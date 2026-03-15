@@ -18,6 +18,7 @@ enableRobotsTXT = true
 [sitemap]
   changeFreq = "daily"
   priority = 0.5
+  filename = "sitemap.xml"
 
 [markup]
   [markup.goldmark]
@@ -25,7 +26,7 @@ enableRobotsTXT = true
       unsafe = true
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS"]
 
 [menu]
@@ -61,3 +62,7 @@ enableRobotsTXT = true
     name = "Toimitus"
     url = "/toimitus/"
     weight = 8
+  [[menu.main]]
+    name = "Haku"
+    url = "/haku/"
+    weight = 9

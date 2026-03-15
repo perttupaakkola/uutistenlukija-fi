@@ -2,37 +2,65 @@
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
 
-{{/* Lead article */}}
+{{/* Lead article - biggest/newest */}}
 {{ with index $sorted 0 }}
 <article class="lead-article">
   {{ with .Params.categories }}
-  <span class="category-label" style="font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">{{ index . 0 }}</span>
+  <span class="category-label">{{ index . 0 }}</span>
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-  <p class="excerpt">{{ .Summary | truncate 300 }}</p>
-  <div class="meta" style="font-family: var(--font-sans); font-size: 0.75rem; color: #888; margin-top: 0.5rem;">
+  <p class="excerpt">{{ .Summary | plainify | truncate 400 }}</p>
+  <div class="meta">
     {{ .Date | time.Format "2.1.2006" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-    {{ with .Params.source_name }} · {{ . }}{{ end }}
+    · {{ .ReadingTime }} min
   </div>
 </article>
 {{ end }}
 
-{{/* Rest of articles */}}
-<div class="articles-grid">
-  {{ range after 1 $sorted }}
-  <article class="article-card">
+{{/* Secondary highlights - 2-3 articles in a row */}}
+{{ $highlights := after 1 $sorted | first 3 }}
+{{ if $highlights }}
+<div class="highlights-row">
+  {{ range $highlights }}
+  <article class="highlight-card">
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p class="excerpt">{{ .Summary | truncate 200 }}</p>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <div class="meta">
       {{ .Date | time.Format "2.1.2006" }}
       {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-      {{ with .Params.source_name }} · {{ . }}{{ end }}
     </div>
   </article>
   {{ end }}
 </div>
+{{ end }}
+
+{{/* Category sections */}}
+{{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
+{{ range $cat := $categories }}
+{{ $catPosts := where $sorted "Params.categories" "intersect" (slice $cat) }}
+{{ if $catPosts }}
+<section class="category-section">
+  <div class="category-section-header">
+    <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
+    <a href="/categories/{{ $cat | urlize }}/" class="see-all">Näytä kaikki →</a>
+  </div>
+  <div class="category-articles">
+    {{ range first 4 $catPosts }}
+    <article class="category-article-card">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <p class="excerpt">{{ .Summary | plainify | truncate 120 }}</p>
+      <div class="meta">
+        {{ .Date | time.Format "2.1.2006" }}
+        {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+        · {{ .ReadingTime }} min
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}
 {{ end }}

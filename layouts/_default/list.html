@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="category-header">
+  <h1>{{ .Title }}</h1>
+</div>
+<div class="articles-grid">
+  {{ range .Pages.ByDate.Reverse }}
+  <article class="article-card">
+    {{ with .Params.categories }}
+    <span class="category-label">{{ index . 0 }}</span>
+    {{ end }}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p class="excerpt">{{ .Summary | truncate 200 }}</p>
+    <div class="meta">
+      {{ .Date | time.Format "2.1.2006" }}
+      {{ with .Params.source_name }} · {{ . }}{{ end }}
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $sorted := $posts.ByDate.Reverse }}
+
+{{/* Lead article */}}
+{{ with index $sorted 0 }}
+<article class="lead-article">
+  {{ with .Params.categories }}
+  <span class="category-label" style="font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">{{ index . 0 }}</span>
+  {{ end }}
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <p class="excerpt">{{ .Summary | truncate 300 }}</p>
+  <div class="meta" style="font-family: var(--font-sans); font-size: 0.75rem; color: #888; margin-top: 0.5rem;">
+    {{ .Date | time.Format "2.1.2006" }}
+    {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+    {{ with .Params.source_name }} · {{ . }}{{ end }}
+    · {{ .ReadingTime }} min
+  </div>
+</article>
+{{ end }}
+
+{{/* Rest of articles */}}
+<div class="articles-grid">
+  {{ range after 1 $sorted }}
+  <article class="article-card">
+    {{ with .Params.categories }}
+    <span class="category-label">{{ index . 0 }}</span>
+    {{ end }}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p class="excerpt">{{ .Summary | truncate 200 }}</p>
+    <div class="meta">
+      {{ .Date | time.Format "2.1.2006" }}
+      {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+      {{ with .Params.source_name }} · {{ . }}{{ end }}
+      · {{ .ReadingTime }} min
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

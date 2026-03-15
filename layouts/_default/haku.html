@@ -1,0 +1,91 @@
+{{ define "main" }}
+<div class="search-page">
+  <h1>Haku</h1>
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Hae artikkeleita..." autofocus>
+  </div>
+  <div id="search-results"></div>
+</div>
+
+<style>
+.search-page { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+.search-box { margin: 1.5rem 0; }
+#search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  font-family: var(--font-sans);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  background: var(--card-bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+#search-input:focus { border-color: var(--accent); }
+.search-result {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.search-result h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+.search-result h3 a:hover { color: var(--accent); }
+.search-result .meta {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: #888;
+}
+.search-result .snippet {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+  line-height: 1.5;
+}
+.no-results {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+}
+</style>
+
+<script>
+(function() {
+  let articles = [];
+  
+  fetch('/index.json')
+    .then(r => r.json())
+    .then(data => { articles = data; });
+  
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+  
+  input.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    if (q.length < 2) {
+      results.innerHTML = '';
+      return;
+    }
+    
+    const matches = articles.filter(a => 
+      a.title.toLowerCase().includes(q) || 
+      a.content.toLowerCase().includes(q) ||
+      a.category.toLowerCase().includes(q) ||
+      a.author.toLowerCase().includes(q)
+    ).slice(0, 20);
+    
+    if (matches.length === 0) {
+      results.innerHTML = '<div class="no-results">Ei hakutuloksia haulle "' + q.replace(/</g,'&lt;') + '"</div>';
+      return;
+    }
+    
+    results.innerHTML = matches.map(a => 
+      '<div class="search-result">' +
+        '<h3><a href="' + a.url + '">' + a.title + '</a></h3>' +
+        '<div class="meta">' + a.date + (a.category ? ' · ' + a.category : '') + (a.author ? ' · ' + a.author : '') + '</div>' +
+        '<p class="snippet">' + a.content.substring(0, 150) + '...</p>' +
+      '</div>'
+    ).join('');
+  });
+})();
+</script>
+{{ end }}

@@ -1,0 +1,6 @@
+{{ $days := dict "Sunday" "sunnuntai" "Monday" "maanantai" "Tuesday" "tiistai" "Wednesday" "keskiviikko" "Thursday" "torstai" "Friday" "perjantai" "Saturday" "lauantai" }}
+{{ $months := dict "January" "tammikuuta" "February" "helmikuuta" "March" "maaliskuuta" "April" "huhtikuuta" "May" "toukokuuta" "June" "kesäkuuta" "July" "heinäkuuta" "August" "elokuuta" "September" "syyskuuta" "October" "lokakuuta" "November" "marraskuuta" "December" "joulukuuta" }}
+{{ $d := now }}
+{{ $wk := index $days ($d.Format "Monday") }}
+{{ $mo := index $months ($d.Format "January") }}
+{{ printf "%s %d. %s %d" $wk $d.Day $mo $d.Year }}

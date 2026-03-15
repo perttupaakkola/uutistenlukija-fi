@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title"><a href="/">Uutistenlukija</a></h1>
+    <p class="site-subtitle">Tekoälyn kuratoima uutiskooste</p>
+    <p class="site-date">{{ partial "finnish-date.html" . }}</p>
+    <nav class="main-nav">
+      <ul>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

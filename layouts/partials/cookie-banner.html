@@ -1,0 +1,5 @@
+<div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1a1a1a; color:#fff; padding:1rem; text-align:center; font-family:var(--font-sans); font-size:0.85rem; z-index:1000;">
+  Käytämme evästeitä sivuston toiminnan parantamiseen.
+  <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookies_accepted','1');" style="margin-left:1rem; padding:0.4rem 1rem; background:var(--accent); color:#fff; border:none; border-radius:3px; cursor:pointer; font-weight:600;">Hyväksy</button>
+</div>
+<script>if(!localStorage.getItem('cookies_accepted'))document.getElementById('cookie-banner').style.display='block';</script>
