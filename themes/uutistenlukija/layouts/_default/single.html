@@ -1,0 +1,39 @@
+{{ define "main" }}
+<article class="single-article">
+  {{ with .Params.categories }}
+  <span class="category-label" style="font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">
+    <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
+  </span>
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  <div class="article-meta">
+    {{ .Date | time.Format "2.1.2006 klo 15:04" }}
+    {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+    {{ with .Params.source_name }} · Lähde: <a href="{{ $.Params.source_url }}" target="_blank" rel="noopener">{{ . }}</a>{{ end }}
+  </div>
+  <div class="content">
+    {{ .Content }}
+  </div>
+  {{ with .Params.source_url }}
+  <div class="source-attribution">
+    <p>Alkuperäinen lähde: <a href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.source_name | default "Lue alkuperäinen artikkeli" }}</a></p>
+  </div>
+  {{ end }}
+  {{ with .Params.author }}
+  <div class="author-box">
+    {{ with $.Params.author_image }}
+    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo">
+    {{ end }}
+    <div class="author-info">
+      <span class="author-name">{{ $.Params.author }}</span>
+      {{ with $.Params.author_title }}
+      <span class="author-role">{{ . }}</span>
+      {{ end }}
+      {{ with $.Params.author_bio }}
+      <p class="author-bio">{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</article>
+{{ end }}

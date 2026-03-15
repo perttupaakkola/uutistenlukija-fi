@@ -1,0 +1,62 @@
+baseURL = 'https://uutistenlukija.fi/'
+languageCode = 'fi'
+title = 'Uutistenlukija'
+theme = 'uutistenlukija'
+defaultContentLanguage = 'fi'
+enableRobotsTXT = true
+paginate = 20
+
+[params]
+  description = "Tekoälyn kuratoima uutiskooste suomeksi"
+  author = "Uutistenlukija"
+  dateFormat = "2.1.2006"
+
+[taxonomies]
+  category = "categories"
+
+[sitemap]
+  changeFreq = "daily"
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    name = "Kotimaa"
+    url = "/categories/kotimaa/"
+    weight = 1
+  [[menu.main]]
+    name = "Ulkomaat"
+    url = "/categories/ulkomaat/"
+    weight = 2
+  [[menu.main]]
+    name = "Talous"
+    url = "/categories/talous/"
+    weight = 3
+  [[menu.main]]
+    name = "Teknologia"
+    url = "/categories/teknologia/"
+    weight = 4
+  [[menu.main]]
+    name = "Urheilu"
+    url = "/categories/urheilu/"
+    weight = 5
+  [[menu.main]]
+    name = "Kulttuuri"
+    url = "/categories/kulttuuri/"
+    weight = 6
+  [[menu.main]]
+    name = "Tiede"
+    url = "/categories/tiede/"
+    weight = 7
+  [[menu.main]]
+    name = "Toimitus"
+    url = "/toimitus/"
+    weight = 8
