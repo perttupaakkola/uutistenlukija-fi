@@ -2,6 +2,30 @@
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
 
+{{/* Trending section */}}
+{{ $trending := where $sorted ".Params.trending" true }}
+{{ if $trending }}
+<section class="trending-section">
+  <div class="trending-header">
+    <h2>🔴 Nyt puheenaiheena</h2>
+  </div>
+  <div class="trending-articles">
+    {{ range first 4 $trending }}
+    <article class="trending-card">
+      {{ with .Params.categories }}
+      <span class="category-label">{{ index . 0 }}</span>
+      {{ end }}
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <div class="meta">
+        {{ .Date | time.Format "2.1.2006" }}
+        {{ with .Params.source_name }} · {{ . }}{{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 {{/* Lead article */}}
 {{ with index $sorted 0 }}
 <article class="lead-article">
@@ -9,6 +33,9 @@
   <span class="category-label" style="font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">{{ index . 0 }}</span>
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  {{ with .Params.image }}
+  <img src="{{ . }}" alt="{{ $.Title }}" class="article-image">
+  {{ end }}
   <p class="excerpt">{{ .Summary | truncate 300 }}</p>
   <div class="meta" style="font-family: var(--font-sans); font-size: 0.75rem; color: #888; margin-top: 0.5rem;">
     {{ .Date | time.Format "2.1.2006" }}
@@ -25,6 +52,9 @@
   <article class="article-card">
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
+    {{ end }}
+    {{ with .Params.image }}
+    <img src="{{ . }}" alt="{{ $.Title }}" class="article-image">
     {{ end }}
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p class="excerpt">{{ .Summary | truncate 200 }}</p>

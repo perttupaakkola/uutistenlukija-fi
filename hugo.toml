@@ -25,11 +25,24 @@ enableRobotsTXT = true
     [markup.goldmark.renderer]
       unsafe = true
 
+[outputFormats]
+  [outputFormats.NewsSitemap]
+    baseName = "news-sitemap"
+    mediaType = "application/xml"
+    isPlainText = true
+    notAlternative = true
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "NewsSitemap"]
   section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
 
 [menu]
+  [[menu.main]]
+    name = "Päivän kooste"
+    url = "/paivan-kooste/"
+    weight = 0
   [[menu.main]]
     name = "Kotimaa"
     url = "/categories/kotimaa/"

@@ -19,6 +19,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from scanner import scan_all_feeds
 from rewriter import rewrite_articles
 from publisher import publish_articles, build_site
+from dedup import filter_new_articles, mark_published
+from image_gen import generate_images_for_articles
 
 
 LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
@@ -66,6 +68,13 @@ def run(quick: bool = False, build_only: bool = False):
 
     log_run("scanned", {"count": len(articles), "articles": articles})
 
+    # Step 1b: Deduplication
+    print("\n🔍 Vaihe 1b: Duplikaattien suodatus...")
+    articles = filter_new_articles(articles)
+    if not articles:
+        print("ℹ️  Kaikki artikkelit on jo julkaistu. Ei uusia artikkeleita.")
+        return True
+
     # Step 2: Rewrite with AI
     print(f"\n✍️  Vaihe 2: {len(articles)} artikkelin uudelleenkirjoitus...")
     try:
@@ -80,10 +89,22 @@ def run(quick: bool = False, build_only: bool = False):
 
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
+    # Step 2b: Generate header images (optional, failures don't block publishing)
+    print(f"\n🖼️  Vaihe 2b: Kuvien generointi...")
+    try:
+        rewritten = generate_images_for_articles(rewritten)
+        image_count = sum(1 for a in rewritten if a.get("image"))
+        print(f"[image_gen] {image_count}/{len(rewritten)} artikkelia sai kuvan")
+    except Exception as e:
+        print(f"[image_gen] Kuvien generointi epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
+
     # Step 3: Publish
     print(f"\n📝 Vaihe 3: {len(rewritten)} artikkelin julkaisu...")
     created = publish_articles(rewritten)
     log_run("published", {"count": len(created), "files": created})
+
+    # Mark published articles for deduplication
+    mark_published(rewritten)
 
     if quick:
         print(f"\n✅ Valmis! {len(created)} artikkelia julkaistu (build ohitettu).")

@@ -1,0 +1,23 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ range first 1000 ($posts.ByDate.Reverse) }}
+  {{ if gt .Date (now.AddDate 0 0 -2) }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Uutistenlukija</news:name>
+        <news:language>fi</news:language>
+      </news:publication>
+      <news:publication_date>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</news:publication_date>
+      <news:title>{{ .Title | htmlEscape }}</news:title>
+      {{ with .Params.categories }}
+      <news:keywords>{{ delimit . ", " }}</news:keywords>
+      {{ end }}
+    </news:news>
+  </url>
+  {{ end }}
+  {{ end }}
+</urlset>

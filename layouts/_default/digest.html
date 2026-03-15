@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="digest-page">
+  <h1>Päivän kooste</h1>
+  <p class="digest-date">{{ partial "finnish-date.html" . }}</p>
+  <p class="digest-intro">Kooste päivän tärkeimmistä uutisista.</p>
+
+  {{ $today := now.Format "2006-01-02" }}
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $todayPosts := where $posts "Date" "ge" (time $today) }}
+  {{ $sorted := $todayPosts.ByDate.Reverse }}
+
+  {{ if not $sorted }}
+  <p class="no-articles">Päivän artikkeleita ei vielä ole. Tarkista myöhemmin uudelleen.</p>
+  {{ else }}
+
+  <p class="digest-count">Tänään julkaistu {{ len $sorted }} artikkelia.</p>
+
+  {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
+  {{ range $cat := $categories }}
+  {{ $catPosts := where $sorted "Params.categories" "intersect" (slice $cat) }}
+  {{ if $catPosts }}
+  <section class="digest-section">
+    <h2>{{ $cat }}</h2>
+    <ul class="digest-list">
+      {{ range $catPosts }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="digest-meta">{{ with .Params.author }}{{ . }} · {{ end }}{{ .ReadingTime }} min</span>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+  {{ end }}
+
+  {{ end }}
+</div>
+
+<style>
+.digest-page { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+.digest-date { font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.digest-intro { color: var(--text-secondary); margin-bottom: 2rem; font-style: italic; }
+.digest-count { font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.digest-section { margin-bottom: 2rem; }
+.digest-section h2 { font-size: 1.2rem; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 0.25rem; margin-bottom: 1rem; }
+.digest-list { list-style: none; }
+.digest-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+.digest-list li a { font-weight: 600; }
+.digest-list li a:hover { color: var(--accent); }
+.digest-meta { display: block; font-family: var(--font-sans); font-size: 0.75rem; color: #888; margin-top: 0.2rem; }
+.no-articles { color: var(--text-secondary); text-align: center; padding: 3rem; }
+</style>
+{{ end }}

@@ -6,6 +6,9 @@
   </span>
   {{ end }}
   <h1>{{ .Title }}</h1>
+  {{ with .Params.image }}
+  <img src="{{ . }}" alt="{{ $.Title }}" class="article-header-image">
+  {{ end }}
   <div class="article-meta">
     {{ .Date | time.Format "2.1.2006 klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}

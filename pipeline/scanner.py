@@ -207,6 +207,23 @@ def scan_all_feeds() -> List[Dict]:
             seen.add(fp)
             unique.append(article)
 
+    # Detect trending: articles with similar fingerprints from multiple sources
+    fp_sources = {}
+    for article in all_articles:
+        fp = article["fingerprint"]
+        source = article["source"]
+        if fp not in fp_sources:
+            fp_sources[fp] = set()
+        fp_sources[fp].add(source)
+
+    # Mark articles as trending if covered by 2+ sources
+    trending_fps = {fp for fp, sources in fp_sources.items() if len(sources) >= 2}
+    for article in unique:
+        article["trending"] = article["fingerprint"] in trending_fps
+
+    trending_count = sum(1 for a in unique if a.get("trending"))
+    print(f"[scanner] Trending stories: {trending_count}")
+
     # Sort by date (newest first)
     unique.sort(key=lambda a: a["published"], reverse=True)
 

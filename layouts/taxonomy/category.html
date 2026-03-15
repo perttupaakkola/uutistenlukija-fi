@@ -1,9 +1,10 @@
 {{ define "main" }}
 <div class="category-header">
-  <h1>{{ .Title }}</h1>
+  <h1>{{ .Title }} <a href="{{ .Permalink }}index.xml" class="rss-link" title="RSS-syöte">RSS</a></h1>
 </div>
 <div class="articles-grid">
-  {{ range .Pages.ByDate.Reverse }}
+  {{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
+  {{ range $paginator.Pages }}
   <article class="article-card">
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
@@ -19,4 +20,17 @@
   </article>
   {{ end }}
 </div>
+
+{{ $pag := $paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav class="pagination">
+  {{ if $pag.HasPrev }}
+  <a href="{{ $pag.Prev.URL }}" class="page-link">← Edellinen</a>
+  {{ end }}
+  <span class="page-info">Sivu {{ $pag.PageNumber }}/{{ $pag.TotalPages }}</span>
+  {{ if $pag.HasNext }}
+  <a href="{{ $pag.Next.URL }}" class="page-link">Seuraava →</a>
+  {{ end }}
+</nav>
+{{ end }}
 {{ end }}

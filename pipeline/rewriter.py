@@ -203,12 +203,22 @@ Palauta korjattu JSON-lista TÄSMÄLLEEN samassa muodossa. Vastaa VAIN JSON-list
             audited = _extract_json(audit_response)
             print(f"[rewriter]   Pass 2 (audit) → {len(audited)} articles cleaned")
 
+            # Carry through fingerprint and trending fields from input articles
+            for j, rewritten_article in enumerate(audited):
+                if j < len(batch):
+                    rewritten_article["fingerprint"] = batch[j].get("fingerprint", "")
+                    rewritten_article["trending"] = batch[j].get("trending", False)
+
             rewritten.extend(audited)
 
         except json.JSONDecodeError as e:
             print(f"[rewriter] JSON parse error: {e}")
             # If audit pass failed but first pass succeeded, use first pass
             if 'parsed' in dir():
+                for j, rewritten_article in enumerate(parsed):
+                    if j < len(batch):
+                        rewritten_article["fingerprint"] = batch[j].get("fingerprint", "")
+                        rewritten_article["trending"] = batch[j].get("trending", False)
                 rewritten.extend(parsed)
                 print(f"[rewriter]   Using pass 1 results (audit parse failed)")
         except Exception as e:
