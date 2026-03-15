@@ -4,7 +4,8 @@ title = 'Uutistenlukija'
 theme = 'uutistenlukija'
 defaultContentLanguage = 'fi'
 enableRobotsTXT = true
-paginate = 20
+[pagination]
+  pagerSize = 20
 
 [params]
   description = "Tekoälyn kuratoima uutiskooste suomeksi"
