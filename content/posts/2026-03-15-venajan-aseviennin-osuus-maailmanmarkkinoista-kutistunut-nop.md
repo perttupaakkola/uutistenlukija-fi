@@ -1,15 +1,18 @@
 ---
 title: "Venäjän aseviennin osuus maailmanmarkkinoista kutistunut nopeasti"
-date: 2026-03-15T12:35:45.527463+00:00
+date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat
-source_name: "Kauppalehti"
-source_url: "https://www.kauppalehti.fi/uutiset/a/bc5f325e-86fd-4c5e-8904-9f0e21e57727"
+author: "Laura Mäkelä"
 draft: false
 ---
 
-Venäjän osuus raskaiden aseiden maailmanmarkkinoista on pienentynyt lyhyessä ajassa. Maan kansainvälistä asekauppaa rasittavat useat ongelmat yhtä aikaa.
+Venäjän osuus raskaiden aseiden maailmanmarkkinoista on pienentynyt merkittävästi lyhyessä ajassa. Maan kansainvälistä asekauppaa rasittavat useat vakavat ongelmat yhtä aikaa, ja aiemmin hallitseva asema on murentunut.
 
-Moskova on perinteisesti ollut yksi maailman suurimmista aseviejistä, mutta vienti on romahtanut. Ukrainan sota sitoo Venäjän omaa tuotantokapasiteettia, ja länsimaiden pakotteet vaikeuttavat komponenttien saantia.
+Moskova on perinteisesti ollut Yhdysvaltain jälkeen maailman toiseksi suurin aseviejä. Venäläisiä hävittäjiä, panssarivaunuja, ohjusjärjestelmiä ja ilmatorjuntajärjestelmiä on myyty laajasti Aasiaan, Lähi-itään ja Afrikkaan. Nyt vienti on kuitenkin romahtanut useista syistä.
 
-Ostajamaat ovat samalla etsineet vaihtoehtoisia toimittajia, mikä on kaventanut Venäjän markkinaosuutta entisestään.
+Ukrainan sota sitoo valtaosan Venäjän omasta tuotantokapasiteetista. Asetehtaat toimivat täydellä teholla kotimaisten tarpeiden täyttämiseksi, eikä vientiin riitä kapasiteettia aiempaan tapaan. Samalla länsimaiden pakotteet ovat vaikeuttaneet merkittävästi komponenttien ja puolijohteiden saantia, mikä hidastaa uusien asejärjestelmien valmistusta.
+
+Perinteiset ostajamaat ovat etsineet aktiivisesti vaihtoehtoisia toimittajia. Intia, joka on ollut Venäjän suurimpia aseasiakkaita vuosikymmeniä, on lisännyt hankintojaan länsimaisilta valmistajilta ja kehittänyt omaa puolustusteollisuuttaan. Myös muut ostajamaat ovat kääntyneet kohti ranskalaisia, eteläkorealaisia ja turkkilaisia toimittajia.
+
+Kehitys heikentää Venäjän geopoliittista vaikutusvaltaa, sillä asekauppa on perinteisesti ollut Moskovalle keskeinen työkalu kansainvälisten suhteiden ylläpitämisessä. Aseviennin tulojen väheneminen rasittaa myös Venäjän valtiontaloutta.

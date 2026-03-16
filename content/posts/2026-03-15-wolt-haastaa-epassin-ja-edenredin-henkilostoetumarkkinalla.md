@@ -1,15 +1,18 @@
 ---
 title: "Wolt haastaa Epassin ja Edenredin henkilöstöetumarkkinalla"
-date: 2026-03-15T12:35:45.527463+00:00
+date: 2026-03-15T12:35:45+00:00
 categories:
   - Talous
-source_name: "Kauppalehti"
-source_url: "https://www.kauppalehti.fi/uutiset/a/bc6f165e-398c-4523-b4d6-8b084222475a"
+author: "Mikko Salonen"
 draft: false
 ---
 
-Wolt ilmoitti perjantaina tuovansa kesällä markkinoille Wolt Benefits -palvelun, joka tähtää suoraan henkilöstöetujen markkinalle. Palvelu haastaa alan vakiintuneet toimijat Epassin ja Edenredin.
+Ruokalähettipalvelustaan tunnettu Wolt ilmoitti perjantaina tuovansa kesällä markkinoille Wolt Benefits -palvelun, joka tähtää suoraan Suomen henkilöstöetumarkkinoille. Uusi palvelu haastaa alan vakiintuneet toimijat Epassin ja Edenredin, jotka ovat hallinneet markkinaa pitkään.
 
-Henkilöstöetumarkkina on Suomessa pitkään ollut kahden suuren pelikenttää. Woltin tulo tuo kilpailua alalle, jolla vaihtuvuus on ollut vähäistä.
+Henkilöstöetumarkkina on Suomessa ollut kahden suuren pelikenttää jo vuosia. Epassi ja Edenred tarjoavat työnantajille ratkaisuja, joilla työntekijöille voidaan tarjota veroedullisia etuja, kuten lounas-, liikunta-, kulttuuri- ja työmatkaetuja. Woltin tulo tuo kaivattua kilpailua alalle, jolla vaihtuvuus ja uudet innovaatiot ovat olleet vähäisiä.
 
-Epassi ja Edenred ovat reagoineet Woltin ilmoitukseen. Molemmat yhtiöt uskovat asemaansa ja korostavat pitkää kokemustaan työnantaja-asiakkaiden palvelemisesta.
+Woltin vahvuutena pidetään sen laajaa ravintola- ja kauppaverkostoa, joka kattaa jo sadat tuhannet käyttäjät Suomessa. Yhtiö voi hyödyntää olemassa olevaa alustaansa ja kumppaniverkostoaan henkilöstöetujen jakelussa, mikä antaa sille merkittävän etulyöntiaseman markkinoille tulossa.
+
+Epassi ja Edenred ovat reagoineet Woltin ilmoitukseen. Molemmat yhtiöt korostavat pitkää kokemustaan työnantaja-asiakkaiden palvelemisesta ja laajaa hyväksyntäverkostoaan. Ne uskovat, että vakiintuneet asiakassuhteet ja kattava palveluvalikoima suojaavat niiden markkina-asemaa.
+
+Wolt on laajentanut liiketoimintaansa voimakkaasti sen jälkeen, kun saksalainen DoorDash osti yhtiön vuonna 2022. Henkilöstöetumarkkina edustaa Woltille kokonaan uutta liiketoiminta-aluetta ja osoittaa yhtiön kunnianhimon laajentua ruokalähettipalvelua laajemmaksi alustaksi.

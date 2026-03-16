@@ -1,13 +1,16 @@
 ---
 title: "Neljän miehen joukko pahoinpiteli uhrin Rovaniemen keskustassa"
-date: 2026-03-15T12:35:45.527463+00:00
+date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-source_name: "Iltalehti"
-source_url: "https://www.iltalehti.fi/kotimaa/a/f0e80120-362d-4c93-860e-74d932ae2f34"
+author: "Matti Virtanen"
 draft: false
 ---
 
-Poliisi sai sunnuntain vastaisena yönä ilmoituksen pahoinpitelystä Rovaniemen keskustassa. Neljä miestä oli pahoinpidellyt uhrin, joka ei tuntenut tekijöitä entuudestaan.
+Poliisi sai sunnuntain vastaisena yönä ilmoituksen pahoinpitelystä Rovaniemen keskustassa. Neljän miehen joukko oli pahoinpidellyt uhrin, joka ei tuntenut tekijöitä entuudestaan. Pahoinpitely tapahtui yöaikaan kaupungin ydinkeskustan alueella.
 
-Tekijät pakenivat paikalta, mutta poliisi sai vihjeitä ja otti kolme neljästä epäillystä kiinni. Kaikkia kolmea epäillään pahoinpitelystä. Neljäs tekijä on yhä kateissa.
+Tekijät pakenivat paikalta välittömästi teon jälkeen, mutta poliisi sai nopeasti vihjeitä ja onnistui ottamaan kolme neljästä epäillystä kiinni saman yön aikana. Kaikkia kolmea epäillään pahoinpitelystä. Neljäs tekijä on edelleen tavoittamatta, ja poliisi pyytää mahdollisia silminnäkijöitä ottamaan yhteyttä.
+
+Uhri toimitettiin Lapin keskussairaalaan tutkittavaksi. Hänen vammojensa vakavuudesta ei ole tarkempaa tietoa, mutta poliisi luokittelee tapausta toistaiseksi perusmuotoisena pahoinpitelynä.
+
+Lapin poliisi jatkaa tapauksen tutkintaa ja pyrkii selvittämään teon tarkemmat olosuhteet. Rovaniemen yöelämässä on ajoittain esiintynyt väkivaltatilanteita, ja poliisi kehottaa ihmisiä ilmoittamaan havaitsemistaan häiriötilanteista hätänumeroon.

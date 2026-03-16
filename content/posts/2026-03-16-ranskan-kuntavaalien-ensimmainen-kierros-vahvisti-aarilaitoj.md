@@ -1,0 +1,20 @@
+---
+title: "Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja"
+date: 2026-03-16T00:15:16.939899+00:00
+categories:
+  - Ulkomaat
+author: "Laura Mäkelä"
+author_id: "laura-makela"
+author_title: "Tiedetoimittaja"
+author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
+author_image: "/images/writers/laura-makela.jpg"
+draft: false
+---
+
+Ranskan kuntavaalien ensimmäinen kierros tuotti vahvan tuloksen sekä Marine Le Penin äärioikeistolaiselle Kansalliselle liittoumalle että Jean-Luc Mélenchonin radikaalivasemmistolaiselle La France insoumise -puolueelle. Molemmat puolueet näyttävät kasvattavan paikallista valtaansa.
+
+Toinen kierros järjestetään 22. maaliskuuta. Kuntavaalit ovat Ranskassa tärkeä mittari puolueiden kannatuksesta, ja niiden tuloksia seurataan ensi vuoden presidentinvaalien näkökulmasta.
+
+Kansallinen liittouma on vahvistanut asemiaan tasaisesti viime vuosien vaaleissa. Kuntatasolla puolueella on perinteisesti ollut vähemmän edustajia kuin sen kansallinen kannatus antaisi olettaa. Nyt tilanne on muuttumassa.
+
+Mélenchonin vasemmistopuolue on kerännyt kannatusta erityisesti suuremmissa kaupungeissa. Ranskan perinteiset keskustapuolueet ovat menettäneet asemiaan molempiin suuntiin.

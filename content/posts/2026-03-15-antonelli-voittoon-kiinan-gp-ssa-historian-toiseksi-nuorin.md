@@ -3,13 +3,14 @@ title: "Antonelli voittoon Kiinan GP:ssä – historian toiseksi nuorin F1-kilpa
 date: 2026-03-15T12:40:00+00:00
 categories:
   - Urheilu
-source_name: "Yle Urheilu"
-source_url: "https://yle.fi/a/74-20215349"
+author: "Matti Virtanen"
 draft: false
 ---
 
-Mercedeksen Kimi Antonelli voitti sunnuntaina formula ykkösten Kiinan osakilpailun ja nousi samalla historian toiseksi nuorimmaksi GP-voittajaksi. Mercedeksen ylivoima on jatkunut selkeänä uusien sääntöjen aikakaudella.
+Mercedeksen italialainen kuljettaja Kimi Antonelli saavutti sunnuntaina uransa ensimmäisen formula ykkösten osakilpailuvoiton Kiinan GP:ssä Shanghain radalla. Vasta 19-vuotias Antonelli nousi samalla historian toiseksi nuorimmaksi F1-kilpailun voittajaksi. Ennätyksen haltijana pysyy edelleen Max Verstappen, joka voitti ensimmäisen kisansa 18-vuotiaana vuonna 2016.
 
-Valtteri Bottas sijoittui kisassa kolmanneksitoista. Suomalaiskuljettaja on kamppaillut kauden alussa vauhdista, eikä Shanghain rata tuonut helpotusta.
+Antonelli hallitsi viikonloppua alusta alkaen. Hän ajoi paalupaikalle aika-ajoissa, ja nousi samalla nuorimmaksi paalupaikan koskaan saavuttaneeksi kuljettajaksi. Itse kisassa Antonelli johti suurimman osan kierroksista ja selvisi voittajaksi turva-autovaiheen ja loppukierrosten haasteiden läpi. Hänen tallikaverinsa George Russell sijoittui toiseksi, ja Lewis Hamilton sai kolmannen sijan – ensimmäisen podiumsijoituksensa Ferrari-urallaan.
 
-Antonellin voitto vahvistaa käsitystä siitä, että Mercedes on onnistunut uuden sääntökauden autosuunnittelussa kilpailijoitaan paremmin.
+Voitto oli myös historiallinen Italian kannalta: Antonellista tuli ensimmäinen italialainen F1-kilpailun voittaja sitten Giancarlo Fisichellan vuonna 2006. Mercedeksen ylivoima on näyttänyt selvältä uusien sääntöjen aikakaudella, ja talli on onnistunut autonsa suunnittelussa kilpailijoitaan paremmin.
+
+Suomalainen Valtteri Bottas sijoittui kisassa kolmanneksitoista. Bottas on kamppaillut vauhdin löytämisen kanssa kauden alkutaipaleella, eikä Shanghain rata tuonut käännettä parempaan. Kauden seuraava osakilpailu ajetaan kahden viikon päästä.

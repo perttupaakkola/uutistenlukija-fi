@@ -1,15 +1,18 @@
 ---
 title: "Perussuomalaisten kansanedustaja vaatii kasvojen peittämiskieltoa Lahden kouluihin"
-date: 2026-03-15T12:35:45.527463+00:00
+date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-source_name: "Yle Uutiset"
-source_url: "https://yle.fi/a/74-20215362?origin=rss"
+author: "Anna Korhonen"
 draft: false
 ---
 
-Kansanedustaja Mira Nieminen (ps.) haluaa, että kasvot peittävä pukeutuminen kielletään Lahden kouluissa. Vaatimus jatkaa valtakunnallista keskustelua, jota peittävästä pukeutumisesta on käyty viime kuukausina.
+Perussuomalaisten kansanedustaja Mira Nieminen vaatii, että kasvot peittävä pukeutuminen kielletään Lahden kouluissa. Vaatimus on osa laajempaa valtakunnallista keskustelua, jota peittävästä pukeutumisesta on käyty suomalaisissa oppilaitoksissa viime kuukausina.
 
-Lahden sivistysjohtaja suhtautuu asiaan maltillisesti. Hänen mukaansa linjaus tehdään, jos siihen ilmenee tarvetta. Toistaiseksi kaupunki ei ole tehnyt päätöstä asiasta.
+Niemisen mukaan kasvojen peittäminen kouluympäristössä haittaa opetustilanteita ja sosiaalista vuorovaikutusta. Hän on vedonnut Lahden kaupungin sivistystoimeen selkeän linjauksen tekemiseksi.
 
-Kasvojen peittämiskiellosta on keskusteltu laajemminkin suomalaisissa kouluissa. Aihe on herättänyt mielipiteitä puolesta ja vastaan.
+Lahden sivistysjohtaja suhtautuu asiaan maltillisesti. Hänen mukaansa kaupunki tekee linjauksen, mikäli siihen ilmenee käytännön tarvetta, mutta toistaiseksi asiasta ei ole tehty päätöstä. Sivistystoimen mukaan yksittäistapaukset on toistaiseksi ratkaistu koulukohtaisesti.
+
+Kasvojen peittämiskiellosta on keskusteltu laajemminkin suomalaisissa kouluissa. Opetushallitus on linjannut, että kouluilla on oikeus asettaa järjestyssäännöissään pukeutumista koskevia ohjeita, mutta valtakunnallista kieltoa ei ole. Aihe jakaa mielipiteitä: kannattajat vetoavat turvallisuuteen ja kasvokkaiseen vuorovaikutukseen, kun taas vastustajat korostavat yksilönvapautta ja uskonnollisten oikeuksien kunnioittamista.
+
+Useissa Euroopan maissa, kuten Ranskassa ja Belgiassa, on jo voimassa julkisia kasvojen peittämiskieltoja. Suomessa vastaavaa lainsäädäntöä ei ole, ja keskustelu on painottunut paikallisiin ratkaisuihin yksittäisten kuntien ja koulujen tasolla.

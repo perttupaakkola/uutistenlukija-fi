@@ -1,15 +1,18 @@
 ---
-title: "Ensi viikosta tulossa poikkeuksellisen lämmin — lämpötilat huhtikuun lukemissa"
-date: 2026-03-15T12:35:45.527463+00:00
+title: "Ensi viikosta tulossa poikkeuksellisen lämmin – lämpötilat huhtikuun lukemissa"
+date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-source_name: "Yle Uutiset"
-source_url: "https://yle.fi/a/74-20215367?origin=rss"
+author: "Mikko Salonen"
 draft: false
 ---
 
-Tuleva viikko tuo mukanaan lämpötiloja, joita nähdään tavallisesti vasta huhtikuun puolivälissä. Erityisesti loppuviikko lupaa aurinkoista ja keväistä säätä.
+Suomeen on saapumassa poikkeuksellisen lämmin sääjakso ensi viikolle. Lämpötilat kohoavat tasolle, jota nähdään tavallisesti vasta huhtikuun puolivälissä, ja erityisesti loppuviikko lupaa aurinkoista ja keväistä säätä.
 
-Meteorologi vahvistaa, että lämmin jakso jatkuu koko ensi viikon. Kevät etenee siis aikataulusta edellä, ja ulkoilukelit paranevat päivä päivältä.
+Ilmatieteen laitoksen ennusteen mukaan lämmin ilmamassa virtaa Suomeen lounaasta, ja päivälämpötilat voivat kohota Etelä-Suomessa jopa kymmenen asteen tuntumaan. Pohjoisessakin lämpötilat nousevat selvästi tavanomaista korkeammalle. Meteorologit vahvistavat, että lämmin jakso jatkuu koko ensi viikon ajan.
 
-Aurinkoisimmat päivät osuvat torstaille ja perjantaille. Silloin kannattaa kaivaa kevättakit esiin.
+Kevät etenee tänä vuonna aikataulusta edellä. Lumi on sulanut Etelä- ja Keski-Suomessa paikoin tavallista nopeammin, ja vesistöjen jääpeitteen odotetaan heikkenevän varhain. Ulkoilukelit paranevat päivä päivältä, ja erityisesti torstai ja perjantai näyttävät aurinkoisimmilta.
+
+Lämpöennätykset eivät ole maaliskuussa Suomessa täysin poikkeuksellisia. Ilmatieteen laitoksen tilastojen mukaan maaliskuun lämpöennätys on mitattu useilla havaintoasemilla poikkeuksellisen lämpimien jaksojen aikana. Nyt ennustettu jakso ei välttämättä riko ennätyksiä, mutta tuo selvää helpotusta pitkän talven jälkeen.
+
+Lämmin sää houkuttelee ulkoilijoita, mutta viranomaiset muistuttavat varovaisuudesta vesistöjen jäillä. Jääpeite voi olla petollisen ohut erityisesti rannikolla ja virtapaikoissa.

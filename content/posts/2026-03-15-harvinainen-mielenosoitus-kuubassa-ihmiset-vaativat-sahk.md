@@ -3,13 +3,14 @@ title: "Harvinainen mielenosoitus Kuubassa – ihmiset vaativat sähköä ja ruo
 date: 2026-03-15T12:47:00+00:00
 categories:
   - Ulkomaat
-source_name: "Yle Uutiset"
-source_url: "https://yle.fi/uutiset"
+author: "Anna Korhonen"
 draft: false
 ---
 
-Kuubassa mielenosoittajat turmelivat kommunistisen puolueen toimiston Havannassa viikonloppuna. Protestoijat vaativat toimivaa sähköverkkoa ja ruoan saatavuuden parantamista.
+Kuuban pääkaupungissa Havannassa puhkesi viikonloppuna harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat toimivaa sähköverkkoa ja ruoan saatavuuden parantamista. Protestoijat tunkeutuivat kommunistisen puolueen paikalliseen toimistoon ja aiheuttivat vahinkoa rakennukselle.
 
-Mielenosoitukset ovat Kuubassa poikkeuksellisia. Maan hallinto suhtautuu katuprotesteihin ankarasti, ja edellinen laajempi mielenosoitusaalto koettiin vuonna 2021. Tuolloin tuhansia ihmisiä pidätettiin.
+Mielenosoitukset ovat Kuubassa poikkeuksellisia, sillä maan hallinto suhtautuu katuprotesteihin erittäin ankarasti. Edellinen laajempi mielenosoitusaalto koettiin heinäkuussa 2021, jolloin tuhannet kuubalaiset marssivat kaduille vaatimaan muutosta. Tuolloin satoja ihmisiä pidätettiin, ja osa tuomittiin vuosien vankeusrangaistuksiin.
 
-Kuuban talouskriisi on syventynyt viime vuosina. Sähkökatkot ovat arkipäivää, ja elintarvikepula koettelee erityisesti pääkaupunkiseudun ulkopuolisia alueita. Yhdysvaltojen kauppasaarto vaikeuttaa tilannetta entisestään.
+Kuuban talouskriisi on syventynyt merkittävästi viime vuosina. Sähkökatkot ovat arkipäivää kaikkialla saarivaltiossa, ja pahimmillaan sähköt ovat poissa tuntikaupalla päivittäin. Maan ikääntynyt sähköinfrastruktuuri ei kykene vastaamaan kysyntään, ja polttoainepula vaikeuttaa voimalaitosten toimintaa. Elintarvikepula koettelee erityisesti pääkaupunkiseudun ulkopuolisia alueita, joissa peruselintarvikkeiden saatavuus on heikentynyt dramaattisesti.
+
+Yhdysvaltojen vuosikymmeniä kestänyt kauppasaarto vaikeuttaa Kuuban taloustilannetta entisestään. Maan hallitus on syyttänyt pakotteita maan ongelmista, mutta kriitikot katsovat, että kommunistisen järjestelmän rakenteelliset ongelmat ovat kriisin keskeinen syy. Kuuban bruttokansantuote on supistunut useana peräkkäisenä vuonna, ja maan valuutta on heikentynyt voimakkaasti.

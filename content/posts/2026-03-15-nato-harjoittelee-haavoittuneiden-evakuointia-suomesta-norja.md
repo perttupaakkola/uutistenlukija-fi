@@ -1,15 +1,18 @@
 ---
 title: "Nato harjoittelee haavoittuneiden evakuointia Suomesta Norjaan"
-date: 2026-03-15T12:35:45.527463+00:00
+date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-source_name: "Iltalehti"
-source_url: "https://www.iltalehti.fi/politiikka/a/9c7cb871-41b9-42ec-b48a-ae0e735fc6f3"
+author: "Anna Korhonen"
 draft: false
 ---
 
-Naton puolustussuunnitelmiin kuuluu haavoittuneiden suomalaissotilaiden siirtäminen Lapista Norjan sairaaloihin sodan syttyessä. Naton lääketieteellisen komitean puheenjohtaja Petter Iversen kertoi asiasta Iltalehdelle.
+Naton puolustussuunnitelmiin kuuluu haavoittuneiden suomalaissotilaiden siirtäminen Lapista Norjan sairaaloihin mahdollisen aseellisen konfliktin syttyessä. Naton lääketieteellisen komitean puheenjohtaja Petter Iversen vahvisti asian suomalaiselle medialle.
 
-Kyse ei ole pelkästään sotilaista. Suomen, Ruotsin ja Norjan viranomaiset varautuvat myös siviiliväestön siirtoihin, jos tilanne sitä vaatii. Nato harjoittelee evakuointeja käytännössä.
+Suunnitelmat eivät koske pelkästään sotilaita. Suomen, Ruotsin ja Norjan viranomaiset varautuvat myös siviiliväestön siirtoihin, mikäli turvallisuustilanne sitä vaatii. Nato on harjoitellut evakuointeja käytännössä osana pohjoisen alueen puolustusvalmiuden kehittämistä.
 
-Suunnitelmat perustuvat skenaarioon, jossa Venäjä hyökkäisi Suomeen. Pohjois-Suomen sijainti tekee Norjasta luonnollisen evakuointireitin, koska Norjan sairaalat ovat lähellä ja maa on Nato-liittolainen.
+Pohjois-Suomen maantieteellinen sijainti tekee Norjasta luonnollisen evakuointireitin. Norjan sairaalat sijaitsevat suhteellisen lähellä Suomen pohjoisinta aluetta, ja maayhteys on olemassa Kilpisjärven ja Utsjoen kautta. Norjan terveydenhuoltojärjestelmä on varautunut vastaanottamaan potilaita naapurimaista kriisitilanteessa.
+
+Suomen Nato-jäsenyys on mahdollistanut entistä konkreettisemman puolustusyhteistyön suunnittelun pohjoismaisten liittolaisten kanssa. Aiemmin vastaavia suunnitelmia tehtiin kahdenvälisinä sopimuksina, mutta Naton jäsenenä Suomi on nyt osa laajempaa liittokunnan puolustusrakennetta.
+
+Evakuointisuunnitelmat perustuvat skenaarioon, jossa Suomen pohjoinen alue joutuisi sotilaallisen uhan kohteeksi. Pohjoismaiden välinen yhteistyö lääkintähuollossa on tiivistynyt merkittävästi viime vuosina, ja harjoituksia on järjestetty säännöllisesti osana Naton kokonaisvalmiuden kehittämistä.

@@ -1,15 +1,16 @@
 ---
 title: "Juutinrauman silta suljettu onnettomuuden vuoksi"
-date: 2026-03-15T12:35:45.527463+00:00
+date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat
-source_name: "Iltalehti"
-source_url: "https://www.iltalehti.fi/ulkomaat/a/22c575cc-419d-4625-ba5a-0578b11136bc"
+author: "Laura Mäkelä"
 draft: false
 ---
 
-Juutinrauman silta on suljettu moottoritieliikenteeltä Ruotsin suuntaan. Sulun syynä on tunnelissa sattunut onnettomuus.
+Juutinrauman silta eli Øresundsbron suljettiin lauantaina moottoritieliikenteeltä Ruotsin suuntaan tunneliosuudella sattuneen onnettomuuden vuoksi. Sulku aiheutti mittavat liikenneruuhkat molemmissa maissa ja vaikutti tuhansien matkustajien kulkuun.
 
-Paikalla tehdään korjaus- ja puhdistustöitä. Onnettomuus vaurioitti rakenteita ja aiheutti öljyvuodon, joka on siivottava ennen liikenteen avaamista. Tiedot perustuvat Øresundsbron verkkosivuihin.
+Onnettomuus vaurioitti tunnelin rakenteita ja aiheutti öljyvuodon, joka vaati perusteellista puhdistustyötä ennen liikenteen avaamista. Pelastusviranomaiset eristivät alueen ja käynnistivät korjaustyöt välittömästi. Onnettomuuden tarkempia yksityiskohtia ei ole toistaiseksi julkistettu.
 
-Silta yhdistää Tanskan ja Ruotsin, ja se on yksi Pohjoismaiden vilkkaimpia liikenneväyliä.
+Vuonna 2000 avattu Juutinrauman silta on 16 kilometriä pitkä ja yhdistää Kööpenhaminan ja Malmön. Se on yksi Pohjoismaiden vilkkaimpia liikenneväyliä: siltaa pitkin kulkee vuosittain noin seitsemän miljoonaa ajoneuvoa ja miljoonia junamatkustajia. Silta käsittää sekä siltaosuuden, keinotekoisen saaren että tunneliosuuden.
+
+Sulku vaikutti myös junaliikenteeseen Tanskan ja Ruotsin välillä. Matkustajia ohjattiin käyttämään vaihtoehtoisia reittejä, mukaan lukien lauttaliikenteen kautta. Siltayhtiö Øresundsbron tiedotti tilanteesta verkkosivuillaan ja kehotti matkustajia seuraamaan päivittyviä liikennetiedotteita.
