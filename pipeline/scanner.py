@@ -13,7 +13,7 @@ from typing import List, Dict, Optional
 from email.utils import parsedate_to_datetime
 
 RSS_FEEDS = [
-    # Finnish sources
+    # Finnish main sources
     {
         "name": "Yle Uutiset",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET",
@@ -25,11 +25,6 @@ RSS_FEEDS = [
         "language": "fi",
     },
     {
-        "name": "MTV Uutiset",
-        "url": "https://www.mtvuutiset.fi/api/feed/rss/uutiset",
-        "language": "fi",
-    },
-    {
         "name": "Kauppalehti",
         "url": "https://feeds.kauppalehti.fi/rss/main",
         "language": "fi",
@@ -38,6 +33,25 @@ RSS_FEEDS = [
         "name": "Taloussanomat",
         "url": "https://www.is.fi/rss/taloussanomat.xml",
         "language": "fi",
+    },
+    # Finnish specialized
+    {
+        "name": "Yle Urheilu",
+        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_URHEILU",
+        "language": "fi",
+        "category_hint": "Urheilu",
+    },
+    {
+        "name": "IS Urheilu",
+        "url": "https://www.is.fi/rss/urheilu.xml",
+        "language": "fi",
+        "category_hint": "Urheilu",
+    },
+    {
+        "name": "Tekniikka & Talous",
+        "url": "https://www.tekniikkatalous.fi/feed",
+        "language": "fi",
+        "category_hint": "Teknologia",
     },
     # International sources
     {
@@ -227,8 +241,60 @@ def scan_all_feeds() -> List[Dict]:
     # Sort by date (newest first)
     unique.sort(key=lambda a: a["published"], reverse=True)
 
-    # Return top 20
-    selected = unique[:20]
+    # Category-aware selection: ensure all 7 categories get representation
+    CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
+    CATEGORY_KEYWORDS = {
+        "Urheilu": ["urheilu", "sport", "liiga", "olymp", "jalkapallo", "jääkiekko", "f1", "formula", "tennis", "golf"],
+        "Tiede": ["tiede", "tutkimus", "science", "research", "ilmasto", "avaruus", "terveys", "health"],
+        "Kulttuuri": ["kulttuuri", "taide", "musiikk", "elokuva", "teatteri", "kirja", "culture", "art", "music"],
+        "Teknologia": ["teknologia", "tech", "ai", "tekoäly", "ohjelmisto", "cyber", "digital", "apple", "google", "microsoft"],
+        "Talous": ["talous", "ekonom", "osake", "pörssi", "business", "economy", "market", "finance", "kauppa"],
+        "Ulkomaat": ["ulkomaa", "world", "international", "usa", "eu ", "eurooppa", "kiina", "venäjä", "nato"],
+        "Kotimaa": ["suomi", "helsinki", "tampere", "turku", "eduskunta", "hallitus"],
+    }
+
+    def _guess_category(article):
+        """Guess category from source hint, title, or description."""
+        hint = article.get("category_hint", "")
+        if hint in CATEGORIES:
+            return hint
+        text = (article.get("title", "") + " " + article.get("description", "")).lower()
+        for cat, keywords in CATEGORY_KEYWORDS.items():
+            if any(kw in text for kw in keywords):
+                return cat
+        # English sources default to Ulkomaat
+        if article.get("language") == "en":
+            return "Ulkomaat"
+        return "Kotimaa"
+
+    # First pass: pick at least 1 article per category
+    selected = []
+    selected_fps = set()
+    for cat in CATEGORIES:
+        for article in unique:
+            if article["fingerprint"] not in selected_fps and _guess_category(article) == cat:
+                article["_guessed_category"] = cat
+                selected.append(article)
+                selected_fps.add(article["fingerprint"])
+                break
+
+    # Second pass: fill remaining slots with newest articles, balanced by category
+    # Track how many we've selected per category
+    cat_counts = {c: sum(1 for a in selected if a.get("_guessed_category") == c) for c in CATEGORIES}
+    target = 25
+    
+    for article in unique:
+        if len(selected) >= target:
+            break
+        if article["fingerprint"] not in selected_fps:
+            cat = _guess_category(article)
+            # Prefer underrepresented categories
+            article["_guessed_category"] = cat
+            selected.append(article)
+            selected_fps.add(article["fingerprint"])
+            cat_counts[cat] = cat_counts.get(cat, 0) + 1
+
+    print(f"[scanner] Category distribution: {cat_counts}")
     print(f"[scanner] Total: {len(all_articles)} → Unique: {len(unique)} → Selected: {len(selected)}")
     return selected
 

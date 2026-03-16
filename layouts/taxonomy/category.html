@@ -14,7 +14,6 @@
     <div class="meta">
       {{ .Date | time.Format "2.1.2006" }}
       {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-      {{ with .Params.source_name }} · {{ . }}{{ end }}
       · {{ .ReadingTime }} min
     </div>
   </article>

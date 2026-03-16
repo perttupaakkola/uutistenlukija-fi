@@ -1,28 +1,34 @@
 {{ define "main" }}
+<div class="reading-progress" id="reading-progress"></div>
 <article class="single-article">
   {{ with .Params.categories }}
-  <span class="category-label" style="font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);">
+  <span class="category-label">
     <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
   </span>
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ with .Params.image }}
   <img src="{{ . }}" alt="{{ $.Title }}" class="article-header-image">
+  {{ with $.Params.image_credit }}<p class="image-credit">{{ . }}</p>{{ end }}
   {{ end }}
   <div class="article-meta">
     {{ .Date | time.Format "2.1.2006 klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-    {{ with .Params.source_name }} · Lähde: <a href="{{ $.Params.source_url }}" target="_blank" rel="noopener">{{ . }}</a>{{ end }}
     · {{ .ReadingTime }} min lukuaika
   </div>
   <div class="content">
     {{ .Content }}
   </div>
-  {{ with .Params.source_url }}
-  <div class="source-attribution">
-    <p>Alkuperäinen lähde: <a href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.source_name | default "Lue alkuperäinen artikkeli" }}</a></p>
+
+  <div class="share-buttons">
+    <span class="share-label">Jaa:</span>
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener" class="share-btn" title="Jaa Twitterissä">𝕏</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener" class="share-btn" title="Jaa Facebookissa">f</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title | urlquery }}" target="_blank" rel="noopener" class="share-btn" title="Jaa LinkedInissä">in</a>
+    <a href="whatsapp://send?text={{ .Title | urlquery }}%20{{ .Permalink }}" class="share-btn" title="Jaa WhatsAppissa">wa</a>
+    <button class="share-btn" onclick="navigator.clipboard.writeText('{{ .Permalink }}');this.textContent='✓';setTimeout(()=>this.textContent='🔗',2000)" title="Kopioi linkki">🔗</button>
   </div>
-  {{ end }}
+
   {{ with .Params.author }}
   <div class="author-box">
     {{ with $.Params.author_image }}
@@ -39,5 +45,59 @@
     </div>
   </div>
   {{ end }}
+
+  {{/* Related articles */}}
+  {{ $currentCategories := .Params.categories }}
+  {{ $currentPage := . }}
+  {{ $related := slice }}
+  {{ range where .Site.RegularPages "Section" "posts" }}
+    {{ if ne .Permalink $currentPage.Permalink }}
+      {{ $pageCategories := .Params.categories }}
+      {{ range $currentCategories }}
+        {{ $cat := . }}
+        {{ range $pageCategories }}
+          {{ if eq . $cat }}
+            {{ $related = $related | append $currentPage }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $related = where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink | first 4 }}
+  {{ if $related }}
+  <div class="related-articles">
+    <h3>Lue myös</h3>
+    <div class="related-grid">
+      {{ range $related }}
+      <a href="{{ .Permalink }}" class="related-link">
+        <span class="related-title">{{ .Title }}</span>
+        <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
 </article>
+
+<button id="back-to-top" aria-label="Takaisin ylös" title="Takaisin ylös">↑</button>
+
+<script>
+// Reading progress
+const progress = document.getElementById('reading-progress');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progress.style.width = scrollPercent + '%';
+});
+
+// Back to top
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 {{ end }}

@@ -29,13 +29,12 @@ def _make_slug(title: str, max_length: int = 60) -> str:
 
 
 def _article_to_markdown(article: Dict, date: str) -> str:
-    """Convert a rewritten article to Hugo markdown with front matter."""
+    """Convert article to Hugo markdown with front matter."""
     title = article.get("title", "Untitled").replace('"', '\\"')
     category = article.get("category", "Kotimaa")
-    source_name = article.get("source_name", "")
-    source_url = article.get("source_url", "")
     content = article.get("content", "")
     image = article.get("image", "")
+    image_credit = article.get("image_credit", "")
     trending = article.get("trending", False)
 
     # Assign a writer based on category
@@ -43,21 +42,20 @@ def _article_to_markdown(article: Dict, date: str) -> str:
 
     # Build optional front matter fields
     image_line = f'\nimage: "{image}"' if image else ""
+    image_credit_line = f'\nimage_credit: "{image_credit}"' if image_credit else ""
     trending_line = "\ntrending: true" if trending else ""
 
-    # Build front matter
+    # Build front matter — no source_name or source_url
     front_matter = f"""---
 title: "{title}"
 date: {date}
 categories:
   - {category}
-source_name: "{source_name}"
-source_url: "{source_url}"
 author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{image_line}{trending_line}
+author_image: "{writer['image']}"{image_line}{image_credit_line}{trending_line}
 draft: false
 ---
 
