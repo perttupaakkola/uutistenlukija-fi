@@ -1,0 +1,22 @@
+---
+title: "Kuuban sähköverkko romahti – kymmenen miljoonaa ihmistä jäi pimeään"
+date: 2026-03-17T00:20:56.278194+00:00
+categories:
+  - Ulkomaat
+author: "Jukka Nieminen"
+author_id: "jukka-nieminen"
+author_title: "Urheilutoimittaja"
+author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
+author_image: "/images/writers/jukka-nieminen.jpg"
+draft: false
+---
+
+Kuuban kansallinen sähköverkko romahti maanantaina. Maan verkonhaltija UNE ilmoitti, että noin kymmenen miljoonaa ihmistä jäi ilman sähköä.
+
+Kuuban sähköntuotantojärjestelmä on vuosikymmenten aikana rapautunut pahoin. Voimalaitokset ovat vanhoja, ja varaosien saanti on ollut hankalaa. Yhdysvaltain Kuubaan kohdistama öljysaarto on vaikeuttanut polttoaineen saantia sähköntuotantoon.
+
+Kuuban sähköverkko on pettänyt laajasti viime vuosina toistuvasti. Vuonna 2024 koko saari pimeni hurrikaanin jälkeen useiksi päiviksi.
+
+Ilman sähköä eivät toimi jääkaapit, vesipumput eivätkä sairaaloiden laitteet. Katkokset ovat aiheuttaneet myös levottomuuksia, kun kansalaiset ovat osoittaneet mieltään elinolojen heikkenemistä vastaan.
+
+UNE ei maanantaina antanut arviota siitä, milloin sähkönjakelu saadaan palautettua.
