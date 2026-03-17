@@ -1,7 +1,8 @@
 """
-Article Rewriter — uses Anthropic API to rewrite news articles in clean Finnish.
-Two-pass system: rewrite + anti-AI audit pass.
-Falls back to Claude transport bridge if API key is not available.
+Article Writer — transforms RSS leads into original journalism.
+
+Pipeline: RSS headline → web research → multi-source synthesis → original article.
+Two-pass system: write + anti-AI audit pass.
 """
 
 import os
@@ -19,94 +20,62 @@ except ImportError:
 
 # Add parent paths for imports
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "autopoetry"))
-from claude_transport import complete_with_claude, parse_json_object
+
+try:
+    from claude_transport import complete_with_claude, parse_json_object
+except ImportError:
+    pass
 
 CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
 
-SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja, joka kirjoittaa kuin ihminen — ei kuin tekoäly.
+SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
 
-Sinulle annetaan lista uutisotsikoita ja -kuvauksia. Jokaisesta sinun tulee kirjoittaa:
-1. Uusi otsikko (selkeä, informatiivinen, ei klikkiotsikko)
-2. 2-4 kappaleen uutisteksti
-3. Oikea kategoria seuraavista: Kotimaa, Ulkomaat, Talous, Teknologia, Urheilu, Kulttuuri, Tiede
+Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
 
-Jos artikkeli on vieraskielinen (esim. englanninkielinen), KÄÄNNÄ ja kirjoita uutinen suomeksi. Älä jätä mitään englanniksi. Suomenna nimet ja käsitteet kun se on luontevaa. Säilytä alkuperäiset erisnimet.
+TÄRKEÄÄ:
+- Tämä on SINUN artikkelisi. Älä viittaa lähteisiin, alkuperäisiin uutisiin tai muihin medioihin.
+- Poikkeus: jos artikkeli perustuu yksittäisen tahon lausuntoon tai tutkimukseen, mainitse se luonnollisesti osana tekstiä.
+- Älä mainitse "alkuperäistä lähdettä", "raportin mukaan" (paitsi jos tiedät raportin nimen), "uutisen mukaan" tms.
+- Kirjoita 3-5 kappaletta, 200-400 sanaa.
 
-KIRJOITUSTYYLI — TÄRKEÄÄ:
-- Kirjoita kuin kokenut toimittaja, EI kuin tekoäly.
-- Aloita suoraan asiasta. Ei "Nykypäivän muuttuvassa maailmassa..." tai "On syytä huomata, että..." -aloituksia.
-- Käytä lyhyitä, suoria lauseita. Vaihtele lauseiden pituutta — osa lyhyitä, osa pidempiä.
-- Vältä tyhjää korostusta: "merkittävä", "historiallinen", "mullistava", "keskeinen", "ratkaiseva" — käytä vain jos asia oikeasti on sitä.
-- Vältä passiivia kun aktiivi toimii: "Hallitus päätti" > "Päätös tehtiin"
-- Kappaleiden pituus saa vaihdella: osa 1-2 lausetta, osa pidempiä.
-- Kirjoita neutraalia, selkeää yleiskieltä. Ei puhekieltä, mutta ei myöskään jäykkää virkasuomea.
+KIRJOITUSTYYLI:
+- Aloita suoraan asiasta.
+- Lyhyet, suorat lauseet. Vaihtele pituutta.
+- Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.
+- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.
+- Vältä passiivia kun aktiivi toimii.
+- Ei emojeja, lihavointia tai otsikkolistoja.
+- Ei ajatusviivoja (—) liiallisesti.
+- Suomeksi vain ensimmäinen sana isolla otsikoissa.
+- Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").
+- Lopeta viimeiseen faktaan.
 
-TEKOÄLYKIRJOITUKSEN MERKIT — VÄLTÄ NÄITÄ KAIKKIA:
+TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:
+- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)
+- Ei kolmen sarjoja joka kappaleessa
+- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)
+- Ei mainosmaista kieltä
+- Ei chatbot-artefakteja
+- Anna faktojen puhua, älä paisuttele
 
-1. MERKITTÄVYYDEN PAISUTTELU: Älä kirjoita "merkitsee käännekohtaa", "mullistaa alan", "historiallinen hetki". Anna faktojen puhua.
-2. NIMIEN PUDOTTELU KOROSTUSKEINONA: Älä korosta henkilöiden merkitystä turhaan. Kerro mitä tapahtui.
-3. PINNALLISET -ING-ANALYYSIT (suomeksi -minen/-mista): Älä kirjoita "symboloiden... heijastaen... osoittaen...". Kerro suoraan mitä asia tarkoittaa.
-4. MAINOSMAINEN KIELI: Ei "kiehtova", "ainutlaatuinen", "upea", "henkeäsalpaava". Neutraali kuvailu riittää.
-5. EPÄMÄÄRÄISET VIITTAUKSET: Ei "Asiantuntijat uskovat", "Tutkijat arvioivat" ilman konkreettista lähdettä. Kerro kuka sanoi tai jätä pois.
-6. KAAVAMAINEN HAASTE-MENESTYS: Ei "Haasteista huolimatta... jatkaa menestystään" -rakennetta. Se on klisee.
-7. TEKOÄLYSANASTO: Vältä: "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "osoitus siitä", "maisema" (kuvainnollisesti), "ekosysteemi" (ei-biologisesti), "paradigma", "synergia". Käytä tavallisia sanoja.
-8. OLLA-VERBIN VÄLTTELEMINEN: Käytä "on" ja "oli" rohkeasti. Älä korvaa niitä keinotekoisesti: "toimii", "edustaa", "muodostaa", "korostaa" kun yksinkertainen "on" riittää.
-9. NEGATIIVISET RINNASTUKSET: Ei "Kyse ei ole vain X:stä, vaan myös Y:stä" -rakennetta. Kerro suoraan mistä on kyse.
-10. KOLMEN SÄÄNTÖ: Älä tee kolmen sarjoja: "nopeampi, tehokkaampi ja luotettavampi" tai "innovaatio, inspiraatio ja oivallus". Vaihtele.
-11. SYNONYYMIEN KIERRÄTYS: Älä vaihda samasta asiasta käytettyä sanaa joka lauseessa. "Yritys" saa olla "yritys" koko tekstin ajan, ei "yhtiö... firma... toimija...".
-12. VÄÄRÄT VAIHTELUVÄLIT: Ei "aina musiikista urheiluun" tai "lapset ja vanhukset" ellei oikeasti kata koko skaalaa.
-13. AJATUSVIIVAN YLIKÄYTTÖ: Käytä ajatusviivoja (—) harvoin. Pisteet ja pilkut riittävät.
-14. LIHAVOINNIN YLIKÄYTTÖ: Älä lihavoi sanoja tekstissä. Otsikko riittää.
-15. OTSIKKOLISTAT: Älä tee "Otsikko: selitys" -listoja tekstin sisään. Kirjoita juoksevaa tekstiä.
-16. OTSIKKOJEN ISOT KIRJAIMET: Suomeksi vain ensimmäinen sana isolla. Ei "Suomen Talous Kasvoi" vaan "Suomen talous kasvoi".
-17. EMOJIT: Ei emojeja uutistekstiin. Koskaan.
-18. TYPOGRAFISET LAINAUSMERKIT: Käytä suoria lainausmerkkejä (" "), ei kaarevaa (" ").
-19. CHATBOT-ARTEFAKTIT: Ei "Toivottavasti tämä auttaa!", "Kerron mielelläni lisää", "Kuten aiemmin mainitsin". Olet toimittaja, et chatbot.
-20. KATKAISUHUOMAUTUKSET: Ei "Tietoni ulottuvat vuoteen..." tai muita tekoälyrajoituksiin viittaavia lauseita.
-21. MIELISTELEVÄ SÄVY: Ei "Erinomainen kysymys!", "Tämä on todella mielenkiintoinen aihe". Kirjoita asiallisesti.
-22. TÄYTESANAT: Ei "Jotta voidaan", "Johtuen siitä tosiasiasta", "On tärkeää huomata, että". Mene suoraan asiaan.
-23. LIIALLINEN VARAUTUMINEN: Ei "saattaisi mahdollisesti ehkä vaikuttaa". Yksi varauma riittää, tai sano suoraan.
-24. GENEERISET LOPETUKSET: Ei "Tulevaisuus näyttää valoisalta", "Aika näyttää", "Jää nähtäväksi miten tilanne kehittyy". Lopeta viimeiseen faktaan.
+Vastaa VAIN JSON-muodossa."""
 
-ÄLÄ kopioi alkuperäistä tekstiä sellaisenaan. Kirjoita uutinen omin sanoin."""
+AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit tekoälykirjoituksen merkkien varalta ja korjaa:
 
-AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja, joka tunnistaa tekoälyn kirjoittaman tekstin piirteet suomenkielisessä uutistekstissä.
+1. Paisuttelu ja mainosmainen kieli
+2. Tekoälysanasto (Lisäksi, Toisaalta, kokonaisvaltainen, ekosysteemi)
+3. Kolmen sarjat, synonyymien kierrätys
+4. Geneeriset lopetukset
+5. Passiivin ylikäyttö
+6. Viittaukset alkuperäisiin lähteisiin tai muihin uutismedioihin (POISTA — tämä on meidän oma artikkeli)
+7. Chatbot-artefaktit
+8. Täytesanat ja varautumiset
 
-Saat uudelleenkirjoitettuja uutisartikkeleita JSON-listana. Tarkista jokainen artikkeli näiden 24 tekoälykirjoituksen merkin varalta ja korjaa löytämäsi ongelmat:
-
-1. Merkittävyyden paisuttelu ("merkitsee käännekohtaa", "mullistava")
-2. Turhaa korostava nimien pudottelu
-3. Pinnalliset -minen/-mista-analyysit ("symboloiden... heijastaen...")
-4. Mainosmainen kieli ("ainutlaatuinen", "kiehtova", "upea")
-5. Epämääräiset viittaukset ("Asiantuntijat uskovat") ilman konkreettista lähdettä
-6. Kaavamainen "haasteista huolimatta... menestys" -rakenne
-7. Tekoälysanasto: "Lisäksi", "Toisaalta", "kokonaisvaltainen", "osoitus siitä", "ekosysteemi", "paradigma"
-8. Olla-verbin turha välttely: "toimii X:nä" kun "on X" riittäisi
-9. "Kyse ei ole vain X:stä, vaan Y:stä" -rakenne
-10. Kolmen sarjat ("nopeampi, tehokkaampi ja luotettavampi")
-11. Synonyymien kierrätys (yritys/yhtiö/firma/toimija samassa tekstissä)
-12. Väärät vaihteluvälit ("musiikista urheiluun")
-13. Ajatusviivan (—) liiallinen käyttö
-14. Lihavoinnin liiallinen käyttö
-15. Otsikkolistat tekstin sisällä
-16. Virheellinen isojen kirjainten käyttö otsikoissa
-17. Emojit
-18. Typografiset/kaarevat lainausmerkit
-19. Chatbot-ilmaukset ("Toivottavasti tämä auttaa!")
-20. Tekoälyrajoituksiin viittaukset
-21. Mielistelevä sävy
-22. Täytesanat ("Jotta voidaan", "On tärkeää huomata")
-23. Liiallinen varautuminen ("saattaisi mahdollisesti ehkä")
-24. Geneeriset lopetukset ("Tulevaisuus näyttää valoisalta", "Aika näyttää")
-
-Korjaa kaikki löytämäsi ongelmat ja palauta korjattu JSON-lista TÄSMÄLLEEN samassa muodossa kuin sait sen.
-Jos teksti on jo hyvä, palauta se sellaisenaan. Älä muuta JSON-rakennetta tai kenttien nimiä.
-
-Vastaa VAIN JSON-listalla."""
+Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
 
 def _call_llm(system: str, prompt: str) -> str:
-    """Call the LLM via Anthropic SDK or transport bridge. Returns response text."""
+    """Call the LLM via Anthropic SDK or transport bridge."""
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     use_sdk = HAVE_ANTHROPIC_SDK and api_key
 
@@ -120,7 +89,7 @@ def _call_llm(system: str, prompt: str) -> str:
         )
         return response.content[0].text.strip()
     else:
-        print("[rewriter]   Using Claude Code bridge...")
+        print("[writer]   Using Claude Code bridge...")
         return complete_with_claude(
             system_prompt=system,
             messages=[{"role": "user", "content": prompt}],
@@ -141,105 +110,96 @@ def _extract_json(text: str) -> list:
 
 
 def rewrite_articles(articles: List[Dict]) -> List[Dict]:
-    """Rewrite articles using two-pass system: rewrite + anti-AI audit."""
+    """Write original articles from RSS leads and research data.
+
+    Each article dict should contain:
+    - title: headline from RSS
+    - description: brief from RSS
+    - research: (optional) additional context/facts from web research
+    - source: RSS feed source name (used internally, NOT published)
+    - link: RSS link (used internally, NOT published)
+    """
     rewritten = []
 
-    # Process in batches of 5 to reduce API calls
     batch_size = 5
     for i in range(0, len(articles), batch_size):
         batch = articles[i:i + batch_size]
-        print(f"[rewriter] Processing batch {i // batch_size + 1} ({len(batch)} articles)...")
+        print(f"[writer] Processing batch {i // batch_size + 1} ({len(batch)} articles)...")
 
         articles_text = ""
         for idx, article in enumerate(batch):
             lang = article.get("language", "fi")
             lang_note = ""
             if lang != "fi":
-                lang_note = f"\nKieli: {lang} (KÄÄNNÄ SUOMEKSI)"
+                lang_note = f"\nKieli: {lang} (KIRJOITA SUOMEKSI)"
+
+            research = article.get("research", "")
+            research_section = ""
+            if research:
+                research_section = f"\nTaustatutkimus:\n{research}"
 
             articles_text += f"""
 ---
-Artikkeli {idx + 1}:
+Aihe {idx + 1}:
 Otsikko: {article['title']}
-Kuvaus: {article['description']}
-Lähde: {article['source']}
-Linkki: {article['link']}
-Julkaistu: {article['published']}{lang_note}
+Kuvaus: {article['description']}{research_section}{lang_note}
 ---
 """
 
-        prompt = f"""Kirjoita jokaisesta seuraavasta uutisesta uudelleenkirjoitettu versio.
+        prompt = f"""Kirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.
 
 {articles_text}
 
-Vastaa täsmälleen tässä JSON-muodossa (lista):
+Vastaa JSON-listana:
 [
   {{
-    "title": "Uusi otsikko",
-    "content": "2-4 kappaleen uutisteksti. Kappaleet erotettu kahdella rivinvaihdolla.",
-    "category": "Yksi seuraavista: {', '.join(CATEGORIES)}",
-    "source_name": "Alkuperäinen lähde",
-    "source_url": "Alkuperäinen linkki",
-    "original_title": "Alkuperäinen otsikko"
+    "title": "Uutisen otsikko",
+    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",
+    "category": "Yksi: {', '.join(CATEGORIES)}",
+    "original_title": "Alkuperäinen otsikko RSS:stä"
   }}
 ]
 
-Vastaa VAIN JSON-listalla, ei muuta tekstiä."""
+Vastaa VAIN JSON-listalla."""
 
         try:
-            # Pass 1: Rewrite
+            # Pass 1: Write
             response_text = _call_llm(SYSTEM_PROMPT, prompt)
             parsed = _extract_json(response_text)
-            print(f"[rewriter]   Pass 1 → {len(parsed)} articles rewritten")
+            print(f"[writer]   Pass 1 → {len(parsed)} articles written")
 
             # Pass 2: Anti-AI audit
-            audit_prompt = f"""Tarkista ja korjaa seuraavat uudelleenkirjoitetut uutisartikkelit tekoälykirjoituksen merkkien varalta.
+            audit_prompt = f"""Tarkista ja korjaa seuraavat uutisartikkelit.
 
 {json.dumps(parsed, indent=2, ensure_ascii=False)}
 
-Palauta korjattu JSON-lista TÄSMÄLLEEN samassa muodossa. Vastaa VAIN JSON-listalla."""
+Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
             audit_response = _call_llm(AUDIT_SYSTEM_PROMPT, audit_prompt)
             audited = _extract_json(audit_response)
-            print(f"[rewriter]   Pass 2 (audit) → {len(audited)} articles cleaned")
+            print(f"[writer]   Pass 2 (audit) → {len(audited)} articles cleaned")
 
-            # Carry through fingerprint and trending fields from input articles
-            for j, rewritten_article in enumerate(audited):
+            # Carry through metadata from input
+            for j, written_article in enumerate(audited):
                 if j < len(batch):
-                    rewritten_article["fingerprint"] = batch[j].get("fingerprint", "")
-                    rewritten_article["trending"] = batch[j].get("trending", False)
+                    written_article["fingerprint"] = batch[j].get("fingerprint", "")
+                    written_article["trending"] = batch[j].get("trending", False)
+                    # Do NOT carry source_name or source_url to output
 
             rewritten.extend(audited)
 
         except json.JSONDecodeError as e:
-            print(f"[rewriter] JSON parse error: {e}")
-            # If audit pass failed but first pass succeeded, use first pass
-            if 'parsed' in dir():
-                for j, rewritten_article in enumerate(parsed):
+            print(f"[writer] JSON parse error: {e}")
+            if 'parsed' in locals():
+                for j, written_article in enumerate(parsed):
                     if j < len(batch):
-                        rewritten_article["fingerprint"] = batch[j].get("fingerprint", "")
-                        rewritten_article["trending"] = batch[j].get("trending", False)
+                        written_article["fingerprint"] = batch[j].get("fingerprint", "")
+                        written_article["trending"] = batch[j].get("trending", False)
                 rewritten.extend(parsed)
-                print(f"[rewriter]   Using pass 1 results (audit parse failed)")
+                print(f"[writer]   Using pass 1 results (audit parse failed)")
         except Exception as e:
-            print(f"[rewriter] Error: {e}")
+            print(f"[writer] Error: {e}")
             import traceback
             traceback.print_exc()
 
     return rewritten
-
-
-if __name__ == "__main__":
-    # Test with sample data
-    sample = [
-        {
-            "title": "Suomen hallitus päätti uusista toimista",
-            "description": "Hallitus päätti tänään useista uusista toimenpiteistä.",
-            "link": "https://example.com/1",
-            "published": "2025-03-15T10:00:00+00:00",
-            "source": "Yle Uutiset",
-            "language": "fi",
-        }
-    ]
-    result = rewrite_articles(sample)
-    print(json.dumps(result, indent=2, ensure_ascii=False))
