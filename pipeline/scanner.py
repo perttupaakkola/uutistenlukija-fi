@@ -195,6 +195,7 @@ def fetch_feed(feed_info: dict) -> List[Dict]:
                 "published": pub_date.isoformat(),
                 "source": feed_info["name"],
                 "language": feed_info.get("language", "fi"),
+                "category_hint": feed_info.get("category_hint"),
                 "fingerprint": _fingerprint(title),
             })
     except Exception as e:
@@ -243,29 +244,93 @@ def scan_all_feeds() -> List[Dict]:
 
     # Category-aware selection: ensure all 7 categories get representation
     CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
-    CATEGORY_KEYWORDS = {
-        "Urheilu": ["urheilu", "sport", "liiga", "olymp", "jalkapallo", "jääkiekko", "f1", "formula", "tennis", "golf"],
-        "Tiede": ["tiede", "tutkimus", "science", "research", "ilmasto", "avaruus", "terveys", "health"],
-        "Kulttuuri": ["kulttuuri", "taide", "musiikk", "elokuva", "teatteri", "kirja", "culture", "art", "music"],
-        "Teknologia": ["teknologia", "tech", "ai", "tekoäly", "ohjelmisto", "cyber", "digital", "apple", "google", "microsoft"],
-        "Talous": ["talous", "ekonom", "osake", "pörssi", "business", "economy", "market", "finance", "kauppa"],
-        "Ulkomaat": ["ulkomaa", "world", "international", "usa", "eu ", "eurooppa", "kiina", "venäjä", "nato"],
-        "Kotimaa": ["suomi", "helsinki", "tampere", "turku", "eduskunta", "hallitus"],
+    CATEGORY_PATTERNS = {
+        "Urheilu": [
+            r"\burheilu\b", r"\bsport\b", r"\bliiga\b", r"\bolymp", r"\bjalkapallo\b",
+            r"\bjääkiekko\b", r"\bnhl\b", r"\bf1\b", r"\bformula\b", r"\btennis\b",
+            r"\bgolf\b", r"\bkoripallo\b", r"\bsalibandy\b", r"\bhiihto\b",
+        ],
+        "Tiede": [
+            r"\btiede\w*", r"\btutkimus\w*", r"\bscience\b", r"\bresearch\b",
+            r"\bilmasto\w*", r"\bavaruus\w*", r"\bterveys\w*", r"\bhealth\b",
+            r"\blääketied", r"\byliopisto\w*", r"\btutkija\w*",
+        ],
+        "Kulttuuri": [
+            r"\bkulttuuri\w*", r"\btaide\w*", r"\bmusiik\w*", r"\belokuva\w*",
+            r"\bteatteri\w*", r"\bkirja\w*", r"\bculture\b", r"\bart\b", r"\bmusic\b",
+            r"\bartisti\w*", r"\bkonsertti\w*",
+        ],
+        "Teknologia": [
+            r"\bteknologia\w*", r"\btech\b", r"\btekoäly\b", r"\bai\b", r"\bohjelmisto\w*",
+            r"\bcyber\b", r"\bdigital\w*", r"\bapple\b", r"\bgoogle\b", r"\bmicrosoft\b",
+            r"\bnvidia\b", r"\bopenai\b", r"\bstartup\b", r"\bsiru\w*", r"\bpuhelin\w*",
+            r"\bsovellus\w*", r"\balgoritmi\w*",
+        ],
+        "Talous": [
+            r"\btalous\w*", r"\bekonom\w*", r"\bosake\w*", r"\bpörssi\w*", r"\bbusiness\b",
+            r"\beconomy\b", r"\bmarket\w*", r"\bfinance\b", r"\bkauppa\w*", r"\binflaatio\w*",
+            r"\bkorko\w*", r"\btyöllisyys\w*", r"\byritys\w*",
+        ],
+        "Ulkomaat": [
+            r"\bulkomaa\w*", r"\bworld\b", r"\binternational\b", r"\busa\b", r"\beurooppa\w*",
+            r"\bkiina\w*", r"\bvenäjä\w*", r"\bnato\b", r"\bukraina\w*", r"\bgaza\w*",
+            r"\blähi-itä\b", r"\btrump\b", r"\bxi\b",
+        ],
+        "Kotimaa": [
+            r"\bsuomi\b", r"\bhelsinki\w*", r"\btampere\w*", r"\bturku\w*", r"\beduskunta\w*",
+            r"\bhallitus\w*", r"\bpoliisi\w*", r"\bkäräjäoikeus\w*", r"\bhyvinvointialue\w*",
+            r"\bpäiväkoti\w*", r"\bkoulu\w*", r"\bkunnan\b",
+        ],
+    }
+    SOURCE_CATEGORY_HINTS = {
+        "Yle Urheilu": "Urheilu",
+        "IS Urheilu": "Urheilu",
+        "Tekniikka & Talous": "Teknologia",
+        "BBC Technology": "Teknologia",
+        "TechCrunch": "Teknologia",
+        "Ars Technica": "Teknologia",
+        "Hacker News Best": "Teknologia",
+        "BBC Science": "Tiede",
+        "Reuters World": "Ulkomaat",
+        "BBC World": "Ulkomaat",
+        "AP News": "Ulkomaat",
+        "The Guardian World": "Ulkomaat",
+        "Der Spiegel International": "Ulkomaat",
+        "Kauppalehti": "Talous",
+        "Taloussanomat": "Talous",
     }
 
+    def _score_category(text: str, category: str) -> int:
+        score = 0
+        for pattern in CATEGORY_PATTERNS.get(category, []):
+            if re.search(pattern, text):
+                score += 1
+        return score
+
     def _guess_category(article):
-        """Guess category from source hint, title, or description."""
+        """Guess category from source hint, source defaults, and boundary-aware keyword scoring."""
         hint = article.get("category_hint", "")
         if hint in CATEGORIES:
             return hint
+
+        source = article.get("source", "")
+        source_default = SOURCE_CATEGORY_HINTS.get(source)
         text = (article.get("title", "") + " " + article.get("description", "")).lower()
-        for cat, keywords in CATEGORY_KEYWORDS.items():
-            if any(kw in text for kw in keywords):
-                return cat
-        # English sources default to Ulkomaat
+        scores = {cat: _score_category(text, cat) for cat in CATEGORIES}
+
+        if source_default:
+            scores[source_default] += 3
+
+        if article.get("language") == "en" and not source_default:
+            scores["Ulkomaat"] += 2
+
+        best_category = max(scores, key=scores.get)
+        if scores[best_category] > 0:
+            return best_category
+
         if article.get("language") == "en":
             return "Ulkomaat"
-        return "Kotimaa"
+        return source_default or "Kotimaa"
 
     # First pass: pick at least 1 article per category
     selected = []
