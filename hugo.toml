@@ -4,11 +4,12 @@ title = 'Uutistenlukija'
 theme = 'uutistenlukija'
 defaultContentLanguage = 'fi'
 enableRobotsTXT = true
+disableHugoGeneratorInject = true
 [pagination]
   pagerSize = 20
 
 [params]
-  description = "Tekoälyn kuratoima uutiskooste suomeksi"
+  description = "Päivän tärkeimmät uutiset"
   author = "Uutistenlukija"
   dateFormat = "2.1.2006"
 
@@ -42,7 +43,7 @@ enableRobotsTXT = true
   [[menu.main]]
     name = "Päivän kooste"
     url = "/paivan-kooste/"
-    weight = 0
+    weight = -1
   [[menu.main]]
     name = "Kotimaa"
     url = "/categories/kotimaa/"
