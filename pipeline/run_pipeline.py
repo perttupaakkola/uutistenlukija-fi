@@ -81,12 +81,13 @@ def _append_metrics(metrics: dict):
         json.dump(existing, f, indent=2, ensure_ascii=False)
 
 
-def run(quick: bool = False, build_only: bool = False):
+def run(quick: bool = False, build_only: bool = False, max_articles: int = 0):
     """Execute the pipeline.
 
     Args:
         quick: If True, skip the Hugo build step (scan + rewrite + publish only).
         build_only: If True, only run the Hugo build (no scanning/rewriting).
+        max_articles: If > 0, limit to this many articles per run.
     """
     run_start = time.monotonic()
     metrics = {
@@ -155,6 +156,18 @@ def run(quick: bool = False, build_only: bool = False):
 
     if not articles:
         print("ℹ️  Kaikki artikkelit on jo julkaistu. Ei uusia artikkeleita.")
+        metrics["success"] = True
+        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
+        _append_metrics(metrics)
+        return True
+
+    # Apply max_articles limit after dedup
+    if max_articles > 0 and len(articles) > max_articles:
+        print(f"  📏 Rajoitetaan {len(articles)} → {max_articles} artikkelia (--max-articles)")
+        articles = articles[:max_articles]
+
+    if not articles:
+        print("ℹ️  Ei artikkeleita rajoituksen jälkeen.")
         metrics["success"] = True
         metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
         _append_metrics(metrics)
@@ -248,11 +261,17 @@ if __name__ == "__main__":
         action="store_true",
         help="Only run Hugo build (no scanning/rewriting)",
     )
+    parser.add_argument(
+        "--max-articles",
+        type=int,
+        default=0,
+        help="Limit to N articles per run (0 = unlimited)",
+    )
     args = parser.parse_args()
 
     if args.quick and args.build_only:
         print("❌ Cannot use --quick and --build-only together.")
         sys.exit(1)
 
-    success = run(quick=args.quick, build_only=args.build_only)
+    success = run(quick=args.quick, build_only=args.build_only, max_articles=args.max_articles)
     sys.exit(0 if success else 1)

@@ -20,7 +20,7 @@ echo "=== Auto-publish started at $(date -u) ===" | tee -a "$LOG_FILE"
 # Run pipeline (scan + rewrite + publish + build)
 echo "[1/3] Running pipeline..." | tee -a "$LOG_FILE"
 cd "$PIPELINE_DIR"
-python3 run_pipeline.py 2>&1 | tee -a "$LOG_FILE"
+python3 run_pipeline.py --max-articles 1 2>&1 | tee -a "$LOG_FILE"
 PIPELINE_EXIT=${PIPESTATUS[0]}
 
 if [ "$PIPELINE_EXIT" -ne 0 ]; then
