@@ -1,5 +1,6 @@
 ---
 title: "Hoitajainformaation vastustaja tuomittiin maksamaan tuhansia euroja"
+description: "Kangasalla sijaitsevassa sairaalassa todistettiin tapaus, jossa 73-vuotiaan naisen hoitoa ei ollut toteutettu asianmukaisesti."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Kotimaa

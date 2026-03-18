@@ -1,5 +1,6 @@
 ---
 title: "Viikonloppuna jopa 14 astetta – lauha ilma leviää koko maahan"
+description: "Lauha ilma valtaa Suomen. Loppuviikolla lämpötila kipuaa etelässä 14 asteeseen Forecan ennusteen mukaan."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Asteroidilöydös sisältää elämän perusaineet"
+description: "Tutkimukset ovat osoittaneet, että asteroidista on löytynyt elämän perustavanlaatuiset molekyylit, jotka muodostavat DNA:n ja RNA:n rakennuspalikoita."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Suomalaisyritys kehitti tavan tuottaa vetyä ilman sähköverkkoa"
+description: "Suomalainen Zun-H on kehittänyt järjestelmän, joka tuottaa uusiutuvaa vetyä ilman sähköverkkoa tai ulkoista sähkönsyöttöä."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Teknologia

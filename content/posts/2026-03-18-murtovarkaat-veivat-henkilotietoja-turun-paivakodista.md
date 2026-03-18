@@ -1,5 +1,6 @@
 ---
 title: "Murtovarkaat veivät henkilötietoja Turun päiväkodista"
+description: "Turun kaupunki tiedottaa, että käytöstä poistettuun Kaerlan päiväkotikiinteistöön on murtauduttu. Murto tapahtui 6.–11. maaliskuuta välisenä aikana."
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Kotimaa

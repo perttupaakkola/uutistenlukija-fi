@@ -1,5 +1,6 @@
 ---
 title: "Trump turhautui liittolaisiinsa Hormuzinsalmen kriisistä – Yhdysvaltain suurlähetystöä Bagdadissa vastaan hyökättiin"
+description: "Yhdysvaltain presidentti Donald Trump arvosteli eurooppalaisia liittolaisiaan näiden kieltäydyttyä avustamasta Hormuzinsalmen avaamisessa."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Tutkija: lestadiolaiset ohittivat ansioituneimman ehdokkaan kirkkoherran valinnassa"
+description: "Kirkkoherran valinta on herättänyt vilkasta keskustelua sen jälkeen, kun kirkkovaltuusto valitsi tehtävään miehen, vaikka tuomiokapituli oli todennut"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

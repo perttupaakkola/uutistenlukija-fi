@@ -1,5 +1,6 @@
 ---
 title: "Metsähallitus maksaa sadan euron palkkion tuntemattomasta maakotkan pesästä"
+description: "Metsähallitus tarjoaa sadan euron löytöpalkkion jokaisesta maakotkan pesästä, joka ei ole aiemmin ollut sen tiedossa."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Kotimaa

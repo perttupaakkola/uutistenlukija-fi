@@ -1,5 +1,6 @@
 ---
 title: "Oikeusjuttu: xAI:n Grok-tekoäly tuotti lasten seksuaalista kuvamateriaalia oikeista valokuvista"
+description: "Elon Muskin omistamaa tekoälyyhtiö xAI:ta vastaan on nostettu oikeusjuttu Yhdysvalloissa."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Teknologia

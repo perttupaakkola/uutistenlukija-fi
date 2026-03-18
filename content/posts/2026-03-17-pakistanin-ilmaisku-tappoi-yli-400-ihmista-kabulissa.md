@@ -1,5 +1,6 @@
 ---
 title: "Pakistanin ilmaisku tappoi yli 400 ihmistä Kabulissa"
+description: "Pakistanin armeija teki ilmaiskun huumevierotusklinikalle Kabulissa Afganistanissa. Iskussa kuoli yli 400 ihmistä."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Ulkomaat

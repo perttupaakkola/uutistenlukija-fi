@@ -1,5 +1,6 @@
 ---
 title: "O'Sullivan 50 vuotta ja yhä pelaamassa: \"Jos selviän tästä, se ylittää kaiken muun\""
+description: "Snookerin kaikkien aikojen menestyneimpiin pelaajiin kuuluva Ronnie O'Sullivan täytti joulukuussa 50 vuotta, mutta lopettaminen ei ole mielessä."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Urheilu

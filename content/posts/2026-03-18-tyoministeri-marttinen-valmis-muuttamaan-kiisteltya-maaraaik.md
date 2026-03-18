@@ -1,5 +1,6 @@
 ---
 title: "Työministeri Marttinen valmis muuttamaan kiisteltyä määräaikalakiesitystä"
+description: "Työministeri Matias Marttinen on valmis tekemään muutoksia lakiesitykseen, joka helpottaisi määräaikaisten työsuhteiden solmimista."
 date: 2026-03-18T00:24:03.547709+00:00
 categories:
   - Kotimaa

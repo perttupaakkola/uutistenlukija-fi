@@ -1,5 +1,6 @@
 ---
 title: "Nothingin toimitusjohtaja Carl Pei: Tekoälyagentit voivat muuttaa sovellusten roolia älypuhelimissa"
+description: "Nothingin toimitusjohtaja Carl Pei arvioi, että tulevaisuudessa sovellukset saattavat vähentyä merkittävästi älypuhelimista, kun keinoälyagentit ottavat"
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Teknologia

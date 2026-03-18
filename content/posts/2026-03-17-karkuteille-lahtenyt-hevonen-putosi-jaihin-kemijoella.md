@@ -1,5 +1,6 @@
 ---
 title: "Karkuteille lähtenyt hevonen putosi jäihin Kemijoella"
+description: "Kemijoen jäille päätynyt hevonen aiheutti pelastusoperaation, kun eläin putosi heikkojen jäiden läpi jokeen."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Kotimaa

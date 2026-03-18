@@ -1,5 +1,6 @@
 ---
 title: "Saksalaisturisti vaatii yli 20 miljoonan dollarin korvauksia New Yorkin lomastaan"
+description: "Saksalainen matkailija on nostanut kolme erillistä kannetta New Yorkissa kokemistaan pettymyksistä."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Ulkomaat

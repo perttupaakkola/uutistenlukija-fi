@@ -1,5 +1,6 @@
 ---
 title: "Romaniyhdistys arvioi Vigeliuksen puheenvuorot loukkaaviksi"
+description: "Suomen Romaniyhdistyksen puheenjohtaja Päivi Majaniemi ei ymmärrä kansanedustaja Joakim Vigeliuksen kritiikkiä hyvinvointialueiden päätöksiä kohtaan."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa

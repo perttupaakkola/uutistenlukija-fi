@@ -1,5 +1,6 @@
 ---
 title: "SM-liigakauden päätös paljasti yllättäviä lukuja sarjan häntäpäästä"
+description: "SM-liigan runkosarjan loppuvaihe nosti esiin häntäpään joukkueiden heikkoja tilastoja. Erityisesti yhden seuran luvut herättivät ihmetystä."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Urheilu

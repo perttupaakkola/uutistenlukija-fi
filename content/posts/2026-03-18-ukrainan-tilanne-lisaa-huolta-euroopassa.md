@@ -1,5 +1,6 @@
 ---
 title: "Ukrainan tilanne lisää huolta Euroopassa"
+description: "Ukrainan ja lähialueiden turvallisuustilanne aiheuttaa edelleen huolta Euroopan tasolla."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Ulkomaat

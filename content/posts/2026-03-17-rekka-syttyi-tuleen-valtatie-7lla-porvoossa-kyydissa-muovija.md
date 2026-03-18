@@ -1,5 +1,6 @@
 ---
 title: "Rekka syttyi tuleen valtatie 7:llä Porvoossa – kyydissä muovijätettä"
+description: "Rekka roihusi ilmiliekeissä valtatie 7:llä Porvoossa maanantai-iltana."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Kotimaa

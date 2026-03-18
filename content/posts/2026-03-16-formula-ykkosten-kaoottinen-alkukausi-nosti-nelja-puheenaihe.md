@@ -1,5 +1,6 @@
 ---
 title: "Formula ykkösten kaoottinen alkukausi nosti neljä puheenaihetta pintaan"
+description: "Formula ykkösten kausi 2026 on alkanut sekavasti. Useilla talleilla on ollut vaikeuksia saada autojaan edes maaliin, ja keskeytyksiä on nähty paljon."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu

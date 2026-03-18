@@ -1,5 +1,6 @@
 ---
 title: "STTK: keskipalkkaisten ostovoima ei ole toipunut"
+description: "Keski- ja pienipalkkaisten ostovoima on edelleen heikolla tasolla."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Talous

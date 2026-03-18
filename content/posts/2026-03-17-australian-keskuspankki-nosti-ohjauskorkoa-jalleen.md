@@ -1,5 +1,6 @@
 ---
 title: "Australian keskuspankki nosti ohjauskorkoa jälleen"
+description: "Australian keskuspankki nosti ohjauskorkoaan 25 peruspisteellä 4,1 prosenttiin. Kyseessä on jo kahdestoista koronnostopäätös vuoden 2022 toukokuun jälkeen."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Talous

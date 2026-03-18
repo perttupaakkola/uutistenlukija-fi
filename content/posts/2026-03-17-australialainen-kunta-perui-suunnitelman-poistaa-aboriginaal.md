@@ -1,5 +1,6 @@
 ---
 title: "Australialainen kunta perui suunnitelman poistaa aboriginaalien liput"
+description: "Uuden Etelä-Walesin osavaltiossa sijaitseva Federation Council luopui suunnitelmastaan kieltää aboriginaalien ja Torres Strait Islander -kansojen lippujen"
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Ulkomaat

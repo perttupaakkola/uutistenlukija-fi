@@ -1,5 +1,6 @@
 ---
 title: "Poika tuomittiin pahoinpitelystä kun juotti kielloista huolimatta vettä tajuilematomalle äidilleen"
+description: "Kanta-Hämeen käräjäoikeus on tuominnut miehen pahoinpitelystä sattumasta, jossa hän juotti sairaalassa maaliskuussa 2023 vettä kielloista huolimatta"
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa

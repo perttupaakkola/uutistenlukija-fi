@@ -1,5 +1,6 @@
 ---
 title: "Kymmenhenkinen matkaseura törmäsi yllättävään Finnairin sääntöön lennolla"
+description: "Helsingin Sanomat kertoi tapauksesta, jossa kymmenen matkailijaa osti omat paikkansa Finnairilta."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Talous

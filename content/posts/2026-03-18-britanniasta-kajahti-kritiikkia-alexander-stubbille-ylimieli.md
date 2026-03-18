@@ -1,5 +1,6 @@
 ---
 title: "Britanniasta kajahti kritiikkiä Alexander Stubbille – ”Ylimielinen”"
+description: "Presidentti Alexander Stubb kommentoi Lontoossa Ison-Britannian EU-eron vaikutuksia, vertaamalla brexitin ajattelutapaa ihmisen amputointiin ilman"
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Ulkomaat

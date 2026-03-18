@@ -1,5 +1,6 @@
 ---
 title: "Häkkänen Hormuzinsalmen operaatiosta: Suomella ei välttämättä resursseja osallistua"
+description: "Puolustusministeri Antti Häkkänen pitää Suomen osallistumista mahdolliseen Hormuzinsalmen merenkulun turvaamisoperaatioon kaukaisena asiana."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Kotimaa

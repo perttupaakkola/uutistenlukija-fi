@@ -1,5 +1,6 @@
 ---
 title: "Patreonin johtaja vaatii oikeudenmukaista korvausta tekoälylle"
+description: "Patreonin toimitusjohtaja Jack Conte on arvostellut tekoälyteknologioiden käyttöä ja ehdottaa, että sisältöä tuottavat luojat tulisi ottaa mukaan"
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Tekoala

@@ -1,5 +1,6 @@
 ---
 title: "Lääkärin kriittiset sanat hyvinvointialueen ostopalveluista johtivat kuulemiseen"
+description: "Lääkäri Mikko Aho on kritisoinut hyvinvointialueiden ostopalvelujen toteutusta ja läpinäkyvyyttä."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Tiede

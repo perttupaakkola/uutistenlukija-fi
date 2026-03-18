@@ -1,5 +1,6 @@
 ---
 title: "Harvinainen mielenosoitus Kuubassa – ihmiset vaativat sähköä ja ruokaa"
+description: "Kuuban pääkaupungissa Havannassa puhkesi viikonloppuna harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat toimivaa sähköverkkoa ja ruoan"
 date: 2026-03-15T12:47:00+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Iso-Britannian hiukkasfysiikan saavutukset uhkaavat joutua leikkurin alle"
+description: "Tutkimusprojekteja uhkaa rahoituksen niukkuus, mikä saattaa hidastaa merkittäviä edistysaskeleita kosmoksen ymmärtämisessä."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Tiede

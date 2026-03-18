@@ -1,5 +1,6 @@
 ---
 title: "Teknologiateollisuuden kysely: vientiyritysten näkymät yllättävän valoisat sodasta huolimatta"
+description: "Suomalaiset vientiyritykset raportoivat odotettua paremmista luvuista, selviää Teknologiateollisuuden tuoreesta kyselystä."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Talous

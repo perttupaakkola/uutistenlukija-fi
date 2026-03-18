@@ -1,5 +1,6 @@
 ---
 title: "Yhdysvaltalainen tuomari esti RFK Jr:n rokotussuositusten muutokset"
+description: "Yhdysvaltalainen liittovaltion tuomari on estänyt terveysministeri Robert F. Kennedy Jr:n ajaman muutoksen maan rokotussuosituksiin."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Ulkomaat

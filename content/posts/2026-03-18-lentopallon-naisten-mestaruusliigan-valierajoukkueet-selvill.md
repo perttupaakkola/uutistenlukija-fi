@@ -1,5 +1,6 @@
 ---
 title: "Lentopallon naisten mestaruusliigan välieräjoukkueet selvillä puhtaasti kolmella voitolla"
+description: "Naisten lentopallon mestaruusliigan välieräjoukkueet ovat selvinneet, koska jokainen joukkue voitti kaikki kolme otteluaan runkosarjassa."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Urheilu

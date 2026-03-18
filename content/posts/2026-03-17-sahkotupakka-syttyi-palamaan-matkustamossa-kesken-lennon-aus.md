@@ -1,5 +1,6 @@
 ---
 title: "Sähkötupakka syttyi palamaan matkustamossa kesken lennon Australiassa"
+description: "Virgin Australian lento Brisbanesta Melbourneen joutui hälytystilanteeseen, kun matkustajan käsimatkatavaroissa ollut sähkötupakka syttyi palamaan"
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

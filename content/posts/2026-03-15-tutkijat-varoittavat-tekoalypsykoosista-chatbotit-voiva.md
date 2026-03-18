@@ -1,5 +1,6 @@
 ---
 title: "Tutkijat varoittavat tekoälypsykoosista – chatbotit voivat ruokkia harhaista ajattelua"
+description: "Tutkijat ovat nostaneet esiin huolestuttavan ilmiön, jota he kutsuvat tekoälypsykoosiksi."
 date: 2026-03-15T12:43:00+00:00
 categories:
   - Teknologia

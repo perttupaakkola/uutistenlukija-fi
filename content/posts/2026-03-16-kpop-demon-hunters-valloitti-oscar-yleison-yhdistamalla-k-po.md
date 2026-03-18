@@ -1,5 +1,6 @@
 ---
 title: "KPop Demon Hunters valloitti Oscar-yleisön yhdistämällä k-popin ja demonien metsästyksen"
+description: "Oscar-palkittu animaatioelokuva KPop Demon Hunters on kerännyt yleisöä ympäri maailmaa erikoisella konseptillaan."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri

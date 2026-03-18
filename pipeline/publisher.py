@@ -28,6 +28,38 @@ def _make_slug(title: str, max_length: int = 60) -> str:
     return slug[:max_length].rstrip('-')
 
 
+
+
+def _generate_description(title: str, content: str, max_chars: int = 155) -> str:
+    """Generate a Finnish meta description from article title and content.
+    
+    Targets 120-158 chars. Uses first sentence(s) of content body,
+    stripped of markdown, ending at a sentence boundary.
+    """
+    # Strip markdown formatting
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', content)  # links
+    text = re.sub(r'[#*_`]', '', text)  # markdown chars
+    text = text.strip()
+
+    if not text:
+        return ""
+
+    # Try to build description from complete sentences
+    sentences = re.split(r'(?<=[.!?])\s+', text[:600])
+    desc = ""
+    for s in sentences:
+        candidate = (desc + " " + s).strip() if desc else s
+        if len(candidate) <= max_chars:
+            desc = candidate
+        else:
+            break
+
+    # Fallback: truncate at word boundary
+    if not desc:
+        desc = text[:max_chars].rsplit(' ', 1)[0]
+
+    return desc
+
 def _article_to_markdown(article: Dict, date: str) -> str:
     """Convert article to Hugo markdown with front matter."""
     title = article.get("title", "Untitled").replace('"', '\\"')
@@ -45,6 +77,11 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_credit_line = f'\nimage_credit: "{image_credit}"' if image_credit else ""
     trending_line = "\ntrending: true" if trending else ""
 
+    # Generate meta description (120-158 chars, Finnish)
+    description = article.get("description", "") or _generate_description(title, content)
+    description = description.replace('"', '\\"') if description else ""
+    description_line = f'\ndescription: "{description}"' if description else ""
+
     # Build front matter — no source_name or source_url
     front_matter = f"""---
 title: "{title}"
@@ -55,7 +92,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{image_line}{image_credit_line}{trending_line}
+author_image: "{writer['image']}"{image_line}{image_credit_line}{trending_line}{description_line}
 draft: false
 ---
 

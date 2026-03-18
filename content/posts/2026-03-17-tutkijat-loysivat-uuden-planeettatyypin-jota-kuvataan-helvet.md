@@ -1,5 +1,6 @@
 ---
 title: "Tutkijat löysivät uuden planeettatyypin, jota kuvataan helvetilliseksi"
+description: "Astronomit ovat tunnistaneet aiemmin tuntemattoman planeettatyypin."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Tiede

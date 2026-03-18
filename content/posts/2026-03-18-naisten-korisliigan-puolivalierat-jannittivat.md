@@ -1,5 +1,6 @@
 ---
 title: "Naisten Korisliigan puolivälierät jännittivät"
+description: "Naisten Korisliigan puolivälierissä pelattiin yhteensä viisi ottelua."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa

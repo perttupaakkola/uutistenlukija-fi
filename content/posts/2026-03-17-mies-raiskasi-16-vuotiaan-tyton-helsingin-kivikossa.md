@@ -1,5 +1,6 @@
 ---
 title: "Mies raiskasi 16-vuotiaan tytön Helsingin Kivikossa"
+description: "19-vuotias Elias Mahad Aden raiskasi törkeästi 16-vuotiaan tytön Helsingin Kivikossa lokakuussa 2023."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Kotimaa

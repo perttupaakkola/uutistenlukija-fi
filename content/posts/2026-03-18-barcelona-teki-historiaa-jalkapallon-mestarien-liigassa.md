@@ -1,5 +1,6 @@
 ---
 title: "Barcelona teki historiaa jalkapallon Mestarien liigassa"
+description: "Ottelun lopputulos herätti suurta kohua, ja sosiaalisessa mediassa käytiinkin aktiivista keskustelua."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Urheilu

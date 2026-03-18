@@ -1,5 +1,6 @@
 ---
 title: "Jyväskylässä keskustelut kasvomaskeista kouluissa jatkuvat"
+description: "Kaupunkien edustajat eivät ole tehneet lopullisia päätöksiä kasvomaskeista kouluissa."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Kotimaa

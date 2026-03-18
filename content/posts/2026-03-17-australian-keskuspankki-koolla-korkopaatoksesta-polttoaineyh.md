@@ -1,5 +1,6 @@
 ---
 title: "Australian keskuspankki koolla korkopäätöksestä – polttoaineyhtiöt kutsuttu kuultaviksi hinnoista"
+description: "Australian keskuspankki RBA kokoontuu tänään päättämään maan ohjauskorosta."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Presidentti Stubb työvierailulla Lontoossa"
+description: "Tasavallan presidentti Alexander Stubb matkustaa maanantaina työvierailulle Lontooseen. Vierailu kestää kaksi päivää, 16.–17. maaliskuuta."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kotimaa

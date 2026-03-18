@@ -1,5 +1,6 @@
 ---
 title: "Sairaalalääkäri kutsuttiin kuulemiseen julkisesta kritiikistä – \"En rikkonut vaitiolovelvollisuutta\""
+description: "Kardiologi Mikko Aho sai kuulemiskirjeen kahden viikon varoitusajalla sen jälkeen, kun hän kommentoi kesäkuun alussa julkisuudessa hyvinvointialueen"
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa

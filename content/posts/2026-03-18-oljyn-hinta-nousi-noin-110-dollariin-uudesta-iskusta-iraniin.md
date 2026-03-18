@@ -1,5 +1,6 @@
 ---
 title: "Öljyn hinta nousi noin 110 dollariin uudesta iskusta Iraniin"
+description: "Öljyn hinta nousi päivän aikana noin 110 dollarin tasolle. Nousua vauhditti uusi hyökkäys Iraniin, joka synnytti huolta alueen vakaudesta."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Talous

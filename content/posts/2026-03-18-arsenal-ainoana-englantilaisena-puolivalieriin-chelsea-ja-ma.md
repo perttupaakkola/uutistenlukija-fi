@@ -1,5 +1,6 @@
 ---
 title: "Arsenal ainoana englantilaisena puolivälieriin – Chelsea ja Manchester City putosivat"
+description: "Jalkapallon Mestarien liigan puolivälieräpaikat täyttyivät tiistaina ja keskiviikkona."
 date: 2026-03-18T00:24:03.547709+00:00
 categories:
   - Urheilu

@@ -1,5 +1,6 @@
 ---
 title: "Varha siirsi 8 000 saatavaansa ulosottoon – väittää virheet olleen Postin toiminnassa"
+description: "Varha on siirtänyt 8 000 karhukirjettä ulosottoon."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa

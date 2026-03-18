@@ -1,5 +1,6 @@
 ---
 title: "TPS kaatui runkosarjan viimeisellä kierroksella – pudotuspelipaikka meni ensi kertaa sitten kevään 2013"
+description: "TPS hävisi lauantaina vieraskaukalossa Tapparalle, mikä varmisti, että joukkue sijoittui runkosarjassa kahden pisteen päähän viimeisestä playoff-viivasta."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Urheilu

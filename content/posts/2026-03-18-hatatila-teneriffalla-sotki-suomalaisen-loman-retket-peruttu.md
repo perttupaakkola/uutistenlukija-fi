@@ -1,5 +1,6 @@
 ---
 title: "Hätätila Teneriffalla sotki suomalaisen loman – retket peruttu, maanjäristysten jälkijäristykset pelottavat"
+description: "Kanariansaarilla lomaileva Iina-Katariina Tourunen joutui muuttamaan lomasuunnitelmansa, kun Teneriffalle julistettiin hätätila sunnuntaina."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Ulkomaat

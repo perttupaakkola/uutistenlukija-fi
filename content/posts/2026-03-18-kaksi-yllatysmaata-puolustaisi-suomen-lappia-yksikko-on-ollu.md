@@ -1,5 +1,6 @@
 ---
 title: "Kaksi yllätysmaata puolustaisi Suomen Lappia – Yksikkö on ollut positiivinen yllätys"
+description: "Naton uusimmat sotaharjoitukset Lapissa ovat herättäneet huomattavaa huomiota."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Ulkomailla

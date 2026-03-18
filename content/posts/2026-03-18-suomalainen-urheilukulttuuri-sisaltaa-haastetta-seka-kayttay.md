@@ -1,5 +1,6 @@
 ---
 title: "Suomalainen urheilukulttuuri sisältää haastetta sekä käyttäytymistä"
+description: "Helsingin yliopiston tutkimuksen mukaan suomalaisessa urheilussa esiintyy huutamista, kontrollointia ja tavaroiden paiskomista."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Urheilu

@@ -1,5 +1,6 @@
 ---
 title: "Väitetyt italialaisten tarkka-ampujien osallisuus Sarajevo-piirin aikana"
+description: "Uusi kirja paljastaa, että Sarajevo-piirin aikana tarkka-ampujajoukkioihin kuului italialaisia. Heitä oli lähetetty Bosniaan osana laajempaa strategiaa."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa

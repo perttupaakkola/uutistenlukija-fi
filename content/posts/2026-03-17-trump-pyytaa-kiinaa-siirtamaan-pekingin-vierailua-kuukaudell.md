@@ -1,5 +1,6 @@
 ---
 title: "Trump pyytää Kiinaa siirtämään Pekingin-vierailua kuukaudella Iranin sodan takia"
+description: "Yhdysvaltain presidentti Donald Trump on pyytänyt Kiinaa lykkäämään suunniteltua Pekingin-vierailuaan noin kuukaudella. Syyksi Trump ilmoitti Iranin sodan."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

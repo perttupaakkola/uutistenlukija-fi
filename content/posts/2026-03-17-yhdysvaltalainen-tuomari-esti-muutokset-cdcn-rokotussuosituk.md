@@ -1,5 +1,6 @@
 ---
 title: "Yhdysvaltalainen tuomari esti muutokset CDC:n rokotussuosituksiin"
+description: "Yhdysvaltalainen liittovaltion tuomari on estänyt terveysministeri Robert F."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

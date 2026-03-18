@@ -1,5 +1,6 @@
 ---
 title: "Skotlanti liittyy ralliautoilun MM-sarjaan vuonna 2027"
+description: "Ralliautoilun MM-sarja saa uuden osakilpailun, kun Skotlanti tulee mukaan kalenteriin vuonna 2027. Kilpailu ajetaan Aberdeenin ympäristössä."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Urheilu

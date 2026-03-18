@@ -1,5 +1,6 @@
 ---
 title: "Lämpöennätys mahdollinen loppuviikon säänvaihteluihin"
+description: "Loppuviikosta Suomessa odotetaan vaihtelevia sääolosuhteita, ja lämpötilat voivat nousta jopa 14 asteeseen."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Tiede

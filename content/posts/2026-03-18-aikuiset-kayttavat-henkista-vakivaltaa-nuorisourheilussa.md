@@ -1,5 +1,6 @@
 ---
 title: "Aikuiset käyttävät henkistä väkivaltaa nuorisourheilussa"
+description: "Valmentaja voi huutamalla murskata nuoren itsetunnon. Helsingin yliopiston tutkimuksessa selvisi henkisen väkivallan yleisyys suomalaisessa urheilussa."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Urheilu

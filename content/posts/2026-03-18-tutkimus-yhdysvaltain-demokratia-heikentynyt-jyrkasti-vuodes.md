@@ -1,5 +1,6 @@
 ---
 title: "Tutkimus: Yhdysvaltain demokratia heikentynyt jyrkästi vuodessa"
+description: "Yhdysvallat on pudonnut 31 sijaa kansainvälisessä demokratiaindeksissä yhden vuoden aikana. Maa on nyt sijalla 51, kun se vuotta aiemmin oli sijalla 20."
 date: 2026-03-18T00:24:03.547709+00:00
 categories:
   - Ulkomaat

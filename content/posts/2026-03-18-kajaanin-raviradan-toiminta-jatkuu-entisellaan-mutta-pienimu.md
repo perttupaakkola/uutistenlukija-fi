@@ -1,5 +1,6 @@
 ---
 title: "Kajaanin raviradan toiminta jatkuu entisellään, mutta pienimuotoisempana"
+description: "Kajaanin raviradan osakeyhtiön hallitus päätti keskiviikkoiltana, että ravirata pysyy toiminnassa."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Kotimaa

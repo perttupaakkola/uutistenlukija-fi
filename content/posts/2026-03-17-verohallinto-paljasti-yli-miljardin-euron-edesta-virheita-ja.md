@@ -1,5 +1,6 @@
 ---
 title: "Verohallinto paljasti yli miljardin euron edestä virheitä ja väärinkäytöksiä"
+description: "Verohallinto havaitsi vuonna 2025 yli miljardin euron edestä virheitä ja väärinkäytöksiä verotuksessa. Summa on kaksinkertainen edellisvuoteen verrattuna."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Kotimaa

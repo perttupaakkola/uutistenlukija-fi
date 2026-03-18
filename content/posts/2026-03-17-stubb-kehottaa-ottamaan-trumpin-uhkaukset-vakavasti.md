@@ -1,5 +1,6 @@
 ---
 title: "Stubb kehottaa ottamaan Trumpin uhkaukset vakavasti"
+description: "Presidentti Alexander Stubb varoittaa Nato-liittolaisia vähättelemästä Donald Trumpin puheita."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Ulkomaat

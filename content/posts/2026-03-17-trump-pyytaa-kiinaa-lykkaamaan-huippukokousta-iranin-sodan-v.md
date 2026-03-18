@@ -1,5 +1,6 @@
 ---
 title: "Trump pyytää Kiinaa lykkäämään huippukokousta Iranin sodan vuoksi"
+description: "Yhdysvaltain presidentti Donald Trump kertoi maanantaina pyytäneensä Kiinaa siirtämään suunniteltua Pekingin-vierailuaan myöhemmäksi Iranin sodan takia."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

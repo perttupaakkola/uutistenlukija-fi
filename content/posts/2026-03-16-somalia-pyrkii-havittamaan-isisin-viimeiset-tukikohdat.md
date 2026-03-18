@@ -1,5 +1,6 @@
 ---
 title: "Somalia pyrkii hävittämään Isisin viimeiset tukikohdat"
+description: "Somalian hallitus ja sen liittolaiset ovat tehostaneet operaatioita äärijärjestö Isisiä vastaan maan syrjäisillä alueilla."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat

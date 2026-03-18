@@ -1,5 +1,6 @@
 ---
 title: "Golfautojen käyttö Kiinan kiertuetaistossa johtaa uusiin kokemuksiin"
+description: "Oliver Lindell valmistautuu ensi yönä alkavaan Hainanin golfturnaukseen. Turnauksen ensimmäisillä kahdella kierroksella on käytössä pakollinen golfauto."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Urheilu

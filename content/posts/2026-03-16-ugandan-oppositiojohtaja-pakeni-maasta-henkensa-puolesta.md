@@ -1,5 +1,6 @@
 ---
 title: "Ugandan oppositiojohtaja pakeni maasta henkensä puolesta"
+description: "Ugandan oppositiojohtaja kertoo paenneensa maasta, koska pelkäsi henkensä puolesta. Hän puhui julkisuuteen paljastamattomasta sijainnista."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Viking Gloryn matkustajat jumittuivat laivaan yön yli – päiväristeily venyi odottamatta"
+description: "Turusta lauantaina päiväristeilylle lähteneet matkustajat saivat yllätyksen, kun matka venyikin yön yli kestäväksi seikkailuksi."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

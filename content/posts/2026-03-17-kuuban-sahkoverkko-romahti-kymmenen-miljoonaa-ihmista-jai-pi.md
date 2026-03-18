@@ -1,5 +1,6 @@
 ---
 title: "Kuuban sähköverkko romahti – kymmenen miljoonaa ihmistä jäi pimeään"
+description: "Kuuban kansallinen sähköverkko romahti maanantaina. Maan verkonhaltija UNE ilmoitti, että noin kymmenen miljoonaa ihmistä jäi ilman sähköä."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

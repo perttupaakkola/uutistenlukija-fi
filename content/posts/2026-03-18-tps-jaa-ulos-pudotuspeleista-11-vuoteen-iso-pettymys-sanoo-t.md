@@ -1,5 +1,6 @@
 ---
 title: "TPS jää ulos pudotuspeleistä 11 vuoteen: 'Iso pettymys', sanoo toimitusjohtaja"
+description: "TPS:n toimitusjohtaja Aki Holma on ilmaissut tyytymättömyytensä seuran tämän kauden tulokseen. Joukkueen odotettiin olevan potentiaalinen playoff-joukkue."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Urheilu

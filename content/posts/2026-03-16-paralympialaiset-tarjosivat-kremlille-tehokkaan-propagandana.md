@@ -1,5 +1,6 @@
 ---
 title: "Paralympialaiset tarjosivat Kremlille tehokkaan propagandanäyttämön"
+description: "Venäjän vallanpitäjät onnistuivat hyödyntämään paralympialaisia omassa viestinnässään."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu

@@ -1,5 +1,6 @@
 ---
 title: "Wolt haastaa Epassin ja Edenredin henkilöstöetumarkkinalla"
+description: "Ruokalähettipalvelustaan tunnettu Wolt ilmoitti perjantaina tuovansa kesällä markkinoille Wolt Benefits -palvelun, joka tähtää suoraan Suomen"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Talous

@@ -1,5 +1,6 @@
 ---
 title: "Powell lupailee pysyvän Fedin johdossa tutkinnan ajan"
+description: "Federal Reserve -pankin pääjohtaja Jerome Powell ilmoitti aikovansa jatkaa tehtävässään tutkinnan ajan."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Talous, Kotimaa

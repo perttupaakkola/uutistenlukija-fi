@@ -1,5 +1,6 @@
 ---
 title: "Australian viranomainen: lapsiin kohdistuva hyväksikäyttömateriaali on rakenteellinen ongelma X-palvelussa"
+description: "Australian verkkoturvallisuusviranomainen eSafety on varoittanut Elon Muskin omistamaa X-palvelua lapsiin kohdistuvan seksuaalisen hyväksikäyttömateriaalin"
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Teknologia

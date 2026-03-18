@@ -1,5 +1,6 @@
 ---
 title: "Stubb kehottaa Nato-liittolaisia ottamaan Trumpin vaatimukset vakavasti"
+description: "Presidentti Alexander Stubb varoittaa Nato-maita suhtautumaan vakavasti Yhdysvaltain presidentti Donald Trumpin vaatimuksiin Hormuzinsalmesta."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

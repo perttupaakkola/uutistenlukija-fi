@@ -1,5 +1,6 @@
 ---
 title: "Cold Response -harjoitus testaa Naton valmiutta arktisella alueella"
+description: "Pohjois-Norjassa, Pohjois-Ruotsissa ja Suomen Lapissa käynnissä oleva Cold Response -sotaharjoitus on yksi Naton suurimmista tämän vuoden harjoituksista."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Stubb BBC:lle: Trumpilla ei ole oikeutta vedota Naton apuun"
+description: "Presidentti Alexander Stubb totesi BBC:n haastattelussa, ettei Yhdysvaltain presidentti Donald Trump voi vedota Naton yhteiseen puolustukseen Iranin sodan"
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Ulkomaat

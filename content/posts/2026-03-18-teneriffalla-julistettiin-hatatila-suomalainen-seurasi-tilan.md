@@ -1,5 +1,6 @@
 ---
 title: "Teneriffalla julistettiin hätätila, suomalainen seurasi tilanteen kehittymistä rauhallisesti"
+description: "Teneriffalla on julistettu hätätila vaikeiden sääriskiolosuhteiden vuoksi."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Kulttuuri

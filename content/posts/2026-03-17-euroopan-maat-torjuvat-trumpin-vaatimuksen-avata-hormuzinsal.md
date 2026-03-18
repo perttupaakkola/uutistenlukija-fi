@@ -1,5 +1,6 @@
 ---
 title: "Euroopan maat torjuvat Trumpin vaatimuksen avata Hormuzinsalmi"
+description: "Eurooppalaiset maat hylkäsivät maanantaina Yhdysvaltain presidentti Donald Trumpin vaatimuksen osallistua Hormuzinsalmen avaamiseen laivaliikenteelle."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Bondi Beachin ampujan perheenjäseniä uhattu tapolla – oikeus käsittelee nimien salaamista"
+description: "Sydneyn Bondi Beachilla tapahtuneen ampumisen epäillyn tekijän Naveed Akramin perheenjäsenet ovat saaneet tappouhkauksia joulukuun antisemitistisen iskun"
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Ulkomaat

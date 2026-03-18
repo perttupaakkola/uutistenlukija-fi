@@ -1,5 +1,6 @@
 ---
 title: "Korisliigan puolivälierät ratkesivat - vastakkainasettelut tiukkoina"
+description: "Keskiviikon ottelut päättivät Korisliigan puolivälierät."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa

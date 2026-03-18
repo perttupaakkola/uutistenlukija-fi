@@ -1,5 +1,6 @@
 ---
 title: "Keravalainen lotta vei jatkosodan sotilaiden sydämet viihdytyskiertueilla"
+description: "Jatkosodan viihdytyskiertueilla esiintyi monia tunnettuja taiteilijoita, kuten Tauno Palo ja muita aikakauden supertähtiä."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

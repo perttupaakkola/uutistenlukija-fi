@@ -1,5 +1,6 @@
 ---
 title: "Saksalaisturisti vaati yli 20 miljoonan dollarin korvauksia pettymyksestään New Yorkiin"
+description: "Saksalainen turisti on nostanut kolme erillistä kannetta New Yorkissa ja vaatii yhteensä yli 20 miljoonan dollarin korvauksia epäonnistuneeksi kokemastaan"
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

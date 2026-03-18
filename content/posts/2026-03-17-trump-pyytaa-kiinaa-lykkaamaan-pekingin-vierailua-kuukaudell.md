@@ -1,5 +1,6 @@
 ---
 title: "Trump pyytää Kiinaa lykkäämään Pekingin-vierailua kuukaudella Iranin sodan vuoksi"
+description: "Yhdysvaltain presidentti Donald Trump on pyytänyt Kiinan presidenttiä Xi Jinpingiä siirtämään suunniteltua Pekingin-huippukokousta noin kuukaudella."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Ulkomaat

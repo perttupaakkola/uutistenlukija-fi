@@ -1,5 +1,6 @@
 ---
 title: "Antonelli voittoon Kiinan GP:ssä – historian toiseksi nuorin F1-kilpailun voittaja"
+description: "Mercedeksen italialainen kuljettaja Kimi Antonelli saavutti sunnuntaina uransa ensimmäisen formula ykkösten osakilpailuvoiton Kiinan GP:ssä Shanghain radalla."
 date: 2026-03-15T12:40:00+00:00
 categories:
   - Urheilu

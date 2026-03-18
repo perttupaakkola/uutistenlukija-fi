@@ -1,5 +1,6 @@
 ---
 title: "Jyväskylässä keskustelu kasvot peittävien asusteiden koulukiellosta jakaa valtuutettuja"
+description: "Jyväskylässä on herännyt keskustelu kasvot peittävien asusteiden mahdollisesta kiellosta kouluissa. Valtuustoryhmien kannat ovat vielä auki."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa

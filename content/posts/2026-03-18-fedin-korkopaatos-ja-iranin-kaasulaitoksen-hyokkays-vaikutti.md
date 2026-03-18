@@ -1,5 +1,6 @@
 ---
 title: "Fedin korkopäätös ja Iranin kaasulaitoksen hyökkäys vaikuttivat Wall Streetiin"
+description: "Yhdysvaltain keskuspankki päätti nostaa ohjauskorkoaan epävarman taloustilanteen vuoksi."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Talous

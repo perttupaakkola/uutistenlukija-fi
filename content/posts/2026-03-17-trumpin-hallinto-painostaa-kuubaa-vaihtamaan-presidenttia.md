@@ -1,5 +1,6 @@
 ---
 title: "Trumpin hallinto painostaa Kuubaa vaihtamaan presidenttiä"
+description: "Yhdysvaltain hallinto on ryhtynyt painostamaan Kuubaa maan johdon vaihtamiseksi. Presidentti Donald Trump ilmaisi asian suorasanaisesti maanantaina."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Ulkomaat

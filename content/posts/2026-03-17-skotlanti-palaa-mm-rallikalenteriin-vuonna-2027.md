@@ -1,5 +1,6 @@
 ---
 title: "Skotlanti palaa MM-rallikalenteriin vuonna 2027"
+description: "Ralliautoilun MM-sarja saa uuden osakilpailun Skotlantiin vuonna 2027."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Urheilu

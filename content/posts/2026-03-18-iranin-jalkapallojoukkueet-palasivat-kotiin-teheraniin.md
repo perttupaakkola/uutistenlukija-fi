@@ -1,5 +1,6 @@
 ---
 title: "Iranin jalkapallojoukkueet palasivat kotiin Teheraniin"
+description: "Iranin naisten jalkapallomaajoukkue saapui takaisin Iranin pääkaupunkiin."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Urheilu

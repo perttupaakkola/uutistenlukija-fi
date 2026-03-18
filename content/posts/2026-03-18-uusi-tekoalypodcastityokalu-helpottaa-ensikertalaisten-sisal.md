@@ -1,5 +1,6 @@
 ---
 title: "Uusi tekoälypodcastityökalu helpottaa ensikertalaisten sisältöjen tekemistä"
+description: "Rebel Audio on julkaissut palvelun, joka tarjoaa podcastin tuotannon vaiheet yhden alustan sisällä."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Teknologia

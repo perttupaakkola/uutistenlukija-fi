@@ -1,5 +1,6 @@
 ---
 title: "Israel toteuttaa toimia Libanonin etelässä"
+description: "Israel on ilmoittanut toteuttavansa puolustusoperaatioita pohjoisessa toimivaa Hizbollah-ryhmää vastaan."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Ulkomaat

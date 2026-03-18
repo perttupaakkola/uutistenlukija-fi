@@ -1,5 +1,6 @@
 ---
 title: "Trevor Milton yrittää kerätä miljardi dollaria tekoälypohjaisiin lentokoneisiin"
+description: "Trevor Milton, aiemmin Nikola-yhtiön perustaja, suunnittelee nyt rahoituksen keräämistä uudelle yritykselleen."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Talous

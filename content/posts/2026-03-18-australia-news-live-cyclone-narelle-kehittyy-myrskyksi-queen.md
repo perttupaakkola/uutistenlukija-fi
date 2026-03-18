@@ -1,5 +1,6 @@
 ---
 title: "Australia news live: Cyclone Narelle kehittyy myrskyksi Queenslandin rannalla; Iranin jalkapallojoukkue palasi maahan"
+description: "Queenslandin rannikko valmistautuu tulivuorihurrikaani Narellen vaikutuksiin, ja alueelle odotetaan vahvoja tuulia ja mahdollisia evakuointeja."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Kotimaa

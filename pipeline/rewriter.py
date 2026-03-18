@@ -110,13 +110,6 @@ def _call_llm(system: str, prompt: str) -> str:
             "base_url": "https://api.openai.com/v1",
             "model": "gpt-4.1-nano",
         },
-        {
-            "name": "kimi-k2",
-            "provider": "openrouter",
-            "api_key_env": "OPENROUTER_API_KEY",
-            "base_url": "https://openrouter.ai/api/v1",
-            "model": "moonshotai/kimi-k2",
-        },
     ]
 
     last_error = None

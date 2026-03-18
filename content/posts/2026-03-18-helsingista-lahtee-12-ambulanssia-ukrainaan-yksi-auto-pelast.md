@@ -1,5 +1,6 @@
 ---
 title: "Helsingistä lähtee 12 ambulanssia Ukrainaan, yksi auto pelastaa kymmeniä ihmishenkiä kuukaudessa"
+description: "Helsingistä lähtee matka kohti Ukrainan kriisialuetta, missä on tarkoitus toimittaa 12 ambulanssia avustustyöhön."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Ulkomaat

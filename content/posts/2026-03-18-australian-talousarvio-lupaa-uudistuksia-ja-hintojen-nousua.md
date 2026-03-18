@@ -1,5 +1,6 @@
 ---
 title: "Australian talousarvio lupaa uudistuksia ja hintojen nousua"
+description: "Chalmers on todennut, että budjetti sisältää useita uudistuksia, jotka vaikuttavat verotukseen ja julkisiin palveluihin."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Talous

@@ -1,5 +1,6 @@
 ---
 title: "Ringeten SM-sarjan välierät päättyivät jännittäviin jatkoajokamppailuihin"
+description: "Ringeten SM-sarjan puolivälierissä nähtiin tiukkoja otteluita, jotka ratkesivat jatkoajalla."
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Fábregas on nostanut Italian pikkuseuran Mestarien liigan kynnykselle"
+description: "Espanjalainen Cesc Fábregas on tehnyt Como 1907:sta yhden kauden yllättäjistä."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Urheilu

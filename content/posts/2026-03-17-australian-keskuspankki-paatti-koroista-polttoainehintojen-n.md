@@ -1,5 +1,6 @@
 ---
 title: "Australian keskuspankki päätti koroista polttoainehintojen noustessa"
+description: "Australian keskuspankki RBA kokoontui tiistaina päättämään maan ohjauskorosta samaan aikaan, kun polttoaineiden hinnat puhuttavat koko maassa."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Ulkomaat

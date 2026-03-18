@@ -1,5 +1,6 @@
 ---
 title: "Suomalaisopiskelija havahtui Britannian aivokalvontulehdusepidemiaan – ystävä joutui koomaan"
+description: "Opiskelija kertoo olleensa huolissaan, kun hän kuuli tartuntatapauksista Britanniassa."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Tiede

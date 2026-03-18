@@ -1,5 +1,6 @@
 ---
 title: "Valkohäntäpeuran kanta kasvanut Suomessa – noin 120 000 yksilöä"
+description: "Luonnonvarakeskuksen tuoreen kanta-arvion mukaan Suomessa oli helmikuussa 2026 noin 120 000 valkohäntäpeuraa."
 date: 2026-03-15T12:45:00+00:00
 categories:
   - Tiede

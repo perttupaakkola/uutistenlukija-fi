@@ -1,5 +1,6 @@
 ---
 title: "Yhdysvaltain arvopaperimarkkinaviranomainen harkitsee siirtymistä puolivuotisraportointiin"
+description: "Yhdysvaltain arvopaperi- ja pörssikomissio SEC valmistelee ehdotusta, joka sallisi pörssiyhtiöiden julkaista tulosraporttinsa kahdesti vuodessa nykyisen"
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Talous

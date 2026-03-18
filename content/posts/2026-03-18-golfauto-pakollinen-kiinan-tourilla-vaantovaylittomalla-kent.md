@@ -1,5 +1,6 @@
 ---
 title: "Golfauto pakollinen Kiinan-Tourilla vääntöväylittömällä kentällä"
+description: "Oliver Lindell putoaa kentälle ensimmäistä kertaa tänään Kiinan Hainanin kilpailussa, jossa pelaajien on pakko käyttää golfautoa kahdella ensimmäisellä"
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Urheilu

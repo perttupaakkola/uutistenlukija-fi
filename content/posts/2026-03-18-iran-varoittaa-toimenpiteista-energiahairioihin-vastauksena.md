@@ -1,5 +1,6 @@
 ---
 title: "Iran varoittaa toimenpiteistä energiahäiriöihin vastauksena uraanikaivoksen iskuihin"
+description: "Iranin armeija on ilmoittanut varautuvansa toimenpiteisiin, mikäli uraanikaivokseen tehdyt hyökkäykset jatkuvat."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Ulkomaat

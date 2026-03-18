@@ -1,5 +1,6 @@
 ---
 title: "Fábregas johtanut Como 1907:n Italian jalkapallon huipulle"
+description: "Espanjalainen Cesc Fábregas on nostanut valmentajana italialaisen pikkuseura Como 1907:n Mestarien liigan kynnykselle."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Urheilu

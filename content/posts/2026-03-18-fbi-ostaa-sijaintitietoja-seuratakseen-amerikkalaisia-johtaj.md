@@ -1,5 +1,6 @@
 ---
 title: "FBI ostaa sijaintitietoja seuratakseen amerikkalaisia, johtaja vahvistaa"
+description: "FBI:n johtaja Kash Patel on vahvistanut, että liittovaltion agentuurit voivat ostaa kaupallisesti saatavilla olevia sijaintitietoja."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Ulkomaat

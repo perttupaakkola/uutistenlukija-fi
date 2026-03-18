@@ -1,5 +1,6 @@
 ---
 title: "Nokia nousi lähes neljä prosenttia Helsingin pörssissä"
+description: "Helsingin pörssi päätyi maanantaina nousuun. Päivän suurimpia nousijoita oli Nokia, jonka osake vahvistui lähes neljä prosenttia."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Talous

@@ -1,5 +1,6 @@
 ---
 title: "Fed pidensi ohjauskoron pysyvyyttä — Lähi-idän tilanteen vaikutus talouteen epäselvä"
+description: "Yhdysvaltain keskuspankki Federal Reserve päätti pitää ohjauskoron ennallaan."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Kotimaa

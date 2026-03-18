@@ -1,5 +1,6 @@
 ---
 title: "Australia kamppailee polttoainekriisin kanssa – kansalaisia kehotetaan välttämään hamstrausta"
+description: "Australian energiaministeri Chris Bowen kehotti kansalaisia lopettamaan polttoaineen hamstraamisen."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Ulkomaat

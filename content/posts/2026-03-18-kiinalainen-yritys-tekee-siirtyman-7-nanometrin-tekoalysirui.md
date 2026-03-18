@@ -1,5 +1,6 @@
 ---
 title: "Kiinalainen yritys tekee siirtymän 7 nanometrin tekoälysiruihin"
+description: "Kiinalainen teknologiayritys siirtyy 7 nanometrin valmistusteknologiaan. Muutos osana maan pyrkimystä vähentää ulkomaisesta chip-teknologiasta riippuvuutta."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Tiede, Teknologia

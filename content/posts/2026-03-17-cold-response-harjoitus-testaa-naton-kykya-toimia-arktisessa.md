@@ -1,5 +1,6 @@
 ---
 title: "Cold Response -harjoitus testaa Naton kykyä toimia arktisessa ympäristössä"
+description: "Pohjois-Norjassa, Pohjois-Ruotsissa ja Suomen Lapissa käynnissä oleva Cold Response -sotaharjoitus kokoaa yhteen 32 000 sotilasta 14 Nato-maasta."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

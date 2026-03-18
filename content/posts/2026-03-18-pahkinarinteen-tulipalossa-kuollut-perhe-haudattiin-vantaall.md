@@ -1,5 +1,6 @@
 ---
 title: "Pähkinärinteen tulipalossa kuollut perhe haudattiin Vantaalla"
+description: "Vantaan Pähkinärinteen tulipalossa menehtynyt viisihenkinen perhe haudattiin keskiviikkona Ruskeasannan hautausmaalla. Hautausseremonia alkoi kello 13.30."
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Kotimaa

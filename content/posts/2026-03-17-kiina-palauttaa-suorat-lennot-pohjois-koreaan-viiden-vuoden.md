@@ -1,5 +1,6 @@
 ---
 title: "Kiina palauttaa suorat lennot Pohjois-Koreaan viiden vuoden tauon jälkeen"
+description: "Air China aloittaa suorat lennot Pekingin ja Pjongjangin välillä 30. maaliskuuta."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Ulkomaat

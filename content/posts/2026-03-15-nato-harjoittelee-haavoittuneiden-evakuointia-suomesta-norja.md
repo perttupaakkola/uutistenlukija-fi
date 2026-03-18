@@ -1,5 +1,6 @@
 ---
 title: "Nato harjoittelee haavoittuneiden evakuointia Suomesta Norjaan"
+description: "Naton puolustussuunnitelmiin kuuluu haavoittuneiden suomalaissotilaiden siirtäminen Lapista Norjan sairaaloihin mahdollisen aseellisen konfliktin syttyessä."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

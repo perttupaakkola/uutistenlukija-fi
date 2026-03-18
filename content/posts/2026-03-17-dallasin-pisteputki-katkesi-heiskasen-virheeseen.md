@@ -1,5 +1,6 @@
 ---
 title: "Dallasin pisteputki katkesi Heiskasen virheeseen"
+description: "Dallas Starsin 15 ottelun pisteputki päättyi tappioon Utah Mammothia vastaan. Suomalaispelaaja Miro Heiskanen joutui ottelussa ikävään valokeilaan."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Urheilu

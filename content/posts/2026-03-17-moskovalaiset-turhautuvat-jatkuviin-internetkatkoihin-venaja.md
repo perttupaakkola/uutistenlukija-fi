@@ -1,5 +1,6 @@
 ---
 title: "Moskovalaiset turhautuvat jatkuviin internetkatkoihin Venäjällä"
+description: "Venäjän pääkaupungin asukkaat kärsivät toistuvista internetin ja viestisovellusten häiriöistä."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Ulkomaat

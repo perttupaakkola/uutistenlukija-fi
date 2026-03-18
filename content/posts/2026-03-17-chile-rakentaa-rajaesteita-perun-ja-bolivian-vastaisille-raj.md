@@ -1,5 +1,6 @@
 ---
 title: "Chile rakentaa rajaesteitä Perun ja Bolivian vastaisille rajoilleen"
+description: "Chilen presidentti José Antonio Kast on käynnistänyt rajaesteiden rakentamisen maan pohjoisrajoille."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Ulkomaat

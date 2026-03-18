@@ -1,5 +1,6 @@
 ---
 title: "Tytti Yli-Viikari saa jatkoa museo-oppaana"
+description: "Tytti Yli-Viikari jatkaa työskentelyä J.L. Runebergin kotimuseossa kesäkauden ajan. Hän on aiemmin toiminut valtiontalouden tarkastusviraston pääjohtajana."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Kotimaa

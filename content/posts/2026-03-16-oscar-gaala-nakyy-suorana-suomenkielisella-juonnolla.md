@@ -1,5 +1,6 @@
 ---
 title: "Oscar-gaala näkyy suorana suomenkielisellä juonnolla"
+description: "Oscar-gaala on seurattavissa suorana lähetyksenä Yle Areenassa suomenkielisen juonnon kera."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Kulttuuri

@@ -1,5 +1,6 @@
 ---
 title: "Julia Kykkänen lopettaa mäkihypyn uransa"
+description: "Julia Kykkänen kertoi keskiviikkona päättävänsä uransa Suomen mäkihypyn huipulla."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Urheilu

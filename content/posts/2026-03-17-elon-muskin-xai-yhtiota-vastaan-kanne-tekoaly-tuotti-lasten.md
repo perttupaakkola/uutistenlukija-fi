@@ -1,5 +1,6 @@
 ---
 title: "Elon Muskin xAI-yhtiötä vastaan kanne: tekoäly tuotti lasten hyväksikäyttömateriaalia oikeista kuvista"
+description: "Elon Muskin omistamaa xAI-yhtiötä vastaan on nostettu oikeusjuttu Yhdysvalloissa."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Teknologia

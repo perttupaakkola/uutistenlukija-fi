@@ -1,5 +1,6 @@
 ---
 title: "Zelenskyi kielsi droonivalmistajia viemästä tuotteitaan ilman lupaa"
+description: "Ukrainan presidentti Volodymyr Zelenskyi allekirjoitti ukaasin, joka kieltää ukrainalaisia droonivalmistajia myymästä tuotteitaan ulkomaille ilman"
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Ulkomaat

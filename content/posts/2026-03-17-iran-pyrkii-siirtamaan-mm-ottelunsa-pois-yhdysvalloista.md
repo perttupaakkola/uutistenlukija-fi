@@ -1,5 +1,6 @@
 ---
 title: "Iran pyrkii siirtämään MM-ottelunsa pois Yhdysvalloista"
+description: "Iranin jalkapalloliitto neuvottelee kansainvälisen jalkapalloliiton Fifan kanssa MM-kisojen otteluiden siirtämisestä pois Yhdysvalloista."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Urheilu

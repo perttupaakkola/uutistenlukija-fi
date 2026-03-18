@@ -1,5 +1,6 @@
 ---
 title: "Lidlin kassakuitista paljastui jättimäinen ostopotti – virhe korjattiin asiakkaan eduksi"
+description: "Joensuulaisessa Lidl-myymälässä ulkopaikkakuntalainen asiakas hämmästyi saatuaan kuitin, jossa oli yli tuhat euroa maksaneita tuotteita."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa

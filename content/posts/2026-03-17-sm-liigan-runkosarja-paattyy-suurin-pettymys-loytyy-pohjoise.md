@@ -1,5 +1,6 @@
 ---
 title: "SM-liigan runkosarja päättyy – suurin pettymys löytyy pohjoisesta"
+description: "Jääkiekon SM-liigan runkosarja pelataan tiistaina päätökseen. Asiantuntija Karri Rämö nimeää kauden suurimman pettymyksen pohjoisesta Suomesta."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Urheilu

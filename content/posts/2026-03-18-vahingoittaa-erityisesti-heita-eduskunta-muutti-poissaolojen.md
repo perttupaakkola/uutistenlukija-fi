@@ -1,5 +1,6 @@
 ---
 title: "”Vahingoittaa erityisesti heitä” – Eduskunta muutti poissaolojen kirjauskäytäntöä"
+description: "Eduskunnan tasa-arvoneuvosto ehdotti poissaolojen kirjaamisen muuttamista."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Kotimaa

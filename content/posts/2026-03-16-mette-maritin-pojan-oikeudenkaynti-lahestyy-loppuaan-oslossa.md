@@ -1,5 +1,6 @@
 ---
 title: "Mette-Maritin pojan oikeudenkäynti lähestyy loppuaan Oslossa"
+description: "Norjan kruununprinsessa Mette-Maritin pojan oikeudenkäynti on siirtynyt viimeiselle viikollensa Oslon käräjäoikeudessa."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat

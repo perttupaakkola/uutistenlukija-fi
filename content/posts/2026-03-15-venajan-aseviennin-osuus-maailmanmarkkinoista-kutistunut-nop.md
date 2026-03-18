@@ -1,5 +1,6 @@
 ---
 title: "Venäjän aseviennin osuus maailmanmarkkinoista kutistunut nopeasti"
+description: "Venäjän osuus raskaiden aseiden maailmanmarkkinoista on pienentynyt merkittävästi lyhyessä ajassa."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat

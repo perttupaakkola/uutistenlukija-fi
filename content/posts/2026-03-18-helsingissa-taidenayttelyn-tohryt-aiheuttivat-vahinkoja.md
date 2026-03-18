@@ -1,5 +1,6 @@
 ---
 title: "Helsingissä taidenäyttelyn töhryt aiheuttivat vahinkoja"
+description: "Helsingissä sijaitsevaa taidenäyttelyä vastaan hyökättiin viime viikonloppuna ja kolme teosta tuhoutui törkeissä töhryissä, aiheuttaen noin 8 000 euron"
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Kulttuuri

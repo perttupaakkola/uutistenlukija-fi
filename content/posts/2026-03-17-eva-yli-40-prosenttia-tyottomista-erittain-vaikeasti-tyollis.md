@@ -1,5 +1,6 @@
 ---
 title: "EVA: Yli 40 prosenttia työttömistä erittäin vaikeasti työllistettäviä"
+description: "Elinkeinoelämän valtuuskunta EVA on arvioinut, että yli 40 prosenttia Suomen työttömistä kuuluu ryhmään, jota on erittäin vaikea työllistää."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Laihdutuslääkkeitä kirjoitetaan chattivastaanotolla ilman potilaan tapaamista"
+description: "Suomessa käytti laihdutuslääkkeitä viime vuonna yli 100 000 ihmistä."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Kotimaa

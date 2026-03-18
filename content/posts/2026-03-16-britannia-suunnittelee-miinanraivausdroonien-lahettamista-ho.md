@@ -1,5 +1,6 @@
 ---
 title: "Britannia suunnittelee miinanraivausdroonien lähettämistä Hormuzinsalmelle"
+description: "Britannian hallitus valmistelee suunnitelmaa miinanraivausdroonien lähettämiseksi Hormuzinsalmelle."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Vihreäriina: Romaniyhdistys kommentoi Vigeliuksen leimaa"
+description: "Kansanedustaja Joakim Vigelius on esittänyt kriittisiä näkemyksiään hyvinvointialueiden toimeentulotukikäytännöistä, viitaten romanihameisiin."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Kotimaa

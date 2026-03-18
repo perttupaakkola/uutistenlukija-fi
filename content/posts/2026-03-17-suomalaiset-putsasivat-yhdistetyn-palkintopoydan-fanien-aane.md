@@ -1,5 +1,6 @@
 ---
 title: "Suomalaiset putsasivat yhdistetyn palkintopöydän fanien äänestyksessä"
+description: "Suomalaisurheilijat keräsivät yhdistetyn kauden päätöspalkinnoista leijonanosan."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Urheilu

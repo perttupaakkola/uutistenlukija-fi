@@ -1,5 +1,6 @@
 ---
 title: "Barcelona voitti seitsemällä maalilla Camp Noulla"
+description: "Barcelona teki vakuuttavan voiton Mestarien liigan jatko-ottelun avauksessa kotikentällään."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Urheilu

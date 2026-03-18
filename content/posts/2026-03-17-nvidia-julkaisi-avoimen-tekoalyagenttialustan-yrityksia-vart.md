@@ -1,5 +1,6 @@
 ---
 title: "Nvidia julkaisi avoimen tekoälyagenttialustan yrityksiä varten"
+description: "Nvidia esitteli NemoClaw-nimisen avoimen alustan, joka on suunniteltu tekoälyagenttien rakentamiseen yrityskäyttöön."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Teknologia

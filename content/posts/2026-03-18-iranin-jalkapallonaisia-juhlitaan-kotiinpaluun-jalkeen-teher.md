@@ -1,5 +1,6 @@
 ---
 title: "Iranin jalkapallonaisia juhlitaan kotiinpaluun jälkeen Teheranin keskusaukiolla"
+description: "Iranin naisten jalkapallomaajoukkue palasi tänään Iranin pysyvälle kotikentälleen."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Urheilu

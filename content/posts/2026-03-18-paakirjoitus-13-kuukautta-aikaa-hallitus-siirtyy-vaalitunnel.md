@@ -1,5 +1,6 @@
 ---
 title: "Pääkirjoitus: 13 kuukautta aikaa – hallitus siirtyy vaalitunnelmiin"
+description: "Hallituspuolueet valmistautuvat eduskuntavaaleihin siirtymällä selvästi vaalitunnelmiin."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Tilanne Lähi-idässä kärjistyy Israelin hyökkäyksen seurauksena"
+description: "Israel teki hyökkäyksen Iraniin kohdistuneelle kaasukaivokselle, mikä on raporttien mukaan koordinoitu Yhdysvaltojen kanssa."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Ulkomaat

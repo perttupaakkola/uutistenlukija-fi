@@ -1,5 +1,6 @@
 ---
 title: "Britannia: Lähi-idän tilanteen rauhoittaminen on välttämätöntä"
+description: "Britannian puolustusministeri on korostanut Lähi-idän tilanteen rauhoittamisen olevan elintärkeää kansainväliselle turvallisuudelle."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat

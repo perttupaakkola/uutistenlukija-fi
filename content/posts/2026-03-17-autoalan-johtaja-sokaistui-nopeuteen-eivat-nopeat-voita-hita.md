@@ -1,5 +1,6 @@
 ---
 title: "Autoalan johtaja sokaistui nopeuteen – \"Eivät nopeat voita hitaita\""
+description: "Luksusautomerkkien johtotehtävissä uransa tehnyt Felix Bräutigam vieraili Suomessa ja kertoi näkemyksiään autoalan murroksesta."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Talous

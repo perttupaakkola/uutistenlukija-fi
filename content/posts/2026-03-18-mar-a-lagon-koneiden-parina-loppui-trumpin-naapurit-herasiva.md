@@ -1,5 +1,6 @@
 ---
 title: "Mar-a-Lagon koneiden pärinä loppui – Trumpin naapurit heräsivät äänettömään aamuun"
+description: "Donald Trumpin omistaman Mar-a-Lagon yläpuolella ei lennä lentokoneita kello 23–07 välillä, mikä on liipaisuksena Yahsin palkinnon kaltaiseen reaktioon"
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Ulkomaat

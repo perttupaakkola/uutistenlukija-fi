@@ -1,5 +1,6 @@
 ---
 title: "Espoon miljonäärimurhan tapahtumapaikka ilmestyi asuntomarkkinoille"
+description: "Espoon Soukanniemessä sijaitseva arvotalo on tullut myyntiin Etuovi-palvelussa. Hintapyyntö on lähes 1,5 miljoonaa euroa."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa

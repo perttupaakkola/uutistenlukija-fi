@@ -1,5 +1,6 @@
 ---
 title: "Stubb kehottaa ottamaan Trumpin Nato-puheet vakavasti"
+description: "Presidentti Alexander Stubb varoittaa, että Yhdysvaltain presidentti Donald Trumpin puheita Naton tulevaisuudesta ei pidä sivuuttaa."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Kotimaa

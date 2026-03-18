@@ -1,5 +1,6 @@
 ---
 title: "Euroopan parlamentti linjasi: Ukraina voisi päästä EU-rakenteisiin ennen täysjäsenyyttä"
+description: "Euroopan parlamentti äänesti 11. maaliskuuta EU:n laajentumisstrategian puolesta."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat

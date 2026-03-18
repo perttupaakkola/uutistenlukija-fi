@@ -1,5 +1,6 @@
 ---
 title: "Asiantuntija kommentoi Putinin kanssa käytävää keskustelua: Venäjä ei ole huolissaan sodasta"
+description: "Ulkopoliittisen instituutin ohjelmajohtaja Arkady Moshes arvioi, että Venäjä ja Eurooppa ovat tilanteessa, jossa vuoropuhelu ei välttämättä ole tuotteen"
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Ulkomaat

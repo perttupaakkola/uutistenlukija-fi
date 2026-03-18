@@ -1,5 +1,6 @@
 ---
 title: "Entinen VTV-pääjohtaja palaa museo-opastajaksi"
+description: "Tytti Yli-Viikari aloittaa kesätyöt J.L. Runebergin kotimuseossa Porvoossa kolmen viikon kuluttua."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kulttuuri

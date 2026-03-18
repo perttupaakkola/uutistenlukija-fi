@@ -1,5 +1,6 @@
 ---
 title: "Oscar-gaala järjestetään 98. kerran – Conan O'Brien juontaa toistamiseen"
+description: "Yhdysvaltain elokuva-akatemian Oscar-gaala järjestetään sunnuntai-iltana Los Angelesissa 98. kerran."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Kulttuuri

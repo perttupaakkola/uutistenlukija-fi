@@ -1,5 +1,6 @@
 ---
 title: "Trumpin naapurit vaativat taukoa hiljaisuudelle Mar-a-Lagossa"
+description: "Mar-a-Lagon naapurit Floridassa ovat ilmaisseet tyytymättömyytensä häiriöitä aiheuttavaa melua kohtaan."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Kotimaa

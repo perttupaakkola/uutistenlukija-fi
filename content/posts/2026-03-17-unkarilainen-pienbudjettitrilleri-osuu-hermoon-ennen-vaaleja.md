@@ -1,5 +1,6 @@
 ---
 title: "Unkarilainen pienbudjettitrilleri osuu hermoon ennen vaaleja"
+description: "Budapestiläinen elokuvateatteri on tiistai-iltana täynnä."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Kulttuuri

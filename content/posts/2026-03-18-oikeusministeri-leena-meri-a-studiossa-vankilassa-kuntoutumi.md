@@ -1,5 +1,6 @@
 ---
 title: "Oikeusministeri Leena Meri A-Studiossa: Vankilassa kuntoutuminen on mahdollisuus"
+description: "Oikeusministeri Leena Meri toteaa, että Suomen vankeinhoito pystyy nykyisellään huolehtimaan noin 3 000 vangista."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Kotimaa

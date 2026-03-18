@@ -1,5 +1,6 @@
 ---
 title: "Daniel Håkans jää pois Huuhkajien Uuden-Seelannin matkasta"
+description: "Lech Poznanin laitahyökkääjä Daniel Håkans ei matkusta Suomen jalkapallomaajoukkueen mukana Uuteen-Seelantiin."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Urheilu

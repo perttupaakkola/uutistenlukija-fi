@@ -1,5 +1,6 @@
 ---
 title: "Postin toimitusjohtajalle yli puolen miljoonan listautumispalkkio"
+description: "Postin toimitusjohtaja Antti Jääskeläinen sai viime vuonna 510 300 euron listautumispalkkion."
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Talous

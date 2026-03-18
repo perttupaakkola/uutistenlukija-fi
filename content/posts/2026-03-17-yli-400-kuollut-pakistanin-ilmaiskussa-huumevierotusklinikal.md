@@ -1,5 +1,6 @@
 ---
 title: "Yli 400 kuollut Pakistanin ilmaiskussa huumevierotusklinikalle Kabulissa"
+description: "Pakistanin armeija iski maanantaina kohteeseen Kabulissa, jonka se kuvasi terroristi-infrastruktuuriksi."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat

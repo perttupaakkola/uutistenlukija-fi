@@ -1,5 +1,6 @@
 ---
 title: "Suomen kovatuloisimmat lääkärit tienaavat satoja tuhansia euroja vuodessa"
+description: "Suomen sadan parhaiten tienaavan lääkärin tulot ylittävät selvästi tavallisen palkansaajan ansiot."
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Kotimaa

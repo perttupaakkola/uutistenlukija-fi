@@ -1,5 +1,6 @@
 ---
 title: "Talousprofessori tyrmää perintöveron poiston – \"Aika poukkoilevaa\""
+description: "Talouspolitiikan arviointineuvoston puheenjohtaja, professori Niku Määttänen pitää kokoomuksen ajamaa perintö- ja lahjaveron poistoa huonosti perusteltuna."
 date: 2026-03-18T00:24:03.547709+00:00
 categories:
   - Talous

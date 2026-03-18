@@ -1,5 +1,6 @@
 ---
 title: "EU-maiden ulkoministerit kokoontuvat Brysselissä"
+description: "Euroopan unionin jäsenmaiden ulkoministerit kokoontuvat maanantaina Brysselissä. Asialistalla ovat unionin ulko- ja turvallisuuspoliittiset kysymykset."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat

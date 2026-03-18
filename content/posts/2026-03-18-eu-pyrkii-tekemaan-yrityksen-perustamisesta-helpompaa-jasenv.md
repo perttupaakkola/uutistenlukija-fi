@@ -1,5 +1,6 @@
 ---
 title: "EU pyrkii tekemään yrityksen perustamisesta helpompaa jäsenvaltioiden välillä"
+description: "Euroopan unioni suunnittelee uudistuksia, joiden tavoitteena on vähentää hallinnollista taakkaa ja tehostaa yritysten perustamista koko unionin alueella."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Talous

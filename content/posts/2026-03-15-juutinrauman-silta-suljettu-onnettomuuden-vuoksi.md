@@ -1,5 +1,6 @@
 ---
 title: "Juutinrauman silta suljettu onnettomuuden vuoksi"
+description: "Juutinrauman silta eli Øresundsbron suljettiin lauantaina moottoritieliikenteeltä Ruotsin suuntaan tunneliosuudella sattuneen onnettomuuden vuoksi."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "SEC aikoo luopua pörssiyhtiöiden neljännesvuosiraportoinnista"
+description: "Yhdysvaltain arvopaperi- ja pörssikomissio SEC valmistelee neljännesvuosittaisen raportointivelvoitteen poistamista."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Talous

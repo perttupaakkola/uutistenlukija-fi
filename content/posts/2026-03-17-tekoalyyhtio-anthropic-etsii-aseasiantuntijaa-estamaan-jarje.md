@@ -1,5 +1,6 @@
 ---
 title: "Tekoälyyhtiö Anthropic etsii aseasiantuntijaa estämään järjestelmiensä väärinkäyttöä"
+description: "Tekoälyyhtiö Anthropic hakee palvelukseensa ase- ja turvallisuusasiantuntijaa."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Teknologia

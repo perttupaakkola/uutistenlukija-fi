@@ -1,5 +1,6 @@
 ---
 title: "Henkilöauto ja kuorma-auto törmäsivät Vetelissä – yksi kuoli"
+description: "Yksi ihminen kuoli liikenneonnettomuudessa keskiviikkona 18. maaliskuuta Vetelissä."
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Kotimaa

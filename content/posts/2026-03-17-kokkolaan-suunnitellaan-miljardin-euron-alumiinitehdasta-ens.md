@@ -1,5 +1,6 @@
 ---
 title: "Kokkolaan suunnitellaan miljardin euron alumiinitehdasta – ensimmäinen laatuaan Manner-Euroopassa yli 30 vuoteen"
+description: "Arctial-yhtiö suunnittelee primäärialumiinin sulattoa Kokkolaan. Hankkeen arvo on noin miljardi euroa, ja se työllistäisi noin 1 200 ihmistä."
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Talous

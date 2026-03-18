@@ -1,5 +1,6 @@
 ---
 title: "Yhtiöt perustetaan EU:n laajuudella yhdellä ilmoituksella"
+description: "EU helpottaa yrityksen perustamista kaikkiin jäsenmaihin yhtä aikaa."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Talous

@@ -1,5 +1,6 @@
 ---
 title: "Israelin iskut voivat jäädyttää Iran-neuvottelut"
+description: "Israel on surmannut kolme Iranin huipputason upseeria ja tutkijaa."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Ulkomaat

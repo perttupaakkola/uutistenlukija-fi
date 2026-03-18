@@ -1,5 +1,6 @@
 ---
 title: "Tylsistyminen työssä voi johtaa masennukseen, varoittaa tutkija"
+description: "Nuoret aikuiset tylsistyvät työssään useammin kuin vanhemmat. Tutkija Jie Linin mukaan jatkuva tylsyyden tunne voi laukaista vakavia mielenterveysongelmia."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Tiede

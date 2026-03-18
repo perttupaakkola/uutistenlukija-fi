@@ -1,5 +1,6 @@
 ---
 title: "Siitepölykausi käynnistyi – lepän ja pähkinäpensaan kukinta alkanut etelässä"
+description: "Lepän ja pähkinäpensaan kukinta on alkanut maan lounaisosissa."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa

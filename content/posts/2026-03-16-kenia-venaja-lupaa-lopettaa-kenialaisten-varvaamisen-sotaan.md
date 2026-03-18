@@ -1,5 +1,6 @@
 ---
 title: "Kenia: Venäjä lupaa lopettaa kenialaisten värväämisen sotaan Ukrainassa"
+description: "Venäjä on ilmoittanut lopettavansa kenialaisten värväämisen sotimaan Ukrainaan."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat

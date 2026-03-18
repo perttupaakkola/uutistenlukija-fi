@@ -1,5 +1,6 @@
 ---
 title: "Ärhäkkä virus iski risteilyalukselle – yli 150 sairastui"
+description: "Star Princess -risteilyalus palasi Karibian alueelta Yhdysvaltoihin, ja matkan aikana ilmeni ripuli- ja oksenteluja."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Ulkomaat

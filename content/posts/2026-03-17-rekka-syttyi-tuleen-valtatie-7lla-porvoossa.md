@@ -1,5 +1,6 @@
 ---
 title: "Rekka syttyi tuleen valtatie 7:llä Porvoossa"
+description: "Muovijätettä kuljettanut rekka syttyi palamaan maanantai-iltana valtatie 7:llä Porvoossa. Itä-Uudenmaan pelastuslaitos sai hälytyksen kello 20.34."
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Kotimaa

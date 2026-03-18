@@ -1,5 +1,6 @@
 ---
 title: "Esperi Care tuomittiin maksamaan yli 200 000 euroa perusteettomasta irtisanomisesta"
+description: "Sosiaali- ja terveyspalveluyhtiö Esperi Care irtisanoi hoitajansa väittäen tätä vakavista laiminlyönneistä."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa

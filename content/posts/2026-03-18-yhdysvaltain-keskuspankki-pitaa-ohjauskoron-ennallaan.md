@@ -1,5 +1,6 @@
 ---
 title: "Yhdysvaltain keskuspankki pitää ohjauskoron ennallaan"
+description: "Yhdysvaltain keskuspankki on päättänyt pitää ohjauskoronsa nykyisellä tasolla. Tämä tarkoittaa, että talouden rahapolitiikka pysyy vakaana jatkossa."
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Talous

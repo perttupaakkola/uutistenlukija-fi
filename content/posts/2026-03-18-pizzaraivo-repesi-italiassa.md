@@ -1,5 +1,6 @@
 ---
 title: "Pizzaraivo repesi Italiassa"
+description: "Milano ja koko Italia ovat joutuneet keskustelun keskelle pizzanvalmistuksen ympäristövaikutuksista."
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Harri István Mäen uudet plagiaatiepäilyt: kustantaja poisti taas kirjoja myynnistä"
+description: "Kustantamo Helmivyö on poistanut myynnistä kolme Harri István Mäen romaania ja yhden novellikokoelman."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kulttuuri

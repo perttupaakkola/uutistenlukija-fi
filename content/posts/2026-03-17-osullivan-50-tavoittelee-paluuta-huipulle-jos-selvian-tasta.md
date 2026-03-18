@@ -1,5 +1,6 @@
 ---
 title: "O'Sullivan, 50, tavoittelee paluuta huipulle: \"Jos selviän tästä, se ylittää kaiken muun\""
+description: "Snookerin kaikkien aikojen menestyneimpiin pelaajiin lukeutuva Ronnie O'Sullivan kertoo tehneensä kovasti töitä palauttaakseen pelitasonsa."
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Urheilu

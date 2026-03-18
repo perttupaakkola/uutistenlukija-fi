@@ -1,5 +1,6 @@
 ---
 title: "Huoli Ukrainan tukemisesta kasvaa, kun Lähi-idän konflikti vie huomiota"
+description: "Ukrainan saama kansainvälinen tuki voi hiipua, kun huomio kiinnittyy Lähi-idän tapahtumiin."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Ulkomaat

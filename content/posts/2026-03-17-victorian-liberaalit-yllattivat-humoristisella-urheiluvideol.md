@@ -1,5 +1,6 @@
 ---
 title: "Victorian liberaalit yllättivät humoristisella urheiluvideolla"
+description: "Australian Victorian osavaltion liberaalipuolue julkaisi sosiaalisen median videon, jossa puolueen johtohahmot kokeilevat eri urheilulajeja vaihtelevalla"
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Ulkomaat

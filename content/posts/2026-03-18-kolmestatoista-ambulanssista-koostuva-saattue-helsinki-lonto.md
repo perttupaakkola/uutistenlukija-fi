@@ -1,5 +1,6 @@
 ---
 title: "Kolmestatoista ambulanssista koostuva saattue Helsinki-Lontoo-reitillä kuljetetaan Ukrainan avuksi"
+description: "Torstaiaamuna kolmesta eri paikasta Helsingissä lähtee 12 kunnostettua ambulanssia kohti Ukrainaa."
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa

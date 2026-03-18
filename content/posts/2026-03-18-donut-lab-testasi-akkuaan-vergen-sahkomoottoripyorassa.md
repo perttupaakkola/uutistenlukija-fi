@@ -1,5 +1,6 @@
 ---
 title: "Donut Lab testasi akkuaan Vergen sähkömoottoripyörässä"
+description: "Suomalainen akkuyhtiö Donut Lab julkisti uuden testiraportin, jossa sen kehittämä akku asennettiin Verge TS Pro -sähkömoottoripyörään."
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Teknologia
