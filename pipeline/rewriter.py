@@ -26,6 +26,32 @@ try:
 except ImportError:
     pass
 
+def _get_anthropic_oauth_token():
+    """Read the Anthropic OAuth access token from openclaw's auth store."""
+    import json as _json
+    from pathlib import Path as _Path
+    # Try multiple auth store locations
+    paths = [
+        _Path("/home/pertt/.openclaw/agents/felix/agent/auth-profiles.json"),
+        _Path("/home/pertt/.openclaw/agents/main/agent/auth-profiles.json"),
+        _Path("/home/pertt/.claude/.credentials.json"),
+    ]
+    for p in paths:
+        try:
+            data = _json.loads(p.read_text())
+            # auth-profiles.json format
+            prof = data.get("profiles", {}).get("anthropic:default", {})
+            if prof.get("access"):
+                return prof["access"]
+            # .credentials.json format
+            oauth = data.get("claudeAiOauth", {})
+            if oauth.get("accessToken"):
+                return oauth["accessToken"]
+        except Exception:
+            continue
+    return None
+
+
 CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
 
 SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
@@ -75,27 +101,81 @@ Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSO
 
 
 def _call_llm(system: str, prompt: str) -> str:
-    """Call the LLM via Anthropic SDK or transport bridge."""
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    use_sdk = HAVE_ANTHROPIC_SDK and api_key
+    """Call the LLM with fallback chain: Claude Sonnet -> OpenRouter kimi-k2."""
+    models = [
+        {
+            "name": "kimi-k2",
+            "provider": "openrouter",
+            "api_key_env": "OPENROUTER_API_KEY",
+            "base_url": "https://openrouter.ai/api/v1",
+            "model": "moonshotai/kimi-k2",
+        },
+    ]
 
-    if use_sdk:
-        client = anthropic.Anthropic(api_key=api_key)
-        response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=4096,
-            system=system,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        return response.content[0].text.strip()
-    else:
-        print("[writer]   Using Claude Code bridge...")
+    last_error = None
+    for m in models:
+        api_key = os.environ.get(m["api_key_env"])
+        if not api_key and m.get("api_key_fn"):
+            try:
+                api_key = globals()[m["api_key_fn"]]()
+            except Exception:
+                pass
+        if not api_key:
+            continue
+        try:
+            if m["provider"] == "anthropic" and HAVE_ANTHROPIC_SDK:
+                client = anthropic.Anthropic(api_key=api_key)
+                response = client.messages.create(
+                    model=m["model"],
+                    max_tokens=4096,
+                    system=system,
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                result = response.content[0].text.strip()
+            elif m["provider"] == "openrouter":
+                import urllib.request as _ur
+                import urllib.error as _ue
+                body = json.dumps({
+                    "model": m["model"],
+                    "max_tokens": 4096,
+                    "messages": [
+                        {"role": "system", "content": system},
+                        {"role": "user", "content": prompt},
+                    ],
+                }).encode()
+                req = _ur.Request(
+                    m["base_url"] + "/chat/completions",
+                    data=body,
+                    headers={
+                        "Authorization": f"Bearer {api_key}",
+                        "Content-Type": "application/json",
+                    },
+                )
+                with _ur.urlopen(req, timeout=120) as resp:
+                    data = json.loads(resp.read())
+                result = data["choices"][0]["message"]["content"].strip()
+            else:
+                continue
+            print(f"[writer]   Model: {m['name']} (success)")
+            return result
+        except Exception as e:
+            last_error = e
+            print(f"[writer]   Model {m['name']} failed: {e}")
+            continue
+
+    # All API models failed — try Claude Code bridge as last resort
+    try:
+        print("[writer]   All API models failed. Trying Claude Code bridge...")
         return complete_with_claude(
             system_prompt=system,
             messages=[{"role": "user", "content": prompt}],
             cwd=Path(__file__).parent.parent,
             require_json=True,
         )
+    except Exception:
+        pass
+
+    raise ValueError(f"All LLM providers failed. Last error: {last_error}")
 
 
 def _extract_json(text: str) -> list:
