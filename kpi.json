@@ -1,0 +1,39 @@
+{
+  "description": "Uutistenlukija.fi KPIs — updated by Felix/Max on each flywheel cycle",
+  "lastUpdated": "2026-03-18T15:30:00Z",
+  "metrics": {
+    "articles": {
+      "total": null,
+      "publishedToday": null,
+      "lastPublishRun": null,
+      "note": "Count Hugo content files: find site/content -name *.md | wc -l"
+    },
+    "pipeline": {
+      "lastRunSuccess": null,
+      "lastRunTime": null,
+      "failuresLast24h": null,
+      "note": "Check pipeline/logs/ for recent runs"
+    },
+    "traffic": {
+      "dailyVisitors": null,
+      "source": "GA4 (G-967GVZH75X) — not yet accessible from CLI",
+      "note": "TODO: set up GA4 API access or a simple analytics proxy"
+    },
+    "seo": {
+      "indexedPages": null,
+      "note": "Check Google Search Console when available"
+    },
+    "revenue": {
+      "monthlyEuros": 0,
+      "source": "none yet",
+      "note": "First priority: get ANY ad network running"
+    },
+    "team": {
+      "activeAgents": null,
+      "tasksCompletedThisWeek": null,
+      "flywheel_ideasPosted": 19,
+      "flywheel_ideasExecuted": 2,
+      "note": "Execution rate needs to improve from 10% to >50%"
+    }
+  }
+}

@@ -104,6 +104,13 @@ def _call_llm(system: str, prompt: str) -> str:
     """Call the LLM with fallback chain: Claude Sonnet -> OpenRouter kimi-k2."""
     models = [
         {
+            "name": "gpt-4.1-nano",
+            "provider": "openai",
+            "api_key_env": "OPENAI_API_KEY",
+            "base_url": "https://api.openai.com/v1",
+            "model": "gpt-4.1-nano",
+        },
+        {
             "name": "kimi-k2",
             "provider": "openrouter",
             "api_key_env": "OPENROUTER_API_KEY",
@@ -132,7 +139,7 @@ def _call_llm(system: str, prompt: str) -> str:
                     messages=[{"role": "user", "content": prompt}],
                 )
                 result = response.content[0].text.strip()
-            elif m["provider"] == "openrouter":
+            elif m["provider"] in ("openrouter", "openai"):
                 import urllib.request as _ur
                 import urllib.error as _ue
                 body = json.dumps({

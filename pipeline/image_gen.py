@@ -9,7 +9,7 @@ import urllib.request
 import urllib.error
 from typing import List, Dict, Optional
 
-KIE_API_KEY = os.environ.get("KIE_API_KEY", "bccd653c94693baab42985f14ec4a9dd")
+KIE_API_KEY = os.environ.get("KIE_API_KEY", "")
 KIE_BASE_URL = "https://api.kie.ai"
 IMAGE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "images", "articles")
 
@@ -44,7 +44,7 @@ def _kie_get(endpoint: str, params: dict = None) -> dict:
         return json.loads(resp.read())
 
 
-def _poll_task(task_id: str, max_wait: int = 120) -> Optional[str]:
+def _poll_task(task_id: str, max_wait: int = 300) -> Optional[str]:
     """Poll for task completion, return image URL or None."""
     start = time.time()
     while time.time() - start < max_wait:
@@ -96,8 +96,7 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
             "model": "z-image",
             "input": {
                 "prompt": prompt,
-                "aspect_ratio": "16:9",
-                "output_format": "jpg"
+                "aspect_ratio": "16:9"
             }
         })
 
@@ -125,6 +124,9 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
 
 def generate_images_for_articles(articles: List[Dict]) -> List[Dict]:
     """Generate header images for a list of articles. Adds 'image' field."""
+    if not KIE_API_KEY:
+        print("[image_gen] No KIE_API_KEY set, skipping image generation")
+        return articles
     for i, article in enumerate(articles):
         title = article.get("title", "")
         category = article.get("category", "")
