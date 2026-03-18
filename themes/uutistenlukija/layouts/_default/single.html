@@ -44,18 +44,22 @@
   </div>
   {{ end }}
 
-  {{/* Related articles */}}
+  {{/* Related articles — match by shared category, deduplicated */}}
   {{ $currentCategories := .Params.categories }}
   {{ $currentPage := . }}
   {{ $related := slice }}
-  {{ range where .Site.RegularPages "Section" "posts" }}
-    {{ if ne .Permalink $currentPage.Permalink }}
-      {{ $pageCategories := .Params.categories }}
+  {{ $seen := slice }}
+  {{ range $page := where .Site.RegularPages "Section" "posts" }}
+    {{ if ne $page.Permalink $currentPage.Permalink }}
+      {{ $pageCategories := $page.Params.categories }}
       {{ range $currentCategories }}
         {{ $cat := . }}
         {{ range $pageCategories }}
           {{ if eq . $cat }}
-            {{ $related = $related | append $currentPage }}
+            {{ if not (in $seen $page.Permalink) }}
+              {{ $related = $related | append $page }}
+              {{ $seen = $seen | append $page.Permalink }}
+            {{ end }}
           {{ end }}
         {{ end }}
       {{ end }}
@@ -68,7 +72,7 @@
   <div class="related-articles">
     <h3>Lue myös</h3>
     <div class="related-grid">
-      {{ range $related }}
+      {{ range first 4 $related }}
       <a href="{{ .Permalink }}" class="related-link">
         <span class="related-title">{{ .Title }}</span>
         <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
