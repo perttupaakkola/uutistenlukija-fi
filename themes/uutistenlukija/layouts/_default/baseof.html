@@ -9,6 +9,19 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{- with .Site.Params.googleAnalytics }}
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+  </script>
+  {{- end }}
+  {{- with .Site.Params.googleSearchVerification }}
+  <meta name="google-site-verification" content="{{ . }}">
+  {{- end }}
   {{ with .Params.image }}
   <meta property="og:image" content="{{ . | absURL }}">
   <meta name="twitter:image" content="{{ . | absURL }}">
