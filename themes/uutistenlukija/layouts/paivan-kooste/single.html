@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="digest-header">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.description }}<p class="digest-desc">{{ . }}</p>{{ end }}
+</div>
+
+<div class="digest-content">
+  {{ .Content }}
+</div>
+
+<div class="digest-nav">
+  <a href="/paivan-kooste/" class="digest-archive-link">← Aiemmat koosteet</a>
+</div>
+{{ end }}

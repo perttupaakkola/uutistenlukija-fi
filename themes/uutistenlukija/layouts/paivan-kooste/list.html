@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="category-header">
+  <h1>Päivän kooste</h1>
+  <p>Päivittäinen tiivistelmä tärkeimmistä uutistapahtumista.</p>
+</div>
+
+<div class="digest-list">
+  {{ range .Pages.ByDate.Reverse }}
+  <div class="digest-entry">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <span class="digest-date">{{ .Date | time.Format "2.1.2006" }}</span>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

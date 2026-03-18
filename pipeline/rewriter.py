@@ -101,7 +101,7 @@ Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSO
 
 
 def _call_llm(system: str, prompt: str) -> str:
-    """Call the LLM with fallback chain: Claude Sonnet -> OpenRouter kimi-k2."""
+    """Call the LLM with fallback chain: gpt-4.1-nano -> gpt-4.1-mini -> bridge."""
     models = [
         {
             "name": "gpt-4.1-nano",
@@ -109,6 +109,13 @@ def _call_llm(system: str, prompt: str) -> str:
             "api_key_env": "OPENAI_API_KEY",
             "base_url": "https://api.openai.com/v1",
             "model": "gpt-4.1-nano",
+        },
+        {
+            "name": "gpt-4.1-mini",
+            "provider": "openai",
+            "api_key_env": "OPENAI_API_KEY",
+            "base_url": "https://api.openai.com/v1",
+            "model": "gpt-4.1-mini",
         },
     ]
 
@@ -278,8 +285,23 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
                 rewritten.extend(parsed)
                 print(f"[writer]   Using pass 1 results (audit parse failed)")
         except Exception as e:
-            print(f"[writer] Error: {e}")
+            print(f"[writer] Error in batch {i // batch_size + 1}: {e}")
             import traceback
             traceback.print_exc()
+            # Retry once after 5 seconds for transient failures
+            try:
+                import time as _time
+                _time.sleep(5)
+                print(f"[writer] Retrying batch {i // batch_size + 1}...")
+                response_text = _call_llm(SYSTEM_PROMPT, prompt)
+                parsed = _extract_json(response_text)
+                for j, written_article in enumerate(parsed):
+                    if j < len(batch):
+                        written_article["fingerprint"] = batch[j].get("fingerprint", "")
+                        written_article["trending"] = batch[j].get("trending", False)
+                rewritten.extend(parsed)
+                print(f"[writer]   Retry succeeded: {len(parsed)} articles")
+            except Exception as e2:
+                print(f"[writer]   Retry also failed: {e2}")
 
     return rewritten
