@@ -19,8 +19,9 @@
   {{ partial "article-schema.html" . }}
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Siirry pääsisältöön</a>
   {{ partial "header.html" . }}
-  <main class="container">
+  <main id="main-content" class="container">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
