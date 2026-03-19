@@ -38,7 +38,7 @@ TÄRKEÄÄ:
 - Tämä on SINUN artikkelisi. Älä viittaa "alkuperäiseen uutiseen" tai "raportin mukaan" (paitsi jos tiedät raportin nimen).
 - Poikkeus KANSAINVÄLISET LÄHTEET: jos artikkeli on englanninkielisestä lähteestä (BBC, Reuters, AP, The Guardian, Ars Technica, TechCrunch, Der Spiegel jne.), mainitse lähde luonnollisesti kerran — esim. "BBC:n mukaan", "The Guardianin mukaan", "Ars Technica raportoi". Ei enempää.
 - Muille artikkeleille: älä mainitse lähdettä ollenkaan.
-- Kirjoita 3-5 kappaletta, 200-400 sanaa.
+- Kirjoita 3-5 kappaletta, VÄHINTÄÄN 200 sanaa, tavoite 280-380 sanaa. Lyhyempi kuin 180 sanaa on liian lyhyt.
 
 KIRJOITUSTYYLI:
 - Aloita suoraan asiasta.
@@ -74,6 +74,7 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 7. Chatbot-artefaktit
 8. Täytesanat ja varautumiset
 9. TARKISTA KIELI: artikkelin täytyy olla suomea. Jos jokin lause on englanniksi, käännä se.
+10. PITUUS: jos artikkeli on alle 180 sanaa, laajenna sitä lisäämällä kontekstia, taustaa tai seurauksia — älä toista samaa. Tavoite 250-350 sanaa.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -210,7 +211,7 @@ Vastaa JSON-listana:
 [
   {{
     "title": "Uutisen otsikko",
-    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",
+    "content": "3-5 kappaletta, 200-380 sanaa. Vähintään 180 sanaa vaaditaan. Kappaleet erotetaan kahdella rivinvaihdolla.",
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "original_title": "Alkuperäinen otsikko RSS:stä"
   }}
@@ -224,6 +225,11 @@ Vastaa VAIN JSON-listalla."""
             response_text = _call_llm(SYSTEM_PROMPT, prompt)
             pass1_result = _extract_json(response_text)
             print(f"[writer]   Pass 1 → {len(pass1_result)} articles written")
+            # Word count check — flag articles under target
+            for _art in pass1_result:
+                _wc = len(_art.get("content", "").split())
+                if _wc < 150:
+                    print(f"[writer]   ⚠️  Short article ({_wc}w): {_art.get('title','')[:40]}")
         except json.JSONDecodeError as e:
             print(f"[writer] Pass 1 JSON parse error (batch {i // batch_size + 1}): {e}")
             print(f"[writer]   Skipping batch — no parseable output")
