@@ -1,6 +1,6 @@
 ---
 title: "Kaasun hinta nousi 25 prosenttia iskujen jälkeen Qatarissa"
-date: 2026-03-19T13:53:03.263321+00:00
+date: 2026-03-19T14:22:11.000943+00:00
 categories:
   - Talous
 author: "Anna Korhonen"
@@ -11,10 +11,10 @@ author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
 ---
 
-Kaasun hinta hyppäsi 25 prosenttia Euroopan markkinoilla sen jälkeen, kun uudet iskut kohdistuivat Lähi-idän energialaitoksiin. Iran iski Qatarin suureen nesteytetyn maakaasun vientilaitokseen kostoksi omaan kaasukentäänsä tehdylle hyökkäykselle.
+Öljyn ja kaasun hinnat nousivat jyrkästi Lähi-idän energiainfrastruktuuriin kohdistuneiden iskujen jälkeen. Kaasun hinta hyppäsi noin 25 prosenttia Euroopan tukkumarkkinoilla, kun Qatarin pääasiallinen kaasuntuotantolaitos joutui hyökkäyksen kohteeksi.
 
-Iranin South Pars -kaasukentälle, joka on yksi maailman suurimmista, tehtiin isku keskiviikkoiltana. Iran vastasi iskemällä Qatarin Ras Laffan -laitokseen, joka tuottaa viidesosan maailman nestekaasusta. Hyökkäys aiheutti "laajaa tuhoa" laitokselle.
+Euroopan kaasun hinta on nyt yli kaksinkertainen verrattuna tasoon ennen Yhdysvaltojen ja Israelin sodan alkua Iranin kanssa. Öljyn hinta nousi 10 prosenttia 119 dollariin barrelilta ennen laskuaan 112 dollariin.
 
-Kaasun hinta Euroopassa on nyt yli kaksinkertainen verrattuna Yhdysvaltojen ja Israelin sodan alkuun Iranin kanssa. Myös öljyn hinta nousi voimakkaasti, Brent-raakaöljyn hinta hyppäsi hetkellisesti 119 dollariin tynnyriltä ennen laskuaan 114 dollariin.
+Iskut kohdistuivat Iran South Pars -kaasukentälle, joka on yksi maailman suurimmista maakaasukentistä. Iran kosti iskemällä Qatarin suureen nesteytetyn maakaasun vientilaitokseen Ras Laffanissa. Laitos tuottaa viidesosan maailman nesteytettystä maakaasusta.
 
-The Economistin hyödykeasiantuntija Matthieu Favas kutsuu hinnan nousua valtavaksi. Hänen mukaansa Ras Laffan -laitoksen käyttökatkos voi kestää kuukausia, mikä selittää markkinoiden voimakkaan reaktion. Hinnat ovat kuitenkin yhä kaukana Ukrainan sodan jälkeisistä huippuluvuista.
+The Economistin hyödykeasiantuntija Matthieu Favas kuvaili hinnankorotusta "valtavaksi". Hänen mukaansa häiriöt voivat kestää kuukausia, mikä selittää markkinoiden voimakkaan reaktion.
