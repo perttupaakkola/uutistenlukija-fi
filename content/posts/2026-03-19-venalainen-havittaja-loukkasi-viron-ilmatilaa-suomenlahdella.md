@@ -1,6 +1,6 @@
 ---
 title: "Venäläinen hävittäjä loukkasi Viron ilmatilaa Suomenlahdella"
-date: 2026-03-19T13:53:03.263321+00:00
+date: 2026-03-19T14:08:12.598119+00:00
 categories:
   - Ulkomaat
 author: "Sanna Heikkinen"
@@ -11,8 +11,10 @@ author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 ---
 
-Venäläinen Su-30-hävittäjä tunkeutui Viron ilmatilaan keskiviikkona Vaindloon saaren lähellä itäisellä Suomenlahdella. Kone pysyi Viron ilmatilassa noin minuutin ajan ennen poistumistaan.
+Venäjän Suhoi Su-30 -hävittäjä tunkeutui Viron ilmatilaan keskiviikkona Vaindloon saaren lähellä itäisellä Suomenlahdella. Kone pysyi Viron ilmatilassa noin minuutin ajan.
 
-Viron ulkoministeriö kutsui torstaina Venäjän Tallinnan-suurlähetystön väliaikaisen asiainhoitajan puhutteluun ja antoi asiasta virallisen nootin. Italialainen ilmavoimien yksikkö reagoi ilmatilaloukkaukseen, mutta tapaus ei aiheuttanut välitöntä uhkaa Viron turvallisuudelle.
+Viron ulkoministeriö kutsui torstaina Venäjän Tallinnan-suurlähetystön väliaikaisen asiainhoitajan puhutteluun ja antoi asiasta nootin. Ulkoministeri Margus Tsahknan mukaan Italian ilmavoimien yksikkö reagoi loukkaukseen. Tapaus ei aiheuttanut välitöntä uhkaa maan turvallisuudelle.
 
-Kyseessä on ensimmäinen Venäjän tekemä ilmatilaloukkaus tänä vuonna. Viime syyskuussa kolme venäläistä hävittäjää lensi Viron ilmatilassa yli 12 minuuttia. Myös Viron merirajaa on loukattu tässä kuussa, kun venäläinen jäänmurtaja seilasi luvatta Viron aluevesillä.
+Kyseessä on ensimmäinen Venäjän tekemä ilmatilaloukkaus tänä vuonna. Viime syyskuussa kolme venäläistä hävittäjää lensi Viron ilmatilassa yli 12 minuuttia.
+
+Venäjä on loukannut myös Viron merirajoja. Tässä kuussa venäläinen jäänmurtaja seilasi luvatta Viron aluevesillä.

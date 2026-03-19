@@ -1,6 +1,6 @@
 ---
 title: "Tampereen yliopisto erotti opiskelijan kolmeksi kuukaudeksi"
-date: 2026-03-19T13:53:03.263321+00:00
+date: 2026-03-19T14:08:12.598119+00:00
 categories:
   - Kotimaa
 author: "Matti Virtanen"
@@ -11,8 +11,8 @@ author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
 ---
 
-Tampereen yliopisto on erottanut opiskelijan määräaikaisesti kolmeksi kuukaudeksi. Visiirin mukaan erotus liittyy opiskelijaan kohdistuneisiin kurinpitotoimiin.
+Tampereen yliopisto on erottanut opiskelijan noin kolmeksi kuukaudeksi. Visiiri-lehti uutisoi asiasta torstaina.
 
-Yliopistot voivat erottaa opiskelijoita määräaikaisesti vakavien rikkomusten vuoksi. Tavallisimpia syitä ovat vilppi tentissä, häirintä tai kampuksen järjestyssääntöjen vakava rikkominen.
+Erotuksen syytä ei ole julkistettu tarkemmin. Yliopisto ei kommentoi yksittäisiä opiskelijatapauksia tietosuojasyihin vedoten.
 
-Tampereen yliopisto ei ole kommentoinut erotuksen syytä. Opiskelija voi hakea muutosta päätökseen hallinto-oikeudelta 30 päivän kuluessa.
+Määräaikainen erottaminen on yliopiston ankarin kurinpitotoimi ennen pysyvää erottamista. Se voidaan määrätä vakavien rikkomusten tai häiritsevän käyttäytymisen vuoksi.
