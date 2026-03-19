@@ -16,12 +16,11 @@
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
   {{ if .IsSection }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} — {{ .Site.Title }}" href="{{ .Permalink }}index.xml">{{ end }}
   {{ template "_internal/schema.html" . }}
-  {{ partial "article-schema.html" . }}
+  {{ partial "json-ld.html" . }}
 </head>
 <body>
-  <a href="#main-content" class="skip-to-content">Siirry pääsisältöön</a>
   {{ partial "header.html" . }}
-  <main id="main-content" class="container">
+  <main class="container">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}

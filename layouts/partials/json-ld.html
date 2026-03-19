@@ -1,0 +1,141 @@
+{{/*
+  json-ld.html — Structured data (JSON-LD) for Schema.org
+  Covers: WebSite (homepage), NewsArticle (posts), CollectionPage (categories/sections)
+
+  Publisher org block is reused across all types.
+*/}}
+
+{{/* ── Shared: Publisher org ─────────────────────────────────────── */}}
+{{ $publisherBlock := dict
+    "@type" "Organization"
+    "name" "Uutistenlukija"
+    "url" "https://uutistenlukija.fi"
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" (printf "%simages/logo.png" .Site.BaseURL)
+      "width" 144
+      "height" 144
+    )
+}}
+
+{{/* ── Homepage: WebSite + SearchAction ──────────────────────────── */}}
+{{ if .IsHome }}
+{{ $schema := dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "name" .Site.Title
+    "url" .Site.BaseURL
+    "description" .Site.Params.description
+    "inLanguage" "fi"
+    "publisher" $publisherBlock
+    "potentialAction" (dict
+      "@type" "SearchAction"
+      "target" (dict
+        "@type" "EntryPoint"
+        "urlTemplate" (printf "%shaku/?q={search_term}" .Site.BaseURL)
+      )
+      "query-input" "required name=search_term"
+    )
+}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{/* ── Article page: NewsArticle ───────────────────────────────────── */}}
+{{ else if and .IsPage (eq .Section "posts") }}
+{{/* Resolve image URL */}}
+{{ $imageUrl := "" }}
+{{ with .Params.image }}
+  {{ if hasPrefix . "https://" }}
+    {{ $imageUrl = . }}
+  {{ else }}
+    {{ $imageUrl = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) }}
+  {{ end }}
+{{ else }}
+  {{ $cat := .Params.categories | first | lower | default "" }}
+  {{ if $cat }}
+    {{ $imageUrl = printf "%simages/og-%s.png" $.Site.BaseURL $cat }}
+  {{ else }}
+    {{ $imageUrl = printf "%simages/og-image.png" $.Site.BaseURL }}
+  {{ end }}
+{{ end }}
+
+{{/* Resolve description */}}
+{{ $desc := .Description | default (.Summary | plainify | truncate 160) | default .Site.Params.description }}
+
+{{/* Author block */}}
+{{ $authorName := .Params.author | default .Site.Params.author }}
+{{ $authorBlock := dict "@type" "Person" "name" $authorName }}
+
+{{/* Build article section list */}}
+{{ $sections := .Params.categories | default (slice) }}
+{{ $articleSection := index $sections 0 | default "" }}
+
+{{ $schema := dict
+    "@context" "https://schema.org"
+    "@type" "NewsArticle"
+    "headline" .Title
+    "url" .Permalink
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "author" $authorBlock
+    "publisher" $publisherBlock
+    "description" $desc
+    "image" (dict
+      "@type" "ImageObject"
+      "url" $imageUrl
+      "width" 1200
+      "height" 630
+    )
+    "articleSection" $articleSection
+    "inLanguage" "fi"
+    "isAccessibleForFree" "true"
+}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{/* ── Category / section page: CollectionPage ─────────────────────── */}}
+{{ else if or .IsSection .IsNode }}
+{{ $catDesc := .Description | default (printf "%s — %s" .Title .Site.Title) }}
+{{ $catImage := "" }}
+{{ $catSlug := .Section | lower }}
+{{ if $catSlug }}
+  {{ $catImage = printf "%simages/og-%s.png" $.Site.BaseURL $catSlug }}
+{{ else }}
+  {{ $catImage = printf "%simages/og-image.png" $.Site.BaseURL }}
+{{ end }}
+
+{{/* Up to 10 items for hasPart */}}
+{{ $items := slice }}
+{{ range first 10 .Pages }}
+  {{ $items = $items | append (dict
+    "@type" "NewsArticle"
+    "headline" .Title
+    "url" .Permalink
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+  ) }}
+{{ end }}
+
+{{ $schema := dict
+    "@context" "https://schema.org"
+    "@type" "CollectionPage"
+    "name" .Title
+    "url" .Permalink
+    "description" $catDesc
+    "inLanguage" "fi"
+    "image" (dict
+      "@type" "ImageObject"
+      "url" $catImage
+      "width" 1200
+      "height" 630
+    )
+    "publisher" $publisherBlock
+    "hasPart" $items
+}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{ end }}

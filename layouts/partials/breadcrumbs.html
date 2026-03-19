@@ -1,0 +1,104 @@
+{{/*
+  breadcrumbs.html
+  Renders HTML <nav> breadcrumb + BreadcrumbList JSON-LD.
+
+  Patterns:
+    Article page:  Etusivu › Kategoria › Artikkelin otsikko (truncated ~60)
+    Section page:  Etusivu › Kategoria
+    Homepage:      (nothing rendered)
+*/}}
+
+{{ if not .IsHome }}
+
+{{/* ── Build crumb list ─────────────────────────────────────────── */}}
+{{ $crumbs := slice (dict "name" "Etusivu" "url" .Site.BaseURL) }}
+
+{{ if .IsSection }}
+  {{/* Category/section page — one extra crumb for the section itself */}}
+  {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
+
+{{ else if .IsPage }}
+  {{/* Article page — category crumb then article title */}}
+  {{ $cat := .Params.categories | first }}
+  {{ if $cat }}
+    {{ $catUrl := printf "%scategories/%s/" .Site.BaseURL ($cat | urlize) }}
+    {{ $crumbs = $crumbs | append (dict "name" $cat "url" $catUrl) }}
+  {{ end }}
+  {{/* Truncate long article titles */}}
+  {{ $title := .Title }}
+  {{ if gt (len $title) 63 }}
+    {{ $title = printf "%s…" (substr $title 0 60) }}
+  {{ end }}
+  {{ $crumbs = $crumbs | append (dict "name" $title "url" .Permalink) }}
+{{ end }}
+
+{{/* ── HTML nav ──────────────────────────────────────────────────── */}}
+<nav class="breadcrumbs" aria-label="Murupolku">
+  {{ range $i, $crumb := $crumbs }}
+    {{- if gt $i 0 }}<span class="bc-sep" aria-hidden="true">›</span>{{ end -}}
+    {{- if eq $i (sub (len $crumbs) 1) -}}
+      <span class="bc-current" aria-current="page">{{ $crumb.name }}</span>
+    {{- else -}}
+      <a class="bc-link" href="{{ $crumb.url }}">{{ $crumb.name }}</a>
+    {{- end -}}
+  {{ end }}
+</nav>
+
+{{/* ── BreadcrumbList JSON-LD ────────────────────────────────────── */}}
+{{ $items := slice }}
+{{ range $i, $crumb := $crumbs }}
+  {{ $items = $items | append (dict
+    "@type" "ListItem"
+    "position" (add $i 1)
+    "name" $crumb.name
+    "item" $crumb.url
+  ) }}
+{{ end }}
+{{ $schema := dict
+    "@context" "https://schema.org"
+    "@type" "BreadcrumbList"
+    "itemListElement" $items
+}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{ end }}{{/* end if not .IsHome */}}
+
+<style>
+.breadcrumbs {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.78rem;
+  line-height: 1;
+  color: var(--text-muted, #888);
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+.bc-sep {
+  color: var(--text-muted, #aaa);
+  user-select: none;
+}
+.bc-link {
+  color: var(--text-muted, #888);
+  text-decoration: none;
+}
+.bc-link:hover {
+  color: var(--accent, #c0392b);
+  text-decoration: underline;
+}
+.bc-current {
+  color: var(--text-secondary, #555);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 40ch;
+}
+@media (max-width: 600px) {
+  .breadcrumbs { font-size: 0.72rem; }
+  .bc-current { max-width: 26ch; }
+}
+</style>
