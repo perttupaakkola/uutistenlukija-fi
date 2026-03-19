@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Viihdeuutissivusto High.fi julkaisee mobiilisovelluksen Android- ja iPhone-käyttäjille, tuoden sisällön helposti saataville älypuhelimilla."
 ---
 
 Viihdeuutissivusto High.fi on lanseerannut mobiilisovelluksen sekä Android- että iPhone-käyttäjille. Sovellus tuo sivuston sisällön saataville älypuhelimien käyttäjille.

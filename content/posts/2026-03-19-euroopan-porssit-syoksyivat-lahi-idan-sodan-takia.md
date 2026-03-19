@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Euroopan osakemarkkinat avautuvat jyrkässä laskussa Lähi-idän sodan vaikutuksesta. Stoxx 600 -indeksi ja Saksan DAX-indeksi putoavat yli kaksi prosenttia."
 ---
 
 Euroopan osakemarkkinat avautuivat torstaina jyrkässä laskussa. Stoxx 600 -indeksi oli lähes kahden prosentin pakkasella, ja Saksan DAX-indeksi putosi yli kaksi prosenttia.

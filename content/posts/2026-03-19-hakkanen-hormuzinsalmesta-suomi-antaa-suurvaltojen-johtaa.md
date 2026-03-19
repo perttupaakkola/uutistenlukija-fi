@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Puolustusministeri Antti Häkkänen ilmoittaa, että Suomi antaa länsimaiden suurvaltojen pohtia toimintaansa Hormuzinsalmella merireitin turvaamiseksi."
 ---
 
 Puolustusministeri Antti Häkkänen sanoo Suomen antavan länsimaiden suurten maiden pohtia toimintaa Hormuzinsalmella. Suomea on pyydetty mukaan merireitin turvaamiseen.

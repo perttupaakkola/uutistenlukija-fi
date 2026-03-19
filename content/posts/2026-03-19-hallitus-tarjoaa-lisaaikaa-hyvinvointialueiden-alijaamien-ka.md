@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Valtiovarainministeriö esittää hyvinvointialueiden alijäämien kattamiseen lisäaikaa vuoden 2029 loppuun, varmistaen lainsäädännön noudattamisen."
 ---
 
 Valtiovarainministeriö esittää mahdollisuutta jatkaa hyvinvointialueiden alijäämien kattamismääräaikaa vuoden 2029 loppuun. Nykyinen määräaika päättyy aiemmin.

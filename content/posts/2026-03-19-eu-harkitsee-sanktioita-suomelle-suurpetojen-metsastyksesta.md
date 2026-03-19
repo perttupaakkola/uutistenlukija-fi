@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "EU harkitsee sanktioita Suomelle, joka on myöntänyt metsästyslupia suurpetoille, kuten susille, karhuille ja ilveksille."
 ---
 
 Suomi voi saada sanktioita Euroopan unionilta susien, karhujen ja ilvesten kiintiömetsästyksen vuoksi. EU:n komissio katsoo Suomen rikkovan luonnonsuojeludirektiiviä sallimalla suurpetojen metsästyksen.

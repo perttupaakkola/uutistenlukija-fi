@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Hotelli Punkaharjun ostanut Thomas Zilliacus on ollut etsintäkuulutettuna talousrikoksista, mutta hänen etsintäkuulutuksensa on nyt poistettu."
 ---
 
 Hotelli Punkaharjun ostaneen Thomas Zilliacuksen etsintäkuulutus on poistettu. Liikemies on ollut etsintäkuulutettuna vuodesta 2024 lähtien ja epäiltynä vanhoista talousrikoksista Singaporessa.

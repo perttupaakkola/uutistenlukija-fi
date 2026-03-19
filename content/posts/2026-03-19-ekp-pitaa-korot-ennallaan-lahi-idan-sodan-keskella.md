@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Euroopan keskuspankki pitää ohjauskorkonsa ennallaan, vaikka Lähi-idän sota lisää inflaatiopaineita ja markkinoiden epävarmuutta."
 ---
 
 Euroopan keskuspankki pitää ohjauskorkonsa muuttumattomana. Talletuskorko pysyy 2,0 prosentissa, vaikka Lähi-idän sota on lisännyt inflaatiopaineita.

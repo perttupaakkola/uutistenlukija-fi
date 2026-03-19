@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Helsingin pörssi avautuu torstaina laskusuunnassa, yleisindeksin pudotessa lähes kahteen prosenttiin sodan kiihtyessä Lähi-idässä."
 ---
 
 Helsingin pörssi avautui torstaina selvään laskuun. Yleisindeksi oli ennen yhdentoista lähes kahden prosentin miinuksella.

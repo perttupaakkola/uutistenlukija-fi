@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Lounais-Suomen poliisi tutkii ammattimaisten myymälävarkaitten sarjaa, joka on varastanut kymmeniä tuhansia euroja merkkivaatteista eri puolilla Suomea."
 ---
 
 Lounais-Suomen poliisi tutkii ammattimaista varkauksien sarjaa, jossa on viety kymmenien tuhansien eurojen edestä arvokkaita merkkitakkeja, -kenkiä ja asusteita. Rikoksia on tehty eri puolilla Suomea 1-3 henkilön ryhmissä, mutta pääpaino on ollut Turun seudulla.

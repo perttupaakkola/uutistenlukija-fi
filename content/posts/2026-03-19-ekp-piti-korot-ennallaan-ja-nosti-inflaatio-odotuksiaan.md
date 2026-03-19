@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Euroopan keskuspankki pitää korot ennallaan, mutta nostaa inflaatio-odotuksiaan ja laskee talouskasvuennustettaan epävarmojen sodan olojen vuoksi."
 ---
 
 Euroopan keskuspankki päätti pitää korkonsa ennallaan torstaina. Talletuskorko pysyy 2,00 prosentissa, perusrahoitusoperaatioiden korko 2,15 prosentissa ja maksuvalmiusluoton korko 2,40 prosentissa.

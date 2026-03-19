@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Euroopan osakemarkkinat avautuvat jyrkässä laskussa öljyn hinnan noustessa Iranissa ja Qatarissa tapahtuneiden iskujen jälkeen."
 ---
 
 Euroopan osakemarkkinat avasivat torstaina voimakkaassa laskussa. Stoxx 600 -indeksi oli lähes kahden prosentin pakkasella ja Saksan DAX-indeksi runsaan kahden prosentin laskussa.

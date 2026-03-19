@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Ålandsbankenin päästrategi Jyri Suonpää esittelee seitsemän suosikkiosaketta, mukaan lukien Nordea, Sampo ja Nokia, korostaen myös Nesteen osakkeen nousua."
 ---
 
 Ålandsbankenin päästrategina toimiva Jyri Suonpää on nostanut esiin seitsemän osaketta, joihin hän uskoo nykytilanteessa. Listalla ovat Nordea, Sampo ja Nokia muiden joukossa.

@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Senegal menetti Afrikan jalkapallomestaruuden protestin vuoksi, mikä herättää kritiikkiä Afrikan jalkapalloliiton päätöksestä riistää titteli."
 ---
 
 Afrikan jalkapalloliiton johtokunnan jäsen Augustin Senghor arvostelee järjestön päätöstä riistää Afrikan mestaruus Senegalilta. BBC:n mukaan Senghor pitää tiistaina tehtyä päätöstä säälittävänä.

@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Åbo Akademin tutkijat ovat löytäneet uuden menetelmän, joka voi johtaa täsmähoitoihin aggressiivisen rintasyövän hoidossa."
 ---
 
 Åbo Akademin tutkijat ovat tehneet löydön, joka voi johtaa täsmähoitoihin aggressiivisen rintasyövän hoidossa. Tutkimus keskittyy syöpäsolujen molekulaarisiin mekanismeihin ja niiden hyödyntämiseen hoidossa.

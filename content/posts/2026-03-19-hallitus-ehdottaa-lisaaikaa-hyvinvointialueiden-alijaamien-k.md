@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Hallitus ehdottaa hyvinvointialueiden alijäämien kattamiseen lisäaikaa vuoteen 2029 saakka, mikäli alueet pystyvät osoittamaan taloudellisen tarpeen."
 ---
 
 Hallitus esittää hyvinvointialueiden alijäämien kattamismääräajan jatkamista vuoden 2029 loppuun saakka. Valtiovarainministeriö voisi tietyin edellytyksin myöntää pidennyksen alueille, joille se on välttämätöntä.

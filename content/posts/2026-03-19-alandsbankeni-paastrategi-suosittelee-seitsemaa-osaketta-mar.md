@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Ålandsbankenin päästrategi Jyri Suonpää suosittelee seitsemää osaketta, kuten Nordea, Sampo ja Nokia, markkinoiden myllerryksen keskellä."
 ---
 
 Ålandsbankenin päästrategi Jyri Suonpää näkee sijoitusmahdollisuuksia markkinoiden myllerryksen keskellä. Hän suosittelee seitsemää osaketta: Nordea, Sampo ja Nokia mukaan lukien.

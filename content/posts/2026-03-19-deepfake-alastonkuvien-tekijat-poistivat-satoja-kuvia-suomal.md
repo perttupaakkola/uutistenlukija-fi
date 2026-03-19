@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Deepfake-alastonkuvien tekijät ovat poistanut satoja kuvia suomalaisnaisista Ylen tutkivan toimituksen yhteydenoton myötä."
 ---
 
 Pornosivustolta on kadonnut suuri määrä suomalaisnaisista tehtyjä deepfake-kuvia sen jälkeen, kun Ylen tutkiva toimitus otti yhteyttä kuvien tekijöihin. Osa käyttäjistä on sulkenut profiilinsa kokonaan, osa on piilottanut tai poistanut kuvia.

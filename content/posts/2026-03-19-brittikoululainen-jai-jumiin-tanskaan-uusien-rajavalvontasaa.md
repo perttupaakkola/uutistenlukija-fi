@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "16-vuotias brittiläinen koululainen jää jumiin Tanskaan, koska hänet estetään matkustamasta Lontooseen uusien rajavalvontasääntöjen vuoksi."
 ---
 
 16-vuotias brittiläinen koululainen on jumissa Tanskassa, kun häntä ei päästetty lentokoneeseen Lontooseen uusien kaksoispassien haltijoita koskevien rajavalvontasääntöjen vuoksi. The Guardianin mukaan tyttö jäi Kööpenhaminaan vierailtuaan brittiläisen isänsä luona.

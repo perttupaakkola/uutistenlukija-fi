@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Euroopan keskuspankki pitää ohjauskoron ennallaan 2,0 prosentissa, vaikka Lähi-idän sota lisää inflaatioriskiä euroalueella."
 ---
 
 Euroopan keskuspankki piti torstaina ohjauskorkonsa ennallaan. Talletuskorko pysyy 2,0 prosentissa.

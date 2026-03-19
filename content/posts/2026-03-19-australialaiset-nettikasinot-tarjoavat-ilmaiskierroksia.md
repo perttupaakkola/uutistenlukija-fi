@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Australialaiset nettikasinot tarjoavat pelaajille ilmaiskierroksia suosituissa peleissä. Tarjouksiin sisältyy usein tiukkoja ehtoja ja voittorajoja."
 ---
 
 Australialaiset nettikasinot houkuttelevat pelaajia erilaisilla ilmaistarjouksilla. Yleisimpiä ovat ilmaiskierrokset ja pienet rahasummat ilman talletusvaatimusta.

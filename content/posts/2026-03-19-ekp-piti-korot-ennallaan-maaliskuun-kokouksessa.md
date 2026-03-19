@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Euroopan keskuspankki pitää ohjauskorot ennallaan maaliskuun kokouksessa, säilyttäen talletus- ja perusrahoituskorot odotusten mukaisesti."
 ---
 
 Euroopan keskuspankki piti ohjauskorot ennallaan maaliskuun korkokokouksessaan. Perusrahoitusoperaatioiden korko säilyi 2,15 prosentissa, talletuskorko 2,00 prosentissa ja maksuvalmiusluoton korko 2,40 prosentissa.

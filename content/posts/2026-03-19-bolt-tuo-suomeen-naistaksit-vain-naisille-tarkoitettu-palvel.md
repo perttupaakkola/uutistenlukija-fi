@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Bolt käynnistää Helsingissä naisille tarkoitetun taksipalvelun, jossa kyydit tarjoaa vain naiskuskit. Palvelu parantaa naisten turvallisuutta matkustamisessa."
 ---
 
 Taksipalvelu Bolt aloittaa torstaina naisille tarkoitetun taksipalvelun Helsingissä. Women for Women -kategoriassa naiset voivat tilata kyytejä vain naiskuskeilta.

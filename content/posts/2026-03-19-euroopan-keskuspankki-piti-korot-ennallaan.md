@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Euroopan keskuspankki pitää ohjauskorot ennallaan 2,15 prosentissa ja nostaa inflaatio-ennustettaan merkittävästi 2,6 prosenttiin."
 ---
 
 Euroopan keskuspankki (EKP) piti ohjauskoronsa ennallaan 2,15 prosentissa maaliskuun korkokokouksessa. Päätös oli ekonomistien odotusten mukainen.

@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Korkotason nousu kasvattaa asuntovelallisten lainanhoitokustannuksia ja pankit tiukentavat lainaehtojaan hakijoiden maksukyvyn perusteella."
 ---
 
 Korkotaso nousee tänä vuonna, mikä vaikuttaa suoraan asuntovelallisten maksuihin. Muuttuvakorkoisissa lainoissa koronmaksut kasvavat, kun viitekorot nousevat.

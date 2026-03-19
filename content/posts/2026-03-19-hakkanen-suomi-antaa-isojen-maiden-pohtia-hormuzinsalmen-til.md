@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Puolustusministeri Antti Häkkänen ilmoittaa, että Suomi antaa läntisten suurvaltojen pohtia toimia Hormuzinsalmella kauppamerenkulun turvaamiseksi."
 ---
 
 Puolustusministeri Antti Häkkänen sanoo Suomen antavan läntisen Euroopan suurten maiden pohtia Hormuzinsalmen toimia. Iltalehden mukaan Suomea tullaan pyytämään kauppamerenkulun turvaamiseen alueella.
