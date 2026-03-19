@@ -1,17 +1,27 @@
 """
-Unsplash image fetcher for article featured images.
+Unsplash image integration for article featured images.
 
-Uses Unsplash Source API (free, no key needed for direct URLs)
-and Unsplash API for proper search + attribution metadata.
+API compliance requirements (Unsplash API Guidelines):
+  - HOTLINK ONLY: serve images directly from images.unsplash.com — no local caching
+  - DOWNLOAD TRACKING: must call /photos/{id}/download endpoint for every image used
+  - ATTRIBUTION MANDATORY: photographer name + link with UTM params
+    UTM format: ?utm_source=uutistenlukija&utm_medium=referral
 
-Priority:
-  1. Unsplash search (UNSPLASH_ACCESS_KEY env var required for search API)
-  2. Unsplash Source random-by-keyword (free, no key, no attribution metadata)
-  3. Return None → caller falls back to category placeholder
+Rate limits:
+  - Demo mode:      50 req/hr  (search/info API calls only; hotlinks don't count)
+  - Production:  5,000 req/hr  (apply at unsplash.com/oauth/applications)
 
-Rate limits (free tier):
-  - Search API: 50 req/hr
-  - Source API: no hard limit but be polite
+Image sizing (hotlink URL params):
+  - Full:    urls.full    (~2400px, varies by original)
+  - Regular: urls.regular (~1080px wide)
+  - Small:   urls.small   (~400px wide, for thumbnails)
+  - Thumb:   urls.thumb   (200px wide)
+
+Environment:
+  UNSPLASH_ACCESS_KEY — required
+
+Fallback:
+  Returns None → caller falls back to Pexels or category placeholder
 """
 
 import os
@@ -20,13 +30,22 @@ import json
 import time
 import urllib.request
 import urllib.parse
-from typing import Optional, Dict, Tuple
+from typing import Optional, Dict, List
 
 UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 UNSPLASH_SEARCH_URL = "https://api.unsplash.com/search/photos"
-UNSPLASH_SOURCE_URL = "https://source.unsplash.com"
+UNSPLASH_DOWNLOAD_URL = "https://api.unsplash.com/photos/{id}/download"
 
-# Finnish stopwords + generic words to strip before querying Unsplash
+UTM = "utm_source=uutistenlukija&utm_medium=referral"
+
+# In-memory search cache: query → list of photo dicts
+# Keeps API calls low against the 50 req/hr demo limit
+_query_cache: Dict[str, List[Dict]] = {}
+
+# Round-robin index per query
+_query_index: Dict[str, int] = {}
+
+# Finnish stopwords
 _FI_STOPWORDS = {
     "ja", "tai", "on", "ei", "se", "hän", "he", "me", "te", "olla", "oli",
     "että", "kun", "jos", "niin", "jo", "vain", "myös", "sekä", "mutta",
@@ -34,14 +53,13 @@ _FI_STOPWORDS = {
     "uusi", "uuden", "uutta", "uudet", "uusia",
     "koko", "kaikki", "yksi", "kaksi", "kolme", "neljä", "viisi",
     "suuri", "pieni", "iso", "vuosi", "vuoden", "vuotta",
-    "yli", "alle", "noin", "lähes", "noin", "enää",
+    "yli", "alle", "noin", "lähes", "enää",
     "sanoo", "kertoo", "mukaan", "mukana", "jälkeen", "ennen",
-    "suomi", "suomen", "suomessa", "suomalais", "suomalainen",  # too generic for image search
-    "voitti", "voittaa", "voitti", "hävis", "julkaisi", "kertoo", "sanoo", "ilmoitti",  # verbs, not useful for image search
-    "uutiset", "lehti", "media",
+    "suomi", "suomen", "suomessa", "suomalais", "suomalainen",
+    "voitti", "hävis", "julkaisi", "ilmoitti", "kertoi", "totesi",
+    "uutiset", "lehti", "media", "uutinen",
 }
 
-# EN translations for key Finnish category-specific terms (Unsplash works in EN)
 _FI_TO_EN = {
     "hallitus": "government",
     "eduskunta": "parliament",
@@ -51,7 +69,7 @@ _FI_TO_EN = {
     "teknologia": "technology",
     "tekoäly": "artificial intelligence",
     "urheilu": "sports",
-    "jalkapallo": "football",
+    "jalkapallo": "football soccer",
     "jääkiekko": "ice hockey",
     "jääkiekon": "ice hockey",
     "jääkiekossa": "ice hockey",
@@ -60,15 +78,16 @@ _FI_TO_EN = {
     "ilmasto": "climate",
     "kulttuuri": "culture",
     "musiikki": "music",
-    "elokuva": "film",
-    "sota": "war",
+    "elokuva": "film cinema",
+    "sota": "war conflict",
     "kriisi": "crisis",
     "vaali": "election",
     "presidentin": "president",
+    "presidentti": "president",
     "ministeri": "minister",
-    "yritys": "company",
-    "nokia": "nokia",
-    "nato": "nato",
+    "yritys": "company business",
+    "nokia": "nokia technology",
+    "nato": "NATO military",
     "eu": "european union",
     "ukraina": "ukraine",
     "venäjä": "russia",
@@ -77,208 +96,284 @@ _FI_TO_EN = {
     "britannia": "britain",
     "ranska": "france",
     "saksa": "germany",
-    "terveys": "health",
+    "terveys": "health medical",
     "sairaala": "hospital",
-    "koulu": "school",
-    "liikenne": "traffic",
+    "koulu": "school education",
+    "liikenne": "traffic transportation",
     "energia": "energy",
     "sähkö": "electricity",
-    "ilma": "air",
     "luonto": "nature",
-    "meri": "sea",
+    "meri": "sea ocean",
     "metsä": "forest",
+    "raha": "money finance",
+    "pankki": "bank",
+    "asunto": "housing apartment",
+    "auto": "car automobile",
+    "lentokone": "airplane aviation",
+    "laiva": "ship maritime",
+    "juna": "train railway",
+    "rokote": "vaccine medicine",
+    "virus": "virus pandemic",
+    "avaruus": "space astronomy",
+    "robotti": "robot automation",
+    "tietokone": "computer",
+    "ohjelmisto": "software",
+    "kyber": "cybersecurity",
+    "tietoturva": "cybersecurity",
 }
 
-CATEGORY_SEARCH_TERMS = {
-    "Kotimaa": "finland news",
-    "Ulkomaat": "world news international",
-    "Talous": "business economy finance",
-    "Teknologia": "technology innovation",
-    "Urheilu": "sports athletic",
-    "Kulttuuri": "culture arts",
-    "Tiede": "science research laboratory",
+CATEGORY_QUERIES = {
+    "Kotimaa":    "finland landscape city",
+    "Ulkomaat":   "world globe international",
+    "Talous":     "business finance economy",
+    "Teknologia": "technology innovation digital",
+    "Urheilu":    "sports athlete competition",
+    "Kulttuuri":  "culture arts performance",
+    "Tiede":      "science research laboratory",
 }
 
 
-def extract_keywords(title: str, category: str = "", max_keywords: int = 3) -> str:
-    """Extract 2-3 English search keywords from a Finnish title.
-
-    Strategy:
-    1. Strip Finnish stopwords
-    2. Translate known Finnish terms to English
-    3. Fall back to category search terms if nothing useful extracted
-    Returns a space-separated query string for Unsplash.
-    """
-    # Normalize: lowercase, strip punctuation except hyphens
+def extract_keywords(title: str, category: str = "", max_terms: int = 4) -> str:
+    """Extract English search keywords from a Finnish article title."""
     words = re.sub(r"[^\wäöå\s-]", " ", title.lower()).split()
-
     translated = []
+    seen = set()
+
     for word in words:
-        # Strip common Finnish inflection suffixes for lookup
-        stem = re.sub(r"(ssa|ssä|sta|stä|lle|lta|ltä|lla|llä|sta|stä|ksi|lla|han|hen|hin|hun|hyn|höön|een|ien|jen|den|ten|nen|sen)$", "", word)
-        if stem in _FI_STOPWORDS or word in _FI_STOPWORDS:
+        stem = re.sub(
+            r"(ssa|ssä|sta|stä|lle|lta|ltä|lla|llä|ksi|han|hen|hin|hun|hyn|höön|een|ien|jen|den|ten|nen|sen)$",
+            "", word
+        )
+        if word in _FI_STOPWORDS or stem in _FI_STOPWORDS:
             continue
         if len(stem) < 3:
             continue
-        # Translate if known
-        en = _FI_TO_EN.get(stem) or _FI_TO_EN.get(word)
+        en = _FI_TO_EN.get(word) or _FI_TO_EN.get(stem)
         if en:
-            translated.append(en)
+            key = en.split()[0]
+            if key not in seen:
+                seen.add(key)
+                translated.append(en)
         else:
-            # Keep original — Unsplash handles some Finnish proper nouns (Nokia etc.)
-            # but skip purely Finnish common words
-            # Heuristic: if it ends in common Finnish suffixes, likely not useful in EN
-            if not re.search(r"(inen|inen|inen|lainen|läinen|linen|llinen|llinen)$", word):
-                translated.append(word)
+            if not re.search(r"(inen|lainen|läinen|linen|llinen)$", word):
+                if word not in seen:
+                    seen.add(word)
+                    translated.append(word)
 
-    # Deduplicate while preserving order
-    seen = set()
-    unique = []
-    for w in translated:
-        if w not in seen:
-            seen.add(w)
-            unique.append(w)
+    terms = translated[:max_terms]
+    if not terms:
+        return CATEGORY_QUERIES.get(category, "news")
 
-    keywords = unique[:max_keywords]
+    if len(terms) < max_terms and category in CATEGORY_QUERIES:
+        cat_word = CATEGORY_QUERIES[category].split()[0]
+        if cat_word not in " ".join(terms):
+            terms.append(cat_word)
 
-    if not keywords:
-        # Full fallback to category terms
-        fallback = CATEGORY_SEARCH_TERMS.get(category, "news")
-        return fallback
-
-    # Append one category hint if we have room
-    if len(keywords) < max_keywords and category:
-        cat_hint = CATEGORY_SEARCH_TERMS.get(category, "").split()[0]
-        if cat_hint and cat_hint not in " ".join(keywords):
-            keywords.append(cat_hint)
-
-    return " ".join(keywords)
+    return " ".join(terms)
 
 
-def _search_unsplash(query: str, orientation: str = "landscape") -> Optional[Dict]:
-    """Search Unsplash API. Returns photo dict or None.
+def _api_headers() -> Dict[str, str]:
+    return {
+        "Authorization": f"Client-ID {UNSPLASH_ACCESS_KEY}",
+        "Accept-Version": "v1",
+        "User-Agent": "uutistenlukija/1.0 (https://uutistenlukija.fi)",
+    }
 
-    Requires UNSPLASH_ACCESS_KEY env var.
-    Photo dict keys: url, thumb_url, photographer, photographer_url, alt_description
+
+def _search(query: str, per_page: int = 30) -> List[Dict]:
+    """Search Unsplash. Returns list of normalized photo dicts, cached per query.
+
+    Per Unsplash API guidelines, per_page max is 30.
     """
     if not UNSPLASH_ACCESS_KEY:
-        return None
+        return []
+
+    cache_key = f"{query}|{per_page}"
+    if cache_key in _query_cache:
+        return _query_cache[cache_key]
 
     params = urllib.parse.urlencode({
         "query": query,
-        "orientation": orientation,
-        "per_page": 5,
+        "orientation": "landscape",
+        "per_page": min(per_page, 30),
         "content_filter": "high",
+        "order_by": "relevant",
     })
     url = f"{UNSPLASH_SEARCH_URL}?{params}"
-    req = urllib.request.Request(url, headers={
-        "Authorization": f"Client-ID {UNSPLASH_ACCESS_KEY}",
-        "Accept-Version": "v1",
-    })
+    req = urllib.request.Request(url, headers=_api_headers())
+
     try:
-        with urllib.request.urlopen(req, timeout=8) as resp:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            remaining = resp.headers.get("X-Ratelimit-Remaining", "?")
+            if remaining != "?" and int(remaining) < 10:
+                print(f"[unsplash] ⚠ Rate limit low: {remaining} remaining")
             data = json.loads(resp.read())
-        results = data.get("results", [])
-        if not results:
-            return None
-        photo = results[0]
-        return {
-            "url": photo["urls"]["regular"],  # ~1080px wide
-            "thumb_url": photo["urls"]["small"],  # ~400px wide
-            "photographer": photo["user"]["name"],
-            "photographer_url": photo["user"]["links"]["html"],
-            "alt_description": photo.get("alt_description") or query,
-            "unsplash_photo_url": photo["links"]["html"],
-        }
+    except urllib.error.HTTPError as e:
+        if e.code == 429:
+            print("[unsplash] ✗ Rate limit exceeded (429)")
+        else:
+            print(f"[unsplash] HTTP {e.code} for query '{query}'")
+        _query_cache[cache_key] = []
+        return []
     except Exception as e:
         print(f"[unsplash] Search error for '{query}': {e}")
-        return None
+        _query_cache[cache_key] = []
+        return []
+
+    photos = []
+    for p in data.get("results", []):
+        user = p.get("user", {})
+        user_links = user.get("links", {})
+        photographer_profile = user_links.get("html", "https://unsplash.com")
+        # Append UTM to attribution URLs (required by Unsplash guidelines)
+        if "?" in photographer_profile:
+            photographer_profile += f"&{UTM}"
+        else:
+            photographer_profile += f"?{UTM}"
+
+        photo_page = p.get("links", {}).get("html", "https://unsplash.com")
+        if "?" in photo_page:
+            photo_page += f"&{UTM}"
+        else:
+            photo_page += f"?{UTM}"
+
+        urls = p.get("urls", {})
+        photos.append({
+            "id": p["id"],
+            # Hotlink URLs — served directly from images.unsplash.com
+            "url_full":    urls.get("full"),
+            "url_regular": urls.get("regular"),   # ~1080px
+            "url_small":   urls.get("small"),     # ~400px
+            "url_thumb":   urls.get("thumb"),     # 200px
+            "download_location": p.get("links", {}).get("download_location"),
+            "photographer": user.get("name", "Unknown"),
+            "photographer_url": photographer_profile,
+            "photo_page": photo_page,
+            "alt": p.get("alt_description") or query,
+            "width": p.get("width", 0),
+            "height": p.get("height", 0),
+        })
+
+    _query_cache[cache_key] = photos
+    return photos
 
 
-def _source_unsplash(query: str, width: int = 1200, height: int = 675) -> Optional[Dict]:
-    """Use Unsplash Source (no API key). Returns URL only, no attribution metadata."""
-    encoded = urllib.parse.quote(query)
-    url = f"{UNSPLASH_SOURCE_URL}/{width}x{height}/?{encoded}"
-    # Unsplash Source returns a redirect to actual image — resolve it
+def _trigger_download(photo: Dict) -> None:
+    """Trigger Unsplash download tracking endpoint.
+
+    Required by Unsplash API guidelines every time a photo is used.
+    Uses download_location from the photo (preferred) or constructs it.
+    Non-blocking: failure is logged but does not abort the pipeline.
+    """
+    if not UNSPLASH_ACCESS_KEY:
+        return
+
+    dl_url = photo.get("download_location")
+    if not dl_url:
+        photo_id = photo.get("id")
+        if not photo_id:
+            return
+        dl_url = UNSPLASH_DOWNLOAD_URL.format(id=photo_id)
+
+    req = urllib.request.Request(dl_url, headers=_api_headers())
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "uutistenlukija/1.0"})
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            final_url = resp.url
-        if "unsplash.com/photos" in final_url or "images.unsplash.com" in final_url:
-            return {
-                "url": final_url,
-                "thumb_url": final_url,
-                "photographer": "Unsplash",
-                "photographer_url": "https://unsplash.com",
-                "alt_description": query,
-                "unsplash_photo_url": "https://unsplash.com",
-            }
+        with urllib.request.urlopen(req, timeout=8) as _:
+            pass
+        print(f"[unsplash] Download tracked: {photo.get('id')}")
     except Exception as e:
-        print(f"[unsplash] Source URL error for '{query}': {e}")
-    return None
+        print(f"[unsplash] Download tracking failed (non-fatal): {e}")
 
 
-def fetch_image_for_article(title: str, category: str, _inter_request_delay: float = 1.2) -> Optional[Dict]:
-    """Fetch a relevant Unsplash image for an article.
+def fetch_image_for_article(
+    title: str,
+    category: str,
+    inter_request_delay: float = 1.2,
+) -> Optional[Dict]:
+    """Fetch a relevant Unsplash image for a single article.
 
-    Returns dict with url, thumb_url, photographer, photographer_url,
-    alt_description, unsplash_photo_url — or None if nothing found.
+    Returns dict with:
+      url          — hotlink URL (full size, images.unsplash.com)
+      thumb_url    — hotlink thumbnail URL
+      photographer — photographer name
+      photographer_url — photographer Unsplash profile URL (with UTM)
+      photo_page   — Unsplash photo page URL (with UTM, for attribution link)
+      alt          — alt text string
+      credit       — "Photo by X on Unsplash" attribution string
+      hotlink      — True (signals templates to use as <img src> directly)
+    Or None if nothing found.
 
-    Callers should use category placeholder if None is returned.
+    Side effect: triggers Unsplash download tracking endpoint.
     """
     query = extract_keywords(title, category)
-    print(f"[unsplash] '{title[:50]}' → query: '{query}'")
+    print(f"[unsplash] '{title[:50]}' → '{query}'")
 
-    # Try search API first (has proper attribution)
-    photo = _search_unsplash(query)
-    if photo:
-        print(f"[unsplash] Search hit: {photo['photographer']} — {photo['url'][:60]}")
-        time.sleep(_inter_request_delay)
-        return photo
+    photos = _search(query)
 
-    # Fall back to Source URL (no attribution metadata, but free)
-    photo = _source_unsplash(query)
-    if photo:
-        print(f"[unsplash] Source URL hit: {photo['url'][:60]}")
-        time.sleep(_inter_request_delay)
-        return photo
+    if not photos and category in CATEGORY_QUERIES:
+        fallback_query = CATEGORY_QUERIES[category]
+        print(f"[unsplash] No results for '{query}' → category fallback '{fallback_query}'")
+        photos = _search(fallback_query)
 
-    print(f"[unsplash] No image found for '{title[:50]}'")
-    return None
+    if not photos:
+        return None
+
+    idx = _query_index.get(query, 0) % len(photos)
+    _query_index[query] = idx + 1
+    photo = photos[idx]
+
+    # Trigger mandatory download tracking
+    _trigger_download(photo)
+    time.sleep(inter_request_delay)
+
+    photographer = photo["photographer"]
+    photo_page = photo["photo_page"]
+
+    return {
+        "url": photo["url_full"] or photo["url_regular"],
+        "thumb_url": photo["url_small"] or photo["url_thumb"],
+        "photographer": photographer,
+        "photographer_url": photo["photographer_url"],
+        "photo_page": photo_page,
+        "alt": f"{category}: {title}"[:125],
+        "credit": f"Photo by {photographer} on Unsplash",
+        "hotlink": True,  # must NOT be downloaded/cached locally
+    }
 
 
 def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
-    """Fetch Unsplash images for a list of articles.
+    """Fetch Unsplash hotlink images for a list of articles.
 
-    Adds to each article:
-      - image: URL (Unsplash regular or category fallback path)
-      - image_thumb: thumbnail URL
-      - image_alt: descriptive alt text
-      - image_credit: "Photo: Photographer / Unsplash" for frontmatter display
-      - image_source_url: Unsplash photo page URL for attribution link
-      - image_category_fallback: True if using category placeholder
+    Sets frontmatter fields on each article:
+      image            — hotlink URL (images.unsplash.com) to use in <img src>
+      image_thumb      — thumbnail hotlink URL
+      image_alt        — alt text (125 char cap)
+      image_credit     — "Photo by X on Unsplash" (mandatory attribution)
+      image_source_url — Unsplash photo page URL with UTM params
+      image_caption    — empty (Sara's layout handles rendering)
+      image_hotlink    — True (downstream templates must not proxy/re-serve this URL)
+      image_category_fallback — True if fell back to local category placeholder
 
-    Articles that already have an `image` field are skipped.
+    Skips articles that already have an `image` field set.
     """
     for article in articles:
         if article.get("image"):
-            continue  # already has image (e.g. from AI gen)
+            continue
 
         title = article.get("title", "")
         category = article.get("category", "Kotimaa")
 
-        photo = fetch_image_for_article(title, category, _inter_request_delay=delay)
+        result = fetch_image_for_article(title, category, inter_request_delay=delay)
 
-        if photo:
-            article["image"] = photo["url"]
-            article["image_thumb"] = photo["thumb_url"]
-            article["image_alt"] = f"{category}-aiheinen kuva: {title}"[:125]
-            photographer = photo.get("photographer", "Unsplash")
-            article["image_credit"] = f"Kuva: {photographer} / Unsplash"
-            article["image_source_url"] = photo.get("unsplash_photo_url", "https://unsplash.com")
-            article["image_caption"] = ""  # populated by caller if needed
+        if result:
+            article["image"] = result["url"]
+            article["image_thumb"] = result["thumb_url"]
+            article["image_alt"] = result["alt"]
+            article["image_credit"] = result["credit"]
+            article["image_source_url"] = result["photo_page"]
+            article["image_caption"] = ""
+            article["image_hotlink"] = True
+            article["image_category_fallback"] = False
         else:
-            # Category placeholder — set a flag, publisher handles the path
             cat_slug = category.lower()
             article["image"] = f"/images/categories/{cat_slug}.jpg"
             article["image_thumb"] = f"/images/categories/{cat_slug}.jpg"
@@ -286,6 +381,7 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
             article["image_credit"] = ""
             article["image_source_url"] = ""
             article["image_caption"] = ""
+            article["image_hotlink"] = False
             article["image_category_fallback"] = True
 
     return articles

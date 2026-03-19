@@ -133,48 +133,59 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
 
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
-    # Step 2b: Fetch images — Pexels primary, Unsplash secondary, AI gen fallback
-    print(f"\n🖼️  Vaihe 2b: Kuvien haku (Pexels → Unsplash → AI fallback)...")
+    # Step 2b: Fetch images — Unsplash primary, Pexels secondary, AI gen fallback
+    # Unsplash: hotlink (images.unsplash.com), 50 req/hr demo, download tracking required
+    # Pexels:   download locally, 200 req/hr, attribution required
+    print(f"\n🖼️  Vaihe 2b: Kuvien haku (Unsplash → Pexels → AI fallback)...")
     try:
         import os as _os
-        _pexels_key = _os.environ.get("PEXELS_API_KEY", "")
         _unsplash_key = _os.environ.get("UNSPLASH_ACCESS_KEY", "")
+        _pexels_key = _os.environ.get("PEXELS_API_KEY", "")
 
-        # Pass 1: Pexels (200 req/hr, downloads locally, full attribution)
-        if _pexels_key:
-            rewritten = pexels_fetch_images(rewritten, delay=0.5)
-            pexels_count = sum(1 for a in rewritten if a.get("image") and not a.get("image_category_fallback"))
-            print(f"[pexels] {pexels_count}/{len(rewritten)} images fetched")
-        else:
-            print("[pexels] No PEXELS_API_KEY — skipping")
-            pexels_count = 0
+        def _needs_image(a):
+            return not a.get("image") or a.get("image_category_fallback")
 
-        # Pass 2: Unsplash for articles still without a real image
-        articles_without = [a for a in rewritten if a.get("image_category_fallback") or not a.get("image")]
-        if articles_without and _unsplash_key:
-            print(f"[unsplash] Trying for {len(articles_without)} articles without Pexels image...")
-            # Clear category fallback flags so unsplash module processes them
-            for a in articles_without:
+        def _clear_fallback(articles):
+            for a in articles:
                 if a.get("image_category_fallback"):
                     a["image"] = ""
                     a["image_category_fallback"] = False
-            articles_without = unsplash_fetch_images(articles_without, delay=1.2)
-            unsplash_count = sum(1 for a in articles_without if a.get("image") and not a.get("image_category_fallback"))
-            print(f"[unsplash] {unsplash_count}/{len(articles_without)} additional images")
-        else:
-            unsplash_count = 0
 
-        # Pass 3: For any still missing image, try AI image gen
+        unsplash_count = pexels_count = ai_count = 0
+
+        # Pass 1: Unsplash (primary — higher quality, hotlinked)
+        if _unsplash_key:
+            rewritten = unsplash_fetch_images(rewritten, delay=1.2)
+            unsplash_count = sum(1 for a in rewritten if a.get("image") and not a.get("image_category_fallback"))
+            print(f"[unsplash] {unsplash_count}/{len(rewritten)} images")
+        else:
+            print("[unsplash] No UNSPLASH_ACCESS_KEY — skipping")
+
+        # Pass 2: Pexels for articles still without a real image (downloads locally)
+        still_missing = [a for a in rewritten if _needs_image(a)]
+        if still_missing and _pexels_key:
+            print(f"[pexels] Trying for {len(still_missing)} remaining articles...")
+            _clear_fallback(still_missing)
+            still_missing = pexels_fetch_images(still_missing, delay=0.5)
+            pexels_count = sum(1 for a in still_missing if a.get("image") and not a.get("image_category_fallback"))
+            print(f"[pexels] {pexels_count}/{len(still_missing)} images")
+        elif not _pexels_key:
+            print("[pexels] No PEXELS_API_KEY — skipping")
+
+        # Pass 3: AI image gen for any remaining gaps
         no_image = [a for a in rewritten if not a.get("image")]
         if no_image:
             print(f"[image_gen] AI gen for {len(no_image)} articles without image...")
             no_image = generate_images_for_articles(no_image)
             ai_count = sum(1 for a in no_image if a.get("image") and not a.get("image_category_fallback"))
-            print(f"[image_gen] AI gen: {ai_count}/{len(no_image)} succeeded")
+            print(f"[image_gen] {ai_count}/{len(no_image)} succeeded")
 
         image_count = sum(1 for a in rewritten if a.get("image"))
         fallback_count = sum(1 for a in rewritten if a.get("image_category_fallback"))
-        print(f"[images] Total: {image_count}/{len(rewritten)} (Pexels:{pexels_count} Unsplash:{unsplash_count} fallback:{fallback_count})")
+        hotlink_count = sum(1 for a in rewritten if a.get("image_hotlink"))
+        print(f"[images] Total: {image_count}/{len(rewritten)} "
+              f"(Unsplash:{unsplash_count} hotlink, Pexels:{pexels_count} local, "
+              f"AI:{ai_count}, fallback:{fallback_count})")
     except Exception as e:
         print(f"[images] Kuvien haku epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
 
