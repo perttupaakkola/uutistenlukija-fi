@@ -5,14 +5,12 @@ Runs alongside RSS scanner. Every 10 minutes, fetches articles from the past 20
 minutes via Server-Sent Events. Dedups by normalized URL hash before feeding into
 the rewriter pipeline.
 
-Rules active in Firehose (POST to /v1/rules to register):
-  - finnish-news:      language:"fi" AND page_category:"/News" AND recent:24h
-  - finnish-articles:  language:"fi" AND page_type:"/Article" AND recent:24h
-  - finnish-domains:   Finnish news domains + recent:24h
-  - finnish-tiede:     language:"fi" AND page_category:"/Science" AND recent:48h
-  - finnish-talous:    language:"fi" AND page_category:"/Finance" AND recent:24h
-  - finnish-urheilu:   language:"fi" AND page_category:"/Sports" AND recent:24h
-  - finnish-teknologia: language:"fi" AND page_category:"/Computers_and_Electronics" AND recent:24h
+Rules active in Firehose (5 rules, updated 2026-03-19):
+  - fi-news-clean:      language:fi AND page_category:"/News" AND recent:24h (excludes spam types)
+  - fi-trusted-domains: Trusted FI domains AND language:fi AND page_type:"/Article" AND recent:24h
+  - tiede:              language:fi AND page_category:"/Science" AND recent:48h
+  - talous-fallback:    FI finance domains AND language:fi AND page_type:"/Article" AND recent:24h
+  - urheilu-fallback:   FI sports domains AND language:fi AND page_type:"/Article" AND recent:24h
 
 Usage:
   python3 firehose.py           # Poll once, print results
@@ -35,38 +33,58 @@ FIREHOSE_BASE = "https://api.firehose.com/v1"
 FIREHOSE_TOKEN = "fh_MPdE6AVizFkpIdRiKgL10QJUfoORj2eEZUfXBHtk"
 
 # Rules to register with Firehose (idempotent — tag is unique key)
+# Updated 2026-03-19: replaced 3 old rules with 5 refined rules
 FIREHOSE_RULES = [
     {
-        "tag": "finnish-news",
-        "value": 'language:"fi" AND page_category:"/News" AND recent:24h',
-    },
-    {
-        "tag": "finnish-articles",
-        "value": 'language:"fi" AND page_type:"/Article" AND recent:24h',
-    },
-    {
-        "tag": "finnish-domains",
+        "tag": "fi-news-clean",
         "value": (
-            "(url_domain:yle.fi OR url_domain:hs.fi OR url_domain:iltalehti.fi OR "
-            "url_domain:is.fi OR url_domain:kauppalehti.fi OR url_domain:tekniikkatalous.fi OR "
-            "url_domain:ts.fi) AND recent:24h"
+            'language:"fi" AND page_category:"/News" AND recent:24h'
+            ' AND NOT page_category:"/Games"'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/Tutorial_or_Guide"'
+            ' AND NOT page_type:"/Article/FAQ"'
         ),
+        "quality": True,
     },
     {
-        "tag": "finnish-tiede",
-        "value": 'language:"fi" AND page_category:"/Science" AND recent:48h',
+        "tag": "fi-trusted-domains",
+        "value": (
+            "(domain:yle.fi OR domain:hs.fi OR domain:is.fi OR domain:iltalehti.fi OR "
+            "domain:mtv.fi OR domain:kauppalehti.fi OR domain:verkkouutiset.fi)"
+            " AND language:fi AND page_type:\"/Article\" AND recent:24h"
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/FAQ"'
+        ),
+        "quality": True,
     },
     {
-        "tag": "finnish-talous",
-        "value": 'language:"fi" AND page_category:"/Finance" AND recent:24h',
+        "tag": "tiede",
+        "value": (
+            'language:fi AND page_category:"/Science" AND recent:48h'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/FAQ"'
+        ),
+        "quality": True,
     },
     {
-        "tag": "finnish-urheilu",
-        "value": 'language:"fi" AND page_category:"/Sports" AND recent:24h',
+        "tag": "talous-fallback",
+        "value": (
+            "(domain:kauppalehti.fi OR domain:hs.fi OR domain:is.fi OR domain:yle.fi)"
+            ' AND language:fi AND page_type:"/Article" AND recent:24h'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/FAQ"'
+        ),
+        "quality": True,
     },
     {
-        "tag": "finnish-teknologia",
-        "value": 'language:"fi" AND page_category:"/Computers_and_Electronics" AND recent:24h',
+        "tag": "urheilu-fallback",
+        "value": (
+            "(domain:yle.fi OR domain:is.fi OR domain:iltalehti.fi OR domain:mtv.fi)"
+            ' AND language:fi AND page_type:"/Article" AND recent:24h'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/FAQ"'
+        ),
+        "quality": True,
     },
 ]
 
@@ -93,10 +111,15 @@ _CATEGORY_MAP = {
 }
 
 _TAG_CATEGORY_MAP = {
+    # Old tags (kept for backward compat with cached state)
     "finnish-tiede": "Tiede",
     "finnish-talous": "Talous",
     "finnish-urheilu": "Urheilu",
     "finnish-teknologia": "Teknologia",
+    # New tags (2026-03-19)
+    "tiede": "Tiede",
+    "talous-fallback": "Talous",
+    "urheilu-fallback": "Urheilu",
 }
 
 HEADERS = {
@@ -193,7 +216,11 @@ def list_rules() -> List[Dict]:
     )
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
-            return json.loads(resp.read())
+            result = json.loads(resp.read())
+            # API returns {"data": [...], "meta": {...}}
+            if isinstance(result, dict) and "data" in result:
+                return result["data"]
+            return result if isinstance(result, list) else []
     except Exception as e:
         print(f"[firehose] Failed to list rules: {e}")
         return []
