@@ -24,6 +24,7 @@ from publisher import publish_articles, build_site
 from generate_descriptions import generate_for_article_dict
 from dedup import filter_new_articles, check_published_duplicates, mark_published
 from image_gen import generate_images_for_articles
+from unsplash import fetch_images_for_articles
 
 
 LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
@@ -131,14 +132,27 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
 
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
-    # Step 2b: Generate header images (optional, failures don't block publishing)
-    print(f"\n🖼️  Vaihe 2b: Kuvien generointi...")
+    # Step 2b: Fetch images — Unsplash first, AI gen fallback
+    print(f"\n🖼️  Vaihe 2b: Kuvien haku (Unsplash + AI fallback)...")
     try:
-        rewritten = generate_images_for_articles(rewritten)
+        # Pass 1: Unsplash (free, fast, attribution-compliant)
+        rewritten = fetch_images_for_articles(rewritten, delay=1.2)
+        unsplash_count = sum(1 for a in rewritten if a.get("image") and not a.get("image_category_fallback"))
+        fallback_count = sum(1 for a in rewritten if a.get("image_category_fallback"))
+        print(f"[unsplash] {unsplash_count} Unsplash / {fallback_count} category placeholder")
+
+        # Pass 2: For any still missing image, try AI image gen
+        no_image = [a for a in rewritten if not a.get("image")]
+        if no_image:
+            print(f"[image_gen] AI gen for {len(no_image)} articles without image...")
+            no_image = generate_images_for_articles(no_image)
+            ai_count = sum(1 for a in no_image if a.get("image") and not a.get("image_category_fallback"))
+            print(f"[image_gen] AI gen: {ai_count}/{len(no_image)} succeeded")
+
         image_count = sum(1 for a in rewritten if a.get("image"))
-        print(f"[image_gen] {image_count}/{len(rewritten)} artikkelia sai kuvan")
+        print(f"[images] Total: {image_count}/{len(rewritten)} artikkelia sai kuvan")
     except Exception as e:
-        print(f"[image_gen] Kuvien generointi epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
+        print(f"[images] Kuvien haku epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
 
     # Step 2c: Generate meta descriptions
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")

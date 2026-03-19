@@ -1,10 +1,17 @@
 {{ define "main" }}
 <div class="category-header">
   <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="category-description">{{ . }}</p>{{ end }}
 </div>
 <div class="articles-grid">
   {{ range .Pages.ByDate.Reverse }}
+  {{ $cat := .Params.categories | first | default "kotimaa" }}
+  {{ $img := .Params.image | default (printf "/images/categories/%s.webp" ($cat | lower)) }}
+  {{ $alt := .Params.image_alt | default .Title }}
   <article class="article-card">
+    <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
+      <img src="{{ $img }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" width="400" height="225">
+    </a>
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}

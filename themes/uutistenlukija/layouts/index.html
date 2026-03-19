@@ -2,15 +2,42 @@
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
 
-{{/* Lead article - biggest/newest */}}
+{{/* Trending section */}}
+{{ $trending := where $sorted ".Params.trending" true }}
+{{ if $trending }}
+<section class="trending-section">
+  <div class="trending-header">
+    <h2>🔴 Nyt puheenaiheena</h2>
+  </div>
+  <div class="trending-articles">
+    {{ range first 4 $trending }}
+    <article class="trending-card">
+      {{ with .Params.categories }}
+      <span class="category-label">{{ index . 0 }}</span>
+      {{ end }}
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <div class="meta">{{ .Date | time.Format "2.1.2006" }}</div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* Lead article */}}
 {{ with index $sorted 0 }}
+{{ $cat := .Params.categories | first | default "kotimaa" }}
+{{ $img := .Params.image | default (printf "/images/categories/%s.webp" ($cat | lower)) }}
+{{ $thumb := .Params.image_thumb | default $img }}
+{{ $alt := .Params.image_alt | default .Title }}
 <article class="lead-article">
   {{ with .Params.categories }}
-  {{ $category := index . 0 }}
-  <span class="category-label category-pill category-{{ $category | urlize }}">{{ $category }}</span>
+  <span class="category-label">{{ index . 0 }}</span>
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-  <p class="excerpt">{{ .Summary | plainify | truncate 400 }}</p>
+  <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
+    <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="800" height="450">
+  </a>
+  <p class="excerpt">{{ .Summary | truncate 300 }}</p>
   <div class="meta">
     {{ .Date | time.Format "2.1.2006" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
@@ -19,21 +46,23 @@
 </article>
 {{ end }}
 
-{{/* Secondary highlights - 2-3 articles in a row */}}
+{{/* Highlights row — next 3 articles */}}
 {{ $highlights := after 1 $sorted | first 3 }}
 {{ if $highlights }}
 <div class="highlights-row">
   {{ range $highlights }}
+  {{ $cat := .Params.categories | first | default "kotimaa" }}
+  {{ $img := .Params.image | default (printf "/images/categories/%s.webp" ($cat | lower)) }}
+  {{ $alt := .Params.image_alt | default .Title }}
   <article class="highlight-card">
     {{ with .Params.categories }}
-    {{ $category := index . 0 }}
-    <span class="category-label category-pill category-{{ $category | urlize }}">{{ $category }}</span>
+    <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
+    <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
+      <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="400" height="225">
+    </a>
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <div class="meta">
-      {{ .Date | time.Format "2.1.2006" }}
-      {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-    </div>
+    <div class="meta">{{ .Date | time.Format "2.1.2006" }}</div>
   </article>
   {{ end }}
 </div>
@@ -41,32 +70,36 @@
 
 {{/* Category sections */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
+{{ $usedPages := after 1 $sorted | first 3 }}
 {{ range $cat := $categories }}
-{{ $catPosts := where $sorted "Params.categories" "intersect" (slice $cat) }}
-{{ if $catPosts }}
-<section class="category-section">
-  <div class="category-section-header">
-    <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
-    <a href="/categories/{{ $cat | urlize }}/" class="see-all">Näytä kaikki →</a>
-  </div>
-  <div class="category-articles">
-    {{ range first 4 $catPosts }}
-    <article class="category-article-card">
-      {{ with .Params.categories }}
-      {{ $category := index . 0 }}
-      <span class="category-label category-pill category-{{ $category | urlize }}">{{ $category }}</span>
+  {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
+  {{ if $catPosts }}
+  <section class="category-section">
+    <div class="category-section-header">
+      <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
+      {{ if gt (len $catPosts) 3 }}
+      <a href="/categories/{{ $cat | urlize }}/" class="see-all">Kaikki {{ $cat | lower }} →</a>
       {{ end }}
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <p class="excerpt">{{ .Summary | plainify | truncate 120 }}</p>
-      <div class="meta">
-        {{ .Date | time.Format "2.1.2006" }}
-        {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-        · {{ .ReadingTime }} min
-      </div>
-    </article>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
+    </div>
+    <div class="category-articles">
+      {{ range first 3 $catPosts }}
+      {{ $cardCat := .Params.categories | first | default "kotimaa" }}
+      {{ $cardImg := .Params.image | default (printf "/images/categories/%s.webp" ($cardCat | lower)) }}
+      {{ $cardAlt := .Params.image_alt | default .Title }}
+      <article class="category-article-card">
+        <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
+          <img src="{{ $cardImg }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" width="400" height="225">
+        </a>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p class="excerpt">{{ .Summary | truncate 150 }}</p>
+        <div class="meta">
+          {{ .Date | time.Format "2.1.2006" }}
+          {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
 {{ end }}
 {{ end }}
