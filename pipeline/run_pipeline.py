@@ -190,7 +190,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         print(f"[images] Kuvien haku epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
 
     # Step 2c: Generate meta descriptions
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    api_key = os.environ.get("OPENAI_API_KEY", "")
     if api_key:
         print(f"\n📋 Vaihe 2c: Meta-kuvausten generointi...")
         desc_count = 0
@@ -202,7 +202,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                     desc_count += 1
         print(f"[descriptions] {desc_count}/{len(rewritten)} artikkelia sai kuvauksen")
     else:
-        print(f"\n📋 Vaihe 2c: ANTHROPIC_API_KEY puuttuu, meta-kuvaukset ohitetaan")
+        print(f"\n📋 Vaihe 2c: OPENAI_API_KEY puuttuu, meta-kuvaukset ohitetaan")
 
     # Step 3: Publish
     print(f"\n📝 Vaihe 3: {len(rewritten)} artikkelin julkaisu...")

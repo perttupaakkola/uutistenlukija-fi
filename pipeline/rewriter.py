@@ -4,8 +4,8 @@ Article Writer — transforms RSS leads into original journalism.
 Pipeline: RSS headline → web research → multi-source synthesis → original article.
 Two-pass system: write + anti-AI audit pass.
 
-Requires ANTHROPIC_API_KEY environment variable.
-OpenRouter / claude_transport bridge removed (2026-03-19).
+Requires OPENAI_API_KEY environment variable.
+Switched from Anthropic to OpenAI (2026-03-19).
 """
 
 import os
@@ -15,7 +15,7 @@ import time
 from typing import List, Dict
 from pathlib import Path
 
-import anthropic
+from openai import OpenAI
 
 CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
 
@@ -94,21 +94,21 @@ _RETRY_BASE_DELAY = 2  # seconds; doubles each attempt (2s, 4s, 8s)
 _RETRYABLE_HTTP = {429, 500, 502, 503, 504}
 
 # Reuse a single client instance per process
-_anthropic_client: "anthropic.Anthropic | None" = None
+_openai_client: "OpenAI | None" = None
 
 
-def _get_client() -> "anthropic.Anthropic":
-    global _anthropic_client
-    if _anthropic_client is None:
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
+def _get_client() -> "OpenAI":
+    global _openai_client
+    if _openai_client is None:
+        api_key = os.environ.get("OPENAI_API_KEY")
         if not api_key:
-            raise RuntimeError("ANTHROPIC_API_KEY is not set")
-        _anthropic_client = anthropic.Anthropic(api_key=api_key)
-    return _anthropic_client
+            raise RuntimeError("OPENAI_API_KEY is not set")
+        _openai_client = OpenAI(api_key=api_key)
+    return _openai_client
 
 
 def _call_llm(system: str, prompt: str) -> str:
-    """Call Anthropic Claude with exponential backoff retry (3 attempts).
+    """Call OpenAI GPT-4o-mini with exponential backoff retry (3 attempts).
 
     Retries on: 429, 5xx, timeout, connection errors.
     Hard-fails on: 400, 401, 403 (bad request / auth — won't fix on retry).
@@ -117,13 +117,16 @@ def _call_llm(system: str, prompt: str) -> str:
     for attempt in range(1, _RETRY_ATTEMPTS + 1):
         try:
             client = _get_client()
-            response = client.messages.create(
-                model="claude-sonnet-4-20250514",
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
                 max_tokens=4096,
-                system=system,
-                messages=[{"role": "user", "content": prompt}],
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.7,
             )
-            return response.content[0].text.strip()
+            return response.choices[0].message.content.strip()
 
         except Exception as e:
             last_exc = e
