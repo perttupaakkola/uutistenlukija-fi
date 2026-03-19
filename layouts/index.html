@@ -47,7 +47,7 @@
 {{ end }}
 
 {{/* Highlights row — next 3 articles */}}
-{{ $highlights := after 1 $sorted | first 3 }}
+{{ $highlights := first 3 (after 1 $sorted) }}
 {{ if $highlights }}
 <div class="highlights-row">
   {{ range $highlights }}
@@ -70,7 +70,7 @@
 
 {{/* Category sections */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
-{{ $usedPages := after 1 $sorted | first 3 }}
+{{ $usedPages := first 3 (after 1 $sorted) }}
 {{ range $cat := $categories }}
   {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
   {{ if $catPosts }}

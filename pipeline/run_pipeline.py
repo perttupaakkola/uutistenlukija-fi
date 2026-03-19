@@ -16,6 +16,21 @@ from datetime import datetime, timezone
 # Add parent to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# Load .env from project root (ensures env vars are available regardless of how pipeline is invoked)
+_pipeline_dir = os.path.dirname(os.path.abspath(__file__))
+_project_dir = os.path.dirname(_pipeline_dir)
+_env_file = os.path.join(_project_dir, ".env")
+if os.path.isfile(_env_file):
+    with open(_env_file) as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and not _line.startswith("#") and "=" in _line:
+                _key, _, _val = _line.partition("=")
+                _key = _key.strip()
+                _val = _val.strip()
+                if _key and _key not in os.environ:  # don't override explicit env vars
+                    os.environ[_key] = _val
+
 from scanner import scan_all_feeds
 from firehose import poll_firehose
 from research import enrich_with_research

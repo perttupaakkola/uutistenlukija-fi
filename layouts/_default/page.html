@@ -67,7 +67,7 @@
   {{ end }}
   {{/* Fallback: recent posts if no category matches */}}
   {{ if not $related }}
-    {{ $related = where .Site.RegularPages "Section" "posts" | first 4 }}
+    {{ $related = first 4 (where .Site.RegularPages "Section" "posts") }}
     {{ $related = where $related "Permalink" "ne" $currentPermalink }}
   {{ end }}
   {{ $related = first 4 $related }}

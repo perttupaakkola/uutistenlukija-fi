@@ -17,7 +17,8 @@
 {{/* Resolve image URL — fallback to category placeholder */}}
 {{ $img := .Params.image }}
 {{ if not $img }}
-  {{ $cat := .Params.categories | first | lower | default "kotimaa" }}
+  {{ $cat := "kotimaa" }}
+  {{ with .Params.categories }}{{ $cat = index . 0 | lower }}{{ end }}
   {{ $img = printf "/images/categories/%s.jpg" $cat }}
 {{ end }}
 
@@ -38,7 +39,7 @@
       loading="eager"
       width="1200"
       height="675"
-      onerror="this.onerror=null;this.src='/images/categories/{{ .Params.categories | first | lower | default "kotimaa" }}.jpg'"
+      onerror="this.onerror=null;this.src='/images/categories/{{ with .Params.categories }}{{ index . 0 | lower }}{{ else }}kotimaa{{ end }}.jpg'"
     >
   </div>
   {{ if or $hasCaption $hasCredit }}

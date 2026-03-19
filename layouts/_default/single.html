@@ -60,7 +60,7 @@
       {{ end }}
     {{ end }}
   {{ end }}
-  {{ $related = where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink | first 4 }}
+  {{ $related = first 4 (where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink) }}
   {{ if $related }}
   <div class="related-articles">
     <h3>Lue myös</h3>
