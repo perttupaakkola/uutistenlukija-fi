@@ -46,6 +46,8 @@
   </div>
   {{ end }}
 
+  {{ partial "newsletter.html" . }}
+
   {{/* Related articles */}}
   {{ $currentCategories := .Params.categories }}
   {{ $currentPage := . }}

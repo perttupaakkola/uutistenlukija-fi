@@ -1,0 +1,11 @@
+{{- $ga4id := .Site.Params.ga4_id -}}
+{{- if and hugo.IsProduction $ga4id -}}
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga4id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ $ga4id }}');
+</script>
+{{- end -}}

@@ -1,0 +1,35 @@
+<div class="newsletter-signup">
+  <div class="newsletter-inner">
+    <h3 class="newsletter-heading">📬 Uutiset suoraan sähköpostiin</h3>
+    <p class="newsletter-desc">Tilaa päivän tärkeimmät uutiset — ilmaiseksi, ilman roskapostia.</p>
+    <form class="newsletter-form"
+          action="https://app.us1.list-manage.com/subscribe/post"
+          method="POST"
+          target="_blank"
+          novalidate>
+      {{- /* Replace u= and id= values with real Mailchimp audience details when available */ -}}
+      <input type="hidden" name="u" value="MAILCHIMP_U">
+      <input type="hidden" name="id" value="MAILCHIMP_ID">
+      <div class="newsletter-fields">
+        <label for="newsletter-email" class="sr-only">Sähköpostiosoite</label>
+        <input
+          id="newsletter-email"
+          type="email"
+          name="EMAIL"
+          class="newsletter-input"
+          placeholder="sinun@sahkoposti.fi"
+          required
+          autocomplete="email">
+        <button type="submit" class="newsletter-btn">Tilaa</button>
+      </div>
+      {{- /* Honeypot — do not remove */ -}}
+      <div style="position:absolute;left:-5000px" aria-hidden="true">
+        <input type="text" name="b_MAILCHIMP_U_MAILCHIMP_ID" tabindex="-1" value="">
+      </div>
+      <p class="newsletter-privacy">
+        Ei roskapostia. Voit peruuttaa tilauksen koska tahansa.
+        <a href="/tietosuoja/">Tietosuoja</a>.
+      </p>
+    </form>
+  </div>
+</div>
