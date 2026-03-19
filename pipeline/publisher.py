@@ -36,6 +36,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image = article.get("image", "")
     image_credit = article.get("image_credit", "")
     trending = article.get("trending", False)
+    description = article.get("description", "")
 
     # Assign a writer based on category
     writer = assign_writer(category)
@@ -44,6 +45,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_line = f'\nimage: "{image}"' if image else ""
     image_credit_line = f'\nimage_credit: "{image_credit}"' if image_credit else ""
     trending_line = "\ntrending: true" if trending else ""
+    description_line = f'\ndescription: "{description.replace(chr(34), chr(92)+chr(34))}"' if description else ""
 
     # Build front matter — no source_name or source_url
     front_matter = f"""---
@@ -55,7 +57,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{image_line}{image_credit_line}{trending_line}
+author_image: "{writer['image']}"{description_line}{image_line}{image_credit_line}{trending_line}
 draft: false
 ---
 
