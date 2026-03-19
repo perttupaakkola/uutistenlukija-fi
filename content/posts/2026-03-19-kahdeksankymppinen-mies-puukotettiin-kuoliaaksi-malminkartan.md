@@ -1,6 +1,6 @@
 ---
 title: "Kahdeksankymppinen mies puukotettiin kuoliaaksi Malminkartanossa"
-date: 2026-03-19T14:26:34.658491+00:00
+date: 2026-03-19T14:34:57.333060+00:00
 categories:
   - Kotimaa
 author: "Sanna Heikkinen"
@@ -11,8 +11,10 @@ author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 ---
 
-Ikääntynyt mies kuoli puukotukseen Helsingin Malminkartanon Luutnantintiellä keskiviikkoiltana. Silminnäkijä ilmoitti veriteosta hätäkeskukseen kello 22.59, mutta pitkistä elvytystoimista huolimatta miehen henkeä ei pelastettu.
+Ikääntynyt mies kuoli puukotuksessa Helsingin Malminkartanossa keskiviikkoiltana. Rikos tapahtui Luutnantintiellä, jossa verilammikot ja tahriintunut valkoinen Toyota muistuttavat yhä tapahtuneesta.
 
-Poliisi otti kiinni 1990-luvulla syntyneen epäillyn rauhallisesti. Rikostutkijat keräsivät torstaiaamuna valvontakameratallenteita lähiliikkeistä. Epäillyn uskotaan paenneen Luutnantintietä pitkin.
+Silminnäkijä ilmoitti veriteosta hätäkeskukseen kello 22.59. Elvytystoimista huolimatta 80-vuotiaan miehen henkeä ei pelastettu. Poliisi otti kiinni 1990-luvulla syntyneen epäillyn, mutta kiinniotto sujui rauhallisesti.
 
-Tapahtumapaikka on verinen. Tienvarteen pysäköity Toyota ja kadulle viskatut roskat kertovat väkivallasta. Paikalliset asukkaat kuvaavat aluetta rauhalliseksi. Monen mieleen palautui samalla alueella 3,5 vuotta sitten tapahtunut henkirikos. Epäillyn ja uhrin suhde sekä teon motiivi ovat selvityksessä.
+Paikallisia yrittäjiä poliisi on pyytänyt luovuttamaan valvontakameratallenteita. Yrittäjien käsityksen mukaan tekijä pakeni Luutnantintietä pitkin. Asukkaat kuvaavat aluetta pääosin rauhalliseksi, vaikka läheisellä Malminkartanonaukiolla tapahtui henkirikos myös vuonna 2021.
+
+Poliisi ei ole kertonut uhrin ja epäillyn välistä suhdetta tai teon motiivia. Tutkinnanjohtaja Jari Korkalainen kertoo tapauksesta lisää perjantaina.
