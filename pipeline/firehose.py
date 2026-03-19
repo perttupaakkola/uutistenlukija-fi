@@ -1,0 +1,395 @@
+"""
+Firehose Poller — supplementary article discovery via Firehose SSE stream.
+
+Runs alongside RSS scanner. Every 10 minutes, fetches articles from the past 20
+minutes via Server-Sent Events. Dedups by normalized URL hash before feeding into
+the rewriter pipeline.
+
+Rules active in Firehose (POST to /v1/rules to register):
+  - finnish-news:      language:"fi" AND page_category:"/News" AND recent:24h
+  - finnish-articles:  language:"fi" AND page_type:"/Article" AND recent:24h
+  - finnish-domains:   Finnish news domains + recent:24h
+  - finnish-tiede:     language:"fi" AND page_category:"/Science" AND recent:48h
+  - finnish-talous:    language:"fi" AND page_category:"/Finance" AND recent:24h
+  - finnish-urheilu:   language:"fi" AND page_category:"/Sports" AND recent:24h
+  - finnish-teknologia: language:"fi" AND page_category:"/Computers_and_Electronics" AND recent:24h
+
+Usage:
+  python3 firehose.py           # Poll once, print results
+  python3 firehose.py --rules   # Print rule registration curl commands
+"""
+
+import hashlib
+import json
+import os
+import re
+import sys
+import time
+import urllib.request
+import urllib.error
+from datetime import datetime, timezone
+from typing import List, Dict, Optional
+from urllib.parse import urlparse, urlencode, parse_qs, urlunparse
+
+FIREHOSE_BASE = "https://api.firehose.com/v1"
+FIREHOSE_TOKEN = "fh_MPdE6AVizFkpIdRiKgL10QJUfoORj2eEZUfXBHtk"
+
+# Rules to register with Firehose (idempotent — tag is unique key)
+FIREHOSE_RULES = [
+    {
+        "tag": "finnish-news",
+        "value": 'language:"fi" AND page_category:"/News" AND recent:24h',
+    },
+    {
+        "tag": "finnish-articles",
+        "value": 'language:"fi" AND page_type:"/Article" AND recent:24h',
+    },
+    {
+        "tag": "finnish-domains",
+        "value": (
+            "(url_domain:yle.fi OR url_domain:hs.fi OR url_domain:iltalehti.fi OR "
+            "url_domain:is.fi OR url_domain:kauppalehti.fi OR url_domain:tekniikkatalous.fi OR "
+            "url_domain:ts.fi) AND recent:24h"
+        ),
+    },
+    {
+        "tag": "finnish-tiede",
+        "value": 'language:"fi" AND page_category:"/Science" AND recent:48h',
+    },
+    {
+        "tag": "finnish-talous",
+        "value": 'language:"fi" AND page_category:"/Finance" AND recent:24h',
+    },
+    {
+        "tag": "finnish-urheilu",
+        "value": 'language:"fi" AND page_category:"/Sports" AND recent:24h',
+    },
+    {
+        "tag": "finnish-teknologia",
+        "value": 'language:"fi" AND page_category:"/Computers_and_Electronics" AND recent:24h',
+    },
+]
+
+# State file: stores Last-Event-ID for exact-offset resume
+_CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
+_STATE_FILE = os.path.join(_CACHE_DIR, "firehose_state.json")
+
+# URL params to strip (tracking noise)
+_STRIP_PARAMS = {
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    "fbclid", "gclid", "mc_cid", "mc_eid", "ref", "source",
+}
+
+# Category hint mapping from Firehose page_category → pipeline category
+_CATEGORY_MAP = {
+    "/Science": "Tiede",
+    "/Finance": "Talous",
+    "/Business": "Talous",
+    "/Sports": "Urheilu",
+    "/Computers_and_Electronics": "Teknologia",
+    "/Technology": "Teknologia",
+    "/News": None,  # Resolved by pipeline
+    "/Article": None,
+}
+
+_TAG_CATEGORY_MAP = {
+    "finnish-tiede": "Tiede",
+    "finnish-talous": "Talous",
+    "finnish-urheilu": "Urheilu",
+    "finnish-teknologia": "Teknologia",
+}
+
+HEADERS = {
+    "User-Agent": "Uutistenlukija/1.0 (+https://uutistenlukija.fi)",
+    "Authorization": f"Bearer {FIREHOSE_TOKEN}",
+    "Accept": "text/event-stream",
+}
+
+
+# ─── URL normalization & dedup ────────────────────────────────────────────────
+
+def _normalize_url(url: str) -> str:
+    """Strip tracking params, normalize case, drop trailing slash."""
+    try:
+        parsed = urlparse(url)
+        host = parsed.netloc.lower()
+        path = parsed.path
+        if path != "/" and path.endswith("/"):
+            path = path[:-1]
+        # Filter query params
+        query_pairs = []
+        for k, vs in parse_qs(parsed.query, keep_blank_values=True).items():
+            if k not in _STRIP_PARAMS:
+                for v in vs:
+                    query_pairs.append(f"{k}={v}")
+        query = "&".join(sorted(query_pairs))
+        return urlunparse((parsed.scheme, host, path, parsed.params, query, ""))
+    except Exception:
+        return url.lower().strip()
+
+
+def _url_hash(url: str) -> str:
+    return hashlib.sha256(_normalize_url(url).encode()).hexdigest()
+
+
+def _title_hash(title: str) -> str:
+    normalized = re.sub(r"[^a-zäöå0-9 ]", "", title.lower().strip())
+    return hashlib.sha256(normalized.encode()).hexdigest()
+
+
+# ─── State persistence ────────────────────────────────────────────────────────
+
+def _load_state() -> Dict:
+    try:
+        with open(_STATE_FILE) as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _save_state(state: Dict) -> None:
+    os.makedirs(_CACHE_DIR, exist_ok=True)
+    with open(_STATE_FILE, "w") as f:
+        json.dump(state, f, indent=2)
+
+
+# ─── SSE parsing ─────────────────────────────────────────────────────────────
+
+def _parse_sse_events(raw: bytes) -> List[Dict]:
+    """Parse SSE text/event-stream into list of {event, data, id} dicts."""
+    events = []
+    current: Dict = {}
+    data_lines = []
+
+    text = raw.decode("utf-8", errors="replace")
+    for line in text.splitlines():
+        if line.startswith("event:"):
+            current["event"] = line[6:].strip()
+        elif line.startswith("data:"):
+            data_lines.append(line[5:].strip())
+        elif line.startswith("id:"):
+            current["id"] = line[3:].strip()
+        elif line == "":
+            # Dispatch event
+            if data_lines:
+                current["data"] = "\n".join(data_lines)
+                events.append(current)
+            current = {}
+            data_lines = []
+
+    return events
+
+
+# ─── Rule management ─────────────────────────────────────────────────────────
+
+def list_rules() -> List[Dict]:
+    """Fetch current rules from Firehose API."""
+    req = urllib.request.Request(
+        f"{FIREHOSE_BASE}/rules",
+        headers={
+            "Authorization": f"Bearer {FIREHOSE_TOKEN}",
+            "Accept": "application/json",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return json.loads(resp.read())
+    except Exception as e:
+        print(f"[firehose] Failed to list rules: {e}")
+        return []
+
+
+def register_rules(dry_run: bool = False) -> None:
+    """Register all configured rules with Firehose (idempotent by tag)."""
+    existing = list_rules()
+    existing_tags = {r.get("tag") for r in existing}
+
+    for rule in FIREHOSE_RULES:
+        tag = rule["tag"]
+        if tag in existing_tags:
+            print(f"[firehose] Rule already exists: {tag}")
+            continue
+
+        if dry_run:
+            print(f"[firehose] Would register: {tag}")
+            print(f"  curl -X POST {FIREHOSE_BASE}/rules \\")
+            print(f"    -H 'Authorization: Bearer {FIREHOSE_TOKEN}' \\")
+            print(f"    -H 'Content-Type: application/json' \\")
+            print(f"    -d '{json.dumps(rule)}'")
+            continue
+
+        payload = json.dumps(rule).encode()
+        req = urllib.request.Request(
+            f"{FIREHOSE_BASE}/rules",
+            data=payload,
+            headers={
+                "Authorization": f"Bearer {FIREHOSE_TOKEN}",
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                result = json.loads(resp.read())
+                print(f"[firehose] Registered rule: {tag} → id={result.get('id', '?')}")
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", errors="replace")
+            print(f"[firehose] Failed to register {tag}: HTTP {e.code} — {body}")
+        except Exception as e:
+            print(f"[firehose] Failed to register {tag}: {e}")
+        time.sleep(0.5)  # polite — don't hammer the API
+
+
+# ─── Core poller ─────────────────────────────────────────────────────────────
+
+def poll_firehose(since: str = "20m") -> List[Dict]:
+    """
+    Poll Firehose stream for the past `since` window.
+
+    Returns list of article dicts compatible with the RSS scanner output format,
+    ready for dedup → rewrite → publish.
+
+    Uses Last-Event-ID for exact-offset resume when available.
+    """
+    state = _load_state()
+    last_event_id = state.get("last_event_id")
+
+    params = {"timeout": "60", "since": since}
+    url = f"{FIREHOSE_BASE}/stream?" + urlencode(params)
+
+    req_headers = dict(HEADERS)
+    if last_event_id:
+        req_headers["Last-Event-ID"] = last_event_id
+
+    articles = []
+    last_seen_id = last_event_id
+
+    print(f"[firehose] Polling stream (since={since}, last_id={last_event_id or 'none'})...")
+    try:
+        req = urllib.request.Request(url, headers=req_headers)
+        with urllib.request.urlopen(req, timeout=75) as resp:
+            raw = resp.read()
+
+        events = _parse_sse_events(raw)
+        print(f"[firehose] Received {len(events)} SSE events")
+
+        for event in events:
+            if event.get("id"):
+                last_seen_id = event["id"]
+
+            event_type = event.get("event", "update")
+            if event_type not in ("update", "create", ""):
+                continue
+
+            raw_data = event.get("data", "")
+            if not raw_data or raw_data in ("[]", "{}"):
+                continue
+
+            try:
+                doc = json.loads(raw_data)
+            except json.JSONDecodeError:
+                continue
+
+            # Handle both wrapped {"document": {...}} and bare {...}
+            if "document" in doc:
+                doc = doc["document"]
+
+            article = _parse_firehose_doc(doc, event)
+            if article:
+                articles.append(article)
+
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"[firehose] HTTP {e.code}: {body[:200]}")
+    except Exception as e:
+        print(f"[firehose] Poll error: {e}")
+
+    # Persist last event ID for next run
+    if last_seen_id and last_seen_id != last_event_id:
+        state["last_event_id"] = last_seen_id
+        state["last_poll"] = datetime.now(timezone.utc).isoformat()
+        _save_state(state)
+
+    # Dedup within this batch by URL hash
+    seen_hashes = set()
+    unique = []
+    for a in articles:
+        h = a.get("_url_hash", "")
+        if h and h not in seen_hashes:
+            seen_hashes.add(h)
+            unique.append(a)
+
+    print(f"[firehose] {len(articles)} events → {len(unique)} unique articles")
+    return unique
+
+
+def _parse_firehose_doc(doc: Dict, event: Dict) -> Optional[Dict]:
+    """Extract article fields from a Firehose document object."""
+    url = doc.get("url") or doc.get("link") or ""
+    title = doc.get("title") or ""
+    if not url or not title:
+        return None
+
+    # Language guard — only Finnish content
+    lang = doc.get("language") or doc.get("lang") or ""
+    if lang and lang.lower() not in ("fi", "fin", ""):
+        return None
+
+    description = doc.get("description") or doc.get("summary") or ""
+    # Firehose may provide full markdown text — use as description if short enough
+    markdown = doc.get("markdown") or doc.get("content") or ""
+    if not description and markdown:
+        description = markdown[:500]
+    elif markdown and len(markdown) > len(description):
+        description = markdown[:500]
+
+    pub_date = doc.get("published_at") or doc.get("published") or doc.get("created_at") or ""
+    if not pub_date:
+        pub_date = datetime.now(timezone.utc).isoformat()
+
+    # Determine category hint from Firehose metadata
+    page_category = doc.get("page_category") or doc.get("category") or ""
+    matched_tag = doc.get("matched_rule_tag") or doc.get("tag") or event.get("event") or ""
+
+    category_hint = (
+        _TAG_CATEGORY_MAP.get(matched_tag)
+        or _CATEGORY_MAP.get(page_category)
+    )
+
+    normalized_url = _normalize_url(url)
+    url_h = _url_hash(url)
+
+    return {
+        "title": title.strip(),
+        "description": str(description)[:500],
+        "link": url,
+        "published": pub_date,
+        "source": "Firehose",
+        "language": "fi",
+        "fingerprint": _title_hash(title),
+        "_url_hash": url_h,
+        "_normalized_url": normalized_url,
+        "_source_type": "firehose",
+        "_matched_rule": matched_tag,
+        "_page_category": page_category,
+        **({"category_hint": category_hint} if category_hint else {}),
+    }
+
+
+# ─── Entry point ─────────────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    if "--rules" in sys.argv:
+        print("=== Firehose rule registration ===")
+        register_rules(dry_run=True)
+        sys.exit(0)
+
+    if "--register" in sys.argv:
+        print("=== Registering Firehose rules ===")
+        register_rules(dry_run=False)
+        sys.exit(0)
+
+    articles = poll_firehose()
+    print(json.dumps(articles[:5], indent=2, ensure_ascii=False))
+    print(f"\nTotal: {len(articles)} articles")
