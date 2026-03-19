@@ -77,8 +77,67 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
 
+def _call_llm_openrouter(system: str, prompt: str, max_tokens: int = 8192) -> str:
+    """Call LLM via OpenRouter's OpenAI-compatible API (no SDK needed)."""
+    import urllib.request
+    api_key = os.environ.get("OPENROUTER_API_KEY", "")
+    if not api_key:
+        raise RuntimeError("OPENROUTER_API_KEY not set")
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    payload = json.dumps({
+        "model": "anthropic/claude-sonnet-4",
+        "max_tokens": max_tokens,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": prompt},
+        ],
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://uutistenlukija.fi",
+            "X-Title": "Uutistenlukija Pipeline",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=300) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    return data["choices"][0]["message"]["content"].strip()
+
+
+def _call_llm_openai(system: str, prompt: str, max_tokens: int = 8192) -> str:
+    """Call LLM via OpenAI API directly (no SDK needed)."""
+    import urllib.request
+    api_key = os.environ.get("OPENAI_API_KEY", "")
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY not set")
+    url = "https://api.openai.com/v1/chat/completions"
+    payload = json.dumps({
+        "model": "gpt-4o",
+        "max_tokens": max_tokens,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": prompt},
+        ],
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=300) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    return data["choices"][0]["message"]["content"].strip()
+
+
 def _call_llm(system: str, prompt: str) -> str:
-    """Call the LLM via Anthropic SDK or transport bridge."""
+    """Call the LLM via Anthropic SDK, OpenRouter, OpenAI, or transport bridge."""
+    # Priority 1: Anthropic SDK (if available and key set)
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     use_sdk = HAVE_ANTHROPIC_SDK and api_key
 
@@ -86,19 +145,37 @@ def _call_llm(system: str, prompt: str) -> str:
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
             model="claude-sonnet-4-20250514",
-            max_tokens=4096,
+            max_tokens=8192,
             system=system,
             messages=[{"role": "user", "content": prompt}],
         )
         return response.content[0].text.strip()
-    else:
-        print("[writer]   Using Claude Code bridge...")
-        return complete_with_claude(
-            system_prompt=system,
-            messages=[{"role": "user", "content": prompt}],
-            cwd=Path(__file__).parent.parent,
-            require_json=True,
-        )
+
+    # Priority 2: OpenRouter (Claude Sonnet via API, fast, reliable)
+    if os.environ.get("OPENROUTER_API_KEY"):
+        print("[writer]   Using OpenRouter API...")
+        try:
+            return _call_llm_openrouter(system, prompt)
+        except Exception as e:
+            print(f"[writer]   OpenRouter failed: {e}")
+
+    # Priority 3: OpenAI (GPT-4o fallback)
+    if os.environ.get("OPENAI_API_KEY"):
+        print("[writer]   Falling back to OpenAI GPT-4o...")
+        try:
+            return _call_llm_openai(system, prompt)
+        except Exception as e:
+            print(f"[writer]   OpenAI failed: {e}")
+
+    # Priority 4: Claude Code bridge (slow, prone to timeout)
+    print("[writer]   Using Claude Code bridge (last resort)...")
+    return complete_with_claude(
+        system_prompt=system,
+        messages=[{"role": "user", "content": prompt}],
+        cwd=Path(__file__).parent.parent,
+        require_json=True,
+        timeout=300,
+    )
 
 
 def _extract_json(text: str) -> list:
