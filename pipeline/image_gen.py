@@ -144,8 +144,18 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
 
 
 def generate_images_for_articles(articles: List[Dict]) -> List[Dict]:
-    """Generate header images for a list of articles. Adds 'image' field."""
+    """Generate header images for a list of articles. Adds 'image' field.
+
+    Circuit breaker: 2 consecutive failures → skip remaining (API likely down).
+    """
+    consecutive_failures = 0
+    max_consecutive_failures = 2
+
     for i, article in enumerate(articles):
+        if consecutive_failures >= max_consecutive_failures:
+            print(f"[image_gen] Circuit breaker: {consecutive_failures} consecutive failures — skipping remaining {len(articles) - i} articles")
+            break
+
         title = article.get("title", "")
         category = article.get("category", "")
         # Create slug from title
@@ -162,6 +172,9 @@ def generate_images_for_articles(articles: List[Dict]) -> List[Dict]:
         if image_path:
             article["image"] = image_path
             article["image_alt"] = _build_alt_text(title, category)
+            consecutive_failures = 0
+        else:
+            consecutive_failures += 1
 
         # Rate limit: 2 second sleep between requests (skip after last)
         if i < len(articles) - 1:
