@@ -5,6 +5,7 @@ theme = 'uutistenlukija'
 defaultContentLanguage = 'fi'
 enableRobotsTXT = true
 disableHugoGeneratorInject = true
+
 [pagination]
   pagerSize = 20
 
@@ -29,6 +30,13 @@ disableHugoGeneratorInject = true
       unsafe = true
 
 [outputFormats]
+  [outputFormats.JSON]
+    name = "JSON"
+    baseName = "index"
+    mediaType = "application/json"
+    isPlainText = true
+    notAlternative = true
+  
   [outputFormats.NewsSitemap]
     baseName = "news-sitemap"
     mediaType = "application/xml"

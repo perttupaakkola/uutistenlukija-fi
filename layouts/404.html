@@ -45,7 +45,7 @@
     <h2 class="error-section-title">Tuoreimmat uutiset</h2>
     <div class="recent-articles-grid">
       {{ range $recent }}
-      {{ $cat := .Params.categories | first | default "kotimaa" }}
+      {{ $cat := index .Params.categories 0 | default "kotimaa" }}
       {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
       <article class="recent-article-card">
         <a href="{{ .Permalink }}" class="recent-card-link">

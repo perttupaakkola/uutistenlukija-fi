@@ -1,0 +1,14 @@
+{{- $articles := where .Site.RegularPages "Section" "posts" -}}
+[
+{{- range $i, $article := $articles -}}
+  {
+    "title": {{ $article.Title | jsonify }},
+    "description": {{ with $article.Description }}{{ . | jsonify }}{{ else }}{{ $article.Summary | plainify | truncate 160 | jsonify }}{{ end }},
+    "url": {{ $article.Permalink | jsonify }},
+    "date": {{ $article.Date.Format "2.1.2006" | jsonify }},
+    "category": {{ with $article.Params.categories }}{{ index . 0 | jsonify }}{{ else }}"" {{ end }},
+    "author": {{ with $article.Params.author }}{{ . | jsonify }}{{ else }}"" {{ end }},
+    "content": {{ $article.Summary | plainify | jsonify }}
+  }{{ if ne $i (sub (len $articles) 1) }},{{ end }}
+{{- end -}}
+]

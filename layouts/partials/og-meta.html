@@ -40,7 +40,7 @@
 
   {{/* 2. Category OG image fallback */}}
   {{ if not $ogImage }}
-    {{ $cat := .Params.categories | first | lower | default "" }}
+    {{ $cat := index .Params.categories 0 | lower | default "" }}
     {{ if $cat }}
       {{ $ogImage = printf "%simages/og-%s.png" $.Site.BaseURL $cat }}
       {{ $ogImageAlt = printf "%s — %s" $.Title $.Site.Title }}
