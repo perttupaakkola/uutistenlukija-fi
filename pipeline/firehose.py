@@ -294,9 +294,16 @@ def poll_firehose(since: str = "20m") -> List[Dict]:
             except json.JSONDecodeError:
                 continue
 
+            # Unwrap list payloads (e.g. [{...}])
+            if isinstance(doc, list):
+                doc = doc[0] if doc else None
+            if not isinstance(doc, dict):
+                continue
+
             # Handle both wrapped {"document": {...}} and bare {...}
-            if "document" in doc:
-                doc = doc["document"]
+            inner = doc.get("document")
+            if isinstance(inner, dict):
+                doc = inner
 
             article = _parse_firehose_doc(doc, event)
             if article:
@@ -355,7 +362,7 @@ def _parse_firehose_doc(doc: Dict, event: Dict) -> Optional[Dict]:
     # Response payload uses plural arrays; query syntax uses singular (correct as-is)
     _raw_cats = doc.get("page_categories") or doc.get("page_category") or []
     page_category = (
-        (_raw_cats[0] if isinstance(_raw_cats, list) else _raw_cats)
+        (_raw_cats[0] if isinstance(_raw_cats, list) and _raw_cats else _raw_cats)
         or doc.get("category")
         or ""
     )
