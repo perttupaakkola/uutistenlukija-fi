@@ -1,0 +1,39 @@
+{{/*
+  hero-image.html — Article hero image partial
+  Usage: {{ partial "hero-image.html" . }}
+
+  Reads from page params:
+    .Params.image          — full image URL (from Unsplash or AI gen)
+    .Params.image_alt      — alt text (falls back to .Title)
+    .Params.image_caption  — optional caption text
+    .Params.image_credit   — photographer/source credit text
+    .Params.image_source_url — link for credit (Unsplash attribution)
+
+  Fallback: /images/categories/{category}.jpg
+*/}}
+{{ $heroImage := .Params.image }}
+{{ if not $heroImage }}
+  {{ $cat := .Params.categories | first | lower | default "kotimaa" }}
+  {{ $heroImage = printf "/images/categories/%s.jpg" $cat }}
+{{ end }}
+{{ $alt := .Params.image_alt | default .Title }}
+
+<figure class="article-hero-figure">
+  <img
+    src="{{ $heroImage }}"
+    alt="{{ $alt }}"
+    class="article-header-image"
+    loading="eager"
+    width="1200"
+    height="675"
+  >
+  {{ if or .Params.image_caption .Params.image_credit }}
+  <figcaption class="image-caption">
+    {{ with .Params.image_caption }}{{ . }}{{ end }}
+    {{ if and .Params.image_caption .Params.image_credit }} — {{ end }}
+    {{ with .Params.image_credit }}
+      {{ if $.Params.image_source_url }}<a href="{{ $.Params.image_source_url }}" target="_blank" rel="noopener nofollow">{{ . }}</a>{{ else }}{{ . }}{{ end }}
+    {{ end }}
+  </figcaption>
+  {{ end }}
+</figure>

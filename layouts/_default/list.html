@@ -5,7 +5,7 @@
 </div>
 <div class="articles-grid">
   {{ range .Pages.ByDate.Reverse }}
-  {{ $cat := .Params.categories | first | default "kotimaa" }}
+  {{ $cat := index .Params.categories 0 | default "kotimaa" }}
   {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="article-card">
