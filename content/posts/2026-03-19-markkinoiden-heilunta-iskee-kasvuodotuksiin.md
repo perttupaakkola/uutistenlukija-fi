@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Pörssien voimakas heilunta herättää huolta kasvuodotuksista, kun sijoittajat ovat varovaisia riskisijoitusten suhteen ja energiahinnat nousevat."
 ---
 
 Pörssien voimakas heilunta on herättänyt huolta kasvuodotuksista. Analyytikot näkevät tilanteen iskuna kasvuodotuksille, kun sijoittajat ovat varovaisempia riskisijoitustensa suhteen.

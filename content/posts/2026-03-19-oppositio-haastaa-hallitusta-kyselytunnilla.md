@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Oppositio kohdistaa kritiikkinsä hallitukseen eduskunnan kyselytunnilla, jossa käsitellään ajankohtaisia ulko- ja turvallisuuspoliittisia kysymyksiä."
 ---
 
 Eduskunnassa alkaa tänään kello 16 suullinen kyselytunti, jossa oppositio kohdistaa kritiikkinsä hallitukseen. Viikon poliittista keskustelua ovat hallinneet ulko- ja turvallisuuspoliittiset aiheet.

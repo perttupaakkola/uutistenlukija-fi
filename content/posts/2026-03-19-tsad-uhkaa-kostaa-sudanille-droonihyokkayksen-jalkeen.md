@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Tšadin presidentti Idris Mahamat Déby määrää armeijan valmiuteen kostohyökkäyksiä varten, kun Sudanista laukaistu drooni tappoi 17 ihmistä Tinessä."
 ---
 
 Tšadin presidentti Idris Mahamat Déby on määrännyt maan armeijan valmiuteen kostohyökkäysten varalle sen jälkeen, kun Sudanista laukaisttu drooni tappoi 17 ihmistä hautajaisissa Tinén raja-kaupungissa. BBC:n mukaan presidentti kutsui hätäkokouksen koolle ja määräsi Sudanin rajan täysin suljettavaksi.

@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Donald Trump kiistää tienneensä Israelin hyökkäyksestä Iranin kaasukenttää vastaan, mikä nostaa esiin kysymyksiä Yhdysvaltain ja Israelin suhteista."
 ---
 
 Yhdysvaltain presidentti Donald Trump väittää, ettei tiennyt etukäteen Israelin hyökkäyksestä Iranin ja Qatarin yhteiselle South Pars -kaasukentälle. BBC:n mukaan Trumpin lausunto herättää kysymyksiä Yhdysvaltain ja Israelin välisen strategisen yhteistyön luonteesta.

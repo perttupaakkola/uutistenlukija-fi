@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Korkein hallinto-oikeus hylkäsi Woltin valituksen lähettien työsuhteista ja vahvisti aiemman päätöksen, mikä herättää jatkokeskustelua työmarkkinoilla."
 ---
 
 Korkein hallinto-oikeus hylkäsi torstaina Woltin purkuhakemuksen, jolla yhtiö pyrki kumoamaan viime toukokuun päätöksen Wolt-lähettien työsuhteista. Oikeus piti aiemman ennakkopäätöksensä voimassa.

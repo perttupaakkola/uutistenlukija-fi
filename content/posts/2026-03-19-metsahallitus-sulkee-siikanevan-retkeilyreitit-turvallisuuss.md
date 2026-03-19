@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Metsähallitus sulkee Siikanevan retkeilyreitit huonokuntoisten pitkospuiden vuoksi, varmistaen asiakasturvallisuuden Pirkanmaan tärkeimmällä…"
 ---
 
 Metsähallitus sulkee Siikanevan soidensuojelualueen retkeilyreitit yleisöltä pitkospuiden huonon kunnon vuoksi. Päätös koskee Pirkanmaan laajinta yhtenäistä suoaluetta, joka on samalla maakunnan tärkein soidensuojelualue.

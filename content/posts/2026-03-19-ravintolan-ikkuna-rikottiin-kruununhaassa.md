@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Helsingin Kruununhaassa ravintolan omistaja Hani Kia epäilee ikkunan rikkomisen liittyvän ääri-islamistiseen toimintaan ja poliittisiin motiiveihin."
 ---
 
 Helsingin Kruununhaassa sijaitsevan ravintolan ikkuna rikottiin viime päivinä. Ravintolan omistaja Hani Kia epäilee teon liittyvän ääri-islamisteihin.

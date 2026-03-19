@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Tubi tekee yhteistyötä TikTok-luojien kanssa käynnistämällä \"Creatorverse Incubator\" -ohjelman, joka tukee alkuperäissisällön tuotantoa Tubille."
 ---
 
 Foxin omistama suoratoistopalvelu Tubi on lanseerannut "Creatorverse Incubator" -ohjelman yhteistyössä TikTokin kanssa. TechCrunchin mukaan aloite antaa sisällöntuottajille tukea omien ohjelmien luomiseen yksinomaan Tubia varten.

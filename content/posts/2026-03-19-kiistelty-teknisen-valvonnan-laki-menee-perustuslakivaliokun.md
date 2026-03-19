@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Eduskunnan sosiaali- ja terveysvaliokunta pyytää perustuslakivaliokunnalta arviota kiistellystä iäkkäiden teknisen valvonnan lakiesityksestä."
 ---
 
 Eduskunnan sosiaali- ja terveysvaliokunta päätti pyytää perustuslakivaliokunnalta arvion iäkkäiden teknisen valvonnan lakiesityksestä. Valiokunnan varapuheenjohtaja Mia Laihon mukaan päätös oli yksimielinen.

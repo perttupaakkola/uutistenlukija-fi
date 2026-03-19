@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Kahdeksankymppinen mies kuolee puukotuksessa Helsingin Malminkartanossa. Poliisi tutkintoja ja on pidättänyt epäillyn. Tapahtuma herättää huomiota paikalla."
 ---
 
 Ikääntynyt mies kuoli puukotuksessa Helsingin Malminkartanossa keskiviikkoiltana. Rikos tapahtui Luutnantintiellä, jossa verilammikot ja tahriintunut valkoinen Toyota muistuttavat yhä tapahtuneesta.

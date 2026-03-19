@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Suomen jalkapallomaajoukkue siirtää syyskuussa pelattavan Kansojen liigan ottelun Valko-Venäjää vastaan ulkoministeriön suosituksesta."
 ---
 
 Suomen miesten jalkapallomaajoukkue ei pelaa Kansojen liigan kotipeliään syyskuussa Valko-Venäjää vastaan Suomessa. Palloliitto päätti siirtää ottelun neutraaliin maahan opetus- ja kulttuuriministeriön sekä ulkoministeriön suosituksesta.

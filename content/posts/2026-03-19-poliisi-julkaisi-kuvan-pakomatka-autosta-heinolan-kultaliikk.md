@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Hämeen poliisi julkaisee kuvan harmaasta farmari-Hondasta, jolla epäilty pakeni Heinolan kultaliikkeen murrosta tiistaina."
 ---
 
 Hämeen poliisi pyytää havaintoja harmaasta farmari-Hondasta, jolla epäilty pakeni Heinolan kultaliikkeen murtopaikan. Auto kuvattiin keskustassa tiistai-iltana tapahtuneessa rikoksessa.

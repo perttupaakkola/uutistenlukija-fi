@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Mäntyharjun kunta lakkauttaa sivistysjohtajan viran ja irtisanoo Sari Aarniokosken, joka uskoo erimielisyyksien koulukyydeistä vaikuttaneen päätökseen."
 ---
 
 Mäntyharjun kunta lakkautti sivistysjohtajan viran ja irtisanoi tehtävää hoitaneen Sari Aarniokosken viime vuoden lopussa. Kunta perusteli päätöstä tuotannollisilla ja taloudellisilla syillä, mutta Aarniokosken mukaan taustalla olivat hänen henkilöstään johtuvat syyt.

@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Thomas Zilliacuksen etsintäkuulutus on poistettu, hän on ollut etsintäkuulutettuna talousrikoksista Singaporessa vuodesta 2024."
 ---
 
 Hotelli Punkaharjun ostaneen liikemies Thomas Zilliacuksen etsintäkuulutus on poistettu. Zilliacus oli ollut etsintäkuulutettuna vuodesta 2024 lähtien.

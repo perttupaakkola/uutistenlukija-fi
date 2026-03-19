@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Venäläinen Su-30-hävittäjä tunkeutui Viron ilmatilaan keskiviikkona Suomenlahdella, ja Viron ulkoministeriö reagoi asiasta nootilla Venäjälle."
 ---
 
 Venäjän Suhoi Su-30 -hävittäjä tunkeutui Viron ilmatilaan keskiviikkona Vaindloon saaren lähellä itäisellä Suomenlahdella. Kone pysyi Viron ilmatilassa noin minuutin ajan.

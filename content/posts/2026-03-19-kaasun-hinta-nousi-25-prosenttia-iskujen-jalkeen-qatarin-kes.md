@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Kaasun hinta nousee 25 prosenttia Britannian ja Euroopan markkinoilla iskujen jälkeen Lähi-idässä, mikä vaikuttaa öljyn hintoihin myös kansainvälisesti."
 ---
 
 Öljyn ja kaasun hinnat nousivat jyrkästi sen jälkeen, kun uudet iskut osuivat energiainfrastruktuuriin Lähi-idässä. Kaasun hinta hyppäsi noin 25 prosenttia Britannian ja Euroopan tukkumarkkinoilla.

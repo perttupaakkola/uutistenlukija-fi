@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Mobiilipelaaminen kasvaa nopeasti, ja 80 prosenttia pelaajista valitsee pelit älypuhelimilla ja tableteilla. Muutos vaikuttaa pelialan strategioihin."
 ---
 
 Mobiilipelit ovat kasvattaneet suosiotaan viime vuosina. Pelaajat siirtyvät yhä enemmän tietokoneista älypuhelimiin ja tabletteihin.

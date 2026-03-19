@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Startup-yritysten perustajat tarvitsevat työkaluja konfliktien ratkaisemiseen, jotta tiimityöskentely sujuu tehokkaasti alusta alkaen."
 ---
 
 Startup-yritysten perustajat voivat luoda toimivia malleja konfliktien käsittelyyn jo silloin, kun tiimi koostuu vain kahdesta tai kolmesta henkilöstä. Oikein toteutettuna nämä käytännöt skaalautuvat yrityksen mukana.

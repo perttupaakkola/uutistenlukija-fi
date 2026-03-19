@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Kevin Spacey tekee sovinnon kolmen miehen kanssa seksuaalirikossyytöksistä, jolloin Lontoon oikeudenkäynti peruuntuu sovintosopimuksen myötä."
 ---
 
 Näyttelijä Kevin Spacey on tehnyt sovinnon kolmen miehen kanssa, jotka syyttivät häntä seksuaalisesta hyväksikäytöstä vuosina 2000–2013. Lontoon oikeudenkäynti peruuntui sovintosopimuksen myötä.

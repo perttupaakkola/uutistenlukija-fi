@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Verouudistusesitys ehdottaa osinkoveron alentamista 5–12 prosenttiin, mikä kannustaa sijoittamaan kotimaisiin yrityksiin ja osakemarkkinoille."
 ---
 
 Verouudistusesitys ehdottaa osinkoverotuksen keventämistä merkittävästi. Ehdotuksen mukaan osinkoveroa maksettaisiin jatkossa vain 5–12 prosenttia nykyisen järjestelmän sijaan, jossa vero voi nousta jopa 34 prosenttiin.

@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Kaasun hinta nousee 25 prosenttia Qatarin kaasuntuotantolaitokseen kohdistuneiden iskujen jälkeen, aiheuttaen merkittäviä vaikutuksia Euroopan markkinoilla."
 ---
 
 Öljyn ja kaasun hinnat nousivat jyrkästi Lähi-idän energiainfrastruktuuriin kohdistuneiden iskujen jälkeen. Kaasun hinta hyppäsi noin 25 prosenttia Euroopan tukkumarkkinoilla, kun Qatarin pääasiallinen kaasuntuotantolaitos joutui hyökkäyksen kohteeksi.

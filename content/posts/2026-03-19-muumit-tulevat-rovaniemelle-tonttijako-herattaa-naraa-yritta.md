@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Rovaniemen kaupunginhallitus varasi tontin Muumimaailmalle ilman hakua, mikä aiheutti närää paikallisissa yrittäjissä, kuten Bearhill huskyssä."
 ---
 
 Rovaniemen kaupunginhallitus varasi Joulupukin pajakylästä tontin toiselle Muumimaailmalle ilman julkista hakua. Päätös herätti ihmetystä paikallisissa yrittäjissä, jotka olisivat halunneet mahdollisuuden hakea samaa tonttia.

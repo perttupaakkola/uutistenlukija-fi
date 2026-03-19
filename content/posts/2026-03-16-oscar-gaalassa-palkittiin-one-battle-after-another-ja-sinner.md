@@ -9,7 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
-description: "Hollywoodin 98. Oscar-gaalassa One Battle After Another voitti parhaan elokuvan ja ohjaajan palkinnot, kun taas Sinners sai 16 ehdokkuutta ja Jordan voitti parhaan miesnäyttelijän Oscarin."
+description: "Hollywoodin 98. Oscar-gaalassa One Battle After Another voitti parhaan elokuvan ja ohjaajan palkinnot, kun taas Sinners sai 16 ehdokkuutta ja Jordan voitti…"
 ---
 
 Hollywoodin 98. Oscar-gaala järjestettiin sunnuntaina Dolby Theatressa Los Angelesissa. Illan suurin voittaja oli Paul Thomas Andersonin ohjaama One Battle After Another, joka vei parhaan elokuvan ja parhaan ohjaajan palkinnot. Andersonille kyseessä olivat uran ensimmäiset Oscar-pystit.

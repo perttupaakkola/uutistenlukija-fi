@@ -5,7 +5,7 @@ categories:
   - Kotimaa
 author: "Anna Korhonen"
 draft: false
-description: "Perussuomalaisten kansanedustaja Mira Nieminen vaatii Lahden kouluissa kasvot peittävän pukeutumisen kieltoa, korostaen sen vaikutuksia opetukseen ja vuorovaikutukseen."
+description: "Perussuomalaisten kansanedustaja Mira Nieminen vaatii Lahden kouluissa kasvot peittävän pukeutumisen kieltoa, korostaen sen vaikutuksia opetukseen ja…"
 ---
 
 Perussuomalaisten kansanedustaja Mira Nieminen vaatii, että kasvot peittävä pukeutuminen kielletään Lahden kouluissa. Vaatimus on osa laajempaa valtakunnallista keskustelua, jota peittävästä pukeutumisesta on käyty suomalaisissa oppilaitoksissa viime kuukausina.

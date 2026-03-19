@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Suomi uhkaa joutua kansainvälisten sanktioiden kohteeksi suurpetojen, kuten susien ja karhujen, kiintiömetsästyksen vuoksi."
 ---
 
 Suomi voi joutua kansainvälisten sanktioiden kohteeksi susien, karhujen ja ilvesten kiintiömetsästyksen takia.

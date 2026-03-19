@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Valtiovarainministeri Riikka Purra vastaanottaa lähes 800 euron samppanjapullon, vaikka ministeriohjeet kieltävät yli 200 euron lahjat."
 ---
 
 Valtiovarainministeri Riikka Purra otti vastaan lähes 800 euron arvoisen samppanjapullon, vaikka valtioneuvoston ministeriohje kieltää yli 200 euron lahjojen ottamisen. Lahja saatiin helsinkiläisessä ravintola Pataässässä viime lokakuussa, jossa pöydässä istui ministerin kanssa virkamiehiä ja esikunnan jäseniä.

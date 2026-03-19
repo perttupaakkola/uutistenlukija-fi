@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Rymättylässä viljelijä Mika Törne istuttaa kevään ensimmäisiä varhaisperunoita. Lämmin sää houkuttelee viljelijöitä saaristopelloille."
 ---
 
 Kevään ensimmäiset varhaisperunat istutetaan Naantalin Rymättylässä. Lämmin ja poutainen sää houkutteli viljelijät töihin etelään viettäville saaristopelloille, joilta routa sulaa nopeasti kevätauringon paistaessa.

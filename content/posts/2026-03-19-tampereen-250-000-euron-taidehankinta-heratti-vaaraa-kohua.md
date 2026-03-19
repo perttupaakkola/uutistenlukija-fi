@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Sebastian Schulz valitaan Kaukajärven koulun muraalitaiteilijaksi, mikä herättää turhaa kohua sosiaalisessa mediassa."
 ---
 
 Tamperelaisen Sebastian Schultzin valinta Kaukajärven koulun muraalitaiteen tekijäksi on herättänyt turhaa kohua sosiaalisessa mediassa. Kouvolalainen kuntapoliitikko väitti virheellisesti, että taiteilija olisi pormestari Ilmari Nurmisen ystävä.

@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Liittovaltion tuomari määrää yli tuhat Voice of America -toimittajaa palaamaan töihin ensi maanantaina. Tuomio kumoaa Trumpin hallinnon päätöksen."
 ---
 
 Liittovaltion tuomari määräsi tiistaina, että yli tuhat Voice of America -radioaseman toimittajaa on palautettava töihin ensi maanantaina. Tuomarin mukaan Trumpin hallinnon päätös lakkauttaa aseman toiminta oli laiton.

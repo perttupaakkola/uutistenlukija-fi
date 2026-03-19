@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Pörsseissä tapahtuu merkittävää heiluntaa, kun analyytikot arvioivat talouden kasvunäkymien hyytymistä ja keskuspankkien rahapolitiikan vaikutuksia."
 ---
 
 Pörsseissä nähtiin merkittävää heiluntaa, kun sijoittajat arvioivat uudelleen talouden kasvunäkymiä. Talousaamun keskustelussa analyytikot kuvasivat tilannetta iskuksi kasvuodotuksille.

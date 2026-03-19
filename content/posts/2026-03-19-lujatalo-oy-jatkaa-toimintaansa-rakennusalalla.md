@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Lujatalo Oy jatkaa vahvasti toimintaansa rakennusalalla, keskittyen erilaisiin rakennusprojekteihin ja -palveluihin kotimaan markkinoilla."
 ---
 
 Lujatalo Oy on suomalainen rakennusalan yritys, joka toimii kotimaan markkinoilla. Yhtiö keskittyy rakennustoimintaan ja niihin liittyviin palveluihin.

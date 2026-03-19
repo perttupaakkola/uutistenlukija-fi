@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Itä-Suomen yliopisto aloittaa neuvottelut Kajaanin, Karelia- ja Savonia-ammattikorkeakoulujen osakkeiden ostamisesta. Tavoitteena on uusi korkeakoulukonserni."
 ---
 
 Itä-Suomen yliopisto aloittaa neuvottelut Kajaanin, Karelia- ja Savonia-ammattikorkeakoulujen osakkeiden ostamisesta. Yliopiston hallitus päätti torstaina neuvottelujen käynnistämisestä.

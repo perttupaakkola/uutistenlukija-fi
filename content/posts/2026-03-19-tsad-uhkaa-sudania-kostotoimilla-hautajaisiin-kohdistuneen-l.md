@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Tšadin presidentti Idris Mahamat Déby valmistautuu kostotoimiin Sudanin hyökkäysten vuoksi, jotka tappoivat hautajaisissa 17 ihmistä Tinén kaupungissa."
 ---
 
 Tšadin presidentti Idris Mahamat Déby on käskenyt armeijan valmistautua kostotoimiin Sudanin suunnasta tulevien hyökkäysten varalta. Taustalla on lennokki-isku, joka tappoi vähintään 17 ihmistä rajaseudun Tinén kaupungissa. Uhrit olivat hautajaisiin kokoontuneita surijoita, BBC:n mukaan.

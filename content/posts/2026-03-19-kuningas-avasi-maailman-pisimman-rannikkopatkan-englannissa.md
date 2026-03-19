@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Kuningas Kaarle III avasi Englannin rannikkovaellusreitin, joka ulottuu 2 689 mailin mittaisena maailman pisimmälle jalkakäytävälle."
 ---
 
 Kuningas Kaarle III avasi uuden jalkakäytävän, joka kiertää koko Englannin rannikon. BBC:n mukaan 2 689 mailin mittainen reitti on maailman pisin hoidettu rannikkovaellusreitti.

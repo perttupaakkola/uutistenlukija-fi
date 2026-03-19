@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Lapin hyvinvointialue Lapha raportoi yllättäen ylijäämäisestä tuloksesta, vaikka se on kärsinyt kahdesta vuodesta alijäämiä yhteensä 177 miljoonaa euroa."
 ---
 
 Lapin hyvinvointialue Lapha tekee viime vuodelta yllättäen ylijäämäisen tuloksen. Alue on tehnyt kahden ensimmäisen toimintavuotensa aikana yhteensä 177 miljoonaa euroa alijäämää ja päätynyt valtion tarkkailuun.

@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Tampereen yliopisto on erottanut opiskelijan kolmeksi kuukaudeksi. Erottamispäätös on harvinainen toimenpide suomalaisessa korkeakoulutuksessa."
 ---
 
 Tampereen yliopisto on erottanut opiskelijan noin kolmeksi kuukaudeksi. Erottamispäätös on harvinainen toimenpide suomalaisessa korkeakoulutuksessa.

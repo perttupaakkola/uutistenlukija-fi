@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Skrill-maksutapaa tukevat nettikasinot saavat kasvavaa suosiota suomalaisten pelaajien keskuudessa helpon käytön ja anonymiteetin ansiosta."
 ---
 
 Skrill-maksutapaa tukevat nettikasinot ovat nousseet suosituiksi suomalaisten pelaajien keskuudessa. Palvelun suosio perustuu käytön helppouteen ja siihen, että Skrill-talletukset eivät näy pelaajan pankin tiliotteessa.

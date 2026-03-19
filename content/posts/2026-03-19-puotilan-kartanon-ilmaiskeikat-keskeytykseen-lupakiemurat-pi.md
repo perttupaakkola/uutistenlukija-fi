@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Puotilan kartanon ilmaiskonsertit keskeytyvät kesällä lupakysymysten takia, kertoo ravintoloitsija Tanja Löppönen."
 ---
 
 Puotilan kartanon suositut ilmaiskonsertit jäävät tulevana kesänä järjestämättä. Ravintoloitsija Tanja Löppösen mukaan lupaprosessien epävarmuus teki mahdottomaksi suunnitella ohjelmistoa ajoissa.

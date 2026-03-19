@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Kirjailija Harri István Mäki ei palaa Tampereen työväenopiston opettajaksi tänä vuonna useiden plagiointiepäilyjen vuoksi."
 ---
 
 Kirjailija Harri István Mäki ei palaa opettamaan Tampereen seudun työväenopiston kirjoittajakursseille. Taustalla on useita plagiointiepäilyjä, joista osa on jo varmistunut. Tällä hetkellä viittä Mäen teosta epäillään plagiaateiksi.

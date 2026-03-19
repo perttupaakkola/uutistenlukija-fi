@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Puotilan kartanon ilmaiskonsertit jäävät kesäksi tauolle, koska esiintymislavalla ei ole tarvittavaa rakennuslupaa ja meluvalituksia on saatu."
 ---
 
 Puotilan kartanon suosittuja ilmaiskonsertteja ei järjestetä tulevana kesänä. Tilanteen taustalla ovat esiintymislavan puuttuva rakennuslupa ja konserteista tehdyt meluvalitukset.

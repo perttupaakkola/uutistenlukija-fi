@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Tanska lähettää joukkoja Grönlantiin varautuakseen mahdolliseen konfliktin puhkeamiseen Yhdysvaltojen kanssa, jolloin alueen jännitteet kasvavat."
 ---
 
 Tanska on vahvistanut sotilaallista läsnäoloaan Grönlannissa lähettämällä joukkoja ja räjähteitä saarelle. Toimenpiteet liittyvät kasvaviin huoliin mahdollisesta konfliktista Yhdysvaltojen kanssa.

@@ -1,10 +1,10 @@
 {{- $desc := "" -}}
 {{- if .Description -}}
-  {{- $desc = .Description | truncate 155 -}}
+  {{- $desc = .Description -}}
 {{- else if .Summary -}}
   {{- $desc = .Summary | plainify | truncate 155 -}}
 {{- else -}}
-  {{- $desc = .Site.Params.description -}}
+  {{- $desc = .Site.Params.description | truncate 155 -}}
 {{- end -}}
 
 <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}">

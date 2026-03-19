@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Kuningas Charles avaa 2689 mailin pituisen englannin rannikkoreitin, joka yhdistää maan rannikot ensimmäistä kertaa hallitusti."
 ---
 
 BBC:n mukaan kuningas Charles on avannut uuden kävelyreitin, joka kiertää koko Englannin rannikon. Reitti on 2689 mailia pitkä ja maailman pisin hallittu rannikkovaellusreitti.

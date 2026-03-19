@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Venäjän kansalliskaarti harjoittelee droonien käyttöä Kuolan niemimaalla, vain 200 kilometriä Suomen rajasta, tuhoten \"aseistettuja sabotööreitä\"."
 ---
 
 Venäjän kansalliskaarti järjesti sotaharjoituksen Kuolan niemimaalla, noin 200 kilometriä Suomen rajasta. Hiipinätuntureilla harjoituksessa erikoisjoukot käyttivät kamikaze-drooneja "aseistettujen sabotöörien" tuhoamiseksi arktisissa olosuhteissa.

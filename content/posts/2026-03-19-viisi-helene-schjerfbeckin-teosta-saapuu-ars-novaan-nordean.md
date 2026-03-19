@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Nordean taidesäätiö tuo ensi vuonna viisi Helene Schjerfbeckin teosta Turun Ars Nova -museoon osana kiertuetta, joka vie taidetta eri puolille Suomea."
 ---
 
 Nordean taidesäätiö tuo viisi Helene Schjerfbeckin teosta Turun Ars Nova -museoon ensi vuonna. Teokset ovat osa säätiön kiertuetta, joka vie kokoelman töitä eri puolille Suomea.

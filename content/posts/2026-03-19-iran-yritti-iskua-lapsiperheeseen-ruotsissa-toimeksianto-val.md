@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Iran yritti hyökätä Ruotsissa lapsiperheeseen, joka kritisoi hallintoa. Hyökkäys estettiin viime hetkellä rikollisverkoston avulla välitetyn toimeksiannon…"
 ---
 
 Iran on yrittänyt hyökätä hallintoa kritisoineeseen lapsiperheeseen Ruotsissa, kertoo ruotsalaislehti Aftonbladet. Hyökkäys estettiin viime hetkellä.

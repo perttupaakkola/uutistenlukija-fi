@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Kuningas Kaarle III avasi Englannin rannikkopolun, joka kattaa 4 325 kilometriä ja on maailman pisin hallinnoitu rannikkovaellusreitti."
 ---
 
 Kuningas Kaarle III avasi uuden kävelypolun, joka kiertää koko Englannin rannikon. BBC:n mukaan 4 325 kilometriä pitkä reitti on maailman pisin hallinnoitu rannikkovaellusreitti.

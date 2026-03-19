@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Vuoden 2025 parhaimmiksi päivävoiteiksi valittiin Cetaphil kuivalle iholle ja Medik8 SPF-suojilla. Weleda erottui herkän ihon voiteena."
 ---
 
 Ihonhoitotuotteiden vertailussa on selvitetty vuoden 2025 parhaat päivävoiteet eri ihotyypeille. Testivoittajaksi kuivalle ja herkälle iholle valittiin Cetaphil Facial Moisturizer, joka sai kiitosta hellävaraisesta mutta tehokkaasta koostumuksestaan.

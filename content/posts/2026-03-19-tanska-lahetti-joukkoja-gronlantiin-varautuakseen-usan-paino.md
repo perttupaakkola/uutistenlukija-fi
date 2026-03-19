@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Tanska lähettää sotilasjoukkoja Grönlantiin varautuakseen Yhdysvaltojen mahdolliseen painostukseen Donald Trumpin Grönlannin hankintapuheiden vuoksi."
 ---
 
 Tanska on lähettänyt sotilasjoukkoja ja räjähteitä Grönlantiin varautuakseen Yhdysvaltojen mahdolliseen painostukseen. DR:n mukaan toimenpiteet liittyvät Donald Trumpin toistuviin lausuntoihin Grönlannin hankkimisesta.

@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Senegal menetti Afrikan mestaruuden, kun jalkapalloliitto myönsi voiton Marokolle protestin vuoksi. Tilanne johtui kiistanalaisesta rangaistuspotkusta."
 ---
 
 Afrikan jalkapalloliitto myönsi tiistaina maanosan mestaruuden Marokolle, vaikka Senegal voitti tammikuun finaalin jatkoajalla 1–0. BBC:n mukaan liiton valituslautakunta perusteli päätöstä sillä, että Senegalin pelaajat poistuivat kentältä protestin vuoksi ja luovuttivat finaalin.

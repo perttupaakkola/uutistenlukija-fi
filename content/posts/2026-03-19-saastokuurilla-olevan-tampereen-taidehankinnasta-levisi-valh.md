@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Sebastian Schultz saa kritiikkiä muraalitaidehankinnastaan Tampereen Kaukajärvelle, kun poliitikko levitti väärää tietoa hänen suhteistaan pormestari…"
 ---
 
 Tamperelaisen Sebastian Schultzin muraalitaidetilaus Kaukajärven uuteen kouluun on herättänyt keskustelua tiukan talouskuurin aikana. Enintään 250 000 euron arvoinen taidehankinta on saanut osakseen kritiikkiä sosiaalisessa mediassa.

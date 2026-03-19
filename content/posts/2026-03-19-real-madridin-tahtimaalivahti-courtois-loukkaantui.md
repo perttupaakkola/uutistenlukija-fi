@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Real Madridin ykkösmaalivahti Thibaut Courtois loukkaantui reisilihaksesta ja jää sivuun viikkojen ajaksi, mikä hankaloittaa joukkueen tilannetta."
 ---
 
 Real Madridin ykkösmaalivahti Thibaut Courtois on loukkaantunut reisilihaksesta ja jää sivuun viikkojen ajaksi. 33-vuotias belgialainen vaihdettiin pois tiistain Mestarien liigan ottelussa.

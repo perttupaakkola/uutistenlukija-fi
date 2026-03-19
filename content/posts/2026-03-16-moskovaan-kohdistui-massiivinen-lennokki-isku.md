@@ -9,7 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
-description: "Venäjän ilmapuolustus torjuu lauantaina 65 lennokkia, jotka olivat suunnattuja Moskovaan. Pormestari Sobjanin vahvistaa tapahtuman olevan yksi suurimmista hyökkäyksistä."
+description: "Venäjän ilmapuolustus torjuu lauantaina 65 lennokkia, jotka olivat suunnattuja Moskovaan. Pormestari Sobjanin vahvistaa tapahtuman olevan yksi suurimmista…"
 ---
 
 Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan suunnattua lennokkia. Moskovan pormestari Sergei Sobjanin vahvisti tiedon.

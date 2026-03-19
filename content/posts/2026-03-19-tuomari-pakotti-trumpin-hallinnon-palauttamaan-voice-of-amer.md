@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Liittovaltion tuomari määrää Trumpin hallinnon palauttamaan yli tuhat Voice of America -toimittajaa töihin ensi maanantaina, kumoten aiemman asetuksen."
 ---
 
 Liittovaltion tuomari määräsi tiistaina, että presidentti Donald Trumpin hallinto on palautettava yli tuhat Voice of America -radioaseman työntekijää töihin ensi maanantaina. Päätös kumosi Trumpin vuosi sitten tekemän asetuksen, jolla hän yritti lakkauttaa kansainvälisen radioaseman.

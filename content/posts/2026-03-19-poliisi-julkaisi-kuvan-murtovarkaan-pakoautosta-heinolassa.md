@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Hämeen poliisi julkaisee kuvan Heinolassa murtovarkaan pakoautosta, harmaasta Honda-farmarista, ja pyytää vihjeitä murtoon liittyen."
 ---
 
 Hämeen poliisi pyytää yleisöltä vihjeitä Heinolan kultaliikkeen murtoon liittyen. Tekijä pakeni tiistai-iltana harmaalla Honda-farmarilla, josta poliisi julkaisi nyt kuvan.

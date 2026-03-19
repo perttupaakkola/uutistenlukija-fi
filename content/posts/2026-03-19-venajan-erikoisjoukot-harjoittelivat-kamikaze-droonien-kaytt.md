@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Venäjän erikoisjoukot harjoittelevat kamikaze-droonien käyttöä Kuolan niemimaan arktisissa olosuhteissa, noin 200 kilometrin päässä Suomesta."
 ---
 
 Venäjän kansalliskaarti Rosgvardian erikoisjoukot järjestivät sotaharjoituksen Kuolan niemimaalla Hiipinätuntureilla, noin 200 kilometrin päässä Suomen rajasta. Harjoituksessa testattiin fpv-tyyppisten kamikaze-droonien käyttöä arktisissa olosuhteissa.

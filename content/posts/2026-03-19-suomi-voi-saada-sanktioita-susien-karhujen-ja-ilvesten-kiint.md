@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Euroopan unioni harkitsee sanktioita Suomelle suurpetojen, kuten susien, karhujen ja ilvesten, kiintiömetsästyksen vuoksi, mikä uhkaa suojeltuja lajeja."
 ---
 
 Euroopan unioni harkitsee sanktioita Suomelle suurpetojen kiintiömetsästyksen vuoksi. EU:n komissio on huolissaan siitä, että Suomen myöntämät metsästysluvat uhkaavat suojeltujen lajien säilymistä.

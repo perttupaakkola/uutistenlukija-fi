@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Irlannissa pyhän Patrickin päivän kulkueella esitettiin seksuaalista väkivaltaa, mikä herätti voimakasta raivoa ja kritiikkiä kansalaisten keskuudessa."
 ---
 
 The Guardianin mukaan Irlannissa järjestettiin pyhän Patrickin päivän paraatissa kulkue, jossa esitettiin seksuaalista väkivaltaa ja viitattiin Jeffrey Epsteinin tapauksiin. Kulkueessa nähtiin ihmisiä peruukeissa jahtaamassa naishahmon esittäjää, joka huusi ja painettiin patjalle kiinni.

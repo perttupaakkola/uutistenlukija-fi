@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Metsähallitus sulkee Siikanevan soidensuojelualueen retkeilyreitit vaarallisten, rapistuneiden pitkospuiden vuoksi."
 ---
 
 Metsähallitus on sulkenut Siikanevan soidensuojelualueen retkeilyreitit yleisöltä. Syynä ovat pitkospuut, jotka ovat rapistuneet vaaralliseen kuntoon. Pirkanmaalaiset luontoyrittäjät saivat tiedon sulkemisesta kirjeellä.

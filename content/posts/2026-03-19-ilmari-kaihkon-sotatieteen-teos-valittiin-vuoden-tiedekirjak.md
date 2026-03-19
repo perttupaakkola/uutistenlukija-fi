@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Sotatieteiden dosentti Ilmari Käihkön teos \"10 oppia sodasta\" voittaa vuoden tiedekirja -palkinnon monitahoisesta ja terävästä analyysistaan sodasta."
 ---
 
 Vuoden tiedekirja -palkinnon on voittanut sotatieteiden dosentti Ilmari Käihkön teos "10 oppia sodasta". Palkintoraadin mukaan kirja on monitahoinen ja terävä analyysi sodasta teoreettisena, yhteiskunnallisena ja medioituneena ilmiönä.

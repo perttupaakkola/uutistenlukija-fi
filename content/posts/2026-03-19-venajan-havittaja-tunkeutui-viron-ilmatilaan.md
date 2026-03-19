@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Venäläinen Suhoi Su-30-hävittäjä loukkasi Viron ilmatilaa keskiviikkona, ja Viron ulkoministeriö reagoi kutsumalla Venäjän edustajan puhutteluun."
 ---
 
 Venäläinen Suhoi Su-30-hävittäjä loukkasi Viron ilmatilaa keskiviikkona itäisellä Suomenlahdella. Kone pysyi Viron ilmatilassa noin minuutin ajan Vaindloon saaren lähellä.

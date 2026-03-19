@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Viljelijä Mika Törne on aloittanut varhaisperunan istutuksen Rymättylässä, tavoitteenaan lakkiaispöydät. Kevät tuo mukanaan suotuisat olosuhteet."
 ---
 
 Varhaisperunan istutus on alkanut Naantalin Rymättylässä lämpenevän kevätilman houkuttelemana. Viljelijä Mika Törne aloitti istutuksen torstaina seitsemän aarin alueelta ja laajentaa työn kolmeen hehtaariin.

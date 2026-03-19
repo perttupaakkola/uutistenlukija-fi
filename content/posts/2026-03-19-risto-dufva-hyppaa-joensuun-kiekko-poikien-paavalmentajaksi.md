@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Risto Dufva siirtyy Joensuun Kiekko-Poikien päävalmentajaksi ensi kaudeksi. Dufva liittyi seuran valmennusryhmään jo kesken päättyneen kauden."
 ---
 
 Pitkän SM-liigauran tehnyt Risto Dufva, 62, siirtyy ensi kaudeksi Mestis-seura Joensuun Kiekko-Poikien päävalmentajaksi. Dufva liittyi joensuulaisseura valmennusryhmään jo kesken päättyneen kauden.

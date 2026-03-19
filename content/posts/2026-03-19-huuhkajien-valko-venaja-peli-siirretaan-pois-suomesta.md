@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Suomen jalkapallomaajoukkue siirtää syyskuun Kansojen liigan kotiottelunsa Valko-Venäjää vastaan ministeriöiden suositusten vuoksi."
 ---
 
 Suomen jalkapallomaajoukkue ei pelaa syyskuun Kansojen liigan kotiottelu Valko-Venäjää vastaan Suomessa. Palloliitto siirtää ottelun neutraaliin maahan ministeriöiden suositusten perusteella.

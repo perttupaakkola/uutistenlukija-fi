@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Eurooppalaiset lentoyhtiöt vaativat EU:lta synteettisen lentopolttoaineen sekoitusvelvoitteen lykkäystä, koska teknologia on vielä liian alkuvaiheessa."
 ---
 
 Eurooppalaiset lentoyhtiöt vaativat EU:ta perumaan synteettisen lentopolttoaineen sekoitusvelvoitteen. Airlines for Europe -yhteisön mukaan teknologia on liian alkuvaiheessa tavoitteiden saavuttamiseksi.

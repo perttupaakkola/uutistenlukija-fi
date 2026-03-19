@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Kyproksen presidentti Nikos Christodoulides vaatii keskustelua Britannian sotilastukikohtien asemasta ja tulevaisuudesta kolonialististen seurausten vuoksi."
 ---
 
 Kyproksen presidentti Nikos Christodoulides kutsuu Britannian kahta sotilastukikohtaa saarella "kolonialistisiksi seurauksiksi". Hän vaatii avointa keskustelua tukikohtien asemasta ja tulevaisuudesta.

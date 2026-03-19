@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Kauppalehti kehittää digitaalista palvelutarjontaansa panostamalla verkkosisältöjen ja mobiilipalveluiden parantamiseen lukijakokemuksen vuoksi."
 ---
 
 Kauppalehti jatkaa digitaalisten palveluidensa kehittämistä. Talousmedia panostaa erityisesti verkkosisältöjen ja mobiilipalveluiden parantamiseen.

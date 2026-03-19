@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Hämeen poliisi julkaisi kuvan murtotapauksen pakoautosta, kun epäilty pakenee Heinolan kultaliikkeen rikospaikalta liikkuen Rantapuiston suuntaan."
 ---
 
 Hämeen poliisi pyytää yleisön apua Heinolan kultaliikkeen murtotapauksen selvittämisessä. Poliisi julkaisi kuvan harmaasta farmari-Hondasta, jolla epäilty pakeni rikospaikalta 17. maaliskuuta.

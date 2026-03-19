@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Kuningas Kaarle III avaa maailman pisimmän rannikkokävelyreitin Englannissa, joka kattaa 4 324 kilometriä ja yhdistää koko maan rannikon."
 ---
 
 Kuningas Kaarle III avasi maailman pisimmän rannikkokävelyreitin, joka kiertää Englannin koko rannikkoviivan. BBC:n mukaan 4 324 kilometriä pitkä reitti luo ensimmäistä kertaa jatkuvan polun, joka antaa kävelijöille pääsyn koko rannikolle.

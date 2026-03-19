@@ -9,7 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
-description: "Asuntovelalliset varautuvat korkojen nousuun tänä vuonna, mikä kiristää kotitalouksien taloutta. Euroopan keskuspankki nostaa ohjauskorkoa inflaation hillitsemiseksi."
+description: "Asuntovelalliset varautuvat korkojen nousuun tänä vuonna, mikä kiristää kotitalouksien taloutta. Euroopan keskuspankki nostaa ohjauskorkoa inflaation…"
 ---
 
 Asuntovelallisten on varauduttava korkojen nousuun kuluvan vuoden aikana. Korkotaso on noususuunnassa, mikä kiristää kotitalouksien taloutta.

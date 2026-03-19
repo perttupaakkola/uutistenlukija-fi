@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Uudenkaupungin telakka saa merkittävän tilauksen Saksan merivoimilta uudenlaisen työveneen rakentamiseksi erityistarpeisiin."
 ---
 
 Uudenkaupungin telakka on saanut merkittävän tilauksen Saksan merivoimille. Kyseessä on uudenlainen työvene, joka on suunniteltu merivoimien erityistarpeisiin.

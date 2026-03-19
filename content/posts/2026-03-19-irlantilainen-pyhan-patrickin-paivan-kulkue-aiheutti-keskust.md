@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Irlantilaiset pyhän Patrickin päivän kulkueet herättävät kritiikkiä seksuaalista väkivaltaa kuvaavasta esityksestä, tuomitsin raiskausavustusjärjestöjen…"
 ---
 
 The Guardianin mukaan raiskausavustusjärjestöt tuomitsivat jyrkästi irlantilaisen pyhän Patrickin päivän kulkueessa nähdyn näytöksen, joka kuvasi seksuaalista väkivaltaa. Traktorin vetämässä kulkueessa esiintyjät piirittivät naishahmon, joka huusi ja jota pidettiin kiinni patjalla. Kulkueessa oli irlantilaislippuja ja kylttejä, joissa viitattiin Jeffrey Epsteinin oikeudenkäynteihin.

@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Oppositio haastaa hallitusta kyselytunnilla, jossa käsitellään erityisesti ulko- ja turvallisuuspolitiikan ajankohtaisia kysymyksiä."
 ---
 
 Eduskunta kokoontuu tänään kello 16 suulliselle kyselytunnille, jossa oppositio haastaa hallitusta viikon polttavimmista aiheista.

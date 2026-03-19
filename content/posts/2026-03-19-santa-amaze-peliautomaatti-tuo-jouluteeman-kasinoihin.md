@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Santa Amaze -peliautomaatti tuo jouluteeman kasinopeleihin ympäri vuoden, tarjoten pelaajille mahdollisuuden voittaa ilmaiskierroksilla ja bonuksia…"
 ---
 
 Santa Amaze -peliautomaatti tuo joulutunnelman kasinopeleihin ympäri vuoden. Peli pyörii neljällä kiekolla ja kolmella rivillä 20 voittolinjalla. Pelaajat voivat panostaa 0,01 dollarista 250 dollariin kierrosta kohden.

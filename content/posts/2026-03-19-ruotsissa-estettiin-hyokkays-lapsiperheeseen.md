@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Ruotsin turvallisuuspoliisi estää hyökkäyksen lapsiperhettä vastaan, mikä paljastaa huolen ulkovaltojen toiminnasta maassa."
 ---
 
 Ruotsin turvallisuuspoliisi esti viime hetkellä suunnitellun hyökkäyksen lapsiperhettä vastaan. Aftonbladetin mukaan teosta epäillyn taustalla on Iran-kytkös.

@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Risto Dufva aloittaa Joensuun Kiekko-Poikien päävalmentajana 1+1-vuotisella sopimuksella, tähdäten joukkueen kehittämiseen ja SM-liigapaikan tavoitteluun."
 ---
 
 62-vuotias Risto Dufva ottaa vastaan Joensuun Kiekko-Poikien päävalmentajan tehtävän. Pitkän SM-liigauran tehnyt valmentaja siirtyi jo kesken kauden joensuulaisten valmennusryhmään.

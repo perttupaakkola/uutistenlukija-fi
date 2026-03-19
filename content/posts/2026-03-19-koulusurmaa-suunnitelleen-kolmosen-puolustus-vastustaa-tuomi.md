@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Evita Kolmonen vastustaa syyttäjän vaatimuksia tuomion koventamisesta korkeimmassa oikeudessa, jossa käsitellään Isonkyrön kouluampumisen suunnittelua."
 ---
 
 Evita Kolmosen puolustus on jättänyt vastineensa korkeimmalle oikeudelle ja vastustaa syyttäjän vaatimuksia tuomion koventamisesta. Kolmonen tuomittiin viime vuonna Isonkyrön kouluampumisen suunnittelusta kolmen vuoden ja kahden kuukauden vankeusrangaistukseen.

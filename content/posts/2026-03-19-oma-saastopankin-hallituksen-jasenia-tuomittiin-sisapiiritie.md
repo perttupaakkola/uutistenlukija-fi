@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Helsingin käräjäoikeus tuomitsee kaksi Oma Säästöpankin hallituksen jäsentä sakkorangaistuksiin sisäpiiritiedon väärinkäytöstä vuosina 2020 ja 2022."
 ---
 
 Helsingin käräjäoikeus on tuominnut kaksi Oma Säästöpankin hallituksessa toiminutta henkilöä sakkorangaistuksiin sisäpiiritiedon väärinkäytöstä. Tuomiot annettiin torstaina tunnustamismenettelyssä. Kumpikin tuomituista tunnusti teot.

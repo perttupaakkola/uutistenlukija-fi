@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Suomen jalkapallomaajoukkue pelaa puolueettomassa maassa ottelun Valko-Venäjää vastaan, päätös herättää keskustelua fanien keskuudessa."
 ---
 
 Suomen jalkapallomaajoukkue ei pelaa syyskuun Kansojen liigan kotipeliään Valko-Venäjää vastaan Suomessa. Palloliiton hallitus päätti maanantaina siirtää ottelun neutraaliin maahan ulko- ja opetusministeriöiden suositusten perusteella.

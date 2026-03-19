@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Kyproksen presidentti Nikos Christodoulides vaatii keskustelua Britannian sotilastukikohtien tulevaisuudesta EU-huippukokouksessa Brysselissä."
 ---
 
 Kyproksen presidentti Nikos Christodoulides pitää Britannian kahta sotilastukikohtaa saarella "koloniaalisen menneisyyden seurauksena" ja vaatii niiden tulevaisuudesta keskustelua. Presidentti sanoi saapuessaan EU-johtajien huippukokoukseen Brysseliin, että avoin keskustelu Britannian hallituksen kanssa käydään Lähi-idän tilanteen rauhoituttua.

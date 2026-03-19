@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Afrikan jalkapalloliiton johtokunnan jäsen Augustin Senghor kritisoi CAFin päätöstä myöntää mestaruus Marokolle riistona Senegalin voitosta."
 ---
 
 Afrikan jalkapalloliiton johtokunnan jäsen Augustin Senghor haukkuu säälittäväksi CAFin päätöksen riistää Afrikan maanosan mestaruus Senegalilta. Tiistaina Marokolle myönnetty mestaruus kuuluu BBC:n mukaan Senegalille, joka voitti finaalin jatkoajalla 1–0 tammikuussa.

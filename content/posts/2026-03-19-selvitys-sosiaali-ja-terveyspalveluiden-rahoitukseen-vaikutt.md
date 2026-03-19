@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Valtiovarainministeriön selvitys paljastaa, että hyvinvointialueiden diagnoositietojen kirjaamisessa on vakavia ongelmia, jotka uhkaavat rahoitusta."
 ---
 
 Hyvinvointialueiden diagnoositietojen kirjaamisessa on merkittäviä ongelmia, selviää valtiovarainministeriön selvityksestä. Asia on vakava, sillä neljä viidesosaa hyvinvointialueiden rahoituksesta määräytyy ihmisten palvelutarpeen mukaan.

@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Kevin Spacey sopi seksuaalisista hyväksikäyttösyytöksistä kolmen miehen kanssa, minkä vuoksi Lontoon siviilioikeudenkäynti peruuntui."
 ---
 
 Näyttelijä Kevin Spacey on päässyt sovintoon kolmen miehen kanssa, jotka syyttivät häntä seksuaalisesta hyväksikäytöstä. Lontoon siviilioikeudenkäynti peruuntui sovinnon myötä.

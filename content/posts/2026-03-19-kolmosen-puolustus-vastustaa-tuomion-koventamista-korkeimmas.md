@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Evita Kolmosen puolustus kiistää korkeimmassa oikeudessa syyttäjän vaatimuksen tuomion koventamisesta koulusurmasta."
 ---
 
 Koulusurmaa suunnitelleen Evita Kolmosen puolustus on jättänyt vastineensa korkeimmalle oikeudelle, jossa kiistetään syyttäjän vaatimus tuomion koventamisesta. Kiista koskee sitä, onko kyse yhdestä vai useammasta rikoksesta.

@@ -5,7 +5,7 @@ categories:
   - Ulkomaat
 author: "Anna Korhonen"
 draft: false
-description: "Havannassa järjestetään harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat sähköä ja ruokaa. Protestoijat tunkeutuvat kommunistisen puolueen toimistoon."
+description: "Havannassa järjestetään harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat sähköä ja ruokaa."
 ---
 
 Kuuban pääkaupungissa Havannassa puhkesi viikonloppuna harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat toimivaa sähköverkkoa ja ruoan saatavuuden parantamista. Protestoijat tunkeutuivat kommunistisen puolueen paikalliseen toimistoon ja aiheuttivat vahinkoa rakennukselle.
