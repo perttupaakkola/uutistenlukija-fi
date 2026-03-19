@@ -28,48 +28,80 @@ except ImportError:
 
 CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
 
-SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
+SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja, joka kirjoittaa Helsingin Sanomien tasolla.
 
-Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
+Saat uutisaiheen otsikon, taustatietoja ja mahdollisesti tutkimustuloksia lähteistä. Kirjoita oma, itsenäinen uutisartikkeli näiden pohjalta.
+
+PITUUS JA SISÄLTÖ:
+- Kirjoita 5-8 kappaletta, 400-700 sanaa. Lyhyempi artikkeli on HYLÄTTY.
+- Jokaisessa artikkelissa on oltava KONKREETTISIA FAKTOJA: lukuja, prosentteja, nimiä, aikamääreitä, paikkoja.
+- Jos taustatietoja on vähän, keskity niihin faktoihin joita sinulla ON. Älä keksi faktoja, mutta syvennä olemassa olevia.
+- Älä KOSKAAN viittaa kuviin, kaavioihin, infograafeihin tai visuaaliseen materiaaliin, jota artikkelissa ei ole.
+- Älä mainitse "kuvan mukaan", "kaaviosta näkyy", "alla oleva kuva" tai vastaavia. Muunna visuaalinen tieto tekstimuotoon.
 
 TÄRKEÄÄ:
 - Tämä on SINUN artikkelisi. Älä viittaa lähteisiin, alkuperäisiin uutisiin tai muihin medioihin.
-- Poikkeus: jos artikkeli perustuu yksittäisen tahon lausuntoon tai tutkimukseen, mainitse se luonnollisesti osana tekstiä.
+- Poikkeus: kun artikkeli perustuu tietyn tahon lausuntoon, tutkimukseen tai tilastoon, mainitse lähde nimeltä luonnollisesti osana tekstiä (esim. "Tilastokeskuksen mukaan", "Financial Timesin analyysin perusteella").
 - Älä mainitse "alkuperäistä lähdettä", "raportin mukaan" (paitsi jos tiedät raportin nimen), "uutisen mukaan" tms.
-- Kirjoita 3-5 kappaletta, 200-400 sanaa.
+
+RAKENNE (HS-tyylinen):
+- 1. kappale: Tärkein fakta tai uutinen suoraan. Ei johdattelua.
+- 2.-3. kappale: Tausta ja konteksti. Miksi tämä on tärkeää? Miten tilanne on kehittynyt?
+- 4.-6. kappale: Yksityiskohdat, numerot, reaktiot tai asiantuntija-arviot (jos tietoa on).
+- 7.-8. kappale: Mitä seuraavaksi tapahtuu? Mikä on aikataulu? Lopeta konkreettiseen faktaan.
 
 KIRJOITUSTYYLI:
-- Aloita suoraan asiasta.
-- Lyhyet, suorat lauseet. Vaihtele pituutta.
-- Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.
-- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.
-- Vältä passiivia kun aktiivi toimii.
+- Aloita suoraan asiasta. Ei "johdanto"-lauseita.
+- Vaihtele lauseiden pituutta: lyhyitä ja pitkiä sekaisin.
+- Neutraalia, selkeää yleiskieltä — kuin HS:n uutissivuilla.
+- Käytä aktiivissa aina kun mahdollista.
 - Ei emojeja, lihavointia tai otsikkolistoja.
-- Ei ajatusviivoja (—) liiallisesti.
 - Suomeksi vain ensimmäinen sana isolla otsikoissa.
-- Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").
-- Lopeta viimeiseen faktaan.
+- Lopeta viimeiseen faktaan, ei geneeriseen yhteenvetoon.
 
-TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:
-- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)
-- Ei kolmen sarjoja joka kappaleessa
-- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)
-- Ei mainosmaista kieltä
-- Ei chatbot-artefakteja
-- Anna faktojen puhua, älä paisuttele
+TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN — KRIITTISTÄ:
+Seuraavat ovat ehdottomia kieltoja. Jos mikään näistä esiintyy tekstissä, artikkeli on hylätty:
+- "Lisäksi", "Toisaalta", "On huomionarvoista", "On syytä huomata"
+- "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti), "herättää keskustelua"
+- "aiheuttaa huolta", "jännitteet lisääntyvät/kasvavat" (yleisluontoisesti ilman konkretiaa)
+- "haasteita" (toistuvasti eri kappaleissa), "merkittävä" (ilman konkretiaa)
+- Kolmen listan toistaminen joka kappaleessa
+- Synonyymien pyörittäminen (yhtiö/firma/toimija/yritys samasta asiasta)
+- Geneeriset lopetukset: "Aika näyttää", "Tulevaisuus näyttää", "herättää kysymyksiä"
+- Tyhjät "vaikuttaa"-väitteet ilman lukuja (esim. "vaikuttaa talouteen" — MITEN ja kuinka paljon?)
+- "polarisoituu", "eriytyy", "syventää eroja" ilman konkreettisia lukuja
+
+OTSIKKO:
+- Napakka, informatiivinen, ei clickbait.
+- Kerro tärkein uutinen otsikossa.
+- Ei kaksoispistettä jokaisen otsikon alussa.
+- Esimerkki hyvästä: "Fedin ohjauskorko pysyy ennallaan 3,50–3,75 prosentissa"
+- Esimerkki huonosta: "Yksi kuva kertoo paljon USA:n taloudesta"
 
 Vastaa VAIN JSON-muodossa."""
 
-AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit tekoälykirjoituksen merkkien varalta ja korjaa:
+AUDIT_SYSTEM_PROMPT = """Olet uutistoimituksen laaduntarkistaja. Tehtäväsi on varmistaa, että artikkeli on Helsingin Sanomien tasolla.
 
-1. Paisuttelu ja mainosmainen kieli
-2. Tekoälysanasto (Lisäksi, Toisaalta, kokonaisvaltainen, ekosysteemi)
-3. Kolmen sarjat, synonyymien kierrätys
-4. Geneeriset lopetukset
-5. Passiivin ylikäyttö
-6. Viittaukset alkuperäisiin lähteisiin tai muihin uutismedioihin (POISTA — tämä on meidän oma artikkeli)
-7. Chatbot-artefaktit
-8. Täytesanat ja varautumiset
+HYLKÄÄ JA KIRJOITA UUDELLEEN jos:
+1. Artikkeli on alle 350 sanaa — kirjoita pidempi versio samoilla tiedoilla
+2. Artikkeli viittaa kuviin, kaavioihin tai visuaaliseen materiaaliin — poista viittaukset ja muunna tieto tekstiksi
+3. Artikkeli sisältää tekoälysanastoa (ks. alla) — poista ja korvaa konkreettisilla ilmaisuilla
+
+TEKOÄLYSANASTON TARKISTUS — poista tai korvaa:
+- "Lisäksi", "Toisaalta", "On huomionarvoista", "On syytä huomata"
+- "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)
+- "herättää keskustelua", "aiheuttaa huolta", "herättää kysymyksiä"
+- Geneeriset lopetukset ("Aika näyttää", "Tulevaisuus näyttää")
+- Tyhjät vaikuttamisväitteet ilman lukuja
+- "polarisoituu", "eriytyy" ilman konkreettisia lukuja
+- Synonyymien pyörittäminen (yhtiö/firma/toimija/yritys samasta asiasta)
+- Passiivilauseita joissa aktiivi olisi selkeämpi
+
+MUU TARKISTUS:
+- Onko otsikko informatiivinen (kertoo uutisen) vai geneerinen?
+- Alkaako artikkeli suoraan uutisesta vai tyhjällä johdattelulla?
+- Loppuuko viimeiseen konkreettiseen faktaan vai geneeriseen pyörittelyyn?
+- Onko artikkeli kielellisesti luontevaa suomea?
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -83,7 +115,7 @@ def _call_llm(system: str, prompt: str) -> str:
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
             model="claude-sonnet-4-20250514",
-            max_tokens=4096,
+            max_tokens=8192,
             system=system,
             messages=[{"role": "user", "content": prompt}],
         )
@@ -121,7 +153,7 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     """
     rewritten = []
 
-    batch_size = 5
+    batch_size = 3  # Smaller batches = better quality per article
     for i in range(0, len(articles), batch_size):
         batch = articles[i:i + batch_size]
         print(f"[writer] Processing batch {i // batch_size + 1} ({len(batch)} articles)...")
@@ -148,13 +180,20 @@ Kuvaus: {article['description']}{research_section}{lang_note}
 
         prompt = f"""Kirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.
 
+MUISTA:
+- Jokaisessa artikkelissa 5-8 kappaletta, 400-700 sanaa
+- Konkreettisia faktoja, lukuja ja nimiä
+- ÄLÄ viittaa kuviin tai kaavioihin joita ei ole
+- ÄLÄ käytä tekoälysanastoa (Lisäksi, Toisaalta, herättää keskustelua, jne.)
+- Lopeta konkreettiseen faktaan, ei geneeriseen pohdintaan
+
 {articles_text}
 
 Vastaa JSON-listana:
 [
   {{
-    "title": "Uutisen otsikko",
-    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",
+    "title": "Napakka, informatiivinen otsikko joka kertoo uutisen",
+    "content": "5-8 kappaleen uutisteksti (400-700 sanaa). Kappaleet erotetaan kahdella rivinvaihdolla.",
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "original_title": "Alkuperäinen otsikko RSS:stä"
   }}

@@ -1,8 +1,10 @@
 """
 Deduplication — tracks published article fingerprints to prevent republishing.
+Includes fuzzy title matching to catch near-duplicates from different feeds.
 """
 import json
 import os
+import re
 from datetime import datetime, timezone, timedelta
 
 DEDUP_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "published_fingerprints.json")
@@ -43,8 +45,36 @@ def _save_url_hashes(hashes: dict):
         json.dump(hashes, f, indent=2)
 
 
+def _normalize_title(title: str) -> set:
+    """Normalize a title into a set of meaningful words for comparison."""
+    title = title.lower().strip()
+    # Remove common punctuation
+    title = re.sub(r'[^\w\s]', ' ', title)
+    # Split into words, remove short ones
+    words = {w for w in title.split() if len(w) > 2}
+    # Remove very common Finnish stop words
+    stop_words = {'eli', 'tai', 'jos', 'kun', 'nyt', 'niin', 'myös', 'sekä',
+                  'vain', 'ovat', 'olla', 'oli', 'ole', 'sen', 'tämä', 'tämän',
+                  'hänen', 'hän', 'ovat', 'joka', 'jossa', 'jota', 'jonka',
+                  'the', 'and', 'for', 'that', 'with', 'from', 'this', 'are'}
+    return words - stop_words
+
+
+def _titles_similar(title1: str, title2: str, threshold: float = 0.6) -> bool:
+    """Check if two titles are semantically similar using Jaccard similarity."""
+    words1 = _normalize_title(title1)
+    words2 = _normalize_title(title2)
+    if not words1 or not words2:
+        return False
+    intersection = words1 & words2
+    union = words1 | words2
+    similarity = len(intersection) / len(union)
+    return similarity >= threshold
+
+
 def filter_new_articles(articles: list) -> list:
-    """Remove articles that have already been published. Returns only new ones."""
+    """Remove articles that have already been published. Returns only new ones.
+    Also deduplicates within the current batch using fuzzy title matching."""
     fps = load_fingerprints()
     url_hashes = _load_url_hashes()
 
@@ -54,15 +84,37 @@ def filter_new_articles(articles: list) -> list:
     url_hashes = {k: v for k, v in url_hashes.items() if v > cutoff}
 
     new_articles = []
+    seen_titles = []  # Track titles within this batch for fuzzy dedup
+    exact_dupes = 0
+    fuzzy_dupes = 0
+
     for article in articles:
         fp = article.get("fingerprint", "")
         url_h = article.get("_url_hash", "")
+        title = article.get("title", "")
+
         # Skip if seen by title fingerprint or URL hash
         if (fp and fp in fps) or (url_h and url_h in url_hashes):
+            exact_dupes += 1
             continue
+
+        # Fuzzy title check within current batch
+        is_fuzzy_dupe = False
+        for seen_title in seen_titles:
+            if _titles_similar(title, seen_title):
+                is_fuzzy_dupe = True
+                fuzzy_dupes += 1
+                print(f"[dedup] Fuzzy duplicate skipped: '{title}' ≈ '{seen_title}'")
+                break
+
+        if is_fuzzy_dupe:
+            continue
+
+        seen_titles.append(title)
         new_articles.append(article)
 
-    print(f"[dedup] {len(articles)} scanned → {len(new_articles)} new ({len(articles) - len(new_articles)} duplicates filtered)")
+    print(f"[dedup] {len(articles)} scanned → {len(new_articles)} new "
+          f"({exact_dupes} exact + {fuzzy_dupes} fuzzy duplicates filtered)")
     return new_articles
 
 

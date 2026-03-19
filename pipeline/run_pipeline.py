@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from scanner import scan_all_feeds
 from firehose import poll_firehose
+from research import enrich_with_research
 from rewriter import rewrite_articles
 from publisher import publish_articles, build_site
 from dedup import filter_new_articles, mark_published
@@ -36,7 +37,7 @@ def log_run(stage: str, data: dict):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-def run(quick: bool = False, build_only: bool = False):
+def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False):
     """Execute the pipeline.
 
     Args:
@@ -49,6 +50,8 @@ def run(quick: bool = False, build_only: bool = False):
         print("  Mode: --quick (skip build)")
     elif build_only:
         print("  Mode: --build-only")
+    elif firehose_only:
+        print("  Mode: --firehose-only (Firehose poll + rewrite, skip RSS + build)")
     print("=" * 60)
 
     if build_only:
@@ -60,24 +63,35 @@ def run(quick: bool = False, build_only: bool = False):
             print("\n❌ Rakennus epäonnistui.")
         return success
 
-    # Step 1: Scan RSS feeds + Firehose
-    print("\n📡 Vaihe 1: RSS-syötteiden skannaus...")
-    rss_articles = scan_all_feeds()
+    # Step 1: Scan sources
+    if firehose_only:
+        # Firehose-only mode: skip RSS, just poll Firehose
+        rss_articles = []
+        print("\n🔥 Vaihe 1: Firehose-pollaus (RSS ohitettu)...")
+        try:
+            fh_articles = poll_firehose()
+        except Exception as e:
+            print(f"[firehose] Error: {e}")
+            fh_articles = []
+        articles = fh_articles
+        print(f"[pipeline] Firehose: {len(articles)} articles")
+    else:
+        print("\n📡 Vaihe 1: RSS-syötteiden skannaus...")
+        rss_articles = scan_all_feeds()
 
-    print("\n🔥 Vaihe 1b: Firehose-pollaus...")
-    try:
-        fh_articles = poll_firehose()
-        print(f"[firehose] +{len(fh_articles)} articles from Firehose")
-    except Exception as e:
-        print(f"[firehose] Skipping (error): {e}")
-        fh_articles = []
+        print("\n🔥 Vaihe 1b: Firehose-pollaus...")
+        try:
+            fh_articles = poll_firehose()
+            print(f"[firehose] +{len(fh_articles)} articles from Firehose")
+        except Exception as e:
+            print(f"[firehose] Skipping (error): {e}")
+            fh_articles = []
 
-    # Merge: prefer RSS articles (already have richer metadata), Firehose fills gaps
-    # Dedup by URL hash across both sets
-    seen_url_hashes = {a.get("_url_hash") for a in rss_articles if a.get("_url_hash")}
-    fh_new = [a for a in fh_articles if a.get("_url_hash") not in seen_url_hashes]
-    articles = rss_articles + fh_new
-    print(f"[pipeline] RSS: {len(rss_articles)} + Firehose new: {len(fh_new)} = {len(articles)} total")
+        # Merge: prefer RSS articles (richer metadata), Firehose fills gaps
+        seen_url_hashes = {a.get("_url_hash") for a in rss_articles if a.get("_url_hash")}
+        fh_new = [a for a in fh_articles if a.get("_url_hash") not in seen_url_hashes]
+        articles = rss_articles + fh_new
+        print(f"[pipeline] RSS: {len(rss_articles)} + Firehose new: {len(fh_new)} = {len(articles)} total")
 
     if not articles:
         print("❌ Ei artikkeleita löytynyt. Keskeytetään.")
@@ -91,6 +105,10 @@ def run(quick: bool = False, build_only: bool = False):
     if not articles:
         print("ℹ️  Kaikki artikkelit on jo julkaistu. Ei uusia artikkeleita.")
         return True
+
+    # Step 1c: Fetch source articles for research
+    print(f"\n🔍 Vaihe 1c: Lähdeartikkelien haku ({len(articles)} artikkelia)...")
+    articles = enrich_with_research(articles)
 
     # Step 2: Rewrite with AI
     print(f"\n✍️  Vaihe 2: {len(articles)} artikkelin uudelleenkirjoitus...")
@@ -151,11 +169,16 @@ if __name__ == "__main__":
         action="store_true",
         help="Only run Hugo build (no scanning/rewriting)",
     )
+    parser.add_argument(
+        "--firehose-only",
+        action="store_true",
+        help="Poll Firehose only (skip RSS scan and Hugo build)",
+    )
     args = parser.parse_args()
 
     if args.quick and args.build_only:
         print("❌ Cannot use --quick and --build-only together.")
         sys.exit(1)
 
-    success = run(quick=args.quick, build_only=args.build_only)
+    success = run(quick=args.quick, build_only=args.build_only, firehose_only=args.firehose_only)
     sys.exit(0 if success else 1)
