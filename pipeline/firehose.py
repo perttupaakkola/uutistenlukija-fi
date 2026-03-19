@@ -5,18 +5,20 @@ Runs alongside RSS scanner. Every 10 minutes, fetches articles from the past 20
 minutes via Server-Sent Events. Dedups by normalized URL hash before feeding into
 the rewriter pipeline.
 
-Rules active in Firehose (POST to /v1/rules to register):
-  - finnish-news:      language:"fi" AND page_category:"/News" AND recent:24h
-  - finnish-articles:  language:"fi" AND page_type:"/Article" AND recent:24h
-  - finnish-domains:   Finnish news domains + recent:24h
-  - finnish-tiede:     language:"fi" AND page_category:"/Science" AND recent:48h
-  - finnish-talous:    language:"fi" AND page_category:"/Finance" AND recent:24h
-  - finnish-urheilu:   language:"fi" AND page_category:"/Sports" AND recent:24h
-  - finnish-teknologia: language:"fi" AND page_category:"/Computers_and_Electronics" AND recent:24h
+Rules active in Firehose (5 rules, synced 2026-03-19):
+  - fi-news-clean:      language:fi AND page_category:"/News" AND recent:24h (excl. games/reviews/tutorials/FAQ)
+  - fi-trusted-domains: Finnish news domains + language:fi + /Article + recent:24h
+  - tiede:              language:fi AND page_category:"/Science" AND recent:48h
+  - talous-fallback:    kauppalehti/hs/is/yle domains + language:fi + recent:24h
+  - urheilu-fallback:   yle/is/iltalehti/mtv domains + language:fi + recent:24h
+
+Field note: response payload uses page_category[] (singular, array) and page_types[] (plural, array).
 
 Usage:
-  python3 firehose.py           # Poll once, print results
-  python3 firehose.py --rules   # Print rule registration curl commands
+  python3 firehose.py              # Poll once, print results
+  python3 firehose.py --rules      # Print current rules from API
+  python3 firehose.py --register   # Register/sync rules to API
+  python3 firehose.py --delete-all # Delete all rules from API (use with care)
 """
 
 import hashlib
@@ -35,38 +37,58 @@ FIREHOSE_BASE = "https://api.firehose.com/v1"
 FIREHOSE_TOKEN = "fh_MPdE6AVizFkpIdRiKgL10QJUfoORj2eEZUfXBHtk"
 
 # Rules to register with Firehose (idempotent — tag is unique key)
+# Synced with live API state 2026-03-19. quality:true on all rules.
 FIREHOSE_RULES = [
     {
-        "tag": "finnish-news",
-        "value": 'language:"fi" AND page_category:"/News" AND recent:24h',
-    },
-    {
-        "tag": "finnish-articles",
-        "value": 'language:"fi" AND page_type:"/Article" AND recent:24h',
-    },
-    {
-        "tag": "finnish-domains",
+        "tag": "fi-news-clean",
         "value": (
-            "(url_domain:yle.fi OR url_domain:hs.fi OR url_domain:iltalehti.fi OR "
-            "url_domain:is.fi OR url_domain:kauppalehti.fi OR url_domain:tekniikkatalous.fi OR "
-            "url_domain:ts.fi) AND recent:24h"
+            'language:fi AND page_category:"/News" AND recent:24h'
+            ' AND NOT page_category:"/Games"'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/Tutorial_or_Guide"'
+            ' AND NOT page_type:"/Article/FAQ"'
         ),
+        "quality": True,
     },
     {
-        "tag": "finnish-tiede",
-        "value": 'language:"fi" AND page_category:"/Science" AND recent:48h',
+        "tag": "fi-trusted-domains",
+        "value": (
+            "(domain:yle.fi OR domain:hs.fi OR domain:is.fi OR domain:iltalehti.fi"
+            " OR domain:mtv.fi OR domain:kauppalehti.fi OR domain:verkkouutiset.fi)"
+            ' AND language:fi AND page_type:"/Article" AND recent:24h'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/FAQ"'
+        ),
+        "quality": True,
     },
     {
-        "tag": "finnish-talous",
-        "value": 'language:"fi" AND page_category:"/Finance" AND recent:24h',
+        "tag": "tiede",
+        "value": (
+            'language:fi AND page_category:"/Science" AND recent:48h'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/FAQ"'
+        ),
+        "quality": True,
     },
     {
-        "tag": "finnish-urheilu",
-        "value": 'language:"fi" AND page_category:"/Sports" AND recent:24h',
+        "tag": "talous-fallback",
+        "value": (
+            "(domain:kauppalehti.fi OR domain:hs.fi OR domain:is.fi OR domain:yle.fi)"
+            ' AND language:fi AND page_type:"/Article" AND recent:24h'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/FAQ"'
+        ),
+        "quality": True,
     },
     {
-        "tag": "finnish-teknologia",
-        "value": 'language:"fi" AND page_category:"/Computers_and_Electronics" AND recent:24h',
+        "tag": "urheilu-fallback",
+        "value": (
+            "(domain:yle.fi OR domain:is.fi OR domain:iltalehti.fi OR domain:mtv.fi)"
+            ' AND language:fi AND page_type:"/Article" AND recent:24h'
+            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
+            ' AND NOT page_type:"/Article/FAQ"'
+        ),
+        "quality": True,
     },
 ]
 
@@ -93,6 +115,11 @@ _CATEGORY_MAP = {
 }
 
 _TAG_CATEGORY_MAP = {
+    # New tag names (2026-03-19 API sync)
+    "tiede": "Tiede",
+    "talous-fallback": "Talous",
+    "urheilu-fallback": "Urheilu",
+    # Legacy tag names (kept for backward compat with old state files)
     "finnish-tiede": "Tiede",
     "finnish-talous": "Talous",
     "finnish-urheilu": "Urheilu",
@@ -358,14 +385,19 @@ def _parse_firehose_doc(doc: Dict, event: Dict) -> Optional[Dict]:
     if not pub_date:
         pub_date = datetime.now(timezone.utc).isoformat()
 
-    # Determine category hint from Firehose metadata
-    # Response payload uses plural arrays; query syntax uses singular (correct as-is)
-    _raw_cats = doc.get("page_categories") or doc.get("page_category") or []
-    page_category = (
-        (_raw_cats[0] if isinstance(_raw_cats, list) and _raw_cats else _raw_cats)
-        or doc.get("category")
-        or ""
-    )
+    # Determine category hint from Firehose metadata.
+    # Field name quirk: response uses page_category[] (singular key, array value)
+    # and page_types[] (plural key, array value). Both must be handled.
+    _raw_cats = doc.get("page_category") or doc.get("page_categories") or []
+    if not isinstance(_raw_cats, list):
+        _raw_cats = [_raw_cats] if _raw_cats else []
+    page_category = _raw_cats[0] if _raw_cats else ""
+
+    _raw_types = doc.get("page_types") or doc.get("page_type") or []
+    if not isinstance(_raw_types, list):
+        _raw_types = [_raw_types] if _raw_types else []
+    # page_types used for filtering only — not mapped to categories currently
+
     matched_tag = doc.get("matched_rule_tag") or doc.get("tag") or event.get("event") or ""
 
     category_hint = (
@@ -395,15 +427,49 @@ def _parse_firehose_doc(doc: Dict, event: Dict) -> Optional[Dict]:
 
 # ─── Entry point ─────────────────────────────────────────────────────────────
 
+def delete_rule(rule_id: str) -> bool:
+    """Delete a rule by ID. Returns True on success."""
+    req = urllib.request.Request(
+        f"{FIREHOSE_BASE}/rules/{rule_id}",
+        headers={
+            "Authorization": f"Bearer {FIREHOSE_TOKEN}",
+            "Accept": "application/json",
+        },
+        method="DELETE",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            print(f"[firehose] Deleted rule {rule_id}: HTTP {resp.status}")
+            return True
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"[firehose] Failed to delete {rule_id}: HTTP {e.code} — {body}")
+        return False
+    except Exception as e:
+        print(f"[firehose] Failed to delete {rule_id}: {e}")
+        return False
+
+
 if __name__ == "__main__":
     if "--rules" in sys.argv:
-        print("=== Firehose rule registration ===")
-        register_rules(dry_run=True)
+        print("=== Current Firehose rules (from API) ===")
+        rules = list_rules()
+        print(json.dumps(rules, indent=2))
         sys.exit(0)
 
     if "--register" in sys.argv:
         print("=== Registering Firehose rules ===")
         register_rules(dry_run=False)
+        sys.exit(0)
+
+    if "--delete-all" in sys.argv:
+        print("=== Deleting all Firehose rules ===")
+        rules = list_rules()
+        rule_list = rules.get("data", rules) if isinstance(rules, dict) else rules
+        for r in rule_list:
+            if isinstance(r, dict) and r.get("id"):
+                delete_rule(r["id"])
+                time.sleep(0.3)
         sys.exit(0)
 
     articles = poll_firehose()
