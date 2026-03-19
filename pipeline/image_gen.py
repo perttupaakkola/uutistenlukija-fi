@@ -1,6 +1,8 @@
 """
-Article Image Generator — generates editorial header images via Kie.ai Z-Image API.
-Cost: ~$0.004/image (10x cheaper than Nano Banana 2).
+Article Image Generator — generates editorial header images via Kie.ai API.
+
+Uses nano-banana-2 (Gemini 3.1 Flash Image) — fast, ~$0.04/image.
+Includes circuit breaker: if 2 consecutive failures, skips remaining images.
 """
 import os
 import json
@@ -9,9 +11,12 @@ import urllib.request
 import urllib.error
 from typing import List, Dict, Optional
 
-KIE_API_KEY = os.environ.get("KIE_API_KEY", "")
+KIE_API_KEY = os.environ.get("KIE_API_KEY", "bccd653c94693baab42985f14ec4a9dd")
 KIE_BASE_URL = "https://api.kie.ai"
 IMAGE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "images", "articles")
+MAX_CONSECUTIVE_FAILURES = 2  # Circuit breaker: skip rest after N consecutive failures
+POLL_INTERVAL_SEC = 5
+POLL_MAX_WAIT_SEC = 120  # 2 min max per image (was 5 min)
 
 
 def _kie_request(endpoint: str, data: dict) -> dict:
@@ -44,7 +49,7 @@ def _kie_get(endpoint: str, params: dict = None) -> dict:
         return json.loads(resp.read())
 
 
-def _poll_task(task_id: str, max_wait: int = 300) -> Optional[str]:
+def _poll_task(task_id: str, max_wait: int = POLL_MAX_WAIT_SEC) -> Optional[str]:
     """Poll for task completion, return image URL or None."""
     start = time.time()
     while time.time() - start < max_wait:
@@ -60,7 +65,7 @@ def _poll_task(task_id: str, max_wait: int = 300) -> Optional[str]:
                 return None
         except Exception as e:
             print(f"[image_gen] Poll error: {e}")
-        time.sleep(5)
+        time.sleep(POLL_INTERVAL_SEC)
     print(f"[image_gen] Task {task_id} timed out after {max_wait}s")
     return None
 
@@ -93,10 +98,12 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
 
     try:
         result = _kie_request("/api/v1/jobs/createTask", {
-            "model": "z-image",
+            "model": "nano-banana-2",
             "input": {
                 "prompt": prompt,
-                "aspect_ratio": "16:9"
+                "aspect_ratio": "16:9",
+                "resolution": "1K",
+                "output_format": "jpg"
             }
         })
 
@@ -111,9 +118,15 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
         if not image_url:
             return None
 
-        # Download
-        urllib.request.urlretrieve(image_url, filepath)
-        size = os.path.getsize(filepath)
+        # Download with proper headers (avoid 403 from naked urlretrieve)
+        dl_req = urllib.request.Request(image_url, headers={
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
+        })
+        with urllib.request.urlopen(dl_req, timeout=30) as resp:
+            img_data = resp.read()
+        with open(filepath, "wb") as f:
+            f.write(img_data)
+        size = len(img_data)
         print(f"[image_gen] Downloaded {slug}.jpg ({size} bytes)")
         return webpath
 
@@ -123,11 +136,24 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
 
 
 def generate_images_for_articles(articles: List[Dict]) -> List[Dict]:
-    """Generate header images for a list of articles. Adds 'image' field."""
+    """Generate header images for a list of articles. Adds 'image' field.
+    
+    Circuit breaker: if MAX_CONSECUTIVE_FAILURES consecutive images fail,
+    skip remaining to avoid wasting minutes on a broken API.
+    """
     if not KIE_API_KEY:
         print("[image_gen] No KIE_API_KEY set, skipping image generation")
         return articles
+
+    consecutive_failures = 0
+
     for i, article in enumerate(articles):
+        # Circuit breaker
+        if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+            remaining = len(articles) - i
+            print(f"[image_gen] Circuit breaker: {consecutive_failures} consecutive failures, skipping {remaining} remaining articles")
+            break
+
         title = article.get("title", "")
         category = article.get("category", "")
         # Create slug from title
@@ -143,6 +169,9 @@ def generate_images_for_articles(articles: List[Dict]) -> List[Dict]:
         image_path = generate_article_image(title, category, slug)
         if image_path:
             article["image"] = image_path
+            consecutive_failures = 0  # Reset on success
+        else:
+            consecutive_failures += 1
 
         # Rate limit: 2 second sleep between requests (skip after last)
         if i < len(articles) - 1:

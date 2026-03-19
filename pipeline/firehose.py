@@ -202,7 +202,10 @@ def list_rules() -> List[Dict]:
 def register_rules(dry_run: bool = False) -> None:
     """Register all configured rules with Firehose (idempotent by tag)."""
     existing = list_rules()
-    existing_tags = {r.get("tag") for r in existing}
+    # existing may be a list of rule dicts, or empty/error
+    if not isinstance(existing, list):
+        existing = []
+    existing_tags = {r.get("tag") for r in existing if isinstance(r, dict)}
 
     for rule in FIREHOSE_RULES:
         tag = rule["tag"]
@@ -349,7 +352,13 @@ def _parse_firehose_doc(doc: Dict, event: Dict) -> Optional[Dict]:
         pub_date = datetime.now(timezone.utc).isoformat()
 
     # Determine category hint from Firehose metadata
-    page_category = doc.get("page_category") or doc.get("category") or ""
+    # Response payload uses plural arrays; query syntax uses singular (correct as-is)
+    _raw_cats = doc.get("page_categories") or doc.get("page_category") or []
+    page_category = (
+        (_raw_cats[0] if isinstance(_raw_cats, list) else _raw_cats)
+        or doc.get("category")
+        or ""
+    )
     matched_tag = doc.get("matched_rule_tag") or doc.get("tag") or event.get("event") or ""
 
     category_hint = (
