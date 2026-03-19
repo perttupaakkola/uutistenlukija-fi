@@ -1,7 +1,99 @@
 {{ define "main" }}
-<div style="text-align: center; padding: 4rem 1rem;">
-  <h1 style="font-size: 4rem; margin-bottom: 1rem;">404</h1>
-  <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">Sivua ei löytynyt</p>
-  <a href="/" style="color: var(--accent); font-family: var(--font-sans); font-weight: 600;">← Takaisin etusivulle</a>
+<div class="page-404">
+
+  <div class="error-hero">
+    <span class="error-code" aria-hidden="true">404</span>
+    <h1 class="error-title">Sivua ei löytynyt</h1>
+    <p class="error-lead">Etsimäsi sivu on poistettu, siirretty tai osoite on kirjoitettu väärin. Löydät varmasti kiinnostavaa luettavaa alta.</p>
+  </div>
+
+  {{/* Search bar */}}
+  <div class="error-search">
+    <form action="/haku/" method="get" class="search-form-404" role="search" aria-label="Hae artikkeleita">
+      <label for="search-404" class="visually-hidden">Hae artikkeleita</label>
+      <input
+        id="search-404"
+        type="search"
+        name="q"
+        placeholder="Hae artikkeleita…"
+        class="search-input-404"
+        autocomplete="off"
+        autofocus
+      >
+      <button type="submit" class="search-btn-404" aria-label="Hae">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </form>
+  </div>
+
+  {{/* Category pills */}}
+  <div class="error-categories">
+    <h2 class="error-section-title">Selaa aiheittain</h2>
+    <div class="category-pills">
+      {{ $cats := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
+      {{ range $cats }}
+      <a href="/categories/{{ . | urlize }}/" class="category-pill cat-{{ . | lower }}">{{ . }}</a>
+      {{ end }}
+    </div>
+  </div>
+
+  {{/* Recent articles */}}
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $recent := $posts.ByDate.Reverse | first 6 }}
+  {{ if $recent }}
+  <div class="error-recent">
+    <h2 class="error-section-title">Tuoreimmat uutiset</h2>
+    <div class="recent-articles-grid">
+      {{ range $recent }}
+      {{ $cat := .Params.categories | first | default "kotimaa" }}
+      {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+      <article class="recent-article-card">
+        <a href="{{ .Permalink }}" class="recent-card-link">
+          <div class="recent-card-thumb-wrapper">
+            <img
+              src="{{ $img }}"
+              alt="{{ .Params.image_alt | default .Title }}"
+              class="recent-card-thumb"
+              loading="lazy"
+              width="300" height="169"
+              onerror="this.onerror=null;this.src='/images/categories/{{ $cat | lower }}.jpg'"
+            >
+          </div>
+          <div class="recent-card-body">
+            {{ with .Params.categories }}<span class="category-label small">{{ index . 0 }}</span>{{ end }}
+            <h3 class="recent-card-title">{{ .Title }}</h3>
+            <div class="recent-card-meta">{{ .Date | time.Format "2.1.2006" }}</div>
+          </div>
+        </a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* Newsletter CTA */}}
+  <div class="error-newsletter">
+    <div class="newsletter-card">
+      <h2 class="newsletter-title">Tilaa uutiskirje</h2>
+      <p class="newsletter-desc">Saat tärkeimmät uutiset suoraan sähköpostiisi — kerran päivässä, ei roskapostia.</p>
+      <form class="newsletter-form-404" action="/uutiskirje/" method="get">
+        <label for="email-404" class="visually-hidden">Sähköpostiosoite</label>
+        <input
+          id="email-404"
+          type="email"
+          name="email"
+          placeholder="sinun@sposti.fi"
+          class="newsletter-input-404"
+          autocomplete="email"
+        >
+        <button type="submit" class="newsletter-btn-404">Tilaa</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="error-back">
+    <a href="/" class="back-home-link">← Takaisin etusivulle</a>
+  </div>
+
 </div>
 {{ end }}
