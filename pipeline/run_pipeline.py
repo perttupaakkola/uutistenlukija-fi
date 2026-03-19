@@ -21,7 +21,7 @@ from firehose import poll_firehose
 from research import enrich_with_research
 from rewriter import rewrite_articles
 from publisher import publish_articles, build_site
-from dedup import filter_new_articles, mark_published
+from dedup import filter_new_articles, check_published_duplicates, mark_published
 from image_gen import generate_images_for_articles
 
 
@@ -104,6 +104,12 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     articles = filter_new_articles(articles)
     if not articles:
         print("ℹ️  Kaikki artikkelit on jo julkaistu. Ei uusia artikkeleita.")
+        return True
+
+    # Step 1b-2: Check against already-published titles (semantic similarity)
+    articles = check_published_duplicates(articles)
+    if not articles:
+        print("ℹ️  Kaikki artikkelit vastaavat jo julkaistuja artikkeleita. Ei uusia.")
         return True
 
     # Step 1c: Fetch source articles for research
