@@ -8,6 +8,7 @@ Two-pass system: write + anti-AI audit pass.
 import os
 import json
 import sys
+import time
 from typing import List, Dict
 from pathlib import Path
 
@@ -77,28 +78,61 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
 
+_RETRY_ATTEMPTS = 3
+_RETRY_BASE_DELAY = 2  # seconds; doubles each attempt (2s, 4s, 8s)
+
+# HTTP status codes worth retrying (transient)
+_RETRYABLE_HTTP = {429, 500, 502, 503, 504}
+
+
 def _call_llm(system: str, prompt: str) -> str:
-    """Call the LLM via Anthropic SDK or transport bridge."""
+    """Call the LLM with exponential backoff retry (3 attempts).
+
+    Retries on: 429, 5xx, timeout, connection errors.
+    Hard-fails on: 400, 401, 403 (bad request / auth — won't fix on retry).
+    """
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     use_sdk = HAVE_ANTHROPIC_SDK and api_key
 
-    if use_sdk:
-        client = anthropic.Anthropic(api_key=api_key)
-        response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=4096,
-            system=system,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        return response.content[0].text.strip()
-    else:
-        print("[writer]   Using Claude Code bridge...")
-        return complete_with_claude(
-            system_prompt=system,
-            messages=[{"role": "user", "content": prompt}],
-            cwd=Path(__file__).parent.parent,
-            require_json=True,
-        )
+    last_exc = None
+    for attempt in range(1, _RETRY_ATTEMPTS + 1):
+        try:
+            if use_sdk:
+                client = anthropic.Anthropic(api_key=api_key)
+                response = client.messages.create(
+                    model="claude-sonnet-4-20250514",
+                    max_tokens=4096,
+                    system=system,
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                return response.content[0].text.strip()
+            else:
+                print("[writer]   Using Claude Code bridge...")
+                return complete_with_claude(
+                    system_prompt=system,
+                    messages=[{"role": "user", "content": prompt}],
+                    cwd=Path(__file__).parent.parent,
+                    require_json=True,
+                )
+
+        except Exception as e:
+            last_exc = e
+            # Check if retryable
+            status = getattr(e, "status_code", None)
+            if status is not None and status not in _RETRYABLE_HTTP:
+                # Hard error — no point retrying
+                print(f"[writer]   LLM call failed (HTTP {status}, non-retryable): {e}")
+                raise
+
+            if attempt < _RETRY_ATTEMPTS:
+                delay = _RETRY_BASE_DELAY * (2 ** (attempt - 1))
+                print(f"[writer]   LLM call failed (attempt {attempt}/{_RETRY_ATTEMPTS}): {e}")
+                print(f"[writer]   Retrying in {delay}s...")
+                time.sleep(delay)
+            else:
+                print(f"[writer]   LLM call failed after {_RETRY_ATTEMPTS} attempts: {e}")
+
+    raise last_exc
 
 
 def _extract_json(text: str) -> list:
@@ -184,44 +218,47 @@ Vastaa JSON-listana:
 
 Vastaa VAIN JSON-listalla."""
 
+        pass1_result = None
         try:
             # Pass 1: Write
             response_text = _call_llm(SYSTEM_PROMPT, prompt)
-            parsed = _extract_json(response_text)
-            print(f"[writer]   Pass 1 → {len(parsed)} articles written")
+            pass1_result = _extract_json(response_text)
+            print(f"[writer]   Pass 1 → {len(pass1_result)} articles written")
+        except json.JSONDecodeError as e:
+            print(f"[writer] Pass 1 JSON parse error (batch {i // batch_size + 1}): {e}")
+            print(f"[writer]   Skipping batch — no parseable output")
+            continue
+        except Exception as e:
+            print(f"[writer] Pass 1 failed after retries (batch {i // batch_size + 1}): {e}")
+            import traceback
+            traceback.print_exc()
+            print(f"[writer]   Skipping batch")
+            continue
 
+        try:
             # Pass 2: Anti-AI audit
             audit_prompt = f"""Tarkista ja korjaa seuraavat uutisartikkelit.
 
-{json.dumps(parsed, indent=2, ensure_ascii=False)}
+{json.dumps(pass1_result, indent=2, ensure_ascii=False)}
 
 Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
             audit_response = _call_llm(AUDIT_SYSTEM_PROMPT, audit_prompt)
             audited = _extract_json(audit_response)
             print(f"[writer]   Pass 2 (audit) → {len(audited)} articles cleaned")
-
-            # Carry through metadata from input
-            for j, written_article in enumerate(audited):
-                if j < len(batch):
-                    written_article["fingerprint"] = batch[j].get("fingerprint", "")
-                    written_article["trending"] = batch[j].get("trending", False)
-                    # Do NOT carry source_name or source_url to output
-
-            rewritten.extend(audited)
-
-        except json.JSONDecodeError as e:
-            print(f"[writer] JSON parse error: {e}")
-            if 'parsed' in locals():
-                for j, written_article in enumerate(parsed):
-                    if j < len(batch):
-                        written_article["fingerprint"] = batch[j].get("fingerprint", "")
-                        written_article["trending"] = batch[j].get("trending", False)
-                rewritten.extend(parsed)
-                print(f"[writer]   Using pass 1 results (audit parse failed)")
         except Exception as e:
-            print(f"[writer] Error: {e}")
-            import traceback
-            traceback.print_exc()
+            # Audit failure is non-fatal — fall back to pass 1 results
+            print(f"[writer]   Pass 2 (audit) failed: {e} — using pass 1 results")
+            audited = pass1_result
+
+        # Carry through metadata from input
+        for j, written_article in enumerate(audited):
+            if j < len(batch):
+                written_article["fingerprint"] = batch[j].get("fingerprint", "")
+                written_article["trending"] = batch[j].get("trending", False)
+                # Do NOT carry source_name or source_url to output
+
+        rewritten.extend(audited)
+        print(f"[writer]   Batch {i // batch_size + 1} complete: {len(audited)} articles")
 
     return rewritten
