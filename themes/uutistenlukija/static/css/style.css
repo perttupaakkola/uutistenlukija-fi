@@ -1016,3 +1016,178 @@ pre code {
   blockquote { padding: 0.5rem 1rem; }
   pre { padding: 0.75rem 1rem; }
 }
+
+/* ============================================================
+   HERO IMAGE — Sara's spec 2026-03-19
+   Full-width 16:9 above the article title, attribution below
+   ============================================================ */
+
+.article-hero {
+  margin: 0 0 1.75rem 0;
+  padding: 0;
+  width: 100%;
+}
+
+.article-hero-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--border);   /* placeholder colour while loading */
+}
+
+/* Shimmer skeleton — shows while image loads */
+.article-hero-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--border) 25%,
+    color-mix(in srgb, var(--bg) 60%, var(--border) 40%) 50%,
+    var(--border) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.article-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.article-hero-img.loaded,
+.article-hero-img[complete] {
+  opacity: 1;
+}
+
+/* JS-free fallback: make image visible once browser paints it */
+.article-hero-img:not([src=""]) {
+  opacity: 1;
+}
+
+.article-hero-caption {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: 0.35rem;
+  line-height: 1.4;
+}
+
+.article-hero-caption a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-hero-caption a:hover {
+  color: var(--accent);
+}
+
+/* ============================================================
+   CARD THUMBNAILS — 16:9 shimmer skeleton
+   ============================================================ */
+
+.card-thumb-link {
+  display: block;
+  text-decoration: none;
+}
+
+.card-thumb-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--border);
+  margin-bottom: 0.75rem;
+}
+
+.card-thumb-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--border) 25%,
+    color-mix(in srgb, var(--bg) 60%, var(--border) 40%) 50%,
+    var(--border) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.article-card-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 1;
+  /* Make visible immediately — fallback for no-JS */
+  opacity: 1;
+}
+
+/* ============================================================
+   FALLBACK GRADIENTS — category colour swatches
+   Used if placeholder .jpg fails to load (onerror handler)
+   ============================================================ */
+
+.article-hero-wrapper[data-cat="kotimaa"]   { background: #3498db; }
+.article-hero-wrapper[data-cat="ulkomaat"]  { background: #e74c3c; }
+.article-hero-wrapper[data-cat="talous"]    { background: #f39c12; }
+.article-hero-wrapper[data-cat="teknologia"]{ background: #8e44ad; }
+.article-hero-wrapper[data-cat="urheilu"]   { background: #27ae60; }
+.article-hero-wrapper[data-cat="kulttuuri"] { background: #d35400; }
+.article-hero-wrapper[data-cat="tiede"]     { background: #16a085; }
+
+/* ============================================================
+   DARK MODE overrides for hero/card backgrounds
+   ============================================================ */
+
+@media (prefers-color-scheme: dark) {
+  .article-hero-wrapper,
+  .card-thumb-wrapper {
+    background: #1e1e1e;
+  }
+
+  .article-hero-caption,
+  .article-hero-caption a {
+    color: #888;
+  }
+}
+
+/* ============================================================
+   MOBILE HERO — full viewport width, 16:9 maintained (≤600px)
+   ============================================================ */
+
+@media (max-width: 600px) {
+  .article-hero {
+    margin-left: calc(-1 * var(--content-pad, 1rem));
+    margin-right: calc(-1 * var(--content-pad, 1rem));
+    border-radius: 0;
+  }
+
+  .article-hero-wrapper {
+    border-radius: 0;
+  }
+
+  .card-thumb-wrapper {
+    border-radius: 4px;
+  }
+}

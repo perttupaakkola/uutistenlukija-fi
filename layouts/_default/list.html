@@ -5,12 +5,15 @@
 </div>
 <div class="articles-grid">
   {{ range .Pages.ByDate.Reverse }}
-  {{ $cat := index .Params.categories 0 | default "kotimaa" }}
-  {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
+  {{ $cat := .Params.categories | first | default "kotimaa" }}
+  {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="article-card">
-    <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-      <img src="{{ $img }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" width="400" height="225">
+    <a href="{{ .Permalink }}" class="article-image-link card-thumb-link" tabindex="-1" aria-hidden="true">
+      <div class="card-thumb-wrapper">
+        <img src="{{ $img }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" width="400" height="225"
+          onerror="this.onerror=null;this.src='/images/categories/{{ $cat | lower }}.jpg'">
+      </div>
     </a>
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>

@@ -1,32 +1,13 @@
 {{ define "main" }}
 <div class="reading-progress" id="reading-progress"></div>
 <article class="single-article">
+  {{ partial "hero-image.html" . }}
   {{ with .Params.categories }}
   <span class="category-label">
     <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
   </span>
   {{ end }}
   <h1>{{ .Title }}</h1>
-  {{ $heroImage := .Params.image }}
-  {{ if not $heroImage }}{{ $heroImage = printf "/images/categories/%s.jpg" (index .Params.categories 0 | lower | default "kotimaa") }}{{ end }}
-  <figure class="article-hero-figure">
-    <img
-      src="{{ $heroImage }}"
-      alt="{{ if .Params.image_alt }}{{ .Params.image_alt }}{{ else }}{{ .Title }}{{ end }}"
-      class="article-header-image"
-      loading="eager"
-      width="1200" height="675"
-    >
-    {{ if or .Params.image_caption .Params.image_credit }}
-    <figcaption class="image-caption">
-      {{ with .Params.image_caption }}{{ . }}{{ end }}
-      {{ if and .Params.image_caption .Params.image_credit }} — {{ end }}
-      {{ with .Params.image_credit }}
-        {{ if $.Params.image_source_url }}<a href="{{ $.Params.image_source_url }}" target="_blank" rel="noopener nofollow">{{ . }}</a>{{ else }}{{ . }}{{ end }}
-      {{ end }}
-    </figcaption>
-    {{ end }}
-  </figure>
   <div class="article-meta">
     {{ .Date | time.Format "2.1.2006 klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}

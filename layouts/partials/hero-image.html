@@ -1,0 +1,59 @@
+{{/*
+  hero-image.html — Article hero image partial
+  
+  Sara's spec (2026-03-19):
+  - Hero sits ABOVE the article title, full-width, 16:9 ratio
+  - Max display width: 100% of content column (~800px)
+  - Mobile (≤600px): full viewport width, 16:9 maintained
+  - Attribution caption below: "Photo by X on Pexels/Unsplash"
+  - Fallback to category placeholder JPG (no broken image states)
+  - Supports both hotlinked (Unsplash) and local (Pexels) images transparently
+  
+  Usage: {{ partial "hero-image.html" . }}
+  Context: Hugo page (.Params.image, .Params.image_alt, .Params.image_credit,
+           .Params.image_source_url, .Params.image_caption, .Params.categories)
+*/}}
+
+{{/* Resolve image URL — fallback to category placeholder */}}
+{{ $img := .Params.image }}
+{{ if not $img }}
+  {{ $cat := .Params.categories | first | lower | default "kotimaa" }}
+  {{ $img = printf "/images/categories/%s.jpg" $cat }}
+{{ end }}
+
+{{/* Alt text */}}
+{{ $alt := .Params.image_alt | default .Title }}
+
+{{/* Build caption/credit line */}}
+{{ $hasCredit := and .Params.image_credit (ne .Params.image_credit "") }}
+{{ $hasCaption := and .Params.image_caption (ne .Params.image_caption "") }}
+{{ $hasSourceUrl := and .Params.image_source_url (ne .Params.image_source_url "") }}
+
+<figure class="article-hero">
+  <div class="article-hero-wrapper">
+    <img
+      src="{{ $img }}"
+      alt="{{ $alt }}"
+      class="article-hero-img"
+      loading="eager"
+      width="1200"
+      height="675"
+      onerror="this.onerror=null;this.src='/images/categories/{{ .Params.categories | first | lower | default "kotimaa" }}.jpg'"
+    >
+  </div>
+  {{ if or $hasCaption $hasCredit }}
+  <figcaption class="article-hero-caption">
+    {{ if $hasCaption }}<span class="caption-text">{{ .Params.image_caption }}</span>{{ end }}
+    {{ if and $hasCaption $hasCredit }} — {{ end }}
+    {{ if $hasCredit }}
+      <span class="caption-credit">
+        {{ if $hasSourceUrl }}
+          <a href="{{ .Params.image_source_url }}" target="_blank" rel="noopener nofollow">{{ .Params.image_credit }}</a>
+        {{ else }}
+          {{ .Params.image_credit }}
+        {{ end }}
+      </span>
+    {{ end }}
+  </figcaption>
+  {{ end }}
+</figure>

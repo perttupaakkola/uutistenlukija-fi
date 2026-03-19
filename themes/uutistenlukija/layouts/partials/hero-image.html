@@ -1,19 +1,10 @@
 {{/*
   hero-image.html — Article hero image partial
   Usage: {{ partial "hero-image.html" . }}
-
-  Reads from page params:
-    .Params.image          — full image URL (from Unsplash or AI gen)
-    .Params.image_alt      — alt text (falls back to .Title)
-    .Params.image_caption  — optional caption text
-    .Params.image_credit   — photographer/source credit text
-    .Params.image_source_url — link for credit (Unsplash attribution)
-
-  Fallback: /images/categories/{category}.jpg
 */}}
 {{ $heroImage := .Params.image }}
 {{ if not $heroImage }}
-  {{ $cat := .Params.categories | first | lower | default "kotimaa" }}
+  {{ $cat := index .Params.categories 0 | lower | default "kotimaa" }}
   {{ $heroImage = printf "/images/categories/%s.jpg" $cat }}
 {{ end }}
 {{ $alt := .Params.image_alt | default .Title }}

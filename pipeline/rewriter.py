@@ -5,7 +5,7 @@ Pipeline: RSS headline → web research → multi-source synthesis → original 
 Two-pass system: write + anti-AI audit pass.
 
 Requires OPENAI_API_KEY environment variable.
-Switched from Anthropic to OpenAI (2026-03-19).
+Uses OpenAI API (gpt-4o-mini). No Anthropic dependency.
 """
 
 import os
@@ -108,7 +108,7 @@ def _get_client() -> "OpenAI":
 
 
 def _call_llm(system: str, prompt: str) -> str:
-    """Call OpenAI GPT-4o-mini with exponential backoff retry (3 attempts).
+    """Call OpenAI gpt-4o-mini with exponential backoff retry (3 attempts).
 
     Retries on: 429, 5xx, timeout, connection errors.
     Hard-fails on: 400, 401, 403 (bad request / auth — won't fix on retry).
@@ -124,7 +124,6 @@ def _call_llm(system: str, prompt: str) -> str:
                     {"role": "system", "content": system},
                     {"role": "user", "content": prompt},
                 ],
-                temperature=0.7,
             )
             return response.choices[0].message.content.strip()
 

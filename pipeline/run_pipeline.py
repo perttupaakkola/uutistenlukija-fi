@@ -189,14 +189,14 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     except Exception as e:
         print(f"[images] Kuvien haku epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
 
-    # Step 2c: Generate meta descriptions
-    api_key = os.environ.get("OPENAI_API_KEY", "")
-    if api_key:
+    # Step 2c: Generate meta descriptions (uses OPENAI_API_KEY via generate_descriptions module)
+    openai_key = os.environ.get("OPENAI_API_KEY", "")
+    if openai_key:
         print(f"\n📋 Vaihe 2c: Meta-kuvausten generointi...")
         desc_count = 0
         for article in rewritten:
             if not article.get("description"):
-                desc = generate_for_article_dict(article, api_key)
+                desc = generate_for_article_dict(article)
                 if desc:
                     article["description"] = desc
                     desc_count += 1
