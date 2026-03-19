@@ -3,6 +3,9 @@ Article Writer — transforms RSS leads into original journalism.
 
 Pipeline: RSS headline → web research → multi-source synthesis → original article.
 Two-pass system: write + anti-AI audit pass.
+
+Requires ANTHROPIC_API_KEY environment variable.
+OpenRouter / claude_transport bridge removed (2026-03-19).
 """
 
 import os
@@ -12,20 +15,7 @@ import time
 from typing import List, Dict
 from pathlib import Path
 
-# Try to import anthropic, but fallback to claude_transport if not available
-try:
-    import anthropic
-    HAVE_ANTHROPIC_SDK = True
-except ImportError:
-    HAVE_ANTHROPIC_SDK = False
-
-# Add parent paths for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "autopoetry"))
-
-try:
-    from claude_transport import complete_with_claude, parse_json_object
-except ImportError:
-    pass
+import anthropic
 
 CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
 
@@ -38,7 +28,14 @@ TÄRKEÄÄ:
 - Tämä on SINUN artikkelisi. Älä viittaa "alkuperäiseen uutiseen" tai "raportin mukaan" (paitsi jos tiedät raportin nimen).
 - Poikkeus KANSAINVÄLISET LÄHTEET: jos artikkeli on englanninkielisestä lähteestä (BBC, Reuters, AP, The Guardian, Ars Technica, TechCrunch, Der Spiegel jne.), mainitse lähde luonnollisesti kerran — esim. "BBC:n mukaan", "The Guardianin mukaan", "Ars Technica raportoi". Ei enempää.
 - Muille artikkeleille: älä mainitse lähdettä ollenkaan.
-- Kirjoita 3-5 kappaletta, VÄHINTÄÄN 200 sanaa, tavoite 280-380 sanaa. Lyhyempi kuin 180 sanaa on liian lyhyt.
+- Kirjoita 4-6 kappaletta, 250-450 sanaa.
+
+RAKENNE JA OTSIKOT:
+- Käytä H2-väliotsikoita (## Otsikko) jakamaan artikkeli loogisiin osiin.
+- Lyhyissä artikkeleissa (alle 300 sanaa): EI väliotsikoita — suora kertomus.
+- Pidemmissä artikkeleissa (300+ sanaa): 1-2 H2-väliotsikkoa jäsentämään sisältöä.
+- Väliotsikot ovat informatiivisia, eivät klikkiotsikoita: "Mitä tapahtui seuraavaksi" → "Tilanne kehittyi nopeasti".
+- Vain ensimmäinen sana isolla väliotsikoissa.
 
 KIRJOITUSTYYLI:
 - Aloita suoraan asiasta.
@@ -46,7 +43,7 @@ KIRJOITUSTYYLI:
 - Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.
 - Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.
 - Vältä passiivia kun aktiivi toimii.
-- Ei emojeja, lihavointia tai otsikkolistoja.
+- Ei emojeja tai otsikkolistoja.
 - Ei ajatusviivoja (—) liiallisesti.
 - Suomeksi vain ensimmäinen sana isolla otsikoissa.
 - Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").
@@ -74,7 +71,8 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 7. Chatbot-artefaktit
 8. Täytesanat ja varautumiset
 9. TARKISTA KIELI: artikkelin täytyy olla suomea. Jos jokin lause on englanniksi, käännä se.
-10. PITUUS: jos artikkeli on alle 180 sanaa, laajenna sitä lisäämällä kontekstia, taustaa tai seurauksia — älä toista samaa. Tavoite 250-350 sanaa.
+10. TARKISTA RAKENNE: pidemmissä artikkeleissa (300+ sanaa) tulee olla 1-2 H2-väliotsikkoa (## Otsikko).
+    Lyhyissä (alle 300 sanaa) ei väliotsikoita. Lisää tai poista tarvittaessa.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -85,43 +83,42 @@ _RETRY_BASE_DELAY = 2  # seconds; doubles each attempt (2s, 4s, 8s)
 # HTTP status codes worth retrying (transient)
 _RETRYABLE_HTTP = {429, 500, 502, 503, 504}
 
+# Reuse a single client instance per process
+_anthropic_client: "anthropic.Anthropic | None" = None
+
+
+def _get_client() -> "anthropic.Anthropic":
+    global _anthropic_client
+    if _anthropic_client is None:
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            raise RuntimeError("ANTHROPIC_API_KEY is not set")
+        _anthropic_client = anthropic.Anthropic(api_key=api_key)
+    return _anthropic_client
+
 
 def _call_llm(system: str, prompt: str) -> str:
-    """Call the LLM with exponential backoff retry (3 attempts).
+    """Call Anthropic Claude with exponential backoff retry (3 attempts).
 
     Retries on: 429, 5xx, timeout, connection errors.
     Hard-fails on: 400, 401, 403 (bad request / auth — won't fix on retry).
     """
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    use_sdk = HAVE_ANTHROPIC_SDK and api_key
-
     last_exc = None
     for attempt in range(1, _RETRY_ATTEMPTS + 1):
         try:
-            if use_sdk:
-                client = anthropic.Anthropic(api_key=api_key)
-                response = client.messages.create(
-                    model="claude-sonnet-4-20250514",
-                    max_tokens=4096,
-                    system=system,
-                    messages=[{"role": "user", "content": prompt}],
-                )
-                return response.content[0].text.strip()
-            else:
-                print("[writer]   Using Claude Code bridge...")
-                return complete_with_claude(
-                    system_prompt=system,
-                    messages=[{"role": "user", "content": prompt}],
-                    cwd=Path(__file__).parent.parent,
-                    require_json=True,
-                )
+            client = _get_client()
+            response = client.messages.create(
+                model="claude-sonnet-4-20250514",
+                max_tokens=4096,
+                system=system,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return response.content[0].text.strip()
 
         except Exception as e:
             last_exc = e
-            # Check if retryable
             status = getattr(e, "status_code", None)
             if status is not None and status not in _RETRYABLE_HTTP:
-                # Hard error — no point retrying
                 print(f"[writer]   LLM call failed (HTTP {status}, non-retryable): {e}")
                 raise
 
@@ -211,7 +208,7 @@ Vastaa JSON-listana:
 [
   {{
     "title": "Uutisen otsikko",
-    "content": "3-5 kappaletta, 200-380 sanaa. Vähintään 180 sanaa vaaditaan. Kappaleet erotetaan kahdella rivinvaihdolla.",
+    "content": "4-6 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla (\\n\\n). Pidemmissä artikkeleissa (300+ sanaa) käytä 1-2 H2-väliotsikkoa muodossa '## Otsikko' omalla rivillään. Lyhyissä (alle 300 sanaa) ei väliotsikoita.",
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "original_title": "Alkuperäinen otsikko RSS:stä"
   }}
@@ -225,11 +222,6 @@ Vastaa VAIN JSON-listalla."""
             response_text = _call_llm(SYSTEM_PROMPT, prompt)
             pass1_result = _extract_json(response_text)
             print(f"[writer]   Pass 1 → {len(pass1_result)} articles written")
-            # Word count check — flag articles under target
-            for _art in pass1_result:
-                _wc = len(_art.get("content", "").split())
-                if _wc < 150:
-                    print(f"[writer]   ⚠️  Short article ({_wc}w): {_art.get('title','')[:40]}")
         except json.JSONDecodeError as e:
             print(f"[writer] Pass 1 JSON parse error (batch {i // batch_size + 1}): {e}")
             print(f"[writer]   Skipping batch — no parseable output")

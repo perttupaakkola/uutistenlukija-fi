@@ -774,6 +774,39 @@ img { max-width: 100%; height: auto; }
   .theme-toggle-label { display: none; }
 }
 
+@media (max-width: 400px) {
+  /* Nav: tighten so items don't wrap to 3 rows */
+  .site-nav {
+    gap: 0.2rem 0.3rem;
+    padding: 0.4rem 0.75rem;
+  }
+  .site-nav a {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.35rem;
+  }
+
+  /* Logo breathing room */
+  .site-header {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Theme toggle: prevent overlap with logo */
+  .theme-toggle-wrap {
+    position: static;
+    margin-left: auto;
+  }
+
+  /* Article cards: tighten padding */
+  .article-card {
+    padding: 0.75rem;
+  }
+
+  /* Lead article: scale down h2 */
+  .lead-article h2 {
+    font-size: 1.5rem;
+  }
+}
+
 /* === Reading Progress Bar === */
 .reading-progress {
   position: fixed;
