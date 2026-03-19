@@ -26,32 +26,6 @@ try:
 except ImportError:
     pass
 
-def _get_anthropic_oauth_token():
-    """Read the Anthropic OAuth access token from openclaw's auth store."""
-    import json as _json
-    from pathlib import Path as _Path
-    # Try multiple auth store locations
-    paths = [
-        _Path("/home/pertt/.openclaw/agents/felix/agent/auth-profiles.json"),
-        _Path("/home/pertt/.openclaw/agents/main/agent/auth-profiles.json"),
-        _Path("/home/pertt/.claude/.credentials.json"),
-    ]
-    for p in paths:
-        try:
-            data = _json.loads(p.read_text())
-            # auth-profiles.json format
-            prof = data.get("profiles", {}).get("anthropic:default", {})
-            if prof.get("access"):
-                return prof["access"]
-            # .credentials.json format
-            oauth = data.get("claudeAiOauth", {})
-            if oauth.get("accessToken"):
-                return oauth["accessToken"]
-        except Exception:
-            continue
-    return None
-
-
 CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
 
 SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
@@ -76,156 +50,52 @@ KIRJOITUSTYYLI:
 - Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").
 - Lopeta viimeiseen faktaan.
 
-TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN (stop-slop):
-
-Kielletyt fraasit ja rakenteet:
-- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "On syytä huomata", "Samalla on todettava"
-- Ei "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti), "moniulotteinen", "merkittävä" (ellei oikeasti ole)
-- Ei "Tämä tarkoittaa sitä, että", "Kyse on siitä, että", "On selvää, että"
-- Ei "herättää kysymyksiä", "jää nähtäväksi", "aika näyttää", "tulevaisuus näyttää"
-
-Rakenteet joita välttää:
-- Ei binäärivastakohtia ("Kyse ei ole X:stä. Kyse on Y:stä.") — sano suoraan Y
-- Ei negatiivisia listoja ("Ei X. Ei Y. Vaan Z.") — sano suoraan Z
-- Ei dramaattisia fragmentteja ("Yksi sana. Muutos.") — kirjoita kokonaisia lauseita
-- Ei retorisia kysymyksiä joihin vastataan heti seuraavassa lauseessa
-- Ei kolmen sarjoja joka kappaleessa (kaksi asiaa riittää, tai yksi)
+TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:
+- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)
+- Ei kolmen sarjoja joka kappaleessa
 - Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)
-
-Passiivin ja toimijuuden säännöt:
-- Nimeä tekijä aina kun mahdollista ("päätös syntyi" → "hallitus päätti")
-- Ei elottomille asioille inhimillisiä verbejä ("tilanne kertoo" → "asiantuntijat tulkitsevat")
-- Aktiivi ensin, passiivi vain kun tekijä on oikeasti tuntematon
-
-Rytmi ja muoto:
-- Vaihtele lausepituutta — ei tasaisen metronomista tekstiä
-- Ei ajatusviivoja (—) lainkaan
-- Ei lihavointia, kursivointia tai typografisia tehosteita
-- Älä lopeta kappaletta iskevällä yksilauseisella — vaihtele lopetuksia
-- Jos lause kuulostaa sitaatilta tai aforismilta, kirjoita se uudelleen
-
-Täytesanat (poista aina):
-- "erittäin", "todella", "varsin", "erityisesti", "nimenomaan"
-- "käytännössä", "periaatteessa", "pohjimmiltaan", "itse asiassa"
-- "tietyllä tavalla", "jossain määrin", "tavallaan"
-
-Ei mainosmaista kieltä. Ei chatbot-artefakteja. Anna faktojen puhua.
+- Ei mainosmaista kieltä
+- Ei chatbot-artefakteja
+- Anna faktojen puhua, älä paisuttele
 
 Vastaa VAIN JSON-muodossa."""
 
-AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit tekoälykirjoituksen merkkien varalta ja korjaa.
+AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit tekoälykirjoituksen merkkien varalta ja korjaa:
 
-TARKISTETTAVAT ASIAT:
-
-1. Kielletyt fraasit — poista: "Lisäksi", "Toisaalta", "On huomionarvoista", "On syytä huomata", "Samalla on todettava", "Tämä tarkoittaa sitä, että", "Kyse on siitä, että", "On selvää, että", "herättää kysymyksiä", "jää nähtäväksi", "aika näyttää", "tulevaisuus näyttää"
-2. Täytesanat — poista: "erittäin", "todella", "varsin", "erityisesti", "nimenomaan", "käytännössä", "periaatteessa", "pohjimmiltaan", "itse asiassa", "tietyllä tavalla", "jossain määrin", "tavallaan"
-3. Binäärivastakohtarakenteet — "Kyse ei ole X:stä. Kyse on Y:stä." → sano suoraan Y
-4. Kolmen sarjat — jos kolme asiaa listataan peräkkäin, karsi kahteen tai yhteen
-5. Retoriset kysymykset joihin vastataan heti → poista kysymys, sano asia suoraan
-6. Passiivin ylikäyttö — nimeä tekijä ("päätös tehtiin" → "hallitus päätti")
-7. Elottomien asioiden inhimilliset verbit ("tilanne kertoo", "luvut paljastavat") → nimeä ihminen
-8. Synonyymien kierrätys — käytä yhtä termiä johdonmukaisesti
-9. Tasainen rytmi — vaihtele lausepituutta, ei metronomia
-10. Ajatusviivat (—) — poista kaikki, käytä pistettä tai pilkkua
-11. Aforistiset lopetukset — jos viimeinen lause kuulostaa sitaatilta, kirjoita se uudelleen
-12. Paisuttelu ja mainosmainen kieli
-13. Viittaukset alkuperäisiin lähteisiin tai muihin uutismedioihin (POISTA — tämä on meidän oma artikkeli)
-
-PISTEYTYS (arvioi ennen korjausta):
-- Suoruus (1-10): Sanooko asia suoraan vai kierteleekö?
-- Rytmi (1-10): Vaihteleva vai metronominen?
-- Luottamus (1-10): Kunnioittaako lukijan älyä?
-- Aitous (1-10): Kuulostaako ihmiseltä?
-- Tiiviys (1-10): Voiko jotain karsia?
-
-Jos yhteispistemäärä on alle 35/50, kirjoita artikkeli kokonaan uudelleen.
+1. Paisuttelu ja mainosmainen kieli
+2. Tekoälysanasto (Lisäksi, Toisaalta, kokonaisvaltainen, ekosysteemi)
+3. Kolmen sarjat, synonyymien kierrätys
+4. Geneeriset lopetukset
+5. Passiivin ylikäyttö
+6. Viittaukset alkuperäisiin lähteisiin tai muihin uutismedioihin (POISTA — tämä on meidän oma artikkeli)
+7. Chatbot-artefaktit
+8. Täytesanat ja varautumiset
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
 
 def _call_llm(system: str, prompt: str) -> str:
-    """Call the LLM with fallback chain: gpt-4.1-nano -> gpt-4.1-mini -> bridge."""
-    models = [
-        {
-            "name": "gpt-4.1-nano",
-            "provider": "openai",
-            "api_key_env": "OPENAI_API_KEY",
-            "base_url": "https://api.openai.com/v1",
-            "model": "gpt-4.1-nano",
-        },
-        {
-            "name": "gpt-4.1-mini",
-            "provider": "openai",
-            "api_key_env": "OPENAI_API_KEY",
-            "base_url": "https://api.openai.com/v1",
-            "model": "gpt-4.1-mini",
-        },
-    ]
+    """Call the LLM via Anthropic SDK or transport bridge."""
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    use_sdk = HAVE_ANTHROPIC_SDK and api_key
 
-    last_error = None
-    for m in models:
-        api_key = os.environ.get(m["api_key_env"])
-        if not api_key and m.get("api_key_fn"):
-            try:
-                api_key = globals()[m["api_key_fn"]]()
-            except Exception:
-                pass
-        if not api_key:
-            continue
-        try:
-            if m["provider"] == "anthropic" and HAVE_ANTHROPIC_SDK:
-                client = anthropic.Anthropic(api_key=api_key)
-                response = client.messages.create(
-                    model=m["model"],
-                    max_tokens=4096,
-                    system=system,
-                    messages=[{"role": "user", "content": prompt}],
-                )
-                result = response.content[0].text.strip()
-            elif m["provider"] in ("openrouter", "openai"):
-                import urllib.request as _ur
-                import urllib.error as _ue
-                body = json.dumps({
-                    "model": m["model"],
-                    "max_tokens": 4096,
-                    "messages": [
-                        {"role": "system", "content": system},
-                        {"role": "user", "content": prompt},
-                    ],
-                }).encode()
-                req = _ur.Request(
-                    m["base_url"] + "/chat/completions",
-                    data=body,
-                    headers={
-                        "Authorization": f"Bearer {api_key}",
-                        "Content-Type": "application/json",
-                    },
-                )
-                with _ur.urlopen(req, timeout=120) as resp:
-                    data = json.loads(resp.read())
-                result = data["choices"][0]["message"]["content"].strip()
-            else:
-                continue
-            print(f"[writer]   Model: {m['name']} (success)")
-            return result
-        except Exception as e:
-            last_error = e
-            print(f"[writer]   Model {m['name']} failed: {e}")
-            continue
-
-    # All API models failed — try Claude Code bridge as last resort
-    try:
-        print("[writer]   All API models failed. Trying Claude Code bridge...")
+    if use_sdk:
+        client = anthropic.Anthropic(api_key=api_key)
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=4096,
+            system=system,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return response.content[0].text.strip()
+    else:
+        print("[writer]   Using Claude Code bridge...")
         return complete_with_claude(
             system_prompt=system,
             messages=[{"role": "user", "content": prompt}],
             cwd=Path(__file__).parent.parent,
             require_json=True,
         )
-    except Exception:
-        pass
-
-    raise ValueError(f"All LLM providers failed. Last error: {last_error}")
 
 
 def _extract_json(text: str) -> list:
@@ -328,23 +198,8 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
                 rewritten.extend(parsed)
                 print(f"[writer]   Using pass 1 results (audit parse failed)")
         except Exception as e:
-            print(f"[writer] Error in batch {i // batch_size + 1}: {e}")
+            print(f"[writer] Error: {e}")
             import traceback
             traceback.print_exc()
-            # Retry once after 5 seconds for transient failures
-            try:
-                import time as _time
-                _time.sleep(5)
-                print(f"[writer] Retrying batch {i // batch_size + 1}...")
-                response_text = _call_llm(SYSTEM_PROMPT, prompt)
-                parsed = _extract_json(response_text)
-                for j, written_article in enumerate(parsed):
-                    if j < len(batch):
-                        written_article["fingerprint"] = batch[j].get("fingerprint", "")
-                        written_article["trending"] = batch[j].get("trending", False)
-                rewritten.extend(parsed)
-                print(f"[writer]   Retry succeeded: {len(parsed)} articles")
-            except Exception as e2:
-                print(f"[writer]   Retry also failed: {e2}")
 
     return rewritten

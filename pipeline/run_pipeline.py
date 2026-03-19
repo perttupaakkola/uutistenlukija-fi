@@ -11,13 +11,13 @@ import argparse
 import json
 import os
 import sys
-import time
 from datetime import datetime, timezone
 
 # Add parent to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from scanner import scan_all_feeds
+from firehose import poll_firehose
 from rewriter import rewrite_articles
 from publisher import publish_articles, build_site
 from dedup import filter_new_articles, mark_published
@@ -25,10 +25,6 @@ from image_gen import generate_images_for_articles
 
 
 LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
-METRICS_FILE = os.path.join(LOG_DIR, "metrics.json")
-
-# Threshold: warn if any step exceeds this many seconds
-SLOW_STEP_THRESHOLD_SEC = 300  # 5 minutes
 
 
 def log_run(stage: str, data: dict):
@@ -40,67 +36,15 @@ def log_run(stage: str, data: dict):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-def _time_step(name: str, fn, metrics: dict, *args, **kwargs):
-    """Execute a function, measure its duration, and record in metrics."""
-    t0 = time.monotonic()
-    error = None
-    result = None
-    try:
-        result = fn(*args, **kwargs)
-    except Exception as e:
-        error = str(e)
-        raise
-    finally:
-        elapsed = round(time.monotonic() - t0, 2)
-        step_info = {"duration_sec": elapsed}
-        if error:
-            step_info["error"] = error
-        if elapsed > SLOW_STEP_THRESHOLD_SEC:
-            step_info["slow"] = True
-            print(f"  ⚠️  {name} took {elapsed:.1f}s (>{SLOW_STEP_THRESHOLD_SEC}s threshold)")
-        else:
-            print(f"  ⏱️  {name}: {elapsed:.1f}s")
-        metrics["steps"][name] = step_info
-    return result
-
-
-def _append_metrics(metrics: dict):
-    """Append run metrics to the metrics.json log file."""
-    os.makedirs(LOG_DIR, exist_ok=True)
-    existing = []
-    if os.path.exists(METRICS_FILE):
-        try:
-            with open(METRICS_FILE, "r", encoding="utf-8") as f:
-                existing = json.load(f)
-        except (json.JSONDecodeError, IOError):
-            existing = []
-    existing.append(metrics)
-    # Keep last 200 runs to prevent unbounded growth
-    existing = existing[-200:]
-    with open(METRICS_FILE, "w", encoding="utf-8") as f:
-        json.dump(existing, f, indent=2, ensure_ascii=False)
-
-
-def run(quick: bool = False, build_only: bool = False, max_articles: int = 0):
+def run(quick: bool = False, build_only: bool = False):
     """Execute the pipeline.
 
     Args:
         quick: If True, skip the Hugo build step (scan + rewrite + publish only).
         build_only: If True, only run the Hugo build (no scanning/rewriting).
-        max_articles: If > 0, limit to this many articles per run.
     """
-    run_start = time.monotonic()
-    metrics = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "mode": "build-only" if build_only else ("quick" if quick else "full"),
-        "success": False,
-        "article_count": 0,
-        "steps": {},
-        "errors": [],
-    }
-
     print("=" * 60)
-    print(f"Uutistenlukija Pipeline — {metrics['timestamp']}")
+    print(f"Uutistenlukija Pipeline — {datetime.now(timezone.utc).isoformat()}")
     if quick:
         print("  Mode: --quick (skip build)")
     elif build_only:
@@ -109,88 +53,55 @@ def run(quick: bool = False, build_only: bool = False, max_articles: int = 0):
 
     if build_only:
         print("\n🔨 Hugo-sivuston rakennus...")
-        try:
-            success = _time_step("build", build_site, metrics)
-        except Exception as e:
-            metrics["errors"].append(f"build: {e}")
-            success = False
-        metrics["success"] = bool(success)
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
+        success = build_site()
         if success:
             print("\n✅ Rakennus valmis!")
         else:
             print("\n❌ Rakennus epäonnistui.")
         return success
 
-    # Step 1: Scan RSS feeds
+    # Step 1: Scan RSS feeds + Firehose
     print("\n📡 Vaihe 1: RSS-syötteiden skannaus...")
+    rss_articles = scan_all_feeds()
+
+    print("\n🔥 Vaihe 1b: Firehose-pollaus...")
     try:
-        articles = _time_step("scanner", scan_all_feeds, metrics)
+        fh_articles = poll_firehose()
+        print(f"[firehose] +{len(fh_articles)} articles from Firehose")
     except Exception as e:
-        metrics["errors"].append(f"scanner: {e}")
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
-        print(f"❌ Skannaus epäonnistui: {e}")
-        return False
+        print(f"[firehose] Skipping (error): {e}")
+        fh_articles = []
+
+    # Merge: prefer RSS articles (already have richer metadata), Firehose fills gaps
+    # Dedup by URL hash across both sets
+    seen_url_hashes = {a.get("_url_hash") for a in rss_articles if a.get("_url_hash")}
+    fh_new = [a for a in fh_articles if a.get("_url_hash") not in seen_url_hashes]
+    articles = rss_articles + fh_new
+    print(f"[pipeline] RSS: {len(rss_articles)} + Firehose new: {len(fh_new)} = {len(articles)} total")
 
     if not articles:
         print("❌ Ei artikkeleita löytynyt. Keskeytetään.")
-        metrics["errors"].append("scanner: no articles found")
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
         return False
 
-    log_run("scanned", {"count": len(articles), "articles": articles})
+    log_run("scanned", {"count": len(articles), "rss_count": len(rss_articles), "firehose_new": len(fh_new), "articles": articles})
 
     # Step 1b: Deduplication
     print("\n🔍 Vaihe 1b: Duplikaattien suodatus...")
-    try:
-        articles = _time_step("dedup", filter_new_articles, metrics, articles)
-    except Exception as e:
-        metrics["errors"].append(f"dedup: {e}")
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
-        print(f"❌ Dedup epäonnistui: {e}")
-        return False
-
+    articles = filter_new_articles(articles)
     if not articles:
         print("ℹ️  Kaikki artikkelit on jo julkaistu. Ei uusia artikkeleita.")
-        metrics["success"] = True
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
         return True
-
-    # Apply max_articles limit after dedup
-    if max_articles > 0 and len(articles) > max_articles:
-        print(f"  📏 Rajoitetaan {len(articles)} → {max_articles} artikkelia (--max-articles)")
-        articles = articles[:max_articles]
-
-    if not articles:
-        print("ℹ️  Ei artikkeleita rajoituksen jälkeen.")
-        metrics["success"] = True
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
-        return True
-
-    metrics["article_count"] = len(articles)
 
     # Step 2: Rewrite with AI
     print(f"\n✍️  Vaihe 2: {len(articles)} artikkelin uudelleenkirjoitus...")
     try:
-        rewritten = _time_step("rewriter", rewrite_articles, metrics, articles)
+        rewritten = rewrite_articles(articles)
     except ValueError as e:
         print(f"❌ {e}")
-        metrics["errors"].append(f"rewriter: {e}")
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
         return False
 
     if not rewritten:
         print("❌ Uudelleenkirjoitus epäonnistui. Keskeytetään.")
-        metrics["errors"].append("rewriter: returned empty")
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
         return False
 
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
@@ -198,25 +109,15 @@ def run(quick: bool = False, build_only: bool = False, max_articles: int = 0):
     # Step 2b: Generate header images (optional, failures don't block publishing)
     print(f"\n🖼️  Vaihe 2b: Kuvien generointi...")
     try:
-        rewritten = _time_step("image_gen", generate_images_for_articles, metrics, rewritten)
+        rewritten = generate_images_for_articles(rewritten)
         image_count = sum(1 for a in rewritten if a.get("image"))
-        metrics["steps"]["image_gen"]["image_count"] = image_count
         print(f"[image_gen] {image_count}/{len(rewritten)} artikkelia sai kuvan")
     except Exception as e:
-        metrics["errors"].append(f"image_gen: {e}")
         print(f"[image_gen] Kuvien generointi epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
 
     # Step 3: Publish
     print(f"\n📝 Vaihe 3: {len(rewritten)} artikkelin julkaisu...")
-    try:
-        created = _time_step("publisher", publish_articles, metrics, rewritten)
-    except Exception as e:
-        metrics["errors"].append(f"publisher: {e}")
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
-        print(f"❌ Julkaisu epäonnistui: {e}")
-        return False
-
+    created = publish_articles(rewritten)
     log_run("published", {"count": len(created), "files": created})
 
     # Mark published articles for deduplication
@@ -224,22 +125,11 @@ def run(quick: bool = False, build_only: bool = False, max_articles: int = 0):
 
     if quick:
         print(f"\n✅ Valmis! {len(created)} artikkelia julkaistu (build ohitettu).")
-        metrics["success"] = True
-        metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-        _append_metrics(metrics)
         return True
 
     # Step 4: Build
     print("\n🔨 Vaihe 4: Hugo-sivuston rakennus...")
-    try:
-        success = _time_step("build", build_site, metrics)
-    except Exception as e:
-        metrics["errors"].append(f"build: {e}")
-        success = False
-
-    metrics["success"] = bool(success) if success is not None else False
-    metrics["total_duration_sec"] = round(time.monotonic() - run_start, 2)
-    _append_metrics(metrics)
+    success = build_site()
 
     if success:
         print(f"\n✅ Valmis! {len(created)} artikkelia julkaistu.")
@@ -261,17 +151,11 @@ if __name__ == "__main__":
         action="store_true",
         help="Only run Hugo build (no scanning/rewriting)",
     )
-    parser.add_argument(
-        "--max-articles",
-        type=int,
-        default=0,
-        help="Limit to N articles per run (0 = unlimited)",
-    )
     args = parser.parse_args()
 
     if args.quick and args.build_only:
         print("❌ Cannot use --quick and --build-only together.")
         sys.exit(1)
 
-    success = run(quick=args.quick, build_only=args.build_only, max_articles=args.max_articles)
+    success = run(quick=args.quick, build_only=args.build_only)
     sys.exit(0 if success else 1)

@@ -3,14 +3,19 @@ RSS Scanner — fetches and deduplicates Finnish news from public RSS feeds.
 Uses only stdlib (no feedparser dependency).
 """
 
+import difflib
 import hashlib
+import json
+import os
 import re
+import time
 import xml.etree.ElementTree as ET
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
 from typing import List, Dict, Optional
 from email.utils import parsedate_to_datetime
+from urllib.parse import urlparse, parse_qs, urlunparse
 
 RSS_FEEDS = [
     # Finnish main sources
@@ -22,6 +27,16 @@ RSS_FEEDS = [
     {
         "name": "Iltalehti",
         "url": "https://www.iltalehti.fi/rss/uutiset.xml",
+        "language": "fi",
+    },
+    {
+        "name": "Ilta-Sanomat",
+        "url": "https://www.is.fi/rss/uutiset.xml",
+        "language": "fi",
+    },
+    {
+        "name": "Turun Sanomat",
+        "url": "https://www.ts.fi/rss.xml",
         "language": "fi",
     },
     {
@@ -53,12 +68,46 @@ RSS_FEEDS = [
         "language": "fi",
         "category_hint": "Teknologia",
     },
-    # International sources
     {
-        "name": "Reuters World",
-        "url": "https://www.reutersagency.com/feed/?best-topics=world&post_type=best",
-        "language": "en",
+        "name": "Yle Tiede",
+        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-819",
+        "language": "fi",
+        "category_hint": "Tiede",
     },
+    {
+        "name": "HS Tiede",
+        "url": "https://www.hs.fi/rss/?section=fi-tiede",
+        "language": "fi",
+        "category_hint": "Tiede",
+        "disabled": True,  # HS returns HTML (paywall/Next.js), not RSS
+    },
+    {
+        "name": "Yle Teknologia",
+        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-85",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "Kauppalehti Markets",
+        "url": "https://www.kauppalehti.fi/rss",
+        "language": "fi",
+        "category_hint": "Talous",
+        "disabled": True,  # returns malformed XML (non-RSS endpoint)
+    },
+    {
+        "name": "HS Kulttuuri",
+        "url": "https://www.hs.fi/rss/?section=fi-kulttuuri",
+        "language": "fi",
+        "category_hint": "Kulttuuri",
+        "disabled": True,  # HS returns HTML (paywall/Next.js), not RSS
+    },
+    {
+        "name": "Yle Kulttuuri",
+        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-3",
+        "language": "fi",
+        "category_hint": "Kulttuuri",
+    },
+    # International sources
     {
         "name": "BBC World",
         "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
@@ -78,6 +127,7 @@ RSS_FEEDS = [
         "name": "AP News",
         "url": "https://rsshub.app/apnews/topics/world-news",
         "language": "en",
+        "disabled": True,  # 403 consistently
     },
     {
         "name": "The Guardian World",
@@ -110,6 +160,36 @@ HEADERS = {
     "User-Agent": "Uutistenlukija/1.0 (news aggregator; +https://uutistenlukija.fi)"
 }
 
+# Politeness: minimum seconds between requests to the same domain
+DOMAIN_DELAY = 30
+
+# ETag/Last-Modified cache file (persists between pipeline runs)
+_CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
+_HTTP_CACHE_FILE = os.path.join(_CACHE_DIR, "feed_http_cache.json")
+
+# Per-domain last-fetch timestamps (in-process only)
+_domain_last_fetch: Dict[str, float] = {}
+
+
+def _load_http_cache() -> Dict:
+    """Load persisted ETag/Last-Modified cache."""
+    try:
+        with open(_HTTP_CACHE_FILE) as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _save_http_cache(cache: Dict) -> None:
+    """Persist ETag/Last-Modified cache to disk."""
+    os.makedirs(_CACHE_DIR, exist_ok=True)
+    with open(_HTTP_CACHE_FILE, "w") as f:
+        json.dump(cache, f, indent=2)
+
+
+def _domain(url: str) -> str:
+    return urlparse(url).netloc
+
 
 def _clean_html(text: str) -> str:
     """Strip HTML tags from text."""
@@ -134,11 +214,76 @@ def _parse_rss_date(date_str: str) -> Optional[datetime]:
     return None
 
 
+_STRIP_PARAMS = {
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    "fbclid", "gclid", "mc_cid", "mc_eid", "ref", "source",
+}
+
+
+def _normalize_url(url: str) -> str:
+    """Strip tracking params and normalize URL for dedup."""
+    try:
+        parsed = urlparse(url)
+        host = parsed.netloc.lower()
+        path = parsed.path
+        if path != "/" and path.endswith("/"):
+            path = path[:-1]
+        query_pairs = []
+        for k, vs in parse_qs(parsed.query, keep_blank_values=True).items():
+            if k not in _STRIP_PARAMS:
+                for v in vs:
+                    query_pairs.append(f"{k}={v}")
+        query = "&".join(sorted(query_pairs))
+        return urlunparse((parsed.scheme, host, path, parsed.params, query, ""))
+    except Exception:
+        return url.lower().strip()
+
+
+def _url_hash(url: str) -> str:
+    return hashlib.sha256(_normalize_url(url).encode()).hexdigest()
+
+
 def _fingerprint(title: str) -> str:
     """Create a simple fingerprint for dedup."""
     normalized = re.sub(r"[^a-zäöå0-9 ]", "", title.lower().strip())
     words = sorted(set(normalized.split()))
     return hashlib.md5(" ".join(words).encode()).hexdigest()
+
+
+def _normalize_title(title: str) -> str:
+    """Normalize title for fuzzy comparison."""
+    return re.sub(r"[^a-zäöå0-9 ]", "", title.lower().strip())
+
+
+def _fuzzy_dedup(articles: List[Dict], threshold: float = 0.85) -> List[Dict]:
+    """Remove near-duplicate articles (>threshold title similarity).
+    
+    Keeps the article with the most complete description (longest).
+    O(n²) but n is bounded ~500 articles per run — fine.
+    """
+    kept = []
+    dropped = set()  # indices into articles list
+
+    for i, a in enumerate(articles):
+        if i in dropped:
+            continue
+        title_a = _normalize_title(a.get("title", ""))
+        for j, b in enumerate(articles):
+            if j <= i or j in dropped:
+                continue
+            title_b = _normalize_title(b.get("title", ""))
+            ratio = difflib.SequenceMatcher(None, title_a, title_b).ratio()
+            if ratio >= threshold:
+                # Keep the one with longer description (more content)
+                if len(b.get("description", "")) > len(a.get("description", "")):
+                    dropped.add(i)
+                    break
+                else:
+                    dropped.add(j)
+        if i not in dropped:
+            kept.append(a)
+
+    return kept
 
 
 def _get_text(element, tag: str) -> str:
@@ -149,15 +294,58 @@ def _get_text(element, tag: str) -> str:
     return ""
 
 
-def fetch_feed(feed_info: dict) -> List[Dict]:
-    """Fetch and parse a single RSS feed."""
+def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]:
+    """Fetch and parse a single RSS feed with politeness and 304 caching."""
     articles = []
+    url = feed_info["url"]
     try:
-        req = urllib.request.Request(feed_info["url"], headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            content = resp.read()
+        # Domain politeness: enforce minimum delay between same-domain requests
+        domain = _domain(url)
+        now = time.monotonic()
+        last = _domain_last_fetch.get(domain, 0)
+        wait = DOMAIN_DELAY - (now - last)
+        if wait > 0:
+            time.sleep(wait)
+        _domain_last_fetch[domain] = time.monotonic()
+
+        # Build request with conditional headers for 304 support
+        headers = dict(HEADERS)
+        cache_entry = (http_cache or {}).get(url, {})
+        if cache_entry.get("etag"):
+            headers["If-None-Match"] = cache_entry["etag"]
+        if cache_entry.get("last_modified"):
+            headers["If-Modified-Since"] = cache_entry["last_modified"]
+
+        req = urllib.request.Request(url, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                content = resp.read()
+                # Update cache with new validators
+                if http_cache is not None:
+                    new_entry = {}
+                    etag = resp.headers.get("ETag")
+                    lm = resp.headers.get("Last-Modified")
+                    if etag:
+                        new_entry["etag"] = etag
+                    if lm:
+                        new_entry["last_modified"] = lm
+                    if new_entry:
+                        http_cache[url] = new_entry
+        except urllib.error.HTTPError as e:
+            if e.code == 304:
+                # Not Modified — return empty, caller uses cached articles
+                return []
+            raise
         
-        root = ET.fromstring(content)
+        # Sanitize content: strip control characters that break ET parser
+        content = re.sub(rb'[\x00-\x08\x0b\x0c\x0e-\x1f]', b'', content)
+        try:
+            root = ET.fromstring(content)
+        except ET.ParseError:
+            # Try decoding as latin-1 then re-encoding to utf-8 as fallback
+            content = content.decode("latin-1", errors="replace").encode("utf-8", errors="replace")
+            content = re.sub(rb'[\x00-\x08\x0b\x0c\x0e-\x1f]', b'', content)
+            root = ET.fromstring(content)
         
         # Handle both RSS 2.0 and Atom feeds
         items = root.findall(".//item")
@@ -195,8 +383,9 @@ def fetch_feed(feed_info: dict) -> List[Dict]:
                 "published": pub_date.isoformat(),
                 "source": feed_info["name"],
                 "language": feed_info.get("language", "fi"),
-                "category_hint": feed_info.get("category_hint"),
                 "fingerprint": _fingerprint(title),
+                "_url_hash": _url_hash(link),
+                **({"category_hint": feed_info["category_hint"]} if feed_info.get("category_hint") else {}),
             })
     except Exception as e:
         print(f"[scanner] Error fetching {feed_info['name']}: {e}")
@@ -206,14 +395,18 @@ def fetch_feed(feed_info: dict) -> List[Dict]:
 
 def scan_all_feeds() -> List[Dict]:
     """Scan all configured RSS feeds, deduplicate, return top articles."""
+    http_cache = _load_http_cache()
     all_articles = []
     for feed in RSS_FEEDS:
+        if feed.get("disabled"):
+            continue
         print(f"[scanner] Fetching {feed['name']}...")
-        articles = fetch_feed(feed)
+        articles = fetch_feed(feed, http_cache=http_cache)
         print(f"[scanner]   → {len(articles)} articles")
         all_articles.extend(articles)
+    _save_http_cache(http_cache)
 
-    # Deduplicate by fingerprint
+    # Exact dedup by fingerprint
     seen = set()
     unique = []
     for article in all_articles:
@@ -221,6 +414,11 @@ def scan_all_feeds() -> List[Dict]:
         if fp not in seen:
             seen.add(fp)
             unique.append(article)
+
+    # Fuzzy dedup: drop near-duplicate titles (>85% similarity)
+    before_fuzzy = len(unique)
+    unique = _fuzzy_dedup(unique, threshold=0.85)
+    print(f"[scanner] Fuzzy dedup: {before_fuzzy} → {len(unique)} (dropped {before_fuzzy - len(unique)} near-dupes)")
 
     # Detect trending: articles with similar fingerprints from multiple sources
     fp_sources = {}
@@ -244,93 +442,29 @@ def scan_all_feeds() -> List[Dict]:
 
     # Category-aware selection: ensure all 7 categories get representation
     CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
-    CATEGORY_PATTERNS = {
-        "Urheilu": [
-            r"\burheilu\b", r"\bsport\b", r"\bliiga\b", r"\bolymp", r"\bjalkapallo\b",
-            r"\bjääkiekko\b", r"\bnhl\b", r"\bf1\b", r"\bformula\b", r"\btennis\b",
-            r"\bgolf\b", r"\bkoripallo\b", r"\bsalibandy\b", r"\bhiihto\b",
-        ],
-        "Tiede": [
-            r"\btiede\w*", r"\btutkimus\w*", r"\bscience\b", r"\bresearch\b",
-            r"\bilmasto\w*", r"\bavaruus\w*", r"\bterveys\w*", r"\bhealth\b",
-            r"\blääketied", r"\byliopisto\w*", r"\btutkija\w*",
-        ],
-        "Kulttuuri": [
-            r"\bkulttuuri\w*", r"\btaide\w*", r"\bmusiik\w*", r"\belokuva\w*",
-            r"\bteatteri\w*", r"\bkirja\w*", r"\bculture\b", r"\bart\b", r"\bmusic\b",
-            r"\bartisti\w*", r"\bkonsertti\w*",
-        ],
-        "Teknologia": [
-            r"\bteknologia\w*", r"\btech\b", r"\btekoäly\b", r"\bai\b", r"\bohjelmisto\w*",
-            r"\bcyber\b", r"\bdigital\w*", r"\bapple\b", r"\bgoogle\b", r"\bmicrosoft\b",
-            r"\bnvidia\b", r"\bopenai\b", r"\bstartup\b", r"\bsiru\w*", r"\bpuhelin\w*",
-            r"\bsovellus\w*", r"\balgoritmi\w*",
-        ],
-        "Talous": [
-            r"\btalous\w*", r"\bekonom\w*", r"\bosake\w*", r"\bpörssi\w*", r"\bbusiness\b",
-            r"\beconomy\b", r"\bmarket\w*", r"\bfinance\b", r"\bkauppa\w*", r"\binflaatio\w*",
-            r"\bkorko\w*", r"\btyöllisyys\w*", r"\byritys\w*",
-        ],
-        "Ulkomaat": [
-            r"\bulkomaa\w*", r"\bworld\b", r"\binternational\b", r"\busa\b", r"\beurooppa\w*",
-            r"\bkiina\w*", r"\bvenäjä\w*", r"\bnato\b", r"\bukraina\w*", r"\bgaza\w*",
-            r"\blähi-itä\b", r"\btrump\b", r"\bxi\b",
-        ],
-        "Kotimaa": [
-            r"\bsuomi\b", r"\bhelsinki\w*", r"\btampere\w*", r"\bturku\w*", r"\beduskunta\w*",
-            r"\bhallitus\w*", r"\bpoliisi\w*", r"\bkäräjäoikeus\w*", r"\bhyvinvointialue\w*",
-            r"\bpäiväkoti\w*", r"\bkoulu\w*", r"\bkunnan\b",
-        ],
+    CATEGORY_KEYWORDS = {
+        "Urheilu": ["urheilu", "sport", "liiga", "olymp", "jalkapallo", "jääkiekko", "f1", "formula", "tennis", "golf"],
+        "Tiede": ["tiede", "tutkimus", "science", "research", "ilmasto", "avaruus", "terveys", "health"],
+        "Kulttuuri": ["kulttuuri", "taide", "musiikk", "elokuva", "teatteri", "kirja", "culture", "art", "music"],
+        "Teknologia": ["teknologia", "tech", "ai", "tekoäly", "ohjelmisto", "cyber", "digital", "apple", "google", "microsoft"],
+        "Talous": ["talous", "ekonom", "osake", "pörssi", "business", "economy", "market", "finance", "kauppa"],
+        "Ulkomaat": ["ulkomaa", "world", "international", "usa", "eu ", "eurooppa", "kiina", "venäjä", "nato"],
+        "Kotimaa": ["suomi", "helsinki", "tampere", "turku", "eduskunta", "hallitus"],
     }
-    SOURCE_CATEGORY_HINTS = {
-        "Yle Urheilu": "Urheilu",
-        "IS Urheilu": "Urheilu",
-        "Tekniikka & Talous": "Teknologia",
-        "BBC Technology": "Teknologia",
-        "TechCrunch": "Teknologia",
-        "Ars Technica": "Teknologia",
-        "Hacker News Best": "Teknologia",
-        "BBC Science": "Tiede",
-        "Reuters World": "Ulkomaat",
-        "BBC World": "Ulkomaat",
-        "AP News": "Ulkomaat",
-        "The Guardian World": "Ulkomaat",
-        "Der Spiegel International": "Ulkomaat",
-        "Kauppalehti": "Talous",
-        "Taloussanomat": "Talous",
-    }
-
-    def _score_category(text: str, category: str) -> int:
-        score = 0
-        for pattern in CATEGORY_PATTERNS.get(category, []):
-            if re.search(pattern, text):
-                score += 1
-        return score
 
     def _guess_category(article):
-        """Guess category from source hint, source defaults, and boundary-aware keyword scoring."""
+        """Guess category from source hint, title, or description."""
         hint = article.get("category_hint", "")
         if hint in CATEGORIES:
             return hint
-
-        source = article.get("source", "")
-        source_default = SOURCE_CATEGORY_HINTS.get(source)
         text = (article.get("title", "") + " " + article.get("description", "")).lower()
-        scores = {cat: _score_category(text, cat) for cat in CATEGORIES}
-
-        if source_default:
-            scores[source_default] += 3
-
-        if article.get("language") == "en" and not source_default:
-            scores["Ulkomaat"] += 2
-
-        best_category = max(scores, key=scores.get)
-        if scores[best_category] > 0:
-            return best_category
-
+        for cat, keywords in CATEGORY_KEYWORDS.items():
+            if any(kw in text for kw in keywords):
+                return cat
+        # English sources default to Ulkomaat
         if article.get("language") == "en":
             return "Ulkomaat"
-        return source_default or "Kotimaa"
+        return "Kotimaa"
 
     # First pass: pick at least 1 article per category
     selected = []
