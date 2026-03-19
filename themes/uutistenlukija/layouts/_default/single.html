@@ -8,7 +8,7 @@
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ $heroImage := .Params.image }}
-  {{ if not $heroImage }}{{ $heroImage = printf "/images/categories/%s.svg" (.Params.categories | first | lower | default "kotimaa") }}{{ end }}
+  {{ if not $heroImage }}{{ $heroImage = printf "/images/categories/%s.jpg" (.Params.categories | first | lower | default "kotimaa") }}{{ end }}
   <figure class="article-hero-figure">
     <img
       src="{{ $heroImage }}"

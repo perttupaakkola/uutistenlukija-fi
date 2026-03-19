@@ -26,7 +26,7 @@
 {{/* Lead article */}}
 {{ with index $sorted 0 }}
 {{ $cat := .Params.categories | first | default "kotimaa" }}
-{{ $img := .Params.image | default (printf "/images/categories/%s.svg" ($cat | lower)) }}
+{{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
 {{ $thumb := .Params.image_thumb | default $img }}
 {{ $alt := .Params.image_alt | default .Title }}
 <article class="lead-article">
@@ -52,7 +52,7 @@
 <div class="highlights-row">
   {{ range $highlights }}
   {{ $cat := .Params.categories | first | default "kotimaa" }}
-  {{ $img := .Params.image | default (printf "/images/categories/%s.svg" ($cat | lower)) }}
+  {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="highlight-card">
     {{ with .Params.categories }}
@@ -84,7 +84,7 @@
     <div class="category-articles">
       {{ range first 3 $catPosts }}
       {{ $cardCat := .Params.categories | first | default "kotimaa" }}
-      {{ $cardImg := .Params.image | default (printf "/images/categories/%s.svg" ($cardCat | lower)) }}
+      {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
       {{ $cardAlt := .Params.image_alt | default .Title }}
       <article class="category-article-card">
         <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
