@@ -8,6 +8,7 @@ Two-pass system: write + anti-AI audit pass.
 import os
 import json
 import sys
+import time
 from typing import List, Dict
 from pathlib import Path
 
@@ -201,44 +202,69 @@ Vastaa JSON-listana:
 
 Vastaa VAIN JSON-listalla."""
 
-        try:
-            # Pass 1: Write
-            response_text = _call_llm(SYSTEM_PROMPT, prompt)
-            parsed = _extract_json(response_text)
-            print(f"[writer]   Pass 1 → {len(parsed)} articles written")
+        MAX_RETRIES = 3
+        for attempt in range(1, MAX_RETRIES + 1):
+            parsed = None
+            try:
+                # Pass 1: Write
+                response_text = _call_llm(SYSTEM_PROMPT, prompt)
+                parsed = _extract_json(response_text)
+                if not parsed:
+                    raise ValueError("LLM returned empty list")
+                print(f"[writer]   Pass 1 → {len(parsed)} articles written (attempt {attempt})")
 
-            # Pass 2: Anti-AI audit
-            audit_prompt = f"""Tarkista ja korjaa seuraavat uutisartikkelit.
+                # Pass 2: Anti-AI audit
+                audit_prompt = f"""Tarkista ja korjaa seuraavat uutisartikkelit.
 
 {json.dumps(parsed, indent=2, ensure_ascii=False)}
 
 Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
-            audit_response = _call_llm(AUDIT_SYSTEM_PROMPT, audit_prompt)
-            audited = _extract_json(audit_response)
-            print(f"[writer]   Pass 2 (audit) → {len(audited)} articles cleaned")
+                audit_response = _call_llm(AUDIT_SYSTEM_PROMPT, audit_prompt)
+                try:
+                    audited = _extract_json(audit_response)
+                except json.JSONDecodeError:
+                    print(f"[writer]   Audit parse failed, using pass 1 results")
+                    audited = parsed
 
-            # Carry through metadata from input
-            for j, written_article in enumerate(audited):
-                if j < len(batch):
-                    written_article["fingerprint"] = batch[j].get("fingerprint", "")
-                    written_article["trending"] = batch[j].get("trending", False)
-                    # Do NOT carry source_name or source_url to output
+                if not audited:
+                    audited = parsed
 
-            rewritten.extend(audited)
+                print(f"[writer]   Pass 2 (audit) → {len(audited)} articles cleaned")
 
-        except json.JSONDecodeError as e:
-            print(f"[writer] JSON parse error: {e}")
-            if 'parsed' in locals():
-                for j, written_article in enumerate(parsed):
+                # Carry through metadata from input
+                for j, written_article in enumerate(audited):
                     if j < len(batch):
                         written_article["fingerprint"] = batch[j].get("fingerprint", "")
                         written_article["trending"] = batch[j].get("trending", False)
-                rewritten.extend(parsed)
-                print(f"[writer]   Using pass 1 results (audit parse failed)")
-        except Exception as e:
-            print(f"[writer] Error: {e}")
-            import traceback
-            traceback.print_exc()
+                        # Do NOT carry source_name or source_url to output
+
+                rewritten.extend(audited)
+                break  # Success — exit retry loop
+
+            except json.JSONDecodeError as e:
+                print(f"[writer] JSON parse error (attempt {attempt}/{MAX_RETRIES}): {e}")
+                if attempt < MAX_RETRIES:
+                    wait = 10 * attempt
+                    print(f"[writer]   Retrying in {wait}s...")
+                    time.sleep(wait)
+                elif parsed:
+                    # Last attempt: salvage pass 1 results if available
+                    for j, written_article in enumerate(parsed):
+                        if j < len(batch):
+                            written_article["fingerprint"] = batch[j].get("fingerprint", "")
+                            written_article["trending"] = batch[j].get("trending", False)
+                    rewritten.extend(parsed)
+                    print(f"[writer]   Using pass 1 results after {MAX_RETRIES} failed attempts")
+            except (ValueError, Exception) as e:
+                print(f"[writer] Error (attempt {attempt}/{MAX_RETRIES}): {e}")
+                if attempt < MAX_RETRIES:
+                    wait = 10 * attempt
+                    print(f"[writer]   Retrying in {wait}s...")
+                    time.sleep(wait)
+                else:
+                    print(f"[writer]   Batch failed after {MAX_RETRIES} attempts, skipping")
+                    import traceback
+                    traceback.print_exc()
 
     return rewritten
