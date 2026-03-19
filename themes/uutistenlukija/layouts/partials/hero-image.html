@@ -4,7 +4,8 @@
 */}}
 {{ $heroImage := .Params.image }}
 {{ if not $heroImage }}
-  {{ $cat := index .Params.categories 0 | lower | default "kotimaa" }}
+  {{ $cat := "kotimaa" }}
+  {{ with .Params.categories }}{{ $cat = index . 0 | lower }}{{ end }}
   {{ $heroImage = printf "/images/categories/%s.jpg" $cat }}
 {{ end }}
 {{ $alt := .Params.image_alt | default .Title }}
