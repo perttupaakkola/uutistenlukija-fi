@@ -1,91 +1,291 @@
 {{ define "main" }}
 <div class="search-page">
-  <h1>Haku</h1>
+  <h1 class="search-heading">Haku</h1>
   <div class="search-box">
-    <input type="text" id="search-input" placeholder="Hae artikkeleita..." autofocus>
+    <input
+      type="search"
+      id="search-input"
+      placeholder="Hae artikkeleita..."
+      aria-label="Haku"
+      autocomplete="off"
+      autofocus
+    >
+    <span id="search-count" class="search-count" aria-live="polite"></span>
   </div>
-  <div id="search-results"></div>
+  <div id="search-results" role="list"></div>
 </div>
 
 <style>
-.search-page { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
-.search-box { margin: 1.5rem 0; }
+.search-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+.search-heading {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+}
+.search-box {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
 #search-input {
   width: 100%;
-  padding: 0.8rem 1rem;
+  padding: 0.85rem 1.1rem;
   font-size: 1.1rem;
   font-family: var(--font-sans);
   border: 2px solid var(--border);
-  border-radius: 4px;
+  border-radius: 6px;
   background: var(--card-bg);
   color: var(--text);
   outline: none;
-  transition: border-color 0.2s;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
-#search-input:focus { border-color: var(--accent); }
-.search-result {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
+#search-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(192,57,43,0.12);
 }
-.search-result h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
-.search-result h3 a:hover { color: var(--accent); }
-.search-result .meta {
+.search-count {
+  display: block;
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  color: #888;
+  color: var(--text-muted, #888);
+  margin-top: 0.4rem;
+  min-height: 1em;
 }
-.search-result .snippet {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-top: 0.3rem;
-  line-height: 1.5;
+.search-result {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.search-result:last-child { border-bottom: none; }
+.search-result h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.3rem;
+  line-height: 1.4;
+}
+.search-result h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+.search-result h3 a:hover { color: var(--accent); }
+.search-result .result-meta {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--text-muted, #888);
+  margin-bottom: 0.35rem;
+}
+.result-cat {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  background: var(--accent);
+  color: #fff;
+  margin-right: 0.4em;
+  text-decoration: none;
+}
+.search-result .result-snippet {
+  font-size: 0.88rem;
+  color: var(--text-secondary, #555);
+  line-height: 1.55;
+  margin-top: 0.25rem;
+}
+mark {
+  background: rgba(192,57,43,0.15);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
 }
 .no-results {
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--text-muted, #888);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+.search-loading {
   padding: 2rem;
   text-align: center;
-  color: var(--text-secondary);
+  color: var(--text-muted, #888);
   font-family: var(--font-sans);
 }
 </style>
 
+<!-- Fuse.js 7.x — fuzzy search library, MIT license -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+
 <script>
 (function() {
-  let articles = [];
-  
+  'use strict';
+
+  var fuse = null;
+  var articles = [];
+  var input = document.getElementById('search-input');
+  var results = document.getElementById('search-results');
+  var countEl = document.getElementById('search-count');
+
+  // Fuse.js config — fuzzy matching on title (high weight), description, category
+  var fuseOptions = {
+    includeScore: true,
+    includeMatches: true,
+    minMatchCharLength: 2,
+    threshold: 0.35,
+    keys: [
+      { name: 'title',       weight: 0.6 },
+      { name: 'description', weight: 0.25 },
+      { name: 'category',    weight: 0.1 },
+      { name: 'content',     weight: 0.05 }
+    ]
+  };
+
+  // Load JSON index
+  var resultsEl = document.getElementById('search-results');
+  resultsEl.innerHTML = '<div class="search-loading">Ladataan...</div>';
+
   fetch('/index.json')
-    .then(r => r.json())
-    .then(data => { articles = data; });
-  
-  const input = document.getElementById('search-input');
-  const results = document.getElementById('search-results');
-  
-  input.addEventListener('input', function() {
-    const q = this.value.toLowerCase().trim();
+    .then(function(r) {
+      if (!r.ok) throw new Error('index.json ' + r.status);
+      return r.json();
+    })
+    .then(function(data) {
+      articles = data;
+      fuse = new Fuse(articles, fuseOptions);
+      resultsEl.innerHTML = '';
+      // Run search if q param present in URL
+      var q = getQueryParam('q');
+      if (q) {
+        input.value = q;
+        doSearch(q);
+      }
+    })
+    .catch(function(err) {
+      resultsEl.innerHTML = '<div class="no-results">Hakuindeksin lataus epäonnistui.</div>';
+      console.error('Search index load failed:', err);
+    });
+
+  // Read URL query param
+  function getQueryParam(name) {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      return params.get(name) || '';
+    } catch(e) {
+      return '';
+    }
+  }
+
+  // Update URL bar without reload so results are bookmarkable
+  function updateUrl(q) {
+    try {
+      var url = new URL(window.location);
+      if (q) {
+        url.searchParams.set('q', q);
+      } else {
+        url.searchParams.delete('q');
+      }
+      history.replaceState(null, '', url.toString());
+    } catch(e) {}
+  }
+
+  // Escape HTML to prevent XSS
+  function esc(str) {
+    return String(str)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;');
+  }
+
+  // Highlight matched ranges in a string
+  function highlight(str, ranges) {
+    if (!ranges || !ranges.length) return esc(str);
+    var out = '';
+    var prev = 0;
+    // ranges is array of [start, end] pairs
+    ranges.forEach(function(r) {
+      out += esc(str.slice(prev, r[0]));
+      out += '<mark>' + esc(str.slice(r[0], r[1] + 1)) + '</mark>';
+      prev = r[1] + 1;
+    });
+    out += esc(str.slice(prev));
+    return out;
+  }
+
+  // Category display names (Finnish)
+  var catNames = {
+    'kotimaa': 'Kotimaa', 'ulkomaat': 'Ulkomaat', 'talous': 'Talous',
+    'teknologia': 'Teknologia', 'urheilu': 'Urheilu', 'kulttuuri': 'Kulttuuri',
+    'tiede': 'Tiede'
+  };
+
+  function renderResults(fuseResults, query) {
+    if (!fuseResults.length) {
+      countEl.textContent = '';
+      results.innerHTML = '<div class="no-results">Ei hakutuloksia haulle &ldquo;' + esc(query) + '&rdquo;</div>';
+      return;
+    }
+
+    var n = fuseResults.length;
+    countEl.textContent = n + ' tulos' + (n === 1 ? '' : 'ta');
+
+    results.innerHTML = fuseResults.slice(0, 20).map(function(r) {
+      var a = r.item;
+      var matchMap = {};
+      (r.matches || []).forEach(function(m) { matchMap[m.key] = m.indices; });
+
+      var titleHtml = matchMap.title ? highlight(a.title, matchMap.title) : esc(a.title);
+      var snippetText = a.description || a.content || '';
+      var snippetHtml = matchMap.description
+        ? highlight(snippetText.substring(0, 180), matchMap.description)
+        : esc(snippetText.substring(0, 180));
+      if (snippetText.length > 180) snippetHtml += '&hellip;';
+
+      var catSlug = (a.category || '').toLowerCase();
+      var catLabel = catNames[catSlug] || a.category;
+      var catHtml = catLabel
+        ? '<a class="result-cat" href="/categories/' + esc(catSlug) + '/">' + esc(catLabel) + '</a>'
+        : '';
+
+      return '<div class="search-result" role="listitem">' +
+        '<h3><a href="' + esc(a.url) + '">' + titleHtml + '</a></h3>' +
+        '<div class="result-meta">' + catHtml + esc(a.date) + '</div>' +
+        (snippetHtml ? '<p class="result-snippet">' + snippetHtml + '</p>' : '') +
+        '</div>';
+    }).join('');
+  }
+
+  function doSearch(q) {
+    q = q.trim();
+    updateUrl(q);
     if (q.length < 2) {
       results.innerHTML = '';
+      countEl.textContent = '';
       return;
     }
-    
-    const matches = articles.filter(a => 
-      a.title.toLowerCase().includes(q) || 
-      a.content.toLowerCase().includes(q) ||
-      a.category.toLowerCase().includes(q) ||
-      a.author.toLowerCase().includes(q)
-    ).slice(0, 20);
-    
-    if (matches.length === 0) {
-      results.innerHTML = '<div class="no-results">Ei hakutuloksia haulle "' + q.replace(/</g,'&lt;') + '"</div>';
-      return;
-    }
-    
-    results.innerHTML = matches.map(a => 
-      '<div class="search-result">' +
-        '<h3><a href="' + a.url + '">' + a.title + '</a></h3>' +
-        '<div class="meta">' + a.date + (a.category ? ' · ' + a.category : '') + (a.author ? ' · ' + a.author : '') + '</div>' +
-        '<p class="snippet">' + a.content.substring(0, 150) + '...</p>' +
-      '</div>'
-    ).join('');
+    if (!fuse) return; // still loading
+    var res = fuse.search(q);
+    renderResults(res, q);
+  }
+
+  // Debounce input
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    var val = this.value;
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() { doSearch(val); }, 180);
   });
+
+  // Handle browser back/forward navigation
+  window.addEventListener('popstate', function() {
+    var q = getQueryParam('q');
+    input.value = q;
+    if (q) doSearch(q); else { results.innerHTML = ''; countEl.textContent = ''; }
+  });
+
 })();
 </script>
 {{ end }}

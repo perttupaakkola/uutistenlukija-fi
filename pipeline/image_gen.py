@@ -1,13 +1,20 @@
 """
 Article Image Generator — generates editorial header images via Kie.ai Nano Banana 2 API.
 Cost: ~$0.04/image. Fallback after Unsplash + Pexels.
+
+Per-article timeout: 180s hard limit via signal.alarm(). On timeout, returns None
+so the caller can fall back to Pexels/category placeholder.
 """
 import os
 import json
 import time
+import signal
 import urllib.request
 import urllib.error
 from typing import List, Dict, Optional
+
+# Per-article generation timeout (seconds). Includes task submit + polling.
+PER_ARTICLE_TIMEOUT = int(os.environ.get("IMAGE_GEN_TIMEOUT", "180"))
 
 KIE_API_KEY = os.environ.get("KIE_API_KEY", "bccd653c94693baab42985f14ec4a9dd")
 KIE_BASE_URL = "https://api.kie.ai"
@@ -84,6 +91,10 @@ def _build_alt_text(title: str, category: str) -> str:
     return alt[:125]
 
 
+def _timeout_handler(signum, frame):
+    raise TimeoutError("image_gen per-article timeout")
+
+
 def generate_article_image(title: str, category: str, slug: str) -> Optional[str]:
     """Generate a header image for an article. Returns the relative path or None."""
     os.makedirs(IMAGE_DIR, exist_ok=True)
@@ -110,6 +121,8 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
 
     prompt = f"Editorial newspaper header illustration for a Finnish news article titled '{title}'. Style: modern editorial illustration, clean and professional, muted sophisticated color palette. Visual theme: {style}. No text in the image. Widescreen composition, suitable as a news article banner."
 
+    old_handler = signal.signal(signal.SIGALRM, _timeout_handler)
+    signal.alarm(PER_ARTICLE_TIMEOUT)
     try:
         result = _kie_request("/api/v1/jobs/createTask", {
             "model": "nano-banana-2",
@@ -138,9 +151,15 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
         print(f"[image_gen] Downloaded {slug}.jpg ({size} bytes)")
         return webpath
 
+    except TimeoutError:
+        print(f"[image_gen] ⏱ Timeout ({PER_ARTICLE_TIMEOUT}s) for '{title[:40]}...' — skipping AI gen")
+        return None
     except Exception as e:
         print(f"[image_gen] Error generating image for '{title[:40]}...': {e}")
         return None
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old_handler)
 
 
 def generate_images_for_articles(articles: List[Dict]) -> List[Dict]:

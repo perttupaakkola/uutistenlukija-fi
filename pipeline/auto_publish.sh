@@ -25,6 +25,14 @@ PIPELINE_EXIT=${PIPESTATUS[0]}
 
 if [ "$PIPELINE_EXIT" -ne 0 ]; then
   echo "Pipeline failed with exit code $PIPELINE_EXIT" | tee -a "$LOG_FILE"
+  # Send Discord alert with last 20 lines of log
+  TAIL=$(tail -20 "$LOG_FILE" 2>/dev/null || echo "(log unavailable)")
+  python3 - <<PYEOF
+import sys
+sys.path.insert(0, "$PIPELINE_DIR")
+from health_check import notify_discord_failure
+notify_discord_failure("run_pipeline", """$TAIL""", "auto_publish.sh exit code $PIPELINE_EXIT")
+PYEOF
   exit 1
 fi
 

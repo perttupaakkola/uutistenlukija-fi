@@ -198,9 +198,24 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         image_count = sum(1 for a in rewritten if a.get("image"))
         fallback_count = sum(1 for a in rewritten if a.get("image_category_fallback"))
         hotlink_count = sum(1 for a in rewritten if a.get("image_hotlink"))
+        real_images = image_count - fallback_count
         print(f"[images] Total: {image_count}/{len(rewritten)} "
               f"(Unsplash:{unsplash_count} hotlink, Pexels:{pexels_count} local, "
               f"AI:{ai_count}, fallback:{fallback_count})")
+
+        # Alert if ALL articles ended up with category fallbacks (0 real images)
+        if len(rewritten) > 0 and real_images == 0:
+            try:
+                from health_check import notify_discord_failure
+                notify_discord_failure(
+                    "image_gen",
+                    f"0/{len(rewritten)} articles got real images — all fell back to category placeholders.\n"
+                    f"Unsplash key: {'set' if _unsplash_key else 'MISSING'}, "
+                    f"Pexels key: {'set' if _pexels_key else 'MISSING'}",
+                    "Check API keys and Kie.ai status."
+                )
+            except Exception as _ne:
+                print(f"[notify] Could not send image alert: {_ne}")
     except Exception as e:
         print(f"[images] Kuvien haku epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
 

@@ -25,7 +25,16 @@ import glob
 import json
 import os
 import sys
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone, timedelta
+
+# Discord #operations channel ID (for bot-based alerts)
+DISCORD_OPERATIONS_CHANNEL = "1482082645553713366"
+# Optional: set DISCORD_WEBHOOK_URL in .env for webhook-based alerts (no bot token needed)
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
+# Bot token for message API fallback
+DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", "")
 
 PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_DIR = os.path.join(PIPELINE_DIR, "logs")
@@ -285,6 +294,70 @@ def print_brief(result):
         print(f"Pipeline {status_emoji.get(result['overall'], '?')} — {'; '.join(issues)}")
     else:
         print(f"Pipeline {status_emoji.get(result['overall'], '?')} healthy — {result['total_runs_recorded']} runs tracked")
+
+
+def notify_discord_failure(step: str, error_lines: str, extra: str = "") -> bool:
+    """Post a pipeline failure alert to Discord #operations.
+
+    Uses DISCORD_WEBHOOK_URL if set, falls back to bot token POST.
+    Returns True if the message was sent successfully.
+
+    Args:
+        step:        Which pipeline step failed (e.g. "image_gen", "rewriter")
+        error_lines: Last few lines of error output (≤10 lines)
+        extra:       Optional extra context (e.g. "0/5 images produced")
+    """
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    lines = error_lines.strip().splitlines()[-10:]  # cap at 10 lines
+    tail = "\n".join(lines) if lines else "(no output)"
+
+    msg = (
+        f"⚠️ **Pipeline failure** `[{step}]` — {ts}\n"
+        f"```\n{tail}\n```"
+    )
+    if extra:
+        msg += f"\n_{extra}_"
+
+    # Try webhook first (no auth needed)
+    if DISCORD_WEBHOOK_URL:
+        try:
+            payload = json.dumps({"content": msg}).encode()
+            req = urllib.request.Request(
+                DISCORD_WEBHOOK_URL,
+                data=payload,
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                if resp.status in (200, 204):
+                    print(f"[notify] Alert sent via webhook ({step})")
+                    return True
+        except Exception as e:
+            print(f"[notify] Webhook failed: {e}")
+
+    # Fallback: Discord bot token
+    if DISCORD_BOT_TOKEN:
+        try:
+            payload = json.dumps({"content": msg}).encode()
+            url = f"https://discord.com/api/v10/channels/{DISCORD_OPERATIONS_CHANNEL}/messages"
+            req = urllib.request.Request(
+                url,
+                data=payload,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bot {DISCORD_BOT_TOKEN}",
+                },
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                if resp.status == 200:
+                    print(f"[notify] Alert sent via bot token ({step})")
+                    return True
+        except Exception as e:
+            print(f"[notify] Bot token send failed: {e}")
+
+    print(f"[notify] ⚠ Could not send Discord alert — set DISCORD_WEBHOOK_URL or DISCORD_BOT_TOKEN in .env")
+    return False
 
 
 if __name__ == "__main__":
