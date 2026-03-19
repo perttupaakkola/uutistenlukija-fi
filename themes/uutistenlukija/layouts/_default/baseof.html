@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-image.png">
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
-  {{ template "_internal/schema.html" . }}
+  {{ partial "structured-data.html" . }}
   {{ partial "opengraph.html" . }}
   {{ partial "twitter-cards.html" . }}
   {{ partial "analytics.html" . }}
