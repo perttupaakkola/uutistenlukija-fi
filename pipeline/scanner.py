@@ -154,6 +154,12 @@ RSS_FEEDS = [
         "url": "https://www.spiegel.de/international/index.rss",
         "language": "en",
     },
+    {
+        "name": "Science News",
+        "url": "https://www.sciencenews.org/feed",
+        "language": "en",
+        "category_hint": "Tiede",
+    },
 ]
 
 HEADERS = {
@@ -440,7 +446,7 @@ def scan_all_feeds() -> List[Dict]:
     # Sort by date (newest first)
     unique.sort(key=lambda a: a["published"], reverse=True)
 
-    # Category-aware selection: ensure all 7 categories get representation
+    # Category-aware selection with target distribution
     CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
     CATEGORY_KEYWORDS = {
         "Urheilu": ["urheilu", "sport", "liiga", "olymp", "jalkapallo", "jääkiekko", "f1", "formula", "tennis", "golf"],
@@ -451,6 +457,36 @@ def scan_all_feeds() -> List[Dict]:
         "Ulkomaat": ["ulkomaa", "world", "international", "usa", "eu ", "eurooppa", "kiina", "venäjä", "nato"],
         "Kotimaa": ["suomi", "helsinki", "tampere", "turku", "eduskunta", "hallitus"],
     }
+
+    # Target distribution (must sum to 1.0)
+    CATEGORY_TARGETS = {
+        "Kotimaa":    0.25,
+        "Ulkomaat":   0.20,
+        "Talous":     0.20,
+        "Teknologia": 0.15,
+        "Urheilu":    0.10,
+        "Kulttuuri":  0.07,
+        "Tiede":      0.03,
+    }
+
+    TOTAL_TARGET = 25
+
+    # Compute per-category quotas (minimum 1 per category regardless of %)
+    import math
+    cat_quotas = {}
+    for cat in CATEGORIES:
+        raw = CATEGORY_TARGETS[cat] * TOTAL_TARGET
+        cat_quotas[cat] = max(1, round(raw))
+    # Adjust rounding drift to hit exactly TOTAL_TARGET
+    while sum(cat_quotas.values()) > TOTAL_TARGET:
+        # Trim from the category most over its raw target
+        worst = max(CATEGORIES, key=lambda c: cat_quotas[c] - CATEGORY_TARGETS[c] * TOTAL_TARGET)
+        if cat_quotas[worst] > 1:
+            cat_quotas[worst] -= 1
+    while sum(cat_quotas.values()) < TOTAL_TARGET:
+        # Add to category most under its raw target
+        best = max(CATEGORIES, key=lambda c: CATEGORY_TARGETS[c] * TOTAL_TARGET - cat_quotas[c])
+        cat_quotas[best] += 1
 
     def _guess_category(article):
         """Guess category from source hint, title, or description."""
@@ -466,33 +502,47 @@ def scan_all_feeds() -> List[Dict]:
             return "Ulkomaat"
         return "Kotimaa"
 
-    # First pass: pick at least 1 article per category
+    # Pre-classify all unique articles
+    for article in unique:
+        article["_guessed_category"] = _guess_category(article)
+
+    # Build per-category pools (newest first)
+    cat_pools: Dict[str, list] = {c: [] for c in CATEGORIES}
+    for article in unique:
+        cat_pools[article["_guessed_category"]].append(article)
+
+    # Fill quotas from each category pool
     selected = []
-    selected_fps = set()
+    selected_fps: set = set()
+    cat_counts = {c: 0 for c in CATEGORIES}
+
     for cat in CATEGORIES:
-        for article in unique:
-            if article["fingerprint"] not in selected_fps and _guess_category(article) == cat:
-                article["_guessed_category"] = cat
+        quota = cat_quotas[cat]
+        taken = 0
+        for article in cat_pools[cat]:
+            if taken >= quota:
+                break
+            if article["fingerprint"] not in selected_fps:
                 selected.append(article)
                 selected_fps.add(article["fingerprint"])
+                cat_counts[cat] += 1
+                taken += 1
+
+    # If any category was short (not enough articles), fill remaining slots
+    # from whichever categories have surplus, newest first
+    if len(selected) < TOTAL_TARGET:
+        remaining_budget = {c: cat_quotas[c] - cat_counts[c] for c in CATEGORIES}
+        # Allow overflow into categories that already hit quota
+        for article in unique:
+            if len(selected) >= TOTAL_TARGET:
                 break
+            if article["fingerprint"] not in selected_fps:
+                cat = article["_guessed_category"]
+                selected.append(article)
+                selected_fps.add(article["fingerprint"])
+                cat_counts[cat] += 1
 
-    # Second pass: fill remaining slots with newest articles, balanced by category
-    # Track how many we've selected per category
-    cat_counts = {c: sum(1 for a in selected if a.get("_guessed_category") == c) for c in CATEGORIES}
-    target = 25
-    
-    for article in unique:
-        if len(selected) >= target:
-            break
-        if article["fingerprint"] not in selected_fps:
-            cat = _guess_category(article)
-            # Prefer underrepresented categories
-            article["_guessed_category"] = cat
-            selected.append(article)
-            selected_fps.add(article["fingerprint"])
-            cat_counts[cat] = cat_counts.get(cat, 0) + 1
-
+    print(f"[scanner] Quotas: {cat_quotas}")
     print(f"[scanner] Category distribution: {cat_counts}")
     print(f"[scanner] Total: {len(all_articles)} → Unique: {len(unique)} → Selected: {len(selected)}")
     return selected
