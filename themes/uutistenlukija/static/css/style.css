@@ -829,21 +829,21 @@ img { max-width: 100%; height: auto; }
   background: var(--accent); /* fallback */
 }
 
-.category-pill[data-cat="kotimaa"]     { background: #2563eb; }
-.category-pill[data-cat="ulkomaat"]    { background: #dc2626; }
-.category-pill[data-cat="talous"]      { background: #ea580c; }
-.category-pill[data-cat="teknologia"]  { background: #7c3aed; }
-.category-pill[data-cat="urheilu"]     { background: #16a34a; }
-.category-pill[data-cat="kulttuuri"]   { background: #db2777; }
-.category-pill[data-cat="tiede"]       { background: #0d9488; }
+.category-pill[data-cat="kotimaa"]     { background: #3498db; }
+.category-pill[data-cat="ulkomaat"]    { background: #e74c3c; }
+.category-pill[data-cat="talous"]      { background: #f39c12; }
+.category-pill[data-cat="teknologia"]  { background: #8e44ad; }
+.category-pill[data-cat="urheilu"]     { background: #27ae60; }
+.category-pill[data-cat="kulttuuri"]   { background: #d35400; }
+.category-pill[data-cat="tiede"]       { background: #16a085; }
 
-[data-theme="dark"] .category-pill[data-cat="kotimaa"]     { background: #3b82f6; }
-[data-theme="dark"] .category-pill[data-cat="ulkomaat"]    { background: #ef4444; }
-[data-theme="dark"] .category-pill[data-cat="talous"]      { background: #f97316; }
-[data-theme="dark"] .category-pill[data-cat="teknologia"]  { background: #8b5cf6; }
-[data-theme="dark"] .category-pill[data-cat="urheilu"]     { background: #22c55e; }
-[data-theme="dark"] .category-pill[data-cat="kulttuuri"]   { background: #ec4899; }
-[data-theme="dark"] .category-pill[data-cat="tiede"]       { background: #14b8a6; }
+[data-theme="dark"] .category-pill[data-cat="kotimaa"]     { background: #3498db; }
+[data-theme="dark"] .category-pill[data-cat="ulkomaat"]    { background: #e74c3c; }
+[data-theme="dark"] .category-pill[data-cat="talous"]      { background: #f39c12; }
+[data-theme="dark"] .category-pill[data-cat="teknologia"]  { background: #8e44ad; }
+[data-theme="dark"] .category-pill[data-cat="urheilu"]     { background: #27ae60; }
+[data-theme="dark"] .category-pill[data-cat="kulttuuri"]   { background: #d35400; }
+[data-theme="dark"] .category-pill[data-cat="tiede"]       { background: #16a085; }
 
 /* === Lead Article — enhanced with accent border + subtle bg === */
 .lead-article {
