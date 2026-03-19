@@ -1,6 +1,5 @@
 ---
 title: "Suomeen perustetaan Nato-joukko – valmista heinäkuuhun mennessä"
-description: "Lapin Rovajärvellä harjoitellaan parhaillaan Naton eteentyönnettyjen joukkojen toimintaa Suomen maaperällä."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa

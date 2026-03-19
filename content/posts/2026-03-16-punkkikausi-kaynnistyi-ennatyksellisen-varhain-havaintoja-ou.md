@@ -1,6 +1,5 @@
 ---
 title: "Punkkikausi käynnistyi ennätyksellisen varhain – havaintoja Oulun korkeudelle asti"
-description: "Punkkeja on havaittu tänä keväänä tavallista aiemmin. Lämmin sää on aktivoinut punkit liikkeelle, ja havaintoja on tehty jopa Oulun korkeudella."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa

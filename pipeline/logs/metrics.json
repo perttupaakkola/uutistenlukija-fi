@@ -1,0 +1,401 @@
+[
+  {
+    "timestamp": "2026-03-18T00:00:01.583042+00:00",
+    "mode": "full",
+    "success": true,
+    "article_count": 25,
+    "steps": {
+      "scanner": {
+        "duration_sec": 12.02
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 875.01,
+        "slow": true
+      },
+      "image_gen": {
+        "duration_sec": 554.83,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.01
+      },
+      "build": {
+        "duration_sec": 2.28
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 1444.25
+  },
+  {
+    "timestamp": "2026-03-18T03:00:01.645878+00:00",
+    "mode": "full",
+    "success": false,
+    "article_count": 22,
+    "steps": {
+      "scanner": {
+        "duration_sec": 8.07
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 755.56,
+        "slow": true
+      }
+    },
+    "errors": [
+      "rewriter: returned empty"
+    ],
+    "total_duration_sec": 763.64
+  },
+  {
+    "timestamp": "2026-03-18T06:00:01.941578+00:00",
+    "mode": "full",
+    "success": false,
+    "article_count": 24,
+    "steps": {
+      "scanner": {
+        "duration_sec": 10.29
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 299.96
+      }
+    },
+    "errors": [
+      "rewriter: returned empty"
+    ],
+    "total_duration_sec": 310.25
+  },
+  {
+    "timestamp": "2026-03-18T09:00:01.889826+00:00",
+    "mode": "full",
+    "success": false,
+    "article_count": 25,
+    "steps": {
+      "scanner": {
+        "duration_sec": 7.27
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 538.63,
+        "slow": true
+      }
+    },
+    "errors": [
+      "rewriter: returned empty"
+    ],
+    "total_duration_sec": 545.99
+  },
+  {
+    "timestamp": "2026-03-18T12:00:01.661174+00:00",
+    "mode": "full",
+    "success": true,
+    "article_count": 25,
+    "steps": {
+      "scanner": {
+        "duration_sec": 9.4
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 334.22,
+        "slow": true
+      },
+      "image_gen": {
+        "duration_sec": 340.52,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.01
+      },
+      "build": {
+        "duration_sec": 1.99
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 686.14
+  },
+  {
+    "timestamp": "2026-03-18T15:00:01.746642+00:00",
+    "mode": "full",
+    "success": false,
+    "article_count": 25,
+    "steps": {
+      "scanner": {
+        "duration_sec": 10.23
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 10.37
+      }
+    },
+    "errors": [
+      "rewriter: returned empty"
+    ],
+    "total_duration_sec": 20.6
+  },
+  {
+    "timestamp": "2026-03-18T17:29:59.680277+00:00",
+    "mode": "quick",
+    "success": false,
+    "article_count": 0,
+    "steps": {},
+    "errors": [
+      "scanner: [Errno 32] Broken pipe"
+    ],
+    "total_duration_sec": 8.83
+  },
+  {
+    "timestamp": "2026-03-18T17:40:35.634532+00:00",
+    "mode": "quick",
+    "success": false,
+    "article_count": 0,
+    "steps": {},
+    "errors": [
+      "scanner: [Errno 32] Broken pipe"
+    ],
+    "total_duration_sec": 1.44
+  },
+  {
+    "timestamp": "2026-03-18T18:00:01.998907+00:00",
+    "mode": "full",
+    "success": true,
+    "article_count": 25,
+    "steps": {
+      "scanner": {
+        "duration_sec": 9.54
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 113.24
+      },
+      "image_gen": {
+        "duration_sec": 2453.08,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.01
+      },
+      "build": {
+        "duration_sec": 0.82
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 2576.7
+  },
+  {
+    "timestamp": "2026-03-18T17:41:08.591820+00:00",
+    "mode": "quick",
+    "success": true,
+    "article_count": 25,
+    "steps": {
+      "scanner": {
+        "duration_sec": 4.46
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 466.57,
+        "slow": true
+      },
+      "image_gen": {
+        "duration_sec": 3727.43,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.02
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 4198.49
+  },
+  {
+    "timestamp": "2026-03-18T19:00:02.544255+00:00",
+    "mode": "full",
+    "success": true,
+    "article_count": 12,
+    "steps": {
+      "scanner": {
+        "duration_sec": 7.68
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 58.46
+      },
+      "image_gen": {
+        "duration_sec": 1489.85,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.0
+      },
+      "build": {
+        "duration_sec": 0.63
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 1556.62
+  },
+  {
+    "timestamp": "2026-03-18T20:00:02.405721+00:00",
+    "mode": "full",
+    "success": true,
+    "article_count": 15,
+    "steps": {
+      "scanner": {
+        "duration_sec": 7.62
+      },
+      "dedup": {
+        "duration_sec": 0.01
+      },
+      "rewriter": {
+        "duration_sec": 80.68
+      },
+      "image_gen": {
+        "duration_sec": 2718.21,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.01
+      },
+      "build": {
+        "duration_sec": 1.73
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 2808.27
+  },
+  {
+    "timestamp": "2026-03-18T21:00:02.261459+00:00",
+    "mode": "full",
+    "success": true,
+    "article_count": 14,
+    "steps": {
+      "scanner": {
+        "duration_sec": 8.78
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 82.18
+      },
+      "image_gen": {
+        "duration_sec": 1706.08,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.0
+      },
+      "build": {
+        "duration_sec": 1.88
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 1798.92
+  },
+  {
+    "timestamp": "2026-03-18T22:06:32.345587+00:00",
+    "mode": "full",
+    "success": false,
+    "article_count": 10,
+    "steps": {
+      "scanner": {
+        "duration_sec": 3.44
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 119.7
+      }
+    },
+    "errors": [
+      "rewriter: returned empty"
+    ],
+    "total_duration_sec": 123.13
+  },
+  {
+    "timestamp": "2026-03-18T22:00:01.776239+00:00",
+    "mode": "full",
+    "success": true,
+    "article_count": 10,
+    "steps": {
+      "scanner": {
+        "duration_sec": 9.32
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 50.58
+      },
+      "image_gen": {
+        "duration_sec": 1531.1,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.0
+      },
+      "build": {
+        "duration_sec": 2.06
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 1593.07
+  },
+  {
+    "timestamp": "2026-03-18T23:00:02.669575+00:00",
+    "mode": "full",
+    "success": true,
+    "article_count": 9,
+    "steps": {
+      "scanner": {
+        "duration_sec": 5.52
+      },
+      "dedup": {
+        "duration_sec": 0.0
+      },
+      "rewriter": {
+        "duration_sec": 42.45
+      },
+      "image_gen": {
+        "duration_sec": 334.96,
+        "slow": true,
+        "image_count": 0
+      },
+      "publisher": {
+        "duration_sec": 0.0
+      },
+      "build": {
+        "duration_sec": 2.05
+      }
+    },
+    "errors": [],
+    "total_duration_sec": 384.98
+  }
+]

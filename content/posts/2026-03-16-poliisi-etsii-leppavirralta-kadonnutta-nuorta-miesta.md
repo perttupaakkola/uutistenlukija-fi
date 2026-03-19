@@ -1,6 +1,5 @@
 ---
 title: "Poliisi etsii Leppävirralta kadonnutta nuorta miestä"
-description: "Itä-Suomen poliisi etsii 28-vuotiasta miestä, joka katosi Leppävirralla maanantaina 9. maaliskuuta. Miehestä ei ole saatu havaintoja katoamisen jälkeen."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Kotimaa

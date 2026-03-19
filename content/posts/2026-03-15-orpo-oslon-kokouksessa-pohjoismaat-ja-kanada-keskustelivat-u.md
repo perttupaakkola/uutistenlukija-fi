@@ -1,6 +1,5 @@
 ---
 title: "Orpo Oslon kokouksessa: Pohjoismaat ja Kanada keskustelivat Ukrainan tuesta ja ydinaseista"
-description: "Pääministeri Petteri Orpo osallistui sunnuntaina Pohjoismaiden ja Kanadan pääministerien kokoukseen Oslossa."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

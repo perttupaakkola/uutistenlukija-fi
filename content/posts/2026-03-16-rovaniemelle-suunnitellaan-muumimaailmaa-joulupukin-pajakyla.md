@@ -1,6 +1,5 @@
 ---
 title: "Rovaniemelle suunnitellaan Muumimaailmaa joulupukin pajakylän naapuriin"
-description: "Rovaniemen kaupunginhallitus varasi maanantaina tontin Muumimaailma oy:lle Joulupukin pajakylän alueelta."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa

@@ -1,6 +1,5 @@
 ---
 title: "Moskovaan kohdistui massiivinen lennokki-isku"
-description: "Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan suunnattua lennokkia. Moskovan pormestari Sergei Sobjanin vahvisti tiedon."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat

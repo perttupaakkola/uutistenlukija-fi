@@ -1,6 +1,5 @@
 ---
 title: "Noin 50-vuotias virolaismies kuoli lasketteluonnettomuudessa Himoksella"
-description: "Himoksen hiihtokeskuksessa Jämsässä sattui perjantaina kuolemaan johtanut lasketteluonnettomuus."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

@@ -1,6 +1,5 @@
 ---
 title: "Iranin iskut Arabiemiraatteihin ajavat ulkomaalaisia pois Dubaista"
-description: "Dubai on joutunut vakavimpaan kriisiinsä vuosikymmeniin."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat

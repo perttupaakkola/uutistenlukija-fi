@@ -1,6 +1,5 @@
 ---
 title: "Kiinan ja Yhdysvaltain kauppaneuvottelut alkoivat Pariisissa"
-description: "Kiina ja Yhdysvallat aloittivat lauantaina kauppaneuvottelut Pariisissa."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat

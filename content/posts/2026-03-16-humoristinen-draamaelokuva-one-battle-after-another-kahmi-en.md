@@ -1,6 +1,5 @@
 ---
 title: "Humoristinen draamaelokuva One Battle After Another kahmi eniten Oscar-palkintoja"
-description: "Oscar-gaalan suurin voittaja oli humoristinen draamaelokuva One Battle After Another, joka keräsi illan aikana eniten palkintoja."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri

@@ -1,6 +1,5 @@
 ---
 title: "Iranin naisten jalkapallomaajoukkueen kapteeni luopui turvapaikkahakemuksestaan Australiassa"
-description: "Iranin naisten jalkapallomaajoukkueen kapteeni Zahra Ghanbari on poistunut Australiasta ja luopunut turvapaikkahakemuksestaan."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Urheilu

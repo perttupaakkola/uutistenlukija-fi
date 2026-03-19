@@ -1,6 +1,5 @@
 ---
 title: "Nokkakolarissa Kittilässä kuoli kaksi – 19-vuotias syytetty kiistää syytteet"
-description: "Pariskunta kuoli nokkakolarissa Kittilässä marraskuussa 2024. Onnettomuus tapahtui kantatie 79:llä 21."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Kotimaa

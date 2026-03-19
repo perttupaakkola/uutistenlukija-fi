@@ -1,6 +1,5 @@
 ---
 title: "Lindsey Vonn ei sulje pois paluuta: \"En tarvitse kenenkään lupaa\""
-description: "Yhdysvaltalainen alppihiihtäjä Lindsey Vonn ei ole valmis tekemään lopullista päätöstä urastaan."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu

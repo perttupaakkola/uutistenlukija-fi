@@ -1,8 +1,11 @@
 #!/bin/bash
 # Firehose cron runner — called every 10 minutes
-# Add to crontab: */10 * * * * /path/to/firehose_cron.sh >> /path/to/logs/firehose_cron.log 2>&1
+# Polls Firehose, rewrites new articles, publishes (no Hugo build — build runs separately).
+#
+# Crontab entry (run as user, from host):
+#   */10 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/firehose_cron.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/firehose_cron.log 2>&1
 
-set -e
+set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
@@ -11,25 +14,45 @@ LOG_FILE="$LOG_DIR/firehose_$(date -u +%Y%m%d).log"
 
 mkdir -p "$LOG_DIR"
 
-echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] firehose_cron starting" | tee -a "$LOG_FILE"
+echo "" | tee -a "$LOG_FILE"
+echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] === firehose_cron starting ===" | tee -a "$LOG_FILE"
 
 cd "$PROJECT_DIR"
 
-# Activate venv if present
-if [ -f "venv/bin/activate" ]; then
-    source venv/bin/activate
+# Load .env if present
+if [ -f "$PROJECT_DIR/.env" ]; then
+    set -a
+    source "$PROJECT_DIR/.env"
+    set +a
 fi
 
-python3 pipeline/firehose.py >> "$LOG_FILE" 2>&1
+# Activate venv if present
+if [ -f "$PROJECT_DIR/venv/bin/activate" ]; then
+    source "$PROJECT_DIR/venv/bin/activate"
+fi
+
+# Run pipeline in Firehose-only mode (poll → rewrite → publish, skip RSS + Hugo build)
+python3 "$SCRIPT_DIR/run_pipeline.py" --firehose-only --quick 2>&1 | tee -a "$LOG_FILE"
+PIPELINE_EXIT=${PIPESTATUS[0]}
+
+if [ "$PIPELINE_EXIT" -ne 0 ]; then
+    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Pipeline exited with code $PIPELINE_EXIT" | tee -a "$LOG_FILE"
+    exit 1
+fi
 
 # Commit and push if new content was added
-if git -C "$PROJECT_DIR" diff --quiet HEAD -- content/; then
+cd "$PROJECT_DIR"
+git add content/ 2>/dev/null || true
+if git diff --cached --quiet; then
     echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] No new content to commit" | tee -a "$LOG_FILE"
 else
-    git -C "$PROJECT_DIR" add content/
-    git -C "$PROJECT_DIR" commit -m "auto: firehose articles $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-    git -C "$PROJECT_DIR" push origin main
-    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Committed and pushed new firehose articles" | tee -a "$LOG_FILE"
+    ARTICLE_COUNT=$(git diff --cached --name-only 2>/dev/null | grep -c "^content/posts/" || echo "0")
+    git commit -m "auto(firehose): ${ARTICLE_COUNT} articles $(date -u +%Y-%m-%dT%H:%M:%SZ)" 2>&1 | tee -a "$LOG_FILE"
+    git push origin main 2>&1 | tee -a "$LOG_FILE"
+    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Committed and pushed ${ARTICLE_COUNT} firehose articles" | tee -a "$LOG_FILE"
 fi
 
-echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] firehose_cron done" | tee -a "$LOG_FILE"
+echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] === firehose_cron done ===" | tee -a "$LOG_FILE"
+
+# Cleanup old logs (keep last 30 daily log files)
+ls -t "$LOG_DIR/firehose_"*.log 2>/dev/null | tail -n +31 | xargs rm -f 2>/dev/null || true

@@ -1,6 +1,5 @@
 ---
 title: "Perussuomalaisten kansanedustaja vaatii kasvojen peittämiskieltoa Lahden kouluihin"
-description: "Perussuomalaisten kansanedustaja Mira Nieminen vaatii, että kasvot peittävä pukeutuminen kielletään Lahden kouluissa."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

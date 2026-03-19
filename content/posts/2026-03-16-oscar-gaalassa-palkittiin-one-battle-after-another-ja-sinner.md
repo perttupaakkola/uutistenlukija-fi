@@ -1,6 +1,5 @@
 ---
 title: "Oscar-gaalassa palkittiin One Battle After Another ja Sinners"
-description: "Hollywoodin 98. Oscar-gaala järjestettiin sunnuntaina Dolby Theatressa Los Angelesissa."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri

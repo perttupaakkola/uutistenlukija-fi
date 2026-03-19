@@ -555,20 +555,10 @@ img { max-width: 100%; height: auto; }
 
 .related-link {
   display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
+  flex-direction: column;
   padding: 0.75rem;
   border-left: 3px solid var(--border);
   transition: border-color 0.2s;
-  align-items: flex-start;
-}
-
-.related-thumb {
-  width: 80px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 4px;
-  flex-shrink: 0;
 }
 
 .related-link:hover {

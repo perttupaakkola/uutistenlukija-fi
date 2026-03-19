@@ -1,6 +1,5 @@
 ---
 title: "Valtonen torjuu ajatuksen Natosta Iranin-operaation osapuolena"
-description: "Ulkoministeri Elina Valtonen ei pidä Natoa oikeana toimijana mahdolliseen sotilasoperaatioon Hormuzinsalmella."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat

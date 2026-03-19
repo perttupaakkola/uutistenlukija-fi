@@ -1,6 +1,5 @@
 ---
 title: "Pohjois-Koreassa järjestettiin vaalit – äänestysaktiivisuus lähes sata prosenttia"
-description: "Pohjois-Korea järjesti sunnuntaina kansallisen kansankokouksen vaalit."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat

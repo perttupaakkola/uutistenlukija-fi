@@ -1,6 +1,5 @@
 ---
 title: "Lentoyhtiöt kiertävät sodan sulkemia ilmatiloja"
-description: "Iranin ja Persianlahden ilmatila on edelleen rajoitettu ohjusiskujen jälkeen."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat

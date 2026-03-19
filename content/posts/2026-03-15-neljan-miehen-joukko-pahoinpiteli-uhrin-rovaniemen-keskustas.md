@@ -1,6 +1,5 @@
 ---
 title: "Neljän miehen joukko pahoinpiteli uhrin Rovaniemen keskustassa"
-description: "Poliisi sai sunnuntain vastaisena yönä ilmoituksen pahoinpitelystä Rovaniemen keskustassa."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

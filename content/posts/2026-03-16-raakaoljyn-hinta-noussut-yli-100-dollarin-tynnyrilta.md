@@ -1,6 +1,5 @@
 ---
 title: "Raakaöljyn hinta noussut yli 100 dollarin tynnyriltä"
-description: "Raakaöljyn hinta on kivunnut tasoille, joita ei ole nähty sitten vuoden 2022 energiakriisin."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Talous

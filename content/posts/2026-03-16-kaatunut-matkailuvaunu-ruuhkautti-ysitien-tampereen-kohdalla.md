@@ -1,6 +1,5 @@
 ---
 title: "Kaatunut matkailuvaunu ruuhkautti ysitien Tampereen kohdalla"
-description: "Ajokaistalle kaatunut matkailuvaunu aiheutti ruuhkaa valtatie 9:llä Tampereen kohdalla maanantai-iltana."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa

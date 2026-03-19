@@ -1,6 +1,5 @@
 ---
 title: "Jukurit-ikoni Jesper Piitulainen jättää Mikkelin – nuoruuden pussikaljoista kapteenin nauhaan"
-description: "Jesper Piitulainen lähtee Mikkelin Jukureista. Pienikokoisesta hyökkääjästä kasvoi joukkueen kapteeni ja yksi seuran tunnetuimmista nimistä."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu

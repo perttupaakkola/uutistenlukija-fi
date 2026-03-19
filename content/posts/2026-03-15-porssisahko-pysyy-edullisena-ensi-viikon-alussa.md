@@ -1,6 +1,5 @@
 ---
 title: "Pörssisähkö pysyy edullisena ensi viikon alussa"
-description: "Sähkön pörssihinta jatkaa matalalla tasolla ensi viikon alussa."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Talous

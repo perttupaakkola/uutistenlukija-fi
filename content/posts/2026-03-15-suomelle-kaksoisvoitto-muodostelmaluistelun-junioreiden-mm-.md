@@ -1,6 +1,5 @@
 ---
 title: "Suomelle kaksoisvoitto muodostelmaluistelun junioreiden MM-kisoissa"
-description: "Helsinki Fintastic voitti kultaa muodostelmaluistelun junioreiden MM-kisoissa sunnuntaina vakuuttavalla esityksellä."
 date: 2026-03-15T12:41:00+00:00
 categories:
   - Urheilu

@@ -1,6 +1,5 @@
 ---
 title: "Venäjän propagandasta kertova Mr Nobody Against Putin voitti parhaan dokumentin Oscarin"
-description: "Dokumenttielokuva Mr Nobody Against Putin voitti parhaan dokumenttielokuvan Oscar-palkinnon."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri

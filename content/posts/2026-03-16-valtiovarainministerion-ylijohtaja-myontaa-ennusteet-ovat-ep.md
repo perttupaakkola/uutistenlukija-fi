@@ -1,6 +1,5 @@
 ---
 title: "Valtiovarainministeriön ylijohtaja myöntää: ennusteet ovat epäonnistuneet toistuvasti"
-description: "Valtiovarainministeriön kansantalousosaston päällikkö Mikko Spolander arvioi suorasanaisesti ministeriön ennustevirheitä."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Talous

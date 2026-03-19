@@ -1,6 +1,5 @@
 ---
 title: "Kangasniemi luopuu autiotalokampanjansa nimestä Suomen asuntomessujen vaatimuksesta"
-description: "Kangasniemen kunta muuttaa tyhjiin taloihin keskittyvän kampanjansa nimen."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa

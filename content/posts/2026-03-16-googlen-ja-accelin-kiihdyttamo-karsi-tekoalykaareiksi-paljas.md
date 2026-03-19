@@ -1,6 +1,5 @@
 ---
 title: "Googlen ja Accelin kiihdyttämö karsi tekoälykääreiksi paljastuneet hakijat"
-description: "Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöohjelmaansa yli 4 000 hakemuksen joukosta."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Teknologia

@@ -1,6 +1,5 @@
 ---
 title: "Nvidian vuosikonferenssi alkaa – toimitusjohtaja esittelee tekoälyn tulevaisuutta"
-description: "Nvidian toimitusjohtaja Jensen Huang astuu lavalle yhtiön vuotuisessa GTC-konferenssissa."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Teknologia

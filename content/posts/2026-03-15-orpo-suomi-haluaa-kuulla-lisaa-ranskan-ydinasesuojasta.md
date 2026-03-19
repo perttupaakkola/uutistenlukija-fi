@@ -1,6 +1,5 @@
 ---
 title: "Orpo: Suomi haluaa kuulla lisää Ranskan ydinasesuojasta"
-description: "Pääministeri Petteri Orpo sanoi Oslossa, että Suomi on kiinnostunut kuulemaan tarkemmin Ranskan tarjoamasta ydinasepelotteesta Euroopan turvallisuuden"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

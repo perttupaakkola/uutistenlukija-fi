@@ -1,6 +1,5 @@
 ---
 title: "Iranin naisten jalkapallojoukkueen kapteeni poistui Australiasta luovuttuaan turvapaikasta"
-description: "Iranin naisten jalkapallomaajoukkueen kapteeni Zahra Ghanbari poistui Australiasta sunnuntai-iltana."
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Urheilu

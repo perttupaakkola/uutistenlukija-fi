@@ -1,0 +1,173 @@
+=== Auto-publish started at Wed Mar 18 12:00:01 PM UTC 2026 ===
+[1/3] Running pipeline...
+Traceback (most recent call last):
+  File "/home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/rewriter.py", line 167, in rewrite_articles
+    response_text = _call_llm(SYSTEM_PROMPT, prompt)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/rewriter.py", line 93, in _call_llm
+    return complete_with_claude(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pertt/.openclaw/workspace/projects/autopoetry/claude_transport.py", line 85, in complete_with_claude
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/skills/openclaw-self-edit/scripts/claude_openclaw_bridge.sh', 'Follow the instructions exactly.\n\nSYSTEM INSTRUCTIONS:\nOlet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.\n\nSaat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.\n\nTÄRKEÄÄ:\n- Tämä on SINUN artikkelisi. Älä viittaa lähteisiin, alkuperäisiin uutisiin tai muihin medioihin.\n- Poikkeus: jos artikkeli perustuu yksittäisen tahon lausuntoon tai tutkimukseen, mainitse se luonnollisesti osana tekstiä.\n- Älä mainitse "alkuperäistä lähdettä", "raportin mukaan" (paitsi jos tiedät raportin nimen), "uutisen mukaan" tms.\n- Kirjoita 3-5 kappaletta, 200-400 sanaa.\n\nKIRJOITUSTYYLI:\n- Aloita suoraan asiasta.\n- Lyhyet, suorat lauseet. Vaihtele pituutta.\n- Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.\n- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.\n- Vältä passiivia kun aktiivi toimii.\n- Ei emojeja, lihavointia tai otsikkolistoja.\n- Ei ajatusviivoja (—) liiallisesti.\n- Suomeksi vain ensimmäinen sana isolla otsikoissa.\n- Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").\n- Lopeta viimeiseen faktaan.\n\nTEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:\n- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)\n- Ei kolmen sarjoja joka kappaleessa\n- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)\n- Ei mainosmaista kieltä\n- Ei chatbot-artefakteja\n- Anna faktojen puhua, älä paisuttele\n\nVastaa VAIN JSON-muodossa.\n\nCONVERSATION:\n\nUSER:\nKirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.\n\n\n---\nAihe 1:\nOtsikko: Kirjailija Jung Chang ei voi matkustaa Kiinaan hyvästelemään äitiään: joutuisi vankilaan\nKuvaus: Villijoutsenet-kirjallaan tunnetuksi tullut tietokirjailija Jung Chang seuraa surullisena Kiinan muutosta. Hän pelkää maolaisuuden palaavan.\n---\n\n---\nAihe 2:\nOtsikko: Yli 84 000 hakijaa perusopetuksen jälkeiseen koulutukseen\nKuvaus: \n---\n\n---\nAihe 3:\nOtsikko: Mitä eri maat haluavat Iranin sodassa? Tämä juttu selittää\nKuvaus: Yhdysvalloilla, Israelilla, Iranilla ja Persianlahden mailla on hyvin erilaiset käsitykset sodasta.\n---\n\n---\nAihe 4:\nOtsikko: Ministerin tiedotus\xadtilaisuus peruttiin yllättäen viime hetkellä\nKuvaus: Lakia perusopetuksen osaamistakuusta joudutaan vielä hiomaan.  Opetusministeri Anders Adlercreutzin (r) torstaille aikataulutettu tiedotustilaisuus perusopetuksen osaamistakuusta peruttiin yllättäen keskiviikkona. Adlercreutzin oli määrä kertoa, miten oppilaiden arviointiin ja opinnoissa etenemiseen liittyviä säännöksiä yhtenäistetään. Lakimuutoksen myötä oppiaineiden tavoitteita ja sisältöjä on tarkoitus selkeyttää ja määritellä vähimmäisosaaminen vuosiluokalta toiselle edettäessä.\n---\n\n---\nAihe 5:\nOtsikko: Toinen Muumimaailma paljastettiin – Näin käy Muumitalon\nKuvaus: Rovaniemelle suunniteltu muumipuisto olisi auki myös talvisin, jolloin valtaosa asiakkaista olisi luultavasti ulkomaalaisia, Muumimaailma oy:n hallituksen puheenjohtaja Tim Livson kertoo. Rovaniemelle kaavailtu muumiaiheinen teemapuisto poikkeaisi Naantalin Muumimaailmasta ainakin kolmella tavalla, Muumimaailma oy:n hallituksen puheenjohtaja Tim Livson kertoo Iltalehdelle. Kenties keskeisin ero on siinä, että Rovaniemellä muumipuisto olisi auki myös talvisin. Naantalin Muumimaailma taas on auki \n---\n\n\nVastaa JSON-listana:\n[\n  {\n    "title": "Uutisen otsikko",\n    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",\n    "category": "Yksi: Kotimaa, Ulkomaat, Talous, Teknologia, Urheilu, Kulttuuri, Tiede",\n    "original_title": "Alkuperäinen otsikko RSS:stä"\n  }\n]\n\nVastaa VAIN JSON-listalla.\n\nReturn only valid JSON. Do not wrap it in markdown fences.']' returned non-zero exit status 124.
+============================================================
+Uutistenlukija Pipeline — 2026-03-18T12:00:01.661174+00:00
+============================================================
+
+📡 Vaihe 1: RSS-syötteiden skannaus...
+[scanner] Fetching Yle Uutiset...
+[scanner]   → 30 articles
+[scanner] Fetching Iltalehti...
+[scanner]   → 20 articles
+[scanner] Fetching Kauppalehti...
+[scanner]   → 10 articles
+[scanner] Fetching Taloussanomat...
+[scanner]   → 30 articles
+[scanner] Fetching Yle Urheilu...
+[scanner]   → 30 articles
+[scanner] Fetching IS Urheilu...
+[scanner]   → 30 articles
+[scanner] Fetching Tekniikka & Talous...
+[scanner]   → 10 articles
+[scanner] Fetching Reuters World...
+[scanner] Error fetching Reuters World: HTTP Error 404: Not Found
+[scanner]   → 0 articles
+[scanner] Fetching BBC World...
+[scanner]   → 28 articles
+[scanner] Fetching BBC Technology...
+[scanner]   → 20 articles
+[scanner] Fetching BBC Science...
+[scanner]   → 30 articles
+[scanner] Fetching AP News...
+[scanner] Error fetching AP News: HTTP Error 403: Forbidden
+[scanner]   → 0 articles
+[scanner] Fetching The Guardian World...
+[scanner]   → 30 articles
+[scanner] Fetching TechCrunch...
+[scanner]   → 20 articles
+[scanner] Fetching Ars Technica...
+[scanner]   → 20 articles
+[scanner] Fetching Hacker News Best...
+[scanner]   → 30 articles
+[scanner] Fetching Der Spiegel International...
+[scanner]   → 20 articles
+[scanner] Trending stories: 0
+[scanner] Category distribution: {'Kotimaa': 10, 'Ulkomaat': 5, 'Talous': 4, 'Teknologia': 1, 'Urheilu': 3, 'Kulttuuri': 1, 'Tiede': 1}
+[scanner] Total: 358 → Unique: 349 → Selected: 25
+  ⏱️  scanner: 9.4s
+
+🔍 Vaihe 1b: Duplikaattien suodatus...
+[dedup] 25 scanned → 25 new (0 duplicates filtered)
+  ⏱️  dedup: 0.0s
+
+✍️  Vaihe 2: 25 artikkelin uudelleenkirjoitus...
+[writer] Processing batch 1 (5 articles)...
+[writer]   Using Claude Code bridge...
+[writer]   Pass 1 → 5 articles written
+[writer]   Using Claude Code bridge...
+[writer]   Pass 2 (audit) → 5 articles cleaned
+[writer] Processing batch 2 (5 articles)...
+[writer]   Using Claude Code bridge...
+[writer]   Pass 1 → 5 articles written
+[writer]   Using Claude Code bridge...
+[writer]   Pass 2 (audit) → 5 articles cleaned
+[writer] Processing batch 3 (5 articles)...
+[writer]   Using Claude Code bridge...
+[writer] Error: Command '['/workspace/skills/openclaw-self-edit/scripts/claude_openclaw_bridge.sh', 'Follow the instructions exactly.\n\nSYSTEM INSTRUCTIONS:\nOlet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.\n\nSaat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.\n\nTÄRKEÄÄ:\n- Tämä on SINUN artikkelisi. Älä viittaa lähteisiin, alkuperäisiin uutisiin tai muihin medioihin.\n- Poikkeus: jos artikkeli perustuu yksittäisen tahon lausuntoon tai tutkimukseen, mainitse se luonnollisesti osana tekstiä.\n- Älä mainitse "alkuperäistä lähdettä", "raportin mukaan" (paitsi jos tiedät raportin nimen), "uutisen mukaan" tms.\n- Kirjoita 3-5 kappaletta, 200-400 sanaa.\n\nKIRJOITUSTYYLI:\n- Aloita suoraan asiasta.\n- Lyhyet, suorat lauseet. Vaihtele pituutta.\n- Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.\n- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.\n- Vältä passiivia kun aktiivi toimii.\n- Ei emojeja, lihavointia tai otsikkolistoja.\n- Ei ajatusviivoja (—) liiallisesti.\n- Suomeksi vain ensimmäinen sana isolla otsikoissa.\n- Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").\n- Lopeta viimeiseen faktaan.\n\nTEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:\n- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)\n- Ei kolmen sarjoja joka kappaleessa\n- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)\n- Ei mainosmaista kieltä\n- Ei chatbot-artefakteja\n- Anna faktojen puhua, älä paisuttele\n\nVastaa VAIN JSON-muodossa.\n\nCONVERSATION:\n\nUSER:\nKirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.\n\n\n---\nAihe 1:\nOtsikko: Kirjailija Jung Chang ei voi matkustaa Kiinaan hyvästelemään äitiään: joutuisi vankilaan\nKuvaus: Villijoutsenet-kirjallaan tunnetuksi tullut tietokirjailija Jung Chang seuraa surullisena Kiinan muutosta. Hän pelkää maolaisuuden palaavan.\n---\n\n---\nAihe 2:\nOtsikko: Yli 84 000 hakijaa perusopetuksen jälkeiseen koulutukseen\nKuvaus: \n---\n\n---\nAihe 3:\nOtsikko: Mitä eri maat haluavat Iranin sodassa? Tämä juttu selittää\nKuvaus: Yhdysvalloilla, Israelilla, Iranilla ja Persianlahden mailla on hyvin erilaiset käsitykset sodasta.\n---\n\n---\nAihe 4:\nOtsikko: Ministerin tiedotus\xadtilaisuus peruttiin yllättäen viime hetkellä\nKuvaus: Lakia perusopetuksen osaamistakuusta joudutaan vielä hiomaan.  Opetusministeri Anders Adlercreutzin (r) torstaille aikataulutettu tiedotustilaisuus perusopetuksen osaamistakuusta peruttiin yllättäen keskiviikkona. Adlercreutzin oli määrä kertoa, miten oppilaiden arviointiin ja opinnoissa etenemiseen liittyviä säännöksiä yhtenäistetään. Lakimuutoksen myötä oppiaineiden tavoitteita ja sisältöjä on tarkoitus selkeyttää ja määritellä vähimmäisosaaminen vuosiluokalta toiselle edettäessä.\n---\n\n---\nAihe 5:\nOtsikko: Toinen Muumimaailma paljastettiin – Näin käy Muumitalon\nKuvaus: Rovaniemelle suunniteltu muumipuisto olisi auki myös talvisin, jolloin valtaosa asiakkaista olisi luultavasti ulkomaalaisia, Muumimaailma oy:n hallituksen puheenjohtaja Tim Livson kertoo. Rovaniemelle kaavailtu muumiaiheinen teemapuisto poikkeaisi Naantalin Muumimaailmasta ainakin kolmella tavalla, Muumimaailma oy:n hallituksen puheenjohtaja Tim Livson kertoo Iltalehdelle. Kenties keskeisin ero on siinä, että Rovaniemellä muumipuisto olisi auki myös talvisin. Naantalin Muumimaailma taas on auki \n---\n\n\nVastaa JSON-listana:\n[\n  {\n    "title": "Uutisen otsikko",\n    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",\n    "category": "Yksi: Kotimaa, Ulkomaat, Talous, Teknologia, Urheilu, Kulttuuri, Tiede",\n    "original_title": "Alkuperäinen otsikko RSS:stä"\n  }\n]\n\nVastaa VAIN JSON-listalla.\n\nReturn only valid JSON. Do not wrap it in markdown fences.']' returned non-zero exit status 124.
+[writer] Processing batch 4 (5 articles)...
+[writer]   Using Claude Code bridge...
+Traceback (most recent call last):
+  File "/home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/rewriter.py", line 167, in rewrite_articles
+    response_text = _call_llm(SYSTEM_PROMPT, prompt)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/rewriter.py", line 93, in _call_llm
+    return complete_with_claude(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pertt/.openclaw/workspace/projects/autopoetry/claude_transport.py", line 85, in complete_with_claude
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/skills/openclaw-self-edit/scripts/claude_openclaw_bridge.sh', 'Follow the instructions exactly.\n\nSYSTEM INSTRUCTIONS:\nOlet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.\n\nSaat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.\n\nTÄRKEÄÄ:\n- Tämä on SINUN artikkelisi. Älä viittaa lähteisiin, alkuperäisiin uutisiin tai muihin medioihin.\n- Poikkeus: jos artikkeli perustuu yksittäisen tahon lausuntoon tai tutkimukseen, mainitse se luonnollisesti osana tekstiä.\n- Älä mainitse "alkuperäistä lähdettä", "raportin mukaan" (paitsi jos tiedät raportin nimen), "uutisen mukaan" tms.\n- Kirjoita 3-5 kappaletta, 200-400 sanaa.\n\nKIRJOITUSTYYLI:\n- Aloita suoraan asiasta.\n- Lyhyet, suorat lauseet. Vaihtele pituutta.\n- Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.\n- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.\n- Vältä passiivia kun aktiivi toimii.\n- Ei emojeja, lihavointia tai otsikkolistoja.\n- Ei ajatusviivoja (—) liiallisesti.\n- Suomeksi vain ensimmäinen sana isolla otsikoissa.\n- Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").\n- Lopeta viimeiseen faktaan.\n\nTEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:\n- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)\n- Ei kolmen sarjoja joka kappaleessa\n- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)\n- Ei mainosmaista kieltä\n- Ei chatbot-artefakteja\n- Anna faktojen puhua, älä paisuttele\n\nVastaa VAIN JSON-muodossa.\n\nCONVERSATION:\n\nUSER:\nKirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.\n\n\n---\nAihe 1:\nOtsikko: Bodö/Glimtin taival päättyi arktisen Tuhkimon jääkengän sulamiseen, mutta tarina ihastutti jalkapallomaailmaa\nKuvaus: Tämän jalkapallokauden suurimpiin tuhkimotarinoihin kuuluva Bodö/Glimtin taival Mestarien liigassa päättyi myöhään tiistai-iltana.\n---\n\n---\nAihe 2:\nOtsikko: Väite: Iranin uusi johtaja on homo – Trump vain nauroi\nKuvaus: Yhdysvaltain presidentti Donald Trump kuuli Iranin uuteen johtajaan liittyvistä väitteistä viime viikolla. Yhdysvaltain presidentti Donald Trump ällistyi kuullessaan väitteen Iranin uudesta johtajasta, kertoo The New York Post (NYP). Trumpille kerrottiin, että Yhdysvaltojen tiedustelutietojen mukaan Mojtaba Khamenei vaikuttaa olevan homoseksuaali.\n---\n\n---\nAihe 3:\nOtsikko: Jere Karalahden velanperijää epäillään uusista rikoksista\nKuvaus: Miestä epäillään ryöstöstä ja vapaudenriistosta. Helsingin käräjäoikeus vangitsi tiistaina miehen, joka liittyy samaan huumejuttuun kuin Jere Karalahti. Vuonna 1999 syntynyt 27-vuotias mies vangittiin uusista rikoksista epäiltynä. Miestä epäillään ryöstöstä ja vapaudenriistosta, jotka ovat tapahtuneet Helsingissä 9.3.–10.3.\n---\n\n---\nAihe 4:\nOtsikko: Törkeästä pakoterikoksesta epäilty kehitti erikoista mönkijää Suomessa verorahoin ja yritti viedä prototyypin Venäjälle\nKuvaus: 18 Wheels Oy:n pääomistaja kertoo Ylelle, että hän kokee toimineensa avoimesti.\n---\n\n---\nAihe 5:\nOtsikko: Orbán sai vakavasti otettavan haastajan – lähestyvät vaalit ratkaisevat, pysyykö Unkari Putinin sylissä\nKuvaus: Unkarissa järjestetään huhtikuussa vaalit. Vastakkain ovat EU:n kiusankappale Viktor Orbán ja nopeasti suosioon kivunnut Péter Magyar.\n---\n\n\nVastaa JSON-listana:\n[\n  {\n    "title": "Uutisen otsikko",\n    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",\n    "category": "Yksi: Kotimaa, Ulkomaat, Talous, Teknologia, Urheilu, Kulttuuri, Tiede",\n    "original_title": "Alkuperäinen otsikko RSS:stä"\n  }\n]\n\nVastaa VAIN JSON-listalla.\n\nReturn only valid JSON. Do not wrap it in markdown fences.']' returned non-zero exit status 124.
+[writer] Error: Command '['/workspace/skills/openclaw-self-edit/scripts/claude_openclaw_bridge.sh', 'Follow the instructions exactly.\n\nSYSTEM INSTRUCTIONS:\nOlet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.\n\nSaat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.\n\nTÄRKEÄÄ:\n- Tämä on SINUN artikkelisi. Älä viittaa lähteisiin, alkuperäisiin uutisiin tai muihin medioihin.\n- Poikkeus: jos artikkeli perustuu yksittäisen tahon lausuntoon tai tutkimukseen, mainitse se luonnollisesti osana tekstiä.\n- Älä mainitse "alkuperäistä lähdettä", "raportin mukaan" (paitsi jos tiedät raportin nimen), "uutisen mukaan" tms.\n- Kirjoita 3-5 kappaletta, 200-400 sanaa.\n\nKIRJOITUSTYYLI:\n- Aloita suoraan asiasta.\n- Lyhyet, suorat lauseet. Vaihtele pituutta.\n- Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.\n- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.\n- Vältä passiivia kun aktiivi toimii.\n- Ei emojeja, lihavointia tai otsikkolistoja.\n- Ei ajatusviivoja (—) liiallisesti.\n- Suomeksi vain ensimmäinen sana isolla otsikoissa.\n- Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").\n- Lopeta viimeiseen faktaan.\n\nTEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:\n- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)\n- Ei kolmen sarjoja joka kappaleessa\n- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)\n- Ei mainosmaista kieltä\n- Ei chatbot-artefakteja\n- Anna faktojen puhua, älä paisuttele\n\nVastaa VAIN JSON-muodossa.\n\nCONVERSATION:\n\nUSER:\nKirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.\n\n\n---\nAihe 1:\nOtsikko: Bodö/Glimtin taival päättyi arktisen Tuhkimon jääkengän sulamiseen, mutta tarina ihastutti jalkapallomaailmaa\nKuvaus: Tämän jalkapallokauden suurimpiin tuhkimotarinoihin kuuluva Bodö/Glimtin taival Mestarien liigassa päättyi myöhään tiistai-iltana.\n---\n\n---\nAihe 2:\nOtsikko: Väite: Iranin uusi johtaja on homo – Trump vain nauroi\nKuvaus: Yhdysvaltain presidentti Donald Trump kuuli Iranin uuteen johtajaan liittyvistä väitteistä viime viikolla. Yhdysvaltain presidentti Donald Trump ällistyi kuullessaan väitteen Iranin uudesta johtajasta, kertoo The New York Post (NYP). Trumpille kerrottiin, että Yhdysvaltojen tiedustelutietojen mukaan Mojtaba Khamenei vaikuttaa olevan homoseksuaali.\n---\n\n---\nAihe 3:\nOtsikko: Jere Karalahden velanperijää epäillään uusista rikoksista\nKuvaus: Miestä epäillään ryöstöstä ja vapaudenriistosta. Helsingin käräjäoikeus vangitsi tiistaina miehen, joka liittyy samaan huumejuttuun kuin Jere Karalahti. Vuonna 1999 syntynyt 27-vuotias mies vangittiin uusista rikoksista epäiltynä. Miestä epäillään ryöstöstä ja vapaudenriistosta, jotka ovat tapahtuneet Helsingissä 9.3.–10.3.\n---\n\n---\nAihe 4:\nOtsikko: Törkeästä pakoterikoksesta epäilty kehitti erikoista mönkijää Suomessa verorahoin ja yritti viedä prototyypin Venäjälle\nKuvaus: 18 Wheels Oy:n pääomistaja kertoo Ylelle, että hän kokee toimineensa avoimesti.\n---\n\n---\nAihe 5:\nOtsikko: Orbán sai vakavasti otettavan haastajan – lähestyvät vaalit ratkaisevat, pysyykö Unkari Putinin sylissä\nKuvaus: Unkarissa järjestetään huhtikuussa vaalit. Vastakkain ovat EU:n kiusankappale Viktor Orbán ja nopeasti suosioon kivunnut Péter Magyar.\n---\n\n\nVastaa JSON-listana:\n[\n  {\n    "title": "Uutisen otsikko",\n    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",\n    "category": "Yksi: Kotimaa, Ulkomaat, Talous, Teknologia, Urheilu, Kulttuuri, Tiede",\n    "original_title": "Alkuperäinen otsikko RSS:stä"\n  }\n]\n\nVastaa VAIN JSON-listalla.\n\nReturn only valid JSON. Do not wrap it in markdown fences.']' returned non-zero exit status 124.
+[writer] Processing batch 5 (5 articles)...
+[writer]   Using Claude Code bridge...
+Traceback (most recent call last):
+  File "/home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/rewriter.py", line 167, in rewrite_articles
+    response_text = _call_llm(SYSTEM_PROMPT, prompt)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/rewriter.py", line 93, in _call_llm
+    return complete_with_claude(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pertt/.openclaw/workspace/projects/autopoetry/claude_transport.py", line 85, in complete_with_claude
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/skills/openclaw-self-edit/scripts/claude_openclaw_bridge.sh', 'Follow the instructions exactly.\n\nSYSTEM INSTRUCTIONS:\nOlet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.\n\nSaat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.\n\nTÄRKEÄÄ:\n- Tämä on SINUN artikkelisi. Älä viittaa lähteisiin, alkuperäisiin uutisiin tai muihin medioihin.\n- Poikkeus: jos artikkeli perustuu yksittäisen tahon lausuntoon tai tutkimukseen, mainitse se luonnollisesti osana tekstiä.\n- Älä mainitse "alkuperäistä lähdettä", "raportin mukaan" (paitsi jos tiedät raportin nimen), "uutisen mukaan" tms.\n- Kirjoita 3-5 kappaletta, 200-400 sanaa.\n\nKIRJOITUSTYYLI:\n- Aloita suoraan asiasta.\n- Lyhyet, suorat lauseet. Vaihtele pituutta.\n- Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.\n- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.\n- Vältä passiivia kun aktiivi toimii.\n- Ei emojeja, lihavointia tai otsikkolistoja.\n- Ei ajatusviivoja (—) liiallisesti.\n- Suomeksi vain ensimmäinen sana isolla otsikoissa.\n- Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").\n- Lopeta viimeiseen faktaan.\n\nTEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:\n- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)\n- Ei kolmen sarjoja joka kappaleessa\n- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)\n- Ei mainosmaista kieltä\n- Ei chatbot-artefakteja\n- Anna faktojen puhua, älä paisuttele\n\nVastaa VAIN JSON-muodossa.\n\nCONVERSATION:\n\nUSER:\nKirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.\n\n\n---\nAihe 1:\nOtsikko: Entinen NHL-tähti menetti jättisumman – suomii itseään: ”Olin naiivi typerys”\nKuvaus: Entisen jääkiekkoilijan uusi urasuuntaus ei mennyt putkeen.\n---\n\n---\nAihe 2:\nOtsikko: Krista Kiurun valiokunnassa tapahtuu taas\nKuvaus: Sosiaali- ja terveysvaliokunnassa viime viikolla ison riidan aiheuttanut asia saattaa päätyä sittenkin uudelleen perustuslakivaliokunnan syyniin. Sosiaali- ja terveysvaliokunnassa käytiin viime viikolla rajua poliittista vääntöä teknologisten ratkaisujen käyttämisestä asiakkaan sosiaalipalveluissa. Hallituspuolueet päättivät tuolloin äänin 9–8, että asiantuntijakuulemiset lakkautetaan eikä asiaa palauteta enää uudestaan perustuslakivaliokuntaan.\n---\n\n---\nAihe 3:\nOtsikko: Puuilolta liputusilmoitus\nKuvaus: Sijoitusyhtiö The Capital Group Companies on vähentänyt omistustaan Puuilossa alle viiden prosentin liputusrajan.\n---\n\n---\nAihe 4:\nOtsikko: PÖRSSI: Neste jäähdyttelee, konepajat nosteessa – Iran-dippi kurottiin vauhdilla umpeen Helsingin pörssissä\nKuvaus: Helsingin pörssi on viimeksi liikkunut yli 13 000 pisteen lukemissa Lähi-idän kriisin alkaessa.\n---\n\n---\nAihe 5:\nOtsikko: Naisen epäillään huijanneen liki miljoona euroa – HS: Petkutti läheisiään riipaisevalla tavalla\nKuvaus: Naisen epäillään huijanneen läheisiltään ja tuttaviltaan satojatuhansia euroja tarinalla syövästä, kertoo Helsingin Sanomat. Lähes miljoonan euron arvoisista huijauksista epäilty nainen on Helsingin Sanomien tietojen mukaan työskennellyt vuosia ulkoministeriössä ja valtion omistamassa Business Finlandissa. Lehti on haastatellut kolmea henkilöä, joita huijauksista epäilty 38-vuotias nainen lähestyi viime kesänä. Heistä yksi kertoo lainanneensa naiselle 15\xa0000 euroa ja tehneensä joulukuussa rikosi\n---\n\n\nVastaa JSON-listana:\n[\n  {\n    "title": "Uutisen otsikko",\n    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",\n    "category": "Yksi: Kotimaa, Ulkomaat, Talous, Teknologia, Urheilu, Kulttuuri, Tiede",\n    "original_title": "Alkuperäinen otsikko RSS:stä"\n  }\n]\n\nVastaa VAIN JSON-listalla.\n\nReturn only valid JSON. Do not wrap it in markdown fences.']' returned non-zero exit status 124.
+[writer] Error: Command '['/workspace/skills/openclaw-self-edit/scripts/claude_openclaw_bridge.sh', 'Follow the instructions exactly.\n\nSYSTEM INSTRUCTIONS:\nOlet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.\n\nSaat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.\n\nTÄRKEÄÄ:\n- Tämä on SINUN artikkelisi. Älä viittaa lähteisiin, alkuperäisiin uutisiin tai muihin medioihin.\n- Poikkeus: jos artikkeli perustuu yksittäisen tahon lausuntoon tai tutkimukseen, mainitse se luonnollisesti osana tekstiä.\n- Älä mainitse "alkuperäistä lähdettä", "raportin mukaan" (paitsi jos tiedät raportin nimen), "uutisen mukaan" tms.\n- Kirjoita 3-5 kappaletta, 200-400 sanaa.\n\nKIRJOITUSTYYLI:\n- Aloita suoraan asiasta.\n- Lyhyet, suorat lauseet. Vaihtele pituutta.\n- Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.\n- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.\n- Vältä passiivia kun aktiivi toimii.\n- Ei emojeja, lihavointia tai otsikkolistoja.\n- Ei ajatusviivoja (—) liiallisesti.\n- Suomeksi vain ensimmäinen sana isolla otsikoissa.\n- Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").\n- Lopeta viimeiseen faktaan.\n\nTEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:\n- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)\n- Ei kolmen sarjoja joka kappaleessa\n- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)\n- Ei mainosmaista kieltä\n- Ei chatbot-artefakteja\n- Anna faktojen puhua, älä paisuttele\n\nVastaa VAIN JSON-muodossa.\n\nCONVERSATION:\n\nUSER:\nKirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.\n\n\n---\nAihe 1:\nOtsikko: Entinen NHL-tähti menetti jättisumman – suomii itseään: ”Olin naiivi typerys”\nKuvaus: Entisen jääkiekkoilijan uusi urasuuntaus ei mennyt putkeen.\n---\n\n---\nAihe 2:\nOtsikko: Krista Kiurun valiokunnassa tapahtuu taas\nKuvaus: Sosiaali- ja terveysvaliokunnassa viime viikolla ison riidan aiheuttanut asia saattaa päätyä sittenkin uudelleen perustuslakivaliokunnan syyniin. Sosiaali- ja terveysvaliokunnassa käytiin viime viikolla rajua poliittista vääntöä teknologisten ratkaisujen käyttämisestä asiakkaan sosiaalipalveluissa. Hallituspuolueet päättivät tuolloin äänin 9–8, että asiantuntijakuulemiset lakkautetaan eikä asiaa palauteta enää uudestaan perustuslakivaliokuntaan.\n---\n\n---\nAihe 3:\nOtsikko: Puuilolta liputusilmoitus\nKuvaus: Sijoitusyhtiö The Capital Group Companies on vähentänyt omistustaan Puuilossa alle viiden prosentin liputusrajan.\n---\n\n---\nAihe 4:\nOtsikko: PÖRSSI: Neste jäähdyttelee, konepajat nosteessa – Iran-dippi kurottiin vauhdilla umpeen Helsingin pörssissä\nKuvaus: Helsingin pörssi on viimeksi liikkunut yli 13 000 pisteen lukemissa Lähi-idän kriisin alkaessa.\n---\n\n---\nAihe 5:\nOtsikko: Naisen epäillään huijanneen liki miljoona euroa – HS: Petkutti läheisiään riipaisevalla tavalla\nKuvaus: Naisen epäillään huijanneen läheisiltään ja tuttaviltaan satojatuhansia euroja tarinalla syövästä, kertoo Helsingin Sanomat. Lähes miljoonan euron arvoisista huijauksista epäilty nainen on Helsingin Sanomien tietojen mukaan työskennellyt vuosia ulkoministeriössä ja valtion omistamassa Business Finlandissa. Lehti on haastatellut kolmea henkilöä, joita huijauksista epäilty 38-vuotias nainen lähestyi viime kesänä. Heistä yksi kertoo lainanneensa naiselle 15\xa0000 euroa ja tehneensä joulukuussa rikosi\n---\n\n\nVastaa JSON-listana:\n[\n  {\n    "title": "Uutisen otsikko",\n    "content": "3-5 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla.",\n    "category": "Yksi: Kotimaa, Ulkomaat, Talous, Teknologia, Urheilu, Kulttuuri, Tiede",\n    "original_title": "Alkuperäinen otsikko RSS:stä"\n  }\n]\n\nVastaa VAIN JSON-listalla.\n\nReturn only valid JSON. Do not wrap it in markdown fences.']' returned non-zero exit status 124.
+  ⚠️  rewriter took 334.2s (>300s threshold)
+
+🖼️  Vaihe 2b: Kuvien generointi...
+[image_gen] Task 2187164cc8adf17fa1e91de494b5ca13 for 'Henkilöauto ja kuorma-auto törmäsivät Ve...'
+[image_gen] Error generating image for 'Henkilöauto ja kuorma-auto törmäsivät Ve...': HTTP Error 403: Forbidden
+[image_gen] Task 1a353606f70874c97564844f183ba729 for 'Stubb BBC:lle: Trumpilla ei ole oikeutta...'
+[image_gen] Error generating image for 'Stubb BBC:lle: Trumpilla ei ole oikeutta...': HTTP Error 403: Forbidden
+[image_gen] Task 8c2d90bc63994ba45582ae4cc94da095 for 'Postin toimitusjohtajalle yli puolen mil...'
+[image_gen] Error generating image for 'Postin toimitusjohtajalle yli puolen mil...': HTTP Error 403: Forbidden
+[image_gen] Task 9638398899c45ec0c8f8f5ed0a4d011e for 'Donut Lab testasi akkuaan Vergen sähkömo...'
+[image_gen] Error generating image for 'Donut Lab testasi akkuaan Vergen sähkömo...': HTTP Error 403: Forbidden
+[image_gen] Task f4f571985ae615de265d958ceaa07b00 for 'Benjamin Rautiainen valittiin Liigan run...'
+[image_gen] Error generating image for 'Benjamin Rautiainen valittiin Liigan run...': HTTP Error 403: Forbidden
+[image_gen] Task a7d4fe9a4edb077cbb53fad63e2784ac for 'Kirjalansalmen vanhan sillan pylonit kaa...'
+[image_gen] Error generating image for 'Kirjalansalmen vanhan sillan pylonit kaa...': HTTP Error 403: Forbidden
+[image_gen] Task 07fe616da11c22a2d482016b68ec0291 for 'Britanniassa koiranomistajille tulossa r...'
+[image_gen] Error generating image for 'Britanniassa koiranomistajille tulossa r...': HTTP Error 403: Forbidden
+[image_gen] Task 8f58b3af138f7f14d1dcbe94d2114033 for 'Murtovarkaat veivät henkilötietoja Turun...'
+[image_gen] Error generating image for 'Murtovarkaat veivät henkilötietoja Turun...': HTTP Error 403: Forbidden
+[image_gen] Task 0b5f237574a1c25c487d17ef49e6ef06 for 'Syyttäjä vaatii Mette Maritin pojalle se...'
+[image_gen] Error generating image for 'Syyttäjä vaatii Mette Maritin pojalle se...': HTTP Error 403: Forbidden
+[image_gen] Task b069523ed2bd68176de19e9302186a50 for 'Pähkinärinteen tulipalossa kuollut perhe...'
+[image_gen] Error generating image for 'Pähkinärinteen tulipalossa kuollut perhe...': HTTP Error 403: Forbidden
+  ⚠️  image_gen took 340.5s (>300s threshold)
+[image_gen] 0/10 artikkelia sai kuvan
+
+📝 Vaihe 3: 10 artikkelin julkaisu...
+[publisher] Created: 2026-03-18-henkiloauto-ja-kuorma-auto-tormasivat-vetelissa-yksi-kuoli.md
+[publisher] Created: 2026-03-18-stubb-bbclle-trumpilla-ei-ole-oikeutta-vedota-naton-apuun.md
+[publisher] Created: 2026-03-18-postin-toimitusjohtajalle-yli-puolen-miljoonan-listautumispa.md
+[publisher] Created: 2026-03-18-donut-lab-testasi-akkuaan-vergen-sahkomoottoripyorassa.md
+[publisher] Created: 2026-03-18-benjamin-rautiainen-valittiin-liigan-runkosarjan-parhaaksi-p.md
+[publisher] Created: 2026-03-18-kirjalansalmen-vanhan-sillan-pylonit-kaadettiin-paraisilla.md
+[publisher] Created: 2026-03-18-britanniassa-koiranomistajille-tulossa-rajattomat-sakot-karj.md
+[publisher] Created: 2026-03-18-murtovarkaat-veivat-henkilotietoja-turun-paivakodista.md
+[publisher] Created: 2026-03-18-syyttaja-vaatii-mette-maritin-pojalle-seitseman-vuoden-vanke.md
+[publisher] Created: 2026-03-18-pahkinarinteen-tulipalossa-kuollut-perhe-haudattiin-vantaall.md
+  ⏱️  publisher: 0.0s
+
+🔨 Vaihe 4: Hugo-sivuston rakennus...
+[publisher] Hugo build successful
+  ⏱️  build: 2.0s
+
+✅ Valmis! 10 artikkelia julkaistu.
+[2/3] Checking for changes...
+[main 12d491f] Auto-publish: 10 new articles ()
+ 10 files changed, 178 insertions(+)
+ create mode 100644 content/posts/2026-03-18-benjamin-rautiainen-valittiin-liigan-runkosarjan-parhaaksi-p.md
+ create mode 100644 content/posts/2026-03-18-britanniassa-koiranomistajille-tulossa-rajattomat-sakot-karj.md
+ create mode 100644 content/posts/2026-03-18-donut-lab-testasi-akkuaan-vergen-sahkomoottoripyorassa.md
+ create mode 100644 content/posts/2026-03-18-henkiloauto-ja-kuorma-auto-tormasivat-vetelissa-yksi-kuoli.md
+ create mode 100644 content/posts/2026-03-18-kirjalansalmen-vanhan-sillan-pylonit-kaadettiin-paraisilla.md
+ create mode 100644 content/posts/2026-03-18-murtovarkaat-veivat-henkilotietoja-turun-paivakodista.md
+ create mode 100644 content/posts/2026-03-18-pahkinarinteen-tulipalossa-kuollut-perhe-haudattiin-vantaall.md
+ create mode 100644 content/posts/2026-03-18-postin-toimitusjohtajalle-yli-puolen-miljoonan-listautumispa.md
+ create mode 100644 content/posts/2026-03-18-stubb-bbclle-trumpilla-ei-ole-oikeutta-vedota-naton-apuun.md
+ create mode 100644 content/posts/2026-03-18-syyttaja-vaatii-mette-maritin-pojalle-seitseman-vuoden-vanke.md
+[3/3] Pushing to GitHub...
+To https://github.com/perttupaakkola/uutistenlukija-fi.git
+   1f5632f..12d491f  main -> main
+Deployed 10 new articles.
+=== Auto-publish completed at Wed Mar 18 12:11:29 PM UTC 2026 ===

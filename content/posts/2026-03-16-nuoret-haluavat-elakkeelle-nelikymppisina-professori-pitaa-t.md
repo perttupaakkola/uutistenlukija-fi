@@ -1,6 +1,5 @@
 ---
 title: "Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhlauksena"
-description: "FIRE-liike on saanut jalansijaa suomalaisten nuorten keskuudessa."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Talous

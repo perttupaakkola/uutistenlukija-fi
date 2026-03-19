@@ -1,6 +1,5 @@
 ---
 title: "Yhdysvaltalaiset ryhmät vievät aborttivastaisuutta Britanniaan"
-description: "Yhdysvaltalaiset aborttivastaiset järjestöt ovat laajentaneet toimintaansa Britanniaan ja pyrkivät muuttamaan maan aborttimyönteistä ilmapiiriä."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat

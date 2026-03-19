@@ -1,6 +1,5 @@
 ---
 title: "Hallituksen leikkaukset uhkaavat kansanopistojen toimintaa"
-description: "Suomen kansanopistot ovat ajautuneet ahtaalle hallituksen suunnittelemien leikkausten vuoksi."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

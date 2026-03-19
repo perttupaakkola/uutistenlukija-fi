@@ -1,6 +1,5 @@
 ---
 title: "Ukraina taistelee rahoituksensa puolesta sodan keskellä"
-description: "Ukraina kamppailee taloudellisesta selviytymisestään."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat

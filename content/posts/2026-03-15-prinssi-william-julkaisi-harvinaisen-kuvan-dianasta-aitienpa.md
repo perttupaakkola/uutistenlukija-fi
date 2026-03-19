@@ -1,6 +1,5 @@
 ---
 title: "Prinssi William julkaisi harvinaisen kuvan Dianasta äitienpäivänä"
-description: "Walesin prinssi William jakoi sunnuntaina aiemmin julkaisemattoman kuvan itsestään ja äidistään prinsessa Dianasta."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat

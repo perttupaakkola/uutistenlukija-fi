@@ -1,6 +1,5 @@
 ---
 title: "Valkoisen talon kansliapäällikkö Susie Wiles sairastaa rintasyöpää"
-description: "Yhdysvaltain presidentti Donald Trump kertoi Truth Social -palvelussa, että Valkoisen talon kansliapäällikkö Susie Wiles on saanut syöpädiagnoosin."
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat

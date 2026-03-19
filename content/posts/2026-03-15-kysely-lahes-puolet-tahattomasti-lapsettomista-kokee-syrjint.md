@@ -1,6 +1,5 @@
 ---
 title: "Kysely: lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä"
-description: "Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, käy ilmi Simpukka ry:n tuoreesta kyselystä."
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa

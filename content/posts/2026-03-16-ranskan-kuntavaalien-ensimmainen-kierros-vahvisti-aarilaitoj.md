@@ -1,6 +1,5 @@
 ---
 title: "Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja"
-description: "Ranskan kuntavaalien ensimmäinen kierros tuotti vahvan tuloksen sekä Marine Le Penin äärioikeistolaiselle Kansalliselle liittoumalle että Jean-Luc"
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat

@@ -58,16 +58,17 @@ WRITERS = [
 
 
 def assign_writer(category: str) -> Dict:
-    """Pick a writer matching the article's category.
+    """Pick a writer matching the article's category, with randomization.
 
-    Only writers whose specialties include the category are eligible.
-    Falls back to the editor-in-chief (Matti Virtanen) if no specialist found.
+    Writers whose specialties include the category are preferred (weighted 3x),
+    but any writer can be picked to avoid deterministic patterns.
     """
-    specialists = [w for w in WRITERS if category in w["specialties"]]
-    if not specialists:
-        # Fallback to editor-in-chief
-        specialists = [w for w in WRITERS if w["id"] == "matti-virtanen"]
-    if not specialists:
-        specialists = WRITERS[:1]
+    weights = []
+    for writer in WRITERS:
+        if category in writer["specialties"]:
+            weights.append(3)
+        else:
+            weights.append(1)
 
-    return random.choice(specialists)
+    chosen = random.choices(WRITERS, weights=weights, k=1)[0]
+    return chosen

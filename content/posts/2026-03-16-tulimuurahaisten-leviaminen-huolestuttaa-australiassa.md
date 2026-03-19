@@ -1,6 +1,5 @@
 ---
 title: "Tulimuurahaisten leviäminen huolestuttaa Australiassa"
-description: "Tulimuurahaisten torjunta on noussut jälleen Australiassa otsikoihin."
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat

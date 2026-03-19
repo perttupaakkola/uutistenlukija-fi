@@ -1,0 +1,150 @@
+=== Auto-publish started at Wed Mar 18 08:00:01 PM UTC 2026 ===
+[1/3] Running pipeline...
+============================================================
+Uutistenlukija Pipeline — 2026-03-18T20:00:02.405721+00:00
+============================================================
+
+📡 Vaihe 1: RSS-syötteiden skannaus...
+[scanner] Fetching Yle Uutiset...
+[scanner]   → 30 articles
+[scanner] Fetching Iltalehti...
+[scanner]   → 20 articles
+[scanner] Fetching Kauppalehti...
+[scanner]   → 10 articles
+[scanner] Fetching Taloussanomat...
+[scanner]   → 30 articles
+[scanner] Fetching Yle Urheilu...
+[scanner]   → 30 articles
+[scanner] Fetching IS Urheilu...
+[scanner]   → 30 articles
+[scanner] Fetching Tekniikka & Talous...
+[scanner]   → 10 articles
+[scanner] Fetching Reuters World...
+[scanner] Error fetching Reuters World: HTTP Error 404: Not Found
+[scanner]   → 0 articles
+[scanner] Fetching BBC World...
+[scanner]   → 26 articles
+[scanner] Fetching BBC Technology...
+[scanner]   → 20 articles
+[scanner] Fetching BBC Science...
+[scanner]   → 30 articles
+[scanner] Fetching AP News...
+[scanner] Error fetching AP News: HTTP Error 403: Forbidden
+[scanner]   → 0 articles
+[scanner] Fetching The Guardian World...
+[scanner]   → 30 articles
+[scanner] Fetching TechCrunch...
+[scanner]   → 20 articles
+[scanner] Fetching Ars Technica...
+[scanner]   → 20 articles
+[scanner] Fetching Hacker News Best...
+[scanner]   → 30 articles
+[scanner] Fetching Der Spiegel International...
+[scanner]   → 20 articles
+[scanner] Trending stories: 1
+[scanner] Category distribution: {'Kotimaa': 8, 'Ulkomaat': 4, 'Talous': 1, 'Teknologia': 1, 'Urheilu': 8, 'Kulttuuri': 1, 'Tiede': 2}
+[scanner] Total: 356 → Unique: 346 → Selected: 25
+  ⏱️  scanner: 7.6s
+
+🔍 Vaihe 1b: Duplikaattien suodatus...
+[dedup] 25 scanned → 15 new (10 duplicates filtered)
+  ⏱️  dedup: 0.0s
+
+✍️  Vaihe 2: 15 artikkelin uudelleenkirjoitus...
+[writer] Processing batch 1 (5 articles)...
+[writer]   Model: gpt-4.1-nano (success)
+[writer]   Pass 1 → 5 articles written
+[writer]   Model: gpt-4.1-nano (success)
+[writer]   Pass 2 (audit) → 5 articles cleaned
+[writer] Processing batch 2 (5 articles)...
+[writer]   Model: gpt-4.1-nano (success)
+[writer]   Pass 1 → 5 articles written
+[writer]   Model: gpt-4.1-nano (success)
+[writer]   Pass 2 (audit) → 5 articles cleaned
+[writer] Processing batch 3 (5 articles)...
+[writer]   Model: gpt-4.1-nano (success)
+[writer]   Pass 1 → 5 articles written
+[writer]   Model: gpt-4.1-nano (success)
+[writer]   Pass 2 (audit) → 5 articles cleaned
+  ⏱️  rewriter: 80.7s
+
+🖼️  Vaihe 2b: Kuvien generointi...
+[image_gen] Task c6998aa84fa3f24af08bef16b1e2fb89 for 'Romaniyhdistys arvioi Vigeliuksen puheen...'
+[image_gen] Error generating image for 'Romaniyhdistys arvioi Vigeliuksen puheen...': HTTP Error 403: Forbidden
+[image_gen] Task d556e7534d9bdf5e6451df017df02279 for 'Eläkeläisten rooli suomalaisessa yhteisk...'
+[image_gen] Error generating image for 'Eläkeläisten rooli suomalaisessa yhteisk...': HTTP Error 403: Forbidden
+[image_gen] Task 5fcd7ec7b8b9bd725834b1b6dc554d0e for 'Asteroidilöydös sisältää elämän perusain...'
+[image_gen] Error generating image for 'Asteroidilöydös sisältää elämän perusain...': HTTP Error 403: Forbidden
+[image_gen] Task 99955908d7ba80b3127f64223e78602a for 'Naisten Korisliigan puolivälierät jännit...'
+[image_gen] Error generating image for 'Naisten Korisliigan puolivälierät jännit...': HTTP Error 403: Forbidden
+[image_gen] Task 2feca14a49889c7beb7378f0b27cf515 for 'Opiskelijoiden lähtö Britanniasta lisään...'
+[image_gen] Task 2feca14a49889c7beb7378f0b27cf515 timed out after 300s
+[image_gen] Task c60a23f1e4571d51b0dc882451af34cd for 'Väitetyt italialaisten tarkka-ampujien o...'
+[image_gen] Task c60a23f1e4571d51b0dc882451af34cd timed out after 300s
+[image_gen] Task 5f18aa4bfa30ec475c6cf8b506b9c8c6 for 'Ringeten SM-sarjan välierät päättyivät j...'
+[image_gen] Task 5f18aa4bfa30ec475c6cf8b506b9c8c6 failed: internal error, please try again later.
+[image_gen] Task e6c1a6beb50245c9f4ca0e34287bd25b for 'Nokian KrP varmisti toiseksi sijoituksen...'
+[image_gen] Task e6c1a6beb50245c9f4ca0e34287bd25b timed out after 300s
+[image_gen] Task 731290e66876d014f3fca936fa5acb4f for 'Korisliigan puolivälierät ratkesivat - v...'
+[image_gen] Error generating image for 'Korisliigan puolivälierät ratkesivat - v...': HTTP Error 403: Forbidden
+[image_gen] Task 83fc3cd931d2b395ae115260b4a2f2df for 'Kajaanin ravirata jatkaa toimintaa pieni...'
+[image_gen] Error generating image for 'Kajaanin ravirata jatkaa toimintaa pieni...': HTTP Error 403: Forbidden
+[image_gen] Task b1f02a0aa2b2023ab45e694455e2134a for 'Barcelona teki historiaa jalkapallon Mes...'
+[image_gen] Task b1f02a0aa2b2023ab45e694455e2134a timed out after 300s
+[image_gen] Task 8a0356cf78cbd571f8b880309c2f0a19 for 'Iranilaiset jalkapalloilijat palaavat ko...'
+[image_gen] Error generating image for 'Iranilaiset jalkapalloilijat palaavat ko...': HTTP Error 403: Forbidden
+[image_gen] Task f12308895584bd62f0689c9df1f35360 for 'Australian talousarvio lupaa uudistuksia...'
+[image_gen] Error generating image for 'Australian talousarvio lupaa uudistuksia...': HTTP Error 403: Forbidden
+[image_gen] Task 0a99bc803b4f34dd9b864a83a7e5a8bb for 'Iso-Britannian hiukkasfysiikan saavutuks...'
+[image_gen] Error generating image for 'Iso-Britannian hiukkasfysiikan saavutuks...': HTTP Error 403: Forbidden
+[image_gen] Task b668fb06328cb10d15ffb61f93e14db6 for 'Israel toteuttaa toimia Libanonin eteläs...'
+[image_gen] Task b668fb06328cb10d15ffb61f93e14db6 timed out after 300s
+  ⚠️  image_gen took 2718.2s (>300s threshold)
+[image_gen] 0/15 artikkelia sai kuvan
+
+📝 Vaihe 3: 15 artikkelin julkaisu...
+[publisher] Created: 2026-03-18-romaniyhdistys-arvioi-vigeliuksen-puheenvuorot-loukkaaviksi.md
+[publisher] Created: 2026-03-18-elakelaisten-rooli-suomalaisessa-yhteiskunnassa-korostuu.md
+[publisher] Created: 2026-03-18-asteroidiloydos-sisaltaa-elaman-perusaineet.md
+[publisher] Created: 2026-03-18-naisten-korisliigan-puolivalierat-jannittivat.md
+[publisher] Created: 2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy.md
+[publisher] Created: 2026-03-18-vaitetyt-italialaisten-tarkka-ampujien-osallisuus-sarajevo-p.md
+[publisher] Created: 2026-03-18-ringeten-sm-sarjan-valierat-paattyivat-jannittaviin-jatkoajo.md
+[publisher] Created: 2026-03-18-nokian-krp-varmisti-toiseksi-sijoituksensa-runkosarjassa.md
+[publisher] Created: 2026-03-18-korisliigan-puolivalierat-ratkesivat-vastakkainasettelut-tiu.md
+[publisher] Created: 2026-03-18-kajaanin-ravirata-jatkaa-toimintaa-pienimuotoistuen.md
+[publisher] Created: 2026-03-18-barcelona-teki-historiaa-jalkapallon-mestarien-liigassa.md
+[publisher] Created: 2026-03-18-iranilaiset-jalkapalloilijat-palaavat-kotimaahansa-turvattom.md
+[publisher] Created: 2026-03-18-australian-talousarvio-lupaa-uudistuksia-ja-hintojen-nousua.md
+[publisher] Created: 2026-03-18-iso-britannian-hiukkasfysiikan-saavutukset-uhkaavat-joutua-l.md
+[publisher] Created: 2026-03-18-israel-toteuttaa-toimia-libanonin-etelassa.md
+  ⏱️  publisher: 0.0s
+
+🔨 Vaihe 4: Hugo-sivuston rakennus...
+[publisher] Hugo build successful
+  ⏱️  build: 1.7s
+
+✅ Valmis! 15 artikkelia julkaistu.
+[2/3] Checking for changes...
+[main 9ef3e16] Auto-publish: 15 new articles ()
+ 15 files changed, 250 insertions(+)
+ create mode 100644 content/posts/2026-03-18-asteroidiloydos-sisaltaa-elaman-perusaineet.md
+ create mode 100644 content/posts/2026-03-18-australian-talousarvio-lupaa-uudistuksia-ja-hintojen-nousua.md
+ create mode 100644 content/posts/2026-03-18-barcelona-teki-historiaa-jalkapallon-mestarien-liigassa.md
+ create mode 100644 content/posts/2026-03-18-elakelaisten-rooli-suomalaisessa-yhteiskunnassa-korostuu.md
+ create mode 100644 content/posts/2026-03-18-iranilaiset-jalkapalloilijat-palaavat-kotimaahansa-turvattom.md
+ create mode 100644 content/posts/2026-03-18-iso-britannian-hiukkasfysiikan-saavutukset-uhkaavat-joutua-l.md
+ create mode 100644 content/posts/2026-03-18-israel-toteuttaa-toimia-libanonin-etelassa.md
+ create mode 100644 content/posts/2026-03-18-kajaanin-ravirata-jatkaa-toimintaa-pienimuotoistuen.md
+ create mode 100644 content/posts/2026-03-18-korisliigan-puolivalierat-ratkesivat-vastakkainasettelut-tiu.md
+ create mode 100644 content/posts/2026-03-18-naisten-korisliigan-puolivalierat-jannittivat.md
+ create mode 100644 content/posts/2026-03-18-nokian-krp-varmisti-toiseksi-sijoituksensa-runkosarjassa.md
+ create mode 100644 content/posts/2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy.md
+ create mode 100644 content/posts/2026-03-18-ringeten-sm-sarjan-valierat-paattyivat-jannittaviin-jatkoajo.md
+ create mode 100644 content/posts/2026-03-18-romaniyhdistys-arvioi-vigeliuksen-puheenvuorot-loukkaaviksi.md
+ create mode 100644 content/posts/2026-03-18-vaitetyt-italialaisten-tarkka-ampujien-osallisuus-sarajevo-p.md
+[3/3] Pushing to GitHub...
+To https://github.com/perttupaakkola/uutistenlukija-fi.git
+   6bfaac0..9ef3e16  main -> main
+Deployed 15 new articles.
+=== Auto-publish completed at Wed Mar 18 08:46:51 PM UTC 2026 ===
