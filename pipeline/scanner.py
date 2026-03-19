@@ -261,6 +261,89 @@ def _normalize_title(title: str) -> str:
     return re.sub(r"[^a-zäöå0-9 ]", "", title.lower().strip())
 
 
+_SLOP_TITLE_PATTERNS = [
+    # Clickbait trigger words
+    r"\buskomatton?a?\b",
+    r"\bhämmästyttävä\b",
+    r"tämä muuttaa kaiken",
+    r"\bet usko\b",
+    r"katso video",
+    r"\bshokki\b",
+    r"\bklikkaa\b",
+    r"voitko arvata",
+    r"salaisuus paljastuu",
+    r"nämä \d+ (vinkkiä|tapaa|syytä|asiaa)",  # listicle
+    r"top \d+ ",
+    # Promotional / non-editorial
+    r"\bmainos\b",
+    r"\bsponsoro\w+\b",
+    r"\bpr-\w+\b",
+    r"tilaa (uutiskirje|newsletter)",
+    r"lataa (app|sovellus)",
+    r"kasinopeli",
+    r"\bkasinot?\b",
+    r"vedonlyönti",
+    r"netticasino",
+    r"ilmaiset (spinnit|kierrokset|pelit)",
+    # Erotic / tabloid junk
+    r"\bsexi?\b.{0,20}\bvideo\b",
+    # RSS feed artifacts — boilerplate titles
+    r"^(Uutiset|Etusivu|Ajankohtaista|RSS|Feed|Comments)$",
+]
+
+_SLOP_TITLE_RE = re.compile(
+    "|".join(_SLOP_TITLE_PATTERNS),
+    re.IGNORECASE,
+)
+
+_SLOP_DESC_PATTERNS = [
+    r"(kasinot?|netticasino|vedonlyönti|pokeri|\bslot\b)",
+    r"(affiliate|kumppanilink|sponsoroitu sisältö)",
+    r"(as an ai language model|i'm an ai|olen tekoäly)",  # LLM leak
+    r"tämä artikkeli on (generoitu|tuotettu tekoälyllä)",
+]
+
+_SLOP_DESC_RE = re.compile(
+    "|".join(_SLOP_DESC_PATTERNS),
+    re.IGNORECASE,
+)
+
+
+def _pre_filter_slop(articles: List[Dict]) -> List[Dict]:
+    """Drop articles that are clearly promotional, clickbait, or feed artifacts.
+
+    Runs before fuzzy-dedup and rewrite so we don't burn API tokens on junk.
+    Returns (kept, dropped_count).
+    """
+    kept = []
+    dropped = 0
+    for article in articles:
+        title = article.get("title", "")
+        desc = article.get("description", "")
+
+        # Title must be at least 10 chars — likely a feed artifact otherwise
+        if len(title.strip()) < 10:
+            print(f"[scanner] slop-filter (short title): {title!r}")
+            dropped += 1
+            continue
+
+        if _SLOP_TITLE_RE.search(title):
+            print(f"[scanner] slop-filter (title pattern): {title!r}")
+            dropped += 1
+            continue
+
+        if desc and _SLOP_DESC_RE.search(desc):
+            print(f"[scanner] slop-filter (desc pattern): {title!r}")
+            dropped += 1
+            continue
+
+        kept.append(article)
+
+    if dropped:
+        print(f"[scanner] Pre-filter: {len(articles)} → {len(kept)} ({dropped} slop dropped)")
+    return kept
+
+
 def _fuzzy_dedup(articles: List[Dict], threshold: float = 0.85) -> List[Dict]:
     """Remove near-duplicate articles (>threshold title similarity).
     
@@ -420,6 +503,9 @@ def scan_all_feeds() -> List[Dict]:
         if fp not in seen:
             seen.add(fp)
             unique.append(article)
+
+    # Pre-filter: drop slop/promotional/artifact titles before burning rewrite tokens
+    unique = _pre_filter_slop(unique)
 
     # Fuzzy dedup: drop near-duplicate titles (>85% similarity)
     before_fuzzy = len(unique)
