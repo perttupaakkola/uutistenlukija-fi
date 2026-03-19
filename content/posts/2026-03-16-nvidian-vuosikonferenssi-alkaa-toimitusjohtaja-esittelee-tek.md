@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Nvidian toimitusjohtaja Jensen Huang esittelee tekoälyn tulevaisuutta yhtiön vuosittaisessa GTC-konferenssissa, joka tuo yhteen alan huipputeknologiat."
 ---
 
 Nvidian toimitusjohtaja Jensen Huang astuu lavalle yhtiön vuotuisessa GTC-konferenssissa. Tapahtuma on piirivalmistajan tärkein vuosittainen tilaisuus, jossa se esittelee uudet tuotteensa ja näkemyksensä laskennan tulevaisuudesta.

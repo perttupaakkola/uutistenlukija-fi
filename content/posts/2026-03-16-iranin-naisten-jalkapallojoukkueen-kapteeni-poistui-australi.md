@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Iranin naisten jalkapallojoukkueen kapteeni Zahra Ghanbari poistuu Australiasta, luovuttuaan aikaisemmasta turvapaikkatarjouksestaan."
 ---
 
 Iranin naisten jalkapallomaajoukkueen kapteeni Zahra Ghanbari poistui Australiasta sunnuntai-iltana. Hän oli aiemmin ottanut vastaan tarjouksen jäädä maahan, mutta perui päätöksensä.

@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Google ja Accel valitsevat viisi innovaatiopohjaista startupia Atoms-kiihdyttämöön yli 4 000 hakemuksesta, karsien tekoälykääreiksi paljastuneet."
 ---
 
 Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöohjelmaansa yli 4 000 hakemuksen joukosta. Yksikään valituista ei ole niin sanottu tekoälykääre eli yritys, joka vain paketoi olemassa olevan tekoälymallin uuteen käyttöliittymään.

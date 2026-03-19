@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Suomeen perustetaan Nato-joukko, joka valmistuu heinäkuuhun mennessä. Harjoitukseen osallistuu yli 30 000 sotilasta 14 eri maasta."
 ---
 
 Lapin Rovajärvellä harjoitellaan parhaillaan Naton eteentyönnettyjen joukkojen toimintaa Suomen maaperällä. Cold Response 26 -sotaharjoitukseen osallistuu yli 30 000 ammattisotilasta ja reserviläistä 14 maasta. Harjoituksen ytimessä on joukkojen siirtäminen Ruotsista Suomeen.

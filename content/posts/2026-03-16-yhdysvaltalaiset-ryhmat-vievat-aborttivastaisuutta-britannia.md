@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Yhdysvaltalaiset aborttivastaiset järjestöt laajentavat toimintaansa Britanniaan ja pyrkivät muuttamaan maan aborttimyönteistä ilmapiiriä."
 ---
 
 Yhdysvaltalaiset aborttivastaiset järjestöt ovat laajentaneet toimintaansa Britanniaan ja pyrkivät muuttamaan maan aborttimyönteistä ilmapiiriä. Charlie Kirkin kuolema vahvisti Atlantin yli ulottuvaa kampanjointia.

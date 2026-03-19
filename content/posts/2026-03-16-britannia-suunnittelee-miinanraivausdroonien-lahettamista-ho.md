@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Britannia suunnittelee miinanraivausdroonien lähettämistä Hormuzinsalmelle öljykuljetusten avaamiseksi ilman, että tilanne Iranin kanssa kiristyisi."
 ---
 
 Britannian hallitus valmistelee suunnitelmaa miinanraivausdroonien lähettämiseksi Hormuzinsalmelle. Tavoitteena on avata salmi uudelleen öljykuljetuksille ilman, että tilanne Iranin kanssa kiristyisi.

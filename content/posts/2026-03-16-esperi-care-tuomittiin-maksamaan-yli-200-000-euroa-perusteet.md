@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Esperi Care tuomitaan maksamaan yli 200 000 euroa entiselle hoitajalleen perusteettomasta irtisanomisesta, kun väitteille ei löydetty todistetta."
 ---
 
 Sosiaali- ja terveyspalveluyhtiö Esperi Care irtisanoi hoitajansa väittäen tätä vakavista laiminlyönneistä. Oikeus katsoi, ettei väitteille ollut riittävää näyttöä. Yhtiö joutuu maksamaan entiselle työntekijälleen yli 200 000 euroa korvauksina perusteettomasta irtisanomisesta, aineettomasta vahingosta ja oikeudenkäyntikuluista.

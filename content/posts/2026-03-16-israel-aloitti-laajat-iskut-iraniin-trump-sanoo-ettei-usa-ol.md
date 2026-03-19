@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Israelin armeija aloitti laajamittaiset iskut Iraniin, ja presidentti Trump ilmoittaa Yhdysvaltojen olevan valmis neuvotteluihin vasta myöhemmin."
 ---
 
 Israelin armeija ilmoitti käynnistäneensä laajamittaiset iskut Irania vastaan. Armeijan tiedottajan mukaan Israel tunnistaa uusia kohteita päivittäin ja operaation arvioidaan kestävän vähintään kolme viikkoa.

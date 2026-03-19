@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Jukka Nieminen"
 draft: false
+description: "Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, kertoo Simpukka ry:n tuore kysely. Syrjintä ilmenee erityisesti lomien jaossa."
 ---
 
 Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, käy ilmi Simpukka ry:n tuoreesta kyselystä. Lapsettomien yhdistyksen maaliskuussa toteuttamassa Instagram-kyselyssä 49 prosenttia vastaajista kertoi kokeneensa työelämäsyrjintää lapsettomuutensa vuoksi.

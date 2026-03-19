@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Iranin iskut Arabiemiraatteihin pakottavat ulkomaalaisia poistumaan Dubaista, mikä heikentää kaupungin omaa turvallisuutta ja taloutta."
 ---
 
 Dubai on joutunut vakavimpaan kriisiinsä vuosikymmeniin. Iran on iskenyt ensimmäistä kertaa Arabiemiraatteihin, ja iskut ovat karkottaneet ulkomaalaisia asukkaita kaupungista.

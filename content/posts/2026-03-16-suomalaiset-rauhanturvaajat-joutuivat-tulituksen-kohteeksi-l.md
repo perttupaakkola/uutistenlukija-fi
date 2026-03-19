@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Suomalaisia rauhanturvaajia ammuttiin Etelä-Libanonissa. Maavoimat vahvistaa tapahtuman, mutta loukkaantuneista ei ole tietoa."
 ---
 
 Suomalaisia rauhanturvaajia kohti ammuttiin Etelä-Libanonissa. Maavoimat vahvisti tapauksen viestipalvelu X:ssä.

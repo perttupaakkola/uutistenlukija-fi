@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Jesper Piitulainen jättää Mikkelin Jukurit, josta hänestä kehittyi joukkueen kapteeni ja yksi seuran tunnetuimmista pelaajista."
 ---
 
 Jesper Piitulainen lähtee Mikkelin Jukureista. Pienikokoisesta hyökkääjästä kasvoi joukkueen kapteeni ja yksi seuran tunnetuimmista nimistä.

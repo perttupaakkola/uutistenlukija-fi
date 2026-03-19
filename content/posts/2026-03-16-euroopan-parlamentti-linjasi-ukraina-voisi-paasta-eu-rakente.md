@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Euroopan parlamentti äänestää EU:n laajentumisstrategian puolesta, jolloin Ukraina voisi liittyä unionin rakenteisiin ennen täysjäsenyyttä."
 ---
 
 Euroopan parlamentti äänesti 11. maaliskuuta EU:n laajentumisstrategian puolesta. Linjaus tukee mallia, jossa Ukraina pääsisi mukaan unionin rakenteisiin jo ennen varsinaista täysjäsenyyttä.

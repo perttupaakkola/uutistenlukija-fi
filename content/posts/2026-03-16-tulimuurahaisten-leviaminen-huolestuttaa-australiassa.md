@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Tulimuurahaiset leviävät huolestuttavasti Australiassa, ja pesiä on löydetty Brisbanen lisäksi Gold Coastin sademetsistä ja urheilukentiltä."
 ---
 
 Tulimuurahaisten torjunta on noussut jälleen Australiassa otsikoihin. Brisbanen New Farm -puistosta löytyi tulimuurahaispesä, ja löytö kuvastaa lajin leviämistä uusille alueille Kaakkois-Queenslandissa. Vieraslajien torjuntajärjestö Invasive Species Council kertoi, että tulimuurahaispesiä on havaittu ja tuhottu myös Gold Coastin takamaiden maailmanperintökohteeksi luokitellussa sademetsässä.

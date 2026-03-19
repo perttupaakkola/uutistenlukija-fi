@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Anna Korhonen"
 draft: false
+description: "Nato harjoittelee haavoittuneiden suomalaissotilaiden evakuointia Norjaan. Suunnitelmat sisältävät myös siviiliväestön siirtoja turvallisuustilanteen mukaan."
 ---
 
 Naton puolustussuunnitelmiin kuuluu haavoittuneiden suomalaissotilaiden siirtäminen Lapista Norjan sairaaloihin mahdollisen aseellisen konfliktin syttyessä. Naton lääketieteellisen komitean puheenjohtaja Petter Iversen vahvisti asian suomalaiselle medialle.

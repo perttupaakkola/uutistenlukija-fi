@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Venäjän vallanpitäjät hyödyntävät paralympialaisia propagandan välineenä, kun venäläisurheilijat menestyvät ja tukevat Kremlin narratiivia."
 ---
 
 Venäjän vallanpitäjät onnistuivat hyödyntämään paralympialaisia omassa viestinnässään. Paraurheilun kansainvälinen kattojärjestö mahdollisti tilanteen, jossa venäläisurheilijat kilpailivat ja menestyivät tavalla, joka palveli suoraan Kremlin tarpeita.

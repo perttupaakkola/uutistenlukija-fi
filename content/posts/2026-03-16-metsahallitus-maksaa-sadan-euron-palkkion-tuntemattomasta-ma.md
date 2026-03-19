@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Metsähallitus tarjoaa sadan euron palkkion jokaisesta tuntemattomasta maakotkan pesästä, mikä edistää suojelu- ja tutkimustoimia."
 ---
 
 Metsähallitus tarjoaa sadan euron löytöpalkkion jokaisesta maakotkan pesästä, joka ei ole aiemmin ollut sen tiedossa. Palkkio koskee myös poronhoitoalueelta löytyviä aiemmin tuntemattomia merikotkan pesiä.

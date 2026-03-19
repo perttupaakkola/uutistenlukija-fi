@@ -5,6 +5,7 @@ categories:
   - Ulkomaat
 author: "Laura Mäkelä"
 draft: false
+description: "Venäjän aseviennin osuus maailmanmarkkinoista on romahtanut merkittävästi, mikä johtuu useista vakavista ongelmista ja Ukrainan konfliktista."
 ---
 
 Venäjän osuus raskaiden aseiden maailmanmarkkinoista on pienentynyt merkittävästi lyhyessä ajassa. Maan kansainvälistä asekauppaa rasittavat useat vakavat ongelmat yhtä aikaa, ja aiemmin hallitseva asema on murentunut.

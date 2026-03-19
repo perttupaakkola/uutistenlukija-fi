@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Australiassa hybridi- ja sähköautojen myynti kasvaa, kun bensiiniautojen osuus markkinoilla laskee ennätysalhaalle 66,3 prosenttiin."
 ---
 
 Bensiiniautot menettävät otettaan Australian automarkkinoilla. Maan autoliiton AAA:n tuoreet tilastot osoittavat, että puhtaasti bensiinikäyttöisten autojen osuus myydyistä ajoneuvoista laski ennätyksellisen alas, 66,3 prosenttiin neljännesvuositasolla.

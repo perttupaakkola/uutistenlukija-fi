@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Kilpailu kansainvälisesti tunnustetusta tekoälyvapaa-logosta kiihtyy, kun yritykset ja taiteilijat haluavat erottua tekoälyn käytön kasvusta."
 ---
 
 Tekoälyn käytön yleistyminen on synnyttänyt vastareaktion. Useat tahot kilpailevat siitä, kuka luo ensimmäisen kansainvälisesti tunnustetun logon, joka kertoo tuotteen tai sisällön olevan tehty ilman tekoälyä.

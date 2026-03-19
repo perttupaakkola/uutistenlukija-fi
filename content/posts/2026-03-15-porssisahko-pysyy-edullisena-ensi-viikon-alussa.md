@@ -5,6 +5,7 @@ categories:
   - Talous
 author: "Laura Mäkelä"
 draft: false
+description: "Pörssisähkön hinta pysyy edullisena ensi viikon alussa, ja maanantaina kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta."
 ---
 
 Sähkön pörssihinta jatkaa matalalla tasolla ensi viikon alussa. Maanantaina kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta, mikä on selvästi tavanomaista halvempaa kevään ajankohtaan nähden.

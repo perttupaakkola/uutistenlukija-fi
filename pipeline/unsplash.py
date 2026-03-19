@@ -280,8 +280,8 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
         else:
             # Category placeholder — set a flag, publisher handles the path
             cat_slug = category.lower()
-            article["image"] = f"/images/categories/{cat_slug}.webp"
-            article["image_thumb"] = f"/images/categories/{cat_slug}.webp"
+            article["image"] = f"/images/categories/{cat_slug}.svg"
+            article["image_thumb"] = f"/images/categories/{cat_slug}.svg"
             article["image_alt"] = f"{category}-uutiset"
             article["image_credit"] = ""
             article["image_source_url"] = ""

@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Mette-Maritin pojan oikeudenkäynti Oslossa lähestyy loppuaan, kun syyttäjä pitää viimeisen puheenvuoron. Tuomion odotus kasvattaa mielenkiintoa Norjassa."
 ---
 
 Norjan kruununprinsessa Mette-Maritin pojan oikeudenkäynti on siirtynyt viimeiselle viikollensa Oslon käräjäoikeudessa. Maanantaina viimeisen puheenvuoronsa käytti syyttäjä.

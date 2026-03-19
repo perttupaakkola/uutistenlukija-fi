@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Matti Virtanen"
 draft: false
+description: "Sisä-Suomen poliisi tutkii Himoksella tapahtunutta lasketteluonnettomuutta, jossa virolainen mies kuoli ajettuaan kallioleikkaukseen."
 ---
 
 Sisä-Suomen poliisi tutkii Jämsän Himoksella perjantaina tapahtunutta lasketteluonnettomuutta kuolemansyyntutkintana. Onnettomuudessa menehtyi virolainen mies, joka ajautui siirtymäreitiltä päin kallioleikkausta.

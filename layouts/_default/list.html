@@ -6,7 +6,7 @@
 <div class="articles-grid">
   {{ range .Pages.ByDate.Reverse }}
   {{ $cat := .Params.categories | first | default "kotimaa" }}
-  {{ $img := .Params.image | default (printf "/images/categories/%s.webp" ($cat | lower)) }}
+  {{ $img := .Params.image | default (printf "/images/categories/%s.svg" ($cat | lower)) }}
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="article-card">
     <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">

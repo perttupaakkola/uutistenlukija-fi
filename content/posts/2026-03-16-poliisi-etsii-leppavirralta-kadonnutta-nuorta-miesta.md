@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Itä-Suomen poliisi etsii 28-vuotiasta miestä, joka on kadonnut Leppävirralla 9. maaliskuuta. Havaintoja pyydetään ilmoittamaan poliisille."
 ---
 
 Itä-Suomen poliisi etsii 28-vuotiasta miestä, joka katosi Leppävirralla maanantaina 9. maaliskuuta. Miehestä ei ole saatu havaintoja katoamisen jälkeen.

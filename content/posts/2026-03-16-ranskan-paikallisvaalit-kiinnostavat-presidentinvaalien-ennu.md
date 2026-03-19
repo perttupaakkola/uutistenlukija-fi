@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Ranskassa äänestetään paikallisvaalien ensimmäisellä kierroksella, ja tulokset saattavat ennakoida ensi vuoden presidentinvaaleja. Huomio suuntautuu Marseilleen."
 ---
 
 Ranskassa äänestettiin sunnuntaina paikallisvaalien ensimmäisellä kierroksella. Vaalien tuloksia seurataan tavallista tarkemmin, koska suurkaupunkien voimasuhteet voivat ennakoida ensi vuoden presidentinvaalien asetelmia.

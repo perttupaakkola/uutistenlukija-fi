@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Mikko Salonen"
 draft: false
+description: "Suomeen saapuu ensi viikolla poikkeuksellisen lämmin sääjakso, lämpötilojen noustessa huhtikuun lukemille, erityisesti loppuviikosta."
 ---
 
 Suomeen on saapumassa poikkeuksellisen lämmin sääjakso ensi viikolle. Lämpötilat kohoavat tasolle, jota nähdään tavallisesti vasta huhtikuun puolivälissä, ja erityisesti loppuviikko lupaa aurinkoista ja keväistä säätä.

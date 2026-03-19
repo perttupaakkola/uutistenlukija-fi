@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Oscar-gaala järjestetään 98. kerran Los Angelesissa, ja Conan O'Brien juontaa tilaisuuden toista kertaa peräkkäin. Palkintoja jaetaan 23 kategoriassa."
 ---
 
 Yhdysvaltain elokuva-akatemian Oscar-gaala järjestetään sunnuntai-iltana Los Angelesissa 98. kerran. Seremonian juontaa toista kertaa peräkkäin Conan O'Brien, joka sai viime vuonna kiitosta suorituksestaan.

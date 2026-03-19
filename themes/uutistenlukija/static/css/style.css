@@ -918,3 +918,69 @@ img { max-width: 100%; height: auto; }
 .static-page .prose a {
   color: var(--accent);
 }
+
+/* === Shimmer loading skeleton === */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.article-card.loading,
+.highlight-card.loading,
+.category-article-card.loading {
+  pointer-events: none;
+}
+
+.article-card.loading .article-image-link,
+.article-card.loading h2,
+.article-card.loading h3,
+.article-card.loading .excerpt,
+.article-card.loading .meta,
+.highlight-card.loading .article-image-link,
+.highlight-card.loading h3,
+.highlight-card.loading .meta,
+.category-article-card.loading .article-image-link,
+.category-article-card.loading h3,
+.category-article-card.loading .excerpt,
+.category-article-card.loading .meta {
+  background: linear-gradient(
+    90deg,
+    var(--card-bg, #f0f0f0) 25%,
+    #e0e0e0 50%,
+    var(--card-bg, #f0f0f0) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 3px;
+  color: transparent !important;
+}
+
+.article-card.loading .article-image-link,
+.highlight-card.loading .article-image-link,
+.category-article-card.loading .article-image-link {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  display: block;
+}
+
+/* Dark mode shimmer */
+@media (prefers-color-scheme: dark) {
+  .article-card.loading h2,
+  .article-card.loading h3,
+  .article-card.loading .excerpt,
+  .article-card.loading .meta,
+  .highlight-card.loading h3,
+  .highlight-card.loading .meta,
+  .category-article-card.loading h3,
+  .category-article-card.loading .excerpt,
+  .category-article-card.loading .meta {
+    background: linear-gradient(
+      90deg,
+      #2a2a2a 25%,
+      #3a3a3a 50%,
+      #2a2a2a 75%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+}

@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Oscar-gaala näkyy suorana Yle Areenassa suomenkielisen juonnon kera. Lähetys alkaa punaiselta matolta ja jatkuu myöhään yöhön Suomen aikaa."
 ---
 
 Oscar-gaala on seurattavissa suorana lähetyksenä Yle Areenassa suomenkielisen juonnon kera. Lähetys alkaa punaiselta matolta ja jatkuu myöhään yöhön Suomen aikaa.

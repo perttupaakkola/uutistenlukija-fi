@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Nuoret tavoittelevat taloudellista riippumattomuutta ja varhaista eläköitymistä nelikymppisinä, mutta professori Vesa Puttonen pitää ilmiötä tuhlauksena."
 ---
 
 FIRE-liike on saanut jalansijaa suomalaisten nuorten keskuudessa. Tavoitteena on taloudellinen riippumattomuus ja varhainen eläköityminen, parhaimmillaan jo nelikymppisenä. Aalto-yliopiston rahoituksen professori Vesa Puttonen suhtautuu ilmiöön varauksellisesti.

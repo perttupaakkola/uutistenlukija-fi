@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Ugandan oppositiijohtaja pakenee maasta henkensä puolesta, kertovat hänen lausuntonsa. Hänen mukaan hallinto pyrki eliminoimaan hänet."
 ---
 
 Ugandan oppositiojohtaja kertoo paenneensa maasta, koska pelkäsi henkensä puolesta. Hän puhui julkisuuteen paljastamattomasta sijainnista.

@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Ukraina neuvottelee Kansainvälisen valuuttarahaston ja EU:n kanssa rahoituksesta taloudellisen selviytymisen turvaamiseksi sodan aikana."
 ---
 
 Ukraina kamppailee taloudellisesta selviytymisestään. Maa neuvottelee samanaikaisesti rahoituksesta Kansainvälisen valuuttarahaston ja Euroopan unionin kanssa sekä nostaa kotimaisia veroja sotakulujen kattamiseksi.

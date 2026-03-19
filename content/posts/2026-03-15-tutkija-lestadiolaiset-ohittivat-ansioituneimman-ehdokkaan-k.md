@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Jukka Nieminen"
 draft: false
+description: "Tutkija paljastaa, että lestadiolaiset ohittavat ansioituneimman naisehdokkaan kirkkoherran valinnassa järjestelmällisesti suosien miehiä."
 ---
 
 Kirkkoherran valinta on herättänyt vilkasta keskustelua sen jälkeen, kun kirkkovaltuusto valitsi tehtävään miehen, vaikka tuomiokapituli oli todennut naisehdokkaan olevan hakijoista ansioitunein. Tutkijan mukaan lestadiolaiset toimivat valinnassa järjestelmällisesti saadakseen itselleen mieluisan papin.

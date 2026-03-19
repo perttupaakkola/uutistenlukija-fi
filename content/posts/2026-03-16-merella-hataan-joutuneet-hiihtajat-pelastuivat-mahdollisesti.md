@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Kaksi saksalaista hiihtovaeltajaa pelastui merihädästä, käyttämällä klassista autiosaaritemppua. Pelastuminen tapahtui myrskyisissä sääolosuhteissa."
 ---
 
 Kaksi kokenutta saksalaista hiihtovaeltajaa selvisi hengissä merellisestä hätätilanteesta lauantaina. Pelastumisen taustalla saattoi olla keino, jota on käytetty autiosaarilla vuosikymmeniä.

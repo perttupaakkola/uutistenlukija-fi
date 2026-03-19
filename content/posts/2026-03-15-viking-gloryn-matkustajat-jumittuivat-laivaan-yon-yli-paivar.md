@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Sanna Heikkinen"
 draft: false
+description: "Viking Gloryn matkustajat jumittuivat laivaan yön yli, kun Viking Grace esti aikataulut. Päiväristeily muuttui odottamattomaksi seikkailuksi."
 ---
 
 Turusta lauantaina päiväristeilylle lähteneet matkustajat saivat yllätyksen, kun matka venyikin yön yli kestäväksi seikkailuksi. Viking Glory joutui pysähtymään yllättäen ennen Maarianhaminaa, kun saman varustamon Viking Grace oli jumiutunut Tukholman edustalle ja aiheuttanut häiriöitä aikatauluihin.

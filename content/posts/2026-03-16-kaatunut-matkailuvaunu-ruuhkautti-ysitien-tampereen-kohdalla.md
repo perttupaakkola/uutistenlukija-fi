@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Matkailuvaunu kaatui maanantai-iltana valtatiellä 9 Tampereen kohdalla, mikä aiheutti merkittävää ruuhkaa. Pelastuslaitos ja poliisi ohjaavat liikennettä."
 ---
 
 Ajokaistalle kaatunut matkailuvaunu aiheutti ruuhkaa valtatie 9:llä Tampereen kohdalla maanantai-iltana. Onnettomuus tapahtui noin kello 17.30 lähellä Karkunvuoren tunnelia Jyväskylän suunnasta Pirkkalaan vievällä osuudella.

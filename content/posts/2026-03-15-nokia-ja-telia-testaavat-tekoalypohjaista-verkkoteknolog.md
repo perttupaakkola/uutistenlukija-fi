@@ -5,6 +5,7 @@ categories:
   - Teknologia
 author: "Sanna Heikkinen"
 draft: false
+description: "Nokia ja Telia testaavat yhteistyössä tekoälypohjaista verkkoteknologiaa parantaakseen 5G-verkon suorituskykyä Suomessa."
 ---
 
 Nokia ja Telia Finland ovat aloittaneet laajan yhteistyön tekoälypohjaisen radiopääsyverkon kehittämiseksi ja testaamiseksi Suomessa. Kumppanuuden tavoitteena on parantaa 5G-verkon suorituskykyä merkittävästi ja nopeuttaa tekoälysovellusten kaupallistamista.

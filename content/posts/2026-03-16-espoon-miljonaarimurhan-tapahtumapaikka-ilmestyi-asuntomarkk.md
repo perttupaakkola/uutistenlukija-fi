@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Espoon Soukanniemessä sijaitseva miljonäärimurhaan liittyvä arvotalo on myynnissä lähes 1,5 miljoonalla eurolla, mutta ostajat eivät pelkää sen synkkää taustaa."
 ---
 
 Espoon Soukanniemessä sijaitseva arvotalo on tullut myyntiin Etuovi-palvelussa. Hintapyyntö on lähes 1,5 miljoonaa euroa. Talo on sama, jossa toukokuussa 2025 tapahtui niin sanottu Espoon miljonäärimurha.

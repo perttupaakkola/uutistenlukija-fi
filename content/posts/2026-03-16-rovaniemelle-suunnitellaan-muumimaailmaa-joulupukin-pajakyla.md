@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Rovaniemen kaupunginhallitus myöntää tontin Muumimaailma oy:lle, joka suunnittelee toista muumiteemapuistoa Joulupukin pajakylän viereen."
 ---
 
 Rovaniemen kaupunginhallitus varasi maanantaina tontin Muumimaailma oy:lle Joulupukin pajakylän alueelta. Yhtiö suunnittelee Rovaniemelle interaktiivista muumiteemapuistoa, josta tulisi Suomen toinen Muumimaailma Naantalin puiston rinnalle.

@@ -5,6 +5,7 @@ categories:
   - Ulkomaat
 author: "Sanna Heikkinen"
 draft: false
+description: "Prinssi William julkaisi äitienpäivänä harvinaisia kuvia prinsessa Dianasta, muistuttaen äidin merkityksestä hänen ja Harryn elämissä."
 ---
 
 Walesin prinssi William jakoi sunnuntaina aiemmin julkaisemattoman kuvan itsestään ja äidistään prinsessa Dianasta. Kuva julkaistiin brittiläisen äitienpäivän kunniaksi, jota vietetään Britanniassa maaliskuun puolivälissä.

@@ -5,6 +5,7 @@ categories:
   - Ulkomaat
 author: "Laura Mäkelä"
 draft: false
+description: "Juutinrauman silta suljettiin lauantaina onnettomuuden vuoksi, mikä aiheutti suuria liikenneruuhkia sekä Ruotsissa että Tanskassa."
 ---
 
 Juutinrauman silta eli Øresundsbron suljettiin lauantaina moottoritieliikenteeltä Ruotsin suuntaan tunneliosuudella sattuneen onnettomuuden vuoksi. Sulku aiheutti mittavat liikenneruuhkat molemmissa maissa ja vaikutti tuhansien matkustajien kulkuun.

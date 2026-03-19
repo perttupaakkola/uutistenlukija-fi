@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Somalian hallitus tehostaa operaatioita äärijärjestö Isisiä vastaan, pyrkien hävittämään sen viimeiset tukikohdat syrjäisillä alueilla."
 ---
 
 Somalian hallitus ja sen liittolaiset ovat tehostaneet operaatioita äärijärjestö Isisiä vastaan maan syrjäisillä alueilla. Isis vahvisti jalansijansa Somaliassa sen jälkeen, kun järjestön taistelijoita ajettiin pois tukikohdistaan Syyriassa ja Irakissa.

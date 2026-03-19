@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Humoristinen draamaelokuva One Battle After Another voittaa eniten Oscar-palkintoja, vakuuttaen akatemian jäsenet useissa kategorioissa."
 ---
 
 Oscar-gaalan suurin voittaja oli humoristinen draamaelokuva One Battle After Another, joka keräsi illan aikana eniten palkintoja. Elokuva vakuutti akatemian jäsenet useassa kategoriassa.

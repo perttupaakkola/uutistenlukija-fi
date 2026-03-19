@@ -5,6 +5,7 @@ categories:
   - Kulttuuri
 author: "Laura Mäkelä"
 draft: false
+description: "Tampereen Armas-festivaali juhlii tänä vuonna kymmenvuotista taivaltaan 17.–31. maaliskuuta, tarjoten maksuttomia teatteri- ja musiikkiesityksiä."
 ---
 
 Tampereen Armas-festivaali juhlii tänä vuonna merkittävää merkkipaalua: kymmenvuotista taivaltaan. Valtakunnallinen kulttuurifestivaali järjestetään 17.–31. maaliskuuta, ja sen suojelijana toimii arvostettu elokuvaohjaaja Aki Kaurismäki.

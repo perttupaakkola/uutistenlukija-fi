@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Jukka Nieminen"
 draft: false
+description: "Pääministeri Petteri Orpo ilmoittaa Suomessa kiinnostuksesta Ranskan ydinasepelotteen yksityiskohtiin Euroopan turvallisuuden parantamiseksi."
 ---
 
 Pääministeri Petteri Orpo sanoi Oslossa, että Suomi on kiinnostunut kuulemaan tarkemmin Ranskan tarjoamasta ydinasepelotteesta Euroopan turvallisuuden vahvistamiseksi. Orpo korosti kuitenkin selkeästi, ettei Suomi hae ydinaseita omalle maaperälle.

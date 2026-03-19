@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Sanna Heikkinen"
 draft: false
+description: "Keravalainen lotta hurmaa jatkosodan sotilaat viihdytyskiertueilla, saaden aikaan poikkeuksellista tunnelmaa rintamalla. Esiintymisiä ylistetään aikalaiskirjeissä."
 ---
 
 Jatkosodan viihdytyskiertueilla esiintyi monia tunnettuja taiteilijoita, kuten Tauno Palo ja muita aikakauden supertähtiä. Rintamamiesten suurimmaksi suosikiksi nousi kuitenkin keravalainen lotta, jonka esiintymistä ylistettiin lukuisissa aikalaiskirjeissä.

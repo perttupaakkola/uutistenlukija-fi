@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Iranin naisten jalkapallomaajoukkueen kapteeni Zahra Ghanbari on palannut Iraniin ja luopunut turvapaikkahakemuksestaan Australiassa."
 ---
 
 Iranin naisten jalkapallomaajoukkueen kapteeni Zahra Ghanbari on poistunut Australiasta ja luopunut turvapaikkahakemuksestaan. Ghanbari oli alun perin päättänyt jäädä maahan Aasian cupin jälkeen, mutta muutti mielensä.

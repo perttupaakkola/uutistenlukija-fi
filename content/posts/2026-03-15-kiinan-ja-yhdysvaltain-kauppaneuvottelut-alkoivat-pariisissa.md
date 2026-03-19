@@ -5,6 +5,7 @@ categories:
   - Ulkomaat
 author: "Mikko Salonen"
 draft: false
+description: "Kiinan ja Yhdysvaltain kauppaneuvottelut alkavat Pariisissa presidenttien tulevaa huippukokousta varten. Jännitteet taloussuhteissa jatkuvat."
 ---
 
 Kiina ja Yhdysvallat aloittivat lauantaina kauppaneuvottelut Pariisissa. Ranskan pääkaupungissa käytävät keskustelut valmistelevat presidentti Donald Trumpin ja presidentti Xi Jinpingin tulevaa huippukokousta, joka on tarkoitus järjestää Kiinassa lähikuukausina.

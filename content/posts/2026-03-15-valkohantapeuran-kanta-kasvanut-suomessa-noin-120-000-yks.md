@@ -5,6 +5,7 @@ categories:
   - Tiede
 author: "Matti Virtanen"
 draft: false
+description: "Suomessa elää nyt noin 120 000 valkohäntäpeuraa, paljastaa Luonnonvarakeskuksen tuore kanta-arvio. Kannan kasvu jatkuu, vaikka metsästystä säännellään."
 ---
 
 Luonnonvarakeskuksen tuoreen kanta-arvion mukaan Suomessa oli helmikuussa 2026 noin 120 000 valkohäntäpeuraa. Kanta on kasvanut hieman viime vuodesta, vaikka metsästyspaine on pyritty pitämään riittävänä kannan hallitsemiseksi.

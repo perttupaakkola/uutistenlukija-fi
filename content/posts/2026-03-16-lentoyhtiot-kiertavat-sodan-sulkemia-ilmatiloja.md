@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Lentoyhtiöt ohjaavat matkustajakoneitaan pidemmille reiteille Iranin ja Persianlahden rajoitusten vuoksi, mikä nostaa kustannuksia ja pidentää lentoja."
 ---
 
 Iranin ja Persianlahden ilmatila on edelleen rajoitettu ohjusiskujen jälkeen. Rajoitukset pakottavat lentoyhtiöt ohjaamaan matkustajakoneitaan pidemmille reiteille, mikä nostaa kustannuksia ja pidentää lentoja.

@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "EU-maiden ulkoministerit kokoontuvat Brysselissä käsittelemään unionin ulko- ja turvallisuuspoliittisia kysymyksiä sekä kansainvälisiä kriisejä."
 ---
 
 Euroopan unionin jäsenmaiden ulkoministerit kokoontuvat maanantaina Brysselissä. Asialistalla ovat unionin ulko- ja turvallisuuspoliittiset kysymykset.

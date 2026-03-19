@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Raakaöljyn hinta nousee yli 100 dollarin tynnyriltä ensimmäistä kertaa sitten vuoden 2022. Hormuzinsalmen sulkeutuminen vaikuttaa merkittävästi hintoihin."
 ---
 
 Raakaöljyn hinta on kivunnut tasoille, joita ei ole nähty sitten vuoden 2022 energiakriisin. Yhdysvaltalainen WTI-laatu maksaa jo yli 107 dollaria tynnyriltä ja kansainvälinen Brent-viitelaatu on ylittänyt 108 dollarin rajan. Maaliskuun aikana hinta on noussut lähes 50 prosenttia.

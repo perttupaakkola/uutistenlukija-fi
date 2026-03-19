@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Ulkoministeri Elina Valtonen torjuu Naton osallistumisen mahdolliseen sotilasoperaatioon Hormuzinsalmella, korostaen puolustusliiton roolia."
 ---
 
 Ulkoministeri Elina Valtonen ei pidä Natoa oikeana toimijana mahdolliseen sotilasoperaatioon Hormuzinsalmella. Presidentti Donald Trump on painostanut Nato-liittolaisia osallistumaan operaatioon Irania vastaan.

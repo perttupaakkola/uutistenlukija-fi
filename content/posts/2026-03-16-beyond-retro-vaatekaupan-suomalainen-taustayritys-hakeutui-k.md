@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Beyond Retro -vaatekaupan suomalainen omistajayritys Kusa Oy hakeutuu konkurssiin, ja Helsingin käräjäoikeus käsittelee hakemusta lähiaikoina."
 ---
 
 Beyond Retro -vaateliikkeiden suomalainen omistajayritys Kusa Oy on hakeutunut konkurssiin. Konkurssihakemus saapui Helsingin käräjäoikeudelle 12. maaliskuuta, käy ilmi maksukyvyttömyysrekisteristä.

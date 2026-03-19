@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Sähköauto törmää liikehuoneiston ikkunaan Turun Eerikinkadulla, kun kuljettaja menettää ajoneuvonsa hallinnan. Onneksi vaara ulkopuolisille vältetään."
 ---
 
 Sähköauto ajoi liikehuoneiston ikkunaan Turun Eerikinkadulla maanantaina noin kello 17. Kuljettaja menetti ajoneuvonsa hallinnan keskusta-alueella.

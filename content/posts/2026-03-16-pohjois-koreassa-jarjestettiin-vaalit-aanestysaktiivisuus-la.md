@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Pohjois-Koreassa järjestettiin kansallisen kansankokouksen vaalit, joissa äänestysaktiivisuus nousi lähes sataan prosenttiin, viranomaisten mukaan."
 ---
 
 Pohjois-Korea järjesti sunnuntaina kansallisen kansankokouksen vaalit. Maan viranomaisten mukaan äänestysaktiivisuus nousi lähes sataan prosenttiin, kuten maassa on tapana.

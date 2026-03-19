@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Punkkikausi alkaa ennätyksellisen varhain, ja havaintoja on tehty jopa Oulun korkeudella. Lämmin sää aktivoi punkkeja liikkeelle ja riskit lisääntyvät."
 ---
 
 Punkkeja on havaittu tänä keväänä tavallista aiemmin. Lämmin sää on aktivoinut punkit liikkeelle, ja havaintoja on tehty jopa Oulun korkeudella.

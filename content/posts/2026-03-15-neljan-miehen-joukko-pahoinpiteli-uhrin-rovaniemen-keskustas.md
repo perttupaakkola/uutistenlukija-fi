@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Matti Virtanen"
 draft: false
+description: "Neljä miestä pahoinpiteli uhri Rovaniemen keskustassa, ja poliisi nappasi kolme epäiltyä nopeasti. Neljäs tekijä on edelleen tavoittamatta."
 ---
 
 Poliisi sai sunnuntain vastaisena yönä ilmoituksen pahoinpitelystä Rovaniemen keskustassa. Neljän miehen joukko oli pahoinpidellyt uhrin, joka ei tuntenut tekijöitä entuudestaan. Pahoinpitely tapahtui yöaikaan kaupungin ydinkeskustan alueella.

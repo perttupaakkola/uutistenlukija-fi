@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Matti Virtanen"
 draft: false
+description: "Ilmanlaatu heikkenee Suomessa, kun Keski-Euroopasta kulkeutuu pienhiukkasia. Ilmatieteen laitos varoittaa erityisesti herkimpiä väestöryhmiä."
 ---
 
 Ilmanlaatu on heikentynyt laajoilla alueilla Suomessa maaliskuun puolivälissä. Syynä on Keski-Euroopasta kulkeutuva pienhiukkaspilvi, johon sekoittuu kotimaista katupölyä lumen sulaessa kaupunkien kaduilta.

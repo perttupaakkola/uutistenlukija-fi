@@ -5,6 +5,7 @@ categories:
   - Ulkomaat
 author: "Sanna Heikkinen"
 draft: false
+description: "Britannian puolustusministeri korostaa Lähi-idän rauhoittamisen tärkeyttä kansainväliselle turvallisuudelle ja käy vuoropuhelua liittolaisten kanssa."
 ---
 
 Britannian puolustusministeri on korostanut Lähi-idän tilanteen rauhoittamisen olevan elintärkeää kansainväliselle turvallisuudelle. Ministeriön tiedottaja kertoi lauantaina, että Britannian hallitus käy tiivistä vuoropuhelua liittolaistensa kanssa useista eri vaihtoehdoista Hormuzinsalmen tilanteen vakauttamiseksi.

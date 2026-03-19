@@ -5,6 +5,7 @@ categories:
   - Urheilu
 author: "Matti Virtanen"
 draft: false
+description: "Kimi Antonelli voittaa uransa ensimmäisen F1-osakilpailun Kiinan GP:ssä ja nousee historian toiseksi nuorimmaksi kilpailuvoittajaksi."
 ---
 
 Mercedeksen italialainen kuljettaja Kimi Antonelli saavutti sunnuntaina uransa ensimmäisen formula ykkösten osakilpailuvoiton Kiinan GP:ssä Shanghain radalla. Vasta 19-vuotias Antonelli nousi samalla historian toiseksi nuorimmaksi F1-kilpailun voittajaksi. Ennätyksen haltijana pysyy edelleen Max Verstappen, joka voitti ensimmäisen kisansa 18-vuotiaana vuonna 2016.

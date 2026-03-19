@@ -5,6 +5,7 @@ categories:
   - Kotimaa
 author: "Laura Mäkelä"
 draft: false
+description: "Perjantaina Himoksella tapahtui lasketteluonnettomuus, jossa noin 50-vuotias virolaismies kuoli vakaviin vammoihinsa osuttuaan kallioon."
 ---
 
 Himoksen hiihtokeskuksessa Jämsässä sattui perjantaina kuolemaan johtanut lasketteluonnettomuus. Uhri on noin 50-vuotias Viron kansalainen, jonka henkilöllisyyden Sisä-Suomen poliisi on vahvistanut.

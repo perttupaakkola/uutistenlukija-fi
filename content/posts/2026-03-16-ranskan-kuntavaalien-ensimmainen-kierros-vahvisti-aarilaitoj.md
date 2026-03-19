@@ -9,6 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+description: "Ranskan kuntavaalien ensimmäinen kierros vahvistaa äärioikeiston Kansallisen liittouman ja radikaalivasemmiston La France insoumise -puolueen valta-asemaa."
 ---
 
 Ranskan kuntavaalien ensimmäinen kierros tuotti vahvan tuloksen sekä Marine Le Penin äärioikeistolaiselle Kansalliselle liittoumalle että Jean-Luc Mélenchonin radikaalivasemmistolaiselle La France insoumise -puolueelle. Molemmat puolueet näyttävät kasvattavan paikallista valtaansa.

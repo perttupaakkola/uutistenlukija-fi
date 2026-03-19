@@ -9,6 +9,7 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+description: "Teneriffalla nainen synnyttää keskellä katua, kun poliisi reagoi nopeasti hälytykseen ja kutsuu paikalle terveysalan ammattilaisia avustamaan."
 ---
 
 Kanariansaarten Teneriffalla nainen synnytti lapsen kadulla Cabo Blancon kaupunginosassa tiistaina. Poliisi sai hälytyksen, kun paikallisen asukkaan synnytys alkoi yllättäen ulkona.

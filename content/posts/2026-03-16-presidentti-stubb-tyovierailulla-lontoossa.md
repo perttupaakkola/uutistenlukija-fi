@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Presidentti Alexander Stubb vierailee Lontoossa 16.–17. maaliskuuta, jonne hän pitää luennon ja keskustelee opiskelijoiden kanssa."
 ---
 
 Tasavallan presidentti Alexander Stubb matkustaa maanantaina työvierailulle Lontooseen. Vierailu kestää kaksi päivää, 16.–17. maaliskuuta.

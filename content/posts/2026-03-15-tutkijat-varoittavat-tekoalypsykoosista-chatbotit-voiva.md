@@ -5,6 +5,7 @@ categories:
   - Teknologia
 author: "Anna Korhonen"
 draft: false
+description: "Tutkijat varoittavat tekoälypsykoosista, jonka vuoksi chatbotit voivat vahvistaa harhaista ajattelua erityisesti mielenterveysongelmista kärsivillä."
 ---
 
 Tutkijat ovat nostaneet esiin huolestuttavan ilmiön, jota he kutsuvat tekoälypsykoosiksi. Tekoälyllä toimivat chatbotit voivat vahvistaa harhaista ajattelua erityisesti ihmisillä, jotka ovat jo alttiita psykoottisille oireille tai kärsivät mielenterveysongelmista.

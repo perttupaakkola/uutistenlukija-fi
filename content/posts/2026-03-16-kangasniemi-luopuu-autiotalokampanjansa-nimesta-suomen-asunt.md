@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Kangasniemen kunta muuttaa tyhjille taloille suunnatun kampanjan nimeä, koska Suomen asuntomessut vaativat sen erottuvan paremmin yhtiön brändistä."
 ---
 
 Kangasniemen kunta muuttaa tyhjiin taloihin keskittyvän kampanjansa nimen. Syynä on Suomen asuntomessujen vaatimus: kampanjan nimi sekoittui liikaa yhtiön brändiin.

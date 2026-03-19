@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Netflixin Frankenstein voittaa kolme Oscar-palkintoa, kun taas KPop Demon Hunters saa kaksi palkintoa vuoden 2026 gaalassa."
 ---
 
 Netflixin Frankenstein-elokuva voitti kolme Oscar-palkintoa vuoden 2026 gaalassa. Palkinnot tulivat parhaasta lavastuksesta, parhaasta pukusuunnittelusta ja parhaasta maskeerauksesta.

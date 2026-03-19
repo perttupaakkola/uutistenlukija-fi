@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "Formula ykkösten kausi 2026 on alkanut kaoottisesti, kun tallit kamppailevat autojensa luotettavuuden kanssa ja keskeytyksiä esiintyy runsaasti."
 ---
 
 Formula ykkösten kausi 2026 on alkanut sekavasti. Useilla talleilla on ollut vaikeuksia saada autojaan edes maaliin, ja keskeytyksiä on nähty paljon.

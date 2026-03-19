@@ -9,6 +9,7 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+description: "KPop Demon Hunters voittaa parhaan animaatioelokuvan Oscarin ja yhdistää k-pop-musiikin yliluonnollisiin taisteluihin, valloittaen yleisön ympäri maailmaa."
 ---
 
 Oscar-palkittu animaatioelokuva KPop Demon Hunters on kerännyt yleisöä ympäri maailmaa erikoisella konseptillaan. Elokuva yhdistää k-pop-musiikin ja yliluonnollisen toiminnan.

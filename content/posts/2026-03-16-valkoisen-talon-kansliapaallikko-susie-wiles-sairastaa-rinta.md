@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Valkoisen talon kansliapäällikkö Susie Wiles on saanut varhaisen rintasyöpädiagnoosin, mutta aikoo jatkaa tehtävässään hoitojen ohella."
 ---
 
 Yhdysvaltain presidentti Donald Trump kertoi Truth Social -palvelussa, että Valkoisen talon kansliapäällikkö Susie Wiles on saanut syöpädiagnoosin. Kyseessä on varhaisessa vaiheessa oleva rintasyöpä.

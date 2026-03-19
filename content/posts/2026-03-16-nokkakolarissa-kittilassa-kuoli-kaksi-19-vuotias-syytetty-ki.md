@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Kittilässä tapahtui nokkakolari, jossa 57-vuotias mies ja hänen 55-vuotias puolisonsa menehtyivät. 19-vuotias syytetty kiistää syytteet törkeistä rikoksista."
 ---
 
 Pariskunta kuoli nokkakolarissa Kittilässä marraskuussa 2024. Onnettomuus tapahtui kantatie 79:llä 21. marraskuuta, kun 19-vuotias mies lähti ohittamaan rekkaa ja törmäsi vastaantulevaan autoon.

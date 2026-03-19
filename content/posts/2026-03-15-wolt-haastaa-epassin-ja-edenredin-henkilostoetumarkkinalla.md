@@ -5,6 +5,7 @@ categories:
   - Talous
 author: "Mikko Salonen"
 draft: false
+description: "Wolt tuo kesällä markkinoille Wolt Benefits -palvelun, joka haastaa Epassin ja Edenredin pitkään hallinneet henkilöstöetumarkkinat Suomessa."
 ---
 
 Ruokalähettipalvelustaan tunnettu Wolt ilmoitti perjantaina tuovansa kesällä markkinoille Wolt Benefits -palvelun, joka tähtää suoraan Suomen henkilöstöetumarkkinoille. Uusi palvelu haastaa alan vakiintuneet toimijat Epassin ja Edenredin, jotka ovat hallinneet markkinaa pitkään.

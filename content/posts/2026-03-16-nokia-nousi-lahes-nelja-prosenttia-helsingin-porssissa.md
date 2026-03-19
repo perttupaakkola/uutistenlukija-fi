@@ -9,6 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+description: "Nokia nousee lähes neljä prosenttia Helsingin pörssissä, kun markkinoilla tunnelma kohenee Hormuzinsalmen tilanteen helpottamisen myötä."
 ---
 
 Helsingin pörssi päätyi maanantaina nousuun. Päivän suurimpia nousijoita oli Nokia, jonka osake vahvistui lähes neljä prosenttia.

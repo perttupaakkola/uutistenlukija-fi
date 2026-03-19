@@ -9,6 +9,7 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+description: "Venäjä lupaa lopettaa kenialaisten värväämisen Ukrainassa Kentällä, kun yli tuhat Kenian kansalaista on matkustanut taistelemaan sodassa."
 ---
 
 Venäjä on ilmoittanut lopettavansa kenialaisten värväämisen sotimaan Ukrainaan. Kenian viranomaiset ovat selvittäneet asiaa sen jälkeen, kun ilmeni, että yli tuhat Venäjälle matkustanutta kenialaista on päätynyt taistelemaan Ukrainassa.

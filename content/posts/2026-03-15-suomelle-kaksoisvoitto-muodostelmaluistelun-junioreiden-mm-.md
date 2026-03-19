@@ -5,6 +5,7 @@ categories:
   - Urheilu
 author: "Mikko Salonen"
 draft: false
+description: "Fintastic voittaa kultaa ja Valley Bay Synchro pronssia muodostelmaluistelun junioreiden MM-kisoissa, tuoden Suomeen kaksoisvoiton upealla esityksellä."
 ---
 
 Helsinki Fintastic voitti kultaa muodostelmaluistelun junioreiden MM-kisoissa sunnuntaina vakuuttavalla esityksellä. Espoolainen Valley Bay Synchro täydensi suomalaisten juhlaa nousemalla pronssisijalle – joukkueen ensimmäiseen MM-mitaliin koskaan.

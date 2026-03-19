@@ -9,6 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+description: "Lindsey Vonn ei sulje pois paluuta alppihiihtouralleen, vaikka toipuminen olympiavammasta on kesken. Hän korostaa itsenäisyyttä valinnoissaan."
 ---
 
 Yhdysvaltalainen alppihiihtäjä Lindsey Vonn ei ole valmis tekemään lopullista päätöstä urastaan. Olympialaisissa vakavasti loukkaantunut Vonn sanoo, ettei tarvitse kenenkään lupaa omia valintojaan varten.
