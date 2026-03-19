@@ -4,34 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 155 }}{{ end }}">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
   <link rel="canonical" href="{{ .Permalink }}">
-  {{- with .Site.Params.googleAnalytics }}
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ . }}');
-  </script>
-  {{- end }}
-  {{- with .Site.Params.googleSearchVerification }}
-  <meta name="google-site-verification" content="{{ . }}">
-  {{- end }}
-  {{ with .Params.image }}
-  <meta property="og:image" content="{{ . | absURL }}">
-  <meta name="twitter:image" content="{{ . | absURL }}">
-  {{ else }}
   <meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.png">
-  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-image.png">
-  {{ end }}
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="576">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-image.png">
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
   {{ template "_internal/schema.html" . }}
   {{ template "_internal/opengraph.html" . }}

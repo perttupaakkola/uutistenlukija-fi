@@ -6,8 +6,8 @@
 {{ with index $sorted 0 }}
 <article class="lead-article">
   {{ with .Params.categories }}
-  {{ $cat := index . 0 }}
-  <span class="category-pill" data-cat="{{ $cat | lower }}">{{ $cat }}</span>
+  {{ $category := index . 0 }}
+  <span class="category-label category-pill category-{{ $category | urlize }}">{{ $category }}</span>
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   <p class="excerpt">{{ .Summary | plainify | truncate 400 }}</p>
@@ -26,8 +26,8 @@
   {{ range $highlights }}
   <article class="highlight-card">
     {{ with .Params.categories }}
-    {{ $cat := index . 0 }}
-    <span class="category-pill" data-cat="{{ $cat | lower }}">{{ $cat }}</span>
+    {{ $category := index . 0 }}
+    <span class="category-label category-pill category-{{ $category | urlize }}">{{ $category }}</span>
     {{ end }}
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <div class="meta">
@@ -53,8 +53,8 @@
     {{ range first 4 $catPosts }}
     <article class="category-article-card">
       {{ with .Params.categories }}
-      {{ $c := index . 0 }}
-      <span class="category-pill" data-cat="{{ $c | lower }}">{{ $c }}</span>
+      {{ $category := index . 0 }}
+      <span class="category-label category-pill category-{{ $category | urlize }}">{{ $category }}</span>
       {{ end }}
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       <p class="excerpt">{{ .Summary | plainify | truncate 120 }}</p>

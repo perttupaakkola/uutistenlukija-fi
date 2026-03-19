@@ -2,7 +2,9 @@
 <div class="reading-progress" id="reading-progress"></div>
 <article class="single-article">
   {{ with .Params.categories }}
-  {{ $cat := index . 0 }}<span class="category-pill" data-cat="{{ $cat | lower }}"><a href="/categories/{{ $cat | urlize }}/" style="color:#fff;">{{ $cat }}</a></span>
+  <span class="category-label">
+    <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
+  </span>
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ with .Params.image }}
@@ -44,35 +46,29 @@
   </div>
   {{ end }}
 
-  {{/* Related articles — match by shared category, deduplicated */}}
+  {{/* Related articles */}}
   {{ $currentCategories := .Params.categories }}
   {{ $currentPage := . }}
   {{ $related := slice }}
-  {{ $seen := slice }}
-  {{ range $page := where .Site.RegularPages "Section" "posts" }}
-    {{ if ne $page.Permalink $currentPage.Permalink }}
-      {{ $pageCategories := $page.Params.categories }}
+  {{ range where .Site.RegularPages "Section" "posts" }}
+    {{ if ne .Permalink $currentPage.Permalink }}
+      {{ $pageCategories := .Params.categories }}
       {{ range $currentCategories }}
         {{ $cat := . }}
         {{ range $pageCategories }}
           {{ if eq . $cat }}
-            {{ if not (in $seen $page.Permalink) }}
-              {{ $related = $related | append $page }}
-              {{ $seen = $seen | append $page.Permalink }}
-            {{ end }}
+            {{ $related = $related | append $currentPage }}
           {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
-  {{ if not $related }}
   {{ $related = where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink | first 4 }}
-  {{ end }}
   {{ if $related }}
   <div class="related-articles">
     <h3>Lue myös</h3>
     <div class="related-grid">
-      {{ range first 4 $related }}
+      {{ range $related }}
       <a href="{{ .Permalink }}" class="related-link">
         <span class="related-title">{{ .Title }}</span>
         <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>

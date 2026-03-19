@@ -1,5 +1,62 @@
-<div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1a1a1a; color:#fff; padding:1rem; text-align:center; font-family:var(--font-sans); font-size:0.85rem; z-index:1000;">
-  Käytämme evästeitä sivuston toiminnan parantamiseen.
-  <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookies_accepted','1');" style="margin-left:1rem; padding:0.4rem 1rem; background:var(--accent); color:#fff; border:none; border-radius:3px; cursor:pointer; font-weight:600;">Hyväksy</button>
+{{/* GDPR cookie consent banner — blocks GA4 until user accepts */}}
+{{ $ga_id := .Site.Params.ga4_id }}
+<div id="cookie-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1a1a1a; color:#fff; padding:1rem 1.5rem; font-family:var(--font-sans,sans-serif); font-size:0.85rem; z-index:9999; box-shadow:0 -2px 8px rgba(0,0,0,.4);">
+  <div style="max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:0.75rem;">
+    <span style="flex:1; min-width:200px;">
+      Käytämme Google Analytics -evästeitä sivuston kehittämiseen.
+      <a href="/tietosuoja/" style="color:#aaa; text-decoration:underline;">Lue lisää</a>
+    </span>
+    <div style="display:flex; gap:0.5rem; flex-shrink:0;">
+      <button id="cookie-reject" style="padding:0.4rem 1rem; background:transparent; color:#aaa; border:1px solid #555; border-radius:3px; cursor:pointer; font-size:0.85rem;">Hylkää</button>
+      <button id="cookie-accept" style="padding:0.4rem 1rem; background:#c0392b; color:#fff; border:none; border-radius:3px; cursor:pointer; font-weight:600; font-size:0.85rem;">Hyväksy</button>
+    </div>
+  </div>
 </div>
-<script>if(!localStorage.getItem('cookies_accepted'))document.getElementById('cookie-banner').style.display='block';</script>
+
+<script>
+(function() {
+  var CONSENT_KEY = 'cookie_consent_v1';
+  var GA_ID = '{{ .Site.Params.ga4_id }}';
+
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, {anonymize_ip: true});
+  }
+
+  function hideBanner() {
+    var b = document.getElementById('cookie-banner');
+    if (b) b.style.display = 'none';
+  }
+
+  var consent = localStorage.getItem(CONSENT_KEY);
+
+  if (consent === 'accepted') {
+    loadGA();
+  } else if (consent === null) {
+    // First visit — show banner
+    document.addEventListener('DOMContentLoaded', function() {
+      var banner = document.getElementById('cookie-banner');
+      if (banner) banner.style.display = 'block';
+
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'accepted');
+        hideBanner();
+        loadGA();
+      });
+
+      document.getElementById('cookie-reject').addEventListener('click', function() {
+        localStorage.setItem(CONSENT_KEY, 'rejected');
+        hideBanner();
+      });
+    });
+  }
+  // consent === 'rejected': do nothing, GA never loads
+})();
+</script>

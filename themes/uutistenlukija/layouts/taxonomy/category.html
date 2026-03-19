@@ -7,7 +7,7 @@
   {{ range $paginator.Pages }}
   <article class="article-card">
     {{ with .Params.categories }}
-    {{ $cat := index . 0 }}<span class="category-pill" data-cat="{{ $cat | lower }}">{{ $cat }}</span>
+    <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p class="excerpt">{{ .Summary | truncate 200 }}</p>

@@ -103,6 +103,33 @@ img { max-width: 100%; height: auto; }
   letter-spacing: 0.05em;
 }
 
+/* === Theme Toggle === */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent) !important;
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.theme-toggle-label {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 /* === Navigation === */
 .main-nav {
   border-top: 1px solid var(--border);
@@ -135,6 +162,31 @@ img { max-width: 100%; height: auto; }
   color: #fff;
 }
 
+/* === Category Pills === */
+.category-pill {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+  color: #fff;
+  background: var(--accent);
+}
+
+.category-kotimaa { background: #1f6feb; }
+.category-ulkomaat { background: #8e44ad; }
+.category-talous { background: #1f8f5f; }
+.category-teknologia { background: #0f766e; }
+.category-urheilu { background: #d97706; }
+.category-kulttuuri { background: #c2410c; }
+.category-tiede { background: #2563eb; }
+
 /* === Article Grid === */
 .articles-grid {
   display: grid;
@@ -155,14 +207,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .article-card .category-label {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--accent);
   margin-bottom: 0.5rem;
-  display: inline-block;
 }
 
 .article-card h2 {
@@ -190,18 +235,22 @@ img { max-width: 100%; height: auto; }
 /* === Featured/Lead Article === */
 .lead-article {
   border-bottom: 2px solid var(--border);
-  padding-bottom: 2rem;
+  border-left: 5px solid var(--accent);
+  background: var(--card-bg);
+  background: color-mix(in srgb, var(--accent) 6%, var(--card-bg));
+  padding: 1.5rem 1.5rem 2rem;
   margin-bottom: 2rem;
+  border-radius: 4px;
 }
 
 .lead-article h2 {
-  font-size: 2rem;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
 }
 
 .lead-article .excerpt {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   max-width: 700px;
 }
 
@@ -404,14 +453,7 @@ img { max-width: 100%; height: auto; }
 .highlight-card h3 a:hover { color: var(--accent); }
 
 .highlight-card .category-label {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--accent);
   margin-bottom: 0.4rem;
-  display: inline-block;
 }
 
 /* === Category Sections === */
@@ -700,14 +742,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .trending-card .category-label {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--accent);
   margin-bottom: 0.3rem;
-  display: inline-block;
 }
 
 .trending-card h3 {
@@ -730,11 +765,13 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 600px) {
   .site-title { font-size: 2rem; }
   .articles-grid { grid-template-columns: 1fr; gap: 1rem; }
-  .lead-article h2 { font-size: 1.5rem; }
+  .lead-article { padding: 1.25rem 1rem 1.5rem; }
+  .lead-article h2 { font-size: 1.85rem; }
   .single-article h1 { font-size: 1.7rem; }
   .main-nav a { font-size: 0.75rem; padding: 0.25rem 0.5rem; }
   .header-banner { height: 30px; }
   .logo-img { max-height: 55px; }
+  .theme-toggle-label { display: none; }
 }
 
 /* === Reading Progress Bar === */
@@ -813,88 +850,48 @@ img { max-width: 100%; height: auto; }
   border-top: 1px solid var(--border);
 }
 
-/* === Category Pill Badges (color-coded) === */
-.category-pill {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #fff;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
+/* === Static pages (tietosuoja, tietoja) === */
+.static-page {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.static-page h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+.static-page .prose h2 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
-  line-height: 1.4;
-  background: var(--accent); /* fallback */
 }
 
-.category-pill[data-cat="kotimaa"]     { background: #3498db; }
-.category-pill[data-cat="ulkomaat"]    { background: #e74c3c; }
-.category-pill[data-cat="talous"]      { background: #f39c12; }
-.category-pill[data-cat="teknologia"]  { background: #8e44ad; }
-.category-pill[data-cat="urheilu"]     { background: #27ae60; }
-.category-pill[data-cat="kulttuuri"]   { background: #d35400; }
-.category-pill[data-cat="tiede"]       { background: #16a085; }
-
-[data-theme="dark"] .category-pill[data-cat="kotimaa"]     { background: #3498db; }
-[data-theme="dark"] .category-pill[data-cat="ulkomaat"]    { background: #e74c3c; }
-[data-theme="dark"] .category-pill[data-cat="talous"]      { background: #f39c12; }
-[data-theme="dark"] .category-pill[data-cat="teknologia"]  { background: #8e44ad; }
-[data-theme="dark"] .category-pill[data-cat="urheilu"]     { background: #27ae60; }
-[data-theme="dark"] .category-pill[data-cat="kulttuuri"]   { background: #d35400; }
-[data-theme="dark"] .category-pill[data-cat="tiede"]       { background: #16a085; }
-
-/* === Lead Article — enhanced with accent border + subtle bg === */
-.lead-article {
-  border-bottom: 2px solid var(--border);
-  border-left: 5px solid var(--accent);
-  padding: 2rem 2rem 2rem 1.75rem;
-  margin-bottom: 2rem;
-  background: color-mix(in srgb, var(--accent) 4%, var(--card-bg));
-  border-radius: 0 4px 4px 0;
+.static-page .prose h3 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary, #555);
 }
 
-.lead-article h2 {
-  font-size: 2.4rem;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
-  font-weight: 900;
-  letter-spacing: -0.01em;
+.static-page .prose p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
 }
 
-.lead-article .excerpt {
-  font-size: 1.1rem;
-  max-width: 700px;
-  line-height: 1.65;
+.static-page .prose ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.lead-article .meta {
-  font-size: 0.8rem;
-  margin-top: 0.75rem;
+.static-page .prose ul li {
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
 }
 
-@media (max-width: 600px) {
-  .lead-article {
-    padding: 1.25rem 1.25rem 1.25rem 1rem;
-  }
-  .lead-article h2 { font-size: 1.6rem; }
-}
-
-/* === Theme Toggle with label === */
-.theme-toggle-wrap {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.theme-toggle-label {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  user-select: none;
+.static-page .prose a {
+  color: var(--accent);
 }
