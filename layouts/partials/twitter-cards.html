@@ -1,0 +1,11 @@
+{{- $desc := "" -}}
+{{- if .Description -}}
+  {{- $desc = .Description | truncate 155 -}}
+{{- else if .Summary -}}
+  {{- $desc = .Summary | plainify | truncate 155 -}}
+{{- else -}}
+  {{- $desc = .Site.Params.description -}}
+{{- end -}}
+
+<meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}">
+<meta name="twitter:description" content="{{ $desc }}">

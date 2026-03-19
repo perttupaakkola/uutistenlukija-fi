@@ -65,6 +65,25 @@ def _poll_task(task_id: str, max_wait: int = 120) -> Optional[str]:
     return None
 
 
+def _build_alt_text(title: str, category: str) -> str:
+    """Generate keyword-rich alt text for a featured image.
+
+    Format: '<Category>-aiheinen kuvituskuva: <title>'
+    Stays under 125 chars (screen-reader + SEO sweet spot).
+    """
+    category_fi = {
+        "kotimaa": "Kotimaa",
+        "ulkomaat": "Ulkomaat",
+        "talous": "Talous",
+        "teknologia": "Teknologia",
+        "urheilu": "Urheilu",
+        "kulttuuri": "Kulttuuri",
+        "tiede": "Tiede",
+    }.get(category.lower(), category.capitalize())
+    alt = f"{category_fi}-aiheinen kuvituskuva: {title}"
+    return alt[:125]
+
+
 def generate_article_image(title: str, category: str, slug: str) -> Optional[str]:
     """Generate a header image for an article. Returns the relative path or None."""
     os.makedirs(IMAGE_DIR, exist_ok=True)
@@ -141,6 +160,7 @@ def generate_images_for_articles(articles: List[Dict]) -> List[Dict]:
         image_path = generate_article_image(title, category, slug)
         if image_path:
             article["image"] = image_path
+            article["image_alt"] = _build_alt_text(title, category)
 
         # Rate limit: 2 second sleep between requests (skip after last)
         if i < len(articles) - 1:

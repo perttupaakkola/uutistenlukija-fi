@@ -8,7 +8,7 @@
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ with .Params.image }}
-  <img src="{{ . }}" alt="{{ $.Title }}" class="article-header-image">
+  <img src="{{ . }}" alt="{{ if $.Params.image_alt }}{{ $.Params.image_alt }}{{ else }}{{ $.Title }}{{ end }}" class="article-header-image">
   {{ with $.Params.image_credit }}<p class="image-credit">{{ . }}</p>{{ end }}
   {{ end }}
   <div class="article-meta">
@@ -45,8 +45,6 @@
     </div>
   </div>
   {{ end }}
-
-  {{ partial "newsletter.html" . }}
 
   {{/* Related articles */}}
   {{ $currentCategories := .Params.categories }}

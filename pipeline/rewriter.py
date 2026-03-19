@@ -37,6 +37,16 @@ RAKENNE JA OTSIKOT:
 - Väliotsikot ovat informatiivisia, eivät klikkiotsikoita: "Mitä tapahtui seuraavaksi" → "Tilanne kehittyi nopeasti".
 - Vain ensimmäinen sana isolla väliotsikoissa.
 
+OTSIKON SÄÄNNÖT:
+- Sisällytä uutiskoukku: miksi tämä on tärkeää juuri tänään?
+- Käytä konkreettisia nimiä, paikkoja ja lukuja kun mahdollista
+- Rakenne: toimija + teko (esim. "Tuomari pakotti", "Poliisi julkaisi")
+- Jos tarina koskee Suomea tai suomalaisia, mainitse se otsikossa
+- Maksimipituus: 80 merkkiä
+- EI klikkiotsikoita ("uskomatonta", "tämä muuttaa kaiken", "hämmästyttävää" jne.)
+- Jos artikkeli on lähes identtinen aiemman kanssa samalta päivältä: palauta DUPLICATE
+- Jos sisältö ei sovi uutissivustolle (mainokset, kasinopelit, PR-tekstit): palauta FILTER
+
 KIRJOITUSTYYLI:
 - Aloita suoraan asiasta.
 - Lyhyet, suorat lauseet. Vaihtele pituutta.
@@ -249,14 +259,33 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             print(f"[writer]   Pass 2 (audit) failed: {e} — using pass 1 results")
             audited = pass1_result
 
-        # Carry through metadata from input
+        # Filter sentinels and carry through metadata
+        kept = []
         for j, written_article in enumerate(audited):
+            title = written_article.get("title", "")
+            content = written_article.get("content", "")
+            # Check for DUPLICATE / FILTER sentinel (title or content starts with it)
+            sentinel = None
+            for field in (title, content):
+                upper = field.strip().upper()
+                if upper.startswith("DUPLICATE"):
+                    sentinel = "DUPLICATE"
+                    break
+                if upper.startswith("FILTER"):
+                    sentinel = "FILTER"
+                    break
+            if sentinel:
+                orig = batch[j].get("title", "?") if j < len(batch) else "?"
+                print(f"[writer]   {sentinel}: '{orig[:60]}' — skipped")
+                continue
+
             if j < len(batch):
                 written_article["fingerprint"] = batch[j].get("fingerprint", "")
                 written_article["trending"] = batch[j].get("trending", False)
                 # Do NOT carry source_name or source_url to output
+            kept.append(written_article)
 
-        rewritten.extend(audited)
-        print(f"[writer]   Batch {i // batch_size + 1} complete: {len(audited)} articles")
+        rewritten.extend(kept)
+        print(f"[writer]   Batch {i // batch_size + 1} complete: {len(kept)}/{len(audited)} articles kept")
 
     return rewritten
