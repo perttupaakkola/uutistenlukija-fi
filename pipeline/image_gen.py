@@ -1,6 +1,6 @@
 """
-Article Image Generator — generates editorial header images via Kie.ai Z-Image API.
-Cost: ~$0.004/image (10x cheaper than Nano Banana 2).
+Article Image Generator — generates editorial header images via Kie.ai Nano Banana 2 API.
+Cost: ~$0.04/image.
 """
 import os
 import json
@@ -93,7 +93,7 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
 
     try:
         result = _kie_request("/api/v1/jobs/createTask", {
-            "model": "z-image",
+            "model": "nano-banana-2",
             "input": {
                 "prompt": prompt,
                 "aspect_ratio": "16:9",
