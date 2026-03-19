@@ -46,30 +46,40 @@
   </div>
   {{ end }}
 
-  {{/* Related articles */}}
-  {{ $currentCategories := .Params.categories }}
+  {{/* Related articles — same category first, then recent fallback */}}
   {{ $currentPage := . }}
   {{ $related := slice }}
-  {{ range where .Site.RegularPages "Section" "posts" }}
-    {{ if ne .Permalink $currentPage.Permalink }}
-      {{ $pageCategories := .Params.categories }}
-      {{ range $currentCategories }}
-        {{ $cat := . }}
-        {{ range $pageCategories }}
+  {{ $allOthers := where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink }}
+  {{ with .Params.categories }}
+    {{ $cat := index . 0 }}
+    {{ range $p := $allOthers }}
+      {{ if and (lt (len $related) 4) $p.Params.categories }}
+        {{ range $p.Params.categories }}
           {{ if eq . $cat }}
-            {{ $related = $related | append $currentPage }}
+            {{ $related = $related | append $p }}
           {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
-  {{ $related = where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink | first 4 }}
+  {{/* Fill remaining slots with recent articles */}}
+  {{ if lt (len $related) 4 }}
+    {{ $need := sub 4 (len $related) }}
+    {{ $relatedPermalinks := slice }}
+    {{ range $related }}{{ $relatedPermalinks = $relatedPermalinks | append .Permalink }}{{ end }}
+    {{ range first (add $need 4) $allOthers }}
+      {{ if and (lt (len $related) 4) (not (in $relatedPermalinks .Permalink)) }}
+        {{ $related = $related | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
   {{ if $related }}
   <div class="related-articles">
     <h3>Lue myös</h3>
     <div class="related-grid">
-      {{ range $related }}
+      {{ range first 4 $related }}
       <a href="{{ .Permalink }}" class="related-link">
+        {{ with .Params.image }}<img src="{{ . }}" alt="{{ $.Title }}" class="related-thumb" loading="lazy">{{ end }}
         <span class="related-title">{{ .Title }}</span>
         <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
       </a>
