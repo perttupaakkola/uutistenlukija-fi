@@ -1,4 +1,5 @@
 ---
 title: "Urheilu"
-description: "Urheiluuutiset – jalkapallo, jääkiekko, Formula 1 ja muut lajit. Päivittäiset urheilutulokset ja uutiset."
+description: "Urheiluuutiset – jalkapallo, jääkiekko, Formula 1 ja muut urheilulajit Suomesta ja maailmalta. Päivittäiset tulokset ja uusimmat uutiset Uutistenlukijasta."
+og_image: "/images/og-urheilu.png"
 ---

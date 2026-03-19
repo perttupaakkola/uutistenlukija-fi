@@ -1,4 +1,5 @@
 ---
 title: "Tiede"
-description: "Tiedeuutiset – tutkimukset, löydöt, avaruus ja luonnontiede. Uusimmat tiedeuutiset Suomesta ja maailmalta."
+description: "Tiedeuutiset – uusimmat tutkimukset, tieteelliset löydöt, avaruus ja luonnontiede. Päivittäiset tiedeuutiset Suomesta ja maailmalta Uutistenlukijasta."
+og_image: "/images/og-tiede.png"
 ---

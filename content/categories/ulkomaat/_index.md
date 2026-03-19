@@ -1,4 +1,5 @@
 ---
 title: "Ulkomaat"
-description: "Ulkomaan uutiset – kansainvälinen politiikka, konfliktit, talous ja kulttuuri. Tuoreimmat uutiset maailmalta."
+description: "Ulkomaan uutiset – kansainvälinen politiikka, konfliktit, talouskriisit ja kulttuuri maailmalta. Tuoreimmat ulkomaan uutiset päivittäin Uutistenlukijasta."
+og_image: "/images/og-ulkomaat.png"
 ---
