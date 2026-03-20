@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{/* Title tag: keep under ~60 chars for Google. Article title capped at 42 chars + " — Uutistenlukija" = ~60. Homepage uses full tagline. */}}
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title | truncate 42 "…" }} — {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
+  {{ $pageTitle := .Title }}{{ if gt (len .Title) 42 }}{{ $pageTitle = printf "%s..." (substr .Title 0 42) }}{{ end }}
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $pageTitle }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
