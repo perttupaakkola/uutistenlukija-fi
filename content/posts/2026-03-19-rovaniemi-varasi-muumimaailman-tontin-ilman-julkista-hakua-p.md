@@ -9,7 +9,7 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
-description: "Rovaniemen kaupunki varasi Muumimaailmalle tontin joulupukin pajakylän läheisyydestä ilman julkista hakua, mikä herätti paikallisessa yrittäjässä pettymystä."
+description: "Rovaniemen kaupunki varasi Muumimaailmalle tontin joulupukin pajakylän läheisyydestä ilman julkista hakua,"
 ---
 
 Rovaniemen kaupunki varasi Joulupukin pajakylän läheisyydestä tontin Muumimaailmalle ilman julkista hakumenettelyä. Päätös salattiin kaupunginhallituksen esityslistalta ja tuli julkiseksi vasta jälkikäteen.

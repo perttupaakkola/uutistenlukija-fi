@@ -9,7 +9,7 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
-description: "Ilmari Käihkön \"10 oppia sodasta\" voitti vuoden tiedekirja -palkinnon monipuolisesta ja terävästä sodan analyysistä teoreettisena ja henkilökohtaisena ilmiönä."
+description: "Ilmari Käihkön \"10 oppia sodasta\" voitti vuoden tiedekirja -palkinnon monipuolisesta ja terävästä sodan analyysistä teoreettisena ja henkilökohtaisena"
 ---
 
 Vuoden tiedekirja -palkinnon on voittanut Ilmari Käihkön teos "10 oppia sodasta". Palkintoraati kuvailee teosta moniulotteiseksi ja teräväksi analyysiksi sodasta teoreettisena, yhteiskunnallisena ja henkilökohtaisesti koettuna ilmiönä.

@@ -9,7 +9,7 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
-description: "Dokumenttielokuva Mr Nobody Against Putin voittaa parhaan dokumentin Oscar-palkinnon. Elokuva paljastaa venäläisten koulujen propagandan Ukrainan-hyökkäyksen…"
+description: "Dokumenttielokuva Mr Nobody Against Putin voittaa parhaan dokumentin Oscar-palkinnon."
 ---
 
 Dokumenttielokuva Mr Nobody Against Putin voitti parhaan dokumenttielokuvan Oscar-palkinnon. Elokuva kertoo venäläisestä peruskoulunopettajasta Pavel Talankinista, joka dokumentoi oppilaittensa indoktrinaatiota Venäjän Ukrainan-hyökkäyksen tueksi.

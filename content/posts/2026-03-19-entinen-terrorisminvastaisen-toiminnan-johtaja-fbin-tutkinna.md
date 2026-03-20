@@ -8,7 +8,7 @@ author_id: "matti-virtanen"
 author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
-description: "Entinen terrorisminvastaisen keskuksen johtaja Joe Kent on FBI:n tutkinnassa väitetyistä luottamuksellisten tietojen vuodoista, jotka herättivät keskustelua."
+description: "Entinen terrorisminvastaisen keskuksen johtaja Joe Kent on FBI:n tutkinnassa väitetyistä luottamuksellisten tietojen vuodoista,"
 draft: false
 ---
 

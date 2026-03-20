@@ -1,6 +1,6 @@
 ---
 title: "Australialaissenaattori jätti jälleen ilmoittamatta kaivosmiljardöörin kustantamia lentoja"
-description: "Australian One Nation -puolueen johtaja Pauline Hanson on toistuvasti laiminlyönyt velvollisuutensa ilmoittaa kaivosmiljardööri Gina Rinehartin kustantamista"
+description: "Australian One Nation -puolueen johtaja Pauline Hanson on toistuvasti laiminlyönyt velvollisuutensa ilmoittaa kaivosmiljardööri Gina Rinehartin"
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Ulkomaat

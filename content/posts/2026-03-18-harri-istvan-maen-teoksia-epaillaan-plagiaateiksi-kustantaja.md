@@ -1,6 +1,6 @@
 ---
 title: "Harri István Mäen teoksia epäillään plagiaateiksi – kustantaja vetäytyi myynnistä"
-description: "Kustantamo Helmivyö on poistanut myynnistä kolme Mäen romaania ja novellikokoelman. Epäilyt kirjallisuuden kopioinnista ovat herättäneet keskustelua alalla."
+description: "Kustantamo Helmivyö on poistanut myynnistä kolme Mäen romaania ja novellikokoelman."
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Kulttuuri

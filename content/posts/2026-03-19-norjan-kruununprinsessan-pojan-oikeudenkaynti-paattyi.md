@@ -8,7 +8,7 @@ author_id: "mikko-salonen"
 author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
-description: "Norjan kruununprinsessa Mette-Maritin pojan, Marius Borg Høibyn, oikeudenkäynti on päättynyt, ja puolustus vaatii huomattavasti lievempää tuomiota kuin syyttäjä."
+description: "Norjan kruununprinsessa Mette-Maritin pojan, Marius Borg Høibyn, oikeudenkäynti on päättynyt,"
 draft: false
 ---
 

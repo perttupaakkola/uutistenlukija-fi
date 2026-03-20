@@ -8,7 +8,7 @@ author_id: "laura-makela"
 author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
-description: "Donald Trumpin johtaman sotatoiminnan hintalappu paljastuu ennennäkemättömäksi, herättäen huolta hallituksen budjetin ja taloudellisten prioriteettien suhteen."
+description: "Donald Trumpin johtaman sotatoiminnan hintalappu paljastuu ennennäkemättömäksi,"
 draft: false
 ---
 

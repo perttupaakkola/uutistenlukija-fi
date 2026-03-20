@@ -8,7 +8,7 @@ author_id: "mikko-salonen"
 author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
-description: "Filosofi Frank Martela korostaa, että Suomen onnellisuus johtuu vahvasta demokratiasta ja kansalaisten luottamuksesta hallintoon, jälleen maailman onnellisin maa."
+description: "Filosofi Frank Martela korostaa, että Suomen onnellisuus johtuu vahvasta demokratiasta ja kansalaisten luottamuksesta hallintoon,"
 draft: false
 ---
 

@@ -8,7 +8,7 @@ author_id: "sanna-heikkinen"
 author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
-description: "Suomessa pääsiäinen tuo tullessaan kesäisiä säitä, kun lämpötilat voivat kohota jopa 15 asteeseen etelässä. Kevätsateet ja auringonpaiste houkuttelevat ulkoilemaan."
+description: "Suomessa pääsiäinen tuo tullessaan kesäisiä säitä, kun lämpötilat voivat kohota jopa 15 asteeseen etelässä."
 draft: false
 ---
 

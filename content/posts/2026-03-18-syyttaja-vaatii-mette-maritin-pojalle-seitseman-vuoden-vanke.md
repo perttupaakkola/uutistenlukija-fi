@@ -1,6 +1,6 @@
 ---
 title: "Syyttäjä vaatii Mette Maritin pojalle seitsemän vuoden vankeustuomiota"
-description: "Norjan kruununprinsessa Mette Maritin pojan Marius Borg Høibyn oikeudenkäynti etenee. Syyttäjä vaatii 28-vuotiaalle Høibylle seitsemän vuoden vankeustuomiota."
+description: "Norjan kruununprinsessa Mette Maritin pojan Marius Borg Høibyn oikeudenkäynti etenee."
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Ulkomaat

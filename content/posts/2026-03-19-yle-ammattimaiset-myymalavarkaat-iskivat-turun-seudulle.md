@@ -8,7 +8,7 @@ author_id: "anna-korhonen"
 author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
-description: "Turun seudulla ammattimaiset myymälävarkaat iskevät useissa liikeyrityksissä, mikä herättää huolta ja saa viranomaiset tutkimaan tilannetta intensiivisesti."
+description: "Turun seudulla ammattimaiset myymälävarkaat iskevät useissa liikeyrityksissä, mikä herättää huolta ja saa viranomaiset tutkimaan tilannetta"
 draft: false
 ---
 

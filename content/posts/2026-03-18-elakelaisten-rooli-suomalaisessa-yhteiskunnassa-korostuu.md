@@ -1,6 +1,6 @@
 ---
 title: "Eläkeläisten rooli suomalaisessa yhteiskunnassa korostuu"
-description: "Eläkeläiset ovat aktiivisia ja monipuolisia yhteiskunnan toimijoita. He osallistuvat kuluttamiseen, vapaaehtoistoimintaan ja tarjoavat apua lähimmäisilleen."
+description: "Eläkeläiset ovat aktiivisia ja monipuolisia yhteiskunnan toimijoita. He osallistuvat kuluttamiseen,"
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa

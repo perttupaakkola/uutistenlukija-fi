@@ -8,7 +8,7 @@ author_id: "matti-virtanen"
 author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
-description: "Sosiaali- ja terveysministeri Wille Rydman ilmaisee huolensa Attendon Olarinpuiston hoivakodin epäluotettavista olosuhteista ja aikoo uudistaa ammattihenkilölainsäädäntöä."
+description: "Sosiaali- ja terveysministeri Wille Rydman ilmaisee huolensa Attendon Olarinpuiston hoivakodin epäluotettavista olosuhteista ja aikoo uudistaa"
 draft: false
 ---
 

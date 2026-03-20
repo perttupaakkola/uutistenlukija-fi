@@ -5,7 +5,7 @@ categories:
   - Kotimaa
 author: "Jukka Nieminen"
 draft: false
-description: "Suomen kansanopistot kamppailevat hallituksen leikkausten vuoksi, jos kotoutumiskoulutuksen rahoitus supistuu, jopa 38 000 maahanmuuttajaa jää ilman opetusta."
+description: "Suomen kansanopistot kamppailevat hallituksen leikkausten vuoksi, jos kotoutumiskoulutuksen rahoitus supistuu,"
 ---
 
 Suomen kansanopistot ovat ajautuneet ahtaalle hallituksen suunnittelemien leikkausten vuoksi. Mikäli kotoutumiskoulutuksen rahoitusta supistetaan suunnitellusti, jopa 38 000 maahanmuuttajaa voi jäädä ilman kielikoulutusta ja muuta kotoutumista tukevaa opetusta.

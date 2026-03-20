@@ -8,7 +8,7 @@ author_id: "anna-korhonen"
 author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
-description: "Bluesky ilmoittaa keränneensä 100 miljoonaa dollaria rahoituksessa toimitusjohtajan vaihtumisen jälkeen. Rahoituskierros saatiin päätökseen huhtikuussa 2025."
+description: "Bluesky ilmoittaa keränneensä 100 miljoonaa dollaria rahoituksessa toimitusjohtajan vaihtumisen jälkeen."
 draft: false
 ---
 

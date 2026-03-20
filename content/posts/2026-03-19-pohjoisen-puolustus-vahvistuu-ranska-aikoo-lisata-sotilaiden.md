@@ -8,7 +8,7 @@ author_id: "jukka-nieminen"
 author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
-description: "Ranska vahvistaa pohjoista puolustusta lisäämällä sotilaidensa harjoittelua Lapissa osana Naton Cold Response -harjoitusta, joka houkuttelee yli 25 000 sotilasta."
+description: "Ranska vahvistaa pohjoista puolustusta lisäämällä sotilaidensa harjoittelua Lapissa osana Naton Cold Response -harjoitusta,"
 draft: false
 ---
 

@@ -8,7 +8,7 @@ author_id: "matti-virtanen"
 author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
-description: "Yhdysvaltain entinen presidentti Donald Trump kyseenalaistaa Yhdysvaltojen ja Israelin välisen yhteistyön Iranin sodassa selostaessaan yllätyksellisiä iskuja."
+description: "Yhdysvaltain entinen presidentti Donald Trump kyseenalaistaa Yhdysvaltojen ja Israelin välisen yhteistyön Iranin sodassa selostaessaan yllätyksellisiä"
 draft: false
 ---
 

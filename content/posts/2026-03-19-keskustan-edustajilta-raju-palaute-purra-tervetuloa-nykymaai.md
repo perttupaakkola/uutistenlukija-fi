@@ -8,7 +8,7 @@ author_id: "matti-virtanen"
 author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
-description: "Keskustan kansanedustajat kritisoivat perussuomalaisia aluepolitiikasta eduskunnan kyselytunnilla, kun taas sisäministeri Rantanen lupaa poliisin jatkuvan läsnäolon."
+description: "Keskustan kansanedustajat kritisoivat perussuomalaisia aluepolitiikasta eduskunnan kyselytunnilla,"
 draft: false
 ---
 
