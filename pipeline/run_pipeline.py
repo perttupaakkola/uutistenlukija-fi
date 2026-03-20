@@ -11,25 +11,11 @@ import argparse
 import json
 import os
 import sys
+import time
 from datetime import datetime, timezone
 
 # Add parent to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-# Load .env from project root (ensures env vars are available regardless of how pipeline is invoked)
-_pipeline_dir = os.path.dirname(os.path.abspath(__file__))
-_project_dir = os.path.dirname(_pipeline_dir)
-_env_file = os.path.join(_project_dir, ".env")
-if os.path.isfile(_env_file):
-    with open(_env_file) as _f:
-        for _line in _f:
-            _line = _line.strip()
-            if _line and not _line.startswith("#") and "=" in _line:
-                _key, _, _val = _line.partition("=")
-                _key = _key.strip()
-                _val = _val.strip()
-                if _key and _key not in os.environ:  # don't override explicit env vars
-                    os.environ[_key] = _val
 
 from scanner import scan_all_feeds
 from firehose import poll_firehose
@@ -41,13 +27,51 @@ from dedup import filter_new_articles, check_published_duplicates, mark_publishe
 from image_gen import generate_images_for_articles
 from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
+from health_check import notify_discord_failure, notify_discord_warning, write_metrics
 
 
 LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
 
+# Alert if total pipeline exceeds this many seconds
+PIPELINE_WARN_TIMEOUT = 900  # 15 minutes
+
+
+class StepTimer:
+    """Context manager for timing pipeline steps and recording results."""
+
+    def __init__(self, name: str):
+        self.name = name
+        self.start: float = 0.0
+        self.duration: float = 0.0
+        self.success: bool = True
+        self.error: str = ""
+        self.meta: dict = {}
+
+    def __enter__(self):
+        self.start = time.time()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.duration = time.time() - self.start
+        if exc_type:
+            self.success = False
+            self.error = str(exc_val)
+        return False  # don't swallow exceptions
+
+    def set(self, **kwargs):
+        """Store additional metadata for this step."""
+        self.meta.update(kwargs)
+
+    def to_dict(self) -> dict:
+        d = {"duration_sec": round(self.duration, 2), "success": self.success}
+        if self.error:
+            d["error"] = self.error
+        d.update(self.meta)
+        return d
+
 
 def log_run(stage: str, data: dict):
-    """Log pipeline run data."""
+    """Log pipeline run data (legacy per-stage files)."""
     os.makedirs(LOG_DIR, exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     filepath = os.path.join(LOG_DIR, f"{timestamp}_{stage}.json")
@@ -55,13 +79,43 @@ def log_run(stage: str, data: dict):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False):
-    """Execute the pipeline.
+def validate_articles(articles: list) -> tuple:
+    """Drop articles that fail quality checks. Returns (valid, dropped_count)."""
+    valid = []
+    dropped = 0
+    for a in articles:
+        issues = []
+        content = a.get("content", "")
+        title = a.get("title", "")
+        word_count = len(content.split())
 
-    Args:
-        quick: If True, skip the Hugo build step (scan + rewrite + publish only).
-        build_only: If True, only run the Hugo build (no scanning/rewriting).
-    """
+        if word_count < 80:
+            issues.append(f"too short ({word_count} words)")
+        if len(title) < 10:
+            issues.append(f"title too short ({len(title)} chars)")
+        if len(title) > 120:
+            issues.append(f"title too long ({len(title)} chars)")
+        if not a.get("category"):
+            issues.append("no category")
+
+        if issues:
+            print(f"[quality] DROPPED: '{title[:60]}' — {', '.join(issues)}")
+            dropped += 1
+        else:
+            valid.append(a)
+
+    if dropped:
+        print(f"[quality] {dropped} articles dropped, {len(valid)} passed quality gate")
+    return valid, dropped
+
+
+def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False):
+    """Execute the pipeline."""
+    pipeline_start = time.time()
+    steps: dict = {}
+    errors: list = []
+    article_count = 0
+
     print("=" * 60)
     print(f"Uutistenlukija Pipeline — {datetime.now(timezone.utc).isoformat()}")
     if quick:
@@ -69,188 +123,258 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     elif build_only:
         print("  Mode: --build-only")
     elif firehose_only:
-        print("  Mode: --firehose-only (Firehose poll + rewrite, skip RSS + build)")
+        print("  Mode: --firehose-only")
     print("=" * 60)
 
     if build_only:
         print("\n🔨 Hugo-sivuston rakennus...")
         success = build_site()
-        if success:
-            print("\n✅ Rakennus valmis!")
-        else:
-            print("\n❌ Rakennus epäonnistui.")
+        print("\n✅ Rakennus valmis!" if success else "\n❌ Rakennus epäonnistui.")
         return success
 
-    # Step 1: Scan sources
-    if firehose_only:
-        # Firehose-only mode: skip RSS, just poll Firehose
-        rss_articles = []
-        fh_new = []
-        print("\n🔥 Vaihe 1: Firehose-pollaus (RSS ohitettu)...")
-        try:
-            fh_articles = poll_firehose()
-        except Exception as e:
-            print(f"[firehose] Error: {e}")
-            fh_articles = []
-        articles = fh_articles
-        fh_new = fh_articles  # In firehose-only mode, all are "new"
-        print(f"[pipeline] Firehose: {len(articles)} articles")
-    else:
-        print("\n📡 Vaihe 1: RSS-syötteiden skannaus...")
-        rss_articles = scan_all_feeds()
+    # ── Step 1: Scan ───────────────────────────────────────────────────────────
+    rss_articles = []
+    fh_new = []
 
-        print("\n🔥 Vaihe 1b: Firehose-pollaus...")
-        try:
-            fh_articles = poll_firehose()
-            print(f"[firehose] +{len(fh_articles)} articles from Firehose")
-        except Exception as e:
-            print(f"[firehose] Skipping (error): {e}")
-            fh_articles = []
+    with StepTimer("scanner") as t_scan:
+        if firehose_only:
+            rss_articles = []
+            print("\n🔥 Vaihe 1: Firehose-pollaus (RSS ohitettu)...")
+            try:
+                fh_articles = poll_firehose()
+            except Exception as e:
+                fh_articles = []
+                errors.append(f"firehose: {e}")
+            articles = fh_articles
+            fh_new = fh_articles
+            print(f"[pipeline] Firehose: {len(articles)} articles")
+        else:
+            print("\n📡 Vaihe 1: RSS-syötteiden skannaus...")
+            rss_articles = scan_all_feeds()
 
-        # Merge: prefer RSS articles (richer metadata), Firehose fills gaps
-        seen_url_hashes = {a.get("_url_hash") for a in rss_articles if a.get("_url_hash")}
-        fh_new = [a for a in fh_articles if a.get("_url_hash") not in seen_url_hashes]
-        articles = rss_articles + fh_new
-        print(f"[pipeline] RSS: {len(rss_articles)} + Firehose new: {len(fh_new)} = {len(articles)} total")
+            print("\n🔥 Vaihe 1b: Firehose-pollaus...")
+            try:
+                fh_articles = poll_firehose()
+                print(f"[firehose] +{len(fh_articles)} articles from Firehose")
+            except Exception as e:
+                print(f"[firehose] Skipping (error): {e}")
+                fh_articles = []
+                errors.append(f"firehose: {e}")
+
+            seen_url_hashes = {a.get("_url_hash") for a in rss_articles if a.get("_url_hash")}
+            fh_new = [a for a in fh_articles if a.get("_url_hash") not in seen_url_hashes]
+            articles = rss_articles + fh_new
+            print(f"[pipeline] RSS: {len(rss_articles)} + Firehose new: {len(fh_new)} = {len(articles)} total")
+
+        t_scan.set(rss_count=len(rss_articles), firehose_count=len(fh_new), total=len(articles))
+
+    steps["scanner"] = t_scan.to_dict()
 
     if not articles:
+        msg = "No articles found after scan"
+        notify_discord_failure("scanner", msg)
+        errors.append(msg)
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
         print("❌ Ei artikkeleita löytynyt. Keskeytetään.")
         return False
 
     log_run("scanned", {"count": len(articles), "rss_count": len(rss_articles), "firehose_new": len(fh_new), "articles": articles})
 
-    # Step 1b: Deduplication
-    print("\n🔍 Vaihe 1b: Duplikaattien suodatus...")
-    articles = filter_new_articles(articles)
+    # ── Step 1b: Dedup ─────────────────────────────────────────────────────────
+    with StepTimer("dedup") as t_dedup:
+        print("\n🔍 Vaihe 1b: Duplikaattien suodatus...")
+        articles = filter_new_articles(articles)
+        if articles:
+            articles = check_published_duplicates(articles)
+        t_dedup.set(remaining=len(articles))
+
+    steps["dedup"] = t_dedup.to_dict()
+
     if not articles:
         print("ℹ️  Kaikki artikkelit on jo julkaistu. Ei uusia artikkeleita.")
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True)
         return True
 
-    # Step 1b-2: Check against already-published titles (semantic similarity)
-    articles = check_published_duplicates(articles)
-    if not articles:
-        print("ℹ️  Kaikki artikkelit vastaavat jo julkaistuja artikkeleita. Ei uusia.")
-        return True
+    # ── Step 1c: Research ──────────────────────────────────────────────────────
+    with StepTimer("research") as t_research:
+        print(f"\n🔍 Vaihe 1c: Lähdeartikkelien haku ({len(articles)} artikkelia)...")
+        articles = enrich_with_research(articles)
+        t_research.set(enriched=len(articles))
 
-    # Step 1c: Fetch source articles for research
-    print(f"\n🔍 Vaihe 1c: Lähdeartikkelien haku ({len(articles)} artikkelia)...")
-    articles = enrich_with_research(articles)
+    steps["research"] = t_research.to_dict()
 
-    # Step 2: Rewrite with AI
-    print(f"\n✍️  Vaihe 2: {len(articles)} artikkelin uudelleenkirjoitus...")
-    try:
-        rewritten = rewrite_articles(articles)
-    except ValueError as e:
-        print(f"❌ {e}")
-        return False
+    # ── Step 2: Rewrite ────────────────────────────────────────────────────────
+    rewritten = []
+    with StepTimer("rewriter") as t_rewrite:
+        print(f"\n✍️  Vaihe 2: {len(articles)} artikkelin uudelleenkirjoitus...")
+        try:
+            rewritten = rewrite_articles(articles)
+        except ValueError as e:
+            t_rewrite.success = False
+            t_rewrite.error = str(e)
+            notify_discord_failure("rewriter", str(e))
+            errors.append(f"rewriter: {e}")
+            print(f"❌ {e}")
+        except Exception as e:
+            t_rewrite.success = False
+            t_rewrite.error = str(e)
+            notify_discord_failure("rewriter", str(e))
+            errors.append(f"rewriter: {e}")
+            print(f"❌ Rewriter failed: {e}")
+        t_rewrite.set(input_count=len(articles), output_count=len(rewritten))
+
+    steps["rewriter"] = t_rewrite.to_dict()
 
     if not rewritten:
+        notify_discord_failure("rewriter", "Rewriter produced 0 articles", f"Input was {len(articles)} articles")
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
         print("❌ Uudelleenkirjoitus epäonnistui. Keskeytetään.")
         return False
 
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
-    # Step 2b: Fetch images — Unsplash primary, Pexels secondary, AI gen fallback
-    # Unsplash: hotlink (images.unsplash.com), 50 req/hr demo, download tracking required
-    # Pexels:   download locally, 200 req/hr, attribution required
-    print(f"\n🖼️  Vaihe 2b: Kuvien haku (Unsplash → Pexels → AI fallback)...")
-    try:
-        import os as _os
-        _unsplash_key = _os.environ.get("UNSPLASH_ACCESS_KEY", "")
-        _pexels_key = _os.environ.get("PEXELS_API_KEY", "")
+    # ── Step 2a: Quality gate ──────────────────────────────────────────────────
+    rewritten, dropped_count = validate_articles(rewritten)
+    if dropped_count:
+        steps["quality_gate"] = {"dropped": dropped_count, "passed": len(rewritten)}
+    if not rewritten:
+        notify_discord_failure("quality_gate", "All articles dropped by quality gate")
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
+        return False
 
-        def _needs_image(a):
-            return not a.get("image") or a.get("image_category_fallback")
+    # ── Step 2b: Images ────────────────────────────────────────────────────────
+    unsplash_count = pexels_count = ai_count = fallback_count = 0
+    image_step_start = time.time()
+    IMAGE_STEP_TIMEOUT = 300  # 5 minutes hard cap
 
-        def _clear_fallback(articles):
-            for a in articles:
-                if a.get("image_category_fallback"):
-                    a["image"] = ""
-                    a["image_category_fallback"] = False
+    with StepTimer("images") as t_images:
+        print(f"\n🖼️  Vaihe 2b: Kuvien haku (Unsplash → Pexels → AI fallback)...")
+        try:
+            _unsplash_key = os.environ.get("UNSPLASH_ACCESS_KEY", "")
+            _pexels_key = os.environ.get("PEXELS_API_KEY", "")
 
-        unsplash_count = pexels_count = ai_count = 0
+            def _needs_image(a):
+                return not a.get("image") or a.get("image_category_fallback")
 
-        # Pass 1: Unsplash (primary — higher quality, hotlinked)
-        if _unsplash_key:
-            rewritten = unsplash_fetch_images(rewritten, delay=1.2)
-            unsplash_count = sum(1 for a in rewritten if a.get("image") and not a.get("image_category_fallback"))
-            print(f"[unsplash] {unsplash_count}/{len(rewritten)} images")
-        else:
-            print("[unsplash] No UNSPLASH_ACCESS_KEY — skipping")
+            def _clear_fallback(arts):
+                for a in arts:
+                    if a.get("image_category_fallback"):
+                        a["image"] = ""
+                        a["image_category_fallback"] = False
 
-        # Pass 2: Pexels for articles still without a real image (downloads locally)
-        still_missing = [a for a in rewritten if _needs_image(a)]
-        if still_missing and _pexels_key:
-            print(f"[pexels] Trying for {len(still_missing)} remaining articles...")
-            _clear_fallback(still_missing)
-            still_missing = pexels_fetch_images(still_missing, delay=0.5)
-            pexels_count = sum(1 for a in still_missing if a.get("image") and not a.get("image_category_fallback"))
-            print(f"[pexels] {pexels_count}/{len(still_missing)} images")
-        elif not _pexels_key:
-            print("[pexels] No PEXELS_API_KEY — skipping")
+            # Pass 1: Unsplash
+            if _unsplash_key and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
+                rewritten = unsplash_fetch_images(rewritten, delay=1.2)
+                unsplash_count = sum(1 for a in rewritten if a.get("image") and not a.get("image_category_fallback"))
+                print(f"[unsplash] {unsplash_count}/{len(rewritten)} images")
+            elif not _unsplash_key:
+                print("[unsplash] No UNSPLASH_ACCESS_KEY — skipping")
 
-        # Pass 3: AI image gen for any remaining gaps
-        no_image = [a for a in rewritten if not a.get("image")]
-        if no_image:
-            print(f"[image_gen] AI gen for {len(no_image)} articles without image...")
-            no_image = generate_images_for_articles(no_image)
-            ai_count = sum(1 for a in no_image if a.get("image") and not a.get("image_category_fallback"))
-            print(f"[image_gen] {ai_count}/{len(no_image)} succeeded")
+            # Pass 2: Pexels
+            still_missing = [a for a in rewritten if _needs_image(a)]
+            if still_missing and _pexels_key and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
+                print(f"[pexels] Trying for {len(still_missing)} remaining articles...")
+                _clear_fallback(still_missing)
+                still_missing = pexels_fetch_images(still_missing, delay=0.5)
+                pexels_count = sum(1 for a in still_missing if a.get("image") and not a.get("image_category_fallback"))
+                print(f"[pexels] {pexels_count}/{len(still_missing)} images")
+            elif not _pexels_key:
+                print("[pexels] No PEXELS_API_KEY — skipping")
+
+            # Pass 3: AI (with total step timeout guard)
+            no_image = [a for a in rewritten if not a.get("image")]
+            elapsed = time.time() - image_step_start
+            if no_image and elapsed < IMAGE_STEP_TIMEOUT:
+                remaining_budget = IMAGE_STEP_TIMEOUT - elapsed
+                print(f"[image_gen] AI gen for {len(no_image)} articles without image (budget: {remaining_budget:.0f}s)...")
+                no_image = generate_images_for_articles(no_image, max_total_sec=int(remaining_budget))
+                ai_count = sum(1 for a in no_image if a.get("image") and not a.get("image_category_fallback"))
+                print(f"[image_gen] {ai_count}/{len(no_image)} succeeded")
+            elif no_image and elapsed >= IMAGE_STEP_TIMEOUT:
+                print(f"[image_gen] Skipping AI gen — image step budget exhausted ({elapsed:.0f}s)")
+                notify_discord_warning("images", f"Image step budget exhausted ({elapsed:.0f}s). {len(no_image)} articles have no image.")
+
+        except Exception as e:
+            errors.append(f"images: {e}")
+            print(f"[images] Kuvien haku epäonnistui: {e}")
 
         image_count = sum(1 for a in rewritten if a.get("image"))
         fallback_count = sum(1 for a in rewritten if a.get("image_category_fallback"))
-        hotlink_count = sum(1 for a in rewritten if a.get("image_hotlink"))
-        real_images = image_count - fallback_count
         print(f"[images] Total: {image_count}/{len(rewritten)} "
-              f"(Unsplash:{unsplash_count} hotlink, Pexels:{pexels_count} local, "
-              f"AI:{ai_count}, fallback:{fallback_count})")
+              f"(Unsplash:{unsplash_count}, Pexels:{pexels_count}, AI:{ai_count}, fallback:{fallback_count})")
 
-        # Alert if ALL articles ended up with category fallbacks (0 real images)
-        if len(rewritten) > 0 and real_images == 0:
-            try:
-                from health_check import notify_discord_failure
-                notify_discord_failure(
-                    "image_gen",
-                    f"0/{len(rewritten)} articles got real images — all fell back to category placeholders.\n"
-                    f"Unsplash key: {'set' if _unsplash_key else 'MISSING'}, "
-                    f"Pexels key: {'set' if _pexels_key else 'MISSING'}",
-                    "Check API keys and Kie.ai status."
-                )
-            except Exception as _ne:
-                print(f"[notify] Could not send image alert: {_ne}")
-    except Exception as e:
-        print(f"[images] Kuvien haku epäonnistui (artikkelit julkaistaan ilman kuvia): {e}")
+        if image_count == 0 and len(rewritten) > 0:
+            notify_discord_warning("images", f"0 real images obtained for {len(rewritten)} articles")
 
-    # Step 2c: Generate meta descriptions (uses OPENAI_API_KEY via generate_descriptions module)
+        t_images.set(
+            total=image_count,
+            unsplash=unsplash_count,
+            pexels=pexels_count,
+            ai=ai_count,
+            fallback=fallback_count,
+        )
+
+    steps["images"] = t_images.to_dict()
+
+    # ── Step 2c: Meta descriptions ─────────────────────────────────────────────
     openai_key = os.environ.get("OPENAI_API_KEY", "")
     if openai_key:
-        print(f"\n📋 Vaihe 2c: Meta-kuvausten generointi...")
-        desc_count = 0
-        for article in rewritten:
-            if not article.get("description"):
-                desc = generate_for_article_dict(article)
-                if desc:
-                    article["description"] = desc
-                    desc_count += 1
-        print(f"[descriptions] {desc_count}/{len(rewritten)} artikkelia sai kuvauksen")
+        with StepTimer("descriptions") as t_desc:
+            print(f"\n📋 Vaihe 2c: Meta-kuvausten generointi...")
+            desc_count = 0
+            for article in rewritten:
+                if not article.get("description"):
+                    desc = generate_for_article_dict(article)
+                    if desc:
+                        article["description"] = desc
+                        desc_count += 1
+            print(f"[descriptions] {desc_count}/{len(rewritten)} artikkelia sai kuvauksen")
+            t_desc.set(generated=desc_count)
+        steps["descriptions"] = t_desc.to_dict()
     else:
         print(f"\n📋 Vaihe 2c: OPENAI_API_KEY puuttuu, meta-kuvaukset ohitetaan")
 
-    # Step 3: Publish
-    print(f"\n📝 Vaihe 3: {len(rewritten)} artikkelin julkaisu...")
-    created = publish_articles(rewritten)
-    log_run("published", {"count": len(created), "files": created})
+    # ── Step 3: Publish ────────────────────────────────────────────────────────
+    created = []
+    with StepTimer("publisher") as t_publish:
+        print(f"\n📝 Vaihe 3: {len(rewritten)} artikkelin julkaisu...")
+        try:
+            created = publish_articles(rewritten)
+            log_run("published", {"count": len(created), "files": created})
+            mark_published(rewritten)
+        except Exception as e:
+            t_publish.success = False
+            t_publish.error = str(e)
+            notify_discord_failure("publisher", str(e))
+            errors.append(f"publisher: {e}")
+        t_publish.set(files_created=len(created))
 
-    # Mark published articles for deduplication
-    mark_published(rewritten)
+    steps["publisher"] = t_publish.to_dict()
+    article_count = len(created)
+
+    # ── Total time warning ─────────────────────────────────────────────────────
+    elapsed_total = time.time() - pipeline_start
+    if elapsed_total > PIPELINE_WARN_TIMEOUT:
+        notify_discord_warning("pipeline", f"Total runtime {elapsed_total:.0f}s exceeds {PIPELINE_WARN_TIMEOUT}s threshold")
 
     if quick:
+        _write_final_metrics(steps, errors, article_count, elapsed_total, success=True)
         print(f"\n✅ Valmis! {len(created)} artikkelia julkaistu (build ohitettu).")
         return True
 
-    # Step 4: Build
-    print("\n🔨 Vaihe 4: Hugo-sivuston rakennus...")
-    success = build_site()
+    # ── Step 4: Build ──────────────────────────────────────────────────────────
+    with StepTimer("build") as t_build:
+        print("\n🔨 Vaihe 4: Hugo-sivuston rakennus...")
+        success = build_site()
+        t_build.success = success
+        if not success:
+            notify_discord_failure("build", "Hugo build failed")
+            errors.append("build failed")
+
+    steps["build"] = t_build.to_dict()
+
+    elapsed_total = time.time() - pipeline_start
+    _write_final_metrics(steps, errors, article_count, elapsed_total, success=success)
 
     if success:
         print(f"\n✅ Valmis! {len(created)} artikkelia julkaistu.")
@@ -258,6 +382,20 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         print("\n⚠️  Artikkelit julkaistu, mutta sivuston rakennus epäonnistui.")
 
     return success
+
+
+def _write_final_metrics(steps: dict, errors: list, article_count: int, total_sec: float, success: bool):
+    """Write structured metrics to logs/metrics.json."""
+    record = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "success": success,
+        "article_count": article_count,
+        "total_duration_sec": round(total_sec, 2),
+        "steps": steps,
+        "errors": errors,
+    }
+    path = write_metrics(record)
+    print(f"[metrics] Written to {path}")
 
 
 if __name__ == "__main__":

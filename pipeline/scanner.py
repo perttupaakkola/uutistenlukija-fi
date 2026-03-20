@@ -167,7 +167,11 @@ HEADERS = {
 }
 
 # Politeness: minimum seconds between requests to the same domain
-DOMAIN_DELAY = 30
+# 5s is still polite for different domains; most feeds are on separate domains
+DOMAIN_DELAY = 5
+
+# Hard cap on total scanner wall-clock time (seconds)
+SCANNER_TIMEOUT = 120
 
 # ETag/Last-Modified cache file (persists between pipeline runs)
 _CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
@@ -483,16 +487,41 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
 
 
 def scan_all_feeds() -> List[Dict]:
-    """Scan all configured RSS feeds, deduplicate, return top articles."""
+    """Scan all configured RSS feeds, deduplicate, return top articles.
+
+    Stops fetching new feeds after SCANNER_TIMEOUT seconds to keep pipeline
+    running even when many feeds are slow.
+    """
     http_cache = _load_http_cache()
     all_articles = []
+    scan_start = time.monotonic()
+    feeds_fetched = 0
+    feeds_skipped = 0
+
     for feed in RSS_FEEDS:
         if feed.get("disabled"):
             continue
+
+        elapsed = time.monotonic() - scan_start
+        if elapsed >= SCANNER_TIMEOUT:
+            feeds_skipped += 1
+            print(f"[scanner] ⏱ Timeout ({SCANNER_TIMEOUT}s) — skipping remaining feeds ({feeds_skipped} total skipped)")
+            break
+
         print(f"[scanner] Fetching {feed['name']}...")
         articles = fetch_feed(feed, http_cache=http_cache)
         print(f"[scanner]   → {len(articles)} articles")
         all_articles.extend(articles)
+        feeds_fetched += 1
+
+    # Count remaining skipped feeds
+    active_feeds = [f for f in RSS_FEEDS if not f.get("disabled")]
+    if feeds_skipped == 0 and feeds_fetched < len(active_feeds):
+        feeds_skipped = len(active_feeds) - feeds_fetched
+
+    total_scan_time = time.monotonic() - scan_start
+    print(f"[scanner] Scan complete: {feeds_fetched} feeds in {total_scan_time:.1f}s "
+          f"({feeds_skipped} skipped due to timeout)")
     _save_http_cache(http_cache)
 
     # Exact dedup by fingerprint

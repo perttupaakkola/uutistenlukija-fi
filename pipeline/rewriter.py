@@ -156,6 +156,66 @@ def _extract_json(text: str) -> list:
     return json.loads(text)
 
 
+def _build_single_prompt(article: dict) -> str:
+    """Build a rewrite prompt for a single article."""
+    ATTRIBUTION_SOURCES = {
+        "BBC World", "BBC Technology", "BBC Science",
+        "Reuters World", "Reuters Technology", "Reuters Science",
+        "AP News", "The Guardian World", "The Guardian",
+        "Ars Technica", "TechCrunch", "Der Spiegel International", "Science News",
+    }
+    lang = article.get("language", "fi")
+    source = article.get("source", "")
+    is_international = lang != "fi" or source in ATTRIBUTION_SOURCES
+
+    lang_note = f"\nKieli: {lang} — KIRJOITA ARTIKKELI SUOMEKSI" if lang != "fi" else ""
+    attribution_note = (f"\nLähde (mainitse kerran luonnollisesti tekstissä): {source}"
+                        if is_international and source else "")
+    research = article.get("research", "")
+    research_section = f"\nTaustatutkimus:\n{research}" if research else ""
+
+    return f"""Kirjoita seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.
+
+---
+Otsikko: {article['title']}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}
+---
+
+Vastaa JSON-listana (lista yhdellä alkiolla):
+[
+  {{
+    "title": "Uutisen otsikko",
+    "content": "4-6 kappaleen uutisteksti...",
+    "category": "Yksi: {', '.join(CATEGORIES)}",
+    "original_title": "Alkuperäinen otsikko RSS:stä"
+  }}
+]
+
+Vastaa VAIN JSON-listalla."""
+
+
+def _rewrite_individually(batch: List[Dict]) -> List[Dict]:
+    """Fallback: rewrite each article in the batch one at a time.
+
+    Slower but recovers content when batch JSON parsing fails.
+    """
+    results = []
+    for idx, article in enumerate(batch):
+        print(f"[writer]   Individual rewrite {idx + 1}/{len(batch)}: '{article.get('title', '')[:50]}'")
+        try:
+            prompt = _build_single_prompt(article)
+            response_text = _call_llm(SYSTEM_PROMPT, prompt)
+            parsed = _extract_json(response_text)
+            if parsed and isinstance(parsed, list):
+                item = parsed[0]
+                item["fingerprint"] = article.get("fingerprint", "")
+                item["trending"] = article.get("trending", False)
+                results.append(item)
+        except Exception as e:
+            print(f"[writer]   Individual rewrite failed for '{article.get('title', '')[:40]}': {e}")
+    return results
+
+
 def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     """Write original articles from RSS leads and research data.
 
@@ -230,20 +290,41 @@ Vastaa VAIN JSON-listalla."""
 
         pass1_result = None
         try:
-            # Pass 1: Write
+            # Pass 1: Write (batch)
             response_text = _call_llm(SYSTEM_PROMPT, prompt)
             pass1_result = _extract_json(response_text)
             print(f"[writer]   Pass 1 → {len(pass1_result)} articles written")
         except json.JSONDecodeError as e:
             print(f"[writer] Pass 1 JSON parse error (batch {i // batch_size + 1}): {e}")
-            print(f"[writer]   Skipping batch — no parseable output")
-            continue
+            print(f"[writer]   Retrying batch once...")
+            try:
+                response_text = _call_llm(SYSTEM_PROMPT, prompt)
+                pass1_result = _extract_json(response_text)
+                print(f"[writer]   Batch retry succeeded → {len(pass1_result)} articles")
+            except json.JSONDecodeError as e2:
+                print(f"[writer]   Batch retry still failed ({e2}). Falling back to individual rewrites...")
+                pass1_result = _rewrite_individually(batch)
+                if not pass1_result:
+                    print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
+                    continue
+                print(f"[writer]   Individual fallback → {len(pass1_result)} articles")
+            except Exception as e2:
+                print(f"[writer]   Batch retry failed: {e2}. Falling back to individual rewrites...")
+                pass1_result = _rewrite_individually(batch)
+                if not pass1_result:
+                    print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
+                    continue
+                print(f"[writer]   Individual fallback → {len(pass1_result)} articles")
         except Exception as e:
             print(f"[writer] Pass 1 failed after retries (batch {i // batch_size + 1}): {e}")
             import traceback
             traceback.print_exc()
-            print(f"[writer]   Skipping batch")
-            continue
+            print(f"[writer]   Falling back to individual rewrites...")
+            pass1_result = _rewrite_individually(batch)
+            if not pass1_result:
+                print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
+                continue
+            print(f"[writer]   Individual fallback → {len(pass1_result)} articles")
 
         try:
             # Pass 2: Anti-AI audit
@@ -280,6 +361,14 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
                 orig = batch[j].get("title", "?") if j < len(batch) else "?"
                 print(f"[writer]   {sentinel}: '{orig[:60]}' — skipped")
                 continue
+
+            # Quality flags — warn but don't drop here (quality gate in run_pipeline.py)
+            word_count = len(content.split())
+            title_len = len(title)
+            if word_count < 100:
+                print(f"[writer]   ⚠ Short article ({word_count} words): '{title[:50]}'")
+            if title_len > 100 or title_len < 10:
+                print(f"[writer]   ⚠ Suspicious title length ({title_len} chars): '{title[:60]}'")
 
             if j < len(batch):
                 written_article["fingerprint"] = batch[j].get("fingerprint", "")
