@@ -13,7 +13,7 @@
 
   // ── article_read ────────────────────────────────────────────────────────
   // Fires when a visitor scrolls past 75% of an article page.
-  {{- if .IsPage }}
+  {{- if $.IsPage }}
   (function () {
     var fired = false;
     var threshold = 0.75;
@@ -25,9 +25,9 @@
       if (total > 0 && scrolled / total >= threshold) {
         fired = true;
         _gtag('event', 'article_read', {
-          article_title: {{ .Title | jsonify }},
-          article_category: {{ with .Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }},
-          article_slug: {{ .File.BaseFileName | jsonify }}
+          article_title: {{ $.Title | jsonify }},
+          article_category: {{ with $.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }},
+          article_slug: {{ $.File.BaseFileName | jsonify }}
         });
         window.removeEventListener('scroll', onScroll, { passive: true });
       }
