@@ -45,7 +45,7 @@ if git diff --cached --quiet; then
   echo "No new content to push." | tee -a "$LOG_FILE"
 else
   ARTICLE_COUNT=$(git diff --cached --name-only | grep -c "^content/posts/" || echo "0")
-  git commit -m "Auto-publish: ${ARTICLE_COUNT} new articles ($(date -u +%Y-%m-%d %H:%M UTC))" 2>&1 | tee -a "$LOG_FILE"
+  git commit -m "Auto-publish: ${ARTICLE_COUNT} new articles ($(date -u '+%Y-%m-%d %H:%M UTC'))" 2>&1 | tee -a "$LOG_FILE"
   
   echo "[3/3] Pushing to GitHub..." | tee -a "$LOG_FILE"
   git push origin main 2>&1 | tee -a "$LOG_FILE"

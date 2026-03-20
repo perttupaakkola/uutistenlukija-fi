@@ -85,6 +85,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     if firehose_only:
         # Firehose-only mode: skip RSS, just poll Firehose
         rss_articles = []
+        fh_new = []
         print("\n🔥 Vaihe 1: Firehose-pollaus (RSS ohitettu)...")
         try:
             fh_articles = poll_firehose()
@@ -92,6 +93,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
             print(f"[firehose] Error: {e}")
             fh_articles = []
         articles = fh_articles
+        fh_new = fh_articles  # In firehose-only mode, all are "new"
         print(f"[pipeline] Firehose: {len(articles)} articles")
     else:
         print("\n📡 Vaihe 1: RSS-syötteiden skannaus...")
