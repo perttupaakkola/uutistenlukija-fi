@@ -107,7 +107,7 @@
       <a href="{{ .Permalink }}" class="related-card">
         {{ with .Params.image }}
         <div class="related-thumb">
-          <img src="{{ . }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="lazy">
         </div>
         {{ end }}
         <div class="related-text">

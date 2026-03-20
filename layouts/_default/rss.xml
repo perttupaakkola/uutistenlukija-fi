@@ -1,5 +1,12 @@
 {{- $pagesAll := .Pages -}}
-{{- $pages := ($pagesAll | first 50) -}}
+{{- /* Filter out static/utility pages: only include items with valid dates and real content */ -}}
+{{- $pages := slice -}}
+{{- range $pagesAll -}}
+  {{- if and (not .Date.IsZero) (ne .Title "Posts") (ne .Section "") -}}
+    {{- $pages = $pages | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages = $pages | first 50 -}}
 {{- $title := .Title | default .Site.Title -}}
 {{- $desc := .Description | default .Site.Params.description -}}
 <?xml version="1.0" encoding="UTF-8"?>
