@@ -13,28 +13,29 @@
 
   // ── article_read ────────────────────────────────────────────────────────
   // Fires when a visitor scrolls past 75% of an article page.
-  {{- if $.IsPage }}
-  (function () {
-    var fired = false;
-    var threshold = 0.75;
-    function onScroll() {
-      if (fired) return;
-      var el = document.documentElement;
-      var scrolled = el.scrollTop + el.clientHeight;
-      var total = el.scrollHeight;
-      if (total > 0 && scrolled / total >= threshold) {
-        fired = true;
-        _gtag('event', 'article_read', {
-          article_title: {{ $.Title | jsonify }},
-          article_category: {{ with $.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }},
-          article_slug: {{ $.File.BaseFileName | jsonify }}
-        });
-        window.removeEventListener('scroll', onScroll, { passive: true });
+  var isPage = {{ if $.IsPage }}true{{ else }}false{{ end }};
+  if (isPage) {
+    (function () {
+      var fired = false;
+      var threshold = 0.75;
+      function onScroll() {
+        if (fired) return;
+        var el = document.documentElement;
+        var scrolled = el.scrollTop + el.clientHeight;
+        var total = el.scrollHeight;
+        if (total > 0 && scrolled / total >= threshold) {
+          fired = true;
+          _gtag('event', 'article_read', {
+            article_title: document.title,
+            article_category: {{ if $.IsPage }}{{ with $.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }}{{ else }}"uncategorized"{{ end }},
+            article_slug: {{ if $.IsPage }}{{ $.File.BaseFileName | jsonify }}{{ else }}""{{ end }}
+          });
+          window.removeEventListener('scroll', onScroll, { passive: true });
+        }
       }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-  })();
-  {{- end }}
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  }
 
   // ── search_used ─────────────────────────────────────────────────────────
   // Fires on search form submission (looks for <form role="search">).

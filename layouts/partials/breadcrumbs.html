@@ -19,7 +19,7 @@
 
 {{ else if .IsPage }}
   {{/* Article page — category crumb then article title */}}
-  {{ $cat := .Params.categories | first }}
+  {{ $cat := "" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
   {{ if $cat }}
     {{ $catUrl := printf "%scategories/%s/" .Site.BaseURL ($cat | urlize) }}
     {{ $crumbs = $crumbs | append (dict "name" $cat "url" $catUrl) }}
