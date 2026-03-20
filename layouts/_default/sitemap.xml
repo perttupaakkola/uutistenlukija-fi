@@ -1,5 +1,6 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   {{- range .Data.Pages }}
   {{- if and (ne .Permalink "") (ne .Params.noindex true) }}
@@ -10,16 +11,21 @@
     {{- else if not .Date.IsZero }}
     <lastmod>{{ .Date.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
     {{- end }}
-    {{- if .Params.images }}
-    {{- range .Params.images }}
+
+    {{- /* image:image — single hero image from article front matter */}}
+    {{- if and (eq .Section "posts") .Params.image }}
     <image:image>
-      <image:loc>{{ . }}</image:loc>
-      {{- if $.Params.image_alt }}
-      <image:title>{{ $.Params.image_alt }}</image:title>
+      <image:loc>{{ .Params.image }}</image:loc>
+      {{- with .Params.image_alt }}
+      <image:title>{{ . }}</image:title>
+      {{- end }}
+      {{- with .Params.image_credit }}
+      <image:license>{{ . }}</image:license>
       {{- end }}
     </image:image>
     {{- end }}
-    {{- end }}
+
+    {{- /* news:news — only for posts within 2 days (Google's 48h window) */}}
     {{- if and (eq .Section "posts") (not .Date.IsZero) }}
     <news:news>
       <news:publication>

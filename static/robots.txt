@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Thin/duplicate content — pagination, taxonomies, tag pages
+Disallow: /page/
+Disallow: /posts/page/
+Disallow: /categories/
+Disallow: /tags/
+
+# Internal / utility paths
+Disallow: /haku/
+Disallow: /sw.js
+
+Sitemap: https://uutistenlukija.fi/sitemap.xml
+Sitemap: https://uutistenlukija.fi/news-sitemap.xml
