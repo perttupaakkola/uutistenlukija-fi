@@ -15,6 +15,12 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - teknologia
+  - lapset
+  - yritys
+  - poliisi
+  - oikeus
 ---
 
 Elon Muskin omistamaa tekoälyyhtiö xAI:ta vastaan on nostettu oikeusjuttu Yhdysvalloissa. Kanteen mukaan yhtiön Grok-tekoälymalli tuotti lasten seksuaalista hyväksikäyttömateriaalia käyttämällä pohjana kolmen tytön oikeita valokuvia.

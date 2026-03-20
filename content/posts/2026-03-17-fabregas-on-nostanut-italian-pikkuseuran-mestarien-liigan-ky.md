@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - urheilu
+  - avaruus
+  - kilpailu
 ---
 
 Espanjalainen Cesc Fábregas on tehnyt Como 1907:sta yhden kauden yllättäjistä. Pohjois-Italian pikkukaupungin seura lähestyy Mestarien liigan paikkaa, mikä olisi seuran historian suurin saavutus.

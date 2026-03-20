@@ -15,6 +15,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - urheilu
+  - iran
+  - jalkapallo
 ---
 
 Iranin naisten jalkapallomaajoukkue saapui takaisin Iranin pääkaupunkiin. Joukkue matkasi rajan yli Turkin kautta ja saapui Teheraniin, jossa odotti suuri joukko faneja ja viranomaisia. Matkan aikana he saivat positiivista huomiota.

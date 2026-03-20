@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - liikenne
+  - kansainvälinen
 ---
 
 41-vuotias kiipeilijä menehtyi Teneriffalla lauantai-iltana pudottuaan rotkoon. Onnettomuus tapahtui Cuevas de Igonsen alueella Candelarian kunnassa noin puoli kahdeksan aikaan illalla.

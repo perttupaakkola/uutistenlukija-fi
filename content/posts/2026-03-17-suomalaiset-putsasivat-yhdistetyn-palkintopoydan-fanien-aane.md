@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - urheilu
+  - hiihto
+  - kilpailu
 ---
 
 Suomalaisurheilijat keräsivät yhdistetyn kauden päätöspalkinnoista leijonanosan. Kansainvälinen hiihtoliitto jakoi palkinnot kauden päätteeksi Oslossa järjestetyssä tilaisuudessa.

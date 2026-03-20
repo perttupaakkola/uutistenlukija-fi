@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - yritys
+  - poliisi
+  - sää
 ---
 
 Britanniassa valmistellaan lakia, jonka nojalla koiranomistajille voidaan määrätä rajoittamattomia sakkoja, jos heidän koiransa hyökkäävät tuotantoeläinten kimppuun. Uusi lainsäädäntö antaisi poliisille valtuudet takavarikoida koiria, jotka ovat hyökänneet karjan kimppuun tai ajaneet eläimiä takaa.

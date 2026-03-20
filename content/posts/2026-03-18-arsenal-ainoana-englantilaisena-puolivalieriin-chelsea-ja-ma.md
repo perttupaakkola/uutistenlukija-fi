@@ -15,6 +15,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - urheilu
+  - jalkapallo
+  - liikenne
 ---
 
 Jalkapallon Mestarien liigan puolivälieräpaikat täyttyivät tiistaina ja keskiviikkona. Englantilaisseuroista vain Arsenal selvitti tiensä neljän parhaan joukkoon. Chelsea ja Manchester City jäivät molemmat pudotuspelien alkukierroksille.

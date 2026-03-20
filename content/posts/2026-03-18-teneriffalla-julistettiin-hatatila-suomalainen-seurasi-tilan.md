@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - kulttuuri
+  - sää
+  - taide
 ---
 
 Teneriffalla on julistettu hätätila vaikeiden sääriskiolosuhteiden vuoksi. Saarta vaivaavat nyt runsaat vesisateet ja voimakas tuuli, mikä on vaikuttanut paikalliseen liikenteeseen ja matkailuun. Lomaileva suomalainen, Iina-Katariina Tourunen, seuraa tilannetta rauhallisin mielin. Hän korostaa, että tilanteen kehittyessä nopeasti on tärkeää pysyä rauhallisena ja seurata viranomaisten ohjeita.

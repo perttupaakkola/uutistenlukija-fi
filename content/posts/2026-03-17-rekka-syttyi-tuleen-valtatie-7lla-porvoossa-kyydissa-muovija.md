@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - liikenne
+  - politiikka
 ---
 
 Rekka roihusi ilmiliekeissä valtatie 7:llä Porvoossa maanantai-iltana. Itä-Uudenmaan pelastuslaitos sai hälytyksen palamaan syttyneestä ajoneuvoyhdistelmästä kello 20.34.

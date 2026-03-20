@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - verotus
+  - politiikka
 ---
 
 Verohallinnon valvonta paljasti, että yhdeksän kymmenestä tarkastetusta yrityksestä oli maksanut matkakulukorvauksia vilpillisesti. Verottomia kilometrikorvauksia maksettiin matkoista, joita ei ollut koskaan tehty.

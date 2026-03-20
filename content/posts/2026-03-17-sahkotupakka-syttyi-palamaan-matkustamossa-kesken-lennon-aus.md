@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - yritys
+  - lentoliikenne
 ---
 
 Virgin Australian lento Brisbanesta Melbourneen joutui hälytystilanteeseen, kun matkustajan käsimatkatavaroissa ollut sähkötupakka syttyi palamaan matkustamossa. Lentoyhtiön mukaan laite aktivoitui koneen tehdessä laskeutumista Melbournen lentokentälle.

@@ -15,6 +15,10 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - sää
+  - lappi
 ---
 
 Lauha ilma valtaa Suomen. Loppuviikolla lämpötila kipuaa etelässä 14 asteeseen Forecan ennusteen mukaan. Viikonloppu on poikkeuksellisen lauha tammi-helmikuun vaihteessa.

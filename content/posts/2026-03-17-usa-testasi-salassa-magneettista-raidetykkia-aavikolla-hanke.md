@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - teknologia
+  - energia
+  - yhdysvallat
+  - liikenne
 ---
 
 Yhdysvallat testasi helmikuussa 2025 sähkömagneettista raidetykkiä aavikko-olosuhteissa. Testi pidettiin salaisena vuoden ajan ennen kuin tieto siitä tuli julkisuuteen.

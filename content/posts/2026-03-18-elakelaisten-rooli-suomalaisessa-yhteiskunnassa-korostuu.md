@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - inflaatio
+  - sää
+  - eläke
+  - lapset
 ---
 
 Eläkeläiset ovat aktiivisia ja monipuolisia yhteiskunnan toimijoita. He osallistuvat kuluttamiseen, vapaaehtoistoimintaan ja tarjoavat apua lähimmäisilleen. Eläkeläisten panos vahvistaa yhteisöjä ja vähentää julkisen sektorin kuormitusta.

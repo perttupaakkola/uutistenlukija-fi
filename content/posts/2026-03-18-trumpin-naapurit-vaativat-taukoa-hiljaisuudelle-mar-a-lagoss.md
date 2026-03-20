@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - yhdysvallat
+  - liikenne
+  - lentoliikenne
 ---
 
 Mar-a-Lagon naapurit Floridassa ovat ilmaisseet tyytymättömyytensä häiriöitä aiheuttavaa melua kohtaan. Trumpin on viimein onnistunut vähentämään lentokoneiden aiheuttamaa hälyä. Naapurit ovat tuoneet esiin turhautumistaan julkisesti ja vaatineet viranomaisia puuttumaan tilanteeseen. Lentoliikenteen melu on ollut keskustelun aihe vuosien ajan.

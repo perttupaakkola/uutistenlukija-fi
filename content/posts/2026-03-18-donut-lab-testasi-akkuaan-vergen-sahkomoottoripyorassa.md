@@ -15,6 +15,11 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - teknologia
+  - energia
+  - yritys
+  - viihde
 ---
 
 Suomalainen akkuyhtiö Donut Lab julkisti uuden testiraportin, jossa sen kehittämä akku asennettiin Verge TS Pro -sähkömoottoripyörään. Kyseessä on yhtiön neljäs VTT-raporttisarjan osa, mutta tällä kertaa testi tehtiin käytännön olosuhteissa, ei VTT:n laboratoriossa.

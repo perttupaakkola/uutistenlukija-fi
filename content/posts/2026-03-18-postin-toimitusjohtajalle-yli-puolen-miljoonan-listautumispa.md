@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - talous
+  - pörssi
+  - liikenne
 ---
 
 Postin toimitusjohtaja Antti Jääskeläinen sai viime vuonna 510 300 euron listautumispalkkion. Palkkio liittyi Postin pörssilistautumiseen ja nosti Jääskeläisen kokonaispalkitsemisen yli miljoonaan euroon. Tiedot käyvät ilmi Postin tiistaina julkistamasta vuosikertomuksesta.

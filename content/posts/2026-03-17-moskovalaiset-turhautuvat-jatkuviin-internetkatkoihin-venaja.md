@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - venäjä
+  - turvallisuus
+  - teknologia
 ---
 
 Venäjän pääkaupungin asukkaat kärsivät toistuvista internetin ja viestisovellusten häiriöistä. Viranomaiset perustelevat rajoituksia turvallisuussyillä, mutta käyttäjien kärsivällisyys on loppumassa.

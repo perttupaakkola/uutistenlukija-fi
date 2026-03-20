@@ -15,6 +15,10 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - iran
+  - jalkapallo
 ---
 
 Queenslandin rannikko valmistautuu tulivuorihurrikaani Narellen vaikutuksiin, ja alueelle odotetaan vahvoja tuulia ja mahdollisia evakuointeja. Varautumistoimet ovat käynnissä, ja viranomaiset kehottaa asukkaita varautumaan mahdollisiin hälytystilanteisiin.

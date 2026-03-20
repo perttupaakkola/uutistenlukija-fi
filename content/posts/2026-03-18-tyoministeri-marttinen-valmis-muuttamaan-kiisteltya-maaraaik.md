@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - politiikka
+  - suomi
 ---
 
 Työministeri Matias Marttinen on valmis tekemään muutoksia lakiesitykseen, joka helpottaisi määräaikaisten työsuhteiden solmimista. Marttinen kertoi A-studiossa olevansa avoin täsmennyksille, mikäli esityksestä nousee kysymyksiä. Hän on jo käynyt keskusteluja valiokunnan kanssa mahdollisista muutoksista.

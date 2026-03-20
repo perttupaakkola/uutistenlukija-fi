@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kulttuuri
+  - opiskelijat
+  - työelämä
 ---
 
 Tytti Yli-Viikari aloittaa kesätyöt J.L. Runebergin kotimuseossa Porvoossa kolmen viikon kuluttua. Tehtävät kattavat lipunmyynnin, vierailuryhmien opastamisen ja näyttelyiden auki pitämisen. Yli-Viikari työskenteli samoissa tehtävissä myös viime kesänä ennen siirtymistään valtiontalouden tarkastusviraston johtajasta eläkkeelle. Museon rekrytointikriteerit sivuavat tutkintovaatimuksia, mutta lisäksi hakijalta edellytetään kielitaitoa ja näyttöä asiakaspalvelutyöstä. Porvoon Museotoimi budjettiin ei sisälly korvausta korkeakoulutuksen vaativista osatekijöistä.

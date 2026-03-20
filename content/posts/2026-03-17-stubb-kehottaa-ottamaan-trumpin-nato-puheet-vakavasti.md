@@ -15,6 +15,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - energia
+  - nato
+  - öljy
+  - sota
 ---
 
 Presidentti Alexander Stubb varoittaa, että Yhdysvaltain presidentti Donald Trumpin puheita Naton tulevaisuudesta ei pidä sivuuttaa. Stubb kommentoi asiaa haastattelussa Lontoossa maanantaina.

@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - puolustus
+  - kansainvälinen
 ---
 
 Pakistanin armeija iski maanantaina kohteeseen Kabulissa, jonka se kuvasi terroristi-infrastruktuuriksi. Iskun kohde oli kuitenkin huumevierotusklinikka, ja uhriluku nousi yli neljänsadan.

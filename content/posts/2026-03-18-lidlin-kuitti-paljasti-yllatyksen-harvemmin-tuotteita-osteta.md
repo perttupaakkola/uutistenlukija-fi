@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - lapset
+  - politiikka
 ---
 
 Joensuulaisessa Lidlin myymälässä havaittiin poikkeuksellinen ostos, jonka kuitit levisivät sosiaalisessa mediassa. Asiakas huomasi kassalla suuren ostoskorin ja epäili laskujen sisältävän erittäin paljon tuotteita. Vasta kuitin tarkastamisen jälkeen selvisi, että kyseessä oli poikkeuksellisen suuri ostos, mahdollisesti suureen perheeseen tai tapahtumaan liittyvä.

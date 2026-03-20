@@ -15,6 +15,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - talous
+  - yritys
+  - eu
 ---
 
 EU helpottaa yrityksen perustamista kaikkiin jäsenmaihin yhtä aikaa. Perustaja täyttäisi yhden digilomakkeen, joka hyväksyttäisiin automaattisesti kaikkialla unionissa. Tavoite on vähentää byrokratiaa ja avata sisämarkkinat pienyrittäjille.

@@ -15,6 +15,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - rokote
+  - terveys
 ---
 
 Yhdysvaltalainen liittovaltion tuomari on estänyt terveysministeri Robert F. Kennedy Jr:n ajamat muutokset maan tartuntatautiviraston CDC:n rokotussuosituksiin. Päätös on väliaikainen, mutta se pysäyttää toistaiseksi suunnitellut muutokset rokotusohjeistukseen ja asiantuntijaneuvottelukunnan toimintaan.

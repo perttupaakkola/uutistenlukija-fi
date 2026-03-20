@@ -15,6 +15,11 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - oikeus
+  - rikos
+  - liikenne
 ---
 
 Norjan kruununprinsessa Mette Maritin pojan Marius Borg Høibyn oikeudenkäynti etenee. Syyttäjä vaatii 28-vuotiaalle Høibylle seitsemän vuoden vankeustuomiota. Häntä syytetään yhteensä 40 rikoksesta.

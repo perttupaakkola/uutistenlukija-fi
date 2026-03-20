@@ -15,6 +15,10 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - ukraina
+  - kansainvälinen
 ---
 
 Helsingistä lähtee matka kohti Ukrainan kriisialuetta, missä on tarkoitus toimittaa 12 ambulanssia avustustyöhön. Mukana on myös suomalainen Lions-järjestön ylläpitämä erikoisauto, joka pyrkii tarjoamaan apua kriisitilanteissa. Tämä auto on suunniteltu mahdollistamaan nopean reagoinnin ja on käytettävissä jatkuvasti turvaamaan pelastustyön tehokkuutta.

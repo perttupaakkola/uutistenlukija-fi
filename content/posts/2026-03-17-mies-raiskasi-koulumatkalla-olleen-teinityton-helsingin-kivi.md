@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - koulutus
+  - luonto
+  - sää
+  - helsinki
 ---
 
 19-vuotias Elias Mahad Aden raiskasi 16-vuotiaan tytön Helsingin Kivikossa lokakuussa 2023. Aden lähestyi uhriaan bussipysäkillä tytön ollessa matkalla kouluun 5. lokakuuta.

@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - yhdysvallat
+  - sää
+  - tiede
 ---
 
 Tutkimukset ovat osoittaneet, että asteroidista on löytynyt elämän perustavanlaatuiset molekyylit, jotka muodostavat DNA:n ja RNA:n rakennuspalikoita. Tämä havainto lisää teorioita siitä, että elämän esiintyminen koko universumissa ei ole sattumaa.

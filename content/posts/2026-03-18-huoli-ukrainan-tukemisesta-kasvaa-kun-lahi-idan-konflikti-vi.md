@@ -15,6 +15,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - ukraina
+  - eu
+  - venäjä
+  - iran
 ---
 
 Ukrainan saama kansainvälinen tuki voi hiipua, kun huomio kiinnittyy Lähi-idän tapahtumiin. Brysselissä huolestuttaa, että Ukrainalle kaivattuja ohjuksia kuluu parhaillaan Iranin sodassa.

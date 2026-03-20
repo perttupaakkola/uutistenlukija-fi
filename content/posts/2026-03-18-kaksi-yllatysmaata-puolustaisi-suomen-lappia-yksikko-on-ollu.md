@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - nato
+  - puolustus
+  - lappi
 ---
 
 Naton uusimmat sotaharjoitukset Lapissa ovat herättäneet huomattavaa huomiota. Ranskalaiset ja italialaiset vuoristosotilaat osallistuvat kansainväliseen harjoitukseen suomalaisjoukkojen rinnalla. Erinomainen suorituskyky näissä maasto-olosuhteissa on yllättänyt monia kenttään osallistuneiden joukossa. Mukavaa on ollut todeta, että harjoitushenkilöstön yhteistoiminta ja kyky sopeutua haastavaan ympäristöön ovat kehittyneet positiivisesti.

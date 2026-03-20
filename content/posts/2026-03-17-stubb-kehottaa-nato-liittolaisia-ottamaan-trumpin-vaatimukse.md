@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - öljy
+  - nato
+  - yhdysvallat
 ---
 
 Presidentti Alexander Stubb varoittaa Nato-maita suhtautumaan vakavasti Yhdysvaltain presidentti Donald Trumpin vaatimuksiin Hormuzinsalmesta. Stubb esitti kantansa haastattelussa New Yorkissa.

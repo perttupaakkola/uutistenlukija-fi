@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - urheilu
+  - politiikka
 ---
 
 Keskiviikon ottelut päättivät Korisliigan puolivälierät. Parit ratkaisivat paikat seuraavaan vaiheeseen, ja ennakkosuosikkien tiukkoja kamppailuja nähtiin useita.

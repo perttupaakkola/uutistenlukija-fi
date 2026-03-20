@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - budjetti
+  - terveys
+  - lääketiede
+  - liikenne
 ---
 
 Suomen sadan parhaiten tienaavan lääkärin tulot ylittävät selvästi tavallisen palkansaajan ansiot. Lähes 80 heistä ansaitsi yli 400 000 euroa ja kuuden lääkärin tulot nousivat yli miljoonaan euroon. Listan kärjessä oleva lääkäri tienasi lähes 10 miljoonaa euroa.

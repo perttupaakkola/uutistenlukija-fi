@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - teknologia
+  - yritys
+  - turvallisuus
+  - yhdysvallat
+  - tekoäly
 ---
 
 Tekoälyyhtiö Anthropic hakee palvelukseensa ase- ja turvallisuusasiantuntijaa. Tehtävänä on estää yhtiön tekoälyjärjestelmien käyttö vaarallisiin tarkoituksiin. Anthropic on perustellut rekrytointia halulla torjua järjestelmiensä väärinkäyttöä.

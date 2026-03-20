@@ -15,6 +15,11 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - talous
+  - pörssi
+  - yritys
+  - yhdysvallat
 ---
 
 Yhdysvaltain arvopaperi- ja pörssikomissio SEC valmistelee neljännesvuosittaisen raportointivelvoitteen poistamista. Toteutuessaan muutos koskisi kaikkia Yhdysvaltain pörsseissä listattuja yhtiöitä.

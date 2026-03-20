@@ -15,6 +15,10 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - teknologia
+  - tekoäly
+  - digitalisaatio
 ---
 
 Rebel Audio on julkaissut palvelun, joka tarjoaa podcastin tuotannon vaiheet yhden alustan sisällä. Käyttäjät voivat äänittää, editoida, leikata sosiaaliseen mediaan sopivia pätkiä ja julkaista jaksot keskitetysti.

@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - verotus
+  - politiikka
 ---
 
 Verohallinto havaitsi vuonna 2025 yli miljardin euron edestä virheitä ja väärinkäytöksiä verotuksessa. Summa on kaksinkertainen edellisvuoteen verrattuna.

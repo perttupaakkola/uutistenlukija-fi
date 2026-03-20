@@ -15,6 +15,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - urheilu
+  - snooker
+  - kilpailu
 ---
 
 Snookerin kaikkien aikojen menestyneimpiin pelaajiin lukeutuva Ronnie O'Sullivan kertoo tehneensä kovasti töitä palauttaakseen pelitasonsa. 50-vuotias englantilainen myöntää, että ikä tuo haasteita, mutta motivaatio on edelleen tallella.

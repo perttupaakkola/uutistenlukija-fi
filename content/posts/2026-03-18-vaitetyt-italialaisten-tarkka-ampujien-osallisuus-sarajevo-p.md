@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - kirjallisuus
+  - liikenne
 ---
 
 Uusi kirja paljastaa, että Sarajevo-piirin aikana tarkka-ampujajoukkioihin kuului italialaisia. Heitä oli lähetetty Bosniaan osana laajempaa strategiaa. Tarkka-ampujat harjoittelivat alueella vuosia ennen julkista tietoa heidän toiminnastaan.

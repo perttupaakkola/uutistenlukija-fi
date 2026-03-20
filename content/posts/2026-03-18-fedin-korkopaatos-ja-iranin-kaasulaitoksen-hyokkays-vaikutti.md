@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - talous
+  - energia
+  - pankki
+  - korot
+  - öljy
 ---
 
 Yhdysvaltain keskuspankki päätti nostaa ohjauskorkoaan epävarman taloustilanteen vuoksi. Samalla Iranin kaasulaitokseen tehtiin yllätyssatoni, mikä lisäsi epävarmuutta markkinoilla. Wall Street reagoi päivään laskupainotteisesti, ja sijoittajat seuraavat tarkasti globaalin tilanteen kehittymistä. Iranin kaasulaitoksen hyökkäys lisää riskejä energia- ja öljymarkkinoilla, mikä voi vaikuttaa taloudelliseen vakauteen. Epävarmuus saattaa johtaa korkojen pysymiseen nykyisellään tai jopa nousuun, mikä voi painaa yritysten tuloksia ja lisätä markkinoiden volatiliteettia.

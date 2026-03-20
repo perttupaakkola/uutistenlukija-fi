@@ -15,6 +15,9 @@ image_alt: "Tiede: Maapallon mannerlaatat liikkuivat jo 3,48 miljardia vuotta si
 image_credit: "Photo by BehindTheTmuna on Unsplash"
 image_source_url: "https://unsplash.com/photos/an-underwater-view-of-a-large-body-of-water-gyGexkq3kjQ?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - tiede
+  - tutkimus
 ---
 
 Länsi-Australian Pilbara-alueen karut kukkulat tarjoavat aikaisinta näyttöä siitä, että mannerlaatat liukuivat Maapallon pinnalla. Pienet magneettikiteet, jotka ovat lukittuneina kallioperään, ovat tallentaneet maan pinnan liikkeitä yli 3,48 miljardin vuoden ajalta. Tutkimus julkaistiin Science News -lehdessä ja herättää uusia kysymyksiä Maan kehityksestä.

@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - teknologia
+  - yritys
+  - koulutus
+  - tekoäly
+  - urheilu
 ---
 
 Nvidia on hallinnut tekoälymallien kouluttamiseen käytettävien sirujen markkinoita jo vuosia. Nyt yhtiö suuntaa katseensa seuraavaan vaiheeseen: tekoälyn pyörittämiseen tuotantokäytössä. Kilpailu kiihtyy, kun yhä useampi yritys ottaa tekoälysovelluksia käyttöön.

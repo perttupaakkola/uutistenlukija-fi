@@ -9,6 +9,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - tiede
+  - lääketiede
+  - tutkimus
 description: "Åbo Akademin tutkijat ovat löytäneet uuden menetelmän, joka voi johtaa täsmähoitoihin aggressiivisen rintasyövän hoidossa."
 image: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwcmVzZWFyY2glMjBsYWJvcmF0b3J5fGVufDF8MHx8fDE3NzQwMDIwODF8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Åbo Akademin löydös voi tuoda uusia hoitoja aggressiiviseen rintasyöpään"

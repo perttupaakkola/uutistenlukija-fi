@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - urheilu
+  - koulutus
+  - jalkapallo
+  - lapset
+  - helsinki
 ---
 
 Valmentaja voi huutamalla murskata nuoren itsetunnon. Helsingin yliopiston tutkimuksessa selvisi henkisen väkivallan yleisyys suomalaisessa urheilussa. Vastaajia tuli jalkapallosta, jääkiekosta, voimistelusta ja hiihdosta.

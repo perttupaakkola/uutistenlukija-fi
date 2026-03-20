@@ -15,6 +15,9 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - pankki
+  - sää
 ---
 
 Federal Reserve -pankin pääjohtaja Jerome Powell ilmoitti aikovansa jatkaa tehtävässään tutkinnan ajan. Hän korosti sitoutumistaan tehtäviinsä riippumatta mahdollisista vaaleista.

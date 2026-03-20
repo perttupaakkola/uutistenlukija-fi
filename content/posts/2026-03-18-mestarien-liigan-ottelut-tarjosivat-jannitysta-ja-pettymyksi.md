@@ -15,6 +15,11 @@ image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=80&w=400"
 draft: false
+tags:
+  - urheilu
+  - terveys
+  - jalkapallo
+  - liikenne
 ---
 
 Mestarien liigan neljässä ottelussa nähtiin runsaasti maaleja, mikä lisäsi jalkapallosivustojen ja fanien jännitystä. Ottelut sisältivät kiihtyviä hetkiä ja upeita maalipaikkoja. Liverpoolin ottelussa sattui onnettomuus, jonka seurauksena peli keskeytettiin ja pelaajia kuljetettiin sairaalaan. Puolivälieräparit on määritelty, ja odotukset seuraaville otteluille ovat korkealla.

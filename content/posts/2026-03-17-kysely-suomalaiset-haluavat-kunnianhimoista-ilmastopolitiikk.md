@@ -15,6 +15,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - energia
+  - ilmasto
+  - politiikka
+  - yritys
 ---
 
 Suomalaiset suhtautuvat ilmastonmuutoksen torjuntaan myönteisesti. Suomen ympäristökeskuksen kyselytutkimuksen mukaan lähes 80 prosenttia vastaajista pitää kasvihuonekaasupäästöjen vähentämistä tärkeänä tavoitteena.

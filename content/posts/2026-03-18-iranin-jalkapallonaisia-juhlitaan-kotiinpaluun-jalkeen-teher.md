@@ -15,6 +15,11 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - urheilu
+  - jalkapallo
+  - iran
+  - yhdysvallat
 ---
 
 Iranin naisten jalkapallomaajoukkue palasi tänään Iranin pysyvälle kotikentälleen. Joukkue saapui rajan yli Turkin kautta Teheraniin, missä suuri joukko faneja ja viranomaisia odotti juhlavasti. Matkalla he saivat osakseen lämpimiä tervehdyksiä ja riemunkiljaisuja.

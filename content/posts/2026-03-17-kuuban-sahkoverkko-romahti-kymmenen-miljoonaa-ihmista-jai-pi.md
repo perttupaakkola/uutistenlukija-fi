@@ -15,6 +15,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - öljy
 ---
 
 Kuuban kansallinen sähköverkko romahti maanantaina. Maan verkonhaltija UNE ilmoitti, että noin kymmenen miljoonaa ihmistä jäi ilman sähköä.

@@ -15,6 +15,12 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - nato
+  - sota
+  - yhdysvallat
+  - puolustus
 ---
 
 Presidentti Alexander Stubb totesi BBC:n haastattelussa, ettei Yhdysvaltain presidentti Donald Trump voi vedota Naton yhteiseen puolustukseen Iranin sodan yhteydessä. Stubbin mukaan Nato on puolustusliitto, ja sen artiklat on kirjoitettu hyökkäyksen kohteeksi joutuneen jäsenmaan suojaksi.

@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - tiede
+  - terveys
+  - lääketiede
+  - opiskelijat
+  - sää
 ---
 
 Opiskelija kertoo olleensa huolissaan, kun hän kuuli tartuntatapauksista Britanniassa. Epidemiasta on tiedotettu rajoitetusti, mikä on herättänyt huolta opiskelijapiireissä. Terveydenhuolto pyrkii lisäämään tietoisuutta tilanteesta. Tartunnan saaneista on seurattu tilannetta lääketieteellisin keinoin, ja heihin on kohdennettu ennaltaehkäiseviä toimenpiteitä.

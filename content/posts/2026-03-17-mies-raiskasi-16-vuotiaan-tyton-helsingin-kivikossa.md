@@ -15,6 +15,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - koulutus
+  - luonto
+  - sää
+  - helsinki
 ---
 
 19-vuotias Elias Mahad Aden raiskasi törkeästi 16-vuotiaan tytön Helsingin Kivikossa lokakuussa 2023. Aden lähestyi koulumatkalla ollutta tyttöä bussipysäkillä 5. lokakuuta. Hän aloitti keskustelun, joka kääntyi nopeasti seksuaaliseksi. Aden talutti tytön kädestä pitäen läheiseen metsään.

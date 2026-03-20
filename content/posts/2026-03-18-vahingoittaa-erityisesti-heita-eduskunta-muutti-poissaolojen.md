@@ -15,6 +15,12 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - eduskunta
+  - kirjallisuus
+  - lapset
+  - liikenne
 ---
 
 Eduskunnan tasa-arvoneuvosto ehdotti poissaolojen kirjaamisen muuttamista. Uuden käytännön mukaan poissaoloista tulisi huomioida myös henkilökohtaiset syyt, kuten perhevapaat. Muutos pyrkii varmistamaan, että pitkäaikaiset poissaolot eivät vääristä eduskunnan työtuntien arviointia.

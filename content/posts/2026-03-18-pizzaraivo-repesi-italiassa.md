@@ -15,6 +15,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - ilmasto
+  - luonto
+  - kulttuuri
+  - lapset
 ---
 
 Milano ja koko Italia ovat joutuneet keskustelun keskelle pizzanvalmistuksen ympäristövaikutuksista. Tutkimusten mukaan perinteiset puu-uunit voivat päästää ilmaan hiilidioksidia, hiukkasia ja orgaanisia aineita. Erityisesti vanhemmat uunit aiheuttavat merkittävää päästöjä. Pizzan ystävät ja valmistajat ovat ilmaisseet huolensa, sillä tulokset voivat vaikuttaa italialaiseen ruokakulttuuriin.

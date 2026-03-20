@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - urheilu
+  - koulutus
+  - kulttuuri
+  - lapset
+  - tiede
 ---
 
 Helsingin yliopiston tutkimuksen mukaan suomalaisessa urheilussa esiintyy huutamista, kontrollointia ja tavaroiden paiskomista. Tutkijat korostavat, että henkinen väkivalta on osa tätä kulttuuria ja harjoittajat ovat useimmiten aikuisia, kuten valmentajat ja vanhemmat. Tällainen käyttäytyminen voi vaikuttaa nuorten hyvinvointiin ja urheiluharrastuksen mielekkyyteen. On tärkeää puuttua epäasialliseen käyttäytymiseen ja edistää terveitä toimintatapoja.

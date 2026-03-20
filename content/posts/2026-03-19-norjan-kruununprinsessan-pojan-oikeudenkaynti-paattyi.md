@@ -15,6 +15,11 @@ image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 draft: false
+tags:
+  - ulkomaat
+  - oikeus
+  - puolustus
+  - rikos
 ---
 
 Norjan kruununprinsessa Mette-Maritin pojan, Marius Borg Høibyn, oikeudenkäynti on päättynyt puolustuksen loppulausuntoihin. Høiby on ollut syytettynä 40 syytteestä, joista vakavimpana on neljä raiskausta. Oikeuden edessä hänen asianajajansa vaativat huomattavasti lievempää tuomiota kuin syyttäjän vaatimukset, jotka ovat kohdistuneet 7,5 vuoden vankeuteen. Puolustus on esittänyt, että oikeuden tulisi langettaa vain 1,5 vuoden vankeustuomio, perustuen Høibyn tunnustuksiin.

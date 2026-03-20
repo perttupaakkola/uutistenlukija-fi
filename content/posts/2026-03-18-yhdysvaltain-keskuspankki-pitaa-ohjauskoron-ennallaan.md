@@ -15,6 +15,11 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - talous
+  - pankki
+  - politiikka
+  - inflaatio
 ---
 
 Yhdysvaltain keskuspankki on päättänyt pitää ohjauskoronsa nykyisellä tasolla. Tämä tarkoittaa, että talouden rahapolitiikka pysyy vakaana jatkossa. Päätös on odotettu, sillä inflaatiotilanne ja talouden kasvuvauhti ovat tasapainossa, eikä tarvetta suurille muille toimenpiteille ole ollut. Markkinat ottavat päätöksen vastaan pääosin rauhallisesti.

@@ -9,6 +9,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - rikos
+  - kansainvälinen
 description: "Irlannissa pyhän Patrickin päivän kulkueella esitettiin seksuaalista väkivaltaa, mikä herätti voimakasta raivoa ja kritiikkiä kansalaisten keskuudessa."
 image: "https://images.unsplash.com/photo-1771797629089-7691ddf45680?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Irlantilainen pyhän Patrickin päivän kulkue herätti raivoa seksirikosvitsillä"

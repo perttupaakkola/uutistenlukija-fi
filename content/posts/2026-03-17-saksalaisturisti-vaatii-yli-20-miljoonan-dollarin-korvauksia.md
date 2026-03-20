@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - kansainvälinen
+  - politiikka
 ---
 
 Saksalainen matkailija on nostanut kolme erillistä kannetta New Yorkissa kokemistaan pettymyksistä. Korvausvaatimukset ylittävät yhteensä 20 miljoonaa dollaria.

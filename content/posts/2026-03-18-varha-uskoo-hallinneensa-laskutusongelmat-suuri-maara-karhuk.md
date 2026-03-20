@@ -15,6 +15,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - talous
+  - yritys
+  - rahoitus
 ---
 
 Hyvinvointialue ilmoittaa, ettei järjestelmissä ole havaittu laskutusvirheitä, mutta silti yli 8 000 karhukirjettä siirretään ulosoton käsittelyyn. Alueen taloushallintoa pidetään toimintansa mukaisena, mutta Postin toiminnan luotettavuutta ei ole varmistettu. Tilanne herättää huolta alueen taloudellisesta vakaudesta. Johtajat vakuuttavat, että ongelmat ovat hallinnassa.

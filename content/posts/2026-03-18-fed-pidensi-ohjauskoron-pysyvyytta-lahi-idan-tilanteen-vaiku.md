@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - pankki
+  - politiikka
+  - talous
 ---
 
 Yhdysvaltain keskuspankki Federal Reserve päätti pitää ohjauskoron ennallaan. Päätös kuvastaa sitä, että talous on vakaalla pohjalla, mutta tulevat riskit ovat edelleen olemassa. Ennusteet koronnostoista tai -alennuksista eivät ole tällä hetkellä ajankohtaisia.

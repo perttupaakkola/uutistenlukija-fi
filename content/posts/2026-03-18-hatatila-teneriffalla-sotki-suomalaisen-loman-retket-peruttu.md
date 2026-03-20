@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - kansainvälinen
+  - politiikka
 ---
 
 Kanariansaarilla lomaileva Iina-Katariina Tourunen joutui muuttamaan lomasuunnitelmansa, kun Teneriffalle julistettiin hätätila sunnuntaina. Rankkasateet ja kovat tuulet ovat lyöneet yli saaren, ja vettä on tullut alkuviikosta enemmän kuin koko edellisenä kuukautena.

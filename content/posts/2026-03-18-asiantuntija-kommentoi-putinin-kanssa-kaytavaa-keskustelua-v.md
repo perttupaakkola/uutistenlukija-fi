@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - venäjä
+  - sota
 ---
 
 Ulkopoliittisen instituutin ohjelmajohtaja Arkady Moshes arvioi, että Venäjä ja Eurooppa ovat tilanteessa, jossa vuoropuhelu ei välttämättä ole tuotteen kannalta hyödyllistä. Hän näkee, että Venäjän hallinnon katsotaan jatkavan toimiaan ei-pelottelevasti vaan vahvistaen vaikutusvaltaansa alueella. Moshes painottaa, että maiden väliset kiinnostukset ovat erilaisia, eikä tulevia keskusteluja pitäisi odottaa ideaalitilanteessa. Hän korostaa, että Venäjän toiminnat ovat alueellisesti painottuneita ja vuoropuhelu siihen ei välttämättä johda toivotulle tulokseen.

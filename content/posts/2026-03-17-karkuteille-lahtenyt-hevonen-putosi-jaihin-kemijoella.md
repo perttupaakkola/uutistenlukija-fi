@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - politiikka
+  - suomi
 ---
 
 Kemijoen jäille päätynyt hevonen aiheutti pelastusoperaation, kun eläin putosi heikkojen jäiden läpi jokeen. Tapaus sattui Kemijoella, jossa jäätilanne on kevään myötä muuttunut arvaamattomaksi.

@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - puolustus
+  - murha
 ---
 
 Pakistanin armeija teki ilmaiskun huumevierotusklinikalle Kabulissa Afganistanissa. Iskussa kuoli yli 400 ihmistä. Pakistan ilmoitti maanantaina kohdistaneensa täsmäiskuja Afganistanin maaperällä sijaitsevaan terroristi-infrastruktuuriin.

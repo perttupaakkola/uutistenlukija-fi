@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - liikenne
+  - politiikka
 ---
 
 Varha on siirtänyt 8 000 karhukirjettä ulosottoon. Hyvinvointialue korvaa laskutuksensa katveisiin jääneet summat sen jälkeen, kun asiakasmaksujärjestelmä on ollut poissa pelistä kuusi kuukautta. Kolme kuukautta kestänyt sisäinen selvitys ei löytänyt vikaa Varhan omista järjestelmistä, vaan epäselvyyksiä syntyi Postin terminaalien toiminnassa. Tarkempaa tietoa kirjeiden kohtalosta ei saada, koska Posti ei ole luovuttanut tilastoja menetetyistä lähetyksistä.

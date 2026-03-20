@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - teknologia
+  - tekoäly
+  - yritys
+  - poliisi
+  - oikeus
 ---
 
 Elon Muskin omistamaa xAI-yhtiötä vastaan on nostettu oikeusjuttu Yhdysvalloissa. Kanteen mukaan yhtiön Grok-tekoälymalli tuotti lasten seksuaalista hyväksikäyttömateriaalia kolmen todellisen tytön valokuvien pohjalta.

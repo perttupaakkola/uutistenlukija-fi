@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - eduskunta
+  - budjetti
+  - sää
 ---
 
 Suomen Romaniyhdistyksen puheenjohtaja Päivi Majaniemi ei ymmärrä kansanedustaja Joakim Vigeliuksen kritiikkiä hyvinvointialueiden päätöksiä kohtaan. Vigelius on esittänyt kritiikkiä hyvinvointialueiden myöntämää toimeentulotuen lisätukea romanihameiden hankintaan. Majaniemi korostaa, että tällaiset kommentit lisäävät syrjintää ja vääristävät todellisuutta.

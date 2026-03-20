@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - hallitus
+  - kirjallisuus
 ---
 
 Kirjalansalmen vanhan sillan pylonit kaadettiin Paraisilla. Teräsrakenteiset tornit purettiin uudenlaisella menetelmällä, jolla rakenteet saatiin hallitusti alas.

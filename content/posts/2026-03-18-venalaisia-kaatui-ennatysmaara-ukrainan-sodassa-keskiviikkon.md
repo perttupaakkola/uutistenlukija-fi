@@ -15,6 +15,11 @@ image_credit: "Photo by cottonbro studio on Pexels"
 image_source_url: "https://www.pexels.com/photo/women-getting-water-from-a-river-5561784/"
 image_thumb: "https://images.pexels.com/photos/5561784/pexels-photo-5561784.jpeg?auto=compress&cs=tinysrgb&h=350"
 draft: false
+tags:
+  - puolustus
+  - ukraina
+  - venäjä
+  - sota
 ---
 
 Ukrainan puolustusministeriö ilmoitti, että keskiviikkona 18. maaliskuuta 2026 Venäjän joukot kärsivät vuoden suurimman taistelutappion. Päivän aikana Venäjän armeija menetti yhteensä 1710 sotilasta, mikä on huomattavasti enemmän kuin muina päivinä tänä vuonna. Tappioiden taustalla oli Zaporižžjan alueen epäonnistunut hyökkäys, jonka seurauksena tilanne kiristyi.

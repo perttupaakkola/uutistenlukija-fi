@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - urheilu
+  - kilpailu
+  - liikunta
 ---
 
 Julia Kykkänen kertoi keskiviikkona päättävänsä uransa Suomen mäkihypyn huipulla. Hän on toiminut uranuurtajana naisten mäkihypyssä maassa ja osallistunut useisiin arvokisoihin.

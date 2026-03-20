@@ -15,6 +15,11 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - energia
+  - öljy
+  - puolustus
 ---
 
 Puolustusministeri Antti Häkkänen pitää Suomen osallistumista Hormuzinsalmen mahdolliseen sotilasoperaatioon kaukaisena asiana. Häkkäsen mukaan Suomella ei välttämättä ole resursseja tai kykyä lähettää joukkoja alueelle.

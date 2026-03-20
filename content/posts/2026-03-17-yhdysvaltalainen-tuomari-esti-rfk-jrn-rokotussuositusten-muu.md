@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - rokote
+  - politiikka
+  - yhdysvallat
+  - terveys
 ---
 
 Yhdysvaltalainen liittovaltion tuomari on estänyt terveysministeri Robert F. Kennedy Jr:n ajaman muutoksen maan rokotussuosituksiin. Päätös estää väliaikaisesti muutokset CDC:n eli tartuntatautiviraston rokoteohjeistukseen.

@@ -15,6 +15,11 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - talous
+  - verotus
+  - inflaatio
+  - työelämä
 ---
 
 Keski- ja pienipalkkaisten ostovoima on edelleen heikolla tasolla. STTK:n ostovoimakatsaus osoittaa, että inflaation ja verotuksen yhteisvaikutus on syönyt palkansaajien ostovoimaa viime vuosina.

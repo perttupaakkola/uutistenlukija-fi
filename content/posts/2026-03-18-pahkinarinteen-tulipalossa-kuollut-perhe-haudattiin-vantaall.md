@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - lapset
+  - politiikka
 ---
 
 Vantaan Pähkinärinteen tulipalossa menehtynyt viisihenkinen perhe haudattiin keskiviikkona Ruskeasannan hautausmaalla. Hautausseremonia alkoi kello 13.30. Paikalle saapui satoja surevia.

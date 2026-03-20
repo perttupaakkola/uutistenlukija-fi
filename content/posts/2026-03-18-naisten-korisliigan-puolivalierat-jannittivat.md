@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - nokia
+  - politiikka
 ---
 
 Naisten Korisliigan puolivälierissä pelattiin yhteensä viisi ottelua. Voitot jakautuivat siten, että kaksi ottelua päättyi kotivoittoihin, kaksi vierasvoittoihin ja yksi tasapeliksi. BC Nokia kukisti ViVen vieraissa, ja HBA-Märsky voitti kotikentällään EBT:n.

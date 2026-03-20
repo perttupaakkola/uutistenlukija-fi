@@ -15,6 +15,11 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - talous
+  - hallitus
+  - yritys
+  - pankki
 ---
 
 Italialainen UniCredit aikoo kasvattaa omistusosuuttaan saksalaisessa Commerzbankissa ja käynnistää viralliset neuvottelut yrityskaupasta. Kyseessä on noin 35 miljardin euron pankkikauppa, jota Saksan hallitus vastustaa jyrkästi.

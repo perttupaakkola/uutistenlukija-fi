@@ -9,6 +9,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - eu
+  - hallitus
 description: "Kyproksen presidentti Nikos Christodoulides vaatii keskustelua Britannian sotilastukikohtien tulevaisuudesta EU-huippukokouksessa Brysselissä."
 image: "https://images.unsplash.com/photo-1771797629089-7691ddf45680?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Kyproksen presidentti vaatii keskustelua Britannian tukikohdista"

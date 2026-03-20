@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - eu
+  - lääketiede
+  - liikenne
 ---
 
 Presidentti Alexander Stubb kommentoi Lontoossa Ison-Britannian EU-eron vaikutuksia, vertaamalla brexitin ajattelutapaa ihmisen amputointiin ilman lääketieteellistä syytä. Hänen kannanottonsa herättivät kritiikkiä Isossa-BBritanniassa, missä monet kokevat sanavalinnat loukkaavina. Stubb ei ollut aiemmin kommentoinut julkisesti brexit-kantaa näin voimakkaasti.

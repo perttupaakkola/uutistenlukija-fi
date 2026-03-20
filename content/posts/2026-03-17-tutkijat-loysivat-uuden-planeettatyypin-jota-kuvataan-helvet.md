@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - tiede
+  - avaruus
+  - sää
 ---
 
 Astronomit ovat tunnistaneet aiemmin tuntemattoman planeettatyypin. Löydettyjen planeettojen olosuhteet ovat niin äärevät, että tutkijat kutsuvat niitä helvetillisiksi.

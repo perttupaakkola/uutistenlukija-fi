@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - yritys
+  - kiina
+  - tekoäly
+  - teknologia
+  - liikenne
 ---
 
 Kiinalainen teknologiayritys siirtyy 7 nanometrin valmistusteknologiaan. Muutos osana maan pyrkimystä vähentää ulkomaisesta chip-teknologiasta riippuvuutta. Uusi tuotantotapa voi edistää paikallisia tekoäly- ja tietokonesovelluksia.

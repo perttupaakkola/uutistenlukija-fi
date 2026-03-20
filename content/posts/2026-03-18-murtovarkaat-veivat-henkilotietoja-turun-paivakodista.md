@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - lapset
+  - asuminen
+  - liikenne
 ---
 
 Turun kaupunki tiedottaa, että käytöstä poistettuun Kaerlan päiväkotikiinteistöön on murtauduttu. Murto tapahtui 6.–11. maaliskuuta välisenä aikana. Varkaat pääsivät käsiksi arkistoituun materiaaliin, joka sisälsi sekä lasten että aikuisten henkilötietoja.

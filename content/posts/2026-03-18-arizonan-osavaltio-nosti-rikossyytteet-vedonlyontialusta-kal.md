@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - yritys
+  - rikos
+  - sää
 ---
 
 Arizonan osavaltion viranomaiset ovat nostaneet rikossyytteet ennustemarkkinoita ylläpitävää Kalshi-yhtiötä vastaan. Kyseessä ovat ensimmäiset rikossyytteet, jotka yhdysvaltalainen osavaltio on nostanut ennustemarkkinayritystä vastaan. Syytteen mukaan Kalshi pyörittää laitonta uhkapelitoimintaa.

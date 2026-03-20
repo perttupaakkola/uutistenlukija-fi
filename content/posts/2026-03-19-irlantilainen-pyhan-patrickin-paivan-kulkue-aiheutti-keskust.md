@@ -9,6 +9,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - yhdysvallat
+  - kansainvälinen
 description: "Irlantilaiset pyhän Patrickin päivän kulkueet herättävät kritiikkiä seksuaalista väkivaltaa kuvaavasta esityksestä, tuomitsin raiskausavustusjärjestöjen…"
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Irlantilainen pyhän Patrickin päivän kulkue aiheutti keskustelua seksuaalisen väkivallan kuvaamisen rajapinnoista"

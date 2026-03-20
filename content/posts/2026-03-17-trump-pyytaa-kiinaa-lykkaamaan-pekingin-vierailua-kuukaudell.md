@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - kiina
+  - sota
+  - iran
+  - yhdysvallat
 ---
 
 Yhdysvaltain presidentti Donald Trump on pyytänyt Kiinan presidenttiä Xi Jinpingiä siirtämään suunniteltua Pekingin-huippukokousta noin kuukaudella. Syynä on Yhdysvaltain sotilasoperaatio Irania vastaan.

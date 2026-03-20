@@ -15,6 +15,11 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - energia
+  - öljy
+  - puolustus
 ---
 
 Puolustusministeri Antti Häkkänen pitää Suomen osallistumista mahdolliseen Hormuzinsalmen merenkulun turvaamisoperaatioon kaukaisena asiana. Häkkäsen mukaan Suomella ei välttämättä ole siihen tarvittavia resursseja tai sotilaallista kykyä.

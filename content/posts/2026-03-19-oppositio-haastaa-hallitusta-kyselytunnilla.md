@@ -9,6 +9,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - hallitus
+  - eduskunta
+  - politiikka
+  - turvallisuus
 description: "Oppositio kohdistaa kritiikkinsä hallitukseen eduskunnan kyselytunnilla, jossa käsitellään ajankohtaisia ulko- ja turvallisuuspoliittisia kysymyksiä."
 image: "https://images.unsplash.com/photo-1675619560942-613bef4a982d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Oppositio haastaa hallitusta kyselytunnilla"

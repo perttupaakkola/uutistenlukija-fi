@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - terveys
+  - lääketiede
+  - yhdysvallat
+  - tiede
 ---
 
 Kardiologi Mikko Aho sai kuulemiskirjeen kahden viikon varoitusajalla sen jälkeen, kun hän kommentoi kesäkuun alussa julkisuudessa hyvinvointialueen ostopalvelusopimuksia. Aho kirjoitti sosiaalisessa mediassa, että yksityisvastaanotoille ohjataan potilaita, joiden hoitocase "ratkeaa 15 minuutissa", vaikka julkisella puolella sama tutkimus vaatisi useamman käynnin.

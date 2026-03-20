@@ -15,6 +15,11 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - politiikka
+  - hallitus
+  - eduskunta
 ---
 
 Hallituspuolueet valmistautuvat eduskuntavaaleihin siirtymällä selvästi vaalitunnelmiin. Poliittiset näkyvyyspaineet kasvavat, mutta hallituksen yhtenäinen linja on säilynyt. Kriisit ja kohut eivät ole horjuttaneet sen kestävyyttä, vaikka poliittinen paine kiristyy. Julkisessa keskustelussa hallituksen koetaan pysyvän edelleen koossa, vaikka epäilyksiä herättää, miten jatkuvan kritiikin keskellä saavutetaan yhtenäisyys.

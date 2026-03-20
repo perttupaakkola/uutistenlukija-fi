@@ -15,6 +15,9 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - koulutus
+  - tekoäly
 ---
 
 Patreonin toimitusjohtaja Jack Conte on arvostellut tekoälyteknologioiden käyttöä ja ehdottaa, että sisältöä tuottavat luojat tulisi ottaa mukaan koulutusdatan käyttöön. Hän korostaa, että monet sisältöjen lisensoinnit mahdollistavat osallistumisen, eikä tekoälyn hyödyntäminen ole pelkästään hyväksikäyttöä. Luojien oikeuksien turvaaminen on tärkeää, ja korvauskäytännöt tulisi ottaa huomioon.

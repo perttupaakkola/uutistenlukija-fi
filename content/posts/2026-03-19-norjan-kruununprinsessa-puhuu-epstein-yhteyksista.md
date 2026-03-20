@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Norjan kruununprinsessa puhuu Epstein-yhteyksistä"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - sää
+  - kansainvälinen
 ---
 
 Norjan kruununprinsessa Mette-Marit on antamassa odotettua haastattelua, jossa hän käsittelee suhteitaan edesmenneeseen seksirikolliseen Jeffrey Epsteiniin. Haastattelu esitetään NRK TV:ssä perjantaina, ja sen on nauhoittanut kruununprinssi Haakon heidän Skaugumin residenssissään. Tämä haastattelu tulee ajankohtaiseksi kruununprinssin pojan Marius Borg Høibyn raiskausoikeudenkäynnin päättymisen lähestyessä. Høiby kohtaa useita vakavia syytteitä, ja hänen oikeudenkäyntinsä on ollut erittäin seurattu Norjassa. Mette-Maritin aikaisemmat selitykset Epsteiniin liittyvistä sähköposteista ovat herättäneet kritiikkiä ja kysymyksiä hänen harkintakyvystään.

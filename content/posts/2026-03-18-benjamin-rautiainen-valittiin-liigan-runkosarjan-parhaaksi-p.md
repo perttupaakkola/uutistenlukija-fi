@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - urheilu
+  - jääkiekko
+  - viihde
 ---
 
 Tapparan laitahyökkääjä Benjamin Rautiainen on kauden 2025–26 Liigan runkosarjan paras pelaaja. Valinnan tekivät jääkiekkotoimittajat äänestämällä.

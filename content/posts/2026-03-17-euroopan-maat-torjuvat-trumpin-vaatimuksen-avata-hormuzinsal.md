@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - öljy
+  - yhdysvallat
 ---
 
 Eurooppalaiset maat hylkäsivät maanantaina Yhdysvaltain presidentti Donald Trumpin vaatimuksen osallistua Hormuzinsalmen avaamiseen laivaliikenteelle. Trump arvosteli kovin sanoin Britanniaa ja muita liittolaisia, jotka kieltäytyivät lähettämästä merivoimiaan alueelle.

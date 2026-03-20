@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - liikenne
+  - kansainvälinen
 ---
 
 FBI:n johtaja Kash Patel on vahvistanut, että liittovaltion agentuurit voivat ostaa kaupallisesti saatavilla olevia sijaintitietoja. Tämä mahdollistaa amerikkalaisten paikantamisen ilman oikeuden määräystä. Käytäntö on herättänyt keskustelua yksityisyyden suojasta ja tietojen hankinnan menetelmistä.

@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - kiina
+  - sota
+  - iran
+  - yhdysvallat
 ---
 
 Yhdysvaltain presidentti Donald Trump on pyytänyt Kiinaa lykkäämään suunniteltua Pekingin-vierailuaan noin kuukaudella. Syyksi Trump ilmoitti Iranin sodan. Tapaamisen presidentti Xi Jinpingin kanssa oli määrä toteutua maaliskuun lopussa.

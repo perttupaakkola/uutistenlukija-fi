@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Keniassa kuukautisvapaata työntekijöille"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - terveys
+  - lääketiede
+  - liikenne
 ---
 
 Kenian pääkaupungissa Nairobissa työskentelevät naiset saavat kuukaudessa kaksi päivää kuukautisvapaata. Uudistus on ollut voimassa joulukuusta 2025 lähtien ja siinä on otettu askel kohti parempia työoloja naisille. Täysin palkallinen vapaapäivä ei vaadi lääkärintodistusta, mikä helpottaa vapaiden pitämistä. Kuukautisvapaamalli on saanut kiitosta tasa-arvoedistysaskeleena. Se auttaa vähentämään naisten työhön liittyvää syrjintää ja parantaa heidän hyvinvointiaan. Tämä käytäntö on otettu huomioon myös muissa maissa, ja sen odotetaan vaikuttavan positiivisesti naisten osallistumiseen työmarkkinoilla.

@@ -9,6 +9,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - sää
+  - politiikka
 description: "Varhaisperunan istutus alkaa Naantalin Rymättylässä, vaikka kevät on poikkeuksellisen aikaisessa. Viljelijä Mika Törne istuttaa kolme hehtaaria perunoita."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Kevät on poikkeuksellisen aikaisessa, mutta perunan istutus etenee tavalliseen tahtiin"

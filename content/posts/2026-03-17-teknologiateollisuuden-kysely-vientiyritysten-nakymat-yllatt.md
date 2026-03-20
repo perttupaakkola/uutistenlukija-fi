@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - talous
+  - yritys
+  - teknologia
 ---
 
 Suomalaiset vientiyritykset raportoivat odotettua paremmista luvuista, selviää Teknologiateollisuuden tuoreesta kyselystä. Tilanne on parempi kuin alan yleiset tunnelmat antaisivat ymmärtää.

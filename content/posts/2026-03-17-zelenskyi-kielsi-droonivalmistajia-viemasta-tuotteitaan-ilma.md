@@ -15,6 +15,11 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - ukraina
+  - hallitus
+  - sota
 ---
 
 Ukrainan presidentti Volodymyr Zelenskyi allekirjoitti ukaasin, joka kieltää ukrainalaisia droonivalmistajia myymästä tuotteitaan ulkomaille ilman hallituksen lupaa. Päätös tulee sodan 1481. päivänä, jolloin Ukraina tarvitsee jokaisen valmistamansa droonin omaan puolustukseensa.

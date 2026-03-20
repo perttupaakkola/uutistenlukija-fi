@@ -15,6 +15,11 @@ image_credit: "Photo by RDNE Stock project on Pexels"
 image_source_url: "https://www.pexels.com/photo/people-praying-in-a-cemetery-6841638/"
 image_thumb: "https://images.pexels.com/photos/6841638/pexels-photo-6841638.jpeg?auto=compress&cs=tinysrgb&h=350"
 draft: false
+tags:
+  - rikos
+  - murha
+  - kirjallisuus
+  - oikeus
 ---
 
 Kouri Richins tuomittiin törkeästä murhasta Utahissa. Hän oli myrkyttänyt miehensä fentanyylillä epäilynsä taloudellisista ongelmista ja 4,5 miljoonan dollarin veloista. Richins odotti saavan perinnön miehensä kuoleman jälkeen, ja häntä syytettiin tarkoituksellisesta teosta. Tuomio vahvistui oikeudenkäynnissä, ja hän joutui vankilaan.

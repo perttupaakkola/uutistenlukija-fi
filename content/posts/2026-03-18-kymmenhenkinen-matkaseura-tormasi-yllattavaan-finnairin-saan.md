@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - talous
+  - sää
+  - helsinki
 ---
 
 Helsingin Sanomat kertoi tapauksesta, jossa kymmenen matkailijaa osti omat paikkansa Finnairilta. Lennolla he huomasivat, että paikkojen siirtäminen yli viiden rivin siirron jälkeen vaatii rahan palautuksen hakemista. Finnairin säännöissä paikkoja voi siirtää viisi riviä, mutta suurempia siirtoja ei yleensä sallita palautuksin. Tämä aiheutti matkaseuralaisille yhteydenoton asiakaspalveluun.

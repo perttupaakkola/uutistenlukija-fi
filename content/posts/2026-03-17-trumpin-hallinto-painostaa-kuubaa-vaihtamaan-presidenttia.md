@@ -15,6 +15,10 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - yhdysvallat
+  - politiikka
 ---
 
 Yhdysvaltain hallinto on ryhtynyt painostamaan Kuubaa maan johdon vaihtamiseksi. Presidentti Donald Trump ilmaisi asian suorasanaisesti maanantaina.

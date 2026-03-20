@@ -15,6 +15,10 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - tiede
+  - sää
+  - lappi
 ---
 
 Loppuviikosta Suomessa odotetaan vaihtelevia sääolosuhteita, ja lämpötilat voivat nousta jopa 14 asteeseen. Forecan sääpalvelu ennustaa, että erityisesti etelässä lämpöä riittää viikonlopun aikana, ja keskilämpötila saattaa nousta normaalitasojen yläpuolelle. Sää jatkuu lämpimänä ja aurinkoisena, ja viikon lopulla voi olla lisää auringonpaistetta. Pohjoisessa, kuten Lapissa, esiintyy ajoittain lumisateita ja sateita, mikä tarkoittaa, että keväisen säätilan muodostuminen tapahtuu vähitellen.

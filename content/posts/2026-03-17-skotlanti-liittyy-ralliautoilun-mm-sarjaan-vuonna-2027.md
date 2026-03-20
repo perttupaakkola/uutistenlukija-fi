@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - urheilu
+  - luonto
+  - viihde
 ---
 
 Ralliautoilun MM-sarja saa uuden osakilpailun, kun Skotlanti tulee mukaan kalenteriin vuonna 2027. Kilpailu ajetaan Aberdeenin ympäristössä. Järjestäjät kertoivat asiasta maanantaina.

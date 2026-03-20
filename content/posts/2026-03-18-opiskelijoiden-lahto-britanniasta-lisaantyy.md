@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - opiskelijat
+  - terveys
+  - rokote
+  - sää
 ---
 
 Opiskelijat lähtevät yhä useammin Britanniasta, osin epidemian laajentumisen vuoksi. Terveysviranomaiset ovat yrittäneet tiedottaa tilanteesta, mutta viestintä on koettu riittämättömäksi.

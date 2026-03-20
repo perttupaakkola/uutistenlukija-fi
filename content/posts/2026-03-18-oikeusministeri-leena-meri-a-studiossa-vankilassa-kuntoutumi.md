@@ -15,6 +15,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - rikos
+  - oikeus
+  - lääketiede
+  - sää
 ---
 
 Oikeusministeri Leena Meri toteaa, että Suomen vankeinhoito pystyy nykyisellään huolehtimaan noin 3 000 vangista. Hän korostaa, että vankeusrangaistus ei ole ainoastaan rangaistusta, vaan myös mahdollisuus kuntoutua yhteiskuntaan. Tavoitteena on kehittää vanki-integraatiota ja tarjota parempia resursseja sosiaalisen pääsyn lisäämiseksi.

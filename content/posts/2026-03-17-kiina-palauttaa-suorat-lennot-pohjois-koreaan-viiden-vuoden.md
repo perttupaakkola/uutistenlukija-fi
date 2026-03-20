@@ -15,6 +15,12 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - kiina
+  - rokote
+  - liikenne
+  - rautatiet
 ---
 
 Air China aloittaa suorat lennot Pekingin ja Pjongjangin välillä 30. maaliskuuta. Reitti on ollut tauolla vuodesta 2020, jolloin Pohjois-Korea sulki rajansa koronapandemian vuoksi.

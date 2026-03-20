@@ -15,6 +15,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - israel
+  - sota
+  - iran
+  - yhdysvallat
 ---
 
 Yhdysvaltain presidentti Donald Trump kertoi maanantaina pyytäneensä Kiinaa siirtämään suunniteltua Pekingin-vierailuaan myöhemmäksi Iranin sodan takia. Trump esiintyi yhdessä varapresidentti JD Vancen kanssa ensimmäistä kertaa kahteen viikkoon.

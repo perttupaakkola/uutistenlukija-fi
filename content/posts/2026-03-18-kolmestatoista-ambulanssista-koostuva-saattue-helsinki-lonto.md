@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - ukraina
+  - helsinki
+  - lääketiede
 ---
 
 Torstaiaamuna kolmesta eri paikasta Helsingissä lähtee 12 kunnostettua ambulanssia kohti Ukrainaa. Lions-hyväntekeväisyysjärjestön organisoinut kuljetus on merkittävä ja jatkuu Puolan läpi viikon kestävällä matkalla Donetskiin ja Harkovaan.

@@ -15,6 +15,11 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - kulttuuri
+  - elokuva
+  - budjetti
+  - liikenne
 ---
 
 Budapestiläinen elokuvateatteri on tiistai-iltana täynnä. Yleisö ei ole tullut katsomaan Hollywood-hittielokuvaa vaan unkarilaista trilleriä, joka tehtiin minimaalisella budjetilla.

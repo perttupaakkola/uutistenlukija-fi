@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - liikenne
+  - politiikka
 ---
 
 Muovijätettä kuljettanut rekka syttyi palamaan maanantai-iltana valtatie 7:llä Porvoossa. Itä-Uudenmaan pelastuslaitos sai hälytyksen kello 20.34.

@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - koulutus
+  - turvallisuus
 ---
 
 Jyväskylässä on herännyt keskustelu kasvot peittävien asusteiden mahdollisesta kiellosta kouluissa. Valtuustoryhmien kannat ovat vielä auki.

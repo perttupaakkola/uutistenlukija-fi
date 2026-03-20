@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - tiede
+  - mielenterveys
+  - terveys
+  - sää
+  - työelämä
 ---
 
 Nuoret aikuiset tylsistyvät työssään useammin kuin vanhemmat. Tutkija Jie Linin mukaan jatkuva tylsyyden tunne voi laukaista vakavia mielenterveysongelmia.

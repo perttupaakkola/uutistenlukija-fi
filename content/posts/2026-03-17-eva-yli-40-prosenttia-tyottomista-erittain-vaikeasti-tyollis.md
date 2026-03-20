@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - työttömyys
+  - politiikka
 ---
 
 Elinkeinoelämän valtuuskunta EVA on arvioinut, että yli 40 prosenttia Suomen työttömistä kuuluu ryhmään, jota on erittäin vaikea työllistää. EVA pitää huolestuttavana etenkin nuorten pitkäaikaistyöttömyyden kasvua.

@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - teknologia
+  - yritys
+  - tekoäly
+  - kyberturvallisuus
+  - nvidia
 ---
 
 Nvidia esitteli NemoClaw-nimisen avoimen alustan, joka on suunniteltu tekoälyagenttien rakentamiseen yrityskäyttöön. Alusta pohjautuu OpenClaw-projektiin ja keskittyy tietoturvan parantamiseen.

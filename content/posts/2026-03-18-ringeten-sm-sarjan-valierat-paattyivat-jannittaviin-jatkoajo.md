@@ -15,6 +15,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - urheilu
+  - viihde
 ---
 
 Ringeten SM-sarjan puolivälierissä nähtiin tiukkoja otteluita, jotka ratkesivat jatkoajalla. Muutamat kärkiammatit ovat edenneet finaaleihin, joissa odotetaan tasokasta kilpailua.

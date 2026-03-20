@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - urheilu
+  - snooker
+  - kilpailu
 ---
 
 Snookerin kaikkien aikojen menestyneimpiin pelaajiin kuuluva Ronnie O'Sullivan täytti joulukuussa 50 vuotta, mutta lopettaminen ei ole mielessä. Englantilainen kertoo tehneensä lujasti töitä saadakseen pelinsä takaisin entiselle tasolle.

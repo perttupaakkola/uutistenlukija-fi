@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kulttuuri
+  - kirjallisuus
+  - liikenne
 ---
 
 Kustantamo Helmivyö on poistanut myynnistä kolme Harri István Mäen romaania ja yhden novellikokoelman. Epäilynä on, että teokset sisältävät toisten tekijöiden tekstiä ilman lupaa.

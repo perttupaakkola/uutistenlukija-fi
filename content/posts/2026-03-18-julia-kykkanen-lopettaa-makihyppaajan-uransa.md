@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - urheilu
+  - kilpailu
+  - liikunta
 ---
 
 Suomen mäkihypyn uranuurtaja Julia Kykkänen ilmoitti lopettavansa uransa. Hän on osallistunut useisiin kansainvälisiin kilpailuihin ja vaikuttanut suomalaisen mäkihypyn kehittymiseen. Päätös perustuu hänen toiveeseensa siirtyä seuraavaan elämänvaiheeseen.

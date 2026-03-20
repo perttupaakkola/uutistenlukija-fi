@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - israel
+  - iran
+  - yhdysvallat
 ---
 
 Israel teki hyökkäyksen Iraniin kohdistuneelle kaasukaivokselle, mikä on raporttien mukaan koordinoitu Yhdysvaltojen kanssa. Iranin presidentti Masoud Pezeshkain varoitti, että jatkuneet hyökkäykset voivat johtaa vakaviin seurauksiin. Alueen maat tuomitsivat hyökkäyksen, ja Iran uhkaa vastatoimilla Gulan energiainfrastruktuuria. Samalla taistelu Israelin ja Hizbollahin välillä Libanonissa jatkuu. Iranin öljyntuonti jatkuu, ja Hormuzinsalmen liikenne on ollut vilkasta alkuvuonna.

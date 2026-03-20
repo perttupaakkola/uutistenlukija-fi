@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - talous
+  - budjetti
+  - verotus
+  - hallitus
+  - inflaatio
 ---
 
 Chalmers on todennut, että budjetti sisältää useita uudistuksia, jotka vaikuttavat verotukseen ja julkisiin palveluihin. Hänen mukaansa suunnitelmat ovat tarpeellisia talouden vakauden varmistamiseksi. Budjetin odotetaan olevan valmis tämän vuoden aikana, jolloin se voi vaikuttaa kansalaisten hyvinvointiin. Hallitus pyrkii myös kiihdyttämään talouskasvua, joka on viime vuosina hidastunut. Nämä uudistukset herättävät keskustelua ja kritiikkiä eri tahoilta.

@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - yhdysvallat
+  - koulutus
+  - liikenne
+  - tiede
 ---
 
 Yhdysvallat on pudonnut 31 sijaa kansainvälisessä demokratiaindeksissä yhden vuoden aikana. Maa on nyt sijalla 51, kun se vuotta aiemmin oli sijalla 20. Tiedot perustuvat Göteborgin yliopiston V-Dem-instituutin tuoreeseen raporttiin.

@@ -15,6 +15,12 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - talous
+  - yritys
+  - tekoäly
+  - teknologia
+  - lentoliikenne
 ---
 
 Trevor Milton, aiemmin Nikola-yhtiön perustaja, suunnittelee nyt rahoituksen keräämistä uudelle yritykselleen. Hän tavoittelee autonomisia lentokoneita, jotka voivat mullistaa ilmailualan. Teknologian kehittäminen edellyttää merkittäviä investointeja sekä tutkimusta.

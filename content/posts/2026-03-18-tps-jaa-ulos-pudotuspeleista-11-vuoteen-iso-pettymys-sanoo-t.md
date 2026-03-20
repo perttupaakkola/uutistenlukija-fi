@@ -15,6 +15,10 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - urheilu
+  - yritys
+  - kilpailu
 ---
 
 TPS:n toimitusjohtaja Aki Holma on ilmaissut tyytymättömyytensä seuran tämän kauden tulokseen. Joukkueen odotettiin olevan potentiaalinen playoff-joukkue. Pettymys on suuri, etenkin seuran historian valossa. Holma totesi, että tavoitteet ja odotukset olivat korkealla, mutta lopputulos jäi saavuttamatta.

@@ -15,6 +15,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - talous
+  - kokoomus
+  - verotus
+  - yritys
+  - urheilu
 ---
 
 Talouspolitiikan arviointineuvoston puheenjohtaja, professori Niku Määttänen pitää kokoomuksen ajamaa perintö- ja lahjaveron poistoa huonosti perusteltuna. Kokoomuksessa on väläytelty mallia, jossa veron poisto rahoitettaisiin perumalla aiemmin toteutettu yhteisöveron alennus.

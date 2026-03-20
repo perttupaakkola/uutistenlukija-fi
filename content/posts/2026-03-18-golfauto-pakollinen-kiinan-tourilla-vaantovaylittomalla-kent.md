@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - urheilu
+  - leikkaukset
+  - kiina
+  - sää
 ---
 
 Oliver Lindell putoaa kentälle ensimmäistä kertaa tänään Kiinan Hainanin kilpailussa, jossa pelaajien on pakko käyttää golfautoa kahdella ensimmäisellä kierroksella. Kuljetus pakotettu kentän kookkaiden etäisyyksien myötä.

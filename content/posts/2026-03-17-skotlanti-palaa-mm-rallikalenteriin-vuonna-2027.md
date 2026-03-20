@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - urheilu
+  - luonto
+  - kilpailu
 ---
 
 Ralliautoilun MM-sarja saa uuden osakilpailun Skotlantiin vuonna 2027. Kilpailu ajetaan Aberdeenin ympäristössä, ja se tuo Britannian takaisin MM-rallikalenteriin vuosien tauon jälkeen.

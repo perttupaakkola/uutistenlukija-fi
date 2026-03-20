@@ -9,6 +9,12 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - talous
+  - pankki
+  - korot
+  - inflaatio
+  - liikenne
 description: "Euroopan keskuspankki pitää ohjauskorot ennallaan maaliskuun kokouksessa, säilyttäen talletus- ja perusrahoituskorot odotusten mukaisesti."
 image: "https://images.unsplash.com/photo-1734942718935-4f08020d70c0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "EKP piti korot ennallaan maaliskuun kokouksessa"

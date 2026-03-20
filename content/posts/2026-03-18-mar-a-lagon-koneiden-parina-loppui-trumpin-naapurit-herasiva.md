@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - yhdysvallat
+  - oikeus
+  - lentoliikenne
 ---
 
 Donald Trumpin omistaman Mar-a-Lagon yläpuolella ei lennä lentokoneita kello 23–07 välillä, mikä on liipaisuksena Yahsin palkinnon kaltaiseen reaktioon naapurustossa. Lentoreitin muutos meni läpi, kun Trump saatteli vuosikymmenten oikeustaiston valtion ilmailuviranomaista vastaan loppusuoraan tarjoten omia karttojaan ja meluaineistojaan osana kaupunkikehitystä.

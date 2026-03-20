@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - lääketiede
+  - terveys
 ---
 
 Suomessa käytti laihdutuslääkkeitä viime vuonna yli 100 000 ihmistä. Selvityksen mukaan osa lääkäreistä kirjoittaa reseptejä etävastaanotolla näkemättä potilasta lainkaan.

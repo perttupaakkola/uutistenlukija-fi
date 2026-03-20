@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - talous
+  - pankki
+  - korot
+  - politiikka
+  - yhdysvallat
 ---
 
 Yhdysvaltojen keskuspankki Federal Reserve jatkoi ohjauskoronsa nykyisellä tasolla. Useat ekonomistit ovat odottaneet tätä päätöstä ja pitäneet sitä oikea-aikaisena. Korkojen pysyttäminen ennallaan antaa talouden tahtia ylläpitäville toimenpiteille tilaa, mutta samalla politikoinnista johtuvat riskit lisääntyvät.

@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - nato
+  - yhdysvallat
+  - liikenne
 ---
 
 Presidentti Alexander Stubb varoittaa Nato-liittolaisia vähättelemästä Donald Trumpin puheita. Stubb sanoi haastattelussa, että Trumpin viestit tulee ottaa vakavasti.

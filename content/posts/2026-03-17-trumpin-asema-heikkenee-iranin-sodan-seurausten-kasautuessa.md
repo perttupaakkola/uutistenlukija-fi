@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - öljy
+  - sota
+  - iran
 ---
 
 Yhdysvaltain presidentti Donald Trump on ajautunut vaikeaan tilanteeseen Iranin-operaation seurausten kasautuessa. Epic Fury -nimellä tunnettu sotilasoperaatio ei ole edennyt suunnitelmien mukaan, ja kritiikki kasvaa niin kotimaassa kuin kansainvälisesti.

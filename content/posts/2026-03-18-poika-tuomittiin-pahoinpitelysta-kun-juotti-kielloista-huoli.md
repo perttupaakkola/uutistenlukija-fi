@@ -15,6 +15,11 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - oikeus
+  - rikos
+  - terveys
 ---
 
 Kanta-Hämeen käräjäoikeus on tuominnut miehen pahoinpitelystä sattumasta, jossa hän juotti sairaalassa maaliskuussa 2023 vettä kielloista huolimatta 73-vuotiaalle tajuilemattomalle äidilleen. Henkilökunnan kiellot johtuivat potilaan nielemiskyvyn epävarmuudesta.

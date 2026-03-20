@@ -15,6 +15,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - ukraina
+  - venäjä
+  - turvallisuus
+  - eu
 ---
 
 Ukrainan ja lähialueiden turvallisuustilanne aiheuttaa edelleen huolta Euroopan tasolla. Venäjän toimet alueella vaikuttavat myös turvallisuuspoliittisiin keskusteluihin. Brysselissä pohditaan, miten tukea Ukrainaa tehokkaasti ja resurssit jakautuvat nykytilanteessa epätasapainoisesti.

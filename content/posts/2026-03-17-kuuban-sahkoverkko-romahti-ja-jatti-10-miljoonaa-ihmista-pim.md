@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - öljy
+  - yhdysvallat
 ---
 
 Kuuban kansallinen sähköverkko romahti maanantaina. Verkonhaltija UNE ilmoitti, että noin 10 miljoonaa ihmistä jäi ilman sähköä.

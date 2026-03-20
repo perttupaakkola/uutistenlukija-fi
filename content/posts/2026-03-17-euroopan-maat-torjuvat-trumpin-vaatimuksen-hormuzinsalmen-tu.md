@@ -15,6 +15,12 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - öljy
+  - liikenne
+  - energia
+  - yhdysvallat
 ---
 
 Useat Euroopan maat ovat hylänneet presidentti Donald Trumpin vaatimuksen osallistua Hormuzinsalmen meriliikenteen turvaamiseen. Trump arvosteli kovin sanoin Britanniaa ja muita liittolaisia, jotka eivät ole vastanneet hänen kutsuunsa.

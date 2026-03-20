@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - kulttuuri
+  - politiikka
 ---
 
 Tytti Yli-Viikari jatkaa työskentelyä J.L. Runebergin kotimuseossa kesäkauden ajan. Hän on aiemmin toiminut valtiontalouden tarkastusviraston pääjohtajana. Nyt hänet on valittu uudelleen museo-oppaaksi asiakaspalvelu-, kassa- ja opastehtäviin. Yli-Viikari jatkaa samalla vastuullisella paikallaan, vaikka hänellä on kokemusta julkiselta sektorilta.

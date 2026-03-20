@@ -15,6 +15,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - teknologia
+  - energia
+  - yritys
+  - liikenne
 ---
 
 Suomalainen Zun-H on kehittänyt järjestelmän, joka tuottaa uusiutuvaa vetyä ilman sähköverkkoa tai ulkoista sähkönsyöttöä. Teknologia perustuu näkyvän valon hyödyntämiseen.

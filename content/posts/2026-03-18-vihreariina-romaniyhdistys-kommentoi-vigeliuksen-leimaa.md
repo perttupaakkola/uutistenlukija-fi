@@ -15,6 +15,11 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - kotimaa
+  - eduskunta
+  - budjetti
+  - kulttuuri
 ---
 
 Kansanedustaja Joakim Vigelius on esittänyt kriittisiä näkemyksiään hyvinvointialueiden toimeentulotukikäytännöistä, viitaten romanihameisiin. Hänen kommenttinsa on herättänyt keskustelua eri tahojen keskuudessa.

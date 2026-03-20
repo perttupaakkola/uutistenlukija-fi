@@ -15,6 +15,11 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - israel
+  - iran
+  - murha
 ---
 
 Iranin korkeiden johtajien surma sisältää riskin alueen epävakauttamisesta, mutta asiantuntijat eivät usko sen johtavan suureen vallan tyhjenemiseen. Parin päivän aikana Israel on tappanut kolme Iranin johtohenkilöä, mikä on lisännyt jännitteitä alueella. Professori Hannu Juusola ei pidä tapahtumaa strategisesti tarkoittavana valtatyhjiön syntymiseksi, mutta hän huomauttaa, että se voi vaikeuttaa neuvottelujen jatkoa ja lisätä jännitteitä. Tapahtumat voivat häiritä Iranin sisäistä ja ulkoista politiikkaa, mutta vaikutukset ovat toistaiseksi rajallisia.

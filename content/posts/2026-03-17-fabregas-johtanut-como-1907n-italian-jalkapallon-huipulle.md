@@ -15,6 +15,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - urheilu
+  - jalkapallo
+  - kilpailu
 ---
 
 Espanjalainen Cesc Fábregas on nostanut valmentajana italialaisen pikkuseura Como 1907:n Mestarien liigan kynnykselle.
