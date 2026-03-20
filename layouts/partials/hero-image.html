@@ -37,6 +37,7 @@
       alt="{{ $alt }}"
       class="article-hero-img"
       loading="eager"
+      fetchpriority="high"
       width="1200"
       height="675"
       onerror="this.onerror=null;this.src='/images/categories/{{ with .Params.categories }}{{ index . 0 | lower }}{{ else }}kotimaa{{ end }}.jpg'"
