@@ -18,11 +18,19 @@ from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse, parse_qs, urlunparse
 
 RSS_FEEDS = [
-    # Finnish main sources
+    # Interleaved Finnish + international — ensures international feeds aren't
+    # all at the end of a timeout window. Order: high-priority first, then alternate.
+
+    # Tier 1: Core Finnish news (fast, high volume)
     {
         "name": "Yle Uutiset",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET",
         "language": "fi",
+    },
+    {
+        "name": "BBC World",
+        "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+        "language": "en",
     },
     {
         "name": "Iltalehti",
@@ -30,31 +38,58 @@ RSS_FEEDS = [
         "language": "fi",
     },
     {
+        "name": "The Guardian World",
+        "url": "https://www.theguardian.com/world/rss",
+        "language": "en",
+    },
+    {
         "name": "Ilta-Sanomat",
         "url": "https://www.is.fi/rss/uutiset.xml",
         "language": "fi",
     },
     {
-        "name": "Turun Sanomat",
-        "url": "https://www.ts.fi/rss.xml",
-        "language": "fi",
+        "name": "BBC Science",
+        "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+        "language": "en",
+        "category_hint": "Tiede",
     },
     {
         "name": "Kauppalehti",
         "url": "https://feeds.kauppalehti.fi/rss/main",
         "language": "fi",
+        "category_hint": "Talous",
+    },
+    {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/feed/",
+        "language": "en",
+        "category_hint": "Teknologia",
     },
     {
         "name": "Taloussanomat",
         "url": "https://www.is.fi/rss/taloussanomat.xml",
         "language": "fi",
+        "category_hint": "Talous",
     },
-    # Finnish specialized
+    {
+        "name": "Ars Technica",
+        "url": "https://feeds.arstechnica.com/arstechnica/index",
+        "language": "en",
+        "category_hint": "Teknologia",
+    },
+
+    # Tier 2: Finnish specialized
     {
         "name": "Yle Urheilu",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_URHEILU",
         "language": "fi",
         "category_hint": "Urheilu",
+    },
+    {
+        "name": "Hacker News Best",
+        "url": "https://hnrss.org/best",
+        "language": "en",
+        "category_hint": "Teknologia",
     },
     {
         "name": "IS Urheilu",
@@ -63,10 +98,33 @@ RSS_FEEDS = [
         "category_hint": "Urheilu",
     },
     {
+        "name": "BBC Technology",
+        "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+        "language": "en",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "Yle Teknologia",
+        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-85",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "Der Spiegel International",
+        "url": "https://www.spiegel.de/international/index.rss",
+        "language": "en",
+    },
+    {
         "name": "Tekniikka & Talous",
         "url": "https://www.tekniikkatalous.fi/feed",
         "language": "fi",
         "category_hint": "Teknologia",
+    },
+    {
+        "name": "Science News",
+        "url": "https://www.sciencenews.org/feed",
+        "language": "en",
+        "category_hint": "Tiede",
     },
     {
         "name": "Yle Tiede",
@@ -75,17 +133,30 @@ RSS_FEEDS = [
         "category_hint": "Tiede",
     },
     {
+        "name": "Turun Sanomat",
+        "url": "https://www.ts.fi/rss.xml",
+        "language": "fi",
+    },
+    {
+        "name": "Yle Kulttuuri",
+        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-3",
+        "language": "fi",
+        "category_hint": "Kulttuuri",
+    },
+
+    # Disabled — confirmed broken (kept for reference)
+    {
+        "name": "AP News",
+        "url": "https://rsshub.app/apnews/topics/world-news",
+        "language": "en",
+        "disabled": True,  # 403 consistently
+    },
+    {
         "name": "HS Tiede",
         "url": "https://www.hs.fi/rss/?section=fi-tiede",
         "language": "fi",
         "category_hint": "Tiede",
         "disabled": True,  # HS returns HTML (paywall/Next.js), not RSS
-    },
-    {
-        "name": "Yle Teknologia",
-        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-85",
-        "language": "fi",
-        "category_hint": "Teknologia",
     },
     {
         "name": "Kauppalehti Markets",
@@ -101,65 +172,6 @@ RSS_FEEDS = [
         "category_hint": "Kulttuuri",
         "disabled": True,  # HS returns HTML (paywall/Next.js), not RSS
     },
-    {
-        "name": "Yle Kulttuuri",
-        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-3",
-        "language": "fi",
-        "category_hint": "Kulttuuri",
-    },
-    # International sources
-    {
-        "name": "BBC World",
-        "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
-        "language": "en",
-    },
-    {
-        "name": "BBC Technology",
-        "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
-        "language": "en",
-    },
-    {
-        "name": "BBC Science",
-        "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
-        "language": "en",
-    },
-    {
-        "name": "AP News",
-        "url": "https://rsshub.app/apnews/topics/world-news",
-        "language": "en",
-        "disabled": True,  # 403 consistently
-    },
-    {
-        "name": "The Guardian World",
-        "url": "https://www.theguardian.com/world/rss",
-        "language": "en",
-    },
-    {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/feed/",
-        "language": "en",
-    },
-    {
-        "name": "Ars Technica",
-        "url": "https://feeds.arstechnica.com/arstechnica/index",
-        "language": "en",
-    },
-    {
-        "name": "Hacker News Best",
-        "url": "https://hnrss.org/best",
-        "language": "en",
-    },
-    {
-        "name": "Der Spiegel International",
-        "url": "https://www.spiegel.de/international/index.rss",
-        "language": "en",
-    },
-    {
-        "name": "Science News",
-        "url": "https://www.sciencenews.org/feed",
-        "language": "en",
-        "category_hint": "Tiede",
-    },
 ]
 
 HEADERS = {
@@ -171,7 +183,10 @@ HEADERS = {
 DOMAIN_DELAY = 5
 
 # Hard cap on total scanner wall-clock time (seconds)
-SCANNER_TIMEOUT = 120
+# Previously 120s — raised to 180s now that pipeline runs every 10min (not 3h),
+# giving more budget per scan. 21 active feeds * ~5s avg = 105s happy path;
+# 180s leaves buffer for slow feeds.
+SCANNER_TIMEOUT = 180
 
 # ETag/Last-Modified cache file (persists between pipeline runs)
 _CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
