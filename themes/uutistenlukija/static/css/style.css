@@ -2214,3 +2214,117 @@ pre code {
   .pub-frequency-bar,
   .load-more-container { display: none !important; }
 }
+
+/* ── Sponsored content ──────────────────────────────────────────────────────── */
+
+.sponsored-article {
+  border-top: 3px solid #e8a000;
+}
+
+.sponsor-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #fffbf0;
+  border: 1px solid #f0d060;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.sponsor-label {
+  font-weight: 700;
+  color: #9a6000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sponsor-divider {
+  color: #ccc;
+}
+
+.sponsor-name,
+.sponsor-name-link {
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+.sponsor-name-link:hover {
+  text-decoration: underline;
+}
+
+.sponsor-logo {
+  height: 24px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.sponsor-disclosure {
+  font-size: 0.75rem;
+  color: #777;
+  font-style: italic;
+  width: 100%;
+}
+
+.sponsor-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fffbf0;
+  border: 1px solid #f0d060;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.sponsor-cta-btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: #e8a000;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sponsor-cta-btn:hover {
+  background: #c88800;
+}
+
+.sponsored-tag {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #9a6000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sponsored-meta {
+  color: #9a6000;
+}
+
+/* Dark mode adjustments for sponsored */
+@media (prefers-color-scheme: dark) {
+  .sponsor-badge,
+  .sponsor-footer {
+    background: #2a2000;
+    border-color: #6a4800;
+  }
+  .sponsor-label,
+  .sponsored-tag,
+  .sponsored-meta {
+    color: #f0b030;
+  }
+  .sponsor-name,
+  .sponsor-name-link {
+    color: #eee;
+  }
+  .sponsor-disclosure {
+    color: #aaa;
+  }
+}

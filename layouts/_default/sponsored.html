@@ -1,0 +1,90 @@
+{{- /*
+  sponsored.html — layout for sponsored / native ad articles
+
+  Finnish advertising disclosure requirements:
+  - Must be labeled as "Mainos" or "Sponsoroitu sisältö" clearly
+  - Disclosure must appear before or alongside the content
+  - All outbound sponsor links must carry rel="nofollow"
+
+  Frontmatter for sponsored articles (in addition to standard fields):
+    layout:         "sponsored"   (required to use this template)
+    sponsor_name:   "Yritys Oy"   (required)
+    sponsor_url:    "https://..."  (optional)
+    sponsor_logo:   "/images/sponsors/logo.png"  (optional)
+    sponsor_label:  "Mainos"      (optional, default "Mainos")
+
+  Note: sponsored articles are excluded from RSS feed and sitemap
+  via hugo.toml build config (see bottom of this file).
+*/}}
+{{ define "main" }}
+<article class="single-article sponsored-article">
+  {{ partial "breadcrumbs.html" . }}
+
+  {{/* Sponsor badge — top of article, before hero image */}}
+  {{ partial "sponsor-badge.html" . }}
+
+  {{ partial "hero-image.html" . }}
+
+  {{ with .Params.categories }}
+  <span class="category-label category-label--sponsored">
+    {{ index . 0 }} · <span class="sponsored-tag">Sponsoroitu</span>
+  </span>
+  {{ end }}
+
+  <h1>{{ .Title }}</h1>
+
+  <div class="article-meta sponsored-meta">
+    {{ .Date | time.Format "2.1.2006 klo 15:04" }}
+    {{ with .Params.sponsor_name }} · <span class="author-inline">{{ . }}</span>{{ end }}
+    · {{ .ReadingTime }} min lukuaika
+  </div>
+
+  {{/* Content — all links get nofollow via JS postprocess below */}}
+  <div class="content sponsored-content">
+    {{ .Content }}
+  </div>
+
+  {{/* Sponsor badge — repeated at bottom (Finnish requirement for long content) */}}
+  <div class="sponsor-footer">
+    {{ partial "sponsor-badge.html" . }}
+    {{ with .Params.sponsor_url }}
+    <a href="{{ . }}" rel="nofollow noopener noreferrer" target="_blank" class="sponsor-cta-btn">
+      Lue lisää →
+    </a>
+    {{ end }}
+  </div>
+
+  {{/* Share buttons — no newsletter CTA on sponsored content */}}
+  <div class="share-buttons">
+    <span class="share-label">Jaa:</span>
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener" class="share-btn" title="Jaa Twitterissä">𝕏</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener" class="share-btn" title="Jaa Facebookissa">f</a>
+    <a href="whatsapp://send?text={{ .Title | urlquery }}%20{{ .Permalink }}" class="share-btn" title="Jaa WhatsAppissa">wa</a>
+  </div>
+
+</article>
+
+<button id="back-to-top" aria-label="Takaisin ylös" title="Takaisin ylös">↑</button>
+
+<script>
+// Enforce nofollow on all links inside sponsored content (belt + suspenders)
+document.querySelectorAll('.sponsored-content a[href]').forEach(function(a) {
+  var rel = a.getAttribute('rel') || '';
+  if (!rel.includes('nofollow')) {
+    a.setAttribute('rel', (rel + ' nofollow noopener noreferrer').trim());
+  }
+  if (a.hostname !== window.location.hostname) {
+    a.setAttribute('target', '_blank');
+  }
+});
+
+// Back to top
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+{{ end }}

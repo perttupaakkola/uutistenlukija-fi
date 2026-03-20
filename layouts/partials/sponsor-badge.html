@@ -1,0 +1,37 @@
+{{- /*
+  sponsor-badge.html — Finnish advertising disclosure badge
+
+  Finnish law (ICC:n markkinointisäännöt + Kuluttajansuojalaki) requires
+  sponsored content to be clearly labeled as advertising.
+
+  Frontmatter params consumed:
+    sponsor_name    string  — company name (required)
+    sponsor_url     string  — sponsor's website (optional, gets rel="nofollow noopener")
+    sponsor_logo    string  — path to logo image (optional)
+    sponsor_label   string  — override label text (default: "Mainos")
+*/}}
+{{ $name  := .Params.sponsor_name  | default "" }}
+{{ $url   := .Params.sponsor_url   | default "" }}
+{{ $logo  := .Params.sponsor_logo  | default "" }}
+{{ $label := .Params.sponsor_label | default "Mainos" }}
+
+<div class="sponsor-badge" role="note" aria-label="Sponsoroitu sisältö">
+  <span class="sponsor-label">{{ $label }}</span>
+  <span class="sponsor-divider">|</span>
+  {{ if $url }}
+  <a href="{{ $url }}" rel="nofollow noopener noreferrer" target="_blank" class="sponsor-name-link">
+    {{ if $logo }}
+    <img src="{{ $logo }}" alt="{{ $name }}" class="sponsor-logo">
+    {{ else }}
+    <span class="sponsor-name">{{ $name }}</span>
+    {{ end }}
+  </a>
+  {{ else }}
+    {{ if $logo }}
+    <img src="{{ $logo }}" alt="{{ $name }}" class="sponsor-logo">
+    {{ else if $name }}
+    <span class="sponsor-name">{{ $name }}</span>
+    {{ end }}
+  {{ end }}
+  <span class="sponsor-disclosure">Tämä sisältö on tuotettu yhteistyössä mainostajan kanssa.</span>
+</div>
