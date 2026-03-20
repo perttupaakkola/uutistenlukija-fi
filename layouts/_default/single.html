@@ -15,8 +15,16 @@
     · {{ .ReadingTime }} min lukuaika
   </div>
   <div class="content">
-    {{ .Content }}
+    {{- $paragraphs := split .Content "</p>" -}}
+    {{- range $i, $p := $paragraphs -}}
+      {{- $p | safeHTML }}</p>
+      {{- if eq $i 2 -}}
+        {{ partial "ad-slot.html" (dict "position" "in-article" "context" $) }}
+      {{- end -}}
+    {{- end -}}
   </div>
+
+  {{ partial "ad-slot.html" (dict "position" "after-article" "context" .) }}
 
   <div class="share-buttons">
     <span class="share-label">Jaa:</span>

@@ -27,9 +27,12 @@ Tallennamme selaimeesi pienen evästeen, joka muistaa evästehyväksyntäsi. Tä
 - **Analytiikka**: ymmärtääksemme, miten sivustoa käytetään ja kehittääksemme sen sisältöä  
 - **Toiminnallisuus**: evästehyväksynnän muistaminen
 
+**Mainosevästeet (Google AdSense)**  
+Sivusto voi näyttää henkilökohtaistettuja mainoksia Google AdSense -palvelun kautta. Google käyttää evästeitä mainosten kohdentamiseen aiempien sivustovierailujen perusteella. Voit hallita mainosasetuksiasi osoitteessa [adssettings.google.com](https://adssettings.google.com). Lue lisää: [policies.google.com/technologies/ads](https://policies.google.com/technologies/ads).
+
 ### Tietojen luovuttaminen
 
-Emme myy emmekä luovuta henkilötietoja kolmansille osapuolille. Google Analytics -tiedot käsitellään Googlen tietosuojakäytännön mukaisesti. Lue lisää: [policies.google.com/privacy](https://policies.google.com/privacy).
+Emme myy emmekä luovuta henkilötietoja kolmansille osapuolille. Google Analytics- ja Google AdSense -tiedot käsitellään Googlen tietosuojakäytännön mukaisesti. Lue lisää: [policies.google.com/privacy](https://policies.google.com/privacy).
 
 ### Evästeiden hallinta
 

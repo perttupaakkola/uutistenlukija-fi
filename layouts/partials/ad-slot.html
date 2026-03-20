@@ -1,0 +1,17 @@
+{{- $adsenseId := site.Params.adsense_id -}}
+{{- $position := .position | default "in-article" -}}
+{{- if $adsenseId -}}
+<div class="ad-slot ad-slot-{{ $position }}">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ $adsenseId }}"
+     crossorigin="anonymous"></script>
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="{{ $adsenseId }}"
+       data-ad-slot="{{ $position }}"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+{{- end -}}
