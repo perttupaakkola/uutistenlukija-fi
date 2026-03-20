@@ -208,11 +208,13 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     # ── Step 1d: Drop wire briefs with no source material ─────────────────────
     # Skip articles with < 30 words in description AND no research text.
     # These produce sub-100 word output even after rewriting.
+    # Exception: firehose articles are already curated — skip the filter for them.
     MIN_SOURCE_WORDS = 30
     pre_filter_count = len(articles)
     articles = [
         a for a in articles
-        if len(a.get("description", "").split()) >= MIN_SOURCE_WORDS
+        if a.get("_source_type") == "firehose"   # firehose: always pass through
+        or len(a.get("description", "").split()) >= MIN_SOURCE_WORDS
         or len(a.get("research", "").split()) >= 50
     ]
     skipped = pre_filter_count - len(articles)
