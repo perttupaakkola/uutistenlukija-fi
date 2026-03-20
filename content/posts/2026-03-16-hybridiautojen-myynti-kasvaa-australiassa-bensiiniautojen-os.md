@@ -9,6 +9,10 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - talous
+  - energia
+  - yritys
 description: "Australiassa hybridi- ja sähköautojen myynti kasvaa, kun bensiiniautojen osuus markkinoilla laskee ennätysalhaalle 66,3 prosenttiin."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Hybridiautojen myynti kasvaa Australiassa – bensiiniautojen osuus ennätysalhaalla"

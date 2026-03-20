@@ -5,6 +5,11 @@ categories:
   - Ulkomaat
 author: "Laura Mäkelä"
 draft: false
+tags:
+  - ulkomaat
+  - liikenne
+  - energia
+  - öljy
 description: "Juutinrauman silta suljettiin lauantaina onnettomuuden vuoksi, mikä aiheutti suuria liikenneruuhkia sekä Ruotsissa että Tanskassa."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Juutinrauman silta suljettu onnettomuuden vuoksi"

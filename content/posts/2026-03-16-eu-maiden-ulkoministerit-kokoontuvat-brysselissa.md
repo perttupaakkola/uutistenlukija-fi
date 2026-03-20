@@ -9,6 +9,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - eu
+  - politiikka
+  - turvallisuus
+  - sää
 description: "EU-maiden ulkoministerit kokoontuvat Brysselissä käsittelemään unionin ulko- ja turvallisuuspoliittisia kysymyksiä sekä kansainvälisiä kriisejä."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "EU-maiden ulkoministerit kokoontuvat Brysselissä"

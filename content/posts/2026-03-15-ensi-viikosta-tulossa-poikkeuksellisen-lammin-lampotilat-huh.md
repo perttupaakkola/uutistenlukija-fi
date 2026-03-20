@@ -5,6 +5,11 @@ categories:
   - Kotimaa
 author: "Mikko Salonen"
 draft: false
+tags:
+  - kotimaa
+  - sää
+  - yritys
+  - liikenne
 description: "Suomeen saapuu ensi viikolla poikkeuksellisen lämmin sääjakso, lämpötilojen noustessa huhtikuun lukemille, erityisesti loppuviikosta."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Ensi viikosta tulossa poikkeuksellisen lämmin – lämpötilat huhtikuun lukemissa"

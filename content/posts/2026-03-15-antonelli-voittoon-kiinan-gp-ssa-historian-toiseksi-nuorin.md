@@ -5,6 +5,10 @@ categories:
   - Urheilu
 author: "Matti Virtanen"
 draft: false
+tags:
+  - urheilu
+  - formula
+  - kiina
 description: "Kimi Antonelli voittaa uransa ensimmäisen F1-osakilpailun Kiinan GP:ssä ja nousee historian toiseksi nuorimmaksi kilpailuvoittajaksi."
 image: "https://images.unsplash.com/photo-1641478058859-f109fe4ae6ae?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxhbnRvbmVsbGklMjB2b2l0dG9vbiUyMGtpaW5hbiUyMGhpc3RvcmlhbnxlbnwxfDB8fHwxNzc0MDA3NTIzfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Antonelli voittoon Kiinan GP:ssä – historian toiseksi nuorin F1-kilpailun voittaja"

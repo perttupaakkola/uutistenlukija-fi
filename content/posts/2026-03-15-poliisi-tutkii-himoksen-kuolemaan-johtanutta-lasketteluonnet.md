@@ -5,6 +5,12 @@ categories:
   - Kotimaa
 author: "Matti Virtanen"
 draft: false
+tags:
+  - kotimaa
+  - leikkaukset
+  - poliisi
+  - sää
+  - hiihto
 description: "Sisä-Suomen poliisi tutkii Himoksella tapahtunutta lasketteluonnettomuutta, jossa virolainen mies kuoli ajettuaan kallioleikkaukseen."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Poliisi tutkii Himoksen kuolemaan johtanutta lasketteluonnettomuutta"

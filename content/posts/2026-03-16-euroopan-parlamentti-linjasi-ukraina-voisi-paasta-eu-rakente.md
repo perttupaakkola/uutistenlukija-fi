@@ -9,6 +9,11 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - eu
+  - ukraina
+  - liikenne
 description: "Euroopan parlamentti äänestää EU:n laajentumisstrategian puolesta, jolloin Ukraina voisi liittyä unionin rakenteisiin ennen täysjäsenyyttä."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Euroopan parlamentti linjasi: Ukraina voisi päästä EU-rakenteisiin ennen täysjäsenyyttä"

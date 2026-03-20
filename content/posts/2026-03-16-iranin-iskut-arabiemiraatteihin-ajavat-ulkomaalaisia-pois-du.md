@@ -9,6 +9,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - iran
+  - verotus
 description: "Iranin iskut Arabiemiraatteihin pakottavat ulkomaalaisia poistumaan Dubaista, mikä heikentää kaupungin omaa turvallisuutta ja taloutta."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Iranin iskut Arabiemiraatteihin ajavat ulkomaalaisia pois Dubaista"

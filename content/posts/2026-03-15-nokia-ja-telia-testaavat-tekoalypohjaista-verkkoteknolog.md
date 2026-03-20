@@ -5,6 +5,11 @@ categories:
   - Teknologia
 author: "Sanna Heikkinen"
 draft: false
+tags:
+  - teknologia
+  - yritys
+  - tekoäly
+  - nokia
 description: "Nokia ja Telia testaavat yhteistyössä tekoälypohjaista verkkoteknologiaa parantaakseen 5G-verkon suorituskykyä Suomessa."
 image: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3Mzk2OTA4OXww&ixlib=rb-4.1.0&q=85"
 image_alt: "Nokia ja Telia testaavat tekoälypohjaista verkkoteknologiaa Suomessa"

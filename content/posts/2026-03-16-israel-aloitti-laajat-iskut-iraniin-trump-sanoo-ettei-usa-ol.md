@@ -9,6 +9,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - yhdysvallat
+  - israel
+  - puolustus
+  - sota
 description: "Israelin armeija aloitti laajamittaiset iskut Iraniin, ja presidentti Trump ilmoittaa Yhdysvaltojen olevan valmis neuvotteluihin vasta myöhemmin."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Israel aloitti laajat iskut Iraniin – Trump sanoo, ettei USA ole valmis sopimukseen"

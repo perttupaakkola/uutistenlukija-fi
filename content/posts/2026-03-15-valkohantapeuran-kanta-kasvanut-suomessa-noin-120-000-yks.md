@@ -5,6 +5,10 @@ categories:
   - Tiede
 author: "Matti Virtanen"
 draft: false
+tags:
+  - tiede
+  - luonto
+  - tutkimus
 description: "Suomessa elää nyt noin 120 000 valkohäntäpeuraa, paljastaa Luonnonvarakeskuksen tuore kanta-arvio. Kannan kasvu jatkuu, vaikka metsästystä säännellään."
 image: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwcmVzZWFyY2glMjBsYWJvcmF0b3J5fGVufDF8MHx8fDE3NzQwMDIwODF8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Valkohäntäpeuran kanta kasvanut Suomessa – noin 120 000 yksilöä"

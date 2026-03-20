@@ -5,6 +5,10 @@ categories:
   - Talous
 author: "Laura Mäkelä"
 draft: false
+tags:
+  - talous
+  - energia
+  - pörssi
 description: "Pörssisähkön hinta pysyy edullisena ensi viikon alussa, ja maanantaina kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Pörssisähkö pysyy edullisena ensi viikon alussa"

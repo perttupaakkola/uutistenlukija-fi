@@ -5,6 +5,11 @@ categories:
   - Ulkomaat
 author: "Sanna Heikkinen"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - puolustus
+  - liikenne
 description: "Britannian puolustusministeri korostaa Lähi-idän rauhoittamisen tärkeyttä kansainväliselle turvallisuudelle ja käy vuoropuhelua liittolaisten kanssa."
 image: "https://images.unsplash.com/photo-1706814567827-c204d90a40c7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxicml0YWluJTIwbCVDMyVBNGhpLWlkJUMzJUE0biUyMHRpbGFudGVlbiUyMHYlQzMlQTRsdHQlQzMlQTRtJUMzJUE0dCVDMyVCNm50JUMzJUE0fGVufDF8MHx8fDE3NzQwMDc1Mjh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Britannia: Lähi-idän tilanteen rauhoittaminen on välttämätöntä"

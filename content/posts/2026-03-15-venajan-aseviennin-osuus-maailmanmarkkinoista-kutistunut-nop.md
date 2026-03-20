@@ -5,6 +5,10 @@ categories:
   - Ulkomaat
 author: "Laura Mäkelä"
 draft: false
+tags:
+  - ulkomaat
+  - venäjä
+  - kansainvälinen
 description: "Venäjän aseviennin osuus maailmanmarkkinoista on romahtanut merkittävästi, mikä johtuu useista vakavista ongelmista ja Ukrainan konfliktista."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Venäjän aseviennin osuus maailmanmarkkinoista kutistunut nopeasti"
