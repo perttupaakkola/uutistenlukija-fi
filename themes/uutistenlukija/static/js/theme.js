@@ -1,29 +1,28 @@
-(function() {
-  const btn = document.getElementById('theme-toggle');
-  const html = document.documentElement;
-  
-  // Load saved preference or use system preference
-  const saved = localStorage.getItem('theme');
-  if (saved) {
-    html.setAttribute('data-theme', saved);
-  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    html.setAttribute('data-theme', 'dark');
-  }
-  
-  const icon = btn.querySelector('.theme-toggle-icon');
-  const label = btn.querySelector('.theme-toggle-label');
+// theme.js — dark/light toggle
+// NOTE: theme is applied before first paint via inline script in baseof.html.
+// This file only handles the toggle button UI.
+(function () {
+  'use strict';
 
-  // Update button icon and label
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  var html = document.documentElement;
+  var icon = btn.querySelector('.theme-toggle-icon');
+  var label = btn.querySelector('.theme-toggle-label');
+
   function updateIcon() {
-    const isDark = html.getAttribute('data-theme') === 'dark';
-    icon.textContent = isDark ? '☀️' : '🌙';
-    label.textContent = isDark ? 'Vaalea' : 'Tumma';
+    var isDark = html.getAttribute('data-theme') === 'dark';
+    if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+    if (label) label.textContent = isDark ? 'Vaalea' : 'Tumma';
+    btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
   }
+
   updateIcon();
-  
-  btn.addEventListener('click', function() {
-    const current = html.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
+
+  btn.addEventListener('click', function () {
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
     updateIcon();

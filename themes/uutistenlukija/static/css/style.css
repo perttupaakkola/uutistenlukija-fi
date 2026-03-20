@@ -48,6 +48,19 @@ img { max-width: 100%; height: auto; }
 .site-header {
   border-bottom: 3px solid var(--text);
   margin-bottom: 2rem;
+  /* Sticky: always on top, slide-out on mobile scroll-down */
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--bg);
+  transition: transform 0.25s ease;
+}
+
+/* Mobile: hide on scroll-down, reveal on scroll-up */
+@media (max-width: 768px) {
+  .site-header.header--hidden {
+    transform: translateY(-100%);
+  }
 }
 
 .header-banner {

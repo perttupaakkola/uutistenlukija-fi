@@ -329,7 +329,7 @@ def fetch_image_for_article(
     photo_page = photo["photo_page"]
 
     return {
-        "url": photo["url_full"] or photo["url_regular"],
+        "url": photo["url_regular"] or photo["url_full"],  # 1080px for performance, not full 2400px
         "thumb_url": photo["url_small"] or photo["url_thumb"],
         "photographer": photographer,
         "photographer_url": photo["photographer_url"],

@@ -240,7 +240,7 @@ def _search_pexels(query: str, per_page: int = 80) -> List[Dict]:
     for photo in data.get("photos", []):
         src = photo.get("src", {})
         photos.append({
-            "url": src.get("large2x") or src.get("large") or src.get("original"),
+            "url": src.get("large") or src.get("large2x"),  # 800px large, not huge large2x for performance
             "thumb_url": src.get("medium") or src.get("small"),
             "photographer": photo.get("photographer", "Unknown"),
             "photographer_url": photo.get("photographer_url", "https://www.pexels.com"),

@@ -55,6 +55,57 @@
   {{ partial "analytics.html" . }}
   {{ partial "event-tracking.html" . }}
   <script>
+  // Mobile sticky header — hide on scroll-down, show on scroll-up (< 768px only)
+  (function() {
+    var siteHeader = document.querySelector('.site-header');
+    if (!siteHeader) return;
+    var lastScrollY = window.scrollY;
+    var ticking = false;
+    var THRESHOLD = 60;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          var currentScrollY = window.scrollY;
+          if (window.innerWidth < 768) {
+            if (currentScrollY > lastScrollY && currentScrollY > THRESHOLD) {
+              siteHeader.classList.add('header--hidden');
+            } else {
+              siteHeader.classList.remove('header--hidden');
+            }
+          } else {
+            siteHeader.classList.remove('header--hidden');
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  })();
+
+  // Back to top
+  (function() {
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+    window.addEventListener('scroll', function() {
+      btn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+  // Reading progress bar
+  (function() {
+    var bar = document.querySelector('.reading-progress');
+    if (!bar) return;
+    window.addEventListener('scroll', function() {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) : 0) + '%';
+    }, { passive: true });
+  })();
+
   // Dark mode toggle
   (function() {
     var btn = document.getElementById('theme-toggle');

@@ -1,0 +1,49 @@
+{{/*
+  responsive-image.html — Responsive image with CDN optimization
+  
+  Handles both Unsplash hotlinks and local Pexels images with proper sizing.
+  Unsplash URLs get `?w=400&q=80` params for cards, `?w=1200&q=85` for hero.
+  
+  Parameters:
+  - src: image URL
+  - alt: alt text
+  - width: desired display width (400 for cards, 1200 for hero)
+  - height: desired display height (225 for cards, 675 for hero)
+  - class: CSS classes
+  - loading: lazy or eager
+  - sizes: responsive sizes string (optional, for srcset)
+*/}}
+
+{{ $src := .src }}
+{{ $alt := .alt | default "Article image" }}
+{{ $width := .width | default 400 }}
+{{ $height := .height | default 225 }}
+{{ $class := .class | default "" }}
+{{ $loading := .loading | default "lazy" }}
+
+{{/* Apply CDN optimization to Unsplash URLs */}}
+{{ if hasPrefix $src "https://images.unsplash.com" }}
+  {{/* Unsplash: add sizing and quality params */}}
+  {{ if contains $src "?" }}
+    {{ $src = printf "%s&w=%d&q=80&fit=crop" $src $width }}
+  {{ else }}
+    {{ $src = printf "%s?w=%d&q=80&fit=crop" $src $width }}
+  {{ end }}
+{{ else if hasPrefix $src "https://images.pexels.com" }}
+  {{/* Pexels: add sizing params */}}
+  {{ if contains $src "?" }}
+    {{ $src = printf "%s&w=%d&h=%d&fit=crop" $src $width $height }}
+  {{ else }}
+    {{ $src = printf "%s?w=%d&h=%d&fit=crop" $src $width $height }}
+  {{ end }}
+{{ end }}
+
+<img
+  src="{{ $src }}"
+  alt="{{ $alt }}"
+  class="{{ $class }}"
+  loading="{{ $loading }}"
+  width="{{ $width }}"
+  height="{{ $height }}"
+  decoding="async"
+/>
