@@ -15,6 +15,12 @@ image_alt: "Sähkön keskihinta Suomessa alhaisin Ruotsin pääkaupungeissa vuos
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - energia
+  - yhdysvallat
+  - urheilu
+  - liikenne
 ---
 
 Energiateollisuus ry julkaisi vuodenvaihteessa sähkön tukkuhintatilastoja, jotka sisältävät tietoa sähkön keskihinnoista eri alueilla. Vuonna 2025 sähkön keskihinta Suomessa oli 40,48 €/MWh. Tämä tarkoittaa, että Suomi on jälleen kerran esitellyt kilpailukykyään sähkömarkkinoilla, sillä sähkön hinta on ollut alhaisin Euroopan talousalueella verrattuna pääkaupunkien hinta-alueisiin, erityisesti Ruotsiin.

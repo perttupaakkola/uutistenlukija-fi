@@ -7,6 +7,10 @@ sponsor_name: "TechFirma Oy"
 sponsor_url: "https://example.com"
 sponsor_logo: ""
 draft: false
+tags:
+  - kotimaa
+  - tekoäly
+  - politiikka
 ---
 
 Tekoäly on muuttanut tapaa, jolla suomalaiset yritykset toimivat. Tässä artikkelissa tarkastelemme, miten johtavat yritykset ovat ottaneet käyttöön uusia ratkaisuja.
