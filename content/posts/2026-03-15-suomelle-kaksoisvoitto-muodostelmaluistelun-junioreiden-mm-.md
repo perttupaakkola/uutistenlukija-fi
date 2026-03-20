@@ -6,6 +6,11 @@ categories:
 author: "Mikko Salonen"
 draft: false
 description: "Fintastic voittaa kultaa ja Valley Bay Synchro pronssia muodostelmaluistelun junioreiden MM-kisoissa, tuoden Suomeen kaksoisvoiton upealla esityksellä."
+image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
+image_alt: "Suomelle kaksoisvoitto muodostelmaluistelun junioreiden MM-kisoissa"
+image_credit: "Photo by Peter Zhan on Unsplash"
+image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Helsinki Fintastic voitti kultaa muodostelmaluistelun junioreiden MM-kisoissa sunnuntaina vakuuttavalla esityksellä. Espoolainen Valley Bay Synchro täydensi suomalaisten juhlaa nousemalla pronssisijalle – joukkueen ensimmäiseen MM-mitaliin koskaan.

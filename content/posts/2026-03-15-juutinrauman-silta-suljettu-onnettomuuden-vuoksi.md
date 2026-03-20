@@ -6,6 +6,11 @@ categories:
 author: "Laura Mäkelä"
 draft: false
 description: "Juutinrauman silta suljettiin lauantaina onnettomuuden vuoksi, mikä aiheutti suuria liikenneruuhkia sekä Ruotsissa että Tanskassa."
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Juutinrauman silta suljettu onnettomuuden vuoksi"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Juutinrauman silta eli Øresundsbron suljettiin lauantaina moottoritieliikenteeltä Ruotsin suuntaan tunneliosuudella sattuneen onnettomuuden vuoksi. Sulku aiheutti mittavat liikenneruuhkat molemmissa maissa ja vaikutti tuhansien matkustajien kulkuun.

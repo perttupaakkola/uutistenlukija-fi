@@ -6,6 +6,11 @@ categories:
 author: "Mikko Salonen"
 draft: false
 description: "Kiinan ja Yhdysvaltain kauppaneuvottelut alkavat Pariisissa presidenttien tulevaa huippukokousta varten. Jännitteet taloussuhteissa jatkuvat."
+image: "https://images.unsplash.com/photo-1682410524595-94f15d7f1649?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxraWluYW4lMjB5aGR5c3ZhbHRhaW4lMjBrYXVwcGFuZXV2b3R0ZWx1dCUyMGFsa29pdmF0fGVufDF8MHx8fDE3NzQwMDc1NDR8MA&ixlib=rb-4.1.0&q=85"
+image_alt: "Kiinan ja Yhdysvaltain kauppaneuvottelut alkoivat Pariisissa"
+image_credit: "Photo by Loegunn Lai on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-woman-walking-down-a-street-holding-an-umbrella-X15u7g-tqVA?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1682410524595-94f15d7f1649?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxraWluYW4lMjB5aGR5c3ZhbHRhaW4lMjBrYXVwcGFuZXV2b3R0ZWx1dCUyMGFsa29pdmF0fGVufDF8MHx8fDE3NzQwMDc1NDR8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Kiina ja Yhdysvallat aloittivat lauantaina kauppaneuvottelut Pariisissa. Ranskan pääkaupungissa käytävät keskustelut valmistelevat presidentti Donald Trumpin ja presidentti Xi Jinpingin tulevaa huippukokousta, joka on tarkoitus järjestää Kiinassa lähikuukausina.

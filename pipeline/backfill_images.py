@@ -239,12 +239,27 @@ def run(
             }
 
             if dry_run:
-                # Just preview keyword extraction
+                # Query the API but don't write any files
                 kw = _unsplash.extract_keywords(title, category)
-                print(f"  [dry-run] {fpath.name[:55]:55s} → '{kw}'")
-                entry["status"] = "dry_run"
+                result = fetch_image(title, category, slug, source)
+                time.sleep(REQUEST_DELAY)
+                if result:
+                    img_url = (result.get("url") or result.get("local_path") or "")[:80]
+                    src = result.get("source", "?")
+                    credit = result.get("credit", "")
+                    print(f"  ✅ [{src:8s}] {title[:45]:45s}")
+                    print(f"             kw='{kw}'")
+                    print(f"             url={img_url}")
+                    print(f"             credit={credit}")
+                    entry["status"] = "dry_run_ok"
+                    entry["image_url"] = img_url
+                    ok_count += 1
+                else:
+                    print(f"  ❌ [no result] {title[:50]}")
+                    print(f"             kw='{kw}'")
+                    entry["status"] = "dry_run_failed"
+                    failed_count += 1
                 entry["keywords"] = kw
-                ok_count += 1
             else:
                 result = fetch_image(title, category, slug, source)
                 time.sleep(REQUEST_DELAY)

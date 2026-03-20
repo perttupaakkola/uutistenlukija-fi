@@ -6,6 +6,11 @@ categories:
 author: "Jukka Nieminen"
 draft: false
 description: "Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, kertoo Simpukka ry:n tuore kysely. Syrjintä ilmenee erityisesti lomien jaossa."
+image: "https://images.unsplash.com/photo-1648197753080-474bed0bf289?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxreXNlbHklMjBwdW9sZXQlMjB0YWhhdHRvbWFzdGklMjBsYXBzZXR0b21pc3RhfGVufDF8MHx8fDE3NzQwMDc1NDd8MA&ixlib=rb-4.1.0&q=85"
+image_alt: "Kysely: lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä"
+image_credit: "Photo by Sean Foster on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-little-girl-sitting-in-the-back-seat-of-a-car-z7p-Veuy_4I?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1648197753080-474bed0bf289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxreXNlbHklMjBwdW9sZXQlMjB0YWhhdHRvbWFzdGklMjBsYXBzZXR0b21pc3RhfGVufDF8MHx8fDE3NzQwMDc1NDd8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, käy ilmi Simpukka ry:n tuoreesta kyselystä. Lapsettomien yhdistyksen maaliskuussa toteuttamassa Instagram-kyselyssä 49 prosenttia vastaajista kertoi kokeneensa työelämäsyrjintää lapsettomuutensa vuoksi.
