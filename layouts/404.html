@@ -96,22 +96,4 @@
   </div>
 
 </div>
-
-{{/* GA4 custom event — fires when user lands on 404. Surfaces in GA4 Explorer
-     as event name "page_not_found" with referring URL and broken path. */}}
-{{ if hugo.IsProduction }}
-<script>
-(function() {
-  function send404() {
-    if (typeof gtag !== 'function') return;
-    gtag('event', 'page_not_found', {
-      page_path: window.location.pathname + window.location.search,
-      referrer: document.referrer || '(direct)'
-    });
-  }
-  if (document.readyState === 'complete') { send404(); }
-  else { window.addEventListener('load', send404); }
-})();
-</script>
-{{ end }}
 {{ end }}

@@ -40,7 +40,7 @@
 
   {{/* 2. Category OG image fallback with unique hash per article */}}
   {{ if not $ogImage }}
-    {{ $cat := "" }}{{ with .Params.categories }}{{ $cat = index . 0 | lower }}{{ end }}
+    {{ $cat := index .Params.categories 0 | lower | default "" }}
     {{ if $cat }}
       {{ $hash := substr (md5 .Permalink) 0 8 }}
       {{ $ogImage = printf "%simages/og-%s.png?v=%s" $.Site.BaseURL $cat $hash }}

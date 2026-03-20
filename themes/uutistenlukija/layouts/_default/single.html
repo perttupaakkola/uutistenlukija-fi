@@ -7,7 +7,26 @@
   </span>
   {{ end }}
   <h1>{{ .Title }}</h1>
-  {{ partial "hero-image.html" . }}
+  {{ $heroImage := .Params.image }}
+  {{ if not $heroImage }}{{ $heroImage = printf "/images/categories/%s.jpg" (index .Params.categories 0 | default "kotimaa" | lower) }}{{ end }}
+  <figure class="article-hero-figure">
+    <img
+      src="{{ $heroImage }}"
+      alt="{{ if .Params.image_alt }}{{ .Params.image_alt }}{{ else }}{{ .Title }}{{ end }}"
+      class="article-header-image"
+      loading="eager"
+      width="1200" height="675"
+    >
+    {{ if or .Params.image_caption .Params.image_credit }}
+    <figcaption class="image-caption">
+      {{ with .Params.image_caption }}{{ . }}{{ end }}
+      {{ if and .Params.image_caption .Params.image_credit }} — {{ end }}
+      {{ with .Params.image_credit }}
+        {{ if $.Params.image_source_url }}<a href="{{ $.Params.image_source_url }}" target="_blank" rel="noopener nofollow">{{ . }}</a>{{ else }}{{ . }}{{ end }}
+      {{ end }}
+    </figcaption>
+    {{ end }}
+  </figure>
   <div class="article-meta">
     {{ .Date | time.Format "2.1.2006 klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
@@ -19,11 +38,11 @@
 
   <div class="share-buttons">
     <span class="share-label">Jaa:</span>
-    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener" class="share-btn" title="Jaa Twitterissä" aria-label="Jaa Twitterissä">𝕏</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener" class="share-btn" title="Jaa Facebookissa" aria-label="Jaa Facebookissa">f</a>
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title | urlquery }}" target="_blank" rel="noopener" class="share-btn" title="Jaa LinkedInissä" aria-label="Jaa LinkedInissä">in</a>
-    <a href="whatsapp://send?text={{ .Title | urlquery }}%20{{ .Permalink }}" class="share-btn" title="Jaa WhatsAppissa" aria-label="Jaa WhatsAppissa">wa</a>
-    <button class="share-btn" onclick="navigator.clipboard.writeText('{{ .Permalink }}');this.textContent='✓';setTimeout(()=>this.textContent='🔗',2000)" title="Kopioi linkki" aria-label="Kopioi artikkelin linkki">🔗</button>
+    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title | urlquery }}" target="_blank" rel="noopener" class="share-btn" title="Jaa Twitterissä">𝕏</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener" class="share-btn" title="Jaa Facebookissa">f</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title | urlquery }}" target="_blank" rel="noopener" class="share-btn" title="Jaa LinkedInissä">in</a>
+    <a href="whatsapp://send?text={{ .Title | urlquery }}%20{{ .Permalink }}" class="share-btn" title="Jaa WhatsAppissa">wa</a>
+    <button class="share-btn" onclick="navigator.clipboard.writeText('{{ .Permalink }}');this.textContent='✓';setTimeout(()=>this.textContent='🔗',2000)" title="Kopioi linkki">🔗</button>
   </div>
 
   {{ with .Params.author }}
@@ -43,34 +62,24 @@
   </div>
   {{ end }}
 
-  {{/* Related articles — category-matched, deduplicated */}}
-  {{ $currentPermalink := .Permalink }}
+  {{/* Related articles */}}
   {{ $currentCategories := .Params.categories }}
+  {{ $currentPage := . }}
   {{ $related := slice }}
-  {{ $seen := slice }}
   {{ range where .Site.RegularPages "Section" "posts" }}
-    {{ $page := . }}
-    {{ if ne $page.Permalink $currentPermalink }}
-      {{ $pageCategories := $page.Params.categories }}
+    {{ if ne .Permalink $currentPage.Permalink }}
+      {{ $pageCategories := .Params.categories }}
       {{ range $currentCategories }}
         {{ $cat := . }}
         {{ range $pageCategories }}
           {{ if eq . $cat }}
-            {{ if not (in $seen $page.Permalink) }}
-              {{ $related = $related | append $page }}
-              {{ $seen = $seen | append $page.Permalink }}
-            {{ end }}
+            {{ $related = $related | append $currentPage }}
           {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
-  {{/* Fallback: recent posts if no category matches */}}
-  {{ if not $related }}
-    {{ $related = where .Site.RegularPages "Section" "posts" | first 4 }}
-    {{ $related = where $related "Permalink" "ne" $currentPermalink }}
-  {{ end }}
-  {{ $related = first 4 $related }}
+  {{ $related = where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink | first 4 }}
   {{ if $related }}
   <div class="related-articles">
     <h3>Lue myös</h3>

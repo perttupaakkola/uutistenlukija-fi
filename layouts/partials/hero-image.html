@@ -17,7 +17,7 @@
 {{/* Resolve image URL — fallback to category placeholder with unique hash */}}
 {{ $img := .Params.image }}
 {{ if not $img }}
-  {{ $cat := "kotimaa" }}{{ with .Params.categories }}{{ $cat = index . 0 | lower }}{{ end }}
+  {{ $cat := index .Params.categories 0 | lower | default "kotimaa" }}
   {{/* Add unique hash per article to prevent duplicate image SEO penalty */}}
   {{ $hash := substr (md5 .Permalink) 0 8 }}
   {{ $img = printf "/images/categories/%s.jpg?v=%s" $cat $hash }}
@@ -42,7 +42,7 @@
       loading="eager"
       width="1200"
       height="675"
-      onerror="this.onerror=null;this.src='/images/categories/{{ with .Params.categories }}{{ index . 0 | lower }}{{ else }}kotimaa{{ end }}.jpg?v={{ $fallbackHash }}'"
+      onerror="this.onerror=null;this.src='/images/categories/{{ index .Params.categories 0 | lower | default "kotimaa" }}.jpg?v={{ $fallbackHash }}'"
     >
   </div>
   {{ if or $hasCaption $hasCredit }}

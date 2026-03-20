@@ -10,6 +10,11 @@ author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän 
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 description: "Irlantilaiset pyhän Patrickin päivän kulkueet herättävät kritiikkiä seksuaalista väkivaltaa kuvaavasta esityksestä, tuomitsin raiskausavustusjärjestöjen…"
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Irlantilainen pyhän Patrickin päivän kulkue aiheutti keskustelua seksuaalisen väkivallan kuvaamisen rajapinnoista"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 The Guardianin mukaan raiskausavustusjärjestöt tuomitsivat jyrkästi irlantilaisen pyhän Patrickin päivän kulkueessa nähdyn näytöksen, joka kuvasi seksuaalista väkivaltaa. Traktorin vetämässä kulkueessa esiintyjät piirittivät naishahmon, joka huusi ja jota pidettiin kiinni patjalla. Kulkueessa oli irlantilaislippuja ja kylttejä, joissa viitattiin Jeffrey Epsteinin oikeudenkäynteihin.

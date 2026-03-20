@@ -10,6 +10,11 @@ author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän 
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 description: "Kuningas Kaarle III avasi Englannin rannikkopolun, joka kattaa 4 325 kilometriä ja on maailman pisin hallinnoitu rannikkovaellusreitti."
+image: "https://images.unsplash.com/photo-1771797629089-7691ddf45680?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Kuningas avasi maailman pisimmän rannikkopolun Englannissa"
+image_credit: "Photo by Dorian Labbe on Unsplash"
+image_source_url: "https://unsplash.com/photos/close-up-of-a-vintage-globe-showing-europe-and-north-africa-QYPK5mSA9xw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1771797629089-7691ddf45680?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Kuningas Kaarle III avasi uuden kävelypolun, joka kiertää koko Englannin rannikon. BBC:n mukaan 4 325 kilometriä pitkä reitti on maailman pisin hallinnoitu rannikkovaellusreitti.
