@@ -68,6 +68,11 @@
       var isOpen = mainNav.classList.toggle('nav-open');
       hamburger.classList.toggle('is-open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      // When opening, focus first nav link for keyboard users
+      if (isOpen) {
+        var firstLink = mainNav.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
     });
 
     // Close nav when a link is clicked
@@ -77,6 +82,16 @@
         hamburger.classList.remove('is-open');
         hamburger.setAttribute('aria-expanded', 'false');
       });
+    });
+
+    // Close nav on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('nav-open')) {
+        mainNav.classList.remove('nav-open');
+        hamburger.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.focus();
+      }
     });
   }
 

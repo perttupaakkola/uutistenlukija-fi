@@ -1,3 +1,42 @@
+/* === Accessibility === */
+
+/* Skip link — hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  background: var(--accent, #c0392b);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  transition: top 0.1s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Global focus indicators — visible, high-contrast */
+:focus-visible {
+  outline: 3px solid var(--accent, #c0392b);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Remove default outline when not keyboard-navigating */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Dark mode: lighter focus ring */
+[data-theme="dark"] :focus-visible {
+  outline-color: #e74c3c;
+}
+
 /* === Reset & Base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

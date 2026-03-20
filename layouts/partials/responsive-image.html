@@ -24,14 +24,14 @@
 {{/* Apply CDN optimization to Unsplash URLs */}}
 {{ if hasPrefix $src "https://images.unsplash.com" }}
   {{/* Unsplash: add sizing and quality params */}}
-  {{ if contains $src "?" }}
+  {{ if in $src "?" }}
     {{ $src = printf "%s&w=%d&q=80&fit=crop" $src $width }}
   {{ else }}
     {{ $src = printf "%s?w=%d&q=80&fit=crop" $src $width }}
   {{ end }}
 {{ else if hasPrefix $src "https://images.pexels.com" }}
   {{/* Pexels: add sizing params */}}
-  {{ if contains $src "?" }}
+  {{ if in $src "?" }}
     {{ $src = printf "%s&w=%d&h=%d&fit=crop" $src $width $height }}
   {{ else }}
     {{ $src = printf "%s?w=%d&h=%d&fit=crop" $src $width $height }}

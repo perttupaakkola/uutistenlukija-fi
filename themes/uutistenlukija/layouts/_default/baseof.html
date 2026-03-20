@@ -33,8 +33,9 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Siirry sisältöön</a>
   {{ partial "header.html" . }}
-  <main class="container" id="main-content">
+  <main class="container" id="main-content" tabindex="-1">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}

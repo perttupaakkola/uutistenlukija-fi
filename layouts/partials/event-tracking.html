@@ -1,8 +1,15 @@
 {{- /* GA4 custom event tracking — no-ops silently if GA4 is not configured */}}
+{{- $page := . }}
 {{- with .Site.Params.ga4_id }}
 <script>
 (function () {
   'use strict';
+
+  // Page context — set by Hugo at build time
+  var _isPage = {{ if $page.IsPage }}true{{ else }}false{{ end }};
+  var _articleTitle = {{ if $page.IsPage }}{{ $page.Title | jsonify }}{{ else }}""{{ end }};
+  var _articleCategory = {{ if $page.IsPage }}{{ with $page.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }}{{ else }}""{{ end }};
+  var _articleSlug = {{ if $page.IsPage }}{{ with $page.File }}{{ .BaseFileName | jsonify }}{{ else }}""{{ end }}{{ else }}""{{ end }};
 
   // Guard: only run if gtag is available
   function _gtag() {
@@ -13,8 +20,7 @@
 
   // ── article_read ────────────────────────────────────────────────────────
   // Fires when a visitor scrolls past 75% of an article page.
-  var isPage = {{ if $.IsPage }}true{{ else }}false{{ end }};
-  if (isPage) {
+  if (_isPage) {
     (function () {
       var fired = false;
       var threshold = 0.75;
@@ -26,9 +32,9 @@
         if (total > 0 && scrolled / total >= threshold) {
           fired = true;
           _gtag('event', 'article_read', {
-            article_title: document.title,
-            article_category: {{ if $.IsPage }}{{ with $.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }}{{ else }}"uncategorized"{{ end }},
-            article_slug: {{ if $.IsPage }}{{ $.File.BaseFileName | jsonify }}{{ else }}""{{ end }}
+            article_title: _articleTitle,
+            article_category: _articleCategory,
+            article_slug: _articleSlug
           });
           window.removeEventListener('scroll', onScroll, { passive: true });
         }
