@@ -1,6 +1,6 @@
 ---
-title: "Cold Response -harjoitus toi kapteeni Maggie Carpenterin Suomeen: ”Kylmintä, mille olen koskaan altistunut”"
-date: 2026-03-20T10:34:07.305743+00:00
+title: "Cold Response -harjoitus toi kapteeni Maggie Carpenterin Suomeen"
+date: 2026-03-20T10:35:59.419107+00:00
 categories:
   - Kotimaa
 author: "Anna Korhonen"
@@ -8,19 +8,17 @@ author_id: "anna-korhonen"
 author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
-description: "Kapteeni Maggie Carpenter saapuu Suomeen osallistumaan Naton Cold Response 26 -sotaharjoitukseen. Hän kokee kylmintä, mille on koskaan altistunut."
+description: "Kapteeni Maggie Carpenter saapuu Suomeen osallistumaan Naton Cold Response 26 -harjoitukseen, johon osallistuu yli 30 000 sotilasta eri maista."
 image: "https://images.unsplash.com/photo-1626880493853-19fa8ed90a75?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb2xkJTIwcmVzcG9uc2UlMjAtaGFyam9pdHVzJTIwdG9pfGVufDF8MHx8fDE3NzQwMDI3ODR8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1626880493853-19fa8ed90a75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb2xkJTIwcmVzcG9uc2UlMjAtaGFyam9pdHVzJTIwdG9pfGVufDF8MHx8fDE3NzQwMDI3ODR8MA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kotimaa: Cold Response -harjoitus toi kapteeni Maggie Carpenterin Suomeen: ”Kylmintä, mille olen koskaan altistunut”"
+image_alt: "Kotimaa: Cold Response -harjoitus toi kapteeni Maggie Carpenterin Suomeen"
 image_credit: "Photo by Call Me Fred on Unsplash"
 image_source_url: "https://unsplash.com/photos/silver-skull-with-cross-pendant-n9rnCoomnhI?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
 ---
 
-Kapteeni Maggie Carpenter saapui ensimmäistä kertaa Suomeen osallistuakseen Naton Cold Response 26 -sotaharjoitukseen. Hänen koneensa, Yhdysvaltain merijalkaväen Hercules, kohtasi matkalla Atlantin yli teknisiä ongelmia, mikä nosti harjoituksen merkitystä. Kapteeni David Leesman korosti, että tällaiset todelliset haasteet tarjoavat arvokasta kokemusta kriisitilanteissa.
+Kapteeni Maggie Carpenter on ensimmäistä kertaa Suomessa osallistumassa Naton Cold Response 26 -harjoitukseen, joka kokoaa yli 30 000 sotilasta eri maista. Carpenter lensi Yhdysvalloista Suomeen ilmatankkauskone Herculesilla, mutta matkalla ilmeni ongelmia tankkaustuessa, mikä nosti esiin harjoituksen tärkeyden. Kapteeni David Leesman Yhdysvaltain merijalkaväen tukilentolaivueesta korosti, että matkan aikana todelliset haasteet olivat hyvä oppitunti tulevia konflikteja silmällä pitäen.
 
-Suomeen tulleen Hercules-koneen tehtävänä on ollut ilmatankkaus, ja Carpenter on toiminut koneen lentoperämiehenä. Hän kuvaili Lapin kylmiä sääolosuhteita, sanoen, että ne ovat olleet ankarimmat, mihin hän on koskaan törmännyt. ”Kotona Yhdysvalloissa en ole juurikaan nähnyt jäätymistä tai lunta”, Carpenter totesi.
+Harjoitukseen osallistuvat Suomen lisäksi Yhdysvallat, Ruotsi, Ranska, Italia ja Iso-Britannia. Suomessa on noin 7 500 sotilasta, ja suomalaiset ilmavoimat tuovat mukanaan kahdeksan Hornet-hävittäjää sekä 150 henkilöä. Ensimmäistä kertaa Lapissa harjoitteleva Carpenter kertoo, että harjoitus on ollut erittäin kylmä kokemus verrattuna Yhdysvaltojen olosuhteisiin, joissa hän ei yleensä kohtaa vastaavaa kylmyyttä. Hänen mukaansa vaikeinta ilmatankkaamisessa on helikopterien tankkaus, mutta perusasiat ovat tulleet opiskeltua.
 
-Harjoituksessa on mukana yli 30 000 sotilasta eri liittolaismaista, mikä osoittaa yhdessä harjoittelun tarpeen. Suomen ilmavoimista harjoitukseen osallistuu 150 henkilöä sekä kahdeksan Hornet-hävittäjää. Eversti Saku Joukas painotti, että ilmatankkaustaito on tärkeä ylläpitää jatkuvasti, jotta kriisitilanteissa osaaminen on valmiina.
-
-Harjoitus päättyy perjantaina 20. maaliskuuta, ja sen tavoitteena on parantaa yhteistyökykyä ja valmiuksia liittolaisten välillä.
+Harjoitus päättyy perjantaina 20. maaliskuuta, ja sen tarkoituksena on vahvistaa liittolaisten yhteistyötä mahdollisissa kriisitilanteissa, joita tällä hetkellä ei ole nähtävissä. Eversti Saku Joukas Lapin lennostosta muistuttaa, että kaikkien Hornet-ohjaajien on oltava valmiita ilmatankkausharjoituksiin, sillä kriisitilanteessa osaamista ei voi enää kehittää erikseen.
