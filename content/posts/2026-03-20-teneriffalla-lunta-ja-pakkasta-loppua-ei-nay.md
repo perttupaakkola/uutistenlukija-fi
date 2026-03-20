@@ -1,14 +1,14 @@
 ---
 title: "Teneriffalla lunta ja pakkasta – Loppua ei näy"
-date: 2026-03-20T10:38:17.376767+00:00
+date: 2026-03-20T10:40:00.799728+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
-description: "Therese-myrsky tuo epätavallisia kylmiä sääolosuhteita Teneriffalle, jossa torstaina mitattiin 4,5 pakkasastetta, koko Espanjan alhaisin."
+author: "Sanna Heikkinen"
+author_id: "sanna-heikkinen"
+author_title: "Ulkomaantoimittaja"
+author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
+author_image: "/images/writers/sanna-heikkinen.jpg"
+description: "Teneriffalla mitataan torstaina -4,5 astetta, mikä tekee siitä maan kylmimmän paikan. Therese-myrsky aiheuttaa äärimmäisiä sääolosuhteita ja hätätilan."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 image_alt: "Ulkomaat: Teneriffalla lunta ja pakkasta – Loppua ei näy"
@@ -17,12 +17,8 @@ image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-k
 draft: false
 ---
 
-Therese-myrsky on ravistellut Kanariansaaria, ja erityisesti Teneriffalla on koettu epätavallisen kylmiä sääolosuhteita. Torstaina mitattiin saarella 4,5 pakkasastetta, mikä teki siitä koko Espanjan kylmimmän paikan. Manner-Espanjassa, esimerkiksi Sierra Nevadassa, ei mitattu yhtä alhaisia lämpötiloja, sillä siellä lukemat jäävät hieman tämän alle.
+Teneriffalla, joka kuuluu Espanjan Kanariansaarille, mitattiin torstaina 4,5 pakkasastetta, mikä tekee siitä koko maan kylmimmän paikan, kertoo Canarian Weekly. Therese-myrsky on aiheuttanut äärimmäiset sääolosuhteet saaren alueella, ja viranomaiset julistivat keskiviikkona koko Teneriffalle hätätilan. Lumisateet yllättivät turistit, jotka jakoivat kuvia lumipeitteisestä Teiden kansallispuistosta brittiläiselle lehdelle The Sun.
 
-Lumipyryllä on ollut merkittäviä vaikutuksia paikallisille ja turisteille. Loma-aika on juuri alkamassa, mutta sään vuoksi kymmeniä lentoja on peruttu, ja tuhannet matkailijat ovat jääneet jumiin Kanariansaarille. Tuoreimmat raportit kertovat lumisateista Teiden kansallispuistossa, jossa turistit ovat jakaneet hämmästyneitä reaktioitaan sosiaalisessa mediassa.
+Myrsky on tuonut mukanaan myös rankkasateita ja voimakkaita tuulia, joiden odotetaan jatkuvan ainakin seuraavien viiden päivän ajan. Viranomaiset varoittavat paikallisia asukkaita ja turisteja liikku­masta ulkona tarpeettomasti, ja aluejohtaja Rosa Dávila kehotti kaikkia noudattamaan varovaisuutta. Kehon lämpötilan lasku ja lumisateet ovat aiheuttaneet myös tulvia monilla alueilla, kuten Gran Canarian etelärannikolla sijaitsevassa Arguineguínissa.
 
-Viranomaiset julistivat koko Teneriffalle hätätilan keskiviikkona ja kehottivat sekä asukkaita että vierailijoita välttämään tarpeetonta ulkona liikkumista. Aluejohtaja Rosa Dávila kehotti varovaisuuteen ja ennakoi, että sääennusteet lupaavat lisää lunta ja rankkasateita seuraavien päivien aikana. Erityisesti korkeimmilla alueilla lumisateet saattavat olla runsaita.
-
-Teneriffan ja La Palman saarten asukkaat ovat kohdanneet kylmyyden lisäksi rankkasateiden aiheuttamia tulvia. Esimerkiksi Gran Canarian etelärannikolla, tunnetussa lomakohteessa Arguineguínissa, tilanne on kehittynyt hankalaksi. Huonot sääolosuhteet ovat aiheuttaneet laajoja haittoja, ja pelastuspalvelut ovat olleet aktiivisesti mukana selvittämässä tilannetta.
-
-Vaikka talvi on tullut Kanariansaarille, lomailijat toivovat, että tilanne rauhoittuu nopeasti, jotta pääsiäinen voitaisiin nauttia säiden sallimissa merkeissä.
+Säännölliset matkustajat Kanariansaarille seuraavat tilannetta huolestuneina, sillä pääsiäislomat lähestyvät. Huonon sään vuoksi kymmeniä lentoja on peruttu, mikä on jättänyt tuhansia turisteja saarten alueelle. Tilanne on epävakaa, ja asiantuntijat varoittavat, että jokainen uusi sääilmiö voi vaikuttaa voimakkaasti seudun olosuhteisiin.
