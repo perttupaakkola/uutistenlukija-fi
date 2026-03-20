@@ -2,7 +2,7 @@
 title: "Sairaalalääkäri kutsuttiin kuulemiseen julkisesta kritiikistä – \"En rikkonut vaitiolovelvollisuutta\""
 description: "Kardiologi Mikko Aho sai kuulemiskirjeen kahden viikon varoitusajalla sen jälkeen, kun hän kommentoi kesäkuun alussa julkisuudessa hyvinvointialueen"
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
-image_alt: "Sairaalalääkäri kutsuttiin kuulemiseen julkisesta kritiikistä – \"En rikkonut vaitiolovelvollisuutta\"
+image_alt: "Sairaalalääkäri kutsuttiin kuulemiseen julkisesta kritiikistä – En rikkonut vaitiolovelvollisuutta"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=80&w=400"
