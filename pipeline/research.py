@@ -1,12 +1,18 @@
 """
-Research module — fetches and extracts full article text from source URLs.
+Research module — multi-source web research for article writing.
 
-Enriches article dicts with article["research"] containing the extracted
-body text. Used between dedup and rewrite steps to give the rewriter
-actual source material instead of just an RSS title + 1-sentence description.
+Pipeline: article headline → news search → fetch top sources → extract text → combine.
 
-Failure modes are all handled gracefully: paywall, 403, timeout, parse error
-— article just proceeds with empty research, pipeline never blocks.
+Multi-source approach:
+1. Fetch the original RSS source URL
+2. Search Bing News RSS for the same topic → discover additional articles
+3. Extract body text from each source (with paywall/thin-content detection)
+4. Combine all usable material into article["research"] for the rewriter
+
+All failures are graceful — if search or any fetch fails, the article proceeds
+with whatever material was collected (even if empty).
+
+Uses only stdlib (no external dependencies).
 """
 
 import html as html_module
@@ -14,11 +20,13 @@ import re
 import time
 import urllib.request
 import urllib.error
-from html.parser import HTMLParser
-from typing import Optional
 import urllib.parse
+import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
+from typing import List
 
-# Browser-like UA to reduce 403s from news sites
+# ── Configuration ──────────────────────────────────────────────────────────────
+
 _HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -28,46 +36,79 @@ _HEADERS = {
     "Accept-Language": "fi-FI,fi;q=0.9,en;q=0.8",
 }
 
-FETCH_TIMEOUT = 10  # seconds
-MAX_RESEARCH_CHARS = 3000  # cap to stay within rewriter context window
-MIN_PARAGRAPH_LEN = 40  # ignore short nav/footer fragments
+FETCH_TIMEOUT = 12          # seconds per fetch
+MAX_RESEARCH_CHARS = 6000   # total research text cap (increased for multi-source)
+MAX_PER_SOURCE_CHARS = 2500 # cap per individual source
+MIN_PARAGRAPH_LEN = 40      # ignore short nav/footer fragments
+MAX_ADDITIONAL_SOURCES = 4   # extra sources beyond the original
+SEARCH_TIMEOUT = 8          # seconds for news search
+INTER_FETCH_DELAY = 0.8     # seconds between fetches (politeness)
+MIN_USEFUL_WORDS = 80       # sources with less are discarded as paywall/thin
 
-
-# Domains known to 403/paywall/JS-render — skip immediately, don't waste time
-# IS/IL serve Next.js shells with zero body content (all JS-rendered, 10s timeout wasted)
+# Domains known to hard-paywall — always skip (never get useful text)
 _BLOCKED_DOMAINS = {
-    "hs.fi",
+    "hs.fi",                # Helsingin Sanomat
     "kauppalehti.fi",
     "tekniikkatalous.fi",
     "talouselama.fi",
     "tivi.fi",
-    "is.fi",          # Next.js, content JS-rendered, web fetch always empty
-    "iltalehti.fi",   # same
+    "aamulehti.fi",
+    "ts.fi",                # Turun Sanomat
+    "savonsanomat.fi",
+    "ess.fi",
+    "kaleva.fi",
+    "keskisuomalainen.fi",
+    "karjalainen.fi",
+    "hameensanomat.fi",
+    "lapin-kansa.fi",
+    "is.fi",                # Next.js, content JS-rendered
+    "iltalehti.fi",         # same
 }
 
+# Domains known to be high quality and open
+_PREFERRED_DOMAINS = {
+    "yle.fi",
+    "mtvuutiset.fi",
+    "mtv.fi",
+    "helsinginuutiset.fi",
+    "maaseuduntulevaisuus.fi",
+    "verkkouutiset.fi",
+    "suomenmaa.fi",
+    "taloussanomat.fi",
+    "bbc.com", "bbc.co.uk",
+    "reuters.com",
+    "theguardian.com",
+    "arstechnica.com",
+    "apnews.com",
+    "techcrunch.com",
+}
+
+# Phrases that signal paywall/login walls (in extracted text)
+_PAYWALL_SIGNALS = [
+    "tilaa lehti", "tilaa nyt", "lue lisää tilaajana", "jatka lukemista",
+    "kirjaudu sisään", "rekisteröidy lukemaan",
+    "tämä sisältö on tilaajille",
+    "artikkeli on maksumuurin takana",
+    "subscribe to continue", "subscribe to read",
+    "sign in to read", "sign in to continue",
+    "this article is for subscribers",
+    "already a subscriber",
+    "log in to continue reading",
+    "premium content", "become a subscriber",
+]
+
+
+# ── HTML Text Extraction ──────────────────────────────────────────────────────
 
 class _ArticleExtractor(HTMLParser):
-    """
-    Minimal HTML parser that extracts visible text from article-like elements.
+    """Extract visible text from article-like HTML elements."""
 
-    Priority order:
-    1. <article> tag content
-    2. <div class="...article-body|article-content|story-body..."> pattern
-    3. Fallback: all <p> tags with meaningful content
-
-    Paywall handling: most Finnish news sites show 2-4 paragraphs before the
-    subscription wall. We capture all paragraphs we can see — even 80 words
-    from the lead is better than zero for the rewriter.
-    """
-
-    # Paywall signal phrases — when we see these in a paragraph, stop collecting
-    # (the paragraphs after are usually "subscribe to read more" UI text, not news)
-    _PAYWALL_SIGNALS = [
-        "tilaa lehti", "tilaa nyt", "lue lisää tilaajana", "jatka lukemista",
-        "artikkeli jatkuu", "kirjaudu sisään", "rekisteröidy lukemaan",
-        "subscribe to read", "sign in to read", "this article is for subscribers",
-        "premium content", "become a subscriber",
-    ]
+    _ARTICLE_P_CLASSES = {
+        "yle__article__paragraph",
+        "article__paragraph",
+        "story__paragraph",
+        "body__paragraph",
+    }
 
     def __init__(self):
         super().__init__()
@@ -78,17 +119,9 @@ class _ArticleExtractor(HTMLParser):
                            "aside", "form", "button", "noscript", "svg"}
         self._skip_depth = 0
         self._hit_paywall = False
-        self.article_paragraphs: list[str] = []
-        self.all_paragraphs: list[str] = []
-        self._buf = []
-
-    # Site-specific class signals that mark article body paragraphs directly on <p>
-    _ARTICLE_P_CLASSES = {
-        "yle__article__paragraph",  # Yle (yle.fi)
-        "article__paragraph",
-        "story__paragraph",
-        "body__paragraph",
-    }
+        self.article_paragraphs: list = []
+        self.all_paragraphs: list = []
+        self._buf: list = []
 
     def handle_starttag(self, tag, attrs):
         attr_dict = dict(attrs)
@@ -98,24 +131,20 @@ class _ArticleExtractor(HTMLParser):
         if tag in self._skip_tags:
             self._skip_depth += 1
             return
-
         if self._skip_depth:
             return
 
         if tag == "article":
             self._in_article += 1
             return
-
         if tag in ("div", "section", "main"):
             combined = (cls + " " + tag_id).lower()
-            # Paywall container: stop collecting once we enter these
             if any(k in combined for k in (
                 "paywall", "subscription-wall", "premium-wall",
                 "register-wall", "login-wall", "metered-wall",
             )):
                 self._hit_paywall = True
                 return
-            # Article body containers
             if any(k in combined for k in (
                 "article-body", "article-content", "article-text",
                 "story-body", "story-content", "entry-content",
@@ -124,50 +153,40 @@ class _ArticleExtractor(HTMLParser):
             )):
                 self._in_article_div += 1
             return
-
         if tag == "p":
             if not self._hit_paywall:
                 self._in_p = True
                 self._buf = []
-                # Check if this <p> is itself a known article-body class (e.g. Yle)
                 cls_tokens = set(cls.lower().split())
                 if cls_tokens & self._ARTICLE_P_CLASSES:
-                    self._in_article_div += 1  # treat as inside article body
+                    self._in_article_div += 1
 
     def handle_endtag(self, tag):
         if tag in self._skip_tags:
             self._skip_depth = max(0, self._skip_depth - 1)
             return
-
         if self._skip_depth:
             return
-
         if tag == "article":
             self._in_article = max(0, self._in_article - 1)
             return
-
         if tag in ("div", "section", "main"):
             if self._in_article_div > 0:
                 self._in_article_div -= 1
             return
-
         if tag == "p" and self._in_p:
             text = "".join(self._buf).strip()
             self._in_p = False
             self._buf = []
             if len(text) < MIN_PARAGRAPH_LEN:
                 return
-            # Check for paywall signal in paragraph text
             text_lower = text.lower()
-            if any(signal in text_lower for signal in self._PAYWALL_SIGNALS):
+            if any(signal in text_lower for signal in _PAYWALL_SIGNALS):
                 self._hit_paywall = True
                 return
             self.all_paragraphs.append(text)
             if self._in_article > 0 or self._in_article_div > 0:
                 self.article_paragraphs.append(text)
-            # Undo article-body bump from site-specific <p> class (balanced with starttag)
-            if self._in_article_div > 0:
-                self._in_article_div -= 1
 
     def handle_data(self, data):
         if self._skip_depth:
@@ -188,106 +207,399 @@ def _extract_text(html: bytes) -> str:
     except Exception:
         return ""
     raw = parser.get_text()
-    # Collapse excessive whitespace
     raw = re.sub(r"\n{3,}", "\n\n", raw)
     return raw.strip()
 
 
-def _is_blocked_domain(url: str) -> bool:
+# ── URL & Domain Utilities ─────────────────────────────────────────────────────
+
+def _get_domain(url: str) -> str:
+    """Extract base domain (strip www.)."""
     try:
         host = urllib.parse.urlparse(url).netloc.lower()
-        return any(host == d or host.endswith("." + d) for d in _BLOCKED_DOMAINS)
+        if host.startswith("www."):
+            host = host[4:]
+        return host
+    except Exception:
+        return ""
+
+
+def _is_blocked_domain(url: str) -> bool:
+    host = _get_domain(url)
+    return any(host == d or host.endswith("." + d) for d in _BLOCKED_DOMAINS)
+
+
+def _is_same_article(url1: str, url2: str) -> bool:
+    """Check if two URLs point to the same article (same domain + path)."""
+    if not url1 or not url2:
+        return False
+    try:
+        p1 = urllib.parse.urlparse(url1)
+        p2 = urllib.parse.urlparse(url2)
+        d1 = p1.netloc.lower().replace("www.", "")
+        d2 = p2.netloc.lower().replace("www.", "")
+        return d1 == d2 and p1.path.rstrip("/") == p2.path.rstrip("/")
     except Exception:
         return False
 
 
-def fetch_article_text(url: str) -> str:
-    """
-    Fetch and extract article body text from URL.
-    Returns empty string on any failure (paywall, 403, timeout, parse error).
-    """
+def _is_paywall_text(text: str) -> bool:
+    """Detect if extracted text looks like a paywall snippet rather than an article."""
+    lower = text.lower()
+    signals_found = sum(1 for s in _PAYWALL_SIGNALS if s in lower)
+    if signals_found >= 2:
+        return True
+    if len(text.split()) < 100 and signals_found >= 1:
+        return True
+    return False
+
+
+# ── Fetching ───────────────────────────────────────────────────────────────────
+
+def fetch_article_text(url: str, timeout: int = FETCH_TIMEOUT) -> str:
+    """Fetch and extract article body text. Returns "" on any failure or paywall."""
     if not url or not url.startswith("http"):
         return ""
-
     if _is_blocked_domain(url):
-        return ""  # known paywall, skip silently
+        return ""
 
     try:
         req = urllib.request.Request(url, headers=_HEADERS)
-        with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as resp:
-            # Only process HTML responses
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
             ct = resp.headers.get("Content-Type", "")
             if "html" not in ct.lower():
                 return ""
-            html = resp.read(500_000)  # cap at 500KB, don't download infinite pages
-    except urllib.error.HTTPError as e:
-        if e.code in (401, 403, 404, 410, 451):
-            return ""  # paywall/gone — expected, silent
+            html = resp.read(500_000)
+    except urllib.error.HTTPError:
         return ""
     except Exception:
-        return ""  # timeout, DNS failure, etc — silent
+        return ""
 
     text = _extract_text(html)
-    return text[:MAX_RESEARCH_CHARS]
 
+    if _is_paywall_text(text):
+        return ""
+
+    return text[:MAX_PER_SOURCE_CHARS]
+
+
+# ── Bing News Search (returns real URLs, no API key needed) ───────────────────
+
+def _search_bing_news(query: str, language: str = "fi", max_results: int = 10) -> List[dict]:
+    """Search Bing News via RSS. Returns [{title, url, source}]."""
+    results = []
+    encoded = urllib.parse.quote_plus(query)
+    mkt = "fi-FI" if language == "fi" else "en-US"
+    rss_url = f"https://www.bing.com/news/search?q={encoded}&format=rss&mkt={mkt}"
+
+    try:
+        req = urllib.request.Request(rss_url, headers={
+            "User-Agent": _HEADERS["User-Agent"],
+            "Accept": "application/xml, text/xml, */*",
+        })
+        with urllib.request.urlopen(req, timeout=SEARCH_TIMEOUT) as resp:
+            xml_data = resp.read(200_000)
+
+        root = ET.fromstring(xml_data)
+        for item in root.findall(".//item"):
+            if len(results) >= max_results:
+                break
+
+            title_el = item.find("title")
+            link_el = item.find("link")
+
+            title = title_el.text.strip() if title_el is not None and title_el.text else ""
+            raw_link = link_el.text.strip() if link_el is not None and link_el.text else ""
+
+            # Extract actual URL from Bing redirect wrapper
+            url_match = re.search(r"url=([^&]+)", raw_link)
+            if url_match:
+                actual_url = urllib.parse.unquote(url_match.group(1))
+            else:
+                actual_url = raw_link
+
+            if not actual_url or not actual_url.startswith("http"):
+                continue
+
+            source_name = _get_domain(actual_url)
+            for child in item:
+                if "Source" in child.tag and child.text:
+                    source_name = child.text
+
+            results.append({
+                "title": title,
+                "url": actual_url,
+                "source": source_name,
+            })
+
+    except Exception as e:
+        print(f"[research]   Bing News search failed: {e}")
+
+    return results
+
+
+def _search_google_news(query: str, language: str = "fi", max_results: int = 8) -> List[dict]:
+    """Search Google News via RSS. Returns [{title, source, source_domain}].
+    
+    Note: Google News RSS returns unresolvable redirect URLs, so we only
+    use this for discovering source names / titles for fallback Bing searches.
+    """
+    results = []
+    encoded = urllib.parse.quote_plus(query)
+
+    if language == "fi":
+        rss_url = f"https://news.google.com/rss/search?q={encoded}&hl=fi&gl=FI&ceid=FI:fi"
+    else:
+        rss_url = f"https://news.google.com/rss/search?q={encoded}&hl=en&gl=US&ceid=US:en"
+
+    try:
+        req = urllib.request.Request(rss_url, headers={
+            "User-Agent": _HEADERS["User-Agent"],
+            "Accept": "application/xml, text/xml, application/rss+xml",
+        })
+        with urllib.request.urlopen(req, timeout=SEARCH_TIMEOUT) as resp:
+            xml_data = resp.read(200_000)
+
+        root = ET.fromstring(xml_data)
+        channel = root.find("channel")
+        if channel is None:
+            return results
+
+        for item in channel.findall("item"):
+            if len(results) >= max_results:
+                break
+
+            title_el = item.find("title")
+            source_el = item.find("source")
+
+            title = title_el.text.strip() if title_el is not None and title_el.text else ""
+            source_name = source_el.text.strip() if source_el is not None and source_el.text else ""
+
+            if not title:
+                continue
+
+            results.append({
+                "title": title,
+                "url": "",
+                "source": source_name,
+            })
+
+    except Exception as e:
+        print(f"[research]   Google News search failed: {e}")
+
+    return results
+
+
+# ── Search Orchestration ──────────────────────────────────────────────────────
+
+def _build_search_query(title: str, description: str = "") -> str:
+    """Build a search query from article title."""
+    query = title.strip()
+    query = re.sub(r'["\[\](){}]', '', query)
+
+    words = query.split()
+    if len(words) < 4 and description:
+        desc_words = re.sub(r'["\[\](){}]', '', description).split()[:6]
+        query = query + " " + " ".join(desc_words)
+
+    words = query.split()
+    if len(words) > 12:
+        words = words[:12]
+    return " ".join(words)
+
+
+def _search_news(query: str, language: str = "fi") -> List[dict]:
+    """Search multiple news sources and merge results.
+    
+    Primary: Bing News RSS (returns real URLs)
+    Fallback: Google News RSS titles → re-search via Bing
+    """
+    bing_results = _search_bing_news(query, language=language)
+
+    if not bing_results:
+        google_results = _search_google_news(query, language=language)
+        if google_results:
+            for gr in google_results[:3]:
+                fallback = _search_bing_news(gr["title"][:60], language=language, max_results=2)
+                bing_results.extend(fallback)
+
+    return bing_results
+
+
+def _rank_and_filter(results: List[dict], original_url: str) -> List[dict]:
+    """Rank search results for quality/diversity. Skip duplicates, paywalls, same-origin."""
+    original_domain = _get_domain(original_url)
+    seen_domains = {original_domain} if original_domain else set()
+    ranked = []
+
+    for result in results:
+        url = result.get("url", "")
+        if not url:
+            continue
+        if _is_same_article(url, original_url):
+            continue
+        if _is_blocked_domain(url):
+            continue
+
+        domain = _get_domain(url)
+        if domain in seen_domains:
+            continue
+
+        score = 10 if any(domain == d or domain.endswith("." + d) for d in _PREFERRED_DOMAINS) else 5
+        ranked.append((score, result))
+        seen_domains.add(domain)
+
+    ranked.sort(key=lambda x: -x[0])
+    return [r for _, r in ranked]
+
+
+# ── Main Research Function ─────────────────────────────────────────────────────
+
+def _research_article(article: dict) -> str:
+    """Perform multi-source research for a single article.
+    
+    1. Fetch original source URL
+    2. Search Bing/Google News for the topic
+    3. Fetch top additional sources (skip paywalls, thin content)
+    4. Combine all text with source labels
+    
+    Returns combined research text, or "" if nothing useful found.
+    """
+    title = article.get("title", "")
+    description = article.get("description", "")
+    original_url = article.get("link", "")
+    language = article.get("language", "fi")
+
+    sources_collected = []  # [(label, text)]
+
+    # ── 1. Fetch original source ──────────────────────────────────────────
+    if original_url:
+        original_text = fetch_article_text(original_url)
+        if original_text and len(original_text.split()) >= MIN_USEFUL_WORDS:
+            label = article.get("source", _get_domain(original_url) or "Alkuperäinen lähde")
+            sources_collected.append((label, original_text))
+            print(f"[research]   Original: {len(original_text.split())}w from {_get_domain(original_url)}")
+        elif original_text:
+            print(f"[research]   Original: only {len(original_text.split())}w (too thin, discarded)")
+        else:
+            print(f"[research]   Original: empty/blocked")
+
+    # ── 2. Search for additional sources ──────────────────────────────────
+    query = _build_search_query(title, description)
+    print(f"[research]   Searching: \"{query[:60]}\"")
+
+    search_results = _search_news(query, language=language)
+    print(f"[research]   Found {len(search_results)} search results")
+
+    if language != "fi" and len(search_results) < 3:
+        en_results = _search_news(query, language="en")
+        search_results.extend(en_results)
+
+    ranked = _rank_and_filter(search_results, original_url)
+
+    # ── 3. Fetch additional sources ───────────────────────────────────────
+    fetched = 0
+    for result in ranked:
+        if fetched >= MAX_ADDITIONAL_SOURCES:
+            break
+
+        url = result.get("url", "")
+        source_name = result.get("source", _get_domain(url))
+        domain = _get_domain(url)
+
+        time.sleep(INTER_FETCH_DELAY)
+
+        text = fetch_article_text(url)
+        word_count = len(text.split()) if text else 0
+
+        if text and word_count >= MIN_USEFUL_WORDS:
+            sources_collected.append((source_name, text))
+            fetched += 1
+            print(f"[research]   + {domain}: {word_count}w ✓")
+        elif text:
+            print(f"[research]   - {domain}: {word_count}w (too thin, skipped)")
+        else:
+            print(f"[research]   - {domain}: empty/blocked")
+
+    # ── 4. Combine ────────────────────────────────────────────────────────
+    if not sources_collected:
+        return ""
+
+    parts = []
+    total_chars = 0
+
+    for label, text in sources_collected:
+        if total_chars + len(text) > MAX_RESEARCH_CHARS:
+            remaining = MAX_RESEARCH_CHARS - total_chars
+            if remaining < 200:
+                break
+            text = text[:remaining] + "..."
+
+        parts.append(f"[Lähde: {label}]\n{text}")
+        total_chars += len(text)
+
+    return "\n\n---\n\n".join(parts)
+
+
+# ── Pipeline Entry Point ──────────────────────────────────────────────────────
 
 def enrich_with_research(articles: list) -> list:
-    """
-    Fetch source text for each article and store in article["research"].
-
-    Fallback chain per article:
-    1. Web fetch of article URL → extract visible paragraphs (paywall-aware)
-    2. RSS content:encoded (already in article["description"] if longer than plain desc)
-    3. RSS description (plain text summary)
-
-    article["research"] is always set (may be empty string if all fail).
-    article["research_source"] records which chain step succeeded: "web", "rss", "none".
-
-    Includes a small inter-fetch delay to be polite.
+    """Multi-source research enrichment for article list.
+    
+    For each article:
+    1. Fetches the original source URL
+    2. Searches Bing + Google News for the same topic
+    3. Fetches up to 4 additional sources (skipping paywalls/thin content)
+    4. Combines all text into article["research"]
+    
+    Articles where all fetches fail get research="" with RSS description fallback.
+    Pipeline never blocks on research failures.
     """
     total = len(articles)
-    web_ok = 0
-    rss_fallback = 0
-    empty = 0
+    enriched = 0
+    skipped = 0
 
-    # Minimum words to consider RSS description useful as research material
     RSS_MIN_WORDS = 30
 
     for i, article in enumerate(articles):
-        url = article.get("link", "")
-        source_name = article.get("source", "?")
-        print(f"[research] ({i+1}/{total}) {source_name} — ", end="", flush=True)
+        title = article.get("title", "?")[:60]
+        print(f"\n[research] ({i+1}/{total}) {title}", flush=True)
 
-        # Step 1: web fetch
-        text = fetch_article_text(url)
+        try:
+            research_text = _research_article(article)
 
-        if text:
-            word_count = len(text.split())
-            print(f"web: {word_count}w")
-            article["research"] = text
-            article["research_source"] = "web"
-            web_ok += 1
-        else:
-            # Step 2: fall back to RSS description (may be content:encoded if longer)
-            # HTML-decode entities (e.g. Guardian wraps desc in &lt;p&gt; tags)
-            rss_raw = article.get("description", "").strip()
-            rss_text = re.sub(r"<[^>]+>", " ", html_module.unescape(rss_raw)).strip()
-            rss_text = re.sub(r"\s{2,}", " ", rss_text)
-            rss_words = len(rss_text.split())
-            if rss_words >= RSS_MIN_WORDS:
-                print(f"rss-fallback: {rss_words}w")
-                article["research"] = rss_text  # decoded, HTML-stripped
-                article["research_source"] = "rss"
-                rss_fallback += 1
+            if research_text:
+                word_count = len(research_text.split())
+                source_count = research_text.count("[Lähde:")
+                print(f"[research]   → {word_count} words from {source_count} source(s)")
+                article["research"] = research_text
+                article["research_source"] = "multi"
+                enriched += 1
             else:
-                print(f"empty (rss only {rss_words}w)")
-                article["research"] = rss_text  # keep even if short — better than nothing
-                article["research_source"] = "none" if rss_words == 0 else "rss-short"
-                empty += 1
+                # Fallback: use RSS description
+                rss_raw = article.get("description", "").strip()
+                rss_text = re.sub(r"<[^>]+>", " ", html_module.unescape(rss_raw)).strip()
+                rss_text = re.sub(r"\s{2,}", " ", rss_text)
+                rss_words = len(rss_text.split())
 
-        # Politeness: small delay between fetches (different domains)
+                if rss_words >= RSS_MIN_WORDS:
+                    print(f"[research]   → RSS fallback: {rss_words}w")
+                    article["research"] = rss_text
+                    article["research_source"] = "rss"
+                else:
+                    print(f"[research]   → No usable sources")
+                    article["research"] = rss_text
+                    article["research_source"] = "none"
+                skipped += 1
+
+        except Exception as e:
+            print(f"[research]   → Failed: {e}")
+            article["research"] = ""
+            article["research_source"] = "error"
+            skipped += 1
+
         if i < total - 1:
-            time.sleep(0.5)
+            time.sleep(0.3)
 
-    print(f"[research] Done: {web_ok} web, {rss_fallback} rss-fallback, {empty} thin/empty (of {total} total)")
+    print(f"\n[research] Done: {enriched}/{total} multi-source, {skipped} fallback/empty")
     return articles
