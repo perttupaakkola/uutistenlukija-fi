@@ -23,17 +23,26 @@ SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alk
 
 Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
 
+PITUUS — KRIITTINEN VAATIMUS:
+- Minimipituus: 250 sanaa. EI POIKKEUKSIA.
+- Tavoitepituus: 300–400 sanaa.
+- Jos lähdemateriaali on lyhyt, LAAJENNA se — lisää taustatietoja, kontekstia ja merkitystä:
+  * Mitä tapahtui aiemmin tässä asiassa?
+  * Miksi tämä on tärkeää lukijalle?
+  * Mitkä ovat seuraukset tai vaikutukset?
+  * Liittyykö tämä johonkin laajempaan ilmiöön tai kehitykseen?
+- ÄLÄ koskaan kirjoita alle 250 sanan artikkelia. Lyhyet lähdetekstit vaativat enemmän taustatietoa ja kontekstia, eivät tiivistämistä.
+
 TÄRKEÄÄ:
 - Kirjoita AINA suomeksi, myös jos lähdemateriaali on englanniksi.
 - Tämä on SINUN artikkelisi. Älä viittaa "alkuperäiseen uutiseen" tai "raportin mukaan" (paitsi jos tiedät raportin nimen).
 - Poikkeus KANSAINVÄLISET LÄHTEET: jos artikkeli on englanninkielisestä lähteestä (BBC, Reuters, AP, The Guardian, Ars Technica, TechCrunch, Der Spiegel jne.), mainitse lähde luonnollisesti kerran — esim. "BBC:n mukaan", "The Guardianin mukaan", "Ars Technica raportoi". Ei enempää.
 - Muille artikkeleille: älä mainitse lähdettä ollenkaan.
-- Kirjoita 4-6 kappaletta, 250-450 sanaa.
 
 RAKENNE JA OTSIKOT:
-- Käytä H2-väliotsikoita (## Otsikko) jakamaan artikkeli loogisiin osiin.
-- Lyhyissä artikkeleissa (alle 300 sanaa): EI väliotsikoita — suora kertomus.
-- Pidemmissä artikkeleissa (300+ sanaa): 1-2 H2-väliotsikkoa jäsentämään sisältöä.
+- Kirjoita 4–6 kappaletta.
+- Käytä 1–2 H2-väliotsikkoa (## Otsikko) jäsentämään artikkeli — aina kun artikkeli on 300+ sanaa.
+- Alle 300 sanan artikkeleissa EI väliotsikoita — suora kertomus.
 - Väliotsikot ovat informatiivisia, eivät klikkiotsikoita: "Mitä tapahtui seuraavaksi" → "Tilanne kehittyi nopeasti".
 - Vain ensimmäinen sana isolla väliotsikoissa.
 
@@ -83,6 +92,9 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 9. TARKISTA KIELI: artikkelin täytyy olla suomea. Jos jokin lause on englanniksi, käännä se.
 10. TARKISTA RAKENNE: pidemmissä artikkeleissa (300+ sanaa) tulee olla 1-2 H2-väliotsikkoa (## Otsikko).
     Lyhyissä (alle 300 sanaa) ei väliotsikoita. Lisää tai poista tarvittaessa.
+11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 250 sanaa. Jos artikkeli on lyhyempi,
+    laajenna sitä lisäämällä asiayhteyden, taustan tai vaikutusten kuvausta. ÄLÄ koskaan
+    palauta alle 250 sanan artikkelia.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -342,9 +354,47 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             print(f"[writer]   Pass 2 (audit) failed: {e} — using pass 1 results")
             audited = pass1_result
 
+        # Pass 3: Per-article expansion retry for anything under 200 words
+        EXPANSION_SYSTEM = """Olet uutistoimittaja. Sinulle annetaan lyhyt uutisartikkeli.
+Laajenna se vähintään 250 sanaan lisäämällä:
+- Taustatieto: mitä aiheen ympärillä on tapahtunut aiemmin?
+- Konteksti: miksi tämä on merkittävää tai miten se liittyy laajempaan kehitykseen?
+- Seuraukset tai vaikutukset: mitä tämä tarkoittaa ihmisille tai yhteiskunnalle?
+Säilytä alkuperäinen otsikko ja faktat. Kirjoita luonnollista suomea.
+Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "..."}"""
+
+        expanded_audited = []
+        for article in audited:
+            word_count = len(article.get("content", "").split())
+            if word_count < 200:
+                title = article.get("title", "")
+                print(f"[writer]   ⚠ Short ({word_count}w), expanding: '{title[:50]}'")
+                try:
+                    expand_prompt = f"""Laajenna tämä artikkeli vähintään 250 sanaan:\n\n{json.dumps(article, ensure_ascii=False, indent=2)}\n\nVastaa VAIN JSON-objektina."""
+                    expand_response = _call_llm(EXPANSION_SYSTEM, expand_prompt)
+                    # Response is a single object, not a list
+                    expand_text = expand_response.strip()
+                    if expand_text.startswith("```"):
+                        expand_text = expand_text.split("```")[1]
+                        if expand_text.startswith("json"):
+                            expand_text = expand_text[4:]
+                        expand_text = expand_text.strip()
+                    expanded = json.loads(expand_text)
+                    new_count = len(expanded.get("content", "").split())
+                    print(f"[writer]   Expanded: {word_count}w → {new_count}w")
+                    # Keep original metadata
+                    expanded["fingerprint"] = article.get("fingerprint", "")
+                    expanded["trending"] = article.get("trending", False)
+                    expanded_audited.append(expanded)
+                except Exception as e:
+                    print(f"[writer]   Expansion failed ({e}), keeping original")
+                    expanded_audited.append(article)
+            else:
+                expanded_audited.append(article)
+
         # Filter sentinels and carry through metadata
         kept = []
-        for j, written_article in enumerate(audited):
+        for j, written_article in enumerate(expanded_audited):
             title = written_article.get("title", "")
             content = written_article.get("content", "")
             # Check for DUPLICATE / FILTER sentinel (title or content starts with it)
@@ -365,8 +415,8 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             # Quality flags — warn but don't drop here (quality gate in run_pipeline.py)
             word_count = len(content.split())
             title_len = len(title)
-            if word_count < 100:
-                print(f"[writer]   ⚠ Short article ({word_count} words): '{title[:50]}'")
+            if word_count < 150:
+                print(f"[writer]   ⚠ Still short after expansion ({word_count} words): '{title[:50]}'")
             if title_len > 100 or title_len < 10:
                 print(f"[writer]   ⚠ Suspicious title length ({title_len} chars): '{title[:60]}'")
 
@@ -377,6 +427,6 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             kept.append(written_article)
 
         rewritten.extend(kept)
-        print(f"[writer]   Batch {i // batch_size + 1} complete: {len(kept)}/{len(audited)} articles kept")
+        print(f"[writer]   Batch {i // batch_size + 1} complete: {len(kept)}/{len(expanded_audited)} articles kept")
 
     return rewritten

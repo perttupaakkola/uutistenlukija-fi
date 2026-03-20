@@ -89,7 +89,7 @@ def validate_articles(articles: list) -> tuple:
         title = a.get("title", "")
         word_count = len(content.split())
 
-        if word_count < 80:
+        if word_count < 150:
             issues.append(f"too short ({word_count} words)")
         if len(title) < 10:
             issues.append(f"title too short ({len(title)} chars)")
@@ -202,6 +202,20 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         t_research.set(enriched=len(articles))
 
     steps["research"] = t_research.to_dict()
+
+    # ── Step 1d: Drop wire briefs with no source material ─────────────────────
+    # Skip articles with < 30 words in description AND no research text.
+    # These produce sub-100 word output even after rewriting.
+    MIN_SOURCE_WORDS = 30
+    pre_filter_count = len(articles)
+    articles = [
+        a for a in articles
+        if len(a.get("description", "").split()) >= MIN_SOURCE_WORDS
+        or len(a.get("research", "").split()) >= 50
+    ]
+    skipped = pre_filter_count - len(articles)
+    if skipped:
+        print(f"[quality] Skipped {skipped} wire briefs (< {MIN_SOURCE_WORDS} desc words, no research)")
 
     # ── Step 2: Rewrite ────────────────────────────────────────────────────────
     rewritten = []
