@@ -29,6 +29,10 @@ disableHugoGeneratorInject = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
 
 [outputFormats]
   [outputFormats.NewsSitemap]
@@ -84,7 +88,3 @@ disableHugoGeneratorInject = true
     name = "Haku"
     url = "/haku/"
     weight = 9
-  [[menu.main]]
-    name = "RSS"
-    url = "/syotteet/"
-    weight = 10

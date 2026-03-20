@@ -1884,3 +1884,281 @@ pre code {
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+/* === Header layout fix for hamburger === */
+.header-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* === Hamburger button — hidden on desktop === */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  z-index: 200;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Animated X when open */
+.hamburger-btn.is-open .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.is-open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.is-open .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* === Mobile nav === */
+@media (max-width: 680px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .theme-toggle-btn {
+    top: 1.5rem;
+    right: 1rem;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 100;
+    padding: 0.5rem 0;
+  }
+
+  .main-nav.nav-open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .main-nav li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 0;
+  }
+
+  .main-nav li a:hover {
+    background: color-mix(in srgb, var(--accent) 10%, var(--bg) 90%);
+    color: var(--accent);
+  }
+
+  .site-date {
+    padding-left: 3rem; /* clear hamburger */
+  }
+}
+
+/* === Table of Contents === */
+.toc {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.88rem;
+}
+
+.toc-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: left;
+  color: var(--text);
+}
+
+.toc-title {
+  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.toc-arrow {
+  font-size: 0.75rem;
+  color: var(--text-muted, #888);
+  transition: transform 0.15s;
+}
+
+.toc-list {
+  margin-top: 0.6rem;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.toc-list.toc-collapsed {
+  display: none;
+}
+
+.toc-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-list li {
+  margin: 0.2rem 0;
+}
+
+/* H3 indent */
+.toc-list ul ul {
+  padding-left: 1rem;
+}
+
+.toc-list a {
+  color: var(--text-muted, #666);
+  text-decoration: none;
+  line-height: 1.5;
+  display: block;
+  padding: 0.1rem 0;
+  border-radius: 2px;
+  transition: color 0.1s;
+}
+
+.toc-list a:hover,
+.toc-list a.toc-active {
+  color: var(--accent);
+}
+
+.toc-list a.toc-active {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .toc {
+    font-size: 0.85rem;
+  }
+}
+
+/* Hide TOC in print (already handled but explicit) */
+@media print {
+  .toc { display: none !important; }
+}
+
+/* === Load More === */
+.hidden-article {
+  display: none !important;
+}
+
+.load-more-container {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.load-more-btn {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.load-more-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.load-more-count {
+  font-weight: 400;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-left: 0.4rem;
+}
+
+/* === Publish Frequency Bar === */
+.pub-frequency-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted, #666);
+  font-family: var(--font-sans);
+  margin-bottom: 1.25rem;
+  padding: 0.4rem 0.75rem;
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg) 94%);
+  border: 1px solid color-mix(in srgb, var(--accent) 15%, var(--border) 85%);
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.pub-freq-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #27ae60;
+  box-shadow: 0 0 0 2px rgba(39,174,96,0.25);
+  animation: pulse-dot 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(39,174,96,0.25); }
+  50%       { box-shadow: 0 0 0 5px rgba(39,174,96,0.0); }
+}
+
+@media print {
+  .pub-frequency-bar,
+  .load-more-container { display: none !important; }
+}

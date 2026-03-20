@@ -8,6 +8,13 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
   <link rel="preload" href="/css/style.css" as="style">
+  {{/* Preconnect to external image/analytics origins for faster first byte */}}
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.pexels.com">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -63,6 +70,34 @@
       document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       updateBtn(isDark);
+    });
+  })();
+
+  // Hamburger menu
+  (function() {
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('main-nav-menu');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function() {
+      var open = nav.classList.toggle('nav-open');
+      btn.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (!btn.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('nav-open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // Close on nav link click (SPA-style navigation)
+    nav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        nav.classList.remove('nav-open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
     });
   })();
   </script>

@@ -2,6 +2,12 @@
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
 
+{{/* Publish frequency badge */}}
+<div class="pub-frequency-bar">
+  <span class="pub-freq-dot"></span>
+  Päivitetään useita kertoja päivässä — uusimmat uutiset aina tuoreina
+</div>
+
 {{/* Trending section */}}
 {{ $trending := where $sorted ".Params.trending" true }}
 {{ if $trending }}
@@ -25,7 +31,7 @@
 
 {{/* Lead article */}}
 {{ with index $sorted 0 }}
-{{ $cat := index .Params.categories 0 | default "kotimaa" }}
+{{ $cat := .Params.categories | first | default "kotimaa" }}
 {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
 {{ $thumb := .Params.image_thumb | default $img }}
 {{ $alt := .Params.image_alt | default .Title }}
@@ -35,7 +41,7 @@
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-    <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="eager" fetchpriority="high" width="800" height="450">
+    <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="800" height="450">
   </a>
   <p class="excerpt">{{ .Summary | truncate 300 }}</p>
   <div class="meta">
@@ -47,11 +53,11 @@
 {{ end }}
 
 {{/* Highlights row — next 3 articles */}}
-{{ $highlights := first 3 (after 1 $sorted) }}
+{{ $highlights := after 1 $sorted | first 3 }}
 {{ if $highlights }}
 <div class="highlights-row">
   {{ range $highlights }}
-  {{ $cat := index .Params.categories 0 | default "kotimaa" }}
+  {{ $cat := .Params.categories | first | default "kotimaa" }}
   {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="highlight-card">
@@ -70,7 +76,7 @@
 
 {{/* Category sections */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
-{{ $usedPages := first 3 (after 1 $sorted) }}
+{{ $usedPages := after 1 $sorted | first 3 }}
 {{ range $cat := $categories }}
   {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
   {{ if $catPosts }}
@@ -83,7 +89,7 @@
     </div>
     <div class="category-articles">
       {{ range first 3 $catPosts }}
-      {{ $cardCat := index .Params.categories 0 | default "kotimaa" }}
+      {{ $cardCat := .Params.categories | first | default "kotimaa" }}
       {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
       {{ $cardAlt := .Params.image_alt | default .Title }}
       <article class="category-article-card">

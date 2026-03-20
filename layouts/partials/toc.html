@@ -1,0 +1,39 @@
+{{/* Table of Contents — renders only when article has 2+ headings */}}
+{{- $toc := .TableOfContents -}}
+{{- if and $toc (gt (len $toc) 100) -}}
+<nav class="toc" aria-label="Sisällysluettelo">
+  <button class="toc-toggle" aria-expanded="true" aria-controls="toc-list">
+    <span class="toc-title">Sisällys</span>
+    <span class="toc-arrow">▾</span>
+  </button>
+  <div id="toc-list" class="toc-list">
+    {{ $toc | safeHTML }}
+  </div>
+</nav>
+<script>
+(function() {
+  var btn = document.querySelector('.toc-toggle');
+  var list = document.getElementById('toc-list');
+  if (!btn || !list) return;
+  btn.addEventListener('click', function() {
+    var open = list.classList.toggle('toc-collapsed');
+    btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    btn.querySelector('.toc-arrow').textContent = open ? '▸' : '▾';
+  });
+  // Highlight active section on scroll
+  var headings = document.querySelectorAll('.content h2, .content h3');
+  var links = list.querySelectorAll('a');
+  if (!headings.length || !links.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('toc-active'); });
+        var link = list.querySelector('a[href="#' + e.target.id + '"]');
+        if (link) link.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  headings.forEach(function(h) { observer.observe(h); });
+})();
+</script>
+{{- end -}}
