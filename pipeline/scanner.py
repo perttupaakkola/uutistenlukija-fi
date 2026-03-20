@@ -430,19 +430,23 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
                 content = resp.read()
                 # Update cache with new validators
                 if http_cache is not None:
-                    new_entry = {}
+                    # Preserve existing cache entry (may have stored articles)
+                    new_entry = dict((http_cache or {}).get(url, {}))
                     etag = resp.headers.get("ETag")
                     lm = resp.headers.get("Last-Modified")
                     if etag:
                         new_entry["etag"] = etag
                     if lm:
                         new_entry["last_modified"] = lm
-                    if new_entry:
-                        http_cache[url] = new_entry
+                    http_cache[url] = new_entry
         except urllib.error.HTTPError as e:
             if e.code == 304:
-                # Not Modified — return empty, caller uses cached articles
-                return []
+                # Not Modified — feed hasn't changed since last fetch.
+                # Return previously cached articles for this feed so the
+                # pipeline can still deduplicate and select from them.
+                cached_articles = (http_cache or {}).get(url, {}).get("articles", [])
+                print(f"[scanner]   304 Not Modified — returning {len(cached_articles)} cached articles")
+                return cached_articles
             raise
         
         # Sanitize content: strip control characters that break ET parser
@@ -497,6 +501,13 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
             })
     except Exception as e:
         print(f"[scanner] Error fetching {feed_info['name']}: {e}")
+
+    # Store parsed articles in http_cache so 304 responses can return them.
+    # Cap at 30 articles to keep cache file manageable.
+    if http_cache is not None and articles:
+        entry = dict(http_cache.get(url, {}))
+        entry["articles"] = articles[:30]
+        http_cache[url] = entry
 
     return articles
 
