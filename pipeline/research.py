@@ -9,6 +9,7 @@ Failure modes are all handled gracefully: paywall, 403, timeout, parse error
 — article just proceeds with empty research, pipeline never blocks.
 """
 
+import html as html_module
 import re
 import time
 import urllib.request
@@ -32,13 +33,16 @@ MAX_RESEARCH_CHARS = 3000  # cap to stay within rewriter context window
 MIN_PARAGRAPH_LEN = 40  # ignore short nav/footer fragments
 
 
-# Domains known to 403/paywall — skip immediately, don't waste time
+# Domains known to 403/paywall/JS-render — skip immediately, don't waste time
+# IS/IL serve Next.js shells with zero body content (all JS-rendered, 10s timeout wasted)
 _BLOCKED_DOMAINS = {
     "hs.fi",
     "kauppalehti.fi",
     "tekniikkatalous.fi",
     "talouselama.fi",
     "tivi.fi",
+    "is.fi",          # Next.js, content JS-rendered, web fetch always empty
+    "iltalehti.fi",   # same
 }
 
 
@@ -77,6 +81,14 @@ class _ArticleExtractor(HTMLParser):
         self.article_paragraphs: list[str] = []
         self.all_paragraphs: list[str] = []
         self._buf = []
+
+    # Site-specific class signals that mark article body paragraphs directly on <p>
+    _ARTICLE_P_CLASSES = {
+        "yle__article__paragraph",  # Yle (yle.fi)
+        "article__paragraph",
+        "story__paragraph",
+        "body__paragraph",
+    }
 
     def handle_starttag(self, tag, attrs):
         attr_dict = dict(attrs)
@@ -117,6 +129,10 @@ class _ArticleExtractor(HTMLParser):
             if not self._hit_paywall:
                 self._in_p = True
                 self._buf = []
+                # Check if this <p> is itself a known article-body class (e.g. Yle)
+                cls_tokens = set(cls.lower().split())
+                if cls_tokens & self._ARTICLE_P_CLASSES:
+                    self._in_article_div += 1  # treat as inside article body
 
     def handle_endtag(self, tag):
         if tag in self._skip_tags:
@@ -149,6 +165,9 @@ class _ArticleExtractor(HTMLParser):
             self.all_paragraphs.append(text)
             if self._in_article > 0 or self._in_article_div > 0:
                 self.article_paragraphs.append(text)
+            # Undo article-body bump from site-specific <p> class (balanced with starttag)
+            if self._in_article_div > 0:
+                self._in_article_div -= 1
 
     def handle_data(self, data):
         if self._skip_depth:
@@ -250,11 +269,14 @@ def enrich_with_research(articles: list) -> list:
             web_ok += 1
         else:
             # Step 2: fall back to RSS description (may be content:encoded if longer)
-            rss_text = article.get("description", "").strip()
+            # HTML-decode entities (e.g. Guardian wraps desc in &lt;p&gt; tags)
+            rss_raw = article.get("description", "").strip()
+            rss_text = re.sub(r"<[^>]+>", " ", html_module.unescape(rss_raw)).strip()
+            rss_text = re.sub(r"\s{2,}", " ", rss_text)
             rss_words = len(rss_text.split())
             if rss_words >= RSS_MIN_WORDS:
                 print(f"rss-fallback: {rss_words}w")
-                article["research"] = rss_text
+                article["research"] = rss_text  # decoded, HTML-stripped
                 article["research_source"] = "rss"
                 rss_fallback += 1
             else:

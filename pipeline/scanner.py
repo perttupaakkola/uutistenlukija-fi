@@ -5,6 +5,7 @@ Uses only stdlib (no feedparser dependency).
 
 import difflib
 import hashlib
+import html as html_module
 import json
 import os
 import re
@@ -217,10 +218,13 @@ def _domain(url: str) -> str:
 
 
 def _clean_html(text: str) -> str:
-    """Strip HTML tags from text."""
+    """Strip HTML tags and decode HTML entities from text."""
     if not text:
         return ""
-    return re.sub(r"<[^>]+>", "", text).strip()
+    # Decode entities first (e.g. Guardian desc: &lt;p&gt;text&lt;/p&gt;)
+    text = html_module.unescape(text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"\s{2,}", " ", text).strip()
 
 
 def _parse_rss_date(date_str: str) -> Optional[datetime]:
