@@ -108,6 +108,46 @@ def load_published_titles() -> list[str]:
     return titles
 
 
+def dedup_within_batch(articles: list) -> list:
+    """
+    Remove within-batch near-duplicates — same event from different sources arriving
+    in the same pipeline run. Keeps the first occurrence (usually best source).
+
+    Uses same two signals as check_published_duplicates:
+    1. Title similarity >= 60%
+    2. Keyword overlap >= 12 long Finnish words
+    """
+    kept = []
+    dropped = 0
+    for article in articles:
+        incoming_title = article.get("title", "")
+        incoming_content = article.get("content", "")
+
+        is_dupe = False
+        for accepted in kept:
+            # Signal 1: title similarity
+            if incoming_title and accepted.get("title") and \
+               _titles_similar(incoming_title, accepted["title"]):
+                print(f"[dedup:batch] TITLE_MATCH: '{incoming_title[:60]}'")
+                is_dupe = True
+                break
+            # Signal 2: keyword overlap
+            if incoming_content and accepted.get("content") and \
+               _keyword_overlap(incoming_content, accepted["content"]) >= KEYWORD_OVERLAP_THRESHOLD:
+                print(f"[dedup:batch] KW_MATCH: '{incoming_title[:60]}'")
+                is_dupe = True
+                break
+
+        if is_dupe:
+            dropped += 1
+        else:
+            kept.append(article)
+
+    if dropped:
+        print(f"[dedup:batch] {dropped} within-batch dupes dropped ({len(kept)} kept)")
+    return kept
+
+
 def check_published_duplicates(articles: list) -> list:
     """
     Filter out articles that are near-duplicates of already-published posts.

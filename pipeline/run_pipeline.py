@@ -23,7 +23,7 @@ from research import enrich_with_research
 from rewriter import rewrite_articles
 from publisher import publish_articles, build_site
 from generate_descriptions import generate_for_article_dict
-from dedup import filter_new_articles, check_published_duplicates, mark_published
+from dedup import filter_new_articles, check_published_duplicates, dedup_within_batch, mark_published
 from image_gen import generate_images_for_articles
 from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
@@ -186,6 +186,8 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         articles = filter_new_articles(articles)
         if articles:
             articles = check_published_duplicates(articles)
+        if articles:
+            articles = dedup_within_batch(articles)
         t_dedup.set(remaining=len(articles))
 
     steps["dedup"] = t_dedup.to_dict()
@@ -266,6 +268,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     # content body — runs here after quality gate so we only compare real articles.
     pre_kw_count = len(rewritten)
     rewritten = check_published_duplicates(rewritten)
+    rewritten = dedup_within_batch(rewritten)
     kw_dropped = pre_kw_count - len(rewritten)
     if kw_dropped:
         print(f"[dedup:kw] {kw_dropped} post-rewrite near-duplicates dropped")
