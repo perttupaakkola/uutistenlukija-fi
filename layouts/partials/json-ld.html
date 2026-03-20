@@ -52,7 +52,7 @@
     {{ $imageUrl = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) }}
   {{ end }}
 {{ else }}
-  {{ $cat := .Params.categories | first | lower | default "" }}
+  {{ $cat := (index (default (slice "") .Params.categories) 0) | lower }}
   {{ if $cat }}
     {{ $imageUrl = printf "%simages/og-%s.png" $.Site.BaseURL $cat }}
   {{ else }}

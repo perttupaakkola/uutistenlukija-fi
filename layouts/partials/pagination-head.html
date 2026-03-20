@@ -1,3 +1,4 @@
+{{- if and .IsNode (not .IsPage) -}}
 {{- with .Paginator -}}
   {{- if .HasPrev -}}
   <link rel="prev" href="{{ .Prev.URL | absURL }}">
@@ -5,4 +6,5 @@
   {{- if .HasNext -}}
   <link rel="next" href="{{ .Next.URL | absURL }}">
   {{- end -}}
+{{- end -}}
 {{- end -}}
