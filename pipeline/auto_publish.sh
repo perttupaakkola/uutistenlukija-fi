@@ -42,6 +42,12 @@ else
   echo "[3/3] Pushing to GitHub..." | tee -a "$LOG_FILE"
   git push origin main 2>&1 | tee -a "$LOG_FILE"
   echo "Deployed ${ARTICLE_COUNT} new articles." | tee -a "$LOG_FILE"
+
+  # Ping search engines about new content
+  echo "[3.5/3] Pinging search engines..." | tee -a "$LOG_FILE"
+  cd "$PIPELINE_DIR"
+  python3 ping_sitemap.py 2>&1 | tee -a "$LOG_FILE" || echo "[ping] Sitemap ping failed (non-fatal)" | tee -a "$LOG_FILE"
+  cd "$PROJECT_DIR"
 fi
 
 echo "=== Auto-publish completed at $(date -u) ===" | tee -a "$LOG_FILE"
