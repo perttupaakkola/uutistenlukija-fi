@@ -35,6 +35,8 @@
     <button class="share-btn" onclick="navigator.clipboard.writeText('{{ .Permalink }}');this.textContent='✓';setTimeout(()=>this.textContent='🔗',2000)" title="Kopioi linkki">🔗</button>
   </div>
 
+  {{ partial "newsletter-cta.html" . }}
+
   {{ with .Params.author }}
   <div class="author-box">
     {{ with $.Params.author_image }}
@@ -86,7 +88,7 @@
       <a href="{{ .Permalink }}" class="related-card">
         {{ with .Params.image }}
         <div class="related-thumb">
-          <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+          <img src="{{ . }}" alt="{{ .Title }}" loading="lazy">
         </div>
         {{ end }}
         <div class="related-text">
@@ -99,6 +101,23 @@
   </div>
   {{ end }}
 </article>
+
+{{/* Article prev/next navigation */}}
+{{ $section := .CurrentSection }}
+<nav class="article-nav" aria-label="Artikkelinavigointi">
+  {{ with .PrevInSection }}
+  <a href="{{ .Permalink }}" class="article-nav-prev" rel="prev">
+    <span class="article-nav-label">← Edellinen</span>
+    <span class="article-nav-title">{{ .Title }}</span>
+  </a>
+  {{ else }}<div class="article-nav-placeholder"></div>{{ end }}
+  {{ with .NextInSection }}
+  <a href="{{ .Permalink }}" class="article-nav-next" rel="next">
+    <span class="article-nav-label">Seuraava →</span>
+    <span class="article-nav-title">{{ .Title }}</span>
+  </a>
+  {{ else }}<div class="article-nav-placeholder"></div>{{ end }}
+</nav>
 
 <button id="back-to-top" aria-label="Takaisin ylös" title="Takaisin ylös">↑</button>
 

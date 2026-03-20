@@ -1,18 +1,14 @@
-{{- /* GA4 — fires only when ga4_id is set in hugo.toml [params] */}}
-{{- with .Site.Params.ga4_id }}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ . }}', {
-    page_path: window.location.pathname,
-    anonymize_ip: true
-  });
-</script>
-{{- end }}
+{{- /*
+  analytics.html — third-party analytics beacons
 
-{{- /* Cloudflare Web Analytics — fires only when cf_beacon_token is set */}}
+  GA4 is intentionally NOT loaded here — it's loaded by cookie-banner.html
+  after explicit user consent (GDPR). Loading it here would fire before consent.
+
+  Cloudflare Web Analytics is privacy-preserving (no cookies, no fingerprinting)
+  and can load without a consent gate under legitimate interest.
+  Activate by setting cf_beacon_token in hugo.toml [params].
+*/}}
+
 {{- with .Site.Params.cf_beacon_token }}
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
   data-cf-beacon='{"token": "{{ . }}"}'></script>

@@ -1611,3 +1611,232 @@ pre code {
   margin: 1.5rem 0;
   text-align: center;
 }
+
+/* === Print Stylesheet === */
+@media print {
+  /* Hide navigation chrome */
+  .site-header,
+  .site-footer,
+  .main-nav,
+  .share-buttons,
+  .related-articles,
+  .newsletter-card,
+  #back-to-top,
+  .reading-progress,
+  #cookie-banner,
+  .ad-slot,
+  #theme-toggle,
+  .breadcrumbs {
+    display: none !important;
+  }
+
+  /* Clean body */
+  body {
+    font-family: Georgia, serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Article layout */
+  .single-article {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 20pt;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-meta {
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 1rem;
+    border-bottom: 1pt solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Hero image — keep but constrain */
+  .hero-figure img {
+    max-width: 100%;
+    max-height: 3in;
+    object-fit: cover;
+    page-break-after: avoid;
+  }
+
+  figcaption {
+    font-size: 9pt;
+    color: #555;
+  }
+
+  /* URLs after links */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+  }
+
+  /* Don't print href after nav/UI links */
+  .category-label a::after,
+  .author-box a::after {
+    content: none;
+  }
+
+  /* Page breaks */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  p, blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Site name as header */
+  .container::before {
+    content: "uutistenlukija.fi";
+    display: block;
+    font-size: 8pt;
+    color: #888;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ── Newsletter CTA (inline article) ────────────────────────────────────── */
+.newsletter-cta {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  background: #f8f4f4;
+  border-left: 4px solid #c0392b;
+  border-radius: 4px;
+}
+.newsletter-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.newsletter-cta-text {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.95rem;
+}
+.newsletter-cta-text strong {
+  font-size: 1rem;
+}
+.newsletter-cta-text span {
+  color: #666;
+  font-size: 0.875rem;
+}
+.newsletter-cta-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.newsletter-cta-input {
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  width: 210px;
+  max-width: 100%;
+}
+.newsletter-cta-input:focus {
+  outline: none;
+  border-color: #c0392b;
+}
+.newsletter-cta-btn {
+  padding: 0.45rem 1.1rem;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.newsletter-cta-btn:hover {
+  background: #a93226;
+}
+[data-theme="dark"] .newsletter-cta {
+  background: #1e1e1e;
+  border-left-color: #e74c3c;
+}
+[data-theme="dark"] .newsletter-cta-text span {
+  color: #aaa;
+}
+[data-theme="dark"] .newsletter-cta-input {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #eee;
+}
+@media (max-width: 480px) {
+  .newsletter-cta-form {
+    width: 100%;
+  }
+  .newsletter-cta-input {
+    width: 100%;
+  }
+  .newsletter-cta-btn {
+    width: 100%;
+  }
+}
+
+/* ── Article prev/next navigation ──────────────────────────────────────── */
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, #e5e5e5);
+}
+.article-nav-prev,
+.article-nav-next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 45%;
+  text-decoration: none;
+  color: var(--text, #222);
+  transition: color 0.15s;
+}
+.article-nav-prev { align-items: flex-start; }
+.article-nav-next { align-items: flex-end; text-align: right; }
+.article-nav-prev:hover,
+.article-nav-next:hover { color: #c0392b; }
+.article-nav-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  font-weight: 600;
+}
+.article-nav-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.article-nav-placeholder {
+  max-width: 45%;
+}
+@media (max-width: 480px) {
+  .article-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .article-nav-prev,
+  .article-nav-next {
+    max-width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+}

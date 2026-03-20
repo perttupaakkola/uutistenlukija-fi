@@ -1,0 +1,38 @@
+{{- /*
+  newsletter-cta.html — inline newsletter signup CTA
+
+  Renders a compact email capture box. The form action points to /uutiskirje/
+  which handles confirmation messaging. The `data-event="newsletter"` and
+  `data-location` attributes are consumed by event-tracking.html for GA4.
+
+  To activate a real provider (Mailchimp/Substack/Brevo):
+  - Set site.Params.newsletter_action to the provider form action URL
+  - Set site.Params.newsletter_hidden_* for any hidden fields required
+  Currently falls back to /uutiskirje/ (a thank-you page).
+*/}}
+{{ $action := default "/uutiskirje/" .Site.Params.newsletter_action }}
+<div class="newsletter-cta">
+  <div class="newsletter-cta-inner">
+    <div class="newsletter-cta-text">
+      <strong>📬 Tärkeimmät uutiset sähköpostiisi</strong>
+      <span>Kerran päivässä — ei roskapostia.</span>
+    </div>
+    <form class="newsletter-cta-form"
+          action="{{ $action }}"
+          method="get"
+          data-event="newsletter"
+          data-location="{{ if .IsPage }}article{{ else }}page{{ end }}">
+      {{- with .Site.Params.newsletter_list_id }}
+      <input type="hidden" name="list_id" value="{{ . }}">
+      {{- end }}
+      <input type="email"
+             name="email"
+             placeholder="sinun@email.fi"
+             required
+             autocomplete="email"
+             class="newsletter-cta-input"
+             aria-label="Sähköpostiosoite">
+      <button type="submit" class="newsletter-cta-btn">Tilaa</button>
+    </form>
+  </div>
+</div>
