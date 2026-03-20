@@ -10,6 +10,11 @@ author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän 
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 description: "Liittovaltion tuomari määrää yli tuhat Voice of America -toimittajaa palaamaan töihin ensi maanantaina. Tuomio kumoaa Trumpin hallinnon päätöksen."
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Yhdysvaltain tuomioistuin määräsi Voice of America -radioaseman toimittajat takaisin töihin"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Liittovaltion tuomari määräsi tiistaina, että yli tuhat Voice of America -radioaseman toimittajaa on palautettava töihin ensi maanantaina. Tuomarin mukaan Trumpin hallinnon päätös lakkauttaa aseman toiminta oli laiton.

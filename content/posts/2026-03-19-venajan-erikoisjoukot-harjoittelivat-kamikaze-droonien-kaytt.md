@@ -10,6 +10,11 @@ author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän 
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 description: "Venäjän erikoisjoukot harjoittelevat kamikaze-droonien käyttöä Kuolan niemimaan arktisissa olosuhteissa, noin 200 kilometrin päässä Suomesta."
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Venäjän erikoisjoukot harjoittelivat kamikaze-droonien käyttöä Suomen rajan lähellä"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Venäjän kansalliskaarti Rosgvardian erikoisjoukot järjestivät sotaharjoituksen Kuolan niemimaalla Hiipinätuntureilla, noin 200 kilometrin päässä Suomen rajasta. Harjoituksessa testattiin fpv-tyyppisten kamikaze-droonien käyttöä arktisissa olosuhteissa.

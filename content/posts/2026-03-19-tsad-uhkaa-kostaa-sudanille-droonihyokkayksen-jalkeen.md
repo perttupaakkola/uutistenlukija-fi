@@ -10,6 +10,11 @@ author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan p
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
 description: "Tšadin presidentti Idris Mahamat Déby määrää armeijan valmiuteen kostohyökkäyksiä varten, kun Sudanista laukaistu drooni tappoi 17 ihmistä Tinessä."
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Tšad uhkaa kostaa Sudanille droonihyökkäyksen jälkeen"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Tšadin presidentti Idris Mahamat Déby on määrännyt maan armeijan valmiuteen kostohyökkäysten varalle sen jälkeen, kun Sudanista laukaisttu drooni tappoi 17 ihmistä hautajaisissa Tinén raja-kaupungissa. BBC:n mukaan presidentti kutsui hätäkokouksen koolle ja määräsi Sudanin rajan täysin suljettavaksi.

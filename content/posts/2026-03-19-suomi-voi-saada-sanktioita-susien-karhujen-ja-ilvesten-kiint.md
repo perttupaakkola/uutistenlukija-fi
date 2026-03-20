@@ -10,6 +10,11 @@ author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän 
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 description: "Euroopan unioni harkitsee sanktioita Suomelle suurpetojen, kuten susien, karhujen ja ilvesten, kiintiömetsästyksen vuoksi, mikä uhkaa suojeltuja lajeja."
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Suomi voi saada sanktioita susien, karhujen ja ilvesten kiintiömetsästyksestä"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Euroopan unioni harkitsee sanktioita Suomelle suurpetojen kiintiömetsästyksen vuoksi. EU:n komissio on huolissaan siitä, että Suomen myöntämät metsästysluvat uhkaavat suojeltujen lajien säilymistä.
