@@ -30,9 +30,14 @@ def _make_slug(title: str, max_length: int = 60) -> str:
 
 def _article_to_markdown(article: Dict, date: str) -> str:
     """Convert article to Hugo markdown with front matter."""
-    title = article.get("title", "Untitled").replace('"', '\\"')
+    title = article.get("title", "Untitled")
+    # Sanitize: collapse whitespace/newlines, escape double-quotes for YAML inline string
+    title = " ".join(title.split())
+    title = title.replace('"', '\\"')
     category = article.get("category", "Kotimaa")
     content = article.get("content", "")
+    # Sanitize content: strip bare YAML front matter delimiters (would break Hugo parsing)
+    content = re.sub(r"(?m)^---+\s*$", "—", content)
     image = article.get("image", "")
     image_alt = article.get("image_alt", "")
     image_caption = article.get("image_caption", "")
