@@ -243,7 +243,7 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     """
     rewritten = []
 
-    batch_size = 3  # Reduced from 5 — model cuts articles short in large batches
+    batch_size = 1  # Reduced from 5 — model cuts articles short in large batches
     for i in range(0, len(articles), batch_size):
         batch = articles[i:i + batch_size]
         print(f"[writer] Processing batch {i // batch_size + 1} ({len(batch)} articles)...")
@@ -360,23 +360,32 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             audited = pass1_result
 
         # Pass 3: Per-article expansion retry for anything under 200 words
-        EXPANSION_SYSTEM = """Olet uutistoimittaja. Sinulle annetaan lyhyt uutisartikkeli.
-Laajenna se vähintään 300 sanaan (tavoite 320–380) lisäämällä KAIKKI seuraavista:
-- Taustatieto: mitä aiheen ympärillä on tapahtunut aiemmin? Mikä johti tähän?
-- Konteksti: miksi tämä on merkittävää tai miten se liittyy laajempaan kehitykseen?
-- Seuraukset tai vaikutukset: mitä tämä tarkoittaa ihmisille tai yhteiskunnalle?
-- Lisäfaktat: tilastoja, numeroita tai muita konkreettisia tietoja aiheesta.
-Lisää H2-väliotsikko (## Otsikko) jäsentämään teksti. Säilytä alkuperäinen otsikko ja faktat. Kirjoita luonnollista suomea.
-Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "..."}"""
+        EXPANSION_SYSTEM = """Olet kokenut suomalainen uutistoimittaja. Sinulle annetaan lyhyt uutisartikkeli joka on laajennettava.
+
+TEHTÄVÄ: Laajenna artikkeli VÄHINTÄÄN 350 sanaan (tavoite 350-400 sanaa).
+
+LAAJENNUSTAVAT:
+- Lisää taustakappale: mitä aiheen ympärillä on tapahtunut aiemmin?
+- Lisää kontekstikappale: miksi tämä on merkittävää, ketä koskee?
+- Lisää seurausten analyysi: mitä tämä tarkoittaa jatkossa?
+- Lisää konkreettisia lukuja, tilastoja tai esimerkkejä
+- Laajenna olemassa olevia kappaleita uusilla lauseilla
+
+SÄÄNNÖT:
+- Säilytä kaikki alkuperäiset faktat ja otsikko
+- Kirjoita luonnollista suomea, ei tekoälymäistä tekstiä
+- Lisää 1-2 H2-väliotsikkoa (## Otsikko) jäsentämään teksti
+- ÄLÄ koskaan lyhennä artikkelia — VAIN lisää sisältöä
+- Vastaa VAIN JSON-objektina: {"title": "...", "content": "...", "category": "...", "original_title": "..."}"""
 
         expanded_audited = []
         for article in audited:
             word_count = len(article.get("content", "").split())
-            if word_count < 250:
+            if word_count < 300:
                 title = article.get("title", "")
                 print(f"[writer]   ⚠ Short ({word_count}w), expanding: '{title[:50]}'")
                 try:
-                    expand_prompt = f"""Laajenna tämä artikkeli vähintään 250 sanaan:\n\n{json.dumps(article, ensure_ascii=False, indent=2)}\n\nVastaa VAIN JSON-objektina."""
+                    expand_prompt = f"""Tämä artikkeli on liian lyhyt ({word_count} sanaa). Laajenna se VÄHINTÄÄN 350 sanaan.\n\nArtikkeli:\n\n{json.dumps(article, ensure_ascii=False, indent=2)}\n\nLisää taustaa, kontekstia ja seurauksia. ÄLÄ lyhennä mitään. Vastaa VAIN JSON-objektina."""
                     expand_response = _call_llm(EXPANSION_SYSTEM, expand_prompt)
                     # Response is a single object, not a list
                     expand_text = expand_response.strip()
