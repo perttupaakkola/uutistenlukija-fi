@@ -1,0 +1,4 @@
+#!/bin/sh
+# post-merge: restore execute bits on all shell scripts after a merge/pull.
+# Prevents bridge syncs from losing chmod +x on auto_publish.sh etc.
+find "$(git rev-parse --show-toplevel)" -name "*.sh" -exec chmod +x {} \;

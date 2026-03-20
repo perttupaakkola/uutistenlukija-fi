@@ -206,20 +206,21 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     steps["research"] = t_research.to_dict()
 
     # ── Step 1d: Drop wire briefs with no source material ─────────────────────
-    # Skip articles with < 30 words in description AND no research text.
-    # These produce sub-100 word output even after rewriting.
-    # Exception: firehose articles are already curated — skip the filter for them.
-    MIN_SOURCE_WORDS = 30
+    # Skip articles where total usable source text is < 50 words.
+    # Below this threshold the rewriter can't produce 280+ word output.
+    # "Total source words" = research words (web/rss) + description words (if research empty).
+    MIN_SOURCE_WORDS = 50
     pre_filter_count = len(articles)
-    articles = [
-        a for a in articles
-        if a.get("_source_type") == "firehose"   # firehose: always pass through
-        or len(a.get("description", "").split()) >= MIN_SOURCE_WORDS
-        or len(a.get("research", "").split()) >= 50
-    ]
+    def _total_source_words(a: dict) -> int:
+        research = a.get("research", "")
+        desc = a.get("description", "")
+        if research:
+            return len(research.split())
+        return len(desc.split())
+    articles = [a for a in articles if _total_source_words(a) >= MIN_SOURCE_WORDS]
     skipped = pre_filter_count - len(articles)
     if skipped:
-        print(f"[quality] Skipped {skipped} wire briefs (< {MIN_SOURCE_WORDS} desc words, no research)")
+        print(f"[quality] Skipped {skipped} articles with < {MIN_SOURCE_WORDS} words source material")
 
     # ── Step 1e: Cap articles if --max-articles set ────────────────────────────
     if max_articles is not None and len(articles) > max_articles:
@@ -257,12 +258,9 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
     # ── Step 2a: Quality gate ──────────────────────────────────────────────────
-    all_before_quality = list(rewritten)  # snapshot for fingerprint marking
     rewritten, dropped_count = validate_articles(rewritten)
     if dropped_count:
         steps["quality_gate"] = {"dropped": dropped_count, "passed": len(rewritten)}
-        # Mark dropped articles' fingerprints so they don't get re-rewritten next run
-        mark_published(all_before_quality)
     if not rewritten:
         notify_discord_failure("quality_gate", "All articles dropped by quality gate")
         _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
@@ -272,18 +270,14 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     # Title dedup ran pre-rewrite (step 1b). Keyword dedup needs the rewritten
     # content body — runs here after quality gate so we only compare real articles.
     pre_kw_count = len(rewritten)
-    all_before_kw_dedup = list(rewritten)  # snapshot for marking fingerprints
     rewritten = check_published_duplicates(rewritten)
     rewritten = dedup_within_batch(rewritten)
     kw_dropped = pre_kw_count - len(rewritten)
     if kw_dropped:
         print(f"[dedup:kw] {kw_dropped} post-rewrite near-duplicates dropped")
         steps["kw_dedup"] = {"dropped": kw_dropped, "passed": len(rewritten)}
-        # Mark ALL pre-dedup articles' fingerprints (including dropped ones) so they
-        # don't get re-scanned and re-rewritten on the next pipeline run.
-        mark_published(all_before_kw_dedup)
     if not rewritten:
-        print("ℹ️  Kaikki kirjoitetut artikkelit hylättiin duplikaatteina. (fingerprints merkitty)")
+        print("ℹ️  Kaikki kirjoitetut artikkelit hylättiin duplikaatteina.")
         _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True)
         return True
 
