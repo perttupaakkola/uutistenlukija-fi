@@ -1,6 +1,11 @@
 ---
 title: "Kaksi yllätysmaata puolustaisi Suomen Lappia – Yksikkö on ollut positiivinen yllätys"
 description: "Naton uusimmat sotaharjoitukset Lapissa ovat herättäneet huomattavaa huomiota."
+image: "/images/articles/2026-03-18-kaksi-yllatysmaata-puolustaisi-suomen-lappia-yksikko-on-ollu-hero.jpg"
+image_alt: "Kaksi yllätysmaata puolustaisi Suomen Lappia – Yksikkö on ollut positiivinen yllätys"
+image_credit: "Photo by cottonbro studio on Pexels"
+image_source_url: "https://www.pexels.com/photo/a-woman-in-gray-knitwear-talking-to-a-person-holding-flowers-5561001/"
+image_thumb: "https://images.pexels.com/photos/5561001/pexels-photo-5561001.jpeg?auto=compress&cs=tinysrgb&h=350"
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Ulkomailla

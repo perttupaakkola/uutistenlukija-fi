@@ -1,6 +1,11 @@
 ---
 title: "Kirjalansalmen vanhan sillan pylonit kaadettiin Paraisilla"
 description: "Kirjalansalmen vanhan sillan pylonit kaadettiin Paraisilla."
+image: "https://images.unsplash.com/photo-1633892251763-d4b2766b9067?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxraXJqYWxhbnNhbG1lbiUyMHZhbmhhbiUyMHNpbGxhbiUyMHB5bG9uaXR8ZW58MXwwfHx8MTc3NDAwODAyMnww&ixlib=rb-4.1.0&q=85"
+image_alt: "Kirjalansalmen vanhan sillan pylonit kaadettiin Paraisilla"
+image_credit: "Photo by Yuri Ternytsky on Unsplash"
+image_source_url: "https://unsplash.com/photos/the-underside-of-a-bridge-against-a-blue-sky-sUDYjbQ9aMs?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1633892251763-d4b2766b9067?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxraXJqYWxhbnNhbG1lbiUyMHZhbmhhbiUyMHNpbGxhbiUyMHB5bG9uaXR8ZW58MXwwfHx8MTc3NDAwODAyMnww&ixlib=rb-4.1.0&q=80&w=400"
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Kotimaa

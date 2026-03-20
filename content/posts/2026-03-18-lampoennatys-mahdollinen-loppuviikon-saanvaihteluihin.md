@@ -1,6 +1,11 @@
 ---
 title: "Lämpöennätys mahdollinen loppuviikon säänvaihteluihin"
 description: "Loppuviikosta Suomessa odotetaan vaihtelevia sääolosuhteita, ja lämpötilat voivat nousta jopa 14 asteeseen."
+image: "https://images.unsplash.com/photo-1615416622685-88123283f70a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxsJUMzJUE0bXAlQzMlQjZlbm4lQzMlQTR0eXMlMjBsb3BwdXZpaWtvbiUyMHMlQzMlQTQlQzMlQTRudmFpaHRlbHVpaGluJTIwc2NpZW5jZXxlbnwxfDB8fHwxNzc0MDA4MDM3fDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Lämpöennätys mahdollinen loppuviikon säänvaihteluihin"
+image_credit: "Photo by Martin Brechtl on Unsplash"
+image_source_url: "https://unsplash.com/photos/silhouette-of-clouds-during-sunset-fqAWCNNLqlM?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1615416622685-88123283f70a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxsJUMzJUE0bXAlQzMlQjZlbm4lQzMlQTR0eXMlMjBsb3BwdXZpaWtvbiUyMHMlQzMlQTQlQzMlQTRudmFpaHRlbHVpaGluJTIwc2NpZW5jZXxlbnwxfDB8fHwxNzc0MDA4MDM3fDA&ixlib=rb-4.1.0&q=80&w=400"
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Tiede

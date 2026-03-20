@@ -9,6 +9,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 description: "Kouri Richins tuomittiin törkeästä murhasta Utahissa."
+image: "/images/articles/2026-03-18-nainen-tuomittiin-murhasta-utahissa-ja-julkaisi-surukirjan-hero.jpg"
+image_alt: "Nainen tuomittiin murhasta Utahissa ja julkaisi surukirjan"
+image_credit: "Photo by RDNE Stock project on Pexels"
+image_source_url: "https://www.pexels.com/photo/people-praying-in-a-cemetery-6841638/"
+image_thumb: "https://images.pexels.com/photos/6841638/pexels-photo-6841638.jpeg?auto=compress&cs=tinysrgb&h=350"
 draft: false
 ---
 
