@@ -240,7 +240,7 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     """
     rewritten = []
 
-    batch_size = 5
+    batch_size = 1
     for i in range(0, len(articles), batch_size):
         batch = articles[i:i + batch_size]
         print(f"[writer] Processing batch {i // batch_size + 1} ({len(batch)} articles)...")
