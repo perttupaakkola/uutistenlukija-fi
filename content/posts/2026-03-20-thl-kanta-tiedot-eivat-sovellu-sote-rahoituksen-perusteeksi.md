@@ -1,14 +1,14 @@
 ---
 title: "THL: Kanta-tiedot eivät sovellu sote-rahoituksen perusteeksi"
-date: 2026-03-20T10:35:59.419107+00:00
+date: 2026-03-20T10:42:15.226820+00:00
 categories:
   - Kotimaa
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
-description: "THL toteaa, että Kanta-järjestelmän tiedot eivät sovellu sosiaali- ja terveydenhuollon rahoituksen laskentaan, johtuen datan epävarmuudesta ja puutteista."
+author: "Anna Korhonen"
+author_id: "anna-korhonen"
+author_title: "Taloustoimittaja"
+author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
+author_image: "/images/writers/anna-korhonen.jpg"
+description: "THL kyseenalaistaa Kanta-järjestelmän tietojen soveltuvuuden sosiaali- ja terveydenhuollon rahoituksen laskentaperusteeksi useiden puutteiden vuoksi."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=80&w=400"
 image_alt: "Kotimaa: THL: Kanta-tiedot eivät sovellu sote-rahoituksen perusteeksi"
@@ -17,10 +17,8 @@ image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-brid
 draft: false
 ---
 
-Terveyden ja hyvinvoinnin laitos (THL) on julkaissut arvion, jonka mukaan Kanta-järjestelmän tietoja ei voida käyttää sosiaali- ja terveydenhuollon rahoituksen laskentaperusteena. Arvio perustuu havaintoihin datan epävarmuudesta ja puutteista sen kattavuudessa.
+Terveyden ja hyvinvoinnin laitos (THL) on julkaissut selvityksen, jossa se kyseenalaistaa Kanta-järjestelmän tietojen soveltuvuuden sosiaali- ja terveydenhuollon rahoituksen laskentaperusteeksi. Selvityksessä tuodaan esiin useita puutteita, jotka voivat aiheuttaa laskentavirheitä ja vaikuttaa rahoituksen oikeudenmukaisuuteen.
 
-Kanta-järjestelmään kerätään valtavasti tietoa potilaista ja heidän saamastaan hoidosta, mutta THL korostaa, että tietoja ei ole mahdollista käyttää luotettavasti rahoitusperusteiden laskemiseen. Tämä vaikuttaa sote-uudistusten toteutumiseen ja taloudelliseen suunnitteluun.
+Kanta-järjestelmä, joka kokoaa yhteen kansalaisten terveydenhuollon tietoja, on suunniteltu potilastietojen hallintaan, mutta sen tarkkuus ja luotettavuus rahoituslaskennassa on herättänyt huolta. THL:n mukaan järjestelmän tiedot saattavat olla epätäydellisiä, eikä se välttämättä heijasta todellista tilannetta sosiaalihuollon tarvitsijoista.
 
-THL:n asiantuntijat ovat huolissaan siitä, miten rahoitusperusteita voitaisiin kehittää, jotta ne perustuisivat enemmän luotettavaan ja kattavaan dataan. On tärkeää, että kunnalliset ja valtakunnalliset terveysviranomaiset tekevät tiivistä yhteistyötä. Rahoituksen perustana tulisi olla luotettavampia ja ajantasaisempia tietoja, jotka heijastavat oikeaa potilasmäärää ja hoidon tarpeita.
-
-THL:n raportti herättää keskustelua siitä, miten sosiaali- ja terveydenhuollon rahoitus voitaisiin järjestää tehokkaasti, samalla kun varmistetaan potilastietojen suoja ja luottamuksellisuus.
+THL:n johtaja on korostanut, että on tärkeää kehittää erillisiä mittareita ja laskentamalleja, jotka perustuvat ensisijaisesti hoidon tarpeeseen ja palvelujen käyttöön, jotta rahoituksen jakaminen olisi oikeasuhteista ja kestävämpää. Tämä voisi parantaa hoidon laatua ja saatavuutta eri puolilla Suomea.
