@@ -52,32 +52,47 @@
   </div>
   {{ end }}
 
-  {{/* Related articles */}}
-  {{ $currentCategories := .Params.categories }}
+  {{/* Related articles — category-matched, falls back to recent */}}
   {{ $currentPage := . }}
+  {{ $currentCategories := .Params.categories }}
+  {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
+  {{ $otherPosts := where $allPosts "Permalink" "ne" .Permalink }}
   {{ $related := slice }}
-  {{ range where .Site.RegularPages "Section" "posts" }}
-    {{ if ne .Permalink $currentPage.Permalink }}
-      {{ $pageCategories := .Params.categories }}
-      {{ range $currentCategories }}
-        {{ $cat := . }}
-        {{ range $pageCategories }}
-          {{ if eq . $cat }}
-            {{ $related = $related | append $currentPage }}
-          {{ end }}
+  {{ range $otherPosts }}
+    {{ $pageCategories := .Params.categories }}
+    {{ $match := false }}
+    {{ range $currentCategories }}
+      {{ $cat := . }}
+      {{ range $pageCategories }}
+        {{ if eq . $cat }}
+          {{ $match = true }}
         {{ end }}
       {{ end }}
     {{ end }}
+    {{ if $match }}
+      {{ $related = $related | append . }}
+    {{ end }}
   {{ end }}
-  {{ $related = where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink | first 4 }}
+  {{/* Fall back to recent posts if no category matches */}}
+  {{ if not $related }}
+    {{ $related = $otherPosts | first 3 }}
+  {{ end }}
+  {{ $related = $related | first 3 }}
   {{ if $related }}
   <div class="related-articles">
     <h3>Lue myös</h3>
     <div class="related-grid">
       {{ range $related }}
-      <a href="{{ .Permalink }}" class="related-link">
-        <span class="related-title">{{ .Title }}</span>
-        <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
+      <a href="{{ .Permalink }}" class="related-card">
+        {{ with .Params.image }}
+        <div class="related-thumb">
+          <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+        </div>
+        {{ end }}
+        <div class="related-text">
+          <span class="related-title">{{ .Title }}</span>
+          <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
+        </div>
       </a>
       {{ end }}
     </div>

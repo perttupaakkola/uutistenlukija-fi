@@ -17,6 +17,7 @@
   {{ if .IsSection }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} — {{ .Site.Title }}" href="{{ .Permalink }}index.xml">{{ end }}
   {{ template "_internal/schema.html" . }}
   {{ partial "json-ld.html" . }}
+  {{ partial "pagination-head.html" . }}
 </head>
 <body>
   {{ partial "header.html" . }}
