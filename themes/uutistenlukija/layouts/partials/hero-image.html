@@ -1,5 +1,5 @@
 {{/*
-  hero-image.html — Article hero image partial
+  hero-image.html — Article hero image partial with Unsplash optimization
   Usage: {{ partial "hero-image.html" . }}
 */}}
 {{ $heroImage := .Params.image }}
@@ -9,10 +9,11 @@
   {{ $heroImage = printf "/images/categories/%s.jpg" $cat }}
 {{ end }}
 {{ $alt := .Params.image_alt | default .Title }}
+{{ $optimizedSrc := partial "img-unsplash.html" (dict "src" $heroImage "w" 1200 "q" 80 "fm" "webp") }}
 
 <figure class="article-hero-figure">
   <img
-    src="{{ $heroImage }}"
+    src="{{ $optimizedSrc }}"
     alt="{{ $alt }}"
     class="article-header-image"
     loading="eager"

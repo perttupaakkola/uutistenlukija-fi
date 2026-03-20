@@ -29,13 +29,14 @@
 {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
 {{ $thumb := .Params.image_thumb | default $img }}
 {{ $alt := .Params.image_alt | default .Title }}
+{{ $optImg := partial "img-unsplash.html" (dict "src" $img "w" 800 "q" 80 "fm" "webp") }}
 <article class="lead-article">
   {{ with .Params.categories }}
   <span class="category-label">{{ index . 0 }}</span>
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-    <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="800" height="450">
+    <img src="{{ $optImg }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="800" height="450">
   </a>
   <p class="excerpt">{{ .Summary | truncate 300 }}</p>
   <div class="meta">
@@ -54,12 +55,13 @@
   {{ $cat := .Params.categories | first | default "kotimaa" }}
   {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
   {{ $alt := .Params.image_alt | default .Title }}
+  {{ $optImg := partial "img-unsplash.html" (dict "src" $img "w" 400 "q" 75 "fm" "webp") }}
   <article class="highlight-card">
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
     <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-      <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="400" height="225">
+      <img src="{{ $optImg }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="400" height="225">
     </a>
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <div class="meta">{{ .Date | time.Format "2.1.2006" }}</div>
@@ -86,9 +88,10 @@
       {{ $cardCat := .Params.categories | first | default "kotimaa" }}
       {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
       {{ $cardAlt := .Params.image_alt | default .Title }}
+      {{ $optCardImg := partial "img-unsplash.html" (dict "src" $cardImg "w" 400 "q" 75 "fm" "webp") }}
       <article class="category-article-card">
         <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-          <img src="{{ $cardImg }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" width="400" height="225">
+          <img src="{{ $optCardImg }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" width="400" height="225">
         </a>
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         <p class="excerpt">{{ .Summary | truncate 150 }}</p>

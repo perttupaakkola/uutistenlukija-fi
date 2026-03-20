@@ -1,0 +1,33 @@
+{{/*
+  img-unsplash.html — Optimizes Unsplash image URLs with size/quality params
+  
+  Usage: {{ partial "img-unsplash.html" (dict "src" $imageUrl "w" 800 "q" 80 "fm" "webp") }}
+  
+  Params:
+    src  — image URL (required)
+    w    — width in px (optional, default: no resize)
+    h    — height in px (optional)
+    q    — quality 1-100 (optional, default: 80)
+    fm   — format: webp, jpg, png (optional, default: webp)
+    fit  — crop mode: crop, clamp, fill, scale (optional)
+  
+  If the URL is not from images.unsplash.com, returns it unchanged.
+*/}}
+{{- $src := .src -}}
+{{- $isUnsplash := or (strings.Contains $src "images.unsplash.com") (strings.Contains $src "unsplash.com/photos") -}}
+{{- if $isUnsplash -}}
+  {{- $params := slice -}}
+  {{- with .w -}}{{- $params = $params | append (printf "w=%d" .) -}}{{- end -}}
+  {{- with .h -}}{{- $params = $params | append (printf "h=%d" .) -}}{{- end -}}
+  {{- $q := .q | default 80 -}}
+  {{- $params = $params | append (printf "q=%d" $q) -}}
+  {{- $fm := .fm | default "webp" -}}
+  {{- $params = $params | append (printf "fm=%s" $fm) -}}
+  {{- with .fit -}}{{- $params = $params | append (printf "fit=%s" .) -}}{{- end -}}
+  {{- $params = $params | append "auto=format" -}}
+  {{- $sep := "&" -}}
+  {{- if not (strings.Contains $src "?") -}}{{- $sep = "?" -}}{{- end -}}
+  {{- printf "%s%s%s" $src $sep (delimit $params "&") -}}
+{{- else -}}
+  {{- $src -}}
+{{- end -}}
