@@ -1,6 +1,11 @@
 ---
 title: "Fedin korkopäätös ja Iranin kaasulaitoksen hyökkäys vaikuttivat Wall Streetiin"
 description: "Yhdysvaltain keskuspankki päätti nostaa ohjauskorkoaan epävarman taloustilanteen vuoksi."
+image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
+image_alt: "Fedin korkopäätös ja Iranin kaasulaitoksen hyökkäys vaikuttivat Wall Streetiin"
+image_credit: "Photo by CHUTTERSNAP on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=80&w=400"
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Talous

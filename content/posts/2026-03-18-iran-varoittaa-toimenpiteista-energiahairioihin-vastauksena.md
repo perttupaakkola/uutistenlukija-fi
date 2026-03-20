@@ -1,6 +1,11 @@
 ---
 title: "Iran varoittaa toimenpiteistä energiahäiriöihin vastauksena uraanikaivoksen iskuihin"
 description: "Iranin armeija on ilmoittanut varautuvansa toimenpiteisiin, mikäli uraanikaivokseen tehdyt hyökkäykset jatkuvat."
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
+image_alt: "Iran varoittaa toimenpiteistä energiahäiriöihin vastauksena uraanikaivoksen iskuihin"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Ulkomaat

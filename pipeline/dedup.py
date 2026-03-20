@@ -1,11 +1,13 @@
 """
 Deduplication — tracks published article fingerprints to prevent republishing.
 
-Three layers:
+Four layers:
 1. Title fingerprint (sorted word hash) — catches exact/near-exact RSS dupes
 2. URL hash — catches cross-source same-URL dupes
 3. Semantic title similarity — compares incoming titles against already-published
-   content/posts/*.md front matter titles using difflib (>85% similarity threshold)
+   content/posts/*.md front matter titles using difflib (>60% similarity threshold)
+4. Keyword overlap — catches same-event articles written differently from different
+   sources (e.g. "Himoksen kuolema" + "Lasketteluonnettomuus Himoksella")
 """
 import glob
 import json
@@ -22,7 +24,32 @@ MAX_AGE_DAYS = 7  # Forget fingerprints older than 7 days
 _CONTENT_POSTS_DIR = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "..", "content", "posts"
 )
-SIMILARITY_THRESHOLD = 0.85
+SIMILARITY_THRESHOLD = 0.60   # Lowered from 0.85 — catches cross-source same-event rewrites
+
+# Keyword overlap dedup: long Finnish words (6+ chars) that indicate named entities
+KEYWORD_OVERLAP_THRESHOLD = 12  # 12+ shared long words = likely same event
+
+# Finnish function words that are NOT event-specific (don't count as signal)
+_KW_STOPWORDS = {
+    'jälkeen', 'ennen', 'kanssa', 'mukaan', 'mukana', 'vuonna', 'vuoden',
+    'tämän', 'tässä', 'tähän', 'siinä', 'siihen', 'siitä',
+    'heidän', 'heille', 'heistä', 'hänelle', 'hänestä', 'häntä',
+    'joiden', 'joille', 'joissa', 'joista', 'jotka', 'joihin',
+    'kautta', 'kohti', 'välillä', 'aikana', 'osalta', 'puolesta',
+    'kaikki', 'kaikille', 'kaikista', 'kaikkia', 'kaikkien',
+    'useita', 'useiden', 'useille', 'useissa', 'useista',
+    'toinen', 'toisen', 'toiseen', 'toiselle', 'toisessa',
+    'myöhemmin', 'aiemmin', 'viime', 'seuraava', 'seuraavan',
+    'kertoo', 'sanoo', 'toteaa', 'arvioi', 'kertoi', 'sanoi',
+    'samalla', 'samaan', 'samassa', 'samasta',
+    'paljon', 'vähän', 'hyvin', 'paremmin',
+    'tärkeää', 'tärkeä', 'tärkeän', 'tärkeät',
+    'suomessa', 'suomesta', 'suomeen', 'suomalaiset', 'suomalainen',
+    'helsingissä', 'helsingin', 'helsinkiin', 'helsinki',
+    'kuitenkin', 'kuitenkaan', 'siksi', 'joten',
+    'koska', 'vaikka', 'jotta', 'sekä',
+    'lisäksi', 'lisää', 'lisätietoja',
+}
 
 
 def _normalize_title(title: str) -> str:
@@ -31,47 +58,68 @@ def _normalize_title(title: str) -> str:
 
 
 def _titles_similar(a: str, b: str) -> bool:
-    """Return True if two titles are >85% similar."""
+    """Return True if two titles are ≥60% similar (catches same-event cross-source rewrites)."""
     return SequenceMatcher(None, _normalize_title(a), _normalize_title(b)).ratio() >= SIMILARITY_THRESHOLD
 
 
-def load_published_titles() -> list[str]:
+def _keyword_overlap(text_a: str, text_b: str) -> int:
+    """Count long Finnish words (6+ chars) shared between two texts.
+
+    Long words act as named-entity proxies: place names, proper nouns, and
+    domain-specific terms that appear in both articles signal same-event coverage.
     """
-    Load titles from all content/posts/*.md front matter.
-    Only reads the first ~10 lines of each file (front matter only — fast).
+    def extract(text: str) -> set:
+        words = re.sub(r"[^\w]", " ", text.lower()).split()
+        return {w for w in words if len(w) >= 6 and w not in _KW_STOPWORDS}
+
+    return len(extract(text_a) & extract(text_b))
+
+
+def load_published_articles() -> tuple[list[str], list[str]]:
+    """
+    Load titles and content bodies from all content/posts/*.md.
+    Returns (titles, contents) — parallel lists.
+
+    Reads full files; content is used for keyword overlap detection.
     """
     titles = []
+    contents = []
     pattern = os.path.join(_CONTENT_POSTS_DIR, "*.md")
-    for path in glob.glob(pattern):
+    for path in sorted(glob.glob(pattern)):
         try:
-            with open(path, "r", encoding="utf-8") as f:
-                in_front_matter = False
-                for i, line in enumerate(f):
-                    if i == 0 and line.strip() == "---":
-                        in_front_matter = True
-                        continue
-                    if in_front_matter:
-                        if line.strip() == "---":
-                            break  # end of front matter
-                        if line.startswith("title:"):
-                            # title: "Some title" or title: Some title
-                            raw = line[len("title:"):].strip().strip('"').strip("'")
-                            if raw:
-                                titles.append(raw)
-                            break
-                    if i > 15:
-                        break  # give up — malformed front matter
+            text = open(path, "r", encoding="utf-8").read()
+            # Split on second "---" to get front matter + body
+            parts = text.split("---", 2)
+            if len(parts) < 3:
+                continue
+            fm, body = parts[1], parts[2]
+            title_m = re.search(r"^title:\s*\"(.+)\"", fm, re.MULTILINE)
+            if title_m:
+                titles.append(title_m.group(1))
+                contents.append(body.strip())
         except (IOError, UnicodeDecodeError):
             continue
+    return titles, contents
+
+
+def load_published_titles() -> list[str]:
+    """Backwards-compatible wrapper — returns just titles."""
+    titles, _ = load_published_articles()
     return titles
 
 
 def check_published_duplicates(articles: list) -> list:
     """
-    Filter out articles whose titles are >85% similar to any already-published post.
-    Loads published titles from content/posts/*.md front matter.
+    Filter out articles that are near-duplicates of already-published posts.
+
+    Two signals:
+    1. Title similarity ≥ 60% — catches same-event different phrasing
+    2. Keyword overlap ≥ 12 long Finnish words — catches same-event different angles
+       (e.g. "Himoksen kuolema" vs "Lasketteluonnettomuus Himoksella")
+
+    Previously used 85% title threshold which missed cross-source rewrites.
     """
-    published_titles = load_published_titles()
+    published_titles, published_contents = load_published_articles()
     if not published_titles:
         return articles  # nothing to compare against
 
@@ -79,17 +127,33 @@ def check_published_duplicates(articles: list) -> list:
     dropped = 0
     for article in articles:
         incoming_title = article.get("title", "")
+        incoming_content = article.get("content", "")
         if not incoming_title:
             kept.append(article)
             continue
-        is_dupe = any(_titles_similar(incoming_title, pt) for pt in published_titles)
-        if is_dupe:
+
+        # Check 1: title similarity
+        title_dupe = any(_titles_similar(incoming_title, pt) for pt in published_titles)
+        if title_dupe:
+            print(f"[dedup:published] TITLE_MATCH: '{incoming_title[:60]}'")
             dropped += 1
-        else:
-            kept.append(article)
+            continue
+
+        # Check 2: keyword overlap (only if we have content to compare)
+        if incoming_content:
+            kw_dupe = any(
+                _keyword_overlap(incoming_content, pc) >= KEYWORD_OVERLAP_THRESHOLD
+                for pc in published_contents
+            )
+            if kw_dupe:
+                print(f"[dedup:published] KW_MATCH: '{incoming_title[:60]}'")
+                dropped += 1
+                continue
+
+        kept.append(article)
 
     if dropped:
-        print(f"[dedup:published] {dropped} articles dropped (similar to already-published titles)")
+        print(f"[dedup:published] {dropped} articles dropped ({len(kept)} kept)")
     return kept
 
 

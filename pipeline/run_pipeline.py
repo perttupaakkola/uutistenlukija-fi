@@ -256,6 +256,20 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
         return False
 
+    # ── Step 2a2: Post-rewrite keyword dedup ──────────────────────────────────
+    # Title dedup ran pre-rewrite (step 1b). Keyword dedup needs the rewritten
+    # content body — runs here after quality gate so we only compare real articles.
+    pre_kw_count = len(rewritten)
+    rewritten = check_published_duplicates(rewritten)
+    kw_dropped = pre_kw_count - len(rewritten)
+    if kw_dropped:
+        print(f"[dedup:kw] {kw_dropped} post-rewrite near-duplicates dropped")
+        steps["kw_dedup"] = {"dropped": kw_dropped, "passed": len(rewritten)}
+    if not rewritten:
+        print("ℹ️  Kaikki kirjoitetut artikkelit hylättiin duplikaatteina.")
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True)
+        return True
+
     # ── Step 2b: Images ────────────────────────────────────────────────────────
     unsplash_count = pexels_count = ai_count = fallback_count = 0
     image_step_start = time.time()

@@ -1,6 +1,11 @@
 ---
 title: "Teknologiateollisuuden kysely: vientiyritysten näkymät yllättävän valoisat sodasta huolimatta"
 description: "Suomalaiset vientiyritykset raportoivat odotettua paremmista luvuista, selviää Teknologiateollisuuden tuoreesta kyselystä."
+image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
+image_alt: "Teknologiateollisuuden kysely: vientiyritysten näkymät yllättävän valoisat sodasta huolimatta"
+image_credit: "Photo by CHUTTERSNAP on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=80&w=400"
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Talous
