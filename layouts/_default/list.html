@@ -8,7 +8,7 @@
   {{ $pages := .Pages.ByDate.Reverse }}
   {{ $pageSize := 12 }}
   {{ range $i, $p := $pages }}
-  {{ $cat := $p.Params.categories | first | default "kotimaa" }}
+  {{ $cat := "kotimaa" }}{{ with $p.Params.categories }}{{ $cat = index . 0 }}{{ end }}
   {{ $img := $p.Params.image_thumb | default ($p.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
   {{ $alt := $p.Params.image_alt | default $p.Title }}
   <article class="article-card{{ if ge $i $pageSize }} load-more-item hidden-article{{ end }}">

@@ -31,7 +31,7 @@
 
 {{/* Lead article */}}
 {{ with index $sorted 0 }}
-{{ $cat := .Params.categories | first | default "kotimaa" }}
+{{ $cat := "kotimaa" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
 {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
 {{ $thumb := .Params.image_thumb | default $img }}
 {{ $alt := .Params.image_alt | default .Title }}
@@ -57,7 +57,7 @@
 {{ if $highlights }}
 <div class="highlights-row">
   {{ range $highlights }}
-  {{ $cat := .Params.categories | first | default "kotimaa" }}
+  {{ $cat := "kotimaa" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
   {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="highlight-card">
@@ -89,7 +89,7 @@
     </div>
     <div class="category-articles">
       {{ range first 3 $catPosts }}
-      {{ $cardCat := .Params.categories | first | default "kotimaa" }}
+      {{ $cardCat := "kotimaa" }}{{ with .Params.categories }}{{ $cardCat = index . 0 }}{{ end }}
       {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
       {{ $cardAlt := .Params.image_alt | default .Title }}
       <article class="category-article-card">
