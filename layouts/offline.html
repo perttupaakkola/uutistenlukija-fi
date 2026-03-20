@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ei yhteyttä — Uutistenlukija</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --accent: #c0392b;
+      --border: #e5e5e5;
+      --card-bg: #f9f9f9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --text: #f0f0f0;
+        --text-muted: #aaa;
+        --accent: #e74c3c;
+        --border: #333;
+        --card-bg: #1a1a1a;
+      }
+    }
+    [data-theme="dark"] {
+      --bg: #111;
+      --text: #f0f0f0;
+      --text-muted: #aaa;
+      --accent: #e74c3c;
+      --border: #333;
+      --card-bg: #1a1a1a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .offline-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 36ch;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .logo-link {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #e74c3c;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+  <script>
+    // Apply saved dark mode pref without flash
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="logo-link" href="/">Uutistenlukija</a>
+
+  <div class="offline-icon">📡</div>
+  <h1>Ei internetyhteyttä</h1>
+  <p>Laitteellasi ei tällä hetkellä ole yhteyttä internettiin. Tarkista verkkoasetukset ja yritä uudelleen.</p>
+
+  <div class="actions">
+    <button class="btn btn-primary" onclick="window.location.reload()">
+      ↻ Yritä uudelleen
+    </button>
+    <a href="/" class="btn btn-secondary">
+      ← Etusivu
+    </a>
+  </div>
+
+  <p style="margin-top: 2.5rem; font-size: 0.8rem;">
+    <span class="status-dot"></span>&nbsp;Offline-tila
+  </p>
+
+  <script>
+    // Auto-reload when connection restored
+    window.addEventListener('online', function() {
+      window.location.reload();
+    });
+  </script>
+</body>
+</html>
