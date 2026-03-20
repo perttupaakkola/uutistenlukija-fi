@@ -21,17 +21,20 @@ CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuu
 
 SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
 
-Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
+=== PITUUS — TÄRKEIN VAATIMUS, LUE ENSIN ===
+Jokaisen artikkelin TÄYTYY olla 300–400 sanaa. ABSOLUUTTINEN MINIMI ON 280 SANAA.
+Laske sanat mielessäsi: tavallinen kappale on 60–80 sanaa. Tarvitset VÄHINTÄÄN 4 täyttä kappaletta.
+Jos ensimmäinen versio jää alle 280 sanan, jatka kirjoittamista — lisää kontekstia, taustaa ja seurauksia.
+LYHYET LÄHDETEKSTIT TARKOITTAVAT ENEMMÄN TAUSTAA, EI LYHYEMPÄÄ ARTIKKELIA.
 
-PITUUS — KRIITTINEN VAATIMUS:
-- Minimipituus: 250 sanaa. EI POIKKEUKSIA.
-- Tavoitepituus: 300–400 sanaa.
-- Jos lähdemateriaali on lyhyt, LAAJENNA se — lisää taustatietoja, kontekstia ja merkitystä:
-  * Mitä tapahtui aiemmin tässä asiassa?
-  * Miksi tämä on tärkeää lukijalle?
-  * Mitkä ovat seuraukset tai vaikutukset?
-  * Liittyykö tämä johonkin laajempaan ilmiöön tai kehitykseen?
-- ÄLÄ koskaan kirjoita alle 250 sanan artikkelia. Lyhyet lähdetekstit vaativat enemmän taustatietoa ja kontekstia, eivät tiivistämistä.
+Kun lähdemateriaali on lyhyt, laajenna AINA näillä tavoilla:
+  * Tausta: Mitä tapahtui aiemmin tässä asiassa? Mikä johti tähän tilanteeseen?
+  * Merkitys: Miksi tämä on tärkeää lukijalle? Ketä tämä koskee?
+  * Seuraukset: Mitkä ovat seuraukset tai vaikutukset lähiaikoina?
+  * Laajempi kehys: Liittyykö tämä johonkin laajempaan ilmiöön tai trendiin?
+  * Lisäfaktat: Tilastoja, numeroita, aiempia tapahtumia samasta aiheesta.
+
+Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
 
 TÄRKEÄÄ:
 - Kirjoita AINA suomeksi, myös jos lähdemateriaali on englanniksi.
@@ -92,9 +95,9 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 9. TARKISTA KIELI: artikkelin täytyy olla suomea. Jos jokin lause on englanniksi, käännä se.
 10. TARKISTA RAKENNE: pidemmissä artikkeleissa (300+ sanaa) tulee olla 1-2 H2-väliotsikkoa (## Otsikko).
     Lyhyissä (alle 300 sanaa) ei väliotsikoita. Lisää tai poista tarvittaessa.
-11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 250 sanaa. Jos artikkeli on lyhyempi,
-    laajenna sitä lisäämällä asiayhteyden, taustan tai vaikutusten kuvausta. ÄLÄ koskaan
-    palauta alle 250 sanan artikkelia.
+11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 280 sanaa (tavoite 300–400). Jos artikkeli on lyhyempi,
+    laajenna sitä lisäämällä taustan, kontekstin ja vaikutusten kuvausta. ÄLÄ koskaan
+    palauta alle 280 sanan artikkelia. Tavallinen kappale on 60–80 sanaa.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -240,7 +243,7 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     """
     rewritten = []
 
-    batch_size = 1
+    batch_size = 1  # 1 article per LLM call — max quality, no truncation (Perttu's directive)
     for i in range(0, len(articles), batch_size):
         batch = articles[i:i + batch_size]
         print(f"[writer] Processing batch {i // batch_size + 1} ({len(batch)} articles)...")
@@ -286,19 +289,21 @@ Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}
 
         prompt = f"""Kirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.
 
+MUISTUTUS PITUUDESTA: Jokaisen artikkelin TÄYTYY olla 300–400 sanaa (minimi 280). Tavallinen kappale on 60–80 sanaa. Tarvitset VÄHINTÄÄN 4–5 täyttä kappaletta. Lisää tausta, merkitys ja seuraukset jokaiseen artikkeliin.
+
 {articles_text}
 
-Vastaa JSON-listana:
+Vastaa JSON-listana ({len(batch)} artikkelia):
 [
   {{
-    "title": "Uutisen otsikko",
-    "content": "4-6 kappaleen uutisteksti. Kappaleet erotetaan kahdella rivinvaihdolla (\\n\\n). Pidemmissä artikkeleissa (300+ sanaa) käytä 1-2 H2-väliotsikkoa muodossa '## Otsikko' omalla rivillään. Lyhyissä (alle 300 sanaa) ei väliotsikoita.",
+    "title": "Uutisen otsikko (max 80 merkkiä)",
+    "content": "Vähintään 280 sanan uutisteksti. 4-6 kappaletta, erotettu \\n\\n. Käytä 1-2 H2-väliotsikkoa (## Otsikko) kun artikkeli on 300+ sanaa.",
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "original_title": "Alkuperäinen otsikko RSS:stä"
   }}
 ]
 
-Vastaa VAIN JSON-listalla."""
+Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vähintään 280 sanaa?"""
 
         pass1_result = None
         try:
@@ -356,17 +361,18 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
         # Pass 3: Per-article expansion retry for anything under 200 words
         EXPANSION_SYSTEM = """Olet uutistoimittaja. Sinulle annetaan lyhyt uutisartikkeli.
-Laajenna se vähintään 250 sanaan lisäämällä:
-- Taustatieto: mitä aiheen ympärillä on tapahtunut aiemmin?
+Laajenna se vähintään 300 sanaan (tavoite 320–380) lisäämällä KAIKKI seuraavista:
+- Taustatieto: mitä aiheen ympärillä on tapahtunut aiemmin? Mikä johti tähän?
 - Konteksti: miksi tämä on merkittävää tai miten se liittyy laajempaan kehitykseen?
 - Seuraukset tai vaikutukset: mitä tämä tarkoittaa ihmisille tai yhteiskunnalle?
-Säilytä alkuperäinen otsikko ja faktat. Kirjoita luonnollista suomea.
+- Lisäfaktat: tilastoja, numeroita tai muita konkreettisia tietoja aiheesta.
+Lisää H2-väliotsikko (## Otsikko) jäsentämään teksti. Säilytä alkuperäinen otsikko ja faktat. Kirjoita luonnollista suomea.
 Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "..."}"""
 
         expanded_audited = []
         for article in audited:
             word_count = len(article.get("content", "").split())
-            if word_count < 200:
+            if word_count < 250:
                 title = article.get("title", "")
                 print(f"[writer]   ⚠ Short ({word_count}w), expanding: '{title[:50]}'")
                 try:
@@ -415,7 +421,7 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
             # Quality flags — warn but don't drop here (quality gate in run_pipeline.py)
             word_count = len(content.split())
             title_len = len(title)
-            if word_count < 150:
+            if word_count < 250:
                 print(f"[writer]   ⚠ Still short after expansion ({word_count} words): '{title[:50]}'")
             if title_len > 100 or title_len < 10:
                 print(f"[writer]   ⚠ Suspicious title length ({title_len} chars): '{title[:60]}'")
