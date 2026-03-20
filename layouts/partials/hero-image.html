@@ -14,12 +14,13 @@
            .Params.image_source_url, .Params.image_caption, .Params.categories)
 */}}
 
-{{/* Resolve image URL — fallback to category placeholder */}}
+{{/* Resolve image URL — fallback to category placeholder with unique hash */}}
 {{ $img := .Params.image }}
 {{ if not $img }}
-  {{ $cat := "kotimaa" }}
-  {{ with .Params.categories }}{{ $cat = index . 0 | lower }}{{ end }}
-  {{ $img = printf "/images/categories/%s.jpg" $cat }}
+  {{ $cat := .Params.categories | first | lower | default "kotimaa" }}
+  {{/* Add unique hash per article to prevent duplicate image SEO penalty */}}
+  {{ $hash := .Permalink | md5 | first 8 }}
+  {{ $img = printf "/images/categories/%s.jpg?v=%s" $cat $hash }}
 {{ end }}
 
 {{/* Alt text */}}
@@ -32,15 +33,16 @@
 
 <figure class="article-hero">
   <div class="article-hero-wrapper">
+    {{/* Calculate hash for consistent onerror fallback */}}
+    {{ $fallbackHash := .Permalink | md5 | first 8 }}
     <img
       src="{{ $img }}"
       alt="{{ $alt }}"
       class="article-hero-img"
       loading="eager"
-      fetchpriority="high"
       width="1200"
       height="675"
-      onerror="this.onerror=null;this.src='/images/categories/{{ with .Params.categories }}{{ index . 0 | lower }}{{ else }}kotimaa{{ end }}.jpg'"
+      onerror="this.onerror=null;this.src='/images/categories/{{ .Params.categories | first | lower | default "kotimaa" }}.jpg?v={{ $fallbackHash }}'"
     >
   </div>
   {{ if or $hasCaption $hasCredit }}

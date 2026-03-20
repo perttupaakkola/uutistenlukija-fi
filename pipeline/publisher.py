@@ -103,8 +103,13 @@ def publish_articles(articles: List[Dict]) -> List[str]:
     return created
 
 
-def build_site() -> bool:
-    """Run hugo build to generate the static site."""
+def build_site() -> tuple[bool, str]:
+    """Run hugo build to generate the static site.
+
+    Returns (success, error_detail). error_detail is empty on success.
+    Hugo mixes build info and errors across stdout/stderr, so both are
+    captured and included in the error detail on failure.
+    """
     try:
         result = subprocess.run(
             [HUGO_BIN, "--minify"],
@@ -114,22 +119,32 @@ def build_site() -> bool:
             timeout=60,
         )
         if result.returncode == 0:
-            print(f"[publisher] Hugo build successful")
+            print("[publisher] Hugo build successful")
             if result.stderr:
-                # Hugo outputs build info to stderr
                 for line in result.stderr.strip().split("\n"):
                     print(f"[publisher]   {line}")
-            return True
+            return True, ""
         else:
-            print(f"[publisher] Hugo build failed:")
-            print(result.stderr)
-            return False
+            # Hugo can write error details to either stream — capture both
+            out = result.stdout.strip()
+            err = result.stderr.strip()
+            combined = "\n".join(filter(None, [out, err])) or f"(exit code {result.returncode}, no output)"
+            print(f"[publisher] Hugo build failed (exit {result.returncode}):")
+            for line in combined.split("\n"):
+                print(f"[publisher]   {line}")
+            return False, combined
+    except subprocess.TimeoutExpired:
+        msg = "Hugo build timed out after 60s"
+        print(f"[publisher] {msg}")
+        return False, msg
     except FileNotFoundError:
-        print(f"[publisher] Hugo binary not found at {HUGO_BIN}")
-        return False
+        msg = f"Hugo binary not found at {HUGO_BIN}"
+        print(f"[publisher] {msg}")
+        return False, msg
     except Exception as e:
-        print(f"[publisher] Build error: {e}")
-        return False
+        msg = f"Build error: {e}"
+        print(f"[publisher] {msg}")
+        return False, msg
 
 
 if __name__ == "__main__":

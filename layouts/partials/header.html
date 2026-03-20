@@ -2,10 +2,10 @@
   <div class="header-banner"></div>
   <div class="container" style="position:relative;">
     <div class="site-logo">
-      <a href="/"><img src="/images/logo.png" alt="Uutistenlukija" class="logo-img" fetchpriority="high" loading="eager" width="240" height="80"></a>
+      <a href="/"><img src="/images/logo.png" alt="Uutistenlukija" class="logo-img"></a>
     </div>
     <p class="site-date">{{ partial "finnish-date.html" . }}</p>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Päävalikko">
       <ul>
         {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>

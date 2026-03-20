@@ -1,366 +1,283 @@
-#!/usr/bin/env python3
 """
-metrics_report.py — Uutistenlukija.fi daily metrics summary
-Posts to Discord #metrics channel.
+Pipeline metrics report — post daily summary to #metrics via Discord webhook.
 
-Collects:
-  - Pipeline health (from logs/metrics.json)
-  - Article counts (from content/posts/)
-  - Category distribution
-  - GA4 traffic (TODO: disabled — OAuth client needs re-enabling in GCP console)
+Reads logs/metrics.json (written by run_pipeline.py after each run).
+Formats the content funnel, image source breakdown, step timings, and
+trend vs previous period.
 
 Usage:
-  python3 metrics_report.py                 # post to Discord
-  python3 metrics_report.py --dry-run       # print report, no Discord post
-  python3 metrics_report.py --days 7        # report window (default: 1)
-"""
+    python3 metrics_report.py [--hours N] [--dry-run] [--webhook URL]
 
+Env:
+    DISCORD_METRICS_WEBHOOK   preferred (separate #metrics channel)
+    DISCORD_PIPELINE_WEBHOOK  fallback
+
+Cron example (08:00 Helsinki = 06:00 UTC):
+    0 6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && \
+        python3 pipeline/metrics_report.py >> pipeline/logs/metrics_report.log 2>&1
+"""
 import argparse
-import glob
 import json
 import os
 import sys
-import urllib.error
-import urllib.parse
 import urllib.request
-from collections import Counter, defaultdict
-from datetime import datetime, timedelta, timezone
+import urllib.error
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-# ---------------------------------------------------------------------------
-# Config
-# ---------------------------------------------------------------------------
-PIPELINE_DIR = Path(__file__).parent
-CONTENT_DIR = PIPELINE_DIR.parent / "content" / "posts"
-METRICS_FILE = PIPELINE_DIR / "logs" / "metrics.json"
+METRICS_FILE = Path(__file__).parent / "logs" / "metrics.json"
 
-DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", "")
-DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
-# #metrics channel
-DISCORD_METRICS_CHANNEL = os.environ.get("DISCORD_METRICS_CHANNEL", "1482720741790060554")
+WEBHOOK = (
+    os.environ.get("DISCORD_METRICS_WEBHOOK")
+    or os.environ.get("DISCORD_PIPELINE_WEBHOOK")
+    or ""
+)
 
 
-# ---------------------------------------------------------------------------
-# Pipeline stats
-# ---------------------------------------------------------------------------
-def load_pipeline_runs(days: int = 1) -> list:
-    """Load recent pipeline runs from metrics.json."""
+# ── Data loading ──────────────────────────────────────────────────────────────
+
+def _load_all() -> list[dict]:
     if not METRICS_FILE.exists():
         return []
     try:
-        with open(METRICS_FILE) as f:
-            runs = json.load(f)
-        if not isinstance(runs, list):
+        records = json.loads(METRICS_FILE.read_text(encoding="utf-8"))
+        if not isinstance(records, list):
             return []
-        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
-        recent = []
-        for run in runs:
-            ts_raw = run.get("timestamp", "")
-            try:
-                ts = datetime.fromisoformat(ts_raw)
-                if ts.tzinfo is None:
-                    ts = ts.replace(tzinfo=timezone.utc)
-                if ts >= cutoff:
-                    recent.append(run)
-            except ValueError:
-                pass
-        return recent
+        return records
     except Exception as e:
-        print(f"[metrics] Could not load metrics.json: {e}", file=sys.stderr)
+        print(f"[metrics_report] Failed to read metrics.json: {e}", file=sys.stderr)
         return []
 
 
-def pipeline_summary(runs: list) -> dict:
-    """Summarise pipeline run data."""
-    if not runs:
-        return {
-            "run_count": 0,
-            "success_rate": 0,
-            "articles_published": 0,
-            "avg_duration_min": 0,
-            "slow_steps": [],
-            "errors": [],
-        }
-
-    success_count = sum(1 for r in runs if r.get("success"))
-    articles = sum(r.get("article_count", 0) for r in runs)
-    durations = [r.get("total_duration_sec", 0) for r in runs]
-    avg_duration = sum(durations) / len(durations) if durations else 0
-
-    # Step timing totals across runs
-    step_totals = defaultdict(list)
-    for run in runs:
-        for step, info in run.get("steps", {}).items():
-            step_totals[step].append(info.get("duration_sec", 0))
-
-    # Flag steps averaging > 5 min
-    slow_steps = []
-    for step, times in step_totals.items():
-        avg = sum(times) / len(times)
-        if avg > 300:
-            slow_steps.append((step, avg))
-    slow_steps.sort(key=lambda x: -x[1])
-
-    # Recent errors
-    errors = []
-    for run in runs:
-        for err in run.get("errors", []):
-            errors.append(err)
-
-    return {
-        "run_count": len(runs),
-        "success_rate": success_count / len(runs) * 100,
-        "articles_published": articles,
-        "avg_duration_min": avg_duration / 60,
-        "slow_steps": slow_steps,
-        "errors": errors[-5:],  # last 5
-    }
-
-
-# ---------------------------------------------------------------------------
-# Content stats
-# ---------------------------------------------------------------------------
-def content_stats(days: int = 1) -> dict:
-    """Count articles and categories from content/posts/."""
-    files = sorted(CONTENT_DIR.glob("*.md"))
-    today = datetime.now(timezone.utc).date()
-    cutoff = today - timedelta(days=days - 1)
-
-    by_date = Counter()
-    total_cats = Counter()
-    recent_cats = Counter()
-
-    for path in files:
-        fname = path.stem  # e.g. 2026-03-20-title
-        parts = fname.split("-")
-        article_date = None
-        if len(parts) >= 3:
-            try:
-                article_date = datetime.strptime("-".join(parts[:3]), "%Y-%m-%d").date()
-                by_date[str(article_date)] += 1
-            except ValueError:
-                pass
-
-        # Parse category from frontmatter (fast, no full YAML parse)
-        cat = None
+def _filter_by_hours(records: list[dict], hours: int) -> list[dict]:
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    result = []
+    for r in records:
         try:
-            with open(path) as f:
-                in_fm = False
-                in_categories = False
-                for line in f:
-                    line = line.rstrip()
-                    if line == "---":
-                        if not in_fm:
-                            in_fm = True
-                            continue
-                        else:
-                            break  # end of frontmatter
-                    if not in_fm:
-                        continue
-                    if line.startswith("categories:"):
-                        in_categories = True
-                        continue
-                    if in_categories:
-                        if line.startswith("  - "):
-                            cat = line.strip()[2:].strip()
-                            break
-                        elif line and not line.startswith(" "):
-                            in_categories = False
+            ts = datetime.fromisoformat(r["timestamp"].replace("Z", "+00:00"))
+            if ts >= cutoff:
+                result.append(r)
         except Exception:
             pass
-
-        if cat:
-            total_cats[cat] += 1
-            if article_date and article_date >= cutoff:
-                recent_cats[cat] += 1
-
-    # Build day-by-day counts for window
-    daily = {}
-    for i in range(days):
-        d = (today - timedelta(days=i)).strftime("%Y-%m-%d")
-        daily[d] = by_date.get(d, 0)
-
-    return {
-        "total_articles": len(files),
-        "recent_articles": sum(daily.values()),
-        "daily": daily,
-        "top_categories_total": total_cats.most_common(8),
-        "top_categories_recent": recent_cats.most_common(8),
-    }
+    return result
 
 
-# ---------------------------------------------------------------------------
-# GA4 (stub)
-# ---------------------------------------------------------------------------
-def ga4_stats() -> dict | None:
-    """Fetch traffic data from Google Analytics 4 Data API.
+# ── Aggregation helpers ───────────────────────────────────────────────────────
 
-    TODO: Currently disabled — OAuth client for project uutistenlukija-fi
-    has been disabled in GCP console. To re-enable:
-      1. Go to console.cloud.google.com → APIs & Services → Credentials
-      2. Re-enable the OAuth 2.0 client ID used by gog CLI
-      3. Ensure 'Google Analytics Data API' is enabled for the project
-      4. Re-run `gog` auth flow to get a fresh token with analytics.readonly scope
-
-    Returns None when unavailable.
-    """
-    return None  # TODO: implement when OAuth is fixed
+def _step(rec: dict, name: str) -> dict:
+    return rec.get("steps", {}).get(name, {})
 
 
-# ---------------------------------------------------------------------------
-# Format report
-# ---------------------------------------------------------------------------
-def format_report(
-    pipeline: dict,
-    content: dict,
-    ga4: dict | None,
-    days: int,
-) -> str:
+def _sum(records: list[dict], path: str) -> int:
+    """Sum a dot-path value across records. e.g. 'steps.scanner.total'"""
+    parts = path.split(".")
+    total = 0
+    for r in records:
+        v = r
+        for p in parts:
+            if isinstance(v, dict):
+                v = v.get(p)
+            else:
+                v = None
+                break
+        if isinstance(v, (int, float)):
+            total += v
+    return int(total)
+
+
+def _avg_duration(records: list[dict], step_name: str) -> float | None:
+    vals = [
+        _step(r, step_name).get("duration_sec", 0)
+        for r in records
+        if step_name in r.get("steps", {})
+    ]
+    return round(sum(vals) / len(vals), 1) if vals else None
+
+
+def _pct(num: int, denom: int) -> str:
+    if not denom:
+        return "—"
+    return f"{num / denom * 100:.0f}%"
+
+
+# ── Report builder ────────────────────────────────────────────────────────────
+
+def build_report(records: list[dict], hours: int) -> str:
+    if not records:
+        label = "24h" if hours == 24 else f"{hours}h"
+        return f"📊 **Pipeline — viimeiset {label}**\n_Ei dataa saatavilla._"
+
+    total_runs   = len(records)
+    success_runs = sum(1 for r in records if r.get("success"))
+    failed_runs  = total_runs - success_runs
+    success_rate = success_runs / total_runs * 100 if total_runs else 0
+
+    # Content funnel
+    scanned   = _sum(records, "steps.scanner.total")
+    rss_in    = _sum(records, "steps.scanner.rss_count")
+    fh_in     = _sum(records, "steps.scanner.firehose_count")
+    after_dedup = _sum(records, "steps.dedup.remaining")
+    rewritten = _sum(records, "steps.rewriter.output_count")
+    qg_passed = _sum(records, "steps.quality_gate.passed")
+    published = sum(r.get("article_count", 0) for r in records)
+
+    # Image sources
+    # Only count image stats from runs where the images step actually ran
+    runs_with_images = [r for r in records if "images" in r.get("steps", {})]
+    img_total    = _sum(runs_with_images, "steps.images.total")
+    img_unsplash = _sum(runs_with_images, "steps.images.unsplash")
+    img_pexels   = _sum(runs_with_images, "steps.images.pexels")
+    img_ai       = _sum(runs_with_images, "steps.images.ai")
+    img_fallback = _sum(runs_with_images, "steps.images.fallback")
+    articles_in_img_runs = sum(r.get("article_count", 0) for r in runs_with_images)
+    img_none = articles_in_img_runs - img_total if articles_in_img_runs > img_total else 0
+
+    # Step timings (avg across runs)
+    step_names = ["scanner", "dedup", "research", "rewriter", "images", "build"]
+    step_avgs: dict[str, float] = {}
+    for s in step_names:
+        v = _avg_duration(records, s)
+        if v is not None:
+            step_avgs[s] = v
+
+    # Total duration
+    durations = [r["total_duration_sec"] for r in records if "total_duration_sec" in r]
+    avg_total = round(sum(durations) / len(durations), 0) if durations else 0
+    max_total = round(max(durations), 0) if durations else 0
+
+    # Errors
+    all_errors: list[str] = []
+    for r in records:
+        for e in r.get("errors", []):
+            if e and len(all_errors) < 5:
+                all_errors.append(str(e)[:160])
+
+    # Status emoji
+    if success_rate >= 90:
+        status = "✅"
+    elif success_rate >= 70:
+        status = "⚠️"
+    else:
+        status = "🚨"
+
+    label = "24h" if hours == 24 else f"{hours}h"
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    window = "viimeinen 24h" if days == 1 else f"viimeiset {days} päivää"
-
     lines = [
-        f"📊 **Uutistenlukija.fi — Metrics Report** ({window}, {now_str})",
+        f"📊 **Pipeline-raportti — {label} | {now_str}**",
         "",
+        f"{status} **Ajot:** {success_runs}/{total_runs} onnistui ({success_rate:.0f}%)",
+        "",
+        "**📥 Sisältöputki:**",
     ]
 
-    # --- Articles ---
-    lines.append("**📰 Artikkelit**")
-    lines.append(f"• Yhteensä tietokannassa: **{content['total_articles']}**")
-    lines.append(
-        f"• Julkaistu ({window}): **{content['recent_articles']}**"
-    )
+    # Funnel
+    lines.append(f"  Skannattu:  **{scanned}**" + (f"  (RSS {rss_in} + Firehose {fh_in})" if rss_in or fh_in else ""))
+    if after_dedup:
+        dropped_dedup = scanned - after_dedup
+        lines.append(f"  Deduplikointi: **{after_dedup}** jäljellä  (-{dropped_dedup} poistettiin)")
+    if rewritten:
+        lines.append(f"  Kirjoitettu uudelleen: **{rewritten}**  ({_pct(rewritten, after_dedup or scanned)} läpäisi)")
+    if qg_passed:
+        dropped_qg = rewritten - qg_passed
+        lines.append(f"  Laadun tarkistus: **{qg_passed}** hyväksytty" + (f"  (-{dropped_qg} hylätty)" if dropped_qg else ""))
+    lines.append(f"  ✅ Julkaistu: **{published}** artikkelia")
 
-    # Daily breakdown if multi-day
-    if days > 1 and content.get("daily"):
-        for d, count in sorted(content["daily"].items(), reverse=True):
-            lines.append(f"  - {d}: {count}")
+    # Image breakdown
+    if runs_with_images and (img_total or img_fallback or img_none):
+        lines.append("")
+        lines.append("**🖼 Kuvat:**")
+        if img_unsplash:
+            lines.append(f"  Unsplash: {img_unsplash}")
+        if img_pexels:
+            lines.append(f"  Pexels:   {img_pexels}")
+        if img_ai:
+            lines.append(f"  AI-gen:   {img_ai}")
+        if img_fallback:
+            lines.append(f"  Kategoriakuva (fallback): {img_fallback}")
+        if img_none:
+            lines.append(f"  Ei kuvaa: {img_none} ⚠️")
 
-    if content.get("top_categories_recent"):
-        top = ", ".join(
-            f"{cat} ({n})" for cat, n in content["top_categories_recent"][:5]
-        )
-        lines.append(f"• Kategoriat ({window}): {top}")
-    lines.append("")
+    # Step timings
+    if step_avgs:
+        lines.append("")
+        lines.append("**⏱ Vaiheiden kestoajat (avg/ajo):**")
+        step_labels = {
+            "scanner": "Skanneri",
+            "dedup": "Dedup",
+            "research": "Tutkimus",
+            "rewriter": "Uudelleenkirjoitus",
+            "images": "Kuvat",
+            "build": "Hugo build",
+        }
+        for s, dur in step_avgs.items():
+            lines.append(f"  {step_labels.get(s, s)}: {dur}s")
+        lines.append(f"  **Yhteensä (avg): {int(avg_total)}s, max {int(max_total)}s**")
 
-    # --- Pipeline ---
-    lines.append("**⚙️ Pipeline**")
-    if pipeline["run_count"] == 0:
-        lines.append("• ⚠️ Ei pipeline-ajoja raportin aikaikkunassa")
-    else:
-        lines.append(f"• Ajoja: **{pipeline['run_count']}**")
-        lines.append(f"• Onnistumisprosentti: **{pipeline['success_rate']:.0f}%**")
-        lines.append(
-            f"• Avg kesto: **{pipeline['avg_duration_min']:.1f} min**"
-        )
-        if pipeline["slow_steps"]:
-            slow = ", ".join(
-                f"{s} ({t/60:.0f}min)" for s, t in pipeline["slow_steps"]
-            )
-            lines.append(f"• 🐢 Hitaat steppit: {slow}")
-        if pipeline["errors"]:
-            lines.append(f"• ❌ Virheitä: {len(pipeline['errors'])}")
-    lines.append("")
-
-    # --- GA4 ---
-    lines.append("**📈 Liikenne (GA4)**")
-    if ga4 is None:
-        lines.append(
-            "• ⚠️ GA4 Data API ei käytettävissä — OAuth client disabled GCP:ssä. "
-            "Pyydä Perttua re-enabloimaan OAuth client projektissa uutistenlukija-fi."
-        )
-    else:
-        # Populated when GA4 works
-        lines.append(f"• Sivulataukset: **{ga4.get('pageviews', 0)}**")
-        lines.append(f"• Uniikkeja kävijöitä: **{ga4.get('users', 0)}**")
-        if ga4.get("top_pages"):
-            lines.append("• Top artikkelit:")
-            for page, views in ga4["top_pages"][:5]:
-                lines.append(f"  - {page}: {views}")
+    # Errors
+    if all_errors:
+        lines.append("")
+        lines.append("**⚠️ Virheet:**")
+        for e in all_errors:
+            lines.append(f"  • {e}")
+    elif failed_runs:
+        lines.append(f"\n⚠️ {failed_runs} epäonnistunutta ajoa — tarkista lokit.")
 
     return "\n".join(lines)
 
 
-# ---------------------------------------------------------------------------
-# Discord post
-# ---------------------------------------------------------------------------
-def post_to_discord(content: str, dry_run: bool = False) -> bool:
-    if dry_run:
-        print("=== DRY RUN — Discord post would be: ===")
-        print(content)
-        return True
+# ── Discord posting ───────────────────────────────────────────────────────────
 
-    payload = json.dumps({"content": content}).encode()
-
-    # Try webhook first
-    if DISCORD_WEBHOOK_URL:
-        try:
-            req = urllib.request.Request(
-                DISCORD_WEBHOOK_URL,
-                data=payload,
-                headers={"Content-Type": "application/json"},
-                method="POST",
-            )
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                if resp.status in (200, 204):
-                    print("[metrics] Posted via webhook ✓")
-                    return True
-        except Exception as e:
-            print(f"[metrics] Webhook failed: {e}", file=sys.stderr)
-
-    # Fall back to bot token
-    if DISCORD_BOT_TOKEN:
-        try:
-            url = f"https://discord.com/api/v10/channels/{DISCORD_METRICS_CHANNEL}/messages"
-            req = urllib.request.Request(
-                url,
-                data=payload,
-                headers={
-                    "Content-Type": "application/json",
-                    "Authorization": f"Bot {DISCORD_BOT_TOKEN}",
-                },
-                method="POST",
-            )
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                if resp.status in (200, 201):
-                    print("[metrics] Posted via bot token ✓")
-                    return True
-        except Exception as e:
-            print(f"[metrics] Bot token post failed: {e}", file=sys.stderr)
-
-    print(
-        "[metrics] ⚠ Could not post to Discord — set DISCORD_WEBHOOK_URL or DISCORD_BOT_TOKEN in .env",
-        file=sys.stderr,
+def post(message: str, webhook: str) -> bool:
+    payload = json.dumps({"content": message}).encode("utf-8")
+    req = urllib.request.Request(
+        webhook,
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
     )
-    return False
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            ok = resp.status in (200, 204)
+            print(f"[metrics_report] Posted ({resp.status})")
+            return ok
+    except urllib.error.HTTPError as e:
+        body = e.read(200).decode("utf-8", errors="replace")
+        print(f"[metrics_report] HTTP {e.code}: {body}", file=sys.stderr)
+        return False
+    except Exception as e:
+        print(f"[metrics_report] Failed: {e}", file=sys.stderr)
+        return False
 
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
+# ── Entry point ───────────────────────────────────────────────────────────────
+
 def main():
-    parser = argparse.ArgumentParser(description="Uutistenlukija metrics reporter")
-    parser.add_argument("--dry-run", action="store_true", help="Print report, don't post")
-    parser.add_argument("--days", type=int, default=1, help="Reporting window in days (default: 1)")
+    parser = argparse.ArgumentParser(description="Post pipeline metrics report to Discord.")
+    parser.add_argument("--hours", type=int, default=24,
+                        help="Lookback window in hours (default: 24)")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Print report without posting")
+    parser.add_argument("--webhook", default="",
+                        help="Override Discord webhook URL")
     args = parser.parse_args()
 
-    # Load .env if present
-    env_path = PIPELINE_DIR.parent / ".env"
-    if env_path.exists():
-        with open(env_path) as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith("#") and "=" in line:
-                    k, v = line.split("=", 1)
-                    os.environ.setdefault(k.strip(), v.strip())
+    webhook = args.webhook or WEBHOOK
 
-    pipeline = pipeline_summary(load_pipeline_runs(args.days))
-    content = content_stats(args.days)
-    ga4 = ga4_stats()
+    all_records = _load_all()
+    records = _filter_by_hours(all_records, args.hours)
+    report = build_report(records, args.hours)
 
-    report = format_report(pipeline, content, ga4, args.days)
-    post_to_discord(report, dry_run=args.dry_run)
+    if args.dry_run:
+        print(report)
+        return 0
+
+    if not webhook:
+        print("[metrics_report] No webhook configured. Set DISCORD_METRICS_WEBHOOK or DISCORD_PIPELINE_WEBHOOK.", file=sys.stderr)
+        print(report)
+        return 1
+
+    return 0 if post(report, webhook) else 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

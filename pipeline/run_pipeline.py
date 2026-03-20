@@ -128,8 +128,8 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
 
     if build_only:
         print("\n🔨 Hugo-sivuston rakennus...")
-        success = build_site()
-        print("\n✅ Rakennus valmis!" if success else "\n❌ Rakennus epäonnistui.")
+        success, build_err = build_site()
+        print("\n✅ Rakennus valmis!" if success else f"\n❌ Rakennus epäonnistui: {build_err}")
         return success
 
     # ── Step 1: Scan ───────────────────────────────────────────────────────────
@@ -365,11 +365,11 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     # ── Step 4: Build ──────────────────────────────────────────────────────────
     with StepTimer("build") as t_build:
         print("\n🔨 Vaihe 4: Hugo-sivuston rakennus...")
-        success = build_site()
+        success, build_err = build_site()
         t_build.success = success
         if not success:
-            notify_discord_failure("build", "Hugo build failed")
-            errors.append("build failed")
+            notify_discord_failure("build", "Hugo build failed", context=build_err[:500] if build_err else "")
+            errors.append(f"build failed: {build_err[:200]}" if build_err else "build failed")
 
     steps["build"] = t_build.to_dict()
 
