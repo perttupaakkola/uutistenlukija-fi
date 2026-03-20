@@ -1,24 +1,24 @@
 ---
-title: "Vanhus surmattiin kadulle Malmin­kartanossa – Poliisi tutkii murhana: Tällainen on epäilty, 26"
-date: 2026-03-20T10:34:07.305743+00:00
+title: "Vanhus surmattiin kadulle Malmin­kartanossa – Poliisi tutkii murhana"
+date: 2026-03-20T10:36:18.536533+00:00
 categories:
   - Kotimaa
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
-description: "Malmin­kartanossa 26-vuotias mies epäillään vanhuksen murhasta. Poliisi tutkii tapausta, ja miehen taustalla on rikoshistoriaa väkivallasta ja huumeista."
+author: "Sanna Heikkinen"
+author_id: "sanna-heikkinen"
+author_title: "Ulkomaantoimittaja"
+author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
+author_image: "/images/writers/sanna-heikkinen.jpg"
+description: "Malmin­kartanossa surmataan noin 80-vuotias vanhus keskiviikkoiltana. Poliisi tutkii tapausta murhana ja pidättää 26-vuotiaan epäillyn."
 image: "https://images.unsplash.com/photo-1600717548331-84dfce1db315?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx2YW5odXMlMjBzdXJtYXR0aWluJTIwa2FkdWxsZSUyMG1hbG1pbnxlbnwxfDB8fHwxNzc0MDAyODE2fDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1600717548331-84dfce1db315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx2YW5odXMlMjBzdXJtYXR0aWluJTIwa2FkdWxsZSUyMG1hbG1pbnxlbnwxfDB8fHwxNzc0MDAyODE2fDA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kotimaa: Vanhus surmattiin kadulle Malmin­kartanossa – Poliisi tutkii murhana: Tällainen on epäilty, 26"
+image_alt: "Kotimaa: Vanhus surmattiin kadulle Malmin­kartanossa – Poliisi tutkii murhana"
 image_credit: "Photo by Denis Oliveira on Unsplash"
 image_source_url: "https://unsplash.com/photos/woman-in-coat-standing-beside-white-van-Ec6k0ot8oS0?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
 ---
 
-Malminkartanossa tapahtui keskiviikkoiltana henkirikos, jota tutkitaan murhana. Poliisi epäilee 26-vuotiasta miestä teosta, ja hänen taustastaan löytyy runsaasti rikoshistoriaa. Miehen epäillään syyllistyneen aiemmin väkivallantekoihin ja huumausainerikoksiin.
+Malminkartanon keskiviikkoiltana tapahtunutta henkirikosta tutkitaan murhana. Epäiltynä on 26-vuotias mies, jolla on laaja rikostausta. Poliisi sai hätäkeskukseen ilmoituksen puukotuksesta, jossa noin 80-vuotias uhri yritettiin elvyttää kadulla, mutta yritykset jäivät tuloksettomiksi.
 
-Rikosaineistosta ilmeni, että epäilty on käyttänyt salaisia osoitetietoja, mutta hän on ollut tuttu näky erityisesti pääkaupunkiseudulla. Poliisi vaatii hänen vangitsemistaan murhasta epäiltynä, ja asia käsitellään Helsingin käräjäoikeudessa lauantaina 21. maaliskuuta. Poliisi ei ole vielä julkistanut henkirikoksen motiivia.
+Epäilty, joka on tuttu näky Malminkartanossa ja jota on aiemmin syytetty muun muassa väkivalta- ja huumausainerikoksista, on pidätetty poliisin toimesta. Hän oli poistunut paikalta ennen poliisin saapumista, mutta otettiin kiinni myöhemmin ilman vastusta.
 
-Todistajien mukaan 26-vuotias mies puukotti noin 80-vuotiasta miestä Luutnantintiellä. Uhria yritettiin elvyttää, mutta tämä kuoli tapahtumapaikalla. Poliisi sai tiedon väkivallanteosta hieman ennen kello 23, ja epäilty otettiin kiinni myöhemmin ilman vastarintaa.
+Poliisi ei ole vielä julkistanut epäillyn ja uhrin välistä suhdetta tai mahdollista motiivia. Vaatimus vangitsemiseksi murhasta käsitellään Helsingin käräjäoikeudessa lauantaina. Rikosnimikkeen muuttuminen taposta murhaksi tuo esiin rikoksen vakavuuden ja nostaa kysymyksiä alueen turvallisuudesta.

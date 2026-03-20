@@ -1,14 +1,14 @@
 ---
 title: "Cold Response -harjoitus toi kapteeni Maggie Carpenterin Suomeen"
-date: 2026-03-20T10:35:59.419107+00:00
+date: 2026-03-20T10:36:18.536533+00:00
 categories:
   - Kotimaa
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
-description: "Kapteeni Maggie Carpenter saapuu Suomeen osallistumaan Naton Cold Response 26 -harjoitukseen, johon osallistuu yli 30 000 sotilasta eri maista."
+author: "Matti Virtanen"
+author_id: "matti-virtanen"
+author_title: "Päätoimittaja"
+author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
+author_image: "/images/writers/matti-virtanen.jpg"
+description: "Kapteeni Maggie Carpenter saapuu ensimmäistä kertaa Suomeen Naton Cold Response 26 -sotaharjoitukseen, jossa hän kohtaa ratkaisevia haasteita matkallaan."
 image: "https://images.unsplash.com/photo-1626880493853-19fa8ed90a75?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb2xkJTIwcmVzcG9uc2UlMjAtaGFyam9pdHVzJTIwdG9pfGVufDF8MHx8fDE3NzQwMDI3ODR8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1626880493853-19fa8ed90a75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb2xkJTIwcmVzcG9uc2UlMjAtaGFyam9pdHVzJTIwdG9pfGVufDF8MHx8fDE3NzQwMDI3ODR8MA&ixlib=rb-4.1.0&q=80&w=400"
 image_alt: "Kotimaa: Cold Response -harjoitus toi kapteeni Maggie Carpenterin Suomeen"
@@ -17,8 +17,8 @@ image_source_url: "https://unsplash.com/photos/silver-skull-with-cross-pendant-n
 draft: false
 ---
 
-Kapteeni Maggie Carpenter on ensimmäistä kertaa Suomessa osallistumassa Naton Cold Response 26 -harjoitukseen, joka kokoaa yli 30 000 sotilasta eri maista. Carpenter lensi Yhdysvalloista Suomeen ilmatankkauskone Herculesilla, mutta matkalla ilmeni ongelmia tankkaustuessa, mikä nosti esiin harjoituksen tärkeyden. Kapteeni David Leesman Yhdysvaltain merijalkaväen tukilentolaivueesta korosti, että matkan aikana todelliset haasteet olivat hyvä oppitunti tulevia konflikteja silmällä pitäen.
+Kapteeni Maggie Carpenter saapui ensimmäistä kertaa Suomeen osallistuakseen Naton merkittävään Cold Response 26 -sotaharjoitukseen. Hänen Hercules-lentokoneensa kohtasi matkalla todellisia ongelmia tankkaustuen saamisessa, mikä osoittautui hyödylliseksi kokemukseksi. Kapteeni Carpenterin mukaan tilanne antoi konkreettisen käsityksen siitä, miten matka ja siihen liittyvät haasteet voivat vaikuttaa toimintaan kriisitilanteissa.
 
-Harjoitukseen osallistuvat Suomen lisäksi Yhdysvallat, Ruotsi, Ranska, Italia ja Iso-Britannia. Suomessa on noin 7 500 sotilasta, ja suomalaiset ilmavoimat tuovat mukanaan kahdeksan Hornet-hävittäjää sekä 150 henkilöä. Ensimmäistä kertaa Lapissa harjoitteleva Carpenter kertoo, että harjoitus on ollut erittäin kylmä kokemus verrattuna Yhdysvaltojen olosuhteisiin, joissa hän ei yleensä kohtaa vastaavaa kylmyyttä. Hänen mukaansa vaikeinta ilmatankkaamisessa on helikopterien tankkaus, mutta perusasiat ovat tulleet opiskeltua.
+Yhdysvaltojen ilma-alukset, kuten C-130 Hercules, saattavat tarvita tukea Euroopassa mahdollisessa konfliktissa, ja harjoitukset ovat elintärkeitä yhteistoiminnan kehittämiseksi. Lapin lennoston komentaja, eversti Saku Joukas, korosti ilmatankkauksen merkitystä Hornet-ohjaajille, jotta osaaminen pysyy yllä myös kriisitilanteissa.
 
-Harjoitus päättyy perjantaina 20. maaliskuuta, ja sen tarkoituksena on vahvistaa liittolaisten yhteistyötä mahdollisissa kriisitilanteissa, joita tällä hetkellä ei ole nähtävissä. Eversti Saku Joukas Lapin lennostosta muistuttaa, että kaikkien Hornet-ohjaajien on oltava valmiita ilmatankkausharjoituksiin, sillä kriisitilanteessa osaamista ei voi enää kehittää erikseen.
+Harjoitus Lapissa on ollut haastava, sillä sääolosuhteet ovat olleet erittäin kylmiä ja loskaisia. Kapteeni Carpenter totesi tämän olevan kylmintä, mihin hän on koskaan altistunut. Hän on ollut tehtävässään hieman yli puoli vuotta ja oppii yhä helikoptereiden ilmatankkauksesta. Suomalaisista joukoista harjoitukseen osallistuu 150 henkilöä sekä kahdeksan Hornet-hävittäjää. Harjoitus päättyy 20. maaliskuuta ja siihen osallistuu yli 30 000 sotilasta eri liittolaismaista.
