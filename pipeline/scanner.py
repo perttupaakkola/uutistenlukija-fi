@@ -188,28 +188,8 @@ DOMAIN_DELAY = 5
 # 180s leaves buffer for slow feeds.
 SCANNER_TIMEOUT = 180
 
-# ETag/Last-Modified cache file (persists between pipeline runs)
-_CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
-_HTTP_CACHE_FILE = os.path.join(_CACHE_DIR, "feed_http_cache.json")
-
 # Per-domain last-fetch timestamps (in-process only)
 _domain_last_fetch: Dict[str, float] = {}
-
-
-def _load_http_cache() -> Dict:
-    """Load persisted ETag/Last-Modified cache."""
-    try:
-        with open(_HTTP_CACHE_FILE) as f:
-            return json.load(f)
-    except Exception:
-        return {}
-
-
-def _save_http_cache(cache: Dict) -> None:
-    """Persist ETag/Last-Modified cache to disk."""
-    os.makedirs(_CACHE_DIR, exist_ok=True)
-    with open(_HTTP_CACHE_FILE, "w") as f:
-        json.dump(cache, f, indent=2)
 
 
 def _domain(url: str) -> str:
@@ -402,8 +382,8 @@ def _get_text(element, tag: str) -> str:
     return ""
 
 
-def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]:
-    """Fetch and parse a single RSS feed with politeness and 304 caching."""
+def fetch_feed(feed_info: dict) -> List[Dict]:
+    """Fetch and parse a single RSS feed with politeness."""
     articles = []
     url = feed_info["url"]
     try:
@@ -416,38 +396,9 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
             time.sleep(wait)
         _domain_last_fetch[domain] = time.monotonic()
 
-        # Build request with conditional headers for 304 support
-        headers = dict(HEADERS)
-        cache_entry = (http_cache or {}).get(url, {})
-        if cache_entry.get("etag"):
-            headers["If-None-Match"] = cache_entry["etag"]
-        if cache_entry.get("last_modified"):
-            headers["If-Modified-Since"] = cache_entry["last_modified"]
-
-        req = urllib.request.Request(url, headers=headers)
-        try:
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                content = resp.read()
-                # Update cache with new validators
-                if http_cache is not None:
-                    # Preserve existing cache entry (may have stored articles)
-                    new_entry = dict((http_cache or {}).get(url, {}))
-                    etag = resp.headers.get("ETag")
-                    lm = resp.headers.get("Last-Modified")
-                    if etag:
-                        new_entry["etag"] = etag
-                    if lm:
-                        new_entry["last_modified"] = lm
-                    http_cache[url] = new_entry
-        except urllib.error.HTTPError as e:
-            if e.code == 304:
-                # Not Modified — feed hasn't changed since last fetch.
-                # Return previously cached articles for this feed so the
-                # pipeline can still deduplicate and select from them.
-                cached_articles = (http_cache or {}).get(url, {}).get("articles", [])
-                print(f"[scanner]   304 Not Modified — returning {len(cached_articles)} cached articles")
-                return cached_articles
-            raise
+        req = urllib.request.Request(url, headers=dict(HEADERS))
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            content = resp.read()
         
         # Sanitize content: strip control characters that break ET parser
         content = re.sub(rb'[\x00-\x08\x0b\x0c\x0e-\x1f]', b'', content)
@@ -502,13 +453,6 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
     except Exception as e:
         print(f"[scanner] Error fetching {feed_info['name']}: {e}")
 
-    # Store parsed articles in http_cache so 304 responses can return them.
-    # Cap at 30 articles to keep cache file manageable.
-    if http_cache is not None and articles:
-        entry = dict(http_cache.get(url, {}))
-        entry["articles"] = articles[:30]
-        http_cache[url] = entry
-
     return articles
 
 
@@ -518,7 +462,6 @@ def scan_all_feeds() -> List[Dict]:
     Stops fetching new feeds after SCANNER_TIMEOUT seconds to keep pipeline
     running even when many feeds are slow.
     """
-    http_cache = _load_http_cache()
     all_articles = []
     scan_start = time.monotonic()
     feeds_fetched = 0
@@ -535,7 +478,7 @@ def scan_all_feeds() -> List[Dict]:
             break
 
         print(f"[scanner] Fetching {feed['name']}...")
-        articles = fetch_feed(feed, http_cache=http_cache)
+        articles = fetch_feed(feed)
         print(f"[scanner]   → {len(articles)} articles")
         all_articles.extend(articles)
         feeds_fetched += 1
@@ -548,7 +491,6 @@ def scan_all_feeds() -> List[Dict]:
     total_scan_time = time.monotonic() - scan_start
     print(f"[scanner] Scan complete: {feeds_fetched} feeds in {total_scan_time:.1f}s "
           f"({feeds_skipped} skipped due to timeout)")
-    _save_http_cache(http_cache)
 
     # Exact dedup by fingerprint
     seen = set()
