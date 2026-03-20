@@ -1,0 +1,17 @@
+[Unit]
+Description=Uutistenlukija Newsletter API
+After=network.target
+
+[Service]
+Type=simple
+User=pertt
+WorkingDirectory=/home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline
+EnvironmentFile=/home/pertt/.openclaw/workspace/projects/uutistenlukija/.env
+ExecStart=/usr/bin/python3 -m uvicorn newsletter_api:app --host 127.0.0.1 --port 8765
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

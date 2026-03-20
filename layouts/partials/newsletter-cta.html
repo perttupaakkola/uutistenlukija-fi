@@ -1,16 +1,17 @@
 {{- /*
   newsletter-cta.html — inline newsletter signup CTA
 
-  Renders a compact email capture box. The form action points to /uutiskirje/
-  which handles confirmation messaging. The `data-event="newsletter"` and
-  `data-location` attributes are consumed by event-tracking.html for GA4.
+  POSTs to newsletter_api_url (default: https://uutistenlukija.fi/api/subscribe)
+  which is the FastAPI newsletter_api.py service proxied via nginx.
+  Falls back to /uutiskirje/ if newsletter_api_url is not set (static-only mode).
 
-  To activate a real provider (Mailchimp/Substack/Brevo):
-  - Set site.Params.newsletter_action to the provider form action URL
-  - Set site.Params.newsletter_hidden_* for any hidden fields required
-  Currently falls back to /uutiskirje/ (a thank-you page).
+  To enable live capture:
+  - Deploy pipeline/newsletter_api.py (see scripts/newsletter-api.service)
+  - Proxy /api/ → http://127.0.0.1:8765 in nginx
+  - Set site.Params.newsletter_api_url = "https://uutistenlukija.fi/api/subscribe"
 */}}
-{{ $action := default "/uutiskirje/" .Site.Params.newsletter_action }}
+{{ $action := default "/uutiskirje/" .Site.Params.newsletter_api_url }}
+{{ $source := cond .IsPage "article" "page" }}
 <div class="newsletter-cta">
   <div class="newsletter-cta-inner">
     <div class="newsletter-cta-text">
@@ -19,12 +20,11 @@
     </div>
     <form class="newsletter-cta-form"
           action="{{ $action }}"
-          method="get"
+          method="post"
           data-event="newsletter"
-          data-location="{{ if .IsPage }}article{{ else }}page{{ end }}">
-      {{- with .Site.Params.newsletter_list_id }}
-      <input type="hidden" name="list_id" value="{{ . }}">
-      {{- end }}
+          data-location="{{ $source }}">
+      <input type="hidden" name="source" value="{{ $source }}">
+      <input type="hidden" name="redirect" value="1">
       <input type="email"
              name="email"
              placeholder="sinun@email.fi"
