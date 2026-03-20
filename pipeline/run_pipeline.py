@@ -255,9 +255,12 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
     # ── Step 2a: Quality gate ──────────────────────────────────────────────────
+    all_before_quality = list(rewritten)  # snapshot for fingerprint marking
     rewritten, dropped_count = validate_articles(rewritten)
     if dropped_count:
         steps["quality_gate"] = {"dropped": dropped_count, "passed": len(rewritten)}
+        # Mark dropped articles' fingerprints so they don't get re-rewritten next run
+        mark_published(all_before_quality)
     if not rewritten:
         notify_discord_failure("quality_gate", "All articles dropped by quality gate")
         _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
@@ -267,14 +270,18 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     # Title dedup ran pre-rewrite (step 1b). Keyword dedup needs the rewritten
     # content body — runs here after quality gate so we only compare real articles.
     pre_kw_count = len(rewritten)
+    all_before_kw_dedup = list(rewritten)  # snapshot for marking fingerprints
     rewritten = check_published_duplicates(rewritten)
     rewritten = dedup_within_batch(rewritten)
     kw_dropped = pre_kw_count - len(rewritten)
     if kw_dropped:
         print(f"[dedup:kw] {kw_dropped} post-rewrite near-duplicates dropped")
         steps["kw_dedup"] = {"dropped": kw_dropped, "passed": len(rewritten)}
+        # Mark ALL pre-dedup articles' fingerprints (including dropped ones) so they
+        # don't get re-scanned and re-rewritten on the next pipeline run.
+        mark_published(all_before_kw_dedup)
     if not rewritten:
-        print("ℹ️  Kaikki kirjoitetut artikkelit hylättiin duplikaatteina.")
+        print("ℹ️  Kaikki kirjoitetut artikkelit hylättiin duplikaatteina. (fingerprints merkitty)")
         _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True)
         return True
 
