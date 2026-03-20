@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+  {{/* Title tag: keep under ~60 chars. Article title capped at 42 chars + " — Uutistenlukija" = ~60. */}}
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title | truncate 42 "…" }} — {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   {{/* Critical CSS: preload, then async-swap to avoid render-blocking */}}
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
