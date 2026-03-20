@@ -20,6 +20,10 @@ tags:
   - iran
   - yhdysvallat
   - jalkapallo
+related_articles:
+  - 2026-03-18-iranin-jalkapallonaisia-juhlitaan-kotiinpaluun-jalkeen-teher
+  - 2026-03-16-iranin-naisten-jalkapallojoukkueen-kapteeni-poistui-australi
+  - 2026-03-16-iranin-naisten-jalkapallomaajoukkueen-kapteeni-luopui-turvap
 ---
 
 Iranin jalkapalloliitto neuvottelee kansainvälisen jalkapalloliiton Fifan kanssa MM-kisojen otteluiden siirtämisestä pois Yhdysvalloista. Iran haluaa pelata ottelunsa Meksikossa.

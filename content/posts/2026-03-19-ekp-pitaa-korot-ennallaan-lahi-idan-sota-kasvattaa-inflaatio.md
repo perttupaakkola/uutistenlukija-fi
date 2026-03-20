@@ -15,6 +15,10 @@ tags:
   - pankki
   - energia
   - inflaatio
+related_articles:
+  - 2026-03-19-ekp-pitaa-korot-ennallaan-lahi-idan-sodan-keskella
+  - 2026-03-19-ekp-piti-korot-ennallaan-ja-nosti-inflaatio-odotuksiaan
+  - 2026-03-19-ekp-piti-korot-ennallaan-laski-talouskasvuennustetta-ja-nost
 description: "Euroopan keskuspankki EKP päätti pitää ohjauskorkonsa ennallaan 2,0 prosentissa, vaikka Lähi-idän sota kasvattaa inflaatioriskiä ja taloudellista…"
 image: "https://images.unsplash.com/photo-1632385820047-f7cc1dbc7051?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "EKP pitää korot ennallaan – Lähi-idän sota kasvattaa inflaatioriskiä"

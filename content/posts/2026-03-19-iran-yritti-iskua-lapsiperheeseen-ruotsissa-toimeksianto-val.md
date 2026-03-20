@@ -15,6 +15,10 @@ tags:
   - lapset
   - turvallisuus
   - poliisi
+related_articles:
+  - 2026-03-19-ruotsissa-estettiin-hyokkays-lapsiperheeseen
+  - 2026-03-18-iran-varoittaa-toimenpiteista-energiahairioihin-vastauksena
+  - 2026-03-18-iranilaiset-jalkapalloilijat-palaavat-kotimaahansa-turvattom
 description: "Iran yritti hyökätä Ruotsissa lapsiperheeseen, joka kritisoi hallintoa. Hyökkäys estettiin viime hetkellä rikollisverkoston avulla välitetyn toimeksiannon…"
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Iran yritti iskua lapsiperheeseen Ruotsissa – toimeksianto välitettiin rikollisverkoston kautta"

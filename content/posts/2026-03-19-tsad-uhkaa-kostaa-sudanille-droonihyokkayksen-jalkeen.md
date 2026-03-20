@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - puolustus
   - murha
+related_articles:
+  - 2026-03-19-tsad-uhkaa-sudania-kostotoimilla-hautajaisiin-kohdistuneen-l
+  - 2026-03-17-pakistanin-ilmaisku-tappoi-yli-400-ihmista-kabulissa
+  - 2026-03-16-israel-aloitti-laajat-iskut-iraniin-trump-sanoo-ettei-usa-ol
 description: "Tšadin presidentti Idris Mahamat Déby määrää armeijan valmiuteen kostohyökkäyksiä varten, kun Sudanista laukaistu drooni tappoi 17 ihmistä Tinessä."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Tšad uhkaa kostaa Sudanille droonihyökkäyksen jälkeen"

@@ -20,6 +20,10 @@ tags:
   - pankki
   - politiikka
   - inflaatio
+related_articles:
+  - 2026-03-19-euroopan-keskuspankki-piti-korot-ennallaan
+  - 2026-03-19-ekp-piti-ohjauskoron-ennallaan-20-prosentissa
+  - 2026-03-18-fed-piti-koron-odotetusti-ennallaan-lahi-idan-tilanteen-vaik
 ---
 
 Yhdysvaltain keskuspankki on päättänyt pitää ohjauskoronsa nykyisellä tasolla. Tämä tarkoittaa, että talouden rahapolitiikka pysyy vakaana jatkossa. Päätös on odotettu, sillä inflaatiotilanne ja talouden kasvuvauhti ovat tasapainossa, eikä tarvetta suurille muille toimenpiteille ole ollut. Markkinat ottavat päätöksen vastaan pääosin rauhallisesti.

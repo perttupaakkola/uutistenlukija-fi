@@ -15,6 +15,10 @@ tags:
   - luonto
   - turvallisuus
   - liikenne
+related_articles:
+  - 2026-03-19-metsahallitus-sulkee-siikanevan-retkeilyreitit-turvallisuuss
+  - 2026-03-19-metsahallitus-sulki-siikanevan-suositut-retkeilyreitit
+  - 2026-03-16-metsahallitus-maksaa-sadan-euron-palkkion-tuntemattomasta-ma
 description: "Metsähallitus sulkee Siikanevan soidensuojelualueen retkeilyreitit vaarallisten, rapistuneiden pitkospuiden vuoksi."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Metsähallitus sulkee Siikanevan soidensuojelualueen retkeilyreitit turvallisuussyistä"

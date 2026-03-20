@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - kansainvälinen
   - politiikka
+related_articles:
+  - 2026-03-17-saksalaisturisti-vaati-yli-20-miljoonan-dollarin-korvauksia
+  - 2026-03-16-pohjois-koreassa-jarjestettiin-vaalit-aanestysaktiivisuus-la
+  - 2026-03-16-ranskan-kuntavaalien-ensimmainen-kierros-vahvisti-aarilaitoj
 ---
 
 Saksalainen matkailija on nostanut kolme erillistä kannetta New Yorkissa kokemistaan pettymyksistä. Korvausvaatimukset ylittävät yhteensä 20 miljoonaa dollaria.

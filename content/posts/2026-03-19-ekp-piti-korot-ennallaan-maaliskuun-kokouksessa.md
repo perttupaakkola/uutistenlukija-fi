@@ -15,6 +15,10 @@ tags:
   - korot
   - inflaatio
   - liikenne
+related_articles:
+  - 2026-03-19-ekp-pitaa-korot-ennallaan-lahi-idan-sota-kasvattaa-inflaatio
+  - 2026-03-19-ekp-piti-korot-ennallaan-ja-nosti-inflaatio-odotuksiaan
+  - 2026-03-19-ekp-piti-korot-ennallaan-laski-talouskasvuennustetta-ja-nost
 description: "Euroopan keskuspankki pitää ohjauskorot ennallaan maaliskuun kokouksessa, säilyttäen talletus- ja perusrahoituskorot odotusten mukaisesti."
 image: "https://images.unsplash.com/photo-1734942718935-4f08020d70c0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "EKP piti korot ennallaan maaliskuun kokouksessa"

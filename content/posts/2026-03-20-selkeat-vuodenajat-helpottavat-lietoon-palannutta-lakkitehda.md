@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-20-selkeat-vuodenajat-tuovat-mahdollisuuksia-lietoon-palanneell
+  - 2026-03-17-karkuteille-lahtenyt-hevonen-putosi-jaihin-kemijoella
+  - 2026-03-19-asuinalueen-jatepisteet-tayttyvat-rosasta
 ---
 
 Lieto on saanut takaisin lakkitehtaan selkeiden vuodenaikojen myötä. Tehdas avasi ovensa uudelleen ja toi mukanaan odotettuja työpaikkoja ja taloudellista toimintaa alueelle. Tehtaan paluu on otettu ilolla vastaan, ja monet paikalliset uskovat sen elvyttävän alueen teollisuutta ja taloutta.

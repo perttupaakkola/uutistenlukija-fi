@@ -13,6 +13,10 @@ tags:
   - kulttuuri
   - sää
   - kirjallisuus
+related_articles:
+  - 2026-03-18-harri-istvan-maen-teoksia-epaillaan-plagiaateiksi-kustantaja
+  - 2026-03-18-harri-istvan-maen-uudet-plagiaatiepailyt-kustantaja-poisti-t
+  - 2026-03-20-turun-huutokauppasivuston-eveliina-oudotkin-esineet-loytavat
 description: "Nordean taidesäätiö tuo ensi vuonna viisi Helene Schjerfbeckin teosta Turun Ars Nova -museoon osana kiertuetta, joka vie taidetta eri puolille Suomea."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Viisi Helene Schjerfbeckin teosta saapuu Ars Novaan Nordean taidesäätiön kiertueella"

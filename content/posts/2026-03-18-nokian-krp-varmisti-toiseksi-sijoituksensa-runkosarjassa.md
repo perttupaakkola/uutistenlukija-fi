@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - nokia
   - viihde
+related_articles:
+  - 2026-03-18-ringeten-sm-sarjan-valierat-paattyivat-jannittaviin-jatkoajo
+  - 2026-03-20-sb-pro-varmisti-paikan-pudotuspeleissa
+  - 2026-03-20-sb-pro-varmisti-paikkansa-pudotuspeleissa-f-liigassa
 ---
 
 Nokian KrP nousi toiseksi runkosarjassa päättyneen ottelun jälkeen. Joukkueen johtohahmo, Joona Rantala, oli keskeisessä roolissa koko kauden ajan ja erityisesti lopputaistossa.

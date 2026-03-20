@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jalkapallo
   - kilpailu
+related_articles:
+  - 2026-03-17-fabregas-johtanut-como-1907n-italian-jalkapallon-huipulle
+  - 2026-03-18-mestarien-liigan-puolivalierat-selvilla-liverpool-bayern-ja
+  - 2026-03-17-osullivan-50-tavoittelee-paluuta-huipulle-jos-selvian-tasta
 ---
 
 Camp Nou täyttyi jalkapallon juhlasta, kun Barcelona voitti Mestarien liigan ottelun seitsemän maalilla. Ottelu oli stadionilla ensimmäinen kertaa sitten vuoden 2019, ja se vahvisti Barcelona jalkapallostrategian uudistumista.

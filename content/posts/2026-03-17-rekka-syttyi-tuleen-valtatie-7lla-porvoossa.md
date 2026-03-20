@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - liikenne
   - politiikka
+related_articles:
+  - 2026-03-17-rekka-syttyi-tuleen-valtatie-7lla-porvoossa-kyydissa-muovija
+  - 2026-03-15-ilmanlaatu-heikentynyt-suomessa-pienhiukkaset-kulkeutuve
+  - 2026-03-16-kaatunut-matkailuvaunu-ruuhkautti-ysitien-tampereen-kohdalla
 ---
 
 Muovijätettä kuljettanut rekka syttyi palamaan maanantai-iltana valtatie 7:llä Porvoossa. Itä-Uudenmaan pelastuslaitos sai hälytyksen kello 20.34.

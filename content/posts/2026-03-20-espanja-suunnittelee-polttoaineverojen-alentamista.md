@@ -20,6 +20,10 @@ tags:
   - hallitus
   - verotus
   - energia
+related_articles:
+  - 2026-03-20-espanjalaismedia-espanja-aikoo-alentaa-polttoainetuotteiden
+  - 2026-03-16-britannia-suunnittelee-miinanraivausdroonien-lahettamista-ho
+  - 2026-03-20-veronmaksajat-rahoittavat-suurten-laittomien-jatetayttojen-s
 ---
 
 Espanjan hallitus aikoo laskea polttoainetuotteiden arvonlisäveroa 21 prosentista 10 prosenttiin, kertoo espanjalaismedia SER. Tämä veromuutospaketti tähtää hiilivetyjen valmisteveron keskeyttämiseen, mikä voisi johtaa dieselin ja bensiinin hinnan laskemiseen 30-40 senttiä litralta.

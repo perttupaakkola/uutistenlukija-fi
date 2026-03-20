@@ -21,6 +21,10 @@ tags:
   - turvallisuus
   - luonto
   - lentoliikenne
+related_articles:
+  - 2026-03-17-cold-response-harjoitus-testaa-naton-valmiutta-arktisella-al
+  - 2026-03-20-cold-response-harjoitus-toi-kapteeni-maggie-carpenterin-suom
+  - 2026-03-18-stubb-bbclle-trumpilla-ei-ole-oikeutta-vedota-naton-apuun
 ---
 
 Pohjois-Norjassa, Pohjois-Ruotsissa ja Suomen Lapissa käynnissä oleva Cold Response -sotaharjoitus kokoaa yhteen 32 000 sotilasta 14 Nato-maasta. Harjoitus jatkuu kuluvan viikon perjantaihin asti. Mukana on muun muassa 3 000–4 000 Yhdysvaltain merijalkaväen sotilasta sekä kalustoa lentokoneista sukellusveneisiin.

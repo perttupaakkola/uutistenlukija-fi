@@ -15,6 +15,10 @@ tags:
   - energia
   - iran
   - yhdysvallat
+related_articles:
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
+  - 2026-03-19-yhdysvaltojen-ja-israelin-valinen-suhde-iranin-sodassa-kysee
+  - 2026-03-18-israelin-ja-iranin-valiset-konfliktit-kiihtyvat-ja-tilanne-h
 description: "Donald Trump kiistää tienneensä Israelin hyökkäyksestä Iranin kaasukenttää vastaan, mikä nostaa esiin kysymyksiä Yhdysvaltain ja Israelin suhteista."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Trump kiisti tienneensä Israelin hyökkäyksestä Iranin kaasukenttää vastaan"

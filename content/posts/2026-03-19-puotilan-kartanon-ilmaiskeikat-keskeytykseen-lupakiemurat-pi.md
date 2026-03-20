@@ -13,6 +13,10 @@ tags:
   - kulttuuri
   - teknologia
   - helsinki
+related_articles:
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-eivat-jatku-kesalla-lavan-rak
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-jaavat-tauolle
+  - 2026-03-18-helsingissa-taidenayttelyn-tohryt-aiheuttivat-vahinkoja
 description: "Puotilan kartanon ilmaiskonsertit keskeytyvät kesällä lupakysymysten takia, kertoo ravintoloitsija Tanja Löppönen."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Puotilan kartanon ilmaiskeikat keskeytykseen – lupakiemurat pilaavat kesän"

@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - sää
   - politiikka
+related_articles:
+  - 2026-03-18-lidlin-kuitti-paljasti-yllatyksen-harvemmin-tuotteita-osteta
+  - 2026-03-19-kevat-on-poikkeuksellisen-aikaisessa-mutta-perunan-istutus-e
+  - 2026-03-19-varhaisperunoiden-istutus-alkoi-rymattylassa
 ---
 
 Joensuulaisessa Lidl-myymälässä ulkopaikkakuntalainen asiakas hämmästyi saatuaan kuitin, jossa oli yli tuhat euroa maksaneita tuotteita. Nainen oli ostanut tavallisia päivittäistavaroita.

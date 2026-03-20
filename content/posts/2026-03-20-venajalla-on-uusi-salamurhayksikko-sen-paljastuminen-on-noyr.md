@@ -21,6 +21,10 @@ tags:
   - turvallisuus
   - murha
   - liikenne
+related_articles:
+  - 2026-03-20-venajalla-paljastui-uusi-salamurhayksikko-noyryytys-vallanka
+  - 2026-03-20-venajalla-paljastettiin-uusi-salamurhayksikko
+  - 2026-03-20-venajalla-paljastettiin-uusi-salamurhayksikko-noyryyttava-sk
 ---
 
 Tutkivat journalistit ovat paljastaneet Venäjän eliittijoukoista kootun salatun salamurhayksikön, mikä on herättänyt huomiota ja keskustelua väkivaltaisten toimintatapojen ympärillä. Tämä uusi yksikkö, jonka olemassaolo oli piilossa, on saanut osakseen paljon kritiikkiä ja hämmennystä.

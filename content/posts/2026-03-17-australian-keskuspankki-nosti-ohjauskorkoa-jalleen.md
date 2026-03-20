@@ -20,6 +20,10 @@ tags:
   - korot
   - inflaatio
   - pankki
+related_articles:
+  - 2026-03-19-ekp-piti-korot-ennallaan-ja-nosti-inflaatio-odotuksiaan
+  - 2026-03-19-ekp-piti-korot-ennallaan-laski-talouskasvuennustetta-ja-nost
+  - 2026-03-19-euroopan-keskuspankki-piti-korot-ennallaan
 ---
 
 Australian keskuspankki nosti ohjauskorkoaan 25 peruspisteellä 4,1 prosenttiin. Kyseessä on jo kahdestoista koronnostopäätös vuoden 2022 toukokuun jälkeen.

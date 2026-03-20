@@ -21,6 +21,10 @@ tags:
   - asuminen
   - oikeus
   - luonto
+related_articles:
+  - 2026-03-20-mp-kysyi-hallitukselta-kalakuolemista-dykeissa
+  - 2026-03-20-mp-kysyy-hallitukselta-kalakuolemista-dyke-alueella
+  - 2026-03-20-kalakuolemat-nostattavat-kysymyksia-britannian-ymparistovira
 ---
 
 Entinen ympäristöministeri Steve Barclay kysyi parlamentissa, miksi mitään oikeustoimia ei ole vielä käynnistetty noin 900 kuolleen kalalajin vuoksi, jotka löytyivät Kings Delph -alueelta syyskuussa 2024. Vedenlaadun heikentyminen johtui kohonneista ammoniakkitasoista sekä alhaisista happitasoista.

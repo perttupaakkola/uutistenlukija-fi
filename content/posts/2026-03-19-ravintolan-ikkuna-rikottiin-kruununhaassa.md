@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - helsinki
   - politiikka
+related_articles:
+  - 2026-03-15-neljan-miehen-joukko-pahoinpiteli-uhrin-rovaniemen-keskustas
+  - 2026-03-17-eva-yli-40-prosenttia-tyottomista-erittain-vaikeasti-tyollis
+  - 2026-03-17-karkuteille-lahtenyt-hevonen-putosi-jaihin-kemijoella
 description: "Helsingin Kruununhaassa ravintolan omistaja Hani Kia epäilee ikkunan rikkomisen liittyvän ääri-islamistiseen toimintaan ja poliittisiin motiiveihin."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Ravintolan ikkuna rikottiin Kruununhaassa"

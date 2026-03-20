@@ -20,6 +20,10 @@ tags:
   - tampere
   - energia
   - urheilu
+related_articles:
+  - 2026-03-20-ekokumppanit-edistaa-kestavaa-kehitysta-tampereella
+  - 2026-03-15-armas-festivaali-tayttaa-kymmenen-vuotta-tampereella
+  - 2026-03-16-kaatunut-matkailuvaunu-ruuhkautti-ysitien-tampereen-kohdalla
 ---
 
 Energia-alan suurtapahtuma Energiamessut järjestetään Tampereen Messu- ja Urheilukeskuksessa 20.–22. lokakuuta 2026. Tapahtuma kokoaa yhteen lähes 10 000 asiantuntijaa energiantuotannon, teknologioiden ja kestävien ratkaisujen äärelle. 30-vuotisen historian omaava tapahtuma tarjoaa ajankohtaisia näkökulmia investoinneista laitosten käyttöön ja kunnossapitoon sekä energiatehokkuuden parantamiseen.

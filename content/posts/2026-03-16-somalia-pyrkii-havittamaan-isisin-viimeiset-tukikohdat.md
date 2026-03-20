@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - hallitus
   - kansainvälinen
+related_articles:
+  - 2026-03-18-israel-toteuttaa-toimia-libanonin-etelassa
+  - 2026-03-16-britannia-suunnittelee-miinanraivausdroonien-lahettamista-ho
+  - 2026-03-18-hatatila-teneriffalla-sotki-suomalaisen-loman-retket-peruttu
 description: "Somalian hallitus tehostaa operaatioita äärijärjestö Isisiä vastaan, pyrkien hävittämään sen viimeiset tukikohdat syrjäisillä alueilla."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Somalia pyrkii hävittämään Isisin viimeiset tukikohdat"

@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - venäjä
   - lääketiede
+related_articles:
+  - 2026-03-18-britanniasta-kajahti-kritiikkia-alexander-stubbille-ylimieli
+  - 2026-03-15-venajan-aseviennin-osuus-maailmanmarkkinoista-kutistunut-nop
+  - 2026-03-16-kenia-venaja-lupaa-lopettaa-kenialaisten-varvaamisen-sotaan
 ---
 
 Ilja Remeslo, tunnettu venäläinen bloggaaja ja asianajaja, on toimitettu psykiatriseen hoitoon vain päivien jälkeen, kun hän julkaisi kirjoituksen, jossa hän kääntyi voimakkaasti Vladimir Putinia vastaan. Remeslo, joka on aiemmin ollut Kremlin ja Putinin vahva tukija, julkaisi manifestin, jossa hän esitti viisi syytä tukensa lopettamiseen.

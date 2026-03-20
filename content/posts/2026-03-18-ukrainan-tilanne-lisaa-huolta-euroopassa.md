@@ -21,6 +21,10 @@ tags:
   - venäjä
   - turvallisuus
   - eu
+related_articles:
+  - 2026-03-18-huoli-ukrainan-tukemisesta-kasvaa-kun-lahi-idan-konflikti-vi
+  - 2026-03-16-eu-maiden-ulkoministerit-kokoontuvat-brysselissa
+  - 2026-03-16-euroopan-parlamentti-linjasi-ukraina-voisi-paasta-eu-rakente
 ---
 
 Ukrainan ja lähialueiden turvallisuustilanne aiheuttaa edelleen huolta Euroopan tasolla. Venäjän toimet alueella vaikuttavat myös turvallisuuspoliittisiin keskusteluihin. Brysselissä pohditaan, miten tukea Ukrainaa tehokkaasti ja resurssit jakautuvat nykytilanteessa epätasapainoisesti.

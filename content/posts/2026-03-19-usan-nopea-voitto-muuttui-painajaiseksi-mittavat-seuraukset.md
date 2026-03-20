@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - yhdysvallat
   - sota
+related_articles:
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-tilanne-kehitty
+  - 2026-03-16-israel-aloitti-laajat-iskut-iraniin-trump-sanoo-ettei-usa-ol
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
 ---
 
 Yhdysvaltojen hyökkäys Irakiin alkoi 23 vuotta sitten massiivisilla ilmaiskuilla Bagdadiin, ja se johti nopeasti kaupungin kaatumiseen. Tämä strategia oli tarkoitettu lamauttamaan Irakin johto, mutta nopeasti saavutettu voitto kääntyi vuosia kestäneeksi konfliktiksi, joka vaikutti syvästi alueen vakauteen. Sodan seuraukset ovat yhä nähtävissä, ja ne ulottuvat kauas Irakin rajojen ulkopuolelle.

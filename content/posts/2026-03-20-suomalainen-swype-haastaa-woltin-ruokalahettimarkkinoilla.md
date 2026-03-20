@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - yhdysvallat
   - politiikka
+related_articles:
+  - 2026-03-20-suomalainen-swype-astuu-ruokalahettimarkkinoille-foodoran-ja
+  - 2026-03-20-suomalainen-swype-haastaa-ruokalahettimarkkinoilla-woltin
+  - 2026-03-19-asiantuntija-varoittaa-demokratian-heikkenemisesta-suomessa
 ---
 
 Uusi suomalainen tilausalusta Swype on astunut Suomen ruokalähettimarkkinoille juuri, kun Foodora ilmoitti vetäytyvänsä Suomesta. Swype aikoo täyttää Foodoran jättämän aukon markkinoilla ja on saanut jo runsaasti kuljettajahakemuksia. Tällä hetkellä Swype toimii koko Suomen alueella ja tarjoaa palveluja noin sadalle ravintolalle, mutta suunnittelee laajentamista.

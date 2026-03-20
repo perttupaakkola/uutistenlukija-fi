@@ -13,6 +13,10 @@ tags:
   - kulttuuri
   - rikos
   - oikeus
+related_articles:
+  - 2026-03-19-kevin-spacey-sovitteli-seksuaalirikossyytokset-lontoossa
+  - 2026-03-18-syyttaja-vaatii-mette-maritin-pojalle-seitseman-vuoden-vanke
+  - 2026-03-19-kevin-spacey-sopi-seksuaalisyytokset-lontoossa
 description: "Kevin Spacey tekee sovinnon kolmen miehen kanssa seksuaalirikossyytöksistä, jolloin Lontoon oikeudenkäynti peruuntuu sovintosopimuksen myötä."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Kevin Spacey sovitti seksuaalirikosoikeusjutun Lontoossa"

@@ -21,6 +21,10 @@ tags:
   - liikenne
   - yhdysvallat
   - murha
+related_articles:
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanossa-poliisi-tutkii-mu
+  - 2026-03-20-meksikolainen-teini-kuoli-yhdysvaltojen-maahanmuuttoviranoma
+  - 2026-03-20-poliisi-epailee-malminkartanon-vanhusmurhaaja-26-ei-tuntenut
 ---
 
 29-vuotias suomalaisnainen on kuollut liikenneonnettomuudessa Reggio Calabriassa Etelä-Italiassa. Nainen ylitti katua, kun häneen törmäsi auto, jonka kuljettaja pakeni paikalta. Onnettomuus tapahtui varhain keskiviikkoaamuna, eikä silminnäkijöitä ollut paikalla. Ulkoministeriö on vahvistanut naisen kuoleman.

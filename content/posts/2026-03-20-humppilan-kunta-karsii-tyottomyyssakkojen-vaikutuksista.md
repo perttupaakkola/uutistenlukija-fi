@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - kirjallisuus
   - työttömyys
+related_articles:
+  - 2026-03-20-humppilan-talous-karsii-tyottomyyssakkojen-seurauksista
+  - 2026-03-20-humppilan-talous-karsii-tyottomyyssakkojen-vuoksi
+  - 2026-03-20-humppila-karsii-tyottomyyssakkojen-aiheuttamasta-talouskaaok
 ---
 
 Humppilan kunta on ajautunut taloudellisiin vaikeuksiin työttömyyssakkojen vuoksi, ja tilanne herättää huolta paikallisessa päätöksenteossa. Kunnan työttömyyteen liittyvät sakot ovat yli kaksinkertaistuneet 300 000 euroon, mikä on huomattava summa pienelle kunnalle. Kunnanjohtaja Minna Ylikännön mukaan sakkomaksut voivat johtaa perikatoon tai edellisten luottamustehtävien irtisanomisiin, mikä on jo nähtävissä. 

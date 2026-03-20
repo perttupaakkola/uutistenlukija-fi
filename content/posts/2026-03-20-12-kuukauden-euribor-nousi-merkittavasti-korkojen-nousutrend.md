@@ -19,6 +19,10 @@ tags:
   - talous
   - korot
   - pankki
+related_articles:
+  - 2026-03-19-asuntovelallisia-odottaa-tiukempi-vuosi-korkojen-nousu-jatku
+  - 2026-03-19-ekp-piti-ohjauskoron-ennallaan-20-prosentissa
+  - 2026-03-17-australian-keskuspankki-nosti-ohjauskorkoa-jalleen
 ---
 
 Perjantaina 12 kuukauden euribor nousi voimakkaasti, ja se saavutti 2,658 prosenttia. Nousua oli tapahtunut 0,134 %-yksikköä, mikä oli historian 13. suurin päivänousu. OP:n seniorianalyytikko Jari Hännikäinen kommentoi, että tämä reaktio on seurausta Euroopan keskuspankin (EKP) aiemmista viesteistä huhtikuun koronnostosta.

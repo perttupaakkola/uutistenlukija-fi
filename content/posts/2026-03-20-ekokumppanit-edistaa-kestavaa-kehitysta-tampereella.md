@@ -20,6 +20,10 @@ tags:
   - tampere
   - energia
   - luonto
+related_articles:
+  - 2026-03-20-energiatapahtuma-keraa-asiantuntijat-tampereelle-vuonna-2026
+  - 2026-03-15-armas-festivaali-tayttaa-kymmenen-vuotta-tampereella
+  - 2026-03-16-kaatunut-matkailuvaunu-ruuhkautti-ysitien-tampereen-kohdalla
 ---
 
 Ekokumppanit Oy, voittoa tavoittelematon asiantuntijaorganisaatio, toimii kestävän kehityksen edistäjänä Tampereen alueella. Organisaatio tarjoaa ympäristö- ja ihmislähtöisiä palveluita, jotka tähtäävät energiatehokkuuden, kiertotalouden ja luonnon monimuotoisuuden parantamiseen. Ekokumppanit on osa Tampereen kaupunkikonsernia, ja sen toiminta kattaa paikalliset ja kansainväliset projektit.

@@ -19,6 +19,10 @@ tags:
   - talous
   - pörssi
   - yritys
+related_articles:
+  - 2026-03-20-ay-pomolta-raju-syytos-suomen-porssiyhtioita-kohtaan
+  - 2026-03-20-ammattiliitto-pro-syyttaa-porssiyhtioita-lyhytnakoisyydesta
+  - 2026-03-20-ay-liiton-johtaja-syyttaa-porssiyhtioita-lyhytnakoisyydesta
 ---
 
 Ammattiliitto Pro on esittänyt voimakasta kritiikkiä Suomen pörssiyhtiöitä kohtaan. Pro väittää, että yritykset ovat valinneet lyhytnäköisen strategian keskittyen osinkojen suurentamiseen sen sijaan, että ne investoisivat tulevaisuuteen. Pron puheenjohtaja Niko Simola korostaa, että suomalaisissa yrityksissä ei tunnu olevan halua kehittää kasvustrategioita, vaan pääpaino on omistajien palkitsemisessa.

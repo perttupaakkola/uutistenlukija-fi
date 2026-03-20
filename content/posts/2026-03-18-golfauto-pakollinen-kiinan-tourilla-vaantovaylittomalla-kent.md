@@ -20,6 +20,10 @@ tags:
   - leikkaukset
   - kiina
   - sää
+related_articles:
+  - 2026-03-18-golfautojen-kaytto-kiinan-kiertuetaistossa-johtaa-uusiin-kok
+  - 2026-03-15-antonelli-voittoon-kiinan-gp-ssa-historian-toiseksi-nuorin
+  - 2026-03-19-afrikan-jalkapallomestaruuden-riisto-saa-kritiikkia-senegal
 ---
 
 Oliver Lindell putoaa kentälle ensimmäistä kertaa tänään Kiinan Hainanin kilpailussa, jossa pelaajien on pakko käyttää golfautoa kahdella ensimmäisellä kierroksella. Kuljetus pakotettu kentän kookkaiden etäisyyksien myötä.

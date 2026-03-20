@@ -15,6 +15,10 @@ tags:
   - pörssi
   - energia
   - sota
+related_articles:
+  - 2026-03-19-helsingin-porssi-avautui-laskuun-lahi-idan-sodan-kiihdyttaes
+  - 2026-03-19-euroopan-porssit-avasivat-jyrkkaan-laskuun-oljyn-hinnan-nous
+  - 2026-03-19-ekp-pitaa-korot-ennallaan-lahi-idan-sodan-keskella
 description: "Euroopan osakemarkkinat avautuvat jyrkässä laskussa Lähi-idän sodan vaikutuksesta. Stoxx 600 -indeksi ja Saksan DAX-indeksi putoavat yli kaksi prosenttia."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Euroopan pörssit syöksyivät Lähi-idän sodan takia"

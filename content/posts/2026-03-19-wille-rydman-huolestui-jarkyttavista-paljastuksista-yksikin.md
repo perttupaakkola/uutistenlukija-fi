@@ -20,6 +20,10 @@ tags:
   - eduskunta
   - terveys
   - sää
+related_articles:
+  - 2026-03-18-romaniyhdistys-arvioi-vigeliuksen-puheenvuorot-loukkaaviksi
+  - 2026-03-20-thl-varoittaa-kanta-tiedot-eivat-riita-sote-rahoitukseen
+  - 2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy
 ---
 
 Sosiaali- ja terveysministeri Wille Rydman on ilmaissut huolensa Iltalehden paljastamista epäpuhtauksista Attendon Olarinpuiston hoivakodissa Espoossa. Rydman katsoo, että tällaiset tapaukset ovat täysin hyväksymättömiä, ja korostaa, että jo yksi tapaus on liikaa. Hän on seurannut tarkasti uutisointia ja aikoo tuoda esityksen eduskuntaan ammattihenkilölainsäädännön uudistamisesta.

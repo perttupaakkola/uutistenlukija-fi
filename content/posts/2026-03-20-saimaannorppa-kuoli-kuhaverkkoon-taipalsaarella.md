@@ -21,6 +21,10 @@ tags:
   - yhdysvallat
   - luonto
   - liikenne
+related_articles:
+  - 2026-03-20-uusi-norppakuolema-taipalsaarella-huolestuttaa-asiantuntijoi
+  - 2026-03-19-metsahallitus-sulkee-siikanevan-soidensuojelualueen-retkeily
+  - 2026-03-16-metsahallitus-maksaa-sadan-euron-palkkion-tuntemattomasta-ma
 ---
 
 Saimaannorppa on kuollut kalaverkkoon Taipalsaarella, Etelä-Karjalassa, ja tämä on jo viides pyydyksen aiheuttama kuolema tänä vuonna. Paikalliselta kalastusrajoitusalueelta löytynyt norppa oli uros, painoa noin 53 kiloa ja pituutta 115 senttimetriä.

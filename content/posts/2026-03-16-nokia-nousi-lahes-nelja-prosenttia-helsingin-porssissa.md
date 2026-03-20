@@ -14,6 +14,10 @@ tags:
   - pörssi
   - nokia
   - helsinki
+related_articles:
+  - 2026-03-19-helsingin-porssi-seurasi-maailman-laskutrendia
+  - 2026-03-19-paastrategi-suosittelee-seitsemaa-osaketta-myllerryksen-kesk
+  - 2026-03-19-alandsbankeni-paastrategi-suosittelee-seitsemaa-osaketta-mar
 description: "Nokia nousee lähes neljä prosenttia Helsingin pörssissä, kun markkinoilla tunnelma kohenee Hormuzinsalmen tilanteen helpottamisen myötä."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Nokia nousi lähes neljä prosenttia Helsingin pörssissä"

@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jalkapallo
   - liikenne
+related_articles:
+  - 2026-03-18-mestarien-liigan-ottelut-tarjosivat-jannitysta-ja-pettymyksi
+  - 2026-03-17-daniel-hakans-jaa-pois-huuhkajien-uuden-seelannin-matkasta
+  - 2026-03-17-fabregas-johtanut-como-1907n-italian-jalkapallon-huipulle
 ---
 
 Jalkapallon Mestarien liigan puolivälieräpaikat täyttyivät tiistaina ja keskiviikkona. Englantilaisseuroista vain Arsenal selvitti tiensä neljän parhaan joukkoon. Chelsea ja Manchester City jäivät molemmat pudotuspelien alkukierroksille.

@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - luonto
   - hallitus
+related_articles:
+  - 2026-03-19-metsahallitus-sulkee-siikanevan-retkeilyreitit-turvallisuuss
+  - 2026-03-19-metsahallitus-sulkee-siikanevan-soidensuojelualueen-retkeily
+  - 2026-03-19-metsahallitus-sulki-siikanevan-suositut-retkeilyreitit
 ---
 
 Metsähallitus on päättänyt sulkea Siikanevan soidensuojelualueen Ruovedellä asiakasturvallisuuden vuoksi. Tämä päätös yllätti alueen kävijät, sillä Siikaneva on Pirkanmaan laajin yhtenäinen suoalue ja tärkein soidensuojelualue maakunnassa. Sulkemiselle ei ole annettu tarkkoja syitä, mutta se herättää huolta alueen tulevaisuudesta ja siitä, miten se vaikuttaa luonnonsuojelun ja matkailun yhdistämiseen.

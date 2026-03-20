@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - taide
   - viihde
+related_articles:
+  - 2026-03-20-huutokauppatoimija-eveliina-oudotkin-esineet-loytavat-arvost
+  - 2026-03-20-eveliina-johtaa-huutokauppaa-jossa-esineet-loytavat-arvonsa
+  - 2026-03-20-huutokauppaa-pyorittava-eveliina-oudoimmatkin-esineet-loytav
 ---
 
 Legendaarinen laulaja ja näyttelijä Liza Minnelli avasi avioliittonsa David Gestin kanssa ja siihen liittyvät taloudelliset haasteet. Minnelli jakoi muistojaan yhdestä hänen elämäntarinansa käännekohdasta, joka oli käytännössä katastrofi hänelle. Avioliitto, joka alkoi vuonna 2002, päättyi eroon vain kolme vuotta myöhemmin, ja matkan varrella Minnelli menetti suuren osan omaisuudestaan.

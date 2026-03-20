@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jalkapallo
   - liikenne
+related_articles:
+  - 2026-03-17-daniel-hakans-jaa-pois-huuhkajien-uuden-seelannin-matkasta
+  - 2026-03-18-arsenal-ainoana-englantilaisena-puolivalieriin-chelsea-ja-ma
+  - 2026-03-18-mestarien-liigan-ottelut-tarjosivat-jannitysta-ja-pettymyksi
 ---
 
 Lech Poznanin laitahyökkääjä Daniel Håkans ei lähde Suomen miesten jalkapallomaajoukkueen mukaan Uuteen-Seelantiin. Palloliitto tiedotti pelaajamuutoksesta maanantaina.

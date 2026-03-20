@@ -13,6 +13,10 @@ tags:
   - urheilu
   - sää
   - jalkapallo
+related_articles:
+  - 2026-03-19-senegal-menetti-afrikan-mestaruuden-valiaikaismaarayksella
+  - 2026-03-19-jalkapallopomo-pitaa-afrikan-mestaruuden-myontamista-marokol
+  - 2026-03-20-fifa-linjasi-naisjoukkueiden-valmennukseen-naisia
 description: "Senegal menetti Afrikan jalkapallomestaruuden protestin vuoksi, mikä herättää kritiikkiä Afrikan jalkapalloliiton päätöksestä riistää titteli."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Afrikan jalkapallomestaruuden riisto saa kritiikkiä – Senegal menetti tittelin protestin vuoksi"

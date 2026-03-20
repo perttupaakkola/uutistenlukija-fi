@@ -13,6 +13,10 @@ tags:
   - teknologia
   - yritys
   - liikenne
+related_articles:
+  - 2026-03-19-startup-yritysten-perustajat-tarvitsevat-tyokaluja-konflikti
+  - 2026-03-17-suomalaisyritys-kehitti-tavan-tuottaa-vetya-ilman-sahkoverkk
+  - 2026-03-19-meta-paatti-olla-sulkematta-horizon-worldsia-vrssa
 description: "Mobiilipelaaminen kasvaa nopeasti, ja 80 prosenttia pelaajista valitsee pelit älypuhelimilla ja tableteilla. Muutos vaikuttaa pelialan strategioihin."
 image: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3Mzk2OTA4OXww&ixlib=rb-4.1.0&q=85"
 image_alt: "Mobiilipelaaminen kasvattaa suosiotaan"

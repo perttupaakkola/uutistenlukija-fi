@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - oikeus
   - sää
+related_articles:
+  - 2026-03-18-britanniassa-koiranomistajille-tulossa-rajattomat-sakot-karj
+  - 2026-03-16-eu-maiden-ulkoministerit-kokoontuvat-brysselissa
+  - 2026-03-17-bondi-beachin-ampujan-perheenjasenia-uhattu-tapolla-oikeus-k
 description: "Yhdysvaltalaiset aborttivastaiset järjestöt laajentavat toimintaansa Britanniaan ja pyrkivät muuttamaan maan aborttimyönteistä ilmapiiriä."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Yhdysvaltalaiset ryhmät vievät aborttivastaisuutta Britanniaan"

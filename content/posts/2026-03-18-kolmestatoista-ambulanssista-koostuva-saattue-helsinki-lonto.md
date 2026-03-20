@@ -20,6 +20,10 @@ tags:
   - ukraina
   - helsinki
   - lääketiede
+related_articles:
+  - 2026-03-15-orpo-oslon-kokouksessa-pohjoismaat-ja-kanada-keskustelivat-u
+  - 2026-03-16-metsahallitus-maksaa-sadan-euron-palkkion-tuntemattomasta-ma
+  - 2026-03-17-laihdutuslaakkeita-kirjoitetaan-chattivastaanotolla-ilman-po
 ---
 
 Torstaiaamuna kolmesta eri paikasta Helsingissä lähtee 12 kunnostettua ambulanssia kohti Ukrainaa. Lions-hyväntekeväisyysjärjestön organisoinut kuljetus on merkittävä ja jatkuu Puolan läpi viikon kestävällä matkalla Donetskiin ja Harkovaan.

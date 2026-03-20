@@ -20,6 +20,10 @@ tags:
   - turvallisuus
   - sää
   - lapset
+related_articles:
+  - 2026-03-17-australian-verkkoturvallisuusviranomainen-lapsiin-kohdistuva
+  - 2026-03-17-oikeusjuttu-xain-grok-tekoaly-tuotti-lasten-seksuaalista-kuv
+  - 2026-03-17-elon-muskin-xai-yhtiota-vastaan-kanne-tekoaly-tuotti-lasten
 ---
 
 Australian verkkoturvallisuusviranomainen eSafety on varoittanut Elon Muskin omistamaa X-palvelua lapsiin kohdistuvan seksuaalisen hyväksikäyttömateriaalin laajasta leviämisestä alustalla. Viranomaisen mukaan ongelma on rakenteellinen ja materiaalia on X:ssä helpommin saatavilla kuin missään muussa valtavirtaisessa palvelussa.

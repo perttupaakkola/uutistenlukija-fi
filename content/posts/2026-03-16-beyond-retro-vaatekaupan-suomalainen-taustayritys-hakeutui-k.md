@@ -14,6 +14,10 @@ tags:
   - yritys
   - yhdysvallat
   - helsinki
+related_articles:
+  - 2026-03-17-autoalan-johtaja-sokaistui-nopeuteen-eivat-nopeat-voita-hita
+  - 2026-03-20-woltin-uusi-haastaja-swype-aloittaa-suomessa
+  - 2026-03-17-sec-aikoo-luopua-porssiyhtioiden-neljannesvuosiraportoinnist
 description: "Beyond Retro -vaatekaupan suomalainen omistajayritys Kusa Oy hakeutuu konkurssiin, ja Helsingin käräjäoikeus käsittelee hakemusta lähiaikoina."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Beyond Retro -vaatekaupan suomalainen taustayritys hakeutui konkurssiin"

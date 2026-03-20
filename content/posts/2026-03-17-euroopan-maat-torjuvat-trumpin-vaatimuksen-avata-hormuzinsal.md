@@ -20,6 +20,10 @@ tags:
   - energia
   - öljy
   - yhdysvallat
+related_articles:
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
+  - 2026-03-17-stubb-kehottaa-nato-liittolaisia-ottamaan-trumpin-vaatimukse
+  - 2026-03-17-trump-turhautui-liittolaisiinsa-hormuzinsalmen-kriisista-yhd
 ---
 
 Eurooppalaiset maat hylkäsivät maanantaina Yhdysvaltain presidentti Donald Trumpin vaatimuksen osallistua Hormuzinsalmen avaamiseen laivaliikenteelle. Trump arvosteli kovin sanoin Britanniaa ja muita liittolaisia, jotka kieltäytyivät lähettämästä merivoimiaan alueelle.

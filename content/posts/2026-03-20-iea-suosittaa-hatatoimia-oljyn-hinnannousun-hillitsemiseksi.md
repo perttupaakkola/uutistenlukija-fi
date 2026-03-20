@@ -20,6 +20,10 @@ tags:
   - energia
   - hallitus
   - öljy
+related_articles:
+  - 2026-03-20-iea-suosittelee-hatatoimia-oljyn-hinnan-nousun-vuoksi
+  - 2026-03-20-energiamarkkina-tarvitsee-kiireellisia-toimia-oljyn-hinnan-n
+  - 2026-03-20-energiaviranomainen-suosittelee-hatatason-toimia-oljyn-hinna
 ---
 
 Kansainvälinen energia-agentuuri (IEA) on julkaissut suosituksia, joita jäsenvaltioiden tulisi noudattaa öljyn hinnannousun ja tulevien polttoainepulien hallitsemiseksi. Suositukset johtuvat huolenaiheista, jotka liittyvät Lähi-idän tilanteeseen ja sen vaikutuksiin öljyn toimituksiin. IEA painottaa, että hallitusten tulisi rohkaista etätyöskentelyä ja vähentää moottoriteiden nopeusrajoituksia.

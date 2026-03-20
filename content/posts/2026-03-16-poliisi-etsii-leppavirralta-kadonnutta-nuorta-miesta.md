@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - poliisi
   - liikenne
+related_articles:
+  - 2026-03-20-poliisi-tutkii-malminkartanon-henkirikosta-murhana
+  - 2026-03-18-henkiloauto-ja-kuorma-auto-tormasivat-vetelissa-yksi-kuoli
+  - 2026-03-20-pelottava-tieto-malminkartanon-epaillysta-murhasta
 description: "Itä-Suomen poliisi etsii 28-vuotiasta miestä, joka on kadonnut Leppävirralla 9. maaliskuuta. Havaintoja pyydetään ilmoittamaan poliisille."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Poliisi etsii Leppävirralta kadonnutta nuorta miestä"

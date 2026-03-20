@@ -20,6 +20,10 @@ tags:
   - energia
   - öljy
   - yhdysvallat
+related_articles:
+  - 2026-03-17-kuuban-sahkoverkko-romahti-kymmenen-miljoonaa-ihmista-jai-pi
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-avata-hormuzinsal
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
 ---
 
 Kuuban kansallinen sähköverkko romahti maanantaina. Verkonhaltija UNE ilmoitti, että noin 10 miljoonaa ihmistä jäi ilman sähköä.

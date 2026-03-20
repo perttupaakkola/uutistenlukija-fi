@@ -14,6 +14,10 @@ tags:
   - energia
   - öljy
   - iran
+related_articles:
+  - 2026-03-18-oljyn-hinta-nousi-noin-110-dollariin-uudesta-iskusta-iraniin
+  - 2026-03-19-kaasun-hinta-nousi-25-prosenttia-iskujen-jalkeen-qatarin-kes
+  - 2026-03-19-kaasun-hinta-nousi-25-prosenttia-iskujen-jalkeen-qatarissa
 description: "Raakaöljyn hinta nousee yli 100 dollarin tynnyriltä ensimmäistä kertaa sitten vuoden 2022. Hormuzinsalmen sulkeutuminen vaikuttaa merkittävästi hintoihin."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Raakaöljyn hinta noussut yli 100 dollarin tynnyriltä"

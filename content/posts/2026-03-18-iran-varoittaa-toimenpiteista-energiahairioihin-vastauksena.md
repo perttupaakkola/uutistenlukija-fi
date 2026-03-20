@@ -20,6 +20,10 @@ tags:
   - iran
   - energia
   - puolustus
+related_articles:
+  - 2026-03-18-tilanne-lahi-idassa-karjistyy-israelin-hyokkayksen-seuraukse
+  - 2026-03-17-lahi-idan-jannitteet-kiristyivat-yon-aikana-iskuja-oljykohte
+  - 2026-03-18-israelin-ja-iranin-valiset-konfliktit-kiihtyvat-ja-tilanne-h
 ---
 
 Iranin armeija on ilmoittanut varautuvansa toimenpiteisiin, mikäli uraanikaivokseen tehdyt hyökkäykset jatkuvat. Tämän vuoksi maa arvioi mahdollisia vastatoimia energiainfrastruktuuriin liittyen. Kansainväliset tahot seuraavat tilannetta tarkasti, ja Iran korostaa oikeuttaan suojella omia resurssejaan.

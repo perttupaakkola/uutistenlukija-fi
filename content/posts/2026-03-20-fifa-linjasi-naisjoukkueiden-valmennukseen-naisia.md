@@ -19,6 +19,10 @@ tags:
   - urheilu
   - sää
   - jalkapallo
+related_articles:
+  - 2026-03-20-fifa-linjasi-naisjoukkueiden-valmennukseen-naisten-osallistu
+  - 2026-03-20-fifa-linjasi-naisjoukkueiden-valmennuksessa-on-oltava-naisia
+  - 2026-03-20-fifa-linjasi-naisten-joukkueiden-valmennukseen-sukupuolikiin
 ---
 
 Kansainvälinen jalkapalloliitto Fifa on päättänyt, että naisjoukkueilla on oltava tulevaisuudessa vähintään yksi naispuolinen pää- tai apuvalmentaja. Tämä sääntö koskee sekä maa- että seurajoukkueita eri tasoilla, mukaan lukien aikuiset ja juniorit.

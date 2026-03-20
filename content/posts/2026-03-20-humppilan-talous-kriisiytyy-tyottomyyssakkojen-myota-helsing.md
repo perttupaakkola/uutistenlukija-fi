@@ -21,6 +21,10 @@ tags:
   - talous
   - työttömyys
   - helsinki
+related_articles:
+  - 2026-03-20-humppilan-talous-karsii-tyottomyyssakkojen-seurauksista
+  - 2026-03-20-humppilan-talous-karsii-tyottomyyssakkojen-vuoksi
+  - 2026-03-20-humppilan-talous-kriisiytyy-tyottomyyssakkojen-seurauksena
 ---
 
 Humppilan kunnan talous on ajautunut vakavaan kriisiin työttömyydestä koituvien sakkojen vuoksi. Sakkojen määrä on yli kaksinkertaistunut, ja nyt kunta on pakotettu tekemään vaikeita päätöksiä. Kunnanhallitus on irtisanonut kaksi johtajaansa, ja investoinnit on pysäytetty. Kunnanjohtaja Minna Ylikännön mukaan sakot, jotka nousevat yli 300 000 euroon, ovat seurauksena korkeasta työttömyydestä, ja ne uhkaavat pienentää kunnan elinvoimaa.

@@ -21,6 +21,10 @@ tags:
   - jääkiekko
   - viihde
   - helsinki
+related_articles:
+  - 2026-03-17-sm-liigakauden-paatos-paljasti-yllattavia-lukuja-sarjan-hant
+  - 2026-03-18-benjamin-rautiainen-valittiin-liigan-runkosarjan-parhaaksi-p
+  - 2026-03-19-kiekkoveteraani-risto-dufva-valmentaa-joensuun-kiekko-poikia
 ---
 
 Kiekko-Espoo on jälleen edennyt Auroraliigan finaaleihin. Joukkue varmisti paikan loppuottelussa voittamalla Tampereen Ilveksen 3–2 vieraissa. Ottelu ratkesi ensimmäisessä jatkoerässä, kun Kiira Yrjänen iski espoolaisten voittomaalin ajassa 65.44. Kiekko-Espoon menestys on vahvistanut heidän asemaansa sarjan hallitsevana mestarina.

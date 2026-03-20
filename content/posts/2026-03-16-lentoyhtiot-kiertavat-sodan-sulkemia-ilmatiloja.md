@@ -15,6 +15,10 @@ tags:
   - yritys
   - turvallisuus
   - sota
+related_articles:
+  - 2026-03-17-trumpin-asema-heikkenee-iranin-sodan-seurausten-kasautuessa
+  - 2026-03-17-cold-response-harjoitus-testaa-naton-kykya-toimia-arktisessa
+  - 2026-03-17-sahkotupakka-syttyi-palamaan-matkustamossa-kesken-lennon-aus
 description: "Lentoyhtiöt ohjaavat matkustajakoneitaan pidemmille reiteille Iranin ja Persianlahden rajoitusten vuoksi, mikä nostaa kustannuksia ja pidentää lentoja."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Lentoyhtiöt kiertävät sodan sulkemia ilmatiloja"

@@ -20,6 +20,10 @@ tags:
   - lapset
   - asuminen
   - liikenne
+related_articles:
+  - 2026-03-18-vahingoittaa-erityisesti-heita-eduskunta-muutti-poissaolojen
+  - 2026-03-20-poliisi-tutkii-malminkartanon-henkirikosta-murhana
+  - 2026-03-15-noin-50-vuotias-virolaismies-kuoli-lasketteluonnettomuudessa
 ---
 
 Turun kaupunki tiedottaa, että käytöstä poistettuun Kaerlan päiväkotikiinteistöön on murtauduttu. Murto tapahtui 6.–11. maaliskuuta välisenä aikana. Varkaat pääsivät käsiksi arkistoituun materiaaliin, joka sisälsi sekä lasten että aikuisten henkilötietoja.

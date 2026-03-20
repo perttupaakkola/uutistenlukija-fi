@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - venäjä
   - sota
+related_articles:
+  - 2026-03-16-kenia-venaja-lupaa-lopettaa-kenialaisten-varvaamisen-sotaan
+  - 2026-03-16-moskovaan-kohdistui-massiivinen-lennokki-isku
+  - 2026-03-20-venajalla-uusi-salamurhayksikko-paljastui-tutkivista-journal
 ---
 
 Ulkopoliittisen instituutin ohjelmajohtaja Arkady Moshes arvioi, että Venäjä ja Eurooppa ovat tilanteessa, jossa vuoropuhelu ei välttämättä ole tuotteen kannalta hyödyllistä. Hän näkee, että Venäjän hallinnon katsotaan jatkavan toimiaan ei-pelottelevasti vaan vahvistaen vaikutusvaltaansa alueella. Moshes painottaa, että maiden väliset kiinnostukset ovat erilaisia, eikä tulevia keskusteluja pitäisi odottaa ideaalitilanteessa. Hän korostaa, että Venäjän toiminnat ovat alueellisesti painottuneita ja vuoropuhelu siihen ei välttämättä johda toivotulle tulokseen.

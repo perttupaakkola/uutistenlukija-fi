@@ -20,6 +20,10 @@ tags:
   - sää
   - sota
   - lappi
+related_articles:
+  - 2026-03-18-viikonloppuna-jopa-14-astetta-lauha-ilma-leviaa-koko-maahan
+  - 2026-03-15-ensi-viikosta-tulossa-poikkeuksellisen-lammin-lampotilat-huh
+  - 2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy
 ---
 
 Lapissa on koettu tänä joulukuussa poikkeuksellinen talvisateiden kausi, kun lunta on mitattu yli metri. Erityisesti Sodankylän ja Rovaniemen alueilla lumisateet ovat olleet runsaita, minkä myötä talviset maisemat ovat luoneet kauniin, mutta myös haastavan tilanteen paikalliselle infrastruktuurille. Lämpötilat ovat pysytelleet nollan tuntumassa, mikä on edesauttanut lumen kertymistä ja uhkaa teiden liukkautta.

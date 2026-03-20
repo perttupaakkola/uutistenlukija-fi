@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - politiikka
   - kansainvälinen
+related_articles:
+  - 2026-03-16-ranskan-kuntavaalien-ensimmainen-kierros-vahvisti-aarilaitoj
+  - 2026-03-16-pohjois-koreassa-jarjestettiin-vaalit-aanestysaktiivisuus-la
+  - 2026-03-16-ugandan-oppositiojohtaja-pakeni-maasta-henkensa-puolesta
 description: "Ranskassa äänestetään paikallisvaalien ensimmäisellä kierroksella, ja tulokset saattavat ennakoida ensi vuoden presidentinvaaleja."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Ranskan paikallisvaalit kiinnostavat presidentinvaalien ennusmerkkinä"

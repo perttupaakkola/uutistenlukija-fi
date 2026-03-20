@@ -21,6 +21,10 @@ tags:
   - politiikka
   - kokoomus
   - luonto
+related_articles:
+  - 2026-03-20-kokoomuksen-varapuheenjohtajakisa-herattaa-kiinnostusta-ikon
+  - 2026-03-20-ikonen-luopuu-varapuheenjohtajan-paikasta-kokoomuksessa
+  - 2026-03-20-kokoomuksen-varapuheenjohtajan-paikka-herattaa-kiinnostusta
 ---
 
 Kokoomuksen varapuheenjohtajaksi tavoittelevat kansanedustajat ovat aktivoituneet, kun kunta- ja alueministeri Anna-Kaisa Ikonen ilmoitti luopuvansa varapuheenjohtajan tehtävästä kuuden vuoden jälkeen. Ikosen päätös on avannut mahdollisuuden uudelle johtajuudelle puolueessa, ja useat kokoomuksen kansanedustajat ovat jo ilmaisseet kiinnostuksensa paikkaan.

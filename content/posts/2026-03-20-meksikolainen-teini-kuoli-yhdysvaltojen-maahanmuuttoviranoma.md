@@ -20,6 +20,10 @@ tags:
   - yhdysvallat
   - pakolaiset
   - murha
+related_articles:
+  - 2026-03-19-nuori-suomalaisnainen-sai-surmansa-italiassa-epailty-kuljett
+  - 2026-03-19-yhdysvaltojen-ja-israelin-valinen-suhde-iranin-sodassa-kysee
+  - 2026-03-19-eu-aanestaa-ensi-viikolla-kauppasopimuksesta-yhdysvaltojen-k
 ---
 
 19-vuotias meksikolainen Royer Perez-Jimenez on kuollut Yhdysvaltojen maahanmuuttoviranomaisten (ICE) pidätettynä. Hänen kuolemansa tapahtui Glades County Detention Centerissä Floridassa, ja viranomaisten mukaan kuolema on oletettavasti itsemurha. Kuitenkin virallista kuolinsyytä tutkitaan edelleen.

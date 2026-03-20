@@ -21,6 +21,10 @@ tags:
   - verotus
   - hallitus
   - inflaatio
+related_articles:
+  - 2026-03-17-sttk-keskipalkkaisten-ostovoima-ei-ole-toipunut
+  - 2026-03-18-yhdysvaltain-keskuspankki-pitaa-ohjauskoron-ennallaan
+  - 2026-03-17-australian-keskuspankki-nosti-ohjauskorkoa-jalleen
 ---
 
 Chalmers on todennut, että budjetti sisältää useita uudistuksia, jotka vaikuttavat verotukseen ja julkisiin palveluihin. Hänen mukaansa suunnitelmat ovat tarpeellisia talouden vakauden varmistamiseksi. Budjetin odotetaan olevan valmis tämän vuoden aikana, jolloin se voi vaikuttaa kansalaisten hyvinvointiin. Hallitus pyrkii myös kiihdyttämään talouskasvua, joka on viime vuosina hidastunut. Nämä uudistukset herättävät keskustelua ja kritiikkiä eri tahoilta.

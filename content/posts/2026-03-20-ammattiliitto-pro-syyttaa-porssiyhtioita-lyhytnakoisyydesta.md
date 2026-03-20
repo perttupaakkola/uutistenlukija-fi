@@ -19,6 +19,10 @@ tags:
   - talous
   - pörssi
   - yritys
+related_articles:
+  - 2026-03-20-ay-liiton-johtaja-syyttaa-porssiyhtioita-lyhytnakoisyydesta
+  - 2026-03-20-pron-puheenjohtaja-syyttaa-suomalaisia-porssiyhtioita-lyhytn
+  - 2026-03-20-ay-liitto-kritisoi-porssiyhtioita-niiden-osinkopolitiikasta
 ---
 
 Ammattiliitto Pro on esittänyt syytöksiä Suomen pörssiyhtiöitä kohtaan, väittäen niiden valinneen lyhytnäköisen strategian osinkojen jakamisessa. Liiton puheenjohtaja Niko Simola totesi, että yhtiöt jakavat omistajilleen ennätyksellisiä osinkoja, vaikka taloudellinen tilanne on heikko. Simolan mukaan tämä kertoo johdon haluttomuudesta hakea kasvua tai investoida tulevaisuuteen. "Suomalaisissa yrityksissä ei keksitä muuta kohdetta rahalle kuin omistajien palkitseminen", hän moittii.

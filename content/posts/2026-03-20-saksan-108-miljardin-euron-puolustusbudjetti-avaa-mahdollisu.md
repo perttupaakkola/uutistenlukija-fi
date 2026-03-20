@@ -21,6 +21,10 @@ tags:
   - talous
   - puolustus
   - oulu
+related_articles:
+  - 2026-03-20-saksan-puolustusbudjetti-avaa-ovia-suomalaisille-yrityksille
+  - 2026-03-20-saksan-108-miljardin-euron-puolustusbudjetti-avaa-markkinoit
+  - 2026-03-20-saksalais-suomalainen-yhteistyo-puolustusteollisuudessa-vahv
 ---
 
 Saksa tavoittelee syvempää yhteistyötä Suomen puolustusteollisuuden kanssa, mikä avaa uusia markkinoita suomalaisille yrityksille. Saksalais-suomalaisen kauppakamarin toimitusjohtaja Jan Feller vieraili Oulussa ja korosti Saksan olevan Euroopan suurin kansantalous, joka investoi merkittävästi oman puolustuskykynsä parantamiseen. Tällä hetkellä Saksan puolustusbudjetti on yli 108 miljardia euroa.

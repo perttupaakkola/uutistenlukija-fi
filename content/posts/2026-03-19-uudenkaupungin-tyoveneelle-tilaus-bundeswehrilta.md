@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - puolustus
   - yhdysvallat
+related_articles:
+  - 2026-03-15-keravalainen-lotta-vei-jatkosodan-sotilaiden-sydamet-viihdyt
+  - 2026-03-15-nato-harjoittelee-haavoittuneiden-evakuointia-suomesta-norja
+  - 2026-03-15-orpo-oslon-kokouksessa-pohjoismaat-ja-kanada-keskustelivat-u
 ---
 
 Uudenkaupungin työvene Oy on solminut sopimuksen miehistönkuljetusaluksen toimittamisesta Saksan puolustusvoimille, Bundeswehrille. SWATH-tyyppinen alus, joka on suunniteltu kuljettamaan enimmillään 60 henkilöä, sijoittuu Neustadt in Holsteiniin. Alus siirtää henkilöstöä laivastosatamasta avomerelle suurempiin aluksiin.

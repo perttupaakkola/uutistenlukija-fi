@@ -21,6 +21,10 @@ tags:
   - kirjallisuus
   - lapset
   - liikenne
+related_articles:
+  - 2026-03-18-eduskunnan-poissaolotilastot-herattavat-keskustelua-perhevap
+  - 2026-03-19-selvitys-sosiaali-ja-terveyspalveluiden-rahoitukseen-vaikutt
+  - 2026-03-18-murtovarkaat-veivat-henkilotietoja-turun-paivakodista
 ---
 
 Eduskunnan tasa-arvoneuvosto ehdotti poissaolojen kirjaamisen muuttamista. Uuden käytännön mukaan poissaoloista tulisi huomioida myös henkilökohtaiset syyt, kuten perhevapaat. Muutos pyrkii varmistamaan, että pitkäaikaiset poissaolot eivät vääristä eduskunnan työtuntien arviointia.

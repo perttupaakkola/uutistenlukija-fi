@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - energia
   - kansainvälinen
+related_articles:
+  - 2026-03-20-iberian-niemimaan-sahkokatkon-syyt-selvitettiin-monia-tekijo
+  - 2026-03-20-iberian-niemimaan-sahkokatkon-taustalla-useita-tekijoita
+  - 2026-03-20-raportti-iberian-niemimaan-sahkokatkon-syyt-moninaiset
 ---
 
 Iberian niemimaata viime vuoden huhtikuussa vaivannut laaja sähkökatko oli seurausta useista syistä, selviää asiantuntijapaneelin tuoreesta raportista. Katkon aikana sähköt pimenivät laajalla alueella, joka kattoi Espanjan, Portugalin ja osan Lounais-Ranskaa. Raportti vahvistaa, että alueen sähköjärjestelmä ei kyennyt hallitsemaan jännitepiikkejä, mikä johti sähkönjakelun katkeamiseen.

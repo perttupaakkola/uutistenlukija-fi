@@ -21,6 +21,10 @@ tags:
   - politiikka
   - öljy
   - sää
+related_articles:
+  - 2026-03-15-juutinrauman-silta-suljettu-onnettomuuden-vuoksi
+  - 2026-03-16-eu-maiden-ulkoministerit-kokoontuvat-brysselissa
+  - 2026-03-17-kuuban-sahkoverkko-romahti-kymmenen-miljoonaa-ihmista-jai-pi
 ---
 
 Australian energiaministeri Chris Bowen kehotti kansalaisia lopettamaan polttoaineen hamstraamisen. Bowen kuvaili Bunnings-rautakaupaketjun kanisteriostoksia epäaustralialaiseksi toiminnaksi. Polttoainekriisi on saanut ihmiset täyttämään kanistereita varastoon.

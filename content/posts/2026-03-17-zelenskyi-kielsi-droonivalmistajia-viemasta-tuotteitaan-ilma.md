@@ -20,6 +20,10 @@ tags:
   - ukraina
   - hallitus
   - sota
+related_articles:
+  - 2026-03-17-zelenskyi-kielsi-droonivalmistajia-myymasta-tuotteita-ulkoma
+  - 2026-03-16-kenia-venaja-lupaa-lopettaa-kenialaisten-varvaamisen-sotaan
+  - 2026-03-20-australian-paaministeri-sai-huudot-moskeijassa-ramadan-tapah
 ---
 
 Ukrainan presidentti Volodymyr Zelenskyi allekirjoitti ukaasin, joka kieltää ukrainalaisia droonivalmistajia myymästä tuotteitaan ulkomaille ilman hallituksen lupaa. Päätös tulee sodan 1481. päivänä, jolloin Ukraina tarvitsee jokaisen valmistamansa droonin omaan puolustukseensa.

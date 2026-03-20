@@ -15,6 +15,10 @@ tags:
   - puolustus
   - sota
   - liikenne
+related_articles:
+  - 2026-03-16-kenia-venaja-lupaa-lopettaa-kenialaisten-varvaamisen-sotaan
+  - 2026-03-17-zelenskyi-kielsi-droonivalmistajia-myymasta-tuotteita-ulkoma
+  - 2026-03-18-asiantuntija-kommentoi-putinin-kanssa-kaytavaa-keskustelua-v
 description: "Venäjän ilmapuolustus torjuu lauantaina 65 lennokkia, jotka olivat suunnattuja Moskovaan. Pormestari Sobjanin vahvistaa tapahtuman olevan yksi suurimmista…"
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Moskovaan kohdistui massiivinen lennokki-isku"

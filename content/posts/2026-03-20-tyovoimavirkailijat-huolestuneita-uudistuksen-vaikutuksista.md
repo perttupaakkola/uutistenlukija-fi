@@ -20,6 +20,10 @@ tags:
   - budjetti
   - sää
   - oulu
+related_articles:
+  - 2026-03-16-punkkikausi-kaynnistyi-ennatyksellisen-varhain-havaintoja-ou
+  - 2026-03-18-romaniyhdistys-arvioi-vigeliuksen-puheenvuorot-loukkaaviksi
+  - 2026-03-18-asteroidiloydos-sisaltaa-elaman-perusaineet
 ---
 
 Oulun seudun työllisyysalueen johtaja Mari Rautiainen varoittaa toimeentulotuen hakijoiden määrän kasvusta työllispalveluissa. Uudistus, joka tuli voimaan maaliskuussa, ohjaa voimakkaasti uusia asiakkaita työllispalveluihin, mutta sen kyky auttaa työllistymisessä on kyseenalainen. Rautiaisen mukaan monet uudet asiakkaat eivät omaa työkykyä, mikä lisää painetta palveluille.

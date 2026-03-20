@@ -20,6 +20,10 @@ tags:
   - politiikka
   - talous
   - yritys
+related_articles:
+  - 2026-03-17-victorian-liberaalit-yllattivat-humoristisella-urheiluvideol
+  - 2026-03-16-lentoyhtiot-kiertavat-sodan-sulkemia-ilmatiloja
+  - 2026-03-17-australian-keskuspankki-paatti-koroista-polttoainehintojen-n
 ---
 
 Australian One Nation -puolueen johtaja Pauline Hanson on toistuvasti laiminlyönyt velvollisuutensa ilmoittaa kaivosmiljardööri Gina Rinehartin kustantamista lennoista.

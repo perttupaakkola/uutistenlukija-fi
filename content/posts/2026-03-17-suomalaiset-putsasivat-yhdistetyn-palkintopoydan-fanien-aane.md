@@ -19,6 +19,10 @@ tags:
   - urheilu
   - hiihto
   - kilpailu
+related_articles:
+  - 2026-03-16-lindsey-vonn-ei-sulje-pois-paluuta-en-tarvitse-kenenkaan-lup
+  - 2026-03-17-osullivan-50-tavoittelee-paluuta-huipulle-jos-selvian-tasta
+  - 2026-03-17-fabregas-on-nostanut-italian-pikkuseuran-mestarien-liigan-ky
 ---
 
 Suomalaisurheilijat keräsivät yhdistetyn kauden päätöspalkinnoista leijonanosan. Kansainvälinen hiihtoliitto jakoi palkinnot kauden päätteeksi Oslossa järjestetyssä tilaisuudessa.

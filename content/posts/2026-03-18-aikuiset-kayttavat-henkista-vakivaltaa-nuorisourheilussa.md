@@ -21,6 +21,10 @@ tags:
   - jalkapallo
   - lapset
   - helsinki
+related_articles:
+  - 2026-03-18-suomalainen-urheilukulttuuri-sisaltaa-haastetta-seka-kayttay
+  - 2026-03-18-barcelona-teki-historiaa-jalkapallon-mestarien-liigassa
+  - 2026-03-20-essi-kivisto-lopetti-vg-62n-paavalmentajan-tehtavat-mutta-ei
 ---
 
 Valmentaja voi huutamalla murskata nuoren itsetunnon. Helsingin yliopiston tutkimuksessa selvisi henkisen väkivallan yleisyys suomalaisessa urheilussa. Vastaajia tuli jalkapallosta, jääkiekosta, voimistelusta ja hiihdosta.

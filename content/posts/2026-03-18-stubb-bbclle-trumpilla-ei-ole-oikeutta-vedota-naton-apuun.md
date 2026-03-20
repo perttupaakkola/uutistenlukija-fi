@@ -21,6 +21,10 @@ tags:
   - sota
   - yhdysvallat
   - puolustus
+related_articles:
+  - 2026-03-16-israel-aloitti-laajat-iskut-iraniin-trump-sanoo-ettei-usa-ol
+  - 2026-03-16-valtonen-torjuu-ajatuksen-natosta-iranin-operaation-osapuole
+  - 2026-03-17-stubb-kehottaa-nato-liittolaisia-ottamaan-trumpin-vaatimukse
 ---
 
 Presidentti Alexander Stubb totesi BBC:n haastattelussa, ettei Yhdysvaltain presidentti Donald Trump voi vedota Naton yhteiseen puolustukseen Iranin sodan yhteydessä. Stubbin mukaan Nato on puolustusliitto, ja sen artiklat on kirjoitettu hyökkäyksen kohteeksi joutuneen jäsenmaan suojaksi.

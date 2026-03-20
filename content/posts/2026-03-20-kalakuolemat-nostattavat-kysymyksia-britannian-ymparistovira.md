@@ -20,6 +20,10 @@ tags:
   - hallitus
   - oikeus
   - luonto
+related_articles:
+  - 2026-03-20-mp-kysyi-hallitukselta-kalakuolemista-dykeissa
+  - 2026-03-20-mp-kysyi-parlamentissa-kalakuolemista-dyke-vedessa
+  - 2026-03-20-mp-kyseenalaistaa-hallituksen-toimia-kalakuolemista
 ---
 
 Entinen ympäristöministeri Steve Barclay on kysynyt parlamentissa, miksi kukaan ei ole vielä syytettynä, kun noin 900 kalaa löydettiin kuolleina Kings Delphin alueelta Cambridgeshiressä syyskuussa 2024. Barclay vaati hallitusta selvittämään syitä kalakuolemille, jotka johtuivat korkeasta ammoniakki- ja matalasta happitasosta.

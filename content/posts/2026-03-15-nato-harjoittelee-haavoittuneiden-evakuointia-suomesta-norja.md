@@ -11,6 +11,10 @@ tags:
   - puolustus
   - lääketiede
   - väestö
+related_articles:
+  - 2026-03-16-suomeen-perustetaan-nato-joukko-valmista-heinakuuhun-menness
+  - 2026-03-15-keravalainen-lotta-vei-jatkosodan-sotilaiden-sydamet-viihdyt
+  - 2026-03-15-orpo-oslon-kokouksessa-pohjoismaat-ja-kanada-keskustelivat-u
 description: "Nato harjoittelee haavoittuneiden suomalaissotilaiden evakuointia Norjaan. Suunnitelmat sisältävät myös siviiliväestön siirtoja turvallisuustilanteen"
 image: "https://images.unsplash.com/photo-1564812761548-d2e62622ca5e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxOQVRPJTIwbWlsaXRhcnklMjBoYXJqb2l0dGVsZWUlMjBoYWF2b2l0dHVuZWlkZW4lMjBldmFrdW9pbnRpYXxlbnwxfDB8fHwxNzc0MDA3NTQ5fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Nato harjoittelee haavoittuneiden evakuointia Suomesta Norjaan"

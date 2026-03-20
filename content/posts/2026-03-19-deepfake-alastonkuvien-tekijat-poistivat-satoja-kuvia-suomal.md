@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - tekoäly
   - politiikka
+related_articles:
+  - 2026-03-18-pahkinarinteen-tulipalossa-kuollut-perhe-haudattiin-vantaall
+  - 2026-03-19-asuinalueen-jatepisteet-tayttyvat-rosasta
+  - 2026-03-20-selkeat-vuodenajat-helpottavat-lietoon-palannutta-lakkitehda
 description: "Deepfake-alastonkuvien tekijät ovat poistanut satoja kuvia suomalaisnaisista Ylen tutkivan toimituksen yhteydenoton myötä."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Deepfake-alastonkuvien tekijät poistivat satoja kuvia suomalaisnaisista"

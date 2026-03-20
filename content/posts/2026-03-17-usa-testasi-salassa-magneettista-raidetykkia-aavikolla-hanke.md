@@ -20,6 +20,10 @@ tags:
   - energia
   - yhdysvallat
   - liikenne
+related_articles:
+  - 2026-03-17-suomalaisyritys-kehitti-tavan-tuottaa-vetya-ilman-sahkoverkk
+  - 2026-03-18-donut-lab-testasi-akkuaan-vergen-sahkomoottoripyorassa
+  - 2026-03-16-kilpailu-maailmanlaajuisesti-tunnustetusta-tekoalyvapaa-logo
 ---
 
 Yhdysvallat testasi helmikuussa 2025 sähkömagneettista raidetykkiä aavikko-olosuhteissa. Testi pidettiin salaisena vuoden ajan ennen kuin tieto siitä tuli julkisuuteen.

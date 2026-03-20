@@ -18,6 +18,10 @@ draft: false
 tags:
   - tiede
   - tutkimus
+related_articles:
+  - 2026-03-18-iso-britannian-hiukkasfysiikan-saavutukset-uhkaavat-joutua-l
+  - 2026-03-19-abo-akademin-loydos-voi-tuoda-uusia-hoitoja-aggressiiviseen
+  - 2026-03-19-maapallon-mannerlaatat-liikkuivat-jo-348-miljardia-vuotta-si
 ---
 
 Neanderthalien elämäntapatutkimukset ovat syventäneet ymmärrystämme heidän arjestaan. Uusimmat löydöt viittaavat siihen, että neandertalilaiset käyttivät kihisevää tervaa haavojensa antiseptisinä aineina, eivät vain koristelussa tai sivelyssä. Tämän ansiosta heidän ymmärryksensä luonnon antiseptisistä ominaisuuksista oli kehittyneempää kuin aiemmin luultiin. Näin ollen neandertalit olivat paitsi varhaisia ihmisen esi-isiä myös kehittyneitä lääkintätaitajia.

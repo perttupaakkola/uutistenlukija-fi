@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - liikenne
   - politiikka
+related_articles:
+  - 2026-03-15-ilmanlaatu-heikentynyt-suomessa-pienhiukkaset-kulkeutuve
+  - 2026-03-16-suomalaiset-rauhanturvaajat-joutuivat-tulituksen-kohteeksi-l
+  - 2026-03-17-rekka-syttyi-tuleen-valtatie-7lla-porvoossa-kyydissa-muovija
 ---
 
 Varha on siirtänyt 8 000 karhukirjettä ulosottoon. Hyvinvointialue korvaa laskutuksensa katveisiin jääneet summat sen jälkeen, kun asiakasmaksujärjestelmä on ollut poissa pelistä kuusi kuukautta. Kolme kuukautta kestänyt sisäinen selvitys ei löytänyt vikaa Varhan omista järjestelmistä, vaan epäselvyyksiä syntyi Postin terminaalien toiminnassa. Tarkempaa tietoa kirjeiden kohtalosta ei saada, koska Posti ei ole luovuttanut tilastoja menetetyistä lähetyksistä.

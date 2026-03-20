@@ -20,6 +20,10 @@ tags:
   - energia
   - sää
   - yleisurheilu
+related_articles:
+  - 2026-03-20-mette-baas-ennakkoluulottomasti-jatkoon-mm-halleissa
+  - 2026-03-16-formula-ykkosten-kaoottinen-alkukausi-nosti-nelja-puheenaihe
+  - 2026-03-16-jukurit-ikoni-jesper-piitulainen-jattaa-mikkelin-nuoruuden-p
 ---
 
 Suomalainen juoksija Mette Baas teki historiaa edetessään 400 metrin välieriin yleisurheilun MM-hallikilpailuissa Puolassa. Baas voitti oman eränsä erinomaisella tuloksella 51,42, mikä on uusi Suomen ennätys lyhyiltä radoilta. Hän paransi aiempaa ennätystään 23 sadasosalla ja näytti juoksevansa kärkipaikalla koko erän ajan.

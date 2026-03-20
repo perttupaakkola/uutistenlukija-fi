@@ -9,6 +9,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-15-neljan-miehen-joukko-pahoinpiteli-uhrin-rovaniemen-keskustas
+  - 2026-03-15-tutkija-lestadiolaiset-ohittivat-ansioituneimman-ehdokkaan-k
+  - 2026-03-17-karkuteille-lahtenyt-hevonen-putosi-jaihin-kemijoella
 description: "Viking Gloryn matkustajat jumittuivat laivaan yön yli, kun Viking Grace esti aikataulut. Päiväristeily muuttui odottamattomaksi seikkailuksi."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Viking Gloryn matkustajat jumittuivat laivaan yön yli – päiväristeily venyi odottamatta"

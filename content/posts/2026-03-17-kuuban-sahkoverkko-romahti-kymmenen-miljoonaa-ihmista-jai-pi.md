@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - energia
   - öljy
+related_articles:
+  - 2026-03-17-kuuban-sahkoverkko-romahti-ja-jatti-10-miljoonaa-ihmista-pim
+  - 2026-03-16-britannia-suunnittelee-miinanraivausdroonien-lahettamista-ho
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-avata-hormuzinsal
 ---
 
 Kuuban kansallinen sähköverkko romahti maanantaina. Maan verkonhaltija UNE ilmoitti, että noin kymmenen miljoonaa ihmistä jäi ilman sähköä.

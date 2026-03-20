@@ -20,6 +20,10 @@ tags:
   - budjetti
   - puolustus
   - oulu
+related_articles:
+  - 2026-03-20-saksan-108-miljardin-euron-puolustusbudjetti-avaa-mahdollisu
+  - 2026-03-20-saksan-puolustusbudjetti-avaa-ovia-suomalaisille-yrityksille
+  - 2026-03-20-saksa-investoi-108-miljardia-euroa-puolustusteollisuuteen-mi
 ---
 
 Saksan 108 miljardin euron puolustusbudjetti avaa uusia mahdollisuuksia suomalaisille yrityksille. Saksalais-suomalaisen kauppakamarin toimitusjohtaja Jan Feller vieraili Oulussa ja kertoi, että Saksa on kiinnostava markkina suomalaisille puolustusteollisuuden toimijoille. Saksalaisten kiinnostus keskittyy erityisesti viestintään, antureihin ja sensoritekniikkaan, mikä yhdistää saksalaisen potentiaalin ja suomalaisen osaamisen.

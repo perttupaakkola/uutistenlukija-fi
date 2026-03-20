@@ -21,6 +21,10 @@ tags:
   - rikos
   - oikeus
   - kirjallisuus
+related_articles:
+  - 2026-03-18-yhdysvalloissa-mies-menehtyi-vaimonsa-cocktailin-vaikutukses
+  - 2026-03-18-nainen-tuomittiin-murhasta-utahissa-ja-julkaisi-surukirjan
+  - 2026-03-19-kahdeksankymppinen-mies-puukotettiin-kuoliaaksi-malminkartan
 ---
 
 Utahissa tapahtui traaginen onnettomuus, kun mies kuoli käyttämänsä cocktailin vuoksi. Syyttäjän mukaan nainen, Kouri Richins, oli velkaa noin 4,5 miljoonaa dollaria ja uskoi saavansa perinnön miehensä kuoleman jälkeen. Hän tuomittiin törkeästä murhasta fentonyyliä sisältäneen cocktailin avulla.

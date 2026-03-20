@@ -21,6 +21,10 @@ tags:
   - lääketiede
   - opiskelijat
   - sää
+related_articles:
+  - 2026-03-18-laakarin-kriittiset-sanat-hyvinvointialueen-ostopalveluista
+  - 2026-03-18-tylsistyminen-tyossa-voi-johtaa-masennukseen-varoittaa-tutki
+  - 2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy
 ---
 
 Opiskelija kertoo olleensa huolissaan, kun hän kuuli tartuntatapauksista Britanniassa. Epidemiasta on tiedotettu rajoitetusti, mikä on herättänyt huolta opiskelijapiireissä. Terveydenhuolto pyrkii lisäämään tietoisuutta tilanteesta. Tartunnan saaneista on seurattu tilannetta lääketieteellisin keinoin, ja heihin on kohdennettu ennaltaehkäiseviä toimenpiteitä.

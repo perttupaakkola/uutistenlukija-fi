@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - yhdysvallat
   - politiikka
+related_articles:
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-avata-hormuzinsal
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
+  - 2026-03-17-stubb-kehottaa-nato-liittolaisia-ottamaan-trumpin-vaatimukse
 ---
 
 Yhdysvaltain hallinto on ryhtynyt painostamaan Kuubaa maan johdon vaihtamiseksi. Presidentti Donald Trump ilmaisi asian suorasanaisesti maanantaina.

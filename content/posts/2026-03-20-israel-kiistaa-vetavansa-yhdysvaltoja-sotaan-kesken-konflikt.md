@@ -21,6 +21,10 @@ tags:
   - israel
   - sota
   - yhdysvallat
+related_articles:
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-tilanne-kehitty
+  - 2026-03-20-israelin-hallitus-kiistaa-yhdysvaltojen-sotaan-vetamisen-syy
+  - 2026-03-20-israelin-hallitus-kiistaa-yhdysvaltojen-sotaan-vetamisen
 ---
 
 Israelin hallitus on jyrkästi kiistänyt väitteet siitä, että se olisi vetämässä Yhdysvaltoja sotaan meneillään olevan konfliktin aikana. Asia on ajankohtainen, sillä alueen levottomuudet ovat viime viikkoina voimistuneet, mikä on herättänyt huolta laajemmista sotilaallisista toimista. Yhdysvallat on perinteisesti ollut yksi Israelin tärkeimmistä tukijoista, mutta hallituksen eri toimenpiteet ovat herättäneet keskustelua siitä, kuinka syvälle maa voisi osallistua alueelle.

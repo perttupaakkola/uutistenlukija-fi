@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - verotus
   - politiikka
+related_articles:
+  - 2026-03-17-verovilppi-matkakulukorvauksissa-osoittautui-laajamittaiseks
+  - 2026-03-19-turun-keskustaan-tulee-ensimmainen-hypermarketti-wiklund-saa
+  - 2026-03-18-lidlin-kuitti-paljasti-yllatyksen-harvemmin-tuotteita-osteta
 ---
 
 Verohallinto havaitsi vuonna 2025 yli miljardin euron edestä virheitä ja väärinkäytöksiä verotuksessa. Summa on kaksinkertainen edellisvuoteen verrattuna.

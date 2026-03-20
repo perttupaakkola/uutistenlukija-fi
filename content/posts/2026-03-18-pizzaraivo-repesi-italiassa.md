@@ -21,6 +21,10 @@ tags:
   - luonto
   - kulttuuri
   - lapset
+related_articles:
+  - 2026-03-20-ikonen-luopuu-varapuheenjohtajan-paikasta-kokoomuksessa
+  - 2026-03-20-kokoomuksen-varapuheenjohtaja-anna-kaisa-ikonen-luopuu-tehta
+  - 2026-03-20-kokoomuksen-varapuheenjohtajan-pesti-kiinnostaa-useita-ikone
 ---
 
 Milano ja koko Italia ovat joutuneet keskustelun keskelle pizzanvalmistuksen ympäristövaikutuksista. Tutkimusten mukaan perinteiset puu-uunit voivat päästää ilmaan hiilidioksidia, hiukkasia ja orgaanisia aineita. Erityisesti vanhemmat uunit aiheuttavat merkittävää päästöjä. Pizzan ystävät ja valmistajat ovat ilmaisseet huolensa, sillä tulokset voivat vaikuttaa italialaiseen ruokakulttuuriin.

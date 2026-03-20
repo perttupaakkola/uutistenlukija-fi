@@ -19,6 +19,10 @@ tags:
   - urheilu
   - snooker
   - kilpailu
+related_articles:
+  - 2026-03-17-osullivan-50-tavoittelee-paluuta-huipulle-jos-selvian-tasta
+  - 2026-03-20-ronnie-osullivan-rikkoi-snookerin-ennatyksen-kiinassa
+  - 2026-03-20-ronnie-osullivan-teki-snooker-historiaa-kiinassa
 ---
 
 Snookerin kaikkien aikojen menestyneimpiin pelaajiin kuuluva Ronnie O'Sullivan täytti joulukuussa 50 vuotta, mutta lopettaminen ei ole mielessä. Englantilainen kertoo tehneensä lujasti töitä saadakseen pelinsä takaisin entiselle tasolle.

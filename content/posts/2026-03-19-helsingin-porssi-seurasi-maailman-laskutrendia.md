@@ -15,6 +15,10 @@ tags:
   - öljy
   - pörssi
   - sota
+related_articles:
+  - 2026-03-19-helsingin-porssi-avautui-laskuun-lahi-idan-sodan-kiihdyttaes
+  - 2026-03-19-euroopan-porssit-avasivat-jyrkkaan-laskuun-oljyn-hinnan-nous
+  - 2026-03-19-euroopan-porssit-syoksyivat-lahi-idan-sodan-takia
 description: "Helsingin pörssi avautuu torstaina lähes kahden prosentin miinuksella, seuraten maailman laajaa laskutrendiä Lähi-idän sodan vuoksi."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Helsingin pörssi seurasi maailman laskutrendiä"

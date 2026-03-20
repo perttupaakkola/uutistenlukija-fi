@@ -21,6 +21,10 @@ tags:
   - tekoäly
   - teknologia
   - liikenne
+related_articles:
+  - 2026-03-19-startup-yritysten-perustajat-tarvitsevat-tyokaluja-konflikti
+  - 2026-03-17-suomalaisyritys-kehitti-tavan-tuottaa-vetya-ilman-sahkoverkk
+  - 2026-03-17-yhdysvaltain-arvopaperimarkkinaviranomainen-harkitsee-siirty
 ---
 
 Kiinalainen teknologiayritys siirtyy 7 nanometrin valmistusteknologiaan. Muutos osana maan pyrkimystä vähentää ulkomaisesta chip-teknologiasta riippuvuutta. Uusi tuotantotapa voi edistää paikallisia tekoäly- ja tietokonesovelluksia.

@@ -20,6 +20,10 @@ tags:
   - turvallisuus
   - tekoäly
   - lapset
+related_articles:
+  - 2026-03-17-australian-viranomainen-lapsiin-kohdistuva-hyvaksikayttomate
+  - 2026-03-19-iran-yritti-iskua-lapsiperheeseen-ruotsissa-toimeksianto-val
+  - 2026-03-19-ruotsissa-estettiin-hyokkays-lapsiperheeseen
 ---
 
 Australian verkkoturvallisuusviranomainen eSafety on varoittanut Elon Muskin omistamaa X-palvelua siitä, että lapsiin kohdistuva seksuaalinen hyväksikäyttömateriaali on alustalla "erityisen rakenteellinen" ongelma. Viranomaisen mukaan materiaali on X:ssä helpommin saavutettavissa kuin millään muulla valtavirtapalvelulla.

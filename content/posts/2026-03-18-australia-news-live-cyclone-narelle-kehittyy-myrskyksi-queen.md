@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - iran
   - jalkapallo
+related_articles:
+  - 2026-03-16-iranin-naisten-jalkapallojoukkueen-kapteeni-poistui-australi
+  - 2026-03-16-iranin-naisten-jalkapallomaajoukkueen-kapteeni-luopui-turvap
+  - 2026-03-18-iranin-jalkapallonaisia-juhlitaan-kotiinpaluun-jalkeen-teher
 ---
 
 Queenslandin rannikko valmistautuu tulivuorihurrikaani Narellen vaikutuksiin, ja alueelle odotetaan vahvoja tuulia ja mahdollisia evakuointeja. Varautumistoimet ovat käynnissä, ja viranomaiset kehottaa asukkaita varautumaan mahdollisiin hälytystilanteisiin.

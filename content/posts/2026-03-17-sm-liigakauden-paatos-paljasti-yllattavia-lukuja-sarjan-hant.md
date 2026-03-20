@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jääkiekko
   - viihde
+related_articles:
+  - 2026-03-18-benjamin-rautiainen-valittiin-liigan-runkosarjan-parhaaksi-p
+  - 2026-03-19-kiekko-espoo-marssi-auroraliigan-finaaleihin-hifk-venyi-voit
+  - 2026-03-20-sb-pro-varmisti-paikan-pudotuspeleissa
 ---
 
 SM-liigan runkosarjan loppuvaihe nosti esiin häntäpään joukkueiden heikkoja tilastoja. Erityisesti yhden seuran luvut herättivät ihmetystä.

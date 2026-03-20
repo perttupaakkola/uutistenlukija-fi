@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - yhdysvallat
   - politiikka
+related_articles:
+  - 2026-03-20-suomalainen-swype-haastaa-woltin-ruokalahettimarkkinoilla
+  - 2026-03-16-suomalaiset-rauhanturvaajat-joutuivat-tulituksen-kohteeksi-l
+  - 2026-03-18-trumpin-naapurit-vaativat-taukoa-hiljaisuudelle-mar-a-lagoss
 ---
 
 Filosofi Frank Martela on nostanut esiin huolen Suomen demokratian tilasta, vaikka maa on jälleen kerran nimetty maailman onnellisimmaksi. Martelan mukaan onnellisuuden saavuttaminen ei riitä, jos demokratia heikkenee. Hän toteaa, että useat maat, mukaan lukien Yhdysvallat, ovat luisumassa kohti autokratiaa, mikä on vaaraksi myös Suomelle. Martelan mukaan demokratiaindeksi antaa viitteitä siitä, mihin suuntaan yhteiskunta on matkalla.

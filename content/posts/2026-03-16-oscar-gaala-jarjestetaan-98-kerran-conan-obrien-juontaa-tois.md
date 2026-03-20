@@ -13,6 +13,10 @@ tags:
   - kulttuuri
   - elokuva
   - taide
+related_articles:
+  - 2026-03-16-oscar-gaalassa-palkittiin-one-battle-after-another-ja-sinner
+  - 2026-03-16-oscar-gaala-nakyy-suorana-suomenkielisella-juonnolla
+  - 2026-03-16-humoristinen-draamaelokuva-one-battle-after-another-kahmi-en
 description: "Oscar-gaala järjestetään 98. kerran Los Angelesissa, ja Conan O'Brien juontaa tilaisuuden toista kertaa peräkkäin. Palkintoja jaetaan 23 kategoriassa."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Oscar-gaala järjestetään 98. kerran – Conan O'Brien juontaa toistamiseen"

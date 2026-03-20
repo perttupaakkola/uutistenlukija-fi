@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - nato
   - sää
+related_articles:
+  - 2026-03-16-suomeen-perustetaan-nato-joukko-valmista-heinakuuhun-menness
+  - 2026-03-17-cold-response-harjoitus-testaa-naton-kykya-toimia-arktisessa
+  - 2026-03-17-cold-response-harjoitus-testaa-naton-valmiutta-arktisella-al
 ---
 
 Kapteeni Maggie Carpenter on ensimmäistä kertaa Suomessa osallistumassa Naton suurharjoitukseen, Cold Response 26:een. Hänen matkansa kuitenkin alkoi ongelmista, kun Yhdysvaltain merijalkaväen ilmatankkauskone, C-130 Hercules, kohtasi vaikeuksia ylittäessään Atlantin. Kapteeni David Leesman kuvasi tilannetta hyväksi harjoitukseksi todellisen maailman ongelmille.

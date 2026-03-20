@@ -20,6 +20,10 @@ tags:
   - jalkapallo
   - iran
   - yhdysvallat
+related_articles:
+  - 2026-03-18-iranin-jalkapallojoukkueet-palasivat-kotiin-teheraniin
+  - 2026-03-16-iranin-naisten-jalkapallojoukkueen-kapteeni-poistui-australi
+  - 2026-03-16-iranin-naisten-jalkapallomaajoukkueen-kapteeni-luopui-turvap
 ---
 
 Iranin naisten jalkapallomaajoukkue palasi tänään Iranin pysyvälle kotikentälleen. Joukkue saapui rajan yli Turkin kautta Teheraniin, missä suuri joukko faneja ja viranomaisia odotti juhlavasti. Matkalla he saivat osakseen lämpimiä tervehdyksiä ja riemunkiljaisuja.

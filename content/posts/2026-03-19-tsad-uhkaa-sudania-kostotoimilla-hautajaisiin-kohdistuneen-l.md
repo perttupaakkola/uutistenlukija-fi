@@ -14,6 +14,10 @@ tags:
   - puolustus
   - turvallisuus
   - murha
+related_articles:
+  - 2026-03-19-tsad-uhkaa-kostaa-sudanille-droonihyokkayksen-jalkeen
+  - 2026-03-17-pakistanin-ilmaisku-tappoi-yli-400-ihmista-kabulissa
+  - 2026-03-16-moskovaan-kohdistui-massiivinen-lennokki-isku
 description: "Tšadin presidentti Idris Mahamat Déby valmistautuu kostotoimiin Sudanin hyökkäysten vuoksi, jotka tappoivat hautajaisissa 17 ihmistä Tinén kaupungissa."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Tšad uhkaa Sudania kostotoimilla hautajaisiin kohdistuneen lennokki-iskun jälkeen"

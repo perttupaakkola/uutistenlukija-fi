@@ -21,6 +21,10 @@ tags:
   - hallitus
   - kokoomus
   - ukraina
+related_articles:
+  - 2026-03-15-orpo-oslon-kokouksessa-pohjoismaat-ja-kanada-keskustelivat-u
+  - 2026-03-19-suomi-voi-saada-sanktioita-susien-karhujen-ja-ilvesten-kiint
+  - 2026-03-19-eu-harkitsee-sanktioita-suomelle-suurpetojen-metsastyksesta
 ---
 
 Kokoomuksen europarlamentaarikko Aura Salla on esittänyt vaatimuksen Unkarin erottamiseksi Euroopan unionista. Salla perustelee vaatimustaan Unkarin nykyisessä Ukraina-politiikassa, joka uhkaa koko unionin poliittista uskottavuutta. Hän nostaa esiin pääministeri Viktor Orbánin päätöksen estää 90 miljardin euron hätälainapaketin ohjaaminen Ukrainalle, mikä on osa EU:n yhteistä tukea alueen kriisissä.

@@ -18,6 +18,10 @@ draft: false
 tags:
   - pankki
   - sää
+related_articles:
+  - 2026-03-16-valkoisen-talon-kansliapaallikko-susie-wiles-sairastaa-rinta
+  - 2026-03-18-fed-pidensi-ohjauskoron-pysyvyytta-lahi-idan-tilanteen-vaiku
+  - 2026-03-18-fed-piti-koron-odotetusti-ennallaan-lahi-idan-tilanteen-vaik
 ---
 
 Federal Reserve -pankin pääjohtaja Jerome Powell ilmoitti aikovansa jatkaa tehtävässään tutkinnan ajan. Hän korosti sitoutumistaan tehtäviinsä riippumatta mahdollisista vaaleista.

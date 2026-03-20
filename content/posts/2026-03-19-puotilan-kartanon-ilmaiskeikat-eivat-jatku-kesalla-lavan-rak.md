@@ -13,6 +13,10 @@ tags:
   - kulttuuri
   - helsinki
   - taide
+related_articles:
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-jaavat-tauolle
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-keskeytykseen-lupakiemurat-pi
+  - 2026-03-18-helsingissa-taidenayttelyn-tohryt-aiheuttivat-vahinkoja
 description: "Puotilan kartanon ilmaiskonsertit jäävät tältä kesältä pois aikatauluongelmien ja rakennusluvan puutteen takia, vahvistaa ravintoloitsija Tanja Löppönen."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Puotilan kartanon ilmaiskeikat eivät jatku kesällä – lavan rakennuslupa järjestyy, mutta epävarmuus vesitti suunnitelmat"

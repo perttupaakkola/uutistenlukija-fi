@@ -20,6 +20,10 @@ tags:
   - oikeus
   - puolustus
   - rikos
+related_articles:
+  - 2026-03-16-mette-maritin-pojan-oikeudenkaynti-lahestyy-loppuaan-oslossa
+  - 2026-03-18-syyttaja-vaatii-mette-maritin-pojalle-seitseman-vuoden-vanke
+  - 2026-03-20-analyysi-norjan-mette-marit-yrittaa-ulostulollaan-liittya-ep
 ---
 
 Norjan kruununprinsessa Mette-Maritin pojan, Marius Borg Høibyn, oikeudenkäynti on päättynyt puolustuksen loppulausuntoihin. Høiby on ollut syytettynä 40 syytteestä, joista vakavimpana on neljä raiskausta. Oikeuden edessä hänen asianajajansa vaativat huomattavasti lievempää tuomiota kuin syyttäjän vaatimukset, jotka ovat kohdistuneet 7,5 vuoden vankeuteen. Puolustus on esittänyt, että oikeuden tulisi langettaa vain 1,5 vuoden vankeustuomio, perustuen Høibyn tunnustuksiin.

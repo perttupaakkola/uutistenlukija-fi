@@ -9,6 +9,10 @@ tags:
   - kotimaa
   - liikenne
   - politiikka
+related_articles:
+  - 2026-03-15-ensi-viikosta-tulossa-poikkeuksellisen-lammin-lampotilat-huh
+  - 2026-03-16-suomalaiset-rauhanturvaajat-joutuivat-tulituksen-kohteeksi-l
+  - 2026-03-17-rekka-syttyi-tuleen-valtatie-7lla-porvoossa-kyydissa-muovija
 description: "Ilmanlaatu heikkenee Suomessa, kun Keski-Euroopasta kulkeutuu pienhiukkasia. Ilmatieteen laitos varoittaa erityisesti herkimpiä väestöryhmiä."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Ilmanlaatu heikentynyt Suomessa – pienhiukkaset kulkeutuvat Keski-Euroopasta"

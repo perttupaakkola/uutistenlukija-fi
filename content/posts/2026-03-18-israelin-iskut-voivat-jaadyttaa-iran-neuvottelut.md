@@ -20,6 +20,10 @@ tags:
   - israel
   - iran
   - murha
+related_articles:
+  - 2026-03-18-iranin-johtajien-surma-ei-todennakoisesti-johda-valtatyhjioo
+  - 2026-03-19-trump-kiisti-tienneensa-israelin-hyokkayksesta-iranin-kaasuk
+  - 2026-03-18-israelin-ja-iranin-valiset-konfliktit-kiihtyvat-ja-tilanne-h
 ---
 
 Israel on surmannut kolme Iranin huipputason upseeria ja tutkijaa. Professori Hannu Juusola arvioi, ettei Iranin johto romahda, mutta iskut voivat hankaloittaa ydinsopimusneuvotteluja.

@@ -9,6 +9,10 @@ tags:
   - ulkomaat
   - liikenne
   - kansainvälinen
+related_articles:
+  - 2026-03-17-kiipeilija-kuoli-pudottuaan-rotkoon-teneriffalla
+  - 2026-03-15-venajan-aseviennin-osuus-maailmanmarkkinoista-kutistunut-nop
+  - 2026-03-15-britannia-lahi-idan-tilanteen-rauhoittaminen-on-valttamatont
 description: "Prinssi William julkaisi äitienpäivänä harvinaisia kuvia prinsessa Dianasta, muistuttaen äidin merkityksestä hänen ja Harryn elämissä."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Prinssi William julkaisi harvinaisen kuvan Dianasta äitienpäivänä"

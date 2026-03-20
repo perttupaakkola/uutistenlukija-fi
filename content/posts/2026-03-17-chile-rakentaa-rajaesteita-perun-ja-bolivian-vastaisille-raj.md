@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - politiikka
   - pakolaiset
+related_articles:
+  - 2026-03-16-pohjois-koreassa-jarjestettiin-vaalit-aanestysaktiivisuus-la
+  - 2026-03-16-ugandan-oppositiojohtaja-pakeni-maasta-henkensa-puolesta
+  - 2026-03-17-trumpin-hallinto-painostaa-kuubaa-vaihtamaan-presidenttia
 ---
 
 Chilen presidentti José Antonio Kast on käynnistänyt rajaesteiden rakentamisen maan pohjoisrajoille. Fyysisten esteiden tarkoitus on vaikeuttaa laitonta maahantuloa Perusta ja Boliviasta.

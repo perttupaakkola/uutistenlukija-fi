@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - taide
   - viihde
+related_articles:
+  - 2026-03-20-eveliina-johtaa-huutokauppaa-jossa-esineet-loytavat-arvonsa
+  - 2026-03-20-huutokauppaa-pyorittava-eveliina-oudoimmatkin-esineet-loytav
+  - 2026-03-20-huutokauppaa-turussa-pyorittava-eveliina-oudoimmatkin-esinee
 ---
 
 Eveliina, Turussa huutokauppaa pyörittävä liiketoiminnan johtaja, kertoo, kuinka erilaisimmat esineet löytävät uuden arvonsa huutokauppatapahtumissa. Huutokaupat tarjoavat ihmisille mahdollisuuden eroon ylimääräisistä tavaroista, ja parhaimmillaan ne tuovat esiin esineitä, joilla on mielenkiintoisia tarinoita.

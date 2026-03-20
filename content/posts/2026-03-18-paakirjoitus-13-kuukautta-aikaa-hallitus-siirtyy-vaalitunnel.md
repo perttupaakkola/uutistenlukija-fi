@@ -20,6 +20,10 @@ tags:
   - politiikka
   - hallitus
   - eduskunta
+related_articles:
+  - 2026-03-19-oppositio-haastaa-hallitusta-kyselytunnilla-ulko-ja-turvalli
+  - 2026-03-19-oppositio-haastaa-hallitusta-kyselytunnilla
+  - 2026-03-19-hallitus-korjaa-virhetta-aluehallintouudistuksessa
 ---
 
 Hallituspuolueet valmistautuvat eduskuntavaaleihin siirtymällä selvästi vaalitunnelmiin. Poliittiset näkyvyyspaineet kasvavat, mutta hallituksen yhtenäinen linja on säilynyt. Kriisit ja kohut eivät ole horjuttaneet sen kestävyyttä, vaikka poliittinen paine kiristyy. Julkisessa keskustelussa hallituksen koetaan pysyvän edelleen koossa, vaikka epäilyksiä herättää, miten jatkuvan kritiikin keskellä saavutetaan yhtenäisyys.

@@ -21,6 +21,10 @@ tags:
   - israel
   - sota
   - yhdysvallat
+related_articles:
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-kesken-konflikt
+  - 2026-03-20-israelin-hallitus-kiistaa-yhdysvaltojen-sotaan-vetamisen-syy
+  - 2026-03-20-israelin-hallitus-kiistaa-yhdysvaltojen-sotaan-vetamisen
 ---
 
 Israelin hallitus on torjunut syytökset siitä, että se vetäisi Yhdysvaltoja mukaan alueelliseen sotaan. Yhdysvaltojen ja Israeliin tekemät toimet ovat johtaneet huoleen Lähi-idän konfliktin laajentumisesta. Samalla Australian hallitus on ryhtynyt toimiin polttoaineen toimitusongelmien hallitsemiseksi, jotka ovat syntyneet konfliktin seurauksena. Australian pääministeri Anthony Albanese kokoontui virtuaaliseen kokoukseen kansallisen kabinetin kanssa torstaiaamuna keskustellakseen hintashokista ja toimitusongelmista.

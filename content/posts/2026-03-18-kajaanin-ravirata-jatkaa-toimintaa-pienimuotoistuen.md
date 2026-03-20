@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - hallitus
   - politiikka
+related_articles:
+  - 2026-03-18-kajaanin-raviradan-toiminta-jatkuu-entisellaan-mutta-pienimu
+  - 2026-03-18-paakirjoitus-13-kuukautta-aikaa-hallitus-siirtyy-vaalitunnel
+  - 2026-03-19-hallitus-korjaa-virhetta-aluehallintouudistuksessa
 ---
 
 Kajaanin raviradan toiminta jatkuu, mutta pienemmässä muodossa. Hallitus päätti, että rata pysyy avoimena ja palveluiden sisältö vähenee.

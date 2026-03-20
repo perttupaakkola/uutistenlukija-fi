@@ -21,6 +21,10 @@ tags:
   - korot
   - energia
   - yritys
+related_articles:
+  - 2026-03-17-australian-keskuspankki-paatti-koroista-polttoainehintojen-n
+  - 2026-03-17-australian-keskuspankki-nosti-ohjauskorkoa-jalleen
+  - 2026-03-17-lahi-idan-jannitteet-kiristyivat-yon-aikana-iskuja-oljykohte
 ---
 
 Australian keskuspankki RBA kokoontuu tänään päättämään maan ohjauskorosta. Samaan aikaan maan energiaregulaattori on kutsunut suuret polttoaineyhtiöt kuultaviksi polttoaineiden hinnoittelusta, joka on noussut poliittiseksi kysymykseksi erityisesti syrjäseuduilla.

@@ -20,6 +20,10 @@ tags:
   - nato
   - yhdysvallat
   - liikenne
+related_articles:
+  - 2026-03-17-stubb-kehottaa-nato-liittolaisia-ottamaan-trumpin-vaatimukse
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
+  - 2026-03-18-stubb-bbclle-trumpilla-ei-ole-oikeutta-vedota-naton-apuun
 ---
 
 Presidentti Alexander Stubb varoittaa Nato-liittolaisia vähättelemästä Donald Trumpin puheita. Stubb sanoi haastattelussa, että Trumpin viestit tulee ottaa vakavasti.

@@ -19,6 +19,10 @@ tags:
   - teknologia
   - yritys
   - digitalisaatio
+related_articles:
+  - 2026-03-16-nvidian-vuosikonferenssi-alkaa-toimitusjohtaja-esittelee-tek
+  - 2026-03-19-mobiilipelaaminen-kasvattaa-suosiotaan
+  - 2026-03-17-tekoalyyhtio-anthropic-etsii-aseasiantuntijaa-estamaan-jarje
 ---
 
 Meta on ilmoittanut, että se ei sulje Horizon Worldsia virtuaalitodellisuudessa, mikä on iloinen uutinen monille käyttäjille. Yhtiön teknologiajohtaja Andrew Bosworth kertoi asiasta Instagramissa, ja monet ovat riemuitseneet päätöksestä. Horizon Worlds oli alun perin keskeinen osa Metan suunnitelmaa rakentaa sosiaalinen metaversumi, mutta viime vuosina sen tulevaisuus on ollut epävarma.

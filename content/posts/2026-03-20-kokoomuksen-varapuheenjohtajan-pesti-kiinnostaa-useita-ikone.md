@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - kokoomus
   - luonto
+related_articles:
+  - 2026-03-20-kokoomuksen-varapuheenjohtajakisa-herattaa-kiinnostusta-ikon
+  - 2026-03-20-ikonen-luopuu-varapuheenjohtajan-paikasta-kokoomuksessa
+  - 2026-03-20-kokoomuksen-varapuheenjohtaja-anna-kaisa-ikonen-luopuu-tehta
 ---
 
 Kokoomuksen varapuheenjohtajakisa on käynnistynyt, kun Anna-Kaisa Ikonen on ilmoittanut luopuvansa tehtävästään, johon hän on kuulunut kuusi vuotta. Ikonen teki ilmoituksen viestipalvelu X:ssä, ja hänen päätöksensä on herättänyt kiinnostusta useissa kansanedustajissa.

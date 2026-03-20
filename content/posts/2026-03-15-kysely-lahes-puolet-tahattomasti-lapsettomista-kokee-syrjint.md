@@ -9,6 +9,10 @@ tags:
   - kotimaa
   - lapset
   - työelämä
+related_articles:
+  - 2026-03-17-kysely-suomalaiset-haluavat-kunnianhimoista-ilmastopolitiikk
+  - 2026-03-18-eduskunnan-poissaolotilastot-herattavat-keskustelua-perhevap
+  - 2026-03-18-elakelaisten-rooli-suomalaisessa-yhteiskunnassa-korostuu
 description: "Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, kertoo Simpukka ry:n tuore kysely. Syrjintä ilmenee erityisesti lomien jaossa."
 image: "https://images.unsplash.com/photo-1648197753080-474bed0bf289?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxreXNlbHklMjBwdW9sZXQlMjB0YWhhdHRvbWFzdGklMjBsYXBzZXR0b21pc3RhfGVufDF8MHx8fDE3NzQwMDc1NDd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Kysely: lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä"

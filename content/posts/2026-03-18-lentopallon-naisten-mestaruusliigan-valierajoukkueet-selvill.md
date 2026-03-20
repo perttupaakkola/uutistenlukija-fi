@@ -19,6 +19,10 @@ tags:
   - urheilu
   - kilpailu
   - liikunta
+related_articles:
+  - 2026-03-18-julia-kykkanen-lopettaa-makihypyn-uransa
+  - 2026-03-18-julia-kykkanen-lopettaa-makihyppaajan-uransa
+  - 2026-03-18-mestarien-liigan-puolivalierat-selvilla-liverpool-bayern-ja
 ---
 
 Naisten lentopallon mestaruusliigan välieräjoukkueet ovat selvinneet, koska jokainen joukkue voitti kaikki kolme otteluaan runkosarjassa. Välieräparit muodostuivat suoraan, eikä arvontaa tarvittu. Näin ollen jatkopaikat ratkesivat selkeästi ilman arpomista.

@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - koulutus
   - opiskelijat
+related_articles:
+  - 2026-03-19-tampereen-yliopisto-erotti-opiskelijan-kolmeksi-kuukaudeksi
+  - 2026-03-19-pornoa-opiskelijoiden-tiloissa-vaasan-hankenilla
+  - 2026-03-20-hamk-aloittaa-kestavan-kehityksen-koulutuksen-hameenlinnassa
 ---
 
 Kaakkois-Suomen ammattikorkeakoulu Xamk on aloittanut neuvottelut LUT-konsernin kanssa, mikä saattaa johtaa koko oppilaitoksen liittämiseen osaksi Lappeenrannan-Lahden teknillistä yliopistoa ja LAB-ammattikorkeakoulua. Kotkan kaupunginjohtaja Esa Sirviö vahvistaa neuvottelujen käynnistyneen, ja Kouvolan kaupunginjohtaja Marita Toikka kertoo, että keskustelut ovat jo edenneet. Yhdistyminen voisi luoda yli 20 000 opiskelijan oppilaitoksen, mikä parantaisi alueen koulutustarjontaa ja vetovoimaa.

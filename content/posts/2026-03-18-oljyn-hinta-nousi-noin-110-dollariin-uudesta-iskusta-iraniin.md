@@ -19,6 +19,10 @@ tags:
   - talous
   - öljy
   - energia
+related_articles:
+  - 2026-03-19-kaasun-hinta-nousi-25-prosenttia-iskujen-jalkeen-qatarin-kes
+  - 2026-03-19-kaasun-hinta-nousi-25-prosenttia-iskujen-jalkeen-qatarissa
+  - 2026-03-16-raakaoljyn-hinta-noussut-yli-100-dollarin-tynnyrilta
 ---
 
 Öljyn hinta nousi päivän aikana noin 110 dollarin tasolle. Nousua vauhditti uusi hyökkäys Iraniin, joka synnytti huolta alueen vakaudesta. Isku kohdistui strategisesti tärkeään infrastruktuuriin ja hetkellisesti supisti öljymarkkinoiden tarjontaa.

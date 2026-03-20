@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - koulutus
   - sää
+related_articles:
+  - 2026-03-19-brittikoululainen-jai-jumiin-tanskaan-uusien-rajavalvontasaa
+  - 2026-03-16-valkoisen-talon-kansliapaallikko-susie-wiles-sairastaa-rinta
+  - 2026-03-20-australian-paaministeri-kohtasi-vastustusta-moskeijassa
 description: "16-vuotias brittikoululainen Hanne Sussexista jää Tanskaan, kun uudet rajasäännöt estävät hänet lentämästä takaisin Lontooseen."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "16-vuotias brittikoululainen jäi jumiin Tanskaan rajavalvonnan takia"

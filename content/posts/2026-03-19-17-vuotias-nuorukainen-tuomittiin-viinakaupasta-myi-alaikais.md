@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - rikos
   - energia
+related_articles:
+  - 2026-03-18-58-vuotias-hierojamies-tuomittiin-ehdolliseen-vankeuteen-sek
+  - 2026-03-16-esperi-care-tuomittiin-maksamaan-yli-200-000-euroa-perusteet
+  - 2026-03-18-poika-tuomittiin-pahoinpitelysta-kun-juotti-kielloista-huoli
 ---
 
 Raumalla 17-vuotias nuorukainen on saanut tuomion laajamittaisesta viinan, tupakan ja sähkösavukkeiden salakaupasta. Hän myi alaikäisille asiakkaille 14 kuukauden aikana 100–150 pulloa viinaa sekä laittomasti tupakkatuotteita ja sähkösavukkeita. Ostajia oli kymmeniä, joista nuorimmat olivat vain 14-vuotiaita.

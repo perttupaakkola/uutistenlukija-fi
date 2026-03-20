@@ -20,6 +20,10 @@ tags:
   - energia
   - yritys
   - sää
+related_articles:
+  - 2026-03-18-eu-pyrkii-tekemaan-yrityksen-perustamisesta-helpompaa-jasenv
+  - 2026-03-19-turun-keskusta-saa-ensimmaisen-hypermarkettinsa-10-miljoonan
+  - 2026-03-16-hybridiautojen-myynti-kasvaa-australiassa-bensiiniautojen-os
 ---
 
 Arctial-yhtiö suunnittelee primäärialumiinin sulattoa Kokkolaan. Hankkeen arvo on noin miljardi euroa, ja se työllistäisi noin 1 200 ihmistä. Vastaavaa investointia ei ole tehty Manner-Euroopassa yli kolmeen vuosikymmeneen.

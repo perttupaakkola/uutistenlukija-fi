@@ -20,6 +20,10 @@ tags:
   - terveys
   - jalkapallo
   - liikenne
+related_articles:
+  - 2026-03-18-mestarien-liigan-puolivalierat-selvilla-liverpool-bayern-ja
+  - 2026-03-18-arsenal-ainoana-englantilaisena-puolivalieriin-chelsea-ja-ma
+  - 2026-03-17-daniel-hakans-jaa-pois-huuhkajien-uuden-seelannin-matkasta
 ---
 
 Mestarien liigan neljässä ottelussa nähtiin runsaasti maaleja, mikä lisäsi jalkapallosivustojen ja fanien jännitystä. Ottelut sisältivät kiihtyviä hetkiä ja upeita maalipaikkoja. Liverpoolin ottelussa sattui onnettomuus, jonka seurauksena peli keskeytettiin ja pelaajia kuljetettiin sairaalaan. Puolivälieräparit on määritelty, ja odotukset seuraaville otteluille ovat korkealla.

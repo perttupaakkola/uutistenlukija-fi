@@ -19,6 +19,10 @@ tags:
   - urheilu
   - sää
   - jalkapallo
+related_articles:
+  - 2026-03-20-fifa-linjasi-naisjoukkueiden-valmennukseen-naisia
+  - 2026-03-20-fifa-linjasi-naisjoukkueiden-valmennuksessa-on-oltava-naisia
+  - 2026-03-20-fifa-linjasi-naisten-joukkueiden-valmennukseen-sukupuolikiin
 ---
 
 Kansainvälinen jalkapalloliitto Fifa on päättänyt, että tulevissa naisjoukkueiden turnauksissa on oltava vähintään yksi naispuolinen pää- tai apuvalmentaja. Tämä uusi sääntö koskee niin maa- kuin seurajoukkueita eri tasoilla, mukaan lukien Brasilian vuonna 2027 järjestettävät naisten MM-kisat.

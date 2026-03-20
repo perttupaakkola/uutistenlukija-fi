@@ -9,6 +9,10 @@ tags:
   - talous
   - energia
   - pörssi
+related_articles:
+  - 2026-03-19-alandsbankenin-strategi-nostaa-seitseman-suosikkiosaketta
+  - 2026-03-19-euroopan-porssit-avasivat-jyrkkaan-laskuun-oljyn-hinnan-nous
+  - 2026-03-19-euroopan-porssit-syoksyivat-lahi-idan-sodan-takia
 description: "Pörssisähkön hinta pysyy edullisena ensi viikon alussa, ja maanantaina kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Pörssisähkö pysyy edullisena ensi viikon alussa"

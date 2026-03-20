@@ -21,6 +21,10 @@ tags:
   - politiikka
   - yhdysvallat
   - terveys
+related_articles:
+  - 2026-03-17-yhdysvaltalainen-tuomari-esti-muutokset-cdcn-rokotussuosituk
+  - 2026-03-19-tuomari-pakotti-trumpin-hallinnon-palauttamaan-voice-of-amer
+  - 2026-03-17-trumpin-hallinto-painostaa-kuubaa-vaihtamaan-presidenttia
 ---
 
 Yhdysvaltalainen liittovaltion tuomari on estänyt terveysministeri Robert F. Kennedy Jr:n ajaman muutoksen maan rokotussuosituksiin. Päätös estää väliaikaisesti muutokset CDC:n eli tartuntatautiviraston rokoteohjeistukseen.

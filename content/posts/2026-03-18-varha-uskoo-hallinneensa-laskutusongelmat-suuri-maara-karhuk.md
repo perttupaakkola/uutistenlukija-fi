@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - rahoitus
+related_articles:
+  - 2026-03-15-wolt-haastaa-epassin-ja-edenredin-henkilostoetumarkkinalla
+  - 2026-03-19-skrill-kasinot-kasvattavat-suosiotaan-suomessa
+  - 2026-03-19-bluesky-kerasi-100-miljoonaa-dollaria-rahoituksessa-ceo-muut
 ---
 
 Hyvinvointialue ilmoittaa, ettei järjestelmissä ole havaittu laskutusvirheitä, mutta silti yli 8 000 karhukirjettä siirretään ulosoton käsittelyyn. Alueen taloushallintoa pidetään toimintansa mukaisena, mutta Postin toiminnan luotettavuutta ei ole varmistettu. Tilanne herättää huolta alueen taloudellisesta vakaudesta. Johtajat vakuuttavat, että ongelmat ovat hallinnassa.

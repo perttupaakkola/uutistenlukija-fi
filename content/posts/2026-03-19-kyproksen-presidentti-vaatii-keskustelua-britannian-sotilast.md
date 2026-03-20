@@ -14,6 +14,10 @@ tags:
   - eu
   - hallitus
   - liikenne
+related_articles:
+  - 2026-03-19-kyproksen-presidentti-vaatii-keskustelua-britannian-tukikohd
+  - 2026-03-15-britannia-lahi-idan-tilanteen-rauhoittaminen-on-valttamatont
+  - 2026-03-17-zelenskyi-kielsi-droonivalmistajia-myymasta-tuotteita-ulkoma
 description: "Kyproksen presidentti Nikos Christodoulides vaatii keskustelua Britannian sotilastukikohtien asemasta ja tulevaisuudesta kolonialististen seurausten"
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Kyproksen presidentti vaatii keskustelua Britannian sotilastukikohdista"

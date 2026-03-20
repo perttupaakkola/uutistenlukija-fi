@@ -19,6 +19,10 @@ tags:
   - talous
   - sää
   - helsinki
+related_articles:
+  - 2026-03-16-beyond-retro-vaatekaupan-suomalainen-taustayritys-hakeutui-k
+  - 2026-03-16-nokia-nousi-lahes-nelja-prosenttia-helsingin-porssissa
+  - 2026-03-20-iea-suosittelee-hatatoimia-oljynhintojen-nousun-ehkaisemisek
 ---
 
 Helsingin Sanomat kertoi tapauksesta, jossa kymmenen matkailijaa osti omat paikkansa Finnairilta. Lennolla he huomasivat, että paikkojen siirtäminen yli viiden rivin siirron jälkeen vaatii rahan palautuksen hakemista. Finnairin säännöissä paikkoja voi siirtää viisi riviä, mutta suurempia siirtoja ei yleensä sallita palautuksin. Tämä aiheutti matkaseuralaisille yhteydenoton asiakaspalveluun.

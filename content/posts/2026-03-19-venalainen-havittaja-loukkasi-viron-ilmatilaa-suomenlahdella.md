@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - venäjä
   - kansainvälinen
+related_articles:
+  - 2026-03-19-venajan-havittaja-tunkeutui-viron-ilmatilaan
+  - 2026-03-15-venajan-aseviennin-osuus-maailmanmarkkinoista-kutistunut-nop
+  - 2026-03-19-venajan-erikoisjoukot-harjoitteli-droonien-kayttoa-suomen-ra
 description: "Venäläinen Su-30-hävittäjä tunkeutui Viron ilmatilaan keskiviikkona Suomenlahdella, ja Viron ulkoministeriö reagoi asiasta nootilla Venäjälle."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Venäläinen hävittäjä loukkasi Viron ilmatilaa Suomenlahdella"

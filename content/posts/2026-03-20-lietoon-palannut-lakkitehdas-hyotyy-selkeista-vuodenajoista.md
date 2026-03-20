@@ -19,6 +19,10 @@ tags:
   - talous
   - teknologia
   - yritys
+related_articles:
+  - 2026-03-20-litoon-palannut-lakkitehdas-kohtaa-ilmastosyksyn-haasteet
+  - 2026-03-20-lakkitehtaan-paluu-lietoon-tuo-mahdollisuuksia
+  - 2026-03-20-lieto-sai-takaisin-lakkitehtaan-selkeat-vuodenajat-tukevat-t
 ---
 
 Lieto on saanut uuden elämän lakkitehtaastaan, joka on palannut kunnan alueelle. Tehdas hyötyy vuodenajoista, jotka mahdollistavat paremman tuotannon suunnittelun ja varastoinnin. Selkeät vuodenajat auttavat varmistamaan, että tuotantoprosessit voivat toteutua ilman keskeytyksiä ja aikataulun muutoksia. 

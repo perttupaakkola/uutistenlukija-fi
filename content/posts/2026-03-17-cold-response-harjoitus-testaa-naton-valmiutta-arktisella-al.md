@@ -20,6 +20,10 @@ tags:
   - nato
   - lentoliikenne
   - lappi
+related_articles:
+  - 2026-03-17-cold-response-harjoitus-testaa-naton-kykya-toimia-arktisessa
+  - 2026-03-19-pohjoisen-puolustus-vahvistuu-ranska-aikoo-lisata-sotilaiden
+  - 2026-03-18-stubb-bbclle-trumpilla-ei-ole-oikeutta-vedota-naton-apuun
 ---
 
 Pohjois-Norjassa, Pohjois-Ruotsissa ja Suomen Lapissa käynnissä oleva Cold Response -sotaharjoitus on yksi Naton suurimmista tämän vuoden harjoituksista. Siihen osallistuu 32 000 sotilasta 14 Nato-maasta, mukana 3 000–4 000 Yhdysvaltain merijalkaväen sotilasta sekä kalustoa lentokoneista sukellusveneisiin. Harjoitus jatkuu kuluvan viikon perjantaihin.

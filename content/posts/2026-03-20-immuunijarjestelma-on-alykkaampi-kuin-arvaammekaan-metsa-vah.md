@@ -21,6 +21,10 @@ tags:
   - puolustus
   - koulutus
   - helsinki
+related_articles:
+  - 2026-03-15-valkohantapeuran-kanta-kasvanut-suomessa-noin-120-000-yks
+  - 2026-03-17-mies-raiskasi-16-vuotiaan-tyton-helsingin-kivikossa
+  - 2026-03-17-mies-raiskasi-koulumatkalla-olleen-teinityton-helsingin-kivi
 ---
 
 Flunssakausi tuo vuodesta toiseen haasteita, mutta immunologian asiantuntijat muistuttavat, että kehon puolustusjärjestelmä on huomattavasti älykkäämpi kuin usein luullaan. Helsingin yliopiston apulaisprofessori Eliisa Kekäläinen korostaa, että immuunijärjestelmän toimintamekanismit vaihtelevat yksilöittäin perinnöllisten ja ympäristötekijöiden vuoksi.

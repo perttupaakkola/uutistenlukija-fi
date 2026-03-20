@@ -19,6 +19,10 @@ tags:
   - talous
   - formula
   - yritys
+related_articles:
+  - 2026-03-17-autoalan-johtaja-sokaistui-nopeuteen-eivat-nopeat-voita-hita
+  - 2026-03-17-yhdysvaltain-arvopaperimarkkinaviranomainen-harkitsee-siirty
+  - 2026-03-19-kauppalehti-uudistaa-palveluitaan
 ---
 
 F1-talli Aston Martin on kiistänyt uutisen, jonka mukaan tallipäällikkö Adrian Newey olisi jättämässä tehtävänsä. Autosportin mukaan Newey, joka ylennettiin tallipäälliköksi vain kuukausi sitten, olisi kuitenkin siirtymässä tekniseen johtajaan. Aston Martin on kuitenkin vahvistanut, että Newey jatkaa tallissa tallipäällikkönä.

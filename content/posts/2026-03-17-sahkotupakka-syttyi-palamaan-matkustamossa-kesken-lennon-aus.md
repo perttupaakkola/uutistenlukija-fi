@@ -20,6 +20,10 @@ tags:
   - energia
   - yritys
   - lentoliikenne
+related_articles:
+  - 2026-03-17-australian-keskuspankki-koolla-korkopaatoksesta-polttoaineyh
+  - 2026-03-17-australian-keskuspankki-paatti-koroista-polttoainehintojen-n
+  - 2026-03-16-hybridiautojen-myynti-kasvaa-australiassa-bensiiniautojen-os
 ---
 
 Virgin Australian lento Brisbanesta Melbourneen joutui hälytystilanteeseen, kun matkustajan käsimatkatavaroissa ollut sähkötupakka syttyi palamaan matkustamossa. Lentoyhtiön mukaan laite aktivoitui koneen tehdessä laskeutumista Melbournen lentokentälle.

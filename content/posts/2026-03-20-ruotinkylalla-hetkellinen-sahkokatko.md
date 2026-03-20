@@ -20,6 +20,10 @@ tags:
   - energia
   - yritys
   - liikenne
+related_articles:
+  - 2026-03-16-rovaniemelle-suunnitellaan-muumimaailmaa-joulupukin-pajakyla
+  - 2026-03-15-ensi-viikosta-tulossa-poikkeuksellisen-lammin-lampotilat-huh
+  - 2026-03-16-kaatunut-matkailuvaunu-ruuhkautti-ysitien-tampereen-kohdalla
 ---
 
 Ruotinkylällä tapahtui tänä iltana hetkellinen sähkökatko, joka alkoi noin klo 22:30. Katkon syynä oli Äänekosken Energian mukaan tekninen vika, joka aiheutti sähkökatkon alueella. Katko kesti vain muutamia minuutteja, joten asukkaille ei aiheutunut merkittäviä haittoja.

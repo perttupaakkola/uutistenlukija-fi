@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-19-varhaisperunoiden-istutus-alkoi-rymattylassa
+  - 2026-03-19-kevat-on-poikkeuksellisen-aikaisessa-mutta-perunan-istutus-e
+  - 2026-03-20-selkeat-vuodenajat-helpottavat-lietoon-palannutta-lakkitehda
 description: "Viljelijä Mika Törne on aloittanut varhaisperunan istutuksen Rymättylässä, tavoitteenaan lakkiaispöydät. Kevät tuo mukanaan suotuisat olosuhteet."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Varhaisperunan istutus alkoi Rymättylässä – tavoitteena lakkiaispöydät"

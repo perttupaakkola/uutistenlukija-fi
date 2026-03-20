@@ -19,6 +19,10 @@ tags:
   - talous
   - yhdysvallat
   - väestö
+related_articles:
+  - 2026-03-18-yksi-kuva-kertoo-kaiken-usan-taloudesta-rikkaat-rikastuvat-k
+  - 2026-03-18-fed-piti-koron-odotetusti-ennallaan-lahi-idan-tilanteen-vaik
+  - 2026-03-19-lujatalo-oy-jatkaa-toimintaansa-rakennusalalla
 ---
 
 Yhdysvaltojen talouskehitys polarisoituu edelleen. Kuluttajien menoeristä suuret osat käytetään tuloiltaan korkeimmilla prosenttiluvuilla varustettujen kuluttajien kesken, kuten Financial Timesin julkaistujen lukujen perusteella. Samanaikaisesti suuri osa väestöstä käyttää yhä vähemmän rahaa, mikä vaikuttaa talouden kasvuun.

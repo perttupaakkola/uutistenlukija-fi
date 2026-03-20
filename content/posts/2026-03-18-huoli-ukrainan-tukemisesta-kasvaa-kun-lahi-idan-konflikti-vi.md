@@ -21,6 +21,10 @@ tags:
   - eu
   - venäjä
   - iran
+related_articles:
+  - 2026-03-18-ukrainan-tilanne-lisaa-huolta-euroopassa
+  - 2026-03-16-kenia-venaja-lupaa-lopettaa-kenialaisten-varvaamisen-sotaan
+  - 2026-03-16-euroopan-parlamentti-linjasi-ukraina-voisi-paasta-eu-rakente
 ---
 
 Ukrainan saama kansainvälinen tuki voi hiipua, kun huomio kiinnittyy Lähi-idän tapahtumiin. Brysselissä huolestuttaa, että Ukrainalle kaivattuja ohjuksia kuluu parhaillaan Iranin sodassa.

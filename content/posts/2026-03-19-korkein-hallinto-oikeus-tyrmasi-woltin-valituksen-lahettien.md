@@ -15,6 +15,10 @@ tags:
   - yhdysvallat
   - oikeus
   - liikenne
+related_articles:
+  - 2026-03-16-esperi-care-tuomittiin-maksamaan-yli-200-000-euroa-perusteet
+  - 2026-03-20-suomalainen-swype-astuu-ruokalahettimarkkinoille-foodoran-ja
+  - 2026-03-16-rovaniemelle-suunnitellaan-muumimaailmaa-joulupukin-pajakyla
 description: "Korkein hallinto-oikeus hylkäsi Woltin valituksen lähettien työsuhteista ja vahvisti aiemman päätöksen, mikä herättää jatkokeskustelua työmarkkinoilla."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Korkein hallinto-oikeus tyrmäsi Woltin valituksen lähettien työsuhteista"

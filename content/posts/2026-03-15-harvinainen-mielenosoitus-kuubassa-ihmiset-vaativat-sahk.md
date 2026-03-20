@@ -9,6 +9,10 @@ tags:
   - ulkomaat
   - politiikka
   - energia
+related_articles:
+  - 2026-03-17-australia-kamppailee-polttoainekriisin-kanssa-kansalaisia-ke
+  - 2026-03-17-trumpin-hallinto-painostaa-kuubaa-vaihtamaan-presidenttia
+  - 2026-03-15-juutinrauman-silta-suljettu-onnettomuuden-vuoksi
 description: "Havannassa järjestetään harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat sähköä ja ruokaa."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Harvinainen mielenosoitus Kuubassa – ihmiset vaativat sähköä ja ruokaa"

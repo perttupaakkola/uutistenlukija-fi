@@ -15,6 +15,10 @@ tags:
   - tampere
   - opiskelijat
   - sää
+related_articles:
+  - 2026-03-19-suomeen-yli-20-000-opiskelijan-ammattikorkeakoulu-xamkin-omi
+  - 2026-03-20-ahdistussanan-kaytto-on-lisaantynyt-tutkija-varoittaa-seurau
+  - 2026-03-19-ita-suomen-yliopisto-haluaa-ostaa-kolme-ammattikorkeakoulua
 description: "Tampereen yliopisto on erottanut opiskelijan kolmeksi kuukaudeksi. Erottamispäätös on harvinainen toimenpide suomalaisessa korkeakoulutuksessa."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Tampereen yliopisto erotti opiskelijan kolmeksi kuukaudeksi"

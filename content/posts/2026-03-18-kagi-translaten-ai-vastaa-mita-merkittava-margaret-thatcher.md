@@ -21,6 +21,10 @@ tags:
   - tekoäly
   - hallitus
   - viihde
+related_articles:
+  - 2026-03-18-kagi-translaten-ai-vastaa-mita-kiihkea-margaret-thatcher-san
+  - 2026-03-17-nvidia-tahtaa-tekoalyn-seuraavaan-taistelukenttaan-koulutusv
+  - 2026-03-15-tutkijat-varoittavat-tekoalypsykoosista-chatbotit-voiva
 ---
 
 Kagi Translate'n kehittynyt tekoälyohjelma on herättänyt keskustelua historian merkittävän pääministerin Margaret Thatcherin mahdollisesta kommentista nykytilanteeseen. Tekoäly tarjoaa erilaisia näkökulmia, jotka voivat olla viihdyttäviä ja ajatuksia herättäviä.

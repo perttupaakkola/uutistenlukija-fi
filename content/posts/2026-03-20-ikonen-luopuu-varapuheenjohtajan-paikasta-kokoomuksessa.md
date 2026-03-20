@@ -21,6 +21,10 @@ tags:
   - politiikka
   - kokoomus
   - luonto
+related_articles:
+  - 2026-03-20-kokoomuksen-varapuheenjohtajan-paikka-herattaa-kiinnostusta
+  - 2026-03-20-kokoomuksessa-varapuheenjohtajakisa-kay-kuumana-ikonen-ilmoi
+  - 2026-03-20-kokoomuksen-varapuheenjohtajakisa-herattaa-kiinnostusta-ikon
 ---
 
 Kokoomuksen varapuheenjohtaja Anna-Kaisa Ikonen on ilmoittanut luopuvansa tehtävästään, jota hän on hoitanut kuusi vuotta. Ikosen päätös tuo mukanaan jännitystä ja kilpailua puolueen keskuudessa, sillä useat kansanedustajat ovat ilmaisseet kiinnostuksensa hänen paikkaansa. Kokoomuksen kansanedustaja Mia Laiho ja ympäristöministeri Sari Multala ovat olleet aktiivisia sosiaalisessa mediassa tuodessaan esille halukkuutensa varapuheenjohtajatehtävään. Myös puolustusministeri Antti Häkkänen on ilmoittanut halustaan jatkaa varapuheenjohtajana. Ikosen päätös herättää kysymyksiä tulevasta puoluekokouksesta ja siitä, millaiset lupaukset ja ohjelmat tulevat olemaan esillä. Kokoomus on perinteisesti ollut kilpailuhenkinen puolue, ja tulevat varapuheenjohtajakisat voivat vaikuttaa puolueen sisäiseen dynamiikkaan. Ikosen aikaisempi kokemus ja vaikuttavat puheenvuorot ovat olleet merkittäviä, ja hänen peräänkuuluttamansa asiat saattavat vaikuttaa mahdollisten seuraajien linjauksiin. Kilpailu varapuheenjohtajan paikasta vaikuttaa olevan voimakasta, ja puolueen tulevat päätökset voivat muokata kokoomuksen suuntaa.

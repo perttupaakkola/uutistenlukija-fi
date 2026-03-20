@@ -20,6 +20,10 @@ tags:
   - hallitus
   - sota
   - israel
+related_articles:
+  - 2026-03-20-australian-paaministeri-sai-huudot-moskeijassa-ramadan-tapah
+  - 2026-03-20-australian-paaministeri-sai-huutoja-moskeijassa-ramadan-tapa
+  - 2026-03-20-australian-paaministeri-kohtasi-vastustusta-moskeijassa
 ---
 
 Australian pääministeri Anthony Albanese sai osakseen vastalauseita Sydneyssä, kun hän osallistui suurta Ramadania päättävään tapahtumaan Lakemban moskeijassa. Pääministeri ja sisäministeri Tony Burke kohtasivat raivoisia huutoja, kun paikalliset muslimiyhteisön johtajat vaativat hallitukselta parempia toimia Israel-Gaza-sodan ja kasvavan islamofobian vuoksi.

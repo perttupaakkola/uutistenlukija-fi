@@ -20,6 +20,10 @@ tags:
   - oikeus
   - rikos
   - terveys
+related_articles:
+  - 2026-03-16-esperi-care-tuomittiin-maksamaan-yli-200-000-euroa-perusteet
+  - 2026-03-18-hoitajainformaation-vastustaja-tuomittiin-maksamaan-tuhansia
+  - 2026-03-20-lahtelainen-mies-tuomittiin-viestintarauhan-rikkomisesta
 ---
 
 Kanta-Hämeen käräjäoikeus on tuominnut miehen pahoinpitelystä sattumasta, jossa hän juotti sairaalassa maaliskuussa 2023 vettä kielloista huolimatta 73-vuotiaalle tajuilemattomalle äidilleen. Henkilökunnan kiellot johtuivat potilaan nielemiskyvyn epävarmuudesta.

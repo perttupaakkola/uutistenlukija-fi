@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - politiikka
   - kansainvälinen
+related_articles:
+  - 2026-03-16-ranskan-paikallisvaalit-kiinnostavat-presidentinvaalien-ennu
+  - 2026-03-16-ugandan-oppositiojohtaja-pakeni-maasta-henkensa-puolesta
+  - 2026-03-18-hatatila-teneriffalla-sotki-suomalaisen-loman-retket-peruttu
 description: "Ranskan kuntavaalien ensimmäinen kierros vahvistaa äärioikeiston Kansallisen liittouman ja radikaalivasemmiston La France insoumise -puolueen valta-asemaa."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja"

@@ -20,6 +20,10 @@ tags:
   - yhdysvallat
   - hallitus
   - liikenne
+related_articles:
+  - 2026-03-17-stubb-kehottaa-ottamaan-trumpin-uhkaukset-vakavasti
+  - 2026-03-20-espanjalaismedia-espanja-aikoo-alentaa-polttoainetuotteiden
+  - 2026-03-19-entinen-terrorisminvastaisen-toiminnan-johtaja-fbin-tutkinna
 ---
 
 Tanskan hallitus on herättänyt huolta Yhdysvaltojen suunnitelmista, jotka liittyvät mahdollisiin sotilaallisiin toimiin. Suomalainen poliitikko Alexander Stubb on kommentoinut tilannetta, ja hänen mukaansa Suomeen ei ole tullut tietoja Tanskan suunnitelmista tai niiden vaikutuksista. Stubbin mukaan on tärkeää, että Suomi pysyy ajan tasalla kansainvälisestä tilanteesta, mutta hän korosti, ettei Suomella ole syytä huoleen.

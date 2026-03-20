@@ -21,6 +21,10 @@ tags:
   - koulutus
   - tekoäly
   - urheilu
+related_articles:
+  - 2026-03-16-nvidian-vuosikonferenssi-alkaa-toimitusjohtaja-esittelee-tek
+  - 2026-03-17-nvidia-julkisti-nemoclaw-alustan-tekoalyagenttien-rakentamis
+  - 2026-03-17-nvidia-julkaisi-avoimen-tekoalyagenttialustan-yrityksia-vart
 ---
 
 Nvidia on hallinnut tekoälymallien kouluttamiseen käytettävien sirujen markkinoita jo vuosia. Nyt yhtiö suuntaa katseensa seuraavaan vaiheeseen: tekoälyn pyörittämiseen tuotantokäytössä. Kilpailu kiihtyy, kun yhä useampi yritys ottaa tekoälysovelluksia käyttöön.

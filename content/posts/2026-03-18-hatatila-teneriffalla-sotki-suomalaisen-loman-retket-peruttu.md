@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - kansainvälinen
   - politiikka
+related_articles:
+  - 2026-03-20-teneriffalla-lunta-ja-pakkasta-loppua-ei-nay
+  - 2026-03-20-teneriffalla-lunta-tupaan-pahimmat-ennusteet-kavivat-toteen
+  - 2026-03-16-pohjois-koreassa-jarjestettiin-vaalit-aanestysaktiivisuus-la
 ---
 
 Kanariansaarilla lomaileva Iina-Katariina Tourunen joutui muuttamaan lomasuunnitelmansa, kun Teneriffalle julistettiin hätätila sunnuntaina. Rankkasateet ja kovat tuulet ovat lyöneet yli saaren, ja vettä on tullut alkuviikosta enemmän kuin koko edellisenä kuukautena.

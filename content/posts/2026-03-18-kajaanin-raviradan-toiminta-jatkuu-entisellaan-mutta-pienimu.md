@@ -20,6 +20,10 @@ tags:
   - hallitus
   - pörssi
   - yritys
+related_articles:
+  - 2026-03-19-ita-suomen-yliopisto-haluaa-ostaa-kolme-ammattikorkeakoulua
+  - 2026-03-18-kajaanin-ravirata-jatkaa-toimintaa-pienimuotoistuen
+  - 2026-03-19-muumit-tulevat-rovaniemelle-tonttijako-herattaa-naraa-yritta
 ---
 
 Kajaanin raviradan osakeyhtiön hallitus päätti keskiviikkoiltana, että ravirata pysyy toiminnassa. Radan järjestämät rave-tilaisuudet jatkunevat myös syksyllä, mutta tapahtumat ovat pienimuotoisempia aiempaan verrattuna. Hallitus korostaa, ettei julkisen tuen tai lippujen osalta ole tehty muutoksia.

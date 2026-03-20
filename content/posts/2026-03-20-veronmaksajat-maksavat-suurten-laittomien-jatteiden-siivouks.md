@@ -20,6 +20,10 @@ tags:
   - hallitus
   - verotus
   - luonto
+related_articles:
+  - 2026-03-20-veronmaksajat-maksavat-laittomien-jatevuorien-siivouksesta
+  - 2026-03-20-veronmaksajat-rahoittavat-suurten-laittomien-jatetayttojen-s
+  - 2026-03-20-veronmaksajat-rahoittavat-suurten-laittomien-jatteenkasittel
 ---
 
 Englannin hallitus on päättänyt puuttua suureen ongelmaan ja siivota maan suurimmat laittomat jätealueet veronmaksajien kustannuksella. Kolme pahamaineista kaatopaikkaa Wiganissa, Sheffieldissä ja Lancashirella, joissa on yhteensä 48 000 tonnia jätettä, on valittu puhdistettavaksi ympäristöhallituksen toimesta.

@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - venäjä
   - kansainvälinen
+related_articles:
+  - 2026-03-19-venalainen-havittaja-loukkasi-viron-ilmatilaa-suomenlahdella
+  - 2026-03-15-venajan-aseviennin-osuus-maailmanmarkkinoista-kutistunut-nop
+  - 2026-03-19-venajan-erikoisjoukot-harjoitteli-droonien-kayttoa-suomen-ra
 description: "Venäläinen Suhoi Su-30-hävittäjä loukkasi Viron ilmatilaa keskiviikkona, ja Viron ulkoministeriö reagoi kutsumalla Venäjän edustajan puhutteluun."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Venäjän hävittäjä tunkeutui Viron ilmatilaan"

@@ -21,6 +21,10 @@ tags:
   - koulutus
   - liikenne
   - tiede
+related_articles:
+  - 2026-03-19-entinen-terrorisminvastaisen-toiminnan-johtaja-fbin-tutkinna
+  - 2026-03-19-tanska-pelkasi-usan-hyokkaysta-nain-stubb-vastasi-isn-kysymy
+  - 2026-03-15-kiinan-ja-yhdysvaltain-kauppaneuvottelut-alkoivat-pariisissa
 ---
 
 Yhdysvallat on pudonnut 31 sijaa kansainvälisessä demokratiaindeksissä yhden vuoden aikana. Maa on nyt sijalla 51, kun se vuotta aiemmin oli sijalla 20. Tiedot perustuvat Göteborgin yliopiston V-Dem-instituutin tuoreeseen raporttiin.

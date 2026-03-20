@@ -20,6 +20,10 @@ tags:
   - musiikki
   - puolustus
   - liikenne
+related_articles:
+  - 2026-03-19-plagioinnista-kiinni-jaanyt-kirjailija-harri-istvan-maki-ei
+  - 2026-03-20-kabbalan-ja-yhteyden-tieteen-vaikutus-elamaan
+  - 2026-03-15-armas-festivaali-tayttaa-kymmenen-vuotta-tampereella
 ---
 
 Etelä-Korealainen BTS-yhtye palaa musiikkikentälle palvelustaan armeijassa, ja heidän kymmenes albuminsa "Arirang" herättää suurta huomioita. Yhtyeen paluu tapahtuu myytyjen konserttien myötä, ja erityisesti heidän ensimmäistä keikkaansa Soulin stadionilla odotetaan houkuttelevan yli 250 000 fania, samalla kun esitys live-striimataan yli 190 maahan.

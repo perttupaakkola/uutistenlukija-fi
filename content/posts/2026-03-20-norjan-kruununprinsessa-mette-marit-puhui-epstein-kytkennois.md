@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - kansainvälinen
   - politiikka
+related_articles:
+  - 2026-03-20-mette-marit-paljastaa-suhteensa-jeffrey-epsteiniin-pyrkii-uh
+  - 2026-03-19-norjan-kruununprinsessa-puhuu-epstein-yhteyksista
+  - 2026-03-20-norjan-kruununprinsessa-mette-marit-kertoo-nrklle-elamansa-h
 ---
 
 Norjan kruununprinsessa Mette-Marit on rikkonut hiljaisuutensa ja kertonut katuvansa tapaamistaan Jeffrey Epsteinin kanssa, ilmiön tultua julki. Prinsessa kertoi kansalliselle televisiolle, että hän tuntee itsensä manipuloiduksi ja petetyksi. Hänen kontaktejaan Epsteinin kanssa on selvitetty viime viikkoina, ja hän on tunnustanut tehneensä huonoja päätöksiä.

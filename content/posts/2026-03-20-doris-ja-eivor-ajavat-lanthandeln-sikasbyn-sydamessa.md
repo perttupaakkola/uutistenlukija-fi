@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-19-asuinalueen-jatepisteet-tayttyvat-rosasta
+  - 2026-03-18-tyoministeri-marttinen-valmis-muuttamaan-kiisteltya-maaraaik
+  - 2026-03-19-yle-ammattimaiset-myymalavarkaat-iskivat-turun-seudulle
 ---
 
 Pienessä Sikås-nimisessä kylässä Ruotsissa Doris ja Eivor ovat pitäneet elinvoimaisena paikallista lanthandeliä, joka on ollut olennainen osa yhteisöä jo vuosikymmenten ajan. Pariskunta on onnistunut luomaan ainutlaatuisen tunnelman kaupalle, joka houkuttelee asiakkaita ympäri seutua. Lanthandeli ei ole vain kauppa, vaan myös yhteisön kokoontumispaikka.

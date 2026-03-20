@@ -20,6 +20,10 @@ tags:
   - hallitus
   - sota
   - israel
+related_articles:
+  - 2026-03-20-australian-paaministeri-sai-huudot-moskeijassa-ramadan-tapah
+  - 2026-03-20-australian-paaministeri-sai-haukkuja-ramadanish-tilaisuudess
+  - 2026-03-20-australian-paaministeri-kohtasi-vastustusta-moskeijassa
 ---
 
 Australian pääministeri Anthony Albanese kohtasi vastustusta moskeijassa, jossa vietettiin Ramadanin päättymistä. Albanese ja sisäministeri Tony Burke olivat Lakemba-moskeijassa, jossa heidät toivotettiin tervetulleiksi yhteisön johtajien toimesta. Tapahtumassa osa osallistujista huusi heitä ”genosiditukijoiksi”, mikä heijastaa syvää närkästystä maan hallituksen toimintaa kohtaan Israel-Gaza-sodan sekä nousevan islamofobian suhteen. Poliisi poisti yhden mielenosoittajan moskeijasta, mutta hänet vapautettiin ilman syytteitä.

@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - teknologia
+related_articles:
+  - 2026-03-15-wolt-haastaa-epassin-ja-edenredin-henkilostoetumarkkinalla
+  - 2026-03-17-unicredit-tehostaa-commerzbankin-valtausyritysta-saksan-vast
+  - 2026-03-18-varha-uskoo-hallinneensa-laskutusongelmat-suuri-maara-karhuk
 ---
 
 Suomalaiset vientiyritykset raportoivat odotettua paremmista luvuista, selviää Teknologiateollisuuden tuoreesta kyselystä. Tilanne on parempi kuin alan yleiset tunnelmat antaisivat ymmärtää.

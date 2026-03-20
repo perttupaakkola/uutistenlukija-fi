@@ -20,6 +20,10 @@ tags:
   - yhdysvallat
   - sää
   - tiede
+related_articles:
+  - 2026-03-18-elakelaisten-rooli-suomalaisessa-yhteiskunnassa-korostuu
+  - 2026-03-18-oikeusministeri-leena-meri-a-studiossa-vankilassa-kuntoutumi
+  - 2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy
 ---
 
 Tutkimukset ovat osoittaneet, että asteroidista on löytynyt elämän perustavanlaatuiset molekyylit, jotka muodostavat DNA:n ja RNA:n rakennuspalikoita. Tämä havainto lisää teorioita siitä, että elämän esiintyminen koko universumissa ei ole sattumaa.

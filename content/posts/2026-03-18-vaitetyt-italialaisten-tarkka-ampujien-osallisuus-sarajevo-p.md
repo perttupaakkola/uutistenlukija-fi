@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - kirjallisuus
   - liikenne
+related_articles:
+  - 2026-03-19-pahkinarinteen-tulipalon-onnettomuusseloste-julki-taman-vuok
+  - 2026-03-18-vahingoittaa-erityisesti-heita-eduskunta-muutti-poissaolojen
+  - 2026-03-19-kahdeksankymppinen-mies-puukotettiin-kuoliaaksi-malminkartan
 ---
 
 Uusi kirja paljastaa, että Sarajevo-piirin aikana tarkka-ampujajoukkioihin kuului italialaisia. Heitä oli lähetetty Bosniaan osana laajempaa strategiaa. Tarkka-ampujat harjoittelivat alueella vuosia ennen julkista tietoa heidän toiminnastaan.

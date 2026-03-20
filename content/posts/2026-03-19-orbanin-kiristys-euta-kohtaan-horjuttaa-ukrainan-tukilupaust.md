@@ -21,6 +21,10 @@ tags:
   - hallitus
   - energia
   - öljy
+related_articles:
+  - 2026-03-19-orban-kayttaa-ukrainaa-kiristyssuhteissaan-euhun
+  - 2026-03-16-britannia-suunnittelee-miinanraivausdroonien-lahettamista-ho
+  - 2026-03-20-israel-torjuu-syytokset-vetamisesta-yhdysvaltoja-sotaan
 ---
 
 Unkarin pääministeri Viktor Orbán käyttää Ukrainan tueksi kaavaillun 90 miljardin euron lainapaketin hyväksymistä poliittisena vipuvarrella kansallisessa vallanhimossaan. EU:n johtajat kokoontuvat tänään keskustelemaan paketin hyväksymisestä, mutta Unkarilta kuuluu odottamattomia esteitä. Orbán, jonka oma valta on kotimaassa uhattuna, on kytkenyt lainapaketin toteutumisen Družba-öljyputken vaurioitumiseen, mikä vaikuttaa olevan tekosyy hänen poliittiselle pelilleen.

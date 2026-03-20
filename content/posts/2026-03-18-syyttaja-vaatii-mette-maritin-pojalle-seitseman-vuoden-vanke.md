@@ -20,6 +20,10 @@ tags:
   - oikeus
   - rikos
   - liikenne
+related_articles:
+  - 2026-03-16-mette-maritin-pojan-oikeudenkaynti-lahestyy-loppuaan-oslossa
+  - 2026-03-19-norjan-kruununprinsessan-pojan-oikeudenkaynti-paattyi
+  - 2026-03-20-analyysi-norjan-mette-marit-yrittaa-ulostulollaan-liittya-ep
 ---
 
 Norjan kruununprinsessa Mette Maritin pojan Marius Borg Høibyn oikeudenkäynti etenee. Syyttäjä vaatii 28-vuotiaalle Høibylle seitsemän vuoden vankeustuomiota. Häntä syytetään yhteensä 40 rikoksesta.

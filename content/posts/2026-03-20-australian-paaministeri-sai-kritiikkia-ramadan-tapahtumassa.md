@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - hallitus
   - murha
+related_articles:
+  - 2026-03-20-australian-paaministeri-sai-huudot-moskeijassa-ramadan-tapah
+  - 2026-03-20-australian-paaministeri-sai-huutoa-sydneyssa-moskeijassa-ram
+  - 2026-03-20-australian-paaministeri-sai-huutoja-moskeijassa-ramadan-tapa
 ---
 
 Australian pääministeri Anthony Albanese kohtasi tiukkaa kritiikkiä Lakemban moskeijassa pidetyssä tapahtumassa, joka merkitsi Ramadanin päättymistä. Useat osallistujat syyttivät häntä kansanmurhan kannattamisesta ja vaativat häntä lähtemään tapahtumasta.

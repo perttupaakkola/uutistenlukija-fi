@@ -20,6 +20,10 @@ tags:
   - yritys
   - poliisi
   - sää
+related_articles:
+  - 2026-03-18-arizonan-osavaltio-nosti-rikossyytteet-vedonlyontialusta-kal
+  - 2026-03-16-yhdysvaltalaiset-ryhmat-vievat-aborttivastaisuutta-britannia
+  - 2026-03-19-nuori-suomalaisnainen-sai-surmansa-italiassa-epailty-kuljett
 ---
 
 Britanniassa valmistellaan lakia, jonka nojalla koiranomistajille voidaan määrätä rajoittamattomia sakkoja, jos heidän koiransa hyökkäävät tuotantoeläinten kimppuun. Uusi lainsäädäntö antaisi poliisille valtuudet takavarikoida koiria, jotka ovat hyökänneet karjan kimppuun tai ajaneet eläimiä takaa.

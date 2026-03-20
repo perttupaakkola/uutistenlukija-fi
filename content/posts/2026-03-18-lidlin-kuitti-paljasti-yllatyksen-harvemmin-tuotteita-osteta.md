@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - lapset
   - politiikka
+related_articles:
+  - 2026-03-18-lidlin-kassakuitista-paljastui-jattimainen-ostopotti-virhe-k
+  - 2026-03-18-pahkinarinteen-tulipalossa-kuollut-perhe-haudattiin-vantaall
+  - 2026-03-17-verohallinto-paljasti-yli-miljardin-euron-edesta-virheita-ja
 ---
 
 Joensuulaisessa Lidlin myymälässä havaittiin poikkeuksellinen ostos, jonka kuitit levisivät sosiaalisessa mediassa. Asiakas huomasi kassalla suuren ostoskorin ja epäili laskujen sisältävän erittäin paljon tuotteita. Vasta kuitin tarkastamisen jälkeen selvisi, että kyseessä oli poikkeuksellisen suuri ostos, mahdollisesti suureen perheeseen tai tapahtumaan liittyvä.

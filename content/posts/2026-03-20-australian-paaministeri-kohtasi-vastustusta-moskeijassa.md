@@ -20,6 +20,10 @@ tags:
   - hallitus
   - israel
   - sää
+related_articles:
+  - 2026-03-20-australian-paaministeri-sai-huudot-moskeijassa-ramadan-tapah
+  - 2026-03-20-australian-paaministeri-sai-huutoa-sydneyssa-moskeijassa-ram
+  - 2026-03-20-australian-paaministeri-sai-huutoja-moskeijassa-ramadan-tapa
 ---
 
 Australian pääministeri Anthony Albanese sai häiriöitä osakseen Lakemba-moskeijassa, kun hän osallistui ramadanin päättäjäisiin. Monet moskeijassa olleet syyttivät häntä tuen antamisesta Israelin ja Gazan sodalle sekä kasvavalle islamofobialle. Tämä herätti huomattavaa närkästystä muslimiyhteisössä, joka odottaa hallituksen lisäävän vuorovaikutusta sen kanssa.

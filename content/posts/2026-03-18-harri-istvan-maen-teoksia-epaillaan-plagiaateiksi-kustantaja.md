@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - kirjallisuus
   - taide
+related_articles:
+  - 2026-03-18-harri-istvan-maen-uudet-plagiaatiepailyt-kustantaja-poisti-t
+  - 2026-03-19-plagioinnista-kiinni-jaanyt-kirjailija-harri-istvan-maki-ei
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-eivat-jatku-kesalla-lavan-rak
 ---
 
 Kustantamo Helmivyö on poistanut myynnistä kolme Mäen romaania ja novellikokoelman. Epäilyt kirjallisuuden kopioinnista ovat herättäneet keskustelua alalla. Vertailuja aikaisemmin julkaistuihin teoksiin on tehty, ja osa on todettu plagioiduiksi. Kustantajan toimet ovat herättäneet palautetta tekijänoikeuksien ja luovuuden välillä. Kirjailijan kanta asiaan odotetaan myöhemmin julkaistavissa lausunnoissa.

@@ -13,6 +13,10 @@ tags:
   - teknologia
   - yritys
   - tekoäly
+related_articles:
+  - 2026-03-17-nvidia-tahtaa-tekoalyn-seuraavaan-taistelukenttaan-koulutusv
+  - 2026-03-20-it-branssi-vahvistaa-asemaansa-ruotsin-it-mediassa
+  - 2026-03-15-nokia-ja-telia-testaavat-tekoalypohjaista-verkkoteknolog
 description: "Google ja Accel valitsevat viisi innovaatiopohjaista startupia Atoms-kiihdyttämöön yli 4 000 hakemuksesta, karsien tekoälykääreiksi paljastuneet."
 image: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3Mzk2OTA4OXww&ixlib=rb-4.1.0&q=85"
 image_alt: "Googlen ja Accelin kiihdyttämö karsi tekoälykääreiksi paljastuneet hakijat"

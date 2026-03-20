@@ -21,6 +21,10 @@ tags:
   - hallitus
   - turvallisuus
   - murha
+related_articles:
+  - 2026-03-20-venajalla-paljastui-uusi-salamurhayksikko-noyryytys-vallanka
+  - 2026-03-20-venajalla-paljastui-uusi-salamurhayksikko
+  - 2026-03-20-venajalla-uusi-salamurhayksikko-paljastui-tutkivista-journal
 ---
 
 Tutkivat journalistit ovat tuoneet päivänvaloon Venäjän eliittijoukoista kootun salatun salamurhayksikön. Yksikön paljastuminen on suuri nöyryytys Venäjän hallitukselle ja sen turvallisuuspalveluille. Tämä uusi yksikkö on herättänyt kansainvälistä huomiota ja nostanut kysymyksiä Venäjän sisäisestä turvallisuudesta ja sen toimista. Paljastuksen myötä on herännyt myös keskustelua siitä, kuinka tällaiset salaiset joukot ovat onnistuneet pysymään piilossa näin pitkään.

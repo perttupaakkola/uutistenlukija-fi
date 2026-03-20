@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-19-turun-keskustaan-tulee-ensimmainen-hypermarketti-wiklund-saa
+  - 2026-03-18-tyoministeri-marttinen-valmis-muuttamaan-kiisteltya-maaraaik
+  - 2026-03-19-asuinalueen-jatepisteet-tayttyvat-rosasta
 ---
 
 Turun seudulla on tapahtunut viime aikoina useita ammattimaisten myymälävarkaiden iskuja, jotka ovat herättäneet huolta paikallisissa liikeyrityksissä. Varkaat ovat toimineet järjestäytyneesti ja suunnitelmallisesti, mikä tekee heistä erityisen vaikeita tavoittaa. Paikalliset viranomaiset ovat aloittaneet tutkimukset ja kehittävät strategioita varkaiden pysäyttämiseksi.

@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - kansainvälinen
   - politiikka
+related_articles:
+  - 2026-03-19-kuningas-avasi-maailman-pisimman-rannikkopatkan-englannissa
+  - 2026-03-19-kuningas-avasi-maailman-pisimman-rannikkopolun-englannissa
+  - 2026-03-19-kuningas-charles-avasi-maailman-pisimman-rannikkoreitin-engl
 description: "Kuningas Kaarle III avaa maailman pisimmän rannikkokävelyreitin Englannissa, joka kattaa 4 324 kilometriä ja yhdistää koko maan rannikon."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Maailman pisin rannikkoreitti avautui Englannissa"

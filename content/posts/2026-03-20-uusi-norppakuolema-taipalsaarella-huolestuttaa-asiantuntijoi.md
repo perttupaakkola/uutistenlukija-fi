@@ -20,6 +20,10 @@ tags:
   - hallitus
   - luonto
   - liikenne
+related_articles:
+  - 2026-03-20-saimaannorppa-kuoli-kuhaverkkoon-taipalsaarella
+  - 2026-03-19-metsahallitus-sulkee-siikanevan-soidensuojelualueen-retkeily
+  - 2026-03-16-metsahallitus-maksaa-sadan-euron-palkkion-tuntemattomasta-ma
 ---
 
 Viimeisimpänä ilmoituksena Metsähallitus sai tiedon saimaannorpan kuolemasta Taipalsaarella. Tapaus on jo viides tänä talvena ja herättää huolta uhanalaisen lajin tulevaisuudesta. Saimaannorppa kuoli kalastajan verkkoihin, mikä on huolestuttava merkki sen suojelun kannalta.

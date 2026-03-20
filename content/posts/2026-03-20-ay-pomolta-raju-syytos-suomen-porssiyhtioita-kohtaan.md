@@ -20,6 +20,10 @@ tags:
   - yritys
   - pörssi
   - työttömyys
+related_articles:
+  - 2026-03-20-ay-pomolta-kova-kritiikki-suomen-porssiyhtioita-kohtaan
+  - 2026-03-20-ammattiliitto-pro-syyttaa-porssiyhtioita-lyhytnakoisyydesta
+  - 2026-03-20-ay-liiton-johtaja-syyttaa-porssiyhtioita-lyhytnakoisyydesta
 ---
 
 Ammattiliitto Pron puheenjohtaja Niko Simola on esittänyt voimakkaita syytöksiä Suomen pörssiyhtiöitä kohtaan käyttäen termejä lyhytnäköinen häviäjän strategia. Simolan mukaan liian suuret osingot paljastavat yritysjohdon haluttomuuden investoida kehitykseen tai visioon kasvusta. "Suomessa vallitsee massatyöttömyys, ja yrityksissä ei keksitä muuta kohdetta rahalle kuin omistajien palkitseminen", hän kritisoi.

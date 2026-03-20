@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - luonto
+related_articles:
+  - 2026-03-20-lakkitehtaan-paluu-lietoon-tuo-mahdollisuuksia
+  - 2026-03-20-lietoon-palannut-lakkitehdas-hyotyy-selkeista-vuodenajoista
+  - 2026-03-17-kokkolaan-suunnitellaan-miljardin-euron-alumiinitehdasta-ens
 ---
 
 PihlaPRO on sitoutunut vähentämään ympäristövaikutuksiaan. Yhtiö on saanut ISO 14001 -sertifikaatin, joka osoittaa sen noudattavan kansainvälisiä ympäristöjärjestelmien standardeja. Sertifikaatti edellyttää organisaatiolta ennakoivaa toimintaa ympäristönäkökulmien tunnistamisessa ja ymmärtämisessä.

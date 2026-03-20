@@ -21,6 +21,10 @@ tags:
   - hallitus
   - energia
   - öljy
+related_articles:
+  - 2026-03-19-orbanin-kiristys-euta-kohtaan-horjuttaa-ukrainan-tukilupaust
+  - 2026-03-16-britannia-suunnittelee-miinanraivausdroonien-lahettamista-ho
+  - 2026-03-20-israel-torjuu-syytokset-vetamisesta-yhdysvaltoja-sotaan
 ---
 
 Unkarin pääministeri Viktor Orbán kiristää EU:ta Ukrainan tuella, juuri kun häneltä itseltään on valta horjumassa. EU-johtajien on määrä päättää tänään Ukrainan saamasta 90 miljardin euron lainapaketista, mutta Unkarin jarrutukset ovat jälleen nousseet keskiöön. Orbán on aikaisemmin hyväksynyt lainapaketin, mutta nyt hän käyttää Družba-öljyputken huolia tekosyynä päätöksensä perumiselle. Tämä strategia näkyy Orbánin vaalikampanjassa, jossa hän pyrkii esiintymään Unkarin ainoana puolustajana EU:ta ja Ukrainaa vastaan. Hänen toimintansa kiristää myös suhteita Brysseliin, jossa kärsivällisyys Unkarin peliä kohtaan alkaa olla lopussa. Orbánin raskaampi politiikka saattaa tulla hänen viimeiseksi, jos se johtaa hänen hallituksensa lopulliseen hyllyttämiseen.

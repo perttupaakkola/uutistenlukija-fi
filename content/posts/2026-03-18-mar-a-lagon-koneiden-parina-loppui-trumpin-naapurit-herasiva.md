@@ -20,6 +20,10 @@ tags:
   - yhdysvallat
   - oikeus
   - lentoliikenne
+related_articles:
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-avata-hormuzinsal
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
+  - 2026-03-17-stubb-kehottaa-nato-liittolaisia-ottamaan-trumpin-vaatimukse
 ---
 
 Donald Trumpin omistaman Mar-a-Lagon yläpuolella ei lennä lentokoneita kello 23–07 välillä, mikä on liipaisuksena Yahsin palkinnon kaltaiseen reaktioon naapurustossa. Lentoreitin muutos meni läpi, kun Trump saatteli vuosikymmenten oikeustaiston valtion ilmailuviranomaista vastaan loppusuoraan tarjoten omia karttojaan ja meluaineistojaan osana kaupunkikehitystä.

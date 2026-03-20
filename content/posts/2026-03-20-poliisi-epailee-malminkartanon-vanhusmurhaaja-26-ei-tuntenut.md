@@ -21,6 +21,10 @@ tags:
   - murha
   - liikenne
   - helsinki
+related_articles:
+  - 2026-03-20-poliisi-tutkii-malminkartanon-henkirikosta-murhana
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanon-murhassa-poliisi-tu
+  - 2026-03-20-pelottava-tieto-malminkartanon-epaillysta-murhasta
 ---
 
 Malminkartanon alueella Helsingissä tapahtui äskettäin erityisen raaka murha, jossa 26-vuotias nuori mies on epäiltynä vanhuksen surmasta. Poliisin alustavien tietojen mukaan tekijä ja uhri eivät tunteneet toisiaan ennestään. Surma tapahtui keskellä katua, mikä herätti huomiota ohikulkijoiden keskuudessa.

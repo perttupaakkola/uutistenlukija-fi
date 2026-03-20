@@ -21,6 +21,10 @@ tags:
   - yritys
   - poliisi
   - oikeus
+related_articles:
+  - 2026-03-17-elon-muskin-xai-yhtiota-vastaan-kanne-tekoaly-tuotti-lasten
+  - 2026-03-17-australian-viranomainen-lapsiin-kohdistuva-hyvaksikayttomate
+  - 2026-03-17-tekoalyyhtio-anthropic-etsii-aseasiantuntijaa-estamaan-jarje
 ---
 
 Elon Muskin omistamaa tekoälyyhtiö xAI:ta vastaan on nostettu oikeusjuttu Yhdysvalloissa. Kanteen mukaan yhtiön Grok-tekoälymalli tuotti lasten seksuaalista hyväksikäyttömateriaalia käyttämällä pohjana kolmen tytön oikeita valokuvia.

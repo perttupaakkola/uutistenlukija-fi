@@ -15,6 +15,10 @@ tags:
   - sota
   - ukraina
   - koulutus
+related_articles:
+  - 2026-03-19-huuhkajien-ottelu-valko-venajaa-vastaan-siirtyy-pois-suomest
+  - 2026-03-16-kenia-venaja-lupaa-lopettaa-kenialaisten-varvaamisen-sotaan
+  - 2026-03-16-venajan-propagandasta-kertova-mr-nobody-against-putin-voitti
 description: "Suomen jalkapallomaajoukkue siirtää syyskuun Kansojen liigan kotiottelunsa Valko-Venäjää vastaan ministeriöiden suositusten vuoksi."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Huuhkajien Valko-Venäjä-peli siirretään pois Suomesta"

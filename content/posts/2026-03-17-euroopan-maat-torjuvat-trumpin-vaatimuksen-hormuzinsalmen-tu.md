@@ -21,6 +21,10 @@ tags:
   - liikenne
   - energia
   - yhdysvallat
+related_articles:
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-avata-hormuzinsal
+  - 2026-03-17-stubb-kehottaa-nato-liittolaisia-ottamaan-trumpin-vaatimukse
+  - 2026-03-17-trump-turhautui-liittolaisiinsa-hormuzinsalmen-kriisista-yhd
 ---
 
 Useat Euroopan maat ovat hylänneet presidentti Donald Trumpin vaatimuksen osallistua Hormuzinsalmen meriliikenteen turvaamiseen. Trump arvosteli kovin sanoin Britanniaa ja muita liittolaisia, jotka eivät ole vastanneet hänen kutsuunsa.

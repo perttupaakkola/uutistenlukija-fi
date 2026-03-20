@@ -19,6 +19,10 @@ tags:
   - nato
   - puolustus
   - lappi
+related_articles:
+  - 2026-03-19-pohjoisen-puolustus-vahvistuu-ranska-aikoo-lisata-sotilaiden
+  - 2026-03-15-nato-harjoittelee-haavoittuneiden-evakuointia-suomesta-norja
+  - 2026-03-17-cold-response-harjoitus-testaa-naton-valmiutta-arktisella-al
 ---
 
 Naton uusimmat sotaharjoitukset Lapissa ovat herättäneet huomattavaa huomiota. Ranskalaiset ja italialaiset vuoristosotilaat osallistuvat kansainväliseen harjoitukseen suomalaisjoukkojen rinnalla. Erinomainen suorituskyky näissä maasto-olosuhteissa on yllättänyt monia kenttään osallistuneiden joukossa. Mukavaa on ollut todeta, että harjoitushenkilöstön yhteistoiminta ja kyky sopeutua haastavaan ympäristöön ovat kehittyneet positiivisesti.

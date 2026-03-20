@@ -13,6 +13,10 @@ tags:
   - urheilu
   - ukraina
   - avaruus
+related_articles:
+  - 2026-03-17-fabregas-on-nostanut-italian-pikkuseuran-mestarien-liigan-ky
+  - 2026-03-19-huuhkajien-ottelu-valko-venajaa-vastaan-siirtyy-pois-suomest
+  - 2026-03-18-arsenal-ainoana-englantilaisena-puolivalieriin-chelsea-ja-ma
 description: "Real Madridin ykkösmaalivahti Thibaut Courtois loukkaantui reisilihaksesta ja jää sivuun viikkojen ajaksi, mikä hankaloittaa joukkueen tilannetta."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Real Madridin tähtimaalivahti Courtois loukkaantui"

@@ -20,6 +20,10 @@ tags:
   - yhdysvallat
   - kirjallisuus
   - liikenne
+related_articles:
+  - 2026-03-18-trumpin-naapurit-vaativat-taukoa-hiljaisuudelle-mar-a-lagoss
+  - 2026-03-18-vaitetyt-italialaisten-tarkka-ampujien-osallisuus-sarajevo-p
+  - 2026-03-19-kahdeksankymppinen-mies-puukotettiin-kuoliaaksi-malminkartan
 ---
 
 Keski-Uudenmaan pelastuslaitoksen julkaisema onnettomuusseloste paljastaa, että Pähkinärinteen tulipalossa, jossa kuoli viisi ihmistä, ei tehty alkusammutusta. Selosteen mukaan syynä oli se, että rakennuksessa ei ollut toimintakykyisiä asukkaita. Vaikka rakennuksessa oli asiakirjan mukaan tarvittavaa alkusammutuskaluistoa, tilanne oli jo pahentunut tulipalon leviäessä asuinhuoneistosta muuhun rakennukseen pelastuslaitoksen saavuttua paikalle.

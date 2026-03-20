@@ -21,6 +21,10 @@ tags:
   - inflaatio
   - öljy
   - luonto
+related_articles:
+  - 2026-03-20-energiaviranomainen-suosittelee-hatatason-toimia-oljyn-hinna
+  - 2026-03-20-iea-suosittelee-hatatoimia-oljyn-hinnan-nousun-vuoksi
+  - 2026-03-20-iea-suosittelee-hatatoimia-oljynhintojen-nousun-ehkaisemisek
 ---
 
 Kansainvälinen energia- ja ympäristöjärjestö (IEA) on julkaissut kiireellisiä suosituksia hallituksille öljyn hintojen nousun hillitsemiseksi Lähi-idän konfliktin seurauksena. IEA kannustaa hallituksia alentamaan moottoriteiden nopeusrajoituksia ja rohkaisee työntekijöitä työskentelemään etätyössä tai käyttämään kimppakyytijärjestelyjä. Suositukset tähtäävät öljyn kysynnän vähentämiseen ja kotitalouksien sekä yritysten valmiuden parantamiseen pitkän aikavälin häiriöitä varten.

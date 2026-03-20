@@ -21,6 +21,10 @@ tags:
   - israel
   - iran
   - yhdysvallat
+related_articles:
+  - 2026-03-18-israelin-ja-iranin-valiset-konfliktit-kiihtyvat-ja-tilanne-h
+  - 2026-03-19-trump-kiisti-tienneensa-israelin-hyokkayksesta-iranin-kaasuk
+  - 2026-03-19-yhdysvaltojen-ja-israelin-valinen-suhde-iranin-sodassa-kysee
 ---
 
 Israel teki hyökkäyksen Iraniin kohdistuneelle kaasukaivokselle, mikä on raporttien mukaan koordinoitu Yhdysvaltojen kanssa. Iranin presidentti Masoud Pezeshkain varoitti, että jatkuneet hyökkäykset voivat johtaa vakaviin seurauksiin. Alueen maat tuomitsivat hyökkäyksen, ja Iran uhkaa vastatoimilla Gulan energiainfrastruktuuria. Samalla taistelu Israelin ja Hizbollahin välillä Libanonissa jatkuu. Iranin öljyntuonti jatkuu, ja Hormuzinsalmen liikenne on ollut vilkasta alkuvuonna.

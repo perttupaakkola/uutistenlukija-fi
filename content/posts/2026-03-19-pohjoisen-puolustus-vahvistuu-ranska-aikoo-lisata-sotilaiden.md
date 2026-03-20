@@ -20,6 +20,10 @@ tags:
   - puolustus
   - nato
   - lappi
+related_articles:
+  - 2026-03-17-cold-response-harjoitus-testaa-naton-valmiutta-arktisella-al
+  - 2026-03-18-kaksi-yllatysmaata-puolustaisi-suomen-lappia-yksikko-on-ollu
+  - 2026-03-18-stubb-bbclle-trumpilla-ei-ole-oikeutta-vedota-naton-apuun
 ---
 
 Ranska on ilmoittanut aikovansa lisätä sotilaidensa harjoittelua Suomessa, erityisesti Lapissa, osana Naton suurta Cold Response -harjoitusta. Harjoitus, jossa on mukana yli 25 000 sotilasta, keskittyy arktisen alueen puolustukseen ja yhteistoimintaan liittolaisten kesken. Ranskalaiset vuoristosotilaat ovat jo osallistuneet yhdeksän päivän maastoharjoitukseen, jossa he tekevät yhteistyötä muiden liittolaisten, kuten italialaisten, kanssa.

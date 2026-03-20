@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-19-turun-keskustaan-tulee-ensimmainen-hypermarketti-wiklund-saa
+  - 2026-03-17-karkuteille-lahtenyt-hevonen-putosi-jaihin-kemijoella
+  - 2026-03-20-selkeat-vuodenajat-helpottavat-lietoon-palannutta-lakkitehda
 ---
 
 Olvi on avannut uuden, modernin keittämön Iisalmeen 20 miljoonan euron investoinnin myötä. Uusi keittämö parantaa tuotantokapasiteettia viidenneksellä ja mahdollistaa laajemman valikoiman erikoisoluita. Vanha keittämö oli jo aikansa elänyt, sillä se oli rakennettu vuonna 1989 ja sen elinkaari oli päättymässä.

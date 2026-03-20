@@ -21,6 +21,10 @@ tags:
   - poliisi
   - rikos
   - sää
+related_articles:
+  - 2026-03-20-tietoa-malminkartanon-epaillysta-vanhusmurhaajasta-26
+  - 2026-03-20-pelottava-tieto-malminkartanon-epaillysta-murhasta
+  - 2026-03-20-poliisi-tutkii-malminkartanon-henkirikosta-murhana
 ---
 
 Malminkartanon alueella Helsingissä tapahtui järkyttävä henkirikos, jossa 26-vuotias mies epäillään surmanneen vanhuksen kadulla. Tapauksen luonne on erityisen julma, ja poliisi tutkii tekoa murhana. Epäillyllä on runsaasti aiempaa rikostaustaa, mikä lisää tapauksen vakavuutta.

@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - yhdysvallat
   - eu
+related_articles:
+  - 2026-03-19-tanska-lahetti-joukkoja-gronlantiin-varautuessaan-mahdollise
+  - 2026-03-19-yhdysvaltojen-ja-israelin-valinen-suhde-iranin-sodassa-kysee
+  - 2026-03-20-meksikolainen-teini-kuoli-yhdysvaltojen-maahanmuuttoviranoma
 ---
 
 EU-parlamentti valmistautuu äänestämään ensi viikolla kauppasopimuksesta Yhdysvaltojen kanssa. Kauppavaliokunta hyväksyi torstaina sopimuksen etenemisen täysistunnon äänestykseen. Sopimus käsittää 15 prosentin tuontitullit useimmille EU:sta tuotaville tuotteille, mikä toisi helpotusta kaupankäyntiin.

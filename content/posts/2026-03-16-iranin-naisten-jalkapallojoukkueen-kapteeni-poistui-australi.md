@@ -13,6 +13,10 @@ tags:
   - urheilu
   - iran
   - jalkapallo
+related_articles:
+  - 2026-03-16-iranin-naisten-jalkapallomaajoukkueen-kapteeni-luopui-turvap
+  - 2026-03-18-iranin-jalkapallojoukkueet-palasivat-kotiin-teheraniin
+  - 2026-03-18-iranin-jalkapallonaisia-juhlitaan-kotiinpaluun-jalkeen-teher
 description: "Iranin naisten jalkapallojoukkueen kapteeni Zahra Ghanbari poistuu Australiasta, luovuttuaan aikaisemmasta turvapaikkatarjouksestaan."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Iranin naisten jalkapallojoukkueen kapteeni poistui Australiasta luovuttuaan turvapaikasta"

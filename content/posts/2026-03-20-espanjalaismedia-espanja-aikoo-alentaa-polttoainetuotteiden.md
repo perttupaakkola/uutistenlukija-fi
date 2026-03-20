@@ -21,6 +21,10 @@ tags:
   - verotus
   - yhdysvallat
   - liikenne
+related_articles:
+  - 2026-03-20-espanja-suunnittelee-polttoaineverojen-alentamista
+  - 2026-03-19-tanska-pelkasi-usan-hyokkaysta-nain-stubb-vastasi-isn-kysymy
+  - 2026-03-20-veronmaksajat-rahoittavat-laajoja-laittomien-kaatopaikkojen
 ---
 
 Espanjan hallitus suunnittelee polttoainetuotteidensa arvonlisäveron merkittävää alentamista 21 prosentista 10 prosenttiin. Tämä tieto on saatu espanjalaismediasta, ja se saattaa tuoda helpotusta autoilijoille ja kuljetusalalle kohonneiden ennakoitujen kustannusten myötä.

@@ -19,6 +19,10 @@ tags:
   - talous
   - pörssi
   - yritys
+related_articles:
+  - 2026-03-20-ay-liiton-johtaja-syyttaa-porssiyhtioita-lyhytnakoisyydesta
+  - 2026-03-20-ammattiliitto-pro-syyttaa-porssiyhtioita-lyhytnakoisyydesta
+  - 2026-03-20-ay-liiton-puheenjohtaja-suomen-porssiyhtiot-valinneet-lyhytn
 ---
 
 Ammattiliitto Pron puheenjohtaja Niko Simola on esittänyt vakavia syytöksiä suomalaisia pörssiyhtiöitä kohtaan, väittäen, että yritykset keskittyvät liikaa lyhytnäköisiin voittoihin omistajilleen. Simolan mukaan yhtiöiden jakamat suuret osingot ovat todiste siitä, että johto ei pyri riittävästi investoimaan kasvuun tai kehittämään pitkän aikavälin strategioita. Tämä on erityisen huolestuttavaa, sillä Suomessa on massatyöttömyys ja yritykset eivät löydä muuta tapaa käyttää rahaa kuin omistajien palkitseminen.

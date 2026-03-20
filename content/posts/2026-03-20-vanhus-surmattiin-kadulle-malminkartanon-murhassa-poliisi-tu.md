@@ -21,6 +21,10 @@ tags:
   - poliisi
   - rikos
   - helsinki
+related_articles:
+  - 2026-03-20-poliisi-tutkii-malminkartanon-henkirikosta-murhana
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanon-alueella-poliisi-tu
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanossa-poliisi-tutkii-mu
 ---
 
 Malminkartanon alueella Helsingissä tapahtui keskiviikkoiltana henkirikos, kun 26-vuotias mies epäillään surmanneen noin 80-vuotiaan vanhuksen teräaseella. Poliisi on luokitellut tapauksen murhaksi ja tutkii veritekoa erityisen raakana. Tutkinnanjohtaja, rikoskomisario Jari Korkalainen, vahvisti, että uhriin kohdistui voimakasta väkivaltaa.

@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - koulutus
   - luonto
+related_articles:
+  - 2026-03-20-hamk-aloittaa-kestavan-kehityksen-koulutuksen-hameenlinnassa
+  - 2026-03-15-perussuomalaisten-kansanedustaja-vaatii-kasvojen-peittamiski
+  - 2026-03-17-mies-raiskasi-16-vuotiaan-tyton-helsingin-kivikossa
 ---
 
 Hämeen ammattikorkeakoulu (HAMK) lanseeraa uuden koulutusohjelman, joka keskittyy luontoympäristön ja hyvinvoinnin yhdistämiseen. Koulutuksen tavoitteena on syventää opiskelijoiden asiantuntijaosaamista ekososiaalisista järjestelmistä ja niiden merkityksestä hyvinvointipalveluissa. Koulutus tarjoaa osallistujille mahdollisuuden kehittää omia työtapojaan ja johtamisstrategioitaan ottaen huomioon luontosuhteen merkityksen ihmisen hyvinvoinnin edistäjänä.

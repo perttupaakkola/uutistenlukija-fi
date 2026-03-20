@@ -14,6 +14,10 @@ tags:
   - korot
   - pankki
   - asuminen
+related_articles:
+  - 2026-03-19-asuntovelallisille-luvassa-kiristysta-korkojen-noususta
+  - 2026-03-20-12-kuukauden-euribor-nousi-merkittavasti-korkojen-nousutrend
+  - 2026-03-19-asuntolainan-korot-nousevat-tana-vuonna
 description: "Suomalaiset asuntovelalliset valmistautuvat tiukempaan vuoteen, kun korkotaso jatkaa nousuaan ja lainanhoitokustannukset kasvavat merkittävästi."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Asuntovelallisia odottaa tiukempi vuosi – korkojen nousu jatkuu"

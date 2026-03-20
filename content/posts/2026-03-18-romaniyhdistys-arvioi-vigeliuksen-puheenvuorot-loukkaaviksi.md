@@ -20,6 +20,10 @@ tags:
   - eduskunta
   - budjetti
   - sää
+related_articles:
+  - 2026-03-18-vihreariina-romaniyhdistys-kommentoi-vigeliuksen-leimaa
+  - 2026-03-19-wille-rydman-huolestui-jarkyttavista-paljastuksista-yksikin
+  - 2026-03-20-tyovoimavirkailijat-huolestuneita-uudistuksen-vaikutuksista
 ---
 
 Suomen Romaniyhdistyksen puheenjohtaja Päivi Majaniemi ei ymmärrä kansanedustaja Joakim Vigeliuksen kritiikkiä hyvinvointialueiden päätöksiä kohtaan. Vigelius on esittänyt kritiikkiä hyvinvointialueiden myöntämää toimeentulotuen lisätukea romanihameiden hankintaan. Majaniemi korostaa, että tällaiset kommentit lisäävät syrjintää ja vääristävät todellisuutta.

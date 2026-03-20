@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - opiskelijat
   - työelämä
+related_articles:
+  - 2026-03-19-kevin-spacey-sovitteli-seksuaalirikossyytokset-lontoossa
+  - 2026-03-19-kevin-spacey-sovitti-seksuaalirikosoikeusjutun-lontoossa
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-eivat-jatku-kesalla-lavan-rak
 ---
 
 Tytti Yli-Viikari aloittaa kesätyöt J.L. Runebergin kotimuseossa Porvoossa kolmen viikon kuluttua. Tehtävät kattavat lipunmyynnin, vierailuryhmien opastamisen ja näyttelyiden auki pitämisen. Yli-Viikari työskenteli samoissa tehtävissä myös viime kesänä ennen siirtymistään valtiontalouden tarkastusviraston johtajasta eläkkeelle. Museon rekrytointikriteerit sivuavat tutkintovaatimuksia, mutta lisäksi hakijalta edellytetään kielitaitoa ja näyttöä asiakaspalvelutyöstä. Porvoon Museotoimi budjettiin ei sisälly korvausta korkeakoulutuksen vaativista osatekijöistä.

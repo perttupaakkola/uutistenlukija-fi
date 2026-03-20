@@ -21,6 +21,10 @@ tags:
   - terveys
   - sää
   - työelämä
+related_articles:
+  - 2026-03-18-nuoret-kokevat-tyottomyyden-haittoja-tyossa-tutkija-varoitta
+  - 2026-03-20-ahdistussanan-kaytto-on-lisaantynyt-tutkija-varoittaa-seurau
+  - 2026-03-18-suomalaisopiskelija-havahtui-britannian-aivokalvontulehdusep
 ---
 
 Nuoret aikuiset tylsistyvät työssään useammin kuin vanhemmat. Tutkija Jie Linin mukaan jatkuva tylsyyden tunne voi laukaista vakavia mielenterveysongelmia.

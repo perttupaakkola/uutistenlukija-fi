@@ -20,6 +20,10 @@ tags:
   - eduskunta
   - budjetti
   - kulttuuri
+related_articles:
+  - 2026-03-18-romaniyhdistys-arvioi-vigeliuksen-puheenvuorot-loukkaaviksi
+  - 2026-03-20-ikonen-luopuu-varapuheenjohtajan-paikasta-kokoomuksessa
+  - 2026-03-20-kokoomuksen-varapuheenjohtajakisa-kaynnistynyt-ikonen-luopuu
 ---
 
 Kansanedustaja Joakim Vigelius on esittänyt kriittisiä näkemyksiään hyvinvointialueiden toimeentulotukikäytännöistä, viitaten romanihameisiin. Hänen kommenttinsa on herättänyt keskustelua eri tahojen keskuudessa.

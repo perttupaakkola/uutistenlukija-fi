@@ -21,6 +21,10 @@ tags:
   - poliisi
   - rikos
   - liikenne
+related_articles:
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanon-alueella-poliisi-tu
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanon-murhassa-poliisi-tu
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanossa-poliisi-tutkii-mu
 ---
 
 Helsingin Malminkartanon alueella on tapahtunut puukotus, jota tutkitaan murhana. Poliisi tiedottaa, että teon uhri oli 1940-luvulla syntynyt mies ja tapahtuma sattui keskiviikkona illalla kello 22.59 Luutnantintiellä.

@@ -19,6 +19,10 @@ tags:
   - urheilu
   - kilpailu
   - liikunta
+related_articles:
+  - 2026-03-18-julia-kykkanen-lopettaa-makihypyn-uransa
+  - 2026-03-18-lentopallon-naisten-mestaruusliigan-valierajoukkueet-selvill
+  - 2026-03-17-osullivan-50-tavoittelee-paluuta-huipulle-jos-selvian-tasta
 ---
 
 Suomen mäkihypyn uranuurtaja Julia Kykkänen ilmoitti lopettavansa uransa. Hän on osallistunut useisiin kansainvälisiin kilpailuihin ja vaikuttanut suomalaisen mäkihypyn kehittymiseen. Päätös perustuu hänen toiveeseensa siirtyä seuraavaan elämänvaiheeseen.

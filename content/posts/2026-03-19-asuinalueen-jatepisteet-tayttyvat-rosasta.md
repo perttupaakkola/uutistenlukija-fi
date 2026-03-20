@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-20-doris-ja-eivor-ajavat-lanthandeln-sikasbyn-sydamessa
+  - 2026-03-17-karkuteille-lahtenyt-hevonen-putosi-jaihin-kemijoella
+  - 2026-03-18-tyoministeri-marttinen-valmis-muuttamaan-kiisteltya-maaraaik
 ---
 
 Uuden asuinalueen jätepisteet ovat täynnä roskaa, mikä huolestuttaa asukkaita. Ongelma on noussut esiin erityisesti kesäkuukausina, jolloin jätteiden määrä kasvaa merkittävästi. Asukkaat pelkäävät, että roska houkuttelee paikalle rottia ja muita tuhoeläimiä. Jätepisteiden huolto ei ole vastannut kasvanutta tarpeita, ja monet asukkaat ovat ilmoittaneet ongelmasta kunnallishallinnolle ilman näkyvää edistystä. Tilanne aiheuttaa tyytymättömyyttä, ja asukkaat vaativat aktiivisempaa toimintaa jätehuollon tehostamiseksi.

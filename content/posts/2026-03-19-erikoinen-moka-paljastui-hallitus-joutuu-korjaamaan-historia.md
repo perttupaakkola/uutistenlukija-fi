@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - hallitus
   - liikenne
+related_articles:
+  - 2026-03-19-hallitus-ehdottaa-lisaaikaa-hyvinvointialueiden-alijaamien-k
+  - 2026-03-19-hallitus-korjaa-virhetta-aluehallintouudistuksessa
+  - 2026-03-16-metsahallitus-maksaa-sadan-euron-palkkion-tuntemattomasta-ma
 ---
 
 Hallitus on joutunut tekemään muutoksia vuoden alussa voimaan tulleeseen aluehallintouudistuslakiin, joka sisältää lain luonnonmukaisesta tuotannosta. Lakitekstistä on jäänyt puuttumaan olennaista tietoa, mikä voi vaikuttaa viranomaisten valvontatehtäviin. Muutos liittyy siihen, että valtuutettua tarkastajaa koskevaan lainkohtaan ei ollut mainittu Ruokavirastoa, joka toimii luonnonmukaisen tuotannon virallisena valvontaviranomaisena.

@@ -15,6 +15,10 @@ tags:
   - politiikka
   - turvallisuus
   - sää
+related_articles:
+  - 2026-03-18-ukrainan-tilanne-lisaa-huolta-euroopassa
+  - 2026-03-17-australia-kamppailee-polttoainekriisin-kanssa-kansalaisia-ke
+  - 2026-03-16-euroopan-parlamentti-linjasi-ukraina-voisi-paasta-eu-rakente
 description: "EU-maiden ulkoministerit kokoontuvat Brysselissä käsittelemään unionin ulko- ja turvallisuuspoliittisia kysymyksiä sekä kansainvälisiä kriisejä."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "EU-maiden ulkoministerit kokoontuvat Brysselissä"

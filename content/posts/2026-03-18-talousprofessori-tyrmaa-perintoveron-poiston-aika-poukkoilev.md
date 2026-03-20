@@ -21,6 +21,10 @@ tags:
   - verotus
   - yritys
   - urheilu
+related_articles:
+  - 2026-03-17-sec-aikoo-luopua-porssiyhtioiden-neljannesvuosiraportoinnist
+  - 2026-03-18-trevor-milton-yrittaa-kerata-miljardi-dollaria-tekoalypohjai
+  - 2026-03-19-meta-houkuttelee-tiktok-ja-youtube-sisallontuottajia-3-000-d
 ---
 
 Talouspolitiikan arviointineuvoston puheenjohtaja, professori Niku Määttänen pitää kokoomuksen ajamaa perintö- ja lahjaveron poistoa huonosti perusteltuna. Kokoomuksessa on väläytelty mallia, jossa veron poisto rahoitettaisiin perumalla aiemmin toteutettu yhteisöveron alennus.

@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - turvallisuus
   - koulutus
+related_articles:
+  - 2026-03-18-jyvaskylassa-keskustelu-kasvot-peittavien-asusteiden-kouluki
+  - 2026-03-15-perussuomalaisten-kansanedustaja-vaatii-kasvojen-peittamiski
+  - 2026-03-19-oppositio-haastaa-hallitusta-kyselytunnilla
 ---
 
 Kaupunkien edustajat eivät ole tehneet lopullisia päätöksiä kasvomaskeista kouluissa. Keskustelua käydään pitkäjänteisesti, ja asioista keskustellaan turvallisuus- ja oppilashoikaisiin näkökulmiin huomioiden. Oppilashuolto- ja opettajatahot ovat esittäneet eriäviä näkökohtia, mutta päätöksiä ei ole tehty. Koulut selvittävät myös sisäilma- ja oppimisolosuhteiden parantamista.

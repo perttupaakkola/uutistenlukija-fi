@@ -20,6 +20,10 @@ tags:
   - eu
   - lääketiede
   - liikenne
+related_articles:
+  - 2026-03-19-kyproksen-presidentti-vaatii-keskustelua-britannian-sotilast
+  - 2026-03-19-keniassa-kuukautisvapaata-tyontekijoille
+  - 2026-03-15-britannia-lahi-idan-tilanteen-rauhoittaminen-on-valttamatont
 ---
 
 Presidentti Alexander Stubb kommentoi Lontoossa Ison-Britannian EU-eron vaikutuksia, vertaamalla brexitin ajattelutapaa ihmisen amputointiin ilman lääketieteellistä syytä. Hänen kannanottonsa herättivät kritiikkiä Isossa-BBritanniassa, missä monet kokevat sanavalinnat loukkaavina. Stubb ei ollut aiemmin kommentoinut julkisesti brexit-kantaa näin voimakkaasti.

@@ -19,6 +19,10 @@ tags:
   - urheilu
   - avaruus
   - kilpailu
+related_articles:
+  - 2026-03-17-fabregas-johtanut-como-1907n-italian-jalkapallon-huipulle
+  - 2026-03-18-mestarien-liigan-puolivalierat-selvilla-liverpool-bayern-ja
+  - 2026-03-17-sm-liigan-runkosarja-paattyy-suurin-pettymys-loytyy-pohjoise
 ---
 
 Espanjalainen Cesc Fábregas on tehnyt Como 1907:sta yhden kauden yllättäjistä. Pohjois-Italian pikkukaupungin seura lähestyy Mestarien liigan paikkaa, mikä olisi seuran historian suurin saavutus.

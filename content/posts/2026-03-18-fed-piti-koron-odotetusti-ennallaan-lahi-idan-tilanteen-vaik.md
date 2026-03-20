@@ -21,6 +21,10 @@ tags:
   - korot
   - politiikka
   - yhdysvallat
+related_articles:
+  - 2026-03-19-ekp-pitaa-korot-ennallaan-lahi-idan-sodan-keskella
+  - 2026-03-19-ekp-pitaa-korot-ennallaan-lahi-idan-sota-kasvattaa-inflaatio
+  - 2026-03-19-ekp-piti-ohjauskoron-ennallaan-20-prosentissa
 ---
 
 Yhdysvaltojen keskuspankki Federal Reserve jatkoi ohjauskoronsa nykyisellä tasolla. Useat ekonomistit ovat odottaneet tätä päätöstä ja pitäneet sitä oikea-aikaisena. Korkojen pysyttäminen ennallaan antaa talouden tahtia ylläpitäville toimenpiteille tilaa, mutta samalla politikoinnista johtuvat riskit lisääntyvät.

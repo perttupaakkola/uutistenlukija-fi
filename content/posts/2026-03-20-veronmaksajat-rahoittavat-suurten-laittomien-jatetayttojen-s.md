@@ -20,6 +20,10 @@ tags:
   - hallitus
   - verotus
   - luonto
+related_articles:
+  - 2026-03-20-veronmaksajat-maksavat-suurten-laittomien-jatteiden-siivouks
+  - 2026-03-20-veronmaksajat-rahoittavat-laajoja-laittomien-kaatopaikkojen
+  - 2026-03-20-veronmaksajat-rahoittavat-suurten-laittomien-jatteenkasittel
 ---
 
 Englannin hallitus on päättänyt puuttua suureen laittomaan jätetäyttöongelmaan ja siivota kolme suurinta laittomia kaatopaikkaa kansalaisten verovaroin. Tämän toimenpiteen taustalla on kansallinen jätteenkierrätysohjelma, joka tähtää jätteen vähentämiseen ja ympäristön suojelemiseen.

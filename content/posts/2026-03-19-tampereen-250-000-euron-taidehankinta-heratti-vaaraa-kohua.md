@@ -14,6 +14,10 @@ tags:
   - tampere
   - koulutus
   - oulu
+related_articles:
+  - 2026-03-19-saastokuurilla-olevan-tampereen-taidehankinnasta-levisi-valh
+  - 2026-03-19-plagioinnista-kiinni-jaanyt-kirjailija-harri-istvan-maki-ei
+  - 2026-03-19-ilmari-kaihkon-sotatieteen-teos-valittiin-vuoden-tiedekirjak
 description: "Sebastian Schulz valitaan Kaukajärven koulun muraalitaiteilijaksi, mikä herättää turhaa kohua sosiaalisessa mediassa."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Tampereen 250 000 euron taidehankinta herätti väärää kohua"

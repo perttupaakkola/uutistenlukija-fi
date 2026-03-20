@@ -20,6 +20,10 @@ tags:
   - perussuomalaiset
   - eduskunta
   - poliisi
+related_articles:
+  - 2026-03-15-perussuomalaisten-kansanedustaja-vaatii-kasvojen-peittamiski
+  - 2026-03-15-poliisi-tutkii-himoksen-kuolemaan-johtanutta-lasketteluonnet
+  - 2026-03-18-vahingoittaa-erityisesti-heita-eduskunta-muutti-poissaolojen
 ---
 
 Keskustan ja perussuomalaisten välinen kiista kävi kuumana eduskunnan kyselytunnilla, jossa keskustalaiset syyttivät perussuomalaisia aluepolitiikan keskittämisestä. Keskustalaiset nostivat esiin huolen poliisiasemien lakkauttamisesta, sillä julkisuudessa on kerrottu jopa 21 poliisiaseman mahdollisesta sulkemisesta. Sisäministeri Mari Rantanen vakuutti, että poliisi pysyy edelleen koko maassa.

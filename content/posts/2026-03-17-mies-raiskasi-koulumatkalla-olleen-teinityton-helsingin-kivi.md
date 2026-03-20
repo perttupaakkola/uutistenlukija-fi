@@ -21,6 +21,10 @@ tags:
   - luonto
   - sää
   - helsinki
+related_articles:
+  - 2026-03-17-mies-raiskasi-16-vuotiaan-tyton-helsingin-kivikossa
+  - 2026-03-15-perussuomalaisten-kansanedustaja-vaatii-kasvojen-peittamiski
+  - 2026-03-16-espoon-miljonaarimurhan-tapahtumapaikka-ilmestyi-asuntomarkk
 ---
 
 19-vuotias Elias Mahad Aden raiskasi 16-vuotiaan tytön Helsingin Kivikossa lokakuussa 2023. Aden lähestyi uhriaan bussipysäkillä tytön ollessa matkalla kouluun 5. lokakuuta.

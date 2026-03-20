@@ -21,6 +21,10 @@ tags:
   - hallitus
   - murha
   - liikenne
+related_articles:
+  - 2026-03-20-venajalla-paljastui-uusi-salamurhayksikko
+  - 2026-03-20-venajalla-uusi-salamurhayksikko-paljastui-tutkivista-journal
+  - 2026-03-20-venajalla-on-uusi-salamurhayksikko-sen-paljastuminen-on-noyr
 ---
 
 Tutkivat journalistit ovat paljastaneet Venäjän eliittijoukoista kootun salatun salamurhayksikön. Tämä yksikkö herättää huolta ja nöyryytystä Venäjän hallituksen piireissä, sillä se paljastaa syvälle juurtuneita ongelmia maassa. Tiedot ovat olleet salassa pitkään, mutta tuore tutkimus tuo valoa yksikön toimintaan ja sen vaikutuksiin.

@@ -21,6 +21,10 @@ tags:
   - hallitus
   - energia
   - inflaatio
+related_articles:
+  - 2026-03-18-tilanne-lahi-idassa-karjistyy-israelin-hyokkayksen-seuraukse
+  - 2026-03-15-britannia-lahi-idan-tilanteen-rauhoittaminen-on-valttamatont
+  - 2026-03-18-israelin-ja-iranin-valiset-konfliktit-kiihtyvat-ja-tilanne-h
 ---
 
 Australialaiset viranomaiset valmistelevat toimenpiteitä öljyn hintojen nousun vuoksi, joka on seurausta Lähi-idän konfliktista. Pääministeri Anthony Albanese on kutsunut yhteen kansallisen kabinettinsa keskustelemaan öljyhuollon vakavista ongelmista, joita sota Israelin ja Iranin välillä on aiheuttanut. Tämä on johtanut kiireellisiin toimiin markkinoiden olosuhteiden kestävyyden parantamiseksi ja hintojen nousun vähentämiseksi.

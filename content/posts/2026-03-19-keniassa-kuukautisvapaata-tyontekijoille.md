@@ -20,6 +20,10 @@ tags:
   - terveys
   - lääketiede
   - liikenne
+related_articles:
+  - 2026-03-18-britanniasta-kajahti-kritiikkia-alexander-stubbille-ylimieli
+  - 2026-03-16-nainen-synnytti-keskella-katua-teneriffalla-poliisi-toimi-ri
+  - 2026-03-17-suomen-kovatuloisimmat-laakarit-tienaavat-satoja-tuhansia-eu
 ---
 
 Kenian pääkaupungissa Nairobissa työskentelevät naiset saavat kuukaudessa kaksi päivää kuukautisvapaata. Uudistus on ollut voimassa joulukuusta 2025 lähtien ja siinä on otettu askel kohti parempia työoloja naisille. Täysin palkallinen vapaapäivä ei vaadi lääkärintodistusta, mikä helpottaa vapaiden pitämistä. Kuukautisvapaamalli on saanut kiitosta tasa-arvoedistysaskeleena. Se auttaa vähentämään naisten työhön liittyvää syrjintää ja parantaa heidän hyvinvointiaan. Tämä käytäntö on otettu huomioon myös muissa maissa, ja sen odotetaan vaikuttavan positiivisesti naisten osallistumiseen työmarkkinoilla.

@@ -21,6 +21,10 @@ tags:
   - sota
   - iran
   - yhdysvallat
+related_articles:
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-pekingin-vierailua-kuukaudell
+  - 2026-03-17-trumpin-asema-heikkenee-iranin-sodan-seurausten-kasautuessa
 ---
 
 Yhdysvaltain presidentti Donald Trump on pyytänyt Kiinaa lykkäämään suunniteltua Pekingin-vierailuaan noin kuukaudella. Syyksi Trump ilmoitti Iranin sodan. Tapaamisen presidentti Xi Jinpingin kanssa oli määrä toteutua maaliskuun lopussa.

@@ -21,6 +21,10 @@ tags:
   - lääketiede
   - yhdysvallat
   - tiede
+related_articles:
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovi-sote-rahoituksen-perustaksi
+  - 2026-03-17-laihdutuslaakkeita-kirjoitetaan-chattivastaanotolla-ilman-po
+  - 2026-03-17-suomen-kovatuloisimmat-laakarit-tienaavat-satoja-tuhansia-eu
 ---
 
 Kardiologi Mikko Aho sai kuulemiskirjeen kahden viikon varoitusajalla sen jälkeen, kun hän kommentoi kesäkuun alussa julkisuudessa hyvinvointialueen ostopalvelusopimuksia. Aho kirjoitti sosiaalisessa mediassa, että yksityisvastaanotoille ohjataan potilaita, joiden hoitocase "ratkeaa 15 minuutissa", vaikka julkisella puolella sama tutkimus vaatisi useamman käynnin.

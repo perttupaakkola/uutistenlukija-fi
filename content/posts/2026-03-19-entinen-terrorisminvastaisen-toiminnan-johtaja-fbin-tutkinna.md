@@ -20,6 +20,10 @@ tags:
   - yhdysvallat
   - sää
   - liikenne
+related_articles:
+  - 2026-03-19-tanska-pelkasi-usan-hyokkaysta-nain-stubb-vastasi-isn-kysymy
+  - 2026-03-19-tuomari-pakotti-trumpin-hallinnon-palauttamaan-voice-of-amer
+  - 2026-03-18-fbi-ostaa-sijaintitietoja-seuratakseen-amerikkalaisia-johtaj
 ---
 
 Yhdysvaltojen entinen kansallinen terrorisminvastaisen keskuksen johtaja Joe Kent on joutunut FBI:n tutkinnan kohteeksi, joka liittyy väitettyihin luottamuksellisten tietojen vuotoihin. Kent ilmoitti erostaan tiistaina ja sanoi, että hän ei voi sydämessään tukea Irania vastaan käytävää sotaa, koska se ei hänen mukaansa uhkaa Yhdysvaltoja. Tämä lausunto on herättänyt paljon keskustelua, ja Valkoinen talo on hylännyt Kentin väitteet.

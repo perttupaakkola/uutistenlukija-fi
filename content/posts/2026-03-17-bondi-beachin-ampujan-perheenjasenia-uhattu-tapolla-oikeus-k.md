@@ -20,6 +20,10 @@ tags:
   - oikeus
   - murha
   - lapset
+related_articles:
+  - 2026-03-18-yhdysvalloissa-mies-menehtyi-vaimonsa-cocktailin-vaikutukses
+  - 2026-03-18-iranilaiset-jalkapalloilijat-palaavat-kotimaahansa-turvattom
+  - 2026-03-20-venajalla-paljastettiin-uusi-salamurhayksikko-noyryyttava-sk
 ---
 
 Sydneyn Bondi Beachilla tapahtuneen ampumisen epäillyn tekijän Naveed Akramin perheenjäsenet ovat saaneet tappouhkauksia joulukuun antisemitistisen iskun jälkeen. Akramin asianajaja vaati oikeudessa perheenjäsenten henkilöllisyyksien salaamista.

@@ -19,6 +19,10 @@ tags:
   - talous
   - pörssi
   - liikenne
+related_articles:
+  - 2026-03-17-yhdysvaltain-arvopaperimarkkinaviranomainen-harkitsee-siirty
+  - 2026-03-19-paastrategi-suosittelee-seitsemaa-osaketta-myllerryksen-kesk
+  - 2026-03-20-saksa-investoi-108-miljardia-euroa-puolustusteollisuuteen-mi
 ---
 
 Postin toimitusjohtaja Antti Jääskeläinen sai viime vuonna 510 300 euron listautumispalkkion. Palkkio liittyi Postin pörssilistautumiseen ja nosti Jääskeläisen kokonaispalkitsemisen yli miljoonaan euroon. Tiedot käyvät ilmi Postin tiistaina julkistamasta vuosikertomuksesta.

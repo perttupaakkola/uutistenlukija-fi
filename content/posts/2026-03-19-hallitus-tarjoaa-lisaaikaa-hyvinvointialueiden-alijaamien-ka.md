@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - hallitus
   - sää
+related_articles:
+  - 2026-03-19-hallitus-ehdottaa-lisaaikaa-hyvinvointialueiden-alijaamien-k
+  - 2026-03-15-orpo-suomi-haluaa-kuulla-lisaa-ranskan-ydinasesuojasta
+  - 2026-03-18-paakirjoitus-13-kuukautta-aikaa-hallitus-siirtyy-vaalitunnel
 description: "Valtiovarainministeriö esittää hyvinvointialueiden alijäämien kattamiseen lisäaikaa vuoden 2029 loppuun, varmistaen lainsäädännön noudattamisen."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Hallitus tarjoaa lisäaikaa hyvinvointialueiden alijäämien kattamiseen"

@@ -21,6 +21,10 @@ tags:
   - öljy
   - nato
   - yhdysvallat
+related_articles:
+  - 2026-03-17-stubb-kehottaa-ottamaan-trumpin-uhkaukset-vakavasti
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-avata-hormuzinsal
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
 ---
 
 Presidentti Alexander Stubb varoittaa Nato-maita suhtautumaan vakavasti Yhdysvaltain presidentti Donald Trumpin vaatimuksiin Hormuzinsalmesta. Stubb esitti kantansa haastattelussa New Yorkissa.

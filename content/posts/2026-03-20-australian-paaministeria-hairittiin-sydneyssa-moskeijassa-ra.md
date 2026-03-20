@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - hallitus
   - israel
+related_articles:
+  - 2026-03-20-australian-paaministeri-sai-huudot-moskeijassa-ramadan-tapah
+  - 2026-03-20-australian-paaministeri-sai-huutoa-sydneyssa-moskeijassa-ram
+  - 2026-03-20-australian-paaministeri-sai-huutoja-moskeijassa-ramadan-tapa
 ---
 
 Australian pääministeri Anthony Albanese kohtasi häirintää osallistuttuaan Lakemba Moskeijassa järjestettyyn Ramadanin päättymisjuhlaan. Tapahtumassa, johon osallistui yli 30 000 ihmistä, useat osallistujat huusivat häntä kohtaan syyttäen häntä 'genocide-tukijaksi' ja vaativat häntä poistumaan. Tapahtuma heijasti syvää turhautumista Australian muslimiyhteisössä hallituksen toimia kohtaan Israel-Gazan sodan ja kasvavan islamofobian vuoksi.

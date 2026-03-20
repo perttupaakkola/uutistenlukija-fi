@@ -20,6 +20,10 @@ tags:
   - rikos
   - terveys
   - lääketiede
+related_articles:
+  - 2026-03-16-esperi-care-tuomittiin-maksamaan-yli-200-000-euroa-perusteet
+  - 2026-03-18-poika-tuomittiin-pahoinpitelysta-kun-juotti-kielloista-huoli
+  - 2026-03-17-suomen-kovatuloisimmat-laakarit-tienaavat-satoja-tuhansia-eu
 ---
 
 Kangasalla sijaitsevassa sairaalassa todistettiin tapaus, jossa 73-vuotiaan naisen hoitoa ei ollut toteutettu asianmukaisesti. Naista oli sidottu sänkyyn ja hän oli huonovointinen, tajunnan taso oli alentunut. Hoitajat kielsivät veden antamisen, koska naisen nielemiskyky oli epävarma, mutta hänen poikansa päätti antaa hänelle vettä. Tämän seurauksena poika tuomittiin pahoinpitelystä ja hän joutuu maksamaan korvauksia. Tapauksen herättänyt keskustelu hoitohenkilökunnan toimintatavoista ja potilasturvallisuudesta jatkuu.

@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - sää
   - oulu
+related_articles:
+  - 2026-03-20-tyovoimavirkailijat-huolestuneita-uudistuksen-vaikutuksista
+  - 2026-03-19-hallitus-tarjoaa-lisaaikaa-hyvinvointialueiden-alijaamien-ka
+  - 2026-03-15-ensi-viikosta-tulossa-poikkeuksellisen-lammin-lampotilat-huh
 description: "Punkkikausi alkaa ennätyksellisen varhain, ja havaintoja on tehty jopa Oulun korkeudella. Lämmin sää aktivoi punkkeja liikkeelle ja riskit lisääntyvät."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Punkkikausi käynnistyi ennätyksellisen varhain – havaintoja Oulun korkeudelle asti"

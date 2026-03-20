@@ -20,6 +20,10 @@ tags:
   - hallitus
   - politiikka
   - talous
+related_articles:
+  - 2026-03-15-orpo-oslon-kokouksessa-pohjoismaat-ja-kanada-keskustelivat-u
+  - 2026-03-15-orpo-suomi-haluaa-kuulla-lisaa-ranskan-ydinasesuojasta
+  - 2026-03-18-kajaanin-ravirata-jatkaa-toimintaa-pienimuotoistuen
 ---
 
 Pääministeri Petteri Orpo on kommentoinut hallituksen sisäistä vaalipeliä, ja hänen mukaansa sen aika ei ole vielä koittanut. Orpo korosti, että hallituksen on keskityttävä nykyisiin haasteisiin ja päätöksentekoon, eikä vaalipeli saa viedä huomiota tärkeiltä asioilta. Hallitus on tällä hetkellä käsittelemässä useita keskeisiä kysymyksiä, kuten talouspolitiikkaa ja sosiaalisen hyvinvoinnin kehittämistä.

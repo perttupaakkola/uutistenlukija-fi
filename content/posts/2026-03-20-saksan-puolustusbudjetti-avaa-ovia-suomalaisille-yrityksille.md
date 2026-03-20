@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - budjetti
   - puolustus
+related_articles:
+  - 2026-03-20-saksan-108-miljardin-euron-puolustusbudjetti-avaa-mahdollisu
+  - 2026-03-20-saksan-108-miljardin-euron-puolustusbudjetti-avaa-markkinoit
+  - 2026-03-20-saksalais-suomalainen-yhteistyo-puolustusteollisuudessa-vahv
 ---
 
 Saksa ja Suomi tiivistävät yhteistyötään puolustusteollisuudessa, mikä avaa uusia mahdollisuuksia suomalaisille toimijoille. Saksa aikoo investoida suuria summia oman puolustuskyvyn parantamiseksi, sillä sen puolustusbudjetti nousee 108 miljardiin euroon.

@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - nokia
   - politiikka
+related_articles:
+  - 2026-03-18-korisliigan-puolivalierat-ratkesivat-vastakkainasettelut-tiu
+  - 2026-03-19-lapin-hyvinvointialue-kaansi-taloutensa-yllattaen-ylijaamais
+  - 2026-03-19-mantyharju-lakkautti-sivistysjohtajan-viran-irtisanotun-miel
 ---
 
 Naisten Korisliigan puolivälierissä pelattiin yhteensä viisi ottelua. Voitot jakautuivat siten, että kaksi ottelua päättyi kotivoittoihin, kaksi vierasvoittoihin ja yksi tasapeliksi. BC Nokia kukisti ViVen vieraissa, ja HBA-Märsky voitti kotikentällään EBT:n.

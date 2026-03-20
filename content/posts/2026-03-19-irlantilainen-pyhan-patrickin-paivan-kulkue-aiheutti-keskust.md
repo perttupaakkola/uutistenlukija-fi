@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - yhdysvallat
   - kansainvälinen
+related_articles:
+  - 2026-03-19-irlantilainen-pyhan-patrickin-paivan-kulkue-heratti-raivoa-s
+  - 2026-03-19-tanska-lahetti-joukkoja-gronlantiin-varautuessaan-mahdollise
+  - 2026-03-17-yli-400-kuollut-pakistanin-ilmaiskussa-huumevierotusklinikal
 description: "Irlantilaiset pyhän Patrickin päivän kulkueet herättävät kritiikkiä seksuaalista väkivaltaa kuvaavasta esityksestä, tuomitsin raiskausavustusjärjestöjen…"
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Irlantilainen pyhän Patrickin päivän kulkue aiheutti keskustelua seksuaalisen väkivallan kuvaamisen rajapinnoista"

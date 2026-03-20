@@ -13,6 +13,10 @@ tags:
   - talous
   - urheilu
   - yritys
+related_articles:
+  - 2026-03-19-turun-keskusta-saa-pian-ensimmaisen-hypermarkettinsa
+  - 2026-03-17-kokkolaan-suunnitellaan-miljardin-euron-alumiinitehdasta-ens
+  - 2026-03-17-unicredit-tehostaa-commerzbankin-valtausyritysta-saksan-vast
 description: "Turun keskusta saa ensimmäisen hypermarkettinsa, kun Wiklundia uudistetaan 10 miljoonan euron remontilla, parantaen alueen kaupallista kilpailukykyä."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Turun keskusta saa ensimmäisen hypermarkettinsa – 10 miljoonan euron remontti muuttaa Wiklundia"

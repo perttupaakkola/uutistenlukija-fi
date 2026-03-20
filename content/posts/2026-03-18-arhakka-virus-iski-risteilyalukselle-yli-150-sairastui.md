@@ -20,6 +20,10 @@ tags:
   - yritys
   - rokote
   - luonto
+related_articles:
+  - 2026-03-18-norovirustartunta-laivalla-johtaa-toimenpiteisiin
+  - 2026-03-16-tulimuurahaisten-leviaminen-huolestuttaa-australiassa
+  - 2026-03-17-cold-response-harjoitus-testaa-naton-kykya-toimia-arktisessa
 ---
 
 Star Princess -risteilyalus palasi Karibian alueelta Yhdysvaltoihin, ja matkan aikana ilmeni ripuli- ja oksenteluja. Varauduttaessa leviämiseen, tartuntaketjuja jäljitettiin ja hygieniotoimia lisättiin. Yhdysvaltain tautikeskus (CDC) reagoi välittömästi tapahtumiin, sillä laivaympäristössä viruksen leviäminen voi olla nopeaa. Laivayhtiö Princess Cruises noudatti varotoimia, ja matkustajien toipumisesta huolehditaan edelleen, samalla ehkäisten uudelleenleviämistä. Tällaiset tapaukset korostavat hygieniatoimien merkitystä risteilyiden turvallisuuden ylläpitämisessä.

@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - lääketiede
   - terveys
+related_articles:
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovellu-sote-rahoituksen-laskentaperu
+  - 2026-03-17-suomen-kovatuloisimmat-laakarit-tienaavat-satoja-tuhansia-eu
+  - 2026-03-18-hoitajainformaation-vastustaja-tuomittiin-maksamaan-tuhansia
 ---
 
 Suomessa käytti laihdutuslääkkeitä viime vuonna yli 100 000 ihmistä. Selvityksen mukaan osa lääkäreistä kirjoittaa reseptejä etävastaanotolla näkemättä potilasta lainkaan.

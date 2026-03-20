@@ -19,6 +19,10 @@ tags:
   - urheilu
   - snooker
   - kilpailu
+related_articles:
+  - 2026-03-17-osullivan-50-vuotta-ja-yha-pelaamassa-jos-selvian-tasta-se-y
+  - 2026-03-20-ronnie-osullivan-rikkoi-snookerin-ennatyksen-kiinassa
+  - 2026-03-20-ronnie-osullivan-teki-snooker-historiaa-kiinassa
 ---
 
 Snookerin kaikkien aikojen menestyneimpiin pelaajiin lukeutuva Ronnie O'Sullivan kertoo tehneensä kovasti töitä palauttaakseen pelitasonsa. 50-vuotias englantilainen myöntää, että ikä tuo haasteita, mutta motivaatio on edelleen tallella.

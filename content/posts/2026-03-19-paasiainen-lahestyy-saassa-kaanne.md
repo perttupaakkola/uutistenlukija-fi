@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - sää
   - liikenne
+related_articles:
+  - 2026-03-15-ensi-viikosta-tulossa-poikkeuksellisen-lammin-lampotilat-huh
+  - 2026-03-19-uuden-asuinalueen-jatepisteet-pursuavat-torkya-asukas-pelkaa
+  - 2026-03-20-thl-varoittaa-kanta-tiedot-eivat-riita-sote-rahoitukseen
 ---
 
 Lämpömittari kohoaa tulevina viikkoina miellyttäviin lukemiin, mikä tuo mukanaan kevätsateet ja auringonpaisteen. Ilmatieteen laitoksen ennusteet lupaavat, että Suomessa nautitaan lähes kesäisestä säästä pääsiäisen aikaan. Erityisesti eteläisessä Suomessa lämpötilat voivat nousta jopa 15 asteeseen, mikä houkuttelee ulkoilemaan ja nauttimaan kevään ensimmäisistä lämpimistä päivistä.

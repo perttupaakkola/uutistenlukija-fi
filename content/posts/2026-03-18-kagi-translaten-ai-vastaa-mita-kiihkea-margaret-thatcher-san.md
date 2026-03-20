@@ -19,6 +19,10 @@ tags:
   - teknologia
   - tekoäly
   - hallitus
+related_articles:
+  - 2026-03-18-kagi-translaten-ai-vastaa-mita-merkittava-margaret-thatcher
+  - 2026-03-15-tutkijat-varoittavat-tekoalypsykoosista-chatbotit-voiva
+  - 2026-03-20-it-branssi-vahvistaa-asemaansa-ruotsin-it-mediassa
 ---
 
 Kagi Translate'n kehittynyt tekoälyohjelma on saanut keskustelua aikaan kysymyksellä, joka liittyy historian kuuluisaan pääministeriin Margaret Thatcheriin. Kysymykseen, mitä hän sanoisi nykyisestä tilanteesta, tekoäly vastaa arvoituksellisesti, tarjoamalla erikoisia ja humoristisia näkökulmia.

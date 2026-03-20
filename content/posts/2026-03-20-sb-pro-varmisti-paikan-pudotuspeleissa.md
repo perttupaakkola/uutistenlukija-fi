@@ -19,6 +19,10 @@ tags:
   - urheilu
   - viihde
   - kilpailu
+related_articles:
+  - 2026-03-20-sb-pro-varmisti-paikkansa-pudotuspeleissa-f-liigassa
+  - 2026-03-18-tps-jaa-ulos-pudotuspeleista-11-vuoteen-iso-pettymys-sanoo-t
+  - 2026-03-17-sm-liigakauden-paatos-paljasti-yllattavia-lukuja-sarjan-hant
 ---
 
 Nurmijärveläinen SB-Pro on varmistanut paikkansa naisten F-liigan pudotuspeleissä, saavuttaen runkosarjan kolmannen sijan. Joukkue, joka on tunnettu erityisesti vahvasta puolustuksestaan, teki kauden aikana 94 maalia, mikä on huomattavasti vähemmän kuin liigan kärkiporukoilla.

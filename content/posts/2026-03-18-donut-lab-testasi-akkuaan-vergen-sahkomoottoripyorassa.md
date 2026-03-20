@@ -20,6 +20,10 @@ tags:
   - energia
   - yritys
   - viihde
+related_articles:
+  - 2026-03-17-usa-testasi-salassa-magneettista-raidetykkia-aavikolla-hanke
+  - 2026-03-17-suomalaisyritys-kehitti-tavan-tuottaa-vetya-ilman-sahkoverkk
+  - 2026-03-16-nvidian-vuosikonferenssi-alkaa-toimitusjohtaja-esittelee-tek
 ---
 
 Suomalainen akkuyhtiö Donut Lab julkisti uuden testiraportin, jossa sen kehittämä akku asennettiin Verge TS Pro -sähkömoottoripyörään. Kyseessä on yhtiön neljäs VTT-raporttisarjan osa, mutta tällä kertaa testi tehtiin käytännön olosuhteissa, ei VTT:n laboratoriossa.

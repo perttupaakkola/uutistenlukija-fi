@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - eu
+related_articles:
+  - 2026-03-18-eu-pyrkii-tekemaan-yrityksen-perustamisesta-helpompaa-jasenv
+  - 2026-03-19-lentopomot-vaativat-eulta-synteettisen-polttoaineen-velvoitt
+  - 2026-03-17-kokkolaan-suunnitellaan-miljardin-euron-alumiinitehdasta-ens
 ---
 
 EU helpottaa yrityksen perustamista kaikkiin jäsenmaihin yhtä aikaa. Perustaja täyttäisi yhden digilomakkeen, joka hyväksyttäisiin automaattisesti kaikkialla unionissa. Tavoite on vähentää byrokratiaa ja avata sisämarkkinat pienyrittäjille.

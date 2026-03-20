@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - puolustus
   - kansainvälinen
+related_articles:
+  - 2026-03-17-pakistanin-ilmaisku-tappoi-yli-400-ihmista-kabulissa
+  - 2026-03-19-irlantilainen-pyhan-patrickin-paivan-kulkue-aiheutti-keskust
+  - 2026-03-16-israel-aloitti-laajat-iskut-iraniin-trump-sanoo-ettei-usa-ol
 ---
 
 Pakistanin armeija iski maanantaina kohteeseen Kabulissa, jonka se kuvasi terroristi-infrastruktuuriksi. Iskun kohde oli kuitenkin huumevierotusklinikka, ja uhriluku nousi yli neljänsadan.

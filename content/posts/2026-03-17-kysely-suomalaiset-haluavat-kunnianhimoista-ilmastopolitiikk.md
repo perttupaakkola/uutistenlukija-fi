@@ -21,6 +21,10 @@ tags:
   - ilmasto
   - politiikka
   - yritys
+related_articles:
+  - 2026-03-16-sahkoauto-tormasi-liikehuoneiston-ikkunaan-turun-keskustassa
+  - 2026-03-20-ruotinkylalla-hetkellinen-sahkokatko
+  - 2026-03-16-suomalaiset-rauhanturvaajat-joutuivat-tulituksen-kohteeksi-l
 ---
 
 Suomalaiset suhtautuvat ilmastonmuutoksen torjuntaan myönteisesti. Suomen ympäristökeskuksen kyselytutkimuksen mukaan lähes 80 prosenttia vastaajista pitää kasvihuonekaasupäästöjen vähentämistä tärkeänä tavoitteena.

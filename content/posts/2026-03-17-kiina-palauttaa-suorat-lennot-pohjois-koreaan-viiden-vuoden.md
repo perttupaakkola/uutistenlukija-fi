@@ -21,6 +21,10 @@ tags:
   - rokote
   - liikenne
   - rautatiet
+related_articles:
+  - 2026-03-18-norovirustartunta-laivalla-johtaa-toimenpiteisiin
+  - 2026-03-18-syyttaja-vaatii-mette-maritin-pojalle-seitseman-vuoden-vanke
+  - 2026-03-16-euroopan-parlamentti-linjasi-ukraina-voisi-paasta-eu-rakente
 ---
 
 Air China aloittaa suorat lennot Pekingin ja Pjongjangin välillä 30. maaliskuuta. Reitti on ollut tauolla vuodesta 2020, jolloin Pohjois-Korea sulki rajansa koronapandemian vuoksi.

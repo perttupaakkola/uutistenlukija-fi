@@ -20,6 +20,10 @@ tags:
   - venäjä
   - turvallisuus
   - teknologia
+related_articles:
+  - 2026-03-20-venajalla-on-uusi-salamurhayksikko-sen-paljastuminen-on-noyr
+  - 2026-03-20-venajalla-paljastettiin-uusi-salamurhayksikko
+  - 2026-03-18-ukrainan-tilanne-lisaa-huolta-euroopassa
 ---
 
 Venäjän pääkaupungin asukkaat kärsivät toistuvista internetin ja viestisovellusten häiriöistä. Viranomaiset perustelevat rajoituksia turvallisuussyillä, mutta käyttäjien kärsivällisyys on loppumassa.

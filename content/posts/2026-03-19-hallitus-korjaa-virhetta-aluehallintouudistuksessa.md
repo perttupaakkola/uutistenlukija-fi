@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - hallitus
   - politiikka
+related_articles:
+  - 2026-03-18-paakirjoitus-13-kuukautta-aikaa-hallitus-siirtyy-vaalitunnel
+  - 2026-03-19-erikoinen-moka-paljastui-hallitus-joutuu-korjaamaan-historia
+  - 2026-03-18-kajaanin-ravirata-jatkaa-toimintaa-pienimuotoistuen
 ---
 
 Hallitus on tehnyt muutoksia vuoden alussa voimaan astuneeseen aluehallintouudistuslakiin, jossa on todettu olevan puutteita luonnonmukaisen tuotannon valvontaan liittyvässä lainkohdassa. Viraston nimeämistä koskeva olennainen sana unohtui lakitekstistä, mikä vaarantaa aluehallinnan sujuvuuden ja valvonnan. 

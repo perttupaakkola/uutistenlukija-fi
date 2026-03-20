@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - hallitus
   - kirjallisuus
+related_articles:
+  - 2026-03-16-rovaniemelle-suunnitellaan-muumimaailmaa-joulupukin-pajakyla
+  - 2026-03-19-purra-otti-vastaan-lahes-800-euron-samppanjapullon-ministeri
+  - 2026-03-15-hallituksen-leikkaukset-uhkaavat-kansanopistojen-toimintaa
 ---
 
 Kirjalansalmen vanhan sillan pylonit kaadettiin Paraisilla. Teräsrakenteiset tornit purettiin uudenlaisella menetelmällä, jolla rakenteet saatiin hallitusti alas.

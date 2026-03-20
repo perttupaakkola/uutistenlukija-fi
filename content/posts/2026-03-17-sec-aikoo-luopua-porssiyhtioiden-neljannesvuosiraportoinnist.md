@@ -20,6 +20,10 @@ tags:
   - pörssi
   - yritys
   - yhdysvallat
+related_articles:
+  - 2026-03-17-yhdysvaltain-arvopaperimarkkinaviranomainen-harkitsee-siirty
+  - 2026-03-20-wolt-saa-haastajan-aikoo-toimia-eri-tavalla
+  - 2026-03-19-lujatalo-oy-jatkaa-toimintaansa-rakennusalalla
 ---
 
 Yhdysvaltain arvopaperi- ja pörssikomissio SEC valmistelee neljännesvuosittaisen raportointivelvoitteen poistamista. Toteutuessaan muutos koskisi kaikkia Yhdysvaltain pörsseissä listattuja yhtiöitä.

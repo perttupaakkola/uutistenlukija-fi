@@ -21,6 +21,10 @@ tags:
   - tekoäly
   - teknologia
   - lentoliikenne
+related_articles:
+  - 2026-03-19-bluesky-kerasi-100-miljoonaa-dollaria-rahoituksessa-ceo-muut
+  - 2026-03-19-alandsbankenin-strategi-nostaa-seitseman-suosikkiosaketta
+  - 2026-03-17-kokkolaan-suunnitellaan-miljardin-euron-alumiinitehdasta-ens
 ---
 
 Trevor Milton, aiemmin Nikola-yhtiön perustaja, suunnittelee nyt rahoituksen keräämistä uudelle yritykselleen. Hän tavoittelee autonomisia lentokoneita, jotka voivat mullistaa ilmailualan. Teknologian kehittäminen edellyttää merkittäviä investointeja sekä tutkimusta.

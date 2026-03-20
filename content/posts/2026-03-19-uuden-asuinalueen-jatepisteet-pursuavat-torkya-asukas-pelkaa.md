@@ -20,6 +20,10 @@ tags:
   - luonto
   - sää
   - liikenne
+related_articles:
+  - 2026-03-19-suomi-voi-saada-sanktioita-susien-karhujen-ja-ilvesten-kiint
+  - 2026-03-19-asuinalueen-jatepisteet-tayttyvat-rosasta
+  - 2026-03-19-metsahallitus-sulkee-siikanevan-soidensuojelualueen-retkeily
 ---
 
 Uudella asuinalueella on noussut esiin huoli jätepisteiden ympäristön siisteydestä. Asukkaat ovat huomanneet, että jätepisteet pursuavat roskia ja muuta törkyä, mikä on herättänyt pelkoa alueen siisteydestä ja mahdollisista ongelmista, kuten rottien valtaamisesta. Erityisesti kesän lähestyessä asukkaat ovat huolissaan, sillä lämpimät säät voivat houkutella paikalle enemmän eläimiä.

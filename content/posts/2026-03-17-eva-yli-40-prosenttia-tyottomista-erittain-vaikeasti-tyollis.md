@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - työttömyys
   - politiikka
+related_articles:
+  - 2026-03-17-kysely-suomalaiset-haluavat-kunnianhimoista-ilmastopolitiikk
+  - 2026-03-17-verovilppi-matkakulukorvauksissa-osoittautui-laajamittaiseks
+  - 2026-03-18-varha-siirsi-8-000-saatavaansa-ulosottoon-vaittaa-virheet-ol
 ---
 
 Elinkeinoelämän valtuuskunta EVA on arvioinut, että yli 40 prosenttia Suomen työttömistä kuuluu ryhmään, jota on erittäin vaikea työllistää. EVA pitää huolestuttavana etenkin nuorten pitkäaikaistyöttömyyden kasvua.

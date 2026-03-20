@@ -21,6 +21,10 @@ tags:
   - oikeus
   - lääketiede
   - liikenne
+related_articles:
+  - 2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-jyvaskylassa
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-katseli-luvat
 ---
 
 Keski-Suomen käräjäoikeus tuomitsi lähihoitajan peräti 186 tietosuojarikoksesta, joissa hän oli luvatta tutkinut potilastietoja. Oikeus määräsi hänelle neljän kuukauden ehdollisen vankeuden sekä merkittäviä korvauksia. 

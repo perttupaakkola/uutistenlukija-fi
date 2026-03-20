@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - liikenne
   - politiikka
+related_articles:
+  - 2026-03-17-rekka-syttyi-tuleen-valtatie-7lla-porvoossa
+  - 2026-03-16-suomalaiset-rauhanturvaajat-joutuivat-tulituksen-kohteeksi-l
+  - 2026-03-15-ilmanlaatu-heikentynyt-suomessa-pienhiukkaset-kulkeutuve
 ---
 
 Rekka roihusi ilmiliekeissä valtatie 7:llä Porvoossa maanantai-iltana. Itä-Uudenmaan pelastuslaitos sai hälytyksen palamaan syttyneestä ajoneuvoyhdistelmästä kello 20.34.

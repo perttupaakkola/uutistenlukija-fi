@@ -19,6 +19,10 @@ tags:
   - urheilu
   - yritys
   - kilpailu
+related_articles:
+  - 2026-03-17-sm-liigan-runkosarja-paattyy-suurin-pettymys-loytyy-pohjoise
+  - 2026-03-18-barcelona-voitti-seitsemalla-maalilla-camp-noulla
+  - 2026-03-20-sb-pro-varmisti-paikan-pudotuspeleissa
 ---
 
 TPS:n toimitusjohtaja Aki Holma on ilmaissut tyytymättömyytensä seuran tämän kauden tulokseen. Joukkueen odotettiin olevan potentiaalinen playoff-joukkue. Pettymys on suuri, etenkin seuran historian valossa. Holma totesi, että tavoitteet ja odotukset olivat korkealla, mutta lopputulos jäi saavuttamatta.

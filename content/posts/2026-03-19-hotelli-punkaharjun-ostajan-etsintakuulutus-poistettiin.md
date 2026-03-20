@@ -15,6 +15,10 @@ tags:
   - poliisi
   - liikenne
   - helsinki
+related_articles:
+  - 2026-03-19-hotelli-punkaharjun-ostaneen-liikemiehen-etsintakuulutus-poi
+  - 2026-03-19-thomas-zilliacuksen-etsintakuulutus-poistettiin
+  - 2026-03-20-poliisi-epailee-malminkartanon-vanhusmurhaaja-26-ei-tuntenut
 description: "Hotelli Punkaharjun ostaja Thomas Zilliacuksen kansainvälinen etsintäkuulutus on poistettu, mikä merkitsee vapautumista pidätysmääräyksestä."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Hotelli Punkaharjun ostajan etsintäkuulutus poistettiin"

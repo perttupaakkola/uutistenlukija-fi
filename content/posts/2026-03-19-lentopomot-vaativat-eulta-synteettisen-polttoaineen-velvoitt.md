@@ -15,6 +15,10 @@ tags:
   - eu
   - teknologia
   - liikenne
+related_articles:
+  - 2026-03-17-yhdysvaltain-arvopaperimarkkinaviranomainen-harkitsee-siirty
+  - 2026-03-18-eu-pyrkii-tekemaan-yrityksen-perustamisesta-helpompaa-jasenv
+  - 2026-03-18-yhtiot-perustetaan-eun-laajuudella-yhdella-ilmoituksella
 description: "Eurooppalaiset lentoyhtiöt vaativat EU:lta synteettisen lentopolttoaineen sekoitusvelvoitteen lykkäystä, koska teknologia on vielä liian alkuvaiheessa."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Lentopomot vaativat EU:lta synteettisen polttoaineen velvoitteen lykkäystä"

@@ -20,6 +20,10 @@ tags:
   - hallitus
   - verotus
   - luonto
+related_articles:
+  - 2026-03-20-veronmaksajat-rahoittavat-suurten-laittomien-jatetayttojen-s
+  - 2026-03-20-veronmaksajat-rahoittavat-suurten-laittomien-jatteenkasittel
+  - 2026-03-20-veronmaksajat-maksavat-laittomien-jatevuorien-siivouksesta
 ---
 
 Englannin hallitus aikoo puuttua laajoihin laittomiin kaatopaikkoihin ja aloittaa siivoustoimet veronmaksajien kustannuksella. Huonokuntoiset kaatopaikat Wiganissa, Sheffieldissä ja Lancashiressä, joissa on yhteensä 48 000 tonnia jätettä, on valittu puhdistettavaksi ympäristöhallinnon toimesta. Tämä päätös on herättänyt paikallisten asukkaiden tyytyväisyyttä, mutta samalla myös huolta siitä, miksi joitakin muita alueita ei ole valittu siivottavaksi.

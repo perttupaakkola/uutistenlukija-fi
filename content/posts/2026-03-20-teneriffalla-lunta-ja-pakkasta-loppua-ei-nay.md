@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - sää
   - kansainvälinen
+related_articles:
+  - 2026-03-20-teneriffalla-lunta-tupaan-pahimmat-ennusteet-kavivat-toteen
+  - 2026-03-18-hatatila-teneriffalla-sotki-suomalaisen-loman-retket-peruttu
+  - 2026-03-17-kiipeilija-kuoli-pudottuaan-rotkoon-teneriffalla
 ---
 
 Therese-myrsky on aiheuttanut poikkeuksellisia sääolosuhteita Espanjan Kanariansaarilla, erityisesti Teneriffalla, joka on ilmoitettu koko maan kylmimmäksi paikaksi torstaina 4,5 pakkasasteen kanssa. Viranomaiset ovat julistaneet saarelle hätätilan myrskyn vuoksi, mikä tuo haasteita paikallisille asukkaille ja turisteille.

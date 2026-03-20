@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-19-asuinalueen-jatepisteet-tayttyvat-rosasta
+  - 2026-03-20-olvin-panimomestari-sai-unelmiensa-tyokalun-kayttoonsa-iisal
+  - 2026-03-20-selkeat-vuodenajat-helpottavat-lietoon-palannutta-lakkitehda
 ---
 
 Kemijoen jäille päätynyt hevonen aiheutti pelastusoperaation, kun eläin putosi heikkojen jäiden läpi jokeen. Tapaus sattui Kemijoella, jossa jäätilanne on kevään myötä muuttunut arvaamattomaksi.

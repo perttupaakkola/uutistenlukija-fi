@@ -14,6 +14,10 @@ tags:
   - kirjallisuus
   - sota
   - liikenne
+related_articles:
+  - 2026-03-19-ilmari-kaihkon-kirja-sodasta-voitti-tiedekirjapalkinnon
+  - 2026-03-19-ilmari-kaihkon-sotatieteen-teos-valittiin-vuoden-tiedekirjak
+  - 2026-03-20-kelo-hanke-tuo-esiin-kelot-luonnontieteiden-ja-taiteen-avull
 description: "Ilmari Käihkön \"10 oppia sodasta\" voitti vuoden tiedekirja -palkinnon monipuolisesta ja terävästä sodan analyysistä teoreettisena ja henkilökohtaisena"
 image: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwcmVzZWFyY2glMjBsYWJvcmF0b3J5fGVufDF8MHx8fDE3NzQwMDIwODF8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Ilmari Käihkön sotatutkimus voitti vuoden tiedekirja -palkinnon"

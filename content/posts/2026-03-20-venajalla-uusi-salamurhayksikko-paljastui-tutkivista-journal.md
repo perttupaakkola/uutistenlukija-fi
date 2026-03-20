@@ -21,6 +21,10 @@ tags:
   - hallitus
   - oikeus
   - murha
+related_articles:
+  - 2026-03-20-venajalla-paljastui-uusi-salamurhayksikko-noyryytys-vallanka
+  - 2026-03-20-venajalla-paljastui-uusi-salamurhayksikko
+  - 2026-03-20-venajalla-paljastettiin-uusi-salamurhayksikko-noyryyttava-sk
 ---
 
 Tutkivat journalistit ovat tuoneet julki Venäjän eliittijoukoista koostuvan salatun salamurhayksikön. Yksikön paljastuminen on nostanut esiin vakavia kysymyksiä Venäjän hallituksen toimista ja sen käyttäytymisestä kansainvälisellä näyttämöllä.

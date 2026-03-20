@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - sää
   - kansainvälinen
+related_articles:
+  - 2026-03-20-norjan-kruununprinsessa-mette-marit-puhui-epstein-kytkennois
+  - 2026-03-20-norjan-kruununprinsessa-mette-marit-kertoo-nrklle-elamansa-h
+  - 2026-03-16-mette-maritin-pojan-oikeudenkaynti-lahestyy-loppuaan-oslossa
 ---
 
 Norjan kruununprinsessa Mette-Marit on antamassa odotettua haastattelua, jossa hän käsittelee suhteitaan edesmenneeseen seksirikolliseen Jeffrey Epsteiniin. Haastattelu esitetään NRK TV:ssä perjantaina, ja sen on nauhoittanut kruununprinssi Haakon heidän Skaugumin residenssissään. Tämä haastattelu tulee ajankohtaiseksi kruununprinssin pojan Marius Borg Høibyn raiskausoikeudenkäynnin päättymisen lähestyessä. Høiby kohtaa useita vakavia syytteitä, ja hänen oikeudenkäyntinsä on ollut erittäin seurattu Norjassa. Mette-Maritin aikaisemmat selitykset Epsteiniin liittyvistä sähköposteista ovat herättäneet kritiikkiä ja kysymyksiä hänen harkintakyvystään.

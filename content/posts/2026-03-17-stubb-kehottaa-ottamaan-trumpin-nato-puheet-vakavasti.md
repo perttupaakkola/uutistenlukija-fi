@@ -21,6 +21,10 @@ tags:
   - nato
   - öljy
   - sota
+related_articles:
+  - 2026-03-17-stubb-kehottaa-nato-liittolaisia-ottamaan-trumpin-vaatimukse
+  - 2026-03-17-trumpin-asema-heikkenee-iranin-sodan-seurausten-kasautuessa
+  - 2026-03-17-stubb-kehottaa-ottamaan-trumpin-uhkaukset-vakavasti
 ---
 
 Presidentti Alexander Stubb varoittaa, että Yhdysvaltain presidentti Donald Trumpin puheita Naton tulevaisuudesta ei pidä sivuuttaa. Stubb kommentoi asiaa haastattelussa Lontoossa maanantaina.

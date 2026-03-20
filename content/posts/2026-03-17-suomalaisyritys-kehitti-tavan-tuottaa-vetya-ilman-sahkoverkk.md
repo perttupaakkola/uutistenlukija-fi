@@ -20,6 +20,10 @@ tags:
   - energia
   - yritys
   - liikenne
+related_articles:
+  - 2026-03-17-usa-testasi-salassa-magneettista-raidetykkia-aavikolla-hanke
+  - 2026-03-19-mobiilipelaaminen-kasvattaa-suosiotaan
+  - 2026-03-18-donut-lab-testasi-akkuaan-vergen-sahkomoottoripyorassa
 ---
 
 Suomalainen Zun-H on kehittänyt järjestelmän, joka tuottaa uusiutuvaa vetyä ilman sähköverkkoa tai ulkoista sähkönsyöttöä. Teknologia perustuu näkyvän valon hyödyntämiseen.

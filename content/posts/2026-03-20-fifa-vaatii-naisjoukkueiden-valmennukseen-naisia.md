@@ -19,6 +19,10 @@ tags:
   - urheilu
   - sää
   - jalkapallo
+related_articles:
+  - 2026-03-20-fifa-linjasi-naisjoukkueiden-valmennukseen-naisia
+  - 2026-03-20-fifa-linjasi-naisjoukkueiden-valmennukseen-naisten-osallistu
+  - 2026-03-20-fifa-linjasi-naisjoukkueiden-valmennuksessa-on-oltava-naisia
 ---
 
 Fifalla on uusi sääntö, jonka mukaan naisten joukkueilla on oltava vähintään yksi naispuolinen pää- tai apuvalmentaja osallistuttaessa kansainvälisiin turnauksiin. Tämä koskee muun muassa vuoden 2027 naisten MM-kisoja Brasiliassa. Uuden säännön myötä myös muu naispuolinen henkilöstö on oltava läsnä vaihtopenkillä. Jill Ellis, Fifan jalkapallojohtaja, korostaa, että muutos on välttämätön naisten valmennuksen lisäämiseksi.

@@ -19,6 +19,10 @@ tags:
   - urheilu
   - kiina
   - sää
+related_articles:
+  - 2026-03-18-golfauto-pakollinen-kiinan-tourilla-vaantovaylittomalla-kent
+  - 2026-03-15-antonelli-voittoon-kiinan-gp-ssa-historian-toiseksi-nuorin
+  - 2026-03-16-formula-ykkosten-kaoottinen-alkukausi-nosti-nelja-puheenaihe
 ---
 
 Oliver Lindell valmistautuu ensi yönä alkavaan Hainanin golfturnaukseen. Turnauksen ensimmäisillä kahdella kierroksella on käytössä pakollinen golfauto. Tämä muutos on herättänyt keskustelua pelaajien keskuudessa. Lindell toteaa, että autolla ajaminen lisää vauhtia ja tarjoaa uusia mahdollisuuksia strategian kehittämiseen, mutta vaatii myös uusia taitoja. Kilpailutapahtuma voi sisältää odottamattomia tilanteita ja yllättäviä käänteitä.

@@ -19,6 +19,10 @@ tags:
   - urheilu
   - budjetti
   - viihde
+related_articles:
+  - 2026-03-18-benjamin-rautiainen-valittiin-liigan-runkosarjan-parhaaksi-p
+  - 2026-03-20-sb-pro-varmisti-paikan-pudotuspeleissa
+  - 2026-03-20-sb-pro-varmisti-paikkansa-pudotuspeleissa-f-liigassa
 ---
 
 TPS hävisi lauantaina vieraskaukalossa Tapparalle, mikä varmisti, että joukkue sijoittui runkosarjassa kahden pisteen päähän viimeisestä playoff-viivasta. Seura toimitusjohtaja Aki Holma kuittaa häviön jättimäiseksi pettymykseksi, koska TPS:n pelaajabudjetti on Liigan seitsemänneksi suurin. B-lohkon kaunein tontti myytiin itsenäisyyspäivän alla loppuun saakka, mutta loppukauden lipputyhjiöt näkyivät seuran kassavirrassa jo ennen runkosarjan päätöstä.

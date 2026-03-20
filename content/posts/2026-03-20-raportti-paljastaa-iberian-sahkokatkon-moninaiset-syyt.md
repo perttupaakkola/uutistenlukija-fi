@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - energia
   - kansainvälinen
+related_articles:
+  - 2026-03-20-iberian-niemimaan-sahkokatkon-syyt-selvitettiin-monia-tekijo
+  - 2026-03-20-raportti-iberian-niemimaan-sahkokatkon-syyt-moninaiset
+  - 2026-03-20-raportti-iberian-niemimaan-sahkokatkon-taustalla-oli-useita
 ---
 
 Iberian niemimaan viime huhtikuussa koetun sähkökatkon taustalla on useita tekijöitä. Tapahtuma, joka pimensi Espanjan, Portugalin ja osan Lounais-Ranskaa, on todettu pahimmaksi sähkökatkoksi Euroopassa kahteenkymmeneen vuoteen. Asiantuntijapaneelin mukaan alueen sähköjärjestelmä ei kyennyt hallitsemaan jännitepiikkejä, mikä johti merkittäviin ongelmiin.

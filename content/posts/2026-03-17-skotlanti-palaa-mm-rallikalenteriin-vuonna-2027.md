@@ -19,6 +19,10 @@ tags:
   - urheilu
   - luonto
   - kilpailu
+related_articles:
+  - 2026-03-17-skotlanti-liittyy-ralliautoilun-mm-sarjaan-vuonna-2027
+  - 2026-03-16-lindsey-vonn-ei-sulje-pois-paluuta-en-tarvitse-kenenkaan-lup
+  - 2026-03-17-osullivan-50-vuotta-ja-yha-pelaamassa-jos-selvian-tasta-se-y
 ---
 
 Ralliautoilun MM-sarja saa uuden osakilpailun Skotlantiin vuonna 2027. Kilpailu ajetaan Aberdeenin ympäristössä, ja se tuo Britannian takaisin MM-rallikalenteriin vuosien tauon jälkeen.

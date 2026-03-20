@@ -18,6 +18,10 @@ draft: false
 tags:
   - tiede
   - tutkimus
+related_articles:
+  - 2026-03-19-abo-akademin-loydos-voi-tuoda-uusia-hoitoja-aggressiiviseen
+  - 2026-03-18-iso-britannian-hiukkasfysiikan-saavutukset-uhkaavat-joutua-l
+  - 2026-03-18-neandertalit-kayttivat-kivipohjaista-antiseptista-tarra-aine
 ---
 
 Länsi-Australian Pilbara-alueen karut kukkulat tarjoavat aikaisinta näyttöä siitä, että mannerlaatat liukuivat Maapallon pinnalla. Pienet magneettikiteet, jotka ovat lukittuneina kallioperään, ovat tallentaneet maan pinnan liikkeitä yli 3,48 miljardin vuoden ajalta. Tutkimus julkaistiin Science News -lehdessä ja herättää uusia kysymyksiä Maan kehityksestä.

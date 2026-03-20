@@ -18,6 +18,10 @@ draft: false
 tags:
   - tiede
   - tutkimus
+related_articles:
+  - 2026-03-18-neandertalit-kayttivat-kivipohjaista-antiseptista-tarra-aine
+  - 2026-03-18-nuoret-kokevat-tyottomyyden-haittoja-tyossa-tutkija-varoitta
+  - 2026-03-19-abo-akademin-loydos-voi-tuoda-uusia-hoitoja-aggressiiviseen
 ---
 
 Tutkimusprojekteja uhkaa rahoituksen niukkuus, mikä saattaa hidastaa merkittäviä edistysaskeleita kosmoksen ymmärtämisessä. Useat asiantuntijat ovat huolissaan, että tärkeät kokeet voivat jäädä toteuttamatta tai siirtyä toisille maille. Britannian osallistuminen kansainvälisiin projekteihin jatkuu, mutta kotimaisen tuen vähentyminen luo epävarmuutta. Tämä saattaa vaikuttaa maan asemaan hiukkasfysiikan soveltamisen ja tutkimuksen saralla.

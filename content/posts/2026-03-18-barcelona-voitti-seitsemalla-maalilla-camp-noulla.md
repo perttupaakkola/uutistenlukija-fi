@@ -19,6 +19,10 @@ tags:
   - urheilu
   - yritys
   - kilpailu
+related_articles:
+  - 2026-03-18-barcelona-teki-historiaa-jalkapallon-mestarien-liigassa
+  - 2026-03-18-tps-jaa-ulos-pudotuspeleista-11-vuoteen-iso-pettymys-sanoo-t
+  - 2026-03-18-barcelonan-murskavoitto-ja-yamaln-historiallinen-saavutus
 ---
 
 Barcelona teki vakuuttavan voiton Mestarien liigan jatko-ottelun avauksessa kotikentällään. Seitsemän maalin tulos varmisti joukkueen paikan seuraavalla kierroksella. Ottelun alku oli räväkkä, ja pelaajat esiintyivät vahvoina. Maaleja syntyi useilta pelaajilta, ja yleisö juhlisti suoritusta, joka oli viimeksi nähty kotikentällä vuonna 2019. Ottelun lopputulos osoitti, että joukkue pystyy vastaaviin suorituksiin myös tulevissa otteluissa. Seuraavissa vaiheissa jatko-ottelut herättävät kiinnostusta, ja yleisön odotukset ovat korkealla. Ottelu antoi varmasti positiivisen vireen koko joukkueelle.

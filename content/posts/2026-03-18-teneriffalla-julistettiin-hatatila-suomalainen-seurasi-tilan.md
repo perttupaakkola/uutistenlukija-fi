@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - sää
   - taide
+related_articles:
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-eivat-jatku-kesalla-lavan-rak
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-jaavat-tauolle
+  - 2026-03-20-turun-huutokauppasivuston-eveliina-oudotkin-esineet-loytavat
 ---
 
 Teneriffalla on julistettu hätätila vaikeiden sääriskiolosuhteiden vuoksi. Saarta vaivaavat nyt runsaat vesisateet ja voimakas tuuli, mikä on vaikuttanut paikalliseen liikenteeseen ja matkailuun. Lomaileva suomalainen, Iina-Katariina Tourunen, seuraa tilannetta rauhallisin mielin. Hän korostaa, että tilanteen kehittyessä nopeasti on tärkeää pysyä rauhallisena ja seurata viranomaisten ohjeita.

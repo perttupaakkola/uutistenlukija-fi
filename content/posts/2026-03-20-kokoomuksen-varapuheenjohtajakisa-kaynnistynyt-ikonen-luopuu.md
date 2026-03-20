@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - eduskunta
   - kokoomus
+related_articles:
+  - 2026-03-20-kokoomuksen-varapuheenjohtaja-anna-kaisa-ikonen-luopuu-tehta
+  - 2026-03-20-ikonen-luopuu-varapuheenjohtajan-paikasta-kokoomuksessa
+  - 2026-03-20-kokoomuksen-varapuheenjohtajakisa-herattaa-kiinnostusta-ikon
 ---
 
 Kokoomuksen varapuheenjohtajakisa on käynnistynyt nopeasti, kun kunta- ja alueministeri Anna-Kaisa Ikonen on ilmoittanut luopuvansa varapuheenjohtajan tehtävästään. Ikonen, joka on toiminut tehtävässä kuusi vuotta, ilmoitti päätöksestään sosiaalisessa mediassa, mikä on herättänyt keskustelua mahdollisista seuraajista.

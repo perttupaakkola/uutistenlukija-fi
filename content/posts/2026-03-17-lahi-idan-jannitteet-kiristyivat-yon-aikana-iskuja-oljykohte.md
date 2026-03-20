@@ -21,6 +21,10 @@ tags:
   - iran
   - yritys
   - öljy
+related_articles:
+  - 2026-03-18-israelin-ja-iranin-valiset-konfliktit-kiihtyvat-ja-tilanne-h
+  - 2026-03-18-tilanne-lahi-idassa-karjistyy-israelin-hyokkayksen-seuraukse
+  - 2026-03-16-britannia-suunnittelee-miinanraivausdroonien-lahettamista-ho
 ---
 
 Yhdistyneiden arabiemiraattien öljykohteisiin kohdistui yön aikana useita iskuja. Samaan aikaan Iran kiisti tiedot diplomaattisesta yhteydenpidosta Yhdysvaltojen kanssa.

@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - liikenne
   - kansainvälinen
+related_articles:
+  - 2026-03-19-entinen-terrorisminvastaisen-toiminnan-johtaja-fbin-tutkinna
+  - 2026-03-15-prinssi-william-julkaisi-harvinaisen-kuvan-dianasta-aitienpa
+  - 2026-03-17-kiipeilija-kuoli-pudottuaan-rotkoon-teneriffalla
 ---
 
 FBI:n johtaja Kash Patel on vahvistanut, että liittovaltion agentuurit voivat ostaa kaupallisesti saatavilla olevia sijaintitietoja. Tämä mahdollistaa amerikkalaisten paikantamisen ilman oikeuden määräystä. Käytäntö on herättänyt keskustelua yksityisyyden suojasta ja tietojen hankinnan menetelmistä.

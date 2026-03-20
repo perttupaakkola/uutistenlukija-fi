@@ -21,6 +21,10 @@ tags:
   - sota
   - iran
   - yhdysvallat
+related_articles:
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
+  - 2026-03-17-trump-pyytaa-kiinaa-siirtamaan-pekingin-vierailua-kuukaudell
+  - 2026-03-17-trumpin-asema-heikkenee-iranin-sodan-seurausten-kasautuessa
 ---
 
 Yhdysvaltain presidentti Donald Trump on pyytänyt Kiinan presidenttiä Xi Jinpingiä siirtämään suunniteltua Pekingin-huippukokousta noin kuukaudella. Syynä on Yhdysvaltain sotilasoperaatio Irania vastaan.

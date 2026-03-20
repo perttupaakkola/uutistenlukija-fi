@@ -21,6 +21,10 @@ tags:
   - mielenterveys
   - koulutus
   - opiskelijat
+related_articles:
+  - 2026-03-18-tylsistyminen-tyossa-voi-johtaa-masennukseen-varoittaa-tutki
+  - 2026-03-18-nuoret-kokevat-tyottomyyden-haittoja-tyossa-tutkija-varoitta
+  - 2026-03-19-tampereen-yliopisto-erotti-opiskelijan-kolmeksi-kuukaudeksi
 ---
 
 Ahdistussanan käyttö arkipuheessa on kasvanut, ja Tampereen yliopiston väitöskirjatutkija Siiri Lampela varoittaa tämän aiheuttamista ongelmista. Monet nuoret kuvaavat normaaleja tunteitaan ahdistuksena, mikä voi johtaa todellisten ahdistusoireiden vähättelyyn. Esimerkiksi 21-vuotias opiskelija Venny Ervasti kertoo, että hänen ikäistensä keskuudessa käytetään usein ilmaisua "mua ahistaa".

@@ -19,6 +19,10 @@ tags:
   - talous
   - yhdysvallat
   - yritys
+related_articles:
+  - 2026-03-16-beyond-retro-vaatekaupan-suomalainen-taustayritys-hakeutui-k
+  - 2026-03-17-sec-aikoo-luopua-porssiyhtioiden-neljannesvuosiraportoinnist
+  - 2026-03-19-lujatalo-oy-jatkaa-toimintaansa-rakennusalalla
 ---
 
 Luksusautomerkkien johtotehtävissä uransa tehnyt Felix Bräutigam vieraili Suomessa ja kertoi näkemyksiään autoalan murroksesta. Bräutigam tunnetaan erityisesti työstään Porschella, jonka hän auttoi nostamaan yhdeksi alan kannattavimmista valmistajista.

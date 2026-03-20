@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - liikenne
   - kansainvälinen
+related_articles:
+  - 2026-03-15-prinssi-william-julkaisi-harvinaisen-kuvan-dianasta-aitienpa
+  - 2026-03-20-teneriffalla-lunta-ja-pakkasta-loppua-ei-nay
+  - 2026-03-18-fbi-ostaa-sijaintitietoja-seuratakseen-amerikkalaisia-johtaj
 ---
 
 41-vuotias kiipeilijä menehtyi Teneriffalla lauantai-iltana pudottuaan rotkoon. Onnettomuus tapahtui Cuevas de Igonsen alueella Candelarian kunnassa noin puoli kahdeksan aikaan illalla.

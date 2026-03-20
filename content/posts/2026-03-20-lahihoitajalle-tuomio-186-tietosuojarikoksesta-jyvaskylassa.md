@@ -21,6 +21,10 @@ tags:
   - rikos
   - lääketiede
   - sää
+related_articles:
+  - 2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-katseli-luvat
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-luvaton-paasy
 ---
 
 Keski-Suomen käräjäoikeus on tuominnut lähihoitajan 186 tietosuojarikoksesta, joita hän oli tehnyt työssään Keski-Suomen hyvinvointialueella. Tuomio sisältää neljän kuukauden ehdollisen vankeuden sekä merkittäviä korvauksia asianomistajille. Teot tapahtuivat huhtikuun 2022 ja kesäkuun 2023 välillä, ja lähihoitajalla oli pääsy potilastietojärjestelmiin.

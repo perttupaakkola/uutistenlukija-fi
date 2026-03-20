@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - hallitus
   - liikenne
+related_articles:
+  - 2026-03-19-hallitus-tarjoaa-lisaaikaa-hyvinvointialueiden-alijaamien-ka
+  - 2026-03-19-erikoinen-moka-paljastui-hallitus-joutuu-korjaamaan-historia
+  - 2026-03-16-metsahallitus-maksaa-sadan-euron-palkkion-tuntemattomasta-ma
 description: "Hallitus ehdottaa hyvinvointialueiden alijäämien kattamiseen lisäaikaa vuoteen 2029 saakka, mikäli alueet pystyvät osoittamaan taloudellisen tarpeen."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Hallitus ehdottaa lisäaikaa hyvinvointialueiden alijäämien kattamiseen"

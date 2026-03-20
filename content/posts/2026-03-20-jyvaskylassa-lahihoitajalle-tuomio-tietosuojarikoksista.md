@@ -21,6 +21,10 @@ tags:
   - oikeus
   - lääketiede
   - liikenne
+related_articles:
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-jyvaskylassa
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-katseli-luvat
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-luvaton-paasy
 ---
 
 Keski-Suomen käräjäoikeus on tuominnut lähihoitajan peräti 186 tietosuojarikoksesta, joihin kuului luvaton katselu potilastietoja. Oikeus määräsi lähihoitajalle neljän kuukauden ehdollisen vankeuden sekä merkittäviä korvauksia. Teot tapahtuivat huhtikuun 2022 ja kesäkuun 2023 välillä, jolloin hoitaja oli saanut käyttöoikeuden potilastietoihin. Rikokset, joista lähihoitaja tuomittiin, olivat laadultaan vakavia, sillä hän katseli tietoja monien potilastietojärjestelmässä ilman asianmukaista lupaa. Tuomittu kiisti syytteen vedoten siihen, että hänen perehdytystään potilastietojen käsittelyyn ei ollut hoidettu riittävän hyvin. Käräjäoikeus katsoi kuitenkin, että lähihoitaja oli saanut riittävät ohjeet ja että hänen uteliaisuutensa ei ollut hyväksyttävä perustelu. Teot vaikuttivat myös niihin potilaisiin, joiden tietoja hän oli luvatta katsellut, joista monet olivat hänelle puolituttuja. Oikeus katsoi, ettei korvauksia ollut syytä sovitella tai vähentää. Näin ollen hänelle määrätyt korvaukset pysyivät ennallaan. Tämä tapaus nostaa esiin tärkeitä kysymyksiä tietosuojasta ja hoitoalan ammattilaisten vastuista. Tämä ei ole ensimmäinen kerta, kun vastaavia rikoksia on raportoitu, mutta määrässä ja vakavuudessaan tämä tapaus erottuu. Käräjäoikeuden päätös on vahva viesti siihen suuntaan, että tietosuojarikoksia ei katsota läpi sormien tulevaisuudessakaan.

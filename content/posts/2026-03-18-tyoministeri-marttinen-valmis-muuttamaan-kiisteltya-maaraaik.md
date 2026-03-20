@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-19-asuinalueen-jatepisteet-tayttyvat-rosasta
+  - 2026-03-19-yle-ammattimaiset-myymalavarkaat-iskivat-turun-seudulle
+  - 2026-03-20-doris-ja-eivor-ajavat-lanthandeln-sikasbyn-sydamessa
 ---
 
 Työministeri Matias Marttinen on valmis tekemään muutoksia lakiesitykseen, joka helpottaisi määräaikaisten työsuhteiden solmimista. Marttinen kertoi A-studiossa olevansa avoin täsmennyksille, mikäli esityksestä nousee kysymyksiä. Hän on jo käynyt keskusteluja valiokunnan kanssa mahdollisista muutoksista.

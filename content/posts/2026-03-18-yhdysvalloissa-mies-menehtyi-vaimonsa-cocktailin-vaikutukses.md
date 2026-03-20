@@ -21,6 +21,10 @@ tags:
   - rikos
   - oikeus
   - lapset
+related_articles:
+  - 2026-03-18-yhdysvalloissa-mies-menehtyi-tapettuaan-vaimonsa-cocktailill
+  - 2026-03-17-bondi-beachin-ampujan-perheenjasenia-uhattu-tapolla-oikeus-k
+  - 2026-03-18-nainen-tuomittiin-murhasta-utahissa-ja-julkaisi-surukirjan
 ---
 
 Utahissa sattui traaginen tapahtuma, kun mies kuoli cocktailin sisältämän aineen vaikutuksesta. Syyttäjän mukaan nainen, Kouri Richins, oli velkaa noin 4,5 miljoonaa dollaria ja epäili saavansa perinnön miehensä kuoleman jälkeen. Hänet tuomittiin törkeästä murhasta fentonyyliä sisältäneen cocktailin avulla.

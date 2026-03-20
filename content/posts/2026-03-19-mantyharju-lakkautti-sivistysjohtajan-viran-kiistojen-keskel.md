@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - politiikka
   - suomi
+related_articles:
+  - 2026-03-19-mantyharju-lakkautti-sivistysjohtajan-viran-irtisanotun-miel
+  - 2026-03-19-yle-ammattimaiset-myymalavarkaat-iskivat-turun-seudulle
+  - 2026-03-15-viking-gloryn-matkustajat-jumittuivat-laivaan-yon-yli-paivar
 description: "Mäntyharjun kunta lakkauttaa sivistysjohtajan viran ja irtisanoo Sari Aarniokosken. Irtisanominen herättää kiistoja koulukyytien kilpailutuksesta."
 image: "https://images.unsplash.com/photo-1675619560942-613bef4a982d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Mäntyharju lakkautti sivistysjohtajan viran kiistojen keskellä"

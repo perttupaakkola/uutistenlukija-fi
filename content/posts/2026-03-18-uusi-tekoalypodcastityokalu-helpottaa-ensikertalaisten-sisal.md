@@ -19,6 +19,10 @@ tags:
   - teknologia
   - tekoäly
   - digitalisaatio
+related_articles:
+  - 2026-03-19-highfi-julkaisee-mobiilisovellukset
+  - 2026-03-15-nokia-ja-telia-testaavat-tekoalypohjaista-verkkoteknolog
+  - 2026-03-16-kilpailu-maailmanlaajuisesti-tunnustetusta-tekoalyvapaa-logo
 ---
 
 Rebel Audio on julkaissut palvelun, joka tarjoaa podcastin tuotannon vaiheet yhden alustan sisällä. Käyttäjät voivat äänittää, editoida, leikata sosiaaliseen mediaan sopivia pätkiä ja julkaista jaksot keskitetysti.

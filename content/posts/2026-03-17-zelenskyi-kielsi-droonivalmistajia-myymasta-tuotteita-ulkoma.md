@@ -21,6 +21,10 @@ tags:
   - hallitus
   - sota
   - liikenne
+related_articles:
+  - 2026-03-17-zelenskyi-kielsi-droonivalmistajia-viemasta-tuotteitaan-ilma
+  - 2026-03-16-kenia-venaja-lupaa-lopettaa-kenialaisten-varvaamisen-sotaan
+  - 2026-03-16-moskovaan-kohdistui-massiivinen-lennokki-isku
 ---
 
 Ukrainan presidentti Volodymyr Zelenskyi allekirjoitti ukaasin, joka kieltää ukrainalaisia droonivalmistajia viemästä tuotteitaan ulkomaille ilman hallituksen lupaa.

@@ -20,6 +20,10 @@ tags:
   - verotus
   - inflaatio
   - työelämä
+related_articles:
+  - 2026-03-18-australian-talousarvio-lupaa-uudistuksia-ja-hintojen-nousua
+  - 2026-03-18-yhdysvaltain-keskuspankki-pitaa-ohjauskoron-ennallaan
+  - 2026-03-19-verouudistusesitys-osinkoveroa-ehdotetaan-pudotettavaksi-512
 ---
 
 Keski- ja pienipalkkaisten ostovoima on edelleen heikolla tasolla. STTK:n ostovoimakatsaus osoittaa, että inflaation ja verotuksen yhteisvaikutus on syönyt palkansaajien ostovoimaa viime vuosina.

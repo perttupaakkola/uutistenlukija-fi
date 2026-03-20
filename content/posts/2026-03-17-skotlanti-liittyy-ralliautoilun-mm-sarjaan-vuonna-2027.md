@@ -19,6 +19,10 @@ tags:
   - urheilu
   - luonto
   - viihde
+related_articles:
+  - 2026-03-17-skotlanti-palaa-mm-rallikalenteriin-vuonna-2027
+  - 2026-03-20-sb-pro-varmisti-paikkansa-pudotuspeleissa-f-liigassa
+  - 2026-03-17-sm-liigakauden-paatos-paljasti-yllattavia-lukuja-sarjan-hant
 ---
 
 Ralliautoilun MM-sarja saa uuden osakilpailun, kun Skotlanti tulee mukaan kalenteriin vuonna 2027. Kilpailu ajetaan Aberdeenin ympäristössä. Järjestäjät kertoivat asiasta maanantaina.

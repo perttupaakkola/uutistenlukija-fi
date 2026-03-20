@@ -20,6 +20,10 @@ tags:
   - koulutus
   - opiskelijat
   - työelämä
+related_articles:
+  - 2026-03-20-hamkn-koulutus-yhdistaa-luontoymparistot-ja-hyvinvointipalve
+  - 2026-03-19-suomeen-yli-20-000-opiskelijan-ammattikorkeakoulu-xamkin-omi
+  - 2026-03-19-pornoa-opiskelijoiden-tiloissa-vaasan-hankenilla
 ---
 
 Hämeen ammattikorkeakoulu (HAMK) tarjoaa ensimmäisenä Suomessa tutkinnon kestävän kehityksen asiantuntijaksi. Koulutus keskittyy käytännön taitoihin, ymmärrykseen ja työelämävalmiuksiin, jotka auttavat opiskelijoita tekemään vastuullisia päätöksiä eri organisaatioissa.

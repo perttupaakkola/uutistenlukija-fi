@@ -20,6 +20,10 @@ tags:
   - elokuva
   - budjetti
   - liikenne
+related_articles:
+  - 2026-03-16-kpop-demon-hunters-valloitti-oscar-yleison-yhdistamalla-k-po
+  - 2026-03-16-oscar-gaala-jarjestetaan-98-kerran-conan-obrien-juontaa-tois
+  - 2026-03-16-oscar-gaala-nakyy-suorana-suomenkielisella-juonnolla
 ---
 
 Budapestiläinen elokuvateatteri on tiistai-iltana täynnä. Yleisö ei ole tullut katsomaan Hollywood-hittielokuvaa vaan unkarilaista trilleriä, joka tehtiin minimaalisella budjetilla.

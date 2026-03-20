@@ -13,6 +13,10 @@ tags:
   - tiede
   - lääketiede
   - tutkimus
+related_articles:
+  - 2026-03-19-maapallon-mannerlaatat-liikkuivat-jo-348-miljardia-vuotta-si
+  - 2026-03-15-valkohantapeuran-kanta-kasvanut-suomessa-noin-120-000-yks
+  - 2026-03-18-iso-britannian-hiukkasfysiikan-saavutukset-uhkaavat-joutua-l
 description: "Åbo Akademin tutkijat ovat löytäneet uuden menetelmän, joka voi johtaa täsmähoitoihin aggressiivisen rintasyövän hoidossa."
 image: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwcmVzZWFyY2glMjBsYWJvcmF0b3J5fGVufDF8MHx8fDE3NzQwMDIwODF8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Åbo Akademin löydös voi tuoda uusia hoitoja aggressiiviseen rintasyöpään"

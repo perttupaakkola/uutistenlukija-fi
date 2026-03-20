@@ -20,6 +20,10 @@ tags:
   - venäjä
   - oikeus
   - murha
+related_articles:
+  - 2026-03-20-venajalla-uusi-salamurhayksikko-paljastui-tutkivista-journal
+  - 2026-03-20-venajalla-paljastettiin-uusi-salamurhayksikko
+  - 2026-03-20-venajalla-paljastui-uusi-salamurhayksikko-noyryytys-vallanka
 ---
 
 Tutkivat journalistit ovat paljastaneet salaisuuksia Venäjän eliittijoukoista, joita on syytetty salaisen salamurhayksikön muodostamisesta. Yksikön paljastuminen herättää uusia kysymyksiä maan sotilaallisista operaatioista ja historiasta. Yksikköön kuuluu erikoisvalikoituja sotilaita, joilla on kyky toteuttaa salaisia operaatioita.

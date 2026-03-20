@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - rokote
   - liikenne
+related_articles:
+  - 2026-03-17-kiina-palauttaa-suorat-lennot-pohjois-koreaan-viiden-vuoden
+  - 2026-03-18-arhakka-virus-iski-risteilyalukselle-yli-150-sairastui
+  - 2026-03-15-britannia-lahi-idan-tilanteen-rauhoittaminen-on-valttamatont
 ---
 
 Star Princess -aluksella sairastui yli 150 matkustajaa ja miehistön jäsentä ripulin ja oksentelun. Tauti levisi nopeasti matkustajien keskuudessa, mikä johti hälytystilaan laivalla. Yhdysvaltain tautikeskus CDC seurasi tilannetta ja odottaa lisätietoja viruksen leviämistavasta. Henkilöstö aloitti siivous- ja desinfektointimenettelyt tilanteen hallitsemiseksi.

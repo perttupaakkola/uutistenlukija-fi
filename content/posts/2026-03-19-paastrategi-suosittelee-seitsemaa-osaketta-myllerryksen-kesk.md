@@ -15,6 +15,10 @@ tags:
   - yritys
   - nokia
   - liikenne
+related_articles:
+  - 2026-03-19-alandsbankeni-paastrategi-suosittelee-seitsemaa-osaketta-mar
+  - 2026-03-17-yhdysvaltain-arvopaperimarkkinaviranomainen-harkitsee-siirty
+  - 2026-03-16-nokia-nousi-lahes-nelja-prosenttia-helsingin-porssissa
 description: "Ålandsbankenin päästrategi Jyri Suonpää suosittelee seitsemää houkuttelevaa osaketta, kuten Nordea ja Sampo, markkinoiden myllerryksen keskellä."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Päästrategi suosittelee seitsemää osaketta myllerryksen keskellä"

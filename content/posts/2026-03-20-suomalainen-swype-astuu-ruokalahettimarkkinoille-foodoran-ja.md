@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - yritys
   - yhdysvallat
+related_articles:
+  - 2026-03-20-suomalainen-swype-haastaa-woltin-ruokalahettimarkkinoilla
+  - 2026-03-20-suomalainen-swype-haastaa-ruokalahettimarkkinoilla-woltin
+  - 2026-03-19-korkein-hallinto-oikeus-tyrmasi-woltin-valituksen-lahettien
 ---
 
 Suomen ruokalähettimarkkinoille tulee uusi toimija, kun suomalainen tilausalusta Swype ilmoittaa aikovansa täyttää Foodoran saappaita. Foodora ilmoitti helmikuussa lähtevänsä Suomesta, mikä on avannut oven Swypelle, joka on saanut runsaasti kuljettajahakemuksia viime kuukausina. Swype toimii tällä hetkellä koko Suomen alueella, ja sen valikoimassa on noin sata ravintolaa. Yhtiö tavoittelee nopeaa laajentumista.

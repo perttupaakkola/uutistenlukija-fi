@@ -19,6 +19,10 @@ tags:
   - urheilu
   - helsinki
   - kilpailu
+related_articles:
+  - 2026-03-15-suomelle-kaksoisvoitto-muodostelmaluistelun-junioreiden-mm-
+  - 2026-03-19-tps-etsii-keskushyokkaajaa-ruotsista
+  - 2026-03-17-fabregas-johtanut-como-1907n-italian-jalkapallon-huipulle
 ---
 
 Essi Kivistö on päättänyt jättää VG-62:n päävalmentajan tehtävät, mutta ei siirrykään Helsinkiin, kuten aiemmin spekuloitiin. Kivistö on toiminut seuran päävalmentajana useita kausia ja ollut keskeisessä roolissa joukkueen kehittämisessä. Hänen päätöksensä taustalla on henkilökohtaisia syitä, mutta Kivistö ei ole ilmoittanut tulevista suunnitelmistaan tai uudesta seurasta, johon hän mahdollisesti siirtyy.

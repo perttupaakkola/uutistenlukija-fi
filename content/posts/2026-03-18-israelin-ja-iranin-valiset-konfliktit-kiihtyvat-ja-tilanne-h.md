@@ -21,6 +21,10 @@ tags:
   - israel
   - iran
   - öljy
+related_articles:
+  - 2026-03-18-tilanne-lahi-idassa-karjistyy-israelin-hyokkayksen-seuraukse
+  - 2026-03-19-trump-kiisti-tienneensa-israelin-hyokkayksesta-iranin-kaasuk
+  - 2026-03-17-trumpin-asema-heikkenee-iranin-sodan-seurausten-kasautuessa
 ---
 
 Israel on hyökännyt Iraniin liittyvään kaasualueeseen. Lähi-idän maat, kuten Yhdistyneet Arabiemiirikunnat ja Qatar, ovat tuominneet teon. Iran on ilmoittanut, että yli 90 irtolastia, mukaan lukien tankkereita, on kulkenut Hormuzinsalmen läpi sodan aikana. Teheran varoittaa vastatoimista ja aikoo jatkaa öljyn vientiä. Lisäksi Iran on ilmoittanut, että Israelin tekemissä hyökkäyksissä on kohteita infrastruktuurissa ja kohdealueilla.

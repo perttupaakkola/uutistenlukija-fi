@@ -20,6 +20,10 @@ tags:
   - yritys
   - rikos
   - sää
+related_articles:
+  - 2026-03-18-britanniassa-koiranomistajille-tulossa-rajattomat-sakot-karj
+  - 2026-03-20-teneriffalla-lunta-ja-pakkasta-loppua-ei-nay
+  - 2026-03-16-esperi-care-tuomittiin-maksamaan-yli-200-000-euroa-perusteet
 ---
 
 Arizonan osavaltion viranomaiset ovat nostaneet rikossyytteet ennustemarkkinoita ylläpitävää Kalshi-yhtiötä vastaan. Kyseessä ovat ensimmäiset rikossyytteet, jotka yhdysvaltalainen osavaltio on nostanut ennustemarkkinayritystä vastaan. Syytteen mukaan Kalshi pyörittää laitonta uhkapelitoimintaa.

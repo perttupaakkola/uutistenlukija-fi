@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - lappi
   - politiikka
+related_articles:
+  - 2026-03-19-turun-keskustaan-tulee-ensimmainen-hypermarketti-wiklund-saa
+  - 2026-03-19-yle-ammattimaiset-myymalavarkaat-iskivat-turun-seudulle
+  - 2026-03-15-viking-gloryn-matkustajat-jumittuivat-laivaan-yon-yli-paivar
 description: "Lapin hyvinvointialue Lapha raportoi yllättäen ylijäämäisestä tuloksesta, vaikka se on kärsinyt kahdesta vuodesta alijäämiä yhteensä 177 miljoonaa euroa."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Lapin hyvinvointialue käänsi taloutensa yllättäen ylijäämäiseksi"

@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - rahoitus
+related_articles:
+  - 2026-03-20-lakkitehtaan-paluu-lietoon-tuo-mahdollisuuksia
+  - 2026-03-15-wolt-haastaa-epassin-ja-edenredin-henkilostoetumarkkinalla
+  - 2026-03-19-bluesky-kerasi-100-miljoonaa-dollaria-rahoituksessa-ceo-muut
 ---
 
 Lieto on saanut takaisin vanhan lakkitehtaansa, joka suljettiin vuosia sitten. Tehdas palasi toimintaan osittain selkeiden vuodenaikojen ansiosta, jotka tukevat lakkituotantoa. Tämä on tärkeä askel alueen teollisuudelle ja työllisyydelle.

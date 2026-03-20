@@ -19,6 +19,10 @@ tags:
   - urheilu
   - snooker
   - kiina
+related_articles:
+  - 2026-03-20-ronnie-osullivan-teki-historiaa-snookerissa-kiinassa
+  - 2026-03-20-ronnie-osullivan-teki-snooker-historiaa-kiinassa
+  - 2026-03-20-ronnie-osullivan-rikkoi-snookerin-ennatyksen-kiinassa
 ---
 
 Ronnie O'Sullivan, seitsemänkertainen snooker-maailmanmestari, teki historiaa World Openissa Kiinan Yushanissa saavuttamalla uuden ennätyksen yhdellä lyöntivuorolla tehdyssä pistemäärässä. Hän teki uskomattomat 153 pistettä, ylittäen aiemman ennätyksen.

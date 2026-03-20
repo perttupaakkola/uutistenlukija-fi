@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - koulutus
   - turvallisuus
+related_articles:
+  - 2026-03-18-jyvaskylassa-keskustelut-kasvomaskeista-kouluissa-jatkuvat
+  - 2026-03-15-perussuomalaisten-kansanedustaja-vaatii-kasvojen-peittamiski
+  - 2026-03-15-hallituksen-leikkaukset-uhkaavat-kansanopistojen-toimintaa
 ---
 
 Jyväskylässä on herännyt keskustelu kasvot peittävien asusteiden mahdollisesta kiellosta kouluissa. Valtuustoryhmien kannat ovat vielä auki.

@@ -21,6 +21,10 @@ tags:
   - öljy
   - sota
   - iran
+related_articles:
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-pekingin-vierailua-kuukaudell
+  - 2026-03-17-trump-pyytaa-kiinaa-siirtamaan-pekingin-vierailua-kuukaudell
 ---
 
 Yhdysvaltain presidentti Donald Trump on ajautunut vaikeaan tilanteeseen Iranin-operaation seurausten kasautuessa. Epic Fury -nimellä tunnettu sotilasoperaatio ei ole edennyt suunnitelmien mukaan, ja kritiikki kasvaa niin kotimaassa kuin kansainvälisesti.

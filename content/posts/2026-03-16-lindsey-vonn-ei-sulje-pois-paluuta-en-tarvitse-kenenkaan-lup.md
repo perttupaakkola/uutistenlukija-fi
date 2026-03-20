@@ -13,6 +13,10 @@ tags:
   - urheilu
   - hiihto
   - kilpailu
+related_articles:
+  - 2026-03-17-suomalaiset-putsasivat-yhdistetyn-palkintopoydan-fanien-aane
+  - 2026-03-17-osullivan-50-tavoittelee-paluuta-huipulle-jos-selvian-tasta
+  - 2026-03-17-skotlanti-palaa-mm-rallikalenteriin-vuonna-2027
 description: "Lindsey Vonn ei sulje pois paluuta alppihiihtouralleen, vaikka toipuminen olympiavammasta on kesken. Hän korostaa itsenäisyyttä valinnoissaan."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Lindsey Vonn ei sulje pois paluuta"

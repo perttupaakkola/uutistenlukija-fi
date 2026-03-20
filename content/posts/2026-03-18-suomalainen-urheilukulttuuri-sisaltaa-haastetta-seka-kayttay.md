@@ -21,6 +21,10 @@ tags:
   - kulttuuri
   - lapset
   - tiede
+related_articles:
+  - 2026-03-18-aikuiset-kayttavat-henkista-vakivaltaa-nuorisourheilussa
+  - 2026-03-19-huuhkajien-ottelu-valko-venajaa-vastaan-siirtyy-pois-suomest
+  - 2026-03-16-formula-ykkosten-kaoottinen-alkukausi-nosti-nelja-puheenaihe
 ---
 
 Helsingin yliopiston tutkimuksen mukaan suomalaisessa urheilussa esiintyy huutamista, kontrollointia ja tavaroiden paiskomista. Tutkijat korostavat, että henkinen väkivalta on osa tätä kulttuuria ja harjoittajat ovat useimmiten aikuisia, kuten valmentajat ja vanhemmat. Tällainen käyttäytyminen voi vaikuttaa nuorten hyvinvointiin ja urheiluharrastuksen mielekkyyteen. On tärkeää puuttua epäasialliseen käyttäytymiseen ja edistää terveitä toimintatapoja.

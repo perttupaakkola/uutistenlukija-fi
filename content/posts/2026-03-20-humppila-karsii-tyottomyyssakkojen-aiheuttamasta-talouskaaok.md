@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - talous
   - työttömyys
+related_articles:
+  - 2026-03-20-humppilan-kunta-karsii-tyottomyyssakkojen-vaikutuksista
+  - 2026-03-20-humppilan-talous-karsii-tyottomyyssakkojen-seurauksista
+  - 2026-03-20-humppilan-talous-karsii-tyottomyyssakkojen-vuoksi
 ---
 
 Humppilan kunta on ajautunut vaikeuksiin työttömyyssakkojen vuoksi, ja tilanne uhkaa kunnan taloudellista tulevaisuutta. Työttömyydestä johtuvat sakot ovat yli kaksinkertaistuneet, ja kunnanjohtaja Minna Ylikännön mukaan tämä kehitys on kestämätöntä. Kunta on joutunut irtisanomaan johtajiaan ja jäädyttämään investointejaan, mikä näkyy huonontuneena infrastruktuurina. Ylikännön mukaan sakot aiheuttavat painetta pienille kunnille ja voivat ajaa ne kriisikuntamenettelyyn. Hän on myös kritisoinut työllisyyspalvelujen uutta järjestelmää, joka vaatii kunnissa toimia työpaikkojen luomiseksi, mutta ei tarjoa keinoja toteuttamiseen. Kunta tarvitsee kipeästi tukea ja uudistuksia selvitäkseen taloudellisista haasteista ja taatakseen asukkailleen tulevaisuuden.

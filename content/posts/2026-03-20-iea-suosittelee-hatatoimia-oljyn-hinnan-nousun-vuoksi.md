@@ -20,6 +20,10 @@ tags:
   - energia
   - yritys
   - öljy
+related_articles:
+  - 2026-03-20-energiamarkkina-tarvitsee-kiireellisia-toimia-oljyn-hinnan-n
+  - 2026-03-20-energiaviranomainen-suosittelee-hatatason-toimia-oljyn-hinna
+  - 2026-03-20-iea-suosittelee-hatatoimia-oljynhintojen-nousun-ehkaisemisek
 ---
 
 Kansainvälinen energiajärjestö IEA on julkaissut suosituksia jäsenvaltioilleen öljymarkkinoiden häiriötilanteisiin. Suosituksiin kuuluu muun muassa moottoriteiden nopeusrajoitusten alentaminen ja etätyön suosiminen öljyn käytön vähentämiseksi. Lähi-idässä käynnissä oleva konflikti on nostanut öljyn hintoja, mikä vaatii kiireellisiä toimenpiteitä kotitalouksien ja yritysten energiakustannusten hallitsemiseksi. IEA:n mukaan hallitusten tulisi harkita myös liikenteen rajoittamista suurissa kaupungeissa rekisterinumeroiden mukaan. Suositusten taustalla on pelko öljyntuonnin riskien lisääntymisestä, mikä voi vaikuttaa globaaliin öljymarkkinatilanteeseen pitkällä aikavälillä. Energiakriisi herättää huolta kansainvälisesti, ja IEA:n suositukset tarjoavat keinoja kysynnän vähentämiseksi ja valmistautumiseksi markkinoiden mahdollisiin häiriöihin, mikä on elintärkeää nykytilanteessa.

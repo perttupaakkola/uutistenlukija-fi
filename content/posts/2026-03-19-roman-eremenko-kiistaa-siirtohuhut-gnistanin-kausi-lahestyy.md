@@ -20,6 +20,10 @@ tags:
   - venäjä
   - jalkapallo
   - avaruus
+related_articles:
+  - 2026-03-19-huuhkajat-pelaa-valko-venajaa-vastaan-puolueettomassa-maassa
+  - 2026-03-17-iran-pyrkii-siirtamaan-mm-ottelunsa-pois-yhdysvalloista
+  - 2026-03-17-daniel-hakans-jaa-pois-huuhkajien-uuden-seelannin-matkasta
 ---
 
 Roman Eremenko, suomalainen jalkapallotähti, on tyrmännyt huhut mahdollisesta siirrosta Venäjälle ja keskittyy täysin tulevaan kauteen IF Gnistanissa. Eremenko kertoi, että viime kauden suurin pettymys oli maajoukkuepaikan menettäminen loukkaantumisen vuoksi. Hän on kuitenkin innoissaan alkavasta kaudesta ja haluaa osoittaa kykynsä kentällä.

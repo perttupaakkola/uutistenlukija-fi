@@ -21,6 +21,10 @@ tags:
   - inflaatio
   - öljy
   - liikenne
+related_articles:
+  - 2026-03-20-energiaviranomainen-suosittelee-hatatason-toimia-oljyn-hinna
+  - 2026-03-20-iea-suosittelee-hatatoimia-oljynhintojen-nousun-ehkaisemisek
+  - 2026-03-20-energiamarkkina-tarvitsee-kiireellisia-toimia-oljyn-hinnan-n
 ---
 
 Kansainvälinen energiajärjestö IEA on julkaissut suosituksia, jotka tulisi ottaa käyttöön öljynhintojen nousun vuoksi. Suositukset sisältävät muun muassa moottoriteiden nopeusrajoitusten alentamisen ja etätyön edistämisen. IEA varoittaa, että keskipitkällä aikavälillä energiamarkkinoilla on odotettavissa häiriöitä, mikä johtuu Lähi-idän konfliktista.

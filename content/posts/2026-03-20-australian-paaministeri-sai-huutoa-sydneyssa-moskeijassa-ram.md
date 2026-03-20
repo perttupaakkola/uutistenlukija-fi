@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - hallitus
   - israel
+related_articles:
+  - 2026-03-20-australian-paaministeri-kohtasi-vastustusta-moskeijassa
+  - 2026-03-20-australian-paaministeri-sai-huudot-moskeijassa-ramadan-tapah
+  - 2026-03-20-australian-paaministeri-sai-huutoja-moskeijassa-ramadan-tapa
 ---
 
 Australian pääministeri Anthony Albanese kohtasi vilkasta vastustusta moskeijassa Sydneyn Lakembassa, kun hän oli yksi vieraista Ramadanin päättävissä rukouksissa. Osallistujat syyttivät häntä ’genosidin tukemisesta’, mikä herätti keskustelua hallituksen politiikasta Israelin ja Gazan sodassa.

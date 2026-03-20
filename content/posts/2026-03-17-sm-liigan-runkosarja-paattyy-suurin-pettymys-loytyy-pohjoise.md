@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jääkiekko
   - kilpailu
+related_articles:
+  - 2026-03-18-tps-jaa-ulos-pudotuspeleista-11-vuoteen-iso-pettymys-sanoo-t
+  - 2026-03-17-dallasin-pisteputki-katkesi-heiskasen-virheeseen
+  - 2026-03-17-fabregas-johtanut-como-1907n-italian-jalkapallon-huipulle
 ---
 
 Jääkiekon SM-liigan runkosarja pelataan tiistaina päätökseen. Asiantuntija Karri Rämö nimeää kauden suurimman pettymyksen pohjoisesta Suomesta.

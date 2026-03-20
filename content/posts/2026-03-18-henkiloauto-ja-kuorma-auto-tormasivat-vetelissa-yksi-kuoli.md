@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - liikenne
   - poliisi
+related_articles:
+  - 2026-03-15-noin-50-vuotias-virolaismies-kuoli-lasketteluonnettomuudessa
+  - 2026-03-16-kaatunut-matkailuvaunu-ruuhkautti-ysitien-tampereen-kohdalla
+  - 2026-03-16-poliisi-etsii-leppavirralta-kadonnutta-nuorta-miesta
 ---
 
 Yksi ihminen kuoli liikenneonnettomuudessa keskiviikkona 18. maaliskuuta Vetelissä. Onnettomuus sattui Jyväskyläntiellä hieman ennen kello kymmentä aamupäivällä.

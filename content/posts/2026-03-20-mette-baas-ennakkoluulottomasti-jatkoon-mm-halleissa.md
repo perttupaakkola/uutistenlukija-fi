@@ -19,6 +19,10 @@ tags:
   - urheilu
   - yleisurheilu
   - kilpailu
+related_articles:
+  - 2026-03-20-mette-baas-historialliselle-suoritukselle-mm-halleissa-uusi
+  - 2026-03-15-suomelle-kaksoisvoitto-muodostelmaluistelun-junioreiden-mm-
+  - 2026-03-16-lindsey-vonn-ei-sulje-pois-paluuta-en-tarvitse-kenenkaan-lup
 ---
 
 Suomalainen juoksija Mette Baas on edennyt yleisurheilun MM-hallikilpailujen välieriin Torunissa. Hän voitti oman 400 metrin eränsä huipputuloksella 51,42, mikä on uusi Suomen ennätys. Tämä aika on parannus helmikuun alussa tehdystä ennätyksestä 23 sadasosaa.

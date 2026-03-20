@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - rahoitus
+related_articles:
+  - 2026-03-19-bluesky-kerasi-100-miljoonaa-dollaria-rahoituksessa-ceo-muut
+  - 2026-03-19-turun-keskusta-saa-pian-ensimmaisen-hypermarkettinsa
+  - 2026-03-15-wolt-haastaa-epassin-ja-edenredin-henkilostoetumarkkinalla
 ---
 
 Meta, Facebookin emoyhtiö, tarjoaa suurille sisällöntuottajille 3 000 dollaria kuukaudessa, jotta he julkaisisivat sisältöä Facebookissa osana Creator Fast Track -ohjelmaa. Tämä ohjelma on suunnattu yli miljoonan seuraajan omaaville vaikuttajille muilla videoalustoilla, kuten TikTokissa ja YouTubessa. Meta on aiemmin maksanut lähes 3 miljardia dollaria sisällöntuottajille vuonna 2025 erilaisista ansaintaohjelmista.

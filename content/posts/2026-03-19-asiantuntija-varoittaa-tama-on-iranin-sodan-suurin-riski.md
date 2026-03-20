@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - sota
   - iran
+related_articles:
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-pekingin-vierailua-kuukaudell
+  - 2026-03-17-trump-pyytaa-kiinaa-siirtamaan-pekingin-vierailua-kuukaudell
 ---
 
 Yhdysvaltain hyökkäys Irakiin alkoi 23 vuotta sitten, ja sen nopea voitto johti vuosia kestäneeseen konfliktiin. Nykyisin tilanne Irakin naapurimaassa Iranissa herättää pelkoa samanlaisten tapahtumien toistumisesta. Poliittisen historian professori Juhana Aunesluoma kuitenkin huomauttaa, että vertaus Yhdysvaltain Irakin sotaan on ontuva.

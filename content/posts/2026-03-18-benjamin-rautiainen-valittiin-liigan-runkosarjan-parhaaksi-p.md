@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jääkiekko
   - viihde
+related_articles:
+  - 2026-03-17-sm-liigakauden-paatos-paljasti-yllattavia-lukuja-sarjan-hant
+  - 2026-03-17-sm-liigan-runkosarja-paattyy-suurin-pettymys-loytyy-pohjoise
+  - 2026-03-18-tps-kaatui-runkosarjan-viimeisella-kierroksella-pudotuspelip
 ---
 
 Tapparan laitahyökkääjä Benjamin Rautiainen on kauden 2025–26 Liigan runkosarjan paras pelaaja. Valinnan tekivät jääkiekkotoimittajat äänestämällä.

@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - rikos
   - kirjallisuus
+related_articles:
+  - 2026-03-20-norjan-kruununprinsessa-mette-marit-kertoo-nrklle-elamansa-h
+  - 2026-03-20-norjan-kruununprinsessa-mette-marit-puhui-epstein-kytkennois
+  - 2026-03-18-syyttaja-vaatii-mette-maritin-pojalle-seitseman-vuoden-vanke
 ---
 
 Norjan kruununprinsessa Mette-Marit on kommentoinut tänään suhdettaan edesmenneeseen seksuaalirikolliseen Jeffrey Epsteiniin. Tämä uutinen on herättänyt laajaa keskustelua sekä Norjan kuningashuoneen että kansan keskuudessa.

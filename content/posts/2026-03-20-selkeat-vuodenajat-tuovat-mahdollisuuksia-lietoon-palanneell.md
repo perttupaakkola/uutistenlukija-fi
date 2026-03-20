@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - talous
   - sää
+related_articles:
+  - 2026-03-20-selkeat-vuodenajat-helpottavat-lietoon-palannutta-lakkitehda
+  - 2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy
+  - 2026-03-20-kirkon-heratysprojekti-kaynnistyy-helsingissa
 ---
 
 Lieto on saanut palautettua lakkitehtaan toiminnan, mikä on merkittävä askel alueen talouskehitykselle. Tehdas on ollut suljettuna, mutta sen avaaminen luo uusia työpaikkoja ja elvyyttää paikallistaloutta. Paikalliset odottavat innolla lakkitehtaasta saatavaa työllisyysetua ja taloudellista vireyttä.

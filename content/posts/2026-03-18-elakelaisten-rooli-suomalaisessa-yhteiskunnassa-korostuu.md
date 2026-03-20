@@ -21,6 +21,10 @@ tags:
   - sää
   - eläke
   - lapset
+related_articles:
+  - 2026-03-18-asteroidiloydos-sisaltaa-elaman-perusaineet
+  - 2026-03-18-eduskunnan-poissaolotilastot-herattavat-keskustelua-perhevap
+  - 2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy
 ---
 
 Eläkeläiset ovat aktiivisia ja monipuolisia yhteiskunnan toimijoita. He osallistuvat kuluttamiseen, vapaaehtoistoimintaan ja tarjoavat apua lähimmäisilleen. Eläkeläisten panos vahvistaa yhteisöjä ja vähentää julkisen sektorin kuormitusta.

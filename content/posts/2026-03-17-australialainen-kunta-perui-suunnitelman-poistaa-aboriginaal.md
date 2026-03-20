@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - pankki
   - kansainvälinen
+related_articles:
+  - 2026-03-15-prinssi-william-julkaisi-harvinaisen-kuvan-dianasta-aitienpa
+  - 2026-03-16-tulimuurahaisten-leviaminen-huolestuttaa-australiassa
+  - 2026-03-19-venajan-havittaja-tunkeutui-viron-ilmatilaan
 ---
 
 Uuden Etelä-Walesin osavaltiossa sijaitseva Federation Council luopui suunnitelmastaan kieltää aboriginaalien ja Torres Strait Islander -kansojen lippujen esillä pitäminen. Päätöstä edelsi lähes 700 kansalaispalautetta, joista valtaosa vastusti lipunpoistoa.

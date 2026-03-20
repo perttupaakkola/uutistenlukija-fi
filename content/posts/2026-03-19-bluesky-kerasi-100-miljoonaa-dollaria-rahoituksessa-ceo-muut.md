@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - rahoitus
+related_articles:
+  - 2026-03-19-meta-houkuttelee-tiktok-ja-youtube-sisallontuottajia-3-000-d
+  - 2026-03-20-lieto-sai-takaisin-lakkitehtaan-selkeat-vuodenajat-tukevat-t
+  - 2026-03-15-wolt-haastaa-epassin-ja-edenredin-henkilostoetumarkkinalla
 ---
 
 Sosiaalinen verkosto Bluesky ilmoitti keränneensä 100 miljoonaa dollaria Series B -rahoituskierroksella. Rahoituskierros, jota johti Bain Capital Crypto, saatiin päätökseen huhtikuussa 2025, mutta uutinen julkaistiin nyt, viikon jälkeen toimitusjohtajan vaihtumisesta. Rahoituksen saaminen on merkittävä askel Blueskylle, joka on kehittänyt palveluaan kilpailijoihinsa verrattuna.

@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - venäjä
   - kansainvälinen
+related_articles:
+  - 2026-03-19-venajan-erikoisjoukot-harjoitteli-droonien-kayttoa-suomen-ra
+  - 2026-03-15-venajan-aseviennin-osuus-maailmanmarkkinoista-kutistunut-nop
+  - 2026-03-19-venajan-havittaja-tunkeutui-viron-ilmatilaan
 description: "Venäjän erikoisjoukot harjoittelevat kamikaze-droonien käyttöä Kuolan niemimaan arktisissa olosuhteissa, noin 200 kilometrin päässä Suomesta."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Venäjän erikoisjoukot harjoittelivat kamikaze-droonien käyttöä Suomen rajan lähellä"

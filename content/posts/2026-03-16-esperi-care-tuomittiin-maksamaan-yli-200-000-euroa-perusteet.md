@@ -15,6 +15,10 @@ tags:
   - rikos
   - oikeus
   - terveys
+related_articles:
+  - 2026-03-18-hoitajainformaation-vastustaja-tuomittiin-maksamaan-tuhansia
+  - 2026-03-18-poika-tuomittiin-pahoinpitelysta-kun-juotti-kielloista-huoli
+  - 2026-03-20-lahtelainen-mies-tuomittiin-viestintarauhan-rikkomisesta
 description: "Esperi Care tuomitaan maksamaan yli 200 000 euroa entiselle hoitajalleen perusteettomasta irtisanomisesta, kun väitteille ei löydetty todistetta."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Esperi Care tuomittiin maksamaan yli 200 000 euroa perusteettomasta irtisanomisesta"

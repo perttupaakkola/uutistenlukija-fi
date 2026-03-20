@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - iran
   - verotus
+related_articles:
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
+  - 2026-03-18-israelin-iskut-voivat-jaadyttaa-iran-neuvottelut
+  - 2026-03-17-trumpin-asema-heikkenee-iranin-sodan-seurausten-kasautuessa
 description: "Iranin iskut Arabiemiraatteihin pakottavat ulkomaalaisia poistumaan Dubaista, mikä heikentää kaupungin omaa turvallisuutta ja taloutta."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Iranin iskut Arabiemiraatteihin ajavat ulkomaalaisia pois Dubaista"

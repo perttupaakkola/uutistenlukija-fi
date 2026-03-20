@@ -20,6 +20,10 @@ tags:
   - pörssi
   - yritys
   - liikenne
+related_articles:
+  - 2026-03-19-paastrategi-suosittelee-seitsemaa-osaketta-myllerryksen-kesk
+  - 2026-03-17-sec-aikoo-luopua-porssiyhtioiden-neljannesvuosiraportoinnist
+  - 2026-03-19-markkinaheilunta-jatkuu-asiantuntijat-arvioivat-iskua-kasvuo
 ---
 
 Yhdysvaltain arvopaperi- ja pörssikomissio SEC valmistelee ehdotusta, joka sallisi pörssiyhtiöiden julkaista tulosraporttinsa kahdesti vuodessa nykyisen neljännesvuosiraportoinnin sijaan.

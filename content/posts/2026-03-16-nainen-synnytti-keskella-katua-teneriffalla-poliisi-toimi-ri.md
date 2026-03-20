@@ -14,6 +14,10 @@ tags:
   - poliisi
   - terveys
   - lääketiede
+related_articles:
+  - 2026-03-19-keniassa-kuukautisvapaata-tyontekijoille
+  - 2026-03-19-nuori-suomalaisnainen-sai-surmansa-italiassa-epailty-kuljett
+  - 2026-03-17-kiipeilija-kuoli-pudottuaan-rotkoon-teneriffalla
 description: "Teneriffalla nainen synnyttää keskellä katua, kun poliisi reagoi nopeasti hälytykseen ja kutsuu paikalle terveysalan ammattilaisia avustamaan."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Nainen synnytti keskellä katua Teneriffalla – poliisi toimi ripeästi"

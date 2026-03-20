@@ -20,6 +20,10 @@ tags:
   - yhdysvallat
   - liikenne
   - lentoliikenne
+related_articles:
+  - 2026-03-18-mar-a-lagon-koneiden-parina-loppui-trumpin-naapurit-herasiva
+  - 2026-03-19-pahkinarinteen-tulipalon-onnettomuusseloste-julki-taman-vuok
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
 ---
 
 Mar-a-Lagon naapurit Floridassa ovat ilmaisseet tyytymättömyytensä häiriöitä aiheuttavaa melua kohtaan. Trumpin on viimein onnistunut vähentämään lentokoneiden aiheuttamaa hälyä. Naapurit ovat tuoneet esiin turhautumistaan julkisesti ja vaatineet viranomaisia puuttumaan tilanteeseen. Lentoliikenteen melu on ollut keskustelun aihe vuosien ajan.

@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - leikkaukset
   - sää
+related_articles:
+  - 2026-03-20-eveliina-johtaa-huutokauppaa-jossa-esineet-loytavat-arvonsa
+  - 2026-03-20-huutokauppaa-pyorittava-eveliina-oudoimmatkin-esineet-loytav
+  - 2026-03-20-huutokauppaa-turussa-pyorittava-eveliina-oudoimmatkin-esinee
 ---
 
 Eveliina, Turussa huutokauppaa pyörittävä yrittäjä, kertoo, että erilaiset esineet löytävät usein arvostusta kaikenlaisilta ihmisiltä. Huutokaupoissa myydään niin arkisia tavaroita kuin erikoisia keräilyesineitä, ja monella niistä on oma tarinansa. Eveliina korostaa, että asiakkaat ovat kiinnostuneita kaikesta mahdollisesta – esineet, joista monet ovat tuntemattomia, ovat tulleet arjen säästökeinoiksi. 

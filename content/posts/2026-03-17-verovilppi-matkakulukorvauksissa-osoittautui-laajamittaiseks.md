@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - verotus
   - politiikka
+related_articles:
+  - 2026-03-17-verohallinto-paljasti-yli-miljardin-euron-edesta-virheita-ja
+  - 2026-03-20-olvin-panimomestari-sai-unelmiensa-tyokalun-kayttoonsa-iisal
+  - 2026-03-17-eva-yli-40-prosenttia-tyottomista-erittain-vaikeasti-tyollis
 ---
 
 Verohallinnon valvonta paljasti, että yhdeksän kymmenestä tarkastetusta yrityksestä oli maksanut matkakulukorvauksia vilpillisesti. Verottomia kilometrikorvauksia maksettiin matkoista, joita ei ollut koskaan tehty.

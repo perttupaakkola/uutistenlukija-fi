@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - ukraina
   - kansainvälinen
+related_articles:
+  - 2026-03-15-prinssi-william-julkaisi-harvinaisen-kuvan-dianasta-aitienpa
+  - 2026-03-16-somalia-pyrkii-havittamaan-isisin-viimeiset-tukikohdat
+  - 2026-03-16-ukraina-taistelee-rahoituksensa-puolesta-sodan-keskella
 ---
 
 Helsingistä lähtee matka kohti Ukrainan kriisialuetta, missä on tarkoitus toimittaa 12 ambulanssia avustustyöhön. Mukana on myös suomalainen Lions-järjestön ylläpitämä erikoisauto, joka pyrkii tarjoamaan apua kriisitilanteissa. Tämä auto on suunniteltu mahdollistamaan nopean reagoinnin ja on käytettävissä jatkuvasti turvaamaan pelastustyön tehokkuutta.

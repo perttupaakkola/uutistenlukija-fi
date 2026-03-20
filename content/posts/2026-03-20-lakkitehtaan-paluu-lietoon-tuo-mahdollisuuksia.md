@@ -20,6 +20,10 @@ tags:
   - yritys
   - luonto
   - teknologia
+related_articles:
+  - 2026-03-20-pihlapro-asettaa-korkeita-ymparistostandardeja-tuotannolleen
+  - 2026-03-20-lieto-sai-takaisin-lakkitehtaan-selkeat-vuodenajat-tukevat-t
+  - 2026-03-20-lietoon-palannut-lakkitehdas-hyotyy-selkeista-vuodenajoista
 ---
 
 Lieto on saanut lakkitehtaan takaisin kotiseudulleen, ja yritys uskoo, että neljä vuodenaikaa tukevat sen toimintaa. Tehtaan toimitusjohtaja kertoi, että alueen vuodenaikojen vaihtelu tarjoaa ainutlaatuisen ympäristön lakkituotannolle, mikä parantaa tuotteiden laatua ja tehokkuutta. Tehdas on investoinut moderniin teknologiaan, joka mahdollistaa joustavan tuotannon eri vuodenaikoina.

@@ -20,6 +20,10 @@ tags:
   - energia
   - öljy
   - puolustus
+related_articles:
+  - 2026-03-17-hakkanen-suomella-ei-valttamatta-resursseja-hormuzinsalmen-o
+  - 2026-03-19-hakkanen-suomi-antaa-isojen-maiden-pohtia-hormuzinsalmen-til
+  - 2026-03-19-hakkanen-hormuzinsalmesta-suomi-antaa-suurvaltojen-johtaa
 ---
 
 Puolustusministeri Antti Häkkänen pitää Suomen osallistumista mahdolliseen Hormuzinsalmen merenkulun turvaamisoperaatioon kaukaisena asiana. Häkkäsen mukaan Suomella ei välttämättä ole siihen tarvittavia resursseja tai sotilaallista kykyä.

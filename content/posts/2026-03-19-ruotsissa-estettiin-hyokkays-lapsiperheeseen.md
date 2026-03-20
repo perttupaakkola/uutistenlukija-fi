@@ -15,6 +15,10 @@ tags:
   - turvallisuus
   - iran
   - poliisi
+related_articles:
+  - 2026-03-19-iran-yritti-iskua-lapsiperheeseen-ruotsissa-toimeksianto-val
+  - 2026-03-17-australian-verkkoturvallisuusviranomainen-lapsiin-kohdistuva
+  - 2026-03-18-iranilaiset-jalkapalloilijat-palaavat-kotimaahansa-turvattom
 description: "Ruotsin turvallisuuspoliisi estää hyökkäyksen lapsiperhettä vastaan, mikä paljastaa huolen ulkovaltojen toiminnasta maassa."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Ruotsissa estettiin hyökkäys lapsiperheeseen"

@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - pörssi
+related_articles:
+  - 2026-03-20-pron-puheenjohtaja-syyttaa-suomalaisia-porssiyhtioita-lyhytn
+  - 2026-03-20-ammattiliitto-pro-syyttaa-porssiyhtioita-lyhytnakoisyydesta
+  - 2026-03-20-ay-liiton-puheenjohtaja-suomen-porssiyhtiot-valinneet-lyhytn
 ---
 
 Ammattiliitto Pro on julkaissut voimakkaan kannanoton, jossa se kritisoi Suomen pörssiyhtiöitä lyhytnäköisestä strategiasta. Liiton puheenjohtaja Niko Simola arvioi, että yhtiöt jakavat osinkoja ennätysmäisiä määriä samalla, kun niiden tulos kasvaa vaatimattomasti. 'On surullista, että suurimmaksi tavoitteeksi on tullut omistajien palkitseminen sen sijaan, että investoitaisiin tulevaisuuteen ja kasvuun', Simola sanoo.

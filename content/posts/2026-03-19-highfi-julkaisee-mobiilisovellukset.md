@@ -13,6 +13,10 @@ tags:
   - teknologia
   - viihde
   - digitalisaatio
+related_articles:
+  - 2026-03-18-uusi-tekoalypodcastityokalu-helpottaa-ensikertalaisten-sisal
+  - 2026-03-19-tubi-tekee-yhteistyota-tiktok-luojien-kanssa-alkuperaissisal
+  - 2026-03-18-kagi-translaten-ai-vastaa-mita-merkittava-margaret-thatcher
 description: "Viihdeuutissivusto High.fi julkaisee mobiilisovelluksen Android- ja iPhone-käyttäjille, tuoden sisällön helposti saataville älypuhelimilla."
 image: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3Mzk2OTA4OXww&ixlib=rb-4.1.0&q=85"
 image_alt: "High.fi julkaisee mobiilisovellukset"

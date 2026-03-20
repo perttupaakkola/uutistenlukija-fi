@@ -13,6 +13,10 @@ tags:
   - kulttuuri
   - elokuva
   - viihde
+related_articles:
+  - 2026-03-16-kpop-demon-hunters-valloitti-oscar-yleison-yhdistamalla-k-po
+  - 2026-03-16-oscar-gaala-jarjestetaan-98-kerran-conan-obrien-juontaa-tois
+  - 2026-03-16-oscar-gaalassa-palkittiin-one-battle-after-another-ja-sinner
 description: "Netflixin Frankenstein voittaa kolme Oscar-palkintoa, kun taas KPop Demon Hunters saa kaksi palkintoa vuoden 2026 gaalassa."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Netflixin Frankenstein ja KPop Demon Hunters menestyivät Oscar-gaalassa"

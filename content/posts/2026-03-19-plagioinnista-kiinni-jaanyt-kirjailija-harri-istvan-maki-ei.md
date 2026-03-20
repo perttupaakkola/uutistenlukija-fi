@@ -15,6 +15,10 @@ tags:
   - koulutus
   - tampere
   - liikenne
+related_articles:
+  - 2026-03-18-harri-istvan-maen-uudet-plagiaatiepailyt-kustantaja-poisti-t
+  - 2026-03-19-saastokuurilla-olevan-tampereen-taidehankinnasta-levisi-valh
+  - 2026-03-18-harri-istvan-maen-teoksia-epaillaan-plagiaateiksi-kustantaja
 description: "Kirjailija Harri István Mäki ei palaa Tampereen työväenopiston opettajaksi tänä vuonna useiden plagiointiepäilyjen vuoksi."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Plagioinnista kiinni jäänyt kirjailija Harri István Mäki ei jatka opettajana Tampereen työväenopistossa"

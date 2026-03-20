@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - terveys
   - liikenne
+related_articles:
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovellu-sosiaali-ja-terveydenhuollon
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovellu-sote-rahoituksen-laskentaperu
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovellu-sote-rahoituksen-perustaksi
 ---
 
 Terveyden ja hyvinvoinnin laitos (THL) on julkaissut selvityksen, jossa se kyseenalaistaa Kanta-järjestelmän tietojen soveltuvuuden sosiaali- ja terveydenhuollon rahoituksen laskentaperusteeksi. Selvityksessä tuodaan esiin useita puutteita, jotka voivat aiheuttaa laskentavirheitä ja vaikuttaa rahoituksen oikeudenmukaisuuteen.

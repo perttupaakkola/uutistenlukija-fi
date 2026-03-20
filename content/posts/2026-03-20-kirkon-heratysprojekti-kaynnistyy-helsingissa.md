@@ -20,6 +20,10 @@ tags:
   - terveys
   - sää
   - helsinki
+related_articles:
+  - 2026-03-19-bolt-tuo-suomeen-naistaksit-vain-naisille-tarkoitettu-palvel
+  - 2026-03-19-wille-rydman-huolestui-jarkyttavista-paljastuksista-yksikin
+  - 2026-03-20-thl-varoittaa-kanta-tiedot-eivat-riita-sote-rahoitukseen
 ---
 
 Helsingissä käynnistyy herätysprojekti, joka kokoaa eri alojen asiantuntijoita ja kirkon edustajia yhteen. Suomen evankelis-luterilainen kirkko haluaa herättää keskustelua uskon merkityksestä nykypäivän Suomessa. Arkkipiispa Timo Handeson tuo esiin videotervehdyksessään sen, kuinka usko voi toimia tärkeänä tukipilarina kansallisessa identiteetissä ja yhteisöllisyydessä.

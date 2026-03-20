@@ -19,6 +19,10 @@ tags:
   - urheilu
   - snooker
   - kiina
+related_articles:
+  - 2026-03-20-ronnie-osullivan-teki-historiaa-snookerissa-kiinassa
+  - 2026-03-20-ronnie-osullivan-teki-snooker-historiaa-kiinassa
+  - 2026-03-20-ronnie-osullivan-teki-snooker-historiaa-vapaapallotilanne-ma
 ---
 
 Ronnie O'Sullivan teki perjantaina snooker-historiaa, kun hän saavutti historian korkeimman breikin World Openissa Kiinan Yushanissa. O'Sullivan, seitsemänkertainen maailmanmestari, teki uskomattomat 153 pistettä voittaessaan walesilaisen Ryan Dayn välierissä 5–0.

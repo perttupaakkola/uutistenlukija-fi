@@ -21,6 +21,10 @@ tags:
   - yritys
   - poliisi
   - oikeus
+related_articles:
+  - 2026-03-17-oikeusjuttu-xain-grok-tekoaly-tuotti-lasten-seksuaalista-kuv
+  - 2026-03-16-nvidian-vuosikonferenssi-alkaa-toimitusjohtaja-esittelee-tek
+  - 2026-03-17-nvidia-tahtaa-tekoalyn-seuraavaan-taistelukenttaan-koulutusv
 ---
 
 Elon Muskin omistamaa xAI-yhtiötä vastaan on nostettu oikeusjuttu Yhdysvalloissa. Kanteen mukaan yhtiön Grok-tekoälymalli tuotti lasten seksuaalista hyväksikäyttömateriaalia kolmen todellisen tytön valokuvien pohjalta.

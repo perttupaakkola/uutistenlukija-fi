@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - hallitus
   - yhdysvallat
+related_articles:
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
+  - 2026-03-19-yhdysvaltojen-ja-israelin-valinen-suhde-iranin-sodassa-kysee
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-kesken-konflikt
 ---
 
 Entisen presidentin Donald Trumpin johtaman sotatoiminnan hintalappu on paljastunut suureksi. Tutkimukset osoittavat, että Trumpin aikakauden sotatoimien kustannukset ovat nousseet ennennäkemättömiin summiin, mikä herättää kysymyksiä hallituksen budjetin käytöstä ja taloudellisista prioriteeteista. Hintalappu kattaa sotilasoperaatiot ja niihin liittyvät inhimilliset kustannukset, mikä tekee asiasta entistä monitahoisemman.

@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jalkapallo
   - kilpailu
+related_articles:
+  - 2026-03-18-mestarien-liigan-ottelut-tarjosivat-jannitysta-ja-pettymyksi
+  - 2026-03-17-fabregas-johtanut-como-1907n-italian-jalkapallon-huipulle
+  - 2026-03-17-fabregas-on-nostanut-italian-pikkuseuran-mestarien-liigan-ky
 ---
 
 Jalkapallon parhaimman seurajoukkuekilpailun, Mestarien liigan, puolivälieräpaikat on julkaistu. Liverpool, Bayern München ja Atlético Madrid selvisivät jatkoon tiukoista otteluista. Yhtä lailla muutkin neljä parasta joukkuetta ovat varmistaneet paikkansa seuraavassa vaiheessa.

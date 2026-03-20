@@ -21,6 +21,10 @@ tags:
   - terveys
   - rokote
   - sää
+related_articles:
+  - 2026-03-18-suomalaisopiskelija-havahtui-britannian-aivokalvontulehdusep
+  - 2026-03-19-wille-rydman-huolestui-jarkyttavista-paljastuksista-yksikin
+  - 2026-03-20-thl-varoittaa-kanta-tiedot-eivat-riita-sote-rahoitukseen
 ---
 
 Opiskelijat lähtevät yhä useammin Britanniasta, osin epidemian laajentumisen vuoksi. Terveysviranomaiset ovat yrittäneet tiedottaa tilanteesta, mutta viestintä on koettu riittämättömäksi.

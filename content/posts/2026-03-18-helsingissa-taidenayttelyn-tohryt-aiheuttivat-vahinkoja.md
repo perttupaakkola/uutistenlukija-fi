@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - kirjallisuus
   - helsinki
+related_articles:
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-eivat-jatku-kesalla-lavan-rak
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-jaavat-tauolle
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-keskeytykseen-lupakiemurat-pi
 ---
 
 Helsingissä sijaitsevaa taidenäyttelyä vastaan hyökättiin viime viikonloppuna ja kolme teosta tuhoutui törkeissä töhryissä, aiheuttaen noin 8 000 euron vahingot. Taiteilija Tiia Henriksson kertoo, ettei ole saanut tukea tilanteen selvittämiseksi.

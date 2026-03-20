@@ -19,6 +19,10 @@ tags:
   - teknologia
   - tekoäly
   - liikenne
+related_articles:
+  - 2026-03-16-nvidian-vuosikonferenssi-alkaa-toimitusjohtaja-esittelee-tek
+  - 2026-03-16-kilpailu-maailmanlaajuisesti-tunnustetusta-tekoalyvapaa-logo
+  - 2026-03-17-nvidia-julkaisi-avoimen-tekoalyagenttialustan-yrityksia-vart
 ---
 
 Nothingin toimitusjohtaja Carl Pei arvioi, että tulevaisuudessa sovellukset saattavat vähentyä merkittävästi älypuhelimista, kun keinoälyagentit ottavat niiden paikan. Hänen mukaansa tulevat tekoälyagentit pystyvät ymmärtämään käyttäjän tarkoituksia ja hoitamaan tiettyjä tehtäviä itsenäisesti. Tämä kehitys voi muuttaa puhelimia laajemmin järjestelmiksi, jotka tarjoavat entistä älykkäämpää käyttäjäkokemusta. Vaikka sovellusten tarve vähenee, käyttäjät voivat hyödyntää entistä monipuolisemmin teknologiaa. Muutoksen myötä on kuitenkin huomioitava yksityisyyteen ja datan suojaan liittyvät haasteet.

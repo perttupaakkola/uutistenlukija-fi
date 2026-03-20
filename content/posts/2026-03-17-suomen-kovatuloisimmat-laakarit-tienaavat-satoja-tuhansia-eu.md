@@ -21,6 +21,10 @@ tags:
   - terveys
   - lääketiede
   - liikenne
+related_articles:
+  - 2026-03-18-hoitajainformaation-vastustaja-tuomittiin-maksamaan-tuhansia
+  - 2026-03-19-selvitys-sosiaali-ja-terveyspalveluiden-rahoitukseen-vaikutt
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovellu-sote-rahoituksen-laskentaperu
 ---
 
 Suomen sadan parhaiten tienaavan lääkärin tulot ylittävät selvästi tavallisen palkansaajan ansiot. Lähes 80 heistä ansaitsi yli 400 000 euroa ja kuuden lääkärin tulot nousivat yli miljoonaan euroon. Listan kärjessä oleva lääkäri tienasi lähes 10 miljoonaa euroa.

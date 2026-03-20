@@ -20,6 +20,10 @@ tags:
   - venäjä
   - hallitus
   - murha
+related_articles:
+  - 2026-03-20-venajalla-paljastui-uusi-salamurhayksikko-noyryytys-vallanka
+  - 2026-03-20-venajalla-uusi-salamurhayksikko-paljastui-tutkivista-journal
+  - 2026-03-20-venajalla-paljastettiin-uusi-salamurhayksikko
 ---
 
 Tutkivat journalistit ovat paljastaneet Venäjän eliittijoukoista koostuvan salaisen salamurhayksikön, mikä on herättänyt huomiota ja hämmennystä. Tällaiset yksiköt ovat yleensä kytköksissä valtiojohtajien erikoistehtäviin, ja niiden olemassaolo voi aiheuttaa vakavia poliittisia seurauksia.

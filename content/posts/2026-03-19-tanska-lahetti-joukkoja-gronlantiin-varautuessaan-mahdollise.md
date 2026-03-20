@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - yhdysvallat
   - kansainvälinen
+related_articles:
+  - 2026-03-19-tanska-lahetti-joukkoja-gronlantiin-varautuakseen-usan-paino
+  - 2026-03-19-tanska-pelkasi-usan-hyokkaysta-nain-stubb-vastasi-isn-kysymy
+  - 2026-03-19-yhdysvaltojen-ja-israelin-valinen-suhde-iranin-sodassa-kysee
 description: "Tanska lähettää joukkoja Grönlantiin varautuakseen mahdolliseen konfliktin puhkeamiseen Yhdysvaltojen kanssa, jolloin alueen jännitteet kasvavat."
 image: "https://images.unsplash.com/photo-1771797629089-7691ddf45680?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Tanska lähetti joukkoja Grönlantiin varautuessaan mahdolliseen Yhdysvaltojen hyökkäykseen"

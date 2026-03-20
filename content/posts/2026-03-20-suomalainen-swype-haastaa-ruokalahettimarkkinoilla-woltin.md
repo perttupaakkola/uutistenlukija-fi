@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - yhdysvallat
+related_articles:
+  - 2026-03-20-woltin-uusi-haastaja-swype-aloittaa-suomessa
+  - 2026-03-20-woltin-uusi-haastaja-swype-aloittaa-toiminnan-suomessa
+  - 2026-03-20-swype-haastaa-woltin-ja-foodoran-suomen-ruokalahettimarkkino
 ---
 
 Suomeen tulee uusi ruokalähettimarkkinoilla toimija, kun suomalainen tilausalusta Swype aikoo ottaa haasteen vastaan ja täyttää Foodoran jättämät saappaat. Foodora ilmoitti helmikuussa poistuvansa Suomesta, minkä myötä Swype on saanut runsaasti kuljettajahakemuksia.

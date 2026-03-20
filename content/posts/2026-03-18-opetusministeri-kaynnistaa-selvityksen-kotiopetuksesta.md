@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - koulutus
   - sää
+related_articles:
+  - 2026-03-17-mies-raiskasi-16-vuotiaan-tyton-helsingin-kivikossa
+  - 2026-03-17-mies-raiskasi-koulumatkalla-olleen-teinityton-helsingin-kivi
+  - 2026-03-19-tampereen-yliopisto-erotti-opiskelijan-kolmeksi-kuukaudeksi
 ---
 
 Opetusministeriö on päättänyt perustaa työryhmän selvittämään kotiopetuksen nykytilaa ja mahdollisia tulevia kehityssuuntia. Selvityksen taustalla on kasvava huoli siitä, miten kotiopetus vaikuttaa oppilaan hyvinvointiin ja koulutukselliseen tasa-arvoon.

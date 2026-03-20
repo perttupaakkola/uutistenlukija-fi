@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - kulttuuri
   - politiikka
+related_articles:
+  - 2026-03-20-kokoomuksen-varapuheenjohtajakisa-herattaa-kiinnostusta-ikon
+  - 2026-03-20-selkeat-vuodenajat-helpottavat-lietoon-palannutta-lakkitehda
+  - 2026-03-18-paakirjoitus-13-kuukautta-aikaa-hallitus-siirtyy-vaalitunnel
 ---
 
 Tytti Yli-Viikari jatkaa työskentelyä J.L. Runebergin kotimuseossa kesäkauden ajan. Hän on aiemmin toiminut valtiontalouden tarkastusviraston pääjohtajana. Nyt hänet on valittu uudelleen museo-oppaaksi asiakaspalvelu-, kassa- ja opastehtäviin. Yli-Viikari jatkaa samalla vastuullisella paikallaan, vaikka hänellä on kokemusta julkiselta sektorilta.

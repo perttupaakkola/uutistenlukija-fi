@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - lapset
   - kansainvälinen
+related_articles:
+  - 2026-03-20-norjan-kruununprinsessa-mette-marit-puhui-epstein-kytkennois
+  - 2026-03-19-norjan-kruununprinsessa-puhuu-epstein-yhteyksista
+  - 2026-03-20-mette-marit-paljastaa-suhteensa-jeffrey-epsteiniin-pyrkii-uh
 ---
 
 Norjan kruununprinsessa Mette-Marit avasi NRK:n haastattelussa henkilökohtaisia haasteitaan ja kamppailujaan elämänsä varrella. Hän kertoi vaikeista ajoista, joihin ovat kuuluneet sekä terveydelliset ongelmat että perhesiteet. Mette-Marit, joka on avioitunut kruununprinssi Haakonin kanssa, on ollut julkisuuden keskiössä vuodesta 2001, ja hänen tarinansa on saanut monilta ymmärrystä ja tukea.

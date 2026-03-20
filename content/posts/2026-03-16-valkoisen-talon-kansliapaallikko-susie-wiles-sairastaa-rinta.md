@@ -14,6 +14,10 @@ tags:
   - lääketiede
   - yhdysvallat
   - sää
+related_articles:
+  - 2026-03-19-tanska-lahetti-joukkoja-gronlantiin-varautuakseen-usan-paino
+  - 2026-03-15-kiinan-ja-yhdysvaltain-kauppaneuvottelut-alkoivat-pariisissa
+  - 2026-03-16-israel-aloitti-laajat-iskut-iraniin-trump-sanoo-ettei-usa-ol
 description: "Valkoisen talon kansliapäällikkö Susie Wiles on saanut varhaisen rintasyöpädiagnoosin, mutta aikoo jatkaa tehtävässään hoitojen ohella."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Valkoisen talon kansliapäällikkö Susie Wiles sairastaa rintasyöpää"

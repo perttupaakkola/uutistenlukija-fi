@@ -21,6 +21,10 @@ tags:
   - energia
   - öljy
   - sota
+related_articles:
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-kesken-konflikt
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-tilanne-kehitty
+  - 2026-03-16-britannia-suunnittelee-miinanraivausdroonien-lahettamista-ho
 ---
 
 Israel on hylännyt väitteet, että se vetoaisi Yhdysvaltojen tukeen konfliktissaan Irania vastaan. Tilanne on erittäin jännittynyt, ja Yhdysvaltain hallitus on ilmoittanut tukevansa Israelia tarvittaessa. Tämä kehitys on herättänyt huolta keskeisten öljynviejämaiden vakaudesta. Samalla Australia valmistautuu vastaamaan polttoaineen saatavuusongelmiin, joita konfliktit aiheuttavat. Pääministeri Anthony Albanese on kutsunut koolle kiireellisen kokouksen kansalliselle kabinetille keskustellakseen hinnoista ja saatavuudesta. Australian hallituksen toimenpiteet ovat osa laajempaa pyrkimystä hallita tilannetta, joka on tuottanut huomattavia hintashokkeja ja aiheuttanut huolia maan toimitusväylien turvallisuudesta.

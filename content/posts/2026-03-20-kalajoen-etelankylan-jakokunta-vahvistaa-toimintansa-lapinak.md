@@ -20,6 +20,10 @@ tags:
   - eu
   - luonto
   - liikenne
+related_articles:
+  - 2026-03-19-metsahallitus-sulkee-siikanevan-soidensuojelualueen-retkeily
+  - 2026-03-20-saimaannorppa-kuoli-kuhaverkkoon-taipalsaarella
+  - 2026-03-20-uusi-norppakuolema-taipalsaarella-huolestuttaa-asiantuntijoi
 ---
 
 Kalajoen Etelänkylän jakokunta, joka toimii tärkeänä elinympäristön ja kalastukseen liittyvien asioiden hallinnassa, on ottanut merkittäviä askelia tietosuojan ja tiedon avoimuuden parantamiseksi. Jakokunnan puheenjohtaja Risto Apuli on korostanut organisaation sitoutumista EU:n tietosuoja-asetukseen (GDPR) ja henkilötietolain vaatimuksiin.

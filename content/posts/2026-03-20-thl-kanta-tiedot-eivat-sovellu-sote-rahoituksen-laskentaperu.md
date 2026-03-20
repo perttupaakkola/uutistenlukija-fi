@@ -20,6 +20,10 @@ tags:
   - terveys
   - lääketiede
   - liikenne
+related_articles:
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovi-sote-rahoituksen-perustaksi
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovellu-sosiaali-ja-terveydenhuollon
+  - 2026-03-20-thl-kanta-tiedot-eivat-sovellu-sote-rahoituksen-perustaksi
 ---
 
 Terveyden ja hyvinvoinnin laitos (THL) on julkaissut selvityksen, jossa todetaan, että Kanta-tietojen käyttö sote-rahoituksen laskentaperusteena ei ole suositeltavaa. Selvityksessä korostuu, että Kanta-tiedot eivät ole riittävän kattavia tai tarkkoja, jotta niiden perusteella voitaisiin tehdä luotettavia rahoituspäätöksiä.

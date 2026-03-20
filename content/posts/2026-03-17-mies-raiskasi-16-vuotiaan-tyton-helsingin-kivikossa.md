@@ -21,6 +21,10 @@ tags:
   - luonto
   - sää
   - helsinki
+related_articles:
+  - 2026-03-17-mies-raiskasi-koulumatkalla-olleen-teinityton-helsingin-kivi
+  - 2026-03-15-perussuomalaisten-kansanedustaja-vaatii-kasvojen-peittamiski
+  - 2026-03-18-opetusministeri-kaynnistaa-selvityksen-kotiopetuksesta
 ---
 
 19-vuotias Elias Mahad Aden raiskasi törkeästi 16-vuotiaan tytön Helsingin Kivikossa lokakuussa 2023. Aden lähestyi koulumatkalla ollutta tyttöä bussipysäkillä 5. lokakuuta. Hän aloitti keskustelun, joka kääntyi nopeasti seksuaaliseksi. Aden talutti tytön kädestä pitäen läheiseen metsään.

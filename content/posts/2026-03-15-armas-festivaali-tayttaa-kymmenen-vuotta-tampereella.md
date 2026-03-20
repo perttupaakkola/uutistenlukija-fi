@@ -11,6 +11,10 @@ tags:
   - politiikka
   - musiikki
   - elokuva
+related_articles:
+  - 2026-03-16-oscar-gaala-jarjestetaan-98-kerran-conan-obrien-juontaa-tois
+  - 2026-03-16-humoristinen-draamaelokuva-one-battle-after-another-kahmi-en
+  - 2026-03-19-plagioinnista-kiinni-jaanyt-kirjailija-harri-istvan-maki-ei
 description: "Tampereen Armas-festivaali juhlii tänä vuonna kymmenvuotista taivaltaan 17.–31. maaliskuuta, tarjoten maksuttomia teatteri- ja musiikkiesityksiä."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Armas-festivaali täyttää kymmenen vuotta Tampereella"

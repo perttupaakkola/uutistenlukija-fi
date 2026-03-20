@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - kansainvälinen
   - politiikka
+related_articles:
+  - 2026-03-17-saksalaisturisti-vaatii-yli-20-miljoonan-dollarin-korvauksia
+  - 2026-03-19-australialaiset-nettikasinot-tarjoavat-ilmaiskierroksia
+  - 2026-03-16-pohjois-koreassa-jarjestettiin-vaalit-aanestysaktiivisuus-la
 ---
 
 Saksalainen turisti on nostanut kolme erillistä kannetta New Yorkissa ja vaatii yhteensä yli 20 miljoonan dollarin korvauksia epäonnistuneeksi kokemastaan lomamatkasta. Yksi korvausvaatimuksista koskee liian tulista ruokaa.

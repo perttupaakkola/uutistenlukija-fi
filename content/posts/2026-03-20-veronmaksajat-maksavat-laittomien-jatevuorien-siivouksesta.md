@@ -20,6 +20,10 @@ tags:
   - hallitus
   - verotus
   - luonto
+related_articles:
+  - 2026-03-20-veronmaksajat-maksavat-suurten-laittomien-jatteiden-siivouks
+  - 2026-03-20-veronmaksajat-rahoittavat-laajoja-laittomien-kaatopaikkojen
+  - 2026-03-20-veronmaksajat-rahoittavat-suurten-laittomien-jatetayttojen-s
 ---
 
 Britannian hallitus on ilmoittanut, että veronmaksajat tulevat maksamaan siivouksen kolmelle suurimmalle laittomalle kaatopaikalle Englannissa osana kansallista jätehuoltoalan toimintasuunnitelmaa. Kaatopaikat Wiganissa, Sheffieldissä ja Lancashireissa sisältävät yhteensä 48 000 tonnia jätettä.

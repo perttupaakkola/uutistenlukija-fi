@@ -18,6 +18,10 @@ draft: false
 tags:
   - koulutus
   - tekoäly
+related_articles:
+  - 2026-03-17-nvidia-tahtaa-tekoalyn-seuraavaan-taistelukenttaan-koulutusv
+  - 2026-03-17-elon-muskin-xai-yhtiota-vastaan-kanne-tekoaly-tuotti-lasten
+  - 2026-03-18-kagi-translaten-ai-vastaa-mita-merkittava-margaret-thatcher
 ---
 
 Patreonin toimitusjohtaja Jack Conte on arvostellut tekoälyteknologioiden käyttöä ja ehdottaa, että sisältöä tuottavat luojat tulisi ottaa mukaan koulutusdatan käyttöön. Hän korostaa, että monet sisältöjen lisensoinnit mahdollistavat osallistumisen, eikä tekoälyn hyödyntäminen ole pelkästään hyväksikäyttöä. Luojien oikeuksien turvaaminen on tärkeää, ja korvauskäytännöt tulisi ottaa huomioon.

@@ -20,6 +20,10 @@ tags:
   - hallitus
   - sota
   - israel
+related_articles:
+  - 2026-03-20-australian-paaministeri-sai-huutoja-moskeijassa-ramadan-tapa
+  - 2026-03-20-australian-paaministeri-sai-haukkuja-ramadanish-tilaisuudess
+  - 2026-03-20-australian-paaministeri-kohtasi-vastustusta-moskeijassa
 ---
 
 Australian pääministeri Anthony Albanese sai osakseen huutoja puhuessaan Lakemba-moskeijassa Ramadanin päättymisen kunniaksi. Paikalla olleet seurakunnan jäsenet syyttivät häntä 'genosidin tukijaksi' ja huusivat, että hänet tulee karkottaa.

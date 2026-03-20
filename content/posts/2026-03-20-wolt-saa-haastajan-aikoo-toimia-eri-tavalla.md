@@ -19,6 +19,10 @@ tags:
   - talous
   - yhdysvallat
   - yritys
+related_articles:
+  - 2026-03-20-suomalainen-swype-haastaa-ruokalahettimarkkinoilla-woltin
+  - 2026-03-20-suomalaista-ruokalahettimarkkinoita-ravistelee-uusi-toimija
+  - 2026-03-20-woltin-uusi-haastaja-swype-aloittaa-suomessa
 ---
 
 Suomen ruokalähettimarkkinoille tulee uusi toimija, kun suomalainen tilausalusta Swype ilmoittaa ottavansa paikan Foodoran väistyessä. Foodora ilmoitti helmikuussa lähtevänsä Suomesta, ja tämän jälkeen Swype on saanut runsaasti kuljettajahakemuksia. Uuden toimijan tavoitteena on murtaa pitkään voimassa ollut duopoli ruokalähettipalveluissa.

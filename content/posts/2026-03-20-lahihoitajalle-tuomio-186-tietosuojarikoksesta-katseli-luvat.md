@@ -21,6 +21,10 @@ tags:
   - rikos
   - lääketiede
   - liikenne
+related_articles:
+  - 2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-jyvaskylassa
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-luvaton-paasy
 ---
 
 Keski-Suomen käräjäoikeus on tuominnut lähihoitajan 186 tietosuojarikoksesta, jotka liittyvät potilastietojen luvattomaan katseluun Jyväskylässä. Käsitelty tapaus paljasti huolestuttavan vyyhdin, jossa nuori lähihoitaja oli tarkastellut useiden potilaiden tietoja ilman asianmukaista lupaa. Tuomion mukaan hänelle annettiin neljän kuukauden ehdollinen vankeus ja velvoite maksaa merkittäviä korvauksia.

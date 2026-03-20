@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - hallitus
   - luonto
+related_articles:
+  - 2026-03-20-mp-kysyi-hallitukselta-kalakuolemista-dykeissa
+  - 2026-03-20-mp-kysyi-parlamentissa-kalakuolemista-dyke-vedessa
+  - 2026-03-20-mp-kyseenalaistaa-hallituksen-toimia-kalakuolemista
 ---
 
 Entinen ympäristöministeri Steve Barclay on kysynyt Parlamentissa, miksi kukaan ei ole saattanut oikeuteen, kun noin 900 kalaa kuoli Kings Delph -alueella Cambridgeshiressä syyskuussa 2024. Kalakuolemat johtuivat korkeista ammoniakkipitoisuuksista ja matalasta hapen määrästä vedessä.

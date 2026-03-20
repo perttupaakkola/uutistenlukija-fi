@@ -20,6 +20,10 @@ tags:
   - israel
   - iran
   - murha
+related_articles:
+  - 2026-03-18-israelin-iskut-voivat-jaadyttaa-iran-neuvottelut
+  - 2026-03-18-israelin-ja-iranin-valiset-konfliktit-kiihtyvat-ja-tilanne-h
+  - 2026-03-19-trump-kiisti-tienneensa-israelin-hyokkayksesta-iranin-kaasuk
 ---
 
 Iranin korkeiden johtajien surma sisältää riskin alueen epävakauttamisesta, mutta asiantuntijat eivät usko sen johtavan suureen vallan tyhjenemiseen. Parin päivän aikana Israel on tappanut kolme Iranin johtohenkilöä, mikä on lisännyt jännitteitä alueella. Professori Hannu Juusola ei pidä tapahtumaa strategisesti tarkoittavana valtatyhjiön syntymiseksi, mutta hän huomauttaa, että se voi vaikeuttaa neuvottelujen jatkoa ja lisätä jännitteitä. Tapahtumat voivat häiritä Iranin sisäistä ja ulkoista politiikkaa, mutta vaikutukset ovat toistaiseksi rajallisia.

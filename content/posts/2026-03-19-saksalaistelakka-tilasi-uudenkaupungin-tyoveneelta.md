@@ -13,6 +13,10 @@ tags:
   - talous
   - yritys
   - rahoitus
+related_articles:
+  - 2026-03-19-saksan-merivoimat-tilasi-tyoveneesta-uudestakupungista
+  - 2026-03-20-lieto-sai-takaisin-lakkitehtaan-selkeat-vuodenajat-tukevat-t
+  - 2026-03-20-swype-haastaa-woltin-ja-foodoran-suomen-ruokalahettimarkkino
 description: "Uudenkaupungin telakka saa merkittävän tilauksen Saksan merivoimilta uudenlaisen työveneen rakentamiseksi erityistarpeisiin."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Saksalaistelakka tilasi Uudenkaupungin työveneeltä"

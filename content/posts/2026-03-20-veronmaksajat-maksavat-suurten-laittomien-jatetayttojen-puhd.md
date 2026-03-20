@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - hallitus
   - verotus
+related_articles:
+  - 2026-03-20-veronmaksajat-maksavat-laittomien-jatevuorien-siivouksesta
+  - 2026-03-20-veronmaksajat-maksavat-suurten-laittomien-jatteiden-siivouks
+  - 2026-03-20-veronmaksajat-rahoittavat-suurten-laittomien-jatetayttojen-s
 ---
 
 Britannian hallitus ilmoitti puhdistavansa kolme suurinta laitonta jätetäyttöä veronmaksajien rahoilla osana kansallista jätteenrikollisuustoimenpiteitä. Wiganissa, Sheffieldissä ja Lancashire'ssa sijaitsevat kaatopaikat, joissa on yhteensä noin 48 000 tonnia jätettä, saavat puhdistustukea.

@@ -19,6 +19,10 @@ tags:
   - tiede
   - energia
   - luonto
+related_articles:
+  - 2026-03-15-valkohantapeuran-kanta-kasvanut-suomessa-noin-120-000-yks
+  - 2026-03-20-kelo-hanke-tuo-esiin-kelot-luonnontieteiden-ja-taiteen-avull
+  - 2026-03-20-immuunijarjestelma-on-alykkaampi-kuin-arvaammekaan-metsa-vah
 ---
 
 Yhdysvaltain Department of Energy pyrkii varmistamaan sähkön toimitusvarmuuden, mutta toimenpiteet hiilivoimaloiden pysäyttämisen viivästyttämiseksi ovat vaikeita. Vanhojen teollisuuslaitteiden ylläpito jatkuu, vaikka kriisitilanteet edellyttäisivät varautumista. Julkinen keskustelu keskittyy ympäristövaikutuksiin ja energian saatavuuteen.

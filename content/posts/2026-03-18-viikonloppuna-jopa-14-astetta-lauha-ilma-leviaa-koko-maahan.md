@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - sää
   - lappi
+related_articles:
+  - 2026-03-20-lapissa-mitattiin-yli-metri-lunta-marraskuussa
+  - 2026-03-15-ensi-viikosta-tulossa-poikkeuksellisen-lammin-lampotilat-huh
+  - 2026-03-18-lampoennatys-mahdollinen-loppuviikon-saanvaihteluihin
 ---
 
 Lauha ilma valtaa Suomen. Loppuviikolla lämpötila kipuaa etelässä 14 asteeseen Forecan ennusteen mukaan. Viikonloppu on poikkeuksellisen lauha tammi-helmikuun vaihteessa.

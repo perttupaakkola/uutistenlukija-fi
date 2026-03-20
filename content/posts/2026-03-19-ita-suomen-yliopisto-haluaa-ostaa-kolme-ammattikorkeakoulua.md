@@ -15,6 +15,10 @@ tags:
   - hallitus
   - pörssi
   - oulu
+related_articles:
+  - 2026-03-18-kajaanin-raviradan-toiminta-jatkuu-entisellaan-mutta-pienimu
+  - 2026-03-19-tampereen-yliopisto-erotti-opiskelijan-kolmeksi-kuukaudeksi
+  - 2026-03-15-hallituksen-leikkaukset-uhkaavat-kansanopistojen-toimintaa
 description: "Itä-Suomen yliopisto aloittaa neuvottelut Kajaanin, Karelia- ja Savonia-ammattikorkeakoulujen osakkeiden ostamisesta."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Itä-Suomen yliopisto haluaa ostaa kolme ammattikorkeakoulua"

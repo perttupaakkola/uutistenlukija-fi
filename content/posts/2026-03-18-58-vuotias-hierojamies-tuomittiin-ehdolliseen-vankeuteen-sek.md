@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - oikeus
   - rikos
+related_articles:
+  - 2026-03-20-lahtelainen-mies-tuomittiin-viestintarauhan-rikkomisesta
+  - 2026-03-18-poika-tuomittiin-pahoinpitelysta-kun-juotti-kielloista-huoli
+  - 2026-03-20-lahtelainen-mies-sai-tuomion-viestintarauhan-rikkomisesta
 ---
 
 Itä-Uudenmaan käräjäoikeus tuomitsi 58-vuotiaan hierojamiehen ehdolliseen vankeuteen seksuaalirikoksen tunnustamisen jälkeen. Nainen oli käynyt miehen vastaanotolla useita kertoja ja oli hieronnan aikana alushousuissaan. Tekoihin liittyi seksuaalista hyväilyä, vaikka tapahtuma tapahtui ammatillisessa tilanteessa.

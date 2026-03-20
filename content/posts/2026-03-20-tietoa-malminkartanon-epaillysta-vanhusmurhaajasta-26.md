@@ -21,6 +21,10 @@ tags:
   - yhdysvallat
   - poliisi
   - rikos
+related_articles:
+  - 2026-03-20-tama-tiedetaan-malminkartanon-epaillysta-vanhusmurhaajasta-2
+  - 2026-03-20-pelottava-tieto-malminkartanon-epaillysta-murhasta
+  - 2026-03-20-poliisi-tutkii-malminkartanon-henkirikosta-murhana
 ---
 
 26-vuotias mies epäillään vakavasta rikoksesta Malminkartanon kadulla, jossa hän surmasi vanhuksen. Poliisi on luokitellut tapahtuman murhaksi, ja tutkinta on käynnissä. Epäillyn tekoa kuvaillaan erityisen julmaksi, johon liittyy voimakasta väkivaltaa teräasein.

@@ -19,6 +19,10 @@ tags:
   - tiede
   - työelämä
   - tutkimus
+related_articles:
+  - 2026-03-18-tylsistyminen-tyossa-voi-johtaa-masennukseen-varoittaa-tutki
+  - 2026-03-20-ahdistussanan-kaytto-on-lisaantynyt-tutkija-varoittaa-seurau
+  - 2026-03-18-iso-britannian-hiukkasfysiikan-saavutukset-uhkaavat-joutua-l
 ---
 
 Jie Lin korostaa, että työntekijöiden tylsistyminen voi vaikuttaa heidän hyvinvointiinsa ja mielenterveyteensä. Pitkäaikainen tyytymättömyys voi altistaa ongelmille kuten ahdistukselle ja masennukselle. Nuorten kokemukset voivat heikentää työmotivaatioita ja urakehitystä. Työnantajien tulisi kiinnittää huomiota työolosuhteisiin ja tarjota mielekkäitä tehtäviä.

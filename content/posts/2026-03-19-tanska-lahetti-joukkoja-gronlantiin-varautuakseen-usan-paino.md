@@ -14,6 +14,10 @@ tags:
   - yhdysvallat
   - puolustus
   - sää
+related_articles:
+  - 2026-03-19-tanska-lahetti-joukkoja-gronlantiin-varautuessaan-mahdollise
+  - 2026-03-16-valkoisen-talon-kansliapaallikko-susie-wiles-sairastaa-rinta
+  - 2026-03-16-valtonen-torjuu-ajatuksen-natosta-iranin-operaation-osapuole
 description: "Tanska lähettää sotilasjoukkoja Grönlantiin varautuakseen Yhdysvaltojen mahdolliseen painostukseen Donald Trumpin Grönlannin hankintapuheiden vuoksi."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Tanska lähetti joukkoja Grönlantiin varautuakseen USA:n painostukseen"

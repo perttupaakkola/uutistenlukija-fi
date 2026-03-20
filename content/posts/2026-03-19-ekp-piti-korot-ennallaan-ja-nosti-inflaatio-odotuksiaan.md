@@ -15,6 +15,10 @@ tags:
   - korot
   - sota
   - inflaatio
+related_articles:
+  - 2026-03-19-ekp-piti-korot-ennallaan-laski-talouskasvuennustetta-ja-nost
+  - 2026-03-19-ekp-pitaa-korot-ennallaan-lahi-idan-sodan-keskella
+  - 2026-03-19-ekp-pitaa-korot-ennallaan-lahi-idan-sota-kasvattaa-inflaatio
 description: "Euroopan keskuspankki pitää korot ennallaan, mutta nostaa inflaatio-odotuksiaan ja laskee talouskasvuennustettaan epävarmojen sodan olojen vuoksi."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "EKP piti korot ennallaan ja nosti inflaatio-odotuksiaan"

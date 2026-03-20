@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - sää
   - kansainvälinen
+related_articles:
+  - 2026-03-20-teneriffalla-lunta-ja-pakkasta-loppua-ei-nay
+  - 2026-03-18-hatatila-teneriffalla-sotki-suomalaisen-loman-retket-peruttu
+  - 2026-03-19-suomi-on-maailman-onnellisin-maa
 ---
 
 Therese-myrsky on aiheuttanut suurta kaaosta Kanariansaarilla, erityisesti Teneriffalla, jossa mitattiin torstaina 4,5 pakkasastetta. Tämä teki Teneriffasta koko Espanjan kylmimmän paikan, kuten Canarian Weekly raportoi. Alkuviikosta lumisateet olivat vain mahdollisuus, mutta nyt ne ovat toteutuneet, ja lunta on satanut runsaasti korkeimmilla alueilla, mikä on yllättänyt monet turistit.

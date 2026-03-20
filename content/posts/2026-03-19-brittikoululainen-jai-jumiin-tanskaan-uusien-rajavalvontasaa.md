@@ -14,6 +14,10 @@ tags:
   - koulutus
   - sää
   - lentoliikenne
+related_articles:
+  - 2026-03-19-16-vuotias-brittikoululainen-jai-jumiin-tanskaan-rajavalvonn
+  - 2026-03-16-valkoisen-talon-kansliapaallikko-susie-wiles-sairastaa-rinta
+  - 2026-03-17-sahkotupakka-syttyi-palamaan-matkustamossa-kesken-lennon-aus
 description: "16-vuotias brittiläinen koululainen jää jumiin Tanskaan, koska hänet estetään matkustamasta Lontooseen uusien rajavalvontasääntöjen vuoksi."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Brittikoululainen jäi jumiin Tanskaan uusien rajavalvontasääntöjen takia"

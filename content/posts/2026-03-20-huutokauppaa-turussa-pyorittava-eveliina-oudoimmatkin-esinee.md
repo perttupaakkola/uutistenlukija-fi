@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - yritys
   - taide
+related_articles:
+  - 2026-03-20-eveliina-johtaa-huutokauppaa-jossa-esineet-loytavat-arvonsa
+  - 2026-03-20-huutokauppaa-pyorittava-eveliina-oudoimmatkin-esineet-loytav
+  - 2026-03-20-huutokauppatoimija-eveliina-oudotkin-esineet-loytavat-arvost
 ---
 
 Turussa huutokauppaliiketoimintaa pyörittävä Eveliina kertoo, kuinka erikoiset ja joskus oudotkin esineet löytävät uusia omistajia. "Aina on joku, joka arvostaa sellaista, mitä muut eivät näe. Huutokaupat tarjoavat mahdollisuuden löytää ainutlaatuisia aarteita." Eveliina kertoo huutokauppamaailman viehätyksistä ja siitä, kuinka jokainen päivä tuo mukanaan uusia haasteita ja yllätyksiä.

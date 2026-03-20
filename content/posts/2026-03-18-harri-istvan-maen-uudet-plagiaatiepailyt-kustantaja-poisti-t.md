@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - kirjallisuus
   - liikenne
+related_articles:
+  - 2026-03-19-plagioinnista-kiinni-jaanyt-kirjailija-harri-istvan-maki-ei
+  - 2026-03-18-harri-istvan-maen-teoksia-epaillaan-plagiaateiksi-kustantaja
+  - 2026-03-19-ilmari-kaihkon-kirja-sodasta-voitti-tiedekirjapalkinnon
 ---
 
 Kustantamo Helmivyö on poistanut myynnistä kolme Harri István Mäen romaania ja yhden novellikokoelman. Epäilynä on, että teokset sisältävät toisten tekijöiden tekstiä ilman lupaa.

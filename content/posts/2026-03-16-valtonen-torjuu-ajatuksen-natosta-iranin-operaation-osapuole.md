@@ -15,6 +15,10 @@ tags:
   - puolustus
   - iran
   - yhdysvallat
+related_articles:
+  - 2026-03-18-stubb-bbclle-trumpilla-ei-ole-oikeutta-vedota-naton-apuun
+  - 2026-03-17-stubb-kehottaa-nato-liittolaisia-ottamaan-trumpin-vaatimukse
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
 description: "Ulkoministeri Elina Valtonen torjuu Naton osallistumisen mahdolliseen sotilasoperaatioon Hormuzinsalmella, korostaen puolustusliiton roolia."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Valtonen torjuu ajatuksen Natosta Iranin-operaation osapuolena"

@@ -21,6 +21,10 @@ tags:
   - puolustus
   - liikenne
   - oulu
+related_articles:
+  - 2026-03-20-saksan-108-miljardin-euron-puolustusbudjetti-avaa-markkinoit
+  - 2026-03-20-saksalais-suomalainen-yhteistyo-puolustusteollisuudessa-vahv
+  - 2026-03-20-saksan-108-miljardin-euron-puolustusbudjetti-avaa-mahdollisu
 ---
 
 Saksa ja Suomi aiovat tiivistää yhteistyötä puolustusteollisuuden kentällä, mikä avaa uusia markkinoita suomalaisille yrityksille. Saksalais-suomalaisen kauppakamarin toimitusjohtaja Jan Feller julkisti tiedot Oulussa käydyssä seminaarissa. Saksalla on suurimmat investoinnit Euroopassa oman puolustuskykynsä parantamiseen, ja sen tämänhetkinen puolustusbudjetti on huikeat 108 miljardia euroa.

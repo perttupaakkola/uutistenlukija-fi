@@ -19,6 +19,10 @@ tags:
   - urheilu
   - iran
   - jalkapallo
+related_articles:
+  - 2026-03-16-iranin-naisten-jalkapallojoukkueen-kapteeni-poistui-australi
+  - 2026-03-16-iranin-naisten-jalkapallomaajoukkueen-kapteeni-luopui-turvap
+  - 2026-03-18-iranin-jalkapallonaisia-juhlitaan-kotiinpaluun-jalkeen-teher
 ---
 
 Iranin naisten jalkapallomaajoukkue saapui takaisin Iranin pääkaupunkiin. Joukkue matkasi rajan yli Turkin kautta ja saapui Teheraniin, jossa odotti suuri joukko faneja ja viranomaisia. Matkan aikana he saivat positiivista huomiota.

@@ -13,6 +13,10 @@ tags:
   - kulttuuri
   - rikos
   - liikenne
+related_articles:
+  - 2026-03-19-kevin-spacey-sovitti-seksuaalirikosoikeusjutun-lontoossa
+  - 2026-03-20-kabbalan-ja-yhteyden-tieteen-vaikutus-elamaan
+  - 2026-03-17-unkarilainen-pienbudjettitrilleri-osuu-hermoon-ennen-vaaleja
 description: "Kevin Spacey on tehnyt sovinnon kolmen miehen kanssa, jotka nostivat häntä vastaan seksuaalirikossyytteet, ja oikeudenkäynti keskeytyi Lontoossa."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Kevin Spacey sovitteli seksuaalirikossyytökset Lontoossa"

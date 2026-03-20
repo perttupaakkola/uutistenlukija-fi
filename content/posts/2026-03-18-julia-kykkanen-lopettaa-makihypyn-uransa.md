@@ -19,6 +19,10 @@ tags:
   - urheilu
   - kilpailu
   - liikunta
+related_articles:
+  - 2026-03-18-julia-kykkanen-lopettaa-makihyppaajan-uransa
+  - 2026-03-18-lentopallon-naisten-mestaruusliigan-valierajoukkueet-selvill
+  - 2026-03-20-essi-kivisto-lopetti-vg-62n-paavalmentajan-tehtavat-mutta-ei
 ---
 
 Julia Kykkänen kertoi keskiviikkona päättävänsä uransa Suomen mäkihypyn huipulla. Hän on toiminut uranuurtajana naisten mäkihypyssä maassa ja osallistunut useisiin arvokisoihin.

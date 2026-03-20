@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - puolustus
   - murha
+related_articles:
+  - 2026-03-17-yli-400-kuollut-pakistanin-ilmaiskussa-huumevierotusklinikal
+  - 2026-03-19-tsad-uhkaa-sudania-kostotoimilla-hautajaisiin-kohdistuneen-l
+  - 2026-03-19-tsad-uhkaa-kostaa-sudanille-droonihyokkayksen-jalkeen
 ---
 
 Pakistanin armeija teki ilmaiskun huumevierotusklinikalle Kabulissa Afganistanissa. Iskussa kuoli yli 400 ihmistä. Pakistan ilmoitti maanantaina kohdistaneensa täsmäiskuja Afganistanin maaperällä sijaitsevaan terroristi-infrastruktuuriin.

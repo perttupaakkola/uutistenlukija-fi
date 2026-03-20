@@ -15,6 +15,10 @@ tags:
   - pörssi
   - inflaatio
   - yritys
+related_articles:
+  - 2026-03-19-alandsbankenin-strategi-nostaa-seitseman-suosikkiosaketta
+  - 2026-03-17-yhdysvaltain-arvopaperimarkkinaviranomainen-harkitsee-siirty
+  - 2026-03-19-helsingin-porssi-seurasi-maailman-laskutrendia
 description: "Osakemarkkinoiden heilunta jatkuu, kun asiantuntijat arvioivat geopoliittisten riskien vaikutuksia talouteen ja kasvun ennusteisiin eri sektoreilla."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Markkinaheilunta jatkuu – asiantuntijat arvioivat iskua kasvuodotuksille"

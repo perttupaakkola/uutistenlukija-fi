@@ -21,6 +21,10 @@ tags:
   - öljy
   - lapset
   - liikenne
+related_articles:
+  - 2026-03-20-energiamarkkina-tarvitsee-kiireellisia-toimia-oljyn-hinnan-n
+  - 2026-03-20-iea-suosittelee-hatatoimia-oljyn-hinnan-nousun-vuoksi
+  - 2026-03-20-energiakriisi-vaatii-toimenpiteita-iea-suosittelee-etatyota
 ---
 
 Kansainvälinen energiajärjestö IEA on antanut hallituksille kymmenen suositusta, joiden avulla perheet ja yritykset voivat varautua jatkuvaan häiriöön energiakaupassa. Suositukset ovat erityisen tärkeitä, sillä öljyn hinnat ovat nousseet jyrkästi Lähi-idän konfliktin seurauksena. Järjestö kehotti hallituksia alentamaan moottoriteiden nopeusrajoituksia ja kannusti työntekijöitä kimppakyytien käyttöön tai etätyön tekemiseen.

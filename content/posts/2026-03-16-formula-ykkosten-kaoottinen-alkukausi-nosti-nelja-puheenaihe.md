@@ -14,6 +14,10 @@ tags:
   - energia
   - sää
   - formula
+related_articles:
+  - 2026-03-20-mette-baas-historialliselle-suoritukselle-mm-halleissa-uusi
+  - 2026-03-15-antonelli-voittoon-kiinan-gp-ssa-historian-toiseksi-nuorin
+  - 2026-03-18-golfautojen-kaytto-kiinan-kiertuetaistossa-johtaa-uusiin-kok
 description: "Formula ykkösten kausi 2026 on alkanut kaoottisesti, kun tallit kamppailevat autojensa luotettavuuden kanssa ja keskeytyksiä esiintyy runsaasti."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Formula ykkösten kaoottinen alkukausi nosti neljä puheenaihetta pintaan"

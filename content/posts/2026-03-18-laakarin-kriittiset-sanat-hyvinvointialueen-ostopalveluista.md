@@ -19,6 +19,10 @@ tags:
   - tiede
   - lääketiede
   - terveys
+related_articles:
+  - 2026-03-18-suomalaisopiskelija-havahtui-britannian-aivokalvontulehdusep
+  - 2026-03-18-sairaalalaakari-kutsuttiin-kuulemiseen-julkisesta-kritiikist
+  - 2026-03-18-tylsistyminen-tyossa-voi-johtaa-masennukseen-varoittaa-tutki
 ---
 
 Lääkäri Mikko Aho on kritisoinut hyvinvointialueiden ostopalvelujen toteutusta ja läpinäkyvyyttä. Hän on kutsuttu kuultavaksi ja hänen odotetaan vastaavan kantaansa. Lääkärit neuvottelevat myös oikeudellisilta asiantuntijoilta saadakseen selkoa siitä, mitä he voivat julkisesti sanoa kriittisistä seikoista. Tilanne nostaa esiin keskustelun ammattiliiton ja potilasturvallisuuden merkityksestä sekä lääkärien vapaudesta ilmaista mielipiteitä.

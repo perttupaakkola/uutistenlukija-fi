@@ -15,6 +15,10 @@ tags:
   - verotus
   - yritys
   - lappi
+related_articles:
+  - 2026-03-19-muumit-tulevat-rovaniemelle-tonttijako-herattaa-naraa-yritta
+  - 2026-03-16-rovaniemelle-suunnitellaan-muumimaailmaa-joulupukin-pajakyla
+  - 2026-03-18-kajaanin-raviradan-toiminta-jatkuu-entisellaan-mutta-pienimu
 description: "Rovaniemen kaupunki varasi Muumimaailmalle tontin joulupukin pajakylän läheisyydestä ilman julkista hakua,"
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Rovaniemi varasi Muumimaailman tontin ilman julkista hakua – paikallinen yrittäjä pettyi"

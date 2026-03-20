@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - eu
   - luonto
+related_articles:
+  - 2026-03-19-suomi-voi-saada-sanktioita-susien-karhujen-ja-ilvesten-kiint
+  - 2026-03-19-suomelle-uhkaa-sanktiota-suurpetojen-kiintiometsastyksesta
+  - 2026-03-20-aura-salla-vaatii-unkaria-ulos-eusta-poliittisen-tukahduttam
 description: "EU harkitsee sanktioita Suomelle, joka on myöntänyt metsästyslupia suurpetoille, kuten susille, karhuille ja ilveksille."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "EU harkitsee sanktioita Suomelle suurpetojen metsästyksestä"

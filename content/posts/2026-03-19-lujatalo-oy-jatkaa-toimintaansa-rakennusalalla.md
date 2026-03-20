@@ -13,6 +13,10 @@ tags:
   - talous
   - yritys
   - yhdysvallat
+related_articles:
+  - 2026-03-20-suomalaista-ruokalahettimarkkinoita-ravistelee-uusi-toimija
+  - 2026-03-20-wolt-saa-haastajan-aikoo-toimia-eri-tavalla
+  - 2026-03-20-woltin-uusi-haastaja-swype-aloittaa-toiminnan-suomessa
 description: "Lujatalo Oy jatkaa vahvasti toimintaansa rakennusalalla, keskittyen erilaisiin rakennusprojekteihin ja -palveluihin kotimaan markkinoilla."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Lujatalo Oy jatkaa toimintaansa rakennusalalla"

@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - urheilu
   - politiikka
+related_articles:
+  - 2026-03-18-naisten-korisliigan-puolivalierat-jannittivat
+  - 2026-03-16-suomalaiset-rauhanturvaajat-joutuivat-tulituksen-kohteeksi-l
+  - 2026-03-19-asiantuntija-varoittaa-demokratian-heikkenemisesta-suomessa
 ---
 
 Keskiviikon ottelut päättivät Korisliigan puolivälierät. Parit ratkaisivat paikat seuraavaan vaiheeseen, ja ennakkosuosikkien tiukkoja kamppailuja nähtiin useita.

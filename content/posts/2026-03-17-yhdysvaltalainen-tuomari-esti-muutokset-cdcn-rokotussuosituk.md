@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - rokote
   - terveys
+related_articles:
+  - 2026-03-17-yhdysvaltalainen-tuomari-esti-rfk-jrn-rokotussuositusten-muu
+  - 2026-03-19-tuomari-pakotti-trumpin-hallinnon-palauttamaan-voice-of-amer
+  - 2026-03-18-arhakka-virus-iski-risteilyalukselle-yli-150-sairastui
 ---
 
 Yhdysvaltalainen liittovaltion tuomari on estänyt terveysministeri Robert F. Kennedy Jr:n ajamat muutokset maan tartuntatautiviraston CDC:n rokotussuosituksiin. Päätös on väliaikainen, mutta se pysäyttää toistaiseksi suunnitellut muutokset rokotusohjeistukseen ja asiantuntijaneuvottelukunnan toimintaan.

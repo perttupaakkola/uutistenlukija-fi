@@ -21,6 +21,10 @@ tags:
   - energia
   - israel
   - iran
+related_articles:
+  - 2026-03-19-trump-kiisti-tienneensa-israelin-hyokkayksesta-iranin-kaasuk
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
+  - 2026-03-18-tilanne-lahi-idassa-karjistyy-israelin-hyokkayksen-seuraukse
 ---
 
 Yhdysvaltain entinen presidentti Donald Trump on julkaissut voimakkaasti muotoillun lausunnon Iranin ja Qatarkin jakaman kaasukentän hyökkäysten jälkeen. Trumpin mukaan Yhdysvallat ei ollut tietoinen Israelin suunnitelmista, mikä herättää kysymyksiä Yhdysvaltojen ja Israelin välisestä yhteistyöstä. Israelin iskut Iranin South Pars -kaasukenttää kohtaan ovat johtaneet korkean energian hinnan nousuun, ja Trumpin kommentit viittaavat siihen, että liittolaisten strategiset tavoitteet saattavat olla eristyksissä.

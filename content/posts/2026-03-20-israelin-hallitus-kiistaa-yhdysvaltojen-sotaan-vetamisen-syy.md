@@ -21,6 +21,10 @@ tags:
   - israel
   - sota
   - iran
+related_articles:
+  - 2026-03-20-israelin-hallitus-kiistaa-yhdysvaltojen-sotaan-vetamisen
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-kesken-konflikt
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-tilanne-kehitty
 ---
 
 Israelin hallitus on kiistänyt syytökset siitä, että se vetäisi Yhdysvaltoja mukaan konfliktiin Iraniin. Tällä hetkellä Israelin ja Iranin väliset jännitteet ovat kasvaneet, ja tilanne herättää huolta kansainvälisesti. Samana päivänä Australian pääministeri Anthony Albanese ilmoitti, että maa valitsee "polttoaine-tsaarin" hallitsemaan nyt esiintyviä, ennennäkemättömiä polttoaineongelmia. Albanese kokoontui äkillisesti kansallisen hallituksen virtuaalikokoukseen keskustelemaan hintojen äkillisistä nousuista ja toimitushäiriöistä, joita ovat aiheuttaneet Yhdysvaltojen ja Israelin toimet.

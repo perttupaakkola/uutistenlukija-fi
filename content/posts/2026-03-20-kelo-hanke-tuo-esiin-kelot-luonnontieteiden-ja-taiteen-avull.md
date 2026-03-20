@@ -20,6 +20,10 @@ tags:
   - luonto
   - talous
   - liikenne
+related_articles:
+  - 2026-03-18-energiainstituutio-jatkaa-hiilivoimaloiden-yllapitamista-kri
+  - 2026-03-15-valkohantapeuran-kanta-kasvanut-suomessa-noin-120-000-yks
+  - 2026-03-19-ilmari-kaihkon-sotatutkimus-voitti-vuoden-tiedekirja-palkinn
 ---
 
 Kelo-hanke käynnistää laajan tutkimusprojektin kelojen merkityksen ja dynamiikan ymmärtämiseksi. Hopeanharmaat kelot, joita voi nähdä luonnonmetsissä, ovat olennainen osa luontoa ja ne tarjoavat elinympäristön useille erikoistuneille eliöille. Kelot voivat pysyä pystyssä jopa satoja vuosia kuolemansa jälkeen, mikä tekee niistä tärkeitä myös hiilen kierron ja lajimonimuotoisuuden kannalta. Talousmetsistä kelot ovat hävinneet suurelta osin, mikä nostaa tarvetta tutkia niiden ekologisia vaikutuksia. 

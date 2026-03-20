@@ -19,6 +19,10 @@ tags:
   - tiede
   - avaruus
   - sää
+related_articles:
+  - 2026-03-18-lampoennatys-mahdollinen-loppuviikon-saanvaihteluihin
+  - 2026-03-18-suomalaisopiskelija-havahtui-britannian-aivokalvontulehdusep
+  - 2026-03-18-tylsistyminen-tyossa-voi-johtaa-masennukseen-varoittaa-tutki
 ---
 
 Astronomit ovat tunnistaneet aiemmin tuntemattoman planeettatyypin. Löydettyjen planeettojen olosuhteet ovat niin äärevät, että tutkijat kutsuvat niitä helvetillisiksi.

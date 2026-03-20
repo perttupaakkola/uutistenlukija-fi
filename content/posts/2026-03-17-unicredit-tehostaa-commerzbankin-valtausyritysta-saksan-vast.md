@@ -20,6 +20,10 @@ tags:
   - hallitus
   - yritys
   - pankki
+related_articles:
+  - 2026-03-17-teknologiateollisuuden-kysely-vientiyritysten-nakymat-yllatt
+  - 2026-03-19-saksalaistelakka-tilasi-uudenkaupungin-tyoveneelta
+  - 2026-03-19-turun-keskusta-saa-ensimmaisen-hypermarkettinsa-10-miljoonan
 ---
 
 Italialainen UniCredit aikoo kasvattaa omistusosuuttaan saksalaisessa Commerzbankissa ja käynnistää viralliset neuvottelut yrityskaupasta. Kyseessä on noin 35 miljardin euron pankkikauppa, jota Saksan hallitus vastustaa jyrkästi.

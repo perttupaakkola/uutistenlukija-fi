@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - budjetti
   - urheilu
+related_articles:
+  - 2026-03-17-unkarilainen-pienbudjettitrilleri-osuu-hermoon-ennen-vaaleja
+  - 2026-03-18-entinen-vtv-paajohtaja-palaa-museo-opastajaksi
+  - 2026-03-18-teneriffalla-julistettiin-hatatila-suomalainen-seurasi-tilan
 ---
 
 Vantaalle, Aviapoliksen alueelle, kohoaa uusi ilmailumuseo, joka tulee olemaan keskeinen nähtävyys ja kohtaamispaikka ilmailuharrastajille. Museon suunnittelu etenee nopeasti, ja parhaillaan käynnissä on kilpailutus rakennusurakoitsijasta ja suunnittelijoista. Hankkeen budjetti on 25 miljoonaa euroa, ja sen rahoitus koostuu valtion, Vantaan kaupungin sekä yksityisten tahojen osuuksista.

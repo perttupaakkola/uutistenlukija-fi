@@ -21,6 +21,10 @@ tags:
   - oikeus
   - jalkapallo
   - lapset
+related_articles:
+  - 2026-03-17-bondi-beachin-ampujan-perheenjasenia-uhattu-tapolla-oikeus-k
+  - 2026-03-19-iran-yritti-iskua-lapsiperheeseen-ruotsissa-toimeksianto-val
+  - 2026-03-18-yhdysvalloissa-mies-menehtyi-vaimonsa-cocktailin-vaikutukses
 ---
 
 Lähteiden mukaan Iranin viranomaiset ovat käyttäneet voimakkaita keinoja naisten jalkapallojoukkueen jäseniä kohtaan. Pelaajien perheet ovat raportoineet sosiaalisista paineista ja yhteisön painostuksesta. Kansalaisjärjestöt vaativat parempia ihmisoikeustakuja ja ovat ilmaisseet huolensa naisten harrastustoiminnan vaikeutumisesta poliittisten syiden vuoksi. Tilanne on herättänyt keskustelua maan sisäisestä tilanteesta ja ihmisoikeuskysymyksistä.

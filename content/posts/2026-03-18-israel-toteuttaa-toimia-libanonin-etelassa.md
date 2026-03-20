@@ -20,6 +20,10 @@ tags:
   - hallitus
   - puolustus
   - israel
+related_articles:
+  - 2026-03-16-israel-aloitti-laajat-iskut-iraniin-trump-sanoo-ettei-usa-ol
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-kesken-konflikt
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-tilanne-kehitty
 ---
 
 Israel on ilmoittanut toteuttavansa puolustusoperaatioita pohjoisessa toimivaa Hizbollah-ryhmää vastaan. Libanon ei ole hyväksynyt toimenpiteitä, mutta maan hallitus on ilmaissut kyvyttömyytensä estää tilanteen kärjistymistä. Humanitaariset järjestöt yrittävät auttaa alueella ja valvoa tilanteen kehittymistä. Jännitteet alueella ovat kasvaneet, ja tilanne on edelleen herkkä.

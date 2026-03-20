@@ -13,6 +13,10 @@ tags:
   - talous
   - verotus
   - pörssi
+related_articles:
+  - 2026-03-17-yhdysvaltain-arvopaperimarkkinaviranomainen-harkitsee-siirty
+  - 2026-03-16-nokia-nousi-lahes-nelja-prosenttia-helsingin-porssissa
+  - 2026-03-17-sec-aikoo-luopua-porssiyhtioiden-neljannesvuosiraportoinnist
 description: "Verouudistusesitys ehdottaa osinkoveron alentamista 5–12 prosenttiin, mikä kannustaa sijoittamaan kotimaisiin yrityksiin ja osakemarkkinoille."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Verouudistusesitys: Osinkoveroa ehdotetaan pudotettavaksi 5–12 prosenttiin"

@@ -9,6 +9,10 @@ tags:
   - urheilu
   - helsinki
   - kilpailu
+related_articles:
+  - 2026-03-20-essi-kivisto-lopetti-vg-62n-paavalmentajan-tehtavat-mutta-ei
+  - 2026-03-18-tps-jaa-ulos-pudotuspeleista-11-vuoteen-iso-pettymys-sanoo-t
+  - 2026-03-20-sb-pro-varmisti-paikan-pudotuspeleissa
 description: "Fintastic voittaa kultaa ja Valley Bay Synchro pronssia muodostelmaluistelun junioreiden MM-kisoissa, tuoden Suomeen kaksoisvoiton upealla esityksellä."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Suomelle kaksoisvoitto muodostelmaluistelun junioreiden MM-kisoissa"

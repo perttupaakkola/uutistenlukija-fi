@@ -13,6 +13,10 @@ tags:
   - urheilu
   - rikos
   - jalkapallo
+related_articles:
+  - 2026-03-19-afrikan-jalkapallomestaruuden-riisto-saa-kritiikkia-senegal
+  - 2026-03-19-jalkapallopomo-pitaa-afrikan-mestaruuden-myontamista-marokol
+  - 2026-03-17-iran-pyrkii-siirtamaan-mm-ottelunsa-pois-yhdysvalloista
 description: "Senegal menetti Afrikan mestaruuden, kun jalkapalloliitto myönsi voiton Marokolle protestin vuoksi. Tilanne johtui kiistanalaisesta rangaistuspotkusta."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Senegal menetti Afrikan mestaruuden väliaikaismääräyksellä"

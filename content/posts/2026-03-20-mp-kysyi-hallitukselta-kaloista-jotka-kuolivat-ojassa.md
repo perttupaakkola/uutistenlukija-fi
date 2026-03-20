@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - oikeus
   - luonto
+related_articles:
+  - 2026-03-20-mp-kysyi-hallitukselta-kalakuolemista-dykeissa
+  - 2026-03-20-mp-kysyi-parlamentissa-kalakuolemista-dyke-vedessa
+  - 2026-03-20-kalakuolemat-nostattavat-kysymyksia-britannian-ymparistovira
 ---
 
 Entinen ympäristöministeri Steve Barclay on esittänyt kysymyksen parlamentissa siitä, miksi kenellekään ei ole nostettu syytettä noin 900 kuolleen kalan vuoksi. Kyseiset kalat löydettiin Kings Delph -nimisestä ojan osasta syyskuussa 2024, missä korkeat ammoniakkitasot ja matalat happitasot olivat syynä kuolemaan. Barclay, joka edustaa aluetta, vaati tilannetta selvittämään syitä ja vastuuhenkilöitä pidättämään.

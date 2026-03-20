@@ -19,6 +19,10 @@ tags:
   - tiede
   - sää
   - lappi
+related_articles:
+  - 2026-03-17-tutkijat-loysivat-uuden-planeettatyypin-jota-kuvataan-helvet
+  - 2026-03-18-suomalaisopiskelija-havahtui-britannian-aivokalvontulehdusep
+  - 2026-03-18-tylsistyminen-tyossa-voi-johtaa-masennukseen-varoittaa-tutki
 ---
 
 Loppuviikosta Suomessa odotetaan vaihtelevia sääolosuhteita, ja lämpötilat voivat nousta jopa 14 asteeseen. Forecan sääpalvelu ennustaa, että erityisesti etelässä lämpöä riittää viikonlopun aikana, ja keskilämpötila saattaa nousta normaalitasojen yläpuolelle. Sää jatkuu lämpimänä ja aurinkoisena, ja viikon lopulla voi olla lisää auringonpaistetta. Pohjoisessa, kuten Lapissa, esiintyy ajoittain lumisateita ja sateita, mikä tarkoittaa, että keväisen säätilan muodostuminen tapahtuu vähitellen.

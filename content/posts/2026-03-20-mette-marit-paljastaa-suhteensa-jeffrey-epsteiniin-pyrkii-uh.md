@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - kansainvälinen
   - politiikka
+related_articles:
+  - 2026-03-20-norjan-kruununprinsessa-mette-marit-puhui-epstein-kytkennois
+  - 2026-03-20-norjan-kruununprinsessa-mette-marit-kertoo-nrklle-elamansa-h
+  - 2026-03-16-mette-maritin-pojan-oikeudenkaynti-lahestyy-loppuaan-oslossa
 ---
 
 Norjan kruununprinsessa Mette-Marit on tuonut esiin suhteensa edesmenneeseen Jeffrey Epsteiniin, etsien syyllisyyden sijasta ymmärrystä itseensä manipuloinnin uhriutumisensa kautta. Hän viittaa viimeaikaisiin asiakirjoihin, jotka paljastavat yksityiskohtia hänen ja Epsteinin ystävyydestä, joka on ollut tunnettu vuodesta 2009, jolloin Epstein oli jo tuomittu alaikäisiin kohdistuvista rikoksista.

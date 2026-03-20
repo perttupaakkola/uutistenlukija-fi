@@ -20,6 +20,10 @@ tags:
   - pankki
   - politiikka
   - talous
+related_articles:
+  - 2026-03-18-fed-piti-koron-odotetusti-ennallaan-lahi-idan-tilanteen-vaik
+  - 2026-03-18-yhdysvaltain-keskuspankki-pitaa-ohjauskoron-ennallaan
+  - 2026-03-19-ekp-piti-ohjauskoron-ennallaan-20-prosentissa
 ---
 
 Yhdysvaltain keskuspankki Federal Reserve päätti pitää ohjauskoron ennallaan. Päätös kuvastaa sitä, että talous on vakaalla pohjalla, mutta tulevat riskit ovat edelleen olemassa. Ennusteet koronnostoista tai -alennuksista eivät ole tällä hetkellä ajankohtaisia.

@@ -21,6 +21,10 @@ tags:
   - sota
   - iran
   - luonto
+related_articles:
+  - 2026-03-17-trumpin-asema-heikkenee-iranin-sodan-seurausten-kasautuessa
+  - 2026-03-17-trump-pyytaa-kiinaa-siirtamaan-pekingin-vierailua-kuukaudell
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-huippukokousta-iranin-sodan-v
 ---
 
 Iranin sodasta johtuvat laivaliikenteen häiriöt ovat vähentäneet kaasutoimituksia Intiaan, mikä uhkaa tilannetta, jossa maa siirtyy takaisin saastuttavampiin polttoaineisiin kuten hiileen ja biomassaan. Asiasta raportoi BBC. Intiassa on havaittu kasvavaa puun ja lehmänlantakakkujen myyntiä, mikä viittaa kuluttajien siirtyvän takaisin vanhempiin, ympäristölle haitallisiin energianlähteisiin.

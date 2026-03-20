@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jalkapallo
   - kilpailu
+related_articles:
+  - 2026-03-17-fabregas-on-nostanut-italian-pikkuseuran-mestarien-liigan-ky
+  - 2026-03-18-barcelonan-murskavoitto-ja-yamaln-historiallinen-saavutus
+  - 2026-03-18-mestarien-liigan-puolivalierat-selvilla-liverpool-bayern-ja
 ---
 
 Espanjalainen Cesc Fábregas on nostanut valmentajana italialaisen pikkuseura Como 1907:n Mestarien liigan kynnykselle.

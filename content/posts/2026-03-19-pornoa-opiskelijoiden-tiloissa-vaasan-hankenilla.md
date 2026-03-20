@@ -20,6 +20,10 @@ tags:
   - koulutus
   - opiskelijat
   - oulu
+related_articles:
+  - 2026-03-19-suomeen-yli-20-000-opiskelijan-ammattikorkeakoulu-xamkin-omi
+  - 2026-03-19-tampereen-yliopisto-erotti-opiskelijan-kolmeksi-kuukaudeksi
+  - 2026-03-18-opiskelijoiden-lahto-britanniasta-lisaantyy
 ---
 
 Vaasassa sijaitsevassa Hankenin opiskelijoiden juhlatilassa on näytetty pornoa jo yli kymmenen vuoden ajan, kertoo HBL. Tilassa, nimeltään Cella Nova, on esitetty pornografista sisältöä miesten vessan pisuaarin yläpuolella sijaitsevalla televisiolla. HBL:n haastatteleman opiskelijan mukaan käytäntö on tuntunut inhottavalta ja oudolta. Vaasan ruotsalaisen kauppakorkeakoulun ylioppilaskunta (SSHV) ei ole antanut kommentteja asiasta, vaikka useat yhteydenottoyritykset ovat jääneet ilman vastausta. Pornon esittäminen opiskelijoiden tiloissa herättää kysymyksiä niin eettisistä kuin käytännöllisistä syistä. Opiskelijat ovat huolissaan ympäristön vaikutuksesta heidän opiskelukulttuuriinsa ja turvallisuuden tunteeseensa.

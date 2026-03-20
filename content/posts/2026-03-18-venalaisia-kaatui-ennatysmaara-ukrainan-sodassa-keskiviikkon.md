@@ -20,6 +20,10 @@ tags:
   - ukraina
   - venäjä
   - sota
+related_articles:
+  - 2026-03-16-moskovaan-kohdistui-massiivinen-lennokki-isku
+  - 2026-03-18-ukrainan-tilanne-lisaa-huolta-euroopassa
+  - 2026-03-19-huuhkajien-ottelu-valko-venajaa-vastaan-siirtyy-pois-suomest
 ---
 
 Ukrainan puolustusministeriö ilmoitti, että keskiviikkona 18. maaliskuuta 2026 Venäjän joukot kärsivät vuoden suurimman taistelutappion. Päivän aikana Venäjän armeija menetti yhteensä 1710 sotilasta, mikä on huomattavasti enemmän kuin muina päivinä tänä vuonna. Tappioiden taustalla oli Zaporižžjan alueen epäonnistunut hyökkäys, jonka seurauksena tilanne kiristyi.

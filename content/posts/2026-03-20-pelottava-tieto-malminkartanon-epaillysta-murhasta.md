@@ -21,6 +21,10 @@ tags:
   - poliisi
   - rikos
   - liikenne
+related_articles:
+  - 2026-03-20-tama-tiedetaan-malminkartanon-epaillysta-vanhusmurhaajasta-2
+  - 2026-03-20-tietoa-malminkartanon-epaillysta-vanhusmurhaajasta-26
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanon-murhassa-poliisi-tu
 ---
 
 Malminkartanossa tapahtunut henkirikos keskiviikkoiltana on herättänyt pelkoa alueen asukkaissa. Poliisi tutkii tapausta murhana, epäiltynä on 26-vuotias mies, joka ei tuntenut noin 80-vuotiasta uhriaan ennestään. Tapauksen raasta luonteesta johtuen tutkijat ovat nostaneet rikoksen nimikkeen koventunutta, ja tutkinnanjohtaja, rikoskomisario Jari Korkalainen, kuvailee tekoa erityisen julmaksi.

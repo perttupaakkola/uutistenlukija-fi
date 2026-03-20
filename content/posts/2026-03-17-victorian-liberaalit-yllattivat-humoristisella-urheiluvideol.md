@@ -20,6 +20,10 @@ tags:
   - politiikka
   - jääkiekko
   - urheilu
+related_articles:
+  - 2026-03-17-australialaissenaattori-jatti-jalleen-ilmoittamatta-kaivosmi
+  - 2026-03-15-harvinainen-mielenosoitus-kuubassa-ihmiset-vaativat-sahk
+  - 2026-03-17-australia-kamppailee-polttoainekriisin-kanssa-kansalaisia-ke
 ---
 
 Australian Victorian osavaltion liberaalipuolue julkaisi sosiaalisen median videon, jossa puolueen johtohahmot kokeilevat eri urheilulajeja vaihtelevalla menestyksellä. Video on kerännyt laajaa huomiota.

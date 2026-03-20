@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - yhdysvallat
   - liikenne
+related_articles:
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
+  - 2026-03-17-stubb-kehottaa-ottamaan-trumpin-uhkaukset-vakavasti
+  - 2026-03-19-entinen-terrorisminvastaisen-toiminnan-johtaja-fbin-tutkinna
 description: "Liittovaltion tuomari määrää Trumpin hallinnon palauttamaan yli tuhat Voice of America -toimittajaa töihin ensi maanantaina, kumoten aiemman asetuksen."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Tuomari pakotti Trumpin hallinnon palauttamaan Voice of American toiminnan"

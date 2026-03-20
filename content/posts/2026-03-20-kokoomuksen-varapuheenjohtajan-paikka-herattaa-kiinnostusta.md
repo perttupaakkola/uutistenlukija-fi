@@ -20,6 +20,10 @@ tags:
   - eduskunta
   - politiikka
   - kokoomus
+related_articles:
+  - 2026-03-20-kokoomuksen-varapuheenjohtajakisa-herattaa-kiinnostusta-ikon
+  - 2026-03-20-ikonen-luopuu-varapuheenjohtajan-paikasta-kokoomuksessa
+  - 2026-03-20-kokoomuksessa-varapuheenjohtajakisa-kay-kuumana-ikonen-ilmoi
 ---
 
 Kokoomuksen varapuheenjohtajan paikka käy kuumana, kun Anna-Kaisa Ikonen ilmoitti luopuvansa tehtävästään kuuden vuoden jälkeen. Ikonen jakoi uutisen sosiaalisessa mediassa, mikä on herättänyt keskustelua sekä puolueen sisällä että sen kannattajien keskuudessa. Ikosen luopumisen myötä monet puolueen kansanedustajat ovat jo ilmoittaneet mielenkiinnosta hakea varapuheenjohtajan paikkaa.

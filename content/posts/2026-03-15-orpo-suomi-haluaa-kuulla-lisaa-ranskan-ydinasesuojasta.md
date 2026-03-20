@@ -9,6 +9,10 @@ tags:
   - kotimaa
   - hallitus
   - sää
+related_articles:
+  - 2026-03-15-orpo-oslon-kokouksessa-pohjoismaat-ja-kanada-keskustelivat-u
+  - 2026-03-19-paaministeri-petteri-orpo-ilmoitti-etta-hallituksen-sisainen
+  - 2026-03-19-suomi-voi-saada-sanktioita-susien-karhujen-ja-ilvesten-kiint
 description: "Pääministeri Petteri Orpo ilmoittaa Suomessa kiinnostuksesta Ranskan ydinasepelotteen yksityiskohtiin Euroopan turvallisuuden parantamiseksi."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Orpo: Suomi haluaa kuulla lisää Ranskan ydinasesuojasta"

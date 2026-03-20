@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - talous
   - työttömyys
+related_articles:
+  - 2026-03-20-humppilan-talous-karsii-tyottomyyssakkojen-seurauksista
+  - 2026-03-20-humppilan-talous-karsii-tyottomyyssakkojen-vuoksi
+  - 2026-03-20-humppilan-talous-kriisiytyy-tyottomyyssakkojen-myota-helsing
 ---
 
 Humppilan kunnan talous on ajautunut kriisiin työttömyyssakkojen kasvun vuoksi. Kunnan koko maksama osuus työttömien työttömyysturvasta on yli kaksinkertaistunut, yltäen 300 000 euroon. Kunnanjohtaja Minna Ylikäntä varoittaa, että tämä kehitys vie pienet kunnat yhä vaikeampaan taloustilanteeseen.

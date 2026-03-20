@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - sää
   - kansainvälinen
+related_articles:
+  - 2026-03-20-teneriffalla-lunta-ja-pakkasta-loppua-ei-nay
+  - 2026-03-20-teneriffalla-lunta-tupaan-pahimmat-ennusteet-kavivat-toteen
+  - 2026-03-19-kuningas-avasi-maailman-pisimman-rannikkopatkan-englannissa
 ---
 
 Filosofi Frank Martela on tuonut esiin, että Suomen menestys onnellisuusmittauksissa johtuu vahvasta demokratiasta ja kansalaisten luottamuksesta hallintoon. Martela kirjoittaa Substack-uutiskirjeessään, että Pohjoismaat, mukaan lukien Suomi, ovat esimerkkejä yhteiskunnista, jotka palvelevat kaikkia kansalaisia, eivät vain kapeaa eliittiä. Tämä on keskeinen syy siihen, miksi Suomi on jälleen nimetty maailman onnellisimmaksi maaksi.

@@ -20,6 +20,10 @@ tags:
   - yhdysvallat
   - väestö
   - liikenne
+related_articles:
+  - 2026-03-18-yksi-kuva-kertoo-paljon-usan-taloudesta-rikkaat-rikastuvat-k
+  - 2026-03-18-fed-piti-koron-odotetusti-ennallaan-lahi-idan-tilanteen-vaik
+  - 2026-03-19-euroopan-keskuspankki-piti-korot-ennallaan
 ---
 
 Yhdysvaltojen talouskehitys on akuutisti polarisoitunut. Kuluttajien menoeristä suurin osa kulutetaan parhaiten tienaavien kymmenen prosentin toimesta, selviää Financial Timesin julkaisemasta kaaviosta. Samanaikaisesti suuri osa väestöstä käyttää yhä vähemmän rahaa, mikä vaikeuttaa talouden tasapainoista kasvua.

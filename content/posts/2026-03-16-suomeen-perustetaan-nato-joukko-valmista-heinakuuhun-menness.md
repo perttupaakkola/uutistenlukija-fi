@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - nato
   - lappi
+related_articles:
+  - 2026-03-20-cold-response-harjoitus-toi-kapteeni-maggie-carpenterin-suom
+  - 2026-03-15-nato-harjoittelee-haavoittuneiden-evakuointia-suomesta-norja
+  - 2026-03-17-stubb-kehottaa-ottamaan-trumpin-nato-puheet-vakavasti
 description: "Suomeen perustetaan Nato-joukko, joka valmistuu heinäkuuhun mennessä. Harjoitukseen osallistuu yli 30 000 sotilasta 14 eri maasta."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Suomeen perustetaan Nato-joukko – valmista heinäkuuhun mennessä"

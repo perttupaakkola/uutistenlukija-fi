@@ -21,6 +21,10 @@ tags:
   - energia
   - yritys
   - urheilu
+related_articles:
+  - 2026-03-17-australian-keskuspankki-koolla-korkopaatoksesta-polttoaineyh
+  - 2026-03-17-lahi-idan-jannitteet-kiristyivat-yon-aikana-iskuja-oljykohte
+  - 2026-03-17-sahkotupakka-syttyi-palamaan-matkustamossa-kesken-lennon-aus
 ---
 
 Australian keskuspankki RBA kokoontui tiistaina päättämään maan ohjauskorosta samaan aikaan, kun polttoaineiden hinnat puhuttavat koko maassa. Energiaministeri varoitti, että lisäpolttoaineen toimittaminen syrjäseuduille vie aikaa.

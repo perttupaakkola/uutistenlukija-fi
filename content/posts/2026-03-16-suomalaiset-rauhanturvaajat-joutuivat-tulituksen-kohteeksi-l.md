@@ -13,6 +13,10 @@ tags:
   - kotimaa
   - liikenne
   - politiikka
+related_articles:
+  - 2026-03-17-rekka-syttyi-tuleen-valtatie-7lla-porvoossa-kyydissa-muovija
+  - 2026-03-15-ilmanlaatu-heikentynyt-suomessa-pienhiukkaset-kulkeutuve
+  - 2026-03-16-rovaniemelle-suunnitellaan-muumimaailmaa-joulupukin-pajakyla
 description: "Suomalaisia rauhanturvaajia ammuttiin Etelä-Libanonissa. Maavoimat vahvistaa tapahtuman, mutta loukkaantuneista ei ole tietoa."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Suomalaiset rauhanturvaajat joutuivat tulituksen kohteeksi Libanonissa"

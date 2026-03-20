@@ -20,6 +20,10 @@ tags:
   - eduskunta
   - kirjallisuus
   - lapset
+related_articles:
+  - 2026-03-18-vahingoittaa-erityisesti-heita-eduskunta-muutti-poissaolojen
+  - 2026-03-19-kiistelty-teknisen-valvonnan-laki-menee-perustuslakivaliokun
+  - 2026-03-18-elakelaisten-rooli-suomalaisessa-yhteiskunnassa-korostuu
 ---
 
 Eduskunnan tasa-arvoneuvosto ehdotti poissaolojen kirjaamiskäytännön muuttamista. Puhemiesneuvosto päätti järjestää vaihtoehdon perhevapaille, mikä helpottaa poissaolojen tilastointia. Tavoitteena on huomioida paremmin pitkäaikaiset perhetilanteet. Muutoksen tarkoituksena on lisätä avoimuutta poissaolojen syistä ja vähentää harhaanjohtavia tulkintoja.

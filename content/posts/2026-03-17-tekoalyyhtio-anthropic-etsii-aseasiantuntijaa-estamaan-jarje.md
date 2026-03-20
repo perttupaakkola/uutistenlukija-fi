@@ -21,6 +21,10 @@ tags:
   - turvallisuus
   - yhdysvallat
   - tekoäly
+related_articles:
+  - 2026-03-17-nvidia-julkaisi-avoimen-tekoalyagenttialustan-yrityksia-vart
+  - 2026-03-15-nokia-ja-telia-testaavat-tekoalypohjaista-verkkoteknolog
+  - 2026-03-16-nvidian-vuosikonferenssi-alkaa-toimitusjohtaja-esittelee-tek
 ---
 
 Tekoälyyhtiö Anthropic hakee palvelukseensa ase- ja turvallisuusasiantuntijaa. Tehtävänä on estää yhtiön tekoälyjärjestelmien käyttö vaarallisiin tarkoituksiin. Anthropic on perustellut rekrytointia halulla torjua järjestelmiensä väärinkäyttöä.

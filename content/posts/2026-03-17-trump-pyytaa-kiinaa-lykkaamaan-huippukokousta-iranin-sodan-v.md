@@ -21,6 +21,10 @@ tags:
   - sota
   - iran
   - yhdysvallat
+related_articles:
+  - 2026-03-17-trump-pyytaa-kiinaa-lykkaamaan-pekingin-vierailua-kuukaudell
+  - 2026-03-17-trump-pyytaa-kiinaa-siirtamaan-pekingin-vierailua-kuukaudell
+  - 2026-03-19-trump-kiisti-tienneensa-israelin-hyokkayksesta-iranin-kaasuk
 ---
 
 Yhdysvaltain presidentti Donald Trump kertoi maanantaina pyytäneensä Kiinaa siirtämään suunniteltua Pekingin-vierailuaan myöhemmäksi Iranin sodan takia. Trump esiintyi yhdessä varapresidentti JD Vancen kanssa ensimmäistä kertaa kahteen viikkoon.

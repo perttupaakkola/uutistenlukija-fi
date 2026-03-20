@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - urheilu
   - viihde
+related_articles:
+  - 2026-03-18-nokian-krp-varmisti-toiseksi-sijoituksensa-runkosarjassa
+  - 2026-03-18-australia-news-live-cyclone-narelle-kehittyy-myrskyksi-queen
+  - 2026-03-18-korisliigan-puolivalierat-ratkesivat-vastakkainasettelut-tiu
 ---
 
 Ringeten SM-sarjan puolivälierissä nähtiin tiukkoja otteluita, jotka ratkesivat jatkoajalla. Muutamat kärkiammatit ovat edenneet finaaleihin, joissa odotetaan tasokasta kilpailua.

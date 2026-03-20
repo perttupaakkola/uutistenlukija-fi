@@ -19,6 +19,10 @@ tags:
   - urheilu
   - jääkiekko
   - kilpailu
+related_articles:
+  - 2026-03-17-sm-liigan-runkosarja-paattyy-suurin-pettymys-loytyy-pohjoise
+  - 2026-03-18-barcelonan-murskavoitto-ja-yamaln-historiallinen-saavutus
+  - 2026-03-19-kiekkoveteraani-risto-dufva-valmentaa-joensuun-kiekko-poikia
 ---
 
 Dallas Starsin 15 ottelun pisteputki päättyi tappioon Utah Mammothia vastaan. Suomalaispelaaja Miro Heiskanen joutui ottelussa ikävään valokeilaan.

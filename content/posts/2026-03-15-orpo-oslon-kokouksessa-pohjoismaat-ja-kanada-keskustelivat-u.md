@@ -11,6 +11,10 @@ tags:
   - ukraina
   - puolustus
   - turvallisuus
+related_articles:
+  - 2026-03-15-orpo-suomi-haluaa-kuulla-lisaa-ranskan-ydinasesuojasta
+  - 2026-03-20-aura-salla-vaatii-unkaria-ulos-eusta-poliittisen-tukahduttam
+  - 2026-03-19-paaministeri-petteri-orpo-ilmoitti-etta-hallituksen-sisainen
 description: "Pääministeri Petteri Orpo osallistuu Oslossa Pohjoismaiden ja Kanadan pääministerien kokoukseen, jossa keskustellaan Ukrainan tuesta ja Euroopan…"
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Orpo Oslon kokouksessa: Pohjoismaat ja Kanada keskustelivat Ukrainan tuesta ja ydinaseista"

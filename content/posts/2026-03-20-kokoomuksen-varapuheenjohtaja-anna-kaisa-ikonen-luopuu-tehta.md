@@ -20,6 +20,10 @@ tags:
   - kokoomus
   - luonto
   - urheilu
+related_articles:
+  - 2026-03-20-kokoomuksen-varapuheenjohtajakisa-kaynnistynyt-ikonen-luopuu
+  - 2026-03-20-ikonen-luopuu-varapuheenjohtajan-paikasta-kokoomuksessa
+  - 2026-03-20-kokoomuksen-varapuheenjohtajan-pesti-kiinnostaa-useita-ikone
 ---
 
 Kokoomuksen varapuheenjohtajan paikkojen kilpailu on kiihtynyt, kun Anna-Kaisa Ikonen ilmoitti luopuvansa tehtävästään. Ikonen on toiminut varapuheenjohtajana kuusi vuotta ja hänen päätöksensä avaa oven uusille ehdokkaille. 

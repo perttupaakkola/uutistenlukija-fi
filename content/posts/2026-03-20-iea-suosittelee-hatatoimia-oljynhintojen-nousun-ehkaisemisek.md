@@ -21,6 +21,10 @@ tags:
   - inflaatio
   - öljy
   - sää
+related_articles:
+  - 2026-03-20-iea-suosittelee-hatatoimia-oljyn-hinnan-nousun-vuoksi
+  - 2026-03-20-energiakriisi-vaatii-toimenpiteita-iea-suosittelee-etatyota
+  - 2026-03-20-energiamarkkina-tarvitsee-kiireellisia-toimia-oljyn-hinnan-n
 ---
 
 Kansainvälinen energiavirasto (IEA) on julkaissut kymmenen suositusta, jotka tähtäävät öljyn kysynnän rajoittamiseen kiihtyvän hintojen nousun vuoksi. Suositukset sisältävät muun muassa moottoriteiden nopeusrajoitusten alentamisen, etätyön edistämisen ja joukkoliikenteen käytön lisäämisen. Konflikti lähi-idässä on aiheuttanut merkittäviä häiriöitä öljyn toimituksissa, ja IEA varoittaa, että tilanne voi kestää pitkään. Suositusten taustalla on huoli öljyn riittävyydestä ja keinoista sopeuttaa käytössä olevia resursseja. IEA:n mukaan jäsenvaltioiden on varauduttava öljyn kysynnän rajoittamiseen kriisitilanteissa tehokkuuden säilyttämiseksi.

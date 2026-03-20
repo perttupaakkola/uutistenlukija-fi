@@ -13,6 +13,10 @@ tags:
   - ulkomaat
   - eu
   - hallitus
+related_articles:
+  - 2026-03-19-kyproksen-presidentti-vaatii-keskustelua-britannian-sotilast
+  - 2026-03-15-britannia-lahi-idan-tilanteen-rauhoittaminen-on-valttamatont
+  - 2026-03-20-israel-kiistaa-vetavansa-yhdysvaltoja-sotaan-tilanne-kehitty
 description: "Kyproksen presidentti Nikos Christodoulides vaatii keskustelua Britannian sotilastukikohtien tulevaisuudesta EU-huippukokouksessa Brysselissä."
 image: "https://images.unsplash.com/photo-1771797629089-7691ddf45680?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Kyproksen presidentti vaatii keskustelua Britannian tukikohdista"

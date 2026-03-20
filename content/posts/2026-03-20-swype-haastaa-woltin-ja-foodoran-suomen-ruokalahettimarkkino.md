@@ -19,6 +19,10 @@ tags:
   - talous
   - yritys
   - rahoitus
+related_articles:
+  - 2026-03-20-suomalainen-swype-haastaa-ruokalahettimarkkinoilla-woltin
+  - 2026-03-20-woltin-uusi-haastaja-swype-aloittaa-suomessa
+  - 2026-03-20-woltin-uusi-haastaja-swype-aloittaa-toiminnan-suomessa
 ---
 
 Suomessa ruokalähettimarkkinat saavat uuden toimijan, kun suomalainen Swype aikoo täyttää Foodoran jättämät saappaat. Foodoran ilmoitus poistumisestaan helmikuussa avasi mahdollisuuksia, ja Swype on saanut runsaasti kuljettajahakemuksia. Tällä hetkellä Swype toimii koko Suomen alueella, ja sen tarjontaan kuuluu noin sata ravintolaa, mutta se aikoo laajentaa toimintaansa huomattavasti.

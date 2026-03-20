@@ -15,6 +15,10 @@ tags:
   - oikeus
   - hallitus
   - leikkaukset
+related_articles:
+  - 2026-03-18-58-vuotias-hierojamies-tuomittiin-ehdolliseen-vankeuteen-sek
+  - 2026-03-18-poika-tuomittiin-pahoinpitelysta-kun-juotti-kielloista-huoli
+  - 2026-03-20-iea-suosittaa-hatatoimia-oljyn-hinnannousun-hillitsemiseksi
 description: "Helsingin käräjäoikeus tuomitsee kaksi Oma Säästöpankin hallituksen jäsentä sakkorangaistuksiin sisäpiiritiedon väärinkäytöstä vuosina 2020 ja 2022."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Oma Säästöpankin hallituksen jäseniä tuomittiin sisäpiiritiedon väärinkäytöstä"

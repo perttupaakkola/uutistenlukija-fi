@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - hallitus
   - luonto
+related_articles:
+  - 2026-03-20-mp-kysyi-hallitukselta-kalakuolemista-dykeissa
+  - 2026-03-20-mp-kysyi-parlamentissa-kalakuolemista-dyke-vedessa
+  - 2026-03-20-mp-kysyy-hallitukselta-kalakuolemista-dyke-alueella
 ---
 
 Steve Barclay, entinen ympäristöministeri, on kysynyt parlamentissa, miksi selvityksiä ei ole vielä käynnistetty vastuuttomista tahoista, kun noin 900 kalaa kuoli Kings Delphissa, Cambridgeshiressa. Kalakuolemat johtuvat korkeista ammoniakkitasoista ja matalista happitasoista, ja tilanne on herättänyt asukkaissa huolta ja närkästystä. Vedenlaadun heikkeneminen on ollut suuri ongelma, ja Barclay vaatii hallitusta tekemään enemmän vastuullisten tahojen löytämiseksi.

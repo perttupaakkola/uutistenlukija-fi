@@ -19,6 +19,10 @@ tags:
   - urheilu
   - viihde
   - kilpailu
+related_articles:
+  - 2026-03-20-sb-pro-varmisti-paikan-pudotuspeleissa
+  - 2026-03-18-mestarien-liigan-puolivalierat-selvilla-liverpool-bayern-ja
+  - 2026-03-17-skotlanti-liittyy-ralliautoilun-mm-sarjaan-vuonna-2027
 ---
 
 Nurmijärveläinen SB-Pro on varmistanut paikkansa naisten F-liigan pudotuspeleissä. Joukkue saavutti runkosarjassa kolmannen sijan, mutta on jäänyt huomiotta voimakkaan puolustuksensa johdosta. Vaikka mukana on ollut useita tiukkoja otteluja, joukkue on päässyt tavoitteeseensa ja pyrkii nyt mitaleille.

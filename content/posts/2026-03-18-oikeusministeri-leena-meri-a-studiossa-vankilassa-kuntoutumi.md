@@ -21,6 +21,10 @@ tags:
   - oikeus
   - lääketiede
   - sää
+related_articles:
+  - 2026-03-20-jyvaskylan-lahihoitaja-sai-tuomion-massiivisista-tietosuojar
+  - 2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista
+  - 2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-jyvaskylassa
 ---
 
 Oikeusministeri Leena Meri toteaa, että Suomen vankeinhoito pystyy nykyisellään huolehtimaan noin 3 000 vangista. Hän korostaa, että vankeusrangaistus ei ole ainoastaan rangaistusta, vaan myös mahdollisuus kuntoutua yhteiskuntaan. Tavoitteena on kehittää vanki-integraatiota ja tarjota parempia resursseja sosiaalisen pääsyn lisäämiseksi.

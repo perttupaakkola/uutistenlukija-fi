@@ -19,6 +19,10 @@ tags:
   - kotimaa
   - lapset
   - politiikka
+related_articles:
+  - 2026-03-18-lidlin-kuitti-paljasti-yllatyksen-harvemmin-tuotteita-osteta
+  - 2026-03-16-sahkoauto-tormasi-liikehuoneiston-ikkunaan-turun-keskustassa
+  - 2026-03-17-rekka-syttyi-tuleen-valtatie-7lla-porvoossa
 ---
 
 Vantaan Pähkinärinteen tulipalossa menehtynyt viisihenkinen perhe haudattiin keskiviikkona Ruskeasannan hautausmaalla. Hautausseremonia alkoi kello 13.30. Paikalle saapui satoja surevia.

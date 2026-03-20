@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - eduskunta
   - luonto
+related_articles:
+  - 2026-03-20-kalakuolemat-nostattavat-kysymyksia-britannian-ymparistovira
+  - 2026-03-20-mp-kysyi-parlamentissa-kalakuolemista-dyke-vedessa
+  - 2026-03-20-mp-kyseenalaistaa-hallituksen-toimia-kalakuolemista
 ---
 
 Entinen ympäristöministeri Steve Barclay kysyi parlamentissa, miksi noin 900 kuollutta kalaa aiheuttaneesta ympäristökatastrofista ei ole nostettu syytteitä. Kalat löytyivät Kings Delphista, Cambridgeshiressa, missä ammoniakin korkeat tasot ja hapen alhaiset tasot johtivat kalakuolemiin syyskuussa 2024.

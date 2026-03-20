@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - taide
   - viihde
+related_articles:
+  - 2026-03-20-eveliina-johtaa-huutokauppaa-jossa-esineet-loytavat-arvonsa
+  - 2026-03-20-huutokauppatoimija-eveliina-oudotkin-esineet-loytavat-arvost
+  - 2026-03-20-huutokauppaa-turussa-pyorittava-eveliina-oudoimmatkin-esinee
 ---
 
 Eveliina, turkulainen huutokauppayrittäjä, kertoo työskentelevänsä eri esineiden parissa, joilla on vaihteleva arvo. Hän on kokenut, että huutokaupat voivat yllättää sekä myyjät että ostajat. 'On uskomatonta, kuinka oudoimmatkin esineet voivat löytää kokoontuneen yleisön, joka arvostaa niiden historiaa tai erityislaatuisuutta', Eveliina toteaa.

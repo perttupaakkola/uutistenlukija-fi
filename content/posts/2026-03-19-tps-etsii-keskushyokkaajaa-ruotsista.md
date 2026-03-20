@@ -13,6 +13,10 @@ tags:
   - urheilu
   - liikenne
   - kilpailu
+related_articles:
+  - 2026-03-17-fabregas-on-nostanut-italian-pikkuseuran-mestarien-liigan-ky
+  - 2026-03-20-essi-kivisto-lopetti-vg-62n-paavalmentajan-tehtavat-mutta-ei
+  - 2026-03-20-sb-pro-varmisti-paikkansa-pudotuspeleissa-f-liigassa
 description: "Turun Palloseura etsii keskushyökkääjää Ruotsista, ja neuvottelut pelaajan kanssa ovat edistyneet. Seura pyrkii vahvistamaan hyökkäyspeliään ennen tulevaa…"
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "TPS etsii keskushyökkääjää Ruotsista"

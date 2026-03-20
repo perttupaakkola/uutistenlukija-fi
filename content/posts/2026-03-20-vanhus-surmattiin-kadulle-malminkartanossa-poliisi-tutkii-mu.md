@@ -21,6 +21,10 @@ tags:
   - poliisi
   - yhdysvallat
   - rikos
+related_articles:
+  - 2026-03-20-poliisi-tutkii-malminkartanon-henkirikosta-murhana
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanon-alueella-poliisi-tu
+  - 2026-03-20-vanhus-surmattiin-kadulle-malminkartanon-murhassa-poliisi-tu
 ---
 
 Malminkartanon kadulla tapahtui keskiviikkoiltana henkirikos, jota poliisi tutkii murhana. Epäiltynä on 26-vuotias mies, jolla on runsaasti aiempaa rikostaustaa, mukaan lukien väkivalta- ja huumausainerikoksia. Rikoksen tekemiseen käytetty tekotapa on ollut erityisen raaka.

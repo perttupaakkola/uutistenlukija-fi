@@ -20,6 +20,10 @@ tags:
   - energia
   - öljy
   - yhdysvallat
+related_articles:
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-hormuzinsalmen-tu
+  - 2026-03-19-trump-kiisti-tienneensa-israelin-hyokkayksesta-iranin-kaasuk
+  - 2026-03-17-euroopan-maat-torjuvat-trumpin-vaatimuksen-avata-hormuzinsal
 ---
 
 Yhdysvaltain presidentti Donald Trump arvosteli eurooppalaisia liittolaisiaan näiden kieltäydyttyä avustamasta Hormuzinsalmen avaamisessa. Salmi on yksi maailman tärkeimmistä öljynkuljetusreiteistä, ja sen sulkeutuminen on nostanut jännitteitä alueella.

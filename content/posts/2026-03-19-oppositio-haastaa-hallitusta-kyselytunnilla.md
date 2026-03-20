@@ -15,6 +15,10 @@ tags:
   - eduskunta
   - politiikka
   - turvallisuus
+related_articles:
+  - 2026-03-19-oppositio-haastaa-hallitusta-kyselytunnilla-ulko-ja-turvalli
+  - 2026-03-18-paakirjoitus-13-kuukautta-aikaa-hallitus-siirtyy-vaalitunnel
+  - 2026-03-20-kokoomuksen-varapuheenjohtajan-paikka-herattaa-kiinnostusta
 description: "Oppositio kohdistaa kritiikkinsä hallitukseen eduskunnan kyselytunnilla, jossa käsitellään ajankohtaisia ulko- ja turvallisuuspoliittisia kysymyksiä."
 image: "https://images.unsplash.com/photo-1675619560942-613bef4a982d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Oppositio haastaa hallitusta kyselytunnilla"

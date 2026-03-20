@@ -19,6 +19,10 @@ tags:
   - kulttuuri
   - liikenne
   - taide
+related_articles:
+  - 2026-03-18-harri-istvan-maen-teoksia-epaillaan-plagiaateiksi-kustantaja
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-eivat-jatku-kesalla-lavan-rak
+  - 2026-03-19-puotilan-kartanon-ilmaiskeikat-jaavat-tauolle
 ---
 
 Tekniikan museon verkkosivusto hyödyntää evästeitä tarjotakseen kävijöille hyvän käyttökokemuksen. Evästeiden avulla sivusto tunnistaa palaavat käyttäjät ja tallentaa heidän kielitoiveensa. Välttämättömät evästeet varmistavat, että nämä toiminnot ovat käytössä.

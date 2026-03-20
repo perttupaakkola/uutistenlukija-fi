@@ -20,6 +20,10 @@ tags:
   - oikeus
   - rikos
   - liikenne
+related_articles:
+  - 2026-03-20-lahtelainen-mies-tuomittiin-viestintarauhan-rikkomisesta
+  - 2026-03-20-lahtelaiselle-miehelle-tuomio-viestintarauhan-rikkomisesta
+  - 2026-03-20-nainen-pyysi-etta-oiset-viestit-loppuisivat-mutta-mies-vain
 ---
 
 Päijät-Hämeen käräjäoikeus on tuominnut lahtelaisen 44-vuotiaan miehen viestintärauhan rikkomisesta 30 päiväsakkoon, mikä tarkoittaa yhteensä 1 500 euron maksamista. Lisäksi tuomio sisältää korvauksia viestien vastaanottajalle aiheutuneista kärsimyksistä.

@@ -19,6 +19,10 @@ tags:
   - ulkomaat
   - kulttuuri
   - kansainvälinen
+related_articles:
+  - 2026-03-19-kuningas-charles-avasi-maailman-pisimman-rannikkoreitin-engl
+  - 2026-03-19-kuningas-avasi-maailman-pisimman-rannikkopatkan-englannissa
+  - 2026-03-19-kuningas-avasi-maailman-pisimman-rannikkopolun-englannissa
 ---
 
 Windsor Castle'n vastaanotossa kuningas Charles arvosti Yhdistyneen kuningaskunnan ja Nigerian yhteistyötä. Hän korosti suhteen merkitystä kaupan, kulttuurin ja diplomatian aloilla. Tapahtumaan osallistui edustajia molemmista maista, mikä vahvisti sitoutumista yhteistyön syventämiseen.
