@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 """
-lighthouse_check.py — Run Lighthouse on uutistenlukija.fi and post scores to Discord #metrics.
+lighthouse_check.py — Lighthouse/PageSpeed audit for uutistenlukija.fi.
+
+Primary:  Google PageSpeed Insights API (free, no key needed)
+Fallback: Lighthouse CLI if `lighthouse` or `npx lighthouse` is available
 
 Usage:
-    python3 lighthouse_check.py                    # runs on homepage + latest article
-    python3 lighthouse_check.py --url <url>        # run on specific URL
-    python3 lighthouse_check.py --dry-run          # print without posting
+    python3 lighthouse_check.py                    # homepage + latest article
+    python3 lighthouse_check.py --url <url>        # specific URL only
+    python3 lighthouse_check.py --dry-run          # print, don't post or save
+    python3 lighthouse_check.py --strategy mobile  # mobile (default) or desktop
 
-Requirements:
-    npm install -g lighthouse  (or: npx lighthouse is used as fallback)
-    DISCORD_WEBHOOK_METRICS env var (webhook URL for #metrics channel)
+Score history: pipeline/logs/lighthouse.json (last 30 runs)
+Posts summary to Discord #metrics. Flags any score drop > 5 points vs previous run.
 
-Score history is appended to pipeline/logs/lighthouse.json
+Discord target: DISCORD_WEBHOOK_METRICS or DISCORD_BOT_TOKEN env var.
 """
 
 import json
@@ -31,27 +34,73 @@ SITE_URL = "https://uutistenlukija.fi"
 CONTENT_DIR = Path(__file__).parent.parent / "content" / "posts"
 LOGS_DIR = Path(__file__).parent / "logs"
 LIGHTHOUSE_LOG = LOGS_DIR / "lighthouse.json"
+
 METRICS_WEBHOOK = os.getenv("DISCORD_WEBHOOK_METRICS", "")
 BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN", "")
 METRICS_CHANNEL_ID = "1482720741790060554"
 
-SCORE_EMOJI = {
-    "good": "🟢",   # >= 90
-    "ok": "🟡",     # >= 50
-    "bad": "🔴",    # < 50
+PSI_API = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
+SCORE_DROP_THRESHOLD = 5  # alert if any category drops more than this many points
+
+CATEGORIES = ["performance", "accessibility", "best-practices", "seo"]
+CATEGORY_LABELS = {
+    "performance": "Perf",
+    "accessibility": "A11y",
+    "best-practices": "BP",
+    "seo": "SEO",
 }
 
 
-def score_emoji(score: float) -> str:
-    if score >= 0.9:
-        return SCORE_EMOJI["good"]
-    if score >= 0.5:
-        return SCORE_EMOJI["ok"]
-    return SCORE_EMOJI["bad"]
+# ── PageSpeed Insights (primary) ──────────────────────────────────────────────
+
+def run_psi(url: str, strategy: str = "mobile") -> dict:
+    """Run PageSpeed Insights API. Returns parsed response dict."""
+    params = urllib.parse.urlencode({
+        "url": url,
+        "strategy": strategy,
+        "category": ["performance", "accessibility", "best-practices", "seo"],
+    }, doseq=True)
+    full_url = f"{PSI_API}?{params}"
+    print(f"  [PSI/{strategy}] {url[:70]} ...", flush=True)
+
+    req = urllib.request.Request(
+        full_url,
+        headers={"User-Agent": "uutistenlukija-lighthouse/1.0"}
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        return json.loads(resp.read())
 
 
-def find_lighthouse() -> str:
-    """Find lighthouse binary (global install or npx)."""
+def extract_psi_scores(data: dict) -> dict:
+    """Extract category scores and key metrics from PSI response."""
+    cats = data.get("lighthouseResult", {}).get("categories", {})
+    audits = data.get("lighthouseResult", {}).get("audits", {})
+
+    def cat_score(key):
+        c = cats.get(key, {})
+        score = c.get("score")
+        return score  # 0.0–1.0 or None
+
+    def audit_display(key):
+        a = audits.get(key, {})
+        return a.get("displayValue", "n/a")
+
+    return {
+        "performance":    cat_score("performance"),
+        "accessibility":  cat_score("accessibility"),
+        "best-practices": cat_score("best-practices"),
+        "seo":            cat_score("seo"),
+        "lcp":  audit_display("largest-contentful-paint"),
+        "cls":  audit_display("cumulative-layout-shift"),
+        "tbt":  audit_display("total-blocking-time"),
+        "fcp":  audit_display("first-contentful-paint"),
+        "si":   audit_display("speed-index"),
+    }
+
+
+# ── Lighthouse CLI (fallback) ─────────────────────────────────────────────────
+
+def find_lighthouse_cli() -> str | None:
     for candidate in ["lighthouse", "npx lighthouse"]:
         try:
             result = subprocess.run(
@@ -62,17 +111,15 @@ def find_lighthouse() -> str:
                 return candidate
         except (FileNotFoundError, subprocess.TimeoutExpired):
             continue
-    raise RuntimeError(
-        "Lighthouse not found. Install with: npm install -g lighthouse"
-    )
+    return None
 
 
-def run_lighthouse(url: str, lighthouse_cmd: str) -> dict:
-    """Run Lighthouse on URL, return parsed JSON report."""
+def run_lighthouse_cli(url: str, cmd: str, strategy: str = "mobile") -> dict:
     with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as f:
         output_path = f.name
 
-    cmd = lighthouse_cmd.split() + [
+    emulation = "--screenEmulation.disabled" if strategy == "desktop" else ""
+    cli_cmd = cmd.split() + [
         url,
         "--output=json",
         f"--output-path={output_path}",
@@ -80,61 +127,79 @@ def run_lighthouse(url: str, lighthouse_cmd: str) -> dict:
         "--only-categories=performance,accessibility,best-practices,seo",
         "--quiet",
     ]
+    if emulation:
+        cli_cmd.append(emulation)
 
-    print(f"  Running: {' '.join(cmd[:3])} {url} ...", flush=True)
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+    subprocess.run(cli_cmd, capture_output=True, text=True, timeout=120)
+    report_path = Path(output_path)
+    if not report_path.exists():
+        raise RuntimeError(f"Lighthouse produced no output for {url}")
 
-    if not Path(output_path).exists():
-        raise RuntimeError(
-            f"Lighthouse produced no output for {url}.\n"
-            f"stderr: {result.stderr[:500]}"
-        )
+    report = json.loads(report_path.read_text())
+    report_path.unlink(missing_ok=True)
 
-    with open(output_path) as f:
-        report = json.load(f)
-
-    Path(output_path).unlink(missing_ok=True)
-    return report
-
-
-def extract_scores(report: dict) -> dict:
-    """Pull category scores + key metrics from Lighthouse report."""
     cats = report.get("categories", {})
     audits = report.get("audits", {})
 
     def cat_score(key):
-        cat = cats.get(key, {})
-        return cat.get("score")  # 0.0–1.0 or None
+        return cats.get(key, {}).get("score")
 
-    def audit_val(key):
-        a = audits.get(key, {})
-        return a.get("displayValue", "n/a")
+    def audit_display(key):
+        return audits.get(key, {}).get("displayValue", "n/a")
 
     return {
-        "performance": cat_score("performance"),
-        "accessibility": cat_score("accessibility"),
-        "best_practices": cat_score("best-practices"),
-        "seo": cat_score("seo"),
-        "lcp": audit_val("largest-contentful-paint"),
-        "cls": audit_val("cumulative-layout-shift"),
-        "tbt": audit_val("total-blocking-time"),
-        "fcp": audit_val("first-contentful-paint"),
+        "performance":    cat_score("performance"),
+        "accessibility":  cat_score("accessibility"),
+        "best-practices": cat_score("best-practices"),
+        "seo":            cat_score("seo"),
+        "lcp":  audit_display("largest-contentful-paint"),
+        "cls":  audit_display("cumulative-layout-shift"),
+        "tbt":  audit_display("total-blocking-time"),
+        "fcp":  audit_display("first-contentful-paint"),
+        "si":   audit_display("speed-index"),
     }
 
 
-def get_latest_article_url() -> str:
-    """Find URL of most recently published article."""
-    posts = sorted(CONTENT_DIR.glob("*.md"), reverse=True)
-    for post in posts[:10]:
-        content = post.read_text()
-        m = re.search(r'^draft:\s*true', content, re.MULTILINE)
-        if m:
-            continue
-        # Build URL from filename: YYYY-MM-DD-slug.md -> /posts/YYYY-MM-DD-slug/
-        slug = post.stem
-        return f"{SITE_URL}/posts/{slug}/"
-    return f"{SITE_URL}/posts/"
+# ── Runner ────────────────────────────────────────────────────────────────────
 
+def run_audit(url: str, strategy: str = "mobile") -> dict:
+    """Run audit using PSI (with retry), falling back to Lighthouse CLI."""
+    psi_error = None
+    for attempt in range(3):
+        try:
+            if attempt > 0:
+                wait = 15 * attempt
+                print(f"  Retrying PSI in {wait}s (attempt {attempt+1}/3)...", flush=True)
+                time.sleep(wait)
+            data = run_psi(url, strategy)
+            scores = extract_psi_scores(data)
+            scores["source"] = "psi"
+            return scores
+        except urllib.error.HTTPError as e:
+            psi_error = e
+            if e.code == 429:
+                print(f"  PSI rate limited (429), will retry...", flush=True)
+                continue
+            print(f"  PSI failed HTTP {e.code}, trying Lighthouse CLI...", flush=True)
+            break
+        except Exception as e:
+            psi_error = e
+            print(f"  PSI failed ({e}), trying Lighthouse CLI...", flush=True)
+            break
+
+    cli = find_lighthouse_cli()
+    if cli:
+        try:
+            scores = run_lighthouse_cli(url, cli, strategy)
+            scores["source"] = "lighthouse-cli"
+            return scores
+        except Exception as cli_err:
+            raise RuntimeError(f"Both PSI and Lighthouse CLI failed. PSI: {psi_error}, CLI: {cli_err}")
+
+    raise RuntimeError(f"PSI failed and no Lighthouse CLI found. PSI error: {psi_error}")
+
+
+# ── History ───────────────────────────────────────────────────────────────────
 
 def load_history() -> list:
     if LIGHTHOUSE_LOG.exists():
@@ -145,73 +210,113 @@ def load_history() -> list:
     return []
 
 
-def save_history(history: list) -> None:
+def save_history(history: list, entry: dict) -> None:
     LOGS_DIR.mkdir(exist_ok=True)
-    # Keep last 100 entries
-    history = history[-100:]
+    history.append(entry)
+    history = history[-30:]  # keep 30 runs
     LIGHTHOUSE_LOG.write_text(json.dumps(history, indent=2))
 
 
-def format_score(score) -> str:
+def find_prev_scores(history: list, key: str) -> dict:
+    """Find the most recent scores for a given URL key."""
+    for run in reversed(history):
+        result = run.get("results", {}).get(key)
+        if result and "scores" in result:
+            return result["scores"]
+    return {}
+
+
+# ── Reporting ─────────────────────────────────────────────────────────────────
+
+def fmt_score(score) -> str:
     if score is None:
         return "n/a"
     return str(int(round(score * 100)))
 
 
-def score_delta(current, previous) -> str:
-    if current is None or previous is None:
-        return ""
-    diff = round((current - previous) * 100)
-    if diff > 0:
-        return f" (+{diff})"
-    if diff < 0:
-        return f" ({diff})"
-    return ""
+def score_emoji(score) -> str:
+    if score is None:
+        return "⚪"
+    if score >= 0.9:
+        return "🟢"
+    if score >= 0.5:
+        return "🟡"
+    return "🔴"
 
 
-def build_discord_message(results: list, previous_run: dict | None) -> str:
+def detect_drops(scores: dict, prev: dict) -> list[str]:
+    """Return list of alert strings for score drops > threshold."""
+    alerts = []
+    for cat in CATEGORIES:
+        cur = scores.get(cat)
+        prv = prev.get(cat)
+        if cur is None or prv is None:
+            continue
+        drop = round((prv - cur) * 100)
+        if drop > SCORE_DROP_THRESHOLD:
+            label = CATEGORY_LABELS.get(cat, cat)
+            alerts.append(f"⚠️ **{label}** dropped {drop} pts ({fmt_score(prv)} → {fmt_score(cur)})")
+    return alerts
+
+
+def format_discord_message(results: list, history: list, strategy: str) -> str:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    lines = [f"## 🔦 Lighthouse — {now}\n"]
+    lines = [f"## 🔦 Lighthouse ({strategy}) — {now}"]
 
-    for entry in results:
-        url = entry["url"]
-        s = entry["scores"]
-        label = "🏠 Etusivu" if url == SITE_URL + "/" or url == SITE_URL else "📄 Artikkeli"
-        key = "home" if "posts" not in url else "article"
-        prev = (previous_run or {}).get(key, {}).get("scores", {})
+    all_alerts = []
 
-        perf = format_score(s["performance"])
-        a11y = format_score(s["accessibility"])
-        bp   = format_score(s["best_practices"])
-        seo  = format_score(s["seo"])
+    for result in results:
+        url = result["url"]
+        key = result["key"]
+        scores = result["scores"]
+        prev = find_prev_scores(history, key)
 
-        pd = score_delta(s["performance"],   prev.get("performance"))
-        ad = score_delta(s["accessibility"], prev.get("accessibility"))
-        bd = score_delta(s["best_practices"],prev.get("best_practices"))
-        sd = score_delta(s["seo"],           prev.get("seo"))
+        # Page label
+        if "posts" not in url:
+            label = "🏠 Etusivu"
+        else:
+            slug = url.rstrip("/").split("/")[-1]
+            label = f"📄 {slug[:40]}"
 
-        ep = score_emoji(s["performance"]   or 0)
-        ea = score_emoji(s["accessibility"] or 0)
-        eb = score_emoji(s["best_practices"]or 0)
-        es = score_emoji(s["seo"]           or 0)
+        lines.append(f"\n**{label}**")
+        lines.append(f"`{url}`")
 
-        lines.append(f"**{label}** `{url}`")
+        score_parts = []
+        for cat in CATEGORIES:
+            cur = scores.get(cat)
+            prv = prev.get(cat)
+            s = fmt_score(cur)
+            em = score_emoji(cur)
+            delta = ""
+            if cur is not None and prv is not None:
+                diff = round((cur - prv) * 100)
+                if diff > 0:
+                    delta = f" **(+{diff})**"
+                elif diff < 0:
+                    delta = f" **({diff})**"
+            lbl = CATEGORY_LABELS[cat]
+            score_parts.append(f"{em} {lbl} **{s}**{delta}")
+
+        lines.append("  ".join(score_parts))
         lines.append(
-            f"{ep} Perf **{perf}**{pd}  "
-            f"{ea} A11y **{a11y}**{ad}  "
-            f"{eb} BP **{bp}**{bd}  "
-            f"{es} SEO **{seo}**{sd}"
+            f"> LCP {scores.get('lcp','n/a')}  ·  "
+            f"CLS {scores.get('cls','n/a')}  ·  "
+            f"TBT {scores.get('tbt','n/a')}  ·  "
+            f"FCP {scores.get('fcp','n/a')}"
         )
-        lines.append(
-            f"> LCP {s['lcp']}  ·  CLS {s['cls']}  ·  TBT {s['tbt']}  ·  FCP {s['fcp']}"
-        )
-        lines.append("")
 
-    return "\n".join(lines).strip()
+        # Drops
+        alerts = detect_drops(scores, prev)
+        all_alerts.extend(alerts)
+
+    if all_alerts:
+        lines.append("\n**🚨 Score drops detected:**")
+        lines.extend(all_alerts)
+
+    return "\n".join(lines)
 
 
 def post_to_discord(message: str) -> bool:
-    """Post to #metrics via webhook, falling back to bot token."""
     if METRICS_WEBHOOK:
         payload = json.dumps({"content": message}).encode()
         req = urllib.request.Request(
@@ -224,14 +329,13 @@ def post_to_discord(message: str) -> bool:
             with urllib.request.urlopen(req, timeout=10) as resp:
                 return resp.status in (200, 204)
         except urllib.error.HTTPError as e:
-            print(f"Webhook POST failed: {e.code} {e.reason}", file=sys.stderr)
+            print(f"Webhook error: {e.code}", file=sys.stderr)
 
     if BOT_TOKEN:
         url = f"https://discord.com/api/v10/channels/{METRICS_CHANNEL_ID}/messages"
         payload = json.dumps({"content": message}).encode()
         req = urllib.request.Request(
-            url,
-            data=payload,
+            url, data=payload,
             headers={
                 "Content-Type": "application/json",
                 "Authorization": f"Bot {BOT_TOKEN}",
@@ -242,74 +346,88 @@ def post_to_discord(message: str) -> bool:
             with urllib.request.urlopen(req, timeout=10) as resp:
                 return resp.status in (200, 201)
         except urllib.error.HTTPError as e:
-            print(f"Bot token POST failed: {e.code} {e.reason}", file=sys.stderr)
+            print(f"Bot token error: {e.code}", file=sys.stderr)
 
     return False
 
 
+def get_latest_article_url() -> str:
+    posts = sorted(CONTENT_DIR.glob("*.md"), reverse=True)
+    for post in posts[:10]:
+        text = post.read_text()
+        if re.search(r"^draft:\s*true", text, re.MULTILINE):
+            continue
+        return f"{SITE_URL}/posts/{post.stem}/"
+    return f"{SITE_URL}/posts/"
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
 def main():
-    dry_run = "--dry-run" in sys.argv
+    args = sys.argv[1:]
+    dry_run = "--dry-run" in args
+    strategy = "mobile"
     specific_url = None
-    if "--url" in sys.argv:
-        idx = sys.argv.index("--url")
-        if idx + 1 < len(sys.argv):
-            specific_url = sys.argv[idx + 1]
 
-    print("🔦 Lighthouse CI check starting...")
-    lighthouse_cmd = find_lighthouse()
-    print(f"  Using: {lighthouse_cmd}")
+    if "--strategy" in args:
+        idx = args.index("--strategy")
+        if idx + 1 < len(args):
+            strategy = args[idx + 1]
 
-    urls_to_check = []
+    if "--url" in args:
+        idx = args.index("--url")
+        if idx + 1 < len(args):
+            specific_url = args[idx + 1]
+
+    print(f"🔦 Lighthouse check (strategy={strategy}, dry_run={dry_run})", flush=True)
+
     if specific_url:
-        urls_to_check = [("custom", specific_url)]
+        targets = [("custom", specific_url)]
     else:
-        article_url = get_latest_article_url()
-        urls_to_check = [
+        targets = [
             ("home", SITE_URL + "/"),
-            ("article", article_url),
+            ("article", get_latest_article_url()),
         ]
 
     history = load_history()
-    previous_run = history[-1] if history else None
-
     run_entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
-        "results": {}
+        "strategy": strategy,
+        "results": {},
     }
-    results_list = []
+    results = []
 
-    for key, url in urls_to_check:
-        print(f"\n→ Checking: {url}")
+    for key, url in targets:
+        print(f"\n→ Auditing: {url}", flush=True)
         try:
-            report = run_lighthouse(url, lighthouse_cmd)
-            scores = extract_scores(report)
+            scores = run_audit(url, strategy)
             run_entry["results"][key] = {"url": url, "scores": scores}
-            results_list.append({"url": url, "scores": scores})
-            print(f"  Performance: {format_score(scores['performance'])}")
-            print(f"  Accessibility: {format_score(scores['accessibility'])}")
-            print(f"  Best Practices: {format_score(scores['best_practices'])}")
-            print(f"  SEO: {format_score(scores['seo'])}")
+            results.append({"key": key, "url": url, "scores": scores})
+            src = scores.pop("source", "psi")
+            print(
+                f"  [{src}] Perf={fmt_score(scores['performance'])} "
+                f"A11y={fmt_score(scores['accessibility'])} "
+                f"BP={fmt_score(scores['best-practices'])} "
+                f"SEO={fmt_score(scores['seo'])}"
+            )
+            scores["source"] = src  # restore
         except Exception as e:
             print(f"  ERROR: {e}", file=sys.stderr)
             run_entry["results"][key] = {"url": url, "error": str(e)}
 
-    if not results_list:
-        print("No results to report.", file=sys.stderr)
+    if not results:
+        print("No results obtained.", file=sys.stderr)
         sys.exit(1)
 
-    message = build_discord_message(results_list, previous_run)
+    message = format_discord_message(results, history, strategy)
     print(f"\n--- Discord message ---\n{message}\n---")
 
     if not dry_run:
-        history.append(run_entry)
-        save_history(history)
+        save_history(history, run_entry)
         ok = post_to_discord(message)
-        if ok:
-            print("✅ Posted to #metrics")
-        else:
-            print("⚠️  Discord post failed (no webhook/token configured?)")
+        print("✅ Posted to #metrics" if ok else "⚠️  Discord post failed (no webhook/token configured)")
     else:
-        print("(dry-run: not posting)")
+        print("(dry-run: not posting or saving)")
 
 
 if __name__ == "__main__":
