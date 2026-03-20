@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Saksan 108 miljardin euron puolustusbudjetti avaa mahdolli
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - budjetti
+  - talous
+  - puolustus
+  - oulu
 ---
 
 Saksa tavoittelee syvempää yhteistyötä Suomen puolustusteollisuuden kanssa, mikä avaa uusia markkinoita suomalaisille yrityksille. Saksalais-suomalaisen kauppakamarin toimitusjohtaja Jan Feller vieraili Oulussa ja korosti Saksan olevan Euroopan suurin kansantalous, joka investoi merkittävästi oman puolustuskykynsä parantamiseen. Tällä hetkellä Saksan puolustusbudjetti on yli 108 miljardia euroa.

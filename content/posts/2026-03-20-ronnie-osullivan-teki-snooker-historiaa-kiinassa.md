@@ -15,6 +15,10 @@ image_alt: "Urheilu: Ronnie O'Sullivan teki snooker-historiaa Kiinassa"
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - snooker
+  - kiina
 ---
 
 Brittiläinen snooker-legend Ronnie O'Sullivan teki perjantaina historiaa saavuttamalla kaikkien aikojen korkeimman breakin World Openissa Kiinan Yushanissa. O'Sullivanin uusi ennätys, 153 pistettä, syntyi ottelussa walesilaista Ryan Dayta vastaan, joka päättyi O'Sullivanin 5–0-voittoon.

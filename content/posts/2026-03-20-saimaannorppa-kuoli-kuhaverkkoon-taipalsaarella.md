@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Saimaannorppa kuoli kuhaverkkoon Taipalsaarella"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - hallitus
+  - yhdysvallat
+  - luonto
+  - liikenne
 ---
 
 Saimaannorppa on kuollut kalaverkkoon Taipalsaarella, Etelä-Karjalassa, ja tämä on jo viides pyydyksen aiheuttama kuolema tänä vuonna. Paikalliselta kalastusrajoitusalueelta löytynyt norppa oli uros, painoa noin 53 kiloa ja pituutta 115 senttimetriä.

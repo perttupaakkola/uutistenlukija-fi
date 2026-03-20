@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Tietoa Malminkartanon epäillystä vanhusmurhaajasta, 26"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - murha
+  - yhdysvallat
+  - poliisi
+  - rikos
 ---
 
 26-vuotias mies epäillään vakavasta rikoksesta Malminkartanon kadulla, jossa hän surmasi vanhuksen. Poliisi on luokitellut tapahtuman murhaksi, ja tutkinta on käynnissä. Epäillyn tekoa kuvaillaan erityisen julmaksi, johon liittyy voimakasta väkivaltaa teräasein.

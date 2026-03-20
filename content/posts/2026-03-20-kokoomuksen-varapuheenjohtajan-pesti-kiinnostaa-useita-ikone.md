@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Kokoomuksen varapuheenjohtajan pesti kiinnostaa useita – 
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - kokoomus
+  - luonto
 ---
 
 Kokoomuksen varapuheenjohtajakisa on käynnistynyt, kun Anna-Kaisa Ikonen on ilmoittanut luopuvansa tehtävästään, johon hän on kuulunut kuusi vuotta. Ikonen teki ilmoituksen viestipalvelu X:ssä, ja hänen päätöksensä on herättänyt kiinnostusta useissa kansanedustajissa.

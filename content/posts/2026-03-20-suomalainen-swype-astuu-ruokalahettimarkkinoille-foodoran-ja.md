@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Suomalainen Swype astuu ruokalähettimarkkinoille Foodoran 
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - yritys
+  - yhdysvallat
 ---
 
 Suomen ruokalähettimarkkinoille tulee uusi toimija, kun suomalainen tilausalusta Swype ilmoittaa aikovansa täyttää Foodoran saappaita. Foodora ilmoitti helmikuussa lähtevänsä Suomesta, mikä on avannut oven Swypelle, joka on saanut runsaasti kuljettajahakemuksia viime kuukausina. Swype toimii tällä hetkellä koko Suomen alueella, ja sen valikoimassa on noin sata ravintolaa. Yhtiö tavoittelee nopeaa laajentumista.

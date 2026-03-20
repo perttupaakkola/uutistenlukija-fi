@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Saksan puolustusbudjetti avaa ovia suomalaisille yrityksil
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - budjetti
+  - puolustus
 ---
 
 Saksa ja Suomi tiivistävät yhteistyötään puolustusteollisuudessa, mikä avaa uusia mahdollisuuksia suomalaisille toimijoille. Saksa aikoo investoida suuria summia oman puolustuskyvyn parantamiseksi, sillä sen puolustusbudjetti nousee 108 miljardiin euroon.

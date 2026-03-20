@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Jyväskylän lähihoitaja sai tuomion massiivisista tietosu
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - rikos
+  - oikeus
+  - lääketiede
+  - liikenne
 ---
 
 Keski-Suomen käräjäoikeus tuomitsi lähihoitajan peräti 186 tietosuojarikoksesta, joissa hän oli luvatta tutkinut potilastietoja. Oikeus määräsi hänelle neljän kuukauden ehdollisen vankeuden sekä merkittäviä korvauksia. 

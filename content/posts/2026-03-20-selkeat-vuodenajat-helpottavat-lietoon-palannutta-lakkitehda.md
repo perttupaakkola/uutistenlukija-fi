@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Selkeät vuodenajat helpottavat Lietoon palannutta lakkiteh
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - politiikka
+  - suomi
 ---
 
 Lieto on saanut takaisin lakkitehtaan selkeiden vuodenaikojen myötä. Tehdas avasi ovensa uudelleen ja toi mukanaan odotettuja työpaikkoja ja taloudellista toimintaa alueelle. Tehtaan paluu on otettu ilolla vastaan, ja monet paikalliset uskovat sen elvyttävän alueen teollisuutta ja taloutta.

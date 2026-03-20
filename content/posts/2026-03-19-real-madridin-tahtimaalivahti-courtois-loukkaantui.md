@@ -9,6 +9,10 @@ author_title: "Urheilutoimittaja"
 author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
 author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
+tags:
+  - urheilu
+  - ukraina
+  - avaruus
 description: "Real Madridin ykkösmaalivahti Thibaut Courtois loukkaantui reisilihaksesta ja jää sivuun viikkojen ajaksi, mikä hankaloittaa joukkueen tilannetta."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Real Madridin tähtimaalivahti Courtois loukkaantui"

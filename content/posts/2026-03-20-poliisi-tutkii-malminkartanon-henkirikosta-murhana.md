@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Poliisi tutkii Malminkartanon henkirikosta murhana"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - murha
+  - poliisi
+  - rikos
+  - liikenne
 ---
 
 Helsingin Malminkartanon alueella on tapahtunut puukotus, jota tutkitaan murhana. Poliisi tiedottaa, että teon uhri oli 1940-luvulla syntynyt mies ja tapahtuma sattui keskiviikkona illalla kello 22.59 Luutnantintiellä.

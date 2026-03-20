@@ -15,6 +15,12 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - pankki
+  - energia
+  - yritys
+  - urheilu
 ---
 
 Australian keskuspankki RBA kokoontui tiistaina päättämään maan ohjauskorosta samaan aikaan, kun polttoaineiden hinnat puhuttavat koko maassa. Energiaministeri varoitti, että lisäpolttoaineen toimittaminen syrjäseuduille vie aikaa.

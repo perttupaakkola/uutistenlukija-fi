@@ -15,6 +15,10 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - urheilu
+  - jääkiekko
+  - kilpailu
 ---
 
 Dallas Starsin 15 ottelun pisteputki päättyi tappioon Utah Mammothia vastaan. Suomalaispelaaja Miro Heiskanen joutui ottelussa ikävään valokeilaan.

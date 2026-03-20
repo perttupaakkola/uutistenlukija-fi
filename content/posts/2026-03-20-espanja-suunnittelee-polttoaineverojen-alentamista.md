@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Espanja suunnittelee polttoaineverojen alentamista"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - verotus
+  - energia
 ---
 
 Espanjan hallitus aikoo laskea polttoainetuotteiden arvonlisäveroa 21 prosentista 10 prosenttiin, kertoo espanjalaismedia SER. Tämä veromuutospaketti tähtää hiilivetyjen valmisteveron keskeyttämiseen, mikä voisi johtaa dieselin ja bensiinin hinnan laskemiseen 30-40 senttiä litralta.

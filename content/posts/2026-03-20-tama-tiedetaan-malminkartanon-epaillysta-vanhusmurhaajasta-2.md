@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Tämä tiedetään Malminkartanon epäillystä vanhusmurhaa
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - murha
+  - poliisi
+  - rikos
+  - sää
 ---
 
 Malminkartanon alueella Helsingissä tapahtui järkyttävä henkirikos, jossa 26-vuotias mies epäillään surmanneen vanhuksen kadulla. Tapauksen luonne on erityisen julma, ja poliisi tutkii tekoa murhana. Epäillyllä on runsaasti aiempaa rikostaustaa, mikä lisää tapauksen vakavuutta.

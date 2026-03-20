@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - nato
+  - lentoliikenne
+  - lappi
 ---
 
 Pohjois-Norjassa, Pohjois-Ruotsissa ja Suomen Lapissa käynnissä oleva Cold Response -sotaharjoitus on yksi Naton suurimmista tämän vuoden harjoituksista. Siihen osallistuu 32 000 sotilasta 14 Nato-maasta, mukana 3 000–4 000 Yhdysvaltain merijalkaväen sotilasta sekä kalustoa lentokoneista sukellusveneisiin. Harjoitus jatkuu kuluvan viikon perjantaihin.

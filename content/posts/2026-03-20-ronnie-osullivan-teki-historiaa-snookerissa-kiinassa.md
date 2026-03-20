@@ -15,6 +15,10 @@ image_alt: "Urheilu: Ronnie O'Sullivan teki historiaa snookerissa Kiinassa"
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - snooker
+  - kiina
 ---
 
 Seitsenkertainen maailmanmestari Ronnie O'Sullivan on kirjoittanut snooker-historiaa, kun hän teki korkeimman koskaan nähdyn breikin World Openissa Kiinan Yushanissa. O'Sullivanin uusi ennätys, 153 pistettä, syntyi välieräottelussa, jossa hän voitti walesilaisen Ryan Dayn selvällä 5–0-voitolla. Tyypillisesti snookerissa maksimibreikki on 147 pistettä, mutta vapaapallo-tilanne mahdollisti O'Sullivanille suuremman pistemäärän.

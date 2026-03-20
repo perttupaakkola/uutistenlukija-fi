@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Venäjällä uusi salamurhayksikkö paljastui tutkivista j
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - venäjä
+  - hallitus
+  - oikeus
+  - murha
 ---
 
 Tutkivat journalistit ovat tuoneet julki Venäjän eliittijoukoista koostuvan salatun salamurhayksikön. Yksikön paljastuminen on nostanut esiin vakavia kysymyksiä Venäjän hallituksen toimista ja sen käyttäytymisestä kansainvälisellä näyttämöllä.

@@ -15,6 +15,12 @@ image_alt: "Talous: Energiakriisi vaatii toimenpiteitä: IEA suosittelee etäty�
 image_credit: "Photo by Ghessyka Schmidt on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-close-up-of-a-street-light-in-the-dark-GBAsrjnuO8A?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - energia
+  - inflaatio
+  - öljy
+  - liikenne
 ---
 
 Kansainvälinen energiajärjestö IEA on julkaissut suosituksia, jotka tulisi ottaa käyttöön öljynhintojen nousun vuoksi. Suositukset sisältävät muun muassa moottoriteiden nopeusrajoitusten alentamisen ja etätyön edistämisen. IEA varoittaa, että keskipitkällä aikavälillä energiamarkkinoilla on odotettavissa häiriöitä, mikä johtuu Lähi-idän konfliktista.

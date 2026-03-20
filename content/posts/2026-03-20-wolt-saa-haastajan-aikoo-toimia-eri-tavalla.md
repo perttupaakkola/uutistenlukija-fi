@@ -15,6 +15,10 @@ image_alt: "Wolt saa haastajan – Aikoo toimia eri tavalla"
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yhdysvallat
+  - yritys
 ---
 
 Suomen ruokalähettimarkkinoille tulee uusi toimija, kun suomalainen tilausalusta Swype ilmoittaa ottavansa paikan Foodoran väistyessä. Foodora ilmoitti helmikuussa lähtevänsä Suomesta, ja tämän jälkeen Swype on saanut runsaasti kuljettajahakemuksia. Uuden toimijan tavoitteena on murtaa pitkään voimassa ollut duopoli ruokalähettipalveluissa.

@@ -9,6 +9,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - koulutus
+  - politiikka
 description: "Presidentti Alexander Stubb vierailee Lontoossa 16.–17. maaliskuuta, jonne hän pitää luennon ja keskustelee opiskelijoiden kanssa."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Presidentti Stubb työvierailulla Lontoossa"

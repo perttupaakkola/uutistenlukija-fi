@@ -15,6 +15,10 @@ image_alt: "Urheilu: SB-Pro varmisti paikkansa pudotuspeleissä F-liigassa"
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - viihde
+  - kilpailu
 ---
 
 Nurmijärveläinen SB-Pro on varmistanut paikkansa naisten F-liigan pudotuspeleissä. Joukkue saavutti runkosarjassa kolmannen sijan, mutta on jäänyt huomiotta voimakkaan puolustuksensa johdosta. Vaikka mukana on ollut useita tiukkoja otteluja, joukkue on päässyt tavoitteeseensa ja pyrkii nyt mitaleille.

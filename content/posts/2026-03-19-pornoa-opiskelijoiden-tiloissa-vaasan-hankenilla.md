@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Pornoa opiskelijoiden tiloissa Vaasan Hankenilla"
 image_credit: "Photo by Vitaly Gariev on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-daughter-gives-her-mother-a-present-2Dt3_ziWgzM?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - koulutus
+  - opiskelijat
+  - oulu
 ---
 
 Vaasassa sijaitsevassa Hankenin opiskelijoiden juhlatilassa on näytetty pornoa jo yli kymmenen vuoden ajan, kertoo HBL. Tilassa, nimeltään Cella Nova, on esitetty pornografista sisältöä miesten vessan pisuaarin yläpuolella sijaitsevalla televisiolla. HBL:n haastatteleman opiskelijan mukaan käytäntö on tuntunut inhottavalta ja oudolta. Vaasan ruotsalaisen kauppakorkeakoulun ylioppilaskunta (SSHV) ei ole antanut kommentteja asiasta, vaikka useat yhteydenottoyritykset ovat jääneet ilman vastausta. Pornon esittäminen opiskelijoiden tiloissa herättää kysymyksiä niin eettisistä kuin käytännöllisistä syistä. Opiskelijat ovat huolissaan ympäristön vaikutuksesta heidän opiskelukulttuuriinsa ja turvallisuuden tunteeseensa.

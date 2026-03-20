@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Australian pääministeri kohtasi vastustusta moskeijassa"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - israel
+  - sää
 ---
 
 Australian pääministeri Anthony Albanese sai häiriöitä osakseen Lakemba-moskeijassa, kun hän osallistui ramadanin päättäjäisiin. Monet moskeijassa olleet syyttivät häntä tuen antamisesta Israelin ja Gazan sodalle sekä kasvavalle islamofobialle. Tämä herätti huomattavaa närkästystä muslimiyhteisössä, joka odottaa hallituksen lisäävän vuorovaikutusta sen kanssa.

@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Saksalais-suomalainen yhteistyö puolustusteollisuudessa v
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - budjetti
+  - puolustus
+  - oulu
 ---
 
 Saksan 108 miljardin euron puolustusbudjetti avaa uusia mahdollisuuksia suomalaisille yrityksille. Saksalais-suomalaisen kauppakamarin toimitusjohtaja Jan Feller vieraili Oulussa ja kertoi, että Saksa on kiinnostava markkina suomalaisille puolustusteollisuuden toimijoille. Saksalaisten kiinnostus keskittyy erityisesti viestintään, antureihin ja sensoritekniikkaan, mikä yhdistää saksalaisen potentiaalin ja suomalaisen osaamisen.

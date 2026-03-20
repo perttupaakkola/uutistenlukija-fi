@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Kalakuolemat nostattavat kysymyksiä Britannian ympärist�
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - oikeus
+  - luonto
 ---
 
 Entinen ympäristöministeri Steve Barclay on kysynyt parlamentissa, miksi kukaan ei ole vielä syytettynä, kun noin 900 kalaa löydettiin kuolleina Kings Delphin alueelta Cambridgeshiressä syyskuussa 2024. Barclay vaati hallitusta selvittämään syitä kalakuolemille, jotka johtuivat korkeasta ammoniakki- ja matalasta happitasosta.

@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Vanhus surmattiin kadulle Malmin­kartanossa – Poliisi tu
 image_credit: "Photo by Denis Oliveira on Unsplash"
 image_source_url: "https://unsplash.com/photos/woman-in-coat-standing-beside-white-van-Ec6k0ot8oS0?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - murha
+  - poliisi
+  - yhdysvallat
+  - rikos
 ---
 
 Malminkartanon kadulla tapahtui keskiviikkoiltana henkirikos, jota poliisi tutkii murhana. Epäiltynä on 26-vuotias mies, jolla on runsaasti aiempaa rikostaustaa, mukaan lukien väkivalta- ja huumausainerikoksia. Rikoksen tekemiseen käytetty tekotapa on ollut erityisen raaka.

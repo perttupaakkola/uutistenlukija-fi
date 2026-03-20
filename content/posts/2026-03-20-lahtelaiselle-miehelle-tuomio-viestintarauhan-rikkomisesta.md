@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Lahtelaiselle miehelle tuomio viestintärauhan rikkomisesta
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - rikos
+  - oikeus
+  - liikenne
 ---
 
 Päijät-Hämeen käräjäoikeus on antanut tuomion 44-vuotiaalle lahtelaiselle miehelle viestintärauhan rikkomisesta. Mies tuomittiin 30 päiväsakkoon, yhteensä 1 500 euroa, sekä maksamaan viestien vastaanottajalle 500 euroa kärsimyksen korvauksena.

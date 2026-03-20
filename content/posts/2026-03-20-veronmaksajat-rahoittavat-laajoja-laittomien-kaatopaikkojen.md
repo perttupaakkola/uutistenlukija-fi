@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Veronmaksajat rahoittavat laajoja laittomien kaatopaikkoje
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - verotus
+  - luonto
 ---
 
 Englannin hallitus aikoo puuttua laajoihin laittomiin kaatopaikkoihin ja aloittaa siivoustoimet veronmaksajien kustannuksella. Huonokuntoiset kaatopaikat Wiganissa, Sheffieldissä ja Lancashiressä, joissa on yhteensä 48 000 tonnia jätettä, on valittu puhdistettavaksi ympäristöhallinnon toimesta. Tämä päätös on herättänyt paikallisten asukkaiden tyytyväisyyttä, mutta samalla myös huolta siitä, miksi joitakin muita alueita ei ole valittu siivottavaksi.

@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Iranin sota aiheuttaa kaasupulaa - Intia siirtyy saastutta
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - sota
+  - iran
+  - luonto
 ---
 
 Iranin sodasta johtuvat laivaliikenteen häiriöt ovat vähentäneet kaasutoimituksia Intiaan, mikä uhkaa tilannetta, jossa maa siirtyy takaisin saastuttavampiin polttoaineisiin kuten hiileen ja biomassaan. Asiasta raportoi BBC. Intiassa on havaittu kasvavaa puun ja lehmänlantakakkujen myyntiä, mikä viittaa kuluttajien siirtyvän takaisin vanhempiin, ympäristölle haitallisiin energianlähteisiin.

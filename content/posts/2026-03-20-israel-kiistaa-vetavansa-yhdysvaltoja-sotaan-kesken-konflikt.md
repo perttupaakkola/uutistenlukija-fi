@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Israel kiistää vetävänsä Yhdysvaltoja sotaan kesken k
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - israel
+  - sota
+  - yhdysvallat
 ---
 
 Israelin hallitus on jyrkästi kiistänyt väitteet siitä, että se olisi vetämässä Yhdysvaltoja sotaan meneillään olevan konfliktin aikana. Asia on ajankohtainen, sillä alueen levottomuudet ovat viime viikkoina voimistuneet, mikä on herättänyt huolta laajemmista sotilaallisista toimista. Yhdysvallat on perinteisesti ollut yksi Israelin tärkeimmistä tukijoista, mutta hallituksen eri toimenpiteet ovat herättäneet keskustelua siitä, kuinka syvälle maa voisi osallistua alueelle.

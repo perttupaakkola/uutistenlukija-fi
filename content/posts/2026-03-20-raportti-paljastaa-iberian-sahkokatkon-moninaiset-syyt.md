@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Raportti paljastaa Iberian sähkökatkon moninaiset syyt"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - kansainvälinen
 ---
 
 Iberian niemimaan viime huhtikuussa koetun sähkökatkon taustalla on useita tekijöitä. Tapahtuma, joka pimensi Espanjan, Portugalin ja osan Lounais-Ranskaa, on todettu pahimmaksi sähkökatkoksi Euroopassa kahteenkymmeneen vuoteen. Asiantuntijapaneelin mukaan alueen sähköjärjestelmä ei kyennyt hallitsemaan jännitepiikkejä, mikä johti merkittäviin ongelmiin.

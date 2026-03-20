@@ -15,6 +15,10 @@ image_alt: "12 kuukauden euribor nousi merkittävästi – korkojen nousutrendi 
 image_credit: "Photo by Cheung Nic on Unsplash"
 image_source_url: "https://unsplash.com/photos/low-angle-photo-of-curtain-glass-wall-building-pKiND2RYAXs?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - korot
+  - pankki
 ---
 
 Perjantaina 12 kuukauden euribor nousi voimakkaasti, ja se saavutti 2,658 prosenttia. Nousua oli tapahtunut 0,134 %-yksikköä, mikä oli historian 13. suurin päivänousu. OP:n seniorianalyytikko Jari Hännikäinen kommentoi, että tämä reaktio on seurausta Euroopan keskuspankin (EKP) aiemmista viesteistä huhtikuun koronnostosta.

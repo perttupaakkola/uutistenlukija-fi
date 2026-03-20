@@ -15,6 +15,10 @@ image_alt: "Urheilu: Fifa vaatii naisjoukkueiden valmennukseen naisia"
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - sää
+  - jalkapallo
 ---
 
 Fifalla on uusi sääntö, jonka mukaan naisten joukkueilla on oltava vähintään yksi naispuolinen pää- tai apuvalmentaja osallistuttaessa kansainvälisiin turnauksiin. Tämä koskee muun muassa vuoden 2027 naisten MM-kisoja Brasiliassa. Uuden säännön myötä myös muu naispuolinen henkilöstö on oltava läsnä vaihtopenkillä. Jill Ellis, Fifan jalkapallojohtaja, korostaa, että muutos on välttämätön naisten valmennuksen lisäämiseksi.

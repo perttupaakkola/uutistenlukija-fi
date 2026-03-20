@@ -15,6 +15,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - pankki
+  - kansainvälinen
 ---
 
 Uuden Etelä-Walesin osavaltiossa sijaitseva Federation Council luopui suunnitelmastaan kieltää aboriginaalien ja Torres Strait Islander -kansojen lippujen esillä pitäminen. Päätöstä edelsi lähes 700 kansalaispalautetta, joista valtaosa vastusti lipunpoistoa.

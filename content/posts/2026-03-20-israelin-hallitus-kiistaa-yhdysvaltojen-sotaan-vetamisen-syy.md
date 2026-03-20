@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Israelin hallitus kiistää Yhdysvaltojen sotaan vetämise
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - israel
+  - sota
+  - iran
 ---
 
 Israelin hallitus on kiistänyt syytökset siitä, että se vetäisi Yhdysvaltoja mukaan konfliktiin Iraniin. Tällä hetkellä Israelin ja Iranin väliset jännitteet ovat kasvaneet, ja tilanne herättää huolta kansainvälisesti. Samana päivänä Australian pääministeri Anthony Albanese ilmoitti, että maa valitsee "polttoaine-tsaarin" hallitsemaan nyt esiintyviä, ennennäkemättömiä polttoaineongelmia. Albanese kokoontui äkillisesti kansallisen hallituksen virtuaalikokoukseen keskustelemaan hintojen äkillisistä nousuista ja toimitushäiriöistä, joita ovat aiheuttaneet Yhdysvaltojen ja Israelin toimet.

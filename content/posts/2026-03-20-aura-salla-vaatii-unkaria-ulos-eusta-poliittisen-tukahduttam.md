@@ -15,6 +15,12 @@ image_alt: "Aura Salla vaatii Unkaria ulos EU:sta poliittisen tukahduttamisen vu
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - eu
+  - hallitus
+  - kokoomus
+  - ukraina
 ---
 
 Kokoomuksen europarlamentaarikko Aura Salla on esittänyt vaatimuksen Unkarin erottamiseksi Euroopan unionista. Salla perustelee vaatimustaan Unkarin nykyisessä Ukraina-politiikassa, joka uhkaa koko unionin poliittista uskottavuutta. Hän nostaa esiin pääministeri Viktor Orbánin päätöksen estää 90 miljardin euron hätälainapaketin ohjaaminen Ukrainalle, mikä on osa EU:n yhteistä tukea alueen kriisissä.

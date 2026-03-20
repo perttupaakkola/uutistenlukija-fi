@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: MP kyseenalaistaa hallituksen toimia kalakuolemista"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - luonto
 ---
 
 Steve Barclay, entinen ympäristöministeri, on kysynyt parlamentissa, miksi selvityksiä ei ole vielä käynnistetty vastuuttomista tahoista, kun noin 900 kalaa kuoli Kings Delphissa, Cambridgeshiressa. Kalakuolemat johtuvat korkeista ammoniakkitasoista ja matalista happitasoista, ja tilanne on herättänyt asukkaissa huolta ja närkästystä. Vedenlaadun heikkeneminen on ollut suuri ongelma, ja Barclay vaatii hallitusta tekemään enemmän vastuullisten tahojen löytämiseksi.

@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Teneriffalla lunta ja pakkasta – loppua ei näy"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - sää
+  - kansainvälinen
 ---
 
 Therese-myrsky on aiheuttanut poikkeuksellisia sääolosuhteita Espanjan Kanariansaarilla, erityisesti Teneriffalla, joka on ilmoitettu koko maan kylmimmäksi paikaksi torstaina 4,5 pakkasasteen kanssa. Viranomaiset ovat julistaneet saarelle hätätilan myrskyn vuoksi, mikä tuo haasteita paikallisille asukkaille ja turisteille.

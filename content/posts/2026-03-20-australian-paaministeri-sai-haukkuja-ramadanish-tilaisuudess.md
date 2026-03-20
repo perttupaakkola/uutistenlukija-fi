@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Australian pääministeri sai haukkuja Ramadanish-tilaisuu
 image_credit: "Photo by Daniel Morton-Jones on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-flag-is-flying-on-top-of-a-building-oYbFTyI6Ijk?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - sota
+  - israel
 ---
 
 Australian pääministeri Anthony Albanese sai osakseen vastalauseita Sydneyssä, kun hän osallistui suurta Ramadania päättävään tapahtumaan Lakemban moskeijassa. Pääministeri ja sisäministeri Tony Burke kohtasivat raivoisia huutoja, kun paikalliset muslimiyhteisön johtajat vaativat hallitukselta parempia toimia Israel-Gaza-sodan ja kasvavan islamofobian vuoksi.

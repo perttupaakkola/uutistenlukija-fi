@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Australian pääministeri sai huutoa Sydneyssä moskeijass
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - israel
 ---
 
 Australian pääministeri Anthony Albanese kohtasi vilkasta vastustusta moskeijassa Sydneyn Lakembassa, kun hän oli yksi vieraista Ramadanin päättävissä rukouksissa. Osallistujat syyttivät häntä ’genosidin tukemisesta’, mikä herätti keskustelua hallituksen politiikasta Israelin ja Gazan sodassa.

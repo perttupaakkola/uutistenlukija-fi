@@ -15,6 +15,12 @@ image_alt: "Immuunijärjestelmä on älykkäämpi kuin arvaammekaan - Metsä vah
 image_credit: "Photo by Daria S on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-forest-filled-with-lots-of-tall-trees-jpXwOOmgFfY?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - tiede
+  - luonto
+  - puolustus
+  - koulutus
+  - helsinki
 ---
 
 Flunssakausi tuo vuodesta toiseen haasteita, mutta immunologian asiantuntijat muistuttavat, että kehon puolustusjärjestelmä on huomattavasti älykkäämpi kuin usein luullaan. Helsingin yliopiston apulaisprofessori Eliisa Kekäläinen korostaa, että immuunijärjestelmän toimintamekanismit vaihtelevat yksilöittäin perinnöllisten ja ympäristötekijöiden vuoksi.

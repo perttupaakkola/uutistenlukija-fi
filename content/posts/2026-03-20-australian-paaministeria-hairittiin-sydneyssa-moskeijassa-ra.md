@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Australian pääministeriä häirittiin Sydneyssä moskeij
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - israel
 ---
 
 Australian pääministeri Anthony Albanese kohtasi häirintää osallistuttuaan Lakemba Moskeijassa järjestettyyn Ramadanin päättymisjuhlaan. Tapahtumassa, johon osallistui yli 30 000 ihmistä, useat osallistujat huusivat häntä kohtaan syyttäen häntä 'genocide-tukijaksi' ja vaativat häntä poistumaan. Tapahtuma heijasti syvää turhautumista Australian muslimiyhteisössä hallituksen toimia kohtaan Israel-Gazan sodan ja kasvavan islamofobian vuoksi.

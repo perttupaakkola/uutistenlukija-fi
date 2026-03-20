@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Lapissa mitattiin yli metri lunta marraskuussa"
 image_credit: "Photo by Karin Kim on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-snow-covered-path-in-the-middle-of-a-snowy-field-glN2HErqqpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - sää
+  - sota
+  - lappi
 ---
 
 Lapissa on koettu tänä joulukuussa poikkeuksellinen talvisateiden kausi, kun lunta on mitattu yli metri. Erityisesti Sodankylän ja Rovaniemen alueilla lumisateet ovat olleet runsaita, minkä myötä talviset maisemat ovat luoneet kauniin, mutta myös haastavan tilanteen paikalliselle infrastruktuurille. Lämpötilat ovat pysytelleet nollan tuntumassa, mikä on edesauttanut lumen kertymistä ja uhkaa teiden liukkautta.

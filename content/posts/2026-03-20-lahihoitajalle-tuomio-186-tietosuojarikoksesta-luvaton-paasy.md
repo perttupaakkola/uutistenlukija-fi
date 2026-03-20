@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Lähihoitajalle tuomio 186 tietosuoja­rikoksesta – luvat
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - rikos
+  - oikeus
+  - lääketiede
+  - liikenne
 ---
 
 Keski-Suomen käräjäoikeus on tuominnut lähihoitajan 186 tietosuojarikoksesta, jotka liittyivät luvattomaan pääsyyn potilastietojärjestelmiin. Tuomio sisältää neljän kuukauden ehdollisen vankeuden ja merkittävät korvausvelvoitteet. Rikokset tapahtuivat Keski-Suomen hyvinvointialueella, ja ne herättivät laajaa huomiota alueen hoitoalan valvonnassa.

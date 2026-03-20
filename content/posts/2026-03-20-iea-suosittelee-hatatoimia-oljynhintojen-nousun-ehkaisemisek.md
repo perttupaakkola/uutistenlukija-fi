@@ -15,6 +15,12 @@ image_alt: "Talous: IEA suosittelee hätätoimia öljynhintojen nousun ehkäisem
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - energia
+  - inflaatio
+  - öljy
+  - sää
 ---
 
 Kansainvälinen energiavirasto (IEA) on julkaissut kymmenen suositusta, jotka tähtäävät öljyn kysynnän rajoittamiseen kiihtyvän hintojen nousun vuoksi. Suositukset sisältävät muun muassa moottoriteiden nopeusrajoitusten alentamisen, etätyön edistämisen ja joukkoliikenteen käytön lisäämisen. Konflikti lähi-idässä on aiheuttanut merkittäviä häiriöitä öljyn toimituksissa, ja IEA varoittaa, että tilanne voi kestää pitkään. Suositusten taustalla on huoli öljyn riittävyydestä ja keinoista sopeuttaa käytössä olevia resursseja. IEA:n mukaan jäsenvaltioiden on varauduttava öljyn kysynnän rajoittamiseen kriisitilanteissa tehokkuuden säilyttämiseksi.

@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Kirkon herätysprojekti käynnistyy Helsingissä"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - terveys
+  - sää
+  - helsinki
 ---
 
 Helsingissä käynnistyy herätysprojekti, joka kokoaa eri alojen asiantuntijoita ja kirkon edustajia yhteen. Suomen evankelis-luterilainen kirkko haluaa herättää keskustelua uskon merkityksestä nykypäivän Suomessa. Arkkipiispa Timo Handeson tuo esiin videotervehdyksessään sen, kuinka usko voi toimia tärkeänä tukipilarina kansallisessa identiteetissä ja yhteisöllisyydessä.

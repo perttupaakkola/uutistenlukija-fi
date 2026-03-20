@@ -15,6 +15,12 @@ image_alt: "Ahdistussanan käyttö on lisääntynyt – tutkija varoittaa seurau
 image_credit: "Photo by DIANA HAUAN on Unsplash"
 image_source_url: "https://unsplash.com/photos/woman-in-white-laboratory-gown-holding-black-microphone-oFK7xgf4_50?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - tiede
+  - tampere
+  - mielenterveys
+  - koulutus
+  - opiskelijat
 ---
 
 Ahdistussanan käyttö arkipuheessa on kasvanut, ja Tampereen yliopiston väitöskirjatutkija Siiri Lampela varoittaa tämän aiheuttamista ongelmista. Monet nuoret kuvaavat normaaleja tunteitaan ahdistuksena, mikä voi johtaa todellisten ahdistusoireiden vähättelyyn. Esimerkiksi 21-vuotias opiskelija Venny Ervasti kertoo, että hänen ikäistensä keskuudessa käytetään usein ilmaisua "mua ahistaa".

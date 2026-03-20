@@ -15,6 +15,10 @@ image_alt: "Talous: Ay-liiton puheenjohtaja: 'Suomen pörssiyhtiöt valinneet ly
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - pörssi
+  - yritys
 ---
 
 Ammattiliitto Pro on julkaissut syytöksiä Suomen pörssiyhtiöitä kohtaan, väittäen, että ne ovat omaksuneet lyhytnäköisen strategian, joka keskittyy osingonmaksamiseen sen sijaan, että investoisivat kasvuun. Pron puheenjohtaja Niko Simola toteaa, että osingot ovat usein suurempia kuin yhtiöiden tulokset, mikä on kestämätöntä pitkällä aikavälillä. Hän korostaa, että maailma on muutoksessa, ja suomalaiset yritykset eivät reagoi riittävän nopeasti. Työntekijöiden etujen ajaminen on keskeisessä asemassa, ja Simola vaatii vähemmän painotusta osingon maksamiseen. Hän viittaa siihen, että monet ulkomaiset yritykset investoivat aktiivisesti teknologisiin innovaatioihin ja vihreään tuotantoon, kun jälleen suomalaiset yhtiöt keskittyvät liikaa lyhyen aikavälin voittoihin. Pro-liitto muistuttaa, että yli 120 000 jäsentään edustava liitto aikoo jatkaa tällaisen käytännön kritiikkiä, jotta suomalaiset yritykset heräisivät tuottavampiin ratkaisuihin.

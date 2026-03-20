@@ -15,6 +15,10 @@ image_alt: "Kulttuuri: Huutokauppaa Turussa pyörittävä Eveliina: Oudoimmatkin
 image_credit: "Photo by Jimmy Liu on Unsplash"
 image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - yritys
+  - taide
 ---
 
 Turussa huutokauppaliiketoimintaa pyörittävä Eveliina kertoo, kuinka erikoiset ja joskus oudotkin esineet löytävät uusia omistajia. "Aina on joku, joka arvostaa sellaista, mitä muut eivät näe. Huutokaupat tarjoavat mahdollisuuden löytää ainutlaatuisia aarteita." Eveliina kertoo huutokauppamaailman viehätyksistä ja siitä, kuinka jokainen päivä tuo mukanaan uusia haasteita ja yllätyksiä.

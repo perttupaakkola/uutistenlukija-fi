@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Veronmaksajat maksavat suurten laittomien jätetäyttöjen
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - verotus
 ---
 
 Britannian hallitus ilmoitti puhdistavansa kolme suurinta laitonta jätetäyttöä veronmaksajien rahoilla osana kansallista jätteenrikollisuustoimenpiteitä. Wiganissa, Sheffieldissä ja Lancashire'ssa sijaitsevat kaatopaikat, joissa on yhteensä noin 48 000 tonnia jätettä, saavat puhdistustukea.

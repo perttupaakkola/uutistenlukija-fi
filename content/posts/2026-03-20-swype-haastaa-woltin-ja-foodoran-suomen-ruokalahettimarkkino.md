@@ -15,6 +15,10 @@ image_alt: "Talous: Swype haastaa Woltin ja Foodoran Suomen ruokalähettimarkkin
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yritys
+  - rahoitus
 ---
 
 Suomessa ruokalähettimarkkinat saavat uuden toimijan, kun suomalainen Swype aikoo täyttää Foodoran jättämät saappaat. Foodoran ilmoitus poistumisestaan helmikuussa avasi mahdollisuuksia, ja Swype on saanut runsaasti kuljettajahakemuksia. Tällä hetkellä Swype toimii koko Suomen alueella, ja sen tarjontaan kuuluu noin sata ravintolaa, mutta se aikoo laajentaa toimintaansa huomattavasti.

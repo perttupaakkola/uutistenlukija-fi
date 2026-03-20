@@ -15,6 +15,10 @@ image_alt: "Urheilu: Ronnie O'Sullivan teki snooker-historiaa – vapaapallotila
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - snooker
+  - kiina
 ---
 
 Ronnie O'Sullivan, seitsemänkertainen snooker-maailmanmestari, teki historiaa World Openissa Kiinan Yushanissa saavuttamalla uuden ennätyksen yhdellä lyöntivuorolla tehdyssä pistemäärässä. Hän teki uskomattomat 153 pistettä, ylittäen aiemman ennätyksen.

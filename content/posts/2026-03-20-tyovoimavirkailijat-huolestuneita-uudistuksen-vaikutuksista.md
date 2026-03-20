@@ -15,6 +15,11 @@ image_alt: "Työvoimavirkailijat huolestuneita uudistuksen vaikutuksista"
 image_credit: "Photo by Heri Susilo on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-man-in-an-orange-vest-and-a-blue-helmet-o2I4HsudmlY?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - budjetti
+  - sää
+  - oulu
 ---
 
 Oulun seudun työllisyysalueen johtaja Mari Rautiainen varoittaa toimeentulotuen hakijoiden määrän kasvusta työllispalveluissa. Uudistus, joka tuli voimaan maaliskuussa, ohjaa voimakkaasti uusia asiakkaita työllispalveluihin, mutta sen kyky auttaa työllistymisessä on kyseenalainen. Rautiaisen mukaan monet uudet asiakkaat eivät omaa työkykyä, mikä lisää painetta palveluille.

@@ -9,6 +9,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - talous
+  - energia
+  - öljy
+  - iran
 description: "Raakaöljyn hinta nousee yli 100 dollarin tynnyriltä ensimmäistä kertaa sitten vuoden 2022. Hormuzinsalmen sulkeutuminen vaikuttaa merkittävästi hintoihin."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Raakaöljyn hinta noussut yli 100 dollarin tynnyriltä"

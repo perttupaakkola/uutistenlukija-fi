@@ -15,6 +15,10 @@ image_alt: "Talous: Lietoon palannut lakkitehdas hyötyy selkeistä vuodenajoist
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - teknologia
+  - yritys
 ---
 
 Lieto on saanut uuden elämän lakkitehtaastaan, joka on palannut kunnan alueelle. Tehdas hyötyy vuodenajoista, jotka mahdollistavat paremman tuotannon suunnittelun ja varastoinnin. Selkeät vuodenajat auttavat varmistamaan, että tuotantoprosessit voivat toteutua ilman keskeytyksiä ja aikataulun muutoksia. 

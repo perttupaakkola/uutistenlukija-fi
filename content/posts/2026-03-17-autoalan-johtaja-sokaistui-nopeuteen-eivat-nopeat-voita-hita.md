@@ -15,6 +15,10 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - talous
+  - yhdysvallat
+  - yritys
 ---
 
 Luksusautomerkkien johtotehtävissä uransa tehnyt Felix Bräutigam vieraili Suomessa ja kertoi näkemyksiään autoalan murroksesta. Bräutigam tunnetaan erityisesti työstään Porschella, jonka hän auttoi nostamaan yhdeksi alan kannattavimmista valmistajista.

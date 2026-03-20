@@ -15,6 +15,11 @@ image_alt: "Mette Baas historialliselle suoritukselle MM-halleissa – uusi SE-a
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - energia
+  - sää
+  - yleisurheilu
 ---
 
 Suomalainen juoksija Mette Baas teki historiaa edetessään 400 metrin välieriin yleisurheilun MM-hallikilpailuissa Puolassa. Baas voitti oman eränsä erinomaisella tuloksella 51,42, mikä on uusi Suomen ennätys lyhyiltä radoilta. Hän paransi aiempaa ennätystään 23 sadasosalla ja näytti juoksevansa kärkipaikalla koko erän ajan.

@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Orbánin kiristys EU:ta kohtaan horjuttaa Ukrainan tukilup
 image_credit: "Photo by Nk Ni on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-sign-that-is-laying-on-the-ground-JaT8VHCyynI?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - ukraina
+  - hallitus
+  - energia
+  - öljy
 ---
 
 Unkarin pääministeri Viktor Orbán käyttää Ukrainan tueksi kaavaillun 90 miljardin euron lainapaketin hyväksymistä poliittisena vipuvarrella kansallisessa vallanhimossaan. EU:n johtajat kokoontuvat tänään keskustelemaan paketin hyväksymisestä, mutta Unkarilta kuuluu odottamattomia esteitä. Orbán, jonka oma valta on kotimaassa uhattuna, on kytkenyt lainapaketin toteutumisen Družba-öljyputken vaurioitumiseen, mikä vaikuttaa olevan tekosyy hänen poliittiselle pelilleen.

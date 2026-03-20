@@ -15,6 +15,11 @@ image_alt: "Talous: Ay-pomolta raju syytös Suomen pörssiyhtiöitä kohtaan"
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yritys
+  - pörssi
+  - työttömyys
 ---
 
 Ammattiliitto Pron puheenjohtaja Niko Simola on esittänyt voimakkaita syytöksiä Suomen pörssiyhtiöitä kohtaan käyttäen termejä lyhytnäköinen häviäjän strategia. Simolan mukaan liian suuret osingot paljastavat yritysjohdon haluttomuuden investoida kehitykseen tai visioon kasvusta. "Suomessa vallitsee massatyöttömyys, ja yrityksissä ei keksitä muuta kohdetta rahalle kuin omistajien palkitseminen", hän kritisoi.

@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Doris ja Eivor ajavat lanthandeln Sikåsbyn sydämessä"
 image_credit: "Photo by Sol Ponce on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-bunch-of-plants-that-are-in-the-grass-AAQ9x9QWsEI?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - politiikka
+  - suomi
 ---
 
 Pienessä Sikås-nimisessä kylässä Ruotsissa Doris ja Eivor ovat pitäneet elinvoimaisena paikallista lanthandeliä, joka on ollut olennainen osa yhteisöä jo vuosikymmenten ajan. Pariskunta on onnistunut luomaan ainutlaatuisen tunnelman kaupalle, joka houkuttelee asiakkaita ympäri seutua. Lanthandeli ei ole vain kauppa, vaan myös yhteisön kokoontumispaikka.

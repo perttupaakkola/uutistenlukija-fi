@@ -15,6 +15,10 @@ image_alt: "Norjan kruununprinsessa Mette-Marit puhui Epstein-kytkennöistään:
 image_credit: "Photo by stefan kroeger on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-gold-crown-sitting-on-top-of-a-table-XK5ywMcV0wY?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - kansainvälinen
+  - politiikka
 ---
 
 Norjan kruununprinsessa Mette-Marit on rikkonut hiljaisuutensa ja kertonut katuvansa tapaamistaan Jeffrey Epsteinin kanssa, ilmiön tultua julki. Prinsessa kertoi kansalliselle televisiolle, että hän tuntee itsensä manipuloiduksi ja petetyksi. Hänen kontaktejaan Epsteinin kanssa on selvitetty viime viikkoina, ja hän on tunnustanut tehneensä huonoja päätöksiä.

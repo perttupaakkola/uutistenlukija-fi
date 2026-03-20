@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: MP kysyy hallitukselta kalakuolemista dyke-alueella"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - luonto
 ---
 
 Entinen ympäristöministeri Steve Barclay on kysynyt Parlamentissa, miksi kukaan ei ole saattanut oikeuteen, kun noin 900 kalaa kuoli Kings Delph -alueella Cambridgeshiressä syyskuussa 2024. Kalakuolemat johtuivat korkeista ammoniakkipitoisuuksista ja matalasta hapen määrästä vedessä.

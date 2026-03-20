@@ -9,6 +9,12 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - eu
+  - hallitus
+  - luonto
+  - sää
 description: "Euroopan unioni harkitsee sanktioita Suomelle suurpetojen, kuten susien, karhujen ja ilvesten, kiintiömetsästyksen vuoksi, mikä uhkaa suojeltuja lajeja."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Suomi voi saada sanktioita susien, karhujen ja ilvesten kiintiömetsästyksestä"

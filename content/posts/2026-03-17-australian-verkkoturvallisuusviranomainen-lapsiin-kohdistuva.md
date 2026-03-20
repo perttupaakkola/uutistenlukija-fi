@@ -15,6 +15,11 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - turvallisuus
+  - tekoäly
+  - lapset
 ---
 
 Australian verkkoturvallisuusviranomainen eSafety on varoittanut Elon Muskin omistamaa X-palvelua siitä, että lapsiin kohdistuva seksuaalinen hyväksikäyttömateriaali on alustalla "erityisen rakenteellinen" ongelma. Viranomaisen mukaan materiaali on X:ssä helpommin saavutettavissa kuin millään muulla valtavirtapalvelulla.

@@ -15,6 +15,11 @@ image_alt: "Kotimaa: HAMK aloittaa kestävän kehityksen koulutuksen Hämeenlinn
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - koulutus
+  - opiskelijat
+  - työelämä
 ---
 
 Hämeen ammattikorkeakoulu (HAMK) tarjoaa ensimmäisenä Suomessa tutkinnon kestävän kehityksen asiantuntijaksi. Koulutus keskittyy käytännön taitoihin, ymmärrykseen ja työelämävalmiuksiin, jotka auttavat opiskelijoita tekemään vastuullisia päätöksiä eri organisaatioissa.

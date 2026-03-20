@@ -15,6 +15,10 @@ image_alt: "Urheilu: Mette Baas ennakko­luulottomasti jatkoon MM-halleissa"
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - yleisurheilu
+  - kilpailu
 ---
 
 Suomalainen juoksija Mette Baas on edennyt yleisurheilun MM-hallikilpailujen välieriin Torunissa. Hän voitti oman 400 metrin eränsä huipputuloksella 51,42, mikä on uusi Suomen ennätys. Tämä aika on parannus helmikuun alussa tehdystä ennätyksestä 23 sadasosaa.

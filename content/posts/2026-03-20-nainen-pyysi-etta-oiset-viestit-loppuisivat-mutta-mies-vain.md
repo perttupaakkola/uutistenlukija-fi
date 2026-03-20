@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Nainen pyysi, että öiset viestit loppuisivat, mutta mies 
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - oikeus
+  - rikos
 ---
 
 Päijät-Hämeen käräjäoikeus on tuominnut 44-vuotiaan lahtelaismiehen viestintärauhan rikkomisesta 30 päiväsakkoon, mikä tarkoittaa yhteensä 1 500 euron maksamista. Mies jatkoi viestittelyä naiselle, vaikka tämä pyysi häntä lopettamaan, ja käräjäoikeuden mukaan lähettämät viestit eivät olleet asioiden hoitamisen kannalta tarpeellisia.

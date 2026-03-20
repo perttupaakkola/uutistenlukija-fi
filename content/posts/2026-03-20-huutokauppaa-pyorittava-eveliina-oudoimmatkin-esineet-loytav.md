@@ -15,6 +15,10 @@ image_alt: "Kulttuuri: Huutokauppaa pyörittävä Eveliina: 'Oudoimmatkin esinee
 image_credit: "Photo by Jimmy Liu on Unsplash"
 image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - taide
+  - viihde
 ---
 
 Eveliina, turkulainen huutokauppayrittäjä, kertoo työskentelevänsä eri esineiden parissa, joilla on vaihteleva arvo. Hän on kokenut, että huutokaupat voivat yllättää sekä myyjät että ostajat. 'On uskomatonta, kuinka oudoimmatkin esineet voivat löytää kokoontuneen yleisön, joka arvostaa niiden historiaa tai erityislaatuisuutta', Eveliina toteaa.

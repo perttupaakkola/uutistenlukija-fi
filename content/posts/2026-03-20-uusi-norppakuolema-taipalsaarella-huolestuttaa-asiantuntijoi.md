@@ -15,6 +15,11 @@ image_alt: "Uusi norppakuolema Taipalsaarella huolestuttaa asiantuntijoita"
 image_credit: "Photo by Maskmedicare Shop on Unsplash"
 image_source_url: "https://unsplash.com/photos/man-in-white-dress-shirt-and-blue-pants-covering-his-face-with-blue-textile-b8lM97M6W0g?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - hallitus
+  - luonto
+  - liikenne
 ---
 
 Viimeisimpänä ilmoituksena Metsähallitus sai tiedon saimaannorpan kuolemasta Taipalsaarella. Tapaus on jo viides tänä talvena ja herättää huolta uhanalaisen lajin tulevaisuudesta. Saimaannorppa kuoli kalastajan verkkoihin, mikä on huolestuttava merkki sen suojelun kannalta.

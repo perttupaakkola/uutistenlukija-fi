@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Australian pääministeri sai kritiikkiä Ramadan-tapahtum
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - murha
 ---
 
 Australian pääministeri Anthony Albanese kohtasi tiukkaa kritiikkiä Lakemban moskeijassa pidetyssä tapahtumassa, joka merkitsi Ramadanin päättymistä. Useat osallistujat syyttivät häntä kansanmurhan kannattamisesta ja vaativat häntä lähtemään tapahtumasta.

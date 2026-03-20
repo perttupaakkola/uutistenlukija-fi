@@ -15,6 +15,10 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - politiikka
+  - pakolaiset
 ---
 
 Chilen presidentti José Antonio Kast on käynnistänyt rajaesteiden rakentamisen maan pohjoisrajoille. Fyysisten esteiden tarkoitus on vaikeuttaa laitonta maahantuloa Perusta ja Boliviasta.

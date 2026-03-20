@@ -15,6 +15,10 @@ image_alt: "Talous: Ay-pomolta kova kritiikki Suomen pörssiyhtiöitä kohtaan"
 image_credit: "Photo by Arturo Añez on Unsplash"
 image_source_url: "https://unsplash.com/photos/stock-market-chart-shows-a-downward-trend-MA1Xobltz5o?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - pörssi
+  - yritys
 ---
 
 Ammattiliitto Pro on esittänyt voimakasta kritiikkiä Suomen pörssiyhtiöitä kohtaan. Pro väittää, että yritykset ovat valinneet lyhytnäköisen strategian keskittyen osinkojen suurentamiseen sen sijaan, että ne investoisivat tulevaisuuteen. Pron puheenjohtaja Niko Simola korostaa, että suomalaisissa yrityksissä ei tunnu olevan halua kehittää kasvustrategioita, vaan pääpaino on omistajien palkitsemisessa.

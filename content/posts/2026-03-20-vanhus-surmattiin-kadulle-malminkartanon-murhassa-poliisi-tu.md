@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Vanhus surmattiin kadulle Malminkartanon murhassa – Polii
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - murha
+  - poliisi
+  - rikos
+  - helsinki
 ---
 
 Malminkartanon alueella Helsingissä tapahtui keskiviikkoiltana henkirikos, kun 26-vuotias mies epäillään surmanneen noin 80-vuotiaan vanhuksen teräaseella. Poliisi on luokitellut tapauksen murhaksi ja tutkii veritekoa erityisen raakana. Tutkinnanjohtaja, rikoskomisario Jari Korkalainen, vahvisti, että uhriin kohdistui voimakasta väkivaltaa.

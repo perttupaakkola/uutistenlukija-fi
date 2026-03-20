@@ -15,6 +15,12 @@ image_alt: "Talous: Energiaviranomainen suosittelee hätätason toimia öljyn hi
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - energia
+  - öljy
+  - lapset
+  - liikenne
 ---
 
 Kansainvälinen energiajärjestö IEA on antanut hallituksille kymmenen suositusta, joiden avulla perheet ja yritykset voivat varautua jatkuvaan häiriöön energiakaupassa. Suositukset ovat erityisen tärkeitä, sillä öljyn hinnat ovat nousseet jyrkästi Lähi-idän konfliktin seurauksena. Järjestö kehotti hallituksia alentamaan moottoriteiden nopeusrajoituksia ja kannusti työntekijöitä kimppakyytien käyttöön tai etätyön tekemiseen.

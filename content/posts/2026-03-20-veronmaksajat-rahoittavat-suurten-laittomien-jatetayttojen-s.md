@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Veronmaksajat rahoittavat suurten laittomien jätetäyttö
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - verotus
+  - luonto
 ---
 
 Englannin hallitus on päättänyt puuttua suureen laittomaan jätetäyttöongelmaan ja siivota kolme suurinta laittomia kaatopaikkaa kansalaisten verovaroin. Tämän toimenpiteen taustalla on kansallinen jätteenkierrätysohjelma, joka tähtää jätteen vähentämiseen ja ympäristön suojelemiseen.

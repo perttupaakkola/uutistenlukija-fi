@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Ruotinkylällä hetkellinen sähkökatko"
 image_credit: "Photo by Sam Di Risio on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-snow-covered-forest-filled-with-lots-of-trees-bKavZi21H50?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - energia
+  - yritys
+  - liikenne
 ---
 
 Ruotinkylällä tapahtui tänä iltana hetkellinen sähkökatko, joka alkoi noin klo 22:30. Katkon syynä oli Äänekosken Energian mukaan tekninen vika, joka aiheutti sähkökatkon alueella. Katko kesti vain muutamia minuutteja, joten asukkaille ei aiheutunut merkittäviä haittoja.

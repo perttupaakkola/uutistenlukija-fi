@@ -15,6 +15,11 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - oikeus
+  - murha
+  - lapset
 ---
 
 Sydneyn Bondi Beachilla tapahtuneen ampumisen epäillyn tekijän Naveed Akramin perheenjäsenet ovat saaneet tappouhkauksia joulukuun antisemitistisen iskun jälkeen. Akramin asianajaja vaati oikeudessa perheenjäsenten henkilöllisyyksien salaamista.

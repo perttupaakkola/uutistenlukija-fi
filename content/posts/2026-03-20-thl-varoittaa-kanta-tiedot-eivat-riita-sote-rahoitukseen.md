@@ -15,6 +15,11 @@ image_alt: "Kotimaa: THL varoittaa: Kanta-tiedot eivät riitä sote-rahoitukseen
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - terveys
+  - sää
+  - liikenne
 ---
 
 Terveyden ja hyvinvoinnin laitos (THL) on julkaissut uuden arvioinnin, jossa se epäilee, että Kanta-tietojen käyttäminen sosiaali- ja terveydenhuollon rahoituksen laskentaperusteena ei ole järkevää. THL:n mukaan Kanta-tiedot eivät riitä kattamaan kaikkia tarvittavia tietoja, jotka ovat välttämättömiä säännösten ja lakien noudattamiseksi. Raportissa korostuu, että Kanta-järjestelmä on suunniteltu tiedonhallintaan, mutta se ei välttämättä kuvaa monimutkaisempia palvelupoliittisia kenttiä. Vaikka Kanta-tiedot voivat olla arvokkaita potilastietojen säilyttämisessä, niiden käytettävyys rahoitusmallissa on kyseenalainen. THL korostaa, että tulevina vuosina sotetoimijoiden kanssa tulee pohtia vaihtoehtoisia tapoja rahoituksen laskentaan ja varmistaa, että varat kohdistuvat oikea-aikaisesti ja oikeisiin palveluihin. Asiantuntijat varoittavat, että virheelliset laskentaperusteet voivat johtaa resurssien väärinkäyttöön ja hoidon heikentymiseen. Kanta-tiedot ovat edelleen merkittävä osa suomalaisessa terveydenhuollossa, mutta niiden roolia rahoitusperusteena on arvioitava kriittisesti. THL:n luoma paine sosiaali- ja terveyspalveluiden kehittämiseen voi johtaa merkittäviin muutoksiin rahoitusmalleissa tulevaisuudessa.

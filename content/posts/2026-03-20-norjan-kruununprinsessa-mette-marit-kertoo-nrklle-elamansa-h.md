@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Norjan kruununprinsessa Mette-Marit kertoo NRK:lle elämä
 image_credit: "Photo by stefan kroeger on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-gold-crown-sitting-on-top-of-a-table-XK5ywMcV0wY?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - lapset
+  - kansainvälinen
 ---
 
 Norjan kruununprinsessa Mette-Marit avasi NRK:n haastattelussa henkilökohtaisia haasteitaan ja kamppailujaan elämänsä varrella. Hän kertoi vaikeista ajoista, joihin ovat kuuluneet sekä terveydelliset ongelmat että perhesiteet. Mette-Marit, joka on avioitunut kruununprinssi Haakonin kanssa, on ollut julkisuuden keskiössä vuodesta 2001, ja hänen tarinansa on saanut monilta ymmärrystä ja tukea.

@@ -15,6 +15,10 @@ image_alt: "Talous: Ammattiliitto Pro syyttää pörssiyhtiöitä lyhytnäkoisyy
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - pörssi
+  - yritys
 ---
 
 Ammattiliitto Pro on esittänyt syytöksiä Suomen pörssiyhtiöitä kohtaan, väittäen niiden valinneen lyhytnäköisen strategian osinkojen jakamisessa. Liiton puheenjohtaja Niko Simola totesi, että yhtiöt jakavat omistajilleen ennätyksellisiä osinkoja, vaikka taloudellinen tilanne on heikko. Simolan mukaan tämä kertoo johdon haluttomuudesta hakea kasvua tai investoida tulevaisuuteen. "Suomalaisissa yrityksissä ei keksitä muuta kohdetta rahalle kuin omistajien palkitseminen", hän moittii.

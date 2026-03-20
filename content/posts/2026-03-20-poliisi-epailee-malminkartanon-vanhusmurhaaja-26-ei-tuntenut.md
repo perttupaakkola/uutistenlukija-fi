@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Poliisi epäilee: Malminkartanon vanhusmurhaaja, 26, ei tun
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - poliisi
+  - murha
+  - liikenne
+  - helsinki
 ---
 
 Malminkartanon alueella Helsingissä tapahtui äskettäin erityisen raaka murha, jossa 26-vuotias nuori mies on epäiltynä vanhuksen surmasta. Poliisin alustavien tietojen mukaan tekijä ja uhri eivät tunteneet toisiaan ennestään. Surma tapahtui keskellä katua, mikä herätti huomiota ohikulkijoiden keskuudessa.

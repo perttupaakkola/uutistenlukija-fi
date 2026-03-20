@@ -15,6 +15,10 @@ image_alt: "Mette-Marit paljastaa suhteensa Jeffrey Epsteiniin – pyrkii uhriut
 image_credit: "Photo by Diwei Zhu on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-statue-of-two-people-standing-next-to-each-other--ROdbuk_fVM?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - kansainvälinen
+  - politiikka
 ---
 
 Norjan kruununprinsessa Mette-Marit on tuonut esiin suhteensa edesmenneeseen Jeffrey Epsteiniin, etsien syyllisyyden sijasta ymmärrystä itseensä manipuloinnin uhriutumisensa kautta. Hän viittaa viimeaikaisiin asiakirjoihin, jotka paljastavat yksityiskohtia hänen ja Epsteinin ystävyydestä, joka on ollut tunnettu vuodesta 2009, jolloin Epstein oli jo tuomittu alaikäisiin kohdistuvista rikoksista.

@@ -15,6 +15,11 @@ image_alt: "Tiede: Kelo-hanke tuo esiin kelot luonnontieteiden ja taiteen avulla
 image_credit: "Photo by DIANA HAUAN on Unsplash"
 image_source_url: "https://unsplash.com/photos/woman-in-white-laboratory-gown-holding-black-microphone-oFK7xgf4_50?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - tiede
+  - luonto
+  - talous
+  - liikenne
 ---
 
 Kelo-hanke käynnistää laajan tutkimusprojektin kelojen merkityksen ja dynamiikan ymmärtämiseksi. Hopeanharmaat kelot, joita voi nähdä luonnonmetsissä, ovat olennainen osa luontoa ja ne tarjoavat elinympäristön useille erikoistuneille eliöille. Kelot voivat pysyä pystyssä jopa satoja vuosia kuolemansa jälkeen, mikä tekee niistä tärkeitä myös hiilen kierron ja lajimonimuotoisuuden kannalta. Talousmetsistä kelot ovat hävinneet suurelta osin, mikä nostaa tarvetta tutkia niiden ekologisia vaikutuksia. 

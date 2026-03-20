@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Humppilan kunta kärsii työttömyyssakkojen vaikutuksista"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - kirjallisuus
+  - työttömyys
 ---
 
 Humppilan kunta on ajautunut taloudellisiin vaikeuksiin työttömyyssakkojen vuoksi, ja tilanne herättää huolta paikallisessa päätöksenteossa. Kunnan työttömyyteen liittyvät sakot ovat yli kaksinkertaistuneet 300 000 euroon, mikä on huomattava summa pienelle kunnalle. Kunnanjohtaja Minna Ylikännön mukaan sakkomaksut voivat johtaa perikatoon tai edellisten luottamustehtävien irtisanomisiin, mikä on jo nähtävissä. 

@@ -15,6 +15,11 @@ image_alt: "Talous: Lakkitehtaan paluu Lietoon tuo mahdollisuuksia"
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yritys
+  - luonto
+  - teknologia
 ---
 
 Lieto on saanut lakkitehtaan takaisin kotiseudulleen, ja yritys uskoo, että neljä vuodenaikaa tukevat sen toimintaa. Tehtaan toimitusjohtaja kertoi, että alueen vuodenaikojen vaihtelu tarjoaa ainutlaatuisen ympäristön lakkituotannolle, mikä parantaa tuotteiden laatua ja tehokkuutta. Tehdas on investoinut moderniin teknologiaan, joka mahdollistaa joustavan tuotannon eri vuodenaikoina.

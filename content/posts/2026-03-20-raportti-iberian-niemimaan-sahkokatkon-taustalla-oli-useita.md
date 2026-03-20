@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Raportti: Iberian niemimaan sähkökatkon taustalla oli us
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - kansainvälinen
 ---
 
 Iberian niemimaan huhtikuussa 2022 tapahtunut laaja sähkökatko johtui useista syistä, käy ilmi asiantuntijapaneelin raportista. Sähköt katkesivat samanaikaisesti Espanjassa, Portugalissa ja osassa Lounais-Ranskaa. Raportti vahvistaa, että alueen sähköjärjestelmä ei pystynyt hallitsemaan jännitepiikkejä, mikä johti suurimpaan sähkökatkoon Euroopassa yli kahteenkymmeneen vuoteen.

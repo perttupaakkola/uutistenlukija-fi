@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - nato
+  - turvallisuus
+  - luonto
+  - lentoliikenne
 ---
 
 Pohjois-Norjassa, Pohjois-Ruotsissa ja Suomen Lapissa käynnissä oleva Cold Response -sotaharjoitus kokoaa yhteen 32 000 sotilasta 14 Nato-maasta. Harjoitus jatkuu kuluvan viikon perjantaihin asti. Mukana on muun muassa 3 000–4 000 Yhdysvaltain merijalkaväen sotilasta sekä kalustoa lentokoneista sukellusveneisiin.

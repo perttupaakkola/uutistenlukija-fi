@@ -15,6 +15,10 @@ image_alt: "Urheilu: Fifa vaatii naisjoukkueilta naisvalmentajia – Marianne Mi
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - sää
+  - jalkapallo
 ---
 
 Kansainvälinen jalkapalloliitto Fifa on päättänyt, että naisten joukkueilla on oltava jatkossa vähintään yksi naispuolinen pää- tai apuvalmentaja. Tämä sääntö koskee kaikkia maan- ja seurajoukkueita, sekä aikuis- että junioritasolla, ja on osa Fifan pyrkimystä lisätä naisten näkyvyyttä urheilussa.

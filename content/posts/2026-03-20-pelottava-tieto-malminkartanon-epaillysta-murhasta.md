@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Pelottava tieto Malminkartanon epäillystä murhasta"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - murha
+  - poliisi
+  - rikos
+  - liikenne
 ---
 
 Malminkartanossa tapahtunut henkirikos keskiviikkoiltana on herättänyt pelkoa alueen asukkaissa. Poliisi tutkii tapausta murhana, epäiltynä on 26-vuotias mies, joka ei tuntenut noin 80-vuotiasta uhriaan ennestään. Tapauksen raasta luonteesta johtuen tutkijat ovat nostaneet rikoksen nimikkeen koventunutta, ja tutkinnanjohtaja, rikoskomisario Jari Korkalainen, kuvailee tekoa erityisen julmaksi.

@@ -9,6 +9,11 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - teknologia
+  - yritys
+  - kulttuuri
+  - liikenne
 description: "Startup-yritysten perustajat tarvitsevat työkaluja konfliktien ratkaisemiseen, jotta tiimityöskentely sujuu tehokkaasti alusta alkaen."
 image: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3Mzk2OTA4OXww&ixlib=rb-4.1.0&q=85"
 image_alt: "Startup-yritysten perustajat tarvitsevat työkaluja konfliktien ratkaisemiseen"

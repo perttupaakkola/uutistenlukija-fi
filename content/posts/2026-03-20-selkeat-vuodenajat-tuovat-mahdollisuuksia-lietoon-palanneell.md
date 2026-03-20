@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Selkeät vuodenajat tuovat mahdollisuuksia Lietoon palannee
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - talous
+  - sää
 ---
 
 Lieto on saanut palautettua lakkitehtaan toiminnan, mikä on merkittävä askel alueen talouskehitykselle. Tehdas on ollut suljettuna, mutta sen avaaminen luo uusia työpaikkoja ja elvyyttää paikallistaloutta. Paikalliset odottavat innolla lakkitehtaasta saatavaa työllisyysetua ja taloudellista vireyttä.

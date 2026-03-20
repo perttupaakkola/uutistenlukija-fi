@@ -15,6 +15,12 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - pankki
+  - korot
+  - energia
+  - yritys
 ---
 
 Australian keskuspankki RBA kokoontuu tänään päättämään maan ohjauskorosta. Samaan aikaan maan energiaregulaattori on kutsunut suuret polttoaineyhtiöt kuultaviksi polttoaineiden hinnoittelusta, joka on noussut poliittiseksi kysymykseksi erityisesti syrjäseuduilla.

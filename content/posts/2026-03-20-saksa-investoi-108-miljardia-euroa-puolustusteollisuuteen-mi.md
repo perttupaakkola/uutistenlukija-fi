@@ -15,6 +15,12 @@ image_alt: "Talous: Saksa investoi 108 miljardia euroa puolustusteollisuuteen, m
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - budjetti
+  - puolustus
+  - liikenne
+  - oulu
 ---
 
 Saksa ja Suomi aiovat tiivistää yhteistyötä puolustusteollisuuden kentällä, mikä avaa uusia markkinoita suomalaisille yrityksille. Saksalais-suomalaisen kauppakamarin toimitusjohtaja Jan Feller julkisti tiedot Oulussa käydyssä seminaarissa. Saksalla on suurimmat investoinnit Euroopassa oman puolustuskykynsä parantamiseen, ja sen tämänhetkinen puolustusbudjetti on huikeat 108 miljardia euroa.

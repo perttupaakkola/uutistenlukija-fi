@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Teneriffalla lunta tupaan: Pahimmat ennusteet kävivät to
 image_credit: "Photo by Robert Katzki on Unsplash"
 image_source_url: "https://unsplash.com/photos/white-clouds-during-day-time-pGbT57F4nDE?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - sää
+  - kansainvälinen
 ---
 
 Therese-myrsky on aiheuttanut suurta kaaosta Kanariansaarilla, erityisesti Teneriffalla, jossa mitattiin torstaina 4,5 pakkasastetta. Tämä teki Teneriffasta koko Espanjan kylmimmän paikan, kuten Canarian Weekly raportoi. Alkuviikosta lumisateet olivat vain mahdollisuus, mutta nyt ne ovat toteutuneet, ja lunta on satanut runsaasti korkeimmilla alueilla, mikä on yllättänyt monet turistit.

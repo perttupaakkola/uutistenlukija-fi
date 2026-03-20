@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Veronmaksajat rahoittavat suurten kaatopaikkojen siivousta
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - verotus
 ---
 
 Britannian hallitus on päättänyt puuttua ongelmaan ja siivota kolme suurinta laittomasti perustettua kaatopaikkaa, jotka sisältävät yhteensä 48 000 tonnia jätettä. Nämä kaatopaikat sijaitsevat Wiganissa, Sheffieldissä ja Lancashirella, ja niiden siivouksen maksavat veronmaksajat osana kansallista jätteenhallintasuunnitelmaa. Aiemmin kaatopaikkojen siivouksen on pitänyt olla maanomistajien vastuulla, mutta nyt tilanne on muuttunut.

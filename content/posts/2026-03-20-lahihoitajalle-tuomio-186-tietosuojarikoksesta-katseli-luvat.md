@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Lähihoitajalle tuomio 186 tietosuoja­rikoksesta – katse
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - oikeus
+  - rikos
+  - lääketiede
+  - liikenne
 ---
 
 Keski-Suomen käräjäoikeus on tuominnut lähihoitajan 186 tietosuojarikoksesta, jotka liittyvät potilastietojen luvattomaan katseluun Jyväskylässä. Käsitelty tapaus paljasti huolestuttavan vyyhdin, jossa nuori lähihoitaja oli tarkastellut useiden potilaiden tietoja ilman asianmukaista lupaa. Tuomion mukaan hänelle annettiin neljän kuukauden ehdollinen vankeus ja velvoite maksaa merkittäviä korvauksia.

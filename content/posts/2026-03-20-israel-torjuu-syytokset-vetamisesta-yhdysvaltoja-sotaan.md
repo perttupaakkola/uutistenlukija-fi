@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Israel torjuu syytökset vetämisestä Yhdysvaltoja sotaan
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - energia
+  - öljy
+  - sota
 ---
 
 Israel on hylännyt väitteet, että se vetoaisi Yhdysvaltojen tukeen konfliktissaan Irania vastaan. Tilanne on erittäin jännittynyt, ja Yhdysvaltain hallitus on ilmoittanut tukevansa Israelia tarvittaessa. Tämä kehitys on herättänyt huolta keskeisten öljynviejämaiden vakaudesta. Samalla Australia valmistautuu vastaamaan polttoaineen saatavuusongelmiin, joita konfliktit aiheuttavat. Pääministeri Anthony Albanese on kutsunut koolle kiireellisen kokouksen kansalliselle kabinetille keskustellakseen hinnoista ja saatavuudesta. Australian hallituksen toimenpiteet ovat osa laajempaa pyrkimystä hallita tilannetta, joka on tuottanut huomattavia hintashokkeja ja aiheuttanut huolia maan toimitusväylien turvallisuudesta.

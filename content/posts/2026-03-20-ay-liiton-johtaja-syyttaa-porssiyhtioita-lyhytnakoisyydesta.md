@@ -15,6 +15,10 @@ image_alt: "Talous: Ay-liiton johtaja syyttää pörssiyhtiöitä lyhytnäköisy
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yritys
+  - pörssi
 ---
 
 Ammattiliitto Pro on julkaissut voimakkaan kannanoton, jossa se kritisoi Suomen pörssiyhtiöitä lyhytnäköisestä strategiasta. Liiton puheenjohtaja Niko Simola arvioi, että yhtiöt jakavat osinkoja ennätysmäisiä määriä samalla, kun niiden tulos kasvaa vaatimattomasti. 'On surullista, että suurimmaksi tavoitteeksi on tullut omistajien palkitseminen sen sijaan, että investoitaisiin tulevaisuuteen ja kasvuun', Simola sanoo.

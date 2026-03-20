@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: MP kysyi hallitukselta kaloista, jotka kuolivat ojassa"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - oikeus
+  - luonto
 ---
 
 Entinen ympäristöministeri Steve Barclay on esittänyt kysymyksen parlamentissa siitä, miksi kenellekään ei ole nostettu syytettä noin 900 kuolleen kalan vuoksi. Kyseiset kalat löydettiin Kings Delph -nimisestä ojan osasta syyskuussa 2024, missä korkeat ammoniakkitasot ja matalat happitasot olivat syynä kuolemaan. Barclay, joka edustaa aluetta, vaati tilannetta selvittämään syitä ja vastuuhenkilöitä pidättämään.

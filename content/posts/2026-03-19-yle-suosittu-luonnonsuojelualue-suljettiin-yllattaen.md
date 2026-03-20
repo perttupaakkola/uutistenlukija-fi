@@ -15,6 +15,10 @@ image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=80&w=400"
 draft: false
+tags:
+  - kotimaa
+  - luonto
+  - hallitus
 ---
 
 Metsähallitus on päättänyt sulkea Siikanevan soidensuojelualueen Ruovedellä asiakasturvallisuuden vuoksi. Tämä päätös yllätti alueen kävijät, sillä Siikaneva on Pirkanmaan laajin yhtenäinen suoalue ja tärkein soidensuojelualue maakunnassa. Sulkemiselle ei ole annettu tarkkoja syitä, mutta se herättää huolta alueen tulevaisuudesta ja siitä, miten se vaikuttaa luonnonsuojelun ja matkailun yhdistämiseen.

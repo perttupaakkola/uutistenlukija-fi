@@ -15,6 +15,10 @@ image_alt: "Talous: Woltin uusi haastaja Swype aloittaa Suomessa"
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yritys
+  - yhdysvallat
 ---
 
 Suomen ruokalähettimarkkinoille saapuu uusi toimija, kun suomalainen tilausalusta Swype aikoo täyttää Foodoran jättämän aukon. Foodora ilmoitti helmikuussa poistuvansa Suomesta, mikä avasi ovet Swypelle. Yritys on saanut runsaasti kuljettajahakemuksia, ja se pyrkii laajentamaan toimintaansa koko maan alueella.

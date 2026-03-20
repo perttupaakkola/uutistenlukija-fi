@@ -15,6 +15,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - talous
+  - korot
+  - inflaatio
+  - pankki
 ---
 
 Australian keskuspankki nosti ohjauskorkoaan 25 peruspisteellä 4,1 prosenttiin. Kyseessä on jo kahdestoista koronnostopäätös vuoden 2022 toukokuun jälkeen.

@@ -15,6 +15,10 @@ image_alt: "Kotimaa: THL: Kanta-tiedot eivät sovellu sote-rahoituksen perustaks
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - terveys
+  - liikenne
 ---
 
 Terveyden ja hyvinvoinnin laitos (THL) on julkaissut tiedotteen, jossa se arvioi, että Kanta-järjestelmän tiedot eivät ole luotettava perusta sote-rahoituksen laskennassa. THL:n mukaan tiedoissa esiintyy puutteita, jotka voivat vaikuttaa rahoituksen oikeudenmukaisuuteen ja tehokkuuteen. Tämä huomiointi nousee esiin erityisesti nyt, kun sote-uudistus etenee ja rahoitusmalleja tarkastellaan uudelleen.

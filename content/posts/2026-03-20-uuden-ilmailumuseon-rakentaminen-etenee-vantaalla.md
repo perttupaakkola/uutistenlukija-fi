@@ -15,6 +15,10 @@ image_alt: "Kulttuuri: Uuden Ilmailumuseon rakentaminen etenee Vantaalla"
 image_credit: "Photo by Jack on Unsplash"
 image_source_url: "https://unsplash.com/photos/people-walking-inside-building-with-white-airplane-SIFkdAVhJHY?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - budjetti
+  - urheilu
 ---
 
 Vantaalle, Aviapoliksen alueelle, kohoaa uusi ilmailumuseo, joka tulee olemaan keskeinen nähtävyys ja kohtaamispaikka ilmailuharrastajille. Museon suunnittelu etenee nopeasti, ja parhaillaan käynnissä on kilpailutus rakennusurakoitsijasta ja suunnittelijoista. Hankkeen budjetti on 25 miljoonaa euroa, ja sen rahoitus koostuu valtion, Vantaan kaupungin sekä yksityisten tahojen osuuksista.

@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Australian pääministeri sai huutoja moskeijassa Ramadan-
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - sota
+  - israel
 ---
 
 Australian pääministeri Anthony Albanese kohtasi vastustusta moskeijassa, jossa vietettiin Ramadanin päättymistä. Albanese ja sisäministeri Tony Burke olivat Lakemba-moskeijassa, jossa heidät toivotettiin tervetulleiksi yhteisön johtajien toimesta. Tapahtumassa osa osallistujista huusi heitä ”genosiditukijoiksi”, mikä heijastaa syvää närkästystä maan hallituksen toimintaa kohtaan Israel-Gaza-sodan sekä nousevan islamofobian suhteen. Poliisi poisti yhden mielenosoittajan moskeijasta, mutta hänet vapautettiin ilman syytteitä.

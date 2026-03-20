@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Australialaiset varautuvat öljyn hinnan nousuun Lähi-id�
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - israel
+  - hallitus
+  - energia
+  - inflaatio
 ---
 
 Australialaiset viranomaiset valmistelevat toimenpiteitä öljyn hintojen nousun vuoksi, joka on seurausta Lähi-idän konfliktista. Pääministeri Anthony Albanese on kutsunut yhteen kansallisen kabinettinsa keskustelemaan öljyhuollon vakavista ongelmista, joita sota Israelin ja Iranin välillä on aiheuttanut. Tämä on johtanut kiireellisiin toimiin markkinoiden olosuhteiden kestävyyden parantamiseksi ja hintojen nousun vähentämiseksi.

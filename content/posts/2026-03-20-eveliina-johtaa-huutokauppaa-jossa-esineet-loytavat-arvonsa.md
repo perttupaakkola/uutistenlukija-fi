@@ -15,6 +15,10 @@ image_alt: "Kulttuuri: Eveliina johtaa huutokauppaa, jossa esineet löytävät a
 image_credit: "Photo by Jimmy Liu on Unsplash"
 image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - taide
+  - viihde
 ---
 
 Turussa huutokauppaa pyörittävä Eveliina on luonut ainutlaatuisen liiketoiminnan, jossa erilaiset esineet löytävät uuden kodin. Huuto- ja markkinapaikka, joka houkuttelee asiakkaita eri ikäryhmistä, keskittyy erityisesti outoihin ja mielenkiintoisiin esineisiin. Eveliina kertoo, että monet ihmiset ovat yllättyneitä siitä, millaiset esineet herättävät kiinnostusta ja löytävät arvonsa huutokaupassa. Huutokaupat tarjoavat mahdollisuuden hauskoihin ja jännittäviin kokemuksiin, ja samalla ne auttavat ihmisiä kierrättämään tavaroitaan. Eveliina uskoo, että jokaisella esineellä on oma tarinansa ja oikea ostaja, joka arvostaa sitä.

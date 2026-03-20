@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Suomalainen Swype haastaa Woltin ruokalähettimarkkinoilla"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - yhdysvallat
+  - politiikka
 ---
 
 Uusi suomalainen tilausalusta Swype on astunut Suomen ruokalähettimarkkinoille juuri, kun Foodora ilmoitti vetäytyvänsä Suomesta. Swype aikoo täyttää Foodoran jättämän aukon markkinoilla ja on saanut jo runsaasti kuljettajahakemuksia. Tällä hetkellä Swype toimii koko Suomen alueella ja tarjoaa palveluja noin sadalle ravintolalle, mutta suunnittelee laajentamista.

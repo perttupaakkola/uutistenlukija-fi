@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Kokoomuksen varapuheenjohtaja­kisa käynnistynyt – Ikone
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - eduskunta
+  - kokoomus
 ---
 
 Kokoomuksen varapuheenjohtajakisa on käynnistynyt nopeasti, kun kunta- ja alueministeri Anna-Kaisa Ikonen on ilmoittanut luopuvansa varapuheenjohtajan tehtävästään. Ikonen, joka on toiminut tehtävässä kuusi vuotta, ilmoitti päätöksestään sosiaalisessa mediassa, mikä on herättänyt keskustelua mahdollisista seuraajista.

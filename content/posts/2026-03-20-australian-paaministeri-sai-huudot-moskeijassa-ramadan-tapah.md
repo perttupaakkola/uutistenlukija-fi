@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: Australian pääministeri sai huudot moskeijassa Ramadan-t
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - sota
+  - israel
 ---
 
 Australian pääministeri Anthony Albanese sai osakseen huutoja puhuessaan Lakemba-moskeijassa Ramadanin päättymisen kunniaksi. Paikalla olleet seurakunnan jäsenet syyttivät häntä 'genosidin tukijaksi' ja huusivat, että hänet tulee karkottaa.

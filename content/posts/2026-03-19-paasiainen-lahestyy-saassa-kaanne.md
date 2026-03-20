@@ -15,6 +15,10 @@ image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=80&w=400"
 draft: false
+tags:
+  - kotimaa
+  - sää
+  - liikenne
 ---
 
 Lämpömittari kohoaa tulevina viikkoina miellyttäviin lukemiin, mikä tuo mukanaan kevätsateet ja auringonpaisteen. Ilmatieteen laitoksen ennusteet lupaavat, että Suomessa nautitaan lähes kesäisestä säästä pääsiäisen aikaan. Erityisesti eteläisessä Suomessa lämpötilat voivat nousta jopa 15 asteeseen, mikä houkuttelee ulkoilemaan ja nauttimaan kevään ensimmäisistä lämpimistä päivistä.

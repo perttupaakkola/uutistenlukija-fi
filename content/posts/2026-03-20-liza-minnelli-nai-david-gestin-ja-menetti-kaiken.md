@@ -15,6 +15,10 @@ image_alt: "Kulttuuri: Liza Minnelli nai David Gestin ja menetti kaiken"
 image_credit: "Photo by Jimmy Liu on Unsplash"
 image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - taide
+  - viihde
 ---
 
 Legendaarinen laulaja ja näyttelijä Liza Minnelli avasi avioliittonsa David Gestin kanssa ja siihen liittyvät taloudelliset haasteet. Minnelli jakoi muistojaan yhdestä hänen elämäntarinansa käännekohdasta, joka oli käytännössä katastrofi hänelle. Avioliitto, joka alkoi vuonna 2002, päättyi eroon vain kolme vuotta myöhemmin, ja matkan varrella Minnelli menetti suuren osan omaisuudestaan.

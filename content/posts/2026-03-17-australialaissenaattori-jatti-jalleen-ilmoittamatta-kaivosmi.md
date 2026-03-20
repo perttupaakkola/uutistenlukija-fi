@@ -15,6 +15,11 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - politiikka
+  - talous
+  - yritys
 ---
 
 Australian One Nation -puolueen johtaja Pauline Hanson on toistuvasti laiminlyönyt velvollisuutensa ilmoittaa kaivosmiljardööri Gina Rinehartin kustantamista lennoista.

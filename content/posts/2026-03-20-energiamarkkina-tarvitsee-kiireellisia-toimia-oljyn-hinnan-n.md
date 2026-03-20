@@ -15,6 +15,12 @@ image_alt: "Talous: Energiamarkkina tarvitsee kiireellisiä toimia öljyn hinnan
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - energia
+  - inflaatio
+  - öljy
+  - luonto
 ---
 
 Kansainvälinen energia- ja ympäristöjärjestö (IEA) on julkaissut kiireellisiä suosituksia hallituksille öljyn hintojen nousun hillitsemiseksi Lähi-idän konfliktin seurauksena. IEA kannustaa hallituksia alentamaan moottoriteiden nopeusrajoituksia ja rohkaisee työntekijöitä työskentelemään etätyössä tai käyttämään kimppakyytijärjestelyjä. Suositukset tähtäävät öljyn kysynnän vähentämiseen ja kotitalouksien sekä yritysten valmiuden parantamiseen pitkän aikavälin häiriöitä varten.

@@ -15,6 +15,11 @@ image_alt: "Kotimaa: THL: Kanta-tiedot eivät sovi sote-rahoituksen perustaksi"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - terveys
+  - lääketiede
+  - liikenne
 ---
 
 Terveyden ja hyvinvoinnin laitos (THL) on julkaissut uuden raportin, jonka mukaan Kanta-tiedot eivät ole riittävä pohja sosiaali- ja terveydenhuollon rahoituksen laskentaperusteeksi. THL:n asiantuntijat arvioivat, että nykyiset tiedot eivät kata riittävästi moninaisuutta ja muuttuvuutta, joka liittyy asiakaskuntien tarpeisiin ja palveluiden käyttöön. 

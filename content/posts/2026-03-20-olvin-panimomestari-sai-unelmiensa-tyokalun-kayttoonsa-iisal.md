@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Olvin panimomestari sai unelmiensa työkalun käyttöönsä
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - politiikka
+  - suomi
 ---
 
 Olvi on avannut uuden, modernin keittämön Iisalmeen 20 miljoonan euron investoinnin myötä. Uusi keittämö parantaa tuotantokapasiteettia viidenneksellä ja mahdollistaa laajemman valikoiman erikoisoluita. Vanha keittämö oli jo aikansa elänyt, sillä se oli rakennettu vuonna 1989 ja sen elinkaari oli päättymässä.

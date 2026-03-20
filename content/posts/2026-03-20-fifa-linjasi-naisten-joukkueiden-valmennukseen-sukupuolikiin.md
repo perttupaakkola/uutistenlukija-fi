@@ -15,6 +15,10 @@ image_alt: "Urheilu: Fifa linjasi naisten joukkueiden valmennukseen sukupuolikii
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - sää
+  - jalkapallo
 ---
 
 Kansainvälinen jalkapalloliitto Fifa on päättänyt, että naisten joukkueilla tulee jatkossa olla vähintään yksi naispuolinen pää- tai apuvalmentaja. Tämä sääntö koskee kaikkia maa- ja seurajoukkueita sekä aikuisissa että junioritasolla. Säännön taustalla on halu parantaa naisten näkyvyyttä valmennustehtävissä.

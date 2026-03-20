@@ -15,6 +15,10 @@ image_alt: "Talous: Suomalaista ruokalähettimarkkinoita ravistelee uusi toimija
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yritys
+  - yhdysvallat
 ---
 
 Suomen ruokalähettimarkkinoilla alkaa uusi aikakausi, kun suomalainen tilausalusta Swype aikoo täyttää Foodoran jättämän aukon. Foodora ilmoitti helmikuussa vetäytyvänsä Suomesta, minkä jälkeen Swype on saanut suuren määrän kuljettajahakemuksia.

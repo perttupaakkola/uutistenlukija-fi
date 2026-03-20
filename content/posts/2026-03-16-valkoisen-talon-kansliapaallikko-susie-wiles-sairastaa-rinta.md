@@ -9,6 +9,11 @@ author_title: "Päätoimittaja"
 author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
 author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - lääketiede
+  - yhdysvallat
+  - sää
 description: "Valkoisen talon kansliapäällikkö Susie Wiles on saanut varhaisen rintasyöpädiagnoosin, mutta aikoo jatkaa tehtävässään hoitojen ohella."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Valkoisen talon kansliapäällikkö Susie Wiles sairastaa rintasyöpää"

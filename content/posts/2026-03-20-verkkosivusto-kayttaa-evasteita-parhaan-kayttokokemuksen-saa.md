@@ -15,6 +15,10 @@ image_alt: "Kulttuuri: Verkkosivusto käyttää evästeitä parhaan käyttökoke
 image_credit: "Photo by Jimmy Liu on Unsplash"
 image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - liikenne
+  - taide
 ---
 
 Tekniikan museon verkkosivusto hyödyntää evästeitä tarjotakseen kävijöille hyvän käyttökokemuksen. Evästeiden avulla sivusto tunnistaa palaavat käyttäjät ja tallentaa heidän kielitoiveensa. Välttämättömät evästeet varmistavat, että nämä toiminnot ovat käytössä.

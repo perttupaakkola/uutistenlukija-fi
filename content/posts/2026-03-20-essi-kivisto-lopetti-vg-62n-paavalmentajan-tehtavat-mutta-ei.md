@@ -15,6 +15,10 @@ image_alt: "Essi Kivistö lopetti VG-62:n päävalmentajan tehtävät mutta ei s
 image_credit: "Photo by Anton Maksimov 5642.su on Unsplash"
 image_source_url: "https://unsplash.com/photos/black-stone-on-white-surface-1Nn5ggHhcCI?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - helsinki
+  - kilpailu
 ---
 
 Essi Kivistö on päättänyt jättää VG-62:n päävalmentajan tehtävät, mutta ei siirrykään Helsinkiin, kuten aiemmin spekuloitiin. Kivistö on toiminut seuran päävalmentajana useita kausia ja ollut keskeisessä roolissa joukkueen kehittämisessä. Hänen päätöksensä taustalla on henkilökohtaisia syitä, mutta Kivistö ei ole ilmoittanut tulevista suunnitelmistaan tai uudesta seurasta, johon hän mahdollisesti siirtyy.

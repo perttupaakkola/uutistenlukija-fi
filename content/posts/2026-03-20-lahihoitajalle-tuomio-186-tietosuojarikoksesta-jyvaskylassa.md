@@ -15,6 +15,12 @@ image_alt: "Kotimaa: Lähihoitajalle tuomio 186 tietosuojarikoksesta Jyväskylä
 image_credit: "Photo by Brett Jordan on Unsplash"
 image_source_url: "https://unsplash.com/photos/text-dZSLi6nbAdE?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - oikeus
+  - rikos
+  - lääketiede
+  - sää
 ---
 
 Keski-Suomen käräjäoikeus on tuominnut lähihoitajan 186 tietosuojarikoksesta, joita hän oli tehnyt työssään Keski-Suomen hyvinvointialueella. Tuomio sisältää neljän kuukauden ehdollisen vankeuden sekä merkittäviä korvauksia asianomistajille. Teot tapahtuivat huhtikuun 2022 ja kesäkuun 2023 välillä, ja lähihoitajalla oli pääsy potilastietojärjestelmiin.

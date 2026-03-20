@@ -15,6 +15,11 @@ image_alt: "BTS palaa armeijapalveluksesta - mutta onko heidän albuminsa odotuk
 image_credit: "Photo by Jimmy Liu on Unsplash"
 image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - musiikki
+  - puolustus
+  - liikenne
 ---
 
 Etelä-Korealainen BTS-yhtye palaa musiikkikentälle palvelustaan armeijassa, ja heidän kymmenes albuminsa "Arirang" herättää suurta huomioita. Yhtyeen paluu tapahtuu myytyjen konserttien myötä, ja erityisesti heidän ensimmäistä keikkaansa Soulin stadionilla odotetaan houkuttelevan yli 250 000 fania, samalla kun esitys live-striimataan yli 190 maahan.

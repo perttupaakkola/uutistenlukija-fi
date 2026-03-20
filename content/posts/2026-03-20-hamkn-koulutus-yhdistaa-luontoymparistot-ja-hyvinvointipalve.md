@@ -15,6 +15,10 @@ image_alt: "Kotimaa: HAMK:n koulutus yhdistää luontoympäristöt ja hyvinvoint
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - koulutus
+  - luonto
 ---
 
 Hämeen ammattikorkeakoulu (HAMK) lanseeraa uuden koulutusohjelman, joka keskittyy luontoympäristön ja hyvinvoinnin yhdistämiseen. Koulutuksen tavoitteena on syventää opiskelijoiden asiantuntijaosaamista ekososiaalisista järjestelmistä ja niiden merkityksestä hyvinvointipalveluissa. Koulutus tarjoaa osallistujille mahdollisuuden kehittää omia työtapojaan ja johtamisstrategioitaan ottaen huomioon luontosuhteen merkityksen ihmisen hyvinvoinnin edistäjänä.

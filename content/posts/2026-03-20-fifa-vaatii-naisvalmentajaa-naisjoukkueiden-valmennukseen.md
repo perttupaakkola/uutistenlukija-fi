@@ -15,6 +15,10 @@ image_alt: "Urheilu: Fifa vaatii naisvalmentajaa naisjoukkueiden valmennukseen"
 image_credit: "Photo by Peter Zhan on Unsplash"
 image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - urheilu
+  - sää
+  - jalkapallo
 ---
 
 Kansainvälinen jalkapalloliitto Fifa on linjannut, että kaikilla naisjoukkueilla on oltava vähintään yksi naispäävalmentaja tai avustava valmentaja. Uusi sääntö astuu voimaan kaikissa Fifan alaisissa turnauksissa, mukaan lukien tulevissa naisten MM-kisoissa. Tämä avaa mahdollisuuksia naisvalmentajille ympäri maailmaa.

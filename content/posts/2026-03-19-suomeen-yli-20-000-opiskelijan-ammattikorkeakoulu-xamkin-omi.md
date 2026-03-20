@@ -15,6 +15,10 @@ image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=80&w=400"
 draft: false
+tags:
+  - kotimaa
+  - koulutus
+  - opiskelijat
 ---
 
 Kaakkois-Suomen ammattikorkeakoulu Xamk on aloittanut neuvottelut LUT-konsernin kanssa, mikä saattaa johtaa koko oppilaitoksen liittämiseen osaksi Lappeenrannan-Lahden teknillistä yliopistoa ja LAB-ammattikorkeakoulua. Kotkan kaupunginjohtaja Esa Sirviö vahvistaa neuvottelujen käynnistyneen, ja Kouvolan kaupunginjohtaja Marita Toikka kertoo, että keskustelut ovat jo edenneet. Yhdistyminen voisi luoda yli 20 000 opiskelijan oppilaitoksen, mikä parantaisi alueen koulutustarjontaa ja vetovoimaa.

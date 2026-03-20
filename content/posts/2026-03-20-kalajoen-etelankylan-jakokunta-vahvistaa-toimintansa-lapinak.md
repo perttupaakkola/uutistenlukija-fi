@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Kalajoen Etelänkylän jakokunta vahvistaa toimintansa läp
 image_credit: "Photo by Nithin P John on Unsplash"
 image_source_url: "https://unsplash.com/photos/man-wearing-yellow-shirt-V05QhJPJtC0?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - eu
+  - luonto
+  - liikenne
 ---
 
 Kalajoen Etelänkylän jakokunta, joka toimii tärkeänä elinympäristön ja kalastukseen liittyvien asioiden hallinnassa, on ottanut merkittäviä askelia tietosuojan ja tiedon avoimuuden parantamiseksi. Jakokunnan puheenjohtaja Risto Apuli on korostanut organisaation sitoutumista EU:n tietosuoja-asetukseen (GDPR) ja henkilötietolain vaatimuksiin.

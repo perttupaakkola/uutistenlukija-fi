@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: MP kysyi parlamentissa kalakuolemista dyke-vedessä"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - asuminen
+  - oikeus
+  - luonto
 ---
 
 Entinen ympäristöministeri Steve Barclay kysyi parlamentissa, miksi mitään oikeustoimia ei ole vielä käynnistetty noin 900 kuolleen kalalajin vuoksi, jotka löytyivät Kings Delph -alueelta syyskuussa 2024. Vedenlaadun heikentyminen johtui kohonneista ammoniakkitasoista sekä alhaisista happitasoista.

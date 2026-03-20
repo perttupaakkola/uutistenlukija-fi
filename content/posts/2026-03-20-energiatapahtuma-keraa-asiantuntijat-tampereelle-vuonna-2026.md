@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Energiatapahtuma kerää asiantuntijat Tampereelle vuonna 2
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - tampere
+  - energia
+  - urheilu
 ---
 
 Energia-alan suurtapahtuma Energiamessut järjestetään Tampereen Messu- ja Urheilukeskuksessa 20.–22. lokakuuta 2026. Tapahtuma kokoaa yhteen lähes 10 000 asiantuntijaa energiantuotannon, teknologioiden ja kestävien ratkaisujen äärelle. 30-vuotisen historian omaava tapahtuma tarjoaa ajankohtaisia näkökulmia investoinneista laitosten käyttöön ja kunnossapitoon sekä energiatehokkuuden parantamiseen.

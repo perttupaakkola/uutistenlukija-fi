@@ -15,6 +15,10 @@ image_alt: "Kulttuuri: Huutokauppatoimija Eveliina: Oudotkin esineet löytävät
 image_credit: "Photo by Jimmy Liu on Unsplash"
 image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - taide
+  - viihde
 ---
 
 Eveliina, Turussa huutokauppaa pyörittävä liiketoiminnan johtaja, kertoo, kuinka erilaisimmat esineet löytävät uuden arvonsa huutokauppatapahtumissa. Huutokaupat tarjoavat ihmisille mahdollisuuden eroon ylimääräisistä tavaroista, ja parhaimmillaan ne tuovat esiin esineitä, joilla on mielenkiintoisia tarinoita.

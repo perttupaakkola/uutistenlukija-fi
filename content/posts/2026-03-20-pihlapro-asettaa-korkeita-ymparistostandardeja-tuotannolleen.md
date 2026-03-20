@@ -15,6 +15,10 @@ image_alt: "Talous: PihlaPRO asettaa korkeita ympäristöstandardeja tuotannolle
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yritys
+  - luonto
 ---
 
 PihlaPRO on sitoutunut vähentämään ympäristövaikutuksiaan. Yhtiö on saanut ISO 14001 -sertifikaatin, joka osoittaa sen noudattavan kansainvälisiä ympäristöjärjestelmien standardeja. Sertifikaatti edellyttää organisaatiolta ennakoivaa toimintaa ympäristönäkökulmien tunnistamisessa ja ymmärtämisessä.

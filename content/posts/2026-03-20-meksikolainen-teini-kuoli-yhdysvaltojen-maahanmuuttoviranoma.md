@@ -15,6 +15,11 @@ image_alt: "Meksikolainen teini kuoli Yhdysvaltojen maahanmuuttoviranomaisten pi
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - yhdysvallat
+  - pakolaiset
+  - murha
 ---
 
 19-vuotias meksikolainen Royer Perez-Jimenez on kuollut Yhdysvaltojen maahanmuuttoviranomaisten (ICE) pidätettynä. Hänen kuolemansa tapahtui Glades County Detention Centerissä Floridassa, ja viranomaisten mukaan kuolema on oletettavasti itsemurha. Kuitenkin virallista kuolinsyytä tutkitaan edelleen.

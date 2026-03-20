@@ -15,6 +15,10 @@ image_alt: "Talous: Lieto sai takaisin lakkitehtaan – selkeät vuodenajat tuke
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - yritys
+  - rahoitus
 ---
 
 Lieto on saanut takaisin vanhan lakkitehtaansa, joka suljettiin vuosia sitten. Tehdas palasi toimintaan osittain selkeiden vuodenaikojen ansiosta, jotka tukevat lakkituotantoa. Tämä on tärkeä askel alueen teollisuudelle ja työllisyydelle.

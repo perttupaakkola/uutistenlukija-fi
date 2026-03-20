@@ -9,6 +9,10 @@ author_title: "Ulkomaantoimittaja"
 author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
 author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
+tags:
+  - talous
+  - koulutus
+  - sää
 description: "Nuoret tavoittelevat taloudellista riippumattomuutta ja varhaista eläköitymistä nelikymppisinä, mutta professori Vesa Puttonen pitää ilmiötä tuhlauksena."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhlauksena"

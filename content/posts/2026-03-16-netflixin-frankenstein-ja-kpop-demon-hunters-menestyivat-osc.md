@@ -9,6 +9,10 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - kulttuuri
+  - elokuva
+  - viihde
 description: "Netflixin Frankenstein voittaa kolme Oscar-palkintoa, kun taas KPop Demon Hunters saa kaksi palkintoa vuoden 2026 gaalassa."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Netflixin Frankenstein ja KPop Demon Hunters menestyivät Oscar-gaalassa"

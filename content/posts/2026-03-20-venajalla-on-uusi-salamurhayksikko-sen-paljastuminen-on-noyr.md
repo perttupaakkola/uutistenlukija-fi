@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Venäjällä on uusi salamurha­yksikkö – sen paljastum
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - venäjä
+  - turvallisuus
+  - murha
+  - liikenne
 ---
 
 Tutkivat journalistit ovat paljastaneet Venäjän eliittijoukoista kootun salatun salamurhayksikön, mikä on herättänyt huomiota ja keskustelua väkivaltaisten toimintatapojen ympärillä. Tämä uusi yksikkö, jonka olemassaolo oli piilossa, on saanut osakseen paljon kritiikkiä ja hämmennystä.

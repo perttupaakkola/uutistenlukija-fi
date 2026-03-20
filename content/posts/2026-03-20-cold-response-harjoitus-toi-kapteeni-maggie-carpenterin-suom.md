@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Cold Response -harjoitus toi kapteeni Maggie Carpenterin Su
 image_credit: "Photo by Call Me Fred on Unsplash"
 image_source_url: "https://unsplash.com/photos/silver-skull-with-cross-pendant-n9rnCoomnhI?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - nato
+  - sää
 ---
 
 Kapteeni Maggie Carpenter on ensimmäistä kertaa Suomessa osallistumassa Naton suurharjoitukseen, Cold Response 26:een. Hänen matkansa kuitenkin alkoi ongelmista, kun Yhdysvaltain merijalkaväen ilmatankkauskone, C-130 Hercules, kohtasi vaikeuksia ylittäessään Atlantin. Kapteeni David Leesman kuvasi tilannetta hyväksi harjoitukseksi todellisen maailman ongelmille.

@@ -15,6 +15,12 @@ author_title: "Tiedetoimittaja"
 author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
 author_image: "/images/writers/laura-makela.jpg"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - politiikka
+  - öljy
+  - sää
 ---
 
 Australian energiaministeri Chris Bowen kehotti kansalaisia lopettamaan polttoaineen hamstraamisen. Bowen kuvaili Bunnings-rautakaupaketjun kanisteriostoksia epäaustralialaiseksi toiminnaksi. Polttoainekriisi on saanut ihmiset täyttämään kanistereita varastoon.

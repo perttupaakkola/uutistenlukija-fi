@@ -15,6 +15,10 @@ image_alt: "Kotimaa: Humppilan talous vaikeuksissa työttömyyssakkojen vuoksi"
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - talous
+  - työttömyys
 ---
 
 Humppilan kunnan talous on ajautunut kriisiin työttömyyssakkojen kasvun vuoksi. Kunnan koko maksama osuus työttömien työttömyysturvasta on yli kaksinkertaistunut, yltäen 300 000 euroon. Kunnanjohtaja Minna Ylikäntä varoittaa, että tämä kehitys vie pienet kunnat yhä vaikeampaan taloustilanteeseen.

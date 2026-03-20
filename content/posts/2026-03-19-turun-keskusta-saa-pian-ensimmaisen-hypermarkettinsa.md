@@ -9,6 +9,10 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - talous
+  - yritys
+  - rahoitus
 description: "Turun ydinkeskustaan nousee ensimmäinen hypermarketti, kun Wiklund-tavaratalo uudistuu 10 miljoonalla eurolla ja laajentaa päivittäistavaroiden tarjontaa."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Turun keskusta saa pian ensimmäisen hypermarkettinsa"

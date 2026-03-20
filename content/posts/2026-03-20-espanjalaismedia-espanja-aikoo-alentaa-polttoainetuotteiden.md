@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Espanjalaismedia: Espanja aikoo alentaa polttoainetuotteid
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - verotus
+  - yhdysvallat
+  - liikenne
 ---
 
 Espanjan hallitus suunnittelee polttoainetuotteidensa arvonlisäveron merkittävää alentamista 21 prosentista 10 prosenttiin. Tämä tieto on saatu espanjalaismediasta, ja se saattaa tuoda helpotusta autoilijoille ja kuljetusalalle kohonneiden ennakoitujen kustannusten myötä.

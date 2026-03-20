@@ -15,6 +15,11 @@ image_alt: "Ulkomaat: MP kysyi hallitukselta kalakuolemista dykeissä"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - oikeus
+  - luonto
 ---
 
 Entinen ympäristöministeri Steve Barclay kysyi parlamentissa, miksi kukaan ei ole joutunut vastuuseen noin 900 kuolleesta kalasta, jotka löytyivät Kings Delph -alueelta Cambridgeshiressä syyskuussa 2024. Kalakuolemat johtuvat kohonneista ammoniakkitasoista ja alhaisista happitasoista, ja Barclay vaati hallitusta selittämään, miksi syytettä ei ole nostettu.

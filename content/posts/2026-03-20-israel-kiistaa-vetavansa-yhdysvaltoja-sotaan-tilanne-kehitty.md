@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Israel kiistää vetävänsä Yhdysvaltoja sotaan – tila
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - hallitus
+  - israel
+  - sota
+  - yhdysvallat
 ---
 
 Israelin hallitus on torjunut syytökset siitä, että se vetäisi Yhdysvaltoja mukaan alueelliseen sotaan. Yhdysvaltojen ja Israeliin tekemät toimet ovat johtaneet huoleen Lähi-idän konfliktin laajentumisesta. Samalla Australian hallitus on ryhtynyt toimiin polttoaineen toimitusongelmien hallitsemiseksi, jotka ovat syntyneet konfliktin seurauksena. Australian pääministeri Anthony Albanese kokoontui virtuaaliseen kokoukseen kansallisen kabinetin kanssa torstaiaamuna keskustellakseen hintashokista ja toimitusongelmista.

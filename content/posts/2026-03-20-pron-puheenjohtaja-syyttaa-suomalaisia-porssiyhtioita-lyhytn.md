@@ -15,6 +15,10 @@ image_alt: "Talous: Pron puheenjohtaja syyttää suomalaisia pörssiyhtiöitä l
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - pörssi
+  - yritys
 ---
 
 Ammattiliitto Pron puheenjohtaja Niko Simola on esittänyt vakavia syytöksiä suomalaisia pörssiyhtiöitä kohtaan, väittäen, että yritykset keskittyvät liikaa lyhytnäköisiin voittoihin omistajilleen. Simolan mukaan yhtiöiden jakamat suuret osingot ovat todiste siitä, että johto ei pyri riittävästi investoimaan kasvuun tai kehittämään pitkän aikavälin strategioita. Tämä on erityisen huolestuttavaa, sillä Suomessa on massatyöttömyys ja yritykset eivät löydä muuta tapaa käyttää rahaa kuin omistajien palkitseminen.

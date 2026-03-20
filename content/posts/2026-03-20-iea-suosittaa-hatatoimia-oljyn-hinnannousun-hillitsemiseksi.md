@@ -15,6 +15,11 @@ image_alt: "Talous: IEA suosittaa hätätoimia öljyn hinnannousun hillitsemisek
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - energia
+  - hallitus
+  - öljy
 ---
 
 Kansainvälinen energia-agentuuri (IEA) on julkaissut suosituksia, joita jäsenvaltioiden tulisi noudattaa öljyn hinnannousun ja tulevien polttoainepulien hallitsemiseksi. Suositukset johtuvat huolenaiheista, jotka liittyvät Lähi-idän tilanteeseen ja sen vaikutuksiin öljyn toimituksiin. IEA painottaa, että hallitusten tulisi rohkaista etätyöskentelyä ja vähentää moottoriteiden nopeusrajoituksia.

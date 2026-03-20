@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Kalakuolemat herättivät raivoa Englannin parlamentissa"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - eduskunta
+  - luonto
 ---
 
 Entinen ympäristöministeri Steve Barclay kysyi parlamentissa, miksi noin 900 kuollutta kalaa aiheuttaneesta ympäristökatastrofista ei ole nostettu syytteitä. Kalat löytyivät Kings Delphista, Cambridgeshiressa, missä ammoniakin korkeat tasot ja hapen alhaiset tasot johtivat kalakuolemiin syyskuussa 2024.

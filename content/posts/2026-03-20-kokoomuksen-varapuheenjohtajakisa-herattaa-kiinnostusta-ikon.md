@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Kokoomuksen varapuheenjohtajakisa herättää kiinnostusta 
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - eduskunta
+  - politiikka
+  - kokoomus
 ---
 
 Kokoomuksessa käydään tällä hetkellä varapuheenjohtajakisaa, kun nykyinen varapuheenjohtaja, kuntaministeri Anna-Kaisa Ikonen, on ilmoittanut luopuvansa paikastaan. Ikonen on toiminut tehtävässä kuuden vuoden ajan, ja hänen lähtönsä on avannut mahdollisuuksia muille puolueen jäsenille. Sosiaalisessa mediassa useat kokoomuksen kansanedustajat ovat jo ilmaisseet kiinnostuksensa tehtävään.

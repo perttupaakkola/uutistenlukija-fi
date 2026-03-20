@@ -15,6 +15,11 @@ author_title: "Taloustoimittaja"
 author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
 author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
+tags:
+  - teknologia
+  - turvallisuus
+  - sää
+  - lapset
 ---
 
 Australian verkkoturvallisuusviranomainen eSafety on varoittanut Elon Muskin omistamaa X-palvelua lapsiin kohdistuvan seksuaalisen hyväksikäyttömateriaalin laajasta leviämisestä alustalla. Viranomaisen mukaan ongelma on rakenteellinen ja materiaalia on X:ssä helpommin saatavilla kuin missään muussa valtavirtaisessa palvelussa.

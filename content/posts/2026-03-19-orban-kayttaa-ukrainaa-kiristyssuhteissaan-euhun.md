@@ -15,6 +15,12 @@ image_alt: "Ulkomaat: Orbán käyttää Ukrainaa kiristyssuhteissaan EU:hun"
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - ukraina
+  - hallitus
+  - energia
+  - öljy
 ---
 
 Unkarin pääministeri Viktor Orbán kiristää EU:ta Ukrainan tuella, juuri kun häneltä itseltään on valta horjumassa. EU-johtajien on määrä päättää tänään Ukrainan saamasta 90 miljardin euron lainapaketista, mutta Unkarin jarrutukset ovat jälleen nousseet keskiöön. Orbán on aikaisemmin hyväksynyt lainapaketin, mutta nyt hän käyttää Družba-öljyputken huolia tekosyynä päätöksensä perumiselle. Tämä strategia näkyy Orbánin vaalikampanjassa, jossa hän pyrkii esiintymään Unkarin ainoana puolustajana EU:ta ja Ukrainaa vastaan. Hänen toimintansa kiristää myös suhteita Brysseliin, jossa kärsivällisyys Unkarin peliä kohtaan alkaa olla lopussa. Orbánin raskaampi politiikka saattaa tulla hänen viimeiseksi, jos se johtaa hänen hallituksensa lopulliseen hyllyttämiseen.

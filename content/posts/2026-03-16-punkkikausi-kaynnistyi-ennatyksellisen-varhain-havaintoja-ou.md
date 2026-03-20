@@ -9,6 +9,10 @@ author_title: "Kulttuuritoimittaja"
 author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
 author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
+tags:
+  - kotimaa
+  - sää
+  - oulu
 description: "Punkkikausi alkaa ennätyksellisen varhain, ja havaintoja on tehty jopa Oulun korkeudella. Lämmin sää aktivoi punkkeja liikkeelle ja riskit lisääntyvät."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Punkkikausi käynnistyi ennätyksellisen varhain – havaintoja Oulun korkeudelle asti"

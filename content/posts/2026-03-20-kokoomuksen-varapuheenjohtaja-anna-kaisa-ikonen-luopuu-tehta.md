@@ -15,6 +15,11 @@ image_alt: "Kotimaa: Kokoomuksen varapuheenjohtaja Anna-Kaisa Ikonen luopuu teht
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kotimaa
+  - kokoomus
+  - luonto
+  - urheilu
 ---
 
 Kokoomuksen varapuheenjohtajan paikkojen kilpailu on kiihtynyt, kun Anna-Kaisa Ikonen ilmoitti luopuvansa tehtävästään. Ikonen on toiminut varapuheenjohtajana kuusi vuotta ja hänen päätöksensä avaa oven uusille ehdokkaille. 

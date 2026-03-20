@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Raportti: Iberian niemimaan sähkökatkon taustalla useita
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - energia
+  - kansainvälinen
 ---
 
 Iberian niemimaata viime vuoden huhtikuussa vaivannut laaja sähkökatko oli seurausta useista syistä, selviää asiantuntijapaneelin tuoreesta raportista. Katkon aikana sähköt pimenivät laajalla alueella, joka kattoi Espanjan, Portugalin ja osan Lounais-Ranskaa. Raportti vahvistaa, että alueen sähköjärjestelmä ei kyennyt hallitsemaan jännitepiikkejä, mikä johti sähkönjakelun katkeamiseen.

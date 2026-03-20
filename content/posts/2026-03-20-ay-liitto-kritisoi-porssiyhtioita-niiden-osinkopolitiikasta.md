@@ -15,6 +15,10 @@ image_alt: "Talous: Ay-liitto kritisoi pörssiyhtiöitä niiden osinkopolitiikas
 image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - talous
+  - pörssi
+  - yritys
 ---
 
 Ammattiliitto Pro on esittänyt voimakkaita syytöksiä Suomen pörssiyhtiöitä kohtaan. Liitto tuo esiin huolen siitä, että yritykset ovat valinneet lyhytnäköisen strategian jakamalla suuria osinkoja sen sijaan, että investoisivat kasvuun. Pron puheenjohtaja Niko Simola korostaa, että yhtiöiden johdolla ei ole selkeää visiota liiketoiminnan kasvattamiseksi tulevaisuudessa. Samalla, kun pörssiyhtiöt jakavat ennätysmäärä osinkoja, työllisyystilanne on heikentynyt. Simolan mukaan suomalaisyritysten tulisi keskittyä tuotekehitykseen ja kestävän kehityksen ratkaisuihin, joiden avulla ne voivat menestyä globaalilla tasolla. Ammattiliitto Pro muistuttaa, että tulevaisuuden investoinnit ovat välttämättömiä kilpailukyvyn ylläpitämiseksi.

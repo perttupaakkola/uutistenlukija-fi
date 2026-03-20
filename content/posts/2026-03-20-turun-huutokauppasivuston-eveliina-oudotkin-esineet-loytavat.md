@@ -15,6 +15,10 @@ image_alt: "Kulttuuri: Turun huutokauppasivuston Eveliina: 'Oudotkin esineet lö
 image_credit: "Photo by Jimmy Liu on Unsplash"
 image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - kulttuuri
+  - leikkaukset
+  - sää
 ---
 
 Eveliina, Turussa huutokauppaa pyörittävä yrittäjä, kertoo, että erilaiset esineet löytävät usein arvostusta kaikenlaisilta ihmisiltä. Huutokaupoissa myydään niin arkisia tavaroita kuin erikoisia keräilyesineitä, ja monella niistä on oma tarinansa. Eveliina korostaa, että asiakkaat ovat kiinnostuneita kaikesta mahdollisesta – esineet, joista monet ovat tuntemattomia, ovat tulleet arjen säästökeinoiksi. 

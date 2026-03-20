@@ -15,6 +15,10 @@ image_alt: "Ulkomaat: Analyysi: Norjan Mette-Marit yrittää ulostulollaan liitt
 image_credit: "Photo by Vito Natale on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
 draft: false
+tags:
+  - ulkomaat
+  - rikos
+  - kirjallisuus
 ---
 
 Norjan kruununprinsessa Mette-Marit on kommentoinut tänään suhdettaan edesmenneeseen seksuaalirikolliseen Jeffrey Epsteiniin. Tämä uutinen on herättänyt laajaa keskustelua sekä Norjan kuningashuoneen että kansan keskuudessa.
