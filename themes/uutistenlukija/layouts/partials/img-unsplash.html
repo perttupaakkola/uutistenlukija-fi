@@ -16,6 +16,10 @@
 {{- $src := .src -}}
 {{- $isUnsplash := or (strings.Contains $src "images.unsplash.com") (strings.Contains $src "unsplash.com/photos") -}}
 {{- if $isUnsplash -}}
+  {{- /* Strip existing fm/q/w params to avoid conflicts */ -}}
+  {{- $src = replaceRE `[&?]fm=[a-z]+` "" $src -}}
+  {{- $src = replaceRE `[&?]q=\d+` "" $src -}}
+  {{- $src = replaceRE `[&?]w=\d+` "" $src -}}
   {{- $params := slice -}}
   {{- with .w -}}{{- $params = $params | append (printf "w=%d" .) -}}{{- end -}}
   {{- with .h -}}{{- $params = $params | append (printf "h=%d" .) -}}{{- end -}}
