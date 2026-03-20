@@ -1,11 +1,19 @@
-{{- $ga4id := .Site.Params.ga4_id -}}
-{{- if and hugo.IsProduction $ga4id -}}
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga4id }}"></script>
+{{- /* GA4 — fires only when ga4_id is set in hugo.toml [params] */}}
+{{- with .Site.Params.ga4_id }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{ $ga4id }}');
+  gtag('config', '{{ . }}', {
+    page_path: window.location.pathname,
+    anonymize_ip: true
+  });
 </script>
-{{- end -}}
+{{- end }}
+
+{{- /* Cloudflare Web Analytics — fires only when cf_beacon_token is set */}}
+{{- with .Site.Params.cf_beacon_token }}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "{{ . }}"}'></script>
+{{- end }}

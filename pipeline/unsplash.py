@@ -334,7 +334,7 @@ def fetch_image_for_article(
         "photographer": photographer,
         "photographer_url": photo["photographer_url"],
         "photo_page": photo_page,
-        "alt": f"{category}: {title}"[:125],
+        "alt": title[:125],
         "credit": f"Photo by {photographer} on Unsplash",
         "hotlink": True,  # must NOT be downloaded/cached locally
     }

@@ -1,0 +1,105 @@
+{{- /* GA4 custom event tracking — no-ops silently if GA4 is not configured */}}
+{{- with .Site.Params.ga4_id }}
+<script>
+(function () {
+  'use strict';
+
+  // Guard: only run if gtag is available
+  function _gtag() {
+    if (typeof gtag === 'function') {
+      gtag.apply(null, arguments);
+    }
+  }
+
+  // ── article_read ────────────────────────────────────────────────────────
+  // Fires when a visitor scrolls past 75% of an article page.
+  {{- if .IsPage }}
+  (function () {
+    var fired = false;
+    var threshold = 0.75;
+    function onScroll() {
+      if (fired) return;
+      var el = document.documentElement;
+      var scrolled = el.scrollTop + el.clientHeight;
+      var total = el.scrollHeight;
+      if (total > 0 && scrolled / total >= threshold) {
+        fired = true;
+        _gtag('event', 'article_read', {
+          article_title: {{ .Title | jsonify }},
+          article_category: {{ with .Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }},
+          article_slug: {{ .File.BaseFileName | jsonify }}
+        });
+        window.removeEventListener('scroll', onScroll, { passive: true });
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+  {{- end }}
+
+  // ── search_used ─────────────────────────────────────────────────────────
+  // Fires on search form submission (looks for <form role="search">).
+  (function () {
+    var form = document.querySelector('form[role="search"]');
+    if (!form) return;
+    form.addEventListener('submit', function () {
+      var input = form.querySelector('input[type="search"], input[name="q"]');
+      _gtag('event', 'search_used', {
+        search_term: input ? input.value.trim() : ''
+      });
+    });
+  })();
+
+  // ── newsletter_signup ───────────────────────────────────────────────────
+  // Fires when newsletter form is submitted (form with data-event="newsletter").
+  (function () {
+    document.addEventListener('submit', function (e) {
+      var form = e.target;
+      if (form && form.dataset.event === 'newsletter') {
+        _gtag('event', 'newsletter_signup', {
+          location: form.dataset.location || 'unknown'
+        });
+      }
+    });
+  })();
+
+  // ── outbound_click ──────────────────────────────────────────────────────
+  // Fires when a visitor clicks an external link (different hostname).
+  (function () {
+    var host = window.location.hostname;
+    document.addEventListener('click', function (e) {
+      var anchor = e.target.closest('a[href]');
+      if (!anchor) return;
+      try {
+        var url = new URL(anchor.href);
+        if (url.hostname && url.hostname !== host) {
+          _gtag('event', 'outbound_click', {
+            outbound_url: url.href,
+            outbound_host: url.hostname,
+            link_text: (anchor.textContent || '').trim().slice(0, 100)
+          });
+        }
+      } catch (err) {}
+    });
+  })();
+
+  // ── category_navigate ───────────────────────────────────────────────────
+  // Fires when a visitor clicks a category link (href contains /kategoria/).
+  (function () {
+    document.addEventListener('click', function (e) {
+      var anchor = e.target.closest('a[href]');
+      if (!anchor) return;
+      var href = anchor.getAttribute('href') || '';
+      if (href.indexOf('/kategoria/') !== -1) {
+        var parts = href.replace(/\/$/, '').split('/');
+        var category = parts[parts.length - 1] || 'unknown';
+        _gtag('event', 'category_navigate', {
+          category_name: category,
+          from_page: window.location.pathname
+        });
+      }
+    });
+  })();
+
+})();
+</script>
+{{- end }}

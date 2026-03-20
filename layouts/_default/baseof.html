@@ -31,5 +31,7 @@
     navigator.serviceWorker.register('/sw.js');
   }
   </script>
+  {{ partial "analytics.html" . }}
+  {{ partial "event-tracking.html" . }}
 </body>
 </html>

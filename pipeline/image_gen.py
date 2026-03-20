@@ -108,18 +108,8 @@ def _poll_task_with_timeout(task_id: str, timeout_sec: int = PER_ARTICLE_TIMEOUT
 
 
 def _build_alt_text(title: str, category: str) -> str:
-    """Generate keyword-rich alt text for a featured image."""
-    category_fi = {
-        "kotimaa": "Kotimaa",
-        "ulkomaat": "Ulkomaat",
-        "talous": "Talous",
-        "teknologia": "Teknologia",
-        "urheilu": "Urheilu",
-        "kulttuuri": "Kulttuuri",
-        "tiede": "Tiede",
-    }.get(category.lower(), category.capitalize())
-    alt = f"{category_fi}-aiheinen kuvituskuva: {title}"
-    return alt[:125]
+    """Generate alt text for a featured image — just the article title."""
+    return title[:125]
 
 
 def generate_article_image(title: str, category: str, slug: str) -> Optional[str]:

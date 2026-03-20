@@ -369,7 +369,7 @@ def fetch_image_for_article(
         "photographer": photographer,
         "photographer_url": photo["photographer_url"],
         "pexels_url": pexels_url,
-        "alt": f"{category}: {title}"[:125],
+        "alt": title[:125],
         "credit": f"Photo by {photographer} on Pexels",
     }
 
