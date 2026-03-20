@@ -3,6 +3,7 @@
   Covers: WebSite (homepage), NewsArticle (posts), CollectionPage (categories/sections)
 
   Publisher org block is reused across all types.
+  Publisher logo: 400×60px (meets Google NewsArticle rich-result requirements).
 */}}
 
 {{/* ── Shared: Publisher org ─────────────────────────────────────── */}}
@@ -12,9 +13,9 @@
     "url" "https://uutistenlukija.fi"
     "logo" (dict
       "@type" "ImageObject"
-      "url" (printf "%simages/logo.png" .Site.BaseURL)
-      "width" 144
-      "height" 144
+      "url" (printf "%simages/publisher-logo.png" .Site.BaseURL)
+      "width" 400
+      "height" 60
     )
 }}
 
@@ -43,10 +44,11 @@
 
 {{/* ── Article page: NewsArticle ───────────────────────────────────── */}}
 {{ else if and .IsPage (eq .Section "posts") }}
-{{/* Resolve image URL */}}
+
+{{/* Resolve primary image URL (full size) */}}
 {{ $imageUrl := "" }}
 {{ with .Params.image }}
-  {{ if hasPrefix . "https://" }}
+  {{ if or (hasPrefix . "https://") (hasPrefix . "http://") }}
     {{ $imageUrl = . }}
   {{ else }}
     {{ $imageUrl = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) }}
@@ -60,21 +62,49 @@
   {{ end }}
 {{ end }}
 
+{{/* Resolve thumbnail URL (if available) */}}
+{{ $thumbUrl := "" }}
+{{ with .Params.image_thumb }}
+  {{ if or (hasPrefix . "https://") (hasPrefix . "http://") }}
+    {{ $thumbUrl = . }}
+  {{ else }}
+    {{ $thumbUrl = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) }}
+  {{ end }}
+{{ else }}
+  {{ $thumbUrl = $imageUrl }}
+{{ end }}
+
+{{/* Image block with optional thumbnail */}}
+{{ $imageBlock := dict
+    "@type" "ImageObject"
+    "url" $imageUrl
+    "width" 1200
+    "height" 630
+    "thumbnailUrl" $thumbUrl
+}}
+
 {{/* Resolve description */}}
 {{ $desc := .Description | default (.Summary | plainify | truncate 160) | default .Site.Params.description }}
 
-{{/* Author block */}}
+{{/* Author block — include URL if author_id is set */}}
 {{ $authorName := .Params.author | default .Site.Params.author }}
 {{ $authorBlock := dict "@type" "Person" "name" $authorName }}
+{{ with .Params.author_id }}
+  {{ $authorBlock = merge $authorBlock (dict "url" (printf "%stoimitus/#%s" $.Site.BaseURL .)) }}
+{{ end }}
 
-{{/* Build article section list */}}
-{{ $sections := .Params.categories | default (slice) }}
-{{ $articleSection := index $sections 0 | default "" }}
+{{/* Build keywords from categories + tags */}}
+{{ $keywords := slice }}
+{{ range .Params.categories }}{{ $keywords = $keywords | append . }}{{ end }}
+{{ range .Params.tags }}{{ $keywords = $keywords | append . }}{{ end }}
+
+{{/* Article section (first category) */}}
+{{ $articleSection := index (.Params.categories | default (slice "")) 0 }}
 
 {{ $schema := dict
     "@context" "https://schema.org"
     "@type" "NewsArticle"
-    "headline" .Title
+    "headline" (.Title | truncate 110)
     "url" .Permalink
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
     "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
@@ -82,30 +112,38 @@
     "author" $authorBlock
     "publisher" $publisherBlock
     "description" $desc
-    "image" (dict
-      "@type" "ImageObject"
-      "url" $imageUrl
-      "width" 1200
-      "height" 630
-    )
+    "image" $imageBlock
     "articleSection" $articleSection
     "inLanguage" "fi"
     "isAccessibleForFree" "true"
+    "wordCount" .WordCount
 }}
+
+{{/* Append keywords only if non-empty */}}
+{{ if $keywords }}
+  {{ $schema = merge $schema (dict "keywords" ($keywords | uniq)) }}
+{{ end }}
+
 <script type="application/ld+json">
 {{ $schema | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 
-{{/* ── Category / section page: CollectionPage ─────────────────────── */}}
+{{/* ── Category / taxonomy term page: CollectionPage ──────────────── */}}
 {{ else if or .IsSection .IsNode }}
-{{ $catDesc := .Description | default (printf "%s — %s" .Title .Site.Title) }}
-{{ $catImage := "" }}
-{{ $catSlug := .Section | lower }}
+
+{{/* Resolve category image: try og-<slug>.png, fall back to og-image.png */}}
+{{ $catSlug := "" }}
+{{ if .IsSection }}
+  {{ $catSlug = .Section | lower }}
+{{ else }}
+  {{ $catSlug = .Slug | lower }}
+{{ end }}
+{{ $catImage := printf "%simages/og-image.png" $.Site.BaseURL }}
 {{ if $catSlug }}
   {{ $catImage = printf "%simages/og-%s.png" $.Site.BaseURL $catSlug }}
-{{ else }}
-  {{ $catImage = printf "%simages/og-image.png" $.Site.BaseURL }}
 {{ end }}
+
+{{ $catDesc := .Description | default (printf "%s — %s" .Title .Site.Title) }}
 
 {{/* Up to 10 items for hasPart */}}
 {{ $items := slice }}
