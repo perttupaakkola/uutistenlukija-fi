@@ -109,7 +109,7 @@ def validate_articles(articles: list) -> tuple:
     return valid, dropped
 
 
-def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False):
+def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None):
     """Execute the pipeline."""
     pipeline_start = time.time()
     steps: dict = {}
@@ -216,6 +216,11 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     skipped = pre_filter_count - len(articles)
     if skipped:
         print(f"[quality] Skipped {skipped} wire briefs (< {MIN_SOURCE_WORDS} desc words, no research)")
+
+    # ── Step 1e: Cap articles if --max-articles set ────────────────────────────
+    if max_articles is not None and len(articles) > max_articles:
+        print(f"[pipeline] --max-articles {max_articles}: limiting {len(articles)} → {max_articles}")
+        articles = articles[:max_articles]
 
     # ── Step 2: Rewrite ────────────────────────────────────────────────────────
     rewritten = []
@@ -443,11 +448,18 @@ if __name__ == "__main__":
         action="store_true",
         help="Poll Firehose only (skip RSS scan and Hugo build)",
     )
+    parser.add_argument(
+        "--max-articles",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Cap articles sent to rewriter at N (default: no limit). Use 1 for cron quality runs.",
+    )
     args = parser.parse_args()
 
     if args.quick and args.build_only:
         print("❌ Cannot use --quick and --build-only together.")
         sys.exit(1)
 
-    success = run(quick=args.quick, build_only=args.build_only, firehose_only=args.firehose_only)
+    success = run(quick=args.quick, build_only=args.build_only, firehose_only=args.firehose_only, max_articles=args.max_articles)
     sys.exit(0 if success else 1)

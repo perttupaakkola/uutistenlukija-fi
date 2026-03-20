@@ -243,7 +243,7 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     """
     rewritten = []
 
-    batch_size = 1  # 1 article per LLM call — max quality, no truncation (Perttu's directive)
+    batch_size = 3  # Reduced from 5 — model cuts articles short in large batches
     for i in range(0, len(articles), batch_size):
         batch = articles[i:i + batch_size]
         print(f"[writer] Processing batch {i // batch_size + 1} ({len(batch)} articles)...")
