@@ -12,7 +12,8 @@ description: "Uutistenlukija.fi:n tietosuojaseloste – miten keräämme ja käs
 
 ## 1. Rekisterinpitäjä
 
-Uutistenlukija.fi
+Perttu Pääkkölä (yksityishenkilö)
+Verkkosivusto: uutistenlukija.fi
 Sähköposti: info@uutistenlukija.fi
 
 ## 2. Yhteyshenkilö tietosuoja-asioissa

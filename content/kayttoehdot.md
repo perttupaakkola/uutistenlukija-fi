@@ -12,7 +12,7 @@ description: "Uutistenlukija.fi:n käyttöehdot."
 
 ## 1. Palvelun kuvaus
 
-Uutistenlukija.fi on suomenkielinen uutissivusto, joka kokoaa ja tiivistää päivän tärkeimmät uutiset. Sivustoa ylläpitää Uutistenlukija.fi.
+Uutistenlukija.fi on suomenkielinen uutissivusto, joka kokoaa ja tiivistää päivän tärkeimmät uutiset. Sivustoa ylläpitää Perttu Pääkkölä (yksityishenkilö).
 
 ## 2. Sisällön luonne ja vastuuvapauslauseke
 
