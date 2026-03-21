@@ -4,28 +4,40 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   {{- range .Data.Pages }}
   {{- if and (ne .Permalink "") (ne .Params.noindex true) }}
+  {{- $changefreq := "monthly" }}
+  {{- $priority   := "0.6" }}
+  {{- if .IsHome }}
+    {{- $changefreq = "daily" }}
+    {{- $priority   = "1.0" }}
+  {{- else if eq .Kind "section" }}
+    {{- $changefreq = "weekly" }}
+    {{- $priority   = "0.8" }}
+  {{- else if eq .Kind "taxonomy" }}
+    {{- $changefreq = "weekly" }}
+    {{- $priority   = "0.7" }}
+  {{- else if eq .Kind "term" }}
+    {{- $changefreq = "weekly" }}
+    {{- $priority   = "0.7" }}
+  {{- end }}
   <url>
     <loc>{{ .Permalink }}</loc>
-    {{- if .Lastmod }}
+    {{- if not .Lastmod.IsZero }}
     <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
     {{- else if not .Date.IsZero }}
     <lastmod>{{ .Date.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
     {{- end }}
-
-    {{- /* image:image — single hero image from article front matter */}}
-    {{- if and (eq .Section "posts") .Params.image }}
+    <changefreq>{{ $changefreq }}</changefreq>
+    <priority>{{ $priority }}</priority>
+    {{- if .Params.images }}
+    {{- range .Params.images }}
     <image:image>
-      <image:loc>{{ .Params.image }}</image:loc>
-      {{- with .Params.image_alt }}
-      <image:title>{{ . }}</image:title>
-      {{- end }}
-      {{- with .Params.image_credit }}
-      <image:license>{{ . }}</image:license>
+      <image:loc>{{ . }}</image:loc>
+      {{- if $.Params.image_alt }}
+      <image:title>{{ $.Params.image_alt }}</image:title>
       {{- end }}
     </image:image>
     {{- end }}
-
-    {{- /* news:news — only for posts within 2 days (Google's 48h window) */}}
+    {{- end }}
     {{- if and (eq .Section "posts") (not .Date.IsZero) }}
     <news:news>
       <news:publication>

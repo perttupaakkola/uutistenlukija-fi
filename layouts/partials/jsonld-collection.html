@@ -1,0 +1,52 @@
+{{/*
+  jsonld-collection.html — CollectionPage JSON-LD for category/section list pages.
+  Outputs itemListElement array (up to 20 items) for Google carousel eligibility.
+  Only renders on section/taxonomy/term pages (not single articles).
+  Usage: {{ partial "jsonld-collection.html" . }}
+*/}}
+{{ if or .IsSection .IsNode }}
+{{- $publisherBlock := dict
+    "@type" "Organization"
+    "name" "Uutistenlukija"
+    "url" "https://uutistenlukija.fi"
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" (printf "%simages/publisher-logo.png" .Site.BaseURL)
+      "width" 400
+      "height" 60
+    )
+-}}
+{{- $catDesc := .Description | default (printf "%s — %s" .Title .Site.Title) -}}
+{{- $catSlug := .Section | lower -}}
+{{- $catImage := cond (ne $catSlug "") (printf "%simages/og-%s.png" $.Site.BaseURL $catSlug) (printf "%simages/og-image.png" $.Site.BaseURL) -}}
+
+{{- $items := slice -}}
+{{- range $i, $p := first 20 .Pages -}}
+  {{- $items = $items | append (dict
+    "@type"    "ListItem"
+    "position" (add $i 1)
+    "url"      $p.Permalink
+    "name"     $p.Title
+  ) -}}
+{{- end -}}
+
+{{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "CollectionPage"
+    "name" .Title
+    "url" .Permalink
+    "description" $catDesc
+    "inLanguage" "fi"
+    "image" (dict
+      "@type" "ImageObject"
+      "url" $catImage
+      "width" 1200
+      "height" 630
+    )
+    "publisher" $publisherBlock
+    "itemListElement" $items
+-}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{ end }}

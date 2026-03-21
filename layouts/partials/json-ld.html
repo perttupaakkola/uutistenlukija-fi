@@ -107,14 +107,14 @@
   {{ $catImage = printf "%simages/og-image.png" $.Site.BaseURL }}
 {{ end }}
 
-{{/* Up to 10 items for hasPart */}}
+{{/* itemListElement: up to 20 items with position for Google carousel */}}
 {{ $items := slice }}
-{{ range first 10 .Pages }}
+{{ range $i, $p := first 20 .Pages }}
   {{ $items = $items | append (dict
-    "@type" "NewsArticle"
-    "headline" .Title
-    "url" .Permalink
-    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "@type"    "ListItem"
+    "position" (add $i 1)
+    "url"      $p.Permalink
+    "name"     $p.Title
   ) }}
 {{ end }}
 
@@ -132,7 +132,7 @@
       "height" 630
     )
     "publisher" $publisherBlock
-    "hasPart" $items
+    "itemListElement" $items
 }}
 <script type="application/ld+json">
 {{ $schema | jsonify (dict "indent" "  ") | safeJS }}

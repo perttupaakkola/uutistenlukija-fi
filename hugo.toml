@@ -43,10 +43,10 @@ disableHugoGeneratorInject = true
     notAlternative = true
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "NewsSitemap"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  term = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON", "NewsSitemap", "Sitemap"]
+  section = ["HTML", "RSS", "Sitemap"]
+  taxonomy = ["HTML", "RSS", "Sitemap"]
+  term = ["HTML", "RSS", "Sitemap"]
 
 [menu]
   [[menu.main]]
