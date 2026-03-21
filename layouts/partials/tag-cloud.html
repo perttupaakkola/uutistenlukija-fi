@@ -13,14 +13,15 @@
 {{ if $top20 }}
 {{ $maxCount := (index $top20 0).count }}
 {{ $minCount := (index (last 1 $top20) 0).count }}
-{{ $range := math.Sub $maxCount $minCount | float64 }}
+{{ $range := math.Sub $maxCount $minCount }}
 <aside class="tag-cloud" aria-label="Aihepilvi">
   <h3 class="tag-cloud__title">Aiheet</h3>
   <div class="tag-cloud__tags">
     {{ range $top20 }}
     {{ $normalized := 0.0 }}
-    {{ if gt $range 0.0 }}
-      {{ $normalized = math.Div (math.Sub (float64 .count) (float64 $minCount)) $range }}
+    {{ if gt $range 0 }}
+      {{/* math.Div on integers returns float in Hugo */}}
+      {{ $normalized = math.Div (math.Sub .count $minCount) $range }}
     {{ end }}
     {{/* Scale: 0.78rem – 1.4rem */}}
     {{ $size := math.Add 0.78 (math.Mul $normalized 0.62) }}
