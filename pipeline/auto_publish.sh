@@ -44,7 +44,10 @@ else
   echo "Deployed ${ARTICLE_COUNT} new articles." | tee -a "$LOG_FILE"
 fi
 
-echo "=== Auto-publish completed at $(date -u) ===" | tee -a "$LOG_FILE"
+# Regenerate health endpoint
+python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
+
+echo "=== Auto-publish completed at $(date -u) ==="  | tee -a "$LOG_FILE"
 
 # Update publish metrics (append this run's stats to publish-metrics.json)
 python3 "$PIPELINE_DIR/update_publish_metrics.py" 2>&1 | tee -a "$LOG_FILE" || true
