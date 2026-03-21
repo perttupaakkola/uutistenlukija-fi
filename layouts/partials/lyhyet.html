@@ -12,7 +12,7 @@
     {{ $cat := index .Params.categories 0 | default "Kotimaa" }}
     {{ $catSlug := $cat | lower }}
     <li class="lyhyet-item">
-      <a href="{{ .Permalink }}" class="lyhyet-link">
+      <a href="{{ .RelPermalink }}" class="lyhyet-link">
         <span class="lyhyet-dot category-{{ $catSlug }}" aria-hidden="true"></span>
         <div class="lyhyet-body">
           <span class="lyhyet-category">{{ $cat }}</span>

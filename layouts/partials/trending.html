@@ -1,0 +1,36 @@
+{{- /*
+  Trending section: 5 most recent articles, one per category.
+  Future: replace sort by date with sort by .Params.views when available.
+*/ -}}
+
+{{- $allPages := where site.RegularPages "Section" "posts" -}}
+{{- $seen := slice -}}
+{{- $trending := slice -}}
+
+{{- range $allPages -}}
+  {{- $cat := lower (index .Params.categories 0 | default "uutiset") -}}
+  {{- if and (not (in $seen $cat)) (lt (len $trending) 5) -}}
+    {{- $seen = $seen | append $cat -}}
+    {{- $trending = $trending | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $trending -}}
+<section class="tanaan-section" aria-label="Tänään aktiivisimmat">
+  <h2 class="tanaan-title">Tänään aktiivisimmat</h2>
+  <ol class="tanaan-list">
+    {{- range $i, $p := $trending -}}
+    {{- $cat := index $p.Params.categories 0 | default "Uutiset" -}}
+    {{- $catSlug := lower $cat -}}
+    <li class="tanaan-item">
+      <span class="tanaan-num" aria-hidden="true">{{ add $i 1 }}</span>
+      <div class="tanaan-body">
+        <span class="tanaan-cat category-{{ $catSlug }}">{{ $cat }}</span>
+        <a class="tanaan-headline" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+      </div>
+      <time class="tanaan-time" datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $p.Date | time.Format "15:04" }}</time>
+    </li>
+    {{- end -}}
+  </ol>
+</section>
+{{- end -}}
