@@ -62,37 +62,7 @@
   </div>
   {{ end }}
 
-  {{/* Related articles */}}
-  {{ $currentCategories := .Params.categories }}
-  {{ $currentPage := . }}
-  {{ $related := slice }}
-  {{ range where .Site.RegularPages "Section" "posts" }}
-    {{ if ne .Permalink $currentPage.Permalink }}
-      {{ $pageCategories := .Params.categories }}
-      {{ range $currentCategories }}
-        {{ $cat := . }}
-        {{ range $pageCategories }}
-          {{ if eq . $cat }}
-            {{ $related = $related | append $currentPage }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-  {{ $related = where (where .Site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink | first 4 }}
-  {{ if $related }}
-  <div class="related-articles">
-    <h3>Lue myös</h3>
-    <div class="related-grid">
-      {{ range $related }}
-      <a href="{{ .Permalink }}" class="related-link">
-        <span class="related-title">{{ .Title }}</span>
-        <span class="related-meta">{{ .Date | time.Format "2.1. klo 15:04" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
-      </a>
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
+  {{ partial "related-articles.html" . }}
 </article>
 
 <button id="back-to-top" aria-label="Takaisin ylös" title="Takaisin ylös">↑</button>

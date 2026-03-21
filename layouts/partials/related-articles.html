@@ -1,0 +1,55 @@
+{{- /*
+  Related articles: 3 cards from same category, excluding current article.
+  Heading: "Lue myös". Layout: 3-col desktop, 2-col tablet, 1-col mobile.
+*/ -}}
+
+{{- $current := . -}}
+{{- $currentPermalink := .Permalink -}}
+{{- $currentCats := .Params.categories | default slice -}}
+
+{{- $candidates := where site.RegularPages "Section" "posts" -}}
+{{- $candidates = where $candidates ".Params.categories" "intersect" $currentCats -}}
+{{- $candidates = first 4 $candidates -}}
+
+{{- $related := slice -}}
+{{- range $candidates -}}
+  {{- if ne .Permalink $currentPermalink -}}
+    {{- $related = $related | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $related = first 3 $related -}}
+
+{{- if not $related -}}
+  {{- $fallback := where site.RegularPages "Section" "posts" -}}
+  {{- range first 4 $fallback -}}
+    {{- if and (ne .Permalink $currentPermalink) (lt (len $related) 3) -}}
+      {{- $related = $related | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $related -}}
+<section class="related-articles-section" aria-label="Lue myös">
+  <h2 class="related-articles-heading">Lue myös</h2>
+  <div class="related-articles-grid">
+    {{- range $related -}}
+    {{- $cat := index .Params.categories 0 | default "Uutiset" -}}
+    {{- $catSlug := lower $cat -}}
+    <a class="related-article-card" href="{{ .RelPermalink }}">
+      {{- if .Params.image -}}
+      <div class="related-article-thumb">
+        <img src="{{ .Params.image }}" alt="{{ .Title | htmlEscape }}" loading="lazy" width="400" height="225">
+      </div>
+      {{- else -}}
+      <div class="related-article-thumb related-article-thumb--placeholder category-{{ $catSlug }}-bg"></div>
+      {{- end -}}
+      <div class="related-article-body">
+        <span class="related-article-cat category-{{ $catSlug }}">{{ $cat }}</span>
+        <span class="related-article-title">{{ .Title }}</span>
+        <time class="related-article-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1. klo 15:04" }}</time>
+      </div>
+    </a>
+    {{- end -}}
+  </div>
+</section>
+{{- end -}}

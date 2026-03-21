@@ -55,59 +55,7 @@
   </div>
   {{ end }}
 
-  {{/* Related articles — category-matched, falls back to recent */}}
-  {{ $currentPage := . }}
-  {{ $currentCategories := .Params.categories }}
-  {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
-  {{ $otherPosts := where $allPosts "Permalink" "ne" .Permalink }}
-  {{ $related := slice }}
-  {{ range $otherPosts }}
-    {{ $pageCategories := .Params.categories }}
-    {{ $match := false }}
-    {{ range $currentCategories }}
-      {{ $cat := . }}
-      {{ range $pageCategories }}
-        {{ if eq . $cat }}
-          {{ $match = true }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-    {{ if $match }}
-      {{ $related = $related | append . }}
-    {{ end }}
-  {{ end }}
-  {{/* Fall back to recent posts if no category matches */}}
-  {{ if not $related }}
-    {{ $related = $otherPosts | first 3 }}
-  {{ end }}
-  {{ $related = $related | first 3 }}
-  {{ if $related }}
-  <div class="related-articles">
-    <h3>Lue myös</h3>
-    <div class="related-grid">
-      {{ range $related }}
-      <a href="{{ .Permalink }}" class="related-card">
-        {{ with .Params.image }}
-        <div class="related-thumb">
-          {{ partial "responsive-image.html" (dict
-            "src"     .
-            "alt"     $.Title
-            "loading" "lazy"
-            "width"   200
-            "height"  113
-            "sizes"   "200px"
-          ) }}
-        </div>
-        {{ end }}
-        <div class="related-text">
-          <span class="related-title">{{ .Title }}</span>
-          <span class="related-meta">{{ .Date | time.Format "2.1. klo 15:04" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
-        </div>
-      </a>
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
+  {{ partial "related-articles.html" . }}
 </article>
 
 {{/* Article prev/next navigation */}}
