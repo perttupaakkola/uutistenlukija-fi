@@ -103,7 +103,8 @@ Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSO
 
 
 _RETRY_ATTEMPTS = 3
-_RETRY_BASE_DELAY = 2  # seconds; doubles each attempt (2s, 4s, 8s)
+_RETRY_BASE_DELAY = 2   # seconds; doubles each attempt (2s, 4s, 8s)
+_REQUEST_TIMEOUT = 120  # seconds per LLM call (per-article when batch_size=1)
 
 # HTTP status codes worth retrying (transient)
 _RETRYABLE_HTTP = {429, 500, 502, 503, 504}
@@ -135,6 +136,7 @@ def _call_llm(system: str, prompt: str) -> str:
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 max_tokens=4096,
+                timeout=_REQUEST_TIMEOUT,
                 messages=[
                     {"role": "system", "content": system},
                     {"role": "user", "content": prompt},
