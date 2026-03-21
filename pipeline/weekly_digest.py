@@ -22,11 +22,15 @@ import os
 import sys
 import urllib.request
 import urllib.error
+from collections import Counter
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 PIPELINE_DIR = Path(__file__).parent
 HISTORY_FILE = PIPELINE_DIR / "logs" / "metrics_history.json"
+IMAGE_BACKFILL_FILE = PIPELINE_DIR / "logs" / "image_backfill.json"
+METRICS_FILE = PIPELINE_DIR / "logs" / "metrics.json"
+CONTENT_DIR = PIPELINE_DIR.parent / "content" / "posts"
 
 WEBHOOK = (
     os.environ.get("DISCORD_METRICS_WEBHOOK")
@@ -34,6 +38,10 @@ WEBHOOK = (
     or ""
 )
 
+DISCORD_MAX_LEN = 1900  # safe limit below 2000
+
+
+# ── Data loading ──────────────────────────────────────────────────────────────
 
 def _load_history() -> list[dict]:
     if not HISTORY_FILE.exists():
@@ -47,8 +55,30 @@ def _load_history() -> list[dict]:
         return []
 
 
+def _load_metrics_runs() -> list[dict]:
+    """Load raw per-run records from metrics.json for detailed failure analysis."""
+    if not METRICS_FILE.exists():
+        return []
+    try:
+        data = json.loads(METRICS_FILE.read_text(encoding="utf-8"))
+        return data if isinstance(data, list) else []
+    except Exception:
+        return []
+
+
+def _load_image_backfill() -> list[dict]:
+    if not IMAGE_BACKFILL_FILE.exists():
+        return []
+    try:
+        data = json.loads(IMAGE_BACKFILL_FILE.read_text(encoding="utf-8"))
+        return data if isinstance(data, list) else []
+    except Exception:
+        return []
+
+
+# ── Aggregation helpers ───────────────────────────────────────────────────────
+
 def _days_in_range(history: list[dict], start: datetime, end: datetime) -> list[dict]:
-    """Filter history records whose date falls in [start, end)."""
     result = []
     for rec in history:
         try:
@@ -65,11 +95,7 @@ def _sum(days: list[dict], *path: str) -> int:
     for d in days:
         v = d
         for p in path:
-            if isinstance(v, dict):
-                v = v.get(p, 0)
-            else:
-                v = 0
-                break
+            v = v.get(p, 0) if isinstance(v, dict) else 0
         if isinstance(v, (int, float)):
             total += v
     return int(total)
@@ -80,62 +106,223 @@ def _avg(days: list[dict], *path: str) -> float | None:
     for d in days:
         v = d
         for p in path:
-            if isinstance(v, dict):
-                v = v.get(p)
-            else:
-                v = None
-                break
+            v = v.get(p) if isinstance(v, dict) else None
         if isinstance(v, (int, float)):
             vals.append(v)
     return round(sum(vals) / len(vals), 1) if vals else None
 
 
 def _pct(n: int, d: int) -> str:
-    return f"{n / d * 100:.1f}%" if d else "—"
+    return f"{n / d * 100:.0f}%" if d else "—"
 
 
 def _trend(curr, prev, higher_is_better=True) -> str:
-    """Return ✅/⚠️/❌ trend indicator."""
     if curr is None or prev is None or prev == 0:
         return "➖"
     delta_pct = (curr - prev) / abs(prev) * 100
     if higher_is_better:
-        if delta_pct > 5:
-            return "✅"
-        elif delta_pct >= -5:
-            return "⚠️"
-        else:
-            return "❌"
+        return "✅" if delta_pct > 5 else ("⚠️" if delta_pct >= -5 else "❌")
     else:
-        # Lower is better (e.g. errors, duration)
-        if delta_pct < -5:
-            return "✅"
-        elif delta_pct <= 5:
-            return "⚠️"
-        else:
-            return "❌"
+        return "✅" if delta_pct < -5 else ("⚠️" if delta_pct <= 5 else "❌")
 
 
-def _delta_str(curr, prev, unit="", higher_is_better=True) -> str:
-    """Format value with delta vs previous period."""
+def _delta(curr, prev, unit="", higher_is_better=True, fmt=".0f") -> str:
     if curr is None:
         return "—"
-    curr_str = f"{curr}{unit}"
+    curr_str = f"{curr:{fmt}}{unit}"
     if prev is None or prev == 0:
         return curr_str
     delta = curr - prev
     sign = "+" if delta >= 0 else ""
     icon = _trend(curr, prev, higher_is_better)
-    return f"{curr_str}  ({sign}{delta:.0f}{unit} {icon})"
+    return f"{curr_str} ({sign}{delta:{fmt}}{unit} {icon})"
 
+
+# ── Section builders ──────────────────────────────────────────────────────────
+
+def _section_core(this_week, prev_week) -> list[str]:
+    published_curr = _sum(this_week, "content", "published")
+    published_prev = _sum(prev_week, "content", "published")
+    runs_curr = _sum(this_week, "runs", "total")
+    success_curr = _sum(this_week, "runs", "success")
+    runs_prev = _sum(prev_week, "runs", "total")
+    success_prev = _sum(prev_week, "runs", "success")
+    sr_curr = round(success_curr / runs_curr * 100, 1) if runs_curr else None
+    sr_prev = round(success_prev / runs_prev * 100, 1) if runs_prev else None
+    avg_dur = _avg(this_week, "duration", "avg_sec")
+    avg_dur_prev = _avg(prev_week, "duration", "avg_sec")
+
+    lines = ["**📊 Viikon tunnusluvut**"]
+    lines.append(f"  Artikkeleita julkaistu: **{published_curr}**  {_delta(published_curr, published_prev, '', True)}")
+    lines.append(f"  Pipeline-ajoja: {runs_curr}  ({success_curr} onnistui)")
+    if sr_curr is not None:
+        lines.append(f"  Onnistumisprosentti: **{sr_curr}%**  {_delta(sr_curr, sr_prev, '%', True)}")
+    if avg_dur is not None:
+        lines.append(f"  Keskim. ajon kesto: {avg_dur}s  {_delta(avg_dur, avg_dur_prev, 's', False)}")
+    return lines
+
+
+def _section_daily(this_week) -> list[str]:
+    if not this_week:
+        return []
+    lines = ["**📅 Päiväkohtainen erittely**"]
+    for day in sorted(this_week, key=lambda d: d["date"]):
+        date_str = datetime.strptime(day["date"], "%Y-%m-%d").strftime("%d.%m")
+        runs = day.get("runs", {})
+        total = runs.get("total", 0)
+        success = runs.get("success", 0)
+        published = day.get("content", {}).get("published", 0)
+        sr = f"{success/total*100:.0f}%" if total else "—"
+        lines.append(f"  {date_str}  ajoja:{total}  ok:{success} ({sr})  julk:{published}")
+    return lines
+
+
+def _section_failures(this_week, all_runs: list[dict], week_start: datetime, week_end: datetime) -> list[str]:
+    """Top 3 failure reasons from errors_sample in history + raw runs in window."""
+    # Collect from history errors_sample
+    error_counter: Counter = Counter()
+    for day in this_week:
+        for err in day.get("errors_sample", []):
+            # Normalise
+            e = err.lower()
+            if "no articles" in e or "empty" in e or "scan" in e:
+                error_counter["Ei artikkeleita (tyhjä skannaus)"] += 1
+            elif "timeout" in e or "exit code 124" in e:
+                error_counter["Rewriter timeout"] += 1
+            elif "build" in e or "hugo" in e:
+                error_counter["Hugo-buildaus epäonnistui"] += 1
+            elif "broken pipe" in e:
+                error_counter["Broken pipe (skanneri)"] += 1
+            elif "import" in e or "nameerror" in e or "attributeerror" in e:
+                error_counter["Python-importtivirhe"] += 1
+            elif "api" in e or "openai" in e or "openrouter" in e:
+                error_counter["LLM API -virhe"] += 1
+            else:
+                error_counter[err[:40]] += 1
+
+    # Also scan raw run records in the week window
+    for run in all_runs:
+        try:
+            ts = datetime.fromisoformat(run.get("timestamp", "").replace("Z", "+00:00"))
+            if not (week_start <= ts < week_end):
+                continue
+        except Exception:
+            continue
+        if run.get("success"):
+            continue
+        err = (run.get("error") or "").lower()
+        if err:
+            if "no articles" in err or "empty" in err:
+                error_counter["Ei artikkeleita (tyhjä skannaus)"] += 1
+            elif "timeout" in err:
+                error_counter["Rewriter timeout"] += 1
+            elif "build" in err:
+                error_counter["Hugo-buildaus epäonnistui"] += 1
+
+    if not error_counter:
+        return []
+
+    total_errors = sum(error_counter.values())
+    lines = [f"**❌ Top 3 vikasyytä** (yhteensä {total_errors} virhettä)"]
+    for i, (reason, count) in enumerate(error_counter.most_common(3), 1):
+        pct = f"{count/total_errors*100:.0f}%"
+        lines.append(f"  {i}. {reason} — {count}x ({pct})")
+    return lines
+
+
+def _section_images(this_week) -> list[str]:
+    img_total = _sum(this_week, "images", "total")
+    if img_total == 0:
+        # Try from image_backfill
+        backfill = _load_image_backfill()
+        if not backfill:
+            return []
+        week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+        recent = [r for r in backfill if r.get("timestamp", "") >= week_ago]
+        if not recent:
+            recent = backfill  # fallback: show all-time
+        sources: Counter = Counter(r.get("source") or "none" for r in recent)
+        total = sum(sources.values())
+        ok = sum(1 for r in recent if r.get("status") == "ok")
+        failed = sum(1 for r in recent if r.get("status") == "failed")
+        lines = [f"**🖼 Kuvat** (backfill, {len(recent)} artikkelia)"]
+        for src, cnt in sources.most_common():
+            lines.append(f"  {src.capitalize()}: {cnt} ({_pct(cnt, total)})")
+        if failed:
+            lines.append(f"  ⚠️ Epäonnistui: {failed}")
+        return lines
+
+    img_unsplash = _sum(this_week, "images", "unsplash")
+    img_pexels = _sum(this_week, "images", "pexels")
+    img_ai = _sum(this_week, "images", "ai")
+    img_fallback = _sum(this_week, "images", "fallback")
+
+    lines = [f"**🖼 Kuvat** (viikon {img_total} artikkelia)"]
+    if img_unsplash:
+        lines.append(f"  Unsplash: {img_unsplash} ({_pct(img_unsplash, img_total)})")
+    if img_pexels:
+        lines.append(f"  Pexels:   {img_pexels} ({_pct(img_pexels, img_total)})")
+    if img_ai:
+        lines.append(f"  AI-gen:   {img_ai} ({_pct(img_ai, img_total)})")
+    if img_fallback:
+        lines.append(f"  Fallback: {img_fallback} ({_pct(img_fallback, img_total)}) ⚠️")
+    if img_total == img_unsplash + img_pexels + img_ai + img_fallback == 0:
+        lines.append("  Ei kuvia tällä viikolla")
+    return lines
+
+
+def _section_backfill() -> list[str]:
+    """Backfill progress — articles expanded this week, remaining."""
+    if not CONTENT_DIR.exists():
+        return []
+    import re
+    articles = list(CONTENT_DIR.glob("**/*.md"))
+    total = len(articles)
+    if not total:
+        return []
+
+    # Count articles by word count tiers
+    tier_counts = {"<50": 0, "50-200": 0, "200-500": 0, "500+": 0}
+    this_week_cutoff = (datetime.now(timezone.utc) - timedelta(days=7)).timestamp()
+    expanded_this_week = 0
+
+    for art in articles:
+        try:
+            text = art.read_text(encoding="utf-8", errors="ignore")
+            # Strip frontmatter
+            body = re.sub(r'^---.*?---\s*', '', text, flags=re.DOTALL)
+            words = len(body.split())
+            if words < 50:
+                tier_counts["<50"] += 1
+            elif words < 200:
+                tier_counts["50-200"] += 1
+            elif words < 500:
+                tier_counts["200-500"] += 1
+            else:
+                tier_counts["500+"] += 1
+            # Expanded this week = recently modified + word count >=200
+            if art.stat().st_mtime >= this_week_cutoff and words >= 200:
+                expanded_this_week += 1
+        except Exception:
+            pass
+
+    thin = tier_counts["<50"] + tier_counts["50-200"]
+    lines = [f"**📈 Sisällön tila** ({total} artikkelia yhteensä)"]
+    lines.append(f"  Laajennettu tällä viikolla: {expanded_this_week}")
+    lines.append(f"  Ohut sisältö (<200 sanaa): {thin} ({_pct(thin, total)})")
+    if tier_counts["<50"]:
+        lines.append(f"    • Kriittisen ohut (<50): {tier_counts['<50']}")
+    lines.append(f"  Hyvä sisältö (500+ sanaa): {tier_counts['500+']} ({_pct(tier_counts['500+'], total)})")
+    return lines
+
+
+# ── Main builder ──────────────────────────────────────────────────────────────
 
 def build_digest(history: list[dict], ref_date: datetime | None = None) -> str:
-    """Build the weekly digest message."""
     now = ref_date or datetime.now(timezone.utc)
 
-    # This week: Mon 00:00 → Sun 23:59 (last full week before now)
-    # We report on the week that just ended (last Mon–Sun)
-    days_since_monday = now.weekday()  # 0=Mon
+    # Last full week (Mon–Sun before today)
+    days_since_monday = now.weekday()
     this_week_end = now.replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=days_since_monday)
     this_week_start = this_week_end - timedelta(days=7)
     prev_week_start = this_week_start - timedelta(days=7)
@@ -145,108 +332,98 @@ def build_digest(history: list[dict], ref_date: datetime | None = None) -> str:
     prev_week = _days_in_range(history, prev_week_start, prev_week_end)
 
     if not this_week:
-        # Fall back to most recent 7 days of data available
+        # Fall back: most recent 7 days available
         if history:
-            latest = sorted(history, key=lambda d: d["date"])[-7:]
-            this_week = latest
-            this_week_start_str = latest[0]["date"]
-            this_week_end_str = latest[-1]["date"]
+            sorted_hist = sorted(history, key=lambda d: d["date"])
+            this_week = sorted_hist[-7:]
+            this_week_start = datetime.strptime(this_week[0]["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+            this_week_end = datetime.strptime(this_week[-1]["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc) + timedelta(days=1)
         else:
             return "📊 **Viikkokooste** — ei dataa saatavilla."
-        week_label = f"{this_week_start_str} – {this_week_end_str}"
-    else:
-        week_label = f"{this_week_start.strftime('%d.%m')}–{(this_week_end - timedelta(days=1)).strftime('%d.%m.%Y')}"
 
-    # Core metrics
-    published_curr = _sum(this_week, "content", "published")
-    published_prev = _sum(prev_week, "content", "published")
+    week_label = (
+        f"{this_week_start.strftime('%d.%m')}–"
+        f"{(this_week_end - timedelta(days=1)).strftime('%d.%m.%Y')}"
+    )
 
-    runs_curr = _sum(this_week, "runs", "total")
-    success_curr = _sum(this_week, "runs", "success")
-    runs_prev = _sum(prev_week, "runs", "total")
-    success_prev = _sum(prev_week, "runs", "success")
-    success_rate_curr = round(success_curr / runs_curr * 100, 1) if runs_curr else None
-    success_rate_prev = round(success_prev / runs_prev * 100, 1) if runs_prev else None
+    all_runs = _load_metrics_runs()
 
-    # Avg rewrite duration
-    rewrite_curr = _avg(this_week, "step_avg_sec", "rewriter")
-    rewrite_prev = _avg(prev_week, "step_avg_sec", "rewriter")
-
-    # Image breakdown
-    img_total = _sum(this_week, "images", "total")
-    img_unsplash = _sum(this_week, "images", "unsplash")
-    img_pexels = _sum(this_week, "images", "pexels")
-    img_ai = _sum(this_week, "images", "ai")
-    img_fallback = _sum(this_week, "images", "fallback")
-
-    # Errors
-    errors_curr = _sum(this_week, "error_count")
-    errors_prev = _sum(prev_week, "error_count")
-
-    # Days active
-    days_active = len(this_week)
-
-    lines = [
-        f"📊 **Viikkokooste — {week_label}**",
-        f"_{days_active} aktiivista päivää, {runs_curr} pipeline-ajoa_",
-        "",
-        "**📰 Julkaisut:**",
-        f"  Tällä viikolla:  **{published_curr}** artikkelia  {_delta_str(published_curr, published_prev, '', True)}",
-        "",
-        "**✅ Pipeline-suorituskyky:**",
+    sections = [
+        [f"📊 **Viikkokooste — {week_label}**", ""],
+        _section_core(this_week, prev_week),
+        [""],
+        _section_daily(this_week),
+        [""],
+        _section_failures(this_week, all_runs, this_week_start, this_week_end),
+        [""],
+        _section_images(this_week),
+        [""],
+        _section_backfill(),
+        [""],
+        [f"_Generoitu {now.strftime('%Y-%m-%d %H:%M UTC')}_"],
     ]
 
-    if success_rate_curr is not None:
-        lines.append(f"  Onnistumisprosentti: **{success_rate_curr}%**  {_delta_str(success_rate_curr, success_rate_prev, '%', True)}")
-    else:
-        lines.append("  Onnistumisprosentti: —")
+    lines = []
+    for section in sections:
+        lines.extend(section)
 
-    if rewrite_curr is not None:
-        lines.append(f"  Uudelleenkirjoitusaika (avg): **{rewrite_curr}s**  {_delta_str(rewrite_curr, rewrite_prev, 's', False)}")
+    # Remove consecutive blank lines
+    result = []
+    prev_blank = False
+    for line in lines:
+        is_blank = line.strip() == ""
+        if is_blank and prev_blank:
+            continue
+        result.append(line)
+        prev_blank = is_blank
 
-    if errors_curr or errors_prev:
-        lines.append(f"  Virheitä: **{errors_curr}**  {_delta_str(errors_curr, errors_prev, '', False)}")
-
-    # Image breakdown
-    if img_total > 0:
-        lines.append("")
-        lines.append("**🖼 Kuvat (viikon yhteensä):**")
-        if img_unsplash:
-            lines.append(f"  Unsplash:  {img_unsplash}  ({_pct(img_unsplash, img_total)})")
-        if img_pexels:
-            lines.append(f"  Pexels:    {img_pexels}  ({_pct(img_pexels, img_total)})")
-        if img_ai:
-            lines.append(f"  AI-gen:    {img_ai}  ({_pct(img_ai, img_total)})")
-        if img_fallback:
-            lines.append(f"  Fallback:  {img_fallback}  ({_pct(img_fallback, img_total)}) ⚠️")
-
-    lines.append("")
-    lines.append(f"_Generoitu {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_")
-
-    return "\n".join(lines)
+    return "\n".join(result)
 
 
-def post(message: str, webhook: str) -> bool:
+# ── Discord posting ───────────────────────────────────────────────────────────
+
+def _post_chunk(message: str, webhook: str) -> bool:
     payload = json.dumps({"content": message}).encode("utf-8")
     req = urllib.request.Request(
-        webhook,
-        data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
+        webhook, data=payload,
+        headers={"Content-Type": "application/json"}, method="POST"
     )
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
-            ok = resp.status in (200, 204)
-            print(f"[weekly_digest] Posted ({resp.status})")
-            return ok
+            print(f"[weekly_digest] Posted chunk ({resp.status})")
+            return resp.status in (200, 204)
     except urllib.error.HTTPError as e:
-        body = e.read(200).decode("utf-8", errors="replace")
-        print(f"[weekly_digest] HTTP {e.code}: {body}", file=sys.stderr)
+        print(f"[weekly_digest] HTTP {e.code}: {e.read(200).decode('utf-8', 'replace')}", file=sys.stderr)
         return False
     except Exception as e:
         print(f"[weekly_digest] Failed: {e}", file=sys.stderr)
         return False
 
+
+def post(message: str, webhook: str) -> bool:
+    """Post message to Discord, splitting into chunks if needed."""
+    if len(message) <= DISCORD_MAX_LEN:
+        return _post_chunk(message, webhook)
+    # Split at paragraph boundaries (blank lines)
+    chunks, current = [], []
+    current_len = 0
+    for line in message.splitlines(keepends=True):
+        if current_len + len(line) > DISCORD_MAX_LEN and current:
+            chunks.append("".join(current))
+            current, current_len = [], 0
+        current.append(line)
+        current_len += len(line)
+    if current:
+        chunks.append("".join(current))
+
+    ok = True
+    for i, chunk in enumerate(chunks, 1):
+        print(f"[weekly_digest] Posting chunk {i}/{len(chunks)}")
+        ok = _post_chunk(chunk.rstrip(), webhook) and ok
+    return ok
+
+
+# ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(description="Post weekly pipeline metrics digest to Discord.")
