@@ -965,10 +965,183 @@ img { max-width: 100%; height: auto; }
   vertical-align: middle;
 }
 
-/* === Cookie Banner fix for dark mode === */
+/* === Cookie Consent Banner + Modal ════════════════════════════════════════ */
+
+#cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  padding: 1rem 1.5rem;
+  z-index: 9998;
+  box-shadow: 0 -2px 12px rgba(0,0,0,.4);
+  font-size: 0.85rem;
+}
+
+.cb-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cb-text {
+  flex: 1;
+  min-width: 200px;
+  margin: 0;
+}
+
+.cb-link { color: #aaa; text-decoration: underline; }
+
+.cb-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.cb-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  transition: opacity .15s;
+  white-space: nowrap;
+}
+.cb-btn:hover { opacity: .85; }
+.cb-btn--primary   { background: var(--accent, #c0392b); color: #fff; }
+.cb-btn--secondary { background: transparent; color: #ccc; border: 1px solid #555; }
+.cb-btn--ghost     { background: transparent; color: #aaa; border: 1px solid #444; }
+
+/* Overlay */
+#cookie-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 9998;
+}
+
+/* Modal */
+#cookie-modal {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: min(520px, 96vw);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.cm-box {
+  background: var(--bg, #fff);
+  color: var(--text, #111);
+  border-radius: 8px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+}
+
+.cm-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.15rem;
+}
+
+.cm-category {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border, #eee);
+}
+
+.cm-category:last-of-type { border-bottom: none; }
+
+.cm-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cm-category-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cm-always-on {
+  font-size: 0.8rem;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.cm-category-desc {
+  margin: 0.3rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-muted, #666);
+  line-height: 1.5;
+}
+
+/* Toggle switch */
+.cm-toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.cm-toggle input { opacity: 0; width: 0; height: 0; }
+.cm-toggle-track {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 24px;
+  transition: background .2s;
+}
+.cm-toggle-track::before {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  left: 3px; top: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.cm-toggle input:checked + .cm-toggle-track { background: var(--accent, #c0392b); }
+.cm-toggle input:checked + .cm-toggle-track::before { transform: translateX(20px); }
+.cm-toggle input:focus-visible + .cm-toggle-track {
+  outline: 2px solid var(--accent, #c0392b);
+  outline-offset: 2px;
+}
+
+.cm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Dark mode */
 [data-theme="dark"] #cookie-banner {
-  background: #2a2a2a;
-  border-top: 1px solid var(--border);
+  background: #1e1e1e;
+  border-top: 1px solid #333;
+}
+[data-theme="dark"] .cm-box {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  border: 1px solid #333;
+}
+[data-theme="dark"] .cm-category { border-color: #333; }
+[data-theme="dark"] .cm-category-desc { color: #aaa; }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cb-actions { width: 100%; }
+  .cb-btn { flex: 1; text-align: center; }
+  .cm-box { padding: 1.25rem; }
 }
 
 /* === Static pages (tietosuoja, tietoja) === */
@@ -1702,6 +1875,8 @@ pre code {
   #back-to-top,
   .reading-progress,
   #cookie-banner,
+  #cookie-modal,
+  #cookie-overlay,
   .ad-slot,
   #theme-toggle,
   .breadcrumbs {

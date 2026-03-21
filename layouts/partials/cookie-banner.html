@@ -1,62 +1,208 @@
-{{/* GDPR cookie consent banner — blocks GA4 until user accepts */}}
-{{ $ga_id := .Site.Params.ga4_id }}
-<div id="cookie-banner" role="dialog" aria-label="Evästeasetukset" aria-live="polite" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1a1a1a; color:#fff; padding:1rem 1.5rem; font-family:var(--font-sans,sans-serif); font-size:0.85rem; z-index:9999; box-shadow:0 -2px 8px rgba(0,0,0,.4);">
-  <div style="max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:0.75rem;">
-    <span style="flex:1; min-width:200px;">
-      Käytämme Google Analytics -evästeitä sivuston kehittämiseen.
-      <a href="/tietosuoja/" style="color:#aaa; text-decoration:underline;">Lue lisää</a>
-    </span>
-    <div style="display:flex; gap:0.5rem; flex-shrink:0;">
-      <button id="cookie-reject" style="padding:0.4rem 1rem; background:transparent; color:#aaa; border:1px solid #555; border-radius:3px; cursor:pointer; font-size:0.85rem;">Hylkää</button>
-      <button id="cookie-accept" style="padding:0.4rem 1rem; background:#c0392b; color:#fff; border:none; border-radius:3px; cursor:pointer; font-weight:600; font-size:0.85rem;">Hyväksy</button>
+{{/* ─────────────────────────────────────────────────────────────────────────
+  cookie-banner.html — GDPR consent banner (three categories)
+
+  Categories:
+    necessary   — always on, no toggle
+    analytics   — GA4 (ga4_id param)
+    advertising — AdSense / future ad networks (adsense_id param)
+
+  localStorage key: cookie_consent_v2
+  Value: JSON {"v":2,"necessary":true,"analytics":bool,"advertising":bool}
+
+  GA4 and ad scripts are only injected after explicit consent.
+  Bumped key from v1 → v2 so existing binary-only consents are re-prompted.
+───────────────────────────────────────────────────────────────────────── */}}
+{{ $ga_id      := .Site.Params.ga4_id }}
+{{ $adsense_id := .Site.Params.adsense_id }}
+
+<div id="cookie-banner" role="dialog" aria-modal="true" aria-label="Evästeasetukset" hidden>
+  <div class="cb-inner">
+    <p class="cb-text">
+      Käytämme evästeitä sivuston kehittämiseen ja mainosten näyttämiseen.
+      <a href="/tietosuoja/" class="cb-link">Lue lisää</a>
+    </p>
+    <div class="cb-actions">
+      <button id="cb-customize" class="cb-btn cb-btn--ghost" type="button">Muokkaa asetuksia</button>
+      <button id="cb-reject"    class="cb-btn cb-btn--secondary" type="button">Hylkää kaikki</button>
+      <button id="cb-accept"    class="cb-btn cb-btn--primary" type="button">Hyväksy kaikki</button>
     </div>
   </div>
 </div>
 
+<div id="cookie-modal" role="dialog" aria-modal="true" aria-label="Evästeasetukset — muokkaa" hidden>
+  <div class="cm-box">
+    <h2 class="cm-title">Evästeasetukset</h2>
+
+    <div class="cm-category">
+      <div class="cm-category-header">
+        <span class="cm-category-name">Välttämättömät</span>
+        <span class="cm-always-on">Aina käytössä</span>
+      </div>
+      <p class="cm-category-desc">Sivuston toiminnan kannalta välttämättömät evästeet (teema, suostumusasetus).</p>
+    </div>
+
+    <div class="cm-category">
+      <div class="cm-category-header">
+        <label class="cm-category-name" for="cb-toggle-analytics">Analytiikka</label>
+        <label class="cm-toggle" aria-label="Analytiikkaevästeet">
+          <input type="checkbox" id="cb-toggle-analytics" name="analytics">
+          <span class="cm-toggle-track"></span>
+        </label>
+      </div>
+      <p class="cm-category-desc">Google Analytics — auttaa meitä ymmärtämään, miten sivustoa käytetään. IP-osoite anonymisoidaan.</p>
+    </div>
+
+    <div class="cm-category">
+      <div class="cm-category-header">
+        <label class="cm-category-name" for="cb-toggle-advertising">Mainokset</label>
+        <label class="cm-toggle" aria-label="Mainosevästeet">
+          <input type="checkbox" id="cb-toggle-advertising" name="advertising">
+          <span class="cm-toggle-track"></span>
+        </label>
+      </div>
+      <p class="cm-category-desc">Google AdSense ja muut mainosverkostot. Mahdollistaa kohdennetut mainokset.</p>
+    </div>
+
+    <div class="cm-actions">
+      <button id="cm-cancel" class="cb-btn cb-btn--ghost" type="button">Peruuta</button>
+      <button id="cm-save"   class="cb-btn cb-btn--primary" type="button">Tallenna valinnat</button>
+    </div>
+  </div>
+</div>
+<div id="cookie-overlay" hidden></div>
+
 <script>
 (function() {
-  var CONSENT_KEY = 'cookie_consent_v1';
-  var GA_ID = '{{ .Site.Params.ga4_id }}';
+  'use strict';
+  var KEY     = 'cookie_consent_v2';
+  var GA_ID   = '{{ $ga_id }}';
+  var ADS_ID  = '{{ $adsense_id }}';
+
+  /* ── Helpers ─────────────────────────────────────────────── */
+  function loadScript(src) {
+    var s = document.createElement('script');
+    s.async = true; s.src = src;
+    document.head.appendChild(s);
+  }
 
   function loadGA() {
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(s);
+    if (!GA_ID) return;
+    loadScript('https://www.googletagmanager.com/gtag/js?id=' + GA_ID);
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', GA_ID, {anonymize_ip: true});
+    gtag('config', GA_ID, { anonymize_ip: true });
   }
 
-  function hideBanner() {
-    var b = document.getElementById('cookie-banner');
-    if (b) b.style.display = 'none';
+  function loadAds() {
+    if (!ADS_ID) return;
+    loadScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADS_ID);
   }
 
-  var consent = localStorage.getItem(CONSENT_KEY);
+  function applyConsent(prefs) {
+    if (prefs.analytics)   loadGA();
+    if (prefs.advertising) loadAds();
+  }
 
-  if (consent === 'accepted') {
-    loadGA();
-  } else if (consent === null) {
-    // First visit — show banner
-    document.addEventListener('DOMContentLoaded', function() {
-      var banner = document.getElementById('cookie-banner');
-      if (banner) banner.style.display = 'block';
+  function saveConsent(analytics, advertising) {
+    var prefs = { v: 2, necessary: true, analytics: !!analytics, advertising: !!advertising };
+    try { localStorage.setItem(KEY, JSON.stringify(prefs)); } catch(e) {}
+    return prefs;
+  }
 
-      document.getElementById('cookie-accept').addEventListener('click', function() {
-        localStorage.setItem(CONSENT_KEY, 'accepted');
-        hideBanner();
-        loadGA();
-      });
+  function loadConsent() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (raw) {
+        var p = JSON.parse(raw);
+        if (p && p.v === 2) return p;
+      }
+    } catch(e) {}
+    return null;
+  }
 
-      document.getElementById('cookie-reject').addEventListener('click', function() {
-        localStorage.setItem(CONSENT_KEY, 'rejected');
-        hideBanner();
-      });
+  /* ── UI helpers ──────────────────────────────────────────── */
+  function show(el)  { if (el) { el.hidden = false; el.removeAttribute('hidden'); } }
+  function hide(el)  { if (el) el.hidden = true; }
+
+  function openModal() {
+    var modal   = document.getElementById('cookie-modal');
+    var overlay = document.getElementById('cookie-overlay');
+    var saved   = loadConsent() || {};
+    document.getElementById('cb-toggle-analytics').checked   = !!saved.analytics;
+    document.getElementById('cb-toggle-advertising').checked = !!saved.advertising;
+    show(overlay); show(modal);
+    modal.focus();
+  }
+
+  function closeModal() {
+    hide(document.getElementById('cookie-modal'));
+    hide(document.getElementById('cookie-overlay'));
+  }
+
+  /* ── Init ────────────────────────────────────────────────── */
+  var existing = loadConsent();
+  if (existing) {
+    applyConsent(existing);
+    return; // already consented — nothing else to do
+  }
+
+  /* First visit: show banner after DOM ready */
+  function initBanner() {
+    var banner  = document.getElementById('cookie-banner');
+    var overlay = document.getElementById('cookie-overlay');
+
+    show(banner);
+
+    document.getElementById('cb-accept').addEventListener('click', function() {
+      var prefs = saveConsent(true, true);
+      hide(banner);
+      applyConsent(prefs);
+    });
+
+    document.getElementById('cb-reject').addEventListener('click', function() {
+      saveConsent(false, false);
+      hide(banner);
+    });
+
+    document.getElementById('cb-customize').addEventListener('click', function() {
+      hide(banner);
+      openModal();
+    });
+
+    document.getElementById('cm-save').addEventListener('click', function() {
+      var analytics   = document.getElementById('cb-toggle-analytics').checked;
+      var advertising = document.getElementById('cb-toggle-advertising').checked;
+      var prefs = saveConsent(analytics, advertising);
+      closeModal();
+      applyConsent(prefs);
+    });
+
+    document.getElementById('cm-cancel').addEventListener('click', function() {
+      closeModal();
+      show(banner);
+    });
+
+    /* Close modal on overlay click */
+    document.getElementById('cookie-overlay').addEventListener('click', function() {
+      closeModal();
+      show(banner);
+    });
+
+    /* Trap Escape key */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var modal = document.getElementById('cookie-modal');
+        if (!modal.hidden) { closeModal(); show(banner); }
+      }
     });
   }
-  // consent === 'rejected': do nothing, GA never loads
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBanner);
+  } else {
+    initBanner();
+  }
 })();
 </script>
