@@ -62,7 +62,7 @@
           <div class="recent-card-body">
             {{ with .Params.categories }}<span class="category-label small">{{ index . 0 }}</span>{{ end }}
             <h3 class="recent-card-title">{{ .Title }}</h3>
-            <div class="recent-card-meta">{{ .Date | time.Format "2.1.2006" }}</div>
+            <div class="recent-card-meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
           </div>
         </a>
       </article>

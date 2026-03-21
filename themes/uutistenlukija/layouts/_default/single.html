@@ -28,7 +28,7 @@
     {{ end }}
   </figure>
   <div class="article-meta">
-    {{ .Date | time.Format "2.1.2006 klo 15:04" }}
+    {{ .Date | time.Format "2.1. klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
     · {{ .ReadingTime }} min lukuaika
   </div>
@@ -87,7 +87,7 @@
       {{ range $related }}
       <a href="{{ .Permalink }}" class="related-link">
         <span class="related-title">{{ .Title }}</span>
-        <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
+        <span class="related-meta">{{ .Date | time.Format "2.1. klo 15:04" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
       </a>
       {{ end }}
     </div>

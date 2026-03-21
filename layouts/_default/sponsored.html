@@ -34,7 +34,7 @@
   <h1>{{ .Title }}</h1>
 
   <div class="article-meta sponsored-meta">
-    {{ .Date | time.Format "2.1.2006 klo 15:04" }}
+    {{ .Date | time.Format "2.1. klo 15:04" }}
     {{ with .Params.sponsor_name }} · <span class="author-inline">{{ . }}</span>{{ end }}
     · {{ .ReadingTime }} min lukuaika
   </div>

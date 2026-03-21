@@ -11,7 +11,7 @@
   <h1>{{ .Title }}</h1>
   {{ partial "toc.html" . }}
   <div class="article-meta">
-    {{ .Date | time.Format "2.1.2006 klo 15:04" }}
+    {{ .Date | time.Format "2.1. klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
     · {{ .ReadingTime }} min lukuaika
   </div>
@@ -55,46 +55,28 @@
   </div>
   {{ end }}
 
-  {{/* Related articles — uses curated related_articles slugs when available,
-       falls back to category matching, then recent posts */}}
+  {{/* Related articles — category-matched, falls back to recent */}}
   {{ $currentPage := . }}
   {{ $currentCategories := .Params.categories }}
   {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
   {{ $otherPosts := where $allPosts "Permalink" "ne" .Permalink }}
   {{ $related := slice }}
-
-  {{/* Priority 1: curated related_articles list from front matter */}}
-  {{ with .Params.related_articles }}
-    {{ range . }}
-      {{ $slug := . }}
-      {{ range $allPosts }}
-        {{ if eq .File.BaseFileName $slug }}
-          {{ $related = $related | append . }}
+  {{ range $otherPosts }}
+    {{ $pageCategories := .Params.categories }}
+    {{ $match := false }}
+    {{ range $currentCategories }}
+      {{ $cat := . }}
+      {{ range $pageCategories }}
+        {{ if eq . $cat }}
+          {{ $match = true }}
         {{ end }}
       {{ end }}
     {{ end }}
-  {{ end }}
-
-  {{/* Priority 2: category-based matching */}}
-  {{ if not $related }}
-    {{ range $otherPosts }}
-      {{ $pageCategories := .Params.categories }}
-      {{ $match := false }}
-      {{ range $currentCategories }}
-        {{ $cat := . }}
-        {{ range $pageCategories }}
-          {{ if eq . $cat }}
-            {{ $match = true }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      {{ if $match }}
-        {{ $related = $related | append . }}
-      {{ end }}
+    {{ if $match }}
+      {{ $related = $related | append . }}
     {{ end }}
   {{ end }}
-
-  {{/* Priority 3: recent posts fallback */}}
+  {{/* Fall back to recent posts if no category matches */}}
   {{ if not $related }}
     {{ $related = $otherPosts | first 3 }}
   {{ end }}
@@ -107,12 +89,12 @@
       <a href="{{ .Permalink }}" class="related-card">
         {{ with .Params.image }}
         <div class="related-thumb">
-          <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="lazy">
+          <img src="{{ . }}" alt="{{ .Title }}" loading="lazy">
         </div>
         {{ end }}
         <div class="related-text">
           <span class="related-title">{{ .Title }}</span>
-          <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
+          <span class="related-meta">{{ .Date | time.Format "2.1. klo 15:04" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
         </div>
       </a>
       {{ end }}
