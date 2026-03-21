@@ -89,7 +89,14 @@
       <a href="{{ .Permalink }}" class="related-card">
         {{ with .Params.image }}
         <div class="related-thumb">
-          <img src="{{ . }}" alt="{{ .Title }}" loading="lazy">
+          {{ partial "responsive-image.html" (dict
+            "src"     .
+            "alt"     $.Title
+            "loading" "lazy"
+            "width"   200
+            "height"  113
+            "sizes"   "200px"
+          ) }}
         </div>
         {{ end }}
         <div class="related-text">

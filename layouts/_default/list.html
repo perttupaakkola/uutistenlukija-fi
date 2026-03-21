@@ -14,8 +14,16 @@
   <article class="article-card{{ if ge $i $pageSize }} load-more-item hidden-article{{ end }}">
     <a href="{{ $p.Permalink }}" class="article-image-link card-thumb-link" tabindex="-1" aria-hidden="true">
       <div class="card-thumb-wrapper">
-        <img src="{{ $img }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" width="400" height="225"
-          onerror="this.onerror=null;this.src='/images/categories/{{ $cat | lower }}.jpg'">
+        {{ partial "responsive-image.html" (dict
+          "src"     $img
+          "alt"     $alt
+          "class"   "article-card-thumb"
+          "loading" "lazy"
+          "width"   400
+          "height"  225
+          "sizes"   "(max-width: 480px) 100vw, (max-width: 768px) 50vw, 400px"
+          "onerror" (printf "this.onerror=null;this.src='/images/categories/%s.jpg'" ($cat | lower))
+        ) }}
       </div>
     </a>
     {{ with $p.Params.categories }}

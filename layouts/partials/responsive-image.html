@@ -1,49 +1,151 @@
 {{/*
-  responsive-image.html — Responsive image with CDN optimization
-  
-  Handles both Unsplash hotlinks and local Pexels images with proper sizing.
-  Unsplash URLs get `?w=400&q=80` params for cards, `?w=1200&q=85` for hero.
-  
+  responsive-image.html — Responsive image with srcset + CDN optimization
+
+  Supports Unsplash (images.unsplash.com) and Pexels (images.pexels.com) resize params.
+  Falls back gracefully to plain <img> for local/category URLs.
+
   Parameters:
-  - src: image URL
-  - alt: alt text
-  - width: desired display width (400 for cards, 1200 for hero)
-  - height: desired display height (225 for cards, 675 for hero)
-  - class: CSS classes
-  - loading: lazy or eager
-  - sizes: responsive sizes string (optional, for srcset)
+  - src:             image URL (required)
+  - alt:             alt text (default: "Article image")
+  - width:           display width in px (default: 800)
+  - height:          display height in px (default: 450)
+  - class:           CSS class string
+  - loading:         "lazy" | "eager" (default: "lazy")
+  - fetchpriority:   "high" | "auto" | "low" (default: omitted)
+  - sizes:           responsive sizes string (default: "(max-width: 768px) 100vw, 800px")
+  - srcset_widths:   comma-separated widths to generate (default: "400,800,1200")
+  - onerror:         onerror attribute value (optional)
 */}}
 
-{{ $src := .src }}
-{{ $alt := .alt | default "Article image" }}
-{{ $width := .width | default 400 }}
-{{ $height := .height | default 225 }}
-{{ $class := .class | default "" }}
-{{ $loading := .loading | default "lazy" }}
+{{ $src        := .src }}
+{{ $alt        := .alt | default "Article image" }}
+{{ $width      := .width | default 800 }}
+{{ $height     := .height | default 450 }}
+{{ $class      := .class | default "" }}
+{{ $loading    := .loading | default "lazy" }}
+{{ $fp         := .fetchpriority }}
+{{ $sizes      := .sizes | default "(max-width: 768px) 100vw, 800px" }}
+{{ $onerror    := .onerror }}
 
-{{/* Apply CDN optimization to Unsplash URLs */}}
-{{ if hasPrefix $src "https://images.unsplash.com" }}
-  {{/* Unsplash: add sizing and quality params */}}
-  {{ if in $src "?" }}
-    {{ $src = printf "%s&w=%d&q=80&fit=crop" $src $width }}
-  {{ else }}
-    {{ $src = printf "%s?w=%d&q=80&fit=crop" $src $width }}
+{{/* Determine CDN type */}}
+{{ $isUnsplash := hasPrefix $src "https://images.unsplash.com" }}
+{{ $isPexels   := hasPrefix $src "https://images.pexels.com" }}
+{{ $hasCDN     := or $isUnsplash $isPexels }}
+
+{{/* --- Build srcset for CDN images --- */}}
+{{ $srcset := "" }}
+{{ if $hasCDN }}
+  {{ $widths := slice 400 800 1200 }}
+  {{ $entries := slice }}
+  {{ range $widths }}
+    {{ $w := . }}
+    {{ $entry := "" }}
+    {{ if $isUnsplash }}
+      {{/* Strip existing w/q/fit params cleanly */}}
+      {{ $base := $src }}
+      {{ if in $src "?" }}
+        {{ $parts := split $src "?" }}
+        {{ $base = index $parts 0 }}
+        {{/* Rebuild query without w/q/fit to avoid duplicates */}}
+        {{ $qs := "" }}
+        {{ range split (index $parts 1) "&" }}
+          {{ $kv := . }}
+          {{ if not (or (hasPrefix $kv "w=") (hasPrefix $kv "q=") (hasPrefix $kv "fit=")) }}
+            {{ $qs = printf "%s&%s" $qs $kv }}
+          {{ end }}
+        {{ end }}
+        {{ if $qs }}
+          {{ $base = printf "%s?%s" $base (strings.TrimLeft "&" $qs) }}
+          {{ $entry = printf "%s&w=%d&q=82&fit=crop %dw" $base $w $w }}
+        {{ else }}
+          {{ $entry = printf "%s?w=%d&q=82&fit=crop %dw" $base $w $w }}
+        {{ end }}
+      {{ else }}
+        {{ $entry = printf "%s?w=%d&q=82&fit=crop %dw" $base $w $w }}
+      {{ end }}
+    {{ else if $isPexels }}
+      {{ $base := $src }}
+      {{ if in $src "?" }}
+        {{ $parts := split $src "?" }}
+        {{ $base = index $parts 0 }}
+        {{ $qs := "" }}
+        {{ range split (index $parts 1) "&" }}
+          {{ $kv := . }}
+          {{ if not (or (hasPrefix $kv "w=") (hasPrefix $kv "h=") (hasPrefix $kv "auto=") (hasPrefix $kv "fit=")) }}
+            {{ $qs = printf "%s&%s" $qs $kv }}
+          {{ end }}
+        {{ end }}
+        {{ if $qs }}
+          {{ $base = printf "%s?%s" $base (strings.TrimLeft "&" $qs) }}
+          {{ $entry = printf "%s&auto=compress&fit=crop&w=%d %dw" $base $w $w }}
+        {{ else }}
+          {{ $entry = printf "%s?auto=compress&fit=crop&w=%d %dw" $base $w $w }}
+        {{ end }}
+      {{ else }}
+        {{ $entry = printf "%s?auto=compress&fit=crop&w=%d %dw" $base $w $w }}
+      {{ end }}
+    {{ end }}
+    {{ $entries = append $entry $entries }}
   {{ end }}
-{{ else if hasPrefix $src "https://images.pexels.com" }}
-  {{/* Pexels: add sizing params */}}
+  {{ $srcset = delimit $entries ", " }}
+{{ end }}
+
+{{/* --- Default src: sized to display width for non-srcset browsers --- */}}
+{{ $defaultSrc := $src }}
+{{ if $isUnsplash }}
+  {{ $base := $src }}
   {{ if in $src "?" }}
-    {{ $src = printf "%s&w=%d&h=%d&fit=crop" $src $width $height }}
+    {{ $parts := split $src "?" }}
+    {{ $base = index $parts 0 }}
+    {{ $qs := "" }}
+    {{ range split (index $parts 1) "&" }}
+      {{ $kv := . }}
+      {{ if not (or (hasPrefix $kv "w=") (hasPrefix $kv "q=") (hasPrefix $kv "fit=")) }}
+        {{ $qs = printf "%s&%s" $qs $kv }}
+      {{ end }}
+    {{ end }}
+    {{ if $qs }}
+      {{ $base = printf "%s?%s" $base (strings.TrimLeft "&" $qs) }}
+      {{ $defaultSrc = printf "%s&w=%d&q=82&fit=crop" $base $width }}
+    {{ else }}
+      {{ $defaultSrc = printf "%s?w=%d&q=82&fit=crop" $base $width }}
+    {{ end }}
   {{ else }}
-    {{ $src = printf "%s?w=%d&h=%d&fit=crop" $src $width $height }}
+    {{ $defaultSrc = printf "%s?w=%d&q=82&fit=crop" $base $width }}
+  {{ end }}
+{{ else if $isPexels }}
+  {{ $base := $src }}
+  {{ if in $src "?" }}
+    {{ $parts := split $src "?" }}
+    {{ $base = index $parts 0 }}
+    {{ $qs := "" }}
+    {{ range split (index $parts 1) "&" }}
+      {{ $kv := . }}
+      {{ if not (or (hasPrefix $kv "w=") (hasPrefix $kv "h=") (hasPrefix $kv "auto=") (hasPrefix $kv "fit=")) }}
+        {{ $qs = printf "%s&%s" $qs $kv }}
+      {{ end }}
+    {{ end }}
+    {{ if $qs }}
+      {{ $base = printf "%s?%s" $base (strings.TrimLeft "&" $qs) }}
+      {{ $defaultSrc = printf "%s&auto=compress&fit=crop&w=%d" $base $width }}
+    {{ else }}
+      {{ $defaultSrc = printf "%s?auto=compress&fit=crop&w=%d" $base $width }}
+    {{ end }}
+  {{ else }}
+    {{ $defaultSrc = printf "%s?auto=compress&fit=crop&w=%d" $base $width }}
   {{ end }}
 {{ end }}
 
 <img
-  src="{{ $src }}"
+  src="{{ $defaultSrc }}"
+  {{ if $srcset }}srcset="{{ $srcset }}"{{ end }}
+  {{ if $srcset }}sizes="{{ $sizes }}"{{ end }}
   alt="{{ $alt }}"
-  class="{{ $class }}"
+  {{ if $class }}class="{{ $class }}"{{ end }}
   loading="{{ $loading }}"
+  {{ if $fp }}fetchpriority="{{ $fp }}"{{ end }}
   width="{{ $width }}"
   height="{{ $height }}"
   decoding="async"
+  {{ if $onerror }}onerror="{{ $onerror | safeHTMLAttr }}"{{ end }}
 />

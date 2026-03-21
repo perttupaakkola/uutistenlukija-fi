@@ -41,17 +41,19 @@
   <div class="article-hero-wrapper{{ if $placeholder }} has-blur-placeholder{{ end }}"{{ if $placeholder }} style="{{ $wrapperStyle | safeCSS }}"{{ end }}>
     {{/* Calculate hash for consistent onerror fallback */}}
     {{ $fallbackHash := substr (md5 .Permalink) 0 8 }}
-    <img
-      src="{{ $img }}"
-      alt="{{ $alt }}"
-      class="article-hero-img"
-      loading="eager"
-      width="1200"
-      height="675"
-      onload="this.classList.add('loaded')"
-      onerror="this.onerror=null;this.src='/images/categories/{{ index .Params.categories 0 | lower | default "kotimaa" }}.jpg?v={{ $fallbackHash }}';this.classList.add('loaded')"
-      {{ if $placeholder }}data-has-placeholder="1"{{ end }}
-    >
+    {{ $fallbackCat := index .Params.categories 0 | lower | default "kotimaa" }}
+    {{ $onerror := printf "this.onerror=null;this.src='/images/categories/%s.jpg?v=%s';this.classList.add('loaded')" $fallbackCat $fallbackHash }}
+    {{ partial "responsive-image.html" (dict
+      "src"           $img
+      "alt"           $alt
+      "class"         (printf "article-hero-img%s" (cond (bool $placeholder) " has-blur-placeholder" ""))
+      "loading"       "eager"
+      "fetchpriority" "high"
+      "width"         1200
+      "height"        675
+      "sizes"         "(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1200px"
+      "onerror"       $onerror
+    ) }}
   </div>
   {{ if $placeholder }}
   <script>
