@@ -20,16 +20,13 @@ echo "=== Auto-publish started at $(date -u) ===" | tee -a "$LOG_FILE"
 # Run pipeline (scan + rewrite + publish + build)
 echo "[1/3] Running pipeline..." | tee -a "$LOG_FILE"
 cd "$PIPELINE_DIR"
-python3 run_pipeline.py --quick --max-articles 1 2>&1 | tee -a "$LOG_FILE"
+python3 run_pipeline.py --quick --max-articles 1 --dedup-window 48 2>&1 | tee -a "$LOG_FILE"
 PIPELINE_EXIT=${PIPESTATUS[0]}
 
 if [ "$PIPELINE_EXIT" -ne 0 ]; then
   echo "Pipeline failed with exit code $PIPELINE_EXIT" | tee -a "$LOG_FILE"
   exit 1
 fi
-
-# Update publish metrics (non-fatal)
-python3 "$PIPELINE_DIR/update_publish_metrics.py" 2>&1 | tee -a "$LOG_FILE" || true
 
 # Commit and push if there are changes
 cd "$PROJECT_DIR"
@@ -45,15 +42,13 @@ else
   echo "[3/3] Pushing to GitHub..." | tee -a "$LOG_FILE"
   git push origin main 2>&1 | tee -a "$LOG_FILE"
   echo "Deployed ${ARTICLE_COUNT} new articles." | tee -a "$LOG_FILE"
-
-  # Ping search engines about new content
-  echo "[3.5/3] Pinging search engines..." | tee -a "$LOG_FILE"
-  cd "$PIPELINE_DIR"
-  python3 ping_sitemap.py 2>&1 | tee -a "$LOG_FILE" || echo "[ping] Sitemap ping failed (non-fatal)" | tee -a "$LOG_FILE"
-  cd "$PROJECT_DIR"
 fi
 
 echo "=== Auto-publish completed at $(date -u) ===" | tee -a "$LOG_FILE"
+
+# Print metrics summary (last 7 days) to log
+echo "[metrics] 7-day summary:" | tee -a "$LOG_FILE"
+python3 "$PIPELINE_DIR/metrics.py" --metrics-report --days 7 2>&1 | tee -a "$LOG_FILE"
 
 # Cleanup old logs (keep last 50)
 ls -t "$PIPELINE_DIR/logs/auto_publish_"*.log 2>/dev/null | tail -n +51 | xargs rm -f 2>/dev/null || true

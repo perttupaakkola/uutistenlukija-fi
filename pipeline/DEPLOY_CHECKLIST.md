@@ -145,3 +145,14 @@ cd pipeline && python3 backfill_images.py --source unsplash
 | no_tags | 621 | 0 ✅ |
 | duplicate_titles | 0 | 0 ✅ |
 | Health score | 21/100 | ~100/100 ✅ |
+
+---
+
+## Email Stack (added 2026-03-21)
+
+| Service | Details |
+|---------|---------|
+| **Outbound** | Resend API, from `info@uutistenlukija.fi` |
+| **Inbox** | `paakkolaperttu43@gmail.com` (Gmail) |
+| **Read inbox** | `gog gmail search --account=paakkolaperttu43@gmail.com --client=uutistenlukija` |
+| **Autonomy** | Full — no Perttu approval needed for email ops |

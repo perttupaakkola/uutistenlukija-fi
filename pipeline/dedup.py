@@ -24,10 +24,10 @@ MAX_AGE_DAYS = 7  # Forget fingerprints older than 7 days
 _CONTENT_POSTS_DIR = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "..", "content", "posts"
 )
-SIMILARITY_THRESHOLD = 0.55   # Lowered from 0.60 — catches more cross-source same-event rewrites
+SIMILARITY_THRESHOLD = 0.60   # Lowered from 0.85 — catches cross-source same-event rewrites
 
 # Keyword overlap dedup: long Finnish words (6+ chars) that indicate named entities
-KEYWORD_OVERLAP_THRESHOLD = 8   # Lowered from 12 — rewriter uses synonyms, so fewer exact word matches
+KEYWORD_OVERLAP_THRESHOLD = 12  # 12+ shared long words = likely same event
 
 # Finnish function words that are NOT event-specific (don't count as signal)
 _KW_STOPWORDS = {
@@ -75,15 +75,22 @@ def _keyword_overlap(text_a: str, text_b: str) -> int:
     return len(extract(text_a) & extract(text_b))
 
 
-def load_published_articles() -> tuple[list[str], list[str]]:
+def load_published_articles(window_hours: int = 48) -> tuple[list[str], list[str]]:
     """
-    Load titles and content bodies from all content/posts/*.md.
+    Load titles and content bodies from content/posts/*.md published within
+    the last ``window_hours`` hours (default 48h).
+
     Returns (titles, contents) — parallel lists.
 
-    Reads full files; content is used for keyword overlap detection.
+    Articles outside the window are ignored so the similarity check stays fast
+    and relevant to recent events only.  Pass window_hours=0 to load all.
     """
     titles = []
     contents = []
+    cutoff: datetime | None = None
+    if window_hours > 0:
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
+
     pattern = os.path.join(_CONTENT_POSTS_DIR, "*.md")
     for path in sorted(glob.glob(pattern)):
         try:
@@ -93,6 +100,22 @@ def load_published_articles() -> tuple[list[str], list[str]]:
             if len(parts) < 3:
                 continue
             fm, body = parts[1], parts[2]
+
+            # Time-window filter: parse `date:` from front matter
+            if cutoff is not None:
+                date_m = re.search(r"^date:\s*['\"]?(\d{4}-\d{2}-\d{2}T[\d:+\-Z]+)['\"]?",
+                                   fm, re.MULTILINE)
+                if date_m:
+                    try:
+                        pub_date = datetime.fromisoformat(
+                            date_m.group(1).replace("Z", "+00:00"))
+                        if pub_date.tzinfo is None:
+                            pub_date = pub_date.replace(tzinfo=timezone.utc)
+                        if pub_date < cutoff:
+                            continue  # outside window, skip
+                    except ValueError:
+                        pass  # unparseable date — include to be safe
+
             title_m = re.search(r"^title:\s*\"(.+)\"", fm, re.MULTILINE)
             if title_m:
                 titles.append(title_m.group(1))
@@ -102,9 +125,9 @@ def load_published_articles() -> tuple[list[str], list[str]]:
     return titles, contents
 
 
-def load_published_titles() -> list[str]:
+def load_published_titles(window_hours: int = 48) -> list[str]:
     """Backwards-compatible wrapper — returns just titles."""
-    titles, _ = load_published_articles()
+    titles, _ = load_published_articles(window_hours=window_hours)
     return titles
 
 
@@ -148,9 +171,12 @@ def dedup_within_batch(articles: list) -> list:
     return kept
 
 
-def check_published_duplicates(articles: list) -> list:
+def check_published_duplicates(articles: list, window_hours: int = 48) -> list:
     """
     Filter out articles that are near-duplicates of already-published posts.
+
+    Only compares against posts published within the last ``window_hours`` hours
+    (default 48h) so the check stays fast and event-relevant.
 
     Two signals:
     1. Title similarity ≥ 60% — catches same-event different phrasing
@@ -159,9 +185,11 @@ def check_published_duplicates(articles: list) -> list:
 
     Previously used 85% title threshold which missed cross-source rewrites.
     """
-    published_titles, published_contents = load_published_articles()
+    published_titles, published_contents = load_published_articles(window_hours=window_hours)
     if not published_titles:
         return articles  # nothing to compare against
+
+    print(f"[dedup:published] comparing against {len(published_titles)} posts from last {window_hours}h")
 
     kept = []
     dropped = 0
@@ -175,7 +203,7 @@ def check_published_duplicates(articles: list) -> list:
         # Check 1: title similarity
         title_dupe = any(_titles_similar(incoming_title, pt) for pt in published_titles)
         if title_dupe:
-            print(f"[dedup:published] TITLE_MATCH: '{incoming_title[:60]}'")
+            print(f"[dedup:published] TITLE_MATCH (window={window_hours}h): '{incoming_title[:60]}'")
             dropped += 1
             continue
 
@@ -186,7 +214,7 @@ def check_published_duplicates(articles: list) -> list:
                 for pc in published_contents
             )
             if kw_dupe:
-                print(f"[dedup:published] KW_MATCH: '{incoming_title[:60]}'")
+                print(f"[dedup:published] KW_MATCH (window={window_hours}h): '{incoming_title[:60]}'")
                 dropped += 1
                 continue
 

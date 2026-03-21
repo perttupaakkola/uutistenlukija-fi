@@ -28,6 +28,7 @@ from image_gen import generate_images_for_articles
 from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
 from health_check import notify_discord_failure, notify_discord_warning, write_metrics
+from metrics import append_run as _append_metrics_run
 
 
 LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
@@ -79,42 +80,147 @@ def log_run(stage: str, data: dict):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+_REJECTED_DIR = os.path.join(os.path.dirname(__file__), "rejected")
+
+# Finnish stopwords excluded from keyword-stuffing check
+_KW_STOPWORDS = {
+    "ja", "on", "ei", "se", "että", "oli", "kun", "tai", "myös",
+    "sekä", "ovat", "oli", "en", "et", "hän", "me", "te", "he",
+    "olla", "joka", "jo", "niin", "kuin", "siis",
+}
+
+
+def _save_rejected(article: dict, reason: str) -> None:
+    """Persist a rejected article to pipeline/rejected/ for later review."""
+    import json
+    os.makedirs(_REJECTED_DIR, exist_ok=True)
+    ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    # Sanitize title for filename
+    slug = re.sub(r"[^\w\-]", "_", article.get("title", "unknown")[:40])
+    filename = f"{ts}_{slug}.json"
+    path = os.path.join(_REJECTED_DIR, filename)
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump({"reason": reason, "article": article}, f, ensure_ascii=False, indent=2)
+    except OSError as e:
+        print(f"[quality] Could not save rejected article: {e}")
+
+
+def _quality_issues(content: str, title: str) -> list[str]:
+    """Return list of quality issue strings (empty = passes all checks)."""
+    issues = []
+
+    # ── existing checks ───────────────────────────────────────────────────────
+    word_count = len(content.split())
+    if word_count < 150:
+        issues.append(f"too short ({word_count} words)")
+    if len(title) < 10:
+        issues.append(f"title too short ({len(title)} chars)")
+    if len(title) > 120:
+        issues.append(f"title too long ({len(title)} chars)")
+
+    # ── new checks ────────────────────────────────────────────────────────────
+
+    # 1. Paragraph count
+    paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+    if len(paragraphs) < 3:
+        issues.append(f"only {len(paragraphs)} paragraphs (min 3)")
+
+    # 2. Lead paragraph length
+    if paragraphs:
+        lead_words = len(paragraphs[0].split())
+        if lead_words < 30:
+            issues.append(f"lead paragraph too short ({lead_words} words, min 30)")
+
+    # 3. No list-only articles (>60% bullet lines)
+    lines = [l for l in content.splitlines() if l.strip()]
+    if lines:
+        bullet_lines = sum(1 for l in lines if re.match(r"^\s*[-*]\s", l))
+        bullet_ratio = bullet_lines / len(lines)
+        if bullet_ratio > 0.60:
+            issues.append(f"listicle ({bullet_ratio:.0%} bullet lines, max 60%)")
+
+    # 4. Keyword stuffing — any single word >5% of total (excluding stopwords)
+    words = re.findall(r"\b[a-zäöåA-ZÄÖÅ]{4,}\b", content.lower())
+    content_words = [w for w in words if w not in _KW_STOPWORDS]
+    if len(content_words) >= 20:  # only meaningful if we have enough words
+        from collections import Counter
+        freq = Counter(content_words)
+        most_common_word, most_common_count = freq.most_common(1)[0]
+        ratio = most_common_count / len(content_words)
+        if ratio > 0.05:
+            issues.append(
+                f"keyword stuffing: '{most_common_word}' appears {most_common_count}× "
+                f"({ratio:.1%} of content words, max 5%)"
+            )
+
+    return issues
+
+
 def validate_articles(articles: list) -> tuple:
-    """Drop articles that fail quality checks. Returns (valid, dropped_count)."""
+    """Drop articles that fail quality checks. Returns (valid, dropped_count, reject_reasons).
+
+    reject_reasons is a dict mapping short reason keys to counts.
+    Rejected articles are saved to pipeline/rejected/ with timestamp filenames
+    for post-run review.
+    """
+    from collections import Counter
     valid = []
     dropped = 0
+    reason_counter: Counter = Counter()
+
     for a in articles:
-        issues = []
         content = a.get("content", "")
         title = a.get("title", "")
-        word_count = len(content.split())
 
-        if word_count < 150:
-            issues.append(f"too short ({word_count} words)")
-        if len(title) < 10:
-            issues.append(f"title too short ({len(title)} chars)")
-        if len(title) > 120:
-            issues.append(f"title too long ({len(title)} chars)")
+        issues = _quality_issues(content, title)
+
         if not a.get("category"):
             issues.append("no category")
 
         if issues:
-            print(f"[quality] DROPPED: '{title[:60]}' — {', '.join(issues)}")
+            reason = ", ".join(issues)
+            print(f"[quality] REJECTED: '{title[:60]}' — {reason}")
+            _save_rejected(a, reason)
             dropped += 1
+            # Bucket into short reason keys for metrics
+            for issue in issues:
+                if "too short" in issue:
+                    reason_counter["too_short"] += 1
+                elif "paragraphs" in issue:
+                    reason_counter["few_paragraphs"] += 1
+                elif "lead" in issue:
+                    reason_counter["thin_lead"] += 1
+                elif "listicle" in issue:
+                    reason_counter["listicle"] += 1
+                elif "stuffing" in issue:
+                    reason_counter["keyword_stuffing"] += 1
+                elif "category" in issue:
+                    reason_counter["no_category"] += 1
+                else:
+                    reason_counter["other"] += 1
         else:
             valid.append(a)
 
     if dropped:
         print(f"[quality] {dropped} articles dropped, {len(valid)} passed quality gate")
-    return valid, dropped
+    return valid, dropped, dict(reason_counter)
 
 
-def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None):
+def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None, dedup_window: int = 48):
     """Execute the pipeline."""
     pipeline_start = time.time()
     steps: dict = {}
     errors: list = []
     article_count = 0
+    # Metrics accumulators
+    _m_fetched = 0
+    _m_deduped = 0
+    _m_rewritten = 0
+    _m_rejected = 0
+    _m_avg_words = 0.0
+    _m_sources: dict = {}
+    _m_reject_reasons: dict = {}
 
     print("=" * 60)
     print(f"Uutistenlukija Pipeline — {datetime.now(timezone.utc).isoformat()}")
@@ -167,26 +273,35 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
             print(f"[pipeline] RSS: {len(rss_articles)} + Firehose new: {len(fh_new)} = {len(articles)} total")
 
         t_scan.set(rss_count=len(rss_articles), firehose_count=len(fh_new), total=len(articles))
+    _m_fetched = len(articles)
+    # Source domain counts from scanner output
+    from collections import Counter as _Counter
+    _m_sources = dict(_Counter(
+        a.get("source_domain") or a.get("source", "?") for a in articles
+    ))
 
     steps["scanner"] = t_scan.to_dict()
 
     if not articles:
-        # No articles is normal during low-traffic hours (nights/weekends).
-        # Mark as success with 0 articles instead of failure to keep metrics clean.
-        print("ℹ️  Ei uusia artikkeleita. Normaalia hiljaisina aikoina.")
-        _write_final_metrics(steps, [], 0, time.time() - pipeline_start, success=True)
-        return True
+        msg = "No articles found after scan"
+        notify_discord_failure("scanner", msg)
+        errors.append(msg)
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
+        print("❌ Ei artikkeleita löytynyt. Keskeytetään.")
+        return False
 
     log_run("scanned", {"count": len(articles), "rss_count": len(rss_articles), "firehose_new": len(fh_new), "articles": articles})
 
     # ── Step 1b: Dedup ─────────────────────────────────────────────────────────
     with StepTimer("dedup") as t_dedup:
         print("\n🔍 Vaihe 1b: Duplikaattien suodatus...")
+        pre_dedup_count = len(articles)
         articles = filter_new_articles(articles)
         if articles:
-            articles = check_published_duplicates(articles)
+            articles = check_published_duplicates(articles, window_hours=dedup_window)
         if articles:
             articles = dedup_within_batch(articles)
+        _m_deduped = pre_dedup_count - len(articles)
         t_dedup.set(remaining=len(articles))
 
     steps["dedup"] = t_dedup.to_dict()
@@ -226,15 +341,6 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         print(f"[pipeline] --max-articles {max_articles}: limiting {len(articles)} → {max_articles}")
         articles = articles[:max_articles]
 
-    # ── Step 1f: Pre-mark fingerprints to prevent rewrite waste ────────────────
-    # Mark ALL articles entering the rewrite stage as "seen". This prevents the
-    # costly pattern where an article gets rewritten (LLM call) then dropped by
-    # post-rewrite keyword dedup, only to be scanned → rewritten → dropped again
-    # every 10 minutes. Observed: 36/43 runs wasted LLM calls this way.
-    # Articles that pass through will get marked again during publish (harmless).
-    mark_published(articles)
-    print(f"[dedup] Pre-marked {len(articles)} article fingerprints (prevents rewrite waste)")
-
     # ── Step 2: Rewrite ────────────────────────────────────────────────────────
     rewritten = []
     with StepTimer("rewriter") as t_rewrite:
@@ -254,6 +360,9 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
             errors.append(f"rewriter: {e}")
             print(f"❌ Rewriter failed: {e}")
         t_rewrite.set(input_count=len(articles), output_count=len(rewritten))
+        _m_rewritten = len(rewritten)
+        if rewritten:
+            _m_avg_words = sum(len(a.get("content", "").split()) for a in rewritten) / len(rewritten)
 
     steps["rewriter"] = t_rewrite.to_dict()
 
@@ -266,7 +375,8 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
     # ── Step 2a: Quality gate ──────────────────────────────────────────────────
-    rewritten, dropped_count = validate_articles(rewritten)
+    rewritten, dropped_count, _m_reject_reasons = validate_articles(rewritten)
+    _m_rejected = dropped_count
     if dropped_count:
         steps["quality_gate"] = {"dropped": dropped_count, "passed": len(rewritten)}
     if not rewritten:
@@ -278,7 +388,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     # Title dedup ran pre-rewrite (step 1b). Keyword dedup needs the rewritten
     # content body — runs here after quality gate so we only compare real articles.
     pre_kw_count = len(rewritten)
-    rewritten = check_published_duplicates(rewritten)
+    rewritten = check_published_duplicates(rewritten, window_hours=dedup_window)
     rewritten = dedup_within_batch(rewritten)
     kw_dropped = pre_kw_count - len(rewritten)
     if kw_dropped:
@@ -405,7 +515,10 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         notify_discord_warning("pipeline", f"Total runtime {elapsed_total:.0f}s exceeds {PIPELINE_WARN_TIMEOUT}s threshold")
 
     if quick:
-        _write_final_metrics(steps, errors, article_count, elapsed_total, success=True)
+        _write_final_metrics(steps, errors, article_count, elapsed_total, success=True,
+                             fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
+                             rejected=_m_rejected, avg_words=_m_avg_words,
+                             sources=_m_sources, reject_reasons=_m_reject_reasons)
         print(f"\n✅ Valmis! {len(created)} artikkelia julkaistu (build ohitettu).")
         return True
 
@@ -421,7 +534,10 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     steps["build"] = t_build.to_dict()
 
     elapsed_total = time.time() - pipeline_start
-    _write_final_metrics(steps, errors, article_count, elapsed_total, success=success)
+    _write_final_metrics(steps, errors, article_count, elapsed_total, success=success,
+                        fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
+                        rejected=_m_rejected, avg_words=_m_avg_words,
+                        sources=_m_sources, reject_reasons=_m_reject_reasons)
 
     if success:
         print(f"\n✅ Valmis! {len(created)} artikkelia julkaistu.")
@@ -431,8 +547,22 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     return success
 
 
-def _write_final_metrics(steps: dict, errors: list, article_count: int, total_sec: float, success: bool):
-    """Write structured metrics to logs/metrics.json."""
+def _write_final_metrics(
+    steps: dict,
+    errors: list,
+    article_count: int,
+    total_sec: float,
+    success: bool,
+    *,
+    fetched: int = 0,
+    deduped: int = 0,
+    rewritten: int = 0,
+    rejected: int = 0,
+    avg_words: float = 0.0,
+    sources: dict | None = None,
+    reject_reasons: dict | None = None,
+):
+    """Write structured metrics to logs/metrics.json and append to metrics.jsonl."""
     record = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "success": success,
@@ -443,6 +573,19 @@ def _write_final_metrics(steps: dict, errors: list, article_count: int, total_se
     }
     path = write_metrics(record)
     print(f"[metrics] Written to {path}")
+
+    # Append to the lightweight metrics.jsonl log
+    _append_metrics_run(
+        fetched=fetched,
+        deduped=deduped,
+        rewritten=rewritten,
+        rejected=rejected,
+        published=article_count,
+        avg_words=avg_words,
+        sources=sources or {},
+        reject_reasons=reject_reasons or {},
+        duration_s=total_sec,
+    )
 
 
 if __name__ == "__main__":
@@ -469,11 +612,37 @@ if __name__ == "__main__":
         metavar="N",
         help="Cap articles sent to rewriter at N (default: no limit). Use 1 for cron quality runs.",
     )
+    parser.add_argument(
+        "--dedup-window",
+        type=int,
+        default=48,
+        metavar="HOURS",
+        help="Cross-batch dedup window in hours (default: 48). Compare incoming articles against "
+             "posts published within the last N hours. Use 0 to compare against all posts.",
+    )
+    parser.add_argument(
+        "--metrics-report",
+        action="store_true",
+        help="Print a summary of pipeline metrics for the last 7 days and exit.",
+    )
+    parser.add_argument(
+        "--days",
+        type=int,
+        default=7,
+        metavar="N",
+        help="Number of days for --metrics-report (default: 7).",
+    )
     args = parser.parse_args()
+
+    if args.metrics_report:
+        from metrics import print_report
+        print_report(days=args.days)
+        sys.exit(0)
 
     if args.quick and args.build_only:
         print("❌ Cannot use --quick and --build-only together.")
         sys.exit(1)
 
-    success = run(quick=args.quick, build_only=args.build_only, firehose_only=args.firehose_only, max_articles=args.max_articles)
+    success = run(quick=args.quick, build_only=args.build_only, firehose_only=args.firehose_only,
+                  max_articles=args.max_articles, dedup_window=args.dedup_window)
     sys.exit(0 if success else 1)

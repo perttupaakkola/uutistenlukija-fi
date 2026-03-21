@@ -511,6 +511,7 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
                 "link": link,
                 "published": pub_date.isoformat(),
                 "source": feed_info["name"],
+                "source_domain": urlparse(feed_info["url"]).netloc.removeprefix("www.").removeprefix("feeds."),
                 "language": feed_info.get("language", "fi"),
                 "fingerprint": _fingerprint(title),
                 "_url_hash": _url_hash(link),
@@ -520,6 +521,37 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
         print(f"[scanner] Error fetching {feed_info['name']}: {e}")
 
     return articles
+
+
+def _source_diversity_reorder(articles: List[Dict]) -> List[Dict]:
+    """Round-robin interleave articles by source_domain.
+
+    Groups articles by their source_domain and picks one from each group in
+    turn (order within each group preserved — newest first).  This ensures
+    that if Yle has 12 items and BBC has 3, we alternate Yle/BBC/Yle/BBC/...
+    until BBC is exhausted, then continue with Yle — rather than serving all
+    Yle first.
+
+    Articles without a source_domain are placed in a catch-all bucket.
+    """
+    from collections import defaultdict, OrderedDict
+
+    # Use an OrderedDict keyed by first-seen domain to keep deterministic order
+    buckets: dict = OrderedDict()
+    for article in articles:
+        domain = article.get("source_domain") or "_unknown"
+        if domain not in buckets:
+            buckets[domain] = []
+        buckets[domain].append(article)
+
+    reordered = []
+    # Round-robin until all buckets exhausted
+    while any(buckets[d] for d in buckets):
+        for domain in list(buckets.keys()):
+            if buckets[domain]:
+                reordered.append(buckets[domain].pop(0))
+
+    return reordered
 
 
 def scan_all_feeds() -> List[Dict]:
@@ -596,6 +628,10 @@ def scan_all_feeds() -> List[Dict]:
 
     # Sort by date (newest first)
     unique.sort(key=lambda a: a["published"], reverse=True)
+
+    # Source diversity reorder: round-robin by source_domain so no single
+    # source dominates the front of the candidate list.
+    unique = _source_diversity_reorder(unique)
 
     # Category-aware selection with target distribution
     CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
@@ -696,6 +732,13 @@ def scan_all_feeds() -> List[Dict]:
     print(f"[scanner] Quotas: {cat_quotas}")
     print(f"[scanner] Category distribution: {cat_counts}")
     print(f"[scanner] Total: {len(all_articles)} → Unique: {len(unique)} → Selected: {len(selected)}")
+
+    # Batch source summary
+    from collections import Counter
+    source_counts = Counter(a.get("source_domain", a.get("source", "?")) for a in selected)
+    source_summary = ", ".join(f"{src}({n})" for src, n in sorted(source_counts.items(), key=lambda x: -x[1]))
+    print(f"[scanner] Batch sources: {source_summary}")
+
     return selected
 
 
