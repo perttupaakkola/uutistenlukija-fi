@@ -171,12 +171,11 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     steps["scanner"] = t_scan.to_dict()
 
     if not articles:
-        msg = "No articles found after scan"
-        notify_discord_failure("scanner", msg)
-        errors.append(msg)
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
-        print("❌ Ei artikkeleita löytynyt. Keskeytetään.")
-        return False
+        # No articles is normal during low-traffic hours (nights/weekends).
+        # Mark as success with 0 articles instead of failure to keep metrics clean.
+        print("ℹ️  Ei uusia artikkeleita. Normaalia hiljaisina aikoina.")
+        _write_final_metrics(steps, [], 0, time.time() - pipeline_start, success=True)
+        return True
 
     log_run("scanned", {"count": len(articles), "rss_count": len(rss_articles), "firehose_new": len(fh_new), "articles": articles})
 
