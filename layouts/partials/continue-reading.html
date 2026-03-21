@@ -1,0 +1,75 @@
+{{/*
+  continue-reading.html — "Jatka lukemista" widget
+  Reads ul_progress_v1 from localStorage, shows up to 3 articles with
+  10–90% scroll progress, sorted by most recent visit.
+  Each card links to the article with #resume hash to restore scroll position.
+  Hidden entirely until JS confirms unfinished articles exist.
+*/}}
+<section class="continue-reading" id="continue-reading-section" hidden aria-label="Jatka lukemista">
+  <h2 class="continue-reading__title">📖 Jatka lukemista</h2>
+  <div class="continue-reading__grid" id="continue-reading-grid"></div>
+</section>
+
+<script>
+(function () {
+  var KEY    = 'ul_progress_v1';
+  var TTL_MS = 30 * 24 * 60 * 60 * 1000;
+  var now    = Date.now();
+
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  try {
+    var store = JSON.parse(localStorage.getItem(KEY) || '{}');
+
+    // Prune expired and out-of-range entries
+    var entries = [];
+    Object.keys(store).forEach(function (slug) {
+      var e = store[slug];
+      if (!e || !e.ts || (now - e.ts) >= TTL_MS) return;
+      if (e.pct < 10 || e.pct > 90) return;
+      entries.push({ slug: slug, pct: e.pct, title: e.title || slug, url: e.url || ('/' + slug + '/'), image: e.image || '', ts: e.ts });
+    });
+
+    if (!entries.length) return;
+
+    // Sort by most recent visit
+    entries.sort(function (a, b) { return b.ts - a.ts; });
+    var top = entries.slice(0, 3);
+
+    var grid    = document.getElementById('continue-reading-grid');
+    var section = document.getElementById('continue-reading-section');
+    if (!grid || !section) return;
+
+    top.forEach(function (item) {
+      var resumeUrl = item.url.replace(/#.*$/, '') + '#resume';
+      var imgHtml = item.image
+        ? '<img class="cr-card__img" src="' + escHtml(item.image) + '" alt="" loading="lazy" decoding="async" width="120" height="68">'
+        : '<div class="cr-card__img cr-card__img--placeholder"></div>';
+
+      var card = document.createElement('a');
+      card.href = resumeUrl;
+      card.className = 'cr-card';
+      card.setAttribute('aria-label', escHtml(item.title) + ' — ' + item.pct + '% luettu');
+      card.innerHTML =
+        imgHtml +
+        '<div class="cr-card__body">' +
+          '<p class="cr-card__title">' + escHtml(item.title) + '</p>' +
+          '<div class="cr-card__progress-track" role="progressbar" aria-valuenow="' + item.pct + '" aria-valuemin="0" aria-valuemax="100">' +
+            '<div class="cr-card__progress-fill" style="width:' + item.pct + '%"></div>' +
+          '</div>' +
+          '<span class="cr-card__pct">' + item.pct + '% luettu</span>' +
+        '</div>';
+      grid.appendChild(card);
+    });
+
+    section.hidden = false;
+    section.removeAttribute('hidden');
+  } catch (e) {}
+})();
+</script>

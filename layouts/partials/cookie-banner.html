@@ -126,6 +126,31 @@
   function show(el)  { if (el) { el.hidden = false; el.removeAttribute('hidden'); } }
   function hide(el)  { if (el) el.hidden = true; }
 
+  /* ── Focus trap ─────────────────────────────────────────── */
+  function getFocusable(container) {
+    return Array.prototype.slice.call(
+      container.querySelectorAll(
+        'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'
+      )
+    ).filter(function (el) { return !el.hidden && el.offsetParent !== null; });
+  }
+
+  function trapFocus(e, container) {
+    var focusable = getFocusable(container);
+    if (!focusable.length) return;
+    var first = focusable[0];
+    var last  = focusable[focusable.length - 1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+      }
+    }
+  }
+
+  var _trapHandler = null;
+
   function openModal() {
     var modal   = document.getElementById('cookie-modal');
     var overlay = document.getElementById('cookie-overlay');
@@ -133,11 +158,19 @@
     document.getElementById('cb-toggle-analytics').checked   = !!saved.analytics;
     document.getElementById('cb-toggle-advertising').checked = !!saved.advertising;
     show(overlay); show(modal);
-    modal.focus();
+    // Move focus to first focusable element inside modal
+    var focusable = getFocusable(modal);
+    if (focusable.length) focusable[0].focus();
+    else modal.setAttribute('tabindex', '-1'), modal.focus();
+    // Attach trap
+    _trapHandler = function (e) { trapFocus(e, modal); };
+    modal.addEventListener('keydown', _trapHandler);
   }
 
   function closeModal() {
-    hide(document.getElementById('cookie-modal'));
+    var modal = document.getElementById('cookie-modal');
+    if (_trapHandler) { modal.removeEventListener('keydown', _trapHandler); _trapHandler = null; }
+    hide(modal);
     hide(document.getElementById('cookie-overlay'));
   }
 

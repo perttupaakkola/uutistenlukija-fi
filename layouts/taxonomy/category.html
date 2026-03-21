@@ -1,21 +1,59 @@
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
-<div class="category-header">
-  <h1>{{ .Title }} <a href="{{ .Permalink }}index.xml" class="rss-link" title="RSS-syöte">RSS</a></h1>
-</div>
-<div class="articles-grid">
-  {{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
-  {{ range $paginator.Pages }}
-  <article class="article-card">
-    {{ with .Params.categories }}
-    <span class="category-label">{{ index . 0 }}</span>
+
+{{/* Hero — description prefers body .Content, falls back to frontmatter .Description */}}
+<div class="category-hero">
+  <h1 class="category-hero__title">{{ .Title }}</h1>
+  {{ with .Content }}
+    <p class="category-hero__desc">{{ . | plainify }}</p>
+  {{ else }}
+    {{ with .Description }}
+      <p class="category-hero__desc">{{ . }}</p>
     {{ end }}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p class="excerpt">{{ .Summary | truncate 200 }}</p>
+  {{ end }}
+  <div class="category-hero__meta">
+    <span class="category-hero__count">{{ len .Pages }} artikkelia</span>
+    <a href="{{ .Permalink }}index.xml" class="rss-link category-hero__rss" title="RSS-syöte">RSS</a>
+  </div>
+</div>
+
+{{/* Featured article — newest in category */}}
+{{ $sorted := .Pages.ByDate.Reverse }}
+{{ with index $sorted 0 }}
+<a href="{{ .Permalink }}" class="category-featured">
+  {{ with .Params.image }}
+  <div class="category-featured__img-wrap">
+    <img src="{{ . }}" alt="{{ $.Title }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high">
+  </div>
+  {{ end }}
+  <div class="category-featured__body">
+    {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
+    <h2 class="category-featured__title">{{ .Title }}</h2>
+    <p class="category-featured__excerpt">{{ .Summary | truncate 200 }}</p>
     <div class="meta">
       {{ .Date | time.Format "2.1. klo 15:04" }}
       {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
       · {{ .ReadingTime }} min
+    </div>
+  </div>
+</a>
+{{ end }}
+
+{{/* Article grid — skip the featured article (first) on page 1 */}}
+<div class="articles-grid">
+  {{ $paginator := .Paginate ($sorted) 20 }}
+  {{ range $i, $p := $paginator.Pages }}
+  {{ if and (eq $paginator.PageNumber 1) (eq $i 0) }}{{ continue }}{{ end }}
+  <article class="article-card">
+    {{ with $p.Params.categories }}
+    <span class="category-label">{{ index . 0 }}</span>
+    {{ end }}
+    <h2><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></h2>
+    <p class="excerpt">{{ $p.Summary | truncate 200 }}</p>
+    <div class="meta">
+      {{ $p.Date | time.Format "2.1. klo 15:04" }}
+      {{ with $p.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+      · {{ $p.ReadingTime }} min
     </div>
   </article>
   {{ end }}

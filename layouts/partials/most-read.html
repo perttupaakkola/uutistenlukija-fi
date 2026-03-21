@@ -1,0 +1,79 @@
+{{/*
+  most-read.html — "Luetuimmat" widget
+  Reads localStorage view counts, sorts top 5, renders from /index.json.
+  Falls back gracefully if localStorage unavailable or index not loaded.
+*/}}
+<aside class="most-read-widget" aria-label="Luetuimmat artikkelit" id="most-read-widget">
+  <h3 class="most-read-title">📈 Luetuimmat</h3>
+  <ol class="most-read-list" id="most-read-list">
+    {{/* Rendered by JS below */}}
+  </ol>
+  <p class="most-read-empty" id="most-read-empty" style="display:none">Ei vielä lukuhistoriaa.</p>
+</aside>
+
+<script>
+(function () {
+  var STORE_KEY = 'ul_views_v1';
+  var TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+  var now = Date.now();
+
+  function loadStore() {
+    try {
+      return JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
+    } catch (e) { return {}; }
+  }
+
+  function pruneStore(store) {
+    var pruned = {};
+    Object.keys(store).forEach(function (slug) {
+      var entry = store[slug];
+      if (entry && entry.ts && (now - entry.ts) < TTL_MS) {
+        pruned[slug] = entry;
+      }
+    });
+    return pruned;
+  }
+
+  function renderWidget(store) {
+    var entries = Object.keys(store).map(function (slug) {
+      return { slug: slug, count: store[slug].count || 0, title: store[slug].title || slug };
+    });
+    entries.sort(function (a, b) { return b.count - a.count; });
+    var top = entries.slice(0, 5);
+
+    var list = document.getElementById('most-read-list');
+    var empty = document.getElementById('most-read-empty');
+    if (!list) return;
+
+    if (top.length === 0) {
+      list.style.display = 'none';
+      if (empty) empty.style.display = '';
+      return;
+    }
+
+    list.innerHTML = '';
+    top.forEach(function (item, i) {
+      var li = document.createElement('li');
+      li.className = 'most-read-item';
+      li.innerHTML =
+        '<span class="most-read-rank">' + (i + 1) + '</span>' +
+        '<a class="most-read-link" href="/' + encodeURIComponent(item.slug) + '/">' +
+          escapeHtml(item.title) +
+        '</a>' +
+        '<span class="most-read-count">' + item.count + ' lukijaa</span>';
+      list.appendChild(li);
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  var store = pruneStore(loadStore());
+  renderWidget(store);
+})();
+</script>

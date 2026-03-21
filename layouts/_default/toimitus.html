@@ -7,7 +7,7 @@
 <div class="toimitus-grid">
   {{ range $.Site.Data.writers }}
   <div class="writer-card">
-    <img src="{{ .image }}" alt="{{ .name }}" class="writer-photo">
+    <img src="{{ .image }}" alt="{{ .name }}" class="writer-photo" loading="lazy" decoding="async" width="120" height="120">
     <div class="writer-info">
       <span class="writer-name">{{ .name }}</span>
       <span class="writer-title">{{ .title }}</span>

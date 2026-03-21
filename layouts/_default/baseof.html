@@ -206,5 +206,66 @@
     });
   })();
   </script>
+
+  <script>
+  /* ── Arrow key navigation for article grids ─────────────── */
+  (function () {
+    var GRID_SELECTORS = [
+      '.articles-grid',
+      '.highlights-row',
+      '.category-articles',
+      '.category-section .category-articles',
+      '.related-articles-grid',
+      '.trending-articles',
+    ];
+
+    function initGrid(grid) {
+      // Get all focusable card links — first <a> in each card
+      function getCards() {
+        return Array.prototype.slice.call(
+          grid.querySelectorAll('article a:first-of-type, .article-card a:first-of-type, .trending-card a:first-of-type, .related-article-card a:first-of-type')
+        );
+      }
+
+      grid.addEventListener('keydown', function (e) {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' &&
+            e.key !== 'ArrowDown'  && e.key !== 'ArrowUp') return;
+
+        var cards = getCards();
+        var idx = cards.indexOf(document.activeElement);
+        if (idx === -1) return;
+
+        e.preventDefault();
+
+        // Determine columns from computed style
+        var style = window.getComputedStyle(grid);
+        var cols = 1;
+        if (style.gridTemplateColumns) {
+          cols = style.gridTemplateColumns.trim().split(/\s+/).length;
+        }
+
+        var next = idx;
+        if (e.key === 'ArrowRight') next = Math.min(idx + 1, cards.length - 1);
+        if (e.key === 'ArrowLeft')  next = Math.max(idx - 1, 0);
+        if (e.key === 'ArrowDown')  next = Math.min(idx + cols, cards.length - 1);
+        if (e.key === 'ArrowUp')    next = Math.max(idx - cols, 0);
+
+        if (next !== idx) cards[next].focus();
+      });
+    }
+
+    function initAll() {
+      GRID_SELECTORS.forEach(function (sel) {
+        document.querySelectorAll(sel).forEach(initGrid);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAll);
+    } else {
+      initAll();
+    }
+  })();
+  </script>
 </body>
 </html>

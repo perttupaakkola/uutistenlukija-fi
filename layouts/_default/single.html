@@ -33,7 +33,7 @@
   {{ with .Params.author }}
   <div class="author-box">
     {{ with $.Params.author_image }}
-    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo">
+    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="80" height="80">
     {{ end }}
     <div class="author-info">
       <span class="author-name">{{ $.Params.author }}</span>
@@ -48,6 +48,7 @@
   {{ end }}
 
   {{ partial "related-articles.html" . }}
+  {{ partial "most-read.html" . }}
 </article>
 
 {{/* Article prev/next navigation */}}
@@ -70,22 +71,84 @@
 <button id="back-to-top" aria-label="Takaisin ylös" title="Takaisin ylös">↑</button>
 
 <script>
-// Reading progress
-const progress = document.getElementById('reading-progress');
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-  progress.style.width = scrollPercent + '%';
-});
+(function () {
+  var VIEWS_KEY    = 'ul_views_v1';
+  var PROGRESS_KEY = 'ul_progress_v1';
+  var TTL_MS       = 30 * 24 * 60 * 60 * 1000; // 30 days for progress
+  var VIEWS_TTL    = 7  * 24 * 60 * 60 * 1000;
+  var slug  = {{ .Params.slug | default (.File.BaseFileName) | jsonify }};
+  var title = {{ .Title | jsonify }};
+  var url   = {{ .Permalink | jsonify }};
+  var image = {{ with .Params.image }}{{ . | jsonify }}{{ else }}""{{ end }};
+  var now   = Date.now();
 
-// Back to top
-const backToTop = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-  backToTop.classList.toggle('visible', window.scrollY > 400);
-});
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  // ── Reading progress bar ──────────────────────────────────
+  var progressBar = document.getElementById('reading-progress');
+  var backToTop   = document.getElementById('back-to-top');
+  var _lastSavedPct = 0;
+
+  function getScrollPct() {
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    return docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+  }
+
+  function saveProgress(pct) {
+    if (Math.abs(pct - _lastSavedPct) < 2) return; // debounce tiny changes
+    _lastSavedPct = pct;
+    try {
+      var store = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+      if (pct >= 10 && pct <= 90) {
+        store[slug] = { pct: Math.round(pct), title: title, url: url, image: image, ts: now };
+      } else if (pct > 90) {
+        // Fully read — remove from continue-reading
+        delete store[slug];
+      }
+      localStorage.setItem(PROGRESS_KEY, JSON.stringify(store));
+    } catch (e) {}
+  }
+
+  window.addEventListener('scroll', function () {
+    var pct = getScrollPct();
+    if (progressBar) progressBar.style.width = pct + '%';
+    if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 400);
+    saveProgress(pct);
+  }, { passive: true });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ── Resume scroll position if #resume hash ───────────────
+  if (window.location.hash === '#resume') {
+    try {
+      var pstore = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+      var saved  = pstore[slug];
+      if (saved && saved.pct > 0) {
+        // Wait for images/layout to settle before jumping
+        window.addEventListener('load', function () {
+          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          var target    = Math.round((saved.pct / 100) * docHeight);
+          window.scrollTo({ top: target, behavior: 'smooth' });
+        });
+      }
+    } catch (e) {}
+  }
+
+  // ── View counter ──────────────────────────────────────────
+  try {
+    var vstore = JSON.parse(localStorage.getItem(VIEWS_KEY) || '{}');
+    Object.keys(vstore).forEach(function (k) {
+      if (!vstore[k].ts || (now - vstore[k].ts) >= VIEWS_TTL) delete vstore[k];
+    });
+    var entry = vstore[slug] || { count: 0, title: title, ts: now };
+    entry.count += 1;
+    entry.title  = title;
+    entry.ts     = now;
+    vstore[slug] = entry;
+    localStorage.setItem(VIEWS_KEY, JSON.stringify(vstore));
+  } catch (e) {}
+})();
 </script>
 {{ end }}
