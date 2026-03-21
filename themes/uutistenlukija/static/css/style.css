@@ -2875,3 +2875,60 @@ pre code {
   }
 }
 /* ── end Lue myös ────────────────────────────────────────────────── */
+
+/* ── Social share buttons ─────────────────────────────────── */
+.social-share {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.social-share__label {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-right: 0.25rem;
+}
+.social-share__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
+  padding: 0;
+}
+.social-share__btn svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.social-share__btn:hover,
+.social-share__btn:focus-visible {
+  transform: translateY(-1px);
+  border-color: transparent;
+  color: #fff;
+}
+.social-share__btn--facebook:hover  { background: #1877f2; }
+.social-share__btn--x:hover         { background: #000; }
+.social-share__btn--linkedin:hover  { background: #0a66c2; }
+.social-share__btn--whatsapp:hover  { background: #25d366; }
+.social-share__btn--copy:hover      { background: var(--accent); }
+.social-share__btn--copied          { background: #22c55e !important; border-color: transparent !important; color: #fff !important; }

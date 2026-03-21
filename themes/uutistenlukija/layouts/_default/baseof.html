@@ -3,51 +3,206 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{/* Title tag: keep under ~60 chars. Article title capped at 42 chars + " — Uutistenlukija" = ~60. */}}
+  {{/* Title tag: keep under ~60 chars for Google. Article title capped at 42 chars + " — Uutistenlukija" = ~60. Homepage uses full tagline. */}}
   {{ $pageTitle := .Title }}{{ if gt (len .Title) 42 }}{{ $pageTitle = printf "%s..." (substr .Title 0 42) }}{{ end }}
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $pageTitle }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  {{/* Critical CSS: preload, then async-swap to avoid render-blocking */}}
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+  {{/* === Resource hints === */}}
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.pexels.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+  {{/* === Critical above-the-fold CSS (inlined — ~2KB) === */}}
+  {{/* Covers: variables, reset, body, skip link, container, header, nav,
+       category pills/labels, highlights-row, article-card shell, reading progress */}}
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#fafaf8;--text:#1a1a1a;--text-secondary:#555;--accent:#c0392b;--border:#e0ddd8;--card-bg:#fff;--max-width:1100px;--font-serif:'Georgia','Times New Roman',serif;--font-sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+    [data-theme="dark"]{--bg:#1a1a1a;--text:#e8e6e3;--text-secondary:#a0a0a0;--accent:#e74c3c;--border:#333;--card-bg:#242424}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-serif);background:var(--bg);color:var(--text);line-height:1.7;font-size:17px}
+    a{color:var(--text);text-decoration:none}
+    a:hover{color:var(--accent)}
+    img{max-width:100%;height:auto}
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 1.5rem}
+    /* Skip link */
+    .skip-to-content,.skip-link{position:absolute;top:-100%;left:0;z-index:9999;background:var(--accent);color:#fff;padding:0.6rem 1.2rem;font-family:var(--font-sans);font-size:0.95rem;font-weight:700;text-decoration:none;border-radius:0 0 4px 0;transition:top 0.1s}
+    .skip-to-content:focus,.skip-link:focus{top:0}
+    /* Header */
+    .site-header{border-bottom:3px solid var(--text);margin-bottom:2rem;position:sticky;top:0;z-index:200;background:var(--bg);transition:transform 0.25s ease}
+    .site-title{font-family:var(--font-serif);font-size:2.8rem;font-weight:900;letter-spacing:-0.02em;text-align:center;margin-bottom:0.25rem}
+    .site-title a{color:var(--text)}
+    .site-subtitle{text-align:center;font-family:var(--font-sans);font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem}
+    /* Navigation */
+    .main-nav{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0.6rem 0;margin-top:1rem}
+    .main-nav ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:0.25rem}
+    .main-nav a{font-family:var(--font-sans);font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;padding:0.3rem 0.8rem;border-radius:3px;transition:background 0.15s}
+    .main-nav a:hover{background:var(--accent);color:#fff}
+    /* Category pills */
+    .category-pill{font-family:var(--font-sans);font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;display:inline-flex;align-items:center;padding:0.22rem 0.65rem;border-radius:999px;margin-bottom:0.6rem;line-height:1.1;color:#fff;background:var(--accent)}
+    .category-kotimaa{background:#1f6feb}
+    .category-ulkomaat{background:#8e44ad}
+    .category-talous{background:#1f8f5f}
+    .category-teknologia{background:#0f766e}
+    .category-urheilu{background:#d97706}
+    .category-kulttuuri{background:#c2410c}
+    .category-tiede{background:#2563eb}
+    /* Article card shell */
+    .article-card{background:var(--card-bg);border:1px solid var(--border);padding:1.5rem;transition:box-shadow 0.2s}
+    .articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin:2rem 0}
+    /* Highlights row */
+    .highlights-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:1.5rem 0;border-bottom:2px solid var(--border);margin-bottom:2rem}
+    /* Reading progress */
+    .reading-progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:9999;transition:width 0.1s linear}
+    /* Focus indicators */
+    :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
+    :focus:not(:focus-visible){outline:none}
+  </style>
+
+  {{/* === Full stylesheet — async load === */}}
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <meta name="msapplication-TileColor" content="#c0392b">
-  <meta name="msapplication-config" content="/browserconfig.xml">
   <link rel="canonical" href="{{ .Permalink }}">
-  <meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.png">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="576">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-image.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#c0392b">
+  {{ partial "og-meta.html" . }}
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
+  {{ if .IsSection }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} — {{ .Site.Title }}" href="{{ .Permalink }}index.xml">{{ end }}
   {{ template "_internal/schema.html" . }}
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
-  {{/* Theme init: inline — must run before first paint to prevent FOUC */}}
-  <script>
-    (function(){
-      var saved = localStorage.getItem('theme');
-      if (saved) {
-        document.documentElement.setAttribute('data-theme', saved);
-      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
-    })();
-  </script>
+  {{ partial "json-ld.html" . }}
+  {{ partial "pagination-head.html" . }}
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Siirry sisältöön</a>
+  <script>
+  // Dark mode — apply saved preference before paint to avoid flash
+  (function() {
+    var saved = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+  </script>
+  <a class="skip-to-content" href="#main-content">Siirry pääsisältöön</a>
   {{ partial "header.html" . }}
   <main class="container" id="main-content" tabindex="-1">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
-  {{/* All JS deferred — does not block parsing or rendering */}}
-  <script src="/js/theme.js" defer></script>
-  <script src="/js/site.js" defer></script>
+  {{ partial "cookie-banner.html" . }}
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+  </script>
+  {{ partial "analytics.html" . }}
+  {{ partial "event-tracking.html" . }}
+  <script>
+  // Mobile sticky header — hide on scroll-down, show on scroll-up (< 768px only)
+  (function() {
+    var siteHeader = document.querySelector('.site-header');
+    if (!siteHeader) return;
+    var lastScrollY = window.scrollY;
+    var ticking = false;
+    var THRESHOLD = 60;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          var currentScrollY = window.scrollY;
+          if (window.innerWidth < 768) {
+            if (currentScrollY > lastScrollY && currentScrollY > THRESHOLD) {
+              siteHeader.classList.add('header--hidden');
+            } else {
+              siteHeader.classList.remove('header--hidden');
+            }
+          } else {
+            siteHeader.classList.remove('header--hidden');
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  })();
+
+  // Back to top
+  (function() {
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+    window.addEventListener('scroll', function() {
+      btn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+  // Reading progress bar
+  (function() {
+    var bar = document.querySelector('.reading-progress');
+    if (!bar) return;
+    window.addEventListener('scroll', function() {
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) : 0) + '%';
+    }, { passive: true });
+  })();
+
+  // Dark mode toggle
+  (function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    function updateBtn(isDark) {
+      btn.textContent = isDark ? '☀️' : '🌙';
+      btn.setAttribute('aria-label', isDark ? 'Vaihda vaaleaan teemaan' : 'Vaihda tummaan teemaan');
+    }
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    updateBtn(isDark);
+    btn.addEventListener('click', function() {
+      isDark = !isDark;
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateBtn(isDark);
+    });
+  })();
+
+  // Hamburger menu
+  (function() {
+    var btn = document.getElementById('hamburger');
+    var nav = document.getElementById('main-nav-menu');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function() {
+      var open = nav.classList.toggle('nav-open');
+      btn.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (!btn.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('nav-open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // Close on nav link click (SPA-style navigation)
+    nav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        nav.classList.remove('nav-open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
