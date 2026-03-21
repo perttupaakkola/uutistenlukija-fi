@@ -8,6 +8,27 @@ LOG_FILE="$PIPELINE_DIR/logs/auto_publish_$(date -u +%Y%m%d_%H%M%S).log"
 
 cd "$PROJECT_DIR"
 
+# ── Deduplication lockfile guard ─────────────────────────────────────────────
+LOCK_FILE="$PIPELINE_DIR/.pipeline_lock"
+
+if [ -f "$LOCK_FILE" ]; then
+    LOCK_PID=$(awk 'NR==1' "$LOCK_FILE")
+    LOCK_TS=$(awk 'NR==2' "$LOCK_FILE")
+    if kill -0 "$LOCK_PID" 2>/dev/null; then
+        echo "[auto_publish] Pipeline already running (PID $LOCK_PID, started $LOCK_TS) — exiting."
+        exit 0
+    else
+        echo "[auto_publish] WARNING: Stale lock (PID $LOCK_PID no longer running, started $LOCK_TS). Removing."
+        rm -f "$LOCK_FILE"
+    fi
+fi
+
+# Write lock and register cleanup on exit
+printf '%s
+%s
+' "$$" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$LOCK_FILE"
+trap 'rm -f "$LOCK_FILE"' EXIT
+
 # Load .env
 if [ -f "$PROJECT_DIR/.env" ]; then
   set -a
