@@ -1,0 +1,35 @@
+{{/*
+  render-image.html — Hugo Goldmark render hook for Markdown images.
+
+  Applied to all ![alt](src "title") in content files.
+  Adds loading="lazy" decoding="async" to keep content images off the critical path.
+  Also wraps in <figure> when a title attribute is present (used as <figcaption>).
+
+  For images that should be eager (e.g. hero shots placed at the very top of Markdown),
+  add a custom CSS class via Hugo's extended image syntax or just use raw HTML in the .md.
+*/}}
+
+{{ $src   := .Destination }}
+{{ $alt   := .PlainText }}
+{{ $title := .Title }}
+
+{{/* Resolve absolute URLs for Unsplash/Pexels — pass through as-is */}}
+{{/* Relative paths stay relative; Hugo copies static/ as-is */}}
+
+{{ if $title }}
+<figure class="content-figure">
+  <img src="{{ $src | safeURL }}"
+       alt="{{ $alt }}"
+       title="{{ $title }}"
+       loading="lazy"
+       decoding="async"
+       class="content-img">
+  <figcaption>{{ $title }}</figcaption>
+</figure>
+{{ else }}
+<img src="{{ $src | safeURL }}"
+     alt="{{ $alt }}"
+     loading="lazy"
+     decoding="async"
+     class="content-img">
+{{ end }}

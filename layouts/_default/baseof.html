@@ -252,5 +252,39 @@
     }
   })();
   </script>
+  <script>
+  /* ── Native lazy-load fallback (Safari <15.4, old browsers) ─
+     If loading="lazy" is unsupported, use IntersectionObserver
+     to defer off-screen images. Images already in-viewport load
+     immediately. Adds no markup changes — pure progressive enhancement.
+     ~420 bytes minified.
+  ────────────────────────────────────────────────────────────── */
+  if (!('loading' in HTMLImageElement.prototype)) {
+    (function () {
+      var imgs = document.querySelectorAll('img[loading="lazy"]');
+      if (!imgs.length) return;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              var img = e.target;
+              if (img.dataset.src) img.src = img.dataset.src;
+              img.removeAttribute('loading');
+              obs.unobserve(img);
+            }
+          });
+        }, { rootMargin: '200px' });
+        imgs.forEach(function (img) {
+          /* Stash src in data-src, clear src so browser skips eager load */
+          if (img.src && !img.dataset.src) img.dataset.src = img.src, img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+          io.observe(img);
+        });
+      } else {
+        /* No IO support — just load everything (rare, very old browsers) */
+        imgs.forEach(function (img) { img.removeAttribute('loading'); });
+      }
+    })();
+  }
+  </script>
 </body>
 </html>
