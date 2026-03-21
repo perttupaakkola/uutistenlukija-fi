@@ -2354,3 +2354,70 @@ pre code {
     color: #aaa;
   }
 }
+
+/* =====================================================
+   Blur-up image placeholder (responsive-image.html)
+   ===================================================== */
+
+/* Wrapper div: contains the blurred background + real image overlay */
+.blur-placeholder-wrap {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* The data URI is set inline as background-image */
+}
+
+/* Blur + slight zoom on the background thumbnail to hide edges */
+.blur-placeholder-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -10px; /* bleed past edges so blur edge is clipped */
+  background: inherit;
+  filter: blur(12px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* Real image: starts transparent, fades in on load */
+.blur-placeholder-img {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* After onload fires, fade in */
+.blur-placeholder-img.blur-placeholder-loaded {
+  opacity: 1;
+}
+
+/* Ensure immediate display if image was cached and fires before JS */
+.blur-placeholder-img[complete=""] {
+  opacity: 1;
+}
+
+/* Article hero: keep wrapper sizing intact when blur-placeholder-wrap is inside */
+.article-hero-wrapper .blur-placeholder-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.article-hero-wrapper .blur-placeholder-wrap .blur-placeholder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card thumbnails with blur-up */
+.card-thumb-wrapper .blur-placeholder-wrap,
+.article-image-link .blur-placeholder-wrap {
+  width: 100%;
+  display: block;
+}
+
+/* Dark mode: no extra adjustments needed (data URI is the same colour) */

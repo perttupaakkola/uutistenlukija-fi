@@ -17,15 +17,16 @@
   - onerror:         onerror attribute value (optional)
 */}}
 
-{{ $src        := .src }}
-{{ $alt        := .alt | default "Article image" }}
-{{ $width      := .width | default 800 }}
-{{ $height     := .height | default 450 }}
-{{ $class      := .class | default "" }}
-{{ $loading    := .loading | default "lazy" }}
-{{ $fp         := .fetchpriority }}
-{{ $sizes      := .sizes | default "(max-width: 768px) 100vw, 800px" }}
-{{ $onerror    := .onerror }}
+{{ $src         := .src }}
+{{ $alt         := .alt | default "Article image" }}
+{{ $width       := .width | default 800 }}
+{{ $height      := .height | default 450 }}
+{{ $class       := .class | default "" }}
+{{ $loading     := .loading | default "lazy" }}
+{{ $fp          := .fetchpriority }}
+{{ $sizes       := .sizes | default "(max-width: 768px) 100vw, 800px" }}
+{{ $onerror     := .onerror }}
+{{ $placeholder := .placeholder }}
 
 {{/* Determine CDN type */}}
 {{ $isUnsplash := hasPrefix $src "https://images.unsplash.com" }}
@@ -136,6 +137,24 @@
   {{ end }}
 {{ end }}
 
+{{ if $placeholder }}
+<div class="blur-placeholder-wrap" style="background-image:url('{{ $placeholder | safeCSS }}')">
+  <img
+    src="{{ $defaultSrc }}"
+    {{ if $srcset }}srcset="{{ $srcset }}"{{ end }}
+    {{ if $srcset }}sizes="{{ $sizes }}"{{ end }}
+    alt="{{ $alt }}"
+    class="blur-placeholder-img{{ if $class }} {{ $class }}{{ end }}"
+    loading="{{ $loading }}"
+    {{ if $fp }}fetchpriority="{{ $fp }}"{{ end }}
+    width="{{ $width }}"
+    height="{{ $height }}"
+    decoding="async"
+    {{ if $onerror }}onerror="{{ $onerror | safeHTMLAttr }}"{{ end }}
+    onload="this.classList.add('blur-placeholder-loaded')"
+  />
+</div>
+{{ else }}
 <img
   src="{{ $defaultSrc }}"
   {{ if $srcset }}srcset="{{ $srcset }}"{{ end }}
@@ -149,3 +168,4 @@
   decoding="async"
   {{ if $onerror }}onerror="{{ $onerror | safeHTMLAttr }}"{{ end }}
 />
+{{ end }}

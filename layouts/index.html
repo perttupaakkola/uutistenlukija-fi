@@ -50,6 +50,7 @@
       "width"         800
       "height"        450
       "sizes"         "(max-width: 768px) 100vw, 800px"
+      "placeholder"   .Params.image_placeholder
     ) }}
   </a>
   <p class="excerpt">{{ .Summary | truncate 300 }}</p>
@@ -75,13 +76,14 @@
     {{ end }}
     <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
       {{ partial "responsive-image.html" (dict
-        "src"     $img
-        "alt"     $alt
-        "class"   "article-image"
-        "loading" "lazy"
-        "width"   400
-        "height"  225
-        "sizes"   "(max-width: 480px) 100vw, (max-width: 1024px) 33vw, 400px"
+        "src"         $img
+        "alt"         $alt
+        "class"       "article-image"
+        "loading"     "lazy"
+        "width"       400
+        "height"      225
+        "sizes"       "(max-width: 480px) 100vw, (max-width: 1024px) 33vw, 400px"
+        "placeholder" .Params.image_placeholder
       ) }}
     </a>
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
@@ -112,13 +114,14 @@
       <article class="category-article-card">
         <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
           {{ partial "responsive-image.html" (dict
-            "src"     $cardImg
-            "alt"     $cardAlt
-            "class"   "article-image"
-            "loading" "lazy"
-            "width"   400
-            "height"  225
-            "sizes"   "(max-width: 480px) 100vw, (max-width: 1024px) 33vw, 400px"
+            "src"         $cardImg
+            "alt"         $cardAlt
+            "class"       "article-image"
+            "loading"     "lazy"
+            "width"       400
+            "height"      225
+            "sizes"       "(max-width: 480px) 100vw, (max-width: 1024px) 33vw, 400px"
+            "placeholder" .Params.image_placeholder
           ) }}
         </a>
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>

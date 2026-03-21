@@ -15,14 +15,15 @@
     <a href="{{ $p.Permalink }}" class="article-image-link card-thumb-link" tabindex="-1" aria-hidden="true">
       <div class="card-thumb-wrapper">
         {{ partial "responsive-image.html" (dict
-          "src"     $img
-          "alt"     $alt
-          "class"   "article-card-thumb"
-          "loading" "lazy"
-          "width"   400
-          "height"  225
-          "sizes"   "(max-width: 480px) 100vw, (max-width: 768px) 50vw, 400px"
-          "onerror" (printf "this.onerror=null;this.src='/images/categories/%s.jpg'" ($cat | lower))
+          "src"         $img
+          "alt"         $alt
+          "class"       "article-card-thumb"
+          "loading"     "lazy"
+          "width"       400
+          "height"      225
+          "sizes"       "(max-width: 480px) 100vw, (max-width: 768px) 50vw, 400px"
+          "onerror"     (printf "this.onerror=null;this.src='/images/categories/%s.jpg'" ($cat | lower))
+          "placeholder" $p.Params.image_placeholder
         ) }}
       </div>
     </a>
