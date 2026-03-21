@@ -23,18 +23,18 @@
     {{ $shown_ellipsis_right := false }}
     {{ range $p.Pagers }}
     {{ $n := .PageNumber }}
-    {{ $in_window := and (ge $n (sub $cur 2)) (le $n (add $cur 2)) }}
+    {{ $in_window := and (ge $n (math.Sub $cur 2)) (le $n (math.Add $cur 2)) }}
     {{ $is_edge   := or (eq $n 1) (eq $n $total) }}
 
     {{ if or $in_window $is_edge }}
 
       {{/* Left ellipsis gap */}}
-      {{ if and (gt $n 2) (lt $n (sub $cur 2)) (not $shown_ellipsis_left) }}
+      {{ if and (gt $n 2) (lt $n (math.Sub $cur 2)) (not $shown_ellipsis_left) }}
       <li class="pagination-ellipsis" aria-hidden="true"><span>…</span></li>
       {{ $shown_ellipsis_left = true }}
       {{ end }}
       {{/* Also show ellipsis when jumping from page 1 to window start */}}
-      {{ if and (eq $n (sub $cur 2)) (gt (sub $cur 2) 2) (not $shown_ellipsis_left) }}
+      {{ if and (eq $n (math.Sub $cur 2)) (gt (math.Sub $cur 2) 2) (not $shown_ellipsis_left) }}
       <li class="pagination-ellipsis" aria-hidden="true"><span>…</span></li>
       {{ $shown_ellipsis_left = true }}
       {{ end }}
@@ -48,7 +48,7 @@
       </li>
 
       {{/* Right ellipsis gap */}}
-      {{ if and (eq $n (add $cur 2)) (lt (add $cur 2) (sub $total 1)) (not $shown_ellipsis_right) }}
+      {{ if and (eq $n (math.Add $cur 2)) (lt (math.Add $cur 2) (math.Sub $total 1)) (not $shown_ellipsis_right) }}
       <li class="pagination-ellipsis" aria-hidden="true"><span>…</span></li>
       {{ $shown_ellipsis_right = true }}
       {{ end }}

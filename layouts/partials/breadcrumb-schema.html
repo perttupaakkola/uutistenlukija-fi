@@ -1,0 +1,98 @@
+{{/*
+  breadcrumb-schema.html — BreadcrumbList JSON-LD for <head>
+
+  Outputs Schema.org BreadcrumbList structured data.
+  Rendered on every non-home page. Homepage outputs nothing.
+
+  Handled page types:
+  - Article page      → Etusivu › Kategoria › Artikkelin otsikko
+  - Tag term page     → Etusivu › Aihetunnisteet › #tagname
+  - Tag terms page    → Etusivu › Aihetunnisteet
+  - Category page     → Etusivu › Kategoriat › Kategoria
+  - Section/list page → Etusivu › Section title
+  - Other pages       → Etusivu › Page title
+
+  Note: HTML breadcrumb rendering lives in breadcrumbs.html.
+        This partial is head-only (JSON-LD only, no visible output).
+*/}}
+
+{{ if not .IsHome }}
+
+{{/* ── Build crumb list ────────────────────────────────────────── */}}
+{{ $base := .Site.BaseURL }}
+{{ $crumbs := slice (dict "name" "Etusivu" "url" $base) }}
+
+{{ if .IsPage }}
+  {{/* Taxonomy term page (tag or category) — Hugo classifies these as .IsPage */}}
+  {{ if eq .Kind "term" }}
+    {{ $taxName := .Data.Singular }}
+    {{ if eq $taxName "tag" }}
+      {{/* Tag article page — shouldn't happen but guard anyway */}}
+      {{ $crumbs = $crumbs | append (dict "name" "Aihetunnisteet" "url" (printf "%stags/" $base)) }}
+      {{ $crumbs = $crumbs | append (dict "name" (printf "#%s" .Title) "url" .Permalink) }}
+    {{ else }}
+      {{ $catName := index .Params.categories 0 | default .Title }}
+      {{ $crumbs = $crumbs | append (dict "name" "Kategoriat" "url" (printf "%scategories/" $base)) }}
+      {{ $crumbs = $crumbs | append (dict "name" $catName "url" .Permalink) }}
+    {{ end }}
+  {{ else }}
+    {{/* Regular article page */}}
+    {{ $cat := index .Params.categories 0 }}
+    {{ if $cat }}
+      {{ $catUrl := printf "%scategories/%s/" $base ($cat | urlize) }}
+      {{ $crumbs = $crumbs | append (dict "name" $cat "url" $catUrl) }}
+    {{ end }}
+    {{ $title := .Title }}
+    {{ if gt (len $title) 63 }}{{ $title = printf "%s…" (substr $title 0 60) }}{{ end }}
+    {{ $crumbs = $crumbs | append (dict "name" $title "url" .Permalink) }}
+  {{ end }}
+
+{{ else if eq .Kind "taxonomy" }}
+  {{/* Taxonomy terms listing, e.g. /tags/ or /categories/ */}}
+  {{ $taxName := .Data.Plural | default .Title }}
+  {{ if eq (.Data.Singular | default "") "tag" }}
+    {{ $crumbs = $crumbs | append (dict "name" "Aihetunnisteet" "url" .Permalink) }}
+  {{ else }}
+    {{ $crumbs = $crumbs | append (dict "name" "Kategoriat" "url" .Permalink) }}
+  {{ end }}
+
+{{ else if eq .Kind "term" }}
+  {{/* Term page (tag term or category term) at section level */}}
+  {{ $singular := .Data.Singular | default "" }}
+  {{ if eq $singular "tag" }}
+    {{ $crumbs = $crumbs | append (dict "name" "Aihetunnisteet" "url" (printf "%stags/" $base)) }}
+    {{ $crumbs = $crumbs | append (dict "name" (printf "#%s" .Title) "url" .Permalink) }}
+  {{ else }}
+    {{ $crumbs = $crumbs | append (dict "name" "Kategoriat" "url" (printf "%scategories/" $base)) }}
+    {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
+  {{ end }}
+
+{{ else if .IsSection }}
+  {{/* Section list page (e.g. /posts/) */}}
+  {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
+
+{{ else }}
+  {{/* Any other page — just title */}}
+  {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
+{{ end }}
+
+{{/* ── Emit BreadcrumbList JSON-LD ──────────────────────────────── */}}
+{{ $items := slice }}
+{{ range $i, $crumb := $crumbs }}
+  {{ $items = $items | append (dict
+    "@type"    "ListItem"
+    "position" (math.Add $i 1)
+    "name"     $crumb.name
+    "item"     $crumb.url
+  ) }}
+{{ end }}
+{{ $schema := dict
+    "@context"        "https://schema.org"
+    "@type"           "BreadcrumbList"
+    "itemListElement" $items
+}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{ end }}{{/* end if not .IsHome */}}

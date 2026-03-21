@@ -41,7 +41,16 @@
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-    <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" decoding="async" width="800" height="450">
+    {{/* LCP element — must be eager + high priority */}}
+    {{- $lcpSrc := $img -}}
+    {{- if hasPrefix $img "https://images.unsplash.com" -}}
+      {{- $lcpSep := "?" -}}{{- if in $img "?" -}}{{- $lcpSep = "&" -}}{{- end -}}
+      {{- $lcpSrc = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $img $lcpSep -}}
+    {{- else if hasPrefix $img "https://images.pexels.com" -}}
+      {{- $lcpSep := "?" -}}{{- if in $img "?" -}}{{- $lcpSep = "&" -}}{{- end -}}
+      {{- $lcpSrc = printf "%s%sw=800&h=450&fit=crop" $img $lcpSep -}}
+    {{- end -}}
+    <img src="{{ $lcpSrc }}" alt="{{ $alt }}" class="article-image" loading="eager" fetchpriority="high" decoding="async" width="800" height="450">
   </a>
   <p class="excerpt">{{ .Summary | truncate 300 }}</p>
   <div class="meta">
@@ -65,7 +74,15 @@
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
     <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-      <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
+      {{- $hSrc := $img -}}
+      {{- if hasPrefix $img "https://images.unsplash.com" -}}
+        {{- $hSep := "?" -}}{{- if in $img "?" -}}{{- $hSep = "&" -}}{{- end -}}
+        {{- $hSrc = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80" $img $hSep -}}
+      {{- else if hasPrefix $img "https://images.pexels.com" -}}
+        {{- $hSep := "?" -}}{{- if in $img "?" -}}{{- $hSep = "&" -}}{{- end -}}
+        {{- $hSrc = printf "%s%sw=400&h=225&fit=crop" $img $hSep -}}
+      {{- end -}}
+      <img src="{{ $hSrc }}" alt="{{ $alt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
     </a>
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
@@ -98,7 +115,15 @@
       {{ $cardAlt := .Params.image_alt | default .Title }}
       <article class="category-article-card">
         <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-          <img src="{{ $cardImg }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
+          {{- $cSrc := $cardImg -}}
+          {{- if hasPrefix $cardImg "https://images.unsplash.com" -}}
+            {{- $cSep := "?" -}}{{- if in $cardImg "?" -}}{{- $cSep = "&" -}}{{- end -}}
+            {{- $cSrc = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80" $cardImg $cSep -}}
+          {{- else if hasPrefix $cardImg "https://images.pexels.com" -}}
+            {{- $cSep := "?" -}}{{- if in $cardImg "?" -}}{{- $cSep = "&" -}}{{- end -}}
+            {{- $cSrc = printf "%s%sw=400&h=225&fit=crop" $cardImg $cSep -}}
+          {{- end -}}
+          <img src="{{ $cSrc }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
         </a>
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         <p class="excerpt">{{ .Summary | truncate 150 }}</p>

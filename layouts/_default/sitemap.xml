@@ -1,24 +1,97 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
+{{- /*
+  Custom sitemap.xml — overrides Hugo's default.
+
+  Priority scheme:
+    Homepage              1.0
+    Category sections     0.8 (Kind=section, Section=categories or top sections)
+    Articles              0.6 (Kind=page, Section=posts)
+    Tag term pages        0.4 (Kind=term, taxonomy=tags)
+    Category term pages   0.5 (Kind=term, taxonomy=categories)
+    Taxonomy listings     0.4 (Kind=taxonomy)
+    Other pages           0.3
+
+  Changefreq scheme:
+    Homepage              hourly
+    Category sections     daily
+    Articles              weekly
+    Tag/taxonomy pages    weekly
+    Other pages           monthly
+
+  Excluded:
+    - Pages with noindex: true in front matter
+    - /pipeline-dashboard/ (internal tool)
+    - /haku/ (search — JS-only, no crawlable content)
+    - /tags/ listing (low-value taxonomy root)
+*/ -}}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   {{- range .Data.Pages }}
-  {{- if and (ne .Permalink "") (ne .Params.noindex true) }}
+
+  {{- /* ── Exclusions ────────────────────────────────────────────── */}}
+  {{- $permalink := .Permalink }}
+  {{- $skip := false }}
+  {{- if .Params.noindex }}{{- $skip = true }}{{- end }}
+  {{- if hasSuffix $permalink "/pipeline-dashboard/" }}{{- $skip = true }}{{- end }}
+  {{- if strings.Contains $permalink "/pipeline-dashboard/" }}{{- $skip = true }}{{- end }}
+  {{- if hasSuffix $permalink "/haku/" }}{{- $skip = true }}{{- end }}
+  {{- if eq $permalink "" }}{{- $skip = true }}{{- end }}
+
+  {{- if not $skip }}
+
+  {{- /* ── Priority + changefreq by page kind ──────────────────── */}}
+  {{- $priority   := "0.3" }}
   {{- $changefreq := "monthly" }}
-  {{- $priority   := "0.6" }}
+
   {{- if .IsHome }}
-    {{- $changefreq = "daily" }}
     {{- $priority   = "1.0" }}
+    {{- $changefreq = "hourly" }}
+
   {{- else if eq .Kind "section" }}
-    {{- $changefreq = "weekly" }}
-    {{- $priority   = "0.8" }}
-  {{- else if eq .Kind "taxonomy" }}
-    {{- $changefreq = "weekly" }}
-    {{- $priority   = "0.7" }}
+    {{- /* Top-level section pages: categories get 0.8 */}}
+    {{- if eq .Section "posts" }}
+      {{- $priority   = "0.7" }}
+      {{- $changefreq = "daily" }}
+    {{- else }}
+      {{- $priority   = "0.8" }}
+      {{- $changefreq = "daily" }}
+    {{- end }}
+
+  {{- else if eq .Kind "page" }}
+    {{- if eq .Section "posts" }}
+      {{- /* Regular article */}}
+      {{- $priority   = "0.6" }}
+      {{- $changefreq = "weekly" }}
+    {{- else }}
+      {{- /* Static pages (toimitus, tietosuoja, tue, uutiskirje, etc.) */}}
+      {{- $priority   = "0.3" }}
+      {{- $changefreq = "monthly" }}
+    {{- end }}
+
   {{- else if eq .Kind "term" }}
-    {{- $changefreq = "weekly" }}
-    {{- $priority   = "0.7" }}
+    {{- $taxName := .Data.Singular | default "" }}
+    {{- if eq $taxName "tag" }}
+      {{- $priority   = "0.4" }}
+      {{- $changefreq = "weekly" }}
+    {{- else }}
+      {{- /* Category term pages */}}
+      {{- $priority   = "0.8" }}
+      {{- $changefreq = "daily" }}
+    {{- end }}
+
+  {{- else if eq .Kind "taxonomy" }}
+    {{- /* /tags/ listing, /categories/ listing */}}
+    {{- $taxName := .Data.Plural | default "" }}
+    {{- if eq $taxName "tags" }}
+      {{- $skip = true }}{{- /* Skip /tags/ root — low value */}}
+    {{- else }}
+      {{- $priority   = "0.5" }}
+      {{- $changefreq = "weekly" }}
+    {{- end }}
+
   {{- end }}
+
+  {{- if not $skip }}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- if not .Lastmod.IsZero }}
@@ -28,32 +101,21 @@
     {{- end }}
     <changefreq>{{ $changefreq }}</changefreq>
     <priority>{{ $priority }}</priority>
-    {{- if .Params.images }}
-    {{- range .Params.images }}
+    {{- /* Image sitemap extension for articles with hero images */}}
+    {{- if .Params.image }}
     <image:image>
-      <image:loc>{{ . }}</image:loc>
-      {{- if $.Params.image_alt }}
-      <image:title>{{ $.Params.image_alt }}</image:title>
+      <image:loc>{{ .Params.image }}</image:loc>
+      {{- with .Params.image_alt }}
+      <image:title>{{ . | htmlEscape }}</image:title>
+      {{- end }}
+      {{- with .Params.image_caption }}
+      <image:caption>{{ . | htmlEscape }}</image:caption>
       {{- end }}
     </image:image>
     {{- end }}
-    {{- end }}
-    {{- if and (eq .Section "posts") (not .Date.IsZero) }}
-    <news:news>
-      <news:publication>
-        <news:name>Uutistenlukija</news:name>
-        <news:language>fi</news:language>
-      </news:publication>
-      <news:publication_date>{{ .Date.Format "2006-01-02T15:04:05-07:00" }}</news:publication_date>
-      <news:title>{{ .Title }}</news:title>
-      {{- with .Params.categories }}
-      {{- range . }}
-      <news:keywords>{{ . }}</news:keywords>
-      {{- end }}
-      {{- end }}
-    </news:news>
-    {{- end }}
   </url>
-  {{- end }}
-  {{- end }}
+  {{- end }}{{/* end if not $skip (taxonomy check) */}}
+
+  {{- end }}{{/* end if not $skip (main check) */}}
+  {{- end }}{{/* end range */}}
 </urlset>

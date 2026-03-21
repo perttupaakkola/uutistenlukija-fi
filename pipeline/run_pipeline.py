@@ -255,6 +255,19 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                 _gen_dashboard()
             except Exception as _dash_err:
                 print(f"[dashboard] WARNING: generation failed: {_dash_err}")
+            # Regenerate critical CSS partial
+            try:
+                import subprocess, sys as _sys
+                _crit = subprocess.run(
+                    [_sys.executable, "extract_critical_css.py"],
+                    capture_output=True, text=True, cwd=os.path.dirname(__file__)
+                )
+                if _crit.returncode != 0:
+                    print(f"[critical-css] WARNING: {_crit.stderr.strip()}")
+                else:
+                    print(f"[critical-css] {_crit.stdout.strip()}")
+            except Exception as _crit_err:
+                print(f"[critical-css] WARNING: regeneration failed: {_crit_err}")
         print("\n✅ Rakennus valmis!" if success else f"\n❌ Rakennus epäonnistui: {build_err}")
         return success
 
@@ -606,6 +619,19 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                 _gen_dashboard()
             except Exception as _dash_err:
                 print(f"[dashboard] WARNING: generation failed: {_dash_err}")
+            # Regenerate critical CSS partial (keeps it in sync if style.css changed)
+            try:
+                import subprocess, sys as _sys
+                _crit = subprocess.run(
+                    [_sys.executable, "extract_critical_css.py"],
+                    capture_output=True, text=True, cwd=os.path.dirname(__file__)
+                )
+                if _crit.returncode != 0:
+                    print(f"[critical-css] WARNING: {_crit.stderr.strip()}")
+                else:
+                    print(f"[critical-css] {_crit.stdout.strip()}")
+            except Exception as _crit_err:
+                print(f"[critical-css] WARNING: regeneration failed: {_crit_err}")
 
     steps["build"] = t_build.to_dict()
 

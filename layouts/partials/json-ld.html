@@ -112,7 +112,7 @@
 {{ range $i, $p := first 20 .Pages }}
   {{ $items = $items | append (dict
     "@type"    "ListItem"
-    "position" (add $i 1)
+    "position" (math.Add $i 1)
     "url"      $p.Permalink
     "name"     $p.Title
   ) }}

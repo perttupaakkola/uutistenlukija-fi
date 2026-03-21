@@ -1,0 +1,66 @@
+{{/*
+  site-nav-schema.html — SiteNavigationElement JSON-LD for <head>
+
+  Outputs a Schema.org SiteNavigationElement (subtype of WebPage) block
+  listing all main navigation items. Google uses this for sitelinks
+  and knowledge graph navigation.
+
+  Source: site.Menus.main (from hugo.toml [menu]) with hardcoded fallback.
+  Rendered on every page (sitewide nav is consistent).
+*/}}
+
+{{/* ── Collect nav items ──────────────────────────────────────────── */}}
+{{ $items := slice }}
+
+{{ $mainMenu := .Site.Menus.main }}
+{{ if $mainMenu }}
+  {{/* Use hugo.toml menu config — weighted order */}}
+  {{ range $mainMenu.ByWeight }}
+    {{ $url := .URL }}
+    {{/* Make absolute if relative */}}
+    {{ if not (hasPrefix $url "http") }}
+      {{ $url = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" $url) }}
+    {{ end }}
+    {{ $items = $items | append (dict
+      "@type" "SiteNavigationElement"
+      "name"  .Name
+      "url"   $url
+    ) }}
+  {{ end }}
+{{ else }}
+  {{/* Hardcoded fallback — mirrors hugo.toml [menu.main] */}}
+  {{ $base := .Site.BaseURL }}
+  {{ $fallback := slice
+    (dict "name" "Etusivu"          "url" $base)
+    (dict "name" "Kotimaa"          "url" (printf "%scategories/kotimaa/"      $base))
+    (dict "name" "Ulkomaat"         "url" (printf "%scategories/ulkomaat/"     $base))
+    (dict "name" "Talous"           "url" (printf "%scategories/talous/"       $base))
+    (dict "name" "Teknologia"       "url" (printf "%scategories/teknologia/"   $base))
+    (dict "name" "Urheilu"          "url" (printf "%scategories/urheilu/"      $base))
+    (dict "name" "Kulttuuri"        "url" (printf "%scategories/kulttuuri/"    $base))
+    (dict "name" "Tiede"            "url" (printf "%scategories/tiede/"        $base))
+    (dict "name" "Haku"             "url" (printf "%shaku/"                    $base))
+    (dict "name" "Tietoa"           "url" (printf "%stoimitus/"                $base))
+  }}
+  {{ range $fallback }}
+    {{ $items = $items | append (dict
+      "@type" "SiteNavigationElement"
+      "name"  .name
+      "url"   .url
+    ) }}
+  {{ end }}
+{{ end }}
+
+{{/* ── Emit JSON-LD ────────────────────────────────────────────────── */}}
+{{ if $items }}
+{{ $schema := dict
+    "@context"        "https://schema.org"
+    "@type"           "ItemList"
+    "name"            "Päänavigaatio"
+    "description"     "Uutistenlukija.fi päänavigaatio"
+    "itemListElement" $items
+}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{ end }}

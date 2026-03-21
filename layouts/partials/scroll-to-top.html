@@ -1,0 +1,28 @@
+{{- /*
+  scroll-to-top.html — "Takaisin ylös" fixed scroll-to-top button.
+
+  - Fixed bottom-right, 44×44px touch target
+  - Hidden (opacity 0, pointer-events none) until 400px scroll
+  - Fades in with 200ms opacity transition
+  - Click → smooth scroll to top; respects prefers-reduced-motion
+  - Inline SVG arrow, no external deps
+  - z-index 200 (above content, below modals at 1000+)
+*/ -}}
+<button id="back-to-top"
+        class="scroll-to-top"
+        aria-label="Takaisin ylös"
+        title="Takaisin ylös"
+        hidden>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="20" height="20"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2.5"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       aria-hidden="true"
+       focusable="false">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>

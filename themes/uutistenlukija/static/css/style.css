@@ -1061,36 +1061,82 @@ img { max-width: 100%; height: auto; }
   transition: width 0.1s linear;
 }
 
-/* === Back to Top === */
-#back-to-top {
+/* === Scroll to Top ("Takaisin ylös") === */
+.scroll-to-top {
+  /* Positioning */
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  z-index: 200; /* above content, below modals (1000+) */
+
+  /* Sizing — 44×44px minimum touch target */
   width: 44px;
   height: 44px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Appearance */
   border-radius: 50%;
   border: 1px solid var(--border);
   background: var(--card-bg);
   color: var(--text);
-  font-size: 1.2rem;
   cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+
+  /* Hidden by default — JS removes `hidden` attr on init */
   opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.15s ease,
+              background-color 0.15s ease, border-color 0.15s ease,
+              box-shadow 0.15s ease;
 }
 
-#back-to-top.visible {
+.scroll-to-top.visible {
   opacity: 1;
-  visibility: visible;
+  pointer-events: auto;
 }
 
-#back-to-top:hover {
+.scroll-to-top:hover,
+.scroll-to-top:focus-visible {
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
+
+.scroll-to-top:active {
+  transform: scale(0.96);
+}
+
+.scroll-to-top:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Reduced motion — disable transitions, keep visibility toggle */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-to-top {
+    transition: opacity 0.01ms, pointer-events 0s;
+  }
+  .scroll-to-top:hover,
+  .scroll-to-top:focus-visible {
+    transform: none;
+  }
+}
+
+/* Dark mode refinement */
+[data-theme="dark"] .scroll-to-top {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+[data-theme="dark"] .scroll-to-top:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Legacy id selector — keeps old JS working during transition */
+#back-to-top { /* intentionally empty — class rules apply */ }
 
 /* === Image Credits (legacy — .image-caption now preferred) === */
 .image-credit {
@@ -1457,10 +1503,27 @@ pre code {
 .article-hero-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9;   /* desktop: 16:9 */
   overflow: hidden;
   border-radius: 8px;
   background: var(--border);   /* placeholder colour while loading */
+}
+
+/* Art-directed aspect ratios matching <picture> breakpoints */
+@media (max-width: 900px) {
+  .article-hero-wrapper {
+    aspect-ratio: 4 / 3;   /* tablet: 4:3 */
+  }
+}
+
+@media (max-width: 600px) {
+  .article-hero-wrapper {
+    aspect-ratio: 1 / 1;   /* mobile: square crop */
+    border-radius: 0;       /* full-bleed on small screens */
+    margin-left: calc(-1 * var(--page-padding, 1rem));
+    margin-right: calc(-1 * var(--page-padding, 1rem));
+    width: calc(100% + 2 * var(--page-padding, 1rem));
+  }
 }
 
 /* Shimmer skeleton — shows while image loads */
@@ -1499,6 +1562,14 @@ pre code {
 /* Hide the blur pseudo-element once real image has loaded */
 .article-hero-wrapper.has-blur-placeholder:has(.article-hero-img.loaded)::before {
   opacity: 0;
+}
+
+/* picture element inside hero wrapper needs to fill the container */
+.article-hero-wrapper picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 1;
 }
 
 .article-hero-img {
@@ -3455,3 +3526,167 @@ pre code {
 .category-pill {
   min-height: 28px;
 }
+
+/* ── Related Articles — "Aiheeseen liittyvät" (Cycle 63) ─────────── */
+/* New BEM layout: horizontal row of cards with thumbnail + meta.    */
+/* Replaces older vertical .related-articles list layout.            */
+
+.related-articles {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border);
+}
+
+.related-articles__heading {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin: 0 0 1.25rem;
+}
+
+.related-articles__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--card-bg);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.related-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.related-card__thumb {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* Category-coloured placeholder when no image */
+.related-card__thumb[data-cat="kotimaa"]    { background: #1f6feb; }
+.related-card__thumb[data-cat="ulkomaat"]   { background: #8e44ad; }
+.related-card__thumb[data-cat="talous"]     { background: #1f8f5f; }
+.related-card__thumb[data-cat="teknologia"] { background: #0f766e; }
+.related-card__thumb[data-cat="urheilu"]    { background: #d97706; }
+.related-card__thumb[data-cat="kulttuuri"]  { background: #c2410c; }
+.related-card__thumb[data-cat="tiede"]      { background: #2563eb; }
+
+.related-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.related-card:hover .related-card__thumb img {
+  transform: scale(1.04);
+}
+
+.related-card__body {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.related-card__cat {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  align-self: flex-start;
+  line-height: 1.4;
+}
+
+.related-card__title {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+.related-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.related-card__rt::before {
+  content: "·";
+  margin-right: 0.3rem;
+}
+
+/* 3-col on medium screens */
+@media (max-width: 900px) {
+  .related-articles__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2-col on tablet */
+@media (max-width: 640px) {
+  .related-articles__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1-col on mobile */
+@media (max-width: 420px) {
+  .related-articles__grid {
+    grid-template-columns: 1fr;
+  }
+  .related-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .related-card__thumb {
+    width: 100px;
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 80px;
+    flex-shrink: 0;
+  }
+}
+
+/* Dark mode */
+[data-theme="dark"] .related-card {
+  border-color: var(--border);
+  background: var(--card-bg);
+}
+[data-theme="dark"] .related-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+/* ── end Related Articles ──────────────────────────────────────────── */

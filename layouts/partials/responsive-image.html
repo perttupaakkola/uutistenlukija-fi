@@ -1,171 +1,70 @@
 {{/*
-  responsive-image.html — Responsive image with srcset + CDN optimization
+  responsive-image.html — Responsive image with CDN optimization + srcset
 
-  Supports Unsplash (images.unsplash.com) and Pexels (images.pexels.com) resize params.
-  Falls back gracefully to plain <img> for local/category URLs.
+  For Unsplash/Pexels: renders <picture> with WebP + JPEG sources at correct
+  crop dimensions. For local/static images: plain <img>.
 
   Parameters:
-  - src:             image URL (required)
-  - alt:             alt text (default: "Article image")
-  - width:           display width in px (default: 800)
-  - height:          display height in px (default: 450)
-  - class:           CSS class string
-  - loading:         "lazy" | "eager" (default: "lazy")
-  - fetchpriority:   "high" | "auto" | "low" (default: omitted)
-  - sizes:           responsive sizes string (default: "(max-width: 768px) 100vw, 800px")
-  - srcset_widths:   comma-separated widths to generate (default: "400,800,1200")
-  - onerror:         onerror attribute value (optional)
+  - src:           image URL
+  - alt:           alt text
+  - width:         display width (400 for cards, 800 for lead, 1200 for hero)
+  - height:        display height (225 for cards, 450 for lead, 675 for hero)
+  - class:         CSS class
+  - loading:       lazy or eager (default: lazy)
+  - fetchpriority: high / auto (default: auto; set high for LCP element)
+  - sizes:         responsive sizes string (optional)
 */}}
 
-{{ $src         := .src }}
-{{ $alt         := .alt | default "Article image" }}
-{{ $width       := .width | default 800 }}
-{{ $height      := .height | default 450 }}
-{{ $class       := .class | default "" }}
-{{ $loading     := .loading | default "lazy" }}
-{{ $fp          := .fetchpriority }}
-{{ $sizes       := .sizes | default "(max-width: 768px) 100vw, 800px" }}
-{{ $onerror     := .onerror }}
-{{ $placeholder := .placeholder }}
+{{ $src    := .src }}
+{{ $alt    := .alt | default "" }}
+{{ $width  := .width  | default 400 }}
+{{ $height := .height | default 225 }}
+{{ $class  := .class  | default "" }}
+{{ $loading := .loading | default "lazy" }}
+{{ $fetchpriority := .fetchpriority | default "" }}
+{{ $sizes  := .sizes | default "" }}
 
-{{/* Determine CDN type */}}
 {{ $isUnsplash := hasPrefix $src "https://images.unsplash.com" }}
 {{ $isPexels   := hasPrefix $src "https://images.pexels.com" }}
-{{ $hasCDN     := or $isUnsplash $isPexels }}
+{{ $sep := "?" }}{{ if in $src "?" }}{{ $sep = "&" }}{{ end }}
 
-{{/* --- Build srcset for CDN images --- */}}
-{{ $srcset := "" }}
-{{ if $hasCDN }}
-  {{ $widths := slice 400 800 1200 }}
-  {{ $entries := slice }}
-  {{ range $widths }}
-    {{ $w := . }}
-    {{ $entry := "" }}
-    {{ if $isUnsplash }}
-      {{/* Strip existing w/q/fit params cleanly */}}
-      {{ $base := $src }}
-      {{ if in $src "?" }}
-        {{ $parts := split $src "?" }}
-        {{ $base = index $parts 0 }}
-        {{/* Rebuild query without w/q/fit to avoid duplicates */}}
-        {{ $qs := "" }}
-        {{ range split (index $parts 1) "&" }}
-          {{ $kv := . }}
-          {{ if not (or (hasPrefix $kv "w=") (hasPrefix $kv "q=") (hasPrefix $kv "fit=")) }}
-            {{ $qs = printf "%s&%s" $qs $kv }}
-          {{ end }}
-        {{ end }}
-        {{ if $qs }}
-          {{ $base = printf "%s?%s" $base (strings.TrimLeft "&" $qs) }}
-          {{ $entry = printf "%s&w=%d&q=82&fit=crop %dw" $base $w $w }}
-        {{ else }}
-          {{ $entry = printf "%s?w=%d&q=82&fit=crop %dw" $base $w $w }}
-        {{ end }}
-      {{ else }}
-        {{ $entry = printf "%s?w=%d&q=82&fit=crop %dw" $base $w $w }}
-      {{ end }}
-    {{ else if $isPexels }}
-      {{ $base := $src }}
-      {{ if in $src "?" }}
-        {{ $parts := split $src "?" }}
-        {{ $base = index $parts 0 }}
-        {{ $qs := "" }}
-        {{ range split (index $parts 1) "&" }}
-          {{ $kv := . }}
-          {{ if not (or (hasPrefix $kv "w=") (hasPrefix $kv "h=") (hasPrefix $kv "auto=") (hasPrefix $kv "fit=")) }}
-            {{ $qs = printf "%s&%s" $qs $kv }}
-          {{ end }}
-        {{ end }}
-        {{ if $qs }}
-          {{ $base = printf "%s?%s" $base (strings.TrimLeft "&" $qs) }}
-          {{ $entry = printf "%s&auto=compress&fit=crop&w=%d %dw" $base $w $w }}
-        {{ else }}
-          {{ $entry = printf "%s?auto=compress&fit=crop&w=%d %dw" $base $w $w }}
-        {{ end }}
-      {{ else }}
-        {{ $entry = printf "%s?auto=compress&fit=crop&w=%d %dw" $base $w $w }}
-      {{ end }}
-    {{ end }}
-    {{ $entries = append $entry $entries }}
-  {{ end }}
-  {{ $srcset = delimit $entries ", " }}
-{{ end }}
-
-{{/* --- Default src: sized to display width for non-srcset browsers --- */}}
-{{ $defaultSrc := $src }}
 {{ if $isUnsplash }}
-  {{ $base := $src }}
-  {{ if in $src "?" }}
-    {{ $parts := split $src "?" }}
-    {{ $base = index $parts 0 }}
-    {{ $qs := "" }}
-    {{ range split (index $parts 1) "&" }}
-      {{ $kv := . }}
-      {{ if not (or (hasPrefix $kv "w=") (hasPrefix $kv "q=") (hasPrefix $kv "fit=")) }}
-        {{ $qs = printf "%s&%s" $qs $kv }}
-      {{ end }}
-    {{ end }}
-    {{ if $qs }}
-      {{ $base = printf "%s?%s" $base (strings.TrimLeft "&" $qs) }}
-      {{ $defaultSrc = printf "%s&w=%d&q=82&fit=crop" $base $width }}
-    {{ else }}
-      {{ $defaultSrc = printf "%s?w=%d&q=82&fit=crop" $base $width }}
-    {{ end }}
-  {{ else }}
-    {{ $defaultSrc = printf "%s?w=%d&q=82&fit=crop" $base $width }}
-  {{ end }}
+  {{ $webp := printf "%s%sw=%d&h=%d&fit=crop&fm=webp&q=80" $src $sep $width $height }}
+  {{ $jpeg := printf "%s%sw=%d&h=%d&fit=crop&fm=jpg&q=85"  $src $sep $width $height }}
+  <picture>
+    <source srcset="{{ $webp }}" type="image/webp"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>
+    <img
+      src="{{ $jpeg }}"
+      alt="{{ $alt }}"
+      class="{{ $class }}"
+      loading="{{ $loading }}"
+      {{ if $fetchpriority }}fetchpriority="{{ $fetchpriority }}"{{ end }}
+      width="{{ $width }}"
+      height="{{ $height }}"
+      decoding="async"
+    >
+  </picture>
 {{ else if $isPexels }}
-  {{ $base := $src }}
-  {{ if in $src "?" }}
-    {{ $parts := split $src "?" }}
-    {{ $base = index $parts 0 }}
-    {{ $qs := "" }}
-    {{ range split (index $parts 1) "&" }}
-      {{ $kv := . }}
-      {{ if not (or (hasPrefix $kv "w=") (hasPrefix $kv "h=") (hasPrefix $kv "auto=") (hasPrefix $kv "fit=")) }}
-        {{ $qs = printf "%s&%s" $qs $kv }}
-      {{ end }}
-    {{ end }}
-    {{ if $qs }}
-      {{ $base = printf "%s?%s" $base (strings.TrimLeft "&" $qs) }}
-      {{ $defaultSrc = printf "%s&auto=compress&fit=crop&w=%d" $base $width }}
-    {{ else }}
-      {{ $defaultSrc = printf "%s?auto=compress&fit=crop&w=%d" $base $width }}
-    {{ end }}
-  {{ else }}
-    {{ $defaultSrc = printf "%s?auto=compress&fit=crop&w=%d" $base $width }}
-  {{ end }}
-{{ end }}
-
-{{ if $placeholder }}
-<div class="blur-placeholder-wrap" style="background-image:url('{{ $placeholder | safeCSS }}')">
+  {{ $sized := printf "%s%sw=%d&h=%d&fit=crop" $src $sep $width $height }}
   <img
-    src="{{ $defaultSrc }}"
-    {{ if $srcset }}srcset="{{ $srcset }}"{{ end }}
-    {{ if $srcset }}sizes="{{ $sizes }}"{{ end }}
+    src="{{ $sized }}"
     alt="{{ $alt }}"
-    class="blur-placeholder-img{{ if $class }} {{ $class }}{{ end }}"
+    class="{{ $class }}"
     loading="{{ $loading }}"
-    {{ if $fp }}fetchpriority="{{ $fp }}"{{ end }}
+    {{ if $fetchpriority }}fetchpriority="{{ $fetchpriority }}"{{ end }}
     width="{{ $width }}"
     height="{{ $height }}"
     decoding="async"
-    {{ if $onerror }}onerror="{{ $onerror | safeHTMLAttr }}"{{ end }}
-    onload="this.classList.add('blur-placeholder-loaded')"
-  />
-</div>
+  >
 {{ else }}
-<img
-  src="{{ $defaultSrc }}"
-  {{ if $srcset }}srcset="{{ $srcset }}"{{ end }}
-  {{ if $srcset }}sizes="{{ $sizes }}"{{ end }}
-  alt="{{ $alt }}"
-  {{ if $class }}class="{{ $class }}"{{ end }}
-  loading="{{ $loading }}"
-  {{ if $fp }}fetchpriority="{{ $fp }}"{{ end }}
-  width="{{ $width }}"
-  height="{{ $height }}"
-  decoding="async"
-  {{ if $onerror }}onerror="{{ $onerror | safeHTMLAttr }}"{{ end }}
-/>
+  <img
+    src="{{ $src }}"
+    alt="{{ $alt }}"
+    class="{{ $class }}"
+    loading="{{ $loading }}"
+    {{ if $fetchpriority }}fetchpriority="{{ $fetchpriority }}"{{ end }}
+    width="{{ $width }}"
+    height="{{ $height }}"
+    decoding="async"
+  >
 {{ end }}

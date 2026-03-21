@@ -36,7 +36,7 @@
 <nav class="breadcrumbs" aria-label="Murupolku">
   {{ range $i, $crumb := $crumbs }}
     {{- if gt $i 0 }}<span class="bc-sep" aria-hidden="true">›</span>{{ end -}}
-    {{- if eq $i (sub (len $crumbs) 1) -}}
+    {{- if eq $i (math.Sub (len $crumbs) 1) -}}
       <span class="bc-current" aria-current="page">{{ $crumb.name }}</span>
     {{- else -}}
       <a class="bc-link" href="{{ $crumb.url }}">{{ $crumb.name }}</a>
@@ -44,24 +44,8 @@
   {{ end }}
 </nav>
 
-{{/* ── BreadcrumbList JSON-LD ────────────────────────────────────── */}}
-{{ $items := slice }}
-{{ range $i, $crumb := $crumbs }}
-  {{ $items = $items | append (dict
-    "@type" "ListItem"
-    "position" (add $i 1)
-    "name" $crumb.name
-    "item" $crumb.url
-  ) }}
-{{ end }}
-{{ $schema := dict
-    "@context" "https://schema.org"
-    "@type" "BreadcrumbList"
-    "itemListElement" $items
-}}
-<script type="application/ld+json">
-{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
-</script>
+{{/* BreadcrumbList JSON-LD is now emitted from layouts/partials/breadcrumb-schema.html
+     which is included in <head> via baseof.html. No duplicate output here. */}}
 
 {{ end }}{{/* end if not .IsHome */}}
 

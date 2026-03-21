@@ -1,48 +1,171 @@
 {{/*
   hero-image.html — Article hero image partial
-  
-  Sara's spec (2026-03-19):
-  - Hero sits ABOVE the article title, full-width, 16:9 ratio
-  - Max display width: 100% of content column (~800px)
-  - Mobile (≤600px): full viewport width, 16:9 maintained
-  - Attribution caption below: "Photo by X on Pexels/Unsplash"
-  - Fallback to category placeholder JPG (no broken image states)
-  - Supports both hotlinked (Unsplash) and local (Pexels) images transparently
-  
+
+  Sara's spec (2026-03-21):
+  - <picture> + srcset: AVIF → WebP → JPEG fallback (Unsplash/Pexels CDN format params)
+  - Art-directed crops: 16:9 desktop, 4:3 tablet (≤900px), 1:1 mobile (≤600px)
+  - loading="eager" fetchpriority="high" on LCP element
+  - Blur-up base64 placeholder while loading
+  - Attribution caption below
+  - Fallback to category placeholder
+
   Usage: {{ partial "hero-image.html" . }}
-  Context: Hugo page (.Params.image, .Params.image_alt, .Params.image_credit,
-           .Params.image_source_url, .Params.image_caption, .Params.categories)
 */}}
 
-{{/* Resolve image URL — fallback to category placeholder with unique hash */}}
+{{/* ── Image URL ──────────────────────────────────────────────── */}}
 {{ $img := .Params.image }}
-{{ if not $img }}
+{{ $isExternal := false }}
+{{ $isUnsplash := false }}
+{{ $isPexels := false }}
+
+{{ if $img }}
+  {{ if hasPrefix $img "https://images.unsplash.com" }}
+    {{ $isUnsplash = true }}
+    {{ $isExternal = true }}
+  {{ else if hasPrefix $img "https://images.pexels.com" }}
+    {{ $isPexels = true }}
+    {{ $isExternal = true }}
+  {{ end }}
+{{ else }}
   {{ $cat := index .Params.categories 0 | lower | default "kotimaa" }}
-  {{/* Add unique hash per article to prevent duplicate image SEO penalty */}}
   {{ $hash := substr (md5 .Permalink) 0 8 }}
   {{ $img = printf "/images/categories/%s.jpg?v=%s" $cat $hash }}
 {{ end }}
 
-{{/* Alt text */}}
+{{/* ── CDN URL builder helpers ────────────────────────────────── */}}
+{{/*
+  Unsplash format params:
+    w=  width, h=  height, fit=crop, ar= aspect ratio, fm= format (avif/webp/jpg), q= quality
+  Pexels format params:
+    w=  width, h=  height, fit=crop (via ?auto=compress&cs=tinysrgb)
+*/}}
+
+{{ $baseUrl := $img }}
+{{ $sep := "?" }}
+{{ if in $img "?" }}{{ $sep = "&" }}{{ end }}
+
+{{/* Strip any existing w/h/fm/q params for clean rebuild */}}
+{{ $cleanBase := $img }}
+
+{{/* ── Unsplash srcset sets ────────────────────────────────────── */}}
+{{ $srcAvifDesktop := "" }}{{ $srcAvifTablet := "" }}{{ $srcAvifMobile := "" }}
+{{ $srcWebpDesktop := "" }}{{ $srcWebpTablet := "" }}{{ $srcWebpMobile := "" }}
+{{ $srcJpegDesktop := "" }}{{ $srcJpegTablet := "" }}{{ $srcJpegMobile := "" }}
+
+{{ if $isUnsplash }}
+  {{/* Base URL without trailing params — Unsplash URLs already contain ixid/ixlib */}}
+  {{ $b := $cleanBase }}
+  {{ $s := $sep }}
+  {{/* Desktop 16:9 — 1200×675 */}}
+  {{ $srcAvifDesktop = printf "%s%sw=1200&h=675&fit=crop&fm=avif&q=80" $b $s }}
+  {{ $srcWebpDesktop = printf "%s%sw=1200&h=675&fit=crop&fm=webp&q=85" $b $s }}
+  {{ $srcJpegDesktop = printf "%s%sw=1200&h=675&fit=crop&fm=jpg&q=85"  $b $s }}
+  {{/* Tablet 4:3 — 900×675 */}}
+  {{ $srcAvifTablet = printf "%s%sw=900&h=675&fit=crop&fm=avif&q=80"  $b $s }}
+  {{ $srcWebpTablet = printf "%s%sw=900&h=675&fit=crop&fm=webp&q=85"  $b $s }}
+  {{ $srcJpegTablet = printf "%s%sw=900&h=675&fit=crop&fm=jpg&q=85"   $b $s }}
+  {{/* Mobile 1:1 — 600×600 */}}
+  {{ $srcAvifMobile = printf "%s%sw=600&h=600&fit=crop&fm=avif&q=80"  $b $s }}
+  {{ $srcWebpMobile = printf "%s%sw=600&h=600&fit=crop&fm=webp&q=85"  $b $s }}
+  {{ $srcJpegMobile = printf "%s%sw=600&h=600&fit=crop&fm=jpg&q=85"   $b $s }}
+{{ else if $isPexels }}
+  {{ $b := $cleanBase }}
+  {{ $s := $sep }}
+  {{ $srcAvifDesktop = printf "%s%sw=1200&h=675&fit=crop" $b $s }}
+  {{ $srcWebpDesktop = printf "%s%sw=1200&h=675&fit=crop" $b $s }}
+  {{ $srcJpegDesktop = printf "%s%sw=1200&h=675&fit=crop" $b $s }}
+  {{ $srcAvifTablet  = printf "%s%sw=900&h=675&fit=crop"  $b $s }}
+  {{ $srcWebpTablet  = printf "%s%sw=900&h=675&fit=crop"  $b $s }}
+  {{ $srcJpegTablet  = printf "%s%sw=900&h=675&fit=crop"  $b $s }}
+  {{ $srcAvifMobile  = printf "%s%sw=600&h=600&fit=crop"  $b $s }}
+  {{ $srcWebpMobile  = printf "%s%sw=600&h=600&fit=crop"  $b $s }}
+  {{ $srcJpegMobile  = printf "%s%sw=600&h=600&fit=crop"  $b $s }}
+{{ end }}
+
+{{/* ── Alt text ────────────────────────────────────────────────── */}}
 {{ $alt := .Params.image_alt | default .Title }}
 
-{{/* Build caption/credit line */}}
-{{ $hasCredit := and .Params.image_credit (ne .Params.image_credit "") }}
-{{ $hasCaption := and .Params.image_caption (ne .Params.image_caption "") }}
+{{/* ── Caption / credit ───────────────────────────────────────── */}}
+{{ $hasCredit   := and .Params.image_credit     (ne .Params.image_credit "")     }}
+{{ $hasCaption  := and .Params.image_caption    (ne .Params.image_caption "")    }}
 {{ $hasSourceUrl := and .Params.image_source_url (ne .Params.image_source_url "") }}
 
+{{/* ── Blur-up placeholder ────────────────────────────────────── */}}
+{{ $placeholder := .Params.image_placeholder }}
+{{ $wrapperStyle := "" }}
+{{ if $placeholder }}
+  {{ $wrapperStyle = printf "background-image:url('%s')" $placeholder }}
+{{ end }}
+
+{{/* ── Fallback URL for onerror ───────────────────────────────── */}}
+{{ $fallbackHash := substr (md5 .Permalink) 0 8 }}
+{{ $fallbackCat  := index .Params.categories 0 | lower | default "kotimaa" }}
+{{ $fallbackSrc  := printf "/images/categories/%s.jpg?v=%s" $fallbackCat $fallbackHash }}
+
+{{/* ── Default img src (JPEG desktop, or original if static) ─── */}}
+{{ $defaultSrc := $img }}
+{{ if $isUnsplash }}
+  {{ $defaultSrc = $srcJpegDesktop }}
+{{ else if $isPexels }}
+  {{ $defaultSrc = $srcJpegDesktop }}
+{{ end }}
+
 <figure class="article-hero">
-  {{/* Blur-up: use base64 placeholder as blurred background while real image loads */}}
-  {{ $placeholder := .Params.image_placeholder }}
-  {{ $wrapperStyle := "" }}
-  {{ if $placeholder }}
-    {{ $wrapperStyle = printf "background-image:url('%s')" $placeholder }}
-  {{ end }}
   <div class="article-hero-wrapper{{ if $placeholder }} has-blur-placeholder{{ end }}"{{ if $placeholder }} style="{{ $wrapperStyle | safeCSS }}"{{ end }}>
-    {{/* Calculate hash for consistent onerror fallback */}}
-    {{ $fallbackHash := substr (md5 .Permalink) 0 8 }}
+    {{ if $isExternal }}
+    {{/* ── Responsive <picture> with format + art-direction ──── */}}
+    <picture>
+      {{/* AVIF — best compression */}}
+      <source
+        media="(max-width: 600px)"
+        srcset="{{ $srcAvifMobile }}"
+        type="image/avif">
+      <source
+        media="(max-width: 900px)"
+        srcset="{{ $srcAvifTablet }}"
+        type="image/avif">
+      <source
+        srcset="{{ $srcAvifDesktop }}"
+        type="image/avif">
+      {{/* WebP — wide browser support */}}
+      <source
+        media="(max-width: 600px)"
+        srcset="{{ $srcWebpMobile }}"
+        type="image/webp">
+      <source
+        media="(max-width: 900px)"
+        srcset="{{ $srcWebpTablet }}"
+        type="image/webp">
+      <source
+        srcset="{{ $srcWebpDesktop }}"
+        type="image/webp">
+      {{/* JPEG fallback */}}
+      <source
+        media="(max-width: 600px)"
+        srcset="{{ $srcJpegMobile }}"
+        type="image/jpeg">
+      <source
+        media="(max-width: 900px)"
+        srcset="{{ $srcJpegTablet }}"
+        type="image/jpeg">
+      <img
+        src="{{ $defaultSrc }}"
+        alt="{{ $alt }}"
+        class="article-hero-img"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="1200"
+        height="675"
+        onload="this.classList.add('loaded')"
+        onerror="this.onerror=null;this.src='{{ $fallbackSrc }}';this.classList.add('loaded')"
+        {{ if $placeholder }}data-has-placeholder="1"{{ end }}
+      >
+    </picture>
+    {{ else }}
+    {{/* ── Static/local image — plain img (no CDN format support) */}}
     <img
-      src="{{ $img }}"
+      src="{{ $defaultSrc }}"
       alt="{{ $alt }}"
       class="article-hero-img"
       loading="eager"
@@ -51,14 +174,16 @@
       width="1200"
       height="675"
       onload="this.classList.add('loaded')"
-      onerror="this.onerror=null;this.src='/images/categories/{{ index .Params.categories 0 | lower | default "kotimaa" }}.jpg?v={{ $fallbackHash }}';this.classList.add('loaded')"
+      onerror="this.onerror=null;this.src='{{ $fallbackSrc }}';this.classList.add('loaded')"
       {{ if $placeholder }}data-has-placeholder="1"{{ end }}
     >
+    {{ end }}
   </div>
   {{ if $placeholder }}
   <script>
   (function(){
-    var img = document.currentScript.previousElementSibling.querySelector('.article-hero-img');
+    var wrap = document.currentScript.previousElementSibling;
+    var img = wrap ? wrap.querySelector('.article-hero-img') : null;
     if(img && img.complete && img.naturalWidth) img.classList.add('loaded');
   })();
   </script>

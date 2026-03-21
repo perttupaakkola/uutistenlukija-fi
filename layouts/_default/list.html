@@ -15,7 +15,15 @@
   <article class="article-card">
     <a href="{{ .Permalink }}" class="article-image-link card-thumb-link" tabindex="-1" aria-hidden="true">
       <div class="card-thumb-wrapper">
-        <img src="{{ $img }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" decoding="async" width="400" height="225"
+        {{- $thumbSrc := $img -}}
+      {{- if hasPrefix $img "https://images.unsplash.com" -}}
+        {{- $tSep := "?" -}}{{- if in $img "?" -}}{{- $tSep = "&" -}}{{- end -}}
+        {{- $thumbSrc = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80" $img $tSep -}}
+      {{- else if hasPrefix $img "https://images.pexels.com" -}}
+        {{- $tSep := "?" -}}{{- if in $img "?" -}}{{- $tSep = "&" -}}{{- end -}}
+        {{- $thumbSrc = printf "%s%sw=400&h=225&fit=crop" $img $tSep -}}
+      {{- end -}}
+      <img src="{{ $thumbSrc }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" decoding="async" width="400" height="225"
           onerror="this.onerror=null;this.src='/images/categories/{{ $cat | lower }}.jpg'">
       </div>
     </a>
