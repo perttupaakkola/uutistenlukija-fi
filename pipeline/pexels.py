@@ -25,6 +25,8 @@ import re
 import json
 import time
 import hashlib
+import base64
+import io
 import urllib.request
 import urllib.parse
 from typing import Optional, Dict, List
@@ -304,6 +306,45 @@ def _download_image(url: str, slug: str, suffix: str = "hero") -> Optional[str]:
         return None
 
 
+def _generate_blur_placeholder(local_static_path: str) -> Optional[str]:
+    """Generate a 20px-wide base64 JPEG thumbnail for CSS blur-up effect.
+
+    Args:
+        local_static_path: relative path like /images/articles/slug-hero.jpg
+
+    Returns:
+        data:image/jpeg;base64,... string, or None on failure.
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        return None
+
+    # Resolve to filesystem path
+    static_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static")
+    # local_static_path starts with /images/... — strip leading slash for join
+    abs_path = os.path.join(static_dir, local_static_path.lstrip("/"))
+
+    if not os.path.exists(abs_path):
+        return None
+
+    try:
+        with Image.open(abs_path) as img:
+            # Preserve aspect ratio, target 20px wide
+            w, h = img.size
+            thumb_w = 20
+            thumb_h = max(1, int(h * thumb_w / w))
+            img = img.convert("RGB")
+            img = img.resize((thumb_w, thumb_h), Image.LANCZOS)
+            buf = io.BytesIO()
+            img.save(buf, format="JPEG", quality=40, optimize=True)
+            b64 = base64.b64encode(buf.getvalue()).decode("ascii")
+            return f"data:image/jpeg;base64,{b64}"
+    except Exception as e:
+        print(f"[pexels] blur placeholder failed for {local_static_path}: {e}")
+        return None
+
+
 # Round-robin index per query to avoid all articles getting the same first result
 _query_index: Dict[str, int] = {}
 
@@ -422,6 +463,10 @@ def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
             article["image_source_url"] = result["pexels_url"]
             article["image_caption"] = ""
             article["image_category_fallback"] = False
+            # Generate blur-up placeholder
+            b64 = _generate_blur_placeholder(result["local_path"])
+            if b64:
+                article["image_placeholder"] = b64
         else:
             # Category placeholder fallback
             cat_slug = category.lower()

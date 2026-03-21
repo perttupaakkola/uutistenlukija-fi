@@ -32,7 +32,13 @@
 {{ $hasSourceUrl := and .Params.image_source_url (ne .Params.image_source_url "") }}
 
 <figure class="article-hero">
-  <div class="article-hero-wrapper">
+  {{/* Blur-up: use base64 placeholder as blurred background while real image loads */}}
+  {{ $placeholder := .Params.image_placeholder }}
+  {{ $wrapperStyle := "" }}
+  {{ if $placeholder }}
+    {{ $wrapperStyle = printf "background-image:url('%s')" $placeholder }}
+  {{ end }}
+  <div class="article-hero-wrapper{{ if $placeholder }} has-blur-placeholder{{ end }}"{{ if $placeholder }} style="{{ $wrapperStyle | safeCSS }}"{{ end }}>
     {{/* Calculate hash for consistent onerror fallback */}}
     {{ $fallbackHash := substr (md5 .Permalink) 0 8 }}
     <img
@@ -42,9 +48,19 @@
       loading="eager"
       width="1200"
       height="675"
-      onerror="this.onerror=null;this.src='/images/categories/{{ index .Params.categories 0 | lower | default "kotimaa" }}.jpg?v={{ $fallbackHash }}'"
+      onload="this.classList.add('loaded')"
+      onerror="this.onerror=null;this.src='/images/categories/{{ index .Params.categories 0 | lower | default "kotimaa" }}.jpg?v={{ $fallbackHash }}';this.classList.add('loaded')"
+      {{ if $placeholder }}data-has-placeholder="1"{{ end }}
     >
   </div>
+  {{ if $placeholder }}
+  <script>
+  (function(){
+    var img = document.currentScript.previousElementSibling.querySelector('.article-hero-img');
+    if(img && img.complete && img.naturalWidth) img.classList.add('loaded');
+  })();
+  </script>
+  {{ end }}
   {{ if or $hasCaption $hasCredit }}
   <figcaption class="article-hero-caption">
     {{ if $hasCaption }}<span class="caption-text">{{ .Params.image_caption }}</span>{{ end }}

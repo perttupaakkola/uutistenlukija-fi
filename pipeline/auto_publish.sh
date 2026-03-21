@@ -28,6 +28,9 @@ if [ "$PIPELINE_EXIT" -ne 0 ]; then
   exit 1
 fi
 
+# Update publish metrics (non-fatal)
+python3 "$PIPELINE_DIR/update_publish_metrics.py" 2>&1 | tee -a "$LOG_FILE" || true
+
 # Commit and push if there are changes
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"

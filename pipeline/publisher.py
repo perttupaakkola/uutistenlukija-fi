@@ -44,6 +44,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_credit = article.get("image_credit", "")
     image_source_url = article.get("image_source_url", "")
     image_thumb = article.get("image_thumb", "")
+    image_placeholder = article.get("image_placeholder", "")
     trending = article.get("trending", False)
     description = article.get("description", "")
 
@@ -60,6 +61,8 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_credit_line = f'\nimage_credit: "{_esc(image_credit)}"' if image_credit else ""
     image_source_url_line = f'\nimage_source_url: "{image_source_url}"' if image_source_url else ""
     image_thumb_line = f'\nimage_thumb: "{image_thumb}"' if image_thumb else ""
+    # base64 placeholder — use literal block scalar to avoid YAML line-length issues
+    image_placeholder_line = f'\nimage_placeholder: "{image_placeholder}"' if image_placeholder else ""
     trending_line = "\ntrending: true" if trending else ""
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
 
@@ -73,7 +76,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}
+author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}
 draft: false
 ---
 
