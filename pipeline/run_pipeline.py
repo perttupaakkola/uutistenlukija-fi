@@ -250,6 +250,11 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         success, build_err = build_site()
         if success:
             record_build()
+            try:
+                from generate_dashboard import generate as _gen_dashboard
+                _gen_dashboard()
+            except Exception as _dash_err:
+                print(f"[dashboard] WARNING: generation failed: {_dash_err}")
         print("\n✅ Rakennus valmis!" if success else f"\n❌ Rakennus epäonnistui: {build_err}")
         return success
 
@@ -390,10 +395,18 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
     # ── Step 2a: Quality gate ──────────────────────────────────────────────────
-    rewritten, dropped_count, _m_reject_reasons = validate_articles(rewritten)
+    _gate = _run_quality_gate(rewritten)
+    rewritten = _gate.passed
+    dropped_count = len(_gate.rejected)
+    _m_reject_reasons = _gate.reject_reasons
     _m_rejected = dropped_count
     if dropped_count:
-        steps["quality_gate"] = {"dropped": dropped_count, "passed": len(rewritten)}
+        steps["quality_gate"] = {
+            "dropped": dropped_count,
+            "passed": len(rewritten),
+            "avg_score": _gate.stats.get("avg_score", 0),
+            "threshold": _gate.stats.get("threshold", 0),
+        }
     if not rewritten:
         notify_discord_failure("quality_gate", "All articles dropped by quality gate")
         _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
@@ -587,6 +600,12 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
             errors.append(f"build failed: {build_err[:200]}" if build_err else "build failed")
         else:
             record_build()  # snapshot manifest after successful build
+            # Regenerate pipeline dashboard after every successful build
+            try:
+                from generate_dashboard import generate as _gen_dashboard
+                _gen_dashboard()
+            except Exception as _dash_err:
+                print(f"[dashboard] WARNING: generation failed: {_dash_err}")
 
     steps["build"] = t_build.to_dict()
 
