@@ -14,8 +14,14 @@ Output record schema:
     "attempted": <articles that passed dedup>,
     "published": <articles actually written to content/>,
     "failed":    <attempted - published>,
-    "success":   <bool — did the run exit cleanly>
+    "success":   <bool — backward compat: True if outcome is "ok" or "skip">,
+    "outcome":   <"ok" | "skip" | "error">
   }
+
+outcome values:
+  "ok"    — pipeline ran and published ≥1 article
+  "skip"  — pipeline ran cleanly but found 0 new articles (deduped / quiet news cycle)
+  "error" — pipeline crashed, timed out, or failed mid-run
 """
 import json
 import sys
@@ -54,6 +60,46 @@ def load_existing_timestamps() -> set:
     return seen
 
 
+def _is_empty_scan(run: dict, steps: dict) -> bool:
+    """
+    Return True if this run failed only because the scanner found 0 new articles.
+    This is expected behavior (deduplication, quiet news cycle) — not a real error.
+
+    Signals:
+    - Only the scanner step ran (pipeline stopped early — nothing to process)
+    - Scanner step itself succeeded (no crash), just returned 0 articles
+    - No error messages that indicate a real crash
+    """
+    step_names = list(steps.keys())
+
+    # Pattern 1: only scanner step present → pipeline exited because scan returned 0
+    if step_names == ["scanner"]:
+        scanner = steps.get("scanner", {})
+        # If scanner itself crashed, it's an error — but if it succeeded and returned 0, it's a skip
+        if scanner.get("success", True):
+            return True
+
+    # Pattern 2: scanner + dedup ran but rewriter got 0 articles (all filtered post-dedup)
+    if set(step_names) <= {"scanner", "dedup", "research"} and not run.get("success", True):
+        errors = " ".join(run.get("errors", [])).lower()
+        if "no articles" in errors or "0 article" in errors or "nothing to" in errors:
+            return True
+
+    # Pattern 3: explicit error message about no articles
+    errors_lower = " ".join(run.get("errors", [])).lower()
+    no_article_phrases = (
+        "no articles found",
+        "no new articles",
+        "scanner returned 0",
+        "0 articles after dedup",
+        "nothing to publish",
+    )
+    if any(p in errors_lower for p in no_article_phrases):
+        return True
+
+    return False
+
+
 def main():
     run = load_last_run()
     if not run:
@@ -71,20 +117,34 @@ def main():
     attempted = dedup.get("remaining", 0)
     published = run.get("article_count", 0)
     failed = max(0, attempted - published)
+    run_success = run.get("success", False)
+
+    # Classify outcome:
+    # "ok"    — clean run with ≥1 article published
+    # "skip"  — clean run, 0 articles (all deduped / quiet news cycle)
+    # "error" — crash, timeout, or mid-run failure
+    if run_success and published > 0:
+        outcome = "ok"
+    elif _is_empty_scan(run, steps):
+        outcome = "skip"
+    else:
+        outcome = "error"
 
     record = {
         "ts":        ts,
         "attempted": attempted,
         "published": published,
         "failed":    failed,
-        "success":   run.get("success", False),
+        # backward compat: success=True for ok + skip (not a real error)
+        "success":   outcome != "error",
+        "outcome":   outcome,
     }
 
     PUBLISH_FILE.parent.mkdir(parents=True, exist_ok=True)
     with PUBLISH_FILE.open("a", encoding="utf-8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
-    print(f"[update_publish_metrics] Logged: attempted={attempted} published={published} failed={failed} success={record['success']}")
+    print(f"[update_publish_metrics] Logged: attempted={attempted} published={published} outcome={outcome}")
 
 
 if __name__ == "__main__":

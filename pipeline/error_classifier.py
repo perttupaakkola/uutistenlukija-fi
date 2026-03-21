@@ -281,9 +281,19 @@ def main():
 
         category = classify_run(run, log_text)
 
+        # Determine outcome: "ok", "skip", or "error"
+        # "skip" = no_articles_scan is expected behavior, not a real failure
+        if success:
+            outcome = "ok"
+        elif category == "no_articles_scan":
+            outcome = "skip"
+        else:
+            outcome = "error"
+
         entry = {
             "timestamp": ts,
             "success":   success,
+            "outcome":   outcome,
             "category":  category,
             "article_count": run.get("article_count", 0),
             "duration_sec":  run.get("total_duration_sec", 0),
@@ -292,18 +302,24 @@ def main():
         }
         classified.append(entry)
 
-        if not success and category:
+        # Only count actual errors as failures — skips are expected
+        if outcome == "error" and category:
             failure_categories.append(category)
             if args.verbose:
                 short_ts = ts[:16] if ts else "?"
                 errs = ", ".join(run.get("errors", []))[:60]
                 print(f"  {short_ts}  [{category:20s}]  {errs}")
+        elif outcome == "skip" and args.verbose:
+            short_ts = ts[:16] if ts else "?"
+            print(f"  {short_ts}  [skip: no_articles_scan]")
 
     # ── Build category summary ────────────────────────────────────────────────
-    counts = Counter(failure_categories)
-    total_runs    = len(runs)
-    total_failures = len(failure_categories)
-    total_success  = total_runs - total_failures
+    counts          = Counter(failure_categories)
+    total_runs      = len(runs)
+    total_skips     = sum(1 for e in classified if e.get("outcome") == "skip")
+    total_errors    = len(failure_categories)
+    total_ok        = total_runs - total_skips - total_errors
+    total_failures  = total_errors   # backward compat label, now = real errors only
 
     # Split into halves for trend analysis
     half = len(failure_categories) // 2
@@ -332,25 +348,36 @@ def main():
         }
 
     # ── Overall health ────────────────────────────────────────────────────────
-    success_rate = round(100 * total_success / max(total_runs, 1), 1)
+    # Error rate = real errors / total (skips are expected, not failures)
+    error_rate   = round(100 * total_errors / max(total_runs, 1), 1)
+    # Publish hit rate = ok / (ok + skip) — how often a scan finds new articles
+    hit_rate     = round(100 * total_ok / max(total_ok + total_skips, 1), 1)
+    # Legacy success_rate (backward compat) = ok + skip = "ran without crashing"
+    success_rate = round(100 * (total_ok + total_skips) / max(total_runs, 1), 1)
 
-    # Health rating
-    if success_rate >= 90:
+    # Health rating based on ERROR rate (not including skips)
+    if error_rate <= 5:
         health = "good"
-    elif success_rate >= 70:
+    elif error_rate <= 15:
         health = "degraded"
     else:
         health = "critical"
 
-    # Top issue
+    # Top issue (real errors only)
     top_category, top_count = counts.most_common(1)[0] if counts else ("none", 0)
 
     output = {
         "generated_at":     now.isoformat(),
         "runs_analyzed":    total_runs,
-        "total_failures":   total_failures,
-        "total_success":    total_success,
+        "total_ok":         total_ok,
+        "total_skips":      total_skips,
+        "total_errors":     total_errors,
+        # backward compat fields
+        "total_failures":   total_errors,
+        "total_success":    total_ok + total_skips,
         "success_rate_pct": success_rate,
+        "error_rate_pct":   error_rate,
+        "publish_hit_rate_pct": hit_rate,
         "health":           health,
         "top_issue":        top_category,
         "top_issue_count":  top_count,
@@ -364,9 +391,11 @@ def main():
     # ── Print summary ─────────────────────────────────────────────────────────
     print(f"\n{'='*55}")
     print(f"Pipeline Error Classification — last {total_runs} runs")
+    print(f"  ✅ ok={total_ok}  ⏭ skip={total_skips}  ❌ error={total_errors}")
     print(f"{'='*55}")
-    print(f"Success rate: {success_rate}% ({total_success}/{total_runs})  health={health}")
-    print(f"\nFailure breakdown ({total_failures} failures):")
+    print(f"Error rate: {error_rate}% ({total_errors} real errors / {total_runs} runs)  health={health}")
+    print(f"Health: {health}  |  Publish hit rate: {hit_rate}%  |  No-crash rate: {success_rate}%")
+    print(f"\nReal error breakdown ({total_errors} errors — skips excluded):")
     for cat, info in sorted(category_summary.items(), key=lambda x: -x[1]["count"]):
         bar   = "█" * (info["count"] // max(1, total_failures // 20))
         trend = {"worsening": "↑", "improving": "↓", "stable": "→", "new": "★"}.get(info["trend"], "?")
