@@ -18,6 +18,24 @@ from typing import List, Dict, Optional
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse, parse_qs, urlunparse
 
+# Trusted sources: facts from these feeds are treated as verified and the rewriter
+# will NOT expand/invent additional details beyond what the source provides.
+# Add a source here only if it has editorial fact-checking standards.
+TRUSTED_SOURCES = {
+    # Finnish public broadcaster — gold standard for Finnish news
+    "yle.fi", "feeds.yle.fi",
+    # Major Finnish dailies
+    "hs.fi", "ts.fi",
+    # International wire services and broadcasters
+    "bbc.co.uk", "feeds.bbci.co.uk",
+    "reuters.com", "feeds.reuters.com",
+    "apnews.com",
+    "theguardian.com",
+    "spiegel.de",
+    # Finnish financial
+    "kauppalehti.fi",
+}
+
 RSS_FEEDS = [
     # Interleaved Finnish + international — ensures international feeds aren't
     # all at the end of a timeout window. Order: high-priority first, then alternate.
@@ -27,11 +45,13 @@ RSS_FEEDS = [
         "name": "Yle Uutiset",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET",
         "language": "fi",
+        "trusted": True,
     },
     {
         "name": "BBC World",
         "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
         "language": "en",
+        "trusted": True,
     },
     {
         "name": "Iltalehti",
@@ -42,6 +62,7 @@ RSS_FEEDS = [
         "name": "The Guardian World",
         "url": "https://www.theguardian.com/world/rss",
         "language": "en",
+        "trusted": True,
     },
     {
         "name": "Ilta-Sanomat",
@@ -53,12 +74,14 @@ RSS_FEEDS = [
         "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
         "language": "en",
         "category_hint": "Tiede",
+        "trusted": True,
     },
     {
         "name": "Kauppalehti",
         "url": "https://feeds.kauppalehti.fi/rss/main",
         "language": "fi",
         "category_hint": "Talous",
+        "trusted": True,
     },
     {
         "name": "TechCrunch",
@@ -85,6 +108,7 @@ RSS_FEEDS = [
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_URHEILU",
         "language": "fi",
         "category_hint": "Urheilu",
+        "trusted": True,
     },
     {
         "name": "Hacker News Best",
@@ -103,17 +127,20 @@ RSS_FEEDS = [
         "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
         "language": "en",
         "category_hint": "Teknologia",
+        "trusted": True,
     },
     {
         "name": "Yle Teknologia",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-85",
         "language": "fi",
         "category_hint": "Teknologia",
+        "trusted": True,
     },
     {
         "name": "Der Spiegel International",
         "url": "https://www.spiegel.de/international/index.rss",
         "language": "en",
+        "trusted": True,
     },
     {
         "name": "Tekniikka & Talous",
@@ -132,17 +159,20 @@ RSS_FEEDS = [
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-819",
         "language": "fi",
         "category_hint": "Tiede",
+        "trusted": True,
     },
     {
         "name": "Turun Sanomat",
         "url": "https://www.ts.fi/rss.xml",
         "language": "fi",
+        "trusted": True,
     },
     {
         "name": "Yle Kulttuuri",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-3",
         "language": "fi",
         "category_hint": "Kulttuuri",
+        "trusted": True,
     },
 
     # Disabled — confirmed broken (kept for reference)
@@ -515,6 +545,7 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
                 "language": feed_info.get("language", "fi"),
                 "fingerprint": _fingerprint(title),
                 "_url_hash": _url_hash(link),
+                "_trusted": feed_info.get("trusted", False),
                 **({"category_hint": feed_info["category_hint"]} if feed_info.get("category_hint") else {}),
             })
     except Exception as e:

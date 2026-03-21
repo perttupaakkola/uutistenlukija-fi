@@ -193,18 +193,25 @@ def _build_single_prompt(article: dict) -> str:
     lang = article.get("language", "fi")
     source = article.get("source", "")
     is_international = lang != "fi" or source in ATTRIBUTION_SOURCES
+    is_trusted = article.get("_trusted", False)
 
     lang_note = f"\nKieli: {lang} — KIRJOITA ARTIKKELI SUOMEKSI" if lang != "fi" else ""
     attribution_note = (f"\nLähde (mainitse kerran luonnollisesti tekstissä): {source}"
                         if is_international and source else "")
     research = article.get("research", "")
     research_section = f"\nTaustatutkimus:\n{research}" if research else ""
+    trusted_note = (
+        f"\n⚠️ LUOTETTU LÄHDE ({source}): Tämä uutinen tulee toimituksellisesti tarkistetusta lähteestä. "
+        "Käytä VAIN lähdetekstin faktoja. Älä lisää mitään omia tietoja, lukuja tai spekulaatioita. "
+        "Jos artikkeli jää alle 280 sanan, se on ok — älä täytä keksityillä tiedoilla."
+        if is_trusted else ""
+    )
 
     return f"""Kirjoita seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.
 
 ---
 Otsikko: {article['title']}
-Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{trusted_note}
 ---
 
 Vastaa JSON-listana (lista yhdellä alkiolla):
@@ -290,11 +297,18 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
             if research:
                 research_section = f"\nTaustatutkimus:\n{research}"
 
+            is_trusted = article.get("_trusted", False)
+            trusted_note = (
+                f"\n⚠️ LUOTETTU LÄHDE ({source}): Käytä VAIN lähdetekstin faktoja. "
+                "Älä lisää lukuja, ikätietoja tai spekulaatioita joita lähde ei mainitse."
+                if is_trusted else ""
+            )
+
             articles_text += f"""
 ---
 Aihe {idx + 1}:
 Otsikko: {article['title']}
-Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{trusted_note}
 ---
 """
 
