@@ -2966,8 +2966,8 @@ pre code {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 2rem 0;
-  padding: 1rem 0;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0.75rem 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
@@ -3017,3 +3017,35 @@ pre code {
 .social-share__btn--whatsapp:hover  { background: #25d366; }
 .social-share__btn--copy:hover      { background: var(--accent); }
 .social-share__btn--copied          { background: #22c55e !important; border-color: transparent !important; color: #fff !important; }
+
+/* "Kopioitu!" tooltip on copy button */
+.social-share__btn--copy { position: relative; }
+.social-share__copied-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #22c55e;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.social-share__copied-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #22c55e;
+}
+.social-share__btn--copied .social-share__copied-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
