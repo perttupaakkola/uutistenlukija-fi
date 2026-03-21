@@ -227,6 +227,15 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         print(f"[pipeline] --max-articles {max_articles}: limiting {len(articles)} → {max_articles}")
         articles = articles[:max_articles]
 
+    # ── Step 1f: Pre-mark fingerprints to prevent rewrite waste ────────────────
+    # Mark ALL articles entering the rewrite stage as "seen". This prevents the
+    # costly pattern where an article gets rewritten (LLM call) then dropped by
+    # post-rewrite keyword dedup, only to be scanned → rewritten → dropped again
+    # every 10 minutes. Observed: 36/43 runs wasted LLM calls this way.
+    # Articles that pass through will get marked again during publish (harmless).
+    mark_published(articles)
+    print(f"[dedup] Pre-marked {len(articles)} article fingerprints (prevents rewrite waste)")
+
     # ── Step 2: Rewrite ────────────────────────────────────────────────────────
     rewritten = []
     with StepTimer("rewriter") as t_rewrite:
