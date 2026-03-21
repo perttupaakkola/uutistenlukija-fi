@@ -10,7 +10,7 @@
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="article-card">
     <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-      <img src="{{ $img }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" width="400" height="225">
+      <img src="{{ $img }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" decoding="async" width="400" height="225">
     </a>
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>

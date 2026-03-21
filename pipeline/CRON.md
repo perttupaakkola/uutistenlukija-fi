@@ -6,7 +6,7 @@ All times UTC. All scripts assume `.env` is co-located in `pipeline/` and source
 
 | Schedule | Script | Purpose | Discord target |
 |---|---|---|---|
-| `*/15 * * * *` | `auto_publish.sh` | Scan → rewrite → images → descriptions → publish | #operations (on failure) |
+| `*/15 * * * *` | `scripts/pipeline-watchdog.sh` | Watchdog wrapper → auto_publish.sh (auto-retry with backoff) | #operations (on failure) |
 | `0 6 * * *` | `metrics_cron.sh` | Daily pipeline metrics report | #metrics |
 | `0 9 * * *` | `lighthouse_check.py` | Lighthouse scores + delta tracking | #metrics |
 | `0 7 * * 1` | `validate_articles.py --all` | Weekly content quality health score | #operations |
@@ -20,8 +20,8 @@ Run `crontab -e` and add:
 # ── uutistenlukija pipeline ────────────────────────────────────────────────
 PIPELINE=/path/to/projects/uutistenlukija/pipeline
 
-# Main pipeline — every 15 min
-*/15 * * * * $PIPELINE/auto_publish.sh >> $PIPELINE/logs/auto_publish.log 2>&1
+# Main pipeline — every 15 min (via watchdog for auto-retry)
+*/15 * * * * $PROJECT/scripts/pipeline-watchdog.sh >> $PIPELINE/logs/watchdog.log 2>&1
 
 # Daily metrics report — 06:00 UTC
 0 6 * * * $PIPELINE/metrics_cron.sh >> $PIPELINE/logs/metrics-cron.log 2>&1
@@ -36,7 +36,9 @@ PIPELINE=/path/to/projects/uutistenlukija/pipeline
 0 7 * * 0 $PIPELINE/dead_link_cron.sh >> $PIPELINE/logs/dead-link-cron.log 2>&1
 ```
 
-Replace `/path/to/projects/uutistenlukija/pipeline` with the absolute path on the host.
+Replace paths with absolute paths on the host. Example for default install:
+- `PROJECT=/home/pertt/.openclaw/workspace/projects/uutistenlukija`
+- `PIPELINE=$PROJECT/pipeline`
 
 ## Log Files
 
@@ -45,6 +47,8 @@ Raw shell logs may be rotated with `logrotate` if they grow large.
 
 | Log file | Written by |
 |---|---|
+| `logs/watchdog.log` | `pipeline-watchdog.sh` (cron entry) |
+| `logs/pipeline-failures.log` | `pipeline-watchdog.sh` (failure detail) |
 | `logs/auto_publish.log` | `auto_publish.sh` |
 | `logs/metrics.json` | `run_pipeline.py` (per-run timing) |
 | `logs/metrics-cron.log` | `metrics_cron.sh` |

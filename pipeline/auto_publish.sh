@@ -46,9 +46,12 @@ fi
 
 echo "=== Auto-publish completed at $(date -u) ===" | tee -a "$LOG_FILE"
 
+# Update publish metrics (append this run's stats to publish-metrics.json)
+python3 "$PIPELINE_DIR/update_publish_metrics.py" 2>&1 | tee -a "$LOG_FILE" || true
+
 # Print metrics summary (last 7 days) to log
 echo "[metrics] 7-day summary:" | tee -a "$LOG_FILE"
-python3 "$PIPELINE_DIR/metrics.py" --metrics-report --days 7 2>&1 | tee -a "$LOG_FILE"
+python3 "$PIPELINE_DIR/metrics.py" --metrics-report --days 7 2>&1 | tee -a "$LOG_FILE" || true
 
 # Cleanup old logs (keep last 50)
 ls -t "$PIPELINE_DIR/logs/auto_publish_"*.log 2>/dev/null | tail -n +51 | xargs rm -f 2>/dev/null || true

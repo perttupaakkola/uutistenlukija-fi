@@ -39,7 +39,20 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     # Sanitize content: strip bare YAML front matter delimiters (would break Hugo parsing)
     content = re.sub(r"(?m)^---+\s*$", "—", content)
     image = article.get("image", "")
-    image_alt = article.get("image_alt", "")
+    # Generate Finnish alt text from article context instead of stock photo title.
+    # Format: "Kuvituskuva: {truncated article title}"
+    # Fallback to category name when no image or title is unavailable.
+    _raw_alt = article.get("image_alt", "")
+    if image and title:
+        # Truncate title to 80 chars so alt text stays concise
+        _title_context = title[:80].rstrip()
+        image_alt = f"Kuvituskuva: {_title_context}"
+    elif image and category:
+        image_alt = f"Kuvituskuva: {category}"
+    elif _raw_alt:
+        image_alt = _raw_alt
+    else:
+        image_alt = "Kuvituskuva"
     image_caption = article.get("image_caption", "")
     image_credit = article.get("image_credit", "")
     image_source_url = article.get("image_source_url", "")
@@ -65,12 +78,8 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_placeholder_line = f'\nimage_placeholder: "{image_placeholder}"' if image_placeholder else ""
     trending_line = "\ntrending: true" if trending else ""
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
-    source_tier = article.get("source_tier", 2)
-    source_name = article.get("source", "")
-    source_tier_line = f'\nsource_tier: {source_tier}'
-    source_name_line = f'\nsource_name: "{_esc(source_name)}"' if source_name else ""
 
-    # Build front matter — includes source tier for deletion protection
+    # Build front matter — no source_name or source_url
     front_matter = f"""---
 title: "{title}"
 date: {date}
@@ -80,7 +89,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{source_tier_line}{source_name_line}
+author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}
 draft: false
 ---
 

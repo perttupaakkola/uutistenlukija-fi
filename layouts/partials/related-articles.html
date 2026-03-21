@@ -38,7 +38,7 @@
     <a class="related-article-card" href="{{ .RelPermalink }}">
       {{- if .Params.image -}}
       <div class="related-article-thumb">
-        <img src="{{ .Params.image }}" alt="{{ .Title | htmlEscape }}" loading="lazy" width="400" height="225">
+        <img src="{{ .Params.image }}" alt="{{ .Title | htmlEscape }}" loading="lazy" decoding="async" width="400" height="225">
       </div>
       {{- else -}}
       <div class="related-article-thumb related-article-thumb--placeholder category-{{ $catSlug }}-bg"></div>
