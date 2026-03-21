@@ -23,7 +23,7 @@
     {{- $cat := index $p.Params.categories 0 | default "Uutiset" -}}
     {{- $catSlug := lower $cat -}}
     <li class="tanaan-item">
-      <span class="tanaan-num" aria-hidden="true">{{ add $i 1 }}</span>
+      <span class="tanaan-num" aria-hidden="true">{{ math.Add $i 1 }}</span>
       <div class="tanaan-body">
         <span class="tanaan-cat category-{{ $catSlug }}">{{ $cat }}</span>
         <a class="tanaan-headline" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>

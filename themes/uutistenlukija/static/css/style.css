@@ -3432,3 +3432,26 @@ pre code {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+/* ── Sara's mobile reading experience fixes (2026-03-21) ────────────── */
+@media (max-width: 600px) {
+  /* 1. H1 line-height: Finnish headlines too tight at 1.25 */
+  .single-article h1 {
+    line-height: 1.35;
+  }
+
+  /* 3. Article meta margin collapse: reduce chrome gap */
+  .single-article .article-meta {
+    margin-bottom: 1rem;
+  }
+
+  /* 4. Paragraph spacing: 1.25rem → 1.5rem (~24px at 16px base) */
+  .single-article .content p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* 2. Category label: proper pill tap target (28px min height) */
+.category-pill {
+  min-height: 28px;
+}
