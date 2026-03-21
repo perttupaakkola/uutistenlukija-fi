@@ -1,21 +1,38 @@
 {
   "name": "Uutistenlukija",
   "short_name": "Uutiset",
-  "description": "Päivän tärkeimmät uutiset",
+  "description": "Päivän tärkeimmät uutiset – tuoreet uutiset Suomesta ja maailmalta",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#fafaf8",
   "theme_color": "#c0392b",
+  "lang": "fi",
+  "categories": ["news"],
   "icons": [
     {
-      "src": "/favicon.png",
-      "sizes": "32x32",
-      "type": "image/png"
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }

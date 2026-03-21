@@ -10,8 +10,13 @@
   {{/* Critical CSS: preload, then async-swap to avoid render-blocking */}}
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#c0392b">
+  <meta name="msapplication-config" content="/browserconfig.xml">
   <link rel="canonical" href="{{ .Permalink }}">
   <meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.png">
   <meta property="og:image:width" content="1024">
