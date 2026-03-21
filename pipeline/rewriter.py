@@ -32,7 +32,16 @@ Kun lähdemateriaali on lyhyt, laajenna AINA näillä tavoilla:
   * Merkitys: Miksi tämä on tärkeää lukijalle? Ketä tämä koskee?
   * Seuraukset: Mitkä ovat seuraukset tai vaikutukset lähiaikoina?
   * Laajempi kehys: Liittyykö tämä johonkin laajempaan ilmiöön tai trendiin?
-  * Lisäfaktat: Tilastoja, numeroita, aiempia tapahtumia samasta aiheesta.
+  * Lisäfaktat: Vain faktat jotka LÖYTYVÄT annetusta lähdetekstistä tai ovat kiistattomia yleistietoja.
+
+FAKTOJEN ANKKUROINTISÄÄNTÖ — KRIITTINEN, lue huolella:
+- Kirjoita VAIN faktoja, jotka löytyvät annetusta lähdetekstistä tai ovat kiistattomia yleistietoja
+  (maantiede, historia, tunnetut tapahtumat — ei henkilöiden elossa/kuollut-tietoja ellei lähde mainitse).
+- ÄLÄ keksi tilastoja, prosenttilukuja tai numeroita joita lähde ei mainitse.
+- ÄLÄ kirjoita henkilön ikää, asemaa tai muuta yksityiskohtaa ellei lähde sitä mainitse.
+- ÄLÄ keksi asiantuntijalausuntoja joita ei ole lähteessä — ei "asiantuntijoiden mukaan" tyhjästä.
+- ÄLÄ sekoita lähteen mainitsemia paikkakuntia: jos lähde sanoo Turku, kirjoita Turku — ei Järvenpää.
+- Jos et tiedä jotain varmasti: jätä pois. Parempi lyhyempi ja tarkka kuin täynnä keksittyjä "faktoja".
 
 Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
 
@@ -366,12 +375,18 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
 TEHTÄVÄ: Laajenna artikkeli VÄHINTÄÄN 350 sanaan (tavoite 350-400 sanaa).
 
-LAAJENNUSTAVAT:
-- Lisää taustakappale: mitä aiheen ympärillä on tapahtunut aiemmin?
-- Lisää kontekstikappale: miksi tämä on merkittävää, ketä koskee?
-- Lisää seurausten analyysi: mitä tämä tarkoittaa jatkossa?
-- Lisää konkreettisia lukuja, tilastoja tai esimerkkejä
-- Laajenna olemassa olevia kappaleita uusilla lauseilla
+SALLITUT LAAJENNUSTAVAT — käytä vain näitä:
+- Selitä miksi tämä uutinen on tärkeä lukijalle (vaikutus arkeen, laajempi merkitys)
+- Kuvaa tapahtuman maantieteellinen tai historiallinen konteksti yleistiedon pohjalta
+- Avaa käsitteitä tai ilmiöitä joita lukija ei välttämättä tunne
+- Laajenna alkuperäisessä lähdetekstissä mainittuja yksityiskohtia
+- Lisää kysymyksiä joita tapaus herättää — ilman keksittyjä vastauksia
+
+KIELLETTYÄ laajennnuksessa:
+- Tilastot, prosenttiluvut tai numerot joita lähde ei mainitse — älä keksi
+- Henkilöiden lausunnot joita ei ole lähteessä — ei "asiantuntijoiden mukaan" tyhjästä
+- Henkilöiden ikä, asema tai elossa/kuollut-tieto ellei lähde sitä mainitse
+- Paikkakunnan vaihtaminen (jos lähde sanoo Turku, kirjoita Turku — ei muuta kaupunkia)
 
 SÄÄNNÖT:
 - Säilytä kaikki alkuperäiset faktat ja otsikko

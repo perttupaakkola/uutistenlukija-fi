@@ -24,10 +24,10 @@ MAX_AGE_DAYS = 7  # Forget fingerprints older than 7 days
 _CONTENT_POSTS_DIR = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "..", "content", "posts"
 )
-SIMILARITY_THRESHOLD = 0.60   # Lowered from 0.85 — catches cross-source same-event rewrites
+SIMILARITY_THRESHOLD = 0.55   # Lowered from 0.60 — catches more cross-source same-event rewrites
 
 # Keyword overlap dedup: long Finnish words (6+ chars) that indicate named entities
-KEYWORD_OVERLAP_THRESHOLD = 12  # 12+ shared long words = likely same event
+KEYWORD_OVERLAP_THRESHOLD = 8   # Lowered from 12 — rewriter uses synonyms, so fewer exact word matches
 
 # Finnish function words that are NOT event-specific (don't count as signal)
 _KW_STOPWORDS = {
