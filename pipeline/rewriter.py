@@ -193,7 +193,7 @@ def _build_single_prompt(article: dict) -> str:
     lang = article.get("language", "fi")
     source = article.get("source", "")
     is_international = lang != "fi" or source in ATTRIBUTION_SOURCES
-    is_trusted = article.get("_trusted", False)
+    is_trusted = article.get("source_tier", 2) == 1
 
     lang_note = f"\nKieli: {lang} — KIRJOITA ARTIKKELI SUOMEKSI" if lang != "fi" else ""
     attribution_note = (f"\nLähde (mainitse kerran luonnollisesti tekstissä): {source}"
@@ -297,7 +297,7 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
             if research:
                 research_section = f"\nTaustatutkimus:\n{research}"
 
-            is_trusted = article.get("_trusted", False)
+            is_trusted = article.get("source_tier", 2) == 1
             trusted_note = (
                 f"\n⚠️ LUOTETTU LÄHDE ({source}): Käytä VAIN lähdetekstin faktoja. "
                 "Älä lisää lukuja, ikätietoja tai spekulaatioita joita lähde ei mainitse."

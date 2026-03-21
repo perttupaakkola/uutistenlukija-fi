@@ -65,8 +65,12 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_placeholder_line = f'\nimage_placeholder: "{image_placeholder}"' if image_placeholder else ""
     trending_line = "\ntrending: true" if trending else ""
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
+    source_tier = article.get("source_tier", 2)
+    source_name = article.get("source", "")
+    source_tier_line = f'\nsource_tier: {source_tier}'
+    source_name_line = f'\nsource_name: "{_esc(source_name)}"' if source_name else ""
 
-    # Build front matter — no source_name or source_url
+    # Build front matter — includes source tier for deletion protection
     front_matter = f"""---
 title: "{title}"
 date: {date}
@@ -76,7 +80,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}
+author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{source_tier_line}{source_name_line}
 draft: false
 ---
 

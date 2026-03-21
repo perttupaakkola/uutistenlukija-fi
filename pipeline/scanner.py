@@ -18,23 +18,61 @@ from typing import List, Dict, Optional
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse, parse_qs, urlunparse
 
-# Trusted sources: facts from these feeds are treated as verified and the rewriter
-# will NOT expand/invent additional details beyond what the source provides.
-# Add a source here only if it has editorial fact-checking standards.
-TRUSTED_SOURCES = {
-    # Finnish public broadcaster — gold standard for Finnish news
-    "yle.fi", "feeds.yle.fi",
-    # Major Finnish dailies
-    "hs.fi", "ts.fi",
-    # International wire services and broadcasters
-    "bbc.co.uk", "feeds.bbci.co.uk",
-    "reuters.com", "feeds.reuters.com",
-    "apnews.com",
-    "theguardian.com",
-    "spiegel.de",
-    # Finnish financial
-    "kauppalehti.fi",
+# Source trust tiers — controls deletion protection and rewriter fact-anchoring.
+#
+# Tier 1 (PROTECTED): Editorial fact-checking standards. Articles from these
+#   sources CANNOT be auto-deleted — require manual review. Rewriter does not
+#   expand facts beyond what the source provides.
+# Tier 2 (STANDARD): Major outlets with editorial standards but not in Tier 1.
+#   Normal pipeline rules apply.
+# Tier 3 (VERIFY): Aggregators, smaller sites, single-source stories. Pipeline
+#   logs a warning when an article's only source is Tier 3.
+
+SOURCE_TRUST_TIERS: dict[str, int] = {
+    # ── Tier 1: Finnish public media ──────────────────────────────────────────
+    "Yle Uutiset":       1,
+    "Yle Urheilu":       1,
+    "Yle Teknologia":    1,
+    "Yle Tiede":         1,
+    "Yle Kulttuuri":     1,
+    # ── Tier 1: Major Finnish dailies ─────────────────────────────────────────
+    "Helsingin Sanomat": 1,
+    "HS Tiede":          1,
+    "HS Kulttuuri":      1,
+    "Turun Sanomat":     1,
+    "Kauppalehti":       1,
+    "Kauppalehti Markets": 1,
+    "Ilta-Sanomat":      1,
+    "IS Urheilu":        1,
+    "Taloussanomat":     1,
+    "Iltalehti":         1,
+    "MTV Uutiset":       1,
+    # ── Tier 1: International wire services / broadcasters ────────────────────
+    "BBC World":         1,
+    "BBC Science":       1,
+    "BBC Technology":    1,
+    "Reuters World":     1,
+    "AP News":           1,
+    # ── Tier 2: Standard major outlets ───────────────────────────────────────
+    "The Guardian World": 2,
+    "The Guardian":       2,
+    "Der Spiegel International": 2,
+    "Tekniikka & Talous": 2,
+    "TechCrunch":         2,
+    "Ars Technica":       2,
+    "Science News":       2,
+    # ── Tier 3: Aggregators / smaller sites ──────────────────────────────────
+    "Hacker News Best":   3,
 }
+
+# Convenience sets derived from the dict above
+TIER1_SOURCES = frozenset(k for k, v in SOURCE_TRUST_TIERS.items() if v == 1)
+TIER2_SOURCES = frozenset(k for k, v in SOURCE_TRUST_TIERS.items() if v == 2)
+TIER3_SOURCES = frozenset(k for k, v in SOURCE_TRUST_TIERS.items() if v == 3)
+
+def get_source_tier(feed_name: str) -> int:
+    """Return trust tier (1/2/3) for a feed. Unknown feeds default to 2."""
+    return SOURCE_TRUST_TIERS.get(feed_name, 2)
 
 RSS_FEEDS = [
     # Interleaved Finnish + international — ensures international feeds aren't
@@ -45,13 +83,11 @@ RSS_FEEDS = [
         "name": "Yle Uutiset",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET",
         "language": "fi",
-        "trusted": True,
     },
     {
         "name": "BBC World",
         "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
         "language": "en",
-        "trusted": True,
     },
     {
         "name": "Iltalehti",
@@ -62,7 +98,6 @@ RSS_FEEDS = [
         "name": "The Guardian World",
         "url": "https://www.theguardian.com/world/rss",
         "language": "en",
-        "trusted": True,
     },
     {
         "name": "Ilta-Sanomat",
@@ -74,14 +109,12 @@ RSS_FEEDS = [
         "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
         "language": "en",
         "category_hint": "Tiede",
-        "trusted": True,
     },
     {
         "name": "Kauppalehti",
         "url": "https://feeds.kauppalehti.fi/rss/main",
         "language": "fi",
         "category_hint": "Talous",
-        "trusted": True,
     },
     {
         "name": "TechCrunch",
@@ -108,7 +141,6 @@ RSS_FEEDS = [
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_URHEILU",
         "language": "fi",
         "category_hint": "Urheilu",
-        "trusted": True,
     },
     {
         "name": "Hacker News Best",
@@ -127,20 +159,17 @@ RSS_FEEDS = [
         "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
         "language": "en",
         "category_hint": "Teknologia",
-        "trusted": True,
     },
     {
         "name": "Yle Teknologia",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-85",
         "language": "fi",
         "category_hint": "Teknologia",
-        "trusted": True,
     },
     {
         "name": "Der Spiegel International",
         "url": "https://www.spiegel.de/international/index.rss",
         "language": "en",
-        "trusted": True,
     },
     {
         "name": "Tekniikka & Talous",
@@ -159,20 +188,17 @@ RSS_FEEDS = [
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-819",
         "language": "fi",
         "category_hint": "Tiede",
-        "trusted": True,
     },
     {
         "name": "Turun Sanomat",
         "url": "https://www.ts.fi/rss.xml",
         "language": "fi",
-        "trusted": True,
     },
     {
         "name": "Yle Kulttuuri",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-3",
         "language": "fi",
         "category_hint": "Kulttuuri",
-        "trusted": True,
     },
 
     # Disabled — confirmed broken (kept for reference)
@@ -545,7 +571,7 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
                 "language": feed_info.get("language", "fi"),
                 "fingerprint": _fingerprint(title),
                 "_url_hash": _url_hash(link),
-                "_trusted": feed_info.get("trusted", False),
+                "source_tier": get_source_tier(feed_info["name"]),
                 **({"category_hint": feed_info["category_hint"]} if feed_info.get("category_hint") else {}),
             })
     except Exception as e:

@@ -8,6 +8,10 @@ Four layers:
    content/posts/*.md front matter titles using difflib (>60% similarity threshold)
 4. Keyword overlap — catches same-event articles written differently from different
    sources (e.g. "Himoksen kuolema" + "Lasketteluonnettomuus Himoksella")
+
+Tier 1 source rule: if a story appears in a Tier 1 source (Yle, BBC, Reuters, HS…),
+it is treated as verified real news. Within-batch dedup keeps the Tier 1 version
+over lower-tier duplicates. Auto-deletion scripts must never delete Tier 1 articles.
 """
 import glob
 import json
@@ -134,7 +138,12 @@ def load_published_titles(window_hours: int = 48) -> list[str]:
 def dedup_within_batch(articles: list) -> list:
     """
     Remove within-batch near-duplicates — same event from different sources arriving
-    in the same pipeline run. Keeps the first occurrence (usually best source).
+    in the same pipeline run.
+
+    Tier rule: when a dupe is detected between a Tier 1 source and a lower-tier
+    source, always keep the Tier 1 version (swap if needed). This ensures that
+    a Yle/BBC/Reuters article is never dropped in favour of a tabloid rewrite
+    of the same story.
 
     Uses same two signals as check_published_duplicates:
     1. Title similarity >= 60%
@@ -145,19 +154,28 @@ def dedup_within_batch(articles: list) -> list:
     for article in articles:
         incoming_title = article.get("title", "")
         incoming_content = article.get("content", "")
+        incoming_tier = article.get("source_tier", 2)
 
         is_dupe = False
-        for accepted in kept:
+        for i, accepted in enumerate(kept):
             # Signal 1: title similarity
-            if incoming_title and accepted.get("title") and \
-               _titles_similar(incoming_title, accepted["title"]):
-                print(f"[dedup:batch] TITLE_MATCH: '{incoming_title[:60]}'")
-                is_dupe = True
-                break
+            title_match = (incoming_title and accepted.get("title") and
+                           _titles_similar(incoming_title, accepted["title"]))
             # Signal 2: keyword overlap
-            if incoming_content and accepted.get("content") and \
-               _keyword_overlap(incoming_content, accepted["content"]) >= KEYWORD_OVERLAP_THRESHOLD:
-                print(f"[dedup:batch] KW_MATCH: '{incoming_title[:60]}'")
+            kw_match = (incoming_content and accepted.get("content") and
+                        _keyword_overlap(incoming_content, accepted["content"]) >= KEYWORD_OVERLAP_THRESHOLD)
+
+            if title_match or kw_match:
+                signal = "TITLE" if title_match else "KW"
+                accepted_tier = accepted.get("source_tier", 2)
+                # Tier 1 beats everything — swap if incoming is better tier
+                if incoming_tier < accepted_tier:
+                    print(f"[dedup:batch] {signal}_MATCH tier upgrade "
+                          f"T{accepted_tier}→T{incoming_tier}: '{incoming_title[:60]}'")
+                    kept[i] = article  # replace lower-tier with higher-tier
+                else:
+                    print(f"[dedup:batch] {signal}_MATCH dropped T{incoming_tier} "
+                          f"(kept T{accepted_tier}): '{incoming_title[:60]}'")
                 is_dupe = True
                 break
 

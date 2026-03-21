@@ -336,7 +336,15 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     if skipped:
         print(f"[quality] Skipped {skipped} articles with < {MIN_SOURCE_WORDS} words source material")
 
-    # ── Step 1e: Cap articles if --max-articles set ────────────────────────────
+    # ── Step 1e: Source tier warnings ──────────────────────────────────────────
+    # Log a warning for articles whose only source is Tier 3 (aggregators/unverified).
+    for a in articles:
+        if a.get("source_tier", 2) == 3:
+            src = a.get("source", "unknown")
+            title = a.get("title", "")[:60]
+            print(f"[quality] ⚠️  TIER3 source '{src}': '{title}' — single unverified source")
+
+    # ── Step 1f: Cap articles if --max-articles set ────────────────────────────
     if max_articles is not None and len(articles) > max_articles:
         print(f"[pipeline] --max-articles {max_articles}: limiting {len(articles)} → {max_articles}")
         articles = articles[:max_articles]
