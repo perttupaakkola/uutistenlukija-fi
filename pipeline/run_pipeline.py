@@ -10,7 +10,6 @@ Flags:
 import argparse
 import json
 import os
-import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -30,6 +29,9 @@ from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
 from health_check import notify_discord_failure, notify_discord_warning, write_metrics
 from metrics import append_run as _append_metrics_run
+from service_health import should_skip, record_success, record_failure
+from change_detector import check_for_changes, record_build
+from quality_gate import run_gate as _run_quality_gate
 
 
 LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
@@ -208,7 +210,7 @@ def validate_articles(articles: list) -> tuple:
     return valid, dropped, dict(reason_counter)
 
 
-def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None, dedup_window: int = 48):
+def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None, dedup_window: int = 48, incremental: bool = False, force: bool = False):
     """Execute the pipeline."""
     pipeline_start = time.time()
     steps: dict = {}
@@ -231,11 +233,23 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         print("  Mode: --build-only")
     elif firehose_only:
         print("  Mode: --firehose-only")
+    elif incremental:
+        print("  Mode: --incremental (skip build if no changes)")
+    if force:
+        print("  Flag: --force (override incremental check)")
     print("=" * 60)
 
     if build_only:
+        if incremental and not force:
+            _change = check_for_changes()
+            if not _change.needs_build:
+                print(f"\n⏭️  Build skipped — {_change.reason}")
+                return True
+            print(f"🔍 Change detected: {_change.reason}")
         print("\n🔨 Hugo-sivuston rakennus...")
         success, build_err = build_site()
+        if success:
+            record_build()
         print("\n✅ Rakennus valmis!" if success else f"\n❌ Rakennus epäonnistui: {build_err}")
         return success
 
@@ -337,15 +351,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     if skipped:
         print(f"[quality] Skipped {skipped} articles with < {MIN_SOURCE_WORDS} words source material")
 
-    # ── Step 1e: Source tier warnings ──────────────────────────────────────────
-    # Log a warning for articles whose only source is Tier 3 (aggregators/unverified).
-    for a in articles:
-        if a.get("source_tier", 2) == 3:
-            src = a.get("source", "unknown")
-            title = a.get("title", "")[:60]
-            print(f"[quality] ⚠️  TIER3 source '{src}': '{title}' — single unverified source")
-
-    # ── Step 1f: Cap articles if --max-articles set ────────────────────────────
+    # ── Step 1e: Cap articles if --max-articles set ────────────────────────────
     if max_articles is not None and len(articles) > max_articles:
         print(f"[pipeline] --max-articles {max_articles}: limiting {len(articles)} → {max_articles}")
         articles = articles[:max_articles]
@@ -429,36 +435,61 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                         a["image_category_fallback"] = False
 
             # Pass 1: Unsplash
-            if _unsplash_key and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
+            _unsplash_skip, _unsplash_reason = should_skip("unsplash")
+            if not _unsplash_key:
+                print("[unsplash] No UNSPLASH_ACCESS_KEY — skipping")
+            elif _unsplash_skip:
+                print(f"[unsplash] Skipped — {_unsplash_reason}")
+            elif (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
                 rewritten = unsplash_fetch_images(rewritten, delay=1.2)
                 unsplash_count = sum(1 for a in rewritten if a.get("image") and not a.get("image_category_fallback"))
                 print(f"[unsplash] {unsplash_count}/{len(rewritten)} images")
-            elif not _unsplash_key:
-                print("[unsplash] No UNSPLASH_ACCESS_KEY — skipping")
+                if unsplash_count > 0:
+                    record_success("unsplash")
+                else:
+                    record_failure("unsplash")
 
             # Pass 2: Pexels
             still_missing = [a for a in rewritten if _needs_image(a)]
-            if still_missing and _pexels_key and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
+            _pexels_skip, _pexels_reason = should_skip("pexels")
+            if not _pexels_key:
+                print("[pexels] No PEXELS_API_KEY — skipping")
+            elif _pexels_skip:
+                print(f"[pexels] Skipped — {_pexels_reason}")
+            elif still_missing and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
                 print(f"[pexels] Trying for {len(still_missing)} remaining articles...")
                 _clear_fallback(still_missing)
                 still_missing = pexels_fetch_images(still_missing, delay=0.5)
                 pexels_count = sum(1 for a in still_missing if a.get("image") and not a.get("image_category_fallback"))
                 print(f"[pexels] {pexels_count}/{len(still_missing)} images")
-            elif not _pexels_key:
-                print("[pexels] No PEXELS_API_KEY — skipping")
+                if pexels_count > 0:
+                    record_success("pexels")
+                else:
+                    record_failure("pexels")
 
-            # Pass 3: AI (with total step timeout guard)
+            # Pass 3: AI (with total step timeout guard + service health check)
             no_image = [a for a in rewritten if not a.get("image")]
             elapsed = time.time() - image_step_start
-            if no_image and elapsed < IMAGE_STEP_TIMEOUT:
-                remaining_budget = IMAGE_STEP_TIMEOUT - elapsed
-                print(f"[image_gen] AI gen for {len(no_image)} articles without image (budget: {remaining_budget:.0f}s)...")
-                no_image = generate_images_for_articles(no_image, max_total_sec=int(remaining_budget))
-                ai_count = sum(1 for a in no_image if a.get("image") and not a.get("image_category_fallback"))
-                print(f"[image_gen] {ai_count}/{len(no_image)} succeeded")
-            elif no_image and elapsed >= IMAGE_STEP_TIMEOUT:
+            if no_image and elapsed >= IMAGE_STEP_TIMEOUT:
                 print(f"[image_gen] Skipping AI gen — image step budget exhausted ({elapsed:.0f}s)")
                 notify_discord_warning("images", f"Image step budget exhausted ({elapsed:.0f}s). {len(no_image)} articles have no image.")
+            elif no_image:
+                _kie_skip, _kie_reason = should_skip("kie_api")
+                if _kie_skip:
+                    print(f"[image_gen] Skipped — Kie.ai {_kie_reason}")
+                else:
+                    if _kie_reason == "probe":
+                        print(f"[image_gen] Kie.ai skip window expired — sending probe request...")
+                    remaining_budget = IMAGE_STEP_TIMEOUT - elapsed
+                    print(f"[image_gen] AI gen for {len(no_image)} articles without image (budget: {remaining_budget:.0f}s)...")
+                    no_image = generate_images_for_articles(no_image, max_total_sec=int(remaining_budget))
+                    ai_count = sum(1 for a in no_image if a.get("image") and not a.get("image_category_fallback"))
+                    print(f"[image_gen] {ai_count}/{len(no_image)} succeeded")
+                    # Update service health based on outcome
+                    if ai_count > 0:
+                        record_success("kie_api")
+                    else:
+                        record_failure("kie_api")
 
         except Exception as e:
             errors.append(f"images: {e}")
@@ -532,6 +563,21 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         return True
 
     # ── Step 4: Build ──────────────────────────────────────────────────────────
+    # Incremental gate: skip build if nothing changed (unless --force)
+    _do_build = True
+    if incremental and not force:
+        _change = check_for_changes(new_articles_published=article_count)
+        if not _change.needs_build:
+            print(f"\n⏭️  Build skipped — {_change.reason}")
+            _write_final_metrics(steps, errors, article_count, time.time() - pipeline_start, success=True,
+                                fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
+                                rejected=_m_rejected, avg_words=_m_avg_words,
+                                sources=_m_sources, reject_reasons=_m_reject_reasons)
+            print(f"\n✅ Valmis! 0 uutta artikkelia, build ohitettu.")
+            return True
+        else:
+            print(f"\n🔍 Change detected: {_change.reason}")
+
     with StepTimer("build") as t_build:
         print("\n🔨 Vaihe 4: Hugo-sivuston rakennus...")
         success, build_err = build_site()
@@ -539,6 +585,8 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         if not success:
             notify_discord_failure("build", "Hugo build failed", context=build_err[:500] if build_err else "")
             errors.append(f"build failed: {build_err[:200]}" if build_err else "build failed")
+        else:
+            record_build()  # snapshot manifest after successful build
 
     steps["build"] = t_build.to_dict()
 
@@ -630,6 +678,16 @@ if __name__ == "__main__":
              "posts published within the last N hours. Use 0 to compare against all posts.",
     )
     parser.add_argument(
+        "--incremental",
+        action="store_true",
+        help="Skip Hugo build if no content changes detected since last build (checks build_manifest.json).",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Override incremental check and always run Hugo build.",
+    )
+    parser.add_argument(
         "--metrics-report",
         action="store_true",
         help="Print a summary of pipeline metrics for the last 7 days and exit.",
@@ -653,5 +711,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     success = run(quick=args.quick, build_only=args.build_only, firehose_only=args.firehose_only,
-                  max_articles=args.max_articles, dedup_window=args.dedup_window)
+                  max_articles=args.max_articles, dedup_window=args.dedup_window,
+                  incremental=args.incremental, force=args.force)
     sys.exit(0 if success else 1)

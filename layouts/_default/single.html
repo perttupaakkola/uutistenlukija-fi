@@ -9,12 +9,19 @@
   </span>
   {{ end }}
   <h1>{{ .Title }}</h1>
+  {{ with .Params.tags }}
+  <div class="article-tags" aria-label="Aihetunnisteet">
+    {{ range . }}
+    <a href="/tags/{{ . | urlize }}/" class="tag-pill">{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
   {{ partial "social-share.html" . }}
   {{ partial "toc.html" . }}
   <div class="article-meta">
     {{ .Date | time.Format "2.1. klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-    · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ .ReadingTime }} min lukuaika
+    · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ partial "reading-time.html" . }}
   </div>
   <div class="content">
     {{- $paragraphs := split .Content "</p>" -}}

@@ -32,16 +32,7 @@ Kun lähdemateriaali on lyhyt, laajenna AINA näillä tavoilla:
   * Merkitys: Miksi tämä on tärkeää lukijalle? Ketä tämä koskee?
   * Seuraukset: Mitkä ovat seuraukset tai vaikutukset lähiaikoina?
   * Laajempi kehys: Liittyykö tämä johonkin laajempaan ilmiöön tai trendiin?
-  * Lisäfaktat: Vain faktat jotka LÖYTYVÄT annetusta lähdetekstistä tai ovat kiistattomia yleistietoja.
-
-FAKTOJEN ANKKUROINTISÄÄNTÖ — KRIITTINEN, lue huolella:
-- Kirjoita VAIN faktoja, jotka löytyvät annetusta lähdetekstistä tai ovat kiistattomia yleistietoja
-  (maantiede, historia, tunnetut tapahtumat — ei henkilöiden elossa/kuollut-tietoja ellei lähde mainitse).
-- ÄLÄ keksi tilastoja, prosenttilukuja tai numeroita joita lähde ei mainitse.
-- ÄLÄ kirjoita henkilön ikää, asemaa tai muuta yksityiskohtaa ellei lähde sitä mainitse.
-- ÄLÄ keksi asiantuntijalausuntoja joita ei ole lähteessä — ei "asiantuntijoiden mukaan" tyhjästä.
-- ÄLÄ sekoita lähteen mainitsemia paikkakuntia: jos lähde sanoo Turku, kirjoita Turku — ei Järvenpää.
-- Jos et tiedä jotain varmasti: jätä pois. Parempi lyhyempi ja tarkka kuin täynnä keksittyjä "faktoja".
+  * Lisäfaktat: Tilastoja, numeroita, aiempia tapahtumia samasta aiheesta.
 
 Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
 
@@ -112,8 +103,7 @@ Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSO
 
 
 _RETRY_ATTEMPTS = 3
-_RETRY_BASE_DELAY = 2   # seconds; doubles each attempt (2s, 4s, 8s)
-_REQUEST_TIMEOUT = 120  # seconds per LLM call (per-article when batch_size=1)
+_RETRY_BASE_DELAY = 2  # seconds; doubles each attempt (2s, 4s, 8s)
 
 # HTTP status codes worth retrying (transient)
 _RETRYABLE_HTTP = {429, 500, 502, 503, 504}
@@ -145,7 +135,6 @@ def _call_llm(system: str, prompt: str) -> str:
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 max_tokens=4096,
-                timeout=_REQUEST_TIMEOUT,
                 messages=[
                     {"role": "system", "content": system},
                     {"role": "user", "content": prompt},
@@ -193,25 +182,18 @@ def _build_single_prompt(article: dict) -> str:
     lang = article.get("language", "fi")
     source = article.get("source", "")
     is_international = lang != "fi" or source in ATTRIBUTION_SOURCES
-    is_trusted = article.get("source_tier", 2) == 1
 
     lang_note = f"\nKieli: {lang} — KIRJOITA ARTIKKELI SUOMEKSI" if lang != "fi" else ""
     attribution_note = (f"\nLähde (mainitse kerran luonnollisesti tekstissä): {source}"
                         if is_international and source else "")
     research = article.get("research", "")
     research_section = f"\nTaustatutkimus:\n{research}" if research else ""
-    trusted_note = (
-        f"\n⚠️ LUOTETTU LÄHDE ({source}): Tämä uutinen tulee toimituksellisesti tarkistetusta lähteestä. "
-        "Käytä VAIN lähdetekstin faktoja. Älä lisää mitään omia tietoja, lukuja tai spekulaatioita. "
-        "Jos artikkeli jää alle 280 sanan, se on ok — älä täytä keksityillä tiedoilla."
-        if is_trusted else ""
-    )
 
     return f"""Kirjoita seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.
 
 ---
 Otsikko: {article['title']}
-Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{trusted_note}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}
 ---
 
 Vastaa JSON-listana (lista yhdellä alkiolla):
@@ -220,9 +202,12 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
     "title": "Uutisen otsikko",
     "content": "4-6 kappaleen uutisteksti...",
     "category": "Yksi: {', '.join(CATEGORIES)}",
+    "tags": ["avainsana1", "avainsana2"],
     "original_title": "Alkuperäinen otsikko RSS:stä"
   }}
 ]
+
+"tags": 2–5 konkreettista suomenkielistä avainsanaa artikkelista (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
 
 Vastaa VAIN JSON-listalla."""
 
@@ -261,7 +246,7 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     """
     rewritten = []
 
-    batch_size = 1  # Reduced from 5 — model cuts articles short in large batches
+    batch_size = 3  # Reduced from 5 — model cuts articles short in large batches
     for i in range(0, len(articles), batch_size):
         batch = articles[i:i + batch_size]
         print(f"[writer] Processing batch {i // batch_size + 1} ({len(batch)} articles)...")
@@ -297,18 +282,11 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
             if research:
                 research_section = f"\nTaustatutkimus:\n{research}"
 
-            is_trusted = article.get("source_tier", 2) == 1
-            trusted_note = (
-                f"\n⚠️ LUOTETTU LÄHDE ({source}): Käytä VAIN lähdetekstin faktoja. "
-                "Älä lisää lukuja, ikätietoja tai spekulaatioita joita lähde ei mainitse."
-                if is_trusted else ""
-            )
-
             articles_text += f"""
 ---
 Aihe {idx + 1}:
 Otsikko: {article['title']}
-Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{trusted_note}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}
 ---
 """
 
@@ -324,9 +302,12 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
     "title": "Uutisen otsikko (max 80 merkkiä)",
     "content": "Vähintään 280 sanan uutisteksti. 4-6 kappaletta, erotettu \\n\\n. Käytä 1-2 H2-väliotsikkoa (## Otsikko) kun artikkeli on 300+ sanaa.",
     "category": "Yksi: {', '.join(CATEGORIES)}",
+    "tags": ["avainsana1", "avainsana2"],
     "original_title": "Alkuperäinen otsikko RSS:stä"
   }}
 ]
+
+"tags": 2–5 konkreettista suomenkielistä avainsanaa jokaiseen artikkeliin (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
 
 Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vähintään 280 sanaa?"""
 
@@ -385,38 +366,23 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             audited = pass1_result
 
         # Pass 3: Per-article expansion retry for anything under 200 words
-        EXPANSION_SYSTEM = """Olet kokenut suomalainen uutistoimittaja. Sinulle annetaan lyhyt uutisartikkeli joka on laajennettava.
-
-TEHTÄVÄ: Laajenna artikkeli VÄHINTÄÄN 350 sanaan (tavoite 350-400 sanaa).
-
-SALLITUT LAAJENNUSTAVAT — käytä vain näitä:
-- Selitä miksi tämä uutinen on tärkeä lukijalle (vaikutus arkeen, laajempi merkitys)
-- Kuvaa tapahtuman maantieteellinen tai historiallinen konteksti yleistiedon pohjalta
-- Avaa käsitteitä tai ilmiöitä joita lukija ei välttämättä tunne
-- Laajenna alkuperäisessä lähdetekstissä mainittuja yksityiskohtia
-- Lisää kysymyksiä joita tapaus herättää — ilman keksittyjä vastauksia
-
-KIELLETTYÄ laajennnuksessa:
-- Tilastot, prosenttiluvut tai numerot joita lähde ei mainitse — älä keksi
-- Henkilöiden lausunnot joita ei ole lähteessä — ei "asiantuntijoiden mukaan" tyhjästä
-- Henkilöiden ikä, asema tai elossa/kuollut-tieto ellei lähde sitä mainitse
-- Paikkakunnan vaihtaminen (jos lähde sanoo Turku, kirjoita Turku — ei muuta kaupunkia)
-
-SÄÄNNÖT:
-- Säilytä kaikki alkuperäiset faktat ja otsikko
-- Kirjoita luonnollista suomea, ei tekoälymäistä tekstiä
-- Lisää 1-2 H2-väliotsikkoa (## Otsikko) jäsentämään teksti
-- ÄLÄ koskaan lyhennä artikkelia — VAIN lisää sisältöä
-- Vastaa VAIN JSON-objektina: {"title": "...", "content": "...", "category": "...", "original_title": "..."}"""
+        EXPANSION_SYSTEM = """Olet uutistoimittaja. Sinulle annetaan lyhyt uutisartikkeli.
+Laajenna se vähintään 300 sanaan (tavoite 320–380) lisäämällä KAIKKI seuraavista:
+- Taustatieto: mitä aiheen ympärillä on tapahtunut aiemmin? Mikä johti tähän?
+- Konteksti: miksi tämä on merkittävää tai miten se liittyy laajempaan kehitykseen?
+- Seuraukset tai vaikutukset: mitä tämä tarkoittaa ihmisille tai yhteiskunnalle?
+- Lisäfaktat: tilastoja, numeroita tai muita konkreettisia tietoja aiheesta.
+Lisää H2-väliotsikko (## Otsikko) jäsentämään teksti. Säilytä alkuperäinen otsikko ja faktat. Kirjoita luonnollista suomea.
+Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "..."}"""
 
         expanded_audited = []
         for article in audited:
             word_count = len(article.get("content", "").split())
-            if word_count < 300:
+            if word_count < 250:
                 title = article.get("title", "")
                 print(f"[writer]   ⚠ Short ({word_count}w), expanding: '{title[:50]}'")
                 try:
-                    expand_prompt = f"""Tämä artikkeli on liian lyhyt ({word_count} sanaa). Laajenna se VÄHINTÄÄN 350 sanaan.\n\nArtikkeli:\n\n{json.dumps(article, ensure_ascii=False, indent=2)}\n\nLisää taustaa, kontekstia ja seurauksia. ÄLÄ lyhennä mitään. Vastaa VAIN JSON-objektina."""
+                    expand_prompt = f"""Laajenna tämä artikkeli vähintään 250 sanaan:\n\n{json.dumps(article, ensure_ascii=False, indent=2)}\n\nVastaa VAIN JSON-objektina."""
                     expand_response = _call_llm(EXPANSION_SYSTEM, expand_prompt)
                     # Response is a single object, not a list
                     expand_text = expand_response.strip()
@@ -470,6 +436,12 @@ SÄÄNNÖT:
                 written_article["fingerprint"] = batch[j].get("fingerprint", "")
                 written_article["trending"] = batch[j].get("trending", False)
                 # Do NOT carry source_name or source_url to output
+            # Normalise tags — ensure list of lowercase strings, 2–5 items
+            raw_tags = written_article.get("tags", [])
+            if isinstance(raw_tags, list):
+                written_article["tags"] = [str(t).lower().strip() for t in raw_tags if t][:5]
+            else:
+                written_article["tags"] = []
             kept.append(written_article)
 
         rewritten.extend(kept)

@@ -1,0 +1,19 @@
+{{/*
+  reading-time.html — Finnish reading time label.
+
+  Priority:
+    1. .Params.reading_time (pipeline-computed, 200 wpm + image time)
+       0  → "alle 1 min lukuaika"
+       N  → "N min lukuaika"
+    2. Hugo .ReadingTime fallback (legacy articles without front matter value)
+*/}}
+{{- $rt := .Params.reading_time -}}
+{{- if (isset .Params "reading_time") -}}
+  {{- if eq (int $rt) 0 -}}alle 1 min lukuaika
+  {{- else -}}{{ $rt }} min lukuaika
+  {{- end -}}
+{{- else -}}
+  {{- if lt .ReadingTime 1 -}}alle 1 min lukuaika
+  {{- else -}}{{ .ReadingTime }} min lukuaika
+  {{- end -}}
+{{- end -}}

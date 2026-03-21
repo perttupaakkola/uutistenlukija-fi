@@ -1,24 +1,15 @@
 {{ define "main" }}
-{{ partial "faq-schema.html" . }}
 {{ partial "breadcrumbs.html" . }}
 
-{{/* Hero — description prefers body .Content, falls back to frontmatter .Description */}}
 <div class="category-hero">
-  <h1 class="category-hero__title">{{ .Title }}</h1>
-  {{ with .Content }}
-    <p class="category-hero__desc">{{ . | plainify }}</p>
-  {{ else }}
-    {{ with .Description }}
-      <p class="category-hero__desc">{{ . }}</p>
-    {{ end }}
-  {{ end }}
+  <h1 class="category-hero__title">#{{ .Title }}</h1>
   <div class="category-hero__meta">
     <span class="category-hero__count">{{ len .Pages }} artikkelia</span>
     <a href="{{ .Permalink }}index.xml" class="rss-link category-hero__rss" title="RSS-syöte">RSS</a>
   </div>
 </div>
 
-{{/* Featured article — newest in category */}}
+{{/* Featured article — newest with this tag */}}
 {{ $sorted := .Pages.ByDate.Reverse }}
 {{ with index $sorted 0 }}
 <a href="{{ .Permalink }}" class="category-featured">
@@ -40,7 +31,6 @@
 </a>
 {{ end }}
 
-{{/* Article grid — skip the featured article (first) on page 1 */}}
 <div class="articles-grid">
   {{ $paginator := .Paginate ($sorted) 20 }}
   {{ range $i, $p := $paginator.Pages }}
@@ -59,17 +49,4 @@
   </article>
   {{ end }}
 </div>
-
-{{ $pag := $paginator }}
-{{ if gt $pag.TotalPages 1 }}
-<nav class="pagination">
-  {{ if $pag.HasPrev }}
-  <a href="{{ $pag.Prev.URL }}" class="page-link">← Edellinen</a>
-  {{ end }}
-  <span class="page-info">Sivu {{ $pag.PageNumber }}/{{ $pag.TotalPages }}</span>
-  {{ if $pag.HasNext }}
-  <a href="{{ $pag.Next.URL }}" class="page-link">Seuraava →</a>
-  {{ end }}
-</nav>
-{{ end }}
 {{ end }}

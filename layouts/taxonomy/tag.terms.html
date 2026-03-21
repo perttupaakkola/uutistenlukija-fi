@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="category-hero">
+  <h1 class="category-hero__title">Kaikki aihetunnisteet</h1>
+  <div class="category-hero__meta">
+    <span class="category-hero__count">{{ len .Pages }} tunnistetta</span>
+  </div>
+</div>
+
+<div class="tag-terms-grid">
+  {{ $tags := .Pages.ByTitle }}
+  {{ range $tags }}
+  <a href="{{ .Permalink }}" class="tag-term-card">
+    <span class="tag-term-name">#{{ .Title }}</span>
+    <span class="tag-term-count">{{ len .Pages }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

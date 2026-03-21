@@ -60,6 +60,22 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_placeholder = article.get("image_placeholder", "")
     trending = article.get("trending", False)
     description = article.get("description", "")
+    tags = article.get("tags", [])
+
+    # Reading time: Finnish reading speed 200 wpm + image viewing time
+    # Images: 12s first, 10s second, -1s per subsequent image, 3s floor
+    _word_count = len(re.findall(r"\S+", content))
+    _reading_seconds = int((_word_count / 200) * 60)
+    _image_count = len(re.findall(r"!\[", content))
+    if image:
+        _image_count += 1  # count hero image
+    _image_seconds = sum(
+        12 if i == 0 else max(3, 10 - (i - 1))
+        for i in range(_image_count)
+    )
+    _total_seconds = _reading_seconds + _image_seconds
+    # 0 = "alle 1 min"; stored as 0 so templates can show the Finnish label
+    reading_time = 0 if _total_seconds < 45 else max(1, round(_total_seconds / 60))
 
     # Assign a writer based on category
     writer = assign_writer(category)
@@ -77,7 +93,12 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     # base64 placeholder — use literal block scalar to avoid YAML line-length issues
     image_placeholder_line = f'\nimage_placeholder: "{image_placeholder}"' if image_placeholder else ""
     trending_line = "\ntrending: true" if trending else ""
+    reading_time_line = f"\nreading_time: {reading_time}"
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
+    if tags:
+        tags_yaml = "\ntags:\n" + "\n".join(f'  - {_esc(str(t))}' for t in tags)
+    else:
+        tags_yaml = ""
 
     # Build front matter — no source_name or source_url
     front_matter = f"""---
@@ -89,7 +110,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}
+author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}
 draft: false
 ---
 

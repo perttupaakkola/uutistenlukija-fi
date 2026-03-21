@@ -36,7 +36,7 @@
   <div class="article-meta sponsored-meta">
     {{ .Date | time.Format "2.1. klo 15:04" }}
     {{ with .Params.sponsor_name }} · <span class="author-inline">{{ . }}</span>{{ end }}
-    · {{ .ReadingTime }} min lukuaika
+    · {{ partial "reading-time.html" . }}
   </div>
 
   {{/* Content — all links get nofollow via JS postprocess below */}}

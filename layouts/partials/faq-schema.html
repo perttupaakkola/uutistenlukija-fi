@@ -1,0 +1,78 @@
+{{/*
+  faq-schema.html — FAQPage JSON-LD for category pages.
+  Call with: {{ partial "faq-schema.html" . }}
+  Outputs nothing on non-category pages or unknown categories.
+*/}}
+{{ $category := "" }}
+{{ with .Params.slug }}{{ $category = . }}{{ end }}
+{{ if not $category }}{{ $category = .Title | lower }}{{ end }}
+
+{{ $faqs := dict
+  "kotimaa" (slice
+    (dict "q" "Mistä uutistenlukija.fi saa kotimaan uutiset?" "a" "Kokoamme uutiset luotettavista suomalaisista tiedotusvälineistä ja uutistoimistoista. Kaikki artikkelit tarkastetaan ennen julkaisua.")
+    (dict "q" "Kuinka usein kotimaan uutisia päivitetään?" "a" "Uusia artikkeleita julkaistaan useita kertoja päivässä, ympäri vuorokauden.")
+    (dict "q" "Mitä aiheita kotimaan osiossa käsitellään?" "a" "Seuraamme politiikkaa, taloutta, yhteiskuntaa, onnettomuuksia ja muita Suomessa tapahtuvia ajankohtaisia asioita.")
+    (dict "q" "Voinko lukea vanhempia kotimaan uutisia?" "a" "Kyllä. Kaikki julkaistut artikkelit säilyvät arkistossa ja ovat vapaasti luettavissa.")
+    (dict "q" "Miten voin seurata kotimaan uutisia jatkuvasti?" "a" "Voit tilata RSS-syötteen tai uutiskirjeen saadaksesi uusimmat uutiset suoraan.")
+  )
+  "ulkomaat" (slice
+    (dict "q" "Mitä ulkomaanuutisia uutistenlukija.fi kattaa?" "a" "Seuraamme Euroopan, Pohjois-Amerikan, Aasian ja muun maailman merkittävimpiä tapahtumia suomeksi.")
+    (dict "q" "Mistä lähteistä ulkomaanuutiset tulevat?" "a" "Hyödynnämme kansainvälisiä uutistoimistoja ja luotettavia ulkomaisia medioita.")
+    (dict "q" "Kirjoitetaanko artikkelit suomeksi?" "a" "Kyllä. Kaikki artikkelit julkaistaan suomeksi alkuperäisestä kielestä riippumatta.")
+    (dict "q" "Kuinka nopeasti kansainväliset uutiset päivittyvät?" "a" "Merkittävimmät tapahtumat näkyvät sivustolla yleensä muutaman tunnin sisällä.")
+  )
+  "talous" (slice
+    (dict "q" "Mitä taloussisältöä uutistenlukija.fi tarjoaa?" "a" "Seuraamme osakemarkkinoita, yritysuutisia, energiahintoja, korkoja ja Suomen talouspolitiikkaa.")
+    (dict "q" "Onko sivustolla pörssikursseja?" "a" "Emme näytä reaaliaikaisia kursseja, mutta julkaisemme markkinauutisia ja analyysejä päivittäin.")
+    (dict "q" "Mistä talousartikkelit kirjoitetaan?" "a" "Artikkeleissa käsitellään Suomen ja kansainvälisen talouden ajankohtaisia ilmiöitä selkeällä yleiskielellä.")
+    (dict "q" "Sopiiko sisältö tavalliselle lukijalle?" "a" "Kyllä. Kirjoitamme taloudesta ymmärrettävästi ilman raskasta ammattikieltä.")
+    (dict "q" "Miten saan talousaiheisten uutisten hälytykset?" "a" "Tilaa uutiskirjeemme tai RSS-syöte Talous-kategoriasta.")
+  )
+  "teknologia" (slice
+    (dict "q" "Mitä teknologiauutisia uutistenlukija.fi kattaa?" "a" "Seuraamme tekoälyä, ohjelmistoja, laitteistoja, kyberturvallisuutta ja suomalaisen teknologiasektorin uutisia.")
+    (dict "q" "Käsitelläänkö tekoälyä omana aiheenaan?" "a" "Kyllä. Tekoäly on yksi aktiivisimmin seuratuista aiheistamme teknologia-osiossa.")
+    (dict "q" "Onko sisältö suunnattu teknisille lukijoille?" "a" "Kirjoitamme teknologiasta laajalle yleisölle. Artikkeleissa ei vaadita aiempaa teknistä osaamista.")
+    (dict "q" "Mistä lähteistä teknologiauutiset kerätään?" "a" "Hyödynnämme suomalaisia ja kansainvälisiä teknologiamedioita sekä yritysten tiedotteita.")
+  )
+  "urheilu" (slice
+    (dict "q" "Mitä urheilulajeja uutistenlukija.fi seuraa?" "a" "Seuraamme jääkiekkoa, jalkapalloa, yleisurheilua, formuloita ja muuta kotimaista ja kansainvälistä urheilua.")
+    (dict "q" "Kattaako sivusto myös suomalaiset sarjat?" "a" "Kyllä. Seuraamme Liigaa, Veikkausliigaa ja muita kotimaisia sarjoja kansainvälisten rinnalla.")
+    (dict "q" "Kuinka usein urheiluuutisia julkaistaan?" "a" "Urheilutuloksia ja uutisia julkaistaan päivittäin, erityisesti kilpailukausien aikana tiheästi.")
+    (dict "q" "Löydänkö sivustolta olympiauutiset?" "a" "Kyllä. Olympialaiset ja muut suuret kansainväliset kilpailut saavat oman kattavan seurantansa.")
+  )
+  "kulttuuri" (slice
+    (dict "q" "Mitä kulttuuriaiheita uutistenlukija.fi käsittelee?" "a" "Seuraamme musiikkia, elokuvaa, teatteria, kirjallisuutta, taidetta ja suomalaista kulttuurielämää.")
+    (dict "q" "Onko sivustolla arvosteluja?" "a" "Julkaisemme uutisten lisäksi arvioita merkittävistä kotimaisista ja kansainvälisistä kulttuuriteoksista.")
+    (dict "q" "Kattavatko kulttuuriuutiset myös kansainväliset tapahtumat?" "a" "Kyllä. Seuraamme esimerkiksi Oscar-gaalaoja, Cannesin elokuvajuhlia ja muita merkittäviä kansainvälisiä kulttuuritapahtumia.")
+    (dict "q" "Miten voin löytää kulttuuriuutiset helposti?" "a" "Voit selata kulttuuri-kategoriaa suoraan tai hakea tiettyä aihetta hakutoiminnolla.")
+  )
+  "tiede" (slice
+    (dict "q" "Mitä tiedeuutisia uutistenlukija.fi julkaisee?" "a" "Seuraamme lääketiedettä, avaruustutkimusta, ilmastonmuutosta, biologiaa ja muuta akateemista tutkimusta.")
+    (dict "q" "Perustuvatko tiedeartikkelit vertaisarvioituun tutkimukseen?" "a" "Pyrimme viittaamaan tunnistettuihin tutkimuksiin ja lainattuihin asiantuntijoihin.")
+    (dict "q" "Onko sisältö ymmärrettävää ilman tiedetaustaa?" "a" "Kyllä. Kirjoitamme tieteestä yleistajuisesti kiinnostuneelle suurelle yleisölle.")
+    (dict "q" "Seurataanko suomalaisia tiedesaavutuksia?" "a" "Kyllä. Suomalaiset tutkimuslaitokset ja yliopistojen löydökset saavat erityishuomiota.")
+  )
+}}
+
+{{ $key := $category | lower }}
+{{ $pairs := index $faqs $key }}
+{{ if $pairs }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $i, $item := $pairs }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.a | jsonify }}
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
