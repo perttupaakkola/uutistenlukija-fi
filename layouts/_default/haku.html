@@ -56,10 +56,23 @@
   min-height: 1em;
 }
 .search-result {
+  display: flex;
+  gap: 1rem;
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--border);
+  align-items: flex-start;
 }
 .search-result:last-child { border-bottom: none; }
+.result-thumb {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--border);
+  display: block;
+}
+.result-body { flex: 1; min-width: 0; }
 .search-result h3 {
   font-size: 1.05rem;
   margin: 0 0 0.3rem;
@@ -94,6 +107,9 @@
   color: var(--text-secondary, #555);
   line-height: 1.55;
   margin-top: 0.25rem;
+}
+@media (max-width: 480px) {
+  .result-thumb { display: none; }
 }
 mark {
   background: rgba(192,57,43,0.15);
@@ -250,10 +266,17 @@ mark {
         ? '<a class="result-cat" href="/categories/' + esc(catSlug) + '/">' + esc(catLabel) + '</a>'
         : '';
 
+      var thumbHtml = a.image
+        ? '<img class="result-thumb" src="' + esc(a.image) + '" alt="" loading="lazy" width="80" height="60">'
+        : '';
+
       return '<div class="search-result" role="listitem">' +
+        thumbHtml +
+        '<div class="result-body">' +
         '<h3><a href="' + esc(a.url) + '">' + titleHtml + '</a></h3>' +
         '<div class="result-meta">' + catHtml + esc(a.date) + '</div>' +
         (snippetHtml ? '<p class="result-snippet">' + snippetHtml + '</p>' : '') +
+        '</div>' +
         '</div>';
     }).join('');
   }
