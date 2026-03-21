@@ -113,8 +113,16 @@ def _parse_date(raw: str | None) -> datetime | None:
     return None
 
 
+def _is_html(body: bytes) -> bool:
+    """Return True if body looks like HTML rather than XML/RSS."""
+    sniff = body[:512].lower()
+    return b"<!doctype html" in sniff or b"<html" in sniff
+
+
 def _parse_feed(body: bytes) -> tuple[int, datetime | None]:
     """Return (entry_count, newest_date) from feed body."""
+    if _is_html(body):
+        return -1, None  # sentinel: HTML response, not a feed
     try:
         root = ET.fromstring(body)
     except ET.ParseError:
@@ -270,6 +278,11 @@ def check_feeds(dry_run: bool = False, force_alert: bool = False) -> list[dict]:
 
         if status in (200, 301, 302) and body:
             entry_count, newest_date = _parse_feed(body)
+            if entry_count == -1:
+                # Feed returned HTML (paywall/redirect) — treat as unreachable
+                status = SCORE_UNREACHABLE
+                entry_count = 0
+                newest_date = None
 
         age_hours = None
         if newest_date:

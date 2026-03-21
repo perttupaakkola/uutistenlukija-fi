@@ -141,6 +141,23 @@ except Exception:
         alert_msg="⚠️ **Pipeline degraded** — \`status=degraded\`${stale_msg} | articles=${article_count:-?}"
     fi
 
+    # Secondary degraded check: high error count (catches failures before 6h stale threshold)
+    if [[ "" == "ok" ]]; then
+        _snapshot="/static/metrics/snapshot.json"
+        if [[ -f "" ]]; then
+            _errors=$(python3 -c "
+import json,sys
+try: print(json.load(open(sys.argv[1])).get('pipelineErrorsToday',0))
+except: print(0)
+" "" 2>/dev/null || echo 0)
+            if (( _errors > 20 )); then
+                condition="degraded"
+                alert_msg="⚠️ **Pipeline degraded** — ${_errors} errors today (threshold >20). Check pipeline logs."
+                log "High error count: errors_today=${_errors}"
+            fi
+        fi
+    fi
+
     # Explicit stale check (belt + suspenders — catches cases where generator didn't set degraded)
     if [[ "$condition" == "ok" && -n "$last_published" && "$last_published" != "None" && "$last_published" != "null" ]]; then
         age_hours=$(python3 -c "
