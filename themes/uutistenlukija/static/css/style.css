@@ -2452,6 +2452,63 @@ pre code {
 }
 
 /* === Table of Contents === */
+/* ── Article summary (Tiivistelmä) ────────────────────────────── */
+.article-summary {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-sans);
+}
+
+.article-summary > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  list-style: none;
+  user-select: none;
+}
+
+.article-summary > summary::-webkit-details-marker { display: none; }
+
+.article-summary__icon {
+  display: inline-block;
+  font-size: 0.6rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.article-summary[open] .article-summary__icon {
+  transform: rotate(90deg);
+}
+
+.article-summary__label {
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.article-summary__body {
+  padding: 0 1rem 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+}
+
+.article-summary__body p {
+  margin: 0.65rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* ── TOC ─────────────────────────────────────────────────────── */
 .toc {
   background: var(--card-bg);
   border: 1px solid var(--border);

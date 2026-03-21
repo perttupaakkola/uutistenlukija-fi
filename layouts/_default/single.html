@@ -17,6 +17,7 @@
   </div>
   {{ end }}
   {{ partial "social-share.html" . }}
+  {{ partial "article-summary.html" . }}
   {{ partial "toc.html" . }}
   <div class="article-meta">
     {{ .Date | time.Format "2.1. klo 15:04" }}

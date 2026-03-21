@@ -1,0 +1,11 @@
+{{- if and .Params.summary (ne .Params.summary "") -}}
+<details class="article-summary">
+  <summary class="article-summary__toggle">
+    <span class="article-summary__icon" aria-hidden="true">▶</span>
+    <span class="article-summary__label">Tiivistelmä</span>
+  </summary>
+  <div class="article-summary__body">
+    <p>{{ .Params.summary }}</p>
+  </div>
+</details>
+{{- end -}}

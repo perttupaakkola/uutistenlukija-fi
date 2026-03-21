@@ -60,6 +60,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_placeholder = article.get("image_placeholder", "")
     trending = article.get("trending", False)
     description = article.get("description", "")
+    summary = article.get("summary", "")
     tags = article.get("tags", [])
 
     # Reading time: Finnish reading speed 200 wpm + image viewing time
@@ -95,6 +96,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     trending_line = "\ntrending: true" if trending else ""
     reading_time_line = f"\nreading_time: {reading_time}"
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
+    summary_line = f'\nsummary: "{_esc(summary)}"' if summary else ""
     if tags:
         tags_yaml = "\ntags:\n" + "\n".join(f'  - {_esc(str(t))}' for t in tags)
     else:
@@ -110,7 +112,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}
+author_image: "{writer['image']}"{description_line}{summary_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}
 draft: false
 ---
 

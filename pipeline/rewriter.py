@@ -71,6 +71,20 @@ KIRJOITUSTYYLI:
 - Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").
 - Lopeta viimeiseen faktaan.
 
+KRIITTISET TYYLIVIRHEET — ÄLÄ KOSKAAN TEE NÄITÄ:
+1. KIELLETTY LOPETUS: Älä koskaan aloita viimeistä kappaletta tai lausetta sanoilla
+   "Yhteenvetona", "Yhteenvetona voidaan todeta", "Kaiken kaikkiaan", "Loppujen lopuksi"
+   tai muulla artikkelin sisällön tiivistämisellä. Artikkeli päättyy faktaan, ei yhteenvetoon.
+2. UUTINEN ENSIN: Ensimmäinen virke on uutinen itse — ei organisaation tai julkaisun esittely.
+   VÄÄRIN: "Poliisihallitus julkaisi tänään raportin, jonka mukaan rikollisuus kasvoi."
+   OIKEIN: "Rikollisuus kasvoi viime vuonna, kertoo poliisihallituksen uusi raportti."
+   VÄÄRIN: "Tutkijat ovat julkaisseet tutkimuksen, jossa todetaan, että..."
+   OIKEIN: "Uusi tutkimus osoittaa, että..."
+3. LAUSERAKENTEIDEN VAIHTELU: Älä kirjoita peräkkäisiä "X on Y"-lauseita. Vaihtele rakennetta:
+   käytä toimintaverbejä, kysymysmuotoa, sivulauseita ja eri lausepituuksia.
+   VÄÄRIN: "Helsinki on Suomen pääkaupunki. Se on myös suurin kaupunki. Helsinki on tunnettu..."
+   OIKEIN: "Helsinki kasvaa. Suomen pääkaupungissa asuu jo yli 650 000 ihmistä — ja luku nousee."
+
 TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:
 - Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)
 - Ei kolmen sarjoja joka kappaleessa
@@ -98,6 +112,15 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 280 sanaa (tavoite 300–400). Jos artikkeli on lyhyempi,
     laajenna sitä lisäämällä taustan, kontekstin ja vaikutusten kuvausta. ÄLÄ koskaan
     palauta alle 280 sanan artikkelia. Tavallinen kappale on 60–80 sanaa.
+12. YHTEENVETOLOPPUJEN POISTO: Jos artikkeli päättyy lauseeseen joka alkaa "Yhteenvetona",
+    "Yhteenvetona voidaan todeta", "Kaiken kaikkiaan", "Loppujen lopuksi" tai muulla
+    tiivistelmällä — poista se ja päätä artikkeli edeltävään faktaan.
+13. INGRESSI: Jos ensimmäinen virke on muotoa "Organisaatio X julkaisi/ilmoitti/kertoi, että..."
+    — kirjoita se uudelleen niin että uutinen itse on ensin:
+    VÄÄRIN: "Tutkijat julkaisivat raportin, jonka mukaan hinnat nousivat."
+    OIKEIN: "Hinnat nousivat, osoittaa tutkijoiden uusi raportti."
+14. X ON Y -RAKENTEET: Korjaa peräkkäiset "X on Y"-lauseet (yli 2 peräkkäin) vaihtelemalla
+    lauserakennetta — käytä toimintaverbejä, sivulauseita tai eri lausepituuksia.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -203,11 +226,13 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
     "content": "4-6 kappaleen uutisteksti...",
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
+    "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
     "original_title": "Alkuperäinen otsikko RSS:stä"
   }}
 ]
 
 "tags": 2–5 konkreettista suomenkielistä avainsanaa artikkelista (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
+"summary": 2-3 lauseen tiivistelmä artikkelista suomeksi. Selkeä, informatiivinen, ei klikkiotsikko-tyylinen.
 
 Vastaa VAIN JSON-listalla."""
 
@@ -303,11 +328,13 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
     "content": "Vähintään 280 sanan uutisteksti. 4-6 kappaletta, erotettu \\n\\n. Käytä 1-2 H2-väliotsikkoa (## Otsikko) kun artikkeli on 300+ sanaa.",
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
+    "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
     "original_title": "Alkuperäinen otsikko RSS:stä"
   }}
 ]
 
 "tags": 2–5 konkreettista suomenkielistä avainsanaa jokaiseen artikkeliin (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
+"summary": 2-3 lauseen tiivistelmä artikkelista suomeksi. Selkeä, informatiivinen, ei klikkiotsikko-tyylinen.
 
 Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vähintään 280 sanaa?"""
 
