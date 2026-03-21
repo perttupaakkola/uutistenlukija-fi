@@ -736,24 +736,96 @@ img { max-width: 100%; height: auto; }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin: 2rem 0;
   padding: 1rem 0;
   border-top: 1px solid var(--border);
   font-family: var(--font-sans);
 }
 
+/* Prev / Next buttons */
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--card-bg);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.pagination-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.pagination-disabled {
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Page number list */
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.pagination-page:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.pagination-current {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  font-weight: 700;
+  cursor: default;
+}
+.pagination-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+/* Legacy classes (kept for compat) */
 .page-link {
   color: var(--accent);
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
 }
-
-.page-link:hover {
-  text-decoration: underline;
-}
-
+.page-link:hover { text-decoration: underline; }
 .page-info {
   font-size: 0.85rem;
   color: var(--text-secondary);

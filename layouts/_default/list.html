@@ -4,68 +4,33 @@
   <h1>{{ .Title }}</h1>
   {{ with .Description }}<p class="category-description">{{ . }}</p>{{ end }}
 </div>
+
+{{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
+
 <div class="articles-grid" id="articles-grid">
-  {{ $pages := .Pages.ByDate.Reverse }}
-  {{ $pageSize := 12 }}
-  {{ range $i, $p := $pages }}
-  {{ $cat := index $p.Params.categories 0 | default "kotimaa" }}
-  {{ $img := $p.Params.image_thumb | default ($p.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
-  {{ $alt := $p.Params.image_alt | default $p.Title }}
-  <article class="article-card{{ if ge $i $pageSize }} load-more-item hidden-article{{ end }}">
-    <a href="{{ $p.Permalink }}" class="article-image-link card-thumb-link" tabindex="-1" aria-hidden="true">
+  {{ range $paginator.Pages }}
+  {{ $cat := index .Params.categories 0 | default "kotimaa" }}
+  {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+  {{ $alt := .Params.image_alt | default .Title }}
+  <article class="article-card">
+    <a href="{{ .Permalink }}" class="article-image-link card-thumb-link" tabindex="-1" aria-hidden="true">
       <div class="card-thumb-wrapper">
         <img src="{{ $img }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" decoding="async" width="400" height="225"
           onerror="this.onerror=null;this.src='/images/categories/{{ $cat | lower }}.jpg'">
       </div>
     </a>
-    {{ with $p.Params.categories }}
+    {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
-    <h2><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></h2>
-    <p class="excerpt">{{ $p.Summary | truncate 200 }}</p>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p class="excerpt">{{ .Summary | truncate 200 }}</p>
     <div class="meta">
-      {{ $p.Date | time.Format "2.1. klo 15:04" }}
-      {{ with $p.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+      {{ .Date | time.Format "2.1. klo 15:04" }}
+      {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
     </div>
   </article>
   {{ end }}
 </div>
 
-{{ if gt (len .Pages) 12 }}
-<div class="load-more-container" id="load-more-container">
-  <button class="load-more-btn" id="load-more-btn"
-    data-batch="12"
-    aria-label="Lataa lisää artikkeleita">
-    Lataa lisää
-    <span class="load-more-count">({{ sub (len .Pages) 12 }} lisää)</span>
-  </button>
-</div>
-<script>
-(function() {
-  var btn = document.getElementById('load-more-btn');
-  var container = document.getElementById('load-more-container');
-  if (!btn) return;
-
-  var BATCH = 12;
-  var hidden = Array.from(document.querySelectorAll('.hidden-article'));
-  var shown = 0;
-
-  function loadMore() {
-    var next = hidden.slice(shown, shown + BATCH);
-    next.forEach(function(el) {
-      el.classList.remove('hidden-article');
-    });
-    shown += next.length;
-    var remaining = hidden.length - shown;
-    if (remaining <= 0) {
-      container.style.display = 'none';
-    } else {
-      btn.querySelector('.load-more-count').textContent = '(' + remaining + ' lisää)';
-    }
-  }
-
-  btn.addEventListener('click', loadMore);
-})();
-</script>
-{{ end }}
+{{ partial "pagination.html" (dict "Paginator" $paginator) }}
 {{ end }}

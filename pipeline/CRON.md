@@ -7,6 +7,9 @@ All times UTC. All scripts assume `.env` is co-located in `pipeline/` and source
 | Schedule | Script | Purpose | Discord target |
 |---|---|---|---|
 | `*/15 * * * *` | `scripts/pipeline-watchdog.sh` | Watchdog wrapper → auto_publish.sh (auto-retry with backoff) | #operations (on failure) |
+| `30 7 * * *` | `seo_daily_dashboard.py` | Daily SEO digest: GA4 + Search Console | #seo |
+| `30 7,11,17,20 * * *` | `x_auto_poster.py` | Post recent articles to @Uutistenlukija_ (3-4/day) | X/Twitter |
+| `*/85 * * * *` | `scripts/refresh-x-token.sh` | Refresh X OAuth2 token (2h TTL) | — |
 | `0 6 * * *` | `metrics_cron.sh` | Daily pipeline metrics report | #metrics |
 | `0 9 * * *` | `lighthouse_check.py` | Lighthouse scores + delta tracking | #metrics |
 | `0 7 * * 1` | `validate_articles.py --all` | Weekly content quality health score | #operations |

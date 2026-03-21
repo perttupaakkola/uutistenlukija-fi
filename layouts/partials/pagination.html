@@ -1,0 +1,68 @@
+{{/*
+  pagination.html — Hugo paginator navigation
+  Finnish labels, accessible nav, windowed page numbers.
+  Usage: {{ partial "pagination.html" . }}
+  Requires .Paginator to be set in calling template.
+*/}}
+{{ $p := .Paginator }}
+{{ if gt $p.TotalPages 1 }}
+{{ $cur   := $p.PageNumber }}
+{{ $total := $p.TotalPages }}
+<nav class="pagination" aria-label="Sivunavigaatio">
+
+  {{/* ← Previous */}}
+  {{ if $p.HasPrev }}
+  <a class="pagination-btn pagination-prev" href="{{ $p.Prev.URL }}" rel="prev">← Edellinen</a>
+  {{ else }}
+  <span class="pagination-btn pagination-prev pagination-disabled" aria-disabled="true">← Edellinen</span>
+  {{ end }}
+
+  {{/* Page number list — always show 1, last, and a ±2 window around current */}}
+  <ol class="pagination-pages" role="list">
+    {{ $shown_ellipsis_left  := false }}
+    {{ $shown_ellipsis_right := false }}
+    {{ range $p.Pagers }}
+    {{ $n := .PageNumber }}
+    {{ $in_window := and (ge $n (sub $cur 2)) (le $n (add $cur 2)) }}
+    {{ $is_edge   := or (eq $n 1) (eq $n $total) }}
+
+    {{ if or $in_window $is_edge }}
+
+      {{/* Left ellipsis gap */}}
+      {{ if and (gt $n 2) (lt $n (sub $cur 2)) (not $shown_ellipsis_left) }}
+      <li class="pagination-ellipsis" aria-hidden="true"><span>…</span></li>
+      {{ $shown_ellipsis_left = true }}
+      {{ end }}
+      {{/* Also show ellipsis when jumping from page 1 to window start */}}
+      {{ if and (eq $n (sub $cur 2)) (gt (sub $cur 2) 2) (not $shown_ellipsis_left) }}
+      <li class="pagination-ellipsis" aria-hidden="true"><span>…</span></li>
+      {{ $shown_ellipsis_left = true }}
+      {{ end }}
+
+      <li>
+        {{ if eq $n $cur }}
+        <span class="pagination-page pagination-current" aria-current="page">{{ $n }}</span>
+        {{ else }}
+        <a class="pagination-page" href="{{ .URL }}">{{ $n }}</a>
+        {{ end }}
+      </li>
+
+      {{/* Right ellipsis gap */}}
+      {{ if and (eq $n (add $cur 2)) (lt (add $cur 2) (sub $total 1)) (not $shown_ellipsis_right) }}
+      <li class="pagination-ellipsis" aria-hidden="true"><span>…</span></li>
+      {{ $shown_ellipsis_right = true }}
+      {{ end }}
+
+    {{ end }}
+    {{ end }}
+  </ol>
+
+  {{/* Next → */}}
+  {{ if $p.HasNext }}
+  <a class="pagination-btn pagination-next" href="{{ $p.Next.URL }}" rel="next">Seuraava →</a>
+  {{ else }}
+  <span class="pagination-btn pagination-next pagination-disabled" aria-disabled="true">Seuraava →</span>
+  {{ end }}
+
+</nav>
+{{ end }}

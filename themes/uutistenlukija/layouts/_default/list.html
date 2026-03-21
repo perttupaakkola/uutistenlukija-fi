@@ -3,8 +3,11 @@
   <h1>{{ .Title }}</h1>
   {{ with .Description }}<p class="category-description">{{ . }}</p>{{ end }}
 </div>
+
+{{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
+
 <div class="articles-grid">
-  {{ range .Pages.ByDate.Reverse }}
+  {{ range $paginator.Pages }}
   {{ $cat := index .Params.categories 0 | default "kotimaa" }}
   {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
   {{ $alt := .Params.image_alt | default .Title }}
@@ -24,4 +27,6 @@
   </article>
   {{ end }}
 </div>
+
+{{ partial "pagination.html" (dict "Paginator" $paginator) }}
 {{ end }}
