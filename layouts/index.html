@@ -41,17 +41,7 @@
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-    {{ partial "responsive-image.html" (dict
-      "src"           $img
-      "alt"           $alt
-      "class"         "article-image"
-      "loading"       "eager"
-      "fetchpriority" "high"
-      "width"         800
-      "height"        450
-      "sizes"         "(max-width: 768px) 100vw, 800px"
-      "placeholder"   .Params.image_placeholder
-    ) }}
+    <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="800" height="450">
   </a>
   <p class="excerpt">{{ .Summary | truncate 300 }}</p>
   <div class="meta">
@@ -75,16 +65,7 @@
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
     <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-      {{ partial "responsive-image.html" (dict
-        "src"         $img
-        "alt"         $alt
-        "class"       "article-image"
-        "loading"     "lazy"
-        "width"       400
-        "height"      225
-        "sizes"       "(max-width: 480px) 100vw, (max-width: 1024px) 33vw, 400px"
-        "placeholder" .Params.image_placeholder
-      ) }}
+      <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" width="400" height="225">
     </a>
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
@@ -92,6 +73,8 @@
   {{ end }}
 </div>
 {{ end }}
+
+{{ partial "lyhyet.html" . }}
 
 {{/* Category sections */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
@@ -113,16 +96,7 @@
       {{ $cardAlt := .Params.image_alt | default .Title }}
       <article class="category-article-card">
         <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-          {{ partial "responsive-image.html" (dict
-            "src"         $cardImg
-            "alt"         $cardAlt
-            "class"       "article-image"
-            "loading"     "lazy"
-            "width"       400
-            "height"      225
-            "sizes"       "(max-width: 480px) 100vw, (max-width: 1024px) 33vw, 400px"
-            "placeholder" .Params.image_placeholder
-          ) }}
+          <img src="{{ $cardImg }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" width="400" height="225">
         </a>
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         <p class="excerpt">{{ .Summary | truncate 150 }}</p>

@@ -68,6 +68,8 @@
 </div>
 {{ end }}
 
+{{ partial "lyhyet.html" . }}
+
 {{/* Category sections */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
 {{ $usedPages := after 1 $sorted | first 3 }}
