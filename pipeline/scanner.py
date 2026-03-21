@@ -40,6 +40,7 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "HS Tiede":          1,
     "HS Kulttuuri":      1,
     "Turun Sanomat":     1,
+    "HS Tuoreimmat":    1,
     "Kauppalehti":       1,
     "Kauppalehti Markets": 1,
     "Ilta-Sanomat":      1,
@@ -193,6 +194,12 @@ RSS_FEEDS = [
         "name": "Turun Sanomat",
         "url": "https://www.ts.fi/rss.xml",
         "language": "fi",
+    },
+    {
+        "name": "HS Tuoreimmat",
+        "url": "https://www.hs.fi/rss/tuoreimmat.xml",
+        "language": "fi",
+        "category_hint": "Uutiset",  # General HS feed - paywall-free RSS endpoint
     },
     {
         "name": "Yle Kulttuuri",
