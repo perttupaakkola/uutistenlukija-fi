@@ -37,7 +37,7 @@ BACKOFF_MAX=300
 
 # Default pipeline command if none given
 if [[ $# -eq 0 ]]; then
-    PIPELINE_CMD=("$PROJECT_DIR/auto_publish.sh")
+    PIPELINE_CMD=("$PROJECT_DIR/pipeline/auto_publish.sh")
 else
     PIPELINE_CMD=("$@")
 fi
