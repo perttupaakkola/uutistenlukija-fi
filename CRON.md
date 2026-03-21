@@ -1,0 +1,31 @@
+# CRON.md — Scheduled Pipeline Jobs
+
+All times UTC. See the live crontab for exact entries.
+
+## Every 15 minutes
+- **auto_publish.sh** — scan → rewrite → publish → build → push
+- **health_monitor.sh** — curl /api/health.json, alert #operations on degraded
+
+## Every 10 minutes
+- **firehose** — fetch new articles from RSS feeds
+
+## Every 6 hours
+- **disk_monitor.sh** — check disk usage, alert #operations if >80%
+
+## Daily
+- **06:00** — metrics_cron (pipeline metrics summary)
+- **06:05** — metrics_history.py (aggregate run data into metrics_history.json)
+- **18:00** — daily digest post to Discord
+
+## Weekly
+- **Monday 07:00** — weekly_digest.py (week-over-week stats to #metrics)
+- **Sunday 06:00** — rotate_logs.sh (archive logs >7d, delete archive >30d)
+
+## System / Maintenance
+- kill-rogue-gateways
+- cleanup-sandboxes
+- session-cleanup
+- task-watchdog
+- sync-taskboard
+- refresh-anthropic-token
+- check-github-actions (every 10 min)
