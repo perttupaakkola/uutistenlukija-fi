@@ -22,39 +22,28 @@
       <span class="category-label">{{ index . 0 }}</span>
       {{ end }}
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <div class="meta">{{ partial "freshness.html" . }}</div>
+      <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
     </article>
     {{ end }}
   </div>
 </section>
 {{ end }}
 
-{{/* Lead article */}}
+{{/* Lead article — hero treatment: full-width image above headline (Sara's Gap #3) */}}
 {{ with index $sorted 0 }}
-{{ $cat := index .Params.categories 0 | default "kotimaa" }}
-{{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
+{{ $cat   := index .Params.categories 0 | default "kotimaa" }}
+{{ $img   := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
 {{ $thumb := .Params.image_thumb | default $img }}
-{{ $alt := .Params.image_alt | default .Title }}
-<article class="lead-article">
+{{ $alt   := .Params.image_alt | default .Title }}
+<article class="lead-article lead-article--hero">
+  {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" true "hero" true "permalink" .Permalink) }}
   {{ with .Params.categories }}
   <span class="category-label">{{ index . 0 }}</span>
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-  <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-    {{/* LCP element — must be eager + high priority */}}
-    {{- $lcpSrc := $img -}}
-    {{- if hasPrefix $img "https://images.unsplash.com" -}}
-      {{- $lcpSep := "?" -}}{{- if in $img "?" -}}{{- $lcpSep = "&" -}}{{- end -}}
-      {{- $lcpSrc = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $img $lcpSep -}}
-    {{- else if hasPrefix $img "https://images.pexels.com" -}}
-      {{- $lcpSep := "?" -}}{{- if in $img "?" -}}{{- $lcpSep = "&" -}}{{- end -}}
-      {{- $lcpSrc = printf "%s%sw=800&h=450&fit=crop" $img $lcpSep -}}
-    {{- end -}}
-    <img src="{{ $lcpSrc }}" alt="{{ $alt }}" class="article-image" loading="eager" fetchpriority="high" decoding="async" width="800" height="450">
-  </a>
   <p class="excerpt">{{ .Summary | truncate 300 }}</p>
   <div class="meta">
-    {{ partial "freshness.html" . }}
+    {{ .Date | time.Format "2.1. klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
     · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min
   </div>
@@ -66,26 +55,17 @@
 {{ if $highlights }}
 <div class="highlights-row">
   {{ range $highlights }}
-  {{ $cat := index .Params.categories 0 | default "kotimaa" }}
-  {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
-  {{ $alt := .Params.image_alt | default .Title }}
+  {{ $cat   := index .Params.categories 0 | default "kotimaa" }}
+  {{ $img   := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
+  {{ $thumb := .Params.image_thumb | default $img }}
+  {{ $alt   := .Params.image_alt | default .Title }}
   <article class="highlight-card">
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
-    <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-      {{- $hSrc := $img -}}
-      {{- if hasPrefix $img "https://images.unsplash.com" -}}
-        {{- $hSep := "?" -}}{{- if in $img "?" -}}{{- $hSep = "&" -}}{{- end -}}
-        {{- $hSrc = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80" $img $hSep -}}
-      {{- else if hasPrefix $img "https://images.pexels.com" -}}
-        {{- $hSep := "?" -}}{{- if in $img "?" -}}{{- $hSep = "&" -}}{{- end -}}
-        {{- $hSrc = printf "%s%sw=400&h=225&fit=crop" $img $hSep -}}
-      {{- end -}}
-      <img src="{{ $hSrc }}" alt="{{ $alt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
-    </a>
+    {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink) }}
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <div class="meta">{{ partial "freshness.html" . }}</div>
+    <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
   </article>
   {{ end }}
 </div>
@@ -97,7 +77,6 @@
 
 {{/* Category sections */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
-{{ $usedPages := after 1 $sorted | first 3 }}
 {{ range $cat := $categories }}
   {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
   {{ if $catPosts }}
@@ -110,25 +89,16 @@
     </div>
     <div class="category-articles">
       {{ range first 3 $catPosts }}
-      {{ $cardCat := index .Params.categories 0 | default "kotimaa" }}
-      {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
-      {{ $cardAlt := .Params.image_alt | default .Title }}
+      {{ $cardCat   := index .Params.categories 0 | default "kotimaa" }}
+      {{ $cardImg   := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
+      {{ $cardThumb := .Params.image_thumb | default $cardImg }}
+      {{ $cardAlt   := .Params.image_alt | default .Title }}
       <article class="category-article-card">
-        <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-          {{- $cSrc := $cardImg -}}
-          {{- if hasPrefix $cardImg "https://images.unsplash.com" -}}
-            {{- $cSep := "?" -}}{{- if in $cardImg "?" -}}{{- $cSep = "&" -}}{{- end -}}
-            {{- $cSrc = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80" $cardImg $cSep -}}
-          {{- else if hasPrefix $cardImg "https://images.pexels.com" -}}
-            {{- $cSep := "?" -}}{{- if in $cardImg "?" -}}{{- $cSep = "&" -}}{{- end -}}
-            {{- $cSrc = printf "%s%sw=400&h=225&fit=crop" $cardImg $cSep -}}
-          {{- end -}}
-          <img src="{{ $cSrc }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
-        </a>
+        {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "alt" $cardAlt "eager" false "hero" false "permalink" .Permalink) }}
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         <p class="excerpt">{{ .Summary | truncate 150 }}</p>
         <div class="meta">
-          {{ partial "freshness.html" . }}
+          {{ .Date | time.Format "2.1. klo 15:04" }}
           {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
         </div>
       </article>

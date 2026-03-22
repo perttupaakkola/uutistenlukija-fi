@@ -311,6 +311,49 @@ img { max-width: 100%; height: auto; }
   max-width: 700px;
 }
 
+/* === Lead Article Hero variant (image-first, full-width image above headline) === */
+.lead-article--hero {
+  padding: 0;
+  overflow: hidden;
+}
+
+.lead-article--hero .article-image-link {
+  margin-bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.lead-article--hero .article-image {
+  aspect-ratio: 16 / 7;   /* wider crop for hero — cinematic feel */
+  max-height: 440px;
+}
+
+.lead-article--hero .category-label,
+.lead-article--hero h2,
+.lead-article--hero .excerpt,
+.lead-article--hero .meta {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.lead-article--hero .category-label {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.lead-article--hero h2 {
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+}
+
+.lead-article--hero .meta {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .lead-article--hero h2 { font-size: 1.6rem; }
+  .lead-article--hero .article-image { max-height: 240px; }
+}
+
 /* === Single Article === */
 .single-article {
   max-width: 720px;
@@ -1150,7 +1193,7 @@ img { max-width: 100%; height: auto; }
   font-style: italic;
 }
 
-/* === Fresh article badge + relative timestamp ═══════════════════════════ */
+/* === Fresh article badge === */
 .badge-fresh {
   display: inline-block;
   font-family: var(--font-sans);
@@ -1159,23 +1202,11 @@ img { max-width: 100%; height: auto; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #fff;
-  background: #e53e3e;           /* red — signals urgency/freshness */
+  background: var(--accent);
   padding: 0.15rem 0.5rem;
   border-radius: 2px;
+  margin-left: 0.5rem;
   vertical-align: middle;
-  margin-right: 0.35rem;
-  animation: badge-pulse 2.4s ease-in-out infinite;
-}
-
-@keyframes badge-pulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.75; }
-}
-
-/* Relative time label ("15 min sitten", "3 h sitten") */
-.meta-time {
-  color: var(--text-secondary);
-  font-size: 0.82rem;
 }
 
 /* === Cookie Consent Banner + Modal ════════════════════════════════════════ */
