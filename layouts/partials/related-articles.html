@@ -69,15 +69,16 @@
 {{- if lt (len $related) 3 -}}
   {{- $catCandidates := slice -}}
   {{- range $pool -}}
+    {{- $candidate := . -}}
     {{- $pageCats := .Params.categories | default slice -}}
     {{- if gt (len (intersect $currentCats $pageCats)) 0 -}}
       {{/* skip pages already in $related */}}
       {{- $alreadyIn := false -}}
       {{- range $related -}}
-        {{- if eq .Permalink $.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
+        {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
       {{- end -}}
       {{- if not $alreadyIn -}}
-        {{- $catCandidates = $catCandidates | append . -}}
+        {{- $catCandidates = $catCandidates | append $candidate -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
@@ -86,18 +87,19 @@
   {{- end -}}
 {{- end -}}
 
-{{/* ── Hard fallback: latest from same category ────────────────── */}}
+{{/* ── Hard fallback: latest posts (any category) ─────────────── */}}
 {{- if lt (len $related) 3 -}}
-  {{- $latestCat := where site.RegularPages "Section" "posts" -}}
-  {{- $latestCat  = $latestCat.ByDate.Reverse -}}
-  {{- range $latestCat -}}
+  {{- $latestAll := where site.RegularPages "Section" "posts" -}}
+  {{- $latestAll  = $latestAll.ByDate.Reverse -}}
+  {{- range $latestAll -}}
+    {{- $candidate := . -}}
     {{- if and (ne .Permalink $currentLink) (lt (len $related) 3) -}}
       {{- $alreadyIn := false -}}
       {{- range $related -}}
-        {{- if eq .Permalink $.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
+        {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
       {{- end -}}
       {{- if not $alreadyIn -}}
-        {{- $related = $related | append . -}}
+        {{- $related = $related | append $candidate -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
