@@ -11,12 +11,39 @@ cd "$PROJECT_DIR"
 # ── Deduplication lockfile guard ─────────────────────────────────────────────
 LOCK_FILE="$PIPELINE_DIR/.pipeline_lock"
 
+STALE_LOCK_MINS=30
+
 if [ -f "$LOCK_FILE" ]; then
     LOCK_PID=$(awk 'NR==1' "$LOCK_FILE")
     LOCK_TS=$(awk 'NR==2' "$LOCK_FILE")
     if kill -0 "$LOCK_PID" 2>/dev/null; then
-        echo "[auto_publish] Pipeline already running (PID $LOCK_PID, started $LOCK_TS) — exiting."
-        exit 0
+        # Check lock age — kill if stuck longer than STALE_LOCK_MINS
+        LOCK_AGE_SECS=$(python3 -c "
+from datetime import datetime, timezone
+import sys
+try:
+    ts = datetime.fromisoformat('" + $LOCK_TS + "'.replace('Z','+00:00'))
+    print(int((datetime.now(timezone.utc) - ts).total_seconds()))
+except: print(0)
+" 2>/dev/null || echo 0)
+        STALE_LOCK_SECS=$(( STALE_LOCK_MINS * 60 ))
+        if (( LOCK_AGE_SECS > STALE_LOCK_SECS )); then
+            LOCK_AGE_MIN=$(( LOCK_AGE_SECS / 60 ))
+            echo "[auto_publish] STUCK PIPELINE: PID $LOCK_PID running ${LOCK_AGE_MIN}min (limit: ${STALE_LOCK_MINS}min). Killing."
+            kill -TERM "$LOCK_PID" 2>/dev/null || true
+            sleep 2
+            kill -KILL "$LOCK_PID" 2>/dev/null || true
+            rm -f "$LOCK_FILE"
+            # Alert Discord
+            WEBHOOK="${DISCORD_PIPELINE_WEBHOOK:-}"
+            if [ -n "$WEBHOOK" ]; then
+                MSG="⚠️ **Stuck pipeline killed** — PID $LOCK_PID was running for ${LOCK_AGE_MIN} minutes (limit: ${STALE_LOCK_MINS}min). Lock removed, new run starting."
+                python3 -c "import json,urllib.request; urllib.request.urlopen(urllib.request.Request('$WEBHOOK', data=json.dumps({'content':'$MSG'}).encode(), headers={'Content-Type':'application/json'}, method='POST'), timeout=5)" 2>/dev/null || true
+            fi
+        else
+            echo "[auto_publish] Pipeline already running (PID $LOCK_PID, started $LOCK_TS, age ${LOCK_AGE_SECS}s) — exiting."
+            exit 0
+        fi
     else
         echo "[auto_publish] WARNING: Stale lock (PID $LOCK_PID no longer running, started $LOCK_TS). Removing."
         rm -f "$LOCK_FILE"
