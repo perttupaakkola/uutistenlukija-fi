@@ -59,9 +59,17 @@
   </div>
   {{ end }}
 
+  {{/* #19.2: Share buttons repeated at bottom of article */}}
+  <div class="social-share--bottom">
+    {{ partial "social-share.html" . }}
+  </div>
+
   {{ partial "related-articles.html" . }}
   {{ partial "most-read.html" . }}
 </article>
+
+{{/* #19.3: Read next — prominent next-article card */}}
+{{ partial "read-next.html" . }}
 
 {{/* Article prev/next navigation */}}
 {{ $section := .CurrentSection }}

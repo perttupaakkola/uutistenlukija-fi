@@ -7,18 +7,13 @@
 
 {{/* ── 1. CATEGORY QUICKNAV BAR (Sara spec #15) ──────────────────────────── */}}
 <nav class="cat-quicknav" aria-label="Kategoriat">
-  {{ $cats := slice
-    (dict "name" "Kotimaa"    "slug" "kotimaa"    "cls" "cat-kotimaa")
-    (dict "name" "Ulkomaat"   "slug" "ulkomaat"   "cls" "cat-ulkomaat")
-    (dict "name" "Talous"     "slug" "talous"     "cls" "cat-talous")
-    (dict "name" "Teknologia" "slug" "teknologia" "cls" "cat-teknologia")
-    (dict "name" "Urheilu"    "slug" "urheilu"    "cls" "cat-urheilu")
-    (dict "name" "Kulttuuri"  "slug" "kulttuuri"  "cls" "cat-kulttuuri")
-    (dict "name" "Tiede"      "slug" "tiede"      "cls" "cat-tiede")
-  }}
-  {{ range $cats }}
-  <a href="/categories/{{ .slug }}/" class="cat-quicknav__pill {{ .cls }}">{{ .name }}</a>
-  {{ end }}
+  <a href="/categories/kotimaa/"    class="cat-quicknav__pill cat-kotimaa">Kotimaa</a>
+  <a href="/categories/ulkomaat/"   class="cat-quicknav__pill cat-ulkomaat">Ulkomaat</a>
+  <a href="/categories/talous/"     class="cat-quicknav__pill cat-talous">Talous</a>
+  <a href="/categories/teknologia/" class="cat-quicknav__pill cat-teknologia">Teknologia</a>
+  <a href="/categories/urheilu/"    class="cat-quicknav__pill cat-urheilu">Urheilu</a>
+  <a href="/categories/kulttuuri/"  class="cat-quicknav__pill cat-kulttuuri">Kulttuuri</a>
+  <a href="/categories/tiede/"      class="cat-quicknav__pill cat-tiede">Tiede</a>
 </nav>
 
 {{/* ── 2. "JUURI NYT" STRIP — articles < 3h old (Sara spec #15) ─────────── */}}

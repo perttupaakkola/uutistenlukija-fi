@@ -1,0 +1,60 @@
+{{/* read-next.html — Prominent "Lue seuraavaksi" card after article ends.
+     Shows the next article in section as a full-width card with image, category,
+     and title. Falls back to most-recent article in the same category if no next.
+     Called from single.html after article content. */}}
+
+{{ $next := .NextInSection }}
+{{ $cat  := index (.Params.categories | default slice) 0 | default "" }}
+
+{{/* Fallback: first other article in same category */}}
+{{ if not $next }}
+  {{ $self := .Permalink }}
+  {{ range first 5 (where (where .Site.RegularPages "Section" "posts") ".Params.categories" "intersect" (slice $cat)) }}
+    {{ if and (not $next) (ne .Permalink $self) }}
+      {{ $next = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $next }}
+{{ $img   := .Params.image | default "" }}
+{{ $thumb := "" }}
+{{ if $img }}
+  {{ if hasPrefix $img "https://images.unsplash.com" }}
+    {{ if strings.Contains $img "?" }}
+      {{ $thumb = printf "%s&w=800&h=450&fit=crop&q=70&auto=format" $img }}
+    {{ else }}
+      {{ $thumb = printf "%s?w=800&h=450&fit=crop&q=70&auto=format" $img }}
+    {{ end }}
+  {{ else }}
+    {{ $thumb = $img }}
+  {{ end }}
+{{ end }}
+{{ $nextCat := index (.Params.categories | default slice) 0 | default "" }}
+<section class="read-next" aria-label="Lue seuraavaksi">
+  <p class="read-next__label">Lue seuraavaksi</p>
+  <a href="{{ .Permalink }}" class="read-next__card" rel="next">
+    <div class="read-next__img-wrap">
+      {{ if $thumb }}
+      <img src="{{ $thumb }}" alt="{{ .Title }}"
+           class="read-next__img article-card-thumb"
+           loading="lazy" decoding="async" width="800" height="450"
+           onload="this.classList.add('img-loaded')"
+           onerror="this.classList.add('img-loaded')">
+      {{ else }}
+      <div class="read-next__img-placeholder read-next__img-placeholder--{{ $nextCat | lower | urlize }}"></div>
+      {{ end }}
+    </div>
+    <div class="read-next__body">
+      {{ with $nextCat }}
+      <span class="category-label read-next__cat">{{ . }}</span>
+      {{ end }}
+      <h3 class="read-next__title">{{ .Title }}</h3>
+      {{ with .Params.description }}
+      <p class="read-next__excerpt">{{ . | truncate 120 }}</p>
+      {{ end }}
+      <span class="read-next__cta">Lue artikkeli →</span>
+    </div>
+  </a>
+</section>
+{{ end }}

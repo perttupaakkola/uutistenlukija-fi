@@ -2506,6 +2506,143 @@ pre code {
 }
 
 /* ── Article prev/next navigation ──────────────────────────────────────── */
+/* ============================================================
+   #19.2 — Share buttons at bottom of article
+   ============================================================ */
+.social-share--bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, #e5e5e5);
+}
+.social-share--bottom .share-buttons {
+  margin-top: 0;
+}
+
+/* ============================================================
+   #19.3 — Read next card (after article)
+   ============================================================ */
+.read-next {
+  margin: 2rem 0;
+}
+.read-next__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--text-muted, #888);
+  margin-bottom: 0.75rem;
+}
+.read-next__card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  text-decoration: none;
+  color: var(--text, #222);
+  background: var(--card-bg, var(--bg, #fff));
+  border: 1px solid var(--border, #e5e5e5);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.read-next__card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}
+.read-next__img-wrap {
+  flex: 0 0 240px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+  background: var(--border, #e5e5e5);
+}
+/* Shimmer on read-next image */
+.read-next__img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--border) 25%, color-mix(in srgb, var(--bg) 60%, var(--border) 40%) 50%, var(--border) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+.read-next__img-wrap:has(.img-loaded)::before {
+  opacity: 0;
+  animation: none;
+}
+.read-next__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.read-next__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--border, #e5e5e5);
+}
+.read-next__img-placeholder--kotimaa    { background: #3498db; }
+.read-next__img-placeholder--ulkomaat   { background: #e74c3c; }
+.read-next__img-placeholder--talous     { background: #f39c12; }
+.read-next__img-placeholder--teknologia { background: #8e44ad; }
+.read-next__img-placeholder--urheilu    { background: #27ae60; }
+.read-next__img-placeholder--kulttuuri  { background: #d35400; }
+.read-next__img-placeholder--tiede      { background: #16a085; }
+.read-next__body {
+  flex: 1;
+  padding: 1.25rem 1.25rem 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.read-next__cat {
+  font-size: 0.7rem;
+  align-self: flex-start;
+}
+.read-next__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+}
+.read-next__excerpt {
+  font-size: 0.875rem;
+  color: var(--text-muted, #666);
+  line-height: 1.5;
+  margin: 0;
+}
+.read-next__cta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent, #c0392b);
+  margin-top: auto;
+}
+@media (max-width: 600px) {
+  .read-next__card {
+    flex-direction: column;
+    gap: 0;
+  }
+  .read-next__img-wrap {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+  }
+  .read-next__body {
+    padding: 1rem;
+  }
+}
+:root:not([data-theme="light"]) .read-next__card {
+  background: var(--card-bg, #1e1e1e);
+  border-color: var(--border, #333);
+}
+:root:not([data-theme="light"]) .read-next__card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.40);
+}
+
+/* ============================================================ */
 .article-nav {
   display: flex;
   justify-content: space-between;
@@ -2948,229 +3085,6 @@ pre code {
 }
 
 /* pub-frequency-bar + load-more print rules consolidated into main @media print block above */
-
-/* ════════════════════════════════════════════════════════════════════════════
-   HOMEPAGE REDESIGN — Sara spec #15
-   1. Category quicknav bar
-   2. "Juuri nyt" strip
-   3. Lead article hero (spec15 enhancements)
-   4. Newsletter band
-   ════════════════════════════════════════════════════════════════════════════ */
-
-/* ── 1. Category quicknav bar ─────────────────────────────────────────────── */
-.cat-quicknav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1.25rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.cat-quicknav__pill {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.3em 0.85em;
-  border-radius: 999px;
-  color: #fff;
-  text-decoration: none;
-  transition: opacity 0.15s, transform 0.1s;
-  line-height: 1.3;
-}
-.cat-quicknav__pill:hover { opacity: 0.85; transform: translateY(-1px); color: #fff; }
-
-/* Category colors — match .category-* pills */
-.cat-quicknav__pill.cat-kotimaa    { background: #1f6feb; }
-.cat-quicknav__pill.cat-ulkomaat   { background: #8e44ad; }
-.cat-quicknav__pill.cat-talous     { background: #1f8f5f; }
-.cat-quicknav__pill.cat-teknologia { background: #0f766e; }
-.cat-quicknav__pill.cat-urheilu    { background: #d97706; }
-.cat-quicknav__pill.cat-kulttuuri  { background: #c2410c; }
-.cat-quicknav__pill.cat-tiede      { background: #2563eb; }
-
-/* ── 2. "Juuri nyt" strip ─────────────────────────────────────────────────── */
-.juuri-nyt-strip {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding: 0.75rem 1rem;
-  background: color-mix(in srgb, #e53e3e 5%, var(--bg) 95%);
-  border: 1px solid color-mix(in srgb, #e53e3e 20%, var(--border) 80%);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.juuri-nyt-label {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #e53e3e;
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding-top: 0.2rem;
-}
-
-.juuri-nyt-dot {
-  display: inline-block;
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: #e53e3e;
-  animation: pulse-dot 1.5s ease-in-out infinite;
-}
-
-.juuri-nyt-scroll {
-  display: flex;
-  gap: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  flex: 1;
-}
-.juuri-nyt-scroll::-webkit-scrollbar { display: none; }
-
-.juuri-nyt-item {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  padding: 0.2rem 0.75rem 0.2rem 0;
-  border-right: 1px solid var(--border);
-  margin-right: 0.75rem;
-  text-decoration: none;
-  color: var(--text);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.juuri-nyt-item:last-child { border-right: none; margin-right: 0; }
-.juuri-nyt-item:hover { color: var(--accent); }
-
-.juuri-nyt-cat {
-  font-family: var(--font-sans);
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.1em 0.4em;
-  border-radius: 3px;
-  color: #fff;
-  flex-shrink: 0;
-}
-.juuri-nyt-cat--kotimaa    { background: #1f6feb; }
-.juuri-nyt-cat--ulkomaat   { background: #8e44ad; }
-.juuri-nyt-cat--talous     { background: #1f8f5f; }
-.juuri-nyt-cat--teknologia { background: #0f766e; }
-.juuri-nyt-cat--urheilu    { background: #d97706; }
-.juuri-nyt-cat--kulttuuri  { background: #c2410c; }
-.juuri-nyt-cat--tiede      { background: #2563eb; }
-
-.juuri-nyt-title {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 600;
-  max-width: 280px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.juuri-nyt-time {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--text-secondary);
-  flex-shrink: 0;
-}
-/* freshness badge inside strip — keep compact */
-.juuri-nyt-time .badge-fresh {
-  font-size: 0.58rem;
-  padding: 0.08rem 0.35rem;
-  margin-left: 0;
-}
-
-/* Mobile: strip becomes vertical scroll on very narrow screens */
-@media (max-width: 480px) {
-  .juuri-nyt-strip { flex-direction: column; gap: 0.5rem; }
-  .juuri-nyt-scroll { flex-direction: column; overflow-x: visible; gap: 0.4rem; }
-  .juuri-nyt-item { white-space: normal; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-right: 0; margin-bottom: 0.2rem; }
-  .juuri-nyt-item:last-child { border-bottom: none; }
-  .juuri-nyt-title { max-width: 100%; }
-}
-
-/* ── 3. Lead article hero (spec15 enhancements) ───────────────────────────── */
-.lead-article--spec15 {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.lead-article__body {
-  padding: 1rem 0 0;
-}
-
-.lead-article__cat {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
-
-.lead-article__headline {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  line-height: 1.15;
-  font-weight: 900;
-  margin-bottom: 0.65rem;
-  letter-spacing: -0.02em;
-}
-
-.lead-article__headline a {
-  color: var(--text);
-  text-decoration: none;
-}
-.lead-article__headline a:hover { color: var(--accent); }
-
-.lead-article__excerpt {
-  font-size: 1.05rem;
-  max-width: 680px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 0.6rem;
-}
-
-.lead-article__meta {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: var(--text-muted, #888);
-}
-
-/* ── 4. Newsletter band ───────────────────────────────────────────────────── */
-.newsletter-band {
-  margin: 2rem 0;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.newsletter-band .newsletter-cta {
-  margin: 0;              /* override any default margins */
-  border-radius: 8px;
-  border-left: none;      /* let the band container provide visual context */
-  border: 2px solid color-mix(in srgb, var(--accent) 25%, var(--border) 75%);
-  padding: 1.5rem 2rem;
-}
-
-@media (max-width: 600px) {
-  .newsletter-band .newsletter-cta { padding: 1.1rem 1rem; }
-}
-
-/* Dark mode adjustments for new components */
-[data-theme="dark"] .juuri-nyt-strip {
-  background: color-mix(in srgb, #e53e3e 8%, var(--bg) 92%);
-  border-color: color-mix(in srgb, #e53e3e 25%, var(--border) 75%);
-}
-[data-theme="dark"] .cat-quicknav { border-color: var(--border); }
 
 /* ── Sponsored content ──────────────────────────────────────────────────────── */
 
