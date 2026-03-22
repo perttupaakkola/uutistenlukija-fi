@@ -96,7 +96,7 @@
       var anchor = e.target.closest('a[href]');
       if (!anchor) return;
       var href = anchor.getAttribute('href') || '';
-      if (href.indexOf('/kategoria/') !== -1) {
+      if (href.indexOf('/categories/') !== -1 || href.indexOf('/kategoria/') !== -1) {
         var parts = href.replace(/\/$/, '').split('/');
         var category = parts[parts.length - 1] || 'unknown';
         _gtag('event', 'category_navigate', {

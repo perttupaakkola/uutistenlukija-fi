@@ -74,6 +74,30 @@ class StepTimer:
         return d
 
 
+def _ping_search_engines():
+    """
+    Notify Google and Bing that the sitemap has been updated.
+    Fire-and-forget: errors are logged but never raise.
+    Both services accept pings via GET with the sitemap URL as a query parameter.
+    """
+    import urllib.parse
+    sitemap_url = "https://uutistenlukija.fi/sitemap.xml"
+    news_sitemap_url = "https://uutistenlukija.fi/news-sitemap.xml"
+    endpoints = [
+        f"https://www.google.com/ping?sitemap={urllib.parse.quote(sitemap_url, safe='')}",
+        f"https://www.google.com/ping?sitemap={urllib.parse.quote(news_sitemap_url, safe='')}",
+        f"https://www.bing.com/ping?sitemap={urllib.parse.quote(sitemap_url, safe='')}",
+    ]
+    for url in endpoints:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "uutistenlukija-pipeline/1.0"})
+            with urllib.request.urlopen(req, timeout=8) as resp:
+                print(f"[sitemap-ping] {resp.status} → {url[:70]}")
+        except Exception as e:
+            # Non-fatal — search engines don't require pings
+            print(f"[sitemap-ping] WARNING: {url[:60]}: {e}")
+
+
 def log_run(stage: str, data: dict):
     """Log pipeline run data (legacy per-stage files)."""
     os.makedirs(LOG_DIR, exist_ok=True)
@@ -255,6 +279,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                 _gen_dashboard()
             except Exception as _dash_err:
                 print(f"[dashboard] WARNING: generation failed: {_dash_err}")
+            _ping_search_engines()
             # Regenerate critical CSS partial
             try:
                 import subprocess, sys as _sys
@@ -517,6 +542,25 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                     else:
                         record_failure("kie_api")
 
+            # Pass 4: Rescue — stock photo fallback for any AI-gen failures
+            # Articles that failed AI gen (Kie.ai timeout/error) get a second Pexels attempt
+            still_no_image = [a for a in rewritten if not a.get("image") or a.get("image_category_fallback")]
+            if still_no_image and _pexels_key and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
+                print(f"[rescue] {len(still_no_image)} articles still without image — Pexels rescue pass...")
+                _clear_fallback(still_no_image)
+                still_no_image = pexels_fetch_images(still_no_image, delay=0.3)
+                rescue_count = sum(1 for a in still_no_image if a.get("image") and not a.get("image_category_fallback"))
+                if rescue_count:
+                    print(f"[rescue] {rescue_count}/{len(still_no_image)} rescued via Pexels")
+                    pexels_count += rescue_count
+            elif still_no_image and _unsplash_key and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
+                print(f"[rescue] {len(still_no_image)} articles still without image — Unsplash rescue pass...")
+                still_no_image = unsplash_fetch_images(still_no_image, delay=0.5)
+                rescue_count = sum(1 for a in still_no_image if a.get("image") and not a.get("image_category_fallback"))
+                if rescue_count:
+                    print(f"[rescue] {rescue_count}/{len(still_no_image)} rescued via Unsplash")
+                    unsplash_count += rescue_count
+
         except Exception as e:
             errors.append(f"images: {e}")
             print(f"[images] Kuvien haku epäonnistui: {e}")
@@ -632,6 +676,8 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                     print(f"[critical-css] {_crit.stdout.strip()}")
             except Exception as _crit_err:
                 print(f"[critical-css] WARNING: regeneration failed: {_crit_err}")
+            # Ping search engines that a new sitemap is available
+            _ping_search_engines()
 
     steps["build"] = t_build.to_dict()
 
