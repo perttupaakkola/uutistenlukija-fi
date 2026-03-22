@@ -22,7 +22,7 @@
 </nav>
 
 {{/* ── 2. "JUURI NYT" STRIP — articles < 3h old (Sara spec #15) ─────────── */}}
-{{ $cutoff := now.Add (duration "-3h") }}
+{{ $cutoff := now.Add (duration "h" -3) }}
 {{ $fresh := slice }}
 {{ range $sorted }}
   {{ if gt .Date $cutoff }}{{ $fresh = $fresh | append . }}{{ end }}
