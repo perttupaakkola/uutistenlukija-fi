@@ -25,11 +25,12 @@
   {{/* pub-frequency bar, highlights row, focus styles.                  */}}
   {{ partial "critical-css.html" . }}
 
-  {{/* === Full stylesheet — deferred async load === */}}
-  {{/* media="print" trick: browser fetches without blocking render,    */}}
-  {{/* onload swaps it to media="all". <noscript> is the no-JS safety net. */}}
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  {{/* === Full stylesheet — deferred async load via media=print trick ===   */}}
+  {{/* Hugo --minify strips onload attrs, so we use media="print" instead:   */}}
+  {{/* browser fetches without blocking render; JS in <head> swaps to "all". */}}
+  <link id="main-stylesheet" rel="stylesheet" href="/css/style.css" media="print">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <script>document.getElementById('main-stylesheet').media='all'</script>
 
   {{/* === Hero image preload hint (article pages only) === */}}
   {{/* Tells the browser to start fetching the LCP image during head parsing,

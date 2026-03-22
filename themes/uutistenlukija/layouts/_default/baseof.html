@@ -54,7 +54,7 @@
     .category-kulttuuri{background:#c2410c}
     .category-tiede{background:#2563eb}
     /* Article card shell */
-    .article-card{background:var(--card-bg);border:1px solid var(--border);padding:1.5rem;transition:box-shadow 0.2s ease,transform 0.2s ease}
+    .article-card{background:var(--card-bg);border:1px solid var(--border);padding:1.5rem;transition:box-shadow 0.2s}
     .articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin:2rem 0}
     /* Highlights row */
     .highlights-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:1.5rem 0;border-bottom:2px solid var(--border);margin-bottom:2rem}
@@ -65,9 +65,10 @@
     :focus:not(:focus-visible){outline:none}
   </style>
 
-  {{/* === Full stylesheet — async load === */}}
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  {{/* === Full stylesheet — async load via media=print trick === */}}
+  <link id="main-stylesheet" rel="stylesheet" href="/css/style.css" media="print">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <script>document.getElementById('main-stylesheet').media='all'</script>
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" hreflang="fi" href="{{ .Permalink }}">
   <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
