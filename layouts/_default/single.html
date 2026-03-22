@@ -21,7 +21,7 @@
   {{ partial "toc.html" . }}
   <div class="article-meta">
     {{ .Date | time.Format "2.1. klo 15:04" }}
-    {{- $diffSec := sub .Lastmod.Unix .Date.Unix -}}
+    {{- $diffSec := math.Sub .Lastmod.Unix .Date.Unix -}}
     {{- if gt $diffSec 3600 }}
     · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty: {{ .Lastmod | time.Format "2.1.2006 klo 15:04" }}</span>
     {{- end }}
