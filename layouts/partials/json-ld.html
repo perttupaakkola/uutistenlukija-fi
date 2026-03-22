@@ -82,10 +82,14 @@
 {{ $sections := .Params.categories | default (slice) }}
 {{ $articleSection := index $sections 0 | default "" }}
 
+{{/* Headline: Google recommends <=110 chars for NewsArticle */}}
+{{ $headline := .Title }}
+{{ if gt (len $headline) 110 }}{{ $headline = printf "%s…" (substr $headline 0 107) }}{{ end }}
+
 {{ $schema := dict
     "@context" "https://schema.org"
     "@type" "NewsArticle"
-    "headline" .Title
+    "headline" $headline
     "url" .Permalink
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
     "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
@@ -101,7 +105,7 @@
     )
     "articleSection" $articleSection
     "inLanguage" "fi"
-    "isAccessibleForFree" "true"
+    "isAccessibleForFree" true
 }}
 <script type="application/ld+json">
 {{ $schema | jsonify (dict "indent" "  ") | safeJS }}

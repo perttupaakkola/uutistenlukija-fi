@@ -20,10 +20,18 @@ keywords:
   - "talous uutiset"
   - "suomen talous uutiset"
 ---
-Valtiovarainministeriön kansantalousosaston päällikkö Mikko Spolander arvioi suorasanaisesti ministeriön ennustevirheitä. Spolander toteaa, että ministeriö on viime vuosina yliarvioinut yksityisen kulutuksen kasvun useassa ennusteessa.
+Valtiovarainministeriön ylijohtaja myöntää: ennusteet ovat epäonnistuneet toistuvasti
 
-Spolanderin mukaan ministeriö ei osannut ennakoida, kuinka pitkään pandemian, Euroopan sodan ja energiakriisin vaikutukset kestivät. Nämä peräkkäiset kriisit muuttivat kuluttajien käyttäytymistä tavalla, jota perinteiset ennustemallit eivät tavoittaneet.
+Valtiovarainministeriön kansantalousosaston päällikkö Mikko Spolander on avannut suunsa ministeriön ennusteiden epäonnistumisesta, mikä on herättänyt huomiota niin asiantuntijoiden kuin kansalaisten keskuudessa. Spolanderin mukaan ministeriö on useaan otteeseen arvioinut yksityisen kulutuksen kasvua liian optimistisesti, mikä on johtanut merkittäviin virhearvioihin talouspolitiikassa. Tällaiset virheet eivät ole vain tilastollisia epäonnistumisia, vaan ne voivat heijastua suoraan hallituksen talouspolitiikkaan ja budjettivalmisteluun.
 
-Itsekritiikki on valtiovarainministeriöstä harvinaista. Ministeriön ennusteet ohjaavat hallituksen talouspolitiikkaa ja budjettivalmistelua, joten virhearviot voivat heijastua suoraan poliittisiin päätöksiin. Kun kulutuksen kasvu arvioidaan todellista suuremmaksi, myös verotulot jäävät odotettua pienemmiksi.
+## Kriisit ja niiden vaikutukset
 
-Julkinen itsearviointi herättää kysymyksen siitä, miten ennustemalleja pitäisi päivittää, jotta ne kestävät paremmin usean samanaikaisen kriisin vaikutukset.
+Spolander nostaa esiin, että ministeriö ei ole osannut ennakoida kriisien pitkäkestoisia vaikutuksia. Koronaviruspandemia, Venäjän hyökkäys Ukrainaan ja sen myötä syntynyt energiakriisi ovat kaikki muuttaneet kuluttajien käyttäytymistä tavalla, jota perinteiset ennustemallit eivät ole kyenneet ennakoimaan. Esimerkiksi pandemian aikana monet kuluttajat muuttuivat varovaisemmiksi ja alkoivat säästää enemmän, mikä puolestaan vaikutti kulutuskäyttäytymiseen. Samalla sodan ja energiakriisin aiheuttamat epävarmuustekijät ovat luoneet uusia haasteita ja muuttaneet markkinoiden dynamiikkaa.
+
+Ministeriön itsekritiikki on harvinaista, sillä ennusteet ovat usein olleet keskeisiä päätöksenteossa. Kun yksityisen kulutuksen kasvu on arvioitu todellista suuremmaksi, se on johtanut siihen, että valtiolle kertyneet verotulot ovat jääneet odotettua pienemmiksi. Tämä puolestaan on vaikuttanut valtion taloudellisiin resursseihin ja mahdollisuuksiin investoida tärkeisiin palveluihin, kuten terveydenhuoltoon ja koulutukseen.
+
+## Ennustemallien päivittäminen
+
+Spolanderin kommentit herättävät kysymyksiä siitä, miten ennustemalleja voitaisiin kehittää niin, että ne pystyvät paremmin ottamaan huomioon useiden samanaikaisten kriisien vaikutukset. Nykyiset mallit saattavat olla liian yksinkertaisia tai ne eivät huomioi riittävästi kuluttajien käyttäytymisen muutoksia. Tämä on erityisen tärkeää tulevaisuutta ajatellen, sillä talous voi kohdata uusia haasteita, kuten ilmastonmuutoksen aiheuttamia vaikutuksia tai globaaleja talouskriisejä.
+
+Valtiovarainministeriön on nyt aika miettiä, kuinka se voi parantaa ennustamisprosessiaan ja varmistaa, että se pystyy reagoimaan muuttuviin olosuhteisiin. Tämä voisi tarkoittaa esimerkiksi laajempaa tietojen keruuta, uusien analyysimenetelmien käyttöönottoa tai jopa yhteistyötä ulkopuolisten asiantuntijoiden kanssa. Vain näin ministeriö voi varmistaa, että se kykenee ohjaamaan talouspolitiikkaansa kestävästi ja tehokkaasti myös tulevaisuudessa.
