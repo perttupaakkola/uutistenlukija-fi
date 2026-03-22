@@ -30,4 +30,18 @@ keywords:
   - "uusimmat kotimaan uutiset"
 ---
 
-Tytti Yli-Viikari jatkaa työskentelyä J.L. Runebergin kotimuseossa kesäkauden ajan. Hän on aiemmin toiminut valtiontalouden tarkastusviraston pääjohtajana. Nyt hänet on valittu uudelleen museo-oppaaksi asiakaspalvelu-, kassa- ja opastehtäviin. Yli-Viikari jatkaa samalla vastuullisella paikallaan, vaikka hänellä on kokemusta julkiselta sektorilta.
+Tytti Yli-Viikari saa jatkoa museo-oppaana
+
+Tytti Yli-Viikari, tunnettu aikaisemmasta roolistaan valtiontalouden tarkastusviraston pääjohtajana, jatkaa kesäkauden ajan J.L. Runebergin kotimuseon museo-oppaana. Hänen valintansa uuteen rooliin on herättänyt kiinnostusta ja keskustelua, sillä Yli-Viikarin aiempi kokemus julkisella sektorilla tuo mielenkiintoisen näkökulman museo- ja kulttuuripalveluiden asiakaspalvelutehtäviin. 
+
+Yli-Viikari on ollut osa J.L. Runebergin kotimuseon tiimiä aiemminkin, ja hänen asiantuntemuksensa sekä opastustaitonsa ovat saaneet kiitosta vierailijoilta. Museon tehtävänä on tuoda esiin J.L. Runebergerin merkitystä suomalaiselle kulttuurille ja kirjallisuudelle, ja Yli-Viikarin rooli opastajana on keskeinen tämän tavoitteen saavuttamisessa. Hänen kykynsä yhdistää kulttuuriperintö ja asiakaspalvelu on erityisen tärkeää, kun museovieraat etsitään yhä enemmän elämyksiä ja syvällistä tietoa vierailuiltaan.
+
+## Museon taustaa ja merkitys
+
+J.L. Runebergin kotimuseo sijaitsee Porvoossa, ja se on perustettu vuonna 1904. Museo on omistettu kansalliskirjailija Johan Ludvig Runebergille, jonka teokset ovat olleet keskeisiä suomalaisen kirjallisuuden kehitykselle. Runebergin töissä yhdistyvät kansalliset teemat ja romanttinen tyyli, ja hänen vaikutuksensa näkyy edelleen suomalaisessa kulttuurissa. Museossa järjestetään myös erilaisia tapahtumia ja näyttelyitä, jotka tuovat esiin Runebergin elämää ja tuotantoa.
+
+Yli-Viikarin valinta museo-oppaaksi ei ole ainoastaan henkilökohtainen voitto, vaan se heijastaa myös laajempaa kehitystä kulttuurialalla. Julkisen sektorin ja kulttuuripalveluiden välinen yhteistyö on yhä tärkeämpää, kun resursseja on rajallisesti ja kulttuurin rooli yhteiskunnassa muuttuu. Yli-Viikarin taustalla on selkeä ymmärrys siitä, kuinka tärkeää on tuoda esiin kulttuuriperintöä ja tarjota samalla laadukasta asiakaspalvelua.
+
+Tytti Yli-Viikarin oma näkökulma museo-oppaana tulee varmasti rikastuttamaan kävijöiden kokemuksia. Hänen asiantuntemuksensa yhdistettynä kykyyn kommunikoida tehokkaasti tekee hänestä erinomaisen oppaan. Museo-opastuksissa Yli-Viikari voi hyödyntää laajaa tietämystään suomalaisesta kulttuurista ja historiasta, mikä tuo lisäarvoa vierailijoiden kokemuksiin.
+
+Tulevat kesäkaudet näyttävät, miten Yli-Viikarin työ vaikuttaa museon kävijätilastoihin ja yleiseen kiinnostukseen J.L. Runebergin tuotantoa kohtaan. On selvää, että Yli-Viikarin valinta museo-oppaaksi on positiivinen askel sekä hänelle itselleen että koko museolle.

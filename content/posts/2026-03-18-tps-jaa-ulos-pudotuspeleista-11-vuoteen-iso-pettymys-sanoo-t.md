@@ -30,4 +30,14 @@ keywords:
   - "uusimmat urheilu-uutiset"
 ---
 
-TPS:n toimitusjohtaja Aki Holma on ilmaissut tyytymättömyytensä seuran tämän kauden tulokseen. Joukkueen odotettiin olevan potentiaalinen playoff-joukkue. Pettymys on suuri, etenkin seuran historian valossa. Holma totesi, että tavoitteet ja odotukset olivat korkealla, mutta lopputulos jäi saavuttamatta.
+## TPS jää ulos pudotuspeleistä 11 vuoteen: 'Iso pettymys', sanoo toimitusjohtaja
+
+TPS:n toimitusjohtaja Aki Holma on ilmaissut tyytymättömyytensä seuran tämän kauden tulokseen. Joukkueen odotettiin olevan potentiaalinen playoff-joukkue, mutta lopputulos oli pettymys, joka näkyy selvästi niin fanien kuin seuran johdon keskuudessa. Holma totesi, että tavoitteet ja odotukset olivat korkealla, mutta lopputulos jäi saavuttamatta. Tämä tarkoittaa, että TPS jää pudotuspelien ulkopuolelle ensimmäistä kertaa 11 vuoteen, mikä on merkittävä muutos seuran historiassa.
+
+TPS:n kausi alkoi lupaavasti, ja joukkueen kokoonpano herätti toiveita menestyksestä. Mukana oli nuoria lupauksia sekä kokeneita pelaajia, jotka olisivat voineet nostaa joukkueen playoff-tasolle. Kuitenkin kauden aikana nähtiin useita haasteita, kuten loukkaantumiset ja epätasaiset esitykset, jotka vaikuttivat joukkueen suoritukseen. Holma myönsi, että seuran sisällä oli paljon keskustelua siitä, miten joukkueen suorituskykyä voitaisiin parantaa, mutta valitettavasti toimenpiteet eivät tuottaneet toivottuja tuloksia.
+
+Seuran faneille tämä on erityisen vaikeaa aikaa, sillä TPS:llä on pitkä ja arvokas historia suomalaisessa jääkiekossa. Olosuhteet ovat muuttuneet, ja monet fanit ovat ilmaisseet huolensa seuran tulevaisuudesta. TPS on perinteinen seura, joka on voittanut useita mestaruuksia, ja nyt pudotuspelien ulkopuolelle jääminen on herättänyt kysymyksiä siitä, mihin suuntaan seura on matkalla. Holma sanoi, että seura on sitoutunut tekemään tarvittavat muutokset ja parannukset, jotta tämä ei toistu tulevaisuudessa.
+
+Tulevaisuuden suunnitelmat ovatkin keskiössä keskusteluissa. Holma painotti, että seuran strategiaa on tarkasteltava uudelleen, ja on tärkeää löytää oikeat palaset, jotka tukevat joukkueen kehittämistä. Tämä voi tarkoittaa uusia pelaajahankintoja, valmennusmuutoksia tai nuorten pelaajien enemmän esille tuomista. TPS:n on myös tärkeää saada fanit takaisin tuekseen, ja tämä voi vaatia aikaa ja kärsivällisyyttä.
+
+Kaiken kaikkiaan TPS:n jääminen pudotuspelien ulkopuolelle on herättänyt laajaa keskustelua jääkiekkoyhteisössä. Seura on jo vuosia ollut yksi Suomen jääkiekkokentän merkkiteoksista, ja nyt sen on kohdattava tosiasiat sekä rakennettava tulevaisuutta uudelleen. Aki Holma ja koko organisaatio ovat tietoisia siitä, että tulevat päätökset voivat vaikuttaa seuran tulevaisuuteen pitkällä aikavälillä, ja he ovat valmiita tekemään tarvittavat muutokset päästäkseen takaisin voittavalle tielle.
