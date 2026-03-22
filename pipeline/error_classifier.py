@@ -152,9 +152,11 @@ def classify_run(run: dict, log_text: str = "") -> str:
     # ── Rewriter timeout ──────────────────────────────────────────────────────
     rewriter_step = steps.get("rewriter", {})
     rewriter_dur  = rewriter_step.get("duration_sec", 0)
-    timeout_patterns = ["timeout", "timed out", "readtimeouterror",
-                        "openai.*timeout", "connection.*timed"]
-    if any(p in log_lower for p in timeout_patterns):
+    # Note: avoid matching "0 skipped due to timeout" from scanner summary line
+    timeout_patterns = ["rewriter.*timeout", "rewriter.*timed out", "readtimeouterror",
+                        "openai.*timeout", "connection.*timed", "llm.*timeout",
+                        "api.*timed out", "request.*timed out"]
+    if any(re.search(p, log_lower) for p in timeout_patterns):
         return "rewriter_timeout"
     if rewriter_dur and rewriter_dur > 115:
         return "rewriter_timeout"
