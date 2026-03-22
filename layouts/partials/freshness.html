@@ -1,0 +1,34 @@
+{{/*
+  freshness.html — "Juuri nyt" freshness badge + relative timestamp.
+
+  Usage:
+    {{ partial "freshness.html" . }}
+
+  Outputs:
+    - If article is < 2h old:   <span class="badge-fresh">Juuri nyt</span>  "15 min sitten"
+    - If article is 2–24h old:  "3 h sitten"
+    - If article is > 24h old:  normal Finnish date ("22.3. klo 14:05")
+
+  Uses Hugo's built-in time.Duration methods (.Minutes, .Hours).
+  Rendered at build time — accurate to last deploy.
+*/}}
+
+{{- $age      := now.Sub .Date -}}
+{{- $ageMin   := int $age.Minutes -}}
+{{- $ageHours := int $age.Hours -}}
+
+{{- if lt $ageMin 120 -}}
+  {{/* < 2 hours: badge + relative time */}}
+  <span class="badge-fresh" aria-label="Julkaistu juuri">Juuri nyt</span>
+  {{- if lt $ageMin 60 -}}
+    <span class="meta-time">{{ $ageMin }} min sitten</span>
+  {{- else -}}
+    <span class="meta-time">{{ $ageHours }} h sitten</span>
+  {{- end -}}
+{{- else if lt $ageHours 24 -}}
+  {{/* 2–24 hours: hour relative, no badge */}}
+  <span class="meta-time">{{ $ageHours }} h sitten</span>
+{{- else -}}
+  {{/* > 24 hours: absolute Finnish date */}}
+  <span class="meta-time">{{ .Date | time.Format "2.1. klo 15:04" }}</span>
+{{- end -}}

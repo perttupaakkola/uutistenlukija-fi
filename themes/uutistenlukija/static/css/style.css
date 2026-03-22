@@ -1150,7 +1150,7 @@ img { max-width: 100%; height: auto; }
   font-style: italic;
 }
 
-/* === Fresh article badge === */
+/* === Fresh article badge + relative timestamp ═══════════════════════════ */
 .badge-fresh {
   display: inline-block;
   font-family: var(--font-sans);
@@ -1159,11 +1159,23 @@ img { max-width: 100%; height: auto; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #fff;
-  background: var(--accent);
+  background: #e53e3e;           /* red — signals urgency/freshness */
   padding: 0.15rem 0.5rem;
   border-radius: 2px;
-  margin-left: 0.5rem;
   vertical-align: middle;
+  margin-right: 0.35rem;
+  animation: badge-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.75; }
+}
+
+/* Relative time label ("15 min sitten", "3 h sitten") */
+.meta-time {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
 }
 
 /* === Cookie Consent Banner + Modal ════════════════════════════════════════ */
