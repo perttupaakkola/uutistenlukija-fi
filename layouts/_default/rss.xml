@@ -1,14 +1,33 @@
+{{- /*
+  rss.xml — Enhanced RSS 2.0 feed for uutistenlukija.fi
+
+  Features:
+  - Full article content via <content:encoded> (CDATA, not escaped)
+  - Article hero images via <media:content> + <media:thumbnail>
+  - <atom:link rel="self"> for feed autodiscovery
+  - Works for home feed (all posts) and category/taxonomy feeds
+  - Sorted newest-first, capped at 50 items
+*/ -}}
+
+{{- /* For home feed: use site.RegularPages to get all posts.
+       For category/tag/section feeds: use the context's .Pages. */ -}}
 {{- $pagesAll := .Pages -}}
-{{- /* Filter out static/utility pages: only include items with valid dates and real content */ -}}
+{{- if eq .Kind "home" -}}
+  {{- $pagesAll = .Site.RegularPages -}}
+{{- end -}}
+
+{{- /* Filter: only real articles with dates, in the posts section */ -}}
 {{- $pages := slice -}}
 {{- range $pagesAll -}}
-  {{- if and (not .Date.IsZero) (ne .Title "Posts") (ne .Section "") -}}
+  {{- if and (not .Date.IsZero) (eq .Section "posts") -}}
     {{- $pages = $pages | append . -}}
   {{- end -}}
 {{- end -}}
-{{- $pages = $pages | first 50 -}}
+{{- $pages = $pages.ByDate.Reverse | first 50 -}}
+
 {{- $title := .Title | default .Site.Title -}}
-{{- $desc := .Description | default .Site.Params.description -}}
+{{- $desc  := .Description | default .Site.Params.description -}}
+{{- $selfURL := .Permalink | default .Site.BaseURL -}}
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
@@ -17,14 +36,14 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>{{ $title | html }}</title>
-    <link>{{ .Permalink }}</link>
-    <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml"/>
+    <link>{{ .Site.BaseURL }}</link>
+    <atom:link href="{{ $selfURL }}index.xml" rel="self" type="application/rss+xml"/>
     <description>{{ $desc | html }}</description>
     <language>fi</language>
     <managingEditor>toimitus@uutistenlukija.fi (Uutistenlukija)</managingEditor>
     <webMaster>toimitus@uutistenlukija.fi (Uutistenlukija)</webMaster>
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 +0000" }}</lastBuildDate>
-    <ttl>60</ttl>
+    <ttl>15</ttl>
     <image>
       <url>{{ "/images/logo.png" | absURL }}</url>
       <title>{{ .Site.Title | html }}</title>
@@ -33,23 +52,28 @@
       <height>144</height>
     </image>
     {{ range $pages }}
-    {{- $itemDesc := .Description | default (.Summary | plainify | truncate 280) -}}
+    {{- $itemDesc  := .Description | default (.Summary | plainify | truncate 280) -}}
     {{- $itemImage := .Params.image | default "" -}}
+    {{- $itemThumb := .Params.image_thumb | default $itemImage -}}
     <item>
       <title>{{ .Title | html }}</title>
       <link>{{ .Permalink }}</link>
       <guid isPermaLink="true">{{ .Permalink }}</guid>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 +0000" }}</pubDate>
       <dc:creator>{{ .Params.author | default "Uutistenlukija" }}</dc:creator>
-      {{ range .Params.categories }}<category>{{ . | html }}</category>
+      {{ range .Params.categories -}}<category>{{ . | html }}</category>
       {{ end -}}
       <description>{{ $itemDesc | html }}</description>
-      {{ with .Content }}<content:encoded><![CDATA[{{ . }}]]></content:encoded>{{ end }}
-      {{ with $itemImage -}}
-      <media:content url="{{ . | absURL }}" medium="image">
+      {{- with .Content }}
+      <content:encoded><![CDATA[{{ . | safeHTML }}]]></content:encoded>
+      {{- end }}
+      {{- with $itemImage }}
+      <media:content url="{{ . | absURL }}" medium="image" width="1080" height="608">
         <media:title type="plain">{{ $.Title | html }}</media:title>
       </media:content>
-      <media:thumbnail url="{{ . | absURL }}"/>
+      {{- end }}
+      {{- with $itemThumb }}
+      <media:thumbnail url="{{ . | absURL }}" width="400" height="225"/>
       {{- end }}
     </item>
     {{ end }}
