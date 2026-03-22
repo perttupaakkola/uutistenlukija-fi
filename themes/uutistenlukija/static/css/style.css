@@ -49,11 +49,9 @@ html {
   --bg: #fafaf8;
   --text: #1a1a1a;
   --text-secondary: #555;
-  --text-muted: #777;
   --accent: #c0392b;
   --border: #e0ddd8;
   --card-bg: #fff;
-  --surface: #f5f4f0;
   --max-width: 1100px;
   --font-serif: 'Georgia', 'Times New Roman', serif;
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -64,11 +62,9 @@ html {
   --bg: #1a1a1a;
   --text: #e8e6e3;
   --text-secondary: #a0a0a0;
-  --text-muted: #888;
   --accent: #e74c3c;
   --border: #333;
   --card-bg: #242424;
-  --surface: #2a2a2a;
 }
 
 /* ── OS-level dark mode (no JS, no toggle) ──────────────────────────────────
@@ -80,11 +76,9 @@ html {
     --bg: #1a1a1a;
     --text: #e8e6e3;
     --text-secondary: #a0a0a0;
-    --text-muted: #888;
     --accent: #e74c3c;
     --border: #333;
     --card-bg: #242424;
-    --surface: #2a2a2a;
   }
 
   /* Elements that can't use CSS vars need explicit overrides */
@@ -301,25 +295,13 @@ img { max-width: 100%; height: auto; }
   color: #fff;
 }
 
-/* === Category Pills === */
-/* Fix #3: category-label base — system-sans badge style (was inheriting Georgia 18px) */
-.category-label {
-  font-family: var(--font-sans);
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.22rem 0.65rem;
-  border-radius: 999px;
-  margin-bottom: 0.6rem;
-  line-height: 1.1;
-  color: #fff;
-  background: var(--accent);
-  min-height: 28px;   /* tap target */
-}
-
+/* === Category Pills / Labels ===
+   Shared base: font-sans badge. 48px min touch target (Sara mobile spec).
+   .category-label = inline article badge (no link)
+   .category-pill  = linked badge (category page, filters)
+   Both share identical visual style; pill adds hover/focus states.
+*/
+.category-label,
 .category-pill {
   font-family: var(--font-sans);
   font-size: 0.68rem;
@@ -328,12 +310,21 @@ img { max-width: 100%; height: auto; }
   letter-spacing: 0.06em;
   display: inline-flex;
   align-items: center;
-  padding: 0.22rem 0.65rem;
+  justify-content: center;
+  padding: 0.3rem 0.75rem;
   border-radius: 999px;
-  margin-bottom: 0.6rem;
   line-height: 1.1;
   color: #fff;
   background: var(--accent);
+  min-height: 48px;   /* Sara: 48px minimum touch target */
+  text-decoration: none;
+}
+
+.category-pill:hover,
+.category-pill:focus-visible {
+  opacity: 0.88;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 .category-kotimaa { background: #1f6feb; }
@@ -356,27 +347,11 @@ img { max-width: 100%; height: auto; }
   background: var(--card-bg);
   border: 1px solid var(--border);
   padding: 1.5rem;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.2s;
 }
 
 .article-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  transform: translateY(-2px);
-}
-
-[data-theme="dark"] .article-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.45);
-}
-
-/* Keyboard focus: highlight card when any child link is focused */
-.article-card:focus-within {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-.category-article-card:focus-within {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 .article-card .category-label {
@@ -507,36 +482,6 @@ img { max-width: 100%; height: auto; }
 
 .single-article .content p { margin-bottom: 1.25rem; }
 
-/* === Typography hierarchy — in-body headings === */
-.single-article .content h2 {
-  font-size: 1.55rem;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-top: 1.75em;
-  margin-bottom: 0.5em;
-}
-
-.single-article .content h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-top: 1.5em;
-  margin-bottom: 0.4em;
-}
-
-.single-article .content h4 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-top: 1.25em;
-  margin-bottom: 0.35em;
-}
-
-/* First heading directly after article meta should not have extra top margin */
-.single-article .content > h2:first-child,
-.single-article .content > h3:first-child {
-  margin-top: 0;
-}
-
 .single-article .source-attribution {
   margin-top: 2rem;
   padding-top: 1rem;
@@ -663,7 +608,7 @@ img { max-width: 100%; height: auto; }
   gap: 1rem;
   margin-top: 2.5rem;
   padding: 1.5rem;
-  background: var(--surface);
+  background: #f5f4f0;
   border: 1px solid var(--border);
   border-radius: 4px;
 }
@@ -2005,19 +1950,12 @@ pre code {
   gap: 0.5rem;
 }
 
+/* .category-pill base consolidated above in "Category Pills / Labels" block */
 .category-pill {
-  display: inline-block;
-  padding: 0.35rem 0.9rem;
-  border-radius: 100px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #fff;
   transition: opacity 0.15s, transform 0.1s;
 }
 
 .category-pill:hover {
-  opacity: 0.88;
   transform: translateY(-1px);
 }
 
@@ -2401,8 +2339,8 @@ pre code {
 .newsletter-cta {
   margin: 2rem 0;
   padding: 1.25rem 1.5rem;
-  background: var(--surface);
-  border-left: 4px solid var(--accent);
+  background: #f8f4f4;
+  border-left: 4px solid #c0392b;
   border-radius: 4px;
 }
 .newsletter-cta-inner {
@@ -2459,27 +2397,17 @@ pre code {
   background: #a93226;
 }
 [data-theme="dark"] .newsletter-cta {
-  background: var(--surface);
-  border-left-color: var(--accent);
+  background: #1e1e1e;
+  border-left-color: #e74c3c;
 }
 [data-theme="dark"] .newsletter-cta-text span {
-  color: var(--text-muted);
+  color: #aaa;
 }
 [data-theme="dark"] .newsletter-cta-input {
-  background: var(--card-bg);
-  border-color: var(--border);
-  color: var(--text);
+  background: #2a2a2a;
+  border-color: #444;
+  color: #eee;
 }
-
-/* Sponsor badge/footer — dark mode (mirrors prefers-color-scheme block) */
-[data-theme="dark"] .sponsor-badge,
-[data-theme="dark"] .sponsor-footer { background: #2a2000; border-color: #6a4800; }
-[data-theme="dark"] .sponsor-label,
-[data-theme="dark"] .sponsored-tag,
-[data-theme="dark"] .sponsored-meta { color: #f0b030; }
-[data-theme="dark"] .sponsor-name,
-[data-theme="dark"] .sponsor-name-link { color: var(--text); }
-[data-theme="dark"] .sponsor-disclosure { color: var(--text-muted); }
 
 /* Dark mode — hero + card components added Mar 22 */
 [data-theme="dark"] .lead-article--hero {
@@ -3711,10 +3639,7 @@ pre code {
   }
 }
 
-/* Category pill tap target — min-height now on .category-label base (Sara spec #14 fix #3) */
-.category-pill {
-  min-height: 28px;
-}
+/* category-pill/label consolidated above — 48px touch target */
 
 /* ── Related Articles — "Aiheeseen liittyvät" (Cycle 63) ─────────── */
 /* New BEM layout: horizontal row of cards with thumbnail + meta.    */
