@@ -43,6 +43,16 @@
   {{- $priority   := "0.3" }}
   {{- $changefreq := "monthly" }}
 
+  {{- /* ── lastmod: aggregate pages use newest child article date ── */}}
+  {{- $lastmod := .Lastmod }}
+  {{- if .IsHome }}
+    {{- $newest := .Site.RegularPages.ByDate.Reverse | first 1 }}
+    {{- with index $newest 0 }}{{- $lastmod = .Date }}{{- end }}
+  {{- else if or (eq .Kind "section") (eq .Kind "term") (eq .Kind "taxonomy") }}
+    {{- $pages := .Pages.ByDate.Reverse }}
+    {{- with index $pages 0 }}{{- $lastmod = .Date }}{{- end }}
+  {{- end }}
+
   {{- if .IsHome }}
     {{- $priority   = "1.0" }}
     {{- $changefreq = "hourly" }}
@@ -94,8 +104,8 @@
   {{- if not $skip }}
   <url>
     <loc>{{ .Permalink }}</loc>
-    {{- if not .Lastmod.IsZero }}
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    {{- if not $lastmod.IsZero }}
+    <lastmod>{{ $lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
     {{- else if not .Date.IsZero }}
     <lastmod>{{ .Date.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
     {{- end }}
