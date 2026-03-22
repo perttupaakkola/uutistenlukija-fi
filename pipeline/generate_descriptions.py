@@ -28,14 +28,14 @@ from openai import OpenAI
 
 CONTENT_DIR = Path(__file__).parent.parent / "content" / "posts"
 MODEL = "gpt-4o-mini"
-MIN_CHARS = 120
-MAX_CHARS = 158
+MIN_CHARS = 110
+MAX_CHARS = 145   # Sara's audit: 145 chars with buffer for Finnish character widths
 
 SYSTEM_PROMPT = (
     "You are writing a meta description for a Finnish news article for Google search results.\n\n"
     "RULES:\n"
     "- Language: Finnish (match the article language exactly)\n"
-    "- Length: 140–155 characters (including spaces)\n"
+    "- Length: 120–145 characters (including spaces) — max 145, never exceed\n"
     "- End at a sentence boundary — never cut mid-sentence or mid-word\n"
     "- Do NOT start with the site name or \"Lue lisää\"\n"
     "- Do NOT use clickbait (\"Hämmästyttävää!\", \"Et usko...\")\n"
