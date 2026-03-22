@@ -27,7 +27,7 @@ from dedup import filter_new_articles, check_published_duplicates, dedup_within_
 from image_gen import generate_images_for_articles
 from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
-from health_check import notify_discord_failure, notify_discord_warning, write_metrics
+from health_check import notify_discord_failure, notify_discord_warning, notify_discord_crash, write_metrics
 from metrics import append_run as _append_metrics_run
 from service_health import should_skip, record_success, record_failure
 from change_detector import check_for_changes, record_build
@@ -629,9 +629,10 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
             log_run("published", {"count": len(created), "files": created})
             mark_published(rewritten)
         except Exception as e:
+            import traceback as _tb
             t_publish.success = False
             t_publish.error = str(e)
-            notify_discord_failure("publisher", str(e))
+            notify_discord_crash("publisher", e, tb=_tb.format_exc())
             errors.append(f"publisher: {e}")
         t_publish.set(files_created=len(created))
 

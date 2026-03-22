@@ -140,6 +140,12 @@ draft: false
 
 def publish_articles(articles: List[Dict]) -> List[str]:
     """Save articles as Hugo content files. Returns list of created file paths."""
+    import traceback
+    try:
+        from health_check import notify_discord_crash
+    except ImportError:
+        notify_discord_crash = None  # type: ignore
+
     os.makedirs(CONTENT_DIR, exist_ok=True)
     created = []
 
@@ -153,13 +159,20 @@ def publish_articles(articles: List[Dict]) -> List[str]:
 
         # Use article date or now, offset by index to maintain order
         article_date = now.isoformat()
-        markdown = _article_to_markdown(article, article_date)
 
-        with open(filepath, "w", encoding="utf-8") as f:
-            f.write(markdown)
-
-        created.append(filepath)
-        print(f"[publisher] Created: {filename}")
+        try:
+            markdown = _article_to_markdown(article, article_date)
+            with open(filepath, "w", encoding="utf-8") as f:
+                f.write(markdown)
+            created.append(filepath)
+            print(f"[publisher] Created: {filename}")
+        except Exception as exc:
+            tb = traceback.format_exc()
+            print(f"[publisher] ERROR writing {filename}: {exc}\n{tb}")
+            if notify_discord_crash:
+                notify_discord_crash("publisher", exc, slug=slug, tb=tb)
+            # Continue with remaining articles — don't abort the whole batch
+            continue
 
     return created
 

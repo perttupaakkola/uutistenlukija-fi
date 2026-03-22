@@ -45,6 +45,48 @@ def notify_discord_failure(step: str, error: str, context: str = "") -> bool:
         return False
 
 
+def notify_discord_crash(step: str, exc: Exception, slug: str = "", tb: str = "") -> bool:
+    """Post a crash alert with traceback to Discord.
+
+    Intended for unexpected exceptions (not quality-gate rejections).
+    Call from except blocks: notify_discord_crash("publisher", e, slug=article_slug, tb=traceback.format_exc())
+
+    Returns True if message was sent successfully.
+    """
+    import traceback as _tb
+    if not DISCORD_WEBHOOK_URL:
+        print(f"[health_check] DISCORD_PIPELINE_WEBHOOK not set — crash alert not sent for: {step}: {exc}")
+        return False
+
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    exc_type = type(exc).__name__
+
+    body = f"💥 **Pipeline crash** — `{step}`\n"
+    body += f"**Time:** {timestamp}\n"
+    body += f"**Exception:** `{exc_type}: {str(exc)[:200]}`\n"
+    if slug:
+        body += f"**Article:** `{slug}`\n"
+    if tb:
+        # Keep last 3 frames of traceback, strip full paths
+        lines = [l for l in tb.strip().splitlines() if l.strip()]
+        snippet = "\n".join(lines[-8:])  # last 8 lines covers ~3 frames
+        body += f"**Traceback:**\n```\n{snippet[:800]}\n```\n"
+
+    payload = json.dumps({"content": body}).encode("utf-8")
+    req = urllib.request.Request(
+        DISCORD_WEBHOOK_URL,
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return resp.status in (200, 204)
+    except Exception as e:
+        print(f"[health_check] Discord crash notify failed: {e}")
+        return False
+
+
 def notify_discord_warning(step: str, message: str) -> bool:
     """Post a warning (non-fatal) to Discord."""
     if not DISCORD_WEBHOOK_URL:
