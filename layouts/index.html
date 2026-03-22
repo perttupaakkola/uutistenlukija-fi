@@ -22,10 +22,11 @@
 </nav>
 
 {{/* ── 2. "JUURI NYT" STRIP — articles < 3h old (Sara spec #15) ─────────── */}}
-{{ $cutoff := now.Add (duration "h" -3) }}
+{{/* Use age comparison (same approach as freshness.html) to avoid duration() syntax issues */}}
 {{ $fresh := slice }}
 {{ range $sorted }}
-  {{ if gt .Date $cutoff }}{{ $fresh = $fresh | append . }}{{ end }}
+  {{- $age := now.Sub .Date -}}
+  {{- if lt (int $age.Hours) 3 }}{{ $fresh = $fresh | append . }}{{ end }}
 {{ end }}
 {{ if $fresh }}
 <section class="juuri-nyt-strip" aria-label="Juuri julkaistu">
