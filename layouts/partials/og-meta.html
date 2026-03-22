@@ -122,10 +122,12 @@
 <meta property="og:type"      content="{{ if and .IsPage (eq .Section "posts") }}article{{ else }}website{{ end }}">
 <meta property="og:title"       content="{{ $ogTitle }}">
 <meta property="og:description" content="{{ $ogDesc }}">
-<meta property="og:image"       content="{{ $ogImage }}">
-<meta property="og:image:width"  content="{{ $ogW }}">
-<meta property="og:image:height" content="{{ $ogH }}">
-<meta property="og:image:alt"    content="{{ $ogImageAlt }}">
+<meta property="og:image"            content="{{ $ogImage }}">
+<meta property="og:image:secure_url" content="{{ $ogImage }}">
+<meta property="og:image:type"       content="image/jpeg">
+<meta property="og:image:width"      content="{{ $ogW }}">
+<meta property="og:image:height"     content="{{ $ogH }}">
+<meta property="og:image:alt"        content="{{ $ogImageAlt }}">
 
 {{/* Article-specific */}}
 {{ if and .IsPage (eq .Section "posts") }}
@@ -143,6 +145,7 @@
 {{/* Twitter Card */}}
 <meta name="twitter:card"        content="summary_large_image">
 {{ with .Site.Params.twitter_site }}<meta name="twitter:site" content="{{ . }}">{{ end }}
+{{ with .Site.Params.twitter_creator }}<meta name="twitter:creator" content="{{ . }}">{{ else }}{{ with .Site.Params.twitter_site }}<meta name="twitter:creator" content="{{ . }}">{{ end }}{{ end }}
 <meta name="twitter:title"       content="{{ $ogTitle }}">
 <meta name="twitter:description" content="{{ $ogDesc }}">
 <meta name="twitter:image"       content="{{ $ogImage }}">
