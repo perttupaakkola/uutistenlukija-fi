@@ -97,13 +97,14 @@ def _rebuild_file(path: str, fm: dict, new_body: str) -> None:
 
 # ── LLM expansion ─────────────────────────────────────────────────────────────
 
-EXPAND_SYSTEM = """Olet kokenut suomalainen uutistoimittaja. Tehtäväsi on laajentaa lyhyt uutisartikkeli täysimittaiseksi 300–400 sanan artikkeliksi.
+EXPAND_SYSTEM = """Olet kokenut suomalainen uutistoimittaja. Tehtäväsi on laajentaa lyhyt uutisartikkeli täysimittaiseksi artikkeliksi.
 
 SÄÄNNÖT:
+- Kirjoita VÄHINTÄÄN 320 sanaa (tavoite 350–420 sanaa). Lyhyempi teksti ei kelpaa.
 - Säilytä alkuperäinen otsikko ja ydintieto täysin ennallaan.
 - Lisää kontekstia, taustaa, seurauksia ja laajempaa merkitystä.
 - Kirjoita AINA suomeksi.
-- Käytä 4–6 kappaletta, 1–2 H2-väliotsikkoa (## Otsikko).
+- Käytä 5–7 kappaletta ja 1–2 H2-väliotsikkoa (## Otsikko).
 - Älä keksi faktoja — laajenna käyttäen yleistä kontekstitietoa aiheesta.
 - Palauta VAIN artikkelin teksti. Ei otsikkoa, ei JSON-muotoilua."""
 
@@ -122,16 +123,22 @@ Nykyinen teksti:
 
 Kirjoita laajennettu versio (VAIN teksti, ei otsikkoa):"""
 
-        resp = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": EXPAND_SYSTEM},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0.7,
-            max_tokens=1000,
-        )
-        return resp.choices[0].message.content.strip()
+        for attempt in range(2):
+            resp = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": EXPAND_SYSTEM},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.7 + attempt * 0.1,
+                max_tokens=1200,
+            )
+            result = resp.choices[0].message.content.strip()
+            if len(result.split()) >= 280:
+                return result
+            # Too short — retry with explicit nudge
+            prompt += f"\n\nMUISTA: tekstin on oltava vähintään 320 sanaa. Edellinen yritys tuotti vain {len(result.split())} sanaa."
+        return result  # Return best attempt even if short
     except Exception as e:
         print(f"[backfill] LLM error: {e}", file=sys.stderr)
         return None
@@ -262,7 +269,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Backfill thin articles via LLM expansion")
     parser.add_argument("--max-words", type=int, default=50,
                         help="Target articles under this word count (default: 50)")
-    parser.add_argument("--batch", type=int, default=10,
+    parser.add_argument("--batch", "--limit", type=int, default=10, dest="batch",
                         help="Max articles to process per run (default: 10)")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show what would be expanded without modifying files")
