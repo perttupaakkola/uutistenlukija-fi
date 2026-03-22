@@ -296,6 +296,24 @@ img { max-width: 100%; height: auto; }
 }
 
 /* === Category Pills === */
+/* Fix #3: category-label base — system-sans badge style (was inheriting Georgia 18px) */
+.category-label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+  color: #fff;
+  background: var(--accent);
+  min-height: 28px;   /* tap target */
+}
+
 .category-pill {
   font-family: var(--font-sans);
   font-size: 0.68rem;
@@ -377,7 +395,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .lead-article h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;  /* Fix #1: was 2.5rem (40px) > H1 2.2rem (35.2px) — inverted hierarchy */
   line-height: 1.15;
   margin-bottom: 0.85rem;
 }
@@ -438,9 +456,11 @@ img { max-width: 100%; height: auto; }
 }
 
 .single-article h1 {
-  font-size: 2.2rem;
-  line-height: 1.25;
+  font-size: 2.4rem;  /* Fix #1: bump to be larger than lead H2 (2.2rem) */
+  line-height: 1.35;  /* Fix #2: 1.25 too tight for Finnish compound words */
   margin-bottom: 0.75rem;
+  hyphens: auto;      /* Fix #5: Finnish hyphenation (lang=fi on html element) */
+  overflow-wrap: break-word;
 }
 
 .single-article .article-meta {
@@ -458,6 +478,9 @@ img { max-width: 100%; height: auto; }
 .single-article .content {
   font-size: 1.05rem;
   line-height: 1.8;
+  max-width: 38em;    /* Fix #6: ~80 CPL → narrower for readability */
+  hyphens: auto;      /* Fix #5: Finnish hyphenation on body copy too */
+  overflow-wrap: break-word;
 }
 
 .single-article .content p { margin-bottom: 1.25rem; }
@@ -735,9 +758,10 @@ img { max-width: 100%; height: auto; }
 
 .category-section-header h2 {
   font-size: 1.3rem;
-  font-weight: 900;
+  font-weight: 700;  /* Fix #4: 900 on Georgia = faux bold */
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  font-family: var(--font-sans);  /* Fix #4: section headers use system-sans, not Georgia */
 }
 
 .category-section-header h2 a { color: var(--text); }
@@ -1161,8 +1185,8 @@ img { max-width: 100%; height: auto; }
   .site-title { font-size: 2rem; }
   .articles-grid { grid-template-columns: 1fr; gap: 1rem; }
   .lead-article { padding: 1.25rem 1rem 1.5rem; }
-  .lead-article h2 { font-size: 1.85rem; }
-  .single-article h1 { font-size: 1.7rem; }
+  .lead-article h2 { font-size: 1.6rem; }   /* Fix #1 mobile: keep H2 < H1 */
+  .single-article h1 { font-size: 1.85rem; } /* Fix #1 mobile: H1 > lead H2 */
   .main-nav a { font-size: 0.75rem; padding: 0.25rem 0.5rem; }
   .header-banner { height: 30px; }
   .logo-img { max-height: 55px; }
@@ -3612,23 +3636,20 @@ pre code {
 
 /* ── Sara's mobile reading experience fixes (2026-03-21) ────────────── */
 @media (max-width: 600px) {
-  /* 1. H1 line-height: Finnish headlines too tight at 1.25 */
-  .single-article h1 {
-    line-height: 1.35;
-  }
+  /* H1 line-height: already 1.35 globally (Sara spec #14 fix #2), kept for mobile parity */
 
-  /* 3. Article meta margin collapse: reduce chrome gap */
+  /* Article meta margin collapse: reduce chrome gap */
   .single-article .article-meta {
     margin-bottom: 1rem;
   }
 
-  /* 4. Paragraph spacing: 1.25rem → 1.5rem (~24px at 16px base) */
+  /* Paragraph spacing: 1.25rem → 1.5rem (~24px at 16px base) */
   .single-article .content p {
     margin-bottom: 1.5rem;
   }
 }
 
-/* 2. Category label: proper pill tap target (28px min height) */
+/* Category pill tap target — min-height now on .category-label base (Sara spec #14 fix #3) */
 .category-pill {
   min-height: 28px;
 }
@@ -4082,5 +4103,6 @@ pre code {
   color: var(--text-secondary);
   margin-top: 0.4rem;
   font-style: italic;
+  line-height: 1.5;   /* Fix #7: was 1.40 (browser default ~1.4) — bumped to 1.50 */
 }
 /* ── end content images ───────────────────────────────────────────── */
