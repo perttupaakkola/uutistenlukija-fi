@@ -34,6 +34,8 @@ from typing import NamedTuple
 
 _PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 REJECTED_DIR  = os.path.join(_PIPELINE_DIR, "rejected")
+REJECTS_LOG   = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
+MIN_BODY_WORDS = 250   # SEO minimum — articles below this hurt rankings
 
 REJECT_THRESHOLD = 40   # minimum score to pass (out of 80)
 
@@ -113,6 +115,10 @@ def score_article(article: dict) -> ScoreBreakdown:
 
     # ── Hard disqualifiers (structural, don't affect score but cause rejection) ──
     hard_fails: list[str] = []
+
+    # Minimum word count (SEO gate — thin articles hurt rankings)
+    if word_count < MIN_BODY_WORDS:
+        hard_fails.append(f"too_short ({word_count} words, min {MIN_BODY_WORDS})")
 
     paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
     if len(paragraphs) < 3:
@@ -199,11 +205,16 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
             _save_rejected(article, reason_str, breakdown.total)
             rejected.append(article)
 
+            # Append to quality_gate_rejects.log
+            _log_reject(article, reason_str)
+
             # Bucket reason keys for metrics
             if breakdown.total < threshold:
                 reason_counter["low_score"] += 1
             for hf in breakdown.hard_fails:
-                if "paragraphs" in hf:
+                if "too_short" in hf:
+                    reason_counter["too_short"] += 1
+                elif "paragraphs" in hf:
                     reason_counter["few_paragraphs"] += 1
                 elif "lead" in hf:
                     reason_counter["thin_lead"] += 1
@@ -255,6 +266,22 @@ def _save_rejected(article: dict, reason: str, score: int) -> None:
                       f, ensure_ascii=False, indent=2)
     except OSError as e:
         print(f"[quality] WARNING: could not save rejected article: {e}")
+
+
+def _log_reject(article: dict, reason: str) -> None:
+    """Append one line to quality_gate_rejects.log for observability."""
+    import re as _re
+    os.makedirs(os.path.dirname(REJECTS_LOG), exist_ok=True)
+    ts = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    title = article.get("title", "?")[:80]
+    slug  = article.get("slug", "?")
+    words = len((article.get("content", "") or "").split())
+    line  = f"{ts}\t{words}w\t{slug}\t{reason}\t{title}\n"
+    try:
+        with open(REJECTS_LOG, "a", encoding="utf-8") as f:
+            f.write(line)
+    except OSError as e:
+        print(f"[quality] WARNING: could not write rejects log: {e}")
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
