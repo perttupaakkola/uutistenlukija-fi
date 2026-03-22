@@ -15,6 +15,10 @@ tags:
   - ikkunaan
   - turun
   - törmäsi
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Sähköauto ajoi liikehuoneiston ikkunaan Turun Eerikinkadulla maanantaina noin kello 17. Kuljettaja menetti ajoneuvonsa hallinnan keskusta-alueella.
 

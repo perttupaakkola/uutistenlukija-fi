@@ -11,6 +11,10 @@ tags:
   - jatkosodan
   - viihdytyskiertueilla
   - sotilaiden
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Jatkosodan viihdytyskiertueilla esiintyi monia tunnettuja taiteilijoita, kuten Tauno Palo ja muita aikakauden supertähtiä. Rintamamiesten suurimmaksi suosikiksi nousi kuitenkin keravalainen lotta, jonka esiintymistä ylistettiin lukuisissa aikalaiskirjeissä.
 

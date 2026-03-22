@@ -15,6 +15,10 @@ tags:
   - suomalaiset
   - rauhanturvaajat
   - joutuivat
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Suomalaisia rauhanturvaajia kohti ammuttiin Etelä-Libanonissa. Maavoimat vahvisti tapauksen viestipalvelu X:ssä.
 

@@ -15,6 +15,10 @@ tags:
   - rovaniemelle
   - suunnitellaan
   - muumimaailmaa
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Rovaniemen kaupunginhallitus varasi maanantaina tontin Muumimaailma oy:lle Joulupukin pajakylän alueelta. Yhtiö suunnittelee Rovaniemelle interaktiivista muumiteemapuistoa, josta tulisi Suomen toinen Muumimaailma Naantalin puiston rinnalle.
 

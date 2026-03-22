@@ -15,6 +15,10 @@ tags:
   - lepän
   - alkanut
   - siitepölykausi
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Lepän ja pähkinäpensaan kukinta on alkanut maan lounaisosissa. Turun yliopiston siitepölytiedotuksen mukaan lepän siitepölymäärät voivat nousta lähipäivinä paikoin runsaiksi.
 

@@ -15,6 +15,10 @@ tags:
   - isku
   - kohdistui
   - massiivinen
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan suunnattua lennokkia. Moskovan pormestari Sergei Sobjanin vahvisti tiedon.
 

@@ -15,6 +15,10 @@ tags:
   - oscar
   - valloitti
   - yleisön
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 Oscar-palkittu animaatioelokuva KPop Demon Hunters on kerännyt yleisöä ympäri maailmaa erikoisella konseptillaan. Elokuva yhdistää k-pop-musiikin ja yliluonnollisen toiminnan.
 

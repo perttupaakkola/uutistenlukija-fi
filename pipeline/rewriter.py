@@ -19,6 +19,14 @@ from openai import OpenAI
 
 CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
 
+# Load SEO keyword data for natural keyword injection into articles
+_SEO_KEYWORDS_PATH = Path(__file__).parent / "seo_keywords.json"
+try:
+    with open(_SEO_KEYWORDS_PATH) as _f:
+        SEO_KEYWORDS: Dict[str, Dict] = json.load(_f)
+except Exception:
+    SEO_KEYWORDS = {}
+
 SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
 
 === PITUUS — TÄRKEIN VAATIMUS, LUE ENSIN ===
@@ -71,20 +79,6 @@ KIRJOITUSTYYLI:
 - Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").
 - Lopeta viimeiseen faktaan.
 
-KRIITTISET TYYLIVIRHEET — ÄLÄ KOSKAAN TEE NÄITÄ:
-1. KIELLETTY LOPETUS: Älä koskaan aloita viimeistä kappaletta tai lausetta sanoilla
-   "Yhteenvetona", "Yhteenvetona voidaan todeta", "Kaiken kaikkiaan", "Loppujen lopuksi"
-   tai muulla artikkelin sisällön tiivistämisellä. Artikkeli päättyy faktaan, ei yhteenvetoon.
-2. UUTINEN ENSIN: Ensimmäinen virke on uutinen itse — ei organisaation tai julkaisun esittely.
-   VÄÄRIN: "Poliisihallitus julkaisi tänään raportin, jonka mukaan rikollisuus kasvoi."
-   OIKEIN: "Rikollisuus kasvoi viime vuonna, kertoo poliisihallituksen uusi raportti."
-   VÄÄRIN: "Tutkijat ovat julkaisseet tutkimuksen, jossa todetaan, että..."
-   OIKEIN: "Uusi tutkimus osoittaa, että..."
-3. LAUSERAKENTEIDEN VAIHTELU: Älä kirjoita peräkkäisiä "X on Y"-lauseita. Vaihtele rakennetta:
-   käytä toimintaverbejä, kysymysmuotoa, sivulauseita ja eri lausepituuksia.
-   VÄÄRIN: "Helsinki on Suomen pääkaupunki. Se on myös suurin kaupunki. Helsinki on tunnettu..."
-   OIKEIN: "Helsinki kasvaa. Suomen pääkaupungissa asuu jo yli 650 000 ihmistä — ja luku nousee."
-
 TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:
 - Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)
 - Ei kolmen sarjoja joka kappaleessa
@@ -112,15 +106,6 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 280 sanaa (tavoite 300–400). Jos artikkeli on lyhyempi,
     laajenna sitä lisäämällä taustan, kontekstin ja vaikutusten kuvausta. ÄLÄ koskaan
     palauta alle 280 sanan artikkelia. Tavallinen kappale on 60–80 sanaa.
-12. YHTEENVETOLOPPUJEN POISTO: Jos artikkeli päättyy lauseeseen joka alkaa "Yhteenvetona",
-    "Yhteenvetona voidaan todeta", "Kaiken kaikkiaan", "Loppujen lopuksi" tai muulla
-    tiivistelmällä — poista se ja päätä artikkeli edeltävään faktaan.
-13. INGRESSI: Jos ensimmäinen virke on muotoa "Organisaatio X julkaisi/ilmoitti/kertoi, että..."
-    — kirjoita se uudelleen niin että uutinen itse on ensin:
-    VÄÄRIN: "Tutkijat julkaisivat raportin, jonka mukaan hinnat nousivat."
-    OIKEIN: "Hinnat nousivat, osoittaa tutkijoiden uusi raportti."
-14. X ON Y -RAKENTEET: Korjaa peräkkäiset "X on Y"-lauseet (yli 2 peräkkäin) vaihtelemalla
-    lauserakennetta — käytä toimintaverbejä, sivulauseita tai eri lausepituuksia.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -212,11 +197,25 @@ def _build_single_prompt(article: dict) -> str:
     research = article.get("research", "")
     research_section = f"\nTaustatutkimus:\n{research}" if research else ""
 
+    # SEO keyword hint: inject 2-3 category keywords naturally
+    category_hint = article.get("category_hint", "")
+    seo_note = ""
+    for cat, data in SEO_KEYWORDS.items():
+        if cat.lower() in (category_hint or "").lower() or category_hint == cat:
+            kws = data.get("inject", [])[:3]
+            if kws:
+                kws_str = ", ".join(f'"{k}"' for k in kws)
+                seo_note = (
+                    f"\nHakusanaohje: Sisällytä 2–3 seuraavista hakutermeistä luonnollisesti artikkeliin: {kws_str}. "
+                    "Älä toista niitä keinotekoisesti — käytä vain jos sopii lauseyhteyteen."
+                )
+            break
+
     return f"""Kirjoita seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.
 
 ---
 Otsikko: {article['title']}
-Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{seo_note}
 ---
 
 Vastaa JSON-listana (lista yhdellä alkiolla):
@@ -307,11 +306,24 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
             if research:
                 research_section = f"\nTaustatutkimus:\n{research}"
 
+            # SEO keyword hint
+            category_hint = article.get("category_hint", "")
+            seo_note = ""
+            for cat, data in SEO_KEYWORDS.items():
+                if cat.lower() in (category_hint or "").lower() or category_hint == cat:
+                    kws = data.get("inject", [])[:3]
+                    if kws:
+                        kws_str = ", ".join(f'"{k}"' for k in kws)
+                        seo_note = (
+                            f"\nHakusanaohje: sisällytä 2–3 seuraavista luonnollisesti: {kws_str}."
+                        )
+                    break
+
             articles_text += f"""
 ---
 Aihe {idx + 1}:
 Otsikko: {article['title']}
-Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{seo_note}
 ---
 """
 

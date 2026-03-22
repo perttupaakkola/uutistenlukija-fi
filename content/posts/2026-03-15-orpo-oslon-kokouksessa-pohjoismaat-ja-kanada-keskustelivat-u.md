@@ -11,6 +11,10 @@ tags:
   - pohjoismaat
   - ukrainan
   - kanada
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Pääministeri Petteri Orpo osallistui sunnuntaina Pohjoismaiden ja Kanadan pääministerien kokoukseen Oslossa. Kokouksen asialistalla olivat Ukrainan tuen jatkaminen, arktisen alueen turvallisuus ja Euroopan puolustuskysymykset.
 

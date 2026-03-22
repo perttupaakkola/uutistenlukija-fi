@@ -11,6 +11,10 @@ tags:
   - onnettomuuden
   - suljettu
   - resundsbron
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Juutinrauman silta eli Øresundsbron suljettiin lauantaina moottoritieliikenteeltä Ruotsin suuntaan tunneliosuudella sattuneen onnettomuuden vuoksi. Sulku aiheutti mittavat liikenneruuhkat molemmissa maissa ja vaikutti tuhansien matkustajien kulkuun.
 

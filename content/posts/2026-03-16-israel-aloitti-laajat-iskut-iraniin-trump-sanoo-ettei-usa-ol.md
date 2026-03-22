@@ -15,6 +15,10 @@ tags:
   - iraniin
   - trump
   - valmis
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Israelin armeija ilmoitti käynnistäneensä laajamittaiset iskut Irania vastaan. Armeijan tiedottajan mukaan Israel tunnistaa uusia kohteita päivittäin ja operaation arvioidaan kestävän vähintään kolme viikkoa.
 

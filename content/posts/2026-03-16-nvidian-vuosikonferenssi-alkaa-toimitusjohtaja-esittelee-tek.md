@@ -15,6 +15,10 @@ tags:
   - toimitusjohtaja
   - esittelee
   - vuosikonferenssi
+keywords:
+  - "teknologia uutiset"
+  - "tiedeuutiset"
+  - "tekoäly uutiset"
 ---
 Nvidian toimitusjohtaja Jensen Huang astuu lavalle yhtiön vuotuisessa GTC-konferenssissa. Tapahtuma on piirivalmistajan tärkein vuosittainen tilaisuus, jossa se esittelee uudet tuotteensa ja näkemyksensä laskennan tulevaisuudesta.
 

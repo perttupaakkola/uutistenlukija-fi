@@ -15,6 +15,10 @@ tags:
   - kasvaa
   - australiassa
   - bensiiniautojen
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 Bensiiniautot menettävät otettaan Australian automarkkinoilla. Maan autoliiton AAA:n tuoreet tilastot osoittavat, että puhtaasti bensiinikäyttöisten autojen osuus myydyistä ajoneuvoista laski ennätyksellisen alas, 66,3 prosenttiin neljännesvuositasolla.
 

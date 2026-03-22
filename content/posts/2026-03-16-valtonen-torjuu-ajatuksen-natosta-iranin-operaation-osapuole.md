@@ -15,6 +15,10 @@ tags:
   - torjuu
   - ajatuksen
   - natosta
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Ulkoministeri Elina Valtonen ei pidä Natoa oikeana toimijana mahdolliseen sotilasoperaatioon Hormuzinsalmella. Presidentti Donald Trump on painostanut Nato-liittolaisia osallistumaan operaatioon Irania vastaan.
 

@@ -11,6 +11,10 @@ tags:
   - suomessa
   - testaavat
   - tekoälypohjaista
+keywords:
+  - "teknologia uutiset"
+  - "tiedeuutiset"
+  - "tekoäly uutiset"
 ---
 Nokia ja Telia Finland ovat aloittaneet laajan yhteistyön tekoälypohjaisen radiopääsyverkon kehittämiseksi ja testaamiseksi Suomessa. Kumppanuuden tavoitteena on parantaa 5G-verkon suorituskykyä merkittävästi ja nopeuttaa tekoälysovellusten kaupallistamista.
 

@@ -15,6 +15,10 @@ tags:
   - kangasniemi
   - luopuu
   - autiotalokampanjansa
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Kangasniemen kunta muuttaa tyhjiin taloihin keskittyvän kampanjansa nimen. Syynä on Suomen asuntomessujen vaatimus: kampanjan nimi sekoittui liikaa yhtiön brändiin.
 

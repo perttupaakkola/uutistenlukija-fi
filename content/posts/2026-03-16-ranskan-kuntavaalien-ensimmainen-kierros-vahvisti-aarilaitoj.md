@@ -15,6 +15,10 @@ tags:
   - kuntavaalien
   - vahvisti
   - äärilaitoja
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Ranskan kuntavaalien ensimmäinen kierros tuotti vahvan tuloksen sekä Marine Le Penin äärioikeistolaiselle Kansalliselle liittoumalle että Jean-Luc Mélenchonin radikaalivasemmistolaiselle La France insoumise -puolueelle. Molemmat puolueet näyttävät kasvattavan paikallista valtaansa.
 

@@ -15,6 +15,10 @@ tags:
   - pyrkii
   - hävittämään
   - viimeiset
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Somalian hallitus ja sen liittolaiset ovat tehostaneet operaatioita äärijärjestö Isisiä vastaan maan syrjäisillä alueilla. Isis vahvisti jalansijansa Somaliassa sen jälkeen, kun järjestön taistelijoita ajettiin pois tukikohdistaan Syyriassa ja Irakissa.
 

@@ -11,6 +11,10 @@ tags:
   - alussa
   - pörssisähkö
   - edullisena
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 Sähkön pörssihinta jatkaa matalalla tasolla ensi viikon alussa. Maanantaina kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta, mikä on selvästi tavanomaista halvempaa kevään ajankohtaan nähden.
 

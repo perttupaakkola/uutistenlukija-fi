@@ -15,6 +15,10 @@ tags:
   - suorana
   - näkyy
   - suomenkielisellä
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 Oscar-gaala on seurattavissa suorana lähetyksenä Yle Areenassa suomenkielisen juonnon kera. Lähetys alkaa punaiselta matolta ja jatkuu myöhään yöhön Suomen aikaa.
 

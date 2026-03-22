@@ -1,7 +1,11 @@
 ---
 title: "Ulkomaat"
-description: "Ulkomaan uutiset – kansainvälinen politiikka, konfliktit, talouskriisit ja kulttuuri maailmalta. Tuoreimmat ulkomaan uutiset päivittäin Uutistenlukijasta."
+description: "Ulkomaan uutiset tänään – maailman uutiset ja kansainväliset uutiset suomeksi. Seuraa päivän tärkeimmät tapahtumat Euroopasta ja maailmalta Uutistenlukijasta."
 og_image: "/images/og-ulkomaat.png"
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
-Kansainväliset uutiset maailman tapahtumista, politiikasta ja konflikteista. Seuraa mitä maailmalla tapahtuu.
+Ulkomaan ja kansainväliset uutiset suomeksi. Euroopan, Yhdysvaltojen ja maailman tapahtumat yhdessä paikassa.

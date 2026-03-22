@@ -11,6 +11,10 @@ tags:
   - epassin
   - edenredin
   - henkilöstöetumarkkinalla
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 Ruokalähettipalvelustaan tunnettu Wolt ilmoitti perjantaina tuovansa kesällä markkinoille Wolt Benefits -palvelun, joka tähtää suoraan Suomen henkilöstöetumarkkinoille. Uusi palvelu haastaa alan vakiintuneet toimijat Epassin ja Edenredin, jotka ovat hallinneet markkinaa pitkään.
 

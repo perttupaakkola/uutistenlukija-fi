@@ -11,6 +11,10 @@ tags:
   - suomi
   - kuulla
   - ydinasesuojasta
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Pääministeri Petteri Orpo sanoi Oslossa, että Suomi on kiinnostunut kuulemaan tarkemmin Ranskan tarjoamasta ydinasepelotteesta Euroopan turvallisuuden vahvistamiseksi. Orpo korosti kuitenkin selkeästi, ettei Suomi hae ydinaseita omalle maaperälle.
 

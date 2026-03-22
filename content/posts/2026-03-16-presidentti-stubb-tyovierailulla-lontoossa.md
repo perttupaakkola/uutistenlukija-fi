@@ -15,6 +15,10 @@ tags:
   - työvierailulla
   - lontoossa
   - maanantaina
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Tasavallan presidentti Alexander Stubb matkustaa maanantaina työvierailulle Lontooseen. Vierailu kestää kaksi päivää, 16.–17. maaliskuuta.
 

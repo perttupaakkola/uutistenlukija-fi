@@ -15,6 +15,10 @@ tags:
   - sodan
   - sulkemia
   - ilmatiloja
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Iranin ja Persianlahden ilmatila on edelleen rajoitettu ohjusiskujen jälkeen. Rajoitukset pakottavat lentoyhtiöt ohjaamaan matkustajakoneitaan pidemmille reiteille, mikä nostaa kustannuksia ja pidentää lentoja.
 

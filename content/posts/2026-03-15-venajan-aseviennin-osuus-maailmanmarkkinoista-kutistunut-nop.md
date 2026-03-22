@@ -11,6 +11,10 @@ tags:
   - maailmanmarkkinoista
   - kutistunut
   - nopeasti
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Venäjän osuus raskaiden aseiden maailmanmarkkinoista on pienentynyt merkittävästi lyhyessä ajassa. Maan kansainvälistä asekauppaa rasittavat useat vakavat ongelmat yhtä aikaa, ja aiemmin hallitseva asema on murentunut.
 

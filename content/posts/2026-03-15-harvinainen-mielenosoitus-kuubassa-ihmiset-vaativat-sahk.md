@@ -11,6 +11,10 @@ tags:
   - kuubassa
   - vaativat
   - ihmiset
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Kuuban pääkaupungissa Havannassa puhkesi viikonloppuna harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat toimivaa sähköverkkoa ja ruoan saatavuuden parantamista. Protestoijat tunkeutuivat kommunistisen puolueen paikalliseen toimistoon ja aiheuttivat vahinkoa rakennukselle.
 

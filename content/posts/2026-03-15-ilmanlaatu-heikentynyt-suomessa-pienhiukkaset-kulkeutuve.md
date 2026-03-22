@@ -11,6 +11,10 @@ tags:
   - ilmanlaatu
   - heikentynyt
   - suomessa
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Ilmanlaatu on heikentynyt laajoilla alueilla Suomessa maaliskuun puolivälissä. Syynä on Keski-Euroopasta kulkeutuva pienhiukkaspilvi, johon sekoittuu kotimaista katupölyä lumen sulaessa kaupunkien kaduilta.
 

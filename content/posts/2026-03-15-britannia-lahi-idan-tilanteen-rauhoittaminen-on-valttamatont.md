@@ -11,6 +11,10 @@ tags:
   - idän
   - rauhoittaminen
   - välttämätöntä
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Britannian puolustusministeri on korostanut Lähi-idän tilanteen rauhoittamisen olevan elintärkeää kansainväliselle turvallisuudelle. Ministeriön tiedottaja kertoi lauantaina, että Britannian hallitus käy tiivistä vuoropuhelua liittolaistensa kanssa useista eri vaihtoehdoista Hormuzinsalmen tilanteen vakauttamiseksi.
 

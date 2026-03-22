@@ -1,7 +1,11 @@
 ---
 title: "Teknologia"
-description: "Teknologiauutiset – tekoäly, älypuhelimet, ohjelmistot, kyberturvallisuus ja digiala. Lue uusimmat teknologiauutiset Suomesta ja maailmalta päivittäin."
+description: "Teknologia uutiset ja tiedeuutiset – tekoäly uutiset, IT-alan kehitys ja tieteen läpimurrot suomeksi. Lue uusimmat teknologia- ja tiedeuutiset Uutistenlukijasta."
 og_image: "/images/og-teknologia.png"
+keywords:
+  - "teknologia uutiset"
+  - "tiedeuutiset"
+  - "tekoäly uutiset"
 ---
 
-Teknologian uusimmat uutiset – tekoäly, ohjelmistot, kyberturvallisuus ja digitaalinen kehitys.
+Teknologia- ja tiedeuutiset suomeksi. Tekoäly, ohjelmistot, kyberturvallisuus ja tieteen uusimmat löydöt.

@@ -15,6 +15,10 @@ tags:
   - joukko
   - mennessä
   - perustetaan
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Lapin Rovajärvellä harjoitellaan parhaillaan Naton eteentyönnettyjen joukkojen toimintaa Suomen maaperällä. Cold Response 26 -sotaharjoitukseen osallistuu yli 30 000 ammattisotilasta ja reserviläistä 14 maasta. Harjoituksen ytimessä on joukkojen siirtäminen Ruotsista Suomeen.
 

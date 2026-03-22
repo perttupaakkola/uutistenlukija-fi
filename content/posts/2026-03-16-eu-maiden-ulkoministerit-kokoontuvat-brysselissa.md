@@ -15,6 +15,10 @@ tags:
   - kokoontuvat
   - maiden
   - unionin
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Euroopan unionin jäsenmaiden ulkoministerit kokoontuvat maanantaina Brysselissä. Asialistalla ovat unionin ulko- ja turvallisuuspoliittiset kysymykset.
 

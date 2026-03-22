@@ -15,6 +15,10 @@ tags:
   - pojan
   - oikeudenkäynti
   - lähestyy
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Norjan kruununprinsessa Mette-Maritin pojan oikeudenkäynti on siirtynyt viimeiselle viikollensa Oslon käräjäoikeudessa. Maanantaina viimeisen puheenvuoronsa käytti syyttäjä.
 

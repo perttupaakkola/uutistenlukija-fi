@@ -15,6 +15,10 @@ tags:
   - teneriffalla
   - poliisi
   - keskellä
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Kanariansaarten Teneriffalla nainen synnytti lapsen kadulla Cabo Blancon kaupunginosassa tiistaina. Poliisi sai hälytyksen, kun paikallisen asukkaan synnytys alkoi yllättäen ulkona.
 

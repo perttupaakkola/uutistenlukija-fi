@@ -15,6 +15,10 @@ tags:
   - paikallisvaalit
   - kiinnostavat
   - ennusmerkkinä
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Ranskassa äänestettiin sunnuntaina paikallisvaalien ensimmäisellä kierroksella. Vaalien tuloksia seurataan tavallista tarkemmin, koska suurkaupunkien voimasuhteet voivat ennakoida ensi vuoden presidentinvaalien asetelmia.
 

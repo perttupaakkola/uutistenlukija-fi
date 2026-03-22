@@ -11,6 +11,10 @@ tags:
   - miehen
   - joukko
   - uhrin
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Poliisi sai sunnuntain vastaisena yönä ilmoituksen pahoinpitelystä Rovaniemen keskustassa. Neljän miehen joukko oli pahoinpidellyt uhrin, joka ei tuntenut tekijöitä entuudestaan. Pahoinpitely tapahtui yöaikaan kaupungin ydinkeskustan alueella.
 

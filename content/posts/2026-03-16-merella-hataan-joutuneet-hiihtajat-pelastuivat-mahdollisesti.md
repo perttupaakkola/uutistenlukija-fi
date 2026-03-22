@@ -15,6 +15,10 @@ tags:
   - hätään
   - joutuneet
   - pelastuivat
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Kaksi kokenutta saksalaista hiihtovaeltajaa selvisi hengissä merellisestä hätätilanteesta lauantaina. Pelastumisen taustalla saattoi olla keino, jota on käytetty autiosaarilla vuosikymmeniä.
 

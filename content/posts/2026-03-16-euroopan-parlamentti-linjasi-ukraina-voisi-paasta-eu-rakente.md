@@ -15,6 +15,10 @@ tags:
   - parlamentti
   - rakenteisiin
   - täysjäsenyyttä
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Euroopan parlamentti äänesti 11. maaliskuuta EU:n laajentumisstrategian puolesta. Linjaus tukee mallia, jossa Ukraina pääsisi mukaan unionin rakenteisiin jo ennen varsinaista täysjäsenyyttä.
 

@@ -15,6 +15,10 @@ tags:
   - tampereen
   - kohdalla
   - ruuhkautti
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Ajokaistalle kaatunut matkailuvaunu aiheutti ruuhkaa valtatie 9:llä Tampereen kohdalla maanantai-iltana. Onnettomuus tapahtui noin kello 17.30 lähellä Karkunvuoren tunnelia Jyväskylän suunnasta Pirkkalaan vievällä osuudella.
 

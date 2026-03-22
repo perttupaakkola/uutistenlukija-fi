@@ -15,6 +15,10 @@ tags:
   - nousi
   - lähes
   - prosenttia
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 Helsingin pörssi päätyi maanantaina nousuun. Päivän suurimpia nousijoita oli Nokia, jonka osake vahvistui lähes neljä prosenttia.
 

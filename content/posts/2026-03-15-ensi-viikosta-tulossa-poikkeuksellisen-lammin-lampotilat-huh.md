@@ -11,6 +11,10 @@ tags:
   - lämpötilat
   - huhtikuun
   - viikosta
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Suomeen on saapumassa poikkeuksellisen lämmin sääjakso ensi viikolle. Lämpötilat kohoavat tasolle, jota nähdään tavallisesti vasta huhtikuun puolivälissä, ja erityisesti loppuviikko lupaa aurinkoista ja keväistä säätä.
 

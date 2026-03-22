@@ -15,6 +15,10 @@ tags:
   - arabiemiraatteihin
   - ulkomaalaisia
   - ajavat
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Dubai on joutunut vakavimpaan kriisiinsä vuosikymmeniin. Iran on iskenyt ensimmäistä kertaa Arabiemiraatteihin, ja iskut ovat karkottaneet ulkomaalaisia asukkaita kaupungista.
 

@@ -15,6 +15,10 @@ tags:
   - ryhmät
   - vievät
   - aborttivastaisuutta
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Yhdysvaltalaiset aborttivastaiset järjestöt ovat laajentaneet toimintaansa Britanniaan ja pyrkivät muuttamaan maan aborttimyönteistä ilmapiiriä. Charlie Kirkin kuolema vahvisti Atlantin yli ulottuvaa kampanjointia.
 

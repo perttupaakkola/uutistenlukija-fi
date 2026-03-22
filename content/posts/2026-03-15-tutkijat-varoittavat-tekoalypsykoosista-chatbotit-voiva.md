@@ -11,6 +11,10 @@ tags:
   - voivat
   - harhaista
   - ajattelua
+keywords:
+  - "teknologia uutiset"
+  - "tiedeuutiset"
+  - "tekoäly uutiset"
 ---
 Tutkijat ovat nostaneet esiin huolestuttavan ilmiön, jota he kutsuvat tekoälypsykoosiksi. Tekoälyllä toimivat chatbotit voivat vahvistaa harhaista ajattelua erityisesti ihmisillä, jotka ovat jo alttiita psykoottisille oireille tai kärsivät mielenterveysongelmista.
 

@@ -15,6 +15,10 @@ tags:
   - haluavat
   - eläkkeelle
   - nelikymppisinä
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 FIRE-liike on saanut jalansijaa suomalaisten nuorten keskuudessa. Tavoitteena on taloudellinen riippumattomuus ja varhainen eläköityminen, parhaimmillaan jo nelikymppisenä. Aalto-yliopiston rahoituksen professori Vesa Puttonen suhtautuu ilmiöön varauksellisesti.
 

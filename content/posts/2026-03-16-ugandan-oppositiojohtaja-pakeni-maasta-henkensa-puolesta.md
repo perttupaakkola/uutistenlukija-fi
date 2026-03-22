@@ -15,6 +15,10 @@ tags:
   - maasta
   - henkensä
   - pakeni
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Ugandan oppositiojohtaja kertoo paenneensa maasta, koska pelkäsi henkensä puolesta. Hän puhui julkisuuteen paljastamattomasta sijainnista.
 

@@ -11,6 +11,10 @@ tags:
   - tahattomasti
   - lapsettomista
   - kokee
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, käy ilmi Simpukka ry:n tuoreesta kyselystä. Lapsettomien yhdistyksen maaliskuussa toteuttamassa Instagram-kyselyssä 49 prosenttia vastaajista kertoi kokeneensa työelämäsyrjintää lapsettomuutensa vuoksi.
 

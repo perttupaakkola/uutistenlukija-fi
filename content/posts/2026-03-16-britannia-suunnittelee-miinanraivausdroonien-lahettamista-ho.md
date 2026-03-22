@@ -15,6 +15,10 @@ tags:
   - hormuzinsalmelle
   - suunnittelee
   - lähettämistä
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Britannian hallitus valmistelee suunnitelmaa miinanraivausdroonien lähettämiseksi Hormuzinsalmelle. Tavoitteena on avata salmi uudelleen öljykuljetuksille ilman, että tilanne Iranin kanssa kiristyisi.
 

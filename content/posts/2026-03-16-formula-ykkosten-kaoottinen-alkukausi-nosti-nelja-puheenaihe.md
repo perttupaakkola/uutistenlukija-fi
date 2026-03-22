@@ -15,6 +15,10 @@ tags:
   - puheenaihetta
   - kaoottinen
   - alkukausi
+keywords:
+  - "urheilu uutiset"
+  - "urheiluuutiset"
+  - "uusimmat urheilu-uutiset"
 ---
 Formula ykkösten kausi 2026 on alkanut sekavasti. Useilla talleilla on ollut vaikeuksia saada autojaan edes maaliin, ja keskeytyksiä on nähty paljon.
 

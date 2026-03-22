@@ -15,6 +15,10 @@ tags:
   - euron
   - maakotkan
   - pesästä
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Metsähallitus tarjoaa sadan euron löytöpalkkion jokaisesta maakotkan pesästä, joka ei ole aiemmin ollut sen tiedossa. Palkkio koskee myös poronhoitoalueelta löytyviä aiemmin tuntemattomia merikotkan pesiä.
 

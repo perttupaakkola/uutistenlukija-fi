@@ -15,6 +15,10 @@ tags:
   - against
   - putin
   - voitti
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 Dokumenttielokuva Mr Nobody Against Putin voitti parhaan dokumenttielokuvan Oscar-palkinnon. Elokuva kertoo venäläisestä peruskoulunopettajasta Pavel Talankinista, joka dokumentoi oppilaittensa indoktrinaatiota Venäjän Ukrainan-hyökkäyksen tueksi.
 

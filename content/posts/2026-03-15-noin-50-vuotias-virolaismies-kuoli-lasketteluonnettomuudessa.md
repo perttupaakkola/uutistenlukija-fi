@@ -11,6 +11,10 @@ tags:
   - virolaismies
   - kuoli
   - lasketteluonnettomuudessa
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Himoksen hiihtokeskuksessa Jämsässä sattui perjantaina kuolemaan johtanut lasketteluonnettomuus. Uhri on noin 50-vuotias Viron kansalainen, jonka henkilöllisyyden Sisä-Suomen poliisi on vahvistanut.
 

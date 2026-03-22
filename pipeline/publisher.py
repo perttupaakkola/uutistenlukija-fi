@@ -6,6 +6,7 @@ import os
 import subprocess
 from datetime import datetime, timezone
 from typing import List, Dict
+from pathlib import Path
 
 import re
 import unicodedata
@@ -102,6 +103,22 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     else:
         tags_yaml = ""
 
+    # Build SEO keywords frontmatter from category primary keywords
+    seo_keywords_path = Path(__file__).parent / "seo_keywords.json"
+    seo_kws: List[str] = []
+    try:
+        import json as _json
+        with open(seo_keywords_path) as _f:
+            _kw_data = _json.load(_f)
+        cat_data = _kw_data.get(category, {})
+        seo_kws = cat_data.get("primary", [])[:3]
+    except Exception:
+        pass
+    if seo_kws:
+        keywords_yaml = "\nkeywords:\n" + "\n".join(f'  - "{_esc(str(k))}"' for k in seo_kws)
+    else:
+        keywords_yaml = ""
+
     # Build front matter — no source_name or source_url
     front_matter = f"""---
 title: "{title}"
@@ -112,7 +129,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{summary_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}
+author_image: "{writer['image']}"{description_line}{summary_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}
 draft: false
 ---
 

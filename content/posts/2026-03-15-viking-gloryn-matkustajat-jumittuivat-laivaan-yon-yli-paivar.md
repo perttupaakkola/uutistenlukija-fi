@@ -11,6 +11,10 @@ tags:
   - venyi
   - gloryn
   - jumittuivat
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Turusta lauantaina päiväristeilylle lähteneet matkustajat saivat yllätyksen, kun matka venyikin yön yli kestäväksi seikkailuksi. Viking Glory joutui pysähtymään yllättäen ennen Maarianhaminaa, kun saman varustamon Viking Grace oli jumiutunut Tukholman edustalle ja aiheuttanut häiriöitä aikatauluihin.
 

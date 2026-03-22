@@ -15,6 +15,10 @@ tags:
   - leviäminen
   - huolestuttaa
   - kaakkois
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Tulimuurahaisten torjunta on noussut jälleen Australiassa otsikoihin. Brisbanen New Farm -puistosta löytyi tulimuurahaispesä, ja löytö kuvastaa lajin leviämistä uusille alueille Kaakkois-Queenslandissa. Vieraslajien torjuntajärjestö Invasive Species Council kertoi, että tulimuurahaispesiä on havaittu ja tuhottu myös Gold Coastin takamaiden maailmanperintökohteeksi luokitellussa sademetsässä.
 

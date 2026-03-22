@@ -15,6 +15,10 @@ tags:
   - mikkelin
   - kapteenin
   - jukurit
+keywords:
+  - "urheilu uutiset"
+  - "urheiluuutiset"
+  - "uusimmat urheilu-uutiset"
 ---
 Jesper Piitulainen lähtee Mikkelin Jukureista. Pienikokoisesta hyökkääjästä kasvoi joukkueen kapteeni ja yksi seuran tunnetuimmista nimistä.
 

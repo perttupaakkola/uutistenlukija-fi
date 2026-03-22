@@ -11,6 +11,10 @@ tags:
   - kisoissa
   - suomelle
   - kaksoisvoitto
+keywords:
+  - "urheilu uutiset"
+  - "urheiluuutiset"
+  - "uusimmat urheilu-uutiset"
 ---
 Helsinki Fintastic voitti kultaa muodostelmaluistelun junioreiden MM-kisoissa sunnuntaina vakuuttavalla esityksellä. Espoolainen Valley Bay Synchro täydensi suomalaisten juhlaa nousemalla pronssisijalle – joukkueen ensimmäiseen MM-mitaliin koskaan.
 

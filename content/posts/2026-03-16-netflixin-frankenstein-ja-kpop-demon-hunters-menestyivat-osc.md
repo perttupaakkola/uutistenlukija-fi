@@ -15,6 +15,10 @@ tags:
   - demon
   - oscar
   - hunters
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 Netflixin Frankenstein-elokuva voitti kolme Oscar-palkintoa vuoden 2026 gaalassa. Palkinnot tulivat parhaasta lavastuksesta, parhaasta pukusuunnittelusta ja parhaasta maskeerauksesta.
 

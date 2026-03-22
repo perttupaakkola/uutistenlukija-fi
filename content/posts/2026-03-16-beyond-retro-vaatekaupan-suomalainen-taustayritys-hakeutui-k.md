@@ -15,6 +15,10 @@ tags:
   - suomalainen
   - konkurssiin
   - vaatekaupan
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 Beyond Retro -vaateliikkeiden suomalainen omistajayritys Kusa Oy on hakeutunut konkurssiin. Konkurssihakemus saapui Helsingin käräjäoikeudelle 12. maaliskuuta, käy ilmi maksukyvyttömyysrekisteristä.
 

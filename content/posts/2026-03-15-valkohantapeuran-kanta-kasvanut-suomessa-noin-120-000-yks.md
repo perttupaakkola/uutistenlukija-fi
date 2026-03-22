@@ -11,6 +11,10 @@ tags:
   - suomessa
   - noin
   - valkohäntäpeuran
+keywords:
+  - "tiedeuutiset"
+  - "tiede uutiset"
+  - "tutkimus uutiset"
 ---
 Luonnonvarakeskuksen tuoreen kanta-arvion mukaan Suomessa oli helmikuussa 2026 noin 120 000 valkohäntäpeuraa. Kanta on kasvanut hieman viime vuodesta, vaikka metsästyspaine on pyritty pitämään riittävänä kannan hallitsemiseksi.
 

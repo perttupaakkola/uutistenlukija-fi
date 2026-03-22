@@ -1,7 +1,11 @@
 ---
 title: "Kulttuuri"
-description: "Kulttuuriuutiset – elokuvat, musiikki, kirjallisuus, taide ja tapahtumat Suomesta ja maailmalta. Tuoreimmat kulttuuriuutiset päivittäin Uutistenlukijasta."
+description: "Kulttuuri uutiset ja viihde uutiset suomeksi – musiikki, elokuva, teatteri ja kulttuuritapahtumat. Lue uusimmat kulttuuri- ja viihdeuutiset Uutistenlukijasta."
 og_image: "/images/og-kulttuuri.png"
+keywords:
+  - "kulttuuri uutiset"
+  - "viihde uutiset"
+  - "kulttuuritapahtumat"
 ---
 
-Kulttuurin uutiset elokuvista, musiikista, kirjallisuudesta ja taiteesta Suomesta ja maailmalta.
+Kulttuuri- ja viihdeuutiset suomeksi. Musiikki, elokuva, teatteri, kirjallisuus ja suomalainen kulttuurielämä.

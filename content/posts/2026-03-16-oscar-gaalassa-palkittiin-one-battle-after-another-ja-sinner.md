@@ -15,6 +15,10 @@ tags:
   - after
   - another
   - gaalassa
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 Hollywoodin 98. Oscar-gaala järjestettiin sunnuntaina Dolby Theatressa Los Angelesissa. Illan suurin voittaja oli Paul Thomas Andersonin ohjaama One Battle After Another, joka vei parhaan elokuvan ja parhaan ohjaajan palkinnot. Andersonille kyseessä olivat uran ensimmäiset Oscar-pystit.
 

@@ -15,6 +15,10 @@ tags:
   - noussut
   - dollarin
   - tynnyriltä
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 Raakaöljyn hinta on kivunnut tasoille, joita ei ole nähty sitten vuoden 2022 energiakriisin. Yhdysvaltalainen WTI-laatu maksaa jo yli 107 dollaria tynnyriltä ja kansainvälinen Brent-viitelaatu on ylittänyt 108 dollarin rajan. Maaliskuun aikana hinta on noussut lähes 50 prosenttia.
 

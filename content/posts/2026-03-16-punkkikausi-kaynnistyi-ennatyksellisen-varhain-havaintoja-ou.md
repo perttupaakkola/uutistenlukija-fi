@@ -15,6 +15,10 @@ tags:
   - punkkikausi
   - käynnistyi
   - ennätyksellisen
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Punkkeja on havaittu tänä keväänä tavallista aiemmin. Lämmin sää on aktivoinut punkit liikkeelle, ja havaintoja on tehty jopa Oulun korkeudella.
 

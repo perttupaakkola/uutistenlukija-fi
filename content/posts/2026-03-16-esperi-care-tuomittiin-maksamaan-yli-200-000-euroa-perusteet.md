@@ -15,6 +15,10 @@ tags:
   - maksamaan
   - euroa
   - perusteettomasta
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Sosiaali- ja terveyspalveluyhtiö Esperi Care irtisanoi hoitajansa väittäen tätä vakavista laiminlyönneistä. Oikeus katsoi, ettei väitteille ollut riittävää näyttöä. Yhtiö joutuu maksamaan entiselle työntekijälleen yli 200 000 euroa korvauksina perusteettomasta irtisanomisesta, aineettomasta vahingosta ja oikeudenkäyntikuluista.
 

@@ -15,6 +15,10 @@ tags:
   - ylijohtaja
   - myöntää
   - epäonnistuneet
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 Valtiovarainministeriön kansantalousosaston päällikkö Mikko Spolander arvioi suorasanaisesti ministeriön ennustevirheitä. Spolander toteaa, että ministeriö on viime vuosina yliarvioinut yksityisen kulutuksen kasvun useassa ennusteessa.
 

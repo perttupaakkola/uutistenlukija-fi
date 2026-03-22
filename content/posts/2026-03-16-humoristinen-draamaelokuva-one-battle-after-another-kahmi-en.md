@@ -15,6 +15,10 @@ tags:
   - after
   - eniten
   - palkintoja
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 Oscar-gaalan suurin voittaja oli humoristinen draamaelokuva One Battle After Another, joka keräsi illan aikana eniten palkintoja. Elokuva vakuutti akatemian jäsenet useassa kategoriassa.
 

@@ -15,6 +15,10 @@ tags:
   - talon
   - kansliapäällikkö
   - susie
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Yhdysvaltain presidentti Donald Trump kertoi Truth Social -palvelussa, että Valkoisen talon kansliapäällikkö Susie Wiles on saanut syöpädiagnoosin. Kyseessä on varhaisessa vaiheessa oleva rintasyöpä.
 

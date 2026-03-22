@@ -7,6 +7,7 @@
   {{ $pageTitle := .Title }}{{ if gt (len .Title) 42 }}{{ $pageTitle = printf "%s..." (substr .Title 0 42) }}{{ end }}
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $pageTitle }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+  {{- with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end -}}
   {{/* === Resource hints === */}}
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>

@@ -15,6 +15,10 @@ tags:
   - kiihdyttämö
   - karsi
   - tekoälykääreiksi
+keywords:
+  - "teknologia uutiset"
+  - "tiedeuutiset"
+  - "tekoäly uutiset"
 ---
 Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöohjelmaansa yli 4 000 hakemuksen joukosta. Yksikään valituista ei ole niin sanottu tekoälykääre eli yritys, joka vain paketoi olemassa olevan tekoälymallin uuteen käyttöliittymään.
 

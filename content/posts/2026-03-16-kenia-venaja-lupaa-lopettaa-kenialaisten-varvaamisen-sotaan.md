@@ -15,6 +15,10 @@ tags:
   - kenialaisten
   - värväämisen
   - ukrainassa
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Venäjä on ilmoittanut lopettavansa kenialaisten värväämisen sotimaan Ukrainaan. Kenian viranomaiset ovat selvittäneet asiaa sen jälkeen, kun ilmeni, että yli tuhat Venäjälle matkustanutta kenialaista on päätynyt taistelemaan Ukrainassa.
 

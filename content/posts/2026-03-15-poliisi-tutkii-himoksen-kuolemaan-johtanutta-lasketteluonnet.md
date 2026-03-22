@@ -11,6 +11,10 @@ tags:
   - kuolemaan
   - lasketteluonnettomuutta
   - himoksen
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Sisä-Suomen poliisi tutkii Jämsän Himoksella perjantaina tapahtunutta lasketteluonnettomuutta kuolemansyyntutkintana. Onnettomuudessa menehtyi virolainen mies, joka ajautui siirtymäreitiltä päin kallioleikkausta.
 

@@ -15,6 +15,10 @@ tags:
   - järjestettiin
   - äänestysaktiivisuus
   - lähes
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Pohjois-Korea järjesti sunnuntaina kansallisen kansankokouksen vaalit. Maan viranomaisten mukaan äänestysaktiivisuus nousi lähes sataan prosenttiin, kuten maassa on tapana.
 

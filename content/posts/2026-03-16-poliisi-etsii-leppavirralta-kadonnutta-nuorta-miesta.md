@@ -15,6 +15,10 @@ tags:
   - miestä
   - leppävirralta
   - kadonnutta
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Itä-Suomen poliisi etsii 28-vuotiasta miestä, joka katosi Leppävirralla maanantaina 9. maaliskuuta. Miehestä ei ole saatu havaintoja katoamisen jälkeen.
 

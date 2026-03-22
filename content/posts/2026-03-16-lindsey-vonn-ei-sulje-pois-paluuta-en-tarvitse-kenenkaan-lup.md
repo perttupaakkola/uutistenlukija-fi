@@ -15,6 +15,10 @@ tags:
   - tarvitse
   - kenenkään
   - lupaa
+keywords:
+  - "urheilu uutiset"
+  - "urheiluuutiset"
+  - "uusimmat urheilu-uutiset"
 ---
 Yhdysvaltalainen alppihiihtäjä Lindsey Vonn ei ole valmis tekemään lopullista päätöstä urastaan. Olympialaisissa vakavasti loukkaantunut Vonn sanoo, ettei tarvitse kenenkään lupaa omia valintojaan varten.
 

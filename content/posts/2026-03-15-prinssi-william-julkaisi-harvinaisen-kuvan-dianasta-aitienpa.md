@@ -11,6 +11,10 @@ tags:
   - prinssi
   - kuvan
   - julkaisi
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Walesin prinssi William jakoi sunnuntaina aiemmin julkaisemattoman kuvan itsestään ja äidistään prinsessa Dianasta. Kuva julkaistiin brittiläisen äitienpäivän kunniaksi, jota vietetään Britanniassa maaliskuun puolivälissä.
 

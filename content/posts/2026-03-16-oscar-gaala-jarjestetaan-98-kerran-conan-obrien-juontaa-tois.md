@@ -15,6 +15,10 @@ tags:
   - brien
   - järjestetään
   - kerran
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 Yhdysvaltain elokuva-akatemian Oscar-gaala järjestetään sunnuntai-iltana Los Angelesissa 98. kerran. Seremonian juontaa toista kertaa peräkkäin Conan O'Brien, joka sai viime vuonna kiitosta suorituksestaan.
 

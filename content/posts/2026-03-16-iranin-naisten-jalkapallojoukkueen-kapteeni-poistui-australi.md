@@ -15,6 +15,10 @@ tags:
   - kapteeni
   - poistui
   - australiasta
+keywords:
+  - "urheilu uutiset"
+  - "urheiluuutiset"
+  - "uusimmat urheilu-uutiset"
 ---
 Iranin naisten jalkapallomaajoukkueen kapteeni Zahra Ghanbari poistui Australiasta sunnuntai-iltana. Hän oli aiemmin ottanut vastaan tarjouksen jäädä maahan, mutta perui päätöksensä.
 

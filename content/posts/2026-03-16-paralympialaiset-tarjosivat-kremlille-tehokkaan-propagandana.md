@@ -15,6 +15,10 @@ tags:
   - tarjosivat
   - tehokkaan
   - propagandanäyttämön
+keywords:
+  - "urheilu uutiset"
+  - "urheiluuutiset"
+  - "uusimmat urheilu-uutiset"
 ---
 Venäjän vallanpitäjät onnistuivat hyödyntämään paralympialaisia omassa viestinnässään. Paraurheilun kansainvälinen kattojärjestö mahdollisti tilanteen, jossa venäläisurheilijat kilpailivat ja menestyivät tavalla, joka palveli suoraan Kremlin tarpeita.
 

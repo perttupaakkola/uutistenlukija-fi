@@ -15,6 +15,10 @@ tags:
   - taistelee
   - rahoituksensa
   - keskellä
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Ukraina kamppailee taloudellisesta selviytymisestään. Maa neuvottelee samanaikaisesti rahoituksesta Kansainvälisen valuuttarahaston ja Euroopan unionin kanssa sekä nostaa kotimaisia veroja sotakulujen kattamiseksi.
 

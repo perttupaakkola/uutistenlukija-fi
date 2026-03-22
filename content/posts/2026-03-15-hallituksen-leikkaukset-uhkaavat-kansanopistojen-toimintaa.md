@@ -11,6 +11,10 @@ tags:
   - leikkaukset
   - uhkaavat
   - kotoutumiskoulutuksen
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Suomen kansanopistot ovat ajautuneet ahtaalle hallituksen suunnittelemien leikkausten vuoksi. Mikäli kotoutumiskoulutuksen rahoitusta supistetaan suunnitellusti, jopa 38 000 maahanmuuttajaa voi jäädä ilman kielikoulutusta ja muuta kotoutumista tukevaa opetusta.
 

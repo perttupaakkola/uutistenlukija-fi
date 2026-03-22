@@ -15,6 +15,10 @@ tags:
   - maailmanlaajuisesti
   - tunnustetusta
   - logosta
+keywords:
+  - "teknologia uutiset"
+  - "tiedeuutiset"
+  - "tekoäly uutiset"
 ---
 Tekoälyn käytön yleistyminen on synnyttänyt vastareaktion. Useat tahot kilpailevat siitä, kuka luo ensimmäisen kansainvälisesti tunnustetun logon, joka kertoo tuotteen tai sisällön olevan tehty ilman tekoälyä.
 

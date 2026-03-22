@@ -11,6 +11,10 @@ tags:
   - ansioituneimman
   - ehdokkaan
   - valinnassa
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 Kirkkoherran valinta on herättänyt vilkasta keskustelua sen jälkeen, kun kirkkovaltuusto valitsi tehtävään miehen, vaikka tuomiokapituli oli todennut naisehdokkaan olevan hakijoista ansioitunein. Tutkijan mukaan lestadiolaiset toimivat valinnassa järjestelmällisesti saadakseen itselleen mieluisan papin.
 

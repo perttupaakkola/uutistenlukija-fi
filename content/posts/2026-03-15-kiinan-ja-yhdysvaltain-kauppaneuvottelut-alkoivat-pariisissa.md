@@ -11,6 +11,10 @@ tags:
   - kiinan
   - yhdysvaltain
   - alkoivat
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 Kiina ja Yhdysvallat aloittivat lauantaina kauppaneuvottelut Pariisissa. Ranskan pääkaupungissa käytävät keskustelut valmistelevat presidentti Donald Trumpin ja presidentti Xi Jinpingin tulevaa huippukokousta, joka on tarkoitus järjestää Kiinassa lähikuukausina.
 

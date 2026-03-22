@@ -11,6 +11,10 @@ tags:
   - täyttää
   - vuotta
   - tampereella
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 Tampereen Armas-festivaali juhlii tänä vuonna merkittävää merkkipaalua: kymmenvuotista taivaltaan. Valtakunnallinen kulttuurifestivaali järjestetään 17.–31. maaliskuuta, ja sen suojelijana toimii arvostettu elokuvaohjaaja Aki Kaurismäki.
 
