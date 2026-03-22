@@ -97,10 +97,17 @@
   letter-spacing: 0.04em;
   padding: 0.15em 0.5em;
   border-radius: 3px;
-  background: var(--accent);
+  background: var(--accent, #c0392b);  /* fix #1: hardcode fallback — var(--accent) alone is invisible if unresolved */
   color: #fff;
-  margin-right: 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.1em;
+  vertical-align: middle;
   text-decoration: none;
+}
+/* fix #2: meta separator between category pill and date */
+.result-meta-sep {
+  color: var(--text-muted, #888);
+  margin-right: 0.3em;
 }
 .search-result .result-snippet {
   font-size: 0.88rem;
@@ -108,8 +115,14 @@
   line-height: 1.55;
   margin-top: 0.25rem;
 }
+/* fix #3: mobile search improvements */
 @media (max-width: 480px) {
   .result-thumb { display: none; }
+  .search-page { padding: 1.25rem 1rem; }
+  #search-input { font-size: 1rem; padding: 0.75rem 0.9rem; }
+  .search-result { padding: 1rem 0; gap: 0.75rem; }
+  .search-result h3 { font-size: 0.97rem; }
+  .result-snippet { font-size: 0.82rem; }
 }
 mark {
   background: rgba(192,57,43,0.15);
@@ -274,7 +287,7 @@ mark {
         thumbHtml +
         '<div class="result-body">' +
         '<h3><a href="' + esc(a.url) + '">' + titleHtml + '</a></h3>' +
-        '<div class="result-meta">' + catHtml + esc(a.date) + '</div>' +
+        '<div class="result-meta">' + catHtml + (catHtml && a.date ? '<span class="result-meta-sep">·</span> ' : '') + esc(a.date) + '</div>' +
         (snippetHtml ? '<p class="result-snippet">' + snippetHtml + '</p>' : '') +
         '</div>' +
         '</div>';
