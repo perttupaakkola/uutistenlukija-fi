@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{/* Title tag: keep under ~60 chars for Google. Article title capped at 42 chars + " — Uutistenlukija" = ~60. Homepage uses full tagline. */}}
+  {{/* Title tag: 404 gets Finnish title; homepage gets site name; others capped at ~60 chars. */}}
+  {{ $is404 := eq .Kind "404" }}
   {{ $pageTitle := .Title }}{{ if gt (len .Title) 42 }}{{ $pageTitle = printf "%s..." (substr .Title 0 42) }}{{ end }}
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $pageTitle }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
+  <title>{{ if $is404 }}Sivua ei löytynyt &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ else if .IsHome }}{{ .Site.Title }}{{ else }}{{ $pageTitle }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
+  {{ if $is404 }}<meta name="robots" content="noindex, nofollow">{{ end }}
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
   {{/* === Resource hints === */}}
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>

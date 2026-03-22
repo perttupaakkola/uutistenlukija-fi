@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{/* Title tag: pass full headline — let Google truncate in SERPs, not us. */}}
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
+  {{/* Title tag: 404 gets Finnish title; homepage gets site name; others get page title. */}}
+  {{ $is404 := eq .Kind "404" }}
+  <title>{{ if $is404 }}Sivua ei löytynyt &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ else if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
+  {{/* 404 pages must be noindex — they have no canonical URL */}}
+  {{ if $is404 }}<meta name="robots" content="noindex, nofollow">{{ end }}
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
   {{- with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end -}}
   {{/* === Resource hints === */}}
