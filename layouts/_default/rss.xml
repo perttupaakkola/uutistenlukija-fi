@@ -2,32 +2,26 @@
   rss.xml — Enhanced RSS 2.0 feed for uutistenlukija.fi
 
   Features:
-  - Full article content via <content:encoded> (CDATA, not escaped)
+  - Full article content via <content:encoded> (CDATA, unescaped HTML)
   - Article hero images via <media:content> + <media:thumbnail>
   - <atom:link rel="self"> for feed autodiscovery
   - Works for home feed (all posts) and category/taxonomy feeds
   - Sorted newest-first, capped at 50 items
 */ -}}
 
-{{- /* For home feed: use site.RegularPages to get all posts.
-       For category/tag/section feeds: use the context's .Pages. */ -}}
-{{- $pagesAll := .Pages -}}
+{{- /* Source pages:
+       - Home feed: all posts from site
+       - Category/tag/section feeds: the context's own pages (already filtered) */ -}}
+{{- $sourcePages := .Pages -}}
 {{- if eq .Kind "home" -}}
-  {{- $pagesAll = .Site.RegularPages -}}
+  {{- $sourcePages = where .Site.RegularPages "Section" "posts" -}}
 {{- end -}}
 
-{{- /* Filter: only real articles with dates, in the posts section */ -}}
-{{- $pages := slice -}}
-{{- range $pagesAll -}}
-  {{- if and (not .Date.IsZero) (eq .Section "posts") -}}
-    {{- $pages = $pages | append . -}}
-  {{- end -}}
-{{- end -}}
-{{- $pages = $pages.ByDate.Reverse | first 50 -}}
+{{- /* Sort newest-first, cap at 50 */ -}}
+{{- $pages := $sourcePages.ByDate.Reverse | first 50 -}}
 
 {{- $title := .Title | default .Site.Title -}}
 {{- $desc  := .Description | default .Site.Params.description -}}
-{{- $selfURL := .Permalink | default .Site.BaseURL -}}
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
@@ -37,7 +31,7 @@
   <channel>
     <title>{{ $title | html }}</title>
     <link>{{ .Site.BaseURL }}</link>
-    <atom:link href="{{ $selfURL }}index.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml"/>
     <description>{{ $desc | html }}</description>
     <language>fi</language>
     <managingEditor>toimitus@uutistenlukija.fi (Uutistenlukija)</managingEditor>
