@@ -74,28 +74,47 @@ class StepTimer:
         return d
 
 
-def _ping_search_engines():
+def _ping_search_engines(new_urls: list[str] | None = None):
     """
-    Notify Google and Bing that the sitemap has been updated.
+    Notify search engines about new content via IndexNow.
+
+    IndexNow is supported by Bing, Yandex, Naver and (via Cloudflare) partially
+    by Google. It sends the specific new article URLs rather than a generic sitemap
+    ping (which is deprecated for both Google and Bing as of 2023).
+
     Fire-and-forget: errors are logged but never raise.
-    Both services accept pings via GET with the sitemap URL as a query parameter.
     """
-    import urllib.parse
-    sitemap_url = "https://uutistenlukija.fi/sitemap.xml"
-    news_sitemap_url = "https://uutistenlukija.fi/news-sitemap.xml"
-    endpoints = [
-        f"https://www.google.com/ping?sitemap={urllib.parse.quote(sitemap_url, safe='')}",
-        f"https://www.google.com/ping?sitemap={urllib.parse.quote(news_sitemap_url, safe='')}",
-        f"https://www.bing.com/ping?sitemap={urllib.parse.quote(sitemap_url, safe='')}",
-    ]
-    for url in endpoints:
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "uutistenlukija-pipeline/1.0"})
-            with urllib.request.urlopen(req, timeout=8) as resp:
-                print(f"[sitemap-ping] {resp.status} → {url[:70]}")
-        except Exception as e:
-            # Non-fatal — search engines don't require pings
-            print(f"[sitemap-ping] WARNING: {url[:60]}: {e}")
+    import json
+    INDEXNOW_KEY = "7faa209351614ee79057069917978b71"
+    HOST = "uutistenlukija.fi"
+
+    # Use provided URLs or fall back to just the sitemap URL path
+    urls_to_ping = new_urls or [f"https://{HOST}/"]
+    # Cap at 10 000 (IndexNow limit per batch)
+    urls_to_ping = urls_to_ping[:10000]
+
+    # IndexNow batch submission (Bing endpoint, accepted by all IndexNow partners)
+    payload = {
+        "host": HOST,
+        "key": INDEXNOW_KEY,
+        "keyLocation": f"https://{HOST}/{INDEXNOW_KEY}.txt",
+        "urlList": urls_to_ping,
+    }
+    endpoint = "https://api.indexnow.org/IndexNow"
+    try:
+        body = json.dumps(payload).encode()
+        req = urllib.request.Request(
+            endpoint, body,
+            {"Content-Type": "application/json; charset=utf-8",
+             "User-Agent": "uutistenlukija-pipeline/1.0"}
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            print(f"[sitemap-ping] IndexNow {resp.status} — {len(urls_to_ping)} URL(s) submitted")
+    except urllib.error.HTTPError as e:
+        body_text = e.read().decode(errors="replace")[:200]
+        print(f"[sitemap-ping] IndexNow HTTP {e.code}: {body_text}")
+    except Exception as e:
+        print(f"[sitemap-ping] WARNING: IndexNow failed: {e}")
 
 
 def log_run(stage: str, data: dict):
@@ -676,8 +695,13 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                     print(f"[critical-css] {_crit.stdout.strip()}")
             except Exception as _crit_err:
                 print(f"[critical-css] WARNING: regeneration failed: {_crit_err}")
-            # Ping search engines that a new sitemap is available
-            _ping_search_engines()
+            # Ping search engines with new article URLs via IndexNow
+            if created:
+                _new_urls = [f"https://uutistenlukija.fi/posts/{p.split('/')[-1].replace('.md','')}/"
+                             for p in created]
+                _ping_search_engines(_new_urls)
+            else:
+                _ping_search_engines()
 
     steps["build"] = t_build.to_dict()
 
