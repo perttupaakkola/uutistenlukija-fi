@@ -43,11 +43,22 @@
 
 {{/* ── Article page: NewsArticle ───────────────────────────────────── */}}
 {{ else if and .IsPage (eq .Section "posts") }}
-{{/* Resolve image URL */}}
+{{/* Resolve image URL — for Unsplash URLs, upgrade to w=1200&h=630&fit=crop
+     so declared schema dimensions match the actually served image size */}}
 {{ $imageUrl := "" }}
 {{ with .Params.image }}
   {{ if hasPrefix . "https://" }}
-    {{ $imageUrl = . }}
+    {{ if strings.Contains . "unsplash.com" }}
+      {{/* Strip existing w/h/fit params then append 1200×630 crop */}}
+      {{ $clean := . | replaceRE `[?&]w=\d+` "" | replaceRE `[?&]h=\d+` "" | replaceRE `[?&]fit=[^&]+` "" }}
+      {{ if strings.Contains $clean "?" }}
+        {{ $imageUrl = printf "%s&w=1200&h=630&fit=crop" $clean }}
+      {{ else }}
+        {{ $imageUrl = printf "%s?w=1200&h=630&fit=crop" $clean }}
+      {{ end }}
+    {{ else }}
+      {{ $imageUrl = . }}
+    {{ end }}
   {{ else }}
     {{ $imageUrl = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) }}
   {{ end }}

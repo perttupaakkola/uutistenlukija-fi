@@ -67,6 +67,82 @@ html {
   --card-bg: #242424;
 }
 
+/* ── OS-level dark mode (no JS, no toggle) ──────────────────────────────────
+   Mirrors [data-theme="dark"] values. Uses :not([data-theme="light"]) so that
+   a manual "light" override wins. [data-theme="dark"] (set by JS) also wins
+   via equal specificity + source order (it appears first). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1a1a;
+    --text: #e8e6e3;
+    --text-secondary: #a0a0a0;
+    --accent: #e74c3c;
+    --border: #333;
+    --card-bg: #242424;
+  }
+
+  /* Elements that can't use CSS vars need explicit overrides */
+  :root:not([data-theme="light"]) body {
+    background: #1a1a1a;
+    color: #e8e6e3;
+  }
+
+  :root:not([data-theme="light"]) a { color: #e8e6e3; }
+  :root:not([data-theme="light"]) .site-title a { color: #e8e6e3; }
+  :root:not([data-theme="light"]) .author-box { background: #2a2a2a; }
+  :root:not([data-theme="light"]) .related-link:hover .related-title { color: #e74c3c; }
+  :root:not([data-theme="light"]) .header-banner { opacity: 0.08; }
+  :root:not([data-theme="light"]) .logo-img { filter: invert(1) hue-rotate(180deg); }
+  :root:not([data-theme="light"]) .scroll-to-top { background: #333; color: #e8e6e3; }
+  :root:not([data-theme="light"]) .scroll-to-top:hover { background: #e74c3c; }
+  :root:not([data-theme="light"]) #cookie-banner { background: #1e1e1e; border-top: 1px solid #333; }
+  :root:not([data-theme="light"]) .cm-box { background: #1e1e1e; color: #f0f0f0; border: 1px solid #333; }
+  :root:not([data-theme="light"]) .cm-category { border-color: #333; }
+  :root:not([data-theme="light"]) .cm-category-desc { color: #aaa; }
+  :root:not([data-theme="light"]) .newsletter-cta { background: #1e1e1e; border-left-color: #e74c3c; }
+  :root:not([data-theme="light"]) .newsletter-cta-text span { color: #aaa; }
+  :root:not([data-theme="light"]) .newsletter-cta-input { background: #2a2a2a; border-color: #444; color: #eee; }
+  :root:not([data-theme="light"]) .related-card { background: #242424; border-color: #333; }
+  :root:not([data-theme="light"]) .related-card:hover { background: #2a2a2a; }
+
+  /* Hero + card image wrappers */
+  :root:not([data-theme="light"]) .article-hero-wrapper,
+  :root:not([data-theme="light"]) .card-thumb-wrapper { background: #1e1e1e; }
+  :root:not([data-theme="light"]) .article-hero-caption,
+  :root:not([data-theme="light"]) .article-hero-caption a { color: #888; }
+
+  /* New hero treatment */
+  :root:not([data-theme="light"]) .lead-article--hero {
+    border-left-color: #e74c3c;
+  }
+
+  /* Category cards */
+  :root:not([data-theme="light"]) .category-article-card {
+    border-left-color: #333;
+  }
+  :root:not([data-theme="light"]) .category-article-card:hover {
+    border-left-color: #e74c3c;
+  }
+
+  /* Pub frequency bar */
+  :root:not([data-theme="light"]) .pub-frequency-bar {
+    background: color-mix(in srgb, #e74c3c 6%, #1a1a1a 94%);
+    border-color: color-mix(in srgb, #e74c3c 15%, #333 85%);
+    color: #a0a0a0;
+  }
+
+  /* Advertiser/sponsor */
+  :root:not([data-theme="light"]) .sponsor-badge,
+  :root:not([data-theme="light"]) .sponsor-footer { background: #2a2000; border-color: #6a4800; }
+  :root:not([data-theme="light"]) .sponsor-label,
+  :root:not([data-theme="light"]) .sponsored-tag,
+  :root:not([data-theme="light"]) .sponsored-meta { color: #f0b030; }
+  :root:not([data-theme="light"]) .sponsor-name,
+  :root:not([data-theme="light"]) .sponsor-name-link { color: #eee; }
+
+  :root:not([data-theme="light"]) .mainasta-placement-card:hover { background: #2a2a2a; }
+}
+
 [data-theme="dark"] a { color: var(--text); }
 [data-theme="dark"] .site-title a { color: var(--text); }
 [data-theme="dark"] .author-box { background: #2a2a2a; }
@@ -1722,17 +1798,7 @@ pre code {
    DARK MODE overrides for hero/card backgrounds
    ============================================================ */
 
-@media (prefers-color-scheme: dark) {
-  .article-hero-wrapper,
-  .card-thumb-wrapper {
-    background: #1e1e1e;
-  }
 
-  .article-hero-caption,
-  .article-hero-caption a {
-    color: #888;
-  }
-}
 
 /* ============================================================
    MOBILE HERO — full viewport width, 16:9 maintained (≤600px)
@@ -2328,6 +2394,23 @@ pre code {
   border-color: #444;
   color: #eee;
 }
+
+/* Dark mode — hero + card components added Mar 22 */
+[data-theme="dark"] .lead-article--hero {
+  border-left-color: #e74c3c;
+}
+[data-theme="dark"] .category-article-card {
+  border-left-color: #333;
+}
+[data-theme="dark"] .category-article-card:hover {
+  border-left-color: #e74c3c;
+}
+[data-theme="dark"] .pub-frequency-bar {
+  background: color-mix(in srgb, #e74c3c 6%, #1a1a1a 94%);
+  border-color: color-mix(in srgb, #e74c3c 15%, #333 85%);
+  color: #a0a0a0;
+}
+
 @media (max-width: 480px) {
   .newsletter-cta-form {
     width: 100%;
@@ -2877,26 +2960,7 @@ pre code {
   color: #9a6000;
 }
 
-/* Dark mode adjustments for sponsored */
-@media (prefers-color-scheme: dark) {
-  .sponsor-badge,
-  .sponsor-footer {
-    background: #2a2000;
-    border-color: #6a4800;
-  }
-  .sponsor-label,
-  .sponsored-tag,
-  .sponsored-meta {
-    color: #f0b030;
-  }
-  .sponsor-name,
-  .sponsor-name-link {
-    color: #eee;
-  }
-  .sponsor-disclosure {
-    color: #aaa;
-  }
-}
+
 
 /* ── Lyhyet digest strip ─────────────────────────────────────────── */
 .lyhyet-section {
@@ -3456,9 +3520,7 @@ pre code {
   white-space: nowrap;
 }
 .most-read-empty { color: var(--text-secondary); font-size: 0.9rem; margin: 0; }
-@media (prefers-color-scheme: dark) {
-  .most-read-widget { background: var(--card-bg); }
-}
+
 /* ── Social share buttons ─────────────────────────────────── */
 .social-share {
   display: flex;

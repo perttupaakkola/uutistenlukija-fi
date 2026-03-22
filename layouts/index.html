@@ -2,6 +2,9 @@
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
 
+{{/* Visually hidden H1 for SEO — Google uses H1 as primary topic signal */}}
+<h1 class="visually-hidden">Uutistenlukija – Päivän uutiset suomeksi</h1>
+
 {{/* Publish frequency badge */}}
 <div class="pub-frequency-bar">
   <span class="pub-freq-dot"></span>
