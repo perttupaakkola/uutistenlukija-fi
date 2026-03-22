@@ -1,0 +1,17 @@
+{{/* category-quicknav.html — Horizontal category pill navigation bar.
+     Appears at the top of the homepage. Smooth-scrolls to each category section
+     on the page (anchored by id="cat-{slug}"). Falls back to category list page. */}}
+<nav class="cat-quicknav" aria-label="Kategoriat">
+  <a class="cat-quicknav__pill cat-quicknav__pill--all" href="#uutiset" aria-label="Kaikki uutiset">
+    Kaikki
+  </a>
+  {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
+  {{ range $categories }}
+  {{ $slug := . | lower | urlize }}
+  <a class="cat-quicknav__pill cat-quicknav__pill--{{ $slug }}"
+     href="#cat-{{ $slug }}"
+     data-cat="{{ $slug }}">
+    {{ . }}
+  </a>
+  {{ end }}
+</nav>

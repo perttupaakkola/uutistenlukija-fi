@@ -187,4 +187,26 @@
     if (window.scrollY > SCROLL_ELEV) siteHeader.classList.add('header--scrolled');
   }
 
+  // ── #15.1: Category quicknav — highlight active pill on scroll ──────────
+  var catPills = document.querySelectorAll('.cat-quicknav__pill[data-cat]');
+  if (catPills.length && 'IntersectionObserver' in window) {
+    var catSections = document.querySelectorAll('.category-section[id]');
+    var activeCat = null;
+    var navObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');  // "cat-kotimaa"
+          var slug = id.replace('cat-', '');
+          if (activeCat !== slug) {
+            activeCat = slug;
+            catPills.forEach(function (pill) {
+              pill.classList.toggle('is-active', pill.getAttribute('data-cat') === slug);
+            });
+          }
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+    catSections.forEach(function (sec) { navObserver.observe(sec); });
+  }
+
 })();

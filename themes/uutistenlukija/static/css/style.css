@@ -4298,3 +4298,232 @@ pre code {
   line-height: 1.5;   /* Fix #7: was 1.40 (browser default ~1.4) — bumped to 1.50 */
 }
 /* ── end content images ───────────────────────────────────────────── */
+
+/* ══════════════════════════════════════════════════════════════════
+   Sara spec #15.1 — Category quicknav pill bar (homepage)
+   ══════════════════════════════════════════════════════════════════ */
+.cat-quicknav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;        /* Firefox */
+  padding: 0.25rem 0 0.75rem;
+  margin-bottom: 1.5rem;
+  scroll-snap-type: x proximity;
+}
+.cat-quicknav::-webkit-scrollbar { display: none; }
+
+.cat-quicknav__pill {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  scroll-snap-align: start;
+  cursor: pointer;
+  min-height: 32px;
+  line-height: 1;
+}
+
+/* "Kaikki" pill — accent colour */
+.cat-quicknav__pill--all {
+  background: var(--accent, #c0392b);
+  color: #fff;
+  border-color: var(--accent, #c0392b);
+}
+.cat-quicknav__pill--all:hover {
+  background: #a93226;
+  border-color: #a93226;
+}
+
+/* Category pills — outlined by default, filled on hover/focus/active */
+.cat-quicknav__pill--kotimaa    { color: #2980b9; border-color: #2980b9; }
+.cat-quicknav__pill--ulkomaat   { color: #c0392b; border-color: #c0392b; }
+.cat-quicknav__pill--talous     { color: #d68910; border-color: #d68910; }
+.cat-quicknav__pill--teknologia { color: #8e44ad; border-color: #8e44ad; }
+.cat-quicknav__pill--urheilu    { color: #1e8449; border-color: #1e8449; }
+.cat-quicknav__pill--kulttuuri  { color: #ca6f1e; border-color: #ca6f1e; }
+.cat-quicknav__pill--tiede      { color: #148f77; border-color: #148f77; }
+
+.cat-quicknav__pill--kotimaa:hover,
+.cat-quicknav__pill--kotimaa.is-active  { background: #2980b9; color: #fff; }
+.cat-quicknav__pill--ulkomaat:hover,
+.cat-quicknav__pill--ulkomaat.is-active { background: #c0392b; color: #fff; }
+.cat-quicknav__pill--talous:hover,
+.cat-quicknav__pill--talous.is-active   { background: #d68910; color: #fff; }
+.cat-quicknav__pill--teknologia:hover,
+.cat-quicknav__pill--teknologia.is-active { background: #8e44ad; color: #fff; }
+.cat-quicknav__pill--urheilu:hover,
+.cat-quicknav__pill--urheilu.is-active  { background: #1e8449; color: #fff; }
+.cat-quicknav__pill--kulttuuri:hover,
+.cat-quicknav__pill--kulttuuri.is-active { background: #ca6f1e; color: #fff; }
+.cat-quicknav__pill--tiede:hover,
+.cat-quicknav__pill--tiede.is-active    { background: #148f77; color: #fff; }
+
+.cat-quicknav__pill:focus-visible {
+  outline: 2px solid var(--accent, #c0392b);
+  outline-offset: 2px;
+}
+
+/* Dark mode adjustments */
+:root:not([data-theme="light"]) .cat-quicknav__pill--kotimaa    { color: #5dade2; border-color: #5dade2; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--ulkomaat   { color: #ec7063; border-color: #ec7063; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--talous     { color: #f0b27a; border-color: #f0b27a; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--teknologia { color: #c39bd3; border-color: #c39bd3; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--urheilu    { color: #76d7c4; border-color: #76d7c4; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--kulttuuri  { color: #f0a27a; border-color: #f0a27a; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--tiede      { color: #48c9b0; border-color: #48c9b0; }
+
+:root:not([data-theme="light"]) .cat-quicknav__pill--kotimaa:hover,
+:root:not([data-theme="light"]) .cat-quicknav__pill--kotimaa.is-active  { background: #5dade2; color: #111; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--ulkomaat:hover,
+:root:not([data-theme="light"]) .cat-quicknav__pill--ulkomaat.is-active { background: #ec7063; color: #111; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--talous:hover,
+:root:not([data-theme="light"]) .cat-quicknav__pill--talous.is-active   { background: #f0b27a; color: #111; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--teknologia:hover,
+:root:not([data-theme="light"]) .cat-quicknav__pill--teknologia.is-active { background: #c39bd3; color: #111; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--urheilu:hover,
+:root:not([data-theme="light"]) .cat-quicknav__pill--urheilu.is-active  { background: #76d7c4; color: #111; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--kulttuuri:hover,
+:root:not([data-theme="light"]) .cat-quicknav__pill--kulttuuri.is-active { background: #f0a27a; color: #111; }
+:root:not([data-theme="light"]) .cat-quicknav__pill--tiede:hover,
+:root:not([data-theme="light"]) .cat-quicknav__pill--tiede.is-active    { background: #48c9b0; color: #111; }
+
+/* Scroll anchor helper */
+.scroll-anchor {
+  display: block;
+  height: 0;
+  margin-top: calc(-1 * var(--header-h, 64px));
+  padding-top: var(--header-h, 64px);
+  visibility: hidden;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Sara spec #15.2 — Newsletter signup band (homepage)
+   ══════════════════════════════════════════════════════════════════ */
+.newsletter-band {
+  margin: 2.5rem calc(-1 * var(--content-pad, 1rem));
+  padding: 2.5rem var(--content-pad, 1rem);
+  background: var(--accent, #c0392b);
+  color: #fff;
+}
+.newsletter-band__inner {
+  max-width: var(--content-max, 860px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 1.25rem;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+.newsletter-band__icon {
+  grid-row: 1 / 3;
+  font-size: 2.2rem;
+  line-height: 1;
+  align-self: center;
+}
+.newsletter-band__text {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.newsletter-band__heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+.newsletter-band__sub {
+  font-size: 0.85rem;
+  opacity: 0.88;
+  margin: 0;
+}
+.newsletter-band__form {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.newsletter-band__input {
+  padding: 0.55rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.9rem;
+  min-width: 220px;
+  color: #222;
+  background: #fff;
+}
+.newsletter-band__input:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.newsletter-band__btn {
+  padding: 0.55rem 1.25rem;
+  background: #fff;
+  color: var(--accent, #c0392b);
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+.newsletter-band__btn:hover { background: #f0f0f0; }
+.newsletter-band__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.newsletter-band__privacy {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 0.75rem;
+  opacity: 0.75;
+  margin: 0;
+}
+.newsletter-band__privacy a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Responsive — stack on narrow screens */
+@media (max-width: 640px) {
+  .newsletter-band__inner {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .newsletter-band__icon {
+    grid-row: 1;
+    font-size: 1.8rem;
+  }
+  .newsletter-band__text {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .newsletter-band__form {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-wrap: wrap;
+  }
+  .newsletter-band__input {
+    flex: 1;
+    min-width: 0;
+  }
+  .newsletter-band__privacy {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+}
+/* ── end spec #15 ─────────────────────────────────────────────── */
