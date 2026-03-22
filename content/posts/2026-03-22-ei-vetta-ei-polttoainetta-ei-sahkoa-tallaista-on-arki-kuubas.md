@@ -22,6 +22,10 @@ tags:
   - polttoainepula
   - vesihuolto
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Kuubassa arki jatkuu öljysaarron keskellä, ja tilanne on muuttunut yhä vaikeammaksi. Maan kansalaiset kamppailevat päivittäin saadakseen peruselintarvikkeita ja palveluita, kun polttoainepula rajoittaa liikkumista. Juan Carlos Pino, 56-vuotias kuubalainen, on innovoinut ratkaisun ongelmaan muuntamalla Fiatinsa kulkemaan hiilillä. Tämä auto on vielä testivaiheessa, mutta se on herättänyt suurta mielenkiintoa, sillä se tarjoaa uuden vaihtoehdon liikenteeseen, missä perinteiset polttoaineet eivät ole enää saatavilla.

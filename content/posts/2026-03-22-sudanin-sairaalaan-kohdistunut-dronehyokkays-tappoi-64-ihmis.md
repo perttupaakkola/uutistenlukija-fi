@@ -23,6 +23,10 @@ tags:
   - who
   - sairaalat
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Sudanissa el-Daein Teaching Hospitaliin kohdistunut dronehyökkäys on vaatinut 64 ihmisen, mukaan lukien 13 lapsen, elämän. Kaksi sairaanhoitajaa ja yksi lääkäri eivät selvinneet hyökkäyksestä, kertoo Maailman terveysjärjestön (WHO) johtaja Dr. Tedros Adhanom Ghebreyesus. Hyökkäys sattui, kun muslimiyhteisö vietti Eid-juhlaa, mikä tekee tragediasta erityisen surullisen. WHO:n mukaan hyökätyn sairaalan henkilökunta on vaatinut, että sodan osapuolia kehotetaan lopettamaan väkivalta.

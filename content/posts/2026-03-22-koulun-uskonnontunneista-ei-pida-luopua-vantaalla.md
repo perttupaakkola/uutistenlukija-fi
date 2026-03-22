@@ -23,6 +23,10 @@ tags:
   - pukeutuminen
   - turvallisuus
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 Vantaan kaupungin uusi koululinjaus on herättänyt vilkasta keskustelua. Valtiovarainministeri Riikka Purra on ylistänyt kaupungin päätöstä, joka kieltää kasvoja peittävät asusteet, kuten burkat ja niqabit, peruskouluissa. Hänen mukaansa jokaisen oppilaan tulee olla tunnistettavissa koulupäivän aikana, mikä on tärkeää sekä turvallisuuden että opettamisen näkökulmasta.

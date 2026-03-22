@@ -22,6 +22,10 @@ tags:
   - diktatuuri
   - kagan
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Yhdysvaltalainen historioitsija Robert Kagan on varoittanut, että Yhdysvallat on vaarassa siirtyä kohti diktatuuria ilman merkittävää vastarintaa. Hänen mukaansa Donald Trump ja hänen tukijansa ovat aktiivisesti pyrkineet heikentämään liberaalia demokratiaa, mikä uhkaa koko yhteiskuntaa. Kaganin mukaan nykytilanne on huolestuttavampi kuin kylmän sodan aika, johon hän vertaa tapahtumia. Hän korostaa, että monet amerikkalaiset eivät vieläkään ole tajunneet sitä vaaraa, joka heidän maataan uhkaa.

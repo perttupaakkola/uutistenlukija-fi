@@ -16,6 +16,10 @@ image_credit: "Photo by Kate Utkina on Unsplash"
 image_source_url: "https://unsplash.com/photos/water-cascades-over-the-edge-of-a-stone-structure--ft8y8h7HsQ?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 2
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 ## Vessakäynnin salliminen bussissa: historia ja merkitys

@@ -23,6 +23,10 @@ tags:
   - savannah guthrie
   - arizona
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Noin seitsemän viikon mittainen haku 84-vuotiaan Nancy Guthrien, televisiouutisten juontaja Savannah Guthrien äidin, löytämiseksi ei ole tuottanut tulosta. Hänen perheensä on kääntynyt yleisön puoleen ja pyytänyt lisää apua kadonneen äidin löytämiseksi, sillä poliisi epäilee Nancy Guthrien tulleen kidnappatuksi. Nancy katosi 1. helmikuuta Tucsonissa, Arizonassa. 

@@ -16,6 +16,10 @@ image_credit: "Photo by Adrian Balasoiu on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-woman-holding-a-sign-that-says-its-getting-hot-in-the-world-RVYuEFnuaIE?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 2
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 Suomessa kansalaisten tuki ympäristö- ja ilmastopolitiikalle on vahvistumassa, ilmenee Suomen ympäristökeskuksen tuoreesta kyselytutkimuksesta. Vastaajien mielestä ilmastonmuutoksen hillintä on ensiarvoisen tärkeää, ja lähes 80 prosenttia pitää kasvihuonekaasupäästöjen vähentämistä tärkeänä tavoitteena. Samalla yli puolet vastaajista katsoo, että Suomen tulee pitää tiukasti kiinni hiilineutraaliustavoitteestaan vuoteen 2035 mennessä.

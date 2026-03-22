@@ -22,6 +22,10 @@ tags:
   - suomi
   - rahapelit
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 Lauantain Lotto-arvonnassa tapahtui poikkeuksellinen tilanne, kun 6+1-tuloksia löytyi peräti kaksi kappaletta. Oikeaksi voittoriviksi arvottiin numerot 6, 12, 18, 22, 26, 34 ja 39, plusnumerona oli 8. Molemmat voitot toivat mukanaan 304 810,56 euroa. Voittajilla on syytä juhlaan, sillä voitot osuivat eri puolille Suomea: toinen meni urjalalaiselle ja toinen kuopiolaiselle nettipelaajalle, Veikkaus raportoi.

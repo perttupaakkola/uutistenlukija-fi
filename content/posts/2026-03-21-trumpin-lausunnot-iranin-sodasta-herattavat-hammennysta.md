@@ -23,6 +23,10 @@ tags:
   - hormuzinsalmi
   - yhdysvallat
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Yhdysvaltojen presidentti Donald Trump on herättänyt kysymyksiä Iranin sodan tilanteesta viimeaikaisten lausuntojensa myötä. Kolme viikkoa Yhdysvaltojen ja Israelin aloittaman sodan jälkeen Trump on todennut, että sota on "melko valmis", vaikka todellisuus kentällä kertoo muuta. Uuden amerikkalaisen maajoukkojen, mukaan lukien merijalkaväen yksiköiden, siirtyminen alueelle viittaa siihen, että sota ei ole päättymässä. Samalla, kun Trump vakuuttaa sodan päättymisestä, Yhdysvaltojen ja Israeliin suorittamat ilma- ja ohjusiskut iranilaisiin kohteisiin jatkuvat.  

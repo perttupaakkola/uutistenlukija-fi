@@ -16,6 +16,10 @@ image_credit: "Photo by CHUTTERSNAP on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 2
 draft: false
+keywords:
+  - "talousuutiset"
+  - "talous uutiset"
+  - "suomen talous uutiset"
 ---
 
 King Colisin toimitusjohtaja Killian Denis on avannut keskustelun yrityksen menestyksen syistä. Hän kutsuu yrityksen myymälöitä "elämyksellisiksi", mikä viittaa uudenlaiseen ostokokemukseen. Denis uskoo, että tämä innovatiivinen lähestymistapa houkuttelee asiakkaita, jotka etsivät jotain erityistä. Kuluttajansuojan näkökulmasta yritystä on kuitenkin kritisoitu turhan tavaran myymisestä. Denis kuitenkin puolustaa konseptia kertomalla, kuinka yritys kierrättää tavaroita ja tarjoaa asiakkaille mahdollisuuden tutustua uniikkeihin tuotteisiin.  

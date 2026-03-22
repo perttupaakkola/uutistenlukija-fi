@@ -22,6 +22,10 @@ tags:
   - puoluevaltuusto
   - eduskuntavaalit
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 Turun pormestari Piia Elo on ilmoittanut tavoittelevansa jatkoa SDP:n puoluevaltuuston puheenjohtajana. Hänen mukaansa puolueen työllisyys ja seuraavat eduskuntavaalit ovat ajankohtaisia aiheita. Elo, joka valittiin puoluevaltuuston puheenjohtajaksi kesällä 2023, kertoo haluavansa varmistaa, että jäsenistön ja alueiden ääni kuuluu puoluejohdolle. Tämä on erityisen tärkeää, kun puolue valmistautuu tuleviin vaaleihin, jotka voivat vaikuttaa merkittävästi Suomen poliittiseen suuntaan.

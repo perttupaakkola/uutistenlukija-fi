@@ -23,6 +23,10 @@ tags:
   - meloni
   - äänestys
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Italia on asettanut äänestykseen tärkeän perustuslain muutoksen, joka voi vaikuttaa pääministeri Giorgia Meloniin ja hänen hallintoonsa. Äänestys tapahtuu viikonloppuna, ja sen taustalla on odotuksia, jotka voivat muuttaa poliittisen kentän dynamiikkaa. Meloni kehotti kansalaisia äänestämään “kyllä” uudistukselle, jota hän lupaa oikeusjärjestelmän parantamiseksi. Hänelle tämä tarkoittaa ei vain oikeusjärjestelmän tulevaisuutta, vaan myös omaa poliittista elämäänsä. 

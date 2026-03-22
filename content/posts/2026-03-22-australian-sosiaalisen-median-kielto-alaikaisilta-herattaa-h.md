@@ -22,6 +22,10 @@ tags:
   - laki
   - australia
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Australia käynnisti joulukuussa 2022 historiallisesti ensimmäisenä maana sosiaalisen median kiellon alle 16-vuotiailta. Lain myötä sosiaalisen median yritysten, kuten Instagramin, TikTokin ja Snapchatin, on oltava kykeneviä tunnistamaan ja poistamaan tilit, jotka kuuluvat nuoremmalle väestölle. Ensimmäisten kuukausien aikana yli 4,7 miljoonaa tiliä on poistettu, mikä luo toiveita myös muiden maiden lainsäätäjille.

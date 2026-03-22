@@ -23,6 +23,10 @@ tags:
   - takaa-ajo
   - maailmancup
 draft: false
+keywords:
+  - "urheilu uutiset"
+  - "urheiluuutiset"
+  - "uusimmat urheilu-uutiset"
 ---
 
 Ampumahiihdon maailmancupin finaaliviikonloppu Holmenkollenilla päättyi suomalaisen Suvi Minkkisen osalta pettymykseen, kun hän sijoittui lauantain takaa-ajokisassa 23:nneksi. Minkkinen oli ennen kilpailua kiinni takaa-ajocupin voitossa, mutta epäonnistuminen ensimmäisellä penkalla, jossa hän ampui kaksi sakkoa, kaatoi hänen mahdollisuutensa. Tämän jälkeen kilpailu sujui kuitenkin rauhallisesti ja hän ampui loput paikat puhtaasti, mutta se ei riittänyt parempaan sijoitukseen. Minkkinen sai kilpailusta aikaiseksi hämmennystä ja tuskaa huolimatta hyviä olosuhteita.

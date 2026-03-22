@@ -22,6 +22,10 @@ tags:
   - aseet
   - sotatilanne
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 Puolustusvoimat on muuttanut ohjeitaan ja sallii nyt reserviläisten ottaa mukaan oman aseensa sotatilanteessa. Muutos on tullut voimaan Venäjän hyökätessä Ukrainaan, mikä on vaikuttanut myös Suomen puolustusstrategiaan. Uudessa käskykortissa, joka lähetetään reserviläisille sodan kynnyksellä, listataan aiemmin vain vaatetarvikkeita sisältäneen luettelon lisäksi myös omat aseet, droonit ja GPS-laitteet.

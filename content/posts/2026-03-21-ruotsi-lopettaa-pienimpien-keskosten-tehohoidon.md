@@ -21,6 +21,10 @@ tags:
   - tehohoito
   - ruotsi
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 Ruotsi on päättänyt lopettaa 22. raskausviikolla syntyneiden keskosten tehohoidon, kertoo Ruotsin yleisradio SVT. Uusien suositusten mukaan tätä ikäryhmää ei enää yritetä pelastaa, vaan heille tarjotaan palliatiivista hoitoa. Aikaisemmin Ruotsissa on ollut käytäntönä auttaa myös niin aikaisia syntymiä, mutta nyt maa siirtyy linjalle, joka on käytössä useimmissa muissa maissa.

@@ -16,6 +16,10 @@ image_credit: "Photo by MohammadAli Dahaghin on Unsplash"
 image_source_url: "https://unsplash.com/photos/two-flags-flying-in-the-wind-with-a-blue-sky-in-the-background-lm0LeTEOplA?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 1
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Iranin asevoimat ovat varoittaneet Yhdistyneitä arabiemiraatteja sodan laajentamisesta, mikäli Emiraatit sallivat hyökkäyksiä kiistellyille Abu Musan ja Suuren Tunbin saarille. Tämä uhkaus, jonka Iran esitti valtiollisen Tasnim-uutistoimiston kautta, on saanut huomiota kansainvälisessä mediassa. Iran on valloittanut nämä saaret jo 1970-luvulla, ja maiden välinen kiista niiden omistusoikeudesta on jatkunut vuosikymmeniä. 

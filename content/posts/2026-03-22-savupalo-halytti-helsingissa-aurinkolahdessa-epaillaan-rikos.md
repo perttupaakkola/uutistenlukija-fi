@@ -16,6 +16,10 @@ image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 1
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 Helsingin Aurinkolahdessa syttyi myöhään lauantai-iltana pieni savupalo, joka altisti useita kerrostalon asukkaita savulle. Pelastuslaitos sai hälytyksen noin kello 23.30, ja savun alkuperä sijaitsi Hiekkalaiturintiellä porrashuoneessa, jossa sytytettiin irtaimistoa sekä yksi huoneiston ulko-ovi. Pelastuslaitoksen toimenpiteet saivat tilanteen hallintaan nopeasti, mutta asukkaille aiheutui hengenvaarallinen savualtistus.

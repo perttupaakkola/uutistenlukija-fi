@@ -22,6 +22,10 @@ tags:
   - sairauden vaikutus
   - elokuvataide
 draft: false
+keywords:
+  - "viihde uutiset"
+  - "kulttuuri uutiset"
+  - "uusimmat viihdeuutiset"
 ---
 
 Suomalainen näyttelijä Petri Poikolainen on kuollut 50-vuotiaana. Poikolainen tunnettiin rooleistaan teatterissa ja elokuvissa, ja hänen viimeinen merkittävä työnsä oli vuonna 2021 julkaistu elokuvassa Sokea mies, joka ei halunnut nähdä Titanicia. Tieto hänen kuolemastaan vahvistettiin elokuvaohjaaja Teemu Nikin toimesta, joka ilmaisi suruaan menetyksestä ja kuvailee Poikolaista ainutlaatuisena ihmisenä sekä lahjakkaana näyttelijänä. Hän muistutti, että kaikki Poikolaisen tunteneet tulevat kantamaan häntä muistoissaan.

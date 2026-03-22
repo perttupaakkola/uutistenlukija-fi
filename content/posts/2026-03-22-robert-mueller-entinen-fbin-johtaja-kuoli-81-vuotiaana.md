@@ -23,6 +23,10 @@ tags:
   - tutkinta
   - venäjä
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Robert Mueller, entinen FBI:n johtaja ja erikoiskonsultti, joka johti tutkintaa Venäjän väitetystä vaikuttamisesta Yhdysvaltain vaaleihin vuonna 2016, on kuollut 81-vuotiaana. Hänen perheensä vahvisti uutisen ja ilmoitti, että hän kuoli perjantai-iltana. Kuoleman syytä ei ole toistaiseksi kerrottu, mutta tiedetään, että Muellerin terveys oli viime vuosina heikentynyt. Hänellä oli diagnosoitu Parkinsonin tauti, mikä esti häntä todistamasta kongressille Jeffrey Epstein -tutkinnassa.

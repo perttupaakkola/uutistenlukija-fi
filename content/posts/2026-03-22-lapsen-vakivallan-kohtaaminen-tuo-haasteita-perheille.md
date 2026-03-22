@@ -23,6 +23,10 @@ tags:
   - psykiatria
   - lisäapu
 draft: false
+keywords:
+  - "kotimaan uutiset"
+  - "suomen uutiset"
+  - "uusimmat kotimaan uutiset"
 ---
 
 Kaisa huomasi, että hänen lapsensa väkivaltaisuus alkoi 3-vuotiaana päiväkodissa. Äitinä hänen tuli olla jatkuvasti valppaana, erityisesti kun leikin äänet nousivat hälyttävästi. Kaisa tunsi vahvasti, että hänen oli oltava lähellä suojelemassa nuorempaa lastaan, joka saattoi joutua isoveljen uhkan kohteeksi. Tämä jatkuva jännitys kodissa vei äidin voimavaroja ja heikensi hänen kykyään nauttia vanhemmuudesta lapsensa käyttäytymisen aiheuttaman stressin vuoksi.

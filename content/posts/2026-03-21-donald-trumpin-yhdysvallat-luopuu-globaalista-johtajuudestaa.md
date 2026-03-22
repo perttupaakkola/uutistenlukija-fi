@@ -23,6 +23,10 @@ tags:
   - sota
   - diplomatia
 draft: false
+keywords:
+  - "ulkomaan uutiset"
+  - "maailman uutiset"
+  - "kansainväliset uutiset"
 ---
 
 Amerikan keskeinen rooli maailman vakauden ja järjestyksen turvaajana on romuttunut äkillisesti Keski-idässä. Kahden viikon aikana Iranissa käydystä sodasta on tullut ilmeistä, että muut voimat ovat nousseet johtoon. Teheranin yllä nousevat liekkien muodot kertovat uudesta, synkästä aikakaudesta. Samaan aikaan varjoja heittää myös Dubai, joka oli aiemmin Persianlahden turvallinen pakopaikka, mutta nyt iranilaiset UAV:t iskevät luksushotellien läheisyyteen.
