@@ -173,7 +173,15 @@ img { max-width: 100%; height: auto; }
   top: 0;
   z-index: 200;
   background: var(--bg);
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.2s ease;
+}
+
+/* #18: scroll elevation — shadow appears once user scrolls past header */
+.site-header.header--scrolled {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+:root:not([data-theme="light"]) .site-header.header--scrolled {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.40);
 }
 
 /* Mobile: hide on scroll-down, reveal on scroll-up */
@@ -414,7 +422,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .lead-article--hero .article-image {
-  aspect-ratio: 16 / 7;   /* wider crop for hero — cinematic feel */
+  aspect-ratio: 16 / 9;   /* #16: consistent 16:9 across all cards */
   max-height: 440px;
 }
 
@@ -1107,6 +1115,33 @@ img { max-width: 100%; height: auto; }
   overflow: hidden;
   border-radius: 2px;
   margin-bottom: 0.75rem;
+  /* #17: shimmer base while image loads */
+  position: relative;
+  background: var(--border);
+  aspect-ratio: 16 / 9;
+}
+
+/* Shimmer ::before on article-image-link (card-image.html path) */
+.article-image-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--border) 25%,
+    color-mix(in srgb, var(--bg) 60%, var(--border) 40%) 50%,
+    var(--border) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+.article-image-link:has(.img-loaded)::before {
+  opacity: 0;
+  animation: none;
+  pointer-events: none;
 }
 
 .article-image-link:hover .article-image,
@@ -1120,7 +1155,15 @@ img { max-width: 100%; height: auto; }
   aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
+  /* #17: fade in on load */
+  opacity: 0;
+}
+.article-image.img-loaded,
+.article-card-thumb.img-loaded {
+  opacity: 1;
 }
 
 /* Legacy fixed-height overrides — keep for any old templates */
@@ -1787,9 +1830,18 @@ pre code {
   animation: shimmer 2s linear infinite;
   z-index: 0;
   border-radius: inherit;
+  /* #17: fade out shimmer once image finishes loading */
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+/* Once the image inside has loaded, collapse the shimmer */
+.card-thumb-wrapper:has(.img-loaded)::before {
+  opacity: 0;
+  animation: none;
+  pointer-events: none;
 }
 
-.article-card-thumb {
+.card-thumb-wrapper .article-card-thumb {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1798,7 +1850,10 @@ pre code {
   object-position: center;
   display: block;
   z-index: 1;
-  /* Make visible immediately — fallback for no-JS */
+  /* #17: inherit fade-in from .article-card-thumb base rule above */
+}
+/* Fallback: no-JS */
+.no-js .article-card-thumb {
   opacity: 1;
 }
 

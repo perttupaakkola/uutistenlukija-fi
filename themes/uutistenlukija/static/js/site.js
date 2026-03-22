@@ -155,4 +155,36 @@
     }
   });
 
+  // ── #17: Card shimmer — mark cached images as loaded immediately ──────────
+  // Browsers don't fire onload for already-cached images; fix by checking
+  // img.complete on DOMContentLoaded.
+  document.querySelectorAll('.article-card-thumb').forEach(function (img) {
+    if (img.complete && img.naturalWidth) {
+      img.classList.add('img-loaded');
+    }
+  });
+
+  // ── #18: Sticky header scroll elevation ──────────────────────────────────
+  // Add box-shadow when user has scrolled > 4px (signals header is floating)
+  var siteHeader = document.querySelector('.site-header');
+  if (siteHeader) {
+    var SCROLL_ELEV = 4;
+    var headerTicking = false;
+    window.addEventListener('scroll', function () {
+      if (!headerTicking) {
+        requestAnimationFrame(function () {
+          if (window.scrollY > SCROLL_ELEV) {
+            siteHeader.classList.add('header--scrolled');
+          } else {
+            siteHeader.classList.remove('header--scrolled');
+          }
+          headerTicking = false;
+        });
+        headerTicking = true;
+      }
+    }, { passive: true });
+    // Initial state on page load (e.g. back-button restore)
+    if (window.scrollY > SCROLL_ELEV) siteHeader.classList.add('header--scrolled');
+  }
+
 })();

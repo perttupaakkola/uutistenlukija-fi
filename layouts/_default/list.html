@@ -24,7 +24,8 @@
         {{- $thumbSrc = printf "%s%sw=400&h=225&fit=crop" $img $tSep -}}
       {{- end -}}
       <img src="{{ $thumbSrc }}" alt="{{ $alt }}" class="article-card-thumb" loading="lazy" decoding="async" width="400" height="225"
-          onerror="this.onerror=null;this.src='/images/categories/{{ $cat | lower }}.jpg'">
+          onload="this.classList.add('img-loaded')"
+          onerror="this.onerror=null;this.src='/images/categories/{{ $cat | lower }}.jpg';this.classList.add('img-loaded')">
       </div>
     </a>
     {{ with .Params.categories }}
@@ -33,7 +34,7 @@
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p class="excerpt">{{ .Summary | truncate 200 }}</p>
     <div class="meta">
-      {{ partial "freshness.html" . }}
+      {{ .Date | time.Format "2.1. klo 15:04" }}
       {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
     </div>
   </article>

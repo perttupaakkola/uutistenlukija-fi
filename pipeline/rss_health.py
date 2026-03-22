@@ -32,7 +32,12 @@ from pathlib import Path
 PIPELINE_DIR = Path(__file__).parent
 PROJECT_DIR = PIPELINE_DIR.parent
 HEALTH_FILE = PIPELINE_DIR / "logs" / "rss-health.json"
-STATE_FILE = PIPELINE_DIR / "logs" / "rss-health-state.json"
+STATE_FILE          = PIPELINE_DIR / "logs" / "rss-health-state.json"
+EXTENDED_STATE_FILE = PIPELINE_DIR / "logs" / "rss-health-extended.json"
+SCANNER_FILE        = PIPELINE_DIR / "scanner.py"
+
+AUTO_DISABLE_CONSEC_ERRORS = 3   # consecutive 4xx/5xx checks before auto-disable
+ZERO_ENTRIES_DAYS          = 7   # days with 0 entries before parser-mismatch alert
 
 FRESH_HOURS = 6
 STALE_HOURS = 24
@@ -193,6 +198,156 @@ def _load_state() -> dict:
 def _save_state(state: dict) -> None:
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
     STATE_FILE.write_text(json.dumps(state, indent=2))
+
+
+# ── Extended state + remediation ─────────────────────────────────────────────
+
+def _load_ext_state() -> dict:
+    """Extended per-feed state: consecutive error counts, first-bad timestamps."""
+    if EXTENDED_STATE_FILE.exists():
+        try:
+            return json.loads(EXTENDED_STATE_FILE.read_text())
+        except Exception:
+            pass
+    return {}
+
+
+def _save_ext_state(state: dict) -> None:
+    EXTENDED_STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    EXTENDED_STATE_FILE.write_text(json.dumps(state, indent=2))
+
+
+def _auto_disable_feed(name: str, url: str, reason: str, dry_run: bool = False) -> bool:
+    """Add disabled=True to a feed dict in scanner.py. Returns True if changed."""
+    if not SCANNER_FILE.exists():
+        print(f"[rss_health] Cannot find {SCANNER_FILE}", file=sys.stderr)
+        return False
+
+    scanner_text = SCANNER_FILE.read_text(encoding="utf-8")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    url_idx = scanner_text.find(url)
+    if url_idx < 0:
+        print(f"[rss_health] WARNING: cannot find URL {url} in scanner.py")
+        return False
+
+    block_start = scanner_text.rfind("{", 0, url_idx)
+    block_end   = scanner_text.find("}", url_idx)
+    if block_start < 0 or block_end < 0:
+        print(f"[rss_health] WARNING: cannot find dict block for {name}")
+        return False
+
+    block = scanner_text[block_start : block_end + 1]
+    if '"disabled"' in block or "'disabled'" in block:
+        print(f"[rss_health] {name} already disabled in scanner.py")
+        return False
+
+    if dry_run:
+        print(f"[rss_health] [dry-run] Would disable {name}: {reason}")
+        return False
+
+    disable_line = '        "disabled": True,  # AUTO-DISABLED ' + today + ': ' + reason
+    new_block = block[:-1] + "\n" + disable_line + "\n    }"
+    new_scanner = scanner_text[:block_start] + new_block + scanner_text[block_end + 1:]
+
+    orig_mode = SCANNER_FILE.stat().st_mode
+    SCANNER_FILE.write_text(new_scanner, encoding="utf-8")
+    os.chmod(str(SCANNER_FILE), orig_mode)
+    print(f"[rss_health] AUTO-DISABLED {name} in scanner.py: {reason}")
+    return True
+
+
+def _remediate(results: list[dict], ext_state: dict, dry_run: bool = False) -> tuple[dict, list[str]]:
+    """
+    Check consecutive HTTP errors and zero-entry streaks.
+    Returns (updated_ext_state, list_of_alert_messages).
+    """
+    now_iso = datetime.now(timezone.utc).isoformat()
+    alerts: list[str] = []
+
+    for feed in results:
+        name    = feed["name"]
+        url     = feed["url"]
+        http    = feed.get("http_status", 0)
+        entries = feed.get("entry_count", 0)
+
+        entry = ext_state.setdefault(name, {
+            "consec_errors":       0,
+            "first_error_at":      None,
+            "consec_zero_entries": 0,
+            "first_zero_at":       None,
+            "disabled_at":         None,
+        })
+
+        # Consecutive HTTP errors (4xx/5xx) → auto-disable after threshold
+        is_http_error = isinstance(http, int) and http >= 400
+        if is_http_error:
+            if entry["consec_errors"] == 0:
+                entry["first_error_at"] = now_iso
+            entry["consec_errors"] += 1
+
+            if (entry["consec_errors"] >= AUTO_DISABLE_CONSEC_ERRORS
+                    and not entry.get("disabled_at")):
+                reason  = "HTTP " + str(http) + " for " + str(entry["consec_errors"]) + " consecutive checks"
+                changed = _auto_disable_feed(name, url, reason, dry_run)
+                if changed or dry_run:
+                    entry["disabled_at"] = now_iso
+                    alerts.append(
+                        "\U0001f6ab **Auto-disabled feed:** " + name + "\n"
+                        "  Reason: " + reason + "\n"
+                        "  URL: `" + url + "`"
+                    )
+        else:
+            entry["consec_errors"]  = 0
+            entry["first_error_at"] = None
+
+        # Zero-entry streak (200 OK, 0 items) → parser mismatch alert after N days
+        if entries == 0 and isinstance(http, int) and http == 200:
+            if entry["consec_zero_entries"] == 0:
+                entry["first_zero_at"] = now_iso
+            entry["consec_zero_entries"] += 1
+
+            if entry["consec_zero_entries"] >= ZERO_ENTRIES_DAYS:
+                alerts.append(
+                    "\u26a0\ufe0f **Parser mismatch suspected:** " + name + "\n"
+                    "  Zero entries for " + str(entry["consec_zero_entries"]) + " consecutive days\n"
+                    "  URL: `" + url + "` \u2014 feed may have changed format"
+                )
+        else:
+            entry["consec_zero_entries"] = 0
+            entry["first_zero_at"]       = None
+
+    return ext_state, alerts
+
+
+def _build_weekly_summary(results: list[dict], ext_state: dict) -> str:
+    """Weekly feed health summary for #operations."""
+    fresh   = [r for r in results if r["score"] == SCORE_FRESH]
+    stale   = [r for r in results if r["score"] == SCORE_STALE]
+    dead    = [r for r in results if r["score"] == SCORE_DEAD]
+    unreach = [r for r in results if r["score"] == SCORE_UNREACHABLE]
+    disabled_names = [n for n, e in ext_state.items() if e.get("disabled_at")]
+
+    lines = [
+        "\U0001f4e1 **Viikkoinen sy\u00f6tteen tilaraportti**",
+        "",
+        ("\U0001f7e2 Tuoreet: " + str(len(fresh)) + "  \U0001f7e1 Vanhentuneet: " + str(len(stale)) +
+         "  \U0001f534 Kuolleet: " + str(len(dead)) + "  \u26ab Tavoittamattomat: " + str(len(unreach))),
+    ]
+    if disabled_names:
+        lines.append("\U0001f6ab Auto-poistettu k\u00e4yt\u00f6st\u00e4: " + str(len(disabled_names)) +
+                     " (" + ", ".join(disabled_names) + ")")
+    if stale:
+        lines += ["", "**\U0001f7e1 Vanhentunut sis\u00e4lt\u00f6:**"]
+        for r in stale:
+            age = str(r["age_hours"]) + "h" if r.get("age_hours") else "?"
+            lines.append("  \u2022 " + r["name"] + " \u2014 viimeisin artikkeli " + age + " sitten")
+    if dead:
+        lines += ["", "**\U0001f534 Kuolleet sy\u00f6tteet:**"]
+        for r in dead:
+            lines.append("  \u2022 " + r["name"] + " (HTTP " + str(r.get("http_status", "?")) + ")")
+    lines += ["", "_Generoitu " + datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC") + "_"]
+    return "\n".join(lines)
 
 
 # ── Discord ───────────────────────────────────────────────────────────────────

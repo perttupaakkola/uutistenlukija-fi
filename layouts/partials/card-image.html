@@ -60,10 +60,12 @@
     src="{{ $src }}"
     {{- if $srcset }} srcset="{{ $srcset }}" sizes="{{ $sizes }}"{{ end }}
     alt="{{ $alt }}"
-    class="article-image"
+    class="article-image article-card-thumb"
     loading="{{ $loading }}"
     fetchpriority="{{ $fetchpri }}"
     decoding="async"
     width="{{ if $hero }}800{{ else }}400{{ end }}"
-    height="{{ if $hero }}450{{ else }}225{{ end }}">
+    height="{{ if $hero }}450{{ else }}225{{ end }}"
+    onload="this.classList.add('img-loaded')"
+    onerror="this.classList.add('img-loaded')">
 </a>
