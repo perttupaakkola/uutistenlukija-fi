@@ -18,6 +18,14 @@ from typing import List, Dict, Optional
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse, parse_qs, urlunparse
 
+try:
+    from feed_health import get_global_health, save_global_health
+    _FEED_HEALTH_AVAILABLE = True
+except ImportError:
+    _FEED_HEALTH_AVAILABLE = False
+    def get_global_health(): return None  # noqa: E731
+    def save_global_health(): pass  # noqa: E731
+
 # Source trust tiers — controls deletion protection and rewriter fact-anchoring.
 #
 # Tier 1 (PROTECTED): Editorial fact-checking standards. Articles from these
@@ -583,6 +591,15 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
             })
     except Exception as e:
         print(f"[scanner] Error fetching {feed_info['name']}: {e}")
+        # Record error in feed health tracker
+        if _FEED_HEALTH_AVAILABLE:
+            _h = get_global_health()
+            if _h:
+                code = 0
+                msg = str(e)[:120]
+                if isinstance(e, urllib.error.HTTPError):
+                    code = e.code
+                _h.record_error(feed_info["name"], code, msg)
 
     return articles
 
@@ -630,9 +647,19 @@ def scan_all_feeds() -> List[Dict]:
     feeds_fetched = 0
     feeds_skipped = 0
 
+    _health = get_global_health() if _FEED_HEALTH_AVAILABLE else None
+
     for feed in RSS_FEEDS:
         if feed.get("disabled"):
             continue
+
+        # Skip feeds that have been auto-disabled by feed_health
+        if _health:
+            _disabled, _reason = _health.is_disabled(feed["name"])
+            if _disabled:
+                print(f"[scanner] ⛔ {feed['name']}: auto-disabled ({_reason[:60]})")
+                feeds_skipped += 1
+                continue
 
         elapsed = time.monotonic() - scan_start
         if elapsed >= SCANNER_TIMEOUT:
@@ -641,10 +668,27 @@ def scan_all_feeds() -> List[Dict]:
             break
 
         print(f"[scanner] Fetching {feed['name']}...")
+        prev_count = len(all_articles)
         articles = fetch_feed(feed, http_cache=http_cache)
         print(f"[scanner]   → {len(articles)} articles")
         all_articles.extend(articles)
         feeds_fetched += 1
+
+        # Record success in health tracker
+        if _health and len(all_articles) > prev_count:
+            # Find newest article timestamp from this feed's batch
+            newest = None
+            for a in articles:
+                try:
+                    ts = datetime.fromisoformat(a.get("published", "").replace("Z", "+00:00"))
+                    if newest is None or ts > newest:
+                        newest = ts
+                except (ValueError, AttributeError):
+                    pass
+            _health.record_success(feed["name"], newest_article_ts=newest)
+        elif _health and len(all_articles) == prev_count:
+            # Feed returned 0 articles but didn't error — still a "success" (304 or no new items)
+            _health.record_success(feed["name"])
 
     # Count remaining skipped feeds
     active_feeds = [f for f in RSS_FEEDS if not f.get("disabled")]
@@ -655,6 +699,7 @@ def scan_all_feeds() -> List[Dict]:
     print(f"[scanner] Scan complete: {feeds_fetched} feeds in {total_scan_time:.1f}s "
           f"({feeds_skipped} skipped due to timeout)")
     _save_http_cache(http_cache)
+    save_global_health()  # persist feed health state
 
     # Exact dedup by fingerprint
     seen = set()
