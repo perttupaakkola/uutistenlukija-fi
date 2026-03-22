@@ -29,3 +29,26 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=uutistenlukija-fi --branch=main
+
+      - name: Ping sitemaps
+        if: success()
+        run: |
+          SITEMAP="https://uutistenlukija.fi/sitemap.xml"
+          NEWS_SITEMAP="https://uutistenlukija.fi/news-sitemap.xml"
+          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+          # Google sitemap ping (deprecated since 2023 — kept per request, expect 404)
+          GOOGLE_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://www.google.com/ping?sitemap=${SITEMAP}" || echo "ERR")
+          echo "${TS} google ${GOOGLE_STATUS} ${SITEMAP}" >> pipeline/logs/sitemap_pings.log
+
+          # IndexNow — real-time notification to Bing + partners (replaces Google ping)
+          INDEXNOW_KEY="7faa209351614ee79057069917978b71"
+          INDEXNOW_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+            "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json" \
+            -d "{\"host\":\"uutistenlukija.fi\",\"key\":\"${INDEXNOW_KEY}\",\"keyLocation\":\"https://uutistenlukija.fi/${INDEXNOW_KEY}.txt\",\"urlList\":[\"${SITEMAP}\",\"${NEWS_SITEMAP}\"]}" \
+            || echo "ERR")
+          echo "${TS} indexnow ${INDEXNOW_STATUS} ${SITEMAP} ${NEWS_SITEMAP}" >> pipeline/logs/sitemap_pings.log
+
+          echo "Sitemap pings: google=${GOOGLE_STATUS} indexnow=${INDEXNOW_STATUS}"
