@@ -82,18 +82,17 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
-  {{- range first (math.Sub $maxCards (len $related)) $catCandidates -}}
+  {{- $remaining := math.Sub $maxCards (len $related) -}}
+  {{- range first $remaining (where $catCandidates.ByDate.Reverse "Section" "posts") -}}
     {{- $related = $related | append . -}}
   {{- end -}}
 {{- end -}}
 
 {{/* ── Hard fallback: latest posts (any category) ─────────────── */}}
 {{- if lt (len $related) 3 -}}
-  {{- $latestAll := where site.RegularPages "Section" "posts" -}}
-  {{- $latestAll  = $latestAll.ByDate.Reverse -}}
-  {{- range $latestAll -}}
+  {{- range $pool.ByDate.Reverse -}}
     {{- $candidate := . -}}
-    {{- if and (ne .Permalink $currentLink) (lt (len $related) 3) -}}
+    {{- if lt (len $related) 3 -}}
       {{- $alreadyIn := false -}}
       {{- range $related -}}
         {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
