@@ -1,9 +1,51 @@
 {{ define "main" }}
-{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $posts  := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
 
-{{/* Visually hidden H1 for SEO — Google uses H1 as primary topic signal */}}
+{{/* SEO H1 */}}
 <h1 class="visually-hidden">Uutistenlukija – Päivän uutiset suomeksi</h1>
+
+{{/* ── 1. CATEGORY QUICKNAV BAR (Sara spec #15) ──────────────────────────── */}}
+<nav class="cat-quicknav" aria-label="Kategoriat">
+  {{ $cats := slice
+    (dict "name" "Kotimaa"    "slug" "kotimaa"    "cls" "cat-kotimaa")
+    (dict "name" "Ulkomaat"   "slug" "ulkomaat"   "cls" "cat-ulkomaat")
+    (dict "name" "Talous"     "slug" "talous"     "cls" "cat-talous")
+    (dict "name" "Teknologia" "slug" "teknologia" "cls" "cat-teknologia")
+    (dict "name" "Urheilu"    "slug" "urheilu"    "cls" "cat-urheilu")
+    (dict "name" "Kulttuuri"  "slug" "kulttuuri"  "cls" "cat-kulttuuri")
+    (dict "name" "Tiede"      "slug" "tiede"      "cls" "cat-tiede")
+  }}
+  {{ range $cats }}
+  <a href="/categories/{{ .slug }}/" class="cat-quicknav__pill {{ .cls }}">{{ .name }}</a>
+  {{ end }}
+</nav>
+
+{{/* ── 2. "JUURI NYT" STRIP — articles < 3h old (Sara spec #15) ─────────── */}}
+{{ $cutoff := now.Add (duration "-3h") }}
+{{ $fresh := slice }}
+{{ range $sorted }}
+  {{ if gt .Date $cutoff }}{{ $fresh = $fresh | append . }}{{ end }}
+{{ end }}
+{{ if $fresh }}
+<section class="juuri-nyt-strip" aria-label="Juuri julkaistu">
+  <div class="juuri-nyt-label">
+    <span class="juuri-nyt-dot" aria-hidden="true"></span>
+    Juuri nyt
+  </div>
+  <div class="juuri-nyt-scroll" role="list">
+    {{ range first 8 $fresh }}
+    <a href="{{ .Permalink }}" class="juuri-nyt-item" role="listitem">
+      {{ with index .Params.categories 0 }}
+      <span class="juuri-nyt-cat juuri-nyt-cat--{{ . | lower | urlize }}">{{ . }}</span>
+      {{ end }}
+      <span class="juuri-nyt-title">{{ .Title }}</span>
+      <span class="juuri-nyt-time">{{ partial "freshness.html" . }}</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
 
 {{/* Publish frequency badge */}}
 <div class="pub-frequency-bar">
@@ -15,40 +57,38 @@
 {{ $trending := where $sorted ".Params.trending" true }}
 {{ if $trending }}
 <section class="trending-section">
-  <div class="trending-header">
-    <h2>🔴 Nyt puheenaiheena</h2>
-  </div>
+  <div class="trending-header"><h2>🔴 Nyt puheenaiheena</h2></div>
   <div class="trending-articles">
     {{ range first 4 $trending }}
     <article class="trending-card">
-      {{ with .Params.categories }}
-      <span class="category-label">{{ index . 0 }}</span>
-      {{ end }}
+      {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
+      <div class="meta">{{ partial "freshness.html" . }}</div>
     </article>
     {{ end }}
   </div>
 </section>
 {{ end }}
 
-{{/* Lead article — hero treatment: full-width image above headline (Sara's Gap #3) */}}
+{{/* ── 3. HERO — enhanced lead article (Sara spec #15) ──────────────────── */}}
 {{ with index $sorted 0 }}
 {{ $cat   := index .Params.categories 0 | default "kotimaa" }}
 {{ $img   := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
 {{ $thumb := .Params.image_thumb | default $img }}
 {{ $alt   := .Params.image_alt | default .Title }}
-<article class="lead-article lead-article--hero">
+<article class="lead-article lead-article--hero lead-article--spec15">
   {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" true "hero" true "permalink" .Permalink) }}
-  {{ with .Params.categories }}
-  <span class="category-label">{{ index . 0 }}</span>
-  {{ end }}
-  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-  {{- with (.Summary | truncate 300) }}<p class="excerpt">{{ . }}</p>{{- end }}
-  <div class="meta">
-    {{ .Date | time.Format "2.1. klo 15:04" }}
-    {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-    · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min
+  <div class="lead-article__body">
+    {{ with .Params.categories }}
+    <a href="/categories/{{ index . 0 | urlize }}/" class="lead-article__cat category-pill category-{{ index . 0 | lower | urlize }}">{{ index . 0 }}</a>
+    {{ end }}
+    <h2 class="lead-article__headline"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{- with (.Summary | truncate 300) }}<p class="lead-article__excerpt excerpt">{{ . }}</p>{{- end }}
+    <div class="lead-article__meta meta">
+      {{ partial "freshness.html" . }}
+      {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+      · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min
+    </div>
   </div>
 </article>
 {{ end }}
@@ -63,24 +103,21 @@
   {{ $thumb := .Params.image_thumb | default $img }}
   {{ $alt   := .Params.image_alt | default .Title }}
   <article class="highlight-card">
-    {{ with .Params.categories }}
-    <span class="category-label">{{ index . 0 }}</span>
-    {{ end }}
+    {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
     {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink) }}
     <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
+    <div class="meta">{{ partial "freshness.html" . }}</div>
   </article>
   {{ end }}
 </div>
 {{ end }}
 
 {{ partial "trending.html" . }}
-
 {{ partial "lyhyet.html" . }}
 
-{{/* Category sections */}}
+{{/* ── 4. CATEGORY SECTIONS + NEWSLETTER BAND (Sara spec #15) ───────────── */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
-{{ range $cat := $categories }}
+{{ range $i, $cat := $categories }}
   {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
   {{ if $catPosts }}
   <section class="category-section">
@@ -101,13 +138,19 @@
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         {{- with (.Summary | truncate 150) }}<p class="excerpt">{{ . }}</p>{{- end }}
         <div class="meta">
-          {{ .Date | time.Format "2.1. klo 15:04" }}
+          {{ partial "freshness.html" . }}
           {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
         </div>
       </article>
       {{ end }}
     </div>
   </section>
+  {{/* Newsletter band after the 3rd category (Talous) */}}
+  {{ if eq $i 2 }}
+  <div class="newsletter-band">
+    {{ partial "newsletter-cta.html" . }}
+  </div>
+  {{ end }}
   {{ end }}
 {{ end }}
 
