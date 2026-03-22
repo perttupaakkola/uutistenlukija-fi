@@ -49,9 +49,11 @@ html {
   --bg: #fafaf8;
   --text: #1a1a1a;
   --text-secondary: #555;
+  --text-muted: #777;
   --accent: #c0392b;
   --border: #e0ddd8;
   --card-bg: #fff;
+  --surface: #f5f4f0;
   --max-width: 1100px;
   --font-serif: 'Georgia', 'Times New Roman', serif;
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -62,9 +64,11 @@ html {
   --bg: #1a1a1a;
   --text: #e8e6e3;
   --text-secondary: #a0a0a0;
+  --text-muted: #888;
   --accent: #e74c3c;
   --border: #333;
   --card-bg: #242424;
+  --surface: #2a2a2a;
 }
 
 /* ── OS-level dark mode (no JS, no toggle) ──────────────────────────────────
@@ -76,9 +80,11 @@ html {
     --bg: #1a1a1a;
     --text: #e8e6e3;
     --text-secondary: #a0a0a0;
+    --text-muted: #888;
     --accent: #e74c3c;
     --border: #333;
     --card-bg: #242424;
+    --surface: #2a2a2a;
   }
 
   /* Elements that can't use CSS vars need explicit overrides */
@@ -350,11 +356,27 @@ img { max-width: 100%; height: auto; }
   background: var(--card-bg);
   border: 1px solid var(--border);
   padding: 1.5rem;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .article-card:hover {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .article-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+}
+
+/* Keyboard focus: highlight card when any child link is focused */
+.article-card:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.category-article-card:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .article-card .category-label {
@@ -485,6 +507,36 @@ img { max-width: 100%; height: auto; }
 
 .single-article .content p { margin-bottom: 1.25rem; }
 
+/* === Typography hierarchy — in-body headings === */
+.single-article .content h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+.single-article .content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+}
+
+.single-article .content h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 1.25em;
+  margin-bottom: 0.35em;
+}
+
+/* First heading directly after article meta should not have extra top margin */
+.single-article .content > h2:first-child,
+.single-article .content > h3:first-child {
+  margin-top: 0;
+}
+
 .single-article .source-attribution {
   margin-top: 2rem;
   padding-top: 1rem;
@@ -611,7 +663,7 @@ img { max-width: 100%; height: auto; }
   gap: 1rem;
   margin-top: 2.5rem;
   padding: 1.5rem;
-  background: #f5f4f0;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 4px;
 }
@@ -2349,8 +2401,8 @@ pre code {
 .newsletter-cta {
   margin: 2rem 0;
   padding: 1.25rem 1.5rem;
-  background: #f8f4f4;
-  border-left: 4px solid #c0392b;
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
   border-radius: 4px;
 }
 .newsletter-cta-inner {
@@ -2407,17 +2459,27 @@ pre code {
   background: #a93226;
 }
 [data-theme="dark"] .newsletter-cta {
-  background: #1e1e1e;
-  border-left-color: #e74c3c;
+  background: var(--surface);
+  border-left-color: var(--accent);
 }
 [data-theme="dark"] .newsletter-cta-text span {
-  color: #aaa;
+  color: var(--text-muted);
 }
 [data-theme="dark"] .newsletter-cta-input {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #eee;
+  background: var(--card-bg);
+  border-color: var(--border);
+  color: var(--text);
 }
+
+/* Sponsor badge/footer — dark mode (mirrors prefers-color-scheme block) */
+[data-theme="dark"] .sponsor-badge,
+[data-theme="dark"] .sponsor-footer { background: #2a2000; border-color: #6a4800; }
+[data-theme="dark"] .sponsor-label,
+[data-theme="dark"] .sponsored-tag,
+[data-theme="dark"] .sponsored-meta { color: #f0b030; }
+[data-theme="dark"] .sponsor-name,
+[data-theme="dark"] .sponsor-name-link { color: var(--text); }
+[data-theme="dark"] .sponsor-disclosure { color: var(--text-muted); }
 
 /* Dark mode — hero + card components added Mar 22 */
 [data-theme="dark"] .lead-article--hero {
