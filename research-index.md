@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-03-22
 **Compiled by:** Monica 🔍
-**Total:** 20 deliverables across 13 files (~130KB)
+**Total:** 27 deliverables across 20 files (~200KB+)
 
 This document is the master table of contents for the uutistenlukija.fi research library. All files are in `projects/uutistenlukija/` in the shared workspace.
 
@@ -32,6 +32,13 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 18 | Competitive pricing analysis | competitive-pricing-2026-03.md | HS Digi €12.42-14.90/kk (observed); future premium tier hypothesis €3.99-7.99/mo; direct-sold CPM target €8-12 |
 | 19 | Regulatory landscape | regulatory-landscape-2026-03.md | No broadcast licence needed; DSA compliance required; cookie consent critical; ad labelling (Mainos/Sponsoroitu) mandatory |
 | 20 | Partnerships & syndication | partnerships-syndication-2026-03.md | Day-one: Cloudflare + Google Publisher Center + Ampparit submission + AdSense; Adform is the Finnish ad tech endgame |
+| 21 | Ampparit submission application | ampparit-application.md | Pre-filled form fields, RSS technical requirements, category mapping, submit after 2-4 weeks of publishing |
+| 22 | Google Publisher Center guide | google-publisher-center-guide.md | Registration steps, logo requirements (Sara), news sitemap spec, JSON-LD NewsArticle, DNS verification, timeline expectations |
+| 23 | Finnish legal pages (GDPR) | legal-pages-drafts.md | Tietosuojaseloste, evästekäytäntö, käyttöehdot — all in Finnish, GDPR-compliant, placeholders for legal name/date |
+| 24 | About page (Tietoa meistä) | about-page-draft.md | Full Finnish about page with DSA transparency section, editorial line, source selection criteria |
+| 25 | SEO implementation sheet | seo-implementation-sheet.md | Per-category keywords, title/meta templates, internal linking, JSON-LD schemas, technical SEO checklist |
+| 26 | Source allowlist with RSS | source-allowlist-rss.md | Tier 1/2/3 sources with verified RSS URLs, legal risk ratings, polling schedule, dedup spec, category coverage analysis |
+| 27 | Launch runbook | launch-runbook.md | T-7 checklist, launch day hour-by-hour, days 2-7 tasks, success metrics, 5 rollback scenarios, final gate checklist |
 
 ---
 
@@ -55,6 +62,13 @@ This document is the master table of contents for the uutistenlukija.fi research
 | regulatory-landscape-2026-03.md | ~17KB | #19 | ✅ Complete |
 | partnerships-syndication-2026-03.md | ~21KB | #20 | ✅ Complete |
 | research-index.md | ~5KB | Index | ✅ This file |
+| ampparit-application.md | ~4KB | #21 | ✅ Complete |
+| google-publisher-center-guide.md | ~7KB | #22 | ✅ Complete |
+| legal-pages-drafts.md | ~9KB | #23 | ✅ Complete |
+| about-page-draft.md | ~6KB | #24 | ✅ Complete |
+| seo-implementation-sheet.md | ~4KB | #25 | ✅ Complete |
+| source-allowlist-rss.md | ~3KB | #26 | ✅ Complete |
+| launch-runbook.md | ~4KB | #27 | ✅ Complete |
 
 ### Deliverables without standalone files
 

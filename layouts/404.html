@@ -55,6 +55,7 @@
               alt="{{ .Params.image_alt | default .Title }}"
               class="recent-card-thumb"
               loading="lazy"
+              decoding="async"
               width="300" height="169"
               onerror="this.onerror=null;this.src='/images/categories/{{ $cat | lower }}.jpg'"
             >

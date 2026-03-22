@@ -13,6 +13,14 @@
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://images.pexels.com">
   <link rel="preconnect" href="https://www.google-analytics.com">
+  {{- with .Site.Params.adsense_id }}
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  {{- end }}
+  {{- if eq .RelPermalink "/haku/" }}
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  {{- end }}
   <link rel="dns-prefetch" href="https://images.unsplash.com">
   <link rel="dns-prefetch" href="https://images.pexels.com">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
