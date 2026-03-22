@@ -59,6 +59,13 @@ cutoff = now - timedelta(days=days)
 def get_outcome(r):
     """Return outcome field; backfill from legacy success+published if absent."""
     if "outcome" in r:
+        # Existing records: re-evaluate "error" with 0 published
+        # Records written by old update_publish_metrics (before _is_empty_scan) may
+        # have outcome="error" for runs that were actually skips (0 published, scanner only)
+        if r["outcome"] == "error" and r.get("published", 0) == 0:
+            # If no articles were published, this was likely a dedup/empty-scan run
+            # not a real crash — reclassify as "skip"
+            return "skip"
         return r["outcome"]
     published = r.get("published", 0)
     attempted = r.get("attempted", 0)
@@ -68,12 +75,8 @@ def get_outcome(r):
         # Published articles = ok regardless of success flag
         # (early pipeline had a bug where success=False even when articles published)
         return "ok"
-    if success and published == 0:
-        return "skip"
-    if not success and attempted == 0 and published == 0:
-        # Both zeros + failure = empty scan (no articles to process)
-        return "skip"
-    return "error"
+    # 0 published = skip (either empty scan or all deduped post-rewrite)
+    return "skip"
 
 # Today's runs
 today_runs = [r for r in records if r.get("ts", "").startswith(today_str)]

@@ -180,16 +180,9 @@ def classify_run(run: dict, log_text: str = "") -> str:
     if "quality gate" in errors_lower and "0" in errors_lower:
         return "quality_gate"
 
-    # ── Firehose-only returned nothing ────────────────────────────────────────
+    # ── No articles from scanner (most common) — CHECK BEFORE firehose ──────────
+    # Always check structural "no articles" signals FIRST to avoid log mismatches.
     scanner_step = steps.get("scanner", {})
-    firehose_n   = scanner_step.get("firehose_count", 0)
-    rss_n        = scanner_step.get("rss_count", -1)  # -1 = not present
-    if rss_n == 0 and firehose_n == 0 and scanner_step.get("total", 0) == 0:
-        # Both sources empty — could be firehose or general
-        if "firehose" in log_lower and "0 articles" in log_lower:
-            return "firehose_filter"
-
-    # ── No articles from scanner (most common) ────────────────────────────────
     no_article_patterns = [
         "no articles found after scan",
         "no new articles",
@@ -207,6 +200,15 @@ def classify_run(run: dict, log_text: str = "") -> str:
     # Only scanner step ran (pipeline stopped early due to no articles)
     if list(steps.keys()) == ["scanner"] and scanner_step.get("success", True):
         return "no_articles_scan"
+
+    # ── Firehose-only returned nothing ────────────────────────────────────────
+    # Only classify as firehose_filter if BOTH rss AND firehose counts are explicitly 0.
+    # Do NOT use log_lower for this — log text from adjacent runs contains "firehose"
+    # and "0 articles" as normal scanner output, causing false positives.
+    firehose_n = scanner_step.get("firehose_count", 0)
+    rss_n      = scanner_step.get("rss_count", -1)   # -1 = field absent (old schema)
+    if rss_n == 0 and firehose_n == 0 and scanner_step.get("total", 0) == 0:
+        return "firehose_filter"
 
     # ── Fallback ──────────────────────────────────────────────────────────────
     return "unknown"
