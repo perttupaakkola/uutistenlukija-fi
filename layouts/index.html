@@ -20,8 +20,8 @@
 {{/* Use age comparison (same approach as freshness.html) to avoid duration() syntax issues */}}
 {{ $fresh := slice }}
 {{ range $sorted }}
-  {{- $age := now.Sub .Date -}}
-  {{- if lt (int $age.Hours) 3 }}{{ $fresh = $fresh | append . }}{{ end }}
+  {{- $ageMin := int (now.Sub .Date).Minutes -}}
+  {{- if lt $ageMin 180 }}{{ $fresh = $fresh | append . }}{{ end }}
 {{ end }}
 {{ if $fresh }}
 <section class="juuri-nyt-strip" aria-label="Juuri julkaistu">
