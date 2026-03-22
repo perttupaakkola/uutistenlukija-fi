@@ -1,6 +1,7 @@
 ---
 title: "Antonelli voittoon Kiinan GP:ssä – historian toiseksi nuorin F1-kilpailun voittaja"
 date: 2026-03-15T12:40:00+00:00
+lastmod: 2026-03-21T20:00:00+00:00
 categories:
   - Urheilu
 author: "Matti Virtanen"
