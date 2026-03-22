@@ -357,6 +357,7 @@ img { max-width: 100%; height: auto; }
   padding: 1.5rem;
   transition: box-shadow 0.2s;
   overflow: hidden;
+  position: relative; /* contain absolutely-positioned children (image, shimmer) */
 }
 
 .article-card:hover {
@@ -1138,6 +1139,9 @@ img { max-width: 100%; height: auto; }
   content: '';
   position: absolute;
   inset: 0;
+  /* Fallback for browsers without color-mix() support */
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  /* color-mix shimmer — overrides above if supported */
   background: linear-gradient(
     90deg,
     var(--border) 25%,
@@ -1248,12 +1252,12 @@ img { max-width: 100%; height: auto; }
 /* === Reading Progress Bar === */
 .reading-progress {
   position: fixed;
-  top: 0;
+  top: var(--header-h, 0px);  /* sits just below sticky header, not behind it */
   left: 0;
   height: 3px;
   width: 0;
   background: var(--accent);
-  z-index: 10000;
+  z-index: 10001;             /* above header z-index:200 and any overlay */
   transition: width 0.1s linear;
   opacity: 1;
 }
@@ -1728,6 +1732,7 @@ pre code {
   content: '';
   position: absolute;
   inset: 0;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
   background: linear-gradient(
     90deg,
     var(--border) 25%,
@@ -1833,6 +1838,7 @@ pre code {
   content: '';
   position: absolute;
   inset: 0;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
   background: linear-gradient(
     90deg,
     var(--border) 25%,
@@ -2752,6 +2758,11 @@ pre code {
   cursor: pointer;
   font-size: 1rem;
   color: var(--text);
+  min-height: 44px;  /* WCAG 2.5.5 touch target */
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-nav-btn {

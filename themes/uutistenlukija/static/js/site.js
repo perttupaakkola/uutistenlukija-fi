@@ -2,6 +2,18 @@
 (function () {
   'use strict';
 
+  // ── Set --header-h CSS variable for reading-progress bar placement ─────────
+  // Progress bar uses top:var(--header-h) so it sits just below the sticky
+  // header rather than being hidden behind it.
+  function updateHeaderHeight() {
+    var h = document.querySelector('.site-header');
+    if (h) {
+      document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+    }
+  }
+  updateHeaderHeight();
+  window.addEventListener('resize', updateHeaderHeight, { passive: true });
+
   // ── Mobile sticky header: hide on scroll-down, show on scroll-up ──────────
   // Applies only to viewports < 768px. Desktop unchanged.
   var header = document.querySelector('.site-header');
