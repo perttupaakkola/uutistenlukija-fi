@@ -37,7 +37,7 @@
   <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
     <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" decoding="async" width="800" height="450">
   </a>
-  <p class="excerpt">{{ .Summary | truncate 300 }}</p>
+  {{- with (.Summary | truncate 300) }}<p class="excerpt">{{ . }}</p>{{- end }}
   <div class="meta">
     {{ .Date | time.Format "2.1. klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
@@ -95,7 +95,7 @@
           <img src="{{ $cardImg }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
         </a>
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <p class="excerpt">{{ .Summary | truncate 150 }}</p>
+        {{- with (.Summary | truncate 150) }}<p class="excerpt">{{ . }}</p>{{- end }}
         <div class="meta">
           {{ .Date | time.Format "2.1. klo 15:04" }}
           {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}

@@ -1347,6 +1347,8 @@ img { max-width: 100%; height: auto; }
   border-radius: 2px;
   margin-left: 0.5rem;
   vertical-align: middle;
+  position: relative;   /* fix #3: prevent z-index bleed from card-thumb (z-index:1) */
+  z-index: 2;
 }
 
 /* === Cookie Consent Banner + Modal ════════════════════════════════════════ */
@@ -1534,10 +1536,22 @@ img { max-width: 100%; height: auto; }
 [data-theme="dark"] .cb-btn--secondary:hover { background: #4a4a4a; opacity: 1; }
 [data-theme="dark"] .cb-btn--ghost { color: #bbb; border-color: #555; }
 
-/* Mobile */
+/* Mobile — fix #2: button column-stack at ≤600px */
 @media (max-width: 600px) {
-  .cb-actions { width: 100%; }
-  .cb-btn { flex: 1; text-align: center; }
+  .cb-actions {
+    width: 100%;
+    flex-direction: column;  /* stack vertically instead of wrapping */
+    gap: 0.4rem;
+  }
+  .cb-btn {
+    width: 100%;
+    text-align: center;
+    flex: none;  /* override flex:1 which can cause uneven sizing */
+  }
+  /* Keep customize (ghost) last visually by reordering */
+  #cb-accept    { order: 1; }
+  #cb-reject    { order: 2; }
+  #cb-customize { order: 3; }
   .cm-box { padding: 1.25rem; }
 }
 
@@ -3844,8 +3858,8 @@ pre code {
   }
 }
 
-/* 1-col on mobile */
-@media (max-width: 420px) {
+/* fix #4: 1-col on mobile — was 420px, widened to 480px to catch all phones */
+@media (max-width: 480px) {
   .related-articles__grid {
     grid-template-columns: 1fr;
   }

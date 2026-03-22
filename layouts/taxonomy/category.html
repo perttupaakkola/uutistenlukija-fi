@@ -30,7 +30,7 @@
   <div class="category-featured__body">
     {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
     <h2 class="category-featured__title">{{ .Title }}</h2>
-    <p class="category-featured__excerpt">{{ .Summary | truncate 200 }}</p>
+    {{- with (.Summary | truncate 200) }}<p class="category-featured__excerpt">{{ . }}</p>{{- end }}
     <div class="meta">
       {{ partial "freshness.html" . }}
       {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}

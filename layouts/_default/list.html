@@ -32,7 +32,7 @@
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p class="excerpt">{{ .Summary | truncate 200 }}</p>
+    {{- with (.Summary | truncate 200) }}<p class="excerpt">{{ . }}</p>{{- end }}
     <div class="meta">
       {{ .Date | time.Format "2.1. klo 15:04" }}
       {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
