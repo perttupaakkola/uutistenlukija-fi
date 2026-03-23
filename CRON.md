@@ -20,6 +20,7 @@ All times UTC. See the live crontab for exact entries.
 ## Weekly
 - **Monday 07:00** — weekly_digest.py (week-over-week stats to #metrics)
 - **Monday 07:05** — feed_health.py --weekly-summary (feed health report to #operations via Discord webhook)
+- **Every pipeline run** — generate_pipeline_status.py (writes static/api/pipeline-status.json for /tila/ live widget)
 - **Sunday 06:00** — rotate_logs.sh (archive logs >7d, delete archive >30d)
 
 ## System / Maintenance
