@@ -66,39 +66,45 @@
 {{- end -}}
 
 {{/* ── Category fallback if no tag matches ─────────────────────── */}}
+{{/* NOTE: $pool and $catCandidates are plain slices (built with | append), NOT hugo.Pages.
+     Hugo's .ByDate/.ByDate.Reverse methods only work on hugo.Pages — calling them on a
+     plain slice silently returns nil/zero. Fix: query site.RegularPages (a Pages type)
+     filtered to the matching category, then exclude already-selected articles. */}}
 {{- if lt (len $related) 3 -}}
-  {{- $catCandidates := slice -}}
-  {{- range $pool -}}
-    {{- $candidate := . -}}
-    {{- $pageCats := .Params.categories | default slice -}}
-    {{- if gt (len (intersect $currentCats $pageCats)) 0 -}}
-      {{/* skip pages already in $related */}}
-      {{- $alreadyIn := false -}}
-      {{- range $related -}}
-        {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
-      {{- end -}}
-      {{- if not $alreadyIn -}}
-        {{- $catCandidates = $catCandidates | append $candidate -}}
+  {{- $remaining := math.Sub $maxCards (len $related) -}}
+  {{- $catPages := where site.RegularPages ".Params.categories" "intersect" $currentCats -}}
+  {{- $catPages  = where $catPages "Section" "posts" -}}
+  {{- range first (math.Mul $remaining 3) $catPages.ByDate.Reverse -}}
+    {{/* Stop once we have enough */}}
+    {{- if lt (len $related) $maxCards -}}
+      {{- $candidate := . -}}
+      {{- if ne $candidate.Permalink $currentLink -}}
+        {{- $alreadyIn := false -}}
+        {{- range $related -}}
+          {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
+        {{- end -}}
+        {{- if not $alreadyIn -}}
+          {{- $related = $related | append $candidate -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
-  {{- end -}}
-  {{- $remaining := math.Sub $maxCards (len $related) -}}
-  {{- range first $remaining (where $catCandidates.ByDate.Reverse "Section" "posts") -}}
-    {{- $related = $related | append . -}}
   {{- end -}}
 {{- end -}}
 
 {{/* ── Hard fallback: latest posts (any category) ─────────────── */}}
+{{/* Same fix: use site.RegularPages.ByDate.Reverse (a Pages type), not plain slice */}}
 {{- if lt (len $related) 3 -}}
-  {{- range $pool.ByDate.Reverse -}}
+  {{- range site.RegularPages.ByDate.Reverse -}}
     {{- $candidate := . -}}
-    {{- if lt (len $related) 3 -}}
-      {{- $alreadyIn := false -}}
-      {{- range $related -}}
-        {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
-      {{- end -}}
-      {{- if not $alreadyIn -}}
-        {{- $related = $related | append $candidate -}}
+    {{- if and (eq $candidate.Section "posts") (lt (len $related) $maxCards) -}}
+      {{- if ne $candidate.Permalink $currentLink -}}
+        {{- $alreadyIn := false -}}
+        {{- range $related -}}
+          {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
+        {{- end -}}
+        {{- if not $alreadyIn -}}
+          {{- $related = $related | append $candidate -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}

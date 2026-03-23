@@ -21,10 +21,24 @@
 {{/* Featured article — newest in category */}}
 {{ $sorted := .Pages.ByDate.Reverse }}
 {{ with index $sorted 0 }}
+{{- $featCat := index .Params.categories 0 | default "kotimaa" -}}
 <a href="{{ .Permalink }}" class="category-featured">
   {{ with .Params.image }}
+  {{- $featImgSrc := . -}}
+  {{- if hasPrefix . "https://images.unsplash.com" -}}
+    {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
+    {{- $featImgSrc = printf "%s%sw=260&h=146&fit=crop&fm=webp&q=80" . $s -}}
+  {{- else if hasPrefix . "https://images.pexels.com" -}}
+    {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
+    {{- $featImgSrc = printf "%s%sw=260&h=146&fit=crop" . $s -}}
+  {{- end -}}
   <div class="category-featured__img-wrap">
-    <img src="{{ . }}" alt="{{ $.Title }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high" width="260" height="146">
+    <img src="{{ $featImgSrc }}"
+         alt="{{ .Params.image_alt | default .Title }}"
+         class="category-featured__img"
+         loading="eager" decoding="async" fetchpriority="high"
+         width="260" height="146"
+         onerror="this.onerror=null;this.src='/images/categories/{{ $featCat | lower }}.jpg';this.classList.add('img-loaded')">
   </div>
   {{ end }}
   <div class="category-featured__body">

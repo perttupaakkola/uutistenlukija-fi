@@ -29,12 +29,19 @@
     · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ partial "reading-time.html" . }}
   </div>
   <div class="content">
+    {{- if .Content -}}
     {{- $paragraphs := split .Content "</p>" -}}
     {{- range $i, $p := $paragraphs -}}
-      {{- $p | safeHTML }}</p>
+      {{/* split always produces a trailing empty string after the last </p> — skip it */}}
+      {{- if trim $p " \t\r\n" -}}
+        {{- $p | safeHTML }}</p>
+      {{- end -}}
       {{- if eq $i 2 -}}
         {{ partial "ad-slot.html" (dict "position" "in-article" "context" $) }}
       {{- end -}}
+    {{- end -}}
+    {{- else -}}
+    <p class="content-empty">Artikkelin sisältö ei ole saatavilla.</p>
     {{- end -}}
   </div>
 

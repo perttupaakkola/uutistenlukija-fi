@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-03-22
 **Compiled by:** Monica 🔍
-**Total:** 27 deliverables across 20 files (~200KB+)
+**Total:** 30 deliverables across 23 files (~210KB+)
 
 This document is the master table of contents for the uutistenlukija.fi research library. All files are in `projects/uutistenlukija/` in the shared workspace.
 
@@ -39,6 +39,9 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 25 | SEO implementation sheet | seo-implementation-sheet.md | Per-category keywords, title/meta templates, internal linking, JSON-LD schemas, technical SEO checklist |
 | 26 | Source allowlist with RSS | source-allowlist-rss.md | Tier 1/2/3 sources with verified RSS URLs, legal risk ratings, polling schedule, dedup spec, category coverage analysis |
 | 27 | Launch runbook | launch-runbook.md | T-7 checklist, launch day hour-by-hour, days 2-7 tasks, success metrics, 5 rollback scenarios, final gate checklist |
+| 28 | April 2026 content calendar | content-calendar-april-2026.md | Week-by-week themes, X posting schedule, newsletter plan, key events (Pääsiäinen, Helmarit, Vappu), category balance targets |
+| 29 | Source tier analysis | source-tier-analysis.md | Current source audit, gap analysis, 10 new source recommendations with RSS, quality gate filters, tier map with coverage projections |
+| 30 | Launch announcement drafts | launch-announcement.md | 5 formats: Finnish blog/press release, X thread, Facebook, English PR, Product Hunt. Distribution checklist. "No AI-hype" messaging rule |
 
 ---
 
@@ -69,6 +72,9 @@ This document is the master table of contents for the uutistenlukija.fi research
 | seo-implementation-sheet.md | ~4KB | #25 | ✅ Complete |
 | source-allowlist-rss.md | ~3KB | #26 | ✅ Complete |
 | launch-runbook.md | ~4KB | #27 | ✅ Complete |
+| content-calendar-april-2026.md | ~3KB | #28 | ✅ Complete |
+| source-tier-analysis.md | ~4KB | #29 | ✅ Complete |
+| launch-announcement.md | ~2KB | #30 | ✅ Complete |
 
 ### Deliverables without standalone files
 
