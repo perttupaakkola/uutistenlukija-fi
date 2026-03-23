@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-03-22
 **Compiled by:** Monica 🔍
-**Total:** 32 deliverables across 25 files (~220KB+)
+**Total:** 33 deliverables across 26 files (~225KB+)
 
 This document is the master table of contents for the uutistenlukija.fi research library. All files are in `projects/uutistenlukija/` in the shared workspace.
 
@@ -44,6 +44,7 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 30 | Launch announcement drafts | launch-announcement.md | 5 formats: Finnish blog/press release, X thread, Facebook, English PR, Product Hunt. Distribution checklist. "No AI-hype" messaging rule |
 | 31 | Reader feedback survey | reader-survey.md | 9 questions (+ 5-question short version), Google Forms implementation, 3 incentive ideas, NPS analytics, GDPR notes |
 | 32 | Competitive map | competitive-map.md | 7 aggregators mapped, 6 mainstream publishers, unique positioning, SWOT, positioning chart. Uutiskeräin.fi gap identified |
+| 33 | Ad revenue model | ad-revenue-model.md | Traffic tier projections (1K-500K), break-even analysis, 3 scenarios (€900-€25K yr1), newsletter sponsorship tiers, MM-kisat golden window |
 
 ---
 
@@ -79,6 +80,7 @@ This document is the master table of contents for the uutistenlukija.fi research
 | launch-announcement.md | ~2KB | #30 | ✅ Complete |
 | reader-survey.md | ~2KB | #31 | ✅ Complete |
 | competitive-map.md | ~4KB | #32 | ✅ Complete |
+| ad-revenue-model.md | ~3KB | #33 | ✅ Complete |
 
 ### Deliverables without standalone files
 

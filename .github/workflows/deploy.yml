@@ -4,10 +4,6 @@ on:
   push:
     branches: [main]
 
-env:
-  HUGO_VERSION: '0.147.0'
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -15,10 +11,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Hugo
-        run: |
-          wget -q "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" -O hugo.deb
-          sudo dpkg -i hugo.deb
-          hugo version
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
 
       - name: Build
         run: hugo --minify
@@ -30,41 +26,12 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=uutistenlukija-fi --branch=main
 
-      - name: Ping sitemaps
-        if: success()
-        run: |
-          SITEMAP="https://uutistenlukija.fi/sitemap.xml"
-          NEWS_SITEMAP="https://uutistenlukija.fi/news-sitemap.xml"
-          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-
-          # Google sitemap ping (deprecated since 2023 — kept per request, expect 404)
-          GOOGLE_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-            "https://www.google.com/ping?sitemap=${SITEMAP}" || echo "ERR")
-          echo "${TS} google ${GOOGLE_STATUS} ${SITEMAP}" >> pipeline/logs/sitemap_pings.log
-
-          # IndexNow — real-time notification to Bing + partners (replaces Google ping)
-          INDEXNOW_KEY="7faa209351614ee79057069917978b71"
-          INDEXNOW_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
-            "https://api.indexnow.org/IndexNow" \
-            -H "Content-Type: application/json" \
-            -d "{\"host\":\"uutistenlukija.fi\",\"key\":\"${INDEXNOW_KEY}\",\"keyLocation\":\"https://uutistenlukija.fi/${INDEXNOW_KEY}.txt\",\"urlList\":[\"${SITEMAP}\",\"${NEWS_SITEMAP}\"]}" \
-            || echo "ERR")
-          echo "${TS} indexnow ${INDEXNOW_STATUS} ${SITEMAP} ${NEWS_SITEMAP}" >> pipeline/logs/sitemap_pings.log
-
-          echo "Sitemap pings: google=${GOOGLE_STATUS} indexnow=${INDEXNOW_STATUS}"
-
       - name: Check internal links
-        if: success()
         env:
           DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
         run: |
-          # Wait briefly for Cloudflare Pages cache to warm up
-          sleep 10
-          # Run internal link checker — exits 1 if broken links found, but we
-          # use || true so a broken link won't fail the deploy step itself.
-          # Discord webhook fires inside the script if broken links are found.
-          python3 pipeline/check_links.py \
-            --limit 150 \
-            --timeout 12 \
-            --delay 0.1 \
-            || echo "[check_links] Broken links found — see log above and Discord alert"
+          python3 pipeline/check_links.py --public-dir public
+          if [ -f pipeline/logs/link_check.log ]; then
+            echo "--- link_check.log (last 40 lines) ---"
+            tail -40 pipeline/logs/link_check.log
+          fi
