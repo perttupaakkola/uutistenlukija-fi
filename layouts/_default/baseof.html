@@ -142,7 +142,7 @@
 
     function update() {
       var y = window.scrollY;
-      var isMobile = window.innerWidth < 768;
+      var isMobile = window.innerWidth <= 768;
       var scrollingDown = y > lastScrollY;
 
       // Phase 1: compact
