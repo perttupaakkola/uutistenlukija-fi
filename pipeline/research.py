@@ -300,6 +300,26 @@ def _search_bing_news(query: str, language: str = "fi", max_results: int = 10) -
         with urllib.request.urlopen(req, timeout=SEARCH_TIMEOUT) as resp:
             xml_data = resp.read(200_000)
 
+        # Bing sometimes returns empty body when rate-limiting or on long queries.
+        # Retry once with a shorter (first 6 words) version of the query.
+        if not xml_data.strip():
+            short_query = " ".join(query.split()[:6])
+            if short_query != query:
+                short_encoded = urllib.parse.quote_plus(short_query)
+                retry_url = f"https://www.bing.com/news/search?q={short_encoded}&format=rss&mkt={mkt}"
+                req2 = urllib.request.Request(retry_url, headers={
+                    "User-Agent": _HEADERS["User-Agent"],
+                    "Accept": "application/xml, text/xml, */*",
+                })
+                try:
+                    with urllib.request.urlopen(req2, timeout=SEARCH_TIMEOUT) as resp2:
+                        xml_data = resp2.read(200_000)
+                except Exception:
+                    pass  # fall through to empty parse
+            if not xml_data.strip():
+                print(f"[research]   Bing returned empty response (rate limited?)")
+                return results
+
         root = ET.fromstring(xml_data)
         for item in root.findall(".//item"):
             if len(results) >= max_results:

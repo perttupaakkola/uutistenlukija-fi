@@ -400,14 +400,17 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     # Skip articles where total usable source text is < 50 words.
     # Below this threshold the rewriter can't produce 280+ word output.
     # "Total source words" = research words (web/rss) + description words (if research empty).
-    MIN_SOURCE_WORDS = 50
+    # Minimum combined words (title + description + research) before rewriting.
+    # Lowered 50→25: title (8-15w) + short description (10-20w) is enough context.
+    # Previous either/or logic discarded description when research existed.
+    # New: sum all three — any combination that reaches 25w can be rewritten.
+    MIN_SOURCE_WORDS = 25
     pre_filter_count = len(articles)
     def _total_source_words(a: dict) -> int:
+        title    = a.get("title", "")
         research = a.get("research", "")
-        desc = a.get("description", "")
-        if research:
-            return len(research.split())
-        return len(desc.split())
+        desc     = a.get("description", "")
+        return len(title.split()) + len(desc.split()) + len(research.split())
     articles = [a for a in articles if _total_source_words(a) >= MIN_SOURCE_WORDS]
     skipped = pre_filter_count - len(articles)
     if skipped:
