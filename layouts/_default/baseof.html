@@ -121,29 +121,59 @@
     window.addEventListener('load', setHeaderH, { once: true });
   })();
 
-  // Mobile sticky header — hide on scroll-down, show on scroll-up (< 768px only)
+  // Sticky header — two-phase scroll behaviour (Spec #18)
+  //
+  // Phase 1 — compact (all widths): past COMPACT_AT px → add header--compact
+  //   Hides .header-banner (60px), reduces logo padding.
+  //   Updates --header-h so reading-progress bar stays flush below the header.
+  //
+  // Phase 2 — hide (mobile only, < 768px): past HIDE_AT px AND scrolling down
+  //   → add header--hidden (translateY(-100%)).
+  //   Reversed on scroll-up or when scrollY drops back below COMPACT_AT.
   (function() {
     var siteHeader = document.querySelector('.site-header');
     if (!siteHeader) return;
+
+    var COMPACT_AT = 80;   // px — banner disappears, header compacts
+    var HIDE_AT    = 200;  // px — mobile hide-on-scroll-down kicks in
+
     var lastScrollY = window.scrollY;
     var ticking = false;
-    var THRESHOLD = 60;
+
+    function update() {
+      var y = window.scrollY;
+      var isMobile = window.innerWidth < 768;
+      var scrollingDown = y > lastScrollY;
+
+      // Phase 1: compact
+      if (y > COMPACT_AT) {
+        siteHeader.classList.add('header--compact');
+      } else {
+        siteHeader.classList.remove('header--compact');
+        siteHeader.classList.remove('header--hidden'); // always reveal when near top
+      }
+
+      // Phase 2: mobile hide/show
+      if (isMobile && y > HIDE_AT) {
+        if (scrollingDown) {
+          siteHeader.classList.add('header--hidden');
+        } else {
+          siteHeader.classList.remove('header--hidden');
+        }
+      } else if (!isMobile) {
+        siteHeader.classList.remove('header--hidden');
+      }
+
+      // Update --header-h so progress bar tracks actual header height
+      document.documentElement.style.setProperty('--header-h', siteHeader.offsetHeight + 'px');
+
+      lastScrollY = y;
+      ticking = false;
+    }
+
     window.addEventListener('scroll', function() {
       if (!ticking) {
-        requestAnimationFrame(function() {
-          var currentScrollY = window.scrollY;
-          if (window.innerWidth < 768) {
-            if (currentScrollY > lastScrollY && currentScrollY > THRESHOLD) {
-              siteHeader.classList.add('header--hidden');
-            } else {
-              siteHeader.classList.remove('header--hidden');
-            }
-          } else {
-            siteHeader.classList.remove('header--hidden');
-          }
-          lastScrollY = currentScrollY;
-          ticking = false;
-        });
+        requestAnimationFrame(update);
         ticking = true;
       }
     }, { passive: true });
