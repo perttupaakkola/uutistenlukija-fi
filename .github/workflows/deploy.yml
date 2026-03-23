@@ -16,6 +16,11 @@ jobs:
           hugo-version: '0.147.0'
           extended: true
 
+      - name: Validate Hugo templates
+        env:
+          DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
+        run: bash scripts/validate_templates.sh
+
       - name: Build
         run: hugo --minify
 

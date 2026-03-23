@@ -6,7 +6,7 @@
 
   {{ $today := now.Format "2006-01-02" }}
   {{ $posts := where .Site.RegularPages "Section" "posts" }}
-  {{ $todayPosts := where $posts "Date" "ge" (time $today) }}
+  {{ $todayPosts := where $posts "Date" "ge" (time.AsTime $today) }}
   {{ $sorted := $todayPosts.ByDate.Reverse }}
 
   {{ if not $sorted }}
