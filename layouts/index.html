@@ -43,17 +43,41 @@
 {{ $thumb := .Params.image_thumb | default $img }}
 {{ $alt   := .Params.image_alt | default .Title }}
 <article class="lead-article lead-article--hero">
-  {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" true "hero" true "permalink" .Permalink) }}
-  {{ with .Params.categories }}
-  <span class="category-label">{{ index . 0 }}</span>
-  {{ end }}
-  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-  <p class="excerpt">{{ .Summary | truncate 300 }}</p>
-  <div class="meta">
-    {{ .Date | time.Format "2.1. klo 15:04" }}
-    {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-    · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min
-  </div>
+  <a href="{{ .Permalink }}" class="hero-scrim-link" aria-label="{{ .Title }}">
+    {{/* Build srcset for Unsplash/Pexels, fall back to $img */}}
+    {{- $heroSrc := $thumb -}}
+    {{- $heroSrcset := "" -}}
+    {{- if hasPrefix $img "https://images.unsplash.com" -}}
+      {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
+      {{- $heroSrc    = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $b $s -}}
+      {{- $heroSrcset = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=85 800w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
+    {{- else if hasPrefix $img "https://images.pexels.com" -}}
+      {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
+      {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop" $b $s -}}
+    {{- end -}}
+    <img
+      src="{{ $heroSrc }}"
+      {{- if $heroSrcset }} srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px"{{ end }}
+      alt="{{ $alt }}"
+      class="hero-scrim-img article-card-thumb"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      width="800" height="450"
+      onload="this.classList.add('img-loaded')"
+      onerror="this.classList.add('img-loaded')">
+    {{/* Gradient scrim — Sara spec #25 */}}
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-scrim-body">
+      {{ with .Params.categories }}<span class="category-pill category-{{ index . 0 | lower | urlize }}">{{ index . 0 }}</span>{{ end }}
+      <h2 class="hero-scrim-title">{{ .Title }}</h2>
+      <div class="hero-scrim-meta">
+        {{ .Date | time.Format "2.1. klo 15:04" }}
+        {{ with .Params.author }} · {{ . }}{{ end }}
+        · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min
+      </div>
+    </div>
+  </a>
 </article>
 {{ end }}
 
