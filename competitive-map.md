@@ -6,7 +6,9 @@
 
 ---
 
-## PART 1: AGGREGAATTORIT (7 kpl)
+## PART 1: KILPAILIJAT — AGGREGAATTORIT JA UUTISALUSTAT (7 kpl)
+
+> **Huom:** Uutistenlukija ei ole aggregaattori — olemme verkkolehti joka tuottaa alkuperäistä AI-journalismia. Alla olevat kilpailijat ovat pääosin aggregaattoreita.
 
 | Kilpailija | Uhkataso | Vahvuudet | Heikkoudet |
 |------------|----------|-----------|------------|
@@ -16,7 +18,7 @@
 | Flipboard | 🟢 VERY LOW | Visuaalinen design | Minimaalinen suomalainen sisältö, laskeva yleisö |
 | Uutiskeräin.fi | — | (suljettu huhtikuu 2025) | Kopiosto vaati maksua → sulki |
 | Bing News | 🟢 VERY LOW | — | Mitätön markkinaosuus Suomessa |
-| Feedly/Inoreader | 🟢 VERY LOW | Eri käyttötapaus | Power users, ei editorial aggregation |
+| Feedly/Inoreader | 🟢 VERY LOW | Eri käyttötapaus | Power users, RSS-lukijoita |
 
 ---
 
@@ -41,7 +43,7 @@
 
 **Positiointi-lausuma:**
 
-_Uutistenlukija on ainoa suomalainen uutisaggregaatti, joka tarjoaa puhtaan, mainoksettoman, GDPR-yhteensopivan näkymän — ilman Googlen profilointia, ilman Alma Median omistuskonfliktia._
+_Uutistenlukija on ainoa suomalainen verkkolehti, joka tarjoaa alkuperäistä AI-journalismia puhtaassa, mainoksettomassa, GDPR-yhteensopivassa muodossa — ilman Googlen profilointia, ilman Alma Median omistuskonfliktia._
 
 ---
 
@@ -55,7 +57,7 @@ _Uutistenlukija on ainoa suomalainen uutisaggregaatti, joka tarjoaa puhtaan, mai
 - 🔑 **Uutiskeräin.fi:n entiset käyttäjät** hakevat korvaajaa nyt — alle vuosi sitten suljettu
 - Ampparinin UX-gap → jopa 5% konversio = 15k reg. käyttäjää
 - Tietosuojabäklash Googlea vastaan
-- Newsletter-aukko — yksikään aggregaatti ei tee sitä hyvin
+- Newsletter-aukko — yksikään uutismedia ei tee sitä hyvin
 - Tekoäly-avainsana kasvu
 - MM-kisat toukokuussa → massiivinen Urheilu-trafikkipiikki
 
@@ -70,7 +72,7 @@ LÄHTEIDEN LAAJUUS
 Kapea ←————————→ Laaja
 
 Korkea  | Yle Uutiset       | Ampparit
-UX      | (julkaisija)       | (aggregaatti, vanheneva)
+UX      | (julkaisija)       | (alusta, vanheneva)
         |                    |
         | UUTISTENLUKIJA     | Google News
         | ← tavoitealue     | (privacy-ongelmat)

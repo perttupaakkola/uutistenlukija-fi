@@ -73,7 +73,7 @@ info@uutistenlukija.fi
 **Kuvailkaa uutissisältöänne:**
 
 ```
-Uutistenlukija.fi on suomalainen uutisaggregaatti, joka kokoaa yhteen parhaat uutiset kahdeksasta eri kategoriasta: Kotimaa, Ulkomaat, Talous, Politiikka, Teknologia & Tiede, Urheilu, Kulttuuri & Viihde sekä Terveys & Hyvinvointi.
+Uutistenlukija.fi on suomalainen verkkolehti, joka tuottaa alkuperäistä AI-avusteista journalismia kahdeksassa kategoriassa: Kotimaa, Ulkomaat, Talous, Politiikka, Teknologia & Tiede, Urheilu, Kulttuuri & Viihde sekä Terveys & Hyvinvointi.
 
 Palvelu on suunnattu suomalaisille lukijoille, jotka haluavat seurata useita luotettavia uutislähteitä yhdestä paikasta. Sisältö koostuu alkuperäisten suomalaisten uutismedioiden julkaisuista, jotka on kategorisoitu ja kuratoitu lukijaystävällisesti. Kaikki linkit ohjaavat alkuperäisen lähteen sivustolle.
 

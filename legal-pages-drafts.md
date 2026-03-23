@@ -226,7 +226,7 @@ Katso myös [tietosuojaseloste](/tietosuojaseloste). Kysymyksiä: info@uutistenl
 
 ## 1. Palvelun kuvaus
 
-Uutistenlukija.fi on suomalainen uutisaggregaattipalvelu, joka kokoaa linkkejä eri uutismedioiden julkaisemiin artikkeleihin ja ohjaa käyttäjät alkuperäisille sivustoille.
+Uutistenlukija.fi on suomalainen verkkolehti, joka tuottaa alkuperäistä journalismia tekoälyn avulla useiden luotettavien uutislähteiden pohjalta.
 
 Ylläpitäjä: [REKISTERINPITÄJÄN NIMI]
 Sähköposti: info@uutistenlukija.fi
@@ -279,7 +279,7 @@ Emme takaa keskeytymätöntä toimintaa. Pidätämme oikeuden keskeyttää palve
 
 ### 5.2 Sisällön oikeellisuus
 
-Aggregaattipalvelu — sisältöä ei tarkisteta manuaalisesti. Emme vastaa artikkelien oikeellisuudesta.
+AI-avusteinen toimitus — artikkelit kirjoitetaan tekoälyn avulla. Pyrimme tarkkuuteen, mutta emme voi taata kaikkien artikkelien virheettömyyttä.
 
 ### 5.3 Vahingonkorvausvastuu
 

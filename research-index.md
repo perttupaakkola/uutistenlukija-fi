@@ -20,7 +20,7 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 6 | Content roadmap | (in-session, not saved to file) | 18-item roadmap; top priority items: allowlist expansion, category routing, explainer template, roundup template |
 | 7 | Sprint backlog | (in-session, not saved to file) | Top 6: allowlist expansion, category routing, explainer template (Monica+Sara+Alex), roundup template, health lane, crime sub-lane |
 | 8 | Finnish RSS feed directory | legal-brief-aggregation-2026-03.md (embedded) | Verified working: Yle, IS, IL, TS, Kauppalehti; Dead/blocked: tiede.fi, tivi.fi, Aamulehti; MTV Uutiset: no working feed |
-| 9 | Legal/copyright brief | legal-brief-aggregation-2026-03.md | Art. 15 in force Finland since Apr 2023; Uutiskeräin shut Apr 2025; operate headline-only, max 120 chars preview; HS/IL/Kauppalehti HIGH risk |
+| 9 | Legal/copyright brief | legal-brief-aggregation-2026-03.md | Art. 15 in force Finland since Apr 2023; not directly applicable to original journalism model; editorial standard: no verbatim copying |
 | 10 | Kopiosto licensing brief | (in-session, not saved to file) | No public standard tariff; case-by-case, slow, expensive; strategy: build traction first, then negotiate |
 | 11 | SEO keyword research | seo-keyword-research-2026-03.md | URL structure locked; Kotimaa/Talous/Urheilu strongest near-term; full keyword tables by category |
 | 12 | Monetization research | monetization-research-2026-03.md | Finnish CPM €2.50-€2.90; realistic RPM €4-8 net; revenue target €234k-€330k/yr at 500k-1M monthly uniques |
@@ -43,10 +43,10 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 29 | Source tier analysis | source-tier-analysis.md | Current source audit, gap analysis, 10 new source recommendations with RSS, quality gate filters, tier map with coverage projections |
 | 30 | Launch announcement drafts | launch-announcement.md | 5 formats: Finnish blog/press release, X thread, Facebook, English PR, Product Hunt. Distribution checklist. "No AI-hype" messaging rule |
 | 31 | Reader feedback survey | reader-survey.md | 9 questions (+ 5-question short version), Google Forms implementation, 3 incentive ideas, NPS analytics, GDPR notes |
-| 32 | Competitive map | competitive-map.md | 7 aggregators mapped, 6 mainstream publishers, unique positioning, SWOT, positioning chart. Uutiskeräin.fi gap identified |
+| 32 | Competitive map | competitive-map.md | 7 competitors mapped, 6 mainstream publishers, unique positioning, SWOT, positioning chart. Uutiskeräin.fi gap identified |
 | 33 | Ad revenue model | ad-revenue-model.md | Traffic tier projections (1K-500K), break-even analysis, 3 scenarios (€900-€25K yr1), newsletter sponsorship tiers, MM-kisat golden window |
 | 34 | Content quality audit | content-quality-audit.md | ⚠️ CRITICAL: Site has AI-generated full articles with fictional bylines, no source attribution. Grade C+. UX A- but legal compliance D |
-| 35 | Attribution best practices | attribution-best-practices.md | Aggregator comparison, JSN guidelines, EU AI Act Art. 50 (Aug 2026), STT/Yle examples, P0 fix list for Alex |
+| 35 | Attribution best practices | attribution-best-practices.md | News media comparison, JSN guidelines, EU AI Act Art. 50 (Aug 2026), STT/Yle examples, P0 fix list for Alex |
 | 36 | Launch readiness v2 | launch-readiness-v2.md | 32% ready (16/50), 5 blockers (B1-B5), 5 Perttu decisions, timeline: mid-April launch if decisions made now |
 | 37 | Monetization timeline | monetization-timeline.md | Path to 1M€ (year 3 realistic), 3 yr1 scenarios (€5K-€120K), milestone unlocks, MM-kisat golden window, byline risk = zero revenue |
 | 38 | Finnish media landscape | finnish-media-landscape.md | Top 5 media by traffic, 5 underserved categories, Alma conflict-free positioning, social media priorities, MM-kisat opportunity, launch messaging |
@@ -107,7 +107,7 @@ Deliverables #1, #4, #5, #6, #7, #10 were produced in-session and reported via D
 ### Product
 
 - **8-category taxonomy** is the right structure at launch
-- **Headline-only aggregation with max 120 chars preview** is the safe legal posture
+- **Original AI-journalism** from multiple sources is the content model; no verbatim copying as editorial standard
 - **Domain-first source allowlist** with quality-trusted publishers; category assignment done downstream by classifier
 
 ### Audience
@@ -123,7 +123,7 @@ Deliverables #1, #4, #5, #6, #7, #10 were produced in-session and reported via D
 
 ### Legal
 
-- Article 15 = biggest ongoing risk; HS/IL/Kauppalehti = HIGH risk
+- Article 15 = not directly applicable to original journalism model; editorial standard: no verbatim copying
 - No special Traficom licence needed; DSA compliance and cookie consent are the real obligations
 
 ### Tech

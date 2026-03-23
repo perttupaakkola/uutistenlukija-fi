@@ -91,4 +91,4 @@
 - **Uusi Suomi -blogifiltteri** on kriittinen Alexille — ilman sitä lukijakontribuutiot livahtavat sisään
 - **SM-liiga RSS pitää tutkia ennen 15.5.** — jääkiekon MM-kisat ovat Urheilu-kategorian suurin tapahtuma koko vuodelle
 - **Terveys + Ulkomaat korjaantuvat** pelkästään BBC:n aktivoinnilla — yksi toimenpide, seitsemän syötettä
-- **ArcticStartup** olisi uniikki lisäarvo — ei muilla suomalaisaggregaattoreilla tätä kulmaa
+- **ArcticStartup** olisi uniikki lisäarvo — ei muilla suomalaisilla uutismedioilla tätä kulmaa

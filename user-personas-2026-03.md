@@ -109,7 +109,7 @@
 - **UI complexity** — large text, simple navigation needed
 - **Paywalls are confusing** — doesn't understand why some articles free, others not
 - **Overwhelming ads on news sites** — adds to visual clutter
-- **Missing local/regional coverage** — wants hometown news aggregated with national
+- **Missing local/regional coverage** — wants hometown news covered alongside national
 - **Tech trust gap** — skeptical of AI-written news
 
 ### What Would Convert
@@ -137,7 +137,7 @@
 
 ### Pain Points
 - **Subscribe to HS? Then miss Alma Media's outlets (Iltalehti, Kauppalehti)**
-- **No aggregated premium tier** — services like Kaikki+ exist but incomplete
+- **No combined premium tier** — services like Kaikki+ exist but incomplete
 - **Overlap frustration:** Same stories on multiple outlets = paying for duplicates
 - **Admin burden:** Managing multiple subscriptions, logins, payment methods
 - **Unclear value proposition:** What's unique about each outlet?
@@ -157,7 +157,7 @@
 ## Summary: Target Priority
 
 ### MVP Launch Priority (Free)
-1. **Direct Accessor** — Already pays for news, appreciates quality aggregation
+1. **Direct Accessor** — Already pays for news, appreciates quality original coverage
 2. **Young Social Native** — Needs phone-first, shareable, no paywall
 3. **Finnish Professional** — High intent, valuable for sponsors/affiliates
 

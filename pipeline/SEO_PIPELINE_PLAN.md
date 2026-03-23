@@ -93,7 +93,7 @@ Real-time: 4 active users
 ```
 [Emoji] [Title, max 180 chars]
 
-[1-sentence summary, max 120 chars — from article description]
+[1-sentence summary — original description of the article]
 
 uutistenlukija.fi/posts/... #uutiset #[category_tag]
 ```

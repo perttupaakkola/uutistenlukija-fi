@@ -22,10 +22,10 @@
 
 | # | Kategoria | Miksi alipalveltu | Fit |
 |---|---|---|---|
-| 🥇 | Paikallisuutiset | Ei kansallista aggregaattoria aluemedioille | KORKEA |
-| 🥈 | Tiede | Tiede.fi paywallissa, ei aggregaattoria | KORKEA |
+| 🥇 | Paikallisuutiset | Ei kansallista kattavaa paikallismediaa | KORKEA |
+| 🥈 | Tiede | Tiede.fi paywallissa, ei vapaata tiedemediaa | KORKEA |
 | 🥉 | Teknologia (suomeksi) | Tivi/Mikrobitti paywallissa, englanninkieliset dominoivat | KORKEA |
-| 4. | Terveys & Hyvinvointi | Ei terveysuutisten aggregaattoria | KOHTALAINEN |
+| 4. | Terveys & Hyvinvointi | Ei terveysuutisiin keskittyvää mediaa | KOHTALAINEN |
 | 5. | Talous (ilmainen) | KL paywallissa, aukko ilmaiselle talousaggregaatille | KORKEA |
 
 ---
@@ -51,7 +51,7 @@ Vapaa + Laaja kattavuus + Korkea UX + Riippumaton
 |---|---|---|
 | X/Twitter | 🔴 Korkein | Suomalaisten toimittajien pääalusta; breaking news |
 | Facebook | 🟡 Toissijainen | Laskussa uutisille, mutta Urheilu/Kotimaa toimii |
-| Instagram | 🟢 Ei nyt | Ei sovi aggregaattoriformaattiin |
+| Instagram | 🟢 Ei nyt | Ei sovi uutismediaformaattiin |
 
 ---
 
@@ -66,4 +66,4 @@ Vapaa + Laaja kattavuus + Korkea UX + Riippumaton
 
 ## 7. MM-KISAT-POSITIOINTI (toukokuu 2026)
 
-Yksikään aggregaattori ei omista "kaikki MM-kisat uutiset yhdessä" -positiota. Tämä on Uutistenlukijan otettava haltuun ennen kisojen alkua.
+Yksikään uutismedia ei omista "kaikki MM-kisat uutiset yhdessä" -positiota. Tämä on Uutistenlukijan otettava haltuun ennen kisojen alkua.

@@ -9,11 +9,9 @@
 
 ### Mikä on Uutistenlukija?
 
-Uutistenlukija on suomalainen uutisaggregaatti — palvelu, joka kokoaa yhteen linkkejä suomalaisten ja kansainvälisten uutismedioiden julkaisemiin artikkeleihin.
+Uutistenlukija on suomalainen verkkolehti, joka tuottaa alkuperäistä journalismia tekoälyn avulla. Toimituksemme tutkii useita luotettavia uutislähteitä ja kirjoittaa niiden pohjalta omia, alkuperäisiä artikkeleita kahdeksassa kategoriassa: kotimaa, ulkomaat, talous, politiikka, teknologia ja tiede, urheilu, kulttuuri ja viihde sekä terveys ja hyvinvointi.
 
-Meillä ei ole toimittajia kirjoittamassa juttuja. Sen sijaan seuraamme luotettavia uutislähteitä ja kokoamme niiden otsikot helposti selattavaan muotoon kahdeksassa kategoriassa: kotimaa, ulkomaat, talous, politiikka, teknologia ja tiede, urheilu, kulttuuri ja viihde sekä terveys ja hyvinvointi.
-
-Kaikki linkit vievät suoraan alkuperäisen median sivustolle. Uutistenlukija on hakemisto — alkuperäinen sisältö asuu aina alkuperäisen julkaisijan luona.
+Emme kopioi tai välitä muiden medioiden artikkeleita sellaisenaan. Jokainen artikkelimme on alkuperäinen teos, joka perustuu useiden lähteiden tutkimiseen ja synteesiin. Käytetyt lähteet listataan jokaisen artikkelin lopussa.
 
 ---
 
@@ -21,19 +19,21 @@ Kaikki linkit vievät suoraan alkuperäisen median sivustolle. Uutistenlukija on
 
 Suomalaisia uutisia on paljon. Hyvät jutut hukkuvat usein klikkiotsikoiden sekaan, ja saman uutisen seuraaminen useasta lähteestä vie aikaa.
 
-Uutistenlukija ratkaisee tämän kokoamalla laadukkaat suomalaiset uutislähteet yhteen paikkaan — ilman mainosraskaita etusivuja tai pakollisia tilauksia. Löydät päivän tärkeimmät uutiset nopeasti ja pääset lukemaan alkuperäisen artikkelin yhdellä klikkauksella.
+Uutistenlukija ratkaisee tämän tarjoamalla päivän tärkeimmät uutiset alkuperäisinä, selkeinä artikkeleina yhdessä paikassa — ilman mainosraskaita etusivuja tai pakollisia tilauksia. AI-toimituksemme tutkii useita lähteitä ja kirjoittaa jokaisesta aiheesta oman artikkelinsa.
 
 ---
 
 ### Miten Uutistenlukija toimii?
 
-Palvelu kerää uutisotsikoita automaattisesti luotettavien medioiden RSS-syötteistä. Jokainen otsikko on linkki alkuperäisen median sivustolle.
+Palvelumme seuraa luotettavia uutislähteitä automaattisesti. Kun havaitsemme merkittävän uutisaiheen, AI-toimituksemme tutkii useita lähteitä ja kirjoittaa alkuperäisen artikkelin.
 
-**Sisällön valinta:** Noudatamme tarkkaa lähdelistaa — mukaan pääsevät vain todetut, laadukkaat uutismediat. Emme julkaise sisältöä tuntemattomilta tai epäluotettavilta sivustoilta.
+**Sisällön valinta:** Noudatamme tarkkaa lähdelistaa — tutkimme vain luotettavia, tunnistettuja uutismedioita. Emme käytä tuntemattomia tai epäluotettavia sivustoja lähteinä.
 
-**Kategorisointi:** Artikkelit kategorisoidaan automaattisesti lähteen ja aiheen perusteella.
+**Alkuperäinen journalismi:** Jokainen artikkelimme on tekoälyn kirjoittama alkuperäinen teos, joka perustuu useiden lähteiden synteesiin. Emme kopioi sanatarkasti yhdestäkään lähteestä.
 
-**Päivitystiheys:** Uutisvirta päivittyy jatkuvasti — tuoreimmat otsikot näkyvät sivustolla pian julkaisun jälkeen.
+**Kategorisointi:** Artikkelit kategorisoidaan automaattisesti aiheen perusteella.
+
+**Päivitystiheys:** Uutiset päivittyvät jatkuvasti — tuoreimmat artikkelit julkaistaan pian uutisaiheen havaitsemisen jälkeen.
 
 ---
 
@@ -61,29 +61,29 @@ Hyväksymme lähteeksi ainoastaan mediat, jotka:
 
 Emme ota mukaan anonyymejä lähteitä, sisältömarkkinointisivustoja, puolueellisia propagandasivustoja tai muita luotettavuudeltaan kyseenalaisia julkaisijoita.
 
-### Automatisoitu kuratointi — mitä se tarkoittaa
+### AI-avusteinen toimitus — mitä se tarkoittaa
 
-Uutistenlukija on automatisoitu palvelu. Emme lue jokaista artikkelia ennen kuin se ilmestyy sivustolle. Tämä tarkoittaa, että:
+Uutistenlukija käyttää tekoälyä artikkeleiden kirjoittamiseen. AI-toimituksemme tutkii useita lähteitä ja tuottaa alkuperäisiä artikkeleita. Tämä tarkoittaa, että:
 
-- Emme vastaa alkuperäisen median artikkelien sisällöstä tai oikeellisuudesta
-- Artikkeli voi ilmestyä sivustollemme myös silloin, kun emme ole sitä erikseen tarkistaneet
-- Jos huomaat ongelmallisen sisällön, voit ilmoittaa siitä meille
+- Artikkelimme ovat AI-kirjoitettuja — tämä kerrotaan avoimesti byline-merkinnällä
+- Pyrimme tarkkuuteen, mutta AI voi satunnaisesti tuottaa epätarkkuuksia
+- Jos huomaat artikkeleissamme virheitä tai ongelmallista sisältöä, voit ilmoittaa siitä meille
 
 ---
 
-## Vastuullinen aggregointi
+## Vastuullinen journalismi
 
-Kunnioitamme alkuperäisiä julkaisijoita. Palvelumme perustuu otsikkojen ja lyhyiden kuvausten näyttämiseen sekä linkkeihin alkuperäiselle sivustolle — emme kopioi tai julkaise artikkeleita kokonaisuudessaan. Ohjaamme liikenteen alkuperäisten julkaisijoiden sivuille.
+Kunnioitamme alkuperäisiä julkaisijoita ja lähteitä. Artikkelimme ovat alkuperäisiä teoksia — emme kopioi sanatarkasti yhdestäkään lähteestä. Jokaisen artikkelin lopussa listataan käytetyt lähteet, ja lukijat voivat halutessaan tutustua alkuperäisiin artikkeleihin.
 
 ---
 
 ## Transparenssi-ilmoitus (DSA)
 
-Uutistenlukija.fi on automaattinen uutisaggregaattipalvelu.
+Uutistenlukija.fi on verkkolehti, joka tuottaa alkuperäistä journalismia tekoälyn avulla.
 
-**Palvelun tyyppi:** Uutisaggregaatti — linkityspalvelu, joka kokoaa ulkoisten medioiden otsikoita.
+**Palvelun tyyppi:** Verkkolehti — AI-avusteinen uutismedia, joka tuottaa alkuperäisiä artikkeleita useiden lähteiden pohjalta.
 
-**Sisällön alkuperä:** Kaikki artikkelisisältö on alkuperäisten uutismedioiden tuottamaa. Uutistenlukija ei tuota uutissisältöä itse.
+**Sisällön alkuperä:** Artikkelimme ovat alkuperäisiä, tekoälyn kirjoittamia teoksia. AI-toimitus tutkii useita luotettavia uutislähteitä ja kirjoittaa niiden pohjalta omat artikkelinsa.
 
 **Algoritmiset suositukset:** Sisältö järjestetään pääasiassa julkaisuajan mukaan (uusimmat ensin). Emme käytä henkilökohtaisiin tietoihin perustuvaa algoritmista suosittelua.
 
@@ -123,7 +123,7 @@ _Vastaamme viesteihin arkisin mahdollisimman pian._
 - [ ] Full-width layout, no sidebar
 - [ ] Add to header nav + footer
 - [ ] Meta title: `Tietoa meistä | Uutistenlukija.fi`
-- [ ] Meta desc: `Uutistenlukija on suomalainen uutisaggregaatti, joka kokoaa luotettavien medioiden uutisotsikot yhteen paikkaan. Lue, miten palvelu toimii.`
+- [ ] Meta desc: `Uutistenlukija on suomalainen verkkolehti, joka tuottaa alkuperäistä journalismia tekoälyn avulla useiden lähteiden pohjalta. Lue, miten palvelu toimii.`
 - [ ] JSON-LD `Organization` schema recommended
 
 ## Perttu:

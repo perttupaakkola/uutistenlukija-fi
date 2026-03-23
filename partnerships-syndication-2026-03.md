@@ -86,7 +86,7 @@ STT does not typically have a direct self-service licensing model for small inde
 
 **What Ampparit is:**
 
-Ampparit.com is Finland's leading news aggregator, combining 250+ Finnish news sources. It operates on an RSS-feed-based model and is the closest existing comparable to uutistenlukija in the Finnish market.
+Ampparit.com is Finland's leading news aggregator, combining 250+ Finnish news sources. It operates on an RSS-feed-based model. While Ampparit is an aggregator (linking to external content), uutistenlukija is a verkkolehti producing original journalism — making us a potential content source for Ampparit rather than a competitor.
 
 **Submission process:**
 

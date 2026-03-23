@@ -43,7 +43,12 @@ def latest_article_timestamp() -> tuple[str | None, int]:
         return None, 0
 
     latest_dt: datetime | None = None
-    date_re = re.compile(r'^date\s*=\s*["\']?(\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}[^"\']*)["\']?', re.MULTILINE)
+    # Match both YAML (date: value) and TOML (date = value) frontmatter styles
+    # Captures timestamp including optional microseconds and timezone offset/Z
+    date_re = re.compile(
+        r'^date\s*[:=]\s*["\']?(\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?)',
+        re.MULTILINE
+    )
 
     for article in articles:
         try:
@@ -51,12 +56,13 @@ def latest_article_timestamp() -> tuple[str | None, int]:
             m = date_re.search(text)
             if not m:
                 continue
-            raw = m.group(1).strip()
-            # normalise: replace space with T, ensure UTC
-            raw = raw.replace(" ", "T")
-            if not raw.endswith("Z") and "+" not in raw[10:] and "-" not in raw[10:]:
-                raw += "Z"
-            dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            raw = m.group(1).strip().replace(" ", "T")
+            # Normalise to UTC-aware datetime
+            if raw.endswith("Z"):
+                raw = raw[:-1] + "+00:00"
+            elif "+" not in raw[10:] and raw.count("-") < 3:
+                raw += "+00:00"
+            dt = datetime.fromisoformat(raw)
             if latest_dt is None or dt > latest_dt:
                 latest_dt = dt
         except Exception:

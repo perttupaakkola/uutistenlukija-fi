@@ -1,6 +1,6 @@
 ---
 title: "Tietoja Uutistenlukijasta"
-description: "Uutistenlukija.fi — suomalainen uutisaggregaattori, joka kokoaa päivän tärkeimmät uutiset"
+description: "Uutistenlukija.fi — suomalainen verkkolehti, joka tuottaa alkuperäistä AI-avusteista journalismia päivän tärkeimmistä uutisista"
 url: "/tietoja/"
 layout: "page"
 ---
