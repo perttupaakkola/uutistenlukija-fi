@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-03-23
 **Compiled by:** Monica 🔍
-**Total:** 38 deliverables across 31 files (~250KB+)
+**Total:** 39 deliverables across 32 files (~255KB+)
 
 This document is the master table of contents for the uutistenlukija.fi research library. All files are in `projects/uutistenlukija/` in the shared workspace.
 
@@ -50,6 +50,8 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 36 | Launch readiness v2 | launch-readiness-v2.md | 32% ready (16/50), 5 blockers (B1-B5), 5 Perttu decisions, timeline: mid-April launch if decisions made now |
 | 37 | Monetization timeline | monetization-timeline.md | Path to 1M€ (year 3 realistic), 3 yr1 scenarios (€5K-€120K), milestone unlocks, MM-kisat golden window, byline risk = zero revenue |
 | 38 | Finnish media landscape | finnish-media-landscape.md | Top 5 media by traffic, 5 underserved categories, Alma conflict-free positioning, social media priorities, MM-kisat opportunity, launch messaging |
+| 39 | SEO content gaps | seo-content-gaps.md | Free talous gap, AI/tech keyword growth, MM-kisat SEO window (deadline 25.4.), Ampparit UX displacement, Google News Showcase, content calendar priorities |
+| 39 | SEO content gap analysis | seo-content-gaps.md | High-volume Finnish query gaps, Google News traffic by category, long-tail opportunities, content types ranking in FI, 2026 content calendar priorities, 3 exploitable gaps |
 
 ---
 
@@ -91,6 +93,8 @@ This document is the master table of contents for the uutistenlukija.fi research
 | launch-readiness-v2.md | ~2KB | #36 | ✅ Complete |
 | monetization-timeline.md | ~2KB | #37 | ✅ Complete |
 | finnish-media-landscape.md | ~2KB | #38 | ✅ Complete |
+| seo-content-gaps.md | ~2KB | #39 | ✅ Complete |
+| seo-content-gaps.md | ~5KB | #39 | ✅ Complete |
 
 ### Deliverables without standalone files
 

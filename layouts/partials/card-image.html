@@ -55,7 +55,7 @@
   {{- if $thumb -}}{{- $src = $thumb -}}{{- end -}}
 {{- end -}}
 
-<a href="{{ $href }}" class="article-image-link" tabindex="-1" aria-hidden="true">
+<a href="{{ $href }}" class="article-image-link img-skeleton" tabindex="-1" aria-hidden="true">
   <picture>
     {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
     {{- if $srcset }}<source type="image/webp" srcset="{{ $srcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
