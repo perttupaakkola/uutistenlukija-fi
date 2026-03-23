@@ -3,6 +3,11 @@ title: "Suomalaiset rauhanturvaajat joutuivat tulituksen kohteeksi Libanonissa"
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - libanonissa
@@ -14,7 +19,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Suomalaiset rauhanturvaajat joutuivat tulituksen kohteeksi Libanonissa Suomalaisia rauhanturvaajia kohti ammuttiin Etelä-Libanonissa, mikä…
 ---
 Suomalaiset rauhanturvaajat joutuivat tulituksen kohteeksi Libanonissa
 

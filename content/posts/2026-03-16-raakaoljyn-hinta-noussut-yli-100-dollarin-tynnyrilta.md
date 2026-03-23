@@ -3,6 +3,11 @@ title: "Raakaöljyn hinta noussut yli 100 dollarin tynnyriltä"
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Talous
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - hinta
@@ -14,7 +19,6 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
-description: Raakaöljyn hinta on kivunnut tasoille, joita ei ole nähty sitten vuoden 2022 energiakriisin.
 ---
 Raakaöljyn hinta on kivunnut tasoille, joita ei ole nähty sitten vuoden 2022 energiakriisin. Yhdysvaltalainen WTI-laatu maksaa jo yli 107 dollaria tynnyriltä ja kansainvälinen Brent-viitelaatu on ylittänyt 108 dollarin rajan. Maaliskuun aikana hinta on noussut lähes 50 prosenttia, mikä herättää huolta niin kuluttajien kuin talousasiantuntijoiden keskuudessa.
 

@@ -1,0 +1,39 @@
+{{/*
+  taxonomy-featured.html — Featured (newest) article block for taxonomy pages.
+
+  Used by: taxonomy/category.html, taxonomy/tag.html
+
+  Parameters: pass the Page object directly (the featured article).
+  Call as: {{ partial "taxonomy-featured.html" $article }}
+*/}}
+{{- $featCat := index .Params.categories 0 | default "kotimaa" -}}
+<a href="{{ .Permalink }}" class="category-featured">
+  {{ with .Params.image }}
+  {{- $featImgSrc := . -}}
+  {{- if hasPrefix . "https://images.unsplash.com" -}}
+    {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
+    {{- $featImgSrc = printf "%s%sw=260&h=146&fit=crop&fm=webp&q=80" . $s -}}
+  {{- else if hasPrefix . "https://images.pexels.com" -}}
+    {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
+    {{- $featImgSrc = printf "%s%sw=260&h=146&fit=crop" . $s -}}
+  {{- end -}}
+  <div class="category-featured__img-wrap">
+    <img src="{{ $featImgSrc }}"
+         alt="{{ .Params.image_alt | default .Title }}"
+         class="category-featured__img"
+         loading="eager" decoding="async" fetchpriority="high"
+         width="260" height="146"
+         onerror="this.onerror=null;this.src='/images/categories/{{ $featCat | lower }}.jpg';this.classList.add('img-loaded')">
+  </div>
+  {{ end }}
+  <div class="category-featured__body">
+    {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
+    <h2 class="category-featured__title">{{ .Title }}</h2>
+    <p class="category-featured__excerpt">{{ .Summary | truncate 200 }}</p>
+    <div class="meta">
+      {{ .Date | time.Format "2.1. klo 15:04" }}
+      · <span class="author-inline">Toimitus</span>
+      · {{ partial "reading-time.html" . }}
+    </div>
+  </div>
+</a>

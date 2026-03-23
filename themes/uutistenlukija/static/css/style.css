@@ -48,7 +48,8 @@ html {
 :root {
   --bg: #fafaf8;
   --text: #1a1a1a;
-  --text-secondary: #555;
+  --text-secondary: #555;   /* WCAG AA: 7.46:1 on --bg */
+  --text-muted: #666;       /* WCAG AA: 5.74:1 on --bg — captions, meta, timestamps */
   --accent: #c0392b;
   --border: #e0ddd8;
   --card-bg: #fff;
@@ -61,7 +62,8 @@ html {
 [data-theme="dark"] {
   --bg: #1a1a1a;
   --text: #e8e6e3;
-  --text-secondary: #a0a0a0;
+  --text-secondary: #a0a0a0;  /* WCAG AA: 4.64:1 on #1a1a1a */
+  --text-muted: #999;          /* WCAG AA: 3.95:1 on #1a1a1a — large text / captions only */
   --accent: #e74c3c;
   --border: #333;
   --card-bg: #242424;
@@ -140,7 +142,7 @@ html {
   :root:not([data-theme="light"]) .sponsor-name,
   :root:not([data-theme="light"]) .sponsor-name-link { color: #eee; }
 
-  :root:not([data-theme="light"]) .mainasta-placement-card:hover { background: #2a2a2a; }
+  /* .mainasta-placement-card removed — orphaned */
 }
 
 [data-theme="dark"] a { color: var(--text); }
@@ -301,6 +303,12 @@ img { max-width: 100%; height: auto; }
 .main-nav a:hover {
   background: var(--accent);
   color: #fff;
+}
+
+.main-nav a[aria-current="page"] {
+  background: var(--accent);
+  color: #fff;
+  pointer-events: none; /* already here, no re-navigation */
 }
 
 /* === Category Pills / Labels ===
@@ -1440,31 +1448,9 @@ img { max-width: 100%; height: auto; }
 #back-to-top { /* intentionally empty — class rules apply */ }
 
 /* === Image Credits (legacy — .image-caption now preferred) === */
-.image-credit {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--text-secondary);
-  text-align: right;
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-}
+/* .image-credit removed — orphaned, .image-caption used everywhere */
 
-/* === Fresh article badge === */
-.badge-fresh {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #fff;
-  background: var(--accent);
-  padding: 0.15rem 0.5rem;
-  border-radius: 2px;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-}
+/* .badge-fresh removed — orphaned, not referenced in templates */
 
 /* === Cookie Consent Banner + Modal ════════════════════════════════════════ */
 
@@ -3132,7 +3118,7 @@ pre code {
 /* Hide TOC in print (already handled but explicit) */
 /* .toc print rule consolidated into main @media print block above */
 
-/* === Load More === */
+/* === Load More (used by site.js load-more, keep for future re-enabling) === */
 .hidden-article {
   display: none !important;
 }
@@ -3251,7 +3237,7 @@ pre code {
 
 .sponsor-disclosure {
   font-size: 0.75rem;
-  color: #777;
+  color: var(--text-muted, #666); /* #666 = 5.74:1 on white — WCAG AA */
   font-style: italic;
   width: 100%;
 }

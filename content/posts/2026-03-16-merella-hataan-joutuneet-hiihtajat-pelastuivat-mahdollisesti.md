@@ -3,6 +3,11 @@ title: "Merellä hätään joutuneet hiihtäjät pelastuivat mahdollisesti klass
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - merellä
@@ -14,7 +19,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Kaksi kokenutta saksalaista hiihtovaeltajaa selvisi hengissä merellisestä hätätilanteesta lauantaina.
 ---
 Kaksi kokenutta saksalaista hiihtovaeltajaa selvisi hengissä merellisestä hätätilanteesta lauantaina. Pelastumisen taustalla saattoi olla keino, jota on käytetty autiosaarilla vuosikymmeniä. Hiihtäjät joutuivat vaikeuksiin, kun myrsky yllätti heidät keskellä meriseikkailua. Sään äkillinen muuttuminen johtaa usein vaarallisiin tilanteisiin erityisesti arktisissa olosuhteissa, joissa tuuli ja lumi voivat tehdä näkyvyydestä lähes mahdotonta.
 

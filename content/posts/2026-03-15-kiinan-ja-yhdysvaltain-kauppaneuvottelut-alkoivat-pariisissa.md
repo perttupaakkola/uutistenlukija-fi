@@ -3,6 +3,7 @@ title: "Kiinan ja Yhdysvaltain kauppaneuvottelut alkoivat Pariisissa"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
 draft: false
 tags:
   - kauppaneuvottelut
@@ -14,7 +15,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Kiinan ja Yhdysvaltain kauppaneuvottelut alkoivat lauantaina Pariisissa.
 ---
 Kiinan ja Yhdysvaltain kauppaneuvottelut alkoivat lauantaina Pariisissa. Ranskan pääkaupungissa käytävät keskustelut valmistelevat presidentti Donald Trumpin ja presidentti Xi Jinpingin tulevaa huippukokousta, joka on tarkoitus järjestää Kiinassa lähikuukausina. Tämä neuvotteluprosessi on tärkeä, sillä se saattaa vaikuttaa merkittävästi globaalin talouden suuntaviivoihin.
 

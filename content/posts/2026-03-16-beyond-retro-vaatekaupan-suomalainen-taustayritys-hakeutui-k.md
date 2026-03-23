@@ -3,6 +3,11 @@ title: "Beyond Retro -vaatekaupan suomalainen taustayritys hakeutui konkurssiin"
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Talous
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - beyond
@@ -14,7 +19,6 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
-description: Beyond Retro -vaateliikkeiden suomalainen omistajayritys Kusa Oy on hakeutunut konkurssiin.
 ---
 ## Beyond Retro -vaatekaupan suomalainen taustayritys hakeutui konkurssiin
 

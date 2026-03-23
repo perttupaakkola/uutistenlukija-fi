@@ -3,6 +3,11 @@ title: "Moskovaan kohdistui massiivinen lennokki-isku"
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - moskovaan
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan suunnattua lennokkia.
 ---
 Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan suunnattua lennokkia. Moskovan pormestari Sergei Sobjanin vahvisti tiedon. Tämä tapahtuma on yksi suurimmista Venäjän pääkaupunkiin kohdistuneista hyökkäyksistä sodan aikana, mikä nostaa esiin kysymyksiä sodan eskaloitumisesta ja sen seurauksista.
 

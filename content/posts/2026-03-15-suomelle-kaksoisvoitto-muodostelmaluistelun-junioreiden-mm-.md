@@ -3,6 +3,7 @@ title: "Suomelle kaksoisvoitto muodostelmaluistelun junioreiden MM-kisoissa"
 date: 2026-03-15T12:41:00+00:00
 categories:
   - Urheilu
+author: "Toimitus"
 draft: false
 tags:
   - muodostelmaluistelun
@@ -14,7 +15,6 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
-description: Helsinki Fintastic voitti kultaa muodostelmaluistelun junioreiden MM-kisoissa sunnuntaina vakuuttavalla esityksellä.
 ---
 Helsinki Fintastic voitti kultaa muodostelmaluistelun junioreiden MM-kisoissa sunnuntaina vakuuttavalla esityksellä. Espoolainen Valley Bay Synchro täydensi suomalaisten juhlaa nousemalla pronssisijalle – joukkueen ensimmäiseen MM-mitaliin koskaan. Tämä kaksinkertainen menestys on merkittävä saavutus suomalaiselle muodostelmaluistelulle ja nostaa entisestään maan asemaa kansainvälisessä taitoluistelussa.
 

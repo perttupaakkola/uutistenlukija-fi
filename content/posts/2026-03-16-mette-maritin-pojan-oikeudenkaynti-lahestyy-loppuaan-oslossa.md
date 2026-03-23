@@ -3,6 +3,11 @@ title: "Mette-Maritin pojan oikeudenkäynti lähestyy loppuaan Oslossa"
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - mette
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Norjan kruununprinsessa Mette-Maritin pojan oikeudenkäynti on siirtynyt viimeiselle viikollensa Oslon käräjäoikeudessa, mikä on herättänyt…
 ---
 Norjan kruununprinsessa Mette-Maritin pojan oikeudenkäynti on siirtynyt viimeiselle viikollensa Oslon käräjäoikeudessa, mikä on herättänyt suuresti julkista kiinnostusta ja keskustelua. Oikeudenkäynnin aikana on käsitelty vakavia syytöksiä, ja se on ollut erityisen poikkeuksellinen, sillä syytetty kuuluu Norjan kuninkaalliseen lähipiiriin Mette-Maritin aiemmasta suhteesta syntyneen pojan kautta. Tämä on tehnyt tapauksesta erityisen merkittävän, ei ainoastaan oikeudellisen, vaan myös sosiaalisen ja kulttuurisen kontekstin vuoksi.
 

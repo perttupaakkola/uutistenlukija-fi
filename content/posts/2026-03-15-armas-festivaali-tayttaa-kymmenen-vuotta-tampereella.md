@@ -3,6 +3,7 @@ title: "Armas-festivaali täyttää kymmenen vuotta Tampereella"
 date: 2026-03-15T12:44:00+00:00
 categories:
   - Kulttuuri
+author: "Toimitus"
 draft: false
 tags:
   - festivaali
@@ -14,7 +15,6 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
-description: "Tampereen Armas-festivaali juhlii tänä vuonna merkittävää merkkipaalua: kymmenvuotista taivaltaan."
 ---
 Tampereen Armas-festivaali juhlii tänä vuonna merkittävää merkkipaalua: kymmenvuotista taivaltaan. Valtakunnallinen kulttuurifestivaali järjestetään 17.–31. maaliskuuta, ja sen suojelijana toimii arvostettu elokuvaohjaaja Aki Kaurismäki, jonka tunnettuus ja taiteellinen panos ovat olleet tärkeä osa suomalaisen kulttuurin kenttää. Kaurismäen läsnäolo festivaalilla nostaa sen profiilia entisestään ja tuo festivaalin teemat laajemman yleisön tietoisuuteen.
 

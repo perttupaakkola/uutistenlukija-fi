@@ -1,0 +1,20 @@
+{{/*
+  taxonomy-article-card.html — Article card for taxonomy listing pages.
+
+  Used by: taxonomy/category.html, taxonomy/tag.html
+
+  Parameters: pass the Page object directly.
+  Call as: {{ partial "taxonomy-article-card.html" $page }}
+*/}}
+<article class="article-card">
+  {{ with .Params.categories }}
+  <span class="category-label">{{ index . 0 }}</span>
+  {{ end }}
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <p class="excerpt">{{ .Summary | truncate 200 }}</p>
+  <div class="meta">
+    {{ .Date | time.Format "2.1. klo 15:04" }}
+    · <span class="author-inline">Toimitus</span>
+    · {{ partial "reading-time.html" . }}
+  </div>
+</article>

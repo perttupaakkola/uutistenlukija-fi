@@ -3,6 +3,7 @@ title: "Nokia ja Telia testaavat tekoälypohjaista verkkoteknologiaa Suomessa"
 date: 2026-03-15T12:42:00+00:00
 categories:
   - Teknologia
+author: "Toimitus"
 draft: false
 tags:
   - nokia
@@ -14,7 +15,6 @@ keywords:
   - "teknologia uutiset"
   - "tiedeuutiset"
   - "tekoäly uutiset"
-description: Nokia ja Telia Finland ovat aloittaneet laajan yhteistyön tekoälypohjaisen radiopääsyverkon kehittämiseksi ja testaamiseksi Suomessa.
 ---
 Nokia ja Telia Finland ovat aloittaneet laajan yhteistyön tekoälypohjaisen radiopääsyverkon kehittämiseksi ja testaamiseksi Suomessa. Kumppanuuden tavoitteena on parantaa 5G-verkon suorituskykyä merkittävästi ja nopeuttaa tekoälysovellusten kaupallistamista. Tekoälyn hyödyntäminen telekommunikaatiossa on noussut keskeiseksi teemaksi, ja tämä yhteistyö edustaa merkittävää askelta kohti älykkäämpää ja tehokkaampaa verkkoinfrastruktuuria.
 

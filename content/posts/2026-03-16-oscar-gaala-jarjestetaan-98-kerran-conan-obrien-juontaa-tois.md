@@ -3,6 +3,11 @@ title: "Oscar-gaala järjestetään 98. kerran – Conan O'Brien juontaa toistam
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Kulttuuri
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - oscar
@@ -14,7 +19,6 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
-description: Yhdysvaltain elokuva-akatemian Oscar-gaala järjestetään sunnuntai-iltana Los Angelesissa 98.
 ---
 Yhdysvaltain elokuva-akatemian Oscar-gaala järjestetään sunnuntai-iltana Los Angelesissa 98. kerran. Seremonian juontaa toista kertaa peräkkäin Conan O'Brien, joka sai viime vuonna kiitosta suorituksestaan. O'Brienin paluu juontajaksi on herättänyt odotuksia, sillä hänen huumorinsa ja karismansa ovat olleet suosittuja niin televisiossa kuin muissa tapahtumissa.
 

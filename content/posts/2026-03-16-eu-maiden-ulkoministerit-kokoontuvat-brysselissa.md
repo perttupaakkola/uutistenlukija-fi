@@ -3,6 +3,11 @@ title: "EU-maiden ulkoministerit kokoontuvat Brysselissä"
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - brysselissä
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Euroopan unionin jäsenmaiden ulkoministerit kokoontuvat maanantaina Brysselissä.
 ---
 Euroopan unionin jäsenmaiden ulkoministerit kokoontuvat maanantaina Brysselissä. Tällä kertaa kokouksessa keskitytään erityisesti unionin ulko- ja turvallisuuspoliittisiin kysymyksiin, jotka ovat nousseet entistä ajankohtaisemmiksi globaalin epävarmuuden ja kansainvälisten kriisien myötä. Kokouksen taustalla on tarve yhtenäistää EU:n jäsenvaltioiden näkemyksiä ja toimintatapoja, jotta unioni voi toimia tehokkaasti kansainvälisessä politiikassa.
 

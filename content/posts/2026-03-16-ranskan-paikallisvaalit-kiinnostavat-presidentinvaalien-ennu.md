@@ -3,6 +3,11 @@ title: "Ranskan paikallisvaalit kiinnostavat presidentinvaalien ennusmerkkinä"
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - presidentinvaalien
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Ranskassa äänestettiin sunnuntaina paikallisvaalien ensimmäisellä kierroksella.
 ---
 Ranskassa äänestettiin sunnuntaina paikallisvaalien ensimmäisellä kierroksella. Vaalien tuloksia seurataan tavallista tarkemmin, koska suurkaupunkien voimasuhteet voivat ennakoida ensi vuoden presidentinvaalien asetelmia. Paikallisvaalit tarjoavat tärkeän mittarin poliittiselle ilmapiirille ja puolueiden kannatukselle, ja niiden vaikutus voi ulottua kauas tulevaisuuteen.
 

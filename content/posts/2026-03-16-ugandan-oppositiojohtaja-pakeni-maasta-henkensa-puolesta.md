@@ -3,6 +3,11 @@ title: "Ugandan oppositiojohtaja pakeni maasta henkensä puolesta"
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - oppositiojohtaja
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Ugandan oppositiojohtaja pakeni maasta henkensä puolesta Ugandan oppositiojohtaja on ilmoittanut paenneensa maasta, peläten henkensä olevan…
 ---
 Ugandan oppositiojohtaja pakeni maasta henkensä puolesta
 

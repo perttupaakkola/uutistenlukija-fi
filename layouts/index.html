@@ -74,7 +74,7 @@
       <div class="hero-scrim-meta">
         {{ .Date | time.Format "2.1. klo 15:04" }}
         · Toimitus
-        · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min
+        · {{ partial "reading-time.html" . }}
       </div>
     </div>
   </a>

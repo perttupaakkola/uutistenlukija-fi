@@ -3,6 +3,11 @@ title: "Formula ykkösten kaoottinen alkukausi nosti neljä puheenaihetta pintaa
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - formula
@@ -14,7 +19,6 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
-description: Formula ykkösten kausi 2026 on alkanut sekavasti.
 ---
 Formula ykkösten kausi 2026 on alkanut sekavasti. Useilla talleilla on ollut vaikeuksia saada autojaan edes maaliin, ja keskeytyksiä on nähty paljon. Tämä ei ole ainoastaan harmittanut tallien faneja, vaan myös herättänyt kysymyksiä sarjan kilpailullisuudesta ja tulevaisuudesta.
 

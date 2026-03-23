@@ -3,6 +3,11 @@ title: "Lindsey Vonn ei sulje pois paluuta: \"En tarvitse kenenkään lupaa\""
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - vonn
@@ -14,7 +19,6 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
-description: Yhdysvaltalainen alppihiihtäjä Lindsey Vonn ei ole vielä valmis päättämään uransa suuntaa, huolimatta vakavasta loukkaantumisesta, jonka hän…
 ---
 ## Lindsey Vonn ei sulje pois paluuta: "En tarvitse kenenkään lupaa"
 

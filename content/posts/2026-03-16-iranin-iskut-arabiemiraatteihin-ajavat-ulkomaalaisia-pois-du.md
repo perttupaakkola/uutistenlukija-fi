@@ -3,6 +3,11 @@ title: "Iranin iskut Arabiemiraatteihin ajavat ulkomaalaisia pois Dubaista"
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - iranin
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Dubai on joutunut vakavimpaan kriisiinsä vuosikymmeniin.
 ---
 Dubai on joutunut vakavimpaan kriisiinsä vuosikymmeniin. Iran on iskenyt ensimmäistä kertaa Arabiemiraatteihin, ja iskut ovat karkottaneet ulkomaalaisia asukkaita kaupungista. Tämä kehitys on herättänyt huolta paitsi paikallisessa väestössä myös kansainvälisesti, kun Dubaista on tullut monien ulkomaalaisten, erityisesti länsimaalaisten, suosittu asuinpaikka.
 

@@ -3,6 +3,11 @@ title: "Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhla
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Talous
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - nuoret
@@ -14,7 +19,6 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
-description: FIRE-liike, eli 'Financial Independence, Retire Early', on saanut merkittävää huomiota suomalaisten nuorten keskuudessa.
 ---
 ## Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhlauksena
 

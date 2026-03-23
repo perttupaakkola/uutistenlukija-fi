@@ -3,6 +3,11 @@ title: "Nokia nousi lähes neljä prosenttia Helsingin pörssissä"
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Talous
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - helsingin
@@ -14,7 +19,6 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
-description: Helsingin pörssi päätyi maanantaina nousuun.
 ---
 Helsingin pörssi päätyi maanantaina nousuun. Päivän suurimpia nousijoita oli Nokia, jonka osake vahvistui lähes neljä prosenttia. Tämä nousu on merkittävä, sillä se tapahtui samalla, kun markkinoilla vallitsi yleinen epävarmuus, erityisesti Lähi-idän jännitteiden vuoksi.
 

@@ -3,6 +3,11 @@ title: "Hybridiautojen myynti kasvaa Australiassa – bensiiniautojen osuus enn�
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Talous
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - hybridiautojen
@@ -14,7 +19,6 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
-description: Bensiiniautot menettävät otettaan Australian automarkkinoilla.
 ---
 Bensiiniautot menettävät otettaan Australian automarkkinoilla. Maan autoliiton AAA:n tuoreet tilastot osoittavat, että puhtaasti bensiinikäyttöisten autojen osuus myydyistä ajoneuvoista laski ennätyksellisen alas, 66,3 prosenttiin neljännesvuositasolla. Tämä muutos ei ole vain tilastollinen ilmiö, vaan se heijastaa laajempia ympäristö- ja taloudellisia trendejä, jotka vaikuttavat kuluttajien valintoihin.
 

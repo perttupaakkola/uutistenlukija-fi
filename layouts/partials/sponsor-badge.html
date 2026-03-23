@@ -21,14 +21,14 @@
   {{ if $url }}
   <a href="{{ $url }}" rel="nofollow noopener noreferrer" target="_blank" class="sponsor-name-link">
     {{ if $logo }}
-    <img src="{{ $logo }}" alt="{{ $name }}" class="sponsor-logo" loading="lazy" decoding="async">
+    <img src="{{ $logo }}" alt="{{ $name }}" class="sponsor-logo" loading="lazy" decoding="async" width="120" height="40">
     {{ else }}
     <span class="sponsor-name">{{ $name }}</span>
     {{ end }}
   </a>
   {{ else }}
     {{ if $logo }}
-    <img src="{{ $logo }}" alt="{{ $name }}" class="sponsor-logo" loading="lazy" decoding="async">
+    <img src="{{ $logo }}" alt="{{ $name }}" class="sponsor-logo" loading="lazy" decoding="async" width="120" height="40">
     {{ else if $name }}
     <span class="sponsor-name">{{ $name }}</span>
     {{ end }}

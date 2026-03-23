@@ -3,6 +3,11 @@ title: "Jukurit-ikoni Jesper Piitulainen jättää Mikkelin – nuoruuden pussik
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - piitulainen
@@ -14,7 +19,6 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
-description: Jesper Piitulainen jättää Mikkelin Jukureista, ja tämä uutinen herättää monissa tunteita ja muistoja.
 ---
 Jesper Piitulainen jättää Mikkelin Jukureista, ja tämä uutinen herättää monissa tunteita ja muistoja. Pienikokoisesta hyökkääjästä, joka aloitti uransa jääkiekon parissa nuoruuden keppihevosen tavoin, kasvoi ajan myötä joukkueen kapteeni ja yksi seuran tunnetuimmista nimistä. Piitulaisen matka ei kuitenkaan ollut itsestäänselvyys, vaan se oli täynnä haasteita ja käänteitä, jotka muovasivat hänestä pelaajan, jota fanit ja joukkuekaverit arvostavat suuresti.
 

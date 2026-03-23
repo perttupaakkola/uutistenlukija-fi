@@ -25,32 +25,16 @@
     {{- if gt $diffSec 3600 }}
     · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty: {{ .Lastmod | time.Format "2.1.2006 klo 15:04" }}</span>
     {{- end }}
-    · <span class="author-inline">Toimitus</span>
+    {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
     · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ partial "reading-time.html" . }}
   </div>
-  {{- with .Params.source_name }}
-  <div class="source-attribution">
-    <span class="source-attribution__label">Alkuperäinen lähde:</span>
-    <span class="source-attribution__name">{{ . }}</span>
-    {{- with $.Params.source_url }}
-    <a class="source-attribution__link" href="{{ . }}" target="_blank" rel="noopener noreferrer nofollow">Lue alkuperäinen →</a>
-    {{- end }}
-  </div>
-  {{- end }}
   <div class="content">
-    {{- if .Content -}}
     {{- $paragraphs := split .Content "</p>" -}}
     {{- range $i, $p := $paragraphs -}}
-      {{/* split always produces a trailing empty string after the last </p> — skip it */}}
-      {{- if trim $p " \t\r\n" -}}
-        {{- $p | safeHTML }}</p>
-      {{- end -}}
+      {{- $p | safeHTML }}</p>
       {{- if eq $i 2 -}}
         {{ partial "ad-slot.html" (dict "position" "in-article" "context" $) }}
       {{- end -}}
-    {{- end -}}
-    {{- else -}}
-    <p class="content-empty">Artikkelin sisältö ei ole saatavilla.</p>
     {{- end -}}
   </div>
 
@@ -58,13 +42,22 @@
 
   {{ partial "newsletter-cta.html" . }}
 
+  {{ with .Params.author }}
   <div class="author-box">
+    {{ with $.Params.author_image }}
+    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="80" height="80">
+    {{ end }}
     <div class="author-info">
-      <span class="author-name">Toimitus</span>
-      <span class="author-role">Uutistenlukija-toimitus</span>
-      <p class="author-bio">Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi.</p>
+      <span class="author-name">{{ $.Params.author }}</span>
+      {{ with $.Params.author_title }}
+      <span class="author-role">{{ . }}</span>
+      {{ end }}
+      {{ with $.Params.author_bio }}
+      <p class="author-bio">{{ . }}</p>
+      {{ end }}
     </div>
   </div>
+  {{ end }}
 
   {{/* #19.2: Share buttons repeated at bottom of article */}}
   <div class="social-share--bottom">

@@ -3,6 +3,11 @@ title: "Kilpailu maailmanlaajuisesti tunnustetusta tekoälyvapaa-logosta kiihtyy
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Teknologia
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - tekoälyvapaa
@@ -14,7 +19,6 @@ keywords:
   - "teknologia uutiset"
   - "tiedeuutiset"
   - "tekoäly uutiset"
-description: Tekoälyn käytön yleistyminen on synnyttänyt vastareaktion, joka näkyy erityisesti luovilla aloilla.
 ---
 ## Kilpailu maailmanlaajuisesti tunnustetusta tekoälyvapaa-logosta kiihtyy
 

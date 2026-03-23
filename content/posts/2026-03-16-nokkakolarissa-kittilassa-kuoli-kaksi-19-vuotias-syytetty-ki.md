@@ -3,6 +3,11 @@ title: "Nokkakolarissa Kittilässä kuoli kaksi – 19-vuotias syytetty kiistä�
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - vuotias
@@ -14,7 +19,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Pariskunta kuoli nokkakolarissa Kittilässä marraskuussa 2024.
 ---
 Pariskunta kuoli nokkakolarissa Kittilässä marraskuussa 2024. Onnettomuus tapahtui kantatie 79:llä 21. marraskuuta, kun 19-vuotias mies lähti ohittamaan rekkaa ja törmäsi vastaantulevaan autoon. Onnettomuus herättää kysymyksiä nuoren kuljettajan ajotavoista sekä yleisesti liikenneturvallisuudesta Suomen teillä.
 

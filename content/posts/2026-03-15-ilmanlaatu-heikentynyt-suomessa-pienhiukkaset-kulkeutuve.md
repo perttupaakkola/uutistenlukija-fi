@@ -3,6 +3,7 @@ title: "Ilmanlaatu heikentynyt Suomessa – pienhiukkaset kulkeutuvat Keski-Euro
 date: 2026-03-15T12:46:00+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
 draft: false
 tags:
   - keski
@@ -14,7 +15,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Ilmanlaatu on heikentynyt laajoilla alueilla Suomessa maaliskuun puolivälissä.
 ---
 ## Ilmanlaatu heikentynyt Suomessa – pienhiukkaset kulkeutuvat Keski-Euroopasta
 

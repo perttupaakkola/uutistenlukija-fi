@@ -3,6 +3,11 @@ title: "Valtiovarainministeriön ylijohtaja myöntää: ennusteet ovat epäonnis
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Talous
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - valtiovarainministeriön
@@ -14,7 +19,6 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
-description: "Valtiovarainministeriön ylijohtaja myöntää: ennusteet ovat epäonnistuneet toistuvasti Valtiovarainministeriön kansantalousosaston päällikkö…"
 ---
 Valtiovarainministeriön ylijohtaja myöntää: ennusteet ovat epäonnistuneet toistuvasti
 

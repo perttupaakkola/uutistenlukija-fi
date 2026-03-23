@@ -3,6 +3,11 @@ title: "Valtonen torjuu ajatuksen Natosta Iranin-operaation osapuolena"
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - valtonen
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Ulkoministeri Elina Valtonen ei pidä Natoa oikeana toimijana mahdolliseen sotilasoperaatioon Hormuzinsalmella.
 ---
 Ulkoministeri Elina Valtonen ei pidä Natoa oikeana toimijana mahdolliseen sotilasoperaatioon Hormuzinsalmella. Presidentti Donald Trump on painostanut Nato-liittolaisia osallistumaan operaatioon Irania vastaan, mutta Valtosen mukaan tämä ajatus on ongelmallinen. Hän korostaa, ettei sotilasliiton päähuomion tulisi suuntautua Iraniin, vaan Naton tehtävänä on ensisijaisesti jäsenmaidensa puolustaminen. 
 

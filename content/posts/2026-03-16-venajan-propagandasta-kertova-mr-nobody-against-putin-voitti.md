@@ -3,6 +3,11 @@ title: "Venäjän propagandasta kertova Mr Nobody Against Putin voitti parhaan d
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - venäjän
@@ -14,7 +19,6 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
-description: Dokumenttielokuva Mr Nobody Against Putin voitti parhaan dokumenttielokuvan Oscar-palkinnon.
 ---
 Dokumenttielokuva Mr Nobody Against Putin voitti parhaan dokumenttielokuvan Oscar-palkinnon. Elokuva kertoo venäläisestä peruskoulunopettajasta Pavel Talankinista, joka dokumentoi oppilaittensa indoktrinaatiota Venäjän Ukrainan-hyökkäyksen tueksi. Talankin tallensi salaa, kuinka venäläiskouluissa opetettiin lapsia tukemaan sotaa. Materiaali paljastaa propagandakoneiston, joka ulottuu koulumaailmaan asti. Talankin elää nykyään maanpaossa Euroopassa.
 

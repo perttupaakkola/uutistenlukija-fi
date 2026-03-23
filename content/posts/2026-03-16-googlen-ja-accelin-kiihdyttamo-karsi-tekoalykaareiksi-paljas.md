@@ -3,6 +3,11 @@ title: "Googlen ja Accelin kiihdyttämö karsi tekoälykääreiksi paljastuneet 
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Teknologia
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - googlen
@@ -14,7 +19,6 @@ keywords:
   - "teknologia uutiset"
   - "tiedeuutiset"
   - "tekoäly uutiset"
-description: Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöohjelmaansa yli 4 000 hakemuksen joukosta.
 ---
 Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöohjelmaansa yli 4 000 hakemuksen joukosta. Yksikään valituista ei ole niin sanottu tekoälykääre eli yritys, joka vain paketoi olemassa olevan tekoälymallin uuteen käyttöliittymään. Tämä valinta on merkittävä osoitus siitä, miten kilpailu tekoälyalan kentällä Intiassa on muuttumassa ja kehittymässä.
 

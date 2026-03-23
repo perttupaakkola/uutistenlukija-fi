@@ -3,6 +3,11 @@ title: "Britannia suunnittelee miinanraivausdroonien lähettämistä Hormuzinsal
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - britannia
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Britannian hallitus valmistelee suunnitelmaa miinanraivausdroonien lähettämiseksi Hormuzinsalmelle.
 ---
 Britannian hallitus valmistelee suunnitelmaa miinanraivausdroonien lähettämiseksi Hormuzinsalmelle. Tavoitteena on avata salmi uudelleen öljykuljetuksille ilman, että tilanne Iranin kanssa kiristyisi. Tämä päätös tulee kriittiseen aikaan, kun alueen geopoliittinen tilanne on herkkä ja öljynkuljetukset ovat keskeisiä sekä maailman taloudelle että energiapoliittiselle vakaudelle.
 

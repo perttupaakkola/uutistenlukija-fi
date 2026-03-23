@@ -3,6 +3,11 @@ title: "Paralympialaiset tarjosivat Kremlille tehokkaan propagandanäyttämön"
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - kremlille
@@ -14,7 +19,6 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
-description: Venäjän vallanpitäjät onnistuivat hyödyntämään paralympialaisia omassa viestinnässään.
 ---
 Venäjän vallanpitäjät onnistuivat hyödyntämään paralympialaisia omassa viestinnässään. Paraurheilun kansainvälinen kattojärjestö mahdollisti tilanteen, jossa venäläisurheilijat kilpailivat ja menestyivät tavalla, joka palveli suoraan Kremlin tarpeita. Urheilun ja politiikan välinen suhde on ollut historiallisesti vahva, ja erityisesti suurissa kansainvälisissä kilpailuissa, kuten paralympialaisissa, niillä on merkittävä rooli valtioiden imagon ja identiteetin muovaamisessa.
 

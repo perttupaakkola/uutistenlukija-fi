@@ -3,6 +3,11 @@ title: "Israel aloitti laajat iskut Iraniin – Trump sanoo, ettei USA ole valmi
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - iskut
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Israelin armeija ilmoitti käynnistäneensä laajamittaiset iskut Irania vastaan.
 ---
 Israelin armeija ilmoitti käynnistäneensä laajamittaiset iskut Irania vastaan. Armeijan tiedottajan mukaan Israel tunnistaa uusia kohteita päivittäin, ja operaation arvioidaan kestävän vähintään kolme viikkoa. Tämä kehitys on herättänyt kansainvälistä huolta ja mielenkiintoa, sillä se merkitsee selvää eskalaatiota konfliktissa, joka on laajentunut Gazan sodasta alueelliseksi kriisiksi.
 

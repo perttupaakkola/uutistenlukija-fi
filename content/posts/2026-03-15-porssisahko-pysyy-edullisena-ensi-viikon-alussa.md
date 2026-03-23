@@ -3,6 +3,7 @@ title: "Pörssisähkö pysyy edullisena ensi viikon alussa"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Talous
+author: "Toimitus"
 draft: false
 tags:
   - pysyy
@@ -14,7 +15,6 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
-description: Sähkön pörssihinta jatkaa matalalla tasolla ensi viikon alussa.
 ---
 Sähkön pörssihinta jatkaa matalalla tasolla ensi viikon alussa. Maanantaina kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta, mikä on selvästi tavanomaista halvempaa kevään ajankohtaan nähden. Tämä tilanne tuo helpotusta monille kuluttajille, jotka ovat kärsineet korkeista sähkönhinnoista viime kuukausina.
 

@@ -3,6 +3,11 @@ title: "Ukraina taistelee rahoituksensa puolesta sodan keskellä"
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - sodan
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Ukraina taistelee rahoituksensa puolesta sodan keskellä Ukraina kamppailee taloudellisesta selviytymisestään.
 ---
 Ukraina taistelee rahoituksensa puolesta sodan keskellä
 

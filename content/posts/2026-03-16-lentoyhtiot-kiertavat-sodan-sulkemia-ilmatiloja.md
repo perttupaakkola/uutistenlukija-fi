@@ -3,6 +3,11 @@ title: "Lentoyhtiöt kiertävät sodan sulkemia ilmatiloja"
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - lentoyhtiöt
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Iranin ja Persianlahden ilmatila on edelleen rajoitettu ohjusiskujen jälkeen.
 ---
 ## Lentoyhtiöt kiertävät sodan sulkemia ilmatiloja
 

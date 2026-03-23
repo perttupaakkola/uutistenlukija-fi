@@ -3,6 +3,11 @@ title: "Kangasniemi luopuu autiotalokampanjansa nimestä Suomen asuntomessujen v
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - suomen
@@ -14,7 +19,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Kangasniemen kunta muuttaa tyhjiin taloihin keskittyvän kampanjansa nimen.
 ---
 Kangasniemen kunta muuttaa tyhjiin taloihin keskittyvän kampanjansa nimen. Syynä on Suomen asuntomessujen vaatimus: kampanjan nimi sekoittui liikaa yhtiön brändiin. Tämä päätös osoittaa, kuinka tärkeää on brändinhallinta nyky-yhteiskunnassa, jossa markkinointi ja viestintä ovat keskeisiä elementtejä kunnallisten hankkeiden onnistumiselle.
 

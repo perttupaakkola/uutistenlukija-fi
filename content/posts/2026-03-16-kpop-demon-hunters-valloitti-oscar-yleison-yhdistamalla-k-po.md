@@ -3,6 +3,11 @@ title: "KPop Demon Hunters valloitti Oscar-yleisön yhdistämällä k-popin ja d
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - demon
@@ -14,7 +19,6 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
-description: KPop Demon Hunters valloitti Oscar-yleisön yhdistämällä k-popin ja demonien metsästyksen Oscar-palkittu animaatioelokuva KPop Demon Hunters on…
 ---
 KPop Demon Hunters valloitti Oscar-yleisön yhdistämällä k-popin ja demonien metsästyksen
 

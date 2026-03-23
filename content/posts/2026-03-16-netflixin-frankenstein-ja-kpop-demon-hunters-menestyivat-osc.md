@@ -3,6 +3,11 @@ title: "Netflixin Frankenstein ja KPop Demon Hunters menestyivät Oscar-gaalassa
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - netflixin
@@ -14,7 +19,6 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
-description: Netflixin Frankenstein ja KPop Demon Hunters menestyivät Oscar-gaalassa Netflixin Frankenstein-elokuva voitti kolme Oscar-palkintoa vuoden 2026…
 ---
 Netflixin Frankenstein ja KPop Demon Hunters menestyivät Oscar-gaalassa
 

@@ -3,6 +3,7 @@ title: "Orpo Oslon kokouksessa: Pohjoismaat ja Kanada keskustelivat Ukrainan tue
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
 draft: false
 tags:
   - orpo
@@ -14,7 +15,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Pääministeri Petteri Orpo osallistui sunnuntaina Pohjoismaiden ja Kanadan pääministerien kokoukseen Oslossa.
 ---
 Pääministeri Petteri Orpo osallistui sunnuntaina Pohjoismaiden ja Kanadan pääministerien kokoukseen Oslossa. Kokouksen asialistalla olivat Ukrainan tuen jatkaminen, arktisen alueen turvallisuus ja Euroopan puolustuskysymykset. Tilaisuus herätti suurta huomiota, sillä se järjestettiin aikana, jolloin Euroopan turvallisuustilanne on poikkeuksellisen jännitteinen Venäjän hyökkäyssodan vuoksi.
 

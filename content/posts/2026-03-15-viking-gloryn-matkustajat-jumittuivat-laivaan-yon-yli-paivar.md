@@ -3,6 +3,7 @@ title: "Viking Gloryn matkustajat jumittuivat laivaan yön yli – päiväristei
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
 draft: false
 tags:
   - viking
@@ -14,7 +15,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Turusta lauantaina päiväristeilylle lähteneet matkustajat saivat yllätyksen, kun matka venyikin yön yli kestäväksi seikkailuksi.
 ---
 Turusta lauantaina päiväristeilylle lähteneet matkustajat saivat yllätyksen, kun matka venyikin yön yli kestäväksi seikkailuksi. Viking Glory joutui pysähtymään yllättäen ennen Maarianhaminaa, kun saman varustamon Viking Grace oli jumiutunut Tukholman edustalle ja aiheuttanut häiriöitä aikatauluihin. Tämä yllättävä tilanne herätti laajaa keskustelua matkustajien keskuudessa, ja se nosti esiin kysymyksiä varustamon aikataulujen luotettavuudesta ja matkustuskäytännöistä.
 

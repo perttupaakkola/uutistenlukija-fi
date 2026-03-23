@@ -3,6 +3,7 @@ title: "Kysely: lähes puolet tahattomasti lapsettomista kokee syrjintää työe
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
 draft: false
 tags:
   - lähes
@@ -14,7 +15,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: "Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, käy ilmi Simpukka ry:n tuoreesta kyselystä."
 ---
 Lähes puolet tahattomasti lapsettomista kokee syrjintää työelämässä, käy ilmi Simpukka ry:n tuoreesta kyselystä. Lapsettomien yhdistyksen maaliskuussa toteuttamassa Instagram-kyselyssä 49 prosenttia vastaajista kertoi kokeneensa työelämäsyrjintää lapsettomuutensa vuoksi. Tämä tulos herättää kysymyksiä työelämän tasa-arvosta ja työntekijöiden kohtelusta perhetilanteen mukaan.
 

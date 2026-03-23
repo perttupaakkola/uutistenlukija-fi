@@ -3,6 +3,11 @@ title: "Suomeen perustetaan Nato-joukko – valmista heinäkuuhun mennessä"
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - suomeen
@@ -14,7 +19,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Lapin Rovajärvellä harjoitellaan parhaillaan Naton eteentyönnettyjen joukkojen toimintaa Suomen maaperällä.
 ---
 Lapin Rovajärvellä harjoitellaan parhaillaan Naton eteentyönnettyjen joukkojen toimintaa Suomen maaperällä. Cold Response 26 -sotaharjoitukseen osallistuu yli 30 000 ammattisotilasta ja reserviläistä 14 maasta. Harjoituksen ytimessä on joukkojen siirtäminen Ruotsista Suomeen, mikä korostaa Norjan, Ruotsin ja Suomen välistä puolustusyhteistyötä ja Naton merkitystä Pohjois-Euroopassa.
 

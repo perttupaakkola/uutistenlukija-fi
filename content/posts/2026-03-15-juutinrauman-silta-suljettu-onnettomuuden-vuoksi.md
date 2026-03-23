@@ -3,6 +3,7 @@ title: "Juutinrauman silta suljettu onnettomuuden vuoksi"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
 draft: false
 tags:
   - silta
@@ -14,7 +15,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Juutinrauman silta eli Øresundsbron suljettiin lauantaina moottoritieliikenteeltä Ruotsin suuntaan tunneliosuudella sattuneen onnettomuuden…
 ---
 ## Juutinrauman silta suljettu onnettomuuden vuoksi
 

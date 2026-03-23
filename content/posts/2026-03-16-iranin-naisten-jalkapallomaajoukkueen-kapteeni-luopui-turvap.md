@@ -3,6 +3,11 @@ title: "Iranin naisten jalkapallomaajoukkueen kapteeni luopui turvapaikkahakemuk
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Urheilu
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - iranin
@@ -14,7 +19,6 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
-description: Iranin naisten jalkapallomaajoukkueen kapteeni Zahra Ghanbari on poistunut Australiasta ja luopunut turvapaikkahakemuksestaan.
 ---
 Iranin naisten jalkapallomaajoukkueen kapteeni Zahra Ghanbari on poistunut Australiasta ja luopunut turvapaikkahakemuksestaan. Ghanbari oli alun perin päättänyt jäädä maahan Aasian cupin jälkeen, mutta muutti mielensä. Tämä päätös herättää kysymyksiä ja keskustelua, ei vain Ghanbarin henkilökohtaisesta tilanteesta, vaan myös laajemmin Iranin naisten urheilijoiden oikeuksista ja olosuhteista.
 

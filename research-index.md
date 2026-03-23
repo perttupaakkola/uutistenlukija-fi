@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-03-23
 **Compiled by:** Monica 🔍
-**Total:** 36 deliverables across 29 files (~240KB+)
+**Total:** 38 deliverables across 31 files (~250KB+)
 
 This document is the master table of contents for the uutistenlukija.fi research library. All files are in `projects/uutistenlukija/` in the shared workspace.
 
@@ -48,6 +48,8 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 34 | Content quality audit | content-quality-audit.md | ⚠️ CRITICAL: Site has AI-generated full articles with fictional bylines, no source attribution. Grade C+. UX A- but legal compliance D |
 | 35 | Attribution best practices | attribution-best-practices.md | Aggregator comparison, JSN guidelines, EU AI Act Art. 50 (Aug 2026), STT/Yle examples, P0 fix list for Alex |
 | 36 | Launch readiness v2 | launch-readiness-v2.md | 32% ready (16/50), 5 blockers (B1-B5), 5 Perttu decisions, timeline: mid-April launch if decisions made now |
+| 37 | Monetization timeline | monetization-timeline.md | Path to 1M€ (year 3 realistic), 3 yr1 scenarios (€5K-€120K), milestone unlocks, MM-kisat golden window, byline risk = zero revenue |
+| 38 | Finnish media landscape | finnish-media-landscape.md | Top 5 media by traffic, 5 underserved categories, Alma conflict-free positioning, social media priorities, MM-kisat opportunity, launch messaging |
 
 ---
 
@@ -87,6 +89,8 @@ This document is the master table of contents for the uutistenlukija.fi research
 | content-quality-audit.md | ~3KB | #34 | ✅ Complete |
 | attribution-best-practices.md | ~4KB | #35 | ✅ Complete |
 | launch-readiness-v2.md | ~2KB | #36 | ✅ Complete |
+| monetization-timeline.md | ~2KB | #37 | ✅ Complete |
+| finnish-media-landscape.md | ~2KB | #38 | ✅ Complete |
 
 ### Deliverables without standalone files
 

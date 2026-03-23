@@ -3,6 +3,11 @@ title: "Euroopan parlamentti linjasi: Ukraina voisi päästä EU-rakenteisiin en
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - ukraina
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Euroopan parlamentti äänesti 11.
 ---
 Euroopan parlamentti äänesti 11. maaliskuuta EU:n laajentumisstrategian puolesta. Linjaus tukee mallia, jossa Ukraina pääsisi mukaan unionin rakenteisiin jo ennen varsinaista täysjäsenyyttä. Tämä on merkittävä askel, joka osoittaa Euroopan unionin halukkuuden tukea Ukrainaa sen pyrkimyksissä vahvistaa omaa asemaansa Euroopan kansainvälisessä politiikassa.
 

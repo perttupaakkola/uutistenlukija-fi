@@ -3,6 +3,11 @@ title: "Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja"
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - ranskan
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja Ranskan kuntavaalien ensimmäinen kierros tuotti vahvan tuloksen sekä Marine Le…
 ---
 Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja
 

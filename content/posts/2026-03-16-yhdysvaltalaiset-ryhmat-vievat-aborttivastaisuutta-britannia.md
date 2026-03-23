@@ -3,6 +3,11 @@ title: "Yhdysvaltalaiset ryhmät vievät aborttivastaisuutta Britanniaan"
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - yhdysvaltalaiset
@@ -14,7 +19,6 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: Yhdysvaltalaiset ryhmät vievät aborttivastaisuutta Britanniaan Yhdysvaltalaiset aborttivastaiset järjestöt ovat laajentaneet toimintaansa…
 ---
 Yhdysvaltalaiset ryhmät vievät aborttivastaisuutta Britanniaan
 

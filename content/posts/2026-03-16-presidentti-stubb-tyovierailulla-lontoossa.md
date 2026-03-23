@@ -3,6 +3,11 @@ title: "Presidentti Stubb työvierailulla Lontoossa"
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kotimaa
+author: "Toimitus"
+author_id: "toimitus"
+author_title: "Uutistenlukija-toimitus"
+author_bio: "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi."
+author_image: ""
 draft: false
 tags:
   - stubb
@@ -14,7 +19,6 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: Tasavallan presidentti Alexander Stubb matkustaa maanantaina työvierailulle Lontooseen.
 ---
 Tasavallan presidentti Alexander Stubb matkustaa maanantaina työvierailulle Lontooseen. Vierailu kestää kaksi päivää, 16.–17. maaliskuuta. Lontoo on tärkeä kansainvälinen keskus, ja vierailunsa aikana Stubb käsittelee ajankohtaisia aiheita, jotka ovat keskiössä niin Euroopan kuin globaalisti. 
 

@@ -74,8 +74,9 @@
 {{/* Resolve description */}}
 {{ $desc := .Description | default (.Summary | plainify | truncate 160) | default .Site.Params.description }}
 
-{{/* Author block — Organisation, not a Person, to avoid fictional bylines */}}
-{{ $authorBlock := dict "@type" "Organization" "name" "Uutistenlukija" "url" .Site.BaseURL }}
+{{/* Author block */}}
+{{ $authorName := .Params.author | default .Site.Params.author }}
+{{ $authorBlock := dict "@type" "Person" "name" $authorName }}
 
 {{/* Build article section list */}}
 {{ $sections := .Params.categories | default (slice) }}
@@ -84,6 +85,19 @@
 {{/* Headline: Google recommends <=110 chars for NewsArticle */}}
 {{ $headline := .Title }}
 {{ if gt (len $headline) 110 }}{{ $headline = printf "%s…" (substr $headline 0 107) }}{{ end }}
+
+{{/* wordCount from Hugo's built-in counter */}}
+{{ $wordCount := .WordCount }}
+
+{{/* keywords from frontmatter — join slice or use as string */}}
+{{ $keywords := "" }}
+{{ with .Params.keywords }}
+  {{ if reflect.IsSlice . }}
+    {{ $keywords = delimit . ", " }}
+  {{ else }}
+    {{ $keywords = . }}
+  {{ end }}
+{{ end }}
 
 {{ $schema := dict
     "@context" "https://schema.org"
@@ -102,17 +116,13 @@
       "width" 1200
       "height" 630
     )
+    "articleSection" $articleSection
     "inLanguage" "fi"
     "isAccessibleForFree" true
+    "wordCount" $wordCount
 }}
-{{/* Only include articleSection when non-empty — empty string fails Schema.org validator */}}
-{{ if $articleSection }}
-  {{ $schema = merge $schema (dict "articleSection" $articleSection) }}
-{{ end }}
-{{/* isBasedOn: original source URL when available */}}
-{{ with .Params.source_url }}
-  {{ $schema = merge $schema (dict "isBasedOn" (dict "@type" "WebPage" "url" .)) }}
-{{ end }}
+{{/* Merge keywords only when present — avoids empty string in output */}}
+{{ if $keywords }}{{ $schema = merge $schema (dict "keywords" $keywords) }}{{ end }}
 <script type="application/ld+json">
 {{ $schema | jsonify (dict "indent" "  ") | safeJS }}
 </script>
