@@ -52,3 +52,19 @@ jobs:
           echo "${TS} indexnow ${INDEXNOW_STATUS} ${SITEMAP} ${NEWS_SITEMAP}" >> pipeline/logs/sitemap_pings.log
 
           echo "Sitemap pings: google=${GOOGLE_STATUS} indexnow=${INDEXNOW_STATUS}"
+
+      - name: Check internal links
+        if: success()
+        env:
+          DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
+        run: |
+          # Wait briefly for Cloudflare Pages cache to warm up
+          sleep 10
+          # Run internal link checker — exits 1 if broken links found, but we
+          # use || true so a broken link won't fail the deploy step itself.
+          # Discord webhook fires inside the script if broken links are found.
+          python3 pipeline/check_links.py \
+            --limit 150 \
+            --timeout 12 \
+            --delay 0.1 \
+            || echo "[check_links] Broken links found — see log above and Discord alert"
