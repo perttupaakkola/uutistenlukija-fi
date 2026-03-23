@@ -4713,3 +4713,75 @@ pre code {
   background: var(--bg-secondary, #1e1e1e);
 }
 /* ── end source attribution ───────────────────────────────────── */
+
+/* ── Journalist note (Spec: journalist-note.html partial) ──────── */
+.journalist-note {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid var(--accent, #3498db);
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 0 6px 6px 0;
+}
+.journalist-note__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent, #3498db);
+}
+.journalist-note__title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.journalist-note__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+  padding: 0.2em 0.6em;
+  background: #27ae60;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.journalist-note__body {
+  font-size: 0.9375rem;
+  color: var(--text-secondary, #555);
+  line-height: 1.65;
+}
+.journalist-note__body p { margin: 0; }
+.journalist-note__body p + p { margin-top: 0.5em; }
+[data-theme="dark"] .journalist-note {
+  background: var(--bg-secondary, #1e1e1e);
+  border-left-color: var(--accent, #4fb3e8);
+}
+[data-theme="dark"] .journalist-note__header {
+  color: var(--accent, #4fb3e8);
+}
+/* ── end journalist note ─────────────────────────────────────── */
+
+/* ── Analysis / opinion content type ────────────────────────── */
+/* Wider prose column for long-form content (600–1200w) */
+.single-article--analysis .content {
+  max-width: 68ch;
+}
+/* Content-type badge */
+.content-type-badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+  background: var(--accent, #3498db);
+  color: #fff;
+}
+.content-type-badge--opinion  { background: #8e44ad; }
+.content-type-badge--feature  { background: #d35400; }
+.content-type-badge--analysis { background: #2980b9; }
+/* ── end analysis / opinion ────────────────────────────────── */

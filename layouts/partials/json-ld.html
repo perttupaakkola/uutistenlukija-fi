@@ -99,9 +99,16 @@
   {{ end }}
 {{ end }}
 
+{{/* content_type: "analysis" | "opinion" | "feature" → Article, else NewsArticle */}}
+{{- $ldType := "NewsArticle" -}}
+{{- $ct := .Params.content_type | default "uutinen" -}}
+{{- if or (eq $ct "analysis") (eq $ct "opinion") (eq $ct "feature") -}}
+  {{- $ldType = "Article" -}}
+{{- end -}}
+
 {{ $schema := dict
     "@context" "https://schema.org"
-    "@type" "NewsArticle"
+    "@type" $ldType
     "headline" $headline
     "url" .Permalink
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
@@ -123,6 +130,14 @@
 }}
 {{/* Merge keywords only when present — avoids empty string in output */}}
 {{ if $keywords }}{{ $schema = merge $schema (dict "keywords" $keywords) }}{{ end }}
+{{/* editorial_reviewed: add reviewedBy field */}}
+{{ if .Params.editorial_reviewed }}
+{{ $schema = merge $schema (dict "reviewedBy" (dict "@type" "Organization" "name" "Uutistenlukija")) }}
+{{ end }}
+{{/* isBasedOn: source attribution */}}
+{{ with .Params.source_url }}
+{{ $schema = merge $schema (dict "isBasedOn" (dict "@type" "WebPage" "url" .)) }}
+{{ end }}
 <script type="application/ld+json">
 {{ $schema | jsonify (dict "indent" "  ") | safeJS }}
 </script>

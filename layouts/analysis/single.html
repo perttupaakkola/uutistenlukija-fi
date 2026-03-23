@@ -1,14 +1,34 @@
+{{- /*
+  analysis/single.html — layout for content_type: analysis | opinion articles.
+
+  Differences from _default/single.html:
+  - "Analyysi" / "Mielipide" content-type badge above the title
+  - Desk byline ("Toimitus") always shown in meta, no author_image/bio box
+  - Wider prose column (600–1200w) via .single-article--analysis
+  - journalist-note partial rendered after content
+  - editorial_reviewed badge shown in journalist-note if present
+*/ -}}
 {{ define "main" }}
 <div class="reading-progress" id="reading-progress"></div>
-<article class="single-article">
+<article class="single-article single-article--analysis">
   {{ partial "breadcrumbs.html" . }}
   {{ partial "hero-image.html" . }}
+
+  {{/* Content-type badge */}}
+  {{- $ct := .Params.content_type | default "uutinen" -}}
+  {{- $badgeLabel := "Analyysi" -}}
+  {{- if eq $ct "opinion" }}{{- $badgeLabel = "Mielipide" -}}{{ end -}}
+  {{- if eq $ct "feature" }}{{- $badgeLabel = "Reportaasi" -}}{{ end -}}
+  <div class="content-type-badge content-type-badge--{{ $ct }}">{{ $badgeLabel }}</div>
+
   {{ with .Params.categories }}
   <span class="category-label">
     <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
   </span>
   {{ end }}
+
   <h1>{{ .Title }}</h1>
+
   {{ with .Params.tags }}
   <div class="article-tags" aria-label="Aihetunnisteet">
     {{ range . }}
@@ -16,18 +36,21 @@
     {{ end }}
   </div>
   {{ end }}
+
   {{ partial "social-share.html" . }}
   {{ partial "article-summary.html" . }}
   {{ partial "toc.html" . }}
+
   <div class="article-meta">
     {{ .Date | time.Format "2.1. klo 15:04" }}
     {{- $diffSec := math.Sub .Lastmod.Unix .Date.Unix -}}
     {{- if gt $diffSec 3600 }}
     · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty: {{ .Lastmod | time.Format "2.1.2006 klo 15:04" }}</span>
     {{- end }}
-    {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+    · <span class="author-inline">Toimitus</span>
     · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ partial "reading-time.html" . }}
   </div>
+
   <div class="content">
     {{- $paragraphs := split .Content "</p>" -}}
     {{- range $i, $p := $paragraphs -}}
@@ -38,31 +61,12 @@
     {{- end -}}
   </div>
 
-  {{/* Journalist note — shown when journalist_note frontmatter is set */}}
+  {{/* Journalist note — rendered after content, before sharing */}}
   {{ partial "journalist-note.html" . }}
 
   {{ partial "ad-slot.html" (dict "position" "after-article" "context" .) }}
-
   {{ partial "newsletter-cta.html" . }}
 
-  {{ with .Params.author }}
-  <div class="author-box">
-    {{ with $.Params.author_image }}
-    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="80" height="80">
-    {{ end }}
-    <div class="author-info">
-      <span class="author-name">{{ $.Params.author }}</span>
-      {{ with $.Params.author_title }}
-      <span class="author-role">{{ . }}</span>
-      {{ end }}
-      {{ with $.Params.author_bio }}
-      <p class="author-bio">{{ . }}</p>
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
-
-  {{/* #19.2: Share buttons repeated at bottom of article */}}
   <div class="social-share--bottom">
     {{ partial "social-share.html" . }}
   </div>
@@ -71,11 +75,8 @@
   {{ partial "most-read.html" . }}
 </article>
 
-{{/* #19.3: Read next — prominent next-article card */}}
 {{ partial "read-next.html" . }}
 
-{{/* Article prev/next navigation */}}
-{{ $section := .CurrentSection }}
 <nav class="article-nav" aria-label="Artikkelinavigointi">
   {{ with .PrevInSection }}
   <a href="{{ .Permalink }}" class="article-nav-prev" rel="prev">
@@ -97,7 +98,7 @@
 (function () {
   var VIEWS_KEY    = 'ul_views_v1';
   var PROGRESS_KEY = 'ul_progress_v1';
-  var TTL_MS       = 30 * 24 * 60 * 60 * 1000; // 30 days for progress
+  var TTL_MS       = 30 * 24 * 60 * 60 * 1000;
   var VIEWS_TTL    = 7  * 24 * 60 * 60 * 1000;
   var slug  = {{ .Params.slug | default (.File.BaseFileName) | jsonify }};
   var title = {{ .Title | jsonify }};
@@ -105,7 +106,6 @@
   var image = {{ with .Params.image }}{{ . | jsonify }}{{ else }}""{{ end }};
   var now   = Date.now();
 
-  // ── Reading progress bar ──────────────────────────────────
   var progressBar = document.getElementById('reading-progress');
   var backToTop   = document.getElementById('back-to-top');
   var _lastSavedPct = 0;
@@ -116,14 +116,13 @@
   }
 
   function saveProgress(pct) {
-    if (Math.abs(pct - _lastSavedPct) < 2) return; // debounce tiny changes
+    if (Math.abs(pct - _lastSavedPct) < 2) return;
     _lastSavedPct = pct;
     try {
       var store = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
       if (pct >= 10 && pct <= 90) {
         store[slug] = { pct: Math.round(pct), title: title, url: url, image: image, ts: now };
       } else if (pct > 90) {
-        // Fully read — remove from continue-reading
         delete store[slug];
       }
       localStorage.setItem(PROGRESS_KEY, JSON.stringify(store));
@@ -143,32 +142,26 @@
     });
   }
 
-  // ── Resume scroll position if #resume hash ───────────────
   if (window.location.hash === '#resume') {
     try {
       var pstore = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
       var saved  = pstore[slug];
       if (saved && saved.pct > 0) {
-        // Wait for images/layout to settle before jumping
         window.addEventListener('load', function () {
           var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-          var target    = Math.round((saved.pct / 100) * docHeight);
-          window.scrollTo({ top: target, behavior: 'smooth' });
+          window.scrollTo({ top: Math.round((saved.pct / 100) * docHeight), behavior: 'smooth' });
         });
       }
     } catch (e) {}
   }
 
-  // ── View counter ──────────────────────────────────────────
   try {
     var vstore = JSON.parse(localStorage.getItem(VIEWS_KEY) || '{}');
     Object.keys(vstore).forEach(function (k) {
       if (!vstore[k].ts || (now - vstore[k].ts) >= VIEWS_TTL) delete vstore[k];
     });
     var entry = vstore[slug] || { count: 0, title: title, ts: now };
-    entry.count += 1;
-    entry.title  = title;
-    entry.ts     = now;
+    entry.count += 1; entry.title = title; entry.ts = now;
     vstore[slug] = entry;
     localStorage.setItem(VIEWS_KEY, JSON.stringify(vstore));
   } catch (e) {}
