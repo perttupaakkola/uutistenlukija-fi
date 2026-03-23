@@ -1,23 +1,34 @@
 {{- /*
-  Trending section: 5 most recent articles, one per category.
-  Future: replace sort by date with sort by .Params.views when available.
+  Trending section: recent cross-category scan, excluding already-used stories.
+  Accepts either full page context or dict:
+    - Site: Hugo site object
+    - exclude: slice of permalinks to skip
+    - limit: max items (default 5)
 */ -}}
 
-{{- $allPages := where site.RegularPages "Section" "posts" -}}
-{{- $seen := slice -}}
+{{- $site := .Site -}}
+{{- $exclude := .exclude | default (slice) -}}
+{{- $limit := .limit | default 5 -}}
+{{- $allPages := where $site.RegularPages "Section" "posts" -}}
+{{- $seenCats := slice -}}
 {{- $trending := slice -}}
 
 {{- range $allPages -}}
-  {{- $cat := lower (index .Params.categories 0 | default "uutiset") -}}
-  {{- if and (not (in $seen $cat)) (lt (len $trending) 5) -}}
-    {{- $seen = $seen | append $cat -}}
-    {{- $trending = $trending | append . -}}
+  {{- if and (not (in $exclude .Permalink)) (lt (len $trending) $limit) -}}
+    {{- $cat := lower (index .Params.categories 0 | default "uutiset") -}}
+    {{- if not (in $seenCats $cat) -}}
+      {{- $seenCats = $seenCats | append $cat -}}
+      {{- $trending = $trending | append . -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
 {{- if $trending -}}
 <section class="tanaan-section" aria-label="Tänään aktiivisimmat">
-  <h2 class="tanaan-title">Tänään aktiivisimmat</h2>
+  <div class="homepage-block-heading">
+    <h2 class="tanaan-title">Tänään aktiivisimmat</h2>
+    <p class="homepage-block-heading__deck">Nopea poiminta eri aiheista ilman samoja juttuja uudelleen.</p>
+  </div>
   <ol class="tanaan-list">
     {{- range $i, $p := $trending -}}
     {{- $cat := index $p.Params.categories 0 | default "Uutiset" -}}

@@ -1,10 +1,22 @@
-{{/* Lyhyet — compact digest strip, 5 most recent articles */}}
-{{ $posts := where .Site.RegularPages "Section" "posts" }}
-{{ $recent := $posts.ByDate.Reverse | first 5 }}
+{{/* Lyhyet — compact digest strip.
+     Accepts either full page context or dict:
+       - Site: Hugo site object
+       - exclude: slice of permalinks to skip
+       - limit: max items (default 5)
+*/}}
+{{ $site := .Site }}
+{{ $exclude := .exclude | default (slice) }}
+{{ $limit := .limit | default 5 }}
+{{ $posts := where $site.RegularPages "Section" "posts" }}
+{{ $pool := where $posts.ByDate.Reverse "Permalink" "not in" $exclude }}
+{{ $recent := first $limit $pool }}
 {{ if $recent }}
 <section class="lyhyet-section" aria-label="Lyhyet uutiset">
-  <div class="lyhyet-header">
-    <h2 class="lyhyet-title">Lyhyet</h2>
+  <div class="homepage-block-heading lyhyet-header">
+    <div>
+      <h2 class="lyhyet-title">Lyhyet</h2>
+      <p class="homepage-block-heading__deck">Viimeisimmät nostot sen jälkeen kun pääjutut on hoidettu.</p>
+    </div>
     <span class="lyhyet-subtitle">Tuoreimmat</span>
   </div>
   <ol class="lyhyet-list">
@@ -18,9 +30,9 @@
           <span class="lyhyet-category">{{ $cat }}</span>
           <span class="lyhyet-headline">{{ .Title }}</span>
           {{ with .Params.description }}
-          <span class="lyhyet-summary">{{ . | truncate 120 }}</span>
+          <span class="lyhyet-summary">{{ . | truncate 110 }}</span>
           {{ else }}
-          <span class="lyhyet-summary">{{ .Summary | truncate 120 }}</span>
+          <span class="lyhyet-summary">{{ .Summary | truncate 110 }}</span>
           {{ end }}
         </div>
         <time class="lyhyet-time" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1. klo 15:04" }}</time>
