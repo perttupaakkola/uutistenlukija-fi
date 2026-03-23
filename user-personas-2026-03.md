@@ -76,7 +76,7 @@
 
 ### Pain Points
 - **Scattered sources:** Tech news on Medium, business on Kauppalehti, politics on HS, international on LinkedIn
-- **International gap:** Finnish aggregators miss Silicon Valley/EU tech trends
+- **International gap:** Finnish news media miss Silicon Valley/EU tech trends
 - **Paywall costs** add up fast when subscribing to multiple verticals
 - **Lack of curated finance/startup content** — wants analysis, not just headlines
 - **Time-poor** — needs digests, not raw firehose
