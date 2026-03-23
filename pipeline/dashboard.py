@@ -1,0 +1,341 @@
+#!/usr/bin/env python3
+"""
+dashboard.py — Pipeline monitoring dashboard for uutistenlukija.fi
+
+Parses pipeline/logs/ data and outputs a summary in one command.
+No external dependencies. Reads:
+  - pipeline/logs/publish-metrics.json  (JSONL per-run stats)
+  - pipeline/logs/quality_gate_rejects.log (TSV rejection reasons)
+  - pipeline/logs/feed-health.json     (per-feed health state)
+  - content/posts/*.md                  (trending keywords)
+
+Usage:
+    python3 pipeline/dashboard.py              # last 24h
+    python3 pipeline/dashboard.py --hours 48   # last 48h
+    python3 pipeline/dashboard.py --json       # machine-readable JSON
+"""
+
+import argparse
+import json
+import os
+import re
+import sys
+from collections import Counter, defaultdict
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).parent
+REPO_ROOT  = SCRIPT_DIR.parent
+
+# Finnish stopwords to exclude from trending keywords
+STOPWORDS = {
+    "että", "joka", "kun", "on", "ja", "ei", "ole", "se", "hän", "he",
+    "me", "te", "myös", "kuin", "niin", "sekä", "vaan", "mutta", "jos",
+    "kuitenkin", "lisäksi", "koska", "siitä", "sitten", "vielä", "jo",
+    "olla", "ollut", "oli", "ovat", "olisi", "sen", "sen", "sitä", "tämä",
+    "tässä", "tähän", "sen", "hänen", "tätä", "niiden", "niitä", "tai",
+    "sekä", "joten", "joita", "joilla", "jolla", "jolle", "jolla", "jonka",
+    "jossa", "josta", "jota", "jolta", "johon", "joita", "kaikki", "koko",
+    "sai", "saa", "saada", "saan", "saakka", "saatu", "saatua", "uusi",
+    "uuden", "muun", "muut", "muu", "tuli", "tulee", "tulla", "tuleva",
+    "tulevat", "päivä", "vuosi", "vuotta", "mukaan", "ainoa", "aina",
+    "asia", "asiaa", "asiat", "suuri", "suuren", "suomessa", "suomen",
+    "suomi", "helsinki", "the", "and", "for", "that", "with", "this",
+}
+
+
+# ── Data loaders ─────────────────────────────────────────────────────────────
+
+def load_metrics(hours: int = 24) -> list[dict]:
+    """Load publish-metrics.json JSONL for the last N hours."""
+    path = SCRIPT_DIR / "logs" / "publish-metrics.json"
+    if not path.exists():
+        return []
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    runs = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            r = json.loads(line)
+            ts_str = r.get("ts", "")
+            ts = datetime.fromisoformat(ts_str) if ts_str else None
+            if ts and ts >= cutoff:
+                runs.append(r)
+        except (json.JSONDecodeError, ValueError):
+            pass
+    return runs
+
+
+def load_rejects(hours: int = 24) -> list[dict]:
+    """Load quality_gate_rejects.log TSV for the last N hours."""
+    path = SCRIPT_DIR / "logs" / "quality_gate_rejects.log"
+    if not path.exists():
+        return []
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    rejects = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        parts = line.split("\t")
+        if len(parts) < 4:
+            continue
+        try:
+            ts = datetime.fromisoformat(parts[0].strip())
+            if ts >= cutoff:
+                rejects.append({
+                    "ts": ts,
+                    "words": parts[1].strip(),
+                    "slug": parts[2].strip(),
+                    "reason": parts[3].strip(),
+                    "title": parts[4].strip() if len(parts) > 4 else "",
+                })
+        except (ValueError, IndexError):
+            pass
+    return rejects
+
+
+def load_feed_health() -> dict:
+    """Load feed-health.json."""
+    path = SCRIPT_DIR / "logs" / "feed-health.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def trending_keywords(hours: int = 24, top_n: int = 5) -> list[tuple[str, int]]:
+    """Extract top N keywords from articles published in the last N hours."""
+    posts_dir = REPO_ROOT / "content" / "posts"
+    if not posts_dir.exists():
+        return []
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    word_counts: Counter = Counter()
+
+    for md in sorted(posts_dir.glob("*.md"), reverse=True)[:200]:  # limit scan
+        text = md.read_text(errors="replace")
+        # Parse date from frontmatter
+        date_m = re.search(r"^date:\s*(.+)$", text, re.MULTILINE)
+        if not date_m:
+            continue
+        try:
+            pub_date = datetime.fromisoformat(date_m.group(1).strip().strip('"\''))
+            if pub_date.tzinfo is None:
+                pub_date = pub_date.replace(tzinfo=timezone.utc)
+            if pub_date < cutoff:
+                break  # sorted descending — no point scanning older files
+        except ValueError:
+            continue
+
+        # Strip frontmatter, extract body
+        if text.startswith("---"):
+            end = text.find("---", 3)
+            body = text[end + 3:].strip() if end != -1 else text
+        else:
+            body = text
+        body = re.sub(r"!\[.*?\]\(.*?\)", "", body)
+        body = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", body)
+        body = re.sub(r"<[^>]+>", "", body)
+        body = re.sub(r"[^a-zA-ZäöåÄÖÅ\s-]", " ", body)
+
+        for word in body.lower().split():
+            word = word.strip("-")
+            if len(word) >= 5 and word not in STOPWORDS:
+                word_counts[word] += 1
+
+    return word_counts.most_common(top_n)
+
+
+# ── Formatting helpers ────────────────────────────────────────────────────────
+
+def _bar(value: int, max_value: int, width: int = 20, char: str = "█") -> str:
+    if max_value == 0:
+        return " " * width
+    filled = int(round(value / max_value * width))
+    return char * filled + "░" * (width - filled)
+
+
+def _pct(a: int, b: int) -> str:
+    return f"{a/b*100:.0f}%" if b else "—"
+
+
+# ── Main dashboard ────────────────────────────────────────────────────────────
+
+def build_dashboard(hours: int = 24) -> dict:
+    runs    = load_metrics(hours)
+    rejects = load_rejects(hours)
+    health  = load_feed_health()
+    trends  = trending_keywords(hours)
+
+    # ── Run stats
+    total_runs   = len(runs)
+    ok_runs      = sum(1 for r in runs if r.get("outcome") == "ok")
+    skip_runs    = sum(1 for r in runs if r.get("outcome") == "skip")
+    error_runs   = sum(1 for r in runs if r.get("outcome") == "error")
+    attempted    = sum(r.get("attempted", 0) for r in runs)
+    published    = sum(r.get("published", 0) for r in runs)
+
+    # ── Reject reasons
+    reason_counts: Counter = Counter()
+    for r in rejects:
+        # Split compound reasons: "too_short | lead paragraph too short"
+        for part in r["reason"].split("|"):
+            part = part.strip()
+            # Normalize to short label
+            if "too_short" in part:
+                reason_counts["too_short"] += 1
+            elif "keyword stuffing" in part:
+                reason_counts["keyword_stuffing"] += 1
+            elif "lead paragraph" in part:
+                reason_counts["lead_too_short"] += 1
+            elif "few_paragraphs" in part:
+                reason_counts["few_paragraphs"] += 1
+            elif part:
+                reason_counts[part[:30]] += 1
+
+    # ── Feed health
+    feed_total    = len(health)
+    feed_disabled = sum(1 for e in health.values() if e.get("auto_disabled"))
+    feed_stale    = sum(1 for e in health.values() if e.get("stale") and not e.get("auto_disabled"))
+    feed_healthy  = feed_total - feed_disabled - feed_stale
+
+    # Find most-recently published article
+    last_pub_ts = None
+    for r in reversed(runs):
+        if r.get("published", 0) > 0:
+            try:
+                last_pub_ts = datetime.fromisoformat(r["ts"])
+            except ValueError:
+                pass
+            break
+
+    return {
+        "hours": hours,
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "runs": {
+            "total": total_runs,
+            "ok": ok_runs,
+            "skip": skip_runs,
+            "error": error_runs,
+        },
+        "articles": {
+            "attempted": attempted,
+            "published": published,
+            "rejected": len(rejects),
+            "publish_rate": round(published / attempted * 100, 1) if attempted else 0,
+            "last_published_ts": last_pub_ts.isoformat() if last_pub_ts else None,
+        },
+        "reject_reasons": dict(reason_counts.most_common(8)),
+        "feeds": {
+            "total": feed_total,
+            "healthy": feed_healthy,
+            "disabled": feed_disabled,
+            "stale": feed_stale,
+            "stale_names": [n for n, e in health.items() if e.get("stale") and not e.get("auto_disabled")],
+            "disabled_names": [n for n, e in health.items() if e.get("auto_disabled")],
+        },
+        "trending": trends,
+    }
+
+
+def print_dashboard(d: dict) -> None:
+    hours = d["hours"]
+    now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    runs  = d["runs"]
+    arts  = d["articles"]
+    feeds = d["feeds"]
+
+    W = 60
+    print()
+    print("╔" + "═" * (W-2) + "╗")
+    print(f"║{'Uutistenlukija — Pipeline Dashboard':^{W-2}}║")
+    print(f"║{f'Last {hours}h  ·  {now_str}':^{W-2}}║")
+    print("╠" + "═" * (W-2) + "╣")
+
+    # ── Pipeline runs
+    total = runs["total"]
+    print(f"║  {'PIPELINE RUNS':30s}  {total:>4} runs in {hours}h   ║")
+    if total:
+        ok_bar = _bar(runs["ok"],    total, 14)
+        sk_bar = _bar(runs["skip"],  total, 14)
+        er_bar = _bar(runs["error"], total, 14)
+        print(f"║    ✅ OK   {ok_bar}  {runs['ok']:>4} ({_pct(runs['ok'],   total):>4})  ║")
+        print(f"║    ⏭ skip  {sk_bar}  {runs['skip']:>4} ({_pct(runs['skip'],  total):>4})  ║")
+        err_icon = "❌" if runs["error"] else "  "
+        print(f"║    {err_icon} error {er_bar}  {runs['error']:>4} ({_pct(runs['error'], total):>4})  ║")
+
+    print("╠" + "─" * (W-2) + "╣")
+
+    # ── Articles
+    print(f"║  {'ARTICLES':30s}                       ║")
+    print(f"║    Attempted  (scanned→rewriter)  {arts['attempted']:>6}               ║")
+    print(f"║    Published  ✅                  {arts['published']:>6}  ({_pct(arts['published'],arts['attempted']):>4} rate)  ║")
+    print(f"║    Rejected   (quality gate)      {arts['rejected']:>6}               ║")
+
+    # Last published
+    lp = arts.get("last_published_ts")
+    if lp:
+        try:
+            lp_dt = datetime.fromisoformat(lp)
+            age = datetime.now(timezone.utc) - lp_dt
+            h, m = divmod(int(age.total_seconds()), 3600)
+            m = m // 60
+            age_str = f"{h}h {m:02d}m ago" if h else f"{m}m ago"
+        except ValueError:
+            age_str = lp[:16]
+        print(f"║    Last publish: {age_str:<40} ║")
+    else:
+        print(f"║    Last publish: no data{'':<32} ║")
+
+    # Reject breakdown
+    if d["reject_reasons"]:
+        print("╠" + "─" * (W-2) + "╣")
+        print(f"║  {'QUALITY GATE REJECTS':30s}                       ║")
+        max_r = max(d["reject_reasons"].values()) if d["reject_reasons"] else 1
+        for reason, count in d["reject_reasons"].items():
+            bar = _bar(count, max_r, 10)
+            print(f"║    {reason:<26} {bar}  {count:>3}              ║")
+
+    print("╠" + "─" * (W-2) + "╣")
+
+    # ── Feed health
+    print(f"║  {'FEED HEALTH':30s}                       ║")
+    h_icon = "✅" if feeds["disabled"] == 0 and feeds["stale"] == 0 else "⚠️"
+    print(f"║    {h_icon} {feeds['healthy']}/{feeds['total']} healthy"
+          f"   🚫 {feeds['disabled']} disabled"
+          f"   ⚠️ {feeds['stale']} stale          ║")
+    for name in feeds.get("stale_names", []):
+        print(f"║    ⚠️  Stale: {name:<42} ║")
+    for name in feeds.get("disabled_names", []):
+        print(f"║    🚫 Disabled: {name:<40} ║")
+
+    # ── Trending
+    if d["trending"]:
+        print("╠" + "─" * (W-2) + "╣")
+        print(f"║  {'TRENDING KEYWORDS (last ' + str(hours) + 'h)':30s}                       ║")
+        max_kw = d["trending"][0][1] if d["trending"] else 1
+        for i, (word, count) in enumerate(d["trending"], 1):
+            bar = _bar(count, max_kw, 12)
+            print(f"║    {i}. {word:<22} {bar}  {count:>3}              ║")
+
+    print("╚" + "═" * (W-2) + "╝")
+    print()
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Uutistenlukija pipeline dashboard")
+    parser.add_argument("--hours", type=int, default=24, help="Time window in hours (default 24)")
+    parser.add_argument("--json",  action="store_true", help="Output JSON instead of formatted table")
+    args = parser.parse_args()
+
+    d = build_dashboard(hours=args.hours)
+
+    if args.json:
+        print(json.dumps(d, indent=2, ensure_ascii=False, default=str))
+    else:
+        print_dashboard(d)
+
+
+if __name__ == "__main__":
+    main()
