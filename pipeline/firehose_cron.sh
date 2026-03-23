@@ -42,7 +42,10 @@ fi
 
 # Commit and push if new content was added
 cd "$PROJECT_DIR"
-git add content/ 2>/dev/null || true
+# CRITICAL: Reset index first to prevent bridge-staged files (layouts/, docs/, etc.)
+# from being accidentally swept into firehose commits. See 0dfb184 revert.
+git reset HEAD -- . 2>/dev/null || true
+git add content/ pipeline/.pipeline_lock pipeline/metrics.jsonl 2>/dev/null || true
 if git diff --cached --quiet; then
     echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] No new content to commit" | tee -a "$LOG_FILE"
 else

@@ -80,7 +80,10 @@ fi
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
-git add content/ public/ 2>/dev/null || true
+# CRITICAL: Reset index first to prevent bridge-staged files (layouts/, docs/, etc.)
+# from being accidentally swept into auto-publish commits. See 0dfb184 revert.
+git reset HEAD -- . 2>/dev/null || true
+git add content/ public/ static/api/ static/metrics/ pipeline/metrics.jsonl pipeline/.pipeline_lock 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "No new content to push." | tee -a "$LOG_FILE"
 else
@@ -94,7 +97,7 @@ fi
 
 # Regenerate health endpoint + metrics snapshot
 python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
-bash "$PROJECT_DIR/scripts/daily-snapshot.sh" 2>&1 | tee -a "$LOG_FILE" || echo "[snapshot] generation failed (non-fatal)" | tee -a "$LOG_FILE" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
+bash "$PROJECT_DIR/scripts/daily-snapshot.sh" 2>&1 | tee -a "$LOG_FILE" || echo "[snapshot] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 
 echo "=== Auto-publish completed at $(date -u) ==="  | tee -a "$LOG_FILE"
 
