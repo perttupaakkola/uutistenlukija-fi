@@ -401,10 +401,11 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     # Below this threshold the rewriter can't produce 280+ word output.
     # "Total source words" = research words (web/rss) + description words (if research empty).
     # Minimum combined words (title + description + research) before rewriting.
-    # Lowered 50→25: title (8-15w) + short description (10-20w) is enough context.
-    # Previous either/or logic discarded description when research existed.
-    # New: sum all three — any combination that reaches 25w can be rewritten.
-    MIN_SOURCE_WORDS = 25
+    # Minimum combined source material before rewriting.
+    # Must be 50+ words — anything less produces hallucinated filler.
+    # Paywalled/thin sources are already skipped in research.py;
+    # this is the final safety net.
+    MIN_SOURCE_WORDS = 50
     pre_filter_count = len(articles)
     def _total_source_words(a: dict) -> int:
         title    = a.get("title", "")
@@ -415,6 +416,13 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     skipped = pre_filter_count - len(articles)
     if skipped:
         print(f"[quality] Skipped {skipped} articles with < {MIN_SOURCE_WORDS} words source material")
+
+    # ── Step 1d.2: Warn on Tier 3-only articles ──────────────────────────────
+    for a in articles:
+        tier = a.get("source_tier", 2)
+        research = a.get("research", "")
+        if tier == 3 and len(research.split()) < 100:
+            print(f"[quality] ⚠️  T3-only article with thin research: '{a.get('title', '')[:60]}'")
 
     # ── Step 1e: Cap articles if --max-articles set ────────────────────────────
     if max_articles is not None and len(articles) > max_articles:

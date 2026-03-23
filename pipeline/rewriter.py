@@ -197,6 +197,15 @@ def _build_single_prompt(article: dict) -> str:
     research = article.get("research", "")
     research_section = f"\nTaustatutkimus:\n{research}" if research else ""
 
+    # Source reliability tier (1=verified editorial, 2=standard, 3=verify claims)
+    tier = article.get("source_tier", 2)
+    if tier == 3:
+        tier_note = "\n⚠️ Lähteen luotettavuus: MATALA — tarkista faktat, lisää varovaisia muotoiluja ('tietojen mukaan', 'väitetysti'). Älä esitä epävarmoja väitteitä faktana."
+    elif tier == 1:
+        tier_note = "\nLähteen luotettavuus: KORKEA — luotettava toimituksellinen lähde. Pysy tarkasti lähteen faktoissa, älä keksi lisätietoja."
+    else:
+        tier_note = ""
+
     # SEO keyword hint: inject 2-3 category keywords naturally
     category_hint = article.get("category_hint", "")
     seo_note = ""
@@ -215,7 +224,7 @@ def _build_single_prompt(article: dict) -> str:
 
 ---
 Otsikko: {article['title']}
-Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{seo_note}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{seo_note}{tier_note}
 ---
 
 Vastaa JSON-listana (lista yhdellä alkiolla):
