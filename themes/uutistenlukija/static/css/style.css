@@ -335,13 +335,13 @@ img { max-width: 100%; height: auto; }
   outline-offset: 2px;
 }
 
-.category-kotimaa { background: #1f6feb; }
-.category-ulkomaat { background: #8e44ad; }
-.category-talous { background: #1f8f5f; }
-.category-teknologia { background: #0f766e; }
-.category-urheilu { background: #d97706; }
-.category-kulttuuri { background: #c2410c; }
-.category-tiede { background: #2563eb; }
+.category-kotimaa   { background: #3498db; }
+.category-ulkomaat  { background: #e74c3c; }
+.category-talous    { background: #f39c12; }
+.category-teknologia{ background: #8e44ad; }
+.category-urheilu   { background: #27ae60; }
+.category-kulttuuri { background: #d35400; }
+.category-tiede     { background: #16a085; }
 
 /* === Article Grid === */
 .articles-grid {
@@ -1644,248 +1644,6 @@ img { max-width: 100%; height: auto; }
   .cb-actions { width: 100%; }
   .cb-btn { flex: 1; text-align: center; }
   .cm-box { padding: 1.25rem; }
-}
-
-/* ════════════════════════════════════════════════════════════════════════════
-   /tila/ — Status / monitoring dashboard page
-   ════════════════════════════════════════════════════════════════════════════ */
-
-.tila-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 0 4rem;
-}
-
-/* Header */
-.tila-header {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--border);
-}
-
-.tila-title {
-  font-size: 1.8rem;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.35rem;
-}
-
-.tila-dot {
-  display: inline-block;
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.tila-dot--green  { background: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,0.2); animation: pulse-dot 2s ease-in-out infinite; }
-.tila-dot--yellow { background: #f59e0b; box-shadow: 0 0 0 3px rgba(245,158,11,0.2); }
-
-.tila-subtitle {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  color: var(--text-secondary);
-}
-
-/* Summary cards */
-.tila-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-}
-
-@media (max-width: 640px) {
-  .tila-cards { grid-template-columns: repeat(2, 1fr); }
-}
-
-.tila-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.25rem 1rem;
-  text-align: center;
-}
-
-.tila-card--accent {
-  border-color: color-mix(in srgb, var(--accent) 30%, var(--border) 70%);
-  background: color-mix(in srgb, var(--accent) 5%, var(--card-bg) 95%);
-}
-
-.tila-card__value {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 900;
-  line-height: 1;
-  color: var(--accent);
-  margin-bottom: 0.4rem;
-}
-
-.tila-card__label {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--text-secondary);
-}
-
-/* Section */
-.tila-section {
-  margin-bottom: 2.5rem;
-}
-
-.tila-section-title {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-secondary);
-  margin: 0 0 1rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--border);
-}
-
-/* Last article */
-.tila-last-article {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.tila-last-link {
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.tila-last-time {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-}
-
-/* Table */
-.tila-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
-
-.tila-table th,
-.tila-table td {
-  padding: 0.6rem 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
-  vertical-align: middle;
-}
-
-.tila-table thead th {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--text-secondary);
-  background: var(--card-bg);
-}
-
-.tila-table tbody tr:hover {
-  background: color-mix(in srgb, var(--accent) 4%, var(--bg) 96%);
-}
-
-.tila-total-row th,
-.tila-total-row td {
-  font-weight: 700;
-  border-top: 2px solid var(--border);
-  border-bottom: none;
-}
-
-.tila-num {
-  text-align: right !important;
-  font-variant-numeric: tabular-nums;
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  white-space: nowrap;
-}
-
-.tila-latest {
-  max-width: 360px;
-}
-
-.tila-latest-link {
-  display: block;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 340px;
-}
-
-.tila-latest-time {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  color: var(--text-secondary);
-}
-
-@media (max-width: 768px) {
-  .tila-table { font-size: 0.8rem; }
-  .tila-latest { display: none; }  /* hide on mobile to avoid overflow */
-}
-
-/* Recent list */
-.tila-recent-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.tila-recent-item {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  padding: 0.45rem 0;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-}
-
-.tila-recent-time {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  white-space: nowrap;
-  min-width: 70px;
-  flex-shrink: 0;
-}
-
-.tila-recent-link {
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* Note */
-.tila-note {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-  line-height: 1.6;
-}
-
-/* Dark mode — all via CSS vars already; add subtle card tweak */
-[data-theme="dark"] .tila-card {
-  background: var(--card-bg);
-  border-color: var(--border);
-}
-[data-theme="dark"] .tila-card--accent {
-  background: color-mix(in srgb, var(--accent) 8%, var(--card-bg) 92%);
-}
-[data-theme="dark"] .tila-table thead th {
-  background: var(--card-bg);
 }
 
 /* === Static pages (tietosuoja, tietoja) === */
@@ -4256,13 +4014,13 @@ pre code {
 }
 
 /* Category-coloured placeholder when no image */
-.related-card__thumb[data-cat="kotimaa"]    { background: #1f6feb; }
-.related-card__thumb[data-cat="ulkomaat"]   { background: #8e44ad; }
-.related-card__thumb[data-cat="talous"]     { background: #1f8f5f; }
-.related-card__thumb[data-cat="teknologia"] { background: #0f766e; }
-.related-card__thumb[data-cat="urheilu"]    { background: #d97706; }
-.related-card__thumb[data-cat="kulttuuri"]  { background: #c2410c; }
-.related-card__thumb[data-cat="tiede"]      { background: #2563eb; }
+.related-card__thumb[data-cat="kotimaa"]    { background: #3498db; }
+.related-card__thumb[data-cat="ulkomaat"]   { background: #e74c3c; }
+.related-card__thumb[data-cat="talous"]     { background: #f39c12; }
+.related-card__thumb[data-cat="teknologia"] { background: #8e44ad; }
+.related-card__thumb[data-cat="urheilu"]    { background: #27ae60; }
+.related-card__thumb[data-cat="kulttuuri"]  { background: #d35400; }
+.related-card__thumb[data-cat="tiede"]      { background: #16a085; }
 
 .related-card__thumb img {
   width: 100%;
