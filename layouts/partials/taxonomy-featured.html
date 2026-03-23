@@ -9,21 +9,31 @@
 {{- $featCat := index .Params.categories 0 | default "kotimaa" -}}
 <a href="{{ .Permalink }}" class="category-featured">
   {{ with .Params.image }}
-  {{- $featImgSrc := . -}}
-  {{- if hasPrefix . "https://images.unsplash.com" -}}
-    {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
-    {{- $featImgSrc = printf "%s%sw=260&h=146&fit=crop&fm=webp&q=80" . $s -}}
-  {{- else if hasPrefix . "https://images.pexels.com" -}}
-    {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
-    {{- $featImgSrc = printf "%s%sw=260&h=146&fit=crop" . $s -}}
+  {{- $b := . -}}
+  {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
+  {{- $isUnsplash := hasPrefix . "https://images.unsplash.com" -}}
+  {{- $isPexels   := hasPrefix . "https://images.pexels.com" -}}
+  {{- $src        := . -}}
+  {{- $webpSrcset := "" -}}
+  {{- $avifSrcset := "" -}}
+  {{- if $isUnsplash -}}
+    {{- $src        = printf "%s%sw=260&h=146&fit=crop&fm=webp&q=80" $b $s -}}
+    {{- $webpSrcset = printf "%s%sw=260&h=146&fit=crop&fm=webp&q=80 260w, %s%sw=520&h=292&fit=crop&fm=webp&q=80 520w" $b $s $b $s -}}
+    {{- $avifSrcset = printf "%s%sw=260&h=146&fit=crop&fm=avif&q=75 260w, %s%sw=520&h=292&fit=crop&fm=avif&q=75 520w" $b $s $b $s -}}
+  {{- else if $isPexels -}}
+    {{- $src = printf "%s%sw=260&h=146&fit=crop" $b $s -}}
   {{- end -}}
   <div class="category-featured__img-wrap">
-    <img src="{{ $featImgSrc }}"
-         alt="{{ .Params.image_alt | default .Title }}"
-         class="category-featured__img"
-         loading="eager" decoding="async" fetchpriority="high"
-         width="260" height="146"
-         onerror="this.onerror=null;this.src='/images/categories/{{ $featCat | lower }}.jpg';this.classList.add('img-loaded')">
+    <picture>
+      {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="260px">{{ end -}}
+      {{- if $webpSrcset }}<source type="image/webp" srcset="{{ $webpSrcset }}" sizes="260px">{{ end -}}
+      <img src="{{ $src }}"
+           alt="{{ $.Params.image_alt | default $.Title }}"
+           class="category-featured__img"
+           loading="eager" decoding="async" fetchpriority="high"
+           width="260" height="146"
+           onerror="this.onerror=null;this.src='/images/categories/{{ $featCat | lower }}.jpg';this.classList.add('img-loaded')">
+    </picture>
   </div>
   {{ end }}
   <div class="category-featured__body">

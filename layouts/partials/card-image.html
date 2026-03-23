@@ -28,20 +28,21 @@
 {{- $srcset  := "" -}}
 {{- $sizes   := "" -}}
 
+{{- $avifSrcset := "" -}}
+
 {{- if hasPrefix $img "https://images.unsplash.com" -}}
-  {{/* Strip existing w/h/fit/fm/q params from the base URL for clean appending */}}
   {{- $base := $img -}}
   {{- $sep  := "?" -}}{{- if in $img "?" -}}{{- $sep = "&" -}}{{- end -}}
   {{- if $hero -}}
-    {{/* Lead/hero: 800w default, 400w for smaller viewports */}}
-    {{- $src    = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $base $sep -}}
-    {{- $srcset = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=85 800w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $base $sep $base $sep $base $sep -}}
-    {{- $sizes  = "(max-width: 640px) 100vw, (max-width: 900px) 90vw, 800px" -}}
+    {{- $src       = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $base $sep -}}
+    {{- $srcset    = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=85 800w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $base $sep $base $sep $base $sep -}}
+    {{- $avifSrcset = printf "%s%sw=400&h=225&fit=crop&fm=avif&q=75 400w, %s%sw=800&h=450&fit=crop&fm=avif&q=80 800w, %s%sw=1200&h=675&fit=crop&fm=avif&q=80 1200w" $base $sep $base $sep $base $sep -}}
+    {{- $sizes     = "(max-width: 640px) 100vw, (max-width: 900px) 90vw, 800px" -}}
   {{- else -}}
-    {{/* Card: 400w default, 800w for retina */}}
-    {{- $src    = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80" $base $sep -}}
-    {{- $srcset = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=80 800w" $base $sep $base $sep -}}
-    {{- $sizes  = "(max-width: 640px) calc(100vw - 2rem), 400px" -}}
+    {{- $src       = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80" $base $sep -}}
+    {{- $srcset    = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=80 800w" $base $sep $base $sep -}}
+    {{- $avifSrcset = printf "%s%sw=400&h=225&fit=crop&fm=avif&q=75 400w, %s%sw=800&h=450&fit=crop&fm=avif&q=75 800w" $base $sep $base $sep -}}
+    {{- $sizes     = "(max-width: 640px) calc(100vw - 2rem), 400px" -}}
   {{- end -}}
 {{- else if hasPrefix $img "https://images.pexels.com" -}}
   {{- $base := $img -}}
@@ -51,21 +52,23 @@
   {{- else -}}
     {{- $src = printf "%s%sw=400&h=225&fit=crop" $base $sep -}}
   {{- end -}}
-  {{/* Use thumb path for local Pexels — it's already sized, no srcset needed */}}
   {{- if $thumb -}}{{- $src = $thumb -}}{{- end -}}
 {{- end -}}
 
 <a href="{{ $href }}" class="article-image-link" tabindex="-1" aria-hidden="true">
-  <img
-    src="{{ $src }}"
-    {{- if $srcset }} srcset="{{ $srcset }}" sizes="{{ $sizes }}"{{ end }}
-    alt="{{ $alt }}"
-    class="article-image article-card-thumb"
-    loading="{{ $loading }}"
-    fetchpriority="{{ $fetchpri }}"
-    decoding="async"
-    width="{{ if $hero }}800{{ else }}400{{ end }}"
-    height="{{ if $hero }}450{{ else }}225{{ end }}"
-    onload="this.classList.add('img-loaded')"
-    onerror="this.classList.add('img-loaded')">
+  <picture>
+    {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
+    {{- if $srcset }}<source type="image/webp" srcset="{{ $srcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
+    <img
+      src="{{ $src }}"
+      alt="{{ $alt }}"
+      class="article-image article-card-thumb"
+      loading="{{ $loading }}"
+      fetchpriority="{{ $fetchpri }}"
+      decoding="async"
+      width="{{ if $hero }}800{{ else }}400{{ end }}"
+      height="{{ if $hero }}450{{ else }}225{{ end }}"
+      onload="this.classList.add('img-loaded')"
+      onerror="this.classList.add('img-loaded')">
+  </picture>
 </a>

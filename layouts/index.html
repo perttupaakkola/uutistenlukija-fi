@@ -45,27 +45,34 @@
 <article class="lead-article lead-article--hero">
   <a href="{{ .Permalink }}" class="hero-scrim-link" aria-label="{{ .Title }}">
     {{/* Build srcset for Unsplash/Pexels, fall back to $img */}}
-    {{- $heroSrc := $thumb -}}
+    {{- $heroSrc    := $thumb -}}
     {{- $heroSrcset := "" -}}
-    {{- if hasPrefix $img "https://images.unsplash.com" -}}
+    {{- $avifSrcset := "" -}}
+    {{- $isUnsplash := hasPrefix $img "https://images.unsplash.com" -}}
+    {{- $isPexels   := hasPrefix $img "https://images.pexels.com" -}}
+    {{- if $isUnsplash -}}
       {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
       {{- $heroSrc    = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $b $s -}}
       {{- $heroSrcset = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=85 800w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
-    {{- else if hasPrefix $img "https://images.pexels.com" -}}
+      {{- $avifSrcset = printf "%s%sw=400&h=225&fit=crop&fm=avif&q=75 400w, %s%sw=800&h=450&fit=crop&fm=avif&q=80 800w, %s%sw=1200&h=675&fit=crop&fm=avif&q=80 1200w" $b $s $b $s $b $s -}}
+    {{- else if $isPexels -}}
       {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
       {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop" $b $s -}}
     {{- end -}}
-    <img
-      src="{{ $heroSrc }}"
-      {{- if $heroSrcset }} srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px"{{ end }}
-      alt="{{ $alt }}"
-      class="hero-scrim-img article-card-thumb"
-      loading="eager"
-      fetchpriority="high"
-      decoding="async"
-      width="800" height="450"
-      onload="this.classList.add('img-loaded')"
-      onerror="this.classList.add('img-loaded')">
+    <picture>
+      {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
+      {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
+      <img
+        src="{{ $heroSrc }}"
+        alt="{{ $alt }}"
+        class="hero-scrim-img article-card-thumb"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="800" height="450"
+        onload="this.classList.add('img-loaded')"
+        onerror="this.classList.add('img-loaded')">
+    </picture>
     {{/* Gradient scrim — Sara spec #25 */}}
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-scrim-body">
