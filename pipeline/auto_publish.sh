@@ -80,9 +80,13 @@ fi
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
-# CRITICAL: Reset index first to prevent bridge-staged files (layouts/, docs/, etc.)
-# from being accidentally swept into auto-publish commits. See 0dfb184 revert.
+# CRITICAL: Reset index + restore layout/script files to HEAD before staging.
+# Bridge syncs from Alex's sessions can leave modified layout files or scripts
+# with wrong permissions in the working tree. This ensures:
+#   1. No layout/theme/script changes leak into auto-publish commits
+#   2. .sh files retain their execute bits (git checkout restores committed mode)
 git reset HEAD -- . 2>/dev/null || true
+git checkout HEAD -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline/firehose_cron.sh 2>/dev/null || true
 git add content/ public/ static/api/ static/metrics/ pipeline/metrics.jsonl pipeline/.pipeline_lock 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "No new content to push." | tee -a "$LOG_FILE"
