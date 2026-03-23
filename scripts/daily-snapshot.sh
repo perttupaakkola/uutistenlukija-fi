@@ -44,7 +44,7 @@ articles = list(content_dir.glob("**/*.md")) if content_dir.exists() else []
 articles_total = len(articles)
 
 # 2. articlesPublishedToday — parse front-matter date fields
-date_re = re.compile(r'^date\s*=\s*["\']?(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})', re.MULTILINE)
+date_re = re.compile(r'^date\s*[:=]\s*["\']?(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?)', re.MULTILINE)
 articles_today = 0
 for art in articles:
     try:
@@ -52,7 +52,12 @@ for art in articles:
         m = date_re.search(text)
         if not m:
             continue
-        dt = datetime.fromisoformat(m.group(1) + "+00:00")
+        raw = m.group(1)
+        if raw.endswith("Z"):
+            raw = raw[:-1] + "+00:00"
+        elif "+" not in raw[10:] and raw.count("-") < 3:
+            raw += "+00:00"
+        dt = datetime.fromisoformat(raw)
         if dt >= cutoff_24h:
             articles_today += 1
     except Exception:
