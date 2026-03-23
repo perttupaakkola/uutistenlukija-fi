@@ -10,7 +10,7 @@ EDITORIAL_STAFF: Dict = {
     "id": "toimitus",
     "name": "Toimitus",
     "title": "Uutistenlukija-toimitus",
-    "bio": "Uutistenlukija kokoaa ja tiivistää päivän tärkeimmät uutiset suomeksi.",
+    "bio": "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita.",
     "specialties": [],
     "image": "",
 }

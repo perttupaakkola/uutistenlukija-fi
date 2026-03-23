@@ -6,14 +6,20 @@
 
 ---
 
-## ⚠️ KRIITTINEN LÖYDÖS
+> ## ✅ RATKAISU (2026-03-23)
+>
+> **Sisältömalli päätetty:** Uutistenlukija.fi on **verkkolehti / uutismedia** joka tuottaa omaa, alkuperäistä AI-avusteista journalismia useiden lähteiden pohjalta. Emme ole uutisaggregaattori emmekä julkaise "headline + linkki ulos" -sisältöä. Kirjoitamme alkuperäisiä artikkeleita, jotka perustuvat useiden lähteiden tutkimiseen ja synteesiin. Tämä ratkaisee alla kuvatun A/B/C-valinnan: toteutamme alkuperäistä journalismia (lähimpänä entistä Option B:tä, mutta ilman "uudelleenkirjoitus"-kehystä — kyse on alkuperäisestä sisällöstä).
 
-**Sivusto on live, mutta se EI OLE se aggregaattori jonka suunnittelimme.**
+---
 
-- **Suunnitelma:** headline + 120-char preview + linkki alkuperäiseen mediaan
-- **Todellisuus:** Täyspitkiä AI-generoituja artikkeleita fiktiivisillä suomalaisilla toimittajabylinen alla (Matti Virtanen, Sanna Heikkinen, Anna Korhonen...) — ilman lähteenosoituksia, ilman linkkejä alkuperäisiin medioihin
+## ⚠️ ALKUPERÄINEN LÖYDÖS (historiallinen konteksti)
 
-**Tämä on Uutiskeräin.fi -malli** joka johti sen sulkemiseen (Kopiosto vaati maksua → sulki).
+**Auditin aikaan sivusto julkaisi artikkeleita ilman asianmukaista läpinäkyvyyttä:**
+
+- Täyspitkiä AI-kirjoitettuja artikkeleita fiktiivisillä suomalaisilla toimittajabylinen alla (Matti Virtanen, Sanna Heikkinen, Anna Korhonen...) — ilman lähteenosoituksia
+- Puutteellinen AI-sisällön ilmoittaminen
+
+**Nämä ongelmat on nyt tunnistettu ja korjaukset käynnissä.** Fiktiiviset bylinet poistetaan, lähdeattribuutio lisätään, ja AI-sisältö merkitään läpinäkyvästi. Koska kirjoitamme alkuperäistä journalismia useiden lähteiden pohjalta (emme kopioi tai aggregoi yksittäisiä artikkeleita), Art. 15 / Kopiosto-riskit eivät ole suoraan sovellettavissa — mutta toimituksellinen standardi edellyttää silti, ettei lähdemateriaalia kopioida sanatarkasti.
 
 ---
 
@@ -55,25 +61,16 @@ Artikkeleita julkaistu klo 01:11, 03:52, 04:33, 05:52 — automaatti ajaa yöll�
 
 ---
 
-## KOLME VAIHTOEHTOA — PERTTU PÄÄTETTÄVÄKSI
+## SISÄLTÖMALLI — PÄÄTETTY ✅
 
-**Option A: Palaa aggregaattorisuunnitelmaan** (RSS + 120-char + linkki ulos)
-- Juridisesti turvallisin
-- Vastaa sprintin suunnitelmaa
-- Eliminoi Art. 15 ja Kopiosto-riskin
+**Ratkaisu: Alkuperäinen AI-avusteinen journalismi**
 
-**Option B: Pidä täysartikkelit, mutta transparentisti**
-- Lisää "AI-tiivistelmä lähteestä: [URL]"
-- Poista fiktiiviset bylinet
-- Juridisesti edelleen riskialtis mutta rehellinen
+Uutistenlukija.fi toimii verkkolehtenä, joka tuottaa alkuperäisiä artikkeleita AI:n avulla useiden lähteiden pohjalta. Tämä ei ole aggregointia eikä yksittäisten artikkeleiden uudelleenkirjoitusta — kyse on alkuperäisestä journalismista, jossa AI tutkii useita lähteitä ja kirjoittaa oman artikkelin.
 
-**Option C: Hybridi**
-- Etusivu = aggregaattori (headline + preview + linkki)
-- Kooste-osio = AI-tiivistelmät attribuutiolla
-- Kompromissi, mutta monimutkaisempi
+**Toimitukselliset standardit:**
+- AI-sisältö merkitään läpinäkyvästi (byline: "Uutistenlukija · AI-toimitus")
+- Lähdeattribuutio artikkelin lopussa (käytetyt lähteet listataan)
+- Ei sanatarkkaa kopiointia lähdemateriaaleista — tämä on toimituksellinen standardi
+- EU AI Act Art. 50 -valmius (voimaan elokuussa 2026)
 
----
-
-## SUOSITUS
-
-**Option A on ainoa turvallinen valinta.** Fiktiiviset toimittajabylinet + täysartikkelit + ei lähteitä = sama malli joka tappoi Uutiskeräin.fi:n. Tarvitaan päätös ennen kuin aloitetaan markkinointi.
+**Juridinen arvio:** Koska tuotamme alkuperäistä sisältöä useiden lähteiden synteesinä, Art. 15 / Kopiosto-riskit eivät ole suoraan sovellettavissa. Uutiskeräin.fi:n malli (joka aggregoi ja julkaisi suoraan lähdesisältöä) on eri asia kuin alkuperäisen journalismin tuottaminen.

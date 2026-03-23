@@ -24,7 +24,7 @@
 - Frustrated by having to jump between 3-5 different sites to stay informed
 
 ### What Would Convert
-- Single aggregated news hub with headlines from 200+ trusted sources (no paywalls to clear)
+- Single news destination with original articles covering all major Finnish news topics (no paywalls to clear)
 - Email newsletter with curated daily digest (saves 30 min/day of browsing)
 - Category filtering — jump straight to Talous or Politiikka without clutter
 - Premium tier option later (e.g., deep analysis pieces, ad-free)

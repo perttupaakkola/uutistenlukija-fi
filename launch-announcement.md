@@ -38,7 +38,7 @@ Henkilökohtainen, rento sävy. "Väsynyt hyppimään sivujen välillä — rake
 
 **FOR IMMEDIATE RELEASE**
 
-> *Uutistenlukija.fi Launches as Finland's New News Aggregator*
+> *Uutistenlukija.fi Launches as Finland's AI-Powered Online Newspaper*
 
 250 sanaa, startup-ystävällinen, sopii ArcticStartupille, Hacker Newsille, Product Huntille. Mainitsee kilpailuetu Amppareihin nähden.
 
@@ -49,7 +49,7 @@ Henkilökohtainen, rento sävy. "Väsynyt hyppimään sivujen välillä — rake
 **Tagline options:**
 
 - `"All Finnish news, one page — free, no signup"`
-- `"The clean Finnish news aggregator you've been missing"`
+- `"Original Finnish journalism, powered by AI"`
 
 ---
 
@@ -63,13 +63,13 @@ Henkilökohtainen, rento sävy. "Väsynyt hyppimään sivujen välillä — rake
 
 ## MESSAGING RULES
 
-**Tärkeä:** ÄLÄ käytä "AI-powered" tai "AI-curated" suomenkielisessä kopiossa — suomalaiset ovat skeptisiä AI-hypeä kohtaan ja curation on RSS-pohjaista. Käytä "automaattisesti kerätty" tai "aggregaatti".
+**Tärkeä:** Suomalaiset ovat skeptisiä AI-hypeä kohtaan. Suomenkielisessä kopiossa käytä "tekoälyn avulla kirjoitettu" tai "AI-avusteinen toimitus" — ei "AI-powered" tai muuta hypeä. Painota alkuperäistä journalismia ja useiden lähteiden käyttöä.
 
 ---
 
 ## KEY NOTES
 
-- **"AI-curated" -varoitus** on tärkeä — suomalainen yleisö reagoi negatiivisesti AI-hypeen ja teknisesti kuvaus ei edes pidä paikkaansa (RSS-aggregaatti, ei generoiva AI)
+- **"AI-hype" -varoitus** on tärkeä — suomalainen yleisö reagoi negatiivisesti AI-hypeen. Painota alkuperäistä journalismia, ei teknologiaa
 - **Product Hunt** on paras kansainvälinen launch-alusta — suosittelen tiistai/keskiviikko US-aamu-aikaan
 - **ArcticStartup** on kohdistettu PR-kanava — he kirjoittavat mielellään suomalaisista uusista tuotteista
 - Kaikki 5 formaattia ovat copy-paste-valmiita Pertulla

@@ -1,10 +1,10 @@
-# Finnish News Aggregator Monetization Research
+# Finnish Online News Monetization Research
 
-**Author:** Monica | **Date:** 2026-03-22 | **Status:** Complete
+**Author:** Monica | **Date:** 2026-03-22 (päivitetty 2026-03-23) | **Status:** Complete
 
 ## Executive Summary
 
-Finnish news aggregators monetize through **display advertising (primary), native sponsorships, and B2B services**. Unlike subscription-heavy models, the dominant strategy is **high-traffic ad-based revenue** with private marketplace (PMP) deals. Direct licensing (Google News Showcase) is emerging but limited to major publishers.
+Finnish online news media monetize through **display advertising (primary), native sponsorships, and B2B services**. Unlike subscription-heavy models, the dominant strategy is **high-traffic ad-based revenue** with private marketplace (PMP) deals. Direct licensing (Google News Showcase) is emerging but limited to major publishers. As a verkkolehti producing original content, uutistenlukija.fi has stronger monetization potential than pure aggregators.
 
 ---
 
@@ -20,7 +20,7 @@ Finnish news aggregators monetize through **display advertising (primary), nativ
 
 **Realistic RPM for news sites:** €4-€8 net (after platform cut)
 
-### How Ampparit & Finnish Aggregators Monetize Display
+### How Ampparit & Finnish News Sites Monetize Display
 
 **Ampparit.com** (founded 2004, 250+ news sources) generates revenue through:
 1. **Direct display advertising** on the site ("Mainosta Amppareissa")
@@ -91,7 +91,7 @@ Finnish publishers are growing email subscriber bases with personalized, segment
 - Keskisuomalainen
 - Others
 
-**Reality:** Limited to major publishers with premium content. Unlikely for aggregators unless they create original content.
+**Reality:** Limited to major publishers with premium content. As a verkkolehti producing original journalism, uutistenlukija.fi may qualify as it grows.
 
 ---
 
@@ -126,7 +126,7 @@ Finnish publishers are growing email subscriber bases with personalized, segment
 
 ---
 
-## 7. Realistic Revenue Mix for Aggregators
+## 7. Realistic Revenue Mix for Online News Media
 
 ### Three-Tier Model (Most Common)
 
@@ -161,7 +161,7 @@ Finnish publishers are growing email subscriber bases with personalized, segment
 
 ## Critical Success Factors
 
-- **Quality traffic** — News aggregators need clean, non-bot traffic. CPM varies wildly.
+- **Quality traffic** — News sites need clean, non-bot traffic. CPM varies wildly.
 - **Direct relationships** — Sanoma/Alma direct deals beat open-market auctions
 - **Newsletter list** — Email subscribers = predictable sponsorship revenue
 - **Content credibility** — Native sponsorships + affiliate links only work if editorial trust is high

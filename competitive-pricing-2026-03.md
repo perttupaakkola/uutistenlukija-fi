@@ -71,7 +71,7 @@ This applies to:
 
 ### Uutistenlukija planning implication
 
-For an early-stage aggregator with a clean audience but no premium brand yet, a realistic initial planning assumption is:
+For an early-stage online newspaper with a clean audience but no premium brand yet, a realistic initial planning assumption is:
 
 - **Programmatic floor:** ~€3-€5 CPM
 - **Direct-sold target:** ~€8-€12 CPM
@@ -254,7 +254,7 @@ Direct current public consumer price was not cleanly extractable from the access
 
 **Planning benchmark:** Because Kauppalehti is a business/finance-focused premium property, it usually belongs in the **higher-value digital subscription bracket** than tabloids. Use a working planning range of **~€20-€40+/month** depending on product tier and campaign structure.
 
-**Interpretation:** Specialized finance/business content commands materially higher willingness to pay than general aggregation.
+**Interpretation:** Specialized finance/business content commands materially higher willingness to pay than general news coverage.
 
 **Planning relevance:** This matters for uutistenlukija's **Talous** category: business audiences may be better monetized via sponsors, affiliates, and B2B offerings than via a cheap consumer paywall alone.
 
@@ -350,7 +350,7 @@ The Finnish market supports monetization, but the ladder is clear:
 1. **traffic + trust first**
 2. **direct-sold display and newsletter second**
 3. **native packages third**
-4. **premium subscription only if the value proposition is genuinely stronger than aggregation alone**
+4. **premium subscription only if the value proposition is genuinely stronger than free news coverage alone**
 
 ### Best monetization conclusion for uutistenlukija right now
 

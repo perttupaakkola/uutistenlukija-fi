@@ -69,10 +69,10 @@ tiede.fi (redirect), tivi.fi (blocked), kaleva.fi (dead), aamulehti.fi (blocked)
 **Per-item extraction:**
 
 - `<title>`, `<link>`, `<pubDate>` — required
-- `<description>` — optional, max 120 chars, strip HTML
-- No images, no full body
+- `<description>` — optional, used as research input for article writing
+- No images from RSS (use licensed stock or original)
 
-**Preview policy:** max 120 chars, hard ceiling 160 chars (legal)
+**Content policy:** RSS feeds are used as research sources — our pipeline reads multiple feeds on a topic and writes an original article. No verbatim copying.
 
 **Feed validation before adding:** W3C validator + HTTP 200 + guid stability check
 

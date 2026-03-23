@@ -1,20 +1,18 @@
-# Finnish News Aggregation — Legal/Copyright Brief
-**Date:** 2026-03-21
+# Finnish News Publishing — Legal/Copyright Brief
+**Date:** 2026-03-21 (päivitetty 2026-03-23)
 **Author:** Monica (research agent)
-**Status:** Final — approved by Felix for team distribution
+**Status:** Final — päivitetty vastaamaan nykyistä sisältömallia (alkuperäinen AI-journalismi)
 
 ## Executive Summary
 
-**Bottom line:** uutistenlukija.fi should operate as a **link + minimal preview aggregator**, not as a republisher of publisher text.
+**Bottom line:** uutistenlukija.fi toimii **verkkolehtenä, joka tuottaa alkuperäistä AI-avusteista journalismia** useiden lähteiden pohjalta. Emme ole uutisaggregaattori — emme kopioi tai välitä muiden artikkeleja.
 
-The biggest legal constraint is that **Finland has implemented EU DSM Directive Art. 15** (press publishers' right). That means commercial online services generally need permission to use press-publication content **beyond hyperlinks, individual words, or "very short extracts."**
+Koska kirjoitamme alkuperäistä sisältöä, EU DSM Directive Art. 15 (press publishers' right) ei ole suoraan sovellettavissa samalla tavalla kuin aggregaattoreille. Silti toimituksellisena standardina:
 
-The hard part is that **"very short extract" is not numerically defined** in law. So there is no reliable "safe by statute" number like 120 or 160 characters. Because of that uncertainty — and because some Finnish publishers explicitly restrict commercial use of headlines in RSS contexts — the safest build rule is:
-
-- **Headline as outbound link** ✅
-- **Very short preview only** ✅  
-- **No copied ledes / no first paragraphs** ❌
-- **No substantial snippets or article-style rewrites derived from publisher text** ❌ without licensing/permission
+- **Alkuperäiset artikkelit useiden lähteiden pohjalta** ✅
+- **Ei sanatarkkaa kopiointia lähdemateriaaleista** ✅
+- **Käytetyt lähteet listataan** ✅
+- **AI-sisältö merkitään läpinäkyvästi** ✅
 
 ---
 
@@ -31,8 +29,8 @@ The hard part is that **"very short extract" is not numerically defined** in law
 ## 2. Finland Status of Article 15
 
 - **Art. 15 is in force in Finland now.**
-- Strong signal from Finnish legal commentary + Kopiosto: this is intended to cover **commercial news aggregators** and similar online news-use cases.
-- Practical implication: if uutistenlukija displays publisher text in a way that goes beyond **link + minimal preview**, we're in licensing-risk territory.
+- Art. 15 is primarily intended to cover **commercial news aggregators** that republish or display publisher content directly.
+- **Uutistenlukija's model** — producing original articles inspired by multiple sources — is fundamentally different from aggregation. We don't republish or display publisher text. However, editorial standards still require that we don't copy verbatim from sources.
 
 ## 3. Safe Snippet Lengths
 
@@ -45,14 +43,11 @@ The hard part is that **"very short extract" is not numerically defined** in law
 - No statutory character/word limit for "very short"
 - No Finnish court rulings yet establishing a bright line
 
-### Recommended operational ceiling
-- **Headline (as-is from publisher) + max 120 characters of preview text**
-- Preview text should be our own summary, not copied lede
-- This stays well within what German/Spanish precedent suggests is safe
-
-### Safer fallback mode
-- **Headline-only with no preview text** — zero risk
-- Use if a publisher sends a takedown notice or objects
+### Our model: original journalism
+Since we write original articles based on research across multiple sources (not snippets or previews of individual articles), the "safe snippet length" question is less relevant. Our editorial standard is:
+- **No verbatim copying** from any single source
+- **Original synthesis** — our articles are new works, not extracts
+- **Source attribution** — list sources used at the end of each article
 
 ## 4. Publisher Policies
 
@@ -84,45 +79,41 @@ The hard part is that **"very short extract" is not numerically defined** in law
 - Google has **licensing agreements** with major Finnish publishers via Google News Showcase
 - Not a valid precedent for us — Google has legal resources and licensing deals we don't have
 
-## 6. Recommended Operating Policy for uutistenlukija.fi
+## 6. Editorial Policy for uutistenlukija.fi
 
-### Default mode (all publishers)
-1. **Headline as clickable link** to original article
-2. **Max 120 chars of AI-generated summary** (NOT copied from article)
-3. **Publisher attribution** clearly visible
-4. **Direct link to original** — no interstitial, no content gate
-5. **No article images** without explicit permission or compatible license
+### Original journalism model
+1. **AI researches multiple sources** for each topic/event
+2. **Writes an original article** that synthesizes information from these sources
+3. **Lists sources used** at the end of each article
+4. **Byline: "Uutistenlukija · AI-toimitus"** — transparent about AI involvement
+5. **`<meta name="ai-generated" content="true">`** on all article pages
 
-### Enhanced mode (permissive publishers only — e.g., Yle)
-1. Everything in default mode PLUS
-2. Up to 200 chars of preview
-3. Category-tagged thumbnail if publisher permits
+### Editorial standards (legal caution)
+- ✅ Synthesize facts from multiple sources into original articles
+- ✅ Attribute sources used
+- ✅ Use our own language, structure, and framing
+- ❌ Do NOT copy verbatim text from any source
+- ❌ Do NOT closely paraphrase a single source's unique expression
+- ❌ Do NOT use publisher images without explicit permission or compatible license
 
 ### Takedown protocol
-1. Any publisher objection → immediately switch to headline-only mode for that publisher
-2. Document the request
-3. Assess whether to pursue licensing conversation
-
-### What we must NOT do
-- ❌ Copy article ledes or first paragraphs
-- ❌ Create "rewritten" versions that are substantially derived from original text
-- ❌ Display publisher images without permission
-- ❌ Cache or host full article content
-- ❌ Use content in AI training pipelines without separate legal basis
+1. Any publisher objection → review the specific article immediately
+2. If verbatim copying found → fix immediately
+3. Document the request and assess
+4. If pattern of issues → review pipeline quality controls
 
 ---
 
 ## Impact on Product
 
-This brief fundamentally shapes what uutistenlukija.fi can be:
-- **We are a discovery/navigation layer**, not a content destination
-- **Value-add must come from**: categorization, clustering, personalization, speed — NOT from displaying publisher content
-- **Our AI summarization** must generate original preview text, not extract/copy from articles
-- **Monetization** must not depend on keeping users away from publisher sites
+As a verkkolehti producing original AI-journalism:
+- **We are a content destination** — readers come for our original articles
+- **Value-add comes from**: original synthesis, categorization, speed, accessibility, and AI-powered journalism
+- **Our AI writes original articles** based on research across multiple sources — not extracts or rewrites
+- **Monetization** is based on our own content and audience — standard media model
 
 ## Next Steps
-1. ⚠️ Perttu to review and confirm operating policy
-2. Alex to implement snippet length limits in article display pipeline
-3. Sara to design article cards within these constraints
-4. Monica to research Kopiosto licensing options for potential enhanced partnerships
-5. Legal review recommended before public launch
+1. ✅ Sisältömalli päätetty: alkuperäinen AI-journalismi
+2. Alex to implement byline fix + source attribution in pipeline
+3. Sara to design article layout with source section
+4. Legal review recommended before public launch (focus: AI disclosure compliance, EU AI Act Art. 50)

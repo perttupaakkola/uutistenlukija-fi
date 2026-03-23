@@ -165,7 +165,7 @@ For Hugo: generate sitemap via custom template in `layouts/_default/news-sitemap
 - Fast pages (LCP < 2.5s)
 - Transparent editorial identity
 
-**Aggregator risk note:** Google News favours original reporting. To mitigate: add editorial context to category pages, publish roundups/explainers, ensure article landing pages have meaningful content beyond just a headline + link.
+**Note:** Google News favours original reporting — which aligns perfectly with our model. As a verkkolehti producing original AI-written journalism from multiple sources, we are well-positioned for Google News inclusion.
 
 ---
 

@@ -1,7 +1,7 @@
 # Finnish Media Regulatory Landscape — uutistenlukija.fi (2026-03)
 
 **Last updated:** 2026-03-22
-**Purpose:** Practical regulatory overview for launching and operating uutistenlukija.fi as a Finnish online news aggregator.
+**Purpose:** Practical regulatory overview for launching and operating uutistenlukija.fi as a Finnish online newspaper (verkkolehti) producing original AI-written journalism.
 
 ---
 
@@ -14,7 +14,7 @@ Uutistenlukija.fi is **not primarily facing a classic "broadcast licence" proble
 3. **Advertising transparency / recognisability**
 4. **Copyright and publisher-rights risk** (already covered in the legal brief)
 
-For a Finnish online news aggregator, the most important practical rule is:
+For a Finnish online newspaper, the most important practical rule is:
 
 Operate as a transparent online intermediary/publisher website with clear contact details, conservative moderation/reporting processes, clear ad labelling, and strong privacy/cookie controls.
 
@@ -24,7 +24,7 @@ Operate as a transparent online intermediary/publisher website with clear contac
 
 ### Bottom line
 
-For a normal **website-based online news aggregator**, there does **not** appear to be a special Traficom-style publication licence requirement comparable to broadcasting licences for radio/TV.
+For a normal **website-based online news publication**, there does **not** appear to be a special Traficom-style publication licence requirement comparable to broadcasting licences for radio/TV.
 
 That said, Traficom is still relevant because it sits in the broader Finnish communications regulatory environment, especially around:
 
@@ -38,7 +38,7 @@ That said, Traficom is still relevant because it sits in the broader Finnish com
 **What uutistenlukija likely does not need:**
 
 - no traditional broadcast licence merely for operating a website
-- no newsroom permit just to publish online aggregated news content
+- no newsroom permit just to publish online news content
 - no special Traficom registration simply because the service is a web news site
 
 **What uutistenlukija does need in practice:**
@@ -80,11 +80,11 @@ Even if uutistenlukija is not formally entering every traditional-media self-reg
 
 ---
 
-## 2) EU DIGITAL SERVICES ACT (DSA) OBLIGATIONS FOR NEWS AGGREGATORS
+## 2) EU DIGITAL SERVICES ACT (DSA) OBLIGATIONS FOR ONLINE NEWS PUBLICATIONS
 
 ### Why the DSA matters here
 
-The DSA applies broadly to **online intermediary services** offered in the EU. A news aggregator can fall under DSA logic if it:
+The DSA applies broadly to **online intermediary services** offered in the EU. An online news publication can fall under DSA logic if it:
 
 - stores or presents third-party information
 - ranks/displays content from third parties
@@ -464,7 +464,7 @@ Needed especially if comments, accounts, personalization, or partner submissions
 
 ### Key conclusion
 
-For uutistenlukija, the regulatory landscape is **manageable** if the service launches as a transparent, conservative, well-documented digital publisher/aggregator.
+For uutistenlukija, the regulatory landscape is **manageable** if the service launches as a transparent, well-documented digital newspaper/verkkolehti.
 
 The biggest compliance traps are **not** classic media licensing. They are:
 
@@ -484,6 +484,6 @@ Translate this into a short implementation checklist for launch:
 
 ### Working operating principle
 
-Launch as a conservative, clearly labelled, privacy-respecting aggregator — not as a "growth-hacked" media site.
+Launch as a transparent, clearly labelled, privacy-respecting verkkolehti producing original AI-journalism.
 
 That lowers legal risk and strengthens trust at the same time.

@@ -85,7 +85,7 @@ Finnish news readers overwhelmingly prefer **direct access** to trusted publishe
 
 **Realistic traffic estimate:** 1-2% of daily visitors from Instagram
 
-### Summary: Traffic Mix for News Aggregator
+### Summary: Traffic Mix for Online Newspaper
 
 **Recommended channel focus (by effort & return):**
 
@@ -100,7 +100,7 @@ Finnish news readers overwhelmingly prefer **direct access** to trusted publishe
 
 ---
 
-## Part 2: Finnish Aggregator Sites + Submission Opportunities
+## Part 2: Finnish News Platforms + Submission Opportunities
 
 ### 1. Ampparit.com — The Primary Competitor
 
@@ -155,7 +155,7 @@ Finnish news readers overwhelmingly prefer **direct access** to trusted publishe
 - Not open to third-party feeds (state broadcaster)
 - Mention for awareness only
 
-### 5. Alternative Aggregators & Distribution
+### 5. Alternative Platforms & Distribution
 
 **Smaller but valuable channels:**
 
@@ -427,7 +427,7 @@ Examples:
 
 **Long-term (Months 4-6):**
 1. 1,000+ newsletter subscribers
-2. Consistent 5-10k monthly visitors (direct + social + aggregators)
+2. Consistent 5-10k monthly visitors (direct + social + platforms)
 3. 5-10% converting to premium tier
 4. Establish as trusted news source in niches (tech, business, politics)
 
@@ -435,7 +435,7 @@ Examples:
 
 ## Critical Success Factors
 
-- **Quality traffic** — News aggregators need clean, non-bot traffic. CPM varies wildly.
+- **Quality traffic** — News sites need clean, non-bot traffic. CPM varies wildly.
 - **Direct relationships** — Sanoma/Alma direct deals beat open-market auctions
 - **Newsletter list** — Email subscribers = predictable sponsorship revenue
 - **Content credibility** — Native sponsorships + affiliate links only work if editorial trust is high

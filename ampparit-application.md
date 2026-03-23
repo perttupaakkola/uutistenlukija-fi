@@ -158,11 +158,11 @@ Full 8/8 category alignment. Strong submission case.
 4. No misconduct, harmful content, or abuse
 5. Gambling advertising compliance (arpajaislaki + kuluttajansuojalaki)
 
-## The aggregator-applying-to-aggregator nuance
+## Positioning for Ampparit
 
-Ampparit may be cautious about listing another aggregator. Best framing:
+Uutistenlukija is not an aggregator like Ampparit — we are a verkkolehti that produces original AI-written journalism. Best framing for the application:
 
-- uutistenlukija **curates and adds editorial value** — not just a mirror
-- **drives traffic back** to original sources (same model as Ampparit itself)
-- **adds category structure** users can't get elsewhere
-- is a **traffic source** for Ampparit's own partner publishers
+- uutistenlukija **produces original articles** — not a mirror or aggregator
+- **adds unique editorial value** through AI-powered multi-source journalism
+- **complements Ampparit's ecosystem** as an original content source
+- **has its own editorial voice** and category structure

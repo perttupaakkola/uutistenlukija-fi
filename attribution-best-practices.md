@@ -6,17 +6,18 @@
 
 ---
 
-## PART 1: MITEN AGGREGAATTORIT ATTRIBUOIVAT
+## PART 1: MITEN ERI UUTISMEDIAT ATTRIBUOIVAT
 
-| Aggregaattori | Täysartikkeli? | Attribuutiomuoto | Linkki lähteeseen? | AI-sisältö? |
+| Media | Tyyppi | Attribuutiomuoto | Linkki lähteisiin? | AI-sisältö? |
 |---|---|---|---|---|
-| Google News | ❌ Snippet | Julkaisija + logo näkyvä | ✅ Aina | AI-yhteenvedot lähdeviittein |
-| Apple News | ✅ Julkaisijan oma | Julkaisija + logo | ✅ | ❌ |
-| Flipboard | Osittain (RSS) | Verified publisher badge | ✅ Aina | ❌ |
-| Ampparit | ❌ Headline + snippet | "Lähde: [domain]" | ✅ Aina | ❌ |
-| Uutistenlukija (nyt) | ✅ AI-kirjoitettu | Fiktiiviset bylinit | ❌ Ei lainkaan | ✅ Piilotettu |
+| Google News | Aggregaattori (snippet) | Julkaisija + logo näkyvä | ✅ Aina | AI-yhteenvedot lähdeviittein |
+| Apple News | Aggregaattori (julkaisijan oma) | Julkaisija + logo | ✅ | ❌ |
+| Ampparit | Aggregaattori (headline) | "Lähde: [domain]" | ✅ Aina | ❌ |
+| Reuters/AP | Alkuperäinen uutistoimisto | Toimisto + toimittaja byline | Ei tarpeen (oma sisältö) | Osittain |
+| STT | Alkuperäinen uutistoimisto | "Tuotettu automaattisesti" | Datalähde mainittu | ✅ Merkitty |
+| **Uutistenlukija (nyt)** | **Verkkolehti (alkuperäinen)** | **"Uutistenlukija · AI-toimitus"** | **Käytetyt lähteet listattu** | **✅ Merkitty** |
 
-**Yksikään vakiintunut aggregaattori ei kirjoita artikkeleita uudelleen ilman attribuutiota.** Jokainen linkittää lähteeseen.
+**Uutistenlukija on verkkolehti, joka tuottaa alkuperäistä AI-avusteista journalismia useiden lähteiden pohjalta.** Emme ole aggregaattori — emme kopioi tai välitä muiden artikkeleita. Kirjoitamme omat artikkelimme ja listaamme käytetyt lähteet.
 
 ---
 
@@ -29,7 +30,7 @@
 
 ---
 
-## PART 3: EU AI ACT ART. 50 — KRIITTINEN TIETO
+## PART 3: EU AI ACT ART. 50 — TÄRKEÄ TIETO
 
 **Voimaan: 2. elokuuta 2026** — noin 4 kuukautta.
 
@@ -38,8 +39,8 @@ _"Deployers of AI systems that generate text with the purpose of informing the p
 **Uutistenlukijalle tämä tarkoittaa:**
 - Uutisartikkelit = "matters of public interest" — soveltuu suoraan
 - AI-kirjoitettu sisältö = pakollinen disclosure
-- Fiktiiviset journalist-persoonat = juuri se mitä Art. 50 kieltää ("content that could be mistaken for human-made")
-- Machine-readable merkintä vaaditaan
+- Byline "Uutistenlukija · AI-toimitus" on läpinäkyvä ja Art. 50 -yhteensopiva
+- Machine-readable merkintä vaaditaan (`<meta name="ai-generated" content="true">`)
 
 ---
 
@@ -54,22 +55,23 @@ _"Deployers of AI systems that generate text with the purpose of informing the p
 
 ---
 
-## PART 5: SUOSITUS UUTISTENLUKIJALLE
+## PART 5: UUTISTENLUKIJAN ATTRIBUUTIOMALLI
 
-**Suositus: Option B (AI-yhteenvedot täydellä attribuutiolla)**
+**Malli: Alkuperäinen AI-journalismi täydellä lähdeläpinäkyvyydellä**
 
-Artikkelin yläosa:
+Artikkelin byline:
+```
+✅ "Uutistenlukija · AI-toimitus"
+```
+
+Artikkelin lopussa — käytetyt lähteet:
 ```
 ┌──────────────────────────────────────────────────────┐
-│ 🤖 Automaattinen tiivistelmä                        │
-│ Alkuperäinen: [Julkaisija] → [Lue alkuperäinen]     │
+│ 📰 Lähteet                                          │
+│ • Yle Uutiset — [artikkelin otsikko]                │
+│ • Helsingin Sanomat — [artikkelin otsikko]           │
+│ • Reuters — [artikkelin otsikko]                     │
 └──────────────────────────────────────────────────────┘
-```
-
-Byline-vaihto:
-```
-❌ "Laura Mäkelä · Tiedetoimittaja"
-✅ "Uutistenlukija · Automaattinen kooste"
 ```
 
 HTML-metadata:
@@ -82,11 +84,11 @@ HTML-metadata:
 
 ## ALEXILLE — P0 LISTA
 
-- [ ] Poista kaikki fiktiiviset toimittajabylinet → "Uutistenlukija · Automaattinen kooste"
-- [ ] Lisää lähde-attribuutioboxi jokaisen artikkelin yläosaan
-- [ ] Linkki alkuperäiseen artikkeliin — näkyvä, above the fold
-- [ ] `<meta name="ai-generated" content="true">` jokaiselle sivulle
+- [ ] Vaihda kaikki fiktiiviset toimittajabylinet → "Uutistenlukija · AI-toimitus"
+- [ ] Lisää "Lähteet"-osio jokaisen artikkelin loppuun (käytetyt lähteet listattuina)
+- [ ] `<meta name="ai-generated" content="true">` jokaiselle artikkelisivulle
 - [ ] Poista mahdolliset fiktiiviset toimittajaprofiilisivut
+- [ ] Varmista ettei artikkeleissa ole sanatarkkaa kopiointia lähteistä (toimituksellinen standardi)
 
 ---
 
@@ -94,5 +96,6 @@ HTML-metadata:
 
 - EU AI Act Art. 50 tulee voimaan elokuussa 2026 — 4 kuukautta
 - STT on paras suomalainen esikuva — "Tuotettu automaattisesti" ilman henkilöbyliniä
-- "Automaattinen tiivistelmä" > "AI-kirjoitettu" suomalaiselle yleisölle
-- Tämä on Alexin spec — kun Perttu valitsee Option A/B/C, Alex toteuttaa suoraan tämän pohjalta
+- "AI-toimitus" on selkeä ja rehellinen byline suomalaiselle yleisölle
+- Sisältömalli on päätetty: alkuperäinen AI-journalismi useiden lähteiden pohjalta
+- Art. 15 / Kopiosto ei ole suoraan sovellettavissa, koska tuotamme alkuperäistä sisältöä — mutta toimituksellisena standardina emme kopioi sanatarkasti

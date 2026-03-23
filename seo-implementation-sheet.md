@@ -56,7 +56,7 @@
 | Article pages | NewsArticle + BreadcrumbList | P0 |
 | Static pages | WebPage | P1-P2 |
 
-**Key aggregator note:** In `NewsArticle`, set `url` to the original source URL — not the uutistenlukija URL. Signals aggregation, not authorship.
+**Note:** In `NewsArticle`, set `url` to the uutistenlukija URL — we are the publisher of original content. Include `citation` references to sources used in the article.
 
 ---
 

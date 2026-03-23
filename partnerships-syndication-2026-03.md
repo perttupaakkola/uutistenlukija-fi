@@ -9,7 +9,7 @@
 
 Uutistenlukija.fi has three realistic partnership tracks:
 
-1. **Distribution partnerships** — getting uutistenlukija listed, indexed, and promoted via aggregator and platform channels (Ampparit, Google News, Apple News)
+1. **Distribution partnerships** — getting uutistenlukija listed, indexed, and promoted via platform channels (Ampparit, Google News, Apple News)
 2. **Content/source partnerships** — building sustainable, legally clear ingest relationships with Finnish publishers via RSS/feed agreements
 3. **Tech partnerships** — selecting and connecting to the right CDN, analytics, ad network, and newsletter tools to operate efficiently
 
@@ -21,12 +21,12 @@ A fourth track — **direct content-sharing or cross-promotion agreements** with
 
 ### Bottom line
 
-Formal content-sharing or co-publishing partnerships with major Finnish news publishers are **not a realistic day-one play** for an early-stage aggregator, given:
+Formal content-sharing or co-publishing partnerships with major Finnish news publishers are **not a realistic day-one play** for an early-stage verkkolehti, given:
 
 - the publisher-rights / Article 15 legal environment (covered in the legal brief)
 - Uutiskeräin.fi's closure in Apr 2025 as a cautionary precedent
 - the need to first prove traffic and audience value
-- publisher wariness toward aggregators in general
+- the need to establish credibility as a new publication
 
 However, **two forms of informal or light-touch relationship are achievable**:
 
@@ -59,7 +59,7 @@ STT does not typically have a direct self-service licensing model for small inde
 **Relevance:**
 
 - Many Finnish news sites are STT subscribers — their stories appear widely
-- Uutistenlukija aggregating STT-sourced articles via licensed outlets is low-risk (we're aggregating published work, not using the raw wire)
+- Uutistenlukija using STT-sourced articles as research input for original journalism is low-risk (we write original articles, not republish)
 - A future direct licensing discussion with STT for structured data / metadata is worth exploring at scale
 
 **Timeline:** relevant at later stage; not a launch-day item
@@ -71,16 +71,16 @@ STT does not typically have a direct self-service licensing model for small inde
 **Relevance:**
 
 - Uutistenlukija's Ulkomaat category can be enriched with AP/Reuters-sourced stories from Finnish publishers who carry them
-- We don't need a direct wire agreement if we're aggregating from already-licensed Finnish publishers
+- We don't need a direct wire agreement as we write original articles based on publicly available sources
 
 ### D. Finnish media associations — not a formal partnership target but worth tracking
 
-- **Medialiitto** (Finnish Media Federation) represents major publishers. More of an industry body than a partnership target, but staying aware of their positions on aggregation and publisher rights is useful.
+- **Medialiitto** (Finnish Media Federation) represents major publishers. More of an industry body than a partnership target, but staying aware of their positions on AI-generated content and publisher rights is useful.
 - **Sanomalehtien Liitto** — similar relevance; monitors market norms
 
 ---
 
-## 2) AGGREGATOR SUBMISSION PLATFORMS
+## 2) NEWS PLATFORM SUBMISSIONS
 
 ### A. Ampparit.com
 
@@ -116,7 +116,7 @@ Ampparit allows publishers/site owners to submit their site for inclusion. The s
 
 **Important nuance:**
 
-Uutistenlukija is an _aggregator_ like Ampparit — not a traditional publisher. Some aggregators do list other aggregators; others are skeptical of the model. The best framing for submission would emphasize the curated, categorized, quality-filtered nature of the content rather than the aggregation mechanism.
+Uutistenlukija is a verkkolehti that produces original AI-written journalism — not an aggregator. This positions us well for Ampparit inclusion as an original content source. The best framing for submission would emphasize our original editorial content, categorized coverage, and quality-filtered journalism.
 
 ---
 
@@ -166,15 +166,15 @@ From Google's content policies:
 - [ ] compliance with Google News content policies (no hate speech, misleading content, etc.)
 - [ ] clear publisher identity (not anonymous/opaque)
 
-**Aggregator-specific consideration:**
+**Original content advantage:**
 
-Google News has historically been careful about including aggregators versus original publishers. An aggregator that is primarily linking to external sources may face challenges vs. a site with original editorial content.
+Google News favours original reporting. As a verkkolehti producing original AI-written journalism from multiple sources, uutistenlukija is well-positioned for inclusion.
 
 **Strategic implication:**
 
 - If uutistenlukija includes category pages, topic summaries, or any editorial context, those strengthen the Google News case
 - The explainer/context pieces discussed in the content strategy are directly relevant here
-- A pure link-dump aggregator with no original text is harder to include
+- Our original journalism model is a strong fit for Google News inclusion
 
 **Action items:**
 
@@ -202,9 +202,9 @@ Google News has historically been careful about including aggregators versus ori
 
 ---
 
-### D. Flipboard / SmartNews / other aggregators
+### D. Flipboard / SmartNews / other platforms
 
-Several international news aggregators accept RSS submissions:
+Several international news platforms accept RSS submissions:
 
 - **Flipboard** (accepts RSS; global reach)
 - **SmartNews** (global app; growing European coverage)
@@ -212,7 +212,7 @@ Several international news aggregators accept RSS submissions:
 
 **Assessment:**
 
-These are lower-priority and unlikely to drive meaningful Finnish-language traffic. Worth submitting RSS to Flipboard as a low-effort action; the others have diminishing returns for a Finnish-language-first aggregator.
+These are lower-priority and unlikely to drive meaningful Finnish-language traffic. Worth submitting RSS to Flipboard as a low-effort action; the others have diminishing returns for a Finnish-language-first publication.
 
 ---
 
@@ -221,10 +221,10 @@ These are lower-priority and unlikely to drive meaningful Finnish-language traff
 ### Two distinct models
 
 **Model A — Passive RSS ingest (current approach)**
-Uutistenlukija ingests publicly available RSS feeds from publishers who make them available. No formal agreement needed for headline + link aggregation. Legal risk managed by conservative snippet policy.
+Uutistenlukija uses publicly available RSS feeds as research sources for writing original journalism. No formal agreement needed since we produce original articles — RSS is a research input, not republished content.
 
 **Model B — Active RSS partnership / feed agreement**
-Publisher explicitly acknowledges or agrees to being aggregated, possibly in exchange for:
+Publisher explicitly acknowledges or agrees to being cited as a source, possibly in exchange for:
 
 - referral traffic guarantees
 - attribution standards
@@ -248,7 +248,7 @@ Publisher explicitly acknowledges or agrees to being aggregated, possibly in exc
 | Kauppalehti | Working | Alma Media group risk; anti-AI notice | High |
 | Tekniikka & Talous | Needs re-verify | Re-verify; worth formal contact if working | Medium |
 | Pelaaja.fi | Tier 2 | Gaming niche; likely RSS-friendly | Low |
-| Muropaketti | Tier 2 | Community/tech; typically aggregator-friendly | Low |
+| Muropaketti | Tier 2 | Community/tech; open to partnerships | Low |
 | Duodecim | Tier 2 | Medical/health; formal, conservative | Medium |
 
 ### Recommended RSS partnership approach
@@ -256,7 +256,7 @@ Publisher explicitly acknowledges or agrees to being aggregated, possibly in exc
 **Short-term (launch phase)**
 
 - operate on passive RSS ingest from Tier 1 sources
-- strict conservative snippet policy (headline + source + max 120 chars)
+- original journalism with proper source attribution
 - log all sources clearly in internal allowlist
 
 **Medium-term (3-6 months post-launch)**
@@ -266,7 +266,7 @@ After establishing traffic and referral data:
 - reach out to 2-3 small/mid publishers with referral numbers
 - propose informal reciprocal acknowledgment: "we feature your content prominently, here's the traffic we sent you"
 - gauge interest in a formal content agreement
-- best candidates: Turun Sanomat, Pelaaja.fi, Muropaketti (most aggregator-friendly culture)
+- best candidates: Turun Sanomat, Pelaaja.fi, Muropaketti (most open to partnerships)
 
 **Longer-term**
 
