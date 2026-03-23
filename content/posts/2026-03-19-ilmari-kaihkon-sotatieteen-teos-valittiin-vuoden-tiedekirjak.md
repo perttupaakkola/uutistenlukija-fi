@@ -3,11 +3,6 @@ title: "Ilmari Käihkön sotatieteen teos valittiin vuoden tiedekirjaksi"
 date: 2026-03-19T14:34:57.333060+00:00
 categories:
   - Kulttuuri
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
 tags:
   - kulttuuri

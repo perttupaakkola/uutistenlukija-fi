@@ -3,11 +3,6 @@ title: "Guthrie-perhe pyytää apua kadonneen äidin löytämiseksi"
 date: 2026-03-22T15:12:51.090752+00:00
 categories:
   - Ulkomaat
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Guthrie-perhe pyytää apua kadonneen äidin, 84-vuotiaan Nancy Guthrien, löytämiseksi Tucsonissa. Poliisi epäilee kidnappausyhteyttä."
 summary: "Savannah Guthrie ja hänen perheensä ovat pyytäneet apua kadonneen äidin löytämiseksi. Nancy Guthrie katosi helmikuussa, eikä poliisi ole saanut epäiltyjä kiinni. Perhe on tarjonnut palkkioita ja pyytänyt paikallisten apua."
 image: "https://images.unsplash.com/photo-1577994781414-6f6149d9e628?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxndXRocmllLXBlcmhlJTIwcHl5dCVDMyVBNCVDMyVBNCUyMGFwdWElMjBrYWRvbm5lZW58ZW58MXwwfHx8MTc3NDE5MjM2N3ww&ixlib=rb-4.1.0&q=80&w=1080"

@@ -3,11 +3,6 @@ title: "Ronnie O'Sullivan teki snooker-historiaa – vapaapallotilanne mahdollis
 date: 2026-03-20T10:42:15.226820+00:00
 categories:
   - Urheilu
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Ronnie O'Sullivan teki snooker-historiaa Yushanissa, kun hän saavutti huikeat 153 pistettä yhdellä lyöntivuorolla World Openissa."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=80&w=400"

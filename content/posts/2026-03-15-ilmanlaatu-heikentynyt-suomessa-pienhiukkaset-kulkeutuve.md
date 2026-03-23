@@ -3,7 +3,6 @@ title: "Ilmanlaatu heikentynyt Suomessa – pienhiukkaset kulkeutuvat Keski-Euro
 date: 2026-03-15T12:46:00+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
 draft: false
 tags:
   - keski

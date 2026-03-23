@@ -3,11 +3,6 @@ title: "Santa Amaze -peliautomaatti tuo jouluteeman kasinoihin"
 date: 2026-03-19T14:26:34.658491+00:00
 categories:
   - Teknologia
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - teknologia

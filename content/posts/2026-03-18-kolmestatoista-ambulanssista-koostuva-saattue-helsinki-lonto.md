@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1633521249135-2b4920138ca3?crop=
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
 tags:
   - kotimaa

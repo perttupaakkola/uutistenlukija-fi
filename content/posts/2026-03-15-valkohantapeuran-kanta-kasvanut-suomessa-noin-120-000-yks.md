@@ -3,7 +3,6 @@ title: "Valkohäntäpeuran kanta kasvanut Suomessa – noin 120 000 yksilöä"
 date: 2026-03-15T12:45:00+00:00
 categories:
   - Tiede
-author: "Matti Virtanen"
 draft: false
 tags:
   - kanta

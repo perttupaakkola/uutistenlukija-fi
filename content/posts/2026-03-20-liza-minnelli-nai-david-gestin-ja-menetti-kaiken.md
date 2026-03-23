@@ -3,11 +3,6 @@ title: "Liza Minnelli nai David Gestin ja menetti kaiken"
 date: 2026-03-20T08:52:00.264269+00:00
 categories:
   - Kulttuuri
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Liza Minnelli kertoo avioliitostaan David Gestin kanssa, joka johti taloudellisiin vaikeuksiin ja omaisuuden menetyksiin vain muutamassa vuodessa."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=80&w=400"

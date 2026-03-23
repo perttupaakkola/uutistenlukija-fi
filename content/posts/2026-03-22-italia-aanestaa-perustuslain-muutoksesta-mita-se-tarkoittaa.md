@@ -3,11 +3,6 @@ title: "Italia äänestää perustuslain muutoksesta – mitä se tarkoittaa Mel
 date: 2026-03-22T00:22:36.631674+00:00
 categories:
   - Ulkomaat
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Italia äänestää perustuslain muutoksesta, joka vaikuttaa pääministeri Giorgia Meloniin ja hänen hallintoonsa. Äänestyksellä on suuri merkitys poliittiselle kentälle."
 summary: "Italia käy läpi merkittävän perustuslain muutoksen äänestyksen, joka vaikuttaa pääministeri Giorgia Meloniin ja hänen hallintoonsa. Uudistus on saanut voimakasta kritiikkiä opposition taholta, ja sen tulos voi muuttaa poliittista kenttää merkittävästi."
 image: "https://images.unsplash.com/photo-1731594700674-92f656ed9572?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpdGFsaWElMjAlQzMlQTQlQzMlQTRuZXN0JUMzJUE0JUMzJUE0JTIwcGVydXN0dXNsYWluJTIwbXV1dG9rc2VzdGF8ZW58MXwwfHx8MTc3NDEzODk1M3ww&ixlib=rb-4.1.0&q=80&w=1080"

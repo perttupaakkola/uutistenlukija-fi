@@ -3,7 +3,6 @@ title: "Armas-festivaali täyttää kymmenen vuotta Tampereella"
 date: 2026-03-15T12:44:00+00:00
 categories:
   - Kulttuuri
-author: "Laura Mäkelä"
 draft: false
 tags:
   - festivaali

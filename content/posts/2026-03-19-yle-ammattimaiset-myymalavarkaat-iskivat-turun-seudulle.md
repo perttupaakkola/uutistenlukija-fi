@@ -3,11 +3,6 @@ title: "Yle: Ammattimaiset myymälävarkaat iskivät Turun seudulle"
 date: 2026-03-19T19:39:06.614941+00:00
 categories:
   - Kotimaa
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Turun seudulla ammattimaiset myymälävarkaat iskevät useissa liikeyrityksissä, mikä herättää huolta ja saa viranomaiset tutkimaan tilannetta"
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Yle: Ammattimaiset myymälävarkaat iskivät Turun seudulle"

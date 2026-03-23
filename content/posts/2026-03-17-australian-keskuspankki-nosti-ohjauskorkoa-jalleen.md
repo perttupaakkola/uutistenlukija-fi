@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Talous
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
 tags:
   - talous

@@ -3,7 +3,6 @@ title: "Orpo Oslon kokouksessa: Pohjoismaat ja Kanada keskustelivat Ukrainan tue
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-author: "Mikko Salonen"
 draft: false
 tags:
   - orpo

@@ -3,11 +3,6 @@ title: "Pron puheenjohtaja syyttää suomalaisia pörssiyhtiöitä lyhytnäköis
 date: 2026-03-20T10:38:06.246418+00:00
 categories:
   - Talous
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Pron puheenjohtaja Niko Simola syyttää suomalaisia pörssiyhtiöitä lyhytnäköisyydestä, joka uhkaa kasvua ja pitkän aikavälin strategioita."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=80&w=400"

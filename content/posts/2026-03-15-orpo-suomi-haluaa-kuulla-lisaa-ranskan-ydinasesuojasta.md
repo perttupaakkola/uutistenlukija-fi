@@ -3,7 +3,6 @@ title: "Orpo: Suomi haluaa kuulla lisää Ranskan ydinasesuojasta"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-author: "Jukka Nieminen"
 draft: false
 tags:
   - orpo

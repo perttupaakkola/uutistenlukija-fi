@@ -3,11 +3,6 @@ title: "Australian sosiaalisen median kielto alaikäisiltä herättää huomiota
 date: 2026-03-22T00:03:10.188131+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Australia on ensimmäinen maa, joka kieltää sosiaalisen median käyttö alle 16-vuotiailta, poistaen yli 4,7 miljoonaa tiliä vuoden 2023 aikana."
 summary: "Australia tuli ensimmäiseksi maaksi, joka kielsi sosiaalisen median alle 16-vuotiailta. Laki on jo tuottanut tulosta, kun miljoonilta lapsilta on poistettu pääsy sosiaalisiin medioihin."
 image: "https://images.unsplash.com/photo-1739193878148-5def6e46e3f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxhdXN0cmFsaWFuJTIwc29zaWFhbGlzZW4lMjBtZWRpYW4lMjBraWVsdG98ZW58MXwwfHx8MTc3NDEzNzc4N3ww&ixlib=rb-4.1.0&q=80&w=1080"

@@ -3,11 +3,6 @@ title: "Pohjois-Koreassa järjestettiin vaalit – äänestysaktiivisuus lähes 
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
 tags:
   - pohjois

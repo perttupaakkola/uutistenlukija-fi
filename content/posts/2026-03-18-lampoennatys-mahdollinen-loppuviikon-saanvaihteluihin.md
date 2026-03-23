@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1615416622685-88123283f70a?crop=
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Tiede
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
 tags:
   - tiede

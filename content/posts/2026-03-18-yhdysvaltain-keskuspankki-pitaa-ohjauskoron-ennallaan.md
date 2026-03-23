@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Talous
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
 tags:
   - talous

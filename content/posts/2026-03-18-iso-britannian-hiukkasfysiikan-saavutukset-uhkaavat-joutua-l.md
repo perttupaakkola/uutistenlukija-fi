@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Tiede
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - tiede

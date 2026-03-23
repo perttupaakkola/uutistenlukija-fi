@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kulttuuri
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - kulttuuri

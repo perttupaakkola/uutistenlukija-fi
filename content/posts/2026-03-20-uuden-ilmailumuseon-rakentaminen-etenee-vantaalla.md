@@ -3,11 +3,6 @@ title: "Uuden Ilmailumuseon rakentaminen etenee Vantaalla"
 date: 2026-03-20T06:11:54.362190+00:00
 categories:
   - Kulttuuri
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Vantaalla rakentuu uusi ilmailumuseo, joka tarjoaa elämyksiä ilmailuharrastajille. Museon kilpailutus on käynnissä, ja budjetti on 25 miljoonaa euroa."
 image: "https://images.unsplash.com/photo-1585560350622-c9767217130f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpbG1haWx1bXVzZW9uJTIwZXRlbmVlJTIwdmFudGFhbGxhJTIwY3VsdHVyZXxlbnwxfDB8fHwxNzczOTg3MTA2fDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1585560350622-c9767217130f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpbG1haWx1bXVzZW9uJTIwZXRlbmVlJTIwdmFudGFhbGxhJTIwY3VsdHVyZXxlbnwxfDB8fHwxNzczOTg3MTA2fDA&ixlib=rb-4.1.0&q=80&w=400"

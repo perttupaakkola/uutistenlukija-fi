@@ -3,11 +3,6 @@ title: "Lapissa mitattiin yli metri lunta marraskuussa"
 date: 2026-03-20T09:31:31.913327+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Lapissa mitataan tänä joulukuussa poikkeuksellinen lumimäärä, ylittäen yli metrin erityisesti Sodankylän ja Rovaniemen alueilla."
 image: "https://images.unsplash.com/photo-1737498725833-15415fe3b1bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxsYXBpc3NhJTIwbWl0YXR0aWluJTIwbWV0cmklMjBsdW50YXxlbnwxfDB8fHwxNzczOTk5MDg4fDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1737498725833-15415fe3b1bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxsYXBpc3NhJTIwbWl0YXR0aWluJTIwbWV0cmklMjBsdW50YXxlbnwxfDB8fHwxNzczOTk5MDg4fDA&ixlib=rb-4.1.0&q=80&w=400"

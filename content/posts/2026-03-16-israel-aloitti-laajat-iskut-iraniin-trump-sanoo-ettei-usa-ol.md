@@ -3,11 +3,6 @@ title: "Israel aloitti laajat iskut Iraniin – Trump sanoo, ettei USA ole valmi
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
 tags:
   - iskut

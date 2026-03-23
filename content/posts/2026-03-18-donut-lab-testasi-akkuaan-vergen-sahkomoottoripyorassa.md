@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Teknologia
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
 tags:
   - teknologia

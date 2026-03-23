@@ -4,7 +4,6 @@ date: 2026-03-15T12:40:00+00:00
 lastmod: 2026-03-21T20:00:00+00:00
 categories:
   - Urheilu
-author: "Matti Virtanen"
 draft: false
 tags:
   - antonelli

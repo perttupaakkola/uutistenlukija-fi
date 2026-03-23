@@ -3,11 +3,6 @@ title: "Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhla
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Talous
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - nuoret

@@ -3,11 +3,6 @@ title: "Eduskunnan poissaolotilastot herättävät keskustelua perhevapaista"
 date: 2026-03-18T22:26:32.784786+00:00
 categories:
   - Kotimaa
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Eduskunnan tasa-arvoneuvosto ehdotti poissaolojen kirjaamiskäytännön muuttamista."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Eduskunnan poissaolotilastot herättävät keskustelua perhevapaista"

@@ -3,11 +3,6 @@ title: "Puolustusvoimien uusi ohje: Oman aseen saa ottaa mukaan sotatilanteessa"
 date: 2026-03-22T07:52:37.615650+00:00
 categories:
   - Kotimaa
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Puolustusvoimat sallii nyt reserviläisten ottaa oman aseen mukaan sotatilanteessa Venäjän uhkien vuoksi, mikä muuttaa puolustusstrategiaa Suomessa."
 summary: "Puolustusvoimat sallii reserviläisten ottaa omat aseensa mukaan sotatilanteessa. Muutoksen myötä aseiden osuus reserviläisten varustuksessa kasvaa, herättäen kysymyksiä turvallisuudesta ja valvonnasta."
 image: "https://images.unsplash.com/photo-1697726952507-453d993d44c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwdW9sdXN0dXN2b2ltaWVuJTIwb2hqZSUyMG9tYW4lMjBzYWF8ZW58MXwwfHx8MTc3NDE2NTk1NHww&ixlib=rb-4.1.0&q=80&w=1080"

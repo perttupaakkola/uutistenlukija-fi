@@ -3,11 +3,6 @@ title: "Neandertalit käyttivät kivipohjaista antiseptistä tarra-ainetta"
 date: 2026-03-18T22:26:32.784786+00:00
 categories:
   - Tiede
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Neanderthalien elämäntapatutkimukset ovat syventäneet ymmärrystämme heidän arjestaan."
 image: "https://images.unsplash.com/photo-1759150467270-aa4496d4c61a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxuZWFuZGVydGFsaXQlMjBrJUMzJUE0eXR0aXYlQzMlQTR0JTIwa2l2aXBvaGphaXN0YSUyMGFudGlzZXB0aXN0JUMzJUE0fGVufDF8MHx8fDE3NzQwMDgwNjN8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Neandertalit käyttivät kivipohjaista antiseptistä tarra-ainetta"

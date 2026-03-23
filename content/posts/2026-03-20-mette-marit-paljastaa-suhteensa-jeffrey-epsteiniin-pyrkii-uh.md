@@ -3,11 +3,6 @@ title: "Mette-Marit paljastaa suhteensa Jeffrey Epsteiniin – pyrkii uhriutumaa
 date: 2026-03-20T11:20:41.864601+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Norjan kruununprinsessa Mette-Marit paljastaa suhteensa Jeffrey Epsteiniin ja hakee ymmärrystä itseensä manipuloinnin uhriutumisensa kautta."
 image: "https://images.unsplash.com/photo-1685773426365-c3b5081b82f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtZXR0ZS1tYXJpdCUyMHBhbGphc3RhYSUyMHN1aHRlZW5zYSUyMGplZmZyZXl8ZW58MXwwfHx8MTc3NDAwNTYyNXww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1685773426365-c3b5081b82f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtZXR0ZS1tYXJpdCUyMHBhbGphc3RhYSUyMHN1aHRlZW5zYSUyMGplZmZyZXl8ZW58MXwwfHx8MTc3NDAwNTYyNXww&ixlib=rb-4.1.0&q=80&w=400"

@@ -3,11 +3,6 @@ title: "Lapin-matka paljasti vakavia puutteita ostetussa omakotitalossa"
 date: 2026-03-21T08:32:42.168753+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Jyväskyläläinen pariskunta palasi Lapista, ja heidän ostamansa omakotitalo paljastui rakennusvikojen vuoksi asuttamiskelvottomaksi."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0MDY2OTc5fDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0MDY2OTc5fDA&ixlib=rb-4.1.0&q=80&w=400"

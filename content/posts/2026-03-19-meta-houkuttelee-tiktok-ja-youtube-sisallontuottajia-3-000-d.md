@@ -3,11 +3,6 @@ title: "Meta houkuttelee TikTok- ja YouTube-sisällöntuottajia 3 000 dollarin t
 date: 2026-03-19T19:33:46.850370+00:00
 categories:
   - Talous
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Meta tarjoaa sisällöntuottajille 3 000 dollaria kuukaudessa houkutellakseen heitä julkaisemaan sisältöä Facebookissa Creator Fast Track -ohjelman kautta."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_alt: "Meta houkuttelee TikTok- ja YouTube-sisällöntuottajia 3 000 dollarin tarjouksella"

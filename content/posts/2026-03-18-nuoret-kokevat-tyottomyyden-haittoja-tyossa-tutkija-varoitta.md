@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
   - Tiede
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - tiede

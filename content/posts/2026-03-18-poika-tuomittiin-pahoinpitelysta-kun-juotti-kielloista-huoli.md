@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=
 date: 2026-03-18T18:51:07.060713+00:00
 categories:
   - Kotimaa
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
 tags:
   - kotimaa

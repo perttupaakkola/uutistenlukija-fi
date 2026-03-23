@@ -3,11 +3,6 @@ title: "Lähihoitajalle tuomio 186 tietosuoja­rikoksesta – katseli luvatta po
 date: 2026-03-20T10:40:00.799728+00:00
 categories:
   - Kotimaa
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 description: "Keski-Suomen käräjäoikeus tuomitsee lähihoitajan 186 tietosuoja­rikoksesta potilastietojen luvattomasta katselusta Jyväskylässä."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=80&w=400"

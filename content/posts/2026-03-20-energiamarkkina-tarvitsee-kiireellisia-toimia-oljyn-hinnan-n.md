@@ -3,11 +3,6 @@ title: "Energiamarkkina tarvitsee kiireellisiä toimia öljyn hinnan nousun vuok
 date: 2026-03-20T10:38:06.246418+00:00
 categories:
   - Talous
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Kansainvälinen energiajärjestö (IEA) suosittelee hallituksille kiireellisiä toimia öljyn hintojen nousun hillitsemiseksi Lähi-idän konfliktin vuoksi."
 image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQwMDE0ODd8MA&ixlib=rb-4.1.0&q=80&w=400"

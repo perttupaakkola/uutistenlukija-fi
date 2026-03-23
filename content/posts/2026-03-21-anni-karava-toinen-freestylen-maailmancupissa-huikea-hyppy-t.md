@@ -3,11 +3,6 @@ title: "Anni Kärävä toinen freestylen maailmancupissa – huikea hyppy Tignes
 date: 2026-03-21T03:02:35.807864+00:00
 categories:
   - Urheilu
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Anni Kärävä sijoittuu toiseksi freestylen slopestylen maailmancupissa Tignesissä, saavuttaen huikeat 63,51 pistettä päätöskierroksellaan."
 image: "https://images.unsplash.com/photo-1593055507277-7730f06bf4e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxhbm5pJTIwayVDMyVBNHIlQzMlQTR2JUMzJUE0JTIwZnJlZXN0eWxlbiUyMG1hYWlsbWFuY3VwaXNzYXxlbnwxfDB8fHwxNzc0MDYyMTUyfDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1593055507277-7730f06bf4e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxhbm5pJTIwayVDMyVBNHIlQzMlQTR2JUMzJUE0JTIwZnJlZXN0eWxlbiUyMG1hYWlsbWFuY3VwaXNzYXxlbnwxfDB8fHwxNzc0MDYyMTUyfDA&ixlib=rb-4.1.0&q=80&w=400"

@@ -3,11 +3,6 @@ title: "Kuningas avasi maailman pisimmän rannikkopolun Englannissa"
 date: 2026-03-19T14:08:12.598119+00:00
 categories:
   - Ulkomaat
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - ulkomaat

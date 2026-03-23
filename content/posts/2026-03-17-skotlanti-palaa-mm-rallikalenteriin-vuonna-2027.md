@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Urheilu
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - urheilu

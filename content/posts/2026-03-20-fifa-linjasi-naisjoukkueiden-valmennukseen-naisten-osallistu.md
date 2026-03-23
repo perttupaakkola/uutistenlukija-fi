@@ -3,11 +3,6 @@ title: "Fifa linjasi naisjoukkueiden valmennukseen naisten osallistuvan"
 date: 2026-03-20T10:38:06.246418+00:00
 categories:
   - Urheilu
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Fifa päättää, että tulevissa naisjoukkueiden turnauksissa on oltava vähintään yksi naisvalmentaja, edistäen naisten roolia jalkapallossa."
 image: "https://images.unsplash.com/photo-1750698544794-bf1cd7038f92?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaWZhJTIwbGluamFzaSUyMG5haXNqb3Vra3VlaWRlbiUyMHZhbG1lbm51a3NlZW58ZW58MXwwfHx8MTc3NDAwMjgwOXww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1750698544794-bf1cd7038f92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaWZhJTIwbGluamFzaSUyMG5haXNqb3Vra3VlaWRlbiUyMHZhbG1lbm51a3NlZW58ZW58MXwwfHx8MTc3NDAwMjgwOXww&ixlib=rb-4.1.0&q=80&w=400"

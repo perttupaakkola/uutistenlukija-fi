@@ -3,11 +3,6 @@ title: "Chuck Norrisin meemikulttuuri elää nuorten sydämissä"
 date: 2026-03-21T04:33:00.855210+00:00
 categories:
   - Kulttuuri
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Chuck Norrisin meemikulttuuri vaikuttaa yhä nuorten keskuudessa, vaikka hän kuoli 86-vuotiaana. Hänen ikoninen roolinsa on inspiroinut hauskoja 'Chuck Norris -faktoja'."
 image: "https://images.unsplash.com/photo-1737639822965-eb41d80c0021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjaHVjayUyMG5vcnJpc2luJTIwbWVlbWlrdWx0dHV1cmklMjBlbCVDMyVBNCVDMyVBNHxlbnwxfDB8fHwxNzc0MDY3NTc3fDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1737639822965-eb41d80c0021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjaHVjayUyMG5vcnJpc2luJTIwbWVlbWlrdWx0dHV1cmklMjBlbCVDMyVBNCVDMyVBNHxlbnwxfDB8fHwxNzc0MDY3NTc3fDA&ixlib=rb-4.1.0&q=80&w=400"

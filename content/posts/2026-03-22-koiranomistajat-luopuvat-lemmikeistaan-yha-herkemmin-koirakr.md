@@ -3,11 +3,6 @@ title: "Koiranomistajat luopuvat lemmikeistään yhä herkemmin – koirakriisi 
 date: 2026-03-22T19:03:17.496448+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Koiranomistajat luopuvat lemmikeistään yhä useammin, ja eläinsuojeluyhdistykset varoittavat koirakriisin vaarasta."
 image: "https://images.unsplash.com/photo-1722644388753-cadd941ee65c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrb2lyYW5vbWlzdGFqYXQlMjBsdW9wdXZhdCUyMGxlbW1pa2Vpc3QlQzMlQTQlQzMlQTRuJTIweWglQzMlQTR8ZW58MXwwfHx8MTc3NDIwNjE5NHww&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1722644388753-cadd941ee65c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrb2lyYW5vbWlzdGFqYXQlMjBsdW9wdXZhdCUyMGxlbW1pa2Vpc3QlQzMlQTQlQzMlQTRuJTIweWglQzMlQTR8ZW58MXwwfHx8MTc3NDIwNjE5NHww&ixlib=rb-4.1.0&q=80&w=400"

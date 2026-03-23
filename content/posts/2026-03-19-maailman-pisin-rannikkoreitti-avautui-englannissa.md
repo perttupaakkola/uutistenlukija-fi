@@ -3,11 +3,6 @@ title: "Maailman pisin rannikkoreitti avautui Englannissa"
 date: 2026-03-19T13:53:03.263321+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
 tags:
   - ulkomaat

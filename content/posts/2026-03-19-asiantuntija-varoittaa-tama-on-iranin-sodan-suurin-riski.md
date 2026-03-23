@@ -3,11 +3,6 @@ title: "Asiantuntija varoittaa: Tämä on Iranin sodan suurin riski"
 date: 2026-03-19T19:33:46.850370+00:00
 categories:
   - Ulkomaat
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Asiantuntija Juhana Aunesluoma varoittaa, että Iranin sodassa on suuri riski toistaa Irakin konfliktin virheitä ilman koalitiota."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Asiantuntija varoittaa: Tämä on Iranin sodan suurin riski"

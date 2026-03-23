@@ -3,11 +3,6 @@ title: "Kevään lämpöennätys rikki Suomessa lämpimän föhn-tuulen vuoksi"
 date: 2026-03-22T16:12:53.206740+00:00
 categories:
   - Kotimaa
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 description: "Suomessa rikottiin kevään lämpöennätys, kun föhn-tuuli nosti lämpötilat plussan puolelle. Lämpimät säät jatkuvat tulevina päivinä."
 image: "https://images.unsplash.com/photo-1650876128279-33ae0b75caed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrZXYlQzMlQTQlQzMlQTRuJTIwbCVDMyVBNG1wJUMzJUI2ZW5uJUMzJUE0dHlzJTIwcmlra2klMjBsJUMzJUE0bXBpbSVDMyVBNG58ZW58MXwwfHx8MTc3NDE5NTk3MHww&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1650876128279-33ae0b75caed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrZXYlQzMlQTQlQzMlQTRuJTIwbCVDMyVBNG1wJUMzJUI2ZW5uJUMzJUE0dHlzJTIwcmlra2klMjBsJUMzJUE0bXBpbSVDMyVBNG58ZW58MXwwfHx8MTc3NDE5NTk3MHww&ixlib=rb-4.1.0&q=80&w=400"

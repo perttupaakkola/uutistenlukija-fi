@@ -9,11 +9,6 @@ image_thumb: "https://images.pexels.com/photos/5561001/pexels-photo-5561001.jpeg
 date: 2026-03-18T19:25:58.533789+00:00
 categories:
   - Ulkomailla
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - nato

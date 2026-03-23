@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Kotimaa
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
 tags:
   - kotimaa

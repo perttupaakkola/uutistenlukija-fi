@@ -3,11 +3,6 @@ title: "Savupalo hälytti Helsingissä Aurinkolahdessa – epäillään rikosta"
 date: 2026-03-22T07:03:02.623954+00:00
 categories:
   - Kotimaa
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Helsingin Aurinkolahdessa syttyi savupalo, joka altisti useita asukkaita hengenvaaralliselle savulle. Poliisi tutkii palon mahdollista tahallisuutta."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0MDY2OTc5fDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0MDY2OTc5fDA&ixlib=rb-4.1.0&q=80&w=400"

@@ -3,11 +3,6 @@ title: "Saksalais-suomalainen yhteistyö puolustusteollisuudessa vahvistuu"
 date: 2026-03-20T10:40:00.799728+00:00
 categories:
   - Ulkomaat
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Saksan 108 miljardin euron puolustusbudjetti avaa suomalaisille yrityksille uusia mahdollisuuksia,"
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=80&w=400"

@@ -3,11 +3,6 @@ title: "Venäläisiä kaatui ennätysmäärä Ukrainan sodassa keskiviikkona"
 date: 2026-03-18T22:26:32.784786+00:00
 categories:
   - Ulkomaalaiset
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Ukrainan puolustusministeriö ilmoitti, että keskiviikkona 18. maaliskuuta 2026 Venäjän joukot kärsivät vuoden suurimman taistelutappion."
 image: "/images/articles/2026-03-18-venalaisia-kaatui-ennatysmaara-ukrainan-sodassa-keskiviikkon-hero.jpg"
 image_alt: "Venäläisiä kaatui ennätysmäärä Ukrainan sodassa keskiviikkona"

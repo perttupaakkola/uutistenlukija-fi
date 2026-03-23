@@ -3,7 +3,6 @@ title: "Ensi viikosta tulossa poikkeuksellisen lämmin – lämpötilat huhtikuu
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-author: "Mikko Salonen"
 draft: false
 tags:
   - lämmin

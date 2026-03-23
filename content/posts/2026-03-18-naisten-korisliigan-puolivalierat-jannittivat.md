@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1622249504895-5b2e35c5ef85?crop=
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - kotimaa

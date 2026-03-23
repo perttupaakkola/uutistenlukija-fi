@@ -3,11 +3,6 @@ title: "Iran varoitti Arabiemiraatteja hyökkäyksistä"
 date: 2026-03-21T18:23:21.111956+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Iranin asevoimat varoittavat Yhdistyneitä arabiemiraatteja sodan laajentamisesta, mikäli Emiraatit sallivat hyökkäyksiä kiistellyille Abu Musan ja Suuren Tunbin saarille."
 image: "https://images.unsplash.com/photo-1568677597024-8b77666289f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpcmFuJTIwdmFyb2l0dGklMjBhcmFiaWVtaXJhYXR0ZWphJTIwaHklQzMlQjZrayVDMyVBNHlrc2lzdCVDMyVBNHxlbnwxfDB8fHwxNzc0MTE3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1568677597024-8b77666289f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpcmFuJTIwdmFyb2l0dGklMjBhcmFiaWVtaXJhYXR0ZWphJTIwaHklQzMlQjZrayVDMyVBNHlrc2lzdCVDMyVBNHxlbnwxfDB8fHwxNzc0MTE3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=400"

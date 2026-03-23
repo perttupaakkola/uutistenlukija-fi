@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 draft: false
 tags:
   - ulkomaat

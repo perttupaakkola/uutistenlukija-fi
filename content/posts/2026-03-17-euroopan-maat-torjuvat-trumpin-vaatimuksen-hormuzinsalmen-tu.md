@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1771797629089-7691ddf45680?crop=
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Ulkomaat
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
 tags:
   - ulkomaat

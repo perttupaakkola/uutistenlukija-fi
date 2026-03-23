@@ -3,11 +3,6 @@ title: "Israelin asukkaat hyökkäävät palestiinalaiskylien kimppuun Länsiran
 date: 2026-03-22T22:02:48.846747+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Israelin asukkaat hyökkäävät palestiinalaiskylien kimppuun Länsirannalla turvallisuustilanteen heikentyessä 18-vuotiaan Yehuda SherMANin kuoleman jälkeen."
 summary: "Israelin juutalaisasukkaita on hyökännyt useisiin palestiinalaiskylille Länsirannalla Yehuda Sherman's kuoleman jälkeen. Tapahtumat ovat johtaneet laajaan väkivaltaan ja huoleen alueen turvallisuudesta."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0MTQwNzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"

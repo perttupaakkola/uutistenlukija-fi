@@ -3,11 +3,6 @@ title: "Plagioinnista kiinni jäänyt kirjailija Harri István Mäki ei jatka op
 date: 2026-03-19T14:56:38.392144+00:00
 categories:
   - Kulttuuri
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - kulttuuri

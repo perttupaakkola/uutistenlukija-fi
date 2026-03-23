@@ -3,11 +3,6 @@ title: "Siitepölykausi käynnistyi – lepän ja pähkinäpensaan kukinta alkan
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Kotimaa
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 draft: false
 tags:
   - pähkinäpensaan

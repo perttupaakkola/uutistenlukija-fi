@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Ulkomaat
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - ulkomaat

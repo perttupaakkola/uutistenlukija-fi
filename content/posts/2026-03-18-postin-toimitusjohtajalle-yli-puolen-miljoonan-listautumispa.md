@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=
 date: 2026-03-18T12:11:25.807484+00:00
 categories:
   - Talous
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - talous

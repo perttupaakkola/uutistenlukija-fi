@@ -3,11 +3,6 @@ title: "Venäjän propagandasta kertova Mr Nobody Against Putin voitti parhaan d
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
 tags:
   - venäjän

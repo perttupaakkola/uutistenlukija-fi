@@ -3,11 +3,6 @@ title: "Hybridiautojen myynti kasvaa Australiassa â€“ bensiiniautojen osuus ennÃ
 date: 2026-03-16T00:15:16.939899+00:00
 categories:
   - Talous
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
 tags:
   - hybridiautojen

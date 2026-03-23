@@ -3,11 +3,6 @@ title: "Nainen tuomittiin murhasta Utahissa ja julkaisi surukirjan"
 date: 2026-03-18T22:26:32.784786+00:00
 categories:
   - Ulkomaalaiset
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Kouri Richins tuomittiin törkeästä murhasta Utahissa."
 image: "/images/articles/2026-03-18-nainen-tuomittiin-murhasta-utahissa-ja-julkaisi-surukirjan-hero.jpg"
 image_alt: "Nainen tuomittiin murhasta Utahissa ja julkaisi surukirjan"

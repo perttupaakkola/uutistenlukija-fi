@@ -3,11 +3,6 @@ title: "Suvi Minkkinen petti odotukset Holmenkollenilla takaa-ajossa"
 date: 2026-03-22T13:52:34.502608+00:00
 categories:
   - Urheilu
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Suvi Minkkinen sijoittuu 23:nneksi ampumahiihdon takaa-ajokisassa Holmenkollenilla, mikä romuttaa hänen mahdollisuutensa takaa-ajocupin voittoon."
 summary: "Suvi Minkkinen epäonnistui ampumahiihdon takaa-ajokisassa Holmenkollenilla, sijoittuen 23:nneksi. Ranskan Lou Jeanmonnot voitti takaa-ajocupin, ja Minkkisen mahdollisuudet voittoon kariutuivat huonoon ammuntasuoritukseen."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDE4NzU1MXww&ixlib=rb-4.1.0&q=80&w=1080"

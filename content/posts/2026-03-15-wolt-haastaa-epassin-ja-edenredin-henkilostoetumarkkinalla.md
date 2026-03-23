@@ -3,7 +3,6 @@ title: "Wolt haastaa Epassin ja Edenredin henkilöstöetumarkkinalla"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Talous
-author: "Mikko Salonen"
 draft: false
 tags:
   - wolt

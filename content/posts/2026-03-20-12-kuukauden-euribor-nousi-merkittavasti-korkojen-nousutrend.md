@@ -3,11 +3,6 @@ title: "12 kuukauden euribor nousi merkittävästi – korkojen nousutrendi jatk
 date: 2026-03-20T11:20:41.864601+00:00
 categories:
   - Talous
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "12 kuukauden euribor nousee merkittävästi 2,658 prosenttiin, mikä on historian 13. suurin päivänousu."
 image: "https://images.unsplash.com/photo-1560600472-87ae521e6bcd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrdXVrYXVkZW4lMjBldXJpYm9yJTIwbm91c2klMjBtZXJraXR0JUMzJUE0diVDMyVBNHN0aXxlbnwxfDB8fHwxNzc0MDA1NjIzfDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1560600472-87ae521e6bcd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrdXVrYXVkZW4lMjBldXJpYm9yJTIwbm91c2klMjBtZXJraXR0JUMzJUE0diVDMyVBNHN0aXxlbnwxfDB8fHwxNzc0MDA1NjIzfDA&ixlib=rb-4.1.0&q=80&w=400"

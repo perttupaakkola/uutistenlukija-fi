@@ -3,11 +3,6 @@ title: "BTS: Soulissa 260 000 fania valmiina comeback-konserttiin"
 date: 2026-03-21T00:23:13.258846+00:00
 categories:
   - Kulttuuri
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Soulissa BTS esiintyy ensimmäistä kertaa lokakuun 2022 jälkeen, ja konserttiin odotetaan saapuvan jopa 260 000 fania."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=80&w=400"

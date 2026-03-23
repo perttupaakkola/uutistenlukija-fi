@@ -3,7 +3,6 @@ title: "Kiinan ja Yhdysvaltain kauppaneuvottelut alkoivat Pariisissa"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat
-author: "Mikko Salonen"
 draft: false
 tags:
   - kauppaneuvottelut

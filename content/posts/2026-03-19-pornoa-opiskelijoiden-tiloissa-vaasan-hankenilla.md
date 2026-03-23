@@ -3,11 +3,6 @@ title: "Pornoa opiskelijoiden tiloissa Vaasan Hankenilla"
 date: 2026-03-19T20:35:29.096064+00:00
 categories:
   - Kotimaa
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 description: "Hankenin opiskelijat ovat nähneet pornoa juhlatilan televisiolla yli kymmenen vuoden ajan, mutta ylioppilaskunta ei ole kommentoinut asiaa."
 image: "https://images.unsplash.com/photo-1752652012230-8ebfa5b3d768?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwb3Jub2ElMjBvcGlza2VsaWpvaWRlbiUyMHRpbG9pc3NhJTIwdmFhc2FufGVufDF8MHx8fDE3NzM5NTI1MDl8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1752652012230-8ebfa5b3d768?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwb3Jub2ElMjBvcGlza2VsaWpvaWRlbiUyMHRpbG9pc3NhJTIwdmFhc2FufGVufDF8MHx8fDE3NzM5NTI1MDl8MA&ixlib=rb-4.1.0&q=80&w=400"

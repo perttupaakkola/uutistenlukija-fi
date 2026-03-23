@@ -3,11 +3,6 @@ title: "Energiakriisi vaatii toimenpiteitä: IEA suosittelee etätyötä ja nope
 date: 2026-03-20T10:34:07.305743+00:00
 categories:
   - Talous
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Kansainvälinen energiajärjestö IEA suosittelee etätyötä ja nopeusrajoitusten alentamista energiakriisin vuoksi, varoittaen häiriöistä markkinoilla."
 image: "https://images.unsplash.com/photo-1693691191914-66397e0dda02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbmVyZ2lha3JpaXNpJTIwdmFhdGlpJTIwdG9pbWVucGl0ZWl0JUMzJUE0JTIwaWVhfGVufDF8MHx8fDE3NzQwMDI3OTd8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1693691191914-66397e0dda02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbmVyZ2lha3JpaXNpJTIwdmFhdGlpJTIwdG9pbWVucGl0ZWl0JUMzJUE0JTIwaWVhfGVufDF8MHx8fDE3NzQwMDI3OTd8MA&ixlib=rb-4.1.0&q=80&w=400"

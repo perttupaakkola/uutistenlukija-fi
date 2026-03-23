@@ -3,11 +3,6 @@ title: "Kevät yllätti varhaisuudellaan, mutta maa on vielä roudassa"
 date: 2026-03-22T19:12:53.710678+00:00
 categories:
   - Kotimaa
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Kevät saapuu ennätysaikaisin, mutta maa jäässä tuo haasteita puutarhureille. Asiantuntija varoittaa kasvien aikaisesta heräämisestä."
 summary: "Kevät on tullut etuajassa, mutta maa on vielä roudassa. Puutarhurit tekevät töitä varoen ja huolehtivat kasveista, jotka voivat herätä liian aikaisin. Varhaisen kevään myötä myös linnunpönttöjen asentamiselle on aikaa."
 image: "https://images.unsplash.com/photo-1614502342360-76f58bbf4090?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrZXYlQzMlQTR0JTIweWxsJUMzJUE0dHRpJTIwdmFyaGFpc3V1ZGVsbGFhbiUyMG1hYXxlbnwxfDB8fHwxNzc0MjA2NzcwfDA&ixlib=rb-4.1.0&q=80&w=1080"

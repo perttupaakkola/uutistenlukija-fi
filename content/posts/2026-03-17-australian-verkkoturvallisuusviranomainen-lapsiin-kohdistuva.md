@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=
 date: 2026-03-17T00:20:56.278194+00:00
 categories:
   - Ulkomaat
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
 tags:
   - ulkomaat

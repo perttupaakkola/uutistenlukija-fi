@@ -3,11 +3,6 @@ title: "Puotilan kartanon ilmaiskeikat eivät jatku kesällä – lavan rakennus
 date: 2026-03-19T13:53:03.263321+00:00
 categories:
   - Kulttuuri
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
 tags:
   - kulttuuri

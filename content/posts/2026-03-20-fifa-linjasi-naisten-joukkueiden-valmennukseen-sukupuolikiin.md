@@ -3,11 +3,6 @@ title: "Fifa linjasi naisten joukkueiden valmennukseen sukupuolikiintiön"
 date: 2026-03-20T10:38:17.376767+00:00
 categories:
   - Urheilu
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Fifa päätti, että naisten joukkueilla on oltava vähintään yksi naispuolinen pää- tai apuvalmentaja kaikkialla maailmassa."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=80&w=400"

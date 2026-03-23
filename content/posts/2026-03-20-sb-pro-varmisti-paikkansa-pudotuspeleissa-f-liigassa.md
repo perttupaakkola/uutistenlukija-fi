@@ -3,11 +3,6 @@ title: "SB-Pro varmisti paikkansa pudotuspeleissä F-liigassa"
 date: 2026-03-20T10:35:59.419107+00:00
 categories:
   - Urheilu
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 description: "Nurmijärveläinen SB-Pro on varmistanut paikkansa naisten F-liigan pudotuspeleissä, saavuttaen runkosarjassa kolmannen sijan puolustuksensa ansiosta."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=80&w=400"

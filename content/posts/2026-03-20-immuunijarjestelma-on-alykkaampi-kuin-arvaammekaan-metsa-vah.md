@@ -3,11 +3,6 @@ title: "Immuunijärjestelmä on älykkäämpi kuin arvaammekaan - Metsä vahvist
 date: 2026-03-20T11:11:43.365261+00:00
 categories:
   - Tiede
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Helsingin yliopiston Eliisa Kekäläinen kertoo, että immuunijärjestelmä on älykkäämpi kuin arvaamme ja vaihtelee yksilöllisten tekijöiden mukaan."
 image: "https://images.unsplash.com/photo-1684155128150-c6170afc8963?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpbW11dW5paiVDMyVBNHJqZXN0ZWxtJUMzJUE0JTIwJUMzJUE0bHlrayVDMyVBNCVDMyVBNG1waSUyMGFydmFhbW1la2FhbiUyMGZvcmVzdHxlbnwxfDB8fHwxNzc0MDA1MTAwfDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1684155128150-c6170afc8963?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpbW11dW5paiVDMyVBNHJqZXN0ZWxtJUMzJUE0JTIwJUMzJUE0bHlrayVDMyVBNCVDMyVBNG1waSUyMGFydmFhbW1la2FhbiUyMGZvcmVzdHxlbnwxfDB8fHwxNzc0MDA1MTAwfDA&ixlib=rb-4.1.0&q=80&w=400"

@@ -3,11 +3,6 @@ title: "Trumpin lausunnot Iranin sodasta herättävät hämmennystä"
 date: 2026-03-21T23:52:44.821792+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Donald Trumpin tuoreet lausunnot Iranin sodasta herättävät hämmennystä, kun hän vakuuttaa sodan olevan \"melko valmis\" tilanteen kuitenkin ollessa toinen."
 summary: "Presidentti Trumpin tuoreet lausunnot Iranin sodasta herättävät hämmennystä. Vaikka Trump julistaa sodan olevan \"melko valmis\", taistelut jatkuvat, ja Yhdysvallat lisää joukkojaan alueella. Tilanne Hormuzinsalmessa sekä mahdolliset seuraukset Yhdysvaltojen nykyhallinnolle kyseenalaistavat presidentin väitteet."
 image: "https://images.unsplash.com/photo-1667157105317-35d6c4380e1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0cnVtcGluJTIwbGF1c3Vubm90JTIwaXJhbmluJTIwc29kYXN0YXxlbnwxfDB8fHwxNzc0MTM3MTYyfDA&ixlib=rb-4.1.0&q=80&w=1080"

@@ -3,7 +3,6 @@ title: "Suomelle kaksoisvoitto muodostelmaluistelun junioreiden MM-kisoissa"
 date: 2026-03-15T12:41:00+00:00
 categories:
   - Urheilu
-author: "Mikko Salonen"
 draft: false
 tags:
   - muodostelmaluistelun

@@ -3,11 +3,6 @@ title: "Norjan kruununprinsessa Mette-Marit puhui Epstein-kytkennöistään: 'Ol
 date: 2026-03-20T11:20:41.864601+00:00
 categories:
   - Ulkomaat
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Norjan kruununprinsessa Mette-Marit kertoo katuvansa tapaamistaan Jeffrey Epsteinin kanssa ja tuntee itsensä manipuloiduksi ja petetyksi."
 image: "https://images.unsplash.com/photo-1684942545990-2241e17f8ac0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub3JqYW4lMjBrcnV1bnVucHJpbnNlc3NhJTIwbWV0dGUtbWFyaXQlMjBwdWh1aXxlbnwxfDB8fHwxNzc0MDA1NjE2fDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1684942545990-2241e17f8ac0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub3JqYW4lMjBrcnV1bnVucHJpbnNlc3NhJTIwbWV0dGUtbWFyaXQlMjBwdWh1aXxlbnwxfDB8fHwxNzc0MDA1NjE2fDA&ixlib=rb-4.1.0&q=80&w=400"

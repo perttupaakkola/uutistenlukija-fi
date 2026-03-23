@@ -3,11 +3,6 @@ title: "Muuttuva taide: Petri Poikolaisen muisto elää klassisissa illoissa"
 date: 2026-03-22T13:22:42.413241+00:00
 categories:
   - Kulttuuri
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Suomalainen näyttelijä Petri Poikolainen on kuollut 50-vuotiaana. Hänen viimeinen merkittävä työnsä oli elokuvassa \"Sokea mies, joka ei halunnut nähdä Titanicia\"."
 summary: "Suomalainen näyttelijä Petri Poikolainen on kuollut 50-vuotiaana. Hänen viimeisin ja merkittävin työnsä oli elokuvassa Sokea mies, joka ei halunnut nähdä Titanicia. Poikolaisen muisto elää hänen taiteensa kautta ja herättää keskustelua taide-elämän arvosta vaikeuksien keskellä."
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQxODU3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080"

@@ -3,11 +3,6 @@ title: "Sudanin sairaalaan kohdistunut dronehyökkäys tappoi 64 ihmistä Eid-ju
 date: 2026-03-22T14:22:49.865655+00:00
 categories:
   - Ulkomaat
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Sudanissa dronehyökkäys el-Daein Teaching Hospitaliin tappoi 64 ihmistä, mukaan lukien 13 lasta, Eid-juhlien aikana. WHO vaatii sodan osapuolia lopettamaan väkivallan."
 summary: "Sudanissa el-Daein Teaching Hospitaliin kohdistunut dronehyökkäys tappoi 64 ihmistä, mukaan lukien 13 lasta. WHO vaatii sodan lopettamista ja terveydenhuollon suojelemista kriisin keskellä."
 image: "https://images.unsplash.com/photo-1714254826032-582efb10da24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzdWRhbmluJTIwc2FpcmFhbGFhbiUyMGtvaGRpc3R1bnV0JTIwZHJvbmVoeSVDMyVCNmtrJUMzJUE0eXN8ZW58MXwwfHx8MTc3NDE4OTM2Nnww&ixlib=rb-4.1.0&q=80&w=1080"

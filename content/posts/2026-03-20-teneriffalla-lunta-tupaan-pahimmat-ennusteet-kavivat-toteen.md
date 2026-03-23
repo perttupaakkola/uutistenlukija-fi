@@ -3,11 +3,6 @@ title: "Teneriffalla lunta tupaan: Pahimmat ennusteet kävivät toteen"
 date: 2026-03-20T10:38:06.246418+00:00
 categories:
   - Ulkomaat
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Therese-myrsky aiheuttaa kaaosta Teneriffalla, joka on nyt Espanjan kylmin paikka. Viranomaiset julistavat hätätilan ja lumisateet yllättävät turistit."
 image: "https://images.unsplash.com/photo-1613334013550-2cc37b9314f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZW5lcmlmZmFsbGElMjBsdW50YSUyMHR1cGFhbiUyMHBhaGltbWF0fGVufDF8MHx8fDE3NzQwMDI4MTR8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1613334013550-2cc37b9314f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZW5lcmlmZmFsbGElMjBsdW50YSUyMHR1cGFhbiUyMHBhaGltbWF0fGVufDF8MHx8fDE3NzQwMDI4MTR8MA&ixlib=rb-4.1.0&q=80&w=400"

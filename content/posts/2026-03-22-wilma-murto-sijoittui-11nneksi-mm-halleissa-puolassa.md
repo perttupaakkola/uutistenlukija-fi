@@ -3,11 +3,6 @@ title: "Wilma Murto sijoittui 11:nneksi MM-halleissa Puolassa"
 date: 2026-03-22T18:52:59.905093+00:00
 categories:
   - Urheilu
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Wilma Murto sijoittuu 11:nneksi yleisurheilun MM-hallikisassa Puolassa, ylittäen aloituskorkeuden 435 mutta jääden 470:stä ilman onnistumista."
 summary: "Wilma Murto sijoittui 11:nneksi yleisurheilun MM-hallikilpailuissa Puolassa. Hän ylitti aloituskorkeuden, mutta 470 senttiä jäi tavoittamattomaksi. Murto on kuitenkin luottavainen tulevaisuuden kilpailuissa."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDE4NzU1MXww&ixlib=rb-4.1.0&q=80&w=1080"

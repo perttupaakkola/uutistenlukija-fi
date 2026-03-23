@@ -3,11 +3,6 @@ title: "Hallituksen norminpurkuryhmä ehdottaa vessakäynnin sallimista bussissa
 date: 2026-03-21T21:22:02.962361+00:00
 categories:
   - Kotimaa
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 description: "Hallituksen norminpurkuryhmä ehdottaa vessakäynnin sallimista kaukoliikenteen busseissa ajon aikana, mahdollistaen suurimman muutoksen vuodesta 2006."
 image: "https://images.unsplash.com/photo-1751815645922-bb8083477228?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxoYWxsaXR1a3NlbiUyMG5vcm1pbnB1cmt1cnlobSVDMyVBNCUyMGVoZG90dGFhJTIwdmVzc2FrJUMzJUE0eW5uaW58ZW58MXwwfHx8MTc3NDEyODEyMHww&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1751815645922-bb8083477228?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxoYWxsaXR1a3NlbiUyMG5vcm1pbnB1cmt1cnlobSVDMyVBNCUyMGVoZG90dGFhJTIwdmVzc2FrJUMzJUE0eW5uaW58ZW58MXwwfHx8MTc3NDEyODEyMHww&ixlib=rb-4.1.0&q=80&w=400"

@@ -3,11 +3,6 @@ title: "Ei vettä, ei polttoainetta, ei sähköä – tällaista on arki Kuubass
 date: 2026-03-22T11:42:42.523717+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Kuuban kansalaiset kamppailevat öljysaarron takia arjessaan. Juan Carlos Pino innovoi ratkaisun muuntamalla Fiatinsa hiilikäyttöiseksi autoksi."
 summary: "Kuubassa vapaa-ajan liikkuminen ja vesihuolto ovat kriittisessä tilassa öljysaarron vuoksi. Innovatiiviset ratkaisut, kuten hiilellä kulkevat autot, nousevat pinnalle, kun perinteiset polttoaineet ovat puutteellisia. Samaan aikaan sähkökatkot kuormittavat entisestään kansalaisten arkea."
 image: "https://images.unsplash.com/photo-1757428179254-cfe561fc24a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx2ZXR0JUMzJUE0JTIwcG9sdHRvYWluZXR0YSUyMHMlQzMlQTRoayVDMyVCNiVDMyVBNCUyMHQlQzMlQTRsbGFpc3RhfGVufDF8MHx8fDE3NzQxNzk3NTl8MA&ixlib=rb-4.1.0&q=80&w=1080"

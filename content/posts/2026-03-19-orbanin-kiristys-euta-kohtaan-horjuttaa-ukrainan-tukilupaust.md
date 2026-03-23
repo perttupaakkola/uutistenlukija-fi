@@ -3,11 +3,6 @@ title: "Orbánin kiristys EU:ta kohtaan horjuttaa Ukrainan tukilupausta"
 date: 2026-03-19T20:19:44.167890+00:00
 categories:
   - Ulkomaat
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Unkarin pääministeri Viktor Orbán kiristää EU:ta Ukrainan tueksi kaavaillun lainapaketin hyväksymisellä, esittäen epärealistisia vaatimuksia."
 image: "https://images.unsplash.com/photo-1672264417415-7e60db7d2e1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxvcmIlQzMlQTFuaW4lMjBraXJpc3R5cyUyMGtvaHRhYW4lMjBob3JqdXR0YWF8ZW58MXwwfHx8MTc3Mzk1MTU4MXww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1672264417415-7e60db7d2e1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxvcmIlQzMlQTFuaW4lMjBraXJpc3R5cyUyMGtvaHRhYW4lMjBob3JqdXR0YWF8ZW58MXwwfHx8MTc3Mzk1MTU4MXww&ixlib=rb-4.1.0&q=80&w=400"

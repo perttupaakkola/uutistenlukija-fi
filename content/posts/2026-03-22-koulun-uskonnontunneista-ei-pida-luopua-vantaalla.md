@@ -3,11 +3,6 @@ title: "Koulun uskonnontunneista ei pidä luopua Vantaalla"
 date: 2026-03-22T05:22:45.199245+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Vantaan kaupungin uusi koululinjaus kieltää kasvoja peittävät asusteet peruskouluissa, herättäen keskustelua myös uskonnontunneista luopumisesta."
 summary: "Vantaan koulut uusissa ohjeistuksissa kieltävät kasvoja peittävät asusteet. Valtiovarainministeri Riikka Purra tukee päätöstä, mutta se herättää myös vastustusta. Kysymyksiä nousee kulttuurin, uskonnon ja oppilaiden oikeuksien ympäriltä."
 image: "https://images.unsplash.com/photo-1560609783-9fd302a8ed57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrb3VsdW4lMjB1c2tvbm5vbnR1bm5laXN0YSUyMHBpZCVDMyVBNCUyMGx1b3B1YXxlbnwxfDB8fHwxNzc0MTU2OTYyfDA&ixlib=rb-4.1.0&q=80&w=1080"

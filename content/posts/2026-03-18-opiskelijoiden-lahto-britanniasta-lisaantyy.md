@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=
 date: 2026-03-18T20:46:48.933911+00:00
 categories:
   - Kotimaa
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - kotimaa

@@ -3,11 +3,6 @@ title: "Kuningas Charles kiittää Nigeria-suhdetta juhlapuheessaan"
 date: 2026-03-18T22:26:32.784786+00:00
 categories:
   - Ulkomaat
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Windsor Castle'n vastaanotossa kuningas Charles arvosti Yhdistyneen kuningaskunnan ja Nigerian yhteistyötä."
 image: "https://images.unsplash.com/photo-1729974737647-3f4f310a6953?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxrdW5pbmdhcyUyMGNoYXJsZXMlMjBraWl0dCVDMyVBNCVDMyVBNCUyMG5pZ2VyaWEtc3VoZGV0dGF8ZW58MXwwfHx8MTc3NDAwODAzMHww&ixlib=rb-4.1.0&q=85"
 image_alt: "Kuningas Charles kiittää Nigeria-suhdetta juhlapuheessaan"

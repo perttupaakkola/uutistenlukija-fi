@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=
 date: 2026-03-17T03:10:19.053743+00:00
 categories:
   - Talous
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 draft: false
 tags:
   - talous

@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Teknologia
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - teknologia

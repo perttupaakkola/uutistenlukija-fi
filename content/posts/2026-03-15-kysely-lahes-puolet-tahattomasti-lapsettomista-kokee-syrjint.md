@@ -3,7 +3,6 @@ title: "Kysely: lähes puolet tahattomasti lapsettomista kokee syrjintää työe
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-author: "Jukka Nieminen"
 draft: false
 tags:
   - lähes

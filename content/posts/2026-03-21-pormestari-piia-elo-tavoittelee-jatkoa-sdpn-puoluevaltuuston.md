@@ -3,11 +3,6 @@ title: "Pormestari Piia Elo tavoittelee jatkoa SDP:n puoluevaltuuston johdossa"
 date: 2026-03-21T20:23:20.749916+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Turun pormestari Piia Elo tavoittelee jatkoa SDP:n puoluevaltuuston puheenjohtajana ja korostaa työllisyyden ja eduskuntavaalien merkitystä."
 summary: "Pormestari Piia Elo pyrkii jatkamaan SDP:n puoluevaltuuston puheenjohtajana. Hän tavoittelee puolueen valmistautumista tuleviin eduskuntavaaleihin ja varmistaa jäsenistön äänen kuulumisen puoluepolitiikassa."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0MDY2OTc5fDA&ixlib=rb-4.1.0&q=80&w=1080"

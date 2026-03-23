@@ -3,7 +3,6 @@ title: "Viking Gloryn matkustajat jumittuivat laivaan yön yli – päiväristei
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-author: "Sanna Heikkinen"
 draft: false
 tags:
   - viking

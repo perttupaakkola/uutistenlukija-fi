@@ -3,11 +3,6 @@ title: "Mestarien liigan puolivälierät selvillä – Liverpool, Bayern ja Atl�
 date: 2026-03-18T23:06:25.600608+00:00
 categories:
   - Urheilu
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Jalkapallon parhaimman seurajoukkuekilpailun, Mestarien liigan, puolivälieräpaikat on julkaistu."
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDAwMjgxMnww&ixlib=rb-4.1.0&q=85"
 image_alt: "Mestarien liigan puolivälierät selvillä – Liverpool, Bayern ja Atlético varmistivat paikkansa"

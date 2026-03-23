@@ -3,11 +3,6 @@ title: "Suomeen yli 20 000 opiskelijan ammatti­korkeakoulu? Xamkin omistajat ne
 date: 2026-03-19T19:33:46.850370+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Kaakkois-Suomen ammattikorkeakoulu Xamk neuvottelee LUT-konsernin kanssa mahdollisesta liittämisestä, mikä voi luoda yli 20 000 opiskelijan oppilaitoksen."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Suomeen yli 20 000 opiskelijan ammatti­korkeakoulu? Xamkin omistajat neuvottelevat LUT-konsernin kanssa"

@@ -3,11 +3,6 @@ title: "Humoristinen draamaelokuva One Battle After Another kahmi eniten Oscar-p
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Kulttuuri
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - oscar

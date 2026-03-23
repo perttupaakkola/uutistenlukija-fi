@@ -3,11 +3,6 @@ title: "Lähihoitajalle tuomio 186 tietosuojarikoksesta Jyväskylässä"
 date: 2026-03-20T10:35:59.419107+00:00
 categories:
   - Kotimaa
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Keski-Suomen käräjäoikeus tuomitsee lähihoitajan 186 tietosuojarikoksesta, joista hän sai neljän kuukauden ehdollisen vankeuden ja korvauksia."
 image: "https://images.unsplash.com/photo-1628665843512-b516cf20d849?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxsJUMzJUE0aGlob2l0YWphbGxlJTIwdHVvbWlvJTIwMTg2JTIwdGlldG9zdW9qYXJpa29rc2VzdGF8ZW58MXwwfHx8MTc3NDAwMjc4MHww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1628665843512-b516cf20d849?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxsJUMzJUE0aGlob2l0YWphbGxlJTIwdHVvbWlvJTIwMTg2JTIwdGlldG9zdW9qYXJpa29rc2VzdGF8ZW58MXwwfHx8MTc3NDAwMjc4MHww&ixlib=rb-4.1.0&q=80&w=400"

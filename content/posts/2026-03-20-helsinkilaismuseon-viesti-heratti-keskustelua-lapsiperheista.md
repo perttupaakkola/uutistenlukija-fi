@@ -3,11 +3,6 @@ title: "Helsinkiläismuseon viesti herätti keskustelua lapsiperheistä"
 date: 2026-03-20T20:22:49.725679+00:00
 categories:
   - Kulttuuri
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Helsingin palomuseo saa kielteistä palautetta viestistään, jossa se luokittelee lapsiperheet häiriötekijöiksi aikuisille museovieraille."
 image: "https://images.unsplash.com/photo-1589091523874-e66e4898d0dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxoZWxzaW5raWwlQzMlQTRpc211c2VvbiUyMHZpZXN0aSUyMGhlciVDMyVBNHR0aSUyMGtlc2t1c3RlbHVhfGVufDF8MHx8fDE3NzQwMzgxNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1589091523874-e66e4898d0dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxoZWxzaW5raWwlQzMlQTRpc211c2VvbiUyMHZpZXN0aSUyMGhlciVDMyVBNHR0aSUyMGtlc2t1c3RlbHVhfGVufDF8MHx8fDE3NzQwMzgxNjZ8MA&ixlib=rb-4.1.0&q=80&w=400"

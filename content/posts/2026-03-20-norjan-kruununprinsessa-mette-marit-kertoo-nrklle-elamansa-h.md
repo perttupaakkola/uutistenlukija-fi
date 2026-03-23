@@ -3,11 +3,6 @@ title: "Norjan kruununprinsessa Mette-Marit kertoo NRK:lle elämänsä haasteist
 date: 2026-03-20T08:52:00.264269+00:00
 categories:
   - Ulkomaat
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Norjan kruununprinsessa Mette-Marit avaa NRK:lle henkilökohtaisia haasteitaan, joihin kuuluvat terveydelliset ongelmat ja perhesiteet."
 image: "https://images.unsplash.com/photo-1684942545990-2241e17f8ac0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub3JqYW4lMjBrcnV1bnVucHJpbnNlc3NhJTIwbWV0dGUtbWFyaXQlMjBucmt8ZW58MXwwfHx8MTc3Mzk5NjcwOXww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1684942545990-2241e17f8ac0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub3JqYW4lMjBrcnV1bnVucHJpbnNlc3NhJTIwbWV0dGUtbWFyaXQlMjBucmt8ZW58MXwwfHx8MTc3Mzk5NjcwOXww&ixlib=rb-4.1.0&q=80&w=400"

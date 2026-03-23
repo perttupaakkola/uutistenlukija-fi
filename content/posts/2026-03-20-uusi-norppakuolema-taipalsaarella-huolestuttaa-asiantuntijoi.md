@@ -3,11 +3,6 @@ title: "Uusi norppakuolema Taipalsaarella huolestuttaa asiantuntijoita"
 date: 2026-03-20T11:32:47.881576+00:00
 categories:
   - Kotimaa
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 description: "Saimaannorppa kuoli kalastajan verkkoihin Taipalsaarella, mikä herättää huolta lajin tulevaisuudesta ja suojelun tarpeesta."
 image: "https://images.unsplash.com/photo-1628246968402-734cf669fd43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub3JwcGFrdW9sZW1hJTIwdGFpcGFsc2FhcmVsbGElMjBodW9sZXN0dXR0YWElMjBhc2lhbnR1bnRpam9pdGF8ZW58MXwwfHx8MTc3NDAwNjM2MXww&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1628246968402-734cf669fd43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub3JwcGFrdW9sZW1hJTIwdGFpcGFsc2FhcmVsbGElMjBodW9sZXN0dXR0YWElMjBhc2lhbnR1bnRpam9pdGF8ZW58MXwwfHx8MTc3NDAwNjM2MXww&ixlib=rb-4.1.0&q=80&w=400"

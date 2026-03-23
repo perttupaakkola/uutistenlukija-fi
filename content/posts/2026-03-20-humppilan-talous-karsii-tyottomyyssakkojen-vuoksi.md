@@ -3,11 +3,6 @@ title: "Humppilan talous kärsii työttömyyssakkojen vuoksi"
 date: 2026-03-20T10:34:07.305743+00:00
 categories:
   - Kotimaa
-author: "Jukka Nieminen"
-author_id: "jukka-nieminen"
-author_title: "Urheilutoimittaja"
-author_bio: "Intohimoinen urheilutoimittaja, joka seuraa erityisesti jääkiekkoa, jalkapalloa ja formula ykkösiä. Aiemmin ESPN Nordicilla."
-author_image: "/images/writers/jukka-nieminen.jpg"
 description: "Humppilan kunta kamppailee tiukan taloustilanteen kanssa työttömyyssakkojen noustessa yli 300 000 euroon, mikä uhkaa palveluja ja investointeja."
 image: "https://images.unsplash.com/photo-1616010650868-e8c1583f6b0d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxodW1wcGlsYW4lMjBlY29ub215JTIwayVDMyVBNHJzaWklMjB0eSVDMyVCNnR0JUMzJUI2bXl5c3Nha2tvamVufGVufDF8MHx8fDE3NzQwMDI3OTl8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1616010650868-e8c1583f6b0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxodW1wcGlsYW4lMjBlY29ub215JTIwayVDMyVBNHJzaWklMjB0eSVDMyVCNnR0JUMzJUI2bXl5c3Nha2tvamVufGVufDF8MHx8fDE3NzQwMDI3OTl8MA&ixlib=rb-4.1.0&q=80&w=400"

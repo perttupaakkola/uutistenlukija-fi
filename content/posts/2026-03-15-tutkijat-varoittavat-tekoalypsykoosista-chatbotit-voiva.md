@@ -3,7 +3,6 @@ title: "Tutkijat varoittavat tekoälypsykoosista – chatbotit voivat ruokkia ha
 date: 2026-03-15T12:43:00+00:00
 categories:
   - Teknologia
-author: "Anna Korhonen"
 draft: false
 tags:
   - tutkijat

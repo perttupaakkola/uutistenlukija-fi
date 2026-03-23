@@ -3,11 +3,6 @@ title: "BTS palaa armeijapalveluksesta - mutta onko heidän albuminsa odotuksen 
 date: 2026-03-20T11:20:41.864601+00:00
 categories:
   - Kulttuuri
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "BTS palaa armeijapalveluksesta ja julkaisee odotetun albuminsa \"Arirang\", joka houkuttelee yli 250 000 fania Soulin stadionille ja live-striimataan"
 image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzM5NzE0ODh8MA&ixlib=rb-4.1.0&q=80&w=400"

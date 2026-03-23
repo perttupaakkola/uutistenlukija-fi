@@ -3,7 +3,6 @@ title: "Harvinainen mielenosoitus Kuubassa – ihmiset vaativat sähköä ja ruo
 date: 2026-03-15T12:47:00+00:00
 categories:
   - Ulkomaat
-author: "Anna Korhonen"
 draft: false
 tags:
   - harvinainen

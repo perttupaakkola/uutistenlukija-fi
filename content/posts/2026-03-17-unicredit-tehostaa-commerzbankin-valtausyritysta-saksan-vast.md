@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=
 date: 2026-03-17T06:17:47.042300+00:00
 categories:
   - Talous
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
 tags:
   - talous

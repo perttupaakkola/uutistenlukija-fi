@@ -3,7 +3,6 @@ title: "Juutinrauman silta suljettu onnettomuuden vuoksi"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat
-author: "Laura Mäkelä"
 draft: false
 tags:
   - silta

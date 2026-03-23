@@ -3,11 +3,6 @@ title: "Kelo-hanke tuo esiin kelot luonnontieteiden ja taiteen avulla"
 date: 2026-03-20T10:21:24.392005+00:00
 categories:
   - Tiede
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Kelo-hanke käynnistää tutkimusprojektin, joka selvittää kelojen merkitystä luonnontieteiden ja taiteen kautta ekologian ja lajimonimuotoisuuden"
 image: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwcmVzZWFyY2glMjBsYWJvcmF0b3J5fGVufDF8MHx8fDE3NzQwMDIwODF8MA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1618053448748-b7251851d014?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwcmVzZWFyY2glMjBsYWJvcmF0b3J5fGVufDF8MHx8fDE3NzQwMDIwODF8MA&ixlib=rb-4.1.0&q=80&w=400"

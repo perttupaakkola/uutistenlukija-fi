@@ -3,11 +3,6 @@ title: "Mette-Maritin pojan oikeudenkäynti lähestyy loppuaan Oslossa"
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Ulkomaat
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - mette

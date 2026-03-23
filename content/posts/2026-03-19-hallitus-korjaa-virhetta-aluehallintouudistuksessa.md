@@ -3,11 +3,6 @@ title: "Hallitus korjaa virhettä aluehallintouudistuksessa"
 date: 2026-03-19T20:04:58.845802+00:00
 categories:
   - Kotimaa
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Hallitus muuttaa aluehallintouudistusta, korjaten lain puutteet luonnonmukaisen tuotannon valvonnassa. Uudistus tuo lähes 2000 uutta työpaikkaa."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Hallitus korjaa virhettä aluehallintouudistuksessa"

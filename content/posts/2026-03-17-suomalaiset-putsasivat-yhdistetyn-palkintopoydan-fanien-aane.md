@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=
 date: 2026-03-17T00:16:12.682740+00:00
 categories:
   - Urheilu
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - urheilu

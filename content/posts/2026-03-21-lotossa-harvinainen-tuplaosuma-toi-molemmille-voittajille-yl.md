@@ -3,11 +3,6 @@ title: "Lotossa harvinainen tuplaosuma toi molemmille voittajille yli 300 000 eu
 date: 2026-03-21T21:13:24.026596+00:00
 categories:
   - Kotimaa
-author: "Anna Korhonen"
-author_id: "anna-korhonen"
-author_title: "Taloustoimittaja"
-author_bio: "Talouden ja markkinoiden asiantuntija. Kirjoittanut laajasti Suomen ja EU:n talouspolitiikasta sekä teknologiainvestoinneista."
-author_image: "/images/writers/anna-korhonen.jpg"
 description: "Lauantain Lotto-arvonnassa kaksi pelaajaa sai 6+1-tuloksen, voittaen kummatkin yli 304 000 euroa eri puolilta Suomea."
 summary: "Lauantain Lotto-arvonnassa nähtiin harvinainen tuplaosuma, kun kaksi pelaajaa voitti 6+1-tuloksella yli 300 000 euroa. Voitot osuivat eri puolille Suomea, ja ensi viikolla peleissä on neljän miljoonan euron potti."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0MDY2OTc5fDA&ixlib=rb-4.1.0&q=80&w=1080"

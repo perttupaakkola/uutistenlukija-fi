@@ -3,11 +3,6 @@ title: "Suomi voi saada sanktioita susien, karhujen ja ilvesten kiintiömetsäst
 date: 2026-03-19T13:53:03.263321+00:00
 categories:
   - Kotimaa
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - kotimaa

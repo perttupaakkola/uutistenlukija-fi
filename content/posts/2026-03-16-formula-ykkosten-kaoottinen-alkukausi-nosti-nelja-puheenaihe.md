@@ -3,11 +3,6 @@ title: "Formula ykkösten kaoottinen alkukausi nosti neljä puheenaihetta pintaa
 date: 2026-03-16T18:20:24.690386+00:00
 categories:
   - Urheilu
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 draft: false
 tags:
   - formula

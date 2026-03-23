@@ -3,11 +3,6 @@ title: "Ukraina taistelee rahoituksensa puolesta sodan keskellä"
 date: 2026-03-16T03:11:57.295936+00:00
 categories:
   - Ulkomaat
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - sodan

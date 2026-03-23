@@ -3,11 +3,6 @@ title: "Norjan kruununprinsessan pojan oikeudenkäynti päättyi"
 date: 2026-03-19T19:33:46.850370+00:00
 categories:
   - Ulkomaat
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Norjan kruununprinsessa Mette-Maritin pojan, Marius Borg Høibyn, oikeudenkäynti on päättynyt,"
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Norjan kruununprinsessan pojan oikeudenkäynti päättyi"

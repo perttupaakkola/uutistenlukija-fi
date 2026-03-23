@@ -3,11 +3,6 @@ title: "Ympäristön ja ilmaston kysymykset nousussa Suomessa"
 date: 2026-03-21T22:23:26.993975+00:00
 categories:
   - Kotimaa
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Suomalaiset tukevat yhä vahvemmin ympäristö- ja ilmastopolitiikkaa, ja lähes 80 % pitää kasvihuonekaasupäästöjen vähentämistä tärkeänä tavoitteena."
 image: "https://images.unsplash.com/photo-1569789182365-c799a19a6a60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx5bXAlQzMlQTRyaXN0JUMzJUI2biUyMGlsbWFzdG9uJTIwa3lzeW15a3NldCUyMG5vdXN1c3NhfGVufDF8MHx8fDE3NzQxMzE4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1569789182365-c799a19a6a60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx5bXAlQzMlQTRyaXN0JUMzJUI2biUyMGlsbWFzdG9uJTIwa3lzeW15a3NldCUyMG5vdXN1c3NhfGVufDF8MHx8fDE3NzQxMzE4MDR8MA&ixlib=rb-4.1.0&q=80&w=400"

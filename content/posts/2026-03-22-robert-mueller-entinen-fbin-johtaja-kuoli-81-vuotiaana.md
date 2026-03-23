@@ -3,11 +3,6 @@ title: "Robert Mueller, entinen FBI:n johtaja, kuoli 81-vuotiaana"
 date: 2026-03-22T02:42:56.658047+00:00
 categories:
   - Ulkomaat
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 description: "Entinen FBI:n johtaja Robert Mueller on kuollut 81-vuotiaana. Hänen perheensä vahvisti, että hän menehtyi perjantai-iltana heikentyneen terveyden vuoksi."
 summary: "Robert Mueller, entinen FBI:n johtaja ja keskeinen henkilö Trumpin aikaisessa Venäjä-tutkinnassa, on kuollut 81-vuotiaana. Hänen poismenonsa herättää keskustelua hänen merkittävästä roolistaan Yhdysvaltain oikeusjärjestelmässä ja kotimaan turvallisuudessa."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0MTQwNzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"

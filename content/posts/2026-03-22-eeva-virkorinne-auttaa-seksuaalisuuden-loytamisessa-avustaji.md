@@ -3,11 +3,6 @@ title: "Eeva Virkorinne auttaa seksuaalisuuden löytämisessä avustajien avulla
 date: 2026-03-22T17:22:59.817823+00:00
 categories:
   - Kotimaa
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 description: "Eeva Virkorinne auttaa suomalaisia löytämään seksuaalisuutensa avustajien avulla, tarjoten tärkeää tukea fyysisten rajoitteiden vuoksi."
 summary: "Eeva Virkorinne, yksi Suomen harvoista seksuaaliavustajista, auttaa ihmisiä saamaan yhteyden omaan seksuaalisuuteensa. Hän on tukenut Marju Väisästä seksuaalisen nautinnon löytämisessä, mikä nostaa esiin tärkeitä kysymyksiä seksuaaliterveydestä ja avustajapalveluista maassamme."
 image: "https://images.unsplash.com/photo-1656152308981-d0a43ece2f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlZXZhJTIwdmlya29yaW5uZSUyMGF1dHRhYSUyMHNla3N1YWFsaXN1dWRlbnxlbnwxfDB8fHwxNzc0MjAwMTc3fDA&ixlib=rb-4.1.0&q=80&w=1080"

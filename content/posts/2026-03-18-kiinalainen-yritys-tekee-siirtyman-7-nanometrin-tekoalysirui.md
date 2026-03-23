@@ -9,11 +9,6 @@ image_thumb: "https://images.unsplash.com/photo-1705635820997-ae12bea888ab?crop=
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
   - Tiede, Teknologia
-author: "Sanna Heikkinen"
-author_id: "sanna-heikkinen"
-author_title: "Ulkomaantoimittaja"
-author_bio: "Ulkomaantoimittaja, jolla on laaja kokemus Euroopan ja Lähi-idän raportoinnista. Aiemmin kirjeenvaihtajana Brysselissä."
-author_image: "/images/writers/sanna-heikkinen.jpg"
 draft: false
 tags:
   - yritys

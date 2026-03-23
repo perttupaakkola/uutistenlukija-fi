@@ -3,11 +3,6 @@ title: "Vanhus surmattiin kadulle Malmin­kartanossa – Poliisi tutkii murhana:
 date: 2026-03-20T10:42:15.226820+00:00
 categories:
   - Kotimaa
-author: "Mikko Salonen"
-author_id: "mikko-salonen"
-author_title: "Kulttuuritoimittaja"
-author_bio: "Kulttuurin ja viihteen monitoimittaja. Seuraa musiikkia, elokuvia, kirjallisuutta ja taidemaailmaa."
-author_image: "/images/writers/mikko-salonen.jpg"
 description: "Malminkartanossa nuori mies epäillään 80-vuotiaan surmaamisesta teräaseella keskiviikkoiltana. Poliisi tutkii tapausta murhana."
 image: "https://images.unsplash.com/photo-1600717548331-84dfce1db315?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx2YW5odXMlMjBzdXJtYXR0aWluJTIwa2FkdWxsZSUyMG1hbG1pbnxlbnwxfDB8fHwxNzc0MDAyODE2fDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1600717548331-84dfce1db315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx2YW5odXMlMjBzdXJtYXR0aWluJTIwa2FkdWxsZSUyMG1hbG1pbnxlbnwxfDB8fHwxNzc0MDAyODE2fDA&ixlib=rb-4.1.0&q=80&w=400"

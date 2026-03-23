@@ -3,11 +3,6 @@ title: "Ruotsi lopettaa pienimpien keskosten tehohoidon"
 date: 2026-03-21T20:13:25.269284+00:00
 categories:
   - Kotimaa
-author: "Matti Virtanen"
-author_id: "matti-virtanen"
-author_title: "Päätoimittaja"
-author_bio: "Kokenut uutistoimittaja ja päätoimittaja. Erikoistunut kotimaan politiikkaan ja yhteiskunta-asioihin. Työskennellyt aiemmin Helsingin Sanomissa ja Yle Uutisissa."
-author_image: "/images/writers/matti-virtanen.jpg"
 description: "Ruotsi lopettaa 22. raskausviikolla syntyneiden keskosten tehohoidon ja siirtyy tarjoamaan palliatiivista hoitoa, raportoi SVT."
 summary: "Ruotsi on päättänyt lopettaa 22. raskausviikolla syntyneiden keskosten tehohoidon. Muutos tarkoittaa, että varhaisimmin syntyneet lapset saavat vain palliatiivista hoitoa sairaaloissa. Tämä nostaa esiin kysymyksiä tehohoidon eettisyydestä eri maissa."
 image: "https://images.unsplash.com/photo-1593977461582-744f23eb0505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxydW90c2klMjBsb3BldHRhYSUyMHBpZW5pbXBpZW4lMjBrZXNrb3N0ZW58ZW58MXwwfHx8MTc3NDEyNDAwMXww&ixlib=rb-4.1.0&q=80&w=1080"

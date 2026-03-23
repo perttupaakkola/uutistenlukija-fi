@@ -3,11 +3,6 @@ title: "Åbo Akademin löydös voi tuoda uusia hoitoja aggressiiviseen rintasyö
 date: 2026-03-19T13:53:03.263321+00:00
 categories:
   - Tiede
-author: "Laura Mäkelä"
-author_id: "laura-makela"
-author_title: "Tiedetoimittaja"
-author_bio: "Tiedetoimittaja ja tietokirjailija. Erikoistunut ilmastotutkimukseen, avaruuteen ja terveysteknologiaan."
-author_image: "/images/writers/laura-makela.jpg"
 draft: false
 tags:
   - tiede

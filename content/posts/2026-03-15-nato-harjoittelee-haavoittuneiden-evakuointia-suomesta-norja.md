@@ -3,7 +3,6 @@ title: "Nato harjoittelee haavoittuneiden evakuointia Suomesta Norjaan"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Kotimaa
-author: "Anna Korhonen"
 draft: false
 tags:
   - nato

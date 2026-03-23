@@ -3,7 +3,6 @@ title: "Prinssi William julkaisi harvinaisen kuvan Dianasta äitienpäivänä"
 date: 2026-03-15T12:35:45+00:00
 categories:
   - Ulkomaat
-author: "Sanna Heikkinen"
 draft: false
 tags:
   - william
