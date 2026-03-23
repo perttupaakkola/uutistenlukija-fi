@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Himoksen hiihtokeskuksessa Jämsässä sattui perjantaina kuolemaan johtanut lasketteluonnettomuus.
 ---
 Himoksen hiihtokeskuksessa Jämsässä sattui perjantaina kuolemaan johtanut lasketteluonnettomuus. Uhri on noin 50-vuotias Viron kansalainen, jonka henkilöllisyyden Sisä-Suomen poliisi on vahvistanut. Tämä surullinen tapahtuma herättää kysymyksiä laskettelun turvallisuudesta ja vaatii laajempaa keskustelua talviurheilun riskitekijöistä.
 

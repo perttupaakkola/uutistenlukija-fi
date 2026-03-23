@@ -25,4 +25,14 @@ keywords:
   - "kansainväliset uutiset"
 ---
 
-Ulkopoliittisen instituutin ohjelmajohtaja Arkady Moshes arvioi, että Venäjä ja Eurooppa ovat tilanteessa, jossa vuoropuhelu ei välttämättä ole tuotteen kannalta hyödyllistä. Hän näkee, että Venäjän hallinnon katsotaan jatkavan toimiaan ei-pelottelevasti vaan vahvistaen vaikutusvaltaansa alueella. Moshes painottaa, että maiden väliset kiinnostukset ovat erilaisia, eikä tulevia keskusteluja pitäisi odottaa ideaalitilanteessa. Hän korostaa, että Venäjän toiminnat ovat alueellisesti painottuneita ja vuoropuhelu siihen ei välttämättä johda toivotulle tulokseen.
+## Asiantuntija kommentoi Putinin kanssa käytävää keskustelua: Venäjä ei ole huolissaan sodasta
+
+Ulkopoliittisen instituutin ohjelmajohtaja Arkady Moshes arvioi, että Venäjä ja Eurooppa ovat tilanteessa, jossa vuoropuhelu ei välttämättä ole tuotteen kannalta hyödyllistä. Hänen mukaansa Venäjän hallinto on päättänyt jatkaa strategiaansa, joka keskittyy alueellisen vaikutusvallan vahvistamiseen, eikä se ole huolissaan sodan aiheuttamista seurauksista. Tämä asenne heijastaa laajempaa kehitystä, jossa Venäjä on viime vuosina eristäytynyt lännen poliittisista ja taloudellisista rakenteista.
+
+Moshes painottaa, että maiden väliset kiinnostukset ovat erilaisia, eikä tulevia keskusteluja pitäisi odottaa ideaalitilanteessa. Euroopan unionin ja Venäjän suhteet ovat heikentyneet merkittävästi vuodesta 2014 lähtien, jolloin Krimin liittäminen Venäjään aiheutti laajoja kansainvälisiä sanktioita. Tämä tilanne on vaikuttanut osaltaan siihen, että Venäjä on etsinyt uusia liittolaisia, erityisesti Aasiassa, samalla kun se on vähentänyt yhteistyötään lännen kanssa.
+
+Venäjän hallinnon toimintatapojen arvioiminen on tärkeää, sillä se vaikuttaa suoraan alueelliseen turvallisuuteen. Moshes korostaa, että Venäjän toiminnat ovat alueellisesti painottuneita, mikä tarkoittaa, että se pyrkii vahvistamaan asemaansa erityisesti entisen Neuvostoliiton alueella. Tämä voi johtaa jännitteiden kasvuun, sillä muut alueen maat, kuten Ukraina ja Baltian valtiot, kokevat Venäjän toiminnan uhkana omalle turvallisuudelleen.
+
+Samaan aikaan Euroopan maat ovat jakautuneet kahteen leiriin: toiset haluavat edelleen dialogia Venäjän kanssa, kun taas toiset vaativat tiukempia toimia ja sanktioita. Tämä jakautuminen vaikeuttaa yhteisten ratkaisujen löytämistä, ja Moshesin mukaan onkin epätodennäköistä, että vuoropuhelusta saataisiin aikaan toivottuja tuloksia. Hän huomauttaa, että nykyisessä kansainvälisessä politiikassa on yhä vahvasti läsnä kylmän sodan aikaisia asetelmia, joissa valtioiden intressit ja turvallisuuskysymykset ovat keskiössä.
+
+Lopuksi Moshesin arvio nostaa esiin kysymyksen siitä, miten lännen tulisi reagoida Venäjän uusiin toimintatapoihin. Onko mahdollista löytää yhteisymmärrys, vai onko tilanne jo niin kriittinen, että avoin vuoropuhelu on mahdotonta? Tämän kysymyksen ympärillä käytävä keskustelu tulee varmasti jatkumaan, sillä se vaikuttaa merkittävästi Euroopan turvallisuuspolitiikkaan ja kansainvälisiin suhteisiin laajemmin.

@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Sähköauto törmäsi liikehuoneiston ikkunaan Turun keskustassa Sähköauto ajoi liikehuoneiston ikkunaan Turun Eerikinkadulla maanantaina noin kello…
 ---
 Sähköauto törmäsi liikehuoneiston ikkunaan Turun keskustassa
 

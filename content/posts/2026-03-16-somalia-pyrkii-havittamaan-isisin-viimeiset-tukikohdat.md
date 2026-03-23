@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Somalian hallitus ja sen liittolaiset ovat tehostaneet operaatioita äärijärjestö Isisiä vastaan maan syrjäisillä alueilla.
 ---
 Somalian hallitus ja sen liittolaiset ovat tehostaneet operaatioita äärijärjestö Isisiä vastaan maan syrjäisillä alueilla. Isis vahvisti jalansijansa Somaliassa sen jälkeen, kun järjestön taistelijoita ajettiin pois tukikohdistaan Syyriassa ja Irakissa. ISIS:n läsnäolo Somaliassa on kasvanut huolestuttavasti, ja se on saanut jalansijaa alueilla, joilla valtio ei pysty takaamaan turvallisuutta. Tämä kehitys on herättänyt kansainvälistä huomiota, sillä Somalia on jo entuudestaan kärsinyt pitkäaikaisista sisällissodista ja poliittisesta epävakaudesta.
 

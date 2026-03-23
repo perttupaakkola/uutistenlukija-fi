@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Ajokaistalle kaatunut matkailuvaunu aiheutti merkittävää ruuhkaa valtatie 9:llä Tampereen kohdalla maanantai-iltana."
 ---
 ## Kaatunut matkailuvaunu ruuhkautti ysitien Tampereen kohdalla
 

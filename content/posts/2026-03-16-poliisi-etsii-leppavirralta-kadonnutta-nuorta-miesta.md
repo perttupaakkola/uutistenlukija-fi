@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Itä-Suomen poliisi on käynnistänyt laajat etsinnät kadonneen nuoren miehen löytämiseksi Leppävirralla.
 ---
 ## Poliisi etsii Leppävirralta kadonnutta nuorta miestä
 

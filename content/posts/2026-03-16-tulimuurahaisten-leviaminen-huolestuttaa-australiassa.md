@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Tulimuurahaisten leviäminen huolestuttaa Australiassa Tulimuurahaisten torjunta on noussut jälleen Australiassa otsikoihin.
 ---
 Tulimuurahaisten leviäminen huolestuttaa Australiassa
 

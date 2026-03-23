@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Kuuban pääkaupungissa Havannassa puhkesi viikonloppuna harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat toimivaa sähköverkkoa…
 ---
 Kuuban pääkaupungissa Havannassa puhkesi viikonloppuna harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat toimivaa sähköverkkoa ja ruoan saatavuuden parantamista. Protestoijat tunkeutuivat kommunistisen puolueen paikalliseen toimistoon ja aiheuttivat vahinkoa rakennukselle. Tämä väkivaltainen purkaus osoittaa, kuinka syvään kansalaisten tyytymättömyys on juurtunut ja kuinka vakavia ongelmat maan sisällä ovat.
 

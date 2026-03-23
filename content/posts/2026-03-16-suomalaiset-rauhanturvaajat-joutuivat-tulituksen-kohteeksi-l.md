@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Suomalaiset rauhanturvaajat joutuivat tulituksen kohteeksi Libanonissa Suomalaisia rauhanturvaajia kohti ammuttiin Etelä-Libanonissa, mikä…
 ---
 Suomalaiset rauhanturvaajat joutuivat tulituksen kohteeksi Libanonissa
 

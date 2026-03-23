@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Naton puolustussuunnitelmiin kuuluu haavoittuneiden suomalaissotilaiden siirtäminen Lapista Norjan sairaaloihin mahdollisen aseellisen…
 ---
 Naton puolustussuunnitelmiin kuuluu haavoittuneiden suomalaissotilaiden siirtäminen Lapista Norjan sairaaloihin mahdollisen aseellisen konfliktin syttyessä. Naton lääketieteellisen komitean puheenjohtaja Petter Iversen vahvisti asian suomalaiselle medialle. Tällaiset suunnitelmat ovat osa Naton laajempaa strategiaa, jossa pyritään varautumaan erilaisiin kriisitilanteisiin, jotka voisivat vaarantaa alueen turvallisuuden.
 

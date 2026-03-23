@@ -3,7 +3,7 @@ title: "Iran varoitti Arabiemiraatteja hyökkäyksistä"
 date: 2026-03-21T18:23:21.111956+00:00
 categories:
   - Ulkomaat
-description: "Iranin asevoimat varoittavat Yhdistyneitä arabiemiraatteja sodan laajentamisesta, mikäli Emiraatit sallivat hyökkäyksiä kiistellyille Abu Musan ja Suuren Tunbin saarille."
+description: Iranin asevoimat varoittavat Yhdistyneitä arabiemiraatteja sodan laajentamisesta, mikäli Emiraatit sallivat hyökkäyksiä kiistellyille Abu Musan…
 image: "https://images.unsplash.com/photo-1568677597024-8b77666289f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpcmFuJTIwdmFyb2l0dGklMjBhcmFiaWVtaXJhYXR0ZWphJTIwaHklQzMlQjZrayVDMyVBNHlrc2lzdCVDMyVBNHxlbnwxfDB8fHwxNzc0MTE3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1568677597024-8b77666289f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxpcmFuJTIwdmFyb2l0dGklMjBhcmFiaWVtaXJhYXR0ZWphJTIwaHklQzMlQjZrayVDMyVBNHlrc2lzdCVDMyVBNHxlbnwxfDB8fHwxNzc0MTE3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=400"
 image_alt: "Kuvituskuva: Iran varoitti Arabiemiraatteja hyökkäyksistä"

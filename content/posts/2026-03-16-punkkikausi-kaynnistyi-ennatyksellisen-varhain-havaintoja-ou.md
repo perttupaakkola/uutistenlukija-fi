@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Punkkikausi käynnistyi ennätyksellisen varhain – havaintoja Oulun korkeudelle asti Punkkeja on havaittu tänä keväänä tavallista aiemmin, ja…
 ---
 Punkkikausi käynnistyi ennätyksellisen varhain – havaintoja Oulun korkeudelle asti
 

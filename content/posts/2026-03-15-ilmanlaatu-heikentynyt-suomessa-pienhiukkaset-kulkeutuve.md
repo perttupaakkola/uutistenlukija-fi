@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Ilmanlaatu on heikentynyt laajoilla alueilla Suomessa maaliskuun puolivälissä.
 ---
 ## Ilmanlaatu heikentynyt Suomessa – pienhiukkaset kulkeutuvat Keski-Euroopasta
 

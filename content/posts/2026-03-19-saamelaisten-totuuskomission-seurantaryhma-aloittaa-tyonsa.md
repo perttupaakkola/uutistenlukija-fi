@@ -25,8 +25,18 @@ keywords:
   - "uusimmat kotimaan uutiset"
 ---
 
-Valtioneuvosto perusti torstaina Saamelaiskäräjien ja Kolttien kyläkokouksen kanssa koordinaatio- ja seurantaryhmän. Ryhmä tukee parlamentaarisen työryhmän työtä, joka arvioi Saamelaisten totuus- ja sovintokomission suosituksia.
+Valtioneuvosto perusti torstaina Saamelaiskäräjien ja Kolttien kyläkokouksen kanssa koordinaatio- ja seurantaryhmän. Ryhmä tukee parlamentaarisen työryhmän työtä, joka arvioi Saamelaisten totuus- ja sovintokomission suosituksia. Tämä päätös merkitsee tärkeää askelta kohti saamelaisten oikeuksien vahvistamista ja heidän kulttuurinsa tunnustamista Suomessa.
 
-Seurantaryhmä koordinoi yhteistyötä toimijoiden välillä ja seuraa suositusten edistämistä. Ryhmä myös edistää loppuraportin tiedon välittymistä suomalaisessa yhteiskunnassa ja valtionhallinnossa. Puheenjohtajana toimii pääministerin valtiosihteeri Risto Artjoki.
+## Saamelaisten totuuskomission tausta
 
-Marraskuussa asetettu parlamentaarinen työryhmä valmistelee näkemystä toimista, joihin totuuskomission suositusten perusteella tulee ryhtyä. Saamelaisten totuus- ja sovintokomissio luovutti loppuraporttinsa joulukuun alussa.
+Saamelaisten totuus- ja sovintokomissio perustettiin vuonna 2021, ja sen tavoitteena oli selvittää saamelaisten historian kipupisteitä, erityisesti kolonialistisia käytäntöjä, jotka ovat vaikuttaneet heidän kulttuuriinsa ja elinoloihinsa. Komissio keräsi tietoa eri puolilta Suomea ja kuuli laajasti saamelaisyhteisön jäseniä. Loppuraportti, joka luovutettiin joulukuussa, sisältää useita suosituksia, jotka koskevat saamelaisten itsemääräämisoikeutta, kielellisiä oikeuksia sekä kulttuurisen perinnön suojelemista.
+
+Seurantaryhmän perustaminen on merkittävä vaihe, sillä se mahdollistaa suositusten tehokkaan edistämisen ja toteuttamisen. Ryhmä koordinoi yhteistyötä eri toimijoiden välillä, mikä on elintärkeää, jotta saamelaiset voivat kokea aidosti osallistuvansa päätöksentekoon itseään koskevissa asioissa. Seurantaryhmän puheenjohtajana toimii pääministerin valtiosihteeri Risto Artjoki, joka tuo mukanaan hallituksen näkökulman ja resursseja.
+
+## Tulevaisuuden näkymät
+
+Marraskuussa asetettu parlamentaarinen työryhmä valmistaa näkemystä toimista, joihin totuuskomission suositusten perusteella tulee ryhtyä. Tämä vaihe on erityisen tärkeä, sillä se määrittää, miten valtionhallinto aikoo reagoida saamelaisten vaatimuksiin ja miten se aikoo ottaa huomioon heidän kulttuurinsa ja oikeutensa. Työryhmän on tarkoitus luoda selkeä toimintasuunnitelma, joka sisältää aikarajoja ja vastuuhenkilöitä.
+
+Saamelaisten totuuskomission seurantaryhmän työ voi myös toimia esimerkkinä muille alkuperäiskansoille, jotka ovat kohdanneet vastaavia haasteita. Tämä voi auttaa parantamaan suhteita valtion ja alkuperäiskansojen välillä, eikä vain Suomessa vaan kansainvälisestikin. Saamelaisten tilanne on osa laajempaa keskustelua alkuperäiskansojen oikeuksista ympäri maailmaa, ja Suomi voi toimia edelläkävijänä.
+
+Yhteiskunnassa on tärkeää, että saamelaiskulttuurin ja -historian tiedonvälitystä lisätään. Seurantaryhmä pyrkii myös edistämään loppuraportin sisältöä ja suosituksia, jotta yhteiskunnassa voidaan paremmin ymmärtää saamelaisten kokemuksia ja oikeutettuja vaatimuksia. Tämä voi osaltaan vähentää ennakkoluuloja ja lisätä suvaitsevaisuutta eri kulttuurien välillä, mikä on elintärkeää monikulttuurisessa Suomessa.

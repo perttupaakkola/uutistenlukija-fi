@@ -12,10 +12,24 @@
 {{/* Featured article — newest with this tag */}}
 {{ $sorted := .Pages.ByDate.Reverse }}
 {{ with index $sorted 0 }}
+{{- $featCat := index .Params.categories 0 | default "kotimaa" -}}
 <a href="{{ .Permalink }}" class="category-featured">
   {{ with .Params.image }}
+  {{- $featImgSrc := . -}}
+  {{- if hasPrefix . "https://images.unsplash.com" -}}
+    {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
+    {{- $featImgSrc = printf "%s%sw=260&h=146&fit=crop&fm=webp&q=80" . $s -}}
+  {{- else if hasPrefix . "https://images.pexels.com" -}}
+    {{- $s := "?" -}}{{- if in . "?" -}}{{- $s = "&" -}}{{- end -}}
+    {{- $featImgSrc = printf "%s%sw=260&h=146&fit=crop" . $s -}}
+  {{- end -}}
   <div class="category-featured__img-wrap">
-    <img src="{{ . }}" alt="{{ $.Title }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high" width="260" height="146">
+    <img src="{{ $featImgSrc }}"
+         alt="{{ .Params.image_alt | default .Title }}"
+         class="category-featured__img"
+         loading="eager" decoding="async" fetchpriority="high"
+         width="260" height="146"
+         onerror="this.onerror=null;this.src='/images/categories/{{ $featCat | lower }}.jpg';this.classList.add('img-loaded')">
   </div>
   {{ end }}
   <div class="category-featured__body">
@@ -24,7 +38,7 @@
     <p class="category-featured__excerpt">{{ .Summary | truncate 200 }}</p>
     <div class="meta">
       {{ .Date | time.Format "2.1. klo 15:04" }}
-      {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+      · <span class="author-inline">Toimitus</span>
       · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min
     </div>
   </div>
@@ -34,7 +48,7 @@
 <div class="articles-grid">
   {{ $paginator := .Paginate ($sorted) 20 }}
   {{ range $i, $p := $paginator.Pages }}
-  {{- if not (and (eq $paginator.PageNumber 1) (eq $i 0)) }}
+  {{ if and (eq $paginator.PageNumber 1) (eq $i 0) }}{{ continue }}{{ end }}
   <article class="article-card">
     {{ with $p.Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
@@ -43,11 +57,24 @@
     <p class="excerpt">{{ $p.Summary | truncate 200 }}</p>
     <div class="meta">
       {{ $p.Date | time.Format "2.1. klo 15:04" }}
-      {{ with $p.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+      · <span class="author-inline">Toimitus</span>
       · {{ if (isset $p.Params "reading_time") }}{{ if eq (int $p.Params.reading_time) 0 }}&lt;1{{ else }}{{ $p.Params.reading_time }}{{ end }}{{ else }}{{ $p.ReadingTime }}{{ end }} min
     </div>
   </article>
-  {{- end }}
   {{ end }}
 </div>
+
+{{/* Pagination nav — was missing, tags with 20+ articles had no way to navigate pages */}}
+{{ $pag := $paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav class="pagination">
+  {{ if $pag.HasPrev }}
+  <a href="{{ $pag.Prev.URL }}" class="page-link">← Edellinen</a>
+  {{ end }}
+  <span class="page-info">Sivu {{ $pag.PageNumber }}/{{ $pag.TotalPages }}</span>
+  {{ if $pag.HasNext }}
+  <a href="{{ $pag.Next.URL }}" class="page-link">Seuraava →</a>
+  {{ end }}
+</nav>
+{{ end }}
 {{ end }}

@@ -14,6 +14,7 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
+description: Yhdysvaltalainen alppihiihtäjä Lindsey Vonn ei ole vielä valmis päättämään uransa suuntaa, huolimatta vakavasta loukkaantumisesta, jonka hän…
 ---
 ## Lindsey Vonn ei sulje pois paluuta: "En tarvitse kenenkään lupaa"
 

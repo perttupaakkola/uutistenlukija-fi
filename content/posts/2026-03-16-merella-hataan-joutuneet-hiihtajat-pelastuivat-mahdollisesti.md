@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Kaksi kokenutta saksalaista hiihtovaeltajaa selvisi hengissä merellisestä hätätilanteesta lauantaina.
 ---
 Kaksi kokenutta saksalaista hiihtovaeltajaa selvisi hengissä merellisestä hätätilanteesta lauantaina. Pelastumisen taustalla saattoi olla keino, jota on käytetty autiosaarilla vuosikymmeniä. Hiihtäjät joutuivat vaikeuksiin, kun myrsky yllätti heidät keskellä meriseikkailua. Sään äkillinen muuttuminen johtaa usein vaarallisiin tilanteisiin erityisesti arktisissa olosuhteissa, joissa tuuli ja lumi voivat tehdä näkyvyydestä lähes mahdotonta.
 

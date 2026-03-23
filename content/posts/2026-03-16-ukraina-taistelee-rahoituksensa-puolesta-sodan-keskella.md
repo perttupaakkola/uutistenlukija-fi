@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Ukraina taistelee rahoituksensa puolesta sodan keskellä Ukraina kamppailee taloudellisesta selviytymisestään.
 ---
 Ukraina taistelee rahoituksensa puolesta sodan keskellä
 

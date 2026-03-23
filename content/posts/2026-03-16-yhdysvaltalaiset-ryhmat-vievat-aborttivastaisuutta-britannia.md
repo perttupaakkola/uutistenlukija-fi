@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Yhdysvaltalaiset ryhmät vievät aborttivastaisuutta Britanniaan Yhdysvaltalaiset aborttivastaiset järjestöt ovat laajentaneet toimintaansa…
 ---
 Yhdysvaltalaiset ryhmät vievät aborttivastaisuutta Britanniaan
 

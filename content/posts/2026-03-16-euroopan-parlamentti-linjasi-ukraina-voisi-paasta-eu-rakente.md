@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Euroopan parlamentti äänesti 11.
 ---
 Euroopan parlamentti äänesti 11. maaliskuuta EU:n laajentumisstrategian puolesta. Linjaus tukee mallia, jossa Ukraina pääsisi mukaan unionin rakenteisiin jo ennen varsinaista täysjäsenyyttä. Tämä on merkittävä askel, joka osoittaa Euroopan unionin halukkuuden tukea Ukrainaa sen pyrkimyksissä vahvistaa omaa asemaansa Euroopan kansainvälisessä politiikassa.
 

@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Sosiaali- ja terveyspalveluyhtiö Esperi Care irtisanoi hoitajansa väittäen tätä vakavista laiminlyönneistä.
 ---
 Sosiaali- ja terveyspalveluyhtiö Esperi Care irtisanoi hoitajansa väittäen tätä vakavista laiminlyönneistä. Oikeus katsoi, ettei väitteille ollut riittävää näyttöä. Yhtiö joutuu maksamaan entiselle työntekijälleen yli 200 000 euroa korvauksina perusteettomasta irtisanomisesta, aineettomasta vahingosta ja oikeudenkäyntikuluista. Tämä tapaus nostaa esiin kysymyksiä hoivasektorin työntekijöiden oikeuksista ja työnantajien vastuista.
 

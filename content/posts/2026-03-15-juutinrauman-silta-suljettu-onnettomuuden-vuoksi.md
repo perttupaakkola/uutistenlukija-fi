@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Juutinrauman silta eli Øresundsbron suljettiin lauantaina moottoritieliikenteeltä Ruotsin suuntaan tunneliosuudella sattuneen onnettomuuden…
 ---
 ## Juutinrauman silta suljettu onnettomuuden vuoksi
 

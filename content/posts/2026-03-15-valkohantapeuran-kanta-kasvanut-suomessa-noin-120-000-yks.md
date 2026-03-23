@@ -14,6 +14,7 @@ keywords:
   - "tiedeuutiset"
   - "tiede uutiset"
   - "tutkimus uutiset"
+description: Luonnonvarakeskuksen tuoreen kanta-arvion mukaan Suomessa oli helmikuussa 2026 noin 120 000 valkohäntäpeuraa.
 ---
 Luonnonvarakeskuksen tuoreen kanta-arvion mukaan Suomessa oli helmikuussa 2026 noin 120 000 valkohäntäpeuraa. Kanta on kasvanut hieman viime vuodesta, vaikka metsästyspaine on pyritty pitämään riittävänä kannan hallitsemiseksi. Tämä kehitys on herättänyt keskustelua valkohäntäpeuran roolista ekosysteemissä sekä sen vaikutuksista ihmisiin ja ympäristöön.
 

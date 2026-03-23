@@ -14,6 +14,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: Netflixin Frankenstein ja KPop Demon Hunters menestyivät Oscar-gaalassa Netflixin Frankenstein-elokuva voitti kolme Oscar-palkintoa vuoden 2026…
 ---
 Netflixin Frankenstein ja KPop Demon Hunters menestyivät Oscar-gaalassa
 

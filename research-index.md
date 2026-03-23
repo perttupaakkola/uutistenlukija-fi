@@ -1,8 +1,8 @@
 # Uutistenlukija.fi — Research Library Index
 
-**Last updated:** 2026-03-22
+**Last updated:** 2026-03-23
 **Compiled by:** Monica 🔍
-**Total:** 33 deliverables across 26 files (~225KB+)
+**Total:** 36 deliverables across 29 files (~240KB+)
 
 This document is the master table of contents for the uutistenlukija.fi research library. All files are in `projects/uutistenlukija/` in the shared workspace.
 
@@ -45,6 +45,9 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 31 | Reader feedback survey | reader-survey.md | 9 questions (+ 5-question short version), Google Forms implementation, 3 incentive ideas, NPS analytics, GDPR notes |
 | 32 | Competitive map | competitive-map.md | 7 aggregators mapped, 6 mainstream publishers, unique positioning, SWOT, positioning chart. Uutiskeräin.fi gap identified |
 | 33 | Ad revenue model | ad-revenue-model.md | Traffic tier projections (1K-500K), break-even analysis, 3 scenarios (€900-€25K yr1), newsletter sponsorship tiers, MM-kisat golden window |
+| 34 | Content quality audit | content-quality-audit.md | ⚠️ CRITICAL: Site has AI-generated full articles with fictional bylines, no source attribution. Grade C+. UX A- but legal compliance D |
+| 35 | Attribution best practices | attribution-best-practices.md | Aggregator comparison, JSN guidelines, EU AI Act Art. 50 (Aug 2026), STT/Yle examples, P0 fix list for Alex |
+| 36 | Launch readiness v2 | launch-readiness-v2.md | 32% ready (16/50), 5 blockers (B1-B5), 5 Perttu decisions, timeline: mid-April launch if decisions made now |
 
 ---
 
@@ -81,6 +84,9 @@ This document is the master table of contents for the uutistenlukija.fi research
 | reader-survey.md | ~2KB | #31 | ✅ Complete |
 | competitive-map.md | ~4KB | #32 | ✅ Complete |
 | ad-revenue-model.md | ~3KB | #33 | ✅ Complete |
+| content-quality-audit.md | ~3KB | #34 | ✅ Complete |
+| attribution-best-practices.md | ~4KB | #35 | ✅ Complete |
+| launch-readiness-v2.md | ~2KB | #36 | ✅ Complete |
 
 ### Deliverables without standalone files
 

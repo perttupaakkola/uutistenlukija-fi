@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Lapin Rovajärvellä harjoitellaan parhaillaan Naton eteentyönnettyjen joukkojen toimintaa Suomen maaperällä.
 ---
 Lapin Rovajärvellä harjoitellaan parhaillaan Naton eteentyönnettyjen joukkojen toimintaa Suomen maaperällä. Cold Response 26 -sotaharjoitukseen osallistuu yli 30 000 ammattisotilasta ja reserviläistä 14 maasta. Harjoituksen ytimessä on joukkojen siirtäminen Ruotsista Suomeen, mikä korostaa Norjan, Ruotsin ja Suomen välistä puolustusyhteistyötä ja Naton merkitystä Pohjois-Euroopassa.
 

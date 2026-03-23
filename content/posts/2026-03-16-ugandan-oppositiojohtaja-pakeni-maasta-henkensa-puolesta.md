@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Ugandan oppositiojohtaja pakeni maasta henkensä puolesta Ugandan oppositiojohtaja on ilmoittanut paenneensa maasta, peläten henkensä olevan…
 ---
 Ugandan oppositiojohtaja pakeni maasta henkensä puolesta
 

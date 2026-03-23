@@ -14,6 +14,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: Yhdysvaltain elokuva-akatemian Oscar-gaala järjestetään sunnuntai-iltana Los Angelesissa 98.
 ---
 Yhdysvaltain elokuva-akatemian Oscar-gaala järjestetään sunnuntai-iltana Los Angelesissa 98. kerran. Seremonian juontaa toista kertaa peräkkäin Conan O'Brien, joka sai viime vuonna kiitosta suorituksestaan. O'Brienin paluu juontajaksi on herättänyt odotuksia, sillä hänen huumorinsa ja karismansa ovat olleet suosittuja niin televisiossa kuin muissa tapahtumissa.
 

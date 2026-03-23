@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Ulkoministeri Elina Valtonen ei pidä Natoa oikeana toimijana mahdolliseen sotilasoperaatioon Hormuzinsalmella.
 ---
 Ulkoministeri Elina Valtonen ei pidä Natoa oikeana toimijana mahdolliseen sotilasoperaatioon Hormuzinsalmella. Presidentti Donald Trump on painostanut Nato-liittolaisia osallistumaan operaatioon Irania vastaan, mutta Valtosen mukaan tämä ajatus on ongelmallinen. Hän korostaa, ettei sotilasliiton päähuomion tulisi suuntautua Iraniin, vaan Naton tehtävänä on ensisijaisesti jäsenmaidensa puolustaminen. 
 

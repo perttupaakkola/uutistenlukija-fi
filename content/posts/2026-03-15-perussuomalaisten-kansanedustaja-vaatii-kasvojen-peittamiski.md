@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Perussuomalaisten kansanedustaja Mira Nieminen vaatii, että kasvot peittävä pukeutuminen kielletään Lahden kouluissa.
 ---
 Perussuomalaisten kansanedustaja Mira Nieminen vaatii, että kasvot peittävä pukeutuminen kielletään Lahden kouluissa. Tämä vaatimuksensa on osa laajempaa valtakunnallista keskustelua, jota peittävästä pukeutumisesta on käyty suomalaisissa oppilaitoksissa viime kuukausina. Nieminen on ottanut asian esille erityisesti opetuksen ja sosiaalisen vuorovaikutuksen näkökulmasta, korostaen, että kasvojen peittäminen kouluympäristössä haittaa opiskelijoiden välistä kommunikaatiota ja voi luoda epäselvyyksiä identiteetissä.
 

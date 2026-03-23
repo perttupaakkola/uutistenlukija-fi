@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Pääministeri Petteri Orpo osallistui sunnuntaina Pohjoismaiden ja Kanadan pääministerien kokoukseen Oslossa.
 ---
 Pääministeri Petteri Orpo osallistui sunnuntaina Pohjoismaiden ja Kanadan pääministerien kokoukseen Oslossa. Kokouksen asialistalla olivat Ukrainan tuen jatkaminen, arktisen alueen turvallisuus ja Euroopan puolustuskysymykset. Tilaisuus herätti suurta huomiota, sillä se järjestettiin aikana, jolloin Euroopan turvallisuustilanne on poikkeuksellisen jännitteinen Venäjän hyökkäyssodan vuoksi.
 

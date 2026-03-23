@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Kirkkoherran valinta on herättänyt vilkasta keskustelua sen jälkeen, kun kirkkovaltuusto valitsi tehtävään miehen, vaikka tuomiokapituli oli…
 ---
 Kirkkoherran valinta on herättänyt vilkasta keskustelua sen jälkeen, kun kirkkovaltuusto valitsi tehtävään miehen, vaikka tuomiokapituli oli todennut naisehdokkaan olevan hakijoista ansioitunein. Tämä tapaus on saanut tutkijat ja kirkon jäsenet pohtimaan valintaprosessin läpinäkyvyyttä ja tasa-arvoisuutta, sekä nostanut esiin kysymyksiä vanhoillislestadiolaisen liikkeen vaikutuksesta kirkon päätöksentekoon.
 

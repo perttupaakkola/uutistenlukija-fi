@@ -14,6 +14,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: Bensiiniautot menettävät otettaan Australian automarkkinoilla.
 ---
 Bensiiniautot menettävät otettaan Australian automarkkinoilla. Maan autoliiton AAA:n tuoreet tilastot osoittavat, että puhtaasti bensiinikäyttöisten autojen osuus myydyistä ajoneuvoista laski ennätyksellisen alas, 66,3 prosenttiin neljännesvuositasolla. Tämä muutos ei ole vain tilastollinen ilmiö, vaan se heijastaa laajempia ympäristö- ja taloudellisia trendejä, jotka vaikuttavat kuluttajien valintoihin.
 

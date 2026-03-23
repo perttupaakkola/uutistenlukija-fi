@@ -27,8 +27,16 @@ keywords:
   - "kansainväliset uutiset"
 ---
 
-Ukrainan saama kansainvälinen tuki voi hiipua, kun huomio kiinnittyy Lähi-idän tapahtumiin. Brysselissä huolestuttaa, että Ukrainalle kaivattuja ohjuksia kuluu parhaillaan Iranin sodassa.
+Ukrainan saama kansainvälinen tuki voi hiipua, kun huomio kiinnittyy Lähi-idän tapahtumiin. Brysselissä huolestuttaa, että Ukrainalle kaivattuja ohjuksia kuluu parhaillaan Iranin sodassa. Tämä tilanne nostaa esiin vakavan kysymyksen: pystyykö lännen yhteisö edelleen tukemaan Ukrainaa, kun maailmanpolitiikan painopisteet näyttävät olevan muuttumassa?
 
-Unkari on jatkanut Ukrainan vastaisia toimiaan ja estänyt yhteisiä päätöksiä EU:n sisällä. Venäjä saa tästä tilaisuuden hyödyntää hajautunutta unionia.
+## Huoli Ukrainasta ja sen tukemisesta
 
-Käytännössä Ukrainan asia jää jalkoihin, jos kansainvälinen huomio kääntyy muualle. Vaikutus ulottuu talouspakotteisiin ja sotilaalliseen apuun.
+Ukrainan sota, joka alkoi Venäjän hyökkäyksellä vuonna 2022, on vaatinut merkittäviä resursseja lännen mailta. Tuki on ollut monimuotoista, sisältäen taloudellista apua, sotilaallista varustusta ja humanitaarista apua. Nyt kuitenkin, kun Lähi-idässä on syttynyt uusi konflikti, on pelko, että Ukrainan tukemiseen käytettävät varat ja huomio voivat siirtyä muualle. Erityisesti Iranin ja Israelin välinen tilanne on herättänyt huolta, ja lännen maat ovat alkaneet keskittyä tämän konfliktin ratkomiseen, mikä voi heikentää Ukrainan saamaa tukea.
+
+Unkari on jatkanut Ukrainan vastaisia toimiaan ja estänyt yhteisiä päätöksiä EU:n sisällä. Tämä on osaltaan heikentänyt EU:n kykyä toimia yhtenäisesti ja tehokkaasti tilanteessa, jossa Ukrainassa tarvitaan tukea enemmän kuin koskaan. Unkarin toiminta herättää kysymyksiä EU:n sisäisestä yhtenäisyydestä ja siitä, voiko unioni toimia tehokkaasti, kun jäsenvaltioiden välinen yhteistyö on horjuvaa. Venäjä saa tästä tilaisuuden hyödyntää hajautunutta unionia, mikä voi pahentaa Ukrainan tilannetta entisestään.
+
+Käytännössä Ukrainan asia jää jalkoihin, jos kansainvälinen huomio kääntyy muualle. Vaikutus ulottuu talouspakotteisiin ja sotilaalliseen apuun. Mikäli lännen maat alkavat vähentää tukitoimiaan, se voi johtaa siihen, että Ukraina ei kykene puolustautumaan tehokkaasti Venäjän hyökkäyksiltä. Tämä puolestaan voi johtaa humanitaariseen katastrofiin, jonka seuraukset ulottuvat kauas Ukrainan rajojen yli. 
+
+Lisäksi, mikäli Ukrainan tuki heikkenee, se voi lähettää vaarallisen signaalin muille maille, jotka kamppailevat omien alueellisten konfliktien kanssa. Se voisi rohkaista aggressiivisia toimia, sillä valtioiden on helppo arvioida, kuinka paljon kansainvälinen yhteisö on valmis tukemaan heitä kriisitilanteissa. 
+
+Kaiken kaikkiaan on äärimmäisen tärkeää, että lännen maat pitävät Ukrainan tukemisen agendalla, vaikka maailmassa tapahtuu muitakin kriisejä. Ukrainan itsenäisyys ja alueellinen koskemattomuus ovat kysymyksiä, jotka eivät kosketa vain Ukrainaa, vaan koko Euroopan turvallisuusjärjestelmää.

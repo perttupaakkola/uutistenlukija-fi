@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Metsähallitus tarjoaa sadan euron löytöpalkkion jokaisesta maakotkan pesästä, joka ei ole aiemmin ollut sen tiedossa.
 ---
 Metsähallitus tarjoaa sadan euron löytöpalkkion jokaisesta maakotkan pesästä, joka ei ole aiemmin ollut sen tiedossa. Tämä toimenpide on osa laajempaa suojeluhanketta, jonka tavoitteena on suojella maakotkan, sekä merikotkan, elinympäristöjä ja varmistaa näiden uhanalaisten lintulajien tulevaisuus. Palkkio koskee erityisesti myös poronhoitoalueelta löytyviä aiemmin tuntemattomia merikotkan pesiä.
 

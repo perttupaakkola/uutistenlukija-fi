@@ -52,8 +52,8 @@ TÄRKEÄÄ:
 
 RAKENNE JA OTSIKOT:
 - Kirjoita 4–6 kappaletta.
-- PAKOLLINEN: käytä 1–2 H2-väliotsikkoa (## Otsikko) — JOKAISESSA artikkelissa yli 200 sanaa. Tämä on ehdoton vaatimus, ei suositus.
-- Alle 200 sanan artikkeleissa EI väliotsikoita — suora kertomus.
+- Käytä 1–2 H2-väliotsikkoa (## Otsikko) jäsentämään artikkeli — aina kun artikkeli on 300+ sanaa.
+- Alle 300 sanan artikkeleissa EI väliotsikoita — suora kertomus.
 - Väliotsikot ovat informatiivisia, eivät klikkiotsikoita: "Mitä tapahtui seuraavaksi" → "Tilanne kehittyi nopeasti".
 - Vain ensimmäinen sana isolla väliotsikoissa.
 
@@ -101,8 +101,8 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 7. Chatbot-artefaktit
 8. Täytesanat ja varautumiset
 9. TARKISTA KIELI: artikkelin täytyy olla suomea. Jos jokin lause on englanniksi, käännä se.
-10. TARKISTA RAKENNE: artikkeleissa yli 200 sanaa TÄYTYY olla 1-2 H2-väliotsikkoa (## Otsikko).
-    Lyhyissä (alle 200 sanaa) ei väliotsikoita. Jos 200+ sanan artikkeli ei sisällä ## väliotsikkoa, lisää yksi.
+10. TARKISTA RAKENNE: pidemmissä artikkeleissa (300+ sanaa) tulee olla 1-2 H2-väliotsikkoa (## Otsikko).
+    Lyhyissä (alle 300 sanaa) ei väliotsikoita. Lisää tai poista tarvittaessa.
 11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 280 sanaa (tavoite 300–400). Jos artikkeli on lyhyempi,
     laajenna sitä lisäämällä taustan, kontekstin ja vaikutusten kuvausta. ÄLÄ koskaan
     palauta alle 280 sanan artikkelia. Tavallinen kappale on 60–80 sanaa.
@@ -337,7 +337,7 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
 [
   {{
     "title": "Uutisen otsikko (max 80 merkkiä)",
-    "content": "Vähintään 280 sanan uutisteksti. 4-6 kappaletta, erotettu \\n\\n. PAKOLLINEN: käytä täsmälleen 1-2 H2-väliotsikkoa (## Otsikko) — jokainen artikkeli yli 200 sanaa TÄYTYY sisältää vähintään yhden ## väliotsikon.",
+    "content": "Vähintään 280 sanan uutisteksti. 4-6 kappaletta, erotettu \\n\\n. Käytä 1-2 H2-väliotsikkoa (## Otsikko) kun artikkeli on 300+ sanaa.",
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
     "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
@@ -474,7 +474,10 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
             if j < len(batch):
                 written_article["fingerprint"] = batch[j].get("fingerprint", "")
                 written_article["trending"] = batch[j].get("trending", False)
-                # Do NOT carry source_name or source_url to output
+                # Pass source attribution fields through to publisher
+                for _src_field in ("source", "source_domain", "source_url", "link"):
+                    if _src_field in batch[j]:
+                        written_article[_src_field] = batch[j][_src_field]
             # Normalise tags — ensure list of lowercase strings, 2–5 items
             raw_tags = written_article.get("tags", [])
             if isinstance(raw_tags, list):

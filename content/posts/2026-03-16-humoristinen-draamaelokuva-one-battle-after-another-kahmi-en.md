@@ -14,6 +14,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: Oscar-gaalan suurin voittaja oli humoristinen draamaelokuva One Battle After Another, joka keräsi illan aikana eniten palkintoja.
 ---
 Oscar-gaalan suurin voittaja oli humoristinen draamaelokuva One Battle After Another, joka keräsi illan aikana eniten palkintoja. Elokuva vakuutti akatemian jäsenet useassa kategoriassa, ja sen menestyksen taustalla on monitasoinen kerronta, joka yhdistää huumorin ja draaman taitavasti. One Battle After Another käsittelee elämän arkea ja sen haasteita hauskalla mutta koskettavalla tavalla, mikä on resonoinut laajasti yleisössä ja kriitikoissa.
 

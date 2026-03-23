@@ -4643,3 +4643,39 @@ pre code {
   }
 }
 /* ── end spec #15 ─────────────────────────────────────────────── */
+
+/* ── source attribution box ───────────────────────────────────── */
+.source-attribution {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+  margin: 0 0 1.25rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-secondary, #f5f5f5);
+  border-left: 3px solid var(--accent, #3498db);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #555);
+}
+.source-attribution__label {
+  font-weight: 600;
+  color: var(--text-primary, #222);
+}
+.source-attribution__name {
+  color: var(--text-secondary, #555);
+}
+.source-attribution__link {
+  margin-left: auto;
+  color: var(--accent, #3498db);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.source-attribution__link:hover {
+  text-decoration: underline;
+}
+[data-theme="dark"] .source-attribution {
+  background: var(--bg-secondary, #1e1e1e);
+}
+/* ── end source attribution ───────────────────────────────────── */

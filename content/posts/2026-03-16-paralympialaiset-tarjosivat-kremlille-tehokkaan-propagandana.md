@@ -14,6 +14,7 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
+description: Venäjän vallanpitäjät onnistuivat hyödyntämään paralympialaisia omassa viestinnässään.
 ---
 Venäjän vallanpitäjät onnistuivat hyödyntämään paralympialaisia omassa viestinnässään. Paraurheilun kansainvälinen kattojärjestö mahdollisti tilanteen, jossa venäläisurheilijat kilpailivat ja menestyivät tavalla, joka palveli suoraan Kremlin tarpeita. Urheilun ja politiikan välinen suhde on ollut historiallisesti vahva, ja erityisesti suurissa kansainvälisissä kilpailuissa, kuten paralympialaisissa, niillä on merkittävä rooli valtioiden imagon ja identiteetin muovaamisessa.
 

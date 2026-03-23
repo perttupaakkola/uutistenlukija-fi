@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Ranskassa äänestettiin sunnuntaina paikallisvaalien ensimmäisellä kierroksella.
 ---
 Ranskassa äänestettiin sunnuntaina paikallisvaalien ensimmäisellä kierroksella. Vaalien tuloksia seurataan tavallista tarkemmin, koska suurkaupunkien voimasuhteet voivat ennakoida ensi vuoden presidentinvaalien asetelmia. Paikallisvaalit tarjoavat tärkeän mittarin poliittiselle ilmapiirille ja puolueiden kannatukselle, ja niiden vaikutus voi ulottua kauas tulevaisuuteen.
 

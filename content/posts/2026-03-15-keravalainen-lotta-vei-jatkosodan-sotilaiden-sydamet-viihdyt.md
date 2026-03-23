@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Jatkosodan viihdytyskiertueilla esiintyi monia tunnettuja taiteilijoita, kuten Tauno Palo ja muita aikakauden supertähtiä.
 ---
 Jatkosodan viihdytyskiertueilla esiintyi monia tunnettuja taiteilijoita, kuten Tauno Palo ja muita aikakauden supertähtiä. Rintamamiesten suurimmaksi suosikiksi nousi kuitenkin keravalainen lotta, jonka esiintymistä ylistettiin lukuisissa aikalaiskirjeissä. Tämä keravalainen lotta, joka on jäänyt historian hämärään, edustaa monia muitakin nuoria naisia, jotka uhmasivat sodan kauhuja ja toivat iloa rintamalle.
 

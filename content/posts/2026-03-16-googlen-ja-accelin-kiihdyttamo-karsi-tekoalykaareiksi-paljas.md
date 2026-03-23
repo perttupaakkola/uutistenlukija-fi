@@ -14,6 +14,7 @@ keywords:
   - "teknologia uutiset"
   - "tiedeuutiset"
   - "tekoäly uutiset"
+description: Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöohjelmaansa yli 4 000 hakemuksen joukosta.
 ---
 Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöohjelmaansa yli 4 000 hakemuksen joukosta. Yksikään valituista ei ole niin sanottu tekoälykääre eli yritys, joka vain paketoi olemassa olevan tekoälymallin uuteen käyttöliittymään. Tämä valinta on merkittävä osoitus siitä, miten kilpailu tekoälyalan kentällä Intiassa on muuttumassa ja kehittymässä.
 

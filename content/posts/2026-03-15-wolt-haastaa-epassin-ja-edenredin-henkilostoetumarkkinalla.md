@@ -14,6 +14,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: Ruokalähettipalvelustaan tunnettu Wolt ilmoitti perjantaina tuovansa kesällä markkinoille Wolt Benefits -palvelun, joka tähtää suoraan Suomen…
 ---
 Ruokalähettipalvelustaan tunnettu Wolt ilmoitti perjantaina tuovansa kesällä markkinoille Wolt Benefits -palvelun, joka tähtää suoraan Suomen henkilöstöetumarkkinoille. Uusi palvelu haastaa alan vakiintuneet toimijat Epassin ja Edenredin, jotka ovat hallinneet markkinaa pitkään. Tämä ilmoitus herättää kysymyksiä siitä, miten kilpailu voi muuttaa henkilöstöetujen kenttää ja mitä vaikutuksia sillä voi olla työntekijöille ja yrityksille.
 

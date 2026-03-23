@@ -14,6 +14,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: Hollywoodin 98. Oscar-gaala järjestettiin sunnuntaina Dolby Theatressa Los Angelesissa, ja se keräsi yhteen elokuvamaailman suurimmat tähdet…
 ---
 Hollywoodin 98. Oscar-gaala järjestettiin sunnuntaina Dolby Theatressa Los Angelesissa, ja se keräsi yhteen elokuvamaailman suurimmat tähdet sekä alan ammattilaiset. Tapahtuma on perinteisesti yksi vuoden odotetuimmista kulttuuritapahtumista, ja tänä vuonna se ei pettänyt odotuksia. Illan suurin voittaja oli Paul Thomas Andersonin ohjaama One Battle After Another, joka vei sekä parhaan elokuvan että parhaan ohjaajan palkinnot. Tämä oli erityinen hetki Andersonille, sillä kyseessä olivat hänen uransa ensimmäiset Oscar-pystit, mikä tekee voitosta symbolisesti merkittävän.
 

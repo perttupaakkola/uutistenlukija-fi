@@ -10,7 +10,7 @@
   "date": {{ $p.Date.Format "2.1.2006" | jsonify }},
   "category": {{ with $p.Params.categories }}{{ index . 0 | jsonify }}{{ else }}""{{ end }},
   "image": {{ $p.Params.image | default "" | jsonify }},
-  "author": {{ $p.Params.author | default "" | jsonify }}
+  "author": "Toimitus"
 }
 {{ end }}
 ]

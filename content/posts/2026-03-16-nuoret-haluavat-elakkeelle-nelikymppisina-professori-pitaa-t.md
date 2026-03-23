@@ -14,6 +14,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: FIRE-liike, eli 'Financial Independence, Retire Early', on saanut merkittävää huomiota suomalaisten nuorten keskuudessa.
 ---
 ## Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhlauksena
 

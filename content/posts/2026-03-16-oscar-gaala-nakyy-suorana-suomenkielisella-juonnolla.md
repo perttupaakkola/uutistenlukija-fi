@@ -14,6 +14,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: Oscar-gaala näkyy suorana suomenkielisellä juonnolla Oscar-gaala, yksi elokuvamaailman tärkeimmistä ja odotetuimmista tapahtumista, on jälleen…
 ---
 Oscar-gaala näkyy suorana suomenkielisellä juonnolla
 

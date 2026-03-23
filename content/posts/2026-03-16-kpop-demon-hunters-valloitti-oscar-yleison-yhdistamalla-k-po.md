@@ -14,6 +14,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: KPop Demon Hunters valloitti Oscar-yleisön yhdistämällä k-popin ja demonien metsästyksen Oscar-palkittu animaatioelokuva KPop Demon Hunters on…
 ---
 KPop Demon Hunters valloitti Oscar-yleisön yhdistämällä k-popin ja demonien metsästyksen
 

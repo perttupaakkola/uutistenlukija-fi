@@ -25,8 +25,18 @@ keywords:
   - "suomen talous uutiset"
 ---
 
-Ålandsbankenin päästrategi Jyri Suonpää näkee sijoitusmahdollisuuksia markkinoiden myllerryksen keskellä. Hän suosittelee seitsemää osaketta: Nordea, Sampo ja Nokia mukaan lukien.
+Ålandsbankenin päästrategi Jyri Suonpää on tuoreessa lausunnossaan tuonut esiin, että markkinoiden nykytilanne, huolimatta sen myrskyisistä olosuhteista, tarjoaa sijoittajille merkittäviä mahdollisuuksia. Hänen suosituksensa sisältävät seitsemän osaketta, joista tunnetuimpia ovat Nordea, Sampo ja Nokia. Näiden yritysten osakkeet ovat olleet keskustelunaiheena niin sijoittajien kuin analyytikoidenkin keskuudessa viime aikoina.
 
-Suonpään mukaan osakemarkkinoilla riittää houkuttelevia kohteita volatiliteetista huolimatta. Voimakkaassa nousussa olleen Nesteen suhteen hänellä on sijoittajille selkeä viesti.
+## Sijoitusmahdollisuudet markkinamyllerryksessä
 
-Markkinat ovat kokeneet voimakasta heiluntaa geopoliittisten jännitteiden ja energiahintojen nousun vuoksi. Suonpää arvioi, että tämä luo mahdollisuuksia pitkäjänteisille sijoittajille.
+Suonpään mukaan osakemarkkinoilla on edelleen houkuttelevia vaihtoehtoja, vaikka markkinoiden volatiliteetti onkin lisääntynyt. Hän korostaa, että sijoittajien tulisi etsiä mahdollisuuksia, jotka voivat tarjota tuottoja pitkällä aikavälillä. Tämä on erityisen tärkeää nyt, kun monet sijoittajat saattavat olla epävarmoja markkinoiden tulevaisuudesta geopoliittisten jännitteiden ja energiahintojen nousun vuoksi. 
+
+Esimerkiksi Neste, joka on viime kuukausina ollut voimakkaassa nousussa, on saanut Suonpäältä selkeän viestin sijoittajilta: vaikka osakkeen hinta on noussut, sen taustalla oleva liiketoimintamalli ja tulevaisuudennäkymät ovat edelleen lupaavia. Suonpään mukaan Nesteen kyky mukautua muuttuviin markkinaolosuhteisiin tekee siitä kiinnostavan vaihtoehdon pitkäjänteiselle sijoittajalle.
+
+## Geopoliittisten jännitteiden vaikutus
+
+Markkinat ovat todellakin kokeneet voimakasta heiluntaa, mikä johtuu monista tekijöistä, kuten geopoliittisista jännitteistä eri puolilla maailmaa, erityisesti Venäjän ja Ukrainan konfliktista. Tämä tilanne on aiheuttanut epävarmuutta, mikä puolestaan on nostanut energiahintoja. Suonpään mukaan tällaiset olosuhteet voivat toisaalta luoda erinomaisia ostopaikkoja niille sijoittajille, jotka ovat valmiita hyväksymään lyhyen aikavälin riskit.
+
+Suonpää uskoo, että pitkäjänteiset sijoittajat, jotka pystyvät katsomaan yli hetkellisten markkinamuutosten, voivat löytää mahdollisuuksia osakkeista, jotka ovat saattaneet jäädä markkinoilla huomaamatta. Hänen näkemyksensä mukaan talouden perusfundamentit, kuten yritysten tuloskehitys ja kasvunäkymät, ovat edelleen vahvoja, ja ne tukevat osakemarkkinoiden elpymistä tulevaisuudessa.
+
+Yhteenvetona voidaan todeta, että Ålandsbankenin päästrategi Jyri Suonpään suositukset tarjoavat arvokasta tietoa niille sijoittajille, jotka etsivät mahdollisuuksia tämän hetkisen markkinamyllerryksen keskellä. Hän rohkaisee sijoittajia olemaan aktiivisia ja huomioimaan markkinoiden tarjoamat mahdollisuudet, sillä tulevaisuudessa on mahdollista, että hyviä sijoitusmahdollisuuksia on yhä runsaasti saatavilla.

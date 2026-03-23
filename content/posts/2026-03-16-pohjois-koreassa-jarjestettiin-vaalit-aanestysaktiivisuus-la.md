@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Pohjois-Korea järjesti sunnuntaina kansallisen kansankokouksen vaalit.
 ---
 Pohjois-Korea järjesti sunnuntaina kansallisen kansankokouksen vaalit. Maan viranomaisten mukaan äänestysaktiivisuus nousi lähes sataan prosenttiin, kuten maassa on tapana. Tällainen korkea äänestysprosentti on ollut perinteinen käytäntö Pohjois-Koreassa, jossa vaalimenettely on enemmän symbolinen kuin todellinen demokraattinen prosessi.
 

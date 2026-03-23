@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Dubai on joutunut vakavimpaan kriisiinsä vuosikymmeniin.
 ---
 Dubai on joutunut vakavimpaan kriisiinsä vuosikymmeniin. Iran on iskenyt ensimmäistä kertaa Arabiemiraatteihin, ja iskut ovat karkottaneet ulkomaalaisia asukkaita kaupungista. Tämä kehitys on herättänyt huolta paitsi paikallisessa väestössä myös kansainvälisesti, kun Dubaista on tullut monien ulkomaalaisten, erityisesti länsimaalaisten, suosittu asuinpaikka.
 

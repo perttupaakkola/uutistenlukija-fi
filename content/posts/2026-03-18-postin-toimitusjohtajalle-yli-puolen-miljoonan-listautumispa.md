@@ -25,8 +25,18 @@ keywords:
   - "suomen talous uutiset"
 ---
 
-Postin toimitusjohtaja Antti Jääskeläinen sai viime vuonna 510 300 euron listautumispalkkion. Palkkio liittyi Postin pörssilistautumiseen ja nosti Jääskeläisen kokonaispalkitsemisen yli miljoonaan euroon. Tiedot käyvät ilmi Postin tiistaina julkistamasta vuosikertomuksesta.
+Postin toimitusjohtajalle yli puolen miljoonan listautumispalkkio
 
-Myös toimitusjohtajan sijainen, talous- ja rahoitusjohtaja Timo Karppinen sai listautumisesta 327 600 euron palkkion.
+Postin toimitusjohtaja Antti Jääskeläinen sai viime vuonna 510 300 euron listautumispalkkion. Palkkio liittyi Postin pörssilistautumiseen ja nosti Jääskeläisen kokonaispalkitsemisen yli miljoonaan euroon. Tiedot käyvät ilmi Postin tiistaina julkistamasta vuosikertomuksesta. Samalla kun Jääskeläisen palkkio herättää keskustelua, myös toimitusjohtajan sijainen, talous- ja rahoitusjohtaja Timo Karppinen sai listautumisesta 327 600 euron palkkion.
 
-Jääskeläisen peruspalkan päälle maksettu lisäkorvaus nostaa esiin kysymyksen valtionyhtiöiden johdon palkkatasosta. Posti oli ennen listautumistaan kokonaan valtion omistuksessa.
+Postin pörssilistautuminen, joka toteutettiin vuonna 2022, oli merkittävä virstanpylväs yrityksen historiassa. Ennen tätä siirtoa Posti oli täysin valtion omistuksessa, ja sen osakkeet siirtyivät julkiselle markkinalle. Tämä muutos ei ainoastaan vaikuttanut yhtiön johtoon ja palkitsemiskäytäntöihin, vaan myös herätti laajaa keskustelua valtionyhtiöiden ja niiden johdon palkkatasosta. Jääskeläisen ja Karppisen saamia palkkioita onkin kritisoitu monilla foorumeilla, ja monet kansalaiset ovat ihmetelleet, miksi valtionyhtiöiden johtajien palkat nousevat pörssin myötä, kun samalla julkinen keskustelu taloudellisista resursseista ja niiden käytöstä on kiihtynyt.
+
+## Valtionyhtiöiden palkkakäytännöt
+
+Valtionyhtiöiden palkkakäytännöistä käydään jatkuvaa keskustelua, ja usein esille nousee kysymys siitä, ovatko palkkiot oikeassa suhteessa yhtiöiden taloudelliseen tilanteeseen tai yhteiskunnalliseen vastuuseen. Palkkioiden suuruus herättää kysymyksiä myös siitä, miten hallitus ja omistajaohjaus valvovat valtionyhtiöiden johtoa. Pörssiyhtiönä Postilla on velvollisuus raportoida palkkioista, mutta samalla se toimii myös osakkeenomistajien edunvalvojana, mikä voi johtaa ristiriitoihin eri intressien välillä.
+
+On myös huomattava, että Postin listautuminen tapahtui aikana, jolloin yhtiön toiminta oli jo aiemmin herättänyt kritiikkiä, muun muassa sen toimituspalveluiden laadusta ja toimitusaikojen pituudesta. Palkkioiden suuruus voi vaikuttaa siihen, miten työntekijät ja asiakkaat kokevat yhtiön sitoutumisen parempaan palveluun ja asiakastyytyväisyyteen. 
+
+Jääskeläisen ja Karppisen palkkiot ovat herättäneet myös kysymyksiä yrityksen tulevaisuudesta. Onko yhtiön johto valmis tekemään investointeja ja kehittämään palvelujaan vai onko se enemmän kiinnostunut omasta taloudellisesta hyödystään? Tällaiset kysymykset ovat tärkeitä, sillä Postin kaltaiset valtionyhtiöt vaikuttavat suoraan kansalaisten arkeen, ja niiden toiminta on monella tavalla sidoksissa yhteiskunnan hyvinvointiin. 
+
+Yhteenvetona voidaan todeta, että Postin toimitusjohtajalle myönnetyt suuret listautumispalkkiot eivät ainoastaan nosta esiin kysymyksiä yhtiön johdon palkkatasosta, vaan myös laajempia kysymyksiä siitä, miten valtionyhtiöiden toimintaa valvotaan ja kehitetään tulevaisuudessa.

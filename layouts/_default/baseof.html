@@ -3,11 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{/* Title tag: 404 gets Finnish title; homepage gets site name; others get page title. */}}
-  {{ $is404 := eq .Kind "404" }}
-  <title>{{ if $is404 }}Sivua ei löytynyt &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ else if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
-  {{/* noindex: 404 pages + any page with noindex: true in frontmatter */}}
-  {{ if or $is404 .Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
+  <meta name="ai-generated" content="true">
+  {{/* Title tag: pass full headline — let Google truncate in SERPs, not us. */}}
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
   {{- with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end -}}
   {{/* === Resource hints === */}}
@@ -104,6 +102,21 @@
   {{ partial "analytics.html" . }}
   {{ partial "event-tracking.html" . }}
   <script>
+  // Set --header-h CSS variable so reading-progress bar sits just below the sticky header.
+  // Also recalculate on resize (orientation change, desktop ↔ mobile).
+  (function() {
+    function setHeaderH() {
+      var h = document.querySelector('.site-header');
+      if (h) {
+        document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+      }
+    }
+    setHeaderH();
+    window.addEventListener('resize', setHeaderH, { passive: true });
+    // Re-run after fonts/images settle in case the header height shifts
+    window.addEventListener('load', setHeaderH, { once: true });
+  })();
+
   // Mobile sticky header — hide on scroll-down, show on scroll-up (< 768px only)
   (function() {
     var siteHeader = document.querySelector('.site-header');

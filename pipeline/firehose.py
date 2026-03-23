@@ -408,12 +408,18 @@ def _parse_firehose_doc(doc: Dict, event: Dict) -> Optional[Dict]:
     normalized_url = _normalize_url(url)
     url_h = _url_hash(url)
 
+    # Derive a human-readable source name and domain from the URL
+    _parsed_url = urlparse(url)
+    _source_domain = _parsed_url.netloc.removeprefix("www.") if url else ""
+    _source_name = _source_domain or "Firehose"
+
     return {
         "title": title.strip(),
         "description": str(description)[:500],
         "link": url,
         "published": pub_date,
-        "source": "Firehose",
+        "source": _source_name,
+        "source_domain": _source_domain,
         "language": "fi",
         "fingerprint": _title_hash(title),
         "_url_hash": url_h,

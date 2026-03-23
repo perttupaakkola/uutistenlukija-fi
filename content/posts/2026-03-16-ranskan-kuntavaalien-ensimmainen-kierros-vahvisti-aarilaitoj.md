@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja Ranskan kuntavaalien ensimmäinen kierros tuotti vahvan tuloksen sekä Marine Le…
 ---
 Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja
 

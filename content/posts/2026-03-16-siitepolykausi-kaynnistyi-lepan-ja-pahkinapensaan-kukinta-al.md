@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Siitepölykausi käynnistyi – lepän ja pähkinäpensaan kukinta alkanut etelässä Lepän ja pähkinäpensaan kukinta on alkanut maan lounaisosissa, mikä…
 ---
 Siitepölykausi käynnistyi – lepän ja pähkinäpensaan kukinta alkanut etelässä
 

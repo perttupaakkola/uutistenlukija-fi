@@ -14,6 +14,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: "Valtiovarainministeriön ylijohtaja myöntää: ennusteet ovat epäonnistuneet toistuvasti Valtiovarainministeriön kansantalousosaston päällikkö…"
 ---
 Valtiovarainministeriön ylijohtaja myöntää: ennusteet ovat epäonnistuneet toistuvasti
 

@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Britannian hallitus valmistelee suunnitelmaa miinanraivausdroonien lähettämiseksi Hormuzinsalmelle.
 ---
 Britannian hallitus valmistelee suunnitelmaa miinanraivausdroonien lähettämiseksi Hormuzinsalmelle. Tavoitteena on avata salmi uudelleen öljykuljetuksille ilman, että tilanne Iranin kanssa kiristyisi. Tämä päätös tulee kriittiseen aikaan, kun alueen geopoliittinen tilanne on herkkä ja öljynkuljetukset ovat keskeisiä sekä maailman taloudelle että energiapoliittiselle vakaudelle.
 

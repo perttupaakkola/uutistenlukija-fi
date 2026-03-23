@@ -14,6 +14,7 @@ keywords:
   - "teknologia uutiset"
   - "tiedeuutiset"
   - "tekoäly uutiset"
+description: Tekoälyn käytön yleistyminen on synnyttänyt vastareaktion, joka näkyy erityisesti luovilla aloilla.
 ---
 ## Kilpailu maailmanlaajuisesti tunnustetusta tekoälyvapaa-logosta kiihtyy
 

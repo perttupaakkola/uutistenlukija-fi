@@ -14,6 +14,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: Iranin ja Persianlahden ilmatila on edelleen rajoitettu ohjusiskujen jälkeen.
 ---
 ## Lentoyhtiöt kiertävät sodan sulkemia ilmatiloja
 

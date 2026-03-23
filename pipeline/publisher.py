@@ -61,6 +61,10 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_placeholder = article.get("image_placeholder", "")
     trending = article.get("trending", False)
     description = article.get("description", "")
+    # Source attribution — source_url prefers original link over feed domain
+    source_name = article.get("source", "")
+    source_url = article.get("source_url", "") or article.get("link", "")
+    source_domain = article.get("source_domain", "")
     summary = article.get("summary", "")
     tags = article.get("tags", [])
 
@@ -95,6 +99,9 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     # base64 placeholder — use literal block scalar to avoid YAML line-length issues
     image_placeholder_line = f'\nimage_placeholder: "{image_placeholder}"' if image_placeholder else ""
     trending_line = "\ntrending: true" if trending else ""
+    source_name_line = f'\nsource_name: "{_esc(source_name)}"' if source_name else ""
+    source_url_line = f'\nsource_url: "{source_url}"' if source_url else ""
+    source_domain_line = f'\nsource_domain: "{source_domain}"' if source_domain else ""
     reading_time_line = f"\nreading_time: {reading_time}"
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
     summary_line = f'\nsummary: "{_esc(summary)}"' if summary else ""
@@ -119,7 +126,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     else:
         keywords_yaml = ""
 
-    # Build front matter — no source_name or source_url
+    # Build front matter — includes source attribution fields
     front_matter = f"""---
 title: "{title}"
 date: {date}
@@ -129,7 +136,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{summary_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}
+author_image: "{writer['image']}"{description_line}{summary_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
 draft: false
 ---
 
@@ -140,12 +147,6 @@ draft: false
 
 def publish_articles(articles: List[Dict]) -> List[str]:
     """Save articles as Hugo content files. Returns list of created file paths."""
-    import traceback
-    try:
-        from health_check import notify_discord_crash
-    except ImportError:
-        notify_discord_crash = None  # type: ignore
-
     os.makedirs(CONTENT_DIR, exist_ok=True)
     created = []
 
@@ -159,20 +160,13 @@ def publish_articles(articles: List[Dict]) -> List[str]:
 
         # Use article date or now, offset by index to maintain order
         article_date = now.isoformat()
+        markdown = _article_to_markdown(article, article_date)
 
-        try:
-            markdown = _article_to_markdown(article, article_date)
-            with open(filepath, "w", encoding="utf-8") as f:
-                f.write(markdown)
-            created.append(filepath)
-            print(f"[publisher] Created: {filename}")
-        except Exception as exc:
-            tb = traceback.format_exc()
-            print(f"[publisher] ERROR writing {filename}: {exc}\n{tb}")
-            if notify_discord_crash:
-                notify_discord_crash("publisher", exc, slug=slug, tb=tb)
-            # Continue with remaining articles — don't abort the whole batch
-            continue
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(markdown)
+
+        created.append(filepath)
+        print(f"[publisher] Created: {filename}")
 
     return created
 

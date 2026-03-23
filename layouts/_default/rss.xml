@@ -1,27 +1,7 @@
-{{- /*
-  rss.xml — Enhanced RSS 2.0 feed for uutistenlukija.fi
-
-  Features:
-  - Full article content via <content:encoded> (CDATA, unescaped HTML)
-  - Article hero images via <media:content> + <media:thumbnail>
-  - <atom:link rel="self"> for feed autodiscovery
-  - Works for home feed (all posts) and category/taxonomy feeds
-  - Sorted newest-first, capped at 50 items
-*/ -}}
-
-{{- /* Source pages:
-       - Home feed: all posts from site
-       - Category/tag/section feeds: the context's own pages (already filtered) */ -}}
-{{- $sourcePages := .Pages -}}
-{{- if eq .Kind "home" -}}
-  {{- $sourcePages = where .Site.RegularPages "Section" "posts" -}}
-{{- end -}}
-
-{{- /* Sort newest-first, cap at 50 */ -}}
-{{- $pages := $sourcePages.ByDate.Reverse | first 50 -}}
-
+{{- $pagesAll := .Pages -}}
+{{- $pages := ($pagesAll | first 50) -}}
 {{- $title := .Title | default .Site.Title -}}
-{{- $desc  := .Description | default .Site.Params.description -}}
+{{- $desc := .Description | default .Site.Params.description -}}
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
@@ -30,14 +10,14 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>{{ $title | html }}</title>
-    <link>{{ .Site.BaseURL }}</link>
+    <link>{{ .Permalink }}</link>
     <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml"/>
     <description>{{ $desc | html }}</description>
     <language>fi</language>
     <managingEditor>toimitus@uutistenlukija.fi (Uutistenlukija)</managingEditor>
     <webMaster>toimitus@uutistenlukija.fi (Uutistenlukija)</webMaster>
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 +0000" }}</lastBuildDate>
-    <ttl>15</ttl>
+    <ttl>60</ttl>
     <image>
       <url>{{ "/images/logo.png" | absURL }}</url>
       <title>{{ .Site.Title | html }}</title>
@@ -46,28 +26,23 @@
       <height>144</height>
     </image>
     {{ range $pages }}
-    {{- $itemDesc  := .Description | default (.Summary | plainify | truncate 280) -}}
+    {{- $itemDesc := .Description | default (.Summary | plainify | truncate 280) -}}
     {{- $itemImage := .Params.image | default "" -}}
-    {{- $itemThumb := .Params.image_thumb | default $itemImage -}}
     <item>
       <title>{{ .Title | html }}</title>
       <link>{{ .Permalink }}</link>
       <guid isPermaLink="true">{{ .Permalink }}</guid>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 +0000" }}</pubDate>
-      <dc:creator>{{ .Params.author | default "Uutistenlukija" }}</dc:creator>
-      {{ range .Params.categories -}}<category>{{ . | html }}</category>
+      <dc:creator>Uutistenlukija</dc:creator>
+      {{ range .Params.categories }}<category>{{ . | html }}</category>
       {{ end -}}
       <description>{{ $itemDesc | html }}</description>
-      {{- with .Content }}
-      <content:encoded><![CDATA[{{ . | safeHTML }}]]></content:encoded>
-      {{- end }}
-      {{- with $itemImage }}
-      <media:content url="{{ . | absURL }}" medium="image" width="1080" height="608">
+      {{ with .Content }}<content:encoded><![CDATA[{{ . }}]]></content:encoded>{{ end }}
+      {{ with $itemImage -}}
+      <media:content url="{{ . | absURL }}" medium="image">
         <media:title type="plain">{{ $.Title | html }}</media:title>
       </media:content>
-      {{- end }}
-      {{- with $itemThumb }}
-      <media:thumbnail url="{{ . | absURL }}" width="400" height="225"/>
+      <media:thumbnail url="{{ . | absURL }}"/>
       {{- end }}
     </item>
     {{ end }}

@@ -6,7 +6,7 @@
 
   {{ $today := now.Format "2006-01-02" }}
   {{ $posts := where .Site.RegularPages "Section" "posts" }}
-  {{ $todayPosts := where $posts "Date" "ge" (time.AsTime $today) }}
+  {{ $todayPosts := where $posts "Date" "ge" (time $today) }}
   {{ $sorted := $todayPosts.ByDate.Reverse }}
 
   {{ if not $sorted }}
@@ -25,7 +25,7 @@
       {{ range $catPosts }}
       <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <span class="digest-meta">{{ with .Params.author }}{{ . }} · {{ end }}{{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min</span>
+        <span class="digest-meta">Toimitus · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min</span>
       </li>
       {{ end }}
     </ul>

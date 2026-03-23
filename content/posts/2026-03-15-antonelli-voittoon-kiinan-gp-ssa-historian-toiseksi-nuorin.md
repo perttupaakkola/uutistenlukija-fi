@@ -15,6 +15,7 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
+description: "Mercedeksen italialainen kuljettaja Kimi Antonelli saavutti sunnuntaina uransa ensimmäisen formula ykkösten osakilpailuvoiton Kiinan GP:ssä…"
 ---
 ## Antonelli voittoon Kiinan GP:ssä – historian toiseksi nuorin F1-kilpailun voittaja
 

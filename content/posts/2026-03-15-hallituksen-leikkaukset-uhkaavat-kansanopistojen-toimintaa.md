@@ -14,6 +14,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: Suomen kansanopistot ovat ajautuneet ahtaalle hallituksen suunnittelemien leikkausten vuoksi.
 ---
 Suomen kansanopistot ovat ajautuneet ahtaalle hallituksen suunnittelemien leikkausten vuoksi. Mikäli kotoutumiskoulutuksen rahoitusta supistetaan suunnitellusti, jopa 38 000 maahanmuuttajaa voi jäädä ilman kielikoulutusta ja muuta kotoutumista tukevaa opetusta. Tämä tilanne herättää huolta niin koulutuksen saatavuuden kuin maahanmuuttajien integroitumisen näkökulmasta.
 

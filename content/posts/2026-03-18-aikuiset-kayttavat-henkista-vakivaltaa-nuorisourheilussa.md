@@ -27,8 +27,14 @@ keywords:
   - "uusimmat urheilu-uutiset"
 ---
 
-Valmentaja voi huutamalla murskata nuoren itsetunnon. Helsingin yliopiston tutkimuksessa selvisi henkisen väkivallan yleisyys suomalaisessa urheilussa. Vastaajia tuli jalkapallosta, jääkiekosta, voimistelusta ja hiihdosta.
+## Aikuiset käyttävät henkistä väkivaltaa nuorisourheilussa
 
-Lähes jokaisessa joukkueessa on kokeneita. Valmentajat ja vanhemmat haukkuvat, nimittävät ja uhkaavat jättää turnauksesta pois. Vaikutus ulottuu harjoitusten ulkopuolelle.
+Valmentaja voi huutamalla murskata nuoren itsetunnon. Helsingin yliopiston tutkimuksessa selvisi henkisen väkivallan yleisyys suomalaisessa urheilussa. Vastaajia tuli jalkapallosta, jääkiekosta, voimistelusta ja hiihdosta. Tutkimustulokset herättävät huomiota, sillä ne paljastavat, että henkinen väkivalta on valitettavan yleinen ilmiö nuorisourheilussa.
 
-Tutkijat ehdottavat jokaiselle seuralle selkeää käytännesääntöä ja aikuisten kouluttamista. Nuori ei aina tunnista väkivaltaa, joten vastuu on aikuisilla.
+Henkinen väkivalta, kuten huutaminen, nimittely ja uhkailu, voi jättää syviä jälkiä nuorten mieliin. Lähes jokaisessa joukkueessa on kokeneita valmentajia ja vanhempia, joiden käytös voi vaikuttaa nuorten urheilijoiden itsetuntoon ja kehitykseen. Valmentajien ja vanhempien haukkuminen, nimittely ja uhkaaminen, kuten turnauksista pois jättämisellä, voivat aiheuttaa nuorille pitkiä aikajaksoja epävarmuutta ja ahdistusta. Vaikutus ulottuu harjoitusten ulkopuolelle, ja nuorten voi olla vaikeaa palautua tällaisista kokemuksista.
+
+Tutkimuksessa havaittiin, että uutena ilmiönä monet nuoret eivät edes tunnista henkistä väkivaltaa, mikä tekee asiasta entistä huolestuttavamman. Tämä voi johtua siitä, että nuoret ovat tottuneet kovaan palautteeseen ja pitävät sitä normaalina osana urheiluvalmennusta. Aikuisten rooli on tässä keskeinen; heidän tulee olla tietoisia omasta käytöksestään ja sen vaikutuksista nuoriin.
+
+Tutkijat ehdottavat, että jokaiselle urheiluseuralle tulisi laatia selkeät käytännesäännöt, jotka ohjaavat valmentajien ja vanhempien käyttäytymistä. Lisäksi aikuisten kouluttaminen on tärkeää, jotta he ymmärtävät henkisen väkivallan seuraukset ja oppivat tarjoamaan nuorille kannustavaa ja rakentavaa palautetta. Tämä voisi auttaa luomaan turvallisempia ja positiivisempia urheiluyhteisöjä, joissa nuoret voivat kehittyä ilman pelkoa henkisestä väkivallasta.
+
+On tärkeää muistaa, että nuorisourheilu ei ole vain kilpailua ja voittamista, vaan myös tärkeä kehitysvaihe nuorten elämässä. Urheilu tarjoaa mahdollisuuden oppia yhteistyötä, kurinalaisuutta ja itseluottamusta. Aikuisten rooli on tukea nuoria tässä prosessissa, ei murskata heidän unelmiaan. Henkisen väkivallan vähentäminen nuorisourheilussa on askel kohti positiivisempaa ja tukevampaa ympäristöä, jossa nuoret voivat nauttia liikunnasta ja kehittyä urheilijoina ja ihmisinä.
