@@ -65,6 +65,35 @@ STALE_DAYS = 7
 MAX_HISTORY = 10
 
 
+# ── Discord integration ───────────────────────────────────────────────────────
+
+def _discord_post(message: str) -> None:
+    """Post a message to DISCORD_PIPELINE_WEBHOOK. Silent on missing env var."""
+    import json as _json
+    import urllib.request as _req
+
+    # Load .env if present
+    _env_file = Path(__file__).parent / ".env"
+    if _env_file.exists():
+        for _line in _env_file.read_text().splitlines():
+            _k, _, _v = _line.partition("=")
+            if _k.strip() and not _k.startswith("#"):
+                os.environ.setdefault(_k.strip(), _v.strip())
+
+    webhook = os.environ.get("DISCORD_PIPELINE_WEBHOOK", "")
+    if not webhook:
+        return
+
+    payload = _json.dumps({"content": message}).encode("utf-8")
+    r = _req.Request(webhook, data=payload,
+                     headers={"Content-Type": "application/json"}, method="POST")
+    try:
+        with _req.urlopen(r, timeout=8):
+            pass
+    except Exception as e:
+        print(f"[feed_health] Discord post failed: {e}", file=sys.stderr)
+
+
 class FeedHealth:
     """Per-feed health tracker. Load once per pipeline run, save at end."""
 
@@ -148,6 +177,11 @@ class FeedHealth:
             e["auto_disabled"] = True
             e["auto_disabled_reason"] = reason
             print(f"[feed_health] 🚫 AUTO-DISABLED {feed_name}: {reason}")
+            _discord_post(
+                f"🚫 **Feed auto-disabled:** `{feed_name}`\n"
+                f"Reason: {reason}\n"
+                f"Re-enable: `python3 pipeline/feed_health.py --reset \"{feed_name}\"`"
+            )
 
     def _get_threshold(self, code: int) -> int:
         if code in DISABLE_THRESHOLD:
@@ -169,6 +203,11 @@ class FeedHealth:
             if e["stale"] and not was_stale:
                 days = age.days
                 print(f"[feed_health] ⚠️  STALE {feed_name}: no new articles for {days}d")
+                _discord_post(
+                    f"⚠️ **Feed stale (possible parser mismatch):** `{feed_name}`\n"
+                    f"No new articles for **{days} days** (last: {last_ts[:10]})\n"
+                    f"Check: feed URL still valid? RSS format changed? Fix or reset."
+                )
         except (ValueError, TypeError):
             pass
 
@@ -250,6 +289,48 @@ def save_global_health():
         _global_health.save()
 
 
+
+# ── Weekly summary ────────────────────────────────────────────────────────────
+
+def weekly_summary(health: "FeedHealth") -> str:
+    """Build a weekly feed-health summary string and post it to Discord."""
+    from datetime import datetime, timezone
+
+    now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    stats = health.get_stats()
+
+    lines = [
+        f"📡 **Feed Health Weekly Summary** — {now_str}",
+        f"Feeds tracked: {stats['total']} | ✅ Healthy: {stats['healthy']} "
+        f"| 🚫 Disabled: {stats['disabled']} | ⚠️ Stale: {stats['stale']}",
+    ]
+
+    disabled_feeds = [(n, e) for n, e in health._data.items() if e.get("auto_disabled")]
+    stale_feeds    = [(n, e) for n, e in health._data.items()
+                      if e.get("stale") and not e.get("auto_disabled")]
+
+    if disabled_feeds:
+        lines.append("\n**🚫 Auto-disabled feeds:**")
+        for name, entry in sorted(disabled_feeds):
+            reason = entry.get("auto_disabled_reason", "unknown")
+            lines.append(f"  • `{name}` — {reason}")
+
+    if stale_feeds:
+        lines.append("\n**⚠️ Stale feeds (no new articles 7+ days):**")
+        for name, entry in sorted(stale_feeds):
+            last_art = (entry.get("last_article_ts") or "unknown")[:10]
+            lines.append(f"  • `{name}` — last article: {last_art} (check RSS parser / URL)")
+
+    if not disabled_feeds and not stale_feeds:
+        lines.append("All feeds healthy — no issues to report.")
+
+    lines.append("\nRe-enable a feed: `python3 pipeline/feed_health.py --reset \"Feed Name\"`")
+
+    summary = "\n".join(lines)
+    _discord_post(summary)
+    return summary
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main():
@@ -257,6 +338,8 @@ def main():
     parser.add_argument("--report", action="store_true", help="Print full report")
     parser.add_argument("--reset", metavar="FEED", help="Re-enable a disabled feed")
     parser.add_argument("--json",  action="store_true", help="Output raw JSON")
+    parser.add_argument("--weekly-summary", action="store_true",
+                        help="Post weekly summary to Discord #operations")
     args = parser.parse_args()
 
     health = FeedHealth()
@@ -271,8 +354,14 @@ def main():
         print(json.dumps(health._data, indent=2, ensure_ascii=False, default=str))
         return
 
+    if args.weekly_summary:
+        summary = weekly_summary(health)
+        print(summary)
+        return
+
     health.print_report()
 
 
 if __name__ == "__main__":
     main()
+
