@@ -58,7 +58,7 @@
 <div class="articles-grid">
   {{ $paginator := .Paginate ($sorted) 20 }}
   {{ range $i, $p := $paginator.Pages }}
-  {{ if and (eq $paginator.PageNumber 1) (eq $i 0) }}{{ continue }}{{ end }}
+  {{- if not (and (eq $paginator.PageNumber 1) (eq $i 0)) }}
   <article class="article-card">
     {{ with $p.Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
@@ -71,6 +71,7 @@
       · {{ if (isset $p.Params "reading_time") }}{{ if eq (int $p.Params.reading_time) 0 }}&lt;1{{ else }}{{ $p.Params.reading_time }}{{ end }}{{ else }}{{ $p.ReadingTime }}{{ end }} min
     </div>
   </article>
+  {{- end }}
   {{ end }}
 </div>
 
