@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "seen" (slice) }}
 
 {{/* Visually hidden H1 for SEO — Google uses H1 as primary topic signal */}}
 <h1 class="visually-hidden">Uutistenlukija – Päivän uutiset suomeksi</h1>
@@ -11,134 +13,171 @@
   Päivitetään useita kertoja päivässä — uusimmat uutiset aina tuoreina
 </div>
 
-{{/* Category quicknav pill bar — Sara spec #15.1 */}}
 {{ partial "category-quicknav.html" . }}
 
-{{/* Trending section */}}
-{{ $trending := where $sorted ".Params.trending" true }}
-{{ if $trending }}
-<section class="trending-section">
-  <div class="trending-header">
-    <h2>🔴 Nyt puheenaiheena</h2>
+<section class="home-intro" aria-label="Etusivun johdanto">
+  <p class="home-intro__eyebrow">ETUSIVU</p>
+  <h2 class="home-intro__title">Tärkeimmät uutiset juuri nyt</h2>
+  <p class="home-intro__dek">Poimimme etusivulle tärkeimmän pääjutun, nopean tilannekuvan ja tuoreimmat jutut aiheittain — niin sivu tuntuu enemmän etusivulta kuin pelkältä syötteeltä.</p>
+</section>
+
+{{ $lead := index $sorted 0 }}
+{{ $secondary := after 1 $sorted | first 4 }}
+{{ with $lead }}
+  {{ $scratch.Set "seen" (($scratch.Get "seen") | append .RelPermalink) }}
+{{ end }}
+{{ range $secondary }}
+  {{ $scratch.Set "seen" (($scratch.Get "seen") | append .RelPermalink) }}
+{{ end }}
+
+<span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
+<section class="home-top-grid" aria-label="Päivän tärkeimmät uutiset">
+  <div class="home-top-grid__lead">
+    {{ with $lead }}
+    {{ $cat   := index .Params.categories 0 | default "kotimaa" }}
+    {{ $img   := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
+    {{ $thumb := .Params.image_thumb | default $img }}
+    {{ $alt   := .Params.image_alt | default .Title }}
+    <article class="lead-article lead-article--hero home-lead-story">
+      <a href="{{ .Permalink }}" class="hero-scrim-link" aria-label="{{ .Title }}">
+        {{- $heroSrc    := $thumb -}}
+        {{- $heroSrcset := "" -}}
+        {{- $avifSrcset := "" -}}
+        {{- $isUnsplash := hasPrefix $img "https://images.unsplash.com" -}}
+        {{- $isPexels   := hasPrefix $img "https://images.pexels.com" -}}
+        {{- if $isUnsplash -}}
+          {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
+          {{- $heroSrc    = printf "%s%sw=1200&h=800&fit=crop&fm=webp&q=85" $b $s -}}
+          {{- $heroSrcset = printf "%s%sw=500&h=334&fit=crop&fm=webp&q=80 500w, %s%sw=900&h=600&fit=crop&fm=webp&q=85 900w, %s%sw=1200&h=800&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
+          {{- $avifSrcset = printf "%s%sw=500&h=334&fit=crop&fm=avif&q=75 500w, %s%sw=900&h=600&fit=crop&fm=avif&q=80 900w, %s%sw=1200&h=800&fit=crop&fm=avif&q=80 1200w" $b $s $b $s $b $s -}}
+        {{- else if $isPexels -}}
+          {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
+          {{- $heroSrc = printf "%s%sw=1200&h=800&fit=crop" $b $s -}}
+        {{- end -}}
+        <picture>
+          {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width:640px) 100vw, (max-width:1024px) 100vw, 780px">{{ end -}}
+          {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, (max-width:1024px) 100vw, 780px">{{ end -}}
+          <img
+            src="{{ $heroSrc }}"
+            alt="{{ $alt }}"
+            class="hero-scrim-img article-card-thumb"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="1200" height="800"
+            onload="this.classList.add('img-loaded')"
+            onerror="this.classList.add('img-loaded')">
+        </picture>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-scrim-body hero-scrim-body--home">
+          {{ with .Params.categories }}<span class="category-pill category-{{ index . 0 | lower | urlize }}">{{ index . 0 }}</span>{{ end }}
+          <p class="home-lead-story__kicker">PÄÄJUTTU</p>
+          <h2 class="hero-scrim-title">{{ .Title }}</h2>
+          {{ with .Params.summary }}<p class="home-lead-story__summary">{{ . | truncate 180 }}</p>{{ else }}<p class="home-lead-story__summary">{{ .Summary | plainify | truncate 180 }}</p>{{ end }}
+          <div class="hero-scrim-meta">
+            {{ .Date | time.Format "2.1. klo 15:04" }}
+            · {{ partial "reading-time.html" . }}
+          </div>
+        </div>
+      </a>
+    </article>
+    {{ end }}
   </div>
-  <div class="trending-articles">
-    {{ range first 4 $trending }}
-    <article class="trending-card">
-      {{ with .Params.categories }}
-      <span class="category-label">{{ index . 0 }}</span>
-      {{ end }}
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
+
+  <aside class="home-top-grid__rail" aria-label="Seuraa nyt">
+    <div class="home-rail">
+      <div class="home-rail__header">
+        <h2>Seuraa nyt</h2>
+        <p>Nopea näkymä muihin tärkeisiin aiheisiin ilman että sama juttu toistuu kaikkialla.</p>
+      </div>
+      <ol class="home-rail__list">
+        {{ range $i, $p := $secondary }}
+        {{ $cat := index $p.Params.categories 0 | default "Uutiset" }}
+        <li class="home-rail__item">
+          <span class="home-rail__rank">{{ math.Add $i 2 }}</span>
+          <div class="home-rail__body">
+            <span class="home-rail__cat category-{{ $cat | lower | urlize }}">{{ $cat }}</span>
+            <a class="home-rail__headline" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+            {{ with $p.Params.summary }}<p class="home-rail__summary">{{ . | truncate 115 }}</p>{{ else }}<p class="home-rail__summary">{{ $p.Summary | plainify | truncate 115 }}</p>{{ end }}
+            <time class="home-rail__time" datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $p.Date | time.Format "2.1. klo 15:04" }}</time>
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+  </aside>
+</section>
+
+{{ $unseenRecent := slice }}
+{{ range $sorted }}
+  {{ if not (in ($scratch.Get "seen") .RelPermalink) }}
+    {{ $unseenRecent = $unseenRecent | append . }}
+  {{ end }}
+{{ end }}
+{{ $briefing := first 6 $unseenRecent }}
+{{ range $briefing }}
+  {{ $scratch.Set "seen" (($scratch.Get "seen") | append .RelPermalink) }}
+{{ end }}
+
+{{ if $briefing }}
+<section class="briefing-section" aria-label="Nopea katsaus">
+  <div class="briefing-section__header">
+    <div>
+      <p class="briefing-section__eyebrow">NOPEA KATSAUS</p>
+      <h2>Tuoreimmat ilman toistoa</h2>
+    </div>
+    <p class="briefing-section__dek">Etusivun seuraava taso: kuusi tuoretta poimintaa, joita ei ole jo nostettu pääjutuksi tai oikean laidan kärkilistaan.</p>
+  </div>
+  <div class="briefing-list">
+    {{ range $briefing }}
+    {{ $cat := index .Params.categories 0 | default "Uutiset" }}
+    <article class="briefing-card">
+      <span class="briefing-card__cat category-{{ $cat | lower | urlize }}">{{ $cat }}</span>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ with .Params.summary }}<p>{{ . | truncate 120 }}</p>{{ else }}<p>{{ .Summary | plainify | truncate 120 }}</p>{{ end }}
+      <time class="briefing-card__time" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1. klo 15:04" }}</time>
     </article>
     {{ end }}
   </div>
 </section>
 {{ end }}
 
-{{/* Lead article — hero treatment: full-width image above headline (Sara's Gap #3) */}}
-<span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
-{{ with index $sorted 0 }}
-{{ $cat   := index .Params.categories 0 | default "kotimaa" }}
-{{ $img   := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
-{{ $thumb := .Params.image_thumb | default $img }}
-{{ $alt   := .Params.image_alt | default .Title }}
-<article class="lead-article lead-article--hero">
-  <a href="{{ .Permalink }}" class="hero-scrim-link" aria-label="{{ .Title }}">
-    {{/* Build srcset for Unsplash/Pexels, fall back to $img */}}
-    {{- $heroSrc    := $thumb -}}
-    {{- $heroSrcset := "" -}}
-    {{- $avifSrcset := "" -}}
-    {{- $isUnsplash := hasPrefix $img "https://images.unsplash.com" -}}
-    {{- $isPexels   := hasPrefix $img "https://images.pexels.com" -}}
-    {{- if $isUnsplash -}}
-      {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-      {{- $heroSrc    = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $b $s -}}
-      {{- $heroSrcset = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=85 800w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
-      {{- $avifSrcset = printf "%s%sw=400&h=225&fit=crop&fm=avif&q=75 400w, %s%sw=800&h=450&fit=crop&fm=avif&q=80 800w, %s%sw=1200&h=675&fit=crop&fm=avif&q=80 1200w" $b $s $b $s $b $s -}}
-    {{- else if $isPexels -}}
-      {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-      {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop" $b $s -}}
-    {{- end -}}
-    <picture>
-      {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
-      {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
-      <img
-        src="{{ $heroSrc }}"
-        alt="{{ $alt }}"
-        class="hero-scrim-img article-card-thumb"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        width="800" height="450"
-        onload="this.classList.add('img-loaded')"
-        onerror="this.classList.add('img-loaded')">
-    </picture>
-    {{/* Gradient scrim — Sara spec #25 */}}
-    <div class="hero-scrim" aria-hidden="true"></div>
-    <div class="hero-scrim-body">
-      {{ with .Params.categories }}<span class="category-pill category-{{ index . 0 | lower | urlize }}">{{ index . 0 }}</span>{{ end }}
-      <h2 class="hero-scrim-title">{{ .Title }}</h2>
-      <div class="hero-scrim-meta">
-        {{ .Date | time.Format "2.1. klo 15:04" }}
-        · Toimitus
-        · {{ partial "reading-time.html" . }}
-      </div>
-    </div>
-  </a>
-</article>
-{{ end }}
-
-{{/* Highlights row — next 3 articles */}}
-{{ $highlights := after 1 $sorted | first 3 }}
-{{ if $highlights }}
-<div class="highlights-row">
-  {{ range $highlights }}
-  {{ $cat   := index .Params.categories 0 | default "kotimaa" }}
-  {{ $img   := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
-  {{ $thumb := .Params.image_thumb | default $img }}
-  {{ $alt   := .Params.image_alt | default .Title }}
-  <article class="highlight-card">
-    {{ with .Params.categories }}
-    <span class="category-label">{{ index . 0 }}</span>
-    {{ end }}
-    {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink) }}
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
-  </article>
-  {{ end }}
+<div class="home-utility-row">
+  {{ partial "most-read.html" . }}
 </div>
-{{ end }}
 
-{{ partial "trending.html" . }}
-
-{{ partial "lyhyet.html" . }}
-
-{{/* Category sections */}}
-{{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
-{{ range $cat := $categories }}
-  {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
+{{/* Category sections — avoid repeating stories already shown higher on the homepage */}}
+{{ $primaryCategories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" }}
+{{ $secondaryCategories := slice "Urheilu" "Kulttuuri" "Tiede" }}
+{{ range $cat := $primaryCategories }}
+  {{ $catPosts := slice }}
+  {{ range $sorted }}
+    {{ if and (in (.Params.categories | default (slice)) $cat) (not (in ($scratch.Get "seen") .RelPermalink)) }}
+      {{ $catPosts = $catPosts | append . }}
+    {{ end }}
+  {{ end }}
   {{ if $catPosts }}
-  <section class="category-section" id="cat-{{ $cat | lower | urlize }}">
+  <section class="category-section category-section--homepage" id="cat-{{ $cat | lower | urlize }}">
     <div class="category-section-header">
-      <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
-      {{ if gt (len $catPosts) 3 }}
+      <div>
+        <p class="category-section-header__eyebrow">AIHE</p>
+        <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
+      </div>
       <a href="/categories/{{ $cat | urlize }}/" class="see-all">Kaikki {{ $cat | lower }} →</a>
-      {{ end }}
     </div>
-    <div class="category-articles">
-      {{ range first 3 $catPosts }}
+    <div class="category-articles category-articles--homepage">
+      {{ range first 2 $catPosts }}
+      {{ $scratch.Set "seen" (($scratch.Get "seen") | append .RelPermalink) }}
       {{ $cardCat   := index .Params.categories 0 | default "kotimaa" }}
       {{ $cardImg   := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
       {{ $cardThumb := .Params.image_thumb | default $cardImg }}
       {{ $cardAlt   := .Params.image_alt | default .Title }}
-      <article class="category-article-card">
+      <article class="category-article-card category-article-card--homepage">
         {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "alt" $cardAlt "eager" false "hero" false "permalink" .Permalink) }}
+        <span class="category-article-card__flag">{{ $cat }}</span>
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <p class="excerpt">{{ .Summary | truncate 150 }}</p>
-        <div class="meta">
-          {{ .Date | time.Format "2.1. klo 15:04" }}
-          · <span class="author-inline">Toimitus</span>
-        </div>
+        <p class="excerpt">{{ .Summary | plainify | truncate 140 }}</p>
+        <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
       </article>
       {{ end }}
     </div>
@@ -146,10 +185,35 @@
   {{ end }}
 {{ end }}
 
-{{/* Newsletter signup band — Sara spec #15.2 */}}
-{{ partial "newsletter-band.html" . }}
+<section class="other-topics" aria-label="Muut aiheet juuri nyt">
+  <div class="category-section-header category-section-header--compact">
+    <div>
+      <p class="category-section-header__eyebrow">LISÄÄ LUETTAVAA</p>
+      <h2>Muut aiheet juuri nyt</h2>
+    </div>
+  </div>
+  <div class="other-topics__grid">
+    {{ range $cat := $secondaryCategories }}
+      {{ $catPosts := slice }}
+      {{ range $sorted }}
+        {{ if and (in (.Params.categories | default (slice)) $cat) (not (in ($scratch.Get "seen") .RelPermalink)) }}
+          {{ $catPosts = $catPosts | append . }}
+        {{ end }}
+      {{ end }}
+      {{ with index $catPosts 0 }}
+      {{ $scratch.Set "seen" (($scratch.Get "seen") | append .RelPermalink) }}
+      <article class="other-topics__card">
+        <span class="category-article-card__flag">{{ $cat }}</span>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary | plainify | truncate 110 }}</p>
+        <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }} · <a href="/categories/{{ $cat | urlize }}/">Kaikki {{ $cat | lower }}</a></div>
+      </article>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
 
+{{ partial "newsletter-band.html" . }}
 {{ partial "continue-reading.html" . }}
-{{ partial "most-read.html" . }}
 {{ partial "tag-cloud.html" . }}
 {{ end }}

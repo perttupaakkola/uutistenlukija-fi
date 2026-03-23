@@ -1,12 +1,19 @@
 {{/*
-  most-read.html — "Luetuimmat" widget
-  Reads localStorage view counts, sorts top 5, renders from /index.json.
-  Falls back gracefully if localStorage unavailable or index not loaded.
+  most-read.html — homepage/support widget
+  Uses localStorage-based reader history when available.
+  Falls back to a server-rendered starter list so the block never looks empty.
 */}}
+{{ $fallback := first 5 ((where site.RegularPages "Section" "posts").ByDate.Reverse) }}
 <aside class="most-read-widget" aria-label="Luetuimmat artikkelit" id="most-read-widget">
-  <h3 class="most-read-title">📈 Luetuimmat</h3>
+  <h3 class="most-read-title" id="most-read-title">📈 Luetuimmat</h3>
   <ol class="most-read-list" id="most-read-list">
-    {{/* Rendered by JS below */}}
+    {{ range $i, $p := $fallback }}
+    <li class="most-read-item most-read-item--fallback">
+      <span class="most-read-rank">{{ math.Add $i 1 }}</span>
+      <a class="most-read-link" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+      <span class="most-read-count">Tuore valinta</span>
+    </li>
+    {{ end }}
   </ol>
   <p class="most-read-empty" id="most-read-empty" style="display:none">Ei vielä lukuhistoriaa.</p>
 </aside>
@@ -14,7 +21,7 @@
 <script>
 (function () {
   var STORE_KEY = 'ul_views_v1';
-  var TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+  var TTL_MS = 7 * 24 * 60 * 60 * 1000;
   var now = Date.now();
 
   function loadStore() {
@@ -43,14 +50,17 @@
 
     var list = document.getElementById('most-read-list');
     var empty = document.getElementById('most-read-empty');
+    var title = document.getElementById('most-read-title');
     if (!list) return;
 
     if (top.length === 0) {
-      list.style.display = 'none';
-      if (empty) empty.style.display = '';
+      if (title) title.textContent = '🧭 Aloita näistä';
+      list.style.display = '';
+      if (empty) empty.style.display = 'none';
       return;
     }
 
+    if (title) title.textContent = '📈 Luetuimmat';
     list.innerHTML = '';
     top.forEach(function (item, i) {
       var li = document.createElement('li');
@@ -73,7 +83,6 @@
       .replace(/"/g, '&quot;');
   }
 
-  var store = pruneStore(loadStore());
-  renderWidget(store);
+  renderWidget(pruneStore(loadStore()));
 })();
 </script>
