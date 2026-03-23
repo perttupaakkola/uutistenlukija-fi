@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-03-22
 **Compiled by:** Monica 🔍
-**Total:** 30 deliverables across 23 files (~210KB+)
+**Total:** 32 deliverables across 25 files (~220KB+)
 
 This document is the master table of contents for the uutistenlukija.fi research library. All files are in `projects/uutistenlukija/` in the shared workspace.
 
@@ -42,6 +42,8 @@ This document is the master table of contents for the uutistenlukija.fi research
 | 28 | April 2026 content calendar | content-calendar-april-2026.md | Week-by-week themes, X posting schedule, newsletter plan, key events (Pääsiäinen, Helmarit, Vappu), category balance targets |
 | 29 | Source tier analysis | source-tier-analysis.md | Current source audit, gap analysis, 10 new source recommendations with RSS, quality gate filters, tier map with coverage projections |
 | 30 | Launch announcement drafts | launch-announcement.md | 5 formats: Finnish blog/press release, X thread, Facebook, English PR, Product Hunt. Distribution checklist. "No AI-hype" messaging rule |
+| 31 | Reader feedback survey | reader-survey.md | 9 questions (+ 5-question short version), Google Forms implementation, 3 incentive ideas, NPS analytics, GDPR notes |
+| 32 | Competitive map | competitive-map.md | 7 aggregators mapped, 6 mainstream publishers, unique positioning, SWOT, positioning chart. Uutiskeräin.fi gap identified |
 
 ---
 
@@ -75,6 +77,8 @@ This document is the master table of contents for the uutistenlukija.fi research
 | content-calendar-april-2026.md | ~3KB | #28 | ✅ Complete |
 | source-tier-analysis.md | ~4KB | #29 | ✅ Complete |
 | launch-announcement.md | ~2KB | #30 | ✅ Complete |
+| reader-survey.md | ~2KB | #31 | ✅ Complete |
+| competitive-map.md | ~4KB | #32 | ✅ Complete |
 
 ### Deliverables without standalone files
 
