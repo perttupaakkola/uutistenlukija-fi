@@ -1,0 +1,169 @@
+{{ define "main" }}
+<div class="reading-progress" id="reading-progress"></div>
+<article class="single-article analysis-article">
+  {{ partial "breadcrumbs.html" . }}
+  {{ partial "hero-image.html" . }}
+  {{ with .Params.categories }}
+  <span class="category-label analysis-category">
+    <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
+  </span>
+  {{ end }}
+  <h1 class="analysis-title">{{ .Title }}</h1>
+  
+  {{/* Desk byline for analysis articles */}}
+  <div class="analysis-byline">
+    <div class="analysis-byline-content">
+      {{ if .Params.author }}
+      <span class="analysis-author">{{ .Params.author }}</span>
+      {{ end }}
+      {{ if .Params.author_title }}
+      <span class="analysis-author-title">{{ .Params.author_title }}</span>
+      {{ end }}
+      {{ if .Params.editorial_reviewed }}
+      <span class="analysis-reviewed" title="Toimituksen tarkistama">📋 Tarkistettu</span>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ with .Params.tags }}
+  <div class="article-tags" aria-label="Aihetunnisteet">
+    {{ range . }}
+    <a href="/tags/{{ . | urlize }}/" class="tag-pill">{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ partial "social-share.html" . }}
+  {{ partial "article-summary.html" . }}
+  {{ partial "toc.html" . }}
+  <div class="article-meta">
+    {{ .Date | time.Format "2.1. klo 15:04" }}
+    {{- $diffSec := math.Sub .Lastmod.Unix .Date.Unix -}}
+    {{- if gt $diffSec 3600 }}
+    · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty: {{ .Lastmod | time.Format "2.1.2006 klo 15:04" }}</span>
+    {{- end }}
+    · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ partial "reading-time.html" . }}
+  </div>
+  <div class="content analysis-content">
+    {{- $paragraphs := split .Content "</p>" -}}
+    {{- range $i, $p := $paragraphs -}}
+      {{- $p | safeHTML }}</p>
+      {{- if eq $i 2 -}}
+        {{ partial "ad-slot.html" (dict "position" "in-article" "context" $) }}
+      {{- end -}}
+    {{- end -}}
+  </div>
+
+  {{/* Journalist note — editorial explanation */}}
+  {{ partial "journalist-note.html" . }}
+
+  {{ partial "ad-slot.html" (dict "position" "after-article" "context" .) }}
+
+  {{ partial "newsletter-cta.html" . }}
+
+  {{ with .Params.author }}
+  <div class="author-box analysis-author-box">
+    {{ with $.Params.author_image }}
+    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="100" height="100">
+    {{ end }}
+    <div class="author-info">
+      <span class="author-name">{{ $.Params.author }}</span>
+      {{ with $.Params.author_title }}
+      <span class="author-role">{{ . }}</span>
+      {{ end }}
+      {{ with $.Params.author_bio }}
+      <p class="author-bio">{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* Share buttons repeated at bottom */}}
+  <div class="social-share--bottom">
+    {{ partial "social-share.html" . }}
+  </div>
+
+  {{ partial "related-articles.html" . }}
+  {{ partial "most-read.html" . }}
+</article>
+
+{{ partial "read-next.html" . }}
+
+{{ $section := .CurrentSection }}
+<nav class="article-nav" aria-label="Artikkelinavigointi">
+  {{ with .PrevInSection }}
+  <a href="{{ .Permalink }}" class="article-nav-prev" rel="prev">
+    <span class="article-nav-label">← Edellinen</span>
+    <span class="article-nav-title">{{ .Title }}</span>
+  </a>
+  {{ else }}<div class="article-nav-placeholder"></div>{{ end }}
+  {{ with .NextInSection }}
+  <a href="{{ .Permalink }}" class="article-nav-next" rel="next">
+    <span class="article-nav-label">Seuraava →</span>
+    <span class="article-nav-title">{{ .Title }}</span>
+  </a>
+  {{ else }}<div class="article-nav-placeholder"></div>{{ end }}
+</nav>
+
+{{ partial "scroll-to-top.html" . }}
+
+<script>
+(function () {
+  var VIEWS_KEY    = 'ul_views_v1';
+  var PROGRESS_KEY = 'ul_progress_v1';
+  var TTL_MS       = 30 * 24 * 60 * 60 * 1000;
+  var lastScrollY  = window.scrollY;
+  var lastScrollDirection = null;
+  var ticking      = false;
+
+  function update() {
+    var header       = document.querySelector('.site-header');
+    var scrollTop    = window.scrollY;
+    var viewportH    = window.innerHeight;
+    var docH         = document.documentElement.scrollHeight;
+    var progress     = Math.min(100, Math.round(100 * scrollTop / (docH - viewportH)));
+
+    if (header) {
+      var headerHeight    = header.offsetHeight;
+      var headerCompactH  = 120;
+      var headerHiddenH   = 0;
+      var COMPACT_PX      = 80;
+      var HIDDEN_PX       = 200;
+      var isScrollingDown = scrollTop > lastScrollY;
+
+      if (scrollTop > COMPACT_PX) {
+        header.classList.add('header--compact');
+      } else {
+        header.classList.remove('header--compact');
+      }
+
+      if (window.innerWidth <= 768 && scrollTop > HIDDEN_PX && isScrollingDown) {
+        header.classList.add('header--hidden');
+      } else {
+        header.classList.remove('header--hidden');
+      }
+
+      var newHeaderH = scrollTop > COMPACT_PX ? headerCompactH : headerHeight;
+      document.documentElement.style.setProperty('--header-h', newHeaderH + 'px');
+    }
+
+    var progressBar = document.getElementById('reading-progress');
+    if (progressBar) {
+      progressBar.style.width = progress + '%';
+    }
+
+    lastScrollY = scrollTop;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  update();
+})();
+</script>
+{{ end }}
