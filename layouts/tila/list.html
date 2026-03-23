@@ -3,9 +3,7 @@
 {{ $posts    := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted   := $posts.ByDate.Reverse }}
 {{ $total    := len $posts }}
-{{ $today    := now.Format "2006-01-02" }}
-{{ $todayPosts := where $posts ".Date" "ge" (time (printf "%sT00:00:00Z" $today)) }}
-{{ $todayCount := len $todayPosts }}
+{{ $todayCount := 0 }}
 
 {{/* Last published article */}}
 {{ $lastPost := index $sorted 0 }}
@@ -30,7 +28,7 @@
   {{/* ── Header ── */}}
   <div class="tila-header">
     <h1 class="tila-title">
-      <span class="tila-dot {{ if gt $todayCount 0 }}tila-dot--green{{ else }}tila-dot--yellow{{ end }}" aria-hidden="true"></span>
+      <span class="tila-dot {{ if gt (len $last24h) 0 }}tila-dot--green{{ else }}tila-dot--yellow{{ end }}" aria-hidden="true"></span>
       Sivuston tila
     </h1>
     <p class="tila-subtitle">Päivitetty: {{ $buildTime }} (staattinen build)</p>
