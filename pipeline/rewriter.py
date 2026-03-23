@@ -106,6 +106,9 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 280 sanaa (tavoite 300–400). Jos artikkeli on lyhyempi,
     laajenna sitä lisäämällä taustan, kontekstin ja vaikutusten kuvausta. ÄLÄ koskaan
     palauta alle 280 sanan artikkelia. Tavallinen kappale on 60–80 sanaa.
+12. TARKISTA journalist_note: säilytä se vain jos siinä on aitoa toimituksellista lisäarvoa. Poista geneerinen tai itsestään selvä huomio käyttämällä tyhjää merkkijonoa.
+13. TARKISTA content_type: pidä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaiseen, kehittyvään tai tulkintaa vaativaan aiheeseen.
+14. TARKISTA editorial_reviewed: sen tulee aina olla true.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -197,15 +200,6 @@ def _build_single_prompt(article: dict) -> str:
     research = article.get("research", "")
     research_section = f"\nTaustatutkimus:\n{research}" if research else ""
 
-    # Source reliability tier (1=verified editorial, 2=standard, 3=verify claims)
-    tier = article.get("source_tier", 2)
-    if tier == 3:
-        tier_note = "\n⚠️ Lähteen luotettavuus: MATALA — tarkista faktat, lisää varovaisia muotoiluja ('tietojen mukaan', 'väitetysti'). Älä esitä epävarmoja väitteitä faktana."
-    elif tier == 1:
-        tier_note = "\nLähteen luotettavuus: KORKEA — luotettava toimituksellinen lähde. Pysy tarkasti lähteen faktoissa, älä keksi lisätietoja."
-    else:
-        tier_note = ""
-
     # SEO keyword hint: inject 2-3 category keywords naturally
     category_hint = article.get("category_hint", "")
     seo_note = ""
@@ -224,7 +218,7 @@ def _build_single_prompt(article: dict) -> str:
 
 ---
 Otsikko: {article['title']}
-Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{seo_note}{tier_note}
+Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{seo_note}
 ---
 
 Vastaa JSON-listana (lista yhdellä alkiolla):
@@ -235,12 +229,18 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
     "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
-    "original_title": "Alkuperäinen otsikko RSS:stä"
+    "original_title": "Alkuperäinen otsikko RSS:stä",
+    "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono jos ei lisäarvoa",
+    "content_type": "article tai analysis",
+    "editorial_reviewed": true
   }}
 ]
 
 "tags": 2–5 konkreettista suomenkielistä avainsanaa artikkelista (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
 "summary": 2-3 lauseen tiivistelmä artikkelista suomeksi. Selkeä, informatiivinen, ei klikkiotsikko-tyylinen.
+"journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa toimituksellista taustaa, merkitystä tai kontekstia. Ei geneeristä filler-tekstiä. Jos huomio ei tuo oikeaa lisäarvoa, käytä tyhjää merkkijonoa.
+"content_type": käytä oletuksena "article". Käytä "analysis" VAIN kun aihe on aidosti monikulmainen, kehittyvä, kiistanalainen tai vaatii tulkintaa useasta näkökulmasta.
+"editorial_reviewed": aina true.
 
 Vastaa VAIN JSON-listalla."""
 
@@ -350,12 +350,18 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
     "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
-    "original_title": "Alkuperäinen otsikko RSS:stä"
+    "original_title": "Alkuperäinen otsikko RSS:stä",
+    "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono",
+    "content_type": "article tai analysis",
+    "editorial_reviewed": true
   }}
 ]
 
 "tags": 2–5 konkreettista suomenkielistä avainsanaa jokaiseen artikkeliin (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
 "summary": 2-3 lauseen tiivistelmä artikkelista suomeksi. Selkeä, informatiivinen, ei klikkiotsikko-tyylinen.
+"journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa vain kun toimituksellinen huomio tuo oikeaa lisäarvoa: taustaa, miksi asia on tärkeä tai mitä lukijan kannattaa seurata. Ei geneeristä filler-tekstiä. Muulloin käytä tyhjää merkkijonoa.
+"content_type": käytä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaisiin, kehittyviin, kiistanalaisiin tai tulkintaa vaativiin juttuihin.
+"editorial_reviewed": aina true.
 
 Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vähintään 280 sanaa?"""
 
@@ -421,7 +427,8 @@ Laajenna se vähintään 300 sanaan (tavoite 320–380) lisäämällä KAIKKI se
 - Seuraukset tai vaikutukset: mitä tämä tarkoittaa ihmisille tai yhteiskunnalle?
 - Lisäfaktat: tilastoja, numeroita tai muita konkreettisia tietoja aiheesta.
 Lisää H2-väliotsikko (## Otsikko) jäsentämään teksti. Säilytä alkuperäinen otsikko ja faktat. Kirjoita luonnollista suomea.
-Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "..."}"""
+Säilytä myös kentät journalist_note, content_type ja editorial_reviewed ennallaan, ellei journalist_note ole selvästi geneerinen — silloin tyhjennä se. editorial_reviewed on aina true.
+Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "...", "journalist_note": "...", "content_type": "article", "editorial_reviewed": true}"""
 
         expanded_audited = []
         for article in audited:
@@ -493,6 +500,22 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                 written_article["tags"] = [str(t).lower().strip() for t in raw_tags if t][:5]
             else:
                 written_article["tags"] = []
+
+            # New editorial fields
+            note = written_article.get("journalist_note", "")
+            note = " ".join(str(note).split()).strip()
+            note_words = len(note.split()) if note else 0
+            if note and (note_words < 40 or note_words > 100):
+                # Keep notes high-signal only; drop bad-length output instead of publishing filler
+                note = ""
+            written_article["journalist_note"] = note
+
+            content_type = str(written_article.get("content_type", "article") or "article").strip().lower()
+            if content_type not in {"article", "analysis"}:
+                content_type = "article"
+            written_article["content_type"] = content_type
+            written_article["editorial_reviewed"] = True
+
             kept.append(written_article)
 
         rewritten.extend(kept)

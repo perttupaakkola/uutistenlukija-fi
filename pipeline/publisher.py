@@ -67,6 +67,9 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     source_domain = article.get("source_domain", "")
     summary = article.get("summary", "")
     tags = article.get("tags", [])
+    journalist_note = article.get("journalist_note", "")
+    content_type = article.get("content_type", "article")
+    editorial_reviewed = bool(article.get("editorial_reviewed", True))
 
     # Reading time: Finnish reading speed 200 wpm + image viewing time
     # Images: 12s first, 10s second, -1s per subsequent image, 3s floor
@@ -105,6 +108,13 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     reading_time_line = f"\nreading_time: {reading_time}"
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
     summary_line = f'\nsummary: "{_esc(summary)}"' if summary else ""
+    journalist_note_line = f'\njournalist_note: |\n  ' + '\n  '.join(str(journalist_note).splitlines()) if journalist_note else ""
+    content_type = str(content_type or "article").strip().lower()
+    if content_type not in {"article", "analysis"}:
+        content_type = "article"
+    content_type_line = f'\ncontent_type: "{content_type}"'
+    type_line = '\ntype: "analysis"' if content_type == "analysis" else ""
+    editorial_reviewed_line = "\neditorial_reviewed: true" if editorial_reviewed else "\neditorial_reviewed: false"
     if tags:
         tags_yaml = "\ntags:\n" + "\n".join(f'  - {_esc(str(t))}' for t in tags)
     else:
@@ -136,7 +146,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{summary_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
+author_image: "{writer['image']}"{description_line}{summary_line}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
 draft: false
 ---
 
