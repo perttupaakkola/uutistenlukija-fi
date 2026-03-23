@@ -1,0 +1,143 @@
+{{ define "main" }}
+{{/* ── Data collection ───────────────────────────────────────────────────── */}}
+{{ $posts    := where .Site.RegularPages "Section" "posts" }}
+{{ $sorted   := $posts.ByDate.Reverse }}
+{{ $total    := len $posts }}
+{{ $today    := now.Format "2006-01-02" }}
+{{ $todayPosts := where $posts ".Date" "ge" (time (printf "%sT00:00:00Z" $today)) }}
+{{ $todayCount := len $todayPosts }}
+
+{{/* Last published article */}}
+{{ $lastPost := index $sorted 0 }}
+
+{{/* Articles by category */}}
+{{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
+
+{{/* Articles by age bucket */}}
+{{ $last24h := slice }}
+{{ $last7d  := slice }}
+{{ range $sorted }}
+  {{- $ageMin := int (now.Sub .Date).Minutes -}}
+  {{- if lt $ageMin 1440  }}{{ $last24h = $last24h | append . }}{{ end }}
+  {{- if lt $ageMin 10080 }}{{ $last7d  = $last7d  | append . }}{{ end }}
+{{ end }}
+
+{{/* Build date for freshness indicator */}}
+{{ $buildTime := now.Format "2.1.2006 klo 15:04 UTC" }}
+
+<div class="tila-page">
+
+  {{/* ── Header ── */}}
+  <div class="tila-header">
+    <h1 class="tila-title">
+      <span class="tila-dot {{ if gt $todayCount 0 }}tila-dot--green{{ else }}tila-dot--yellow{{ end }}" aria-hidden="true"></span>
+      Sivuston tila
+    </h1>
+    <p class="tila-subtitle">Päivitetty: {{ $buildTime }} (staattinen build)</p>
+  </div>
+
+  {{/* ── Summary cards ── */}}
+  <div class="tila-cards">
+
+    <div class="tila-card">
+      <div class="tila-card__value">{{ $total }}</div>
+      <div class="tila-card__label">Artikkelia yhteensä</div>
+    </div>
+
+    <div class="tila-card tila-card--accent">
+      <div class="tila-card__value">{{ len $last24h }}</div>
+      <div class="tila-card__label">Viimeisen 24 h</div>
+    </div>
+
+    <div class="tila-card">
+      <div class="tila-card__value">{{ len $last7d }}</div>
+      <div class="tila-card__label">Viimeisen 7 pv</div>
+    </div>
+
+    <div class="tila-card">
+      <div class="tila-card__value">{{ math.Round (math.Div (float (len $last7d)) 7.0) }}</div>
+      <div class="tila-card__label">Artikkelia / pv (ka.)</div>
+    </div>
+
+  </div>
+
+  {{/* ── Last published ── */}}
+  {{ with $lastPost }}
+  <section class="tila-section">
+    <h2 class="tila-section-title">Viimeksi julkaistu</h2>
+    <div class="tila-last-article">
+      {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
+      <a href="{{ .Permalink }}" class="tila-last-link">{{ .Title }}</a>
+      <span class="tila-last-time">{{ .Date | time.Format "2.1.2006 klo 15:04" }}</span>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* ── Category breakdown ── */}}
+  <section class="tila-section">
+    <h2 class="tila-section-title">Kategorioittain</h2>
+    <table class="tila-table" aria-label="Artikkelimäärät kategorioittain">
+      <thead>
+        <tr>
+          <th scope="col">Kategoria</th>
+          <th scope="col" class="tila-num">Artikkeleita</th>
+          <th scope="col" class="tila-num">Viim. 7 pv</th>
+          <th scope="col">Viimeisin artikkeli</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $cat := $categories }}
+        {{ $catPosts   := where $sorted ".Params.categories" "intersect" (slice $cat) }}
+        {{ $catRecent  := where $last7d ".Params.categories" "intersect" (slice $cat) }}
+        {{ $catLatest  := index $catPosts 0 }}
+        <tr>
+          <td>
+            <a href="/categories/{{ $cat | urlize }}/"
+               class="category-label cat-{{ $cat | lower | urlize }}">{{ $cat }}</a>
+          </td>
+          <td class="tila-num">{{ len $catPosts }}</td>
+          <td class="tila-num">{{ len $catRecent }}</td>
+          <td class="tila-latest">
+            {{ with $catLatest }}
+            <a href="{{ .Permalink }}" class="tila-latest-link">{{ .Title | truncate 60 }}</a>
+            <span class="tila-latest-time">{{ .Date | time.Format "2.1. klo 15:04" }}</span>
+            {{ else }}—{{ end }}
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+      <tfoot>
+        <tr class="tila-total-row">
+          <th scope="row">Yhteensä</th>
+          <td class="tila-num">{{ $total }}</td>
+          <td class="tila-num">{{ len $last7d }}</td>
+          <td class="tila-latest"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  {{/* ── Recent 10 articles ── */}}
+  <section class="tila-section">
+    <h2 class="tila-section-title">Viimeisimmät 10 artikkelia</h2>
+    <ol class="tila-recent-list">
+      {{ range first 10 $sorted }}
+      <li class="tila-recent-item">
+        <span class="tila-recent-time">{{ .Date | time.Format "2.1. 15:04" }}</span>
+        {{ with .Params.categories }}
+        <span class="category-label small cat-{{ index . 0 | lower | urlize }}">{{ index . 0 }}</span>
+        {{ end }}
+        <a href="{{ .Permalink }}" class="tila-recent-link">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+
+  <p class="tila-note">
+    Tämä sivu päivittyy jokaisen sisältöbuildin yhteydessä.
+    Pipeline julkaisee uusia artikkeleita noin 15 minuutin välein.
+    <a href="/">← Etusivulle</a>
+  </p>
+
+</div>
+{{ end }}
