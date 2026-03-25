@@ -5086,3 +5086,30 @@ pre code {
     aspect-ratio: 16 / 9;
   }
 }
+
+/* ── Freshness badges ──────────────────────────────────────────────────────── */
+.freshness-badge {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.freshness-now {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15em 0.55em;
+  border-radius: 999px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.freshness-recent {
+  color: var(--text-secondary, #555);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .freshness-now {
+  background: #c0392b;
+}

@@ -64,7 +64,7 @@
           <p class="hero-scrim-excerpt">{{ . | truncate 180 }}</p>
           {{ end }}
           <div class="hero-scrim-meta">
-            <span>{{ .Date | time.Format "2.1. klo 15:04" }}</span>
+            <span>{{ partial "freshness-label.html" .Date }}</span>
             <span>Toimitus</span>
             <span>{{ partial "reading-time.html" . }}</span>
           </div>
@@ -94,7 +94,7 @@
         {{ with .Params.description }}
         <p class="highlight-card__excerpt">{{ . | truncate 120 }}</p>
         {{ end }}
-        <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
+        <div class="meta">{{ partial "freshness-label.html" .Date }}</div>
       </article>
       {{ end }}
     </div>
@@ -130,7 +130,7 @@
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         <p class="excerpt">{{ .Summary | truncate 135 }}</p>
         <div class="meta">
-          <span>{{ .Date | time.Format "2.1. klo 15:04" }}</span>
+          <span>{{ partial "freshness-label.html" .Date }}</span>
           <span>{{ partial "reading-time.html" . }}</span>
         </div>
       </article>

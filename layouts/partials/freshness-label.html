@@ -1,0 +1,31 @@
+{{/*
+  freshness-label.html — relative time labels in Finnish.
+  Usage: {{ partial "freshness-label.html" .Date }}
+
+  < 1h   → <span class="freshness-badge freshness-now">Juuri nyt</span>
+  < 6h   → "X tuntia sitten"
+  Same day → "Tänään klo HH:MM"
+  Yesterday → "Eilen klo HH:MM"
+  Older  → "D.M. klo HH:MM"
+*/}}
+{{- $date := . -}}
+{{- $now := now -}}
+{{- $diffSec := math.Round (sub $now.Unix $date.Unix) -}}
+{{- $diffHours := math.Round (div $diffSec 3600) -}}
+{{- $time := $date | time.Format "15:04" -}}
+{{- $nowDay := $now | time.Format "2006-01-02" -}}
+{{- $dateDay := $date | time.Format "2006-01-02" -}}
+{{- $yesterdayUnix := sub $now.Unix 86400 -}}
+{{- $yesterday := time $yesterdayUnix -}}
+{{- $yesterdayDay := $yesterday | time.Format "2006-01-02" -}}
+{{- if lt $diffSec 3600.0 -}}
+<span class="freshness-badge freshness-now">Juuri nyt</span>
+{{- else if lt $diffSec 21600.0 -}}
+<span class="freshness-badge freshness-recent">{{ int $diffHours }} tuntia sitten</span>
+{{- else if eq $nowDay $dateDay -}}
+<span class="freshness-badge">Tänään klo {{ $time }}</span>
+{{- else if eq $yesterdayDay $dateDay -}}
+<span class="freshness-badge">Eilen klo {{ $time }}</span>
+{{- else -}}
+<span class="freshness-badge">{{ $date | time.Format "2.1. klo 15:04" }}</span>
+{{- end -}}
