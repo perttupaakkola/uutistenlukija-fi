@@ -4801,7 +4801,7 @@ pre code {
 }
 
 .highlights-row--top {
-  grid-template-columns: 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 1rem;
   padding: 0;
   margin: 0;
@@ -4919,11 +4919,6 @@ pre code {
 @media (max-width: 900px) {
   .homepage-top {
     grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .highlights-row--top {
-    grid-template-columns: 2fr 1fr;
     gap: 1rem;
   }
 
