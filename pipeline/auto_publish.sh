@@ -8,6 +8,9 @@ LOG_FILE="$PIPELINE_DIR/logs/auto_publish_$(date -u +%Y%m%d_%H%M%S).log"
 
 cd "$PROJECT_DIR"
 
+# ── Pre-flight checks ───────────────────────────────────────────────────────
+python3 "$PIPELINE_DIR/preflight_check.py" || { echo "[auto_publish] ❌ Preflight check failed. Aborting pipeline."; exit 1; }
+
 # ── Deduplication lockfile guard ─────────────────────────────────────────────
 LOCK_FILE="$PIPELINE_DIR/.pipeline_lock"
 
@@ -91,6 +94,9 @@ fi
 
 # Commit and push if there are changes
 cd "$PROJECT_DIR"
+
+# ── Pre-flight checks ───────────────────────────────────────────────────────
+python3 "$PIPELINE_DIR/preflight_check.py" || { echo "[auto_publish] ❌ Preflight check failed. Aborting pipeline."; exit 1; }
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
 # CRITICAL: Reset index + restore layout/script files to HEAD before staging.
