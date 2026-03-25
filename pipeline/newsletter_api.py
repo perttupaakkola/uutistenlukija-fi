@@ -29,7 +29,12 @@ try:
     from fastapi.responses import JSONResponse, RedirectResponse
     from fastapi.middleware.cors import CORSMiddleware
 except ImportError:
-    raise SystemExit("fastapi not installed — run: pip install fastapi uvicorn")
+    if __name__ == "__main__":
+        raise SystemExit("fastapi not installed — run: pip install fastapi uvicorn")
+    # Allow module to be imported for inspection (e.g. smoke_test.py)
+    # without killing the importing process. Actual usage will fail
+    # at the FastAPI() call below, which is fine.
+    raise
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
