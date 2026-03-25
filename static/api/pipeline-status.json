@@ -1,20 +1,22 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-25T19:53:24+00:00",
+  "generated_at": "2026-03-25T20:03:36+00:00",
   "runs": {
-    "total": 14,
-    "ok": 9,
+    "total": 15,
+    "ok": 10,
     "skip": 0,
     "error": 5
   },
   "articles": {
-    "attempted": 269,
-    "published": 9,
-    "rejected": 0,
-    "publish_rate": 3.3,
-    "last_published_ts": "2026-03-25T19:13:04.438798+00:00"
+    "attempted": 294,
+    "published": 10,
+    "rejected": 1,
+    "publish_rate": 3.4,
+    "last_published_ts": "2026-03-25T19:53:22.798255+00:00"
   },
-  "reject_reasons": {},
+  "reject_reasons": {
+    "keyword_stuffing": 1
+  },
   "feeds": {
     "total": 22,
     "healthy": 21,
@@ -28,7 +30,7 @@
   "trending": [
     [
       "sillä",
-      13
+      15
     ],
     [
       "kuten",
@@ -43,8 +45,8 @@
       10
     ],
     [
-      "trumpin",
-      9
+      "voivat",
+      10
     ]
   ]
 }
