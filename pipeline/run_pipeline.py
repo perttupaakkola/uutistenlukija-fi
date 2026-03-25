@@ -10,8 +10,11 @@ Flags:
 import argparse
 import json
 import os
+import re
 import sys
 import time
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone
 
 # Add parent to path for imports

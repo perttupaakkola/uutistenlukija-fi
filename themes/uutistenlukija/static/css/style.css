@@ -5064,3 +5064,30 @@ pre code {
     font-size: 1rem;
   }
 }
+
+/* ── Highlight row hierarchy: first card dominant ────────────────────────── */
+.highlight-card--secondary:first-child h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.highlight-card--secondary:first-child .highlight-card__excerpt {
+  font-size: 0.95rem;
+}
+
+.highlight-card--secondary:first-child .article-image,
+.highlight-card--secondary:first-child .article-card-thumb {
+  aspect-ratio: 21 / 9;
+}
+
+@media (max-width: 600px) {
+  .highlight-card--secondary:first-child h3 {
+    font-size: 1.15rem;
+  }
+
+  .highlight-card--secondary:first-child .article-image,
+  .highlight-card--secondary:first-child .article-card-thumb {
+    aspect-ratio: 16 / 9;
+  }
+}
