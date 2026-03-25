@@ -50,6 +50,15 @@
     · <span class="author-inline">Toimitus</span>
     · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ partial "reading-time.html" . }}
   </div>
+  {{ with .Params.source_name }}
+  <div class="source-attribution">
+    <span class="source-attribution__label">Alkuperäinen lähde:</span>
+    <strong>{{ . }}</strong>
+    {{ with $.Params.source_url }}
+    <a href="{{ . }}" target="_blank" rel="noopener nofollow" class="source-attribution__link">Lue alkuperäinen →</a>
+    {{ end }}
+  </div>
+  {{ end }}
 
   <div class="content">
     {{- $paragraphs := split .Content "</p>" -}}

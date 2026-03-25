@@ -30,11 +30,68 @@ from dedup import filter_new_articles, check_published_duplicates, dedup_within_
 from image_gen import generate_images_for_articles
 from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
-from health_check import notify_discord_failure, notify_discord_warning, notify_discord_crash, write_metrics
-from metrics import append_run as _append_metrics_run
-from service_health import should_skip, record_success, record_failure
-from change_detector import check_for_changes, record_build
-from quality_gate import run_gate as _run_quality_gate
+# ── Resilient imports: stub on failure so a single missing function never kills the pipeline ──
+def _stub_notify(*args, **kwargs):
+    print(f"[resilience] Discord notification skipped (import failed)")
+
+def _stub_write_metrics(record):
+    path = os.path.join(LOG_DIR, "metrics.json")
+    try:
+        with open(path, "w") as f:
+            json.dump(record, f, indent=2)
+    except Exception:
+        pass
+    return path
+
+def _stub_should_skip(service):
+    return False, "stub"
+
+def _stub_noop(*args, **kwargs):
+    pass
+
+def _stub_check_for_changes(**kwargs):
+    from types import SimpleNamespace
+    return SimpleNamespace(needs_build=True, reason="stub (import failed)")
+
+def _stub_run_gate(articles):
+    from types import SimpleNamespace
+    return SimpleNamespace(passed=articles, rejected=[], reject_reasons={}, stats={})
+
+try:
+    from health_check import notify_discord_failure, notify_discord_warning, notify_discord_crash, write_metrics
+except ImportError as _ie:
+    print(f"[resilience] WARNING: health_check import failed: {_ie}")
+    notify_discord_failure = _stub_notify
+    notify_discord_warning = _stub_notify
+    notify_discord_crash = _stub_notify
+    write_metrics = _stub_write_metrics
+
+try:
+    from metrics import append_run as _append_metrics_run
+except ImportError as _ie:
+    print(f"[resilience] WARNING: metrics import failed: {_ie}")
+    _append_metrics_run = _stub_noop
+
+try:
+    from service_health import should_skip, record_success, record_failure
+except ImportError as _ie:
+    print(f"[resilience] WARNING: service_health import failed: {_ie}")
+    should_skip = _stub_should_skip
+    record_success = _stub_noop
+    record_failure = _stub_noop
+
+try:
+    from change_detector import check_for_changes, record_build
+except ImportError as _ie:
+    print(f"[resilience] WARNING: change_detector import failed: {_ie}")
+    check_for_changes = _stub_check_for_changes
+    record_build = _stub_noop
+
+try:
+    from quality_gate import run_gate as _run_quality_gate
+except ImportError as _ie:
+    print(f"[resilience] WARNING: quality_gate import failed: {_ie}")
+    _run_quality_gate = _stub_run_gate
 
 
 LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
@@ -818,6 +875,11 @@ if __name__ == "__main__":
         help="Override incremental check and always run Hugo build.",
     )
     parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Validate all imports and config without running the pipeline. Exits 0 if OK, 1 if broken.",
+    )
+    parser.add_argument(
         "--metrics-report",
         action="store_true",
         help="Print a summary of pipeline metrics for the last 7 days and exit.",
@@ -830,6 +892,50 @@ if __name__ == "__main__":
         help="Number of days for --metrics-report (default: 7).",
     )
     args = parser.parse_args()
+
+    if args.dry_run:
+        errors = []
+        # Validate all pipeline imports
+        _imports = {
+            "scanner": "scanner",
+            "firehose": "firehose",
+            "research": "research",
+            "rewriter": "rewriter",
+            "publisher": "publisher",
+            "generate_descriptions": "generate_descriptions",
+            "dedup": "dedup",
+            "image_gen": "image_gen",
+            "pexels": "pexels",
+            "unsplash": "unsplash",
+            "health_check": "health_check",
+            "metrics": "metrics",
+            "service_health": "service_health",
+            "change_detector": "change_detector",
+            "quality_gate": "quality_gate",
+        }
+        for label, mod in _imports.items():
+            try:
+                __import__(mod)
+                print(f"  ✅ {label}")
+            except Exception as e:
+                print(f"  ❌ {label}: {e}")
+                errors.append(label)
+
+        # Validate env
+        _env_keys = ["OPENAI_API_KEY"]
+        for k in _env_keys:
+            v = os.environ.get(k, "")
+            if v:
+                print(f"  ✅ {k} (set)")
+            else:
+                print(f"  ⚠️  {k} (not set)")
+
+        if errors:
+            print(f"\n❌ Dry run FAILED: {len(errors)} broken import(s): {', '.join(errors)}")
+            sys.exit(1)
+        else:
+            print(f"\n✅ Dry run OK — all imports valid")
+            sys.exit(0)
 
     if args.metrics_report:
         from metrics import print_report

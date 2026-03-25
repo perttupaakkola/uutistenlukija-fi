@@ -65,9 +65,22 @@ fi
 
 echo "=== Auto-publish started at $(date -u) ===" | tee -a "$LOG_FILE"
 
+# Pre-flight: validate imports before running the real pipeline
+echo "[0/3] Pre-flight import check..." | tee -a "$LOG_FILE"
+cd "$PIPELINE_DIR"
+if ! python3 run_pipeline.py --dry-run 2>&1 | tee -a "$LOG_FILE"; then
+  echo "❌ Pre-flight failed — broken imports. Pipeline NOT started." | tee -a "$LOG_FILE"
+  # Alert Discord if webhook is set
+  WEBHOOK="${DISCORD_PIPELINE_WEBHOOK:-}"
+  if [ -n "$WEBHOOK" ]; then
+    MSG="❌ **Pipeline pre-flight failed** — broken imports detected. Pipeline did NOT run. Check logs: $LOG_FILE"
+    python3 -c "import json,urllib.request; urllib.request.urlopen(urllib.request.Request('$WEBHOOK', data=json.dumps({'content':'$MSG'}).encode(), headers={'Content-Type':'application/json'}, method='POST'), timeout=5)" 2>/dev/null || true
+  fi
+  exit 1
+fi
+
 # Run pipeline (scan + rewrite + publish + build)
 echo "[1/3] Running pipeline..." | tee -a "$LOG_FILE"
-cd "$PIPELINE_DIR"
 python3 run_pipeline.py --quick --max-articles 1 --dedup-window 48 2>&1 | tee -a "$LOG_FILE"
 PIPELINE_EXIT=${PIPESTATUS[0]}
 
