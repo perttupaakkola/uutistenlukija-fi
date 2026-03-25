@@ -4801,7 +4801,7 @@ pre code {
 }
 
 .highlights-row--top {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
   padding: 0;
   margin: 0;
@@ -4919,6 +4919,11 @@ pre code {
 @media (max-width: 900px) {
   .homepage-top {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .highlights-row--top {
+    grid-template-columns: 2fr 1fr;
     gap: 1rem;
   }
 
@@ -5085,31 +5090,4 @@ pre code {
   .highlight-card--secondary:first-child .article-card-thumb {
     aspect-ratio: 16 / 9;
   }
-}
-
-/* ── Freshness badges ──────────────────────────────────────────────────────── */
-.freshness-badge {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.freshness-now {
-  display: inline-block;
-  background: #e74c3c;
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.15em 0.55em;
-  border-radius: 999px;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
-}
-
-.freshness-recent {
-  color: var(--text-secondary, #555);
-  font-weight: 500;
-}
-
-[data-theme="dark"] .freshness-now {
-  background: #c0392b;
 }
