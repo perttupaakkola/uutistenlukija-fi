@@ -433,7 +433,7 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
         expanded_audited = []
         for article in audited:
             word_count = len(article.get("content", "").split())
-            if word_count < 250:
+            if word_count < 310:
                 title = article.get("title", "")
                 print(f"[writer]   ⚠ Short ({word_count}w), expanding: '{title[:50]}'")
                 try:
