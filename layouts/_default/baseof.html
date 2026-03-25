@@ -75,7 +75,6 @@
   {{ partial "og-meta.html" . }}
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
   {{ if .IsSection }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} — {{ .Site.Title }}" href="{{ .Permalink }}index.xml">{{ end }}
-  {{ template "_internal/schema.html" . }}
   {{ partial "json-ld.html" . }}
   {{ partial "breadcrumb-schema.html" . }}
   {{ partial "site-nav-schema.html" . }}

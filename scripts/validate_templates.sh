@@ -146,6 +146,27 @@ echo ""
 echo "[validate] ══════════════════════════════════════════"
 echo "[validate] Template Validation — $TEMPLATE_COUNT files scanned"
 echo "[validate] Errors:   ${#ERRORS[@]}"
+
+# ── Check 8: _internal/schema.html (we own json-ld.html — internal is redundant) ──
+echo "[validate] Checking for _internal/schema.html (duplicate JSON-LD)..."
+if grep -rn '_internal/schema\.html' "$REPO_ROOT/layouts" "$REPO_ROOT/themes" \
+    --include="*.html" -l 2>/dev/null | grep -q .; then
+  CULPRITS=$(grep -rn '_internal/schema\.html' "$REPO_ROOT/layouts" "$REPO_ROOT/themes" --include="*.html")
+  warn "_internal/schema.html found — generates duplicate JSON-LD alongside json-ld.html: $CULPRITS"
+fi
+
+# ── Check 9: Identical shadow files (root == theme, theme copy is dead weight) ──
+echo "[validate] Checking for identical shadow files..."
+ROOT_LAYOUTS="$REPO_ROOT/layouts"
+THEME_LAYOUTS="$REPO_ROOT/themes/uutistenlukija/layouts"
+while IFS= read -r -d '' rfile; do
+  rel="${rfile#$ROOT_LAYOUTS/}"
+  tfile="$THEME_LAYOUTS/$rel"
+  if [[ -f "$tfile" ]] && cmp -s "$rfile" "$tfile"; then
+    warn "Identical shadow: $rel exists in both root and theme (remove theme copy)"
+  fi
+done < <(find "$ROOT_LAYOUTS" -name "*.html" -print0)
+
 echo "[validate] Warnings: ${#WARNINGS[@]}"
 
 for w in "${WARNINGS[@]}"; do
