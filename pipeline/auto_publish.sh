@@ -8,6 +8,13 @@ LOG_FILE="$PIPELINE_DIR/logs/auto_publish_$(date -u +%Y%m%d_%H%M%S).log"
 
 cd "$PROJECT_DIR"
 
+# Load .env early for preflight
+if [ -f "$PROJECT_DIR/.env" ]; then
+  set -a
+  source "$PROJECT_DIR/.env"
+  set +a
+fi
+
 # ── Pre-flight checks ───────────────────────────────────────────────────────
 python3 "$PIPELINE_DIR/preflight_check.py" || { echo "[auto_publish] ❌ Preflight check failed. Aborting pipeline."; exit 1; }
 
