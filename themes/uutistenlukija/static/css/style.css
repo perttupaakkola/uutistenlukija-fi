@@ -4999,3 +4999,68 @@ pre code {
     padding: 0.9rem 0.85rem 0.85rem;
   }
 }
+
+/* ── Homepage content hierarchy (Sara spec) ──────────────────────────────── */
+
+/* First article in each category section: featured treatment */
+.category-article-card:first-child {
+  grid-column: 1 / -1;
+}
+
+.category-article-card:first-child .article-image-link {
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.category-article-card:first-child .article-image,
+.category-article-card:first-child .article-card-thumb {
+  aspect-ratio: 21 / 9;
+}
+
+.category-article-card:first-child h3 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.category-article-card:first-child .excerpt {
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+/* Articles 2–3: medium tier, side by side */
+.category-article-card:nth-child(2),
+.category-article-card:nth-child(3) {
+  /* Grid already handles 2-col via auto-fill minmax(250px,1fr);
+     just boost the type weight for visual hierarchy */
+}
+
+.category-article-card:nth-child(2) h3,
+.category-article-card:nth-child(3) h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ── Mobile: hierarchy scales down ───────────────────────────────────────── */
+@media (max-width: 600px) {
+  .category-article-card:first-child .article-image,
+  .category-article-card:first-child .article-card-thumb {
+    aspect-ratio: 16 / 9;
+  }
+
+  .category-article-card:first-child h3 {
+    font-size: 1.35rem;
+  }
+
+  .category-article-card:first-child .excerpt {
+    font-size: 0.92rem;
+  }
+
+  .category-article-card:nth-child(2) h3,
+  .category-article-card:nth-child(3) h3 {
+    font-size: 1rem;
+  }
+}
