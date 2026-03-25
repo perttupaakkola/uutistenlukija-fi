@@ -1,0 +1,105 @@
+# Ghost CMS — uutistenlukija.fi
+# Phase 1: Ghost 5.x + MySQL 8 + NGINX reverse proxy
+#
+# Usage:
+#   cp .env.example .env   # fill in secrets
+#   docker compose up -d
+#
+# Volumes persist data across restarts.
+# NGINX handles SSL termination via certbot certs.
+
+services:
+  ghost:
+    image: ghost:5-alpine
+    container_name: uutistenlukija-ghost
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      url: https://${GHOST_DOMAIN:-cms.uutistenlukija.fi}
+      database__client: mysql
+      database__connection__host: db
+      database__connection__port: 3306
+      database__connection__user: ghost
+      database__connection__password: ${MYSQL_GHOST_PASSWORD}
+      database__connection__database: ghost
+      mail__transport: SMTP
+      mail__options__host: ${MAILGUN_SMTP_HOST:-smtp.eu.mailgun.org}
+      mail__options__port: 587
+      mail__options__secure: "false"
+      mail__options__auth__user: ${MAILGUN_SMTP_USER}
+      mail__options__auth__pass: ${MAILGUN_SMTP_PASSWORD}
+      mail__from: "${MAIL_FROM:-noreply@uutistenlukija.fi}"
+      # Stripe (Phase 1 prep — activate when Perttu provides keys)
+      # STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+      # STRIPE_PUBLISHABLE_KEY: ${STRIPE_PUBLISHABLE_KEY}
+    volumes:
+      - ghost_content:/var/lib/ghost/content
+    networks:
+      - ghost-net
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:2368/ghost/api/admin/site/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  db:
+    image: mysql:8.0
+    container_name: uutistenlukija-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ghost
+      MYSQL_USER: ghost
+      MYSQL_PASSWORD: ${MYSQL_GHOST_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - ghost-net
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: uutistenlukija-nginx
+    restart: unless-stopped
+    depends_on:
+      ghost:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - certbot_webroot:/var/www/certbot:ro
+    networks:
+      - ghost-net
+
+  # Certbot sidecar for auto-renewal
+  certbot:
+    image: certbot/certbot:latest
+    container_name: uutistenlukija-certbot
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - certbot_webroot:/var/www/certbot
+    entrypoint: /bin/sh -c 'trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot --quiet; sleep 12h & wait $${!}; done'
+    networks:
+      - ghost-net
+
+volumes:
+  ghost_content:
+  db_data:
+  certbot_webroot:
+
+networks:
+  ghost-net:
+    driver: bridge

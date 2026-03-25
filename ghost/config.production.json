@@ -1,0 +1,52 @@
+{
+  "url": "https://cms.uutistenlukija.fi",
+  "server": {
+    "port": 2368,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "db",
+      "port": 3306,
+      "user": "ghost",
+      "password": "__MYSQL_GHOST_PASSWORD__",
+      "database": "ghost",
+      "charset": "utf8mb4"
+    }
+  },
+  "mail": {
+    "transport": "SMTP",
+    "from": "Uutistenlukija <noreply@uutistenlukija.fi>",
+    "options": {
+      "host": "smtp.eu.mailgun.org",
+      "port": 587,
+      "secure": false,
+      "auth": {
+        "user": "__MAILGUN_SMTP_USER__",
+        "pass": "__MAILGUN_SMTP_PASSWORD__"
+      }
+    }
+  },
+  "logging": {
+    "level": "info",
+    "transports": ["stdout"],
+    "rotation": {
+      "enabled": true,
+      "count": 15
+    }
+  },
+  "privacy": {
+    "useGravatar": false,
+    "useRpcPing": false,
+    "useUpdateCheck": true
+  },
+  "compress": true,
+  "imageOptimization": {
+    "resize": true,
+    "srcsets": true
+  },
+  "paths": {
+    "contentPath": "/var/lib/ghost/content"
+  }
+}
