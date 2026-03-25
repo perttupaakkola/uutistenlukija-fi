@@ -84,6 +84,41 @@ def notify_discord_failure(step: str, error: str, context: str = "") -> bool:
         return False
 
 
+def notify_discord_crash(step: str, exception: Exception, *, tb: str = "") -> bool:
+    """Post a crash alert (unhandled exception) to Discord via webhook.
+
+    Returns True if message was sent successfully.
+    """
+    error_str = f"{type(exception).__name__}: {exception}"
+    context = tb[:600] if tb else ""
+    if not DISCORD_WEBHOOK_URL:
+        print(f"[health_check] CRASH [{step}]: {error_str}")
+        if context:
+            print(context)
+        return False
+
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    body = f"💥 **Pipeline crash** — `{step}`\n"
+    body += f"**Time:** {timestamp}\n"
+    body += f"**Error:** {error_str[:400]}\n"
+    if context:
+        body += f"```\n{context[:500]}\n```\n"
+
+    payload = json.dumps({"content": body}).encode("utf-8")
+    req = urllib.request.Request(
+        DISCORD_WEBHOOK_URL,
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return resp.status in (200, 204)
+    except Exception as e:
+        print(f"[health_check] Discord notify failed: {e}")
+        return False
+
+
 def notify_discord_warning(step: str, message: str) -> bool:
     """Post a warning (non-fatal) to Discord."""
     if not DISCORD_WEBHOOK_URL:
