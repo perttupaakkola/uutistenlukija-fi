@@ -139,7 +139,7 @@ class GhostPublisher:
 
     # ── Article → Ghost post mapping ────────────────────────────────────────
 
-    def _article_to_post(self, article: Dict) -> dict:
+    def _article_to_post(self, article: Dict, publish: bool = False) -> dict:
         """Map pipeline article dict to Ghost post payload."""
         title = article.get("title", "Untitled")
         content = article.get("content", "")
@@ -187,7 +187,7 @@ class GhostPublisher:
         post = {
             "title": title,
             "html": content,
-            "status": "published",
+            "status": "published" if publish else "draft",
             "tags": ghost_tags,
             "custom_excerpt": summary[:300] if summary else None,
             "meta_title": title[:300],
@@ -211,9 +211,14 @@ class GhostPublisher:
 
     # ── Public API ──────────────────────────────────────────────────────────
 
-    def publish(self, article: Dict) -> str:
-        """Publish a single article to Ghost. Returns the Ghost post URL."""
-        post_data = self._article_to_post(article)
+    def publish(self, article: Dict, publish: bool = False) -> str:
+        """Create a Ghost post from an article. Returns the Ghost post URL.
+        
+        Args:
+            article: Pipeline article dict (same format as publisher.py).
+            publish: If True, set status to 'published'. Default is 'draft'.
+        """
+        post_data = self._article_to_post(article, publish=publish)
         logger.info("Publishing to Ghost: %s", post_data.get("title", "?")[:60])
 
         result = self._api_post("posts", {"posts": [post_data]})
@@ -227,13 +232,18 @@ class GhostPublisher:
         logger.info("Published: %s (id=%s)", ghost_url, ghost_id)
         return ghost_url
 
-    def publish_batch(self, articles: list) -> list:
-        """Publish multiple articles. Returns list of (title, url|error) tuples."""
+    def publish_batch(self, articles: list, publish: bool = False) -> list:
+        """Create Ghost posts for multiple articles. Returns list of (title, url|error) tuples.
+        
+        Args:
+            articles: List of pipeline article dicts.
+            publish: If True, posts go live immediately. Default is 'draft'.
+        """
         results = []
         for art in articles:
             title = art.get("title", "?")[:60]
             try:
-                url = self.publish(art)
+                url = self.publish(art, publish=publish)
                 results.append((title, url))
             except Exception as e:
                 logger.error("Failed to publish '%s': %s", title, e)
@@ -250,6 +260,7 @@ def main():
     parser = argparse.ArgumentParser(description="Publish articles to Ghost CMS")
     parser.add_argument("json_file", help="Path to JSON file with article(s)")
     parser.add_argument("--dry-run", action="store_true", help="Show post payload without publishing")
+    parser.add_argument("--publish", action="store_true", help="Set status to 'published' (default is 'draft')")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -273,7 +284,7 @@ def main():
         return
 
     gp = GhostPublisher()
-    results = gp.publish_batch(articles)
+    results = gp.publish_batch(articles, publish=args.publish)
     for title, url in results:
         status = "✅" if url.startswith("http") else "❌"
         print(f"  {status} {title}: {url}")
