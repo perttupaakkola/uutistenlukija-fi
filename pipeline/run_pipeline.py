@@ -313,7 +313,7 @@ def validate_articles(articles: list) -> tuple:
     return valid, dropped, dict(reason_counter)
 
 
-def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None, dedup_window: int = 48, incremental: bool = False, force: bool = False):
+def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None, dedup_window: int = 48, incremental: bool = False, force: bool = False, ghost: bool = False):
     """Execute the pipeline."""
     pipeline_start = time.time()
     steps: dict = {}
@@ -710,6 +710,35 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     steps["publisher"] = t_publish.to_dict()
     article_count = len(created)
 
+    # ── Step 3b: Ghost CMS dual-publish (optional) ─────────────────────────────
+    ghost_enabled = ghost or os.environ.get("GHOST_ENABLED", "").lower() in ("true", "1", "yes")
+    ghost_publish_live = os.environ.get("GHOST_PUBLISH", "").lower() in ("true", "1", "yes")
+    if ghost_enabled and rewritten:
+        # Graceful skip if env vars not configured
+        ghost_url = os.environ.get("GHOST_API_URL", "")
+        ghost_key = os.environ.get("GHOST_ADMIN_API_KEY", "")
+        if not ghost_url or not ghost_key:
+            print(f"  👻 Ghost: skipped (GHOST_API_URL / GHOST_ADMIN_API_KEY not set)")
+        else:
+            try:
+                from ghost_publisher import GhostPublisher
+                gp = GhostPublisher()
+                ghost_results = gp.publish_batch(rewritten, publish=ghost_publish_live)
+                ghost_ok = sum(1 for _, url in ghost_results if url.startswith("http"))
+                ghost_fail = len(ghost_results) - ghost_ok
+                status_label = "published" if ghost_publish_live else "drafted"
+                print(f"  👻 Ghost: {ghost_ok} {status_label}, {ghost_fail} failed")
+                log_run("ghost_publish", {"ok": ghost_ok, "failed": ghost_fail, "status": status_label})
+                if ghost_fail > 0:
+                    failed_titles = [t for t, u in ghost_results if not u.startswith("http")]
+                    notify_discord_warning("ghost_publisher", f"{ghost_fail} articles failed: {', '.join(failed_titles[:5])}")
+            except Exception as e:
+                # Ghost failure must NEVER block Hugo pipeline
+                print(f"  ⚠️ Ghost publish failed (non-blocking): {e}")
+                log_run("ghost_publish_error", {"error": str(e)})
+    elif ghost_enabled:
+        print(f"  👻 Ghost: no articles to publish")
+
     # ── Total time warning ─────────────────────────────────────────────────────
     elapsed_total = time.time() - pipeline_start
     if elapsed_total > PIPELINE_WARN_TIMEOUT:
@@ -891,6 +920,12 @@ if __name__ == "__main__":
         metavar="N",
         help="Number of days for --metrics-report (default: 7).",
     )
+    parser.add_argument(
+        "--ghost",
+        action="store_true",
+        help="Enable Ghost CMS dual-publish (also enabled by GHOST_ENABLED env var). "
+             "Posts are created as drafts unless GHOST_PUBLISH=true.",
+    )
     args = parser.parse_args()
 
     if args.dry_run:
@@ -948,5 +983,5 @@ if __name__ == "__main__":
 
     success = run(quick=args.quick, build_only=args.build_only, firehose_only=args.firehose_only,
                   max_articles=args.max_articles, dedup_window=args.dedup_window,
-                  incremental=args.incremental, force=args.force)
+                  incremental=args.incremental, force=args.force, ghost=args.ghost)
     sys.exit(0 if success else 1)

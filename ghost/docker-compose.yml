@@ -37,6 +37,10 @@ services:
       # STRIPE_PUBLISHABLE_KEY: ${STRIPE_PUBLISHABLE_KEY}
     volumes:
       - ghost_content:/var/lib/ghost/content
+    deploy:
+      resources:
+        limits:
+          memory: 512M
     networks:
       - ghost-net
     healthcheck:
@@ -57,9 +61,13 @@ services:
       MYSQL_PASSWORD: ${MYSQL_GHOST_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
+    deploy:
+      resources:
+        limits:
+          memory: 512M
     networks:
       - ghost-net
-    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --mysql-native-password=ON
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
       interval: 10s
