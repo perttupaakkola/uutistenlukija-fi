@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Kittilässä tapahtuneessa nokkakolarissa kuoli marraskuussa 2024 kaksi ihmistä. 19-vuotias syytetty kiistää syytteet ja onnettomuus herättää huolta liikenneturvallisuudesta."
 ---
 Pariskunta kuoli nokkakolarissa Kittilässä marraskuussa 2024. Onnettomuus tapahtui kantatie 79:llä 21. marraskuuta, kun 19-vuotias mies lähti ohittamaan rekkaa ja törmäsi vastaantulevaan autoon. Onnettomuus herättää kysymyksiä nuoren kuljettajan ajotavoista sekä yleisesti liikenneturvallisuudesta Suomen teillä.
 

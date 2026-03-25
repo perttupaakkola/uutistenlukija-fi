@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Espoon Soukanniemessä myyntiin tullut arvotalo herättää muistoja toukokuussa 2025 tapahtuneesta miljonäärimurhasta, joka järkytti Suomea."
 ---
 Espoon Soukanniemessä sijaitseva arvotalo on tullut myyntiin Etuovi-palvelussa. Hintapyyntö on lähes 1,5 miljoonaa euroa. Talo on sama, jossa toukokuussa 2025 tapahtui niin sanottu Espoon miljonäärimurha. Tämä tapaus järkytti koko Suomea, sillä se liittyi liiketoimintaan ja henkilökohtaisiin suhteisiin, mikä herätti kysymyksiä niin rikollisuuden kuin ihmisten välisen luottamuksen luonteesta.
 

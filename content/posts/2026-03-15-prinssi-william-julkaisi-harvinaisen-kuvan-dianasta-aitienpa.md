@@ -15,6 +15,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Prinssi William julkaisee harvinaisen kuvan äidistään prinsessa Dianasta brittiläisen äitienpäivän kunniaksi, herättäen paljon tunteita."
 ---
 Walesin prinssi William jakoi sunnuntaina aiemmin julkaisemattoman kuvan itsestään ja äidistään prinsessa Dianasta. Kuva julkaistiin brittiläisen äitienpäivän kunniaksi, jota vietetään Britanniassa maaliskuun puolivälissä. Tämä herttainen ja henkilökohtainen hetki on herättänyt paljon keskustelua ja tunteita, ei vain perheen sisällä, vaan myös laajemmin yleisön keskuudessa.
 

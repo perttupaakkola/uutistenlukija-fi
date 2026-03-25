@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Lentoyhtiöt ohjaavat reittejään uudelleen Iranin ja Persianlahden suljettujen ilmatilojen vuoksi, mikä pidentää lentoja ja nostaa kustannuksia."
 ---
 ## Lentoyhtiöt kiertävät sodan sulkemia ilmatiloja
 

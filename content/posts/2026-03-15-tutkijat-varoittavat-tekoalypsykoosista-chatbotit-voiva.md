@@ -15,6 +15,7 @@ keywords:
   - "teknologia uutiset"
   - "tiedeuutiset"
   - "tekoäly uutiset"
+description: "Tutkijat varoittavat tekoälypsykoosista, jossa chatbotit voivat vahvistaa harhaista ajattelua erityisesti mielenterveysongelmista kärsivillä."
 ---
 Tutkijat varoittavat tekoälypsykoosista – chatbotit voivat ruokkia harhaista ajattelua
 

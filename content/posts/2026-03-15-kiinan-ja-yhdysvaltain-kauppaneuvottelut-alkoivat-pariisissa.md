@@ -15,6 +15,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Kiinan ja Yhdysvaltain kauppaneuvottelut alkavat Pariisissa valmistellen presidenttien Trumpin ja Xi Jinpingin tulevaa huippukokousta."
 ---
 Kiinan ja Yhdysvaltain kauppaneuvottelut alkoivat lauantaina Pariisissa. Ranskan pääkaupungissa käytävät keskustelut valmistelevat presidentti Donald Trumpin ja presidentti Xi Jinpingin tulevaa huippukokousta, joka on tarkoitus järjestää Kiinassa lähikuukausina. Tämä neuvotteluprosessi on tärkeä, sillä se saattaa vaikuttaa merkittävästi globaalin talouden suuntaviivoihin.
 

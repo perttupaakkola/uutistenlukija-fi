@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "EU-maiden ulkoministerit kokoontuvat maanantaina Brysselissä keskustelemaan ulko- ja turvallisuuspoliittisista kysymyksistä globaaleissa kriiseissä."
 ---
 Euroopan unionin jäsenmaiden ulkoministerit kokoontuvat maanantaina Brysselissä. Tällä kertaa kokouksessa keskitytään erityisesti unionin ulko- ja turvallisuuspoliittisiin kysymyksiin, jotka ovat nousseet entistä ajankohtaisemmiksi globaalin epävarmuuden ja kansainvälisten kriisien myötä. Kokouksen taustalla on tarve yhtenäistää EU:n jäsenvaltioiden näkemyksiä ja toimintatapoja, jotta unioni voi toimia tehokkaasti kansainvälisessä politiikassa.
 

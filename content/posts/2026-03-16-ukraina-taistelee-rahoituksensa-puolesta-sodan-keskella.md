@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Ukraina neuvottelee rahoituksesta IMF:n ja EU:n kanssa selvitäkseen sodan aiheuttamasta talouskriisistä ja kasvavista puolustusmenoista."
 ---
 Ukraina taistelee rahoituksensa puolesta sodan keskellä
 

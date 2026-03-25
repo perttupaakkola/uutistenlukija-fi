@@ -19,6 +19,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: "Netflixin Frankenstein voitti kolme Oscar-palkintoa parhaasta lavastuksesta, pukusuunnittelusta ja maskeerauksesta vuoden 2026 gaalassa."
 ---
 Netflixin Frankenstein ja KPop Demon Hunters menestyivät Oscar-gaalassa
 

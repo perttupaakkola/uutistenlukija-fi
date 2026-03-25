@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Punkkikausi on käynnistynyt ennätyksellisen varhain, ja havaintoja on tehty jopa Oulun korkeudella, mikä huolestuttaa asiantuntijoita."
 ---
 Punkkikausi käynnistyi ennätyksellisen varhain – havaintoja Oulun korkeudelle asti
 

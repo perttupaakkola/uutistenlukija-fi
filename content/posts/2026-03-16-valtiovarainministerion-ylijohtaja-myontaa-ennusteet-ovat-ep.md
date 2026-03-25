@@ -19,6 +19,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: "Valtiovarainministeriön ylijohtaja Mikko Spolander myöntää, että ministeriön talousennusteet ovat toistuvasti epäonnistuneet ja johtaneet virhearvioihin."
 ---
 Valtiovarainministeriön ylijohtaja myöntää: ennusteet ovat epäonnistuneet toistuvasti
 

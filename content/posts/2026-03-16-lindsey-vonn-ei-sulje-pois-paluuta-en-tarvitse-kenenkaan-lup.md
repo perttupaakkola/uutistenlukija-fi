@@ -19,6 +19,7 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
+description: "Lindsey Vonn ei sulje pois paluuta alppihiihtoon, vaikka vakava loukkaantuminen vaivaa. Hän korostaa, että tekee omat valintansa ilman lupaa."
 ---
 ## Lindsey Vonn ei sulje pois paluuta: "En tarvitse kenenkään lupaa"
 

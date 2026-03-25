@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Valkoisen talon kansliapäällikkö Susie Wiles on saanut syöpädiagnoosin, sillä hän sairastaa varhaisessa vaiheessa olevaa rintasyöpää."
 ---
 Yhdysvaltain presidentti Donald Trump kertoi Truth Social -palvelussa, että Valkoisen talon kansliapäällikkö Susie Wiles on saanut syöpädiagnoosin. Kyseessä on varhaisessa vaiheessa oleva rintasyöpä. Tämä uutinen on herättänyt huolta ja tukireaktiota sekä Wilesin lähipiirissä että laajemmassa yhteiskunnassa, sillä rintasyöpä on yksi yleisimmistä syöpätyypeistä naisilla ja sen hoito voi olla pitkä ja vaativa prosessi.
 

@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Venäjä lupaa lopettaa kenialaisten värväämisen sotaan Ukrainassa, Kenian viranomaisten selvitettyä yli tuhannen kenialaisen tilanne."
 ---
 ## Kenia: Venäjä lupaa lopettaa kenialaisten värväämisen sotaan Ukrainassa
 

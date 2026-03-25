@@ -15,6 +15,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Ilmanlaatu heikentyy laajoilla alueilla Suomessa, kun Keski-Euroopasta kulkeutuvan pienhiukkaspilven mukana saapuu kotimaista katupölyä."
 ---
 ## Ilmanlaatu heikentynyt Suomessa – pienhiukkaset kulkeutuvat Keski-Euroopasta
 

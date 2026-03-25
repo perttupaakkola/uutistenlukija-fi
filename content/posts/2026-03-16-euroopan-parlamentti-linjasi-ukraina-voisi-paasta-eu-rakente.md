@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Euroopan parlamentti linjasi Ukrainan pääsyn EU-rakenteisiin ennen täysjäsenyyttä, tukien maan integraatiota ja aseman vahvistamista Euroopassa."
 ---
 Euroopan parlamentti äänesti 11. maaliskuuta EU:n laajentumisstrategian puolesta. Linjaus tukee mallia, jossa Ukraina pääsisi mukaan unionin rakenteisiin jo ennen varsinaista täysjäsenyyttä. Tämä on merkittävä askel, joka osoittaa Euroopan unionin halukkuuden tukea Ukrainaa sen pyrkimyksissä vahvistaa omaa asemaansa Euroopan kansainvälisessä politiikassa.
 

@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Itä-Suomen poliisi etsii Leppävirralla kadonnutta 28-vuotiasta miestä, joka hävisi jälkiä huhtikuun 9. päivänä. Etsinnät ovat laajentuneet."
 ---
 ## Poliisi etsii Leppävirralta kadonnutta nuorta miestä
 

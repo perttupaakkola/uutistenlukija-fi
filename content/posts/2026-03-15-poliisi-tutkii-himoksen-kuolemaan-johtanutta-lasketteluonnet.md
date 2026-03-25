@@ -15,6 +15,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Poliisi tutkii Himoksella tapahtunutta lasketteluonnettomuutta, jossa virolainen mies menehtyi siirtymäreitin kalliolle ajautuessa."
 ---
 Sisä-Suomen poliisi tutkii Jämsän Himoksella perjantaina tapahtunutta lasketteluonnettomuutta kuolemansyyntutkintana. Onnettomuudessa menehtyi virolainen mies, joka ajautui siirtymäreitiltä päin kallioleikkausta. Tämä traaginen tapahtuma on herättänyt huolta sekä paikallisten asukkaiden että laskettelijoiden keskuudessa, sillä Himoksen laskettelukeskus on tunnettu suosiostaan ja vierailee vuosittain kymmeniätuhansia ihmisiä.
 

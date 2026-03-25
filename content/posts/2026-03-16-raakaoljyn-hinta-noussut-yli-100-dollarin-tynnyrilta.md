@@ -19,6 +19,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: "Raakaöljyn hinta ylittää 100 dollaria tynnyriltä ensimmäistä kertaa vuoden 2022 jälkeen, herättäen huolta kuluttajissa ja asiantuntijoissa."
 ---
 Raakaöljyn hinta on kivunnut tasoille, joita ei ole nähty sitten vuoden 2022 energiakriisin. Yhdysvaltalainen WTI-laatu maksaa jo yli 107 dollaria tynnyriltä ja kansainvälinen Brent-viitelaatu on ylittänyt 108 dollarin rajan. Maaliskuun aikana hinta on noussut lähes 50 prosenttia, mikä herättää huolta niin kuluttajien kuin talousasiantuntijoiden keskuudessa.
 

@@ -19,6 +19,7 @@ keywords:
   - "teknologia uutiset"
   - "tiedeuutiset"
   - "tekoäly uutiset"
+description: "Nvidian toimitusjohtaja Jensen Huang esittelee tänään vuosikokouksessaan tekoälyn tulevaisuutta ja uusia innovaatioita."
 ---
 Nvidian toimitusjohtaja Jensen Huang astuu lavalle yhtiön vuotuisessa GTC-konferenssissa. Tapahtuma on piirivalmistajan tärkein vuosittainen tilaisuus, jossa se esittelee uudet tuotteensa ja näkemyksensä laskennan tulevaisuudesta. GTC (GPU Technology Conference) on kerännyt yhteen innovaatioista kiinnostuneita asiantuntijoita, tutkijoita ja kehittäjiä eri puolilta maailmaa, ja sen merkitys on kasvanut erityisesti tekoälyn ja koneoppimisen aikakaudella.
 

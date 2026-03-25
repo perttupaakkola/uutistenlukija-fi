@@ -19,6 +19,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: "KPop Demon Hunters valloittaa Oscar-yleisön yhdistämällä k-popin ja demonien metsästyksen, tavoittaen laajan katsojakunnan ympäri maailmaa."
 ---
 KPop Demon Hunters valloitti Oscar-yleisön yhdistämällä k-popin ja demonien metsästyksen
 

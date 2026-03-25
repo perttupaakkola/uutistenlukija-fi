@@ -15,6 +15,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Neljän miehen joukko pahoinpitelee uhrin Rovaniemen keskustassa, kun poliisi saa ilmoituksen tapahtuneesta."
 ---
 Poliisi sai sunnuntain vastaisena yönä ilmoituksen pahoinpitelystä Rovaniemen keskustassa. Neljän miehen joukko oli pahoinpidellyt uhrin, joka ei tuntenut tekijöitä entuudestaan. Pahoinpitely tapahtui yöaikaan kaupungin ydinkeskustan alueella, joka on tunnettu vilkkaasta yöelämästään. Rovaniemi, joka on monille matkailijoille tuttu joulukaupunkina, houkuttelee myös nuoria ja yöelämän ystäviä, mikä saattaa lisätä riskitekijöitä väkivallantekojen esiintymiselle.
 

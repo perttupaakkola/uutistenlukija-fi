@@ -15,6 +15,7 @@ keywords:
   - "teknologia uutiset"
   - "tiedeuutiset"
   - "tekoäly uutiset"
+description: "Nokia ja Telia kehittävät yhdessä tekoälypohjaista radiopääsyverkkoa Suomessa, tavoitteenaan parantaa 5G-verkon suorituskykyä merkittävästi."
 ---
 Nokia ja Telia Finland ovat aloittaneet laajan yhteistyön tekoälypohjaisen radiopääsyverkon kehittämiseksi ja testaamiseksi Suomessa. Kumppanuuden tavoitteena on parantaa 5G-verkon suorituskykyä merkittävästi ja nopeuttaa tekoälysovellusten kaupallistamista. Tekoälyn hyödyntäminen telekommunikaatiossa on noussut keskeiseksi teemaksi, ja tämä yhteistyö edustaa merkittävää askelta kohti älykkäämpää ja tehokkaampaa verkkoinfrastruktuuria.
 

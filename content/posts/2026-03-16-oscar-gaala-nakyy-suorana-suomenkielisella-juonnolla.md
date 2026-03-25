@@ -19,6 +19,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: "Oscar-gaala esitetään tänä vuonna suorana Yle Areenassa suomenkielisellä juonnolla, tarjoten suomalaisille erilaista elokuvanautintoa."
 ---
 Oscar-gaala näkyy suorana suomenkielisellä juonnolla
 

@@ -19,6 +19,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: "Hybridiautojen myynti kasvaa Australiassa, kun bensiinikäyttöisten autojen osuus pudottaa ennätyksellisiin 66,3 prosenttiin."
 ---
 Bensiiniautot menettävät otettaan Australian automarkkinoilla. Maan autoliiton AAA:n tuoreet tilastot osoittavat, että puhtaasti bensiinikäyttöisten autojen osuus myydyistä ajoneuvoista laski ennätyksellisen alas, 66,3 prosenttiin neljännesvuositasolla. Tämä muutos ei ole vain tilastollinen ilmiö, vaan se heijastaa laajempia ympäristö- ja taloudellisia trendejä, jotka vaikuttavat kuluttajien valintoihin.
 

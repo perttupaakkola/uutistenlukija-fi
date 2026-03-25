@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Israel aloittaa laajamittaiset iskut Irania vastaan, mikä nostaa huolta alueen konfliktin eskalaatiosta. Donald Trump ilmoittaa USA:n olevan valmis diplomaattisiin ratkaisuihin."
 ---
 Israelin armeija ilmoitti käynnistäneensä laajamittaiset iskut Irania vastaan. Armeijan tiedottajan mukaan Israel tunnistaa uusia kohteita päivittäin, ja operaation arvioidaan kestävän vähintään kolme viikkoa. Tämä kehitys on herättänyt kansainvälistä huolta ja mielenkiintoa, sillä se merkitsee selvää eskalaatiota konfliktissa, joka on laajentunut Gazan sodasta alueelliseksi kriisiksi.
 

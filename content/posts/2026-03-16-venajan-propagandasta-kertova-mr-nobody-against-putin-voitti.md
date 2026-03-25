@@ -19,6 +19,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: "Dokumenttielokuva Mr Nobody Against Putin voittaa parhaan dokumentin Oscarin ja paljastaa venäläisten koululaisten indoktrinaation Ukrainaa vastaan."
 ---
 Dokumenttielokuva Mr Nobody Against Putin voitti parhaan dokumenttielokuvan Oscar-palkinnon. Elokuva kertoo venäläisestä peruskoulunopettajasta Pavel Talankinista, joka dokumentoi oppilaittensa indoktrinaatiota Venäjän Ukrainan-hyökkäyksen tueksi. Talankin tallensi salaa, kuinka venäläiskouluissa opetettiin lapsia tukemaan sotaa. Materiaali paljastaa propagandakoneiston, joka ulottuu koulumaailmaan asti. Talankin elää nykyään maanpaossa Euroopassa.
 

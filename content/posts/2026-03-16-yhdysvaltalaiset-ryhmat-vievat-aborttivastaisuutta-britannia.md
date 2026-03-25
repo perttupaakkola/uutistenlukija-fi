@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Yhdysvaltalaiset aborttivastaiset ryhmät ovat laajentaneet toimintaansa Britanniaan, herättäen huolta maan aborttioikeuden tulevaisuudesta."
 ---
 Yhdysvaltalaiset ryhmät vievät aborttivastaisuutta Britanniaan
 

@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Moskovan pormestari Sergei Sobjanin vahvistaa, että Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan kohdistunutta lennokkia."
 ---
 Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan suunnattua lennokkia. Moskovan pormestari Sergei Sobjanin vahvisti tiedon. Tämä tapahtuma on yksi suurimmista Venäjän pääkaupunkiin kohdistuneista hyökkäyksistä sodan aikana, mikä nostaa esiin kysymyksiä sodan eskaloitumisesta ja sen seurauksista.
 

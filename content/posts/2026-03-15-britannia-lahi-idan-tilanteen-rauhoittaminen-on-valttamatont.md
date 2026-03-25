@@ -15,6 +15,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Britannian puolustusministeri korostaa Lähi-idän rauhoittamisen tärkeyttä kansainväliselle turvallisuudelle ja viranomaiset keskustelevat vaihtoehdoista."
 ---
 Britannian puolustusministeri on korostanut Lähi-idän tilanteen rauhoittamisen olevan elintärkeää kansainväliselle turvallisuudelle. Ministeriön tiedottaja kertoi lauantaina, että Britannian hallitus käy tiivistä vuoropuhelua liittolaistensa kanssa useista eri vaihtoehdoista Hormuzinsalmen tilanteen vakauttamiseksi. Tämä uutinen tulee ajankohtaiseksi, kun alueen jännitteet ovat jälleen nousseet, ja kansainväliset suhteet ovat kiristyneet.
 

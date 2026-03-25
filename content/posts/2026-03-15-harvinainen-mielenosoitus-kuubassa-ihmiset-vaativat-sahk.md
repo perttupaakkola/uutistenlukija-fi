@@ -15,6 +15,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Havannassa järjestettiin harvinainen mielenosoitus, jossa kansalaiset vaativat toimivaa sähköverkkoa ja parempaa ruoan saatavuutta."
 ---
 Kuuban pääkaupungissa Havannassa puhkesi viikonloppuna harvinainen mielenosoitus, jossa turhautuneet kansalaiset vaativat toimivaa sähköverkkoa ja ruoan saatavuuden parantamista. Protestoijat tunkeutuivat kommunistisen puolueen paikalliseen toimistoon ja aiheuttivat vahinkoa rakennukselle. Tämä väkivaltainen purkaus osoittaa, kuinka syvään kansalaisten tyytymättömyys on juurtunut ja kuinka vakavia ongelmat maan sisällä ovat.
 

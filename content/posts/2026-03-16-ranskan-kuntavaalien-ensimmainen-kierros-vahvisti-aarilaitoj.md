@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Ranskan kuntavaalien ensimmäinen kierros vahvistaa äärioikeistolaisen Kansallisen liittouman ja radikaalivasemmistolaisen La France insoumise -puolueen valtaa."
 ---
 Ranskan kuntavaalien ensimmäinen kierros vahvisti äärilaitoja
 

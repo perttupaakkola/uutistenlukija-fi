@@ -15,6 +15,7 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
+description: "Helsingin Fintastic voittaa kultaa junioreiden muodostelmaluistelun MM-kisoissa, ja Valley Bay Synchro saavuttaa pronssia historiallisesti."
 ---
 Helsinki Fintastic voitti kultaa muodostelmaluistelun junioreiden MM-kisoissa sunnuntaina vakuuttavalla esityksellä. Espoolainen Valley Bay Synchro täydensi suomalaisten juhlaa nousemalla pronssisijalle – joukkueen ensimmäiseen MM-mitaliin koskaan. Tämä kaksinkertainen menestys on merkittävä saavutus suomalaiselle muodostelmaluistelulle ja nostaa entisestään maan asemaa kansainvälisessä taitoluistelussa.
 

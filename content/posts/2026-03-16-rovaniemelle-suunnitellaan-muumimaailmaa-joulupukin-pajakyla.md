@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Rovaniemen kaupunginhallitus varasi tontin Muumimaailma oy:lle joulupukin pajakylän läheltä, suunnitelmissa on interaktiivinen muumiteemapuisto."
 ---
 Rovaniemen kaupunginhallitus varasi maanantaina tontin Muumimaailma oy:lle Joulupukin pajakylän alueelta. Yhtiö suunnittelee Rovaniemelle interaktiivista muumiteemapuistoa, josta tulisi Suomen toinen Muumimaailma Naantalin puiston rinnalle. Suunnitelma on herättänyt jo ennakkoon suurta kiinnostusta niin paikallisten asukkaiden kuin matkailijoiden keskuudessa.
 

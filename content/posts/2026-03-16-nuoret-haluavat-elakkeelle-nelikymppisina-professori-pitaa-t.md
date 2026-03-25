@@ -19,6 +19,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: "Nuoret tavoittelevat eläkkeelle jäämistä nelikymppisinä, mutta professori Vesa Puttonen pitää tätä tuhlauksena ja varoittaa riskistä."
 ---
 ## Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhlauksena
 

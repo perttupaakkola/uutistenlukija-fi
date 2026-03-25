@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Kangasniemen kunta muuttaa tyhjien talojen kampanjan nimen Suomen asuntomessujen vaatimuksesta brändinhallinnan vuoksi."
 ---
 Kangasniemen kunta muuttaa tyhjiin taloihin keskittyvän kampanjansa nimen. Syynä on Suomen asuntomessujen vaatimus: kampanjan nimi sekoittui liikaa yhtiön brändiin. Tämä päätös osoittaa, kuinka tärkeää on brändinhallinta nyky-yhteiskunnassa, jossa markkinointi ja viestintä ovat keskeisiä elementtejä kunnallisten hankkeiden onnistumiselle.
 

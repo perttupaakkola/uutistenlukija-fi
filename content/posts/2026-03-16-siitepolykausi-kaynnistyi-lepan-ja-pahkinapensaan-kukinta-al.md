@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Lepän ja pähkinäpensaan kukinta on alkanut etelässä, mikä käynnistää siitepölykauden ja herättää huolta allergikoissa."
 ---
 Siitepölykausi käynnistyi – lepän ja pähkinäpensaan kukinta alkanut etelässä
 

@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Sähköauto törmää liikehuoneiston ikkunaan Turun keskustassa. Onnettomuus tapahtui Eerikinkadulla vilkkaana aikana, mutta loukkaantuneita ei ole."
 ---
 Sähköauto törmäsi liikehuoneiston ikkunaan Turun keskustassa
 

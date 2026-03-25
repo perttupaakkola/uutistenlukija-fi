@@ -15,6 +15,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Juutinrauman silta on suljettu onnettomuuden vuoksi, mikä aiheuttaa suuria liikenneongelmia Ruotsin suunnalla ja vaikuttaa tuhansiin matkustajiin."
 ---
 ## Juutinrauman silta suljettu onnettomuuden vuoksi
 

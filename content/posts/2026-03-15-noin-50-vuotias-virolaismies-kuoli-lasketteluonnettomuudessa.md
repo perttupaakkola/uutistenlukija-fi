@@ -15,6 +15,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Virolaismies kuoli lasketteluonnettomuudessa Himoksella, kun hän ajautui siirtymäreitiltä kallioleikkaukseen ja sai vakavia vammoja."
 ---
 Himoksen hiihtokeskuksessa Jämsässä sattui perjantaina kuolemaan johtanut lasketteluonnettomuus. Uhri on noin 50-vuotias Viron kansalainen, jonka henkilöllisyyden Sisä-Suomen poliisi on vahvistanut. Tämä surullinen tapahtuma herättää kysymyksiä laskettelun turvallisuudesta ja vaatii laajempaa keskustelua talviurheilun riskitekijöistä.
 

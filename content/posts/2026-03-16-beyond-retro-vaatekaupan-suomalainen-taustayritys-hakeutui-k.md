@@ -19,6 +19,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: "Beyond Retro -vaateliikkeiden suomalainen omistajayritys Kusa Oy hakeutuu konkurssiin, mikä herättää huomiota nuorten keskuudessa."
 ---
 ## Beyond Retro -vaatekaupan suomalainen taustayritys hakeutui konkurssiin
 

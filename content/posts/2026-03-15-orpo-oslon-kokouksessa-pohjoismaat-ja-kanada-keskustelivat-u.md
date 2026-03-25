@@ -15,6 +15,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Pääministeri Petteri Orpo keskustelee Oslossa Pohjoismaiden ja Kanadan johtajien kanssa Ukrainan tuesta ja Euroopan puolustuksesta."
 ---
 Pääministeri Petteri Orpo osallistui sunnuntaina Pohjoismaiden ja Kanadan pääministerien kokoukseen Oslossa. Kokouksen asialistalla olivat Ukrainan tuen jatkaminen, arktisen alueen turvallisuus ja Euroopan puolustuskysymykset. Tilaisuus herätti suurta huomiota, sillä se järjestettiin aikana, jolloin Euroopan turvallisuustilanne on poikkeuksellisen jännitteinen Venäjän hyökkäyssodan vuoksi.
 

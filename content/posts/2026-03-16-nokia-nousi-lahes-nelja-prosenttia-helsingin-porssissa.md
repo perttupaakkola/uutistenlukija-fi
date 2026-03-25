@@ -19,6 +19,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: "Nokia nousi lähes neljä prosenttia Helsingin pörssissä, positiivisen tunnelman myötä sijoittajien tulkittua Hormuzinsalmen tilanteen helpottuvan."
 ---
 Helsingin pörssi päätyi maanantaina nousuun. Päivän suurimpia nousijoita oli Nokia, jonka osake vahvistui lähes neljä prosenttia. Tämä nousu on merkittävä, sillä se tapahtui samalla, kun markkinoilla vallitsi yleinen epävarmuus, erityisesti Lähi-idän jännitteiden vuoksi.
 

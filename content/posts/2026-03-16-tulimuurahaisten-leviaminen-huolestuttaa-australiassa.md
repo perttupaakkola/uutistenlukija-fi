@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Tulimuurahaisten leviäminen huolestuttaa Australiassa, kun pesä löydettiin Brisbanen New Farm -puistosta. Torjuntatoimet ovat käynnistyneet."
 ---
 Tulimuurahaisten leviäminen huolestuttaa Australiassa
 

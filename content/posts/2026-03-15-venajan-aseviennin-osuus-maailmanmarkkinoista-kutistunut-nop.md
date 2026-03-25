@@ -15,6 +15,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Venäjän osuus raskaista aseista maailmanmarkkinoilla kutistuu nopeasti useiden vakavien ongelmien seurauksena, mikä romuttaa maan aiemman vahvan aseman."
 ---
 Venäjän osuus raskaiden aseiden maailmanmarkkinoista on pienentynyt merkittävästi lyhyessä ajassa. Maan kansainvälistä asekauppaa rasittavat useat vakavat ongelmat yhtä aikaa, ja aiemmin hallitseva asema on murentunut.
 

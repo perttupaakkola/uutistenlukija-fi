@@ -15,6 +15,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Viking Gloryn matkustajat odottavat laivassa yön yli, kun Viking Grace aiheuttaa yllättäviä häiriöitä aikatauluihin Maarianhaminassa."
 ---
 Turusta lauantaina päiväristeilylle lähteneet matkustajat saivat yllätyksen, kun matka venyikin yön yli kestäväksi seikkailuksi. Viking Glory joutui pysähtymään yllättäen ennen Maarianhaminaa, kun saman varustamon Viking Grace oli jumiutunut Tukholman edustalle ja aiheuttanut häiriöitä aikatauluihin. Tämä yllättävä tilanne herätti laajaa keskustelua matkustajien keskuudessa, ja se nosti esiin kysymyksiä varustamon aikataulujen luotettavuudesta ja matkustuskäytännöistä.
 

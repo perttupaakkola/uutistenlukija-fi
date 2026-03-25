@@ -15,6 +15,7 @@ keywords:
   - "talousuutiset"
   - "talous uutiset"
   - "suomen talous uutiset"
+description: "Pörssisähkön hinta pysyy alhaalla ensi viikon alussa, jolloin kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta."
 ---
 Sähkön pörssihinta jatkaa matalalla tasolla ensi viikon alussa. Maanantaina kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta, mikä on selvästi tavanomaista halvempaa kevään ajankohtaan nähden. Tämä tilanne tuo helpotusta monille kuluttajille, jotka ovat kärsineet korkeista sähkönhinnoista viime kuukausina.
 

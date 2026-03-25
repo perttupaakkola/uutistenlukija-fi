@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Presidentti Alexander Stubb aloittaa työvierailunsa Lontoossa 16.–17. maaliskuuta, käsitellen ajankohtaisia kansainvälisiä aiheita."
 ---
 Tasavallan presidentti Alexander Stubb matkustaa maanantaina työvierailulle Lontooseen. Vierailu kestää kaksi päivää, 16.–17. maaliskuuta. Lontoo on tärkeä kansainvälinen keskus, ja vierailunsa aikana Stubb käsittelee ajankohtaisia aiheita, jotka ovat keskiössä niin Euroopan kuin globaalisti. 
 

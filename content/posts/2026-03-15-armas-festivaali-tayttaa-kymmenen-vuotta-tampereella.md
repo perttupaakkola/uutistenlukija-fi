@@ -15,6 +15,7 @@ keywords:
   - "viihde uutiset"
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
+description: "Tampereen Armas-festivaali juhlii kymmenvuotista taivaltaan 17.–31. maaliskuuta Aki Kaurismäen suojeluksessa, tuoden kulttuurin lähelle kaikkia."
 ---
 Tampereen Armas-festivaali juhlii tänä vuonna merkittävää merkkipaalua: kymmenvuotista taivaltaan. Valtakunnallinen kulttuurifestivaali järjestetään 17.–31. maaliskuuta, ja sen suojelijana toimii arvostettu elokuvaohjaaja Aki Kaurismäki, jonka tunnettuus ja taiteellinen panos ovat olleet tärkeä osa suomalaisen kulttuurin kenttää. Kaurismäen läsnäolo festivaalilla nostaa sen profiilia entisestään ja tuo festivaalin teemat laajemman yleisön tietoisuuteen.
 

@@ -19,6 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
+description: "Ugandan oppositiojohtaja pakenee maasta henkensä puolesta hallituksen uhkaavien toimien vuoksi ja kuvaa maan poliittista ilmapiiriä tukalaksi."
 ---
 Ugandan oppositiojohtaja pakeni maasta henkensä puolesta
 

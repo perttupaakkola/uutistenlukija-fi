@@ -19,6 +19,7 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
+description: "Jesper Piitulainen, Jukureiden kapteeni, jättää Mikkelin ja suunnistaa uusiin haasteisiin, herättäen muistoja ja tunteita faneissa."
 ---
 Jesper Piitulainen jättää Mikkelin Jukureista, ja tämä uutinen herättää monissa tunteita ja muistoja. Pienikokoisesta hyökkääjästä, joka aloitti uransa jääkiekon parissa nuoruuden keppihevosen tavoin, kasvoi ajan myötä joukkueen kapteeni ja yksi seuran tunnetuimmista nimistä. Piitulaisen matka ei kuitenkaan ollut itsestäänselvyys, vaan se oli täynnä haasteita ja käänteitä, jotka muovasivat hänestä pelaajan, jota fanit ja joukkuekaverit arvostavat suuresti.
 

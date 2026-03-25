@@ -19,6 +19,7 @@ keywords:
   - "urheilu uutiset"
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
+description: "Formula ykkösten 2026 kausi käynnistyy kaoottisesti, kun tallit kamppailevat autojensa luotettavuuden kanssa ja keskeytykset lisääntyvät."
 ---
 Formula ykkösten kausi 2026 on alkanut sekavasti. Useilla talleilla on ollut vaikeuksia saada autojaan edes maaliin, ja keskeytyksiä on nähty paljon. Tämä ei ole ainoastaan harmittanut tallien faneja, vaan myös herättänyt kysymyksiä sarjan kilpailullisuudesta ja tulevaisuudesta.
 

@@ -19,6 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
+description: "Suomalaiset rauhanturvaajat ovat joutuneet tulituksen kohteeksi Libanonissa, mikä herättää huolta kotimaassa ja kansainvälisesti."
 ---
 Suomalaiset rauhanturvaajat joutuivat tulituksen kohteeksi Libanonissa
 
