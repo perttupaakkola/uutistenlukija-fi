@@ -124,6 +124,7 @@ RSS_FEEDS = [
         "url": "https://feeds.kauppalehti.fi/rss/main",
         "language": "fi",
         "category_hint": "Talous",
+        # was disabled (403), re-enabled 2026-03-26 after confirming 200 + valid XML
     },
     {
         "name": "TechCrunch",
@@ -182,9 +183,21 @@ RSS_FEEDS = [
     },
     {
         "name": "Tekniikka & Talous",
-        "url": "https://www.tekniikkatalous.fi/feed",
+        "url": "https://www.tekniikkatalous.fi/api/feed/v2/rss/tt",
         "language": "fi",
         "category_hint": "Teknologia",
+    },
+    {
+        "name": "MTV Uutiset",
+        "url": "https://www.mtvuutiset.fi/api/feed/rss/uutiset_uusimmat",
+        "language": "fi",
+        "category_hint": "Kotimaa",
+    },
+    {
+        "name": "Maaseudun Tulevaisuus",
+        "url": "https://www.maaseuduntulevaisuus.fi/feeds/maaseuduntulevaisuus",
+        "language": "fi",
+        "category_hint": "Kotimaa",
     },
     {
         "name": "Science News",
