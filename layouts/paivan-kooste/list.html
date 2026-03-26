@@ -44,7 +44,6 @@
 
         <div class="kooste-digest-card__body">
           <h2 class="kooste-digest-card__title">
-            {{/* Use explicit title if set, otherwise generate from date */}}
             {{ if .Title }}{{ .Title }}{{ else }}Päivän kooste — {{ .Date | time.Format "2.1.2006" }}{{ end }}
           </h2>
 
@@ -52,7 +51,6 @@
           <p class="kooste-digest-card__desc">{{ . | truncate 120 }}</p>
           {{ end }}
 
-          {{/* Section pills — show which categories appear in this digest */}}
           {{ with .Params.sections }}
           <div class="kooste-digest-card__pills" aria-label="Osiot">
             {{ range . }}
@@ -68,8 +66,7 @@
     {{ end }}
   </ol>
 
-  {{/* Pagination if many digests accumulate */}}
-  {{/* Pagination — disabled until digest volume warrants it */}}
+  {{ template "_internal/pagination.html" . }}
 
   {{ end }}
 
@@ -81,8 +78,6 @@
   margin: 0 auto;
   padding: 0 1rem 3rem;
 }
-
-/* Header */
 .kooste-archive__header {
   padding: 2rem 0 1.5rem;
   border-bottom: 2px solid var(--border, #e5e7eb);
@@ -104,8 +99,6 @@
   text-align: center;
   padding: 3rem 0;
 }
-
-/* List */
 .kooste-archive__list {
   list-style: none;
   margin: 0;
@@ -114,8 +107,6 @@
   flex-direction: column;
   gap: .5rem;
 }
-
-/* Month divider */
 .kooste-archive__month-divider {
   font-size: .78rem;
   font-weight: 600;
@@ -127,8 +118,6 @@
   background: none;
   pointer-events: none;
 }
-
-/* Digest card */
 .kooste-digest-card {
   border: 1px solid var(--border, #e5e7eb);
   border-radius: 8px;
@@ -139,92 +128,18 @@
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
   border-color: var(--color-accent, #2563eb);
 }
-.kooste-digest-card__link {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: .875rem 1rem;
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Date badge */
-.kooste-digest-card__date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.75rem;
-  background: var(--color-accent-soft, #eff6ff);
-  border-radius: 6px;
-  padding: .4rem .5rem;
-  flex-shrink: 0;
-  line-height: 1.1;
-}
-.kooste-digest-card__day {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-accent, #2563eb);
-}
-.kooste-digest-card__mon {
-  font-size: .75rem;
-  color: var(--color-muted, #6b7280);
-}
-
-/* Body */
-.kooste-digest-card__body {
-  flex: 1;
-  min-width: 0;
-}
-.kooste-digest-card__title {
-  font-size: .975rem;
-  font-weight: 600;
-  margin: 0 0 .25rem;
-  line-height: 1.3;
-  color: var(--color-text, #111827);
-}
-.kooste-digest-card:hover .kooste-digest-card__title {
-  color: var(--color-accent, #2563eb);
-}
-.kooste-digest-card__desc {
-  font-size: .85rem;
-  color: var(--color-muted, #6b7280);
-  margin: 0 0 .4rem;
-  line-height: 1.4;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Section pills */
-.kooste-digest-card__pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .3rem;
-}
-.kooste-digest-pill {
-  font-size: .72rem;
-  padding: .15rem .5rem;
-  border-radius: 999px;
-  background: var(--color-accent-soft, #eff6ff);
-  color: var(--color-accent, #2563eb);
-  border: 1px solid var(--color-accent-border, #bfdbfe);
-  white-space: nowrap;
-}
-
-/* Arrow */
-.kooste-digest-card__arrow {
-  font-size: 1rem;
-  color: var(--color-muted, #d1d5db);
-  flex-shrink: 0;
-  transition: color .15s, transform .15s;
-}
-.kooste-digest-card:hover .kooste-digest-card__arrow {
-  color: var(--color-accent, #2563eb);
-  transform: translateX(3px);
-}
-
-/* Mobile */
+.kooste-digest-card__link { display: flex; align-items: center; gap: 1rem; padding: .875rem 1rem; text-decoration: none; color: inherit; }
+.kooste-digest-card__date { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 2.75rem; background: var(--color-accent-soft, #eff6ff); border-radius: 6px; padding: .4rem .5rem; flex-shrink: 0; line-height: 1.1; }
+.kooste-digest-card__day { font-size: 1.2rem; font-weight: 700; color: var(--color-accent, #2563eb); }
+.kooste-digest-card__mon { font-size: .75rem; color: var(--color-muted, #6b7280); }
+.kooste-digest-card__body { flex: 1; min-width: 0; }
+.kooste-digest-card__title { font-size: .975rem; font-weight: 600; margin: 0 0 .25rem; line-height: 1.3; color: var(--color-text, #111827); }
+.kooste-digest-card:hover .kooste-digest-card__title { color: var(--color-accent, #2563eb); }
+.kooste-digest-card__desc { font-size: .85rem; color: var(--color-muted, #6b7280); margin: 0 0 .4rem; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kooste-digest-card__pills { display: flex; flex-wrap: wrap; gap: .3rem; }
+.kooste-digest-pill { font-size: .72rem; padding: .15rem .5rem; border-radius: 999px; background: var(--color-accent-soft, #eff6ff); color: var(--color-accent, #2563eb); border: 1px solid var(--color-accent-border, #bfdbfe); white-space: nowrap; }
+.kooste-digest-card__arrow { font-size: 1rem; color: var(--color-muted, #d1d5db); flex-shrink: 0; transition: color .15s, transform .15s; }
+.kooste-digest-card:hover .kooste-digest-card__arrow { color: var(--color-accent, #2563eb); transform: translateX(3px); }
 @media (max-width: 480px) {
   .kooste-digest-card__link { padding: .75rem; gap: .75rem; }
   .kooste-digest-card__desc { display: none; }
