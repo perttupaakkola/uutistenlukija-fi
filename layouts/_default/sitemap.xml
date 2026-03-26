@@ -6,27 +6,32 @@
     Homepage              1.0
     Category sections     0.8 (Kind=section, Section=categories or top sections)
     Articles              0.6 (Kind=page, Section=posts)
-    Tag term pages        0.4 (Kind=term, taxonomy=tags)
-    Category term pages   0.5 (Kind=term, taxonomy=categories)
-    Taxonomy listings     0.4 (Kind=taxonomy)
+    Category term pages   0.8 (Kind=term, taxonomy=categories)
+    Taxonomy listings     0.5 (Kind=taxonomy)
     Other pages           0.3
 
   Changefreq scheme:
     Homepage              hourly
     Category sections     daily
     Articles              weekly
-    Tag/taxonomy pages    weekly
+    Category/taxonomy     daily/weekly
     Other pages           monthly
 
   Excluded:
     - Pages with noindex: true in front matter
     - /pipeline-dashboard/ (internal tool)
     - /haku/ (search — JS-only, no crawlable content)
-    - /tags/ listing (low-value taxonomy root)
+    - /tags/ archives (blocked in robots.txt)
 */ -}}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  {{- range .Data.Pages }}
+  {{- $allPages := slice .Site.Home -}}
+  {{- range .Site.AllPages -}}
+    {{- if ne .Permalink $.Site.Home.Permalink -}}
+      {{- $allPages = $allPages | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $allPages }}
 
   {{- /* ── Exclusions ────────────────────────────────────────────── */}}
   {{- $permalink := .Permalink }}
@@ -35,6 +40,7 @@
   {{- if hasSuffix $permalink "/pipeline-dashboard/" }}{{- $skip = true }}{{- end }}
   {{- if strings.Contains $permalink "/pipeline-dashboard/" }}{{- $skip = true }}{{- end }}
   {{- if hasSuffix $permalink "/haku/" }}{{- $skip = true }}{{- end }}
+  {{- if strings.Contains $permalink "/tags/" }}{{- $skip = true }}{{- end }}
   {{- if eq $permalink "" }}{{- $skip = true }}{{- end }}
 
   {{- if not $skip }}
@@ -79,25 +85,14 @@
     {{- end }}
 
   {{- else if eq .Kind "term" }}
-    {{- $taxName := .Data.Singular | default "" }}
-    {{- if eq $taxName "tag" }}
-      {{- $priority   = "0.4" }}
-      {{- $changefreq = "weekly" }}
-    {{- else }}
-      {{- /* Category term pages */}}
-      {{- $priority   = "0.8" }}
-      {{- $changefreq = "daily" }}
-    {{- end }}
+    {{- /* Category term pages */}}
+    {{- $priority   = "0.8" }}
+    {{- $changefreq = "daily" }}
 
   {{- else if eq .Kind "taxonomy" }}
-    {{- /* /tags/ listing, /categories/ listing */}}
-    {{- $taxName := .Data.Plural | default "" }}
-    {{- if eq $taxName "tags" }}
-      {{- $skip = true }}{{- /* Skip /tags/ root — low value */}}
-    {{- else }}
-      {{- $priority   = "0.5" }}
-      {{- $changefreq = "weekly" }}
-    {{- end }}
+    {{- /* /categories/ listing */}}
+    {{- $priority   = "0.5" }}
+    {{- $changefreq = "weekly" }}
 
   {{- end }}
 
