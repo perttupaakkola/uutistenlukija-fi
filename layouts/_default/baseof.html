@@ -4,8 +4,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="ai-generated" content="true">
-  {{/* Title tag: pass full headline unless a page-specific SEO title override is set. */}}
-  <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
+  {{/* Title tag: page-type specific titles with pagination disambiguation. */}}
+  {{- $siteName := .Site.Params.shortTitle | default "Uutistenlukija" -}}
+  {{- $coreTitle := "" -}}
+  {{- $fullTitle := "" -}}
+  {{- $pageSuffix := "" -}}
+  {{- if or .IsHome .IsSection (eq .Kind "taxonomy") (eq .Kind "term") -}}
+    {{- with .Paginator -}}
+      {{- if gt .PageNumber 1 -}}
+        {{- $pageSuffix = printf " – sivu %d" .PageNumber -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if .Params.seo_title -}}
+    {{- $fullTitle = printf "%s%s" (.Params.seo_title | plainify) $pageSuffix -}}
+  {{- else if .IsHome -}}
+    {{- $fullTitle = printf "%s%s" .Site.Title $pageSuffix -}}
+  {{- else if eq .RelPermalink "/haku/" -}}
+    {{- $coreTitle = "Hae uutisia" -}}
+  {{- else if eq .RelPermalink "/404.html" -}}
+    {{- $coreTitle = "Sivua ei löytynyt" -}}
+  {{- else if .IsPage -}}
+    {{- $coreTitle = .Title | plainify | truncate 43 -}}
+  {{- else if eq .Kind "term" -}}
+    {{- if eq .Data.Plural "categories" -}}
+      {{- $coreTitle = .Data.Term | humanize | title -}}
+    {{- else -}}
+      {{- $coreTitle = .Title | plainify -}}
+    {{- end -}}
+  {{- else if eq .Kind "taxonomy" -}}
+    {{- if eq .Data.Plural "categories" -}}
+      {{- $coreTitle = "Kategoriat" -}}
+    {{- else if eq .Data.Plural "tags" -}}
+      {{- $coreTitle = "Aiheet" -}}
+    {{- else -}}
+      {{- $coreTitle = .Title | plainify -}}
+    {{- end -}}
+  {{- else if and .IsSection (eq .Section "posts") -}}
+    {{- $coreTitle = "Uutiset" -}}
+  {{- else -}}
+    {{- $coreTitle = .Title | plainify -}}
+  {{- end -}}
+  {{- if not $fullTitle -}}
+    {{- $coreTitle = printf "%s%s" $coreTitle $pageSuffix -}}
+    {{- $fullTitle = printf "%s | %s" $coreTitle $siteName -}}
+  {{- end -}}
+  <title>{{ $fullTitle }}</title>
   {{ $metaDesc := .Site.Params.description }}
   {{ if .IsHome }}
     {{ $metaDesc = .Site.Params.description }}
@@ -224,17 +268,6 @@
     btn.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: reducedMotion ? 'instant' : 'smooth' });
     });
-  })();
-
-  // Reading progress bar.
-  (function() {
-    var bar = document.querySelector('.reading-progress');
-    if (!bar) return;
-    window.addEventListener('scroll', function() {
-      var scrollTop = window.scrollY;
-      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      bar.style.width = (docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) : 0) + '%';
-    }, { passive: true });
   })();
 
   // Dark mode toggle.
