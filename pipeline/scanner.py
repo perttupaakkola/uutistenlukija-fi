@@ -277,6 +277,21 @@ SCANNER_TIMEOUT = 180
 # RSS feeds return 304 unreliably, causing fetched=0 stalls.
 # Dedup layer handles duplicate articles instead.
 
+# Domains blocked from appearing as article sources.
+# These are content aggregators, low-quality curators, or spam domains
+# that should never be published even if fetched via Firehose.
+BLOCKED_SOURCE_DOMAINS: set = {
+    "scoop.it",       # content aggregator — not a news source
+    "7sun.fi",        # low-quality PR/aggregator
+    "ecoonline.com",  # low-quality content farm
+    "bandilanews.com",  # low-quality aggregator
+    "listafriikki.com",  # low-quality list content
+    "listamaailma.fi",   # low-quality list content
+    "menejatieda.fi",    # low-quality content
+    "uutiskaista.com",   # PR wire aggregator
+    "voice.fi",          # entertainment only — not news
+}
+
 # Per-domain last-fetch timestamps (in-process only)
 _domain_last_fetch: Dict[str, float] = {}
 
@@ -712,6 +727,16 @@ def scan_all_feeds() -> List[Dict]:
 
     trending_count = sum(1 for a in unique if a.get("trending"))
     print(f"[scanner] Trending stories: {trending_count}")
+
+    # Filter out blocked source domains (aggregators, PR sites, low-quality)
+    pre_block = len(unique)
+    unique = [
+        a for a in unique
+        if a.get("source_domain", "").lower() not in BLOCKED_SOURCE_DOMAINS
+    ]
+    blocked_count = pre_block - len(unique)
+    if blocked_count:
+        print(f"[scanner] Blocked {blocked_count} articles from blocked source domains")
 
     # Sort by date (newest first)
     unique.sort(key=lambda a: a["published"], reverse=True)
