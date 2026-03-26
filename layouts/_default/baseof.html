@@ -6,7 +6,7 @@
   <meta name="ai-generated" content="true">
   {{/* Title tag: pass full headline unless a page-specific SEO title override is set. */}}
   <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+  <meta name="description" content="{{ with .Description }}{{ . | plainify | truncate 155 }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 155 }}{{ else }}{{ .Site.Params.description | plainify | truncate 155 }}{{ end }}{{ end }}">
   {{- with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end -}}
   {{/* === Resource hints === */}}
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -264,15 +264,14 @@
       '.highlights-row',
       '.category-articles',
       '.category-section .category-articles',
-      '.related-articles-grid',
-      '.trending-articles',
+      '.related-articles-grid'
     ];
 
     function initGrid(grid) {
       // Get all focusable card links — first <a> in each card
       function getCards() {
         return Array.prototype.slice.call(
-          grid.querySelectorAll('article a:first-of-type, .article-card a:first-of-type, .trending-card a:first-of-type, .related-article-card a:first-of-type')
+          grid.querySelectorAll('article a:first-of-type, .article-card a:first-of-type, .related-article-card a:first-of-type')
         );
       }
 

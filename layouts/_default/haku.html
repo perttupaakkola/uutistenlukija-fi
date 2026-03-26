@@ -267,7 +267,7 @@ mark {
         : '';
 
       var thumbHtml = a.image
-        ? '<img class="result-thumb" src="' + esc(a.image) + '" alt="" loading="lazy" width="80" height="60">'
+        ? '<img class="result-thumb" src="' + esc(a.image) + '" alt="" loading="lazy" decoding="async" width="80" height="60">'
         : '';
 
       return '<div class="search-result" role="listitem">' +

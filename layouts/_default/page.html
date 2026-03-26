@@ -29,7 +29,7 @@
   {{ with .Params.author }}
   <div class="author-box">
     {{ with $.Params.author_image }}
-    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo">
+    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="80" height="80">
     {{ end }}
     <div class="author-info">
       <span class="author-name">{{ $.Params.author }}</span>

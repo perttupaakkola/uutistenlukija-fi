@@ -1,0 +1,95 @@
+# Source Allowlist Appendix — New Feeds for Pipeline
+# Deliverable #50 | Monica | 2026-03-26
+# Merge into pipeline source config. 7 enabled, 8 on hold.
+# Risk rules: headline-only = title + link only; short-preview = max 120 chars + link
+
+sources_appendix:
+  - slug: hameensanomat
+    feed_url: https://www.hameensanomat.fi/feed/rss/
+    category_map: [kotimaa]
+    risk_rule: headline-only
+    status: enable
+
+  - slug: keskisuomalainen
+    feed_url: https://www.ksml.fi/feed/rss/
+    category_map: [kotimaa, urheilu]
+    risk_rule: headline-only
+    status: enable
+
+  - slug: karjalainen
+    feed_url: https://www.karjalainen.fi/feed/rss/
+    category_map: [kotimaa]
+    risk_rule: headline-only
+    status: enable
+
+  - slug: ess
+    feed_url: https://www.ess.fi/feed/rss/
+    category_map: [kotimaa, urheilu]
+    risk_rule: headline-only
+    status: enable
+
+  - slug: maaseudun-tulevaisuus
+    feed_url: https://www.maaseuduntulevaisuus.fi/feeds/maaseuduntulevaisuus
+    category_map: [talous, kotimaa]
+    risk_rule: short-preview
+    status: enable
+
+  - slug: io-tech
+    feed_url: https://www.io-tech.fi/feed/
+    category_map: [teknologia-tiede]
+    risk_rule: short-preview
+    status: enable
+
+  - slug: kansan-uutiset
+    feed_url: https://www.ku.fi/feed/
+    category_map: [politiikka, kotimaa]
+    risk_rule: short-preview
+    status: enable
+
+  - slug: demokraatti
+    feed_url: https://demokraatti.fi/feed/
+    category_map: [politiikka, kotimaa]
+    risk_rule: short-preview
+    status: hold
+
+  - slug: suomenmaa
+    feed_url: https://www.suomenmaa.fi/feed/
+    category_map: [politiikka, kotimaa, talous]
+    risk_rule: short-preview
+    status: hold
+
+  - slug: uutisvuoksi
+    feed_url: https://www.uutisvuoksi.fi/feed/rss/
+    category_map: [kotimaa]
+    risk_rule: headline-only
+    status: hold
+
+  - slug: hbl
+    feed_url: https://www.hbl.fi/rss
+    category_map: [kotimaa, urheilu, ulkomaat]
+    risk_rule: headline-only
+    status: hold
+
+  - slug: finland-today
+    feed_url: https://finlandtoday.fi/feed/
+    category_map: [kotimaa, ulkomaat]
+    risk_rule: short-preview
+    status: hold
+
+  - slug: helsinki-times
+    feed_url: https://www.helsinkitimes.fi/?format=feed&type=rss
+    category_map: [kotimaa, ulkomaat]
+    risk_rule: short-preview
+    status: hold
+
+  - slug: stara
+    feed_url: https://www.stara.fi/feed/
+    category_map: [kulttuuri-viihde]
+    risk_rule: short-preview
+    status: hold
+
+  - slug: arcticstartup
+    feed_url: https://arcticstartup.com/feed/
+    category_map: [talous, teknologia-tiede]
+    risk_rule: short-preview
+    status: hold
