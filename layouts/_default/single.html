@@ -27,7 +27,7 @@
     {{- end }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
     {{- if ge .WordCount 200 }}
-    {{- $readingMinutes := math.Div (math.Add .WordCount 199) 200 -}}
+    {{- $readingMinutes := div (add .WordCount 199) 200 -}}
     · <span class="article-reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ $readingMinutes }} min lukuaika</span>
     {{- end }}
   </div>

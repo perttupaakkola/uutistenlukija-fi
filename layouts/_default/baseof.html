@@ -38,9 +38,18 @@
   {{/* Hugo --minify strips onload attrs, so we use media="print" instead:   */}}
   {{/* browser fetches without blocking render; JS in <head> swaps to "all". */}}
   <link id="main-stylesheet" rel="stylesheet" href="/css/style.css" media="print">
-  <link id="homepage-polish" rel="stylesheet" href="/css/homepage-polish.css" media="print">
-  <noscript><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/homepage-polish.css"></noscript>
-  <script>document.getElementById('main-stylesheet').media='all';document.getElementById('homepage-polish').media='all'</script>
+  {{ if .IsHome }}<link id="homepage-polish" rel="stylesheet" href="/css/homepage-polish.css" media="print">{{ end }}
+  {{ if and .IsPage (ne .RelPermalink "/haku/") }}<link id="article-stylesheet" rel="stylesheet" href="/css/article.css" media="print">{{ end }}
+  {{ if or .IsSection (eq .Kind "term") (eq .Kind "taxonomy") }}<link id="category-stylesheet" rel="stylesheet" href="/css/category.css" media="print">{{ end }}
+  {{ if eq .RelPermalink "/haku/" }}<link id="search-stylesheet" rel="stylesheet" href="/css/search.css" media="print">{{ end }}
+  <noscript>
+    <link rel="stylesheet" href="/css/style.css">
+    {{ if .IsHome }}<link rel="stylesheet" href="/css/homepage-polish.css">{{ end }}
+    {{ if and .IsPage (ne .RelPermalink "/haku/") }}<link rel="stylesheet" href="/css/article.css">{{ end }}
+    {{ if or .IsSection (eq .Kind "term") (eq .Kind "taxonomy") }}<link rel="stylesheet" href="/css/category.css">{{ end }}
+    {{ if eq .RelPermalink "/haku/" }}<link rel="stylesheet" href="/css/search.css">{{ end }}
+  </noscript>
+  <script>['main-stylesheet','homepage-polish','article-stylesheet','category-stylesheet','search-stylesheet'].forEach(function(id){var el=document.getElementById(id);if(el)el.media='all';});</script>
   {{ block "extra_head" . }}{{ end }}
 
   {{/* === Hero image preload hint (article pages only) === */}}
