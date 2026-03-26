@@ -1,0 +1,12 @@
+{{- with .Params.key_points -}}
+  {{- if gt (len .) 0 -}}
+  <section class="article-key-points" aria-labelledby="article-key-points-title">
+    <h2 id="article-key-points-title">Tärkeimmät kohdat</h2>
+    <ul>
+      {{- range first 3 . }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end -}}
+{{- end -}}
