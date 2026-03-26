@@ -1,21 +1,22 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-26T12:04:11+00:00",
+  "generated_at": "2026-03-26T12:14:00+00:00",
   "runs": {
-    "total": 14,
+    "total": 15,
     "ok": 0,
     "skip": 0,
-    "error": 14
+    "error": 15
   },
   "articles": {
-    "attempted": 380,
+    "attempted": 405,
     "published": 0,
-    "rejected": 1,
+    "rejected": 2,
     "publish_rate": 0.0,
     "last_published_ts": null
   },
   "reject_reasons": {
-    "keyword_stuffing": 1
+    "keyword_stuffing": 1,
+    "too_short": 1
   },
   "feeds": {
     "total": 22,
@@ -29,12 +30,12 @@
   },
   "trending": [
     [
-      "jotka",
-      34
+      "sillä",
+      35
     ],
     [
-      "sillä",
-      33
+      "jotka",
+      34
     ],
     [
       "kuten",
@@ -46,7 +47,7 @@
     ],
     [
       "tärkeää",
-      20
+      21
     ]
   ]
 }
