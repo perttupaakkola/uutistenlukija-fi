@@ -3,6 +3,9 @@
 <article class="single-article">
   {{ partial "breadcrumbs.html" . }}
   {{ partial "hero-image.html" . }}
+  {{ with .Params.content_type }}
+  <span class="article-badge article-badge--{{ . | urlize }}">{{ . }}</span>
+  {{ end }}
   {{ with .Params.categories }}
   <span class="category-label">
     <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
