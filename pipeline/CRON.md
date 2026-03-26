@@ -12,6 +12,7 @@ All times UTC. Copy-paste the full block below into `crontab -e` on the deploy h
 | `30 7,11,17,20 * * *` | X auto-poster | Post recent articles to @Uutistenlukija_ | X/Twitter |
 | `0 6 * * *` | metrics report | 7-day pipeline stats | #metrics |
 | `0 9 * * *` | Lighthouse | Score tracking + delta | #metrics |
+| `*/30 * * * *` | pipeline health check | Alert if no publish in >3h + script perms | `logs/health-check.log` |
 | `0 17 * * *` | daily briefing | Build `Päivän kooste` newsletter HTML preview | `static/newsletter/` |
 | `0 7 * * 1` | content quality | Weekly article validation | #operations |
 | `0 7 * * 0` | dead links | Weekly crawl for broken links | #metrics |
@@ -24,7 +25,7 @@ All times UTC. Copy-paste the full block below into `crontab -e` on the deploy h
 # ══════════════════════════════════════════════════════════════════════════════
 # uutistenlukija.fi pipeline — full cron schedule
 # Deploy host: /home/pertt/.openclaw/workspace/projects/uutistenlukija
-# Last updated: 2026-03-21
+# Last updated: 2026-03-26
 # ══════════════════════════════════════════════════════════════════════════════
 
 PROJECT=/home/pertt/.openclaw/workspace/projects/uutistenlukija
@@ -34,6 +35,9 @@ WORKSPACE=/home/pertt/.openclaw/workspace
 
 # ── Main pipeline (every 15 min, via watchdog for auto-retry + alerting) ─────
 */15 * * * * $PROJECT/scripts/pipeline-watchdog.sh >> $LOGS/watchdog.log 2>&1
+
+# ── Pipeline health check (every 30 min — alert if no publish in >3h) ────────
+*/30 * * * * $PROJECT/scripts/pipeline-health-check.sh --alert-only >> $LOGS/health-check.log 2>&1
 
 # ── X / Twitter token refresh (every 85 min — token TTL is 2h) ───────────────
 */85 * * * * $WORKSPACE/scripts/refresh-x-token.sh >> $WORKSPACE/logs/x-token-refresh.log 2>&1
