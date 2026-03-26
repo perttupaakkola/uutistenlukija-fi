@@ -99,7 +99,7 @@ echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 #   1. No layout/theme/script changes leak into auto-publish commits
 #   2. .sh files retain their execute bits (git checkout restores committed mode)
 git reset HEAD -- . 2>/dev/null || true
-git checkout HEAD -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline/firehose_cron.sh 2>/dev/null || true
+git checkout HEAD -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline/firehose_cron.sh pipeline/scanner.py 2>/dev/null || true
 git add content/ public/ static/api/ static/metrics/ pipeline/metrics.jsonl pipeline/.pipeline_lock 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "No new content to push." | tee -a "$LOG_FILE"
