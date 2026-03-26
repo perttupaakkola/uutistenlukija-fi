@@ -1,0 +1,159 @@
+{{ define "extra_head" }}
+{{ $siteUrl := strings.TrimSuffix "/" .Site.BaseURL }}
+{{ $org := dict
+  "@type" "Organization"
+  "name" "Uutistenlukija"
+  "url" .Site.BaseURL
+}}
+{{ $webPage := dict
+  "@context" "https://schema.org"
+  "@type" "WebPage"
+  "name" (.Params.seo_title | default .Title)
+  "url" .Permalink
+  "description" .Description
+  "inLanguage" "fi"
+  "isPartOf" (dict
+    "@type" "WebSite"
+    "name" .Site.Title
+    "url" .Site.BaseURL
+  )
+  "about" $org
+}}
+<script type="application/ld+json">
+{{ $webPage | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{ $faq := dict
+  "@context" "https://schema.org"
+  "@type" "FAQPage"
+  "mainEntity" (slice
+    (dict
+      "@type" "Question"
+      "name" "Onko uutiskirje ilmainen?"
+      "acceptedAnswer" (dict "@type" "Answer" "text" "Kyllä. Uutistenlukijan uutiskirje on täysin ilmainen.")
+    )
+    (dict
+      "@type" "Question"
+      "name" "Kuinka usein uutiskirje lähetetään?"
+      "acceptedAnswer" (dict "@type" "Answer" "text" "Uutiskirje lähetetään kerran päivässä.")
+    )
+    (dict
+      "@type" "Question"
+      "name" "Voinko peruuttaa tilauksen?"
+      "acceptedAnswer" (dict "@type" "Answer" "text" "Kyllä. Voit peruuttaa tilauksen milloin tahansa uutiskirjeen lopussa olevasta linkistä.")
+    )
+    (dict
+      "@type" "Question"
+      "name" "Millaisia uutisia uutiskirje sisältää?"
+      "acceptedAnswer" (dict "@type" "Answer" "text" "Uutiskirje sisältää päivän tärkeimmät kotimaan, ulkomaan, talouden ja teknologian uutiset tiiviissä muodossa.")
+    )
+  )
+}}
+<script type="application/ld+json">
+{{ $faq | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{ end }}
+
+{{ define "main" }}
+{{ $action := default "/uutiskirje/" .Site.Params.newsletter_api_url }}
+<div id="newsletter-default-state">
+  <article class="single-article">
+    <h1>{{ .Title }}</h1>
+    <div class="content">
+      <p>Uutistenlukijan uutiskirje kokoaa päivän tärkeimmät uutiset suomeksi yhteen tiiviiseen sähköpostiin. Saat olennaiset aiheet nopeasti ilman, että sinun tarvitsee selata useita eri uutissivustoja.</p>
+    </div>
+
+    <section class="newsletter-band" aria-labelledby="newsletter-landing-heading">
+      <div class="newsletter-band__inner">
+        <div class="newsletter-band__text">
+          <h2 id="newsletter-landing-heading" class="newsletter-band__heading">Päivän tärkeimmät uutiset sähköpostiisi kerran päivässä.</h2>
+        </div>
+        <form class="newsletter-band__form"
+              action="{{ $action }}"
+              method="post"
+              data-event="newsletter"
+              data-location="newsletter-landing">
+          <input type="hidden" name="source" value="newsletter-landing">
+          <input type="hidden" name="redirect" value="1">
+          <label for="newsletter-landing-email" class="visually-hidden">Sähköpostiosoite</label>
+          <input id="newsletter-landing-email"
+                 type="email"
+                 name="email"
+                 placeholder="sinun@email.fi"
+                 autocomplete="email"
+                 required
+                 class="newsletter-band__input">
+          <button type="submit" class="newsletter-band__btn">Tilaa ilmaiseksi</button>
+        </form>
+        <p class="newsletter-band__privacy">
+          Ei roskapostia. Ei maksumuuria. Voit peruuttaa milloin tahansa.
+          <a href="/tietosuojaseloste/">Tietosuoja</a>.
+        </p>
+      </div>
+    </section>
+
+    <div class="content">
+      <h2>Mitä uutiskirje sisältää?</h2>
+      <ul>
+        <li>Päivän tärkeimmät uutiset yhdessä koosteessa</li>
+        <li>Tiiviit yhteenvedot nopeasti luettavassa muodossa</li>
+        <li>Suomalaiset ja kansainväliset aiheet selkeästi jäsenneltyinä</li>
+        <li>Helppo tapa pysyä ajan tasalla ilman informaatiotulvaa</li>
+      </ul>
+
+      <h2>Kenelle tämä sopii?</h2>
+      <p>Kiireisille ammattilaisille, opiskelijoille ja kaikille, jotka haluavat uutiset nopeasti — suomeksi, tiiviisti ja ilman turhaa täytettä.</p>
+
+      <h2>Miksi tilata Uutistenlukijalta?</h2>
+      <p>Uutistenlukija kokoaa tärkeimmät uutiset helposti luettavaan muotoon. Uutiskirje tekee saman sähköpostissa: tärkeimmät aiheet, nopea luettava rakenne ja selkeä kokonaiskuva päivän tapahtumista.</p>
+
+      <h2>Usein kysyttyä</h2>
+      <h3>Onko uutiskirje ilmainen?</h3>
+      <p>Kyllä. Uutistenlukijan uutiskirje on täysin ilmainen.</p>
+
+      <h3>Kuinka usein uutiskirje lähetetään?</h3>
+      <p>Uutiskirje lähetetään kerran päivässä.</p>
+
+      <h3>Voinko peruuttaa tilauksen?</h3>
+      <p>Kyllä. Voit peruuttaa tilauksen milloin tahansa uutiskirjeen lopussa olevasta linkistä.</p>
+
+      <h3>Millaisia uutisia uutiskirje sisältää?</h3>
+      <p>Uutiskirje sisältää päivän tärkeimmät kotimaan ja ulkomaan uutiset sekä olennaiset talouden ja teknologian aiheet tiiviissä muodossa.</p>
+    </div>
+  </article>
+</div>
+
+<div id="newsletter-status-state" hidden>
+  <article class="single-article">
+    <h1 id="newsletter-status-title">Kiitos tilauksesta</h1>
+    <div class="content" id="newsletter-status-content"></div>
+  </article>
+</div>
+
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var status = params.get('status');
+  if (!status) return;
+
+  var defaultState = document.getElementById('newsletter-default-state');
+  var statusState = document.getElementById('newsletter-status-state');
+  var title = document.getElementById('newsletter-status-title');
+  var content = document.getElementById('newsletter-status-content');
+  if (!defaultState || !statusState || !title || !content) return;
+
+  defaultState.hidden = true;
+  statusState.hidden = false;
+
+  if (status === 'ok') {
+    title.textContent = 'Kiitos tilauksesta';
+    content.innerHTML = '<p>Olet nyt Uutistenlukijan uutiskirjeen tilaaja.</p><ul><li>Päivän tärkeimmät uutiset kerran päivässä</li><li>Tiivis kooste ilman roskapostia</li><li>Voit peruuttaa milloin tahansa</li></ul><p><a href="/">← Takaisin etusivulle</a></p>';
+  } else if (status === 'invalid') {
+    title.textContent = 'Virheellinen sähköpostiosoite';
+    content.innerHTML = '<p>Tarkista sähköpostiosoite ja yritä uudelleen.</p><p><a href="/uutiskirje/">← Takaisin tilauslomakkeelle</a></p>';
+  } else {
+    title.textContent = 'Jokin meni pieleen';
+    content.innerHTML = '<p>Tilausta ei voitu käsitellä juuri nyt. Yritä hetken päästä uudelleen.</p><p><a href="/uutiskirje/">← Takaisin tilauslomakkeelle</a></p>';
+  }
+})();
+</script>
+{{ end }}

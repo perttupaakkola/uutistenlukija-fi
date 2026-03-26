@@ -78,15 +78,17 @@
 {{ end }}
 
 {{/* ── og:title ──────────────────────────────────────────────────── */}}
-{{ $ogTitle := "" }}
-{{ if .IsHome }}
-  {{ $ogTitle = .Site.Title }}
-{{ else if eq .Kind "section" }}
-  {{ $ogTitle = printf "%s – %s" .Title .Site.Params.shortTitle | default (printf "%s — %s" .Title .Site.Title) }}
-{{ else if eq .Kind "term" }}
-  {{ $ogTitle = printf "%s – %s" .Title (.Site.Params.shortTitle | default "Uutistenlukija") }}
-{{ else }}
-  {{ $ogTitle = printf "%s — %s" .Title (.Site.Params.shortTitle | default "Uutistenlukija") }}
+{{ $ogTitle := .Params.og_title | default .Params.seo_title | default "" }}
+{{ if not $ogTitle }}
+  {{ if .IsHome }}
+    {{ $ogTitle = .Site.Title }}
+  {{ else if eq .Kind "section" }}
+    {{ $ogTitle = printf "%s – %s" .Title .Site.Params.shortTitle | default (printf "%s — %s" .Title .Site.Title) }}
+  {{ else if eq .Kind "term" }}
+    {{ $ogTitle = printf "%s – %s" .Title (.Site.Params.shortTitle | default "Uutistenlukija") }}
+  {{ else }}
+    {{ $ogTitle = printf "%s — %s" .Title (.Site.Params.shortTitle | default "Uutistenlukija") }}
+  {{ end }}
 {{ end }}
 
 {{/* ── og:description ────────────────────────────────────────────── */}}

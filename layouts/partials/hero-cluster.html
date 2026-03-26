@@ -1,0 +1,89 @@
+{{/*
+  hero-cluster.html — Homepage block 2
+  Expects:
+    .lead      — lead page
+    .followups — slice of up to 2 follow-up pages
+*/}}
+{{- $lead := .lead -}}
+{{- $followups := .followups | default (slice) -}}
+{{- if $lead -}}
+<section class="hero-cluster" aria-labelledby="hero-cluster-title">
+  <div class="hero-cluster__lead">
+    {{ $cat := index $lead.Params.categories 0 | default "kotimaa" }}
+    {{ $img := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
+    {{ $thumb := $lead.Params.image_thumb | default $img }}
+    {{ $alt := $lead.Params.image_alt | default $lead.Title }}
+    <article class="lead-article lead-article--hero hero-cluster__lead-card">
+      <a href="{{ $lead.Permalink }}" class="hero-scrim-link" aria-label="{{ $lead.Title }}">
+        {{- $heroSrc := $thumb -}}
+        {{- $heroSrcset := "" -}}
+        {{- $avifSrcset := "" -}}
+        {{- $isUnsplash := hasPrefix $img "https://images.unsplash.com" -}}
+        {{- $isPexels := hasPrefix $img "https://images.pexels.com" -}}
+        {{- if $isUnsplash -}}
+          {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
+          {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $b $s -}}
+          {{- $heroSrcset = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=85 800w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
+          {{- $avifSrcset = printf "%s%sw=400&h=225&fit=crop&fm=avif&q=75 400w, %s%sw=800&h=450&fit=crop&fm=avif&q=80 800w, %s%sw=1200&h=675&fit=crop&fm=avif&q=80 1200w" $b $s $b $s $b $s -}}
+        {{- else if $isPexels -}}
+          {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
+          {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop" $b $s -}}
+        {{- end -}}
+        <picture>
+          {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
+          {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
+          <img
+            src="{{ $heroSrc }}"
+            alt="{{ $alt }}"
+            class="hero-scrim-img article-card-thumb"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="800" height="450"
+            onload="this.classList.add('img-loaded')"
+            onerror="this.classList.add('img-loaded')">
+        </picture>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-scrim-body">
+          <span class="category-pill hero-cluster__kicker">Pääuutinen</span>
+          <h2 id="hero-cluster-title" class="hero-scrim-title">{{ $lead.Title }}</h2>
+          {{ with $lead.Params.description }}
+          <p class="hero-scrim-excerpt">{{ . | truncate 180 }}</p>
+          {{ end }}
+          <div class="hero-scrim-meta">
+            <span>{{ partial "freshness-label.html" $lead.Date }}</span>
+            {{ with $lead.Params.source_name }}<span>{{ . }}</span>{{ end }}
+            <span>{{ partial "reading-time.html" $lead }}</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+
+  {{ if $followups }}
+  <aside class="hero-cluster__followups highlights-row--top" aria-label="Seuraa myös">
+    {{ range $followups }}
+    {{ $cat := index .Params.categories 0 | default "kotimaa" }}
+    {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
+    {{ $thumb := .Params.image_thumb | default $img }}
+    {{ $alt := .Params.image_alt | default .Title }}
+    <article class="highlight-card highlight-card--secondary hero-cluster__followup-card">
+      <span class="hero-cluster__followup-label">Seuraa myös</span>
+      {{ with .Params.categories }}
+      <span class="category-label">{{ index . 0 }}</span>
+      {{ end }}
+      {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink) }}
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ with .Params.description }}
+      <p class="highlight-card__excerpt">{{ . | truncate 120 }}</p>
+      {{ end }}
+      <div class="meta">
+        <span>{{ partial "freshness-label.html" .Date }}</span>
+        {{ with .Params.source_name }}<span>{{ . }}</span>{{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </aside>
+  {{ end }}
+</section>
+{{- end -}}

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="ai-generated" content="true">
-  {{/* Title tag: pass full headline — let Google truncate in SERPs, not us. */}}
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
+  {{/* Title tag: pass full headline unless a page-specific SEO title override is set. */}}
+  <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
   {{- with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end -}}
   {{/* === Resource hints === */}}
@@ -41,6 +41,7 @@
   <link id="homepage-polish" rel="stylesheet" href="/css/homepage-polish.css" media="print">
   <noscript><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/homepage-polish.css"></noscript>
   <script>document.getElementById('main-stylesheet').media='all';document.getElementById('homepage-polish').media='all'</script>
+  {{ block "extra_head" . }}{{ end }}
 
   {{/* === Hero image preload hint (article pages only) === */}}
   {{/* Tells the browser to start fetching the LCP image during head parsing,
@@ -80,7 +81,7 @@
   {{ partial "site-nav-schema.html" . }}
   {{ partial "pagination-head.html" . }}
 </head>
-<body>
+<body{{ if .IsHome }} class="is-home"{{ end }}>
   <script>
   // Dark mode — apply saved preference before paint to avoid flash
   (function() {
@@ -349,6 +350,5 @@
     })();
   }
   </script>
-  <script src="/js/dedup.js" defer></script>
 </body>
 </html>

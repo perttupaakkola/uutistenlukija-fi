@@ -1,0 +1,83 @@
+{{ define "extra_head" }}
+{{ $cats := slice
+  (dict "key" "Kotimaa" "slug" "kotimaa")
+  (dict "key" "Ulkomaat" "slug" "ulkomaat")
+  (dict "key" "Talous" "slug" "talous")
+  (dict "key" "Teknologia" "slug" "teknologia")
+}}
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $displayed := slice }}
+{{ range $cats }}
+  {{ $catPosts := first 4 (where $posts.ByDate.Reverse "Params.categories" "intersect" (slice .key)) }}
+  {{ range $catPosts }}{{ $displayed = $displayed | append . }}{{ end }}
+{{ end }}
+{{ $items := slice }}
+{{ range $i, $p := $displayed }}
+  {{ $items = $items | append (dict
+    "@type" "ListItem"
+    "position" (math.Add $i 1)
+    "url" $p.Permalink
+    "name" $p.Title
+  ) }}
+{{ end }}
+{{ $schema := dict
+  "@context" "https://schema.org"
+  "@type" "CollectionPage"
+  "name" (.Params.seo_title | default .Title)
+  "url" .Permalink
+  "description" .Description
+  "inLanguage" "fi"
+  "publisher" (dict "@type" "Organization" "name" "Uutistenlukija" "url" .Site.BaseURL)
+  "itemListElement" $items
+}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{ end }}
+
+{{ define "main" }}
+{{ $cats := slice
+  (dict "key" "Kotimaa" "slug" "kotimaa")
+  (dict "key" "Ulkomaat" "slug" "ulkomaat")
+  (dict "key" "Talous" "slug" "talous")
+  (dict "key" "Teknologia" "slug" "teknologia")
+}}
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+<article class="single-article">
+  <h1>{{ .Title }}</h1>
+  <div class="content">
+    <p>Uutistenlukija kokoaa päivän tärkeimmät uutiset tiiviiseen koosteeseen. Suomen ja maailman uutiset yhdessä paikassa, selkeästi ja nopeasti luettavassa muodossa.</p>
+    <p>Tältä sivulta löydät uusimmat jutut kotimaasta, ulkomailta, taloudesta ja teknologiasta. Jos haluat saman suoraan sähköpostiisi, <a href="/uutiskirje/">tilaa ilmainen uutiskirje</a>.</p>
+  </div>
+</article>
+
+{{ range $cats }}
+  {{ $catPosts := first 4 (where $posts.ByDate.Reverse "Params.categories" "intersect" (slice .key)) }}
+  {{ if $catPosts }}
+  <section aria-labelledby="digest-{{ .slug }}">
+    <div class="category-header">
+      <h2 id="digest-{{ .slug }}"><a href="/categories/{{ .slug }}/">{{ .key }}</a></h2>
+    </div>
+    <div class="articles-grid">
+      {{ range $catPosts }}
+      <article class="article-card">
+        {{ with .Params.categories }}
+        <span class="category-label">{{ index . 0 }}</span>
+        {{ end }}
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p class="excerpt">{{ .Description | default (.Summary | plainify | truncate 180) }}</p>
+        <div class="meta">
+          {{ .Date | time.Format "2.1. klo 15:04" }}
+          · <span class="author-inline">{{ .Params.author | default "Toimitus" }}</span>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+{{ end }}
+
+<article class="single-article">
+  {{ partial "newsletter-cta.html" . }}
+</article>
+{{ end }}

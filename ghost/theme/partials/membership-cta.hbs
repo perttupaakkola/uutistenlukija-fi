@@ -1,0 +1,15 @@
+<aside class="gh-membership-cta" aria-label="Jäsenyys ja uutiskirje">
+    <div class="gh-membership-cta__content">
+        <p class="gh-membership-cta__eyebrow">Uutistenlukija</p>
+        <h2 class="gh-membership-cta__title">Tilaa uutiskirje tai liity jäseneksi</h2>
+        <p class="gh-membership-cta__text">Saat päivän tärkeimmät uutiset sähköpostiisi ja pääsyn jäsenille tarkoitettuihin sisältöihin, kun ne avataan.</p>
+    </div>
+    <div class="gh-membership-cta__actions">
+        {{#if @member}}
+            <a class="gh-btn gh-primary-btn" href="#/portal/account" data-portal="account">Hallitse tilausta</a>
+        {{else}}
+            <a class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Tilaa uutiskirje</a>
+            <a class="gh-btn gh-membership-cta__secondary" href="#/portal/signup" data-portal="signup">Liity jäseneksi</a>
+        {{/if}}
+    </div>
+</aside>

@@ -1,0 +1,181 @@
+:root {
+  --ul-accent: #c0392b;
+  --ul-bg-dark: #1a1a1a;
+  --ul-text-dark: #e8e6e3;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+  background: var(--ul-bg-dark);
+  color: var(--ul-text-dark);
+}
+
+html[data-theme="dark"] .gh-site,
+html[data-theme="dark"] .gh-outer,
+html[data-theme="dark"] .gh-canvas,
+html[data-theme="dark"] .gh-foot {
+  background: var(--ul-bg-dark);
+  color: var(--ul-text-dark);
+}
+
+html[data-theme="dark"] .gh-head,
+html[data-theme="dark"] .gh-foot,
+html[data-theme="dark"] body:not(.is-head-transparent):not(.is-head-brand):not(.is-head-dark) .gh-head-inner {
+  border-color: #333;
+}
+
+html[data-theme="dark"] a,
+html[data-theme="dark"] .gh-card-title a,
+html[data-theme="dark"] .gh-topic-name,
+html[data-theme="dark"] .gh-head-menu,
+html[data-theme="dark"] .gh-copyright,
+html[data-theme="dark"] .gh-head-logo,
+html[data-theme="dark"] .gh-head-tagline {
+  color: var(--ul-text-dark);
+}
+
+html[data-theme="dark"] .gh-card-excerpt,
+html[data-theme="dark"] .gh-card-meta,
+html[data-theme="dark"] .gh-head-description,
+html[data-theme="dark"] .gh-subscribe-description {
+  color: #b5b5b5;
+}
+
+html[data-theme="dark"] .gh-btn,
+html[data-theme="dark"] .gh-head-link,
+html[data-theme="dark"] .gh-head-btn,
+html[data-theme="dark"] .gh-icon-btn {
+  border-color: #444;
+}
+
+html[data-theme="dark"] .gh-primary-btn,
+html[data-theme="dark"] .gh-btn.gh-primary-btn,
+html[data-theme="dark"] .gh-subscribe-btn {
+  background: var(--ul-accent);
+  color: #fff;
+}
+
+html[data-theme="dark"] .gh-topic-footer,
+html[data-theme="dark"] .gh-topic-grid .gh-card:not(:only-child).large {
+  border-color: #333;
+}
+
+.gh-head-branding {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.gh-head-tagline {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: var(--color-secondary-text);
+}
+
+.gh-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 999px;
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.gh-theme-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(192, 57, 43, 0.08);
+  border-color: var(--ul-accent);
+}
+
+.gh-theme-toggle:focus-visible {
+  outline: 2px solid var(--ul-accent);
+  outline-offset: 2px;
+}
+
+.gh-theme-toggle__sun {
+  display: none;
+}
+
+html[data-theme="dark"] .gh-theme-toggle__moon {
+  display: none;
+}
+
+html[data-theme="dark"] .gh-theme-toggle__sun {
+  display: inline;
+}
+
+.gh-membership-cta,
+.gh-member-gate {
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(192, 57, 43, 0.22);
+  background: linear-gradient(135deg, rgba(192, 57, 43, 0.10), rgba(192, 57, 43, 0.03));
+}
+
+.gh-membership-cta__eyebrow,
+.gh-member-gate__label {
+  margin: 0 0 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ul-accent);
+}
+
+.gh-membership-cta__title,
+.gh-member-gate__title {
+  margin: 0 0 0.5rem;
+}
+
+.gh-membership-cta__text,
+.gh-member-gate__text {
+  margin: 0;
+  color: var(--color-secondary-text);
+}
+
+.gh-membership-cta__actions,
+.gh-member-gate__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.1rem;
+}
+
+.gh-membership-cta__secondary {
+  background: transparent;
+  color: var(--ul-accent);
+  border: 1px solid rgba(192, 57, 43, 0.35);
+}
+
+html[data-theme="dark"] .gh-membership-cta,
+html[data-theme="dark"] .gh-member-gate {
+  border-color: rgba(192, 57, 43, 0.35);
+  background: linear-gradient(135deg, rgba(192, 57, 43, 0.16), rgba(192, 57, 43, 0.06));
+}
+
+html[data-theme="dark"] .gh-membership-cta__text,
+html[data-theme="dark"] .gh-member-gate__text,
+html[data-theme="dark"] .gh-membership-cta__secondary {
+  color: var(--ul-text-dark);
+}
+
+@media (max-width: 767px) {
+  .gh-head-tagline {
+    font-size: 1.05rem;
+  }
+
+  .gh-membership-cta,
+  .gh-member-gate {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+}

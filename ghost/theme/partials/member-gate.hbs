@@ -1,0 +1,24 @@
+{{#if access}}
+    {{#has visibility="paid"}}
+        <div class="gh-member-gate gh-member-gate--member">
+            <p class="gh-member-gate__label">Jäsenille</p>
+            <h2 class="gh-member-gate__title">Kiitos, että olet jäsen.</h2>
+            <p class="gh-member-gate__text">Saat täyden pääsyn tähän juttuun sekä tuleviin jäsenartikkeleihin.</p>
+        </div>
+    {{/has}}
+{{else}}
+    <aside class="gh-member-gate gh-member-gate--locked" aria-label="Jäsenille tarkoitettu sisältö">
+        <p class="gh-member-gate__label">Jäsenille</p>
+        {{#has visibility="paid"}}
+            <h2 class="gh-member-gate__title">Tämä juttu on vain jäsenille.</h2>
+            <p class="gh-member-gate__text">Liity jäseneksi, niin saat pääsyn koko juttuun ja tuleviin lisäsisältöihin.</p>
+        {{else}}
+            <h2 class="gh-member-gate__title">Kirjaudu sisään jatkaaksesi lukemista.</h2>
+            <p class="gh-member-gate__text">Tämä sisältö on jäsenille. Luo tunnus tai kirjaudu sisään jatkaaksesi.</p>
+        {{/has}}
+        <div class="gh-member-gate__actions">
+            <a class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Liity jäseneksi</a>
+            <a class="gh-btn gh-membership-cta__secondary" href="#/portal/signin" data-portal="signin">Kirjaudu sisään</a>
+        </div>
+    </aside>
+{{/if}}

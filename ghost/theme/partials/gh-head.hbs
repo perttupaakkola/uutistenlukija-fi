@@ -1,0 +1,64 @@
+<header id="gh-head" class="gh-head gh-outer">
+    <div class="gh-head-inner gh-inner">
+        <div class="gh-head-brand">
+            <div class="gh-head-brand-wrapper">
+                {{#is "home"}}<h1 class="gh-head-logo">{{/is}}
+                <div class="gh-head-branding">
+                    <a {{^is "home"}}class="gh-head-logo"{{/is}} href="{{@site.url}}">
+                        {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="{{@site.title}}">
+                            {{#if @custom.white_publication_logo_for_transparent_header}}
+                                <img src="{{@custom.white_publication_logo_for_transparent_header}}" alt="{{@site.title}}">
+                            {{/if}}
+                        {{else}}
+                            {{@site.title}}
+                        {{/if}}
+                    </a>
+                    {{#if @site.description}}
+                        <div class="gh-head-tagline">{{@site.description}}</div>
+                    {{else}}
+                        <div class="gh-head-tagline">Päivän tärkeimmät uutiset suomeksi</div>
+                    {{/if}}
+                </div>
+                {{#is "home"}}</h1>{{/is}}
+            </div>
+            <button class="gh-search gh-icon-btn" aria-label="{{t "Search this site"}}" data-ghost-search>{{> "icons/search"}}</button>
+            <button class="gh-theme-toggle" id="gh-theme-toggle" aria-label="Vaihda teema" type="button">
+                <span class="gh-theme-toggle__moon" aria-hidden="true">🌙</span>
+                <span class="gh-theme-toggle__sun" aria-hidden="true">☀️</span>
+            </button>
+            <button class="gh-burger" aria-label="{{t "Toggle menu"}}"></button>
+        </div>
+
+        <nav class="gh-head-menu">
+            {{navigation}}
+            {{#unless @site.members_enabled}}
+                {{#match @custom.navigation_layout "Stacked"}}
+                    <button class="gh-search gh-icon-btn" aria-label="{{t "Search this site"}}" data-ghost-search>{{> "icons/search"}}</button>
+                {{/match}}
+            {{/unless}}
+        </nav>
+
+        <div class="gh-head-actions">
+            {{#unless @site.members_enabled}}
+                {{^match @custom.navigation_layout "Stacked"}}
+                    <button class="gh-search gh-icon-btn" aria-label="{{t "Search this site"}}" data-ghost-search>{{> "icons/search"}}</button>
+                {{/match}}
+            {{else}}
+                <button class="gh-search gh-icon-btn" aria-label="{{t "Search this site"}}" data-ghost-search>{{> "icons/search"}}</button>
+                <div class="gh-head-members">
+                    {{#unless @member}}
+                        {{#unless @site.members_invite_only}}
+                            <a class="gh-head-link" href="#/portal/signin" data-portal="signin">{{t "Sign in"}}</a>
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">{{t "Subscribe"}}</a>
+                        {{else}}
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signin" data-portal="signin">{{t "Sign in"}}</a>
+                        {{/unless}}
+                    {{else}}
+                        <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/account" data-portal="account">{{t "Account"}}</a>
+                    {{/unless}}
+                </div>
+            {{/unless}}
+        </div>
+    </div>
+</header>

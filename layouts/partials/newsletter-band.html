@@ -6,10 +6,8 @@
 {{ $action := default "/uutiskirje/" .Site.Params.newsletter_api_url }}
 <section class="newsletter-band" aria-labelledby="newsletter-band-heading">
   <div class="newsletter-band__inner">
-    <div class="newsletter-band__icon" aria-hidden="true">📬</div>
     <div class="newsletter-band__text">
-      <h2 id="newsletter-band-heading" class="newsletter-band__heading">Päivän uutiset sähköpostiisi</h2>
-      <p class="newsletter-band__sub">Kerran päivässä, tärkeimmät jutut — ei roskapostia.</p>
+      <h2 id="newsletter-band-heading" class="newsletter-band__heading">Päivän tärkeimmät uutiset sähköpostiisi kerran päivässä.</h2>
     </div>
     <form class="newsletter-band__form"
           action="{{ $action }}"
@@ -30,7 +28,7 @@
     </form>
     <p class="newsletter-band__privacy">
       Ei mainoksia. Voit peruuttaa koska tahansa.
-      <a href="/tietosuoja/">Tietosuoja</a>.
+      <a href="/tietosuojaseloste/">Tietosuoja</a>.
     </p>
   </div>
 </section>

@@ -12,6 +12,7 @@ All times UTC. Copy-paste the full block below into `crontab -e` on the deploy h
 | `30 7,11,17,20 * * *` | X auto-poster | Post recent articles to @Uutistenlukija_ | X/Twitter |
 | `0 6 * * *` | metrics report | 7-day pipeline stats | #metrics |
 | `0 9 * * *` | Lighthouse | Score tracking + delta | #metrics |
+| `0 17 * * *` | daily briefing | Build `Päivän kooste` newsletter HTML preview | `static/newsletter/` |
 | `0 7 * * 1` | content quality | Weekly article validation | #operations |
 | `0 7 * * 0` | dead links | Weekly crawl for broken links | #metrics |
 
@@ -48,6 +49,9 @@ WORKSPACE=/home/pertt/.openclaw/workspace
 
 # ── Lighthouse scores (09:00 UTC, after metrics) ─────────────────────────────
 0 9 * * * cd $PIPELINE && python3 lighthouse_check.py >> $LOGS/lighthouse-cron.log 2>&1
+
+# ── Daily newsletter preview (17:00 UTC) ─────────────────────────────────────
+0 17 * * * cd $PROJECT && python3 pipeline/daily_briefing.py >> $LOGS/daily-briefing.log 2>&1
 
 # ── Weekly content quality scan (Mondays 07:00 UTC → #operations) ────────────
 0 7 * * 1 cd $PIPELINE && python3 validate_articles.py --all >> $LOGS/validate-cron.log 2>&1
@@ -87,6 +91,7 @@ If you had any of these already, **replace** them:
 | `logs/metrics-cron.log` | `metrics_cron.sh` |
 | `logs/lighthouse_scores.json` | `lighthouse_check.py` |
 | `logs/lighthouse-cron.log` | lighthouse cron |
+| `logs/daily-briefing.log` | `daily_briefing.py` |
 | `logs/validation.json` | `validate_articles.py` |
 | `logs/validate-cron.log` | validate cron |
 | `logs/dead_links.json` | `dead_link_check.py` |

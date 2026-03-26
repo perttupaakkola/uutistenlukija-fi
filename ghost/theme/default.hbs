@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title page=(t " (Page %)")}}</title>
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <link rel="stylesheet" href="{{asset "css/custom.css"}}">
+
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (saved === 'dark' || (!saved && prefersDark)) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (e) {}
+        }());
+    </script>
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#is "tag"}}{{#if tag.feature_image}} is-head-transparent{{/if}}{{/is}}{{#match @custom.header_style "Accent color"}} is-head-brand{{/match}}{{#match @custom.header_style "Dark"}} is-head-dark{{/match}}">
+<div class="gh-site">
+
+    {{> "gh-head"}}
+
+    {{{body}}}
+
+    <footer class="gh-foot gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            {{#if @site.members_enabled}}
+            {{#unless @member}}
+                <section class="gh-subscribe">
+                    <h3 class="gh-subscribe-title">{{t "Subscribe to {sitetitle}" sitetitle=@site.title}}</h3>
+                    {{#if @custom.email_signup_text}}
+                        <div class="gh-subscribe-description">{{@custom.email_signup_text}}</div>
+                    {{/if}}
+                    <button class="gh-subscribe-btn gh-btn" data-portal="signup">{{> "icons/email"}} {{t "Subscribe now"}}</button>
+                </section>
+            {{/unless}}
+            {{/if}}
+
+            <nav class="gh-foot-menu">
+                {{navigation type="secondary"}}
+            </nav>
+
+            <div class="gh-copyright">
+                {{#unless @custom.footer_text}}
+                    {{@site.title}} © {{date format="YYYY"}}. {{{t "Powered by {ghostlink}" ghostlink="<a href=\"https://ghost.org/\" target=\"_blank\" rel=\"noopener\">Ghost</a>"}}}
+                {{else}}
+                    {{@custom.footer_text}}
+                {{/unless}}
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+{{#is "post, page"}}
+    {{> "pswp"}}
+{{/is}}
+
+<script src="{{asset "built/main.min.js"}}"></script>
+<script>
+    (function () {
+        var btn = document.getElementById('gh-theme-toggle');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+            var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            try {
+                localStorage.setItem('theme', next);
+            } catch (e) {}
+        });
+    }());
+</script>
+
+{{ghost_foot}}
+
+</body>
+
+</html>

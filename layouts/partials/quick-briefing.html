@@ -1,0 +1,37 @@
+{{/*
+  quick-briefing.html — Homepage block 3
+  Expects .items = slice of 4–6 pages
+*/}}
+{{- $items := .items | default (slice) -}}
+<section class="quick-briefing" aria-labelledby="quick-briefing-title">
+  <div class="quick-briefing__inner">
+    <div class="homepage-block-heading quick-briefing__header">
+      <div>
+        <h2 id="quick-briefing-title" class="quick-briefing__title">Mitä tapahtui tänään</h2>
+        <p class="homepage-block-heading__deck">Nopea kierros päivän tärkeimpiin liikkeisiin — ilman kuvahälyä.</p>
+      </div>
+    </div>
+    <ol class="quick-briefing__list">
+      {{ if $items }}
+        {{ range $i, $p := $items }}
+        <li class="quick-briefing__item">
+          <span class="quick-briefing__index">{{ math.Add $i 1 }}</span>
+          <div class="quick-briefing__body">
+            <h3 class="quick-briefing__headline"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+            {{ with $p.Params.description }}
+            <p class="quick-briefing__excerpt">{{ . | truncate 150 }}</p>
+            {{ end }}
+            <div class="quick-briefing__meta">
+              {{ with $p.Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
+              <span>{{ partial "freshness-label.html" $p.Date }}</span>
+              {{ with $p.Params.source_name }}<span>{{ . }}</span>{{ end }}
+            </div>
+          </div>
+        </li>
+        {{ end }}
+      {{ else }}
+        <li class="quick-briefing__item quick-briefing__item--empty">Uusi briiffi täyttyy heti, kun päivän julkaisut karttuvat.</li>
+      {{ end }}
+    </ol>
+  </div>
+</section>

@@ -1,11 +1,11 @@
 ---
 title: "Talous"
-description: "Talousuutiset tänään – suomen talous uutiset, pörssikurssit, markkinat ja talouspolitiikka. Lue uusimmat talous uutiset Suomesta ja maailmalta Uutistenlukijasta."
+description: "Talousuutiset ilmaiseksi – Suomen talousuutiset, markkinat, pörssi ja talouspolitiikka ilman maksumuuria. Lue tärkeimmät talousuutiset tiiviisti Uutistenlukijasta."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"
-  - "talous uutiset"
-  - "suomen talous uutiset"
+  - "talousuutiset ilmainen"
+  - "talousuutiset tiivistelmä"
 ---
 
-Talous- ja markkinauutiset Suomesta ja maailmalta. Pörssikurssit, yritykset ja talouspolitiikka yhdessä paikassa.
+Uutistenlukijan taloussivu kokoaa talousuutiset ilmaiseksi yhteen näkymään. Saat tärkeimmät markkina-, yritys- ja talouspolitiikan aiheet tiiviisti ilman, että sinun tarvitsee hypätä maksumuurilta toiselle.

@@ -1,11 +1,11 @@
 ---
-title: "Teknologia"
-description: "Teknologia uutiset ja tiedeuutiset – tekoäly uutiset, IT-alan kehitys ja tieteen läpimurrot suomeksi. Lue uusimmat teknologia- ja tiedeuutiset Uutistenlukijasta."
+title: "Teknologiauutiset suomeksi – tekoäly ja IT"
+description: "Teknologiauutiset suomeksi – tekoäly, IT, ohjelmistot ja tieteen läpimurrot helposti luettavassa muodossa. Lue uusimmat tekoäly- ja teknologiauutiset Uutistenlukijasta."
 og_image: "/images/og-teknologia.png"
 keywords:
-  - "teknologia uutiset"
-  - "tiedeuutiset"
+  - "teknologia uutiset suomeksi"
+  - "tekoäly uutiset suomeksi"
   - "tekoäly uutiset"
 ---
 
-Teknologia- ja tiedeuutiset suomeksi. Tekoäly, ohjelmistot, kyberturvallisuus ja tieteen uusimmat löydöt.
+Uutistenlukija kokoaa teknologiauutiset suomeksi selkeään koosteeseen. Tekoäly, IT, ohjelmistot, kyberturvallisuus ja muut olennaiset aiheet löytyvät yhdestä paikasta nopeasti luettavassa muodossa.
