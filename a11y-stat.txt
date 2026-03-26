@@ -1,0 +1,25 @@
+ a11y-files.txt                                     | 14 ++++
+ ghost/theme/default.hbs                            | 10 +++
+ layouts/_default/baseof.html                       | 87 ++++++++++++++++++--
+ layouts/_default/haku.html                         |  5 +-
+ layouts/partials/critical-css.html                 |  2 +-
+ layouts/partials/footer.html                       |  2 +-
+ layouts/partials/header.html                       | 14 ++--
+ layouts/taxonomy/category.html                     |  2 +-
+ pipeline/.pipeline_lock                            |  2 -
+ static/api/health.json                             |  8 +-
+ static/api/pipeline-status.json                    | 26 +++---
+ static/metrics/snapshot.json                       |  8 +-
+ themes/uutistenlukija/layouts/_default/baseof.html | 92 +++++++++++++++++++---
+ themes/uutistenlukija/layouts/partials/footer.html |  2 +-
+ themes/uutistenlukija/layouts/partials/header.html |  4 +-
+ .../uutistenlukija/layouts/taxonomy/category.html  |  2 +-
+ themes/uutistenlukija/static/css/style.css         | 12 +--
+ 17 files changed, 227 insertions(+), 65 deletions(-)
+[pre-commit] WARNING: 10 layout file(s) staged with pipeline/content — verify this is intentional.
+[main 5c968ca] a11y: landmarks, focus trap, search form, contrast fixes
+ 17 files changed, 227 insertions(+), 65 deletions(-)
+ create mode 100644 a11y-files.txt
+ delete mode 100644 pipeline/.pipeline_lock
+To https://github.com/perttupaakkola/uutistenlukija-fi.git
+   61c9381..5c968ca  main -> main

@@ -18,9 +18,8 @@
     )
 }}
 
-{{/* ── Homepage: WebSite + SearchAction ──────────────────────────── */}}
-{{ if .IsHome }}
-{{ $schema := dict
+{{/* ── Sitewide: WebSite + SearchAction ─────────────────────────── */}}
+{{ $websiteSchema := dict
     "@context" "https://schema.org"
     "@type" "WebSite"
     "name" .Site.Title
@@ -38,11 +37,11 @@
     )
 }}
 <script type="application/ld+json">
-{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+{{ $websiteSchema | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 
 {{/* ── Article page: NewsArticle ───────────────────────────────────── */}}
-{{ else if and .IsPage (eq .Section "posts") }}
+{{ if and .IsPage (eq .Section "posts") }}
 {{/* Resolve image URL — for Unsplash URLs, upgrade to w=1200&h=630&fit=crop
      so declared schema dimensions match the actually served image size */}}
 {{ $imageUrl := "" }}
@@ -75,8 +74,9 @@
 {{ $desc := .Description | default (.Summary | plainify | truncate 160) | default .Site.Params.description }}
 
 {{/* Author block */}}
-{{ $authorName := .Params.author | default .Site.Params.author }}
-{{ $authorBlock := dict "@type" "Person" "name" $authorName }}
+{{ $authorName := .Params.author | default .Site.Params.author | default "Toimitus" }}
+{{ $authorUrl := .Params.author_url | default (printf "%stoimitus/" .Site.BaseURL) }}
+{{ $authorBlock := dict "@type" "Person" "name" $authorName "url" $authorUrl }}
 
 {{/* Build article section list */}}
 {{ $sections := .Params.categories | default (slice) }}
