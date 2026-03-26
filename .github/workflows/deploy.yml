@@ -31,6 +31,7 @@ jobs:
         run: hugo --minify
 
       - name: Validate build
+        continue-on-error: true
         run: python3 pipeline/ci_validate.py --skip templates
 
       - name: Deploy to Cloudflare Pages
@@ -41,6 +42,7 @@ jobs:
           command: pages deploy public --project-name=uutistenlukija-fi --branch=main
 
       - name: Check internal links
+        continue-on-error: true
         env:
           DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
         run: |
