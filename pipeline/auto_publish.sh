@@ -145,6 +145,7 @@ fi
 # Regenerate health endpoint + metrics snapshot
 python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PIPELINE_DIR/generate_pipeline_status.py" 2>&1 | tee -a "$LOG_FILE" || echo "[pipeline_status] generation failed (non-fatal)" | tee -a "$LOG_FILE"
+python3 "$PIPELINE_DIR/feed_health_report.py" 2>&1 | tee -a "$LOG_FILE" || true
 bash "$PROJECT_DIR/scripts/daily-snapshot.sh" 2>&1 | tee -a "$LOG_FILE" || echo "[snapshot] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 
 echo "=== Auto-publish completed at $(date -u) ==="  | tee -a "$LOG_FILE"
