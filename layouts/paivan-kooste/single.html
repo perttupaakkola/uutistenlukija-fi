@@ -1,0 +1,229 @@
+{{ define "main" }}
+{{/*
+  layouts/paivan-kooste/single.html
+  Daily news digest page — "Päivän kooste"
+
+  Content type: paivan-kooste
+  Expected frontmatter:
+    date:        2026-03-26T00:00:00Z   (digest date)
+    title:       "Päivän kooste — 26.3.2026"
+    description: "Tärkeimmät uutiset tänään."
+
+  Articles are pulled live from site.RegularPages filtered by category + date.
+  Sections without matching articles are hidden automatically.
+*/}}
+
+{{ $digestDate := .Date }}
+{{ $digestDateStr := $digestDate | time.Format "2.1.2006" }}
+{{ $digestDay := $digestDate.Unix }}
+{{ $digestDayEnd := add $digestDay 86400 }}
+
+{{/* Sections to show, in order */}}
+{{ $sectionDefs := slice
+  (dict "slug" "kotimaa"    "label" "Kotimaa")
+  (dict "slug" "ulkomaat"   "label" "Ulkomaat")
+  (dict "slug" "talous"     "label" "Talous")
+  (dict "slug" "teknologia" "label" "Teknologia")
+}}
+
+{{/* Gather all posts published on the digest date */}}
+{{ $allPosts := where .Site.RegularPages "Section" "posts" }}
+{{ $dayPosts := slice }}
+{{ range $allPosts }}
+  {{ $ts := .Date.Unix }}
+  {{ if and (ge $ts $digestDay) (lt $ts $digestDayEnd) }}
+    {{ $dayPosts = $dayPosts | append . }}
+  {{ end }}
+{{ end }}
+{{ $dayPosts = $dayPosts | sort "Date" "desc" }}
+
+{{/* Build per-section article lists (max 5 each) */}}
+{{ $sectionArticles := dict }}
+{{ range $sectionDefs }}
+  {{ $slug := .slug }}
+  {{ $matched := slice }}
+  {{ range $dayPosts }}
+    {{ $cats := .Params.categories | default slice }}
+    {{ range $cats }}
+      {{ if and (eq (. | lower | urlize) $slug) (lt (len $matched) 5) }}
+        {{ $matched = $matched | append $ }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $sectionArticles = merge $sectionArticles (dict $slug $matched) }}
+{{ end }}
+
+{{/* Count non-empty sections */}}
+{{ $activeSections := 0 }}
+{{ range $sectionDefs }}
+  {{ if gt (len (index $sectionArticles .slug)) 0 }}
+    {{ $activeSections = add $activeSections 1 }}
+  {{ end }}
+{{ end }}
+
+<div class="kooste-page">
+
+  {{/* Page header */}}
+  <header class="kooste-header">
+    <div class="kooste-header__eyebrow">
+      <a href="/kooste/" class="kooste-nav-back">← Kaikki koosteet</a>
+    </div>
+    <h1 class="kooste-header__title">Päivän kooste</h1>
+    <p class="kooste-header__date">
+      <time datetime="{{ $digestDate | time.Format "2006-01-02" }}">{{ $digestDateStr }}</time>
+    </p>
+    {{ with .Params.description }}
+    <p class="kooste-header__lead">{{ . }}</p>
+    {{ end }}
+
+    {{ if eq $activeSections 0 }}
+    <p class="kooste-empty">Tälle päivälle ei löytynyt artikkeleita.</p>
+    {{ else }}
+    <nav class="kooste-jump-nav" aria-label="Siirry osioon">
+      {{ range $sectionDefs }}
+        {{ if gt (len (index $sectionArticles .slug)) 0 }}
+        <a href="#kooste-{{ .slug }}" class="kooste-jump-pill">{{ .label }}</a>
+        {{ end }}
+      {{ end }}
+    </nav>
+    {{ end }}
+  </header>
+
+  {{/* Sections */}}
+  {{ range $sectionDefs }}
+    {{ $slug  := .slug }}
+    {{ $label := .label }}
+    {{ $arts  := index $sectionArticles $slug }}
+
+    {{ if gt (len $arts) 0 }}
+    <section class="kooste-section" id="kooste-{{ $slug }}">
+
+      <div class="kooste-section__header">
+        <h2 class="kooste-section__title">
+          <a href="/categories/{{ $slug }}/" class="kooste-section__title-link">{{ $label }}</a>
+        </h2>
+        <a href="/categories/{{ $slug }}/" class="kooste-section__more-link">
+          Lue lisää →
+        </a>
+      </div>
+
+      <ul class="kooste-article-list" role="list">
+        {{ range $arts }}
+        <li class="kooste-article-card">
+          {{ with .Params.image }}
+          <a href="{{ $.RelPermalink }}" class="kooste-card__image-wrap" tabindex="-1" aria-hidden="true">
+            <img
+              src="{{ . }}"
+              alt="{{ $.Params.image_alt | default $.Title }}"
+              class="kooste-card__image"
+              loading="lazy"
+              decoding="async"
+              width="280"
+              height="158"
+            >
+          </a>
+          {{ end }}
+
+          <div class="kooste-card__body">
+            <h3 class="kooste-card__title">
+              <a href="{{ .RelPermalink }}" class="kooste-card__link">{{ .Title }}</a>
+            </h3>
+
+            {{ with .Params.description }}
+            <p class="kooste-card__desc">{{ . | truncate 120 }}</p>
+            {{ else }}
+              {{ with .Summary }}
+              <p class="kooste-card__desc">{{ . | plainify | truncate 120 }}</p>
+              {{ end }}
+            {{ end }}
+
+            <div class="kooste-card__meta">
+              {{ with .Params.source_name }}
+              <span class="kooste-card__source">{{ . }}</span>
+              {{ end }}
+              <span class="kooste-card__time">{{ partial "freshness-label.html" .Date }}</span>
+            </div>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+
+      <div class="kooste-section__footer">
+        <a href="/categories/{{ $slug }}/" class="kooste-more-btn">
+          Kaikki {{ $label | lower }}uutiset →
+        </a>
+      </div>
+
+    </section>
+    {{ end }}
+  {{ end }}
+
+  {{/* Footer nav between digests */}}
+  <footer class="kooste-footer">
+    <div class="kooste-footer__nav">
+      {{ with .PrevInSection }}
+      <a href="{{ .RelPermalink }}" class="kooste-footer__prev">← {{ .Date | time.Format "2.1.2006" }}</a>
+      {{ end }}
+      {{ with .NextInSection }}
+      <a href="{{ .RelPermalink }}" class="kooste-footer__next">{{ .Date | time.Format "2.1.2006" }} →</a>
+      {{ end }}
+    </div>
+    <a href="/kooste/" class="kooste-footer__archive">Kaikki koosteet</a>
+  </footer>
+
+</div>
+
+<style>
+.kooste-page { max-width: 860px; margin: 0 auto; padding: 0 1rem 3rem; }
+
+.kooste-header { text-align: center; padding: 2rem 0 1.5rem; border-bottom: 2px solid var(--border, #e5e7eb); margin-bottom: 2rem; }
+.kooste-header__eyebrow { font-size: .85rem; margin-bottom: .5rem; }
+.kooste-nav-back { color: var(--color-muted, #6b7280); text-decoration: none; }
+.kooste-nav-back:hover { text-decoration: underline; }
+.kooste-header__title { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: .25rem 0; line-height: 1.15; }
+.kooste-header__date { font-size: 1.05rem; color: var(--color-muted, #6b7280); margin: .25rem 0 .75rem; }
+.kooste-header__lead { font-size: 1.05rem; color: var(--color-text, #374151); max-width: 560px; margin: 0 auto 1rem; }
+.kooste-empty { color: var(--color-muted, #6b7280); font-style: italic; }
+
+.kooste-jump-nav { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-top: 1rem; }
+.kooste-jump-pill { display: inline-block; padding: .3rem .85rem; border-radius: 999px; background: var(--color-accent-soft, #eff6ff); color: var(--color-accent, #2563eb); font-size: .85rem; font-weight: 500; text-decoration: none; border: 1px solid var(--color-accent-border, #bfdbfe); transition: background .15s; }
+.kooste-jump-pill:hover { background: var(--color-accent, #2563eb); color: #fff; }
+
+.kooste-section { margin-bottom: 2.5rem; }
+.kooste-section__header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border, #e5e7eb); }
+.kooste-section__title { font-size: 1.3rem; margin: 0; }
+.kooste-section__title-link { color: inherit; text-decoration: none; }
+.kooste-section__title-link:hover { text-decoration: underline; }
+.kooste-section__more-link { font-size: .85rem; color: var(--color-accent, #2563eb); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.kooste-section__more-link:hover { text-decoration: underline; }
+
+.kooste-article-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1rem; }
+.kooste-article-card { display: flex; gap: .875rem; padding: .75rem; border-radius: 8px; border: 1px solid var(--border, #e5e7eb); background: var(--color-surface, #fff); transition: box-shadow .15s; }
+.kooste-article-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.kooste-card__image-wrap { flex-shrink: 0; }
+.kooste-card__image { width: 100px; height: 70px; object-fit: cover; border-radius: 5px; display: block; }
+.kooste-card__body { flex: 1; min-width: 0; }
+.kooste-card__title { font-size: .975rem; font-weight: 600; margin: 0 0 .3rem; line-height: 1.35; }
+.kooste-card__link { color: var(--color-text, #111827); text-decoration: none; }
+.kooste-card__link:hover { color: var(--color-accent, #2563eb); }
+.kooste-card__desc { font-size: .875rem; color: var(--color-muted, #6b7280); margin: 0 0 .4rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.kooste-card__meta { display: flex; align-items: center; gap: .6rem; font-size: .78rem; color: var(--color-muted, #9ca3af); }
+.kooste-card__source { font-weight: 500; color: var(--color-muted, #6b7280); }
+
+.kooste-section__footer { margin-top: .75rem; text-align: right; }
+.kooste-more-btn { display: inline-block; font-size: .85rem; color: var(--color-accent, #2563eb); text-decoration: none; }
+.kooste-more-btn:hover { text-decoration: underline; }
+
+.kooste-footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border, #e5e7eb); display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: .9rem; }
+.kooste-footer__nav { display: flex; gap: 1.25rem; }
+.kooste-footer__prev, .kooste-footer__next, .kooste-footer__archive { color: var(--color-accent, #2563eb); text-decoration: none; }
+.kooste-footer__prev:hover, .kooste-footer__next:hover, .kooste-footer__archive:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .kooste-section__header { flex-direction: column; gap: .25rem; }
+  .kooste-card__image { width: 80px; height: 56px; }
+  .kooste-header__title { font-size: 1.6rem; }
+  .kooste-footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
+{{ end }}
