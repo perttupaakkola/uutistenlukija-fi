@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
   <div class="header-banner" aria-hidden="true"></div>
   <div class="container" style="position:relative;">
-    <button class="hamburger-btn" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav">
+    <button id="hamburger" class="hamburger-btn" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav-menu">
       <span class="hamburger-line" aria-hidden="true"></span>
       <span class="hamburger-line" aria-hidden="true"></span>
       <span class="hamburger-line" aria-hidden="true"></span>
@@ -10,7 +10,7 @@
       <a href="/" aria-label="Uutistenlukija — etusivulle"><img src="/images/logo.png" alt="Uutistenlukija" class="logo-img" loading="eager" decoding="async" width="160" height="40"></a>
     </div>
     <p class="site-date">{{ now | time.Format "Monday 2. January 2006" }}</p>
-    <nav class="main-nav" id="main-nav" aria-label="Päänavigaatio" role="navigation">
+    <nav class="main-nav" id="main-nav-menu" aria-label="Päänavigaatio" role="navigation">
       <ul>
         {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>

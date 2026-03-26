@@ -1,17 +1,18 @@
 {{ define "main" }}
 <div class="search-page">
   <h1 class="search-heading">Haku</h1>
-  <div class="search-box">
+  <form class="search-box" role="search" aria-label="Hae artikkeleita" action="/haku/" method="get">
     <input
       type="search"
       id="search-input"
+      name="q"
       placeholder="Hae artikkeleita..."
       aria-label="Haku"
       autocomplete="off"
       autofocus
     >
     <span id="search-count" class="search-count" aria-live="polite"></span>
-  </div>
+  </form>
   <div id="search-results" role="list"></div>
 </div>
 

@@ -22,7 +22,7 @@
 
 {{ $pag := $paginator }}
 {{ if gt $pag.TotalPages 1 }}
-<nav class="pagination">
+<nav class="pagination" aria-label="Sivunavigaatio">
   {{ if $pag.HasPrev }}
   <a href="{{ $pag.Prev.URL }}" class="page-link">← Edellinen</a>
   {{ end }}
