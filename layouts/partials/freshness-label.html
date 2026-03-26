@@ -10,13 +10,13 @@
 */}}
 {{- $date := . -}}
 {{- $now := now -}}
-{{- $diffSec := math.Round (sub $now.Unix $date.Unix) -}}
-{{- $diffHours := math.Round (div $diffSec 3600) -}}
+{{- $diffSec := math.Round (math.Sub $now.Unix $date.Unix) -}}
+{{- $diffHours := math.Round (math.Div $diffSec 3600) -}}
 {{- $time := $date | time.Format "15:04" -}}
 {{- $nowDay := $now | time.Format "2006-01-02" -}}
 {{- $dateDay := $date | time.Format "2006-01-02" -}}
-{{- $yesterdayUnix := sub $now.Unix 86400 -}}
-{{- $yesterday := time $yesterdayUnix -}}
+{{- $yesterdayUnix := math.Sub $now.Unix 86400 -}}
+{{- $yesterday := time.AsTime $yesterdayUnix -}}
 {{- $yesterdayDay := $yesterday | time.Format "2006-01-02" -}}
 {{- if lt $diffSec 3600.0 -}}
 <span class="freshness-badge freshness-now">Juuri nyt</span>

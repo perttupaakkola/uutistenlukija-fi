@@ -3,7 +3,7 @@
 {{ $sorted := $posts.ByDate.Reverse }}
 {{ $seen := slice }}
 {{ $nowUnix := now.Unix }}
-{{ $dayAgoUnix := sub $nowUnix 86400 }}
+{{ $dayAgoUnix := math.Sub $nowUnix 86400 }}
 {{ $leadScratch := newScratch }}
 {{ $candidatePool := first 24 $sorted }}
 {{ $breakingPool := where $candidatePool ".Params.breaking" true }}
@@ -21,16 +21,16 @@
 {{ range $candidatePool }}
   {{ $cat := lower (index .Params.categories 0 | default "kotimaa") }}
   {{ $source := lower (.Params.source_domain | default .Params.source | default .Params.source_url | default .Site.BaseURL) }}
-  {{ $hoursAgo := div (sub $nowUnix .Date.Unix) 3600.0 }}
-  {{ $recencyScore := math.Max 0.0 (sub 1.0 (div $hoursAgo 48.0)) }}
+  {{ $hoursAgo := math.Div (math.Sub $nowUnix .Date.Unix) 3600.0 }}
+  {{ $recencyScore := math.Max 0.0 (math.Sub 1.0 (math.Div $hoursAgo 48.0)) }}
 
   {{ $sourceCount := $leadScratch.Get (printf "source:%s" $source) | default 1 }}
-  {{ $sourcePenalty := mul (sub $sourceCount 1) 0.2 }}
-  {{ $sourceDiversityScore := math.Max 0.2 (sub 1.0 $sourcePenalty) }}
+  {{ $sourcePenalty := math.Mul (math.Sub $sourceCount 1) 0.2 }}
+  {{ $sourceDiversityScore := math.Max 0.2 (math.Sub 1.0 $sourcePenalty) }}
 
   {{ $categoryCount := $leadScratch.Get (printf "cat:%s" $cat) | default 1 }}
-  {{ $categoryPenalty := mul (sub $categoryCount 1) 0.15 }}
-  {{ $categoryBalanceScore := math.Max 0.2 (sub 1.0 $categoryPenalty) }}
+  {{ $categoryPenalty := math.Mul (math.Sub $categoryCount 1) 0.15 }}
+  {{ $categoryBalanceScore := math.Max 0.2 (math.Sub 1.0 $categoryPenalty) }}
 
   {{ $imageScore := 0.15 }}
   {{ if .Params.image }}
@@ -43,7 +43,7 @@
     {{ end }}
   {{ end }}
 
-  {{ $score := add (add (mul $recencyScore 0.4) (mul $sourceDiversityScore 0.2)) (add (mul $categoryBalanceScore 0.2) (mul $imageScore 0.2)) }}
+  {{ $score := math.Add (math.Add (math.Mul $recencyScore 0.4) (math.Mul $sourceDiversityScore 0.2)) (math.Add (math.Mul $categoryBalanceScore 0.2) (math.Mul $imageScore 0.2)) }}
   {{ $leadCandidates = $leadCandidates | append (dict "page" . "score" $score) }}
 {{ end }}
 
