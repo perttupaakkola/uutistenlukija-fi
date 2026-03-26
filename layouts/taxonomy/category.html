@@ -1,16 +1,9 @@
 {{ define "main" }}
 <div class="category-header">
-  <h1>{{ .Title }} <a href="{{ .Permalink }}index.xml" class="rss-link" title="RSS-syöte">RSS</a></h1>
+  <h1>{{ .Title }}</h1>
+  <p class="category-meta"><a href="{{ .Permalink }}index.xml" class="rss-link" title="RSS-syöte">RSS-syöte</a></p>
   {{ with .Description }}<p class="category-description">{{ . }}</p>{{ end }}
 </div>
-
-{{ if .Content }}
-<article class="single-article">
-  <div class="content">
-    {{ .Content }}
-  </div>
-</article>
-{{ end }}
 
 {{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
 {{ if gt (len $paginator.Pages) 0 }}
