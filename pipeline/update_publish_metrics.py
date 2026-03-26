@@ -125,11 +125,6 @@ def main():
     # "error" — crash, timeout, or mid-run failure
     if run_success and published > 0:
         outcome = "ok"
-    elif run_success and published == 0:
-        # Pipeline completed successfully but nothing new to publish.
-        # This includes: all articles deduped, kw_dedup dropped duplicates,
-        # quiet news cycle, empty scan. Not an error.
-        outcome = "skip"
     elif _is_empty_scan(run, steps):
         outcome = "skip"
     else:

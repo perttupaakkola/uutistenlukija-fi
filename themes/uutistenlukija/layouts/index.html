@@ -33,8 +33,8 @@
   {{ with .Params.categories }}
   <span class="category-label">{{ index . 0 }}</span>
   {{ end }}
-  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-  <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
+  <h2><a href="{{ .Permalink }}" data-track="hero_click">{{ .Title }}</a></h2>
+  <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true" data-track="hero_click">
     <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" decoding="async" width="800" height="450">
   </a>
   {{- with (.Summary | truncate 300) }}<p class="excerpt">{{ . }}</p>{{- end }}

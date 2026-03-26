@@ -31,8 +31,6 @@ jobs:
         run: hugo --minify
 
       - name: Validate build
-        continue-on-error: true
-        continue-on-error: true
         run: python3 pipeline/ci_validate.py --skip templates
 
       - name: Deploy to Cloudflare Pages

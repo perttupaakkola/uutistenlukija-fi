@@ -14,7 +14,7 @@
     {{ $thumb := $lead.Params.image_thumb | default $img }}
     {{ $alt := $lead.Params.image_alt | default $lead.Title }}
     <article class="lead-article lead-article--hero hero-cluster__lead-card">
-      <a href="{{ $lead.Permalink }}" class="hero-scrim-link" aria-label="{{ $lead.Title }}">
+      <a href="{{ $lead.Permalink }}" class="hero-scrim-link" aria-label="{{ $lead.Title }}" data-track="hero_click">
         {{- $heroSrc := $thumb -}}
         {{- $heroSrcset := "" -}}
         {{- $avifSrcset := "" -}}
@@ -72,8 +72,8 @@
       {{ with .Params.categories }}
       <span class="category-label">{{ index . 0 }}</span>
       {{ end }}
-      {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink) }}
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink "track" "hero_click") }}
+      <h3><a href="{{ .Permalink }}" data-track="hero_click">{{ .Title }}</a></h3>
       {{ with .Params.description }}
       <p class="highlight-card__excerpt">{{ . | truncate 120 }}</p>
       {{ end }}

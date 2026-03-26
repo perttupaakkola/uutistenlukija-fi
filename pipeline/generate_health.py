@@ -76,20 +76,6 @@ def latest_article_timestamp() -> tuple[str | None, int]:
     return latest_dt.strftime("%Y-%m-%dT%H:%M:%SZ"), count
 
 
-DEPLOY_STATE_FILE = SCRIPT_DIR / "logs" / "deploy-state.json"
-
-
-def last_deploy_push() -> str | None:
-    """Return ISO timestamp of last successful git push to origin/main, or None."""
-    if DEPLOY_STATE_FILE.exists():
-        try:
-            state = json.loads(DEPLOY_STATE_FILE.read_text())
-            return state.get("lastDeployPush")
-        except Exception:
-            pass
-    return None
-
-
 def pipeline_stats() -> dict:
     """Read metrics files for pipeline summary."""
     last_run = None
@@ -115,18 +101,8 @@ def pipeline_stats() -> dict:
                     except Exception:
                         pass
                 if recent:
-                    def _is_healthy(r):
-                        """A run is healthy if it succeeded OR if it only failed
-                        because the scanner found no new articles (empty scan)."""
-                        if r.get("success"):
-                            return True
-                        errs = " ".join(r.get("errors", [])).lower()
-                        if "no articles found" in errs or "0 articles" in errs:
-                            return True
-                        return False
-
                     success_rate_7d = round(
-                        100 * sum(1 for r in recent if _is_healthy(r)) / len(recent), 1
+                        100 * sum(1 for r in recent if r.get("success")) / len(recent), 1
                     )
         except Exception:
             pass
@@ -180,7 +156,6 @@ def main():
         "articleCount": article_count,
         "generatedAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "uptimeCheck": True,   # always true when generated — site was just built
-        "lastDeployPush": last_deploy_push(),
         "pipeline": pipeline_stats(),
     }
 

@@ -8,7 +8,7 @@
   // Page context — set by Hugo at build time
   var _isPage = {{ if $page.IsPage }}true{{ else }}false{{ end }};
   var _articleTitle = {{ if $page.IsPage }}{{ $page.Title | jsonify }}{{ else }}""{{ end }};
-  var _articleCategory = {{ if $page.IsPage }}{{ with $page.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }}{{ else }}""{{ end }};
+  var _articleCategory = {{ if $page.IsPage }}{{ with $page.Params.categories }}{{ index . 0 | jsonify }}{{ else }}{{ with $page.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }}{{ end }}{{ else }}""{{ end }};
   var _articleSlug = {{ if $page.IsPage }}{{ with $page.File }}{{ .BaseFileName | jsonify }}{{ else }}""{{ end }}{{ else }}""{{ end }};
 
   // Guard: only run if gtag is available
@@ -18,28 +18,88 @@
     }
   }
 
-  // ── article_read ────────────────────────────────────────────────────────
-  // Fires when a visitor scrolls past 75% of an article page.
-  if (_isPage) {
+  // ── article_scroll_depth + article_read ────────────────────────────────
+  // Uses IntersectionObserver markers inside the article body.
+  if (_isPage && 'IntersectionObserver' in window) {
     (function () {
-      var fired = false;
-      var threshold = 0.75;
-      function onScroll() {
-        if (fired) return;
-        var el = document.documentElement;
-        var scrolled = el.scrollTop + el.clientHeight;
-        var total = el.scrollHeight;
-        if (total > 0 && scrolled / total >= threshold) {
-          fired = true;
-          _gtag('event', 'article_read', {
-            article_title: _articleTitle,
-            article_category: _articleCategory,
-            article_slug: _articleSlug
-          });
-          window.removeEventListener('scroll', onScroll, { passive: true });
+      var articleBody = document.querySelector('.article-body, .content');
+      if (!articleBody) return;
+
+      var thresholds = [25, 50, 75, 100];
+      var firedDepths = Object.create(null);
+      var articleReadFired = false;
+
+      function ensurePositionContext(el) {
+        if (window.getComputedStyle(el).position === 'static') {
+          el.style.position = 'relative';
         }
       }
-      window.addEventListener('scroll', onScroll, { passive: true });
+
+      function markerTopPx(depth, height) {
+        if (depth === 100) {
+          return Math.max(height - 2, 0);
+        }
+        return Math.max(Math.round((height * depth) / 100) - 1, 0);
+      }
+
+      function initObserver() {
+        var height = articleBody.scrollHeight;
+        if (!height) return;
+
+        ensurePositionContext(articleBody);
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+
+            var depth = Number(entry.target.getAttribute('data-depth'));
+            if (!depth || firedDepths[depth]) return;
+
+            firedDepths[depth] = true;
+            _gtag('event', 'article_scroll_depth', {
+              depth: depth,
+              article_title: _articleTitle,
+              article_category: _articleCategory
+            });
+
+            if (depth === 75 && !articleReadFired) {
+              articleReadFired = true;
+              _gtag('event', 'article_read', {
+                article_title: _articleTitle,
+                article_category: _articleCategory,
+                article_slug: _articleSlug
+              });
+            }
+
+            observer.unobserve(entry.target);
+          });
+        }, {
+          threshold: 0
+        });
+
+        thresholds.forEach(function (depth) {
+          var marker = document.createElement('span');
+          marker.setAttribute('data-depth', String(depth));
+          marker.setAttribute('aria-hidden', 'true');
+          marker.style.cssText = [
+            'position:absolute',
+            'left:0',
+            'top:' + markerTopPx(depth, height) + 'px',
+            'width:1px',
+            'height:1px',
+            'pointer-events:none',
+            'opacity:0'
+          ].join(';');
+          articleBody.appendChild(marker);
+          observer.observe(marker);
+        });
+      }
+
+      if (document.readyState === 'complete') {
+        initObserver();
+      } else {
+        window.addEventListener('load', initObserver, { once: true });
+      }
     })();
   }
 
@@ -69,13 +129,49 @@
     });
   })();
 
+  // ── data-track click events ────────────────────────────────────────────
+  // Fires GA4 events from declarative data attributes.
+  (function () {
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest('[data-track]');
+      if (!el) return;
+
+      var eventName = el.dataset.track;
+      if (!eventName) return;
+
+      var params = {
+        link_url: el.href || '',
+        link_text: (el.textContent || '').trim().slice(0, 100)
+      };
+
+      Object.keys(el.dataset).forEach(function (key) {
+        if (key === 'track') return;
+        params[key] = el.dataset[key];
+      });
+
+      if (eventName === 'source_click') {
+        var sourceName = el.dataset.sourceName || '';
+        if (!sourceName && el.href) {
+          try {
+            sourceName = new URL(el.href).hostname || '';
+          } catch (err) {}
+        }
+        params.source_name = sourceName;
+        params.article_title = _articleTitle;
+        params.article_category = _articleCategory;
+      }
+
+      _gtag('event', eventName, params);
+    });
+  })();
+
   // ── outbound_click ──────────────────────────────────────────────────────
   // Fires when a visitor clicks an external link (different hostname).
   (function () {
     var host = window.location.hostname;
     document.addEventListener('click', function (e) {
       var anchor = e.target.closest('a[href]');
-      if (!anchor) return;
+      if (!anchor || anchor.dataset.track) return;
       try {
         var url = new URL(anchor.href);
         if (url.hostname && url.hostname !== host) {
@@ -94,7 +190,7 @@
   (function () {
     document.addEventListener('click', function (e) {
       var anchor = e.target.closest('a[href]');
-      if (!anchor) return;
+      if (!anchor || anchor.dataset.track) return;
       var href = anchor.getAttribute('href') || '';
       if (href.indexOf('/categories/') !== -1 || href.indexOf('/kategoria/') !== -1) {
         var parts = href.replace(/\/$/, '').split('/');

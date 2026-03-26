@@ -3,7 +3,7 @@
 {{ $sorted := $posts.ByDate.Reverse }}
 {{ $seen := slice }}
 {{ $nowUnix := now.Unix }}
-{{ $dayAgoUnix := math.Sub $nowUnix 86400 }}
+{{ $dayAgoUnix := sub $nowUnix 86400 }}
 {{ $leadScratch := newScratch }}
 {{ $candidatePool := first 24 $sorted }}
 {{ $breakingPool := where $candidatePool ".Params.breaking" true }}
@@ -21,16 +21,16 @@
 {{ range $candidatePool }}
   {{ $cat := lower (index .Params.categories 0 | default "kotimaa") }}
   {{ $source := lower (.Params.source_domain | default .Params.source | default .Params.source_url | default .Site.BaseURL) }}
-  {{ $hoursAgo := math.Div (math.Sub $nowUnix .Date.Unix) 3600.0 }}
-  {{ $recencyScore := math.Max 0.0 (math.Sub 1.0 (math.Div $hoursAgo 48.0)) }}
+  {{ $hoursAgo := div (sub $nowUnix .Date.Unix) 3600.0 }}
+  {{ $recencyScore := math.Max 0.0 (sub 1.0 (div $hoursAgo 48.0)) }}
 
   {{ $sourceCount := $leadScratch.Get (printf "source:%s" $source) | default 1 }}
-  {{ $sourcePenalty := math.Mul (math.Sub $sourceCount 1) 0.2 }}
-  {{ $sourceDiversityScore := math.Max 0.2 (math.Sub 1.0 $sourcePenalty) }}
+  {{ $sourcePenalty := mul (sub $sourceCount 1) 0.2 }}
+  {{ $sourceDiversityScore := math.Max 0.2 (sub 1.0 $sourcePenalty) }}
 
   {{ $categoryCount := $leadScratch.Get (printf "cat:%s" $cat) | default 1 }}
-  {{ $categoryPenalty := math.Mul (math.Sub $categoryCount 1) 0.15 }}
-  {{ $categoryBalanceScore := math.Max 0.2 (math.Sub 1.0 $categoryPenalty) }}
+  {{ $categoryPenalty := mul (sub $categoryCount 1) 0.15 }}
+  {{ $categoryBalanceScore := math.Max 0.2 (sub 1.0 $categoryPenalty) }}
 
   {{ $imageScore := 0.15 }}
   {{ if .Params.image }}
@@ -43,7 +43,7 @@
     {{ end }}
   {{ end }}
 
-  {{ $score := math.Add (math.Add (math.Mul $recencyScore 0.4) (math.Mul $sourceDiversityScore 0.2)) (math.Add (math.Mul $categoryBalanceScore 0.2) (math.Mul $imageScore 0.2)) }}
+  {{ $score := add (add (mul $recencyScore 0.4) (mul $sourceDiversityScore 0.2)) (add (mul $categoryBalanceScore 0.2) (mul $imageScore 0.2)) }}
   {{ $leadCandidates = $leadCandidates | append (dict "page" . "score" $score) }}
 {{ end }}
 
@@ -62,6 +62,8 @@
 {{/* Visually hidden H1 for SEO — Google uses H1 as primary topic signal */}}
 <h1 class="visually-hidden">Uutistenlukija – Päivän uutiset suomeksi</h1>
 
+{{ partial "site-header.html" . }}
+
 {{/* Publish frequency badge */}}
 <div class="pub-frequency-bar">
   <span class="pub-freq-dot"></span>
@@ -73,105 +75,44 @@
 
 <span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
 
-{{/* Lead article + follow rail */}}
-<div class="homepage-top">
-  <div class="homepage-top__lead">
-    {{ with $lead }}
-    {{ $cat := index .Params.categories 0 | default "kotimaa" }}
-    {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
-    {{ $thumb := .Params.image_thumb | default $img }}
-    {{ $alt := .Params.image_alt | default .Title }}
-    {{ $seen = $seen | append .Permalink }}
-    <article class="lead-article lead-article--hero">
-      <a href="{{ .Permalink }}" class="hero-scrim-link" aria-label="{{ .Title }}">
-        {{- $heroSrc := $thumb -}}
-        {{- $heroSrcset := "" -}}
-        {{- $avifSrcset := "" -}}
-        {{- $isUnsplash := hasPrefix $img "https://images.unsplash.com" -}}
-        {{- $isPexels := hasPrefix $img "https://images.pexels.com" -}}
-        {{- if $isUnsplash -}}
-          {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-          {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $b $s -}}
-          {{- $heroSrcset = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=85 800w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
-          {{- $avifSrcset = printf "%s%sw=400&h=225&fit=crop&fm=avif&q=75 400w, %s%sw=800&h=450&fit=crop&fm=avif&q=80 800w, %s%sw=1200&h=675&fit=crop&fm=avif&q=80 1200w" $b $s $b $s $b $s -}}
-        {{- else if $isPexels -}}
-          {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-          {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop" $b $s -}}
-        {{- end -}}
-        <picture>
-          {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
-          {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
-          <img
-            src="{{ $heroSrc }}"
-            alt="{{ $alt }}"
-            class="hero-scrim-img article-card-thumb"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            width="800" height="450"
-            onload="this.classList.add('img-loaded')"
-            onerror="this.classList.add('img-loaded')">
-        </picture>
-        <div class="hero-scrim" aria-hidden="true"></div>
-        <div class="hero-scrim-body">
-          {{ if .Params.breaking }}
-          <span class="category-pill">JUURI NYT</span>
-          {{ else }}
-          {{ with .Params.categories }}<span class="category-pill category-{{ index . 0 | lower | urlize }}">{{ index . 0 }}</span>{{ end }}
-          {{ end }}
-          <h2 class="hero-scrim-title">{{ .Title }}</h2>
-          {{ with .Params.description }}
-          <p class="hero-scrim-excerpt">{{ . | truncate 180 }}</p>
-          {{ end }}
-          <div class="hero-scrim-meta">
-            <span>{{ partial "freshness-label.html" .Date }}</span>
-            <span>Toimitus</span>
-            <span>{{ partial "reading-time.html" . }}</span>
-          </div>
-        </div>
-      </a>
-    </article>
+{{ $followups := slice }}
+{{ $followCats := slice $leadCategory }}
+{{ range $leadRanked }}
+  {{ $p := .page }}
+  {{ $pCat := lower (index $p.Params.categories 0 | default "kotimaa") }}
+  {{ if and $lead (ne $p.Permalink $lead.Permalink) (not (in $followCats $pCat)) (lt (len $followups) 2) }}
+    {{ $followups = $followups | append $p }}
+    {{ $followCats = $followCats | append $pCat }}
+  {{ end }}
+{{ end }}
+{{ $followSeen := slice }}
+{{ range $followups }}
+  {{ $followSeen = $followSeen | append .Permalink }}
+{{ end }}
+{{ if lt (len $followups) 2 }}
+  {{ range $leadRanked }}
+    {{ $p := .page }}
+    {{ if and $lead (ne $p.Permalink $lead.Permalink) (not (in $followSeen $p.Permalink)) (lt (len $followups) 2) }}
+      {{ $followups = $followups | append $p }}
+      {{ $followSeen = $followSeen | append $p.Permalink }}
     {{ end }}
-  </div>
+  {{ end }}
+{{ end }}
 
-  {{ $rail := slice }}
-  {{ $railCats := slice }}
-  {{ range $sorted }}
-    {{ $cat := lower (index .Params.categories 0 | default "kotimaa") }}
-    {{ if and (not (in $seen .Permalink)) (ne $cat $leadCategory) (not (in $railCats $cat)) (lt (len $rail) 2) }}
-      {{ $rail = $rail | append . }}
-      {{ $railCats = $railCats | append $cat }}
-    {{ end }}
-  {{ end }}
-  {{ if $rail }}
-  <aside class="homepage-top__rail" aria-label="Seuraa nyt">
-    <div class="homepage-block-heading">
-      <h2 class="tanaan-title">Seuraa nyt</h2>
-      <p class="homepage-block-heading__deck">Eri aiheista juuri nyt, ilman että pääjuttu toistuu samasta kategoriasta.</p>
-    </div>
-    <div class="highlights-row highlights-row--top">
-      {{ range $rail }}
-      {{ $cat := index .Params.categories 0 | default "kotimaa" }}
-      {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
-      {{ $thumb := .Params.image_thumb | default $img }}
-      {{ $alt := .Params.image_alt | default .Title }}
-      {{ $seen = $seen | append .Permalink }}
-      <article class="highlight-card highlight-card--secondary">
-        {{ with .Params.categories }}
-        <span class="category-label">{{ index . 0 }}</span>
-        {{ end }}
-        {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink) }}
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        {{ with .Params.description }}
-        <p class="highlight-card__excerpt">{{ . | truncate 120 }}</p>
-        {{ end }}
-        <div class="meta">{{ partial "freshness-label.html" .Date }}</div>
-      </article>
-      {{ end }}
-    </div>
-  </aside>
-  {{ end }}
-</div>
+{{ partial "hero-cluster.html" (dict "lead" $lead "followups" $followups) }}
+{{ with $lead }}
+  {{ $seen = $seen | append .Permalink }}
+{{ end }}
+{{ range $followups }}
+  {{ $seen = $seen | append .Permalink }}
+{{ end }}
+
+{{ $briefPool := where $sorted "Permalink" "not in" $seen }}
+{{ $briefingItems := first 5 $briefPool }}
+{{ partial "quick-briefing.html" (dict "items" $briefingItems) }}
+{{ range $briefingItems }}
+  {{ $seen = $seen | append .Permalink }}
+{{ end }}
 
 {{ $trending := slice }}
 {{ $trendingCats := slice }}
@@ -189,33 +130,11 @@
 {{ end }}
 {{ partial "trending.html" (dict "items" $trending) }}
 
-{{ $latestPool := where $sorted "Permalink" "not in" $seen }}
-{{ $latestItems := first 5 $latestPool }}
-<section class="lyhyet-section" aria-label="Tuoreimmat uutiset">
-  <div class="homepage-block-heading lyhyet-header">
-    <div>
-      <h2 class="lyhyet-title">Tuoreimmat</h2>
-      <p class="homepage-block-heading__deck">{{ if $latestItems }}Viisi uusinta otsikkoa ilman kuvapainoa.{{ else }}Tuore virta täyttyy heti, kun uutta julkaistaan.{{ end }}</p>
-    </div>
-  </div>
-  <ol class="lyhyet-list">
-    {{ if $latestItems }}
-      {{ range $latestItems }}
-      {{ $seen = $seen | append .Permalink }}
-      <li class="lyhyet-item">
-        <a href="{{ .RelPermalink }}" class="lyhyet-link">
-          <div class="lyhyet-body">
-            <span class="lyhyet-headline">{{ .Title }}</span>
-          </div>
-          <time class="lyhyet-time" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1. klo 15:04" }}</time>
-        </a>
-      </li>
-      {{ end }}
-    {{ else }}
-      <li class="lyhyet-item lyhyet-item--empty">Ei uusia otsikoita juuri nyt.</li>
-    {{ end }}
-  </ol>
-</section>
+{{ $lyhyetItems := first 5 (where $sorted "Permalink" "not in" $seen) }}
+{{ partial "lyhyet.html" (dict "Site" .Site "exclude" $seen "limit" 5) }}
+{{ range $lyhyetItems }}
+  {{ $seen = $seen | append .Permalink }}
+{{ end }}
 
 {{/* Category sections ordered by freshest story in the last 24h. */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
@@ -232,38 +151,47 @@
   {{ end }}
 {{ end }}
 
-{{ range sort $categoryRank "latestUnix" "desc" }}
-  {{ $cat := .name }}
-  {{ $pool := .freshPool }}
-  {{ $catPosts := where $pool "Permalink" "not in" $seen }}
-  {{ if $catPosts }}
-  <section class="category-section" id="cat-{{ $cat | lower | urlize }}">
-    <div class="category-section-header">
-      <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
-      {{ if gt (len $pool) 3 }}
-      <a href="/categories/{{ $cat | urlize }}/" class="see-all">Kaikki {{ $cat | lower }} →</a>
-      {{ end }}
-    </div>
-    <div class="category-articles">
-      {{ range first 3 $catPosts }}
-      {{ $seen = $seen | append .Permalink }}
-      {{ $cardCat := index .Params.categories 0 | default "kotimaa" }}
-      {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
-      {{ $cardThumb := .Params.image_thumb | default $cardImg }}
-      {{ $cardAlt := .Params.image_alt | default .Title }}
-      <article class="category-article-card">
-        {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "alt" $cardAlt "eager" false "hero" false "permalink" .Permalink) }}
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <p class="excerpt">{{ .Summary | truncate 135 }}</p>
-        <div class="meta">
-          <span>{{ partial "freshness-label.html" .Date }}</span>
-          <span>{{ partial "reading-time.html" . }}</span>
-        </div>
-      </article>
-      {{ end }}
-    </div>
-  </section>
+{{ $spotlights := first 3 (sort $categoryRank "latestUnix" "desc") }}
+{{ if $spotlights }}
+<section class="category-spotlights" aria-labelledby="category-spotlights-title">
+  <div class="homepage-block-heading">
+    <h2 id="category-spotlights-title" class="tanaan-title">Kategoriat nyt</h2>
+    <p class="homepage-block-heading__deck">Kolme tuoreinta aihealuetta juuri nyt — ei koko ruudukkoa kerralla.</p>
+  </div>
+  {{ range $spotlights }}
+    {{ $cat := .name }}
+    {{ $pool := .freshPool }}
+    {{ $catPosts := where $pool "Permalink" "not in" $seen }}
+    {{ if $catPosts }}
+    <section class="category-section category-section--spotlight" id="cat-{{ $cat | lower | urlize }}">
+      <div class="category-section-header">
+        <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
+        {{ if gt (len $pool) 3 }}
+        <a href="/categories/{{ $cat | urlize }}/" class="see-all">Kaikki {{ $cat | lower }} →</a>
+        {{ end }}
+      </div>
+      <div class="category-articles">
+        {{ range first 3 $catPosts }}
+        {{ $seen = $seen | append .Permalink }}
+        {{ $cardCat := index .Params.categories 0 | default "kotimaa" }}
+        {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
+        {{ $cardThumb := .Params.image_thumb | default $cardImg }}
+        {{ $cardAlt := .Params.image_alt | default .Title }}
+        <article class="category-article-card">
+          {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "alt" $cardAlt "eager" false "hero" false "permalink" .Permalink) }}
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p class="excerpt">{{ .Summary | truncate 135 }}</p>
+          <div class="meta">
+            <span>{{ partial "freshness-label.html" .Date }}</span>
+            <span>{{ partial "reading-time.html" . }}</span>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
   {{ end }}
+</section>
 {{ end }}
 
 {{/* Newsletter signup band */}}

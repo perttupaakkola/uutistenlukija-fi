@@ -8,6 +8,7 @@
     .eager     — bool: true = loading="eager" fetchpriority="high" (LCP / first card)
     .hero      — bool: true = larger size hints (800w srcset lead) vs 400w card
     .permalink — article permalink for the wrapping link
+    .track     — optional data-track value for the wrapping link
 */}}
 
 {{- $img    := .img    | default "" -}}
@@ -16,6 +17,7 @@
 {{- $eager  := .eager  | default false -}}
 {{- $hero   := .hero   | default false -}}
 {{- $href   := .permalink | default "#" -}}
+{{- $track  := .track | default "" -}}
 
 {{- $loading  := cond $eager "eager" "lazy" -}}
 {{- $fetchpri := cond $eager "high" "auto" -}}
@@ -55,7 +57,7 @@
   {{- if $thumb -}}{{- $src = $thumb -}}{{- end -}}
 {{- end -}}
 
-<a href="{{ $href }}" class="article-image-link img-skeleton" tabindex="-1" aria-hidden="true">
+<a href="{{ $href }}" class="article-image-link img-skeleton" tabindex="-1" aria-hidden="true"{{ with $track }} data-track="{{ . }}"{{ end }}>
   <picture>
     {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
     {{- if $srcset }}<source type="image/webp" srcset="{{ $srcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}

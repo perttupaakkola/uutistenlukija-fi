@@ -1,10 +1,16 @@
+routes:
+  /:
+    controller: collection
+    template: index
+    filter: 'tag:-hash-hidden'
+
 collections:
   /:
     permalink: /{slug}/
     template: index
     filter: 'tag:-hash-hidden'
 
-  /tag/{slug}/:
+  /category/{slug}/:
     permalink: /{slug}/
     template: index
     filter: 'tag:{slug}+tag:-hash-hidden'

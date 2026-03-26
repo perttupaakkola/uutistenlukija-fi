@@ -1,165 +1,63 @@
 {{- /*
-  related-articles.html — "Aiheeseen liittyvät" related articles section.
+  related-articles.html — "Lue myös" section for article pages.
 
-  Selection logic (priority order):
-    1. Same tags, weighted by overlap count → top 4 by overlap
-    2. Same category (fallback when tag overlap = 0 for all candidates)
-    3. Exclude current article
-    4. Hard fallback: 3 most-recent from same category
-
-  Card layout:
-    - Thumbnail: Unsplash/Pexels 240×160 crop, lazy-loaded
-    - Category pill
-    - Title
-    - Reading time
-    - Horizontal row (4 cards) on desktop, 2-col tablet, 1-col mobile
+  Rules:
+    - same category only (first category slug)
+    - section = posts
+    - exclude current page
+    - newest first
+    - max 3 cards
+    - skip entirely when no matches
 */ -}}
 
-{{- $current        := . -}}
-{{- $currentLink    := .Permalink -}}
-{{- $currentCats    := .Params.categories | default slice -}}
-{{- $currentTags    := .Params.tags       | default slice -}}
-{{- $maxCards       := 4 -}}
-
-{{/* ── Candidate pool: all posts except self ───────────────────── */}}
-{{- $pool := slice -}}
-{{- range where site.RegularPages "Section" "posts" -}}
-  {{- if ne .Permalink $currentLink -}}
-    {{- $pool = $pool | append . -}}
-  {{- end -}}
+{{- $current := . -}}
+{{- $categories := .Params.categories | default (slice) -}}
+{{- $currentCat := "" -}}
+{{- if gt (len $categories) 0 -}}
+  {{- $currentCat = (index $categories 0) | urlize -}}
 {{- end -}}
 
-{{/* ── Score each candidate by tag overlap ─────────────────────── */}}
-{{- $scored := slice -}}
-{{- if gt (len $currentTags) 0 -}}
-  {{- range $pool -}}
-    {{- $pageTags := .Params.tags | default slice -}}
-    {{- $overlap  := len (intersect $currentTags $pageTags) -}}
-    {{- if gt $overlap 0 -}}
-      {{- $scored = $scored | append (dict "page" . "score" $overlap) -}}
+{{- if $currentCat -}}
+  {{- $related := slice -}}
+  {{- range where site.RegularPages "Section" "posts" -}}
+    {{- $candidateCats := .Params.categories | default (slice) -}}
+    {{- $candidateCat := "" -}}
+    {{- if gt (len $candidateCats) 0 -}}
+      {{- $candidateCat = (index $candidateCats 0) | urlize -}}
+    {{- end -}}
+    {{- if and (ne .Permalink $current.Permalink) (eq $candidateCat $currentCat) -}}
+      {{- $related = $related | append . -}}
     {{- end -}}
   {{- end -}}
-{{- end -}}
 
-{{/* ── Sort scored by overlap desc (manual — Hugo sort is asc only) */}}
-{{/* Insertion-sort the small slice — max 4 items needed anyway.   */}}
-{{- $sorted := slice -}}
-{{- range $scored -}}
-  {{- $item   := . -}}
-  {{- $placed := false -}}
-  {{- $newSorted := slice -}}
-  {{- range $sorted -}}
-    {{- if and (not $placed) (gt $item.score .score) -}}
-      {{- $newSorted = $newSorted | append $item -}}
-      {{- $placed = true -}}
-    {{- end -}}
-    {{- $newSorted = $newSorted | append . -}}
-  {{- end -}}
-  {{- if not $placed -}}{{- $newSorted = $newSorted | append $item -}}{{- end -}}
-  {{- $sorted = $newSorted -}}
-{{- end -}}
+  {{- $related = first 3 ($related.ByDate.Reverse) -}}
 
-{{/* ── Extract pages from scored results ───────────────────────── */}}
-{{- $related := slice -}}
-{{- range first $maxCards $sorted -}}
-  {{- $related = $related | append .page -}}
-{{- end -}}
-
-{{/* ── Category fallback if no tag matches ─────────────────────── */}}
-{{- if lt (len $related) 3 -}}
-  {{- $catCandidates := slice -}}
-  {{- range $pool -}}
-    {{- $candidate := . -}}
-    {{- $pageCats := .Params.categories | default slice -}}
-    {{- if gt (len (intersect $currentCats $pageCats)) 0 -}}
-      {{/* skip pages already in $related */}}
-      {{- $alreadyIn := false -}}
+  {{- if gt (len $related) 0 -}}
+  <section class="related-articles" aria-labelledby="related-heading">
+    <h2 class="related-articles__heading" id="related-heading">Lue myös</h2>
+    <div class="related-articles__grid">
       {{- range $related -}}
-        {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
-      {{- end -}}
-      {{- if not $alreadyIn -}}
-        {{- $catCandidates = $catCandidates | append $candidate -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-  {{- $remaining := math.Sub $maxCards (len $related) -}}
-  {{- range first $remaining (where $catCandidates.ByDate.Reverse "Section" "posts") -}}
-    {{- $related = $related | append . -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* ── Hard fallback: latest posts (any category) ─────────────── */}}
-{{- if lt (len $related) 3 -}}
-  {{- range $pool.ByDate.Reverse -}}
-    {{- $candidate := . -}}
-    {{- if lt (len $related) 3 -}}
-      {{- $alreadyIn := false -}}
-      {{- range $related -}}
-        {{- if eq .Permalink $candidate.Permalink -}}{{- $alreadyIn = true -}}{{- end -}}
-      {{- end -}}
-      {{- if not $alreadyIn -}}
-        {{- $related = $related | append $candidate -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* ── Render ────────────────────────────────────────────────────── */}}
-{{- if $related -}}
-<section class="related-articles" aria-labelledby="related-heading">
-  <h2 class="related-articles__heading" id="related-heading">Aiheeseen liittyvät</h2>
-  <div class="related-articles__grid">
-    {{- range $related -}}
-    {{- $cat    := index .Params.categories 0 | default "" -}}
-    {{- $catSlug := $cat | urlize -}}
-    {{- $rt     := "" -}}
-    {{- if isset .Params "reading_time" -}}
-      {{- $rtVal := int .Params.reading_time -}}
-      {{- if eq $rtVal 0 -}}{{- $rt = "&lt;1 min" -}}{{- else -}}{{- $rt = printf "%d min" $rtVal -}}{{- end -}}
-    {{- else if gt .ReadingTime 0 -}}
-      {{- $rt = printf "%d min" .ReadingTime -}}
-    {{- end -}}
-
-    {{/* Build optimised thumbnail URL */}}
-    {{- $thumb := "" -}}
-    {{- with .Params.image_thumb -}}
-      {{- $thumb = . -}}
-    {{- else -}}
-      {{- with .Params.image -}}
-        {{- if hasPrefix . "https://images.unsplash.com" -}}
-          {{- $sep := "?" -}}{{- if in . "?" -}}{{- $sep = "&" -}}{{- end -}}
-          {{- $thumb = printf "%s%sw=240&h=160&fit=crop&fm=webp&q=75" . $sep -}}
-        {{- else if hasPrefix . "https://images.pexels.com" -}}
-          {{- $sep := "?" -}}{{- if in . "?" -}}{{- $sep = "&" -}}{{- end -}}
-          {{- $thumb = printf "%s%sw=240&h=160&fit=crop" . $sep -}}
-        {{- else -}}
-          {{- $thumb = . -}}
+      {{- $img := .Params.image_thumb | default (.Params.image | default "") -}}
+      <article class="related-card">
+        {{- if $img -}}
+        <a class="related-card__thumb" href="{{ .RelPermalink }}" aria-hidden="true" tabindex="-1">
+          <img src="{{ $img }}"
+               alt="{{ .Title | htmlEscape }}"
+               width="320"
+               height="180"
+               loading="lazy"
+               decoding="async">
+        </a>
         {{- end -}}
-      {{- end -}}
-    {{- end -}}
-
-    <a class="related-card" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
-      <div class="related-card__thumb" data-cat="{{ $catSlug }}">
-        {{- if $thumb -}}
-        <img src="{{ $thumb }}"
-             alt="{{ .Title | htmlEscape }}"
-             width="240" height="160"
-             loading="lazy"
-             decoding="async">
-        {{- end -}}
-      </div>
-      <div class="related-card__body">
-        {{- if $cat -}}
-        <span class="related-card__cat category-{{ $catSlug }}">{{ $cat }}</span>
-        {{- end -}}
-        <p class="related-card__title">{{ .Title }}</p>
-        <div class="related-card__meta">
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1." }}</time>
-          {{- if $rt -}}<span class="related-card__rt">{{ $rt | safeHTML }}</span>{{- end -}}
+        <div class="related-card__body">
+          <h3 class="related-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="related-card__meta">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1.2006" }}</time>
+          </div>
         </div>
-      </div>
-    </a>
-    {{- end -}}
-  </div>
-</section>
+      </article>
+      {{- end -}}
+    </div>
+  </section>
+  {{- end -}}
 {{- end -}}

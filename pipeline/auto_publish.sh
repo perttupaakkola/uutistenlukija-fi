@@ -8,16 +8,6 @@ LOG_FILE="$PIPELINE_DIR/logs/auto_publish_$(date -u +%Y%m%d_%H%M%S).log"
 
 cd "$PROJECT_DIR"
 
-# Load .env early for preflight
-if [ -f "$PROJECT_DIR/.env" ]; then
-  set -a
-  source "$PROJECT_DIR/.env"
-  set +a
-fi
-
-# ── Pre-flight checks ───────────────────────────────────────────────────────
-python3 "$PIPELINE_DIR/preflight_check.py" || { echo "[auto_publish] ❌ Preflight check failed. Aborting pipeline."; exit 1; }
-
 # ── Deduplication lockfile guard ─────────────────────────────────────────────
 LOCK_FILE="$PIPELINE_DIR/.pipeline_lock"
 
@@ -91,7 +81,7 @@ fi
 
 # Run pipeline (scan + rewrite + publish + build)
 echo "[1/3] Running pipeline..." | tee -a "$LOG_FILE"
-python3 run_pipeline.py --quick --max-articles 3 --dedup-window 48 2>&1 | tee -a "$LOG_FILE"
+python3 run_pipeline.py --quick --max-articles 1 --dedup-window 48 2>&1 | tee -a "$LOG_FILE"
 PIPELINE_EXIT=${PIPESTATUS[0]}
 
 if [ "$PIPELINE_EXIT" -ne 0 ]; then
@@ -101,9 +91,6 @@ fi
 
 # Commit and push if there are changes
 cd "$PROJECT_DIR"
-
-# ── Pre-flight checks ───────────────────────────────────────────────────────
-python3 "$PIPELINE_DIR/preflight_check.py" || { echo "[auto_publish] ❌ Preflight check failed. Aborting pipeline."; exit 1; }
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
 # CRITICAL: Reset index + restore layout/script files to HEAD before staging.
@@ -118,34 +105,16 @@ if git diff --cached --quiet; then
   echo "No new content to push." | tee -a "$LOG_FILE"
 else
   ARTICLE_COUNT=$(git diff --cached --name-only | grep -c "^content/posts/" || echo "0")
-  git commit -m "Auto-publish: ${ARTICLE_COUNT} new articles ($(date -u '+%Y-%m-%d %H:%M UTC'))" 2>&1 | tee -a "$LOG_FILE"
+  git commit -m "Auto-publish: ${ARTICLE_COUNT} new articles ($(date -u +%Y-%m-%d %H:%M UTC))" 2>&1 | tee -a "$LOG_FILE"
   
   echo "[3/3] Pushing to GitHub..." | tee -a "$LOG_FILE"
-  if git push origin main 2>&1 | tee -a "$LOG_FILE"; then
-    LOCAL_HEAD=$(git rev-parse HEAD)
-    REMOTE_HEAD=$(git ls-remote origin refs/heads/main 2>/dev/null | cut -f1)
-    if [ "$LOCAL_HEAD" = "$REMOTE_HEAD" ]; then
-      PUSH_TS=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
-      python3 -c "
-import json, pathlib
-f = pathlib.Path('$PIPELINE_DIR/logs/deploy-state.json')
-f.parent.mkdir(parents=True, exist_ok=True)
-f.write_text(json.dumps({'lastDeployPush': '$PUSH_TS', 'lastCommit': '$LOCAL_HEAD'}, indent=2))
-" 2>/dev/null || true
-      echo "[deploy] Push verified: $LOCAL_HEAD at $PUSH_TS" | tee -a "$LOG_FILE"
-    else
-      echo "[deploy] WARNING: HEAD mismatch after push (local=$LOCAL_HEAD remote=$REMOTE_HEAD)" | tee -a "$LOG_FILE"
-    fi
-  else
-    echo "[deploy] ERROR: git push failed" | tee -a "$LOG_FILE"
-  fi
+  git push origin main 2>&1 | tee -a "$LOG_FILE"
   echo "Deployed ${ARTICLE_COUNT} new articles." | tee -a "$LOG_FILE"
 fi
 
 # Regenerate health endpoint + metrics snapshot
 python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PIPELINE_DIR/generate_pipeline_status.py" 2>&1 | tee -a "$LOG_FILE" || echo "[pipeline_status] generation failed (non-fatal)" | tee -a "$LOG_FILE"
-python3 "$PIPELINE_DIR/feed_health_report.py" 2>&1 | tee -a "$LOG_FILE" || true
 bash "$PROJECT_DIR/scripts/daily-snapshot.sh" 2>&1 | tee -a "$LOG_FILE" || echo "[snapshot] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 
 echo "=== Auto-publish completed at $(date -u) ==="  | tee -a "$LOG_FILE"
