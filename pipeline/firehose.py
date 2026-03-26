@@ -47,6 +47,16 @@ FIREHOSE_RULES = [
             ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
             ' AND NOT page_type:"/Article/Tutorial_or_Guide"'
             ' AND NOT page_type:"/Article/FAQ"'
+            # Exclude known low-quality / non-news domains (2026-03-26)
+            ' AND NOT domain:scoop.it'
+            ' AND NOT domain:7sun.fi'
+            ' AND NOT domain:listamaailma.fi'
+            ' AND NOT domain:listafriikki.com'
+            ' AND NOT domain:uutiskaista.com'
+            ' AND NOT domain:bandilanews.com'
+            ' AND NOT domain:itbranschen.com'
+            ' AND NOT domain:etappi.com'
+            ' AND NOT domain:destia.fi'
         ),
         "quality": True,
     },
