@@ -76,7 +76,7 @@ def latest_article_timestamp() -> tuple[str | None, int]:
     return latest_dt.strftime("%Y-%m-%dT%H:%M:%SZ"), count
 
 
-DEPLOY_STATE_FILE = PIPELINE_DIR / "logs" / "deploy-state.json"
+DEPLOY_STATE_FILE = SCRIPT_DIR / "logs" / "deploy-state.json"
 
 
 def last_deploy_push() -> str | None:
