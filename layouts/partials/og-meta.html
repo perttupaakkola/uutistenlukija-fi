@@ -14,7 +14,7 @@
     Other      → "Page Title — Uutistenlukija"
 
   og:description:
-    Articles   → .Params.summary (pipeline field) → .Description → first 160 of .Summary
+    Articles   → .Params.summary → .Description → first 160 chars of .Content
     Others     → .Description → site description
 
   All pages: og:url, og:site_name, og:locale=fi_FI
@@ -34,13 +34,15 @@
 {{ if .IsPage }}
   {{ with .Params.image }}
     {{ if hasPrefix . "https://images.unsplash.com" }}
-      {{/* Unsplash — request exact OG dimensions via API */}}
-      {{ $sep := "?" }}{{ if in . "?" }}{{ $sep = "&" }}{{ end }}
-      {{ $ogImage = printf "%s%sw=1200&h=630&fit=crop&fm=jpg&q=85" . $sep }}
+      {{/* Unsplash — rebuild with exact OG dimensions, matching repo crop conventions */}}
+      {{ $clean := . | replaceRE `[?&]w=\d+` "" | replaceRE `[?&]h=\d+` "" | replaceRE `[?&]fit=[^&]+` "" | replaceRE `[?&]fm=[^&]+` "" | replaceRE `[?&]q=\d+` "" }}
+      {{ $sep := "?" }}{{ if in $clean "?" }}{{ $sep = "&" }}{{ end }}
+      {{ $ogImage = printf "%s%sw=1200&h=630&fit=crop&fm=jpg&q=85" $clean $sep }}
     {{ else if hasPrefix . "https://images.pexels.com" }}
       {{/* Pexels CDN */}}
-      {{ $sep := "?" }}{{ if in . "?" }}{{ $sep = "&" }}{{ end }}
-      {{ $ogImage = printf "%s%sw=1200&h=630&fit=crop" . $sep }}
+      {{ $clean := . | replaceRE `[?&]w=\d+` "" | replaceRE `[?&]h=\d+` "" | replaceRE `[?&]fit=[^&]+` "" }}
+      {{ $sep := "?" }}{{ if in $clean "?" }}{{ $sep = "&" }}{{ end }}
+      {{ $ogImage = printf "%s%sw=1200&h=630&fit=crop" $clean $sep }}
     {{ else if hasPrefix . "/images/articles/" }}
       {{/* Local Pexels file — absolute URL with crop params */}}
       {{ $ogImage = printf "%s%s?w=1200&h=630&fit=crop" $siteBase . }}
@@ -109,27 +111,33 @@
 {{ end }}
 
 {{/* ── og:description ────────────────────────────────────────────── */}}
-{{ $ogDesc := "" }}
+{{ $ogDesc := .Site.Params.description }}
 {{ if .IsHome }}
   {{ $ogDesc = .Site.Params.description }}
+{{ else if eq .RelPermalink "/haku/" }}
+  {{ $ogDesc = printf "Hae uutisia Uutistenlukijasta – kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede." }}
 {{ else if .IsPage }}
-  {{ if .Params.summary }}
-    {{ $ogDesc = .Params.summary | plainify | truncate 160 }}
-  {{ else if .Description }}
-    {{ $ogDesc = .Description | truncate 160 }}
-  {{ else if .Summary }}
-    {{ $ogDesc = .Summary | plainify | truncate 160 }}
+  {{ with .Params.summary }}
+    {{ $ogDesc = . }}
+  {{ else with .Description }}
+    {{ $ogDesc = . }}
   {{ else }}
-    {{ $ogDesc = .Site.Params.description }}
+    {{ $ogDesc = .Content | plainify | truncate 160 }}
   {{ end }}
-{{ else }}
-  {{ if .Description }}
-    {{ $ogDesc = .Description | truncate 160 }}
+{{ else if .Description }}
+  {{ $ogDesc = .Description }}
+{{ else if eq .Kind "term" }}
+  {{ if eq .Data.Plural "categories" }}
+    {{ $ogDesc = printf "%s – uusimmat uutiset ja ajankohtaiset artikkelit aiheesta %s." .Title .Title }}
+  {{ else if eq .Data.Plural "tags" }}
+    {{ $ogDesc = printf "%s – artikkelit ja uutiset avainsanalla %s." .Title .Title }}
   {{ else }}
-    {{ $ogDesc = .Site.Params.description }}
+    {{ $ogDesc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) }}
   {{ end }}
+{{ else if or .IsSection (eq .Kind "taxonomy") }}
+  {{ $ogDesc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) }}
 {{ end }}
-{{/* Ensure description never empty */}}
+{{ $ogDesc = $ogDesc | plainify | truncate 152 }}
 {{ if not $ogDesc }}{{ $ogDesc = .Site.Params.description }}{{ end }}
 
 {{/* ── Output ─────────────────────────────────────────────────────── */}}

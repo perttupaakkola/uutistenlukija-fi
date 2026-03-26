@@ -15,7 +15,7 @@
 <a href="{{ .Permalink }}" class="category-featured">
   {{ with .Params.image }}
   <div class="category-featured__img-wrap">
-    <img src="{{ . }}" alt="{{ $.Title }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high" width="260" height="146">
+    <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high" width="260" height="146">
   </div>
   {{ end }}
   <div class="category-featured__body">

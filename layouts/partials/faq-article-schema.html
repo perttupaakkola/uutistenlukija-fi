@@ -1,1 +1,47 @@
-{{/* faq-article-schema.html — FAQPage + Article JSON-LD stub */}}
+{{- if and .IsPage (eq .Section "posts") -}}
+  {{- $keyPoints := .Params.key_points | default (slice) -}}
+  {{- if ge (len $keyPoints) 2 -}}
+    {{- $answerSource := .Params.summary | default (.Summary | plainify) | default (.Content | plainify) -}}
+    {{- $answerSource = $answerSource | replaceRE `\s+` " " | strings.TrimSpace -}}
+    {{- $sentenceMatches := findRE `[^.!?]+[.!?]+(["”’']+)?` $answerSource 2 -}}
+    {{- $answerText := "" -}}
+    {{- if ge (len $sentenceMatches) 2 -}}
+      {{- $answerText = delimit $sentenceMatches " " -}}
+    {{- else if eq (len $sentenceMatches) 1 -}}
+      {{- $answerText = index $sentenceMatches 0 -}}
+    {{- else -}}
+      {{- $answerText = $answerSource -}}
+    {{- end -}}
+    {{- $answerText = $answerText | replaceRE `\s+` " " | strings.TrimSpace -}}
+
+    {{- $entities := slice -}}
+    {{- range first 3 $keyPoints -}}
+      {{- $point := . | plainify | replaceRE `\s+` " " | strings.TrimSpace -}}
+      {{- if $point -}}
+        {{- $question := $point -}}
+        {{- if not (hasSuffix $question "?") -}}
+          {{- $question = printf "%s?" ($question | strings.TrimRight " .!?") -}}
+        {{- end -}}
+        {{- $entities = $entities | append (dict
+          "@type" "Question"
+          "name" $question
+          "acceptedAnswer" (dict
+            "@type" "Answer"
+            "text" $answerText
+          )
+        ) -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- if ge (len $entities) 2 -}}
+      {{- $schema := dict
+        "@context" "https://schema.org"
+        "@type" "FAQPage"
+        "mainEntity" $entities
+      -}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
