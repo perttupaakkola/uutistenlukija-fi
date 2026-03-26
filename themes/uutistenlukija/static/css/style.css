@@ -1838,6 +1838,55 @@ pre code {
   background: var(--accent);
   color: #fff;
 }
+.share-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0 1.25rem;
+  font-family: var(--font-sans);
+}
+.share-buttons-row__label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.share-buttons-row__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+.share-buttons-row__button:hover,
+.share-buttons-row__button:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.share-buttons-row__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.2rem;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+.share-buttons-row__button.is-copied {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--card-bg));
+  color: var(--accent);
+}
 .tag-cloud {
   margin: 1.5rem 0 2rem;
   padding: 1.5rem;

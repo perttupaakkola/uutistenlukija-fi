@@ -12,10 +12,11 @@
 {{/* Featured article — newest with this tag */}}
 {{ $sorted := .Pages.ByDate.Reverse }}
 {{ with index $sorted 0 }}
+{{ $featCat := index (.Params.categories | default slice) 0 | default "kotimaa" }}
 <a href="{{ .Permalink }}" class="category-featured">
   {{ with .Params.image }}
   <div class="category-featured__img-wrap">
-    <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high" width="260" height="146">
+    <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high" width="260" height="146" onerror="if(this.dataset.fallbackApplied==='1'){return;}this.dataset.fallbackApplied='1';this.src='/images/categories/{{ $featCat | lower }}.jpg'">
   </div>
   {{ end }}
   <div class="category-featured__body">

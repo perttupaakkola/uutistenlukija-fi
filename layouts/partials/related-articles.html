@@ -95,8 +95,9 @@
         {{ partial "card-image.html" (dict
           "img" $img
           "thumb" $thumb
-          "alt" .Title
+          "alt" (.Params.image_alt | default .Title)
           "permalink" .RelPermalink
+          "fallback" (printf "/images/categories/%s.jpg" $fallbackCat)
         ) }}
         <div class="related-card__body">
           <h3 class="related-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>

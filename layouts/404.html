@@ -12,6 +12,11 @@
     <p class="error-back">
       <a href="/" class="back-home-link">← Palaa etusivulle</a>
     </p>
+    <nav class="error-links" aria-label="Hyödylliset linkit">
+      <a href="/haku/">Haku</a>
+      <a href="/categories/">Kategoriat</a>
+      <a href="/paivan-kooste/">Päivän kooste</a>
+    </nav>
   </section>
 
   {{ $latest := first 3 ((where .Site.RegularPages "Section" "posts").ByDate.Reverse) }}

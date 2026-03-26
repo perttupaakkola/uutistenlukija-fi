@@ -16,7 +16,6 @@
     {{ end }}
   </div>
   {{ end }}
-  {{ partial "social-share.html" . }}
   {{ partial "key-points.html" . }}
   {{ partial "article-summary.html" . }}
   {{ partial "toc.html" . }}
@@ -32,6 +31,9 @@
     · <span class="article-reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ $readingMinutes }} min lukuaika</span>
     {{- end }}
   </div>
+  <!-- share-buttons-row start -->
+  {{ partial "share-buttons.html" . }}
+  <!-- share-buttons-row end -->
   {{ with .Params.source_name }}
   <div class="source-attribution">
     <span class="source-attribution__label">Alkuperäinen lähde:</span>

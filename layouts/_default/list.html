@@ -7,13 +7,14 @@
 
 {{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
 
+{{ if gt (len $paginator.Pages) 0 }}
 <div class="articles-grid" id="articles-grid">
   {{ range $paginator.Pages }}
   {{ $cat := index .Params.categories 0 | default "kotimaa" }}
   {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="article-card">
-    {{ partial "card-image.html" (dict "img" $img "thumb" $img "alt" $alt "eager" false "hero" false "permalink" .Permalink) }}
+    {{ partial "card-image.html" (dict "img" $img "thumb" $img "alt" $alt "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
     {{ with .Params.categories }}
     <span class="category-label">{{ index . 0 }}</span>
     {{ end }}
@@ -28,4 +29,11 @@
 </div>
 
 {{ partial "pagination.html" (dict "Paginator" $paginator) }}
+{{ else }}
+<article class="single-article empty-state">
+  <h2>Tässä kategoriassa ei ole vielä artikkeleita</h2>
+  <p>Kokeile hetken päästä uudelleen tai selaa muita osioita.</p>
+  <p><a href="/">Etusivu</a> · <a href="/haku/">Haku</a> · <a href="/categories/">Kaikki kategoriat</a></p>
+</article>
+{{ end }}
 {{ end }}

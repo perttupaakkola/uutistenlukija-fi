@@ -18,6 +18,7 @@
 {{- $hero   := .hero   | default false -}}
 {{- $href   := .permalink | default "#" -}}
 {{- $track  := .track | default "" -}}
+{{- $fallback := .fallback | default "/images/categories/kotimaa.jpg" -}}
 
 {{- $loading  := cond $eager "eager" "lazy" -}}
 {{- $fetchpri := cond $eager "high" "auto" -}}
@@ -71,6 +72,7 @@
       width="{{ if $hero }}800{{ else }}400{{ end }}"
       height="{{ if $hero }}450{{ else }}225{{ end }}"
       onload="this.classList.add('img-loaded')"
-      onerror="this.classList.add('img-loaded')">
+      onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');this.closest('.article-image-link')?.classList.add('img-failed');return;}this.dataset.fallbackApplied='1';this.src='{{ $fallback }}';this.srcset='';this.classList.add('img-loaded');"
+      data-fallback="{{ $fallback }}">
   </picture>
 </a>

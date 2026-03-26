@@ -126,7 +126,7 @@
   function renderResults(fuseResults, query) {
     if (!fuseResults.length) {
       countEl.textContent = '';
-      results.innerHTML = '<div class="no-results">Ei hakutuloksia haulle &ldquo;' + esc(query) + '&rdquo;</div>';
+      results.innerHTML = '<div class="no-results"><h2>Ei hakutuloksia</h2><p>Haulla &ldquo;' + esc(query) + '&rdquo; ei löytynyt osumia.</p><p>Kokeile yleisempää hakusanaa tai selaa aiheita suoraan:</p><p><a href="/">Etusivu</a> · <a href="/categories/">Kategoriat</a> · <a href="/paivan-kooste/">Päivän kooste</a></p></div>';
       return;
     }
 
@@ -152,7 +152,7 @@
         : '';
 
       var thumbHtml = a.image
-        ? '<img class="result-thumb" src="' + esc(a.image) + '" alt="" loading="lazy" decoding="async" width="80" height="60">'
+        ? '<img class="result-thumb" src="' + esc(a.image) + '" alt="" loading="lazy" decoding="async" width="80" height="60" onerror="this.style.display=\'none\'">'
         : '';
 
       return '<div class="search-result" role="listitem">' +

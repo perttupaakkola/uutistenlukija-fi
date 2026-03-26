@@ -41,7 +41,7 @@
             decoding="async"
             width="800" height="450"
             onload="this.classList.add('img-loaded')"
-            onerror="this.classList.add('img-loaded')">
+            onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}';this.classList.add('img-loaded')">
         </picture>
         <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-scrim-body">
@@ -72,7 +72,7 @@
       {{ with .Params.categories }}
       <span class="category-label">{{ index . 0 }}</span>
       {{ end }}
-      {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink "track" "hero_click") }}
+      {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink "track" "hero_click" "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
       <h3><a href="{{ .Permalink }}" data-track="hero_click">{{ .Title }}</a></h3>
       {{ with .Params.description }}
       <p class="highlight-card__excerpt">{{ . | truncate 120 }}</p>
