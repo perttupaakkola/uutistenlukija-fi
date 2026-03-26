@@ -2,53 +2,81 @@
   related-articles.html — "Lue myös" section for article pages.
 
   Rules:
-    - same category only (first category slug)
-    - section = posts
+    - prefer up to 3 newest published posts from the same first category
     - exclude current page
-    - newest first
-    - max 3 cards
-    - skip entirely when no matches
+    - if same-category matches < 3, fill the remainder with newest published posts from any category
+    - render image, title, and publication date
+    - skip entirely only if there are no eligible published posts at all
 */ -}}
 
 {{- $current := . -}}
+{{- $currentPermalink := .Permalink -}}
 {{- $categories := .Params.categories | default (slice) -}}
 {{- $currentCat := "" -}}
 {{- if gt (len $categories) 0 -}}
   {{- $currentCat = (index $categories 0) | urlize -}}
 {{- end -}}
 
+{{- $publishedPosts := where site.RegularPages "Section" "posts" -}}
+{{- $publishedPosts = where $publishedPosts "Draft" "ne" true -}}
+{{- $publishedPosts = where $publishedPosts "Date" "le" now -}}
+{{- $publishedPosts = $publishedPosts.ByDate.Reverse -}}
+
+{{- $related := slice -}}
+
 {{- if $currentCat -}}
-  {{- $related := slice -}}
-  {{- range where site.RegularPages "Section" "posts" -}}
+  {{- range $publishedPosts -}}
     {{- $candidateCats := .Params.categories | default (slice) -}}
     {{- $candidateCat := "" -}}
     {{- if gt (len $candidateCats) 0 -}}
       {{- $candidateCat = (index $candidateCats 0) | urlize -}}
     {{- end -}}
-    {{- if and (ne .Permalink $current.Permalink) (eq $candidateCat $currentCat) -}}
+    {{- if and (ne .Permalink $currentPermalink) (eq $candidateCat $currentCat) -}}
       {{- $related = $related | append . -}}
     {{- end -}}
   {{- end -}}
+{{- end -}}
 
-  {{- $related = first 3 ($related.ByDate.Reverse) -}}
+{{- $related = first 3 $related -}}
 
-  {{- if gt (len $related) 0 -}}
-  <section class="related-articles" aria-labelledby="related-heading">
-    <h2 class="related-articles__heading" id="related-heading">Lue myös</h2>
-    <div class="related-articles__grid">
+{{- if lt (len $related) 3 -}}
+  {{- range $publishedPosts -}}
+    {{- $candidate := . -}}
+    {{- if and (ne $candidate.Permalink $currentPermalink) (lt (len $related) 3) -}}
+      {{- $alreadyIncluded := false -}}
       {{- range $related -}}
-      {{- $img := .Params.image_thumb | default (.Params.image | default "") -}}
-      <article class="related-card">
-        {{- if $img -}}
-        <a class="related-card__thumb" href="{{ .RelPermalink }}" aria-hidden="true" tabindex="-1">
-          <img src="{{ $img }}"
-               alt="{{ .Title | htmlEscape }}"
-               width="320"
-               height="180"
-               loading="lazy"
-               decoding="async">
-        </a>
+        {{- if eq .Permalink $candidate.Permalink -}}
+          {{- $alreadyIncluded = true -}}
         {{- end -}}
+      {{- end -}}
+      {{- if not $alreadyIncluded -}}
+        {{- $related = $related | append $candidate -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $related = first 3 $related -}}
+
+{{- if gt (len $related) 0 -}}
+<section class="related-articles" aria-labelledby="related-heading">
+  <h2 class="related-articles__heading" id="related-heading">Lue myös</h2>
+  <div class="related-articles__grid">
+    {{- range $related -}}
+      {{- $candidateCats := .Params.categories | default (slice) -}}
+      {{- $fallbackCat := "uutiset" -}}
+      {{- if gt (len $candidateCats) 0 -}}
+        {{- $fallbackCat = (index $candidateCats 0) | lower -}}
+      {{- end -}}
+      {{- $img := .Params.image | default (printf "/images/categories/%s.jpg" $fallbackCat) -}}
+      {{- $thumb := .Params.image_thumb | default $img -}}
+      <article class="related-card">
+        {{ partial "card-image.html" (dict
+          "img" $img
+          "thumb" $thumb
+          "alt" .Title
+          "permalink" .RelPermalink
+        ) }}
         <div class="related-card__body">
           <h3 class="related-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <div class="related-card__meta">
@@ -56,8 +84,7 @@
           </div>
         </div>
       </article>
-      {{- end -}}
-    </div>
-  </section>
-  {{- end -}}
+    {{- end -}}
+  </div>
+</section>
 {{- end -}}

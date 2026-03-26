@@ -8,6 +8,7 @@
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ partial "hero-image.html" . }}
+  {{ partial "key-points.html" . }}
   <div class="article-meta">
     {{ .Date | time.Format "2.1.2006 klo 15:04" }}
     {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
@@ -43,47 +44,7 @@
   </div>
   {{ end }}
 
-  {{/* Related articles — category-matched, deduplicated */}}
-  {{ $currentPermalink := .Permalink }}
-  {{ $currentCategories := .Params.categories }}
-  {{ $related := slice }}
-  {{ $seen := slice }}
-  {{ range where .Site.RegularPages "Section" "posts" }}
-    {{ $page := . }}
-    {{ if ne $page.Permalink $currentPermalink }}
-      {{ $pageCategories := $page.Params.categories }}
-      {{ range $currentCategories }}
-        {{ $cat := . }}
-        {{ range $pageCategories }}
-          {{ if eq . $cat }}
-            {{ if not (in $seen $page.Permalink) }}
-              {{ $related = $related | append $page }}
-              {{ $seen = $seen | append $page.Permalink }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-  {{/* Fallback: recent posts if no category matches */}}
-  {{ if not $related }}
-    {{ $related = first 4 (where .Site.RegularPages "Section" "posts") }}
-    {{ $related = where $related "Permalink" "ne" $currentPermalink }}
-  {{ end }}
-  {{ $related = first 4 $related }}
-  {{ if $related }}
-  <div class="related-articles">
-    <h3>Lue myös</h3>
-    <div class="related-grid">
-      {{ range $related }}
-      <a href="{{ .Permalink }}" class="related-link">
-        <span class="related-title">{{ .Title }}</span>
-        <span class="related-meta">{{ .Date | time.Format "2.1.2006" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</span>
-      </a>
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
+  {{ partial "related-articles-v2.html" . }}
 </article>
 
 <button id="back-to-top" aria-label="Takaisin ylös" title="Takaisin ylös">↑</button>
