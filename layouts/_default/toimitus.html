@@ -5,7 +5,7 @@
 </div>
 
 <div class="toimitus-grid">
-  {{ range hugo.Data.writers }}
+  {{ range .Site.Data.writers }}
   <div class="writer-card">
     <img src="{{ .image }}" alt="{{ .name }}" class="writer-photo" loading="lazy" decoding="async" width="120" height="120">
     <div class="writer-info">
