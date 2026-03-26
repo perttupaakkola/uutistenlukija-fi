@@ -1,0 +1,23 @@
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+    filter: 'tag:-hash-hidden'
+
+  /tag/{slug}/:
+    permalink: /{slug}/
+    template: index
+    filter: 'tag:{slug}+tag:-hash-hidden'
+
+  /author/{slug}/:
+    permalink: /author/{slug}/
+    template: author
+
+  /podcast/:
+    permalink: /podcast/{slug}/
+    template: podcast
+    filter: 'tag:podcast+tag:-hash-hidden'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
