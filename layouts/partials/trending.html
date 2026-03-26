@@ -1,36 +1,38 @@
 {{- /*
   Trending section: recent cross-category scan, excluding already-used stories.
   Accepts either full page context or dict:
+    - items: preselected pages to render
     - Site: Hugo site object
     - exclude: slice of permalinks to skip
     - limit: max items (default 5)
 */ -}}
 
-{{- $site := .Site -}}
-{{- $exclude := .exclude | default (slice) -}}
-{{- $limit := .limit | default 5 -}}
-{{- $allPages := where $site.RegularPages "Section" "posts" -}}
-{{- $seenCats := slice -}}
-{{- $trending := slice -}}
-
-{{- range $allPages -}}
-  {{- if and (not (in $exclude .Permalink)) (lt (len $trending) $limit) -}}
-    {{- $cat := lower (index .Params.categories 0 | default "uutiset") -}}
-    {{- if not (in $seenCats $cat) -}}
-      {{- $seenCats = $seenCats | append $cat -}}
-      {{- $trending = $trending | append . -}}
+{{- $items := .items | default (slice) -}}
+{{- if not $items -}}
+  {{- $site := .Site -}}
+  {{- $exclude := .exclude | default (slice) -}}
+  {{- $limit := .limit | default 5 -}}
+  {{- $allPages := where $site.RegularPages "Section" "posts" -}}
+  {{- $seenCats := slice -}}
+  {{- range $allPages -}}
+    {{- if lt (len $items) $limit -}}
+      {{- $cat := lower (index .Params.categories 0 | default "uutiset") -}}
+      {{- if and (not (in $exclude .Permalink)) (not (in $seenCats $cat)) -}}
+        {{- $seenCats = $seenCats | append $cat -}}
+        {{- $items = $items | append . -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 
-{{- if $trending -}}
+{{- if $items -}}
 <section class="tanaan-section" aria-label="Tänään aktiivisimmat">
   <div class="homepage-block-heading">
     <h2 class="tanaan-title">Tänään aktiivisimmat</h2>
     <p class="homepage-block-heading__deck">Nopea poiminta eri aiheista ilman samoja juttuja uudelleen.</p>
   </div>
   <ol class="tanaan-list">
-    {{- range $i, $p := $trending -}}
+    {{- range $i, $p := $items -}}
     {{- $cat := index $p.Params.categories 0 | default "Uutiset" -}}
     {{- $catSlug := lower $cat -}}
     <li class="tanaan-item">

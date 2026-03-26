@@ -6,6 +6,7 @@
 {{ $dayAgoUnix := sub $nowUnix 86400 }}
 {{ $leadScratch := newScratch }}
 {{ $candidatePool := first 24 $sorted }}
+{{ $breakingPool := where $candidatePool ".Params.breaking" true }}
 
 {{/* Build lightweight frequency maps from the freshest story window. */}}
 {{ range $candidatePool }}
@@ -47,8 +48,12 @@
 {{ end }}
 
 {{ $leadRanked := sort $leadCandidates "score" "desc" }}
-{{ $leadEntry := index $leadRanked 0 }}
-{{ $lead := $leadEntry.page }}
+{{ $lead := false }}
+{{ if gt (len $breakingPool) 0 }}
+  {{ $lead = index $breakingPool 0 }}
+{{ else if gt (len $leadRanked) 0 }}
+  {{ $lead = (index $leadRanked 0).page }}
+{{ end }}
 {{ $leadCategory := "kotimaa" }}
 {{ with $lead }}
   {{ $leadCategory = lower (index .Params.categories 0 | default "kotimaa") }}
@@ -109,7 +114,11 @@
         </picture>
         <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-scrim-body">
+          {{ if .Params.breaking }}
+          <span class="category-pill">JUURI NYT</span>
+          {{ else }}
           {{ with .Params.categories }}<span class="category-pill category-{{ index . 0 | lower | urlize }}">{{ index . 0 }}</span>{{ end }}
+          {{ end }}
           <h2 class="hero-scrim-title">{{ .Title }}</h2>
           {{ with .Params.description }}
           <p class="hero-scrim-excerpt">{{ . | truncate 180 }}</p>
@@ -164,33 +173,49 @@
   {{ end }}
 </div>
 
-{{ partial "trending.html" (dict "Site" .Site "exclude" $seen "limit" 4) }}
+{{ $trending := slice }}
+{{ $trendingCats := slice }}
+{{ range $sorted }}
+  {{ $cat := lower (index .Params.categories 0 | default "uutiset") }}
+  {{ if and (not (in $seen .Permalink)) (lt (len $trending) 4) (not (in $trendingCats $cat)) }}
+    {{ $trending = $trending | append . }}
+    {{ $trendingCats = $trendingCats | append $cat }}
+  {{ end }}
+{{ end }}
+{{ if $trending }}
+  {{ range $trending }}
+    {{ $seen = $seen | append .Permalink }}
+  {{ end }}
+{{ end }}
+{{ partial "trending.html" (dict "items" $trending) }}
 
 {{ $latestPool := where $sorted "Permalink" "not in" $seen }}
 {{ $latestItems := first 5 $latestPool }}
-{{ if $latestItems }}
 <section class="lyhyet-section" aria-label="Tuoreimmat uutiset">
   <div class="homepage-block-heading lyhyet-header">
     <div>
       <h2 class="lyhyet-title">Tuoreimmat</h2>
-      <p class="homepage-block-heading__deck">Viisi uusinta otsikkoa ilman kuvapainoa.</p>
+      <p class="homepage-block-heading__deck">{{ if $latestItems }}Viisi uusinta otsikkoa ilman kuvapainoa.{{ else }}Tuore virta täyttyy heti, kun uutta julkaistaan.{{ end }}</p>
     </div>
   </div>
   <ol class="lyhyet-list">
-    {{ range $latestItems }}
-    {{ $seen = $seen | append .Permalink }}
-    <li class="lyhyet-item">
-      <a href="{{ .RelPermalink }}" class="lyhyet-link">
-        <div class="lyhyet-body">
-          <span class="lyhyet-headline">{{ .Title }}</span>
-        </div>
-        <time class="lyhyet-time" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1. klo 15:04" }}</time>
-      </a>
-    </li>
+    {{ if $latestItems }}
+      {{ range $latestItems }}
+      {{ $seen = $seen | append .Permalink }}
+      <li class="lyhyet-item">
+        <a href="{{ .RelPermalink }}" class="lyhyet-link">
+          <div class="lyhyet-body">
+            <span class="lyhyet-headline">{{ .Title }}</span>
+          </div>
+          <time class="lyhyet-time" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1. klo 15:04" }}</time>
+        </a>
+      </li>
+      {{ end }}
+    {{ else }}
+      <li class="lyhyet-item lyhyet-item--empty">Ei uusia otsikoita juuri nyt.</li>
     {{ end }}
   </ol>
 </section>
-{{ end }}
 
 {{/* Category sections ordered by freshest story in the last 24h. */}}
 {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
@@ -243,7 +268,7 @@
 
 {{/* Newsletter signup band */}}
 {{ partial "newsletter-band.html" . }}
-{{ partial "most-read.html" . }}
+{{ partial "most-read.html" (dict "Site" .Site "exclude" $seen) }}
 {{ partial "continue-reading.html" . }}
 {{ partial "tag-cloud.html" . }}
 {{ end }}

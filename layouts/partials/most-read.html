@@ -3,7 +3,11 @@
   Uses localStorage-based reader history when available.
   Falls back to a server-rendered starter list so the block never looks empty.
 */}}
-{{ $fallback := first 5 ((where site.RegularPages "Section" "posts").ByDate.Reverse) }}
+{{ $site := .Site | default site }}
+{{ $exclude := .exclude | default (slice) }}
+{{ $fallbackPool := where $site.RegularPages "Section" "posts" }}
+{{ $fallbackSorted := $fallbackPool.ByDate.Reverse }}
+{{ $fallback := first 5 (where $fallbackSorted "Permalink" "not in" $exclude) }}
 <aside class="most-read-widget" aria-label="Luetuimmat artikkelit" id="most-read-widget">
   <h3 class="most-read-title" id="most-read-title">📈 Uusimmat</h3>
   <ol class="most-read-list" id="most-read-list">
@@ -15,7 +19,7 @@
     </li>
     {{ end }}
   </ol>
-  <p class="most-read-empty" id="most-read-empty" style="display:none">Ei vielä lukuhistoriaa.</p>
+  <p class="most-read-empty" id="most-read-empty"{{ if $fallback }} style="display:none"{{ end }}>Ei vielä lukuhistoriaa.</p>
 </aside>
 
 <script>
@@ -56,12 +60,13 @@
     if (top.length === 0) {
       if (title) title.textContent = '📈 Uusimmat';
       list.style.display = '';
-      if (empty) empty.style.display = 'none';
+      if (empty) empty.style.display = list.children.length ? 'none' : '';
       return;
     }
 
     if (title) title.textContent = '📈 Luetuimmat';
     list.innerHTML = '';
+    if (empty) empty.style.display = 'none';
     top.forEach(function (item, i) {
       var li = document.createElement('li');
       li.className = 'most-read-item';
