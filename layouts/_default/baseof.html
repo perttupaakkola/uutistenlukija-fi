@@ -6,7 +6,35 @@
   <meta name="ai-generated" content="true">
   {{/* Title tag: pass full headline unless a page-specific SEO title override is set. */}}
   <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . | plainify | truncate 155 }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 155 }}{{ else }}{{ .Site.Params.description | plainify | truncate 155 }}{{ end }}{{ end }}">
+  {{ $metaDesc := .Site.Params.description }}
+  {{ if .IsHome }}
+    {{ $metaDesc = .Site.Params.description }}
+  {{ else if eq .RelPermalink "/haku/" }}
+    {{ $metaDesc = printf "Hae uutisia Uutistenlukijasta – kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede." }}
+  {{ else if .IsPage }}
+    {{ with .Params.summary }}
+      {{ $metaDesc = . }}
+    {{ else with .Description }}
+      {{ $metaDesc = . }}
+    {{ else with .Summary }}
+      {{ $metaDesc = . }}
+    {{ end }}
+  {{ else if .Description }}
+    {{ $metaDesc = .Description }}
+  {{ else if eq .Kind "term" }}
+    {{ if eq .Data.Plural "categories" }}
+      {{ $metaDesc = printf "%s – uusimmat uutiset ja ajankohtaiset artikkelit aiheesta %s." .Title .Title }}
+    {{ else if eq .Data.Plural "tags" }}
+      {{ $metaDesc = printf "%s – artikkelit ja uutiset avainsanalla %s." .Title .Title }}
+    {{ else }}
+      {{ $metaDesc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) }}
+    {{ end }}
+  {{ else if or .IsSection (eq .Kind "taxonomy") }}
+    {{ $metaDesc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) }}
+  {{ end }}
+  {{ $metaDesc = $metaDesc | plainify | truncate 152 }}
+  {{ if not $metaDesc }}{{ $metaDesc = .Site.Title }}{{ end }}
+  <meta name="description" content="{{ $metaDesc }}">
   {{- with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end -}}
   {{/* === Resource hints === */}}
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
