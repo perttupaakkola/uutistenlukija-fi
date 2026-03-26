@@ -67,6 +67,8 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "The Guardian":       2,
     "Der Spiegel International": 2,
     "Tekniikka & Talous": 2,
+    "Tivi":               2,
+    "MikroBitti":         2,
     "TechCrunch":         2,
     "Ars Technica":       2,
     "Science News":       2,
@@ -184,6 +186,18 @@ RSS_FEEDS = [
     {
         "name": "Tekniikka & Talous",
         "url": "https://www.tekniikkatalous.fi/api/feed/v2/rss/tt",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "Tivi",
+        "url": "https://www.tivi.fi/feed/",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "MikroBitti",
+        "url": "https://mikrobitti.fi/feed/",
         "language": "fi",
         "category_hint": "Teknologia",
     },
