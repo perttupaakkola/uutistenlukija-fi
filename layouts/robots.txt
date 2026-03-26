@@ -5,15 +5,15 @@
 User-agent: *
 Allow: /
 
-# Block internal tooling and search UI (no crawlable content)
+# Block internal tooling and non-public paths
+Disallow: /api/
+Disallow: /admin/
 Disallow: /pipeline-dashboard/
 Disallow: /haku/
 
-# Block Hugo taxonomy index pages (low-value listing pages)
-# NOTE: Allow /categories/*/index.xml — RSS feeds need to be crawlable for Ampparit etc.
+# Block thin taxonomy tag pages
+# NOTE: Keep category RSS feeds explicitly allowed for aggregators.
 Disallow: /tags/
-# /categories/ HTML pages blocked but RSS feeds allowed via Allow rule
-Disallow: /categories/
 Allow: /categories/*/index.xml
 
 # Block draft/test content if accidentally published

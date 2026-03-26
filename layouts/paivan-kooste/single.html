@@ -35,7 +35,7 @@
     {{ $dayPosts = $dayPosts | append . }}
   {{ end }}
 {{ end }}
-{{ $dayPosts = $dayPosts | sort "Date" "desc" }}
+{{ if gt (len $dayPosts) 0 }}{{ $dayPosts = sort $dayPosts "Date" "desc" }}{{ end }}
 
 {{/* Build per-section article lists (max 5 each) */}}
 {{ $sectionArticles := dict }}

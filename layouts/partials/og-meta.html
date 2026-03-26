@@ -57,17 +57,29 @@
 
 {{/* Section/category page fallback */}}
 {{ if not $ogImage }}
+  {{ with .Params.og_image }}
+    {{ if hasPrefix . "https://" }}
+      {{ $ogImage = . }}
+    {{ else }}
+      {{ $ogImage = printf "%s/%s" $siteBase (strings.TrimPrefix "/" .) }}
+    {{ end }}
+    {{ $ogImageAlt = printf "%s — %s" $.Title $.Site.Title }}
+  {{ end }}
+{{ end }}
+
+{{ if not $ogImage }}
   {{ if .IsSection }}
     {{ $slug := .Section | lower | urlize }}
-    {{ if $slug }}
+    {{ if and $slug (ne $slug "tags") (ne $slug "categories") }}
       {{ $ogImage = printf "%s/images/og-%s.png" $siteBase $slug }}
       {{ $ogImageAlt = printf "%s — %s" .Title .Site.Title }}
     {{ end }}
   {{ else if eq .Kind "term" }}
-    {{/* taxonomy term — try category image, else site default */}}
-    {{ $slug := .Title | lower | urlize }}
-    {{ $ogImage = printf "%s/images/og-%s.png" $siteBase $slug }}
-    {{ $ogImageAlt = printf "%s — %s" .Title .Site.Title }}
+    {{ if eq .Data.Plural "categories" }}
+      {{ $slug := .Title | lower | urlize }}
+      {{ $ogImage = printf "%s/images/og-%s.png" $siteBase $slug }}
+      {{ $ogImageAlt = printf "%s — %s" .Title .Site.Title }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
@@ -75,6 +87,11 @@
 {{ if not $ogImage }}
   {{ $ogImage = printf "%s/images/og-image.png" $siteBase }}
   {{ $ogImageAlt = .Site.Title }}
+{{ end }}
+
+{{ $ogImageType := "image/jpeg" }}
+{{ if or (hasSuffix $ogImage ".png") (in $ogImage ".png?") }}
+  {{ $ogImageType = "image/png" }}
 {{ end }}
 
 {{/* ── og:title ──────────────────────────────────────────────────── */}}
@@ -126,7 +143,7 @@
 <meta property="og:description" content="{{ $ogDesc }}">
 <meta property="og:image"            content="{{ $ogImage }}">
 <meta property="og:image:secure_url" content="{{ $ogImage }}">
-<meta property="og:image:type"       content="image/jpeg">
+<meta property="og:image:type"       content="{{ $ogImageType }}">
 <meta property="og:image:width"      content="{{ $ogW }}">
 <meta property="og:image:height"     content="{{ $ogH }}">
 <meta property="og:image:alt"        content="{{ $ogImageAlt }}">
