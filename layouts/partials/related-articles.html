@@ -11,6 +11,7 @@
 
 {{- $current := . -}}
 {{- $currentPermalink := .Permalink -}}
+{{- $sourceTitle := .Title -}}
 {{- $categories := .Params.categories | default (slice) -}}
 {{- $currentCat := "" -}}
 {{- if gt (len $categories) 0 -}}
@@ -91,6 +92,8 @@
       {{- end -}}
       {{- $img := .Params.image | default (printf "/images/categories/%s.jpg" $fallbackCat) -}}
       {{- $thumb := .Params.image_thumb | default $img -}}
+      {{- $targetTitle := .Title -}}
+      {{- $trackRelatedClick := printf "if(typeof gtag==='function'){gtag('event','related_article_click',{target_title:%s,source_title:%s});}" ($targetTitle | jsonify) ($sourceTitle | jsonify) -}}
       <article class="related-card">
         {{ partial "card-image.html" (dict
           "img" $img
@@ -98,9 +101,10 @@
           "alt" (.Params.image_alt | default .Title)
           "permalink" .RelPermalink
           "fallback" (printf "/images/categories/%s.jpg" $fallbackCat)
+          "onclick" $trackRelatedClick
         ) }}
         <div class="related-card__body">
-          <h3 class="related-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <h3 class="related-card__title"><a href="{{ .RelPermalink }}" onclick="{{ $trackRelatedClick | safeHTMLAttr }}">{{ .Title }}</a></h3>
           <div class="related-card__meta">
             <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1.2006" }}</time>
           </div>

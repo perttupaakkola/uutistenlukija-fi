@@ -9,6 +9,7 @@
     .hero      — bool: true = larger size hints (800w srcset lead) vs 400w card
     .permalink — article permalink for the wrapping link
     .track     — optional data-track value for the wrapping link
+    .onclick   — optional inline onclick handler for the wrapping link
 */}}
 
 {{- $img    := .img    | default "" -}}
@@ -18,6 +19,7 @@
 {{- $hero   := .hero   | default false -}}
 {{- $href   := .permalink | default "#" -}}
 {{- $track  := .track | default "" -}}
+{{- $onclick := .onclick | default "" -}}
 {{- $fallback := .fallback | default "/images/categories/kotimaa.jpg" -}}
 
 {{- $loading  := cond $eager "eager" "lazy" -}}
@@ -58,7 +60,7 @@
   {{- if $thumb -}}{{- $src = $thumb -}}{{- end -}}
 {{- end -}}
 
-<a href="{{ $href }}" class="article-image-link img-skeleton" tabindex="-1" aria-hidden="true"{{ with $track }} data-track="{{ . }}"{{ end }}>
+<a href="{{ $href }}" class="article-image-link img-skeleton" tabindex="-1" aria-hidden="true"{{ with $track }} data-track="{{ . }}"{{ end }}{{ with $onclick }} onclick="{{ . | safeHTMLAttr }}"{{ end }}>
   <picture>
     {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
     {{- if $srcset }}<source type="image/webp" srcset="{{ $srcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}

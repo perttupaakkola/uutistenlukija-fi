@@ -3,7 +3,19 @@
 
   Uses the real article body selector in this codebase: .single-article .content
   (not .article-content, which does not exist here).
+
+  reading_time param source:
+    - prefer .Params.reading_time when present
+    - fall back to Hugo .ReadingTime
+    - emit seconds for GA4
 */ -}}
+{{- $readingMinutes := 0 -}}
+{{- if isset .Params "reading_time" -}}
+  {{- $readingMinutes = int .Params.reading_time -}}
+{{- else -}}
+  {{- $readingMinutes = .ReadingTime -}}
+{{- end -}}
+{{- $readingSeconds := mul $readingMinutes 60 -}}
 <div class="reading-progress-track" aria-hidden="true">
   <div class="reading-progress" id="reading-progress"></div>
 </div>
@@ -15,6 +27,10 @@
   var selector = '.single-article .content';
   var articleBody = document.querySelector(selector);
   if (!articleBody) return;
+
+  var articleTitle = {{ .Title | jsonify }};
+  var readingTimeSeconds = {{ $readingSeconds }};
+  var readingCompleteFired = false;
 
   function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
@@ -30,8 +46,21 @@
     return maxScroll > 0 ? (distance / maxScroll) * 100 : (window.scrollY >= articleTop ? 100 : 0);
   }
 
+  function fireReadingComplete() {
+    if (readingCompleteFired || typeof gtag !== 'function') return;
+    readingCompleteFired = true;
+    gtag('event', 'reading_complete', {
+      article_title: articleTitle,
+      reading_time: readingTimeSeconds
+    });
+  }
+
   function update() {
-    bar.style.width = getProgress().toFixed(2) + '%';
+    var progress = getProgress();
+    bar.style.width = progress.toFixed(2) + '%';
+    if (progress >= 100) {
+      fireReadingComplete();
+    }
   }
 
   window.__ulReadingProgress = {
