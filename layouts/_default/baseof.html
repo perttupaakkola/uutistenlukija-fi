@@ -49,7 +49,19 @@
     {{ if or .IsSection (eq .Kind "term") (eq .Kind "taxonomy") }}<link rel="stylesheet" href="/css/category.css">{{ end }}
     {{ if eq .RelPermalink "/haku/" }}<link rel="stylesheet" href="/css/search.css">{{ end }}
   </noscript>
-  <script>['main-stylesheet','homepage-polish','article-stylesheet','category-stylesheet','search-stylesheet'].forEach(function(id){var el=document.getElementById(id);if(el)el.media='all';});</script>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      ['main-stylesheet','homepage-polish','article-stylesheet','category-stylesheet','search-stylesheet'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.media = 'all';
+      });
+    })();
+  </script>
   {{ block "extra_head" . }}{{ end }}
 
   {{/* === Hero image preload hint (article pages only) === */}}
@@ -91,16 +103,6 @@
   {{ partial "pagination-head.html" . }}
 </head>
 <body{{ if .IsHome }} class="is-home"{{ end }}>
-  <script>
-  // Dark mode — apply saved preference before paint to avoid flash
-  (function() {
-    var saved = localStorage.getItem('theme');
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved === 'dark' || (!saved && prefersDark)) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  })();
-  </script>
   <a class="skip-to-content" href="#main-content">Siirry pääsisältöön</a>
   {{ partial "header.html" . }}
   <main class="container" id="main-content" tabindex="-1">
@@ -108,14 +110,14 @@
   </main>
   {{ partial "footer.html" . }}
   {{ partial "cookie-banner.html" . }}
-  <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
-  }
-  </script>
   {{ partial "analytics.html" . }}
   {{ partial "event-tracking.html" . }}
   <script>
+  // Register service worker after page markup is parsed.
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+
   // Set --header-h CSS variable so reading-progress bar sits just below the sticky header.
   // Also recalculate on resize (orientation change, desktop ↔ mobile).
   (function() {
@@ -127,26 +129,16 @@
     }
     setHeaderH();
     window.addEventListener('resize', setHeaderH, { passive: true });
-    // Re-run after fonts/images settle in case the header height shifts
     window.addEventListener('load', setHeaderH, { once: true });
   })();
 
-  // Sticky header — two-phase scroll behaviour (Spec #18)
-  //
-  // Phase 1 — compact (all widths): past COMPACT_AT px → add header--compact
-  //   Hides .header-banner (60px), reduces logo padding.
-  //   Updates --header-h so reading-progress bar stays flush below the header.
-  //
-  // Phase 2 — hide (mobile only, < 768px): past HIDE_AT px AND scrolling down
-  //   → add header--hidden (translateY(-100%)).
-  //   Reversed on scroll-up or when scrollY drops back below COMPACT_AT.
+  // Sticky header — compact + mobile hide on scroll.
   (function() {
     var siteHeader = document.querySelector('.site-header');
     if (!siteHeader) return;
 
-    var COMPACT_AT = 80;   // px — banner disappears, header compacts
-    var HIDE_AT    = 200;  // px — mobile hide-on-scroll-down kicks in
-
+    var COMPACT_AT = 80;
+    var HIDE_AT = 200;
     var lastScrollY = window.scrollY;
     var ticking = false;
 
@@ -155,28 +147,20 @@
       var isMobile = window.innerWidth <= 768;
       var scrollingDown = y > lastScrollY;
 
-      // Phase 1: compact
       if (y > COMPACT_AT) {
         siteHeader.classList.add('header--compact');
       } else {
         siteHeader.classList.remove('header--compact');
-        siteHeader.classList.remove('header--hidden'); // always reveal when near top
+        siteHeader.classList.remove('header--hidden');
       }
 
-      // Phase 2: mobile hide/show
       if (isMobile && y > HIDE_AT) {
-        if (scrollingDown) {
-          siteHeader.classList.add('header--hidden');
-        } else {
-          siteHeader.classList.remove('header--hidden');
-        }
+        siteHeader.classList.toggle('header--hidden', scrollingDown);
       } else if (!isMobile) {
         siteHeader.classList.remove('header--hidden');
       }
 
-      // Update --header-h so progress bar tracks actual header height
       document.documentElement.style.setProperty('--header-h', siteHeader.offsetHeight + 'px');
-
       lastScrollY = y;
       ticking = false;
     }
@@ -189,17 +173,16 @@
     }, { passive: true });
   })();
 
-  // Scroll to top
+  // Scroll to top.
   (function() {
     var btn = document.getElementById('back-to-top');
     if (!btn) return;
     var THRESHOLD = 400;
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // Remove `hidden` attr so CSS controls visibility via opacity/pointer-events
+
     btn.removeAttribute('hidden');
     function onScroll() {
-      var past = window.scrollY > THRESHOLD;
-      btn.classList.toggle('visible', past);
+      btn.classList.toggle('visible', window.scrollY > THRESHOLD);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     btn.addEventListener('click', function() {
@@ -207,7 +190,7 @@
     });
   })();
 
-  // Reading progress bar
+  // Reading progress bar.
   (function() {
     var bar = document.querySelector('.reading-progress');
     if (!bar) return;
@@ -218,14 +201,16 @@
     }, { passive: true });
   })();
 
-  // Dark mode toggle
+  // Dark mode toggle.
   (function() {
     var btn = document.getElementById('theme-toggle');
     if (!btn) return;
+
     function updateBtn(isDark) {
       btn.textContent = isDark ? '☀️' : '🌙';
       btn.setAttribute('aria-label', isDark ? 'Vaihda vaaleaan teemaan' : 'Vaihda tummaan teemaan');
     }
+
     var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     updateBtn(isDark);
     btn.addEventListener('click', function() {
@@ -236,17 +221,18 @@
     });
   })();
 
-  // Hamburger menu
+  // Hamburger menu.
   (function() {
     var btn = document.getElementById('hamburger');
     var nav = document.getElementById('main-nav-menu');
     if (!btn || !nav) return;
+
     btn.addEventListener('click', function() {
       var open = nav.classList.toggle('nav-open');
       btn.classList.toggle('is-open', open);
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    // Close on outside click
+
     document.addEventListener('click', function(e) {
       if (!btn.contains(e.target) && !nav.contains(e.target)) {
         nav.classList.remove('nav-open');
@@ -254,7 +240,7 @@
         btn.setAttribute('aria-expanded', 'false');
       }
     });
-    // Close on nav link click (SPA-style navigation)
+
     nav.querySelectorAll('a').forEach(function(a) {
       a.addEventListener('click', function() {
         nav.classList.remove('nav-open');
@@ -263,30 +249,27 @@
       });
     });
   })();
-  </script>
 
-  <script>
-  /* ── Arrow key navigation for article grids ─────────────── */
+  // Arrow key navigation for card grids.
   (function () {
     var GRID_SELECTORS = [
       '.articles-grid',
       '.highlights-row',
       '.category-articles',
       '.category-section .category-articles',
-      '.related-articles-grid'
+      '.related-articles__grid'
     ];
 
     function initGrid(grid) {
-      // Get all focusable card links — first <a> in each card
       function getCards() {
         return Array.prototype.slice.call(
-          grid.querySelectorAll('article a:first-of-type, .article-card a:first-of-type, .related-article-card a:first-of-type')
+          grid.querySelectorAll('article a:first-of-type, .article-card a:first-of-type, .related-card a:first-of-type')
         );
       }
 
       grid.addEventListener('keydown', function (e) {
         if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' &&
-            e.key !== 'ArrowDown'  && e.key !== 'ArrowUp') return;
+            e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
 
         var cards = getCards();
         var idx = cards.indexOf(document.activeElement);
@@ -294,7 +277,6 @@
 
         e.preventDefault();
 
-        // Determine columns from computed style
         var style = window.getComputedStyle(grid);
         var cols = 1;
         if (style.gridTemplateColumns) {
@@ -303,9 +285,9 @@
 
         var next = idx;
         if (e.key === 'ArrowRight') next = Math.min(idx + 1, cards.length - 1);
-        if (e.key === 'ArrowLeft')  next = Math.max(idx - 1, 0);
-        if (e.key === 'ArrowDown')  next = Math.min(idx + cols, cards.length - 1);
-        if (e.key === 'ArrowUp')    next = Math.max(idx - cols, 0);
+        if (e.key === 'ArrowLeft') next = Math.max(idx - 1, 0);
+        if (e.key === 'ArrowDown') next = Math.min(idx + cols, cards.length - 1);
+        if (e.key === 'ArrowUp') next = Math.max(idx - cols, 0);
 
         if (next !== idx) cards[next].focus();
       });
@@ -323,14 +305,8 @@
       initAll();
     }
   })();
-  </script>
-  <script>
-  /* ── Native lazy-load fallback (Safari <15.4, old browsers) ─
-     If loading="lazy" is unsupported, use IntersectionObserver
-     to defer off-screen images. Images already in-viewport load
-     immediately. Adds no markup changes — pure progressive enhancement.
-     ~420 bytes minified.
-  ────────────────────────────────────────────────────────────── */
+
+  // Native lazy-load fallback (Safari <15.4, old browsers).
   if (!('loading' in HTMLImageElement.prototype)) {
     (function () {
       var imgs = document.querySelectorAll('img[loading="lazy"]');
@@ -347,12 +323,13 @@
           });
         }, { rootMargin: '200px' });
         imgs.forEach(function (img) {
-          /* Stash src in data-src, clear src so browser skips eager load */
-          if (img.src && !img.dataset.src) img.dataset.src = img.src, img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+          if (img.src && !img.dataset.src) {
+            img.dataset.src = img.src;
+            img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+          }
           io.observe(img);
         });
       } else {
-        /* No IO support — just load everything (rare, very old browsers) */
         imgs.forEach(function (img) { img.removeAttribute('loading'); });
       }
     })();
