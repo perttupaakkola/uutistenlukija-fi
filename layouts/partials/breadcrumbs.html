@@ -17,14 +17,30 @@
   {{/* Category/section page — one extra crumb for the section itself */}}
   {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
 
+{{ else if eq .Kind "taxonomy" }}
+  {{ if eq .Data.Plural "tags" }}
+    {{ $crumbs = $crumbs | append (dict "name" "Aiheet" "url" .Permalink) }}
+  {{ else }}
+    {{ $crumbs = $crumbs | append (dict "name" "Kategoriat" "url" .Permalink) }}
+  {{ end }}
+
+{{ else if eq .Kind "term" }}
+  {{ if eq .Data.Plural "tags" }}
+    {{ $crumbs = $crumbs | append (dict "name" "Aiheet" "url" (printf "%stags/" .Site.BaseURL)) }}
+    {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
+  {{ else }}
+    {{ $crumbs = $crumbs | append (dict "name" "Kategoriat" "url" (printf "%scategories/" .Site.BaseURL)) }}
+    {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
+  {{ end }}
+
 {{ else if .IsPage }}
-  {{/* Article page — category crumb then article title */}}
+  {{/* Article page — category crumb then article title; static page — just title */}}
   {{ $cat := index .Params.categories 0 }}
   {{ if $cat }}
     {{ $catUrl := printf "%scategories/%s/" .Site.BaseURL ($cat | urlize) }}
     {{ $crumbs = $crumbs | append (dict "name" $cat "url" $catUrl) }}
   {{ end }}
-  {{/* Truncate long article titles */}}
+  {{/* Truncate long page titles */}}
   {{ $title := .Title }}
   {{ if gt (len $title) 63 }}
     {{ $title = printf "%s…" (substr $title 0 60) }}

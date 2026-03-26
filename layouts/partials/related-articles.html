@@ -23,16 +23,37 @@
 {{- $publishedPosts = $publishedPosts.ByDate.Reverse -}}
 
 {{- $related := slice -}}
+{{- $manualSlugs := .Params.related_articles | default (slice) -}}
 
-{{- if $currentCat -}}
-  {{- range $publishedPosts -}}
-    {{- $candidateCats := .Params.categories | default (slice) -}}
+{{- range $slug := $manualSlugs -}}
+  {{- range $i, $candidate := $publishedPosts -}}
+    {{- if and (eq $candidate.File.BaseFileName $slug) (ne $candidate.Permalink $currentPermalink) -}}
+      {{- $alreadyIncluded := false -}}
+      {{- range $j, $item := $related -}}
+        {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
+      {{- end -}}
+      {{- if not $alreadyIncluded -}}
+        {{- $related = $related | append $candidate -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if and $currentCat (lt (len $related) 3) -}}
+  {{- range $i, $candidate := $publishedPosts -}}
+    {{- $candidateCats := $candidate.Params.categories | default (slice) -}}
     {{- $candidateCat := "" -}}
     {{- if gt (len $candidateCats) 0 -}}
       {{- $candidateCat = (index $candidateCats 0) | urlize -}}
     {{- end -}}
-    {{- if and (ne .Permalink $currentPermalink) (eq $candidateCat $currentCat) -}}
-      {{- $related = $related | append . -}}
+    {{- if and (ne $candidate.Permalink $currentPermalink) (eq $candidateCat $currentCat) -}}
+      {{- $alreadyIncluded := false -}}
+      {{- range $j, $item := $related -}}
+        {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
+      {{- end -}}
+      {{- if and (not $alreadyIncluded) (lt (len $related) 3) -}}
+        {{- $related = $related | append $candidate -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}

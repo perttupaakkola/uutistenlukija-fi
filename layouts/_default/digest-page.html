@@ -36,6 +36,7 @@
 {{ end }}
 
 {{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
 {{ $cats := slice
   (dict "key" "Kotimaa" "slug" "kotimaa")
   (dict "key" "Ulkomaat" "slug" "ulkomaat")

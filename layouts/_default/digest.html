@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
 <div class="digest-page">
   <h1>Päivän kooste</h1>
   <p class="digest-date">{{ partial "finnish-date.html" . }}</p>
@@ -31,6 +32,22 @@
     </ul>
   </section>
   {{ end }}
+  {{ end }}
+
+  {{ $archives := where .Site.RegularPages "Section" "paivan-kooste" }}
+  {{ $archives = where $archives "Draft" "ne" true }}
+  {{ $archives = $archives.ByDate.Reverse }}
+  {{ if $archives }}
+  <section class="digest-section" aria-labelledby="digest-archive-heading">
+    <h2 id="digest-archive-heading">Aiemmat koosteet</h2>
+    <ul class="digest-list">
+      {{ range first 14 $archives }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Date | time.Format "2.1.2006" }} — Päivän kooste</a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
   {{ end }}
 
   {{ end }}
