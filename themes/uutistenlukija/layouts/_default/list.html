@@ -23,7 +23,7 @@
     <div class="meta">
       {{ .Date | time.Format "2.1. klo 15:04" }}
       {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-      {{ if .ReadingTime }} · {{ .ReadingTime }} min{{ end }}
+      {{ if .ReadingTime }} · {{ .ReadingTime }} min lukuaika{{ end }}
     </div>
   </article>
   {{ end }}

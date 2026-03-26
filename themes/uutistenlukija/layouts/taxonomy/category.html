@@ -3,7 +3,7 @@
   <h1>{{ .Title }} <a href="{{ .Permalink }}index.xml" class="rss-link" title="RSS-syöte">RSS</a></h1>
 </div>
 <div class="articles-grid">
-  {{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
+  {{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) 20 }}
   {{ range $paginator.Pages }}
   <article class="article-card">
     {{ with .Params.categories }}
