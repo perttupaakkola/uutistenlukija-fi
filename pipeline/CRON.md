@@ -50,6 +50,9 @@ WORKSPACE=/home/pertt/.openclaw/workspace
 # ── X auto-poster (4× daily: morning, lunch, after-work, evening) ────────────
 30 7,11,17,20 * * * cd $PIPELINE && python3 x_auto_poster.py >> $LOGS/x-poster.log 2>&1
 
+# ── Source diversity report (07:00 UTC → static/api/source-stats.json + #metrics) ─
+0 7 * * * cd $PROJECT && python3 pipeline/source_stats.py >> $LOGS/source-stats.log 2>&1
+
 # ── Daily metrics report (06:00 UTC → #metrics) ──────────────────────────────
 0 6 * * * $PIPELINE/metrics_cron.sh >> $LOGS/metrics-cron.log 2>&1
 
