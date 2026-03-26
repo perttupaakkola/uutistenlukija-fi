@@ -71,6 +71,8 @@
   <link id="main-stylesheet" rel="stylesheet" href="/css/style.css" media="print">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   <script>document.getElementById('main-stylesheet').media='all'</script>
+  {{/* Homepage visual polish — loaded only on the front page */}}
+  {{ if .IsHome }}<link rel="stylesheet" href="/css/homepage-polish.css">{{ end }}
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="alternate" hreflang="fi" href="{{ .Permalink }}">
   <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
@@ -82,6 +84,7 @@
   {{ partial "og-meta.html" . }}
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
   {{ if .IsSection }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} — {{ .Site.Title }}" href="{{ .Permalink }}index.xml">{{ end }}
+  {{ template "_internal/schema.html" . }}
   {{ partial "json-ld.html" . }}
   {{ partial "pagination-head.html" . }}
 </head>
