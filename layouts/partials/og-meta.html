@@ -122,7 +122,13 @@
   {{ else with .Description }}
     {{ $ogDesc = . }}
   {{ else }}
-    {{ $ogDesc = .Content | plainify | truncate 160 }}
+    {{/* Fallback: use content if available, otherwise SEO-targeted template text */}}
+    {{ $contentText := .Content | plainify | truncate 160 }}
+    {{ if gt (len $contentText) 40 }}
+      {{ $ogDesc = $contentText }}
+    {{ else }}
+      {{ $ogDesc = printf "Lue uutiskooste aiheesta %s. Tiivistämme päivän tärkeimmät uutiset suomeksi — säästä aikaa ja pysy kärryillä vaivatta." .Title }}
+    {{ end }}
   {{ end }}
 {{ else if .Description }}
   {{ $ogDesc = .Description }}

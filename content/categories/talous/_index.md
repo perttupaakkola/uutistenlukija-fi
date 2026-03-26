@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-description: "Talousuutiset ilmaiseksi – Suomen talousuutiset, markkinat, pörssi ja talouspolitiikka ilman maksumuuria. Lue tärkeimmät talousuutiset tiiviisti Uutistenlukijasta."
+description: "Talous uutiset ilmainen – seuraa talouden uusimpia käänteitä ja markkinauutisia. Lue asiantuntevat tiivistelmät ja säästä aikaa joka päivä."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"
