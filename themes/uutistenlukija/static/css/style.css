@@ -2735,14 +2735,3 @@ body.is-home .highlights-row--top {
   font-weight: 600;
 }
 .source-attribution__link:hover { opacity: 0.8; }
-
-/* === Section header font consistency fix ===
-   Ensure all section/UI headings use sans, not Georgia.
-   Overrides body { font-family: serif } inheritance. */
-h2, h3, h4 { font-family: var(--font-sans); }
-.category-section-header h2,
-.tanaan-title,
-.trending-title,
-.section-label,
-.kooste-section h2,
-.highlights-title { font-family: var(--font-sans) !important; }
