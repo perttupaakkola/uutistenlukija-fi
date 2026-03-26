@@ -1,0 +1,43 @@
+# uutistenlukija.fi — canonical cron entries
+# Machine-readable source of truth for install-crons.sh
+# Human docs: pipeline/CRON.md
+#
+# Format: standard crontab lines + comment lines (# ...) + blank lines
+# DO NOT use $VAR substitutions here — use absolute paths only
+# Last updated: 2026-03-26
+
+# Main pipeline watchdog (every 15 min)
+*/15 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/pipeline-watchdog.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/watchdog.log 2>&1
+
+# X / Twitter OAuth2 token refresh (every 85 min)
+*/85 * * * * /home/pertt/.openclaw/workspace/scripts/refresh-x-token.sh >> /home/pertt/.openclaw/workspace/logs/x-token-refresh.log 2>&1
+
+# SEO daily dashboard (07:30 UTC)
+30 7 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline && python3 seo_daily_dashboard.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/seo-dashboard.log 2>&1
+
+# X auto-poster (4x daily: 07:30, 11:30, 17:30, 20:30 UTC)
+30 7,11,17,20 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline && python3 x_auto_poster.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/x-poster.log 2>&1
+
+# Daily metrics report (06:00 UTC)
+0 6 * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/metrics_cron.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/metrics-cron.log 2>&1
+
+# Lighthouse score tracking (09:00 UTC)
+0 9 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline && python3 lighthouse_check.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/lighthouse-cron.log 2>&1
+
+# Daily briefing / kooste (17:00 UTC)
+0 17 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 pipeline/daily_briefing.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/daily-briefing.log 2>&1
+
+# Weekly content quality scan (Mondays 07:00 UTC)
+0 7 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline && python3 validate_articles.py --all >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/validate-cron.log 2>&1
+
+# Weekly dead-link crawl (Sundays 07:00 UTC)
+0 7 * * 0 /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/dead_link_cron.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/dead-link-cron.log 2>&1
+
+# Pipeline health check (every 30 min)
+*/30 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/pipeline-health-check.sh --alert-only >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/health-check.log 2>&1
+
+# Weekly metrics digest (Mondays 07:00 UTC)
+0 7 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline && python3 weekly_metrics_digest.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/weekly-metrics.log 2>&1
+
+# Daily kooste generator (21:55 UTC = 23:55 Helsinki)
+55 21 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/generate_kooste.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/generate-kooste.log 2>&1

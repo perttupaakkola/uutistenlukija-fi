@@ -1,6 +1,8 @@
 # Pipeline Cron Schedule
 
-All times UTC. Copy-paste the full block below into `crontab -e` on the deploy host.
+> **Machine-readable source:** `pipeline/crons.txt` — run `./scripts/install-crons.sh` to install all missing entries idempotently.
+
+All times UTC. Copy-paste the full block below into `crontab -e` on the deploy host, or use the installer above.
 
 ## Quick Reference
 
