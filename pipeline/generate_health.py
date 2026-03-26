@@ -115,8 +115,18 @@ def pipeline_stats() -> dict:
                     except Exception:
                         pass
                 if recent:
+                    def _is_healthy(r):
+                        """A run is healthy if it succeeded OR if it only failed
+                        because the scanner found no new articles (empty scan)."""
+                        if r.get("success"):
+                            return True
+                        errs = " ".join(r.get("errors", [])).lower()
+                        if "no articles found" in errs or "0 articles" in errs:
+                            return True
+                        return False
+
                     success_rate_7d = round(
-                        100 * sum(1 for r in recent if r.get("success")) / len(recent), 1
+                        100 * sum(1 for r in recent if _is_healthy(r)) / len(recent), 1
                     )
         except Exception:
             pass
