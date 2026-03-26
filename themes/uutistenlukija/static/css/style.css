@@ -2735,3 +2735,9 @@ body.is-home .highlights-row--top {
   font-weight: 600;
 }
 .source-attribution__link:hover { opacity: 0.8; }
+
+/* === Mobile: hide low-priority chrome to surface news faster === */
+@media (max-width: 600px) {
+  .pub-frequency-bar { display: none; }
+  .homepage-site-header__tagline { font-size: 0.95rem; }
+}
