@@ -30,6 +30,9 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Validate build
+        run: python3 pipeline/ci_validate.py --skip templates
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:

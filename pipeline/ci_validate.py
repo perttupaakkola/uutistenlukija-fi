@@ -63,6 +63,7 @@ STEPS = [
     Step("templates", "Template edge-case tests", "test_templates.py"),
     Step("feeds", "RSS feed validation", "validate_feeds.py"),
     Step("structured-data", "Structured data validation", "validate_structured_data.py"),
+    Step("frontmatter", "Front matter validation", "validate_frontmatter.py"),
 ]
 
 ALIASES = {
@@ -75,6 +76,9 @@ ALIASES = {
     "structured": "structured-data",
     "structured-data": "structured-data",
     "structured_data": "structured-data",
+    "frontmatter": "frontmatter",
+    "front-matter": "frontmatter",
+    "front_matter": "frontmatter",
 }
 
 
@@ -135,7 +139,7 @@ def main() -> int:
         "--skip",
         action="append",
         default=[],
-        help="Skip one or more steps: smoke, templates, feeds, structured-data",
+        help="Skip one or more steps: smoke, templates, feeds, structured-data, frontmatter",
     )
     args = parser.parse_args()
 
