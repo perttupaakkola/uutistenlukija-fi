@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="reading-progress" id="reading-progress"></div>
+{{ partial "reading-progress.html" . }}
 <article class="single-article">
   {{ partial "breadcrumbs.html" . }}
   {{ partial "hero-image.html" . }}
@@ -80,7 +80,7 @@
     {{ partial "social-share.html" . }}
   </div>
 
-  {{ partial "related-articles-v2.html" . }}
+  {{ partial "related-articles.html" . }}
   {{ partial "most-read.html" . }}
 </article>
 
@@ -124,6 +124,9 @@
   var _lastSavedPct = 0;
 
   function getScrollPct() {
+    if (window.__ulReadingProgress && typeof window.__ulReadingProgress.getProgress === 'function') {
+      return window.__ulReadingProgress.getProgress();
+    }
     var docHeight = document.documentElement.scrollHeight - window.innerHeight;
     return docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
   }
@@ -145,7 +148,7 @@
 
   window.addEventListener('scroll', function () {
     var pct = getScrollPct();
-    if (progressBar) progressBar.style.width = pct + '%';
+    if (progressBar) progressBar.style.width = pct.toFixed(2) + '%';
     if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 400);
     saveProgress(pct);
   }, { passive: true });

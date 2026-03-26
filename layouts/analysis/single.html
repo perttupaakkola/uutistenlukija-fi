@@ -9,7 +9,7 @@
   - editorial_reviewed badge shown in journalist-note if present
 */ -}}
 {{ define "main" }}
-<div class="reading-progress" id="reading-progress"></div>
+{{ partial "reading-progress.html" . }}
 <article class="single-article single-article--analysis">
   {{ partial "breadcrumbs.html" . }}
   {{ partial "hero-image.html" . }}
@@ -120,6 +120,9 @@
   var _lastSavedPct = 0;
 
   function getScrollPct() {
+    if (window.__ulReadingProgress && typeof window.__ulReadingProgress.getProgress === 'function') {
+      return window.__ulReadingProgress.getProgress();
+    }
     var docHeight = document.documentElement.scrollHeight - window.innerHeight;
     return docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
   }
@@ -140,7 +143,7 @@
 
   window.addEventListener('scroll', function () {
     var pct = getScrollPct();
-    if (progressBar) progressBar.style.width = pct + '%';
+    if (progressBar) progressBar.style.width = pct.toFixed(2) + '%';
     if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 400);
     saveProgress(pct);
   }, { passive: true });

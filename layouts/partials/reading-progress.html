@@ -1,0 +1,53 @@
+{{- /*
+  reading-progress.html — top-of-viewport reading progress indicator for article pages.
+
+  Uses the real article body selector in this codebase: .single-article .content
+  (not .article-content, which does not exist here).
+*/ -}}
+<div class="reading-progress-track" aria-hidden="true">
+  <div class="reading-progress" id="reading-progress"></div>
+</div>
+<script>
+(function () {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+
+  var selector = '.single-article .content';
+  var articleBody = document.querySelector(selector);
+  if (!articleBody) return;
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function getProgress() {
+    var rect = articleBody.getBoundingClientRect();
+    var articleTop = rect.top + window.scrollY;
+    var articleHeight = articleBody.offsetHeight;
+    var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+    var maxScroll = Math.max(articleHeight - viewportHeight, 0);
+    var distance = clamp(window.scrollY - articleTop, 0, maxScroll);
+    return maxScroll > 0 ? (distance / maxScroll) * 100 : (window.scrollY >= articleTop ? 100 : 0);
+  }
+
+  function update() {
+    bar.style.width = getProgress().toFixed(2) + '%';
+  }
+
+  window.__ulReadingProgress = {
+    selector: selector,
+    getProgress: getProgress,
+    update: update
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  window.addEventListener('load', update, { once: true });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', update, { once: true });
+  } else {
+    update();
+  }
+})();
+</script>

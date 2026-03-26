@@ -70,7 +70,6 @@ html {
   :root:not([data-theme="light"]) a { color: #e8e6e3; }
   :root:not([data-theme="light"]) .site-title a { color: #e8e6e3; }
   :root:not([data-theme="light"]) .author-box { background: #2a2a2a; }
-  :root:not([data-theme="light"]) .related-link:hover .related-title { color: #e74c3c; }
   :root:not([data-theme="light"]) .header-banner { opacity: 0.08; }
   :root:not([data-theme="light"]) .logo-img { filter: invert(1) hue-rotate(180deg); }
   :root:not([data-theme="light"]) .scroll-to-top { background: #333; color: #e8e6e3; }
@@ -84,8 +83,7 @@ html {
   :root:not([data-theme="light"]) .newsletter-cta-input { background: #2a2a2a; border-color: #444; color: #eee; }
   :root:not([data-theme="light"]) .related-card { background: #242424; border-color: #333; }
   :root:not([data-theme="light"]) .related-card:hover { background: #2a2a2a; }
-  :root:not([data-theme="light"]) .article-hero-wrapper,
-  :root:not([data-theme="light"]) .card-thumb-wrapper { background: #1e1e1e; }
+  :root:not([data-theme="light"]) .article-hero-wrapper { background: #1e1e1e; }
   :root:not([data-theme="light"]) .article-hero-caption,
   :root:not([data-theme="light"]) .article-hero-caption a { color: var(--text-secondary); }
   :root:not([data-theme="light"]) .lead-article--hero {
@@ -113,7 +111,6 @@ html {
 [data-theme="dark"] a { color: var(--text); }
 [data-theme="dark"] .site-title a { color: var(--text); }
 [data-theme="dark"] .author-box { background: #2a2a2a; }
-[data-theme="dark"] .related-link:hover .related-title { color: var(--accent); }
 body {
   font-family: var(--font-serif);
   background: var(--bg);
@@ -797,16 +794,22 @@ img { max-width: 100%; height: auto; }
   .logo-img { max-height: 55px; }
   .theme-toggle-label { display: none; }
 }
-.reading-progress {
+.reading-progress-track {
   position: fixed;
   top: var(--header-h, 0px);
   left: 0;
+  width: 100%;
   height: 3px;
+  z-index: 9999;
+  pointer-events: none;
+}
+.reading-progress {
   width: 0;
+  height: 100%;
   background: var(--accent);
-  z-index: 10001;
-  transition: width 0.1s linear;
-  opacity: 1;
+  transition: width 0.12s linear;
+  will-change: width;
+  pointer-events: none;
 }
 .scroll-to-top {
   position: fixed;
@@ -1212,55 +1215,6 @@ pre code {
 .article-hero-caption a:hover {
   color: var(--accent);
 }
-.card-thumb-link {
-  display: block;
-  text-decoration: none;
-}
-.card-thumb-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 6px;
-  background: var(--border);
-  margin-bottom: 0.75rem;
-}
-.card-thumb-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
-  background: linear-gradient(
-    90deg,
-    var(--border) 25%,
-    color-mix(in srgb, var(--bg) 60%, var(--border) 40%) 50%,
-    var(--border) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 2s linear infinite;
-  z-index: 0;
-  border-radius: inherit;
-  transition: opacity 0.3s ease;
-  opacity: 1;
-}
-.card-thumb-wrapper:has(.img-loaded)::before {
-  opacity: 0;
-  animation: none;
-  pointer-events: none;
-}
-.card-thumb-wrapper .article-card-thumb {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  z-index: 1;
-}
-.no-js .article-card-thumb {
-  opacity: 1;
-}
 .article-hero-wrapper[data-cat="kotimaa"]   { background: #3498db; }
 .article-hero-wrapper[data-cat="ulkomaat"]  { background: #e74c3c; }
 .article-hero-wrapper[data-cat="talous"]    { background: #f39c12; }
@@ -1273,12 +1227,6 @@ pre code {
     margin-left: calc(-1 * var(--content-pad, 1rem));
     margin-right: calc(-1 * var(--content-pad, 1rem));
     border-radius: 0;
-  }
-  .article-hero-wrapper {
-    border-radius: 0;
-  }
-  .card-thumb-wrapper {
-    border-radius: 4px;
   }
 }
 .support-box {
@@ -1327,7 +1275,6 @@ pre code {
   .main-nav,
   .share-buttons,
   .related-articles,
-  .newsletter-card,
   .newsletter-cta,
   #back-to-top,
   .reading-progress,
@@ -2301,9 +2248,6 @@ pre code {
   font-size: 1rem;
   line-height: 1.55;
   max-width: 640px;
-}
-.category-article-card:nth-child(2),
-.category-article-card:nth-child(3) {
 }
 .category-article-card:nth-child(2) h3,
 .category-article-card:nth-child(3) h3 {

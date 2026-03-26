@@ -1,5 +1,4 @@
 {{ define "main" }}
-<div class="reading-progress" id="reading-progress"></div>
 <article class="single-article">
   {{ with .Params.categories }}
   <span class="category-label">
@@ -44,28 +43,8 @@
   </div>
   {{ end }}
 
-  {{ partial "related-articles-v2.html" . }}
+  {{ partial "related-articles.html" . }}
 </article>
 
-<button id="back-to-top" aria-label="Takaisin ylös" title="Takaisin ylös">↑</button>
-
-<script>
-// Reading progress
-const progress = document.getElementById('reading-progress');
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-  progress.style.width = scrollPercent + '%';
-});
-
-// Back to top
-const backToTop = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-  backToTop.classList.toggle('visible', window.scrollY > 400);
-});
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-</script>
+{{ partial "scroll-to-top.html" . }}
 {{ end }}

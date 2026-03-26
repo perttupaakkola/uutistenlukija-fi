@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="reading-progress" id="reading-progress"></div>
+{{ partial "reading-progress.html" . }}
 <article class="single-article analysis-article">
   {{ partial "breadcrumbs.html" . }}
   {{ partial "hero-image.html" . }}
@@ -33,6 +33,7 @@
   </div>
   {{ end }}
   {{ partial "social-share.html" . }}
+  {{ partial "key-points.html" . }}
   {{ partial "article-summary.html" . }}
   {{ partial "toc.html" . }}
   <div class="article-meta">
@@ -118,14 +119,10 @@
   function update() {
     var header       = document.querySelector('.site-header');
     var scrollTop    = window.scrollY;
-    var viewportH    = window.innerHeight;
-    var docH         = document.documentElement.scrollHeight;
-    var progress     = Math.min(100, Math.round(100 * scrollTop / (docH - viewportH)));
 
     if (header) {
       var headerHeight    = header.offsetHeight;
       var headerCompactH  = 120;
-      var headerHiddenH   = 0;
       var COMPACT_PX      = 80;
       var HIDDEN_PX       = 200;
       var isScrollingDown = scrollTop > lastScrollY;
@@ -147,8 +144,11 @@
     }
 
     var progressBar = document.getElementById('reading-progress');
+    var progress = window.__ulReadingProgress && typeof window.__ulReadingProgress.getProgress === 'function'
+      ? window.__ulReadingProgress.getProgress()
+      : 0;
     if (progressBar) {
-      progressBar.style.width = progress + '%';
+      progressBar.style.width = progress.toFixed(2) + '%';
     }
 
     lastScrollY = scrollTop;
