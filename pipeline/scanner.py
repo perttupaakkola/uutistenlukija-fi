@@ -281,15 +281,25 @@ SCANNER_TIMEOUT = 180
 # These are content aggregators, low-quality curators, or spam domains
 # that should never be published even if fetched via Firehose.
 BLOCKED_SOURCE_DOMAINS: set = {
-    "scoop.it",       # content aggregator — not a news source
-    "7sun.fi",        # low-quality PR/aggregator
-    "ecoonline.com",  # low-quality content farm
-    "bandilanews.com",  # low-quality aggregator
+    "scoop.it",          # content aggregator — not a news source
+    "7sun.fi",           # low-quality PR/aggregator (also posts Polish product pages)
+    "ecoonline.com",     # low-quality content farm
+    "bandilanews.com",   # low-quality aggregator
     "listafriikki.com",  # low-quality list content
-    "listamaailma.fi",   # low-quality list content
+    "listamaailma.fi",   # SEO farm / listicles
     "menejatieda.fi",    # low-quality content
     "uutiskaista.com",   # PR wire aggregator
     "voice.fi",          # entertainment only — not news
+    "itbranschen.com",   # Swedish IT trade site with URL mismatches
+    "etappi.com",        # company PR (waste management)
+    "destia.fi",         # company PR (infrastructure)
+    "aanekoskenenergia.fi",  # company PR (energy)
+    "koneensaatio.fi",   # foundation PR
+    "tieteentekijat.fi", # association PR (not news)
+    "luonnonperintosaatio.fi",  # foundation PR
+    "kelikamerat.info",  # road condition cameras — not news
+    "nauvolaiset.fi",    # local community site — too niche/low-quality
+    "uefconnect.uef.fi", # university internal — not public news
 }
 
 # Per-domain last-fetch timestamps (in-process only)
