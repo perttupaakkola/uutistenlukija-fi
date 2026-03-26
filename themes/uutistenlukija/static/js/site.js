@@ -167,12 +167,13 @@
     }
   });
 
-  // ── #17: Card shimmer — mark cached images as loaded immediately ──────────
-  // Browsers don't fire onload for already-cached images; fix by checking
-  // img.complete on DOMContentLoaded.
-  document.querySelectorAll('.article-card-thumb').forEach(function (img) {
-    if (img.complete && img.naturalWidth) {
+  // ── #17: Card shimmer — mark images as loaded, handle errors ──────────────
+  document.querySelectorAll('.article-card-thumb, .article-image').forEach(function (img) {
+    if (img.complete) {
       img.classList.add('img-loaded');
+    } else {
+      img.addEventListener('load', function () { img.classList.add('img-loaded'); });
+      img.addEventListener('error', function () { img.classList.add('img-loaded'); }); // show even on error
     }
   });
 
