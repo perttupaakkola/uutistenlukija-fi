@@ -1,149 +1,103 @@
 {{ define "main" }}
 {{/*
   layouts/paivan-kooste/list.html
-  Archive page at /kooste/ — lists all daily digest pages sorted by date (newest first).
-*/}}
+  Archive page for daily digests — /kooste/
 
-{{ $pages := .Pages.ByDate.Reverse }}
+  Lists all daily digest pages sorted newest-first.
+  Grouped by month with subtle dividers.
+*/}}
 
 <div class="kooste-archive">
 
   <header class="kooste-archive__header">
     <h1 class="kooste-archive__title">Päivän koosteet</h1>
-    <p class="kooste-archive__lead">
-      Päivittäinen katsaus tärkeimpiin uutisiin — kotimaa, ulkomaat, talous ja teknologia.
-    </p>
+    <p class="kooste-archive__lead">Päivittäiset uutiskoosteet — tärkeimmät uutiset yhdellä sivulla.</p>
   </header>
 
-  {{ if eq (len $pages) 0 }}
-  <p class="kooste-archive__empty">Koosteet julkaistaan pian. Tule takaisin huomenna!</p>
+  {{ $pages := .Pages.ByDate.Reverse }}
 
+  {{ if eq (len $pages) 0 }}
+  <p class="kooste-archive__empty">Koosteet alkavat pian. Tarkista myöhemmin uudelleen.</p>
   {{ else }}
 
-  {{/* Group by year-month for optional header breaks */}}
   {{ $currentMonth := "" }}
 
-  <ol class="kooste-archive__list" reversed>
+  <div class="kooste-archive__list">
     {{ range $pages }}
-    {{ $month := .Date | time.Format "January 2006" }}
+      {{ $month := .Date | time.Format "January 2006" }}
+      {{ if ne $month $currentMonth }}
+        {{ $currentMonth = $month }}
+        <div class="kooste-archive__month-divider">
+          <span class="kooste-archive__month-label">{{ .Date | time.Format "Tammikuu 2006" | replace "January" "Tammikuu" | replace "February" "Helmikuu" | replace "March" "Maaliskuu" | replace "April" "Huhtikuu" | replace "May" "Toukokuu" | replace "June" "Kesäkuu" | replace "July" "Heinäkuu" | replace "August" "Elokuu" | replace "September" "Syyskuu" | replace "October" "Lokakuu" | replace "November" "Marraskuu" | replace "December" "Joulukuu" }}</span>
+        </div>
+      {{ end }}
 
-    {{ if ne $month $currentMonth }}
-      {{ $currentMonth = $month }}
-      <li class="kooste-archive__month-divider" aria-hidden="true">
-        {{ .Date | time.Format "1.2006" }}
-      </li>
-    {{ end }}
-
-    <li class="kooste-digest-card">
-      <a href="{{ .RelPermalink }}" class="kooste-digest-card__link">
-
-        <div class="kooste-digest-card__date">
-          <span class="kooste-digest-card__day">{{ .Date | time.Format "2." }}</span>
-          <span class="kooste-digest-card__mon">{{ .Date | time.Format "1." }}</span>
+      <a href="{{ .RelPermalink }}" class="kooste-archive__card">
+        <div class="kooste-archive__date-badge">
+          <span class="kooste-archive__day">{{ .Date | time.Format "2" }}</span>
+          <span class="kooste-archive__month-short">{{ .Date | time.Format "1" }}.{{ .Date | time.Format "2006" }}</span>
         </div>
 
-        <div class="kooste-digest-card__body">
-          <h2 class="kooste-digest-card__title">
-            {{ if .Title }}{{ .Title }}{{ else }}Päivän kooste — {{ .Date | time.Format "2.1.2006" }}{{ end }}
-          </h2>
-
+        <div class="kooste-archive__card-body">
+          <h2 class="kooste-archive__card-title">{{ .Title }}</h2>
           {{ with .Params.description }}
-          <p class="kooste-digest-card__desc">{{ . | truncate 120 }}</p>
+          <p class="kooste-archive__card-desc">{{ . | truncate 140 }}</p>
           {{ end }}
-
           {{ with .Params.sections }}
-          <div class="kooste-digest-card__pills" aria-label="Osiot">
+          <div class="kooste-archive__pills">
             {{ range . }}
-            <span class="kooste-digest-pill">{{ . | title }}</span>
+            <span class="kooste-archive__pill">{{ . }}</span>
             {{ end }}
           </div>
           {{ end }}
         </div>
 
-        <span class="kooste-digest-card__arrow" aria-hidden="true">→</span>
+        <span class="kooste-archive__arrow" aria-hidden="true">→</span>
       </a>
-    </li>
     {{ end }}
-  </ol>
+  </div>
 
-  {{/* Pagination — Hugo 0.147 removed _internal/pagination */}}
+  {{ template "_internal/pagination.html" . }}
 
   {{ end }}
 
 </div>
 
 <style>
-.kooste-archive {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1rem 3rem;
-}
-.kooste-archive__header {
-  padding: 2rem 0 1.5rem;
-  border-bottom: 2px solid var(--border, #e5e7eb);
-  margin-bottom: 1.75rem;
-}
-.kooste-archive__title {
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-  margin: 0 0 .5rem;
-  line-height: 1.2;
-}
-.kooste-archive__lead {
-  font-size: 1rem;
-  color: var(--color-muted, #6b7280);
-  margin: 0;
-}
-.kooste-archive__empty {
-  color: var(--color-muted, #6b7280);
-  font-style: italic;
-  text-align: center;
-  padding: 3rem 0;
-}
-.kooste-archive__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-.kooste-archive__month-divider {
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--color-muted, #9ca3af);
-  padding: .75rem 0 .25rem;
-  border: none;
-  background: none;
-  pointer-events: none;
-}
-.kooste-digest-card {
-  border: 1px solid var(--border, #e5e7eb);
-  border-radius: 8px;
-  background: var(--color-surface, #fff);
-  transition: box-shadow .15s, border-color .15s;
-}
-.kooste-digest-card:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-  border-color: var(--color-accent, #2563eb);
-}
-.kooste-digest-card__link { display: flex; align-items: center; gap: 1rem; padding: .875rem 1rem; text-decoration: none; color: inherit; }
-.kooste-digest-card__date { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 2.75rem; background: var(--color-accent-soft, #eff6ff); border-radius: 6px; padding: .4rem .5rem; flex-shrink: 0; line-height: 1.1; }
-.kooste-digest-card__day { font-size: 1.2rem; font-weight: 700; color: var(--color-accent, #2563eb); }
-.kooste-digest-card__mon { font-size: .75rem; color: var(--color-muted, #6b7280); }
-.kooste-digest-card__body { flex: 1; min-width: 0; }
-.kooste-digest-card__title { font-size: .975rem; font-weight: 600; margin: 0 0 .25rem; line-height: 1.3; color: var(--color-text, #111827); }
-.kooste-digest-card:hover .kooste-digest-card__title { color: var(--color-accent, #2563eb); }
-.kooste-digest-card__desc { font-size: .85rem; color: var(--color-muted, #6b7280); margin: 0 0 .4rem; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.kooste-digest-card__pills { display: flex; flex-wrap: wrap; gap: .3rem; }
-.kooste-digest-pill { font-size: .72rem; padding: .15rem .5rem; border-radius: 999px; background: var(--color-accent-soft, #eff6ff); color: var(--color-accent, #2563eb); border: 1px solid var(--color-accent-border, #bfdbfe); white-space: nowrap; }
-.kooste-digest-card__arrow { font-size: 1rem; color: var(--color-muted, #d1d5db); flex-shrink: 0; transition: color .15s, transform .15s; }
-.kooste-digest-card:hover .kooste-digest-card__arrow { color: var(--color-accent, #2563eb); transform: translateX(3px); }
-@media (max-width: 480px) {
-  .kooste-digest-card__link { padding: .75rem; gap: .75rem; }
-  .kooste-digest-card__desc { display: none; }
-  .kooste-digest-card__arrow { display: none; }
+.kooste-archive { max-width: 720px; margin: 0 auto; padding: 0 1rem 3rem; }
+
+.kooste-archive__header { text-align: center; padding: 2rem 0 1.5rem; margin-bottom: 1.5rem; }
+.kooste-archive__title { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 .5rem; }
+.kooste-archive__lead { font-size: 1rem; color: var(--color-muted, #6b7280); margin: 0; max-width: 480px; margin: 0 auto; }
+.kooste-archive__empty { text-align: center; color: var(--color-muted, #6b7280); font-style: italic; padding: 3rem 0; }
+
+.kooste-archive__list { display: flex; flex-direction: column; gap: .75rem; }
+
+.kooste-archive__month-divider { padding: 1.25rem 0 .5rem; }
+.kooste-archive__month-label { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--color-muted, #9ca3af); border-bottom: 1px solid var(--border, #e5e7eb); display: block; padding-bottom: .4rem; }
+
+.kooste-archive__card { display: flex; align-items: center; gap: 1rem; padding: .875rem 1rem; border: 1px solid var(--border, #e5e7eb); border-radius: 8px; background: var(--color-surface, #fff); text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s; }
+.kooste-archive__card:hover { border-color: var(--color-accent, #2563eb); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.kooste-archive__card:hover .kooste-archive__arrow { transform: translateX(3px); }
+
+.kooste-archive__date-badge { flex-shrink: 0; width: 52px; text-align: center; padding: .4rem 0; border-radius: 6px; background: var(--color-accent-soft, #eff6ff); border: 1px solid var(--color-accent-border, #bfdbfe); }
+.kooste-archive__day { display: block; font-size: 1.3rem; font-weight: 700; color: var(--color-accent, #2563eb); line-height: 1.2; }
+.kooste-archive__month-short { display: block; font-size: .7rem; color: var(--color-muted, #6b7280); }
+
+.kooste-archive__card-body { flex: 1; min-width: 0; }
+.kooste-archive__card-title { font-size: 1rem; font-weight: 600; margin: 0 0 .2rem; line-height: 1.3; }
+.kooste-archive__card-desc { font-size: .85rem; color: var(--color-muted, #6b7280); margin: 0 0 .3rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+
+.kooste-archive__pills { display: flex; gap: .3rem; flex-wrap: wrap; }
+.kooste-archive__pill { font-size: .7rem; padding: .15rem .5rem; border-radius: 999px; background: var(--color-accent-soft, #eff6ff); color: var(--color-accent, #2563eb); border: 1px solid var(--color-accent-border, #bfdbfe); }
+
+.kooste-archive__arrow { flex-shrink: 0; font-size: 1.1rem; color: var(--color-accent, #2563eb); transition: transform .15s; }
+
+@media (max-width: 600px) {
+  .kooste-archive__card { gap: .75rem; padding: .75rem; }
+  .kooste-archive__date-badge { width: 44px; }
+  .kooste-archive__day { font-size: 1.1rem; }
+  .kooste-archive__card-desc { display: none; }
 }
 </style>
 {{ end }}
