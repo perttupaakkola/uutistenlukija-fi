@@ -169,6 +169,11 @@ def build_test_articles() -> list[TestArticle]:
             source_url="https://www.reuters.com/",
             source_domain="reuters.com",
             summary="Tiivistelmä valinnaisten kenttien renderöintitestiin.",
+            key_points=[
+                "Ensimmäinen testikohta varmistaa, että lista renderöityy.",
+                "Toinen kohta tarkistaa, että otsikko näkyy artikkelin alussa.",
+                "Kolmas kohta pitää rakenteen kolmen bulletin mittaisena.",
+            ],
             image="https://images.unsplash.com/photo-1497366754035-f200968a6e72",
             image_thumb="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=400",
             image_alt="Testikuva newsroom-ympäristöstä",
@@ -185,7 +190,7 @@ def build_test_articles() -> list[TestArticle]:
             author_image="/images/authors/toimitus.jpg",
             content_type="analysis",
             editorial_reviewed=True,
-            reading_time="5 min",
+            reading_time=5,
         ),
         article(
             "template-edge-future-date.md",

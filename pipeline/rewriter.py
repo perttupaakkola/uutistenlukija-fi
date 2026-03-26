@@ -13,6 +13,7 @@ import json
 import sys
 import time
 from typing import List, Dict
+import re
 from pathlib import Path
 
 from openai import OpenAI
@@ -109,6 +110,7 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 12. TARKISTA journalist_note: säilytä se vain jos siinä on aitoa toimituksellista lisäarvoa. Poista geneerinen tai itsestään selvä huomio käyttämällä tyhjää merkkijonoa.
 13. TARKISTA content_type: pidä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaiseen, kehittyvään tai tulkintaa vaativaan aiheeseen.
 14. TARKISTA editorial_reviewed: sen tulee aina olla true.
+15. TARKISTA key_points: kentässä tulee olla tasan 3 suomenkielistä kohtaa. Poista luettelomerkit, tiivistä muotoon yksi ydinajatus per kohta ja pidä yhteispituus enintään 300 merkissä aina kun mahdollista.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -182,6 +184,104 @@ def _extract_json(text: str) -> list:
     return json.loads(text)
 
 
+
+
+MAX_KEY_POINTS_TOTAL_CHARS = 300
+
+
+def _sanitize_key_point(text: str) -> str:
+    text = re.sub(r"^\s*[-•*\d.)\s]+", "", str(text or "").strip())
+    text = " ".join(text.split())
+    text = text.strip("\"“”'’.,;:!?-–— ")
+    return text
+
+
+def _rebalance_key_points(points: List[str], max_total_chars: int = MAX_KEY_POINTS_TOTAL_CHARS) -> List[str]:
+    points = [_sanitize_key_point(p) for p in points if _sanitize_key_point(p)]
+    if not points:
+        return []
+
+    points = points[:3]
+    total = sum(len(p) for p in points)
+    if total <= max_total_chars:
+        return points
+
+    lengths = [len(p) for p in points]
+    total_len = sum(lengths) or 1
+    targets = [max(40, int(max_total_chars * (length / total_len))) for length in lengths]
+    overflow = sum(targets) - max_total_chars
+    idx = 0
+    while overflow > 0 and targets:
+        if targets[idx % len(targets)] > 40:
+            targets[idx % len(targets)] -= 1
+            overflow -= 1
+        idx += 1
+        if idx > 1000:
+            break
+
+    trimmed = []
+    for point, limit in zip(points, targets):
+        if len(point) <= limit:
+            trimmed.append(point)
+            continue
+        cut = point[:limit].rstrip()
+        if ' ' in cut and limit >= 24:
+            cut = cut.rsplit(' ', 1)[0]
+        cut = cut.rstrip('.,;:!?-–— ')
+        trimmed.append(cut)
+
+    if sum(len(p) for p in trimmed) > max_total_chars:
+        # Final hard trim from the longest points first.
+        while sum(len(p) for p in trimmed) > max_total_chars:
+            longest_idx = max(range(len(trimmed)), key=lambda i: len(trimmed[i]))
+            if len(trimmed[longest_idx]) <= 20:
+                break
+            trimmed[longest_idx] = trimmed[longest_idx][:-1].rstrip(' .,;:!?-–—')
+
+    return [_sanitize_key_point(p) for p in trimmed if _sanitize_key_point(p)]
+
+
+def _fallback_key_points(article: Dict) -> List[str]:
+    source_text = " ".join(
+        str(article.get(field, ""))
+        for field in ("summary", "description", "content")
+        if article.get(field)
+    )
+    sentences = re.split(r"(?<=[.!?])\s+", source_text)
+    cleaned = []
+    seen = set()
+    for sentence in sentences:
+        point = _sanitize_key_point(sentence)
+        if len(point) < 20:
+            continue
+        key = point.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        cleaned.append(point)
+        if len(cleaned) == 3:
+            break
+    return _rebalance_key_points(cleaned)
+
+
+def _normalize_key_points(article: Dict) -> List[str]:
+    raw = article.get("key_points", [])
+    if isinstance(raw, str):
+        raw = [part for part in re.split(r"[\n•]+", raw) if part.strip()]
+    elif not isinstance(raw, list):
+        raw = []
+
+    points = _rebalance_key_points([str(item) for item in raw])
+    if len(points) < 3:
+        fallback = _fallback_key_points(article)
+        for point in fallback:
+            if len(points) >= 3:
+                break
+            if point.casefold() not in {p.casefold() for p in points}:
+                points.append(point)
+        points = _rebalance_key_points(points)
+    return points[:3]
+
 def _build_single_prompt(article: dict) -> str:
     """Build a rewrite prompt for a single article."""
     ATTRIBUTION_SOURCES = {
@@ -232,7 +332,8 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
     "original_title": "Alkuperäinen otsikko RSS:stä",
     "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono jos ei lisäarvoa",
     "content_type": "article tai analysis",
-    "editorial_reviewed": true
+    "editorial_reviewed": true,
+    "key_points": ["Kohta 1", "Kohta 2", "Kohta 3"]
   }}
 ]
 
@@ -241,6 +342,7 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
 "journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa toimituksellista taustaa, merkitystä tai kontekstia. Ei geneeristä filler-tekstiä. Jos huomio ei tuo oikeaa lisäarvoa, käytä tyhjää merkkijonoa.
 "content_type": käytä oletuksena "article". Käytä "analysis" VAIN kun aihe on aidosti monikulmainen, kehittyvä, kiistanalainen tai vaatii tulkintaa useasta näkökulmasta.
 "editorial_reviewed": aina true.
+"key_points": tasan 3 suomenkielistä bullet-kohtaa. Ytimekkäitä, informatiivisia, eivät kokonaisia pitkiä lausekappaleita. Pyri siihen, että kaikkien kolmen kohdan yhteispituus on enintään 300 merkkiä.
 
 Vastaa VAIN JSON-listalla."""
 
@@ -353,7 +455,8 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
     "original_title": "Alkuperäinen otsikko RSS:stä",
     "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono",
     "content_type": "article tai analysis",
-    "editorial_reviewed": true
+    "editorial_reviewed": true,
+    "key_points": ["Kohta 1", "Kohta 2", "Kohta 3"]
   }}
 ]
 
@@ -362,6 +465,7 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
 "journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa vain kun toimituksellinen huomio tuo oikeaa lisäarvoa: taustaa, miksi asia on tärkeä tai mitä lukijan kannattaa seurata. Ei geneeristä filler-tekstiä. Muulloin käytä tyhjää merkkijonoa.
 "content_type": käytä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaisiin, kehittyviin, kiistanalaisiin tai tulkintaa vaativiin juttuihin.
 "editorial_reviewed": aina true.
+"key_points": tasan 3 suomenkielistä bullet-kohtaa per artikkeli. Tiiviit, konkreettiset, ei otsikkomuotoisia katkelmia. Pyri siihen, että kolmen kohdan yhteispituus on enintään 300 merkkiä.
 
 Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vähintään 280 sanaa?"""
 
@@ -515,6 +619,7 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                 content_type = "article"
             written_article["content_type"] = content_type
             written_article["editorial_reviewed"] = True
+            written_article["key_points"] = _normalize_key_points(written_article)
 
             kept.append(written_article)
 
