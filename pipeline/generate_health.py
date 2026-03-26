@@ -76,6 +76,20 @@ def latest_article_timestamp() -> tuple[str | None, int]:
     return latest_dt.strftime("%Y-%m-%dT%H:%M:%SZ"), count
 
 
+DEPLOY_STATE_FILE = PIPELINE_DIR / "logs" / "deploy-state.json"
+
+
+def last_deploy_push() -> str | None:
+    """Return ISO timestamp of last successful git push to origin/main, or None."""
+    if DEPLOY_STATE_FILE.exists():
+        try:
+            state = json.loads(DEPLOY_STATE_FILE.read_text())
+            return state.get("lastDeployPush")
+        except Exception:
+            pass
+    return None
+
+
 def pipeline_stats() -> dict:
     """Read metrics files for pipeline summary."""
     last_run = None
@@ -156,6 +170,7 @@ def main():
         "articleCount": article_count,
         "generatedAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "uptimeCheck": True,   # always true when generated — site was just built
+        "lastDeployPush": last_deploy_push(),
         "pipeline": pipeline_stats(),
     }
 

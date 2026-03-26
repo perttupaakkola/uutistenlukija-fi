@@ -121,7 +121,24 @@ else
   git commit -m "Auto-publish: ${ARTICLE_COUNT} new articles ($(date -u +%Y-%m-%d %H:%M UTC))" 2>&1 | tee -a "$LOG_FILE"
   
   echo "[3/3] Pushing to GitHub..." | tee -a "$LOG_FILE"
-  git push origin main 2>&1 | tee -a "$LOG_FILE"
+  if git push origin main 2>&1 | tee -a "$LOG_FILE"; then
+    LOCAL_HEAD=$(git rev-parse HEAD)
+    REMOTE_HEAD=$(git ls-remote origin refs/heads/main 2>/dev/null | cut -f1)
+    if [ "$LOCAL_HEAD" = "$REMOTE_HEAD" ]; then
+      PUSH_TS=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+      python3 -c "
+import json, pathlib
+f = pathlib.Path('$PIPELINE_DIR/logs/deploy-state.json')
+f.parent.mkdir(parents=True, exist_ok=True)
+f.write_text(json.dumps({'lastDeployPush': '$PUSH_TS', 'lastCommit': '$LOCAL_HEAD'}, indent=2))
+" 2>/dev/null || true
+      echo "[deploy] Push verified: $LOCAL_HEAD at $PUSH_TS" | tee -a "$LOG_FILE"
+    else
+      echo "[deploy] WARNING: HEAD mismatch after push (local=$LOCAL_HEAD remote=$REMOTE_HEAD)" | tee -a "$LOG_FILE"
+    fi
+  else
+    echo "[deploy] ERROR: git push failed" | tee -a "$LOG_FILE"
+  fi
   echo "Deployed ${ARTICLE_COUNT} new articles." | tee -a "$LOG_FILE"
 fi
 
