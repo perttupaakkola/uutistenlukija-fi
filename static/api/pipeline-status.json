@@ -1,22 +1,23 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-26T07:44:39+00:00",
+  "generated_at": "2026-03-26T07:55:02+00:00",
   "runs": {
-    "total": 79,
+    "total": 80,
     "ok": 15,
-    "skip": 19,
+    "skip": 20,
     "error": 45
   },
   "articles": {
-    "attempted": 1495,
+    "attempted": 1514,
     "published": 15,
-    "rejected": 3,
+    "rejected": 4,
     "publish_rate": 1.0,
     "last_published_ts": "2026-03-26T07:24:36.498997+00:00"
   },
   "reject_reasons": {
     "keyword_stuffing": 2,
-    "lead_too_short": 1
+    "lead_too_short": 1,
+    "too_short": 1
   },
   "feeds": {
     "total": 22,
