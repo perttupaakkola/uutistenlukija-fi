@@ -2572,3 +2572,95 @@ body.is-home .highlights-row--top {
     letter-spacing: -0.01em;
   }
 }
+
+.newsletter-signup {
+  margin: 2rem 0;
+}
+.newsletter-signup__inner {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,249,251,0.98));
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+.newsletter-signup--home .newsletter-signup__inner {
+  padding: 1.5rem;
+}
+.newsletter-signup__eyebrow {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.newsletter-signup__title {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.2;
+}
+.newsletter-signup__text,
+.newsletter-signup__note {
+  margin: 0;
+  color: var(--text-secondary);
+}
+.newsletter-signup__form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.newsletter-signup__input {
+  flex: 1 1 260px;
+  min-height: 48px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+.newsletter-signup__input:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+.newsletter-signup__button {
+  min-height: 48px;
+  padding: 0.8rem 1.1rem;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.newsletter-signup__button:hover {
+  filter: brightness(0.96);
+}
+.newsletter-signup__button:active {
+  transform: translateY(1px);
+}
+.newsletter-signup__note a {
+  color: inherit;
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  .newsletter-signup__inner {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+  .newsletter-signup__form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .newsletter-signup__button,
+  .newsletter-signup__input {
+    width: 100%;
+  }
+}

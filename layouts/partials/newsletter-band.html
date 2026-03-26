@@ -1,34 +1,26 @@
-{{/* newsletter-band.html — Full-width newsletter signup band for homepage.
-     Uses a simple form POSTing to /uutiskirje/ (success page already exists).
-     No JS dependency — plain HTML form, server redirect on success.
-     Brevo embed placeholder: swap action URL to Brevo list embed endpoint
-     or newsletter_api.py URL once Brevo is configured. */}}
-{{ $action := default "/uutiskirje/" .Site.Params.newsletter_api_url }}
-<section class="newsletter-band" aria-labelledby="newsletter-band-heading">
-  <div class="newsletter-band__inner">
-    <div class="newsletter-band__text">
-      <h2 id="newsletter-band-heading" class="newsletter-band__heading">Päivän tärkeimmät uutiset sähköpostiisi kerran päivässä.</h2>
+{{/* newsletter-band.html — homepage newsletter signup card below the fold. */}}
+<section id="newsletter-signup" class="newsletter-signup newsletter-signup--home" aria-labelledby="newsletter-band-heading">
+  <div class="newsletter-signup__inner">
+    <div class="newsletter-signup__copy">
+      <p class="newsletter-signup__eyebrow">Päivittäinen kooste</p>
+      <h2 id="newsletter-band-heading" class="newsletter-signup__title">Tilaa päivittäinen uutiskooste sähköpostiisi</h2>
+      <p class="newsletter-signup__text">Saat tärkeimmät uutiset suomeksi kerran päivässä. Hyvä tapa pysyä kartalla ilman jatkuvaa doomscrollausta.</p>
     </div>
-    <form class="newsletter-band__form"
-          action="{{ $action }}"
-          method="post"
-          data-event="newsletter"
-          data-location="homepage-band">
-      <input type="hidden" name="source" value="homepage-band">
-      <input type="hidden" name="redirect" value="1">
-      <label for="nb-email" class="visually-hidden">Sähköpostiosoite</label>
-      <input id="nb-email"
+    <form class="newsletter-signup__form"
+          action="#newsletter-signup"
+          method="get"
+          data-location="homepage">
+      <input type="hidden" name="source" value="homepage">
+      <label for="newsletter-home-email" class="visually-hidden">Sähköpostiosoite</label>
+      <input id="newsletter-home-email"
              type="email"
              name="email"
              placeholder="sinun@email.fi"
-             autocomplete="email"
              required
-             class="newsletter-band__input">
-      <button type="submit" class="newsletter-band__btn">Tilaa ilmaiseksi</button>
+             autocomplete="email"
+             class="newsletter-signup__input">
+      <button type="submit" class="newsletter-signup__button">Tilaa ilmaiseksi</button>
     </form>
-    <p class="newsletter-band__privacy">
-      Ei mainoksia. Voit peruuttaa koska tahansa.
-      <a href="/tietosuojaseloste/">Tietosuoja</a>.
-    </p>
+    <p class="newsletter-signup__note">Tulossa pian. Ei roskapostia. <a href="/tietosuojaseloste/">Tietosuoja</a>.</p>
   </div>
 </section>
