@@ -91,7 +91,7 @@ fi
 
 # Run pipeline (scan + rewrite + publish + build)
 echo "[1/3] Running pipeline..." | tee -a "$LOG_FILE"
-python3 run_pipeline.py --quick --max-articles 1 --dedup-window 48 2>&1 | tee -a "$LOG_FILE"
+python3 run_pipeline.py --quick --max-articles 3 --dedup-window 48 2>&1 | tee -a "$LOG_FILE"
 PIPELINE_EXIT=${PIPESTATUS[0]}
 
 if [ "$PIPELINE_EXIT" -ne 0 ]; then
