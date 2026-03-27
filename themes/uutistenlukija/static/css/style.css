@@ -280,12 +280,13 @@ img { max-width: 100%; height: auto; }
   background: var(--card-bg);
   border: 1px solid var(--border);
   padding: 1.5rem;
-  transition: box-shadow 0.2s;
+  transition: transform 0.18s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.18s ease;
   overflow: hidden;
   position: relative;
 }
 .article-card:hover {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
 }
 .article-card .category-label {
   margin-bottom: 0.5rem;
@@ -465,6 +466,14 @@ img { max-width: 100%; height: auto; }
   border-bottom: 2px solid var(--border);
   margin-bottom: 2rem;
 }
+.highlight-card {
+  transition: transform 0.18s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.18s ease;
+  overflow: hidden;
+}
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
+}
 .highlight-card h3 {
   font-size: 1.1rem;
   line-height: 1.3;
@@ -513,10 +522,12 @@ img { max-width: 100%; height: auto; }
 .category-article-card {
   padding: 1rem;
   border-left: 3px solid var(--border);
-  transition: border-color 0.2s;
+  transition: transform 0.18s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.18s ease, border-color 0.2s;
 }
 .category-article-card:hover {
   border-left-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
 }
 .category-article-card h3 {
   font-size: 1rem;
@@ -749,7 +760,7 @@ img { max-width: 100%; height: auto; }
   aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
-  transition: transform 0.2s ease, opacity 0.3s ease;
+  transition: transform 0.18s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s ease;
   position: relative;
   z-index: 1;
   opacity: 0;
@@ -1351,6 +1362,12 @@ pre code {
 }
 [data-theme="dark"] .category-article-card:hover {
   border-left-color: #e74c3c;
+}
+[data-theme="dark"] .article-card:hover,
+[data-theme="dark"] .category-article-card:hover,
+[data-theme="dark"] .highlight-card:hover {
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.45);
+  border-color: var(--accent);
 }
 [data-theme="dark"] .pub-frequency-bar {
   background: color-mix(in srgb, #e74c3c 6%, #1a1a1a 94%);
