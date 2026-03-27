@@ -9,8 +9,8 @@
 # Main pipeline watchdog (every 15 min)
 */15 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/pipeline-watchdog.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/watchdog.log 2>&1
 
-# X / Twitter OAuth2 token refresh (every 85 min)
-*/85 * * * * /home/pertt/.openclaw/workspace/scripts/refresh-x-token.sh >> /home/pertt/.openclaw/workspace/logs/x-token-refresh.log 2>&1
+# X / Twitter OAuth2 token refresh (every 2h)
+0 */2 * * * /home/pertt/.openclaw/workspace/scripts/refresh-x-token.sh >> /home/pertt/.openclaw/workspace/logs/x-token-refresh.log 2>&1
 
 # SEO daily dashboard (07:30 UTC)
 30 7 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline && python3 seo_daily_dashboard.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/seo-dashboard.log 2>&1
