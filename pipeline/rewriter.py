@@ -111,6 +111,16 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 13. TARKISTA content_type: pidä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaiseen, kehittyvään tai tulkintaa vaativaan aiheeseen.
 14. TARKISTA editorial_reviewed: sen tulee aina olla true.
 15. TARKISTA key_points: kentässä tulee olla tasan 3 suomenkielistä kohtaa. Poista luettelomerkit, tiivistä muotoon yksi ydinajatus per kohta ja pidä yhteispituus enintään 300 merkissä aina kun mahdollista.
+16. SISÄISET LINKIT: Lisää artikkelin sisältöön enintään 3 kontekstuaalista sisäistä linkkiä markdown-muodossa. Linkitä VAIN ensimmäinen maininta per kohde. Käytä näitä linkkejä:
+    - "kotimaa" → [kotimaa](/categories/kotimaa/)
+    - "ulkomaat" → [ulkomaat](/categories/ulkomaat/)
+    - "talous" tai "talousuutiset" → [talous](/categories/talous/)
+    - "teknologia" → [teknologia](/categories/teknologia/)
+    - "urheilu" → [urheilu](/categories/urheilu/)
+    - "kulttuuri" → [kulttuuri](/categories/kulttuuri/)
+    - "tiede" → [tiede](/categories/tiede/)
+    - "uutiskirje" → [uutiskirje](/uutiskirje/)
+    Lisää linkit vain jos sana esiintyy luonnollisesti lauseessa. Älä pakota linkkejä. Jos artikkelissa ei ole sopivia kohtia, jätä sisältö ennalleen.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 

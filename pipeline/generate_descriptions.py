@@ -28,18 +28,20 @@ from openai import OpenAI
 
 CONTENT_DIR = Path(__file__).parent.parent / "content" / "posts"
 MODEL = "gpt-4o-mini"
-MIN_CHARS = 110
-MAX_CHARS = 145   # Sara's audit: 145 chars with buffer for Finnish character widths
+MIN_CHARS = 120
+MAX_CHARS = 155   # Target 120-155: naturally complete sentences, no truncation
 
 SYSTEM_PROMPT = (
     "You are writing a meta description for a Finnish news article for Google search results.\n\n"
     "RULES:\n"
     "- Language: Finnish (match the article language exactly)\n"
-    "- Length: 120–145 characters (including spaces) — max 145, never exceed\n"
+    "- Length: 120–155 characters (including spaces) — target 130–145, hard max 155\n"
+    "- Write a naturally complete sentence that is 120–155 characters — do NOT rely on truncation\n"
     "- End at a sentence boundary — never cut mid-sentence or mid-word\n"
     "- Do NOT start with the site name or \"Lue lisää\"\n"
     "- Do NOT use clickbait (\"Hämmästyttävää!\", \"Et usko...\")\n"
     "- Lead with the most newsworthy fact — WHO did WHAT\n"
+    "- Be distinct from the headline — rephrase, add a key detail\n"
     "- Present tense preferred when describing ongoing situations\n"
     "- Past tense for completed events\n"
     "- Avoid passive voice when active is natural\n\n"

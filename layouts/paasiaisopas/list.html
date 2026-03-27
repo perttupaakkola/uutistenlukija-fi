@@ -1,0 +1,71 @@
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+
+<div class="paasiaisopas-header">
+  <h1>{{ .Title | default "Pääsiäisopas" }}</h1>
+  {{ with .Description }}<p class="paasiaisopas-intro">{{ . }}</p>{{ end }}
+  {{ with .Content }}{{ . }}{{ end }}
+</div>
+
+{{/* Newsletter CTA — prominent placement for Easter hub */}}
+{{ partial "newsletter-band.html" . }}
+
+{{/* Article grid — all pages under /paasiaisopas/ */}}
+{{ $pages := where .Site.RegularPages "Section" "paasiaisopas" }}
+{{ $pages = $pages | complement (where $pages "Draft" true) }}
+{{ $pages = $pages.ByDate.Reverse }}
+
+{{ if gt (len $pages) 0 }}
+<section class="paasiaisopas-articles" aria-labelledby="paasiaisopas-articles-heading">
+  <h2 id="paasiaisopas-articles-heading" class="paasiaisopas-section-title">Pääsiäisartikkelit</h2>
+  <div class="articles-grid">
+    {{ range $pages }}
+    {{ $cat := index .Params.categories 0 | default "kotimaa" }}
+    {{ $img := .Params.image_thumb | default (.Params.image | default "/images/categories/kulttuuri.jpg") }}
+    {{ $alt := .Params.image_alt | default .Title }}
+    <article class="article-card">
+      {{ partial "card-image.html" (dict "img" $img "thumb" $img "alt" $alt "eager" false "hero" false "permalink" .Permalink "fallback" "/images/categories/kulttuuri.jpg") }}
+      {{ with .Params.categories }}
+      <span class="category-label">{{ index . 0 }}</span>
+      {{ end }}
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="excerpt">{{ .Summary | truncate 200 }}</p>
+      <div class="meta">
+        {{ .Date | time.Format "2.1. klo 15:04" }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* Also pull related articles tagged 'pääsiäinen' from the main posts section */}}
+{{ $tagged := where .Site.RegularPages "Params.tags" "intersect" (slice "pääsiäinen" "paasiäinen" "pääsiäinen 2026") }}
+{{ $tagged = where $tagged "Draft" "ne" true }}
+{{ $tagged = $tagged.ByDate.Reverse }}
+{{ $tagged = first 12 $tagged }}
+
+{{ if gt (len $tagged) 0 }}
+<section class="paasiaisopas-related" aria-labelledby="paasiaisopas-related-heading">
+  <h2 id="paasiaisopas-related-heading" class="paasiaisopas-section-title">Pääsiäisuutiset</h2>
+  <div class="articles-grid">
+    {{ range $tagged }}
+    {{ $cat := index .Params.categories 0 | default "kotimaa" }}
+    {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+    {{ $alt := .Params.image_alt | default .Title }}
+    <article class="article-card">
+      {{ partial "card-image.html" (dict "img" $img "thumb" $img "alt" $alt "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+      {{ with .Params.categories }}
+      <span class="category-label">{{ index . 0 }}</span>
+      {{ end }}
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="excerpt">{{ .Summary | truncate 200 }}</p>
+      <div class="meta">
+        {{ .Date | time.Format "2.1. klo 15:04" }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}
