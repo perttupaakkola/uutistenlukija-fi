@@ -44,3 +44,6 @@
 
 # Pipeline silence alert (every 30 min, alert if last publish/run >2h)
 */30 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/check_pipeline_silence.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/pipeline-silence.log 2>&1
+
+# Weekly top 5 articles report to #metrics (Mondays 08:00 UTC)
+0 8 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/weekly_top_articles.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/weekly-top-articles.log 2>&1
