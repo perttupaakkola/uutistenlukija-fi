@@ -295,6 +295,29 @@ HEADERS = {
     "User-Agent": "Uutistenlukija/1.0 (news aggregator; +https://uutistenlukija.fi)"
 }
 
+# Domains blocked from publication — product pages, SEO farms, non-Finnish aggregators, etc.
+# Two-layer defense: these are also excluded in Firehose rules where possible.
+BLOCKED_SOURCE_DOMAINS = frozenset({
+    "scoop.it",
+    "ecoonline.com",
+    "7sun.fi",
+    "bandilanews.com",
+    "itbranschen.com",
+    "kelikamerat.info",
+    "listafriikki.com",
+    "listamaailma.fi",
+    "nauvolaiset.fi",
+    "menejatieda.fi",
+    "ilmastoviisas.fi",
+    "destia.fi",
+    "voice.fi",
+    "uutiskaista.com",
+    "tieteentekijat.fi",
+    "koneensaatio.fi",
+    "etappi.com",
+    "shpilotech.com",   # Chinese lab equipment, non-Finnish product pages (2026-03-27)
+})
+
 # Politeness: minimum seconds between requests to the same domain
 # 5s is still polite for different domains; most feeds are on separate domains
 DOMAIN_DELAY = 5
@@ -459,6 +482,16 @@ def _pre_filter_slop(articles: List[Dict]) -> List[Dict]:
     for article in articles:
         title = article.get("title", "")
         desc = article.get("description", "")
+
+        # Block known low-quality / non-Finnish domains
+        link = article.get("link", "")
+        if link:
+            from urllib.parse import urlparse as _urlparse2
+            _netloc = _urlparse2(link).netloc.lower().removeprefix("www.")
+            if any(_netloc == bd or _netloc.endswith("." + bd) for bd in BLOCKED_SOURCE_DOMAINS):
+                print(f"[scanner] slop-filter (blocked domain {_netloc}): {title!r}")
+                dropped += 1
+                continue
 
         # Title must be at least 10 chars — likely a feed artifact otherwise
         if len(title.strip()) < 10:
