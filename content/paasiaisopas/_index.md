@@ -4,7 +4,6 @@ description: "Kattava opas pääsiäiseen 2026: kaupat auki pitkänä viikonlopp
 date: 2026-03-26
 lastmod: 2026-03-26
 draft: false
-layout: "paasiaisopas"
 ---
 
 Pääsiäinen 2026 vietetään 3.–6. huhtikuuta. Pitkä viikonloppu alkaa pitkäperjantaista ja päättyy toiseen pääsiäispäivään maanantaina. Useimmat kaupat ovat suljettuina tai lyhentynein aukioloajoin — tarkista oman kauppasi ajat etukäteen.
