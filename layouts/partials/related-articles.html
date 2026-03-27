@@ -2,11 +2,10 @@
   related-articles.html — "Lue myös" section for article pages.
 
   Rules:
-    - prefer up to 3 newest published posts from the same first category
+    - prefer Hugo built-in Related results (tags + categories + configured indices)
     - exclude current page
-    - if same-category matches < 3, fill the remainder with newest published posts from any category
-    - render image, title, and publication date
-    - skip entirely only if there are no eligible published posts at all
+    - cap at 4 cards
+    - if Related returns < 2 results, fill with newest posts from the same first category
 */ -}}
 
 {{- $current := . -}}
@@ -24,52 +23,30 @@
 {{- $publishedPosts = $publishedPosts.ByDate.Reverse -}}
 
 {{- $related := slice -}}
-{{- $manualSlugs := .Params.related_articles | default (slice) -}}
-
-{{- range $slug := $manualSlugs -}}
-  {{- range $i, $candidate := $publishedPosts -}}
-    {{- if and (eq $candidate.File.BaseFileName $slug) (ne $candidate.Permalink $currentPermalink) -}}
-      {{- $alreadyIncluded := false -}}
-      {{- range $j, $item := $related -}}
-        {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
-      {{- end -}}
-      {{- if not $alreadyIncluded -}}
-        {{- $related = $related | append $candidate -}}
-      {{- end -}}
+{{- $relatedPool := site.RegularPages.Related . -}}
+{{- range $candidate := $relatedPool -}}
+  {{- if and (eq $candidate.Section "posts") (not $candidate.Draft) (le $candidate.Date now) (ne $candidate.Permalink $currentPermalink) (lt (len $related) 4) -}}
+    {{- $alreadyIncluded := false -}}
+    {{- range $item := $related -}}
+      {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
+    {{- end -}}
+    {{- if not $alreadyIncluded -}}
+      {{- $related = $related | append $candidate -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 
-{{- if and $currentCat (lt (len $related) 3) -}}
-  {{- range $i, $candidate := $publishedPosts -}}
+{{- if and $currentCat (lt (len $related) 2) -}}
+  {{- range $candidate := $publishedPosts -}}
     {{- $candidateCats := $candidate.Params.categories | default (slice) -}}
     {{- $candidateCat := "" -}}
     {{- if gt (len $candidateCats) 0 -}}
       {{- $candidateCat = (index $candidateCats 0) | urlize -}}
     {{- end -}}
-    {{- if and (ne $candidate.Permalink $currentPermalink) (eq $candidateCat $currentCat) -}}
+    {{- if and (ne $candidate.Permalink $currentPermalink) (eq $candidateCat $currentCat) (lt (len $related) 4) -}}
       {{- $alreadyIncluded := false -}}
-      {{- range $j, $item := $related -}}
+      {{- range $item := $related -}}
         {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
-      {{- end -}}
-      {{- if and (not $alreadyIncluded) (lt (len $related) 3) -}}
-        {{- $related = $related | append $candidate -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-{{- $related = first 3 $related -}}
-
-{{- if lt (len $related) 3 -}}
-  {{- range $publishedPosts -}}
-    {{- $candidate := . -}}
-    {{- if and (ne $candidate.Permalink $currentPermalink) (lt (len $related) 3) -}}
-      {{- $alreadyIncluded := false -}}
-      {{- range $related -}}
-        {{- if eq .Permalink $candidate.Permalink -}}
-          {{- $alreadyIncluded = true -}}
-        {{- end -}}
       {{- end -}}
       {{- if not $alreadyIncluded -}}
         {{- $related = $related | append $candidate -}}
@@ -78,7 +55,7 @@
   {{- end -}}
 {{- end -}}
 
-{{- $related = first 3 $related -}}
+{{- $related = first 4 $related -}}
 
 {{- if gt (len $related) 0 -}}
 <section class="related-articles" aria-labelledby="related-heading">

@@ -1,6 +1,6 @@
 baseURL = 'https://uutistenlukija.fi/'
 locale = 'fi'
-title = 'Uutistenlukija – Kattava uutiskooste tänään suomeksi'
+title = 'Uutistenlukija – Päivän uutiset suomeksi'
 theme = 'uutistenlukija'
 defaultContentLanguage = 'fi'
 enableRobotsTXT = true
@@ -9,7 +9,7 @@ disableHugoGeneratorInject = true
   pagerSize = 20
 
 [params]
-  description = "Lue päivän tärkein uutiskooste tänään. Tiivistämme uutiset puolestasi: kotimaa, ulkomaat, talous, teknologia ja urheilu. Tilaa ilmainen uutiskirje."
+  description = "Päivän tärkeimmät uutiset suomeksi — kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede."
   shortTitle = "Uutistenlukija"
   author = "Uutistenlukija"
   dateFormat = "2.1.2006"
@@ -49,6 +49,18 @@ disableHugoGeneratorInject = true
   taxonomy = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
 
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = true
+
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+
+  [[related.indices]]
+    name = "tags"
+
 [menu]
   [[menu.main]]
     name = "Päivän kooste"
@@ -86,4 +98,7 @@ disableHugoGeneratorInject = true
     name = "Toimitus"
     url = "/toimitus/"
     weight = 8
-
+  [[menu.main]]
+    name = "Haku"
+    url = "/haku/"
+    weight = 9
