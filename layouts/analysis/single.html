@@ -50,15 +50,7 @@
     · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ partial "reading-time.html" . }}
   </div>
   {{ partial "share-buttons.html" . }}
-  {{ with .Params.source_name }}
-  <div class="source-attribution">
-    <span class="source-attribution__label">Alkuperäinen lähde:</span>
-    <strong>{{ . }}</strong>
-    {{ with $.Params.source_url }}
-    <a href="{{ . }}" target="_blank" rel="noopener nofollow" class="source-attribution__link" data-track="source_click"{{ with $.Params.source_domain }} data-source-name="{{ . }}"{{ end }}>Lue alkuperäinen →</a>
-    {{ end }}
-  </div>
-  {{ end }}
+  {{ partial "source-article-link.html" . }}
 
   <div class="content">
     {{- $paragraphs := split .Content "</p>" -}}
@@ -75,6 +67,10 @@
 
   {{ partial "ad-slot.html" (dict "position" "after-article" "context" .) }}
   {{ partial "newsletter-cta.html" . }}
+
+  <div class="social-share--bottom">
+    {{ partial "social-share.html" . }}
+  </div>
 
   {{ partial "related-articles.html" . }}
   {{ partial "most-read.html" . }}

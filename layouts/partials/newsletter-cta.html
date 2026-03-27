@@ -4,12 +4,12 @@
   <div class="newsletter-signup__inner">
     <div class="newsletter-signup__copy">
       <p class="newsletter-signup__eyebrow">Uutiskirje</p>
-      <h2 id="newsletter-signup-heading" class="newsletter-signup__title">Tilaa ilmainen uutiskirje</h2>
-      <p class="newsletter-signup__text">Saat kattavan uutiskoosteen tänään suoraan sähköpostiisi. Pysy ajan tasalla ilman uutisähkyä.</p>
+      <h2 id="newsletter-signup-heading" class="newsletter-signup__title">Pidä päivän tärkeimmät uutiset mukana ilman jatkuvaa selailua</h2>
+      <p class="newsletter-signup__text">Tilaa ilmainen uutiskirje ja saat olennaiset uutiset suomeksi tiiviinä koosteena sähköpostiisi.</p>
     </div>
-    <form class="newsletter-signup__form"
-          action="#newsletter-signup"
-          method="get"
+    <form class="newsletter-signup__form js-newsletter-form"
+          action="/api/subscribe"
+          method="post"
           data-location="{{ $source }}">
       <input type="hidden" name="source" value="{{ $source }}">
       <label for="newsletter-inline-email" class="visually-hidden">Sähköpostiosoite</label>
@@ -19,9 +19,11 @@
              placeholder="sinun@email.fi"
              required
              autocomplete="email"
+             inputmode="email"
              class="newsletter-signup__input">
-      <button type="submit" class="newsletter-signup__button">Tilaa uutiskooste</button>
+      <button type="submit" class="newsletter-signup__button">Tilaa ilmaiseksi</button>
     </form>
-    <p class="newsletter-signup__note">Tulossa pian. Voit peruuttaa koska tahansa. <a href="/tietosuojaseloste/">Tietosuoja</a>.</p>
+    <p class="newsletter-signup__status" data-newsletter-status aria-live="polite"></p>
+    <p class="newsletter-signup__note">Ei roskapostia. Voit peruuttaa koska tahansa. <a href="/tietosuojaseloste/">Tietosuoja</a>.</p>
   </div>
 </section>

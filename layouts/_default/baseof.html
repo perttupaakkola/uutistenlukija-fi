@@ -391,6 +391,81 @@
     syncMenuState();
   })();
 
+  // Newsletter signup.
+  (function() {
+    var forms = document.querySelectorAll('.js-newsletter-form');
+    if (!forms.length) return;
+
+    forms.forEach(function(form) {
+      var status = form.parentElement ? form.parentElement.querySelector('[data-newsletter-status]') : null;
+      var submitButton = form.querySelector('button[type="submit"]');
+      var emailInput = form.querySelector('input[name="email"]');
+
+      function setStatus(message, kind) {
+        if (!status) return;
+        status.textContent = message || '';
+        status.classList.remove('is-visible', 'is-success', 'is-error');
+        if (!message) return;
+        status.classList.add('is-visible', kind === 'success' ? 'is-success' : 'is-error');
+      }
+
+      form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        setStatus('');
+
+        var formData = new FormData(form);
+        var email = String(formData.get('email') || '').trim();
+        if (!email) {
+          setStatus('Anna sähköpostiosoite.', 'error');
+          if (emailInput) emailInput.focus();
+          return;
+        }
+
+        form.classList.add('is-loading');
+        if (submitButton) submitButton.disabled = true;
+
+        try {
+          var response = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              email: email,
+              source: formData.get('source') || form.dataset.location || 'article'
+            })
+          });
+
+          var data = {};
+          try {
+            data = await response.json();
+          } catch (jsonError) {
+            data = {};
+          }
+
+          if (response.ok) {
+            setStatus(data.message || 'Kiitos! Lähetämme pian ensimmäisen uutiskirjeemme.', 'success');
+            form.reset();
+            return;
+          }
+
+          if (response.status === 409) {
+            setStatus(data.message || 'Tämä sähköpostiosoite on jo uutiskirjeen tilaaja.', 'error');
+            return;
+          }
+
+          setStatus(data.message || 'Tilauksen käsittely ei onnistunut juuri nyt. Yritä hetken päästä uudelleen.', 'error');
+        } catch (error) {
+          setStatus('Tilauksen käsittely ei onnistunut juuri nyt. Yritä hetken päästä uudelleen.', 'error');
+        } finally {
+          form.classList.remove('is-loading');
+          if (submitButton) submitButton.disabled = false;
+        }
+      });
+    });
+  })();
+
   // Arrow key navigation for card grids.
   (function () {
     var GRID_SELECTORS = [

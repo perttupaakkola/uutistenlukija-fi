@@ -1,0 +1,19 @@
+{{ with .Params.source_url }}
+{{ $label := $.Params.source_name | default $.Params.source_domain }}
+<div class="source-article-link" data-track="source_callout">
+  <span class="source-article-link__icon" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 3h7v7" />
+      <path d="M10 14 21 3" />
+      <path d="M21 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+    </svg>
+  </span>
+  <div class="source-article-link__body">
+    <span class="source-article-link__eyebrow">Alkuperäinen artikkeli</span>
+    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="source-article-link__anchor" data-track="source_click"{{ with $.Params.source_domain }} data-source-name="{{ . }}"{{ end }}>Alkuperäinen artikkeli →</a>
+    {{ with $label }}
+    <span class="source-article-link__meta">Lähde: {{ . }}</span>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

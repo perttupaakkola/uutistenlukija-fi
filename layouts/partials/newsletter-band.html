@@ -6,9 +6,9 @@
       <h2 id="newsletter-band-heading" class="newsletter-signup__title">Tilaa päivittäinen uutiskooste sähköpostiisi</h2>
       <p class="newsletter-signup__text">Saat tärkeimmät uutiset suomeksi kerran päivässä. Hyvä tapa pysyä kartalla ilman jatkuvaa doomscrollausta.</p>
     </div>
-    <form class="newsletter-signup__form"
-          action="#newsletter-signup"
-          method="get"
+    <form class="newsletter-signup__form js-newsletter-form"
+          action="/api/subscribe"
+          method="post"
           data-location="homepage">
       <input type="hidden" name="source" value="homepage">
       <label for="newsletter-home-email" class="visually-hidden">Sähköpostiosoite</label>
@@ -18,9 +18,11 @@
              placeholder="sinun@email.fi"
              required
              autocomplete="email"
+             inputmode="email"
              class="newsletter-signup__input">
       <button type="submit" class="newsletter-signup__button">Tilaa ilmaiseksi</button>
     </form>
-    <p class="newsletter-signup__note">Tulossa pian. Ei roskapostia. <a href="/tietosuojaseloste/">Tietosuoja</a>.</p>
+    <p class="newsletter-signup__status" data-newsletter-status aria-live="polite"></p>
+    <p class="newsletter-signup__note">Ei roskapostia. Voit peruuttaa koska tahansa. <a href="/tietosuojaseloste/">Tietosuoja</a>.</p>
   </div>
 </section>

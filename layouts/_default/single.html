@@ -35,15 +35,7 @@
     {{- end }}
   </div>
   {{ partial "share-buttons.html" . }}
-  {{ with .Params.source_name }}
-  <div class="source-attribution">
-    <span class="source-attribution__label">Alkuperäinen lähde:</span>
-    <strong>{{ . }}</strong>
-    {{ with $.Params.source_url }}
-    <a href="{{ . }}" target="_blank" rel="noopener nofollow" class="source-attribution__link" data-track="source_click"{{ with $.Params.source_domain }} data-source-name="{{ . }}"{{ end }}>Lue alkuperäinen →</a>
-    {{ end }}
-  </div>
-  {{ end }}
+  {{ partial "source-article-link.html" . }}
   <div class="content">
     {{- $paragraphs := split .Content "</p>" -}}
     {{- range $i, $p := $paragraphs -}}
@@ -78,7 +70,12 @@
   </div>
   {{ end }}
 
-    {{ partial "related-articles.html" . }}
+  {{/* #19.2: Share buttons repeated at bottom of article */}}
+  <div class="social-share--bottom">
+    {{ partial "social-share.html" . }}
+  </div>
+
+  {{ partial "related-articles.html" . }}
   {{ partial "most-read.html" . }}
 </article>
 
