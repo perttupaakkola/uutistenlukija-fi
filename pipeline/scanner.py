@@ -118,6 +118,7 @@ RSS_FEEDS = [
         "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
         "language": "en",
         "category_hint": "Tiede",
+        "disabled": True,  # 2026-03-27: Tiede should be Finnish-language sources
     },
     {
         "name": "Kauppalehti",
@@ -164,10 +165,17 @@ RSS_FEEDS = [
         "category_hint": "Urheilu",
     },
     {
+        "name": "Jatkoaika.com",
+        "url": "https://jatkoaika.com/rss/index.rss",
+        "language": "fi",
+        "category_hint": "Urheilu",
+    },
+    {
         "name": "BBC Technology",
         "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
         "language": "en",
         "category_hint": "Teknologia",
+        "disabled": True,  # 2026-03-27: Teknologia should be Finnish-language sources
     },
     {
         "name": "Yle Teknologia",
@@ -179,12 +187,43 @@ RSS_FEEDS = [
         "name": "Der Spiegel International",
         "url": "https://www.spiegel.de/international/index.rss",
         "language": "en",
+        "disabled": True,  # 8 days stale 2026-03-27, no new content passing dedup
     },
     {
         "name": "Tekniikka & Talous",
-        "url": "https://www.tekniikkatalous.fi/feed",
+        "url": "https://www.tekniikkatalous.fi/api/feed/v2/rss/tt",  # updated URL 2026-03-26
         "language": "fi",
         "category_hint": "Teknologia",
+    },
+    {
+        "name": "Tivi",
+        "url": "https://www.tivi.fi/feed/",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "io-tech.fi",
+        "url": "https://io-tech.fi/feed/",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "IS Digitoday",
+        "url": "https://www.is.fi/rss/digitoday.xml",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "MTV Uutiset",
+        "url": "https://www.mtvuutiset.fi/api/feed/rss/uutiset_uusimmat",
+        "language": "fi",
+        "category_hint": "Kotimaa",
+    },
+    {
+        "name": "Maaseudun Tulevaisuus",
+        "url": "https://www.maaseuduntulevaisuus.fi/feeds/maaseuduntulevaisuus",
+        "language": "fi",
+        "category_hint": "Kotimaa",
     },
     {
         "name": "Science News",
@@ -195,6 +234,12 @@ RSS_FEEDS = [
     {
         "name": "Yle Tiede",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-819",
+        "language": "fi",
+        "category_hint": "Tiede",
+    },
+    {
+        "name": "THL",
+        "url": "https://thl.fi/ajankohtaista/-/asset_publisher/m8s4MMkgtyYg/rss",
         "language": "fi",
         "category_hint": "Tiede",
     },
