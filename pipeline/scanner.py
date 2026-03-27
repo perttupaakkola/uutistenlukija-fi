@@ -193,6 +193,7 @@ RSS_FEEDS = [
         "name": "Der Spiegel International",
         "url": "https://www.spiegel.de/international/index.rss",
         "language": "en",
+        "disabled": True,  # 8 days stale as of 2026-03-27, no new content passing dedup
     },
     {
         "name": "Tekniikka & Talous",
