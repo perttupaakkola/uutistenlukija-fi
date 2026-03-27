@@ -1,6 +1,6 @@
 {{/*
   json-ld.html — Structured data (JSON-LD) for Schema.org
-  Covers: WebSite (homepage), NewsArticle (posts), CollectionPage (categories/sections)
+  Covers: WebSite+SearchAction (homepage only), NewsArticle (posts), CollectionPage (categories/sections)
 
   Publisher org block is reused across all types.
 */}}
@@ -18,7 +18,8 @@
     )
 }}
 
-{{/* ── Sitewide: WebSite + SearchAction ─────────────────────────── */}}
+{{/* ── Homepage only: WebSite + SearchAction ─────────────────────── */}}
+{{ if .IsHome }}
 {{ $websiteSchema := dict
     "@context" "https://schema.org"
     "@type" "WebSite"
@@ -39,6 +40,7 @@
 <script type="application/ld+json">
 {{ $websiteSchema | jsonify (dict "indent" "  ") | safeJS }}
 </script>
+{{ end }}
 
 {{/* ── Article page: NewsArticle ───────────────────────────────────── */}}
 {{ if and .IsPage (eq .Section "posts") }}
