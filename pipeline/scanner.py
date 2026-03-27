@@ -68,6 +68,7 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "Tekniikka & Talous": 2,
     "Tivi":               2,
     "io-tech.fi":         2,
+    "IS Digitoday":       2,
     "Jatkoaika.com":      2,
     "THL":                2,
     # MikroBitti removed 2026-03-27 (dead feed)
