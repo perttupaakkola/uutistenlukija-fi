@@ -1,23 +1,24 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-27T18:32:35+00:00",
+  "generated_at": "2026-03-27T19:20:22+00:00",
   "runs": {
-    "total": 154,
+    "total": 150,
     "ok": 13,
     "skip": 0,
-    "error": 141
+    "error": 137
   },
   "articles": {
-    "attempted": 3730,
+    "attempted": 3632,
     "published": 13,
-    "rejected": 129,
-    "publish_rate": 0.3,
-    "last_published_ts": "2026-03-27T17:54:24.551589+00:00"
+    "rejected": 152,
+    "publish_rate": 0.4,
+    "last_published_ts": "2026-03-27T18:32:34.619630+00:00"
   },
   "reject_reasons": {
-    "too_short": 127,
+    "too_short": 150,
     "lead_too_short": 8,
-    "keyword_stuffing": 5,
+    "keyword_stuffing": 6,
+    "only 1 paragraphs (min 3)": 3,
     "score 30/40 (wc=10 title=0 des": 1
   },
   "feeds": {
