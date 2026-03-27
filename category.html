@@ -1,0 +1,49 @@
+{{ define "extra_head" }}
+<link rel="stylesheet" href="/css/category-hero.css" media="print" onload="this.onload=null;this.media='all'">
+<noscript><link rel="stylesheet" href="/css/category-hero.css"></noscript>
+{{ end }}
+
+{{ define "main" }}
+{{ partial "category-hero.html" . }}
+
+{{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
+{{ if gt (len $paginator.Pages) 0 }}
+<div class="articles-grid">
+  {{ range $paginator.Pages }}
+  <article class="article-card">
+    {{ with .Params.categories }}
+    <span class="category-label">{{ index . 0 }}</span>
+    {{ end }}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{- with (.Summary | truncate 200) }}<p class="excerpt">{{ . }}</p>{{- end }}
+    <div class="meta">
+      {{ .Date | time.Format "2.1. klo 15:04" }}
+      {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+      · {{ .ReadingTime }} min
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ else }}
+<article class="single-article empty-state">
+  <h2>Tässä kategoriassa ei ole vielä artikkeleita</h2>
+  <p>Kokeile hetken päästä uudelleen tai selaa muita uutisia.</p>
+  <p><a href="/">Etusivu</a> · <a href="/haku/">Haku</a> · <a href="/categories/">Kaikki kategoriat</a></p>
+</article>
+{{ end }}
+
+{{ partial "newsletter-cta.html" . }}
+
+{{ $pag := $paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav class="pagination" aria-label="Sivunavigaatio">
+  {{ if $pag.HasPrev }}
+  <a href="{{ $pag.Prev.URL }}" class="page-link">← Edellinen</a>
+  {{ end }}
+  <span class="page-info">Sivu {{ $pag.PageNumber }}/{{ $pag.TotalPages }}</span>
+  {{ if $pag.HasNext }}
+  <a href="{{ $pag.Next.URL }}" class="page-link">Seuraava →</a>
+  {{ end }}
+</nav>
+{{ end }}
+{{ end }}
