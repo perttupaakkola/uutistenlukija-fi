@@ -29,6 +29,7 @@ keywords:
 source_name: "shpilotech.com"
 source_url: "https://www.shpilotech.com/tl/maliit-na-spray-dryer/"
 source_domain: "shpilotech.com"
+briefing: true
 draft: false
 ---
 
