@@ -7,34 +7,14 @@
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ partial "hero-image.html" . }}
-  {{ partial "key-points.html" . }}
-  <div class="article-meta">
-    {{ .Date | time.Format "2.1.2006 klo 15:04" }}
-    {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-    · {{ .ReadingTime }} min lukuaika
-  </div>
-  {{ partial "share-buttons.html" . }}
-  {{ partial "source-article-link.html" . }}
-  <div class="content">
-    {{ .Content }}
-  </div>
-
-  {{ with .Params.author }}
-  <div class="author-box">
-    {{ with $.Params.author_image }}
-    <img src="{{ . }}" alt="{{ $.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="80" height="80">
-    {{ end }}
-    <div class="author-info">
-      <span class="author-name">{{ $.Params.author }}</span>
-      {{ with $.Params.author_title }}
-      <span class="author-role">{{ . }}</span>
-      {{ end }}
-      {{ with $.Params.author_bio }}
-      <p class="author-bio">{{ . }}</p>
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
+  {{ partial "article-body.html" (dict
+    "page" .
+    "showKeyPoints" true
+    "metaVariant" "page"
+    "showShareTop" true
+    "showSource" true
+    "showAuthorBox" true
+  ) }}
 
   {{ partial "related-articles.html" . }}
   {{ partial "more-from-category.html" . }}
