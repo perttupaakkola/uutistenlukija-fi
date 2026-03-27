@@ -67,6 +67,9 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "Der Spiegel International": 2,
     "Tekniikka & Talous": 2,
     "Tivi":               2,
+    "io-tech.fi":         2,
+    "Jatkoaika.com":      2,
+    "THL":                2,
     # MikroBitti removed 2026-03-27 (dead feed)
     "TechCrunch":         2,
     "Ars Technica":       2,
@@ -166,6 +169,12 @@ RSS_FEEDS = [
         "language": "fi",
         "category_hint": "Urheilu",
     },
+    {
+        "name": "Jatkoaika.com",
+        "url": "https://jatkoaika.com/rss/index.rss",
+        "language": "fi",
+        "category_hint": "Urheilu",
+    },
     # BBC Technology removed 2026-03-27 — Teknologia should come from Finnish sources (Tivi, MikroBitti, Yle Teknologia)
     # {
     #     "name": "BBC Technology",
@@ -204,6 +213,12 @@ RSS_FEEDS = [
     #     "category_hint": "Teknologia",
     # },
     {
+        "name": "io-tech.fi",
+        "url": "https://io-tech.fi/feed/",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
         "name": "MTV Uutiset",
         "url": "https://www.mtvuutiset.fi/api/feed/rss/uutiset_uusimmat",
         "language": "fi",
@@ -224,6 +239,14 @@ RSS_FEEDS = [
     {
         "name": "Yle Tiede",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-819",
+        "language": "fi",
+        "category_hint": "Tiede",
+    },
+    {
+        # THL (Terveyden ja hyvinvoinnin laitos) — health & welfare news
+        # Non-obvious Liferay AssetPublisher URL, found via page source scraping
+        "name": "THL",
+        "url": "https://thl.fi/ajankohtaista/-/asset_publisher/m8s4MMkgtyYg/rss",
         "language": "fi",
         "category_hint": "Tiede",
     },
