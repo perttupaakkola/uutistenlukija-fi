@@ -29,7 +29,6 @@ keywords:
 source_name: "Turun Sanomat"
 source_url: "https://www.ts.fi/a/6938769"
 source_domain: "ts.fi"
-briefing: true
 draft: false
 ---
 
