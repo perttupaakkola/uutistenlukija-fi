@@ -58,8 +58,7 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "MTV Uutiset":       1,
     # ── Tier 1: International wire services / broadcasters ────────────────────
     "BBC World":         1,
-    "BBC Science":       1,
-    "BBC Technology":    1,
+    # BBC Science + BBC Technology removed 2026-03-27
     "Reuters World":     1,
     "AP News":           1,
     # ── Tier 2: Standard major outlets ───────────────────────────────────────
@@ -115,12 +114,13 @@ RSS_FEEDS = [
         "url": "https://www.is.fi/rss/uutiset.xml",
         "language": "fi",
     },
-    {
-        "name": "BBC Science",
-        "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
-        "language": "en",
-        "category_hint": "Tiede",
-    },
+    # BBC Science removed 2026-03-27 — Tiede should come from Finnish sources (Yle Tiede, Tivi)
+    # {
+    #     "name": "BBC Science",
+    #     "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+    #     "language": "en",
+    #     "category_hint": "Tiede",
+    # },
     {
         "name": "Kauppalehti",
         "url": "https://feeds.kauppalehti.fi/rss/main",
@@ -166,12 +166,13 @@ RSS_FEEDS = [
         "language": "fi",
         "category_hint": "Urheilu",
     },
-    {
-        "name": "BBC Technology",
-        "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
-        "language": "en",
-        "category_hint": "Teknologia",
-    },
+    # BBC Technology removed 2026-03-27 — Teknologia should come from Finnish sources (Tivi, MikroBitti, Yle Teknologia)
+    # {
+    #     "name": "BBC Technology",
+    #     "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    #     "language": "en",
+    #     "category_hint": "Teknologia",
+    # },
     {
         "name": "Yle Teknologia",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-85",
