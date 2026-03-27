@@ -30,23 +30,26 @@ except Exception:
 
 SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
 
-=== PITUUS — TÄRKEIN VAATIMUS, LUE ENSIN ===
-Jokaisen artikkelin TÄYTYY olla 300–400 sanaa. ABSOLUUTTINEN MINIMI ON 280 SANAA.
-Laske sanat mielessäsi: tavallinen kappale on 60–80 sanaa. Tarvitset VÄHINTÄÄN 4 täyttä kappaletta.
-Jos ensimmäinen versio jää alle 280 sanan, jatka kirjoittamista — lisää kontekstia, taustaa ja seurauksia.
-LYHYET LÄHDETEKSTIT TARKOITTAVAT ENEMMÄN TAUSTAA, EI LYHYEMPÄÄ ARTIKKELIA.
+=== PITUUS ===
+Tavoite 280–380 sanaa. Jos lähde on lyhyt, kirjoita lyhyempi artikkeli — älä täytä tyhjää tilaa keksityllä tiedolla.
+Alle 200 sanan artikkelit ovat OK jos lähdemateriaali ei anna enemmän.
 
-Kun lähdemateriaali on lyhyt, laajenna AINA näillä tavoilla:
-  * Tausta: Mitä tapahtui aiemmin tässä asiassa? Mikä johti tähän tilanteeseen?
+Kun lähdemateriaali on lyhyt, laajenna VAIN näillä tavoilla (ilman keksittyjä faktoja):
+  * Tausta: Mitä tapahtui aiemmin tässä asiassa? (vain jos tiedät sen varmasti)
   * Merkitys: Miksi tämä on tärkeää lukijalle? Ketä tämä koskee?
-  * Seuraukset: Mitkä ovat seuraukset tai vaikutukset lähiaikoina?
-  * Laajempi kehys: Liittyykö tämä johonkin laajempaan ilmiöön tai trendiin?
-  * Lisäfaktat: VAIN faktat jotka esiintyvät lähdetekstissä — älä keksi tilastoja.
+  * Seuraukset: Mitkä ovat mahdolliset vaikutukset? (epävarmuus OK, spekulointi ei)
+  * Laajempi kehys: Yleinen ilmiö tai trendi — ilman lukuja.
+
+=== NUMEROIDEN ABSOLUUTTINEN SÄÄNTÖ ===
+KIELLETTY: Älä kirjoita YHTÄÄN numeroa, prosenttia, vuosilukua tai mittayksikköä joka EI esiinny sanasta sanaan lähdetekstissä.
+Tämä sääntö on ehdoton. Ei poikkeuksia. Ei "arviolta", ei "noin", ei "viime vuonna".
+Jos lähteessä ei ole lukuja → artikkelissa ei ole lukuja.
+Rikkominen = artikkeli poistetaan välittömästi.
 
 KIELLETTY — älä koskaan tee näin:
-- Älä keksi tilastoja, lukuja, vuosilukuja tai lainauksia joita ei ole lähdetekstissä
-- Jos lähde ei sisällä tilastoja, älä lisää niitä — laajenna kontekstilla, taustoituksella tai merkityksellä
-- Älä päätä artikkelia yleisellä tulevaisuuden pohdinnalla tai tyhjällä yhteenvedolla — lopeta konkreettiseen tietoon
+- Älä keksi lainauksia joita ei ole lähdetekstissä
+- Älä päätä artikkelia yleisellä tulevaisuuden pohdinnolla tai tyhjällä yhteenvedolla — lopeta konkreettiseen tietoon
+- Älä lisää markkinointipuhe-tyylistä yritystietoa (asiakasmäärät, messuosallistumiset) ellei lähde mainitse niitä
 
 Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
 
@@ -540,24 +543,22 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
         # Pass 3: Per-article expansion retry for anything under 200 words
         EXPANSION_SYSTEM = """Olet uutistoimittaja. Sinulle annetaan lyhyt uutisartikkeli.
-Laajenna se vähintään 300 sanaan (tavoite 320–380) lisäämällä KAIKKI seuraavista:
-- Taustatieto: mitä aiheen ympärillä on tapahtunut aiemmin? Mikä johti tähän?
-- Konteksti: miksi tämä on merkittävää tai miten se liittyy laajempaan kehitykseen?
-- Seuraukset tai vaikutukset: mitä tämä tarkoittaa ihmisille tai yhteiskunnalle?
-- Lisäfaktat: VAIN faktat jotka esiintyvät lähdetekstissä — älä keksi tilastoja tai lukuja.
-KIELLETTY: Älä keksi tilastoja, vuosilukuja tai lainauksia joita ei ole lähdetekstissä. Älä päätä yleisellä tulevaisuuden pohdinnolla.
-Lisää H2-väliotsikko (## Otsikko) jäsentämään teksti. Säilytä alkuperäinen otsikko ja faktat. Kirjoita luonnollista suomea.
-Säilytä myös kentät journalist_note, content_type ja editorial_reviewed ennallaan, ellei journalist_note ole selvästi geneerinen — silloin tyhjennä se. editorial_reviewed on aina true.
+Laajenna se lisäämällä kontekstia, taustaa ja merkitystä — tavoite 250–320 sanaa.
+NUMEROIDEN ABSOLUUTTINEN SÄÄNTÖ: Älä kirjoita YHTÄÄN numeroa, prosenttia, vuosilukua tai mittayksikköä joka ei esiinny sanasta sanaan alkuperäisessä artikkelissa. Ei poikkeuksia.
+KIELLETTY: Älä keksi lainauksia, tilastoja tai yritystietoja. Älä päätä yleisellä tulevaisuuden pohdinnolla.
+Jos artikkeli on jo riittävä lyhyenäkin, palauta se sellaisenaan — älä täytä tyhjää tilaa.
+Lisää H2-väliotsikko (## Otsikko) jäsentämään teksti jos yli 200 sanaa. Kirjoita luonnollista suomea.
+Säilytä kentät journalist_note, content_type ja editorial_reviewed ennallaan. editorial_reviewed on aina true.
 Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "...", "journalist_note": "...", "content_type": "article", "editorial_reviewed": true}"""
 
         expanded_audited = []
         for article in audited:
             word_count = len(article.get("content", "").split())
-            if word_count < 310:
+            if word_count < 180:
                 title = article.get("title", "")
                 print(f"[writer]   ⚠ Short ({word_count}w), expanding: '{title[:50]}'")
                 try:
-                    expand_prompt = f"""Laajenna tämä artikkeli vähintään 250 sanaan:\n\n{json.dumps(article, ensure_ascii=False, indent=2)}\n\nVastaa VAIN JSON-objektina."""
+                    expand_prompt = f"""Laajenna tämä artikkeli 200–280 sanaan lisäämällä kontekstia ja taustaa. ÄLÄ keksi numeroita tai tilastoja:\n\n{json.dumps(article, ensure_ascii=False, indent=2)}\n\nVastaa VAIN JSON-objektina."""
                     expand_response = _call_llm(EXPANSION_SYSTEM, expand_prompt)
                     # Response is a single object, not a list
                     expand_text = expand_response.strip()
