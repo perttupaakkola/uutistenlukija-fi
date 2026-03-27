@@ -2855,3 +2855,24 @@ body.is-home .highlights-row--top {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+.single-article .content {
+  max-width: 720px;
+  font-size: 1.25rem;
+  line-height: 1.65;
+}
+.single-article .content > * {
+  max-width: 100%;
+}
+.single-article .content p,
+.single-article .content ul,
+.single-article .content ol,
+.single-article .content blockquote {
+  max-width: 720px;
+}
+@media (max-width: 768px) {
+  .single-article .content {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+}
