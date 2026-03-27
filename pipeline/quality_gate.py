@@ -35,7 +35,7 @@ from typing import NamedTuple
 _PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 REJECTED_DIR  = os.path.join(_PIPELINE_DIR, "rejected")
 REJECTS_LOG   = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
-MIN_BODY_WORDS = 250   # SEO minimum — articles below this hurt rankings
+MIN_BODY_WORDS = 280   # SEO minimum — align hard floor with rewriter threshold
 
 REJECT_THRESHOLD = 40   # minimum score to pass (out of 80)
 
