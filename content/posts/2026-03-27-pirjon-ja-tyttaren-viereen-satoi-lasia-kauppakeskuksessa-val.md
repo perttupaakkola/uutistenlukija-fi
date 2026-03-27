@@ -29,7 +29,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/pirjon-ja-tyttaren-viereen-satoi-lasia-kauppakeskuksessa-kuului-iso-pamaus/9316148"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
