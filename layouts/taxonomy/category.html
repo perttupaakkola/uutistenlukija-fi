@@ -1,9 +1,10 @@
+{{ define "extra_head" }}
+<link rel="stylesheet" href="/css/category-hero.css" media="print" onload="this.onload=null;this.media='all'">
+<noscript><link rel="stylesheet" href="/css/category-hero.css"></noscript>
+{{ end }}
+
 {{ define "main" }}
-<div class="category-header">
-  <h1>{{ .Title }}</h1>
-  <p class="category-meta"><a href="{{ .Permalink }}index.xml" class="rss-link" title="RSS-syöte">RSS-syöte</a></p>
-  {{ with .Description }}<p class="category-description">{{ . }}</p>{{ end }}
-</div>
+{{ partial "category-hero.html" . }}
 
 {{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
 {{ if gt (len $paginator.Pages) 0 }}

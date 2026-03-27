@@ -1,0 +1,23 @@
+{{- $pages := .Pages.ByDate.Reverse -}}
+{{- $latest := false -}}
+{{- if gt (len $pages) 0 -}}
+  {{- $latest = index $pages 0 -}}
+{{- end -}}
+{{- $articleCount := len .RegularPages -}}
+<section class="category-hero" aria-labelledby="category-hero-title">
+  <h1 id="category-hero-title">{{ .Title }}</h1>
+  {{ with .Description }}
+    <p class="category-description">{{ . }}</p>
+  {{ else }}
+    {{ with .Content }}
+      <div class="category-description">{{ . }}</div>
+    {{ end }}
+  {{ end }}
+  <div class="category-stats" aria-label="Kategorian tiedot">
+    <span>{{ $articleCount }} artikkelia</span>
+    {{ with $latest }}
+      <span>Viimeisin artikkeli: {{ .Date | time.Format "2.1. klo 15:04" }}</span>
+    {{ end }}
+    <a href="{{ .Permalink }}index.xml" class="rss-link" title="RSS-syöte">RSS-syöte</a>
+  </div>
+</section>
