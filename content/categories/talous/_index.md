@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-description: "Talous uutiset ilmainen – seuraa talouden uusimpia käänteitä ja markkinauutisia. Lue asiantuntevat tiivistelmät ja säästä aikaa joka päivä."
+description: "Talousuutiset, markkinat ja yritysliikkeet tiiviisti yhdessä näkymässä ilman turhaa kiertelyä."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"

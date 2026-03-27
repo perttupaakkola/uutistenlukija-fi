@@ -1,6 +1,6 @@
 ---
 title: "Kotimaa"
-description: "Kotimaan uutiset tänään – uusimmat suomen uutiset politiikasta, yhteiskunnasta ja päivän tapahtumista. Lue ajankohtaiset uutiset suomeksi Uutistenlukijasta."
+description: "Suomen tärkeimmät uutiset politiikasta, yhteiskunnasta ja päivän puheenaiheista yhdessä näkymässä."
 og_image: "/images/og-kotimaa.png"
 keywords:
   - "kotimaan uutiset"

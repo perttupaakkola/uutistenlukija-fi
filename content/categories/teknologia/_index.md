@@ -1,6 +1,6 @@
 ---
 title: "Teknologiauutiset suomeksi – tekoäly ja IT"
-description: "Teknologiauutiset suomeksi – tekoäly, IT, ohjelmistot ja tieteen läpimurrot helposti luettavassa muodossa. Lue uusimmat tekoäly- ja teknologiauutiset Uutistenlukijasta."
+description: "Tekoäly, IT, ohjelmistot ja muut teknologiakäänteet selkeästi koottuna suomeksi."
 og_image: "/images/og-teknologia.png"
 keywords:
   - "teknologia uutiset suomeksi"

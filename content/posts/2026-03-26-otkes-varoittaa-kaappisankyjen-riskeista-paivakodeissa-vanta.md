@@ -32,14 +32,8 @@ source_domain: "ts.fi"
 draft: false
 ---
 
-Otkes eli Oikeuskanslerinvirasto on nostanut esiin huolen kaappisänkyjen turvallisuudesta päiväkodeissa. Tämä varoitus seuraa Vantaalla tapahtunutta onnettomuutta, jossa lapsi loukkaantui vakavasti kaappisängyn putoamisen vuoksi. Otkes on huolestunut sellaisista säilytysratkaisuista, jotka eivät ole lapsiystävällisiä. 
+Onnettomuustutkintakeskus Otkes on varoittanut kaappisänkyjen turvallisuusriskeistä päiväkodeissa Vantaalla sattuneen vakavan onnettomuuden jälkeen. Onnettomuudessa lapsi loukkaantui, kun kaappisänky putosi tai romahti.
 
-Onnettomuus sattui päiväkodissa, jossa kaappisängyt olivat käytössä. Otkes on saanut tietoa siitä, että monet päiväkodit käyttävät kaappisänkyjä, jotka eivät täytä nykyisiä turvallisuusvaatimuksia. Tällaiset sängyt voivat romahdella lapsen painon alla, mikä on äärimmäisen vaarallista. Viimeisen viiden vuoden aikana on raportoitu useita vastaavia tapauksia, jotka ovat nostaneet esiin kaappisänkyjen riskit. Tämä on merkki siitä, että tarve turvallisille ja yhteensopiville kalusteille on ilmeinen.  
+Otkes selvitti tapauksen ja havaitsi puutteita kaappisänkyjen rakenteellisessa turvallisuudessa. Viranomainen suosittaa, että päiväkodit tarkistavat käytössä olevien kaappisänkyjen turvallisuuden ja varmistavat niiden vaatimustenmukaisuuden.
 
-Otkes suosittaa, että päiväkotien tulisi tarkistaa kaappisänkyjensä turvallisuus. Testatut ja hyväksytyt kalustevaihtoehdot tarjoavat enemmän turvallisuutta ja estävät tällaisia onnettomuuksia. Vanhempia kehotetaan myös olemaan valppaana ja ilmoittamaan, mikäli he havaitsevat vaarallisia kalusteita tai kuulevat sellaista tietoa. Yksi tärkeä tilasto on se, että 30 %:ssa kaappisänkyjä, joita käytetään päiväkodeissa, on havaittu puutteellisia turvallisuusvaatimuksia. 
-
-Yhtenä syynä kaappisänkyjen käyttöön on tilansäästötarve, joka lisää riskiä, jos kalusteita ei suunnitella ajanmukaisesti. Otkes muistuttaa, että vaikka sängyt vievät vähemmän tilaa, niiden on oltava turvallisia ja riittävästi tukevia. Onnettomuus Vantaalla on herätys koko alalle, jotta lasten turvallisuus asetetaan aina etusijalle. 
-
-Mikäli kaappisänkyriskit otetaan vakavasti, on mahdollista vähentää onnettomuuksien mahdollisuutta. Otkes aikoo jatkaa valvontaa ja tiedottamista tämän asian tiimoilta, kunnes onnettomuuksia ei enää tapahdu lapsen turvallisuuden takaamiseksi. Lapsilta ei voida ottaa turvallisuutta, ja pelastustilanteet eivät saa syntyä tällaisen kalusteen vuoksi. 
-
-Koulutus ja tietoisuus ovat avaimia ongelman ratkaisemiseksi. Asiantuntijat ovat yksimielisiä, että kaappisänkyjen korjaaminen ja päivittäminen tulee tehdä mahdollisimman nopeasti. Päiväkotien saama tuki on tärkeää, mutta valtion ja kunnallisten viranomaisten rooli on myös olennainen tilanteen parantamisessa. Tämän kaltaiset kriisit nostavat esiin kysymyksiä myös kunnallisten budjettien riittävyydestä turvallisten kalusteiden hankinnassa, mikäli tarve kasvaa merkittävästi.
+Kaappisänkyjä käytetään päiväkodeissa tilansäästösyistä, mutta niiden on täytettävä lasten käyttöön soveltuvat turvallisuusvaatimukset. Otkes muistuttaa, että lasten turvallisuus on asetettava tilaratkaisujen edelle.

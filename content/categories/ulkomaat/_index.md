@@ -1,6 +1,6 @@
 ---
 title: "Ulkomaat"
-description: "Ulkomaan uutiset tänään – maailman uutiset ja kansainväliset uutiset suomeksi. Seuraa päivän tärkeimmät tapahtumat Euroopasta ja maailmalta Uutistenlukijasta."
+description: "Maailman tärkeimmät uutiset ja kansainväliset käänteet suomeksi Euroopasta, Yhdysvalloista ja muualta."
 og_image: "/images/og-ulkomaat.png"
 keywords:
   - "ulkomaan uutiset"
