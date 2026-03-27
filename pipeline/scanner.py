@@ -58,7 +58,8 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "MTV Uutiset":       1,
     # ── Tier 1: International wire services / broadcasters ────────────────────
     "BBC World":         1,
-    # BBC Science + BBC Technology removed 2026-03-27
+    "BBC Science":       1,
+    "BBC Technology":    1,
     "Reuters World":     1,
     "AP News":           1,
     # ── Tier 2: Standard major outlets ───────────────────────────────────────
@@ -66,12 +67,6 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "The Guardian":       2,
     "Der Spiegel International": 2,
     "Tekniikka & Talous": 2,
-    "Tivi":               2,
-    "io-tech.fi":         2,
-    "IS Digitoday":       2,
-    "Jatkoaika.com":      2,
-    "THL":                2,
-    # MikroBitti removed 2026-03-27 (dead feed)
     "TechCrunch":         2,
     "Ars Technica":       2,
     "Science News":       2,
@@ -118,19 +113,17 @@ RSS_FEEDS = [
         "url": "https://www.is.fi/rss/uutiset.xml",
         "language": "fi",
     },
-    # BBC Science removed 2026-03-27 — Tiede should come from Finnish sources (Yle Tiede, Tivi)
-    # {
-    #     "name": "BBC Science",
-    #     "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
-    #     "language": "en",
-    #     "category_hint": "Tiede",
-    # },
+    {
+        "name": "BBC Science",
+        "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+        "language": "en",
+        "category_hint": "Tiede",
+    },
     {
         "name": "Kauppalehti",
         "url": "https://feeds.kauppalehti.fi/rss/main",
         "language": "fi",
         "category_hint": "Talous",
-        # was disabled (403), re-enabled 2026-03-26 after confirming 200 + valid XML
     },
     {
         "name": "TechCrunch",
@@ -171,18 +164,11 @@ RSS_FEEDS = [
         "category_hint": "Urheilu",
     },
     {
-        "name": "Jatkoaika.com",
-        "url": "https://jatkoaika.com/rss/index.rss",
-        "language": "fi",
-        "category_hint": "Urheilu",
+        "name": "BBC Technology",
+        "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+        "language": "en",
+        "category_hint": "Teknologia",
     },
-    # BBC Technology removed 2026-03-27 — Teknologia should come from Finnish sources (Tivi, MikroBitti, Yle Teknologia)
-    # {
-    #     "name": "BBC Technology",
-    #     "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
-    #     "language": "en",
-    #     "category_hint": "Teknologia",
-    # },
     {
         "name": "Yle Teknologia",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-85",
@@ -193,44 +179,12 @@ RSS_FEEDS = [
         "name": "Der Spiegel International",
         "url": "https://www.spiegel.de/international/index.rss",
         "language": "en",
-        "disabled": True,  # 8 days stale as of 2026-03-27, no new content passing dedup
     },
     {
         "name": "Tekniikka & Talous",
-        "url": "https://www.tekniikkatalous.fi/api/feed/v2/rss/tt",
+        "url": "https://www.tekniikkatalous.fi/feed",
         "language": "fi",
         "category_hint": "Teknologia",
-    },
-    {
-        "name": "Tivi",
-        "url": "https://www.tivi.fi/feed/",
-        "language": "fi",
-        "category_hint": "Teknologia",
-    },
-    # MikroBitti removed 2026-03-27 — dead feed, redirects to iltalehti.fi/bitti (no RSS)
-    # {
-    #     "name": "MikroBitti",
-    #     "url": "https://mikrobitti.fi/feed/",
-    #     "language": "fi",
-    #     "category_hint": "Teknologia",
-    # },
-    {
-        "name": "io-tech.fi",
-        "url": "https://io-tech.fi/feed/",
-        "language": "fi",
-        "category_hint": "Teknologia",
-    },
-    {
-        "name": "MTV Uutiset",
-        "url": "https://www.mtvuutiset.fi/api/feed/rss/uutiset_uusimmat",
-        "language": "fi",
-        "category_hint": "Kotimaa",
-    },
-    {
-        "name": "Maaseudun Tulevaisuus",
-        "url": "https://www.maaseuduntulevaisuus.fi/feeds/maaseuduntulevaisuus",
-        "language": "fi",
-        "category_hint": "Kotimaa",
     },
     {
         "name": "Science News",
@@ -241,14 +195,6 @@ RSS_FEEDS = [
     {
         "name": "Yle Tiede",
         "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-819",
-        "language": "fi",
-        "category_hint": "Tiede",
-    },
-    {
-        # THL (Terveyden ja hyvinvoinnin laitos) — health & welfare news
-        # Non-obvious Liferay AssetPublisher URL, found via page source scraping
-        "name": "THL",
-        "url": "https://thl.fi/ajankohtaista/-/asset_publisher/m8s4MMkgtyYg/rss",
         "language": "fi",
         "category_hint": "Tiede",
     },
@@ -265,7 +211,7 @@ RSS_FEEDS = [
     },
     {
         "name": "Yle Kulttuuri",
-        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-3",
+        "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET&concepts=18-150067",
         "language": "fi",
         "category_hint": "Kulttuuri",
     },
@@ -314,37 +260,28 @@ DOMAIN_DELAY = 5
 # 180s leaves buffer for slow feeds.
 SCANNER_TIMEOUT = 180
 
-# NOTE: ETag/304 HTTP cache PERMANENTLY DISABLED (see commit ef54d6d).
-# RSS feeds return 304 unreliably, causing fetched=0 stalls.
-# Dedup layer handles duplicate articles instead.
-
-# Domains blocked from appearing as article sources.
-# These are content aggregators, low-quality curators, or spam domains
-# that should never be published even if fetched via Firehose.
-BLOCKED_SOURCE_DOMAINS: set = {
-    "scoop.it",          # content aggregator — not a news source
-    "7sun.fi",           # low-quality PR/aggregator (also posts Polish product pages)
-    "ecoonline.com",     # low-quality content farm
-    "bandilanews.com",   # low-quality aggregator
-    "listafriikki.com",  # low-quality list content
-    "listamaailma.fi",   # SEO farm / listicles
-    "menejatieda.fi",    # low-quality content
-    "uutiskaista.com",   # PR wire aggregator
-    "voice.fi",          # entertainment only — not news
-    "itbranschen.com",   # Swedish IT trade site with URL mismatches
-    "etappi.com",        # company PR (waste management)
-    "destia.fi",         # company PR (infrastructure)
-    "aanekoskenenergia.fi",  # company PR (energy)
-    "koneensaatio.fi",   # foundation PR
-    "tieteentekijat.fi", # association PR (not news)
-    "luonnonperintosaatio.fi",  # foundation PR
-    "kelikamerat.info",  # road condition cameras — not news
-    "nauvolaiset.fi",    # local community site — too niche/low-quality
-    "uefconnect.uef.fi", # university internal — not public news
-}
+# ETag/Last-Modified cache file (persists between pipeline runs)
+_CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
+_HTTP_CACHE_FILE = os.path.join(_CACHE_DIR, "feed_http_cache.json")
 
 # Per-domain last-fetch timestamps (in-process only)
 _domain_last_fetch: Dict[str, float] = {}
+
+
+def _load_http_cache() -> Dict:
+    """Load persisted ETag/Last-Modified cache."""
+    try:
+        with open(_HTTP_CACHE_FILE) as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _save_http_cache(cache: Dict) -> None:
+    """Persist ETag/Last-Modified cache to disk."""
+    os.makedirs(_CACHE_DIR, exist_ok=True)
+    with open(_HTTP_CACHE_FILE, "w") as f:
+        json.dump(cache, f, indent=2)
 
 
 def _domain(url: str) -> str:
@@ -540,8 +477,8 @@ def _get_text(element, tag: str) -> str:
     return ""
 
 
-def fetch_feed(feed_info: dict) -> List[Dict]:
-    """Fetch and parse a single RSS feed with politeness."""
+def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]:
+    """Fetch and parse a single RSS feed with politeness and 304 caching."""
     articles = []
     url = feed_info["url"]
     try:
@@ -554,16 +491,33 @@ def fetch_feed(feed_info: dict) -> List[Dict]:
             time.sleep(wait)
         _domain_last_fetch[domain] = time.monotonic()
 
-        # NOTE: 304/ETag caching DISABLED (commit ef54d6d, Mar 20).
-        # Many RSS feeds return 304 even when they have new items mixed in.
-        # This caused fetched=0 for hours (same bug resurfaced Mar 26).
-        # Always fetch fresh — the dedup layer handles duplicates.
+        # Build request with conditional headers for 304 support
         headers = dict(HEADERS)
+        cache_entry = (http_cache or {}).get(url, {})
+        if cache_entry.get("etag"):
+            headers["If-None-Match"] = cache_entry["etag"]
+        if cache_entry.get("last_modified"):
+            headers["If-Modified-Since"] = cache_entry["last_modified"]
+
         req = urllib.request.Request(url, headers=headers)
         try:
             with urllib.request.urlopen(req, timeout=15) as resp:
                 content = resp.read()
+                # Update cache with new validators
+                if http_cache is not None:
+                    new_entry = {}
+                    etag = resp.headers.get("ETag")
+                    lm = resp.headers.get("Last-Modified")
+                    if etag:
+                        new_entry["etag"] = etag
+                    if lm:
+                        new_entry["last_modified"] = lm
+                    if new_entry:
+                        http_cache[url] = new_entry
         except urllib.error.HTTPError as e:
+            if e.code == 304:
+                # Not Modified — return empty, caller uses cached articles
+                return []
             raise
         
         # Sanitize content: strip control characters that break ET parser
@@ -687,6 +641,7 @@ def scan_all_feeds() -> List[Dict]:
     Stops fetching new feeds after SCANNER_TIMEOUT seconds to keep pipeline
     running even when many feeds are slow.
     """
+    http_cache = _load_http_cache()
     all_articles = []
     scan_start = time.monotonic()
     feeds_fetched = 0
@@ -714,7 +669,7 @@ def scan_all_feeds() -> List[Dict]:
 
         print(f"[scanner] Fetching {feed['name']}...")
         prev_count = len(all_articles)
-        articles = fetch_feed(feed)
+        articles = fetch_feed(feed, http_cache=http_cache)
         print(f"[scanner]   → {len(articles)} articles")
         all_articles.extend(articles)
         feeds_fetched += 1
@@ -743,6 +698,7 @@ def scan_all_feeds() -> List[Dict]:
     total_scan_time = time.monotonic() - scan_start
     print(f"[scanner] Scan complete: {feeds_fetched} feeds in {total_scan_time:.1f}s "
           f"({feeds_skipped} skipped due to timeout)")
+    _save_http_cache(http_cache)
     save_global_health()  # persist feed health state
 
     # Exact dedup by fingerprint
@@ -778,16 +734,6 @@ def scan_all_feeds() -> List[Dict]:
 
     trending_count = sum(1 for a in unique if a.get("trending"))
     print(f"[scanner] Trending stories: {trending_count}")
-
-    # Filter out blocked source domains (aggregators, PR sites, low-quality)
-    pre_block = len(unique)
-    unique = [
-        a for a in unique
-        if a.get("source_domain", "").lower() not in BLOCKED_SOURCE_DOMAINS
-    ]
-    blocked_count = pre_block - len(unique)
-    if blocked_count:
-        print(f"[scanner] Blocked {blocked_count} articles from blocked source domains")
 
     # Sort by date (newest first)
     unique.sort(key=lambda a: a["published"], reverse=True)
