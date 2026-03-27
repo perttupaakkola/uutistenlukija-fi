@@ -615,6 +615,13 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                 for _src_field in ("source", "source_domain", "source_url", "link"):
                     if _src_field in batch[j]:
                         written_article[_src_field] = batch[j][_src_field]
+                # Preserve source context for number validation in quality gate
+                _src_article = batch[j]
+                written_article["source_text"] = " ".join(filter(None, [
+                    str(_src_article.get("title", "")),
+                    str(_src_article.get("description", "")),
+                    str(_src_article.get("research", "")),
+                ]))
             # Normalise tags — ensure list of lowercase strings, 2–5 items
             raw_tags = written_article.get("tags", [])
             if isinstance(raw_tags, list):

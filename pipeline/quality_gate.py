@@ -50,6 +50,37 @@ _KW_STOPWORDS = {
     "olla", "joka", "jo", "niin", "kuin", "siis",
 }
 
+# ── Number extraction ─────────────────────────────────────────────────────────
+
+# Matches: 4-digit years first, then integers/decimals with optional units
+_NUMBER_RE = re.compile(
+    r"\b(?:19|20)\d{2}\b"                                                          # years 1900-2099
+    r"|\b\d{1,3}(?:[,.\s]\d{3})*(?:[,.]\d+)?\s*(?:%|prosentt[ia]|milj(?:oona[a-z]*)?|mrd|kg|km|m²|MW|GW|€|euroa|dollari[a-z]*)?",
+    re.IGNORECASE,
+)
+
+def _extract_numbers(text: str) -> set[str]:
+    """Extract and normalise numeric tokens from text."""
+    raw = _NUMBER_RE.findall(text or "")
+    normalised: set[str] = set()
+    for token in raw:
+        # Strip spaces, normalise decimal comma/dot, lowercase unit
+        n = re.sub(r"\s+", "", token.strip())
+        n = n.replace(",", ".")
+        normalised.add(n.lower())
+    return normalised
+
+
+def check_numbers_sourced(source_text: str, content: str, title: str = "") -> list[str]:
+    """
+    Return list of numeric tokens present in (title + content) but absent from source_text.
+    Empty list means all numbers are sourced.
+    """
+    source_nums = _extract_numbers(source_text)
+    article_nums = _extract_numbers((title or "") + " " + (content or ""))
+    unsourced = article_nums - source_nums
+    return sorted(unsourced)
+
 # ── Result types ──────────────────────────────────────────────────────────────
 
 class ScoreBreakdown(NamedTuple):
@@ -81,6 +112,7 @@ def score_article(article: dict) -> ScoreBreakdown:
     description = article.get("description", "") or ""
     image       = article.get("image", "") or ""
     category    = article.get("category", "") or ""
+    source_text = article.get("source_text", "") or ""
 
     # ── Scoring criteria ──────────────────────────────────────────────────────
 
@@ -145,6 +177,13 @@ def score_article(article: dict) -> ScoreBreakdown:
             hard_fails.append(
                 f"keyword stuffing: '{top_word}' {top_count}× ({ratio:.1%})"
             )
+
+    # Unsourced number check — only when source_text is available
+    if source_text:
+        unsourced = check_numbers_sourced(source_text, content, title)
+        if unsourced:
+            sample = ", ".join(unsourced[:5])
+            hard_fails.append(f"unsourced numbers: {sample}")
 
     passes = (total >= REJECT_THRESHOLD) and not hard_fails
 
@@ -222,6 +261,8 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
                     reason_counter["listicle"] += 1
                 elif "stuffing" in hf:
                     reason_counter["keyword_stuffing"] += 1
+                elif "unsourced numbers" in hf:
+                    reason_counter["unsourced_numbers"] += 1
                 else:
                     reason_counter["other"] += 1
 
