@@ -41,3 +41,6 @@
 
 # Daily kooste generator (21:55 UTC = 23:55 Helsinki)
 55 21 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/generate_kooste.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/generate-kooste.log 2>&1
+
+# Pipeline silence alert (every 30 min, alert if last publish/run >2h)
+*/30 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/check_pipeline_silence.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/pipeline-silence.log 2>&1
