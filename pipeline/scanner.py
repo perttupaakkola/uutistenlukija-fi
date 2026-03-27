@@ -48,9 +48,6 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "HS Tiede":          1,
     "HS Kulttuuri":      1,
     "Turun Sanomat":     1,
-    "Keskisuomalainen":  2,
-    "Savon Sanomat":     2,
-    "Karjalainen":       2,
     "HS Tuoreimmat":    1,
     "Kauppalehti":       1,
     "Kauppalehti Markets": 1,
@@ -206,7 +203,7 @@ RSS_FEEDS = [
     },
     {
         "name": "io-tech.fi",
-        "url": "https://io-tech.fi/feed/",
+        "url": "https://www.io-tech.fi/feed/rss/",
         "language": "fi",
         "category_hint": "Teknologia",
     },
@@ -227,27 +224,6 @@ RSS_FEEDS = [
         "url": "https://www.maaseuduntulevaisuus.fi/feeds/maaseuduntulevaisuus",
         "language": "fi",
         "category_hint": "Kotimaa",
-    },
-    {
-        "name": "Keskisuomalainen",
-        "url": "https://www.ksml.fi/feed/rss",
-        "language": "fi",
-        "category_hint": "Kotimaa",
-        "exclude_paths": ["/mielipide/", "/blog/", "/blogi/", "/kolumni/"],
-    },
-    {
-        "name": "Savon Sanomat",
-        "url": "https://www.savonsanomat.fi/feed/rss",
-        "language": "fi",
-        "category_hint": "Kotimaa",
-        "exclude_paths": ["/mielipide/", "/blog/", "/blogi/", "/kolumni/"],
-    },
-    {
-        "name": "Karjalainen",
-        "url": "https://www.karjalainen.fi/feed/rss",
-        "language": "fi",
-        "category_hint": "Kotimaa",
-        "exclude_paths": ["/mielipide/", "/blog/", "/blogi/", "/kolumni/"],
     },
     {
         "name": "Science News",
@@ -644,14 +620,6 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
                 _get_text(item, "updated")
             )
             pub_date = _parse_rss_date(date_str) or datetime.now(timezone.utc)
-
-            # exclude_paths: skip articles whose URL path matches any prefix
-            exclude_paths = feed_info.get("exclude_paths", [])
-            if exclude_paths and link:
-                from urllib.parse import urlparse as _urlparse
-                _path = _urlparse(link).path
-                if any(_path.startswith(ep) for ep in exclude_paths):
-                    continue
 
             articles.append({
                 "title": title,
