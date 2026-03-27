@@ -100,19 +100,6 @@ FIREHOSE_RULES = [
         ),
         "quality": True,
     },
-    {
-        # Added 2026-03-26: Teknologia is underserved (3.8% vs 15% target).
-        # Broad Finnish tech/digital news rule to supplement RSS feeds.
-        "tag": "teknologia-boost",
-        "value": (
-            'language:fi AND page_category:"/Technology" AND recent:48h'
-            ' AND NOT page_type:"/Article/Product_or_Brand_Review"'
-            ' AND NOT page_type:"/Article/Tutorial_or_Guide"'
-            ' AND NOT page_type:"/Article/FAQ"'
-            ' AND NOT domain:scoop.it AND NOT domain:7sun.fi'
-        ),
-        "quality": True,
-    },
 ]
 
 # State file: stores Last-Event-ID for exact-offset resume
