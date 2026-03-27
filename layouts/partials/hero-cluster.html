@@ -61,8 +61,11 @@
   </div>
 
   {{ if $followups }}
+  {{ $seen := slice $lead.Permalink }}
   <aside class="hero-cluster__followups highlights-row--top" aria-label="Seuraa myös">
     {{ range $followups }}
+    {{ if not (in $seen .Permalink) }}
+    {{ $seen = $seen | append .Permalink }}
     {{ $cat := index .Params.categories 0 | default "kotimaa" }}
     {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
     {{ $thumb := .Params.image_thumb | default $img }}
@@ -82,6 +85,7 @@
         {{ with .Params.source_name }}<span>{{ . }}</span>{{ end }}
       </div>
     </article>
+    {{ end }}
     {{ end }}
   </aside>
   {{ end }}

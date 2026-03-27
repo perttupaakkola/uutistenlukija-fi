@@ -29,6 +29,177 @@ def _make_slug(title: str, max_length: int = 60) -> str:
     return slug[:max_length].rstrip('-')
 
 
+def _split_front_matter(text: str) -> tuple[list[str], str]:
+    """Return (front_matter_lines, body) for a Hugo markdown file."""
+    if not text.startswith("---\n"):
+        return [], text
+
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return [], text
+
+    front = text[4:end].splitlines()
+    body = text[end + 5 :]
+    return front, body
+
+
+def _extract_front_matter_value(lines: list[str], key: str):
+    prefix = f"{key}:"
+    for idx, line in enumerate(lines):
+        if line.startswith(prefix):
+            raw = line[len(prefix):].strip()
+            if raw.startswith('"') and raw.endswith('"'):
+                return raw[1:-1]
+            if raw.lower() == "true":
+                return True
+            if raw.lower() == "false":
+                return False
+            if raw:
+                try:
+                    return float(raw) if "." in raw else int(raw)
+                except ValueError:
+                    return raw
+
+            values = []
+            j = idx + 1
+            while j < len(lines) and lines[j].startswith("  - "):
+                values.append(lines[j][4:])
+                j += 1
+            return values
+    return None
+
+
+def _set_boolean_front_matter_flag(text: str, key: str, enabled: bool) -> str:
+    lines, body = _split_front_matter(text)
+    if not lines:
+        return text
+
+    filtered = [line for line in lines if not line.startswith(f"{key}:")]
+
+    if enabled:
+        insert_at = None
+        for idx, line in enumerate(filtered):
+            if line.startswith("draft:"):
+                insert_at = idx
+                break
+        flag_line = f"{key}: true"
+        if insert_at is None:
+            filtered.append(flag_line)
+        else:
+            filtered.insert(insert_at, flag_line)
+
+    front = "\n".join(filtered)
+    body = body.lstrip("\n")
+    return f"---\n{front}\n---\n\n{body}"
+
+
+def _refresh_daily_briefing_flags(target_day: str) -> list[str]:
+    """Assign briefing=true to up to 6 same-day articles, preferring category diversity.
+
+    Selection order:
+    1. Highest available score field (if any article has one)
+    2. Otherwise newest first
+
+    breaking=true articles are excluded.
+    """
+    posts_dir = Path(CONTENT_DIR)
+    candidates: list[dict] = []
+
+    for path in sorted(posts_dir.glob(f"{target_day}-*.md")):
+        text = path.read_text(encoding="utf-8")
+        lines, _body = _split_front_matter(text)
+        if not lines:
+            continue
+
+        raw_date = str(_extract_front_matter_value(lines, "date") or "").strip()
+        if not raw_date.startswith(target_day):
+            continue
+        if bool(_extract_front_matter_value(lines, "breaking") or False):
+            continue
+
+        categories = _extract_front_matter_value(lines, "categories") or []
+        primary_category = str(categories[0]).strip().lower() if categories else "uutiset"
+
+        score = None
+        for key in ("editorial_score", "lead_score", "homepage_score", "score", "quality_score"):
+            value = _extract_front_matter_value(lines, key)
+            if isinstance(value, (int, float)):
+                score = float(value)
+                break
+            if isinstance(value, str):
+                try:
+                    score = float(value.strip())
+                    break
+                except ValueError:
+                    pass
+
+        try:
+            sort_date = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+        except ValueError:
+            sort_date = datetime.min.replace(tzinfo=timezone.utc)
+
+        candidates.append({
+            "path": path,
+            "text": text,
+            "category": primary_category,
+            "score": score,
+            "date": sort_date,
+            "has_briefing": bool(_extract_front_matter_value(lines, "briefing") is True),
+        })
+
+    if not candidates:
+        return []
+
+    use_scores = any(item["score"] is not None for item in candidates)
+
+    def _sort_key(item: dict):
+        score_rank = item["score"] if item["score"] is not None else float("-inf")
+        return (score_rank, item["date"].timestamp()) if use_scores else (item["date"].timestamp(),)
+
+    ranked = sorted(candidates, key=_sort_key, reverse=True)
+    selected: list[dict] = []
+    seen_categories: set[str] = set()
+    max_items = min(6, len(ranked))
+
+    for item in ranked:
+        if len(selected) >= max_items:
+            break
+        if item["category"] in seen_categories:
+            continue
+        selected.append(item)
+        seen_categories.add(item["category"])
+
+    if len(selected) < max_items:
+        selected_paths = {item["path"] for item in selected}
+        for item in ranked:
+            if len(selected) >= max_items:
+                break
+            if item["path"] in selected_paths:
+                continue
+            selected.append(item)
+            selected_paths.add(item["path"])
+
+    selected_set = {item["path"] for item in selected}
+    updated: list[str] = []
+
+    for item in candidates:
+        should_brief = item["path"] in selected_set
+        if should_brief and item["has_briefing"]:
+            continue
+        if not should_brief and not item["has_briefing"]:
+            continue
+
+        new_text = _set_boolean_front_matter_flag(item["text"], "briefing", should_brief)
+        item["path"].write_text(new_text, encoding="utf-8")
+        updated.append(item["path"].name)
+
+    print(
+        f"[publisher] Briefing selection for {target_day}: "
+        f"{len(selected_set)} articles (scores={'on' if use_scores else 'off'})"
+    )
+    return updated
+
+
 def _article_to_markdown(article: Dict, date: str) -> str:
     """Convert article to Hugo markdown with front matter."""
     title = article.get("title", "Untitled")
@@ -183,6 +354,10 @@ def publish_articles(articles: List[Dict]) -> List[str]:
 
         created.append(filepath)
         print(f"[publisher] Created: {filename}")
+
+    updated = _refresh_daily_briefing_flags(date_str)
+    if updated:
+        print(f"[publisher] Updated briefing flags: {', '.join(updated)}")
 
     return created
 
