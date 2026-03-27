@@ -41,7 +41,12 @@ Kun lähdemateriaali on lyhyt, laajenna AINA näillä tavoilla:
   * Merkitys: Miksi tämä on tärkeää lukijalle? Ketä tämä koskee?
   * Seuraukset: Mitkä ovat seuraukset tai vaikutukset lähiaikoina?
   * Laajempi kehys: Liittyykö tämä johonkin laajempaan ilmiöön tai trendiin?
-  * Lisäfaktat: Tilastoja, numeroita, aiempia tapahtumia samasta aiheesta.
+  * Lisäfaktat: VAIN faktat jotka esiintyvät lähdetekstissä — älä keksi tilastoja.
+
+KIELLETTY — älä koskaan tee näin:
+- Älä keksi tilastoja, lukuja, vuosilukuja tai lainauksia joita ei ole lähdetekstissä
+- Jos lähde ei sisällä tilastoja, älä lisää niitä — laajenna kontekstilla, taustoituksella tai merkityksellä
+- Älä päätä artikkelia yleisellä tulevaisuuden pohdinnalla tai tyhjällä yhteenvedolla — lopeta konkreettiseen tietoon
 
 Saat uutisaiheen otsikon, taustatietoja ja tutkimustuloksia useista lähteistä. Tehtäväsi on kirjoittaa oma, itsenäinen uutisartikkeli näiden pohjalta.
 
@@ -539,7 +544,8 @@ Laajenna se vähintään 300 sanaan (tavoite 320–380) lisäämällä KAIKKI se
 - Taustatieto: mitä aiheen ympärillä on tapahtunut aiemmin? Mikä johti tähän?
 - Konteksti: miksi tämä on merkittävää tai miten se liittyy laajempaan kehitykseen?
 - Seuraukset tai vaikutukset: mitä tämä tarkoittaa ihmisille tai yhteiskunnalle?
-- Lisäfaktat: tilastoja, numeroita tai muita konkreettisia tietoja aiheesta.
+- Lisäfaktat: VAIN faktat jotka esiintyvät lähdetekstissä — älä keksi tilastoja tai lukuja.
+KIELLETTY: Älä keksi tilastoja, vuosilukuja tai lainauksia joita ei ole lähdetekstissä. Älä päätä yleisellä tulevaisuuden pohdinnolla.
 Lisää H2-väliotsikko (## Otsikko) jäsentämään teksti. Säilytä alkuperäinen otsikko ja faktat. Kirjoita luonnollista suomea.
 Säilytä myös kentät journalist_note, content_type ja editorial_reviewed ennallaan, ellei journalist_note ole selvästi geneerinen — silloin tyhjennä se. editorial_reviewed on aina true.
 Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "...", "journalist_note": "...", "content_type": "article", "editorial_reviewed": true}"""
