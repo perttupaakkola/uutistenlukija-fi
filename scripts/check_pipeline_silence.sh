@@ -1,113 +1,77 @@
 #!/usr/bin/env bash
-# check_pipeline_silence.sh — Alert to #operations if pipeline has been silent
-#
-# Checks when the last article was published. If older than THRESHOLD_HOURS
-# and within active hours (06:00-22:00 UTC), posts a Discord alert.
-#
-# Usage:
-#   bash scripts/check_pipeline_silence.sh [--hours N]
-#
-# Cron (every 6h):
-#   0 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/check_pipeline_silence.sh
-
+# check_pipeline_silence.sh — alerts Discord if pipeline hasn't published in >2h
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
-HEALTH_JSON="$PROJECT_DIR/static/api/health.json"
-ENV_FILE="$PROJECT_DIR/pipeline/.env"
-THRESHOLD_HOURS="${1:-6}"
+REPO="/home/pertt/.openclaw/workspace/projects/uutistenlukija"
+STATE_FILE="$REPO/pipeline/.silence_alert_state"
+LOG_FILE="$REPO/pipeline/logs/cron.log"
+METRICS_FILE="$REPO/pipeline/metrics.jsonl"
+THRESHOLD=7200  # 2 hours in seconds
+WEBHOOK="${DISCORD_METRICS_WEBHOOK:-}"
 
-# Parse --hours flag
-while [[ $# -gt 0 ]]; do
-    case "$1" in
-        --hours) THRESHOLD_HOURS="$2"; shift 2 ;;
-        *) shift ;;
-    esac
-done
-
-# Load .env for webhook URL
-if [[ -f "$ENV_FILE" ]]; then
-    set -a
-    # shellcheck disable=SC1090
-    source "$ENV_FILE" 2>/dev/null || true
-    set +a
+if [ -z "$WEBHOOK" ]; then
+  . "$REPO/pipeline/.env" 2>/dev/null || true
+  WEBHOOK="${DISCORD_METRICS_WEBHOOK:-}"
 fi
 
-DISCORD_WEBHOOK="${DISCORD_OPERATIONS_WEBHOOK:-${DISCORD_PIPELINE_WEBHOOK:-}}"
+if [ -z "$WEBHOOK" ]; then
+  echo "$(date -u): DISCORD_METRICS_WEBHOOK not set, skipping"
+  exit 0
+fi
 
-# Get current UTC hour for active-hours check
-CURRENT_HOUR=$(date -u +%H)
-CURRENT_HOUR=$((10#$CURRENT_HOUR))
+# Find last successful publish timestamp
+LAST_PUBLISH=0
 
-# Read last published timestamp from health.json
-if [[ ! -f "$HEALTH_JSON" ]]; then
-    echo "[silence_check] health.json not found at $HEALTH_JSON — skipping" >&2
+# Try metrics.jsonl first (most reliable)
+if [ -f "$METRICS_FILE" ]; then
+  LAST_LINE=$(grep '"published":[1-9]' "$METRICS_FILE" 2>/dev/null | tail -1)
+  if [ -n "$LAST_LINE" ]; then
+    TS=$(echo "$LAST_LINE" | python3 -c "import json,sys,datetime; d=json.load(sys.stdin); print(int(datetime.datetime.fromisoformat(d['timestamp'].replace('Z','+00:00')).timestamp()))" 2>/dev/null || echo 0)
+    [ "$TS" -gt "$LAST_PUBLISH" ] && LAST_PUBLISH=$TS
+  fi
+fi
+
+# Fall back to .last_run
+if [ -f "$REPO/pipeline/.last_run" ]; then
+  TS=$(cat "$REPO/pipeline/.last_run" 2>/dev/null | tr -d '[:space:]')
+  [ "$TS" -gt "$LAST_PUBLISH" ] 2>/dev/null && LAST_PUBLISH=$TS || true
+fi
+
+# Fall back to cron.log last success
+if [ "$LAST_PUBLISH" -eq 0 ] && [ -f "$LOG_FILE" ]; then
+  TS=$(grep -o 'Auto-publish completed at .*' "$LOG_FILE" 2>/dev/null | tail -1 | sed 's/Auto-publish completed at //' | xargs -I{} date -d '{}' +%s 2>/dev/null || echo 0)
+  [ "$TS" -gt 0 ] && LAST_PUBLISH=$TS
+fi
+
+if [ "$LAST_PUBLISH" -eq 0 ]; then
+  echo "$(date -u): Could not determine last publish time, skipping alert"
+  exit 0
+fi
+
+NOW=$(date +%s)
+AGE=$((NOW - LAST_PUBLISH))
+
+if [ "$AGE" -lt "$THRESHOLD" ]; then
+  echo "$(date -u): Pipeline healthy, last publish ${AGE}s ago"
+  # Clear alert state if recovering
+  rm -f "$STATE_FILE"
+  exit 0
+fi
+
+# Check cooldown — don't spam (6h cooldown)
+if [ -f "$STATE_FILE" ]; then
+  LAST_ALERT=$(cat "$STATE_FILE" 2>/dev/null || echo 0)
+  COOLDOWN=21600
+  if [ $((NOW - LAST_ALERT)) -lt $COOLDOWN ]; then
+    echo "$(date -u): Alert already sent, cooldown active"
     exit 0
+  fi
 fi
 
-LAST_PUBLISHED=$(python3 -c "
-import json, sys
-try:
-    d = json.load(open('$HEALTH_JSON'))
-    print(d.get('lastPublished', ''))
-except Exception as e:
-    print('', file=sys.stderr)
-    sys.exit(0)
-" 2>/dev/null || echo "")
+HOURS=$((AGE / 3600))
+MINS=$(( (AGE % 3600) / 60 ))
 
-if [[ -z "$LAST_PUBLISHED" ]]; then
-    echo "[silence_check] Could not read lastPublished — skipping"
-    exit 0
-fi
+curl -s -X POST "$WEBHOOK"   -H 'Content-Type: application/json'   -d "{\"content\":\"⚠️ **Pipeline hiljaisuusvaroitus** — viimeisin julkaisu ${HOURS}h ${MINS}min sitten. Tarkista pipeline.\"}" > /dev/null
 
-# Calculate age in hours
-AGE_HOURS=$(python3 -c "
-from datetime import datetime, timezone
-import sys
-ts = '$LAST_PUBLISHED'
-try:
-    if ts.endswith('Z'):
-        ts = ts[:-1] + '+00:00'
-    last = datetime.fromisoformat(ts)
-    now = datetime.now(timezone.utc)
-    hours = (now - last).total_seconds() / 3600
-    print(f'{hours:.1f}')
-except Exception as e:
-    print('0', file=sys.stderr)
-    sys.exit(0)
-" 2>/dev/null || echo "0")
-
-echo "[silence_check] status=OK age=${AGE_HOURS}h last=$LAST_PUBLISHED"
-
-# Check threshold
-AGE_INT=$(python3 -c "print(int(float('$AGE_HOURS')))" 2>/dev/null || echo "0")
-
-if (( AGE_INT >= THRESHOLD_HOURS )); then
-    # Only alert during active hours (06:00-22:00 UTC)
-    if (( CURRENT_HOUR >= 6 && CURRENT_HOUR < 22 )); then
-        MSG="⚠️ **Pipeline hiljaa ${AGE_HOURS}h** — viimeisin artikkeli julkaistu \`$LAST_PUBLISHED\`.\nTarkista cron / firehose / pipeline status.\n\`\`\`bash\nbash scripts/pipeline-status.sh\n\`\`\`"
-        echo "[silence_check] ALERT: Pipeline silent ${AGE_HOURS}h — posting to Discord"
-
-        if [[ -n "$DISCORD_WEBHOOK" ]]; then
-            python3 -c "
-import json, urllib.request
-webhook = '$DISCORD_WEBHOOK'
-msg = '''$MSG'''
-payload = json.dumps({'content': msg}).encode()
-req = urllib.request.Request(webhook, data=payload, headers={'Content-Type': 'application/json'})
-try:
-    with urllib.request.urlopen(req, timeout=10) as r:
-        print(f'[silence_check] Alert sent (HTTP {r.status})')
-except Exception as e:
-    print(f'[silence_check] Alert failed: {e}')
-" 2>&1
-        else
-            echo "[silence_check] DISCORD_OPERATIONS_WEBHOOK not set — alert not sent"
-        fi
-    else
-        echo "[silence_check] Age ${AGE_HOURS}h exceeds threshold but outside active hours (${CURRENT_HOUR}h UTC) — no alert"
-    fi
-else
-    echo "[silence_check] Pipeline active — last article ${AGE_HOURS}h ago. No alert."
-fi
+echo "$NOW" > "$STATE_FILE"
+echo "$(date -u): Alert sent — pipeline silent for ${HOURS}h ${MINS}min"
