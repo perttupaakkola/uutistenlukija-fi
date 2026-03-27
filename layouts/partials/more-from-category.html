@@ -1,0 +1,11 @@
+{{ with .Params.categories }}
+  {{ $category := index . 0 }}
+  {{ $slug := $category | urlize }}
+  <section class="more-from-category" aria-label="Lisää samasta aiheesta">
+    <a class="more-from-category__link" href="/categories/{{ $slug }}/">
+      <span class="more-from-category__eyebrow">Jatka aiheesta</span>
+      <span class="more-from-category__title">Lisää {{ $category | lower }}-aiheisia artikkeleita</span>
+      <span class="more-from-category__arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
+{{ end }}

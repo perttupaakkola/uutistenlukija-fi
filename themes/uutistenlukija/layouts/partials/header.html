@@ -13,7 +13,21 @@
     <nav class="main-nav" id="main-nav-menu" aria-label="Päänavigaatio" role="navigation">
       <ul>
         {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ $url := .URL }}
+          {{ $isCategory := hasPrefix $url "/categories/" }}
+          {{ $count := 0 }}
+          {{ if $isCategory }}
+            {{ $term := replaceRE "^/categories/([^/]+)/?$" "$1" $url }}
+            {{ with index $.Site.Taxonomies.categories $term }}
+              {{ $count = len . }}
+            {{ end }}
+          {{ end }}
+        <li>
+          <a href="{{ $url }}">
+            <span class="main-nav__label">{{ .Name }}</span>
+            {{ if $isCategory }}<span class="main-nav__count" aria-label="{{ $count }} artikkelia">{{ $count }}</span>{{ end }}
+          </a>
+        </li>
         {{ end }}
       </ul>
     </nav>
