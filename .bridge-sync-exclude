@@ -1,0 +1,5 @@
+# Files that must NEVER be overwritten by Alex bridge sync
+# These contain host-specific configuration that Alex's sandbox gets wrong
+pipeline/auto_publish.sh
+pipeline/scanner.py
+pipeline/firehose_cron.sh
