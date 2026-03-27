@@ -5,6 +5,7 @@ All times UTC. See the live crontab for exact entries.
 ## Every 15 minutes
 - **auto_publish.sh** — scan → rewrite → publish → build → push
 - **health_monitor.sh** — curl /api/health.json, alert #operations on degraded
+- **uptime_monitor.sh** — HTTP status + response time check for uutistenlukija.fi, Discord alert on failure or >5s response (30min cooldown)
 
 ## Every 10 minutes
 - **firehose** — fetch new articles from RSS feeds
