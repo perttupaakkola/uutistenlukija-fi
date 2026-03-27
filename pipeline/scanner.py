@@ -67,7 +67,7 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "Der Spiegel International": 2,
     "Tekniikka & Talous": 2,
     "Tivi":               2,
-    "MikroBitti":         2,
+    # MikroBitti removed 2026-03-27 (dead feed)
     "TechCrunch":         2,
     "Ars Technica":       2,
     "Science News":       2,
@@ -196,12 +196,13 @@ RSS_FEEDS = [
         "language": "fi",
         "category_hint": "Teknologia",
     },
-    {
-        "name": "MikroBitti",
-        "url": "https://mikrobitti.fi/feed/",
-        "language": "fi",
-        "category_hint": "Teknologia",
-    },
+    # MikroBitti removed 2026-03-27 — dead feed, redirects to iltalehti.fi/bitti (no RSS)
+    # {
+    #     "name": "MikroBitti",
+    #     "url": "https://mikrobitti.fi/feed/",
+    #     "language": "fi",
+    #     "category_hint": "Teknologia",
+    # },
     {
         "name": "MTV Uutiset",
         "url": "https://www.mtvuutiset.fi/api/feed/rss/uutiset_uusimmat",
