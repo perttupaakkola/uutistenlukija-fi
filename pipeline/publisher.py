@@ -278,6 +278,9 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     source_url_line = f'\nsource_url: "{source_url}"' if source_url else ""
     source_domain_line = f'\nsource_domain: "{source_domain}"' if source_domain else ""
     reading_time_line = f"\nreading_time: {reading_time}"
+    # Cap description at 155 chars for Google SERP display (truncates at ~160)
+    if description and len(description) > 155:
+        description = description[:152].rstrip() + "…"
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
     summary_line = f'\nsummary: "{_esc(summary)}"' if summary else ""
     if isinstance(key_points, list):
