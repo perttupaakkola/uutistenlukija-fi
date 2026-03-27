@@ -86,8 +86,8 @@
 {{ $alt := .Params.image_alt | default .Title }}
 
 {{/* ── Caption / credit ───────────────────────────────────────── */}}
-{{ $hasCredit   := and .Params.image_credit     (ne .Params.image_credit "")     }}
-{{ $hasCaption  := and .Params.image_caption    (ne .Params.image_caption "")    }}
+{{ $hasCaption := and .Params.image_caption (ne .Params.image_caption "") }}
+{{ $hasCredit := and $hasCaption .Params.image_credit (ne .Params.image_credit "") }}
 {{ $hasSourceUrl := and .Params.image_source_url (ne .Params.image_source_url "") }}
 
 {{/* ── Blur-up placeholder ────────────────────────────────────── */}}
@@ -188,10 +188,9 @@
   })();
   </script>
   {{ end }}
-  {{ if or $hasCaption $hasCredit }}
+  {{ if $hasCaption }}
   <figcaption class="article-hero-caption">
-    {{ if $hasCaption }}<span class="caption-text">{{ .Params.image_caption }}</span>{{ end }}
-    {{ if and $hasCaption $hasCredit }} — {{ end }}
+    <span class="caption-text">{{ .Params.image_caption }}</span>
     {{ if $hasCredit }}
       <span class="caption-credit">
         {{ if $hasSourceUrl }}

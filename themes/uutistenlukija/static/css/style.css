@@ -1179,14 +1179,18 @@ pre code {
   opacity: 1;
 }
 .article-hero-caption {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  text-align: right;
+  font-style: italic;
+  text-align: center;
   margin-top: 0.35rem;
   line-height: 1.4;
 }
+.article-hero-caption .caption-credit {
+  display: block;
+}
 .article-hero-caption a {
-  color: var(--text-muted);
+  color: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
