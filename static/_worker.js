@@ -48,32 +48,30 @@ async function resendRequest(env, path, init = {}) {
 }
 
 async function findExistingContact(env, email) {
-  const response = await resendRequest(env, `/contacts/${encodeURIComponent(email)}`, {
+  const audienceId = readEnv(env, 'RESEND_AUDIENCE_ID');
+  const response = await resendRequest(env, `/audiences/${audienceId}/contacts`, {
     method: 'GET',
   });
 
-  if (response.status === 404) {
-    return null;
-  }
-
   if (!response.ok) {
+    if (response.status === 404) return null;
     const errorText = await response.text();
     throw new Error(`Resend contact lookup failed (${response.status}): ${errorText}`);
   }
 
-  return response.json();
+  const data = await response.json();
+  const contacts = data?.data || [];
+  return contacts.find((c) => c.email?.toLowerCase() === email.toLowerCase()) || null;
 }
 
 async function createContact(env, email, source) {
   const audienceId = readEnv(env, 'RESEND_AUDIENCE_ID');
 
-  const response = await resendRequest(env, '/contacts', {
+  const response = await resendRequest(env, `/audiences/${audienceId}/contacts`, {
     method: 'POST',
     body: JSON.stringify({
-      audienceId,
       email,
       unsubscribed: false,
-      properties: source ? { source } : undefined,
     }),
   });
 
@@ -112,7 +110,7 @@ async function handleSubscribe(request, env) {
 
   try {
     const existingContact = await findExistingContact(env, email);
-    if (existingContact?.id || existingContact?.data?.id) {
+    if (existingContact?.id) {
       return jsonResponse(
         { ok: false, error: 'already_subscribed', message: 'Tämä sähköpostiosoite on jo uutiskirjeen tilaaja.' },
         409,
