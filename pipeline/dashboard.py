@@ -162,6 +162,10 @@ def _pct(a: int, b: int) -> str:
 
 # ── Main dashboard ────────────────────────────────────────────────────────────
 
+STALE_THRESHOLD_MINUTES = 90   # daytime publishing gap threshold
+ACTIVE_HOURS_UTC = (6, 22)     # 06:00–22:00 UTC — hours when staleness matters
+
+
 def build_dashboard(hours: int = 24) -> dict:
     runs    = load_metrics(hours)
     rejects = load_rejects(hours)
@@ -210,9 +214,23 @@ def build_dashboard(hours: int = 24) -> dict:
                 pass
             break
 
+    # ── Staleness check
+    now = datetime.now(timezone.utc)
+    current_hour = now.hour
+    in_active_hours = ACTIVE_HOURS_UTC[0] <= current_hour < ACTIVE_HOURS_UTC[1]
+    is_stale = False
+    if last_pub_ts is not None and in_active_hours:
+        age_minutes = (now - last_pub_ts).total_seconds() / 60
+        if age_minutes > STALE_THRESHOLD_MINUTES:
+            is_stale = True
+    pipeline_status = "degraded" if is_stale else "ok"
+
     return {
         "hours": hours,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "status": pipeline_status,
+        "is_stale": is_stale,
+        "stale_threshold_minutes": STALE_THRESHOLD_MINUTES,
         "runs": {
             "total": total_runs,
             "ok": ok_runs,
