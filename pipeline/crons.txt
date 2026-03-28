@@ -47,3 +47,6 @@
 
 # Weekly top 5 articles report to #metrics (Mondays 08:00 UTC)
 0 8 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/weekly_top_articles.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/weekly-top-articles.log 2>&1
+
+# Site uptime monitor (every 15 min, alerts after 2 consecutive failures)
+*/15 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/uptime_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/uptime.log 2>&1
