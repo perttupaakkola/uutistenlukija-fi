@@ -29,7 +29,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/KeuPa-j%C3%A4tti-Haukat-nollille-Mestis-karsintojen-avauksessa/268867"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
