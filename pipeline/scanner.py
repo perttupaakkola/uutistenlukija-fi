@@ -210,6 +210,18 @@ RSS_FEEDS = [
         "category_hint": "Teknologia",
     },
     {
+        "name": "mobiili.fi",
+        "url": "https://mobiili.fi/feed/",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
+        "name": "muropaketti.com",
+        "url": "https://muropaketti.com/feed/",
+        "language": "fi",
+        "category_hint": "Teknologia",
+    },
+    {
         "name": "IS Digitoday",
         "url": "https://www.is.fi/rss/digitoday.xml",
         "language": "fi",
