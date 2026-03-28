@@ -48,7 +48,7 @@
     </div>
     <div class="read-next__body">
       {{ with $nextCat }}
-      <span class="category-label read-next__cat">{{ . }}</span>
+      {{ partial "category-badge.html" (dict "category" . "link" true) }}
       {{ end }}
       <h3 class="read-next__title">{{ .Title }}</h3>
       {{ with .Params.description }}

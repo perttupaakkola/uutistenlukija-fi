@@ -8,7 +8,7 @@
 */}}
 <article class="article-card">
   {{ with .Params.categories }}
-  <span class="category-label">{{ index . 0 }}</span>
+  {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
   <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   <p class="excerpt">{{ .Summary | truncate 200 }}</p>
