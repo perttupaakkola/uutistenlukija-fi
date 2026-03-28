@@ -29,7 +29,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/mar/28/tropical-cyclone-narelle-wa-carnavon-exmouth-perth-bom-weather-warning-forecasts"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
