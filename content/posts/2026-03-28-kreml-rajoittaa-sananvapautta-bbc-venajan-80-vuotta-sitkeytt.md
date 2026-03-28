@@ -26,8 +26,9 @@ source_name: "BBC World"
 source_url: "https://www.bbc.com/news/articles/c05dlnd3635o?at_medium=RSS&at_campaign=rss"
 source_domain: "bbci.co.uk"
 draft: false
-image: "https://images.pexels.com/photos/36700255/pexels-photo-36700255.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-image_credit: "Photo by Maksim Shiriagin on Pexels"
+image: "https://images.pexels.com/photos/30484740/pexels-photo-30484740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+image_thumb: "https://images.pexels.com/photos/30484740/pexels-photo-30484740.jpeg?auto=compress&cs=tinysrgb&w=640"
+image_credit: "Photo by Arif Khan on Pexels"
 ---
 
 BBC Venäjä on kamppailut valtion tiukentuvia rajoituksia vastaan jo kahdeksan vuosikymmentä. Taustalla on halu tarjota vaihtoehtoja valtion propagandalle ja tiukasti kontrolloidulle kulttuurille. Alun perin BBC aloitti säännölliset venäjänkieliset radio-ohjelmat vuonna 1946. Näiden ohjelmien fanit siirtyivät usein syrjemmälle radiota kuunnellakseen, jottei häirintä vaikuttaisi heidän kuunteluunsa. Jamming, eli radiokanavien häirintä, oli pitkään osa peruskuuntelukokemusta ja muistuttaa meitä siitä, kuinka tärkeää tietoa pidetään monissa maissa pimennossa.

@@ -27,8 +27,9 @@ source_name: "Yle Uutiset"
 source_url: "https://yle.fi/a/74-20217835?origin=rss"
 source_domain: "yle.fi"
 draft: false
-image: "https://images.pexels.com/photos/4570712/pexels-photo-4570712.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-image_credit: "Photo by Kelly on Pexels"
+image: "https://images.pexels.com/photos/27499944/pexels-photo-27499944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+image_thumb: "https://images.pexels.com/photos/27499944/pexels-photo-27499944.jpeg?auto=compress&cs=tinysrgb&w=640"
+image_credit: "Photo by RDNE Stock project on Pexels"
 ---
 
 Yhdysvalloissa vietetään tänään laajoja mielenosoituksia presidentti Donald Trumpin hallintoa vastaan. No Kings -protesteja järjestetään eri puolilla maata, ja järjestäjät odottavat suurta osallistujamäärää. Kyseessä on kolmas protestipäivä No Kings -otsikon alla Trumpin toisen presidenttikauden aikana. Ensimmäiset mielenosoitukset kesäkuussa ja lokakuussa keräsivät merkittävän määrän osallistujia, ja tämä kerta on ennakoitavasti vähintään yhtä suuri.

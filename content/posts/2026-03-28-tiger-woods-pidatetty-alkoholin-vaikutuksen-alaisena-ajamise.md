@@ -27,8 +27,9 @@ source_name: "BBC World"
 source_url: "https://www.bbc.com/sport/golf/articles/cvg092kege7o?at_medium=RSS&at_campaign=rss"
 source_domain: "bbci.co.uk"
 draft: false
-image: "https://images.pexels.com/photos/32031148/pexels-photo-32031148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-image_credit: "Photo by Ahmet Can Avci on Pexels"
+image: "https://images.pexels.com/photos/10463465/pexels-photo-10463465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+image_thumb: "https://images.pexels.com/photos/10463465/pexels-photo-10463465.jpeg?auto=compress&cs=tinysrgb&w=640"
+image_credit: "Photo by Mikhail Nilov on Pexels"
 ---
 
 Golflegenda Tiger Woods on pidätetty ajamisesta alkoholin vaikutuksen alaisena Floridassa, minkä seurauksena hänet on syytetty useista rikkomuksista. Onnettomuus tapahtui, kun hänen autonsa vaurioitui Jupiter Islandilla. Woodsin Land Rover kaatui hänen yrittäessään ohittaa toisen ajoneuvon. Onnettomuudessa ei tullut henkilövahinkoja, mutta Woodsin kuljettamat ja muut osapuolet ovat joutuneet silti kokemaan pelottavia hetkiä.
