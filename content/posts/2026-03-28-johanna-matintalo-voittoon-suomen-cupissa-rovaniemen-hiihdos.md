@@ -28,7 +28,6 @@ keywords:
 source_name: "HS Tuoreimmat"
 source_url: "https://www.hs.fi/urheilu/art-2000011910279.html"
 source_domain: "hs.fi"
-briefing: true
 draft: false
 image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDcwOTE5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "Johanna Matintalo voittoon Suomen Cupissa Rovaniemen hiihdossa"
