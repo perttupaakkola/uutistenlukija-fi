@@ -88,6 +88,18 @@ KIRJOITUSTYYLI:
 - Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").
 - Lopeta viimeiseen faktaan.
 
+KIELLETYT FRAASIT — älä koskaan käytä:
+- "herättää kysymyksiä" / "nostaa esiin kysymyksiä"
+- "herättää huolta" (pelkkä klisee ilman faktaa)
+- "voidaan todeta" / "yhteenvetona voidaan todeta"
+- "on tärkeää huomata" / "on syytä huomata"
+- "merkittävä askel" / "tärkeä askel"
+- "läpinäkyvyys on tärkeää"
+- "jokainen voi tehdä oman osuutensa"
+- "aika näyttää" / "tulevaisuus näyttää" / "tulevaisuus on epävarma"
+- "voimaantua" / "voimaantuminen" (hallintoslangi)
+- Mitään muuta geneeristä tulevaisuus/vastuullisuus/yhteiskunta-jargonia joka ei lisää faktoja.
+
 TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:
 - Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)
 - Ei kolmen sarjoja joka kappaleessa
