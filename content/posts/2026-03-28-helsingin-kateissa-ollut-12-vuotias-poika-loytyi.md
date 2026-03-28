@@ -31,7 +31,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/helsingissa-kateissa-ollut-12-vuotias-poika-loytynyt/9317034"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
