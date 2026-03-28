@@ -55,8 +55,11 @@
 # Article validator (Sundays 07:30 UTC)
 30 7 * * 0 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 pipeline/validate_articles.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/validate-articles.log 2>&1
 
-# Site uptime monitor (every 15 min, alerts after 2 consecutive failures)
+# Site uptime monitor (every 15 min, alerts after 2 consecutive failures — HTTP check → #metrics)
 */15 * * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/uptime_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/uptime-monitor.log 2>&1
+
+# Pipeline health monitor (every 15 min — /api/health.json + pipeline degraded + stale >6h → #operations)
+*/15 * * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/health_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/health-monitor.log 2>&1
 
 # Disk monitor (every 6h)
 0 */6 * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/disk_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/disk_monitor.log 2>&1
