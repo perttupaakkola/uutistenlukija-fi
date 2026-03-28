@@ -30,6 +30,7 @@ import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
@@ -37,6 +38,9 @@ CONTENT_DIR = PROJECT_DIR / "content" / "posts"
 OUTPUT_DIR = PROJECT_DIR / "static" / "newsletter"
 SITE_BASE_URL = "https://uutistenlukija.fi"
 DEFAULT_LIMIT = 5
+NEWSLETTER_UTM_SOURCE = "newsletter"
+NEWSLETTER_UTM_MEDIUM = "email"
+NEWSLETTER_UTM_CAMPAIGN = "daily_briefing"
 
 MONTHS_FI = {
     1: "tammikuuta",
@@ -146,6 +150,20 @@ def parse_iso_datetime(value: str) -> datetime | None:
 
 def slug_to_url(path: Path) -> str:
     return f"{SITE_BASE_URL}/posts/{path.stem}/"
+
+
+def with_newsletter_utm(url: str, *, item_index: int | None = None) -> str:
+    """Append newsletter attribution params so GA4 classifies traffic as Email."""
+    parts = urlsplit(url)
+    query = dict(parse_qsl(parts.query, keep_blank_values=True))
+    query.update({
+        "utm_source": NEWSLETTER_UTM_SOURCE,
+        "utm_medium": NEWSLETTER_UTM_MEDIUM,
+        "utm_campaign": NEWSLETTER_UTM_CAMPAIGN,
+    })
+    if item_index is not None:
+        query["utm_content"] = f"story_{item_index}"
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
 
 
 def normalize_space(text: str) -> str:
@@ -258,13 +276,14 @@ def render_html_preview(target_day: date, articles: list[Article], generated_at:
 
     rows = []
     for idx, article in enumerate(articles, start=1):
+        tracked_url = with_newsletter_utm(article.url, item_index=idx)
         rows.append(
             f"""
             <li class=\"story\">
               <div class=\"story__number\">{idx}</div>
               <div class=\"story__content\">
                 <div class=\"story__meta\">{html.escape(article.category)} · {html.escape(article.source_label)}</div>
-                <h2 class=\"story__title\"><a href=\"{html.escape(article.url)}\">{html.escape(article.title)}</a></h2>
+                <h2 class=\"story__title\"><a href=\"{html.escape(tracked_url)}\">{html.escape(article.title)}</a></h2>
                 <p class=\"story__blurb\">{html.escape(article.blurb)}</p>
                 <p class=\"story__source\">Lähde: {html.escape(article.source_label)}</p>
               </div>
