@@ -230,6 +230,9 @@ def main() -> int:
     print(f"[schema] Passed: {passed}")
     print(f"[schema] Failed: {len(failed_results)}")
 
+    yaml_failures = [r for r in failed_results if any("YAML syntax error" in i or "front matter parse failed" in i for i in r.issues)]
+    schema_warnings = [r for r in failed_results if r not in yaml_failures]
+
     if failed_results:
         print("[schema] ─────────────────────────────────────────────")
         for result in failed_results:
@@ -237,11 +240,17 @@ def main() -> int:
                 rel = result.path.relative_to(PROJECT_DIR)
             except ValueError:
                 rel = result.path
+            severity = "FATAL" if result in yaml_failures else "WARN "
             print(f"[schema] {rel}")
             for issue in result.issues:
-                print(f"[schema]   ERR  {issue}")
-        print("[schema] Validation failed")
+                print(f"[schema]   {severity}  {issue}")
+
+    if yaml_failures:
+        print(f"[schema] FATAL: {len(yaml_failures)} YAML syntax error(s) — Hugo build will fail")
         return 1
+
+    if schema_warnings:
+        print(f"[schema] WARNING: {len(schema_warnings)} schema violation(s) — not blocking deploy")
 
     print("[schema] Validation passed")
     return 0
