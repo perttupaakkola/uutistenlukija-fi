@@ -29,7 +29,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/inkan-isosisko-katosi-nelja-vuotta-sitten-yritan-olla-ajattelematta-pahinta/9316196"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
