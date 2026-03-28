@@ -26,7 +26,6 @@ tags:
 source_name: "Kauppalehti"
 source_url: "https://www.kauppalehti.fi/uutiset/a/8487e3d6-97c4-48ca-b6ec-91a2627f4e29"
 source_domain: "kauppalehti.fi"
-briefing: true
 draft: false
 image: "https://images.pexels.com/photos/20101888/pexels-photo-20101888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 image_credit: "Photo by Masood Aslami on Pexels"
