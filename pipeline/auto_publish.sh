@@ -100,6 +100,11 @@ echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 #   2. .sh files retain their execute bits (git checkout restores committed mode)
 git reset HEAD -- . 2>/dev/null || true
 git checkout HEAD -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline/firehose_cron.sh pipeline/scanner.py 2>/dev/null || true
+
+# Generate health + pipeline status BEFORE git add so they get committed and deployed to Cloudflare
+python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
+python3 "$PIPELINE_DIR/generate_pipeline_status.py" 2>&1 | tee -a "$LOG_FILE" || echo "[pipeline_status] generation failed (non-fatal)" | tee -a "$LOG_FILE"
+
 git add content/ public/ static/api/ static/metrics/ pipeline/metrics.jsonl pipeline/.pipeline_lock 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "No new content to push." | tee -a "$LOG_FILE"
@@ -111,10 +116,6 @@ else
   git push origin main 2>&1 | tee -a "$LOG_FILE"
   echo "Deployed ${ARTICLE_COUNT} new articles." | tee -a "$LOG_FILE"
 fi
-
-# Regenerate health endpoint + metrics snapshot
-python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
-python3 "$PIPELINE_DIR/generate_pipeline_status.py" 2>&1 | tee -a "$LOG_FILE" || echo "[pipeline_status] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 bash "$PROJECT_DIR/scripts/daily-snapshot.sh" 2>&1 | tee -a "$LOG_FILE" || echo "[snapshot] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 
 echo "=== Auto-publish completed at $(date -u) ==="  | tee -a "$LOG_FILE"
