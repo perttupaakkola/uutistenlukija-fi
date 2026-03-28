@@ -31,7 +31,6 @@ keywords:
 source_name: "scoop.it"
 source_url: "https://www.scoop.it/topic/oppitori/p/4170666830/2026/03/28/saamenmaan-isoimmassa-musiikki-kilpailussa-valitaan-paras-joiku-ja-laulu-kotimaa-yle"
 source_domain: "scoop.it"
-briefing: true
 draft: false
 ---
 
