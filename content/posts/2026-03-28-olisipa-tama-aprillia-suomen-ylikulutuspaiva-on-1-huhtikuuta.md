@@ -26,7 +26,6 @@ tags:
 source_name: "Maaseudun Tulevaisuus"
 source_url: "https://www.maaseuduntulevaisuus.fi/uutiset/3fd7205c-6044-4398-aa4e-4942eed9a070"
 source_domain: "maaseuduntulevaisuus.fi"
-briefing: true
 draft: false
 ---
 
