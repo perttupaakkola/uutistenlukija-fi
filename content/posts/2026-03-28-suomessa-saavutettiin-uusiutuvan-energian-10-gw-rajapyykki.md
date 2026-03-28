@@ -16,7 +16,6 @@ key_points:
   - "Tapahtuma tarjoaa verkostoitumismahdollisuuksia asiantuntijoille"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - uusiutuva energia
@@ -31,6 +30,11 @@ source_name: "suomenuusiutuvat.fi"
 source_url: "https://suomenuusiutuvat.fi/ajankohtaista/tapahtumat/10-gw-juhlagaala/"
 source_domain: "suomenuusiutuvat.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Suomessa saavutettiin uusiutuvan energian 10 GW rajapyykki"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Suomessa uusiutuva energia on tehnyt merkittävän harppauksen, sillä teollisen mittakaavan aurinko- ja tuulivoiman yhteenlaskettu kapasiteetti on nyt ylittänyt kymmenen gigawatin rajan. Tämä kehitys nostaa Suomen entistä vahvempaan asemaan uusiutuvan energian tuottajana Euroopassa. Suomen uusiutuvat ry kutsuu alan toimijoita juhlistamaan tätä saavutusta 10 GW Juhlagaalassa, joka järjestetään Helsingissä. Gaala on suunniteltu vietettäväksi vuonna 2026, tarkalleen ottaen huhtikuussa, ja se pidetään Ravintola Töölössä.

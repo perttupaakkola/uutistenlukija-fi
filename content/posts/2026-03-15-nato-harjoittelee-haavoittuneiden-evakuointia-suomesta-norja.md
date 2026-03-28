@@ -16,6 +16,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Nato harjoittelee suomalais-sotilaiden evakuointia Norjaan Lapista mahdollisen konfliktin varalta, vahvistaa komitean puheenjohtaja Iversen."
+image: "https://images.unsplash.com/photo-1564812761548-d2e62622ca5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxOQVRPJTIwbWlsaXRhcnklMjBoYXJqb2l0dGVsZWUlMjBoYWF2b2l0dHVuZWlkZW4lMjBldmFrdW9pbnRpYXxlbnwxfDB8fHwxNzc0NzA0NjIxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Nato harjoittelee haavoittuneiden evakuointia Suomesta Norjaan"
+image_credit: "Photo by أخٌ‌في‌الله on Unsplash"
+image_source_url: "https://unsplash.com/photos/two-brown-backpacks-T_kagYWg1pU?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1564812761548-d2e62622ca5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxOQVRPJTIwbWlsaXRhcnklMjBoYXJqb2l0dGVsZWUlMjBoYWF2b2l0dHVuZWlkZW4lMjBldmFrdW9pbnRpYXxlbnwxfDB8fHwxNzc0NzA0NjIxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Naton puolustussuunnitelmiin kuuluu haavoittuneiden suomalaissotilaiden siirtäminen Lapista Norjan sairaaloihin mahdollisen aseellisen konfliktin syttyessä. Naton lääketieteellisen komitean puheenjohtaja Petter Iversen vahvisti asian suomalaiselle medialle. Tällaiset suunnitelmat ovat osa Naton laajempaa strategiaa, jossa pyritään varautumaan erilaisiin kriisitilanteisiin, jotka voisivat vaarantaa alueen turvallisuuden.
 

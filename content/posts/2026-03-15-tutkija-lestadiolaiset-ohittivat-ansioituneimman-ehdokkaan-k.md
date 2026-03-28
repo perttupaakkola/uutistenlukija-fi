@@ -16,6 +16,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Lestadiolaiset ohittavat ansioituneimman naisehdokkaan kirkkoherran valinnassa, mikä herättää kysymyksiä kirkon päätöksenteosta."
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Tutkija: lestadiolaiset ohittivat ansioituneimman ehdokkaan kirkkoherran valinnassa"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Kirkkoherran valinta on herättänyt vilkasta keskustelua sen jälkeen, kun kirkkovaltuusto valitsi tehtävään miehen, vaikka tuomiokapituli oli todennut naisehdokkaan olevan hakijoista ansioitunein. Tämä tapaus on saanut tutkijat ja kirkon jäsenet pohtimaan valintaprosessin läpinäkyvyyttä ja tasa-arvoisuutta, sekä nostanut esiin kysymyksiä vanhoillislestadiolaisen liikkeen vaikutuksesta kirkon päätöksentekoon.
 

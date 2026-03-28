@@ -16,7 +16,6 @@ key_points:
   - "Paikalliset yhteisöt tarvitsevat pitkäaikaista apua"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - australia
@@ -30,6 +29,11 @@ source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/mar/28/tropical-cyclone-narelle-wa-carnavon-exmouth-perth-bom-weather-warning-forecasts"
 source_domain: "theguardian.com"
 draft: false
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Ex-tropiikkikyloni Narelle tuo tulvia Länsi-Australiaan"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Ex-tropiikkikyloni Narelle on laantunut trooppiseksi matalapaineeksi, mutta sen jälkeiset säävaroitukset jatkuvat Länsi-Australiassa. Sateet ja tuulenpuuskat uhkaavat erityisesti viljanviljelyalueita ja Perthin kaupunkia. Viime viikon perjantaina Narelle teki maihinnousun Länsi-Australiassa, jossa se aiheutti mittavaa tuhoa ja jätti monia ilman sähköä. Alueen asukkaat valmistautuvat arvioimaan vaurioita, joita Narelle on aiheuttanut.

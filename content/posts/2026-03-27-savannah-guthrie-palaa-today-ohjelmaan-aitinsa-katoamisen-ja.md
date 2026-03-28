@@ -16,7 +16,6 @@ key_points:
   - "Guthrie ilmaisee pelkoa julkisuuden aiheuttamasta paineesta äitinsä osalta"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - televisio
@@ -31,6 +30,11 @@ source_url: "https://www.bbc.com/news/articles/c79jd4x572qo?at_medium=RSS&at_cam
 source_domain: "bbci.co.uk"
 briefing: true
 draft: false
+image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQ3MDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Savannah Guthrie palaa Today-ohjelmaan äitinsä katoamisen jälkeen"
+image_credit: "Photo by Jimmy Liu on Unsplash"
+image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQ3MDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Yhdysvaltalainen televisiopersoona Savannah Guthrie ilmoitti palaavansa Today-ohjelmaan huhtikuussa, kahden kuukauden tauon jälkeen äitinsä Nancy Guthrien katoamisen johdosta. Haasteista huolimatta Guthrie kertoi NBC:n haastattelussa, että hän ei voi olla palaamatta, sillä ohjelma on hänen perheensä jatke.

@@ -20,6 +20,11 @@ keywords:
   - "maailman uutiset"
   - "kansainväliset uutiset"
 description: "Israel aloittaa laajamittaiset iskut Irania vastaan, mikä nostaa huolta alueen konfliktin eskalaatiosta. Donald Trump ilmoittaa USA:n olevan valmis diplomaattisiin ratkaisuihin."
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Israel aloitti laajat iskut Iraniin – Trump sanoo, ettei USA ole valmis sopimukseen"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Israelin armeija ilmoitti käynnistäneensä laajamittaiset iskut Irania vastaan. Armeijan tiedottajan mukaan Israel tunnistaa uusia kohteita päivittäin, ja operaation arvioidaan kestävän vähintään kolme viikkoa. Tämä kehitys on herättänyt kansainvälistä huolta ja mielenkiintoa, sillä se merkitsee selvää eskalaatiota konfliktissa, joka on laajentunut Gazan sodasta alueelliseksi kriisiksi.
 

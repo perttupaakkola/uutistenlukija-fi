@@ -16,6 +16,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Viking Gloryn matkustajat odottavat laivassa yön yli, kun Viking Grace aiheuttaa yllättäviä häiriöitä aikatauluihin Maarianhaminassa."
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Viking Gloryn matkustajat jumittuivat laivaan yön yli – päiväristeily venyi odottamatta"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Turusta lauantaina päiväristeilylle lähteneet matkustajat saivat yllätyksen, kun matka venyikin yön yli kestäväksi seikkailuksi. Viking Glory joutui pysähtymään yllättäen ennen Maarianhaminaa, kun saman varustamon Viking Grace oli jumiutunut Tukholman edustalle ja aiheuttanut häiriöitä aikatauluihin. Tämä yllättävä tilanne herätti laajaa keskustelua matkustajien keskuudessa, ja se nosti esiin kysymyksiä varustamon aikataulujen luotettavuudesta ja matkustuskäytännöistä.
 

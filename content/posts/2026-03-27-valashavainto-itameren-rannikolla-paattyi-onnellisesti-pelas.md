@@ -16,7 +16,6 @@ key_points:
   - "Valaan hyvinvointi on edelleen huolenaihe pelastustapahtuman jälkeen"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - valaat
@@ -31,6 +30,11 @@ source_url: "https://www.bbc.com/news/articles/c9vlmxwk2jmo?at_medium=RSS&at_cam
 source_domain: "bbci.co.uk"
 briefing: true
 draft: false
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Valashavainto Itämeren rannikolla päättyi onnellisesti pelastustalkoisiin"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Vähintään 12 metriä pitkä humpback-valas on onnistunut vapautumaan hiekkaesteestä Saksan rannikolla Lübeckin lähellä. Pelastustiimi oli yrittänyt useita päiviä saada valasta takaisin syvämereen, ja viimein valas ui noin 600 metrin päähän rannasta. Pelastustyöntekijät ovat toiveikkaita valaan tulevaisuuden suhteen, sillä se on nyt syvillä vesillä.

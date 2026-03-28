@@ -16,7 +16,6 @@ key_points:
   - "Yhteiskunnan rooli nuorten tukemisessa on keskeinen"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - huumeet
@@ -30,6 +29,11 @@ source_name: "Iltalehti"
 source_url: "https://www.iltalehti.fi/kotimaa/a/ec095371-eb01-490c-91f3-aff3a726d4ec"
 source_domain: "iltalehti.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Huumeongelmat kasvaneet Helsingissä – Janne jakaa kokemuksiaan"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Helsingin kaduille on palannut pelko, kun nuorten käytössä on yleistynyt vaarallinen substanssi. Janne Mikkonen, vain 21-vuotias, kertoo omin silmin näkemästään huumetilanteesta, joka on huolestuttanut monia. Hän on itse kokeillut Alfa-pvp:tä, myös tunnettu nimellä peukku, ja kuvaa sen aiheuttamaa syöksykierrettä. Janne kuvaa, kuinka tämä huume on jättänyt syviä jälkiä häneen ja ympäröivään yhteiskuntaan, mikä herättää hetkellisesti ällistyksen ja huolen.

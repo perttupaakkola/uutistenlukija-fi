@@ -16,7 +16,6 @@ key_points:
   - "Läpinäkyvyyden ja valvonnan tarve kasvaa ulkomaisten investointien myötä"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - putin
@@ -30,6 +29,11 @@ source_name: "Yle Uutiset"
 source_url: "https://yle.fi/a/74-20205937?origin=rss"
 source_domain: "yle.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Lappeenrannassa yhtiö teki salaisia liiketoimia Putinin lähipiirin kanssa"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Lappeenrantalainen Kitkovest-niminen yritys on herättänyt huomiota sen sidoksista Venäjän presidentin Vladimir Putinin oligarkkeihin. Tämä yritys on ollut piilossa julkisuudelta ja se ei ole juurikaan ilmoittanut toiminnastaan. Kitkovestin tarinaan liittyy venäläisliikemies Jevgeni Malov, joka oli mukana oligarkki Gennadi Timtšenkon kanssa luomassa laajaa öljynvälitysyhtiötä.

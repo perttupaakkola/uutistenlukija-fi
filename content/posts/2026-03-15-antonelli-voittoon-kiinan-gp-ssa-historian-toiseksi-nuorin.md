@@ -17,6 +17,11 @@ keywords:
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
 description: "Kimi Antonelli voittaa Kiinan GP:n ja nousee historian toiseksi nuorimmaksi F1-kilpailun voittajaksi ollessaan vain 19-vuotias."
+image: "https://images.unsplash.com/photo-1641478058859-f109fe4ae6ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxhbnRvbmVsbGklMjB2b2l0dG9vbiUyMGtpaW5hbiUyMGhpc3RvcmlhbnxlbnwxfDB8fHwxNzc0NzA0NTc5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Antonelli voittoon Kiinan GP:ssä – historian toiseksi nuorin F1-kilpailun voittaja"
+image_credit: "Photo by Hero ding on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-statue-of-a-man-with-a-beard-in-front-of-a-building-o_1x68Ia6GY?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1641478058859-f109fe4ae6ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxhbnRvbmVsbGklMjB2b2l0dG9vbiUyMGtpaW5hbiUyMGhpc3RvcmlhbnxlbnwxfDB8fHwxNzc0NzA0NTc5fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 ## Antonelli voittoon Kiinan GP:ssä – historian toiseksi nuorin F1-kilpailun voittaja
 

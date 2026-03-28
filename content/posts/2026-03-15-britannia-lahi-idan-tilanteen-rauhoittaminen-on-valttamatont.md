@@ -16,6 +16,11 @@ keywords:
   - "maailman uutiset"
   - "kansainväliset uutiset"
 description: "Britannian puolustusministeri korostaa Lähi-idän rauhoittamisen tärkeyttä kansainväliselle turvallisuudelle ja viranomaiset keskustelevat vaihtoehdoista."
+image: "https://images.unsplash.com/photo-1706814567827-c204d90a40c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxicml0YWluJTIwbCVDMyVBNGhpLWlkJUMzJUE0biUyMHRpbGFudGVlbiUyMHYlQzMlQTRsdHQlQzMlQTRtJUMzJUE0dCVDMyVCNm50JUMzJUE0fGVufDF8MHx8fDE3NzQ3MDQ1ODR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Britannia: Lähi-idän tilanteen rauhoittaminen on välttämätöntä"
+image_credit: "Photo by Michael Starkie on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-flag-flying-in-the-wind-on-a-clear-day-4F0sg4IS8UI?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1706814567827-c204d90a40c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxicml0YWluJTIwbCVDMyVBNGhpLWlkJUMzJUE0biUyMHRpbGFudGVlbiUyMHYlQzMlQTRsdHQlQzMlQTRtJUMzJUE0dCVDMyVCNm50JUMzJUE0fGVufDF8MHx8fDE3NzQ3MDQ1ODR8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Britannian puolustusministeri on korostanut Lähi-idän tilanteen rauhoittamisen olevan elintärkeää kansainväliselle turvallisuudelle. Ministeriön tiedottaja kertoi lauantaina, että Britannian hallitus käy tiivistä vuoropuhelua liittolaistensa kanssa useista eri vaihtoehdoista Hormuzinsalmen tilanteen vakauttamiseksi. Tämä uutinen tulee ajankohtaiseksi, kun alueen jännitteet ovat jälleen nousseet, ja kansainväliset suhteet ovat kiristyneet.
 

@@ -16,7 +16,6 @@ key_points:
   - "Alennus edistää osallisuutta ja keskustelun avulla muutoksia"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - viking line
@@ -30,6 +29,11 @@ source_name: "Iltalehti"
 source_url: "https://www.iltalehti.fi/kotimaa/a/25245962-6e2d-4ef2-a38c-ddc3b5a7abbc"
 source_domain: "iltalehti.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Jos sinulle on tehty tämä operaatio, saat alennuksen Viking Linella"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Suomessa monet kamppailevat aikuisten annoskoko-ongelmien kanssa, ja laivan buffet-ruokailu on erityisesti heidän keskuudessaan suosittua. Buffet on usein risteilyn kohokohta, jossa nautitaan monenlaisista ruokailuvaihtoehdoista. Kuitenkin kaikki eivät kykene nauttimaan suurista annoksista kerralla. Viking Line haluaa helpottaa tämän erityisryhmän tilannetta tarjoamalla merkittävän alennuksen. 

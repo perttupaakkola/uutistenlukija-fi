@@ -16,7 +16,6 @@ key_points:
   - "Epätoivo ja pelko ovat valloillaan Teheranissa"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - iran
@@ -30,6 +29,11 @@ source_name: "BBC World"
 source_url: "https://www.bbc.com/news/articles/cn0w1qxzd4xo?at_medium=RSS&at_campaign=rss"
 source_domain: "bbci.co.uk"
 draft: false
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Teheranin siviilit kärsivät Yhdysvaltojen ja Israelin iskuista"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Iran on kärsinyt Yhdysvaltojen ja Israelin laukaisemista iskuista jo kuukauden ajan, ja siviilien kärsimykset ovat kasvaneet. Päivittäin asukkaat ovat pelon vallassa, nähdessään rakenteidensa murenevan ja perheidensä hajautuvan. Erityisesti Teheranin Resalat-kaupunginosassa asuvan äidin huudot ovat saaneet maailman huomion, kun hän odottaa tytärtään löydettäväksi romukasan alta.

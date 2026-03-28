@@ -16,7 +16,6 @@ key_points:
   - "Tarvitaan tiukempia lakeja ja avointa keskustelua ilmiöistä"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - seksuaaliväkivalta
@@ -30,6 +29,11 @@ source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/netin-kammottava-raiskausakatemia-paljastui-cnn-miehet-opastavat-toisiaan-jarkyttavissa-teoissa/9316712"
 source_domain: "mtvuutiset.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Netin kammottava 'raiskausakatemia' paljastui – CNN: Miehet opastavat toisiaan"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 CNN:n selvitys on tuonut esiin järkyttävän ilmiön netissä, jossa miehet jakavat keskenään ohjeita ja vinkkejä omien vaimojensa huumaamisesta ja raiskaamisesta. Tämä toimintatapa on saanut nimen 'uniporno', ja siihen liittyy seksuaalista väkivaltaa nukkuvia kumppaneita kohtaan. Ilmiö on levittäytynyt erityisesti viestipalvelu Telegramin anonyymissä Zzz-ryhmässä, jossa miehet jakavat omia kokemuksiaan ja jopa videoita näistä järkyttävistä teoista.

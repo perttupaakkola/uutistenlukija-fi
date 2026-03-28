@@ -20,6 +20,11 @@ keywords:
   - "tiedeuutiset"
   - "tekoäly uutiset"
 description: "Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöön yli 4 000 hakemuksesta, välttääkseen tekoälykääreitä."
+image: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3NDcwNDYyOXww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Googlen ja Accelin kiihdyttämö karsi tekoälykääreiksi paljastuneet hakijat"
+image_credit: "Photo by Jonas Morgner on Unsplash"
+image_source_url: "https://unsplash.com/photos/man-standing-while-using-computer-and-another-group-of-men-chatting-F7u5fL11Lt0?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3NDcwNDYyOXww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Google ja Accel India valitsivat viisi startup-yritystä Atoms-kiihdyttämöohjelmaansa yli 4 000 hakemuksen joukosta. Yksikään valituista ei ole niin sanottu tekoälykääre eli yritys, joka vain paketoi olemassa olevan tekoälymallin uuteen käyttöliittymään. Tämä valinta on merkittävä osoitus siitä, miten kilpailu tekoälyalan kentällä Intiassa on muuttumassa ja kehittymässä.
 

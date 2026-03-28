@@ -12,7 +12,6 @@ description: "Virpominen on palmusunnuntain perinne, jossa lapset käyvät toivo
 summary: "Virpominen on monessa suomalaiskodissa palmusunnuntain odotettu perinne. Tässä 7 virpomislorua lapsille ja käytännön opas perinteen viettämiseen."
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 3
 tags:
   - pääsiäinen
@@ -25,6 +24,11 @@ keywords:
   - "virpominen palmusunnuntai"
   - "pääsiäisperinteet"
 draft: false
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Virpominen 2026 – 7 lorua ja perinneopas palmusunnuntaille"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Virpominen on monessa suomalaiskodissa palmusunnuntain odotettu perinne. Lapset koristelevat pajunoksia, pukeutuvat noidiksi tai pääsiäishahmoiksi ja kiertävät toivottamassa terveyttä, onnea ja siunausta. Vastalahjaksi annetaan usein suklaamuna, karkkia tai pieni muu yllätys. Tavat vaihtelevat eri puolilla Suomea, mutta ajatus on sama: virpominen tuo iloa, kevään tuntua ja ripauksen pääsiäisen taikaa.

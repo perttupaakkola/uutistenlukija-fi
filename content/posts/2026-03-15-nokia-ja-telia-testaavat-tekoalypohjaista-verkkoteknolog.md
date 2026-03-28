@@ -16,6 +16,11 @@ keywords:
   - "tiedeuutiset"
   - "tekoäly uutiset"
 description: "Nokia ja Telia kehittävät yhdessä tekoälypohjaista radiopääsyverkkoa Suomessa, tavoitteenaan parantaa 5G-verkon suorituskykyä merkittävästi."
+image: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3NDcwNDYyOXww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Nokia ja Telia testaavat tekoälypohjaista verkkoteknologiaa Suomessa"
+image_credit: "Photo by Jonas Morgner on Unsplash"
+image_source_url: "https://unsplash.com/photos/man-standing-while-using-computer-and-another-group-of-men-chatting-F7u5fL11Lt0?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3NDcwNDYyOXww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Nokia ja Telia Finland ovat aloittaneet laajan yhteistyön tekoälypohjaisen radiopääsyverkon kehittämiseksi ja testaamiseksi Suomessa. Kumppanuuden tavoitteena on parantaa 5G-verkon suorituskykyä merkittävästi ja nopeuttaa tekoälysovellusten kaupallistamista. Tekoälyn hyödyntäminen telekommunikaatiossa on noussut keskeiseksi teemaksi, ja tämä yhteistyö edustaa merkittävää askelta kohti älykkäämpää ja tehokkaampaa verkkoinfrastruktuuria.
 

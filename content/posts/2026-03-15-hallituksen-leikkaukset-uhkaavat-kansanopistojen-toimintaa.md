@@ -16,6 +16,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Hallituksen leikkaukset uhkaavat kansanopistojen toimintaa, jättäen jopa 38 000 maahanmuuttajaa ilman kielikoulutusta ja tukea."
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Hallituksen leikkaukset uhkaavat kansanopistojen toimintaa"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Suomen kansanopistot ovat ajautuneet ahtaalle hallituksen suunnittelemien leikkausten vuoksi. Mikäli kotoutumiskoulutuksen rahoitusta supistetaan suunnitellusti, jopa 38 000 maahanmuuttajaa voi jäädä ilman kielikoulutusta ja muuta kotoutumista tukevaa opetusta. Tämä tilanne on herättänyt laajaa keskustelua ja huolta kansanopistojen tulevaisuudesta, erityisesti niiden roolista maahanmuuttajien integroitumisessa suomalaisiin yhteiskuntarakenteisiin.
 

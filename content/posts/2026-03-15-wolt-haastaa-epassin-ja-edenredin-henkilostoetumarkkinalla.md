@@ -16,6 +16,11 @@ keywords:
   - "talous uutiset"
   - "suomen talous uutiset"
 description: "Wolt tuo kesällä markkinoille Wolt Benefits -palvelun, haastamalla Epassin ja Edenredin Suomen henkilöstöetumarkkinoilla."
+image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQ3MDQ2NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Wolt haastaa Epassin ja Edenredin henkilöstöetumarkkinalla"
+image_credit: "Photo by CHUTTERSNAP on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQ3MDQ2NDN8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Ruokalähettipalvelustaan tunnettu Wolt ilmoitti perjantaina tuovansa kesällä markkinoille Wolt Benefits -palvelun, joka tähtää suoraan Suomen henkilöstöetumarkkinoille. Uusi palvelu haastaa alan vakiintuneet toimijat Epassin ja Edenredin, jotka ovat hallinneet markkinaa pitkään. Tämä ilmoitus herättää kysymyksiä siitä, miten kilpailu voi muuttaa henkilöstöetujen kenttää ja mitä vaikutuksia sillä voi olla työntekijöille ja yrityksille.
 

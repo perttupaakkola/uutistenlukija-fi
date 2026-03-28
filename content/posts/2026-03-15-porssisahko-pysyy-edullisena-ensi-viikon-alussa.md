@@ -16,6 +16,11 @@ keywords:
   - "talous uutiset"
   - "suomen talous uutiset"
 description: "Pörssisähkön hinta pysyy alhaalla ensi viikon alussa, jolloin kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta."
+image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQ3MDQ2NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Pörssisähkö pysyy edullisena ensi viikon alussa"
+image_credit: "Photo by CHUTTERSNAP on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQ3MDQ2NDN8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Sähkön pörssihinta jatkaa matalalla tasolla ensi viikon alussa. Maanantaina kalleinkin tunti jää alle seitsemän sentin kilowattitunnilta, mikä on selvästi tavanomaista halvempaa kevään ajankohtaan nähden. Tämä tilanne tuo helpotusta monille kuluttajille, jotka ovat kärsineet korkeista sähkönhinnoista viime kuukausina.
 

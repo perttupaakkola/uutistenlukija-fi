@@ -20,6 +20,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Esperi Care tuomitaan maksamaan entiselle hoitajalleen yli 200 000 euroa perusteettomasta irtisanomisesta, sillä väitteille ei löytynyt näyttöä."
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Esperi Care tuomittiin maksamaan yli 200 000 euroa perusteettomasta irtisanomisesta"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Sosiaali- ja terveyspalveluyhtiö Esperi Care irtisanoi hoitajansa väittäen tätä vakavista laiminlyönneistä. Oikeus katsoi, ettei väitteille ollut riittävää näyttöä. Yhtiö joutuu maksamaan entiselle työntekijälleen yli 200 000 euroa korvauksina perusteettomasta irtisanomisesta, aineettomasta vahingosta ja oikeudenkäyntikuluista. Tämä tapaus nostaa esiin kysymyksiä hoivasektorin työntekijöiden oikeuksista ja työnantajien vastuista.
 

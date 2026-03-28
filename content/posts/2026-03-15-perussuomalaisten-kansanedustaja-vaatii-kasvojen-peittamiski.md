@@ -16,6 +16,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Perussuomalaisten kansanedustaja Mira Nieminen vaatii kasvojen peittämisen kieltämistä Lahden kouluissa opetuksen ja vuorovaikutuksen vuoksi."
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Perussuomalaisten kansanedustaja vaatii kasvojen peittämiskieltoa Lahden kouluihin"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Perussuomalaisten kansanedustaja Mira Nieminen vaatii, että kasvot peittävä pukeutuminen kielletään Lahden kouluissa. Tämä vaatimuksensa on osa laajempaa valtakunnallista keskustelua, jota peittävästä pukeutumisesta on käyty suomalaisissa oppilaitoksissa viime kuukausina. Nieminen on ottanut asian esille erityisesti opetuksen ja sosiaalisen vuorovaikutuksen näkökulmasta, korostaen, että kasvojen peittäminen kouluympäristössä haittaa opiskelijoiden välistä kommunikaatiota ja voi luoda epäselvyyksiä identiteetissä.
 

@@ -16,7 +16,6 @@ key_points:
   - "Markkinat ovat herkempiä kuin koskaan Trumpin toimille"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - trump
@@ -31,6 +30,11 @@ source_url: "https://www.theguardian.com/business/2026/mar/27/trump-iran-strateg
 source_domain: "theguardian.com"
 briefing: true
 draft: false
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Trumpin uhkat taktiikkana Iranin sodassa"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Yhdysvaltojen presidentti Donald Trumpin uusin strategia Iranissa, nimeltään "Trump Always Chickens Out", on saanut osakseen kritiikkiä, sillä näyttää siltä, että hänen uhkansa ja takinkäännöt eivät enää toimi. Tämän viikon alussa Trump uhkasi pommittaa Iranin siviilivoimainfraa, mikä aiheutti öljyn hintojen nousua ja osakkeiden laskua. Heti kun uhka herätti huolta markkinoilla, Trump kiirehti perumaan pommitushankkeensa ilmoittaen, että neuvottelut Iranin kanssa sujuvat hyvinkin lupaavasti. Tämä strategia on tullut uhkaavaksi ja häilyväksi, eikä aikaisempien uhkausten taustalla ole ollut todellista vaikutusvaltaa.

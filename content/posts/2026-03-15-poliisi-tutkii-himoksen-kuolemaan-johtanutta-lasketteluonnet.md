@@ -16,6 +16,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Poliisi tutkii Himoksella tapahtunutta lasketteluonnettomuutta, jossa virolainen mies menehtyi siirtymäreitin kalliolle ajautuessa."
+image: "https://images.unsplash.com/photo-1605493666665-532ab9fb00b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwb2xpY2UlMjB0dXRraWklMjBoaW1va3NlbiUyMGt1b2xlbWFhbnxlbnwxfDB8fHwxNzc0NzA0NjM5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Poliisi tutkii Himoksen kuolemaan johtanutta lasketteluonnettomuutta"
+image_credit: "Photo by Erik Mclean on Unsplash"
+image_source_url: "https://unsplash.com/photos/2-men-standing-beside-white-and-blue-police-car-TbWjlEr_UTw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1605493666665-532ab9fb00b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwb2xpY2UlMjB0dXRraWklMjBoaW1va3NlbiUyMGt1b2xlbWFhbnxlbnwxfDB8fHwxNzc0NzA0NjM5fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Sisä-Suomen poliisi tutkii Jämsän Himoksella perjantaina tapahtunutta lasketteluonnettomuutta kuolemansyyntutkintana. Onnettomuudessa menehtyi virolainen mies, joka ajautui siirtymäreitiltä päin kallioleikkausta. Tämä traaginen tapahtuma on herättänyt huolta sekä paikallisten asukkaiden että laskettelijoiden keskuudessa, sillä Himoksen laskettelukeskus on tunnettu suosiostaan ja vierailee vuosittain kymmeniätuhansia ihmisiä.
 

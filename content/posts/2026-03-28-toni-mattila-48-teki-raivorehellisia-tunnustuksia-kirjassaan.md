@@ -16,7 +16,6 @@ key_points:
   - "Mattilan tarina avaa keskustelua mielenterveydestä"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - mielenterveys
@@ -30,6 +29,11 @@ source_name: "Etelä-Suomen Sanomat"
 source_url: "https://www.ess.fi/teemat/9336213"
 source_domain: "ess.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Toni Mattila, 48, teki raivorehellisiä tunnustuksia kirjassaan"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Helsinkiläinen terveyskeskuslääkäri Toni Mattila on julkaissut teoksen, joka kertoo hänen omista kokemuksistaan ja diagnooseistaan. Kirja ei ole pelkästään kertomus lääkärin työstä, vaan myös henkilökohtainen matka, joka voi tarjota vertaistukea monille, jotka ovat kohdanneet vastaavia haasteita.

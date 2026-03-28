@@ -16,7 +16,6 @@ key_points:
   - "Pohjoiskorealaisten pakolaisten elämät ovat täynnä vaaroja"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - pohjois-korea
@@ -31,6 +30,11 @@ source_url: "https://www.bbc.com/news/articles/c239n93ejm8o?at_medium=RSS&at_cam
 source_domain: "bbci.co.uk"
 briefing: true
 draft: false
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Pakenin Pohjois-Koreasta äitini kanssa – nyt pelkään, että hänet palautetaan"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Geumseong onnistui pakenemaan Pohjois-Koreasta eteläiseen naapurimaahan, mutta hänen äitinsä on edelleen vangittuna Kiinassa. Geumseong, joka aloitti matkansa pelastautumiseen äitinsä kanssa, kokee syvää pelkoa siitä, että hänen äitinsä saatetaan palauttaa Pohjois-Koreaan. Tämä tilanne on sydäntäsärkevä. Eräänä päivänä, kun Geumseong oli ensimmäistä kertaa Etelä-Korean pääkaupungissa Soulissa, hänen äitinsä onnistui soittamaan hänelle. Geumseong kuunteli, kuinka äiti itki ja kertoi elävänsä vaikeissa olosuhteissa. Heidän perheensä oli elänyt kärsimyksissä ja pelossa koko elämänsä ajan.

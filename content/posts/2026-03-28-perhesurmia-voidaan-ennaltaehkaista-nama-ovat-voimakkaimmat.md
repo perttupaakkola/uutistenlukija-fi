@@ -16,7 +16,6 @@ key_points:
   - "Yhteistyö viranomaisten välillä on avain ennaltaehkäisyssä"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - perhesurmat
@@ -31,6 +30,11 @@ source_url: "https://www.mtvuutiset.fi/artikkeli/perhesurmia-voidaan-ennaltaehka
 source_domain: "mtvuutiset.fi"
 briefing: true
 draft: false
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Perhesurmia voidaan ennaltaehkäistä – nämä ovat voimakkaimmat riskitekijät"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Perheen sisäisiä henkirikoksia voidaan ehkäistä tehokkaasti, kun apu saadaan ajoissa sekä uhreille että tekijöille. Tutkija Marianne Ellilä, joka on tehnyt aiheesta väitöskirjan, korostaa, että tietyt riskitekijät toistuvat useissa väkivaltaisissa perhetilanteissa. Lapsuuden kaltoinkohtelu, mielenterveysongelmat, päihteiden käyttö ja vaikeat erotilanteet ovat havaittuja tekijöitä, jotka lisäävät riskiä perhesurmalle. 
