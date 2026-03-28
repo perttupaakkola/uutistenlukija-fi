@@ -78,7 +78,9 @@
 {{/* Author block */}}
 {{ $authorName := .Params.author | default .Site.Params.author | default "Toimitus" }}
 {{ $authorUrl := .Params.author_url | default (printf "%stoimitus/" .Site.BaseURL) }}
-{{ $authorBlock := dict "@type" "Person" "name" $authorName "url" $authorUrl }}
+{{ $authorSameAs := $authorUrl }}
+{{ if not .Params.author_url }}{{ $authorSameAs = "https://uutistenlukija.fi/toimitus/" }}{{ end }}
+{{ $authorBlock := dict "@type" "Person" "name" $authorName "url" $authorUrl "sameAs" $authorSameAs }}
 
 {{/* Build article section list */}}
 {{ $sections := .Params.categories | default (slice) }}
@@ -147,7 +149,7 @@
 {{ if .Params.summary }}
 {{ $schema = merge $schema (dict "speakable" (dict
     "@type" "SpeakableSpecification"
-    "cssSelector" (slice "h1" ".article-summary__body" ".article-key-points li:first-child")
+    "cssSelector" (slice "h1" ".tldr" ".article-key-points li:first-child")
 )) }}
 {{ end }}
 <script type="application/ld+json">
