@@ -20,6 +20,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Kittilässä tapahtuneessa nokkakolarissa kuoli marraskuussa 2024 kaksi ihmistä. 19-vuotias syytetty kiistää syytteet ja onnettomuus herättää huolta liikenneturvallisuudesta."
+image: "https://images.unsplash.com/photo-1694439093682-3ac2b4b2e7ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub2trYWtvbGFyaXNzYSUyMGtpdHRpbCVDMyVBNHNzJUMzJUE0JTIwa3VvbGklMjAxOS12dW90aWFzfGVufDF8MHx8fDE3NzQ3MDkyMjN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Nokkakolarissa Kittilässä kuoli kaksi – 19-vuotias syytetty kiistää syytteet"
+image_credit: "Photo by Maarten Scheel on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-mushroom-is-laying-on-the-ground-in-the-grass-pXXjVC3WqmQ?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1694439093682-3ac2b4b2e7ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub2trYWtvbGFyaXNzYSUyMGtpdHRpbCVDMyVBNHNzJUMzJUE0JTIwa3VvbGklMjAxOS12dW90aWFzfGVufDF8MHx8fDE3NzQ3MDkyMjN8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Pariskunta kuoli nokkakolarissa Kittilässä marraskuussa 2024. Onnettomuus tapahtui kantatie 79:llä 21. marraskuuta, kun 19-vuotias mies lähti ohittamaan rekkaa ja törmäsi vastaantulevaan autoon. Onnettomuus herättää kysymyksiä nuoren kuljettajan ajotavoista sekä yleisesti liikenneturvallisuudesta Suomen teillä.
 

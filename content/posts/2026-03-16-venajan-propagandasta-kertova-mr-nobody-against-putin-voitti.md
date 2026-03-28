@@ -20,6 +20,11 @@ keywords:
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
 description: "Dokumenttielokuva Mr Nobody Against Putin voittaa parhaan dokumentin Oscarin ja paljastaa venäläisten koululaisten indoktrinaation Ukrainaa vastaan."
+image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQ3MDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Venäjän propagandasta kertova Mr Nobody Against Putin voitti parhaan dokumentin Oscarin"
+image_credit: "Photo by Jimmy Liu on Unsplash"
+image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQ3MDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Dokumenttielokuva Mr Nobody Against Putin voitti parhaan dokumenttielokuvan Oscar-palkinnon. Elokuva kertoo venäläisestä peruskoulunopettajasta Pavel Talankinista, joka dokumentoi oppilaittensa indoktrinaatiota Venäjän Ukrainan-hyökkäyksen tueksi. Talankin tallensi salaa, kuinka venäläiskouluissa opetettiin lapsia tukemaan sotaa. Materiaali paljastaa propagandakoneiston, joka ulottuu koulumaailmaan asti. Talankin elää nykyään maanpaossa Euroopassa.
 

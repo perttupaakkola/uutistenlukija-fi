@@ -20,6 +20,11 @@ keywords:
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
 description: "Formula ykkösten 2026 kausi käynnistyy kaoottisesti, kun tallit kamppailevat autojensa luotettavuuden kanssa ja keskeytykset lisääntyvät."
+image: "https://images.unsplash.com/photo-1740818576274-6fbff450f868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmb3JtdWxhJTIweWtrJUMzJUI2c3RlbiUyMGFsa3VrYXVzaSUyMG5vc3RpfGVufDF8MHx8fDE3NzQ3MDkxOTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Formula ykkösten kaoottinen alkukausi nosti neljä puheenaihetta pintaan"
+image_credit: "Photo by Markus Winkler on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-close-up-of-a-scrabble-type-word-on-a-table-U6GhBbesGPk?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1740818576274-6fbff450f868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmb3JtdWxhJTIweWtrJUMzJUI2c3RlbiUyMGFsa3VrYXVzaSUyMG5vc3RpfGVufDF8MHx8fDE3NzQ3MDkxOTd8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Formula ykkösten kausi 2026 on alkanut sekavasti. Useilla talleilla on ollut vaikeuksia saada autojaan edes maaliin, ja keskeytyksiä on nähty paljon. Tämä ei ole ainoastaan harmittanut tallien faneja, vaan myös herättänyt kysymyksiä sarjan kilpailullisuudesta ja tulevaisuudesta.
 

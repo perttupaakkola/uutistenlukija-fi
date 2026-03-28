@@ -20,6 +20,11 @@ keywords:
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
 description: "Oscar-gaalassa Paul Thomas Andersonin One Battle After Another voitti parhaan elokuvan ja parhaan ohjaajan palkinnot Los Angelesissa."
+image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQ3MDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Oscar-gaalassa palkittiin One Battle After Another ja Sinners"
+image_credit: "Photo by Jimmy Liu on Unsplash"
+image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQ3MDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Hollywoodin 98. Oscar-gaala järjestettiin sunnuntaina Dolby Theatressa Los Angelesissa, ja se keräsi yhteen elokuvamaailman suurimmat tähdet sekä alan ammattilaiset. Tapahtuma on perinteisesti yksi vuoden odotetuimmista kulttuuritapahtumista, ja tänä vuonna se ei pettänyt odotuksia. Illan suurin voittaja oli Paul Thomas Andersonin ohjaama One Battle After Another, joka vei sekä parhaan elokuvan että parhaan ohjaajan palkinnot. Tämä oli erityinen hetki Andersonille, sillä kyseessä olivat hänen uransa ensimmäiset Oscar-pystit, mikä tekee voitosta symbolisesti merkittävän.
 

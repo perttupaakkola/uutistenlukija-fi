@@ -16,7 +16,6 @@ key_points:
   - "Matintalon voitto tukee Suomen maastohiihdon tulevaisuutta"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - maastohiihto
@@ -31,6 +30,11 @@ source_url: "https://www.hs.fi/urheilu/art-2000011910279.html"
 source_domain: "hs.fi"
 briefing: true
 draft: false
+image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDcwOTE5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Johanna Matintalo voittoon Suomen Cupissa Rovaniemen hiihdossa"
+image_credit: "Photo by Peter Zhan on Unsplash"
+image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDcwOTE5Mnww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Johanna Matintalo saavutti merkittävän voiton Rovaniemen Suomen Cupissa, kun hän yllätti kilpailijat ja voitti ensimmäistä kertaa urallaan vapaan hiihtotavan kilpailussa. Voitto oli samalla myös näyttö hänen kehittymisestään hiihtäjänä, sillä Matintalo nousi sujuvasti kilpailun kärkeen ja kellotti kilpailuaikaa 49.39,9.

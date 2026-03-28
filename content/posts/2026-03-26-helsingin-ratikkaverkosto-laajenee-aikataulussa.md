@@ -16,7 +16,6 @@ key_points:
   - "New connections enhance the attractiveness of residential areas and sustainable transport"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - raitiotie
@@ -30,6 +29,11 @@ source_name: "Turun Sanomat"
 source_url: "https://www.ts.fi/a/6938793"
 source_domain: "ts.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Helsingin ratikkaverkosto laajenee aikataulussa"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Helsingin ratikkaverkosto kasvaa, kun uusi pikaratikka valmistuu aikataulussa. Helsingin kaupungilla on ollut viime vuosina vilkasta kasvua, ja uusi infrastruktuuri on tarpeen tämän kehityksen tukemiseksi. Seuraavien kolmen vuoden aikana Helsinki velkaantuu miljardilla eurolla kattaakseen suuren osan raidehankkeista. Rahoitusjohtaja Pia Ojavuo kertoo, että suurin osa näistä rahoista, noin 2,2 miljardia euroa, suunnataan juuri näihin projekteihin.

@@ -20,6 +20,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Itä-Suomen poliisi etsii Leppävirralla kadonnutta 28-vuotiasta miestä, joka hävisi jälkiä huhtikuun 9. päivänä. Etsinnät ovat laajentuneet."
+image: "https://images.unsplash.com/photo-1592689891352-f185cc4b9179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwb2xpY2UlMjBldHNpaSUyMGxlcHAlQzMlQTR2aXJyYWx0YSUyMGthZG9ubnV0dGF8ZW58MXwwfHx8MTc3NDcwOTI0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Poliisi etsii Leppävirralta kadonnutta nuorta miestä"
+image_credit: "Photo by Geoffrey Moffett on Unsplash"
+image_source_url: "https://unsplash.com/photos/man-in-black-and-white-adidas-vest-bR-XJVP0qdo?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1592689891352-f185cc4b9179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwb2xpY2UlMjBldHNpaSUyMGxlcHAlQzMlQTR2aXJyYWx0YSUyMGthZG9ubnV0dGF8ZW58MXwwfHx8MTc3NDcwOTI0M3ww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 ## Poliisi etsii Leppävirralta kadonnutta nuorta miestä
 

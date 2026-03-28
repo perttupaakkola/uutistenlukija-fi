@@ -16,7 +16,6 @@ key_points:
   - "Tapaus herättää huolta meriliikenteen turvallisuudesta ja geopoliittisista konflikteista"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - öljytankkeri
@@ -32,6 +31,11 @@ source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/rajahdys-oljytankkerissa-mustallamerella/9316126"
 source_domain: "mtvuutiset.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Räjähdys öljytankkerissa Mustalla merellä aiheutti vahinkoa"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Mustalla merellä, lähellä Turkin rannikkoa, on tapahtunut räjähdys raakaöljyä kuljettavassa Altura-nimisessä öljytankkerissa. Alus, joka oli matkalla Istanbuliin ja kuljetti 140 000 tonnia raakaöljyä Venäjältä, kärsi useista vaurioista räjähdyksen seurauksena. Aluksen konehuone vaurioitui pahoin, ja sinne pääsi vettä. BBC:n mukaan onneksi kukaan Alturan 27 hengen miehistöstä ei loukkaantunut onnettomuudessa. 

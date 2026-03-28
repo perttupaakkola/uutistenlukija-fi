@@ -20,6 +20,11 @@ keywords:
   - "maailman uutiset"
   - "kansainväliset uutiset"
 description: "Norjan kruununprinsessa Mette-Maritin pojan oikeudenkäynti Oslossa lähestyy loppuaan, herättäen laajaa julkista keskustelua ja kiinnostusta."
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Mette-Maritin pojan oikeudenkäynti lähestyy loppuaan Oslossa"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Norjan kruununprinsessa Mette-Maritin pojan oikeudenkäynti on siirtynyt viimeiselle viikollensa Oslon käräjäoikeudessa, mikä on herättänyt suuresti julkista kiinnostusta ja keskustelua. Oikeudenkäynnin aikana on käsitelty vakavia syytöksiä, ja se on ollut erityisen poikkeuksellinen, sillä syytetty kuuluu Norjan kuninkaalliseen lähipiiriin Mette-Maritin aiemmasta suhteesta syntyneen pojan kautta. Tämä on tehnyt tapauksesta erityisen merkittävän, ei ainoastaan oikeudellisen, vaan myös sosiaalisen ja kulttuurisen kontekstin vuoksi.
 

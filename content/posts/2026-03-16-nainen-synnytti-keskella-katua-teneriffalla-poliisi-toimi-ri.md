@@ -20,6 +20,11 @@ keywords:
   - "maailman uutiset"
   - "kansainväliset uutiset"
 description: "Teneriffalla nainen synnyttää keskellä katua, ja paikalle saapuneet poliisit toimivat ripeästi auttaakseen äitiä ja vauvaa."
+image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Nainen synnytti keskellä katua Teneriffalla – poliisi toimi ripeästi"
+image_credit: "Photo by Vito Natale on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-small-globe-on-a-wooden-table-kKgZh-KYpw8?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Kanariansaarten Teneriffalla nainen synnytti lapsen kadulla Cabo Blancon kaupunginosassa tiistaina, mikä herätti huomiota paikallisten asukkaiden keskuudessa. Poliisille annettiin hälytys, kun synnytys alkoi yllättäen ulkona, ja paikalliset asukkaat yrittivät auttaa äitiä parhaansa mukaan. Tapahtuma nosti esiin kysymyksiä synnytyksen olosuhteista ja siitä, miten tärkeää on saada oikea-aikaista apua tällaisissa tilanteissa.
 

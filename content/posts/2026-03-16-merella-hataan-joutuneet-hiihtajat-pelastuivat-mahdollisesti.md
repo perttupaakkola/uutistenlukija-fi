@@ -20,6 +20,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Kaksi saksalaista hiihtoa vaeltajaa pelastui merellisestä hätätilanteesta lauantaina mahdollisesti klassisella autiosaaritempulla."
+image: "https://images.unsplash.com/photo-1648317402823-01cda2671467?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtZXJlbGwlQzMlQTQlMjBoJUMzJUE0dCVDMyVBNCVDMyVBNG4lMjBqb3V0dW5lZXQlMjBoaWlodCVDMyVBNGolQzMlQTR0fGVufDF8MHx8fDE3NzQ3MDkyMDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Merellä hätään joutuneet hiihtäjät pelastuivat mahdollisesti klassisella autiosaaritempulla"
+image_credit: "Photo by Janek Valdsalu on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-couple-of-people-walking-across-a-snow-covered-field-phdkh5V5X2s?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1648317402823-01cda2671467?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtZXJlbGwlQzMlQTQlMjBoJUMzJUE0dCVDMyVBNCVDMyVBNG4lMjBqb3V0dW5lZXQlMjBoaWlodCVDMyVBNGolQzMlQTR0fGVufDF8MHx8fDE3NzQ3MDkyMDd8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Kaksi kokenutta saksalaista hiihtovaeltajaa selvisi hengissä merellisestä hätätilanteesta lauantaina. Pelastumisen taustalla saattoi olla keino, jota on käytetty autiosaarilla vuosikymmeniä. Hiihtäjät joutuivat vaikeuksiin, kun myrsky yllätti heidät keskellä meriseikkailua. Sään äkillinen muuttuminen johtaa usein vaarallisiin tilanteisiin erityisesti arktisissa olosuhteissa, joissa tuuli ja lumi voivat tehdä näkyvyydestä lähes mahdotonta.
 

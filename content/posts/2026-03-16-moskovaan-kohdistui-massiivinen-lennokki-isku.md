@@ -20,6 +20,11 @@ keywords:
   - "maailman uutiset"
   - "kansainväliset uutiset"
 description: "Moskovan pormestari Sergei Sobjanin vahvistaa, että Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan kohdistunutta lennokkia."
+image: "https://images.unsplash.com/photo-1762177305640-5c0024c9a421?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtb3Nrb3ZhYW4lMjBrb2hkaXN0dWklMjBsZW5ub2traS1pc2t1JTIwd29ybGR8ZW58MXwwfHx8MTc3NDcwOTIxNHww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Moskovaan kohdistui massiivinen lennokki-isku"
+image_credit: "Photo by DL314 Lin on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-bird-flying-through-a-cloudy-sky-at-dusk-cPOG0X8FnhE?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1762177305640-5c0024c9a421?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtb3Nrb3ZhYW4lMjBrb2hkaXN0dWklMjBsZW5ub2traS1pc2t1JTIwd29ybGR8ZW58MXwwfHx8MTc3NDcwOTIxNHww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Venäjän ilmapuolustus torjui lauantaina 65 Moskovaan suunnattua lennokkia. Moskovan pormestari Sergei Sobjanin vahvisti tiedon. Tämä tapahtuma on yksi suurimmista Venäjän pääkaupunkiin kohdistuneista hyökkäyksistä sodan aikana, mikä nostaa esiin kysymyksiä sodan eskaloitumisesta ja sen seurauksista.
 

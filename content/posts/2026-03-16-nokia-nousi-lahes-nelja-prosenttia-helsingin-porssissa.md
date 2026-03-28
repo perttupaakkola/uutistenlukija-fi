@@ -20,6 +20,11 @@ keywords:
   - "talous uutiset"
   - "suomen talous uutiset"
 description: "Nokia nousi lähes neljä prosenttia Helsingin pörssissä, positiivisen tunnelman myötä sijoittajien tulkittua Hormuzinsalmen tilanteen helpottuvan."
+image: "https://images.unsplash.com/photo-1759680191098-8a622ad64a6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub2tpYSUyMHRlY2hub2xvZ3klMjBub3VzaSUyMHByb3NlbnR0aWElMjBoZWxzaW5naW58ZW58MXwwfHx8MTc3NDcwOTIyMHww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Nokia nousi lähes neljä prosenttia Helsingin pörssissä"
+image_credit: "Photo by Tasha Kostyuk on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-collection-of-various-old-mobile-phones-and-devices-bHR2emO4iL0?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1759680191098-8a622ad64a6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub2tpYSUyMHRlY2hub2xvZ3klMjBub3VzaSUyMHByb3NlbnR0aWElMjBoZWxzaW5naW58ZW58MXwwfHx8MTc3NDcwOTIyMHww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Helsingin pörssi päätyi maanantaina nousuun. Päivän suurimpia nousijoita oli Nokia, jonka osake vahvistui lähes neljä prosenttia. Tämä nousu on merkittävä, sillä se tapahtui samalla, kun markkinoilla vallitsi yleinen epävarmuus, erityisesti Lähi-idän jännitteiden vuoksi.
 

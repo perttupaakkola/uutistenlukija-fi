@@ -20,6 +20,11 @@ keywords:
   - "kulttuuri uutiset"
   - "uusimmat viihdeuutiset"
 description: "Oscar-gaala järjestetään 98. kertaa Los Angelesissa, ja Conan O'Brien juontaa tapahtumaa toista kertaa peräkkäin."
+image: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQ3MDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Oscar-gaala järjestetään 98. kerran – Conan O'Brien juontaa toistamiseen"
+image_credit: "Photo by Jimmy Liu on Unsplash"
+image_source_url: "https://unsplash.com/photos/performers-in-colorful-costumes-on-a-stage-eYy5dN1oXpo?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1761229661006-541274889388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjdWx0dXJlJTIwYXJ0cyUyMHBlcmZvcm1hbmNlfGVufDF8MHx8fDE3NzQ3MDQ1ODJ8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Yhdysvaltain elokuva-akatemian Oscar-gaala järjestetään sunnuntai-iltana Los Angelesissa 98. kerran. Seremonian juontaa toista kertaa peräkkäin Conan O'Brien, joka sai viime vuonna kiitosta suorituksestaan. O'Brienin paluu juontajaksi on herättänyt odotuksia, sillä hänen huumorinsa ja karismansa ovat olleet suosittuja niin televisiossa kuin muissa tapahtumissa.
 

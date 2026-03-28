@@ -16,7 +16,6 @@ key_points:
   - "Elo vastustaa salailua ja korostaa avoimen keskustelun merkitystä"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - tiitisen lista
@@ -30,6 +29,11 @@ source_name: "Turun Sanomat"
 source_url: "https://www.ts.fi/a/6938769"
 source_domain: "ts.fi"
 draft: false
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Kimmo Elo hakee tutkimuslupaa Tiitisen listan tutkimiseen"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Suojelupoliisin (Supo) päällikkö Antti Pelttari paljasti viime viikon lauantaina, että Helsingin yliopiston poliittisen historian dosentti Kimmo Elo on jättänyt tutkimuslupahakemuksen niin sanotusta Tiitisen listasta. Lista, joka saatiin Supolle vuonna 1990, sisältää 18 suomalaista henkilöä, joiden epäillään olevan yhteydessä entisen Itä-Saksan turvallisuuspalveluun Stasiin. Vaikka hakemus on tehty, Pelttari ei paljastanut hakemuksen tehneen nimeä ennen kuin Helsingin Sanomat julkaisi uutisen Eloa koskevasta hakemuksesta.

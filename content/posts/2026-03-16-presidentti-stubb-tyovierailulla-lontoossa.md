@@ -20,6 +20,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Presidentti Alexander Stubb aloittaa työvierailunsa Lontoossa 16.–17. maaliskuuta, käsitellen ajankohtaisia kansainvälisiä aiheita."
+image: "https://images.unsplash.com/photo-1690238450132-cf907b6239f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwcmVzaWRlbnQlMjBzdHViYiUyMHR5JUMzJUI2dmllcmFpbHVsbGElMjBsb250b29zc2F8ZW58MXwwfHx8MTc3NDcwOTI0NXww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Presidentti Stubb työvierailulla Lontoossa"
+image_credit: "Photo by Denise Jans on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-group-of-men-in-uniform-marching-down-a-street-vpE_iIaShW0?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1690238450132-cf907b6239f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwcmVzaWRlbnQlMjBzdHViYiUyMHR5JUMzJUI2dmllcmFpbHVsbGElMjBsb250b29zc2F8ZW58MXwwfHx8MTc3NDcwOTI0NXww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Tasavallan presidentti Alexander Stubb matkustaa maanantaina työvierailulle Lontooseen. Vierailu kestää kaksi päivää, 16.–17. maaliskuuta. Lontoo on tärkeä kansainvälinen keskus, ja vierailunsa aikana Stubb käsittelee ajankohtaisia aiheita, jotka ovat keskiössä niin Euroopan kuin globaalisti. 
 

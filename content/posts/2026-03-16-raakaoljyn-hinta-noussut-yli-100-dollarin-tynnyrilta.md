@@ -20,6 +20,11 @@ keywords:
   - "talous uutiset"
   - "suomen talous uutiset"
 description: "Raakaöljyn hinta ylittää 100 dollaria tynnyriltä ensimmäistä kertaa vuoden 2022 jälkeen, herättäen huolta kuluttajissa ja asiantuntijoissa."
+image: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQ3MDQ2NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Raakaöljyn hinta noussut yli 100 dollarin tynnyriltä"
+image_credit: "Photo by CHUTTERSNAP on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-city-in-the-background-8JKDRFhEWME?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1632385820055-8370ff5a17a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGZpbmFuY2UlMjBlY29ub215fGVufDF8MHx8fDE3NzQ3MDQ2NDN8MA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Raakaöljyn hinta on kivunnut tasoille, joita ei ole nähty sitten vuoden 2022 energiakriisin. Yhdysvaltalainen WTI-laatu maksaa jo yli 107 dollaria tynnyriltä ja kansainvälinen Brent-viitelaatu on ylittänyt 108 dollarin rajan. Maaliskuun aikana hinta on noussut lähes 50 prosenttia, mikä herättää huolta niin kuluttajien kuin talousasiantuntijoiden keskuudessa.
 

@@ -20,6 +20,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Rovajärvellä harjoitellaan Naton eteentyönnettyjen joukkojen toimintaa, valmistellen Suomeen perustettavaa joukkoa heinäkuuhun mennessä."
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Suomeen perustetaan Nato-joukko – valmista heinäkuuhun mennessä"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Lapin Rovajärvellä harjoitellaan parhaillaan Naton eteentyönnettyjen joukkojen toimintaa Suomen maaperällä. Cold Response 26 -sotaharjoitukseen osallistuu yli 30 000 ammattisotilasta ja reserviläistä 14 maasta. Harjoituksen ytimessä on joukkojen siirtäminen Ruotsista Suomeen, mikä korostaa Norjan, Ruotsin ja Suomen välistä puolustusyhteistyötä ja Naton merkitystä Pohjois-Euroopassa.
 

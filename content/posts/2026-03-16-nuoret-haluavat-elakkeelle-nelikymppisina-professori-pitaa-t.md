@@ -20,6 +20,11 @@ keywords:
   - "talous uutiset"
   - "suomen talous uutiset"
 description: "Nuoret tavoittelevat eläkkeelle jäämistä nelikymppisinä, mutta professori Vesa Puttonen pitää tätä tuhlauksena ja varoittaa riskistä."
+image: "https://images.unsplash.com/photo-1568337339884-18892057f7cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxudW9yZXQlMjBoYWx1YXZhdCUyMGVsJUMzJUE0a2tlZWxsZSUyMG5lbGlreW1wcGlzaW4lQzMlQTR8ZW58MXwwfHx8MTc3NDcwOTIyNXww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhlauksena"
+image_credit: "Photo by Jen Theodore on Unsplash"
+image_source_url: "https://unsplash.com/photos/senior-dice-on-persons-palm-fqkaMzeGk7E?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1568337339884-18892057f7cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxudW9yZXQlMjBoYWx1YXZhdCUyMGVsJUMzJUE0a2tlZWxsZSUyMG5lbGlreW1wcGlzaW4lQzMlQTR8ZW58MXwwfHx8MTc3NDcwOTIyNXww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 ## Nuoret haluavat eläkkeelle nelikymppisinä – professori pitää tuhlauksena
 

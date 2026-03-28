@@ -20,6 +20,11 @@ keywords:
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
 description: "Metsähallitus maksaa sadan euron palkkion jokaisesta aiemmin tuntemattomasta maakotkan pesästä osana suojeluhanketta."
+image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Metsähallitus maksaa sadan euron palkkion tuntemattomasta maakotkan pesästä"
+image_credit: "Photo by K8 on Unsplash"
+image_source_url: "https://unsplash.com/photos/a-large-body-of-water-with-a-bridge-in-the-background-e7ChKEttaEw?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Metsähallitus tarjoaa sadan euron löytöpalkkion jokaisesta maakotkan pesästä, joka ei ole aiemmin ollut sen tiedossa. Tämä toimenpide on osa laajempaa suojeluhanketta, jonka tavoitteena on suojella maakotkan, sekä merikotkan, elinympäristöjä ja varmistaa näiden uhanalaisten lintulajien tulevaisuus. Palkkio koskee erityisesti myös poronhoitoalueelta löytyviä aiemmin tuntemattomia merikotkan pesiä.
 

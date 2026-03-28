@@ -16,7 +16,6 @@ key_points:
   - "Seuraava ottelu Järvenpäässä on ratkaiseva karsintojen jatkon kannalta"
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - mestis
@@ -30,6 +29,11 @@ source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/KeuPa-j%C3%A4tti-Haukat-nollille-Mestis-karsintojen-avauksessa/268867"
 source_domain: "jatkoaika.com"
 draft: false
+image: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDcwOTE5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "KeuPa jätti Haukat nollille Mestis-karsintojen avauksessa"
+image_credit: "Photo by Peter Zhan on Unsplash"
+image_source_url: "https://unsplash.com/photos/athlete-mid-jump-during-a-long-jump-competition-RWpEFLH86jA?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1772475625553-038d9d7e600c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhdGhsZXRlJTIwY29tcGV0aXRpb258ZW58MXwwfHx8MTc3NDcwOTE5Mnww&ixlib=rb-4.1.0&q=80&w=400"
 ---
 
 Mestis-karsinnat alkoivat Keuruulla, ja avausottelussa KeuPa oli ylivoimainen Haukoille. Joukkue voitti ottelun tylysti 4−0, jättäen vierailijat maaleitta. Avauserässä KeuPa eteni nopeasti kahden maalin johtoon, kun Miiro Linjala teki rangaistuslaukauksesta maalin ja Jarkko Harjula lisäsi johdon toisella osumallaan.

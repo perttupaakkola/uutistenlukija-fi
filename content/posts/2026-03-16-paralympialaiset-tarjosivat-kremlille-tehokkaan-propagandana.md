@@ -20,6 +20,11 @@ keywords:
   - "urheiluuutiset"
   - "uusimmat urheilu-uutiset"
 description: "Venäjän vallanpitäjät hyödyntävät paralympialaisia tehokkaana propagandanäyttämönä oman viestintänsä välineenä."
+image: "https://images.unsplash.com/photo-1622198776347-6dcbe1d9a2f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwYXJhbHltcGlhbGFpc2V0JTIwdGFyam9zaXZhdCUyMGtyZW1saWxsZSUyMHRlaG9ra2FhbnxlbnwxfDB8fHwxNzc0NzA5MjM4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+image_alt: "Paralympialaiset tarjosivat Kremlille tehokkaan propagandanäyttämön"
+image_credit: "Photo by Maxim Tolchinskiy on Unsplash"
+image_source_url: "https://unsplash.com/photos/red-and-black-wooden-signage-on-wooden-fence-aEFvMTTXHDY?utm_source=uutistenlukija&utm_medium=referral"
+image_thumb: "https://images.unsplash.com/photo-1622198776347-6dcbe1d9a2f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwYXJhbHltcGlhbGFpc2V0JTIwdGFyam9zaXZhdCUyMGtyZW1saWxsZSUyMHRlaG9ra2FhbnxlbnwxfDB8fHwxNzc0NzA5MjM4fDA&ixlib=rb-4.1.0&q=80&w=400"
 ---
 Venäjän vallanpitäjät onnistuivat hyödyntämään paralympialaisia omassa viestinnässään. Paraurheilun kansainvälinen kattojärjestö mahdollisti tilanteen, jossa venäläisurheilijat kilpailivat ja menestyivät tavalla, joka palveli suoraan Kremlin tarpeita. Urheilun ja politiikan välinen suhde on ollut historiallisesti vahva, ja erityisesti suurissa kansainvälisissä kilpailuissa, kuten paralympialaisissa, niillä on merkittävä rooli valtioiden imagon ja identiteetin muovaamisessa.
 
