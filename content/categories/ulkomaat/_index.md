@@ -1,6 +1,6 @@
 ---
 title: "Ulkomaat"
-description: "Maailmanpolitiikan polttopisteet ja globaalit ilmiöt selitettynä. Laajenna näkökulmaasi rajojen ulkopuolelle."
+description: "Kansainvälisen politiikan jännitteet, konfliktit ja globaalit ilmiöt. Avaamme maailman tapahtumien taustat ja niiden suorat vaikutukset."
 og_image: "/images/og-ulkomaat.png"
 keywords:
   - "ulkomaan uutiset"

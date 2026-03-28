@@ -1,6 +1,6 @@
 ---
 title: "Tiede"
-description: "Universumin mysteerit ja uusimmat tutkimusläpimurrot. Selkeää ja kiehtovaa tietoa tieteen eturintamasta."
+description: "Lääketieteen läpimurrot, avaruustutkimus ja ilmastoratkaisut. Olennaiset faktat uuden tutkimustiedon ytimestä."
 og_image: "/images/og-tiede.png"
 keywords:
   - "tiedeuutiset"

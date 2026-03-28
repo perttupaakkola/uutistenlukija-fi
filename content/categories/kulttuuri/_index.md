@@ -1,6 +1,6 @@
 ---
 title: "Kulttuuri"
-description: "Ilmiöt, taide ja viihde pintaa syvemmältä. Tutustu kulttuurikentän kiinnostavimpiin tekijöihin ja tarinoihin."
+description: "Elokuvan, kirjallisuuden ja taiteen puhutuimmat ilmiöt. Katsaus siihen, mistä kulttuurikentällä juuri nyt väitellään."
 og_image: "/images/og-kulttuuri.png"
 keywords:
   - "kulttuuri uutiset"

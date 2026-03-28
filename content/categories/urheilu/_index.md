@@ -1,6 +1,6 @@
 ---
 title: "Urheilu"
-description: "Draamaa, tuloksia ja intohimoa urheilun maailmasta. Kaikki kenttien sankarit ja katsomoiden kohahdukset samassa paikassa."
+description: "Huippu-urheilun tulokset, sankaritarinat ja kulissien takaiset draamat. Lajien ratkaisuhetket ja ilmiöt suoraan ytimeen."
 og_image: "/images/og-urheilu.png"
 keywords:
   - "urheilu uutiset"

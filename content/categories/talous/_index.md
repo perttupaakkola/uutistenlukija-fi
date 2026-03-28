@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-description: "Markkinoiden liikkeet, pörssihuippujen analyysit ja talouden suunnat. Pysy askeleen edellä raha-asioissa."
+description: "Markkinoiden reaktiot, yritysmaailman peliliikkeet ja talouden iso kuva. Suoraa puhetta rahasta, työelämästä ja päätöksistä."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"
