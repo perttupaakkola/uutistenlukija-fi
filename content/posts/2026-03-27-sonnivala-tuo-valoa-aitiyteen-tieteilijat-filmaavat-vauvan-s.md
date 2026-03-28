@@ -31,6 +31,8 @@ source_url: "https://www.theguardian.com/environment/2026/mar/27/scientists-film
 source_domain: "theguardian.com"
 briefing: true
 draft: false
+image: "https://images.pexels.com/photos/11947838/pexels-photo-11947838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+image_credit: "Photo by Tom Fisk on Pexels"
 ---
 
 Heinäkuussa 2023 tutkijatiimi Project Ceti -hankkeesta tallensi harvinaisen hetken merivalaan synnyttäessä, kun muualla podissa olevat naarasvalaat tukivat äitiä ja vastasyntynyttä. Tutkimus, joka julkaistiin Scientific Reports ja Science -lehdissä, tuo esiin valasten yhteistyön ja kommunikaation synnytyksen aikana, mikä on äärimmäisen harvinaista. Vain yhdeksää merivalaalajia on havaittu synnyttävän luonnossa.

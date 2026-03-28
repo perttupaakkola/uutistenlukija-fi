@@ -27,6 +27,8 @@ source_url: "https://www.theguardian.com/world/2026/mar/28/pope-leo-monaco-papal
 source_domain: "theguardian.com"
 briefing: true
 draft: false
+image: "https://images.pexels.com/photos/31741852/pexels-photo-31741852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+image_credit: "Photo by Dirk Pothen on Pexels"
 ---
 
 Paavi Leo XIV vierailee Monacoon ensimmäistä kertaa 488 vuoteen — edellisen kerran alueen maaperälle astui paavi Paul III vuonna 1538. Tämä yhden päivän matka on herättänyt monia kysymyksiä, erityisesti siksi, että se tapahtuu 488 vuotta edellisen paavin vierailun jälkeen, jolloin paavi Paul III kävi siellä vuonna 1538. 
