@@ -1,7 +1,7 @@
-{{/* Table of Contents — renders only for 800+ word articles with 3+ headings */}}
+{{/* Table of Contents — renders for articles with 3+ headings */}}
 {{- $toc := .TableOfContents -}}
 {{- $headingCount := len (findRE `<li>` $toc) -}}
-{{- if and $toc (ge .WordCount 800) (ge $headingCount 3) -}}
+{{- if and $toc (ge $headingCount 3) -}}
 <nav class="toc" aria-label="Sisällysluettelo">
   <button class="toc-toggle" aria-expanded="true" aria-controls="toc-list">
     <span class="toc-title">Sisällys</span>
