@@ -140,6 +140,16 @@
 {{ with .Params.source_url }}
 {{ $schema = merge $schema (dict "isBasedOn" (dict "@type" "WebPage" "url" .)) }}
 {{ end }}
+{{/* Speakable: h1 + .article-summary__body (summary block with Tiivistelmä).
+     Only emitted when summary frontmatter exists — avoids marking up pages
+     where .article-summary__body won't render. Google crawls static DOM so
+     collapsed <details> content is visible; no fallback selector needed. */}}
+{{ if .Params.summary }}
+{{ $schema = merge $schema (dict "speakable" (dict
+    "@type" "SpeakableSpecification"
+    "cssSelector" (slice "h1" ".article-summary__body")
+)) }}
+{{ end }}
 <script type="application/ld+json">
 {{ $schema | jsonify (dict "indent" "  ") | safeJS }}
 </script>

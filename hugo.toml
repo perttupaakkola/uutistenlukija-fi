@@ -44,8 +44,14 @@ disableHugoGeneratorInject = true
     isPlainText = true
     notAlternative = true
 
+  [outputFormats.llmstxt]
+    baseName = "llms"
+    mediaType = "text/plain"
+    isPlainText = true
+    notAlternative = true
+
 [outputs]
-  home = ["HTML", "RSS", "JSON", "NewsSitemap", "Sitemap"]
+  home = ["HTML", "RSS", "JSON", "NewsSitemap", "Sitemap", "llmstxt"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   term = ["HTML", "RSS"]

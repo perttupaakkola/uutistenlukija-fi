@@ -1,0 +1,23 @@
+# {{ .Site.Title }}
+
+> Suomenkielinen uutiskooste — automaattisesti kirjoitetut uutiset suomalaisista lähteistä (Yle, HS, Iltalehti, Kauppalehti jne.). Julkaisee {{ len .Site.RegularPages }} artikkelia.
+
+## Uutiset
+
+{{ range first 50 (where .Site.RegularPages "Section" "posts" | sort "Date" "desc") -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 120 }}{{ end }}
+{{ end }}
+## Osiot
+
+- [Kotimaa]({{ $.Site.BaseURL }}categories/kotimaa/): Suomalaiset uutiset
+- [Ulkomaat]({{ $.Site.BaseURL }}categories/ulkomaat/): Kansainväliset uutiset
+- [Talous]({{ $.Site.BaseURL }}categories/talous/): Talousuutiset
+- [Teknologia]({{ $.Site.BaseURL }}categories/teknologia/): Teknologiauutiset
+- [Urheilu]({{ $.Site.BaseURL }}categories/urheilu/): Urheiluuutiset
+- [Kulttuuri]({{ $.Site.BaseURL }}kulttuuri/): Kulttuuriuutiset
+- [Tiede]({{ $.Site.BaseURL }}tiede/): Tiedeuutiset
+- [Pääsiäisopas]({{ $.Site.BaseURL }}paasiaisopas/): Pääsiäinen 2026
+
+## Optional
+
+- [Päivän kooste]({{ $.Site.BaseURL }}kooste/): Päivittäinen uutiskooste
