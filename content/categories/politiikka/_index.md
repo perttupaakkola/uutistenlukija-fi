@@ -1,4 +1,4 @@
 ---
 title: Politiikka
-description: Suomen ja maailman politiikan uutiset — päätökset, vaalit ja vallankäyttö.
+description: "Kotimaan ja maailman poliittiset käänteet, päätöksenteko ja valtapelit. Syvällistä analyysia yhteiskunnan suunnasta."
 ---
