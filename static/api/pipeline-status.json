@@ -1,25 +1,26 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-28T00:00:50+00:00",
+  "generated_at": "2026-03-28T00:15:00+00:00",
   "runs": {
-    "total": 132,
-    "ok": 14,
+    "total": 131,
+    "ok": 13,
     "skip": 0,
     "error": 118
   },
   "articles": {
-    "attempted": 3154,
-    "published": 15,
-    "rejected": 273,
-    "publish_rate": 0.5,
+    "attempted": 3126,
+    "published": 14,
+    "rejected": 275,
+    "publish_rate": 0.4,
     "last_published_ts": "2026-03-27T22:14:18.270740+00:00"
   },
   "reject_reasons": {
-    "too_short": 271,
+    "too_short": 273,
     "lead_too_short": 12,
     "only 1 paragraphs (min 3)": 9,
     "keyword_stuffing": 8,
-    "score 30/40 (wc=10 title=0 des": 1
+    "score 30/40 (wc=10 title=0 des": 1,
+    "unsourced numbers: 2022": 1
   },
   "feeds": {
     "total": 30,
@@ -32,10 +33,6 @@
   "trending": [
     [
       "sillä",
-      14
-    ],
-    [
-      "jotka",
       11
     ],
     [
@@ -43,12 +40,16 @@
       11
     ],
     [
-      "kuinka",
-      9
-    ],
-    [
       "valas",
       8
+    ],
+    [
+      "tilanne",
+      7
+    ],
+    [
+      "eivät",
+      7
     ]
   ]
 }

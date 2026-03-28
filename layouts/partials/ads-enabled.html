@@ -1,0 +1,7 @@
+{{- $raw := getenv "ADS_ENABLED" -}}
+{{- if eq $raw "" -}}
+  {{- if site.Params.ads_enabled -}}true{{- else -}}false{{- end -}}
+{{- else -}}
+  {{- $normalized := lower (trim $raw " ") -}}
+  {{- if or (eq $normalized "1") (eq $normalized "true") (eq $normalized "yes") (eq $normalized "on") -}}true{{- else -}}false{{- end -}}
+{{- end -}}

@@ -191,8 +191,8 @@ def _call_llm(system: str, prompt: str) -> str:
     raise last_exc
 
 
-def _extract_json(text: str) -> list:
-    """Extract JSON list from response text, handling code fences."""
+def _extract_json(text: str):
+    """Extract JSON payload from response text, handling code fences."""
     text = text.strip()
     if text.startswith("```"):
         text = text.split("```")[1]
@@ -202,6 +202,33 @@ def _extract_json(text: str) -> list:
     return json.loads(text)
 
 
+def _count_h2s(markdown: str) -> int:
+    return len(re.findall(r"(?m)^##\s+", markdown or ""))
+
+
+def _enforce_h2_subheadings(article: Dict) -> tuple[Dict, bool, bool]:
+    """Ensure long articles have at least one H2. Retry once, then warn-only."""
+    content = str(article.get("content", "") or "")
+    word_count = len(content.split())
+    h2_count = _count_h2s(content)
+    if word_count <= 250 or h2_count >= 1:
+        return article, False, h2_count >= 1
+
+    title = article.get("title", "")
+    print(f"[writer]   ⚠ Missing H2 in long article ({word_count}w), retrying: '{title[:50]}'")
+    retry_prompt = f"""Lisää tähän artikkeliin 2 kuvaavaa H2-väliotsikkoa. Säilytä faktat, sävy, rakenne, linkit, journalist_note, content_type, editorial_reviewed ja key_points. Älä keksi uutta tietoa. Vastaa VAIN JSON-objektina.\n\n{json.dumps(article, ensure_ascii=False, indent=2)}"""
+    try:
+        retried = _extract_json(_call_llm(AUDIT_SYSTEM_PROMPT, retry_prompt))
+        retried_content = str(retried.get("content", "") or "")
+        retried_h2_count = _count_h2s(retried_content)
+        if retried_h2_count >= 1:
+            print(f"[writer]   H2 retry succeeded: '{title[:50]}'")
+            return retried, True, True
+        print(f"[writer]   ⚠ H2 retry still missing subheadings: '{title[:50]}'")
+        return retried, True, False
+    except Exception as e:
+        print(f"[writer]   ⚠ H2 retry failed ({e}): '{title[:50]}'")
+        return article, True, False
 
 
 MAX_KEY_POINTS_TOTAL_CHARS = 300
@@ -398,6 +425,10 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     - link: RSS link (used internally, NOT published)
     """
     rewritten = []
+    h2_metric_long_articles = 0
+    h2_metric_with_h2 = 0
+    h2_metric_retries = 0
+    h2_metric_warns = 0
 
     batch_size = 3  # Reduced from 5 — model cuts articles short in large batches
     for i in range(0, len(articles), batch_size):
@@ -600,6 +631,18 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                 print(f"[writer]   {sentinel}: '{orig[:60]}' — skipped")
                 continue
 
+            written_article, h2_retried, h2_ok = _enforce_h2_subheadings(written_article)
+            title = written_article.get("title", "")
+            content = written_article.get("content", "")
+            if len(str(content).split()) > 250:
+                h2_metric_long_articles += 1
+                if h2_retried:
+                    h2_metric_retries += 1
+                if h2_ok:
+                    h2_metric_with_h2 += 1
+                else:
+                    h2_metric_warns += 1
+
             # Quality flags — warn but don't drop here (quality gate in run_pipeline.py)
             word_count = len(content.split())
             title_len = len(title)
@@ -650,4 +693,8 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
         rewritten.extend(kept)
         print(f"[writer]   Batch {i // batch_size + 1} complete: {len(kept)}/{len(expanded_audited)} articles kept")
 
+    h2_rate = (h2_metric_with_h2 / h2_metric_long_articles * 100) if h2_metric_long_articles else 100.0
+    print(
+        f"[writer] H2 presence: {h2_metric_with_h2}/{h2_metric_long_articles} long articles ({h2_rate:.0f}%) | retries={h2_metric_retries} | warns={h2_metric_warns}"
+    )
     return rewritten
