@@ -69,9 +69,9 @@ Create `pipeline/.env` with:
 
 ```bash
 OPENAI_API_KEY=...
-PEXELS_API_KEY=3HYwUfVZkBHgUt30ygCCt6qJrO7xW3CVe1OhwFUO7byYO5Er2L5txhem
-UNSPLASH_ACCESS_KEY=50wJVJ-XzJC-oYF0pgGvD6v4q_ERyb8K0u4tn4m6B7g
-KIE_API_KEY=bccd653c94693baab42985f14ec4a9dd
+PEXELS_API_KEY=<see TOOLS.md or .env>
+UNSPLASH_ACCESS_KEY=<see TOOLS.md or .env>
+KIE_API_KEY=<see TOOLS.md or .env>
 DISCORD_BOT_TOKEN=...          # for pipeline → Discord #metrics / #operations
 DISCORD_WEBHOOK_METRICS=...    # optional webhook alternative for #metrics
 DISCORD_WEBHOOK_OPS=...        # optional webhook alternative for #operations
