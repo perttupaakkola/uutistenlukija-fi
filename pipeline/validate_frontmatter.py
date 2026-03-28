@@ -122,8 +122,44 @@ def parse_date(value: str) -> datetime | None:
     return None
 
 
+def _check_yaml_syntax(path: Path) -> str | None:
+    """Return an error string if the frontmatter has YAML syntax issues, else None.
+
+    Detects unclosed quoted strings in scalar values — the most common cause of
+    instant Hugo build failures (e.g. image_alt ending with \\" but missing the
+    closing double-quote).
+    """
+    import re
+    text = path.read_text(encoding="utf-8", errors="replace")
+    if not text.startswith("---\n"):
+        return None
+    parts = text.split("\n---\n", 1)
+    if len(parts) != 2:
+        return None
+    fm = parts[0][4:]
+    for i, line in enumerate(fm.splitlines(), 1):
+        if ":" not in line or line.startswith((" ", "\t")):
+            continue
+        key, _, value = line.partition(":")
+        value = value.strip()
+        if not value:
+            continue
+        # Detect unclosed double-quoted string: starts with " but doesn't end with "
+        # (allowing for escaped quotes like \" inside but the final char must be unescaped ")
+        if value.startswith('"') and not value.endswith('"'):
+            return f"line {i}: unclosed double-quoted string in '{key.strip()}': {value[:80]!r}"
+        if value.startswith("'") and not value.endswith("'"):
+            return f"line {i}: unclosed single-quoted string in '{key.strip()}': {value[:80]!r}"
+    return None
+
+
 def validate_article(path: Path) -> ArticleResult:
     result = ArticleResult(path=path)
+
+    yaml_err = _check_yaml_syntax(path)
+    if yaml_err:
+        result.issues.append(f"YAML syntax error: {yaml_err}")
+        return result
 
     try:
         front_matter = parse_front_matter(path)
