@@ -206,7 +206,13 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     # Sanitize: collapse whitespace/newlines, escape double-quotes for YAML inline string
     title = " ".join(title.split())
     title = title.replace('"', '\\"')
-    category = article.get("category", "Kotimaa")
+    # Normalize category: match against canonical list (case-insensitive), fallback to Kotimaa
+    _CANONICAL_CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
+    _raw_category = article.get("category", "Kotimaa").strip()
+    category = next(
+        (c for c in _CANONICAL_CATEGORIES if c.lower() == _raw_category.lower()),
+        "Kotimaa"  # fallback if LLM returns unknown value
+    )
     content = article.get("content", "")
     # Sanitize content: strip bare YAML front matter delimiters (would break Hugo parsing)
     content = re.sub(r"(?m)^---+\s*$", "—", content)
