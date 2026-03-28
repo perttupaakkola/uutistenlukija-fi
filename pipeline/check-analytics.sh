@@ -20,6 +20,12 @@ set -euo pipefail
 PRINT_SUMMARY=false
 [[ "${1:-}" == "--print" ]] && PRINT_SUMMARY=true
 
+# Require jq — exit gracefully if not installed (avoids silent cron failures)
+if ! command -v jq &>/dev/null; then
+    echo "[check-analytics] SKIP: jq not installed. Install with: sudo apt-get install -y jq" >&2
+    exit 0
+fi
+
 SECRETS_DIR="/workspace/.secrets"
 ANALYTICS_TOKENS="$SECRETS_DIR/analytics-tokens.json"
 SEARCH_CONSOLE_TOKENS="$SECRETS_DIR/search-console-tokens.json"
