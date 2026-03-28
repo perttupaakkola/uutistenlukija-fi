@@ -30,7 +30,6 @@ keywords:
 source_name: "suomenuusiutuvat.fi"
 source_url: "https://suomenuusiutuvat.fi/ajankohtaista/tapahtumat/10-gw-juhlagaala/"
 source_domain: "suomenuusiutuvat.fi"
-briefing: true
 draft: false
 ---
 
