@@ -13,9 +13,6 @@
 # Main pipeline watchdog (every 10 min)
 */10 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/watchdog.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/watchdog.log 2>&1
 
-# Firehose poller (every 10 min — polls stream, rewrites + publishes new articles)
-*/10 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/firehose_cron.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/firehose_cron.log 2>&1
-
 # X / Twitter OAuth2 token refresh (every 2h) — managed by OpenClaw scripts
 0 */2 * * * /home/pertt/.openclaw/workspace/scripts/refresh-x-token.sh >> /home/pertt/.openclaw/workspace/logs/x-token-refresh.log 2>&1
 
@@ -27,6 +24,9 @@
 
 # Source diversity stats (daily 07:00 UTC)
 0 7 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 pipeline/source_stats.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/source-stats.log 2>&1
+
+# Category distribution tracker (daily 07:30 UTC)
+30 7 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/category_distribution.py --post-discord >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/category-distribution.log 2>&1
 
 # Daily briefing / kooste (17:00 UTC)
 0 17 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 pipeline/daily_briefing.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/daily-briefing.log 2>&1
