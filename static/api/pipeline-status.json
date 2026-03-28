@@ -1,35 +1,35 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-28T07:51:22+00:00",
-  "status": "degraded",
-  "is_stale": true,
+  "generated_at": "2026-03-28T08:52:36+00:00",
+  "status": "ok",
+  "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 98,
-    "ok": 24,
+    "total": 90,
+    "ok": 23,
     "skip": 0,
-    "error": 74
+    "error": 67
   },
   "articles": {
-    "attempted": 2175,
-    "published": 28,
-    "rejected": 403,
-    "publish_rate": 1.3,
-    "last_published_ts": "2026-03-28T06:04:37.925463+00:00"
+    "attempted": 1992,
+    "published": 27,
+    "rejected": 420,
+    "publish_rate": 1.4,
+    "last_published_ts": "2026-03-28T07:51:20.384179+00:00"
   },
   "reject_reasons": {
-    "too_short": 385,
+    "too_short": 400,
     "only 1 paragraphs (min 3)": 24,
     "lead_too_short": 20,
-    "keyword_stuffing": 18,
-    "unsourced numbers: 26miljoonaa": 10,
+    "keyword_stuffing": 19,
+    "unsourced numbers: 26miljoonaa": 13,
     "unsourced numbers: 500": 3,
     "unsourced numbers: 310": 2,
     "unsourced numbers: 2023": 2
   },
   "feeds": {
-    "total": 34,
-    "healthy": 34,
+    "total": 36,
+    "healthy": 36,
     "disabled": 0,
     "stale": 0,
     "stale_names": [],
@@ -37,24 +37,24 @@
   },
   "trending": [
     [
-      "voivat",
-      22
-    ],
-    [
-      "jotka",
-      19
-    ],
-    [
-      "sillä",
-      19
-    ],
-    [
       "vaikuttaa",
       16
     ],
     [
       "eivät",
       14
+    ],
+    [
+      "erityisesti",
+      14
+    ],
+    [
+      "kuinka",
+      14
+    ],
+    [
+      "trumpin",
+      12
     ]
   ]
 }
