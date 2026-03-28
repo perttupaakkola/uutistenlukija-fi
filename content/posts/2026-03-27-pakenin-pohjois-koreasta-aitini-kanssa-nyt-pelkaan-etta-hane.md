@@ -41,7 +41,7 @@ Geumseongin ja hänen äitinsä elämä Pohjois-Koreassa oli täynnä haasteita,
 
 Heidän pakonsa kesti lukemattomia vaaroja, mutta he onnistuivat lopulta ylittämään joen ja pääsemään Kiinaan. Siellä Geumseongin äiti joutui kohtaamaan ahdistavia tilanteita; hänet myytiin kiinalaiselle miehelle, jotta hän voisi paeta. Tämä on monen pohjoiskorealaisen naisen, mukaan lukien Geumseongin äidin, armoton kohtalo. Nykyisin, kun Geumseong viettää vapaata elämää Etelä-Koreassa, hänen äitinsä on edelleen loukussa ja pelkää suurinta mahdollista moitetta: palauttamista Pohjois-Koreaan. Tämä on sydäntäsärkevä tilanne, joka jättää Geumseongin aikamoiseen ahdinkoon.
 
-Geumseongin tarina avaa syvällisen näkymän pohjoiskorealaisten pakolaisten epätoivoiseen elämään. Noin 30 000 pohjoiskorealaista on riskeerannut kaiken saadakseen vapauden, mutta paluupolku väijyy joka kulman takana. Jos heidät vangitaan, heitä odottavat henkeäsalpaavat rangaistukset, kuten kidutus ja pakkotyö. Aiemmat raportit ovat paljastaneet, kuinka vankilat ovat hengenvaarallisia paikkoja, joita hallitsee tiukka kontrolli.
+Geumseongin tarina avaa syvällisen näkymän pohjoiskorealaisten pakolaisten epätoivoiseen elämään. Tuhannet ovat riskeerannut kaiken saadakseen vapauden, mutta paluupolku väijyy joka kulman takana. Jos heidät vangitaan, heitä odottavat henkeäsalpaavat rangaistukset, kuten kidutus ja pakkotyö. Aiemmat raportit ovat paljastaneet, kuinka vankilat ovat hengenvaarallisia paikkoja, joita hallitsee tiukka kontrolli.
 
 ## Tulevaisuus ja toivo
 
