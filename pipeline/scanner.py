@@ -452,6 +452,47 @@ def _url_hash(url: str) -> str:
     return hashlib.sha256(_normalize_url(url).encode()).hexdigest()
 
 
+# URL path → category hint mapping for generic feeds (IS, IL, etc.)
+# These feeds publish all sections in one RSS feed without a category_hint on the
+# feed config, so individual article URLs are the only structural signal available.
+_URL_PATH_CATEGORY: list[tuple[str, str]] = [
+    # Ilta-Sanomat: is.fi/<section>/art-...
+    ("/talous/",      "Talous"),
+    ("/taloussanomat/", "Talous"),
+    ("/urheilu/",     "Urheilu"),
+    ("/teknologia/",  "Teknologia"),
+    ("/tiede/",       "Tiede"),
+    ("/terveys/",     "Tiede"),
+    ("/viihde/",      "Kulttuuri"),
+    ("/kulttuuri/",   "Kulttuuri"),
+    ("/ulkomaat/",    "Ulkomaat"),
+    ("/politiikka/",  "Kotimaa"),
+    ("/kotimaa/",     "Kotimaa"),
+    # Iltalehti: iltalehti.fi/<section>/a/...
+    # (same path segments, covered by patterns above)
+    # Yle sub-feeds: yle.fi/uutiset/<topic> style links are numeric; handled by feed-level hints
+]
+
+
+def _infer_category_from_url(url: str) -> str:
+    """Return a category hint inferred from the article's URL path, or empty string."""
+    if not url:
+        return ""
+    path = url.lower().split("?")[0]  # strip query params
+    for segment, category in _URL_PATH_CATEGORY:
+        if segment in path:
+            return category
+    return ""
+
+
+def _build_category_hint(feed_hint: Optional[str], article_url: str) -> dict:
+    """Return a {'category_hint': ...} dict if a hint can be determined, else {}."""
+    if feed_hint:
+        return {"category_hint": feed_hint}
+    inferred = _infer_category_from_url(article_url)
+    return {"category_hint": inferred} if inferred else {}
+
+
 def _fingerprint(title: str) -> str:
     """Create a simple fingerprint for dedup."""
     normalized = re.sub(r"[^a-zäöå0-9 ]", "", title.lower().strip())
@@ -706,7 +747,7 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
                 "fingerprint": _fingerprint(title),
                 "_url_hash": _url_hash(link),
                 "source_tier": get_source_tier(feed_info["name"]),
-                **({"category_hint": feed_info["category_hint"]} if feed_info.get("category_hint") else {}),
+                **_build_category_hint(feed_info.get("category_hint"), link),
             })
     except Exception as e:
         print(f"[scanner] Error fetching {feed_info['name']}: {e}")
