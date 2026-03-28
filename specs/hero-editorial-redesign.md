@@ -161,3 +161,103 @@ Replace `.hero-cluster__lead` block with:
 - `$heroSrc`, `$alt`, `$permalink`, `$title`, `$excerpt`, `$category`, `$date`, `$readingTime` — wire from existing hero-cluster.html Hugo variables
 - Dark mode: add `[data-theme="dark"] .hero-editorial__content { background-color: #1a1a18; color: #f0ede4; }`
 - Add fonts to `layouts/partials/head.html` or baseof.html `<head>`
+
+---
+
+## Addendum: Text-Only Hero Fallback
+**Author:** Sara  
+**Date:** 2026-03-28  
+**Triggered by:** P1 audit finding — generic category images in hero
+
+### Logic (`layouts/partials/hero-cluster.html`)
+```hugo
+{{ $img := $lead.Params.image }}
+{{ $thumb := $lead.Params.image_thumb | default $img }}
+{{ $hasImage := and $thumb (ne $thumb "") }}
+```
+Remove all `| default "/images/categories/..."` fallbacks. Pass `$hasImage` to template.
+
+### HTML
+```html
+<section class="hero-cluster-editorial{{ if not $hasImage }} hero-editorial--text-only{{ end }}" aria-labelledby="hero-cluster-title">
+  <div class="hero-editorial__layout">
+    {{ if $hasImage }}
+    <div class="hero-editorial__image-wrap">
+      <picture>
+        <img src="{{ $thumb }}" alt="{{ $lead.Title }}" class="hero-editorial__img"
+             loading="eager" fetchpriority="high" width="1200" height="800">
+      </picture>
+    </div>
+    {{ end }}
+    <div class="hero-editorial__content">
+      <div class="hero-editorial__meta-top">
+        <span class="hero-editorial__kicker">Pääuutinen</span>
+        {{ partial "category-badge.html" (dict "page" $lead "link" false) }}
+      </div>
+      <h2 id="hero-cluster-title" class="hero-editorial__title">
+        <a href="{{ $lead.Permalink }}">{{ $lead.Title }}</a>
+      </h2>
+      {{ with $lead.Params.description }}
+        <p class="hero-editorial__excerpt">{{ . | truncate 180 }}</p>
+      {{ end }}
+      <div class="hero-editorial__meta-bottom">
+        <span>{{ partial "freshness-label.html" $lead.Date }}</span>
+        {{ with $lead.Params.source_name }}<span>{{ . }}</span>{{ end }}
+        <span>{{ partial "reading-time.html" $lead }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+### CSS (`hero-editorial.css` or appended to `style.css`)
+```css
+/* Text-Only Hero Modifier */
+.hero-editorial--text-only {
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+}
+
+.hero-editorial--text-only .hero-editorial__layout {
+  grid-template-columns: 1fr;
+}
+
+.hero-editorial--text-only .hero-editorial__content {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 5rem 4rem;
+  text-align: center;
+  border-left: none;
+  border-top: 4px solid #E3342F;
+  background-color: #f4f1ea;
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.04);
+}
+
+.hero-editorial--text-only .hero-editorial__layout {
+  grid-template-columns: 1fr;
+}
+
+.hero-editorial--text-only .hero-editorial__meta-top,
+.hero-editorial--text-only .hero-editorial__meta-bottom {
+  justify-content: center;
+}
+
+.hero-editorial--text-only .hero-editorial__title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin: 2rem 0;
+  line-height: 1.05;
+}
+
+.hero-editorial--text-only .hero-editorial__excerpt {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 767px) {
+  .hero-editorial--text-only .hero-editorial__content {
+    padding: 3rem 1.5rem;
+    margin-top: 0;
+  }
+}
+```
