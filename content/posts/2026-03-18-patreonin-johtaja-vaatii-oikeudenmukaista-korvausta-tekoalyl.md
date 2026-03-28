@@ -8,7 +8,7 @@ image_source_url: "https://www.pexels.com/photo/woman-in-gray-long-sleeves-shirt
 image_thumb: "https://images.pexels.com/photos/7153856/pexels-photo-7153856.jpeg?auto=compress&cs=tinysrgb&h=350"
 date: 2026-03-18T18:42:57.868540+00:00
 categories:
-  - Tekoala
+  - Teknologia
 draft: false
 tags:
   - koulutus

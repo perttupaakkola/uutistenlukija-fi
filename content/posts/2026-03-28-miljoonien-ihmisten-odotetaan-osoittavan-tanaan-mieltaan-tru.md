@@ -2,7 +2,7 @@
 title: "Miljoonien ihmisten odotetaan osoittavan tänään mieltään Trumpia vastaan USA:ssa"
 date: 2026-03-28T02:29:19.693388+00:00
 categories:
-  - ulkomaat
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

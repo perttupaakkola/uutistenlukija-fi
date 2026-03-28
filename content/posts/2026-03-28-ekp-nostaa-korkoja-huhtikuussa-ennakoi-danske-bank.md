@@ -2,7 +2,7 @@
 title: "EKP nostaa korkoja huhtikuussa, ennakoi Danske Bank"
 date: 2026-03-28T02:44:23.546222+00:00
 categories:
-  - talous
+  - Talous
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

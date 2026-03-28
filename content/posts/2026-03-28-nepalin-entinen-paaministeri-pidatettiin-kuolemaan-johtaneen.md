@@ -2,7 +2,7 @@
 title: "Nepalin entinen pääministeri pidätettiin kuolemaan johtaneen mielenosoituksen vuoksi"
 date: 2026-03-28T04:43:38.141192+00:00
 categories:
-  - ulkomaat
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

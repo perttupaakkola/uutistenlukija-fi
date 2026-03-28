@@ -8,7 +8,7 @@ image_source_url: "https://www.pexels.com/photo/san-francisco-cable-car-at-night
 image_thumb: "https://images.pexels.com/photos/35120569/pexels-photo-35120569.jpeg?auto=compress&cs=tinysrgb&h=350"
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
-  - Talous, Kotimaa
+  - Talous
 draft: false
 tags:
   - pankki

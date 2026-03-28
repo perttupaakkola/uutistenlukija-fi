@@ -2,7 +2,7 @@
 title: "Kreml rajoittaa sananvapautta – BBC Venäjän 80 vuotta sitkeyttä"
 date: 2026-03-28T04:48:43.234871+00:00
 categories:
-  - ulkomaat
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

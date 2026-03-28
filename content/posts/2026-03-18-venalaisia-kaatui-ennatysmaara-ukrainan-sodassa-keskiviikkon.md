@@ -2,7 +2,7 @@
 title: "Venäläisiä kaatui ennätysmäärä Ukrainan sodassa keskiviikkona"
 date: 2026-03-18T22:26:32.784786+00:00
 categories:
-  - Ulkomaalaiset
+  - Ulkomaat
 description: "Ukrainan puolustusministeriö ilmoitti, että keskiviikkona 18. maaliskuuta 2026 Venäjän joukot kärsivät vuoden suurimman taistelutappion."
 image: "/images/articles/2026-03-18-venalaisia-kaatui-ennatysmaara-ukrainan-sodassa-keskiviikkon-hero.jpg"
 image_alt: "Venäläisiä kaatui ennätysmäärä Ukrainan sodassa keskiviikkona"

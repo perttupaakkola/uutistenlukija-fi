@@ -2,7 +2,7 @@
 title: "Paavi Leo XIV vierailee Monacoon 488 vuotta edellisen paavin vierailun jälkeen"
 date: 2026-03-28T07:51:20.380592+00:00
 categories:
-  - kulttuuri
+  - Kulttuuri
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

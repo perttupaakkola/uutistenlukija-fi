@@ -8,7 +8,7 @@ image_source_url: "https://unsplash.com/photos/a-large-group-of-blue-and-green-p
 image_thumb: "https://images.unsplash.com/photo-1705635820997-ae12bea888ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb21wYW55JTIwYnVzaW5lc3MlMjB0ZWtlZSUyMHNpaXJ0eW0lQzMlQTRuJTIwbmFub21ldHJpbnxlbnwxfDB8fHwxNzc0MDA4MDIwfDA&ixlib=rb-4.1.0&q=80&w=400"
 date: 2026-03-18T21:29:59.306676+00:00
 categories:
-  - Tiede, Teknologia
+  - Teknologia
 draft: false
 tags:
   - yritys
