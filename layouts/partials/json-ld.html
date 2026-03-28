@@ -147,7 +147,7 @@
 {{ if .Params.summary }}
 {{ $schema = merge $schema (dict "speakable" (dict
     "@type" "SpeakableSpecification"
-    "cssSelector" (slice "h1" ".article-summary__body")
+    "cssSelector" (slice "h1" ".article-summary__body" ".article-key-points li:first-child")
 )) }}
 {{ end }}
 <script type="application/ld+json">
