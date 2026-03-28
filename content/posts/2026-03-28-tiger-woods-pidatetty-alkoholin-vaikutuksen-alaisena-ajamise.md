@@ -1,5 +1,5 @@
 ---
-title: "Tiger Woods pidätetty alkoholin vaikutuksen alaisena ajamisesta"
+title: "Tiger Woods pidätetty huumaantuneena ajamisesta – puhallustesti nolla"
 date: 2026-03-28T02:29:19.693388+00:00
 categories:
   - urheilu
