@@ -1,24 +1,26 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-28T00:15:00+00:00",
+  "generated_at": "2026-03-28T02:29:21+00:00",
   "runs": {
-    "total": 131,
-    "ok": 13,
+    "total": 114,
+    "ok": 14,
     "skip": 0,
-    "error": 118
+    "error": 100
   },
   "articles": {
-    "attempted": 3126,
-    "published": 14,
-    "rejected": 275,
-    "publish_rate": 0.4,
-    "last_published_ts": "2026-03-27T22:14:18.270740+00:00"
+    "attempted": 2713,
+    "published": 15,
+    "rejected": 342,
+    "publish_rate": 0.6,
+    "last_published_ts": "2026-03-28T00:25:06.109467+00:00"
   },
   "reject_reasons": {
-    "too_short": 273,
-    "lead_too_short": 12,
-    "only 1 paragraphs (min 3)": 9,
-    "keyword_stuffing": 8,
+    "too_short": 341,
+    "lead_too_short": 16,
+    "only 1 paragraphs (min 3)": 12,
+    "keyword_stuffing": 10,
+    "unsourced numbers: 310": 2,
+    "unsourced numbers: 2023": 2,
     "score 30/40 (wc=10 title=0 des": 1,
     "unsourced numbers: 2022": 1
   },
@@ -33,23 +35,23 @@
   "trending": [
     [
       "sillä",
-      11
+      12
+    ],
+    [
+      "trumpin",
+      12
     ],
     [
       "äitinsä",
       11
     ],
     [
-      "valas",
-      8
-    ],
-    [
       "tilanne",
-      7
+      9
     ],
     [
       "eivät",
-      7
+      8
     ]
   ]
 }
