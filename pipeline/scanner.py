@@ -51,6 +51,7 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "HS Tuoreimmat":    1,
     "Kauppalehti":       1,
     "Kauppalehti Markets": 1,
+    "Kauppalehti KL-Nyt": 1,
     "Ilta-Sanomat":      1,
     "IS Urheilu":        1,
     "Taloussanomat":     1,
@@ -72,6 +73,7 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "Science News":       2,
     "Etelä-Suomen Sanomat": 2,
     "Lääkärilehti":       2,
+    "Suomen Yrittäjät":   2,
     # ── Tier 3: Aggregators / smaller sites ──────────────────────────────────
     "Hacker News Best":   3,
 }
@@ -137,6 +139,18 @@ RSS_FEEDS = [
     {
         "name": "Taloussanomat",
         "url": "https://www.is.fi/rss/taloussanomat.xml",
+        "language": "fi",
+        "category_hint": "Talous",
+    },
+    {
+        "name": "Kauppalehti KL-Nyt",
+        "url": "https://feeds.kauppalehti.fi/rss/klnyt",
+        "language": "fi",
+        "category_hint": "Talous",
+    },
+    {
+        "name": "Suomen Yrittäjät",
+        "url": "https://www.yrittajat.fi/feed/?post_type=news&tax-organization=suomen-yrittajat",
         "language": "fi",
         "category_hint": "Talous",
     },
