@@ -171,7 +171,19 @@
       .then(function(d) {
         var r = d.runs, a = d.articles, f = d.feeds;
         var total = r.total || 1;
-        var html = '<div class="pw-grid">';
+        var html = '';
+
+        // ── Degraded warning banner ──
+        if (d.status === 'degraded' || d.is_stale) {
+          var threshold = d.stale_threshold_minutes || 90;
+          html += '<div class="pw-alert pw-alert--degraded" role="alert">'
+            + '\u26a0\ufe0f <strong>Pipeline hidastunut</strong> &mdash; '
+            + 'ei uusia artikkeleita yli ' + threshold + ' minuuttiin. '
+            + 'Tila: <strong>degraded</strong>'
+            + '</div>';
+        }
+
+        html += '<div class="pw-grid">';
 
         var errPct = Math.round(r.error / total * 100);
         var healthIcon = r.error === 0 ? '\u2705' : (errPct > 50 ? '\ud83d\udd34' : '\u26a0\ufe0f');
@@ -216,6 +228,20 @@
       });
   })();
   </script>
+
+  <style>
+  .pw-alert {
+    padding: .75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: .95rem;
+  }
+  .pw-alert--degraded {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #664d03;
+  }
+  </style>
 
 </div>
 {{ end }}
