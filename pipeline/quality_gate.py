@@ -35,7 +35,7 @@ from typing import NamedTuple
 _PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 REJECTED_DIR  = os.path.join(_PIPELINE_DIR, "rejected")
 REJECTS_LOG   = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
-MIN_BODY_WORDS = 300   # Raised from 200: rewriter target updated to 400-600 words (2026-03-28)
+MIN_BODY_WORDS = 220   # Lowered: tech/news briefs from mobiili.fi/Teknavi typically rewrite to 220-280w
 
 REJECT_THRESHOLD = 40   # minimum score to pass (out of 80)
 
