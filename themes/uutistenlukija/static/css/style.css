@@ -2876,3 +2876,28 @@ body.is-home .highlights-row--top {
     line-height: 1.7;
   }
 }
+
+/* Category badge — color-coded per category */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.category-badge__link,
+.category-badge {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--badge-color, var(--accent));
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  line-height: 1.1;
+}
+.category-badge__link:hover {
+  opacity: 0.85;
+  color: #fff;
+}

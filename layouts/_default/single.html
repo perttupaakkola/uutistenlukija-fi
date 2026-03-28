@@ -7,9 +7,7 @@
   <span class="article-badge article-badge--{{ . | urlize }}">{{ . }}</span>
   {{ end }}
   {{ with .Params.categories }}
-  <span class="category-label">
-    <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
-  </span>
+  {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ with .Params.tags }}

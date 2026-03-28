@@ -1,0 +1,34 @@
+{{- /*
+  category-badge.html — Color-coded category badge
+  Usage: {{ partial "category-badge.html" (dict "category" "Talous" "link" true) }}
+  Params:
+    .category — category name string
+    .link     — bool, whether to wrap in <a> tag (default true)
+*/ -}}
+{{- $cat := .category | default "" -}}
+{{- $link := ne .link false -}}
+{{- $slug := $cat | urlize -}}
+
+{{- $colors := dict
+  "kotimaa"    "#c0392b"
+  "ulkomaat"   "#2563eb"
+  "talous"     "#16a34a"
+  "teknologia" "#7c3aed"
+  "urheilu"    "#dc2626"
+  "kulttuuri"  "#0891b2"
+  "tiede"      "#0f6f5d"
+  "terveys"    "#ea580c"
+  "politiikka" "#2563eb"
+-}}
+
+{{- $color := index $colors $slug | default "#6b7280" -}}
+
+{{- if $cat -}}
+<span class="category-badge" style="--badge-color: {{ $color }}">
+  {{- if $link -}}
+  <a href="/categories/{{ $slug }}/" class="category-badge__link">{{ $cat }}</a>
+  {{- else -}}
+  {{ $cat }}
+  {{- end -}}
+</span>
+{{- end -}}
