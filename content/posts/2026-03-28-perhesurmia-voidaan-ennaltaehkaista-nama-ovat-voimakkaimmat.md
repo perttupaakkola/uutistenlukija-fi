@@ -28,7 +28,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/perhesurmia-voidaan-ennaltaehkaista-nama-ovat-voimakkaimmat-riskitekijat/9316804"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc0NzA0NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "Perhesurmia voidaan ennaltaehkäistä – nämä ovat voimakkaimmat riskitekijät"
