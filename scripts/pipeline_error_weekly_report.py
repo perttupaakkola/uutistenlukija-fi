@@ -1,38 +1,58 @@
 #!/usr/bin/env python3
-"""pipeline_error_weekly_report.py — Weekly pipeline error summary to Discord.
-
-Reads pipeline/logs/pipeline_errors.json and posts a 7-day summary to #operations.
-
-Usage:
-    python3 scripts/pipeline_error_weekly_report.py [--dry-run]
 """
+pipeline_error_weekly_report.py — Weekly pipeline error summary for #operations
+
+Reads pipeline/logs/pipeline_errors.json (written by pipeline_error_tracker.py),
+computes 7-day stats, and posts a Discord summary to #operations via webhook.
+
+Run Mondays 09:05 UTC via cron.
+"""
+
 import json
 import os
 import sys
+import urllib.request
+import urllib.error
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import urllib.request
-import urllib.error
+# ── Paths ─────────────────────────────────────────────────────────────────────
+SCRIPT_DIR  = Path(__file__).resolve().parent
+PROJECT_DIR = SCRIPT_DIR.parent
+ERRORS_FILE = PROJECT_DIR / "pipeline" / "logs" / "pipeline_errors.json"
+ENV_FILE    = PROJECT_DIR / "pipeline" / ".env"
 
-PROJECT_DIR = Path(__file__).parent.parent
-ERROR_DB = PROJECT_DIR / "pipeline" / "logs" / "pipeline_errors.json"
-ENV_FILE = PROJECT_DIR / "pipeline" / ".env"
+OPERATIONS_WEBHOOK_ENV = "DISCORD_OPERATIONS_WEBHOOK"
+WINDOW_DAYS = 7
 
-# Load .env
-def load_env():
-    if ENV_FILE.exists():
-        for line in ENV_FILE.read_text().splitlines():
+
+def load_env(path: Path) -> dict[str, str]:
+    env: dict[str, str] = {}
+    if not path.exists():
+        return env
+    with path.open() as f:
+        for line in f:
             line = line.strip()
-            if line and not line.startswith("#") and "=" in line:
-                key, _, val = line.partition("=")
-                os.environ.setdefault(key.strip(), val.strip().strip('"').strip("'"))
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, _, v = line.partition("=")
+            env[k.strip()] = v.strip().strip('"').strip("'")
+    return env
 
-load_env()
+
+def load_errors() -> list[dict]:
+    if not ERRORS_FILE.exists():
+        return []
+    try:
+        with ERRORS_FILE.open() as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return []
 
 
-def post_to_discord(message: str, webhook_url: str):
-    payload = json.dumps({"content": message}).encode("utf-8")
+def post_to_discord(webhook_url: str, message: str) -> bool:
+    payload = json.dumps({"content": message}).encode()
     req = urllib.request.Request(
         webhook_url,
         data=payload,
@@ -41,84 +61,111 @@ def post_to_discord(message: str, webhook_url: str):
     )
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
-            return resp.status
-    except urllib.error.URLError as e:
-        print(f"Discord post failed: {e}")
-        return None
+            return resp.status in (200, 204)
+    except urllib.error.HTTPError as e:
+        print(f"[weekly_report] Discord webhook error: {e.code} {e.reason}", file=sys.stderr)
+        return False
+    except Exception as e:
+        print(f"[weekly_report] Discord webhook error: {e}", file=sys.stderr)
+        return False
 
 
-def main():
-    dry_run = "--dry-run" in sys.argv
-
-    webhook = os.environ.get("DISCORD_PIPELINE_WEBHOOK", "")
-    if not webhook and not dry_run:
-        print("No DISCORD_PIPELINE_WEBHOOK set — use --dry-run or set webhook")
-        sys.exit(1)
-
-    if not ERROR_DB.exists():
-        print(f"No error DB at {ERROR_DB} — run pipeline_error_tracker.py first")
-        sys.exit(0)
-
-    db = json.loads(ERROR_DB.read_text())
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
-    week_records = [r for r in db if r.get("date", "") >= cutoff]
-
-    if not week_records:
-        print("No data for the last 7 days")
-        sys.exit(0)
-
-    total_runs = sum(r["runs"] for r in week_records)
-    total_articles = sum(r["articles_deployed"] for r in week_records)
-    total_errors = sum(r["total_errors"] for r in week_records)
-    avg_error_rate = (total_errors / total_runs * 100) if total_runs > 0 else 0.0
-
-    # Aggregate error categories
-    all_cats: dict[str, int] = {}
-    for r in week_records:
-        for cat, count in r.get("error_categories", {}).items():
-            all_cats[cat] = all_cats.get(cat, 0) + count
-
-    top3 = sorted(all_cats.items(), key=lambda x: x[1], reverse=True)[:3]
-
-    # Build message
-    week_start = min(r["date"] for r in week_records)
-    week_end = max(r["date"] for r in week_records)
-
-    msg_lines = [
-        f"**📊 Pipeline viikkoraportti ({week_start} – {week_end})**",
-        "",
-        f"🔄 Ajoja yhteensä: **{total_runs}**",
-        f"📰 Artikkeleita julkaistu: **{total_articles}**",
-        f"⚠️ Virheaste: **{avg_error_rate:.1f}%**",
-    ]
-
-    if top3:
-        msg_lines.append("")
-        msg_lines.append("**Top-3 virhekategoriat:**")
-        for cat, count in top3:
-            msg_lines.append(f"  • {cat}: {count} kpl")
-
-    # Per-day summary
-    msg_lines.append("")
-    msg_lines.append("**Päiväkohtainen:**")
-    for r in sorted(week_records, key=lambda x: x["date"]):
-        status = "✅" if r["error_rate_pct"] < 10 else "⚠️"
-        msg_lines.append(
-            f"  {status} {r['date']}: {r['runs']} ajoa, {r['articles_deployed']} artikkelia, {r['error_rate_pct']}% virheaste"
+def format_report(window: list[dict], week_start: str, week_end: str) -> str:
+    if not window:
+        return (
+            f"⚙️ **Pipeline virheraportti** — {week_start} → {week_end}\n"
+            "_Ei dataa saatavilla tältä ajanjaksolta._"
         )
 
-    message = "\n".join(msg_lines)
-    print(message)
+    total_runs   = sum(d.get("runs", 0) for d in window)
+    total_ok     = sum(d.get("ok_runs", 0) for d in window)
+    total_skip   = sum(d.get("skip_runs", 0) for d in window)
+    total_err    = sum(d.get("error_runs", 0) for d in window)
+    total_pub    = sum(d.get("published", 0) for d in window)
+    error_rate   = total_err / total_runs if total_runs else 0
 
-    if dry_run:
-        print("\n[DRY RUN — not posted to Discord]")
+    # Aggregate error categories
+    cat_totals: dict[str, int] = defaultdict(int)
+    for d in window:
+        for cat, count in d.get("error_categories", {}).items():
+            cat_totals[cat] += count
+
+    top_cats = sorted(cat_totals.items(), key=lambda x: -x[1])[:3]
+
+    # Status emoji
+    if error_rate < 0.05:
+        status = "✅"
+    elif error_rate < 0.15:
+        status = "⚠️"
     else:
-        status = post_to_discord(message, webhook)
-        if status == 204:
-            print("Posted to Discord ✅")
-        else:
-            print(f"Discord returned status {status}")
+        status = "🔴"
+
+    lines = [
+        f"⚙️ **Pipeline-virheraportti** — {week_start} → {week_end}",
+        "",
+        f"{'Ajoja yhteensä:':<22} **{total_runs}**",
+        f"{'Onnistuneet (julkaisua):':<22} **{total_ok}** ({total_pub} artikkelia julkaistu)",
+        f"{'Ohitetut (ei uutta):':<22} **{total_skip}**",
+        f"{'Virheet:':<22} **{total_err}** ({error_rate:.0%}) {status}",
+    ]
+
+    if top_cats:
+        lines.append("")
+        lines.append("**Top virhekategoriat:**")
+        cat_labels = {
+            "no_articles_fetched": "Ei artikkeleita haettu",
+            "rewrite_failed":      "Kirjoitus epäonnistui",
+            "quality_gate":        "Laadunvalvonta hylkäsi",
+            "dedup_rejected":      "Duplikaatti hylätty",
+            "publish_blocked":     "Julkaisu estyi (muu)",
+            "timeout_suspected":   "Timeout epäilty",
+        }
+        for i, (cat, count) in enumerate(top_cats, 1):
+            label = cat_labels.get(cat, cat)
+            lines.append(f"{i}. {label} — **{count}** kertaa")
+
+    # Per-day breakdown (compact)
+    lines.append("")
+    lines.append("**Päivittäin:**")
+    for d in window:
+        runs = d.get("runs", 0)
+        errs = d.get("error_runs", 0)
+        pub  = d.get("published", 0)
+        rate = d.get("error_rate", 0)
+        flag = "🔴" if rate >= 0.15 else ("⚠️" if rate >= 0.05 else "✅")
+        lines.append(f"`{d['date']}` — {runs} ajoa, {pub} julkaistu, {errs} virh. {flag}")
+
+    return "\n".join(lines)
+
+
+def main() -> int:
+    env = load_env(ENV_FILE)
+    # Also check process environment
+    webhook_url = os.environ.get(OPERATIONS_WEBHOOK_ENV) or env.get(OPERATIONS_WEBHOOK_ENV, "")
+
+    now = datetime.now(timezone.utc)
+    week_end   = (now - timedelta(days=1)).strftime("%Y-%m-%d")
+    week_start = (now - timedelta(days=WINDOW_DAYS)).strftime("%Y-%m-%d")
+
+    errors = load_errors()
+    window = [e for e in errors if week_start <= e.get("date", "") <= week_end]
+
+    report = format_report(window, week_start, week_end)
+    print(report)
+
+    if not webhook_url:
+        print(f"\n[weekly_report] {OPERATIONS_WEBHOOK_ENV} not set — printed to stdout only.")
+        return 0
+
+    ok = post_to_discord(webhook_url, report)
+    if ok:
+        print(f"\n[weekly_report] Posted to Discord #operations ✓")
+    else:
+        print(f"\n[weekly_report] Discord post failed", file=sys.stderr)
+        return 1
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

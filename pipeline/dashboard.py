@@ -29,18 +29,34 @@ REPO_ROOT  = SCRIPT_DIR.parent
 
 # Finnish stopwords to exclude from trending keywords
 STOPWORDS = {
-    "että", "joka", "kun", "on", "ja", "ei", "ole", "se", "hän", "he",
-    "me", "te", "myös", "kuin", "niin", "sekä", "vaan", "mutta", "jos",
-    "kuitenkin", "lisäksi", "koska", "siitä", "sitten", "vielä", "jo",
-    "olla", "ollut", "oli", "ovat", "olisi", "sen", "sen", "sitä", "tämä",
-    "tässä", "tähän", "sen", "hänen", "tätä", "niiden", "niitä", "tai",
-    "sekä", "joten", "joita", "joilla", "jolla", "jolle", "jolla", "jonka",
-    "jossa", "josta", "jota", "jolta", "johon", "joita", "kaikki", "koko",
-    "sai", "saa", "saada", "saan", "saakka", "saatu", "saatua", "uusi",
-    "uuden", "muun", "muut", "muu", "tuli", "tulee", "tulla", "tuleva",
-    "tulevat", "päivä", "vuosi", "vuotta", "mukaan", "ainoa", "aina",
-    "asia", "asiaa", "asiat", "suuri", "suuren", "suomessa", "suomen",
-    "suomi", "helsinki", "the", "and", "for", "that", "with", "this",
+    # Conjunctions / particles
+    "että", "joka", "jotka", "kun", "ja", "tai", "sekä", "vaan", "mutta",
+    "jos", "joten", "koska", "kuin", "niin", "myös", "kuitenkin", "lisäksi",
+    "sitten", "vielä", "jo", "aina", "ainoa", "mukaan",
+    # Pronouns
+    "on", "ei", "ole", "se", "hän", "he", "me", "te",
+    "sen", "sitä", "tämä", "tässä", "tähän", "hänen", "tätä",
+    "niiden", "niitä", "joita", "joilla", "jolla", "jolle",
+    "jonka", "jossa", "josta", "jota", "jolta", "johon", "kaikki", "koko",
+    "siitä",
+    # Verb forms
+    "olla", "ollut", "oli", "ovat", "olisi",
+    "sai", "saa", "saada", "saan", "saakka", "saatu", "saatua",
+    "tuli", "tulee", "tulla", "tuleva", "tulevat",
+    "voivat", "voisi", "voi", "voida",
+    "on", "ovat", "olisi", "oli",
+    "sillä",  # "because" / instrumental pronoun
+    "kuten",  # "such as"
+    "sekä",
+    # Nouns too generic to be meaningful
+    "uusi", "uuden", "muun", "muut", "muu",
+    "suuri", "suuren",
+    "päivä", "vuosi", "vuotta",
+    "asia", "asiaa", "asiat",
+    "suomessa", "suomen", "suomi", "helsinki",
+    # English stopwords (some articles still slip through)
+    "the", "and", "for", "that", "with", "this", "has", "are", "was",
+    "from", "not", "but", "have", "been", "its", "more",
 }
 
 

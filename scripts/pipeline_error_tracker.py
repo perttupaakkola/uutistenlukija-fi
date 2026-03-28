@@ -1,206 +1,162 @@
 #!/usr/bin/env python3
-"""pipeline_error_tracker.py — Parse pipeline logs and track daily error stats.
-
-Reads pipeline/logs/cron.log, extracts per-run stats, and appends to
-pipeline/logs/pipeline_errors.json (rolling 30 days).
-
-Usage:
-    python3 scripts/pipeline_error_tracker.py [--date YYYY-MM-DD]
 """
+pipeline_error_tracker.py — Daily pipeline error log for uutistenlukija.fi
+
+Reads pipeline/metrics.jsonl, aggregates per-day stats, and appends/updates
+a rolling 30-day record in pipeline/logs/pipeline_errors.json.
+
+Run daily via cron (e.g. 06:10 UTC) after the pipeline has had time to run.
+"""
+
 import json
-import re
+import os
 import sys
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-PROJECT_DIR = Path(__file__).parent.parent
-LOG_FILE = PROJECT_DIR / "pipeline" / "logs" / "cron.log"
-ERROR_DB = PROJECT_DIR / "pipeline" / "logs" / "pipeline_errors.json"
-
-# Error category patterns (order matters — first match wins)
-ERROR_PATTERNS = [
-    ("openai_quota", re.compile(r"insufficient_quota|rate.limit|RateLimitError|openai.*error", re.I)),
-    ("fetch_error", re.compile(r"ConnectionError|TimeoutError|requests\.exceptions|URLError|HTTPError", re.I)),
-    ("parse_error", re.compile(r"JSONDecodeError|ParseError|parse.*fail|invalid.*json", re.I)),
-    ("rewrite_error", re.compile(r"rewrite.*error|rewriter.*error|failed.*rewrite", re.I)),
-    ("publish_error", re.compile(r"publish.*error|publisher.*error|failed.*publish", re.I)),
-    ("build_error", re.compile(r"hugo.*error|build.*fail|FAILED", re.I)),
-    ("other", re.compile(r"(Error|Exception|Traceback)", re.I)),
-]
+# ── Paths ─────────────────────────────────────────────────────────────────────
+SCRIPT_DIR  = Path(__file__).resolve().parent
+PROJECT_DIR = SCRIPT_DIR.parent
+METRICS_FILE   = PROJECT_DIR / "pipeline" / "metrics.jsonl"
+OUTPUT_FILE    = PROJECT_DIR / "pipeline" / "logs" / "pipeline_errors.json"
+ROLLING_DAYS   = 30
 
 
-def categorize_error(line: str) -> str:
-    for name, pattern in ERROR_PATTERNS:
-        if pattern.search(line):
-            return name
-    return "other"
-
-
-def parse_log(log_path: Path, target_date: str | None = None) -> list[dict]:
-    """Parse cron.log and return list of run summaries."""
-    if not log_path.exists():
+def load_metrics() -> list[dict]:
+    if not METRICS_FILE.exists():
         return []
-
-    runs = []
-    current_run: dict | None = None
-    errors: list[str] = []
-
-    with open(log_path, "r", encoding="utf-8", errors="replace") as f:
+    records = []
+    with METRICS_FILE.open() as f:
         for line in f:
-            line = line.rstrip()
-            # Run start
-            m = re.match(r"=== Auto-publish started at (.+) ===", line)
-            if m:
-                if current_run:
-                    current_run["errors"] = errors
-                    runs.append(current_run)
-                current_run = {
-                    "start": m.group(1),
-                    "date": None,
-                    "articles_deployed": 0,
-                    "errors": [],
-                    "error_categories": defaultdict(int),
-                    "success": False,
-                }
-                errors = []
-                # Parse date from timestamp
-                try:
-                    dt = datetime.strptime(m.group(1), "%a %b %d %I:%M:%S %p UTC %Y")
-                    current_run["date"] = dt.strftime("%Y-%m-%d")
-                except ValueError:
-                    try:
-                        dt = datetime.strptime(m.group(1), "%a %b %d %H:%M:%S UTC %Y")
-                        current_run["date"] = dt.strftime("%Y-%m-%d")
-                    except ValueError:
-                        current_run["date"] = "unknown"
+            line = line.strip()
+            if not line:
                 continue
-
-            if current_run is None:
-                continue
-
-            # Run end
-            if "=== Auto-publish completed" in line:
-                current_run["success"] = True
-                current_run["errors"] = errors
-                runs.append(current_run)
-                current_run = None
-                errors = []
-                continue
-
-            # Articles deployed
-            m = re.search(r"Deployed (\d+) new articles", line)
-            if m and current_run:
-                current_run["articles_deployed"] = int(m.group(1))
-
-            # Error lines
-            if re.search(r"(Error|Exception|Traceback|FAILED|failed)", line, re.I):
-                errors.append(line)
-                if current_run:
-                    cat = categorize_error(line)
-                    current_run["error_categories"][cat] = current_run["error_categories"].get(cat, 0) + 1
-
-    # Handle unclosed run
-    if current_run:
-        current_run["errors"] = errors
-        runs.append(current_run)
-
-    # Filter by date if requested
-    if target_date:
-        runs = [r for r in runs if r.get("date") == target_date]
-
-    return runs
+            try:
+                records.append(json.loads(line))
+            except json.JSONDecodeError:
+                pass
+    return records
 
 
-def aggregate_by_date(runs: list[dict]) -> dict:
-    """Aggregate runs by date."""
-    by_date: dict[str, dict] = defaultdict(lambda: {
+def classify_run(run: dict) -> str:
+    """Return error category for a run that had 0 published."""
+    reject = run.get("reject_reasons", {})
+    if reject.get("quality_gate", 0) > 0:
+        return "quality_gate"
+    if reject.get("dedup", 0) > 0 or reject.get("duplicate", 0) > 0:
+        return "dedup_rejected"
+    if run.get("fetched", 0) == 0:
+        return "no_articles_fetched"
+    if run.get("rewritten", 0) == 0 and run.get("fetched", 0) > 0:
+        return "rewrite_failed"
+    if run.get("duration_s", 0) > 300:
+        return "timeout_suspected"
+    # Generic catch-all: fetched something but published nothing
+    return "publish_blocked"
+
+
+def aggregate_by_day(records: list[dict], cutoff: datetime) -> dict[str, dict]:
+    """Group metrics records by UTC date, return day → stats dict."""
+    days: dict[str, dict] = defaultdict(lambda: {
         "runs": 0,
-        "successful_runs": 0,
-        "articles_deployed": 0,
-        "total_errors": 0,
+        "published": 0,
+        "fetched": 0,
+        "error_runs": 0,
+        "skip_runs": 0,
+        "ok_runs": 0,
         "error_categories": defaultdict(int),
     })
 
-    for run in runs:
-        date = run.get("date", "unknown")
-        day = by_date[date]
-        day["runs"] += 1
-        if run.get("success"):
-            day["successful_runs"] += 1
-        day["articles_deployed"] += run.get("articles_deployed", 0)
-        err_count = sum(run.get("error_categories", {}).values())
-        day["total_errors"] += err_count
-        for cat, count in run.get("error_categories", {}).items():
-            day["error_categories"][cat] = day["error_categories"].get(cat, 0) + count
-
-    return dict(by_date)
-
-
-def load_db() -> list[dict]:
-    if ERROR_DB.exists():
+    for r in records:
+        ts_str = r.get("ts", "")
+        if not ts_str:
+            continue
         try:
-            return json.loads(ERROR_DB.read_text())
-        except Exception:
-            return []
-    return []
+            ts = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if ts < cutoff:
+            continue
+
+        day = ts.strftime("%Y-%m-%d")
+        d = days[day]
+        d["runs"] += 1
+        published = r.get("published", 0)
+        d["published"] += published
+        d["fetched"] += r.get("fetched", 0)
+
+        # Classify run outcome
+        if published > 0:
+            d["ok_runs"] += 1
+        elif r.get("fetched", 0) == 0 and r.get("rewritten", 0) == 0:
+            d["skip_runs"] += 1
+        else:
+            d["error_runs"] += 1
+            cat = classify_run(r)
+            d["error_categories"][cat] += 1
+
+    # Convert defaultdicts to plain dicts
+    return {
+        day: {
+            **stats,
+            "error_categories": dict(stats["error_categories"]),
+            "error_rate": round(stats["error_runs"] / stats["runs"], 3) if stats["runs"] else 0,
+        }
+        for day, stats in sorted(days.items())
+    }
 
 
-def save_db(records: list[dict]):
-    ERROR_DB.parent.mkdir(parents=True, exist_ok=True)
-    # Keep only last 30 days
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%Y-%m-%d")
-    records = [r for r in records if r.get("date", "") >= cutoff]
-    records.sort(key=lambda r: r.get("date", ""))
-    ERROR_DB.write_text(json.dumps(records, indent=2))
+def load_existing() -> list[dict]:
+    if not OUTPUT_FILE.exists():
+        return []
+    try:
+        with OUTPUT_FILE.open() as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return []
 
 
 def main():
-    target_date = None
-    if len(sys.argv) > 2 and sys.argv[1] == "--date":
-        target_date = sys.argv[2]
+    cutoff = datetime.now(timezone.utc) - timedelta(days=ROLLING_DAYS)
+    records = load_metrics()
 
+    if not records:
+        print("[pipeline_error_tracker] No metrics.jsonl records found — nothing to track.")
+        return 0
+
+    print(f"[pipeline_error_tracker] Loaded {len(records)} records from metrics.jsonl")
+    daily = aggregate_by_day(records, cutoff)
+
+    # Merge with existing (existing entries overwritten by fresh aggregation)
+    existing = load_existing()
+    existing_by_day = {e["date"]: e for e in existing if "date" in e}
+
+    for day, stats in daily.items():
+        existing_by_day[day] = {"date": day, **stats}
+
+    # Prune to rolling window
+    final = sorted(existing_by_day.values(), key=lambda x: x["date"])
+    cutoff_str = cutoff.strftime("%Y-%m-%d")
+    final = [e for e in final if e["date"] >= cutoff_str]
+
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with OUTPUT_FILE.open("w") as f:
+        json.dump(final, f, indent=2, ensure_ascii=False)
+
+    # Summary for log
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    if target_date is None:
-        target_date = today
+    today_stats = daily.get(today, {})
+    runs  = today_stats.get("runs", 0)
+    errs  = today_stats.get("error_runs", 0)
+    rate  = today_stats.get("error_rate", 0)
+    pub   = today_stats.get("published", 0)
 
-    print(f"Parsing pipeline logs for {target_date}...")
-    runs = parse_log(LOG_FILE, target_date=target_date)
-
-    if not runs:
-        print(f"No pipeline runs found for {target_date}")
-        return
-
-    aggregated = aggregate_by_date(runs)
-
-    # Load existing DB, update/insert today's record
-    db = load_db()
-    # Remove existing entry for this date
-    db = [r for r in db if r.get("date") != target_date]
-
-    for date, stats in aggregated.items():
-        error_rate = (stats["total_errors"] / stats["runs"] * 100) if stats["runs"] > 0 else 0.0
-        record = {
-            "date": date,
-            "runs": stats["runs"],
-            "successful_runs": stats["successful_runs"],
-            "articles_deployed": stats["articles_deployed"],
-            "total_errors": stats["total_errors"],
-            "error_rate_pct": round(error_rate, 1),
-            "error_categories": dict(stats["error_categories"]),
-            "updated_at": datetime.now(timezone.utc).isoformat(),
-        }
-        db.append(record)
-        print(f"Date: {date}")
-        print(f"  Runs: {stats['runs']} ({stats['successful_runs']} successful)")
-        print(f"  Articles deployed: {stats['articles_deployed']}")
-        print(f"  Error rate: {error_rate:.1f}%")
-        if stats["error_categories"]:
-            print(f"  Error categories: {dict(stats['error_categories'])}")
-
-    save_db(db)
-    print(f"Updated {ERROR_DB}")
+    print(f"[pipeline_error_tracker] {today}: {runs} runs, {pub} published, "
+          f"{errs} errors ({rate:.0%} error rate)")
+    print(f"[pipeline_error_tracker] Written {len(final)} days to {OUTPUT_FILE}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
