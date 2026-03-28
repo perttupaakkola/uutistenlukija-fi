@@ -13,6 +13,9 @@
 # Main pipeline watchdog (every 10 min)
 */10 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/watchdog.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/watchdog.log 2>&1
 
+# Firehose poller (every 10 min — polls stream, rewrites + publishes new articles)
+*/10 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/firehose_cron.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/firehose_cron.log 2>&1
+
 # X / Twitter OAuth2 token refresh (every 2h) — managed by OpenClaw scripts
 0 */2 * * * /home/pertt/.openclaw/workspace/scripts/refresh-x-token.sh >> /home/pertt/.openclaw/workspace/logs/x-token-refresh.log 2>&1
 
