@@ -1,5 +1,5 @@
 ---
-title: "Wolt saa haastajan – Aikoo toimia eri tavalla"
+title: "Foodoran tilalle Suomeen uusi ruokalähettipalvelu Swype – lupaa korkeamman palkan kuljettajille"
 date: 2026-03-20T11:02:15.183723+00:00
 categories:
   - Talous

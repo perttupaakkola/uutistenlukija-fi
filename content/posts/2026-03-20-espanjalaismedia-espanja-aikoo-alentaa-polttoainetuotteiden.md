@@ -1,5 +1,5 @@
 ---
-title: "Espanjalaismedia: Espanja aikoo alentaa polttoainetuotteiden arvonlisäveroa"
+title: "Espanja alentaa polttoaineen arvonlisäveroa – hinta voisi halventua 30–40 senttiä litralta"
 date: 2026-03-20T10:42:15.226820+00:00
 categories:
   - Ulkomaat

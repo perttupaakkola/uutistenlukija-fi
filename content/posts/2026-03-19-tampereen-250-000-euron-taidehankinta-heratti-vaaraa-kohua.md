@@ -1,5 +1,5 @@
 ---
-title: "Tampereen 250 000 euron taidehankinta herätti väärää kohua"
+title: "Tampere tilasi 250 000 euron koulumuuralin – somessa levisi väärää tietoa pormestarin kaveruudesta"
 date: 2026-03-19T14:08:12.598119+00:00
 categories:
   - Kulttuuri

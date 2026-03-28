@@ -1,5 +1,5 @@
 ---
-title: "Suomalainen Swype haastaa Woltin ruokalähettimarkkinoilla"
+title: "Suomalainen Swype astuu Foodoran tilalle – haastaa Woltin ruokalähettimarkkinoilla"
 date: 2026-03-20T10:38:06.246418+00:00
 categories:
   - Kotimaa
