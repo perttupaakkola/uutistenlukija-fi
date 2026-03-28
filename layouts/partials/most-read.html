@@ -9,13 +9,12 @@
 {{ $fallbackSorted := $fallbackPool.ByDate.Reverse }}
 {{ $fallback := first 5 (where $fallbackSorted "Permalink" "not in" $exclude) }}
 <aside class="most-read-widget" aria-label="Luetuimmat artikkelit" id="most-read-widget">
-  <h3 class="most-read-title" id="most-read-title">📈 Uusimmat</h3>
+  <h3 class="most-read-title" id="most-read-title">Uusimmat</h3>
   <ol class="most-read-list" id="most-read-list">
     {{ range $i, $p := $fallback }}
     <li class="most-read-item most-read-item--fallback">
       <span class="most-read-rank">{{ math.Add $i 1 }}</span>
       <a class="most-read-link" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
-      <span class="most-read-count">Tuore valinta</span>
     </li>
     {{ end }}
   </ol>
@@ -58,13 +57,13 @@
     if (!list) return;
 
     if (top.length === 0) {
-      if (title) title.textContent = '📈 Uusimmat';
+      if (title) title.textContent = 'Uusimmat';
       list.style.display = '';
       if (empty) empty.style.display = list.children.length ? 'none' : '';
       return;
     }
 
-    if (title) title.textContent = '📈 Luetuimmat';
+    if (title) title.textContent = 'Luetuimmat';
     list.innerHTML = '';
     if (empty) empty.style.display = 'none';
     top.forEach(function (item, i) {

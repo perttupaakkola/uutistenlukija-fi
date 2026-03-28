@@ -8,11 +8,13 @@
   if (!btn) return;
 
   var html = document.documentElement;
-  var icon = btn.querySelector('.theme-toggle-icon');
+  var moonIcon = btn.querySelector('.theme-toggle-icon--moon');
+  var sunIcon = btn.querySelector('.theme-toggle-icon--sun');
   var label = btn.querySelector('.theme-toggle-label');
 
   function applyToggleUI(isDark) {
-    if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+    if (moonIcon) moonIcon.style.display = isDark ? 'none' : '';
+    if (sunIcon) sunIcon.style.display = isDark ? '' : 'none';
     if (label) label.textContent = isDark ? 'Vaalea' : 'Tumma';
     btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
   }
