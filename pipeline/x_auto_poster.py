@@ -68,10 +68,28 @@ def parse_frontmatter(path: str) -> dict:
 
     fm_text = content[3:end]
     result = {}
+    current_list_key = None
     for line in fm_text.splitlines():
-        m = re.match(r'^(\w+):\s*"?([^"]*)"?$', line.strip())
+        stripped = line.strip()
+        # YAML list item
+        if stripped.startswith("- ") and current_list_key:
+            item = stripped[2:].strip().strip('"')
+            if isinstance(result.get(current_list_key), list):
+                result[current_list_key].append(item)
+            continue
+        # Key: value (scalar)
+        m = re.match(r'^(\w+):\s*"?([^"]*)"?$', stripped)
         if m:
-            result[m.group(1)] = m.group(2).strip()
+            key, val = m.group(1), m.group(2).strip()
+            if val == "":
+                # might be start of a list block
+                result[key] = []
+                current_list_key = key
+            else:
+                result[key] = val
+                current_list_key = None
+        elif stripped == "" or ":" in stripped:
+            current_list_key = None
 
     # Also grab body word count (rough)
     body = content[end + 4:]
@@ -162,37 +180,48 @@ def compose_tweet(article: dict) -> str:
     title = article.get("title", "")
     desc  = article.get("description", "")
     url   = article.get("_url", "")
-    # keywords field may be "Kotimaa" or "Talous, Teknologia" — normalize
-    raw_kw = article.get("keywords", article.get("categories", ""))
-    category = raw_kw.lower().split(",")[0].strip()
+
+    # categories is a list from frontmatter; fall back to keywords string
+    cats = article.get("categories", [])
+    if isinstance(cats, list):
+        category = cats[0].lower().strip() if cats else ""
+    else:
+        category = str(cats).lower().split(",")[0].strip()
+    if not category:
+        raw_kw = article.get("keywords", "")
+        category = str(raw_kw).lower().split(",")[0].strip()
 
     emoji    = CATEGORY_EMOJIS.get(category, "📰")
-    hashtags = CATEGORY_HASHTAGS.get(category, "")
-    if not hashtags:
-        hashtags = "#uutiset"
+    hashtags = CATEGORY_HASHTAGS.get(category, "#uutiset")
 
     # Extra hashtag for AI articles
     if any(k in title.lower() + desc.lower() for k in ["tekoäly", "tekoäl", "ai ", "chatgpt", "openai"]):
         if "#tekoäly" not in hashtags:
             hashtags += " #tekoäly"
 
-    # Build tweet
-    title_trunc = title[:180] if len(title) > 180 else title
-    desc_trunc  = (desc[:110] + "…") if len(desc) > 110 else desc
-
-    if desc_trunc:
-        tweet = f"{emoji} {title_trunc}\n\n{desc_trunc}\n\n{url} {hashtags} #uutiset"
+    # Teaser line: first key_point if available, else description
+    key_points = article.get("key_points", [])
+    if isinstance(key_points, list) and key_points:
+        teaser = f"▪ {key_points[0].strip()}"
     else:
-        tweet = f"{emoji} {title_trunc}\n\n{url} {hashtags} #uutiset"
+        teaser = desc
+
+    # Build tweet (no trailing #uutiset — already in hashtags default)
+    title_trunc  = title[:180] if len(title) > 180 else title
+    teaser_trunc = (teaser[:110] + "…") if len(teaser) > 110 else teaser
+
+    if teaser_trunc:
+        tweet = f"{emoji} {title_trunc}\n\n{teaser_trunc}\n\n{url} {hashtags}"
+    else:
+        tweet = f"{emoji} {title_trunc}\n\n{url} {hashtags}"
 
     # Twitter hard limit: 280 chars
     if len(tweet) > 280:
-        # Trim description first
-        available = 280 - len(f"{emoji} {title_trunc}\n\n…\n\n{url} {hashtags} #uutiset")
+        available = 280 - len(f"{emoji} {title_trunc}\n\n…\n\n{url} {hashtags}")
         if available > 20:
-            tweet = f"{emoji} {title_trunc}\n\n{desc[:available]}…\n\n{url} {hashtags} #uutiset"
+            tweet = f"{emoji} {title_trunc}\n\n{teaser[:available]}…\n\n{url} {hashtags}"
         else:
-            tweet = f"{emoji} {title_trunc[:220]}\n\n{url} {hashtags} #uutiset"
+            tweet = f"{emoji} {title_trunc[:220]}\n\n{url} {hashtags}"
 
     return tweet[:280]
 
