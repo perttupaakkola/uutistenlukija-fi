@@ -556,6 +556,11 @@ Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vä
                 continue
             print(f"[writer]   Individual fallback → {len(pass1_result)} articles")
 
+        # Stamp batch index into each written article so source metadata lookup
+        # stays correct even after DUPLICATE/FILTER items are removed downstream.
+        for _j, _art in enumerate(pass1_result):
+            _art["_batch_idx"] = _j
+
         try:
             # Pass 2: Anti-AI audit
             audit_prompt = f"""Tarkista ja korjaa seuraavat uutisartikkelit.
@@ -627,7 +632,8 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                     sentinel = "FILTER"
                     break
             if sentinel:
-                orig = batch[j].get("title", "?") if j < len(batch) else "?"
+                _bidx_s = written_article.get("_batch_idx", j)
+                orig = batch[_bidx_s].get("title", "?") if _bidx_s < len(batch) else "?"
                 print(f"[writer]   {sentinel}: '{orig[:60]}' — skipped")
                 continue
 
@@ -651,20 +657,24 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
             if title_len > 100 or title_len < 10:
                 print(f"[writer]   ⚠ Suspicious title length ({title_len} chars): '{title[:60]}'")
 
-            if j < len(batch):
-                written_article["fingerprint"] = batch[j].get("fingerprint", "")
-                written_article["trending"] = batch[j].get("trending", False)
+            # Use _batch_idx (stamped before any filtering) so source metadata
+            # stays correctly paired even after DUPLICATE/FILTER items are skipped.
+            _bidx = written_article.get("_batch_idx", j)
+            if _bidx < len(batch):
+                written_article["fingerprint"] = batch[_bidx].get("fingerprint", "")
+                written_article["trending"] = batch[_bidx].get("trending", False)
                 # Pass source attribution fields through to publisher
                 for _src_field in ("source", "source_domain", "source_url", "link"):
-                    if _src_field in batch[j]:
-                        written_article[_src_field] = batch[j][_src_field]
+                    if _src_field in batch[_bidx]:
+                        written_article[_src_field] = batch[_bidx][_src_field]
                 # Preserve source context for number validation in quality gate
-                _src_article = batch[j]
+                _src_article = batch[_bidx]
                 written_article["source_text"] = " ".join(filter(None, [
                     str(_src_article.get("title", "")),
                     str(_src_article.get("description", "")),
                     str(_src_article.get("research", "")),
                 ]))
+            written_article.pop("_batch_idx", None)  # don't leak internal field to output
             # Normalise tags — ensure list of lowercase strings, 2–5 items
             raw_tags = written_article.get("tags", [])
             if isinstance(raw_tags, list):
