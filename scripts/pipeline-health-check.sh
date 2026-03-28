@@ -11,7 +11,7 @@
 
 set -euo pipefail
 
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/..&& pwd)"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HEALTH_JSON="$PROJECT_DIR/static/api/health.json"
 PIPELINE_DIR="$PROJECT_DIR/pipeline"
 ALERT_THRESHOLD_HOURS=3
