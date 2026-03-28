@@ -28,6 +28,8 @@ from datetime import datetime, timezone, timedelta
 GA4_PROPERTY   = "529369568"
 GA4_SECRETS_PATHS = [
     "/workspace/.secrets/analytics-tokens.json",
+    "/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace-max/projects/uutistenlukija/.secrets/analytics-tokens.json",
 ]

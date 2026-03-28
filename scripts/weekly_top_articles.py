@@ -33,6 +33,8 @@ METRICS_CHANNEL = "1482720741790060554"  # #metrics
 # Token file: workspace path works in sandbox, absolute path on host
 GA4_SECRETS_PATHS = [
     "/workspace/.secrets/analytics-tokens.json",
+    "/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace-max/projects/uutistenlukija/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace-alex/projects/uutistenlukija/.secrets/analytics-tokens.json",
