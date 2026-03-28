@@ -93,6 +93,12 @@ fi
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
+# Pull latest pipeline code from origin so scanner.py and scripts stay current.
+# Without this, the host checkout drifts from GitHub main and new feeds/fixes
+# never reach the running pipeline. --rebase keeps history linear.
+# Non-fatal: if pull fails (offline, conflict), we proceed with current code.
+git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE" || echo "[git-pull] pull failed (non-fatal, continuing with current code)" | tee -a "$LOG_FILE"
+
 # CRITICAL: Reset index + restore layout/script files to HEAD before staging.
 # Bridge syncs from Alex's sessions can leave modified layout files or scripts
 # with wrong permissions in the working tree. This ensures:
