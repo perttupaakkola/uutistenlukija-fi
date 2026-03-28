@@ -19,8 +19,13 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).parent.parent
-SECRETS_DIR = PROJECT_DIR.parent / ".secrets"
-ANALYTICS_TOKENS = SECRETS_DIR / "analytics-tokens.json"
+# Try multiple candidate paths (same pattern as weekly-metrics-digest.py)
+_SECRETS_CANDIDATES = [
+    PROJECT_DIR / ".secrets" / "analytics-tokens.json",
+    PROJECT_DIR.parent / ".secrets" / "analytics-tokens.json",
+    Path.home() / ".openclaw" / "workspace" / "projects" / "uutistenlukija" / ".secrets" / "analytics-tokens.json",
+]
+ANALYTICS_TOKENS = next((p for p in _SECRETS_CANDIDATES if p.exists()), _SECRETS_CANDIDATES[0])
 ENV_FILE = PROJECT_DIR / "pipeline" / ".env"
 GA4_PROPERTY = "529369568"
 METRICS_CHANNEL = "1482720741790060554"  # #metrics
@@ -38,7 +43,7 @@ load_env()
 
 def get_ga4_token() -> str:
     if not ANALYTICS_TOKENS.exists():
-        raise FileNotFoundError(f"Analytics tokens not found at {ANALYTICS_TOKENS}")
+        raise FileNotFoundError(f"Analytics tokens not found. Tried: {[str(p) for p in _SECRETS_CANDIDATES]}")
     data = json.loads(ANALYTICS_TOKENS.read_text())
     token = data.get("access_token", "")
     # Try refresh if needed
