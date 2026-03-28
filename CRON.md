@@ -34,3 +34,7 @@ All times UTC. See the live crontab for exact entries.
 - sync-taskboard
 - refresh-anthropic-token
 - check-github-actions (every 10 min)
+
+## Added 2026-03-28
+- **06:30 daily** — fetch_search_console.py (pull GSC data → search-console-data.json)
+- **07:30 daily** — category_distribution.py --post-discord (category balance report)
