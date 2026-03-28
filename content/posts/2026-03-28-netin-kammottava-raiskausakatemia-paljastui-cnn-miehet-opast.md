@@ -29,7 +29,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/netin-kammottava-raiskausakatemia-paljastui-cnn-miehet-opastavat-toisiaan-jarkyttavissa-teoissa/9316712"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
