@@ -12,7 +12,7 @@ ALERT_THRESHOLD=2
 COOLDOWN=1800
 
 if [ -z "$WEBHOOK" ]; then
-  . "$PROJECT/pipeline/.env" 2>/dev/null || true
+  . "$PROJECT/.env" 2>/dev/null || true
   WEBHOOK="${DISCORD_METRICS_WEBHOOK:-}"
 fi
 
