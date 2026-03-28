@@ -33,7 +33,6 @@ keywords:
 source_name: "scoop.it"
 source_url: "https://www.scoop.it/topic/oppitori/p/4170666686/2026/03/28/rappari-jay-z-ta-syytettiin-lapsen-raiskaamisesta-puhuu-nyt-suunsa-puhtaaksi"
 source_domain: "scoop.it"
-briefing: true
 draft: false
 ---
 
