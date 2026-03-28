@@ -128,6 +128,7 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
     - "kulttuuri" → [kulttuuri](/categories/kulttuuri/)
     - "tiede" → [tiede](/categories/tiede/)
     - "uutiskirje" → [uutiskirje](/uutiskirje/)
+    - "pääsiäinen" tai "pääsiäiseksi" tai "pääsiäisenä" → [pääsiäisopas](/paasiaisopas/)
     Lisää linkit vain jos sana esiintyy luonnollisesti lauseessa. Älä pakota linkkejä. Jos artikkelissa ei ole sopivia kohtia, jätä sisältö ennalleen.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
