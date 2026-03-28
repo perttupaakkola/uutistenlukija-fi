@@ -261,6 +261,7 @@ RSS_FEEDS = [
         "name": "Turun Sanomat",
         "url": "https://www.ts.fi/rss.xml",
         "language": "fi",
+        "disabled": True,  # Paywall — rewriter fabricates from partial RSS content
     },
     {
         "name": "HS Tuoreimmat",
