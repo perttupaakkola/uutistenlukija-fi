@@ -25,7 +25,6 @@ tags:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/mar/28/pope-leo-monaco-papal-visit"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 image: "https://images.pexels.com/photos/29945580/pexels-photo-29945580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 image_thumb: "https://images.pexels.com/photos/29945580/pexels-photo-29945580.jpeg?auto=compress&cs=tinysrgb&w=640"
