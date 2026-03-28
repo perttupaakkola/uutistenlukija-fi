@@ -29,7 +29,7 @@ briefing: true
 draft: false
 ---
 
-Paavi Leo XIV vierailee Monacoon, mikä merkitsee ensimmäistä kertaa lähes viiteen vuoteen, että paavi astuu tämän alueen maaperälle. Tämä yhden päivän matka on herättänyt monia kysymyksiä, erityisesti siksi, että se tapahtuu 488 vuotta edellisen paavin vierailun jälkeen, jolloin paavi Paul III kävi siellä vuonna 1538. 
+Paavi Leo XIV vierailee Monacoon ensimmäistä kertaa 488 vuoteen — edellisen kerran alueen maaperälle astui paavi Paul III vuonna 1538. Tämä yhden päivän matka on herättänyt monia kysymyksiä, erityisesti siksi, että se tapahtuu 488 vuotta edellisen paavin vierailun jälkeen, jolloin paavi Paul III kävi siellä vuonna 1538. 
 
 ## Matkan merkitys ja taustat
 
