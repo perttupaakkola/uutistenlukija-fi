@@ -64,10 +64,21 @@ def _extract_numbers(text: str) -> set[str]:
     raw = _NUMBER_RE.findall(text or "")
     normalised: set[str] = set()
     for token in raw:
-        # Strip spaces, normalise decimal comma/dot, lowercase unit
-        n = re.sub(r"\s+", "", token.strip())
-        n = n.replace(",", ".")
-        normalised.add(n.lower())
+        n = token.strip()
+        # Split off any trailing unit
+        unit_match = re.search(r"(%|prosentt[ia]|milj(?:oona[a-z]*)?|mrd|kg|km|m²|MW|GW|€|euroa|dollari[a-z]*)$", n, re.IGNORECASE)
+        unit = unit_match.group(0).lower() if unit_match else ""
+        num_part = n[:unit_match.start()].strip() if unit_match else n
+        # Normalise thousands separators: remove spaces and commas used as separators
+        # Detect if comma is thousands separator (followed by exactly 3 digits at end)
+        if re.match(r"^\d{1,3}(,\d{3})+$", num_part):
+            num_part = num_part.replace(",", "")  # 30,000 → 30000
+        elif re.match(r"^\d{1,3}(\s\d{3})+$", num_part):
+            num_part = re.sub(r"\s", "", num_part)  # 30 000 → 30000
+        else:
+            # Remaining commas/spaces are decimal separators or noise
+            num_part = re.sub(r"\s+", "", num_part).replace(",", ".")
+        normalised.add((num_part + unit).lower())
     return normalised
 
 
