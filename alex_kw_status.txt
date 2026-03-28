@@ -1,0 +1,61 @@
+ M pipeline/publisher.py
+diff --git a/pipeline/publisher.py b/pipeline/publisher.py
+index 7cf0a971..d859cdd8 100644
+--- a/pipeline/publisher.py
++++ b/pipeline/publisher.py
+@@ -18,6 +18,16 @@ CONTENT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fil
+ SITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ HUGO_BIN = os.environ.get("HUGO_BIN", "/workspace/hugo")
+ 
++TECH_CATEGORY_KEYWORDS = [
++    "tekoäly", "ohjelmisto", "sovellus", "tietokone", "mobiili", "älypuhelin",
++    "tietoturva", "kyberturvallisuus", "digitaalinen", "robotti", "automaatio",
++    "pilvipalvelu", "startup", "teknologia",
++]
++SCIENCE_CATEGORY_KEYWORDS = [
++    "tutkimus", "tiede", "tutkijat", "löytö", "avaruus", "ilmasto",
++    "ilmastonmuutos", "evoluutio", "genomi", "dna", "lääketiede",
++]
++
+ 
+ def _make_slug(title: str, max_length: int = 60) -> str:
+     """Create a URL-friendly slug from title."""
+@@ -200,6 +210,45 @@ def _refresh_daily_briefing_flags(target_day: str) -> list[str]:
+     return updated
+ 
+ 
++def _keyword_score(text: str, keywords: list[str]) -> int:
++    if not text:
++        return 0
++
++    score = 0
++    lowered = text.casefold()
++    for keyword in keywords:
++        folded = keyword.casefold()
++        if keyword == "AI":
++            if re.search(r"(?<![a-zåäö])ai(?![a-zåäö])", lowered, re.IGNORECASE):
++                score += 1
++            continue
++        if folded in lowered:
++            score += 1
++    return score
++
++
++def _apply_keyword_category_override(article: Dict, category: str) -> str:
++    raw_category = str(article.get("category") or "").strip()
++    if raw_category and raw_category.lower() != "kotimaa":
++        return category
++
++    haystack = " ".join(
++        str(article.get(field, "") or "")
++        for field in ("title", "summary", "content")
++    )
++    if not haystack.strip():
++        return category
++
++    tech_score = _keyword_score(haystack, TECH_CATEGORY_KEYWORDS + ["AI"])
++    science_score = _keyword_score(haystack, SCIENCE_CATEGORY_KEYWORDS)
++
++    if tech_score == 0 and science_score == 0:
++        return category
++    if science_score > tech_score:
