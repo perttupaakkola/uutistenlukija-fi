@@ -24,6 +24,7 @@ keywords:
   - "virpomisloru"
   - "virpominen palmusunnuntai"
   - "pääsiäisperinteet"
+briefing: true
 draft: false
 ---
 
