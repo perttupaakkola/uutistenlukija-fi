@@ -30,6 +30,7 @@ briefing: true
 draft: false
 image: "https://images.pexels.com/photos/20101888/pexels-photo-20101888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 image_credit: "Photo by Masood Aslami on Pexels"
+image_thumb: "https://images.pexels.com/photos/20101888/pexels-photo-20101888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350&w=500"
 ---
 
 Euroopan keskuspankki (EKP) aikoo nostaa ohjauskorkoja huhtikuussa, mikä muuttaa talouden toimintaympäristöä merkittävästi. Danske Bank on ennustanut, että korkojen nosto tulee toteutumaan, ja lisäksi ennakoidaan nostojen jatkuvan myös kesäkuussa. Tämä kehitys on merkki EKP:n pyrkimyksestä torjua kiihtyvää inflaatiota eurosamassa, joka on korkeimmalla tasolla pitkään aikaan. Inflaation tarkastelu on tärkeää, sillä se vaikuttaa suoraan kansalaisten ostovoimaan sekä yritysten päätöksentekoon.

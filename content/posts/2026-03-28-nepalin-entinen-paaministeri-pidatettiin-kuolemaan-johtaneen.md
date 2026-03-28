@@ -28,6 +28,7 @@ source_domain: "bbci.co.uk"
 draft: false
 image: "https://images.pexels.com/photos/36524167/pexels-photo-36524167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 image_credit: "Photo by Volker Meyer on Pexels"
+image_thumb: "https://images.pexels.com/photos/36524167/pexels-photo-36524167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350&w=500"
 ---
 
 Nepalin entinen pääministeri KP Sharma Oli on pidätetty väitetyn osallisuutensa vuoksi kuolemaan johtuneessa mielenosoitusten tukahduttamisessa viime vuonna. Mielenosoituksissa kuoli yli 70 ihmistä, mukaan lukien monet protestoijat poliisin ampuma, syyskuussa. Kohu sai alkunsa sosiaalisen median sulkemisesta, mutta se sai myös voimaa kansalaisten kasvavasta tyytymättömyydestä korruptioon ja heikkoon taloustilanteeseen.

@@ -27,6 +27,7 @@ source_domain: "maaseuduntulevaisuus.fi"
 draft: false
 image: "https://images.pexels.com/photos/31092525/pexels-photo-31092525.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 image_credit: "Photo by Matt Webster on Pexels"
+image_thumb: "https://images.pexels.com/photos/31092525/pexels-photo-31092525.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350&w=500"
 ---
 
 Uuden tutkimuksen mukaan runsas lihankulutus saattaa lieventää Alzheimer-riskigeeniä kantavien iäkkäiden henkilöiden kognitiivista heikentymistä. Ruotsalaisen Karoliinisen instituutin tutkijat havaitsivat, että korkeinta lihaosuutta ruokavaliossaan pitävät vanhukset eivät kärsineet merkittävästä muistisairausriskin noususta. Tutkimustulokset julkaistiin JAMA Network Open -lehdessä, ja ne osoittavat mahdollisuuksia kehittää yksilöllisempiä ravitsemussuosituksia erityisesti korkean Alzheimerin tautiriskiin. 
