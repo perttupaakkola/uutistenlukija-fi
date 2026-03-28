@@ -34,6 +34,8 @@ METRICS_CHANNEL = "1482720741790060554"  # #metrics
 GA4_SECRETS_PATHS = [
     "/workspace/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace/.secrets/analytics-tokens.json",
+    "/home/pertt/.openclaw/workspace-max/projects/uutistenlukija/.secrets/analytics-tokens.json",
+    "/home/pertt/.openclaw/workspace-alex/projects/uutistenlukija/.secrets/analytics-tokens.json",
 ]
 
 DISCORD_METRICS_WEBHOOK = os.environ.get(

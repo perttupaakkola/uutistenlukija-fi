@@ -58,6 +58,12 @@
 # Article validator (Sundays 07:30 UTC)
 30 7 * * 0 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 pipeline/validate_articles.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/validate-articles.log 2>&1
 
+# Fetch Search Console data daily (06:30 UTC)
+30 6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/fetch_search_console.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/fetch-search-console.log 2>&1
+
+# Category distribution stats (07:30 UTC)
+30 7 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/category_distribution.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/category-distribution.log 2>&1
+
 # Site uptime monitor (every 15 min, alerts after 2 consecutive failures — HTTP check → #metrics)
 */15 * * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/uptime_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/uptime-monitor.log 2>&1
 

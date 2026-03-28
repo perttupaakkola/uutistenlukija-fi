@@ -26,7 +26,13 @@ from datetime import datetime, timezone, timedelta
 
 # ── Config ────────────────────────────────────────────────────────────────────
 GA4_PROPERTY   = "529369568"
-GA4_SECRETS    = "/workspace/.secrets/analytics-tokens.json"
+GA4_SECRETS_PATHS = [
+    "/workspace/.secrets/analytics-tokens.json",
+    "/home/pertt/.openclaw/workspace/.secrets/analytics-tokens.json",
+    "/home/pertt/.openclaw/workspace-max/projects/uutistenlukija/.secrets/analytics-tokens.json",
+]
+GA4_SECRETS = next((p for p in GA4_SECRETS_PATHS if os.path.exists(p)),
+                   GA4_SECRETS_PATHS[0])
 METRICS_CHANNEL = "1482720741790060554"  # #metrics
 
 # Fallback: use DISCORD_METRICS_WEBHOOK env or bot token

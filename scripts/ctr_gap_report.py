@@ -85,19 +85,22 @@ def analyze_gsc_data(rows: list, top_n: int) -> list:
     for row in rows:
         impressions = row.get("impressions", 0)
         clicks = row.get("clicks", 0)
-        ctr = row.get("ctr", clicks / impressions if impressions > 0 else 0)
+        ctr_raw = row.get("ctr", clicks / impressions if impressions > 0 else 0)
+        # Normalise: GSC stores CTR as decimal (0.027) but fetch_search_console.py
+        # may return percentage (2.7). Normalise to percentage for display.
+        ctr = ctr_raw * 100 if ctr_raw < 1 else ctr_raw
         position = row.get("position", 99)
 
-        if impressions >= 100 and ctr < 0.02 and 4 <= position <= 20:
+        if impressions >= 50 and ctr < 3.0 and 4 <= position <= 20:
             gaps.append({
                 "url": row.get("url", row.get("page", "")),
                 "query": row.get("query", ""),
                 "impressions": impressions,
                 "clicks": clicks,
-                "ctr": round(ctr * 100, 2),
+                "ctr": round(ctr, 2),  # already in percent
                 "position": round(position, 1),
                 "potential_clicks": round(impressions * 0.05),
-                "gap_size": round(impressions * (0.05 - ctr)),
+                "gap_size": round(impressions * (0.05 - ctr / 100)),
             })
 
     gaps.sort(key=lambda x: x["gap_size"], reverse=True)
