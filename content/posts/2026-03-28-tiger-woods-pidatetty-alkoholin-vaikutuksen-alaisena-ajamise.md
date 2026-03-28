@@ -26,7 +26,6 @@ tags:
 source_name: "BBC World"
 source_url: "https://www.bbc.com/sport/golf/articles/cvg092kege7o?at_medium=RSS&at_campaign=rss"
 source_domain: "bbci.co.uk"
-briefing: true
 draft: false
 ---
 
