@@ -33,7 +33,6 @@ keywords:
 source_name: "shpilotech.com"
 source_url: "https://www.shpilotech.com/fi/laboratorio-suihkukuivain/"
 source_domain: "shpilotech.com"
-briefing: true
 draft: false
 ---
 
