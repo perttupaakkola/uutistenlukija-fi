@@ -4,7 +4,8 @@
 
 ## Uutiset
 
-{{ range first 50 (where .Site.RegularPages "Section" "posts" | sort "Date" "desc") -}}
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ range first 50 $posts.ByDate.Reverse -}}
 - [{{ .Title }}]({{ .Permalink }}): {{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 120 }}{{ end }}
 {{ end }}
 ## Osiot
