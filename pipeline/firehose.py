@@ -129,6 +129,7 @@ _TAG_CATEGORY_MAP = {
     "tiede": "Tiede",
     "talous-fallback": "Talous",
     "urheilu-fallback": "Urheilu",
+    "teknologia": "Teknologia",
     # Legacy tag names (kept for backward compat with old state files)
     "finnish-tiede": "Tiede",
     "finnish-talous": "Talous",
