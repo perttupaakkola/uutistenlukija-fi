@@ -33,7 +33,6 @@ keywords:
 source_name: "scoop.it"
 source_url: "https://www.scoop.it/topic/oppitori/p/4170664662/2026/03/28/kriget-i-iran-skapar-spanningar-inom-maga-rorelsen-ar-totalforstord-utrikes"
 source_domain: "scoop.it"
-briefing: true
 draft: false
 ---
 
