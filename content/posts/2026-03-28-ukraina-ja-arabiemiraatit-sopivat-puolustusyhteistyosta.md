@@ -28,7 +28,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/ukraina-ja-arabiemiraatit-sopivat-puolustusyhteistyosta/9316962"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "Ukraina ja Arabiemiraatit sopivat puolustusyhteistyöstä"
