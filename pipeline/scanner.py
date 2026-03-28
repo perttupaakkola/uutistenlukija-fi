@@ -70,6 +70,8 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "TechCrunch":         2,
     "Ars Technica":       2,
     "Science News":       2,
+    "Etelä-Suomen Sanomat": 2,
+    "Lääkärilehti":       2,
     # ── Tier 3: Aggregators / smaller sites ──────────────────────────────────
     "Hacker News Best":   3,
 }
@@ -224,6 +226,18 @@ RSS_FEEDS = [
         "url": "https://www.maaseuduntulevaisuus.fi/feeds/maaseuduntulevaisuus",
         "language": "fi",
         "category_hint": "Kotimaa",
+    },
+    {
+        "name": "Etelä-Suomen Sanomat",
+        "url": "https://www.ess.fi/feed/rss/",
+        "language": "fi",
+        "category_hint": "Kotimaa",
+    },
+    {
+        "name": "Lääkärilehti",
+        "url": "http://www.laakarilehti.fi/?rss=1",
+        "language": "fi",
+        "category_hint": "Tiede",
     },
     {
         "name": "Science News",
