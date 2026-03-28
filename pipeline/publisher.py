@@ -18,6 +18,56 @@ CONTENT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HUGO_BIN = os.environ.get("HUGO_BIN", "/workspace/hugo")
 
+TECH_CATEGORY_KEYWORDS = [
+    "tekoäly", "ohjelmisto", "sovellus", "tietokone", "mobiili", "älypuhelin",
+    "tietoturva", "kyberturvallisuus", "digitaalinen", "robotti", "automaatio",
+    "pilvipalvelu", "startup", "teknologia",
+]
+
+SCIENCE_CATEGORY_KEYWORDS = [
+    "tutkimus", "tiede", "tutkijat", "löytö", "avaruus", "ilmasto",
+    "ilmastonmuutos", "evoluutio", "genomi", "DNA", "lääketiede",
+]
+
+
+def _keyword_score(text: str, keywords: list) -> int:
+    """Count keyword matches in text (case-insensitive, word-boundary for 'AI')."""
+    score = 0
+    lowered = text.casefold()
+    for keyword in keywords:
+        folded = keyword.casefold()
+        if keyword == "AI":
+            if re.search(r"(?<![a-zåäö])ai(?![a-zåäö])", lowered, re.IGNORECASE):
+                score += 1
+            continue
+        if folded in lowered:
+            score += 1
+    return score
+
+
+def _apply_keyword_category_override(article: dict, category: str) -> str:
+    """Override category to Teknologia/Tiede based on keyword scoring.
+    Only fires when current category is Kotimaa or missing."""
+    raw_category = str(article.get("category") or "").strip()
+    if raw_category and raw_category.lower() != "kotimaa":
+        return category
+
+    haystack = " ".join(
+        str(article.get(field, "") or "")
+        for field in ("title", "summary", "content")
+    )
+    if not haystack.strip():
+        return category
+
+    tech_score = _keyword_score(haystack, TECH_CATEGORY_KEYWORDS + ["AI"])
+    science_score = _keyword_score(haystack, SCIENCE_CATEGORY_KEYWORDS)
+
+    if tech_score == 0 and science_score == 0:
+        return category
+    if science_score > tech_score:
+        return "Tiede"
+    return "Teknologia"
+
 
 def _make_slug(title: str, max_length: int = 60) -> str:
     """Create a URL-friendly slug from title."""
@@ -208,11 +258,12 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     title = title.replace('"', '\\"')
     # Normalize category: match against canonical list (case-insensitive), fallback to Kotimaa
     _CANONICAL_CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
-    _raw_category = article.get("category", "Kotimaa").strip()
+    _raw_category = str(article.get("category", "") or "").strip()
     category = next(
         (c for c in _CANONICAL_CATEGORIES if c.lower() == _raw_category.lower()),
         "Kotimaa"  # fallback if LLM returns unknown value
     )
+    category = _apply_keyword_category_override(article, category)
     content = article.get("content", "")
     # Sanitize content: strip bare YAML front matter delimiters (would break Hugo parsing)
     content = re.sub(r"(?m)^---+\s*$", "—", content)
