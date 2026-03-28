@@ -1,6 +1,6 @@
 ---
 title: "Tiede"
-description: "Tiedeuutiset suomeksi – uusimmat tiede uutiset, tutkimus uutiset ja tieteen löydöt. Lue päivän kiinnostavimmat tiedeuutiset Uutistenlukijasta."
+description: "Universumin mysteerit ja uusimmat tutkimusläpimurrot. Selkeää ja kiehtovaa tietoa tieteen eturintamasta."
 og_image: "/images/og-tiede.png"
 keywords:
   - "tiedeuutiset"

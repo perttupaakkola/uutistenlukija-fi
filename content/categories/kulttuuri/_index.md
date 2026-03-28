@@ -1,6 +1,6 @@
 ---
 title: "Kulttuuri"
-description: "Kulttuuri uutiset ja viihde uutiset suomeksi – musiikki, elokuva, teatteri ja kulttuuritapahtumat. Lue uusimmat kulttuuri- ja viihdeuutiset Uutistenlukijasta."
+description: "Ilmiöt, taide ja viihde pintaa syvemmältä. Tutustu kulttuurikentän kiinnostavimpiin tekijöihin ja tarinoihin."
 og_image: "/images/og-kulttuuri.png"
 keywords:
   - "kulttuuri uutiset"

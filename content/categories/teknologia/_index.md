@@ -1,6 +1,6 @@
 ---
 title: "Teknologiauutiset suomeksi – tekoäly ja IT"
-description: "Tekoäly, IT, ohjelmistot ja muut teknologiakäänteet selkeästi koottuna suomeksi."
+description: "Digimurros, uusimmat innovaatiot ja tekoälyn vallankumous. Tulevaisuus on täällä — seuraa sitä kanssamme."
 og_image: "/images/og-teknologia.png"
 keywords:
   - "teknologia uutiset suomeksi"

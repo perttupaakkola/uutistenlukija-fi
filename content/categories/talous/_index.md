@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-description: "Talousuutiset, markkinat ja yritysliikkeet tiiviisti yhdessä näkymässä ilman turhaa kiertelyä."
+description: "Markkinoiden liikkeet, pörssihuippujen analyysit ja talouden suunnat. Pysy askeleen edellä raha-asioissa."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"

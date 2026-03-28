@@ -1,6 +1,6 @@
 ---
 title: "Ulkomaat"
-description: "Maailman tärkeimmät uutiset ja kansainväliset käänteet suomeksi Euroopasta, Yhdysvalloista ja muualta."
+description: "Maailmanpolitiikan polttopisteet ja globaalit ilmiöt selitettynä. Laajenna näkökulmaasi rajojen ulkopuolelle."
 og_image: "/images/og-ulkomaat.png"
 keywords:
   - "ulkomaan uutiset"

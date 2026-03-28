@@ -1,6 +1,6 @@
 ---
 title: "Kotimaa"
-description: "Suomen tärkeimmät uutiset politiikasta, yhteiskunnasta ja päivän puheenaiheista yhdessä näkymässä."
+description: "Suomen tärkeimmät uutiset ja puhutuimmat aiheet suoraan ytimeen. Tiedä mitä maassa tapahtuu juuri nyt."
 og_image: "/images/og-kotimaa.png"
 keywords:
   - "kotimaan uutiset"
