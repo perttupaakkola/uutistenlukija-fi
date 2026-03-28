@@ -62,6 +62,7 @@
     {{ $crumbs = $crumbs | append (dict "name" "Aihetunnisteet" "url" (printf "%stags/" $base)) }}
     {{ $crumbs = $crumbs | append (dict "name" (printf "#%s" .Title) "url" .Permalink) }}
   {{ else }}
+    {{ $crumbs = $crumbs | append (dict "name" "Kategoriat" "url" (printf "%scategories/" $base)) }}
     {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
   {{ end }}
 
