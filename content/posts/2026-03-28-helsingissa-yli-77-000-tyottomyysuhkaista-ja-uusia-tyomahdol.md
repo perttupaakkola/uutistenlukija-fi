@@ -31,7 +31,6 @@ keywords:
 source_name: "scoop.it"
 source_url: "https://www.scoop.it/topic/oppitori/p/4170664651/2026/03/28/helsingissa-on-yli-77-000-tyotonta-mutta-roihupellon-levyseppa-hitsaajia-odottaa-varma-tyopaikka-kotimaa-yle"
 source_domain: "scoop.it"
-briefing: true
 draft: false
 ---
 
