@@ -74,6 +74,7 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "Etelä-Suomen Sanomat": 2,
     "Lääkärilehti":       2,
     "Suomen Yrittäjät":   2,
+    "Teknavi":            2,
     # ── Tier 3: Aggregators / smaller sites ──────────────────────────────────
     "Hacker News Best":   3,
 }
@@ -215,13 +216,20 @@ RSS_FEEDS = [
         "name": "Tivi",
         "url": "https://www.tivi.fi/feed/",
         "language": "fi",
-        "category_hint": "Teknologia",
+        # No category_hint — tivi.fi content is mixed (tech, lifestyle, general);
+        # let the rewriter classify per article
     },
     {
         "name": "io-tech.fi",
         "url": "https://www.io-tech.fi/feed/rss/",
         "language": "fi",
         "category_hint": "Teknologia",
+    },
+    {
+        "name": "Teknavi",
+        "url": "https://teknavi.fi/feed/",
+        "language": "fi",
+        "category_hint": "Teknologia",  # Finnish consumer tech (phones, gadgets, Apple/Samsung)
     },
     {
         "name": "mobiili.fi",
@@ -468,6 +476,8 @@ _URL_PATH_CATEGORY: list[tuple[str, str]] = [
     ("/ulkomaat/",    "Ulkomaat"),
     ("/politiikka/",  "Kotimaa"),
     ("/kotimaa/",     "Kotimaa"),
+    # IS Digitoday: is.fi/digitoday/...
+    ("/digitoday/",   "Teknologia"),
     # Iltalehti: iltalehti.fi/<section>/a/...
     # (same path segments, covered by patterns above)
     # Yle sub-feeds: yle.fi/uutiset/<topic> style links are numeric; handled by feed-level hints
