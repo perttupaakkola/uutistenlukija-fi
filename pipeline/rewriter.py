@@ -31,8 +31,8 @@ except Exception:
 SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
 
 === PITUUS ===
-Tavoite 280–380 sanaa. Jos lähde on lyhyt, kirjoita lyhyempi artikkeli — älä täytä tyhjää tilaa keksityllä tiedolla.
-Alle 200 sanan artikkelit ovat OK jos lähdemateriaali ei anna enemmän.
+Tavoite 400–600 sanaa. Jos lähde on lyhyt, laajenna taustan, merkityksen ja seurausten avulla — älä täytä tyhjää tilaa keksityllä tiedolla.
+Alle 300 sanan artikkelit hyväksytään vain jos lähdemateriaali on todella niukka eikä laajentaminen ole mahdollista.
 
 Kun lähdemateriaali on lyhyt, laajenna VAIN näillä tavoilla (ilman keksittyjä faktoja):
   * Tausta: Mitä tapahtui aiemmin tässä asiassa? (vain jos tiedät sen varmasti)
@@ -112,9 +112,9 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 9. TARKISTA KIELI: artikkelin täytyy olla suomea. Jos jokin lause on englanniksi, käännä se.
 10. TARKISTA RAKENNE: pidemmissä artikkeleissa (300+ sanaa) tulee olla 1-2 H2-väliotsikkoa (## Otsikko).
     Lyhyissä (alle 300 sanaa) ei väliotsikoita. Lisää tai poista tarvittaessa.
-11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 280 sanaa (tavoite 300–400). Jos artikkeli on lyhyempi,
+11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 350 sanaa (tavoite 400–600). Jos artikkeli on lyhyempi,
     laajenna sitä lisäämällä taustan, kontekstin ja vaikutusten kuvausta. ÄLÄ koskaan
-    palauta alle 280 sanan artikkelia. Tavallinen kappale on 60–80 sanaa.
+    palauta alle 350 sanan artikkelia. Tavallinen kappale on 60–80 sanaa.
 12. TARKISTA journalist_note: säilytä se vain jos siinä on aitoa toimituksellista lisäarvoa. Poista geneerinen tai itsestään selvä huomio käyttämällä tyhjää merkkijonoa.
 13. TARKISTA content_type: pidä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaiseen, kehittyvään tai tulkintaa vaativaan aiheeseen.
 14. TARKISTA editorial_reviewed: sen tulee aina olla true.
@@ -490,7 +490,7 @@ Kuvaus: {article['description']}{research_section}{lang_note}{attribution_note}{
 
         prompt = f"""Kirjoita jokaisesta seuraavasta aiheesta oma, alkuperäinen uutisartikkeli.
 
-MUISTUTUS PITUUDESTA: Jokaisen artikkelin TÄYTYY olla 300–400 sanaa (minimi 280). Tavallinen kappale on 60–80 sanaa. Tarvitset VÄHINTÄÄN 4–5 täyttä kappaletta. Lisää tausta, merkitys ja seuraukset jokaiseen artikkeliin.
+MUISTUTUS PITUUDESTA: Jokaisen artikkelin TÄYTYY olla 400–600 sanaa (minimi 350). Tavallinen kappale on 60–80 sanaa. Tarvitset VÄHINTÄÄN 5–7 täyttä kappaletta. Lisää tausta, merkitys ja seuraukset jokaiseen artikkeliin.
 
 {articles_text}
 
@@ -498,7 +498,7 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
 [
   {{
     "title": "Uutisen otsikko (max 80 merkkiä)",
-    "content": "Vähintään 280 sanan uutisteksti. 4-6 kappaletta, erotettu \\n\\n. Käytä 1-2 H2-väliotsikkoa (## Otsikko) kun artikkeli on 300+ sanaa.",
+    "content": "Vähintään 350 sanan uutisteksti. 5-7 kappaletta, erotettu \\n\\n. Käytä 1-2 H2-väliotsikkoa (## Otsikko) kun artikkeli on 300+ sanaa.",
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
     "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",

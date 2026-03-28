@@ -1,34 +1,28 @@
-{{- /*
-  category-badge.html — Color-coded category badge
-  Usage: {{ partial "category-badge.html" (dict "category" "Talous" "link" true) }}
-  Params:
-    .category — category name string
-    .link     — bool, whether to wrap in <a> tag (default true)
-*/ -}}
-{{- $cat := .category | default "" -}}
-{{- $link := ne .link false -}}
-{{- $slug := $cat | urlize -}}
-
-{{- $colors := dict
-  "kotimaa"    "#c0392b"
-  "ulkomaat"   "#2563eb"
-  "talous"     "#16a34a"
-  "teknologia" "#7c3aed"
-  "urheilu"    "#dc2626"
-  "kulttuuri"  "#0891b2"
-  "tiede"      "#0f6f5d"
-  "terveys"    "#ea580c"
-  "politiikka" "#2563eb"
--}}
-
-{{- $color := index $colors $slug | default "#6b7280" -}}
-
-{{- if $cat -}}
-<span class="category-badge" style="--badge-color: {{ $color }}">
+{{- $category := .category | default "" -}}
+{{- if $category -}}
+  {{- $slug := $category | lower | urlize -}}
+  {{- $link := .link | default false -}}
+  {{- $colors := dict
+    "kotimaa" "#3498db"
+    "ulkomaat" "#e74c3c"
+    "talous" "#f39c12"
+    "teknologia" "#8e44ad"
+    "urheilu" "#27ae60"
+    "kulttuuri" "#d35400"
+    "tiede" "#16a085"
+  -}}
+  {{- $color := index $colors $slug | default "var(--accent)" -}}
+  {{- $class := printf "category-label category-label--badge category-label--%s" $slug -}}
   {{- if $link -}}
-  <a href="/categories/{{ $slug }}/" class="category-badge__link">{{ $cat }}</a>
+    <a
+      href="/categories/{{ $slug }}/"
+      class="{{ $class }}"
+      style="background-color: {{ $color }}; border-color: {{ $color }};"
+    >{{ $category }}</a>
   {{- else -}}
-  {{ $cat }}
+    <span
+      class="{{ $class }}"
+      style="background-color: {{ $color }}; border-color: {{ $color }};"
+    >{{ $category }}</span>
   {{- end -}}
-</span>
 {{- end -}}

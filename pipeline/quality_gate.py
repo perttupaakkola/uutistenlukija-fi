@@ -5,7 +5,7 @@ Scores each article 0–80 across six criteria. Articles below the threshold
 are rejected to pipeline/rejected/ before publishing.
 
 Scoring breakdown (max 80):
-  Word count        30pts  (<100→0, 100-200→10, 200-400→25, 400+→30)
+  Word count        30pts  (<200→0, 200-350→10, 350-500→25, 500+→30)
   Title             10pts  (non-empty, <100 chars)
   Meta description  10pts  (non-empty, 50–160 chars)
   Image             10pts  (non-empty image field)
@@ -35,7 +35,7 @@ from typing import NamedTuple
 _PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 REJECTED_DIR  = os.path.join(_PIPELINE_DIR, "rejected")
 REJECTS_LOG   = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
-MIN_BODY_WORDS = 200   # Lowered from 280: rewriter now accepts shorter articles over fabricated padding
+MIN_BODY_WORDS = 300   # Raised from 200: rewriter target updated to 400-600 words (2026-03-28)
 
 REJECT_THRESHOLD = 40   # minimum score to pass (out of 80)
 
@@ -127,13 +127,13 @@ def score_article(article: dict) -> ScoreBreakdown:
 
     # ── Scoring criteria ──────────────────────────────────────────────────────
 
-    # 1. Word count (30 pts)
+    # 1. Word count (30 pts) — targets updated 2026-03-28: goal 400-600 words
     word_count = len(content.split())
-    if word_count >= 400:
+    if word_count >= 500:
         wc_pts = 30
-    elif word_count >= 200:
+    elif word_count >= 350:
         wc_pts = 25
-    elif word_count >= 100:
+    elif word_count >= 200:
         wc_pts = 10
     else:
         wc_pts = 0

@@ -15,9 +15,7 @@
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="article-card">
     {{ partial "card-image.html" (dict "img" $img "thumb" $img "alt" $alt "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
-    {{ with .Params.categories }}
-    <span class="category-label">{{ index . 0 }}</span>
-    {{ end }}
+    {{ partial "category-badge.html" (dict "category" $cat "link" true) }}
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p class="excerpt">{{ .Summary | truncate 200 }}</p>
     <div class="meta">

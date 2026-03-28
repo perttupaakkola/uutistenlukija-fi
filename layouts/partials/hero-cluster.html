@@ -45,7 +45,7 @@
         </picture>
         <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-scrim-body">
-          <span class="category-pill hero-cluster__kicker">Pääuutinen</span>
+          {{ partial "category-badge.html" (dict "category" $cat "link" true) }}
           <h2 id="hero-cluster-title" class="hero-scrim-title">{{ $lead.Title }}</h2>
           {{ with $lead.Params.description }}
           <p class="hero-scrim-excerpt">{{ . | truncate 180 }}</p>
@@ -72,9 +72,7 @@
     {{ $alt := .Params.image_alt | default .Title }}
     <article class="highlight-card highlight-card--secondary hero-cluster__followup-card">
       <span class="hero-cluster__followup-label">Seuraa myös</span>
-      {{ with .Params.categories }}
-      <span class="category-label">{{ index . 0 }}</span>
-      {{ end }}
+      {{ partial "category-badge.html" (dict "category" $cat "link" true) }}
       {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink "track" "hero_click" "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
       <h3><a href="{{ .Permalink }}" data-track="hero_click">{{ .Title }}</a></h3>
       {{ with .Params.description }}

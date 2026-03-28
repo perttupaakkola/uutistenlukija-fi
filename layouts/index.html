@@ -179,6 +179,7 @@
         {{ $cardAlt := .Params.image_alt | default .Title }}
         <article class="category-article-card">
           {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "alt" $cardAlt "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cardCat | lower))) }}
+          {{ partial "category-badge.html" (dict "category" $cardCat "link" true) }}
           <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
           <p class="excerpt">{{ .Summary | truncate 135 }}</p>
           <div class="meta">

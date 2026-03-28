@@ -1,23 +1,26 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-28T07:30:47+00:00",
+  "generated_at": "2026-03-28T07:51:22+00:00",
+  "status": "degraded",
+  "is_stale": true,
+  "stale_threshold_minutes": 90,
   "runs": {
-    "total": 100,
+    "total": 98,
     "ok": 24,
     "skip": 0,
-    "error": 76
+    "error": 74
   },
   "articles": {
-    "attempted": 2220,
+    "attempted": 2175,
     "published": 28,
-    "rejected": 399,
+    "rejected": 403,
     "publish_rate": 1.3,
     "last_published_ts": "2026-03-28T06:04:37.925463+00:00"
   },
   "reject_reasons": {
-    "too_short": 381,
+    "too_short": 385,
     "only 1 paragraphs (min 3)": 24,
-    "lead_too_short": 19,
+    "lead_too_short": 20,
     "keyword_stuffing": 18,
     "unsourced numbers: 26miljoonaa": 10,
     "unsourced numbers: 500": 3,
@@ -43,14 +46,14 @@
     ],
     [
       "sillä",
-      17
+      19
     ],
     [
       "vaikuttaa",
       16
     ],
     [
-      "kuinka",
+      "eivät",
       14
     ]
   ]
