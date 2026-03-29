@@ -45,6 +45,9 @@ _query_cache: Dict[str, List[Dict]] = {}
 # Round-robin index per query
 _query_index: Dict[str, int] = {}
 
+# Global set of photo IDs used in current batch — prevents duplicate images
+_used_photo_ids: set = set()
+
 # Finnish stopwords
 _FI_STOPWORDS = {
     "ja", "tai", "on", "ei", "se", "hän", "he", "me", "te", "olla", "oli",
@@ -131,6 +134,27 @@ CATEGORY_QUERIES = {
     "Kulttuuri":  "culture arts performance",
     "Tiede":      "science research laboratory",
 }
+
+
+def load_used_ids_from_content(content_dir: str) -> None:
+    """Pre-load photo IDs already used in existing articles to avoid duplicates
+    across pipeline runs. Scans frontmatter 'image' fields for Unsplash photo IDs."""
+    import glob
+    pattern = os.path.join(content_dir, "posts", "*.md")
+    id_pattern = re.compile(r"images\.unsplash\.com/photo-([a-zA-Z0-9_-]+)")
+    count = 0
+    for path in glob.glob(pattern):
+        try:
+            with open(path, "r") as f:
+                head = f.read(2000)  # Only need frontmatter
+            m = id_pattern.search(head)
+            if m:
+                _used_photo_ids.add(m.group(1))
+                count += 1
+        except Exception:
+            continue
+    if count:
+        print(f"[unsplash] Pre-loaded {count} used photo IDs from existing content")
 
 
 def extract_keywords(title: str, category: str = "", max_terms: int = 4) -> str:
@@ -317,9 +341,30 @@ def fetch_image_for_article(
     if not photos:
         return None
 
-    idx = _query_index.get(query, 0) % len(photos)
-    _query_index[query] = idx + 1
-    photo = photos[idx]
+    # Pick first unused photo from results to avoid duplicates across articles
+    photo = None
+    start_idx = _query_index.get(query, 0)
+    for i in range(len(photos)):
+        candidate = photos[(start_idx + i) % len(photos)]
+        if candidate["id"] not in _used_photo_ids:
+            photo = candidate
+            _query_index[query] = (start_idx + i + 1) % len(photos)
+            break
+
+    if photo is None:
+        # All photos in this query are used; try category fallback if not already
+        if query != CATEGORY_QUERIES.get(category, ""):
+            fallback_query = CATEGORY_QUERIES.get(category, "news")
+            fallback_photos = _search(fallback_query)
+            for p in fallback_photos:
+                if p["id"] not in _used_photo_ids:
+                    photo = p
+                    break
+        if photo is None:
+            # Last resort: use first result even if duplicate
+            photo = photos[start_idx % len(photos)]
+
+    _used_photo_ids.add(photo["id"])
 
     # Trigger mandatory download tracking
     _trigger_download(photo)
@@ -340,7 +385,7 @@ def fetch_image_for_article(
     }
 
 
-def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
+def fetch_images_for_articles(articles: list, delay: float = 1.2, content_dir: str = "") -> list:
     """Fetch Unsplash hotlink images for a list of articles.
 
     Sets frontmatter fields on each article:
@@ -355,6 +400,10 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
 
     Skips articles that already have an `image` field set.
     """
+    # Pre-load used IDs to avoid duplicates across pipeline runs
+    if content_dir and not _used_photo_ids:
+        load_used_ids_from_content(content_dir)
+
     for article in articles:
         if article.get("image"):
             continue
