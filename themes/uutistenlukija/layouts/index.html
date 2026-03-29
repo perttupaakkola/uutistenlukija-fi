@@ -23,25 +23,23 @@
 </section>
 {{ end }}
 
-{{/* Lead article */}}
+{{/* Lead article — entire card is one tap target */}}
 {{ with index $sorted 0 }}
 {{ $cat := index .Params.categories 0 | default "kotimaa" }}
 {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
 {{ $thumb := .Params.image_thumb | default $img }}
 {{ $alt := .Params.image_alt | default .Title }}
 <article class="lead-article">
-  {{ with .Params.categories }}
-  <span class="category-label">{{ index . 0 }}</span>
-  {{ end }}
-  <h2><a href="{{ .Permalink }}" data-track="hero_click">{{ .Title }}</a></h2>
-  <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true" data-track="hero_click">
+  <a href="{{ .Permalink }}" class="card-link" data-track="hero_click">
     <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="eager" decoding="async" width="800" height="450">
+    {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
+    <h2>{{ .Title }}</h2>
+    {{- with (.Summary | truncate 300) }}<p class="excerpt">{{ . }}</p>{{- end }}
+    <div class="meta">
+      {{ .Date | time.Format "2.1. klo 15:04" }}
+      · {{ .ReadingTime }} min
+    </div>
   </a>
-  {{- with (.Summary | truncate 300) }}<p class="excerpt">{{ . }}</p>{{- end }}
-  <div class="meta">
-    {{ .Date | time.Format "2.1. klo 15:04" }}
-    · {{ .ReadingTime }} min
-  </div>
 </article>
 {{ end }}
 
@@ -54,14 +52,12 @@
   {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
   {{ $alt := .Params.image_alt | default .Title }}
   <article class="highlight-card">
-    {{ with .Params.categories }}
-    <span class="category-label">{{ index . 0 }}</span>
-    {{ end }}
-    <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
+    <a href="{{ .Permalink }}" class="card-link">
       <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
+      {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
+      <h3>{{ .Title }}</h3>
+      <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
     </a>
-    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
   </article>
   {{ end }}
 </div>
@@ -90,14 +86,14 @@
       {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
       {{ $cardAlt := .Params.image_alt | default .Title }}
       <article class="category-article-card">
-        <a href="{{ .Permalink }}" class="article-image-link" tabindex="-1" aria-hidden="true">
+        <a href="{{ .Permalink }}" class="card-link">
           <img src="{{ $cardImg }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
+          <h3>{{ .Title }}</h3>
+          {{- with (.Summary | truncate 150) }}<p class="excerpt">{{ . }}</p>{{- end }}
+          <div class="meta">
+            {{ .Date | time.Format "2.1. klo 15:04" }}
+          </div>
         </a>
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        {{- with (.Summary | truncate 150) }}<p class="excerpt">{{ . }}</p>{{- end }}
-        <div class="meta">
-          {{ .Date | time.Format "2.1. klo 15:04" }}
-        </div>
       </article>
       {{ end }}
     </div>

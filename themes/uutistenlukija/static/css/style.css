@@ -133,6 +133,26 @@ body {
 }
 a { color: var(--text); text-decoration: none; }
 a:hover { color: var(--accent); }
+
+/* Card link — wraps entire article card as one tap target */
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: none;
+}
+.card-link:hover { color: inherit; }
+.card-link:hover h2,
+.card-link:hover h3 { color: var(--accent); }
+.card-link .article-image {
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+  background: var(--border);
+}
+.card-link:hover .article-image {
+  transform: scale(1.02);
+}
+
 img { max-width: 100%; height: auto; }
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
 .site-header {
@@ -3346,5 +3366,41 @@ body.is-home .highlights-row--top {
     grid-template-columns: 1fr !important;
     padding: 0 0.75rem !important;
     gap: 0.75rem !important;
+  }
+
+  /* ── Card link: full-bleed image on mobile ──────────────────────── */
+  .lead-article .card-link .article-image {
+    border-radius: 0 !important;
+    margin-left: -0.75rem !important;
+    margin-right: -0.75rem !important;
+    width: calc(100% + 1.5rem) !important;
+    max-width: none !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .lead-article .card-link .category-label {
+    margin-top: 0.35rem;
+  }
+  .lead-article .card-link h2 {
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* ── Consistent section spacing on mobile ───────────────────────── */
+  .highlights-row {
+    padding: 1rem 0 !important;
+    margin-bottom: 1rem !important;
+    gap: 1rem !important;
+    grid-template-columns: 1fr !important;
+  }
+  .tanaan-section,
+  .lyhyet-section {
+    margin: 1rem 0 !important;
+    border-radius: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+  .category-section {
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 1rem !important;
   }
 }
