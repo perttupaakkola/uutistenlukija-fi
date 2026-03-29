@@ -1,5 +1,5 @@
 ---
-title: "Trump turhautui liittolaisiinsa Hormuzinsalmen kriisistä – Yhdysvaltain suurlähetystöä Bagdadissa vastaan hyökättiin"
+title: "Trump turhautui liittolaisiinsa Hormuzinsalmen kriisistä – Bagdadin suurlähetystöön hyökättiin"
 description: "Yhdysvaltain presidentti Donald Trump arvosteli eurooppalaisia liittolaisiaan näiden kieltäydyttyä avustamasta Hormuzinsalmen avaamisessa."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzczOTUyNTEyfDA&ixlib=rb-4.1.0&q=85"
 image_alt: "Trump turhautui liittolaisiinsa Hormuzinsalmen kriisistä – Yhdysvaltain suurlähetystöä Bagdadissa vastaan hyökättiin"

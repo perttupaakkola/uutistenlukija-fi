@@ -1,5 +1,5 @@
 ---
-title: "Mäntyharju lakkautti sivistysjohtajan viran – irtisanotun mielestä taustalla koulukyytejä koskevat erimielisyydet"
+title: "Mäntyharju lakkautti sivistysjohtajan viran – taustalla koulukyytikiista irtisanotun mukaan"
 date: 2026-03-19T14:46:29.616067+00:00
 categories:
   - Kotimaa

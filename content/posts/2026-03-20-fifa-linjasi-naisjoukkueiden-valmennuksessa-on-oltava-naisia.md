@@ -1,5 +1,5 @@
 ---
-title: "Fifa linjasi: naisjoukkueiden valmennuksessa on oltava naisia – Marianne Miettinen avaa rakenteellista ongelmaa"
+title: "Fifa: naisjoukkueiden valmennuksessa on oltava naisia – Miettinen avaa rakenteellista ongelmaa"
 date: 2026-03-20T10:42:15.226820+00:00
 categories:
   - Urheilu

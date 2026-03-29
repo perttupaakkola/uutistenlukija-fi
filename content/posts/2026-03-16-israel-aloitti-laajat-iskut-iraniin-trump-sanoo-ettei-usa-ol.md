@@ -19,7 +19,7 @@ keywords:
   - "ulkomaan uutiset"
   - "maailman uutiset"
   - "kansainväliset uutiset"
-description: "Israel aloittaa laajamittaiset iskut Irania vastaan, mikä nostaa huolta alueen konfliktin eskalaatiosta. Donald Trump ilmoittaa USA:n olevan valmis diplomaattisiin ratkaisuihin."
+description: "Israel aloitti laajamittaiset iskut Irania vastaan, nostaten huolta konfliktin eskalaatiosta. Trump ilmoitti, ettei USA ole valmis sopimukseen."
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc0NzA0NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "Israel aloitti laajat iskut Iraniin – Trump sanoo, ettei USA ole valmis sopimukseen"
 image_credit: "Photo by Vito Natale on Unsplash"

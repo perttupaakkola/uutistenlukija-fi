@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Kreml-mielinen bloggaaja Ilja Remeslo tekee yllättävän käänteen ja hyökkää presidentti Vladimir Putinia vastaan, herättäen keskustelua Venäjän poliittisessa kentässä."
+description: "Kreml-mielinen bloggaaja Ilja Remeslo hyökkää yllättäen presidentti Putinia vastaan, herättäen laajaa keskustelua Venäjän poliittisessa kentässä."
 summary: "Ilja Remeslon shokeeraava käänne Putinin kritiikkiin herättää kysymyksiä Venäjän poliittisesta tulevaisuudesta. Remeslon hyökkäys presidenttiä vastaan voi enteillä laajempaa tyytymättömyyttä kansassa ja poliittisia myllerryksiä."
 content_type: "article"
 editorial_reviewed: true

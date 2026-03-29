@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Pääministeri Mette Frederiksen johtaa hallitusneuvotteluja Tanskassa uuden hallituskoalition muodostamiseksi sosiaalidemokraattien heikentyneestä kannatuksesta huolimatta."
+description: "Pääministeri Mette Frederiksen johtaa Tanskan hallitusneuvotteluja sosiaalidemokraattien heikentyneestä kannatuksesta huolimatta."
 summary: "Mette Frederiksen ryhtyy johtamaan hallitusneuvotteluja Tanskassa, jossa sosiaalidemokraatit säilyttivät suurimman puolueen aseman, vaikka äänimäärä laski. Vasemmistoblokki ei kuitenkaan saanut riittävää enemmistöä, mikä tuo lisähaasteita neuvotteluihin."
 content_type: "article"
 editorial_reviewed: true

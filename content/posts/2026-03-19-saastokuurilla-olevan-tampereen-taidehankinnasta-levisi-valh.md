@@ -1,5 +1,5 @@
 ---
-title: "Säästökuurilla olevan Tampereen taidehankinnasta levisi valheita – taiteilija yllättyi \"populistisesta öyhötyksestä\""
+title: "Tampereen taidehankinnasta levisi valheita – taiteilija yllättyi populistisesta öyhötyksestä"
 date: 2026-03-19T13:53:03.263321+00:00
 categories:
   - Kulttuuri

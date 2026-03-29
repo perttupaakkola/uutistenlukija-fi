@@ -19,7 +19,7 @@ keywords:
   - "kotimaan uutiset"
   - "suomen uutiset"
   - "uusimmat kotimaan uutiset"
-description: "Kittilässä tapahtuneessa nokkakolarissa kuoli marraskuussa 2024 kaksi ihmistä. 19-vuotias syytetty kiistää syytteet ja onnettomuus herättää huolta liikenneturvallisuudesta."
+description: "Kittilässä tapahtuneessa nokkakolarissa kuoli marraskuussa 2024 kaksi ihmistä. 19-vuotias syytetty kiistää syytteet."
 image: "https://images.unsplash.com/photo-1694439093682-3ac2b4b2e7ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxub2trYWtvbGFyaXNzYSUyMGtpdHRpbCVDMyVBNHNzJUMzJUE0JTIwa3VvbGklMjAxOS12dW90aWFzfGVufDF8MHx8fDE3NzQ3MDkyMjN8MA&ixlib=rb-4.1.0&q=80&w=1080"
 image_alt: "Nokkakolarissa Kittilässä kuoli kaksi – 19-vuotias syytetty kiistää syytteet"
 image_credit: "Photo by Maarten Scheel on Unsplash"

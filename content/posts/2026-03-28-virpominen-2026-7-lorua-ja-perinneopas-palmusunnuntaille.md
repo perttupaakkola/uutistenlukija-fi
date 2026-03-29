@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Virpominen on palmusunnuntain perinne, jossa lapset käyvät toivottamassa terveyttä koristelluilla pajunoksilla. Tässä 7 virpomislorua ja ohjeet perinteen viettämiseen 2026."
+description: "Virpominen on palmusunnuntain perinne. Tässä 7 virpomislorua ja ohjeet perinteen viettämiseen 2026."
 summary: "Virpominen on monessa suomalaiskodissa palmusunnuntain odotettu perinne. Tässä 7 virpomislorua lapsille ja käytännön opas perinteen viettämiseen."
 content_type: "article"
 editorial_reviewed: true

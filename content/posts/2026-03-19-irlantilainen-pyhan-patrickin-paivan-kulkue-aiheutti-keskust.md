@@ -1,5 +1,5 @@
 ---
-title: "Irlantilainen pyhän Patrickin päivän kulkue aiheutti keskustelua seksuaalisen väkivallan kuvaamisen rajapinnoista"
+title: "Pyhän Patrickin päivän kulkue herätti keskustelua seksuaalisen väkivallan kuvaamisen rajoista"
 date: 2026-03-19T14:22:11.000943+00:00
 categories:
   - Ulkomaat
