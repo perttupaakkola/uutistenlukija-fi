@@ -35,7 +35,6 @@ source_url: "https://www.iltalehti.fi/ulkomaat/a/1646878b-7c5c-44ab-b497-ea8c231
 source_domain: "iltalehti.fi"
 draft: false
 ---
-
 ## Uusi lähestymistapa Yhdysvaltoihin
 Saksassa on syntynyt uusi lähestymistapa suhteessa Yhdysvaltoihin, mikä on seurausta Yhdysvaltain presidentin Donald Trumpin aikakauden jälkeisestä geopoliittisesta ilmapiiristä. Saksalaisviranomaiset ovat alkaneet etsiä keinoja painostaa Yhdysvaltoja taloudellisin keinoin, mikä kertoo Euroopan halusta toimia itsenäisesti suurvaltojen välisessä pelissä.
 
@@ -47,5 +46,3 @@ Merz huomautti, että Euroopassa tärkeä kompassi on vapaakauppa eikä protekti
 Ukrainan sodan osalta Merz on pessimisti. Hän arvioi, että sota voisi päättyä vain, kun Venäjä on taloudellisesti ja sotilaallisesti heikentynyt. Tämä ei kuitenkaan tapahdu hetkessä, ja tilanne on vielä kaukana rauhasta. Samalla NATO:n pääsihteeri Mark Rutte korosti Ukrainan tukemisen tärkeyttä, riippumatta Yhdysvaltain ja Euroopan suhteiden kehityksestä.
 
 Münchenissä järjestettävään kolmipäiväiseen turvallisuuskonferenssiin osallistuvat myös suomalaiset päättäjät, mukaan lukien presidentti Alexander Stubb, joka aikoo tavata Ukrainan presidentti Volodymyr Zelenskyin. Stubbin ohjelmassa on keskusteluja Euroopan ja Ukrainan tulevaisuudesta sekä kahdenvälisiä tapaamisia. Tavoitteena on luoda vahvempia siteitä ja yhteisiä toimintasuunnitelmia, joilla voidaan torjua tulevia haasteita niin taloudessa kuin turvallisuudessa.
-
-Usko Euroopan yhtenäisyyteen ja päättäväisyyteen on nyt koetuksella. Kuinka kauan Yhdysvallat ja Eurooppa kykenevät pitämään kiinni yhteisistä tavoitteistaan, jää nähtäväksi. Saksa vaikuttaa olevan askeleen edellä kehityksessä ja se uskoo johdonmukaisesti yhteiseen eurooppalaiseen puolustukseen sekä itsenäisyyteen maailmanpolitiikassa.

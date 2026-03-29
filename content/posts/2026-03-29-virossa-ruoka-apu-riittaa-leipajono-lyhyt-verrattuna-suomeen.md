@@ -35,7 +35,6 @@ source_url: "https://www.iltalehti.fi/ulkomaat/a/8794204b-0527-414c-bf6a-42e1b70
 source_domain: "iltalehti.fi"
 draft: false
 ---
-
 Viro on osoittautunut maaksi, jossa ruoka-apuun turvautuvaa väestöä on hyvin vähän. Tallinnan Ruokapankin asiantuntijat ovat raportoineet, että paikallinen leipäjono on merkittävästi lyhyempi kuin monissa muissa maissa, myös Suomessa. Yksi ilta Ruokapankin oven avaamisessa paljastaa, että Tallinnan Lasnamäen toimipisteessä jonottaminen tapahtuu erittäin nopeasti. Jonottajien määrä maanantai-iltaisin on vain parin metrin pituinen, ja ovesta pääsee sisään nopeasti.
 
 Ruokapankin käytännöt ovat hyviä tehokkuuden ja valvonnan kannalta. Ennen kuin jonottajat saavat ruokakassinsa, heidät tarkistetaan henkilöllisyyden mukaan, jotta ruoka-avun saanti voidaan varmistaa. Tämä malli takaa, että vain oikeutetut saavat avustusta, mikä vaikuttaa olevan suotavaa monille paikallisille.
@@ -45,5 +44,3 @@ Viro on ylpeä siitä, ettei ruoka-apuun tarvitse turvautua satunnaisesti. Täm�
 Ruoka-apua tarjoavat järjestöt tekevät hartiavoimin työtä varmistaakseen, että virolaisilla on mahdollisimman hyvät mahdollisuudet elää itsenäisesti ilman tukitoimia. Samalla ruokakassien tarjontaa pyritään säilyttämään kohtuullisen suurina, mutta vain äärimmäisissä tapauksissa.
 
 Erityisesti tällaiset käytännöt ovat auttaneet vähentämään stigmapuolta, joka usein liittyy ruoka-apuun. Kun ruoka-apua saadaan vain harvoilta, se vahvistaa yhteisön yhtenäisyyttä ja rakentaa myönteistä kuvaa avustustyöstä. Tällöin tarjotut ruokakassit eivät koostu vain edullisista tuotteista, vaan myös tarpeellisista ja ravitsevista elintarvikkeista.
-
-Kaiken kaikkiaan Virossa tehdyt panostukset ja käytännöt osoittavat, että ruoka-apu on selkeä väline huono-osaisimman väestön tukemiseksi. Lähitulevaisuudessa suomalaisilla on syytä tarkkailla Viron kehitystä tämän alueen politiikassa. Ruoka-avun toimintaa voidaan tarkastella ja mahdollisesti soveltaa myös Suomessa, jos maassa nähdään yhä taloudellisia haasteita.
