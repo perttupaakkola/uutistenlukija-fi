@@ -1,28 +1,28 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-29T13:34:26+00:00",
+  "generated_at": "2026-03-29T13:51:04+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 136,
-    "ok": 41,
+    "total": 135,
+    "ok": 40,
     "skip": 0,
     "error": 95
   },
   "articles": {
-    "attempted": 2929,
-    "published": 46,
-    "rejected": 132,
+    "attempted": 2903,
+    "published": 45,
+    "rejected": 135,
     "publish_rate": 1.6,
     "last_published_ts": "2026-03-29T12:50:51.921899+00:00"
   },
   "reject_reasons": {
-    "too_short": 77,
-    "score 30/40 (wc=0 title=10 des": 22,
-    "lead_too_short": 19,
+    "too_short": 80,
+    "score 30/40 (wc=0 title=10 des": 25,
+    "lead_too_short": 21,
+    "keyword_stuffing": 11,
     "only 1 paragraphs (min 3)": 11,
-    "keyword_stuffing": 10,
     "score 30/40 (wc=10 title=0 des": 6,
     "unsourced numbers: 72.5miljoon": 5,
     "unsourced numbers: 180": 3
@@ -38,23 +38,23 @@
   "trending": [
     [
       "tilanne",
-      22
-    ],
-    [
-      "tärkeää",
-      17
+      20
     ],
     [
       "vaikka",
       15
     ],
     [
-      "jotta",
+      "kansalaisten",
       14
     ],
     [
-      "kansalaisten",
+      "tärkeää",
       14
+    ],
+    [
+      "eivät",
+      13
     ]
   ]
 }
