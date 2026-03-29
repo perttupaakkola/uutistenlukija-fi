@@ -200,6 +200,30 @@
     if (window.scrollY > SCROLL_ELEV) siteHeader.classList.add('header--scrolled');
   }
 
+  // ── Search toggle (collapsed ↔ expanded) ───────────────────────────────
+  var searchWrap = document.querySelector('[data-site-search]');
+  var searchToggle = document.querySelector('[data-search-toggle]');
+  if (searchWrap && searchToggle) {
+    searchToggle.addEventListener('click', function () {
+      searchWrap.classList.remove('site-search--collapsed');
+      var input = searchWrap.querySelector('[data-search-input]');
+      if (input) input.focus();
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !searchWrap.classList.contains('site-search--collapsed')) {
+        searchWrap.classList.add('site-search--collapsed');
+        searchToggle.focus();
+      }
+    });
+    // Close when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!searchWrap.classList.contains('site-search--collapsed') && !searchWrap.contains(e.target)) {
+        searchWrap.classList.add('site-search--collapsed');
+      }
+    });
+  }
+
   // ── #15.1: Category quicknav — highlight active pill on scroll ──────────
   var catPills = document.querySelectorAll('.cat-quicknav__pill[data-cat]');
   if (catPills.length && 'IntersectionObserver' in window) {

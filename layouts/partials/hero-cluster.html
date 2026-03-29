@@ -71,7 +71,7 @@
     {{ $thumb := .Params.image_thumb | default $img }}
     {{ $alt := .Params.image_alt | default .Title }}
     <article class="highlight-card highlight-card--secondary hero-cluster__followup-card">
-      <span class="hero-cluster__followup-label">Seuraa myös</span>
+      <span class="hero-cluster__followup-label">Myös tänään</span>
       {{ partial "category-badge.html" (dict "category" $cat "link" true) }}
       {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink "track" "hero_click" "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
       <h3><a href="{{ .Permalink }}" data-track="hero_click">{{ .Title }}</a></h3>
