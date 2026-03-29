@@ -10,7 +10,7 @@
   {{ with .Params.categories }}
   {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
-  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <h2><a href="{{ .Permalink }}" data-track="article_card_click" data-article-category="{{ with .Params.categories }}{{ index . 0 | lower }}{{ end }}">{{ .Title }}</a></h2>
   <p class="excerpt">{{ .Summary | truncate 200 }}</p>
   <div class="meta">
     {{ .Date | time.Format "2.1. klo 15:04" }}

@@ -14,7 +14,7 @@
     {{ range $i, $p := $fallback }}
     <li class="most-read-item most-read-item--fallback">
       <span class="most-read-rank">{{ math.Add $i 1 }}</span>
-      <a class="most-read-link" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+      <a class="most-read-link" href="{{ $p.RelPermalink }}" data-track="most_read_click">{{ $p.Title }}</a>
     </li>
     {{ end }}
   </ol>

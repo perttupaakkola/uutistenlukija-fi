@@ -39,7 +39,7 @@
       <span class="tanaan-num" aria-hidden="true">{{ math.Add $i 1 }}</span>
       <div class="tanaan-body">
         <span class="tanaan-cat category-{{ $catSlug }}">{{ $cat }}</span>
-        <a class="tanaan-headline" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+        <a class="tanaan-headline" href="{{ $p.RelPermalink }}" data-track="trending_click" data-article-category="{{ $catSlug }}">{{ $p.Title }}</a>
       </div>
       <time class="tanaan-time" datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $p.Date | time.Format "15:04" }}</time>
     </li>
