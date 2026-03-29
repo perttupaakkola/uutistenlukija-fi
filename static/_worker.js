@@ -83,6 +83,49 @@ async function createContact(env, email, source) {
   return response.json();
 }
 
+async function sendWelcomeEmail(env, email) {
+  const siteUrl = readEnv(env, 'SITE_URL') || 'https://uutistenlukija.fi';
+  const homepageUrl = `${siteUrl.replace(/\/$/, '')}/`;
+  const response = await resendRequest(env, '/emails', {
+    method: 'POST',
+    body: JSON.stringify({
+      from: 'Uutistenlukija <info@uutistenlukija.fi>',
+      to: [email],
+      subject: 'Tervetuloa Uutistenlukijaan! 📰',
+      html: `
+        <div style="font-family:Inter,Arial,sans-serif;line-height:1.6;color:#1f2933;max-width:560px;margin:0 auto;padding:24px;">
+          <h1 style="font-size:28px;line-height:1.2;margin:0 0 16px;color:#111827;">Tervetuloa Uutistenlukijaan</h1>
+          <p style="margin:0 0 14px;">Kiitos tilauksesta. Saat meiltä tiiviit, selkeät ja olennaiset uutiset suomeksi ilman turhaa kiertelyä.</p>
+          <p style="margin:0 0 14px;">Uutiskirjeessä nostamme esiin päivän tärkeimmät jutut, taustat ja linkit suoraan sivulle, jotta pääset nopeasti olennaiseen.</p>
+          <p style="margin:0 0 20px;">Sillä välin voit lukea tuoreimmat uutiset tästä:</p>
+          <p style="margin:0 0 24px;">
+            <a href="${homepageUrl}" style="display:inline-block;background:#c0392b;color:#ffffff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700;">Avaa Uutistenlukija</a>
+          </p>
+          <p style="margin:0;color:#6b7280;font-size:14px;">Tervetuloa mukaan.<br>Uutistenlukija</p>
+        </div>
+      `,
+      text: [
+        'Tervetuloa Uutistenlukijaan.',
+        '',
+        'Kiitos tilauksesta. Saat meiltä tiiviit, selkeät ja olennaiset uutiset suomeksi.',
+        'Uutiskirjeessä nostamme esiin päivän tärkeimmät jutut, taustat ja linkit suoraan sivulle.',
+        '',
+        `Lue tuoreimmat uutiset: ${homepageUrl}`,
+        '',
+        'Tervetuloa mukaan,',
+        'Uutistenlukija',
+      ].join('\n'),
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Resend welcome email failed (${response.status}): ${errorText}`);
+  }
+
+  return response.json();
+}
+
 async function handleSubscribe(request, env) {
   if (request.method !== 'POST') {
     return jsonResponse({ ok: false, error: 'method_not_allowed' }, 405);
@@ -118,6 +161,7 @@ async function handleSubscribe(request, env) {
     }
 
     await createContact(env, email, source);
+    await sendWelcomeEmail(env, email);
 
     return jsonResponse({
       ok: true,
