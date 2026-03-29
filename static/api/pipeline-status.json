@@ -1,29 +1,29 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-29T00:04:25+00:00",
+  "generated_at": "2026-03-29T00:25:13+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 113,
+    "total": 112,
     "ok": 42,
     "skip": 0,
-    "error": 71
+    "error": 70
   },
   "articles": {
-    "attempted": 2451,
+    "attempted": 2430,
     "published": 47,
-    "rejected": 233,
+    "rejected": 232,
     "publish_rate": 1.9,
-    "last_published_ts": "2026-03-28T23:04:31.650463+00:00"
+    "last_published_ts": "2026-03-29T00:04:25.187040+00:00"
   },
   "reject_reasons": {
-    "too_short": 181,
+    "too_short": 180,
+    "only 1 paragraphs (min 3)": 21,
     "keyword_stuffing": 20,
     "lead_too_short": 18,
-    "only 1 paragraphs (min 3)": 18,
+    "score 30/40 (wc=0 title=10 des": 16,
     "unsourced numbers: 26miljoonaa": 13,
-    "score 30/40 (wc=0 title=10 des": 13,
     "unsourced numbers: 72.5miljoon": 5,
     "unsourced numbers: 500": 3
   },
@@ -38,23 +38,23 @@
   "trending": [
     [
       "erityisesti",
-      42
+      11
     ],
     [
-      "vaikuttaa",
-      30
+      "ukrainan",
+      10
     ],
     [
-      "monet",
-      29
+      "yhdysvaltain",
+      9
     ],
     [
-      "tärkeää",
-      28
+      "viron",
+      8
     ],
     [
-      "kuinka",
-      25
+      "virvon",
+      7
     ]
   ]
 }
