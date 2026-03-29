@@ -27,7 +27,6 @@ keywords:
 source_name: "FIFA.com"
 source_url: "https://www.stadissa.fi/tapahtumat/114688/kap-verde-suomi-fifa-series-2026"
 source_domain: "stadissa.fi"
-briefing: true
 draft: false
 ---
 
