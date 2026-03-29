@@ -377,28 +377,23 @@ DOMAIN_DELAY = 5
 # 180s leaves buffer for slow feeds.
 SCANNER_TIMEOUT = 180
 
-# ETag/Last-Modified cache file (persists between pipeline runs)
-_CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
-_HTTP_CACHE_FILE = os.path.join(_CACHE_DIR, "feed_http_cache.json")
+# ⛔ WARNING: DO NOT RE-INTRODUCE ETag/304 CACHING.
+# ETag caching was removed 3 times (commits ef54d6d, 61c93819, this fix).
+# Each time it causes fetched=0 on ALL feeds for hours (304 responses).
+# RSS feeds do not need caching — always fetch fresh. This is intentional.
 
 # Per-domain last-fetch timestamps (in-process only)
 _domain_last_fetch: Dict[str, float] = {}
 
 
 def _load_http_cache() -> Dict:
-    """Load persisted ETag/Last-Modified cache."""
-    try:
-        with open(_HTTP_CACHE_FILE) as f:
-            return json.load(f)
-    except Exception:
-        return {}
+    """⛔ INTENTIONALLY DISABLED — always returns empty (no ETag caching)."""
+    return {}
 
 
 def _save_http_cache(cache: Dict) -> None:
-    """Persist ETag/Last-Modified cache to disk."""
-    os.makedirs(_CACHE_DIR, exist_ok=True)
-    with open(_HTTP_CACHE_FILE, "w") as f:
-        json.dump(cache, f, indent=2)
+    """⛔ INTENTIONALLY DISABLED — no-op (no ETag caching)."""
+    return
 
 
 def _domain(url: str) -> str:
@@ -648,7 +643,12 @@ def _get_text(element, tag: str) -> str:
 
 
 def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]:
-    """Fetch and parse a single RSS feed with politeness and 304 caching."""
+    """Fetch and parse a single RSS feed with politeness.
+
+    ⛔ NO conditional headers (If-None-Match / If-Modified-Since).
+    ETag/304 caching was stripped intentionally — it causes fetched=0 for hours.
+    Always fetch the full feed content. http_cache param kept for API compat but ignored.
+    """
     articles = []
     url = feed_info["url"]
     try:
@@ -661,33 +661,12 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
             time.sleep(wait)
         _domain_last_fetch[domain] = time.monotonic()
 
-        # Build request with conditional headers for 304 support
-        headers = dict(HEADERS)
-        cache_entry = (http_cache or {}).get(url, {})
-        if cache_entry.get("etag"):
-            headers["If-None-Match"] = cache_entry["etag"]
-        if cache_entry.get("last_modified"):
-            headers["If-Modified-Since"] = cache_entry["last_modified"]
-
-        req = urllib.request.Request(url, headers=headers)
+        # Always fetch fresh — no conditional headers
+        req = urllib.request.Request(url, headers=dict(HEADERS))
         try:
             with urllib.request.urlopen(req, timeout=15) as resp:
                 content = resp.read()
-                # Update cache with new validators
-                if http_cache is not None:
-                    new_entry = {}
-                    etag = resp.headers.get("ETag")
-                    lm = resp.headers.get("Last-Modified")
-                    if etag:
-                        new_entry["etag"] = etag
-                    if lm:
-                        new_entry["last_modified"] = lm
-                    if new_entry:
-                        http_cache[url] = new_entry
         except urllib.error.HTTPError as e:
-            if e.code == 304:
-                # Not Modified — return empty, caller uses cached articles
-                return []
             raise
         
         # Sanitize content: strip control characters that break ET parser
