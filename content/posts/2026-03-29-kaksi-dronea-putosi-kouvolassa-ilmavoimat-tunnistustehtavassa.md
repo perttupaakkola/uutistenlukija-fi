@@ -1,5 +1,5 @@
 ---
-title: "Kaksi dronea putosi Kouvolan lähelle – puolustusministeri: suhtaudumme hyvin vakavasti"
+title: "Orpo: Kouvolan dronet todennäköisesti ukrainalaisia – yksi tunnistettu AN196-malliksi"
 date: 2026-03-29T11:40:00.000000+00:00
 categories:
   - Kotimaa
@@ -8,8 +8,8 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Poliisi sai sunnuntaina aamulla ilmoituksen maastoon pudonneesta lentävästä laitteesta Kouvolan pohjoispuolella. Ilmavoimat suoritti tunnistustehtäviä F/A-18-hävittäjillä."
-summary: "Kaksi dronea on pudonnut Kouvolan pohjoispuolelle ja itäpuolelle sunnuntaina 29. maaliskuuta. Ilmavoimat teki tunnistustehtäviä F/A-18-hävittäjillä. Puolustusministeri Häkkänen sanoo Suomen suhtautuvan asiaan hyvin vakavasti."
+description: "Pääministeri Orpon mukaan Kouvolaan pudonnut kaksi dronea on todennäköisesti ukrainalaisia. Yksi laite on tunnistettu AN196-malliksi. Venäläinen häirintä arvioidaan syyksi harhautumiseen."
+summary: "Kaksi dronea putosi Kouvolan lähelle sunnuntaina 29. maaliskuuta. Pääministeri Orpo sanoo dronejen olevan todennäköisesti ukrainalaisia. Yksi on tunnistettu AN196-malliksi. Ilmavoimat teki tunnistustehtäviä F/A-18-hävittäjillä."
 content_type: "article"
 editorial_reviewed: true
 image_alt: "Kuvituskuva"
@@ -43,6 +43,10 @@ Puolustusministeri Antti Häkkänen kommentoi tapausta toteamalla, että Suomeen
 
 Puolustusvoimat tutkii tapausta yhdessä muiden viranomaisten kanssa. Jatkotiedottamisesta vastaavat Puolustusvoimat ja muut viranomaiset yhteistyössä.
 
-Ukraina on suorittanut lennokki-iskuja kohteisiin Venäjällä, jotka sijaitsevat Suomen lähialueilla. Pudonneet dronet voivat olla tällaisista operaatioista harhautuneita laitteita. Dronejen mahdollista lastikapasiteettia ei ole virallisesti vahvistettu.
+## Orpo: todennäköisesti ukrainalaisia, venäläinen häirintä syynä
 
-*Uutista päivitetään sitä mukaa kuin tietoja saadaan.*
+Pääministeri Petteri Orpo sanoi sunnuntaina, että dronet ovat todennäköisesti ukrainalaisia ja harhautuivat Suomen alueelle Venäjän voimakkaan elektronisen häirinnän takia. Ukraina on iskenyt drooneilla Venäjän öljynjalostamo- ja varastokohteisiin Suomen lähialueilla. Vastaavia tapauksia — jossa ukrainalaiset dronet ovat eksyneet Baltian maiden alueille — raportoitiin saman viikon aikana Virosta, Latviasta ja Liettuasta.
+
+Ilmavoimien tunnistustehtävässä vähintään yksi drone on tunnistettu ukrainalaiseksi AN196-malliksi. Toisen dronen malli ei ole julkisesti vahvistettu.
+
+Poliisi tutkii tapausta. Orpo korosti tarvetta vahvistaa Suomen valmiuksia torjua droneuhkia.
