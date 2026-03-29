@@ -49,6 +49,5 @@ Tulevat projektit innostavat asiakkaita tarttumaan välineisiin ja ideoimaan omi
 
 Puuilon menestys riippuu vahvasti siitä, kuinka hyvin he kykenevät vetämään asiakkaita puoleensa ja tuomaan esille ajankohtaisia tarjouksia. Saarela aikoo tehdä kaikkensa menestyksen eteen ja kehittää yhtiön toimintaa asiakaskokemusta parantaen. Hän uskoo, että asiakkaille on tarjottava laatua ja hintoja, jotka puhuvat puolestaan.
 
-Yhteenvetona Puuilon kevätsesonki näyttää olevan hyvin käynnistynyt, ja Saarela kumoaa huolia tulevaisuuden kehityksestä. Hän vakuuttaa, että yhtiö tulee jatkamaan kasvuaan hyvin suunnitelluilla projekteilla, jotka palvelevat asiakkaita. Tällä hetkellä asiat näyttävät valoisilta, ja Saarelan mökkiprojektit ovat osa laajempaa ilmiötä, jossa kuluttajat innostuvat yhä enemmän omista projekteistaan.
 
 Puuilo lanseerasi myös uusia tuotteita kevätsesongin myötä, mikä nostaa yhtiön tunnettavuutta ja asiantuntevuutta. Omiin projekteihinsa valmistautuessaan Saarela kannustaa asiakkaitaan ottamaan rohkeasti askelia kohti uusia nikkaroinnin mahdollisuuksia.
