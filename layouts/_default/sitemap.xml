@@ -109,7 +109,7 @@
     {{- /* Image sitemap extension for articles with hero images */}}
     {{- if .Params.image }}
     <image:image>
-      <image:loc>{{ .Params.image }}</image:loc>
+      <image:loc>{{ if hasPrefix .Params.image "http" }}{{ .Params.image }}{{ else }}{{ $.Site.BaseURL | strings.TrimSuffix "/" }}{{ .Params.image }}{{ end }}</image:loc>
       {{- with .Params.image_alt }}
       <image:title>{{ . | htmlEscape }}</image:title>
       {{- end }}
