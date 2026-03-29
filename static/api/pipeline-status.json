@@ -1,28 +1,28 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-29T01:24:00+00:00",
+  "generated_at": "2026-03-29T01:39:16+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 118,
-    "ok": 44,
+    "total": 119,
+    "ok": 45,
     "skip": 0,
     "error": 74
   },
   "articles": {
-    "attempted": 2556,
-    "published": 50,
-    "rejected": 203,
+    "attempted": 2576,
+    "published": 51,
+    "rejected": 198,
     "publish_rate": 2.0,
-    "last_published_ts": "2026-03-29T00:54:32.289144+00:00"
+    "last_published_ts": "2026-03-29T01:24:00.306643+00:00"
   },
   "reject_reasons": {
-    "too_short": 151,
+    "too_short": 145,
+    "only 1 paragraphs (min 3)": 21,
+    "score 30/40 (wc=0 title=10 des": 19,
     "keyword_stuffing": 18,
-    "only 1 paragraphs (min 3)": 18,
     "lead_too_short": 17,
-    "score 30/40 (wc=0 title=10 des": 16,
     "unsourced numbers: 26miljoonaa": 13,
     "unsourced numbers: 72.5miljoon": 5,
     "unsourced numbers: 500": 3
