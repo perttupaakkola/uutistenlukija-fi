@@ -84,6 +84,7 @@
           <h3 class="related-card__title"><a href="{{ .RelPermalink }}" onclick="{{ $trackRelatedClick | safeHTMLAttr }}">{{ .Title }}</a></h3>
           <div class="related-card__meta">
             <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1.2006" }}</time>
+            <span class="related-card__reading-time">· {{ partial "reading-time.html" . }}</span>
           </div>
         </div>
       </article>
