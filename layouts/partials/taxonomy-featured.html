@@ -37,7 +37,7 @@
   </div>
   {{ end }}
   <div class="category-featured__body">
-    {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
+    {{ with .Params.categories }}{{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}{{ end }}
     <h2 class="category-featured__title">{{ .Title }}</h2>
     <p class="category-featured__excerpt">{{ .Summary | truncate 200 }}</p>
     <div class="meta">
