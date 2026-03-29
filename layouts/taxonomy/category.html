@@ -13,7 +13,7 @@
   {{ range $paginator.Pages }}
   <article class="article-card">
     {{ with .Params.categories }}
-    <span class="category-label">{{ index . 0 }}</span>
+    {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
     {{ end }}
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{- with (.Summary | truncate 200) }}<p class="excerpt">{{ . }}</p>{{- end }}

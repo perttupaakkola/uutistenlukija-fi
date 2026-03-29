@@ -1,9 +1,7 @@
 {{ define "main" }}
 <article class="single-article">
   {{ with .Params.categories }}
-  <span class="category-label">
-    <a href="/categories/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>
-  </span>
+  {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ partial "hero-image.html" . }}
