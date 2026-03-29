@@ -3221,3 +3221,98 @@ body.is-home .highlights-row--top {
     display: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   MOBILE OVERHAUL — Iltalehti-density layout (≤640px)
+   Goal: header ~48px → news immediately. Image first, text below.
+   ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  /* ── Compact header ─────────────────────────────────────────────── */
+  .site-header {
+    margin-bottom: 0;
+    border-bottom-width: 1px;
+  }
+  .header-inner {
+    padding: 0.4rem 0.75rem;
+    gap: 0;
+  }
+  .header-main-row {
+    min-height: 44px;
+    gap: 0.5rem;
+  }
+  .logo-img {
+    max-height: 28px;
+  }
+
+  /* Hide search toggle in header — available in hamburger menu */
+  .site-search--collapsed {
+    display: none;
+  }
+
+  /* ── Hero: image-first, text below (Iltalehti style) ────────────── */
+  .hero-cluster {
+    margin-top: 0;
+  }
+  .lead-article--hero {
+    border: 0;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+  }
+  .lead-article--hero .hero-scrim-link {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+    border-radius: 0;
+    max-height: none;
+    overflow: visible;
+    color: var(--text);
+  }
+  /* Image: full bleed, fixed aspect ratio */
+  .lead-article--hero .hero-scrim-img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: 0;
+  }
+  /* Hide scrim overlay — not needed when text is below */
+  .lead-article--hero .hero-scrim {
+    display: none;
+  }
+  /* Text below image instead of overlaid */
+  .lead-article--hero .hero-scrim-body {
+    position: static;
+    padding: 0.75rem;
+    pointer-events: auto;
+  }
+  .lead-article--hero .hero-scrim-body .category-label {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    margin-bottom: 0.35rem;
+  }
+  .hero-scrim-title {
+    color: var(--text);
+    text-shadow: none;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    -webkit-line-clamp: 4;
+  }
+  body.is-home .lead-article--hero h2,
+  body.is-home .hero-scrim-title {
+    font-size: 1.4rem;
+    line-height: 1.25;
+  }
+  .hero-scrim-excerpt {
+    color: var(--text-secondary);
+    text-shadow: none;
+    font-size: 0.9rem;
+  }
+  .hero-scrim-meta {
+    color: var(--text-muted);
+    text-shadow: none;
+  }
+  /* Container: reduce side padding for more content space */
+  .container {
+    padding: 0 0.75rem;
+  }
+}
