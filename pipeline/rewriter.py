@@ -140,10 +140,15 @@ Suosi konkreettisia verbejä ja faktoja, vältä abstraktia metapuhetta.
 - "on tärkeää huomata"
 - "merkittävä askel kohti"
 - "herättää kysymyksiä"
-- "nähtäväksi jää"
+- "nähtäväksi jää" / "jää nähtäväksi"
 - "voidaan pitää"
 - "on hyvä muistaa"
 - "tämä tarkoittaa käytännössä sitä, että"
+- "kaiken kaikkiaan"
+- "yhteenvetona"
+- "lopuksi voidaan"
+- "kokonaisuutena"
+- "tiivistäen"
 
 Vastaa VAIN JSON-muodossa."""
 
@@ -262,7 +267,8 @@ _GENERIC_ENDING_PATTERNS = re.compile(
     r"aika näyttää|jää nähtäväksi|seuraamme tilannetta|"
     r"merkittävä (hetki|askel|käänne|kehitys)|"
     r"on tärkeää,?\s+että|herättää (laajaa )?(kysymyksiä|huolta)|"
-    r"voidaan todeta|yhteenvetona)",
+    r"voidaan todeta|yhteenvetona|kaiken kaikkiaan|"
+    r"lopuksi voidaan|kokonaisuutena|tiivistäen)",
     re.IGNORECASE,
 )
 
