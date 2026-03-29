@@ -80,7 +80,8 @@ def article_slug_from_path(path: Path) -> str:
 
 
 def build_url(path: Path, category: str) -> str:
-    return f"/categories/{slugify_category(category)}/{article_slug_from_path(path)}/"
+    # Articles live at /posts/<slug>/ — not /categories/<cat>/<slug>/
+    return f"/posts/{path.stem}/"
 
 
 def summarize_text(text: str, limit: int = 150) -> str:

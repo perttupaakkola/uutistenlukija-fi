@@ -112,6 +112,7 @@ git checkout HEAD -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline
 python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PIPELINE_DIR/generate_pipeline_status.py" 2>&1 | tee -a "$LOG_FILE" || echo "[pipeline_status] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PROJECT_DIR/scripts/category_distribution.py" 2>&1 | tee -a "$LOG_FILE" || echo "[category_distribution] generation failed (non-fatal)" | tee -a "$LOG_FILE"
+python3 "$PIPELINE_DIR/generate_search_index.py" 2>&1 | tee -a "$LOG_FILE" || echo "[search_index] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 
 git add content/ public/ static/api/ static/metrics/ pipeline/metrics.jsonl pipeline/.pipeline_lock 2>/dev/null || true
 if git diff --cached --quiet; then
