@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-29T08:23:54+00:00",
-  "status": "ok",
-  "is_stale": false,
+  "generated_at": "2026-03-29T08:34:25+00:00",
+  "status": "degraded",
+  "is_stale": true,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 132,
+    "total": 133,
     "ok": 42,
     "skip": 0,
-    "error": 90
+    "error": 91
   },
   "articles": {
-    "attempted": 2856,
+    "attempted": 2880,
     "published": 46,
-    "rejected": 143,
+    "rejected": 138,
     "publish_rate": 1.6,
     "last_published_ts": "2026-03-29T06:54:03.276530+00:00"
   },
   "reject_reasons": {
-    "too_short": 87,
+    "too_short": 83,
     "score 30/40 (wc=0 title=10 des": 22,
     "lead_too_short": 20,
-    "keyword_stuffing": 11,
+    "keyword_stuffing": 10,
     "only 1 paragraphs (min 3)": 9,
     "score 30/40 (wc=10 title=0 des": 5,
     "unsourced numbers: 72.5miljoon": 5,
-    "unsourced numbers: 26miljoonaa": 3
+    "unsourced numbers: 42000": 3
   },
   "feeds": {
     "total": 37,
@@ -42,7 +42,7 @@
     ],
     [
       "vaikka",
-      12
+      13
     ],
     [
       "erityisesti",
