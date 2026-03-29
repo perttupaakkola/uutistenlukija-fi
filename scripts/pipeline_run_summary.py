@@ -13,9 +13,7 @@ PROJECT_DIR = Path(__file__).resolve().parent.parent
 ENV_FILE    = PROJECT_DIR / "pipeline" / ".env"
 CONTENT_DIR = PROJECT_DIR / "content" / "posts"
 SITE_BASE   = "https://uutistenlukija.fi"
-# Primary: #operations channel webhook. Falls back to pipeline webhook if not set.
-WEBHOOK_ENV = "DISCORD_OPERATIONS_WEBHOOK"
-WEBHOOK_FALLBACK_ENV = "DISCORD_PIPELINE_WEBHOOK"
+WEBHOOK_ENV = "DISCORD_PIPELINE_WEBHOOK"
 
 
 def load_env(path):
@@ -105,8 +103,7 @@ def main():
         return 0
 
     env  = load_env(ENV_FILE)
-    hook = (os.environ.get(WEBHOOK_ENV) or env.get(WEBHOOK_ENV, "")
-            or os.environ.get(WEBHOOK_FALLBACK_ENV) or env.get(WEBHOOK_FALLBACK_ENV, ""))
+    hook = os.environ.get(WEBHOOK_ENV) or env.get(WEBHOOK_ENV, "")
     arts = recent_articles()
     msg  = build_msg(a.articles, arts, a.elapsed)
     print(msg)
