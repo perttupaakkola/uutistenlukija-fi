@@ -74,7 +74,7 @@
 
   {{ partial "related-articles.html" . }}
   {{ partial "more-from-category.html" . }}
-  {{ partial "most-read.html" . }}
+  {{ partial "most-read.html" (dict "Site" .Site "exclude" (slice .Permalink)) }}
 </article>
 
 {{ partial "read-next.html" . }}
