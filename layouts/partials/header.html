@@ -1,27 +1,37 @@
 <header class="site-header" role="banner">
   <div class="header-banner" aria-hidden="true"></div>
   <div class="container header-inner">
-    <div class="site-logo">
-      <a href="/" aria-label="Uutistenlukija — etusivulle"><img src="/images/logo.png" alt="Uutistenlukija" class="logo-img" loading="eager" decoding="async" width="160" height="40"></a>
+    <div class="header-main-row">
+      <div class="site-logo">
+        <a href="/" aria-label="Uutistenlukija — etusivulle"><img src="/images/logo.png" alt="Uutistenlukija" class="logo-img" loading="eager" decoding="async" width="160" height="40"></a>
+      </div>
+      <p class="site-date">{{ partial "finnish-date.html" . }}</p>
+      <button id="hamburger" class="hamburger-btn" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav-menu">
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="main-nav-menu" aria-label="Päävalikko" role="navigation">
+        <ul>
+          {{ range .Site.Menus.main }}
+          {{ if ne .URL "/haku/" }}
+          <li><a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+          {{ end }}
+          {{ end }}
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Vaihda teema">🌙</button>
     </div>
-    <p class="site-date">{{ partial "finnish-date.html" . }}</p>
-    <button id="hamburger" class="hamburger-btn" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav-menu">
-      <span class="hamburger-line" aria-hidden="true"></span>
-      <span class="hamburger-line" aria-hidden="true"></span>
-      <span class="hamburger-line" aria-hidden="true"></span>
-    </button>
-    <nav class="main-nav" id="main-nav-menu" aria-label="Päävalikko" role="navigation">
-      <ul>
-        {{ range .Site.Menus.main }}
-        {{ if ne .URL "/haku/" }}
-        <li><a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
-        {{ end }}
-        {{ end }}
-      </ul>
-    </nav>
-    <a href="/haku/" class="search-nav-btn" aria-label="Haku">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    </a>
-    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Vaihda teema">🌙</button>
+
+    <div class="site-search" data-site-search>
+      <form class="site-search__form" role="search" aria-label="Etsi artikkeleita" data-search-form>
+        <label class="site-search__label" for="header-search-input">Hae</label>
+        <svg class="site-search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="header-search-input" class="site-search__input" type="search" name="q" placeholder="Etsi artikkeleita…" aria-label="Etsi artikkeleita" autocomplete="off" data-search-input>
+        <button class="site-search__submit" type="submit">Hae</button>
+      </form>
+      <div class="site-search__status" aria-live="polite" data-search-status></div>
+      <div class="search-dropdown" hidden data-search-dropdown></div>
+    </div>
   </div>
 </header>

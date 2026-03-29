@@ -790,7 +790,7 @@ def scan_all_feeds() -> List[Dict]:
     Stops fetching new feeds after SCANNER_TIMEOUT seconds to keep pipeline
     running even when many feeds are slow.
     """
-    http_cache = _load_http_cache()
+    # ⛔ http_cache intentionally not used — ETag caching is disabled (see _load_http_cache)
     all_articles = []
     scan_start = time.monotonic()
     feeds_fetched = 0
@@ -818,7 +818,7 @@ def scan_all_feeds() -> List[Dict]:
 
         print(f"[scanner] Fetching {feed['name']}...")
         prev_count = len(all_articles)
-        articles = fetch_feed(feed, http_cache=http_cache)
+        articles = fetch_feed(feed)
         print(f"[scanner]   → {len(articles)} articles")
         all_articles.extend(articles)
         feeds_fetched += 1
@@ -847,7 +847,6 @@ def scan_all_feeds() -> List[Dict]:
     total_scan_time = time.monotonic() - scan_start
     print(f"[scanner] Scan complete: {feeds_fetched} feeds in {total_scan_time:.1f}s "
           f"({feeds_skipped} skipped due to timeout)")
-    _save_http_cache(http_cache)
     save_global_health()  # persist feed health state
 
     # Exact dedup by fingerprint

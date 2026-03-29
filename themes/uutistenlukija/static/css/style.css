@@ -2901,3 +2901,224 @@ body.is-home .highlights-row--top {
   opacity: 0.85;
   color: #fff;
 }
+
+.site-search {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin-left: auto;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  height: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.header-main-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 48px;
+}
+
+.site-search__form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.site-search__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.site-search__icon {
+  position: absolute;
+  left: 0.9rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.site-search__input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.7rem 5rem 0.7rem 2.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.site-search__input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+.site-search__submit {
+  position: absolute;
+  right: 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 0.85rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.site-search__submit:hover,
+.site-search__submit:focus-visible {
+  filter: brightness(0.96);
+}
+
+.site-search__status {
+  min-height: 1.1em;
+  margin-top: 0.3rem;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  z-index: 250;
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.search-result-item {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+}
+
+.search-result-item:hover,
+.search-result-item:focus-visible {
+  background: color-mix(in srgb, var(--accent) 8%, var(--card-bg));
+  color: var(--text);
+}
+
+.search-result-item__body,
+.search-result-item__title,
+.search-result-item__summary {
+  display: block;
+}
+
+.search-result-item__title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.search-result-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  margin-top: 0.3rem;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.search-result-item__summary {
+  margin-top: 0.35rem;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.search-dropdown__empty {
+  padding: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.result-cat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.result-cat--kotimaa { background: #2980b9; }
+.result-cat--ulkomaat { background: #c0392b; }
+.result-cat--talous { background: #9a6700; }
+.result-cat--teknologia { background: #8e44ad; }
+.result-cat--urheilu { background: #1e8449; }
+.result-cat--kulttuuri { background: #9a5200; }
+.result-cat--tiede { background: #0f6f5d; }
+
+@media (max-width: 860px) {
+  .header-main-row {
+    flex-wrap: wrap;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .site-search {
+    max-width: none;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-search__input {
+    font-size: 16px;
+  }
+
+  .search-dropdown {
+    position: static;
+    margin-top: 0.4rem;
+    box-shadow: none;
+  }
+
+  .site-search__status {
+    display: none;
+  }
+}
