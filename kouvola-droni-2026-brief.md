@@ -1,64 +1,58 @@
-# Brief: Kouvolaan putosi lentävä laite — epäilty alueloukkaus
+# Brief: Ukrainalainen hyökkäysdrooni putosi Kouvolaan — alueloukkaus vahvistettu
 
-**Date:** 2026-03-29
-**Category:** kotimaa
-**Priority:** BREAKING — publish immediately
+**Date:** 2026-03-29 (updated 16:32 UTC)
+**Category:** kotimaa / ulkomaat
+**Priority:** BREAKING UPDATE — publish immediately, update from morning article
 **Format:** Daily explainer lane
 
 **Suositeltu otsikko:**
-Kouvolaan putosi lentävä laite ja Kaakkois-Suomessa epäillään alueloukkausta – mitä tiedetään nyt?
+Ukrainalainen hyökkäysdrooni putosi Kouvolaan – Suomen alueloukkaus vahvistettu, Ilmavoimat hälytettiin
 
 ---
 
-## Verified facts (Felix, web search Mar 29 11:38 UTC)
+## Confirmed facts (Felix verified, Puolustusministeriö + Ilmavoimat, Mar 29)
 
-**Mitä tapahtui:**
-- Poliisi sai klo 10.04 ilmoituksen Kouvolassa maastoon pudonneesta lentävästä laitteesta
-- Tapahtumapaikka: Savistontie, ~25 km Utin jääkärirykmentin alueesta
-- Alue eristetty, ei henkilövahinkoja
-- Pelastuslaitoksella ei tehtävää
-- MTV Uutiset: Kaakkois-Suomessa epäillään alueloukkausta, Kouvolaan pudonnut drooneja
-- Puolustusvoimien hävittäjät lentäneet valvontatehtävissä Kaakkois-Suomessa koko päivän
-- Puolustusvoimat ei kommentoinut — lisätiedotus luvassa
-
-**Mitä ei tiedetä:**
-- Laitteen alkuperä (kuka, mistä)
-- Onko kyseessä sotilaallinen vai siviilidrooni
-- Yhteys mahdolliseen alueloukkaukseen vahvistamatta
+- Puolustusministeriö vahvisti sunnuntaina 29.3.2026 epäillyn lennokkien alueloukkauksen Kaakkois-Suomessa
+- **Kaksi lennokkia** putosi: toinen Kouvolan pohjoispuolelle, toinen Kouvolan itäpuolelle
+- Ilmavoimat tunnisti yhden lennokin: **ukrainalainen yksisuuntainen An-196 Ljutyi -hyökkäysdrooni**
+- Ilmavoimat hälytettiin tehtävään F/A-18 Hornet -hävittäjällä
+- Puolustusministeri Antti Häkkänen: "Suomen alueelle on harhautunut lennokkeja, suhtaudutaan erittäin vakavasti"
+- Pääministeri Petteri Orpo: lennokit todennäköisesti Ukrainasta, liittyvät Ukrainan iskuihin Venäjän öljyteollisuutta vastaan
+- Ei henkilövahinkoja
+- Alueet eristetty, tutkinta jatkuu
 
 ---
 
 ## Article structure
 
 ### 1. Mitä tapahtui (lede)
-Poliisi sai sunnuntaiaamuna kello 10.04 ilmoituksen Kouvolaan pudonneesta lentävästä laitteesta. MTV Uutisten mukaan alueella epäillään tapahtuneen alueloukkaus ja kohteena on useampi drooni.
+Kaksi ukrainalaista lennokkia putosi Kaakkois-Suomeen sunnuntaina 29. maaliskuuta 2026. Ilmavoimat tunnisti toisen lennokin ukrainalaiseksi yksisuuntaiseksi An-196 Ljutyi -hyökkäysdrooniksi. Puolustusministeriö vahvisti alueloukkauksen.
 
 ### 2. Ketä tämä koskee
-Kaikki Suomalaiset turvallisuusnäkökulmasta. Erityisesti Kaakkois-Suomi ja Utin jääkärirykmentti (lähellä tapahtumapaikkaa).
+Kaikki suomalaiset — kyse on Suomen alueellisesta koskemattomuudesta. Erityisesti Kaakkois-Suomen asukkaat (Kouvola).
 
 ### 3. Mitä muuttuu nyt
-Alue eristetty. Hävittäjät valvontatehtävissä. Puolustusvoimat ei kommentoinut mutta lisätiedotus tulossa.
+- Suomi on vahvistanut ensimmäisen merkittävän alueloukkausepisodin, jossa käyttöön otettiin hävittäjät
+- Viranomaiset tutkivat miten lennokit päätyivät Suomen ilmatilaan
+- Tapaus korostaa Suomen NATO-jäsenyyden turvallisuusmerkitystä
 
 ### 4. Mitä seurata
-- Puolustusvoimien tiedote (odotettavissa)
-- Poliisin tutkinta laitteen alkuperästä
-- Mahdollinen yhteys Venäjä-kontekstiin (Kaakkois-Suomi on rajan läheinen alue)
+- Puolustusministeriön jatkotiedotteet
+- Suomen ja Ukrainan välinen diplomaattinen kontakti
+- Tutkintamateriaali: miten lennokit hairahtivat Venäjän yli Suomeen?
+- NATOn reaktio alueloukkaukseen
 
 ---
 
 ## SEO
-- "Kouvola lentävä laite"
-- "alueloukkaus Suomi 2026"
-- "droonit Kouvola"
-- "Puolustusvoimat alueloukkaus"
+- "Kouvola drooni 2026"
+- "Suomi alueloukkaus 2026"
+- "ukrainalainen drooni Suomi"
+- "Ilmavoimat hälytys Kouvola"
+- "An-196 Ljutyi Suomi"
 
 ## Article spec
-- **Length:** 350-450 words — facts only, no speculation beyond what officials have said
-- **Tone:** Neutraali, asiallinen — tämä on turvallisuusuutinen
-- **Update:** Päivitä kun Puolustusvoimat tiedottaa lisää
-- **IMPORTANT:** Do NOT speculate on origin/attacker. Report only confirmed facts + MTV's alueloukkaus-epäily with attribution.
-
-## Action for Alex
-- PUBLISH NOW — this is today's biggest Finnish news story
-- Check MTV Uutiset / Poliisi.fi for updates before publishing
-- Add note at bottom: "Uutista päivitetään sitä mukaa kuin tietoja saadaan"
+- **Length:** 450-550 words
+- **Tone:** Asiallinen, vakava — tämä on turvallisuusuutinen
+- **Update:** Lisää "Päivitetty klo XX:XX" — tämä on päivitys aamuiseen artikkeliin
+- **IMPORTANT:** Käytä vain vahvistettuja faktoja. Lainaa Häkkänen + Orpo suoraan.

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Generate static/search-index.json for /haku/ client-side search."""
+"""Generate static/search-index.json for /haku/ Fuse.js client-side search.
+
+Fields emitted match exactly what layouts/_default/haku.html expects:
+  title, description, category, url, date
+"""
 
 from __future__ import annotations
 
@@ -84,22 +88,15 @@ def build_url(path: Path, category: str) -> str:
     return f"/posts/{path.stem}/"
 
 
-def summarize_text(text: str, limit: int = 150) -> str:
-    cleaned = re.sub(r"\s+", " ", str(text or "")).strip()
-    if len(cleaned) <= limit:
-        return cleaned
-    return cleaned[: limit - 1].rstrip() + "…"
-
-
 def build_record(path: Path) -> dict | None:
     text = path.read_text(encoding="utf-8")
-    meta, body = parse_frontmatter(text)
+    meta, _body = parse_frontmatter(text)
 
     if meta.get("draft") is True:
         return None
 
     title = str(meta.get("title", "")).strip()
-    summary = str(meta.get("summary", "") or meta.get("description", "")).strip()
+    description = str(meta.get("description", "")).strip()
     date = str(meta.get("date", "")).strip()
 
     categories = meta.get("categories") or []
@@ -112,10 +109,10 @@ def build_record(path: Path) -> dict | None:
 
     return {
         "title": title,
-        "slug": build_url(path, category),
+        "description": description,
         "category": category,
-        "summary": summarize_text(summary or body, 150),
-        "published_at": date,
+        "url": build_url(path, category),
+        "date": date[:10] if len(date) >= 10 else date,
     }
 
 
