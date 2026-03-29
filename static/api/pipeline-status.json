@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-29T17:38:24+00:00",
+  "generated_at": "2026-03-29T17:52:21+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
     "total": 133,
-    "ok": 34,
+    "ok": 33,
     "skip": 1,
-    "error": 98
+    "error": 99
   },
   "articles": {
-    "attempted": 2813,
-    "published": 38,
-    "rejected": 129,
-    "publish_rate": 1.4,
+    "attempted": 2815,
+    "published": 37,
+    "rejected": 131,
+    "publish_rate": 1.3,
     "last_published_ts": "2026-03-29T16:26:25.597534+00:00"
   },
   "reject_reasons": {
-    "too_short": 77,
+    "too_short": 80,
     "score 30/40 (wc=0 title=10 des": 25,
     "lead_too_short": 21,
-    "only 1 paragraphs (min 3)": 9,
+    "only 1 paragraphs (min 3)": 12,
     "score 35/40 (wc=10 title=10 de": 9,
     "keyword_stuffing": 6,
     "score 30/40 (wc=10 title=0 des": 5,
-    "unsourced numbers: 180": 3
+    "score 25/40 (wc=0 title=10 des": 4
   },
   "feeds": {
     "total": 37,
