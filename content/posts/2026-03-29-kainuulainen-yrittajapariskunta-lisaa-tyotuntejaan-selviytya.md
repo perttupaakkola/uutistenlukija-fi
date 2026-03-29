@@ -33,7 +33,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kainuulainen-yrittajapariskunta-lisaa-tyotuntejaan-selviytyakseen-lainakaan-ei-auttanut-ei-ole-enaa-vapaapaivia/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
