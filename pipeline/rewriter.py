@@ -108,6 +108,43 @@ TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:
 - Ei chatbot-artefakteja
 - Anna faktojen puhua, älä paisuttele
 
+=== LEDE ===
+Aloita juttu heti tärkeimmällä uutisella.
+Ensimmäisen virkkeen pitää kertoa mahdollisimman suoraan:
+- mitä tapahtui
+- kenelle tai mille asia tapahtui
+- milloin, jos ajankohta on tiedossa
+
+Älä aloita juttua taustoituksella, yleisellä ilmiökuvauksella tai epämääräisellä merkityspuheella.
+Älä piilota uutista virkkeen loppuun.
+
+Jos lähteessä on yksi selkeä uusi kehitys, sano se heti ensimmäisessä virkkeessä.
+Vasta sen jälkeen voit avata taustaa, merkitystä ja seurauksia.
+
+=== TOISTON ESTO ===
+Jokaisen kappaleen pitää tuoda jutulle uusi tieto, uusi vaihe tapahtumissa tai uusi näkökulma.
+
+Älä toista samaa pääasiaa eri sanoin useassa kappaleessa.
+Älä kirjoita kappaletta, joka vain muotoilee uudelleen otsikon, ingressin tai edellisen kappaleen sisällön.
+Älä päätä juttua yhteenvetoon, joka vain toistaa jo kerrotun ilman uutta tietoa.
+
+Jos asia on jo kerrottu selvästi, siirry seuraavaan olennaiseen tietoon.
+Jos uutta tietoa ei ole, jätä kappale kirjoittamatta.
+
+=== TYYLI ===
+Kirjoita selkeää, täsmällistä uutiskieltä suomeksi.
+Suosi konkreettisia verbejä ja faktoja, vältä abstraktia metapuhetta.
+
+Älä käytä geneerisiä täytefraaseja tai niiden kaltaisia ilmauksia, kuten:
+- "voidaan todeta"
+- "on tärkeää huomata"
+- "merkittävä askel kohti"
+- "herättää kysymyksiä"
+- "nähtäväksi jää"
+- "voidaan pitää"
+- "on hyvä muistaa"
+- "tämä tarkoittaa käytännössä sitä, että"
+
 Vastaa VAIN JSON-muodossa."""
 
 AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit tekoälykirjoituksen merkkien varalta ja korjaa:
