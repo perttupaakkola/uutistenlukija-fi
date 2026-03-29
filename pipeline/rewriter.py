@@ -256,6 +256,34 @@ def _count_h2s(markdown: str) -> int:
     return len(re.findall(r"(?m)^##\s+", markdown or ""))
 
 
+_GENERIC_ENDING_PATTERNS = re.compile(
+    r"(tarina jatkuu|tulevaisuus on (nyt )?entistä|kaikki silmät ovat|"
+    r"tulevat (viikot|kuukaudet|päivät) (näyttävät|kertovat|määrittävät)|"
+    r"aika näyttää|jää nähtäväksi|seuraamme tilannetta|"
+    r"merkittävä (hetki|askel|käänne|kehitys)|"
+    r"on tärkeää,?\s+että|herättää (laajaa )?(kysymyksiä|huolta)|"
+    r"voidaan todeta|yhteenvetona)",
+    re.IGNORECASE,
+)
+
+def _strip_generic_ending(content: str) -> str:
+    """Remove last paragraph if it matches generic filler patterns."""
+    if not content:
+        return content
+    paragraphs = [p.strip() for p in content.strip().split("\n\n") if p.strip()]
+    if len(paragraphs) < 3:
+        return content  # Don't strip short articles
+    last = paragraphs[-1]
+    # Skip if last paragraph is a H2 heading or update notice
+    if last.startswith("##") or "*Uutista päivitetään" in last:
+        return content
+    if _GENERIC_ENDING_PATTERNS.search(last):
+        stripped = "\n\n".join(paragraphs[:-1])
+        print(f"[writer]   ✂ Stripped generic ending paragraph: '{last[:80]}...'")
+        return stripped
+    return content
+
+
 def _enforce_h2_subheadings(article: Dict) -> tuple[Dict, bool, bool]:
     """Ensure long articles have at least one H2. Retry once, then warn-only."""
     content = str(article.get("content", "") or "")
@@ -688,6 +716,11 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                 continue
 
             written_article, h2_retried, h2_ok = _enforce_h2_subheadings(written_article)
+            # Strip generic feel-good ending paragraphs programmatically
+            raw_content = str(written_article.get("content", "") or "")
+            cleaned_content = _strip_generic_ending(raw_content)
+            if cleaned_content != raw_content:
+                written_article["content"] = cleaned_content
             title = written_article.get("title", "")
             content = written_article.get("content", "")
             if len(str(content).split()) > 250:
