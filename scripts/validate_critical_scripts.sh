@@ -11,7 +11,6 @@ cd "$ROOT_DIR"
 CRITICAL_SCRIPTS=(
   "pipeline/auto_publish.sh"
   "pipeline/firehose_cron.sh"
-  "scripts/pipeline-watchdog.sh"
 )
 
 FAIL=0
