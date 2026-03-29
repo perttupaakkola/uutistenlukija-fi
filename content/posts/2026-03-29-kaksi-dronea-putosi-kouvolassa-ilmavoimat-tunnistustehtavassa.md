@@ -27,6 +27,7 @@ keywords:
 source_name: "Lentoposti.fi"
 source_url: "https://www.lentoposti.fi/uutiset/puolustusministeri_ep_ilty_alueloukkaus_kaakkois_suomessa_kaksi_dronea_pudonnut_kouvolassa"
 source_domain: "lentoposti.fi"
+briefing: true
 draft: false
 ---
 

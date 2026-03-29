@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/pekka-pouta-tyrmaa-takatalven-aika-varmaa/9317178"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
