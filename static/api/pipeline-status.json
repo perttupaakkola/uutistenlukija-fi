@@ -1,28 +1,28 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-29T02:24:45+00:00",
+  "generated_at": "2026-03-29T02:43:36+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 124,
-    "ok": 47,
+    "total": 123,
+    "ok": 46,
     "skip": 0,
     "error": 77
   },
   "articles": {
-    "attempted": 2664,
-    "published": 53,
-    "rejected": 178,
-    "publish_rate": 2.0,
+    "attempted": 2640,
+    "published": 51,
+    "rejected": 185,
+    "publish_rate": 1.9,
     "last_published_ts": "2026-03-29T02:14:40.593969+00:00"
   },
   "reject_reasons": {
-    "too_short": 122,
+    "too_short": 126,
     "only 1 paragraphs (min 3)": 21,
-    "score 30/40 (wc=0 title=10 des": 19,
+    "score 30/40 (wc=0 title=10 des": 20,
     "keyword_stuffing": 18,
-    "lead_too_short": 14,
+    "lead_too_short": 15,
     "unsourced numbers: 26miljoonaa": 13,
     "unsourced numbers: 72.5miljoon": 5,
     "unsourced numbers: 500": 3
@@ -37,24 +37,24 @@
   },
   "trending": [
     [
+      "tilanne",
+      10
+    ],
+    [
       "venäjän",
-      14
+      7
+    ],
+    [
+      "trumpin",
+      6
+    ],
+    [
+      "vaikka",
+      6
     ],
     [
       "ukrainan",
-      12
-    ],
-    [
-      "tilanne",
-      12
-    ],
-    [
-      "erityisesti",
-      12
-    ],
-    [
-      "yhdysvaltain",
-      10
+      6
     ]
   ]
 }
