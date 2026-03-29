@@ -94,11 +94,13 @@ fi
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
-# Pull latest pipeline code from origin so scanner.py and scripts stay current.
+# Sync with origin — stash any working tree changes first, pull, then restore.
 # Without this, the host checkout drifts from GitHub main and new feeds/fixes
 # never reach the running pipeline. --rebase keeps history linear.
-# Non-fatal: if pull fails (offline, conflict), we proceed with current code.
-git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE" || echo "[git-pull] pull failed (non-fatal, continuing with current code)" | tee -a "$LOG_FILE"
+git stash --include-untracked --quiet 2>/dev/null || true
+git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
+STASH_LIST=$(git stash list 2>/dev/null | head -1)
+if [ -n "$STASH_LIST" ]; then git stash pop --quiet 2>/dev/null || true; fi
 
 # CRITICAL: Reset index + restore layout/script files to HEAD before staging.
 # Bridge syncs from Alex's sessions can leave modified layout files or scripts
@@ -113,7 +115,6 @@ python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[h
 python3 "$PIPELINE_DIR/generate_pipeline_status.py" 2>&1 | tee -a "$LOG_FILE" || echo "[pipeline_status] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PIPELINE_DIR/generate_search_index.py" 2>&1 | tee -a "$LOG_FILE" || echo "[search_index] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PROJECT_DIR/scripts/category_distribution.py" 2>&1 | tee -a "$LOG_FILE" || echo "[category_distribution] generation failed (non-fatal)" | tee -a "$LOG_FILE"
-python3 "$PIPELINE_DIR/generate_search_index.py" 2>&1 | tee -a "$LOG_FILE" || echo "[search_index] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 
 git add content/ public/ static/api/ static/metrics/ static/search-index.json pipeline/metrics.jsonl pipeline/.pipeline_lock 2>/dev/null || true
 if git diff --cached --quiet; then
@@ -123,7 +124,12 @@ else
   git commit -m "Auto-publish: ${ARTICLE_COUNT} new articles ($(date -u +%Y-%m-%d %H:%M UTC))" 2>&1 | tee -a "$LOG_FILE"
   
   echo "[3/3] Pushing to GitHub..." | tee -a "$LOG_FILE"
-  git push origin main 2>&1 | tee -a "$LOG_FILE"
+  # Retry push once on rejection (another agent may have pushed between pull and push)
+  if ! git push origin main 2>&1 | tee -a "$LOG_FILE"; then
+    echo "[git-push] Push rejected — pulling and retrying..." | tee -a "$LOG_FILE"
+    git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
+    git push origin main 2>&1 | tee -a "$LOG_FILE"
+  fi
   echo "Deployed ${ARTICLE_COUNT} new articles." | tee -a "$LOG_FILE"
 fi
 bash "$PROJECT_DIR/scripts/daily-snapshot.sh" 2>&1 | tee -a "$LOG_FILE" || echo "[snapshot] generation failed (non-fatal)" | tee -a "$LOG_FILE"
