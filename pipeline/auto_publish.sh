@@ -63,6 +63,7 @@ if [ -f "$PROJECT_DIR/.env" ]; then
   set +a
 fi
 
+PIPELINE_START_TS=$(date +%s)
 echo "=== Auto-publish started at $(date -u) ===" | tee -a "$LOG_FILE"
 
 # Pre-flight: validate imports before running the real pipeline
@@ -133,6 +134,11 @@ python3 "$PIPELINE_DIR/update_publish_metrics.py" 2>&1 | tee -a "$LOG_FILE" || t
 # Print metrics summary (last 7 days) to log
 echo "[metrics] 7-day summary:" | tee -a "$LOG_FILE"
 python3 "$PIPELINE_DIR/metrics.py" --metrics-report --days 7 2>&1 | tee -a "$LOG_FILE" || true
+
+PIPELINE_ELAPSED=$(( $(date +%s) - PIPELINE_START_TS ))
+python3 "$PROJECT_DIR/scripts/pipeline_run_summary.py" \
+  --articles "${ARTICLE_COUNT:-0}" --elapsed "$PIPELINE_ELAPSED" \
+  2>&1 | tee -a "$LOG_FILE" || true
 
 # Cleanup old logs (keep last 50)
 ls -t "$PIPELINE_DIR/logs/auto_publish_"*.log 2>/dev/null | tail -n +51 | xargs rm -f 2>/dev/null || true
