@@ -50,6 +50,13 @@ _KW_STOPWORDS = {
     "olla", "joka", "jo", "niin", "kuin", "siis",
 }
 
+_GENERIC_ENDING_PATTERNS = (
+    "tulevat viikot",
+    "aika näyttää",
+    "voidaan todeta",
+    "on tärkeää",
+)
+
 # ── Number extraction ─────────────────────────────────────────────────────────
 
 # Matches: 4-digit years first, then integers/decimals with optional units
@@ -103,6 +110,7 @@ class ScoreBreakdown(NamedTuple):
     category_pts: int           # 0/10
     no_placeholder_pts: int     # 0/10
     hard_fails: list[str]       # structural disqualifiers (non-scoring)
+    soft_warnings: list[str]    # non-blocking quality warnings
     passes: bool                # True if total >= threshold AND no hard_fails
 
 
@@ -156,6 +164,21 @@ def score_article(article: dict) -> ScoreBreakdown:
 
     total = wc_pts + title_pts + desc_pts + image_pts + cat_pts + placeholder_pts
 
+    # ── Soft warnings (non-blocking, reduce score slightly) ───────────────────
+    soft_warnings: list[str] = []
+    paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+    if paragraphs:
+        last_paragraph = paragraphs[-1].lower()
+        matched_generic = [
+            phrase for phrase in _GENERIC_ENDING_PATTERNS
+            if phrase in last_paragraph
+        ]
+        if matched_generic:
+            total = max(0, total - 5)
+            soft_warnings.append(
+                "generic_ending: " + ", ".join(matched_generic)
+            )
+
     # ── Hard disqualifiers (structural, don't affect score but cause rejection) ──
     hard_fails: list[str] = []
 
@@ -163,7 +186,6 @@ def score_article(article: dict) -> ScoreBreakdown:
     if word_count < MIN_BODY_WORDS:
         hard_fails.append(f"too_short ({word_count} words, min {MIN_BODY_WORDS})")
 
-    paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
     if len(paragraphs) < 3:
         hard_fails.append(f"only {len(paragraphs)} paragraphs (min 3)")
 
@@ -207,6 +229,7 @@ def score_article(article: dict) -> ScoreBreakdown:
         category_pts=cat_pts,
         no_placeholder_pts=placeholder_pts,
         hard_fails=hard_fails,
+        soft_warnings=soft_warnings,
         passes=passes,
     )
 
@@ -233,6 +256,12 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
         title = article.get("title", "?")[:60]
         breakdown = score_article(article)
         scores[title] = breakdown.total
+
+        if breakdown.soft_warnings:
+            print(
+                f"[quality] WARNING ({breakdown.total}/80): '{title}' — "
+                + " | ".join(breakdown.soft_warnings)
+            )
 
         if breakdown.passes:
             passed.append(article)
@@ -356,6 +385,8 @@ if __name__ == "__main__":
         print(f"  no_placeholder: {bd.no_placeholder_pts:2d}/10")
         if bd.hard_fails:
             print(f"  hard_fails   : {'; '.join(bd.hard_fails)}")
+        if bd.soft_warnings:
+            print(f"  soft_warnings: {'; '.join(bd.soft_warnings)}")
         print(f"  title        : {title!r}")
 
     if len(sys.argv) < 2:

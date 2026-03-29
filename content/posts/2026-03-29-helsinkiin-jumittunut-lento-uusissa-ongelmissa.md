@@ -41,11 +41,5 @@ Alun perin lennoissa oli teknisiä ongelmia, ja nyt matkustajien on kohdattava u
 
 Venäläinen media Fontanka raportoi, että lento on edelleen jumissa Belgradissa, mikä nostaa kysymyksiä lentoyhtiön kyvystä hallita mahdollisia ongelmia tilanteessa. Matkustajat ovat kokeneet tilannetta uuvuttavana, ja monet heistä ovat ilmaisseet turhautumistaan viivästyksistä. Lentoyhtiön kommunikaatio on myös saanut kritiikkiä, sillä matkustajat kaipaavat ajankohtaista ja tarkkaa tietoa omasta tilanteestaan.
 
-## Lentoyhtiön vastuu tilanteessa
-Ilmaliikenne on monella tapaa haastavaa, ja suurtehoisten lentokoneiden käyttö on alkanut olla yhä monimutkaisempaa. Lentoyhtiöltä odotetaan sujuvaa yhteistyötä viranomaisten kanssa, mutta nyt näyttää siltä, että asianmukaisia toimenpiteitä ei ole toteutettu riittävän nopeasti. Tämä näkyy matkustajien kokemassa stressissä ja huolessa.
-
-On tärkeää, että lentoyhtiö varmistaa matkustajien turvallisuuden ja mukavuuden, erityisesti tilanteissa, joissa viivästyksiä esiintyy. Matkustajien on saatava mahdollisimman ajankohtaista tietoa lentoyhtiöltä, jotta he voivat tehdä suunnitelmia ja reagoida tilanteeseen parhaalla mahdollisella tavalla.
-
-Tilanne lentoyhtiöiden ja matkustajien välillä on tällä hetkellä jännittynyt, ja matkustajat toivovat tilanteen ratkeavan nopeasti, jotta pääsevät jatkamaan matkaansa Pietariin. Lentoyhtiöiden on tärkeää ottaa huomioon matkustajien palautteet ja kehittää vastaavasti toimintaprosessejaan.
-
-Kun lentoyhtiö kohtaa uusia haasteita, on tärkeää, että se pystyisi tarjoamaan asiakkailleen luotettavaa palvelua, joka takaa turvallisuuden ja hyvän asiakaskokemuksen. Tämä tilanne on herättänyt kysymyksiä lentoliikenteen hallinnasta ja matkustajien oikeuksista viivästyksissä.
+## Matkustajien oikeudet viivästyksissä
+Pitkissä viivästyksissä EU:n lentoasetus 261/2004 velvoittaa lentoyhtiön tarjoamaan matkustajille huolenpitoa ja tarvittaessa korvausta. Air Serbian on varmistettava, että matkustajat saavat ajankohtaista tietoa tilanteestaan.
