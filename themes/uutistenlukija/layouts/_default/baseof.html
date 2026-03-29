@@ -71,9 +71,17 @@
   <link id="main-stylesheet" rel="stylesheet" href="/css/style.css" media="print">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   <script>document.getElementById('main-stylesheet').media='all'</script>
-  <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="alternate" hreflang="fi" href="{{ .Permalink }}">
-  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+  {{- $canonicalURL := .Permalink -}}
+  {{- if or .IsHome .IsSection (eq .Kind "taxonomy") (eq .Kind "term") -}}
+    {{- with .Paginator -}}
+      {{- if gt .PageNumber 1 -}}
+        {{- $canonicalURL = .URL | absURL -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  <link rel="canonical" href="{{ $canonicalURL }}">
+  <link rel="alternate" hreflang="fi" href="{{ $canonicalURL }}">
+  <link rel="alternate" hreflang="x-default" href="{{ $canonicalURL }}">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
