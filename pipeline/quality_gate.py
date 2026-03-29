@@ -182,6 +182,12 @@ def score_article(article: dict) -> ScoreBreakdown:
     # ── Hard disqualifiers (structural, don't affect score but cause rejection) ──
     hard_fails: list[str] = []
 
+    # Thin source gate — if source_text is very short, the rewriter had nothing to work with
+    # and likely invented content. Reject before publishing.
+    source_text_words = len((source_text or "").split())
+    if source_text_words > 0 and source_text_words < 60:
+        hard_fails.append(f"thin_source ({source_text_words} words in source — likely paywall/stub)")
+
     # Minimum word count (SEO gate — thin articles hurt rankings)
     if word_count < MIN_BODY_WORDS:
         hard_fails.append(f"too_short ({word_count} words, min {MIN_BODY_WORDS})")
