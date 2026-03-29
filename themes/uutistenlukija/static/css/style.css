@@ -3229,12 +3229,12 @@ body.is-home .highlights-row--top {
 @media (max-width: 640px) {
   /* ── Compact header ─────────────────────────────────────────────── */
   .site-header {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     border-bottom-width: 1px;
   }
   .header-inner {
-    padding: 0.4rem 0.75rem;
-    gap: 0;
+    padding: 0.4rem 0.75rem !important;
+    gap: 0 !important;
   }
   .header-main-row {
     min-height: 44px;
@@ -3246,73 +3246,105 @@ body.is-home .highlights-row--top {
 
   /* Hide search toggle in header — available in hamburger menu */
   .site-search--collapsed {
-    display: none;
+    display: none !important;
   }
 
-  /* ── Hero: image-first, text below (Iltalehti style) ────────────── */
-  .hero-cluster {
-    margin-top: 0;
+  /* ── Kill all spacing between header and hero ───────────────────── */
+  .hero-cluster,
+  body.is-home .hero-cluster {
+    margin: 0 !important;
+    gap: 0.75rem !important;
+    grid-template-columns: 1fr !important;
   }
-  .lead-article--hero {
-    border: 0;
-    border-radius: 0;
-    background: none;
-    padding: 0;
+
+  /* ── Lead article: full bleed, no card styling ──────────────────── */
+  .lead-article,
+  .lead-article--hero,
+  .lead-article--hero.hero-cluster__lead-card {
+    border: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
   }
+  :root:not([data-theme="light"]) .lead-article--hero {
+    border-left-color: transparent !important;
+  }
+
+  /* ── Hero link: flexbox column for image-then-text ──────────────── */
   .lead-article--hero .hero-scrim-link {
-    display: flex;
-    flex-direction: column;
-    aspect-ratio: auto;
-    border-radius: 0;
-    max-height: none;
-    overflow: visible;
-    color: var(--text);
+    display: flex !important;
+    flex-direction: column !important;
+    position: static !important;
+    aspect-ratio: auto !important;
+    border-radius: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    color: var(--text) !important;
   }
-  /* Image: full bleed, fixed aspect ratio */
-  .lead-article--hero .hero-scrim-img {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    border-radius: 0;
+
+  /* Image: full bleed edge-to-edge */
+  .lead-article--hero .hero-scrim-img,
+  .lead-article--hero .article-card-thumb {
+    aspect-ratio: 16 / 9 !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    max-height: none !important;
+    display: block !important;
   }
+
   /* Hide scrim overlay — not needed when text is below */
   .lead-article--hero .hero-scrim {
-    display: none;
+    display: none !important;
   }
+
   /* Text below image instead of overlaid */
   .lead-article--hero .hero-scrim-body {
-    position: static;
-    padding: 0.75rem;
-    pointer-events: auto;
+    position: static !important;
+    padding: 0.65rem 0.75rem 0.5rem !important;
+    pointer-events: auto !important;
   }
+  .lead-article--hero .hero-scrim-body .category-pill,
   .lead-article--hero .hero-scrim-body .category-label {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #fff;
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #fff !important;
     margin-bottom: 0.35rem;
   }
-  .hero-scrim-title {
-    color: var(--text);
-    text-shadow: none;
-    font-size: 1.4rem;
-    line-height: 1.25;
-    -webkit-line-clamp: 4;
-  }
+
+  /* Hero title: normal text color, not white */
+  .hero-scrim-title,
   body.is-home .lead-article--hero h2,
   body.is-home .hero-scrim-title {
-    font-size: 1.4rem;
-    line-height: 1.25;
+    color: var(--text) !important;
+    text-shadow: none !important;
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+    -webkit-line-clamp: 4;
+    max-width: none !important;
   }
   .hero-scrim-excerpt {
-    color: var(--text-secondary);
-    text-shadow: none;
-    font-size: 0.9rem;
+    color: var(--text-secondary) !important;
+    text-shadow: none !important;
+    font-size: 0.88rem !important;
   }
   .hero-scrim-meta {
-    color: var(--text-muted);
-    text-shadow: none;
+    color: var(--text-muted) !important;
+    text-shadow: none !important;
   }
+
   /* Container: reduce side padding for more content space */
   .container {
     padding: 0 0.75rem;
+  }
+
+  /* ── Followups: compact below hero ──────────────────────────────── */
+  .hero-cluster__followups,
+  .highlights-row--top {
+    grid-template-columns: 1fr !important;
+    padding: 0 0.75rem !important;
+    gap: 0.75rem !important;
   }
 }
