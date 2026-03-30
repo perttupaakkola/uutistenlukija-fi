@@ -372,6 +372,19 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                     print(f"[critical-css] {_crit.stdout.strip()}")
             except Exception as _crit_err:
                 print(f"[critical-css] WARNING: regeneration failed: {_crit_err}")
+            try:
+                import subprocess, sys as _sys
+                _schema = subprocess.run(
+                    [_sys.executable, os.path.join(PROJECT_DIR, "scripts", "validate_structured_data.py"), "--public-dir", os.path.join(PROJECT_DIR, "public")],
+                    capture_output=True, text=True, cwd=PROJECT_DIR
+                )
+                schema_output = "\n".join(filter(None, [_schema.stdout.strip(), _schema.stderr.strip()]))
+                if schema_output:
+                    print(schema_output)
+                if _schema.returncode != 0:
+                    print(f"[schema] WARNING: validator exited {_schema.returncode}")
+            except Exception as _schema_err:
+                print(f"[schema] WARNING: validation failed to run: {_schema_err}")
         print("\n✅ Rakennus valmis!" if success else f"\n❌ Rakennus epäonnistui: {build_err}")
         return success
 
@@ -796,6 +809,19 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                     print(f"[critical-css] {_crit.stdout.strip()}")
             except Exception as _crit_err:
                 print(f"[critical-css] WARNING: regeneration failed: {_crit_err}")
+            try:
+                import subprocess, sys as _sys
+                _schema = subprocess.run(
+                    [_sys.executable, os.path.join(PROJECT_DIR, "scripts", "validate_structured_data.py"), "--public-dir", os.path.join(PROJECT_DIR, "public")],
+                    capture_output=True, text=True, cwd=PROJECT_DIR
+                )
+                schema_output = "\n".join(filter(None, [_schema.stdout.strip(), _schema.stderr.strip()]))
+                if schema_output:
+                    print(schema_output)
+                if _schema.returncode != 0:
+                    print(f"[schema] WARNING: validator exited {_schema.returncode}")
+            except Exception as _schema_err:
+                print(f"[schema] WARNING: validation failed to run: {_schema_err}")
             # Ping search engines with new article URLs via IndexNow
             if created:
                 _new_urls = [f"https://uutistenlukija.fi/posts/{p.split('/')[-1].replace('.md','')}/"
