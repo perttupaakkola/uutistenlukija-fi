@@ -25,7 +25,6 @@
               {{ with $p.Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
               <span>{{ partial "freshness-label.html" $p.Date }}</span>
               <span>{{ partial "reading-time.html" $p }}</span>
-              {{ with $p.Params.source_name }}<span>{{ . }}</span>{{ end }}
             </div>
           </div>
         </li>

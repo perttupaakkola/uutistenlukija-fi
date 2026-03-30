@@ -52,7 +52,6 @@
           {{ end }}
           <div class="hero-scrim-meta">
             <span>{{ partial "freshness-label.html" $lead.Date }}</span>
-            {{ with $lead.Params.source_name }}<span>{{ . }}</span>{{ end }}
             <span>{{ partial "reading-time.html" $lead }}</span>
           </div>
         </div>
@@ -80,7 +79,6 @@
       {{ end }}
       <div class="meta">
         <span>{{ partial "freshness-label.html" .Date }}</span>
-        {{ with .Params.source_name }}<span>{{ . }}</span>{{ end }}
       </div>
     </article>
     {{ end }}
