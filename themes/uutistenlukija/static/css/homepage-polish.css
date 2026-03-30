@@ -267,3 +267,30 @@
   .home-rail__item { grid-template-columns: 1.75rem minmax(0, 1fr); gap: 0.65rem; }
   .home-rail__rank { width: 1.75rem; height: 1.75rem; }
 }
+
+/* Felix: Sara's Mobile Hero Polish (P0) */
+@media (max-width: 680px) {
+  body.is-home .hero-cluster {
+    /* Kill header gap and container padding */
+    margin: -2rem -1rem 1.5rem !important; 
+  }
+
+  .lead-article--hero .hero-scrim-body {
+    padding: 1.25rem 1.5rem 1.5rem !important;
+  }
+
+  .hero-scrim-title, 
+  body.is-home .lead-article--hero h2 {
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.75rem !important;
+    color: var(--text) !important;
+  }
+
+  .hero-scrim-excerpt {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+}
