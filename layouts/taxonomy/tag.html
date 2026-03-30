@@ -24,7 +24,7 @@
     <h2 class="category-featured__title">{{ .Title }}</h2>
     <p class="category-featured__excerpt">{{ .Summary | truncate 200 }}</p>
     <div class="meta">
-      {{ .Date | time.Format "2.1. klo 15:04" }}
+      {{ partial "relative-date.html" . }}
       {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
       · {{ if (isset .Params "reading_time") }}{{ if eq (int .Params.reading_time) 0 }}&lt;1{{ else }}{{ .Params.reading_time }}{{ end }}{{ else }}{{ .ReadingTime }}{{ end }} min
     </div>
@@ -43,7 +43,7 @@
     <h2><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></h2>
     <p class="excerpt">{{ $p.Summary | truncate 200 }}</p>
     <div class="meta">
-      {{ $p.Date | time.Format "2.1. klo 15:04" }}
+      {{ partial "relative-date.html" $p }}
       {{ with $p.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
       · {{ if (isset $p.Params "reading_time") }}{{ if eq (int $p.Params.reading_time) 0 }}&lt;1{{ else }}{{ $p.Params.reading_time }}{{ end }}{{ else }}{{ $p.ReadingTime }}{{ end }} min
     </div>

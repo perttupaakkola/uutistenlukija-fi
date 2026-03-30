@@ -68,7 +68,7 @@
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         <p class="excerpt">{{ .Description | default (.Summary | plainify | truncate 180) }}</p>
         <div class="meta">
-          {{ .Date | time.Format "2.1. klo 15:04" }}
+          {{ partial "relative-date.html" . }}
           · <span class="author-inline">{{ .Params.author | default "Toimitus" }}</span>
         </div>
       </article>

@@ -45,9 +45,6 @@ _query_cache: Dict[str, List[Dict]] = {}
 # Round-robin index per query
 _query_index: Dict[str, int] = {}
 
-# Global set of photo IDs used in current batch — prevents duplicate images
-_used_photo_ids: set = set()
-
 # Finnish stopwords
 _FI_STOPWORDS = {
     "ja", "tai", "on", "ei", "se", "hän", "he", "me", "te", "olla", "oli",
@@ -61,6 +58,7 @@ _FI_STOPWORDS = {
     "suomi", "suomen", "suomessa", "suomalais", "suomalainen",
     "voitti", "hävis", "julkaisi", "ilmoitti", "kertoi", "totesi",
     "uutiset", "lehti", "media", "uutinen",
+    "ovat", "saattavat", "takia", "lähellä", "tulokset", "asiantuntija", "pääministeri",
 }
 
 _FI_TO_EN = {
@@ -136,64 +134,82 @@ CATEGORY_QUERIES = {
 }
 
 
-def load_used_ids_from_content(content_dir: str) -> None:
-    """Pre-load photo IDs already used in existing articles to avoid duplicates
-    across pipeline runs. Scans frontmatter 'image' fields for Unsplash photo IDs."""
-    import glob
-    pattern = os.path.join(content_dir, "posts", "*.md")
-    id_pattern = re.compile(r"images\.unsplash\.com/photo-([a-zA-Z0-9_-]+)")
-    count = 0
-    for path in glob.glob(pattern):
-        try:
-            with open(path, "r") as f:
-                head = f.read(2000)  # Only need frontmatter
-            m = id_pattern.search(head)
-            if m:
-                _used_photo_ids.add(m.group(1))
-                count += 1
-        except Exception:
-            continue
-    if count:
-        print(f"[unsplash] Pre-loaded {count} used photo IDs from existing content")
+def _normalize_category(category: str) -> str:
+    category = (category or "").strip()
+    if not category:
+        return ""
+    for canonical in CATEGORY_QUERIES:
+        if canonical.lower() == category.lower():
+            return canonical
+    return category
 
 
-def extract_keywords(title: str, category: str = "", max_terms: int = 4) -> str:
-    """Extract English search keywords from a Finnish article title."""
-    words = re.sub(r"[^\wäöå\s-]", " ", title.lower()).split()
-    translated = []
+def _tokenize_terms(*parts: str) -> list[str]:
+    tokens: list[str] = []
     seen = set()
+    for part in parts:
+        words = re.sub(r"[^\wäöå\s-]", " ", (part or "").lower()).split()
+        for word in words:
+            stem = re.sub(
+                r"(ssa|ssä|sta|stä|lle|lta|ltä|lla|llä|ksi|han|hen|hin|hun|hyn|höön|een|ien|jen|den|ten|nen|sen)$",
+                "", word
+            )
+            if word in _FI_STOPWORDS or stem in _FI_STOPWORDS:
+                continue
+            if len(stem) < 3:
+                continue
+            en = _FI_TO_EN.get(word) or _FI_TO_EN.get(stem)
+            candidates = (en.split() if en else [word])
+            for cand in candidates:
+                cand = cand.strip()
+                if not cand or cand in seen:
+                    continue
+                if not en and re.search(r"(inen|lainen|läinen|linen|llinen)$", cand):
+                    continue
+                seen.add(cand)
+                tokens.append(cand)
+    return tokens
 
-    for word in words:
-        stem = re.sub(
-            r"(ssa|ssä|sta|stä|lle|lta|ltä|lla|llä|ksi|han|hen|hin|hun|hyn|höön|een|ien|jen|den|ten|nen|sen)$",
-            "", word
-        )
-        if word in _FI_STOPWORDS or stem in _FI_STOPWORDS:
-            continue
-        if len(stem) < 3:
-            continue
-        en = _FI_TO_EN.get(word) or _FI_TO_EN.get(stem)
-        if en:
-            key = en.split()[0]
-            if key not in seen:
-                seen.add(key)
-                translated.append(en)
-        else:
-            if not re.search(r"(inen|lainen|läinen|linen|llinen)$", word):
-                if word not in seen:
-                    seen.add(word)
-                    translated.append(word)
 
-    terms = translated[:max_terms]
+def build_search_query(
+    title: str,
+    category: str = "",
+    *,
+    summary: str = "",
+    key_points: list[str] | None = None,
+    content: str = "",
+    max_terms: int = 5,
+) -> str:
+    """Build a topic-specific English-biased image search query.
+
+    Priority: title terms first, then key points, then summary/content, then category context.
+    """
+    category = _normalize_category(category)
+    content_excerpt = " ".join((content or "").split()[:80])
+    tokens = _tokenize_terms(
+        " ".join(key_points or []),
+        title,
+        summary,
+        content_excerpt,
+    )
+
+    terms = tokens[:max_terms]
     if not terms:
         return CATEGORY_QUERIES.get(category, "news")
 
-    if len(terms) < max_terms and category in CATEGORY_QUERIES:
-        cat_word = CATEGORY_QUERIES[category].split()[0]
-        if cat_word not in " ".join(terms):
-            terms.append(cat_word)
+    if category in CATEGORY_QUERIES:
+        for cat_word in CATEGORY_QUERIES[category].split():
+            if len(terms) >= max_terms:
+                break
+            if cat_word not in terms:
+                terms.append(cat_word)
 
-    return " ".join(terms)
+    return " ".join(terms[:max_terms])
+
+
+def extract_keywords(title: str, category: str = "", max_terms: int = 4) -> str:
+    """Backward-compatible title-only keyword extraction."""
+    return build_search_query(title, category, max_terms=max_terms)
 
 
 def _api_headers() -> Dict[str, str]:
@@ -311,6 +327,10 @@ def _trigger_download(photo: Dict) -> None:
 def fetch_image_for_article(
     title: str,
     category: str,
+    *,
+    summary: str = "",
+    key_points: list[str] | None = None,
+    content: str = "",
     inter_request_delay: float = 1.2,
 ) -> Optional[Dict]:
     """Fetch a relevant Unsplash image for a single article.
@@ -328,7 +348,14 @@ def fetch_image_for_article(
 
     Side effect: triggers Unsplash download tracking endpoint.
     """
-    query = extract_keywords(title, category)
+    category = _normalize_category(category)
+    query = build_search_query(
+        title,
+        category,
+        summary=summary,
+        key_points=key_points,
+        content=content,
+    )
     print(f"[unsplash] '{title[:50]}' → '{query}'")
 
     photos = _search(query)
@@ -341,30 +368,9 @@ def fetch_image_for_article(
     if not photos:
         return None
 
-    # Pick first unused photo from results to avoid duplicates across articles
-    photo = None
-    start_idx = _query_index.get(query, 0)
-    for i in range(len(photos)):
-        candidate = photos[(start_idx + i) % len(photos)]
-        if candidate["id"] not in _used_photo_ids:
-            photo = candidate
-            _query_index[query] = (start_idx + i + 1) % len(photos)
-            break
-
-    if photo is None:
-        # All photos in this query are used; try category fallback if not already
-        if query != CATEGORY_QUERIES.get(category, ""):
-            fallback_query = CATEGORY_QUERIES.get(category, "news")
-            fallback_photos = _search(fallback_query)
-            for p in fallback_photos:
-                if p["id"] not in _used_photo_ids:
-                    photo = p
-                    break
-        if photo is None:
-            # Last resort: use first result even if duplicate
-            photo = photos[start_idx % len(photos)]
-
-    _used_photo_ids.add(photo["id"])
+    idx = _query_index.get(query, 0) % len(photos)
+    _query_index[query] = idx + 1
+    photo = photos[idx]
 
     # Trigger mandatory download tracking
     _trigger_download(photo)
@@ -385,7 +391,7 @@ def fetch_image_for_article(
     }
 
 
-def fetch_images_for_articles(articles: list, delay: float = 1.2, content_dir: str = "") -> list:
+def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
     """Fetch Unsplash hotlink images for a list of articles.
 
     Sets frontmatter fields on each article:
@@ -400,10 +406,6 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2, content_dir: s
 
     Skips articles that already have an `image` field set.
     """
-    # Pre-load used IDs to avoid duplicates across pipeline runs
-    if content_dir and not _used_photo_ids:
-        load_used_ids_from_content(content_dir)
-
     for article in articles:
         if article.get("image"):
             continue
@@ -411,7 +413,14 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2, content_dir: s
         title = article.get("title", "")
         category = article.get("category", "Kotimaa")
 
-        result = fetch_image_for_article(title, category, inter_request_delay=delay)
+        result = fetch_image_for_article(
+            title,
+            category,
+            summary=article.get("summary", "") or "",
+            key_points=article.get("key_points") or [],
+            content=article.get("content", "") or "",
+            inter_request_delay=delay,
+        )
 
         if result:
             article["image"] = result["url"]

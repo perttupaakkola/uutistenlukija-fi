@@ -1,0 +1,30 @@
+{{/*
+  relative-date.html — server-rendered relative publish date for cards.
+  Usage: {{ partial "relative-date.html" . }}
+
+  Rules:
+  - < 1h   → "Juuri nyt" or "X min sitten"
+  - < 24h  → "X tuntia sitten"
+  - < 7d   → "X päivää sitten"
+  - >= 7d  → "DD.MM.YYYY"
+
+  Prefers .Params.published_at when present, otherwise falls back to .Date.
+*/}}
+{{- $page := . -}}
+{{- $publishedAt := $page.Date -}}
+{{- if isset $page.Params "published_at" -}}{{- $publishedAt = time.AsTime $page.Params.published_at -}}{{- end -}}
+{{- $diffSec := math.Max 0 (math.Sub now.Unix $publishedAt.Unix) -}}
+{{- $minutes := int (math.Floor (math.Div $diffSec 60)) -}}
+{{- $hours := int (math.Floor (math.Div $diffSec 3600)) -}}
+{{- $days := int (math.Floor (math.Div $diffSec 86400)) -}}
+<time datetime="{{ $publishedAt.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- if lt $diffSec 3600 -}}
+  {{- if lt $minutes 1 -}}Juuri nyt{{- else -}}{{ $minutes }} min sitten{{- end -}}
+{{- else if lt $diffSec 86400 -}}
+  {{- if eq $hours 1 -}}1 tunti sitten{{- else -}}{{ $hours }} tuntia sitten{{- end -}}
+{{- else if lt $diffSec 604800 -}}
+  {{- if eq $days 1 -}}1 päivä sitten{{- else -}}{{ $days }} päivää sitten{{- end -}}
+{{- else -}}
+  {{- $publishedAt | time.Format "2.1.2006" -}}
+{{- end -}}
+</time>

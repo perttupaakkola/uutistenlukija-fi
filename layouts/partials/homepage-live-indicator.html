@@ -1,0 +1,28 @@
+{{/*
+  homepage-live-indicator.html — relative freshness signal for homepage.
+  Usage: {{ partial "homepage-live-indicator.html" $publishedAt }}
+
+  Output examples:
+  - Viimeisin artikkeli: 12 min sitten
+  - Viimeisin artikkeli: 3 h sitten
+  - Viimeisin artikkeli: 1 pv sitten
+*/}}
+{{- $date := . -}}
+{{- $now := now -}}
+{{- $diffSec := math.Max 0 (math.Sub $now.Unix $date.Unix) -}}
+{{- $minutes := int (math.Floor (math.Div $diffSec 60)) -}}
+{{- $hours := int (math.Floor (math.Div $diffSec 3600)) -}}
+{{- $days := int (math.Floor (math.Div $diffSec 86400)) -}}
+<span class="homepage-live-indicator" aria-label="Viimeisin artikkeli julkaistu {{ $date | time.Format "2.1.2006 klo 15:04" }}">
+  <span class="homepage-live-indicator__dot" aria-hidden="true"></span>
+  <span class="homepage-live-indicator__text">
+    Viimeisin artikkeli:
+    {{- if lt $diffSec 3600 -}}
+      {{- if lt $minutes 1 -}} 0 min sitten{{- else -}} {{ $minutes }} min sitten{{- end -}}
+    {{- else if lt $diffSec 86400 -}}
+      {{- if eq $hours 1 -}} 1 h sitten{{- else -}} {{ $hours }} h sitten{{- end -}}
+    {{- else -}}
+      {{- if eq $days 1 -}} 1 pv sitten{{- else -}} {{ $days }} pv sitten{{- end -}}
+    {{- end -}}
+  </span>
+</span>

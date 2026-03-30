@@ -54,6 +54,7 @@ _FI_STOPWORDS = {
     "suomi", "suomen", "suomessa", "suomalais", "suomalainen",
     "voitti", "hävis", "julkaisi", "ilmoitti", "kertoi", "totesi",
     "uutiset", "lehti", "media", "uutinen",
+    "ovat", "olla", "oli", "saattavat", "takia", "lähellä", "tulokset", "asiantuntija", "pääministeri",
 }
 
 # Finnish → English translations for high-value content terms
@@ -141,54 +142,79 @@ def _cache_dir() -> str:
     return os.path.join(_project_root(), _CACHE_SUBDIR)
 
 
-def extract_keywords(title: str, category: str = "", max_terms: int = 4) -> str:
-    """Extract English search keywords from a Finnish article title.
+def _normalize_category(category: str) -> str:
+    category = (category or "").strip()
+    if not category:
+        return ""
+    for canonical in CATEGORY_QUERIES:
+        if canonical.lower() == category.lower():
+            return canonical
+    return category
 
-    Strips stopwords, translates key Finnish terms, falls back to category query.
-    Returns space-joined query string for Pexels.
-    """
-    words = re.sub(r"[^\wäöå\s-]", " ", title.lower()).split()
-    translated = []
+
+def _tokenize_terms(*parts: str) -> list[str]:
+    tokens: list[str] = []
     seen = set()
+    for part in parts:
+        words = re.sub(r"[^\wäöå\s-]", " ", (part or "").lower()).split()
+        for word in words:
+            stem = re.sub(
+                r"(ssa|ssä|sta|stä|lle|lta|ltä|lla|llä|ksi|han|hen|hin|hun|hyn|höön|een|ien|jen|den|ten|nen|sen)$",
+                "", word
+            )
+            if word in _FI_STOPWORDS or stem in _FI_STOPWORDS:
+                continue
+            if len(stem) < 3:
+                continue
+            en = _FI_TO_EN.get(word) or _FI_TO_EN.get(stem)
+            candidates = (en.split() if en else [word])
+            for cand in candidates:
+                cand = cand.strip()
+                if not cand or cand in seen:
+                    continue
+                if not en and re.search(r"(inen|lainen|läinen|linen|llinen)$", cand):
+                    continue
+                seen.add(cand)
+                tokens.append(cand)
+    return tokens
 
-    for word in words:
-        # Try stripping common Finnish inflection suffixes for lookup
-        stem = re.sub(
-            r"(ssa|ssä|sta|stä|lle|lta|ltä|lla|llä|ksi|han|hen|hin|hun|hyn|höön|een|ien|jen|den|ten|nen|sen)$",
-            "", word
-        )
-        if word in _FI_STOPWORDS or stem in _FI_STOPWORDS:
-            continue
-        if len(stem) < 3:
-            continue
 
-        # Translate if known
-        en = _FI_TO_EN.get(word) or _FI_TO_EN.get(stem)
-        if en:
-            key = en.split()[0]  # primary EN word for dedup
-            if key not in seen:
-                seen.add(key)
-                translated.append(en)
-        else:
-            # Keep non-stopword Finnish words that might be proper nouns/brands
-            # Skip words with purely Finnish morphology suffixes
-            if not re.search(r"(inen|lainen|läinen|linen|llinen)$", word):
-                if word not in seen:
-                    seen.add(word)
-                    translated.append(word)
+def build_search_query(
+    title: str,
+    category: str = "",
+    *,
+    summary: str = "",
+    key_points: list[str] | None = None,
+    content: str = "",
+    max_terms: int = 5,
+) -> str:
+    """Build a topic-specific image search query from article fields."""
+    category = _normalize_category(category)
+    content_excerpt = " ".join((content or "").split()[:80])
+    tokens = _tokenize_terms(
+        " ".join(key_points or []),
+        title,
+        summary,
+        content_excerpt,
+    )
 
-    terms = translated[:max_terms]
-
+    terms = tokens[:max_terms]
     if not terms:
         return CATEGORY_QUERIES.get(category, "news")
 
-    # Append category context if space remains
-    if len(terms) < max_terms and category in CATEGORY_QUERIES:
-        cat_word = CATEGORY_QUERIES[category].split()[0]
-        if cat_word not in " ".join(terms):
-            terms.append(cat_word)
+    if category in CATEGORY_QUERIES:
+        for cat_word in CATEGORY_QUERIES[category].split():
+            if len(terms) >= max_terms:
+                break
+            if cat_word not in terms:
+                terms.append(cat_word)
 
-    return " ".join(terms)
+    return " ".join(terms[:max_terms])
+
+
+def extract_keywords(title: str, category: str = "", max_terms: int = 4) -> str:
+    """Backward-compatible title-only keyword extraction."""
+    return build_search_query(title, category, max_terms=max_terms)
 
 
 def _search_pexels(query: str, per_page: int = 80) -> List[Dict]:
@@ -352,6 +378,10 @@ _query_index: Dict[str, int] = {}
 def fetch_image_for_article(
     title: str,
     category: str,
+    *,
+    summary: str = "",
+    key_points: list[str] | None = None,
+    content: str = "",
     slug: str = "",
     download: bool = True,
     inter_request_delay: float = 0.5,
@@ -369,7 +399,14 @@ def fetch_image_for_article(
       credit       — "Photo by X on Pexels" attribution string
     Or None if no suitable image found.
     """
-    query = extract_keywords(title, category)
+    category = _normalize_category(category)
+    query = build_search_query(
+        title,
+        category,
+        summary=summary,
+        key_points=key_points,
+        content=content,
+    )
     print(f"[pexels] '{title[:50]}' → '{query}'")
 
     photos = _search_pexels(query)
@@ -452,7 +489,14 @@ def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
         slug = article.get("slug", "") or _derive_slug(title)
 
         result = fetch_image_for_article(
-            title, category, slug=slug, download=True, inter_request_delay=delay
+            title,
+            category,
+            summary=article.get("summary", "") or "",
+            key_points=article.get("key_points") or [],
+            content=article.get("content", "") or "",
+            slug=slug,
+            download=True,
+            inter_request_delay=delay,
         )
 
         if result and result.get("local_path"):

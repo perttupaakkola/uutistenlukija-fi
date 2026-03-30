@@ -1,6 +1,18 @@
 {{ define "main" }}
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
+{{ $latestScratch := newScratch }}
+{{ $latestScratch.Set "unix" 0 }}
+{{ $latestScratch.Set "time" now }}
+{{ range $posts }}
+  {{ $publishedAt := .Date }}
+  {{ if isset .Params "published_at" }}{{ $publishedAt = time.AsTime .Params.published_at }}{{ end }}
+  {{ if gt $publishedAt.Unix ($latestScratch.Get "unix") }}
+    {{ $latestScratch.Set "unix" $publishedAt.Unix }}
+    {{ $latestScratch.Set "time" $publishedAt }}
+  {{ end }}
+{{ end }}
+{{ $latestPublishedAt := $latestScratch.Get "time" }}
 {{ $seen := slice }}
 {{ $nowUnix := now.Unix }}
 {{ $dayAgoUnix := math.Sub $nowUnix 86400 }}
@@ -62,7 +74,17 @@
 {{/* Visually hidden H1 for SEO — Google uses H1 as primary topic signal */}}
 <h1 class="visually-hidden">Uutistenlukija – Päivän uutiset suomeksi</h1>
 
-{{/* Tagline, pub-frequency bar, category quicknav all removed — redundant above-fold chrome */}}
+{{ partial "site-header.html" . }}
+
+{{/* Homepage freshness signal */}}
+{{ with $latestPublishedAt }}
+<div class="pub-frequency-bar pub-frequency-bar--live">
+  {{ partial "homepage-live-indicator.html" . }}
+</div>
+{{ end }}
+
+{{/* Category quicknav pill bar */}}
+{{ partial "category-quicknav.html" . }}
 
 <span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
 
@@ -171,10 +193,10 @@
         <article class="category-article-card">
           {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "alt" $cardAlt "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cardCat | lower))) }}
           {{ partial "category-badge.html" (dict "category" $cardCat "link" true) }}
-          <h3><a href="{{ .Permalink }}" data-track="article_card_click" data-article-category="{{ $cardCat | lower }}">{{ .Title }}</a></h3>
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
           <p class="excerpt">{{ .Summary | truncate 135 }}</p>
           <div class="meta">
-            <span>{{ partial "freshness-label.html" .Date }}</span>
+            <span>{{ partial "relative-date.html" . }}</span>
             <span>{{ partial "reading-time.html" . }}</span>
           </div>
         </article>

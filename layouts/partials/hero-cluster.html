@@ -51,7 +51,8 @@
           <p class="hero-scrim-excerpt">{{ . | truncate 180 }}</p>
           {{ end }}
           <div class="hero-scrim-meta">
-            <span>{{ partial "freshness-label.html" $lead.Date }}</span>
+            <span>{{ partial "relative-date.html" $lead }}</span>
+            {{ with $lead.Params.source_name }}<span>{{ . }}</span>{{ end }}
             <span>{{ partial "reading-time.html" $lead }}</span>
           </div>
         </div>
@@ -70,7 +71,7 @@
     {{ $thumb := .Params.image_thumb | default $img }}
     {{ $alt := .Params.image_alt | default .Title }}
     <article class="highlight-card highlight-card--secondary hero-cluster__followup-card">
-      <span class="hero-cluster__followup-label">Myös tänään</span>
+      <span class="hero-cluster__followup-label">Seuraa myös</span>
       {{ partial "category-badge.html" (dict "category" $cat "link" true) }}
       {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink "track" "hero_click" "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
       <h3><a href="{{ .Permalink }}" data-track="hero_click">{{ .Title }}</a></h3>
@@ -78,7 +79,8 @@
       <p class="highlight-card__excerpt">{{ . | truncate 120 }}</p>
       {{ end }}
       <div class="meta">
-        <span>{{ partial "freshness-label.html" .Date }}</span>
+        <span>{{ partial "relative-date.html" . }}</span>
+        {{ with .Params.source_name }}<span>{{ . }}</span>{{ end }}
       </div>
     </article>
     {{ end }}

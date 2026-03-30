@@ -36,7 +36,7 @@
         <span class="lyhyet-summary">{{ .Summary | truncate 110 }}</span>
         {{ end }}
       </div>
-      <time class="lyhyet-time" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "2.1. klo 15:04" }}</time>
+      <span class="lyhyet-time">{{ partial "relative-date.html" . }}</span>
     </li>
     {{ end }}
   </ol>

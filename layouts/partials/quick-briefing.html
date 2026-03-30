@@ -17,14 +17,14 @@
         <li class="quick-briefing__item">
           <span class="quick-briefing__index">{{ math.Add $i 1 }}</span>
           <div class="quick-briefing__body">
-            <h3 class="quick-briefing__headline"><a href="{{ $p.RelPermalink }}" data-track="briefing_click">{{ $p.Title }}</a></h3>
+            <h3 class="quick-briefing__headline"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
             {{ with $p.Params.description }}
             <p class="quick-briefing__excerpt">{{ . | truncate 150 }}</p>
             {{ end }}
             <div class="quick-briefing__meta">
               {{ with $p.Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
-              <span>{{ partial "freshness-label.html" $p.Date }}</span>
-              <span>{{ partial "reading-time.html" $p }}</span>
+              <span>{{ partial "relative-date.html" $p }}</span>
+              {{ with $p.Params.source_name }}<span>{{ . }}</span>{{ end }}
             </div>
           </div>
         </li>

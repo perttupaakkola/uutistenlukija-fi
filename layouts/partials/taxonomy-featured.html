@@ -41,7 +41,7 @@
     <h2 class="category-featured__title">{{ .Title }}</h2>
     <p class="category-featured__excerpt">{{ .Summary | truncate 200 }}</p>
     <div class="meta">
-      {{ .Date | time.Format "2.1. klo 15:04" }}
+      {{ partial "relative-date.html" . }}
       · <span class="author-inline">Toimitus</span>
       · {{ partial "reading-time.html" . }}
     </div>
