@@ -1,63 +1,32 @@
 {{ define "main" }}
 {{ partial "reading-progress.html" . }}
 <article class="single-article">
-  {{ partial "breadcrumbs.html" . }}
-  {{ partial "hero-image.html" . }}
-  {{ with .Params.content_type }}
-  <span class="article-badge article-badge--{{ . | urlize }}">{{ . }}</span>
-  {{ end }}
   {{ with .Params.categories }}
   {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
   <h1>{{ .Title }}</h1>
-  {{ with .Params.tags }}
-  <div class="article-tags" aria-label="Aihetunnisteet">
-    {{ range . }}
-    <a href="/tags/{{ . | urlize }}/" class="tag-pill">{{ . }}</a>
-    {{ end }}
-  </div>
-  {{ end }}
+  {{ partial "hero-image.html" . }}
   {{ partial "article-body.html" (dict
     "page" .
     "showKeyPoints" true
-    "showSummary" true
-    "showToc" true
+    "showSummary" false
+    "showToc" false
     "metaVariant" "single"
-    "showShareTop" true
-    "showSource" true
-    "splitParagraphs" true
-    "showInArticleAd" true
-    "showJournalistNote" true
-    "showAfterArticleAd" true
-    "showNewsletter" true
-    "showAuthorBox" true
-    "showBottomShare" true
+    "showShareTop" false
+    "showSource" false
+    "splitParagraphs" false
+    "showInArticleAd" false
+    "showJournalistNote" false
+    "showAfterArticleAd" false
+    "showNewsletter" false
+    "showAuthorBox" false
+    "showBottomShare" false
   ) }}
 
+  {{ partial "share-buttons.html" . }}
+
   {{ partial "related-articles.html" . }}
-  {{ partial "more-from-category.html" . }}
-  {{ partial "most-read.html" . }}
 </article>
-
-{{/* #19.3: Read next — prominent next-article card */}}
-{{ partial "read-next.html" . }}
-
-{{/* Article prev/next navigation */}}
-{{ $section := .CurrentSection }}
-<nav class="article-nav" aria-label="Artikkelinavigointi">
-  {{ with .PrevInSection }}
-  <a href="{{ .Permalink }}" class="article-nav-prev" rel="prev">
-    <span class="article-nav-label">← Edellinen</span>
-    <span class="article-nav-title">{{ .Title }}</span>
-  </a>
-  {{ else }}<div class="article-nav-placeholder"></div>{{ end }}
-  {{ with .NextInSection }}
-  <a href="{{ .Permalink }}" class="article-nav-next" rel="next">
-    <span class="article-nav-label">Seuraava →</span>
-    <span class="article-nav-title">{{ .Title }}</span>
-  </a>
-  {{ else }}<div class="article-nav-placeholder"></div>{{ end }}
-</nav>
 
 {{ partial "scroll-to-top.html" . }}
 

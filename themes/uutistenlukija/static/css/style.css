@@ -2927,10 +2927,56 @@ body.is-home .highlights-row--top {
   text-underline-offset: 2px;
 }
 
+/* ── Single article page ──────────────────────────────────────── */
+.single-article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.single-article h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0.5rem 0 1rem;
+  font-weight: 800;
+}
+.single-article .article-meta {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.single-article .article-key-points {
+  background: color-mix(in srgb, var(--accent) 5%, var(--card-bg));
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.single-article .article-key-points h2 {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.single-article .article-key-points ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.single-article .article-key-points li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+  color: var(--text-secondary);
+}
 .single-article .content {
   max-width: 720px;
-  font-size: 1.25rem;
-  line-height: 1.65;
+  font-size: 1.15rem;
+  line-height: 1.75;
 }
 .single-article .content > * {
   max-width: 100%;
@@ -2940,11 +2986,41 @@ body.is-home .highlights-row--top {
 .single-article .content ol,
 .single-article .content blockquote {
   max-width: 720px;
+  margin-bottom: 1.25rem;
 }
-@media (max-width: 768px) {
+.single-article .content h2 {
+  font-size: 1.4rem;
+  margin: 2rem 0 0.75rem;
+  font-weight: 700;
+}
+.single-article .content h3 {
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 700;
+}
+.single-article .share-buttons-row {
+  margin: 2rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 640px) {
+  .single-article {
+    padding: 0 0.75rem;
+  }
+  .single-article h1 {
+    font-size: 1.5rem;
+    margin: 0.35rem 0 0.75rem;
+  }
   .single-article .content {
-    font-size: 1.125rem;
+    font-size: 1.05rem;
     line-height: 1.7;
+  }
+  .single-article .article-hero {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+  .single-article .article-hero-wrapper {
+    border-radius: 0;
   }
 }
 
