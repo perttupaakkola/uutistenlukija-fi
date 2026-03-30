@@ -4,9 +4,9 @@
 {{- $authorImageSize := .authorImageSize | default 80 -}}
 {{- $bottomShareClass := .bottomShareClass | default "social-share--bottom" -}}
 
-{{- if .showKeyPoints }}{{ partial "key-points.html" $page }}{{ end }}
-{{- if .showSummary }}{{ partial "article-summary.html" $page }}{{ end }}
-{{- if .showToc }}{{ partial "toc.html" $page }}{{ end }}
+{{- if eq .showKeyPoints true }}{{ partial "key-points.html" $page }}{{ end }}
+{{- if eq .showSummary true }}{{ partial "article-summary.html" $page }}{{ end }}
+{{- if eq .showToc true }}{{ partial "toc.html" $page }}{{ end }}
 
 {{- if eq .metaVariant "single" }}
 <div class="article-meta">
@@ -28,19 +28,15 @@
   · {{ $page.ReadingTime }} min lukuaika
 </div>
 {{- end }}
-
-{{- if .showShareTop }}{{ partial "share-buttons.html" $page }}{{ end }}
-{{- if .showSource }}{{ partial "source-article-link.html" $page }}{{ end }}
-
 <div class="{{ $contentClass }}">
   {{ $page.Content }}
 </div>
 
-{{- if .showJournalistNote }}{{ partial "journalist-note.html" $page }}{{ end }}
-{{- if .showAfterArticleAd }}{{ partial "ad-slot.html" (dict "position" "after-article" "context" $page) }}{{ end }}
-{{- if .showNewsletter }}{{ partial "newsletter-cta.html" $page }}{{ end }}
+{{- if eq .showJournalistNote true }}{{ partial "journalist-note.html" $page }}{{ end }}
+{{- if eq .showAfterArticleAd true }}{{ partial "ad-slot.html" (dict "position" "after-article" "context" $page) }}{{ end }}
+{{- if eq .showNewsletter true }}{{ partial "newsletter-cta.html" $page }}{{ end }}
 
-{{- if .showAuthorBox }}
+{{- if eq .showAuthorBox true }}
   {{ with $page.Params.author }}
   <div class="{{ $authorBoxClass }}">
     {{ with $page.Params.author_image }}
@@ -59,7 +55,7 @@
   {{ end }}
 {{- end }}
 
-{{- if .showBottomShare }}
+{{- if eq .showBottomShare true }}
 <div class="{{ $bottomShareClass }}">
   {{ partial "social-share.html" $page }}
 </div>
