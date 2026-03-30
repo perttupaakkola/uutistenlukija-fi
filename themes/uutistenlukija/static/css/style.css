@@ -2934,8 +2934,9 @@ body.is-home .highlights-row--top {
   padding: 0 1.5rem;
 }
 .single-article h1 {
-  font-size: 2rem;
-  line-height: 1.2;
+  font-size: 2.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   margin: 0.5rem 0 1rem;
   font-weight: 800;
 }
@@ -3478,5 +3479,31 @@ body.is-home .highlights-row--top {
   .category-section {
     margin-bottom: 1.5rem !important;
     padding-bottom: 1rem !important;
+  }
+}
+
+/* ── Article Ingress (editorial text-bridge between H1 and hero) ── */
+.article-ingress {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0 0 1.25rem;
+  max-width: 640px;
+}
+@media (max-width: 640px) {
+  .article-ingress {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+}
+
+/* ── Full-bleed hero on mobile ── */
+@media (max-width: 640px) {
+  .single-article .article-hero-wrapper {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    width: calc(100% + 1.5rem);
+    border-radius: 0;
   }
 }
