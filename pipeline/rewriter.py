@@ -149,6 +149,7 @@ Suosi konkreettisia verbejä ja faktoja, vältä abstraktia metapuhetta.
 - "lopuksi voidaan"
 - "kokonaisuutena"
 - "tiivistäen"
+- ÄLÄ käytä seuraavia fraseja tai niiden muunnelmia: "on syytä huomata", "tässä yhteydessä on hyvä mainita", "kuten aiemmin todettiin", "jää nähtäväksi", "asiantuntijat ovat huolissaan" (ilman nimeä). Korvaa geneerinen spekulaatio konkreettisilla faktoilla.
 
 Vastaa VAIN JSON-muodossa."""
 
@@ -261,6 +262,10 @@ def _count_h2s(markdown: str) -> int:
     return len(re.findall(r"(?m)^##\s+", markdown or ""))
 
 
+def _count_words(text: str) -> int:
+    return len(str(text or "").split())
+
+
 _GENERIC_ENDING_PATTERNS = re.compile(
     r"(tarina jatkuu|tulevaisuus on (nyt )?entistä|kaikki silmät ovat|"
     r"tulevat (viikot|kuukaudet|päivät) (näyttävät|kertovat|määrittävät)|"
@@ -293,7 +298,7 @@ def _strip_generic_ending(content: str) -> str:
 def _enforce_h2_subheadings(article: Dict) -> tuple[Dict, bool, bool]:
     """Ensure long articles have at least one H2. Retry once, then warn-only."""
     content = str(article.get("content", "") or "")
-    word_count = len(content.split())
+    word_count = _count_words(content)
     h2_count = _count_h2s(content)
     if word_count <= 250 or h2_count >= 1:
         return article, False, h2_count >= 1
@@ -312,6 +317,29 @@ def _enforce_h2_subheadings(article: Dict) -> tuple[Dict, bool, bool]:
         return retried, True, False
     except Exception as e:
         print(f"[writer]   ⚠ H2 retry failed ({e}): '{title[:50]}'")
+        return article, True, False
+
+
+def _enforce_min_words(article: Dict, min_words: int = 250) -> tuple[Dict, bool, bool]:
+    """Ensure article meets minimum word count. Retry once, then fail closed."""
+    content = str(article.get("content", "") or "")
+    word_count = _count_words(content)
+    if word_count >= min_words:
+        return article, False, True
+
+    title = article.get("title", "")
+    print(f"[writer]   ⚠ Under minimum length ({word_count}w < {min_words}), retrying: '{title[:50]}'")
+    retry_prompt = f"""Laajenna tämä artikkeli vähintään {min_words} sanaan lisäämällä kontekstia ja taustaa. Säilytä faktat, sävy, rakenne, linkit, journalist_note, content_type, editorial_reviewed ja key_points. Älä keksi uutta tietoa, numeroita, lainauksia tai väitteitä. Jos tieto ei riitä, tee artikkelista vain selkeämpi ja kattavampi olemassa olevien faktojen pohjalta. Vastaa VAIN JSON-objektina.\n\n{json.dumps(article, ensure_ascii=False, indent=2)}"""
+    try:
+        retried = _extract_json(_call_llm(AUDIT_SYSTEM_PROMPT, retry_prompt))
+        retried_count = _count_words(retried.get("content", ""))
+        if retried_count >= min_words:
+            print(f"[writer]   Length retry succeeded: {word_count}w → {retried_count}w: '{title[:50]}'")
+            return retried, True, True
+        print(f"[writer]   ⚠ Length retry still too short ({retried_count}w): '{title[:50]}'")
+        return retried, True, False
+    except Exception as e:
+        print(f"[writer]   ⚠ Length retry failed ({e}): '{title[:50]}'")
         return article, True, False
 
 
@@ -513,6 +541,10 @@ def rewrite_articles(articles: List[Dict]) -> List[Dict]:
     h2_metric_with_h2 = 0
     h2_metric_retries = 0
     h2_metric_warns = 0
+    min_words_metric_checked = 0
+    min_words_metric_passed = 0
+    min_words_metric_retries = 0
+    min_words_metric_failed = 0
 
     batch_size = 3  # Reduced from 5 — model cuts articles short in large batches
     for i in range(0, len(articles), batch_size):
@@ -661,48 +693,9 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             print(f"[writer]   Pass 2 (audit) failed: {e} — using pass 1 results")
             audited = pass1_result
 
-        # Pass 3: Per-article expansion retry for anything under 200 words
-        EXPANSION_SYSTEM = """Olet uutistoimittaja. Sinulle annetaan lyhyt uutisartikkeli.
-Laajenna se lisäämällä kontekstia, taustaa ja merkitystä — tavoite 250–320 sanaa.
-NUMEROIDEN ABSOLUUTTINEN SÄÄNTÖ: Älä kirjoita YHTÄÄN numeroa, prosenttia, vuosilukua tai mittayksikköä joka ei esiinny sanasta sanaan alkuperäisessä artikkelissa. Ei poikkeuksia.
-KIELLETTY: Älä keksi lainauksia, tilastoja tai yritystietoja. Älä päätä yleisellä tulevaisuuden pohdinnolla.
-Jos artikkeli on jo riittävä lyhyenäkin, palauta se sellaisenaan — älä täytä tyhjää tilaa.
-Lisää H2-väliotsikko (## Otsikko) jäsentämään teksti jos yli 200 sanaa. Kirjoita luonnollista suomea.
-Säilytä kentät journalist_note, content_type ja editorial_reviewed ennallaan. editorial_reviewed on aina true.
-Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...", "original_title": "...", "journalist_note": "...", "content_type": "article", "editorial_reviewed": true}"""
-
-        expanded_audited = []
-        for article in audited:
-            word_count = len(article.get("content", "").split())
-            if word_count < 180:
-                title = article.get("title", "")
-                print(f"[writer]   ⚠ Short ({word_count}w), expanding: '{title[:50]}'")
-                try:
-                    expand_prompt = f"""Laajenna tämä artikkeli 200–280 sanaan lisäämällä kontekstia ja taustaa. ÄLÄ keksi numeroita tai tilastoja:\n\n{json.dumps(article, ensure_ascii=False, indent=2)}\n\nVastaa VAIN JSON-objektina."""
-                    expand_response = _call_llm(EXPANSION_SYSTEM, expand_prompt)
-                    # Response is a single object, not a list
-                    expand_text = expand_response.strip()
-                    if expand_text.startswith("```"):
-                        expand_text = expand_text.split("```")[1]
-                        if expand_text.startswith("json"):
-                            expand_text = expand_text[4:]
-                        expand_text = expand_text.strip()
-                    expanded = json.loads(expand_text)
-                    new_count = len(expanded.get("content", "").split())
-                    print(f"[writer]   Expanded: {word_count}w → {new_count}w")
-                    # Keep original metadata
-                    expanded["fingerprint"] = article.get("fingerprint", "")
-                    expanded["trending"] = article.get("trending", False)
-                    expanded_audited.append(expanded)
-                except Exception as e:
-                    print(f"[writer]   Expansion failed ({e}), keeping original")
-                    expanded_audited.append(article)
-            else:
-                expanded_audited.append(article)
-
         # Filter sentinels and carry through metadata
         kept = []
-        for j, written_article in enumerate(expanded_audited):
+        for j, written_article in enumerate(audited):
             title = written_article.get("title", "")
             content = written_article.get("content", "")
             # Check for DUPLICATE / FILTER sentinel (title or content starts with it)
@@ -721,6 +714,17 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                 print(f"[writer]   {sentinel}: '{orig[:60]}' — skipped")
                 continue
 
+            written_article, word_retried, word_ok = _enforce_min_words(written_article, min_words=250)
+            min_words_metric_checked += 1
+            if word_retried:
+                min_words_metric_retries += 1
+            if not word_ok:
+                min_words_metric_failed += 1
+                failed_count = _count_words(written_article.get("content", ""))
+                print(f"[writer]   SKIP short article after retry ({failed_count} words): '{written_article.get('title', '')[:50]}'")
+                continue
+            min_words_metric_passed += 1
+
             written_article, h2_retried, h2_ok = _enforce_h2_subheadings(written_article)
             # Strip generic feel-good ending paragraphs programmatically
             raw_content = str(written_article.get("content", "") or "")
@@ -729,7 +733,7 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                 written_article["content"] = cleaned_content
             title = written_article.get("title", "")
             content = written_article.get("content", "")
-            if len(str(content).split()) > 250:
+            if _count_words(content) > 250:
                 h2_metric_long_articles += 1
                 if h2_retried:
                     h2_metric_retries += 1
@@ -739,10 +743,8 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
                     h2_metric_warns += 1
 
             # Quality flags — warn but don't drop here (quality gate in run_pipeline.py)
-            word_count = len(content.split())
+            word_count = _count_words(content)
             title_len = len(title)
-            if word_count < 250:
-                print(f"[writer]   ⚠ Still short after expansion ({word_count} words): '{title[:50]}'")
             if title_len > 100 or title_len < 10:
                 print(f"[writer]   ⚠ Suspicious title length ({title_len} chars): '{title[:60]}'")
 
@@ -790,9 +792,13 @@ Vastaa VAIN JSON-muodossa: {"title": "...", "content": "...", "category": "...",
             kept.append(written_article)
 
         rewritten.extend(kept)
-        print(f"[writer]   Batch {i // batch_size + 1} complete: {len(kept)}/{len(expanded_audited)} articles kept")
+        print(f"[writer]   Batch {i // batch_size + 1} complete: {len(kept)}/{len(audited)} articles kept")
 
+    min_words_rate = (min_words_metric_passed / min_words_metric_checked * 100) if min_words_metric_checked else 100.0
     h2_rate = (h2_metric_with_h2 / h2_metric_long_articles * 100) if h2_metric_long_articles else 100.0
+    print(
+        f"[writer] Min words (250): {min_words_metric_passed}/{min_words_metric_checked} passed ({min_words_rate:.0f}%) | retries={min_words_metric_retries} | failed={min_words_metric_failed}"
+    )
     print(
         f"[writer] H2 presence: {h2_metric_with_h2}/{h2_metric_long_articles} long articles ({h2_rate:.0f}%) | retries={h2_metric_retries} | warns={h2_metric_warns}"
     )
