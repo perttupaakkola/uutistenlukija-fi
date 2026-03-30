@@ -1,22 +1,115 @@
 {{ define "main" }}
+{{ partial "reading-progress.html" . }}
 <article class="single-article">
   {{ with .Params.categories }}
   {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
   <h1>{{ .Title }}</h1>
+  {{ with .Description }}
+  <p class="article-ingress">{{ . }}</p>
+  {{ end }}
   {{ partial "hero-image.html" . }}
   {{ partial "article-body.html" (dict
     "page" .
     "showKeyPoints" true
-    "metaVariant" "page"
-    "showShareTop" true
-    "showSource" true
-    "showAuthorBox" true
+    "showSummary" false
+    "showToc" false
+    "metaVariant" "single"
+    "showShareTop" false
+    "showSource" false
+    "splitParagraphs" false
+    "showInArticleAd" false
+    "showJournalistNote" false
+    "showAfterArticleAd" false
+    "showNewsletter" false
+    "showAuthorBox" false
+    "showBottomShare" false
   ) }}
 
+  {{ partial "share-buttons.html" . }}
+
   {{ partial "related-articles.html" . }}
-  {{ partial "more-from-category.html" . }}
 </article>
 
 {{ partial "scroll-to-top.html" . }}
+
+<script>
+(function () {
+  var VIEWS_KEY    = 'ul_views_v1';
+  var PROGRESS_KEY = 'ul_progress_v1';
+  var TTL_MS       = 30 * 24 * 60 * 60 * 1000;
+  var VIEWS_TTL    = 7  * 24 * 60 * 60 * 1000;
+  var slug  = {{ .Params.slug | default (.File.BaseFileName) | jsonify }};
+  var title = {{ .Title | jsonify }};
+  var url   = {{ .Permalink | jsonify }};
+  var image = {{ with .Params.image }}{{ . | jsonify }}{{ else }}""{{ end }};
+  var now   = Date.now();
+
+  var progressBar = document.getElementById('reading-progress');
+  var backToTop   = document.getElementById('back-to-top');
+  var _lastSavedPct = 0;
+
+  function getScrollPct() {
+    if (window.__ulReadingProgress && typeof window.__ulReadingProgress.getProgress === 'function') {
+      return window.__ulReadingProgress.getProgress();
+    }
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    return docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+  }
+
+  function saveProgress(pct) {
+    if (Math.abs(pct - _lastSavedPct) < 2) return;
+    _lastSavedPct = pct;
+    try {
+      var store = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+      if (pct >= 10 && pct <= 90) {
+        store[slug] = { pct: Math.round(pct), title: title, url: url, image: image, ts: now };
+      } else if (pct > 90) {
+        delete store[slug];
+      }
+      localStorage.setItem(PROGRESS_KEY, JSON.stringify(store));
+    } catch (e) {}
+  }
+
+  window.addEventListener('scroll', function () {
+    var pct = getScrollPct();
+    if (progressBar) progressBar.style.width = pct.toFixed(2) + '%';
+    if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 400);
+    saveProgress(pct);
+  }, { passive: true });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (window.location.hash === '#resume') {
+    try {
+      var pstore = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+      var saved  = pstore[slug];
+      if (saved && saved.pct > 0) {
+        window.addEventListener('load', function () {
+          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          var target    = Math.round((saved.pct / 100) * docHeight);
+          window.scrollTo({ top: target, behavior: 'smooth' });
+        });
+      }
+    } catch (e) {}
+  }
+
+  try {
+    var vstore = JSON.parse(localStorage.getItem(VIEWS_KEY) || '{}');
+    Object.keys(vstore).forEach(function (k) {
+      if (!vstore[k].ts || (now - vstore[k].ts) >= VIEWS_TTL) delete vstore[k];
+    });
+    var entry = vstore[slug] || { count: 0, title: title, ts: now };
+    entry.count += 1;
+    entry.title  = title;
+    entry.ts     = now;
+    vstore[slug] = entry;
+    localStorage.setItem(VIEWS_KEY, JSON.stringify(vstore));
+  } catch (e) {}
+})();
+</script>
 {{ end }}
