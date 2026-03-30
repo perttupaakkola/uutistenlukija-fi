@@ -1,0 +1,62 @@
+{{- $page := .page -}}
+{{- $contentClass := .contentClass | default "content" -}}
+{{- $authorBoxClass := .authorBoxClass | default "author-box" -}}
+{{- $authorImageSize := .authorImageSize | default 80 -}}
+{{- $bottomShareClass := .bottomShareClass | default "social-share--bottom" -}}
+
+{{- if eq .showKeyPoints true }}{{ partial "key-points.html" $page }}{{ end }}
+{{- if eq .showSummary true }}{{ partial "article-summary.html" $page }}{{ end }}
+{{- if eq .showToc true }}{{ partial "toc.html" $page }}{{ end }}
+
+{{- if eq .metaVariant "single" }}
+<div class="article-meta">
+  {{ $page.Date | time.Format "2.1. klo 15:04" }}
+  {{- $diffSec := math.Sub $page.Lastmod.Unix $page.Date.Unix -}}
+  {{- if gt $diffSec 3600 }}
+  · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty: {{ $page.Lastmod | time.Format "2.1.2006 klo 15:04" }}</span>
+  {{- end }}
+  {{ with $page.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+  {{- if ge $page.WordCount 200 }}
+  {{- $readingMinutes := math.Div (math.Add $page.WordCount 199) 200 -}}
+  · <span class="article-reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ $readingMinutes }} min lukuaika</span>
+  {{- end }}
+</div>
+{{- else if eq .metaVariant "page" }}
+<div class="article-meta">
+  {{ $page.Date | time.Format "2.1.2006 klo 15:04" }}
+  {{ with $page.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
+  · {{ $page.ReadingTime }} min lukuaika
+</div>
+{{- end }}
+<div class="{{ $contentClass }}">
+  {{ $page.Content }}
+</div>
+
+{{- if eq .showJournalistNote true }}{{ partial "journalist-note.html" $page }}{{ end }}
+{{- if eq .showAfterArticleAd true }}{{ partial "ad-slot.html" (dict "position" "after-article" "context" $page) }}{{ end }}
+{{- if eq .showNewsletter true }}{{ partial "newsletter-cta.html" $page }}{{ end }}
+
+{{- if eq .showAuthorBox true }}
+  {{ with $page.Params.author }}
+  <div class="{{ $authorBoxClass }}">
+    {{ with $page.Params.author_image }}
+    <img src="{{ . }}" alt="{{ $page.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="{{ $authorImageSize }}" height="{{ $authorImageSize }}">
+    {{ end }}
+    <div class="author-info">
+      <span class="author-name">{{ $page.Params.author }}</span>
+      {{ with $page.Params.author_title }}
+      <span class="author-role">{{ . }}</span>
+      {{ end }}
+      {{ with $page.Params.author_bio }}
+      <p class="author-bio">{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+{{- end }}
+
+{{- if eq .showBottomShare true }}
+<div class="{{ $bottomShareClass }}">
+  {{ partial "social-share.html" $page }}
+</div>
+{{- end }}

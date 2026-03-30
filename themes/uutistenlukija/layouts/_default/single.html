@@ -5,7 +5,7 @@
   {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
   <h1>{{ .Title }}</h1>
-  {{ with .Params.description }}
+  {{ with .Description }}
   <p class="article-ingress">{{ . }}</p>
   {{ end }}
   {{ partial "hero-image.html" . }}
