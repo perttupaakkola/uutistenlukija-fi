@@ -33,17 +33,7 @@
 {{- if .showSource }}{{ partial "source-article-link.html" $page }}{{ end }}
 
 <div class="{{ $contentClass }}">
-  {{- if .splitParagraphs -}}
-    {{- $paragraphs := split $page.Content "</p>" -}}
-    {{- range $i, $p := $paragraphs -}}
-      {{- $p | safeHTML }}</p>
-      {{- if and $.showInArticleAd (eq $i 2) -}}
-        {{ partial "ad-slot.html" (dict "position" "in-article" "context" $page) }}
-      {{- end -}}
-    {{- end -}}
-  {{- else -}}
-    {{ $page.Content }}
-  {{- end -}}
+  {{ $page.Content }}
 </div>
 
 {{- if .showJournalistNote }}{{ partial "journalist-note.html" $page }}{{ end }}
