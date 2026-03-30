@@ -94,20 +94,16 @@ fi
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
-# Sync with origin — stash any working tree changes first, pull, then restore.
-# Without this, the host checkout drifts from GitHub main and new feeds/fixes
-# never reach the running pipeline. --rebase keeps history linear.
-git stash --include-untracked --quiet 2>/dev/null || true
+# Sync with origin — pull remote changes, preserving local untracked content.
+# Only stash tracked layout/script files (NOT untracked content articles).
+# Previous approach used 'git stash --include-untracked' which ate new articles.
+git stash push -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline/firehose_cron.sh pipeline/scanner.py 2>/dev/null || true
 git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
 STASH_LIST=$(git stash list 2>/dev/null | head -1)
 if [ -n "$STASH_LIST" ]; then git stash pop --quiet 2>/dev/null || true; fi
 
-# CRITICAL: Reset index + restore layout/script files to HEAD before staging.
-# Bridge syncs from Alex's sessions can leave modified layout files or scripts
-# with wrong permissions in the working tree. This ensures:
-#   1. No layout/theme/script changes leak into auto-publish commits
-#   2. .sh files retain their execute bits (git checkout restores committed mode)
-git reset HEAD -- . 2>/dev/null || true
+# Restore layout/script files to HEAD (discard any bridge sync drift).
+# This only touches tracked paths — content/posts/ is preserved.
 git checkout HEAD -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline/firehose_cron.sh pipeline/scanner.py 2>/dev/null || true
 
 # Generate health + pipeline status BEFORE git add so they get committed and deployed to Cloudflare
