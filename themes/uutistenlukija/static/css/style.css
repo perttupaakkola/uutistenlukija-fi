@@ -310,6 +310,20 @@ img { max-width: 100%; height: auto; }
 .article-card .category-label {
   margin-bottom: 0.5rem;
 }
+/* ── Naked category text (article pages) ── */
+.category-naked {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  text-decoration: none;
+}
+.category-naked:hover {
+  opacity: 0.75;
+}
 .article-card h2 {
   font-size: 1.2rem;
   line-height: 1.35;
@@ -2888,6 +2902,7 @@ body.is-home .highlights-row--top {
 .single-article .content ol,
 .single-article .content blockquote {
   max-width: 720px;
+  margin-bottom: 1.5em;
 }
 @media (max-width: 768px) {
   .single-article .content {

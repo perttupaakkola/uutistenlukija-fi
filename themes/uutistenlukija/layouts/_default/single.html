@@ -2,7 +2,7 @@
 {{ partial "reading-progress.html" . }}
 <article class="single-article">
   {{ with .Params.categories }}
-  {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
+  {{ partial "category-badge.html" (dict "category" (index . 0) "link" true "naked" true) }}
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ with .Description }}

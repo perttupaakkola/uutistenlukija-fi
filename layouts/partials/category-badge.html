@@ -2,6 +2,7 @@
 {{- if $category -}}
   {{- $slug := $category | lower | urlize -}}
   {{- $link := .link | default false -}}
+  {{- $naked := .naked | default false -}}
   {{- $colors := dict
     "kotimaa" "#3498db"
     "ulkomaat" "#e74c3c"
@@ -12,17 +13,26 @@
     "tiede" "#16a085"
   -}}
   {{- $color := index $colors $slug | default "var(--accent)" -}}
-  {{- $class := printf "category-label category-label--badge category-label--%s" $slug -}}
-  {{- if $link -}}
+  {{- if $naked -}}
+    {{/* Editorial naked text style — premium feel, no pill box */}}
+    {{- if $link -}}
+    <a href="/categories/{{ $slug }}/" class="category-naked" style="color: {{ $color }};">{{ upper $category }}</a>
+    {{- else -}}
+    <span class="category-naked" style="color: {{ $color }};">{{ upper $category }}</span>
+    {{- end -}}
+  {{- else -}}
+    {{- $class := printf "category-label category-label--badge category-label--%s" $slug -}}
+    {{- if $link -}}
     <a
       href="/categories/{{ $slug }}/"
       class="{{ $class }}"
       style="background-color: {{ $color }}; border-color: {{ $color }};"
     >{{ $category }}</a>
-  {{- else -}}
+    {{- else -}}
     <span
       class="{{ $class }}"
       style="background-color: {{ $color }}; border-color: {{ $color }};"
     >{{ $category }}</span>
+    {{- end -}}
   {{- end -}}
 {{- end -}}
