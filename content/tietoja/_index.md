@@ -1,28 +1,36 @@
 ---
 title: "Tietoja Uutistenlukijasta"
-description: "Uutistenlukija.fi — suomalainen verkkolehti, joka tuottaa alkuperäistä AI-avusteista journalismia päivän tärkeimmistä uutisista"
+description: "Kaikki Suomen uutiset yhdessä osoitteessa. Uutistenlukija.fi kokoaa päivän tärkeimmät uutiset selkeään ja nopealukuiseen muotoon."
 url: "/tietoja/"
 layout: "page"
 ---
 
-## Tietoja Uutistenlukijasta
+## Kaikki Suomen uutiset. Yhdessä osoitteessa.
 
-Uutistenlukija.fi on suomalainen uutispalvelu, joka kokoaa päivän tärkeimmät uutiset yhdelle sivulle. Sivusto päivittyy useita kertoja päivässä.
+**Uutistenlukija.fi kokoaa päivän tärkeimmät uutiset selkeään, nopealukuiseen ja häiriöttömään muotoon.**
 
-### Miten se toimii
+Digitaalinen uutistulva on usein raskas ja sirpaleinen. Uutistenlukija syntyi tarpeesta luoda yksi paikka, josta näet nopeasti, mitä Suomessa ja maailmalla tapahtuu – ilman klikkiotsikoita, häiritseviä mainospopuppeja tai hitaita sivulatauksia.
 
-Seuraamme automaattisesti kymmeniä suomalaisia ja kansainvälisiä uutislähteitä. Tekoäly valitsee päivän merkittävimmät aiheet ja kirjoittaa niistä omat suomenkieliset artikkelinsa — kotimaisista uutisista alkuperäiset lähteet mukaillen, kansainvälisistä uutisista suomennettuna ja lähde mainiten.
+### Miksi Uutistenlukija on olemassa?
 
-Tavoitteena on nopea, luettava tiivistelmä päivän tapahtumista ilman klikkiotsikkoja tai mainoslatauksia.
+Koska aikasi on arvokasta. Uutisten perässä juokseminen kymmenellä eri sivustolla on hidasta ja turhauttavaa. Rakensimme palvelun, joka tekee uutisten seuraamisesta vaivatonta, nopeaa ja täysin ilmaista.
+
+### Miten se toimii?
+
+Tekoäly seuraa lakkaamatta Suomen luotetuimpia medioita (mm. Yle, Helsingin Sanomat, Ilta-Sanomat, Iltalehti). Algoritmi perkaa uutistulvan, tiivistää olennaisen ja paketoi sen yhdelle, salamannopealle sivustolle.
+
+### Luotettavuus ja läpinäkyvyys
+
+Kunnioitamme alkuperäistä journalismia. Emme itse tuota uutisia, vaan toimimme puhtaasti apuvälineenä ja lukemisen helpottajana.
+
+- Jokaisessa tiivistelmässä on aina selkeästi esillä alkuperäinen lähde
+- Tarjoamme aina suoran linkin alkuperäiseen artikkeliin
+- Kannustamme lukijoita siirtymään lukemaan aiheen koko laajuudessaan ja tukemaan kotimaista mediakenttää
 
 ### Kategoriat
 
 Uutiset on jaettu seitsemään kategoriaan: Kotimaa, Ulkomaat, Talous, Teknologia, Urheilu, Kulttuuri ja Tiede.
 
-### Yhteydenotot
+### Ota yhteyttä
 
-Palaute ja yhteydenotot: info@uutistenlukija.fi
-
-### Tekijänoikeudet
-
-Uutistenlukija.fi tuottaa oman toimituksellisen sisältönsä. Emme kopioi lähteiden artikkeleita — kirjoitamme omat versiot uutistapahtumista. Kansainvälisten uutisten kohdalla mainitsemme alkuperäisen lähteen.
+Onko sinulla kehitysehdotuksia, palautetta tai kysyttävää? Laita meille viestiä: **info@uutistenlukija.fi**
