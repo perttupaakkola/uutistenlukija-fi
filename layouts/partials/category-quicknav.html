@@ -1,11 +1,21 @@
 {{/* category-quicknav.html — Horizontal category pill navigation bar.
-     Appears at the top of the homepage. Links go to real category pages
-     (/categories/kotimaa/ etc.) so they never 404. JS in baseof.html adds
-     the is-active class by intersecting id="cat-{slug}" sections on the page. */}}
+     Used on homepage and category pages.
+
+     Homepage: plain link pills.
+     Category pages: active pill gets is-active + aria-current="page".
+*/}}
+{{- $currentSlug := "" -}}
+{{- if and (eq .Kind "term") (eq .Data.Plural "categories") -}}
+  {{- $currentSlug = .Title | lower | urlize -}}
+{{- else with .Params.slug -}}
+  {{- $currentSlug = . | lower | urlize -}}
+{{- end -}}
 <nav class="cat-quicknav" aria-label="Kategoriat">
-  <a class="cat-quicknav__pill cat-quicknav__pill--all"
+  {{- $allActive := eq $currentSlug "" -}}
+  <a class="cat-quicknav__pill cat-quicknav__pill--all{{ if $allActive }} is-active{{ end }}"
      href="/"
      aria-label="Kaikki uutiset"
+     {{ if $allActive }}aria-current="page"{{ end }}
      data-track="quicknav_click"
      data-category="all">
     Kaikki
@@ -13,9 +23,11 @@
   {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
   {{ range $categories }}
   {{ $slug := . | lower | urlize }}
-  <a class="cat-quicknav__pill cat-quicknav__pill--{{ $slug }}"
+  {{ $isActive := eq $currentSlug $slug }}
+  <a class="cat-quicknav__pill cat-quicknav__pill--{{ $slug }}{{ if $isActive }} is-active{{ end }}"
      href="/categories/{{ $slug }}/"
      data-cat="{{ $slug }}"
+     {{ if $isActive }}aria-current="page"{{ end }}
      data-track="quicknav_click"
      data-category="{{ $slug }}">
     {{ . }}

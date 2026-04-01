@@ -6,6 +6,7 @@
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
 {{ partial "category-hero.html" . }}
+{{ partial "category-quicknav.html" . }}
 
 {{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) 20 }}
 {{ if gt (len $paginator.Pages) 0 }}
