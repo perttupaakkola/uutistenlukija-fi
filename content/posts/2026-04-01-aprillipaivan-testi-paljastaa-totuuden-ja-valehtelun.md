@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.iltalehti.fi/ulkomaat/a/00e8d7e8-1b14-4211-8b59-0a32829ba81b"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 

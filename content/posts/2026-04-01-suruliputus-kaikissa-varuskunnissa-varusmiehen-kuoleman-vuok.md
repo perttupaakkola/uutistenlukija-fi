@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/suruliputus-halki-suomen-tama-tiedetaan-varusmiehen-kuolemasta-kouvolassa/9318752"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
