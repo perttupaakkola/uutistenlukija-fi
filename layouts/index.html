@@ -71,20 +71,8 @@
   {{ $leadCategory = lower (index .Params.categories 0 | default "kotimaa") }}
 {{ end }}
 
-{{/* Visually hidden H1 for SEO — Google uses H1 as primary topic signal */}}
+{{/* Visually hidden H1 for SEO */}}
 <h1 class="visually-hidden">Uutistenlukija – Päivän uutiset suomeksi</h1>
-
-{{ partial "site-header.html" . }}
-
-{{/* Homepage freshness signal */}}
-{{ with $latestPublishedAt }}
-<div class="pub-frequency-bar pub-frequency-bar--live">
-  {{ partial "homepage-live-indicator.html" . }}
-</div>
-{{ end }}
-
-{{/* Category quicknav pill bar */}}
-{{ partial "category-quicknav.html" . }}
 
 <span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
 
