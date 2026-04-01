@@ -1,32 +1,15 @@
-{{- /*
-  analysis/single.html — layout for content_type: analysis | opinion articles.
-
-  Differences from _default/single.html:
-  - "Analyysi" / "Mielipide" content-type badge above the title
-  - Desk byline ("Toimitus") always shown in meta, no author_image/bio box
-  - Wider prose column (600–1200w) via .single-article--analysis
-  - journalist-note partial rendered after content
-  - editorial_reviewed badge shown in journalist-note if present
-*/ -}}
 {{ define "main" }}
 {{ partial "reading-progress.html" . }}
-<article class="single-article single-article--analysis">
+<article class="single-article">
   {{ partial "breadcrumbs.html" . }}
   {{ partial "hero-image.html" . }}
-
-  {{/* Content-type badge */}}
-  {{- $ct := .Params.content_type | default "uutinen" -}}
-  {{- $badgeLabel := "Analyysi" -}}
-  {{- if eq $ct "opinion" }}{{- $badgeLabel = "Mielipide" -}}{{ end -}}
-  {{- if eq $ct "feature" }}{{- $badgeLabel = "Reportaasi" -}}{{ end -}}
-  <div class="content-type-badge content-type-badge--{{ $ct }}">{{ $badgeLabel }}</div>
-
+  {{ with .Params.content_type }}
+  <span class="article-badge article-badge--{{ . | urlize }}">{{ . }}</span>
+  {{ end }}
   {{ with .Params.categories }}
   {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
-
   <h1>{{ .Title }}</h1>
-
   {{ with .Params.tags }}
   <div class="article-tags" aria-label="Aihetunnisteet">
     {{ range . }}
@@ -34,49 +17,34 @@
     {{ end }}
   </div>
   {{ end }}
-
-  {{ partial "article-summary.html" . }}
-  {{ partial "toc.html" . }}
-
-  <div class="article-meta">
-    {{ .Date | time.Format "2.1. klo 15:04" }}
-    {{- if isset .Params "updated_at" }}
-    · <span class="article-updated" title="Artikkeli päivitetty uudelleenkäsittelyn jälkeen">Päivitetty {{ time.AsTime .Params.updated_at | time.Format "2.1.2006" }}</span>
-    {{- end }}
-    · <span class="author-inline">Toimitus</span>
-    · <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ partial "reading-time.html" . }}
-  </div>
-  {{ partial "share-buttons.html" . }}
-  {{ partial "source-article-link.html" . }}
-
-  <div class="content">
-    {{- $paragraphs := split .Content "</p>" -}}
-    {{- range $i, $p := $paragraphs -}}
-      {{- $p | safeHTML }}</p>
-      {{- if eq $i 2 -}}
-        {{ partial "ad-slot.html" (dict "position" "in-article" "context" $) }}
-      {{- end -}}
-    {{- end -}}
-  </div>
-
-  {{/* Journalist note — rendered after content, before sharing */}}
-  {{ partial "journalist-note.html" . }}
-
-  {{ partial "ad-slot.html" (dict "position" "after-article" "context" .) }}
-  {{ partial "newsletter-cta.html" . }}
-
-  <div class="social-share--bottom">
-    {{ partial "social-share.html" . }}
-  </div>
+  {{ partial "article-body.html" (dict
+    "page" .
+    "showKeyPoints" true
+    "showSummary" true
+    "showToc" true
+    "metaVariant" "single"
+    "showShareTop" true
+    "showSource" true
+    "splitParagraphs" true
+    "showInArticleAd" true
+    "showJournalistNote" true
+    "showAfterArticleAd" true
+    "showNewsletter" true
+    "showAuthorBox" true
+    "showBottomShare" true
+  ) }}
 
   {{ partial "related-articles.html" . }}
   {{ partial "advertiser-cta.html" (dict "placement" "article-bottom" "page" .) }}
   {{ partial "more-from-category.html" . }}
-  {{ partial "most-read.html" (dict "Site" .Site "exclude" (slice .Permalink)) }}
+  {{ partial "most-read.html" . }}
 </article>
 
+{{/* #19.3: Read next — prominent next-article card */}}
 {{ partial "read-next.html" . }}
 
+{{/* Article prev/next navigation */}}
+{{ $section := .CurrentSection }}
 <nav class="article-nav" aria-label="Artikkelinavigointi">
   {{ with .PrevInSection }}
   <a href="{{ .Permalink }}" class="article-nav-prev" rel="prev">
@@ -98,7 +66,7 @@
 (function () {
   var VIEWS_KEY    = 'ul_views_v1';
   var PROGRESS_KEY = 'ul_progress_v1';
-  var TTL_MS       = 30 * 24 * 60 * 60 * 1000;
+  var TTL_MS       = 30 * 24 * 60 * 60 * 1000; // 30 days for progress
   var VIEWS_TTL    = 7  * 24 * 60 * 60 * 1000;
   var slug  = {{ .Params.slug | default (.File.BaseFileName) | jsonify }};
   var title = {{ .Title | jsonify }};
@@ -106,6 +74,7 @@
   var image = {{ with .Params.image }}{{ . | jsonify }}{{ else }}""{{ end }};
   var now   = Date.now();
 
+  // ── Reading progress bar ──────────────────────────────────
   var progressBar = document.getElementById('reading-progress');
   var backToTop   = document.getElementById('back-to-top');
   var _lastSavedPct = 0;
@@ -119,13 +88,14 @@
   }
 
   function saveProgress(pct) {
-    if (Math.abs(pct - _lastSavedPct) < 2) return;
+    if (Math.abs(pct - _lastSavedPct) < 2) return; // debounce tiny changes
     _lastSavedPct = pct;
     try {
       var store = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
       if (pct >= 10 && pct <= 90) {
         store[slug] = { pct: Math.round(pct), title: title, url: url, image: image, ts: now };
       } else if (pct > 90) {
+        // Fully read — remove from continue-reading
         delete store[slug];
       }
       localStorage.setItem(PROGRESS_KEY, JSON.stringify(store));
@@ -145,26 +115,32 @@
     });
   }
 
+  // ── Resume scroll position if #resume hash ───────────────
   if (window.location.hash === '#resume') {
     try {
       var pstore = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
       var saved  = pstore[slug];
       if (saved && saved.pct > 0) {
+        // Wait for images/layout to settle before jumping
         window.addEventListener('load', function () {
           var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-          window.scrollTo({ top: Math.round((saved.pct / 100) * docHeight), behavior: 'smooth' });
+          var target    = Math.round((saved.pct / 100) * docHeight);
+          window.scrollTo({ top: target, behavior: 'smooth' });
         });
       }
     } catch (e) {}
   }
 
+  // ── View counter ──────────────────────────────────────────
   try {
     var vstore = JSON.parse(localStorage.getItem(VIEWS_KEY) || '{}');
     Object.keys(vstore).forEach(function (k) {
       if (!vstore[k].ts || (now - vstore[k].ts) >= VIEWS_TTL) delete vstore[k];
     });
     var entry = vstore[slug] || { count: 0, title: title, ts: now };
-    entry.count += 1; entry.title = title; entry.ts = now;
+    entry.count += 1;
+    entry.title  = title;
+    entry.ts     = now;
     vstore[slug] = entry;
     localStorage.setItem(VIEWS_KEY, JSON.stringify(vstore));
   } catch (e) {}

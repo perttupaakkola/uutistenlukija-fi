@@ -1,0 +1,32 @@
+{{- /* advertiser-cta.html — compact promo block for advertisers.
+     Usage: {{ partial "advertiser-cta.html" (dict "placement" "homepage" "page" .) }} */ -}}
+{{- $page := .page -}}
+{{- $placement := .placement | default "unknown" -}}
+{{- $title := cond $page ($page.Title | default "") "" -}}
+<section class="advertiser-cta advertiser-cta--{{ $placement }}" aria-labelledby="advertiser-cta-{{ $placement }}">
+  <div class="advertiser-cta__inner">
+    <div class="advertiser-cta__copy">
+      <p class="advertiser-cta__eyebrow">Yrityksille</p>
+      <h2 id="advertiser-cta-{{ $placement }}" class="advertiser-cta__title">Mainosta Uutistenlukijassa</h2>
+      <p class="advertiser-cta__text">Tavoita suomalaiset lukijat journalistisessa ympäristössä ilman räikeää bannerihälyä. Kampanjat, sponsoroinnit ja näkyvyysratkaisut löytyvät yhdestä paikasta.</p>
+    </div>
+    <div class="advertiser-cta__actions">
+      <a href="/mainosta/"
+         class="advertiser-cta__button advertiser-cta__button--primary"
+         data-track="advertise_cta_click"
+         data-placement="{{ $placement }}"
+         data-destination="mainosta"
+         data-article-title="{{ $title }}">
+        Katso mainostusvaihtoehdot
+      </a>
+      <a href="mailto:info@uutistenlukija.fi?subject=Mainostus%20Uutistenlukijassa"
+         class="advertiser-cta__button advertiser-cta__button--secondary"
+         data-track="advertise_cta_click"
+         data-placement="{{ $placement }}"
+         data-destination="email"
+         data-article-title="{{ $title }}">
+        Ota yhteyttä sähköpostilla
+      </a>
+    </div>
+  </div>
+</section>

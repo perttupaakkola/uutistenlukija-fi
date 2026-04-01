@@ -208,6 +208,8 @@
 </section>
 {{ end }}
 
+{{ partial "advertiser-cta.html" (dict "placement" "homepage" "page" .) }}
+
 {{/* Newsletter signup band */}}
 {{ partial "newsletter-band.html" . }}
 {{ partial "most-read.html" (dict "Site" .Site "exclude" $seen) }}
