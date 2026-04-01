@@ -20,5 +20,5 @@ if [ -f "$PROJECT_DIR/.env" ]; then
 fi
 
 echo "=== Metrics report at $(date -u) ==="
-python3 "$PIPELINE_DIR/metrics_report.py" --days 1
+python3 "$PIPELINE_DIR/metrics_report.py" --hours 24
 echo "=== Done ==="
