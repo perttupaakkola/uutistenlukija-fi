@@ -72,8 +72,8 @@ html {
   :root:not([data-theme="light"]) .author-box { background: #2a2a2a; }
   :root:not([data-theme="light"]) .header-banner { opacity: 0.08; }
   :root:not([data-theme="light"]) .logo-img {
-  mix-blend-mode: screen !important;
   filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
 }
   :root:not([data-theme="light"]) .scroll-to-top { background: #333; color: #e8e6e3; }
   :root:not([data-theme="light"]) .scroll-to-top:hover { background: #e74c3c; }
@@ -155,12 +155,13 @@ img { max-width: 100%; height: auto; }
 }
 .logo-img {
   mix-blend-mode: multiply;
+  background-color: transparent;
   max-height: 40px;
   width: auto;
 }
 [data-theme="dark"] .logo-img {
-  mix-blend-mode: screen !important;
   filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
 }
 .site-title {
   font-family: var(--font-serif);
@@ -804,7 +805,8 @@ img { max-width: 100%; height: auto; }
   .header-banner { height: 30px; }
   .logo-img {
   mix-blend-mode: multiply;
-  max-height: 55px;
+  background-color: transparent;
+  max-height: 40px;
   width: auto;
 }
   .theme-toggle-label { display: none; }
@@ -3058,10 +3060,9 @@ body.is-home .highlights-row--top {
 .site-search {
   position: relative;
   margin-left: auto;
-  flex-shrink: 0;
 }
 .site-search:not(.site-search--collapsed) {
-  width: 100%;
+  flex: 1;
   max-width: 560px;
 }
 /* Search collapsed by default — only show form on toggle */
@@ -3086,18 +3087,12 @@ body.is-home .highlights-row--top {
 .header-main-row {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
+  gap: 1rem;
   min-height: 48px;
-}
-@media (max-width: 600px) {
-  .site-search:not(.site-search--collapsed) {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
 }
 
 .site-search__form {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -3294,6 +3289,13 @@ body.is-home .highlights-row--top {
   }
 }
 
-.site-search--collapsed {
-  width: auto;
+
+
+@media (max-width: 860px) {
+  .site-search:not(.site-search--collapsed) {
+    width: 100%;
+    flex: 1 1 100%;
+    order: 4;
+    margin-top: 1rem;
+  }
 }
