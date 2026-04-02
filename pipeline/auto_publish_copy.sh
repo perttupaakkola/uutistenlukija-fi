@@ -85,9 +85,6 @@ echo "[1/3] Running pipeline..." | tee -a "$LOG_FILE"
 python3 run_pipeline.py --quick --max-articles 3 --dedup-window 48 2>&1 | tee -a "$LOG_FILE"
 PIPELINE_EXIT=${PIPESTATUS[0]}
 
-# Generate health unconditionally so stale pipeline failures still surface in static/api/health.json
-python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
-
 if [ "$PIPELINE_EXIT" -ne 0 ]; then
   echo "Pipeline failed with exit code $PIPELINE_EXIT" | tee -a "$LOG_FILE"
   exit 1
@@ -109,7 +106,8 @@ if [ -n "$STASH_LIST" ]; then git stash pop --quiet 2>/dev/null || true; fi
 # This only touches tracked paths — content/posts/ is preserved.
 git checkout HEAD -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline/firehose_cron.sh pipeline/scanner.py 2>/dev/null || true
 
-# Generate pipeline status BEFORE git add so it gets committed and deployed to Cloudflare
+# Generate health + pipeline status BEFORE git add so they get committed and deployed to Cloudflare
+python3 "$PIPELINE_DIR/generate_health.py" 2>&1 | tee -a "$LOG_FILE" || echo "[health] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PIPELINE_DIR/generate_pipeline_status.py" 2>&1 | tee -a "$LOG_FILE" || echo "[pipeline_status] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PIPELINE_DIR/generate_search_index.py" 2>&1 | tee -a "$LOG_FILE" || echo "[search_index] generation failed (non-fatal)" | tee -a "$LOG_FILE"
 python3 "$PROJECT_DIR/scripts/category_distribution.py" 2>&1 | tee -a "$LOG_FILE" || echo "[category_distribution] generation failed (non-fatal)" | tee -a "$LOG_FILE"
