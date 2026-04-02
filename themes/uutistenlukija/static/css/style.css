@@ -153,6 +153,10 @@ img { max-width: 100%; height: auto; }
 .logo-img {
   max-height: 40px;
   width: auto;
+  mix-blend-mode: multiply;
+}
+[data-theme="dark"] .logo-img {
+  mix-blend-mode: screen;
 }
 [data-theme="dark"] .logo-img {
   filter: invert(1) hue-rotate(180deg);
@@ -2578,9 +2582,10 @@ body.is-home .category-section-header {
 .hero-lead-cat--kulttuuri { color: #9a5200; }
 .hero-lead-cat--tiede { color: #0f6f5d; }
 .hero-lead-title {
-  font-size: 1.8rem;
+  font-size: 2.6rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
 .hero-lead-title a { color: var(--text); }
@@ -3162,9 +3167,28 @@ body.is-home .hero-lead-title {
 
 .site-search {
   position: relative;
-  width: 100%;
   max-width: 560px;
   margin-left: auto;
+}
+.site-search--collapsed {
+  width: auto;
+}
+.search-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.35rem;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+}
+.search-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 /* Search collapsed by default — only show form on toggle */
 .site-search--collapsed .site-search__form,
@@ -3181,9 +3205,9 @@ body.is-home .hero-lead-title {
 
 .header-inner {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.75rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
   height: auto;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
