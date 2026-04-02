@@ -29,6 +29,12 @@ SCIENCE_CATEGORY_KEYWORDS = [
     "ilmastonmuutos", "evoluutio", "genomi", "DNA", "lääketiede",
 ]
 
+WEATHER_KEYWORDS = [
+    "sää", "sääennuste", "lämpötila", "sadealue", "tuulinen", "myrsky",
+    "lumisade", "helle", "pakkanen", "ilmatieteen laitos", "säävaroitus",
+    "ukkosmyrsky", "tuuli", "sade", "pilvisyys", "aurinkoinen",
+]
+
 
 def _keyword_score(text: str, keywords: list) -> int:
     """Count keyword matches in text (case-insensitive, word-boundary for 'AI')."""
@@ -46,17 +52,30 @@ def _keyword_score(text: str, keywords: list) -> int:
 
 
 def _apply_keyword_category_override(article: dict, category: str) -> str:
-    """Override category to Teknologia/Tiede based on keyword scoring.
-    Only fires when current category is Kotimaa or missing."""
-    raw_category = str(article.get("category") or "").strip()
-    if raw_category and raw_category.lower() != "kotimaa":
-        return category
+    """Override category based on keyword scoring.
 
+    - Weather articles → Kotimaa (regardless of current category)
+    - Kotimaa articles with tech/science keywords → Teknologia/Tiede
+    """
     haystack = " ".join(
         str(article.get(field, "") or "")
         for field in ("title", "summary", "content")
     )
     if not haystack.strip():
+        return category
+
+    # Weather → Kotimaa (fires from any category, typically catches Tiede misclassification)
+    weather_score = _keyword_score(haystack, WEATHER_KEYWORDS)
+    if weather_score >= 2:
+        raw_cat = str(article.get("category") or "").strip().lower()
+        if raw_cat != "kotimaa":
+            print(f"[publisher] Category override: {category} → Kotimaa (weather, score={weather_score})")
+            return "Kotimaa"
+        return category
+
+    # Tech/Science override only fires when current category is Kotimaa or missing
+    raw_category = str(article.get("category") or "").strip()
+    if raw_category and raw_category.lower() != "kotimaa":
         return category
 
     tech_score = _keyword_score(haystack, TECH_CATEGORY_KEYWORDS + ["AI"])
@@ -357,17 +376,21 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     else:
         tags_yaml = ""
 
-    # Build SEO keywords frontmatter from category primary keywords
-    seo_keywords_path = Path(__file__).parent / "seo_keywords.json"
+    # Build SEO keywords from article-specific tags (concrete entities/topics)
+    # Falls back to category-level keywords only if tags are empty
     seo_kws: List[str] = []
-    try:
-        import json as _json
-        with open(seo_keywords_path) as _f:
-            _kw_data = _json.load(_f)
-        cat_data = _kw_data.get(category, {})
-        seo_kws = cat_data.get("primary", [])[:3]
-    except Exception:
-        pass
+    if tags:
+        seo_kws = [str(t).strip() for t in tags if str(t).strip()][:5]
+    if not seo_kws:
+        seo_keywords_path = Path(__file__).parent / "seo_keywords.json"
+        try:
+            import json as _json
+            with open(seo_keywords_path) as _f:
+                _kw_data = _json.load(_f)
+            cat_data = _kw_data.get(category, {})
+            seo_kws = cat_data.get("primary", [])[:3]
+        except Exception:
+            pass
     if seo_kws:
         keywords_yaml = "\nkeywords:\n" + "\n".join(f'  - "{_esc(str(k))}"' for k in seo_kws)
     else:

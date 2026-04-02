@@ -1,20 +1,76 @@
 {{/*
-  hero-cluster.html — Homepage block 2
+  hero-cluster.html — Homepage hero: 3-column broadsheet grid
+  Left:   "Uusimmat" text-only ticker (6 items)
+  Center: Lead story with image ABOVE text (no scrim)
+  Right:  "Toimittajan valinnat" sidebar (3 items with 1:1 thumbs)
+
   Expects:
     .lead      — lead page
-    .followups — slice of up to 2 follow-up pages
+    .followups — slice of follow-up pages (used in sidebar)
 */}}
 {{- $lead := .lead -}}
 {{- $followups := .followups | default (slice) -}}
 {{- if $lead -}}
-<section class="hero-cluster" aria-labelledby="hero-cluster-title">
-  <div class="hero-cluster__lead">
-    {{ $cat := index $lead.Params.categories 0 | default "kotimaa" }}
-    {{ $img := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
-    {{ $thumb := $lead.Params.image_thumb | default $img }}
-    {{ $alt := $lead.Params.image_alt | default $lead.Title }}
-    <article class="lead-article lead-article--hero hero-cluster__lead-card">
-      <a href="{{ $lead.Permalink }}" class="hero-scrim-link" aria-label="{{ $lead.Title }}" data-track="hero_click">
+
+{{/* Collect seen permalinks to avoid duplication across columns */}}
+{{- $seen := slice $lead.Permalink -}}
+{{- range $followups -}}
+  {{- $seen = $seen | append .Permalink -}}
+{{- end -}}
+
+{{/* Ticker: 6 most recent articles not already shown */}}
+{{- $allPosts := where site.RegularPages "Section" "posts" -}}
+{{- $sorted := $allPosts.ByDate.Reverse -}}
+{{- $tickerItems := slice -}}
+{{- range $sorted -}}
+  {{- if and (not (in $seen .Permalink)) (lt (len $tickerItems) 6) -}}
+    {{- $tickerItems = $tickerItems | append . -}}
+    {{- $seen = $seen | append .Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Sidebar: use followups + fill from remaining unseen posts to get 3 items */}}
+{{- $sidebarItems := slice -}}
+{{- range $followups -}}
+  {{- if lt (len $sidebarItems) 3 -}}
+    {{- $sidebarItems = $sidebarItems | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- range $sorted -}}
+  {{- if and (not (in $seen .Permalink)) (lt (len $sidebarItems) 3) -}}
+    {{- $sidebarItems = $sidebarItems | append . -}}
+    {{- $seen = $seen | append .Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+<section class="hero-grid" aria-labelledby="hero-grid-title">
+
+  {{/* ── LEFT: Uusimmat ticker ── */}}
+  <div class="hero-grid__ticker">
+    <h2 class="hero-grid__section-title">Uusimmat</h2>
+    <ul class="hero-ticker-list">
+      {{- range $tickerItems -}}
+      {{- $cat := index .Params.categories 0 | default "kotimaa" -}}
+      <li class="hero-ticker-item">
+        <a href="{{ .Permalink }}" class="hero-ticker-link" data-track="ticker_click">
+          <span class="hero-ticker-time">{{ .Date.Format "15:04" }}</span>
+          <span class="hero-ticker-cat hero-ticker-cat--{{ $cat | lower }}">{{ $cat }}</span>
+          <span class="hero-ticker-headline">{{ .Title }}</span>
+        </a>
+      </li>
+      {{- end -}}
+    </ul>
+  </div>
+
+  {{/* ── CENTER: Lead story ── */}}
+  <div class="hero-grid__lead">
+    {{- $cat := index $lead.Params.categories 0 | default "kotimaa" -}}
+    {{- $img := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) -}}
+    {{- $thumb := $lead.Params.image_thumb | default $img -}}
+    {{- $alt := $lead.Params.image_alt | default $lead.Title -}}
+
+    <article class="hero-lead-article">
+      <a href="{{ $lead.Permalink }}" class="hero-lead-image-link" data-track="hero_click">
         {{- $heroSrc := $thumb -}}
         {{- $heroSrcset := "" -}}
         {{- $avifSrcset := "" -}}
@@ -22,70 +78,82 @@
         {{- $isPexels := hasPrefix $img "https://images.pexels.com" -}}
         {{- if $isUnsplash -}}
           {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-          {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop&fm=webp&q=85" $b $s -}}
-          {{- $heroSrcset = printf "%s%sw=400&h=225&fit=crop&fm=webp&q=80 400w, %s%sw=800&h=450&fit=crop&fm=webp&q=85 800w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
-          {{- $avifSrcset = printf "%s%sw=400&h=225&fit=crop&fm=avif&q=75 400w, %s%sw=800&h=450&fit=crop&fm=avif&q=80 800w, %s%sw=1200&h=675&fit=crop&fm=avif&q=80 1200w" $b $s $b $s $b $s -}}
+          {{- $heroSrc = printf "%s%sw=900&h=506&fit=crop&fm=webp&q=85" $b $s -}}
+          {{- $heroSrcset = printf "%s%sw=480&h=270&fit=crop&fm=webp&q=80 480w, %s%sw=900&h=506&fit=crop&fm=webp&q=85 900w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
+          {{- $avifSrcset = printf "%s%sw=480&h=270&fit=crop&fm=avif&q=75 480w, %s%sw=900&h=506&fit=crop&fm=avif&q=80 900w, %s%sw=1200&h=675&fit=crop&fm=avif&q=80 1200w" $b $s $b $s $b $s -}}
         {{- else if $isPexels -}}
           {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-          {{- $heroSrc = printf "%s%sw=800&h=450&fit=crop" $b $s -}}
+          {{- $heroSrc = printf "%s%sw=900&h=506&fit=crop" $b $s -}}
         {{- end -}}
         <picture>
-          {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
-          {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, (max-width:900px) 90vw, 800px">{{ end -}}
+          {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width:640px) 100vw, 600px">{{ end -}}
+          {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, 600px">{{ end -}}
           <img
             src="{{ $heroSrc }}"
             alt="{{ $alt }}"
-            class="hero-scrim-img article-card-thumb"
+            class="hero-lead-img"
             loading="eager"
             fetchpriority="high"
             decoding="async"
-            width="800" height="450"
+            width="900" height="506"
             onload="this.classList.add('img-loaded')"
             onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}';this.classList.add('img-loaded')">
         </picture>
-        <div class="hero-scrim" aria-hidden="true"></div>
-        <div class="hero-scrim-body">
-          {{ partial "category-badge.html" (dict "category" $cat "link" true) }}
-          <h2 id="hero-cluster-title" class="hero-scrim-title">{{ $lead.Title }}</h2>
-          {{ with $lead.Params.description }}
-          <p class="hero-scrim-excerpt">{{ . | truncate 180 }}</p>
-          {{ end }}
-          <div class="hero-scrim-meta">
-            <span>{{ partial "relative-date.html" $lead }}</span>
-            {{ with $lead.Params.source_name }}<span>{{ . }}</span>{{ end }}
-            <span>{{ partial "reading-time.html" $lead }}</span>
-          </div>
-        </div>
       </a>
+
+      <div class="hero-lead-body">
+        <span class="hero-lead-cat hero-lead-cat--{{ $cat | lower }}">{{ $cat }}</span>
+        <h2 id="hero-grid-title" class="hero-lead-title">
+          <a href="{{ $lead.Permalink }}" data-track="hero_click">{{ $lead.Title }}</a>
+        </h2>
+        {{ with $lead.Params.description }}
+        <p class="hero-lead-excerpt">{{ . | truncate 200 }}</p>
+        {{ end }}
+        <div class="hero-lead-meta">
+          <span>{{ partial "relative-date.html" $lead }}</span>
+          {{ with $lead.Params.source_name }}<span>{{ . }}</span>{{ end }}
+          <span>{{ partial "reading-time.html" $lead }}</span>
+        </div>
+      </div>
     </article>
   </div>
 
-  {{ if $followups }}
-  {{ $seen := slice $lead.Permalink }}
-  <aside class="hero-cluster__followups highlights-row--top" aria-label="Seuraa myös">
-    {{ range $followups }}
-    {{ if not (in $seen .Permalink) }}
-    {{ $seen = $seen | append .Permalink }}
-    {{ $cat := index .Params.categories 0 | default "kotimaa" }}
-    {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
-    {{ $thumb := .Params.image_thumb | default $img }}
-    {{ $alt := .Params.image_alt | default .Title }}
-    <article class="highlight-card highlight-card--secondary hero-cluster__followup-card">
-      <span class="hero-cluster__followup-label">Myös tänään</span>
-      {{ partial "category-badge.html" (dict "category" $cat "link" true) }}
-      {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "alt" $alt "eager" false "hero" false "permalink" .Permalink "track" "hero_click" "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
-      <h3><a href="{{ .Permalink }}" data-track="hero_click">{{ .Title }}</a></h3>
-      {{ with .Params.description }}
-      <p class="highlight-card__excerpt">{{ . | truncate 120 }}</p>
-      {{ end }}
-      <div class="meta">
-        <span>{{ partial "relative-date.html" . }}</span>
-        {{ with .Params.source_name }}<span>{{ . }}</span>{{ end }}
+  {{/* ── RIGHT: Toimittajan valinnat sidebar ── */}}
+  <div class="hero-grid__sidebar">
+    <h2 class="hero-grid__section-title">Toimittajan valinnat</h2>
+    {{- range $sidebarItems -}}
+    {{- $cat := index .Params.categories 0 | default "kotimaa" -}}
+    {{- $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) -}}
+    {{- $thumb := .Params.image_thumb | default $img -}}
+    {{- $alt := .Params.image_alt | default .Title -}}
+    <article class="hero-sidebar-card">
+      <a href="{{ .Permalink }}" class="hero-sidebar-thumb-link" data-track="sidebar_click">
+        {{- $sbSrc := $thumb -}}
+        {{- if hasPrefix $img "https://images.unsplash.com" -}}
+          {{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
+          {{- $sbSrc = printf "%s%sw=120&h=120&fit=crop&fm=webp&q=80" $img $s -}}
+        {{- else if hasPrefix $img "https://images.pexels.com" -}}
+          {{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
+          {{- $sbSrc = printf "%s%sw=120&h=120&fit=crop" $img $s -}}
+        {{- end -}}
+        <img
+          src="{{ $sbSrc }}"
+          alt="{{ $alt }}"
+          class="hero-sidebar-thumb"
+          loading="lazy"
+          width="80" height="80"
+          onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
+      </a>
+      <div class="hero-sidebar-card-body">
+        <span class="hero-sidebar-cat hero-sidebar-cat--{{ $cat | lower }}">{{ $cat }}</span>
+        <h3 class="hero-sidebar-headline">
+          <a href="{{ .Permalink }}" data-track="sidebar_click">{{ .Title }}</a>
+        </h3>
+        <span class="hero-sidebar-source">{{ with .Params.source_name }}{{ . }}{{ end }}</span>
       </div>
     </article>
-    {{ end }}
-    {{ end }}
-  </aside>
-  {{ end }}
+    {{- end -}}
+  </div>
+
 </section>
 {{- end -}}

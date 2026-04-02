@@ -343,6 +343,55 @@ def _enforce_min_words(article: Dict, min_words: int = 250) -> tuple[Dict, bool,
         return article, True, False
 
 
+def _normalize_title_tokens(title: str) -> set:
+    """Normalize a headline into a set of lowercase tokens for overlap comparison."""
+    text = re.sub(r"[^\w\s]", "", str(title or "").lower())
+    # Drop very short tokens (articles, prepositions)
+    return {t for t in text.split() if len(t) > 2}
+
+
+def _deduplicate_articles(articles: List[Dict], threshold: float = 0.70) -> tuple[List[Dict], int]:
+    """Remove near-duplicate articles based on headline token overlap.
+
+    Compares all pairs. If overlap > threshold, keeps the longer article.
+    Returns (deduplicated list, number of duplicates dropped).
+    """
+    if len(articles) <= 1:
+        return articles, 0
+
+    # Pre-compute token sets
+    token_sets = [_normalize_title_tokens(a.get("title", "")) for a in articles]
+    dropped = set()
+
+    for i in range(len(articles)):
+        if i in dropped:
+            continue
+        for j in range(i + 1, len(articles)):
+            if j in dropped:
+                continue
+            tokens_i = token_sets[i]
+            tokens_j = token_sets[j]
+            if not tokens_i or not tokens_j:
+                continue
+            intersection = tokens_i & tokens_j
+            union = tokens_i | tokens_j
+            overlap = len(intersection) / len(union) if union else 0
+            if overlap > threshold:
+                # Keep the longer article
+                len_i = _count_words(articles[i].get("content", ""))
+                len_j = _count_words(articles[j].get("content", ""))
+                drop_idx = j if len_i >= len_j else i
+                keep_idx = i if drop_idx == j else j
+                dropped.add(drop_idx)
+                print(
+                    f"[writer] DEDUP: '{articles[drop_idx].get('title', '')[:50]}' "
+                    f"({overlap:.0%} overlap with '{articles[keep_idx].get('title', '')[:50]}') — dropped"
+                )
+
+    kept = [a for idx, a in enumerate(articles) if idx not in dropped]
+    return kept, len(dropped)
+
+
 MAX_KEY_POINTS_TOTAL_CHARS = 300
 
 
@@ -794,6 +843,9 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
         rewritten.extend(kept)
         print(f"[writer]   Batch {i // batch_size + 1} complete: {len(kept)}/{len(audited)} articles kept")
 
+    # Deduplicate near-identical headlines before returning
+    rewritten, dedup_dropped = _deduplicate_articles(rewritten, threshold=0.70)
+
     min_words_rate = (min_words_metric_passed / min_words_metric_checked * 100) if min_words_metric_checked else 100.0
     h2_rate = (h2_metric_with_h2 / h2_metric_long_articles * 100) if h2_metric_long_articles else 100.0
     print(
@@ -801,5 +853,8 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
     )
     print(
         f"[writer] H2 presence: {h2_metric_with_h2}/{h2_metric_long_articles} long articles ({h2_rate:.0f}%) | retries={h2_metric_retries} | warns={h2_metric_warns}"
+    )
+    print(
+        f"[writer] Dedup: {dedup_dropped} near-duplicate articles dropped (>{70}% headline overlap)"
     )
     return rewritten
