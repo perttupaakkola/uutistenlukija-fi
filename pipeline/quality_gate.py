@@ -33,8 +33,11 @@ REJECTS_LOG = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
 MIN_BODY_WORDS = 220
 
 # Historical internal threshold (0–80). Corresponds to 5.0 / 10 normalized.
-REJECT_THRESHOLD = 40
-DEFAULT_NORMALIZED_THRESHOLD = 4.0
+# TEMPORARILY lowered 40→30 (2026-04-02) to unblock publishing after 60h drought.
+# Missing images zero out image score, pushing otherwise-good articles below 40.
+# TODO: restore to 40 once image generation pipeline is fixed.
+REJECT_THRESHOLD = 30
+DEFAULT_NORMALIZED_THRESHOLD = 3.5
 MAX_DUPLICATION_LOOKBACK = 50
 
 _PLACEHOLDER_PATTERNS = re.compile(

@@ -10,7 +10,7 @@
 # OpenClaw-managed crons (flywheel, agent management, token refresh, etc.)
 # are NOT listed here — they're managed by OpenClaw directly.
 
-# Main pipeline watchdog (every 10 min)
+# Main pipeline watchdog (every 10 min; watchdog self-throttles to hourly during 00:00-05:59 UTC quiet hours)
 */10 * * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/watchdog.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/watchdog.log 2>&1
 
 # X / Twitter OAuth2 token refresh (every 2h) — managed by OpenClaw scripts

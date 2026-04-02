@@ -8,7 +8,7 @@ All times UTC. Copy-paste the full block below into `crontab -e` on the deploy h
 
 | Schedule | Job | Purpose | Output |
 |---|---|---|---|
-| `*/15 * * * *` | pipeline watchdog | Scan → rewrite → publish (auto-retry, 5 max) | #operations on failure |
+| `*/15 * * * *` | pipeline watchdog | Scan → rewrite → publish (auto-retry, 5 max; quiet-hours throttle inside watchdog reduces 00:00-05:59 UTC runs to hourly) | #operations on failure |
 | `*/85 * * * *` | X token refresh | Keep OAuth2 token alive (2h TTL) | log file |
 | `30 7 * * *` | SEO dashboard | GA4 + Search Console daily digest | #seo |
 | `30 7,11,17,20 * * *` | X auto-poster | Post recent articles to @Uutistenlukija_ | X/Twitter |

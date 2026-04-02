@@ -4,6 +4,7 @@
 # Cron calls this instead of auto_publish.sh directly.
 # Features:
 #   - Lock timeout guard (removes stale lock >20min before running)
+#   - Quiet-hours throttle: from 00:00-05:59 UTC only run on the hour
 #   - Single retry on non-zero exit (60s wait between attempts)
 #   - Discord alert to #operations if both attempts fail
 #   - Separate log file: pipeline/logs/watchdog_YYYYMMDD.log
@@ -36,6 +37,8 @@ if [[ -f "$ENV_FILE" ]]; then
 fi
 
 DISCORD_WEBHOOK="${DISCORD_PIPELINE_WEBHOOK:-}"
+QUIET_HOURS_START_UTC=0
+QUIET_HOURS_END_UTC=6  # exclusive; 00:00-05:59 UTC
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 mkdir -p "$LOGS_DIR"
@@ -68,6 +71,16 @@ except Exception as e:
     print(f"[watchdog] Discord alert failed: {e}", file=sys.stderr)
 PYEOF
 }
+
+# ── Quiet-hours throttle ─────────────────────────────────────────────────────
+CURRENT_HOUR_UTC=$(date -u '+%-H')
+CURRENT_MINUTE_UTC=$(date -u '+%-M')
+if (( CURRENT_HOUR_UTC >= QUIET_HOURS_START_UTC && CURRENT_HOUR_UTC < QUIET_HOURS_END_UTC )); then
+    if (( CURRENT_MINUTE_UTC != 0 )); then
+        log "Quiet-hours throttle active (${CURRENT_HOUR_UTC}:$(printf '%02d' "$CURRENT_MINUTE_UTC") UTC) — skipping non-hourly cycle."
+        exit 0
+    fi
+fi
 
 # ── Lock guard ────────────────────────────────────────────────────────────────
 if [[ -f "$LOCK_FILE" ]]; then
