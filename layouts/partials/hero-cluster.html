@@ -111,7 +111,6 @@
         {{ end }}
         <div class="hero-lead-meta">
           <span>{{ partial "relative-date.html" $lead }}</span>
-          {{ with $lead.Params.source_name }}<span>{{ . }}</span>{{ end }}
           <span>{{ partial "reading-time.html" $lead }}</span>
         </div>
       </div>
@@ -149,7 +148,7 @@
         <h3 class="hero-sidebar-headline">
           <a href="{{ .Permalink }}" data-track="sidebar_click">{{ .Title }}</a>
         </h3>
-        <span class="hero-sidebar-source">{{ with .Params.source_name }}{{ . }}{{ end }}</span>
+        <span class="hero-sidebar-source">{{ partial "relative-date.html" . }}</span>
       </div>
     </article>
     {{- end -}}

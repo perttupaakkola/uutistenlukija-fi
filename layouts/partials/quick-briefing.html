@@ -24,7 +24,7 @@
             <div class="quick-briefing__meta">
               {{ with $p.Params.categories }}<span>{{ index . 0 }}</span>{{ end }}
               <span>{{ partial "relative-date.html" $p }}</span>
-              {{ with $p.Params.source_name }}<span>{{ . }}</span>{{ end }}
+              {{ with $p.Params.reading_time }}<span>{{ . }} min</span>{{ end }}
             </div>
           </div>
         </li>
