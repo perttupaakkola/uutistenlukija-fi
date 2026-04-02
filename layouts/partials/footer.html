@@ -1,23 +1,42 @@
 <footer class="site-footer" role="contentinfo" aria-label="Sivuston alatunniste">
   <div class="container">
-    <p><strong>Uutistenlukija.fi</strong> — Päivän tärkeimmät uutiset</p>
-    <p>
-      <a href="/tietoja/">Tietoja</a> ·
-      <a href="/uutiskirje/">Ilmainen uutiskirje</a> ·
-      <a href="/tietosuojaseloste/">Tietosuoja</a> ·
-      <a href="/evasteet/">Evästeet</a> ·
-      <a href="/kayttoehdot/">Käyttöehdot</a> ·
-      <a href="/tue/">☕ Tue meitä</a> ·
-      <a href="/mainosta/">Mainosta</a> ·
-      <a href="/tila/">Sivuston tila</a>
-    </p>
-    <p><strong>Hyödyllistä:</strong>
-      <a href="/paivan-kooste/">Päivän kooste</a> ·
-      <a href="/paivan-tarkeimmat-uutiset/">Päivän tärkeimmät</a> ·
-      <a href="/syotteet/">RSS-syötteet</a> ·
-      <a href="/haku/">Haku</a>
-    </p>
-    <p><a href="mailto:info@uutistenlukija.fi">info@uutistenlukija.fi</a></p>
-    <p>© {{ now.Year }} Uutistenlukija</p>
+    <div class="site-footer-grid">
+      <div class="site-footer-col site-footer-brand-col">
+        <div class="site-footer-brand">
+          <h2>Uutistenlukija.fi</h2>
+        </div>
+        <p class="site-footer-slogan">Uutiset selkeästi. Suomen nopein tapa seurata päivän puheenaiheita.</p>
+        <p class="site-footer-email"><a href="mailto:info@uutistenlukija.fi">info@uutistenlukija.fi</a></p>
+      </div>
+
+      <div class="site-footer-col">
+        <h3>Sisältö</h3>
+        <ul class="site-footer-links">
+          <li><a href="/paivan-kooste/">Päivän kooste</a></li>
+          <li><a href="/paivan-tarkeimmat-uutiset/">Päivän tärkeimmät</a></li>
+          <li><a href="/kategoriat/">Kategoriat</a></li>
+          <li><a href="/haku/">Haku</a></li>
+          <li><a href="/syotteet/">RSS-syötteet</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer-col">
+        <h3>Tietoa</h3>
+        <ul class="site-footer-links">
+          <li><a href="/tietoja/">Tietoja palvelusta</a></li>
+          <li><a href="/mainosta/">Mainosta</a></li>
+          <li><a href="/tietosuojaseloste/">Tietosuoja</a></li>
+          <li><a href="/evasteet/">Evästeet</a></li>
+          <li><a href="/kayttoehdot/">Käyttöehdot</a></li>
+          <li><a href="/tue/">☕ Tue meitä</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="site-footer-copyright">
+    <div class="container">
+      <p>&copy; {{ now.Year }} Uutistenlukija.fi. Kaikki oikeudet pidätetään.</p>
+    </div>
   </div>
 </footer>
