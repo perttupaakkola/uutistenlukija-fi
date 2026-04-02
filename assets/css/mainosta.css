@@ -169,6 +169,107 @@
   margin-top: auto;
 }
 
+.mainosta-packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.mainosta-package-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.mainosta-package-card--growth {
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--border) 72%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.mainosta-package-card__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.mainosta-package-card__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg) 90%);
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mainosta-package-card__price {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.mainosta-package-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.mainosta-package-card__desc {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.mainosta-package-card__features {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--text-secondary);
+}
+
+.mainosta-package-card__features li {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin-bottom: 0.2rem;
+}
+
+.mainosta-package-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 0.78rem 1rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: opacity 0.15s, transform 0.12s, box-shadow 0.15s;
+}
+
+.mainosta-package-card__cta:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
 .mainosta-why__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -255,6 +356,12 @@
   text-decoration: underline;
 }
 
+@media (max-width: 920px) {
+  .mainosta-packages {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 680px) {
   .mainosta-stats {
     grid-template-columns: repeat(2, 1fr);
@@ -268,6 +375,12 @@
 
   .mainosta-placements {
     grid-template-columns: 1fr;
+  }
+
+  .mainosta-package-card__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
   }
 }
 
