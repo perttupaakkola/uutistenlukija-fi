@@ -440,11 +440,15 @@ def score_article(article: dict) -> ScoreBreakdown:
         if ratio > 0.06 and top_count >= 6:
             hard_fails.append(f"keyword stuffing: '{top_word}' {top_count}× ({ratio:.1%})")
 
+    # NOTE: unsourced numbers downgraded from hard fail to score penalty (2026-04-02).
+    # The rewriter frequently reformats numbers ("noin 30 000" → "30000", "3,5 miljardia"
+    # → "3.5 billion") causing 30% false positive rate on hard fail. Now deducts 5 points
+    # from the 80-point score instead of blocking outright.
     if source_text:
         unsourced = check_numbers_sourced(source_text, content, title)
         if unsourced:
-            sample = ", ".join(unsourced[:5])
-            hard_fails.append(f"unsourced numbers: {sample}")
+            score_penalty = min(len(unsourced) * 2, 10)  # -2 per unsourced number, max -10
+            total -= score_penalty
 
     normalized_score = round(_clamp(weighted_score), 2)
     effective_threshold = max(DEFAULT_NORMALIZED_THRESHOLD, round(REJECT_THRESHOLD / 80 * 10, 2))
