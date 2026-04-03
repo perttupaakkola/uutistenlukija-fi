@@ -189,6 +189,53 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
 
+QUALITY_SCORE_PROMPT = """Arvioi tämän suomenkielisen uutisartikkelin kielellinen laatu asteikolla 1–5:
+
+5 = Luonnollista, sujuvaa uutiskieltä. Voisi olla ihmistoimittajan kirjoittama.
+4 = Hyvää suomea, pieniä kömpelöyksiä mutta luettavaa.
+3 = Ymmärrettävää mutta tunnistettavasti konegeneroitua. Toistoa tai täytettä.
+2 = Kömpelöä, epäluonnollisia sanankäänteitä, selviä tekoälyartefakteja.
+1 = Huonoa suomea, vaikeaselkoista.
+
+Palauta VAIN JSON: {"score": <numero>, "issues": "<lyhyt selitys ongelmista>"}"""
+
+ESCALATION_THRESHOLD = 3  # Score <= this triggers gpt-4o rewrite
+
+
+def _score_article_quality(body: str) -> tuple:
+    """Score Finnish quality 1-5. Returns (score, issues_text)."""
+    try:
+        resp = _call_llm(QUALITY_SCORE_PROMPT, f"Artikkeli:\n\n{body}", model="gpt-4o-mini")
+        data = _extract_json(resp)
+        if isinstance(data, dict):
+            return int(data.get("score", 3)), data.get("issues", "")
+    except Exception as e:
+        print(f"[quality]   Scoring failed: {e}")
+    return 3, ""  # Default to 3 on failure
+
+
+def _escalate_to_gpt4o(article_json: dict, original_sources: str) -> dict:
+    """Re-rewrite a low-quality article using gpt-4o."""
+    title = article_json.get("title", "")
+    body = article_json.get("body", "") or article_json.get("content", "")
+
+    escalation_prompt = f"""Tämä artikkeli kirjoitettiin automaattisesti mutta sen suomen kielen laatu on heikko.
+Kirjoita se kokonaan uudelleen paremmalla suomella. Säilytä kaikki faktat ja rakenne.
+
+Otsikko: {title}
+
+Alkuperäinen teksti:
+{body}
+
+Lähdemateriaali:
+{original_sources[:3000]}
+
+Palauta JSON-muodossa samalla rakenteella kuin alkuperäinen."""
+
+    resp = _call_llm(SYSTEM_PROMPT, escalation_prompt, model="gpt-4o")
+    return _extract_json(resp)
+
+
 _RETRY_ATTEMPTS = 3
 _RETRY_BASE_DELAY = 2  # seconds; doubles each attempt (2s, 4s, 8s)
 
@@ -209,8 +256,8 @@ def _get_client() -> "OpenAI":
     return _openai_client
 
 
-def _call_llm(system: str, prompt: str) -> str:
-    """Call OpenAI gpt-4o-mini with exponential backoff retry (3 attempts).
+def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
+    """Call OpenAI LLM with exponential backoff retry (3 attempts).
 
     Retries on: 429, 5xx, timeout, connection errors.
     Hard-fails on: 400, 401, 403 (bad request / auth — won't fix on retry).
@@ -220,7 +267,7 @@ def _call_llm(system: str, prompt: str) -> str:
         try:
             client = _get_client()
             response = client.chat.completions.create(
-                model="gpt-4o-mini",
+                model=model,
                 max_tokens=4096,
                 messages=[
                     {"role": "system", "content": system},
@@ -837,6 +884,34 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             written_article["content_type"] = content_type
             written_article["editorial_reviewed"] = True
             written_article["key_points"] = _normalize_key_points(written_article)
+
+            # Quality gate: score Finnish and escalate low-quality to gpt-4o
+            art_body = written_article.get("content", "")
+            score, issues = _score_article_quality(art_body)
+            if score <= ESCALATION_THRESHOLD:
+                print(f"[quality]   Score {score}/5 for '{written_article.get('title','')[:50]}' — escalating to gpt-4o")
+                print(f"[quality]   Issues: {issues}")
+                try:
+                    upgraded = _escalate_to_gpt4o(written_article, written_article.get("source_text", ""))
+                    if isinstance(upgraded, dict) and (upgraded.get("body") or upgraded.get("content")):
+                        # Normalize: escalation may return "body" or "content"
+                        if "body" in upgraded and "content" not in upgraded:
+                            upgraded["content"] = upgraded.pop("body")
+                        new_score, _ = _score_article_quality(upgraded.get("content", ""))
+                        print(f"[quality]   Upgraded score: {new_score}/5")
+                        if new_score > score:
+                            # Preserve metadata from original
+                            for key in ["category", "tags", "image_url", "image_alt", "source_url", "source_name",
+                                         "content_type", "editorial_reviewed", "journalist_note", "author_title",
+                                         "key_points", "fingerprint", "trending", "source", "source_domain",
+                                         "link", "source_text", "summary", "original_title"]:
+                                if key in written_article and key not in upgraded:
+                                    upgraded[key] = written_article[key]
+                            written_article = upgraded
+                except Exception as e:
+                    print(f"[quality]   Escalation failed: {e}")
+            else:
+                print(f"[quality]   Score {score}/5 for '{written_article.get('title','')[:50]}' — OK")
 
             kept.append(written_article)
 
