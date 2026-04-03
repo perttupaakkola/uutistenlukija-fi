@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-03-30T02:40:15+00:00",
+  "generated_at": "2026-04-03T02:06:58+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 94,
-    "ok": 17,
-    "skip": 1,
-    "error": 76
+    "total": 0,
+    "ok": 0,
+    "skip": 0,
+    "error": 0
   },
   "articles": {
-    "attempted": 1990,
-    "published": 20,
-    "rejected": 151,
-    "publish_rate": 1.0,
-    "last_published_ts": "2026-03-29T20:22:06.401128+00:00"
+    "attempted": 0,
+    "published": 0,
+    "rejected": 66,
+    "publish_rate": 0,
+    "last_published_ts": null
   },
   "reject_reasons": {
-    "too_short": 81,
-    "score 35/40 (wc=10 title=10 de": 28,
-    "score 30/40 (wc=0 title=10 des": 26,
-    "lead_too_short": 22,
-    "only 1 paragraphs (min 3)": 10,
-    "score 25/40 (wc=0 title=10 des": 9,
-    "keyword_stuffing": 5,
-    "score 30/40 (wc=10 title=0 des": 4
+    "missing: image": 66,
+    "generic ending": 26,
+    "lead_too_short": 15,
+    "too_short": 14,
+    "language borderline Finnish si": 11,
+    "length under target (268 words": 3,
+    "length under target (269 words": 3,
+    "score 35/40 norm=7.69/10 (leng": 2
   },
   "feeds": {
     "total": 37,
@@ -35,5 +35,26 @@
     "stale_names": [],
     "disabled_names": []
   },
-  "trending": []
+  "trending": [
+    [
+      "bondin",
+      14
+    ],
+    [
+      "trumpin",
+      14
+    ],
+    [
+      "enemmän",
+      12
+    ],
+    [
+      "tilanne",
+      12
+    ],
+    [
+      "vaikuttaa",
+      11
+    ]
+  ]
 }
