@@ -21,7 +21,7 @@
     {{ $normalized := 0.0 }}
     {{ if gt $range 0 }}
       {{/* Force float division so we get a value between 0 and 1 */}}
-      {{ $normalized = div (mul 1.0 (math.Sub .count $minCount)) (mul 1.0 $range) }}
+      {{ $normalized = math.Div (math.Mul 1.0 (math.Sub .count $minCount)) (math.Mul 1.0 $range) }}
     {{ end }}
     {{/* Scale: 0.78rem – 1.4rem */}}
     {{ $size := math.Add 0.78 (math.Mul $normalized 0.62) }}
