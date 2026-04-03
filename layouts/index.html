@@ -72,7 +72,7 @@
 {{ end }}
 
 {{/* Visually hidden H1 for SEO */}}
-<h1 class="visually-hidden">Uutistenlukija – Uutiset selkeästi</h1>
+{{/* H1 removed — brand is in the logo/header, no need for a separate tagline */}}
 
 <span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
 
@@ -157,7 +157,7 @@
 <section class="category-spotlights" aria-labelledby="category-spotlights-title">
   <div class="homepage-block-heading">
     <h2 id="category-spotlights-title" class="tanaan-title">Kategoriat nyt</h2>
-    <p class="homepage-block-heading__deck">Kolme tuoreinta aihealuetta juuri nyt — ei koko ruudukkoa kerralla.</p>
+    <p class="homepage-block-heading__deck">Tuoreimmat aiheet ja artikkelit.</p>
   </div>
   {{ range $spotlights }}
     {{ $cat := .name }}

@@ -10,7 +10,7 @@
 {{ $fallback := first 5 (where $fallbackSorted "Permalink" "not in" $exclude) }}
 <aside class="most-read-widget most-read-widget--fallback-only" aria-label="Luetuimmat artikkelit" id="most-read-widget">
   <h3 class="most-read-title" id="most-read-title">Uusimmat</h3>
-  <ol class="most-read-list" id="most-read-list">
+  <ul class="most-read-list" id="most-read-list" style="list-style:none;padding-left:0">
     {{ range $i, $p := $fallback }}
     <li class="most-read-item most-read-item--fallback">
       <span class="most-read-rank">{{ math.Add $i 1 }}</span>
@@ -18,7 +18,7 @@
       <span class="most-read-reading-time">{{ partial "reading-time.html" $p }}</span>
     </li>
     {{ end }}
-  </ol>
+  </ul>
   <p class="most-read-empty" id="most-read-empty"{{ if $fallback }} style="display:none"{{ end }}>Ei vielä lukuhistoriaa.</p>
 </aside>
 

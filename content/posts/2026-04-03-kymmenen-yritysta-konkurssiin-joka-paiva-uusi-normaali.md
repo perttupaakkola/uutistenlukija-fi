@@ -33,7 +33,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kymmenen-yritysta-konkurssiin-joka-paiva-asiamies-2000-luvun-ennatysluvuista-uusi-normaali/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
