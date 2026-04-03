@@ -155,9 +155,8 @@
 {{ $spotlights := first 3 (sort $categoryRank "latestUnix" "desc") }}
 {{ if $spotlights }}
 <section class="category-spotlights" aria-labelledby="category-spotlights-title">
-  <div class="homepage-block-heading">
-    <h2 id="category-spotlights-title" class="tanaan-title">Kategoriat nyt</h2>
-    <p class="homepage-block-heading__deck">Tuoreimmat aiheet ja artikkelit.</p>
+  <div class="category-spotlights__heading">
+    <h2 id="category-spotlights-title" class="category-spotlights__title">Kategoriat nyt</h2>
   </div>
   {{ range $spotlights }}
     {{ $cat := .name }}

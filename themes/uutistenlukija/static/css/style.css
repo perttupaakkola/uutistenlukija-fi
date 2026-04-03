@@ -1745,7 +1745,7 @@ pre code {
 .lyhyet-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
 }
 .lyhyet-item {
   border-bottom: 1px solid var(--border);
@@ -2647,8 +2647,28 @@ body.is-home .category-section-header {
   gap: 1.25rem;
   margin-bottom: 2rem;
 }
+.category-spotlights__heading {
+  margin-bottom: 0.25rem;
+}
+.category-spotlights__title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
 .category-section--spotlight {
   margin-bottom: 0;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.category-section--spotlight:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 @media (max-width: 900px) {
   .hero-cluster {
@@ -3363,3 +3383,9 @@ body.is-home .highlights-row--top {
 
 /* Hide fallback "Uusimmat" widget — shown only when JS switches to "Luetuimmat" */
 .most-read-widget--fallback-only { display: none; }
+.most-read-list { list-style: none; padding-left: 0; }
+.most-read-item { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+.most-read-item:last-child { border-bottom: none; }
+.most-read-rank { font-family: var(--font-sans); font-weight: 800; font-size: 1rem; color: var(--accent); flex-shrink: 0; min-width: 1.5rem; }
+.most-read-link { font-size: 0.92rem; line-height: 1.35; }
+.most-read-reading-time, .most-read-count { font-family: var(--font-sans); font-size: 0.72rem; color: var(--text-muted); margin-left: auto; flex-shrink: 0; }

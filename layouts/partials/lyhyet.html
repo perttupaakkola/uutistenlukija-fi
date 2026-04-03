@@ -19,26 +19,26 @@
     </div>
     <span class="lyhyet-subtitle">Tuoreimmat</span>
   </div>
-  <ol class="lyhyet-list">
+  <ul class="lyhyet-list">
     {{ range $recent }}
     {{ $cat := index .Params.categories 0 | default "Kotimaa" }}
     {{ $catSlug := $cat | lower }}
     <li class="lyhyet-item">
-      <span class="lyhyet-dot category-{{ $catSlug }}" aria-hidden="true"></span>
-      <div class="lyhyet-body">
-        <span class="lyhyet-category">{{ $cat }}</span>
-        <a href="{{ .RelPermalink }}" class="lyhyet-link">
+      <a href="{{ .RelPermalink }}" class="lyhyet-link">
+        <span class="lyhyet-dot category-{{ $catSlug }}" aria-hidden="true"></span>
+        <div class="lyhyet-body">
+          <span class="lyhyet-category">{{ $cat }}</span>
           <span class="lyhyet-headline">{{ .Title }}</span>
-        </a>
-        {{ with .Params.description }}
-        <span class="lyhyet-summary">{{ . | truncate 110 }}</span>
-        {{ else }}
-        <span class="lyhyet-summary">{{ .Summary | truncate 110 }}</span>
-        {{ end }}
-      </div>
-      <span class="lyhyet-time">{{ partial "relative-date.html" . }}</span>
+          {{ with .Params.description }}
+          <span class="lyhyet-summary">{{ . | truncate 110 }}</span>
+          {{ else }}
+          <span class="lyhyet-summary">{{ .Summary | truncate 110 }}</span>
+          {{ end }}
+        </div>
+        <span class="lyhyet-time">{{ partial "relative-date.html" . }}</span>
+      </a>
     </li>
     {{ end }}
-  </ol>
+  </ul>
 </section>
 {{ end }}

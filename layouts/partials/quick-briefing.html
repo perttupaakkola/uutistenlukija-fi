@@ -11,7 +11,7 @@
         <p class="homepage-block-heading__deck">Päivän tärkeimmät tapahtumat lyhyesti.</p>
       </div>
     </div>
-    <ol class="quick-briefing__list">
+    <ul class="quick-briefing__list" style="list-style:none">
       {{ if $items }}
         {{ range $i, $p := $items }}
         <li class="quick-briefing__item">
@@ -32,6 +32,6 @@
       {{ else }}
         <li class="quick-briefing__item quick-briefing__item--empty">Uusi briiffi täyttyy heti, kun päivän julkaisut karttuvat.</li>
       {{ end }}
-    </ol>
+    </ul>
   </div>
 </section>
