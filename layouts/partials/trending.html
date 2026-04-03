@@ -29,9 +29,9 @@
 <section class="tanaan-section" aria-label="Tänään aktiivisimmat">
   <div class="homepage-block-heading">
     <h2 class="tanaan-title">Tänään aktiivisimmat</h2>
-    <p class="homepage-block-heading__deck">Nopea poiminta eri aiheista ilman samoja juttuja uudelleen.</p>
+    <p class="homepage-block-heading__deck">Poimintoja eri aihealueilta.</p>
   </div>
-  <ol class="tanaan-list">
+  <ul class="tanaan-list">
     {{- range $i, $p := $items -}}
     {{- $cat := index $p.Params.categories 0 | default "Uutiset" -}}
     {{- $catSlug := lower $cat -}}
@@ -41,10 +41,12 @@
         <span class="tanaan-cat category-{{ $catSlug }}">{{ $cat }}</span>
         <a class="tanaan-headline" href="{{ $p.RelPermalink }}" data-track="trending_click" data-article-category="{{ $catSlug }}">{{ $p.Title }}</a>
       </div>
-      <time class="tanaan-time" datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $p.Date | time.Format "15:04" }}</time>
-      <span class="tanaan-reading-time">· {{ partial "reading-time.html" $p }}</span>
+      <div class="tanaan-meta">
+        <time class="tanaan-time" datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $p.Date | time.Format "15:04" }}</time>
+        <span class="tanaan-reading-time">· {{ partial "reading-time.html" $p }}</span>
+      </div>
     </li>
     {{- end -}}
-  </ol>
+  </ul>
 </section>
 {{- end -}}
