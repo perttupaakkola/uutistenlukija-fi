@@ -8,7 +8,7 @@
 {{ $fallbackPool := where $site.RegularPages "Section" "posts" }}
 {{ $fallbackSorted := $fallbackPool.ByDate.Reverse }}
 {{ $fallback := first 5 (where $fallbackSorted "Permalink" "not in" $exclude) }}
-<aside class="most-read-widget" aria-label="Luetuimmat artikkelit" id="most-read-widget">
+<aside class="most-read-widget most-read-widget--fallback-only" aria-label="Luetuimmat artikkelit" id="most-read-widget">
   <h3 class="most-read-title" id="most-read-title">Uusimmat</h3>
   <ol class="most-read-list" id="most-read-list">
     {{ range $i, $p := $fallback }}
@@ -65,6 +65,8 @@
     }
 
     if (title) title.textContent = 'Luetuimmat';
+    var widget = document.getElementById('most-read-widget');
+    if (widget) widget.classList.remove('most-read-widget--fallback-only');
     list.innerHTML = '';
     if (empty) empty.style.display = 'none';
     top.forEach(function (item, i) {

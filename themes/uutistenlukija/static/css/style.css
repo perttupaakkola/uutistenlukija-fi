@@ -3360,3 +3360,6 @@ body.is-home .highlights-row--top {
   padding: 0.25rem 0;
   min-height: 36px;
 }
+
+/* Hide fallback "Uusimmat" widget — shown only when JS switches to "Luetuimmat" */
+.most-read-widget--fallback-only { display: none; }
