@@ -162,7 +162,7 @@
   {{ range $spotlights }}
     {{ $cat := .name }}
     {{ $pool := .freshPool }}
-    {{ $catPosts := where $pool "Permalink" "not in" $seen }}
+    {{ $catPosts := $pool }}
     {{ if $catPosts }}
     <section class="category-section category-section--spotlight" id="cat-{{ $cat | lower | urlize }}">
       <div class="category-section-header">
