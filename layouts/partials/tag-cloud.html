@@ -20,8 +20,8 @@
     {{ range $top20 }}
     {{ $normalized := 0.0 }}
     {{ if gt $range 0 }}
-      {{/* math.Div on integers returns float in Hugo */}}
-      {{ $normalized = math.Div (math.Sub .count $minCount) $range }}
+      {{/* Force float division so we get a value between 0 and 1 */}}
+      {{ $normalized = div (mul 1.0 (math.Sub .count $minCount)) (mul 1.0 $range) }}
     {{ end }}
     {{/* Scale: 0.78rem – 1.4rem */}}
     {{ $size := math.Add 0.78 (math.Mul $normalized 0.62) }}
