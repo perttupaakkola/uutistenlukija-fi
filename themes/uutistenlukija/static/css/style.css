@@ -3188,6 +3188,7 @@ body.is-home .highlights-row--top {
   align-items: center;
   gap: 1rem;
   min-height: 48px;
+  flex: 1;
 }
 
 .site-search__form {
@@ -3364,6 +3365,10 @@ body.is-home .highlights-row--top {
     order: 3;
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .hamburger-btn {
+    margin-left: auto;
   }
 
   .site-search {
