@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/tama-kaikki-tiedetaan-al-holin-leirilla-olleesta-suomalaispojasta/9320136"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
