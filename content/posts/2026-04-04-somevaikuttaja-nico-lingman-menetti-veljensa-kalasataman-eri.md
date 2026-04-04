@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/somevaikuttaja-nico-lingman-menetti-veljensa-kalasataman-erikoisessa-henkirikoksessa-dani-oli-hauska-ja-sydamellinen-tyyppi/9319382"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
