@@ -349,13 +349,23 @@ def fetch_image_for_article(
     Side effect: triggers Unsplash download tracking endpoint.
     """
     category = _normalize_category(category)
-    query = build_search_query(
-        title,
-        category,
-        summary=summary,
-        key_points=key_points,
-        content=content,
-    )
+
+    # Try LLM-powered query first for better contextual matching
+    query = ""
+    try:
+        from image_query import generate_image_query
+        query = generate_image_query(title, content or summary or "", category)
+    except Exception as e:
+        print(f"[unsplash] LLM query unavailable ({e}), using keyword extraction")
+
+    if not query:
+        query = build_search_query(
+            title,
+            category,
+            summary=summary,
+            key_points=key_points,
+            content=content,
+        )
     print(f"[unsplash] '{title[:50]}' → '{query}'")
 
     photos = _search(query)

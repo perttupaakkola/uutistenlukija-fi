@@ -152,11 +152,11 @@ def find_missing_image_articles(limit: int | None = None, offset: int = 0) -> li
     return missing
 
 
-def fetch_image(title: str, category: str, slug: str, source: str) -> dict | None:
+def fetch_image(title: str, category: str, slug: str, source: str, content: str = "") -> dict | None:
     """Try Unsplash then Pexels. Returns image data dict or None."""
     if source in ("unsplash", "both"):
         result = _unsplash.fetch_image_for_article(
-            title, category, inter_request_delay=0
+            title, category, content=content, inter_request_delay=0
         )
         if result:
             result["source"] = "unsplash"
@@ -165,7 +165,7 @@ def fetch_image(title: str, category: str, slug: str, source: str) -> dict | Non
 
     if source in ("pexels", "both"):
         result = _pexels.fetch_image_for_article(
-            title, category, slug=slug, download=True, inter_request_delay=0
+            title, category, content=content, slug=slug, download=True, inter_request_delay=0
         )
         if result and result.get("local_path"):
             result["source"] = "pexels"
@@ -221,7 +221,7 @@ def run(
 
         for fpath in batch:
             text = fpath.read_text(encoding="utf-8")
-            meta, _, _ = _parse_fm(text)
+            meta, _, body = _parse_fm(text)
 
             title = meta.get("title", fpath.stem)
             cats = meta.get("categories", [])
@@ -241,7 +241,7 @@ def run(
             if dry_run:
                 # Query the API but don't write any files
                 kw = _unsplash.extract_keywords(title, category)
-                result = fetch_image(title, category, slug, source)
+                result = fetch_image(title, category, slug, source, content=body)
                 time.sleep(REQUEST_DELAY)
                 if result:
                     img_url = (result.get("url") or result.get("local_path") or "")[:80]
@@ -261,7 +261,7 @@ def run(
                     failed_count += 1
                 entry["keywords"] = kw
             else:
-                result = fetch_image(title, category, slug, source)
+                result = fetch_image(title, category, slug, source, content=body)
                 time.sleep(REQUEST_DELAY)
 
                 if result:
