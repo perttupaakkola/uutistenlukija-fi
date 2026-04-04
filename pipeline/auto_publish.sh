@@ -100,7 +100,10 @@ echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 # Sync with origin — pull remote changes, preserving local untracked content.
 # Only stash tracked layout/script files (NOT untracked content articles).
 # Previous approach used 'git stash --include-untracked' which ate new articles.
-git stash push -- layouts/ themes/ scripts/ pipeline/auto_publish.sh pipeline/firehose_cron.sh pipeline/scanner.py 2>/dev/null || true
+# Stash ALL local changes before pull to prevent "cannot pull with rebase: unstaged changes"
+# This includes content articles written by the pipeline, cron-generated JSON, and layout files.
+# Everything gets popped back after the rebase.
+git stash push -m "auto-publish pre-rebase" 2>/dev/null || true
 git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
 STASH_LIST=$(git stash list 2>/dev/null | head -1)
 if [ -n "$STASH_LIST" ]; then git stash pop --quiet 2>/dev/null || true; fi
