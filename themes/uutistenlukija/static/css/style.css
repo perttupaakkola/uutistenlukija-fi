@@ -84,8 +84,7 @@ html {
   :root:not([data-theme="light"]) .newsletter-cta { background: #1e1e1e; border-left-color: #e74c3c; }
   :root:not([data-theme="light"]) .newsletter-cta-text span { color: #aaa; }
   :root:not([data-theme="light"]) .newsletter-cta-input { background: #2a2a2a; border-color: #444; color: #eee; }
-  :root:not([data-theme="light"]) .related-card { background: #242424; border-color: #333; }
-  :root:not([data-theme="light"]) .related-card:hover { background: #2a2a2a; }
+  /* related-card dark overrides removed — naked cards inherit bg */
   :root:not([data-theme="light"]) .article-hero-wrapper { background: #1e1e1e; }
   :root:not([data-theme="light"]) .article-hero-caption,
   :root:not([data-theme="light"]) .article-hero-caption a { color: var(--text-secondary); }
@@ -620,61 +619,56 @@ img { max-width: 100%; height: auto; }
   font-size: 0.72rem;
   color: var(--text-secondary);
 }
+/* === LUE MYÖS / Related Articles (Broadsheet Redesign) === */
 .related-articles {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 2px solid var(--border);
+  margin: 3rem 0 0; padding-top: 1.5rem;
+  border-top: 4px solid var(--text);
 }
 .related-articles__heading {
-  margin-bottom: 1rem;
-  font-size: 1.35rem;
-  line-height: 1.2;
+  font: 800 1.25rem/1.2 var(--font-sans);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 1.5rem; color: var(--text);
 }
 .related-articles__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem;
 }
 .related-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--card-bg);
-  overflow: hidden;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  display: flex; flex-direction: column;
+  border: none; background: transparent; min-width: 0;
 }
-.related-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  border-color: color-mix(in srgb, var(--accent) 22%, var(--border));
-}
-.related-card .article-image-link {
-  margin-bottom: 0;
-}
-.related-card .article-card-thumb {
-  aspect-ratio: 16 / 9;
-}
+.related-card .article-image-link { margin-bottom: 0.75rem; }
+.related-card .article-card-thumb { aspect-ratio: 16 / 9; }
 .related-card__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: 0.45rem;
-  padding: 0.9rem 1rem 1rem;
+  display: flex; flex-direction: column; flex: 1; gap: 0.35rem;
 }
-.related-card__title {
-  font-size: 1rem;
-  line-height: 1.35;
+.related-card__cat {
+  font: 700 0.65rem/1 var(--font-sans);
+  letter-spacing: 0.05em; text-transform: uppercase;
+  margin-bottom: 0.15rem; display: block;
 }
-.related-card__title a {
-  color: inherit;
-}
+.related-card__cat--kotimaa { color: #2980b9; }
+.related-card__cat--ulkomaat { color: #c0392b; }
+.related-card__cat--talous { color: #9a6700; }
+.related-card__cat--teknologia { color: #8e44ad; }
+.related-card__cat--urheilu { color: #1e8449; }
+.related-card__cat--kulttuuri { color: #9a5200; }
+.related-card__cat--tiede { color: #0f6f5d; }
+.related-card__title { font: 700 1.05rem/1.3 var(--font-serif); margin: 0; }
+.related-card__title a { color: var(--text); }
+.related-card:hover .related-card__title a { color: var(--accent); }
 .related-card__meta {
-  margin-top: auto;
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font: 500 0.75rem/1 var(--font-sans);
+  color: var(--text-muted); margin-top: 0.2rem;
+}
+@media (max-width: 680px) {
+  .related-articles__grid {
+    display: flex; flex-wrap: nowrap; overflow-x: auto;
+    scroll-snap-type: x mandatory; scrollbar-width: none;
+    -ms-overflow-style: none; margin: 0 -1.5rem;
+    padding: 0 1.5rem 1rem; gap: 1.25rem;
+  }
+  .related-articles__grid::-webkit-scrollbar { display: none; }
+  .related-card { flex: 0 0 78%; scroll-snap-align: center; }
 }
 @media (max-width: 900px) {
   .category-articles {
@@ -686,8 +680,7 @@ img { max-width: 100%; height: auto; }
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .category-articles,
-  .related-articles__grid {
+  .category-articles {
     grid-template-columns: 1fr;
   }
 }

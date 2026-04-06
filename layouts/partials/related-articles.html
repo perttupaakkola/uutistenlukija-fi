@@ -4,7 +4,7 @@
   Rules:
     - prefer Hugo built-in Related results (tags + categories + configured indices)
     - exclude current page
-    - cap at 4 cards
+    - cap at 3 cards
     - if Related returns < 2 results, fill with newest posts from the same first category
 */ -}}
 
@@ -25,7 +25,7 @@
 {{- $related := slice -}}
 {{- $relatedPool := site.RegularPages.Related . -}}
 {{- range $candidate := $relatedPool -}}
-  {{- if and (eq $candidate.Section "posts") (not $candidate.Draft) (le $candidate.Date now) (ne $candidate.Permalink $currentPermalink) (lt (len $related) 4) -}}
+  {{- if and (eq $candidate.Section "posts") (not $candidate.Draft) (le $candidate.Date now) (ne $candidate.Permalink $currentPermalink) (lt (len $related) 3) -}}
     {{- $alreadyIncluded := false -}}
     {{- range $item := $related -}}
       {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
@@ -43,7 +43,7 @@
     {{- if gt (len $candidateCats) 0 -}}
       {{- $candidateCat = (index $candidateCats 0) | urlize -}}
     {{- end -}}
-    {{- if and (ne $candidate.Permalink $currentPermalink) (eq $candidateCat $currentCat) (lt (len $related) 4) -}}
+    {{- if and (ne $candidate.Permalink $currentPermalink) (eq $candidateCat $currentCat) (lt (len $related) 3) -}}
       {{- $alreadyIncluded := false -}}
       {{- range $item := $related -}}
         {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
@@ -55,7 +55,7 @@
   {{- end -}}
 {{- end -}}
 
-{{- $related = first 4 $related -}}
+{{- $related = first 3 $related -}}
 
 {{- if gt (len $related) 0 -}}
 <section class="related-articles" aria-labelledby="related-heading">
@@ -81,6 +81,9 @@
           "onclick" $trackRelatedClick
         ) }}
         <div class="related-card__body">
+          {{- if $fallbackCat -}}
+          <span class="related-card__cat related-card__cat--{{ $fallbackCat | urlize }}">{{ $fallbackCat }}</span>
+          {{- end -}}
           <h3 class="related-card__title"><a href="{{ .RelPermalink }}" onclick="{{ $trackRelatedClick | safeHTMLAttr }}">{{ .Title }}</a></h3>
           <div class="related-card__meta">
             {{ partial "relative-date.html" . }}
