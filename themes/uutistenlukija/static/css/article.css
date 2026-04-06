@@ -158,36 +158,7 @@
   line-height: 1.5;
   margin-top: 0.25rem;
 }
-.related-articles h3 {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 1rem;
-  color: var(--text-secondary);
-}
-
-.related-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.related-card {
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  border-left: 3px solid var(--border);
-  transition: border-color 0.2s;
-  text-decoration: none;
-  color: inherit;
-}
-
-.related-card:hover {
-  border-left-color: var(--accent);
-}
+/* legacy related-articles/card styles removed — see style.css broadsheet redesign */
 
 .related-thumb {
   flex: 0 0 80px;
@@ -1002,98 +973,7 @@
 
 /* category-pill/label consolidated above — 48px touch target */
 
-/* ── Related Articles — "Lue myös" ───────────────────────────────── */
-.related-articles {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-}
-
-.related-articles__heading {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-accent, var(--accent));
-  margin: 0 0 1rem;
-}
-
-.related-articles__grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.related-card {
-  display: flex;
-  flex: 1 1 160px;
-  min-width: 160px;
-  max-width: 100%;
-  flex-direction: column;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--color-surface, var(--card-bg));
-}
-
-.related-card__thumb {
-  display: block;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: var(--border);
-}
-
-.related-card__thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.related-card__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 0.8rem;
-  gap: 0.45rem;
-}
-
-.related-card__title {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  line-height: 1.35;
-}
-
-.related-card__title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.related-card__title a:hover {
-  color: var(--color-accent, var(--accent));
-}
-
-.related-card__meta {
-  margin-top: auto;
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-}
-
-@media (max-width: 640px) {
-  .related-card {
-    flex-basis: calc(50% - 0.5rem);
-  }
-}
-
-@media (max-width: 420px) {
-  .related-card {
-    flex-basis: 100%;
-  }
-}
-/* ── end Related Articles ──────────────────────────────────────────── */
+/* ── Related Articles — moved to style.css (broadsheet redesign) ── */
 
 
 /* ── Markdown content images (render hook) ───────────────────────── */
