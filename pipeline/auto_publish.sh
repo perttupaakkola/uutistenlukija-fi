@@ -2,7 +2,8 @@
 # Auto-publish pipeline: scan → rewrite → publish → build → commit → push
 set -euo pipefail
 
-PROJECT_DIR="/home/pertt/.openclaw/workspace/projects/uutistenlukija"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 PIPELINE_DIR="$PROJECT_DIR/pipeline"
 LOG_FILE="$PIPELINE_DIR/logs/auto_publish_$(date -u +%Y%m%d_%H%M%S).log"
 
@@ -90,6 +91,8 @@ PIPELINE_EXIT=${PIPESTATUS[0]}
 
 if [ "$PIPELINE_EXIT" -ne 0 ]; then
   echo "Pipeline failed with exit code $PIPELINE_EXIT" | tee -a "$LOG_FILE"
+  python3 pipeline/generate_health.py 2>&1 | tee -a "$LOG_FILE" || true
+  python3 pipeline/generate_pipeline_status.py 2>&1 | tee -a "$LOG_FILE" || true
   exit 1
 fi
 

@@ -535,6 +535,102 @@ def _normalize_summary_bullets(article: Dict) -> List[str]:
         points = _rebalance_summary_bullets(points)
     return points[:4]
 
+def _infer_fallback_category(article: Dict) -> str:
+    raw = str(article.get("category") or article.get("category_hint") or "").strip()
+    if raw:
+        return raw
+
+    text = f"{article.get('title', '')} {article.get('description', '')}".lower()
+    rules = [
+        ("Urheilu", ["liiga", "nhl", "sm-liiga", "ottelu", "tappara", "hpk", "urheilu", "jalkapallo", "real madrid"]),
+        ("Teknologia", ["tekoäly", "ai ", "chatgpt", "apple", "google", "nasa", "macbook", "teknologia", "kuulento", "artemis"]),
+        ("Talous", ["talous", "kela", "eurojackpot", "komissio", "raha", "palkka", "työ", "markkina", "yritys"]),
+        ("Kulttuuri", ["festivaali", "kulttuuri", "elokuva", "musiikki", "wireless festival"]),
+        ("Ulkomaat", ["trump", "ukraina", "iran", "venäjä", "moskova", "orban", "pakistan", "nato", "zelenskyi"]),
+    ]
+    for category, needles in rules:
+        if any(needle in text for needle in needles):
+            return category
+    return "Kotimaa"
+
+
+def _build_quota_fallback_article(article: Dict) -> Optional[Dict]:
+    title = str(article.get("title") or article.get("original_title") or "").strip()
+    if not title:
+        return None
+
+    description = str(article.get("description") or "").strip()
+    research = str(article.get("research") or article.get("research_text") or "").strip()
+    source_text = str(article.get("content") or article.get("source_text") or "").strip()
+
+    blocks: List[str] = []
+    if description:
+        blocks.append(description)
+    if research:
+        blocks.append(research)
+    if source_text:
+        blocks.append(source_text)
+
+    cleaned_blocks: List[str] = []
+    seen = set()
+    for block in blocks:
+        block = re.sub(r"\[Lähde:[^\]]+\]", "", block)
+        block = re.sub(r"\n{3,}", "\n\n", block).strip()
+        if len(block) < 80 or block in seen:
+            continue
+        seen.add(block)
+        cleaned_blocks.append(block)
+
+    if not cleaned_blocks:
+        return None
+
+    intro = description or cleaned_blocks[0].split("\n", 1)[0]
+    intro = intro.strip()
+    if intro and not re.search(r"[.!?]$", intro):
+        intro += "."
+
+    body_parts: List[str] = [intro, "## Mitä tiedetään nyt"]
+    body_parts.extend(cleaned_blocks[:2])
+
+    if len(cleaned_blocks) > 2:
+        body_parts.append("## Miksi asia on tärkeä")
+        body_parts.extend(cleaned_blocks[2:4])
+
+    body = "\n\n".join(part for part in body_parts if part).strip()
+    if len(body.split()) < 180:
+        body = "\n\n".join([intro, "## Tilannekuva", "\n\n".join(cleaned_blocks)]).strip()
+
+    if len(body.split()) < 120:
+        return None
+
+    summary = description or re.sub(r"\s+", " ", body).strip()[:220]
+    category = _infer_fallback_category(article)
+    source_name = str(article.get("source") or article.get("source_name") or article.get("domain") or "").strip()
+    link = str(article.get("link") or article.get("url") or article.get("source_url") or "").strip()
+
+    return {
+        "title": title,
+        "content": body,
+        "summary": summary,
+        "category": category,
+        "tags": [category.lower(), "uutiset", "tilannekuva"],
+        "summary_bullets": _fallback_summary_bullets({"description": summary, "content": body}),
+        "source_name": source_name,
+        "source_url": link,
+    }
+
+
+def _build_quota_fallback_batch(batch: List[Dict]) -> List[Dict]:
+    fallback_articles: List[Dict] = []
+    for article in batch:
+        fallback_article = _build_quota_fallback_article(article)
+        if fallback_article:
+            fallback_articles.append(fallback_article)
+    if fallback_articles:
+        print(f"[writer]   Emergency quota fallback produced {len(fallback_articles)} article(s).")
+    return fallback_articles
+
+
 def _build_single_prompt(article: dict) -> str:
     """Build a rewrite prompt for a single article."""
     ATTRIBUTION_SOURCES = {
@@ -619,6 +715,12 @@ def _rewrite_individually(batch: List[Dict]) -> List[Dict]:
                 results.append(item)
         except Exception as e:
             print(f"[writer]   Individual rewrite failed for '{article.get('title', '')[:40]}': {e}")
+            fallback_article = _build_quota_fallback_article(article)
+            if fallback_article:
+                print(f"[writer]   Emergency fallback used for '{article.get('title', '')[:40]}'")
+                fallback_article["fingerprint"] = article.get("fingerprint", "")
+                fallback_article["trending"] = article.get("trending", False)
+                results.append(fallback_article)
     return results
 
 
@@ -747,15 +849,19 @@ Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vä
                 print(f"[writer]   Batch retry still failed ({e2}). Falling back to individual rewrites...")
                 pass1_result = _rewrite_individually(batch)
                 if not pass1_result:
-                    print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
-                    continue
+                    pass1_result = _build_quota_fallback_batch(batch)
+                    if not pass1_result:
+                        print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
+                        continue
                 print(f"[writer]   Individual fallback → {len(pass1_result)} articles")
             except Exception as e2:
                 print(f"[writer]   Batch retry failed: {e2}. Falling back to individual rewrites...")
                 pass1_result = _rewrite_individually(batch)
                 if not pass1_result:
-                    print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
-                    continue
+                    pass1_result = _build_quota_fallback_batch(batch)
+                    if not pass1_result:
+                        print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
+                        continue
                 print(f"[writer]   Individual fallback → {len(pass1_result)} articles")
         except Exception as e:
             print(f"[writer] Pass 1 failed after retries (batch {i // batch_size + 1}): {e}")
@@ -764,8 +870,10 @@ Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vä
             print(f"[writer]   Falling back to individual rewrites...")
             pass1_result = _rewrite_individually(batch)
             if not pass1_result:
-                print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
-                continue
+                pass1_result = _build_quota_fallback_batch(batch)
+                if not pass1_result:
+                    print(f"[writer]   Individual fallback produced 0 articles. Skipping batch.")
+                    continue
             print(f"[writer]   Individual fallback → {len(pass1_result)} articles")
 
         # Stamp batch index into each written article so source metadata lookup
