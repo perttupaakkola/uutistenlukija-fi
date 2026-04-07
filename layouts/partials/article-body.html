@@ -10,10 +10,20 @@
 
 {{- if eq .metaVariant "single" }}
 <div class="article-meta">
-  {{ $page.Date | time.Format "2.1. klo 15:04" }}
-  {{- $diffSec := math.Sub $page.Lastmod.Unix $page.Date.Unix -}}
-  {{- if gt $diffSec 3600 }}
-  · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty: {{ $page.Lastmod | time.Format "2.1.2006 klo 15:04" }}</span>
+  {{- $publishedAt := $page.Date -}}
+  {{- if isset $page.Params "published_at" -}}{{- $publishedAt = time.AsTime $page.Params.published_at -}}{{- end -}}
+  {{ $publishedAt | time.Format "2.1. klo 15:04" }}
+  
+  {{- $updatedAt := "" -}}
+  {{- if isset $page.Params "updated_at" -}}
+    {{- $parsedUpdate := time.AsTime $page.Params.updated_at -}}
+    {{- if gt $parsedUpdate.Unix $publishedAt.Unix -}}{{- $updatedAt = $parsedUpdate -}}{{- end -}}
+  {{- else if gt (math.Sub $page.Lastmod.Unix $page.Date.Unix) 3600 -}}
+    {{- $updatedAt = $page.Lastmod -}}
+  {{- end -}}
+
+  {{- if ne $updatedAt "" }}
+  · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty {{ $updatedAt | time.Format "15:04" }}</span>
   {{- end }}
   {{ with $page.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
   {{- if ge $page.WordCount 200 }}

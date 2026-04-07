@@ -13,11 +13,22 @@
 {{- $page := . -}}
 {{- $publishedAt := $page.Date -}}
 {{- if isset $page.Params "published_at" -}}{{- $publishedAt = time.AsTime $page.Params.published_at -}}{{- end -}}
-{{- $diffSec := math.Max 0 (math.Sub now.Unix $publishedAt.Unix) -}}
+
+{{- $updatedAt := "" -}}
+{{- if isset $page.Params "updated_at" -}}
+  {{- $parsedUpdate := time.AsTime $page.Params.updated_at -}}
+  {{- if gt $parsedUpdate.Unix $publishedAt.Unix -}}{{- $updatedAt = $parsedUpdate -}}{{- end -}}
+{{- end -}}
+
+{{- $referenceTime := $publishedAt -}}
+{{- if ne $updatedAt "" -}}{{- $referenceTime = $updatedAt -}}{{- end -}}
+
+{{- $diffSec := math.Max 0 (math.Sub now.Unix $referenceTime.Unix) -}}
 {{- $minutes := int (math.Floor (math.Div $diffSec 60)) -}}
 {{- $hours := int (math.Floor (math.Div $diffSec 3600)) -}}
 {{- $days := int (math.Floor (math.Div $diffSec 86400)) -}}
-<time datetime="{{ $publishedAt.Format "2006-01-02T15:04:05Z07:00" }}">
+<time datetime="{{ $referenceTime.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- if ne $updatedAt "" -}}Päivitetty {{ end -}}
 {{- if lt $diffSec 3600 -}}
   {{- if lt $minutes 1 -}}Juuri nyt{{- else -}}{{ $minutes }} min sitten{{- end -}}
 {{- else if lt $diffSec 86400 -}}
@@ -25,6 +36,6 @@
 {{- else if lt $diffSec 604800 -}}
   {{- if eq $days 1 -}}1 päivä sitten{{- else -}}{{ $days }} päivää sitten{{- end -}}
 {{- else -}}
-  {{- $publishedAt | time.Format "2.1.2006" -}}
+  {{- $referenceTime | time.Format "2.1.2006" -}}
 {{- end -}}
 </time>
