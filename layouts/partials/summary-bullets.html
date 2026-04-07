@@ -1,0 +1,12 @@
+{{- with .Params.summary_bullets -}}
+  {{- if gt (len .) 0 -}}
+  <section class="article-summary-bullets" aria-labelledby="summary-bullets-title">
+    <span id="summary-bullets-title" class="article-summary-bullets__title">Pähkinänkuoressa</span>
+    <ul>
+      {{- range . }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end -}}
+{{- end -}}

@@ -173,7 +173,7 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
 12. TARKISTA journalist_note: säilytä se vain jos siinä on aitoa toimituksellista lisäarvoa. Poista geneerinen tai itsestään selvä huomio käyttämällä tyhjää merkkijonoa.
 13. TARKISTA content_type: pidä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaiseen, kehittyvään tai tulkintaa vaativaan aiheeseen.
 14. TARKISTA editorial_reviewed: sen tulee aina olla true.
-15. TARKISTA key_points: kentässä tulee olla tasan 3 suomenkielistä kohtaa. Poista luettelomerkit, tiivistä muotoon yksi ydinajatus per kohta ja pidä yhteispituus enintään 300 merkissä aina kun mahdollista.
+15. TARKISTA summary_bullets: kentässä tulee olla 3–4 lyhyttä suomenkielistä kohtaa. Poista luettelomerkit, tiivistä muotoon yksi ydinajatus per kohta ja pidä yhteispituus enintään 400 merkissä aina kun mahdollista.
 16. SISÄISET LINKIT: Lisää artikkelin sisältöön enintään 3 kontekstuaalista sisäistä linkkiä markdown-muodossa. Linkitä VAIN ensimmäinen maininta per kohde. Käytä näitä linkkejä:
     - "kotimaa" → [kotimaa](/categories/kotimaa/)
     - "ulkomaat" → [ulkomaat](/categories/ulkomaat/)
@@ -352,7 +352,7 @@ def _enforce_h2_subheadings(article: Dict) -> tuple[Dict, bool, bool]:
 
     title = article.get("title", "")
     print(f"[writer]   ⚠ Missing H2 in long article ({word_count}w), retrying: '{title[:50]}'")
-    retry_prompt = f"""Lisää tähän artikkeliin 2 kuvaavaa H2-väliotsikkoa. Säilytä faktat, sävy, rakenne, linkit, journalist_note, content_type, editorial_reviewed ja key_points. Älä keksi uutta tietoa. Vastaa VAIN JSON-objektina.\n\n{json.dumps(article, ensure_ascii=False, indent=2)}"""
+    retry_prompt = f"""Lisää tähän artikkeliin 2 kuvaavaa H2-väliotsikkoa. Säilytä faktat, sävy, rakenne, linkit, journalist_note, content_type, editorial_reviewed ja summary_bullets. Älä keksi uutta tietoa. Vastaa VAIN JSON-objektina.\n\n{json.dumps(article, ensure_ascii=False, indent=2)}"""
     try:
         retried = _extract_json(_call_llm(AUDIT_SYSTEM_PROMPT, retry_prompt))
         retried_content = str(retried.get("content", "") or "")
@@ -376,7 +376,7 @@ def _enforce_min_words(article: Dict, min_words: int = 250) -> tuple[Dict, bool,
 
     title = article.get("title", "")
     print(f"[writer]   ⚠ Under minimum length ({word_count}w < {min_words}), retrying: '{title[:50]}'")
-    retry_prompt = f"""Laajenna tämä artikkeli vähintään {min_words} sanaan lisäämällä kontekstia ja taustaa. Säilytä faktat, sävy, rakenne, linkit, journalist_note, content_type, editorial_reviewed ja key_points. Älä keksi uutta tietoa, numeroita, lainauksia tai väitteitä. Jos tieto ei riitä, tee artikkelista vain selkeämpi ja kattavampi olemassa olevien faktojen pohjalta. Vastaa VAIN JSON-objektina.\n\n{json.dumps(article, ensure_ascii=False, indent=2)}"""
+    retry_prompt = f"""Laajenna tämä artikkeli vähintään {min_words} sanaan lisäämällä kontekstia ja taustaa. Säilytä faktat, sävy, rakenne, linkit, journalist_note, content_type, editorial_reviewed ja summary_bullets. Älä keksi uutta tietoa, numeroita, lainauksia tai väitteitä. Jos tieto ei riitä, tee artikkelista vain selkeämpi ja kattavampi olemassa olevien faktojen pohjalta. Vastaa VAIN JSON-objektina.\n\n{json.dumps(article, ensure_ascii=False, indent=2)}"""
     try:
         retried = _extract_json(_call_llm(AUDIT_SYSTEM_PROMPT, retry_prompt))
         retried_count = _count_words(retried.get("content", ""))
@@ -439,22 +439,22 @@ def _deduplicate_articles(articles: List[Dict], threshold: float = 0.70) -> tupl
     return kept, len(dropped)
 
 
-MAX_KEY_POINTS_TOTAL_CHARS = 300
+MAX_SUMMARY_BULLETS_TOTAL_CHARS = 400
 
 
-def _sanitize_key_point(text: str) -> str:
+def _sanitize_bullet(text: str) -> str:
     text = re.sub(r"^\s*[-•*\d.)\s]+", "", str(text or "").strip())
     text = " ".join(text.split())
     text = text.strip("\"“”'’.,;:!?-–— ")
     return text
 
 
-def _rebalance_key_points(points: List[str], max_total_chars: int = MAX_KEY_POINTS_TOTAL_CHARS) -> List[str]:
-    points = [_sanitize_key_point(p) for p in points if _sanitize_key_point(p)]
+def _rebalance_summary_bullets(points: List[str], max_total_chars: int = MAX_SUMMARY_BULLETS_TOTAL_CHARS) -> List[str]:
+    points = [_sanitize_bullet(p) for p in points if _sanitize_bullet(p)]
     if not points:
         return []
 
-    points = points[:3]
+    points = points[:4]
     total = sum(len(p) for p in points)
     if total <= max_total_chars:
         return points
@@ -491,10 +491,10 @@ def _rebalance_key_points(points: List[str], max_total_chars: int = MAX_KEY_POIN
                 break
             trimmed[longest_idx] = trimmed[longest_idx][:-1].rstrip(' .,;:!?-–—')
 
-    return [_sanitize_key_point(p) for p in trimmed if _sanitize_key_point(p)]
+    return [_sanitize_bullet(p) for p in trimmed if _sanitize_bullet(p)]
 
 
-def _fallback_key_points(article: Dict) -> List[str]:
+def _fallback_summary_bullets(article: Dict) -> List[str]:
     source_text = " ".join(
         str(article.get(field, ""))
         for field in ("summary", "description", "content")
@@ -504,7 +504,7 @@ def _fallback_key_points(article: Dict) -> List[str]:
     cleaned = []
     seen = set()
     for sentence in sentences:
-        point = _sanitize_key_point(sentence)
+        point = _sanitize_bullet(sentence)
         if len(point) < 20:
             continue
         key = point.casefold()
@@ -512,28 +512,28 @@ def _fallback_key_points(article: Dict) -> List[str]:
             continue
         seen.add(key)
         cleaned.append(point)
-        if len(cleaned) == 3:
+        if len(cleaned) == 4:
             break
-    return _rebalance_key_points(cleaned)
+    return _rebalance_summary_bullets(cleaned)
 
 
-def _normalize_key_points(article: Dict) -> List[str]:
-    raw = article.get("key_points", [])
+def _normalize_summary_bullets(article: Dict) -> List[str]:
+    raw = article.get("summary_bullets", article.get("summary_bullets", []))
     if isinstance(raw, str):
         raw = [part for part in re.split(r"[\n•]+", raw) if part.strip()]
     elif not isinstance(raw, list):
         raw = []
 
-    points = _rebalance_key_points([str(item) for item in raw])
+    points = _rebalance_summary_bullets([str(item) for item in raw])
     if len(points) < 3:
-        fallback = _fallback_key_points(article)
+        fallback = _fallback_summary_bullets(article)
         for point in fallback:
-            if len(points) >= 3:
+            if len(points) >= 4:
                 break
             if point.casefold() not in {p.casefold() for p in points}:
                 points.append(point)
-        points = _rebalance_key_points(points)
-    return points[:3]
+        points = _rebalance_summary_bullets(points)
+    return points[:4]
 
 def _build_single_prompt(article: dict) -> str:
     """Build a rewrite prompt for a single article."""
@@ -586,7 +586,7 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
     "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono jos ei lisäarvoa",
     "content_type": "article tai analysis",
     "editorial_reviewed": true,
-    "key_points": ["Kohta 1", "Kohta 2", "Kohta 3"]
+    "summary_bullets": ["Kohta 1", "Kohta 2", "Kohta 3"]
   }}
 ]
 
@@ -595,7 +595,7 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
 "journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa toimituksellista taustaa, merkitystä tai kontekstia. Ei geneeristä filler-tekstiä. Jos huomio ei tuo oikeaa lisäarvoa, käytä tyhjää merkkijonoa.
 "content_type": käytä oletuksena "article". Käytä "analysis" VAIN kun aihe on aidosti monikulmainen, kehittyvä, kiistanalainen tai vaatii tulkintaa useasta näkökulmasta.
 "editorial_reviewed": aina true.
-"key_points": tasan 3 suomenkielistä bullet-kohtaa. Ytimekkäitä, informatiivisia, eivät kokonaisia pitkiä lausekappaleita. Pyri siihen, että kaikkien kolmen kohdan yhteispituus on enintään 300 merkkiä.
+"summary_bullets": 3–4 lyhyttä suomenkielistä bullet-kohtaa. Ytimekkäitä, informatiivisia, eivät kokonaisia pitkiä lausekappaleita. Pyri siihen, että kaikkien kolmen kohdan yhteispituus on enintään 400 merkkiä.
 
 Vastaa VAIN JSON-listalla."""
 
@@ -717,7 +717,7 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
     "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono",
     "content_type": "article tai analysis",
     "editorial_reviewed": true,
-    "key_points": ["Kohta 1", "Kohta 2", "Kohta 3"]
+    "summary_bullets": ["Kohta 1", "Kohta 2", "Kohta 3"]
   }}
 ]
 
@@ -726,7 +726,7 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
 "journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa vain kun toimituksellinen huomio tuo oikeaa lisäarvoa: taustaa, miksi asia on tärkeä tai mitä lukijan kannattaa seurata. Ei geneeristä filler-tekstiä. Muulloin käytä tyhjää merkkijonoa.
 "content_type": käytä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaisiin, kehittyviin, kiistanalaisiin tai tulkintaa vaativiin juttuihin.
 "editorial_reviewed": aina true.
-"key_points": tasan 3 suomenkielistä bullet-kohtaa per artikkeli. Tiiviit, konkreettiset, ei otsikkomuotoisia katkelmia. Pyri siihen, että kolmen kohdan yhteispituus on enintään 300 merkkiä.
+"summary_bullets": 3–4 lyhyttä suomenkielistä bullet-kohtaa per artikkeli. Tiiviit, konkreettiset, ei otsikkomuotoisia katkelmia. Pyri siihen, että kolmen kohdan yhteispituus on enintään 400 merkkiä.
 
 Vastaa VAIN JSON-listalla. TARKISTA ennen vastausta: onko jokainen artikkeli vähintään 280 sanaa?"""
 
@@ -883,7 +883,7 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
                 content_type = "article"
             written_article["content_type"] = content_type
             written_article["editorial_reviewed"] = True
-            written_article["key_points"] = _normalize_key_points(written_article)
+            written_article["summary_bullets"] = _normalize_summary_bullets(written_article)
 
             # Quality gate: score Finnish and escalate low-quality to gpt-4o
             art_body = written_article.get("content", "")
@@ -903,7 +903,7 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
                             # Preserve metadata from original
                             for key in ["category", "tags", "image_url", "image_alt", "source_url", "source_name",
                                          "content_type", "editorial_reviewed", "journalist_note", "author_title",
-                                         "key_points", "fingerprint", "trending", "source", "source_domain",
+                                         "summary_bullets", "fingerprint", "trending", "source", "source_domain",
                                          "link", "source_text", "summary", "original_title"]:
                                 if key in written_article and key not in upgraded:
                                     upgraded[key] = written_article[key]
