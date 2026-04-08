@@ -19,6 +19,17 @@ disableHugoGeneratorInject = true
   ads_enabled = false
   adsense_id = ""
 
+  [params.publisher]
+    name = "Uutistenlukija"
+    url = "https://uutistenlukija.fi"
+    logo = "images/publisher-logo.png"
+    logoWidth = 400
+    logoHeight = 60
+    foundingDate = "2024"
+    sameAs = [
+      "https://x.com/uutistenlukija"
+    ]
+
 [taxonomies]
   category = "categories"
   tag = "tags"

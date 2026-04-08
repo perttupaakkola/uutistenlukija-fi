@@ -1,6 +1,6 @@
 {{- if and .IsPage (eq .Section "posts") -}}
-  {{- $keyPoints := .Params.key_points | default (slice) -}}
-  {{- if ge (len $keyPoints) 2 -}}
+  {{- $faqPoints := .Params.summary_bullets | default .Params.key_points | default (slice) -}}
+  {{- if ge (len $faqPoints) 2 -}}
     {{- $answerSource := .Params.summary | default (.Summary | plainify) | default (.Content | plainify) -}}
     {{- $answerSource = $answerSource | replaceRE `\s+` " " | strings.TrimSpace -}}
     {{- $sentenceMatches := findRE `[^.!?]+[.!?]+(["”’']+)?` $answerSource 2 -}}
@@ -15,7 +15,7 @@
     {{- $answerText = $answerText | replaceRE `\s+` " " | strings.TrimSpace -}}
 
     {{- $entities := slice -}}
-    {{- range first 3 $keyPoints -}}
+    {{- range first 4 $faqPoints -}}
       {{- $point := . | plainify | replaceRE `\s+` " " | strings.TrimSpace -}}
       {{- if $point -}}
         {{- $question := $point -}}

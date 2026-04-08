@@ -4,19 +4,15 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="page-404">
+<div class="page-404 container">
   <section class="error-hero">
-    <span class="error-code" aria-hidden="true">404</span>
+    <p class="error-kicker">404</p>
     <h1 class="error-title">Sivua ei löytynyt</h1>
     <p class="error-lead">Pyytämääsi sivua ei löytynyt. Se on voinut siirtyä, poistua tai osoite on kirjoitettu väärin.</p>
-    <p class="error-back">
-      <a href="/" class="back-home-link">← Palaa etusivulle</a>
-    </p>
-    <nav class="error-links" aria-label="Hyödylliset linkit">
-      <a href="/haku/">Haku</a>
-      <a href="/categories/">Kategoriat</a>
-      <a href="/paivan-kooste/">Päivän kooste</a>
-    </nav>
+    <div class="error-actions">
+      <a href="/" class="button button--primary">Palaa etusivulle</a>
+      <a href="/haku/" class="button button--secondary">Hae uutisia</a>
+    </div>
   </section>
 
   {{ $latest := first 3 ((where .Site.RegularPages "Section" "posts").ByDate.Reverse) }}

@@ -5,17 +5,7 @@
   Usage: {{ partial "jsonld-collection.html" . }}
 */}}
 {{ if or .IsSection .IsNode }}
-{{- $publisherBlock := dict
-    "@type" "Organization"
-    "name" "Uutistenlukija"
-    "url" "https://uutistenlukija.fi"
-    "logo" (dict
-      "@type" "ImageObject"
-      "url" (printf "%simages/publisher-logo.png" .Site.BaseURL)
-      "width" 400
-      "height" 60
-    )
--}}
+{{- $publisherBlock := partial "publisher-schema.html" . -}}
 {{- $catDesc := .Description | default (printf "%s — %s" .Title .Site.Title) -}}
 {{- $catSlug := .Section | lower -}}
 {{- $catImage := cond (ne $catSlug "") (printf "%simages/og-%s.png" $.Site.BaseURL $catSlug) (printf "%simages/og-image.png" $.Site.BaseURL) -}}

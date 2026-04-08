@@ -6,6 +6,7 @@
 
 {{- if eq .showSummaryBullets true }}{{ partial "summary-bullets.html" $page }}{{ end }}
 {{- if eq .showSummary true }}{{ partial "article-summary.html" $page }}{{ end }}
+{{- if eq .showKeyFacts true }}{{ partial "key-facts.html" $page }}{{ end }}
 {{- if eq .showToc true }}{{ partial "toc.html" $page }}{{ end }}
 
 {{- if eq .metaVariant "single" }}

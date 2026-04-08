@@ -17,15 +17,35 @@
 
 .single-article .article-meta {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1.35rem;
+  padding: 0.6rem 0 1rem;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  line-height: 1.45;
+}
+
+.single-article .article-meta > * {
+  display: inline-flex;
+  align-items: center;
 }
 
 .single-article .article-meta a { color: var(--accent); }
-.article-updated { color: var(--text-secondary); font-style: italic; }
+.article-updated { color: var(--accent); font-style: normal; font-weight: 700; }
+.article-meta .author-inline { color: var(--text-primary); font-weight: 600; }
+.article-meta .article-reading-time { white-space: nowrap; }
+@media (max-width: 600px) {
+  .single-article .article-meta {
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.85rem;
+    gap: 0.25rem 0.4rem;
+  }
+}
 
 .single-article .content {
   font-size: 1.05rem;
@@ -1101,6 +1121,65 @@
 .content-type-badge--analysis { background: #2980b9; }
 /* ── end analysis / opinion ────────────────────────────────── */
 
+
+/* ── Article readability pass ─────────────────────────────── */
+.single-article .content,
+.single-article .article-content,
+.single-article .post-content {
+  max-width: 68ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-article .content p,
+.single-article .article-content p,
+.single-article .post-content p {
+  line-height: 1.75;
+  margin: 0 0 1rem;
+}
+
+.single-article .content h2,
+.single-article .content h3,
+.single-article .article-content h2,
+.single-article .article-content h3,
+.single-article .post-content h2,
+.single-article .post-content h3 {
+  margin: 1.8rem 0 0.85rem;
+  line-height: 1.25;
+}
+
+.single-article .content ul,
+.single-article .content ol,
+.single-article .article-content ul,
+.single-article .article-content ol,
+.single-article .post-content ul,
+.single-article .post-content ol {
+  padding-left: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.single-article .content li,
+.single-article .article-content li,
+.single-article .post-content li {
+  margin: 0.35rem 0;
+}
+
+.single-article .content blockquote,
+.single-article .article-content blockquote,
+.single-article .post-content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1.1rem;
+  border-left: 4px solid var(--accent, #c0392b);
+  background: color-mix(in srgb, var(--surface-alt, #f1eee8) 72%, transparent);
+  border-radius: 0 6px 6px 0;
+}
+
+[data-theme="dark"] .single-article .content blockquote,
+[data-theme="dark"] .single-article .article-content blockquote,
+[data-theme="dark"] .single-article .post-content blockquote {
+  background: color-mix(in srgb, var(--surface-alt, #202428) 78%, transparent);
+}
+
 /* ── Summary Bullets (Kainalojuttu) ────────────────────────── */
 .article-summary-bullets {
   margin: 1.5rem 0 2rem;
@@ -1149,5 +1228,57 @@
 }
 
 [data-theme="dark"] .article-summary-bullets {
+  background: var(--surface-alt, #202428);
+}
+
+/* ── Key Facts (Keskeiset tiedot) ────────────────────────── */
+.article-key-facts {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface-alt, #f1eee8);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.article-key-facts__title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #666);
+  margin: 0 0 1rem;
+}
+
+.article-key-facts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0;
+}
+
+.article-key-facts__row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.article-key-facts__label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-secondary);
+}
+
+.article-key-facts__value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+[data-theme="dark"] .article-key-facts {
   background: var(--surface-alt, #202428);
 }

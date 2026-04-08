@@ -6,17 +6,7 @@
 */}}
 
 {{/* ── Shared: Publisher org ─────────────────────────────────────── */}}
-{{ $publisherBlock := dict
-    "@type" "Organization"
-    "name" "Uutistenlukija"
-    "url" "https://uutistenlukija.fi"
-    "logo" (dict
-      "@type" "ImageObject"
-      "url" (printf "%simages/publisher-logo.png" .Site.BaseURL)
-      "width" 400
-      "height" 60
-    )
-}}
+{{ $publisherBlock := partial "publisher-schema.html" . }}
 
 {{/* ── Homepage only: WebSite + SearchAction ───────────────────── */}}
 {{ if .IsHome }}
@@ -136,7 +126,7 @@
 {{ if $keywords }}{{ $schema = merge $schema (dict "keywords" $keywords) }}{{ end }}
 {{/* editorial_reviewed: add reviewedBy field */}}
 {{ if .Params.editorial_reviewed }}
-{{ $schema = merge $schema (dict "reviewedBy" (dict "@type" "Organization" "name" "Uutistenlukija")) }}
+{{ $schema = merge $schema (dict "reviewedBy" $publisherBlock) }}
 {{ end }}
 {{/* isBasedOn: source attribution */}}
 {{ with .Params.source_url }}
@@ -199,3 +189,8 @@
 </script>
 
 {{ end }}
+
+{{/* ── Standalone Organization: Identity for all pages ────────────── */}}
+<script type="application/ld+json">
+{{ (merge (dict "@context" "https://schema.org") $publisherBlock) | jsonify (dict "indent" "  ") | safeJS }}
+</script>

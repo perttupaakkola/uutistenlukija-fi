@@ -476,19 +476,18 @@ img { max-width: 100%; height: auto; }
   .hero-scrim-body  { padding: 0.75rem 1rem 1rem; }
 }
 .site-footer {
-  background-color: #111;
-  color: #ccc;
-  border-top: 4px solid var(--accent);
+  background: #101114;
+  color: #c9c9c9;
+  border-top: 1px solid rgba(255,255,255,0.08);
   margin-top: 4rem;
-  padding: 3rem 0 0 0;
+  padding: 2.5rem 0 0;
   font-family: var(--font-sans);
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 .site-footer a {
-  color: #eee;
+  color: #e7e7e7;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 .site-footer a:hover {
   color: #fff;
@@ -496,34 +495,41 @@ img { max-width: 100%; height: auto; }
 }
 .site-footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
   text-align: left;
 }
 @media (max-width: 768px) {
   .site-footer-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
+}
+.site-footer-brand {
+  display: inline-block;
 }
 .site-footer-brand h2 {
   color: #fff;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
   font-family: var(--font-serif);
 }
 .site-footer-slogan {
-  color: #999;
+  color: #a7a7a7;
   margin-bottom: 1rem;
+  max-width: 28rem;
+}
+.site-footer-email {
+  margin: 0;
 }
 .site-footer-col h3 {
   color: #fff;
-  font-size: 1.05rem;
-  margin-bottom: 1.25rem;
+  font-size: 0.78rem;
+  margin-bottom: 1rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   font-family: var(--font-sans);
 }
 .site-footer-links {
@@ -532,15 +538,15 @@ img { max-width: 100%; height: auto; }
   margin: 0;
 }
 .site-footer-links li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 .site-footer-copyright {
-  background-color: #050505;
-  color: #666;
-  padding: 1.5rem 0;
+  background: #0a0b0d;
+  color: #777;
+  padding: 1rem 0 1.25rem;
   text-align: center;
   font-size: 0.85rem;
-  border-top: 1px solid #222;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 .highlights-row {
   display: grid;

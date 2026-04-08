@@ -1,0 +1,24 @@
+{{- $facts := .Params.key_facts | default (dict) -}}
+{{- if and $facts (gt (len $facts) 0) -}}
+{{- $rows := slice -}}
+{{- range $label, $value := $facts -}}
+  {{- $cleanLabel := $label | humanize | title -}}
+  {{- $cleanValue := $value | plainify | replaceRE `\s+` " " | strings.TrimSpace -}}
+  {{- if and $cleanLabel $cleanValue -}}
+    {{- $rows = $rows | append (dict "label" $cleanLabel "value" $cleanValue) -}}
+  {{- end -}}
+{{- end -}}
+{{- if ge (len $rows) 3 -}}
+<section class="article-key-facts" aria-labelledby="key-facts-title">
+  <h2 id="key-facts-title" class="article-key-facts__title">Keskeiset tiedot</h2>
+  <dl class="article-key-facts__grid">
+    {{- range first 6 $rows }}
+    <div class="article-key-facts__row">
+      <dt class="article-key-facts__label">{{ .label }}</dt>
+      <dd class="article-key-facts__value">{{ .value | safeHTML }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+</section>
+{{- end -}}
+{{- end -}}

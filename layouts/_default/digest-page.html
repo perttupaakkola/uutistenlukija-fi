@@ -1,4 +1,5 @@
 {{ define "extra_head" }}
+{{ $publisherBlock := partial "publisher-schema.html" . }}
 {{ $cats := slice
   (dict "key" "Kotimaa" "slug" "kotimaa")
   (dict "key" "Ulkomaat" "slug" "ulkomaat")
@@ -27,7 +28,7 @@
   "url" .Permalink
   "description" .Description
   "inLanguage" "fi"
-  "publisher" (dict "@type" "Organization" "name" "Uutistenlukija" "url" .Site.BaseURL)
+  "publisher" $publisherBlock
   "itemListElement" $items
 }}
 <script type="application/ld+json">

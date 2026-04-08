@@ -1,0 +1,28 @@
+{{/*
+  publisher-schema.html — Returns a dict representing the Organization for JSON-LD.
+  Usage: {{ $publisher := partial "publisher-schema.html" . }}
+*/}}
+{{- $p := .Site.Params.publisher -}}
+{{- $logoUrl := printf "%s%s" .Site.BaseURL (strings.TrimPrefix "/" $p.logo) -}}
+
+{{- $publisher := dict
+    "@type" "Organization"
+    "name" ($p.name | default .Site.Title)
+    "url" ($p.url | default .Site.BaseURL)
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" $logoUrl
+      "width" ($p.logoWidth | default 400)
+      "height" ($p.logoHeight | default 60)
+    )
+-}}
+
+{{- if $p.foundingDate -}}
+  {{- $publisher = merge $publisher (dict "foundingDate" $p.foundingDate) -}}
+{{- end -}}
+
+{{- if $p.sameAs -}}
+  {{- $publisher = merge $publisher (dict "sameAs" $p.sameAs) -}}
+{{- end -}}
+
+{{- return $publisher -}}
