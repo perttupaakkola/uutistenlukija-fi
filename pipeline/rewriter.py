@@ -390,6 +390,47 @@ def _enforce_min_words(article: Dict, min_words: int = 250) -> tuple[Dict, bool,
         return article, True, False
 
 
+def _enforce_no_repeated_paragraphs(article: Dict) -> tuple[Dict, bool, bool]:
+    """Dedup consecutive paragraphs and fail if any paragraph appears 3+ times."""
+    content = str(article.get("content", "") or "")
+    if not content:
+        return article, False, True
+
+    paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+    if not paragraphs:
+        return article, False, True
+
+    # 1. Dedup consecutive identical paragraphs
+    new_paragraphs = []
+    last_p = None
+    deduped_consecutive = False
+    for p in paragraphs:
+        if p == last_p:
+            deduped_consecutive = True
+            continue
+        new_paragraphs.append(p)
+        last_p = p
+
+    if deduped_consecutive:
+        article["content"] = "\n\n".join(new_paragraphs)
+        content = article["content"]
+        print(f"[writer]   ✂ Deduped consecutive identical paragraphs: '{article.get('title', '')[:50]}'")
+
+    # 2. Check for 3+ occurrences of any paragraph (>30 chars)
+    counts = {}
+    for p in new_paragraphs:
+        if len(p) < 30:
+            continue
+        # Normalize a bit for comparison (strip links/extra whitespace)
+        p_norm = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", p).strip()
+        counts[p_norm] = counts.get(p_norm, 0) + 1
+        if counts[p_norm] >= 3:
+            print(f"[writer]   ❌ REPEAT LOOP DETECTED (3+ times): '{p_norm[:80]}...'")
+            return article, False, False
+
+    return article, deduped_consecutive, True
+
+
 def _normalize_title_tokens(title: str) -> set:
     """Normalize a headline into a set of lowercase tokens for overlap comparison."""
     text = re.sub(r"[^\w\s]", "", str(title or "").lower())
@@ -951,6 +992,12 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             title_len = len(title)
             if title_len > 100 or title_len < 10:
                 print(f"[writer]   ⚠ Suspicious title length ({title_len} chars): '{title[:60]}'")
+
+            # Check for repeat loops (duplicate paragraphs)
+            written_article, _deduped, p_ok = _enforce_no_repeated_paragraphs(written_article)
+            if not p_ok:
+                print(f"[writer]   SKIP article with repeat loop (3+ identical paragraphs): '{title[:50]}'")
+                continue
 
             # Use _batch_idx (stamped before any filtering) so source metadata
             # stays correctly paired even after DUPLICATE/FILTER items are skipped.

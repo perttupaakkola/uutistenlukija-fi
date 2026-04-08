@@ -287,14 +287,18 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     # Sanitize content: strip bare YAML front matter delimiters (would break Hugo parsing)
     content = re.sub(r"(?m)^---+\s*$", "—", content)
     image = article.get("image", "")
+    tags = article.get("tags", [])
     # Generate Finnish alt text from article context instead of stock photo title.
-    # Format: "Kuvituskuva: {truncated article title}"
-    # Fallback to category name when no image or title is unavailable.
+    # Format: "Kuvituskuva uutiseen: {title} (tag1, tag2)"
     _raw_alt = article.get("image_alt", "")
     if image and title:
-        # Truncate title to 80 chars so alt text stays concise
-        _title_context = title[:80].rstrip()
-        image_alt = f"Kuvituskuva: {_title_context}"
+        _title_context = title.strip().rstrip('.')
+        # Include up to 2 tags to add descriptive weight without fluff
+        _relevant_tags = [str(t) for t in tags if str(t).lower() != category.lower()][:2]
+        if _relevant_tags:
+            image_alt = f"Kuvituskuva uutiseen: {_title_context} ({', '.join(_relevant_tags)})"
+        else:
+            image_alt = f"Kuvituskuva uutiseen: {_title_context}"
     elif image and category:
         image_alt = f"Kuvituskuva: {category}"
     elif _raw_alt:
@@ -313,7 +317,6 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     source_url = article.get("source_url", "") or article.get("link", "")
     source_domain = article.get("source_domain", "")
     summary = article.get("summary", "")
-    tags = article.get("tags", [])
     summary_bullets = article.get("summary_bullets", [])
     journalist_note = article.get("journalist_note", "")
     content_type = article.get("content_type", "article")
