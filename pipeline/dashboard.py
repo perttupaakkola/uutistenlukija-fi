@@ -121,6 +121,31 @@ def load_feed_health() -> dict:
         return {}
 
 
+def recent_post_dates(hours: int = 24) -> list[datetime]:
+    """Return publication datetimes for posts in the last N hours."""
+    posts_dir = REPO_ROOT / "content" / "posts"
+    if not posts_dir.exists():
+        return []
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    dates: list[datetime] = []
+
+    for md in sorted(posts_dir.glob("*.md"), reverse=True)[:300]:
+        text = md.read_text(errors="replace")
+        date_m = re.search(r"^date:\s*(.+)$", text, re.MULTILINE)
+        if not date_m:
+            continue
+        try:
+            pub_date = datetime.fromisoformat(date_m.group(1).strip().strip('"\''))
+            if pub_date.tzinfo is None:
+                pub_date = pub_date.replace(tzinfo=timezone.utc)
+            if pub_date < cutoff:
+                continue
+            dates.append(pub_date)
+        except ValueError:
+            continue
+    return sorted(dates)
+
+
 def trending_keywords(hours: int = 24, top_n: int = 5) -> list[tuple[str, int]]:
     """Extract top N keywords from articles published in the last N hours."""
     posts_dir = REPO_ROOT / "content" / "posts"
@@ -140,7 +165,7 @@ def trending_keywords(hours: int = 24, top_n: int = 5) -> list[tuple[str, int]]:
             if pub_date.tzinfo is None:
                 pub_date = pub_date.replace(tzinfo=timezone.utc)
             if pub_date < cutoff:
-                break  # sorted descending — no point scanning older files
+                continue
         except ValueError:
             continue
 
@@ -187,6 +212,7 @@ def build_dashboard(hours: int = 24) -> dict:
     rejects = load_rejects(hours)
     health  = load_feed_health()
     trends  = trending_keywords(hours)
+    recent_posts = recent_post_dates(hours)
 
     # ── Run stats
     total_runs   = len(runs)
@@ -229,6 +255,12 @@ def build_dashboard(hours: int = 24) -> dict:
             except ValueError:
                 pass
             break
+
+    if recent_posts:
+        if published == 0:
+            published = len(recent_posts)
+        if last_pub_ts is None or recent_posts[-1] > last_pub_ts:
+            last_pub_ts = recent_posts[-1]
 
     # ── Staleness check
     now = datetime.now(timezone.utc)

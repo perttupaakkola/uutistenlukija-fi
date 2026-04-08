@@ -1,0 +1,60 @@
+{
+  "hours": 24,
+  "generated_at": "2026-04-08T17:33:43+00:00",
+  "status": "degraded",
+  "is_stale": true,
+  "stale_threshold_minutes": 90,
+  "runs": {
+    "total": 0,
+    "ok": 0,
+    "skip": 0,
+    "error": 0
+  },
+  "articles": {
+    "attempted": 0,
+    "published": 7,
+    "rejected": 14,
+    "publish_rate": 0,
+    "last_published_ts": "2026-04-08T13:40:25.332976+00:00"
+  },
+  "reject_reasons": {
+    "lead_too_short": 13,
+    "missing: key_points, image": 10,
+    "missing: image": 4,
+    "language borderline Finnish si": 3,
+    "language weak Finnish signal (": 2,
+    "length under target (219 words": 1,
+    "too_short": 1,
+    "generic ending": 1
+  },
+  "feeds": {
+    "total": 37,
+    "healthy": 37,
+    "disabled": 0,
+    "stale": 0,
+    "stale_names": [],
+    "disabled_names": []
+  },
+  "trending": [
+    [
+      "kanadan",
+      17
+    ],
+    [
+      "stubbin",
+      10
+    ],
+    [
+      "stubb",
+      10
+    ],
+    [
+      "tasavallan",
+      9
+    ],
+    [
+      "miten",
+      8
+    ]
+  ]
+}

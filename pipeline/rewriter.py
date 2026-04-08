@@ -12,7 +12,7 @@ import os
 import json
 import sys
 import time
-from typing import List, Dict
+from typing import List, Dict, Optional
 import re
 from pathlib import Path
 
