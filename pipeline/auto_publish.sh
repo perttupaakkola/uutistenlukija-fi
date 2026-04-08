@@ -17,15 +17,16 @@ STALE_LOCK_MINS=30
 if [ -f "$LOCK_FILE" ]; then
     LOCK_PID=$(awk 'NR==1' "$LOCK_FILE")
     LOCK_TS=$(awk 'NR==2' "$LOCK_FILE")
-    if kill -0 "$LOCK_PID" 2>/dev/null; then
+    LOCK_CMD=$(ps -p "$LOCK_PID" -o args= 2>/dev/null || true)
+    if kill -0 "$LOCK_PID" 2>/dev/null && echo "$LOCK_CMD" | grep -Eq 'auto_publish\.sh|run_pipeline\.py'; then
         # Check lock age — kill if stuck longer than STALE_LOCK_MINS
         LOCK_AGE_SECS=$(python3 -c "
 from datetime import datetime, timezone
-import sys
 try:
     ts = datetime.fromisoformat('" + $LOCK_TS + "'.replace('Z','+00:00'))
     print(int((datetime.now(timezone.utc) - ts).total_seconds()))
-except: print(0)
+except Exception:
+    print(0)
 " 2>/dev/null || echo 0)
         STALE_LOCK_SECS=$(( STALE_LOCK_MINS * 60 ))
         if (( LOCK_AGE_SECS > STALE_LOCK_SECS )); then
@@ -46,7 +47,7 @@ except: print(0)
             exit 0
         fi
     else
-        echo "[auto_publish] WARNING: Stale lock (PID $LOCK_PID no longer running, started $LOCK_TS). Removing."
+        echo "[auto_publish] WARNING: Stale or unrelated lock (PID $LOCK_PID, cmd: ${LOCK_CMD:-<missing>}, started $LOCK_TS). Removing."
         rm -f "$LOCK_FILE"
     fi
 fi
