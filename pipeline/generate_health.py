@@ -32,17 +32,18 @@ OUT_FILE    = PROJECT_DIR / "static" / "api" / "health.json"
 STALE_THRESHOLD_HOURS = 6
 
 
-def latest_article_timestamp() -> tuple[str | None, int]:
-    """Scan content/posts/ for the most recent publish date. Returns (iso_ts, count)."""
+def latest_article_timestamp() -> tuple[str | None, int, list[datetime]]:
+    """Scan content/posts/ for the most recent publish date. Returns (iso_ts, count, dates)."""
     if not CONTENT_DIR.exists():
-        return None, 0
+        return None, 0, []
 
     articles = list(CONTENT_DIR.glob("**/*.md"))
     count = len(articles)
     if not articles:
-        return None, 0
+        return None, 0, []
 
     latest_dt: datetime | None = None
+    dates: list[datetime] = []
     # Match both YAML (date: value) and TOML (date = value) frontmatter styles
     # Captures timestamp including optional microseconds and timezone offset/Z
     date_re = re.compile(
@@ -63,6 +64,7 @@ def latest_article_timestamp() -> tuple[str | None, int]:
             elif "+" not in raw[10:] and raw.count("-") < 3:
                 raw += "+00:00"
             dt = datetime.fromisoformat(raw)
+            dates.append(dt)
             if latest_dt is None or dt > latest_dt:
                 latest_dt = dt
         except Exception:
@@ -72,11 +74,12 @@ def latest_article_timestamp() -> tuple[str | None, int]:
         # fallback: use mtime of newest file
         newest = max(articles, key=lambda p: p.stat().st_mtime)
         latest_dt = datetime.fromtimestamp(newest.stat().st_mtime, tz=timezone.utc)
+        dates.append(latest_dt)
 
-    return latest_dt.strftime("%Y-%m-%dT%H:%M:%SZ"), count
+    return latest_dt.strftime("%Y-%m-%dT%H:%M:%SZ"), count, dates
 
 
-def pipeline_stats() -> dict:
+def pipeline_stats(post_dates: list[datetime] | None = None) -> dict:
     """Read metrics files for pipeline summary."""
     last_run = None
     success_rate_7d = None
@@ -126,6 +129,10 @@ def pipeline_stats() -> dict:
         except Exception:
             pass
 
+    if published_today == 0 and post_dates:
+        today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        published_today = sum(1 for dt in post_dates if dt.astimezone(timezone.utc).strftime("%Y-%m-%d") == today_str)
+
     return {
         "lastRun": last_run,
         "successRate7d": success_rate_7d,
@@ -135,7 +142,7 @@ def pipeline_stats() -> dict:
 
 def main():
     now = datetime.now(timezone.utc)
-    last_published, article_count = latest_article_timestamp()
+    last_published, article_count, post_dates = latest_article_timestamp()
 
     # Determine status
     status = "ok"
@@ -156,7 +163,7 @@ def main():
         "articleCount": article_count,
         "generatedAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "uptimeCheck": True,   # always true when generated — site was just built
-        "pipeline": pipeline_stats(),
+        "pipeline": pipeline_stats(post_dates),
     }
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
