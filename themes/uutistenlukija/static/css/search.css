@@ -72,12 +72,17 @@ mark {
   border-radius: 2px;
   padding: 0 1px;
 }
-.no-results {
-  padding: 3rem 0;
+.search-dropdown__empty {
+  padding: 2.5rem 1.5rem;
   text-align: center;
-  color: var(--text-muted, #888);
+  color: var(--text-secondary);
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.search-dropdown__empty strong {
+  color: var(--text);
+  word-break: break-word;
 }
 .search-loading {
   padding: 2rem;

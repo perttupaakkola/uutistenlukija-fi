@@ -1,6 +1,10 @@
 {{ define "extra_head" }}
 <link rel="stylesheet" href="/css/category-hero.css" media="print" onload="this.onload=null;this.media='all'">
-<noscript><link rel="stylesheet" href="/css/category-hero.css"></noscript>
+<link rel="stylesheet" href="/css/empty-state.css" media="print" onload="this.onload=null;this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="/css/category-hero.css">
+  <link rel="stylesheet" href="/css/empty-state.css">
+</noscript>
 {{ end }}
 
 {{ define "main" }}
@@ -26,11 +30,13 @@
   {{ end }}
 </div>
 {{ else }}
-<article class="single-article empty-state">
-  <h2>Tässä kategoriassa ei ole vielä artikkeleita</h2>
-  <p>Kokeile hetken päästä uudelleen tai selaa muita uutisia.</p>
-  <p><a href="/">Etusivu</a> · <a href="/haku/">Haku</a> · <a href="/categories/">Kaikki kategoriat</a></p>
-</article>
+  {{ partial "empty-state.html" (dict 
+    "title" "Tässä kategoriassa ei ole vielä artikkeleita" 
+    "description" "Päivitämme sisältöä jatkuvasti. Kokeile hetken päästä uudelleen tai selaa muita uutisaiheita alta."
+    "icon" "news"
+    "extraAction" "Kaikki kategoriat"
+    "extraActionUrl" "/categories/"
+  ) }}
 {{ end }}
 
 {{ partial "newsletter-cta.html" . }}

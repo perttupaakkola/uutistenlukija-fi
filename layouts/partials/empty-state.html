@@ -1,0 +1,22 @@
+<div class="empty-state">
+  <div class="empty-state__icon">
+    {{ if eq .icon "search" }}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    {{ else if eq .icon "news" }}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+    {{ else }}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M10 10.3c.2-.4.5-.8.9-1a2.1 2.1 0 0 1 2.6.4c.3.4.5.8.5 1.3 0 1.3-2 2-2 2"/><path d="M12 17h.01"/></svg>
+    {{ end }}
+  </div>
+  <h2 class="empty-state__title">{{ .title | default "Ei sisältöä" }}</h2>
+  <p class="empty-state__description">{{ .description | default "Etsimääsi sisältöä ei löytynyt tai sitä ei ole vielä julkaistu." }}</p>
+  <div class="empty-state__actions">
+    <a href="/" class="empty-state__btn empty-state__btn--primary">Palaa etusivulle</a>
+    {{ if ne .hideSearch true }}
+    <a href="/haku/" class="empty-state__btn empty-state__btn--secondary">Hae uutisia</a>
+    {{ end }}
+    {{ if .extraAction }}
+    <a href="{{ .extraActionUrl | default "/categories/" }}" class="empty-state__btn empty-state__btn--secondary">{{ .extraAction }}</a>
+    {{ end }}
+  </div>
+</div>

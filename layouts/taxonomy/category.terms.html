@@ -1,3 +1,7 @@
+{{ define "extra_head" }}
+<link rel="stylesheet" href="/css/empty-state.css">
+{{ end }}
+
 {{ define "main" }}
 <div class="category-header">
   <h1>Kategoriat</h1>
@@ -10,4 +14,10 @@
   </article>
   {{ end }}
 </div>
+{{ else }}
+  {{ partial "empty-state.html" (dict 
+    "title" "Ei kategorioita" 
+    "description" "Sivustolla ei ole vielä määriteltyjä kategorioita."
+    "icon" "news"
+  ) }}
 {{ end }}

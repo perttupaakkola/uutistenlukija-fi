@@ -1,3 +1,9 @@
+{{ define "extra_head" }}
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/empty-state.css">
+<script src="/js/search.js" defer></script>
+{{ end }}
+
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
 <div class="search-page" data-search-page>

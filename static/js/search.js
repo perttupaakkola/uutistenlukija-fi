@@ -158,7 +158,7 @@
       if (!items.length) {
         openDropdown();
         status.textContent = 'Ei osumia';
-        panel.innerHTML = '<div class="search-dropdown__empty">Ei hakutuloksia haulla “' + esc(query) + '”.</div>';
+        panel.innerHTML = '<div class="search-dropdown__empty">Ei hakutuloksia haulla <br><strong>“' + esc(query) + '”</strong>.</div>';
         return;
       }
 
@@ -254,7 +254,18 @@
 
       if (!items.length) {
         count.textContent = '';
-        results.innerHTML = '<div class="no-results"><h2>Ei hakutuloksia</h2><p>Haulla &ldquo;' + esc(query) + '&rdquo; ei löytynyt osumia.</p></div>';
+        results.innerHTML = 
+          '<div class="empty-state">' +
+            '<div class="empty-state__icon">' +
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>' +
+            '</div>' +
+            '<h2 class="empty-state__title">Ei hakutuloksia</h2>' +
+            '<p class="empty-state__description">Haulla &ldquo;' + esc(query) + '&rdquo; ei löytynyt osumia. Kokeile eri hakusanoja tai selaa uutisaiheita alta.</p>' +
+            '<div class="empty-state__actions">' +
+              '<a href="/" class="empty-state__btn empty-state__btn--primary">Palaa etusivulle</a>' +
+              '<a href="/categories/" class="empty-state__btn empty-state__btn--secondary">Selaa kategorioita</a>' +
+            '</div>' +
+          '</div>';
         return;
       }
 
