@@ -871,9 +871,15 @@ img { max-width: 100%; height: auto; }
   top: var(--header-h, 0px);
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   z-index: 9999;
   pointer-events: none;
+  background: rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.reading-progress-track.is-visible {
+  opacity: 1;
 }
 .reading-progress {
   width: 0;
@@ -882,6 +888,10 @@ img { max-width: 100%; height: auto; }
   transition: width 0.12s linear;
   will-change: width;
   pointer-events: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+[data-theme="dark"] .reading-progress-track {
+  background: rgba(255, 255, 255, 0.05);
 }
 .scroll-to-top {
   position: fixed;

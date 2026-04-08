@@ -58,8 +58,17 @@
   function update() {
     var progress = getProgress();
     bar.style.width = progress.toFixed(2) + '%';
+    
+    // Delayed fade-in logic: show track once we have a bit of progress
+    if (progress > 1 && !bar.parentElement.classList.contains('is-visible')) {
+      bar.parentElement.classList.add('is-visible');
+    }
+
     if (progress >= 100) {
+      bar.style.opacity = '1';
       fireReadingComplete();
+    } else {
+      bar.style.opacity = '';
     }
   }
 
