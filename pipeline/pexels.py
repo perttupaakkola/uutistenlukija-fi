@@ -421,20 +421,31 @@ def fetch_image_for_article(
 
     photos = _search_pexels(query)
 
-    # Fallback: try category query if specific search is empty
-    if not photos and category in CATEGORY_QUERIES:
-        fallback_query = CATEGORY_QUERIES[category]
-        print(f"[pexels] No results for '{query}' — trying category fallback '{fallback_query}'")
-        photos = _search_pexels(fallback_query)
+    # Filter out already used images
+    try:
+        from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
+        available_photos = [p for p in photos if not is_image_used(p["id"])]
+    except ImportError:
+        available_photos = photos
+        mark_image_used = lambda x: None
+        get_query_index = lambda x: _query_index.get(x, 0)
+        set_query_index = lambda x, y: _query_index.update({x: y})
 
-    if not photos:
-        print(f"[pexels] No image found for '{title[:50]}'")
+    # Fallback: try category query if specific search is empty or all used
+    if not available_photos and category in CATEGORY_QUERIES:
+        fallback_query = CATEGORY_QUERIES[category]
+        print(f"[pexels] No fresh results for '{query}' — trying category fallback '{fallback_query}'")
+        photos = _search_pexels(fallback_query)
+        available_photos = [p for p in photos if not is_image_used(p["id"])]
+
+    if not available_photos:
+        print(f"[pexels] No fresh image found for '{title[:50]}'")
         return None
 
     # Round-robin to distribute different photos across articles
-    idx = _query_index.get(query, 0) % len(photos)
-    _query_index[query] = idx + 1
-    photo = photos[idx]
+    idx = get_query_index(query) % len(available_photos)
+    set_query_index(query, idx + 1)
+    photo = available_photos[idx]
 
     local_path = None
     if download:
@@ -442,6 +453,8 @@ def fetch_image_for_article(
         hero_url = photo.get("url")  # already large2x or large from _search_pexels
         local_path = _download_image(hero_url, slug, suffix="hero")
         thumb_local = _download_image(photo["thumb_url"], slug, suffix="thumb")
+        if local_path:
+            mark_image_used(photo["id"])
         time.sleep(inter_request_delay)
     else:
         thumb_local = None

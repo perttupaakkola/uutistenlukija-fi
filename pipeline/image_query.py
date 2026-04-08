@@ -29,17 +29,19 @@ def _get_client():
     return _client
 
 
-QUERY_PROMPT = """You are an image search expert. Given a Finnish news article title and body, generate the BEST English search query (3-5 words) for finding a relevant stock photo on Unsplash.
+QUERY_PROMPT = """You are an image search expert. Given a Finnish news article title and body, generate the BEST English search query (3-5 words) for finding a relevant stock photo on Unsplash or Pexels.
 
 Rules:
-- The query must be in ENGLISH
-- Focus on the VISUAL SUBJECT of the article, not abstract concepts
-- Consider the SEASON and SETTING described in the article
-- Be specific: "rainy spring street Helsinki" is better than "weather"
-- Never use abstract words like "crisis", "impact", "situation"
-- Prefer concrete visual subjects: people, places, objects, landscapes
-- If the article mentions a specific location, include it
-- If the article is about weather, match the ACTUAL weather described (rain ≠ snow)
+- The query must be in ENGLISH.
+- Focus on the VISUAL SUBJECT of the article, not abstract concepts.
+- Consider the SEASON and SETTING described in the article.
+- Be specific: "rainy spring street Helsinki" is better than "weather".
+- Never use abstract words like "crisis", "impact", "situation".
+- Prefer concrete visual subjects: people, places, objects, landscapes.
+- If the article mentions a specific location, include it.
+- If the article is about a specific person (e.g. Petteri Orpo, Sanna Marin), prioritize searching for them by name.
+- IMPORTANT: If you think a stock photo of that specific person is unlikely to exist, search for a generic high-quality representation of their ROLE (e.g. "politician in suit", "businesswoman professional", "footballer action", "police officer"). This is better than a generic landscape.
+- If the article is about weather, match the ACTUAL weather described (rain ≠ snow).
 
 Return ONLY the search query, nothing else. No quotes, no explanation."""
 

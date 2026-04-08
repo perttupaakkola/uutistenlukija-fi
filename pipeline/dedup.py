@@ -31,7 +31,7 @@ _CONTENT_POSTS_DIR = os.path.join(
 SIMILARITY_THRESHOLD = 0.78   # Raised from 0.60 — was too aggressive, blocking most articles
 
 # Keyword overlap dedup: long Finnish words (6+ chars) that indicate named entities
-KEYWORD_OVERLAP_THRESHOLD = 12  # 12+ shared long words = likely same event
+KEYWORD_OVERLAP_THRESHOLD = 20  # raised from 12 to reduce false positive deduplications
 
 # Finnish function words that are NOT event-specific (don't count as signal)
 _KW_STOPWORDS = {

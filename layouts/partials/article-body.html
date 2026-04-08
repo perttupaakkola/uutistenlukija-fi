@@ -45,7 +45,7 @@
 
 {{- if eq .showJournalistNote true }}{{ partial "journalist-note.html" $page }}{{ end }}
 {{- if eq .showAfterArticleAd true }}{{ partial "ad-slot.html" (dict "position" "after-article" "context" $page) }}{{ end }}
-{{- if eq .showNewsletter true }}{{ partial "newsletter-cta.html" $page }}{{ end }}
+{{- if eq .showNewsletter true }}{{ partial "newsletter-cta.html" (dict "context" $page "variant" "article_bottom_latest") }}{{ end }}
 
 {{- if eq .showAuthorBox true }}
   {{ with $page.Params.author }}

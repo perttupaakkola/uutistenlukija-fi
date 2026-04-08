@@ -1,5 +1,11 @@
 {{- /* newsletter-cta.html — inline newsletter signup card for article/page bottoms. */ -}}
-{{ $source := cond .IsPage "article" "page" }}
+{{- $variant := "default" -}}
+{{- $ctx := . -}}
+{{- if reflect.IsMap . -}}
+  {{- $variant = .variant | default "default" -}}
+  {{- $ctx = .context -}}
+{{- end -}}
+{{- $source := cond $ctx.IsPage "article" "page" -}}
 <section id="newsletter-signup" class="newsletter-signup newsletter-signup--inline" aria-labelledby="newsletter-signup-heading">
   <div class="newsletter-signup__inner">
     <div class="newsletter-signup__copy">
@@ -10,8 +16,11 @@
     <form class="newsletter-signup__form js-newsletter-form"
           action="/api/subscribe"
           method="post"
-          data-location="{{ $source }}">
+          data-event="newsletter"
+          data-location="{{ $source }}"
+          data-variant="{{ $variant }}">
       <input type="hidden" name="source" value="{{ $source }}">
+      <input type="hidden" name="variant" value="{{ $variant }}">
       <label for="newsletter-inline-email" class="visually-hidden">Sähköpostiosoite</label>
       <input id="newsletter-inline-email"
              type="email"

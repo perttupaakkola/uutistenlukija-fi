@@ -564,9 +564,10 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         print(f"[dedup:kw] {kw_dropped} post-rewrite near-duplicates dropped")
         steps["kw_dedup"] = {"dropped": kw_dropped, "passed": len(rewritten)}
     if not rewritten:
-        print("ℹ️  Kaikki kirjoitetut artikkelit hylättiin duplikaatteina.")
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True)
-        return True
+        print("❌ Kaikki kirjoitetut artikkelit hylättiin duplikaatteina.")
+        notify_discord_warning("dedup:kw", "All rewritten articles dropped as near-duplicates", f"Batch was {pre_kw_count} articles")
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
+        return False
 
     # ── Step 2b: Images ────────────────────────────────────────────────────────
     unsplash_count = pexels_count = ai_count = fallback_count = 0

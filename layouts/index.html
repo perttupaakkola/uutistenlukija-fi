@@ -198,7 +198,7 @@
 {{ partial "advertiser-cta.html" (dict "placement" "homepage" "page" .) }}
 
 {{/* Newsletter signup band */}}
-{{ partial "newsletter-band.html" . }}
+{{ partial "newsletter-band.html" (dict "variant" "homepage_digest") }}
 {{ partial "most-read.html" (dict "Site" .Site "exclude" $seen) }}
 {{ partial "continue-reading.html" . }}
 {{ partial "tag-cloud.html" . }}

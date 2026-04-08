@@ -370,20 +370,32 @@ def fetch_image_for_article(
 
     photos = _search(query)
 
-    if not photos and category in CATEGORY_QUERIES:
-        fallback_query = CATEGORY_QUERIES[category]
-        print(f"[unsplash] No results for '{query}' → category fallback '{fallback_query}'")
-        photos = _search(fallback_query)
+    # Filter out already used images
+    try:
+        from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
+        available_photos = [p for p in photos if not is_image_used(p["id"])]
+    except ImportError:
+        available_photos = photos
+        mark_image_used = lambda x: None
+        get_query_index = lambda x: _query_index.get(x, 0)
+        set_query_index = lambda x, y: _query_index.update({x: y})
 
-    if not photos:
+    if not available_photos and category in CATEGORY_QUERIES:
+        fallback_query = CATEGORY_QUERIES[category]
+        print(f"[unsplash] No fresh results for '{query}' → category fallback '{fallback_query}'")
+        photos = _search(fallback_query)
+        available_photos = [p for p in photos if not is_image_used(p["id"])]
+
+    if not available_photos:
         return None
 
-    idx = _query_index.get(query, 0) % len(photos)
-    _query_index[query] = idx + 1
-    photo = photos[idx]
+    idx = get_query_index(query) % len(available_photos)
+    set_query_index(query, idx + 1)
+    photo = available_photos[idx]
 
     # Trigger mandatory download tracking
     _trigger_download(photo)
+    mark_image_used(photo["id"])
     time.sleep(inter_request_delay)
 
     photographer = photo["photographer"]
