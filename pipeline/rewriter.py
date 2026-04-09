@@ -63,7 +63,8 @@ RAKENNE JA OTSIKOT:
 - Kirjoita 4–6 kappaletta.
 - Käytä 1–2 H2-väliotsikkoa (## Otsikko) jäsentämään artikkeli — aina kun artikkeli on 300+ sanaa.
 - Alle 300 sanan artikkeleissa EI väliotsikoita — suora kertomus.
-- Väliotsikot ovat informatiivisia, eivät klikkiotsikoita: "Mitä tapahtui seuraavaksi" → "Tilanne kehittyi nopeasti".
+- Väliotsikot ovat informatiivisia, eivät klikkiotsikoita.
+- TÄRKEÄÄ: Ainakin yhden H2-väliotsikon TÄYTYY sisältää uutisen pääaihe tai nimi (esim. otsikossa mainittu henkilö, yhtiö tai paikka).
 - Vain ensimmäinen sana isolla väliotsikoissa.
 
 OTSIKON SÄÄNNÖT:
@@ -185,6 +186,7 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
     - "uutiskirje" → [uutiskirje](/uutiskirje/)
     - "pääsiäinen" tai "pääsiäiseksi" tai "pääsiäisenä" → [pääsiäisopas](/paasiaisopas/)
     Lisää linkit vain jos sana esiintyy luonnollisesti lauseessa. Älä pakota linkkejä. Jos artikkelissa ei ole sopivia kohtia, jätä sisältö ennalleen.
+17. TARKISTA description: sen tulee olla 120–155 merkkiä pitkä meta-kuvaus Google-hakutuloksiin. Jos se puuttuu tai on huonon pituinen (liian lyhyt tai yli 160 merkkiä), kirjoita se uudelleen tiiviiksi, uutisarvoiseksi ja täydeksi lauseeksi. Älä katkaise lausetta kesken.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -365,6 +367,68 @@ def _enforce_h2_subheadings(article: Dict) -> tuple[Dict, bool, bool]:
     except Exception as e:
         print(f"[writer]   ⚠ H2 retry failed ({e}): '{title[:50]}'")
         return article, True, False
+
+
+def _enforce_description_length(article: Dict) -> tuple[Dict, bool]:
+    """Ensure meta description is within 120-160 chars. Retry once if not."""
+    desc = str(article.get("description", "") or "").strip()
+    if 120 <= len(desc) <= 160:
+        return article, False
+
+    title = article.get("title", "")
+    print(f"[writer]   ⚠ Meta description bad length ({len(desc)} chars), retrying: '{title[:50]}'")
+
+    retry_prompt = (
+        "Kirjoita tälle uutiselle uusi meta-kuvaus Google-hakutuloksiin.\n"
+        "SÄÄNNÖT:\n"
+        "- Pituus: 120–155 merkkiä\n"
+        "- Kieli: Suomi\n"
+        "- Kirjoita täysiä lauseita, älä katkaise kesken\n"
+        "- Tuo esiin tärkein fakta tai lisätieto\n\n"
+        f"Otsikko: {title}\n"
+        f"Leipäteksti: {article.get('content', '')[:500]}\n\n"
+        "Vastaa VAIN uudella meta-kuvauksella. Ei selityksiä."
+    )
+
+    try:
+        new_desc = _call_llm(SYSTEM_PROMPT, retry_prompt).strip().strip('"')
+        if new_desc:
+            article["description"] = new_desc
+            if 120 <= len(new_desc) <= 160:
+                print(f"[writer]   Meta description retry succeeded ({len(new_desc)} chars)")
+                return article, True
+            else:
+                print(f"[writer]   ⚠ Meta description retry still bad length ({len(new_desc)} chars)")
+    except Exception as e:
+        print(f"[writer]   ⚠ Meta description retry failed: {e}")
+
+    return article, True
+
+
+def _clean_description(article: Dict) -> Dict:
+    """Final cleanup of description: sentence boundary truncation if > 160 chars."""
+    desc = str(article.get("description", "") or "").strip()
+    if len(desc) <= 160:
+        return article
+
+    # Try to truncate at sentence boundary
+    sentences = re.split(r'(?<=[.!?])\s+', desc)
+    candidate = ""
+    for s in sentences:
+        if len(candidate) + len(s) + 1 <= 155:
+            candidate = (candidate + " " + s).strip()
+        else:
+            break
+
+    if candidate and len(candidate) >= 100:
+        desc = candidate
+    else:
+        # Hard truncate if no clean sentence boundary found or result too short
+        desc = desc[:152].rstrip() + "..."
+
+    article["description"] = desc
+    print(f"[writer]   ✂ Hard truncated description to {len(desc)} chars")
+    return article
 
 
 def _enforce_min_words(article: Dict, min_words: int = 250) -> tuple[Dict, bool, bool]:
@@ -719,6 +783,7 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
     "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
+    "description": "Meta-kuvaus Google-hakutuloksiin. 120–155 merkkiä. Sisällä uutisen tärkein fakta ja pääaihe. Täysi lause, ei katkea kesken.",
     "original_title": "Alkuperäinen otsikko RSS:stä",
     "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono jos ei lisäarvoa",
     "content_type": "article tai analysis",
@@ -729,6 +794,7 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
 
 "tags": 2–5 konkreettista suomenkielistä avainsanaa artikkelista (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
 "summary": 2-3 lauseen tiivistelmä artikkelista suomeksi. Selkeä, informatiivinen, ei klikkiotsikko-tyylinen.
+"description": 120–155 merkin pituinen meta-kuvaus Google-hakutuloksiin. Kirjoita täysiä lauseita. Älä toista otsikkoa sanasta sanaan, vaan tuo esiin tärkein fakta tai lisätieto.
 "journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa toimituksellista taustaa, merkitystä tai kontekstia. Ei geneeristä filler-tekstiä. Jos huomio ei tuo oikeaa lisäarvoa, käytä tyhjää merkkijonoa.
 "content_type": käytä oletuksena "article". Käytä "analysis" VAIN kun aihe on aidosti monikulmainen, kehittyvä, kiistanalainen tai vaatii tulkintaa useasta näkökulmasta.
 "editorial_reviewed": aina true.
@@ -856,6 +922,7 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
     "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
+    "description": "Meta-kuvaus Google-hakutuloksiin. 120–155 merkkiä. Sisällä uutisen tärkein fakta ja pääaihe. Täysi lause, ei katkea kesken.",
     "original_title": "Alkuperäinen otsikko RSS:stä",
     "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono",
     "content_type": "article tai analysis",
@@ -866,6 +933,7 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
 
 "tags": 2–5 konkreettista suomenkielistä avainsanaa jokaiseen artikkeliin (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
 "summary": 2-3 lauseen tiivistelmä artikkelista suomeksi. Selkeä, informatiivinen, ei klikkiotsikko-tyylinen.
+"description": 120–155 merkin pituinen meta-kuvaus Google-hakutuloksiin. Kirjoita täysiä lauseita. Älä toista otsikkoa sanasta sanaan, vaan tuo esiin tärkein fakta tai lisätieto.
 "journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa vain kun toimituksellinen huomio tuo oikeaa lisäarvoa: taustaa, miksi asia on tärkeä tai mitä lukijan kannattaa seurata. Ei geneeristä filler-tekstiä. Muulloin käytä tyhjää merkkijonoa.
 "content_type": käytä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaisiin, kehittyviin, kiistanalaisiin tai tulkintaa vaativiin juttuihin.
 "editorial_reviewed": aina true.
@@ -998,6 +1066,10 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             if not p_ok:
                 print(f"[writer]   SKIP article with repeat loop (3+ identical paragraphs): '{title[:50]}'")
                 continue
+
+            # Meta description validation and cleanup
+            written_article, _desc_retried = _enforce_description_length(written_article)
+            written_article = _clean_description(written_article)
 
             # Use _batch_idx (stamped before any filtering) so source metadata
             # stays correctly paired even after DUPLICATE/FILTER items are skipped.
