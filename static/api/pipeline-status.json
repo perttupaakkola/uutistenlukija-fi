@@ -1,8 +1,8 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-08T17:39:02+00:00",
-  "status": "degraded",
-  "is_stale": true,
+  "generated_at": "2026-04-09T22:26:02+00:00",
+  "status": "ok",
+  "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
     "total": 0,
@@ -12,20 +12,20 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 7,
-    "rejected": 14,
+    "published": 14,
+    "rejected": 213,
     "publish_rate": 0,
-    "last_published_ts": "2026-04-08T13:40:25.332976+00:00"
+    "last_published_ts": "2026-04-09T21:22:56.092264+00:00"
   },
   "reject_reasons": {
-    "lead_too_short": 14,
-    "missing: key_points, image": 11,
-    "missing: image": 3,
-    "language borderline Finnish si": 3,
-    "language weak Finnish signal (": 2,
-    "generic ending": 1,
-    "length under target (292 words": 1,
-    "length under target (298 words": 1
+    "missing: key_points, image": 213,
+    "lead_too_short": 179,
+    "too_short": 105,
+    "unsourced numbers": 90,
+    "language borderline Finnish si": 77,
+    "language weak Finnish signal (": 67,
+    "length very short (155 words)": 14,
+    "length very short (122 words)": 13
   },
   "feeds": {
     "total": 37,
@@ -37,24 +37,24 @@
   },
   "trending": [
     [
-      "kanadan",
-      17
+      "venäjän",
+      21
     ],
     [
-      "stubbin",
-      10
+      "kertoo",
+      19
     ],
     [
-      "stubb",
-      10
+      "ukrainan",
+      18
     ],
     [
-      "tasavallan",
-      9
+      "poutala",
+      15
     ],
     [
-      "miten",
-      8
+      "tiedetään",
+      14
     ]
   ]
 }
