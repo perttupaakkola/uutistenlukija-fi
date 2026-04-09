@@ -313,7 +313,7 @@ def validate_articles(articles: list) -> tuple:
     return valid, dropped, dict(reason_counter)
 
 
-def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None, dedup_window: int = 48, incremental: bool = False, force: bool = False, ghost: bool = False):
+def run(quick: bool = False, build_only: bool = False, firehose_only: bool = False, max_articles: int = None, dedup_window: int = 24, incremental: bool = False, force: bool = False, ghost: bool = False):
     """Execute the pipeline."""
     pipeline_start = time.time()
     steps: dict = {}
@@ -436,7 +436,8 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         msg = "No articles found after scan"
         notify_discord_failure("scanner", msg)
         errors.append(msg)
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False,
+                             fetched=_m_fetched, sources=_m_sources)
         print("❌ Ei artikkeleita löytynyt. Keskeytetään.")
         return False
 
@@ -458,7 +459,8 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
 
     if not articles:
         print("ℹ️  Kaikki artikkelit on jo julkaistu. Ei uusia artikkeleita.")
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True)
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True,
+                             fetched=_m_fetched, deduped=_m_deduped, sources=_m_sources)
         return True
 
     # ── Step 1c: Research ──────────────────────────────────────────────────────
@@ -529,7 +531,9 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
 
     if not rewritten:
         notify_discord_failure("rewriter", "Rewriter produced 0 articles", f"Input was {len(articles)} articles")
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False,
+                             fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
+                             sources=_m_sources)
         print("❌ Uudelleenkirjoitus epäonnistui. Keskeytetään.")
         return False
 
@@ -550,7 +554,9 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         }
     if not rewritten:
         notify_discord_failure("quality_gate", "All articles dropped by quality gate")
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False,
+                             fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
+                             rejected=_m_rejected, sources=_m_sources, reject_reasons=_m_reject_reasons)
         return False
 
     # ── Step 2a2: Post-rewrite keyword dedup ──────────────────────────────────
@@ -566,7 +572,9 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     if not rewritten:
         print("❌ Kaikki kirjoitetut artikkelit hylättiin duplikaatteina.")
         notify_discord_warning("dedup:kw", "All rewritten articles dropped as near-duplicates", f"Batch was {pre_kw_count} articles")
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False)
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False,
+                             fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
+                             rejected=_m_rejected, sources=_m_sources, reject_reasons=_m_reject_reasons)
         return False
 
     # ── Step 2b: Images ────────────────────────────────────────────────────────

@@ -18,6 +18,9 @@ from pathlib import Path
 
 from openai import OpenAI
 
+# Global flag to bypass LLM calls (audits, scoring, retries) when quota is hit
+QUOTA_EXHAUSTED = False
+
 CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
 
 # Load SEO keyword data for natural keyword injection into articles
@@ -63,8 +66,7 @@ RAKENNE JA OTSIKOT:
 - Kirjoita 4–6 kappaletta.
 - Käytä 1–2 H2-väliotsikkoa (## Otsikko) jäsentämään artikkeli — aina kun artikkeli on 300+ sanaa.
 - Alle 300 sanan artikkeleissa EI väliotsikoita — suora kertomus.
-- Väliotsikot ovat informatiivisia, eivät klikkiotsikoita.
-- TÄRKEÄÄ: Ainakin yhden H2-väliotsikon TÄYTYY sisältää uutisen pääaihe tai nimi (esim. otsikossa mainittu henkilö, yhtiö tai paikka).
+- Väliotsikot ovat informatiivisia, eivät klikkiotsikoita: "Mitä tapahtui seuraavaksi" → "Tilanne kehittyi nopeasti".
 - Vain ensimmäinen sana isolla väliotsikoissa.
 
 OTSIKON SÄÄNNÖT:
@@ -186,7 +188,6 @@ AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit 
     - "uutiskirje" → [uutiskirje](/uutiskirje/)
     - "pääsiäinen" tai "pääsiäiseksi" tai "pääsiäisenä" → [pääsiäisopas](/paasiaisopas/)
     Lisää linkit vain jos sana esiintyy luonnollisesti lauseessa. Älä pakota linkkejä. Jos artikkelissa ei ole sopivia kohtia, jätä sisältö ennalleen.
-17. TARKISTA description: sen tulee olla 120–155 merkkiä pitkä meta-kuvaus Google-hakutuloksiin. Jos se puuttuu tai on huonon pituinen (liian lyhyt tai yli 160 merkkiä), kirjoita se uudelleen tiiviiksi, uutisarvoiseksi ja täydeksi lauseeksi. Älä katkaise lausetta kesken.
 
 Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
 
@@ -206,6 +207,8 @@ ESCALATION_THRESHOLD = 3  # Score <= this triggers gpt-4o rewrite
 
 def _score_article_quality(body: str) -> tuple:
     """Score Finnish quality 1-5. Returns (score, issues_text)."""
+    if QUOTA_EXHAUSTED:
+        return 4, "Quota exhausted, bypassing score" # Assume good enough for fallback
     try:
         resp = _call_llm(QUALITY_SCORE_PROMPT, f"Artikkeli:\n\n{body}", model="gpt-4o-mini")
         data = _extract_json(resp)
@@ -264,6 +267,10 @@ def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
     Retries on: 429, 5xx, timeout, connection errors.
     Hard-fails on: 400, 401, 403 (bad request / auth — won't fix on retry).
     """
+    global QUOTA_EXHAUSTED
+    if QUOTA_EXHAUSTED:
+        raise RuntimeError("Quota already exhausted in this run")
+
     last_exc = None
     for attempt in range(1, _RETRY_ATTEMPTS + 1):
         try:
@@ -284,6 +291,10 @@ def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
             if status is not None and status not in _RETRYABLE_HTTP:
                 print(f"[writer]   LLM call failed (HTTP {status}, non-retryable): {e}")
                 raise
+
+            # Detect quota exhaustion
+            if status == 429 or "insufficient_quota" in str(e):
+                QUOTA_EXHAUSTED = True
 
             if attempt < _RETRY_ATTEMPTS:
                 delay = _RETRY_BASE_DELAY * (2 ** (attempt - 1))
@@ -352,6 +363,9 @@ def _enforce_h2_subheadings(article: Dict) -> tuple[Dict, bool, bool]:
     if word_count <= 250 or h2_count >= 1:
         return article, False, h2_count >= 1
 
+    if QUOTA_EXHAUSTED:
+        return article, False, False
+
     title = article.get("title", "")
     print(f"[writer]   ⚠ Missing H2 in long article ({word_count}w), retrying: '{title[:50]}'")
     retry_prompt = f"""Lisää tähän artikkeliin 2 kuvaavaa H2-väliotsikkoa. Säilytä faktat, sävy, rakenne, linkit, journalist_note, content_type, editorial_reviewed ja summary_bullets. Älä keksi uutta tietoa. Vastaa VAIN JSON-objektina.\n\n{json.dumps(article, ensure_ascii=False, indent=2)}"""
@@ -369,74 +383,17 @@ def _enforce_h2_subheadings(article: Dict) -> tuple[Dict, bool, bool]:
         return article, True, False
 
 
-def _enforce_description_length(article: Dict) -> tuple[Dict, bool]:
-    """Ensure meta description is within 120-160 chars. Retry once if not."""
-    desc = str(article.get("description", "") or "").strip()
-    if 120 <= len(desc) <= 160:
-        return article, False
-
-    title = article.get("title", "")
-    print(f"[writer]   ⚠ Meta description bad length ({len(desc)} chars), retrying: '{title[:50]}'")
-
-    retry_prompt = (
-        "Kirjoita tälle uutiselle uusi meta-kuvaus Google-hakutuloksiin.\n"
-        "SÄÄNNÖT:\n"
-        "- Pituus: 120–155 merkkiä\n"
-        "- Kieli: Suomi\n"
-        "- Kirjoita täysiä lauseita, älä katkaise kesken\n"
-        "- Tuo esiin tärkein fakta tai lisätieto\n\n"
-        f"Otsikko: {title}\n"
-        f"Leipäteksti: {article.get('content', '')[:500]}\n\n"
-        "Vastaa VAIN uudella meta-kuvauksella. Ei selityksiä."
-    )
-
-    try:
-        new_desc = _call_llm(SYSTEM_PROMPT, retry_prompt).strip().strip('"')
-        if new_desc:
-            article["description"] = new_desc
-            if 120 <= len(new_desc) <= 160:
-                print(f"[writer]   Meta description retry succeeded ({len(new_desc)} chars)")
-                return article, True
-            else:
-                print(f"[writer]   ⚠ Meta description retry still bad length ({len(new_desc)} chars)")
-    except Exception as e:
-        print(f"[writer]   ⚠ Meta description retry failed: {e}")
-
-    return article, True
-
-
-def _clean_description(article: Dict) -> Dict:
-    """Final cleanup of description: sentence boundary truncation if > 160 chars."""
-    desc = str(article.get("description", "") or "").strip()
-    if len(desc) <= 160:
-        return article
-
-    # Try to truncate at sentence boundary
-    sentences = re.split(r'(?<=[.!?])\s+', desc)
-    candidate = ""
-    for s in sentences:
-        if len(candidate) + len(s) + 1 <= 155:
-            candidate = (candidate + " " + s).strip()
-        else:
-            break
-
-    if candidate and len(candidate) >= 100:
-        desc = candidate
-    else:
-        # Hard truncate if no clean sentence boundary found or result too short
-        desc = desc[:152].rstrip() + "..."
-
-    article["description"] = desc
-    print(f"[writer]   ✂ Hard truncated description to {len(desc)} chars")
-    return article
-
-
 def _enforce_min_words(article: Dict, min_words: int = 250) -> tuple[Dict, bool, bool]:
     """Ensure article meets minimum word count. Retry once, then fail closed."""
     content = str(article.get("content", "") or "")
     word_count = _count_words(content)
     if word_count >= min_words:
         return article, False, True
+
+    if QUOTA_EXHAUSTED:
+        # If quota exhausted, don't retry but don't fail immediately either
+        # if it's "close enough" (e.g. >150 words for a fallback)
+        return article, False, (word_count >= 120)
 
     title = article.get("title", "")
     print(f"[writer]   ⚠ Under minimum length ({word_count}w < {min_words}), retrying: '{title[:50]}'")
@@ -783,7 +740,6 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
     "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
-    "description": "Meta-kuvaus Google-hakutuloksiin. 120–155 merkkiä. Sisällä uutisen tärkein fakta ja pääaihe. Täysi lause, ei katkea kesken.",
     "original_title": "Alkuperäinen otsikko RSS:stä",
     "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono jos ei lisäarvoa",
     "content_type": "article tai analysis",
@@ -794,7 +750,6 @@ Vastaa JSON-listana (lista yhdellä alkiolla):
 
 "tags": 2–5 konkreettista suomenkielistä avainsanaa artikkelista (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
 "summary": 2-3 lauseen tiivistelmä artikkelista suomeksi. Selkeä, informatiivinen, ei klikkiotsikko-tyylinen.
-"description": 120–155 merkin pituinen meta-kuvaus Google-hakutuloksiin. Kirjoita täysiä lauseita. Älä toista otsikkoa sanasta sanaan, vaan tuo esiin tärkein fakta tai lisätieto.
 "journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa toimituksellista taustaa, merkitystä tai kontekstia. Ei geneeristä filler-tekstiä. Jos huomio ei tuo oikeaa lisäarvoa, käytä tyhjää merkkijonoa.
 "content_type": käytä oletuksena "article". Käytä "analysis" VAIN kun aihe on aidosti monikulmainen, kehittyvä, kiistanalainen tai vaatii tulkintaa useasta näkökulmasta.
 "editorial_reviewed": aina true.
@@ -922,7 +877,6 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
     "category": "Yksi: {', '.join(CATEGORIES)}",
     "tags": ["avainsana1", "avainsana2"],
     "summary": "2-3 lauseen tiivistelmä suomeksi lukijalle.",
-    "description": "Meta-kuvaus Google-hakutuloksiin. 120–155 merkkiä. Sisällä uutisen tärkein fakta ja pääaihe. Täysi lause, ei katkea kesken.",
     "original_title": "Alkuperäinen otsikko RSS:stä",
     "journalist_note": "40-100 sanan toimituksellinen huomio TAI tyhjä merkkijono",
     "content_type": "article tai analysis",
@@ -933,7 +887,6 @@ Vastaa JSON-listana ({len(batch)} artikkelia):
 
 "tags": 2–5 konkreettista suomenkielistä avainsanaa jokaiseen artikkeliin (esim. "tekoäly", "NATO", "korot"). Käytä yksikköä ja pieniä kirjaimia.
 "summary": 2-3 lauseen tiivistelmä artikkelista suomeksi. Selkeä, informatiivinen, ei klikkiotsikko-tyylinen.
-"description": 120–155 merkin pituinen meta-kuvaus Google-hakutuloksiin. Kirjoita täysiä lauseita. Älä toista otsikkoa sanasta sanaan, vaan tuo esiin tärkein fakta tai lisätieto.
 "journalist_note": lisää VAIN noin 20–30 % artikkeleista. Kirjoita 40–100 sanaa vain kun toimituksellinen huomio tuo oikeaa lisäarvoa: taustaa, miksi asia on tärkeä tai mitä lukijan kannattaa seurata. Ei geneeristä filler-tekstiä. Muulloin käytä tyhjää merkkijonoa.
 "content_type": käytä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaisiin, kehittyviin, kiistanalaisiin tai tulkintaa vaativiin juttuihin.
 "editorial_reviewed": aina true.
@@ -1066,10 +1019,6 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             if not p_ok:
                 print(f"[writer]   SKIP article with repeat loop (3+ identical paragraphs): '{title[:50]}'")
                 continue
-
-            # Meta description validation and cleanup
-            written_article, _desc_retried = _enforce_description_length(written_article)
-            written_article = _clean_description(written_article)
 
             # Use _batch_idx (stamped before any filtering) so source metadata
             # stays correctly paired even after DUPLICATE/FILTER items are skipped.

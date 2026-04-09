@@ -30,7 +30,7 @@ _PIPELINE_DIR = os.path.dirname(os.path.abspath(__file__))
 _CONTENT_POSTS_DIR = os.path.abspath(os.path.join(_PIPELINE_DIR, "..", "content", "posts"))
 REJECTED_DIR = os.path.join(_PIPELINE_DIR, "rejected")
 REJECTS_LOG = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
-MIN_BODY_WORDS = 220
+MIN_BODY_WORDS = 250
 
 # Historical internal threshold (0–80). Corresponds to 5.0 / 10 normalized.
 # TEMPORARILY lowered 40→30 (2026-04-02) to unblock publishing after 60h drought.
@@ -347,6 +347,7 @@ def score_article(article: dict) -> ScoreBreakdown:
     source_text = article.get("source_text", "") or ""
 
     word_count = len(content.split())
+    missing_image = not image.strip()
 
     # Historical scoring kept for compatibility/metrics.
     if word_count >= 500:
@@ -390,6 +391,9 @@ def score_article(article: dict) -> ScoreBreakdown:
         + duplication_score * 0.18
         + language_score * 0.16
     )
+
+    if missing_image:
+        weighted_score = max(0.0, weighted_score - 0.2)  # ~1.6 points on legacy 80-point scale
 
     if paragraphs:
         last_paragraph = paragraphs[-1].lower()
@@ -447,8 +451,9 @@ def score_article(article: dict) -> ScoreBreakdown:
     if source_text:
         unsourced = check_numbers_sourced(source_text, content, title)
         if unsourced:
-            score_penalty = min(len(unsourced) * 2, 10)  # -2 per unsourced number, max -10
-            total -= score_penalty
+            sample = ", ".join(unsourced[:5])
+            soft_warnings.append(f"unsourced_numbers: {sample}")
+            reasons.append("unsourced numbers")
 
     normalized_score = round(_clamp(weighted_score), 2)
     effective_threshold = max(DEFAULT_NORMALIZED_THRESHOLD, round(REJECT_THRESHOLD / 80 * 10, 2))

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "monitor_deploys",
+    "expected_interval_hours": 0.083,
+    "marker_file_path": "pipeline/logs/deploy-monitor.log"
+  },
+  {
+    "name": "firehose_cron",
+    "expected_interval_hours": 0.167,
+    "marker_file_path": "pipeline/logs/firehose_cron.log"
+  },
+  {
+    "name": "watchdog",
+    "expected_interval_hours": 0.167,
+    "marker_file_path": "pipeline/logs/watchdog.log"
+  },
+  {
+    "name": "health_monitor",
+    "expected_interval_hours": 0.25,
+    "marker_file_path": "pipeline/logs/health-monitor.log"
+  },
+  {
+    "name": "uptime_monitor",
+    "expected_interval_hours": 0.25,
+    "marker_file_path": "pipeline/logs/uptime-monitor.log"
+  },
+  {
+    "name": "stale_assignment_nudge",
+    "expected_interval_hours": 0.25,
+    "marker_file_path": "pipeline/logs/stale-assignment-nudge.log"
+  },
+  {
+    "name": "pipeline_health_check",
+    "expected_interval_hours": 0.5,
+    "marker_file_path": "pipeline/logs/health-check.log"
+  },
+  {
+    "name": "pipeline_silence",
+    "expected_interval_hours": 6.0,
+    "marker_file_path": "pipeline/logs/pipeline-silence.log"
+  },
+  {
+    "name": "analytics_check",
+    "expected_interval_hours": 6.0,
+    "marker_file_path": "pipeline/logs/analytics.log"
+  },
+  {
+    "name": "disk_monitor",
+    "expected_interval_hours": 6.0,
+    "marker_file_path": "pipeline/logs/disk_monitor.log"
+  },
+  {
+    "name": "content_backup",
+    "expected_interval_hours": 24.0,
+    "marker_file_path": "pipeline/logs/content-backup.log"
+  },
+  {
+    "name": "rss_health",
+    "expected_interval_hours": 24.0,
+    "marker_file_path": "pipeline/logs/rss-health.log"
+  },
+  {
+    "name": "metrics_history",
+    "expected_interval_hours": 24.0,
+    "marker_file_path": "pipeline/logs/metrics_history.log"
+  },
+  {
+    "name": "metrics_cron",
+    "expected_interval_hours": 24.0,
+    "marker_file_path": "pipeline/logs/metrics-cron.log"
+  },
+  {
+    "name": "auto_publish",
+    "expected_interval_hours": 0.167,
+    "marker_file_path": "pipeline/logs/cron.log"
+  }
+]
