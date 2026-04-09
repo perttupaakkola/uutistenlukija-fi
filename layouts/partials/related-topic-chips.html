@@ -1,0 +1,28 @@
+{{- /*
+  related-topic-chips.html — Compact row of topic/category chips.
+  Used to help users discover related coverage laterally.
+*/ -}}
+
+{{- $page := . -}}
+{{- $categories := $page.Params.categories | default (slice) -}}
+{{- $tags := $page.Params.tags | default (slice) -}}
+{{- $topics := $page.Params.topics | default (slice) -}}
+
+{{- /* Combine and deduplicate terms */ -}}
+{{- $terms := slice -}}
+{{- range $categories }}{{ $terms = $terms | append (dict "name" . "url" (printf "/categories/%s/" (. | urlize)) "type" "category") }}{{ end -}}
+{{- range $tags }}{{ $terms = $terms | append (dict "name" . "url" (printf "/tags/%s/" (. | urlize)) "type" "tag") }}{{ end -}}
+{{- range $topics }}{{ $terms = $terms | append (dict "name" . "url" (printf "/topics/%s/" (. | urlize)) "type" "topic") }}{{ end -}}
+
+{{- if gt (len $terms) 0 -}}
+<div class="related-topic-chips" aria-label="Aiheeseen liittyvää">
+  <span class="related-topic-chips__label">Aiheeseen liittyy:</span>
+  <div class="related-topic-chips__list">
+    {{- range $terms -}}
+    <a href="{{ .url }}" class="topic-chip topic-chip--{{ .type }}">
+      {{ .name }}
+    </a>
+    {{- end -}}
+  </div>
+</div>
+{{- end -}}
