@@ -3,8 +3,9 @@
 {{- if reflect.IsMap . -}}
   {{- $variant = .variant | default "default" -}}
 {{- end -}}
+{{- $trackVariant := printf "if(typeof gtag==='function'){gtag('event','newsletter_cta_view',{variant:%s,location:'homepage'});}" ($variant | jsonify) -}}
 <section id="newsletter-signup" class="newsletter-signup newsletter-signup--home" aria-labelledby="newsletter-band-heading">
-  <div class="newsletter-signup__inner">
+  <div class="newsletter-signup__inner" onmouseover="{{ $trackVariant | safeHTMLAttr }}">
     <div class="newsletter-signup__copy">
       <p class="newsletter-signup__eyebrow">Päivittäinen kooste</p>
       <h2 id="newsletter-band-heading" class="newsletter-signup__title">Tilaa päivittäinen uutiskooste sähköpostiisi</h2>
