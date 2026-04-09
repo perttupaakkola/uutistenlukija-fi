@@ -10,13 +10,10 @@
   {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}
   <h1>{{ .Title }}</h1>
-  {{ with .Params.tags }}
-  <div class="article-tags" aria-label="Aihetunnisteet">
-    {{ range . }}
-    <a href="/tags/{{ . | urlize }}/" class="tag-pill">{{ . }}</a>
-    {{ end }}
-  </div>
-  {{ end }}
+  
+  {{- /* Related topic chips for better discovery */ -}}
+  {{ partial "related-topic-chips.html" . }}
+
   {{ partial "article-body.html" (dict
     "page" .
     "showSummaryBullets" true

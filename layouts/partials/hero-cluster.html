@@ -67,7 +67,6 @@
     {{- $cat := index $lead.Params.categories 0 | default "kotimaa" -}}
     {{- $img := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) -}}
     {{- $thumb := $lead.Params.image_thumb | default $img -}}
-    {{- $alt := $lead.Params.image_alt | default $lead.Title -}}
 
     <article class="hero-lead-article">
       <a href="{{ $lead.Permalink }}" class="hero-lead-image-link" data-track="hero_click">
@@ -90,7 +89,7 @@
           {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, 600px">{{ end -}}
           <img
             src="{{ $heroSrc }}"
-            alt="{{ $alt }}"
+            alt="{{ partial "image-alt.html" $lead }}"
             class="hero-lead-img"
             loading="eager"
             fetchpriority="high"
@@ -124,7 +123,6 @@
     {{- $cat := index .Params.categories 0 | default "kotimaa" -}}
     {{- $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) -}}
     {{- $thumb := .Params.image_thumb | default $img -}}
-    {{- $alt := .Params.image_alt | default .Title -}}
     <article class="hero-sidebar-card">
       <a href="{{ .Permalink }}" class="hero-sidebar-thumb-link" data-track="sidebar_click">
         {{- $sbSrc := $thumb -}}
@@ -137,7 +135,7 @@
         {{- end -}}
         <img
           src="{{ $sbSrc }}"
-          alt="{{ $alt }}"
+          alt="{{ partial "image-alt.html" . }}"
           class="hero-sidebar-thumb"
           loading="lazy"
           width="80" height="80"

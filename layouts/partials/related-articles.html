@@ -75,7 +75,7 @@
         {{ partial "card-image.html" (dict
           "img" $img
           "thumb" $thumb
-          "alt" (.Params.image_alt | default .Title)
+          "context" .
           "permalink" .RelPermalink
           "fallback" (printf "/images/categories/%s.jpg" $fallbackCat)
           "onclick" $trackRelatedClick

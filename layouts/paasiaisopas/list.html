@@ -22,9 +22,8 @@
     {{ range $pages }}
     {{ $cat := index .Params.categories 0 | default "kotimaa" }}
     {{ $img := .Params.image_thumb | default (.Params.image | default "/images/categories/kulttuuri.jpg") }}
-    {{ $alt := .Params.image_alt | default .Title }}
     <article class="article-card">
-      {{ partial "card-image.html" (dict "img" $img "thumb" $img "alt" $alt "eager" false "hero" false "permalink" .Permalink "fallback" "/images/categories/kulttuuri.jpg") }}
+      {{ partial "card-image.html" (dict "img" $img "thumb" $img "context" . "eager" false "hero" false "permalink" .Permalink "fallback" "/images/categories/kulttuuri.jpg") }}
       {{ with .Params.categories }}
       <span class="category-label">{{ index . 0 }}</span>
       {{ end }}
@@ -52,9 +51,8 @@
     {{ range $tagged }}
     {{ $cat := index .Params.categories 0 | default "kotimaa" }}
     {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
-    {{ $alt := .Params.image_alt | default .Title }}
     <article class="article-card">
-      {{ partial "card-image.html" (dict "img" $img "thumb" $img "alt" $alt "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+      {{ partial "card-image.html" (dict "img" $img "thumb" $img "context" . "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
       {{ with .Params.categories }}
       <span class="category-label">{{ index . 0 }}</span>
       {{ end }}

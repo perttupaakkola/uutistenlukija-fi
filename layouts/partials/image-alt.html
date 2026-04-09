@@ -1,0 +1,16 @@
+{{- /*
+  image-alt.html — Centralized logic for image alt text fallback.
+  Usage: {{ partial "image-alt.html" . }}
+*/ -}}
+{{- $page := . -}}
+{{- $alt := "" -}}
+
+{{- if $page.Params.image_alt -}}
+  {{- $alt = $page.Params.image_alt -}}
+{{- else if $page.Params.image_caption -}}
+  {{- $alt = $page.Params.image_caption -}}
+{{- else if $page.Title -}}
+  {{- $alt = $page.Title -}}
+{{- end -}}
+
+{{- $alt | plainify | truncate 120 | safeHTML -}}

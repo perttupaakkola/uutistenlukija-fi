@@ -37,7 +37,7 @@
   <a href="{{ .Permalink }}" class="read-next__card" rel="next">
     <div class="read-next__img-wrap">
       {{ if $thumb }}
-      <img src="{{ $thumb }}" alt="{{ .Params.image_alt | default .Title }}"
+      <img src="{{ $thumb }}" alt="{{ partial "image-alt.html" . }}"
            class="read-next__img article-card-thumb"
            loading="lazy" decoding="async" width="800" height="450"
            onload="this.classList.add('img-loaded')"

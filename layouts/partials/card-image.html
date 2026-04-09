@@ -10,11 +10,18 @@
     .permalink — article permalink for the wrapping link
     .track     — optional data-track value for the wrapping link
     .onclick   — optional inline onclick handler for the wrapping link
+    .context   — optional page context for alt-text fallback
 */}}
 
 {{- $img    := .img    | default "" -}}
 {{- $thumb  := .thumb  | default $img -}}
 {{- $alt    := .alt    | default "" -}}
+
+{{- /* Fallback alt text logic if context is provided */ -}}
+{{- if and (not $alt) .context -}}
+  {{- $alt = partial "image-alt.html" .context -}}
+{{- end -}}
+
 {{- $eager  := .eager  | default false -}}
 {{- $hero   := .hero   | default false -}}
 {{- $href   := .permalink | default "#" -}}
