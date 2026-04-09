@@ -20,18 +20,12 @@
 <article class="single-article sponsored-article">
   {{ partial "breadcrumbs.html" . }}
 
+  <h1>{{ .Title }}</h1>
+
   {{/* Sponsor badge — top of article, before hero image */}}
   {{ partial "sponsor-badge.html" . }}
 
   {{ partial "hero-image.html" . }}
-
-  {{ with .Params.categories }}
-  <span class="category-label category-label--sponsored">
-    {{ index . 0 }} · <span class="sponsored-tag">Sponsoroitu</span>
-  </span>
-  {{ end }}
-
-  <h1>{{ .Title }}</h1>
 
   <div class="article-meta sponsored-meta">
     {{ .Date | time.Format "2.1. klo 15:04" }}

@@ -7,6 +7,9 @@
   Call as: {{ partial "taxonomy-article-card.html" $page }}
 */}}
 <article class="article-card">
+  {{- if eq .Params.layout "sponsored" -}}
+  <span class="sponsored-label-pill">{{ .Params.sponsor_label | default "Kaupallinen yhteistyö" }}</span>
+  {{- end -}}
   {{ with .Params.categories }}
   {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
   {{ end }}

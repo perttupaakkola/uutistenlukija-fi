@@ -3479,3 +3479,25 @@ body.is-home .highlights-row--top {
 [data-theme="dark"] .topic-chip {
   background: #2a2a2a;
 }
+
+/* ── Sponsored Content UI Polish ────────────────── */
+.sponsored-label-pill {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #B8860B;
+  margin: 0 0 0.5rem 0;
+}
+
+[data-theme="dark"] .sponsored-label-pill {
+  color: #f0b030;
+}
+
+.sponsor-disclosure {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
