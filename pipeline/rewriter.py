@@ -202,13 +202,13 @@ QUALITY_SCORE_PROMPT = """Arvioi tämän suomenkielisen uutisartikkelin kielelli
 
 Palauta VAIN JSON: {"score": <numero>, "issues": "<lyhyt selitys ongelmista>"}"""
 
-ESCALATION_THRESHOLD = 3  # Score <= this triggers gpt-4o rewrite
+ESCALATION_THRESHOLD = 4  # Score <= this triggers stricter rewrite, 3 was too lenient for publish quality
 
 
 def _score_article_quality(body: str) -> tuple:
     """Score Finnish quality 1-5. Returns (score, issues_text)."""
     if QUOTA_EXHAUSTED:
-        return 4, "Quota exhausted, bypassing score" # Assume good enough for fallback
+        return 1, "Quota exhausted, quality scoring unavailable"  # Fail closed rather than blessing weak prose
     try:
         resp = _call_llm(QUALITY_SCORE_PROMPT, f"Artikkeli:\n\n{body}", model="gpt-4o-mini")
         data = _extract_json(resp)
@@ -216,7 +216,7 @@ def _score_article_quality(body: str) -> tuple:
             return int(data.get("score", 3)), data.get("issues", "")
     except Exception as e:
         print(f"[quality]   Scoring failed: {e}")
-    return 3, ""  # Default to 3 on failure
+    return 2, ""  # Fail conservatively so scoring outages do not silently pass weak prose
 
 
 def _escalate_to_gpt4o(article_json: dict, original_sources: str) -> dict:

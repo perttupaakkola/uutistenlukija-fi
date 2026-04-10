@@ -33,11 +33,10 @@ REJECTS_LOG = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
 MIN_BODY_WORDS = 250
 
 # Historical internal threshold (0–80). Corresponds to 5.0 / 10 normalized.
-# TEMPORARILY lowered 40→30 (2026-04-02) to unblock publishing after 60h drought.
-# Missing images zero out image score, pushing otherwise-good articles below 40.
-# TODO: restore to 40 once image generation pipeline is fixed.
-REJECT_THRESHOLD = 30
-DEFAULT_NORMALIZED_THRESHOLD = 3.5
+# Restored to the stricter baseline because production quality is currently below
+# publishable standard and low-quality thin-source articles have been slipping through.
+REJECT_THRESHOLD = 40
+DEFAULT_NORMALIZED_THRESHOLD = 5.0
 MAX_DUPLICATION_LOOKBACK = 50
 
 _PLACEHOLDER_PATTERNS = re.compile(
@@ -56,6 +55,11 @@ _GENERIC_ENDING_PATTERNS = (
     "aika näyttää",
     "voidaan todeta",
     "on tärkeää",
+    "enemmän kuin vain",
+    "iloa ja toivoa",
+    "yhteisöllisyyden tunnetta",
+    "kuvaa suomalaisten",
+    "kertoo suomalaisten",
 )
 
 _FINNISH_SIGNAL_WORDS = {
