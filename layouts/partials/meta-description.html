@@ -1,0 +1,36 @@
+{{- $desc := .Description -}}
+
+{{- if .IsHome -}}
+  {{- $desc = .Site.Params.description -}}
+{{- else if eq .RelPermalink "/haku/" -}}
+  {{- $desc = "Hae uutisia Uutistenlukijasta – kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede." -}}
+{{- else if .IsPage -}}
+  {{- with .Params.summary -}}
+    {{- $desc = . -}}
+  {{- else if $desc -}}
+    {{- /* Use existing .Description */ -}}
+  {{- else -}}
+    {{- $contentText := .Content | plainify | truncate 160 -}}
+    {{- if gt (len $contentText) 40 -}}
+      {{- $desc = $contentText -}}
+    {{- else -}}
+      {{- $desc = printf "Lue uutiskooste aiheesta %s. Tiivistämme päivän tärkeimmät uutiset suomeksi — säästä aikaa ja pysy kärryillä vaivatta." .Title -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if $desc -}}
+  {{- /* Use existing .Description (e.g. from category/tag _index.md) */ -}}
+{{- else if eq .Kind "term" -}}
+  {{- if eq .Data.Plural "categories" -}}
+    {{- $desc = printf "Lue tuoreimmat %s-uutiset ja tiivistelmät. Uutistenlukija kokoaa päivän tärkeimmät %s-aiheet useista eri lähteistä lukijan ajan säästämiseksi." .Title .Title -}}
+  {{- else if eq .Data.Plural "tags" -}}
+    {{- $desc = printf "Lue uutiset ja artikkelit avainsanalla %s. Tiivistämme päivän tärkeimmät puheenaiheet useista lähteistä lukijan ajan säästämiseksi." .Title -}}
+  {{- end -}}
+{{- else if or .IsSection (eq .Kind "taxonomy") -}}
+  {{- $desc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) -}}
+{{- end -}}
+
+{{- /* Final cleanup: remove newlines, plainify, and truncate to SEO-safe length */ -}}
+{{- $desc = $desc | plainify | replaceRE `\s+` " " | trim | truncate 155 -}}
+
+{{- if not $desc }}{{ $desc = .Site.Params.description | default .Site.Title }}{{ end -}}
+{{- $desc -}}

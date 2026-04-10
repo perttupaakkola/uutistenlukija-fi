@@ -28,7 +28,7 @@
     {{- $coreTitle = .Title | plainify | truncate 43 -}}
   {{- else if eq .Kind "term" -}}
     {{- if eq .Data.Plural "categories" -}}
-      {{- $coreTitle = .Data.Term | humanize | title -}}
+      {{- $coreTitle = .Title | plainify -}}
     {{- else -}}
       {{- $coreTitle = .Title | plainify -}}
     {{- end -}}
@@ -50,34 +50,7 @@
     {{- $fullTitle = printf "%s | %s" $coreTitle $siteName -}}
   {{- end -}}
   <title>{{ $fullTitle }}</title>
-  {{ $metaDesc := .Site.Params.description }}
-  {{ if .IsHome }}
-    {{ $metaDesc = .Site.Params.description }}
-  {{ else if eq .RelPermalink "/haku/" }}
-    {{ $metaDesc = printf "Hae uutisia Uutistenlukijasta – kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede." }}
-  {{ else if .IsPage }}
-    {{ with .Params.summary }}
-      {{ $metaDesc = . }}
-    {{ else with .Description }}
-      {{ $metaDesc = . }}
-    {{ else }}
-      {{ $metaDesc = .Content | plainify | truncate 160 }}
-    {{ end }}
-  {{ else if .Description }}
-    {{ $metaDesc = .Description }}
-  {{ else if eq .Kind "term" }}
-    {{ if eq .Data.Plural "categories" }}
-      {{ $metaDesc = printf "%s – uusimmat uutiset ja ajankohtaiset artikkelit aiheesta %s." .Title .Title }}
-    {{ else if eq .Data.Plural "tags" }}
-      {{ $metaDesc = printf "%s – artikkelit ja uutiset avainsanalla %s." .Title .Title }}
-    {{ else }}
-      {{ $metaDesc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) }}
-    {{ end }}
-  {{ else if or .IsSection (eq .Kind "taxonomy") }}
-    {{ $metaDesc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) }}
-  {{ end }}
-  {{ $metaDesc = $metaDesc | plainify | truncate 152 }}
-  {{ if not $metaDesc }}{{ $metaDesc = .Site.Title }}{{ end }}
+  {{ $metaDesc := partial "meta-description.html" . }}
   <meta name="description" content="{{ $metaDesc }}">
   {{- with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end -}}
   {{/* === Resource hints === */}}

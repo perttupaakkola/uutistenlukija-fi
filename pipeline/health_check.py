@@ -119,16 +119,17 @@ def notify_discord_crash(step: str, exception: Exception, *, tb: str = "") -> bo
         return False
 
 
-def notify_discord_warning(step: str, message: str) -> bool:
+def notify_discord_warning(step: str, message: str, details: str | None = None) -> bool:
     """Post a warning (non-fatal) to Discord."""
+    combined = message if not details else f"{message}\n{details}"
     if not DISCORD_WEBHOOK_URL:
-        print(f"[health_check] WARNING [{step}]: {message}")
+        print(f"[health_check] WARNING [{step}]: {combined}")
         return False
 
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     body = f"⚠️ **Pipeline warning** — `{step}`\n"
     body += f"**Time:** {timestamp}\n"
-    body += f"**Message:** {message[:500]}\n"
+    body += f"**Message:** {combined[:500]}\n"
 
     payload = json.dumps({"content": body}).encode("utf-8")
     req = urllib.request.Request(

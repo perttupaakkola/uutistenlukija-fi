@@ -63,7 +63,7 @@
 {{ end }}
 
 {{/* Resolve description */}}
-{{ $desc := .Description | default (.Summary | plainify | truncate 160) | default .Site.Params.description }}
+{{ $desc := partial "meta-description.html" . }}
 
 {{/* Author block */}}
 {{ $authorName := .Params.author | default .Site.Params.author | default "Toimitus" }}
@@ -148,7 +148,7 @@
 
 {{/* ── Category / section page: CollectionPage ─────────────────────── */}}
 {{ else if or .IsSection .IsNode }}
-{{ $catDesc := .Description | default (printf "%s — %s" .Title .Site.Title) }}
+{{ $catDesc := partial "meta-description.html" . }}
 {{ $catImage := "" }}
 {{ $catSlug := .Section | lower }}
 {{ if $catSlug }}

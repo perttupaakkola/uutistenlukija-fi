@@ -111,40 +111,7 @@
 {{ end }}
 
 {{/* ── og:description ────────────────────────────────────────────── */}}
-{{ $ogDesc := .Site.Params.description }}
-{{ if .IsHome }}
-  {{ $ogDesc = .Site.Params.description }}
-{{ else if eq .RelPermalink "/haku/" }}
-  {{ $ogDesc = printf "Hae uutisia Uutistenlukijasta – kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede." }}
-{{ else if .IsPage }}
-  {{ with .Params.summary }}
-    {{ $ogDesc = . }}
-  {{ else with .Description }}
-    {{ $ogDesc = . }}
-  {{ else }}
-    {{/* Fallback: use content if available, otherwise SEO-targeted template text */}}
-    {{ $contentText := .Content | plainify | truncate 160 }}
-    {{ if gt (len $contentText) 40 }}
-      {{ $ogDesc = $contentText }}
-    {{ else }}
-      {{ $ogDesc = printf "Lue uutiskooste aiheesta %s. Tiivistämme päivän tärkeimmät uutiset suomeksi — säästä aikaa ja pysy kärryillä vaivatta." .Title }}
-    {{ end }}
-  {{ end }}
-{{ else if .Description }}
-  {{ $ogDesc = .Description }}
-{{ else if eq .Kind "term" }}
-  {{ if eq .Data.Plural "categories" }}
-    {{ $ogDesc = printf "%s – uusimmat uutiset ja ajankohtaiset artikkelit aiheesta %s." .Title .Title }}
-  {{ else if eq .Data.Plural "tags" }}
-    {{ $ogDesc = printf "%s – artikkelit ja uutiset avainsanalla %s." .Title .Title }}
-  {{ else }}
-    {{ $ogDesc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) }}
-  {{ end }}
-{{ else if or .IsSection (eq .Kind "taxonomy") }}
-  {{ $ogDesc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) }}
-{{ end }}
-{{ $ogDesc = $ogDesc | plainify | truncate 152 }}
-{{ if not $ogDesc }}{{ $ogDesc = .Site.Params.description }}{{ end }}
+{{ $ogDesc := partial "meta-description.html" . }}
 
 {{/* ── Output ─────────────────────────────────────────────────────── */}}
 

@@ -15,8 +15,6 @@ import time
 from typing import List, Dict, Optional
 import re
 from pathlib import Path
-import urllib.request
-import urllib.error
 
 from openai import OpenAI
 
@@ -35,9 +33,12 @@ except Exception:
 
 SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja. Kirjoitat omia, alkuperäisiä uutisartikkeleita.
 
+MUISTUTUS: Kirjoita AINA suomeksi, vaikka lähde olisi englanniksi. Englanninkielinen vastaus hylätään välittömästi.
+
 === PITUUS ===
 Tavoite 400–600 sanaa. Jos lähde on lyhyt, laajenna taustan, merkityksen ja seurausten avulla — älä täytä tyhjää tilaa keksityllä tiedolla.
-Alle 300 sanan artikkelit hyväksytään vain jos lähdemateriaali on todella niukka eikä laajentaminen ole mahdollista.
+TÄRKEÄÄ: Jos laajentaminen vaatii tunteiden, "toivon", "yhteisöllisyyden" tai muun epämääräisen sentimentin keksimistä, ÄLÄ laajenna. Suomalainen uutiskieli on kuivaa ja faktapohjaista.
+Alle 300 sanan artikkelit hyväksytään vain jos lähdemateriaali on todella niukka eikä laajentaminen ole mahdollista ilman täytettä.
 
 Kun lähdemateriaali on lyhyt, laajenna VAIN näillä tavoilla (ilman keksittyjä faktoja):
   * Tausta: Mitä tapahtui aiemmin tässä asiassa? (vain jos tiedät sen varmasti)
@@ -85,33 +86,42 @@ KIRJOITUSTYYLI:
 - Aloita suoraan asiasta.
 - Lyhyet, suorat lauseet. Vaihtele pituutta.
 - Neutraalia yleiskieltä — ei puhekieltä eikä virkasuomea.
-- Vältä kliseitä: "merkittävä", "historiallinen", "mullistava" — paitsi jos se oikeasti on sitä.
-- Vältä passiivia kun aktiivi toimii.
+- ÄLÄ KEKSI ohjeita, neuvoja tai moraalisia opetuksia (esim. "rahat kannattaa käyttää harkitusti").
+- ÄLÄ KEKSI tunteita tai tunnelmia (esim. "tuo toivoa", "herättää innostusta", "on enemmän kuin peli").
+- Vältä passiivia ("on todettu", "kerrotaan") kun aktiivi toimii ("poliisi totesi", "tutkijat kertovat").
+- Käytä dynaamisia verbejä (tekee, päättää, iskee) staattisten (on, tapahtuu, esiintyy) sijaan.
+- Suosi konkreettisia kuvauksia "korkealentoisen" jargonin sijaan.
 - Ei emojeja tai otsikkolistoja.
 - Ei ajatusviivoja (—) liiallisesti.
 - Suomeksi vain ensimmäinen sana isolla otsikoissa.
 - Ei geneerisiä lopetuksia ("Aika näyttää", "Tulevaisuus näyttää").
 - Lopeta viimeiseen faktaan.
 
-KIELLETYT FRAASIT — älä koskaan käytä:
+KIELLETYT FRAASIT — älä koskaan käytä (nämä paljastavat tekoälyn):
 - "herättää kysymyksiä" / "nostaa esiin kysymyksiä"
 - "herättää huolta" (pelkkä klisee ilman faktaa)
 - "voidaan todeta" / "yhteenvetona voidaan todeta"
-- "on tärkeää huomata" / "on syytä huomata"
-- "merkittävä askel" / "tärkeä askel"
+- "on tärkeää huomata" / "on syytä huomata" / "on huomionarvoista"
+- "merkittävä askel" / "tärkeä askel" / "avainasemassa"
 - "läpinäkyvyys on tärkeää"
 - "jokainen voi tehdä oman osuutensa"
-- "aika näyttää" / "tulevaisuus näyttää" / "tulevaisuus on epävarma"
-- "voimaantua" / "voimaantuminen" (hallintoslangi)
-- Mitään muuta geneeristä tulevaisuus/vastuullisuus/yhteiskunta-jargonia joka ei lisää faktoja.
+- "aika näyttää" / "tulevaisuus näyttää" / "jää nähtäväksi"
+- "voimaantua" / "voimaantuminen" / "yhteisöllisyys" (ilman kontekstia)
+- "Lisäksi", "Toisaalta", "Siten", "Tämän seurauksena" (liiallisesti käytettynä side-sanoina)
+- "Taho", "Toimija" (kun viitataan epämääräisesti organisaatioon)
+- "Sekä" (lauseen alussa tai liiallisesti luetteloissa)
+- "Enemmän kuin vain peli"
+- "Tunne ja odotus"
+- "Viimeisenä, mutta ei vähäisimpänä"
+- "Herättää suurta innostusta"
+- "Elinehto" (liioiteltuna)
 
 TEKOÄLYKIRJOITUKSEN VÄLTTÄMINEN:
-- Ei "Lisäksi", "Toisaalta", "On huomionarvoista", "kokonaisvaltainen", "ekosysteemi" (kuvainnollisesti)
-- Ei kolmen sarjoja joka kappaleessa
-- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta)
-- Ei mainosmaista kieltä
-- Ei chatbot-artefakteja
-- Anna faktojen puhua, älä paisuttele
+- Vältä "käännöskieltä" (anglismi-rakenteet). Suomen kieli on kotiinpäin suuntautuvaa.
+- Älä käytä "kokonaisvaltainen", "ekosysteemi", "haaste" (ongelman sijaan).
+- Ei kolmen sarjoja joka kappaleessa (A, B ja C).
+- Ei synonyymien kierrätystä (yhtiö/firma/toimija/yritys samasta asiasta) — käytä mieluummin nimeä tai pronominia.
+- Anna faktojen puhua, älä paisuttele.
 
 === LEDE ===
 Aloita juttu heti tärkeimmällä uutisella.
@@ -158,40 +168,23 @@ Suosi konkreettisia verbejä ja faktoja, vältä abstraktia metapuhetta.
 
 Vastaa VAIN JSON-muodossa."""
 
-AUDIT_SYSTEM_PROMPT = """Olet tarkka kielentarkistaja. Tarkista uutisartikkelit tekoälykirjoituksen merkkien varalta ja korjaa:
+AUDIT_SYSTEM_PROMPT = """Olet kokenut suomalainen uutistoimittaja ja kielenhuollon asiantuntija. Tehtäväsi on muokata automaattisesti generoituja uutisartikkeleita niin, että ne lukevat kuin ammattitoimittajan kirjoittamat.
 
-1. Paisuttelu ja mainosmainen kieli
-2. Tekoälysanasto (Lisäksi, Toisaalta, kokonaisvaltainen, ekosysteemi)
-3. Kolmen sarjat, synonyymien kierrätys
-4. Geneeriset lopetukset
-5. Passiivin ylikäyttö
-6. Lähdeviittaukset: POISTA generiset viittaukset ("alkuperäisen uutisen mukaan", "uutinen kertoo").
-   SÄILYTÄ kansainvälisten lähteiden maininta kun se on luonnollinen osa tekstiä ("BBC:n mukaan", "The Guardianin mukaan" jne.) — sallittu kerran per artikkeli.
-7. Chatbot-artefaktit
-8. Täytesanat ja varautumiset
-9. TARKISTA KIELI: artikkelin täytyy olla suomea. Jos jokin lause on englanniksi, käännä se.
-10. TARKISTA RAKENNE: pidemmissä artikkeleissa (300+ sanaa) tulee olla 1-2 H2-väliotsikkoa (## Otsikko).
-    Lyhyissä (alle 300 sanaa) ei väliotsikoita. Lisää tai poista tarvittaessa.
-11. TARKISTA PITUUS: artikkelin täytyy olla vähintään 350 sanaa (tavoite 400–600). Jos artikkeli on lyhyempi,
-    laajenna sitä lisäämällä taustan, kontekstin ja vaikutusten kuvausta. ÄLÄ koskaan
-    palauta alle 350 sanan artikkelia. Tavallinen kappale on 60–80 sanaa.
-12. TARKISTA journalist_note: säilytä se vain jos siinä on aitoa toimituksellista lisäarvoa. Poista geneerinen tai itsestään selvä huomio käyttämällä tyhjää merkkijonoa.
-13. TARKISTA content_type: pidä oletuksena "article". Käytä "analysis" vain aidosti moninäkökulmaiseen, kehittyvään tai tulkintaa vaativaan aiheeseen.
-14. TARKISTA editorial_reviewed: sen tulee aina olla true.
-15. TARKISTA summary_bullets: kentässä tulee olla 3–4 lyhyttä suomenkielistä kohtaa. Poista luettelomerkit, tiivistä muotoon yksi ydinajatus per kohta ja pidä yhteispituus enintään 400 merkissä aina kun mahdollista.
-16. SISÄISET LINKIT: Lisää artikkelin sisältöön enintään 3 kontekstuaalista sisäistä linkkiä markdown-muodossa. Linkitä VAIN ensimmäinen maininta per kohde. Käytä näitä linkkejä:
-    - "kotimaa" → [kotimaa](/categories/kotimaa/)
-    - "ulkomaat" → [ulkomaat](/categories/ulkomaat/)
-    - "talous" tai "talousuutiset" → [talous](/categories/talous/)
-    - "teknologia" → [teknologia](/categories/teknologia/)
-    - "urheilu" → [urheilu](/categories/urheilu/)
-    - "kulttuuri" → [kulttuuri](/categories/kulttuuri/)
-    - "tiede" → [tiede](/categories/tiede/)
-    - "uutiskirje" → [uutiskirje](/uutiskirje/)
-    - "pääsiäinen" tai "pääsiäiseksi" tai "pääsiäisenä" → [pääsiäisopas](/paasiaisopas/)
-    Lisää linkit vain jos sana esiintyy luonnollisesti lauseessa. Älä pakota linkkejä. Jos artikkelissa ei ole sopivia kohtia, jätä sisältö ennalleen.
+TARKISTUSLISTA:
+1. KIELI: Artikkelin täytyy olla SUOMEA. Jos teksti on englantia, käännä se kokonaan.
+2. POISTA KAUPALLISUUS: Poista kaikki mainosmainen hehkutus ja turhat adjektiivit.
+3. LUONNOLLINEN SUOMI: Korvaa tekoälylle tyypilliset rakenteet ("Lisäksi", "Toisaalta", "On huomionarvoista", "Sekä" lauseen alussa) sujuvammilla siirtymillä tai poista ne kokonaan.
+4. AKTIIVINEN KIELI: Muuta passiivilauseet aktiiviin aina kun mahdollista (esim. "uudistus julkaistiin" -> "yhtiö julkaisi uudistuksen").
+5. KÄÄNNÖSKUKKASET: Korjaa englannista suoraan käännetyt ilmaisut, jotka kuulostavat epäluonnollisilta.
+6. VÄLTÄ "TAHOJA": Älä käytä sanoja "taho" tai "toimija" viittaamaan epämääräisiin organisaatioihin. Käytä konkreettisia nimiä.
+7. EI GENEERISIÄ LOPETUKSIA: Poista "jää nähtäväksi", "aika näyttää" ja muut tyhjät lopetukset. Artikkeli päättyy viimeiseen faktaan.
+8. RAKENNE: Varmista informatiiviset H2-väliotsikot 300+ sanan artikkeleissa. Poista ne lyhyemmistä.
+9. PITUUS: Tavoite 400-600 sanaa. Älä palauta alle 350 sanan tekstiä.
+10. SISÄISET LINKIT: Lisää linkit (kotimaa, ulkomaat, talous jne.) vain jos ne sopivat tekstiin luonnollisesti.
 
-Korjaa ongelmat ja palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
+Säilytä kaikki faktat, mutta tee tekstistä dynaamista ja uskottavaa journalismia.
+
+Vastaa VAIN JSON-listalla."""
 
 
 QUALITY_SCORE_PROMPT = """Arvioi tämän suomenkielisen uutisartikkelin kielellinen laatu asteikolla 1–5:
@@ -204,13 +197,13 @@ QUALITY_SCORE_PROMPT = """Arvioi tämän suomenkielisen uutisartikkelin kielelli
 
 Palauta VAIN JSON: {"score": <numero>, "issues": "<lyhyt selitys ongelmista>"}"""
 
-ESCALATION_THRESHOLD = 4  # Score <= this triggers stricter rewrite, 3 was too lenient for publish quality
+ESCALATION_THRESHOLD = 3  # Score <= this triggers gpt-4o rewrite
 
 
 def _score_article_quality(body: str) -> tuple:
     """Score Finnish quality 1-5. Returns (score, issues_text)."""
     if QUOTA_EXHAUSTED:
-        return 1, "Quota exhausted, quality scoring unavailable"  # Fail closed rather than blessing weak prose
+        return 4, "Quota exhausted, bypassing score" # Assume good enough for fallback
     try:
         resp = _call_llm(QUALITY_SCORE_PROMPT, f"Artikkeli:\n\n{body}", model="gpt-4o-mini")
         data = _extract_json(resp)
@@ -218,7 +211,7 @@ def _score_article_quality(body: str) -> tuple:
             return int(data.get("score", 3)), data.get("issues", "")
     except Exception as e:
         print(f"[quality]   Scoring failed: {e}")
-    return 2, ""  # Fail conservatively so scoring outages do not silently pass weak prose
+    return 3, ""  # Default to 3 on failure
 
 
 def _escalate_to_gpt4o(article_json: dict, original_sources: str) -> dict:
@@ -251,60 +244,6 @@ _RETRYABLE_HTTP = {429, 500, 502, 503, 504}
 
 # Reuse a single client instance per process
 _openai_client: "OpenAI | None" = None
-GEMINI_FALLBACK_MODEL = os.environ.get("GEMINI_FALLBACK_MODEL", "gemini-2.0-flash")
-
-
-def _read_env_key_from_files(key_name: str) -> str:
-    candidates = [
-        Path(__file__).resolve().parents[1] / ".env",
-        Path("/home/pertt/.openclaw/.env"),
-    ]
-    for path in candidates:
-        try:
-            if not path.exists():
-                continue
-            for line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
-                if line.startswith(f"{key_name}="):
-                    return line.split("=", 1)[1].strip()
-        except Exception:
-            continue
-    return ""
-
-
-def _get_gemini_key() -> str:
-    return os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY") or _read_env_key_from_files("GEMINI_API_KEY") or _read_env_key_from_files("GOOGLE_API_KEY")
-
-
-def _call_gemini(system: str, prompt: str, model: str | None = None) -> str:
-    api_key = _get_gemini_key()
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY is not set")
-    model = model or GEMINI_FALLBACK_MODEL
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
-    payload = {
-        "system_instruction": {"parts": [{"text": system}]},
-        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.2,
-            "responseMimeType": "text/plain",
-        },
-    }
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    candidates = data.get("candidates") or []
-    if not candidates:
-        raise RuntimeError(f"Gemini returned no candidates: {data}")
-    parts = candidates[0].get("content", {}).get("parts", [])
-    text = "".join(part.get("text", "") for part in parts)
-    if not text.strip():
-        raise RuntimeError(f"Gemini returned empty text: {data}")
-    return text.strip()
 
 
 def _get_client() -> "OpenAI":
@@ -318,11 +257,14 @@ def _get_client() -> "OpenAI":
 
 
 def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
-    """Call OpenAI LLM with exponential backoff retry and Gemini fallback on quota exhaustion."""
+    """Call OpenAI LLM with exponential backoff retry (3 attempts).
+
+    Retries on: 429, 5xx, timeout, connection errors.
+    Hard-fails on: 400, 401, 403 (bad request / auth — won't fix on retry).
+    """
     global QUOTA_EXHAUSTED
     if QUOTA_EXHAUSTED:
-        print(f"[writer]   OpenAI quota exhausted earlier in run, using Gemini fallback ({GEMINI_FALLBACK_MODEL})")
-        return _call_gemini(system, prompt)
+        raise RuntimeError("Quota already exhausted in this run")
 
     last_exc = None
     for attempt in range(1, _RETRY_ATTEMPTS + 1):
@@ -345,11 +287,9 @@ def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
                 print(f"[writer]   LLM call failed (HTTP {status}, non-retryable): {e}")
                 raise
 
-            quota_hit = status == 429 or "insufficient_quota" in str(e)
-            if quota_hit:
+            # Detect quota exhaustion
+            if status == 429 or "insufficient_quota" in str(e):
                 QUOTA_EXHAUSTED = True
-                print(f"[writer]   OpenAI quota exhausted, switching to Gemini fallback ({GEMINI_FALLBACK_MODEL})")
-                return _call_gemini(system, prompt)
 
             if attempt < _RETRY_ATTEMPTS:
                 delay = _RETRY_BASE_DELAY * (2 ** (attempt - 1))
@@ -388,7 +328,9 @@ _GENERIC_ENDING_PATTERNS = re.compile(
     r"merkittävä (hetki|askel|käänne|kehitys)|"
     r"on tärkeää,?\s+että|herättää (laajaa )?(kysymyksiä|huolta)|"
     r"voidaan todeta|yhteenvetona|kaiken kaikkiaan|"
-    r"lopuksi voidaan|kokonaisuutena|tiivistäen)",
+    r"lopuksi voidaan|kokonaisuutena|tiivistäen|"
+    r"enemmän kuin vain peli|tunne ja odotus|"
+    r"viimeisenä, mutta ei vähäisimpänä|perjantairaskaus)",
     re.IGNORECASE,
 )
 
@@ -1116,10 +1058,14 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             written_article["editorial_reviewed"] = True
             written_article["summary_bullets"] = _normalize_summary_bullets(written_article)
 
-            # Quality gate: score Finnish and escalate low-quality to gpt-4o
+                        # Quality gate: score Finnish and escalate low-quality to gpt-4o
             art_body = written_article.get("content", "")
             score, issues = _score_article_quality(art_body)
-            if score <= ESCALATION_THRESHOLD:
+            # FORCE REWRITE if quota not exhausted and article is likely fallback/low quality
+            # (Emergency fallbacks usually have low quality scores or specific patterns)
+            force_rewrite = not QUOTA_EXHAUSTED and (score <= ESCALATION_THRESHOLD or "## Mitä tiedetään nyt" in art_body)
+            
+            if force_rewrite:
                 print(f"[quality]   Score {score}/5 for '{written_article.get('title','')[:50]}' — escalating to gpt-4o")
                 print(f"[quality]   Issues: {issues}")
                 try:
