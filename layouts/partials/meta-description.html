@@ -30,7 +30,7 @@
 {{- end -}}
 
 {{- /* Final cleanup: remove newlines, plainify, and truncate to SEO-safe length */ -}}
-{{- $desc = $desc | plainify | replaceRE `\s+` " " | trim | truncate 155 -}}
+{{- $desc = $desc | plainify | replaceRE `\s+` " " | truncate 155 -}}
 
 {{- if not $desc }}{{ $desc = .Site.Params.description | default .Site.Title }}{{ end -}}
 {{- $desc -}}
