@@ -15,6 +15,7 @@ import time
 from typing import List, Dict, Optional
 import re
 from pathlib import Path
+import urllib.request
 
 from openai import OpenAI
 
@@ -244,6 +245,65 @@ _RETRYABLE_HTTP = {429, 500, 502, 503, 504}
 
 # Reuse a single client instance per process
 _openai_client: "OpenAI | None" = None
+GEMINI_FALLBACK_MODEL = os.environ.get("GEMINI_FALLBACK_MODEL", "gemini-2.0-flash")
+
+
+def _read_env_key_from_files(key_name: str) -> str:
+    candidates = [
+        Path(__file__).resolve().parents[1] / ".env",
+        Path("/home/pertt/.openclaw/.env"),
+    ]
+    for path in candidates:
+        try:
+            if not path.exists():
+                continue
+            for line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+                if line.startswith(f"{key_name}="):
+                    return line.split("=", 1)[1].strip()
+        except Exception:
+            continue
+    return ""
+
+
+def _get_gemini_key() -> str:
+    return (
+        os.environ.get("GEMINI_API_KEY")
+        or os.environ.get("GOOGLE_API_KEY")
+        or _read_env_key_from_files("GEMINI_API_KEY")
+        or _read_env_key_from_files("GOOGLE_API_KEY")
+    )
+
+
+def _call_gemini(system: str, prompt: str, model: str | None = None) -> str:
+    api_key = _get_gemini_key()
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY is not set")
+    model = model or GEMINI_FALLBACK_MODEL
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
+    payload = {
+        "system_instruction": {"parts": [{"text": system}]},
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.2,
+            "responseMimeType": "text/plain",
+        },
+    }
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    candidates = data.get("candidates") or []
+    if not candidates:
+        raise RuntimeError(f"Gemini returned no candidates: {data}")
+    parts = candidates[0].get("content", {}).get("parts", [])
+    text = "".join(part.get("text", "") for part in parts)
+    if not text.strip():
+        raise RuntimeError(f"Gemini returned empty text: {data}")
+    return text.strip()
 
 
 def _get_client() -> "OpenAI":
@@ -257,14 +317,11 @@ def _get_client() -> "OpenAI":
 
 
 def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
-    """Call OpenAI LLM with exponential backoff retry (3 attempts).
-
-    Retries on: 429, 5xx, timeout, connection errors.
-    Hard-fails on: 400, 401, 403 (bad request / auth — won't fix on retry).
-    """
+    """Call OpenAI with retry, fall back to Gemini on quota exhaustion."""
     global QUOTA_EXHAUSTED
     if QUOTA_EXHAUSTED:
-        raise RuntimeError("Quota already exhausted in this run")
+        print(f"[writer]   OpenAI quota exhausted earlier in run, using Gemini fallback ({GEMINI_FALLBACK_MODEL})")
+        return _call_gemini(system, prompt)
 
     last_exc = None
     for attempt in range(1, _RETRY_ATTEMPTS + 1):
@@ -287,9 +344,11 @@ def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
                 print(f"[writer]   LLM call failed (HTTP {status}, non-retryable): {e}")
                 raise
 
-            # Detect quota exhaustion
-            if status == 429 or "insufficient_quota" in str(e):
+            quota_hit = status == 429 or "insufficient_quota" in str(e)
+            if quota_hit:
                 QUOTA_EXHAUSTED = True
+                print(f"[writer]   OpenAI quota exhausted, switching to Gemini fallback ({GEMINI_FALLBACK_MODEL})")
+                return _call_gemini(system, prompt)
 
             if attempt < _RETRY_ATTEMPTS:
                 delay = _RETRY_BASE_DELAY * (2 ** (attempt - 1))
