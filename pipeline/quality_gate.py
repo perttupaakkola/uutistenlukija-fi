@@ -31,6 +31,9 @@ _CONTENT_POSTS_DIR = os.path.abspath(os.path.join(_PIPELINE_DIR, "..", "content"
 REJECTED_DIR = os.path.join(_PIPELINE_DIR, "rejected")
 REJECTS_LOG = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
 MIN_BODY_WORDS = 250
+DEGRADED_MIN_BODY_WORDS = 140
+DEGRADED_MIN_PARAGRAPHS = 2
+DEGRADED_MIN_LEAD_WORDS = 20
 
 # Historical internal threshold (0–80). Corresponds to 5.0 / 10 normalized.
 # TEMPORARILY lowered 40→30 (2026-04-02) to unblock publishing after 60h drought.
@@ -421,16 +424,21 @@ def score_article(article: dict) -> ScoreBreakdown:
     if source_text_words > 0 and source_text_words < 60:
         hard_fails.append(f"thin_source ({source_text_words} words in source — likely paywall/stub)")
 
-    if word_count < MIN_BODY_WORDS:
-        hard_fails.append(f"too_short ({word_count} words, min {MIN_BODY_WORDS})")
+    degraded_mode = bool(article.get("degraded_mode"))
+    min_body_words = DEGRADED_MIN_BODY_WORDS if degraded_mode else MIN_BODY_WORDS
+    min_paragraphs = DEGRADED_MIN_PARAGRAPHS if degraded_mode else 3
+    min_lead_words = DEGRADED_MIN_LEAD_WORDS if degraded_mode else 30
 
-    if len(paragraphs) < 3:
-        hard_fails.append(f"only {len(paragraphs)} paragraphs (min 3)")
+    if word_count < min_body_words:
+        hard_fails.append(f"too_short ({word_count} words, min {min_body_words})")
+
+    if len(paragraphs) < min_paragraphs:
+        hard_fails.append(f"only {len(paragraphs)} paragraphs (min {min_paragraphs})")
 
     if paragraphs:
         lead_words = len(paragraphs[0].split())
-        if lead_words < 30:
-            hard_fails.append(f"lead paragraph too short ({lead_words} words, min 30)")
+        if lead_words < min_lead_words:
+            hard_fails.append(f"lead paragraph too short ({lead_words} words, min {min_lead_words})")
 
     lines = [l for l in content.splitlines() if l.strip()]
     if lines:

@@ -707,6 +707,9 @@ def _build_quota_fallback_article(article: Dict) -> Optional[Dict]:
     if intro and not re.search(r"[.!?]$", intro):
         intro += "."
 
+    if intro and len(intro.split()) < 20 and cleaned_blocks:
+        intro = f"{intro} {' '.join(cleaned_blocks[:1])}".strip()
+
     body_parts: List[str] = [intro, "## Mitä tiedetään nyt"]
     body_parts.extend(cleaned_blocks[:2])
 
@@ -714,17 +717,22 @@ def _build_quota_fallback_article(article: Dict) -> Optional[Dict]:
         body_parts.append("## Miksi asia on tärkeä")
         body_parts.extend(cleaned_blocks[2:4])
 
+    if len(cleaned_blocks) > 4:
+        body_parts.append("## Taustaa")
+        body_parts.extend(cleaned_blocks[4:6])
+
     body = "\n\n".join(part for part in body_parts if part).strip()
-    if len(body.split()) < 180:
+    if len(body.split()) < 220:
         body = "\n\n".join([intro, "## Tilannekuva", "\n\n".join(cleaned_blocks)]).strip()
 
-    if len(body.split()) < 120:
+    if len(body.split()) < 140:
         return None
 
     summary = description or re.sub(r"\s+", " ", body).strip()[:220]
     category = _infer_fallback_category(article)
     source_name = str(article.get("source") or article.get("source_name") or article.get("domain") or "").strip()
     link = str(article.get("link") or article.get("url") or article.get("source_url") or "").strip()
+    key_points = _fallback_summary_bullets({"description": summary, "content": body})[:3]
 
     return {
         "title": title,
@@ -733,6 +741,8 @@ def _build_quota_fallback_article(article: Dict) -> Optional[Dict]:
         "category": category,
         "tags": [category.lower(), "uutiset", "tilannekuva"],
         "summary_bullets": _fallback_summary_bullets({"description": summary, "content": body}),
+        "key_points": key_points,
+        "degraded_mode": True,
         "source_name": source_name,
         "source_url": link,
     }
