@@ -28,6 +28,7 @@ import urllib.request
 import urllib.error
 from datetime import datetime, timezone
 from typing import Optional
+from pathlib import Path
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -48,9 +49,67 @@ DISK_WARN_GB       = 2.0          # warn if free < 2 GB
 MEM_WARN_MB        = 200          # warn if available < 200 MB
 
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_PIPELINE_WEBHOOK", "")
+DISCORD_ALERT_CHANNEL_ID = os.environ.get("DISCORD_PIPELINE_ALERT_CHANNEL_ID", "1482079802621169735")
 LOG_DIR_OVERRIDE = None  # set by tests
 
 LOG_DIR = os.path.join(_HERE, "logs")
+
+
+def _read_env_key_from_files(key_name: str) -> str:
+    candidates = [
+        Path(_ROOT) / ".env",
+        Path("/home/pertt/.openclaw/.env"),
+    ]
+    for path in candidates:
+        try:
+            if not path.exists():
+                continue
+            for line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+                if line.startswith(f"{key_name}="):
+                    return line.split("=", 1)[1].strip()
+        except Exception:
+            continue
+    return ""
+
+
+def _post_via_discord_bot(body: str) -> bool:
+    token = os.environ.get("OPENCLAW_DISCORD_BOT_TOKEN") or _read_env_key_from_files("OPENCLAW_DISCORD_BOT_TOKEN")
+    if not token or not DISCORD_ALERT_CHANNEL_ID:
+        return False
+    payload = json.dumps({"content": body[:1900]}).encode("utf-8")
+    req = urllib.request.Request(
+        f"https://discord.com/api/v10/channels/{DISCORD_ALERT_CHANNEL_ID}/messages",
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bot {token}",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return resp.status in (200, 201, 204)
+    except Exception as e:
+        print(f"[health_check] Discord bot notify failed: {e}")
+        return False
+
+
+def _send_discord_message(body: str) -> bool:
+    if DISCORD_WEBHOOK_URL:
+        payload = json.dumps({"content": body}).encode("utf-8")
+        req = urllib.request.Request(
+            DISCORD_WEBHOOK_URL,
+            data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                if resp.status in (200, 204):
+                    return True
+        except Exception as e:
+            print(f"[health_check] Discord webhook notify failed: {e}")
+    return _post_via_discord_bot(body)
 
 
 def notify_discord_failure(step: str, error: str, context: str = "") -> bool:
@@ -69,19 +128,7 @@ def notify_discord_failure(step: str, error: str, context: str = "") -> bool:
     if context:
         body += f"**Context:** {context[:300]}\n"
 
-    payload = json.dumps({"content": body}).encode("utf-8")
-    req = urllib.request.Request(
-        DISCORD_WEBHOOK_URL,
-        data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            return resp.status in (200, 204)
-    except Exception as e:
-        print(f"[health_check] Discord notify failed: {e}")
-        return False
+    return _send_discord_message(body)
 
 
 def notify_discord_crash(step: str, exception: Exception, *, tb: str = "") -> bool:
@@ -104,19 +151,7 @@ def notify_discord_crash(step: str, exception: Exception, *, tb: str = "") -> bo
     if context:
         body += f"```\n{context[:500]}\n```\n"
 
-    payload = json.dumps({"content": body}).encode("utf-8")
-    req = urllib.request.Request(
-        DISCORD_WEBHOOK_URL,
-        data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            return resp.status in (200, 204)
-    except Exception as e:
-        print(f"[health_check] Discord notify failed: {e}")
-        return False
+    return _send_discord_message(body)
 
 
 def notify_discord_warning(step: str, message: str, details: str | None = None) -> bool:
@@ -131,19 +166,7 @@ def notify_discord_warning(step: str, message: str, details: str | None = None) 
     body += f"**Time:** {timestamp}\n"
     body += f"**Message:** {combined[:500]}\n"
 
-    payload = json.dumps({"content": body}).encode("utf-8")
-    req = urllib.request.Request(
-        DISCORD_WEBHOOK_URL,
-        data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            return resp.status in (200, 204)
-    except Exception as e:
-        print(f"[health_check] Discord warning notify failed: {e}")
-        return False
+    return _send_discord_message(body)
 
 
 def write_metrics(metrics: dict) -> str:
