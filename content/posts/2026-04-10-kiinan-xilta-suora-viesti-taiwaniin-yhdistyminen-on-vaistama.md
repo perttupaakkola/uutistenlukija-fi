@@ -8,12 +8,12 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-summary: "Taiwanin oppositiojohtaja vierailee parhaillaan Kiinassa. Kiinan presidentti Xi Jinping tapasi perjantaina Taiwanin oppositiopuolue Kuomintangin (KMT) puheenjohtajan Cheng Li-wunin Pekingissä. Xi sanoi tapaamisessa luottavansa täysin siihen, että Kiina ja Taiwan vielä jonain päivänä yhdistyvät."
+summary: "Kiinan presidentti Xi Jinping tapasi Pekingissä Taiwanin oppositiopuolue Kuomintangin puheenjohtajan Cheng Li-wunin. Xi sanoi uskovansa, että Kiina ja Taiwan vielä yhdistyvät, kun taas vierailu on herättänyt Taiwanissa kiistaa turvallisuudesta ja suhteista Pekingiin."
 summary_bullets:
-  - "Taiwanin oppositiojohtaja vierailee parhaillaan Kiinassa"
-  - "Kiinan presidentti Xi Jinping tapasi perjantaina Taiwanin oppositiopuolue Kuomintangin (KMT) puheenjohtajan Cheng Li-wunin Pekingissä"
-  - "Xi sanoi tapaamisessa luottavansa täysin siihen, että Kiina ja Taiwan vielä jonain päivänä yhdistyvät"
-  - "## Mitä tiedetään nyt Taiwanin oppositiojohtaja vierailee parhaillaan Kiinassa"
+  - "Xi tapasi Kuomintangin puheenjohtajan Pekingissä"
+  - "Kiinan viesti oli, että yhdistyminen on väistämätöntä"
+  - "Vierailu on herättänyt Taiwanissa poliittista kiistaa"
+  - "Keskustelu liittyy myös Taiwanin turvallisuuteen ja puolustukseen"
 content_type: "article"
 editorial_reviewed: true
 image: "https://images.unsplash.com/photo-1766964288691-9a3f8ac1be35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwzfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc1NzQzNDA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -37,44 +37,20 @@ briefing: true
 draft: false
 ---
 
-Taiwanin oppositiojohtaja vierailee parhaillaan Kiinassa. Kiinan presidentti Xi Jinping tapasi perjantaina Taiwanin oppositiopuolue Kuomintangin (KMT) puheenjohtajan Cheng Li-wunin Pekingissä. Xi sanoi tapaamisessa luottavansa täysin siihen, että Kiina ja Taiwan vielä jonain päivänä yhdistyvät.
+Kiinan presidentti Xi Jinping tapasi perjantaina Pekingissä Taiwanin oppositiopuolue Kuomintangin puheenjohtajan Cheng Li-wunin ja sanoi uskovansa, että Kiina ja Taiwan vielä yhdistyvät.
 
-## Mitä tiedetään nyt
+Tapaaminen on poikkeuksellinen, sillä Kuomintangin nykyjohdon vierailut Pekingissä ovat olleet harvinaisia. Kiina pitää Taiwania osana itseään, vaikka Taiwan toimii käytännössä itsenäisesti ja sillä on oma demokraattinen hallinto.
 
-Taiwanin oppositiojohtaja vierailee parhaillaan Kiinassa. Kiinan presidentti Xi Jinping tapasi perjantaina Taiwanin oppositiopuolue Kuomintangin (KMT) puheenjohtajan Cheng Li-wunin Pekingissä. Xi sanoi tapaamisessa luottavansa täysin siihen, että Kiina ja Taiwan vielä jonain päivänä yhdistyvät.
+## Pekingin viesti oli suora
 
-PEKING Kiinan pääkaupungissa nähtiin perjantaina harvinainen poseeraus. Presidentti Xi Jinping otti vastaan Taiwanin oppositiopuolueen Kuomintangin johtajan Cheng Li-wunin.
+Xi kuvasi tapaamisessa yhdistymistä historialliseksi kehityskuluksi. Cheng puolestaan korosti yhteistyötä ja sitä, että Taiwaninsalmessa pitäisi pyrkiä välttämään sotilaallista kärjistymistä.
 
-Taiwanin ”perustajapuolueen” Kuomintangin johtajaa ei ole Pekingissä nähty vuosikymmeneen.
+Tapaaminen tuli hetkeen, jolloin Kiinan ja Taiwanin suhteet ovat muuten kireät. Kiina on lisännyt sotilaallista painetta Taiwanin ympärillä, ja saarella käydään samaan aikaan sisäpoliittista kiistaa siitä, miten puolustusta pitäisi vahvistaa.
 
-Taiwan on itsenäisesti toimiva, demokraattinen valtio. Harva maa tunnustaa sen itsenäisyyden, ja Kiina pitää Taiwania osana itseään.
+## Vierailu jakaa mielipiteitä Taiwanissa
 
-Xin mukaan Kiinan ja Taiwanin yhdistyminen tulee koko ajan lähemmäksi.
+Taiwanissa Kuomintangin Peking-vierailu on herättänyt kritiikkiä erityisesti hallitsevan DPP-puolueen suunnalta. Arvostelijoiden mielestä tällaiset tapaamiset voivat antaa Kiinalle mahdollisuuden vaikuttaa Taiwanin sisäiseen keskusteluun samaan aikaan, kun Peking torjuu yhteydet presidentti Lai Ching-tehin johtoon.
 
-– Se on väistämätön osa historiaa, Xi sanoi tapaamisessa.
+Kuomintang on puolustanut vierailuaan rauhan edistämisellä. Puolueen mukaan matkaa ei pidä tulkita osaksi neuvotteluja Taiwanin puolustusmenoista tai myönnytyksenä Kiinan suuntaan.
 
-Chengin mielestä Kiinan ja Taiwanin pitäisi tehdä kuitenkin yhteistyötä sodan välttämiseksi.
-
-– Taiwaninsalmi voisi olla malli rauhanomaiselle konfliktinratkaisulle, hän totesi.
-
-Nyt salmi on kaikkea muuta kuin esimerkki rauhan rakentamisesta. Kiinan asevoimien on sanottu varustautuvan siihen, että maalla on valmiudet ensi vuoden jälkeen koska tahansa ottaa Taiwan haltuunsa.
-
-Xi ja Cheng haluavat nyt vierailulla vahvistaa narratiivia, että sota ei ole vääjäämätön. Viesti on tarkoitettu kuultavaksi niin Taiwanissa kuin Yhdysvalloissakin.
-
-Taiwanissa Chengin Kiinan-vierailu aiheuttaa kuohuntaa. Hallitsevan Demokraattisen edistyspuolueen DPP:n mielestä vierailu kyseenalaistaa Taiwanin itsemääräämisasemaa.
-
-Taiwanissa tällaisen vierailun yhteydessä herää aina pelkoa siitä, että kulisseissa solmitaan salaisia sopimuksia ja saaren asema kansainvälisesti heikentyy.
-
-Kiina kieltäytyy tapaamisista DPP:n ja sitä edustavan presidentti Lai Ching-tehin kanssa.
-
-Sisäpoliittisesti Chengin vierailu osuu arkaan paikkaan, sillä Taiwanissa on meneillään armoton vääntö puolustusbudjetin kasvattamisesta nimenomaan Kiinan pelossa.
-
-Kuomintang ei osallistunut torstaina Taipeissa yhteisneuvotteluihin, joissa piti edistää lähes 40 miljardin euron lisäystä puolustusmäärärahoihin. Niillä pitäisi kustantaa uudet aseostot Yhdysvalloista.
-
-Puolue antoi tiedotteen, jonka mukaan Chengin ”rauhanmatkalla” ei ole yhteyttä puolustusbudjettineuvotteluihin.
-
-Kun Kiinan nostaa nyt vuoropuhelun näkyvyyttä Kuomintangin kanssa, se samalla vahvistaa taiwanilaisessa sisäpolitiikassa jo olevaa keskustelua, jonkn mukaan vuoropuhelu voi vahvistaa rauhaa ja sotavoiman kasvattamiseen tulee suhtautua varauksin.
-
-Kiinakin mielummin haluaisi yhdistymisen tapahtuvan muutoin kuin pakkokeinoin. Halukkaiden taiwanilaisten toimijoiden kautta Kiinan on mahdollista muokata taiwanilaista keskustelua turvallisuudesta, rauhasta ja kansallisesta identiteetistä.
-
-Työsarkaa tässä riittää. Nyt Taiwan
+Vierailu kuitenkin osoittaa, että Kiina pyrkii pitämään yhteydet auki niihin taiwanilaisiin poliittisiin toimijoihin, jotka suhtautuvat vuoropuheluun myönteisemmin. Samalla Taiwanissa jatkuu kiista siitä, voiko tällainen yhteys lieventää jännitteitä vai heikentää saaren omaa neuvotteluasemaa.
