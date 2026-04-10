@@ -101,16 +101,25 @@ fi
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
-# Sync with origin — pull remote changes, preserving local untracked content.
-# Only stash tracked layout/script files (NOT untracked content articles).
-# Previous approach used 'git stash --include-untracked' which ate new articles.
-# Stash ALL local changes before pull to prevent "cannot pull with rebase: unstaged changes"
-# This includes content articles written by the pipeline, cron-generated JSON, and layout files.
-# Everything gets popped back after the rebase.
-git stash push -m "auto-publish pre-rebase" 2>/dev/null || true
+# Sync with origin — pull remote changes without losing newly generated untracked articles.
+# Plain `git stash push` misses untracked content/posts/*.md, while `--include-untracked`
+# can hide them inside the stash and leave the run looking like a successful no-op.
+# So we explicitly back up untracked article files first, then stash everything else.
+TMP_UNTRACKED_DIR="$(mktemp -d)"
+git ls-files --others --exclude-standard content/posts/*.md 2>/dev/null | while IFS= read -r f; do
+  [ -f "$f" ] || continue
+  mkdir -p "$TMP_UNTRACKED_DIR/$(dirname "$f")"
+  cp "$f" "$TMP_UNTRACKED_DIR/$f"
+done
+
+git stash push --include-untracked -m "auto-publish pre-rebase" 2>/dev/null || true
 git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
 STASH_LIST=$(git stash list 2>/dev/null | head -1)
 if [ -n "$STASH_LIST" ]; then git stash pop --quiet 2>/dev/null || true; fi
+if [ -d "$TMP_UNTRACKED_DIR/content/posts" ]; then
+  cp -n "$TMP_UNTRACKED_DIR"/content/posts/*.md content/posts/ 2>/dev/null || true
+fi
+rm -rf "$TMP_UNTRACKED_DIR"
 
 # Restore layout/script files to HEAD (discard any bridge sync drift).
 # This only touches tracked paths — content/posts/ is preserved.
