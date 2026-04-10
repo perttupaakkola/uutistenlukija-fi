@@ -6,6 +6,7 @@
 <div class="category-header">
   <h1>Kategoriat</h1>
 </div>
+{{ if gt (len .Pages) 0 }}
 <div class="articles-grid">
   {{ range .Pages }}
   <article class="article-card">
@@ -20,4 +21,5 @@
     "description" "Sivustolla ei ole vielä määriteltyjä kategorioita."
     "icon" "news"
   ) }}
+{{ end }}
 {{ end }}
