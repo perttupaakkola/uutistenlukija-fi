@@ -3156,7 +3156,7 @@ body.is-home .highlights-row--top {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin: 1rem 0 1.25rem;
+  margin: 1.1rem 0 1.35rem;
   padding: 0.8rem 0.95rem;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -3247,6 +3247,40 @@ body.is-home .highlights-row--top {
 .article-outro-topic-prompt a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.single-article > h1,
+.single-article .analysis-title {
+  margin-bottom: 0.9rem;
+}
+
+.single-article > .content-type-badge,
+.single-article > .article-badge,
+.single-article > .category-label,
+.single-article > .category-badge {
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+}
+
+.single-article > .related-topic-chips {
+  margin-top: 0;
+  margin-bottom: 0.95rem;
+}
+
+.single-article > .article-summary,
+.single-article > .article-summary-bullets,
+.single-article > .source-article-link,
+.single-article > .article-meta {
+  margin-top: 0;
+}
+
+.single-article > .article-summary,
+.single-article > .article-summary-bullets {
+  margin-bottom: 1rem;
+}
+
+.single-article > .article-meta {
+  margin-bottom: 1.15rem;
 }
 
 .single-article .content {
@@ -3608,6 +3642,31 @@ body.is-home .highlights-row--top {
 
 [data-theme="dark"] .topic-chip {
   background: #2a2a2a;
+}
+
+@media (max-width: 600px) {
+  .single-article > h1,
+  .single-article .analysis-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .single-article > .content-type-badge,
+  .single-article > .article-badge,
+  .single-article > .category-label,
+  .single-article > .category-badge {
+    margin-bottom: 0.7rem;
+  }
+
+  .single-article > .related-topic-chips {
+    margin-bottom: 0.8rem;
+  }
+
+  .single-article > .article-summary,
+  .single-article > .article-summary-bullets,
+  .single-article > .source-article-link,
+  .single-article > .article-meta {
+    margin-bottom: 0.9rem;
+  }
 }
 
 /* ── Sponsored Content UI Polish ────────────────── */
