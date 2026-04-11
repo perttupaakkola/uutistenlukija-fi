@@ -20,7 +20,13 @@
 {{- else if .IsPage -}}
   {{- $coreTitle = .Title | plainify | truncate 43 -}}
 {{- else if eq .Kind "term" -}}
-  {{- $coreTitle = .Title | plainify -}}
+  {{- if eq .Data.Plural "categories" -}}
+    {{- $coreTitle = printf "%s-uutiset" (.Title | plainify) -}}
+  {{- else if eq .Data.Plural "tags" -}}
+    {{- $coreTitle = printf "%s-aiheiset uutiset" (.Title | plainify) -}}
+  {{- else -}}
+    {{- $coreTitle = .Title | plainify -}}
+  {{- end -}}
 {{- else if eq .Kind "taxonomy" -}}
   {{- if eq .Data.Plural "categories" -}}
     {{- $coreTitle = "Kategoriat" -}}
