@@ -9,6 +9,8 @@
 {{- if eq .showKeyFacts true }}{{ partial "key-facts.html" $page }}{{ end }}
 {{- if eq .showToc true }}{{ partial "toc.html" $page }}{{ end }}
 
+{{- if eq .showSource true }}{{ partial "source-article-link.html" $page }}{{ end }}
+
 {{- if eq .metaVariant "single" }}
 <div class="article-meta">
   {{- $publishedAt := $page.Date -}}
@@ -24,7 +26,7 @@
   {{- end -}}
 
   {{- if ne $updatedAt "" }}
-  · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty {{ $updatedAt | time.Format "15:04" }}</span>
+  · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty {{ $updatedAt | time.Format "2.1. klo 15:04" }}</span>
   {{- end }}
   {{ with $page.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
   {{- if ge $page.WordCount 200 }}
@@ -42,6 +44,14 @@
 <div class="{{ $contentClass }}">
   {{ $page.Content }}
 </div>
+
+{{- if and (eq .showSource true) (not $page.Params.source_url) (not $page.Params.journalist_note) }}
+<div class="article-end-note">
+  <p>Tämä uutinen on tiivistetty useista eri uutislähteistä lukijan ajan säästämiseksi.</p>
+</div>
+{{- end }}
+
+{{ partial "article-outro-topic-prompt.html" $page }}
 
 {{- if eq .showJournalistNote true }}{{ partial "journalist-note.html" $page }}{{ end }}
 {{- if eq .showAfterArticleAd true }}{{ partial "ad-slot.html" (dict "position" "after-article" "context" $page) }}{{ end }}

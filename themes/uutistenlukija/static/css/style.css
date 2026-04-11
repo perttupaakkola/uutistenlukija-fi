@@ -495,11 +495,50 @@ img { max-width: 100%; height: auto; }
 }
 .site-footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.4fr;
   gap: 2rem;
   padding-bottom: 2rem;
   text-align: left;
 }
+.newsletter-signup--footer {
+  margin: 0;
+}
+.newsletter-signup--footer .newsletter-signup__inner {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  padding: 0;
+  border: 0;
+}
+.newsletter-signup--footer .newsletter-signup__eyebrow {
+  display: none;
+}
+.newsletter-signup--footer .newsletter-signup__title {
+  color: #fff;
+  font-size: 1.1rem;
+}
+.newsletter-signup--footer .newsletter-signup__text,
+.newsletter-signup--footer .newsletter-signup__note {
+  color: #a7a7a7;
+  font-size: 0.85rem;
+}
+.newsletter-signup--footer .newsletter-signup__input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  min-height: 42px;
+}
+.newsletter-signup--footer .newsletter-signup__button {
+  min-height: 42px;
+  padding: 0 1rem;
+}
+.newsletter-signup--footer .newsletter-signup__status.is-success {
+  color: #86efac;
+}
+.newsletter-signup--footer .newsletter-signup__status.is-error {
+  color: #fca5a5;
+}
+
 @media (max-width: 768px) {
   .site-footer-grid {
     grid-template-columns: 1fr;
@@ -3157,6 +3196,51 @@ body.is-home .highlights-row--top {
   text-decoration: none;
 }
 .source-article-link__anchor:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-end-note {
+  margin: 2.5rem 0 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  text-align: center;
+  background: color-mix(in srgb, var(--surface-alt) 30%, transparent);
+  border-radius: 8px;
+}
+.article-end-note p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.article-outro-topic-prompt {
+  margin: 1.5rem 0 2rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--surface-alt) 45%, transparent);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.article-outro-topic-prompt p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.article-outro-topic-prompt a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.article-outro-topic-prompt a:hover,
+.article-outro-topic-prompt a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 2px;
 }

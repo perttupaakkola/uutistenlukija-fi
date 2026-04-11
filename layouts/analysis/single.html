@@ -55,6 +55,14 @@
     {{- end -}}
   </div>
 
+  {{- if and (not .Params.source_url) (not .Params.journalist_note) }}
+  <div class="article-end-note">
+    <p>Tämä uutinen on tiivistetty useista eri uutislähteistä lukijan ajan säästämiseksi.</p>
+  </div>
+  {{- end }}
+
+  {{ partial "article-outro-topic-prompt.html" . }}
+
   {{/* Journalist note — rendered after content, before sharing */}}
   {{ partial "journalist-note.html" . }}
 

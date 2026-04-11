@@ -1,0 +1,34 @@
+{{- $page := . -}}
+{{- $categories := $page.Params.categories | default (slice) -}}
+{{- $tags := $page.Params.tags | default (slice) -}}
+{{- $topics := $page.Params.topics | default (slice) -}}
+{{- $primaryCategory := index $categories 0 | default "" -}}
+{{- $primaryTag := index $tags 0 | default "" -}}
+{{- $primaryTopic := index $topics 0 | default "" -}}
+
+{{- $label := "" -}}
+{{- $href := "" -}}
+{{- $kind := "" -}}
+
+{{- if $primaryCategory -}}
+  {{- $label = $primaryCategory -}}
+  {{- $href = printf "/categories/%s/" ($primaryCategory | urlize) -}}
+  {{- $kind = "category" -}}
+{{- else if $primaryTopic -}}
+  {{- $label = $primaryTopic -}}
+  {{- $href = printf "/topics/%s/" ($primaryTopic | urlize) -}}
+  {{- $kind = "topic" -}}
+{{- else if $primaryTag -}}
+  {{- $label = $primaryTag -}}
+  {{- $href = printf "/tags/%s/" ($primaryTag | urlize) -}}
+  {{- $kind = "tag" -}}
+{{- end -}}
+
+{{- if and $label $href -}}
+<div class="article-outro-topic-prompt article-outro-topic-prompt--{{ $kind }}">
+  <p>
+    Jatka aiheesta
+    <a href="{{ $href }}">{{ $label }}</a>.
+  </p>
+</div>
+{{- end -}}
