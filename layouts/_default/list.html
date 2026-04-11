@@ -1,7 +1,8 @@
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
+{{ $heading := partial "category-heading.html" . }}
 <div class="category-header">
-  <h1>{{ .Title }}</h1>
+  <h1>{{ $heading }}</h1>
   {{ with .Description }}<p class="category-description">{{ . }}</p>{{ end }}
 </div>
 

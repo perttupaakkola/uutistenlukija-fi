@@ -1,11 +1,31 @@
-{{- if and .Params.summary (ne .Params.summary "") -}}
+{{- $summary := .Params.summary | default "" -}}
+{{- if not $summary -}}
+  {{- $lead := .Params.lead | default .Params.intro | default "" -}}
+  {{- if not $lead -}}
+    {{- $plainContent := .Plain | default "" -}}
+    {{- $opening := findRE `(?s)^\s*(.+?[.!?])(?:\s|$)` $plainContent 1 -}}
+    {{- with index $opening 0 -}}
+      {{- $lead = . -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $lead = $lead | plainify | replaceRE `\s+` " " | strings.TrimSpace -}}
+  {{- if and $lead (ge (len $lead) 90) -}}
+    {{- $fallback := $lead | truncate 220 -}}
+    {{- if and $fallback (ne $fallback (.Title | plainify)) -}}
+      {{- $summary = $fallback -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $summary -}}
 <details class="article-summary">
   <summary class="article-summary__toggle">
     <span class="article-summary__icon" aria-hidden="true">▶</span>
     <span class="article-summary__label">Tiivistelmä</span>
   </summary>
   <div class="article-summary__body tldr">
-    <p>{{ .Params.summary }}</p>
+    <p>{{ $summary }}</p>
   </div>
 </details>
 {{- end -}}

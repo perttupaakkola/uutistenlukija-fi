@@ -103,7 +103,10 @@
 {{ end }}
 
 {{/* ── og:description ────────────────────────────────────────────── */}}
-{{ $ogDesc := partial "meta-description.html" . }}
+{{ $ogDesc := .Params.og_description | default .Params.twitter_description | default "" }}
+{{ if not $ogDesc }}
+  {{ $ogDesc = partial "meta-description.html" . }}
+{{ end }}
 
 {{/* ── Output ─────────────────────────────────────────────────────── */}}
 

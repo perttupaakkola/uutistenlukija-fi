@@ -4,8 +4,9 @@
   {{- $latest = index $pages 0 -}}
 {{- end -}}
 {{- $articleCount := len .RegularPages -}}
+{{- $heading := partial "category-heading.html" . -}}
 <section class="category-hero" aria-labelledby="category-hero-title">
-  <h1 id="category-hero-title">{{ .Title }}</h1>
+  <h1 id="category-hero-title">{{ $heading }}</h1>
   {{ with .Description }}
     <p class="category-description">{{ . }}</p>
   {{ else }}

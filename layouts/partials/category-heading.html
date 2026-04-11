@@ -1,0 +1,11 @@
+{{- $title := .Params.hero_title | default .Params.heading | default .Params.seo_title | default "" -}}
+{{- if not $title -}}
+  {{- if eq .Data.Plural "categories" -}}
+    {{- $title = printf "%s-uutiset" (.Title | plainify) -}}
+  {{- else if eq .Data.Plural "tags" -}}
+    {{- $title = printf "%s-aiheiset uutiset" (.Title | plainify) -}}
+  {{- else -}}
+    {{- $title = .Title | plainify -}}
+  {{- end -}}
+{{- end -}}
+{{- return $title -}}
