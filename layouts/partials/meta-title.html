@@ -1,0 +1,41 @@
+{{- $siteName := .Site.Params.shortTitle | default "Uutistenlukija" -}}
+{{- $coreTitle := "" -}}
+{{- $fullTitle := "" -}}
+{{- $pageSuffix := "" -}}
+{{- if or .IsHome .IsSection (eq .Kind "taxonomy") (eq .Kind "term") -}}
+  {{- with .Paginator -}}
+    {{- if gt .PageNumber 1 -}}
+      {{- $pageSuffix = printf " – sivu %d" .PageNumber -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if .Params.seo_title -}}
+  {{- $fullTitle = printf "%s%s" (.Params.seo_title | plainify) $pageSuffix -}}
+{{- else if .IsHome -}}
+  {{- $fullTitle = printf "%s%s" .Site.Title $pageSuffix -}}
+{{- else if eq .RelPermalink "/haku/" -}}
+  {{- $coreTitle = "Hae uutisia" -}}
+{{- else if eq .RelPermalink "/404.html" -}}
+  {{- $coreTitle = "Sivua ei löytynyt" -}}
+{{- else if .IsPage -}}
+  {{- $coreTitle = .Title | plainify | truncate 43 -}}
+{{- else if eq .Kind "term" -}}
+  {{- $coreTitle = .Title | plainify -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- if eq .Data.Plural "categories" -}}
+    {{- $coreTitle = "Kategoriat" -}}
+  {{- else if eq .Data.Plural "tags" -}}
+    {{- $coreTitle = "Aiheet" -}}
+  {{- else -}}
+    {{- $coreTitle = .Title | plainify -}}
+  {{- end -}}
+{{- else if and .IsSection (eq .Section "posts") -}}
+  {{- $coreTitle = "Uutiset" -}}
+{{- else -}}
+  {{- $coreTitle = .Title | plainify -}}
+{{- end -}}
+{{- if not $fullTitle -}}
+  {{- $coreTitle = printf "%s%s" $coreTitle $pageSuffix -}}
+  {{- $fullTitle = printf "%s | %s" $coreTitle $siteName -}}
+{{- end -}}
+{{- return $fullTitle -}}
