@@ -2088,25 +2088,29 @@ pre code {
   color: var(--accent);
 }
 .more-from-category {
-  margin: 1.5rem 0 1.25rem;
+  margin: 2.75rem 0 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
 }
 .more-from-category__link {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.15rem;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  background: color-mix(in srgb, var(--accent) 5%, var(--card-bg));
+  padding: 1.15rem 1.15rem;
+  border: 1px solid color-mix(in srgb, var(--border) 88%, transparent);
+  border-radius: 18px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-alt) 82%, transparent), color-mix(in srgb, var(--accent) 4%, var(--card-bg)));
+  box-shadow: 0 -18px 32px -30px rgba(15, 23, 42, 0.28);
   text-decoration: none;
-  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 .more-from-category__link:hover,
 .more-from-category__link:focus-visible {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-1px);
+  box-shadow: 0 -12px 28px -26px rgba(15, 23, 42, 0.34);
 }
 .more-from-category__eyebrow {
   display: block;
@@ -3201,16 +3205,16 @@ body.is-home .highlights-row--top {
 }
 
 .article-end-note {
-  margin: 2.5rem 0 1.5rem;
-  padding: 1.5rem;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  margin: 2.75rem 0 1.25rem;
+  padding: 1.35rem 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 55%, transparent);
   color: var(--text-secondary);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   text-align: center;
-  background: color-mix(in srgb, var(--surface-alt) 30%, transparent);
-  border-radius: 8px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-alt) 18%, transparent), color-mix(in srgb, var(--surface-alt) 42%, transparent));
+  border-radius: 12px;
 }
 .article-end-note p {
   margin: 0;
@@ -3218,11 +3222,11 @@ body.is-home .highlights-row--top {
 }
 
 .article-outro-topic-prompt {
-  margin: 1.5rem 0 2rem;
-  padding: 0.9rem 1.1rem;
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--surface-alt) 45%, transparent);
-  border: 1px solid var(--border);
+  margin: 1.25rem 0 2.5rem;
+  padding: 1rem 1.15rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-alt) 24%, transparent), color-mix(in srgb, var(--surface-alt) 52%, transparent));
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
   color: var(--text-secondary);
   font-family: var(--font-sans);
   font-size: 0.95rem;
