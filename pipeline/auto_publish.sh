@@ -101,37 +101,29 @@ fi
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
-# Sync with origin without losing freshly generated article files.
-# The prior stash/pop flow could fail silently after the pull step, which made a run
-# look successful in cron.log while the newly created markdown files vanished before
-# commit/push. Back up all changed article files first, then always restore them.
-TMP_ARTICLE_DIR="$(mktemp -d)"
+# Sync with origin without losing freshly generated output.
+# Incident mode: avoid stash/pop entirely. We back up generated files, hard-reset to
+# origin/main, then restore the fresh output on top. This removes the rebase/stash
+# failure path that has been eating newly created articles.
+TMP_SYNC_DIR="$(mktemp -d)"
 while IFS= read -r f; do
   [ -f "$f" ] || continue
-  mkdir -p "$TMP_ARTICLE_DIR/$(dirname "$f")"
-  cp -f "$f" "$TMP_ARTICLE_DIR/$f"
+  mkdir -p "$TMP_SYNC_DIR/$(dirname "$f")"
+  cp -f "$f" "$TMP_SYNC_DIR/$f"
 done < <(
   {
-    git diff --name-only -- content/posts/
-    git ls-files --others --exclude-standard -- content/posts/
+    git diff --name-only -- content/ static/images/ data/
+    git ls-files --others --exclude-standard -- content/ static/images/ data/
   } | sort -u
 )
 
-git stash push --include-untracked -m "auto-publish pre-rebase" 2>/dev/null || true
-git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
-if git rev-parse -q --verify refs/stash >/dev/null 2>&1; then
-  if git stash pop --quiet >>"$LOG_FILE" 2>&1; then
-    echo "[git-stash] Restored stashed changes." | tee -a "$LOG_FILE"
-  else
-    echo "[git-stash] stash pop failed, restoring article files from backup." | tee -a "$LOG_FILE"
-    git reset --hard HEAD >/dev/null 2>&1 || true
-  fi
+echo "[git-sync] Fetching latest origin/main..." | tee -a "$LOG_FILE"
+git fetch origin main 2>&1 | tee -a "$LOG_FILE"
+git reset --hard origin/main 2>&1 | tee -a "$LOG_FILE"
+if [ -d "$TMP_SYNC_DIR" ]; then
+  cp -a "$TMP_SYNC_DIR"/. . 2>/dev/null || true
 fi
-if [ -d "$TMP_ARTICLE_DIR/content/posts" ]; then
-  mkdir -p content/posts
-  cp -f "$TMP_ARTICLE_DIR"/content/posts/*.md content/posts/ 2>/dev/null || true
-fi
-rm -rf "$TMP_ARTICLE_DIR"
+rm -rf "$TMP_SYNC_DIR"
 
 # Restore layout/script files to HEAD (discard any bridge sync drift).
 # This only touches tracked paths — content/posts/ is preserved.
