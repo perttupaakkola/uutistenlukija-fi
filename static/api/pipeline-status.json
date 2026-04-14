@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-09T22:26:02+00:00",
+  "generated_at": "2026-04-14T13:26:49+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,24 +12,24 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 14,
-    "rejected": 213,
+    "published": 1,
+    "rejected": 74,
     "publish_rate": 0,
-    "last_published_ts": "2026-04-09T21:22:56.092264+00:00"
+    "last_published_ts": "2026-04-14T13:26:48.497006+00:00"
   },
   "reject_reasons": {
-    "missing: key_points, image": 213,
-    "lead_too_short": 179,
-    "too_short": 105,
-    "unsourced numbers": 90,
-    "language borderline Finnish si": 77,
-    "language weak Finnish signal (": 67,
-    "length very short (155 words)": 14,
-    "length very short (122 words)": 13
+    "missing: image": 74,
+    "unsourced numbers": 35,
+    "lead_too_short": 31,
+    "keyword_stuffing": 23,
+    "length under target (224 words": 12,
+    "language borderline Finnish si": 10,
+    "length very short (130 words)": 10,
+    "too_short": 10
   },
   "feeds": {
-    "total": 37,
-    "healthy": 37,
+    "total": 38,
+    "healthy": 38,
     "disabled": 0,
     "stale": 0,
     "stale_names": [],
@@ -37,24 +37,24 @@
   },
   "trending": [
     [
-      "venäjän",
-      21
-    ],
-    [
-      "kertoo",
-      19
-    ],
-    [
-      "ukrainan",
-      18
-    ],
-    [
-      "poutala",
-      15
-    ],
-    [
-      "tiedetään",
+      "helsingin",
       14
+    ],
+    [
+      "tiedon",
+      12
+    ],
+    [
+      "jutussa",
+      10
+    ],
+    [
+      "virhe",
+      8
+    ],
+    [
+      "sanomat",
+      8
     ]
   ]
 }
