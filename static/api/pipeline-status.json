@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-14T19:43:02+00:00",
+  "generated_at": "2026-04-14T21:13:06+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 12,
-    "ok": 12,
+    "total": 13,
+    "ok": 13,
     "skip": 0,
     "error": 0
   },
   "articles": {
-    "attempted": 225,
-    "published": 12,
-    "rejected": 77,
+    "attempted": 247,
+    "published": 13,
+    "rejected": 82,
     "publish_rate": 5.3,
-    "last_published_ts": "2026-04-14T19:43:01.368754+00:00"
+    "last_published_ts": "2026-04-14T21:13:06.198591+00:00"
   },
   "reject_reasons": {
-    "missing: image": 77,
-    "lead_too_short": 34,
-    "unsourced numbers": 34,
-    "language borderline Finnish si": 16,
-    "keyword_stuffing": 14,
-    "length under target (224 words": 12,
+    "missing: image": 82,
+    "lead_too_short": 43,
+    "unsourced numbers": 37,
+    "language borderline Finnish si": 17,
     "length very short (130 words)": 10,
-    "too_short": 10
+    "too_short": 10,
+    "thin_source (51 words in sourc": 10,
+    "keyword_stuffing": 9
   },
   "feeds": {
     "total": 38,
@@ -37,6 +37,10 @@
   },
   "trending": [
     [
+      "helsingin",
+      21
+    ],
+    [
       "maradona",
       21
     ],
@@ -45,16 +49,12 @@
       19
     ],
     [
-      "helsingin",
+      "poliisi",
       18
     ],
     [
       "after",
       17
-    ],
-    [
-      "trumpin",
-      16
     ]
   ]
 }

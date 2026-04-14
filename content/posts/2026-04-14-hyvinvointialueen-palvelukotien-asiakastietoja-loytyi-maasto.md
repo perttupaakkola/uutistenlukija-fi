@@ -33,7 +33,6 @@ keywords:
 source_name: "Kauppalehti KL-Nyt"
 source_url: "https://yle.fi/a/74-20220575?origin=rss"
 source_domain: "kauppalehti.fi"
-briefing: true
 draft: false
 ---
 
