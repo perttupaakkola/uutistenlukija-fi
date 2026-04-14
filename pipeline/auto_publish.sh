@@ -101,25 +101,38 @@ fi
 cd "$PROJECT_DIR"
 echo "[2/3] Checking for changes..." | tee -a "$LOG_FILE"
 
-# Sync with origin — pull remote changes without losing newly generated untracked articles.
-# Plain `git stash push` misses untracked content/posts/*.md, while `--include-untracked`
-# can hide them inside the stash and leave the run looking like a successful no-op.
-# So we explicitly back up untracked article files first, then stash everything else.
-TMP_UNTRACKED_DIR="$(mktemp -d)"
-git ls-files --others --exclude-standard content/posts/*.md 2>/dev/null | while IFS= read -r f; do
+# Sync with origin without losing freshly generated article files.
+# The prior stash/pop flow could fail silently after the pull step, which made a run
+# look successful in cron.log while the newly created markdown files vanished before
+# commit/push. Back up all changed article files first, then always restore them.
+TMP_ARTICLE_DIR="$(mktemp -d)"
+while IFS= read -r f; do
   [ -f "$f" ] || continue
-  mkdir -p "$TMP_UNTRACKED_DIR/$(dirname "$f")"
-  cp "$f" "$TMP_UNTRACKED_DIR/$f"
-done
+  mkdir -p "$TMP_ARTICLE_DIR/$(dirname "$f")"
+  cp -f "$f" "$TMP_ARTICLE_DIR/$f"
+done < <(
+  {
+    git diff --name-only -- content/posts/
+    git ls-files --others --exclude-standard -- content/posts/
+  } | sort -u
+)
 
 git stash push --include-untracked -m "auto-publish pre-rebase" 2>/dev/null || true
 git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
 STASH_LIST=$(git stash list 2>/dev/null | head -1)
-if [ -n "$STASH_LIST" ]; then git stash pop --quiet 2>/dev/null || true; fi
-if [ -d "$TMP_UNTRACKED_DIR/content/posts" ]; then
-  cp -n "$TMP_UNTRACKED_DIR"/content/posts/*.md content/posts/ 2>/dev/null || true
+if [ -n "$STASH_LIST" ]; then
+  if git stash pop --quiet >>"$LOG_FILE" 2>&1; then
+    echo "[git-stash] Restored stashed changes." | tee -a "$LOG_FILE"
+  else
+    echo "[git-stash] stash pop failed, restoring article files from backup." | tee -a "$LOG_FILE"
+    git reset --hard HEAD >/dev/null 2>&1 || true
+  fi
 fi
-rm -rf "$TMP_UNTRACKED_DIR"
+if [ -d "$TMP_ARTICLE_DIR/content/posts" ]; then
+  mkdir -p content/posts
+  cp -f "$TMP_ARTICLE_DIR"/content/posts/*.md content/posts/ 2>/dev/null || true
+fi
+rm -rf "$TMP_ARTICLE_DIR"
 
 # Restore layout/script files to HEAD (discard any bridge sync drift).
 # This only touches tracked paths — content/posts/ is preserved.
