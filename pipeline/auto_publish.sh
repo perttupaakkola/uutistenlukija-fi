@@ -119,8 +119,7 @@ done < <(
 
 git stash push --include-untracked -m "auto-publish pre-rebase" 2>/dev/null || true
 git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
-STASH_LIST=$(git stash list 2>/dev/null | head -1)
-if [ -n "$STASH_LIST" ]; then
+if git rev-parse -q --verify refs/stash >/dev/null 2>&1; then
   if git stash pop --quiet >>"$LOG_FILE" 2>&1; then
     echo "[git-stash] Restored stashed changes." | tee -a "$LOG_FILE"
   else
