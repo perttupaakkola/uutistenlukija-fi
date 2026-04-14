@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/uhrin-paon-estanyt-tuomittiin-helsingin-karaoketaposta-mies-tapettiin-juomariidan-jalkeen/9324238"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
