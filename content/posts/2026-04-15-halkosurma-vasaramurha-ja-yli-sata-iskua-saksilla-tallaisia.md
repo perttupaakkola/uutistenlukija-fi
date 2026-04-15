@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.mtvuutiset.fi/artikkeli/halkosurma-vasaramurha-ja-yli-sata-iskua-saksilla-tallaisia-henkirikoksia-asumisyksikoissa-on-tehty/9324242"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
