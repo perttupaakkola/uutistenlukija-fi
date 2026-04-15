@@ -33,7 +33,6 @@ keywords:
 source_name: "Etelä-Suomen Sanomat"
 source_url: "https://www.is.fi/ulkomaat/art-2000011945121.html"
 source_domain: "ess.fi"
-briefing: true
 draft: false
 ---
 
