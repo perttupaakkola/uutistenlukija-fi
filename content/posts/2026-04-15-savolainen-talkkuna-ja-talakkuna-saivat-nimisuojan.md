@@ -33,7 +33,6 @@ keywords:
 source_name: "Maaseudun Tulevaisuus"
 source_url: "https://www.maaseuduntulevaisuus.fi/uutiset/4753ca01-30a5-4528-a149-e863a90b4a68"
 source_domain: "maaseuduntulevaisuus.fi"
-briefing: true
 draft: false
 ---
 
