@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.is.fi/ulkomaat/art-2000011946218.html"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
