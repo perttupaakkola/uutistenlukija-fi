@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/henna-virkkunen-time-lehden-arvostetulle-listalle/9324862"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
