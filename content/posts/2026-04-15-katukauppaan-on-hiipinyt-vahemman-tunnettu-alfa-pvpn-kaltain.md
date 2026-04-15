@@ -33,7 +33,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://yle.fi/a/74-20220516?origin=rss"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
