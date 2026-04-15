@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.mtvuutiset.fi/artikkeli/nain-eurooppa-varautuu-natoon-ilman-yhdysvaltoja-olisi-tyhmyytta-ja-hulluutta/9324850"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
