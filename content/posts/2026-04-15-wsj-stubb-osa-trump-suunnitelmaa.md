@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/wsj-eurooppa-valmistautuu-trumpin-nato-eroon-stubb-mukana/9324460"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
