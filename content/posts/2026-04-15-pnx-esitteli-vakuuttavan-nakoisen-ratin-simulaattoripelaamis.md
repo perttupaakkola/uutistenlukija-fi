@@ -33,7 +33,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/pnx-esitteli-vakuuttavan-nakoisen-ratin-simulaattoripelaamiseen-kuin-ammattikuskin-tyokalu/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
