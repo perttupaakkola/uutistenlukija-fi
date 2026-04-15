@@ -18,7 +18,7 @@ content_type: "article"
 editorial_reviewed: true
 image: "https://images.unsplash.com/photo-1684602766679-3276d13cb255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxOXx8ZmlubGFuZCUyMGxhbmRzY2FwZSUyMGNpdHl8ZW58MXwwfHx8MTc3NjE5NTc3N3ww&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1684602766679-3276d13cb255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxOXx8ZmlubGFuZCUyMGxhbmRzY2FwZSUyMGNpdHl8ZW58MXwwfHx8MTc3NjE5NTc3N3ww&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kuvituskuva uutiseen: Trump vastasi Melonin kritiikkiin – \\"Luulin, että hän on rohkea\\" (kotimaa, uutiset)"
+image_alt: 'Kuvituskuva uutiseen: Trump vastasi Melonin kritiikkiin – "Luulin, että hän on rohkea" (kotimaa, uutiset)'
 image_credit: "Photo by K8 on Unsplash"
 image_source_url: "https://unsplash.com/photos/a-large-field-with-trees-in-the-background-R0szHo1AzU0?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 3

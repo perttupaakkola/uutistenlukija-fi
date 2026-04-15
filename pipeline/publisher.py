@@ -271,10 +271,11 @@ def _refresh_daily_briefing_flags(target_day: str) -> list[str]:
 
 def _article_to_markdown(article: Dict, date: str) -> str:
     """Convert article to Hugo markdown with front matter."""
-    title = article.get("title", "Untitled")
-    # Sanitize: collapse whitespace/newlines, escape double-quotes for YAML inline string
-    title = " ".join(title.split())
-    title = title.replace('"', '\\"')
+    raw_title = article.get("title", "Untitled")
+    # Sanitize once, then keep raw and YAML-safe variants separate so we do not
+    # leak YAML escapes into derived fields like image_alt.
+    raw_title = " ".join(str(raw_title).split())
+    title = raw_title.replace('"', '\\"')
     # Normalize category: match against canonical list (case-insensitive), fallback to Kotimaa
     _CANONICAL_CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
     _raw_category = str(article.get("category", "") or "").strip()
@@ -291,8 +292,8 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     # Generate Finnish alt text from article context instead of stock photo title.
     # Format: "Kuvituskuva uutiseen: {title} (tag1, tag2)"
     _raw_alt = article.get("image_alt", "")
-    if image and title:
-        _title_context = title.strip().rstrip('.')
+    if image and raw_title:
+        _title_context = raw_title.strip().rstrip('.')
         # Include up to 2 tags to add descriptive weight without fluff
         _relevant_tags = [str(t) for t in tags if str(t).lower() != category.lower()][:2]
         if _relevant_tags:

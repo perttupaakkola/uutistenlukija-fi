@@ -144,6 +144,10 @@ def _check_yaml_syntax(path: Path) -> str | None:
         value = value.strip()
         if not value:
             continue
+        if value.startswith('"') and r'\\"' in value:
+            return (
+                f"line {i}: suspicious double-escaped quote sequence (\\\\\") in '{key.strip()}': {value[:80]!r}"
+            )
         # Detect unclosed double-quoted string: starts with " but doesn't end with "
         # (allowing for escaped quotes like \" inside but the final char must be unescaped ")
         if value.startswith('"') and not value.endswith('"'):
