@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.yrittajat.fi/uutiset/mika-ihmeen-eu-inc-osakeyhtio-pystyyn-100-eurolla-48-tunnissa-ennen-kaikkea-kasvuyrityksia-ja-startupeja-varten/"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
