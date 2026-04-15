@@ -33,7 +33,6 @@ keywords:
 source_name: "Ilta-Sanomat"
 source_url: "https://www.yrittajat.fi/uutiset/yritysten-maksuviiveet-kaantyivat-alkuvuonna-rajuun-nousuun/"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
