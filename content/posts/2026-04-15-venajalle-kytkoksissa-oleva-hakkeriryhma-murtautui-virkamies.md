@@ -34,7 +34,6 @@ keywords:
 source_name: "Kauppalehti"
 source_url: "https://yle.fi/a/74-20220662?origin=rss"
 source_domain: "kauppalehti.fi"
-briefing: true
 draft: false
 ---
 
