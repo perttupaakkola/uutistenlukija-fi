@@ -34,7 +34,6 @@ keywords:
 source_name: "Kauppalehti"
 source_url: "https://www.yrittajat.fi/uutiset/kun-ambulanssin-sireenit-alkoivat-soida-matti-tiesi-olevansa-lahella-kuolemaa-keuhkoveritulppa-paljasti-karun-totuuden-yrittajan-sairastuminen-on-yel-katastrofi/"
 source_domain: "kauppalehti.fi"
-briefing: true
 draft: false
 ---
 
