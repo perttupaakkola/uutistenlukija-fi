@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.kauppalehti.fi/uutiset/a/fc40fbb6-d64e-452d-96bf-fdd7b5b47a56"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
