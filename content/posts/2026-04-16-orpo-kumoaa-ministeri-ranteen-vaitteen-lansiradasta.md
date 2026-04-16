@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.mtvuutiset.fi/artikkeli/orpo-kumoaa-ministeri-ranteen-vaitteen-lansiradasta/9325288"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
