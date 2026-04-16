@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.hs.fi/maailma/art-2000011909452.html"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
