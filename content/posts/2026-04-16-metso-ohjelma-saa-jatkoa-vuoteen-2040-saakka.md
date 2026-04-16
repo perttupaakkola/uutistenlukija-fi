@@ -31,7 +31,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.maaseuduntulevaisuus.fi/metsa/87e3d5d0-4094-4348-883d-a0b8c2206c63"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
