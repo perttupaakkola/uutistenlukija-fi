@@ -31,7 +31,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.maaseuduntulevaisuus.fi/maatalous/3119e090-2bc7-42f7-bf74-1e1ee95fecec"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
