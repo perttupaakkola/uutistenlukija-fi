@@ -1,60 +1,62 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-16T04:13:20+00:00",
+  "generated_at": "2026-04-16T06:22:49+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 52,
-    "ok": 52,
+    "total": 42,
+    "ok": 42,
     "skip": 0,
     "error": 0
   },
   "articles": {
-    "attempted": 1078,
-    "published": 59,
-    "rejected": 48,
-    "publish_rate": 5.5,
-    "last_published_ts": "2026-04-16T04:13:19.226263+00:00"
+    "attempted": 890,
+    "published": 45,
+    "rejected": 44,
+    "publish_rate": 5.1,
+    "last_published_ts": "2026-04-16T06:22:48.265475+00:00"
   },
   "reject_reasons": {
-    "missing: image": 48,
+    "missing: image": 44,
     "lead_too_short": 28,
-    "unsourced numbers": 16,
-    "language borderline Finnish si": 12,
+    "unsourced numbers": 17,
     "keyword_stuffing": 12,
-    "score 25/30 norm=5.69/10 (leng": 4,
-    "generic ending": 4,
-    "length very short (163 words)": 4
+    "language borderline Finnish si": 9,
+    "thin_source (58 words in sourc": 3,
+    "length very short (171 words)": 3,
+    "language weak Finnish signal (": 3
   },
   "feeds": {
     "total": 38,
-    "healthy": 38,
+    "healthy": 37,
     "disabled": 0,
-    "stale": 0,
-    "stale_names": [],
+    "stale": 1,
+    "stale_names": [
+      "Yle Teknologia"
+    ],
     "disabled_names": []
   },
   "trending": [
     [
-      "sanoo",
-      67
-    ],
-    [
-      "trump",
-      55
+      "kertoo",
+      42
     ],
     [
       "tiedetään",
-      51
-    ],
-    [
-      "kertoo",
-      47
-    ],
-    [
-      "yhdysvaltain",
       40
+    ],
+    [
+      "iranin",
+      39
+    ],
+    [
+      "sanoo",
+      30
+    ],
+    [
+      "trump",
+      30
     ]
   ]
 }
