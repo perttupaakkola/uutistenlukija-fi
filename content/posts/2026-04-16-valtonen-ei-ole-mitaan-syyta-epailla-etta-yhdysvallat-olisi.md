@@ -31,7 +31,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/valtonen-ei-ole-mitaan-syyta-epailla-etta-yhdysvallat-olisi-vetaytymassa-natosta/9325256"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
