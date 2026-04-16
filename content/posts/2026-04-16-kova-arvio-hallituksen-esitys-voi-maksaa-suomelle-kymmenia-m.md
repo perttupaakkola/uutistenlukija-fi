@@ -34,7 +34,6 @@ keywords:
 source_name: "Kauppalehti"
 source_url: "https://www.kauppalehti.fi/uutiset/a/e94e7434-a353-4747-a62f-7c3facab9936"
 source_domain: "kauppalehti.fi"
-briefing: true
 draft: false
 ---
 
