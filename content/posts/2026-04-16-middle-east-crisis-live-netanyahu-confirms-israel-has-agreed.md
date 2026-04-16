@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.theguardian.com/world/live/2026/apr/16/middle-east-crisis-live-iran-war-news-us-trump-ceasefire-deal-lebanon-israel-oil-sanctions-latest-updates"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
