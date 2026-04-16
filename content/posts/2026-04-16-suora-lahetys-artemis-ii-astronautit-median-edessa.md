@@ -33,7 +33,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.is.fi/ulkomaat/art-2000011949710.html"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
