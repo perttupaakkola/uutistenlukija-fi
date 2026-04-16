@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.mtvuutiset.fi/artikkeli/suomen-poliittinen-johto-boikotoi-venetsian-biennaalia-venajan-vuoksi/9325064"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
