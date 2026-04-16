@@ -33,7 +33,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/susanna-liukkonen-aloitti-autofiksauksen-nollabudjetilla-ja-nousi-alan-sometahdeksi-monelle-kova-pala-kun-nuori-nainen-neuvoo/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
