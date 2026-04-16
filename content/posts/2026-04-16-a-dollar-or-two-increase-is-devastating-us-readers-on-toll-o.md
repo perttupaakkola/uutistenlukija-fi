@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.theguardian.com/us-news/2026/apr/16/us-readers-rising-gas-prices-iran-trump"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
