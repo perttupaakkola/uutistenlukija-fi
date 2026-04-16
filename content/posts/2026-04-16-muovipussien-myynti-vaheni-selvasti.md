@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/muovipussien-myynti-vaheni-selvasti/9325044"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
