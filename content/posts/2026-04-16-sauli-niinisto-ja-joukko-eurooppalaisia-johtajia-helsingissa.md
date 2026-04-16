@@ -33,7 +33,6 @@ keywords:
 source_name: "Etelä-Suomen Sanomat"
 source_url: "https://www.is.fi/politiikka/art-2000011947482.html"
 source_domain: "ess.fi"
-briefing: true
 draft: false
 ---
 
