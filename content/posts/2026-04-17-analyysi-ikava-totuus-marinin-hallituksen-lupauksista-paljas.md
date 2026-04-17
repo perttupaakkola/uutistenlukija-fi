@@ -33,7 +33,6 @@ keywords:
 source_name: "Etelä-Suomen Sanomat"
 source_url: "https://www.iltalehti.fi/politiikka/a/99bf2645-7711-4ec9-b52a-72a67aa87a9c"
 source_domain: "ess.fi"
-briefing: true
 draft: false
 ---
 
