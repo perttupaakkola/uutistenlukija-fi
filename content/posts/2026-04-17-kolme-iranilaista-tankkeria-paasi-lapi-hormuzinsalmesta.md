@@ -31,7 +31,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kolme-iranilaista-tankkeria-paasi-lapi-hormuzinsalmesta/9325786"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
