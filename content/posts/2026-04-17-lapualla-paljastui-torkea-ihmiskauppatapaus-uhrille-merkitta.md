@@ -33,7 +33,6 @@ keywords:
 source_name: "Maaseudun Tulevaisuus"
 source_url: "https://www.mtvuutiset.fi/artikkeli/lapualla-paljastui-torkea-ihmiskauppatapaus-uhrille-merkittavaa-karsimysta/9325884"
 source_domain: "maaseuduntulevaisuus.fi"
-briefing: true
 draft: false
 ---
 
