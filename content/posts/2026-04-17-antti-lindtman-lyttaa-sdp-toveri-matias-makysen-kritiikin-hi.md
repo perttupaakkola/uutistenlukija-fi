@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/antti-lindtman-lyttaa-sdp-toveri-matias-makysen-kritiikin-hiukan-vaikea-pysya-perassa/9325748"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
