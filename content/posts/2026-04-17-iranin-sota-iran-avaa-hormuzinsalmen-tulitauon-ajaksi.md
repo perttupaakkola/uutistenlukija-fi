@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.hs.fi/maailma/art-2000011909452.html"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
