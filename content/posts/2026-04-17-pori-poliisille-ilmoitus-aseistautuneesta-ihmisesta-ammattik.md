@@ -33,7 +33,6 @@ keywords:
 source_name: "HS Tuoreimmat"
 source_url: "https://www.hs.fi/suomi/art-2000011950429.html"
 source_domain: "hs.fi"
-briefing: true
 draft: false
 ---
 
