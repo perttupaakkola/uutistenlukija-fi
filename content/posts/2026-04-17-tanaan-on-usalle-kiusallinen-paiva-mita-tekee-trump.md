@@ -33,7 +33,6 @@ keywords:
 source_name: "Maaseudun Tulevaisuus"
 source_url: "https://www.iltalehti.fi/ulkomaat/a/8bdc67f0-decd-4557-b3f8-992383e3757e"
 source_domain: "maaseuduntulevaisuus.fi"
-briefing: true
 draft: false
 ---
 
