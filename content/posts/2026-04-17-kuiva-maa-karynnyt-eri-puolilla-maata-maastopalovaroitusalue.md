@@ -33,7 +33,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kuiva-maa-karynnyt-eri-puolilla-maata-maastopalovaroitusalue-laajenee/9325964"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
