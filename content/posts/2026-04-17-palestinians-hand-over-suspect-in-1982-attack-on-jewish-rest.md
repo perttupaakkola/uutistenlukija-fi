@@ -33,7 +33,6 @@ keywords:
 source_name: "Ilta-Sanomat"
 source_url: "https://www.bbc.com/news/articles/cj94pkyr9mpo?at_medium=RSS&at_campaign=rss"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
