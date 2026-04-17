@@ -33,7 +33,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.mtvuutiset.fi/artikkeli/lapsi-kuoli-jaatyaan-kuorma-auton-alle-mynamaella-rikosnimike-muuttui/9325860"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
