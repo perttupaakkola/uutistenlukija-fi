@@ -1,62 +1,60 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-17T09:23:21+00:00",
+  "generated_at": "2026-04-17T10:13:26+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 50,
-    "ok": 50,
+    "total": 48,
+    "ok": 48,
     "skip": 0,
     "error": 0
   },
   "articles": {
-    "attempted": 1094,
-    "published": 58,
-    "rejected": 78,
-    "publish_rate": 5.3,
-    "last_published_ts": "2026-04-17T09:23:20.992824+00:00"
+    "attempted": 1052,
+    "published": 55,
+    "rejected": 82,
+    "publish_rate": 5.2,
+    "last_published_ts": "2026-04-17T10:13:25.258395+00:00"
   },
   "reject_reasons": {
-    "missing: image": 78,
+    "missing: image": 82,
     "keyword_stuffing": 40,
     "length under target (209 words": 33,
-    "lead_too_short": 27,
-    "unsourced numbers": 18,
+    "lead_too_short": 31,
+    "unsourced numbers": 19,
     "length under target (283 words": 8,
-    "language borderline Finnish si": 7,
+    "language borderline Finnish si": 6,
     "thin_source (52 words in sourc": 4
   },
   "feeds": {
     "total": 38,
-    "healthy": 37,
+    "healthy": 38,
     "disabled": 0,
-    "stale": 1,
-    "stale_names": [
-      "Yle Teknologia"
-    ],
+    "stale": 0,
+    "stale_names": [],
     "disabled_names": []
   },
   "trending": [
     [
       "kertoo",
-      67
+      69
+    ],
+    [
+      "jälkeen",
+      47
     ],
     [
       "vuonna",
       46
     ],
     [
-      "jälkeen",
-      43
-    ],
-    [
       "viime",
-      42
+      41
     ],
     [
       "tiedetään",
-      41
+      39
     ]
   ]
 }
