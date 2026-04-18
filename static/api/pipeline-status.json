@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-18T08:12:59+00:00",
+  "generated_at": "2026-04-18T22:25:59+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 46,
-    "ok": 46,
+    "total": 5,
+    "ok": 5,
     "skip": 0,
     "error": 0
   },
   "articles": {
-    "attempted": 1026,
-    "published": 48,
-    "rejected": 51,
-    "publish_rate": 4.7,
-    "last_published_ts": "2026-04-18T08:12:59.097660+00:00"
+    "attempted": 120,
+    "published": 5,
+    "rejected": 68,
+    "publish_rate": 4.2,
+    "last_published_ts": "2026-04-18T22:25:58.287094+00:00"
   },
   "reject_reasons": {
-    "missing: image": 51,
-    "lead_too_short": 38,
-    "unsourced numbers": 28,
-    "keyword_stuffing": 9,
+    "missing: image": 68,
+    "unsourced numbers": 45,
+    "lead_too_short": 28,
+    "language weak Finnish signal (": 7,
     "length under target (234 words": 7,
-    "language weak Finnish signal (": 6,
-    "thin_source (50 words in sourc": 5,
-    "score 20/30 norm=7.67/10 (leng": 3
+    "keyword_stuffing": 7,
+    "thin_source (50 words in sourc": 6,
+    "length very short (154 words)": 6
   },
   "feeds": {
     "total": 38,
@@ -37,24 +37,24 @@
   },
   "trending": [
     [
-      "kertoo",
-      60
+      "helsingin",
+      17
+    ],
+    [
+      "prosenttia",
+      16
+    ],
+    [
+      "viime",
+      14
     ],
     [
       "vuonna",
-      45
+      14
     ],
     [
-      "tiedetään",
-      35
-    ],
-    [
-      "jälkeen",
-      34
-    ],
-    [
-      "poliisi",
-      29
+      "lipposen",
+      12
     ]
   ]
 }
