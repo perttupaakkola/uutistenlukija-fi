@@ -23,11 +23,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from scanner import scan_all_feeds
 from firehose import poll_firehose
 from research import enrich_with_research
-from rewriter import rewrite_articles
+from monica_writer import rewrite_articles
 from publisher import publish_articles, build_site
-from generate_descriptions import generate_for_article_dict
 from dedup import filter_new_articles, check_published_duplicates, dedup_within_batch, mark_published
-from image_gen import generate_images_for_articles
 from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
 # ── Resilient imports: stub on failure so a single missing function never kills the pipeline ──
@@ -48,6 +46,12 @@ def _stub_should_skip(service):
 
 def _stub_noop(*args, **kwargs):
     pass
+
+def _stub_generate_description(*args, **kwargs):
+    return ""
+
+def _stub_generate_images(articles, *args, **kwargs):
+    return articles
 
 def _stub_check_for_changes(**kwargs):
     from types import SimpleNamespace
@@ -71,6 +75,18 @@ try:
 except ImportError as _ie:
     print(f"[resilience] WARNING: metrics import failed: {_ie}")
     _append_metrics_run = _stub_noop
+
+try:
+    from generate_descriptions import generate_for_article_dict
+except ImportError as _ie:
+    print(f"[resilience] WARNING: generate_descriptions import failed: {_ie}")
+    generate_for_article_dict = _stub_generate_description
+
+try:
+    from image_gen import generate_images_for_articles
+except ImportError as _ie:
+    print(f"[resilience] WARNING: image_gen import failed: {_ie}")
+    generate_images_for_articles = _stub_generate_images
 
 try:
     from service_health import should_skip, record_success, record_failure
@@ -965,12 +981,13 @@ if __name__ == "__main__":
 
     if args.dry_run:
         errors = []
+        optional_imports = {"generate_descriptions", "image_gen"}
         # Validate all pipeline imports
         _imports = {
             "scanner": "scanner",
             "firehose": "firehose",
             "research": "research",
-            "rewriter": "rewriter",
+            "rewriter": "monica_writer",
             "publisher": "publisher",
             "generate_descriptions": "generate_descriptions",
             "dedup": "dedup",
@@ -988,11 +1005,14 @@ if __name__ == "__main__":
                 __import__(mod)
                 print(f"  ✅ {label}")
             except Exception as e:
-                print(f"  ❌ {label}: {e}")
-                errors.append(label)
+                if label in optional_imports:
+                    print(f"  ⚠️ {label}: optional import unavailable ({e})")
+                else:
+                    print(f"  ❌ {label}: {e}")
+                    errors.append(label)
 
         # Validate env
-        _env_keys = ["OPENAI_API_KEY"]
+        _env_keys = []
         for k in _env_keys:
             v = os.environ.get(k, "")
             if v:

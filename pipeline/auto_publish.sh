@@ -65,6 +65,16 @@ if [ -f "$PROJECT_DIR/.env" ]; then
   set +a
 fi
 
+# Monica writer lane depends on the OpenClaw CLI. Cron PATH can be minimal,
+# so pin the common install location when present.
+OPENCLAW_NODE_BIN="/home/pertt/.openclaw/tools/node-v22.22.0/bin"
+if [ -d "$OPENCLAW_NODE_BIN" ]; then
+  export PATH="$OPENCLAW_NODE_BIN:$PATH"
+  if [ -z "${MONICA_OPENCLAW_CMD:-}" ] && [ -x "$OPENCLAW_NODE_BIN/openclaw" ]; then
+    export MONICA_OPENCLAW_CMD="$OPENCLAW_NODE_BIN/openclaw"
+  fi
+fi
+
 PIPELINE_START_TS=$(date +%s)
 echo "=== Auto-publish started at $(date -u) ===" | tee -a "$LOG_FILE"
 

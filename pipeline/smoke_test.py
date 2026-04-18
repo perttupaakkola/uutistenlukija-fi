@@ -20,14 +20,14 @@ PIPELINE_DIR = Path(__file__).parent
 # Modules that need external packages not always available in all environments.
 # We still try to import them — if they fail due to missing 3rd-party deps
 # (openai, requests, etc.) that's a WARN, not a FAIL.
-EXTERNAL_DEP_MODULES = {"rewriter", "generate_descriptions", "ghost_publisher", "newsletter_api", "run_pipeline"}
+EXTERNAL_DEP_MODULES = {"generate_descriptions", "ghost_publisher", "newsletter_api", "run_pipeline", "rewriter", "batch_improve_descriptions", "image_gen"}
 
 # Cross-module function references that run_pipeline.py depends on.
 CRITICAL_IMPORTS = {
     "scanner": ["scan_all_feeds"],
     "firehose": ["poll_firehose"],
     "research": ["enrich_with_research"],
-    "rewriter": ["rewrite_articles"],
+    "monica_writer": ["rewrite_articles"],
     "publisher": ["publish_articles", "build_site"],
     "generate_descriptions": ["generate_for_article_dict"],
     "dedup": ["filter_new_articles", "check_published_duplicates", "dedup_within_batch", "mark_published"],
@@ -53,7 +53,7 @@ def main():
     print("── Module imports ──")
 
     py_files = sorted(PIPELINE_DIR.glob("*.py"))
-    skip = {"smoke_test.py", "__init__.py", "test_ghost_publish.py"}
+    skip = {"smoke_test.py", "__init__.py", "test_ghost_publish.py", "test_key_points.py", "test_templates.py", "test_monica_writer.py"}
 
     for f in py_files:
         if f.name in skip:

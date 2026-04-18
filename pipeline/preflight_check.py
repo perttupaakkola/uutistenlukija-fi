@@ -5,8 +5,8 @@ preflight_check.py — pre-flight validation before each auto_publish.sh cycle.
 Checks (in order):
   1. Execute bit on all .sh files in pipeline/ and scripts/ — auto-fix if missing
   2. Stale lock file older than 30min — kill stuck PID and remove lock
-  3. Syntax check: scanner.py, rewriter.py, publisher.py via py_compile
-  4. Required env vars present: DISCORD_PIPELINE_WEBHOOK, OPENAI_API_KEY
+  3. Syntax check: scanner.py, monica_writer.py, publisher.py via py_compile
+  4. Required env vars present: DISCORD_PIPELINE_WEBHOOK
   5. Disk space ≥ 500MB free on project filesystem
 
 Output:
@@ -25,6 +25,7 @@ Usage:
 import json
 import os
 import py_compile
+import shlex
 import shutil
 import signal
 import stat
@@ -44,8 +45,14 @@ OUTPUT_FILE  = LOG_DIR / "preflight.json"
 # ── Config ────────────────────────────────────────────────────────────────────
 STALE_LOCK_MINUTES   = 30
 MIN_FREE_DISK_MB     = 500
-SYNTAX_CHECK_FILES   = ["scanner.py", "rewriter.py", "publisher.py", "run_pipeline.py"]
-REQUIRED_ENV_VARS    = ["DISCORD_PIPELINE_WEBHOOK", "OPENAI_API_KEY"]
+SYNTAX_CHECK_FILES   = ["scanner.py", "story_packet.py", "quarantine.py", "monica_writer.py", "publisher.py", "run_pipeline.py"]
+REQUIRED_ENV_VARS    = ["DISCORD_PIPELINE_WEBHOOK"]
+OPENCLAW_CANDIDATES  = [
+    os.environ.get("MONICA_OPENCLAW_CMD", "openclaw"),
+    "/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw",
+    "/usr/local/bin/openclaw",
+    "/usr/bin/openclaw",
+]
 
 WEBHOOK = os.environ.get("DISCORD_PIPELINE_WEBHOOK", "")
 
@@ -219,6 +226,35 @@ def check_env_vars(dry_run: bool = False) -> dict:
             "detail": f"{len(REQUIRED_ENV_VARS)} vars present", "hard_failure": False}
 
 
+def check_required_commands(dry_run: bool = False) -> dict:
+    """Check required executables for the Monica lane are available."""
+    resolved = []
+    missing = []
+
+    for candidate in OPENCLAW_CANDIDATES:
+        parts = shlex.split(candidate)
+        executable = parts[0]
+        if os.path.isabs(executable) and os.path.exists(executable):
+            resolved.append(executable)
+            continue
+        found = shutil.which(executable)
+        if found:
+            resolved.append(found)
+            continue
+        missing.append(executable)
+
+    if not resolved:
+        detail = f"OpenClaw CLI not found (checked: {', '.join(missing)})"
+        print(f"[preflight] ❌ commands: {detail}")
+        return {"check": "commands", "status": "fail", "detail": detail,
+                "resolved": [], "hard_failure": True}
+
+    detail = f"OpenClaw CLI available via {resolved[0]}"
+    print(f"[preflight] ✅ commands: {detail}")
+    return {"check": "commands", "status": "ok",
+            "detail": detail, "resolved": resolved, "hard_failure": False}
+
+
 def check_disk_space(dry_run: bool = False) -> dict:
     """Check free disk space on project filesystem."""
     try:
@@ -248,6 +284,7 @@ def run_preflight(dry_run: bool = False) -> tuple[list[dict], bool]:
     results.append(check_stale_lock(dry_run))
     results.append(check_syntax(dry_run))
     results.append(check_env_vars(dry_run))
+    results.append(check_required_commands(dry_run))
     results.append(check_disk_space(dry_run))
     any_hard_failure = any(r["hard_failure"] for r in results)
     return results, any_hard_failure

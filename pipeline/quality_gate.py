@@ -36,11 +36,10 @@ DEGRADED_MIN_PARAGRAPHS = 2
 DEGRADED_MIN_LEAD_WORDS = 20
 
 # Historical internal threshold (0–80). Corresponds to 5.0 / 10 normalized.
-# TEMPORARILY lowered 40→30 (2026-04-02) to unblock publishing after 60h drought.
-# Missing images zero out image score, pushing otherwise-good articles below 40.
-# TODO: restore to 40 once image generation pipeline is fixed.
-REJECT_THRESHOLD = 30
-DEFAULT_NORMALIZED_THRESHOLD = 3.5
+# Restored to a stricter publish bar (2026-04-18) now that the public writer lane
+# is moving behind Monica + hard fail checks. Better to quarantine than publish weak copy.
+REJECT_THRESHOLD = 40
+DEFAULT_NORMALIZED_THRESHOLD = 5.0
 MAX_DUPLICATION_LOOKBACK = 50
 
 _PLACEHOLDER_PATTERNS = re.compile(
@@ -60,6 +59,17 @@ _GENERIC_ENDING_PATTERNS = (
     "voidaan todeta",
     "on tärkeää",
 )
+
+_SOURCE_LEAK_PATTERNS = re.compile(
+    r"(?i)(?:^|\b)(?:lähde:|source:|alkuperäinen artikkeli|continue reading|read more|liity yrittäjiin|newsletter)",
+)
+
+_ENGLISH_SIGNAL_WORDS = {
+    "the", "and", "for", "with", "from", "that", "this", "into", "their", "there", "about",
+    "charged", "preview", "movies", "studios", "coverage", "breaking", "latest", "live", "war",
+    "back", "new", "more", "after", "before", "over", "under", "during", "report", "reported",
+    "story", "student", "struggle", "office", "offices", "london", "hollywood", "top", "gun",
+}
 
 _FINNISH_SIGNAL_WORDS = {
     "ja", "on", "että", "suomi", "suomen", "mutta", "myös", "kuten", "joka",
@@ -114,6 +124,43 @@ def _normalize_text(text: str) -> str:
 
 def _tokenize_words(text: str) -> list[str]:
     return re.findall(r"\b[a-zäöåA-ZÄÖÅ]{2,}\b", (text or "").lower())
+
+
+def _has_source_leakage(text: str) -> bool:
+    return bool(_SOURCE_LEAK_PATTERNS.search(text or ""))
+
+
+def _has_substantial_english(text: str, *, title_mode: bool = False) -> bool:
+    words = _tokenize_words(text)
+    if not words:
+        return False
+    english_hits = sum(1 for w in words if w in _ENGLISH_SIGNAL_WORDS)
+    ratio = english_hits / len(words)
+    if title_mode:
+        return len(words) >= 4 and english_hits >= 2 and ratio >= 0.25
+    return len(words) >= 40 and english_hits >= 10 and ratio >= 0.12
+
+
+def _has_repeated_paragraphs(content: str) -> bool:
+    paragraphs = [_normalize_text(p).lower() for p in (content or "").split("\n\n") if _normalize_text(p)]
+    seen: set[str] = set()
+    for paragraph in paragraphs:
+        if len(paragraph) < 40:
+            continue
+        if paragraph in seen:
+            return True
+        seen.add(paragraph)
+    return False
+
+
+def _looks_truncated(content: str) -> bool:
+    paragraphs = [p.strip() for p in (content or "").split("\n\n") if p.strip()]
+    if not paragraphs:
+        return False
+    last = paragraphs[-1].strip()
+    if len(last.split()) < 7:
+        return False
+    return last[-1] not in (".", "!", "?", '"', "'", "”", "»")
 
 
 def _jaccard_similarity(a: str, b: str) -> float:
@@ -454,6 +501,21 @@ def score_article(article: dict) -> ScoreBreakdown:
         ratio = top_count / len(content_words)
         if ratio > 0.06 and top_count >= 6:
             hard_fails.append(f"keyword stuffing: '{top_word}' {top_count}× ({ratio:.1%})")
+
+    if _has_substantial_english(title, title_mode=True):
+        hard_fails.append("title contains substantial English")
+
+    if _has_substantial_english(content):
+        hard_fails.append("body contains substantial English")
+
+    if _has_source_leakage(title) or _has_source_leakage(description) or _has_source_leakage(content):
+        hard_fails.append("source leakage in public text")
+
+    if _has_repeated_paragraphs(content):
+        hard_fails.append("repeated paragraph block")
+
+    if _looks_truncated(content):
+        hard_fails.append("truncated ending")
 
     # NOTE: unsourced numbers downgraded from hard fail to score penalty (2026-04-02).
     # The rewriter frequently reformats numbers ("noin 30 000" → "30000", "3,5 miljardia"
