@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-17T21:23:10+00:00",
+  "generated_at": "2026-04-18T00:43:07+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 53,
-    "ok": 53,
+    "total": 52,
+    "ok": 52,
     "skip": 0,
     "error": 0
   },
   "articles": {
-    "attempted": 1183,
-    "published": 56,
-    "rejected": 73,
+    "attempted": 1161,
+    "published": 55,
+    "rejected": 57,
     "publish_rate": 4.7,
-    "last_published_ts": "2026-04-17T21:23:09.501805+00:00"
+    "last_published_ts": "2026-04-18T00:43:06.346672+00:00"
   },
   "reject_reasons": {
-    "missing: image": 73,
-    "lead_too_short": 36,
-    "keyword_stuffing": 34,
-    "length under target (209 words": 29,
-    "unsourced numbers": 22,
+    "missing: image": 57,
+    "lead_too_short": 32,
+    "unsourced numbers": 28,
+    "keyword_stuffing": 16,
+    "length under target (209 words": 11,
     "length under target (283 words": 8,
-    "thin_source (52 words in sourc": 4,
-    "score 20/30 norm=7.67/10 (leng": 3
+    "thin_source (52 words in sourc": 7,
+    "language weak Finnish signal (": 6
   },
   "feeds": {
     "total": 38,
@@ -38,23 +38,23 @@
   "trending": [
     [
       "kertoo",
-      72
+      69
     ],
     [
       "jälkeen",
-      49
-    ],
-    [
-      "poliisi",
-      43
+      47
     ],
     [
       "vuonna",
-      39
+      38
+    ],
+    [
+      "poliisi",
+      38
     ],
     [
       "tiedetään",
-      38
+      37
     ]
   ]
 }
