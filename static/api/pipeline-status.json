@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-19T19:58:33+00:00",
+  "generated_at": "2026-04-19T20:16:41+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 3,
-    "ok": 3,
+    "total": 4,
+    "ok": 4,
     "skip": 0,
     "error": 0
   },
   "articles": {
-    "attempted": 74,
-    "published": 3,
-    "rejected": 62,
-    "publish_rate": 4.1,
-    "last_published_ts": "2026-04-19T19:58:32.183453+00:00"
+    "attempted": 99,
+    "published": 4,
+    "rejected": 59,
+    "publish_rate": 4.0,
+    "last_published_ts": "2026-04-19T20:16:39.696886+00:00"
   },
   "reject_reasons": {
-    "missing: image": 62,
+    "missing: image": 59,
     "lead_too_short": 28,
-    "unsourced numbers": 24,
-    "language borderline Finnish si": 13,
+    "unsourced numbers": 21,
+    "language borderline Finnish si": 10,
     "length under target (268 words": 8,
     "length under target (259 words": 7,
     "thin_source (45 words in sourc": 7,
-    "score 30/40 norm=7.74/10 (leng": 6
+    "score 30/40 norm=7.26/10 (leng": 6
   },
   "feeds": {
     "total": 38,
@@ -38,11 +38,15 @@
   "trending": [
     [
       "ennen",
-      7
+      8
     ],
     [
       "prosenttia",
       6
+    ],
+    [
+      "tietojen",
+      5
     ],
     [
       "määttä",
@@ -50,11 +54,7 @@
     ],
     [
       "juuri",
-      4
-    ],
-    [
-      "teslan",
-      4
+      5
     ]
   ]
 }
