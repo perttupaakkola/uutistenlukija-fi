@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-19T18:10:19+00:00",
+  "generated_at": "2026-04-19T19:18:44+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "skip": 0,
     "error": 0
   },
   "articles": {
-    "attempted": 25,
-    "published": 1,
-    "rejected": 60,
+    "attempted": 50,
+    "published": 2,
+    "rejected": 64,
     "publish_rate": 4.0,
-    "last_published_ts": "2026-04-19T18:10:17.902155+00:00"
+    "last_published_ts": "2026-04-19T19:18:43.208733+00:00"
   },
   "reject_reasons": {
-    "missing: image": 60,
-    "lead_too_short": 29,
+    "missing: image": 64,
+    "lead_too_short": 32,
     "unsourced numbers": 25,
-    "language borderline Finnish si": 10,
+    "language borderline Finnish si": 12,
     "length under target (268 words": 8,
     "length under target (259 words": 7,
-    "length very short (154 words)": 6,
-    "score 30/40 norm=7.74/10 (leng": 6
+    "thin_source (45 words in sourc": 7,
+    "length very short (154 words)": 6
   },
   "feeds": {
     "total": 38,
