@@ -14,6 +14,8 @@ ENV_FILE    = PROJECT_DIR / "pipeline" / ".env"
 CONTENT_DIR = PROJECT_DIR / "content" / "posts"
 SITE_BASE   = "https://uutistenlukija.fi"
 WEBHOOK_ENV = "DISCORD_PIPELINE_WEBHOOK"
+CHANNEL_ENV = "DISCORD_PIPELINE_ALERT_CHANNEL_ID"
+DEFAULT_CHANNEL_ID = "1482082645553713366"
 
 
 def load_env(path):
@@ -76,6 +78,23 @@ def build_msg(n, arts, elapsed):
     )
 
 
+def _read_env_key_from_files(key_name: str) -> str:
+    candidates = [
+        ENV_FILE,
+        Path("/home/pertt/.openclaw/.env"),
+    ]
+    for path in candidates:
+        try:
+            if not path.exists():
+                continue
+            for line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+                if line.startswith(f"{key_name}="):
+                    return line.split("=", 1)[1].strip().strip('"').strip("'")
+        except Exception:
+            continue
+    return ""
+
+
 def post_discord(url, msg):
     data = json.dumps({"content": msg}).encode()
     req = urllib.request.Request(
@@ -88,6 +107,28 @@ def post_discord(url, msg):
             return r.status in (200, 204)
     except Exception as e:
         print(f"[run_summary] webhook error: {e}", file=sys.stderr)
+        return False
+
+
+def post_via_discord_bot(channel_id: str, msg: str) -> bool:
+    token = os.environ.get("OPENCLAW_DISCORD_BOT_TOKEN") or _read_env_key_from_files("OPENCLAW_DISCORD_BOT_TOKEN")
+    if not token or not channel_id:
+        return False
+    data = json.dumps({"content": msg[:1900]}).encode()
+    req = urllib.request.Request(
+        f"https://discord.com/api/v10/channels/{channel_id}/messages",
+        data=data,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bot {token}",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as r:
+            return r.status in (200, 201, 204)
+    except Exception as e:
+        print(f"[run_summary] bot error: {e}", file=sys.stderr)
         return False
 
 
@@ -104,20 +145,26 @@ def main():
 
     env  = load_env(ENV_FILE)
     hook = os.environ.get(WEBHOOK_ENV) or env.get(WEBHOOK_ENV, "")
+    channel_id = os.environ.get(CHANNEL_ENV) or env.get(CHANNEL_ENV, DEFAULT_CHANNEL_ID)
     arts = recent_articles()
     msg  = build_msg(a.articles, arts, a.elapsed)
     print(msg)
 
-    if a.dry_run or not hook:
-        if not hook:
-            print(f"[run_summary] {WEBHOOK_ENV} not set — stdout only")
+    if a.dry_run:
         return 0
 
-    ok = post_discord(hook, msg)
-    if ok:
-        print("[run_summary] Posted to #operations ✓")
+    if hook and post_discord(hook, msg):
+        print("[run_summary] Posted to #operations via webhook ✓")
+        return 0
+
+    if post_via_discord_bot(channel_id, msg):
+        print("[run_summary] Posted to #operations via bot ✓")
+        return 0
+
+    if not hook:
+        print(f"[run_summary] {WEBHOOK_ENV} not set and bot fallback failed", file=sys.stderr)
     else:
-        print("[run_summary] Discord post failed", file=sys.stderr)
+        print("[run_summary] Discord post failed via webhook and bot", file=sys.stderr)
     return 0
 
 

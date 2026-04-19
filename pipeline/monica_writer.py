@@ -35,7 +35,7 @@ ALLOWED_CATEGORIES = {
 DEFAULT_MONICA_AGENT = os.environ.get("MONICA_OPENCLAW_AGENT", "monica")
 DEFAULT_OPENCLAW_CMD = os.environ.get("MONICA_OPENCLAW_CMD", "openclaw")
 DEFAULT_TIMEOUT_SEC = int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", "240"))
-MIN_CONTENT_WORDS = 250
+MIN_CONTENT_WORDS = 140
 
 OPENCLAW_CANDIDATES = (
     "/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw",
@@ -184,7 +184,8 @@ Hard rules:
 - No duplicated opener, no repeated paragraphs, no generic AI ending
 - No invented facts
 - If the evidence is too weak or contradictory, return: {{"packet_id":"{packet['packet_id']}","status":"INSUFFICIENT_CONFIDENCE","reason":"short reason"}}
-- If content is over 250 words, include at least two H2 subheadings inside `content`
+- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it
+- If content is over 180 words, include at least two H2 subheadings inside `content`
 
 Required JSON schema:
 {schema_text}
@@ -276,6 +277,7 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
     bullets = _normalize_summary_bullets(payload.get("summary_bullets", []), summary)
     note = _normalize_ws(str(payload.get("journalist_note", ""))) or " "
 
+    word_count = len(content.split())
     merged = dict(original)
     merged.update(
         {
@@ -293,7 +295,7 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
             "source_text": packet.get("source_text", ""),
             "writer_backend": "monica",
             "writer_confidence": float(payload.get("confidence", 0.0) or 0.0),
-            "degraded_mode": False,
+            "degraded_mode": MIN_CONTENT_WORDS <= word_count < 250,
             "monica_packet_id": packet.get("packet_id", ""),
         }
     )

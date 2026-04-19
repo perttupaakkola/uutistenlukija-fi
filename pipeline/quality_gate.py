@@ -34,6 +34,7 @@ MIN_BODY_WORDS = 250
 DEGRADED_MIN_BODY_WORDS = 140
 DEGRADED_MIN_PARAGRAPHS = 2
 DEGRADED_MIN_LEAD_WORDS = 20
+DEGRADED_REJECT_THRESHOLD = 30
 
 # Historical internal threshold (0–80). Corresponds to 5.0 / 10 normalized.
 # Restored to a stricter publish bar (2026-04-18) now that the public writer lane
@@ -400,9 +401,12 @@ def score_article(article: dict) -> ScoreBreakdown:
 
     word_count = len(content.split())
     missing_image = not image.strip()
+    degraded_mode = bool(article.get("degraded_mode"))
 
     # Historical scoring kept for compatibility/metrics.
-    if word_count >= 500:
+    if degraded_mode and word_count >= 140:
+        wc_pts = 10
+    elif word_count >= 500:
         wc_pts = 30
     elif word_count >= 350:
         wc_pts = 25
@@ -471,7 +475,6 @@ def score_article(article: dict) -> ScoreBreakdown:
     if source_text_words > 0 and source_text_words < 60:
         hard_fails.append(f"thin_source ({source_text_words} words in source — likely paywall/stub)")
 
-    degraded_mode = bool(article.get("degraded_mode"))
     min_body_words = DEGRADED_MIN_BODY_WORDS if degraded_mode else MIN_BODY_WORDS
     min_paragraphs = DEGRADED_MIN_PARAGRAPHS if degraded_mode else 3
     min_lead_words = DEGRADED_MIN_LEAD_WORDS if degraded_mode else 30
@@ -529,8 +532,9 @@ def score_article(article: dict) -> ScoreBreakdown:
             reasons.append("unsourced numbers")
 
     normalized_score = round(_clamp(weighted_score), 2)
-    effective_threshold = max(DEFAULT_NORMALIZED_THRESHOLD, round(REJECT_THRESHOLD / 80 * 10, 2))
-    passes = (total >= REJECT_THRESHOLD) and (normalized_score >= effective_threshold) and not hard_fails
+    effective_total_threshold = DEGRADED_REJECT_THRESHOLD if degraded_mode else REJECT_THRESHOLD
+    effective_threshold = max(DEFAULT_NORMALIZED_THRESHOLD, round(effective_total_threshold / 80 * 10, 2))
+    passes = (total >= effective_total_threshold) and (normalized_score >= effective_threshold) and not hard_fails
 
     return ScoreBreakdown(
         total=total,
@@ -583,9 +587,14 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
             passed.append(article)
         else:
             reasons: list[str] = []
-            if breakdown.total < threshold or breakdown.normalized_score < DEFAULT_NORMALIZED_THRESHOLD:
+            effective_total_threshold = DEGRADED_REJECT_THRESHOLD if article.get("degraded_mode") else threshold
+            effective_normalized_threshold = max(
+                DEFAULT_NORMALIZED_THRESHOLD,
+                round(effective_total_threshold / 80 * 10, 2),
+            )
+            if breakdown.total < effective_total_threshold or breakdown.normalized_score < effective_normalized_threshold:
                 reasons.append(
-                    f"score {breakdown.total}/{threshold} norm={breakdown.normalized_score}/10 "
+                    f"score {breakdown.total}/{effective_total_threshold} norm={breakdown.normalized_score}/10 "
                     f"(length={breakdown.length_score} readability={breakdown.readability_score} "
                     f"complete={breakdown.completeness_score} dup={breakdown.duplication_score} lang={breakdown.language_score})"
                 )
@@ -599,7 +608,7 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
             rejected.append(article)
             _log_reject(article, reason_str)
 
-            if breakdown.total < threshold or breakdown.normalized_score < DEFAULT_NORMALIZED_THRESHOLD:
+            if breakdown.total < effective_total_threshold or breakdown.normalized_score < effective_normalized_threshold:
                 reason_counter["low_score"] += 1
             for reason in breakdown.reasons:
                 if reason.startswith("length"):
@@ -656,6 +665,7 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
         "min_score": min(all_scores) if all_scores else 0,
         "max_score": max(all_scores) if all_scores else 0,
         "threshold": threshold,
+        "degraded_threshold": DEGRADED_REJECT_THRESHOLD,
         "normalized_threshold": DEFAULT_NORMALIZED_THRESHOLD,
         "filler_hits": filler_hit_articles,
         "filler_penalty_total": filler_total_penalty,
@@ -752,7 +762,8 @@ if __name__ == "__main__":
         article = data.get("article", data)
         bd = score_article(article)
         title = article.get("title", "?")[:70]
-        print(f"Score: {bd.total}/80  norm={bd.normalized_score}/10  passes={bd.passes}  (threshold {REJECT_THRESHOLD})")
+        effective_total_threshold = DEGRADED_REJECT_THRESHOLD if article.get("degraded_mode") else REJECT_THRESHOLD
+        print(f"Score: {bd.total}/80  norm={bd.normalized_score}/10  passes={bd.passes}  (threshold {effective_total_threshold})")
         print(f"  length       : {bd.length_score:>4}/10")
         print(f"  readability  : {bd.readability_score:>4}/10")
         print(f"  completeness : {bd.completeness_score:>4}/10")

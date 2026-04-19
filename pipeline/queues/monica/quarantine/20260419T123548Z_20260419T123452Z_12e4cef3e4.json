@@ -1,0 +1,30 @@
+{
+  "ts": "2026-04-19T12:35:48Z",
+  "reason": "Lähdeaineisto on liian niukka ja sisältää kiistanalaisia väitteitä, joita ei voi vahvistaa julkaistavaksi uutiseksi ilman lisätietoja tapahtumasta.",
+  "packet": {
+    "packet_id": "20260419T123452Z_12e4cef3e4",
+    "created_at": "2026-04-19T12:34:52Z",
+    "headline_seed": "French peacekeeper killed in southern Lebanon",
+    "description_seed": "President Macron blames the attack on Hezbollah. The Iran-backed armed group denies \"any connection\" to the incident.",
+    "link": "https://www.bbc.com/news/articles/cvg4mrm2vm0o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "category_hint": "",
+    "category": "Ulkomaat",
+    "story_confidence": 0.48,
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "President Macron blames the attack on Hezbollah. The Iran-backed armed group denies \"any connection\" to the incident.",
+        "word_count": 17,
+        "keyword_overlap": 11,
+        "strong_overlap": 9
+      }
+    ],
+    "source_text": "President Macron blames the attack on Hezbollah. The Iran-backed armed group denies \"any connection\" to the incident."
+  },
+  "raw_response": "[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n{\"packet_id\":\"20260419T123452Z_12e4cef3e4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka ja sisältää kiistanalaisia väitteitä, joita ei voi vahvistaa julkaistavaksi uutiseksi ilman lisätietoja tapahtumasta.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

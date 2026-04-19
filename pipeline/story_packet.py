@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 """
 story_packet.py — Build structured Monica writer packets from scanned articles.
-
-The goal is to keep raw source soup out of the final writing prompt.
 """
-
 from __future__ import annotations
 
 import hashlib
@@ -28,31 +25,82 @@ _ALLOWED_CATEGORIES = {
 }
 
 _SOURCE_LABEL_RE = re.compile(r"(?im)^\s*\[(?:lähde|source):[^\]]+\]\s*")
-_BOILERPLATE_PATTERNS = [
-    re.compile(r"(?im)^\s*(?:lähde|source):\s*.+$"),
-    re.compile(r"(?im)^\s*continue reading.*$"),
-    re.compile(r"(?im)^\s*read more.*$"),
-    re.compile(r"(?im)^\s*liity yrittäjiin.*$"),
-    re.compile(r"(?im)^\s*mainos.*$"),
-    re.compile(r"(?im)^\s*advertisement.*$"),
-    re.compile(r"(?im)^\s*newsletter.*$"),
-    re.compile(r"(?im)^\s*sign up.*$"),
-]
 _HTML_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"\s+")
+_SOURCE_SPLIT_RE = re.compile(r"\n\s*\n")
+_KEYWORD_RE = re.compile(r"[a-z0-9äöå-]{4,}", re.IGNORECASE)
+
+_COMMON_KEYWORDS = {
+    "uutinen",
+    "uutiset",
+    "suomi",
+    "suomessa",
+    "kertoo",
+    "sanoo",
+    "vuotta",
+    "vuoden",
+    "päivä",
+    "viikon",
+    "jälkeen",
+    "sitten",
+    "asiasta",
+    "mukaan",
+    "tämä",
+    "tuo",
+    "sekä",
+    "myös",
+    "joka",
+    "jotka",
+}
+
+_FOREIGN_TOPIC_TOKENS = {
+    "trump",
+    "biden",
+    "washington",
+    "fbi",
+    "patel",
+    "iran",
+    "israel",
+    "ukraina",
+    "venäjä",
+    "latvia",
+    "liettua",
+    "liettuan",
+    "latvian",
+    "eurooppa",
+    "euroopassa",
+    "yhdysvallat",
+    "yhdysvaltain",
+    "mexico",
+    "spanja",
+    "unkari",
+    "orban",
+    "orbán",
+}
+
+
+def _normalize_ws(text: str) -> str:
+    return _WS_RE.sub(" ", text or "").strip()
+
+
+def _extract_source_label(text: str) -> str:
+    first_line = (text or "").splitlines()[0].strip()
+    match = re.match(r"\[(?:Lähde|Source):\s*([^\]]+?)\]", first_line, flags=re.IGNORECASE)
+    if not match:
+        return ""
+    return _normalize_ws(match.group(1))
 
 
 def queue_root() -> Path:
     configured = os.environ.get("MONICA_QUEUE_DIR", "").strip()
     if configured:
-        return Path(configured)
+        return Path(configured).expanduser().resolve()
     return Path(__file__).resolve().parent / "queues" / "monica"
 
 
 def ensure_queue_dirs() -> dict[str, Path]:
     root = queue_root()
     paths = {
-        "root": root,
         "inbox": root / "inbox",
         "outbox": root / "outbox",
         "quarantine": root / "quarantine",
@@ -62,53 +110,35 @@ def ensure_queue_dirs() -> dict[str, Path]:
     return paths
 
 
-def _normalize_ws(text: str) -> str:
-    return _WS_RE.sub(" ", (text or "")).strip()
-
-
-def _strip_html(text: str) -> str:
+def _sanitize_html(text: str) -> str:
     return _normalize_ws(_HTML_RE.sub(" ", html.unescape(text or "")))
 
 
 def _sanitize_source_block(text: str) -> str:
-    cleaned = text or ""
-    cleaned = _SOURCE_LABEL_RE.sub("", cleaned)
-    cleaned = _strip_html(cleaned)
-    for pattern in _BOILERPLATE_PATTERNS:
-        cleaned = pattern.sub(" ", cleaned)
-    cleaned = re.sub(r"\b(?:Reuters|AP|AFP|BBC)\s+reported\b", "", cleaned, flags=re.IGNORECASE)
-    cleaned = re.sub(r"\b(?:This article was originally published .*?)\b", "", cleaned, flags=re.IGNORECASE)
-    cleaned = re.sub(r"\s{2,}", " ", cleaned)
-    return cleaned.strip(" -\n\t")
-
-
-def _extract_source_label(block: str) -> str:
-    m = re.match(r"\s*\[(?:Lähde|Source):\s*([^\]]+?)\]\s*", block, flags=re.IGNORECASE)
-    if m:
-        return m.group(1).strip()
-    return ""
+    text = _normalize_ws(_sanitize_html(text))
+    text = _SOURCE_LABEL_RE.sub("", text)
+    return text.strip()
 
 
 def _split_research_blocks(research_text: str) -> list[dict]:
     blocks: list[dict] = []
-    raw = (research_text or "").strip()
-    if not raw:
+    if not research_text:
         return blocks
 
-    for idx, part in enumerate(re.split(r"\n\n---\n\n", raw)):
-        part = part.strip()
+    parts = [part.strip() for part in _SOURCE_SPLIT_RE.split(research_text) if part.strip()]
+    for idx, part in enumerate(parts, start=1):
         if not part:
             continue
-        label = _extract_source_label(part) or f"source-{idx + 1}"
-        text = _sanitize_source_block(part)
-        if not text:
+        label = _extract_source_label(part) or f"source-{idx}"
+        clean = _sanitize_source_block(part)
+        if not clean:
             continue
         blocks.append(
             {
                 "source": label,
-                "url": "",
-                "text": text,
-                "word_count": len(text.split()),
+                "source_type": "research",
+                "text": clean,
+                "word_count": len(clean.split()),
             }
         )
     return blocks
@@ -116,12 +146,12 @@ def _split_research_blocks(research_text: str) -> list[dict]:
 
 def _fallback_source_blocks(article: dict) -> list[dict]:
     blocks: list[dict] = []
-    description = _sanitize_source_block(article.get("description", ""))
+    description = _sanitize_source_block(str(article.get("description", "") or ""))
     if description:
         blocks.append(
             {
-                "source": article.get("source", "rss"),
-                "url": article.get("link", ""),
+                "source": article.get("source", "") or "rss",
+                "source_type": "description",
                 "text": description,
                 "word_count": len(description.split()),
             }
@@ -129,14 +159,79 @@ def _fallback_source_blocks(article: dict) -> list[dict]:
     return blocks
 
 
-def _select_best_sources(blocks: Iterable[dict], max_sources: int = 4) -> list[dict]:
-    ranked = sorted(blocks, key=lambda b: b.get("word_count", 0), reverse=True)
+def _keyword_tokens(text: str) -> set[str]:
+    tokens: set[str] = set()
+    for raw in _KEYWORD_RE.findall((text or "").lower()):
+        token = raw.strip("-")
+        if len(token) < 4 or token in _COMMON_KEYWORDS:
+            continue
+        tokens.add(token)
+    return tokens
+
+
+def _keyword_overlap(context_tokens: set[str], text: str) -> tuple[int, int]:
+    if not context_tokens:
+        return 0, 0
+    block_tokens = _keyword_tokens(text)
+    overlap_tokens = context_tokens & block_tokens
+    strong_overlap = sum(1 for token in overlap_tokens if len(token) >= 6)
+    return len(overlap_tokens), strong_overlap
+
+
+def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int = 4) -> list[dict]:
+    context_tokens = _keyword_tokens(
+        " ".join(
+            part
+            for part in [
+                str(article.get("title", "") or ""),
+                str(article.get("description", "") or ""),
+            ]
+            if part
+        )
+    )
+
+    ranked: list[tuple[tuple[int, int, int, int, int], dict]] = []
+    article_source = _normalize_ws(str(article.get("source", "") or ""))
+
+    for block in blocks:
+        text = _normalize_ws(str(block.get("text", "") or ""))
+        if not text:
+            continue
+
+        source = _normalize_ws(str(block.get("source", "") or ""))
+        source_type = _normalize_ws(str(block.get("source_type", "") or ""))
+        words = len(text.split())
+        is_fallback = source_type in {"description", "rss_description"} or source == article_source
+        min_words = 8 if is_fallback else 12
+        if words < min_words:
+            continue
+
+        overlap, strong = _keyword_overlap(context_tokens, text)
+        if context_tokens and not is_fallback:
+            if strong == 0 and overlap < 3:
+                continue
+            if overlap < 1:
+                continue
+
+        ranked.append(
+            (
+                (strong, overlap, 1 if is_fallback else 0, words, len(source)),
+                {
+                    **block,
+                    "text": text,
+                    "source": source,
+                    "word_count": words,
+                    "keyword_overlap": overlap,
+                    "strong_overlap": strong,
+                },
+            )
+        )
+
+    ranked.sort(key=lambda item: item[0], reverse=True)
     selected: list[dict] = []
     seen_text: set[str] = set()
-    for block in ranked:
-        text = _normalize_ws(block.get("text", "")).lower()
-        if not text or len(text.split()) < 25:
-            continue
+    for _, block in ranked:
+        text = block["text"]
         if text in seen_text:
             continue
         seen_text.add(text)
@@ -146,12 +241,24 @@ def _select_best_sources(blocks: Iterable[dict], max_sources: int = 4) -> list[d
     return selected
 
 
-def _infer_category(article: dict) -> str:
-    hint = (article.get("category") or article.get("category_hint") or "").strip()
+def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
+    title_and_desc = " ".join(
+        part
+        for part in [
+            str(article.get("title", "") or ""),
+            str(article.get("description", "") or ""),
+        ]
+        if part
+    ).lower()
+    if any(token in title_and_desc for token in _FOREIGN_TOPIC_TOKENS):
+        return "Ulkomaat"
+
+    hint = _normalize_ws(str(article.get("category_hint") or article.get("category") or ""))
     if hint in _ALLOWED_CATEGORIES:
         return hint
-    title = (article.get("title") or "").lower()
-    if any(token in title for token in ("trump", "iran", "ukraina", "venäjä", "usa", "china", "yhdysvallat")):
+
+    combined = " ".join(block.get("text", "") for block in selected_blocks).lower()
+    if any(token in combined for token in _FOREIGN_TOPIC_TOKENS):
         return "Ulkomaat"
     return "Kotimaa"
 
@@ -159,29 +266,36 @@ def _infer_category(article: dict) -> str:
 def _story_confidence(blocks: list[dict], article: dict) -> float:
     source_score = min(0.35, len(blocks) * 0.10)
     word_count = sum(b.get("word_count", 0) for b in blocks)
-    word_score = min(0.35, word_count / 1200)
-    desc_score = 0.10 if article.get("description") else 0.0
-    link_score = 0.10 if article.get("link") else 0.0
-    score = 0.25 + source_score + word_score + desc_score + link_score
-    return round(max(0.0, min(0.95, score)), 2)
+    word_score = min(0.35, word_count / 600)
+    meta_score = 0.15 if _normalize_ws(str(article.get("title", ""))) else 0.0
+    meta_score += 0.10 if _normalize_ws(str(article.get("description", ""))) else 0.0
+    overlap_bonus = 0.0
+    if blocks:
+        overlap_bonus = min(
+            0.10,
+            max(
+                (block.get("keyword_overlap", 0) * 0.02) + (block.get("strong_overlap", 0) * 0.03)
+                for block in blocks
+            ),
+        )
+    return round(min(0.98, source_score + word_score + meta_score + overlap_bonus), 2)
 
 
-def build_story_packet(article: dict, max_sources: int = 4) -> dict:
+def build_story_packet(article: dict) -> dict:
     title = _normalize_ws(article.get("title", ""))
     description = _sanitize_source_block(article.get("description", ""))
-    research = article.get("research", "") or ""
-    blocks = _split_research_blocks(research)
-    if not blocks:
-        blocks = _fallback_source_blocks(article)
-    blocks = _select_best_sources(blocks, max_sources=max_sources)
-
-    source_text = "\n\n".join(block["text"] for block in blocks).strip()
-    category = _infer_category(article)
-    seed = f"{article.get('link','')}|{title}|{category}"
-    digest = hashlib.sha1(seed.encode("utf-8", errors="ignore")).hexdigest()[:10]
+    seed = article.get("link") or f"{title}|{description}"
+    digest = hashlib.sha1(str(seed).encode("utf-8", errors="ignore")).hexdigest()[:10]
     created_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     packet_id = f"{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}_{digest}"
 
+    research_text = article.get("research_text") or article.get("research") or ""
+    all_blocks = _split_research_blocks(str(research_text))
+    all_blocks.extend(_fallback_source_blocks(article))
+    selected_blocks = _select_best_sources(article, all_blocks)
+    source_text = "\n\n".join(block["text"] for block in selected_blocks)
+
+    inferred_category = _infer_category(article, selected_blocks)
     packet = {
         "packet_id": packet_id,
         "created_at": created_at,
@@ -189,10 +303,11 @@ def build_story_packet(article: dict, max_sources: int = 4) -> dict:
         "description_seed": description,
         "link": article.get("link", ""),
         "source": article.get("source", ""),
-        "source_urls": [u for u in [article.get("link", "")] if u],
-        "source_names": [b.get("source", "") for b in blocks if b.get("source")],
-        "category_hint": category,
-        "story_confidence": _story_confidence(blocks, article),
+        "source_names": [block.get("source", "") for block in selected_blocks if block.get("source")],
+        "source_urls": [article.get("link", "")] if article.get("link") else [],
+        "category_hint": inferred_category,
+        "category": inferred_category,
+        "story_confidence": _story_confidence(selected_blocks, article),
         "language_mix": [article.get("lang", "fi") or "fi"],
         "facts": {
             "who": [],
@@ -202,7 +317,7 @@ def build_story_packet(article: dict, max_sources: int = 4) -> dict:
             "why": [],
             "consequences": [],
         },
-        "clean_source_blocks": blocks,
+        "clean_source_blocks": selected_blocks,
         "source_text": source_text,
         "editor_brief": (
             "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. "
@@ -218,10 +333,15 @@ def build_story_packet(article: dict, max_sources: int = 4) -> dict:
     return packet
 
 
-def save_packet(packet: dict, box: str = "inbox") -> Path:
-    paths = ensure_queue_dirs()
-    target_dir = paths.get(box, paths["inbox"])
+def save_story_packet(packet: dict, queue: str = "inbox") -> Path:
+    dirs = ensure_queue_dirs()
+    target_dir = dirs.get(queue, dirs["inbox"])
     packet_id = packet.get("packet_id") or packet.get("packet", {}).get("packet_id") or "unknown"
     path = target_dir / f"{packet_id}.json"
-    path.write_text(json.dumps(packet, ensure_ascii=False, indent=2), encoding="utf-8")
+    path.write_text(json.dumps(packet, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return path
+
+
+def save_packet(packet: dict, box: str = "inbox") -> Path:
+    """Backward-compatible alias used by monica_writer.py."""
+    return save_story_packet(packet, queue=box)

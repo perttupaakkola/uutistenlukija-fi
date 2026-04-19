@@ -1,0 +1,30 @@
+{
+  "ts": "2026-04-19T10:36:59Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260419T103258Z_a3a78faa08",
+    "created_at": "2026-04-19T10:32:58Z",
+    "headline_seed": "Vauvanruoasta löytyi rotanmyrkkyä Itävallassa – Poistettiin myynnistä yli tuhannesta kaupasta",
+    "description_seed": "Itävallan poliisin mukaan myrkkyä sisältäneiden purkkien kannet olivat ilmeisesti kertaalleen avattuja ja niistä levisi epätavallista hajua. Laajasti myynnissä olleesta vauvanruoasta on löydetty rotanmyrkkyä Itävallassa, kertoo uutistoimisto Reuters. Itävallan poliisin mukaan kyseessä on Hipp-tuotemerkin 190 gramman porkkana-peruna-vauvanruoka. Itävallassa tuote on vedetty kaupoista yli tuhannesta Spar-ketjun myymälästä.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/3b113a4f-5297-4bda-8995-3f1ffa1531ec",
+    "source": "Iltalehti",
+    "category_hint": "",
+    "category": "Kotimaa",
+    "story_confidence": 0.53,
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Itävallan poliisin mukaan myrkkyä sisältäneiden purkkien kannet olivat ilmeisesti kertaalleen avattuja ja niistä levisi epätavallista hajua. Laajasti myynnissä olleesta vauvanruoasta on löydetty rotanmyrkkyä Itävallassa, kertoo uutistoimisto Reuters. Itävallan poliisin mukaan kyseessä on Hipp-tuotemerkin 190 gramman porkkana-peruna-vauvanruoka. Itävallassa tuote on vedetty kaupoista yli tuhannesta Spar-ketjun myymälästä.",
+        "word_count": 45,
+        "keyword_overlap": 33,
+        "strong_overlap": 31
+      }
+    ],
+    "source_text": "Itävallan poliisin mukaan myrkkyä sisältäneiden purkkien kannet olivat ilmeisesti kertaalleen avattuja ja niistä levisi epätavallista hajua. Laajasti myynnissä olleesta vauvanruoasta on löydetty rotanmyrkkyä Itävallassa, kertoo uutistoimisto Reuters. Itävallan poliisin mukaan kyseessä on Hipp-tuotemerkin 190 gramman porkkana-peruna-vauvanruoka. Itävallassa tuote on vedetty kaupoista yli tuhannesta Spar-ketjun myymälästä."
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260419T103258Z_a3a78faa08\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- If content is over 250 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260419T103258Z_a3a78faa08\",\\n  \"created_at\": \"2026-04-19T10:32:58Z\",\\n  \"headline_seed\": \"Vauvanruoasta löytyi rotanmyrkkyä Itävallassa – Poistettiin myynnistä yli tuhannesta kaupasta\",\\n  \"description_seed\": \"Itävallan poliisin mukaan myrkkyä sisältäneiden purkkien kannet olivat ilmeisesti kertaalleen avattuja ja niistä levisi epätavallista hajua. Laajasti myynnissä olleesta vauvanruoasta on löydetty rotanmyrkkyä Itävallassa, kertoo uutistoimisto Reuters. Itävallan poliisin mukaan kyseessä on Hipp-tuotemerkin 190 gramman porkkana-peruna-vauvanruoka. Itävallassa tuote on vedetty kaupoista yli tuhannesta Spar-ketjun myymälästä.\",\\n  \"link\": \"https://www.iltalehti.fi/ulkomaat/a/3b113a4f-5297-4bda-8995-3f1ffa1531ec\",\\n  \"source\": \"Iltalehti\",\\n  \"category_hint\": \"\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.53,\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Itävallan poliisin mukaan myrkkyä sisältäneiden purkkien kannet olivat ilmeisesti kertaalleen avattuja ja niistä levisi epätavallista hajua. Laajasti myynnissä olleesta vauvanruoasta on löydetty rotanmyrkkyä Itävallassa, kertoo uutistoimisto Reuters. Itävallan poliisin mukaan kyseessä on Hipp-tuotemerkin 190 gramman porkkana-peruna-vauvanruoka. Itävallassa tuote on vedetty kaupoista yli tuhannesta Spar-ketjun myymälästä.\",\\n      \"word_count\": 45,\\n      \"keyword_overlap\": 33,\\n      \"strong_overlap\": 31\\n    }\\n  ],\\n  \"source_text\": \"Itävallan poliisin mukaan myrkkyä sisältäneiden purkkien kannet olivat ilmeisesti kertaalleen avattuja ja niistä levisi epätavallista hajua. Laajasti myynnissä olleesta vauvanruoasta on löydetty rotanmyrkkyä Itävallassa, kertoo uutistoimisto Reuters. Itävallan poliisin mukaan kyseessä on Hipp-tuotemerkin 190 gramman porkkana-peruna-vauvanruoka. Itävallassa tuote on vedetty kaupoista yli tuhannesta Spar-ketjun myymälästä.\"\\n}\\n']' timed out after 240 seconds"
+  }
+}
