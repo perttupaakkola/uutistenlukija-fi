@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-20T08:06:27Z",
+  "reason": "Otsikon ME-väite ei saa tukea lähdeaineistosta, joten paketin keskeinen väite on ristiriitainen.",
+  "packet": {
+    "packet_id": "20260420T080501Z_ba6445abd0",
+    "created_at": "2026-04-20T08:05:01Z",
+    "headline_seed": "Robotiikka | Robotti rikkoi puolimaratonin ME:n",
+    "description_seed": "Kiinassa juostiin erikoinen puolimaraton, jossa mukana oli ihmisten lisäksi humanoidirobotteja.",
+    "link": "https://www.hs.fi/urheilu/art-2000011954489.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "HS Tuoreimmat",
+      "Yle",
+      "source-2",
+      "source-9"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/urheilu/art-2000011954489.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.82,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Robotiikka | Robotti rikkoi puolimaratonin ME:n"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "HS Tuoreimmat",
+        "source_type": "description",
+        "text": "Kiinassa juostiin erikoinen puolimaraton, jossa mukana oli ihmisten lisäksi humanoidirobotteja.",
+        "word_count": 10,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Kymmenet kiinalaisvalmisteiset robotit juoksivat puolimaratonin Kiinan Pekingissä sunnuntaina. Tapahtuma osoitti, miten nopeasti robotiikka ja tekoäly ovat kehittyneet.",
+        "word_count": 17,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Voittajarobotti oli älypuhelimistaan tunnetun Honorin kehittämä. Robotti juoksi puolimaratonin ajassa 50 minuuttia ja 26 sekuntia.",
+        "word_count": 15,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "– Ihmisten kaltaisten robottien juoksuasento oli todella vakuuttava ottaen huomioon, että tekoälyä on kehitetty vain lyhyen aikaa. Olen erittäin vaikuttunut, että robotit voivat saavuttaa tämän tason suorituskyvyn, sanoi 23-vuotias insinööriopiskelija Chu Tianqi.",
+        "word_count": 32,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Kiinassa juostiin erikoinen puolimaraton, jossa mukana oli ihmisten lisäksi humanoidirobotteja.\n\nKymmenet kiinalaisvalmisteiset robotit juoksivat puolimaratonin Kiinan Pekingissä sunnuntaina. Tapahtuma osoitti, miten nopeasti robotiikka ja tekoäly ovat kehittyneet.\n\nVoittajarobotti oli älypuhelimistaan tunnetun Honorin kehittämä. Robotti juoksi puolimaratonin ajassa 50 minuuttia ja 26 sekuntia.\n\n– Ihmisten kaltaisten robottien juoksuasento oli todella vakuuttava ottaen huomioon, että tekoälyä on kehitetty vain lyhyen aikaa. Olen erittäin vaikuttunut, että robotit voivat saavuttaa tämän tason suorituskyvyn, sanoi 23-vuotias insinööriopiskelija Chu Tianqi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Robotiikka | Robotti rikkoi puolimaratonin ME:n",
+      "description": "Kiinassa juostiin erikoinen puolimaraton, jossa mukana oli ihmisten lisäksi humanoidirobotteja.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n{\"packet_id\":\"20260420T080501Z_ba6445abd0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Otsikon ME-väite ei saa tukea lähdeaineistosta, joten paketin keskeinen väite on ristiriitainen.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

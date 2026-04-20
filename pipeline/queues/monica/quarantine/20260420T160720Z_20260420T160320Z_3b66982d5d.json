@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-20T16:07:20Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T160320Z_3b66982d5d",
+    "created_at": "2026-04-20T16:03:20Z",
+    "headline_seed": "Piikkisika pihassa – Poliisi paikalle",
+    "description_seed": "Sunnuntaiaamuna kansalainen soitti hätäkeskukseen pihallaan liikkuvasta piikkisiasta, Länsi-Uudenmaan poliisi kertoo. Poliisilla oli piikkisikaan liittyvä tehtävä Hangossa sunnuntaina. Länsi-Uudenmaan poliisi kertoo asiasta sosiaalisessa mediassa. – Tällainen \"ötökkä\" löytyi Hangosta aamulla 19.4., poliisin julkaisu alkaa.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/5f356f8f-d606-40b4-bff7-61a202fe1b71",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/5f356f8f-d606-40b4-bff7-61a202fe1b71"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Piikkisika pihassa – Poliisi paikalle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Sunnuntaiaamuna kansalainen soitti hätäkeskukseen pihallaan liikkuvasta piikkisiasta, Länsi-Uudenmaan poliisi kertoo. Poliisilla oli piikkisikaan liittyvä tehtävä Hangossa sunnuntaina. Länsi-Uudenmaan poliisi kertoo asiasta sosiaalisessa mediassa. – Tällainen \"ötökkä\" löytyi Hangosta aamulla 19.4., poliisin julkaisu alkaa.",
+        "word_count": 33,
+        "keyword_overlap": 25,
+        "strong_overlap": 24
+      }
+    ],
+    "source_text": "Sunnuntaiaamuna kansalainen soitti hätäkeskukseen pihallaan liikkuvasta piikkisiasta, Länsi-Uudenmaan poliisi kertoo. Poliisilla oli piikkisikaan liittyvä tehtävä Hangossa sunnuntaina. Länsi-Uudenmaan poliisi kertoo asiasta sosiaalisessa mediassa. – Tällainen \"ötökkä\" löytyi Hangosta aamulla 19.4., poliisin julkaisu alkaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Piikkisika pihassa – Poliisi paikalle",
+      "description": "Sunnuntaiaamuna kansalainen soitti hätäkeskukseen pihallaan liikkuvasta piikkisiasta, Länsi-Uudenmaan poliisi kertoo. Poliisilla oli piikkisikaan liittyvä tehtävä Hangossa sunnuntaina. Länsi-Uudenmaan poliisi kertoo asiasta sosiaalisessa mediassa. – Tällainen \"ötökkä\" löytyi Hangosta aamulla 19.4., poliisin julkaisu alkaa.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T160320Z_3b66982d5d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T160320Z_3b66982d5d\",\\n  \"created_at\": \"2026-04-20T16:03:20Z\",\\n  \"headline_seed\": \"Piikkisika pihassa – Poliisi paikalle\",\\n  \"description_seed\": \"Sunnuntaiaamuna kansalainen soitti hätäkeskukseen pihallaan liikkuvasta piikkisiasta, Länsi-Uudenmaan poliisi kertoo. Poliisilla oli piikkisikaan liittyvä tehtävä Hangossa sunnuntaina. Länsi-Uudenmaan poliisi kertoo asiasta sosiaalisessa mediassa. – Tällainen \\\\\"ötökkä\\\\\" löytyi Hangosta aamulla 19.4., poliisin julkaisu alkaa.\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/5f356f8f-d606-40b4-bff7-61a202fe1b71\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/5f356f8f-d606-40b4-bff7-61a202fe1b71\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.51,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Piikkisika pihassa – Poliisi paikalle\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Sunnuntaiaamuna kansalainen soitti hätäkeskukseen pihallaan liikkuvasta piikkisiasta, Länsi-Uudenmaan poliisi kertoo. Poliisilla oli piikkisikaan liittyvä tehtävä Hangossa sunnuntaina. Länsi-Uudenmaan poliisi kertoo asiasta sosiaalisessa mediassa. – Tällainen \\\\\"ötökkä\\\\\" löytyi Hangosta aamulla 19.4., poliisin julkaisu alkaa.\",\\n      \"word_count\": 33,\\n      \"keyword_overlap\": 25,\\n      \"strong_overlap\": 24\\n    }\\n  ],\\n  \"source_text\": \"Sunnuntaiaamuna kansalainen soitti hätäkeskukseen pihallaan liikkuvasta piikkisiasta, Länsi-Uudenmaan poliisi kertoo. Poliisilla oli piikkisikaan liittyvä tehtävä Hangossa sunnuntaina. Länsi-Uudenmaan poliisi kertoo asiasta sosiaalisessa mediassa. – Tällainen \\\\\"ötökkä\\\\\" löytyi Hangosta aamulla 19.4., poliisin julkaisu alkaa.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Piikkisika pihassa – Poliisi paikalle\",\\n    \"description\": \"Sunnuntaiaamuna kansalainen soitti hätäkeskukseen pihallaan liikkuvasta piikkisiasta, Länsi-Uudenmaan poliisi kertoo. Poliisilla oli piikkisikaan liittyvä tehtävä Hangossa sunnuntaina. Länsi-Uudenmaan poliisi kertoo asiasta sosiaalisessa mediassa. – Tällainen \\\\\"ötökkä\\\\\" löytyi Hangosta aamulla 19.4., poliisin julkaisu alkaa.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

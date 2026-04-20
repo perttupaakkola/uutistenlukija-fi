@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-20T11:26:44Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T112244Z_3aa394d78b",
+    "created_at": "2026-04-20T11:22:44Z",
+    "headline_seed": "Näkökulma: Puolustus­voimilla on jättimäinen ongelma",
+    "description_seed": "Nämä viestit paljastavat varusmiesten ja heidän perheidensä epätoivon. Puolustusvoimilla on jättimäinen ongelma, kirjoittaa Iltalehden toimittaja Matti Tanner. Tässä on perusterveiden nuorten miesten terveys ja henki vaarassa. Täytyykö jonkun kuolla ennen kuin mikään muuttuu?",
+    "link": "https://www.iltalehti.fi/kotimaa/a/10ef403c-8fdb-495b-a144-32161735921f",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/10ef403c-8fdb-495b-a144-32161735921f"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näkökulma: Puolustus­voimilla on jättimäinen ongelma"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Nämä viestit paljastavat varusmiesten ja heidän perheidensä epätoivon. Puolustusvoimilla on jättimäinen ongelma, kirjoittaa Iltalehden toimittaja Matti Tanner. Tässä on perusterveiden nuorten miesten terveys ja henki vaarassa. Täytyykö jonkun kuolla ennen kuin mikään muuttuu?",
+        "word_count": 33,
+        "keyword_overlap": 29,
+        "strong_overlap": 23
+      }
+    ],
+    "source_text": "Nämä viestit paljastavat varusmiesten ja heidän perheidensä epätoivon. Puolustusvoimilla on jättimäinen ongelma, kirjoittaa Iltalehden toimittaja Matti Tanner. Tässä on perusterveiden nuorten miesten terveys ja henki vaarassa. Täytyykö jonkun kuolla ennen kuin mikään muuttuu?",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näkökulma: Puolustus­voimilla on jättimäinen ongelma",
+      "description": "Nämä viestit paljastavat varusmiesten ja heidän perheidensä epätoivon. Puolustusvoimilla on jättimäinen ongelma, kirjoittaa Iltalehden toimittaja Matti Tanner. Tässä on perusterveiden nuorten miesten terveys ja henki vaarassa. Täytyykö jonkun kuolla ennen kuin mikään muuttuu?",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T112244Z_3aa394d78b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T112244Z_3aa394d78b\",\\n  \"created_at\": \"2026-04-20T11:22:44Z\",\\n  \"headline_seed\": \"Näkökulma: Puolustus\\xadvoimilla on jättimäinen ongelma\",\\n  \"description_seed\": \"Nämä viestit paljastavat varusmiesten ja heidän perheidensä epätoivon. Puolustusvoimilla on jättimäinen ongelma, kirjoittaa Iltalehden toimittaja Matti Tanner. Tässä on perusterveiden nuorten miesten terveys ja henki vaarassa. Täytyykö jonkun kuolla ennen kuin mikään muuttuu?\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/10ef403c-8fdb-495b-a144-32161735921f\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/10ef403c-8fdb-495b-a144-32161735921f\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.51,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Näkökulma: Puolustus\\xadvoimilla on jättimäinen ongelma\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Nämä viestit paljastavat varusmiesten ja heidän perheidensä epätoivon. Puolustusvoimilla on jättimäinen ongelma, kirjoittaa Iltalehden toimittaja Matti Tanner. Tässä on perusterveiden nuorten miesten terveys ja henki vaarassa. Täytyykö jonkun kuolla ennen kuin mikään muuttuu?\",\\n      \"word_count\": 33,\\n      \"keyword_overlap\": 29,\\n      \"strong_overlap\": 23\\n    }\\n  ],\\n  \"source_text\": \"Nämä viestit paljastavat varusmiesten ja heidän perheidensä epätoivon. Puolustusvoimilla on jättimäinen ongelma, kirjoittaa Iltalehden toimittaja Matti Tanner. Tässä on perusterveiden nuorten miesten terveys ja henki vaarassa. Täytyykö jonkun kuolla ennen kuin mikään muuttuu?\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Näkökulma: Puolustus\\xadvoimilla on jättimäinen ongelma\",\\n    \"description\": \"Nämä viestit paljastavat varusmiesten ja heidän perheidensä epätoivon. Puolustusvoimilla on jättimäinen ongelma, kirjoittaa Iltalehden toimittaja Matti Tanner. Tässä on perusterveiden nuorten miesten terveys ja henki vaarassa. Täytyykö jonkun kuolla ennen kuin mikään muuttuu?\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-20T16:27:12Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T162312Z_bbd3293b2f",
+    "created_at": "2026-04-20T16:23:12Z",
+    "headline_seed": "Alko teki yllättävän aluevaltauksen – Ihmisiltä yksimielinen näkemys",
+    "description_seed": "Alkon valikoimassa olevia napostelutuotteita myydään 2–4 euron hintaan. Alkon valikoiman sekaan on nyt ilmaantunut sipsejä, pähkinöitä ja kuivalihaa. Tuotteita on hyvin hillitysti ripoteltu ympäri myymälää. Viimeistään asiakas huomaa uudet tuotteet kassalla, jonne ne on laitettu juomien kylmähyllyn viereen heräteostoshoukuttimeksi. Huomio hyllyssä kiinnittyy erityisesti värikkääseen kuivalihapakettiin, jota valmistaja markkinoi Youtube-supertähti MrBeastin nimellä. Naposteltavat ovat suomalaisille tuntemattomammilta tuotemerkeiltä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/9a1b9562-9048-4b55-acfc-dd7303c0cd14",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/9a1b9562-9048-4b55-acfc-dd7303c0cd14"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.54,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Alko teki yllättävän aluevaltauksen – Ihmisiltä yksimielinen näkemys"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Alkon valikoimassa olevia napostelutuotteita myydään 2–4 euron hintaan. Alkon valikoiman sekaan on nyt ilmaantunut sipsejä, pähkinöitä ja kuivalihaa. Tuotteita on hyvin hillitysti ripoteltu ympäri myymälää. Viimeistään asiakas huomaa uudet tuotteet kassalla, jonne ne on laitettu juomien kylmähyllyn viereen heräteostoshoukuttimeksi. Huomio hyllyssä kiinnittyy erityisesti värikkääseen kuivalihapakettiin, jota valmistaja markkinoi Youtube-supertähti MrBeastin nimellä. Naposteltavat ovat suomalaisille tuntemattomammilta tuotemerkeiltä.",
+        "word_count": 56,
+        "keyword_overlap": 48,
+        "strong_overlap": 41
+      }
+    ],
+    "source_text": "Alkon valikoimassa olevia napostelutuotteita myydään 2–4 euron hintaan. Alkon valikoiman sekaan on nyt ilmaantunut sipsejä, pähkinöitä ja kuivalihaa. Tuotteita on hyvin hillitysti ripoteltu ympäri myymälää. Viimeistään asiakas huomaa uudet tuotteet kassalla, jonne ne on laitettu juomien kylmähyllyn viereen heräteostoshoukuttimeksi. Huomio hyllyssä kiinnittyy erityisesti värikkääseen kuivalihapakettiin, jota valmistaja markkinoi Youtube-supertähti MrBeastin nimellä. Naposteltavat ovat suomalaisille tuntemattomammilta tuotemerkeiltä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Alko teki yllättävän aluevaltauksen – Ihmisiltä yksimielinen näkemys",
+      "description": "Alkon valikoimassa olevia napostelutuotteita myydään 2–4 euron hintaan. Alkon valikoiman sekaan on nyt ilmaantunut sipsejä, pähkinöitä ja kuivalihaa. Tuotteita on hyvin hillitysti ripoteltu ympäri myymälää. Viimeistään asiakas huomaa uudet tuotteet kassalla, jonne ne on laitettu juomien kylmähyllyn viereen heräteostoshoukuttimeksi. Huomio hyllyssä kiinnittyy erityisesti värikkääseen kuivalihapakettiin, jota valmistaja markkinoi Youtube-supertähti MrBeastin nimellä. Naposteltavat ovat suomalaisille tuntemattomammilta tuotemerkeiltä.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T162312Z_bbd3293b2f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T162312Z_bbd3293b2f\",\\n  \"created_at\": \"2026-04-20T16:23:12Z\",\\n  \"headline_seed\": \"Alko teki yllättävän aluevaltauksen – Ihmisiltä yksimielinen näkemys\",\\n  \"description_seed\": \"Alkon valikoimassa olevia napostelutuotteita myydään 2–4 euron hintaan. Alkon valikoiman sekaan on nyt ilmaantunut sipsejä, pähkinöitä ja kuivalihaa. Tuotteita on hyvin hillitysti ripoteltu ympäri myymälää. Viimeistään asiakas huomaa uudet tuotteet kassalla, jonne ne on laitettu juomien kylmähyllyn viereen heräteostoshoukuttimeksi. Huomio hyllyssä kiinnittyy erityisesti värikkääseen kuivalihapakettiin, jota valmistaja markkinoi Youtube-supertähti MrBeastin nimellä. Naposteltavat ovat suomalaisille tuntemattomammilta tuotemerkeiltä.\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/9a1b9562-9048-4b55-acfc-dd7303c0cd14\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/9a1b9562-9048-4b55-acfc-dd7303c0cd14\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.54,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Alko teki yllättävän aluevaltauksen – Ihmisiltä yksimielinen näkemys\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Alkon valikoimassa olevia napostelutuotteita myydään 2–4 euron hintaan. Alkon valikoiman sekaan on nyt ilmaantunut sipsejä, pähkinöitä ja kuivalihaa. Tuotteita on hyvin hillitysti ripoteltu ympäri myymälää. Viimeistään asiakas huomaa uudet tuotteet kassalla, jonne ne on laitettu juomien kylmähyllyn viereen heräteostoshoukuttimeksi. Huomio hyllyssä kiinnittyy erityisesti värikkääseen kuivalihapakettiin, jota valmistaja markkinoi Youtube-supertähti MrBeastin nimellä. Naposteltavat ovat suomalaisille tuntemattomammilta tuotemerkeiltä.\",\\n      \"word_count\": 56,\\n      \"keyword_overlap\": 48,\\n      \"strong_overlap\": 41\\n    }\\n  ],\\n  \"source_text\": \"Alkon valikoimassa olevia napostelutuotteita myydään 2–4 euron hintaan. Alkon valikoiman sekaan on nyt ilmaantunut sipsejä, pähkinöitä ja kuivalihaa. Tuotteita on hyvin hillitysti ripoteltu ympäri myymälää. Viimeistään asiakas huomaa uudet tuotteet kassalla, jonne ne on laitettu juomien kylmähyllyn viereen heräteostoshoukuttimeksi. Huomio hyllyssä kiinnittyy erityisesti värikkääseen kuivalihapakettiin, jota valmistaja markkinoi Youtube-supertähti MrBeastin nimellä. Naposteltavat ovat suomalaisille tuntemattomammilta tuotemerkeiltä.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Alko teki yllättävän aluevaltauksen – Ihmisiltä yksimielinen näkemys\",\\n    \"description\": \"Alkon valikoimassa olevia napostelutuotteita myydään 2–4 euron hintaan. Alkon valikoiman sekaan on nyt ilmaantunut sipsejä, pähkinöitä ja kuivalihaa. Tuotteita on hyvin hillitysti ripoteltu ympäri myymälää. Viimeistään asiakas huomaa uudet tuotteet kassalla, jonne ne on laitettu juomien kylmähyllyn viereen heräteostoshoukuttimeksi. Huomio hyllyssä kiinnittyy erityisesti värikkääseen kuivalihapakettiin, jota valmistaja markkinoi Youtube-supertähti MrBeastin nimellä. Naposteltavat ovat suomalaisille tuntemattomammilta tuotemerkeiltä.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

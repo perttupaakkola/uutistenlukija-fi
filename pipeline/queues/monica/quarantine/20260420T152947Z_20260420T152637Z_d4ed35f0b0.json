@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-20T15:29:47Z",
+  "reason": "Lähdeaineisto on liian lyhyt eikä kerro lennon tapahtumista, syistä tai seurauksista riittävästi.",
+  "packet": {
+    "packet_id": "20260420T152637Z_d4ed35f0b0",
+    "created_at": "2026-04-20T15:26:37Z",
+    "headline_seed": "Hurja tilanne Finnairin lennolla – ”Osa matkustajista itki”",
+    "description_seed": "Kone oli juuri laskeutumassa kiitoradalle, kun se teki yllättäen ylösvedon.",
+    "link": "https://www.is.fi/kotimaa/art-2000011955391.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat"
+    ],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000011955391.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.47,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hurja tilanne Finnairin lennolla – ”Osa matkustajista itki”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Kone oli juuri laskeutumassa kiitoradalle, kun se teki yllättäen ylösvedon.",
+        "word_count": 10,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Kone oli juuri laskeutumassa kiitoradalle, kun se teki yllättäen ylösvedon.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hurja tilanne Finnairin lennolla – ”Osa matkustajista itki”",
+      "description": "Kone oli juuri laskeutumassa kiitoradalle, kun se teki yllättäen ylösvedon.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n[plugins] [memclaw] Initializing MemClaw plugin...\n[plugins] [memclaw] MemClaw plugin initialized\n{\"packet_id\":\"20260420T152637Z_d4ed35f0b0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian lyhyt eikä kerro lennon tapahtumista, syistä tai seurauksista riittävästi.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

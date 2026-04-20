@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-20T12:27:00Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T122300Z_666a89ad40",
+    "created_at": "2026-04-20T12:23:00Z",
+    "headline_seed": "Lihavuuslääkkeiden suosio on kovassa kasvusssa.",
+    "description_seed": "Suuret voitot houktettelevat väärentäjiä.",
+    "link": "https://yle.fi/a/74-20221594?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "source-5",
+      "Yle Uutiset"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20221594?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.61,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lihavuuslääkkeiden suosio on kovassa kasvusssa."
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Suuret voitot houkuttelevat väärentäjiä. Vangituilla miehillä ei ole lääketieeellistä koulutusta. He kauppasivat valelääkkeitä kolmanneksen aitoja lihavuuslääkkeitä halvemmalla.",
+        "word_count": 17,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Intiassa lääkevalvontaviranomaiset ovat takavarikoineet erän lihavuuden hoitoon tarkoitettuja insuliinikyniä. Eli Lilly- ja Mounjaro-merkkien nimiin laputetuissa lääkekynissä oli kiinalaiselta Alibaba-verkkoalustalta hankittuja aineksia.",
+        "word_count": 21,
+        "keyword_overlap": 0,
+        "strong_overlap": 0
+      }
+    ],
+    "source_text": "Suuret voitot houkuttelevat väärentäjiä. Vangituilla miehillä ei ole lääketieeellistä koulutusta. He kauppasivat valelääkkeitä kolmanneksen aitoja lihavuuslääkkeitä halvemmalla.\n\nIntiassa lääkevalvontaviranomaiset ovat takavarikoineet erän lihavuuden hoitoon tarkoitettuja insuliinikyniä. Eli Lilly- ja Mounjaro-merkkien nimiin laputetuissa lääkekynissä oli kiinalaiselta Alibaba-verkkoalustalta hankittuja aineksia.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lihavuuslääkkeiden suosio on kovassa kasvusssa.",
+      "description": "Suuret voitot houktettelevat väärentäjiä.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T122300Z_666a89ad40\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T122300Z_666a89ad40\",\\n  \"created_at\": \"2026-04-20T12:23:00Z\",\\n  \"headline_seed\": \"Lihavuuslääkkeiden suosio on kovassa kasvusssa.\",\\n  \"description_seed\": \"Suuret voitot houktettelevat väärentäjiä.\",\\n  \"link\": \"https://yle.fi/a/74-20221594?origin=rss\",\\n  \"source\": \"Yle Uutiset\",\\n  \"source_names\": [\\n    \"source-5\",\\n    \"Yle Uutiset\"\\n  ],\\n  \"source_urls\": [\\n    \"https://yle.fi/a/74-20221594?origin=rss\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.61,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Lihavuuslääkkeiden suosio on kovassa kasvusssa.\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"source-5\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Suuret voitot houkuttelevat väärentäjiä. Vangituilla miehillä ei ole lääketieeellistä koulutusta. He kauppasivat valelääkkeitä kolmanneksen aitoja lihavuuslääkkeitä halvemmalla.\",\\n      \"word_count\": 17,\\n      \"keyword_overlap\": 3,\\n      \"strong_overlap\": 3\\n    },\\n    {\\n      \"source\": \"Yle Uutiset\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Intiassa lääkevalvontaviranomaiset ovat takavarikoineet erän lihavuuden hoitoon tarkoitettuja insuliinikyniä. Eli Lilly- ja Mounjaro-merkkien nimiin laputetuissa lääkekynissä oli kiinalaiselta Alibaba-verkkoalustalta hankittuja aineksia.\",\\n      \"word_count\": 21,\\n      \"keyword_overlap\": 0,\\n      \"strong_overlap\": 0\\n    }\\n  ],\\n  \"source_text\": \"Suuret voitot houkuttelevat väärentäjiä. Vangituilla miehillä ei ole lääketieeellistä koulutusta. He kauppasivat valelääkkeitä kolmanneksen aitoja lihavuuslääkkeitä halvemmalla.\\\\n\\\\nIntiassa lääkevalvontaviranomaiset ovat takavarikoineet erän lihavuuden hoitoon tarkoitettuja insuliinikyniä. Eli Lilly- ja Mounjaro-merkkien nimiin laputetuissa lääkekynissä oli kiinalaiselta Alibaba-verkkoalustalta hankittuja aineksia.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Lihavuuslääkkeiden suosio on kovassa kasvusssa.\",\\n    \"description\": \"Suuret voitot houktettelevat väärentäjiä.\",\\n    \"category_hint\": \"\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

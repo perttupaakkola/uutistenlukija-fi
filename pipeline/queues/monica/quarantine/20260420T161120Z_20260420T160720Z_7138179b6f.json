@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-20T16:11:20Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T160720Z_7138179b6f",
+    "created_at": "2026-04-20T16:07:20Z",
+    "headline_seed": "Poliisi tutkii rikoksia hoivakodissa Riihimäellä",
+    "description_seed": "Poliisi tutkii tapausta huumausainerikoksena ja varkautena. Kanta-Hämeen hyvinvointialue (Oma Häme) on havainnut epäkohtia Riihimäellä sijaitsevan hoivakodin toiminnassa. Hyvinvointialue on tehnyt asiasta tutkintapyynnön Hämeen poliisille. Poliisin kirjaamat rikosnimikkeet ovat huumausainerikos ja varkaus. Rikosnimikkeet saattavat muuttua tutkinnan edetessä. Tapahtumien selvittäminen on poliisin mukaan alkuvaiheessa.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/bc7b055c-c291-4c91-8cb2-02ad63b5ffab",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/bc7b055c-c291-4c91-8cb2-02ad63b5ffab"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.52,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Poliisi tutkii rikoksia hoivakodissa Riihimäellä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Poliisi tutkii tapausta huumausainerikoksena ja varkautena. Kanta-Hämeen hyvinvointialue (Oma Häme) on havainnut epäkohtia Riihimäellä sijaitsevan hoivakodin toiminnassa. Hyvinvointialue on tehnyt asiasta tutkintapyynnön Hämeen poliisille. Poliisin kirjaamat rikosnimikkeet ovat huumausainerikos ja varkaus. Rikosnimikkeet saattavat muuttua tutkinnan edetessä. Tapahtumien selvittäminen on poliisin mukaan alkuvaiheessa.",
+        "word_count": 42,
+        "keyword_overlap": 31,
+        "strong_overlap": 29
+      }
+    ],
+    "source_text": "Poliisi tutkii tapausta huumausainerikoksena ja varkautena. Kanta-Hämeen hyvinvointialue (Oma Häme) on havainnut epäkohtia Riihimäellä sijaitsevan hoivakodin toiminnassa. Hyvinvointialue on tehnyt asiasta tutkintapyynnön Hämeen poliisille. Poliisin kirjaamat rikosnimikkeet ovat huumausainerikos ja varkaus. Rikosnimikkeet saattavat muuttua tutkinnan edetessä. Tapahtumien selvittäminen on poliisin mukaan alkuvaiheessa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Poliisi tutkii rikoksia hoivakodissa Riihimäellä",
+      "description": "Poliisi tutkii tapausta huumausainerikoksena ja varkautena. Kanta-Hämeen hyvinvointialue (Oma Häme) on havainnut epäkohtia Riihimäellä sijaitsevan hoivakodin toiminnassa. Hyvinvointialue on tehnyt asiasta tutkintapyynnön Hämeen poliisille. Poliisin kirjaamat rikosnimikkeet ovat huumausainerikos ja varkaus. Rikosnimikkeet saattavat muuttua tutkinnan edetessä. Tapahtumien selvittäminen on poliisin mukaan alkuvaiheessa.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T160720Z_7138179b6f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T160720Z_7138179b6f\",\\n  \"created_at\": \"2026-04-20T16:07:20Z\",\\n  \"headline_seed\": \"Poliisi tutkii rikoksia hoivakodissa Riihimäellä\",\\n  \"description_seed\": \"Poliisi tutkii tapausta huumausainerikoksena ja varkautena. Kanta-Hämeen hyvinvointialue (Oma Häme) on havainnut epäkohtia Riihimäellä sijaitsevan hoivakodin toiminnassa. Hyvinvointialue on tehnyt asiasta tutkintapyynnön Hämeen poliisille. Poliisin kirjaamat rikosnimikkeet ovat huumausainerikos ja varkaus. Rikosnimikkeet saattavat muuttua tutkinnan edetessä. Tapahtumien selvittäminen on poliisin mukaan alkuvaiheessa.\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/bc7b055c-c291-4c91-8cb2-02ad63b5ffab\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/bc7b055c-c291-4c91-8cb2-02ad63b5ffab\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.52,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Poliisi tutkii rikoksia hoivakodissa Riihimäellä\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Poliisi tutkii tapausta huumausainerikoksena ja varkautena. Kanta-Hämeen hyvinvointialue (Oma Häme) on havainnut epäkohtia Riihimäellä sijaitsevan hoivakodin toiminnassa. Hyvinvointialue on tehnyt asiasta tutkintapyynnön Hämeen poliisille. Poliisin kirjaamat rikosnimikkeet ovat huumausainerikos ja varkaus. Rikosnimikkeet saattavat muuttua tutkinnan edetessä. Tapahtumien selvittäminen on poliisin mukaan alkuvaiheessa.\",\\n      \"word_count\": 42,\\n      \"keyword_overlap\": 31,\\n      \"strong_overlap\": 29\\n    }\\n  ],\\n  \"source_text\": \"Poliisi tutkii tapausta huumausainerikoksena ja varkautena. Kanta-Hämeen hyvinvointialue (Oma Häme) on havainnut epäkohtia Riihimäellä sijaitsevan hoivakodin toiminnassa. Hyvinvointialue on tehnyt asiasta tutkintapyynnön Hämeen poliisille. Poliisin kirjaamat rikosnimikkeet ovat huumausainerikos ja varkaus. Rikosnimikkeet saattavat muuttua tutkinnan edetessä. Tapahtumien selvittäminen on poliisin mukaan alkuvaiheessa.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Poliisi tutkii rikoksia hoivakodissa Riihimäellä\",\\n    \"description\": \"Poliisi tutkii tapausta huumausainerikoksena ja varkautena. Kanta-Hämeen hyvinvointialue (Oma Häme) on havainnut epäkohtia Riihimäellä sijaitsevan hoivakodin toiminnassa. Hyvinvointialue on tehnyt asiasta tutkintapyynnön Hämeen poliisille. Poliisin kirjaamat rikosnimikkeet ovat huumausainerikos ja varkaus. Rikosnimikkeet saattavat muuttua tutkinnan edetessä. Tapahtumien selvittäminen on poliisin mukaan alkuvaiheessa.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}
