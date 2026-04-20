@@ -37,7 +37,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/stt-n-tiedot-yli-65-vuotiaiden-kelan-valinnanvapauskokeilulle-halutaan-jatkoa-hintalappu-kymmenissa-miljoonissa/9326752"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
