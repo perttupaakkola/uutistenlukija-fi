@@ -38,7 +38,6 @@ keywords:
 source_name: "Maaseudun Tulevaisuus"
 source_url: "https://www.maaseuduntulevaisuus.fi/hevoset/6e74c4ab-fcd7-4cb0-887e-b9bab3d8fbc8"
 source_domain: "maaseuduntulevaisuus.fi"
-briefing: true
 draft: false
 ---
 
