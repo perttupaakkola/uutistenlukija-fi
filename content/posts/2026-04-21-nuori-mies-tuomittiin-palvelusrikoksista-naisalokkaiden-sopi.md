@@ -37,7 +37,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/mies-laappi-ja-kouri-naisalokkaita-panssariprikaatissa/9327292"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
