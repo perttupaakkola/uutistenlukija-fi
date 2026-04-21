@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-21T00:46:49Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T004249Z_b6a6cc84d0",
+    "created_at": "2026-04-21T00:42:49Z",
+    "headline_seed": "Vanhus kadonnut Tampereella, poliisi pyytää havaintoja",
+    "description_seed": "Poliisi pyytää kansalaisilta havaintoja kadonneesta miehestä. Sisä-Suomen poliisilaitoksen mukaan iäkäs mies on kateissa Tampereella. Mies on lähtenyt kotoaan Tampereen Lamminpäästä jalkaisin. Miehellä oli yllään valkoinen pipo, tumma takki ja mustat housut. Miehellä on pitkä harmaa parta. Kadonneella oli mukanaan mahdollisesti valkoinen putkikassi.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/ec1cc1f5-febb-4c5f-a06b-1ca205b3d767",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti",
+      "source-2",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/ec1cc1f5-febb-4c5f-a06b-1ca205b3d767"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.8,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vanhus kadonnut Tampereella, poliisi pyytää havaintoja"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Poliisi pyytää kansalaisilta havaintoja kadonneesta miehestä. Sisä-Suomen poliisilaitoksen mukaan iäkäs mies on kateissa Tampereella. Mies on lähtenyt kotoaan Tampereen Lamminpäästä jalkaisin. Miehellä oli yllään valkoinen pipo, tumma takki ja mustat housut. Miehellä on pitkä harmaa parta. Kadonneella oli mukanaan mahdollisesti valkoinen putkikassi.",
+        "word_count": 42,
+        "keyword_overlap": 32,
+        "strong_overlap": 25
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Poliisin mukaan mies oli lähtenyt kotoaan jalkaisin maanantaina 20.huhtikuuta kello 18.45 Tampereen Lamminpäästä. Miehen tuntomerkkeja ovat valkoinen pipo, tumma takki, mustat housut, harmaa pitkä parta. Poliisin mukaan miehellä on mahdollisesti mukana valkoinen putkikassi.",
+        "word_count": 33,
+        "keyword_overlap": 18,
+        "strong_overlap": 12
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Poliisi pyytää havaintoja Tampereella kateissa olevasta iäkkäästä miehestä. Sisä-Suomen poliisi kertoi asiasta tiedotteessaan varhain tiistaina.",
+        "word_count": 15,
+        "keyword_overlap": 7,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Poliisi pyytää kansalaisilta havaintoja kadonneesta miehestä. Sisä-Suomen poliisilaitoksen mukaan iäkäs mies on kateissa Tampereella. Mies on lähtenyt kotoaan Tampereen Lamminpäästä jalkaisin. Miehellä oli yllään valkoinen pipo, tumma takki ja mustat housut. Miehellä on pitkä harmaa parta. Kadonneella oli mukanaan mahdollisesti valkoinen putkikassi.\n\nPoliisin mukaan mies oli lähtenyt kotoaan jalkaisin maanantaina 20.huhtikuuta kello 18.45 Tampereen Lamminpäästä. Miehen tuntomerkkeja ovat valkoinen pipo, tumma takki, mustat housut, harmaa pitkä parta. Poliisin mukaan miehellä on mahdollisesti mukana valkoinen putkikassi.\n\nPoliisi pyytää havaintoja Tampereella kateissa olevasta iäkkäästä miehestä. Sisä-Suomen poliisi kertoi asiasta tiedotteessaan varhain tiistaina.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vanhus kadonnut Tampereella, poliisi pyytää havaintoja",
+      "description": "Poliisi pyytää kansalaisilta havaintoja kadonneesta miehestä. Sisä-Suomen poliisilaitoksen mukaan iäkäs mies on kateissa Tampereella. Mies on lähtenyt kotoaan Tampereen Lamminpäästä jalkaisin. Miehellä oli yllään valkoinen pipo, tumma takki ja mustat housut. Miehellä on pitkä harmaa parta. Kadonneella oli mukanaan mahdollisesti valkoinen putkikassi.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T004249Z_b6a6cc84d0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T004249Z_b6a6cc84d0\",\\n  \"created_at\": \"2026-04-21T00:42:49Z\",\\n  \"headline_seed\": \"Vanhus kadonnut Tampereella, poliisi pyytää havaintoja\",\\n  \"description_seed\": \"Poliisi pyytää kansalaisilta havaintoja kadonneesta miehestä. Sisä-Suomen poliisilaitoksen mukaan iäkäs mies on kateissa Tampereella. Mies on lähtenyt kotoaan Tampereen Lamminpäästä jalkaisin. Miehellä oli yllään valkoinen pipo, tumma takki ja mustat housut. Miehellä on pitkä harmaa parta. Kadonneella oli mukanaan mahdollisesti valkoinen putkikassi.\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/ec1cc1f5-febb-4c5f-a06b-1ca205b3d767\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\",\\n    \"source-2\",\\n    \"Yle\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/ec1cc1f5-febb-4c5f-a06b-1ca205b3d767\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.8,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Vanhus kadonnut Tampereella, poliisi pyytää havaintoja\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Poliisi pyytää kansalaisilta havaintoja kadonneesta miehestä. Sisä-Suomen poliisilaitoksen mukaan iäkäs mies on kateissa Tampereella. Mies on lähtenyt kotoaan Tampereen Lamminpäästä jalkaisin. Miehellä oli yllään valkoinen pipo, tumma takki ja mustat housut. Miehellä on pitkä harmaa parta. Kadonneella oli mukanaan mahdollisesti valkoinen putkikassi.\",\\n      \"word_count\": 42,\\n      \"keyword_overlap\": 32,\\n      \"strong_overlap\": 25\\n    },\\n    {\\n      \"source\": \"source-2\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Poliisin mukaan mies oli lähtenyt kotoaan jalkaisin maanantaina 20.huhtikuuta kello 18.45 Tampereen Lamminpäästä. Miehen tuntomerkkeja ovat valkoinen pipo, tumma takki, mustat housut, harmaa pitkä parta. Poliisin mukaan miehellä on mahdollisesti mukana valkoinen putkikassi.\",\\n      \"word_count\": 33,\\n      \"keyword_overlap\": 18,\\n      \"strong_overlap\": 12\\n    },\\n    {\\n      \"source\": \"Yle\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Poliisi pyytää havaintoja Tampereella kateissa olevasta iäkkäästä miehestä. Sisä-Suomen poliisi kertoi asiasta tiedotteessaan varhain tiistaina.\",\\n      \"word_count\": 15,\\n      \"keyword_overlap\": 7,\\n      \"strong_overlap\": 7\\n    }\\n  ],\\n  \"source_text\": \"Poliisi pyytää kansalaisilta havaintoja kadonneesta miehestä. Sisä-Suomen poliisilaitoksen mukaan iäkäs mies on kateissa Tampereella. Mies on lähtenyt kotoaan Tampereen Lamminpäästä jalkaisin. Miehellä oli yllään valkoinen pipo, tumma takki ja mustat housut. Miehellä on pitkä harmaa parta. Kadonneella oli mukanaan mahdollisesti valkoinen putkikassi.\\\\n\\\\nPoliisin mukaan mies oli lähtenyt kotoaan jalkaisin maanantaina 20.huhtikuuta kello 18.45 Tampereen Lamminpäästä. Miehen tuntomerkkeja ovat valkoinen pipo, tumma takki, mustat housut, harmaa pitkä parta. Poliisin mukaan miehellä on mahdollisesti mukana valkoinen putkikassi.\\\\n\\\\nPoliisi pyytää havaintoja Tampereella kateissa olevasta iäkkäästä miehestä. Sisä-Suomen poliisi kertoi asiasta tiedotteessaan varhain tiistaina.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Vanhus kadonnut Tampereella, poliisi pyytää havaintoja\",\\n    \"description\": \"Poliisi pyytää kansalaisilta havaintoja kadonneesta miehestä. Sisä-Suomen poliisilaitoksen mukaan iäkäs mies on kateissa Tampereella. Mies on lähtenyt kotoaan Tampereen Lamminpäästä jalkaisin. Miehellä oli yllään valkoinen pipo, tumma takki ja mustat housut. Miehellä on pitkä harmaa parta. Kadonneella oli mukanaan mahdollisesti valkoinen putkikassi.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

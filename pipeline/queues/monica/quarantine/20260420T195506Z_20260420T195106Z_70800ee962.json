@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-20T19:55:06Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T195106Z_70800ee962",
+    "created_at": "2026-04-20T19:51:06Z",
+    "headline_seed": "US singer D4vd charged with murder stemming from death of missing teenage girl",
+    "description_seed": "Prosecutors say the singer, real name David Anthony Burke, could face life in prison due to the nature of the case.",
+    "link": "https://www.bbc.com/news/articles/crr1v4gzkvlo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-20",
+      "BBC World",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/crr1v4gzkvlo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.89,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US singer D4vd charged with murder stemming from death of missing teenage girl"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Prosecutors say the singer, real name David Anthony Burke, could face life in prison due to the nature of the case.",
+        "word_count": 21,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-20",
+        "source_type": "research",
+        "text": "The Los Angeles County District Attorney's Office on Monday, April 20, announced that the 21-year-old singer-songwriter, whose real name is David Anthony Burke, will be charged with first-degree murder with special circumstances, continuous lewd acts with an individual under 14 and mutilating human remains of a body.",
+        "word_count": 47,
+        "keyword_overlap": 8,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US musician D4vd has been charged with first-degree murder in the death of a teenage girl who vanished last year, officials say.",
+        "word_count": 22,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Burke, 21, also was charged with murder for \"financial gain\" and with murder of a witness to an investigation, the Los Angeles district attorney said.",
+        "word_count": 25,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Prosecutors say the singer, real name David Anthony Burke, could face life in prison due to the nature of the case.\n\nThe Los Angeles County District Attorney's Office on Monday, April 20, announced that the 21-year-old singer-songwriter, whose real name is David Anthony Burke, will be charged with first-degree murder with special circumstances, continuous lewd acts with an individual under 14 and mutilating human remains of a body.\n\nUS musician D4vd has been charged with first-degree murder in the death of a teenage girl who vanished last year, officials say.\n\nBurke, 21, also was charged with murder for \"financial gain\" and with murder of a witness to an investigation, the Los Angeles district attorney said.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US singer D4vd charged with murder stemming from death of missing teenage girl",
+      "description": "Prosecutors say the singer, real name David Anthony Burke, could face life in prison due to the nature of the case.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T195106Z_70800ee962\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T195106Z_70800ee962\",\\n  \"created_at\": \"2026-04-20T19:51:06Z\",\\n  \"headline_seed\": \"US singer D4vd charged with murder stemming from death of missing teenage girl\",\\n  \"description_seed\": \"Prosecutors say the singer, real name David Anthony Burke, could face life in prison due to the nature of the case.\",\\n  \"link\": \"https://www.bbc.com/news/articles/crr1v4gzkvlo?at_medium=RSS&at_campaign=rss\",\\n  \"source\": \"BBC World\",\\n  \"source_names\": [\\n    \"BBC World\",\\n    \"source-20\",\\n    \"BBC World\",\\n    \"source-3\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.bbc.com/news/articles/crr1v4gzkvlo?at_medium=RSS&at_campaign=rss\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.89,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"US singer D4vd charged with murder stemming from death of missing teenage girl\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"BBC World\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Prosecutors say the singer, real name David Anthony Burke, could face life in prison due to the nature of the case.\",\\n      \"word_count\": 21,\\n      \"keyword_overlap\": 13,\\n      \"strong_overlap\": 5\\n    },\\n    {\\n      \"source\": \"source-20\",\\n      \"source_type\": \"research\",\\n      \"text\": \"The Los Angeles County District Attorney\\'s Office on Monday, April 20, announced that the 21-year-old singer-songwriter, whose real name is David Anthony Burke, will be charged with first-degree murder with special circumstances, continuous lewd acts with an individual under 14 and mutilating human remains of a body.\",\\n      \"word_count\": 47,\\n      \"keyword_overlap\": 8,\\n      \"strong_overlap\": 3\\n    },\\n    {\\n      \"source\": \"BBC World\",\\n      \"source_type\": \"research\",\\n      \"text\": \"US musician D4vd has been charged with first-degree murder in the death of a teenage girl who vanished last year, officials say.\",\\n      \"word_count\": 22,\\n      \"keyword_overlap\": 7,\\n      \"strong_overlap\": 3\\n    },\\n    {\\n      \"source\": \"source-3\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Burke, 21, also was charged with murder for \\\\\"financial gain\\\\\" and with murder of a witness to an investigation, the Los Angeles district attorney said.\",\\n      \"word_count\": 25,\\n      \"keyword_overlap\": 4,\\n      \"strong_overlap\": 2\\n    }\\n  ],\\n  \"source_text\": \"Prosecutors say the singer, real name David Anthony Burke, could face life in prison due to the nature of the case.\\\\n\\\\nThe Los Angeles County District Attorney\\'s Office on Monday, April 20, announced that the 21-year-old singer-songwriter, whose real name is David Anthony Burke, will be charged with first-degree murder with special circumstances, continuous lewd acts with an individual under 14 and mutilating human remains of a body.\\\\n\\\\nUS musician D4vd has been charged with first-degree murder in the death of a teenage girl who vanished last year, officials say.\\\\n\\\\nBurke, 21, also was charged with murder for \\\\\"financial gain\\\\\" and with murder of a witness to an investigation, the Los Angeles district attorney said.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"US singer D4vd charged with murder stemming from death of missing teenage girl\",\\n    \"description\": \"Prosecutors say the singer, real name David Anthony Burke, could face life in prison due to the nature of the case.\",\\n    \"category_hint\": \"\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

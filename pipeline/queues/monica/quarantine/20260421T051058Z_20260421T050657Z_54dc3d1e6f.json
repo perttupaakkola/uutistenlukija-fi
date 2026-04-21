@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T05:10:58Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T050657Z_54dc3d1e6f",
+    "created_at": "2026-04-21T05:06:57Z",
+    "headline_seed": "Carolina taisteli jatkoaikavoittoon Ottawasta – Aho maalinteossa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9390460",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Keski-Uusimaa"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9390460"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.34,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Carolina taisteli jatkoaikavoittoon Ottawasta – Aho maalinteossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Keski-Uusimaa",
+        "source_type": "research",
+        "text": "Jääkiekon NHL:ssä Carolina Hurricanes on voittanut myös kevään toisen pudotuspelinsä. Kotipeli Ottawa Senatorsia vastaan venyi toiseen jatkoerään asti, mutta päättyi lopulta Carolinan 3–2-voittoon.",
+        "word_count": 23,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Jääkiekon NHL:ssä Carolina Hurricanes on voittanut myös kevään toisen pudotuspelinsä. Kotipeli Ottawa Senatorsia vastaan venyi toiseen jatkoerään asti, mutta päättyi lopulta Carolinan 3–2-voittoon.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Carolina taisteli jatkoaikavoittoon Ottawasta – Aho maalinteossa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T050657Z_54dc3d1e6f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T050657Z_54dc3d1e6f\",\\n  \"created_at\": \"2026-04-21T05:06:57Z\",\\n  \"headline_seed\": \"Carolina taisteli jatkoaikavoittoon Ottawasta – Aho maalinteossa\",\\n  \"description_seed\": \"\",\\n  \"link\": \"https://www.ess.fi/urheilu/9390460\",\\n  \"source\": \"Etelä-Suomen Sanomat\",\\n  \"source_names\": [\\n    \"Keski-Uusimaa\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.ess.fi/urheilu/9390460\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.34,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Carolina taisteli jatkoaikavoittoon Ottawasta – Aho maalinteossa\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Keski-Uusimaa\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Jääkiekon NHL:ssä Carolina Hurricanes on voittanut myös kevään toisen pudotuspelinsä. Kotipeli Ottawa Senatorsia vastaan venyi toiseen jatkoerään asti, mutta päättyi lopulta Carolinan 3–2-voittoon.\",\\n      \"word_count\": 23,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Jääkiekon NHL:ssä Carolina Hurricanes on voittanut myös kevään toisen pudotuspelinsä. Kotipeli Ottawa Senatorsia vastaan venyi toiseen jatkoerään asti, mutta päättyi lopulta Carolinan 3–2-voittoon.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Carolina taisteli jatkoaikavoittoon Ottawasta – Aho maalinteossa\",\\n    \"description\": \"\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

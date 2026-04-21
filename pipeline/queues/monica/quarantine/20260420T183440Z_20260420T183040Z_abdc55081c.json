@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-20T18:34:40Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T183040Z_abdc55081c",
+    "created_at": "2026-04-20T18:30:40Z",
+    "headline_seed": "Kauneus­klinikalta löydettiin vakavia puutteita – Toimitus­johtaja vain nauroi",
+    "description_seed": "Toimitusjohtajan näkemys muuttui epäkohtien tultua julkisuuteen. Lupa- ja valvontaviraston (LVV) raportti kauneusklinikka Nordicshapesta antaa karun kuvan yrityksen suhtautumisesta. Raportin mukaan toimitusjohtaja Samuel Rossi naureskeli, kun virasto yritti ohjeistaa häntä vakavista puutteista. Tarkastuksella havaittiin useita merkittäviä epäkohtia aina laittomista botuliini- eli botoxvalmisteista niiden pistämiseen.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/4358c775-cedf-4187-9dc6-8bc8def6f2e8",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/4358c775-cedf-4187-9dc6-8bc8def6f2e8"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.52,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kauneus­klinikalta löydettiin vakavia puutteita – Toimitus­johtaja vain nauroi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Toimitusjohtajan näkemys muuttui epäkohtien tultua julkisuuteen. Lupa- ja valvontaviraston (LVV) raportti kauneusklinikka Nordicshapesta antaa karun kuvan yrityksen suhtautumisesta. Raportin mukaan toimitusjohtaja Samuel Rossi naureskeli, kun virasto yritti ohjeistaa häntä vakavista puutteista. Tarkastuksella havaittiin useita merkittäviä epäkohtia aina laittomista botuliini- eli botoxvalmisteista niiden pistämiseen.",
+        "word_count": 43,
+        "keyword_overlap": 38,
+        "strong_overlap": 31
+      }
+    ],
+    "source_text": "Toimitusjohtajan näkemys muuttui epäkohtien tultua julkisuuteen. Lupa- ja valvontaviraston (LVV) raportti kauneusklinikka Nordicshapesta antaa karun kuvan yrityksen suhtautumisesta. Raportin mukaan toimitusjohtaja Samuel Rossi naureskeli, kun virasto yritti ohjeistaa häntä vakavista puutteista. Tarkastuksella havaittiin useita merkittäviä epäkohtia aina laittomista botuliini- eli botoxvalmisteista niiden pistämiseen.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kauneus­klinikalta löydettiin vakavia puutteita – Toimitus­johtaja vain nauroi",
+      "description": "Toimitusjohtajan näkemys muuttui epäkohtien tultua julkisuuteen. Lupa- ja valvontaviraston (LVV) raportti kauneusklinikka Nordicshapesta antaa karun kuvan yrityksen suhtautumisesta. Raportin mukaan toimitusjohtaja Samuel Rossi naureskeli, kun virasto yritti ohjeistaa häntä vakavista puutteista. Tarkastuksella havaittiin useita merkittäviä epäkohtia aina laittomista botuliini- eli botoxvalmisteista niiden pistämiseen.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T183040Z_abdc55081c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T183040Z_abdc55081c\",\\n  \"created_at\": \"2026-04-20T18:30:40Z\",\\n  \"headline_seed\": \"Kauneus\\xadklinikalta löydettiin vakavia puutteita – Toimitus\\xadjohtaja vain nauroi\",\\n  \"description_seed\": \"Toimitusjohtajan näkemys muuttui epäkohtien tultua julkisuuteen. Lupa- ja valvontaviraston (LVV) raportti kauneusklinikka Nordicshapesta antaa karun kuvan yrityksen suhtautumisesta. Raportin mukaan toimitusjohtaja Samuel Rossi naureskeli, kun virasto yritti ohjeistaa häntä vakavista puutteista. Tarkastuksella havaittiin useita merkittäviä epäkohtia aina laittomista botuliini- eli botoxvalmisteista niiden pistämiseen.\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/4358c775-cedf-4187-9dc6-8bc8def6f2e8\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/4358c775-cedf-4187-9dc6-8bc8def6f2e8\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.52,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Kauneus\\xadklinikalta löydettiin vakavia puutteita – Toimitus\\xadjohtaja vain nauroi\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Toimitusjohtajan näkemys muuttui epäkohtien tultua julkisuuteen. Lupa- ja valvontaviraston (LVV) raportti kauneusklinikka Nordicshapesta antaa karun kuvan yrityksen suhtautumisesta. Raportin mukaan toimitusjohtaja Samuel Rossi naureskeli, kun virasto yritti ohjeistaa häntä vakavista puutteista. Tarkastuksella havaittiin useita merkittäviä epäkohtia aina laittomista botuliini- eli botoxvalmisteista niiden pistämiseen.\",\\n      \"word_count\": 43,\\n      \"keyword_overlap\": 38,\\n      \"strong_overlap\": 31\\n    }\\n  ],\\n  \"source_text\": \"Toimitusjohtajan näkemys muuttui epäkohtien tultua julkisuuteen. Lupa- ja valvontaviraston (LVV) raportti kauneusklinikka Nordicshapesta antaa karun kuvan yrityksen suhtautumisesta. Raportin mukaan toimitusjohtaja Samuel Rossi naureskeli, kun virasto yritti ohjeistaa häntä vakavista puutteista. Tarkastuksella havaittiin useita merkittäviä epäkohtia aina laittomista botuliini- eli botoxvalmisteista niiden pistämiseen.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Kauneus\\xadklinikalta löydettiin vakavia puutteita – Toimitus\\xadjohtaja vain nauroi\",\\n    \"description\": \"Toimitusjohtajan näkemys muuttui epäkohtien tultua julkisuuteen. Lupa- ja valvontaviraston (LVV) raportti kauneusklinikka Nordicshapesta antaa karun kuvan yrityksen suhtautumisesta. Raportin mukaan toimitusjohtaja Samuel Rossi naureskeli, kun virasto yritti ohjeistaa häntä vakavista puutteista. Tarkastuksella havaittiin useita merkittäviä epäkohtia aina laittomista botuliini- eli botoxvalmisteista niiden pistämiseen.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

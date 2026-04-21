@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T06:13:57Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T060957Z_78de1388ca",
+    "created_at": "2026-04-21T06:09:57Z",
+    "headline_seed": "ISW: Venäjän joukkojen viikonlopun ponnistelut eivät edistäneet laajaa kevät­hyökkäystä",
+    "description_seed": "Ajatushautomon mukaan vaikuttaa siltä, että neljästä Venäjän hyökkäyksestä kolme ei edennyt nykyisen kontaktilinjan yli.",
+    "link": "https://www.is.fi/ulkomaat/art-2000011957016.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "source-10",
+      "source-2",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000011957016.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "ISW: Venäjän joukkojen viikonlopun ponnistelut eivät edistäneet laajaa kevät­hyökkäystä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Ajatushautomon mukaan vaikuttaa siltä, että neljästä Venäjän hyökkäyksestä kolme ei edennyt nykyisen kontaktilinjan yli.",
+        "word_count": 14,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Ukrainalaiset virkailijat kertoivat eilen maanantaina, että tekniset edellytykset ovat kunnossa. Putki vaurioitui tammikuussa Venäjän iskussa, kertoo Kyiv Post -lehti.",
+        "word_count": 19,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Venäjä on viime viikon aikana käynnistänyt keväthyökkäyksensä, arvioi tutkimuslaitos The Institute for the Study of War (ISW) viikonloppuna. Myös Ukrainan asevoimien komentaja Oleksandr Syrskyi kertoi tänään Venäjän hyökkäysten kiihtyneen viime päivien aikana.",
+        "word_count": 32,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Venäjän päähyökkäys on kohdistunut Lymanin kaupungin suuntaan. Lyman sijaitsee Donetskin linnoitusvyöhykkeen pohjoislaidalla. Jos Venäjä saisi Lymanin vallattua, olisi sen helpompi edetä Slovjanskin ja Kramatorskin suurkaupunkien suuntaan.",
+        "word_count": 26,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Ajatushautomon mukaan vaikuttaa siltä, että neljästä Venäjän hyökkäyksestä kolme ei edennyt nykyisen kontaktilinjan yli.\n\nUkrainalaiset virkailijat kertoivat eilen maanantaina, että tekniset edellytykset ovat kunnossa. Putki vaurioitui tammikuussa Venäjän iskussa, kertoo Kyiv Post -lehti.\n\nVenäjä on viime viikon aikana käynnistänyt keväthyökkäyksensä, arvioi tutkimuslaitos The Institute for the Study of War (ISW) viikonloppuna. Myös Ukrainan asevoimien komentaja Oleksandr Syrskyi kertoi tänään Venäjän hyökkäysten kiihtyneen viime päivien aikana.\n\nVenäjän päähyökkäys on kohdistunut Lymanin kaupungin suuntaan. Lyman sijaitsee Donetskin linnoitusvyöhykkeen pohjoislaidalla. Jos Venäjä saisi Lymanin vallattua, olisi sen helpompi edetä Slovjanskin ja Kramatorskin suurkaupunkien suuntaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "ISW: Venäjän joukkojen viikonlopun ponnistelut eivät edistäneet laajaa kevät­hyökkäystä",
+      "description": "Ajatushautomon mukaan vaikuttaa siltä, että neljästä Venäjän hyökkäyksestä kolme ei edennyt nykyisen kontaktilinjan yli.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T060957Z_78de1388ca\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T060957Z_78de1388ca\",\\n  \"created_at\": \"2026-04-21T06:09:57Z\",\\n  \"headline_seed\": \"ISW: Venäjän joukkojen viikonlopun ponnistelut eivät edistäneet laajaa kevät\\xadhyökkäystä\",\\n  \"description_seed\": \"Ajatushautomon mukaan vaikuttaa siltä, että neljästä Venäjän hyökkäyksestä kolme ei edennyt nykyisen kontaktilinjan yli.\",\\n  \"link\": \"https://www.is.fi/ulkomaat/art-2000011957016.html\",\\n  \"source\": \"Ilta-Sanomat\",\\n  \"source_names\": [\\n    \"Ilta-Sanomat\",\\n    \"source-10\",\\n    \"source-2\",\\n    \"source-4\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.is.fi/ulkomaat/art-2000011957016.html\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.85,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"ISW: Venäjän joukkojen viikonlopun ponnistelut eivät edistäneet laajaa kevät\\xadhyökkäystä\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Ilta-Sanomat\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Ajatushautomon mukaan vaikuttaa siltä, että neljästä Venäjän hyökkäyksestä kolme ei edennyt nykyisen kontaktilinjan yli.\",\\n      \"word_count\": 14,\\n      \"keyword_overlap\": 11,\\n      \"strong_overlap\": 8\\n    },\\n    {\\n      \"source\": \"source-10\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Ukrainalaiset virkailijat kertoivat eilen maanantaina, että tekniset edellytykset ovat kunnossa. Putki vaurioitui tammikuussa Venäjän iskussa, kertoo Kyiv Post -lehti.\",\\n      \"word_count\": 19,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-2\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Venäjä on viime viikon aikana käynnistänyt keväthyökkäyksensä, arvioi tutkimuslaitos The Institute for the Study of War (ISW) viikonloppuna. Myös Ukrainan asevoimien komentaja Oleksandr Syrskyi kertoi tänään Venäjän hyökkäysten kiihtyneen viime päivien aikana.\",\\n      \"word_count\": 32,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-4\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Venäjän päähyökkäys on kohdistunut Lymanin kaupungin suuntaan. Lyman sijaitsee Donetskin linnoitusvyöhykkeen pohjoislaidalla. Jos Venäjä saisi Lymanin vallattua, olisi sen helpompi edetä Slovjanskin ja Kramatorskin suurkaupunkien suuntaan.\",\\n      \"word_count\": 26,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Ajatushautomon mukaan vaikuttaa siltä, että neljästä Venäjän hyökkäyksestä kolme ei edennyt nykyisen kontaktilinjan yli.\\\\n\\\\nUkrainalaiset virkailijat kertoivat eilen maanantaina, että tekniset edellytykset ovat kunnossa. Putki vaurioitui tammikuussa Venäjän iskussa, kertoo Kyiv Post -lehti.\\\\n\\\\nVenäjä on viime viikon aikana käynnistänyt keväthyökkäyksensä, arvioi tutkimuslaitos The Institute for the Study of War (ISW) viikonloppuna. Myös Ukrainan asevoimien komentaja Oleksandr Syrskyi kertoi tänään Venäjän hyökkäysten kiihtyneen viime päivien aikana.\\\\n\\\\nVenäjän päähyökkäys on kohdistunut Lymanin kaupungin suuntaan. Lyman sijaitsee Donetskin linnoitusvyöhykkeen pohjoislaidalla. Jos Venäjä saisi Lymanin vallattua, olisi sen helpompi edetä Slovjanskin ja Kramatorskin suurkaupunkien suuntaan.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"ISW: Venäjän joukkojen viikonlopun ponnistelut eivät edistäneet laajaa kevät\\xadhyökkäystä\",\\n    \"description\": \"Ajatushautomon mukaan vaikuttaa siltä, että neljästä Venäjän hyökkäyksestä kolme ei edennyt nykyisen kontaktilinjan yli.\",\\n    \"category_hint\": \"Ulkomaat\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

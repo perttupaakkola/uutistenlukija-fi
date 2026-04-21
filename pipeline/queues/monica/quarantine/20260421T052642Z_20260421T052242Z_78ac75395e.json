@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T05:26:42Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T052242Z_78ac75395e",
+    "created_at": "2026-04-21T05:22:42Z",
+    "headline_seed": "Seuraa suorana kello 9.30: Hallitus koolle viimeiseen kehysriiheensä – Tavoitteet karkaavat",
+    "description_seed": "Taloustilanne on edelleen mollivoittoinen, eikä hallituksella ole juurikaan pelivaraa tehdä isoja elvytystoimia, koska se ei halua ylittää sovittuja menokehyksiä. Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen, jossa päätetään julkisen talouden päälinjoista tuleville vuosille. Riihessä on tarkoitus löytää 400 miljoonan euron korvaavat säästöt sekä mahdollisia elvyttävämpiä toimia. Jonkin verran lisäleikkauksia on myös tulossa.",
+    "link": "https://www.iltalehti.fi/politiikka/a/78f55f51-c305-4824-a6d0-ac2070d70b85",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/politiikka/a/78f55f51-c305-4824-a6d0-ac2070d70b85"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.54,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Seuraa suorana kello 9.30: Hallitus koolle viimeiseen kehysriiheensä – Tavoitteet karkaavat"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Taloustilanne on edelleen mollivoittoinen, eikä hallituksella ole juurikaan pelivaraa tehdä isoja elvytystoimia, koska se ei halua ylittää sovittuja menokehyksiä. Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen, jossa päätetään julkisen talouden päälinjoista tuleville vuosille. Riihessä on tarkoitus löytää 400 miljoonan euron korvaavat säästöt sekä mahdollisia elvyttävämpiä toimia. Jonkin verran lisäleikkauksia on myös tulossa.",
+        "word_count": 54,
+        "keyword_overlap": 43,
+        "strong_overlap": 35
+      }
+    ],
+    "source_text": "Taloustilanne on edelleen mollivoittoinen, eikä hallituksella ole juurikaan pelivaraa tehdä isoja elvytystoimia, koska se ei halua ylittää sovittuja menokehyksiä. Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen, jossa päätetään julkisen talouden päälinjoista tuleville vuosille. Riihessä on tarkoitus löytää 400 miljoonan euron korvaavat säästöt sekä mahdollisia elvyttävämpiä toimia. Jonkin verran lisäleikkauksia on myös tulossa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Seuraa suorana kello 9.30: Hallitus koolle viimeiseen kehysriiheensä – Tavoitteet karkaavat",
+      "description": "Taloustilanne on edelleen mollivoittoinen, eikä hallituksella ole juurikaan pelivaraa tehdä isoja elvytystoimia, koska se ei halua ylittää sovittuja menokehyksiä. Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen, jossa päätetään julkisen talouden päälinjoista tuleville vuosille. Riihessä on tarkoitus löytää 400 miljoonan euron korvaavat säästöt sekä mahdollisia elvyttävämpiä toimia. Jonkin verran lisäleikkauksia on myös tulossa.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T052242Z_78ac75395e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T052242Z_78ac75395e\",\\n  \"created_at\": \"2026-04-21T05:22:42Z\",\\n  \"headline_seed\": \"Seuraa suorana kello 9.30: Hallitus koolle viimeiseen kehysriiheensä – Tavoitteet karkaavat\",\\n  \"description_seed\": \"Taloustilanne on edelleen mollivoittoinen, eikä hallituksella ole juurikaan pelivaraa tehdä isoja elvytystoimia, koska se ei halua ylittää sovittuja menokehyksiä. Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen, jossa päätetään julkisen talouden päälinjoista tuleville vuosille. Riihessä on tarkoitus löytää 400 miljoonan euron korvaavat säästöt sekä mahdollisia elvyttävämpiä toimia. Jonkin verran lisäleikkauksia on myös tulossa.\",\\n  \"link\": \"https://www.iltalehti.fi/politiikka/a/78f55f51-c305-4824-a6d0-ac2070d70b85\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/politiikka/a/78f55f51-c305-4824-a6d0-ac2070d70b85\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.54,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Seuraa suorana kello 9.30: Hallitus koolle viimeiseen kehysriiheensä – Tavoitteet karkaavat\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Taloustilanne on edelleen mollivoittoinen, eikä hallituksella ole juurikaan pelivaraa tehdä isoja elvytystoimia, koska se ei halua ylittää sovittuja menokehyksiä. Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen, jossa päätetään julkisen talouden päälinjoista tuleville vuosille. Riihessä on tarkoitus löytää 400 miljoonan euron korvaavat säästöt sekä mahdollisia elvyttävämpiä toimia. Jonkin verran lisäleikkauksia on myös tulossa.\",\\n      \"word_count\": 54,\\n      \"keyword_overlap\": 43,\\n      \"strong_overlap\": 35\\n    }\\n  ],\\n  \"source_text\": \"Taloustilanne on edelleen mollivoittoinen, eikä hallituksella ole juurikaan pelivaraa tehdä isoja elvytystoimia, koska se ei halua ylittää sovittuja menokehyksiä. Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen, jossa päätetään julkisen talouden päälinjoista tuleville vuosille. Riihessä on tarkoitus löytää 400 miljoonan euron korvaavat säästöt sekä mahdollisia elvyttävämpiä toimia. Jonkin verran lisäleikkauksia on myös tulossa.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Seuraa suorana kello 9.30: Hallitus koolle viimeiseen kehysriiheensä – Tavoitteet karkaavat\",\\n    \"description\": \"Taloustilanne on edelleen mollivoittoinen, eikä hallituksella ole juurikaan pelivaraa tehdä isoja elvytystoimia, koska se ei halua ylittää sovittuja menokehyksiä. Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen, jossa päätetään julkisen talouden päälinjoista tuleville vuosille. Riihessä on tarkoitus löytää 400 miljoonan euron korvaavat säästöt sekä mahdollisia elvyttävämpiä toimia. Jonkin verran lisäleikkauksia on myös tulossa.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

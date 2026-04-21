@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T05:54:00Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T055000Z_272aacd99b",
+    "created_at": "2026-04-21T05:50:00Z",
+    "headline_seed": "Elisan liikevaihto laski odotusten vastaisesti – asiakaskato rauhoittui",
+    "description_seed": "Teleoperaattori Elisa julkaisi ensimmäisen vuosineljänneksen osavuosikatsauksensa. Asiakkaiden karkaaminen kilpailijoiden luokse väheni viime vuoden loppuun nähden.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/86b61238-c763-4e4d-8361-5cc3f54de60b",
+    "source": "Kauppalehti",
+    "source_names": [
+      "Kauppalehti",
+      "source-3",
+      "ksml.fi",
+      "source-19"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/86b61238-c763-4e4d-8361-5cc3f54de60b"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Elisan liikevaihto laski odotusten vastaisesti – asiakaskato rauhoittui"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti",
+        "source_type": "description",
+        "text": "Teleoperaattori Elisa julkaisi ensimmäisen vuosineljänneksen osavuosikatsauksensa. Asiakkaiden karkaaminen kilpailijoiden luokse väheni viime vuoden loppuun nähden.",
+        "word_count": 15,
+        "keyword_overlap": 14,
+        "strong_overlap": 12
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Teleoperaattori Elisa julkaisi osavuosikatsauksensa tammi–maaliskuulta. Yhtiön liikevaihto ja osakekohtainen tulos jäivät odotuksista.",
+        "word_count": 12,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Teleoperaattori Elisan vertailukelpoinen liikevoitto ja liikevaihto laskivat tammi-maaliskuussa. Liikevoittoa kertyi nyt 92 miljoonaa euroa, kun viime vuonna vastaavalla jaksolla se oli 97 miljoonaa.",
+        "word_count": 23,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-19",
+        "source_type": "research",
+        "text": "Liikevaihto laski kymmenellä miljoonalla eurolla 440 miljoonaan. Liikevaihtoa laski Elisan mukaan päätelaitemyynnin ja yhdysliikenteen liikevaihdon lasku sekä liiketoimintojen myynti. Elisa ennakoi, että liikevaihto tänä vuonna on viime vuoden tasolla tai hieman korkeampi, samoin vertailukelpoinen käyttökate. Kilpailutilanne Suomen televiestintämarkkinoilla jatkuu haasteellisena.",
+        "word_count": 40,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Teleoperaattori Elisa julkaisi ensimmäisen vuosineljänneksen osavuosikatsauksensa. Asiakkaiden karkaaminen kilpailijoiden luokse väheni viime vuoden loppuun nähden.\n\nTeleoperaattori Elisa julkaisi osavuosikatsauksensa tammi–maaliskuulta. Yhtiön liikevaihto ja osakekohtainen tulos jäivät odotuksista.\n\nTeleoperaattori Elisan vertailukelpoinen liikevoitto ja liikevaihto laskivat tammi-maaliskuussa. Liikevoittoa kertyi nyt 92 miljoonaa euroa, kun viime vuonna vastaavalla jaksolla se oli 97 miljoonaa.\n\nLiikevaihto laski kymmenellä miljoonalla eurolla 440 miljoonaan. Liikevaihtoa laski Elisan mukaan päätelaitemyynnin ja yhdysliikenteen liikevaihdon lasku sekä liiketoimintojen myynti. Elisa ennakoi, että liikevaihto tänä vuonna on viime vuoden tasolla tai hieman korkeampi, samoin vertailukelpoinen käyttökate. Kilpailutilanne Suomen televiestintämarkkinoilla jatkuu haasteellisena.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Elisan liikevaihto laski odotusten vastaisesti – asiakaskato rauhoittui",
+      "description": "Teleoperaattori Elisa julkaisi ensimmäisen vuosineljänneksen osavuosikatsauksensa. Asiakkaiden karkaaminen kilpailijoiden luokse väheni viime vuoden loppuun nähden.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T055000Z_272aacd99b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T055000Z_272aacd99b\",\\n  \"created_at\": \"2026-04-21T05:50:00Z\",\\n  \"headline_seed\": \"Elisan liikevaihto laski odotusten vastaisesti – asiakaskato rauhoittui\",\\n  \"description_seed\": \"Teleoperaattori Elisa julkaisi ensimmäisen vuosineljänneksen osavuosikatsauksensa. Asiakkaiden karkaaminen kilpailijoiden luokse väheni viime vuoden loppuun nähden.\",\\n  \"link\": \"https://www.kauppalehti.fi/uutiset/a/86b61238-c763-4e4d-8361-5cc3f54de60b\",\\n  \"source\": \"Kauppalehti\",\\n  \"source_names\": [\\n    \"Kauppalehti\",\\n    \"source-3\",\\n    \"ksml.fi\",\\n    \"source-19\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.kauppalehti.fi/uutiset/a/86b61238-c763-4e4d-8361-5cc3f54de60b\"\\n  ],\\n  \"category_hint\": \"Talous\",\\n  \"category\": \"Talous\",\\n  \"story_confidence\": 0.85,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Elisan liikevaihto laski odotusten vastaisesti – asiakaskato rauhoittui\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Kauppalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Teleoperaattori Elisa julkaisi ensimmäisen vuosineljänneksen osavuosikatsauksensa. Asiakkaiden karkaaminen kilpailijoiden luokse väheni viime vuoden loppuun nähden.\",\\n      \"word_count\": 15,\\n      \"keyword_overlap\": 14,\\n      \"strong_overlap\": 12\\n    },\\n    {\\n      \"source\": \"source-3\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Teleoperaattori Elisa julkaisi osavuosikatsauksensa tammi–maaliskuulta. Yhtiön liikevaihto ja osakekohtainen tulos jäivät odotuksista.\",\\n      \"word_count\": 12,\\n      \"keyword_overlap\": 5,\\n      \"strong_overlap\": 4\\n    },\\n    {\\n      \"source\": \"ksml.fi\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Teleoperaattori Elisan vertailukelpoinen liikevoitto ja liikevaihto laskivat tammi-maaliskuussa. Liikevoittoa kertyi nyt 92 miljoonaa euroa, kun viime vuonna vastaavalla jaksolla se oli 97 miljoonaa.\",\\n      \"word_count\": 23,\\n      \"keyword_overlap\": 4,\\n      \"strong_overlap\": 3\\n    },\\n    {\\n      \"source\": \"source-19\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Liikevaihto laski kymmenellä miljoonalla eurolla 440 miljoonaan. Liikevaihtoa laski Elisan mukaan päätelaitemyynnin ja yhdysliikenteen liikevaihdon lasku sekä liiketoimintojen myynti. Elisa ennakoi, että liikevaihto tänä vuonna on viime vuoden tasolla tai hieman korkeampi, samoin vertailukelpoinen käyttökate. Kilpailutilanne Suomen televiestintämarkkinoilla jatkuu haasteellisena.\",\\n      \"word_count\": 40,\\n      \"keyword_overlap\": 5,\\n      \"strong_overlap\": 2\\n    }\\n  ],\\n  \"source_text\": \"Teleoperaattori Elisa julkaisi ensimmäisen vuosineljänneksen osavuosikatsauksensa. Asiakkaiden karkaaminen kilpailijoiden luokse väheni viime vuoden loppuun nähden.\\\\n\\\\nTeleoperaattori Elisa julkaisi osavuosikatsauksensa tammi–maaliskuulta. Yhtiön liikevaihto ja osakekohtainen tulos jäivät odotuksista.\\\\n\\\\nTeleoperaattori Elisan vertailukelpoinen liikevoitto ja liikevaihto laskivat tammi-maaliskuussa. Liikevoittoa kertyi nyt 92 miljoonaa euroa, kun viime vuonna vastaavalla jaksolla se oli 97 miljoonaa.\\\\n\\\\nLiikevaihto laski kymmenellä miljoonalla eurolla 440 miljoonaan. Liikevaihtoa laski Elisan mukaan päätelaitemyynnin ja yhdysliikenteen liikevaihdon lasku sekä liiketoimintojen myynti. Elisa ennakoi, että liikevaihto tänä vuonna on viime vuoden tasolla tai hieman korkeampi, samoin vertailukelpoinen käyttökate. Kilpailutilanne Suomen televiestintämarkkinoilla jatkuu haasteellisena.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Elisan liikevaihto laski odotusten vastaisesti – asiakaskato rauhoittui\",\\n    \"description\": \"Teleoperaattori Elisa julkaisi ensimmäisen vuosineljänneksen osavuosikatsauksensa. Asiakkaiden karkaaminen kilpailijoiden luokse väheni viime vuoden loppuun nähden.\",\\n    \"category_hint\": \"Talous\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

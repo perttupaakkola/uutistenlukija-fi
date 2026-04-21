@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T06:07:04Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T060303Z_6e79848ce3",
+    "created_at": "2026-04-21T06:03:03Z",
+    "headline_seed": "Kesäasunto paloi Kärsämäellä – Poliisi pyytää vihjeitä",
+    "description_seed": "Tulipalo syttyi keskellä yötä Kärsämäellä Pohjois-Pohjanmaalla. Tyhjillään ollut tallirakennus ja kesäasunto paloivat keskellä yötä 16. huhtikuuta Kärsämäellä. Poliisi kaipaa palosta yleisöhavaintoja. Poliisi sai ilmoituksen tulipalosta Kärsämäen Hanhelantiellä kello 3.16. Palossa tuhoutuivat tyhjillään ollut talli ja sen yhteydessä sijainnut kesäasunto. Poliisi epäilee, että tulipalo sytytettiin tahallaan.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/9082cc89-38c1-4f56-a35a-531b3025e37d",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/9082cc89-38c1-4f56-a35a-531b3025e37d"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.53,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kesäasunto paloi Kärsämäellä – Poliisi pyytää vihjeitä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Tulipalo syttyi keskellä yötä Kärsämäellä Pohjois-Pohjanmaalla. Tyhjillään ollut tallirakennus ja kesäasunto paloivat keskellä yötä 16. huhtikuuta Kärsämäellä. Poliisi kaipaa palosta yleisöhavaintoja. Poliisi sai ilmoituksen tulipalosta Kärsämäen Hanhelantiellä kello 3.16. Palossa tuhoutuivat tyhjillään ollut talli ja sen yhteydessä sijainnut kesäasunto. Poliisi epäilee, että tulipalo sytytettiin tahallaan.",
+        "word_count": 45,
+        "keyword_overlap": 30,
+        "strong_overlap": 25
+      }
+    ],
+    "source_text": "Tulipalo syttyi keskellä yötä Kärsämäellä Pohjois-Pohjanmaalla. Tyhjillään ollut tallirakennus ja kesäasunto paloivat keskellä yötä 16. huhtikuuta Kärsämäellä. Poliisi kaipaa palosta yleisöhavaintoja. Poliisi sai ilmoituksen tulipalosta Kärsämäen Hanhelantiellä kello 3.16. Palossa tuhoutuivat tyhjillään ollut talli ja sen yhteydessä sijainnut kesäasunto. Poliisi epäilee, että tulipalo sytytettiin tahallaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kesäasunto paloi Kärsämäellä – Poliisi pyytää vihjeitä",
+      "description": "Tulipalo syttyi keskellä yötä Kärsämäellä Pohjois-Pohjanmaalla. Tyhjillään ollut tallirakennus ja kesäasunto paloivat keskellä yötä 16. huhtikuuta Kärsämäellä. Poliisi kaipaa palosta yleisöhavaintoja. Poliisi sai ilmoituksen tulipalosta Kärsämäen Hanhelantiellä kello 3.16. Palossa tuhoutuivat tyhjillään ollut talli ja sen yhteydessä sijainnut kesäasunto. Poliisi epäilee, että tulipalo sytytettiin tahallaan.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T060303Z_6e79848ce3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T060303Z_6e79848ce3\",\\n  \"created_at\": \"2026-04-21T06:03:03Z\",\\n  \"headline_seed\": \"Kesäasunto paloi Kärsämäellä – Poliisi pyytää vihjeitä\",\\n  \"description_seed\": \"Tulipalo syttyi keskellä yötä Kärsämäellä Pohjois-Pohjanmaalla. Tyhjillään ollut tallirakennus ja kesäasunto paloivat keskellä yötä 16. huhtikuuta Kärsämäellä. Poliisi kaipaa palosta yleisöhavaintoja. Poliisi sai ilmoituksen tulipalosta Kärsämäen Hanhelantiellä kello 3.16. Palossa tuhoutuivat tyhjillään ollut talli ja sen yhteydessä sijainnut kesäasunto. Poliisi epäilee, että tulipalo sytytettiin tahallaan.\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/9082cc89-38c1-4f56-a35a-531b3025e37d\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/9082cc89-38c1-4f56-a35a-531b3025e37d\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.53,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Kesäasunto paloi Kärsämäellä – Poliisi pyytää vihjeitä\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Tulipalo syttyi keskellä yötä Kärsämäellä Pohjois-Pohjanmaalla. Tyhjillään ollut tallirakennus ja kesäasunto paloivat keskellä yötä 16. huhtikuuta Kärsämäellä. Poliisi kaipaa palosta yleisöhavaintoja. Poliisi sai ilmoituksen tulipalosta Kärsämäen Hanhelantiellä kello 3.16. Palossa tuhoutuivat tyhjillään ollut talli ja sen yhteydessä sijainnut kesäasunto. Poliisi epäilee, että tulipalo sytytettiin tahallaan.\",\\n      \"word_count\": 45,\\n      \"keyword_overlap\": 30,\\n      \"strong_overlap\": 25\\n    }\\n  ],\\n  \"source_text\": \"Tulipalo syttyi keskellä yötä Kärsämäellä Pohjois-Pohjanmaalla. Tyhjillään ollut tallirakennus ja kesäasunto paloivat keskellä yötä 16. huhtikuuta Kärsämäellä. Poliisi kaipaa palosta yleisöhavaintoja. Poliisi sai ilmoituksen tulipalosta Kärsämäen Hanhelantiellä kello 3.16. Palossa tuhoutuivat tyhjillään ollut talli ja sen yhteydessä sijainnut kesäasunto. Poliisi epäilee, että tulipalo sytytettiin tahallaan.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Kesäasunto paloi Kärsämäellä – Poliisi pyytää vihjeitä\",\\n    \"description\": \"Tulipalo syttyi keskellä yötä Kärsämäellä Pohjois-Pohjanmaalla. Tyhjillään ollut tallirakennus ja kesäasunto paloivat keskellä yötä 16. huhtikuuta Kärsämäellä. Poliisi kaipaa palosta yleisöhavaintoja. Poliisi sai ilmoituksen tulipalosta Kärsämäen Hanhelantiellä kello 3.16. Palossa tuhoutuivat tyhjillään ollut talli ja sen yhteydessä sijainnut kesäasunto. Poliisi epäilee, että tulipalo sytytettiin tahallaan.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

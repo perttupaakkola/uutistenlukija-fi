@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-20T18:51:10Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T184709Z_93be69b2f3",
+    "created_at": "2026-04-20T18:47:09Z",
+    "headline_seed": "Painajainen nousi sumun keskeltä – Jokelan junaturmasta 30 vuotta",
+    "description_seed": "Juna ajoi onnettomuuspaikkaan yli kolminkertaista nopeutta. Sumulla arveltiin olleen osuutta. Onnettomuudessa kuoli neljä ja loukkaantui 47.",
+    "link": "https://www.ess.fi/paikalliset/9390157",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Etelä-Suomen Sanomat",
+      "source-28"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9390157"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.63,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Painajainen nousi sumun keskeltä – Jokelan junaturmasta 30 vuotta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Etelä-Suomen Sanomat",
+        "source_type": "description",
+        "text": "Juna ajoi onnettomuuspaikkaan yli kolminkertaista nopeutta. Sumulla arveltiin olleen osuutta. Onnettomuudessa kuoli neljä ja loukkaantui 47.",
+        "word_count": 16,
+        "keyword_overlap": 13,
+        "strong_overlap": 9
+      },
+      {
+        "source": "source-28",
+        "source_type": "research",
+        "text": "– Onnettomuudessa ei loukkaantunut ketään. Yksi kaista on ollut koko ajan käytössä, mutta nyt on neljän ruuhka eli liikenne ruuhkautuu vielä jonkin aikaa, kertoi päivystävä paloesimies Keski-Uudenmaan pelastuslaitokselta neljän maissa.",
+        "word_count": 30,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Juna ajoi onnettomuuspaikkaan yli kolminkertaista nopeutta. Sumulla arveltiin olleen osuutta. Onnettomuudessa kuoli neljä ja loukkaantui 47.\n\n– Onnettomuudessa ei loukkaantunut ketään. Yksi kaista on ollut koko ajan käytössä, mutta nyt on neljän ruuhka eli liikenne ruuhkautuu vielä jonkin aikaa, kertoi päivystävä paloesimies Keski-Uudenmaan pelastuslaitokselta neljän maissa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Painajainen nousi sumun keskeltä – Jokelan junaturmasta 30 vuotta",
+      "description": "Juna ajoi onnettomuuspaikkaan yli kolminkertaista nopeutta. Sumulla arveltiin olleen osuutta. Onnettomuudessa kuoli neljä ja loukkaantui 47.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T184709Z_93be69b2f3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T184709Z_93be69b2f3\",\\n  \"created_at\": \"2026-04-20T18:47:09Z\",\\n  \"headline_seed\": \"Painajainen nousi sumun keskeltä – Jokelan junaturmasta 30 vuotta\",\\n  \"description_seed\": \"Juna ajoi onnettomuuspaikkaan yli kolminkertaista nopeutta. Sumulla arveltiin olleen osuutta. Onnettomuudessa kuoli neljä ja loukkaantui 47.\",\\n  \"link\": \"https://www.ess.fi/paikalliset/9390157\",\\n  \"source\": \"Etelä-Suomen Sanomat\",\\n  \"source_names\": [\\n    \"Etelä-Suomen Sanomat\",\\n    \"source-28\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.ess.fi/paikalliset/9390157\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.63,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Painajainen nousi sumun keskeltä – Jokelan junaturmasta 30 vuotta\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Etelä-Suomen Sanomat\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Juna ajoi onnettomuuspaikkaan yli kolminkertaista nopeutta. Sumulla arveltiin olleen osuutta. Onnettomuudessa kuoli neljä ja loukkaantui 47.\",\\n      \"word_count\": 16,\\n      \"keyword_overlap\": 13,\\n      \"strong_overlap\": 9\\n    },\\n    {\\n      \"source\": \"source-28\",\\n      \"source_type\": \"research\",\\n      \"text\": \"– Onnettomuudessa ei loukkaantunut ketään. Yksi kaista on ollut koko ajan käytössä, mutta nyt on neljän ruuhka eli liikenne ruuhkautuu vielä jonkin aikaa, kertoi päivystävä paloesimies Keski-Uudenmaan pelastuslaitokselta neljän maissa.\",\\n      \"word_count\": 30,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Juna ajoi onnettomuuspaikkaan yli kolminkertaista nopeutta. Sumulla arveltiin olleen osuutta. Onnettomuudessa kuoli neljä ja loukkaantui 47.\\\\n\\\\n– Onnettomuudessa ei loukkaantunut ketään. Yksi kaista on ollut koko ajan käytössä, mutta nyt on neljän ruuhka eli liikenne ruuhkautuu vielä jonkin aikaa, kertoi päivystävä paloesimies Keski-Uudenmaan pelastuslaitokselta neljän maissa.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Painajainen nousi sumun keskeltä – Jokelan junaturmasta 30 vuotta\",\\n    \"description\": \"Juna ajoi onnettomuuspaikkaan yli kolminkertaista nopeutta. Sumulla arveltiin olleen osuutta. Onnettomuudessa kuoli neljä ja loukkaantui 47.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

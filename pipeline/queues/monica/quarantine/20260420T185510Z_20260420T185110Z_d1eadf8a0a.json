@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-20T18:55:10Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T185110Z_d1eadf8a0a",
+    "created_at": "2026-04-20T18:51:10Z",
+    "headline_seed": "Raskaana olleen naisen kauhun­hetket Espoossa – oma äiti puukotti",
+    "description_seed": "Kuusikymppinen nainen kävi tyttärensä kimppuun keskellä yötä. Perheenäidin puoliso joutui painimaan veitsellä varustautuneen anopin kanssa.",
+    "link": "https://www.is.fi/kotimaa/art-2000011955084.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "source-11",
+      "source-8",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000011955084.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.82,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Raskaana olleen naisen kauhun­hetket Espoossa – oma äiti puukotti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Kuusikymppinen nainen kävi tyttärensä kimppuun keskellä yötä. Perheenäidin puoliso joutui painimaan veitsellä varustautuneen anopin kanssa.",
+        "word_count": 15,
+        "keyword_overlap": 15,
+        "strong_overlap": 13
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "Nainen kiistää murhan. Puolustuksen mukaan nainen ei tiennyt raskauden olleen niin pitkällä. Hän vetosi oikeudessa oikeuteensa päättää itse raskauden keskeyttämisestä.",
+        "word_count": 20,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Syytteen mukaan nainen oli saanut raskaudenkeskeytyslääkkeet vilpillisesti väitettyään raskauden olleen vasta alkuvaiheessa. Todellisuudessa raskaus oli jo viikolla 30.",
+        "word_count": 18,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "– Olen todella iloinen ja tyytyväinen päämieheni puolesta, että hän pääsi pitkän tutkintavankeuden jälkeen vapaaksi ja olemaan läheistensä kanssa, Holopainen kertoo.",
+        "word_count": 21,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Kuusikymppinen nainen kävi tyttärensä kimppuun keskellä yötä. Perheenäidin puoliso joutui painimaan veitsellä varustautuneen anopin kanssa.\n\nNainen kiistää murhan. Puolustuksen mukaan nainen ei tiennyt raskauden olleen niin pitkällä. Hän vetosi oikeudessa oikeuteensa päättää itse raskauden keskeyttämisestä.\n\nSyytteen mukaan nainen oli saanut raskaudenkeskeytyslääkkeet vilpillisesti väitettyään raskauden olleen vasta alkuvaiheessa. Todellisuudessa raskaus oli jo viikolla 30.\n\n– Olen todella iloinen ja tyytyväinen päämieheni puolesta, että hän pääsi pitkän tutkintavankeuden jälkeen vapaaksi ja olemaan läheistensä kanssa, Holopainen kertoo.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Raskaana olleen naisen kauhun­hetket Espoossa – oma äiti puukotti",
+      "description": "Kuusikymppinen nainen kävi tyttärensä kimppuun keskellä yötä. Perheenäidin puoliso joutui painimaan veitsellä varustautuneen anopin kanssa.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T185110Z_d1eadf8a0a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T185110Z_d1eadf8a0a\",\\n  \"created_at\": \"2026-04-20T18:51:10Z\",\\n  \"headline_seed\": \"Raskaana olleen naisen kauhun\\xadhetket Espoossa – oma äiti puukotti\",\\n  \"description_seed\": \"Kuusikymppinen nainen kävi tyttärensä kimppuun keskellä yötä. Perheenäidin puoliso joutui painimaan veitsellä varustautuneen anopin kanssa.\",\\n  \"link\": \"https://www.is.fi/kotimaa/art-2000011955084.html\",\\n  \"source\": \"Ilta-Sanomat\",\\n  \"source_names\": [\\n    \"Ilta-Sanomat\",\\n    \"source-11\",\\n    \"source-8\",\\n    \"source-5\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.is.fi/kotimaa/art-2000011955084.html\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.82,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Raskaana olleen naisen kauhun\\xadhetket Espoossa – oma äiti puukotti\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Ilta-Sanomat\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Kuusikymppinen nainen kävi tyttärensä kimppuun keskellä yötä. Perheenäidin puoliso joutui painimaan veitsellä varustautuneen anopin kanssa.\",\\n      \"word_count\": 15,\\n      \"keyword_overlap\": 15,\\n      \"strong_overlap\": 13\\n    },\\n    {\\n      \"source\": \"source-11\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Nainen kiistää murhan. Puolustuksen mukaan nainen ei tiennyt raskauden olleen niin pitkällä. Hän vetosi oikeudessa oikeuteensa päättää itse raskauden keskeyttämisestä.\",\\n      \"word_count\": 20,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    },\\n    {\\n      \"source\": \"source-8\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Syytteen mukaan nainen oli saanut raskaudenkeskeytyslääkkeet vilpillisesti väitettyään raskauden olleen vasta alkuvaiheessa. Todellisuudessa raskaus oli jo viikolla 30.\",\\n      \"word_count\": 18,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    },\\n    {\\n      \"source\": \"source-5\",\\n      \"source_type\": \"research\",\\n      \"text\": \"– Olen todella iloinen ja tyytyväinen päämieheni puolesta, että hän pääsi pitkän tutkintavankeuden jälkeen vapaaksi ja olemaan läheistensä kanssa, Holopainen kertoo.\",\\n      \"word_count\": 21,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Kuusikymppinen nainen kävi tyttärensä kimppuun keskellä yötä. Perheenäidin puoliso joutui painimaan veitsellä varustautuneen anopin kanssa.\\\\n\\\\nNainen kiistää murhan. Puolustuksen mukaan nainen ei tiennyt raskauden olleen niin pitkällä. Hän vetosi oikeudessa oikeuteensa päättää itse raskauden keskeyttämisestä.\\\\n\\\\nSyytteen mukaan nainen oli saanut raskaudenkeskeytyslääkkeet vilpillisesti väitettyään raskauden olleen vasta alkuvaiheessa. Todellisuudessa raskaus oli jo viikolla 30.\\\\n\\\\n– Olen todella iloinen ja tyytyväinen päämieheni puolesta, että hän pääsi pitkän tutkintavankeuden jälkeen vapaaksi ja olemaan läheistensä kanssa, Holopainen kertoo.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Raskaana olleen naisen kauhun\\xadhetket Espoossa – oma äiti puukotti\",\\n    \"description\": \"Kuusikymppinen nainen kävi tyttärensä kimppuun keskellä yötä. Perheenäidin puoliso joutui painimaan veitsellä varustautuneen anopin kanssa.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

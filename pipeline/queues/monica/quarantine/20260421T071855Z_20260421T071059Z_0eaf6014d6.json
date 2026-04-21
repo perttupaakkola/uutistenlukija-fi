@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T07:18:55Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T071059Z_0eaf6014d6",
+    "created_at": "2026-04-21T07:10:59Z",
+    "headline_seed": "Venäläisiä pommi­koneita Itämerellä",
+    "description_seed": "Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella. Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Asiasta kertoo Ruotsin yleisradio SVT. Venäläiskoneet tunnistettiin Tupolev Tu-22M3-pommikoneiksi.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/b24aeb10-b413-4115-bf33-72c27e061763",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/b24aeb10-b413-4115-bf33-72c27e061763"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Venäläisiä pommi­koneita Itämerellä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella. Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Asiasta kertoo Ruotsin yleisradio SVT. Venäläiskoneet tunnistettiin Tupolev Tu-22M3-pommikoneiksi.",
+        "word_count": 27,
+        "keyword_overlap": 21,
+        "strong_overlap": 20
+      }
+    ],
+    "source_text": "Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella. Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Asiasta kertoo Ruotsin yleisradio SVT. Venäläiskoneet tunnistettiin Tupolev Tu-22M3-pommikoneiksi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Venäläisiä pommi­koneita Itämerellä",
+      "description": "Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella. Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Asiasta kertoo Ruotsin yleisradio SVT. Venäläiskoneet tunnistettiin Tupolev Tu-22M3-pommikoneiksi.",
+      "category_hint": "Ulkomaat",
+      "research_source": "none"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'Fix the article JSON below and return ONLY a corrected JSON object.\\nDo not add commentary.\\n\\nProblems to fix:\\n- content too short: 137 words\\n\\nOriginal packet:\\n{\\n  \"packet_id\": \"20260421T071059Z_0eaf6014d6\",\\n  \"created_at\": \"2026-04-21T07:10:59Z\",\\n  \"headline_seed\": \"Venäläisiä pommi\\xadkoneita Itämerellä\",\\n  \"description_seed\": \"Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella. Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Asiasta kertoo Ruotsin yleisradio SVT. Venäläiskoneet tunnistettiin Tupolev Tu-22M3-pommikoneiksi.\",\\n  \"link\": \"https://www.iltalehti.fi/ulkomaat/a/b24aeb10-b413-4115-bf33-72c27e061763\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/ulkomaat/a/b24aeb10-b413-4115-bf33-72c27e061763\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.49,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Venäläisiä pommi\\xadkoneita Itämerellä\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella. Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Asiasta kertoo Ruotsin yleisradio SVT. Venäläiskoneet tunnistettiin Tupolev Tu-22M3-pommikoneiksi.\",\\n      \"word_count\": 27,\\n      \"keyword_overlap\": 21,\\n      \"strong_overlap\": 20\\n    }\\n  ],\\n  \"source_text\": \"Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella. Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Asiasta kertoo Ruotsin yleisradio SVT. Venäläiskoneet tunnistettiin Tupolev Tu-22M3-pommikoneiksi.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Venäläisiä pommi\\xadkoneita Itämerellä\",\\n    \"description\": \"Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella. Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Asiasta kertoo Ruotsin yleisradio SVT. Venäläiskoneet tunnistettiin Tupolev Tu-22M3-pommikoneiksi.\",\\n    \"category_hint\": \"Ulkomaat\",\\n    \"research_source\": \"none\"\\n  }\\n}\\n\\nBroken article JSON:\\n{\\n  \"packet_id\": \"20260421T071059Z_0eaf6014d6\",\\n  \"title\": \"Ruotsi lähetti hävittäjiä venäläisten pommikoneiden vuoksi Itämerellä\",\\n  \"summary\": \"Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Koneet havaittiin Gotlannin koillispuolella, ja ne tunnistettiin Tupolev Tu-22M3 -pommikoneiksi.\",\\n  \"content\": \"Ruotsi lähetti kaksi Jas Gripen -hävittäjää vastauksena Itämerellä havaittuihin venäläisiin pommikoneisiin. Ruotsin mukaan koneet havaittiin Gotlannin koillispuolella.\\\\n\\\\nSaatavilla olevien tietojen perusteella venäläiskoneet tunnistettiin Tupolev Tu-22M3 -pommikoneiksi. Asiasta kertoi Ruotsin yleisradio SVT.\\\\n\\\\nHavainto liittyy Itämeren alueen turvallisuustilanteeseen, jossa sotilasilmailun liikkeet herättävät nopeasti viranomaisten reaktion. Tällä kertaa Ruotsi vastasi tilanteeseen lähettämällä omat hävittäjänsä ilmaan.\\\\n\\\\nLähdeaineistossa ei tarkenneta, kuinka lähelle Ruotsin ilmatilaa koneet tulivat tai kuinka pitkään tilanne kesti. Julkisuudessa vahvistettu tieto on, että havainto tehtiin Gotlannin koillispuolella ja että Ruotsi reagoi siihen kahdella Jas Gripen -koneella.\\\\n\\\\nAineistossa ei myöskään kerrota, liittyikö tilanteeseen ilmatilan loukkausta tai muuta poikkeamaa. Siksi tapahtumaa voidaan kuvata tässä vaiheessa sotilasilmailuun liittyvänä havaintona ja siihen annetuksi vastatoimeksi.\\\\n\\\\nVenäläisten pitkän matkan pommikoneiden liikkeet Itämeren alueella ovat omiaan lisäämään alueen jännitteitä. Tässä tapauksessa varmistettua on kuitenkin vain koneiden havaitseminen, niiden tunnistaminen sekä Ruotsin päätös lähettää hävittäjät niitä vastaan.\",\\n  \"category\": \"Ulkomaat\",\\n  \"tags\": [\\n    \"Ruotsi\",\\n    \"Venäjä\",\\n    \"Itämeri\",\\n    \"sotilasilmailu\"\\n  ],\\n  \"summary_bullets\": [\\n    \"Ruotsi havaitsi kaksi venäläistä pommikonetta Gotlannin koillispuolella.\",\\n    \"Ruotsi lähetti tilanteeseen vastauksena kaksi Jas Gripen -hävittäjää.\",\\n    \"Koneet tunnistettiin Tupolev Tu-22M3 -pommikoneiksi.\"\\n  ],\\n  \"content_type\": \"news\",\\n  \"editorial_reviewed\": true,\\n  \"confidence\": 0.78,\\n  \"journalist_note\": \"Juttu perustuu packetin tietoihin Ruotsin havainnosta ja reagoinnista Itämerellä. Aineisto ei sisällä tarkempia tietoja tapahtuman kestosta, ilmatilan mahdollisesta loukkauksesta tai koneiden tehtävästä, joten niitä ei täsmennetä.\"\\n}\\n']' timed out after 240 seconds"
+  }
+}

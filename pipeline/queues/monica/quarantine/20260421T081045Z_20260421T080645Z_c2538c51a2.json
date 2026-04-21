@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T08:10:45Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T080645Z_c2538c51a2",
+    "created_at": "2026-04-21T08:06:45Z",
+    "headline_seed": "Yhdysvaltojen asetoimitukset Viroon tauolle",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9390979",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-10",
+      "source-15",
+      "source-17",
+      "source-11"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9390979"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.67,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Yhdysvaltojen asetoimitukset Viroon tauolle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Jo ennen Iranin sotaa Yhdysvaltojen asevarastoja rasittivat Israelin sotatoimet esimerkiksi Gazassa ja Libanonissa sekä Venäjän hyökkäyssota, jossa Yhdysvallat on tukenut Ukrainaa valtavalla määrällä aseita ja ammuksia.",
+        "word_count": 26,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-15",
+        "source_type": "research",
+        "text": "Sota Iranissa alkoi Yhdysvaltojen ja Israelin hyökättyä maahan 28. helmikuuta. Maat sopivat kahden viikon tulitauosta 8. huhtikuuta.",
+        "word_count": 17,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-17",
+        "source_type": "research",
+        "text": "Iranin ja Yhdysvaltojen edustajien on määrä tavata kuluvalla viikolla Pakistanin pääkaupungissa Islamabadissa. Edellinen tapaaminen maiden väli",
+        "word_count": 16,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "Viron puolustusminsiteri Hanno Pevkur viime lokakuussa. Hän sanoo ymmärtävänsä Yhdysvaltojen päätöstä, vaikka pitääkin sitä valitettavana.",
+        "word_count": 15,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Jo ennen Iranin sotaa Yhdysvaltojen asevarastoja rasittivat Israelin sotatoimet esimerkiksi Gazassa ja Libanonissa sekä Venäjän hyökkäyssota, jossa Yhdysvallat on tukenut Ukrainaa valtavalla määrällä aseita ja ammuksia.\n\nSota Iranissa alkoi Yhdysvaltojen ja Israelin hyökättyä maahan 28. helmikuuta. Maat sopivat kahden viikon tulitauosta 8. huhtikuuta.\n\nIranin ja Yhdysvaltojen edustajien on määrä tavata kuluvalla viikolla Pakistanin pääkaupungissa Islamabadissa. Edellinen tapaaminen maiden väli\n\nViron puolustusminsiteri Hanno Pevkur viime lokakuussa. Hän sanoo ymmärtävänsä Yhdysvaltojen päätöstä, vaikka pitääkin sitä valitettavana.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Yhdysvaltojen asetoimitukset Viroon tauolle",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T080645Z_c2538c51a2\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T080645Z_c2538c51a2\",\\n  \"created_at\": \"2026-04-21T08:06:45Z\",\\n  \"headline_seed\": \"Yhdysvaltojen asetoimitukset Viroon tauolle\",\\n  \"description_seed\": \"\",\\n  \"link\": \"https://www.ess.fi/uutissuomalainen/9390979\",\\n  \"source\": \"Etelä-Suomen Sanomat\",\\n  \"source_names\": [\\n    \"source-10\",\\n    \"source-15\",\\n    \"source-17\",\\n    \"source-11\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.ess.fi/uutissuomalainen/9390979\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.67,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Yhdysvaltojen asetoimitukset Viroon tauolle\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"source-10\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Jo ennen Iranin sotaa Yhdysvaltojen asevarastoja rasittivat Israelin sotatoimet esimerkiksi Gazassa ja Libanonissa sekä Venäjän hyökkäyssota, jossa Yhdysvallat on tukenut Ukrainaa valtavalla määrällä aseita ja ammuksia.\",\\n      \"word_count\": 26,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-15\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Sota Iranissa alkoi Yhdysvaltojen ja Israelin hyökättyä maahan 28. helmikuuta. Maat sopivat kahden viikon tulitauosta 8. huhtikuuta.\",\\n      \"word_count\": 17,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-17\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Iranin ja Yhdysvaltojen edustajien on määrä tavata kuluvalla viikolla Pakistanin pääkaupungissa Islamabadissa. Edellinen tapaaminen maiden väli\",\\n      \"word_count\": 16,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-11\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Viron puolustusminsiteri Hanno Pevkur viime lokakuussa. Hän sanoo ymmärtävänsä Yhdysvaltojen päätöstä, vaikka pitääkin sitä valitettavana.\",\\n      \"word_count\": 15,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Jo ennen Iranin sotaa Yhdysvaltojen asevarastoja rasittivat Israelin sotatoimet esimerkiksi Gazassa ja Libanonissa sekä Venäjän hyökkäyssota, jossa Yhdysvallat on tukenut Ukrainaa valtavalla määrällä aseita ja ammuksia.\\\\n\\\\nSota Iranissa alkoi Yhdysvaltojen ja Israelin hyökättyä maahan 28. helmikuuta. Maat sopivat kahden viikon tulitauosta 8. huhtikuuta.\\\\n\\\\nIranin ja Yhdysvaltojen edustajien on määrä tavata kuluvalla viikolla Pakistanin pääkaupungissa Islamabadissa. Edellinen tapaaminen maiden väli\\\\n\\\\nViron puolustusminsiteri Hanno Pevkur viime lokakuussa. Hän sanoo ymmärtävänsä Yhdysvaltojen päätöstä, vaikka pitääkin sitä valitettavana.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Yhdysvaltojen asetoimitukset Viroon tauolle\",\\n    \"description\": \"\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T02:15:14Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T021113Z_86b32bf648",
+    "created_at": "2026-04-21T02:11:13Z",
+    "headline_seed": "Trumpin puhdistukset jatkuvat",
+    "description_seed": "Työministeriä syytettiin alkoholin käytöstä työaikana ja suhteesta turvallisuusviranomaiseen. Yhdysvaltain työministerinä toiminut Lori Chavez-DeRemer eroaa virastaan. Tilalle nousee nykyinen varatyöministeri Keith Sonderling. Valkoinen talo ilmoitti asiasta maanantain ja tiistain välisenä yönä Suomen aikaa. Chavez-DeRemerin kerrotaan ”siirtyvän yksityisen sektorin tehtäviin\".",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/d4f4f3ce-f81b-4f0c-ae95-2829d739621a",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/d4f4f3ce-f81b-4f0c-ae95-2829d739621a"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trumpin puhdistukset jatkuvat"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Työministeriä syytettiin alkoholin käytöstä työaikana ja suhteesta turvallisuusviranomaiseen. Yhdysvaltain työministerinä toiminut Lori Chavez-DeRemer eroaa virastaan. Tilalle nousee nykyinen varatyöministeri Keith Sonderling. Valkoinen talo ilmoitti asiasta maanantain ja tiistain välisenä yönä Suomen aikaa. Chavez-DeRemerin kerrotaan ”siirtyvän yksityisen sektorin tehtäviin\".",
+        "word_count": 38,
+        "keyword_overlap": 35,
+        "strong_overlap": 29
+      }
+    ],
+    "source_text": "Työministeriä syytettiin alkoholin käytöstä työaikana ja suhteesta turvallisuusviranomaiseen. Yhdysvaltain työministerinä toiminut Lori Chavez-DeRemer eroaa virastaan. Tilalle nousee nykyinen varatyöministeri Keith Sonderling. Valkoinen talo ilmoitti asiasta maanantain ja tiistain välisenä yönä Suomen aikaa. Chavez-DeRemerin kerrotaan ”siirtyvän yksityisen sektorin tehtäviin\".",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trumpin puhdistukset jatkuvat",
+      "description": "Työministeriä syytettiin alkoholin käytöstä työaikana ja suhteesta turvallisuusviranomaiseen. Yhdysvaltain työministerinä toiminut Lori Chavez-DeRemer eroaa virastaan. Tilalle nousee nykyinen varatyöministeri Keith Sonderling. Valkoinen talo ilmoitti asiasta maanantain ja tiistain välisenä yönä Suomen aikaa. Chavez-DeRemerin kerrotaan ”siirtyvän yksityisen sektorin tehtäviin\".",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T021113Z_86b32bf648\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T021113Z_86b32bf648\",\\n  \"created_at\": \"2026-04-21T02:11:13Z\",\\n  \"headline_seed\": \"Trumpin puhdistukset jatkuvat\",\\n  \"description_seed\": \"Työministeriä syytettiin alkoholin käytöstä työaikana ja suhteesta turvallisuusviranomaiseen. Yhdysvaltain työministerinä toiminut Lori Chavez-DeRemer eroaa virastaan. Tilalle nousee nykyinen varatyöministeri Keith Sonderling. Valkoinen talo ilmoitti asiasta maanantain ja tiistain välisenä yönä Suomen aikaa. Chavez-DeRemerin kerrotaan ”siirtyvän yksityisen sektorin tehtäviin\\\\\".\",\\n  \"link\": \"https://www.iltalehti.fi/ulkomaat/a/d4f4f3ce-f81b-4f0c-ae95-2829d739621a\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/ulkomaat/a/d4f4f3ce-f81b-4f0c-ae95-2829d739621a\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.51,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Trumpin puhdistukset jatkuvat\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Työministeriä syytettiin alkoholin käytöstä työaikana ja suhteesta turvallisuusviranomaiseen. Yhdysvaltain työministerinä toiminut Lori Chavez-DeRemer eroaa virastaan. Tilalle nousee nykyinen varatyöministeri Keith Sonderling. Valkoinen talo ilmoitti asiasta maanantain ja tiistain välisenä yönä Suomen aikaa. Chavez-DeRemerin kerrotaan ”siirtyvän yksityisen sektorin tehtäviin\\\\\".\",\\n      \"word_count\": 38,\\n      \"keyword_overlap\": 35,\\n      \"strong_overlap\": 29\\n    }\\n  ],\\n  \"source_text\": \"Työministeriä syytettiin alkoholin käytöstä työaikana ja suhteesta turvallisuusviranomaiseen. Yhdysvaltain työministerinä toiminut Lori Chavez-DeRemer eroaa virastaan. Tilalle nousee nykyinen varatyöministeri Keith Sonderling. Valkoinen talo ilmoitti asiasta maanantain ja tiistain välisenä yönä Suomen aikaa. Chavez-DeRemerin kerrotaan ”siirtyvän yksityisen sektorin tehtäviin\\\\\".\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Trumpin puhdistukset jatkuvat\",\\n    \"description\": \"Työministeriä syytettiin alkoholin käytöstä työaikana ja suhteesta turvallisuusviranomaiseen. Yhdysvaltain työministerinä toiminut Lori Chavez-DeRemer eroaa virastaan. Tilalle nousee nykyinen varatyöministeri Keith Sonderling. Valkoinen talo ilmoitti asiasta maanantain ja tiistain välisenä yönä Suomen aikaa. Chavez-DeRemerin kerrotaan ”siirtyvän yksityisen sektorin tehtäviin\\\\\".\",\\n    \"category_hint\": \"Ulkomaat\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T03:11:24Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T030724Z_6c026fbb5c",
+    "created_at": "2026-04-21T03:07:24Z",
+    "headline_seed": "Iran uhkaa lyödä ”uusia kortteja” pöytään – Yhdysvallat odotti koko päivän merkkiä Teheranista",
+    "description_seed": "IS seuraa tässä artikkelissa tilannetta Lähi-idässä.",
+    "link": "https://www.is.fi/ulkomaat/art-2000011917601.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000011917601.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.47,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Iran uhkaa lyödä ”uusia kortteja” pöytään – Yhdysvallat odotti koko päivän merkkiä Teheranista"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Pysyvä rauha edellyttää kuitenkin jotain, mitä alueella ei ole ollut vuosikymmeniin, vähäisintäkään luottamusta. Vuoden 2025 niin kutsuttu 12 päivän sota päättyi tulitaukoon, joka kesti vain kuukausia. Historia on varoitus. Israelilla ja Yhdysvalloilla on syynsä viedä tilanne loppuun ja Iranin strategiseen häviöön.",
+        "word_count": 41,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Pysyvä rauha edellyttää kuitenkin jotain, mitä alueella ei ole ollut vuosikymmeniin, vähäisintäkään luottamusta. Vuoden 2025 niin kutsuttu 12 päivän sota päättyi tulitaukoon, joka kesti vain kuukausia. Historia on varoitus. Israelilla ja Yhdysvalloilla on syynsä viedä tilanne loppuun ja Iranin strategiseen häviöön.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Iran uhkaa lyödä ”uusia kortteja” pöytään – Yhdysvallat odotti koko päivän merkkiä Teheranista",
+      "description": "IS seuraa tässä artikkelissa tilannetta Lähi-idässä.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T030724Z_6c026fbb5c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T030724Z_6c026fbb5c\",\\n  \"created_at\": \"2026-04-21T03:07:24Z\",\\n  \"headline_seed\": \"Iran uhkaa lyödä ”uusia kortteja” pöytään – Yhdysvallat odotti koko päivän merkkiä Teheranista\",\\n  \"description_seed\": \"IS seuraa tässä artikkelissa tilannetta Lähi-idässä.\",\\n  \"link\": \"https://www.is.fi/ulkomaat/art-2000011917601.html\",\\n  \"source\": \"Ilta-Sanomat\",\\n  \"source_names\": [\\n    \"source-4\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.is.fi/ulkomaat/art-2000011917601.html\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.47,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Iran uhkaa lyödä ”uusia kortteja” pöytään – Yhdysvallat odotti koko päivän merkkiä Teheranista\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"source-4\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Pysyvä rauha edellyttää kuitenkin jotain, mitä alueella ei ole ollut vuosikymmeniin, vähäisintäkään luottamusta. Vuoden 2025 niin kutsuttu 12 päivän sota päättyi tulitaukoon, joka kesti vain kuukausia. Historia on varoitus. Israelilla ja Yhdysvalloilla on syynsä viedä tilanne loppuun ja Iranin strategiseen häviöön.\",\\n      \"word_count\": 41,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Pysyvä rauha edellyttää kuitenkin jotain, mitä alueella ei ole ollut vuosikymmeniin, vähäisintäkään luottamusta. Vuoden 2025 niin kutsuttu 12 päivän sota päättyi tulitaukoon, joka kesti vain kuukausia. Historia on varoitus. Israelilla ja Yhdysvalloilla on syynsä viedä tilanne loppuun ja Iranin strategiseen häviöön.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Iran uhkaa lyödä ”uusia kortteja” pöytään – Yhdysvallat odotti koko päivän merkkiä Teheranista\",\\n    \"description\": \"IS seuraa tässä artikkelissa tilannetta Lähi-idässä.\",\\n    \"category_hint\": \"Ulkomaat\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

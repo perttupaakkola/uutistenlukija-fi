@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T15:56:05Z",
+  "reason": "otsikko ja lähdeaineisto ovat ristiriidassa pörssin suunnasta ja päivän kehityksestä",
+  "packet": {
+    "packet_id": "20260421T155511Z_e8a75f86c9",
+    "created_at": "2026-04-21T15:55:11Z",
+    "headline_seed": "PÖRSSI: Helsingin pörssi päätyi laskuun – Neste vaihtokärjen valopilkku",
+    "description_seed": "Helsingin pörssi ei jaksanut pysyä pinnalla tiistaina.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/77a8bd5a-8cfb-41e7-9e15-e7ce4ed5a858",
+    "source": "Kauppalehti KL-Nyt",
+    "source_names": [
+      "Yle",
+      "source-26",
+      "source-10",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/77a8bd5a-8cfb-41e7-9e15-e7ce4ed5a858"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.89,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "PÖRSSI: Helsingin pörssi päätyi laskuun – Neste vaihtokärjen valopilkku"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Tiistaina saattoi lähes kuulla paukahduksen, kun Helsingin pörssi päätyi korkeimmalle tasolleen sitten loppuvuoden 2000.",
+        "word_count": 14,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-26",
+        "source_type": "research",
+        "text": "Etelä-Korean pörssin Kospi-indeksi päätyi keskiviikkona noin 12 prosentin laskuun. CNBC:n mukaan kyseessä oli suurin yksittäinen päivälasku indeksin historiassa.",
+        "word_count": 18,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Suominen: Ehkä selkeitä sodasta kärsijöitä Helsingin pörssissä ei niin paljon ole. Viimeisimpänä Nokia on noussut todella voimakkaasti, se on päässyt tekoälyhuumaan mukaan. Neste on noussut sen myötä, että öljynjalostuskapasiteetti on maailmassa todella tiukalla, ja Fortum siksi että sähkön hintojen odotetaan meillä nousevan pidemmällä tähtäimellä.",
+        "word_count": 44,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Osakkeiden hintakehitystä kuvaava yleisindeksi kipusi 13 463 pisteeseen, mikä on siis lähes parasta mitä koko 2000-luku on tarjonnut. Parikymppiset osakesijoittajat eivät olleet vielä syntyneet, kun pörssi viimeksi revitteli tällaisilla luvuilla ja ylikin, ennen kuin it-kupla puhkesi lopullisesti.",
+        "word_count": 37,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Tiistaina saattoi lähes kuulla paukahduksen, kun Helsingin pörssi päätyi korkeimmalle tasolleen sitten loppuvuoden 2000.\n\nEtelä-Korean pörssin Kospi-indeksi päätyi keskiviikkona noin 12 prosentin laskuun. CNBC:n mukaan kyseessä oli suurin yksittäinen päivälasku indeksin historiassa.\n\nSuominen: Ehkä selkeitä sodasta kärsijöitä Helsingin pörssissä ei niin paljon ole. Viimeisimpänä Nokia on noussut todella voimakkaasti, se on päässyt tekoälyhuumaan mukaan. Neste on noussut sen myötä, että öljynjalostuskapasiteetti on maailmassa todella tiukalla, ja Fortum siksi että sähkön hintojen odotetaan meillä nousevan pidemmällä tähtäimellä.\n\nOsakkeiden hintakehitystä kuvaava yleisindeksi kipusi 13 463 pisteeseen, mikä on siis lähes parasta mitä koko 2000-luku on tarjonnut. Parikymppiset osakesijoittajat eivät olleet vielä syntyneet, kun pörssi viimeksi revitteli tällaisilla luvuilla ja ylikin, ennen kuin it-kupla puhkesi lopullisesti.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "PÖRSSI: Helsingin pörssi päätyi laskuun – Neste vaihtokärjen valopilkku",
+      "description": "Helsingin pörssi ei jaksanut pysyä pinnalla tiistaina.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=cd9bad58-f122-4261-8cbe-00fdbba401e3 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260421T155511Z_e8a75f86c9\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"otsikko ja lähdeaineisto ovat ristiriidassa pörssin suunnasta ja päivän kehityksestä\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

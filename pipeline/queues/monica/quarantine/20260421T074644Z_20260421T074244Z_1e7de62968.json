@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T07:46:44Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T074244Z_1e7de62968",
+    "created_at": "2026-04-21T07:42:44Z",
+    "headline_seed": "USA keskeyttää asetoimitukset Viroon – miten käy Suomen?",
+    "description_seed": "Yhdysvallat keskeyttää ammustoimitukset Viroon Iranin sodan ajaksi.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/usa-keskeyttaa-asetoimitukset-viroon-miten-kay-suomen/9327148",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "source-21",
+      "source-10",
+      "source-16",
+      "source-9"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/usa-keskeyttaa-asetoimitukset-viroon-miten-kay-suomen/9327148"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "USA keskeyttää asetoimitukset Viroon – miten käy Suomen?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-21",
+        "source_type": "research",
+        "text": "Yhdysvallat oli jo keskeyttänyt asetoimitukset. Nyt Hegseth täsmensi, että keskeytys jatkuu niin kauan kuin Iranin sota.",
+        "word_count": 16,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Jo ennen Iranin sotaa Yhdysvaltojen asevarastoja rasittivat Israelin sotatoimet esimerkiksi Gazassa ja Libanonissa sekä Venäjän hyökkäyssota, jossa Yhdysvallat on tukenut Ukrainaa valtavalla määrällä aseita ja ammuksia.",
+        "word_count": 26,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-16",
+        "source_type": "research",
+        "text": "Tulitauko on sujunut kireissä merkeissä. Iran on pitänyt öljyliikenteelle kriittisen Hormuzinsalmen suljettuna ja Yhdysvallat on aloittanut Iranin merisaarron, jonka aikana se on avannut tulen iranilaisalusta kohti.",
+        "word_count": 26,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Yhdysvallat on myös kuluttanut suuren määrän torjunta-ammuksia Iranin tehdessä hyökkäyksiä amerikkalaisiin sotilastukikohtiin ja muihin kohteisiin Lähi-idässä.",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Yhdysvallat oli jo keskeyttänyt asetoimitukset. Nyt Hegseth täsmensi, että keskeytys jatkuu niin kauan kuin Iranin sota.\n\nJo ennen Iranin sotaa Yhdysvaltojen asevarastoja rasittivat Israelin sotatoimet esimerkiksi Gazassa ja Libanonissa sekä Venäjän hyökkäyssota, jossa Yhdysvallat on tukenut Ukrainaa valtavalla määrällä aseita ja ammuksia.\n\nTulitauko on sujunut kireissä merkeissä. Iran on pitänyt öljyliikenteelle kriittisen Hormuzinsalmen suljettuna ja Yhdysvallat on aloittanut Iranin merisaarron, jonka aikana se on avannut tulen iranilaisalusta kohti.\n\nYhdysvallat on myös kuluttanut suuren määrän torjunta-ammuksia Iranin tehdessä hyökkäyksiä amerikkalaisiin sotilastukikohtiin ja muihin kohteisiin Lähi-idässä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "USA keskeyttää asetoimitukset Viroon – miten käy Suomen?",
+      "description": "Yhdysvallat keskeyttää ammustoimitukset Viroon Iranin sodan ajaksi.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T074244Z_1e7de62968\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T074244Z_1e7de62968\",\\n  \"created_at\": \"2026-04-21T07:42:44Z\",\\n  \"headline_seed\": \"USA keskeyttää asetoimitukset Viroon – miten käy Suomen?\",\\n  \"description_seed\": \"Yhdysvallat keskeyttää ammustoimitukset Viroon Iranin sodan ajaksi.\",\\n  \"link\": \"https://www.mtvuutiset.fi/artikkeli/usa-keskeyttaa-asetoimitukset-viroon-miten-kay-suomen/9327148\",\\n  \"source\": \"MTV Uutiset\",\\n  \"source_names\": [\\n    \"source-21\",\\n    \"source-10\",\\n    \"source-16\",\\n    \"source-9\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.mtvuutiset.fi/artikkeli/usa-keskeyttaa-asetoimitukset-viroon-miten-kay-suomen/9327148\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.84,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"USA keskeyttää asetoimitukset Viroon – miten käy Suomen?\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"source-21\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Yhdysvallat oli jo keskeyttänyt asetoimitukset. Nyt Hegseth täsmensi, että keskeytys jatkuu niin kauan kuin Iranin sota.\",\\n      \"word_count\": 16,\\n      \"keyword_overlap\": 3,\\n      \"strong_overlap\": 3\\n    },\\n    {\\n      \"source\": \"source-10\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Jo ennen Iranin sotaa Yhdysvaltojen asevarastoja rasittivat Israelin sotatoimet esimerkiksi Gazassa ja Libanonissa sekä Venäjän hyökkäyssota, jossa Yhdysvallat on tukenut Ukrainaa valtavalla määrällä aseita ja ammuksia.\",\\n      \"word_count\": 26,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    },\\n    {\\n      \"source\": \"source-16\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Tulitauko on sujunut kireissä merkeissä. Iran on pitänyt öljyliikenteelle kriittisen Hormuzinsalmen suljettuna ja Yhdysvallat on aloittanut Iranin merisaarron, jonka aikana se on avannut tulen iranilaisalusta kohti.\",\\n      \"word_count\": 26,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    },\\n    {\\n      \"source\": \"source-9\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Yhdysvallat on myös kuluttanut suuren määrän torjunta-ammuksia Iranin tehdessä hyökkäyksiä amerikkalaisiin sotilastukikohtiin ja muihin kohteisiin Lähi-idässä.\",\\n      \"word_count\": 16,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    }\\n  ],\\n  \"source_text\": \"Yhdysvallat oli jo keskeyttänyt asetoimitukset. Nyt Hegseth täsmensi, että keskeytys jatkuu niin kauan kuin Iranin sota.\\\\n\\\\nJo ennen Iranin sotaa Yhdysvaltojen asevarastoja rasittivat Israelin sotatoimet esimerkiksi Gazassa ja Libanonissa sekä Venäjän hyökkäyssota, jossa Yhdysvallat on tukenut Ukrainaa valtavalla määrällä aseita ja ammuksia.\\\\n\\\\nTulitauko on sujunut kireissä merkeissä. Iran on pitänyt öljyliikenteelle kriittisen Hormuzinsalmen suljettuna ja Yhdysvallat on aloittanut Iranin merisaarron, jonka aikana se on avannut tulen iranilaisalusta kohti.\\\\n\\\\nYhdysvallat on myös kuluttanut suuren määrän torjunta-ammuksia Iranin tehdessä hyökkäyksiä amerikkalaisiin sotilastukikohtiin ja muihin kohteisiin Lähi-idässä.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"USA keskeyttää asetoimitukset Viroon – miten käy Suomen?\",\\n    \"description\": \"Yhdysvallat keskeyttää ammustoimitukset Viroon Iranin sodan ajaksi.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

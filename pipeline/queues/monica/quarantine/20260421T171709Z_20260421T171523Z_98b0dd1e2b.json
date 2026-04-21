@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T17:17:09Z",
+  "reason": "aineisto kuvaa keskiviikon säätilaa, mutta viikonloppua koskeva otsikkoväite ei saa riittävää tukea",
+  "packet": {
+    "packet_id": "20260421T171523Z_98b0dd1e2b",
+    "created_at": "2026-04-21T17:15:23Z",
+    "headline_seed": "Lunta jopa etelään – raju ennuste viikonlopulle",
+    "description_seed": "Ajokeli voi viikonlopun aikana muuttua paikoin huonoksi.",
+    "link": "https://www.is.fi/kotimaa/art-2000011958821.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-3",
+      "source-2",
+      "source-4",
+      "source-8"
+    ],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000011958821.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lunta jopa etelään – raju ennuste viikonlopulle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Iltapäivällä sateiden painopiste on etelässä. Yöllä ja aamulla osa sateesta on tullut jäätävänä tihkuna, mutta iltapäivällä sade on pääosin lunta. Illan ja yön aikana lumisateet vähitellen heikkenevät.",
+        "word_count": 27,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Maan etelä- ja keskiosan yllä on liikkeellä lumisateita. Maan keskiosassa lunta on viime yön aikana kertynyt noin 5 cm, ja lumisateet ovat siellä jo heikkenemään päin.",
+        "word_count": 26,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Pohjoistuuli voimistuu keskiviikkona koko maassa. Samalla Suomeen alkaa virrata selvästi viileämpää ilmaa. Maan pohjoisosassa tulee päivän aikana lumi- ja räntäsateita. Illalla lunta voi sataa myös idässä.",
+        "word_count": 26,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Keskiviikkona pohjoiseen alkaa virrata kylmempää ilmaa ja Lapissa tulee monin paikoin räntää tai lunta. Etelässä sää on poutaista, mutta pilvisyys on alkuviikkoa runsaampaa.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Iltapäivällä sateiden painopiste on etelässä. Yöllä ja aamulla osa sateesta on tullut jäätävänä tihkuna, mutta iltapäivällä sade on pääosin lunta. Illan ja yön aikana lumisateet vähitellen heikkenevät.\n\nMaan etelä- ja keskiosan yllä on liikkeellä lumisateita. Maan keskiosassa lunta on viime yön aikana kertynyt noin 5 cm, ja lumisateet ovat siellä jo heikkenemään päin.\n\nPohjoistuuli voimistuu keskiviikkona koko maassa. Samalla Suomeen alkaa virrata selvästi viileämpää ilmaa. Maan pohjoisosassa tulee päivän aikana lumi- ja räntäsateita. Illalla lunta voi sataa myös idässä.\n\nKeskiviikkona pohjoiseen alkaa virrata kylmempää ilmaa ja Lapissa tulee monin paikoin räntää tai lunta. Etelässä sää on poutaista, mutta pilvisyys on alkuviikkoa runsaampaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lunta jopa etelään – raju ennuste viikonlopulle",
+      "description": "Ajokeli voi viikonlopun aikana muuttua paikoin huonoksi.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=4eba5130-e325-4b32-b0a2-ea7903a31a37 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260421T171523Z_98b0dd1e2b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto kuvaa keskiviikon säätilaa, mutta viikonloppua koskeva otsikkoväite ei saa riittävää tukea\"}\n[agent/embedded] [context-engine] maintenance(turn) changed transcript rewrittenEntries=0 bytesFreed=0 sessionKey=agent:monica:main",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

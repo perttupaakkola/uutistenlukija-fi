@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-20T18:47:09Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260420T184309Z_572f1e706d",
+    "created_at": "2026-04-20T18:43:09Z",
+    "headline_seed": "Nuorten pahoinvointi näkyy hälyttävällä tavalla: Etenkin nuoret tytöt viiltelevät itseään",
+    "description_seed": "Tuoreen MLL:n selvityksen mukaan lapset ja nuoret eivät saa apua vaikka pyytävät.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/nuorten-pahoinvointi-nakyy-halyttavalla-tavalla-etenkin-nuoret-tytot-viiltelevat-itseaan/9326918",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "source-9",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/nuorten-pahoinvointi-nakyy-halyttavalla-tavalla-etenkin-nuoret-tytot-viiltelevat-itseaan/9326918"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.75,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nuorten pahoinvointi näkyy hälyttävällä tavalla: Etenkin nuoret tytöt viiltelevät itseään"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "research",
+        "text": "Tuoreen MLL:n selvityksen mukaan lapset ja nuoret eivät saa apua vaikka pyytävät.",
+        "word_count": 12,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "– Vaikka väkivalta ei kohdistuisi suoraan lapseen, saa väkivaltainen ilmapiiri aikaan pelkoa ja turvattomuutta. Usein lapset ovat tietoisempia väkivallasta kuin aikuiset kuvittelevat, sivustolla kerrotaan.",
+        "word_count": 24,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Mannerheimin lastensuojeluliiton vuoden 2025 raportista käy ilmi, että Nuorten tukilinjaan on tullut yhteydenottoja aiempaa enemmän. Yhteydenotoista nousee toistuvasti esiin lasten ja nuorten pahoinvointi.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Tuoreen MLL:n selvityksen mukaan lapset ja nuoret eivät saa apua vaikka pyytävät.\n\n– Vaikka väkivalta ei kohdistuisi suoraan lapseen, saa väkivaltainen ilmapiiri aikaan pelkoa ja turvattomuutta. Usein lapset ovat tietoisempia väkivallasta kuin aikuiset kuvittelevat, sivustolla kerrotaan.\n\nMannerheimin lastensuojeluliiton vuoden 2025 raportista käy ilmi, että Nuorten tukilinjaan on tullut yhteydenottoja aiempaa enemmän. Yhteydenotoista nousee toistuvasti esiin lasten ja nuorten pahoinvointi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nuorten pahoinvointi näkyy hälyttävällä tavalla: Etenkin nuoret tytöt viiltelevät itseään",
+      "description": "Tuoreen MLL:n selvityksen mukaan lapset ja nuoret eivät saa apua vaikka pyytävät.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260420T184309Z_572f1e706d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260420T184309Z_572f1e706d\",\\n  \"created_at\": \"2026-04-20T18:43:09Z\",\\n  \"headline_seed\": \"Nuorten pahoinvointi näkyy hälyttävällä tavalla: Etenkin nuoret tytöt viiltelevät itseään\",\\n  \"description_seed\": \"Tuoreen MLL:n selvityksen mukaan lapset ja nuoret eivät saa apua vaikka pyytävät.\",\\n  \"link\": \"https://www.mtvuutiset.fi/artikkeli/nuorten-pahoinvointi-nakyy-halyttavalla-tavalla-etenkin-nuoret-tytot-viiltelevat-itseaan/9326918\",\\n  \"source\": \"MTV Uutiset\",\\n  \"source_names\": [\\n    \"MTV Uutiset\",\\n    \"source-9\",\\n    \"source-2\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.mtvuutiset.fi/artikkeli/nuorten-pahoinvointi-nakyy-halyttavalla-tavalla-etenkin-nuoret-tytot-viiltelevat-itseaan/9326918\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.75,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Nuorten pahoinvointi näkyy hälyttävällä tavalla: Etenkin nuoret tytöt viiltelevät itseään\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"MTV Uutiset\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Tuoreen MLL:n selvityksen mukaan lapset ja nuoret eivät saa apua vaikka pyytävät.\",\\n      \"word_count\": 12,\\n      \"keyword_overlap\": 8,\\n      \"strong_overlap\": 6\\n    },\\n    {\\n      \"source\": \"source-9\",\\n      \"source_type\": \"research\",\\n      \"text\": \"– Vaikka väkivalta ei kohdistuisi suoraan lapseen, saa väkivaltainen ilmapiiri aikaan pelkoa ja turvattomuutta. Usein lapset ovat tietoisempia väkivallasta kuin aikuiset kuvittelevat, sivustolla kerrotaan.\",\\n      \"word_count\": 24,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    },\\n    {\\n      \"source\": \"source-2\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Mannerheimin lastensuojeluliiton vuoden 2025 raportista käy ilmi, että Nuorten tukilinjaan on tullut yhteydenottoja aiempaa enemmän. Yhteydenotoista nousee toistuvasti esiin lasten ja nuorten pahoinvointi.\",\\n      \"word_count\": 23,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    }\\n  ],\\n  \"source_text\": \"Tuoreen MLL:n selvityksen mukaan lapset ja nuoret eivät saa apua vaikka pyytävät.\\\\n\\\\n– Vaikka väkivalta ei kohdistuisi suoraan lapseen, saa väkivaltainen ilmapiiri aikaan pelkoa ja turvattomuutta. Usein lapset ovat tietoisempia väkivallasta kuin aikuiset kuvittelevat, sivustolla kerrotaan.\\\\n\\\\nMannerheimin lastensuojeluliiton vuoden 2025 raportista käy ilmi, että Nuorten tukilinjaan on tullut yhteydenottoja aiempaa enemmän. Yhteydenotoista nousee toistuvasti esiin lasten ja nuorten pahoinvointi.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Nuorten pahoinvointi näkyy hälyttävällä tavalla: Etenkin nuoret tytöt viiltelevät itseään\",\\n    \"description\": \"Tuoreen MLL:n selvityksen mukaan lapset ja nuoret eivät saa apua vaikka pyytävät.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

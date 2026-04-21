@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T10:30:49Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T102649Z_01cd5ac8f8",
+    "created_at": "2026-04-21T10:26:49Z",
+    "headline_seed": "Arvi Savolainen hävisi avausottelunsa EM-paineissa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9391660",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-10",
+      "source-9",
+      "source-2",
+      "source-12"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9391660"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.77,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Arvi Savolainen hävisi avausottelunsa EM-paineissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Viime vuoden arvokisoissa Savolainen hävisi heti ensimmäiset ottelut. Nyt vuoden 2022 EM-hopeamitalisti toivoo pääsevänsä takaisin ”vanhalle” uralle. Hän kokee pystyvänsä olemaan edelleen mitalitaistoissa. Ranne ei tarvinnut Savolaisen mukaan mitään hoitoa, ja käsi on jo ennallaan.",
+        "word_count": 35,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Arvi Savolainen puolestaan loukkasi rannettaan alkuvuodesta ja joutui kuudeksi viikoksi painikieltoon. Hän osoitti kuitenkin nousukuntoa EM-kenraalissa voitettuaan Tanskassa turnauksen muutama viikko sitten.",
+        "word_count": 22,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "– Yksi kerta siellä oli kanoja ruokapaikan ympärillä. Toivotaan, että nyt säästyttäisiin syömiseltä kanojen kanssa, Arvi Savolainen heittää.",
+        "word_count": 18,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Savolainen kilpaili aiemmin samassa 97-kiloisten sarjassa Elias Kuosmasen kanssa, ennen kuin Kuosmanen päätti siirtyä kreikkalais-roomalaisen painin raskaimpaan sarjaan. Savolaisesta on ollut hienoa seurata Kuosmasen matkaa MM-mitalistiksi asti.",
+        "word_count": 27,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Viime vuoden arvokisoissa Savolainen hävisi heti ensimmäiset ottelut. Nyt vuoden 2022 EM-hopeamitalisti toivoo pääsevänsä takaisin ”vanhalle” uralle. Hän kokee pystyvänsä olemaan edelleen mitalitaistoissa. Ranne ei tarvinnut Savolaisen mukaan mitään hoitoa, ja käsi on jo ennallaan.\n\nArvi Savolainen puolestaan loukkasi rannettaan alkuvuodesta ja joutui kuudeksi viikoksi painikieltoon. Hän osoitti kuitenkin nousukuntoa EM-kenraalissa voitettuaan Tanskassa turnauksen muutama viikko sitten.\n\n– Yksi kerta siellä oli kanoja ruokapaikan ympärillä. Toivotaan, että nyt säästyttäisiin syömiseltä kanojen kanssa, Arvi Savolainen heittää.\n\nSavolainen kilpaili aiemmin samassa 97-kiloisten sarjassa Elias Kuosmasen kanssa, ennen kuin Kuosmanen päätti siirtyä kreikkalais-roomalaisen painin raskaimpaan sarjaan. Savolaisesta on ollut hienoa seurata Kuosmasen matkaa MM-mitalistiksi asti.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Arvi Savolainen hävisi avausottelunsa EM-paineissa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T102649Z_01cd5ac8f8\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T102649Z_01cd5ac8f8\",\\n  \"created_at\": \"2026-04-21T10:26:49Z\",\\n  \"headline_seed\": \"Arvi Savolainen hävisi avausottelunsa EM-paineissa\",\\n  \"description_seed\": \"\",\\n  \"link\": \"https://www.ess.fi/urheilu/9391660\",\\n  \"source\": \"Etelä-Suomen Sanomat\",\\n  \"source_names\": [\\n    \"source-10\",\\n    \"source-9\",\\n    \"source-2\",\\n    \"source-12\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.ess.fi/urheilu/9391660\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.77,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Arvi Savolainen hävisi avausottelunsa EM-paineissa\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"source-10\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Viime vuoden arvokisoissa Savolainen hävisi heti ensimmäiset ottelut. Nyt vuoden 2022 EM-hopeamitalisti toivoo pääsevänsä takaisin ”vanhalle” uralle. Hän kokee pystyvänsä olemaan edelleen mitalitaistoissa. Ranne ei tarvinnut Savolaisen mukaan mitään hoitoa, ja käsi on jo ennallaan.\",\\n      \"word_count\": 35,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    },\\n    {\\n      \"source\": \"source-9\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Arvi Savolainen puolestaan loukkasi rannettaan alkuvuodesta ja joutui kuudeksi viikoksi painikieltoon. Hän osoitti kuitenkin nousukuntoa EM-kenraalissa voitettuaan Tanskassa turnauksen muutama viikko sitten.\",\\n      \"word_count\": 22,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-2\",\\n      \"source_type\": \"research\",\\n      \"text\": \"– Yksi kerta siellä oli kanoja ruokapaikan ympärillä. Toivotaan, että nyt säästyttäisiin syömiseltä kanojen kanssa, Arvi Savolainen heittää.\",\\n      \"word_count\": 18,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-12\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Savolainen kilpaili aiemmin samassa 97-kiloisten sarjassa Elias Kuosmasen kanssa, ennen kuin Kuosmanen päätti siirtyä kreikkalais-roomalaisen painin raskaimpaan sarjaan. Savolaisesta on ollut hienoa seurata Kuosmasen matkaa MM-mitalistiksi asti.\",\\n      \"word_count\": 27,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Viime vuoden arvokisoissa Savolainen hävisi heti ensimmäiset ottelut. Nyt vuoden 2022 EM-hopeamitalisti toivoo pääsevänsä takaisin ”vanhalle” uralle. Hän kokee pystyvänsä olemaan edelleen mitalitaistoissa. Ranne ei tarvinnut Savolaisen mukaan mitään hoitoa, ja käsi on jo ennallaan.\\\\n\\\\nArvi Savolainen puolestaan loukkasi rannettaan alkuvuodesta ja joutui kuudeksi viikoksi painikieltoon. Hän osoitti kuitenkin nousukuntoa EM-kenraalissa voitettuaan Tanskassa turnauksen muutama viikko sitten.\\\\n\\\\n– Yksi kerta siellä oli kanoja ruokapaikan ympärillä. Toivotaan, että nyt säästyttäisiin syömiseltä kanojen kanssa, Arvi Savolainen heittää.\\\\n\\\\nSavolainen kilpaili aiemmin samassa 97-kiloisten sarjassa Elias Kuosmasen kanssa, ennen kuin Kuosmanen päätti siirtyä kreikkalais-roomalaisen painin raskaimpaan sarjaan. Savolaisesta on ollut hienoa seurata Kuosmasen matkaa MM-mitalistiksi asti.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Arvi Savolainen hävisi avausottelunsa EM-paineissa\",\\n    \"description\": \"\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

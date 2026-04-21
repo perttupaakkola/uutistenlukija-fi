@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T05:14:58Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T051058Z_4f960b67a3",
+    "created_at": "2026-04-21T05:10:58Z",
+    "headline_seed": "Sijoittajalta suorat sanat Orpolle ja Purralle: ”Täydellinen karhunpalvelus”",
+    "description_seed": "Talousaamussa pohdittiin alkavaa kehysriihtä. Tunnettu sijoittaja Kim Väisänen antoi maan hallitukselle pyyhkeitä. Pääministeri Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen tekemään julkisen talouden lähivuosia koskevia linjauksia, ja hallitukselta odotetaan muun muassa kasvutoimia. Kauppalehden suorassa Talousaamu-ohjelmassa maanantaina vierailleella päätoimisena startup-sijoittajana toimivalla Kim Väisäsellä ei ole suuria odotuksia kasvutoimista.",
+    "link": "https://www.iltalehti.fi/politiikka/a/fd1e056a-935f-4411-b821-78dd79686c06",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/politiikka/a/fd1e056a-935f-4411-b821-78dd79686c06"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.53,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sijoittajalta suorat sanat Orpolle ja Purralle: ”Täydellinen karhunpalvelus”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Talousaamussa pohdittiin alkavaa kehysriihtä. Tunnettu sijoittaja Kim Väisänen antoi maan hallitukselle pyyhkeitä. Pääministeri Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen tekemään julkisen talouden lähivuosia koskevia linjauksia, ja hallitukselta odotetaan muun muassa kasvutoimia. Kauppalehden suorassa Talousaamu-ohjelmassa maanantaina vierailleella päätoimisena startup-sijoittajana toimivalla Kim Väisäsellä ei ole suuria odotuksia kasvutoimista.",
+        "word_count": 49,
+        "keyword_overlap": 42,
+        "strong_overlap": 38
+      }
+    ],
+    "source_text": "Talousaamussa pohdittiin alkavaa kehysriihtä. Tunnettu sijoittaja Kim Väisänen antoi maan hallitukselle pyyhkeitä. Pääministeri Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen tekemään julkisen talouden lähivuosia koskevia linjauksia, ja hallitukselta odotetaan muun muassa kasvutoimia. Kauppalehden suorassa Talousaamu-ohjelmassa maanantaina vierailleella päätoimisena startup-sijoittajana toimivalla Kim Väisäsellä ei ole suuria odotuksia kasvutoimista.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sijoittajalta suorat sanat Orpolle ja Purralle: ”Täydellinen karhunpalvelus”",
+      "description": "Talousaamussa pohdittiin alkavaa kehysriihtä. Tunnettu sijoittaja Kim Väisänen antoi maan hallitukselle pyyhkeitä. Pääministeri Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen tekemään julkisen talouden lähivuosia koskevia linjauksia, ja hallitukselta odotetaan muun muassa kasvutoimia. Kauppalehden suorassa Talousaamu-ohjelmassa maanantaina vierailleella päätoimisena startup-sijoittajana toimivalla Kim Väisäsellä ei ole suuria odotuksia kasvutoimista.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T051058Z_4f960b67a3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T051058Z_4f960b67a3\",\\n  \"created_at\": \"2026-04-21T05:10:58Z\",\\n  \"headline_seed\": \"Sijoittajalta suorat sanat Orpolle ja Purralle: ”Täydellinen karhunpalvelus”\",\\n  \"description_seed\": \"Talousaamussa pohdittiin alkavaa kehysriihtä. Tunnettu sijoittaja Kim Väisänen antoi maan hallitukselle pyyhkeitä. Pääministeri Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen tekemään julkisen talouden lähivuosia koskevia linjauksia, ja hallitukselta odotetaan muun muassa kasvutoimia. Kauppalehden suorassa Talousaamu-ohjelmassa maanantaina vierailleella päätoimisena startup-sijoittajana toimivalla Kim Väisäsellä ei ole suuria odotuksia kasvutoimista.\",\\n  \"link\": \"https://www.iltalehti.fi/politiikka/a/fd1e056a-935f-4411-b821-78dd79686c06\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/politiikka/a/fd1e056a-935f-4411-b821-78dd79686c06\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.53,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Sijoittajalta suorat sanat Orpolle ja Purralle: ”Täydellinen karhunpalvelus”\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Talousaamussa pohdittiin alkavaa kehysriihtä. Tunnettu sijoittaja Kim Väisänen antoi maan hallitukselle pyyhkeitä. Pääministeri Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen tekemään julkisen talouden lähivuosia koskevia linjauksia, ja hallitukselta odotetaan muun muassa kasvutoimia. Kauppalehden suorassa Talousaamu-ohjelmassa maanantaina vierailleella päätoimisena startup-sijoittajana toimivalla Kim Väisäsellä ei ole suuria odotuksia kasvutoimista.\",\\n      \"word_count\": 49,\\n      \"keyword_overlap\": 42,\\n      \"strong_overlap\": 38\\n    }\\n  ],\\n  \"source_text\": \"Talousaamussa pohdittiin alkavaa kehysriihtä. Tunnettu sijoittaja Kim Väisänen antoi maan hallitukselle pyyhkeitä. Pääministeri Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen tekemään julkisen talouden lähivuosia koskevia linjauksia, ja hallitukselta odotetaan muun muassa kasvutoimia. Kauppalehden suorassa Talousaamu-ohjelmassa maanantaina vierailleella päätoimisena startup-sijoittajana toimivalla Kim Väisäsellä ei ole suuria odotuksia kasvutoimista.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Sijoittajalta suorat sanat Orpolle ja Purralle: ”Täydellinen karhunpalvelus”\",\\n    \"description\": \"Talousaamussa pohdittiin alkavaa kehysriihtä. Tunnettu sijoittaja Kim Väisänen antoi maan hallitukselle pyyhkeitä. Pääministeri Petteri Orpon (kok) hallitus kokoontuu tiistaina ja keskiviikkona kehysriiheen tekemään julkisen talouden lähivuosia koskevia linjauksia, ja hallitukselta odotetaan muun muassa kasvutoimia. Kauppalehden suorassa Talousaamu-ohjelmassa maanantaina vierailleella päätoimisena startup-sijoittajana toimivalla Kim Väisäsellä ei ole suuria odotuksia kasvutoimista.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

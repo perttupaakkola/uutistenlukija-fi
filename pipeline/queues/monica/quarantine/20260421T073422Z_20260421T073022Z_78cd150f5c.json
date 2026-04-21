@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T07:34:22Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T073022Z_78cd150f5c",
+    "created_at": "2026-04-21T07:30:22Z",
+    "headline_seed": "Luvassa on yhä lisää säästöjä, mutta myös kasvutoimia – Essayah lupaa, että huoltovarmuudesta huolehditaan",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/8fb7bbef-1e3a-4821-ab85-c4d70e47f322",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [
+      "source-6"
+    ],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/uutiset/8fb7bbef-1e3a-4821-ab85-c4d70e47f322"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.34,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Luvassa on yhä lisää säästöjä, mutta myös kasvutoimia – Essayah lupaa, että huoltovarmuudesta huolehditaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Luvassa on myös koko kaupungin henkilöstöä koskevat yt-neuvottelut, mutta se ei välttämättä tarkoita irtisanomisia.",
+        "word_count": 14,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Luvassa on myös koko kaupungin henkilöstöä koskevat yt-neuvottelut, mutta se ei välttämättä tarkoita irtisanomisia.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Luvassa on yhä lisää säästöjä, mutta myös kasvutoimia – Essayah lupaa, että huoltovarmuudesta huolehditaan",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T073022Z_78cd150f5c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T073022Z_78cd150f5c\",\\n  \"created_at\": \"2026-04-21T07:30:22Z\",\\n  \"headline_seed\": \"Luvassa on yhä lisää säästöjä, mutta myös kasvutoimia – Essayah lupaa, että huoltovarmuudesta huolehditaan\",\\n  \"description_seed\": \"\",\\n  \"link\": \"https://www.maaseuduntulevaisuus.fi/uutiset/8fb7bbef-1e3a-4821-ab85-c4d70e47f322\",\\n  \"source\": \"Maaseudun Tulevaisuus\",\\n  \"source_names\": [\\n    \"source-6\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.maaseuduntulevaisuus.fi/uutiset/8fb7bbef-1e3a-4821-ab85-c4d70e47f322\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.34,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Luvassa on yhä lisää säästöjä, mutta myös kasvutoimia – Essayah lupaa, että huoltovarmuudesta huolehditaan\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"source-6\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Luvassa on myös koko kaupungin henkilöstöä koskevat yt-neuvottelut, mutta se ei välttämättä tarkoita irtisanomisia.\",\\n      \"word_count\": 14,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Luvassa on myös koko kaupungin henkilöstöä koskevat yt-neuvottelut, mutta se ei välttämättä tarkoita irtisanomisia.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Luvassa on yhä lisää säästöjä, mutta myös kasvutoimia – Essayah lupaa, että huoltovarmuudesta huolehditaan\",\\n    \"description\": \"\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

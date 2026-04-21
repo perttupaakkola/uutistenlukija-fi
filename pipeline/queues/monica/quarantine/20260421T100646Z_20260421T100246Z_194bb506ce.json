@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T10:06:46Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T100246Z_194bb506ce",
+    "created_at": "2026-04-21T10:02:46Z",
+    "headline_seed": "Autoilija voi pian joutua sellaiseen rumbaan, että hikeä pukkaa pintaan",
+    "description_seed": "Ylikomisario kertoo, että myös poliisiautojen nastarenkaista on tullut kritiikkiä keväällä. Poliisi aloitti viime viikolla sakottamaan nastarenkaiden käytöstä. Miten käy autoilijoiden, kun takatalvi iskee? Helsingin poliisin liikennevalvontatoiminnon johtaja, ylikomisario Dennis Pasterstein sanoo, että se riippuu päivästä. Tällä hetkellä Pastersteinin mukaan nastarenkaat pitäisi jo olla vaihdettu.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/1e500449-1a3e-46aa-843d-57f943ecf3ac",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/1e500449-1a3e-46aa-843d-57f943ecf3ac"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.52,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Autoilija voi pian joutua sellaiseen rumbaan, että hikeä pukkaa pintaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Ylikomisario kertoo, että myös poliisiautojen nastarenkaista on tullut kritiikkiä keväällä. Poliisi aloitti viime viikolla sakottamaan nastarenkaiden käytöstä. Miten käy autoilijoiden, kun takatalvi iskee? Helsingin poliisin liikennevalvontatoiminnon johtaja, ylikomisario Dennis Pasterstein sanoo, että se riippuu päivästä. Tällä hetkellä Pastersteinin mukaan nastarenkaat pitäisi jo olla vaihdettu.",
+        "word_count": 44,
+        "keyword_overlap": 33,
+        "strong_overlap": 27
+      }
+    ],
+    "source_text": "Ylikomisario kertoo, että myös poliisiautojen nastarenkaista on tullut kritiikkiä keväällä. Poliisi aloitti viime viikolla sakottamaan nastarenkaiden käytöstä. Miten käy autoilijoiden, kun takatalvi iskee? Helsingin poliisin liikennevalvontatoiminnon johtaja, ylikomisario Dennis Pasterstein sanoo, että se riippuu päivästä. Tällä hetkellä Pastersteinin mukaan nastarenkaat pitäisi jo olla vaihdettu.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Autoilija voi pian joutua sellaiseen rumbaan, että hikeä pukkaa pintaan",
+      "description": "Ylikomisario kertoo, että myös poliisiautojen nastarenkaista on tullut kritiikkiä keväällä. Poliisi aloitti viime viikolla sakottamaan nastarenkaiden käytöstä. Miten käy autoilijoiden, kun takatalvi iskee? Helsingin poliisin liikennevalvontatoiminnon johtaja, ylikomisario Dennis Pasterstein sanoo, että se riippuu päivästä. Tällä hetkellä Pastersteinin mukaan nastarenkaat pitäisi jo olla vaihdettu.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T100246Z_194bb506ce\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T100246Z_194bb506ce\",\\n  \"created_at\": \"2026-04-21T10:02:46Z\",\\n  \"headline_seed\": \"Autoilija voi pian joutua sellaiseen rumbaan, että hikeä pukkaa pintaan\",\\n  \"description_seed\": \"Ylikomisario kertoo, että myös poliisiautojen nastarenkaista on tullut kritiikkiä keväällä. Poliisi aloitti viime viikolla sakottamaan nastarenkaiden käytöstä. Miten käy autoilijoiden, kun takatalvi iskee? Helsingin poliisin liikennevalvontatoiminnon johtaja, ylikomisario Dennis Pasterstein sanoo, että se riippuu päivästä. Tällä hetkellä Pastersteinin mukaan nastarenkaat pitäisi jo olla vaihdettu.\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/1e500449-1a3e-46aa-843d-57f943ecf3ac\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/1e500449-1a3e-46aa-843d-57f943ecf3ac\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.52,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Autoilija voi pian joutua sellaiseen rumbaan, että hikeä pukkaa pintaan\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Ylikomisario kertoo, että myös poliisiautojen nastarenkaista on tullut kritiikkiä keväällä. Poliisi aloitti viime viikolla sakottamaan nastarenkaiden käytöstä. Miten käy autoilijoiden, kun takatalvi iskee? Helsingin poliisin liikennevalvontatoiminnon johtaja, ylikomisario Dennis Pasterstein sanoo, että se riippuu päivästä. Tällä hetkellä Pastersteinin mukaan nastarenkaat pitäisi jo olla vaihdettu.\",\\n      \"word_count\": 44,\\n      \"keyword_overlap\": 33,\\n      \"strong_overlap\": 27\\n    }\\n  ],\\n  \"source_text\": \"Ylikomisario kertoo, että myös poliisiautojen nastarenkaista on tullut kritiikkiä keväällä. Poliisi aloitti viime viikolla sakottamaan nastarenkaiden käytöstä. Miten käy autoilijoiden, kun takatalvi iskee? Helsingin poliisin liikennevalvontatoiminnon johtaja, ylikomisario Dennis Pasterstein sanoo, että se riippuu päivästä. Tällä hetkellä Pastersteinin mukaan nastarenkaat pitäisi jo olla vaihdettu.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Autoilija voi pian joutua sellaiseen rumbaan, että hikeä pukkaa pintaan\",\\n    \"description\": \"Ylikomisario kertoo, että myös poliisiautojen nastarenkaista on tullut kritiikkiä keväällä. Poliisi aloitti viime viikolla sakottamaan nastarenkaiden käytöstä. Miten käy autoilijoiden, kun takatalvi iskee? Helsingin poliisin liikennevalvontatoiminnon johtaja, ylikomisario Dennis Pasterstein sanoo, että se riippuu päivästä. Tällä hetkellä Pastersteinin mukaan nastarenkaat pitäisi jo olla vaihdettu.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

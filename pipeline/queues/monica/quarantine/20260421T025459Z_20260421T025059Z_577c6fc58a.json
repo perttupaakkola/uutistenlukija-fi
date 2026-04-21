@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-21T02:54:59Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T025059Z_577c6fc58a",
+    "created_at": "2026-04-21T02:50:59Z",
+    "headline_seed": "Bloomberg: Kiistelty Družba-öljyputki aukeaa huomenna",
+    "description_seed": "Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat maanantailta 20. huhtikuuta 2026. Kyseessä on sodan 1517. päivä. Ukraina on avaamassa kiistellyn Družba-öljyputken jo tiistaina, kertoo Bloomberg. Družba-putkea pitkin viedään öljyä Venäjältä Unkariin ja Slovakiaan. Družba on ollut suljettuna tammikuusta lähtien, sillä putki vaurioitui Venäjän iskussa. Unkari ja Slovakia ovat syyttäneet Ukrainaa siitä, että se viivyttelisi öljyputken korjaamisessa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/f8d34db6-4e1c-4811-adb8-3cb146597a38",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/f8d34db6-4e1c-4811-adb8-3cb146597a38"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.55,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Bloomberg: Kiistelty Družba-öljyputki aukeaa huomenna"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat maanantailta 20. huhtikuuta 2026. Kyseessä on sodan 1517. päivä. Ukraina on avaamassa kiistellyn Družba-öljyputken jo tiistaina, kertoo Bloomberg. Družba-putkea pitkin viedään öljyä Venäjältä Unkariin ja Slovakiaan. Družba on ollut suljettuna tammikuusta lähtien, sillä putki vaurioitui Venäjän iskussa. Unkari ja Slovakia ovat syyttäneet Ukrainaa siitä, että se viivyttelisi öljyputken korjaamisessa.",
+        "word_count": 57,
+        "keyword_overlap": 44,
+        "strong_overlap": 33
+      }
+    ],
+    "source_text": "Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat maanantailta 20. huhtikuuta 2026. Kyseessä on sodan 1517. päivä. Ukraina on avaamassa kiistellyn Družba-öljyputken jo tiistaina, kertoo Bloomberg. Družba-putkea pitkin viedään öljyä Venäjältä Unkariin ja Slovakiaan. Družba on ollut suljettuna tammikuusta lähtien, sillä putki vaurioitui Venäjän iskussa. Unkari ja Slovakia ovat syyttäneet Ukrainaa siitä, että se viivyttelisi öljyputken korjaamisessa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Bloomberg: Kiistelty Družba-öljyputki aukeaa huomenna",
+      "description": "Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat maanantailta 20. huhtikuuta 2026. Kyseessä on sodan 1517. päivä. Ukraina on avaamassa kiistellyn Družba-öljyputken jo tiistaina, kertoo Bloomberg. Družba-putkea pitkin viedään öljyä Venäjältä Unkariin ja Slovakiaan. Družba on ollut suljettuna tammikuusta lähtien, sillä putki vaurioitui Venäjän iskussa. Unkari ja Slovakia ovat syyttäneet Ukrainaa siitä, että se viivyttelisi öljyputken korjaamisessa.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T025059Z_577c6fc58a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T025059Z_577c6fc58a\",\\n  \"created_at\": \"2026-04-21T02:50:59Z\",\\n  \"headline_seed\": \"Bloomberg: Kiistelty Družba-öljyputki aukeaa huomenna\",\\n  \"description_seed\": \"Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat maanantailta 20. huhtikuuta 2026. Kyseessä on sodan 1517. päivä. Ukraina on avaamassa kiistellyn Družba-öljyputken jo tiistaina, kertoo Bloomberg. Družba-putkea pitkin viedään öljyä Venäjältä Unkariin ja Slovakiaan. Družba on ollut suljettuna tammikuusta lähtien, sillä putki vaurioitui Venäjän iskussa. Unkari ja Slovakia ovat syyttäneet Ukrainaa siitä, että se viivyttelisi öljyputken korjaamisessa.\",\\n  \"link\": \"https://www.iltalehti.fi/ulkomaat/a/f8d34db6-4e1c-4811-adb8-3cb146597a38\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/ulkomaat/a/f8d34db6-4e1c-4811-adb8-3cb146597a38\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.55,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Bloomberg: Kiistelty Družba-öljyputki aukeaa huomenna\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat maanantailta 20. huhtikuuta 2026. Kyseessä on sodan 1517. päivä. Ukraina on avaamassa kiistellyn Družba-öljyputken jo tiistaina, kertoo Bloomberg. Družba-putkea pitkin viedään öljyä Venäjältä Unkariin ja Slovakiaan. Družba on ollut suljettuna tammikuusta lähtien, sillä putki vaurioitui Venäjän iskussa. Unkari ja Slovakia ovat syyttäneet Ukrainaa siitä, että se viivyttelisi öljyputken korjaamisessa.\",\\n      \"word_count\": 57,\\n      \"keyword_overlap\": 44,\\n      \"strong_overlap\": 33\\n    }\\n  ],\\n  \"source_text\": \"Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat maanantailta 20. huhtikuuta 2026. Kyseessä on sodan 1517. päivä. Ukraina on avaamassa kiistellyn Družba-öljyputken jo tiistaina, kertoo Bloomberg. Družba-putkea pitkin viedään öljyä Venäjältä Unkariin ja Slovakiaan. Družba on ollut suljettuna tammikuusta lähtien, sillä putki vaurioitui Venäjän iskussa. Unkari ja Slovakia ovat syyttäneet Ukrainaa siitä, että se viivyttelisi öljyputken korjaamisessa.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Bloomberg: Kiistelty Družba-öljyputki aukeaa huomenna\",\\n    \"description\": \"Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat maanantailta 20. huhtikuuta 2026. Kyseessä on sodan 1517. päivä. Ukraina on avaamassa kiistellyn Družba-öljyputken jo tiistaina, kertoo Bloomberg. Družba-putkea pitkin viedään öljyä Venäjältä Unkariin ja Slovakiaan. Družba on ollut suljettuna tammikuusta lähtien, sillä putki vaurioitui Venäjän iskussa. Unkari ja Slovakia ovat syyttäneet Ukrainaa siitä, että se viivyttelisi öljyputken korjaamisessa.\",\\n    \"category_hint\": \"Ulkomaat\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

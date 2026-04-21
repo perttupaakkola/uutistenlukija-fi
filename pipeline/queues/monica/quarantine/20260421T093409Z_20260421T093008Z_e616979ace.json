@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T09:34:09Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T093008Z_e616979ace",
+    "created_at": "2026-04-21T09:30:08Z",
+    "headline_seed": "Japan loosens arms export rules in break from post-WW2 pacifism",
+    "description_seed": "This clears the way for Japan to sell weapons to more than a dozen countries.",
+    "link": "https://www.bbc.com/news/articles/clyx4vlqy4vo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-4",
+      "source-12"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clyx4vlqy4vo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Japan loosens arms export rules in break from post-WW2 pacifism"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "This clears the way for Japan to sell weapons to more than a dozen countries.",
+        "word_count": 15,
+        "keyword_overlap": 9,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Japan has relaxed decades-old restrictions on its arms exports, clearing the way for it to sell weapons to more than a dozen countries.",
+        "word_count": 23,
+        "keyword_overlap": 8,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "This means Japan can now sell lethal weapons to the 17 countries with which it has defence agreements, including the US and the UK.",
+        "word_count": 24,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "The new arms export rules were announced as Japan's Self-Defence Forces took part in annual war games between the US and the Philippines. Japan is joining the war games as combatants for the first time, instead of mere observers.",
+        "word_count": 39,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "This clears the way for Japan to sell weapons to more than a dozen countries.\n\nJapan has relaxed decades-old restrictions on its arms exports, clearing the way for it to sell weapons to more than a dozen countries.\n\nThis means Japan can now sell lethal weapons to the 17 countries with which it has defence agreements, including the US and the UK.\n\nThe new arms export rules were announced as Japan's Self-Defence Forces took part in annual war games between the US and the Philippines. Japan is joining the war games as combatants for the first time, instead of mere observers.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Japan loosens arms export rules in break from post-WW2 pacifism",
+      "description": "This clears the way for Japan to sell weapons to more than a dozen countries.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T093008Z_e616979ace\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T093008Z_e616979ace\",\\n  \"created_at\": \"2026-04-21T09:30:08Z\",\\n  \"headline_seed\": \"Japan loosens arms export rules in break from post-WW2 pacifism\",\\n  \"description_seed\": \"This clears the way for Japan to sell weapons to more than a dozen countries.\",\\n  \"link\": \"https://www.bbc.com/news/articles/clyx4vlqy4vo?at_medium=RSS&at_campaign=rss\",\\n  \"source\": \"BBC World\",\\n  \"source_names\": [\\n    \"BBC World\",\\n    \"BBC World\",\\n    \"source-4\",\\n    \"source-12\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.bbc.com/news/articles/clyx4vlqy4vo?at_medium=RSS&at_campaign=rss\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.87,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Japan loosens arms export rules in break from post-WW2 pacifism\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"BBC World\",\\n      \"source_type\": \"description\",\\n      \"text\": \"This clears the way for Japan to sell weapons to more than a dozen countries.\",\\n      \"word_count\": 15,\\n      \"keyword_overlap\": 9,\\n      \"strong_overlap\": 3\\n    },\\n    {\\n      \"source\": \"BBC World\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Japan has relaxed decades-old restrictions on its arms exports, clearing the way for it to sell weapons to more than a dozen countries.\",\\n      \"word_count\": 23,\\n      \"keyword_overlap\": 8,\\n      \"strong_overlap\": 2\\n    },\\n    {\\n      \"source\": \"source-4\",\\n      \"source_type\": \"research\",\\n      \"text\": \"This means Japan can now sell lethal weapons to the 17 countries with which it has defence agreements, including the US and the UK.\",\\n      \"word_count\": 24,\\n      \"keyword_overlap\": 5,\\n      \"strong_overlap\": 2\\n    },\\n    {\\n      \"source\": \"source-12\",\\n      \"source_type\": \"research\",\\n      \"text\": \"The new arms export rules were announced as Japan\\'s Self-Defence Forces took part in annual war games between the US and the Philippines. Japan is joining the war games as combatants for the first time, instead of mere observers.\",\\n      \"word_count\": 39,\\n      \"keyword_overlap\": 4,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"This clears the way for Japan to sell weapons to more than a dozen countries.\\\\n\\\\nJapan has relaxed decades-old restrictions on its arms exports, clearing the way for it to sell weapons to more than a dozen countries.\\\\n\\\\nThis means Japan can now sell lethal weapons to the 17 countries with which it has defence agreements, including the US and the UK.\\\\n\\\\nThe new arms export rules were announced as Japan\\'s Self-Defence Forces took part in annual war games between the US and the Philippines. Japan is joining the war games as combatants for the first time, instead of mere observers.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Japan loosens arms export rules in break from post-WW2 pacifism\",\\n    \"description\": \"This clears the way for Japan to sell weapons to more than a dozen countries.\",\\n    \"category_hint\": \"\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

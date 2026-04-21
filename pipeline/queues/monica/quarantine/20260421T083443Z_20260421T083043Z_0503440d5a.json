@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-21T08:34:43Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T083043Z_0503440d5a",
+    "created_at": "2026-04-21T08:30:43Z",
+    "headline_seed": "Pikku-Vesijärven puistoon uusi oleskelualue vanhan kioskin tilalle – puistoon voi saada luvan myyntitoiminnalle",
+    "description_seed": "",
+    "link": "https://www.ess.fi/paikalliset/9391158",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-4",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9391158"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.46,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pikku-Vesijärven puistoon uusi oleskelualue vanhan kioskin tilalle – puistoon voi saada luvan myyntitoiminnalle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Kaupunki on kunnostanut myös alueen läpi kulkevan jalankulun ja pyöräilyn pääreitin Jalkarantaan, joten kiertoreittiä Pikku-Vesijärven puiston kautta ei enää tarvitse käyttää.",
+        "word_count": 21,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Pikku-Vesijärven puiston pysäköintialueen kunnostustyöt Lahdessa on saatu valmiiksi, ja kesän ajan kiinni ollut alue on jälleen käytettävissä.",
+        "word_count": 17,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Kaupunki on kunnostanut myös alueen läpi kulkevan jalankulun ja pyöräilyn pääreitin Jalkarantaan, joten kiertoreittiä Pikku-Vesijärven puiston kautta ei enää tarvitse käyttää.\n\nPikku-Vesijärven puiston pysäköintialueen kunnostustyöt Lahdessa on saatu valmiiksi, ja kesän ajan kiinni ollut alue on jälleen käytettävissä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pikku-Vesijärven puistoon uusi oleskelualue vanhan kioskin tilalle – puistoon voi saada luvan myyntitoiminnalle",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T083043Z_0503440d5a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T083043Z_0503440d5a\",\\n  \"created_at\": \"2026-04-21T08:30:43Z\",\\n  \"headline_seed\": \"Pikku-Vesijärven puistoon uusi oleskelualue vanhan kioskin tilalle – puistoon voi saada luvan myyntitoiminnalle\",\\n  \"description_seed\": \"\",\\n  \"link\": \"https://www.ess.fi/paikalliset/9391158\",\\n  \"source\": \"Etelä-Suomen Sanomat\",\\n  \"source_names\": [\\n    \"source-4\",\\n    \"Yle\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.ess.fi/paikalliset/9391158\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.46,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Pikku-Vesijärven puistoon uusi oleskelualue vanhan kioskin tilalle – puistoon voi saada luvan myyntitoiminnalle\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"source-4\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Kaupunki on kunnostanut myös alueen läpi kulkevan jalankulun ja pyöräilyn pääreitin Jalkarantaan, joten kiertoreittiä Pikku-Vesijärven puiston kautta ei enää tarvitse käyttää.\",\\n      \"word_count\": 21,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"Yle\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Pikku-Vesijärven puiston pysäköintialueen kunnostustyöt Lahdessa on saatu valmiiksi, ja kesän ajan kiinni ollut alue on jälleen käytettävissä.\",\\n      \"word_count\": 17,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Kaupunki on kunnostanut myös alueen läpi kulkevan jalankulun ja pyöräilyn pääreitin Jalkarantaan, joten kiertoreittiä Pikku-Vesijärven puiston kautta ei enää tarvitse käyttää.\\\\n\\\\nPikku-Vesijärven puiston pysäköintialueen kunnostustyöt Lahdessa on saatu valmiiksi, ja kesän ajan kiinni ollut alue on jälleen käytettävissä.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Pikku-Vesijärven puistoon uusi oleskelualue vanhan kioskin tilalle – puistoon voi saada luvan myyntitoiminnalle\",\\n    \"description\": \"\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

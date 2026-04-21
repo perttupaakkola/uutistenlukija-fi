@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-21T08:50:50Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260421T084650Z_4468a0c822",
+    "created_at": "2026-04-21T08:46:50Z",
+    "headline_seed": "Poliisille syyte tutkinta­viiväs­tyksistä vakavissa rikosepäilyissä Pohjanmaalla – useat tapaukset kohdistuneet lapsiin",
+    "description_seed": "Syytteen taustalla ovat pitkittyneet esi­tutkinta­prosessit seksuaalirikos- ja lähi­suhde­väki­valta­tapauksissa.",
+    "link": "https://yle.fi/a/74-20221764?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "Yle Uutiset",
+      "source-8",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20221764?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.79,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Poliisille syyte tutkinta­viiväs­tyksistä vakavissa rikosepäilyissä Pohjanmaalla – useat tapaukset kohdistuneet lapsiin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Syytteen taustalla ovat pitkittyneet esi­tutkinta­prosessit seksuaalirikos- ja lähi­suhde­väki­valta­tapauksissa.",
+        "word_count": 8,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Apulaisoikeuskanslerin sijainen on nostanut syytteen Pohjanmaan poliisilaitoksen rikoskomisariota vastaan tuottamuksellisesta virkavelvollisuuden rikkomisesta.",
+        "word_count": 12,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Rikoksesta epäiltyinä kuultiin myös kahta muuta päällystöön kuuluvaa poliisimiestä. Heidän osaltaan apulaisoikeuskanslerin sijainen jätti syytteen nostamatta. Neljännen osalta syyteoikeus ehti myös vanhentua.",
+        "word_count": 22,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Syytteen mukaan rikoskomisario olisi huolimattomuudesta laiminlyönyt tutkinnanjohtajana velvollisuutensa saattaa esitutkintoja päätökseen ilman aiheetonta viivytystä.",
+        "word_count": 14,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Syytteen taustalla ovat pitkittyneet esi­tutkinta­prosessit seksuaalirikos- ja lähi­suhde­väki­valta­tapauksissa.\n\nApulaisoikeuskanslerin sijainen on nostanut syytteen Pohjanmaan poliisilaitoksen rikoskomisariota vastaan tuottamuksellisesta virkavelvollisuuden rikkomisesta.\n\nRikoksesta epäiltyinä kuultiin myös kahta muuta päällystöön kuuluvaa poliisimiestä. Heidän osaltaan apulaisoikeuskanslerin sijainen jätti syytteen nostamatta. Neljännen osalta syyteoikeus ehti myös vanhentua.\n\nSyytteen mukaan rikoskomisario olisi huolimattomuudesta laiminlyönyt tutkinnanjohtajana velvollisuutensa saattaa esitutkintoja päätökseen ilman aiheetonta viivytystä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Poliisille syyte tutkinta­viiväs­tyksistä vakavissa rikosepäilyissä Pohjanmaalla – useat tapaukset kohdistuneet lapsiin",
+      "description": "Syytteen taustalla ovat pitkittyneet esi­tutkinta­prosessit seksuaalirikos- ja lähi­suhde­väki­valta­tapauksissa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260421T084650Z_4468a0c822\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it\\n- If content is over 180 words, include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260421T084650Z_4468a0c822\",\\n  \"created_at\": \"2026-04-21T08:46:50Z\",\\n  \"headline_seed\": \"Poliisille syyte tutkinta\\xadviiväs\\xadtyksistä vakavissa rikosepäilyissä Pohjanmaalla – useat tapaukset kohdistuneet lapsiin\",\\n  \"description_seed\": \"Syytteen taustalla ovat pitkittyneet esi\\xadtutkinta\\xadprosessit seksuaalirikos- ja lähi\\xadsuhde\\xadväki\\xadvalta\\xadtapauksissa.\",\\n  \"link\": \"https://yle.fi/a/74-20221764?origin=rss\",\\n  \"source\": \"Yle Uutiset\",\\n  \"source_names\": [\\n    \"Yle Uutiset\",\\n    \"Yle Uutiset\",\\n    \"source-8\",\\n    \"source-2\"\\n  ],\\n  \"source_urls\": [\\n    \"https://yle.fi/a/74-20221764?origin=rss\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.79,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Poliisille syyte tutkinta\\xadviiväs\\xadtyksistä vakavissa rikosepäilyissä Pohjanmaalla – useat tapaukset kohdistuneet lapsiin\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Yle Uutiset\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Syytteen taustalla ovat pitkittyneet esi\\xadtutkinta\\xadprosessit seksuaalirikos- ja lähi\\xadsuhde\\xadväki\\xadvalta\\xadtapauksissa.\",\\n      \"word_count\": 8,\\n      \"keyword_overlap\": 12,\\n      \"strong_overlap\": 7\\n    },\\n    {\\n      \"source\": \"Yle Uutiset\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Apulaisoikeuskanslerin sijainen on nostanut syytteen Pohjanmaan poliisilaitoksen rikoskomisariota vastaan tuottamuksellisesta virkavelvollisuuden rikkomisesta.\",\\n      \"word_count\": 12,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-8\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Rikoksesta epäiltyinä kuultiin myös kahta muuta päällystöön kuuluvaa poliisimiestä. Heidän osaltaan apulaisoikeuskanslerin sijainen jätti syytteen nostamatta. Neljännen osalta syyteoikeus ehti myös vanhentua.\",\\n      \"word_count\": 22,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    },\\n    {\\n      \"source\": \"source-2\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Syytteen mukaan rikoskomisario olisi huolimattomuudesta laiminlyönyt tutkinnanjohtajana velvollisuutensa saattaa esitutkintoja päätökseen ilman aiheetonta viivytystä.\",\\n      \"word_count\": 14,\\n      \"keyword_overlap\": 1,\\n      \"strong_overlap\": 1\\n    }\\n  ],\\n  \"source_text\": \"Syytteen taustalla ovat pitkittyneet esi\\xadtutkinta\\xadprosessit seksuaalirikos- ja lähi\\xadsuhde\\xadväki\\xadvalta\\xadtapauksissa.\\\\n\\\\nApulaisoikeuskanslerin sijainen on nostanut syytteen Pohjanmaan poliisilaitoksen rikoskomisariota vastaan tuottamuksellisesta virkavelvollisuuden rikkomisesta.\\\\n\\\\nRikoksesta epäiltyinä kuultiin myös kahta muuta päällystöön kuuluvaa poliisimiestä. Heidän osaltaan apulaisoikeuskanslerin sijainen jätti syytteen nostamatta. Neljännen osalta syyteoikeus ehti myös vanhentua.\\\\n\\\\nSyytteen mukaan rikoskomisario olisi huolimattomuudesta laiminlyönyt tutkinnanjohtajana velvollisuutensa saattaa esitutkintoja päätökseen ilman aiheetonta viivytystä.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Poliisille syyte tutkinta\\xadviiväs\\xadtyksistä vakavissa rikosepäilyissä Pohjanmaalla – useat tapaukset kohdistuneet lapsiin\",\\n    \"description\": \"Syytteen taustalla ovat pitkittyneet esi\\xadtutkinta\\xadprosessit seksuaalirikos- ja lähi\\xadsuhde\\xadväki\\xadvalta\\xadtapauksissa.\",\\n    \"category_hint\": \"\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}
