@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/eu-maat-alustavaan-sopuun-ukrainan-lainapaketista-ja-venajan-vastaisesta-pakotepaketista/9327964"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
