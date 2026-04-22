@@ -39,7 +39,6 @@ keywords:
 source_name: "HS Tuoreimmat"
 source_url: "https://www.hs.fi/politiikka/art-2000011959702.html"
 source_domain: "hs.fi"
-briefing: true
 draft: false
 ---
 
