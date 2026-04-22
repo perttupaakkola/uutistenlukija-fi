@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/pikkubaarissa-poikkeuksellisen-vaarallisen-teloitusmurhan-tehnyt-paasee-vapaaksi/9327762"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
