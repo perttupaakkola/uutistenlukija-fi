@@ -40,7 +40,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/havittajalentajat-ottivat-kuvia-toisistaan-kesken-lennon-sitten-rysahti/9328016"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
