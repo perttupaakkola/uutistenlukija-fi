@@ -74,11 +74,6 @@ class Article:
     def blurb(self) -> str:
         return build_blurb(self.description, self.body)
 
-    @property
-    def source_label(self) -> str:
-        return self.source_name or self.source_domain or "Uutistenlukija"
-
-
 def parse_frontmatter(text: str) -> tuple[dict, str]:
     """Parse simple YAML frontmatter without external deps."""
     meta: dict = {}
@@ -282,10 +277,9 @@ def render_html_preview(target_day: date, articles: list[Article], generated_at:
             <li class=\"story\">
               <div class=\"story__number\">{idx}</div>
               <div class=\"story__content\">
-                <div class=\"story__meta\">{html.escape(article.category)} · {html.escape(article.source_label)}</div>
+                <div class=\"story__meta\">{html.escape(article.category)}</div>
                 <h2 class=\"story__title\"><a href=\"{html.escape(tracked_url)}\">{html.escape(article.title)}</a></h2>
                 <p class=\"story__blurb\">{html.escape(article.blurb)}</p>
-                <p class=\"story__source\">Lähde: {html.escape(article.source_label)}</p>
               </div>
             </li>
             """.strip()
@@ -395,7 +389,7 @@ def render_html_preview(target_day: date, articles: list[Article], generated_at:
       font-weight: 800;
       font-size: 18px;
     }}
-    .story__meta, .story__source {{ color: var(--muted); font-size: 13px; }}
+    .story__meta {{ color: var(--muted); font-size: 13px; }}
     .story__title {{ margin: 4px 0 8px; font-size: 22px; line-height: 1.25; }}
     .story__title a {{ color: inherit; text-decoration: none; }}
     .story__title a:hover {{ color: var(--accent); }}
@@ -437,7 +431,7 @@ def build_plaintext_preview(target_day: date, articles: list[Article]) -> str:
 
     for idx, article in enumerate(articles, start=1):
         lines.append(f"{idx}. {article.title}")
-        lines.append(f"   {article.blurb} ({article.source_label})")
+        lines.append(f"   {article.blurb}")
     return "\n".join(lines)
 
 

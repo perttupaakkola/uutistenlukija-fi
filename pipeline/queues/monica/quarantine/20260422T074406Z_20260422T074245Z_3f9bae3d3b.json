@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-22T07:44:06Z",
+  "reason": "aineisto sisältää vain yleisen teaserin eikä kerro, mikä keino on kyseessä tai mitä pankit ovat vastanneet",
+  "packet": {
+    "packet_id": "20260422T074245Z_3f9bae3d3b",
+    "created_at": "2026-04-22T07:42:45Z",
+    "headline_seed": "Onko sinulla 100 000 euroa asuntolainaa? Tällä keinolla laitat lainan tuottamaan ja saat tuhansia euroja",
+    "description_seed": "Onko sinulla 100 000 euroa asuntolainaa? Tällä keinolla laitat lainankin tuottamaan ja saat ylimääräistä rahaa. Haluaisitko käyttää asuntolainaan kuluvat rahat sijoituksiin? Kaikkea et voi sijoittaa, mutta parhaimmillaan voit tehdä tuhansien eurojen tilin. Kysyimme suomalaisilta pankeilta, miten se onnistuu.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/4b425e74-f26d-4fe1-a866-d448606c9673",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/4b425e74-f26d-4fe1-a866-d448606c9673"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Onko sinulla 100 000 euroa asuntolainaa? Tällä keinolla laitat lainan tuottamaan ja saat tuhansia euroja"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Onko sinulla 100 000 euroa asuntolainaa? Tällä keinolla laitat lainankin tuottamaan ja saat ylimääräistä rahaa. Haluaisitko käyttää asuntolainaan kuluvat rahat sijoituksiin? Kaikkea et voi sijoittaa, mutta parhaimmillaan voit tehdä tuhansien eurojen tilin. Kysyimme suomalaisilta pankeilta, miten se onnistuu.",
+        "word_count": 38,
+        "keyword_overlap": 32,
+        "strong_overlap": 21
+      }
+    ],
+    "source_text": "Onko sinulla 100 000 euroa asuntolainaa? Tällä keinolla laitat lainankin tuottamaan ja saat ylimääräistä rahaa. Haluaisitko käyttää asuntolainaan kuluvat rahat sijoituksiin? Kaikkea et voi sijoittaa, mutta parhaimmillaan voit tehdä tuhansien eurojen tilin. Kysyimme suomalaisilta pankeilta, miten se onnistuu.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Onko sinulla 100 000 euroa asuntolainaa? Tällä keinolla laitat lainan tuottamaan ja saat tuhansia euroja",
+      "description": "Onko sinulla 100 000 euroa asuntolainaa? Tällä keinolla laitat lainankin tuottamaan ja saat ylimääräistä rahaa. Haluaisitko käyttää asuntolainaan kuluvat rahat sijoituksiin? Kaikkea et voi sijoittaa, mutta parhaimmillaan voit tehdä tuhansien eurojen tilin. Kysyimme suomalaisilta pankeilta, miten se onnistuu.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=b7d23603-d71d-4b09-bd02-935e7a71afb0 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260422T074245Z_3f9bae3d3b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto sisältää vain yleisen teaserin eikä kerro, mikä keino on kyseessä tai mitä pankit ovat vastanneet\"}\n[agent/embedded] [context-engine] maintenance(turn) changed transcript rewrittenEntries=0 bytesFreed=0 sessionKey=agent:monica:main",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-22T05:44:18Z",
+  "reason": "aineistossa on ristiriitaista tietoa siitä, onko Virginian äänestys jo hyväksytty vai vielä kesken",
+  "packet": {
+    "packet_id": "20260422T054338Z_847d532e9a",
+    "created_at": "2026-04-22T05:43:38Z",
+    "headline_seed": "Virginia approves redistricting, giving Democrats edge in midterms",
+    "description_seed": "The new maps in Virginia could make it easier for Democrats to take control of the US House of Representatives in November.",
+    "link": "https://www.bbc.com/news/articles/c895j8zgqe4o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "NPR",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c895j8zgqe4o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.91,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Virginia approves redistricting, giving Democrats edge in midterms"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The new maps in Virginia could make it easier for Democrats to take control of the US House of Representatives in November.",
+        "word_count": 22,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Virginia voters have approved a redistricting measure that could hand Democrats control of the thinly-divided US House of Representatives in the midterm elections later this year.",
+        "word_count": 26,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "NPR",
+        "source_type": "research",
+        "text": "Voting ends Tuesday in Virginia on a ballot measure that would lead to a new congressional map for the state. These new districts could provide Democrats a big boost ahead of the midterms.",
+        "word_count": 33,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Historically, the party of the current president would lose House seats during this congressional election. If Democrats win in the November race, it will not only serve a blow to Trump's political agenda, but it could open him up to Democratic-led congressional investigations.",
+        "word_count": 43,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "The new maps in Virginia could make it easier for Democrats to take control of the US House of Representatives in November.\n\nVirginia voters have approved a redistricting measure that could hand Democrats control of the thinly-divided US House of Representatives in the midterm elections later this year.\n\nVoting ends Tuesday in Virginia on a ballot measure that would lead to a new congressional map for the state. These new districts could provide Democrats a big boost ahead of the midterms.\n\nHistorically, the party of the current president would lose House seats during this congressional election. If Democrats win in the November race, it will not only serve a blow to Trump's political agenda, but it could open him up to Democratic-led congressional investigations.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Virginia approves redistricting, giving Democrats edge in midterms",
+      "description": "The new maps in Virginia could make it easier for Democrats to take control of the US House of Representatives in November.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=7f71b6f7-e22d-4623-bb53-0adfdce8a524 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260422T054338Z_847d532e9a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineistossa on ristiriitaista tietoa siitä, onko Virginian äänestys jo hyväksytty vai vielä kesken\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

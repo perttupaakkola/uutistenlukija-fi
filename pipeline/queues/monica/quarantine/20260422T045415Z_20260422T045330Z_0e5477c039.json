@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-22T04:54:15Z",
+  "reason": "aineistossa on mukana selvästi asiaan kuulumaton lähdekatkelma eikä tietoja riitä luotettavaan koosteeseen",
+  "packet": {
+    "packet_id": "20260422T045330Z_0e5477c039",
+    "created_at": "2026-04-22T04:53:30Z",
+    "headline_seed": "Kehysriihen viimeinen päivä alkaa – tässä tilanne lyhyesti",
+    "description_seed": "Hallitukselta on luvassa leikkauksia. Bensiinin hinta hiersi neuvotteluissa tiistaina.",
+    "link": "https://www.is.fi/politiikka/art-2000011959710.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "source-20",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.is.fi/politiikka/art-2000011959710.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kehysriihen viimeinen päivä alkaa – tässä tilanne lyhyesti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Hallitukselta on luvassa leikkauksia. Bensiinin hinta hiersi neuvotteluissa tiistaina.",
+        "word_count": 9,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-20",
+        "source_type": "research",
+        "text": "Useita leikkauksia vaatinut parantuminen vei aikaa, eikä hengenlähtökään ollut kaukana: yhtä leikkausta seurannut verenmyrkytys ajoi miehen teho-osastolle ja lähelle kuolemaa.",
+        "word_count": 20,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Kokoomuksella ei ole haluja suostua hallituksen kehysriihessä perussuomalaisten ajatukseen laskea uusiutuvien polttoaineiden jakeluvelvoitteen tasoa. Jakeluvelvoitteen lasku alentaisi hivenen bensiinin hintaa.",
+        "word_count": 20,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Hallitukselta on luvassa leikkauksia. Bensiinin hinta hiersi neuvotteluissa tiistaina.\n\nUseita leikkauksia vaatinut parantuminen vei aikaa, eikä hengenlähtökään ollut kaukana: yhtä leikkausta seurannut verenmyrkytys ajoi miehen teho-osastolle ja lähelle kuolemaa.\n\nKokoomuksella ei ole haluja suostua hallituksen kehysriihessä perussuomalaisten ajatukseen laskea uusiutuvien polttoaineiden jakeluvelvoitteen tasoa. Jakeluvelvoitteen lasku alentaisi hivenen bensiinin hintaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kehysriihen viimeinen päivä alkaa – tässä tilanne lyhyesti",
+      "description": "Hallitukselta on luvassa leikkauksia. Bensiinin hinta hiersi neuvotteluissa tiistaina.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=9af008fc-4b9d-4e2b-a272-cf816f794f8d sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260422T045330Z_0e5477c039\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineistossa on mukana selvästi asiaan kuulumaton lähdekatkelma eikä tietoja riitä luotettavaan koosteeseen\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

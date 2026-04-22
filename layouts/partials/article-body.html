@@ -9,8 +9,6 @@
 {{- if eq .showKeyFacts true }}{{ partial "key-facts.html" $page }}{{ end }}
 {{- if eq .showToc true }}{{ partial "toc.html" $page }}{{ end }}
 
-{{- if eq .showSource true }}{{ partial "source-article-link.html" $page }}{{ end }}
-
 {{- if eq .metaVariant "single" }}
 <div class="article-meta">
   {{- $publishedAt := $page.Date -}}
@@ -44,12 +42,6 @@
 <div class="{{ $contentClass }}">
   {{ $page.Content }}
 </div>
-
-{{- if and (eq .showSource true) (not $page.Params.source_url) (not $page.Params.journalist_note) }}
-<div class="article-end-note">
-  <p>Tämä uutinen on tiivistetty useista eri uutislähteistä lukijan ajan säästämiseksi.</p>
-</div>
-{{- end }}
 
 {{ partial "article-outro-topic-prompt.html" $page }}
 

@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-22T08:45:12Z",
+  "reason": "aineisto on liian niukka eikä tue otsikon yksityiskohtia teon tavasta, vaikka tuomio ja syyntakeettomuus käyvät ilmi",
+  "packet": {
+    "packet_id": "20260422T084410Z_9f8a552085",
+    "created_at": "2026-04-22T08:44:10Z",
+    "headline_seed": "50-vuotias mies murhasi äitinsä kymmenillä iskuilla Hämeenlinnassa",
+    "description_seed": "Miehellä ei ollut mitään muistikuvaa päivästä, jolloin henkirikos oli tapahtunut.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/50-vuotias-mies-murhasi-aitinsa-kymmenilla-iskuilla-hameenlinnassa/9327760",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "MTV Uutiset",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/50-vuotias-mies-murhasi-aitinsa-kymmenilla-iskuilla-hameenlinnassa/9327760"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.71,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "50-vuotias mies murhasi äitinsä kymmenillä iskuilla Hämeenlinnassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Miehellä ei ollut mitään muistikuvaa päivästä, jolloin henkirikos oli tapahtunut.",
+        "word_count": 10,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "MTV Uutiset",
+        "source_type": "research",
+        "text": "50-vuotias mies on tuomittu äitinsä murhasta. Teko tapahtui Hämeenlinnassa huhtikuussa 2025.",
+        "word_count": 11,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Vuonna 1975 syntynyt hämeenlinnalaismies oli syyntakeeton murhatessaan äitinsä. Kanta-Hämeen käräjäoikeus antoi tuomion tänään.",
+        "word_count": 13,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Miehellä ei ollut mitään muistikuvaa päivästä, jolloin henkirikos oli tapahtunut.\n\n50-vuotias mies on tuomittu äitinsä murhasta. Teko tapahtui Hämeenlinnassa huhtikuussa 2025.\n\nVuonna 1975 syntynyt hämeenlinnalaismies oli syyntakeeton murhatessaan äitinsä. Kanta-Hämeen käräjäoikeus antoi tuomion tänään.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "50-vuotias mies murhasi äitinsä kymmenillä iskuilla Hämeenlinnassa",
+      "description": "Miehellä ei ollut mitään muistikuvaa päivästä, jolloin henkirikos oli tapahtunut.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=c7e05297-fa52-4d9f-95cb-077e82cd1713 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260422T084410Z_9f8a552085\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on liian niukka eikä tue otsikon yksityiskohtia teon tavasta, vaikka tuomio ja syyntakeettomuus käyvät ilmi\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}
