@@ -38,7 +38,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/lufthansa-peruu-20-000-lentoa/9327568"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
