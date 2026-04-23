@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/tuhotyosta-ja-murhan-yrityksesta-syytettyja-lapsia-kuullaan-tanaan-oikeudessa/9328202"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
