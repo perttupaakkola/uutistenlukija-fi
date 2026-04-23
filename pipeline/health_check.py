@@ -26,9 +26,14 @@ import shutil
 import time
 import urllib.request
 import urllib.error
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 from pathlib import Path
+
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:  # pragma: no cover
+    ZoneInfo = None
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -48,19 +53,40 @@ LOCK_STALE_MINUTES = 30           # stale lock threshold
 DISK_WARN_GB       = 2.0          # warn if free < 2 GB
 MEM_WARN_MB        = 200          # warn if available < 200 MB
 
+DEFAULT_DISCORD_ALERT_CHANNEL_ID = "1482082645553713366"  # #operations
+ENV_CANDIDATES = [
+    Path(_ROOT) / ".env",
+    Path(_ROOT) / "pipeline" / ".env",
+    Path("/workspace/.env"),
+    Path("/home/pertt/.openclaw/.env"),
+]
+
+
+def _load_env_files() -> None:
+    for path in ENV_CANDIDATES:
+        try:
+            if not path.exists():
+                continue
+            for line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+                if not line or line.lstrip().startswith("#") or "=" not in line:
+                    continue
+                key, value = line.split("=", 1)
+                os.environ.setdefault(key.strip(), value.strip())
+        except Exception:
+            continue
+
+
+_load_env_files()
+
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_PIPELINE_WEBHOOK", "")
-DISCORD_ALERT_CHANNEL_ID = os.environ.get("DISCORD_PIPELINE_ALERT_CHANNEL_ID", "1482079802621169735")
+DISCORD_ALERT_CHANNEL_ID = os.environ.get("DISCORD_PIPELINE_ALERT_CHANNEL_ID", DEFAULT_DISCORD_ALERT_CHANNEL_ID)
 LOG_DIR_OVERRIDE = None  # set by tests
 
 LOG_DIR = os.path.join(_HERE, "logs")
 
 
 def _read_env_key_from_files(key_name: str) -> str:
-    candidates = [
-        Path(_ROOT) / ".env",
-        Path("/home/pertt/.openclaw/.env"),
-    ]
-    for path in candidates:
+    for path in ENV_CANDIDATES:
         try:
             if not path.exists():
                 continue
@@ -73,7 +99,12 @@ def _read_env_key_from_files(key_name: str) -> str:
 
 
 def _post_via_discord_bot(body: str) -> bool:
-    token = os.environ.get("OPENCLAW_DISCORD_BOT_TOKEN") or _read_env_key_from_files("OPENCLAW_DISCORD_BOT_TOKEN")
+    token = (
+        os.environ.get("OPENCLAW_DISCORD_BOT_TOKEN")
+        or os.environ.get("DISCORD_BOT_TOKEN")
+        or _read_env_key_from_files("OPENCLAW_DISCORD_BOT_TOKEN")
+        or _read_env_key_from_files("DISCORD_BOT_TOKEN")
+    )
     if not token or not DISCORD_ALERT_CHANNEL_ID:
         return False
     payload = json.dumps({"content": body[:1900]}).encode("utf-8")
@@ -117,10 +148,6 @@ def notify_discord_failure(step: str, error: str, context: str = "") -> bool:
 
     Returns True if message was sent successfully.
     """
-    if not DISCORD_WEBHOOK_URL:
-        print(f"[health_check] DISCORD_PIPELINE_WEBHOOK not set — alert not sent for: {step}: {error}")
-        return False
-
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     body = f"🚨 **Pipeline failure** — `{step}`\n"
     body += f"**Time:** {timestamp}\n"
@@ -128,7 +155,10 @@ def notify_discord_failure(step: str, error: str, context: str = "") -> bool:
     if context:
         body += f"**Context:** {context[:300]}\n"
 
-    return _send_discord_message(body)
+    sent = _send_discord_message(body)
+    if not sent:
+        print(f"[health_check] alert not sent for: {step}: {error}")
+    return sent
 
 
 def notify_discord_crash(step: str, exception: Exception, *, tb: str = "") -> bool:
@@ -138,12 +168,6 @@ def notify_discord_crash(step: str, exception: Exception, *, tb: str = "") -> bo
     """
     error_str = f"{type(exception).__name__}: {exception}"
     context = tb[:600] if tb else ""
-    if not DISCORD_WEBHOOK_URL:
-        print(f"[health_check] CRASH [{step}]: {error_str}")
-        if context:
-            print(context)
-        return False
-
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     body = f"💥 **Pipeline crash** — `{step}`\n"
     body += f"**Time:** {timestamp}\n"
@@ -151,22 +175,26 @@ def notify_discord_crash(step: str, exception: Exception, *, tb: str = "") -> bo
     if context:
         body += f"```\n{context[:500]}\n```\n"
 
-    return _send_discord_message(body)
+    sent = _send_discord_message(body)
+    if not sent:
+        print(f"[health_check] CRASH [{step}]: {error_str}")
+        if context:
+            print(context)
+    return sent
 
 
 def notify_discord_warning(step: str, message: str, details: str | None = None) -> bool:
     """Post a warning (non-fatal) to Discord."""
     combined = message if not details else f"{message}\n{details}"
-    if not DISCORD_WEBHOOK_URL:
-        print(f"[health_check] WARNING [{step}]: {combined}")
-        return False
-
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     body = f"⚠️ **Pipeline warning** — `{step}`\n"
     body += f"**Time:** {timestamp}\n"
     body += f"**Message:** {combined[:500]}\n"
 
-    return _send_discord_message(body)
+    sent = _send_discord_message(body)
+    if not sent:
+        print(f"[health_check] WARNING [{step}]: {combined}")
+    return sent
 
 
 def write_metrics(metrics: dict) -> str:
@@ -202,6 +230,16 @@ def _utc_now() -> datetime:
     return datetime.now(timezone.utc)
 
 
+def _helsinki_now() -> datetime:
+    now = _utc_now()
+    if ZoneInfo is not None:
+        try:
+            return now.astimezone(ZoneInfo("Europe/Helsinki"))
+        except Exception:
+            pass
+    return now + timedelta(hours=2)
+
+
 def check_last_article() -> dict:
     """Return time since last published article and warn if stale during daytime."""
     md_files = glob.glob(os.path.join(POSTS_DIR, "*.md"))
@@ -217,10 +255,8 @@ def check_last_article() -> dict:
     newest_dt = datetime.fromtimestamp(newest_mtime, tz=timezone.utc)
 
     # Determine if we're in Helsinki daytime.
-    # Helsinki is UTC+2 (EET) or UTC+3 (EEST). Use UTC+2 as a conservative
-    # estimate (if it's daytime in UTC+2, it's definitely daytime in UTC+3).
-    now_utc = _utc_now()
-    hel_hour = (now_utc.hour + 2) % 24  # conservative: UTC+2
+    hel_now = _helsinki_now()
+    hel_hour = hel_now.hour
 
     in_daytime = DAYTIME_START_HEL <= hel_hour < DAYTIME_END_HEL
 
@@ -248,6 +284,7 @@ def check_last_article() -> dict:
             "newest_file_utc": newest_dt.isoformat(),
             "in_daytime": in_daytime,
             "hel_hour": hel_hour,
+            "hel_tz": getattr(hel_now.tzinfo, "key", None) or str(hel_now.tzinfo),
         },
     }
 

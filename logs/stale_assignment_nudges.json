@@ -1,0 +1,95 @@
+{
+  "sent": {
+    "alex:alex-legacy:escalate30": {
+      "sentAt": "2026-04-23T16:31:01.431526+00:00",
+      "agent": "alex",
+      "taskId": "alex-legacy",
+      "stage": "escalate30",
+      "channel": "#development",
+      "source": "/workspace/projects/agent-ops/agent-health.json"
+    },
+    "sara:sara-legacy:escalate30": {
+      "sentAt": "2026-04-23T16:31:01.431526+00:00",
+      "agent": "sara",
+      "taskId": "sara-legacy",
+      "stage": "escalate30",
+      "channel": "#design",
+      "source": "/workspace/projects/agent-ops/agent-health.json"
+    },
+    "max:max-legacy:escalate30": {
+      "sentAt": "2026-04-23T16:31:01.431526+00:00",
+      "agent": "max",
+      "taskId": "max-legacy",
+      "stage": "escalate30",
+      "channel": "#operations",
+      "source": "/workspace/projects/agent-ops/agent-health.json"
+    },
+    "monica:monica-legacy:escalate30": {
+      "sentAt": "2026-04-23T16:31:01.431526+00:00",
+      "agent": "monica",
+      "taskId": "monica-legacy",
+      "stage": "escalate30",
+      "channel": "#research",
+      "source": "/workspace/projects/agent-ops/agent-health.json"
+    },
+    "alex:alex-current:escalate30": {
+      "sentAt": "2026-04-23T17:08:56.695415+00:00",
+      "agent": "alex",
+      "taskId": "alex-current",
+      "stage": "escalate30",
+      "channel": "#development",
+      "source": "/workspace/projects/agent-ops/agent-health.json"
+    },
+    "sara:sara-current:escalate30": {
+      "sentAt": "2026-04-23T17:08:56.695415+00:00",
+      "agent": "sara",
+      "taskId": "sara-current",
+      "stage": "escalate30",
+      "channel": "#design",
+      "source": "/workspace/projects/agent-ops/agent-health.json"
+    },
+    "max:max-current:escalate30": {
+      "sentAt": "2026-04-23T17:08:56.695415+00:00",
+      "agent": "max",
+      "taskId": "max-current",
+      "stage": "escalate30",
+      "channel": "#operations",
+      "source": "/workspace/projects/agent-ops/agent-health.json"
+    },
+    "monica:monica-current:escalate30": {
+      "sentAt": "2026-04-23T17:08:56.695415+00:00",
+      "agent": "monica",
+      "taskId": "monica-current",
+      "stage": "escalate30",
+      "channel": "#research",
+      "source": "/workspace/projects/agent-ops/agent-health.json"
+    }
+  },
+  "lastRun": "2026-04-23T17:08:56.695415+00:00",
+  "lastActions": [
+    {
+      "agent": "alex",
+      "task": "alex-current",
+      "stage": "escalate30",
+      "age_min": 31872
+    },
+    {
+      "agent": "sara",
+      "task": "sara-current",
+      "stage": "escalate30",
+      "age_min": 31752
+    },
+    {
+      "agent": "max",
+      "task": "max-current",
+      "stage": "escalate30",
+      "age_min": 32232
+    },
+    {
+      "agent": "monica",
+      "task": "monica-current",
+      "stage": "escalate30",
+      "age_min": 31392
+    }
+  ]
+}

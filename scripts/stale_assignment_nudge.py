@@ -29,17 +29,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+WORKSPACE_ROOT = ROOT.parent.parent
 AGENT_HEALTH_PATHS = [
+    ROOT.parent / "agent-ops" / "agent-health.json",
+    WORKSPACE_ROOT / "agent-health.json",
     ROOT / "agent-health.json",
-    Path("/workspace/projects/agent-ops/agent-health.json"),
 ]
 STATE_FILE = ROOT / "logs" / "stale_assignment_nudges.json"
 
 CHANNELS = {
     "alex": "1482082568169066667",      # #development
-    "sara": "1482082498044235989",      # fallback #design unknown in workspace; using improvement-ideas is worse, keep placeholder if absent
+    "sara": "1482082542692733170",      # #design
     "max":  "1482082645553713366",      # #operations
-    "monica": "1482082498044235989",    # fallback #research unknown in workspace
+    "monica": "1482720265174782055",    # #research
 }
 CHANNEL_NAMES = {
     "alex": "#development",
@@ -55,15 +57,16 @@ MENTIONS = {
     "monica": "<@1482473689789370398>",
 }
 
-DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", "")
-ENV_FILE = ROOT / "pipeline" / ".env"
-if ENV_FILE.exists():
-    for line in ENV_FILE.read_text().splitlines():
+for env_file in (ROOT / ".env", ROOT / "pipeline" / ".env", WORKSPACE_ROOT / ".env"):
+    if not env_file.exists():
+        continue
+    for line in env_file.read_text().splitlines():
         line = line.strip()
         if line and not line.startswith("#") and "=" in line:
             k, _, v = line.partition("=")
             os.environ.setdefault(k.strip(), v.strip())
-    DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", DISCORD_BOT_TOKEN)
+
+DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN") or os.environ.get("OPENCLAW_DISCORD_BOT_TOKEN", "")
 
 
 def parse_iso(ts: str):
@@ -95,7 +98,39 @@ def load_state():
 
 def save_state(state):
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False))
+    tmp = STATE_FILE.with_suffix(STATE_FILE.suffix + ".tmp")
+    tmp.write_text(json.dumps(state, indent=2, ensure_ascii=False))
+    tmp.replace(STATE_FILE)
+
+
+def normalize_task(agent_key: str, agent: dict):
+    current = agent.get("currentTask")
+
+    if isinstance(current, dict):
+        return {
+            "id": current.get("id") or agent.get("lastAssignment") or f"{agent_key}-current",
+            "title": current.get("title") or current.get("description") or current.get("task") or "Untitled task",
+            "assignedAt": current.get("assignedAt") or current.get("createdAt") or current.get("updatedAt") or agent.get("lastTaskAssigned") or agent.get("lastAssignmentAt"),
+            "status": current.get("status") or agent.get("state") or agent.get("status"),
+        }
+
+    if isinstance(current, str):
+        return {
+            "id": agent.get("lastAssignment") or f"{agent_key}-current",
+            "title": current,
+            "assignedAt": agent.get("lastTaskAssigned") or agent.get("lastAssignmentAt") or agent.get("assignedAt"),
+            "status": agent.get("state") or agent.get("status"),
+        }
+
+    if agent.get("lastAssignment"):
+        return {
+            "id": agent.get("lastAssignment"),
+            "title": agent.get("lastAssignment"),
+            "assignedAt": agent.get("lastAssignmentAt") or agent.get("lastTaskAssigned"),
+            "status": agent.get("status") or agent.get("state"),
+        }
+
+    return None
 
 
 def post_message(channel_id: str, content: str, dry_run: bool):
@@ -103,7 +138,7 @@ def post_message(channel_id: str, content: str, dry_run: bool):
         print(f"--- POST {channel_id} ---\n{content}\n")
         return True
     if not DISCORD_BOT_TOKEN:
-        print("[stale-nudge] Missing DISCORD_BOT_TOKEN", file=sys.stderr)
+        print("[stale-nudge] Missing Discord bot token (DISCORD_BOT_TOKEN / OPENCLAW_DISCORD_BOT_TOKEN)", file=sys.stderr)
         return False
     payload = json.dumps({"content": content}).encode()
     req = urllib.request.Request(
@@ -159,9 +194,18 @@ def main():
 
     actions = []
     for agent_key, agent in health.get("agents", {}).items():
-        current = agent.get("currentTask")
+        agent_state = str(agent.get("state") or agent.get("status") or "").lower()
+        if agent_state in {"idle", "standby"} and not agent.get("currentTask"):
+            continue
+
+        current = normalize_task(agent_key, agent)
         if not current:
             continue
+
+        task_status = str(current.get("status") or agent_state).lower()
+        if task_status in {"idle", "standby", "done", "completed"}:
+            continue
+
         assigned_at = parse_iso(current.get("assignedAt", ""))
         if not assigned_at:
             continue

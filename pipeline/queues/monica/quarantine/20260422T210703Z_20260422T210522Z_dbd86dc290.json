@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-22T21:07:03Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260422T210522Z_dbd86dc290",
+    "created_at": "2026-04-22T21:05:22Z",
+    "headline_seed": "Rajua palautetta hallitukselle: ”Täysin vastuutonta”",
+    "description_seed": "Oppositio lähetti tiedotteissaan välittömästi myrkyllistä palautetta, kun hallitus oli julkaissut kehysriihipäätöksensä keskiviikkoiltana. SDP:n talouspoliittinen ääni, kansanedustaja Joona Räsänen tiedottaa otsikolla ”Hallituksen talouspolitiikan totaalinen epäonnistuminen sai sinettinsä kehysriihessä”. Hänen mielestään kehysriihen lopputulema jää näpertelyksi ja Orpon hallituksen jäljiltä julkinen talous on jäämässä pysyvästi raskaasti alijäämäiseksi.",
+    "link": "https://www.iltalehti.fi/politiikka/a/4b2c14c5-30f6-43f4-b2c6-6e004134c077",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/politiikka/a/4b2c14c5-30f6-43f4-b2c6-6e004134c077"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.52,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Rajua palautetta hallitukselle: ”Täysin vastuutonta”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Oppositio lähetti tiedotteissaan välittömästi myrkyllistä palautetta, kun hallitus oli julkaissut kehysriihipäätöksensä keskiviikkoiltana. SDP:n talouspoliittinen ääni, kansanedustaja Joona Räsänen tiedottaa otsikolla ”Hallituksen talouspolitiikan totaalinen epäonnistuminen sai sinettinsä kehysriihessä”. Hänen mielestään kehysriihen lopputulema jää näpertelyksi ja Orpon hallituksen jäljiltä julkinen talous on jäämässä pysyvästi raskaasti alijäämäiseksi.",
+        "word_count": 44,
+        "keyword_overlap": 36,
+        "strong_overlap": 32
+      }
+    ],
+    "source_text": "Oppositio lähetti tiedotteissaan välittömästi myrkyllistä palautetta, kun hallitus oli julkaissut kehysriihipäätöksensä keskiviikkoiltana. SDP:n talouspoliittinen ääni, kansanedustaja Joona Räsänen tiedottaa otsikolla ”Hallituksen talouspolitiikan totaalinen epäonnistuminen sai sinettinsä kehysriihessä”. Hänen mielestään kehysriihen lopputulema jää näpertelyksi ja Orpon hallituksen jäljiltä julkinen talous on jäämässä pysyvästi raskaasti alijäämäiseksi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Rajua palautetta hallitukselle: ”Täysin vastuutonta”",
+      "description": "Oppositio lähetti tiedotteissaan välittömästi myrkyllistä palautetta, kun hallitus oli julkaissut kehysriihipäätöksensä keskiviikkoiltana. SDP:n talouspoliittinen ääni, kansanedustaja Joona Räsänen tiedottaa otsikolla ”Hallituksen talouspolitiikan totaalinen epäonnistuminen sai sinettinsä kehysriihessä”. Hänen mielestään kehysriihen lopputulema jää näpertelyksi ja Orpon hallituksen jäljiltä julkinen talous on jäämässä pysyvästi raskaasti alijäämäiseksi.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [diagnostic] lane task error: lane=main durationMs=18867 error=\"Error: session file locked (timeout 10000ms): pid=2426444 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=18873 error=\"Error: session file locked (timeout 10000ms): pid=2426444 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=timeout next=none detail=session file locked (timeout 10000ms): pid=2426444 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock\nFailoverError: session file locked (timeout 10000ms): pid=2426444 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock"
+  }
+}

@@ -18,21 +18,27 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY_FILE = ROOT / "data" / "cron_registry.json"
 OPERATIONS_CHANNEL = "1482082645553713366"
+ENV_FILES = [
+    ROOT / ".env",
+    ROOT / "pipeline" / ".env",
+    Path("/workspace/.env"),
+]
 
 # Load environment variables for Discord token
-DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", "")
-ENV_FILE = ROOT / "pipeline" / ".env"
-if ENV_FILE.exists():
+for ENV_FILE in ENV_FILES:
+    if not ENV_FILE.exists():
+        continue
     for line in ENV_FILE.read_text().splitlines():
         line = line.strip()
         if line and not line.startswith("#") and "=" in line:
             k, _, v = line.partition("=")
             os.environ.setdefault(k.strip(), v.strip())
-    DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", DISCORD_BOT_TOKEN)
+
+DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN") or os.environ.get("OPENCLAW_DISCORD_BOT_TOKEN", "")
 
 def post_to_discord(content):
     if not DISCORD_BOT_TOKEN:
-        print("[cron-health] Missing DISCORD_BOT_TOKEN", file=sys.stderr)
+        print("[cron-health] Missing Discord bot token (DISCORD_BOT_TOKEN / OPENCLAW_DISCORD_BOT_TOKEN)", file=sys.stderr)
         return False
     payload = json.dumps({"content": content}).encode()
     req = urllib.request.Request(

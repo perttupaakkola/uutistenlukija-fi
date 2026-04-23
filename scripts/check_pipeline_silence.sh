@@ -15,8 +15,9 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 HEALTH_JSON="$PROJECT_DIR/static/api/health.json"
-ENV_FILE="$PROJECT_DIR/pipeline/.env"
 THRESHOLD_HOURS="${1:-6}"
+ACTIVE_START_HEL=6
+ACTIVE_END_HEL=23
 
 # Parse --hours flag
 while [[ $# -gt 0 ]]; do
@@ -27,17 +28,36 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Load .env for webhook URL
-if [[ -f "$ENV_FILE" ]]; then
-    set -a
-    # shellcheck disable=SC1090
-    source "$ENV_FILE" 2>/dev/null || true
-    set +a
-fi
+for ENV_FILE in "$PROJECT_DIR/.env" "$PROJECT_DIR/pipeline/.env" "/workspace/.env"; do
+    if [[ -f "$ENV_FILE" ]]; then
+        set -a
+        # shellcheck disable=SC1090
+        source "$ENV_FILE" 2>/dev/null || true
+        set +a
+    fi
+done
 
 DISCORD_WEBHOOK="${DISCORD_OPERATIONS_WEBHOOK:-${DISCORD_PIPELINE_WEBHOOK:-}}"
 
-# Get current UTC hour for active-hours check
-CURRENT_HOUR=$(date -u +%H)
+# Get current Helsinki hour for active-hours check
+CURRENT_HOUR=$(python3 - <<'PY'
+from datetime import datetime, timedelta, timezone
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    ZoneInfo = None
+
+now = datetime.now(timezone.utc)
+if ZoneInfo is not None:
+    try:
+        hel = now.astimezone(ZoneInfo("Europe/Helsinki"))
+        print(hel.hour)
+        raise SystemExit
+    except Exception:
+        pass
+print((now + timedelta(hours=2)).hour)
+PY
+)
 CURRENT_HOUR=$((10#$CURRENT_HOUR))
 
 # Read last published timestamp from health.json
@@ -84,8 +104,8 @@ echo "[silence_check] status=OK age=${AGE_HOURS}h last=$LAST_PUBLISHED"
 AGE_INT=$(python3 -c "print(int(float('$AGE_HOURS')))" 2>/dev/null || echo "0")
 
 if (( AGE_INT >= THRESHOLD_HOURS )); then
-    # Only alert during active hours (06:00-22:00 UTC)
-    if (( CURRENT_HOUR >= 6 && CURRENT_HOUR < 22 )); then
+    # Only alert during active hours (06:00-23:00 Helsinki)
+    if (( CURRENT_HOUR >= ACTIVE_START_HEL && CURRENT_HOUR < ACTIVE_END_HEL )); then
         MSG="⚠️ **Pipeline hiljaa ${AGE_HOURS}h** — viimeisin artikkeli julkaistu \`$LAST_PUBLISHED\`.\nTarkista cron / firehose / pipeline status.\n\`\`\`bash\nbash scripts/pipeline-status.sh\n\`\`\`"
         echo "[silence_check] ALERT: Pipeline silent ${AGE_HOURS}h — posting to Discord"
 
@@ -106,7 +126,7 @@ except Exception as e:
             echo "[silence_check] DISCORD_OPERATIONS_WEBHOOK not set — alert not sent"
         fi
     else
-        echo "[silence_check] Age ${AGE_HOURS}h exceeds threshold but outside active hours (${CURRENT_HOUR}h UTC) — no alert"
+        echo "[silence_check] Age ${AGE_HOURS}h exceeds threshold but outside active hours (${CURRENT_HOUR}h Helsinki) — no alert"
     fi
 else
     echo "[silence_check] Pipeline active — last article ${AGE_HOURS}h ago. No alert."

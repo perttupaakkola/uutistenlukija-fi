@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-23T05:16:17Z",
+  "reason": "otsikko ja aineisto eivät vastaa toisiaan eikä sähkökatkoista ole paketissa vahvistettuja tietoja",
+  "packet": {
+    "packet_id": "20260423T051507Z_91d17da701",
+    "created_at": "2026-04-23T05:15:07Z",
+    "headline_seed": "Maastopalot ovat työllistäneet pelastuslaitoksia yöllä eri puolilla Suomea − sähköttä enää muutama tuhat asiakasta",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/metsa/e387b948-4643-45dc-8c72-f8b4904810eb",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [
+      "source-4",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/metsa/e387b948-4643-45dc-8c72-f8b4904810eb"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.47,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Maastopalot ovat työllistäneet pelastuslaitoksia yöllä eri puolilla Suomea − sähköttä enää muutama tuhat asiakasta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Kyyjärvellä peltoa paloi muutama aari, Laukaassa tuli eteni pellolta metsän puolelle ja maastoa paloi noin kaksi hehtaaria. Hankasalmella peltoa paloi noin hehtaarin alalta.",
+        "word_count": 23,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Palokuntaa on tarvittu eri puolilla Keski-Suomea. Esimerkiksi torstaina pelastuslaitoksen yksiköt hälytettiin sammuttamaan neljää maastopaloa, muun muassa Jyväskylässä, Konnevedellä ja Toivakassa.",
+        "word_count": 20,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Kyyjärvellä peltoa paloi muutama aari, Laukaassa tuli eteni pellolta metsän puolelle ja maastoa paloi noin kaksi hehtaaria. Hankasalmella peltoa paloi noin hehtaarin alalta.\n\nPalokuntaa on tarvittu eri puolilla Keski-Suomea. Esimerkiksi torstaina pelastuslaitoksen yksiköt hälytettiin sammuttamaan neljää maastopaloa, muun muassa Jyväskylässä, Konnevedellä ja Toivakassa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Maastopalot ovat työllistäneet pelastuslaitoksia yöllä eri puolilla Suomea − sähköttä enää muutama tuhat asiakasta",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=d4c7a2c2-feb8-47a6-a11d-91ecc9d4fa4f sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260423T051507Z_91d17da701\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"otsikko ja aineisto eivät vastaa toisiaan eikä sähkökatkoista ole paketissa vahvistettuja tietoja\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

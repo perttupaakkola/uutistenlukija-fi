@@ -1,0 +1,25 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.4"
+      },
+      "workspace": "/home/pertt/.openclaw/workspace-monica",
+      "maxConcurrent": 1
+    },
+    "list": [
+      {
+        "id": "monica",
+        "name": "Monica",
+        "workspace": "/home/pertt/.openclaw/workspace-monica",
+        "model": {
+          "primary": "openai-codex/gpt-5.4"
+        },
+        "identity": {
+          "name": "Monica",
+          "emoji": "🔍"
+        }
+      }
+    ]
+  }
+}
