@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/op-lta-uudistus-huijareita-vastaan-tileja-ei-voida-tyhjentaa-kokonaan/9328464"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
