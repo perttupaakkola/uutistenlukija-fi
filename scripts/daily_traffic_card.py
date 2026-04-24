@@ -26,17 +26,22 @@ _SECRETS_CANDIDATES = [
     Path.home() / ".openclaw" / "workspace" / "projects" / "uutistenlukija" / ".secrets" / "analytics-tokens.json",
 ]
 ANALYTICS_TOKENS = next((p for p in _SECRETS_CANDIDATES if p.exists()), _SECRETS_CANDIDATES[0])
-ENV_FILE = PROJECT_DIR / "pipeline" / ".env"
+ENV_FILES = [
+    PROJECT_DIR / ".env",
+    PROJECT_DIR / "pipeline" / ".env",
+    Path("/workspace/.env"),
+]
 GA4_PROPERTY = "529369568"
 METRICS_CHANNEL = "1482720741790060554"  # #metrics
 
 def load_env():
-    if ENV_FILE.exists():
-        for line in ENV_FILE.read_text().splitlines():
-            line = line.strip()
-            if line and not line.startswith("#") and "=" in line:
-                k, _, v = line.partition("=")
-                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+    for env_file in ENV_FILES:
+        if env_file.exists():
+            for line in env_file.read_text().splitlines():
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, _, v = line.partition("=")
+                    os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 load_env()
 

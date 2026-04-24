@@ -21,23 +21,28 @@ from pathlib import Path
 SCRIPT_DIR  = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
 ERRORS_FILE = PROJECT_DIR / "pipeline" / "logs" / "pipeline_errors.json"
-ENV_FILE    = PROJECT_DIR / "pipeline" / ".env"
+ENV_FILES   = [
+    PROJECT_DIR / ".env",
+    PROJECT_DIR / "pipeline" / ".env",
+    Path("/workspace/.env"),
+]
 
 OPERATIONS_WEBHOOK_ENV = "DISCORD_OPERATIONS_WEBHOOK"
 WINDOW_DAYS = 7
 
 
-def load_env(path: Path) -> dict[str, str]:
+def load_env(paths) -> dict[str, str]:
     env: dict[str, str] = {}
-    if not path.exists():
-        return env
-    with path.open() as f:
-        for line in f:
-            line = line.strip()
-            if not line or line.startswith("#") or "=" not in line:
-                continue
-            k, _, v = line.partition("=")
-            env[k.strip()] = v.strip().strip('"').strip("'")
+    for path in paths:
+        if not path.exists():
+            continue
+        with path.open() as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, _, v = line.partition("=")
+                env[k.strip()] = v.strip().strip('"').strip("'")
     return env
 
 
@@ -139,7 +144,7 @@ def format_report(window: list[dict], week_start: str, week_end: str) -> str:
 
 
 def main() -> int:
-    env = load_env(ENV_FILE)
+    env = load_env(ENV_FILES)
     # Also check process environment
     webhook_url = os.environ.get(OPERATIONS_WEBHOOK_ENV) or env.get(OPERATIONS_WEBHOOK_ENV, "")
 

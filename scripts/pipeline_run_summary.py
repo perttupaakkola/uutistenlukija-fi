@@ -10,7 +10,12 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
-ENV_FILE    = PROJECT_DIR / "pipeline" / ".env"
+ENV_FILES   = [
+    PROJECT_DIR / ".env",
+    PROJECT_DIR / "pipeline" / ".env",
+    Path("/workspace/.env"),
+    Path("/home/pertt/.openclaw/.env"),
+]
 CONTENT_DIR = PROJECT_DIR / "content" / "posts"
 SITE_BASE   = "https://uutistenlukija.fi"
 WEBHOOK_ENV = "DISCORD_PIPELINE_WEBHOOK"
@@ -18,16 +23,17 @@ CHANNEL_ENV = "DISCORD_PIPELINE_ALERT_CHANNEL_ID"
 DEFAULT_CHANNEL_ID = "1482082645553713366"
 
 
-def load_env(path):
+def load_env(paths):
     env = {}
-    if not path.exists():
-        return env
-    for line in path.open():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
+    for path in paths:
+        if not path.exists():
             continue
-        k, _, v = line.partition("=")
-        env[k.strip()] = v.strip().strip('"').strip("'")
+        for line in path.open():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, _, v = line.partition("=")
+            env[k.strip()] = v.strip().strip('"').strip("'")
     return env
 
 
@@ -79,10 +85,7 @@ def build_msg(n, arts, elapsed):
 
 
 def _read_env_key_from_files(key_name: str) -> str:
-    candidates = [
-        ENV_FILE,
-        Path("/home/pertt/.openclaw/.env"),
-    ]
+    candidates = ENV_FILES
     for path in candidates:
         try:
             if not path.exists():
@@ -143,7 +146,7 @@ def main():
         print("[run_summary] 0 articles — skipping")
         return 0
 
-    env  = load_env(ENV_FILE)
+    env  = load_env(ENV_FILES)
     hook = os.environ.get(WEBHOOK_ENV) or env.get(WEBHOOK_ENV, "")
     channel_id = os.environ.get(CHANNEL_ENV) or env.get(CHANNEL_ENV, DEFAULT_CHANNEL_ID)
     arts = recent_articles()

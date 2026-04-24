@@ -12,7 +12,7 @@
 # Usage (crontab):
 #   */10 * * * * cd /path/to/project && bash pipeline/watchdog.sh
 #
-# Env (loaded from pipeline/.env):
+# Env (loaded from project/root env files):
 #   DISCORD_PIPELINE_WEBHOOK — webhook URL for failure alerts
 
 set -euo pipefail
@@ -28,13 +28,14 @@ LOG_FILE="$LOGS_DIR/watchdog_$(date -u '+%Y%m%d').log"
 LOCK_MAX_AGE_SECS=1200  # 20 minutes
 
 # ── Load .env ─────────────────────────────────────────────────────────────────
-ENV_FILE="$PIPELINE_DIR/.env"
-if [[ -f "$ENV_FILE" ]]; then
-    set -a
-    # shellcheck disable=SC1090
-    source "$ENV_FILE"
-    set +a
-fi
+for ENV_FILE in "$PROJECT_DIR/.env" "$PIPELINE_DIR/.env" "/workspace/.env"; do
+    if [[ -f "$ENV_FILE" ]]; then
+        set -a
+        # shellcheck disable=SC1090
+        source "$ENV_FILE" || true
+        set +a
+    fi
+done
 
 DISCORD_WEBHOOK="${DISCORD_PIPELINE_WEBHOOK:-}"
 QUIET_HOURS_START_UTC=0

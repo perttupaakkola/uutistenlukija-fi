@@ -26,7 +26,11 @@ SCRIPT_DIR  = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
 CONTENT_DIR = PROJECT_DIR / "content" / "posts"
 OUTPUT_FILE = PROJECT_DIR / "static" / "api" / "category-stats.json"
-ENV_FILE    = PROJECT_DIR / "pipeline" / ".env"
+ENV_FILES   = [
+    PROJECT_DIR / ".env",
+    PROJECT_DIR / "pipeline" / ".env",
+    Path("/workspace/.env"),
+]
 
 DISCORD_WEBHOOK_ENV = "DISCORD_METRICS_WEBHOOK"
 
@@ -45,17 +49,18 @@ TARGETS = {
 ALERT_THRESHOLD = 5  # percentage points
 
 
-def load_env(path: Path) -> dict[str, str]:
+def load_env(paths) -> dict[str, str]:
     env: dict[str, str] = {}
-    if not path.exists():
-        return env
-    with path.open() as f:
-        for line in f:
-            line = line.strip()
-            if not line or line.startswith("#") or "=" not in line:
-                continue
-            k, _, v = line.partition("=")
-            env[k.strip()] = v.strip().strip('"').strip("'")
+    for path in paths:
+        if not path.exists():
+            continue
+        with path.open() as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, _, v = line.partition("=")
+                env[k.strip()] = v.strip().strip('"').strip("'")
     return env
 
 
@@ -244,7 +249,7 @@ def main() -> int:
 
     # Discord post
     if args.post_discord or args.dry_run:
-        env = load_env(ENV_FILE)
+        env = load_env(ENV_FILES)
         webhook_url = os.environ.get(DISCORD_WEBHOOK_ENV) or env.get(DISCORD_WEBHOOK_ENV, "")
         if not webhook_url:
             print(f"[category_distribution] {DISCORD_WEBHOOK_ENV} not set — skipping Discord post")
