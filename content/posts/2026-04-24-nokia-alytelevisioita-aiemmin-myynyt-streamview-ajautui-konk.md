@@ -41,7 +41,6 @@ keywords:
 source_name: "Teknavi"
 source_url: "https://teknavi.fi/digi/uutinen-digi/aiemmin-nokia-alytelevisioita-tehnyt-streamview-ajautui-konkurssiin/"
 source_domain: "teknavi.fi"
-briefing: true
 draft: false
 ---
 
