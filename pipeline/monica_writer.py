@@ -35,7 +35,8 @@ ALLOWED_CATEGORIES = {
 DEFAULT_MONICA_AGENT = os.environ.get("MONICA_OPENCLAW_AGENT", "monica")
 DEFAULT_OPENCLAW_CMD = os.environ.get("MONICA_OPENCLAW_CMD", "openclaw")
 DEFAULT_TIMEOUT_SEC = int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", "240"))
-MIN_CONTENT_WORDS = 140
+MIN_CONTENT_WORDS = 250
+MIN_LEAD_WORDS = 30
 
 OPENCLAW_CANDIDATES = (
     "/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw",
@@ -162,6 +163,9 @@ def _basic_payload_issues(payload: dict) -> list[str]:
         issues.append(f"invalid category: {category or 'empty'}")
     if len(content.split()) < MIN_CONTENT_WORDS:
         issues.append(f"content too short: {len(content.split())} words")
+    paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+    if paragraphs and len(paragraphs[0].split()) < MIN_LEAD_WORDS:
+        issues.append(f"lead paragraph too short: {len(paragraphs[0].split())} words")
     if len(tags) < 2:
         issues.append("not enough tags")
     if len(bullets) < 2:
@@ -184,8 +188,9 @@ Hard rules:
 - No duplicated opener, no repeated paragraphs, no generic AI ending
 - No invented facts
 - If the evidence is too weak or contradictory, return: {{"packet_id":"{packet['packet_id']}","status":"INSUFFICIENT_CONFIDENCE","reason":"short reason"}}
-- Target roughly 160 to 320 words when the evidence is limited, longer only when the packet clearly supports it
-- If content is over 180 words, include at least two H2 subheadings inside `content`
+- Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE
+- The first paragraph must be at least 30 words and summarize the verified core of the story
+- Include at least two H2 subheadings inside `content`
 
 Required JSON schema:
 {schema_text}
@@ -201,6 +206,10 @@ Do not add commentary.
 
 Problems to fix:
 - {'; '.join(issues)}
+
+Repair rules:
+- Return INSUFFICIENT_CONFIDENCE if the original packet cannot support at least 250 factual Finnish words without filler or invention.
+- Otherwise expand the article to 280–420 words, make the first paragraph at least 30 words, and include at least two H2 subheadings.
 
 Original packet:
 {json.dumps(packet, ensure_ascii=False, indent=2)}
@@ -295,7 +304,7 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
             "source_text": packet.get("source_text", ""),
             "writer_backend": "monica",
             "writer_confidence": float(payload.get("confidence", 0.0) or 0.0),
-            "degraded_mode": MIN_CONTENT_WORDS <= word_count < 250,
+            "degraded_mode": False,
             "monica_packet_id": packet.get("packet_id", ""),
         }
     )

@@ -135,6 +135,22 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertTrue(os.path.isdir(quarantine_dir))
         self.assertTrue(any(name.endswith(".json") for name in os.listdir(quarantine_dir)))
 
+    @patch("subprocess.run")
+    def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):
+        short_content = " ".join(["Sana"] * 180)
+        short_payload = json.loads(_good_payload())
+        short_payload["content"] = short_content
+        run_mock.side_effect = [
+            self._result(json.dumps(short_payload, ensure_ascii=False)),
+            self._result(json.dumps(short_payload, ensure_ascii=False)),
+        ]
+
+        rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+        self.assertEqual(rewritten, [])
+        self.assertEqual(run_mock.call_count, 2)
+        quarantine_dir = os.path.join(self.tmpdir.name, "quarantine")
+        self.assertTrue(any(name.endswith(".json") for name in os.listdir(quarantine_dir)))
+
 
 if __name__ == "__main__":
     unittest.main()
