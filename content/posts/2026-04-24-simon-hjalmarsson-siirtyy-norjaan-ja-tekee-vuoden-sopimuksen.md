@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Simon-Hjalmarsson-jatkaa-uraansa-Norjassa-%E2%88%92-pelaajan-vaimo-vaikutti-siirtoon/269267"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

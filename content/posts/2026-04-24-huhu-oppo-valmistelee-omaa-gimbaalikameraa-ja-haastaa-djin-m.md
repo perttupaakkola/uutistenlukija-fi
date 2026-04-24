@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/24/huhu-oppo-aikoo-mukaan-gimbaalikameroiden-markkinoille-kehittaa-haastajaa-djille/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
