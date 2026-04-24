@@ -39,7 +39,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/live/2026/apr/24/iran-war-live-updates-trump-hormuz-strait-israel-lebanon-truce"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
