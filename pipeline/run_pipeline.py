@@ -534,10 +534,19 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         if tier == 3 and len(research.split()) < 100:
             print(f"[quality] ⚠️  T3-only article with thin research: '{a.get('title', '')[:60]}'")
 
-    # ── Step 1e: Cap articles if --max-articles set ────────────────────────────
+    # ── Step 1e: Cap article candidates if --max-articles set ─────────────────
+    # `max_articles` is the desired publish cap, not a guarantee that every
+    # Monica attempt will survive confidence + quality gates. Keep a small
+    # candidate buffer before rewriting so one thin/short draft does not turn a
+    # healthy researched batch into a 0-publish cycle.
+    publish_cap = max_articles
     if max_articles is not None and len(articles) > max_articles:
-        print(f"[pipeline] --max-articles {max_articles}: limiting {len(articles)} → {max_articles}")
-        articles = articles[:max_articles]
+        rewrite_cap = min(len(articles), max_articles * 3)
+        print(
+            f"[pipeline] --max-articles {max_articles}: "
+            f"keeping {rewrite_cap} candidates for rewrite buffer from {len(articles)}"
+        )
+        articles = articles[:rewrite_cap]
 
     # ── Step 2: Rewrite ────────────────────────────────────────────────────────
     rewritten = []
@@ -611,6 +620,10 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                              fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
                              rejected=_m_rejected, sources=_m_sources, reject_reasons=_m_reject_reasons)
         return False
+
+    if publish_cap is not None and len(rewritten) > publish_cap:
+        print(f"[pipeline] publish cap {publish_cap}: limiting passed articles {len(rewritten)} → {publish_cap}")
+        rewritten = rewritten[:publish_cap]
 
     # ── Step 2b: Images ────────────────────────────────────────────────────────
     unsplash_count = pexels_count = ai_count = fallback_count = 0
