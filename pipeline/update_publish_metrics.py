@@ -100,6 +100,25 @@ def _is_empty_scan(run: dict, steps: dict) -> bool:
     return False
 
 
+def classify_outcome(run: dict) -> str:
+    """Classify a completed pipeline metrics run as ok, skip, or error."""
+    steps = run.get("steps", {})
+    published = run.get("article_count", 0)
+    run_success = run.get("success", False)
+
+    # Classify outcome:
+    # "ok"    — clean run with ≥1 article published
+    # "skip"  — clean run, 0 articles (all deduped / quiet news cycle)
+    # "error" — crash, timeout, or mid-run failure
+    if run_success and published > 0:
+        return "ok"
+    if run_success and published == 0:
+        return "skip"
+    if _is_empty_scan(run, steps):
+        return "skip"
+    return "error"
+
+
 def main():
     run = load_last_run()
     if not run:
@@ -117,18 +136,7 @@ def main():
     attempted = dedup.get("remaining", 0)
     published = run.get("article_count", 0)
     failed = max(0, attempted - published)
-    run_success = run.get("success", False)
-
-    # Classify outcome:
-    # "ok"    — clean run with ≥1 article published
-    # "skip"  — clean run, 0 articles (all deduped / quiet news cycle)
-    # "error" — crash, timeout, or mid-run failure
-    if run_success and published > 0:
-        outcome = "ok"
-    elif _is_empty_scan(run, steps):
-        outcome = "skip"
-    else:
-        outcome = "error"
+    outcome = classify_outcome(run)
 
     record = {
         "ts":        ts,
