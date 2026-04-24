@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/tekoalyko-auttoi-murhaamisessa-chatgptta-syytetaan-nyt-kouluammuskelusta/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

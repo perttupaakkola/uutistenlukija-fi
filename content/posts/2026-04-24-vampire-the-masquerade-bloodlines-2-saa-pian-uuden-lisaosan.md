@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/vampire-the-masquerade-bloodlines-2n-uudessa-lisaosassa-palataan-seattlen-synkille-kaduille/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
