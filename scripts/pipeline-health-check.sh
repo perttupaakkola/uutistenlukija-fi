@@ -14,6 +14,7 @@ set -euo pipefail
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HEALTH_JSON="$PROJECT_DIR/static/api/health.json"
 PIPELINE_DIR="$PROJECT_DIR/pipeline"
+MARKER_FILE="$PIPELINE_DIR/logs/pipeline-health-check.marker"
 ALERT_THRESHOLD_HOURS=3
 ALERT_ONLY=false
 
@@ -90,6 +91,9 @@ format_duration() {
 DURATION=$(format_duration "$MINUTES_AGO")
 
 # ── 4. Output ──────────────────────────────────────────────────────────────
+mkdir -p "$(dirname "$MARKER_FILE")"
+touch "$MARKER_FILE"
+
 if (( MINUTES_AGO > THRESHOLD_MINUTES )); then
     MSG="ALERT: no publish in $DURATION | scripts: $SCRIPTS_STATUS"
     echo "$MSG"

@@ -12,6 +12,7 @@ import sys
 import time
 import urllib.request
 import urllib.error
+import glob
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -58,6 +59,8 @@ def post_to_discord(content):
         return False
 
 def main():
+    dry_run = "--dry-run" in sys.argv[1:]
+
     if not REGISTRY_FILE.exists():
         print(f"Registry file not found: {REGISTRY_FILE}")
         return 1
@@ -71,11 +74,22 @@ def main():
     ok_count = 0
 
     for job in registry:
+        if job.get("enabled") is False:
+            continue
+
         name = job["name"]
         interval_h = job["expected_interval_hours"]
-        marker_path = ROOT / job["marker_file_path"]
+        marker_rel = job.get("marker_file_path")
+        marker_glob_rel = job.get("marker_glob_path")
+        if marker_rel:
+            marker_path = ROOT / marker_rel
+        elif marker_glob_rel:
+            matches = [Path(p) for p in glob.glob(str(ROOT / marker_glob_rel))]
+            marker_path = max(matches, key=lambda p: p.stat().st_mtime) if matches else None
+        else:
+            marker_path = None
 
-        if not marker_path.exists():
+        if marker_path is None or not marker_path.exists():
             missing_jobs.append(name)
             continue
 
@@ -111,7 +125,8 @@ def main():
     report += f"\nTotal healthy: {ok_count}"
     
     print(report)
-    post_to_discord(report)
+    if not dry_run:
+        post_to_discord(report)
     return 0
 
 if __name__ == "__main__":

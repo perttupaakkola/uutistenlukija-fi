@@ -27,12 +27,13 @@
   {
     "name": "stale_assignment_nudge",
     "expected_interval_hours": 0.25,
-    "marker_file_path": "pipeline/logs/stale-assignment-nudge.log"
+    "marker_file_path": "pipeline/logs/stale-assignment-nudge.log",
+    "enabled": false
   },
   {
     "name": "pipeline_health_check",
     "expected_interval_hours": 0.5,
-    "marker_file_path": "pipeline/logs/health-check.log"
+    "marker_file_path": "pipeline/logs/pipeline-health-check.marker"
   },
   {
     "name": "pipeline_silence",
@@ -72,6 +73,6 @@
   {
     "name": "auto_publish",
     "expected_interval_hours": 0.167,
-    "marker_file_path": "pipeline/logs/cron.log"
+    "marker_file_path": "pipeline/logs/watchdog.log"
   }
 ]
