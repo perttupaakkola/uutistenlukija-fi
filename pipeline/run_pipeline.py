@@ -614,12 +614,12 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
         print(f"[dedup:kw] {kw_dropped} post-rewrite near-duplicates dropped")
         steps["kw_dedup"] = {"dropped": kw_dropped, "passed": len(rewritten)}
     if not rewritten:
-        print("❌ Kaikki kirjoitetut artikkelit hylättiin duplikaatteina.")
+        print("ℹ️  Kaikki kirjoitetut artikkelit hylättiin duplikaatteina. Ei uusia artikkeleita julkaistavaksi.")
         notify_discord_warning("dedup:kw", "All rewritten articles dropped as near-duplicates", f"Batch was {pre_kw_count} articles")
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False,
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True,
                              fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
                              rejected=_m_rejected, sources=_m_sources, reject_reasons=_m_reject_reasons)
-        return False
+        return True
 
     if publish_cap is not None and len(rewritten) > publish_cap:
         print(f"[pipeline] publish cap {publish_cap}: limiting passed articles {len(rewritten)} → {publish_cap}")
