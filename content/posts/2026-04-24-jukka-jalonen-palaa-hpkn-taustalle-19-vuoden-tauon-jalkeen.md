@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Jukka-Jalonen-palaa-HPKn-taustalle-%E2%80%93-%E2%80%9DAnnan-n%C3%A4kemykseni-s%C3%B6rkkim%C3%A4tt%C3%A4-liikaa%E2%80%9D/269259"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
