@@ -39,7 +39,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/24/another-spyware-maker-caught-distributing-fake-android-snooping-apps/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
