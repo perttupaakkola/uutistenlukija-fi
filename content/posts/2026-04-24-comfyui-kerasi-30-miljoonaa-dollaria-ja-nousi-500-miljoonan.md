@@ -39,7 +39,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/24/comfyui-hits-500m-valuation-as-creators-seek-more-control-over-ai-generated-media/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
