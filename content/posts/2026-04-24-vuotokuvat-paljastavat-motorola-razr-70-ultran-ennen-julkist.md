@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/24/motorolan-tuleva-taittuvanayttoisten-simpukkapuhelinten-huippumalli-razr-70-ultra-paljastui-tarkoissa-kuvissa-ja-videolla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
