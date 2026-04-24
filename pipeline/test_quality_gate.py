@@ -48,5 +48,13 @@ class QualityGateDegradedModeTests(unittest.TestCase):
         self.assertGreaterEqual(breakdown.total, 30)
 
 
+    def test_missing_image_does_not_block_pre_image_gate(self):
+        article = _article(True)
+        article["image"] = ""
+        breakdown = score_article(article)
+        self.assertTrue(breakdown.passes)
+        self.assertEqual(breakdown.image_pts, 10)
+
+
 if __name__ == "__main__":
     unittest.main()

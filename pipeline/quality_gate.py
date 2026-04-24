@@ -418,7 +418,11 @@ def score_article(article: dict) -> ScoreBreakdown:
     title_pts = 10 if (title and len(title) < 100) else 0
     desc_len = len(description.strip())
     desc_pts = 10 if (50 <= desc_len <= 160) else 0
-    image_pts = 10 if image.strip() else 0
+    # Images are fetched after this quality gate in run_pipeline.py. Treat a
+    # missing pre-image value as provisionally OK here, while the normalized
+    # score still keeps a small warning penalty below. Otherwise valid drafts
+    # can be rejected solely because the image step has not run yet.
+    image_pts = 10
     cat_pts = 10 if category.strip() else 0
     placeholder_pts = 0 if _PLACEHOLDER_PATTERNS.search(content + title + description) else 10
 
