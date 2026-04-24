@@ -508,6 +508,25 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     if skipped:
         print(f"[quality] Skipped {skipped} articles with < {MIN_SOURCE_WORDS} words source material")
 
+    # ── Step 1d.1: Prefer strongest evidence before max-article cap ──────────
+    # The scanner order can put thin RSS/paywall fallbacks before well-supported
+    # researched articles. If --max-articles cuts the list there, Monica may see
+    # only weak packets and correctly return INSUFFICIENT_CONFIDENCE for all of
+    # them, even though stronger candidates are available later in the batch.
+    def _source_strength(a: dict) -> tuple[int, int, int, int]:
+        research = a.get("research", "") or a.get("research_text", "") or ""
+        desc = a.get("description", "") or ""
+        research_words = len(str(research).split())
+        desc_words = len(str(desc).split())
+        # Named source labels are inserted by research.py as [Lähde: ...] blocks.
+        source_blocks = str(research).lower().count("[lähde:") + str(research).lower().count("[source:")
+        # Lower tier numbers are more trusted; invert for descending sort.
+        tier_score = max(0, 4 - int(a.get("source_tier", 2) or 2))
+        return (research_words, source_blocks, desc_words, tier_score)
+
+    if articles:
+        articles = sorted(articles, key=_source_strength, reverse=True)
+
     # ── Step 1d.2: Warn on Tier 3-only articles ──────────────────────────────
     for a in articles:
         tier = a.get("source_tier", 2)
