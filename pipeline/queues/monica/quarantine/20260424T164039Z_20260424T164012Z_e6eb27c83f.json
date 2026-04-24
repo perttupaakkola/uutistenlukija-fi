@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-24T16:40:39Z",
+  "reason": "aineisto on alaikäisiä koskevassa asiassa liian niukka eikä mahdollista turvallista ja riittävän täsmällistä 250 sanan uutisjuttua",
+  "packet": {
+    "packet_id": "20260424T164012Z_e6eb27c83f",
+    "created_at": "2026-04-24T16:40:12Z",
+    "headline_seed": "Yle: Nyt puhuu pelkoa Vuosaaressa kylväneen 11-vuotiaan tytön isä",
+    "description_seed": "Isä uskoo tietävänsä, mikä on vaikuttanut tytön väkivaltaisuuteen.",
+    "link": "https://www.is.fi/kotimaa/art-2000011966921.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000011966921.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.6,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Yle: Nyt puhuu pelkoa Vuosaaressa kylväneen 11-vuotiaan tytön isä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Isä uskoo tietävänsä, mikä on vaikuttanut tytön väkivaltaisuuteen.",
+        "word_count": 8,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Vuosaaressa liikkuvan väkivaltaisen tyttöporukan jäsenet ovat Ylen tietojen mukaan ahdistelleet niin aikuisia kuin lapsia. Ainakin kahteen rikosilmoitukseen johtaneeseen tapaukseen liittyy sama 11-vuotias tyttö.",
+        "word_count": 23,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Isä uskoo tietävänsä, mikä on vaikuttanut tytön väkivaltaisuuteen.\n\nVuosaaressa liikkuvan väkivaltaisen tyttöporukan jäsenet ovat Ylen tietojen mukaan ahdistelleet niin aikuisia kuin lapsia. Ainakin kahteen rikosilmoitukseen johtaneeseen tapaukseen liittyy sama 11-vuotias tyttö.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Yle: Nyt puhuu pelkoa Vuosaaressa kylväneen 11-vuotiaan tytön isä",
+      "description": "Isä uskoo tietävänsä, mikä on vaikuttanut tytön väkivaltaisuuteen.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=86d75904-8599-433f-bdfe-278004ba90e6 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260424T164012Z_e6eb27c83f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on alaikäisiä koskevassa asiassa liian niukka eikä mahdollista turvallista ja riittävän täsmällistä 250 sanan uutisjuttua\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

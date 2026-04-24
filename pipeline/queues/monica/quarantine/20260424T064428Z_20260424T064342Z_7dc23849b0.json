@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-24T06:44:28Z",
+  "reason": "aineisto on ristiriitainen ja sisältää aiheeseen liittymättömän tutkimuslohkon",
+  "packet": {
+    "packet_id": "20260424T064342Z_7dc23849b0",
+    "created_at": "2026-04-24T06:43:42Z",
+    "headline_seed": "Suomeen työstetään järjestelmää, joka mahdollistaisi maksamisen verkkokatkosten aikana",
+    "description_seed": "Tavoitteena on, että jatkossa kaupan kassalla voisi maksaa, vaikka maksupääte ei olisi yhteydessä internetiin.",
+    "link": "https://www.ess.fi/uutissuomalainen/9399772",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Etelä-Suomen Sanomat",
+      "ksml.fi"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9399772"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.62,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomeen työstetään järjestelmää, joka mahdollistaisi maksamisen verkkokatkosten aikana"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Etelä-Suomen Sanomat",
+        "source_type": "description",
+        "text": "Tavoitteena on, että jatkossa kaupan kassalla voisi maksaa, vaikka maksupääte ei olisi yhteydessä internetiin.",
+        "word_count": 14,
+        "keyword_overlap": 12,
+        "strong_overlap": 9
+      },
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Hallitus esittää lakimuutosta, jonka mukaan ydinräjähteiden tuominen Suomeen ja niiden kuljettaminen Suomen kautta olisi mahdollista, mikäli se liittyisi Suomen sotilaalliseen puolustamiseen, Naton yhteiseen puolustukseen tai puolustusyhteistyöhön.",
+        "word_count": 26,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Tavoitteena on, että jatkossa kaupan kassalla voisi maksaa, vaikka maksupääte ei olisi yhteydessä internetiin.\n\nHallitus esittää lakimuutosta, jonka mukaan ydinräjähteiden tuominen Suomeen ja niiden kuljettaminen Suomen kautta olisi mahdollista, mikäli se liittyisi Suomen sotilaalliseen puolustamiseen, Naton yhteiseen puolustukseen tai puolustusyhteistyöhön.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomeen työstetään järjestelmää, joka mahdollistaisi maksamisen verkkokatkosten aikana",
+      "description": "Tavoitteena on, että jatkossa kaupan kassalla voisi maksaa, vaikka maksupääte ei olisi yhteydessä internetiin.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=29b30f18-5a4f-444d-b364-b2dd03b65874 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260424T064342Z_7dc23849b0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on ristiriitainen ja sisältää aiheeseen liittymättömän tutkimuslohkon\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

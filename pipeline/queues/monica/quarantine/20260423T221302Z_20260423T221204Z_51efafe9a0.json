@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-23T22:13:02Z",
+  "reason": "aineisto ei vahvista Vantaata, ajankohtaa eikä tulipalon keskeisiä perustietoja riittävän varmasti",
+  "packet": {
+    "packet_id": "20260423T221204Z_51efafe9a0",
+    "created_at": "2026-04-23T22:12:04Z",
+    "headline_seed": "Vantaa | Vantaalla suuri tulipalo",
+    "description_seed": "Suuri savupatsas näkyy kauas.",
+    "link": "https://www.hs.fi/suomi/art-2000011964492.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "source-7"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/suomi/art-2000011964492.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.44,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vantaa | Vantaalla suuri tulipalo"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "Palopäällikkö kuvasi paloa tuolloin äärimmäisen rajuksi. Palokunnan saavuttua tulipalo oli täydessä palamisvaiheessa. Savukaasut olivat levinneet koko rakennukseen avoimien ikkunoiden ja avoimien palo-ovien kautta.",
+        "word_count": 23,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Palopäällikkö kuvasi paloa tuolloin äärimmäisen rajuksi. Palokunnan saavuttua tulipalo oli täydessä palamisvaiheessa. Savukaasut olivat levinneet koko rakennukseen avoimien ikkunoiden ja avoimien palo-ovien kautta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vantaa | Vantaalla suuri tulipalo",
+      "description": "Suuri savupatsas näkyy kauas.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=b11527fc-2c49-42e2-b082-ebf79c579fce sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260423T221204Z_51efafe9a0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto ei vahvista Vantaata, ajankohtaa eikä tulipalon keskeisiä perustietoja riittävän varmasti\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

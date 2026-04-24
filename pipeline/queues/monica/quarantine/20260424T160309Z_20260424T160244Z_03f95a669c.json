@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-24T16:03:09Z",
+  "reason": "aineistossa on keskeinen ristiriita tutkinnan jatkumisesta ja päättymisestä, eikä 250 sanan juttua voi kirjoittaa ilman oletuksia",
+  "packet": {
+    "packet_id": "20260424T160244Z_03f95a669c",
+    "created_at": "2026-04-24T16:02:44Z",
+    "headline_seed": "US justice department drops probe into Fed chairman Jerome Powell",
+    "description_seed": "President Donald Trump had accused Powell of improper cost overruns in renovating the Fed's building.",
+    "link": "https://www.bbc.com/news/articles/cdxd1v0028vo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-30",
+      "source-17"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cdxd1v0028vo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US justice department drops probe into Fed chairman Jerome Powell"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "President Donald Trump had accused Powell of improper cost overruns in renovating the Fed's building.",
+        "word_count": 15,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The US justice department is dropping its investigation into the Federal Reserve chairman, Jerome Powell, over alleged building cost overruns.",
+        "word_count": 20,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-30",
+        "source_type": "research",
+        "text": "US President Donald Trump has said he will fire Jerome Powell if the Federal Reserve chair does not step down “in time”, adding that he will not drop the Justice Department investigation into the central bank leader.",
+        "word_count": 37,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-17",
+        "source_type": "research",
+        "text": "The US Department of Justice is dropping its criminal investigation against Federal Reserve chair Jerome Powell, clearing the path for Donald Trump’s new nominee for chair to be confirmed.",
+        "word_count": 29,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "President Donald Trump had accused Powell of improper cost overruns in renovating the Fed's building.\n\nThe US justice department is dropping its investigation into the Federal Reserve chairman, Jerome Powell, over alleged building cost overruns.\n\nUS President Donald Trump has said he will fire Jerome Powell if the Federal Reserve chair does not step down “in time”, adding that he will not drop the Justice Department investigation into the central bank leader.\n\nThe US Department of Justice is dropping its criminal investigation against Federal Reserve chair Jerome Powell, clearing the path for Donald Trump’s new nominee for chair to be confirmed.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US justice department drops probe into Fed chairman Jerome Powell",
+      "description": "President Donald Trump had accused Powell of improper cost overruns in renovating the Fed's building.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=4efcd2b7-b54a-463f-983a-f8e763ac1707 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260424T160244Z_03f95a669c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineistossa on keskeinen ristiriita tutkinnan jatkumisesta ja päättymisestä, eikä 250 sanan juttua voi kirjoittaa ilman oletuksia\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

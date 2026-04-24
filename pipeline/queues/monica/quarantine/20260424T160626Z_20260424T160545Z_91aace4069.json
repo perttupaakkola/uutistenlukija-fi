@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-24T16:06:26Z",
+  "reason": "aineisto on liian niukka eikä riitä 250 sanan uutisjuttuun ilman oletuksia tai toistoa",
+  "packet": {
+    "packet_id": "20260424T160545Z_91aace4069",
+    "created_at": "2026-04-24T16:05:45Z",
+    "headline_seed": "Fedin pääjohtajan tutkinta lopetetaan Yhdysvalloissa",
+    "description_seed": "",
+    "link": "https://yle.fi/a/74-20222627?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "source-5",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222627?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Fedin pääjohtajan tutkinta lopetetaan Yhdysvalloissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Powellia koskeneen tutkinnan päättäminen todennäköisesti helpottaa uuden pääjohtajan nimitystä. Trump valitsi tammikuussa Fedin uudeksi pääjohtajaksi Kevin Warshin, jonka nimitys vaatii vielä senaatin hyväksynnän.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Tutkinta liittyi keskuspankin pääkonttorin remonttiin. Syyttäjän mukaan Fedin ylitarkastaja tutkii sen sijaan pääkonttorin korjauskustannuksia.",
+        "word_count": 14,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Powellia koskeneen tutkinnan päättäminen todennäköisesti helpottaa uuden pääjohtajan nimitystä. Trump valitsi tammikuussa Fedin uudeksi pääjohtajaksi Kevin Warshin, jonka nimitys vaatii vielä senaatin hyväksynnän.\n\nTutkinta liittyi keskuspankin pääkonttorin remonttiin. Syyttäjän mukaan Fedin ylitarkastaja tutkii sen sijaan pääkonttorin korjauskustannuksia.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Fedin pääjohtajan tutkinta lopetetaan Yhdysvalloissa",
+      "description": "",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=67a82bfd-560a-4bae-b828-51650f06798f sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260424T160545Z_91aace4069\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on liian niukka eikä riitä 250 sanan uutisjuttuun ilman oletuksia tai toistoa\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}
