@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Kari-Piiroinen-nollasi-KooKoon-%E2%80%93-Kaakon-v%C3%A4lier%C3%A4sarja-on-nyt-tasan/269262"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

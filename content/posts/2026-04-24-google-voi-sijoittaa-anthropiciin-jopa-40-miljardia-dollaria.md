@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/24/google-sijoittaa-jopa-40-miljardia-dollaria-tekoaly-yhtio-anthropiciin/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
