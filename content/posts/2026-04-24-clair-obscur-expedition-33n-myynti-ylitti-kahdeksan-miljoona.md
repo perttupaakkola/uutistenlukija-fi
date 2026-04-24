@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/viime-vuoden-paras-peli-ylitti-kahdeksan-miljoonan-myydyn-kappaleen-rajapyykin/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

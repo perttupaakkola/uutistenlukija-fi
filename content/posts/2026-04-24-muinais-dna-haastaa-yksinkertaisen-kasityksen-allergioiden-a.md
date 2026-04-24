@@ -39,7 +39,6 @@ keywords:
 source_name: "Science News"
 source_url: "https://www.sciencenews.org/article/ancient-dna-allergies-dirtier-past"
 source_domain: "sciencenews.org"
-briefing: true
 draft: false
 ---
 
