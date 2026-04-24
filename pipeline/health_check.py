@@ -83,6 +83,7 @@ DISCORD_ALERT_CHANNEL_ID = os.environ.get("DISCORD_PIPELINE_ALERT_CHANNEL_ID", D
 LOG_DIR_OVERRIDE = None  # set by tests
 
 LOG_DIR = os.path.join(_HERE, "logs")
+DISCORD_HTTP_USER_AGENT = "Mozilla/5.0"
 
 
 def _read_env_key_from_files(key_name: str) -> str:
@@ -114,6 +115,7 @@ def _post_via_discord_bot(body: str) -> bool:
         headers={
             "Content-Type": "application/json",
             "Authorization": f"Bot {token}",
+            "User-Agent": DISCORD_HTTP_USER_AGENT,
         },
         method="POST",
     )
@@ -131,7 +133,10 @@ def _send_discord_message(body: str) -> bool:
         req = urllib.request.Request(
             DISCORD_WEBHOOK_URL,
             data=payload,
-            headers={"Content-Type": "application/json"},
+            headers={
+                "Content-Type": "application/json",
+                "User-Agent": DISCORD_HTTP_USER_AGENT,
+            },
             method="POST",
         )
         try:

@@ -33,6 +33,7 @@ ENV_FILES   = [
 ]
 
 DISCORD_WEBHOOK_ENV = "DISCORD_METRICS_WEBHOOK"
+DISCORD_HTTP_USER_AGENT = "Mozilla/5.0"
 
 # Target distribution (%) — matches editorial goals
 TARGETS = {
@@ -202,7 +203,10 @@ def post_to_discord(webhook_url: str, message: str, dry_run: bool = False) -> bo
     req = urllib.request.Request(
         webhook_url,
         data=payload,
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": DISCORD_HTTP_USER_AGENT,
+        },
         method="POST",
     )
     try:

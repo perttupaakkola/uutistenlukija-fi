@@ -21,6 +21,7 @@ SITE_BASE   = "https://uutistenlukija.fi"
 WEBHOOK_ENV = "DISCORD_PIPELINE_WEBHOOK"
 CHANNEL_ENV = "DISCORD_PIPELINE_ALERT_CHANNEL_ID"
 DEFAULT_CHANNEL_ID = "1482082645553713366"
+DISCORD_HTTP_USER_AGENT = "Mozilla/5.0"
 
 
 def load_env(paths):
@@ -102,7 +103,10 @@ def post_discord(url, msg):
     data = json.dumps({"content": msg}).encode()
     req = urllib.request.Request(
         url, data=data,
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": DISCORD_HTTP_USER_AGENT,
+        },
         method="POST",
     )
     try:
@@ -124,6 +128,7 @@ def post_via_discord_bot(channel_id: str, msg: str) -> bool:
         headers={
             "Content-Type": "application/json",
             "Authorization": f"Bot {token}",
+            "User-Agent": DISCORD_HTTP_USER_AGENT,
         },
         method="POST",
     )

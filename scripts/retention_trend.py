@@ -36,6 +36,7 @@ ENV_FILES = [
 ]
 GA4_PROPERTY = "529369568"
 METRICS_CHANNEL = "1482720741790060554"  # #metrics
+DISCORD_HTTP_USER_AGENT = "Mozilla/5.0"
 
 
 def load_env():
@@ -154,7 +155,10 @@ def post_to_discord(message: str, webhook: str) -> int | None:
     req = urllib.request.Request(
         webhook,
         data=payload,
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": DISCORD_HTTP_USER_AGENT,
+        },
         method="POST",
     )
     try:

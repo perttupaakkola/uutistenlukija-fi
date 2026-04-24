@@ -36,6 +36,7 @@ for ENV_FILE in ENV_FILES:
             os.environ.setdefault(k.strip(), v.strip())
 
 DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN") or os.environ.get("OPENCLAW_DISCORD_BOT_TOKEN", "")
+DISCORD_HTTP_USER_AGENT = "Mozilla/5.0"
 
 def post_to_discord(content):
     if not DISCORD_BOT_TOKEN:
@@ -48,6 +49,7 @@ def post_to_discord(content):
         {
             "Authorization": f"Bot {DISCORD_BOT_TOKEN}",
             "Content-Type": "application/json",
+            "User-Agent": DISCORD_HTTP_USER_AGENT,
         },
         method="POST",
     )

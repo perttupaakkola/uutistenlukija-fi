@@ -33,6 +33,7 @@ ENV_FILES = [
 ]
 GA4_PROPERTY = "529369568"
 METRICS_CHANNEL = "1482720741790060554"  # #metrics
+DISCORD_HTTP_USER_AGENT = "Mozilla/5.0"
 
 def load_env():
     for env_file in ENV_FILES:
@@ -96,7 +97,7 @@ def extract_metric(report: dict, name: str) -> float:
 def post_to_discord(message: str, webhook: str):
     payload = json.dumps({"content": message}).encode()
     req = urllib.request.Request(webhook, data=payload,
-                                  headers={"Content-Type": "application/json"}, method="POST")
+                                  headers={"Content-Type": "application/json", "User-Agent": DISCORD_HTTP_USER_AGENT}, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
             return resp.status

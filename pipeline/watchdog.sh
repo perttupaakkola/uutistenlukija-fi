@@ -62,7 +62,10 @@ webhook, msg = sys.argv[1], sys.argv[2]
 payload = json.dumps({"content": msg}).encode("utf-8")
 req = urllib.request.Request(
     webhook, data=payload,
-    headers={"Content-Type": "application/json"},
+    headers={
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0",
+    },
     method="POST"
 )
 try:

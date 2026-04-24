@@ -29,6 +29,7 @@ ENV_FILES   = [
 
 OPERATIONS_WEBHOOK_ENV = "DISCORD_OPERATIONS_WEBHOOK"
 WINDOW_DAYS = 7
+DISCORD_HTTP_USER_AGENT = "Mozilla/5.0"
 
 
 def load_env(paths) -> dict[str, str]:
@@ -61,7 +62,10 @@ def post_to_discord(webhook_url: str, message: str) -> bool:
     req = urllib.request.Request(
         webhook_url,
         data=payload,
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": DISCORD_HTTP_USER_AGENT,
+        },
         method="POST",
     )
     try:
