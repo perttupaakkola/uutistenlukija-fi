@@ -41,7 +41,7 @@ except ImportError:  # pragma: no cover
 _HERE   = os.path.dirname(os.path.abspath(__file__))
 _ROOT   = os.path.dirname(_HERE)            # project root
 POSTS_DIR   = os.path.join(_ROOT, "content", "posts")
-LOCK_FILE   = os.path.join(_ROOT, ".pipeline_lock")
+LOCK_FILE   = os.path.join(_HERE, ".pipeline_lock")
 
 # ---------------------------------------------------------------------------
 # Thresholds
