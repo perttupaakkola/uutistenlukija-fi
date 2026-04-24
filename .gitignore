@@ -9,6 +9,9 @@ pipeline/cache/
 # Pipeline logs and state
 pipeline/logs/
 pipeline/rejected/
+pipeline/queues/monica/inbox/*.json
+pipeline/queues/monica/outbox/*.json
+pipeline/queues/monica/quarantine/*.json
 flywheel-state.json
 FLYWHEEL.md
 
