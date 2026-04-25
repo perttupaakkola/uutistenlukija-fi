@@ -50,6 +50,7 @@ LAST_ARTICLE_WARN_MINUTES = 120   # 2 h — warn if no article during daytime
 DAYTIME_START_HEL = 6             # 06:00 Helsinki (UTC+2/+3)
 DAYTIME_END_HEL   = 23            # 23:00 Helsinki
 LOCK_STALE_MINUTES = 30           # stale lock threshold
+DEAD_LOCK_GRACE_MINUTES = 12      # avoid clearing fresh locks while child pipeline work may still be running
 DISK_WARN_GB       = 2.0          # warn if free < 2 GB
 MEM_WARN_MB        = 200          # warn if available < 200 MB
 
@@ -327,6 +328,23 @@ def check_pipeline_lock() -> dict:
             pid_alive = None
 
     if lock_pid is not None and pid_alive is False:
+        if age_minutes < DEAD_LOCK_GRACE_MINUTES:
+            return {
+                "status": "OK",
+                "message": (
+                    f".pipeline_lock PID {lock_pid} is gone but lock is only "
+                    f"{age_minutes:.0f} min old; leaving it in place during the "
+                    f"{DEAD_LOCK_GRACE_MINUTES} min grace window"
+                ),
+                "value": {
+                    "lock_exists": True,
+                    "dead_lock_cleared": False,
+                    "age_minutes": round(age_minutes, 1),
+                    "pid": lock_pid,
+                    "pid_alive": False,
+                    "grace_minutes": DEAD_LOCK_GRACE_MINUTES,
+                },
+            }
         try:
             os.remove(LOCK_FILE)
             return {

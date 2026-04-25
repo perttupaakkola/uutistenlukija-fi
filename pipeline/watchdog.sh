@@ -95,6 +95,11 @@ if [[ -f "$LOCK_FILE" ]]; then
 
     if [[ "$LOCK_PID" =~ ^[0-9]+$ ]] && ! kill -0 "$LOCK_PID" 2>/dev/null; then
         LOCK_MIN=$(( LOCK_AGE / 60 ))
+        DEAD_LOCK_GRACE_SECS=$(( 12 * 60 ))
+        if [[ "$LOCK_AGE" -lt "$DEAD_LOCK_GRACE_SECS" ]]; then
+            log "Pipeline lock PID $LOCK_PID is gone but lock age is ${LOCK_MIN}min; preserving fresh lock during 12min grace window."
+            exit 0
+        fi
         log "WARNING: Dead pipeline lock detected (PID $LOCK_PID, ${LOCK_MIN}min old). Removing."
         rm -f "$LOCK_FILE"
     elif [[ "$LOCK_AGE" -gt "$LOCK_MAX_AGE_SECS" ]]; then
