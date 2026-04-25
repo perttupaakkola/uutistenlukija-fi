@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Suomalaisedusteinen-Charge-selvitti-viimeisen%C3%A4-tiens%C3%A4-PWHLn-pudotuspeleihin/269291"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

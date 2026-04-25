@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/25/samsung-galaxy-s26-testi/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
