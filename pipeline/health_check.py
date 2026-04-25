@@ -327,16 +327,31 @@ def check_pipeline_lock() -> dict:
             pid_alive = None
 
     if lock_pid is not None and pid_alive is False:
-        return {
-            "status": "WARN",
-            "message": f".pipeline_lock points to dead PID {lock_pid}",
-            "value": {
-                "lock_exists": True,
-                "age_minutes": round(age_minutes, 1),
-                "pid": lock_pid,
-                "pid_alive": False,
-            },
-        }
+        try:
+            os.remove(LOCK_FILE)
+            return {
+                "status": "OK",
+                "message": f"Removed dead .pipeline_lock for PID {lock_pid}",
+                "value": {
+                    "lock_exists": False,
+                    "dead_lock_cleared": True,
+                    "age_minutes": round(age_minutes, 1),
+                    "pid": lock_pid,
+                    "pid_alive": False,
+                },
+            }
+        except Exception as e:
+            return {
+                "status": "WARN",
+                "message": f".pipeline_lock points to dead PID {lock_pid} and could not be removed: {e}",
+                "value": {
+                    "lock_exists": True,
+                    "dead_lock_cleared": False,
+                    "age_minutes": round(age_minutes, 1),
+                    "pid": lock_pid,
+                    "pid_alive": False,
+                },
+            }
 
     if age_minutes > LOCK_STALE_MINUTES:
         return {
