@@ -40,7 +40,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/apr/25/canada-nova-scotia-wildfire-woods-ban"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
