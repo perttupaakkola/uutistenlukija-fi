@@ -295,7 +295,7 @@ def check_last_article() -> dict:
 
 
 def check_pipeline_lock() -> dict:
-    """Warn if .pipeline_lock exists and is older than LOCK_STALE_MINUTES."""
+    """Warn if .pipeline_lock is stale or points at a dead pipeline process."""
     if not os.path.exists(LOCK_FILE):
         return {
             "status": "OK",
@@ -304,6 +304,40 @@ def check_pipeline_lock() -> dict:
         }
 
     age_minutes = (time.time() - os.path.getmtime(LOCK_FILE)) / 60.0
+
+    lock_pid = None
+    try:
+        with open(LOCK_FILE, "r", encoding="utf-8", errors="ignore") as f:
+            first_line = f.readline().strip()
+        if first_line:
+            lock_pid = int(first_line)
+    except Exception:
+        lock_pid = None
+
+    pid_alive = None
+    if lock_pid is not None:
+        try:
+            os.kill(lock_pid, 0)
+            pid_alive = True
+        except ProcessLookupError:
+            pid_alive = False
+        except PermissionError:
+            pid_alive = True
+        except Exception:
+            pid_alive = None
+
+    if lock_pid is not None and pid_alive is False:
+        return {
+            "status": "WARN",
+            "message": f".pipeline_lock points to dead PID {lock_pid}",
+            "value": {
+                "lock_exists": True,
+                "age_minutes": round(age_minutes, 1),
+                "pid": lock_pid,
+                "pid_alive": False,
+            },
+        }
+
     if age_minutes > LOCK_STALE_MINUTES:
         return {
             "status": "WARN",
@@ -311,13 +345,23 @@ def check_pipeline_lock() -> dict:
                 f".pipeline_lock is {age_minutes:.0f} min old "
                 f"(>{LOCK_STALE_MINUTES} min — pipeline may be stuck)"
             ),
-            "value": {"lock_exists": True, "age_minutes": round(age_minutes, 1)},
+            "value": {
+                "lock_exists": True,
+                "age_minutes": round(age_minutes, 1),
+                "pid": lock_pid,
+                "pid_alive": pid_alive,
+            },
         }
 
     return {
         "status": "OK",
         "message": f"Pipeline lock is active but fresh ({age_minutes:.0f} min old)",
-        "value": {"lock_exists": True, "age_minutes": round(age_minutes, 1)},
+        "value": {
+            "lock_exists": True,
+            "age_minutes": round(age_minutes, 1),
+            "pid": lock_pid,
+            "pid_alive": pid_alive,
+        },
     }
 
 
