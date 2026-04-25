@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/25/deepseek-julkaisi-avoimet-v4-tekoalymallit/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
