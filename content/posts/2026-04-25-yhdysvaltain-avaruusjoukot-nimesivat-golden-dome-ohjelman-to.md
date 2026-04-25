@@ -39,7 +39,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/space/2026/04/this-is-whos-developing-golden-domes-orbital-interceptors-if-theyre-ever-built/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
