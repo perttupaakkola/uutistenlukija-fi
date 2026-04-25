@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/legendan-maineessa-oleva-sijoittaja-varoitti-tulevasta-romahduksesta-kertoo-teknologiayhtioiden-vaaristelleen-tuloksiaan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
