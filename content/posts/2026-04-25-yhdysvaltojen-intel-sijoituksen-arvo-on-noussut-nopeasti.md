@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/25/trumpin-ajamasta-poikkeuksellisesta-intel-diilista-jattipotti-yhdysvaltojen-sijoituksen-arvo-jo-nelinkertaistunut-vain-puolessa-vuodessa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
