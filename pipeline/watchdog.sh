@@ -91,10 +91,14 @@ if [[ -f "$LOCK_FILE" ]]; then
     LOCK_EPOCH=$(date -r "$LOCK_FILE" +%s 2>/dev/null || echo 0)
     NOW_EPOCH=$(date +%s)
     LOCK_AGE=$(( NOW_EPOCH - LOCK_EPOCH ))
+    LOCK_PID=$(awk 'NR==1' "$LOCK_FILE" 2>/dev/null || echo "unknown")
 
-    if [[ "$LOCK_AGE" -gt "$LOCK_MAX_AGE_SECS" ]]; then
+    if [[ "$LOCK_PID" =~ ^[0-9]+$ ]] && ! kill -0 "$LOCK_PID" 2>/dev/null; then
         LOCK_MIN=$(( LOCK_AGE / 60 ))
-        LOCK_PID=$(awk 'NR==1' "$LOCK_FILE" 2>/dev/null || echo "unknown")
+        log "WARNING: Dead pipeline lock detected (PID $LOCK_PID, ${LOCK_MIN}min old). Removing."
+        rm -f "$LOCK_FILE"
+    elif [[ "$LOCK_AGE" -gt "$LOCK_MAX_AGE_SECS" ]]; then
+        LOCK_MIN=$(( LOCK_AGE / 60 ))
 
         log "WARNING: Stale lock detected (PID $LOCK_PID, ${LOCK_MIN}min old). Removing."
         rm -f "$LOCK_FILE"
