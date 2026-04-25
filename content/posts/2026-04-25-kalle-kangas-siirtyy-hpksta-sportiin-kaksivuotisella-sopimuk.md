@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Kalle-Kangas-vaihtaa-HPK-paidasta-Sportin-nuttuun-%E2%88%92-Uskotaan-ett%C3%A4-Kallesta-tulee-Liigaan-hyv%C3%A4-sheriffi/269272"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

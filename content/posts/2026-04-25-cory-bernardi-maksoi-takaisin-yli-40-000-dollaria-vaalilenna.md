@@ -40,7 +40,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/apr/25/cory-bernardi-repays-more-than-40000-for-flying-on-gina-rineharts-plane-during-sa-election-campaign"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
