@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/etko-halua-maksaa-nykyhintoja-ssd-asemista-pc-harrastajat-keksivat-ovelan-kiertoreitin/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
