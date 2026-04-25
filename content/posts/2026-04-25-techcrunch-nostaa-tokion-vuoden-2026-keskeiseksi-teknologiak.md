@@ -39,7 +39,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/25/why-tokyo-is-the-most-important-tech-destination-of-2026/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
