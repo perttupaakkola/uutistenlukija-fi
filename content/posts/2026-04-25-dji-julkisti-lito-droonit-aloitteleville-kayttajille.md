@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiiliuutiset/dji-toi-markkinoille-lito-droonit-aloitteleville-suunnatuissa-malleissa-keskitytty-helppokayttoisyyteen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
