@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/valve-julkaisi-kehittajille-tyokaluja-steam-deck-optimoinnin-helpottamiseksi/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
