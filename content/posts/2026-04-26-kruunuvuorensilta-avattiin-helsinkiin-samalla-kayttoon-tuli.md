@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/suomen-suurin-silta-muutti-helsingin-kaupunkikuvaa/9328638"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
