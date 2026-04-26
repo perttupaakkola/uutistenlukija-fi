@@ -39,7 +39,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://www.science.org/content/article/trump-fires-nsf-s-oversight-board"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
