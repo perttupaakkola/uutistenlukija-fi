@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/26/mediatek-esitteli-dimensity-7450-jarjestelmapiirit-keskitason-alypuhelimiin-x-versio-tulossa-kayttoon-motorolan-uudessa-simpukkapuhelimessa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
