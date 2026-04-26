@@ -39,7 +39,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/live/2026/apr/26/australia-news-live-victoria-car-registration-rebate-cost-of-living-fuel-crisis-anzac-angus-taylor-albanese-chris-bowen-labor-liberal-ntwnfb"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
