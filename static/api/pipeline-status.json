@@ -1,20 +1,20 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-26T05:13:18+00:00",
-  "status": "ok",
-  "is_stale": false,
+  "generated_at": "2026-04-26T06:14:28+00:00",
+  "status": "degraded",
+  "is_stale": true,
   "stale_threshold_minutes": 90,
   "runs": {
     "total": 100,
-    "ok": 43,
-    "skip": 57,
+    "ok": 42,
+    "skip": 58,
     "error": 0
   },
   "articles": {
-    "attempted": 2128,
-    "published": 58,
+    "attempted": 2129,
+    "published": 56,
     "rejected": 4,
-    "publish_rate": 2.7,
+    "publish_rate": 2.6,
     "last_published_ts": "2026-04-26T04:16:31.750612+00:00"
   },
   "reject_reasons": {
@@ -37,16 +37,16 @@
   },
   "trending": [
     [
-      "aineiston",
-      75
-    ],
-    [
       "perusteella",
       71
     ],
     [
+      "aineiston",
+      69
+    ],
+    [
       "samalla",
-      62
+      60
     ],
     [
       "tietojen",
