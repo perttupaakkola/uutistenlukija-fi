@@ -1,25 +1,27 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-28T18:03:48+00:00",
+  "generated_at": "2026-04-28T18:14:49+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 24,
-    "ok": 23,
+    "total": 25,
+    "ok": 24,
     "skip": 1,
     "error": 0
   },
   "articles": {
-    "attempted": 532,
-    "published": 40,
-    "rejected": 1,
-    "publish_rate": 7.5,
-    "last_published_ts": "2026-04-28T18:03:47.363683+00:00"
+    "attempted": 555,
+    "published": 42,
+    "rejected": 2,
+    "publish_rate": 7.6,
+    "last_published_ts": "2026-04-28T18:14:49.072262+00:00"
   },
   "reject_reasons": {
-    "missing: image": 1,
-    "thin_source (55 words in sourc": 1
+    "missing: image": 2,
+    "thin_source (55 words in sourc": 1,
+    "length under target (256 words": 1,
+    "keyword_stuffing": 1
   },
   "feeds": {
     "total": 38,
@@ -44,11 +46,11 @@
     ],
     [
       "saatavilla",
-      48
+      49
     ],
     [
       "siihen",
-      43
+      44
     ]
   ]
 }
