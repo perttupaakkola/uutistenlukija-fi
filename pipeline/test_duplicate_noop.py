@@ -6,6 +6,53 @@ import run_pipeline
 
 
 class DuplicateOnlyBatchTests(unittest.TestCase):
+    def test_all_thin_source_candidates_are_successful_noop(self):
+        scanned = [{
+            "title": "Thin source item",
+            "description": "too short",
+            "research": "",
+            "source_domain": "example.com",
+            "source_tier": 2,
+        }]
+
+        with patch.object(run_pipeline, "scan_all_feeds", return_value=scanned), \
+             patch.object(run_pipeline, "poll_firehose", return_value=[]), \
+             patch.object(run_pipeline, "filter_new_articles", side_effect=lambda articles: articles), \
+             patch.object(run_pipeline, "check_published_duplicates", side_effect=lambda articles, window_hours=24: articles), \
+             patch.object(run_pipeline, "dedup_within_batch", side_effect=lambda articles: articles), \
+             patch.object(run_pipeline, "enrich_with_research", side_effect=lambda articles: articles), \
+             patch.object(run_pipeline, "rewrite_articles") as rewrite, \
+             patch.object(run_pipeline, "_write_final_metrics") as metrics:
+            ok = run_pipeline.run(quick=True, max_articles=3, dedup_window=48)
+
+        self.assertTrue(ok)
+        rewrite.assert_not_called()
+        self.assertTrue(metrics.call_args.kwargs["success"])
+
+    def test_confidence_only_rewriter_zero_is_successful_noop(self):
+        scanned = [{
+            "title": "Supported but unsafe item",
+            "description": "This source has enough words to pass the source-material filter " * 3,
+            "research": "supporting source words " * 40,
+            "source_domain": "example.com",
+            "source_tier": 1,
+        }]
+
+        with patch.object(run_pipeline, "scan_all_feeds", return_value=scanned), \
+             patch.object(run_pipeline, "poll_firehose", return_value=[]), \
+             patch.object(run_pipeline, "filter_new_articles", side_effect=lambda articles: articles), \
+             patch.object(run_pipeline, "check_published_duplicates", side_effect=lambda articles, window_hours=24: articles), \
+             patch.object(run_pipeline, "dedup_within_batch", side_effect=lambda articles: articles), \
+             patch.object(run_pipeline, "enrich_with_research", side_effect=lambda articles: articles), \
+             patch.object(run_pipeline, "rewrite_articles", return_value=[]), \
+             patch.object(run_pipeline, "notify_discord_failure") as notify_failure, \
+             patch.object(run_pipeline, "_write_final_metrics") as metrics:
+            ok = run_pipeline.run(quick=True, max_articles=3, dedup_window=48)
+
+        self.assertTrue(ok)
+        notify_failure.assert_not_called()
+        self.assertTrue(metrics.call_args.kwargs["success"])
+
     def test_all_post_rewrite_duplicates_are_successful_noop(self):
         scanned = [{
             "title": "Fresh source item",

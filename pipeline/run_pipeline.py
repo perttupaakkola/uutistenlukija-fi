@@ -582,6 +582,12 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     skipped = pre_filter_count - len(articles)
     if skipped:
         print(f"[quality] Skipped {skipped} articles with < {MIN_SOURCE_WORDS} words source material")
+    if not articles:
+        print("ℹ️  No candidates had enough source material after research. Treating as a successful no-op.")
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True,
+                             fetched=_m_fetched, deduped=_m_deduped, rewritten=0,
+                             sources=_m_sources)
+        return True
 
     # ── Step 1d.1: Prefer strongest evidence before max-article cap ──────────
     # The scanner order can put thin RSS/paywall fallbacks before well-supported
@@ -649,12 +655,17 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     steps["rewriter"] = t_rewrite.to_dict()
 
     if not rewritten:
-        notify_discord_failure("rewriter", "Rewriter produced 0 articles", f"Input was {len(articles)} articles")
-        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False,
+        if errors:
+            notify_discord_failure("rewriter", "Rewriter produced 0 articles", f"Input was {len(articles)} articles")
+        else:
+            print("ℹ️  Rewriter produced no safe articles. Treating as a successful no-op.")
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=not errors,
                              fetched=_m_fetched, deduped=_m_deduped, rewritten=_m_rewritten,
                              sources=_m_sources)
-        print("❌ Uudelleenkirjoitus epäonnistui. Keskeytetään.")
-        return False
+        if errors:
+            print("❌ Uudelleenkirjoitus epäonnistui. Keskeytetään.")
+            return False
+        return True
 
     log_run("rewritten", {"count": len(rewritten), "articles": rewritten})
 
