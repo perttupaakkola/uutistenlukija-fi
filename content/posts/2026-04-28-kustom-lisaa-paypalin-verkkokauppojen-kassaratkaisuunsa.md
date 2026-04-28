@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/28/kustom-tuo-nyt-paypalin-maksutapavaihtoehdoksi-osana-verkkokauppojen-kassaratkaisuaan-osti-aiemmin-vipps-mobilepay-checkoutin/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
