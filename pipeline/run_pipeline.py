@@ -8,6 +8,7 @@ Flags:
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -16,6 +17,7 @@ import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
+from pathlib import Path
 
 # Add parent to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -26,8 +28,67 @@ from research import enrich_with_research
 from monica_writer import rewrite_articles
 from publisher import publish_articles, build_site
 from dedup import filter_new_articles, check_published_duplicates, dedup_within_batch, mark_published
+from story_packet import queue_root
 from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
+
+
+def _article_seed_digest(article: dict) -> str:
+    title = str(article.get("title", "") or "")
+    description = str(article.get("description", "") or "")
+    seed = article.get("link") or f"{title}|{description}"
+    return hashlib.sha1(str(seed).encode("utf-8", errors="ignore")).hexdigest()[:10]
+
+
+def _recent_monica_attempt_digests(cooldown_hours: int = 12) -> set[str]:
+    """Return story-packet digests recently sent to Monica.
+
+    Monica packet filenames end with the stable seed digest used by
+    story_packet.build_story_packet(). If the same source item keeps cycling
+    through the buffer, skip it before research/rewriter work for a short
+    cooldown. This prevents one repeated item from consuming unattended cycles
+    while still allowing it to be retried later if it remains genuinely fresh.
+    """
+    root = queue_root()
+    if not root.exists():
+        return set()
+    cutoff = time.time() - (cooldown_hours * 3600)
+    digests: set[str] = set()
+    for box in ("inbox", "outbox", "quarantine"):
+        path = root / box
+        if not path.exists():
+            continue
+        for item in path.glob("*.json"):
+            try:
+                if item.stat().st_mtime < cutoff:
+                    continue
+            except OSError:
+                continue
+            stem = item.stem
+            if "_" not in stem:
+                continue
+            digest = stem.rsplit("_", 1)[-1]
+            if re.fullmatch(r"[0-9a-f]{10}", digest):
+                digests.add(digest)
+    return digests
+
+
+def _drop_recent_monica_attempts(articles: list[dict], cooldown_hours: int = 12) -> list[dict]:
+    attempted = _recent_monica_attempt_digests(cooldown_hours=cooldown_hours)
+    if not attempted:
+        return articles
+    kept: list[dict] = []
+    dropped: list[str] = []
+    for article in articles:
+        if _article_seed_digest(article) in attempted:
+            dropped.append(str(article.get("title", "?"))[:80])
+        else:
+            kept.append(article)
+    if dropped:
+        print(f"[dedup:monica] skipped {len(dropped)} recently attempted Monica packet(s) ({cooldown_hours}h cooldown)")
+        for title in dropped[:5]:
+            print(f"[dedup:monica]   - {title}")
+    return kept
 # ── Resilient imports: stub on failure so a single missing function never kills the pipeline ──
 def _stub_notify(*args, **kwargs):
     print(f"[resilience] Discord notification skipped (import failed)")
@@ -475,6 +536,20 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
 
     if not articles:
         print("ℹ️  Kaikki artikkelit on jo julkaistu. Ei uusia artikkeleita.")
+        _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True,
+                             fetched=_m_fetched, deduped=_m_deduped, sources=_m_sources)
+        return True
+
+    # ── Step 1b.1: Monica attempt cooldown ───────────────────────────────────
+    # Some high-scoring feed items can recur for hours and repeatedly consume
+    # research + Monica capacity. If the same stable story-packet digest already
+    # entered Monica's inbox/outbox/quarantine recently, let fresher candidates
+    # use the rewrite buffer first.
+    before_monica_cooldown = len(articles)
+    articles = _drop_recent_monica_attempts(articles)
+    _m_deduped += before_monica_cooldown - len(articles)
+    if not articles:
+        print("ℹ️  All candidates were recent Monica attempts. Treating as a successful no-op.")
         _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True,
                              fetched=_m_fetched, deduped=_m_deduped, sources=_m_sources)
         return True
