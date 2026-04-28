@@ -39,7 +39,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/enta-jos-suomi-joutuisi-sotaan-hvklta-tuore-skenaario-ei-ole-ennuste-vaan-kuvitteellinen-tapahtumakulku/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
