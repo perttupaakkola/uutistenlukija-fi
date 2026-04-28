@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/jenkkikoomikko-piruili-leonardo-dicapriolle-nuorista-tyttoystavista-sai-pian-yllattavan-lahetyksen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
