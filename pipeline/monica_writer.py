@@ -44,7 +44,7 @@ OPENCLAW_CANDIDATES = (
     "/usr/bin/openclaw",
 )
 
-_JSON_BLOCK_RE = re.compile(r"```(?:json)?\s*(\{.*\})\s*```", re.DOTALL)
+_JSON_BLOCK_RE = re.compile(r"```(?:json)?\s*(\{.*?\})\s*```", re.DOTALL | re.IGNORECASE)
 _WS_RE = re.compile(r"\s+")
 
 WRITER_SCHEMA = {
@@ -70,29 +70,74 @@ def _normalize_ws(text: str) -> str:
     return _WS_RE.sub(" ", (text or "")).strip()
 
 
+def _balanced_json_candidates(text: str) -> list[str]:
+    """Return balanced top-level JSON object candidates found in arbitrary text.
+
+    OpenClaw/agent output can include progress lines or other brace-containing
+    text before/after the actual model JSON. A simple first-"{" to last-"}"
+    slice turns those responses into one invalid blob. This scanner keeps the
+    fallback local and conservative: it only emits balanced object spans while
+    respecting JSON string escaping.
+    """
+    candidates: list[str] = []
+    start: int | None = None
+    depth = 0
+    in_string = False
+    escaped = False
+
+    for idx, char in enumerate(text):
+        if in_string:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+            continue
+
+        if char == '"':
+            in_string = True
+        elif char == "{":
+            if depth == 0:
+                start = idx
+            depth += 1
+        elif char == "}" and depth:
+            depth -= 1
+            if depth == 0 and start is not None:
+                candidates.append(text[start : idx + 1])
+                start = None
+
+    return candidates
+
+
 def _extract_json_object(raw: str) -> dict:
     text = (raw or "").strip()
     if not text:
         raise ValueError("empty Monica response")
 
     candidates = [text]
-    fenced = _JSON_BLOCK_RE.search(text)
-    if fenced:
+    for fenced in _JSON_BLOCK_RE.finditer(text):
         candidates.insert(0, fenced.group(1).strip())
 
     start = text.find("{")
     end = text.rfind("}")
     if start != -1 and end != -1 and end > start:
         candidates.append(text[start : end + 1])
+    candidates.extend(_balanced_json_candidates(text))
+
+    seen: set[str] = set()
 
     for candidate in candidates:
+        if candidate in seen:
+            continue
+        seen.add(candidate)
         try:
             data = json.loads(candidate)
             if isinstance(data, dict):
                 return data
         except json.JSONDecodeError:
             continue
-    raise ValueError("Monica response did not contain valid JSON")
+    raise ValueError("Monica response did not contain valid JSON object")
 
 
 def _normalize_tags(tags) -> list[str]:
@@ -248,8 +293,12 @@ def _openclaw_command(prompt: str) -> list[str]:
     return cmd
 
 
-def _run_monica(prompt: str) -> str:
-    cmd = _openclaw_command(prompt)
+def _looks_like_context_overflow(text: str) -> bool:
+    lowered = (text or "").lower()
+    return "context overflow" in lowered or "prompt too large for the model" in lowered
+
+
+def _run_openclaw_command(cmd: list[str]) -> str:
     try:
         result = subprocess.run(
             cmd,
@@ -271,6 +320,35 @@ def _run_monica(prompt: str) -> str:
     text = (result.stdout or "").strip()
     if not text:
         raise RuntimeError("Monica writer returned empty output")
+    return text
+
+
+def _reset_monica_session() -> None:
+    """Best-effort reset for local OpenClaw agent sessions.
+
+    The unattended writer lane uses OpenClaw as a subprocess. When the local
+    Monica session grows until auto-compaction can no longer fit the next
+    article prompt, OpenClaw prints a user-facing "Context overflow" message
+    and suggests `/reset` or `/new`. Treat that as recoverable automation debt:
+    reset the agent session once and immediately retry the same packet instead
+    of burning the whole batch.
+    """
+    cmd = _openclaw_command("/reset")
+    try:
+        _run_openclaw_command(cmd)
+    except Exception as e:
+        print(f"[monica]   warning: session reset failed ({e})")
+
+
+def _run_monica(prompt: str) -> str:
+    cmd = _openclaw_command(prompt)
+    text = _run_openclaw_command(cmd)
+    if _looks_like_context_overflow(text):
+        print("[monica]   context overflow from Monica session; resetting and retrying once")
+        _reset_monica_session()
+        text = _run_openclaw_command(cmd)
+    if _looks_like_context_overflow(text):
+        raise RuntimeError("Monica writer context overflow after reset")
     return text
 
 
@@ -327,7 +405,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
             try:
                 payload = _extract_json_object(raw)
             except ValueError as e:
-                save_writer_quarantine(packet, "dispatch_error", raw_response=raw, extra={"error": str(e), "stage": "initial_parse"})
+                save_writer_quarantine(packet, "dispatch_error", raw_response=raw, extra={"reason_code": "json_parse_failed", "error": str(e), "stage": "initial_parse"})
                 print(f"[monica]   quarantine: dispatch_error ({e})")
                 continue
 
@@ -343,7 +421,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                 try:
                     payload = _extract_json_object(repaired_raw)
                 except ValueError as e:
-                    save_writer_quarantine(packet, "dispatch_error", raw_response=repaired_raw, extra={"error": str(e), "stage": "repair_parse", "initial_payload": payload, "initial_issues": issues})
+                    save_writer_quarantine(packet, "dispatch_error", raw_response=repaired_raw, extra={"reason_code": "repair_json_parse_failed", "error": str(e), "stage": "repair_parse", "initial_payload": payload, "initial_issues": issues})
                     print(f"[monica]   quarantine: dispatch_error ({e})")
                     continue
                 raw = repaired_raw
@@ -360,7 +438,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
             print(f"[monica]   ok: {written_article.get('title','')[:70]}")
 
         except Exception as e:
-            save_writer_quarantine(packet, "dispatch_error", raw_response=raw, extra={"error": str(e)})
+            save_writer_quarantine(packet, "dispatch_error", raw_response=raw, extra={"reason_code": "monica_dispatch_exception", "error": str(e)})
             print(f"[monica]   quarantine: dispatch_error ({e})")
 
     if written:
