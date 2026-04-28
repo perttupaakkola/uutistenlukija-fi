@@ -143,6 +143,9 @@ HEADERS = {
     "Accept": "text/event-stream",
 }
 
+FIREHOSE_STREAM_WAIT_SEC = int(os.environ.get("FIREHOSE_STREAM_WAIT_SEC", "5"))
+FIREHOSE_HTTP_TIMEOUT_SEC = int(os.environ.get("FIREHOSE_HTTP_TIMEOUT_SEC", "12"))
+
 
 # ─── URL normalization & dedup ────────────────────────────────────────────────
 
@@ -296,7 +299,10 @@ def poll_firehose(since: str = "20m") -> List[Dict]:
     state = _load_state()
     last_event_id = state.get("last_event_id")
 
-    params = {"timeout": "60", "since": since}
+    # Firehose is a supplementary discovery lane. The main auto-publish path
+    # must never spend minutes waiting on an empty SSE stream while RSS already
+    # has a healthy batch, so keep both server-side and client-side waits short.
+    params = {"timeout": str(FIREHOSE_STREAM_WAIT_SEC), "since": since}
     url = f"{FIREHOSE_BASE}/stream?" + urlencode(params)
 
     req_headers = dict(HEADERS)
@@ -309,7 +315,7 @@ def poll_firehose(since: str = "20m") -> List[Dict]:
     print(f"[firehose] Polling stream (since={since}, last_id={last_event_id or 'none'})...")
     try:
         req = urllib.request.Request(url, headers=req_headers)
-        with urllib.request.urlopen(req, timeout=75) as resp:
+        with urllib.request.urlopen(req, timeout=FIREHOSE_HTTP_TIMEOUT_SEC) as resp:
             raw = resp.read()
 
         events = _parse_sse_events(raw)
