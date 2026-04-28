@@ -39,7 +39,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/microsoft-lupaa-kayttajille-entista-laajempaa-hallintaa-windows-11-paivityksiin/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
