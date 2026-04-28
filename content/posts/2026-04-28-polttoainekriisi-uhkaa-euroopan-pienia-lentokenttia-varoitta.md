@@ -39,7 +39,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/business/2026/apr/28/europe-smaller-airports-fuel-shortages-cancellations-eu-ees"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
