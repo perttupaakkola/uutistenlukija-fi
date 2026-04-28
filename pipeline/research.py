@@ -16,7 +16,9 @@ Uses only stdlib (no external dependencies).
 """
 
 import html as html_module
+import os
 import re
+import signal
 import time
 import urllib.request
 import urllib.error
@@ -44,6 +46,7 @@ MAX_ADDITIONAL_SOURCES = 4   # extra sources beyond the original
 SEARCH_TIMEOUT = 8          # seconds for news search
 INTER_FETCH_DELAY = 0.8     # seconds between fetches (politeness)
 MIN_USEFUL_WORDS = 80       # sources with less are discarded as paywall/thin
+ARTICLE_RESEARCH_TIMEOUT = int(os.environ.get("ARTICLE_RESEARCH_TIMEOUT_SEC", "45"))
 
 # Domains known to hard-paywall — always skip (never get useful text)
 _BLOCKED_DOMAINS = {
@@ -581,12 +584,23 @@ def enrich_with_research(articles: list) -> list:
 
     RSS_MIN_WORDS = 30
 
+    def _timeout_handler(signum, frame):
+        raise TimeoutError(f"research article exceeded {ARTICLE_RESEARCH_TIMEOUT}s")
+
+    can_alarm = hasattr(signal, "SIGALRM") and ARTICLE_RESEARCH_TIMEOUT > 0
+
     for i, article in enumerate(articles):
         title = article.get("title", "?")[:60]
         print(f"\n[research] ({i+1}/{total}) {title}", flush=True)
 
         try:
+            if can_alarm:
+                previous_handler = signal.signal(signal.SIGALRM, _timeout_handler)
+                signal.alarm(ARTICLE_RESEARCH_TIMEOUT)
             research_text = _research_article(article)
+            if can_alarm:
+                signal.alarm(0)
+                signal.signal(signal.SIGALRM, previous_handler)
 
             if research_text:
                 word_count = len(research_text.split())
@@ -612,7 +626,18 @@ def enrich_with_research(articles: list) -> list:
                     article["research_source"] = "none"
                 skipped += 1
 
+        except TimeoutError as e:
+            if can_alarm:
+                signal.alarm(0)
+                signal.signal(signal.SIGALRM, previous_handler)
+            print(f"[research]   → Timeout: {e}")
+            article["research"] = ""
+            article["research_source"] = "timeout"
+            skipped += 1
         except Exception as e:
+            if can_alarm:
+                signal.alarm(0)
+                signal.signal(signal.SIGALRM, previous_handler)
             print(f"[research]   → Failed: {e}")
             article["research"] = ""
             article["research_source"] = "error"
