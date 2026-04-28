@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/ubuntu-26-04-lts-resolute-raccoon-on-nyt-saatavilla/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
