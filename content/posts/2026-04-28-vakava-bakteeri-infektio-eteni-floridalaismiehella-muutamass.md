@@ -39,7 +39,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/health/2026/04/flesh-eating-bacteria-devour-mans-arm-and-leg-in-just-three-days/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
