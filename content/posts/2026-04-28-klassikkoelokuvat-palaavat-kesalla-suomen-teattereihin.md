@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/suomen-teattereihin-tulee-kesalla-pirates-of-the-caribbeania-alienia-ja-jurassic-parkia/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
