@@ -39,7 +39,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/kiina-suunnittelee-jopa-2-eksaflopsin-kotikutoista-lingsheng-supertietokonetta/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
