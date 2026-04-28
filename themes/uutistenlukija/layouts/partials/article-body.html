@@ -21,6 +21,11 @@
   · <span class="article-reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ $readingMinutes }} min lukuaika</span>
   {{- end }}
 </div>
+{{- if eq .showTrustNote true }}
+<div class="article-trust-note" role="note" aria-label="Toimituksen huomautus">
+  <strong>Toimituksen huomautus:</strong> Uutistenlukija tiivistää päivän uutisaiheita toimituksellisessa muodossa. Tarkistamme sisällön rakenteen automaattisesti ennen julkaisua ja korjaamme näkyvät virheet, kun niitä havaitaan.
+</div>
+{{- end }}
 {{- else if eq .metaVariant "page" }}
 <div class="article-meta">
   {{ $page.Date | time.Format "2.1.2006 klo 15:04" }}

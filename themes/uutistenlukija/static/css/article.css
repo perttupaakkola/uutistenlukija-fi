@@ -57,6 +57,33 @@
 
 .single-article .content p { margin-bottom: 1.25rem; }
 
+.article-trust-note {
+  margin: 1.25rem 0 1.5rem;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--card-bg));
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.article-trust-note strong {
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  .article-trust-note {
+    margin: 1rem 0 1.25rem;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.82rem;
+  }
+}
+
+[data-theme="dark"] .article-trust-note {
+  background: color-mix(in srgb, var(--accent) 9%, var(--card-bg));
+}
+
 .single-article .source-attribution {
   margin-top: 2rem;
   padding-top: 1rem;
