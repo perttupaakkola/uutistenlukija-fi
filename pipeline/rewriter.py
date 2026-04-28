@@ -246,6 +246,19 @@ _RETRYABLE_HTTP = {429, 500, 502, 503, 504}
 # Reuse a single client instance per process
 _openai_client: "OpenAI | None" = None
 GEMINI_FALLBACK_MODEL = os.environ.get("GEMINI_FALLBACK_MODEL", "gemini-2.0-flash")
+GEMINI_FALLBACK_ENABLED = os.environ.get("GEMINI_FALLBACK_ENABLED", "0").strip().lower() in {
+    "1",
+    "true",
+    "yes",
+    "on",
+}
+
+
+def _gemini_fallback_disabled_error() -> RuntimeError:
+    return RuntimeError(
+        "OpenAI quota exhausted and Gemini fallback is disabled to protect Gemini monthly quota. "
+        "Set GEMINI_FALLBACK_ENABLED=1 for an emergency manual run."
+    )
 
 
 def _read_env_key_from_files(key_name: str) -> str:
@@ -317,9 +330,12 @@ def _get_client() -> "OpenAI":
 
 
 def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
-    """Call OpenAI with retry, fall back to Gemini on quota exhaustion."""
+    """Call OpenAI with retry; Gemini fallback requires explicit opt-in."""
     global QUOTA_EXHAUSTED
     if QUOTA_EXHAUSTED:
+        if not GEMINI_FALLBACK_ENABLED:
+            print("[writer]   OpenAI quota exhausted earlier in run; Gemini fallback disabled for quota protection")
+            raise _gemini_fallback_disabled_error()
         print(f"[writer]   OpenAI quota exhausted earlier in run, using Gemini fallback ({GEMINI_FALLBACK_MODEL})")
         return _call_gemini(system, prompt)
 
@@ -347,6 +363,9 @@ def _call_llm(system: str, prompt: str, model: str = "gpt-4o-mini") -> str:
             quota_hit = status == 429 or "insufficient_quota" in str(e)
             if quota_hit:
                 QUOTA_EXHAUSTED = True
+                if not GEMINI_FALLBACK_ENABLED:
+                    print("[writer]   OpenAI quota exhausted; Gemini fallback disabled for quota protection")
+                    raise _gemini_fallback_disabled_error()
                 print(f"[writer]   OpenAI quota exhausted, switching to Gemini fallback ({GEMINI_FALLBACK_MODEL})")
                 return _call_gemini(system, prompt)
 
