@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/the-last-of-us-part-2n-kiistelty-kohtalo-jakoi-myos-kehittajien-mielipiteet/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
