@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/suora-lahetys-kello-11-45-presidentti-stubbin-ja-viron-presidentin-tiedotustilaisuus/9330662"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 

@@ -39,7 +39,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/joka-neljas-pk-yritys-palkkaamassa-lisavakea-vuoden-sisalla-sivukulut-ovat-merkittava-jarru/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
