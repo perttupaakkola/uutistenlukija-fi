@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/28/kiinalta-kova-paatos-raportti-meta-valmistautuu-purkamaan-jo-toteuttamansa-yli-2-miljardin-dollarin-manus-yrityskaupan/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
