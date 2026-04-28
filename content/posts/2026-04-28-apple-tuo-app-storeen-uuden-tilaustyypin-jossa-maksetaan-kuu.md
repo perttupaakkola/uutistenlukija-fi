@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/28/apple-tuo-uuden-tilaustyypin-app-store-sovelluksiin-kuukausimaksu-vuoden-maaraajalla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
