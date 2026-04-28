@@ -2,12 +2,14 @@
 title: "Kaupat auki vappuna 2026 — aukioloajat vappuaattona ja vappupäivänä"
 description: "Mitkä kaupat ovat auki vappuna 2026? Tarkista aukioloajat vappuaatolle 30.4. ja vappupäivälle 1.5. Prisma, K-ryhmä, Lidl, Tokmanni, Alko ja kauppakeskukset."
 date: 2026-04-04
-lastmod: 2026-04-04
+lastmod: 2026-04-28
 draft: false
 categories: ["kotimaa", "talous"]
 ---
 
 Vappu 2026: vappuaatto on **torstaina 30.4.** ja vappupäivä **perjantaina 1.5.** Vappupäivä on yleinen pyhäpäivä, jolloin useimmat liikkeet ovat kiinni tai auki rajoitetusti. Vappuaattona monet kaupat sulkeutuvat tavallista aikaisemmin.
+
+**Päivitetty 28.4.2026:** aukioloajat voivat edelleen vaihdella myymälöittäin, joten tarkista oman kaupan tai kauppakeskuksen ajantasainen tieto ketjun myymälähausta ennen lähtöä.
 
 ## Kauppojen aukioloajat vappuna 2026
 
@@ -65,7 +67,7 @@ Kauppakeskusten aukioloajat vaihtelevat, mutta yleinen linja on:
 | **Ideapark** (Lempäälä) | Klo 10–19 | Klo 10–19 (liikkeet klo 12–18) |
 | **Skanssi** (Turku) | Lyhennetyt ajat | Klo 11–19 |
 
-**Huom!** Kauppakeskusten sisällä yksittäisten liikkeiden aukioloajat voivat poiketa keskuksen yleisestä aukioloajasta. Tarkista aina kiinnostavan liikkeen omat sivut.
+**Huom!** Kauppakeskusten sisällä yksittäisten liikkeiden aukioloajat voivat poiketa keskuksen yleisestä aukioloajasta. Tarkista aina kiinnostavan liikkeen omat sivut. Ruokakaupat, ravintolat, elokuvateatterit ja palvelut voivat olla auki eri rytmillä kuin muotiliikkeet.
 
 ---
 
@@ -94,7 +96,7 @@ Vaikka suurin osa on kiinni, joitain palveluja voi löytyä:
 
 ## Tarkista oman kauppasi aukioloajat
 
-Aukioloajat vaihtelevat myymälöittäin. Käytä ketjujen myymälähakuja:
+Aukioloajat vaihtelevat myymälöittäin, ja pyhäpäivän poikkeukset näkyvät luotettavimmin ketjujen omissa myymälähauissa. Tarkista erityisesti lähikaupat, 24h-myymälät ja kauppakeskusten sisällä olevat liikkeet erikseen:
 
 - **S-ryhmä:** [s-kanava.fi → myymälähaku](https://www.s-kanava.fi/myymalat)
 - **K-ryhmä:** [k-ruoka.fi → kauppahaku](https://www.k-ruoka.fi/kaupat)
