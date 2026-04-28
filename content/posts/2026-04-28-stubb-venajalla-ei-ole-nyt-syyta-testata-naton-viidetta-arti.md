@@ -39,7 +39,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/live/2026/apr/28/europe-france-andorra-abortion-macron-ukraine-russia-eu-latest-news-updates"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
