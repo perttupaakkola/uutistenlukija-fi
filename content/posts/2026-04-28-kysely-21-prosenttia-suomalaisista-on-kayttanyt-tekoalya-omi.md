@@ -39,7 +39,6 @@ keywords:
 source_name: "Lääkärilehti"
 source_url: "http://www.laakarilehti.fi/terveydenhuolto/yli-20-prosenttia-kysyy-tekoalylta-terveysasioistaan/"
 source_domain: "laakarilehti.fi"
-briefing: true
 draft: false
 ---
 
