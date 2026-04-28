@@ -39,7 +39,6 @@ keywords:
 source_name: "Science News"
 source_url: "https://www.sciencenews.org/article/extinct-volcanoes-erupt"
 source_domain: "sciencenews.org"
-briefing: true
 draft: false
 ---
 
