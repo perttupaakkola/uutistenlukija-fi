@@ -321,9 +321,16 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
         packet = build_story_packet(article)
         save_packet(packet, box="inbox")
 
+        raw = ""
         try:
             raw = _run_monica(_build_prompt(packet))
-            payload = _extract_json_object(raw)
+            try:
+                payload = _extract_json_object(raw)
+            except ValueError as e:
+                save_writer_quarantine(packet, "dispatch_error", raw_response=raw, extra={"error": str(e), "stage": "initial_parse"})
+                print(f"[monica]   quarantine: dispatch_error ({e})")
+                continue
+
             if payload.get("status") == "INSUFFICIENT_CONFIDENCE":
                 save_writer_quarantine(packet, payload.get("reason", "insufficient_confidence"), raw_response=raw, extra={"status": payload.get("status")})
                 print(f"[monica]   quarantine: insufficient confidence")
@@ -333,7 +340,12 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
             if issues:
                 print(f"[monica]   repair pass: {'; '.join(issues)}")
                 repaired_raw = _run_monica(_build_repair_prompt(packet, payload, issues))
-                payload = _extract_json_object(repaired_raw)
+                try:
+                    payload = _extract_json_object(repaired_raw)
+                except ValueError as e:
+                    save_writer_quarantine(packet, "dispatch_error", raw_response=repaired_raw, extra={"error": str(e), "stage": "repair_parse", "initial_payload": payload, "initial_issues": issues})
+                    print(f"[monica]   quarantine: dispatch_error ({e})")
+                    continue
                 raw = repaired_raw
                 issues = _basic_payload_issues(payload)
 
@@ -348,7 +360,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
             print(f"[monica]   ok: {written_article.get('title','')[:70]}")
 
         except Exception as e:
-            save_writer_quarantine(packet, "dispatch_error", raw_response="", extra={"error": str(e)})
+            save_writer_quarantine(packet, "dispatch_error", raw_response=raw, extra={"error": str(e)})
             print(f"[monica]   quarantine: dispatch_error ({e})")
 
     if written:
