@@ -39,7 +39,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/28/match-group-invests-100-million-in-sniffies-a-cruising-app-for-gay-men/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
