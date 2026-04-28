@@ -283,10 +283,16 @@ def _resolve_openclaw_base_cmd() -> list[str]:
     return parts
 
 
-def _openclaw_command(prompt: str) -> list[str]:
+def _openclaw_command(prompt: str, *, force_local: bool | None = None) -> list[str]:
     base = _resolve_openclaw_base_cmd()
     cmd = [*base, "agent", "--agent", os.environ.get("MONICA_OPENCLAW_AGENT", DEFAULT_MONICA_AGENT)]
-    use_local = os.environ.get("MONICA_OPENCLAW_LOCAL", "1").lower() not in {"0", "false", "no"}
+    if force_local is None:
+        # Default to a fresh one-shot agent dispatch. The previous local-session
+        # default made unattended article prompts accumulate until Monica hit
+        # OpenClaw context overflow even after auto-compaction.
+        use_local = os.environ.get("MONICA_OPENCLAW_LOCAL", "0").lower() not in {"0", "false", "no"}
+    else:
+        use_local = force_local
     if use_local:
         cmd.append("--local")
     cmd.extend(["--message", prompt])
@@ -344,9 +350,9 @@ def _run_monica(prompt: str) -> str:
     cmd = _openclaw_command(prompt)
     text = _run_openclaw_command(cmd)
     if _looks_like_context_overflow(text):
-        print("[monica]   context overflow from Monica session; resetting and retrying once")
+        print("[monica]   context overflow from Monica session; resetting and retrying once without local session")
         _reset_monica_session()
-        text = _run_openclaw_command(cmd)
+        text = _run_openclaw_command(_openclaw_command(prompt, force_local=False))
     if _looks_like_context_overflow(text):
         raise RuntimeError("Monica writer context overflow after reset")
     return text
