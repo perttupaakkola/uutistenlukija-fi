@@ -39,7 +39,6 @@ keywords:
 source_name: "Kauppalehti KL-Nyt"
 source_url: "https://www.kauppalehti.fi/uutiset/a/49d1a2a3-856c-43e3-ad42-4e4eee66059c"
 source_domain: "kauppalehti.fi"
-briefing: true
 draft: false
 ---
 
