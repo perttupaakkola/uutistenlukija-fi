@@ -40,7 +40,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/apr/28/european-parliament-urges-eu-draw-up-standardised-consent-based-definition-rape"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
