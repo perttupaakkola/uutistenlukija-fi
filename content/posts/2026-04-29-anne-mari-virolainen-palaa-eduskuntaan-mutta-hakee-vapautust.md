@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/eduskuntaan-tanaan-paluun-tehnyt-kansanedustaja-hakee-vapautusta-heti-ensi-viikolla/9331466"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
