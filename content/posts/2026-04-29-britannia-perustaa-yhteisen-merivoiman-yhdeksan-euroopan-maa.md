@@ -39,7 +39,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/uk-news/2026/apr/29/britain-royal-navy-russia-open-sea-border-europe"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
