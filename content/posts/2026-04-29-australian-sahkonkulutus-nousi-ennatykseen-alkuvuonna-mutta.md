@@ -39,7 +39,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/environment/2026/apr/30/hot-weather-and-hungry-datacentres-lift-australias-energy-demand-to-record-highs-but-batteries-quell-prices"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
