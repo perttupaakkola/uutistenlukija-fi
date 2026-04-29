@@ -39,7 +39,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/tech-policy/2026/04/school-shooting-lawsuits-accuse-openai-of-hiding-violent-chatgpt-users/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 

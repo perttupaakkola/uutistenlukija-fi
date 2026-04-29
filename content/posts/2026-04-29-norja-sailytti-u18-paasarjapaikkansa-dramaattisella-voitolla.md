@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Huippulupauksen-hattutemppu-nosti-Norjan-tasoihin-ja-ohi-U18-MM-karsintaottelun-p%C3%A4%C3%A4t%C3%B6sminuuteilla/269356"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

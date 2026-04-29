@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-29T12:16:46+00:00",
+  "generated_at": "2026-04-29T12:23:51+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -11,21 +11,21 @@
     "error": 0
   },
   "articles": {
-    "attempted": 1875,
-    "published": 83,
-    "rejected": 4,
-    "publish_rate": 4.4,
-    "last_published_ts": "2026-04-29T12:16:45.240901+00:00"
+    "attempted": 1874,
+    "published": 85,
+    "rejected": 3,
+    "publish_rate": 4.5,
+    "last_published_ts": "2026-04-29T12:23:50.828335+00:00"
   },
   "reject_reasons": {
-    "missing: image": 3,
+    "missing: image": 2,
     "keyword_stuffing": 2,
-    "thin_source (55 words in sourc": 1,
     "length under target (256 words": 1,
     "length under target (268 words": 1,
     "high duplication similarity (1": 1,
     "language borderline Finnish si": 1,
-    "length under target (235 words": 1
+    "length under target (235 words": 1,
+    "missing: key_points, source_ur": 1
   },
   "feeds": {
     "total": 38,
@@ -45,16 +45,16 @@
       75
     ],
     [
-      "aineiston",
-      65
+      "vaikka",
+      61
     ],
     [
-      "vaikka",
-      55
+      "aineiston",
+      61
     ],
     [
       "erityisesti",
-      47
+      48
     ]
   ]
 }
