@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/far-cry-televisiosarja-ei-valttamatta-tuo-pelien-ikonisia-pahiksia-ruudulle/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
