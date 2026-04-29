@@ -40,7 +40,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/motorola-julkaisi-razr-70-malliston-ultra-mallissa-lofic-paakamera/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
