@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/29/kaytossa-iphone-17-tai-iphone-air-ala-paasta-akkua-nyt-taysin-tyhjaksi-puhelin-ei-valttamatta-enaa-kaynnisty-normaalisti/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
