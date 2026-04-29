@@ -39,7 +39,6 @@ keywords:
 source_name: "Lääkärilehti"
 source_url: "http://www.laakarilehti.fi/tieteessa/alkuperaistutkimukset/hoitoon-liittyvien-infektioiden-esiintyvyys-suomessa-2022/"
 source_domain: "laakarilehti.fi"
-briefing: true
 draft: false
 ---
 

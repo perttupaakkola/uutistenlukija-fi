@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/kotimainen-wardrum-julkaistaan-toukokuussa-sotarummun-paukkuessa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
