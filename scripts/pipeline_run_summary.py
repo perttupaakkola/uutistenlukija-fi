@@ -154,7 +154,11 @@ def main():
     env  = load_env(ENV_FILES)
     hook = os.environ.get(WEBHOOK_ENV) or env.get(WEBHOOK_ENV, "")
     channel_id = os.environ.get(CHANNEL_ENV) or env.get(CHANNEL_ENV, DEFAULT_CHANNEL_ID)
-    arts = recent_articles()
+    # The recent window may include articles from an earlier run (or posts whose
+    # briefing metadata was just touched). Limit the display set to the number
+    # of newly added posts that auto_publish.sh passed in, so category/link
+    # summaries do not over-report this run.
+    arts = recent_articles()[:a.articles]
     msg  = build_msg(a.articles, arts, a.elapsed)
     print(msg)
 
