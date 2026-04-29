@@ -40,7 +40,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/29/google-photos-uses-ai-to-make-the-iconic-closet-from-clueless-a-reality/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
