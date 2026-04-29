@@ -40,7 +40,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/29/uber-is-in-the-hotel-business-now-thanks-in-part-to-ai/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
