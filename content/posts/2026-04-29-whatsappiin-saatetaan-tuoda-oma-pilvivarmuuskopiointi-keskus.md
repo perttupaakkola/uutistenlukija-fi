@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiiliuutiset/whatsapp-saattaa-tarjota-pian-uuden-tavan-keskusteluiden-varmuuskopiointiin/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
