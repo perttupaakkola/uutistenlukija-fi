@@ -39,7 +39,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/vaikea-asiakas-ei-ole-aina-oikeassa-asiantuntija-huomasi-yleistyneen-minakeskeisyyden-vaikutukset-haetaan-mieluummin-kostoa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
