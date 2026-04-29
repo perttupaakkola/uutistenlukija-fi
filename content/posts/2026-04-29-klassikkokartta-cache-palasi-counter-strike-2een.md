@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/klassikkokartta-cache-teki-paluun-counter-strike-2een/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

@@ -1,31 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-04-29T19:51:41+00:00",
+  "generated_at": "2026-04-29T20:08:56+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 110,
+    "total": 111,
     "ok": 65,
-    "skip": 45,
+    "skip": 46,
     "error": 0
   },
   "articles": {
-    "attempted": 2247,
+    "attempted": 2266,
     "published": 103,
-    "rejected": 7,
-    "publish_rate": 4.6,
-    "last_published_ts": "2026-04-29T19:12:45.021583+00:00"
+    "rejected": 6,
+    "publish_rate": 4.5,
+    "last_published_ts": "2026-04-29T20:08:55.640017+00:00"
   },
   "reject_reasons": {
-    "missing: image": 6,
-    "keyword_stuffing": 2,
+    "missing: image": 5,
     "language borderline Finnish si": 2,
-    "length under target (268 words": 1,
     "high duplication similarity (1": 1,
     "length under target (235 words": 1,
     "missing: key_points, source_ur": 1,
-    "unsourced numbers": 1
+    "unsourced numbers": 1,
+    "thin_source (14 words in sourc": 1,
+    "too_short": 1
   },
   "feeds": {
     "total": 38,
@@ -38,15 +38,15 @@
   "trending": [
     [
       "siihen",
-      97
+      98
     ],
     [
       "samalla",
-      93
+      94
     ],
     [
       "vaikka",
-      84
+      86
     ],
     [
       "kertoo",
@@ -54,7 +54,7 @@
     ],
     [
       "ennen",
-      61
+      62
     ]
   ]
 }
