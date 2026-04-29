@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/29/7-9-vuotiaille-hankitaan-yha-harvemmin-alypuhelin-kellopuhelinten-myynti-moninkertaistunut/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
