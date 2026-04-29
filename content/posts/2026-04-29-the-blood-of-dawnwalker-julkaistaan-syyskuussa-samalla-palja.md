@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/the-witcher-3-kehittajien-odotettu-vampyyriroolipeli-sai-julkaisupaivan-tallaisen-raudan-se-vaatii-pyoriakseen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
