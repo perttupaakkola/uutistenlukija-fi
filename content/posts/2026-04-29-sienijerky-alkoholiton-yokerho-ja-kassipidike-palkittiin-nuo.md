@@ -39,7 +39,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/proteiinipitoisella-sienijerkylla-voittoon-nama-ideat-palkittiin-uskalla-yrittaa-finaalissa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
