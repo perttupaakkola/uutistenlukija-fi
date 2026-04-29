@@ -40,7 +40,6 @@ keywords:
 source_name: "Tekniikka & Talous"
 source_url: "https://www.tekniikkatalous.fi/uutiset/a/b083dc93-5572-4c41-bee8-1ada6462e578"
 source_domain: "tekniikkatalous.fi"
-briefing: true
 draft: false
 ---
 
