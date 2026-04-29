@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/29/google-testaa-youtubessa-uudenlaista-tekoalyhakua/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
