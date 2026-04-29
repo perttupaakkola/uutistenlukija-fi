@@ -40,7 +40,6 @@ keywords:
 source_name: "Science News"
 source_url: "https://www.sciencenews.org/article/prenatal-surgery-spina-bifida-stem-cell"
 source_domain: "sciencenews.org"
-briefing: true
 draft: false
 ---
 
