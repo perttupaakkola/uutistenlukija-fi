@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/vuoden-2024-megaelokuva-nousi-netflixin-katsotuimmaksi-heti-uusi-taru-sormusten-herrasta-ei-ole-katsojia-loytanyt/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

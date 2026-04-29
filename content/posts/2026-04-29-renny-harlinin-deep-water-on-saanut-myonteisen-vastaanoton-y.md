@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/renny-harlinin-uusi-elokuva-keraa-nyt-kehuja-usassa-tulee-menestymaan-hyvin/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
