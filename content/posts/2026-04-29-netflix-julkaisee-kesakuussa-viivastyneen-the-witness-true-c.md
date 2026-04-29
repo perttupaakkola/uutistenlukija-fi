@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/netflix-julkaisee-vihdoinkin-true-crime-sarjan-jonka-piti-ilmestya-jo-viime-vuonna/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
