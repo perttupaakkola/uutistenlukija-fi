@@ -40,7 +40,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/apr/29/veteran-goalkeeper-70-to-return-to-pitch-for-official-game-in-spain"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
