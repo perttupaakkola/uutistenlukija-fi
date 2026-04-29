@@ -40,7 +40,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/palit-microsystems-sulauttaa-naytonohjainvalmistaja-galaxin-itseensa/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
