@@ -39,7 +39,6 @@ keywords:
 source_name: "IS Digitoday"
 source_url: "https://www.is.fi/digitoday/art-2000011975788.html"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
