@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/motogp-26-ilmestyi-trailerin-kera/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
