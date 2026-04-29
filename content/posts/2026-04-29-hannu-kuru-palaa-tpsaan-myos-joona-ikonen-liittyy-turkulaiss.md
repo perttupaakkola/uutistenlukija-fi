@@ -40,7 +40,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Puolan-liigan-pistep%C3%B6rssin-voittanut-Hannu-Kuru-palaa-TPS%C3%A4%C3%A4n-my%C3%B6s-Ruotsista-saapuva-Joona-Ikonen-sopimukseen/269271"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
