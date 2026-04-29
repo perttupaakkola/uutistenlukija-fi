@@ -40,7 +40,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/apr/30/guardian-essential-poll-australians-want-higher-tax-on-gas-exports-and-extension-of-petrol-excise-cut"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
