@@ -40,7 +40,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/29/samsungia-vastaan-nostettiin-patenttikanne-asialla-oleva-yhtio-vaittaa-olevansa-taittuvanayttoisten-puhelinten-alkuperainen-kehittaja/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
