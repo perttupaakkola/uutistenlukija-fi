@@ -55,6 +55,26 @@ class QualityGateDegradedModeTests(unittest.TestCase):
         self.assertTrue(breakdown.passes)
         self.assertEqual(breakdown.image_pts, 10)
 
+    def test_unsourced_numbers_in_body_remain_warning_only(self):
+        article = _article(False)
+        article["content"] = article["content"] + "\n\nLisäksi valmistelussa arvioidaan 42 miljoonan euron vaikutusta."
+        breakdown = score_article(article)
+        self.assertTrue(any(w.startswith("unsourced_numbers") for w in breakdown.soft_warnings))
+        self.assertFalse(any("central unsourced number" in fail for fail in breakdown.hard_fails))
+
+    def test_unsourced_numbers_in_title_or_lead_are_hard_fail(self):
+        article = _article(False)
+        article["title"] = "Hallitus valmistelee 42 miljoonan euron säästöjä"
+        article["content"] = (
+            "Hallitus valmistelee 42 miljoonan euron säästöjä sosiaalihuoltoon ensi vuodelle. "
+            "Valmistelu jatkuu ministeriöissä ja vaikutuksia arvioidaan hyvinvointialueilla. "
+            "Ratkaisujen tavoitteena on hillitä menojen kasvua ilman, että palveluiden saatavuus heikkenee liikaa.\n\n"
+            + article["content"]
+        )
+        breakdown = score_article(article)
+        self.assertFalse(breakdown.passes)
+        self.assertTrue(any("central unsourced number" in fail for fail in breakdown.hard_fails))
+
 
 if __name__ == "__main__":
     unittest.main()

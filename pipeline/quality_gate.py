@@ -113,6 +113,22 @@ def check_numbers_sourced(source_text: str, content: str, title: str = "") -> li
     return sorted(article_nums - source_nums)
 
 
+def _lead_contains_unsourced_numbers(unsourced: list[str], title: str, content: str) -> bool:
+    """Return true when unsupported numbers appear in the article's headline/lead frame.
+
+    The Apr 29 trust incident was not merely "some number was reformatted"; the
+    unsupported numeric/rate-hike frame appeared in the public headline/lead and
+    became central to the story. Keep generic unsourced numbers as warnings to
+    avoid the old false-positive problem, but hard-block unsupported numbers
+    that sit in the title or opening paragraph.
+    """
+    if not unsourced:
+        return False
+    lead_frame = f"{title or ''} {_first_paragraph(content or '')}"
+    lead_nums = _extract_numbers(lead_frame)
+    return bool(set(unsourced) & lead_nums)
+
+
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _clamp(value: float, lo: float = 0.0, hi: float = 10.0) -> float:
@@ -524,16 +540,18 @@ def score_article(article: dict) -> ScoreBreakdown:
     if _looks_truncated(content):
         hard_fails.append("truncated ending")
 
-    # NOTE: unsourced numbers downgraded from hard fail to score penalty (2026-04-02).
-    # The rewriter frequently reformats numbers ("noin 30 000" → "30000", "3,5 miljardia"
-    # → "3.5 billion") causing 30% false positive rate on hard fail. Now deducts 5 points
-    # from the 80-point score instead of blocking outright.
+    # NOTE: unsourced numbers are usually a warning because number formatting can
+    # produce false positives ("noin 30 000" → "30000", comma/dot decimals, etc.).
+    # But if an unsupported number appears in the headline/lead frame, it is a
+    # central-claim risk and must not publish as a passive warning.
     if source_text:
         unsourced = check_numbers_sourced(source_text, content, title)
         if unsourced:
             sample = ", ".join(unsourced[:5])
             soft_warnings.append(f"unsourced_numbers: {sample}")
             reasons.append("unsourced numbers")
+            if _lead_contains_unsourced_numbers(unsourced, title, content):
+                hard_fails.append(f"central unsourced number in title/lead: {sample}")
 
     normalized_score = round(_clamp(weighted_score), 2)
     effective_total_threshold = DEGRADED_REJECT_THRESHOLD if degraded_mode else REJECT_THRESHOLD
