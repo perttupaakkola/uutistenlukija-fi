@@ -39,7 +39,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/analyysi-paljastaa-leasing-sahkoauto-voi-olla-yritykselle-edullisempi-kuin-polttomoottoriauto/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

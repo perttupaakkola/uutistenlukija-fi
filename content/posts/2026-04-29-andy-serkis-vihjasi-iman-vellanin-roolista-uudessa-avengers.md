@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/andy-serkis-saattoi-juuri-spoilata-avengers-doomsdayta-yhden-supersankarin-osalta/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
