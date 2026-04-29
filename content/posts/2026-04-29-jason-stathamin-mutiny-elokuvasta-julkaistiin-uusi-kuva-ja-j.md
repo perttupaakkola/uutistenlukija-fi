@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/kuva-jason-statham-nayttaa-uudessa-elokuvassaan-ihan-samalta-kuin-kaikissa-muissakin-elokuvissaan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

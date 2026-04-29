@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Juhani-Jasun-ura-p%C3%A4%C3%A4ttyi-loukkaantumiseen-Rakastin-olla-j%C3%A4%C3%A4kiekkoilija/269360"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
