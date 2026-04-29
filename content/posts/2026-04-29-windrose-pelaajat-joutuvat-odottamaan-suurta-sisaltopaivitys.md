@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/piraattihitin-pelaajat-joutuvat-odottamaan-uutta-pelattavaa-viela-pitkan-tovin/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

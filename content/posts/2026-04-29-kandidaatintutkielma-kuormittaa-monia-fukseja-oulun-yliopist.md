@@ -39,7 +39,6 @@ keywords:
 source_name: "Lääkärilehti"
 source_url: "http://www.laakarilehti.fi/terveydenhuolto/kandityon-teko-kuormittaa-fuksivuotta-oulun-yliopistossa/"
 source_domain: "laakarilehti.fi"
-briefing: true
 draft: false
 ---
 
