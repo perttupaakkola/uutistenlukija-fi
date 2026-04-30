@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/audi-q4-e-tron-sahkoauto-sai-kevyen-kauneusleikkauksen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
