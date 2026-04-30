@@ -40,7 +40,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/30/oneplus-julkisti-tehokkaan-pad-4-tablettilaitteen-intiassa-varustettu-132-naytolla-ja-snapdragon-8-elite-gen-5lla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
