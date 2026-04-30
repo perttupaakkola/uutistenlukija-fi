@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/intel-myy-nyt-asiakkailleen-b-luokan-suorittimia-hylkypiirit-olisivat-aiemmin-voineet-paatya-roskiin/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
