@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/maailmanloppu-tulee-aikaisemmin-kuin-on-luultu-kaikki-maailmankaikkeuden-aine-ja-aika-avaruus-luhistuvat/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

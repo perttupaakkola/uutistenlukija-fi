@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/weapons-ohjaajan-uusi-resident-evil-tulee-suomenkin-elokuvateattereihin-syksylla/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
