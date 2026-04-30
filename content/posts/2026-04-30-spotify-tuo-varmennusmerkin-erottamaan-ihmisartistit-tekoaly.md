@@ -40,7 +40,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/30/spotify-introduces-verified-artist-badges-to-help-distinguish-humans-from-ai/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
