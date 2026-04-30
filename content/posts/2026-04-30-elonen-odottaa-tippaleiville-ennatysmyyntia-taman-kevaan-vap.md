@@ -40,7 +40,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/suomen-tippaleipataivas-sijaitsee-toysassa-yrittaja-povaa-ennatysmaista-myyntia-loppukadessa-simppeli-kunhan-tuntee-tekniikan/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

@@ -40,7 +40,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/apr/30/canada-financial-crimes-agency-us-weakens-approach-cryptocurrency-atms-money-laundering"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
