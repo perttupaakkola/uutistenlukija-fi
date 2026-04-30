@@ -40,7 +40,6 @@ keywords:
 source_name: "Taloussanomat"
 source_url: "https://www.is.fi/taloussanomat/art-2000011979357.html"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
