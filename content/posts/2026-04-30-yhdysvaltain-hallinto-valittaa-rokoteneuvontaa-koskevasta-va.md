@@ -40,7 +40,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/health/2026/04/rfk-jr-appeals-ruling-that-wiped-out-his-vaccine-advisory-panel/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
