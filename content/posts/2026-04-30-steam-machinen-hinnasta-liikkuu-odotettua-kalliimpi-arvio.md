@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/nyt-tuli-ikava-tieto-steam-machinen-hinnasta/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
