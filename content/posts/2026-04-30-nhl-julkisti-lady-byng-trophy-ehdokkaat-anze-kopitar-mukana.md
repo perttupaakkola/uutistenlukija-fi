@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/NHLn-herrasmiespelaajan-palkintoehdokkaat-julki-mukana-uransa-p%C3%A4%C3%A4tt%C3%A4nyt-An%C5%BEe-Kopitar/269380"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
