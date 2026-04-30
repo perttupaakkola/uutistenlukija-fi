@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/mortal-kombat-2n-ensireaktiot-ovat-olleet-positiiviset-tama-meidan-olisi-pitanyt-saada-jo-ensimmaisella-kerralla/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
