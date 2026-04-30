@@ -40,7 +40,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/30/youtube-tuo-kuva-kuvassa-tilan-kaikille-android-ja-ios-kayttajille-maailmanlaajuisesti-ei-vaadi-enaa-maksullista-tilausta/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
