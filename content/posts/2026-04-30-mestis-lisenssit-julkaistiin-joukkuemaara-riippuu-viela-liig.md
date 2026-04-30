@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Mestis-lisenssin-saajat-julki-%E2%80%93-ensi-kauden-joukkuem%C3%A4%C3%A4r%C3%A4-on-joko-8-tai-9/269381"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
