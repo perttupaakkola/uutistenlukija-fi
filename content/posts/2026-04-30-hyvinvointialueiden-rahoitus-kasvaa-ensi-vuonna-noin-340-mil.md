@@ -40,7 +40,6 @@ keywords:
 source_name: "Lääkärilehti"
 source_url: "http://www.laakarilehti.fi/terveydenhuolto/hyvinvointialueiden-ennakollinen-rahoituslaskelma-ensi-vuodelle-on-julkaistu/"
 source_domain: "laakarilehti.fi"
-briefing: true
 draft: false
 ---
 
