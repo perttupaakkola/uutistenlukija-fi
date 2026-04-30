@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/30/applen-tulos-lunasti-kovat-odotukset-iphone-myynti-jatkoi-yli-20-prosentin-kasvussa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
