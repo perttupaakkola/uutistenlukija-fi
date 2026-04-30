@@ -40,7 +40,6 @@ keywords:
 source_name: "IS Urheilu"
 source_url: "https://www.is.fi/mm-futis/art-2000011977113.html"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
