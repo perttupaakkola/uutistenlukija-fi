@@ -39,7 +39,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/artanddesign/2026/apr/30/venice-biennale-jury-quits-amid-row-russia"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
