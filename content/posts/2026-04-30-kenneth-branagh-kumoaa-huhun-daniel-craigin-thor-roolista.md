@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/oliko-bond-tahti-oikeasti-ehdolla-thoriksi-ohjaaja-kertoi-totuuden-daniel-craigista/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
