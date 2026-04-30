@@ -40,7 +40,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/artanddesign/2026/apr/30/archibald-prize-2026-finalists-packing-room-winner"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
