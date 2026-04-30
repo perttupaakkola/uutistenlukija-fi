@@ -39,7 +39,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/30/gemini-tekoalylla-voi-nyt-luoda-google-docs-pdf-word-ja-muita-tiedostoja/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
