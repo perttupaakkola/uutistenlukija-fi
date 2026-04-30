@@ -40,7 +40,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Kolumni/Tappara-nousi-sillasta-v%C3%A4lieriss%C3%A4-%E2%80%93-dynastia-vaikuttaa-taas-pys%C3%A4ytt%C3%A4m%C3%A4tt%C3%B6m%C3%A4lt%C3%A4/269345"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

@@ -41,7 +41,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/lahes-20-vuotias-studio-sulkee-ovensa-uusin-peli-julkaistiin-vain-reilu-kuukausi-sitten/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
