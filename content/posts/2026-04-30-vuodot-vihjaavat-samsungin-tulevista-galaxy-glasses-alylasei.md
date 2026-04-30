@@ -39,7 +39,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/renderointivuodoissa-samsungin-tulevat-android-xr-alylasit/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
