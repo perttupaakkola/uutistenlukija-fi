@@ -40,7 +40,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Philadelphia-Flyers-marssi-Pennsylvanian-kuninkaaksi-puolustaja-Cam-Yorkin-maalilla/269368"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

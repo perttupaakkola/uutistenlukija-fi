@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuva-artikkelit/viaplayn-uutuudet-toukokuussa-2026-twisters-caught-stealing-bring-her-back/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
