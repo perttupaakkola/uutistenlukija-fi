@@ -40,7 +40,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
