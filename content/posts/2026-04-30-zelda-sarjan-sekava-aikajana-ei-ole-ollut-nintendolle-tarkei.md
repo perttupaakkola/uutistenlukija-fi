@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/the-legend-of-zelda-pelisarjan-sekavuudesta-saa-kiittaa-sen-luojaa-se-ei-ollut-tarkeaa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
