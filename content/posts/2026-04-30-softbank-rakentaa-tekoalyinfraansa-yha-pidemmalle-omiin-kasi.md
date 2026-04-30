@@ -40,7 +40,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
