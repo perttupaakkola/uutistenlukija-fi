@@ -40,7 +40,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/04/30/paljastus-samsung-kehittaa-yhdessa-googlen-kanssa-android-lappareita/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
