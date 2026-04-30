@@ -40,7 +40,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/SaiPa-rallatteli-pronssimitaleille-n%C3%A4yt%C3%B6styyliin-%E2%88%92-Ilves-hyytyi-t%C3%A4ysin/269374"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
