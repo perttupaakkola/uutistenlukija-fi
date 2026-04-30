@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/take-two-pomo-vihjailee-gta-6n-ymparilla-tapahtuvan-pian-porinaa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
