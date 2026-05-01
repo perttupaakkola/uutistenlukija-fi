@@ -44,7 +44,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/01/fairphone-3n-virallinen-paivitystuki-paattyy-kayttajlle-tarjotaan-kuitenkin-yllattava-valinta/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
