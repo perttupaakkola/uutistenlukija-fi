@@ -12,7 +12,7 @@
   {
     "name": "watchdog",
     "expected_interval_hours": 0.167,
-    "marker_file_path": "pipeline/logs/watchdog.log"
+    "marker_glob_path": "pipeline/logs/watchdog*.log"
   },
   {
     "name": "health_monitor",
@@ -73,6 +73,6 @@
   {
     "name": "auto_publish",
     "expected_interval_hours": 0.167,
-    "marker_file_path": "pipeline/logs/watchdog.log"
+    "marker_glob_path": "pipeline/logs/watchdog*.log"
   }
 ]
