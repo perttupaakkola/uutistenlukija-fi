@@ -39,7 +39,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Tapanin-Fleet-otti-johtoaseman-PWHLn-suomalaiskohtaamisessa-%E2%88%92-sveitsil%C3%A4ist%C3%A4hti-monessa-mukana/269390"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
