@@ -39,7 +39,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
