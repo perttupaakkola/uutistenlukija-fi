@@ -252,7 +252,17 @@ def run_git_deploy(created_count: int) -> int:
     if created_count <= 0:
         return 0
     cmds = [
-        ["git", "add", "content/", "public/", "static/api/", "static/metrics/", "static/search-index.json", "pipeline/metrics.jsonl"],
+        [
+            "git",
+            "add",
+            "-A",
+            "content/",
+            "static/api/",
+            "static/metrics/",
+            "static/search-index.json",
+            "pipeline/published_url_hashes.json",
+            "pipeline/queues/staged/",
+        ],
         ["git", "commit", "-m", f"Auto-publish staged: {created_count} new articles ({datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')})"],
         ["git", "push", "origin", "main"],
     ]
