@@ -577,6 +577,7 @@ def _deduplicate_articles(articles: List[Dict], threshold: float = 0.70) -> tupl
 
 
 MAX_SUMMARY_BULLETS_TOTAL_CHARS = 400
+MAX_KEY_POINTS_TOTAL_CHARS = 300
 
 
 def _sanitize_bullet(text: str) -> str:
@@ -671,6 +672,31 @@ def _normalize_summary_bullets(article: Dict) -> List[str]:
                 points.append(point)
         points = _rebalance_summary_bullets(points)
     return points[:4]
+
+
+def _fallback_key_points(article: Dict) -> List[str]:
+    return _fallback_summary_bullets(article)[:3]
+
+
+def _normalize_key_points(article: Dict) -> List[str]:
+    raw = article.get("key_points", [])
+    if isinstance(raw, str):
+        raw = [part for part in re.split(r"[\n•]+", raw) if part.strip()]
+    elif not isinstance(raw, list):
+        raw = []
+
+    points = _rebalance_summary_bullets([str(item) for item in raw], MAX_KEY_POINTS_TOTAL_CHARS)
+    if len(points) < 3:
+        fallback = _fallback_key_points(article)
+        seen = {p.casefold() for p in points}
+        for point in fallback:
+            if len(points) >= 3:
+                break
+            if point.casefold() not in seen:
+                points.append(point)
+                seen.add(point.casefold())
+        points = _rebalance_summary_bullets(points, MAX_KEY_POINTS_TOTAL_CHARS)
+    return points[:3]
 
 def _infer_fallback_category(article: Dict) -> str:
     raw = str(article.get("category") or article.get("category_hint") or "").strip()
@@ -1145,6 +1171,7 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
             written_article["content_type"] = content_type
             written_article["editorial_reviewed"] = True
             written_article["summary_bullets"] = _normalize_summary_bullets(written_article)
+            written_article["key_points"] = _normalize_key_points(written_article)
 
                         # Quality gate: score Finnish and escalate low-quality to gpt-4o
             art_body = written_article.get("content", "")
@@ -1168,7 +1195,7 @@ Palauta korjattu JSON-lista samassa muodossa. Vastaa VAIN JSON-listalla."""
                             # Preserve metadata from original
                             for key in ["category", "tags", "image_url", "image_alt", "source_url", "source_name",
                                          "content_type", "editorial_reviewed", "journalist_note", "author_title",
-                                         "summary_bullets", "fingerprint", "trending", "source", "source_domain",
+                                         "summary_bullets", "key_points", "fingerprint", "trending", "source", "source_domain",
                                          "link", "source_text", "summary", "original_title"]:
                                 if key in written_article and key not in upgraded:
                                     upgraded[key] = written_article[key]

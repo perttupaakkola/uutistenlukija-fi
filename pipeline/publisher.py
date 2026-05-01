@@ -319,6 +319,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     source_domain = article.get("source_domain", "")
     summary = article.get("summary", "")
     summary_bullets = article.get("summary_bullets", [])
+    key_points = article.get("key_points", [])
     journalist_note = article.get("journalist_note", "")
     content_type = article.get("content_type", "article")
     editorial_reviewed = bool(article.get("editorial_reviewed", True))
@@ -368,6 +369,11 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     else:
         summary_bullets = []
     summary_bullets_yaml = "\nsummary_bullets:\n" + "\n".join(f'  - "{_esc(point)}"' for point in summary_bullets[:4]) if summary_bullets else ""
+    if isinstance(key_points, list):
+        key_points = [str(point).strip() for point in key_points if str(point).strip()]
+    else:
+        key_points = []
+    key_points_yaml = "\nkey_points:\n" + "\n".join(f'  - "{_esc(point)}"' for point in key_points[:3]) if key_points else ""
     journalist_note_line = f'\njournalist_note: |\n  ' + '\n  '.join(str(journalist_note).splitlines()) if journalist_note else ""
     content_type = str(content_type or "article").strip().lower()
     if content_type not in {"article", "analysis"}:
@@ -410,7 +416,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
+author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
 draft: false
 ---
 
