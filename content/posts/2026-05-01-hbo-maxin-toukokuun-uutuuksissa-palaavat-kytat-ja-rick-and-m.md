@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuva-artikkelit/hbo-maxin-tarkeimmat-uutuudet-toukokuussa-2026/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
