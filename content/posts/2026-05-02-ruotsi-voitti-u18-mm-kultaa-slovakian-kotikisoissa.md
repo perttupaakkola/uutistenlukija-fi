@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Ruotsi-dominoi-loppuottelua-oli-sulaa-p%C3%A4%C3%A4t%C3%B6sminuuteilla-ja-voitti-lopulta-U18-MM-kultaa/269421"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
