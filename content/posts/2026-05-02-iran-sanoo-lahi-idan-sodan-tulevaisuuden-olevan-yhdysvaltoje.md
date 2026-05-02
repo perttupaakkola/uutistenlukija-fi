@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/iran-tassa-ovat-yhdysvaltain-vaihtoehdot/9332768"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
