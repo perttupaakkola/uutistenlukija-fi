@@ -248,9 +248,37 @@ def load_outbox(max_items: int) -> list[tuple[Path, dict]]:
     return out
 
 
+def refresh_static_status() -> None:
+    """Regenerate public status artifacts after staged publish changes.
+
+    The staged pipeline replaced the old monolithic auto_publish path, but the
+    site health JSONs are still the public control-plane truth. Keep them in the
+    deploy commit whenever a staged publish creates articles.
+    """
+    commands = [
+        [sys.executable, "pipeline/generate_health.py"],
+        [sys.executable, "pipeline/generate_pipeline_status.py"],
+        [sys.executable, "pipeline/generate_search_index.py"],
+        [sys.executable, "scripts/category_distribution.py", "--dry-run"],
+        ["bash", "scripts/daily-snapshot.sh"],
+    ]
+    for cmd in commands:
+        res = subprocess.run(cmd, cwd=PROJECT_DIR, timeout=180, text=True, capture_output=True)
+        if res.returncode != 0:
+            combined = (res.stdout + "\n" + res.stderr).strip()
+            raise RuntimeError(f"status refresh failed rc={res.returncode}: {' '.join(cmd)}\n{combined[-1000:]}")
+        if res.stdout.strip():
+            log(res.stdout.strip()[-1000:])
+
+
 def run_git_deploy(created_count: int) -> int:
     if created_count <= 0:
         return 0
+    try:
+        refresh_static_status()
+    except Exception as e:
+        log(f"deploy: status refresh failed: {e}")
+        return 3
     cmds = [
         [
             "git",
