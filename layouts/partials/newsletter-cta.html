@@ -1,17 +1,43 @@
-{{- /* newsletter-cta.html — inline newsletter signup card for article/page bottoms. */ -}}
+{{- /* newsletter-cta.html — inline newsletter signup card for article/page bottoms.
+     Usage: {{ partial "newsletter-cta.html" (dict "context" . "variant" "article_bottom" "title" "..." "text" "...") }} */ -}}
 {{- $variant := "default" -}}
 {{- $ctx := . -}}
+{{- $title := "" -}}
+{{- $text := "" -}}
+{{- $eyebrow := "" -}}
+{{- $trust := "" -}}
+{{- $buttonOverride := "" -}}
+{{- $placeholderOverride := "" -}}
+{{- $sourceOverride := "" -}}
+
 {{- if reflect.IsMap . -}}
   {{- $variant = .variant | default "default" -}}
   {{- $ctx = .context -}}
+  {{- $title = .title -}}
+  {{- $text = .text -}}
+  {{- $eyebrow = .eyebrow -}}
+  {{- $trust = .trust -}}
+  {{- $buttonOverride = .button -}}
+  {{- $placeholderOverride = .placeholder -}}
+  {{- $sourceOverride = .source -}}
 {{- end -}}
-{{- $source := cond $ctx.IsPage "article" "page" -}}
-<section id="newsletter-signup" class="newsletter-signup newsletter-signup--inline" aria-labelledby="newsletter-signup-heading">
+
+{{- /* Standardized fallback benefit copy */ -}}
+{{- $defaults := .Site.Data.newsletter.defaults -}}
+{{- $title = $title | default $defaults.title -}}
+{{- $text = $text | default $defaults.text -}}
+{{- $eyebrow = $eyebrow | default $defaults.eyebrow -}}
+{{- $button := $buttonOverride | default $defaults.button -}}
+{{- $placeholder := $placeholderOverride | default $defaults.placeholder | default "Sähköpostiosoitteesi" -}}
+{{- if eq $trust false }}{{- $trust = "" -}}{{- else -}}{{- $trust = $trust | default $defaults.trust -}}{{- end -}}
+
+{{- $source := $sourceOverride | default (cond ($ctx.IsPage | default false) "article" "page") -}}
+<section id="newsletter-signup" class="newsletter-signup newsletter-signup--{{ $variant }}" aria-labelledby="newsletter-signup-heading">
   <div class="newsletter-signup__inner">
     <div class="newsletter-signup__copy">
-      <p class="newsletter-signup__eyebrow">Uutiskirje</p>
-      <h2 id="newsletter-signup-heading" class="newsletter-signup__title">Pidä päivän tärkeimmät uutiset mukana ilman jatkuvaa selailua</h2>
-      <p class="newsletter-signup__text">Tilaa ilmainen uutiskirje ja saat olennaiset uutiset suomeksi tiiviinä koosteena sähköpostiisi.</p>
+      <p class="newsletter-signup__eyebrow">{{ $eyebrow }}</p>
+      <h2 id="newsletter-signup-heading" class="newsletter-signup__title">{{ $title }}</h2>
+      <p class="newsletter-signup__text">{{ $text }}</p>
     </div>
     <form class="newsletter-signup__form js-newsletter-form"
           action="/api/subscribe"
@@ -25,14 +51,16 @@
       <input id="newsletter-inline-email"
              type="email"
              name="email"
-             placeholder="sinun@email.fi"
+             placeholder="{{ $placeholder }}"
              required
              autocomplete="email"
              inputmode="email"
              class="newsletter-signup__input">
-      <button type="submit" class="newsletter-signup__button">Tilaa ilmaiseksi</button>
+      <button type="submit" class="newsletter-signup__button" aria-label="{{ $button }}">{{ $button }}</button>
     </form>
     <p class="newsletter-signup__status" data-newsletter-status aria-live="polite"></p>
-    <p class="newsletter-signup__note">Ei roskapostia. Voit peruuttaa koska tahansa. <a href="/tietosuojaseloste/">Tietosuoja</a>.</p>
+    {{- with $trust }}
+    <p class="newsletter-signup__note">{{ . | safeHTML }}</p>
+    {{- end }}
   </div>
 </section>

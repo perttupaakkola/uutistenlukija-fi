@@ -50,6 +50,9 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $newsletterDefaults := .Site.Data.newsletter.defaults }}
+{{ $newsletterPlaceholder := $newsletterDefaults.placeholder | default "Sähköpostiosoitteesi" }}
+{{ $newsletterButton := $newsletterDefaults.button | default "Tilaa uutiskirje" }}
 {{ $action := default "/uutiskirje/" .Site.Params.newsletter_api_url }}
 <div id="newsletter-default-state">
   <article class="single-article">
@@ -74,11 +77,11 @@
           <input id="newsletter-landing-email"
                  type="email"
                  name="email"
-                 placeholder="sinun@email.fi"
+                 placeholder="{{ $newsletterPlaceholder }}"
                  autocomplete="email"
                  required
                  class="newsletter-band__input">
-          <button type="submit" class="newsletter-band__btn">Tilaa ilmaiseksi</button>
+          <button type="submit" class="newsletter-band__btn" aria-label="{{ $newsletterButton }}">{{ $newsletterButton }}</button>
         </form>
         <p class="newsletter-band__privacy">
           Ei roskapostia. Ei maksumuuria. Voit peruuttaa milloin tahansa.

@@ -7,7 +7,7 @@
 {{- else if .IsPage -}}
   {{- if .Params.summary -}}
     {{- $desc = .Params.summary -}}
-  {{- else if $desc -}}
+  {{- else if ne $desc "" -}}
     {{- /* Use existing .Description */ -}}
   {{- else -}}
     {{- $contentText := .Content | plainify | truncate 160 -}}
@@ -17,20 +17,25 @@
       {{- $desc = printf "Lue uutiskooste aiheesta %s. Tiivistämme päivän tärkeimmät uutiset suomeksi — säästä aikaa ja pysy kärryillä vaivatta." .Title -}}
     {{- end -}}
   {{- end -}}
-{{- else if $desc -}}
+{{- else if ne $desc "" -}}
   {{- /* Use existing .Description (e.g. from category/tag _index.md) */ -}}
 {{- else if eq .Kind "term" -}}
   {{- if eq .Data.Plural "categories" -}}
-    {{- $desc = printf "Lue tuoreimmat %s-uutiset ja tiivistelmät. Uutistenlukija kokoaa päivän tärkeimmät %s-aiheet useista eri lähteistä lukijan ajan säästämiseksi." .Title .Title -}}
+    {{- $desc = printf "Tuoreimmat %s-uutiset ja tärkeimmät taustat yhdessä näkymässä. Seuraa aihetta nopeasti Uutistenlukijassa." .Title -}}
   {{- else if eq .Data.Plural "tags" -}}
-    {{- $desc = printf "Lue uutiset ja artikkelit avainsanalla %s. Tiivistämme päivän tärkeimmät puheenaiheet useista lähteistä lukijan ajan säästämiseksi." .Title -}}
+    {{- $desc = printf "Ajankohtaiset uutiset ja artikkelit aiheesta %s. Katso olennaisimmat nostot yhdestä paikasta." .Title -}}
   {{- end -}}
-{{- else if or .IsSection (eq .Kind "taxonomy") -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- if eq .Data.Plural "categories" -}}
+    {{- $desc = "Kategoriat – selaa Uutistenlukijan aihealueita ja löydä tuoreimmat uutiset kotimaasta, ulkomailta, taloudesta, teknologiasta, urheilusta, kulttuurista ja tieteestä." -}}
+  {{- else -}}
+    {{- $desc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) -}}
+  {{- end -}}
+{{- else if .IsSection -}}
   {{- $desc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) -}}
 {{- end -}}
 
-{{- /* Final cleanup: remove newlines, plainify, and truncate to SEO-safe length */ -}}
-{{- $desc = $desc | plainify | replaceRE `\s+` " " | truncate 155 -}}
+{{- $desc = $desc | plainify | replaceRE `\s+` " " | strings.TrimSpace | truncate 155 -}}
 
 {{- if not $desc }}{{ $desc = .Site.Params.description | default .Site.Title }}{{ end -}}
 {{- $desc -}}

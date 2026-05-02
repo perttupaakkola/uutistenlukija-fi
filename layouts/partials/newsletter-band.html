@@ -1,15 +1,39 @@
-{{- /* newsletter-band.html — homepage newsletter signup card below the fold. */ -}}
+{{- /* newsletter-band.html — homepage newsletter signup card below the fold.
+     Usage: {{ partial "newsletter-band.html" (dict "variant" "homepage" "title" "..." "text" "...") }} */ -}}
 {{- $variant := "default" -}}
+{{- $title := "" -}}
+{{- $text := "" -}}
+{{- $eyebrow := "" -}}
+{{- $trust := "" -}}
+{{- $buttonOverride := "" -}}
+{{- $placeholderOverride := "" -}}
+
 {{- if reflect.IsMap . -}}
   {{- $variant = .variant | default "default" -}}
+  {{- $title = .title -}}
+  {{- $text = .text -}}
+  {{- $eyebrow = .eyebrow -}}
+  {{- $trust = .trust -}}
+  {{- $buttonOverride = .button -}}
+  {{- $placeholderOverride = .placeholder -}}
 {{- end -}}
+
+{{- /* Standardized fallback benefit copy (consistent with newsletter-cta.html) */ -}}
+{{- $defaults := .Site.Data.newsletter.defaults -}}
+{{- $title = $title | default $defaults.title -}}
+{{- $text = $text | default $defaults.text -}}
+{{- $eyebrow = $eyebrow | default $defaults.eyebrow -}}
+{{- $button := $buttonOverride | default $defaults.button -}}
+{{- $placeholder := $placeholderOverride | default $defaults.placeholder | default "Sähköpostiosoitteesi" -}}
+{{- if eq $trust false }}{{- $trust = "" -}}{{- else -}}{{- $trust = $trust | default $defaults.trust -}}{{- end -}}
+
 {{- $trackVariant := printf "if(typeof gtag==='function'){gtag('event','newsletter_cta_view',{variant:%s,location:'homepage'});}" ($variant | jsonify) -}}
 <section id="newsletter-signup" class="newsletter-signup newsletter-signup--home" aria-labelledby="newsletter-band-heading">
   <div class="newsletter-signup__inner" onmouseover="{{ $trackVariant | safeHTMLAttr }}">
     <div class="newsletter-signup__copy">
-      <p class="newsletter-signup__eyebrow">Päivittäinen kooste</p>
-      <h2 id="newsletter-band-heading" class="newsletter-signup__title">Tilaa päivittäinen uutiskooste sähköpostiisi</h2>
-      <p class="newsletter-signup__text">Saat tärkeimmät uutiset suomeksi kerran päivässä — tiivis kooste, joka säästää aikaasi.</p>
+      <p class="newsletter-signup__eyebrow">{{ $eyebrow }}</p>
+      <h2 id="newsletter-band-heading" class="newsletter-signup__title">{{ $title }}</h2>
+      <p class="newsletter-signup__text">{{ $text }}</p>
     </div>
     <form class="newsletter-signup__form js-newsletter-form"
           action="/api/subscribe"
@@ -23,14 +47,16 @@
       <input id="newsletter-home-email"
              type="email"
              name="email"
-             placeholder="sinun@email.fi"
+             placeholder="{{ $placeholder }}"
              required
              autocomplete="email"
              inputmode="email"
              class="newsletter-signup__input">
-      <button type="submit" class="newsletter-signup__button">Tilaa ilmaiseksi</button>
+      <button type="submit" class="newsletter-signup__button" aria-label="{{ $button }}">{{ $button }}</button>
     </form>
     <p class="newsletter-signup__status" data-newsletter-status aria-live="polite"></p>
-    <p class="newsletter-signup__note">Ei roskapostia. Voit peruuttaa koska tahansa. <a href="/tietosuojaseloste/">Tietosuoja</a>.</p>
+    {{- with $trust }}
+    <p class="newsletter-signup__note">{{ . | safeHTML }}</p>
+    {{- end }}
   </div>
 </section>

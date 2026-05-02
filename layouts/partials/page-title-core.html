@@ -1,0 +1,28 @@
+{{- $title := .Title | plainify -}}
+{{- if eq .Kind "term" -}}
+  {{- $title = .Params.hero_title | default .Params.heading | default .Params.seo_title | default "" -}}
+  {{- if not $title -}}
+    {{- if eq .Data.Plural "categories" -}}
+      {{- $title = printf "%s-uutiset" (.Title | plainify) -}}
+    {{- else if eq .Data.Plural "tags" -}}
+      {{- $title = printf "%s-aiheiset uutiset" (.Title | plainify) -}}
+    {{- else -}}
+      {{- $title = .Title | plainify -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{- if eq .Data.Plural "categories" -}}
+    {{- $title = "Kategoriat" -}}
+  {{- else if eq .Data.Plural "tags" -}}
+    {{- $title = "Aiheet" -}}
+  {{- end -}}
+{{- else if and .IsSection (eq .Section "posts") -}}
+  {{- $title = "Uutiset" -}}
+{{- else if eq .RelPermalink "/haku/" -}}
+  {{- $title = "Hae uutisia" -}}
+{{- else if eq .RelPermalink "/404.html" -}}
+  {{- $title = "Sivua ei löytynyt" -}}
+{{- else if .IsPage -}}
+  {{- $title = .Title | plainify | truncate 43 -}}
+{{- end -}}
+{{- return $title -}}
