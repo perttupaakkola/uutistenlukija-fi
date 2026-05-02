@@ -1,0 +1,59 @@
+{
+  "hours": 24,
+  "generated_at": "2026-05-02T16:26:30+00:00",
+  "status": "degraded",
+  "is_stale": true,
+  "stale_threshold_minutes": 90,
+  "runs": {
+    "total": 6,
+    "ok": 0,
+    "skip": 6,
+    "error": 0
+  },
+  "articles": {
+    "attempted": 150,
+    "published": 4,
+    "rejected": 27,
+    "publish_rate": 2.7,
+    "last_published_ts": "2026-05-02T14:30:45.977038+00:00"
+  },
+  "reject_reasons": {
+    "missing: image": 27,
+    "unsourced numbers": 27,
+    "central unsourced number in ti": 27,
+    "language borderline Finnish si": 18,
+    "length under target (264 words": 18,
+    "length under target (254 words": 9,
+    "keyword_stuffing": 9
+  },
+  "feeds": {
+    "total": 38,
+    "healthy": 38,
+    "disabled": 0,
+    "stale": 0,
+    "stale_names": [],
+    "disabled_names": []
+  },
+  "trending": [
+    [
+      "aineiston",
+      11
+    ],
+    [
+      "galaxy",
+      11
+    ],
+    [
+      "skorpionien",
+      6
+    ],
+    [
+      "metallien",
+      6
+    ],
+    [
+      "ottelun",
+      6
+    ]
+  ]
+}

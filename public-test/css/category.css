@@ -1,0 +1,92 @@
+/* Category/taxonomy/list-page styles extracted from style.css */
+
+.category-header {
+  margin-bottom: 2rem;
+}
+
+.category-header h1 {
+  font-size: 2rem;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* === Category featured article === */
+.category-featured {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s;
+}
+.category-featured:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.category-featured__img-wrap {
+  flex: 0 0 260px;
+  width: 260px;
+}
+.category-featured__img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+.category-featured__body { flex: 1; min-width: 0; }
+.category-featured__title {
+  font-size: 1.4rem;
+  margin: 0.4rem 0 0.6rem;
+  line-height: 1.3;
+  color: var(--text);
+}
+.category-featured:hover .category-featured__title { color: var(--accent); }
+.category-featured__excerpt {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 0.5rem;
+}
+@media (max-width: 600px) {
+  .category-featured { flex-direction: column; }
+  .category-featured__img-wrap { width: 100%; flex: none; }
+}
+
+/* === Category hero === */
+.category-hero {
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  background: var(--card-bg);
+  border-radius: 0 6px 6px 0;
+}
+.category-hero__title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+.category-hero__desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+.category-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+}
+.category-hero__count {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.category-hero__rss {
+  font-size: 0.75rem;
+}
