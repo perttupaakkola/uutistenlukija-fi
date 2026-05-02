@@ -1,28 +1,30 @@
 {
   "hours": 24,
-  "generated_at": "2026-05-02T10:27:01+00:00",
+  "generated_at": "2026-05-02T12:29:30+00:00",
   "status": "degraded",
   "is_stale": true,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 10,
-    "ok": 1,
-    "skip": 9,
+    "total": 6,
+    "ok": 0,
+    "skip": 6,
     "error": 0
   },
   "articles": {
-    "attempted": 235,
-    "published": 1,
-    "rejected": 4,
-    "publish_rate": 0.4,
+    "attempted": 146,
+    "published": 2,
+    "rejected": 13,
+    "publish_rate": 1.4,
     "last_published_ts": "2026-05-02T00:48:01.653624+00:00"
   },
   "reject_reasons": {
-    "language borderline Finnish si": 4,
-    "length under target (264 words": 4,
-    "missing: image": 4,
-    "unsourced numbers": 4,
-    "central unsourced number in ti": 4
+    "missing: image": 13,
+    "unsourced numbers": 13,
+    "central unsourced number in ti": 13,
+    "language borderline Finnish si": 11,
+    "length under target (264 words": 11,
+    "length under target (254 words": 2,
+    "keyword_stuffing": 2
   },
   "feeds": {
     "total": 38,
@@ -38,10 +40,6 @@
       11
     ],
     [
-      "aineiston",
-      9
-    ],
-    [
       "skorpionien",
       6
     ],
@@ -50,8 +48,12 @@
       6
     ],
     [
-      "miten",
-      6
+      "metalleja",
+      5
+    ],
+    [
+      "aineiston",
+      5
     ]
   ]
 }
