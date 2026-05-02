@@ -1,23 +1,29 @@
 {
   "hours": 24,
-  "generated_at": "2026-05-02T08:25:55+00:00",
+  "generated_at": "2026-05-02T10:27:01+00:00",
   "status": "degraded",
   "is_stale": true,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 16,
-    "ok": 3,
-    "skip": 13,
+    "total": 10,
+    "ok": 1,
+    "skip": 9,
     "error": 0
   },
   "articles": {
-    "attempted": 364,
-    "published": 3,
-    "rejected": 0,
-    "publish_rate": 0.8,
+    "attempted": 235,
+    "published": 1,
+    "rejected": 4,
+    "publish_rate": 0.4,
     "last_published_ts": "2026-05-02T00:48:01.653624+00:00"
   },
-  "reject_reasons": {},
+  "reject_reasons": {
+    "language borderline Finnish si": 4,
+    "length under target (264 words": 4,
+    "missing: image": 4,
+    "unsourced numbers": 4,
+    "central unsourced number in ti": 4
+  },
   "feeds": {
     "total": 38,
     "healthy": 38,
@@ -28,16 +34,12 @@
   },
   "trending": [
     [
-      "aineiston",
-      13
-    ],
-    [
       "galaxy",
       11
     ],
     [
-      "kerro",
-      7
+      "aineiston",
+      9
     ],
     [
       "skorpionien",
@@ -45,6 +47,10 @@
     ],
     [
       "metallien",
+      6
+    ],
+    [
+      "miten",
       6
     ]
   ]
