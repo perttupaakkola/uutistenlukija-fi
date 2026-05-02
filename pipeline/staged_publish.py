@@ -248,6 +248,28 @@ def load_outbox(max_items: int) -> list[tuple[Path, dict]]:
     return out
 
 
+def quarantine_rejected_outbox(items: list[tuple[Path, dict]], rejected_articles: list[dict]) -> int:
+    """Move quality-gate rejects out of outbox so one bad draft cannot block publishing."""
+    rejected_ids = {id(article) for article in rejected_articles}
+    moved = 0
+    for path, data in items:
+        article = data.get("article")
+        if id(article) not in rejected_ids:
+            continue
+        data["quality_gate_rejected_at"] = datetime.now(timezone.utc).isoformat()
+        data["quality_gate_rejected"] = True
+        target = STAGED_ROOT / "failed" / path.name
+        # Preserve any existing failed artifact rather than overwriting evidence.
+        if target.exists():
+            target = STAGED_ROOT / "failed" / f"{path.stem}_{int(time.time())}{path.suffix}"
+        atomic_write_json(target, data)
+        path.unlink(missing_ok=True)
+        moved += 1
+    if moved:
+        log(f"publish: quarantined quality-gate rejects moved={moved}")
+    return moved
+
+
 def refresh_static_status() -> None:
     """Regenerate public status artifacts after staged publish changes.
 
@@ -317,10 +339,12 @@ def cmd_publish(args: argparse.Namespace) -> int:
         return 0
     articles = [data["article"] for _, data in items]
     gate = run_quality_gate(articles)
+    if not args.dry_run:
+        quarantine_rejected_outbox(items, gate.rejected)
     articles = gate.passed
     if not articles:
         log(f"publish: all articles rejected by quality gate rejected={len(gate.rejected)}")
-        return 1
+        return 0
     articles = check_published_duplicates(articles, window_hours=args.dedup_window)
     articles = dedup_within_batch(articles)
     if not articles:
