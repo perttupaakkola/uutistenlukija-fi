@@ -39,7 +39,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/science/2026/05/scorpions-go-terminator-mode-and-reinforce-their-weapons-with-metal/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
