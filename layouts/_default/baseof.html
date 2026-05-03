@@ -39,14 +39,15 @@
   {{ if and .IsPage (ne .RelPermalink "/haku/") }}<link id="article-stylesheet" rel="stylesheet" href="/css/article.css" media="print" onload="this.onload=null;this.media='all'">{{ end }}
   {{ if or .IsSection (eq .Kind "term") (eq .Kind "taxonomy") }}<link id="category-stylesheet" rel="stylesheet" href="/css/category.css" media="print" onload="this.onload=null;this.media='all'">{{ end }}
   {{ if eq .RelPermalink "/haku/" }}<link id="search-stylesheet" rel="stylesheet" href="/css/search.css" media="print" onload="this.onload=null;this.media='all'">{{ end }}
-  <link id="portal-overhaul" rel="stylesheet" href="{{ "css/portal-overhaul.css" | relURL }}">
+  {{- $portalCssVersion := getenv "HUGO_PORTAL_CSS_VERSION" | default (now.Unix) -}}
+  <link id="portal-overhaul" rel="stylesheet" href="{{ "css/portal-overhaul.css" | relURL }}?v={{ $portalCssVersion }}">
   <noscript>
     <link rel="stylesheet" href="/css/style.css">
     {{ if .IsHome }}<link rel="stylesheet" href="/css/homepage-polish.css">{{ end }}
     {{ if and .IsPage (ne .RelPermalink "/haku/") }}<link rel="stylesheet" href="/css/article.css">{{ end }}
     {{ if or .IsSection (eq .Kind "term") (eq .Kind "taxonomy") }}<link rel="stylesheet" href="/css/category.css">{{ end }}
     {{ if eq .RelPermalink "/haku/" }}<link rel="stylesheet" href="/css/search.css">{{ end }}
-    <link rel="stylesheet" href="{{ "css/portal-overhaul.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/portal-overhaul.css" | relURL }}?v={{ $portalCssVersion }}">
   </noscript>
   <script>
     (function() {
