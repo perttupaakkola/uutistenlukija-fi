@@ -1,39 +1,25 @@
 {{/*
-  hero-cluster.html — Homepage hero: 3-column broadsheet grid
-  Left:   "Uusimmat" text-only ticker (6 items)
-  Center: Lead story with image ABOVE text (no scrim)
-  Right:  "Toimittajan valinnat" sidebar (3 items with 1:1 thumbs)
+  hero-cluster.html — Rebuilt front-page lead package.
+  Goal: reference-style newspaper frame with a dominant lead story,
+  editors' picks stack, latest headlines rail, and a narrow top strip.
 
   Expects:
     .lead      — lead page
-    .followups — slice of follow-up pages (used in sidebar)
+    .followups — slice of follow-up pages
 */}}
 {{- $lead := .lead -}}
 {{- $followups := .followups | default (slice) -}}
 {{- if $lead -}}
 
-{{/* Collect seen permalinks to avoid duplication across columns */}}
-{{- $seen := slice $lead.Permalink -}}
-{{- range $followups -}}
-  {{- $seen = $seen | append .Permalink -}}
-{{- end -}}
-
-{{/* Ticker: 6 most recent articles not already shown */}}
 {{- $allPosts := where site.RegularPages "Section" "posts" -}}
 {{- $sorted := $allPosts.ByDate.Reverse -}}
-{{- $tickerItems := slice -}}
-{{- range $sorted -}}
-  {{- if and (not (in $seen .Permalink)) (lt (len $tickerItems) 6) -}}
-    {{- $tickerItems = $tickerItems | append . -}}
-    {{- $seen = $seen | append .Permalink -}}
-  {{- end -}}
-{{- end -}}
+{{- $seen := slice $lead.Permalink -}}
 
-{{/* Sidebar: use followups + fill from remaining unseen posts to get 3 items */}}
 {{- $sidebarItems := slice -}}
 {{- range $followups -}}
   {{- if lt (len $sidebarItems) 3 -}}
     {{- $sidebarItems = $sidebarItems | append . -}}
+    {{- if not (in $seen .Permalink) -}}{{- $seen = $seen | append .Permalink -}}{{- end -}}
   {{- end -}}
 {{- end -}}
 {{- range $sorted -}}
@@ -43,34 +29,43 @@
   {{- end -}}
 {{- end -}}
 
-<section class="hero-grid" aria-labelledby="hero-grid-title">
+{{- $toplineItems := slice -}}
+{{- range $sorted -}}
+  {{- if and (not (in $seen .Permalink)) (lt (len $toplineItems) 4) -}}
+    {{- $toplineItems = $toplineItems | append . -}}
+    {{- $seen = $seen | append .Permalink -}}
+  {{- end -}}
+{{- end -}}
 
-  {{/* ── LEFT: Uusimmat ticker ── */}}
-  <div class="hero-grid__ticker">
-    <h2 class="hero-grid__section-title">Uusimmat</h2>
-    <ul class="hero-ticker-list">
-      {{- range $tickerItems -}}
-      {{- $cat := index .Params.categories 0 | default "kotimaa" -}}
-      <li class="hero-ticker-item">
-        <a href="{{ .Permalink }}" class="hero-ticker-link" data-track="ticker_click">
-          <span class="hero-ticker-time">{{ .Date.Format "15:04" }}</span>
-          <span class="hero-ticker-cat hero-ticker-cat--{{ $cat | lower }}">{{ $cat }}</span>
-          <span class="hero-ticker-headline">{{ .Title }}</span>
-        </a>
-      </li>
-      {{- end -}}
-    </ul>
+{{- $latestItems := slice -}}
+{{- range $sorted -}}
+  {{- if and (not (in $seen .Permalink)) (lt (len $latestItems) 6) -}}
+    {{- $latestItems = $latestItems | append . -}}
+    {{- $seen = $seen | append .Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $cat := index $lead.Params.categories 0 | default "kotimaa" -}}
+{{- $hasHeroImage := $lead.Params.image -}}
+{{- $img := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) -}}
+{{- $thumb := $lead.Params.image_thumb | default $img -}}
+
+<section class="reference-front-package" aria-labelledby="reference-front-title">
+  {{- if $toplineItems -}}
+  <div class="reference-front-package__topline" aria-label="Nopea katsaus">
+    {{- range $toplineItems -}}
+    {{- $itemCat := index .Params.categories 0 | default "Uutiset" -}}
+    <article class="reference-front-package__topline-item">
+      <span class="reference-front-package__topline-cat">{{ $itemCat }}</span>
+      <h2 class="reference-front-package__topline-headline"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    </article>
+    {{- end -}}
   </div>
+  {{- end -}}
 
-  {{/* ── CENTER: Lead story ── */}}
-  <div class="hero-grid__lead">
-    {{- $cat := index $lead.Params.categories 0 | default "kotimaa" -}}
-    {{- $hasHeroImage := $lead.Params.image -}}
-    {{- $img := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) -}}
-    {{- $thumb := $lead.Params.image_thumb | default $img -}}
-
-    <article class="hero-lead-article{{ if not $hasHeroImage }} hero-lead-article--fallback{{ end }}">
-      <a href="{{ $lead.Permalink }}" class="hero-lead-image-link{{ if not $hasHeroImage }} hero-lead-image-link--fallback{{ end }}" data-track="hero_click"{{ if not $hasHeroImage }} aria-label="{{ $lead.Title }}"{{ end }}>
+  <div class="reference-front-package__grid">
+    <article class="reference-front-package__lead{{ if not $hasHeroImage }} reference-front-package__lead--fallback{{ end }}">
+      <a href="{{ $lead.Permalink }}" class="reference-front-package__lead-image{{ if not $hasHeroImage }} reference-front-package__lead-image--fallback{{ end }}" data-track="hero_click"{{ if not $hasHeroImage }} aria-label="{{ $lead.Title }}"{{ end }}>
         {{- $heroSrc := $thumb -}}
         {{- $heroSrcset := "" -}}
         {{- $avifSrcset := "" -}}
@@ -78,86 +73,91 @@
         {{- $isPexels := hasPrefix $img "https://images.pexels.com" -}}
         {{- if $isUnsplash -}}
           {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-          {{- $heroSrc = printf "%s%sw=900&h=506&fit=crop&fm=webp&q=85" $b $s -}}
-          {{- $heroSrcset = printf "%s%sw=480&h=270&fit=crop&fm=webp&q=80 480w, %s%sw=900&h=506&fit=crop&fm=webp&q=85 900w, %s%sw=1200&h=675&fit=crop&fm=webp&q=85 1200w" $b $s $b $s $b $s -}}
-          {{- $avifSrcset = printf "%s%sw=480&h=270&fit=crop&fm=avif&q=75 480w, %s%sw=900&h=506&fit=crop&fm=avif&q=80 900w, %s%sw=1200&h=675&fit=crop&fm=avif&q=80 1200w" $b $s $b $s $b $s -}}
+          {{- $heroSrc = printf "%s%sw=1200&h=700&fit=crop&fm=webp&q=85" $b $s -}}
+          {{- $heroSrcset = printf "%s%sw=640&h=420&fit=crop&fm=webp&q=80 640w, %s%sw=1200&h=700&fit=crop&fm=webp&q=85 1200w, %s%sw=1600&h=900&fit=crop&fm=webp&q=85 1600w" $b $s $b $s $b $s -}}
+          {{- $avifSrcset = printf "%s%sw=640&h=420&fit=crop&fm=avif&q=75 640w, %s%sw=1200&h=700&fit=crop&fm=avif&q=80 1200w, %s%sw=1600&h=900&fit=crop&fm=avif&q=80 1600w" $b $s $b $s $b $s -}}
         {{- else if $isPexels -}}
           {{- $b := $img -}}{{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-          {{- $heroSrc = printf "%s%sw=900&h=506&fit=crop" $b $s -}}
+          {{- $heroSrc = printf "%s%sw=1200&h=700&fit=crop" $b $s -}}
         {{- end -}}
         <picture>
-          {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width:640px) 100vw, 600px">{{ end -}}
-          {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width:640px) 100vw, 600px">{{ end -}}
+          {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width: 920px) 100vw, 760px">{{ end -}}
+          {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width: 920px) 100vw, 760px">{{ end -}}
           <img
             src="{{ $heroSrc }}"
             alt="{{ partial "image-alt.html" $lead }}"
-            class="hero-lead-img{{ if not $hasHeroImage }} hero-lead-img--fallback{{ end }}"
+            class="reference-front-package__lead-img{{ if not $hasHeroImage }} reference-front-package__lead-img--fallback{{ end }}"
             loading="eager"
             fetchpriority="high"
             decoding="async"
-            width="900" height="506"
+            width="1200" height="700"
             onload="this.classList.add('img-loaded')"
             onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}';this.classList.add('img-loaded')">
         </picture>
       </a>
-
-      <div class="hero-lead-body">
+      <div class="reference-front-package__lead-body">
         {{- if eq $lead.Params.layout "sponsored" -}}
         <span class="sponsored-label-pill">{{ $lead.Params.sponsor_label | default "Kaupallinen yhteistyö" }}</span>
         {{- end -}}
-        <span class="hero-lead-cat hero-lead-cat--{{ $cat | lower }}">{{ $cat }}</span>
-        <h2 id="hero-grid-title" class="hero-lead-title">
-          <a href="{{ $lead.Permalink }}" data-track="hero_click">{{ $lead.Title }}</a>
-        </h2>
+        <span class="reference-front-package__kicker">{{ $cat }}</span>
+        <h1 id="reference-front-title" class="reference-front-package__lead-title"><a href="{{ $lead.Permalink }}">{{ $lead.Title }}</a></h1>
         {{ with $lead.Params.description }}
-        <p class="hero-lead-excerpt">{{ . | truncate 200 }}</p>
+        <p class="reference-front-package__lead-deck">{{ . | truncate 210 }}</p>
         {{ end }}
-        <div class="hero-lead-meta">
+        <div class="reference-front-package__lead-meta">
           <span>{{ partial "relative-date.html" $lead }}</span>
           <span>{{ partial "reading-time.html" $lead }}</span>
         </div>
       </div>
     </article>
-  </div>
 
-  {{/* ── RIGHT: Toimittajan valinnat sidebar ── */}}
-  <div class="hero-grid__sidebar">
-    <h2 class="hero-grid__section-title">Toimittajan valinnat</h2>
-    {{- range $sidebarItems -}}
-    {{- $cat := index .Params.categories 0 | default "kotimaa" -}}
-    {{- $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) -}}
-    {{- $thumb := .Params.image_thumb | default $img -}}
-    <article class="hero-sidebar-card">
-      <a href="{{ .Permalink }}" class="hero-sidebar-thumb-link" data-track="sidebar_click">
-        {{- $sbSrc := $thumb -}}
-        {{- if hasPrefix $img "https://images.unsplash.com" -}}
-          {{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-          {{- $sbSrc = printf "%s%sw=120&h=120&fit=crop&fm=webp&q=80" $img $s -}}
-        {{- else if hasPrefix $img "https://images.pexels.com" -}}
-          {{- $s := "?" -}}{{- if in $img "?" -}}{{- $s = "&" -}}{{- end -}}
-          {{- $sbSrc = printf "%s%sw=120&h=120&fit=crop" $img $s -}}
-        {{- end -}}
-        <img
-          src="{{ $sbSrc }}"
-          alt="{{ partial "image-alt.html" . }}"
-          class="hero-sidebar-thumb"
-          loading="lazy"
-          width="80" height="80"
-          onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
-      </a>
-      <div class="hero-sidebar-card-body">
-        {{- if eq .Params.layout "sponsored" -}}
-        <span class="sponsored-label-pill">{{ .Params.sponsor_label | default "Kaupallinen yhteistyö" }}</span>
-        {{- end -}}
-        <span class="hero-sidebar-cat hero-sidebar-cat--{{ $cat | lower }}">{{ $cat }}</span>
-        <h3 class="hero-sidebar-headline">
-          <a href="{{ .Permalink }}" data-track="sidebar_click">{{ .Title }}</a>
-        </h3>
-        <span class="hero-sidebar-source">{{ partial "relative-date.html" . }}</span>
-      </div>
-    </article>
-    {{- end -}}
-  </div>
+    <div class="reference-front-package__side">
+      <section class="reference-front-package__editors" aria-labelledby="reference-editors-picks">
+        <div class="reference-module-heading">
+          <h2 id="reference-editors-picks">Poiminnat</h2>
+          <p>Toimituksen valitsema jatkoluku.</p>
+        </div>
+        <div class="reference-front-package__editors-list">
+          {{- range $sidebarItems -}}
+          {{- $itemCat := index .Params.categories 0 | default "kotimaa" -}}
+          {{- $itemImg := .Params.image | default (printf "/images/categories/%s.jpg" ($itemCat | lower)) -}}
+          {{- $itemThumb := .Params.image_thumb | default $itemImg -}}
+          <article class="reference-front-package__editor-card">
+            <a href="{{ .Permalink }}" class="reference-front-package__editor-thumb">
+              <img src="{{ $itemThumb }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="300" height="200" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($itemCat | lower) }}'">
+            </a>
+            <div class="reference-front-package__editor-body">
+              <span class="reference-front-package__editor-kicker">{{ $itemCat }}</span>
+              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+              {{ with .Params.description }}<p>{{ . | truncate 120 }}</p>{{ end }}
+              <span class="reference-front-package__editor-meta">{{ partial "relative-date.html" . }}</span>
+            </div>
+          </article>
+          {{- end -}}
+        </div>
+      </section>
 
+      <section class="reference-front-package__latest" aria-labelledby="reference-latest">
+        <div class="reference-module-heading">
+          <h2 id="reference-latest">Uusimmat</h2>
+          <p>Nopea näkymä päivän uutisvirtaan.</p>
+        </div>
+        <ol class="reference-front-package__latest-list">
+          {{- range $latestItems -}}
+          {{- $itemCat := index .Params.categories 0 | default "Uutiset" -}}
+          <li class="reference-front-package__latest-item">
+            <a href="{{ .Permalink }}" class="reference-front-package__latest-link" data-track="ticker_click">
+              <span class="reference-front-package__latest-time">{{ .Date.Format "15:04" }}</span>
+              <div class="reference-front-package__latest-body">
+                <span class="reference-front-package__latest-cat">{{ $itemCat }}</span>
+                <span class="reference-front-package__latest-headline">{{ .Title }}</span>
+              </div>
+            </a>
+          </li>
+          {{- end -}}
+        </ol>
+      </section>
+    </div>
+  </div>
 </section>
 {{- end -}}

@@ -1,37 +1,80 @@
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
 {{ $heading := partial "category-heading.html" . }}
-<div class="category-header">
-  <h1>{{ $heading }}</h1>
-  {{ with .Description }}<p class="category-description">{{ . }}</p>{{ end }}
-</div>
-
 {{ $paginator := .Paginate (.Pages.ByDate.Reverse) 20 }}
 
-{{ if gt (len $paginator.Pages) 0 }}
-<div class="articles-grid" id="articles-grid">
-  {{ range $paginator.Pages }}
-  {{ $cat := index .Params.categories 0 | default "kotimaa" }}
-  {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
-  <article class="article-card">
-    {{ partial "card-image.html" (dict "img" $img "thumb" $img "context" . "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
-    {{ partial "category-badge.html" (dict "category" $cat "link" true) }}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p class="excerpt">{{ .Summary | truncate 200 }}</p>
-    <div class="meta">
-      {{ partial "relative-date.html" . }}
-      · <span class="author-inline">Toimitus</span>
+<section class="reference-list-shell">
+  <header class="reference-list-shell__header">
+    <span class="reference-list-shell__eyebrow">Kategoria</span>
+    <h1>{{ $heading }}</h1>
+    {{ with .Description }}<p class="reference-list-shell__deck">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ if gt (len $paginator.Pages) 0 }}
+    {{ $feature := index $paginator.Pages 0 }}
+    {{ $rest := after 1 $paginator.Pages }}
+    {{ $featureCat := index $feature.Params.categories 0 | default "kotimaa" }}
+    {{ $featureImg := $feature.Params.image | default (printf "/images/categories/%s.jpg" ($featureCat | lower)) }}
+    {{ $featureThumb := $feature.Params.image_thumb | default $featureImg }}
+
+    <article class="reference-list-shell__feature">
+      <div class="reference-list-shell__feature-media">
+        {{ partial "card-image.html" (dict "img" $featureImg "thumb" $featureThumb "context" $feature "eager" true "hero" true "permalink" $feature.Permalink "fallback" (printf "/images/categories/%s.jpg" ($featureCat | lower))) }}
+      </div>
+      <div class="reference-list-shell__feature-body">
+        <span class="reference-list-shell__feature-kicker">{{ $featureCat }}</span>
+        <h2><a href="{{ $feature.Permalink }}">{{ $feature.Title }}</a></h2>
+        <p>{{ $feature.Summary | truncate 220 }}</p>
+        <div class="reference-list-shell__feature-meta">
+          <span>{{ partial "relative-date.html" $feature }}</span>
+          <span>{{ partial "reading-time.html" $feature }}</span>
+        </div>
+      </div>
+    </article>
+
+    {{ if $rest }}
+    <div class="reference-list-shell__grid">
+      {{ range first 6 $rest }}
+      {{ $cat := index .Params.categories 0 | default "kotimaa" }}
+      {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+      <article class="reference-list-shell__card article-card">
+        {{ partial "card-image.html" (dict "img" $img "thumb" $img "context" . "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+        <span class="reference-list-shell__card-kicker">{{ $cat }}</span>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p class="excerpt">{{ .Summary | truncate 140 }}</p>
+        <div class="reference-list-shell__card-meta">
+          <span>{{ partial "relative-date.html" . }}</span>
+          <span>Toimitus</span>
+        </div>
+      </article>
+      {{ end }}
     </div>
+    {{ end }}
+
+    {{ if gt (len $rest) 6 }}
+    <div class="reference-list-shell__river" aria-label="Lisää artikkeleita">
+      {{ range after 6 $rest }}
+      {{ $cat := index .Params.categories 0 | default "kotimaa" }}
+      <article class="reference-list-shell__river-item">
+        <span class="reference-list-shell__river-kicker">{{ $cat }}</span>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary | truncate 170 }}</p>
+        <div class="reference-list-shell__river-meta">
+          <span>{{ partial "relative-date.html" . }}</span>
+          <span>{{ partial "reading-time.html" . }}</span>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ partial "pagination.html" (dict "Paginator" $paginator) }}
+  {{ else }}
+  <article class="reference-list-shell__empty single-article empty-state">
+    <h2>Tässä kategoriassa ei ole vielä artikkeleita</h2>
+    <p>Kokeile hetken päästä uudelleen tai selaa muita osioita.</p>
+    <p><a href="/">Etusivu</a> · <a href="/haku/">Haku</a> · <a href="/categories/">Kaikki kategoriat</a></p>
   </article>
   {{ end }}
-</div>
-
-{{ partial "pagination.html" (dict "Paginator" $paginator) }}
-{{ else }}
-<article class="single-article empty-state">
-  <h2>Tässä kategoriassa ei ole vielä artikkeleita</h2>
-  <p>Kokeile hetken päästä uudelleen tai selaa muita osioita.</p>
-  <p><a href="/">Etusivu</a> · <a href="/haku/">Haku</a> · <a href="/categories/">Kaikki kategoriat</a></p>
-</article>
-{{ end }}
+</section>
 {{ end }}

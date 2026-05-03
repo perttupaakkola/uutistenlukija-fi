@@ -1,49 +1,60 @@
 {{ define "main" }}
 {{ partial "reading-progress.html" . }}
-<article class="single-article">
+<article class="single-article reference-article-shell">
   {{ partial "breadcrumbs.html" . }}
-  {{ partial "hero-image.html" . }}
-  {{ with .Params.content_type }}
-  <span class="article-badge article-badge--{{ . | urlize }}">{{ . }}</span>
-  {{ end }}
-  {{ with .Params.categories }}
-  {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
-  {{ end }}
-  <h1>{{ .Title }}</h1>
-  
-  {{- /* Related topic chips for better discovery */ -}}
-  {{ partial "related-topic-chips.html" . }}
 
-  {{ partial "article-body.html" (dict
-    "page" .
-    "showSummaryBullets" true
-    "showSummary" true
-    "showKeyFacts" true
-    "showToc" true
-    "metaVariant" "single"
-    "showShareTop" true
-    "showSource" true
-    "splitParagraphs" true
-    "showInArticleAd" true
-    "showJournalistNote" true
-    "showTrustNote" true
-    "showAfterArticleAd" true
-    "showNewsletter" true
-    "showAuthorBox" true
-    "showBottomShare" true
-  ) }}
+  <header class="reference-article-shell__header">
+    <div class="reference-article-shell__header-main">
+      {{ with .Params.content_type }}
+      <span class="article-badge article-badge--{{ . | urlize }}">{{ . }}</span>
+      {{ end }}
+      {{ with .Params.categories }}
+      {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
+      {{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}
+      <p class="reference-article-shell__deck">{{ . }}</p>
+      {{ end }}
+      {{ partial "related-topic-chips.html" . }}
+    </div>
+    <div class="reference-article-shell__header-media">
+      {{ partial "hero-image.html" . }}
+    </div>
+  </header>
 
-  {{ partial "related-articles.html" . }}
-  {{ partial "advertiser-cta.html" (dict "placement" "article-bottom" "page" .) }}
-  {{ partial "more-from-category.html" . }}
-  {{ partial "most-read.html" . }}
+  <div class="reference-article-shell__content-wrap">
+    <div class="reference-article-shell__content-main">
+      {{ partial "article-body.html" (dict
+        "page" .
+        "showSummaryBullets" true
+        "showSummary" true
+        "showKeyFacts" true
+        "showToc" true
+        "metaVariant" "single"
+        "showShareTop" true
+        "showSource" true
+        "splitParagraphs" true
+        "showInArticleAd" true
+        "showJournalistNote" true
+        "showTrustNote" true
+        "showAfterArticleAd" true
+        "showNewsletter" true
+        "showAuthorBox" true
+        "showBottomShare" true
+      ) }}
+    </div>
+  </div>
+
+  <div class="reference-article-shell__below">
+    {{ partial "related-articles.html" . }}
+    {{ partial "advertiser-cta.html" (dict "placement" "article-bottom" "page" .) }}
+    {{ partial "more-from-category.html" . }}
+    {{ partial "most-read.html" . }}
+  </div>
 </article>
 
-{{/* #19.3: Read next — prominent next-article card */}}
 {{ partial "read-next.html" . }}
 
-{{/* Article prev/next navigation */}}
-{{ $section := .CurrentSection }}
 <nav class="article-nav" aria-label="Artikkelinavigointi">
   {{ with .PrevInSection }}
   <a href="{{ .Permalink }}" class="article-nav-prev" rel="prev">
@@ -65,7 +76,7 @@
 (function () {
   var VIEWS_KEY    = 'ul_views_v1';
   var PROGRESS_KEY = 'ul_progress_v1';
-  var TTL_MS       = 30 * 24 * 60 * 60 * 1000; // 30 days for progress
+  var TTL_MS       = 30 * 24 * 60 * 60 * 1000;
   var VIEWS_TTL    = 7  * 24 * 60 * 60 * 1000;
   var slug  = {{ .Params.slug | default (.File.BaseFileName) | jsonify }};
   var title = {{ .Title | jsonify }};
@@ -73,7 +84,6 @@
   var image = {{ with .Params.image }}{{ . | jsonify }}{{ else }}""{{ end }};
   var now   = Date.now();
 
-  // ── Reading progress bar ──────────────────────────────────
   var progressBar = document.getElementById('reading-progress');
   var backToTop   = document.getElementById('back-to-top');
   var _lastSavedPct = 0;
@@ -87,14 +97,13 @@
   }
 
   function saveProgress(pct) {
-    if (Math.abs(pct - _lastSavedPct) < 2) return; // debounce tiny changes
+    if (Math.abs(pct - _lastSavedPct) < 2) return;
     _lastSavedPct = pct;
     try {
       var store = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
       if (pct >= 10 && pct <= 90) {
         store[slug] = { pct: Math.round(pct), title: title, url: url, image: image, ts: now };
       } else if (pct > 90) {
-        // Fully read — remove from continue-reading
         delete store[slug];
       }
       localStorage.setItem(PROGRESS_KEY, JSON.stringify(store));
@@ -114,13 +123,11 @@
     });
   }
 
-  // ── Resume scroll position if #resume hash ───────────────
   if (window.location.hash === '#resume') {
     try {
       var pstore = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
       var saved  = pstore[slug];
       if (saved && saved.pct > 0) {
-        // Wait for images/layout to settle before jumping
         window.addEventListener('load', function () {
           var docHeight = document.documentElement.scrollHeight - window.innerHeight;
           var target    = Math.round((saved.pct / 100) * docHeight);
@@ -130,7 +137,6 @@
     } catch (e) {}
   }
 
-  // ── View counter ──────────────────────────────────────────
   try {
     var vstore = JSON.parse(localStorage.getItem(VIEWS_KEY) || '{}');
     Object.keys(vstore).forEach(function (k) {

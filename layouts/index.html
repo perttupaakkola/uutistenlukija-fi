@@ -20,7 +20,6 @@
 {{ $candidatePool := first 24 $sorted }}
 {{ $breakingPool := where $candidatePool ".Params.breaking" true }}
 
-{{/* Build lightweight frequency maps from the freshest story window. */}}
 {{ range $candidatePool }}
   {{ $cat := lower (index .Params.categories 0 | default "kotimaa") }}
   {{ $source := lower (.Params.source_domain | default .Params.source | default .Params.source_url | default .Site.BaseURL) }}
@@ -28,33 +27,24 @@
   {{ $leadScratch.Add (printf "source:%s" $source) 1 }}
 {{ end }}
 
-{{/* Score hero candidates. Weights: recency 0.4, source diversity 0.2, category balance 0.2, image quality 0.2. */}}
 {{ $leadCandidates := slice }}
 {{ range $candidatePool }}
   {{ $cat := lower (index .Params.categories 0 | default "kotimaa") }}
   {{ $source := lower (.Params.source_domain | default .Params.source | default .Params.source_url | default .Site.BaseURL) }}
   {{ $hoursAgo := math.Div (math.Sub $nowUnix .Date.Unix) 3600.0 }}
   {{ $recencyScore := math.Max 0.0 (math.Sub 1.0 (math.Div $hoursAgo 48.0)) }}
-
   {{ $sourceCount := $leadScratch.Get (printf "source:%s" $source) | default 1 }}
   {{ $sourcePenalty := math.Mul (math.Sub $sourceCount 1) 0.2 }}
   {{ $sourceDiversityScore := math.Max 0.2 (math.Sub 1.0 $sourcePenalty) }}
-
   {{ $categoryCount := $leadScratch.Get (printf "cat:%s" $cat) | default 1 }}
   {{ $categoryPenalty := math.Mul (math.Sub $categoryCount 1) 0.15 }}
   {{ $categoryBalanceScore := math.Max 0.2 (math.Sub 1.0 $categoryPenalty) }}
-
   {{ $imageScore := 0.15 }}
   {{ if .Params.image }}
     {{ $imageScore = 0.65 }}
-    {{ if .Params.image_thumb }}
-      {{ $imageScore = 0.85 }}
-    {{ end }}
-    {{ if and .Params.image_alt (or .Params.image_credit .Params.image_source_url) }}
-      {{ $imageScore = 1 }}
-    {{ end }}
+    {{ if .Params.image_thumb }}{{ $imageScore = 0.85 }}{{ end }}
+    {{ if and .Params.image_alt (or .Params.image_credit .Params.image_source_url) }}{{ $imageScore = 1 }}{{ end }}
   {{ end }}
-
   {{ $score := math.Add (math.Add (math.Mul $recencyScore 0.4) (math.Mul $sourceDiversityScore 0.2)) (math.Add (math.Mul $categoryBalanceScore 0.2) (math.Mul $imageScore 0.2)) }}
   {{ $leadCandidates = $leadCandidates | append (dict "page" . "score" $score) }}
 {{ end }}
@@ -67,138 +57,132 @@
   {{ $lead = (index $leadRanked 0).page }}
 {{ end }}
 {{ $leadCategory := "kotimaa" }}
-{{ with $lead }}
-  {{ $leadCategory = lower (index .Params.categories 0 | default "kotimaa") }}
-{{ end }}
+{{ with $lead }}{{ $leadCategory = lower (index .Params.categories 0 | default "kotimaa") }}{{ end }}
 
-<h1 class="visually-hidden">Uutistenlukija — kotimaan ja maailman uutiset</h1>
+<div class="reference-front-shell">
+  <h1 class="visually-hidden">Uutistenlukija — kotimaan ja maailman uutiset</h1>
+  <span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
 
-<span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
-
-{{ $followups := slice }}
-{{ $followCats := slice $leadCategory }}
-{{ range $leadRanked }}
-  {{ $p := .page }}
-  {{ $pCat := lower (index $p.Params.categories 0 | default "kotimaa") }}
-  {{ if and $lead (ne $p.Permalink $lead.Permalink) (not (in $followCats $pCat)) (lt (len $followups) 2) }}
-    {{ $followups = $followups | append $p }}
-    {{ $followCats = $followCats | append $pCat }}
-  {{ end }}
-{{ end }}
-{{ $followSeen := slice }}
-{{ range $followups }}
-  {{ $followSeen = $followSeen | append .Permalink }}
-{{ end }}
-{{ if lt (len $followups) 2 }}
+  {{ $followups := slice }}
+  {{ $followCats := slice $leadCategory }}
   {{ range $leadRanked }}
     {{ $p := .page }}
-    {{ if and $lead (ne $p.Permalink $lead.Permalink) (not (in $followSeen $p.Permalink)) (lt (len $followups) 2) }}
+    {{ $pCat := lower (index $p.Params.categories 0 | default "kotimaa") }}
+    {{ if and $lead (ne $p.Permalink $lead.Permalink) (not (in $followCats $pCat)) (lt (len $followups) 2) }}
       {{ $followups = $followups | append $p }}
-      {{ $followSeen = $followSeen | append $p.Permalink }}
+      {{ $followCats = $followCats | append $pCat }}
     {{ end }}
   {{ end }}
-{{ end }}
-
-{{ partial "hero-cluster.html" (dict "lead" $lead "followups" $followups) }}
-{{ with $lead }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
-{{ range $followups }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
-
-{{ $briefPool := where $sorted "Permalink" "not in" $seen }}
-{{ $briefingItems := first 5 $briefPool }}
-{{ partial "quick-briefing.html" (dict "items" $briefingItems) }}
-{{ range $briefingItems }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
-
-{{ $trending := slice }}
-{{ $trendingCats := slice }}
-{{ range $sorted }}
-  {{ $cat := lower (index .Params.categories 0 | default "uutiset") }}
-  {{ if and (not (in $seen .Permalink)) (lt (len $trending) 4) (not (in $trendingCats $cat)) }}
-    {{ $trending = $trending | append . }}
-    {{ $trendingCats = $trendingCats | append $cat }}
-  {{ end }}
-{{ end }}
-{{ if $trending }}
-  {{ range $trending }}
-    {{ $seen = $seen | append .Permalink }}
-  {{ end }}
-{{ end }}
-{{ partial "trending.html" (dict "items" $trending) }}
-
-{{ $lyhyetItems := first 5 (where $sorted "Permalink" "not in" $seen) }}
-{{ partial "lyhyet.html" (dict "Site" .Site "exclude" $seen "limit" 5) }}
-{{ range $lyhyetItems }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
-
-{{/* Category sections ordered by freshest story in the last 24h. */}}
-{{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
-{{ $categoryRank := slice }}
-{{ range $cat := $categories }}
-  {{ $freshPool := slice }}
-  {{ range where $sorted ".Params.categories" "intersect" (slice $cat) }}
-    {{ if ge .Date.Unix $dayAgoUnix }}
-      {{ $freshPool = $freshPool | append . }}
+  {{ $followSeen := slice }}
+  {{ range $followups }}{{ $followSeen = $followSeen | append .Permalink }}{{ end }}
+  {{ if lt (len $followups) 2 }}
+    {{ range $leadRanked }}
+      {{ $p := .page }}
+      {{ if and $lead (ne $p.Permalink $lead.Permalink) (not (in $followSeen $p.Permalink)) (lt (len $followups) 2) }}
+        {{ $followups = $followups | append $p }}
+        {{ $followSeen = $followSeen | append $p.Permalink }}
+      {{ end }}
     {{ end }}
   {{ end }}
-  {{ if gt (len $freshPool) 0 }}
-    {{ $categoryRank = $categoryRank | append (dict "name" $cat "latestUnix" ((index $freshPool 0).Date.Unix) "freshPool" $freshPool) }}
-  {{ end }}
-{{ end }}
 
-{{ $spotlights := first 3 (sort $categoryRank "latestUnix" "desc") }}
-{{ if $spotlights }}
-<section class="category-spotlights" aria-labelledby="category-spotlights-title">
-  <div class="category-spotlights__heading">
-    <h2 id="category-spotlights-title" class="category-spotlights__title">Kategoriat nyt</h2>
-  </div>
-  {{ range $spotlights }}
-    {{ $cat := .name }}
-    {{ $pool := .freshPool }}
-    {{ $catPosts := $pool }}
-    {{ if $catPosts }}
-    <section class="category-section category-section--spotlight" id="cat-{{ $cat | lower | urlize }}">
-      <div class="category-section-header">
-        <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
-        {{ if gt (len $pool) 3 }}
-        <a href="/categories/{{ $cat | urlize }}/" class="see-all">Kaikki {{ $cat | lower }} →</a>
-        {{ end }}
+  {{ partial "hero-cluster.html" (dict "lead" $lead "followups" $followups) }}
+  {{ with $lead }}{{ $seen = $seen | append .Permalink }}{{ end }}
+  {{ range $followups }}{{ $seen = $seen | append .Permalink }}{{ end }}
+
+  {{ $briefPool := where $sorted "Permalink" "not in" $seen }}
+  {{ $briefingItems := first 5 $briefPool }}
+  <section class="reference-front-shell__briefing">
+    {{ partial "quick-briefing.html" (dict "items" $briefingItems) }}
+  </section>
+  {{ range $briefingItems }}{{ $seen = $seen | append .Permalink }}{{ end }}
+
+  {{ $trending := slice }}
+  {{ $trendingCats := slice }}
+  {{ range $sorted }}
+    {{ $cat := lower (index .Params.categories 0 | default "uutiset") }}
+    {{ if and (not (in $seen .Permalink)) (lt (len $trending) 4) (not (in $trendingCats $cat)) }}
+      {{ $trending = $trending | append . }}
+      {{ $trendingCats = $trendingCats | append $cat }}
+    {{ end }}
+  {{ end }}
+  {{ if $trending }}{{ range $trending }}{{ $seen = $seen | append .Permalink }}{{ end }}{{ end }}
+  {{ $lyhyetItems := first 5 (where $sorted "Permalink" "not in" $seen) }}
+
+  <section class="reference-front-shell__newsgrid">
+    <div class="reference-front-shell__newsgrid-primary">
+      {{ partial "trending.html" (dict "items" $trending) }}
+    </div>
+    <div class="reference-front-shell__newsgrid-secondary">
+      {{ partial "lyhyet.html" (dict "Site" .Site "exclude" $seen "limit" 5) }}
+    </div>
+  </section>
+  {{ range $lyhyetItems }}{{ $seen = $seen | append .Permalink }}{{ end }}
+
+  {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
+  {{ $categoryRank := slice }}
+  {{ range $cat := $categories }}
+    {{ $freshPool := slice }}
+    {{ range where $sorted ".Params.categories" "intersect" (slice $cat) }}
+      {{ if ge .Date.Unix $dayAgoUnix }}{{ $freshPool = $freshPool | append . }}{{ end }}
+    {{ end }}
+    {{ if gt (len $freshPool) 0 }}
+      {{ $categoryRank = $categoryRank | append (dict "name" $cat "latestUnix" ((index $freshPool 0).Date.Unix) "freshPool" $freshPool) }}
+    {{ end }}
+  {{ end }}
+
+  {{ $spotlights := first 3 (sort $categoryRank "latestUnix" "desc") }}
+  {{ if $spotlights }}
+  <section class="reference-topic-mosaic" aria-labelledby="reference-topic-mosaic-title">
+    <div class="reference-section-heading">
+      <div>
+        <h2 id="reference-topic-mosaic-title">Kategoriat nyt</h2>
+        <p>Tuoreimmat aiheet rakennettu uudeksi uutisrungoksi.</p>
       </div>
-      <div class="category-articles">
-        {{ range first 3 $catPosts }}
-        {{ $seen = $seen | append .Permalink }}
-        {{ $cardCat := index .Params.categories 0 | default "kotimaa" }}
-        {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
-        {{ $cardThumb := .Params.image_thumb | default $cardImg }}
-        {{ $cardAlt := .Params.image_alt | default .Title }}
-        <article class="category-article-card">
-          {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "context" . "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cardCat | lower))) }}
-          {{ partial "category-badge.html" (dict "category" $cardCat "link" true) }}
-          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          <p class="excerpt">{{ .Summary | truncate 135 }}</p>
-          <div class="meta">
-            <span>{{ partial "relative-date.html" . }}</span>
-            <span>{{ partial "reading-time.html" . }}</span>
+    </div>
+    <div class="reference-topic-mosaic__grid">
+      {{ range $spotlights }}
+        {{ $cat := .name }}
+        {{ $pool := .freshPool }}
+        {{ $catPosts := $pool }}
+        {{ if $catPosts }}
+        {{ $leadPost := index $catPosts 0 }}
+        <section class="reference-topic-column" id="cat-{{ $cat | lower | urlize }}">
+          <div class="reference-topic-column__header">
+            <h3><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h3>
+            <a href="/categories/{{ $cat | urlize }}/" class="reference-topic-column__more">Kaikki →</a>
           </div>
-        </article>
+          <article class="reference-topic-column__lead">
+            {{ $leadCat := index $leadPost.Params.categories 0 | default "kotimaa" }}
+            {{ $leadImg := $leadPost.Params.image | default (printf "/images/categories/%s.jpg" ($leadCat | lower)) }}
+            {{ $leadThumb := $leadPost.Params.image_thumb | default $leadImg }}
+            {{ partial "card-image.html" (dict "img" $leadImg "thumb" $leadThumb "context" $leadPost "eager" false "hero" false "permalink" $leadPost.Permalink "fallback" (printf "/images/categories/%s.jpg" ($leadCat | lower))) }}
+            <span class="reference-topic-column__label">{{ $cat }}</span>
+            <h4><a href="{{ $leadPost.Permalink }}">{{ $leadPost.Title }}</a></h4>
+            <p>{{ $leadPost.Summary | truncate 140 }}</p>
+            <div class="reference-topic-column__meta">
+              <span>{{ partial "relative-date.html" $leadPost }}</span>
+              <span>{{ partial "reading-time.html" $leadPost }}</span>
+            </div>
+          </article>
+          <div class="reference-topic-column__list">
+            {{ range first 2 (after 1 $catPosts) }}
+            <article class="reference-topic-column__item">
+              <span class="reference-topic-column__item-time">{{ partial "relative-date.html" . }}</span>
+              <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+            </article>
+            {{ end }}
+          </div>
+        </section>
         {{ end }}
-      </div>
-    </section>
-    {{ end }}
+      {{ end }}
+    </div>
+  </section>
   {{ end }}
-</section>
-{{ end }}
 
-{{ partial "advertiser-cta.html" (dict "placement" "homepage" "page" .) }}
-
-{{/* Newsletter signup band */}}
-{{ partial "newsletter-band.html" (dict "variant" "homepage_digest") }}
-{{ partial "most-read.html" (dict "Site" .Site "exclude" $seen) }}
-{{ partial "continue-reading.html" . }}
-{{ partial "tag-cloud.html" . }}
+  {{ partial "advertiser-cta.html" (dict "placement" "homepage" "page" .) }}
+  {{ partial "newsletter-band.html" (dict "variant" "homepage_digest") }}
+  {{ partial "most-read.html" (dict "Site" .Site "exclude" $seen) }}
+  {{ partial "continue-reading.html" . }}
+  {{ partial "tag-cloud.html" . }}
+</div>
 {{ end }}
