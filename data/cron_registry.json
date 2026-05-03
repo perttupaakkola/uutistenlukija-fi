@@ -10,9 +10,9 @@
     "marker_file_path": "pipeline/logs/firehose_cron.log"
   },
   {
-    "name": "watchdog",
+    "name": "staged_scan",
     "expected_interval_hours": 0.167,
-    "marker_glob_path": "pipeline/logs/watchdog*.log"
+    "marker_file_path": "pipeline/logs/staged-scan.log"
   },
   {
     "name": "health_monitor",
@@ -71,8 +71,13 @@
     "marker_file_path": "pipeline/logs/metrics-cron.log"
   },
   {
-    "name": "auto_publish",
-    "expected_interval_hours": 0.167,
-    "marker_glob_path": "pipeline/logs/watchdog*.log"
+    "name": "staged_monica_worker",
+    "expected_interval_hours": 0.333,
+    "marker_file_path": "pipeline/logs/staged-monica-worker.log"
+  },
+  {
+    "name": "staged_publish",
+    "expected_interval_hours": 0.333,
+    "marker_file_path": "pipeline/logs/staged-publish.log"
   }
 ]
