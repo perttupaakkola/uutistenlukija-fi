@@ -18,8 +18,12 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from quarantine import save_writer_quarantine
-from story_packet import build_story_packet, ensure_queue_dirs, save_packet
+try:
+    from .quarantine import save_writer_quarantine
+    from .story_packet import build_story_packet, ensure_queue_dirs, save_packet
+except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
+    from quarantine import save_writer_quarantine
+    from story_packet import build_story_packet, ensure_queue_dirs, save_packet
 
 ALLOWED_CATEGORIES = {
     "Kotimaa",
@@ -305,6 +309,17 @@ def _looks_like_context_overflow(text: str) -> bool:
     return "context overflow" in lowered or "prompt too large for the model" in lowered
 
 
+def _dispatch_reason_code(error: BaseException | str) -> str:
+    text = str(error or "").lower()
+    if isinstance(error, FileNotFoundError) or "no such file or directory" in text or "checked path and candidates" in text:
+        return "cli_missing"
+    if isinstance(error, (subprocess.TimeoutExpired, TimeoutError)) or "timed out" in text or "timeout" in text:
+        return "timeout"
+    if _looks_like_context_overflow(text):
+        return "context_overflow"
+    return "dispatch_failed"
+
+
 def _run_openclaw_command(cmd: list[str]) -> str:
     try:
         result = subprocess.run(
@@ -314,6 +329,8 @@ def _run_openclaw_command(cmd: list[str]) -> str:
             timeout=int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", str(DEFAULT_TIMEOUT_SEC))),
             check=False,
         )
+    except subprocess.TimeoutExpired as e:
+        raise RuntimeError(f"Monica writer command timed out after {e.timeout} seconds") from e
     except FileNotFoundError as e:
         searched = ", ".join(OPENCLAW_CANDIDATES)
         raise RuntimeError(
@@ -428,7 +445,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                 try:
                     payload = _extract_json_object(repaired_raw)
                 except ValueError as e:
-                    save_writer_quarantine(packet, "dispatch_error", raw_response=repaired_raw, extra={"reason_code": "repair_json_parse_failed", "error": str(e), "stage": "repair_parse", "initial_payload": payload, "initial_issues": issues})
+                    save_writer_quarantine(packet, "dispatch_error", raw_response=repaired_raw, extra={"reason_code": "json_parse_failed", "error": str(e), "stage": "repair_parse", "initial_payload": payload, "initial_issues": issues})
                     print(f"[monica]   quarantine: dispatch_error ({e})")
                     continue
                 raw = repaired_raw
@@ -445,7 +462,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
             print(f"[monica]   ok: {written_article.get('title','')[:70]}")
 
         except Exception as e:
-            save_writer_quarantine(packet, "dispatch_error", raw_response=raw, extra={"reason_code": "monica_dispatch_exception", "error": str(e)})
+            save_writer_quarantine(packet, "dispatch_error", raw_response=raw, extra={"reason_code": _dispatch_reason_code(e), "error": str(e)})
             print(f"[monica]   quarantine: dispatch_error ({e})")
 
     if written:

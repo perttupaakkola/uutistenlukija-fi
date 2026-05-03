@@ -8,7 +8,14 @@ import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from monica_writer import OPENCLAW_CANDIDATES, _extract_json_object, rewrite_articles
+try:
+    from .monica_writer import OPENCLAW_CANDIDATES, _extract_json_object, rewrite_articles
+    PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
+    RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
+except ImportError:  # pragma: no cover - direct execution from pipeline cwd
+    from monica_writer import OPENCLAW_CANDIDATES, _extract_json_object, rewrite_articles
+    PATCH_TARGET = "monica_writer.subprocess.run"
+    RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
 
 SAMPLE_ARTICLE = {
@@ -110,7 +117,7 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertEqual(payload["content_type"], "article")
 
-    @patch("subprocess.run")
+    @patch(PATCH_TARGET)
     def test_rewrite_articles_valid_output(self, run_mock):
         run_mock.return_value = self._result(_good_payload())
 
@@ -122,7 +129,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertGreaterEqual(len(article["key_points"]), 2)
         self.assertIn("Hallitus valmistelee", article["content"])
 
-    @patch("subprocess.run")
+    @patch(PATCH_TARGET)
     def test_rewrite_articles_repairs_once(self, run_mock):
         broken_payload = {
             "packet_id": "abc",
@@ -143,7 +150,48 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(len(rewritten), 1)
         self.assertEqual(run_mock.call_count, 2)
 
-    @patch("subprocess.run")
+    @patch(RESOLVE_PATCH_TARGET, side_effect=FileNotFoundError("openclaw"))
+    def test_rewrite_articles_quarantine_cli_missing_has_reason_code(self, _resolve_mock):
+        rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+
+        self.assertEqual(rewritten, [])
+        quarantine_dir = os.path.join(self.tmpdir.name, "quarantine")
+        files = [name for name in os.listdir(quarantine_dir) if name.endswith(".json")]
+        self.assertEqual(len(files), 1)
+        with open(os.path.join(quarantine_dir, files[0]), encoding="utf-8") as f:
+            quarantine = json.load(f)
+        self.assertEqual(quarantine["reason"], "dispatch_error")
+        self.assertEqual(quarantine["extra"].get("reason_code"), "cli_missing")
+
+    @patch(PATCH_TARGET, side_effect=TimeoutError("timed out"))
+    def test_rewrite_articles_quarantine_timeout_has_reason_code(self, _run_mock):
+        rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+
+        self.assertEqual(rewritten, [])
+        quarantine_dir = os.path.join(self.tmpdir.name, "quarantine")
+        files = [name for name in os.listdir(quarantine_dir) if name.endswith(".json")]
+        self.assertEqual(len(files), 1)
+        with open(os.path.join(quarantine_dir, files[0]), encoding="utf-8") as f:
+            quarantine = json.load(f)
+        self.assertEqual(quarantine["reason"], "dispatch_error")
+        self.assertEqual(quarantine["extra"].get("reason_code"), "timeout")
+
+    @patch(PATCH_TARGET)
+    def test_rewrite_articles_quarantine_context_overflow_has_reason_code(self, run_mock):
+        run_mock.return_value = self._result("Context overflow: prompt too large for the model")
+
+        rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+
+        self.assertEqual(rewritten, [])
+        quarantine_dir = os.path.join(self.tmpdir.name, "quarantine")
+        files = [name for name in os.listdir(quarantine_dir) if name.endswith(".json")]
+        self.assertEqual(len(files), 1)
+        with open(os.path.join(quarantine_dir, files[0]), encoding="utf-8") as f:
+            quarantine = json.load(f)
+        self.assertEqual(quarantine["reason"], "dispatch_error")
+        self.assertEqual(quarantine["extra"].get("reason_code"), "context_overflow")
+
+    @patch(PATCH_TARGET)
     def test_rewrite_articles_quarantines_insufficient_confidence(self, run_mock):
         run_mock.return_value = self._result(json.dumps({"packet_id": "abc", "status": "INSUFFICIENT_CONFIDENCE", "reason": "source too thin"}))
 
@@ -153,7 +201,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertTrue(os.path.isdir(quarantine_dir))
         self.assertTrue(any(name.endswith(".json") for name in os.listdir(quarantine_dir)))
 
-    @patch("subprocess.run")
+    @patch(PATCH_TARGET)
     def test_rewrite_articles_quarantine_parse_failure_has_reason_code(self, run_mock):
         run_mock.return_value = self._result("openclaw progress {not-json}\nMonica failed to produce JSON")
 
@@ -169,7 +217,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(quarantine["extra"].get("reason_code"), "json_parse_failed")
         self.assertEqual(quarantine["extra"].get("stage"), "initial_parse")
 
-    @patch("subprocess.run")
+    @patch(PATCH_TARGET)
     def test_rewrite_articles_resets_local_session_on_context_overflow(self, run_mock):
         run_mock.side_effect = [
             self._result("Context overflow: prompt too large for the model. Try /reset (or /new) to start a fresh session."),
@@ -184,7 +232,7 @@ class MonicaWriterTests(unittest.TestCase):
         reset_cmd = run_mock.call_args_list[1].args[0]
         self.assertIn("/reset", reset_cmd)
 
-    @patch("subprocess.run")
+    @patch(PATCH_TARGET)
     def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):
         short_content = " ".join(["Sana"] * 180)
         short_payload = json.loads(_good_payload())

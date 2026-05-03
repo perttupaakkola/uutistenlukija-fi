@@ -9,7 +9,10 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from story_packet import ensure_queue_dirs
+try:
+    from .story_packet import ensure_queue_dirs
+except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
+    from story_packet import ensure_queue_dirs
 
 
 def save_writer_quarantine(packet: dict, reason: str, raw_response: str = "", extra: dict | None = None) -> Path:
