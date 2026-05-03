@@ -1,0 +1,257 @@
+{
+  "analytics": {
+    "ga4": {
+      "daily_traffic_log": {
+        "age_minutes": 961.4,
+        "exists": true,
+        "status": "error_seen"
+      },
+      "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
+      "status": "blocked_or_unknown",
+      "weekly_metrics_log": {
+        "age_minutes": 8161.4,
+        "exists": true,
+        "status": "error_seen"
+      }
+    },
+    "gsc": {
+      "ctr_gap_report": {
+        "age_minutes": 3896.6,
+        "data_source": "frontmatter_synthetic",
+        "generated_at": "2026-04-30T06:04:48.572602Z",
+        "source": "static/api/ctr-gap-report.json",
+        "total_gaps_found": 20
+      },
+      "fetch_log": {
+        "age_minutes": 991.4,
+        "exists": true,
+        "status": "error_seen"
+      },
+      "reason": "no local GSC export; CTR gap report uses frontmatter fallback",
+      "status": "blocked"
+    },
+    "source": "local public/static reports and pipeline/logs only; external analytics APIs not queried"
+  },
+  "category_drift": {
+    "alerts": [
+      "Talous: 9.5% (-10.5% under target 20%)",
+      "Tiede: 9.0% (+6.0% over target 3%)",
+      "Ulkomaat: 28.0% (+8.0% over target 20%)"
+    ],
+    "available": true,
+    "categories": [
+      {
+        "category": "Kotimaa",
+        "count": 499,
+        "delta": 4.2,
+        "pct": 29.2,
+        "status": "ok",
+        "target_pct": 25
+      },
+      {
+        "category": "Kulttuuri",
+        "count": 67,
+        "delta": -3.1,
+        "pct": 3.9,
+        "status": "ok",
+        "target_pct": 7
+      },
+      {
+        "category": "Talous",
+        "count": 162,
+        "delta": -10.5,
+        "pct": 9.5,
+        "status": "under",
+        "target_pct": 20
+      },
+      {
+        "category": "Teknologia",
+        "count": 196,
+        "delta": -3.5,
+        "pct": 11.5,
+        "status": "ok",
+        "target_pct": 15
+      },
+      {
+        "category": "Tiede",
+        "count": 154,
+        "delta": 6.0,
+        "pct": 9.0,
+        "status": "over",
+        "target_pct": 3
+      },
+      {
+        "category": "Ulkomaat",
+        "count": 479,
+        "delta": 8.0,
+        "pct": 28.0,
+        "status": "over",
+        "target_pct": 20
+      },
+      {
+        "category": "Urheilu",
+        "count": 153,
+        "delta": -1.1,
+        "pct": 8.9,
+        "status": "ok",
+        "target_pct": 10
+      }
+    ],
+    "generated_at": "2026-05-02T22:58:00.966609+00:00",
+    "source": "static/api/category-stats.json",
+    "total_articles": 1710
+  },
+  "content": {
+    "article_count_local": 1710,
+    "last_publish_age_minutes": 3.5,
+    "last_publish_at": "2026-05-02T22:57:59.123288Z",
+    "latest_article": {
+      "category": "Urheilu",
+      "slug": "2026-05-02-kimi-antonelli-ajoi-jalleen-paalulle-miamissa",
+      "title": "Kimi Antonelli ajoi jälleen paalulle Miamissa"
+    },
+    "published_last_24h_local": 12,
+    "source": "content/posts frontmatter"
+  },
+  "coordination": {
+    "items": {
+      "agent_health": {
+        "available": false
+      },
+      "autonomy_state": {
+        "available": false
+      },
+      "linear_cache": {
+        "available": false
+      },
+      "taskboard": {
+        "available": false
+      }
+    },
+    "source": "local placeholder files only; Linear API not queried"
+  },
+  "generated_at": "2026-05-02T23:01:27.242379Z",
+  "notes": [
+    "Generated from local files/logs only.",
+    "No external APIs queried; no credentials read or printed."
+  ],
+  "pipeline": {
+    "last_24h": {
+      "article_count": 5,
+      "failure": 144,
+      "runs_total": 153,
+      "skipped": 0,
+      "success": 9,
+      "top_error_reasons": [
+        {
+          "count": 144,
+          "reason": "No articles found after scan"
+        }
+      ]
+    },
+    "last_run_age_minutes": 1.3,
+    "last_run_article_count": 0,
+    "last_run_at": "2026-05-02T23:00:08.548622Z",
+    "last_run_success": false,
+    "metrics_rows_total": 200,
+    "published_status_snapshot": {
+      "articles": {
+        "attempted": 200,
+        "last_published_ts": "2026-05-02T22:57:59.123288+00:00",
+        "publish_rate": 1.5,
+        "published": 3,
+        "rejected": 27
+      },
+      "feeds": {
+        "disabled": 0,
+        "disabled_names": [],
+        "healthy": 38,
+        "stale": 0,
+        "stale_names": [],
+        "total": 38
+      },
+      "generated_at": "2026-05-02T22:58:00+00:00",
+      "hours": 24,
+      "is_stale": false,
+      "reject_reasons": {
+        "central unsourced number in ti": 27,
+        "keyword_stuffing": 9,
+        "language borderline Finnish si": 18,
+        "length under target (254 words": 9,
+        "length under target (264 words": 18,
+        "missing: image": 27,
+        "unsourced numbers": 27
+      },
+      "runs": {
+        "error": 0,
+        "ok": 1,
+        "skip": 7,
+        "total": 8
+      },
+      "stale_threshold_minutes": 90,
+      "status": "ok",
+      "trending": [
+        [
+          "aineiston",
+          27
+        ],
+        [
+          "kerro",
+          12
+        ],
+        [
+          "yhdysvaltain",
+          11
+        ],
+        [
+          "kuitenkaan",
+          10
+        ],
+        [
+          "iranin",
+          10
+        ]
+      ]
+    },
+    "source": "pipeline/logs/metrics.json plus static/public pipeline-status.json if present"
+  },
+  "queues": {
+    "queues": {
+      "monica/inbox": {
+        "count": 6558,
+        "newest_item_age_minutes": 10.4,
+        "oldest_item_age_minutes": 20978.5
+      },
+      "monica/outbox": {
+        "count": 1573,
+        "newest_item_age_minutes": 21.8,
+        "oldest_item_age_minutes": 20375.5
+      },
+      "monica/quarantine": {
+        "count": 4984,
+        "newest_item_age_minutes": 3.6,
+        "oldest_item_age_minutes": 20978.5
+      },
+      "staged/failed": {
+        "count": 81,
+        "newest_item_age_minutes": 55.9,
+        "oldest_item_age_minutes": 1874.2
+      },
+      "staged/published": {
+        "count": 8,
+        "newest_item_age_minutes": 72.9,
+        "oldest_item_age_minutes": 1533.0
+      },
+      "staged/ready": {
+        "count": 312,
+        "newest_item_age_minutes": 3.4,
+        "oldest_item_age_minutes": 1429.9
+      }
+    },
+    "source": "pipeline/queues/*.json file counts only"
+  },
+  "safe_public": true,
+  "schema_version": "1.0",
+  "site": "uutistenlukija.fi",
+  "status": "attention"
+}
