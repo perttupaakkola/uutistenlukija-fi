@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Oulun käräjäoikeus tuomitsi 29-vuotiaan miehen elinkautiseen murhasta ja törkeästä raiskauksesta vakavan väkivaltarikoksen jälkeen."
 summary: "Syyttäjä vaati miehelle tuomiota taposta, mutta oikeus tuomitsi hänet murhasta. Oulun käräjäoikeus on tuominnut Ahti Tapani Kvistin, 29, elinkautiseen vankeuteen murhasta ja törkeästä raiskauksesta. Kvist houkutteli tuntemansa naisen asunnolleen, pahoinpiteli häntä päähän ja kuristi pitkään. Sitten hän raiskasi tajuntansa menettäneen naisen."
 summary_bullets:
   - "Syyttäjä vaati miehelle tuomiota taposta, mutta oikeus tuomitsi hänet murhasta"

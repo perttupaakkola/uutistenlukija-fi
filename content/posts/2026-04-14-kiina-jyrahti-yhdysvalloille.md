@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Sanoman medioiden tekoälytyökalu johti virheelliseen Venäjä-tietoon drooniuutisessa, ja päätoimittajat pahoittelevat virhettä."
 summary: "IS seuraa tässä artikkelissa tilannetta Lähi-idässä."
 summary_bullets:
   - "IS seuraa tässä artikkelissa"

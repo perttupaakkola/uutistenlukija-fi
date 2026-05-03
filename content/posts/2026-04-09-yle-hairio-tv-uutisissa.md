@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Ylen alueuutisten jakeluhäiriö näytti Uudenmaan uutisia koko maassa, kun automaatiovika sotki torstain iltapäivälähetyksen."
 summary: "Ylen mukaan vika saatiin korjattua kesken lähetyksen. Yle kertoo häiriöstä tv-uutisissa. Yhtiö näytti alueellisten uutisten sijaan Uudenmaan uutisia torstaina iltapäivällä koko maassa. Ylen mukaan syynä tähän oli jakeluautomaatiossa ollut vika, joka saatiin korjattua kesken kello 15.50 alkaneen lähetyksen."
 summary_bullets:
   - "Ylen mukaan vika saatiin korjattua kesken lähetyksen"

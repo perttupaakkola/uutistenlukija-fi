@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Yhdysvaltain varapresidentti J. D. Vance tapasi paavi Leo XIV:n Vatikaanissa maahanmuuttoa ja Ukrainaa koskevien jännitteiden keskellä."
 summary: "Paavi Leo XIV on arvostellut Yhdysvaltojen harjoittamaa maahanmuuttopolitiikkaa ja sotaa Iranissa. Yhdysvaltain varapresidentti J. D. Vance otti kantaa paavi Leo XIV:n lausuntoon, jonka mukaan ”Kristuksen opetuslapset eivät koskaan ole niiden puolella, jotka kerran heiluttivat miekkaa ja tänään pudottavat pommeja”. Vance on itse katolinen. Se ei kuitenkaan estänyt häntä toteamasta konservatiiviselle yleisöllä Georgian yliopistolla, että katolisen kirkon johtaja on väärässä."
 summary_bullets:
   - "Paavi Leo XIV on arvostellut Yhdysvaltojen harjoittamaa maahanmuuttopolitiikkaa ja sotaa Iranissa"

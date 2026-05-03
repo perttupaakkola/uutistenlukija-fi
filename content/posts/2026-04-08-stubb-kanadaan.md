@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Presidentti Alexander Stubb matkustaa Ottawaan tapaamaan Kanadan johtoa ja keskustelemaan turvallisuudesta, taloudesta ja arktisesta yhteistyöstä."
 summary: "Tasavallan presidentti Alexander Stubbin mukana Kanadaan matkustaa laaja yritysdelegaatio. Tasavallan presidentti Alexander Stubb tekee työvierailun Kanadan Ottawaan tiistaina ja keskiviikkona 14.- 15. huhtikuuta. Stubbin keskustelee vierailun aikana Kanadan kenraalikuvernööri Mary Simonin, pääministeri Mark Carneyn ja edustajainhuoneen puhemiehen Francis Scarpaleggian kanssa."
 content_type: "article"
 editorial_reviewed: true

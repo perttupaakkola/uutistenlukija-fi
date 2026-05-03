@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Karhunkierroksen lähtö- ja päätepiste siirtyy Rukalta Saaruaan, kun Metsähallitus lyhentää reittiä turvallisuussyistä noin kilometrillä."
 summary: "Vaellusreitin lähtö- ja päätepiste siirretään Rukan kylästä Saaruaan. Metsähallitus perustelee siirtoa turvallisuudella."
 summary_bullets:
   - "Vaellusreitin lähtö- ja päätepiste siirretään Rukan kylästä Saaruaan"

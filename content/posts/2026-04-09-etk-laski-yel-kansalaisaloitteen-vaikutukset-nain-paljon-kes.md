@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Eläketurvakeskuksen laskelma arvioi YEL-kansalaisaloitteen nostavan monien yrittäjien työtuloa ja kasvattavan maksutuloa."
 summary: "Helmikuun lopulla julkistettu kansalaisaloite kasvattaisi YEL-maksuja merkittävällä osalla yrittäjistä. Tähän lopputulokseen Eläketurvakeskus (ETK) on päätynyt tuoreessa julkaisussaan. ”Loppu kohtuuttomille yel-maksuille!” -kansalaisaloite on saanut eduskuntakäsittelyyn vaaditut 50 000 allekirjoitusta. ETK:n mukaan YEL-vakuutettujen yrittäjien määrä pienenisi aloitteen toteutuessa noin 32 000 henkilöllä verrattuna nykylain mukaiseen tilanteeseen. YEL-maksutulo nousisi arviolta noin 11 prosenttia. Kansalaisaloitteen mukaisessa tilanteessa yrittäjän eläkemaksut […]"
 summary_bullets:
   - "Helmikuun lopulla julkistettu kansalaisaloite kasvattaisi YEL-maksuja merkittävällä osalla"

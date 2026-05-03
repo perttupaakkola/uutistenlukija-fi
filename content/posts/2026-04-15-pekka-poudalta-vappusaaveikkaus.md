@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Meteorologi Pekka Pouta arvioi vapun säätilannetta ja muistuttaa, että kevään ennuste tarkentuu vasta lähempänä juhlapäiviä."
 summary: "Meteorologi Pekka Pouta venytti katseensa jo vappuun ja paljasti \"vappusääveikkauksensa\""
 summary_bullets:
   - "Meteorologi Pekka Pouta venytti katseensa jo vappuun ja paljasti \"vappusääveikkauksensa\" Meteorologi Pekka Pouta"

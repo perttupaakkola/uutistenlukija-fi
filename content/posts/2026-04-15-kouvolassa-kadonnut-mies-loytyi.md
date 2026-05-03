@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Poliisi arvioi Rautalammin talopalossa kadonneen miehen menehtyneen palossa, kun raunioista löytyi viitteitä ihmisestä ja koirasta."
 summary: "Poliisi pyysi ilmoittamaan havainnot miehestä hätänumeroon."
 summary_bullets:
   - "Poliisi pyysi ilmoittamaan havainnot miehestä hätänumeroon"

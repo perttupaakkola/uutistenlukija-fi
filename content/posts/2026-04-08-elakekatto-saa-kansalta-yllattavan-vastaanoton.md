@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Keskustan kyselyn mukaan eläkekatolle löytyy laajaa kannatusta, kun enemmistö vastaajista tukee suurimpien eläkkeiden rajaamista."
 summary: "Keskusta ehdottaa eläkekattoa. Puolueen teettämä kysely paljastaa, että myös kansalaisilta löytyy ajatukselle varsin laajaa tukea. Keskusta on teettänyt Verianilla kyselyn eläkekaton käyttöönotosta. Kyselyssä vastaajille esitettiin väite ”suurimpia eläkkeitä rajaamaan on perusteltua säätää euromääräinen katto”. Vastaajista 35 prosenttia oli väittämästä täysin samaa mieltä ja 30 prosenttia osittain samaa mieltä."
 key_points:
   - "Keskusta ehdottaa eläkekattoa"

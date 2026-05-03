@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Ilomantsin lukioon haki yhteishaussa vain yksi opiskelija, mikä nostaa esiin pienten lukioiden oppilaskadon ja tulevaisuuden."
 summary: "Ilomantsin lukioon haki kevään yhteishaussa vain yksi oppilas. Syynä on muun muassa väestön ikääntyminen ja nuorten muutto opiskelemaan suurempiin kaupunkeihin. Pohjois-Karjalassa Ilomantsin lukioon haki kevään yhteishaussa vain yksi oppilas, uutisoi Yle. Tällä hetkellä lukiossa opiskelee 20 nuorta ja yksi aikuislukiolainen. Ensi syksynä määrä laskee 15 lukiolaiseen."
 summary_bullets:
   - "Ilomantsin lukioon haki kevään yhteishaussa vain yksi oppilas"

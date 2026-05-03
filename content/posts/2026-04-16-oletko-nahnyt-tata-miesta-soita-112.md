@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Poliisi pyytää havaintoja Vantaalla kadonneesta 82-vuotiaasta miehestä, jonka viimeiset jäljet liittyvät lentoaseman pysäköintiin."
 summary: "Helsingin poliisi etsii Vantaalla kadonnutta vanhusta. Poliisin etsimä mies on 82-vuotias. Hänet on viimeksi nähty Vantaan Simonkylässä torstaina iltakahdeksan aikaan. Kadonnut mies on noin 175 senttimetriä pitkä ja hänellä on kiharat harmaat hiukset ja harmaat paksut viikset."
 summary_bullets:
   - "Helsingin poliisi etsii Vantaalla kadonnutta vanhusta"

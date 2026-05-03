@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Liigan pudotuspeleissä Ässät murskasi SaiPan ja Ilves kukisti KalPan jatkoerässä, mikä vei molemmat joukkueet lähemmäs välieriä."
 summary: "Porin Ässät harppasi voiton päähän välieristä jääkiekon Liigassa, ja näyttävästi: kotijoukkue SaiPa kaatui Lappeenrannassa musertavaan 1–5-tappioon. Ässät johtaa sarjaa voitoin 3–2 ja se voi napata paikan neljän parhaan "
 summary_bullets:
   - "Porin Ässät harppasi voiton päähän välieristä jääkiekon Liigassa, ja näyttävästi"

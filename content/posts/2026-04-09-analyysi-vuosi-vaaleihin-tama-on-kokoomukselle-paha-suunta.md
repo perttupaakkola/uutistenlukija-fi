@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Ylen kannatusmittaus näyttää kokoomukselle vaikeaa suuntaa, kun SDP:n etumatka pysyy suurena vuotta ennen eduskuntavaaleja."
 summary: "SDP:n ero kokoomukseen on vuosi ennen vaaleja liki 7 prosenttiyksikköä. Se on niin suuri, että SDP:n olisi tyrittävä itsekin johdon menettääkseen, kirjoittaa Iltalehden politiikan toimittaja Johannes Ijäs. Vuosi ja kymmenkunta päivää. Sen verran on aikaa, kunnes kansa jälleen vaeltaa vaaliuurnille. Vuoden 2027 eduskuntavaalien varsinainen äänestyspäivä on 18. huhtikuuta."
 summary_bullets:
   - "SDP:n ero kokoomukseen on vuosi ennen vaaleja liki 7 prosenttiyksikköä"

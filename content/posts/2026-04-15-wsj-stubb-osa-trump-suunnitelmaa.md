@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Alexander Stubb arvioi Trumpin rauhanneuvostoa haastavaksi ja korostaa YK-mandaatin merkitystä kansainvälisessä rauhanvälityksessä."
 summary: "Eurooppalainen Nato on helpommin sanottu kuin tehty."
 summary_bullets:
   - "Eurooppalainen Nato on helpommin sanottu kuin tehty"

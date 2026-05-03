@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Muovikassien myynti väheni päivittäistavarakaupoissa noin 14 prosenttia, kun hinnankorotukset ja Green Deal ohjaavat kulutusta."
 summary: "Muovipussien myynti väheni kaupoissa."
 summary_bullets:
   - "Muovipussien myynti väheni kaupoissa"

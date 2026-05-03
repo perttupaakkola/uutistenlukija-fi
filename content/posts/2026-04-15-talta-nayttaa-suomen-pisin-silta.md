@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Kruunuvuorensilta avataan jalankulkijoille ja pyöräilijöille Helsingissä huhtikuussa, ja sillasta tulee Suomen pisin sekä korkein."
 summary: "Helsinkiin avautuu viikonloppuna uusi, hulppea nähtävyys. Lähes viiden vuoden odotus Helsingissä tulee pian päätökseen. Nimittäin Suomen pisin silta, Kruunuvuorensilta avataan helsinkiläisten käyttöön lauantaina 18. huhtikuuta. Sillalla voi kulkea jatkossa niin kävellen kuin pyöräillen."
 summary_bullets:
   - "Helsinkiin avautuu viikonloppuna uusi, hulppea nähtävyys"

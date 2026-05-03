@@ -46,8 +46,8 @@
 # Weekly metrics digest (Mondays 07:00 UTC)
 0 7 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/weekly-metrics-digest.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/weekly-metrics-digest.log 2>&1
 
-# CTR gap report (Mondays 08:00 UTC)
-0 8 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/ctr_gap_report.py --post-discord >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/ctr-gap-report.log 2>&1
+# CTR gap report + durable trend snapshot (Mondays 08:00 UTC)
+0 8 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/ctr_gap_report.py --top 20 --output static/api/ctr-gap-report.json --post-discord && python3 scripts/ctr_gap_trend_snapshot.py --report static/api/ctr-gap-report.json --output static/api/ctr-gap-trend-snapshot.json --cohort static/api/ctr-gap-cohort.json >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/ctr-gap-report.log 2>&1
 
 # Weekly top 5 articles report to #metrics (Mondays 08:00 UTC)
 0 8 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 scripts/weekly_top_articles.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/weekly-top-articles.log 2>&1

@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "PANSTARRS-komeetta näkyy Suomen taivaalla huhtikuussa, mutta havainto vaatii sopivan pimeän paikan ja usein kiikarin avuksi."
 summary: "Tästä eteenpäin tähdenlentoja ei enää näy, sillä yöt alkavat valaistua liikaa."
 summary_bullets:
   - "Tästä eteenpäin tähdenlentoja ei enää näy, sillä yöt alkavat valaistua liikaa"

@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Korkein oikeus arvioi Lahden rappukäytäväampumista, jossa tekijä vetoaa hätävarjeluun ja uhri osui vääräksi mieheksi pimeässä rapussa."
 summary: "Maaliskuussa 2023 Lahdessa kerrostalon rappukäytävässä ammuttiin 30-vuotias mies. Tekijän mukaan tarkoitus oli ampua toista miestä."
 key_points:
   - "Maaliskuussa 2023 Lahdessa kerrostalon rappukäytävässä ammuttiin 30-vuotias mies"

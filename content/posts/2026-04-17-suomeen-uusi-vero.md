@@ -8,6 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
+description: "Valtiovarainministeriö aloittaa matkailijaveron valmistelun, joka antaisi kunnille mahdollisuuden kerätä veroa majoittumisesta."
 summary: "Valtiovarainministeriö aloittaa matkailijaveron lainvalmistelun. Se koskisi kotimaisia matkailijoita. Uusi laki mahdollistaisi kunnille vapaaehtoisen matkailijaveron ja uuden tavan saada lisätuloa matkailusta. Veron käyttöönotosta päättäisi kunta itse, VM tiedottaa. Valtiovarainministeriö on selvittänyt edellytyksiä matkailijaveron käyttöönotolle Suomessa. Valmistelun tueksi on laadittu alustava selvitys ja kuultu keskeisiä sidosryhmiä."
 summary_bullets:
   - "Valtiovarainministeriö aloittaa matkailijaveron lainvalmistelun"
