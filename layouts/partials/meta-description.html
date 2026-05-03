@@ -5,7 +5,9 @@
 {{- else if eq .RelPermalink "/haku/" -}}
   {{- $desc = "Hae uutisia Uutistenlukijasta – kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede." -}}
 {{- else if .IsPage -}}
-  {{- if .Params.summary -}}
+  {{- if .Params.description -}}
+    {{- $desc = .Params.description -}}
+  {{- else if .Params.summary -}}
     {{- $desc = .Params.summary -}}
   {{- else if ne $desc "" -}}
     {{- /* Use existing .Description */ -}}
