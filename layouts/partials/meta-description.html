@@ -5,8 +5,10 @@
 {{- else if eq .RelPermalink "/haku/" -}}
   {{- $desc = "Hae uutisia Uutistenlukijasta – kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede." -}}
 {{- else if .IsPage -}}
-  {{- if isset .Params "description" -}}
-    {{- $desc = index .Params "description" -}}
+  {{- $frontMatter := .RawContent | replaceRE `(?s)^---\s*(.*?)\s*---.*$` `$1` -}}
+  {{- $explicitDesc := $frontMatter | replaceRE `(?s).*?\ndescription:\s*"([^"]+)".*` `$1` -}}
+  {{- if and (ne $explicitDesc $frontMatter) (ne $explicitDesc "") -}}
+    {{- $desc = $explicitDesc -}}
   {{- else if .Params.summary -}}
     {{- $desc = .Params.summary -}}
   {{- else if ne $desc "" -}}
