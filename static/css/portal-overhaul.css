@@ -513,3 +513,70 @@ a:hover { color: var(--portal-accent) !important; }
   }
   main.container { padding-left: .72rem !important; padding-right: .72rem !important; }
 }
+
+/* P0 continuation: override older homepage-polish width rules on the mobile hero cluster. */
+@media (max-width: 680px) {
+  body.is-home .hero-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+  body.is-home .hero-grid > *,
+  body.is-home .hero-grid__ticker,
+  body.is-home .hero-grid__lead,
+  body.is-home .hero-grid__sidebar,
+  body.is-home .hero-lead-article,
+  body.is-home .hero-lead-image-link,
+  body.is-home .hero-lead-img,
+  body.is-home .hero-lead-body,
+  body.is-home .hero-lead-meta,
+  body.is-home .hero-sidebar-card,
+  body.is-home .hero-grid__section-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    inline-size: auto !important;
+  }
+  body.is-home .hero-ticker-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+  }
+  body.is-home .hero-ticker-list::-webkit-scrollbar { display: none; }
+  body.is-home .hero-ticker-item {
+    flex: 0 0 76% !important;
+    min-width: 0 !important;
+    max-width: 76% !important;
+  }
+  body.is-home .hero-ticker-link {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  body.is-home .hero-sidebar-card {
+    grid-template-columns: 74px minmax(0, 1fr) !important;
+  }
+  body.is-home .hero-sidebar-card-body,
+  body.is-home .hero-sidebar-headline {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .quick-briefing,
+  .quick-briefing__inner,
+  .category-spotlights,
+  .category-section--spotlight,
+  .tanaan-section,
+  .lyhyet-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+}
