@@ -301,12 +301,13 @@ def _openclaw_command(prompt: str, *, force_local: bool | None = None, session_i
         use_local = os.environ.get("MONICA_OPENCLAW_LOCAL", "0").lower() not in {"0", "false", "no"}
     else:
         use_local = force_local
+
+    explicit_session = session_id or os.environ.get("MONICA_OPENCLAW_SESSION_ID")
+    if not explicit_session:
+        explicit_session = f"monica-pipeline-{uuid.uuid4()}"
     if use_local:
         cmd.append("--local")
     else:
-        explicit_session = session_id or os.environ.get("MONICA_OPENCLAW_SESSION_ID")
-        if not explicit_session:
-            explicit_session = f"monica-pipeline-{uuid.uuid4()}"
         cmd.extend(["--session-id", explicit_session])
     cmd.extend(["--message", prompt])
     return cmd
@@ -355,32 +356,17 @@ def _run_openclaw_command(cmd: list[str]) -> str:
     return text
 
 
-def _reset_monica_session() -> None:
-    """Best-effort reset for local OpenClaw agent sessions.
-
-    The unattended writer lane uses OpenClaw as a subprocess. When the local
-    Monica session grows until auto-compaction can no longer fit the next
-    article prompt, OpenClaw prints a user-facing "Context overflow" message
-    and suggests `/reset` or `/new`. Treat that as recoverable automation debt:
-    reset the agent session once and immediately retry the same packet instead
-    of burning the whole batch.
-    """
-    cmd = _openclaw_command("/reset")
-    try:
-        _run_openclaw_command(cmd)
-    except Exception as e:
-        print(f"[monica]   warning: session reset failed ({e})")
-
-
 def _run_monica(prompt: str) -> str:
-    cmd = _openclaw_command(prompt)
-    text = _run_openclaw_command(cmd)
+    # Use one explicit, unique Gateway session per attempt. Reusing a durable
+    # Monica session (or resetting it through `/reset`) polluted the writer lane
+    # until every retry overflowed. A second unique session is the safest small
+    # recovery: it bypasses the bad transcript without sending extra reset turns.
+    text = _run_openclaw_command(_openclaw_command(prompt))
     if _looks_like_context_overflow(text):
-        print("[monica]   context overflow from Monica session; resetting and retrying once without local session")
-        _reset_monica_session()
-        text = _run_openclaw_command(_openclaw_command(prompt, force_local=False))
+        print("[monica]   context overflow from Monica session; retrying once with fresh explicit session")
+        text = _run_openclaw_command(_openclaw_command(prompt, force_local=False, session_id=f"monica-pipeline-retry-{uuid.uuid4()}"))
     if _looks_like_context_overflow(text):
-        raise RuntimeError("Monica writer context overflow after reset")
+        raise RuntimeError("Monica writer context overflow after fresh-session retry")
     return text
 
 

@@ -221,16 +221,24 @@ class MonicaWriterTests(unittest.TestCase):
     def test_rewrite_articles_resets_local_session_on_context_overflow(self, run_mock):
         run_mock.side_effect = [
             self._result("Context overflow: prompt too large for the model. Try /reset (or /new) to start a fresh session."),
-            self._result("reset ok"),
             self._result(_good_payload()),
         ]
 
         rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
 
         self.assertEqual(len(rewritten), 1)
-        self.assertEqual(run_mock.call_count, 3)
-        reset_cmd = run_mock.call_args_list[1].args[0]
-        self.assertIn("/reset", reset_cmd)
+        self.assertEqual(run_mock.call_count, 2)
+        first_cmd = run_mock.call_args_list[0].args[0]
+        retry_cmd = run_mock.call_args_list[1].args[0]
+        self.assertNotIn("/reset", retry_cmd)
+        self.assertNotEqual(first_cmd, retry_cmd)
+        if "--session-id" in first_cmd:
+            self.assertIn("--session-id", retry_cmd)
+            self.assertNotEqual(first_cmd[first_cmd.index("--session-id") + 1], retry_cmd[retry_cmd.index("--session-id") + 1])
+        else:
+            self.assertIn("--local", first_cmd)
+            self.assertIn("--session-id", retry_cmd)
+            self.assertNotIn("--local", retry_cmd)
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):
