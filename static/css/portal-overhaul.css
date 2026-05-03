@@ -580,3 +580,86 @@ a:hover { color: var(--portal-accent) !important; }
     overflow: visible !important;
   }
 }
+
+/* Iteration: make missing hero photos look intentional, not like blue placeholders. */
+.hero-lead-article--fallback .hero-lead-image-link,
+.hero-lead-image-link--fallback {
+  position: relative;
+  display: grid !important;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(192,57,43,.10), rgba(22,19,16,.02) 42%, rgba(22,19,16,.10)),
+    repeating-linear-gradient(90deg, rgba(22,19,16,.10) 0 1px, transparent 1px 17px),
+    var(--portal-card-alt) !important;
+  border-top: 3px solid var(--portal-line-strong) !important;
+  border-bottom: 1px solid var(--portal-line) !important;
+}
+.hero-lead-article--fallback .hero-lead-image-link::before {
+  content: "Uutistenlukija";
+  position: absolute;
+  left: clamp(14px, 2vw, 26px);
+  top: clamp(12px, 1.8vw, 22px);
+  color: var(--portal-accent);
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.hero-lead-article--fallback .hero-lead-image-link::after {
+  content: "";
+  width: min(42%, 220px);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  border: 1px solid rgba(22,19,16,.16);
+  background:
+    linear-gradient(90deg, transparent 49%, rgba(192,57,43,.45) 49% 51%, transparent 51%),
+    linear-gradient(0deg, transparent 49%, rgba(22,19,16,.18) 49% 51%, transparent 51%);
+  opacity: .75;
+}
+.hero-lead-img--fallback {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  opacity: .16 !important;
+  filter: grayscale(1) contrast(1.25) saturate(.2) !important;
+  mix-blend-mode: multiply;
+}
+
+/* Iteration: denser desktop front page authority. */
+@media (min-width: 1021px) {
+  .site-header { margin-bottom: .75rem !important; padding-top: .35rem !important; }
+  .header-main-row { gap: .65rem !important; padding-top: .15rem !important; }
+  .main-nav { margin-top: .45rem !important; padding-top: .38rem !important; padding-bottom: .34rem !important; }
+  .logo-img { width: 178px !important; max-height: 40px !important; }
+  .site-search__input { min-height: 34px !important; }
+  .search-toggle-btn, .theme-toggle-btn, .hamburger-btn { min-height: 34px !important; min-width: 34px !important; }
+  .hero-grid {
+    grid-template-columns: minmax(190px,.52fr) minmax(0,1.95fr) minmax(310px,.95fr) !important;
+    gap: 18px !important;
+    padding-bottom: 18px !important;
+  }
+  .hero-grid__ticker { padding-right: 14px !important; }
+  .hero-grid__sidebar { padding-left: 14px !important; }
+  .hero-lead-image-link { aspect-ratio: 16 / 8.4 !important; margin-bottom: .72rem !important; }
+  .hero-lead-title {
+    font-size: clamp(3.25rem, 5.5vw, 5.7rem) !important;
+    line-height: .86 !important;
+    letter-spacing: -.075em !important;
+    max-width: 11.8ch !important;
+    margin-bottom: .55rem !important;
+  }
+  .hero-lead-excerpt { font-size: 1rem !important; line-height: 1.34 !important; margin-bottom: .65rem !important; }
+  .hero-ticker-link { padding: .45rem 0 !important; }
+  .hero-sidebar-card { padding: .68rem 0 !important; }
+  .quick-briefing__item { padding-top: .65rem !important; padding-bottom: .65rem !important; }
+}
+
+@media (max-width: 680px) {
+  .hero-lead-article--fallback .hero-lead-image-link,
+  .hero-lead-image-link--fallback { aspect-ratio: 16 / 7.8 !important; min-height: 154px; }
+  .hero-lead-article--fallback .hero-lead-image-link::after { width: 118px; }
+  .hero-lead-article--fallback .hero-lead-image-link::before { font-size: .58rem; }
+}

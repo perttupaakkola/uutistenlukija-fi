@@ -65,11 +65,12 @@
   {{/* ── CENTER: Lead story ── */}}
   <div class="hero-grid__lead">
     {{- $cat := index $lead.Params.categories 0 | default "kotimaa" -}}
+    {{- $hasHeroImage := $lead.Params.image -}}
     {{- $img := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) -}}
     {{- $thumb := $lead.Params.image_thumb | default $img -}}
 
-    <article class="hero-lead-article">
-      <a href="{{ $lead.Permalink }}" class="hero-lead-image-link" data-track="hero_click">
+    <article class="hero-lead-article{{ if not $hasHeroImage }} hero-lead-article--fallback{{ end }}">
+      <a href="{{ $lead.Permalink }}" class="hero-lead-image-link{{ if not $hasHeroImage }} hero-lead-image-link--fallback{{ end }}" data-track="hero_click"{{ if not $hasHeroImage }} aria-label="{{ $lead.Title }}"{{ end }}>
         {{- $heroSrc := $thumb -}}
         {{- $heroSrcset := "" -}}
         {{- $avifSrcset := "" -}}
@@ -90,7 +91,7 @@
           <img
             src="{{ $heroSrc }}"
             alt="{{ partial "image-alt.html" $lead }}"
-            class="hero-lead-img"
+            class="hero-lead-img{{ if not $hasHeroImage }} hero-lead-img--fallback{{ end }}"
             loading="eager"
             fetchpriority="high"
             decoding="async"
