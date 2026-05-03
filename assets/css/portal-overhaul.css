@@ -663,3 +663,97 @@ a:hover { color: var(--portal-accent) !important; }
   .hero-lead-article--fallback .hero-lead-image-link::after { width: 118px; }
   .hero-lead-article--fallback .hero-lead-image-link::before { font-size: .58rem; }
 }
+
+/* Follow-up acceptance pass: mobile ticker should scan as a news list, not a clipped carousel. */
+@media (max-width: 680px) {
+  body.is-home .hero-grid__ticker {
+    padding: .75rem 0 .55rem !important;
+    overflow: visible !important;
+  }
+  body.is-home .hero-ticker-list {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    scroll-snap-type: none !important;
+  }
+  body.is-home .hero-ticker-item {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: none !important;
+  }
+  body.is-home .hero-ticker-item:nth-child(n+4) { display: none !important; }
+  body.is-home .hero-ticker-link {
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    gap: .58rem !important;
+    align-items: baseline !important;
+    border: 0 !important;
+    border-top: 1px solid var(--portal-line) !important;
+    background: transparent !important;
+    padding: .62rem 0 !important;
+  }
+  body.is-home .hero-ticker-item:last-child .hero-ticker-link {
+    border-bottom: 1px solid var(--portal-line) !important;
+  }
+  body.is-home .hero-ticker-time {
+    grid-column: 1 !important;
+    font-size: .72rem !important;
+    letter-spacing: .01em !important;
+  }
+  body.is-home .hero-ticker-headline {
+    grid-column: 2 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+    font-size: .9rem !important;
+    line-height: 1.18 !important;
+  }
+
+  /* This H1 is semantic only; keep it from contributing odd scroll metrics. */
+  main > h1.visually-hidden {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    overflow: hidden !important;
+    max-width: 1px !important;
+    contain: strict !important;
+  }
+}
+
+/* Follow-up acceptance pass: make desktop top news feel more decisive. */
+@media (min-width: 1180px) {
+  .hero-grid {
+    max-width: 100% !important;
+    grid-template-columns: minmax(170px,.42fr) minmax(0,2.18fr) minmax(300px,.86fr) !important;
+    gap: 16px !important;
+    border-top: 3px solid var(--portal-line-strong) !important;
+    padding-top: .75rem !important;
+  }
+  .hero-grid__section-title {
+    font-size: .66rem !important;
+    letter-spacing: .16em !important;
+    margin-bottom: .55rem !important;
+  }
+  .hero-lead-image-link {
+    aspect-ratio: 16 / 7.35 !important;
+    border-top-width: 4px !important;
+  }
+  .hero-lead-title {
+    font-size: clamp(4rem, 6.35vw, 6.6rem) !important;
+    line-height: .82 !important;
+    max-width: 10.9ch !important;
+  }
+  .hero-lead-meta,
+  .hero-lead-excerpt { max-width: 54ch !important; }
+  .hero-sidebar-card,
+  .hero-ticker-link {
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+}
