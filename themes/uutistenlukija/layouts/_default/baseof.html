@@ -8,7 +8,8 @@
   {{ $pageTitle := .Title }}{{ if gt (len .Title) 42 }}{{ $pageTitle = printf "%s..." (substr .Title 0 42) }}{{ end }}
   <title>{{ if $is404 }}Sivua ei löytynyt &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ else if .IsHome }}{{ .Site.Title }}{{ else }}{{ $pageTitle }} &#x2014; {{ .Site.Params.shortTitle | default "Uutistenlukija" }}{{ end }}</title>
   {{ if or $is404 .Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+  {{ $metaDesc := partial "meta-description.html" . }}
+  <meta name="description" content="{{ $metaDesc }}">
   {{/* === Resource hints === */}}
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
