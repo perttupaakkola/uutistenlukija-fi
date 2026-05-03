@@ -41,6 +41,7 @@ from story_packet import build_story_packet  # noqa: E402
 from publisher import publish_articles, build_site  # noqa: E402
 from monica_writer import (  # noqa: E402
     _build_prompt,
+    _build_repair_prompt,
     _basic_payload_issues,
     _extract_json_object,
     _merge_article,
@@ -198,6 +199,19 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
             writing.unlink(missing_ok=True)
             return ("failed", reason)
         issues = _basic_payload_issues(payload)
+        if issues:
+            log(f"monica-worker: repair pass {'; '.join(issues)}")
+            repaired_raw = _run_monica(_build_repair_prompt(packet, payload, issues))
+            repaired_payload = _extract_json_object(repaired_raw)
+            raw = repaired_raw
+            payload = repaired_payload
+            if payload.get("status") == "INSUFFICIENT_CONFIDENCE":
+                reason = _normalize_ws(str(payload.get("reason") or "insufficient_confidence_after_repair"))
+                data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": reason, "raw_response": raw})
+                atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
+                writing.unlink(missing_ok=True)
+                return ("failed", reason)
+            issues = _basic_payload_issues(payload)
         if issues:
             data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": "; ".join(issues), "payload": payload, "raw_response": raw})
             atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)

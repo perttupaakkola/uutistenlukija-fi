@@ -16,6 +16,7 @@ import re
 import shlex
 import shutil
 import subprocess
+import uuid
 from pathlib import Path
 
 try:
@@ -288,18 +289,25 @@ def _resolve_openclaw_base_cmd() -> list[str]:
     return parts
 
 
-def _openclaw_command(prompt: str, *, force_local: bool | None = None) -> list[str]:
+def _openclaw_command(prompt: str, *, force_local: bool | None = None, session_id: str | None = None) -> list[str]:
     base = _resolve_openclaw_base_cmd()
     cmd = [*base, "agent", "--agent", os.environ.get("MONICA_OPENCLAW_AGENT", DEFAULT_MONICA_AGENT)]
     if force_local is None:
-        # Default to a fresh one-shot agent dispatch. The previous local-session
-        # default made unattended article prompts accumulate until Monica hit
-        # OpenClaw context overflow even after auto-compaction.
+        # Default to a fresh one-shot gateway dispatch. The old implicit gateway
+        # path reused `agent:monica:main`, so unattended article prompts
+        # accumulated in one durable transcript until every worker hit context
+        # overflow. A unique explicit session keeps each packet isolated while
+        # still using the normal OpenClaw gateway/provider setup.
         use_local = os.environ.get("MONICA_OPENCLAW_LOCAL", "0").lower() not in {"0", "false", "no"}
     else:
         use_local = force_local
     if use_local:
         cmd.append("--local")
+    else:
+        explicit_session = session_id or os.environ.get("MONICA_OPENCLAW_SESSION_ID")
+        if not explicit_session:
+            explicit_session = f"monica-pipeline-{uuid.uuid4()}"
+        cmd.extend(["--session-id", explicit_session])
     cmd.extend(["--message", prompt])
     return cmd
 
