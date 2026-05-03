@@ -39,6 +39,7 @@ MIN_CONTENT_WORDS = 250
 MIN_LEAD_WORDS = 30
 
 OPENCLAW_CANDIDATES = (
+    "/home/pertt/.openclaw/bin/openclaw",
     "/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw",
     "/usr/local/bin/openclaw",
     "/usr/bin/openclaw",

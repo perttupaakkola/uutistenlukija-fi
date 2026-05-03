@@ -8,7 +8,7 @@ import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from monica_writer import _extract_json_object, rewrite_articles
+from monica_writer import OPENCLAW_CANDIDATES, _extract_json_object, rewrite_articles
 
 
 SAMPLE_ARTICLE = {
@@ -91,6 +91,9 @@ class MonicaWriterTests(unittest.TestCase):
 
     def _result(self, stdout: str):
         return SimpleNamespace(returncode=0, stdout=stdout, stderr="")
+
+    def test_openclaw_candidates_include_user_bin_wrapper_first(self):
+        self.assertEqual(OPENCLAW_CANDIDATES[0], "/home/pertt/.openclaw/bin/openclaw")
 
     def test_extract_json_object_skips_noisy_braces_before_payload(self):
         raw = 'openclaw: dispatch {agent=monica}\nnot json {oops}\n' + _good_payload() + '\n[done]'
