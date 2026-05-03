@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/viikon-18-2026-10-uutista-renny-jackman-rillit/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
