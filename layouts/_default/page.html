@@ -1,28 +1,69 @@
 {{ define "main" }}
-<article class="single-article">
-  {{ with .Params.categories }}
-  {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
-  {{ end }}
-  <h1>{{ .Title }}</h1>
-  {{ partial "hero-image.html" . }}
-  {{ partial "article-body.html" (dict
-    "page" .
-    "showKeyPoints" true
-    "metaVariant" "page"
-    "showShareTop" true
-    "showSource" true
-    "showAuthorBox" true
-  ) }}
-  {{ if eq .Section "posts" }}
-  <div class="article-trust-note" role="note" aria-label="Toimituksen huomautus">
-    <strong>Toimituksen huomautus:</strong> Uutistenlukija tiivistää päivän uutisaiheita toimituksellisessa muodossa. Tarkistamme sisällön rakenteen automaattisesti ennen julkaisua ja korjaamme näkyvät virheet, kun niitä havaitaan.
+{{ if eq .Section "posts" }}
+{{ partial "reading-progress.html" . }}
+{{ $cat := index .Params.categories 0 | default "Uutiset" }}
+<article class="portal-article-page single-article">
+  <div class="portal-article-topbar">
+    <a href="/" aria-label="Takaisin etusivulle">‹ Etusivu</a>
+    <span>{{ $cat }}</span>
+    <button type="button" aria-label="Jaa artikkeli">Jaa</button>
   </div>
-  {{ end }}
 
-  {{ partial "related-articles.html" . }}
-  {{ partial "advertiser-cta.html" (dict "placement" "article-bottom" "page" .) }}
-  {{ partial "more-from-category.html" . }}
+  <header class="portal-article-header">
+    <div class="portal-article-header__text">
+      <span class="portal-kicker">{{ $cat }}</span>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="portal-article-deck">{{ . }}</p>{{ else }}{{ with .Summary }}<p class="portal-article-deck">{{ . | truncate 180 }}</p>{{ end }}{{ end }}
+      <div class="portal-article-byline">
+        <strong>{{ .Params.author | default "Uutistenlukija" }}</strong>
+        <span>{{ .Date | time.Format "2.1.2006 15:04" }}</span>
+        <span>{{ partial "reading-time.html" . }}</span>
+      </div>
+    </div>
+    <div class="portal-article-header__media">
+      {{ partial "hero-image.html" . }}
+    </div>
+  </header>
+
+  <div class="portal-article-layout">
+    <aside class="portal-article-rail">
+      <div class="portal-article-rail__box">
+        <span>Lukuaika</span>
+        <strong>{{ partial "reading-time.html" . }}</strong>
+      </div>
+      {{ partial "share-buttons.html" . }}
+    </aside>
+    <div class="portal-article-main">
+      {{ partial "article-body.html" (dict
+        "page" .
+        "showSummaryBullets" true
+        "showSummary" false
+        "showKeyFacts" true
+        "showToc" false
+        "metaVariant" "none"
+        "showShareTop" false
+        "showSource" true
+        "splitParagraphs" true
+        "showJournalistNote" true
+        "showAfterArticleAd" true
+        "showNewsletter" true
+        "showAuthorBox" true
+        "showBottomShare" true
+      ) }}
+    </div>
+  </div>
+
+  <div class="portal-article-below">
+    {{ partial "related-articles.html" . }}
+    {{ partial "advertiser-cta.html" (dict "placement" "article-bottom" "page" .) }}
+    {{ partial "more-from-category.html" . }}
+  </div>
 </article>
-
 {{ partial "scroll-to-top.html" . }}
+{{ else }}
+<article class="single-article portal-static-page">
+  <h1>{{ .Title }}</h1>
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}
 {{ end }}

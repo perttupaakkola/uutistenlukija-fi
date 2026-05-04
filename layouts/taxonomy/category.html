@@ -1,56 +1,79 @@
-{{ define "extra_head" }}
-<link rel="stylesheet" href="/css/category-hero.css" media="print" onload="this.onload=null;this.media='all'">
-<link rel="stylesheet" href="/css/empty-state.css" media="print" onload="this.onload=null;this.media='all'">
-<noscript>
-  <link rel="stylesheet" href="/css/category-hero.css">
-  <link rel="stylesheet" href="/css/empty-state.css">
-</noscript>
-{{ end }}
-
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
-{{ partial "category-hero.html" . }}
-
+{{ $heading := partial "category-heading.html" . }}
 {{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) 20 }}
-{{ if gt (len $paginator.Pages) 0 }}
-<div class="articles-grid">
-  {{ range $paginator.Pages }}
-  <article class="article-card">
-    {{ with .Params.categories }}
-    {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
-    {{ end }}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{- with (.Summary | truncate 200) }}<p class="excerpt">{{ . }}</p>{{- end }}
-    <div class="meta">
-      {{ partial "relative-date.html" . }}
-      {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-      · {{ .ReadingTime }} min
+
+<section class="portal-list-page">
+  <header class="portal-list-header">
+    <span class="portal-list-header__eyebrow">Kategoria</span>
+    <h1>{{ $heading }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </header>
+
+  {{ if gt (len $paginator.Pages) 0 }}
+  {{ $feature := index $paginator.Pages 0 }}
+  {{ $rest := after 1 $paginator.Pages }}
+  {{ $cat := index $feature.Params.categories 0 | default "Uutiset" }}
+  {{ $img := $feature.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
+  {{ $thumb := $feature.Params.image_thumb | default $img }}
+
+  <div class="portal-list-layout">
+    <div class="portal-list-main">
+      <article class="portal-list-feature">
+        <div class="portal-list-feature__image">
+          {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "context" $feature "eager" true "hero" true "permalink" $feature.Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+        </div>
+        <div class="portal-list-feature__body">
+          <span class="portal-kicker">{{ $cat }}</span>
+          <h2><a href="{{ $feature.RelPermalink }}">{{ $feature.Title }}</a></h2>
+          <p>{{ $feature.Summary | truncate 210 }}</p>
+          <time>{{ partial "relative-date.html" $feature }}</time>
+        </div>
+      </article>
+
+      <div class="portal-list-feed">
+        {{ range $rest }}
+        {{ $itemCat := index .Params.categories 0 | default "Uutiset" }}
+        {{ $itemImg := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($itemCat | lower))) }}
+        <article class="portal-feed-item">
+          <time class="portal-feed-item__time">{{ .Date.Format "15:04" }}</time>
+          <div class="portal-feed-item__body">
+            <span class="portal-kicker">{{ $itemCat }}</span>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Summary | truncate 155 }}</p>
+            <span class="portal-feed-item__relative">{{ partial "relative-date.html" . }}</span>
+          </div>
+          <a class="portal-feed-item__thumb" href="{{ .RelPermalink }}">
+            <img src="{{ $itemImg }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="132" height="92" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($itemCat | lower) }}'">
+          </a>
+        </article>
+        {{ end }}
+      </div>
+
+      {{ partial "pagination.html" (dict "Paginator" $paginator) }}
     </div>
+
+    <aside class="portal-list-rail">
+      <section class="portal-most-read">
+        <h2>Luetuimmat</h2>
+        <ol>
+          {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ol>
+      </section>
+      <section class="portal-newsletter portal-newsletter--compact">
+        <h2>Pysy kartalla.</h2>
+        <p>Uutiskirje kokoaa päivän olennaiset uutiset.</p>
+        <a href="/uutiskirje/">Tilaa uutiskirje</a>
+      </section>
+    </aside>
+  </div>
+  {{ else }}
+  <article class="portal-empty">
+    <h2>Tässä kategoriassa ei ole vielä artikkeleita</h2>
+    <p>Kokeile hetken päästä uudelleen tai selaa muita osioita.</p>
   </article>
   {{ end }}
-</div>
-{{ else }}
-  {{ partial "empty-state.html" (dict 
-    "title" "Tässä kategoriassa ei ole vielä artikkeleita" 
-    "description" "Päivitämme sisältöä jatkuvasti. Kokeile hetken päästä uudelleen tai selaa muita uutisaiheita alta."
-    "icon" "news"
-    "extraAction" "Kaikki kategoriat"
-    "extraActionUrl" "/categories/"
-  ) }}
-{{ end }}
-
-{{ partial "newsletter-cta.html" . }}
-
-{{ $pag := $paginator }}
-{{ if gt $pag.TotalPages 1 }}
-<nav class="pagination" aria-label="Sivunavigaatio">
-  {{ if $pag.HasPrev }}
-  <a href="{{ $pag.Prev.URL }}" class="page-link">← Edellinen</a>
-  {{ end }}
-  <span class="page-info">Sivu {{ $pag.PageNumber }}/{{ $pag.TotalPages }}</span>
-  {{ if $pag.HasNext }}
-  <a href="{{ $pag.Next.URL }}" class="page-link">Seuraava →</a>
-  {{ end }}
-</nav>
-{{ end }}
+</section>
 {{ end }}
