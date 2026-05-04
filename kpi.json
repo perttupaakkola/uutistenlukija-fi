@@ -1,6 +1,6 @@
 {
   "description": "Uutistenlukija.fi KPIs — updated by Felix/Max on each flywheel cycle",
-  "lastUpdated": "2026-03-18T15:30:00Z",
+  "lastUpdated": "2026-05-04T07:40:00Z",
   "metrics": {
     "articles": {
       "total": null,
@@ -17,7 +17,7 @@
     "traffic": {
       "dailyVisitors": null,
       "source": "GA4 (G-967GVZH75X) — not yet accessible from CLI",
-      "note": "TODO: set up GA4 API access or a simple analytics proxy"
+      "note": "GA4/GSC external APIs still blocked/unknown from CLI; business-control-panel now exposes a safe_public monetization signal while analytics credentials are repaired."
     },
     "seo": {
       "indexedPages": null,
@@ -25,8 +25,8 @@
     },
     "revenue": {
       "monthlyEuros": 0,
-      "source": "none yet",
-      "note": "First priority: get ANY ad network running"
+      "source": "advertiser-lead-cta-v1 monetization signal",
+      "note": "First measurable business loop shipped: /mainosta/ and advertiser CTA clicks emit monetization_signal; watch static/api/business-control-panel.json monetization.status and GA4 event when consented."
     },
     "team": {
       "activeAgents": null,

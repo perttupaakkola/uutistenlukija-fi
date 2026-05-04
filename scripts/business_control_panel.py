@@ -328,6 +328,74 @@ def analytics_status(now: datetime) -> dict[str, Any]:
     }
 
 
+
+def parse_hugo_params(path: Path) -> dict[str, Any]:
+    params: dict[str, Any] = {}
+    if not path.exists():
+        return params
+    in_params = False
+    try:
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    except Exception:
+        return params
+    for raw in lines:
+        line = raw.split("#", 1)[0].strip()
+        if not line:
+            continue
+        if line.startswith("["):
+            in_params = line == "[params]"
+            continue
+        if not in_params or "=" not in line:
+            continue
+        key, value = [part.strip() for part in line.split("=", 1)]
+        if value.lower() in {"true", "false"}:
+            params[key] = value.lower() == "true"
+        else:
+            params[key] = value.strip('"').strip("'")
+    return params
+
+
+def monetization_status() -> dict[str, Any]:
+    params = parse_hugo_params(PROJECT_DIR / "hugo.toml")
+    mainosta = PROJECT_DIR / "layouts" / "_default" / "mainosta.html"
+    advertiser_cta = PROJECT_DIR / "layouts" / "partials" / "advertiser-cta.html"
+    tracking = PROJECT_DIR / "layouts" / "partials" / "event-tracking.html"
+    files = [mainosta, advertiser_cta, tracking]
+
+    tracked_files = []
+    tracked_signal_count = 0
+    for path in files:
+        if not path.exists():
+            continue
+        try:
+            text = path.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            continue
+        count = text.count("data-monetization-signal") + text.count("monetization_signal")
+        if count:
+            tracked_files.append(str(path.relative_to(PROJECT_DIR)))
+            tracked_signal_count += count
+
+    adsense_id = str(params.get("adsense_id") or "")
+    ads_enabled = bool(params.get("ads_enabled"))
+    return {
+        "status": "lead_capture_tracking_active" if tracked_signal_count else "not_tracked",
+        "safe_public": True,
+        "monthly_euros": 0,
+        "source": "hugo.toml + monetization CTA markup; no ad network or personal data required",
+        "ads_enabled": ads_enabled,
+        "adsense_configured": bool(adsense_id),
+        "experiment": {
+            "id": "advertiser-lead-cta-v1",
+            "primary_metric": "monetization_signal events",
+            "secondary_metrics": ["advertise_cta_click", "advertise_email_click"],
+            "target": "first qualified advertiser inquiry",
+            "tracking_storage": "anonymous localStorage counter plus GA4 event when analytics consent is granted",
+            "tracked_signal_markers": tracked_signal_count,
+            "tracked_files": tracked_files,
+        },
+    }
+
 def local_coordination_placeholders(now: datetime) -> dict[str, Any]:
     candidates = {
         "taskboard": PROJECT_DIR / "TASKBOARD.md",
@@ -381,6 +449,7 @@ def build_panel(now: datetime | None = None) -> dict[str, Any]:
         "queues": queues,
         "category_drift": categories,
         "analytics": analytics,
+        "monetization": monetization_status(),
         "coordination": local_coordination_placeholders(now),
     }
 

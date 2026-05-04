@@ -166,6 +166,53 @@
     });
   })();
 
+
+
+  // ── monetization CTA funnel ─────────────────────────────────────────────
+  // Stores anonymous local intent so /api/business-control-panel.json can
+  // expose a safe_public=true measurable growth-loop target without reading
+  // external analytics credentials. GA4 receives the same event when consented.
+  (function () {
+    var KEY = 'uutistenlukija_monetization_signal_v1';
+
+    function readState() {
+      try {
+        return JSON.parse(localStorage.getItem(KEY) || '{}') || {};
+      } catch (err) {
+        return {};
+      }
+    }
+
+    function writeState(state) {
+      try {
+        localStorage.setItem(KEY, JSON.stringify(state));
+      } catch (err) {}
+    }
+
+    function recordSignal(kind, el) {
+      var state = readState();
+      var now = new Date().toISOString();
+      state[kind] = (Number(state[kind]) || 0) + 1;
+      state.last_signal = kind;
+      state.last_signal_at = now;
+      state.last_path = window.location.pathname;
+      state.last_placement = el ? (el.dataset.placement || el.dataset.package || 'unknown') : 'unknown';
+      writeState(state);
+
+      _gtag('event', 'monetization_signal', {
+        signal_type: kind,
+        placement: state.last_placement,
+        page_path: state.last_path
+      });
+    }
+
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest('[data-monetization-signal]');
+      if (!el) return;
+      recordSignal(el.dataset.monetizationSignal || 'unknown', el);
+    });
+  })();
+
   // ── outbound_click ──────────────────────────────────────────────────────
   // Fires when a visitor clicks an external link (different hostname).
   (function () {

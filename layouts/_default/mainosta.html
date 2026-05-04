@@ -57,6 +57,23 @@
     </div>
   </section>
 
+  {{/* ── Measurement loop ──────────────────────────────────────── */}}
+  <section class="mainosta-section mainosta-signal" aria-labelledby="mainosta-signal-title">
+    <div>
+      <p class="mainosta-signal__eyebrow">Mitattava kokeilu</p>
+      <h2 id="mainosta-signal-title" class="mainosta-signal__heading">Ensimmäinen tavoite: mainostajaliidit</h2>
+      <p class="mainosta-signal__body">Seuraamme nyt mainossivun ja sähköpostikontaktin klikkejä erillisenä <code>monetization_signal</code>-tapahtumana. Mittari on turvallinen julkaista: se ei sisällä henkilötietoja eikä vaadi uusia mainosverkkoja.</p>
+    </div>
+    <a href="mailto:info@uutistenlukija.fi?subject=Mainostus%20Uutistenlukijassa%20-%20pilottikampanja"
+       class="mainosta-signal__btn"
+       data-track="advertise_cta_click"
+       data-monetization-signal="advertise_email_click"
+       data-placement="mainosta-signal"
+       data-destination="email">
+      Pyydä pilottikampanjaa
+    </a>
+  </section>
+
   {{/* ── Ad placements ─────────────────────────────────────────── */}}
   <section class="mainosta-section">
     <h2 class="mainosta-section__heading">Mainostuspaikat</h2>
@@ -141,7 +158,11 @@
     <h2 class="mainosta-cta__heading">Kiinnostuitko?</h2>
     <p class="mainosta-cta__body">Ota yhteyttä ja kerro kampanjatavoitteistasi. Vastaamme yleensä saman päivän aikana.</p>
     <a href="mailto:info@uutistenlukija.fi?subject=Mainostus%20Uutistenlukijassa"
-       class="mainosta-cta__btn">
+       class="mainosta-cta__btn"
+       data-track="advertise_cta_click"
+       data-monetization-signal="advertise_email_click"
+       data-placement="mainosta-final-cta"
+       data-destination="email">
       Lähetä viesti →
     </a>
     <p class="mainosta-cta__email">tai kirjoita suoraan: <a href="mailto:info@uutistenlukija.fi">info@uutistenlukija.fi</a></p>
