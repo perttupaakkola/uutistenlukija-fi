@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-05-03T23:08:27+00:00",
+  "generated_at": "2026-05-04T03:48:23+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,12 +12,17 @@
   },
   "articles": {
     "attempted": 100,
-    "published": 14,
-    "rejected": 0,
-    "publish_rate": 14.0,
-    "last_published_ts": "2026-05-03T23:08:01.321537+00:00"
+    "published": 12,
+    "rejected": 1,
+    "publish_rate": 12.0,
+    "last_published_ts": "2026-05-04T03:48:01.782783+00:00"
   },
-  "reject_reasons": {},
+  "reject_reasons": {
+    "length under target (250 words": 1,
+    "missing: image": 1,
+    "unsourced numbers": 1,
+    "keyword_stuffing": 1
+  },
   "feeds": {
     "total": 38,
     "healthy": 38,
@@ -28,24 +33,24 @@
   },
   "trending": [
     [
-      "kerro",
-      12
-    ],
-    [
-      "perusteella",
-      12
+      "yhdysvaltain",
+      15
     ],
     [
       "koirien",
       11
     ],
     [
-      "yhdysvaltain",
+      "perusteella",
       10
     ],
     [
       "jälkeen",
-      10
+      9
+    ],
+    [
+      "julkisen",
+      8
     ]
   ]
 }
