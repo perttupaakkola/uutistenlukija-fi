@@ -175,6 +175,57 @@ LOW_CONFIDENCE_MAX_BLOCKS = 1
 DEFAULT_DEMOTE_AFTER_HOURS = 48.0
 DEFAULT_EXPIRE_AFTER_HOURS = 96.0
 
+FAILED_HYGIENE_DEFAULT_KEEP_DAYS = 7.0
+FAILED_HYGIENE_DEFAULT_KEEP_RECENT = 500
+INTENTIONAL_FAILURE_BUCKETS = {"stale_ready_expired", "stale_low_confidence_expired", "stale_low_confidence_demoted", "duplicate"}
+
+
+def failed_runtime_alert_summary(failure_buckets: dict[str, int]) -> dict[str, Any]:
+    intentional = {k: v for k, v in failure_buckets.items() if k in INTENTIONAL_FAILURE_BUCKETS}
+    runtime = {k: v for k, v in failure_buckets.items() if k not in INTENTIONAL_FAILURE_BUCKETS}
+    return {
+        "intentional_cleanup_total": sum(intentional.values()),
+        "runtime_failure_total": sum(runtime.values()),
+        "intentional_cleanup_buckets": dict(sorted(intentional.items())),
+        "runtime_failure_buckets": dict(sorted(runtime.items())),
+    }
+
+
+def prune_failed_backlog(*, keep_days: float = FAILED_HYGIENE_DEFAULT_KEEP_DAYS, keep_recent: int = FAILED_HYGIENE_DEFAULT_KEEP_RECENT, dry_run: bool = True, bucket: str = "stale_ready_expired") -> dict[str, Any]:
+    now = datetime.now(timezone.utc)
+    files = sorted((STAGED_ROOT / "failed").glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    cutoff = now.timestamp() - keep_days * 86400
+    kept_bucket = 0
+    summary: dict[str, Any] = {
+        "dry_run": dry_run,
+        "bucket": bucket,
+        "keep_days": keep_days,
+        "keep_recent": keep_recent,
+        "scanned": 0,
+        "kept": 0,
+        "pruned": 0,
+        "actions": [],
+    }
+    for path in files:
+        summary["scanned"] += 1
+        data = read_queue_record(path)
+        reason = data.get("failure")
+        if data.get("quality_gate_rejected"):
+            reason = "quality_gate_rejected"
+        reason_bucket = normalize_failure_reason(str(reason or data.get("read_error") or ""))
+        should_keep = True
+        if reason_bucket == bucket:
+            kept_bucket += 1
+            should_keep = kept_bucket <= keep_recent or path.stat().st_mtime >= cutoff
+        if should_keep:
+            summary["kept"] += 1
+            continue
+        summary["actions"].append({"file": path.name, "bucket": reason_bucket, "age_hours": round((now.timestamp() - path.stat().st_mtime) / 3600, 2)})
+        summary["pruned"] += 1
+        if not dry_run:
+            path.unlink(missing_ok=True)
+    return summary
+
 
 def packet_confidence(data: dict) -> float:
     packet = data.get("packet") or data
@@ -673,6 +724,7 @@ def queue_box_status(box: str, files: list[Path], now: datetime) -> dict[str, An
             bucket = normalize_failure_reason(str(reason or data.get("read_error") or ""))
             buckets[bucket] = buckets.get(bucket, 0) + 1
         result["failure_reason_buckets"] = dict(sorted(buckets.items()))
+        result["alert_summary"] = failed_runtime_alert_summary(result["failure_reason_buckets"])
     return result
 
 
@@ -700,6 +752,17 @@ def cmd_audit_ready(args: argparse.Namespace) -> int:
         expire_after_hours=args.expire_after_hours,
         dry_run=args.dry_run,
         limit=args.limit,
+    )
+    print(json.dumps(summary, indent=2, ensure_ascii=False))
+    return 0
+
+
+def cmd_prune_failed(args: argparse.Namespace) -> int:
+    summary = prune_failed_backlog(
+        keep_days=args.keep_days,
+        keep_recent=args.keep_recent,
+        dry_run=args.dry_run,
+        bucket=args.bucket,
     )
     print(json.dumps(summary, indent=2, ensure_ascii=False))
     return 0
@@ -752,6 +815,13 @@ def main() -> int:
     audit.add_argument("--limit", type=int, default=0, help="scan only first N oldest ready packets")
     audit.add_argument("--dry-run", action="store_true", default=False, help="report actions without moving packets")
     audit.set_defaults(func=cmd_audit_ready)
+
+    prune = sub.add_parser("prune-failed")
+    prune.add_argument("--bucket", default="stale_ready_expired", help="normalized failed bucket to rotate")
+    prune.add_argument("--keep-days", type=float, default=FAILED_HYGIENE_DEFAULT_KEEP_DAYS)
+    prune.add_argument("--keep-recent", type=int, default=FAILED_HYGIENE_DEFAULT_KEEP_RECENT)
+    prune.add_argument("--dry-run", action="store_true", default=False, help="report files without deleting them")
+    prune.set_defaults(func=cmd_prune_failed)
 
     status = sub.add_parser("status")
     status.add_argument("--verbose", action="store_true", help="include queue age/source metrics and failed reason buckets")

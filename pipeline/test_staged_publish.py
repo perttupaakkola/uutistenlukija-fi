@@ -82,6 +82,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertIn("source_words_median", ready_status)
         self.assertEqual(failed_status["failure_reason_buckets"]["content_too_short"], 1)
         self.assertEqual(failed_status["failure_reason_buckets"]["writer_runtime"], 1)
+        self.assertEqual(failed_status["alert_summary"]["runtime_failure_total"], 2)
 
     def test_priority_prefers_promising_packet_over_old_thin_fifo(self) -> None:
         thin_old = self._write("ready", "thin-old", _record("thin-old", source_words=45, blocks=1), age_hours=30)
@@ -157,6 +158,64 @@ class StagedPublishBacklogAuditTests(unittest.TestCase):
         self.assertEqual(status["audit"]["stale_low_confidence"], 1)
         self.assertEqual(status["audit"]["demote_candidates_48h"], 1)
         self.assertEqual(status["audit"]["expire_candidates_96h"], 0)
+
+
+class StagedPublishFailedHygieneTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        for box in ["ready", "writing", "outbox", "published", "failed"]:
+            (self.root / box).mkdir(parents=True, exist_ok=True)
+        self.patch = patch.object(staged_publish, "STAGED_ROOT", self.root)
+        self.patch.start()
+
+    def tearDown(self) -> None:
+        self.patch.stop()
+        self.tmp.cleanup()
+
+    def _write_failed(self, name: str, failure: str, age_hours: float) -> Path:
+        path = self.root / "failed" / f"{name}.json"
+        created = datetime.now(timezone.utc) - timedelta(hours=age_hours)
+        data = {**_record(name, 100), "failed_at": created.isoformat(), "failure": failure}
+        path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        import os
+        os.utime(path, (created.timestamp(), created.timestamp()))
+        return path
+
+    def test_failed_alert_summary_separates_intentional_cleanup_from_runtime(self) -> None:
+        summary = staged_publish.failed_runtime_alert_summary({
+            "stale_ready_expired": 10,
+            "content_too_short": 2,
+            "writer_runtime": 1,
+        })
+
+        self.assertEqual(summary["intentional_cleanup_total"], 10)
+        self.assertEqual(summary["runtime_failure_total"], 3)
+        self.assertEqual(summary["runtime_failure_buckets"], {"content_too_short": 2, "writer_runtime": 1})
+
+    def test_prune_failed_dry_run_keeps_recent_bucket_and_reports_old_excess(self) -> None:
+        self._write_failed("old-a", "stale_ready_expired age_h=240 max_age_h=10", age_hours=240)
+        self._write_failed("old-b", "stale_ready_expired age_h=230 max_age_h=10", age_hours=230)
+        self._write_failed("runtime", "timed out", age_hours=240)
+
+        summary = staged_publish.prune_failed_backlog(dry_run=True, keep_days=7, keep_recent=1)
+
+        self.assertEqual(summary["pruned"], 1)
+        self.assertEqual(summary["kept"], 2)
+        self.assertTrue((self.root / "failed" / "old-a.json").exists())
+        self.assertTrue((self.root / "failed" / "old-b.json").exists())
+        self.assertTrue((self.root / "failed" / "runtime.json").exists())
+
+    def test_prune_failed_non_dry_removes_only_old_excess_bucket(self) -> None:
+        self._write_failed("old-a", "stale_ready_expired age_h=240 max_age_h=10", age_hours=240)
+        self._write_failed("old-b", "stale_ready_expired age_h=230 max_age_h=10", age_hours=230)
+        self._write_failed("runtime", "timed out", age_hours=240)
+
+        summary = staged_publish.prune_failed_backlog(dry_run=False, keep_days=7, keep_recent=1)
+
+        self.assertEqual(summary["pruned"], 1)
+        self.assertEqual(len(list((self.root / "failed").glob("*.json"))), 2)
+        self.assertTrue((self.root / "failed" / "runtime.json").exists())
 
 
 if __name__ == "__main__":
