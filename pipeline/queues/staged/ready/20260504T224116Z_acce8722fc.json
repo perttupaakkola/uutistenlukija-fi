@@ -1,0 +1,90 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-04T22:41:16.033723+00:00",
+  "digest": "acce8722fc",
+  "packet": {
+    "packet_id": "20260504T224116Z_acce8722fc",
+    "created_at": "2026-05-04T22:41:16Z",
+    "headline_seed": "U.S. government warns of severe CopyFail bug affecting major versions of Linux",
+    "description_seed": "U.S. cybersecurity agency CISA says the CopyFail bug is being actively used in hacking campaigns, and poses a major risk to servers and datacenters that rely on Linux.",
+    "link": "https://techcrunch.com/2026/05/04/u-s-government-warns-of-severe-copyfail-bug-affecting-major-versions-of-linux/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "OSTechNix",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/05/04/u-s-government-warns-of-severe-copyfail-bug-affecting-major-versions-of-linux/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.77,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "U.S. government warns of severe CopyFail bug affecting major versions of Linux"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "U.S. cybersecurity agency CISA says the CopyFail bug is being actively used in hacking campaigns, and poses a major risk to servers and datacenters that rely on Linux.",
+        "word_count": 28,
+        "keyword_overlap": 18,
+        "strong_overlap": 8
+      },
+      {
+        "source": "OSTechNix",
+        "source_type": "research",
+        "text": "Security researchers recently found a major flaw in the Linux kernel that grants root access on major Linux distributions since 2017. They named it Copy Fail (CVE-2026-31431).",
+        "word_count": 27,
+        "keyword_overlap": 3,
+        "strong_overlap": 0
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "If you use a major Linux version released since 2017, your system is likely at risk.",
+        "word_count": 16,
+        "keyword_overlap": 3,
+        "strong_overlap": 0
+      }
+    ],
+    "source_text": "U.S. cybersecurity agency CISA says the CopyFail bug is being actively used in hacking campaigns, and poses a major risk to servers and datacenters that rely on Linux.\n\nSecurity researchers recently found a major flaw in the Linux kernel that grants root access on major Linux distributions since 2017. They named it Copy Fail (CVE-2026-31431).\n\nIf you use a major Linux version released since 2017, your system is likely at risk.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "U.S. government warns of severe CopyFail bug affecting major versions of Linux",
+      "description": "U.S. cybersecurity agency CISA says the CopyFail bug is being actively used in hacking campaigns, and poses a major risk to servers and datacenters that rely on Linux.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "U.S. government warns of severe CopyFail bug affecting major versions of Linux",
+    "description": "U.S. cybersecurity agency CISA says the CopyFail bug is being actively used in hacking campaigns, and poses a major risk to servers and datacenters that rely on Linux.",
+    "link": "https://techcrunch.com/2026/05/04/u-s-government-warns-of-severe-copyfail-bug-affecting-major-versions-of-linux/",
+    "published": "2026-05-04T22:21:32+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "5cb4a490b16a0174c4d26d050c2e7a60",
+    "_url_hash": "2e8dc5052ac35be2772ed278e2b73419131559c12c0f7420a967c30815532f3d",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: OSTechNix]\nSecurity researchers recently found a major flaw in the Linux kernel that grants root access on major Linux distributions since 2017. They named it Copy Fail (CVE-2026-31431).\n\nThe Copy Fail bug is quite different from most security issues. Usually, a hacker needs luck or perfect timing to break into a system. However, Copy Fail is a straight-line logic flaw. This means it works with 100% reliability every single time someone runs it.\n\nIf you use a major Linux version released since 2017, your system is likely at risk.\n\nIn this blog post, we will understand how \"Copy Fail (CVE-2026-31431)\" bug works and how you can fix it.\n\nMost Linux bugs depend on \"race conditions\". These are like trying to win a sprint where the finish line keeps moving. Copy Fail does not need to win a race. It uses a tiny 732-byte Python script to gain full root access.\n\nThis bug is also very stealthy. It targets the Page Cache (RAM), which is the kernel's way of keeping file data in fast memory.\n\nBecause the bug only changes the memory version of a file, the actual file on your hard drive stays the same. As a result, standard security tools that check for file changes on the disk will see nothing wrong.\n\nThe problem started in 2017 with a small code change meant to make the kernel faster. This change allowed the kernel to perform \"in-place\" encryption. This simply means the kernel used the same memory area for both the input and the output of a task.\n\nThe exploit chains three specific tools together:\n\nThe trouble begins because authencesn uses its output space as a \"scratch pad\" to store temporary notes. Because of the 2017 mistake, those notes are written directly into the read-only memory pages of sensitive files. By choosing the right file, an attacker can overwrite four bytes of data to take over the machine.\n\nThe typical attack targets a file called /usr/bin/su. This is a special file that helps users switch to the root account. The exploit script overwrites just four bytes of this file in the system's memory.\n\nOnce the memory is corrupted, the attacker simply runs the su command. Since the kernel loads the corrupted version from its fast memory, the attacker instantly gets a root shell.\n\nWhat about the root password? The attacker doesn't need the root password. Because, the version of sudo currently in the Page Cache has been modified to skip the password check. The attacker types any password (or none at all), and the kernel grants them a Root Shell.\n\nThis same trick also lets",
+    "research_source": "multi"
+  }
+}
