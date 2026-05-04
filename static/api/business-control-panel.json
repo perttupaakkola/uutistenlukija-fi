@@ -2,28 +2,28 @@
   "analytics": {
     "ga4": {
       "daily_traffic_log": {
-        "age_minutes": 273.9,
+        "age_minutes": 990.0,
         "exists": true,
         "status": "error_seen"
       },
       "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
       "status": "blocked_or_unknown",
       "weekly_metrics_log": {
-        "age_minutes": 273.9,
+        "age_minutes": 990.0,
         "exists": true,
         "status": "error_seen"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 213.9,
+        "age_minutes": 930.0,
         "data_source": "frontmatter_synthetic",
         "generated_at": "2026-05-04T08:00:01.756093Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 20
       },
       "fetch_log": {
-        "age_minutes": 303.9,
+        "age_minutes": 1020.0,
         "exists": true,
         "status": "error_seen"
       },
@@ -102,15 +102,15 @@
     "total_articles": 1727
   },
   "content": {
-    "article_count_local": 1730,
-    "last_publish_age_minutes": 1.7,
-    "last_publish_at": "2026-05-04T11:32:16.361166Z",
+    "article_count_local": 1741,
+    "last_publish_age_minutes": 2.0,
+    "last_publish_at": "2026-05-04T23:28:02.107469Z",
     "latest_article": {
-      "category": "Ulkomaat",
-      "slug": "2026-05-04-iranin-talouskriisi-voi-kaventaa-teheranin-liikkumavaraa-yhd",
-      "title": "Iranin talouskriisi voi kaventaa Teheranin liikkumavaraa Yhdysvaltojen neuvotteluissa"
+      "category": "Kulttuuri",
+      "slug": "2026-05-04-met-gaalan-punaisella-matolla-korostui-muoti-taidemuotona",
+      "title": "Met-gaalan punaisella matolla korostui muoti taidemuotona"
     },
-    "published_last_24h_local": 14,
+    "published_last_24h_local": 16,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -130,7 +130,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-05-04T11:33:57.770933Z",
+  "generated_at": "2026-05-04T23:30:03.228392Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -163,9 +163,9 @@
     "last_24h": {
       "article_count": 0,
       "failure": 144,
-      "runs_total": 146,
+      "runs_total": 144,
       "skipped": 0,
-      "success": 2,
+      "success": 0,
       "top_error_reasons": [
         {
           "count": 144,
@@ -173,18 +173,18 @@
         }
       ]
     },
-    "last_run_age_minutes": 3.8,
+    "last_run_age_minutes": 9.9,
     "last_run_article_count": 0,
-    "last_run_at": "2026-05-04T11:30:08.208163Z",
+    "last_run_at": "2026-05-04T23:20:08.155643Z",
     "last_run_success": false,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
-        "attempted": 50,
-        "last_published_ts": "2026-05-04T11:32:16.361166+00:00",
-        "publish_rate": 28.0,
-        "published": 14,
-        "rejected": 4
+        "attempted": 0,
+        "last_published_ts": "2026-05-04T23:28:02.107469+00:00",
+        "publish_rate": 0,
+        "published": 16,
+        "rejected": 9
       },
       "feeds": {
         "disabled": 0,
@@ -194,47 +194,47 @@
         "stale_names": [],
         "total": 38
       },
-      "generated_at": "2026-05-04T11:32:38+00:00",
+      "generated_at": "2026-05-04T23:28:23+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "central unsourced number in ti": 3,
-        "keyword_stuffing": 1,
-        "language borderline Finnish si": 1,
+        "central unsourced number in ti": 6,
+        "keyword_stuffing": 3,
+        "language borderline Finnish si": 3,
         "length under target (250 words": 1,
         "length under target (252 words": 1,
         "length under target (269 words": 1,
-        "missing: image": 4,
-        "unsourced numbers": 4
+        "missing: image": 9,
+        "unsourced numbers": 7
       },
       "runs": {
         "error": 0,
         "ok": 0,
-        "skip": 2,
-        "total": 2
+        "skip": 0,
+        "total": 0
       },
       "stale_threshold_minutes": 90,
       "status": "ok",
       "trending": [
         [
-          "yhdysvaltain",
-          15
-        ],
-        [
-          "jälkeen",
-          13
-        ],
-        [
-          "koirien",
-          11
-        ],
-        [
           "iranin",
-          9
+          24
         ],
         [
-          "julkisen",
-          9
+          "yhdysvaltain",
+          20
+        ],
+        [
+          "miten",
+          17
+        ],
+        [
+          "kanssa",
+          12
+        ],
+        [
+          "mukana",
+          11
         ]
       ]
     },
@@ -244,33 +244,33 @@
     "queues": {
       "monica/inbox": {
         "count": 6594,
-        "newest_item_age_minutes": 1316.0,
-        "oldest_item_age_minutes": 23171.0
+        "newest_item_age_minutes": 2032.1,
+        "oldest_item_age_minutes": 23887.1
       },
       "monica/outbox": {
         "count": 1573,
-        "newest_item_age_minutes": 2214.3,
-        "oldest_item_age_minutes": 22568.0
+        "newest_item_age_minutes": 2930.4,
+        "oldest_item_age_minutes": 23284.1
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 1315.3,
-        "oldest_item_age_minutes": 23171.0
+        "newest_item_age_minutes": 2031.4,
+        "oldest_item_age_minutes": 23887.1
       },
       "staged/failed": {
-        "count": 630,
-        "newest_item_age_minutes": 2.0,
-        "oldest_item_age_minutes": 4066.7
+        "count": 794,
+        "newest_item_age_minutes": 25.8,
+        "oldest_item_age_minutes": 4782.8
       },
       "staged/published": {
-        "count": 28,
-        "newest_item_age_minutes": 1.3,
-        "oldest_item_age_minutes": 3725.5
+        "count": 39,
+        "newest_item_age_minutes": 1.7,
+        "oldest_item_age_minutes": 4441.6
       },
       "staged/ready": {
-        "count": 146,
-        "newest_item_age_minutes": 4.1,
-        "oldest_item_age_minutes": 602.7
+        "count": 43,
+        "newest_item_age_minutes": 8.7,
+        "oldest_item_age_minutes": 598.8
       }
     },
     "source": "pipeline/queues/*.json file counts only"
