@@ -56,16 +56,14 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   align-items: center;
 }
 .portal-logo { display: inline-flex; align-items: center; min-width: 0; }
-.portal-logo__image { display: none; }
-.portal-logo__text {
-  color: #071329;
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -.055em;
+.portal-logo__image {
+  display: block;
+  width: min(220px, 100%);
+  height: auto;
+  max-height: 43px;
+  object-fit: contain;
+  object-position: left center;
 }
-.portal-logo__text span { color: #164aa3; }
-.portal-logo__mark { display: none; }
 .portal-search { min-width: 0; position: relative; }
 .site-search--collapsed .site-search__form { display: flex !important; }
 .site-search--collapsed .site-search__status { display: none !important; }
@@ -426,26 +424,20 @@ main.container { padding-top: 0; padding-bottom: 48px; }
     justify-content: space-between;
     border-bottom: 1px solid var(--portal-line);
   }
-  .portal-logo__image { display: none; }
-  .portal-logo__text { display: none; }
-  .portal-logo__mark {
-    display: grid;
-    place-items: center;
-    width: 38px;
-    height: 38px;
-    background: #050505;
-    color: #fff;
-    border-radius: 3px;
-    font-size: 20px;
-    font-family: Georgia, serif;
-    line-height: 1;
-    letter-spacing: -.04em;
+  .portal-logo__image {
+    display: block;
+    width: clamp(148px, 42vw, 188px);
+    max-width: 100%;
+    max-height: 34px;
+    object-fit: contain;
+    object-position: left center;
   }
   .portal-actions { margin-left: 0; justify-self: end; gap: 0; font-size: 15px; font-weight: 500; }
   .portal-weather, .portal-action--desktop, .theme-toggle-btn { display: none !important; }
   .portal-mobile-label { display: inline; }
   .portal-icon-button { min-height: 38px; }
   .portal-search { order: 0; margin-left: 0; display: inline-flex !important; justify-self: end; width: auto !important; max-width: none !important; min-width: 0 !important; }
+  .portal-logo { min-width: 0; overflow: hidden; }
   .portal-masthead .portal-search .search-toggle-btn { display: inline-flex !important; visibility: visible !important; opacity: 1 !important; }
   .site-search--collapsed .site-search__form { display: none !important; }
   .site-search:not(.site-search--collapsed) {
