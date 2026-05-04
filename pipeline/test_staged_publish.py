@@ -65,6 +65,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.normalize_failure_reason("Context overflow from Monica"), "writer_runtime")
         self.assertEqual(staged_publish.normalize_failure_reason("quality gate unsourced_numbers"), "quality_gate")
         self.assertEqual(staged_publish.normalize_failure_reason("duplicate article"), "duplicate")
+        self.assertEqual(staged_publish.normalize_failure_reason("stale_low_confidence_expired age_h=120.0"), "stale_low_confidence_expired")
 
     def test_verbose_status_contains_age_source_and_failure_buckets(self) -> None:
         self._write("ready", "old-rich", _record("old-rich", source_words=360, blocks=2), age_hours=12)
@@ -100,6 +101,62 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(sample["packet_id"], "sample")
         self.assertGreater(sample["priority_score"], 0)
         self.assertTrue(path.exists())
+
+
+class StagedPublishBacklogAuditTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        for box in ["ready", "writing", "outbox", "published", "failed"]:
+            (self.root / box).mkdir(parents=True, exist_ok=True)
+        self.patch = patch.object(staged_publish, "STAGED_ROOT", self.root)
+        self.patch.start()
+
+    def tearDown(self) -> None:
+        self.patch.stop()
+        self.tmp.cleanup()
+
+    def _write(self, box: str, name: str, data: dict, age_hours: float = 0) -> Path:
+        path = self.root / box / f"{name}.json"
+        created = datetime.now(timezone.utc) - timedelta(hours=age_hours)
+        data = {**data, "created_at": created.isoformat()}
+        path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        import os
+        os.utime(path, (created.timestamp(), created.timestamp()))
+        return path
+
+    def test_audit_ready_dry_run_identifies_stale_low_confidence_without_moving(self) -> None:
+        self._write("ready", "stale-thin", _record("stale-thin", source_words=55, blocks=1), age_hours=60)
+        self._write("ready", "fresh-rich", _record("fresh-rich", source_words=420, blocks=2), age_hours=4)
+
+        summary = staged_publish.audit_ready_backlog(dry_run=True, demote_after_hours=48, expire_after_hours=96)
+
+        self.assertEqual(summary["scanned"], 2)
+        self.assertEqual(summary["demoted"], 1)
+        self.assertEqual(summary["expired"], 0)
+        self.assertTrue((self.root / "ready" / "stale-thin.json").exists())
+        self.assertFalse((self.root / "failed" / "stale-thin.json").exists())
+
+    def test_audit_ready_moves_expired_packet_to_failed_with_reason(self) -> None:
+        self._write("ready", "expired-thin", _record("expired-thin", source_words=55, blocks=1), age_hours=120)
+
+        summary = staged_publish.audit_ready_backlog(dry_run=False, demote_after_hours=48, expire_after_hours=96)
+
+        self.assertEqual(summary["expired"], 1)
+        self.assertFalse((self.root / "ready" / "expired-thin.json").exists())
+        failed = json.loads((self.root / "failed" / "expired-thin.json").read_text(encoding="utf-8"))
+        self.assertEqual(failed["backlog_audit_action"], "expire")
+        self.assertIn("stale_low_confidence_expired", failed["failure"])
+
+    def test_status_reports_ready_audit_candidates(self) -> None:
+        self._write("ready", "stale-thin", _record("stale-thin", source_words=55, blocks=1), age_hours=60)
+        self._write("ready", "fresh-rich", _record("fresh-rich", source_words=420, blocks=2), age_hours=4)
+
+        status = staged_publish.queue_box_status("ready", list((self.root / "ready").glob("*.json")), datetime.now(timezone.utc))
+
+        self.assertEqual(status["audit"]["stale_low_confidence"], 1)
+        self.assertEqual(status["audit"]["demote_candidates_48h"], 1)
+        self.assertEqual(status["audit"]["expire_candidates_96h"], 0)
 
 
 if __name__ == "__main__":

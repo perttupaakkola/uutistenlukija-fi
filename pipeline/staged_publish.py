@@ -153,6 +153,10 @@ def normalize_failure_reason(reason: str | None) -> str:
         return "quality_gate"
     if "duplicate" in text or "duplika" in text:
         return "duplicate"
+    if "stale_low_confidence_expired" in text:
+        return "stale_low_confidence_expired"
+    if "stale_low_confidence_demoted" in text:
+        return "stale_low_confidence_demoted"
     if "stale_ready_expired" in text or "stale" in text:
         return "stale_ready_expired"
     return "unknown"
@@ -166,19 +170,67 @@ def read_queue_record(path: Path) -> dict:
         return {"read_error": str(e)}
 
 
-def priority_score(path: Path) -> tuple[float, float, int, int, float, str]:
-    data = read_queue_record(path)
-    created = file_record_time(path, data)
-    age_hours = max(0.0, (datetime.now(timezone.utc) - created).total_seconds() / 3600)
+LOW_CONFIDENCE_MAX_WORDS = 120
+LOW_CONFIDENCE_MAX_BLOCKS = 1
+DEFAULT_DEMOTE_AFTER_HOURS = 48.0
+DEFAULT_EXPIRE_AFTER_HOURS = 96.0
+
+
+def packet_confidence(data: dict) -> float:
+    packet = data.get("packet") or data
+    try:
+        return float(packet.get("story_confidence") or packet.get("confidence") or 0.0)
+    except Exception:
+        return 0.0
+
+
+def packet_audit(data: dict, path: Path | None = None, now: datetime | None = None) -> dict[str, Any]:
+    now = now or datetime.now(timezone.utc)
     source_words = packet_source_words(data)
     source_blocks = packet_source_blocks(data)
+    confidence = packet_confidence(data)
+    created = file_record_time(path, data) if path else parse_record_time(data.get("created_at")) or now
+    age_hours = max(0.0, (now - created).total_seconds() / 3600)
+    low_confidence = confidence and confidence < 0.55
+    thin = source_words < LOW_CONFIDENCE_MAX_WORDS or source_blocks < LOW_CONFIDENCE_MAX_BLOCKS
+    return {
+        "age_hours": age_hours,
+        "source_words": source_words,
+        "source_blocks": source_blocks,
+        "story_confidence": round(confidence, 3),
+        "low_confidence": bool(low_confidence),
+        "thin_source": bool(thin),
+        "stale_low_confidence": bool(age_hours >= DEFAULT_DEMOTE_AFTER_HOURS and (low_confidence or thin)),
+    }
+
+
+def ready_packet_action(data: dict, path: Path, now: datetime, demote_after_hours: float, expire_after_hours: float) -> tuple[str, str]:
+    audit = packet_audit(data, path, now)
+    age = audit["age_hours"]
+    stale_low = audit["stale_low_confidence"] or (age >= demote_after_hours and audit["source_words"] < 180 and audit["source_blocks"] <= 1)
+    if age >= expire_after_hours and stale_low:
+        return "expire", f"stale_low_confidence_expired age_h={age:.1f} source_words={audit['source_words']} source_blocks={audit['source_blocks']} confidence={audit['story_confidence']}"
+    if age >= demote_after_hours and stale_low:
+        return "demote", f"stale_low_confidence_demoted age_h={age:.1f} source_words={audit['source_words']} source_blocks={audit['source_blocks']} confidence={audit['story_confidence']}"
+    return "keep", ""
+
+
+def priority_score(path: Path) -> tuple[float, float, int, int, float, str]:
+    data = read_queue_record(path)
+    audit = packet_audit(data, path)
+    age_hours = float(audit["age_hours"])
+    source_words = int(audit["source_words"])
+    source_blocks = int(audit["source_blocks"])
+    confidence = float(audit["story_confidence"])
     # Age still matters, but source strength prevents the worker from burning
     # the oldest thin packets forever. This is deterministic for stable mtimes.
-    score = age_hours + min(source_words, 800) / 80 + source_blocks * 3
+    score = age_hours + min(source_words, 800) / 80 + source_blocks * 3 + confidence * 4
     if source_words < 120:
         score -= 8
     if source_words < 80:
         score -= 8
+    if audit["stale_low_confidence"]:
+        score -= 20
     return (score, age_hours, source_words, source_blocks, -path.stat().st_mtime, path.name)
 
 
@@ -188,6 +240,42 @@ def prioritized_ready_packets(max_packets: int | None = None) -> list[Path]:
     if max_packets is None:
         return ordered
     return ordered[:max_packets]
+
+
+def audit_ready_backlog(*, demote_after_hours: float = DEFAULT_DEMOTE_AFTER_HOURS, expire_after_hours: float = DEFAULT_EXPIRE_AFTER_HOURS, dry_run: bool = True, limit: int = 0) -> dict[str, Any]:
+    now = datetime.now(timezone.utc)
+    files = sorted((STAGED_ROOT / "ready").glob("*.json"), key=lambda p: p.stat().st_mtime)
+    summary: dict[str, Any] = {
+        "dry_run": dry_run,
+        "scanned": 0,
+        "kept": 0,
+        "demoted": 0,
+        "expired": 0,
+        "demote_after_hours": demote_after_hours,
+        "expire_after_hours": expire_after_hours,
+        "actions": [],
+    }
+    for path in files:
+        if limit and summary["scanned"] >= limit:
+            break
+        summary["scanned"] += 1
+        data = read_queue_record(path)
+        action, reason = ready_packet_action(data, path, now, demote_after_hours, expire_after_hours)
+        if action == "keep":
+            summary["kept"] += 1
+            continue
+        summary["actions"].append({"file": path.name, "action": action, "reason": reason})
+        if dry_run:
+            summary["demoted" if action == "demote" else "expired"] += 1
+            continue
+        data.update({"failed_at": now.isoformat(), "failure": reason, "backlog_audit_action": action})
+        target = STAGED_ROOT / "failed" / path.name
+        if target.exists():
+            target = STAGED_ROOT / "failed" / f"{path.stem}_{int(time.time())}{path.suffix}"
+        atomic_write_json(target, data)
+        path.unlink(missing_ok=True)
+        summary["demoted" if action == "demote" else "expired"] += 1
+    return summary
 
 
 def expire_ready_packets(max_age_hours: float) -> int:
@@ -567,6 +655,15 @@ def queue_box_status(box: str, files: list[Path], now: datetime) -> dict[str, An
             "source_words_p90": source_words[min(len(source_words) - 1, int(len(source_words) * 0.9))] if source_words else 0,
         }
     )
+    if box == "ready":
+        audits = [packet_audit(data, p, now) for p, data in records]
+        result["audit"] = {
+            "low_confidence": sum(1 for a in audits if a["low_confidence"]),
+            "thin_source": sum(1 for a in audits if a["thin_source"]),
+            "stale_low_confidence": sum(1 for a in audits if a["stale_low_confidence"]),
+            "demote_candidates_48h": sum(1 for p, data in records if ready_packet_action(data, p, now, DEFAULT_DEMOTE_AFTER_HOURS, DEFAULT_EXPIRE_AFTER_HOURS)[0] == "demote"),
+            "expire_candidates_96h": sum(1 for p, data in records if ready_packet_action(data, p, now, DEFAULT_DEMOTE_AFTER_HOURS, DEFAULT_EXPIRE_AFTER_HOURS)[0] == "expire"),
+        }
     if box == "failed":
         buckets: dict[str, int] = {}
         for _, data in records:
@@ -592,7 +689,20 @@ def ready_sample(path: Path) -> dict[str, Any]:
         "age_hours": round(age_hours, 2),
         "source_words": source_words,
         "source_blocks": source_blocks,
+        "story_confidence": packet_confidence(data),
+        "audit": packet_audit(data, path),
     }
+
+
+def cmd_audit_ready(args: argparse.Namespace) -> int:
+    summary = audit_ready_backlog(
+        demote_after_hours=args.demote_after_hours,
+        expire_after_hours=args.expire_after_hours,
+        dry_run=args.dry_run,
+        limit=args.limit,
+    )
+    print(json.dumps(summary, indent=2, ensure_ascii=False))
+    return 0
 
 
 def cmd_status(args: argparse.Namespace) -> int:
@@ -635,6 +745,13 @@ def main() -> int:
     pub.add_argument("--git-push", action="store_true")
     pub.add_argument("--dry-run", action="store_true")
     pub.set_defaults(func=cmd_publish)
+
+    audit = sub.add_parser("audit-ready")
+    audit.add_argument("--demote-after-hours", type=float, default=DEFAULT_DEMOTE_AFTER_HOURS)
+    audit.add_argument("--expire-after-hours", type=float, default=DEFAULT_EXPIRE_AFTER_HOURS)
+    audit.add_argument("--limit", type=int, default=0, help="scan only first N oldest ready packets")
+    audit.add_argument("--dry-run", action="store_true", default=False, help="report actions without moving packets")
+    audit.set_defaults(func=cmd_audit_ready)
 
     status = sub.add_parser("status")
     status.add_argument("--verbose", action="store_true", help="include queue age/source metrics and failed reason buckets")
