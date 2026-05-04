@@ -252,3 +252,20 @@ class StagedPublishFailedHygieneTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RssSourcePolicyTests(unittest.TestCase):
+    def test_scanner_policy_skips_dead_and_unreachable_feeds(self) -> None:
+        from pipeline import scanner
+        policy = {"AP News": {"policy": "disable_or_replace", "reason": "http_403_or_known_block"}}
+        allowed, reason = scanner._scanner_policy_allows_feed({"name": "AP News"}, policy)
+        self.assertFalse(allowed)
+        self.assertEqual(reason, "http_403_or_known_block")
+
+    def test_scanner_policy_marks_stale_articles_not_fresh_quota_eligible(self) -> None:
+        from pipeline import scanner
+        article = {"source": "Yle Tiede"}
+        scanner._apply_source_policy_metadata(article, {"Yle Tiede": {"policy": "stale_source", "fresh_quota_eligible": False}})
+        self.assertEqual(article["source_policy"], "stale_source")
+        self.assertFalse(article["fresh_source_quota_eligible"])
+        self.assertTrue(article["stale_source"])

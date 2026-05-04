@@ -335,13 +335,32 @@ def _remediate(results: list[dict], ext_state: dict, dry_run: bool = False) -> t
     return ext_state, alerts
 
 
+def _source_policy(feed: dict) -> dict:
+    """Return deterministic scanner/source policy for a probed feed."""
+    name = str(feed.get("name") or "")
+    status = _normalize_http_status(feed.get("http_status"))
+    score = feed.get("score")
+    age = feed.get("age_hours")
+    if status == 403 or name == "AP News":
+        return {"policy": "disable_or_replace", "fresh_quota_eligible": False, "reason": "http_403_or_known_block"}
+    if score == SCORE_UNREACHABLE:
+        return {"policy": "demote_unreachable", "fresh_quota_eligible": False, "reason": "unreachable_probe"}
+    if status == 200 and age is None:
+        return {"policy": "fix_parser_or_demote", "fresh_quota_eligible": False, "reason": "unknown_newest_age"}
+    if status == 200 and isinstance(age, (int, float)) and age >= STALE_HOURS:
+        return {"policy": "stale_source", "fresh_quota_eligible": False, "reason": "http_200_stale_48h_plus"}
+    if score == SCORE_STALE:
+        return {"policy": "warn_only", "fresh_quota_eligible": False, "reason": "short_stale"}
+    return {"policy": "fresh", "fresh_quota_eligible": True, "reason": "fresh"}
+
+
 def _write_unified_feed_health(results: list[dict]) -> None:
     """Write a stable, API-served RSS probe artifact for ops dashboards."""
     checked_at = datetime.now(timezone.utc).isoformat()
     feeds = []
     for r in results:
         status = _normalize_http_status(r.get("http_status"))
-        feeds.append({
+        feed = {
             "name": r.get("name"),
             "url": r.get("url"),
             "language": r.get("language"),
@@ -352,14 +371,20 @@ def _write_unified_feed_health(results: list[dict]) -> None:
             "newest_age_h": r.get("age_hours"),
             "score": r.get("score"),
             "checked_at": r.get("checked_at", checked_at),
-        })
+        }
+        feed.update(_source_policy(r))
+        feeds.append(feed)
 
     counts = {score: sum(1 for r in results if r.get("score") == score)
               for score in (SCORE_FRESH, SCORE_STALE, SCORE_DEAD, SCORE_UNREACHABLE)}
+    policy_counts = {}
+    for feed in feeds:
+        policy_counts[feed["policy"]] = policy_counts.get(feed["policy"], 0) + 1
     payload = {
         "generated_at": checked_at,
         "schema": "uutistenlukija.rss_feed_health.v1",
         "counts": counts,
+        "policy_counts": dict(sorted(policy_counts.items())),
         "feeds": feeds,
     }
     UNIFIED_FEED_HEALTH_FILE.parent.mkdir(parents=True, exist_ok=True)

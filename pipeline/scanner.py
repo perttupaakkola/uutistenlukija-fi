@@ -6,13 +6,14 @@ Uses only stdlib (no feedparser dependency).
 import difflib
 import hashlib
 import html as html_module
-import json
 import os
 import re
 import time
+import json
 import xml.etree.ElementTree as ET
 import urllib.request
 import urllib.error
+from pathlib import Path
 from datetime import datetime, timezone
 from typing import List, Dict, Optional
 from email.utils import parsedate_to_datetime
@@ -25,6 +26,9 @@ except ImportError:
     _FEED_HEALTH_AVAILABLE = False
     def get_global_health(): return None  # noqa: E731
     def save_global_health(): pass  # noqa: E731
+
+PIPELINE_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = PIPELINE_DIR.parent
 
 # Source trust tiers — controls deletion protection and rewriter fact-anchoring.
 #
@@ -339,6 +343,31 @@ RSS_FEEDS = [
         "disabled": True,  # HS returns HTML (paywall/Next.js), not RSS
     },
 ]
+
+RSS_FEED_HEALTH_FILE = PROJECT_DIR / "static" / "api" / "rss-feed-health.json"
+
+def _load_rss_feed_policy() -> dict[str, dict]:
+    try:
+        data = json.loads(RSS_FEED_HEALTH_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return {str(feed.get("name")): feed for feed in data.get("feeds", []) if feed.get("name")}
+
+def _scanner_policy_allows_feed(feed: dict, policy: dict[str, dict]) -> tuple[bool, str]:
+    status = policy.get(feed.get("name"), {})
+    action = status.get("policy")
+    if action in {"disable_or_replace", "demote_unreachable"}:
+        return False, str(status.get("reason") or action)
+    return True, ""
+
+def _apply_source_policy_metadata(article: dict, policy: dict[str, dict]) -> None:
+    status = policy.get(article.get("source"), {})
+    if not status:
+        return
+    article["source_policy"] = status.get("policy", "unknown")
+    article["fresh_source_quota_eligible"] = bool(status.get("fresh_quota_eligible", True))
+    if status.get("policy") == "stale_source":
+        article["stale_source"] = True
 
 HEADERS = {
     "User-Agent": "Uutistenlukija/1.0 (news aggregator; +https://uutistenlukija.fi)"
@@ -797,9 +826,16 @@ def scan_all_feeds() -> List[Dict]:
     feeds_skipped = 0
 
     _health = get_global_health() if _FEED_HEALTH_AVAILABLE else None
+    _rss_policy = _load_rss_feed_policy()
 
     for feed in RSS_FEEDS:
         if feed.get("disabled"):
+            continue
+
+        _allowed, _policy_reason = _scanner_policy_allows_feed(feed, _rss_policy)
+        if not _allowed:
+            print(f"[scanner] ⛔ {feed['name']}: rss policy skip ({_policy_reason})")
+            feeds_skipped += 1
             continue
 
         # Skip feeds that have been auto-disabled by feed_health
@@ -820,6 +856,8 @@ def scan_all_feeds() -> List[Dict]:
         prev_count = len(all_articles)
         articles = fetch_feed(feed)
         print(f"[scanner]   → {len(articles)} articles")
+        for article in articles:
+            _apply_source_policy_metadata(article, _rss_policy)
         all_articles.extend(articles)
         feeds_fetched += 1
 
