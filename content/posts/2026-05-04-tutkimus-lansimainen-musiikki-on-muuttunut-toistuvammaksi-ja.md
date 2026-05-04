@@ -40,7 +40,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/tuntuuko-musiikki-toistavan-nykyisin-itseaan-tutkimus-vahvistaa-asian/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
