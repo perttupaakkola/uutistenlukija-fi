@@ -2,28 +2,28 @@
   "analytics": {
     "ga4": {
       "daily_traffic_log": {
-        "age_minutes": 961.4,
+        "age_minutes": 272.2,
         "exists": true,
         "status": "error_seen"
       },
       "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
       "status": "blocked_or_unknown",
       "weekly_metrics_log": {
-        "age_minutes": 8161.4,
+        "age_minutes": 272.2,
         "exists": true,
         "status": "error_seen"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 3896.6,
+        "age_minutes": 212.2,
         "data_source": "frontmatter_synthetic",
-        "generated_at": "2026-04-30T06:04:48.572602Z",
+        "generated_at": "2026-05-04T08:00:01.756093Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 20
       },
       "fetch_log": {
-        "age_minutes": 991.4,
+        "age_minutes": 302.2,
         "exists": true,
         "status": "error_seen"
       },
@@ -34,17 +34,17 @@
   },
   "category_drift": {
     "alerts": [
-      "Talous: 9.5% (-10.5% under target 20%)",
+      "Talous: 9.4% (-10.6% under target 20%)",
       "Tiede: 9.0% (+6.0% over target 3%)",
-      "Ulkomaat: 28.0% (+8.0% over target 20%)"
+      "Ulkomaat: 28.1% (+8.1% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 499,
-        "delta": 4.2,
-        "pct": 29.2,
+        "count": 501,
+        "delta": 4.0,
+        "pct": 29.0,
         "status": "ok",
         "target_pct": 25
       },
@@ -59,22 +59,22 @@
       {
         "category": "Talous",
         "count": 162,
-        "delta": -10.5,
-        "pct": 9.5,
+        "delta": -10.6,
+        "pct": 9.4,
         "status": "under",
         "target_pct": 20
       },
       {
         "category": "Teknologia",
-        "count": 196,
-        "delta": -3.5,
-        "pct": 11.5,
+        "count": 201,
+        "delta": -3.4,
+        "pct": 11.6,
         "status": "ok",
         "target_pct": 15
       },
       {
         "category": "Tiede",
-        "count": 154,
+        "count": 155,
         "delta": 6.0,
         "pct": 9.0,
         "status": "over",
@@ -82,35 +82,35 @@
       },
       {
         "category": "Ulkomaat",
-        "count": 479,
-        "delta": 8.0,
-        "pct": 28.0,
+        "count": 485,
+        "delta": 8.1,
+        "pct": 28.1,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
-        "count": 153,
-        "delta": -1.1,
-        "pct": 8.9,
+        "count": 156,
+        "delta": -1.0,
+        "pct": 9.0,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-05-02T22:58:00.966609+00:00",
+    "generated_at": "2026-05-04T07:30:02.009037+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 1710
+    "total_articles": 1727
   },
   "content": {
-    "article_count_local": 1710,
-    "last_publish_age_minutes": 3.5,
-    "last_publish_at": "2026-05-02T22:57:59.123288Z",
+    "article_count_local": 1729,
+    "last_publish_age_minutes": 44.2,
+    "last_publish_at": "2026-05-04T10:48:01.876485Z",
     "latest_article": {
       "category": "Urheilu",
-      "slug": "2026-05-02-kimi-antonelli-ajoi-jalleen-paalulle-miamissa",
-      "title": "Kimi Antonelli ajoi jälleen paalulle Miamissa"
+      "slug": "2026-05-04-kookoon-pitka-tyo-palkittiin-finaalipaikalla",
+      "title": "KooKoon pitkä työ palkittiin finaalipaikalla"
     },
-    "published_last_24h_local": 12,
+    "published_last_24h_local": 13,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -130,18 +130,18 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-05-02T23:01:27.242379Z",
+  "generated_at": "2026-05-04T11:32:13.796116Z",
   "notes": [
     "Generated from local files/logs only.",
     "No external APIs queried; no credentials read or printed."
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 5,
+      "article_count": 0,
       "failure": 144,
-      "runs_total": 153,
+      "runs_total": 146,
       "skipped": 0,
-      "success": 9,
+      "success": 2,
       "top_error_reasons": [
         {
           "count": 144,
@@ -149,18 +149,18 @@
         }
       ]
     },
-    "last_run_age_minutes": 1.3,
+    "last_run_age_minutes": 2.1,
     "last_run_article_count": 0,
-    "last_run_at": "2026-05-02T23:00:08.548622Z",
+    "last_run_at": "2026-05-04T11:30:08.208163Z",
     "last_run_success": false,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
-        "attempted": 200,
-        "last_published_ts": "2026-05-02T22:57:59.123288+00:00",
-        "publish_rate": 1.5,
-        "published": 3,
-        "rejected": 27
+        "attempted": 50,
+        "last_published_ts": "2026-05-04T10:48:01.876485+00:00",
+        "publish_rate": 26.0,
+        "published": 13,
+        "rejected": 4
       },
       "feeds": {
         "disabled": 0,
@@ -170,46 +170,47 @@
         "stale_names": [],
         "total": 38
       },
-      "generated_at": "2026-05-02T22:58:00+00:00",
+      "generated_at": "2026-05-04T10:48:24+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "central unsourced number in ti": 27,
-        "keyword_stuffing": 9,
-        "language borderline Finnish si": 18,
-        "length under target (254 words": 9,
-        "length under target (264 words": 18,
-        "missing: image": 27,
-        "unsourced numbers": 27
+        "central unsourced number in ti": 3,
+        "keyword_stuffing": 1,
+        "language borderline Finnish si": 1,
+        "length under target (250 words": 1,
+        "length under target (252 words": 1,
+        "length under target (269 words": 1,
+        "missing: image": 4,
+        "unsourced numbers": 4
       },
       "runs": {
         "error": 0,
-        "ok": 1,
-        "skip": 7,
-        "total": 8
+        "ok": 0,
+        "skip": 2,
+        "total": 2
       },
       "stale_threshold_minutes": 90,
       "status": "ok",
       "trending": [
         [
-          "aineiston",
-          27
-        ],
-        [
-          "kerro",
-          12
-        ],
-        [
           "yhdysvaltain",
+          15
+        ],
+        [
+          "jälkeen",
+          13
+        ],
+        [
+          "koirien",
           11
         ],
         [
-          "kuitenkaan",
-          10
+          "perusteella",
+          9
         ],
         [
-          "iranin",
-          10
+          "kahden",
+          8
         ]
       ]
     },
@@ -218,34 +219,39 @@
   "queues": {
     "queues": {
       "monica/inbox": {
-        "count": 6558,
-        "newest_item_age_minutes": 10.4,
-        "oldest_item_age_minutes": 20978.5
+        "count": 6594,
+        "newest_item_age_minutes": 1314.3,
+        "oldest_item_age_minutes": 23169.3
       },
       "monica/outbox": {
         "count": 1573,
-        "newest_item_age_minutes": 21.8,
-        "oldest_item_age_minutes": 20375.5
+        "newest_item_age_minutes": 2212.5,
+        "oldest_item_age_minutes": 22566.3
       },
       "monica/quarantine": {
-        "count": 4984,
-        "newest_item_age_minutes": 3.6,
-        "oldest_item_age_minutes": 20978.5
+        "count": 5020,
+        "newest_item_age_minutes": 1313.6,
+        "oldest_item_age_minutes": 23169.3
       },
       "staged/failed": {
-        "count": 81,
-        "newest_item_age_minutes": 55.9,
-        "oldest_item_age_minutes": 1874.2
+        "count": 630,
+        "newest_item_age_minutes": 0.3,
+        "oldest_item_age_minutes": 4065.0
+      },
+      "staged/outbox": {
+        "count": 1,
+        "newest_item_age_minutes": 0.6,
+        "oldest_item_age_minutes": 0.6
       },
       "staged/published": {
-        "count": 8,
-        "newest_item_age_minutes": 72.9,
-        "oldest_item_age_minutes": 1533.0
+        "count": 27,
+        "newest_item_age_minutes": 43.8,
+        "oldest_item_age_minutes": 3723.8
       },
       "staged/ready": {
-        "count": 312,
-        "newest_item_age_minutes": 3.4,
-        "oldest_item_age_minutes": 1429.9
+        "count": 146,
+        "newest_item_age_minutes": 2.3,
+        "oldest_item_age_minutes": 600.9
       }
     },
     "source": "pipeline/queues/*.json file counts only"

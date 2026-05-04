@@ -153,6 +153,8 @@ def normalize_failure_reason(reason: str | None) -> str:
         return "quality_gate"
     if "duplicate" in text or "duplika" in text:
         return "duplicate"
+    if "stale_ready_expired" in text or "stale" in text:
+        return "stale_ready_expired"
     return "unknown"
 
 
@@ -188,8 +190,38 @@ def prioritized_ready_packets(max_packets: int | None = None) -> list[Path]:
     return ordered[:max_packets]
 
 
+def expire_ready_packets(max_age_hours: float) -> int:
+    """Fail closed stale ready packets so Monica does not publish old news."""
+    if max_age_hours <= 0:
+        return 0
+    now = datetime.now(timezone.utc)
+    moved = 0
+    for path in list((STAGED_ROOT / "ready").glob("*.json")):
+        data = read_queue_record(path)
+        age_hours = max(0.0, (now - file_record_time(path, data)).total_seconds() / 3600)
+        if age_hours <= max_age_hours:
+            continue
+        data["failed_at"] = now.isoformat()
+        data["failure"] = f"stale_ready_expired age_h={age_hours:.1f} max_age_h={max_age_hours:.1f}"
+        target = STAGED_ROOT / "failed" / path.name
+        if target.exists():
+            target = STAGED_ROOT / "failed" / f"{path.stem}_{int(time.time())}{path.suffix}"
+        atomic_write_json(target, data)
+        path.unlink(missing_ok=True)
+        moved += 1
+    if moved:
+        log(f"ready-expire: moved stale packets={moved} max_age_h={max_age_hours:.1f}")
+    return moved
+
+
 def cmd_scan(args: argparse.Namespace) -> int:
     start = time.time()
+    if not args.dry_run:
+        expire_ready_packets(args.max_ready_age_hours)
+    ready_backlog = len(list((STAGED_ROOT / "ready").glob("*.json")))
+    if args.max_ready_backlog and ready_backlog >= args.max_ready_backlog:
+        log(f"scan: skipping because ready backlog={ready_backlog} >= max_ready_backlog={args.max_ready_backlog}")
+        return 0
     log("scan: start")
     rss_articles = []
     fh_articles = []
@@ -326,6 +358,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
 
 
 def cmd_monica_worker(args: argparse.Namespace) -> int:
+    expire_ready_packets(args.max_ready_age_hours)
     ready = prioritized_ready_packets(args.max_packets)
     if not ready:
         log("monica-worker: no ready packets")
@@ -375,6 +408,32 @@ def quarantine_rejected_outbox(items: list[tuple[Path, dict]], rejected_articles
         moved += 1
     if moved:
         log(f"publish: quarantined quality-gate rejects moved={moved}")
+    return moved
+
+
+def quarantine_duplicate_outbox(items: list[tuple[Path, dict]], kept_articles: list[dict]) -> int:
+    """Move drafts dropped by published/batch dedup out of outbox.
+
+    Quality-gate rejects were already fail-closed, but duplicate drafts could stay
+    in outbox forever. Because publish only loads the oldest N outbox files, one
+    duplicate at the front repeatedly blocked later valid Monica output.
+    """
+    kept_ids = {id(article) for article in kept_articles}
+    moved = 0
+    for path, data in items:
+        article = data.get("article")
+        if id(article) in kept_ids:
+            continue
+        data["duplicate_rejected_at"] = datetime.now(timezone.utc).isoformat()
+        data["duplicate_rejected"] = True
+        target = STAGED_ROOT / "failed" / path.name
+        if target.exists():
+            target = STAGED_ROOT / "failed" / f"{path.stem}_{int(time.time())}{path.suffix}"
+        atomic_write_json(target, data)
+        path.unlink(missing_ok=True)
+        moved += 1
+    if moved:
+        log(f"publish: quarantined duplicate drops moved={moved}")
     return moved
 
 
@@ -455,6 +514,8 @@ def cmd_publish(args: argparse.Namespace) -> int:
         return 0
     articles = check_published_duplicates(articles, window_hours=args.dedup_window)
     articles = dedup_within_batch(articles)
+    if not args.dry_run:
+        quarantine_duplicate_outbox(items, articles)
     if not articles:
         log("publish: all articles dropped as duplicates")
         return 0
@@ -558,11 +619,14 @@ def main() -> int:
     scan.add_argument("--min-source-words", type=int, default=50)
     scan.add_argument("--dedup-window", type=int, default=48)
     scan.add_argument("--cooldown-hours", type=int, default=24)
+    scan.add_argument("--max-ready-backlog", type=int, default=120, help="skip scan when ready queue is already this large; 0 disables")
+    scan.add_argument("--max-ready-age-hours", type=float, default=36.0, help="expire ready packets older than this; 0 disables")
     scan.add_argument("--dry-run", action="store_true")
     scan.set_defaults(func=cmd_scan)
 
     worker = sub.add_parser("monica-worker")
     worker.add_argument("--max-packets", type=int, default=1)
+    worker.add_argument("--max-ready-age-hours", type=float, default=36.0, help="expire ready packets older than this before selecting work; 0 disables")
     worker.set_defaults(func=cmd_monica_worker)
 
     pub = sub.add_parser("publish")
