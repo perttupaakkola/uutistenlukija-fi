@@ -83,12 +83,9 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertIn("source_words_median", ready_status)
         self.assertEqual(failed_status["failure_reason_buckets"]["content_too_short"], 1)
         self.assertEqual(failed_status["failure_reason_buckets"]["writer_runtime"], 1)
-<<<<<<< HEAD
         self.assertEqual(failed_status["alert_summary"]["runtime_failure_total"], 2)
-=======
         self.assertEqual(failed_status["failure_alert_buckets"]["quality"], 1)
         self.assertEqual(failed_status["failure_alert_buckets"]["writer_runtime"], 1)
->>>>>>> 6ff12a438 (ops: separate staged cleanup failure buckets)
 
     def test_priority_prefers_promising_packet_over_old_thin_fifo(self) -> None:
         thin_old = self._write("ready", "thin-old", _record("thin-old", source_words=45, blocks=1), age_hours=30)

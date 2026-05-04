@@ -742,11 +742,8 @@ def queue_box_status(box: str, files: list[Path], now: datetime) -> dict[str, An
             else:
                 alert_buckets["quality"] += 1
         result["failure_reason_buckets"] = dict(sorted(buckets.items()))
-<<<<<<< HEAD
         result["alert_summary"] = failed_runtime_alert_summary(result["failure_reason_buckets"])
-=======
         result["failure_alert_buckets"] = alert_buckets
->>>>>>> 6ff12a438 (ops: separate staged cleanup failure buckets)
     return result
 
 
@@ -810,7 +807,6 @@ def cmd_audit_ready(args: argparse.Namespace) -> int:
     return 0
 
 
-<<<<<<< HEAD
 def cmd_prune_failed(args: argparse.Namespace) -> int:
     summary = prune_failed_backlog(
         keep_days=args.keep_days,
@@ -818,10 +814,12 @@ def cmd_prune_failed(args: argparse.Namespace) -> int:
         dry_run=args.dry_run,
         bucket=args.bucket,
     )
-=======
+    print(json.dumps(summary, indent=2, ensure_ascii=False))
+    return 0
+
+
 def cmd_cleanup_failed(args: argparse.Namespace) -> int:
     summary = cleanup_failed_queue(max_age_hours=args.max_age_hours, archive=args.archive, dry_run=args.dry_run)
->>>>>>> 6ff12a438 (ops: separate staged cleanup failure buckets)
     print(json.dumps(summary, indent=2, ensure_ascii=False))
     return 0
 
@@ -874,20 +872,18 @@ def main() -> int:
     audit.add_argument("--dry-run", action="store_true", default=False, help="report actions without moving packets")
     audit.set_defaults(func=cmd_audit_ready)
 
-<<<<<<< HEAD
     prune = sub.add_parser("prune-failed")
     prune.add_argument("--bucket", default="stale_ready_expired", help="normalized failed bucket to rotate")
     prune.add_argument("--keep-days", type=float, default=FAILED_HYGIENE_DEFAULT_KEEP_DAYS)
     prune.add_argument("--keep-recent", type=int, default=FAILED_HYGIENE_DEFAULT_KEEP_RECENT)
     prune.add_argument("--dry-run", action="store_true", default=False, help="report files without deleting them")
     prune.set_defaults(func=cmd_prune_failed)
-=======
+
     cleanup = sub.add_parser("cleanup-failed")
     cleanup.add_argument("--max-age-hours", type=float, default=168.0, help="remove/archive stale_ready_expired failed records older than this")
     cleanup.add_argument("--archive", action="store_true", help="move records to failed_archive instead of deleting")
     cleanup.add_argument("--dry-run", action="store_true", default=False, help="report matches without changing files")
     cleanup.set_defaults(func=cmd_cleanup_failed)
->>>>>>> 6ff12a438 (ops: separate staged cleanup failure buckets)
 
     status = sub.add_parser("status")
     status.add_argument("--verbose", action="store_true", help="include queue age/source metrics and failed reason buckets")
