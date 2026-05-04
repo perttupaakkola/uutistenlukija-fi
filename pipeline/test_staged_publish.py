@@ -66,6 +66,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.normalize_failure_reason("quality gate unsourced_numbers"), "quality_gate")
         self.assertEqual(staged_publish.normalize_failure_reason("duplicate article"), "duplicate")
         self.assertEqual(staged_publish.normalize_failure_reason("stale_low_confidence_expired age_h=120.0"), "stale_low_confidence_expired")
+        self.assertEqual(staged_publish.normalize_failure_reason("stale_ready_expired age_h=10.1 max_age_h=10.0"), "stale_ready_expired")
 
     def test_verbose_status_contains_age_source_and_failure_buckets(self) -> None:
         self._write("ready", "old-rich", _record("old-rich", source_words=360, blocks=2), age_hours=12)
@@ -82,7 +83,12 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertIn("source_words_median", ready_status)
         self.assertEqual(failed_status["failure_reason_buckets"]["content_too_short"], 1)
         self.assertEqual(failed_status["failure_reason_buckets"]["writer_runtime"], 1)
+<<<<<<< HEAD
         self.assertEqual(failed_status["alert_summary"]["runtime_failure_total"], 2)
+=======
+        self.assertEqual(failed_status["failure_alert_buckets"]["quality"], 1)
+        self.assertEqual(failed_status["failure_alert_buckets"]["writer_runtime"], 1)
+>>>>>>> 6ff12a438 (ops: separate staged cleanup failure buckets)
 
     def test_priority_prefers_promising_packet_over_old_thin_fifo(self) -> None:
         thin_old = self._write("ready", "thin-old", _record("thin-old", source_words=45, blocks=1), age_hours=30)
@@ -102,6 +108,35 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(sample["packet_id"], "sample")
         self.assertGreater(sample["priority_score"], 0)
         self.assertTrue(path.exists())
+
+    def test_failed_status_extracts_nested_failure_reason_and_cleanup_bucket(self) -> None:
+        self._write("failed", "expired", {**_record("expired", 100), "failure": {"reason": "stale_ready_expired age_h=10.1 max_age_h=10.0"}}, age_hours=12)
+
+        failed_status = staged_publish.queue_box_status("failed", list((self.root / "failed").glob("*.json")), datetime.now(timezone.utc))
+
+        self.assertEqual(failed_status["failure_reason_buckets"]["stale_ready_expired"], 1)
+        self.assertEqual(failed_status["failure_alert_buckets"]["expected_cleanup"], 1)
+
+    def test_cleanup_failed_queue_dry_run_matches_old_stale_ready_only(self) -> None:
+        self._write("failed", "old-expired", {**_record("old-expired", 100), "failure": "stale_ready_expired age_h=40.0 max_age_h=10.0"}, age_hours=200)
+        self._write("failed", "new-expired", {**_record("new-expired", 100), "failure": "stale_ready_expired age_h=10.0 max_age_h=10.0"}, age_hours=2)
+        self._write("failed", "runtime", {**_record("runtime", 100), "failure": "timed out"}, age_hours=200)
+
+        summary = staged_publish.cleanup_failed_queue(max_age_hours=168, dry_run=True)
+
+        self.assertEqual(summary["matched"], 1)
+        self.assertTrue((self.root / "failed" / "old-expired.json").exists())
+        self.assertTrue((self.root / "failed" / "runtime.json").exists())
+
+    def test_cleanup_failed_queue_deletes_old_stale_ready_only(self) -> None:
+        self._write("failed", "old-expired", {**_record("old-expired", 100), "failure": "stale_ready_expired age_h=40.0 max_age_h=10.0"}, age_hours=200)
+        self._write("failed", "runtime", {**_record("runtime", 100), "failure": "timed out"}, age_hours=200)
+
+        summary = staged_publish.cleanup_failed_queue(max_age_hours=168, dry_run=False)
+
+        self.assertEqual(summary["deleted"], 1)
+        self.assertFalse((self.root / "failed" / "old-expired.json").exists())
+        self.assertTrue((self.root / "failed" / "runtime.json").exists())
 
 
 class StagedPublishBacklogAuditTests(unittest.TestCase):

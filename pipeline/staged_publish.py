@@ -21,6 +21,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+import shutil
 from statistics import median
 from typing import Any
 
@@ -133,6 +134,17 @@ def file_record_time(path: Path, data: dict) -> datetime:
     if parsed:
         return parsed
     return datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
+
+
+def failure_reason_text(data: dict) -> str:
+    reason = data.get("failure")
+    if isinstance(reason, dict):
+        reason = reason.get("reason") or reason.get("code") or reason.get("message") or json.dumps(reason, ensure_ascii=False)
+    if not reason and data.get("quality_gate_rejected"):
+        reason = "quality_gate_rejected"
+    if not reason and data.get("duplicate_rejected"):
+        reason = "duplicate_rejected"
+    return str(reason or data.get("read_error") or "")
 
 
 def normalize_failure_reason(reason: str | None) -> str:
@@ -717,14 +729,24 @@ def queue_box_status(box: str, files: list[Path], now: datetime) -> dict[str, An
         }
     if box == "failed":
         buckets: dict[str, int] = {}
+        alert_buckets: dict[str, int] = {"expected_cleanup": 0, "quality": 0, "writer_runtime": 0, "unknown": 0}
         for _, data in records:
-            reason = data.get("failure")
-            if data.get("quality_gate_rejected"):
-                reason = "quality_gate_rejected"
-            bucket = normalize_failure_reason(str(reason or data.get("read_error") or ""))
+            bucket = normalize_failure_reason(failure_reason_text(data))
             buckets[bucket] = buckets.get(bucket, 0) + 1
+            if bucket in {"stale_ready_expired", "stale_low_confidence_expired", "stale_low_confidence_demoted", "duplicate"}:
+                alert_buckets["expected_cleanup"] += 1
+            elif bucket == "writer_runtime":
+                alert_buckets["writer_runtime"] += 1
+            elif bucket == "unknown":
+                alert_buckets["unknown"] += 1
+            else:
+                alert_buckets["quality"] += 1
         result["failure_reason_buckets"] = dict(sorted(buckets.items()))
+<<<<<<< HEAD
         result["alert_summary"] = failed_runtime_alert_summary(result["failure_reason_buckets"])
+=======
+        result["failure_alert_buckets"] = alert_buckets
+>>>>>>> 6ff12a438 (ops: separate staged cleanup failure buckets)
     return result
 
 
@@ -746,6 +768,37 @@ def ready_sample(path: Path) -> dict[str, Any]:
     }
 
 
+def cleanup_failed_queue(max_age_hours: float, archive: bool = False, dry_run: bool = True) -> dict[str, Any]:
+    now = datetime.now(timezone.utc)
+    failed_dir = STAGED_ROOT / "failed"
+    archive_dir = STAGED_ROOT / "failed_archive"
+    summary: dict[str, Any] = {"scanned": 0, "matched": 0, "deleted": 0, "archived": 0, "dry_run": dry_run, "max_age_hours": max_age_hours, "buckets": {}}
+    if max_age_hours <= 0 or not failed_dir.exists():
+        return summary
+    for path in sorted(failed_dir.glob("*.json"), key=lambda p: p.stat().st_mtime):
+        data = read_queue_record(path)
+        summary["scanned"] += 1
+        age_hours = max(0.0, (now - file_record_time(path, data)).total_seconds() / 3600)
+        bucket = normalize_failure_reason(failure_reason_text(data))
+        summary["buckets"][bucket] = summary["buckets"].get(bucket, 0) + 1
+        if bucket != "stale_ready_expired" or age_hours < max_age_hours:
+            continue
+        summary["matched"] += 1
+        if dry_run:
+            continue
+        if archive:
+            archive_dir.mkdir(parents=True, exist_ok=True)
+            target = archive_dir / path.name
+            if target.exists():
+                target = archive_dir / f"{path.stem}_{int(now.timestamp())}{path.suffix}"
+            shutil.move(str(path), str(target))
+            summary["archived"] += 1
+        else:
+            path.unlink(missing_ok=True)
+            summary["deleted"] += 1
+    return summary
+
+
 def cmd_audit_ready(args: argparse.Namespace) -> int:
     summary = audit_ready_backlog(
         demote_after_hours=args.demote_after_hours,
@@ -757,6 +810,7 @@ def cmd_audit_ready(args: argparse.Namespace) -> int:
     return 0
 
 
+<<<<<<< HEAD
 def cmd_prune_failed(args: argparse.Namespace) -> int:
     summary = prune_failed_backlog(
         keep_days=args.keep_days,
@@ -764,6 +818,10 @@ def cmd_prune_failed(args: argparse.Namespace) -> int:
         dry_run=args.dry_run,
         bucket=args.bucket,
     )
+=======
+def cmd_cleanup_failed(args: argparse.Namespace) -> int:
+    summary = cleanup_failed_queue(max_age_hours=args.max_age_hours, archive=args.archive, dry_run=args.dry_run)
+>>>>>>> 6ff12a438 (ops: separate staged cleanup failure buckets)
     print(json.dumps(summary, indent=2, ensure_ascii=False))
     return 0
 
@@ -816,12 +874,20 @@ def main() -> int:
     audit.add_argument("--dry-run", action="store_true", default=False, help="report actions without moving packets")
     audit.set_defaults(func=cmd_audit_ready)
 
+<<<<<<< HEAD
     prune = sub.add_parser("prune-failed")
     prune.add_argument("--bucket", default="stale_ready_expired", help="normalized failed bucket to rotate")
     prune.add_argument("--keep-days", type=float, default=FAILED_HYGIENE_DEFAULT_KEEP_DAYS)
     prune.add_argument("--keep-recent", type=int, default=FAILED_HYGIENE_DEFAULT_KEEP_RECENT)
     prune.add_argument("--dry-run", action="store_true", default=False, help="report files without deleting them")
     prune.set_defaults(func=cmd_prune_failed)
+=======
+    cleanup = sub.add_parser("cleanup-failed")
+    cleanup.add_argument("--max-age-hours", type=float, default=168.0, help="remove/archive stale_ready_expired failed records older than this")
+    cleanup.add_argument("--archive", action="store_true", help="move records to failed_archive instead of deleting")
+    cleanup.add_argument("--dry-run", action="store_true", default=False, help="report matches without changing files")
+    cleanup.set_defaults(func=cmd_cleanup_failed)
+>>>>>>> 6ff12a438 (ops: separate staged cleanup failure buckets)
 
     status = sub.add_parser("status")
     status.add_argument("--verbose", action="store_true", help="include queue age/source metrics and failed reason buckets")
