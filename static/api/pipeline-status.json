@@ -1,29 +1,31 @@
 {
   "hours": 24,
-  "generated_at": "2026-05-04T07:28:23+00:00",
+  "generated_at": "2026-05-04T10:08:22+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
   "runs": {
-    "total": 4,
+    "total": 2,
     "ok": 0,
-    "skip": 4,
+    "skip": 2,
     "error": 0
   },
   "articles": {
-    "attempted": 100,
-    "published": 11,
-    "rejected": 2,
-    "publish_rate": 11.0,
-    "last_published_ts": "2026-05-04T07:28:01.901559+00:00"
+    "attempted": 50,
+    "published": 12,
+    "rejected": 4,
+    "publish_rate": 24.0,
+    "last_published_ts": "2026-05-04T10:08:02.150951+00:00"
   },
   "reject_reasons": {
-    "missing: image": 2,
-    "unsourced numbers": 2,
+    "missing: image": 4,
+    "unsourced numbers": 4,
+    "central unsourced number in ti": 3,
     "length under target (250 words": 1,
     "keyword_stuffing": 1,
     "length under target (269 words": 1,
-    "central unsourced number in ti": 1
+    "language borderline Finnish si": 1,
+    "length under target (252 words": 1
   },
   "feeds": {
     "total": 38,
@@ -43,15 +45,15 @@
       11
     ],
     [
+      "jälkeen",
+      10
+    ],
+    [
       "perusteella",
       9
     ],
     [
-      "jälkeen",
-      9
-    ],
-    [
-      "kertoo",
+      "kahden",
       8
     ]
   ]
