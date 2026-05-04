@@ -56,7 +56,15 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   align-items: center;
 }
 .portal-logo { display: inline-flex; align-items: center; min-width: 0; }
-.portal-logo__image { width: 220px; max-height: 52px; object-fit: contain; object-position: left center; }
+.portal-logo__image { display: none; }
+.portal-logo__text {
+  color: #071329;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.055em;
+}
+.portal-logo__text span { color: #164aa3; }
 .portal-logo__mark { display: none; }
 .portal-search { min-width: 0; position: relative; }
 .site-search--collapsed .site-search__form { display: flex !important; }
@@ -195,7 +203,9 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(7,19,41,0) 24%, rgba(7,19,41,.45) 56%, rgba(0,0,0,.82));
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.44), rgba(0,0,0,.16) 54%, rgba(0,0,0,.08)),
+    linear-gradient(180deg, rgba(7,19,41,.18) 0%, rgba(7,19,41,.48) 50%, rgba(0,0,0,.88));
 }
 .portal-lead__body {
   position: absolute;
@@ -216,15 +226,16 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 .portal-lead .portal-kicker { background: #0b49ad; color: #fff; border-radius: 3px; padding: 4px 7px; margin-right: 10px; }
 .portal-lead__time { color: rgba(255,255,255,.9); font-size: 13px; font-weight: 650; }
 .portal-lead h2 {
-  max-width: 17ch;
+  max-width: 25ch;
   margin: 18px 0 14px;
-  font-size: clamp(30px, 3.15vw, 42px);
+  font-size: clamp(30px, 2.55vw, 36px);
   line-height: 1.08;
   letter-spacing: -.02em;
   overflow-wrap: anywhere;
+  text-shadow: 0 2px 18px rgba(0,0,0,.9);
 }
-.portal-lead p { max-width: 68ch; margin: 0 0 22px; color: rgba(255,255,255,.94); font-size: 17px; line-height: 1.35; }
-.portal-meta-row { display: flex; gap: 22px; color: rgba(255,255,255,.92); font-size: 15px; }
+.portal-lead p { max-width: 68ch; margin: 0 0 22px; color: rgba(255,255,255,.96); font-size: 17px; line-height: 1.35; text-shadow: 0 1px 12px rgba(0,0,0,.85); }
+.portal-meta-row { display: flex; gap: 22px; color: rgba(255,255,255,.92); font-size: 15px; text-shadow: 0 1px 10px rgba(0,0,0,.82); }
 .portal-center-list { display: grid; gap: 0; }
 .portal-teaser {
   display: grid;
@@ -306,7 +317,16 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   border-bottom: 1px solid var(--portal-line);
 }
 .portal-list-feature__image, .portal-list-feature__image .article-image-link { display: block; aspect-ratio: 16/9; overflow: hidden; border-radius: 7px; background: var(--portal-soft); }
-.portal-list-feature__image img { width: 100%; height: 100%; object-fit: cover; }
+.portal-list-feature__image img,
+.portal-list-feature__image .article-image,
+.portal-list-feature__image .article-card-thumb,
+.portal-lead__image .article-image,
+.portal-lead__image .article-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1 !important;
+}
 .portal-list-feature h2 { margin: 8px 0 12px; font-size: clamp(28px, 3vw, 42px); line-height: 1.08; letter-spacing: -.02em; }
 .portal-list-feature p { margin: 0 0 14px; color: #334155; font-size: 17px; line-height: 1.4; }
 .portal-list-feature time, .portal-feed-item__relative { color: var(--portal-muted); font-size: 13px; }
@@ -407,6 +427,7 @@ main.container { padding-top: 0; padding-bottom: 48px; }
     border-bottom: 1px solid var(--portal-line);
   }
   .portal-logo__image { display: none; }
+  .portal-logo__text { display: none; }
   .portal-logo__mark {
     display: grid;
     place-items: center;
@@ -437,11 +458,11 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   }
   .site-search:not(.site-search--collapsed) .site-search__form { display: flex !important; }
   .hamburger-btn { order: 3; }
-  .main-nav { width: 100vw !important; max-width: 100vw !important; padding: 0 16px; overflow: hidden; justify-content: flex-start !important; scrollbar-width: none; }
+  .main-nav { width: 100vw !important; max-width: 100vw !important; padding: 0 16px; overflow-x: auto; overflow-y: hidden; justify-content: flex-start !important; scrollbar-width: none; }
   .main-nav::-webkit-scrollbar { display: none; }
-  .site-header .main-nav { display: flex !important; position: static !important; background: #fff !important; box-shadow: none !important; border-top: 0 !important; }
-  .main-nav ul { gap: 0; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; width: 100% !important; flex-wrap: nowrap !important; transform: none !important; margin: 0 !important; padding: 0 !important; }
-  .main-nav li { flex: 0 1 auto; min-width: 0; }
+  .site-header .main-nav { display: block !important; position: static !important; background: #fff !important; box-shadow: none !important; border-top: 0 !important; }
+  .main-nav ul { gap: 22px; flex-direction: row !important; align-items: center !important; justify-content: flex-start !important; width: max-content !important; min-width: 100% !important; flex-wrap: nowrap !important; transform: none !important; margin: 0 !important; padding: 0 !important; }
+  .main-nav li { flex: 0 0 auto; min-width: 0; }
   .main-nav li:nth-child(n+6) { display: none; }
   .main-nav a {
     border-radius: 0;
@@ -480,11 +501,10 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   .portal-lead__image img { width: 100%; height: 100%; object-fit: cover; }
   .portal-lead__body { position: static; color: #111; }
   .portal-lead__body,
-  .portal-list-header,
-  .portal-list-feature__body,
-  .portal-feed-item__body,
-  .portal-article-header__text,
-  .portal-article-main {
+    .portal-list-header,
+    .portal-list-feature__body,
+    .portal-article-header__text,
+    .portal-article-main {
     inline-size: calc(100vw - 48px) !important;
     max-inline-size: calc(100vw - 48px) !important;
     width: calc(100vw - 48px) !important;
@@ -496,6 +516,11 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   .portal-lead__time, .portal-meta-row, .portal-lead p { color: #111; }
   .portal-meta-row { font-size: 13px; }
   .portal-lead h2 { max-width: 100%; margin: 10px 0 10px; font-size: 22px; line-height: 1.24; letter-spacing: -.01em; overflow-wrap: anywhere !important; word-break: break-word !important; white-space: normal !important; }
+  .portal-lead h2,
+  .portal-lead p,
+  .portal-meta-row {
+    text-shadow: none;
+  }
   .portal-lead h2 a { display: block; max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
   .portal-lead p { font-size: 15px; line-height: 1.4; margin-bottom: 12px; }
   .portal-center-list { display: grid; gap: 0; }
@@ -545,6 +570,11 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   .portal-feed-item h3 { font-size: 17px; line-height: 1.28; }
   .portal-feed-item p { display: none; }
   .portal-feed-item__thumb { width: 82px; height: 72px; border-radius: 4px; }
+  .portal-feed-item__body {
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
   .portal-list-rail { display: none; }
 
   .portal-article-page.single-article,
@@ -590,6 +620,23 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   .portal-article-main p { font-size: 17px; line-height: 1.65; }
   .portal-article-main h2 { font-size: 23px; }
   .portal-article-below, .article-nav, .read-next { margin-top: 24px; }
+  .related-articles__grid,
+  .more-from-category__grid,
+  .read-next__grid {
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+    overflow: visible !important;
+  }
+  .related-card,
+  .more-from-category__item,
+  .read-next-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
 
   #cookie-banner,
   #cookie-banner .cb-inner,
@@ -623,11 +670,10 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   .portal-masthead { padding-inline: 12px; }
   .main-nav { padding-left: 12px; }
   .portal-lead__body,
-  .portal-list-header,
-  .portal-list-feature__body,
-  .portal-feed-item__body,
-  .portal-article-header__text,
-  .portal-article-main {
+    .portal-list-header,
+    .portal-list-feature__body,
+    .portal-article-header__text,
+    .portal-article-main {
     inline-size: calc(100vw - 48px) !important;
     max-inline-size: calc(100vw - 48px) !important;
     width: calc(100vw - 48px) !important;
