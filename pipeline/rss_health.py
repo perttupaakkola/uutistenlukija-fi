@@ -32,6 +32,7 @@ from pathlib import Path
 PIPELINE_DIR = Path(__file__).parent
 PROJECT_DIR = PIPELINE_DIR.parent
 HEALTH_FILE = PIPELINE_DIR / "logs" / "rss-health.json"
+UNIFIED_FEED_HEALTH_FILE = PROJECT_DIR / "static" / "api" / "rss-feed-health.json"
 STATE_FILE          = PIPELINE_DIR / "logs" / "rss-health-state.json"
 EXTENDED_STATE_FILE = PIPELINE_DIR / "logs" / "rss-health-extended.json"
 SCANNER_FILE        = PIPELINE_DIR / "scanner.py"
@@ -166,10 +167,23 @@ def _parse_feed(body: bytes) -> tuple[int, datetime | None]:
 
 # ── Scoring ───────────────────────────────────────────────────────────────────
 
-def _score(http_status: int, newest_date: datetime | None) -> str:
-    if http_status == 0 or http_status >= 500:
+def _normalize_http_status(http_status: int | str | None) -> int:
+    """Coerce probe status to an int so sentinel strings cannot crash scoring."""
+    if isinstance(http_status, int):
+        return http_status
+    if isinstance(http_status, str):
+        try:
+            return int(http_status)
+        except ValueError:
+            return 0
+    return 0
+
+
+def _score(http_status: int | str | None, newest_date: datetime | None) -> str:
+    status = _normalize_http_status(http_status)
+    if status == 0 or status >= 500:
         return SCORE_UNREACHABLE
-    if http_status >= 400:
+    if status >= 400:
         return SCORE_DEAD
     if newest_date is None:
         return SCORE_STALE  # reachable but can't determine freshness
@@ -280,7 +294,8 @@ def _remediate(results: list[dict], ext_state: dict, dry_run: bool = False) -> t
         })
 
         # Consecutive HTTP errors (4xx/5xx) → auto-disable after threshold
-        is_http_error = isinstance(http, int) and http >= 400
+        http_norm = _normalize_http_status(http)
+        is_http_error = http_norm >= 400
         if is_http_error:
             if entry["consec_errors"] == 0:
                 entry["first_error_at"] = now_iso
@@ -302,7 +317,7 @@ def _remediate(results: list[dict], ext_state: dict, dry_run: bool = False) -> t
             entry["first_error_at"] = None
 
         # Zero-entry streak (200 OK, 0 items) → parser mismatch alert after N days
-        if entries == 0 and isinstance(http, int) and http == 200:
+        if entries == 0 and http_norm == 200:
             if entry["consec_zero_entries"] == 0:
                 entry["first_zero_at"] = now_iso
             entry["consec_zero_entries"] += 1
@@ -318,6 +333,38 @@ def _remediate(results: list[dict], ext_state: dict, dry_run: bool = False) -> t
             entry["first_zero_at"]       = None
 
     return ext_state, alerts
+
+
+def _write_unified_feed_health(results: list[dict]) -> None:
+    """Write a stable, API-served RSS probe artifact for ops dashboards."""
+    checked_at = datetime.now(timezone.utc).isoformat()
+    feeds = []
+    for r in results:
+        status = _normalize_http_status(r.get("http_status"))
+        feeds.append({
+            "name": r.get("name"),
+            "url": r.get("url"),
+            "language": r.get("language"),
+            "http_status": r.get("http_status"),
+            "http_status_normalized": status,
+            "entries": r.get("entry_count", 0),
+            "newest_date": r.get("newest_date"),
+            "newest_age_h": r.get("age_hours"),
+            "score": r.get("score"),
+            "checked_at": r.get("checked_at", checked_at),
+        })
+
+    counts = {score: sum(1 for r in results if r.get("score") == score)
+              for score in (SCORE_FRESH, SCORE_STALE, SCORE_DEAD, SCORE_UNREACHABLE)}
+    payload = {
+        "generated_at": checked_at,
+        "schema": "uutistenlukija.rss_feed_health.v1",
+        "counts": counts,
+        "feeds": feeds,
+    }
+    UNIFIED_FEED_HEALTH_FILE.parent.mkdir(parents=True, exist_ok=True)
+    UNIFIED_FEED_HEALTH_FILE.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+    print(f"[rss_health] Written unified feed health to {UNIFIED_FEED_HEALTH_FILE}")
 
 
 def _build_weekly_summary(results: list[dict], ext_state: dict) -> str:
@@ -434,7 +481,8 @@ def check_feeds(dry_run: bool = False, force_alert: bool = False) -> list[dict]:
         if status in (200, 301, 302) and body:
             entry_count, newest_date = _parse_feed(body)
             if entry_count == -1:
-                # Feed returned HTML (paywall/redirect) — treat as unreachable
+                # Feed returned HTML (paywall/redirect) — keep a string sentinel
+                # in output, but scoring/remediation must normalize it safely.
                 status = SCORE_UNREACHABLE
                 entry_count = 0
                 newest_date = None
@@ -449,11 +497,14 @@ def check_feeds(dry_run: bool = False, force_alert: bool = False) -> list[dict]:
         age_str = f"{age_hours}h" if age_hours is not None else "unknown"
         print(f"{em} status={status} entries={entry_count} age={age_str}")
 
+        normalized_status = _normalize_http_status(status)
+
         results.append({
             "name": name,
             "url": url,
             "language": language,
             "http_status": status,
+            "http_status_normalized": normalized_status,
             "entry_count": entry_count,
             "newest_date": newest_date.isoformat() if newest_date else None,
             "age_hours": age_hours,
@@ -481,6 +532,7 @@ def main():
     HEALTH_FILE.parent.mkdir(parents=True, exist_ok=True)
     HEALTH_FILE.write_text(json.dumps(results, indent=2, ensure_ascii=False))
     print(f"[rss_health] Written to {HEALTH_FILE}")
+    _write_unified_feed_health(results)
 
     # State-change detection
     prev_state = _load_state()
