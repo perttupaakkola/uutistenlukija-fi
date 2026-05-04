@@ -21,6 +21,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from statistics import median
 from typing import Any
 
 PIPELINE_DIR = Path(__file__).resolve().parent
@@ -96,6 +97,95 @@ def source_strength(article: dict) -> tuple[int, int, int, int]:
     source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
     tier_score = max(0, 4 - int(article.get("source_tier", 2) or 2))
     return (len(research.split()), source_blocks, len(desc.split()), tier_score)
+
+
+def packet_original_article(data: dict) -> dict:
+    packet = data.get("packet") or data
+    return data.get("original_article") or reconstruct_original(packet)
+
+
+def packet_source_words(data: dict) -> int:
+    return total_source_words(packet_original_article(data))
+
+
+def packet_source_blocks(data: dict) -> int:
+    article = packet_original_article(data)
+    research = str(article.get("research") or article.get("research_text") or "")
+    return research.lower().count("[lähde:") + research.lower().count("[source:")
+
+
+def parse_record_time(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def file_record_time(path: Path, data: dict) -> datetime:
+    parsed = parse_record_time(
+        data.get("created_at") or data.get("completed_at") or data.get("failed_at") or data.get("published_at")
+    )
+    if parsed:
+        return parsed
+    return datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
+
+
+def normalize_failure_reason(reason: str | None) -> str:
+    text = _normalize_ws(str(reason or "")).lower()
+    if not text:
+        return "unknown"
+    if "insufficient_confidence" in text or "insufficient confidence" in text or "riitä" in text or "riittäv" in text or "liian niukka" in text:
+        return "insufficient_confidence"
+    if "source" in text and ("thin" in text or "too short" in text):
+        return "thin_source"
+    if "lähde" in text and ("niukka" in text or "lyhyt" in text or "ei tue" in text or "eri aihe" in text):
+        return "thin_source"
+    if "content too short" in text or "lead paragraph too short" in text or "sanan" in text or "words" in text:
+        return "content_too_short"
+    if "context overflow" in text or "timed out" in text or "timeout" in text or "openclaw" in text or "json" in text or "dispatch" in text:
+        return "writer_runtime"
+    if "quality" in text or "gate" in text or "unsourced" in text or "quality_gate_rejected" in text:
+        return "quality_gate"
+    if "duplicate" in text or "duplika" in text:
+        return "duplicate"
+    return "unknown"
+
+
+def read_queue_record(path: Path) -> dict:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8", errors="replace"))
+        return data if isinstance(data, dict) else {}
+    except Exception as e:
+        return {"read_error": str(e)}
+
+
+def priority_score(path: Path) -> tuple[float, float, int, int, float, str]:
+    data = read_queue_record(path)
+    created = file_record_time(path, data)
+    age_hours = max(0.0, (datetime.now(timezone.utc) - created).total_seconds() / 3600)
+    source_words = packet_source_words(data)
+    source_blocks = packet_source_blocks(data)
+    # Age still matters, but source strength prevents the worker from burning
+    # the oldest thin packets forever. This is deterministic for stable mtimes.
+    score = age_hours + min(source_words, 800) / 80 + source_blocks * 3
+    if source_words < 120:
+        score -= 8
+    if source_words < 80:
+        score -= 8
+    return (score, age_hours, source_words, source_blocks, -path.stat().st_mtime, path.name)
+
+
+def prioritized_ready_packets(max_packets: int | None = None) -> list[Path]:
+    ready = list((STAGED_ROOT / "ready").glob("*.json"))
+    ordered = sorted(ready, key=priority_score, reverse=True)
+    if max_packets is None:
+        return ordered
+    return ordered[:max_packets]
 
 
 def cmd_scan(args: argparse.Namespace) -> int:
@@ -236,13 +326,17 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
 
 
 def cmd_monica_worker(args: argparse.Namespace) -> int:
-    ready = sorted((STAGED_ROOT / "ready").glob("*.json"), key=lambda p: p.stat().st_mtime)
+    ready = prioritized_ready_packets(args.max_packets)
     if not ready:
         log("monica-worker: no ready packets")
         return 0
     processed = 0
-    for path in ready[: args.max_packets]:
-        log(f"monica-worker: processing {path.name}")
+    for path in ready:
+        score, age_hours, source_words, source_blocks, *_ = priority_score(path)
+        log(
+            f"monica-worker: processing {path.name} "
+            f"priority={score:.1f} age_h={age_hours:.1f} source_words={source_words} source_blocks={source_blocks}"
+        )
         status, detail = process_one_packet(path, args)
         log(f"monica-worker: {status} {detail}")
         processed += 1
@@ -391,12 +485,67 @@ def cmd_publish(args: argparse.Namespace) -> int:
     return 0
 
 
+def queue_box_status(box: str, files: list[Path], now: datetime) -> dict[str, Any]:
+    result: dict[str, Any] = {"count": len(files), "size_bytes": sum(p.stat().st_size for p in files)}
+    if not files:
+        return result
+
+    records = [(p, read_queue_record(p)) for p in files]
+    times = [file_record_time(p, data) for p, data in records]
+    ages = sorted(max(0.0, (now - t).total_seconds() / 3600) for t in times)
+    source_words = sorted(packet_source_words(data) for _, data in records)
+    result.update(
+        {
+            "oldest_at": min(times).isoformat(),
+            "newest_at": max(times).isoformat(),
+            "oldest_age_hours": round(max(ages), 2),
+            "median_age_hours": round(float(median(ages)), 2),
+            "newest_age_hours": round(min(ages), 2),
+            "source_words_min": source_words[0] if source_words else 0,
+            "source_words_median": int(median(source_words)) if source_words else 0,
+            "source_words_p90": source_words[min(len(source_words) - 1, int(len(source_words) * 0.9))] if source_words else 0,
+        }
+    )
+    if box == "failed":
+        buckets: dict[str, int] = {}
+        for _, data in records:
+            reason = data.get("failure")
+            if data.get("quality_gate_rejected"):
+                reason = "quality_gate_rejected"
+            bucket = normalize_failure_reason(str(reason or data.get("read_error") or ""))
+            buckets[bucket] = buckets.get(bucket, 0) + 1
+        result["failure_reason_buckets"] = dict(sorted(buckets.items()))
+    return result
+
+
+def ready_sample(path: Path) -> dict[str, Any]:
+    data = read_queue_record(path)
+    score, age_hours, source_words, source_blocks, *_ = priority_score(path)
+    packet = data.get("packet") or data
+    article = packet_original_article(data)
+    return {
+        "file": path.name,
+        "packet_id": packet.get("packet_id") or path.stem,
+        "title": article.get("title") or packet.get("headline_seed") or "",
+        "priority_score": round(score, 2),
+        "age_hours": round(age_hours, 2),
+        "source_words": source_words,
+        "source_blocks": source_blocks,
+    }
+
+
 def cmd_status(args: argparse.Namespace) -> int:
     status: dict[str, Any] = {}
+    now = datetime.now(timezone.utc)
     for box in ["ready", "writing", "outbox", "published", "failed"]:
         files = list((STAGED_ROOT / box).glob("*.json"))
-        status[box] = {"count": len(files), "size_bytes": sum(p.stat().st_size for p in files)}
-    print(json.dumps(status, indent=2))
+        status[box] = queue_box_status(box, files, now) if args.verbose else {
+            "count": len(files),
+            "size_bytes": sum(p.stat().st_size for p in files),
+        }
+    if args.sample_ready:
+        status["ready_priority_sample"] = [ready_sample(p) for p in prioritized_ready_packets(args.sample_ready)]
+    print(json.dumps(status, indent=2, ensure_ascii=False))
     return 0
 
 
@@ -424,6 +573,8 @@ def main() -> int:
     pub.set_defaults(func=cmd_publish)
 
     status = sub.add_parser("status")
+    status.add_argument("--verbose", action="store_true", help="include queue age/source metrics and failed reason buckets")
+    status.add_argument("--sample-ready", type=int, default=0, help="include top N ready packets by worker priority without moving files")
     status.set_defaults(func=cmd_status)
     args = ap.parse_args()
     return args.func(args)
