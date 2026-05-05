@@ -2,28 +2,28 @@
   "analytics": {
     "ga4": {
       "daily_traffic_log": {
-        "age_minutes": 1110.7,
+        "age_minutes": 870.5,
         "exists": true,
         "status": "error_seen"
       },
       "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
       "status": "blocked_or_unknown",
       "weekly_metrics_log": {
-        "age_minutes": 1110.7,
+        "age_minutes": 2310.5,
         "exists": true,
         "status": "error_seen"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 1050.7,
+        "age_minutes": 2250.5,
         "data_source": "frontmatter_synthetic",
         "generated_at": "2026-05-04T08:00:01.756093Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 20
       },
       "fetch_log": {
-        "age_minutes": 1140.7,
+        "age_minutes": 900.5,
         "exists": true,
         "status": "error_seen"
       },
@@ -34,23 +34,23 @@
   },
   "category_drift": {
     "alerts": [
-      "Talous: 9.4% (-10.6% under target 20%)",
-      "Tiede: 9.0% (+6.0% over target 3%)",
-      "Ulkomaat: 28.1% (+8.1% over target 20%)"
+      "Talous: 9.3% (-10.7% under target 20%)",
+      "Tiede: 8.9% (+5.9% over target 3%)",
+      "Ulkomaat: 28.3% (+8.3% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 501,
-        "delta": 4.0,
-        "pct": 29.0,
+        "count": 503,
+        "delta": 3.8,
+        "pct": 28.8,
         "status": "ok",
         "target_pct": 25
       },
       {
         "category": "Kulttuuri",
-        "count": 67,
+        "count": 68,
         "delta": -3.1,
         "pct": 3.9,
         "status": "ok",
@@ -59,58 +59,58 @@
       {
         "category": "Talous",
         "count": 162,
-        "delta": -10.6,
-        "pct": 9.4,
+        "delta": -10.7,
+        "pct": 9.3,
         "status": "under",
         "target_pct": 20
       },
       {
         "category": "Teknologia",
-        "count": 201,
-        "delta": -3.4,
-        "pct": 11.6,
+        "count": 206,
+        "delta": -3.2,
+        "pct": 11.8,
         "status": "ok",
         "target_pct": 15
       },
       {
         "category": "Tiede",
-        "count": 155,
-        "delta": 6.0,
-        "pct": 9.0,
+        "count": 156,
+        "delta": 5.9,
+        "pct": 8.9,
         "status": "over",
         "target_pct": 3
       },
       {
         "category": "Ulkomaat",
-        "count": 485,
-        "delta": 8.1,
-        "pct": 28.1,
+        "count": 494,
+        "delta": 8.3,
+        "pct": 28.3,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
-        "count": 156,
-        "delta": -1.0,
-        "pct": 9.0,
+        "count": 159,
+        "delta": -0.9,
+        "pct": 9.1,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-05-04T07:30:02.009037+00:00",
+    "generated_at": "2026-05-05T07:30:01.953016+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 1727
+    "total_articles": 1748
   },
   "content": {
-    "article_count_local": 1744,
-    "last_publish_age_minutes": 22.7,
-    "last_publish_at": "2026-05-05T01:08:01.774079Z",
+    "article_count_local": 1756,
+    "last_publish_age_minutes": 102.5,
+    "last_publish_at": "2026-05-05T19:48:01.647096Z",
     "latest_article": {
-      "category": "Teknologia",
-      "slug": "2026-05-05-humanoidirobotteja-kokeillaan-jatteiden-lajittelussa-tyovoim",
-      "title": "Humanoidirobotteja kokeillaan jätteiden lajittelussa työvoimapulan keskellä"
+      "category": "Kotimaa",
+      "slug": "2026-05-05-romanivaikuttaja-vartti-isberg-vangittu-epailtyna-vakavan-va",
+      "title": "Romanivaikuttaja Vartti Isberg vangittu epäiltynä vakavan väkivaltarikoksen valmistelusta"
     },
-    "published_last_24h_local": 19,
+    "published_last_24h_local": 17,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -130,7 +130,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-05-05T01:30:46.228702Z",
+  "generated_at": "2026-05-05T21:30:32.317557Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -173,18 +173,18 @@
         }
       ]
     },
-    "last_run_age_minutes": 0.6,
+    "last_run_age_minutes": 0.4,
     "last_run_article_count": 0,
-    "last_run_at": "2026-05-05T01:30:07.876627Z",
+    "last_run_at": "2026-05-05T21:30:08.371130Z",
     "last_run_success": false,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-05-05T01:08:01.774079+00:00",
+        "last_published_ts": "2026-05-05T19:48:01.647096+00:00",
         "publish_rate": 0,
-        "published": 19,
-        "rejected": 9
+        "published": 18,
+        "rejected": 1
       },
       "feeds": {
         "disabled": 0,
@@ -194,18 +194,15 @@
         "stale_names": [],
         "total": 38
       },
-      "generated_at": "2026-05-05T01:08:23+00:00",
+      "generated_at": "2026-05-05T19:48:23+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "central unsourced number in ti": 6,
-        "keyword_stuffing": 3,
-        "language borderline Finnish si": 3,
-        "length under target (250 words": 1,
-        "length under target (252 words": 1,
-        "length under target (269 words": 1,
-        "missing: image": 9,
-        "unsourced numbers": 7
+        "keyword_stuffing": 1,
+        "language borderline Finnish si": 1,
+        "length under target (283 words": 1,
+        "missing: image": 1,
+        "unsourced numbers": 1
       },
       "runs": {
         "error": 0,
@@ -217,24 +214,24 @@
       "status": "ok",
       "trending": [
         [
-          "iranin",
-          24
-        ],
-        [
-          "yhdysvaltain",
+          "perusteella",
           20
         ],
         [
           "kanssa",
-          18
+          16
         ],
         [
-          "miten",
-          17
+          "samaan",
+          14
         ],
         [
-          "perusteella",
-          12
+          "aikana",
+          13
+        ],
+        [
+          "iranin",
+          13
         ]
       ]
     },
@@ -244,33 +241,33 @@
     "queues": {
       "monica/inbox": {
         "count": 6594,
-        "newest_item_age_minutes": 2152.8,
-        "oldest_item_age_minutes": 24007.8
+        "newest_item_age_minutes": 3352.6,
+        "oldest_item_age_minutes": 25207.6
       },
       "monica/outbox": {
         "count": 1573,
-        "newest_item_age_minutes": 3051.1,
-        "oldest_item_age_minutes": 23404.8
+        "newest_item_age_minutes": 4250.9,
+        "oldest_item_age_minutes": 24604.6
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 2152.1,
-        "oldest_item_age_minutes": 24007.8
+        "newest_item_age_minutes": 3351.9,
+        "oldest_item_age_minutes": 25207.6
       },
       "staged/failed": {
-        "count": 808,
+        "count": 903,
         "newest_item_age_minutes": 6.5,
-        "oldest_item_age_minutes": 4903.5
+        "oldest_item_age_minutes": 6103.3
       },
       "staged/published": {
-        "count": 42,
-        "newest_item_age_minutes": 22.4,
-        "oldest_item_age_minutes": 4562.3
+        "count": 54,
+        "newest_item_age_minutes": 102.1,
+        "oldest_item_age_minutes": 5762.1
       },
       "staged/ready": {
-        "count": 34,
-        "newest_item_age_minutes": 9.5,
-        "oldest_item_age_minutes": 589.5
+        "count": 39,
+        "newest_item_age_minutes": 19.2,
+        "oldest_item_age_minutes": 569.1
       }
     },
     "source": "pipeline/queues/*.json file counts only"

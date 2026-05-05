@@ -40,7 +40,6 @@ keywords:
 source_name: "Teknavi"
 source_url: "https://teknavi.fi/digi/julkistus-digi/apple-julkisti-ja-toi-myyntiin-uuden-pride-edition-sport-loop-rannekkeen-uudet-pride-kellotaulu-ja-taustakuvat-tulossa-pian/"
 source_domain: "teknavi.fi"
-briefing: true
 draft: false
 ---
 
