@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/iranin-ulkoministeri-poliittiseen-kriisiin-ei-ole-sotilaallista-ratkaisua/9333612"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
