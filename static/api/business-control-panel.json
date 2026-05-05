@@ -2,28 +2,28 @@
   "analytics": {
     "ga4": {
       "daily_traffic_log": {
-        "age_minutes": 990.0,
+        "age_minutes": 1110.7,
         "exists": true,
         "status": "error_seen"
       },
       "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
       "status": "blocked_or_unknown",
       "weekly_metrics_log": {
-        "age_minutes": 990.0,
+        "age_minutes": 1110.7,
         "exists": true,
         "status": "error_seen"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 930.0,
+        "age_minutes": 1050.7,
         "data_source": "frontmatter_synthetic",
         "generated_at": "2026-05-04T08:00:01.756093Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 20
       },
       "fetch_log": {
-        "age_minutes": 1020.0,
+        "age_minutes": 1140.7,
         "exists": true,
         "status": "error_seen"
       },
@@ -102,15 +102,15 @@
     "total_articles": 1727
   },
   "content": {
-    "article_count_local": 1741,
-    "last_publish_age_minutes": 2.0,
-    "last_publish_at": "2026-05-04T23:28:02.107469Z",
+    "article_count_local": 1744,
+    "last_publish_age_minutes": 22.7,
+    "last_publish_at": "2026-05-05T01:08:01.774079Z",
     "latest_article": {
-      "category": "Kulttuuri",
-      "slug": "2026-05-04-met-gaalan-punaisella-matolla-korostui-muoti-taidemuotona",
-      "title": "Met-gaalan punaisella matolla korostui muoti taidemuotona"
+      "category": "Teknologia",
+      "slug": "2026-05-05-humanoidirobotteja-kokeillaan-jatteiden-lajittelussa-tyovoim",
+      "title": "Humanoidirobotteja kokeillaan jätteiden lajittelussa työvoimapulan keskellä"
     },
-    "published_last_24h_local": 16,
+    "published_last_24h_local": 19,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -130,7 +130,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-05-04T23:30:03.228392Z",
+  "generated_at": "2026-05-05T01:30:46.228702Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -173,17 +173,17 @@
         }
       ]
     },
-    "last_run_age_minutes": 9.9,
+    "last_run_age_minutes": 0.6,
     "last_run_article_count": 0,
-    "last_run_at": "2026-05-04T23:20:08.155643Z",
+    "last_run_at": "2026-05-05T01:30:07.876627Z",
     "last_run_success": false,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-05-04T23:28:02.107469+00:00",
+        "last_published_ts": "2026-05-05T01:08:01.774079+00:00",
         "publish_rate": 0,
-        "published": 16,
+        "published": 19,
         "rejected": 9
       },
       "feeds": {
@@ -194,7 +194,7 @@
         "stale_names": [],
         "total": 38
       },
-      "generated_at": "2026-05-04T23:28:23+00:00",
+      "generated_at": "2026-05-05T01:08:23+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
@@ -225,16 +225,16 @@
           20
         ],
         [
+          "kanssa",
+          18
+        ],
+        [
           "miten",
           17
         ],
         [
-          "kanssa",
+          "perusteella",
           12
-        ],
-        [
-          "mukana",
-          11
         ]
       ]
     },
@@ -244,33 +244,33 @@
     "queues": {
       "monica/inbox": {
         "count": 6594,
-        "newest_item_age_minutes": 2032.1,
-        "oldest_item_age_minutes": 23887.1
+        "newest_item_age_minutes": 2152.8,
+        "oldest_item_age_minutes": 24007.8
       },
       "monica/outbox": {
         "count": 1573,
-        "newest_item_age_minutes": 2930.4,
-        "oldest_item_age_minutes": 23284.1
+        "newest_item_age_minutes": 3051.1,
+        "oldest_item_age_minutes": 23404.8
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 2031.4,
-        "oldest_item_age_minutes": 23887.1
+        "newest_item_age_minutes": 2152.1,
+        "oldest_item_age_minutes": 24007.8
       },
       "staged/failed": {
-        "count": 794,
-        "newest_item_age_minutes": 25.8,
-        "oldest_item_age_minutes": 4782.8
+        "count": 808,
+        "newest_item_age_minutes": 6.5,
+        "oldest_item_age_minutes": 4903.5
       },
       "staged/published": {
-        "count": 39,
-        "newest_item_age_minutes": 1.7,
-        "oldest_item_age_minutes": 4441.6
+        "count": 42,
+        "newest_item_age_minutes": 22.4,
+        "oldest_item_age_minutes": 4562.3
       },
       "staged/ready": {
-        "count": 43,
-        "newest_item_age_minutes": 8.7,
-        "oldest_item_age_minutes": 598.8
+        "count": 34,
+        "newest_item_age_minutes": 9.5,
+        "oldest_item_age_minutes": 589.5
       }
     },
     "source": "pipeline/queues/*.json file counts only"
