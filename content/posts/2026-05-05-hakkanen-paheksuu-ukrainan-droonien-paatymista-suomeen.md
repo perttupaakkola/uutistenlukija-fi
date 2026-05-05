@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/hakkanen-paheksuu-ukrainan-droonien-paatymista-suomeen-luvassa-keskustelu-ukrainan-puolustusministerin-kanssa/9333410"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
