@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kesalomat-siirtyvat-tata-mielta-asiasta-ovat-koululaiset/9333500"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
