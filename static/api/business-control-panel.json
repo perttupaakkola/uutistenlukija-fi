@@ -2,28 +2,28 @@
   "analytics": {
     "ga4": {
       "daily_traffic_log": {
-        "age_minutes": 870.5,
+        "age_minutes": 990.5,
         "exists": true,
         "status": "error_seen"
       },
       "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
       "status": "blocked_or_unknown",
       "weekly_metrics_log": {
-        "age_minutes": 2310.5,
+        "age_minutes": 2430.5,
         "exists": true,
         "status": "error_seen"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 2250.5,
+        "age_minutes": 2370.5,
         "data_source": "frontmatter_synthetic",
         "generated_at": "2026-05-04T08:00:01.756093Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 20
       },
       "fetch_log": {
-        "age_minutes": 900.5,
+        "age_minutes": 1020.5,
         "exists": true,
         "status": "error_seen"
       },
@@ -102,15 +102,15 @@
     "total_articles": 1748
   },
   "content": {
-    "article_count_local": 1756,
+    "article_count_local": 1757,
     "last_publish_age_minutes": 102.5,
-    "last_publish_at": "2026-05-05T19:48:01.647096Z",
+    "last_publish_at": "2026-05-05T21:48:01.355623Z",
     "latest_article": {
-      "category": "Kotimaa",
-      "slug": "2026-05-05-romanivaikuttaja-vartti-isberg-vangittu-epailtyna-vakavan-va",
-      "title": "Romanivaikuttaja Vartti Isberg vangittu epäiltynä vakavan väkivaltarikoksen valmistelusta"
+      "category": "Teknologia",
+      "slug": "2026-05-05-apple-aikoo-tuoda-ios-27aan-laajemman-valinnan-kolmansien-os",
+      "title": "Apple aikoo tuoda iOS 27:ään laajemman valinnan kolmansien osapuolten tekoälymalleista"
     },
-    "published_last_24h_local": 17,
+    "published_last_24h_local": 16,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -130,7 +130,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-05-05T21:30:32.317557Z",
+  "generated_at": "2026-05-05T23:30:30.358432Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -175,13 +175,13 @@
     },
     "last_run_age_minutes": 0.4,
     "last_run_article_count": 0,
-    "last_run_at": "2026-05-05T21:30:08.371130Z",
+    "last_run_at": "2026-05-05T23:30:08.377453Z",
     "last_run_success": false,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-05-05T19:48:01.647096+00:00",
+        "last_published_ts": "2026-05-05T21:48:01.355623+00:00",
         "publish_rate": 0,
         "published": 18,
         "rejected": 1
@@ -194,7 +194,7 @@
         "stale_names": [],
         "total": 38
       },
-      "generated_at": "2026-05-05T19:48:23+00:00",
+      "generated_at": "2026-05-05T21:48:24+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
@@ -218,12 +218,12 @@
           20
         ],
         [
-          "kanssa",
-          16
+          "apple",
+          18
         ],
         [
-          "samaan",
-          14
+          "kanssa",
+          16
         ],
         [
           "aikana",
@@ -241,33 +241,33 @@
     "queues": {
       "monica/inbox": {
         "count": 6594,
-        "newest_item_age_minutes": 3352.6,
-        "oldest_item_age_minutes": 25207.6
+        "newest_item_age_minutes": 3472.6,
+        "oldest_item_age_minutes": 25327.5
       },
       "monica/outbox": {
         "count": 1573,
-        "newest_item_age_minutes": 4250.9,
-        "oldest_item_age_minutes": 24604.6
+        "newest_item_age_minutes": 4370.8,
+        "oldest_item_age_minutes": 24724.6
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 3351.9,
-        "oldest_item_age_minutes": 25207.6
+        "newest_item_age_minutes": 3471.9,
+        "oldest_item_age_minutes": 25327.5
       },
       "staged/failed": {
-        "count": 903,
-        "newest_item_age_minutes": 6.5,
-        "oldest_item_age_minutes": 6103.3
+        "count": 913,
+        "newest_item_age_minutes": 2.5,
+        "oldest_item_age_minutes": 6223.3
       },
       "staged/published": {
-        "count": 54,
+        "count": 55,
         "newest_item_age_minutes": 102.1,
-        "oldest_item_age_minutes": 5762.1
+        "oldest_item_age_minutes": 5882.1
       },
       "staged/ready": {
-        "count": 39,
-        "newest_item_age_minutes": 19.2,
-        "oldest_item_age_minutes": 569.1
+        "count": 40,
+        "newest_item_age_minutes": 19.0,
+        "oldest_item_age_minutes": 579.2
       }
     },
     "source": "pipeline/queues/*.json file counts only"
