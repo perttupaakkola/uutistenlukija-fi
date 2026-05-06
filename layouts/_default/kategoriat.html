@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $terms := .Site.Taxonomies.categories }}
+<div class="category-header">
+  <h1>Kategoriat</h1>
+  <p class="category-header__description">Selaa uutisia aiheen mukaan.</p>
+</div>
+
+{{ if gt (len $terms) 0 }}
+<div class="articles-grid category-index-grid">
+  {{ range $name, $taxonomy := $terms }}
+    {{ $page := site.GetPage (printf "/categories/%s" $name) }}
+    {{ $title := humanize $name | title }}
+    {{ with $page }}{{ $title = .Title }}{{ end }}
+    <article class="article-card category-index-card">
+      <h2><a href="/categories/{{ $name | urlize }}/">{{ $title }}</a></h2>
+      <p class="excerpt">{{ len $taxonomy.Pages }} artikkelia</p>
+      {{ with $page.Params.description }}<p>{{ . }}</p>{{ end }}
+    </article>
+  {{ end }}
+</div>
+{{ else }}
+  {{ partial "empty-state.html" (dict
+    "title" "Ei kategorioita"
+    "description" "Sivustolla ei ole vielä määriteltyjä kategorioita."
+    "icon" "news"
+  ) }}
+{{ end }}
+{{ end }}
