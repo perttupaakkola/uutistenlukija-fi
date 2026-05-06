@@ -2,28 +2,28 @@
   "analytics": {
     "ga4": {
       "daily_traffic_log": {
-        "age_minutes": 1230.6,
+        "age_minutes": 1350.4,
         "exists": true,
         "status": "error_seen"
       },
       "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
       "status": "blocked_or_unknown",
       "weekly_metrics_log": {
-        "age_minutes": 2670.6,
+        "age_minutes": 2790.4,
         "exists": true,
         "status": "error_seen"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 2610.6,
+        "age_minutes": 2730.4,
         "data_source": "frontmatter_synthetic",
         "generated_at": "2026-05-04T08:00:01.756093Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 20
       },
       "fetch_log": {
-        "age_minutes": 1260.6,
+        "age_minutes": 1380.4,
         "exists": true,
         "status": "error_seen"
       },
@@ -102,15 +102,15 @@
     "total_articles": 1748
   },
   "content": {
-    "article_count_local": 1762,
-    "last_publish_age_minutes": 62.6,
-    "last_publish_at": "2026-05-06T02:28:02.166746Z",
+    "article_count_local": 1765,
+    "last_publish_age_minutes": 2.4,
+    "last_publish_at": "2026-05-06T05:28:01.528396Z",
     "latest_article": {
-      "category": "Kotimaa",
-      "slug": "2026-05-06-saa-muuttuu-loppuviikolla-poutaisemmaksi-paikalliset-ukkosku",
-      "title": "Sää muuttuu loppuviikolla poutaisemmaksi – paikalliset ukkoskuurot mahdollisia"
+      "category": "Ulkomaat",
+      "slug": "2026-05-06-palestiinalaissuurlahettilas-vaatii-britannian-ulkoministeri",
+      "title": "Palestiinalaissuurlähettiläs vaatii Britannian ulkoministeriötä puuttumaan British Museumin näyttelyteksteihin"
     },
-    "published_last_24h_local": 18,
+    "published_last_24h_local": 19,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -130,7 +130,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-05-06T03:30:39.442915Z",
+  "generated_at": "2026-05-06T05:30:27.796206Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -173,18 +173,18 @@
         }
       ]
     },
-    "last_run_age_minutes": 0.5,
+    "last_run_age_minutes": 0.3,
     "last_run_article_count": 0,
-    "last_run_at": "2026-05-06T03:30:08.769380Z",
+    "last_run_at": "2026-05-06T05:30:08.693479Z",
     "last_run_success": false,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-05-06T02:28:02.166746+00:00",
+        "last_published_ts": "2026-05-06T05:28:01.528396+00:00",
         "publish_rate": 0,
-        "published": 18,
-        "rejected": 1
+        "published": 19,
+        "rejected": 2
       },
       "feeds": {
         "disabled": 0,
@@ -194,15 +194,14 @@
         "stale_names": [],
         "total": 38
       },
-      "generated_at": "2026-05-06T02:28:24+00:00",
+      "generated_at": "2026-05-06T05:28:26+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "keyword_stuffing": 1,
-        "language borderline Finnish si": 1,
-        "length under target (283 words": 1,
-        "missing: image": 1,
-        "unsourced numbers": 1
+        "central unsourced number in ti": 2,
+        "length under target (253 words": 1,
+        "missing: image": 2,
+        "unsourced numbers": 2
       },
       "runs": {
         "error": 0,
@@ -215,22 +214,22 @@
       "trending": [
         [
           "perusteella",
-          19
-        ],
-        [
-          "apple",
-          18
+          22
         ],
         [
           "aikana",
           14
         ],
         [
+          "siihen",
+          11
+        ],
+        [
           "jälkeen",
           11
         ],
         [
-          "poikkeuksellisen",
+          "aiempaa",
           10
         ]
       ]
@@ -241,33 +240,33 @@
     "queues": {
       "monica/inbox": {
         "count": 6594,
-        "newest_item_age_minutes": 3712.7,
-        "oldest_item_age_minutes": 25567.7
+        "newest_item_age_minutes": 3832.5,
+        "oldest_item_age_minutes": 25687.5
       },
       "monica/outbox": {
         "count": 1573,
-        "newest_item_age_minutes": 4611.0,
-        "oldest_item_age_minutes": 24964.7
+        "newest_item_age_minutes": 4730.8,
+        "oldest_item_age_minutes": 25084.5
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 3712.0,
-        "oldest_item_age_minutes": 25567.7
+        "newest_item_age_minutes": 3831.8,
+        "oldest_item_age_minutes": 25687.5
       },
       "staged/failed": {
-        "count": 930,
-        "newest_item_age_minutes": 6.5,
-        "oldest_item_age_minutes": 6463.4
+        "count": 938,
+        "newest_item_age_minutes": 7.4,
+        "oldest_item_age_minutes": 6583.2
       },
       "staged/published": {
-        "count": 60,
-        "newest_item_age_minutes": 62.2,
-        "oldest_item_age_minutes": 6122.2
+        "count": 63,
+        "newest_item_age_minutes": 2.0,
+        "oldest_item_age_minutes": 6242.0
       },
       "staged/ready": {
-        "count": 38,
-        "newest_item_age_minutes": 9.5,
-        "oldest_item_age_minutes": 569.4
+        "count": 37,
+        "newest_item_age_minutes": 19.2,
+        "oldest_item_age_minutes": 589.2
       }
     },
     "source": "pipeline/queues/*.json file counts only"
