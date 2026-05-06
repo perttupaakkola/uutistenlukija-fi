@@ -278,6 +278,18 @@ def ready_packet_action(data: dict, path: Path, now: datetime, demote_after_hour
     return "keep", ""
 
 
+CATEGORY_PRIORITY_BONUS = {
+    # Business-control panel target: Talous is materially under target, while
+    # Ulkomaat/Tiede have been over target. Give strong, already-qualified
+    # Talous packets a modest queue bump without bypassing quality gates.
+    "Talous": 4.0,
+}
+
+
+def packet_category(packet: dict) -> str:
+    return _normalize_ws(str(packet.get("category") or packet.get("category_hint") or ""))
+
+
 def priority_score(path: Path) -> tuple[float, float, int, int, float, str]:
     data = read_queue_record(path)
     audit = packet_audit(data, path)
@@ -285,9 +297,12 @@ def priority_score(path: Path) -> tuple[float, float, int, int, float, str]:
     source_words = int(audit["source_words"])
     source_blocks = int(audit["source_blocks"])
     confidence = float(audit["story_confidence"])
+    packet = data.get("packet") or data
+    category = packet_category(packet)
     # Age still matters, but source strength prevents the worker from burning
     # the oldest thin packets forever. This is deterministic for stable mtimes.
     score = age_hours + min(source_words, 800) / 80 + source_blocks * 3 + confidence * 4
+    score += CATEGORY_PRIORITY_BONUS.get(category, 0.0)
     if source_words < 120:
         score -= 8
     if source_words < 80:
@@ -761,6 +776,8 @@ def ready_sample(path: Path) -> dict[str, Any]:
         "source_words": source_words,
         "source_blocks": source_blocks,
         "story_confidence": packet_confidence(data),
+        "category": packet_category(packet),
+        "category_priority_bonus": CATEGORY_PRIORITY_BONUS.get(packet_category(packet), 0.0),
         "audit": packet_audit(data, path),
     }
 

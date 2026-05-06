@@ -96,6 +96,17 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(ordered[0], rich_newer)
         self.assertIn(thin_old, ordered)
 
+    def test_priority_applies_talous_mix_bonus_without_beating_much_stronger_packet(self) -> None:
+        talous = _record("talous", source_words=260, blocks=2)
+        talous["packet"]["category_hint"] = "Talous"
+        talous_path = self._write("ready", "talous", talous, age_hours=1)
+        kotimaa_path = self._write("ready", "kotimaa", _record("kotimaa", source_words=260, blocks=2), age_hours=1)
+        rich_path = self._write("ready", "rich", _record("rich", source_words=700, blocks=4), age_hours=1)
+
+        self.assertGreater(staged_publish.priority_score(talous_path)[0], staged_publish.priority_score(kotimaa_path)[0])
+        self.assertEqual(staged_publish.ready_sample(talous_path)["category_priority_bonus"], 4.0)
+        self.assertEqual(staged_publish.prioritized_ready_packets()[0], rich_path)
+
     def test_ready_sample_is_dry_run_metadata_only(self) -> None:
         path = self._write("ready", "sample", _record("sample", source_words=250, blocks=2), age_hours=5)
 
