@@ -39,7 +39,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/tasta-kasvokuvasta-tuli-pahuuden-ja-pedofilian-ikoni-jammua-vihasi-koko-suomi/9333290"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
