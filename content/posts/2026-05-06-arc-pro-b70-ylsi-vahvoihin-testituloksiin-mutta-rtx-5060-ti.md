@@ -39,7 +39,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/intelin-isoon-battlemageen-perustuva-arc-pro-b70-paasi-pelitesteihin/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
