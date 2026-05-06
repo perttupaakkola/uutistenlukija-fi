@@ -39,7 +39,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittaja-kertoo-miksi-yha-useampi-tesla-hylataan-katsastuksessa-sanoisin-sita-jo-tyyppiviaksi/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
