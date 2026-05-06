@@ -40,7 +40,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/halu-yrittajyyteen-hiipunut-nama-ovat-syyt-nuoret-ovat-valopilkku/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
