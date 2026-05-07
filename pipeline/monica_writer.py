@@ -42,6 +42,10 @@ DEFAULT_OPENCLAW_CMD = os.environ.get("MONICA_OPENCLAW_CMD", "openclaw")
 DEFAULT_TIMEOUT_SEC = int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", "240"))
 MIN_CONTENT_WORDS = 250
 MIN_LEAD_WORDS = 30
+SOURCE_BACKED_REPAIR_WORDS = 300
+SOURCE_BACKED_REPAIR_BLOCKS = 2
+SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS = 280
+SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS = 420
 
 OPENCLAW_CANDIDATES = (
     "/home/pertt/.openclaw/bin/openclaw",
@@ -224,6 +228,44 @@ def _basic_payload_issues(payload: dict) -> list[str]:
     return issues
 
 
+def _packet_source_words(packet: dict) -> int:
+    text = str(packet.get("source_text") or "")
+    if text.strip():
+        return len(text.split())
+    blocks = packet.get("clean_source_blocks") or []
+    if isinstance(blocks, list):
+        total = 0
+        for block in blocks:
+            if not isinstance(block, dict):
+                continue
+            try:
+                total += int(block.get("word_count") or 0)
+            except (TypeError, ValueError):
+                total += len(str(block.get("text") or "").split())
+        return total
+    return 0
+
+
+def _packet_source_blocks(packet: dict) -> int:
+    blocks = packet.get("clean_source_blocks") or []
+    if isinstance(blocks, list):
+        count = sum(1 for block in blocks if isinstance(block, dict) and _normalize_ws(str(block.get("text") or "")))
+        if count:
+            return count
+    text = str(packet.get("source_text") or "")
+    if not text.strip():
+        return 0
+    return len([part for part in re.split(r"\n\s*\n|\n---\n", text) if _normalize_ws(part)])
+
+
+def _is_source_backed_repair_candidate(packet: dict, issues: list[str]) -> bool:
+    joined = "; ".join(issues).lower()
+    has_length_issue = "content too short" in joined or "lead paragraph too short" in joined
+    if not has_length_issue:
+        return False
+    return _packet_source_words(packet) >= SOURCE_BACKED_REPAIR_WORDS and _packet_source_blocks(packet) >= SOURCE_BACKED_REPAIR_BLOCKS
+
+
 def _build_prompt(packet: dict) -> str:
     schema_text = json.dumps(WRITER_SCHEMA, ensure_ascii=False, indent=2)
     packet_text = json.dumps(packet, ensure_ascii=False, indent=2)
@@ -252,6 +294,19 @@ Story packet:
 
 
 def _build_repair_prompt(packet: dict, broken_payload: dict, issues: list[str]) -> str:
+    source_words = _packet_source_words(packet)
+    source_blocks = _packet_source_blocks(packet)
+    source_backed = _is_source_backed_repair_candidate(packet, issues)
+    source_backed_rules = ""
+    if source_backed:
+        source_backed_rules = f"""
+Source-backed repair mode:
+- The packet has {source_words} source words across {source_blocks} source blocks, so a short draft is a repair target, not an automatic failure.
+- Expand to {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
+- Build 3–5 concise paragraphs plus at least two H2 subheadings.
+- Use each source block to add concrete context: actors, figures/timing, cause, consequence, and what happens next when available.
+- Do not pad with generic economy commentary, advice, sentiment, or invented market context.
+"""
     return f"""Fix the article JSON below and return ONLY a corrected JSON object.
 Do not add commentary.
 
@@ -261,6 +316,10 @@ Problems to fix:
 Repair rules:
 - Return INSUFFICIENT_CONFIDENCE if the original packet cannot support at least 250 factual Finnish words without filler or invention.
 - Otherwise expand the article to 280–420 words, make the first paragraph at least 30 words, and include at least two H2 subheadings.
+{source_backed_rules}
+Original packet source evidence:
+- source_words: {source_words}
+- source_blocks: {source_blocks}
 
 Original packet:
 {json.dumps(packet, ensure_ascii=False, indent=2)}

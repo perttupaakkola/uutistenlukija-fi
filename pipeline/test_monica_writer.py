@@ -9,11 +9,11 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import OPENCLAW_CANDIDATES, _extract_json_object, rewrite_articles
+    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import OPENCLAW_CANDIDATES, _extract_json_object, rewrite_articles
+    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -25,6 +25,19 @@ SAMPLE_ARTICLE = {
     "category_hint": "Kotimaa",
     "research": "[Lähde: Yle]\nHallitus valmistelee uusia sosiaalihuollon säästöjä. Päätöksiä valmistellaan ensi vuodelle ja vaikutukset kohdistuvat useisiin palveluihin.\n\n---\n\n[Lähde: BBC]\nThe government is preparing new savings measures for social care. Ministers say the final package is still under preparation.",
 }
+
+
+def _source_packet(source_words: int, blocks: int = 2) -> dict:
+    block_text = " ".join(["sana"] * max(1, source_words // max(1, blocks)))
+    return {
+        "packet_id": "talous-test",
+        "category_hint": "Talous",
+        "source_text": "\n\n".join(f"[Lähde: Testi {idx}]\n{block_text}" for idx in range(blocks)),
+        "clean_source_blocks": [
+            {"source": f"Testi {idx}", "text": block_text, "word_count": len(block_text.split())}
+            for idx in range(blocks)
+        ],
+    }
 
 
 def _long_content() -> str:
@@ -239,6 +252,27 @@ class MonicaWriterTests(unittest.TestCase):
             self.assertIn("--local", first_cmd)
             self.assertIn("--session-id", retry_cmd)
             self.assertNotIn("--local", retry_cmd)
+
+    def test_source_backed_repair_candidate_requires_words_blocks_and_length_issue(self):
+        issues = ["content too short: 207 words", "lead paragraph too short: 22 words"]
+
+        self.assertTrue(_is_source_backed_repair_candidate(_source_packet(320, blocks=2), issues))
+        self.assertFalse(_is_source_backed_repair_candidate(_source_packet(260, blocks=2), issues))
+        self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=1), issues))
+        self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=2), ["not enough tags"]))
+
+    def test_repair_prompt_strengthens_source_backed_short_draft_without_lowering_gate(self):
+        packet = _source_packet(360, blocks=2)
+        broken_payload = json.loads(_good_payload())
+        broken_payload["content"] = " ".join(["Sana"] * 207)
+
+        prompt = _build_repair_prompt(packet, broken_payload, ["content too short: 207 words"])
+
+        self.assertIn("Source-backed repair mode", prompt)
+        self.assertIn("short draft is a repair target", prompt)
+        self.assertIn("source_words: 366", prompt)
+        self.assertIn("Return INSUFFICIENT_CONFIDENCE", prompt)
+        self.assertIn("Do not pad", prompt)
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):
