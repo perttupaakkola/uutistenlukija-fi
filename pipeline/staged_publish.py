@@ -100,6 +100,29 @@ def source_strength(article: dict) -> tuple[int, int, int, int]:
     return (len(research.split()), source_blocks, len(desc.split()), tier_score)
 
 
+def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> list[dict]:
+    if max_packets <= 0:
+        return []
+    ordered = sorted(articles, key=source_strength, reverse=True)
+    if len(ordered) <= max_packets:
+        return ordered
+
+    selected = ordered[:max_packets]
+    selected_categories = {article_category(article) for article in selected}
+    for category in CATEGORY_SCAN_ENQUEUE_PRIORITY:
+        if category in selected_categories:
+            continue
+        priority_candidates = [article for article in ordered[max_packets:] if article_category(article) == category]
+        if not priority_candidates:
+            continue
+        weakest_index, weakest = min(enumerate(selected), key=lambda item: source_strength(item[1]))
+        best_priority = priority_candidates[0]
+        if source_strength(best_priority) >= source_strength(weakest):
+            selected[weakest_index] = best_priority
+            selected_categories = {article_category(article) for article in selected}
+    return sorted(selected, key=source_strength, reverse=True)
+
+
 
 
 def article_category(article: dict) -> str:
@@ -330,6 +353,8 @@ CATEGORY_PRIORITY_BONUS = {
     "Talous": 4.0,
 }
 
+CATEGORY_SCAN_ENQUEUE_PRIORITY = ("Talous",)
+
 
 def packet_category(packet: dict, original_article: dict | None = None) -> str:
     saved = _normalize_ws(str(packet.get("category") or packet.get("category_hint") or ""))
@@ -488,8 +513,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
     log_scan_research_buckets("research_result", articles)
     articles = [a for a in articles if total_source_words(a) >= args.min_source_words]
     log_scan_stage("min_source_words_pass", articles)
-    articles = sorted(articles, key=source_strength, reverse=True)
-    articles = articles[: args.max_packets]
+    articles = select_scan_enqueue_candidates(articles, args.max_packets)
     log_scan_stage("queued_candidates", articles)
 
     queued = 0

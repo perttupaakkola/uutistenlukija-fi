@@ -120,6 +120,24 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.ready_sample(stale_path)["category"], "Talous")
         self.assertEqual(staged_publish.ready_sample(stale_path)["category_priority_bonus"], 4.0)
 
+    def test_scan_enqueue_keeps_under_target_talous_when_source_strength_ties(self) -> None:
+        kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 220, "description": "kuvaus"}
+        talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 220, "description": "kuvaus"}
+
+        selected = staged_publish.select_scan_enqueue_candidates([kotimaa, talous], max_packets=1)
+
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
+
+    def test_scan_enqueue_does_not_let_talous_beat_much_stronger_source(self) -> None:
+        rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 700, "description": "kuvaus"}
+        thin_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 120, "description": "kuvaus"}
+
+        selected = staged_publish.select_scan_enqueue_candidates([rich_kotimaa, thin_talous], max_packets=1)
+
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(staged_publish.article_category(selected[0]), "Kotimaa")
+
     def test_ready_sample_is_dry_run_metadata_only(self) -> None:
         path = self._write("ready", "sample", _record("sample", source_words=250, blocks=2), age_hours=5)
 
