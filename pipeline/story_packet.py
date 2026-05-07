@@ -32,6 +32,22 @@ _KEYWORD_RE = re.compile(r"[a-z0-9äöå-]{4,}", re.IGNORECASE)
 
 _COMMON_KEYWORDS = {
     "uutinen",
+    "yhtiö",
+    "yhtiön",
+    "yritys",
+    "yrityksen",
+    "talous",
+    "talouden",
+    "markkina",
+    "markkinat",
+    "kasvu",
+    "kasvun",
+    "liikevaihto",
+    "tulos",
+    "euro",
+    "euroa",
+    "prosentti",
+    "prosenttia",
     "uutiset",
     "suomi",
     "suomessa",
@@ -52,6 +68,34 @@ _COMMON_KEYWORDS = {
     "joka",
     "jotka",
 }
+
+_BUSINESS_SOURCE_NAMES = {
+    "kauppalehti",
+    "kauppalehti kl-nyt",
+    "taloussanomat",
+    "suomen yrittäjät",
+}
+
+_BUSINESS_CONTEXT_KEYWORDS = {
+    "talous",
+    "talouden",
+    "yritys",
+    "yritykset",
+    "yrityksen",
+    "yrittäjä",
+    "yrittäjät",
+    "liikevaihto",
+    "tulos",
+    "pörssi",
+    "osake",
+    "markkina",
+    "markkinat",
+    "rahoitus",
+    "investointi",
+    "kasvu",
+    "vienti",
+}
+
 
 _FOREIGN_TOPIC_TOKENS = {
     "trump",
@@ -178,6 +222,14 @@ def _keyword_overlap(context_tokens: set[str], text: str) -> tuple[int, int]:
     return len(overlap_tokens), strong_overlap
 
 
+def _is_business_context(article: dict, context_tokens: set[str]) -> bool:
+    hint = _normalize_ws(str(article.get("category_hint") or article.get("category") or ""))
+    source = _normalize_ws(str(article.get("source") or "")).lower()
+    if hint == "Talous" or source in _BUSINESS_SOURCE_NAMES:
+        return True
+    return bool(context_tokens & _BUSINESS_CONTEXT_KEYWORDS)
+
+
 def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int = 4) -> list[dict]:
     context_tokens = _keyword_tokens(
         " ".join(
@@ -189,6 +241,7 @@ def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int
             if part
         )
     )
+    business_context = _is_business_context(article, context_tokens)
 
     ranked: list[tuple[tuple[int, int, int, int, int], dict]] = []
     article_source = _normalize_ws(str(article.get("source", "") or ""))
@@ -209,9 +262,11 @@ def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int
         overlap, strong = _keyword_overlap(context_tokens, text)
         if context_tokens and not is_fallback:
             if strong == 0 and overlap < 3:
-                continue
+                if not (business_context and words >= 80):
+                    continue
             if overlap < 1:
-                continue
+                if not (business_context and words >= 80):
+                    continue
 
         ranked.append(
             (

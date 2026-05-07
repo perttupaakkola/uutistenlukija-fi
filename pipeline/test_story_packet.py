@@ -25,6 +25,33 @@ class StoryPacketTests(unittest.TestCase):
         self.assertNotIn("Washingtonin ampumisessa", packet["source_text"])
 
 
+
+    def test_talous_packet_keeps_long_business_context_block_with_generic_terms(self) -> None:
+        business_text = " ".join(
+            [
+                "Yhtiö kertoi liikevaihdon kasvaneen alkuvuonna ja tuloksen parantuneen markkinoiden elpyessä.",
+                "Johto arvioi kysynnän vahvistuvan vientimarkkinoilla, mutta kustannusten nousu painaa edelleen kannattavuutta.",
+                "Yritys kertoo investoivansa tuotantoon ja hakevansa kasvua uusista asiakkuuksista loppuvuoden aikana.",
+            ]
+            * 10
+        )
+        research = "\n\n".join(f"[Lähde: Kauppalehti {idx}]\n{business_text}" for idx in range(4))
+        article = {
+            "title": "Talouskasvu hidastui alkuvuonna",
+            "description": "Yritysten markkinat elpyvät hitaasti ja investoinnit jatkuvat.",
+            "source": "Kauppalehti",
+            "link": "https://www.kauppalehti.fi/uutiset/example",
+            "category_hint": "Talous",
+            "research": research,
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Talous")
+        self.assertEqual(len(packet["clean_source_blocks"]), 1)
+        self.assertGreaterEqual(sum(block["word_count"] for block in packet["clean_source_blocks"]), 300)
+        self.assertIn("liikevaihdon", packet["source_text"])
+
     def test_talous_hint_survives_foreign_market_tokens(self) -> None:
         article = {
             "title": "Pörssijuhla jatkuu Wall Streetillä – Nousuhuuma ei tarttunut Nokiaan",
