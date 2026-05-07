@@ -9,11 +9,11 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, rewrite_articles
+    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, _packet_source_blocks, _packet_source_words, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, rewrite_articles
+    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, _packet_source_blocks, _packet_source_words, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -271,6 +271,14 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=1), issues))
         self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=2), ["not enough tags"]))
 
+    def test_packet_source_words_prefers_clean_selected_blocks_over_full_source_text(self):
+        packet = _source_packet(120, blocks=2)
+        packet["source_text"] = " ".join(["sana"] * 600)
+
+        self.assertEqual(_packet_source_words(packet), 120)
+        self.assertEqual(_packet_source_blocks(packet), 2)
+        self.assertFalse(_is_source_backed_repair_candidate(packet, ["content too short: 220 words"]))
+
     def test_repair_prompt_strengthens_source_backed_short_draft_without_lowering_gate(self):
         packet = _source_packet(360, blocks=2)
         broken_payload = json.loads(_good_payload())
@@ -280,7 +288,7 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertIn("Source-backed repair mode", prompt)
         self.assertIn("short draft is a repair target", prompt)
-        self.assertIn("source_words: 366", prompt)
+        self.assertIn("source_words: 360", prompt)
         self.assertIn("Return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
 

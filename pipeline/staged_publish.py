@@ -48,6 +48,8 @@ from monica_writer import (  # noqa: E402
     _extract_json_object,
     _merge_article,
     _normalize_ws,
+    _packet_source_blocks as monica_packet_source_blocks,
+    _packet_source_words as monica_packet_source_words,
     _run_monica,
 )
 from quality_gate import run_gate as run_quality_gate  # noqa: E402
@@ -174,13 +176,13 @@ def packet_original_article(data: dict) -> dict:
 
 
 def packet_source_words(data: dict) -> int:
-    return total_source_words(packet_original_article(data))
+    packet = data.get("packet") or data
+    return monica_packet_source_words(packet)
 
 
 def packet_source_blocks(data: dict) -> int:
-    article = packet_original_article(data)
-    research = str(article.get("research") or article.get("research_text") or "")
-    return research.lower().count("[lähde:") + research.lower().count("[source:")
+    packet = data.get("packet") or data
+    return monica_packet_source_blocks(packet)
 
 
 def parse_record_time(value: str | None) -> datetime | None:

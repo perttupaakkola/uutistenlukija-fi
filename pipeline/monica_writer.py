@@ -18,6 +18,7 @@ import shutil
 import subprocess
 import uuid
 from pathlib import Path
+from typing import Any
 
 try:
     from .quarantine import save_writer_quarantine
@@ -269,21 +270,22 @@ def _basic_payload_issues(payload: dict) -> list[str]:
     return issues
 
 
+def _source_block_words(block: dict[str, Any]) -> int:
+    try:
+        return int(block.get("word_count") or 0)
+    except (TypeError, ValueError):
+        return len(str(block.get("text") or "").split())
+
+
 def _packet_source_words(packet: dict) -> int:
+    blocks = packet.get("clean_source_blocks") or []
+    if isinstance(blocks, list) and blocks:
+        total = sum(_source_block_words(block) for block in blocks if isinstance(block, dict))
+        if total:
+            return total
     text = str(packet.get("source_text") or "")
     if text.strip():
         return len(text.split())
-    blocks = packet.get("clean_source_blocks") or []
-    if isinstance(blocks, list):
-        total = 0
-        for block in blocks:
-            if not isinstance(block, dict):
-                continue
-            try:
-                total += int(block.get("word_count") or 0)
-            except (TypeError, ValueError):
-                total += len(str(block.get("text") or "").split())
-        return total
     return 0
 
 

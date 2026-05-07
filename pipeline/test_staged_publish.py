@@ -166,6 +166,23 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertGreater(sample["priority_score"], 0)
         self.assertTrue(path.exists())
 
+    def test_status_source_metrics_match_monica_selected_packet_metrics(self) -> None:
+        record = _record("selected-metrics", source_words=120, blocks=2)
+        record["packet"]["source_text"] = " ".join(["sana"] * 600)
+        record["packet"]["clean_source_blocks"] = [
+            {"source": "Testi 0", "text": " ".join(["sana"] * 60), "word_count": 60},
+            {"source": "Testi 1", "text": " ".join(["sana"] * 60), "word_count": 60},
+        ]
+        path = self._write("ready", "selected-metrics", record, age_hours=1)
+
+        data = staged_publish.read_queue_record(path)
+
+        self.assertEqual(staged_publish.packet_source_words(data), 120)
+        self.assertEqual(staged_publish.packet_source_blocks(data), 2)
+        sample = staged_publish.ready_sample(path)
+        self.assertEqual(sample["source_words"], 120)
+        self.assertEqual(sample["source_blocks"], 2)
+
     def test_failed_status_extracts_nested_failure_reason_and_cleanup_bucket(self) -> None:
         self._write("failed", "expired", {**_record("expired", 100), "failure": {"reason": "stale_ready_expired age_h=10.1 max_age_h=10.0"}}, age_hours=12)
 
