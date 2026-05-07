@@ -52,7 +52,7 @@ from monica_writer import (  # noqa: E402
     _packet_source_words as monica_packet_source_words,
     _run_monica,
 )
-from quality_gate import run_gate as run_quality_gate  # noqa: E402
+from quality_gate import score_article, run_gate as run_quality_gate  # noqa: E402
 
 
 def log(msg: str) -> None:
@@ -651,6 +651,67 @@ def load_outbox(max_items: int) -> list[tuple[Path, dict]]:
     return out
 
 
+def quality_gate_retry_classification(data: dict, article: dict, breakdown: Any | None = None) -> dict[str, Any]:
+    """Return structured fail-closed diagnostics for a post-Monica quality reject.
+
+    This is intentionally classification-only. It makes quality-gate failures
+    actionable for a later bounded writer retry, but never bypasses the publish
+    gate or republishes weak/unsupported copy.
+    """
+    packet = data.get("packet") or {}
+    original = data.get("original_article") or {}
+    payload = data.get("payload") or {}
+    breakdown = breakdown or score_article(article)
+    source_words = packet_source_words(data)
+    source_blocks = packet_source_blocks(data)
+    category = packet.get("category") or packet.get("category_hint") or article.get("category") or original.get("category_hint") or "?"
+    reasons = list(dict.fromkeys([*breakdown.reasons, *breakdown.hard_fails, *breakdown.soft_warnings]))
+    blocking = [reason for reason in reasons if any(token in reason.lower() for token in [
+        "central unsourced number",
+        "unsourced_numbers",
+        "language weak",
+        "missing: image",
+        "duplication",
+        "duplicate",
+        "repeated paragraph",
+        "source leakage",
+        "substantial english",
+        "thin_source",
+        "truncated",
+    ])]
+    length_only_reasons = [reason for reason in reasons if not reason.startswith("missing: key_points")]
+    length_only = bool(length_only_reasons) and all(
+        reason.startswith("length") or "too_short" in reason or "paragraph" in reason or "lead" in reason
+        for reason in length_only_reasons
+    )
+    source_backed = source_words >= 300 and source_blocks >= 2
+    repair_eligible = bool(source_backed and length_only and not blocking)
+    if repair_eligible:
+        classification = "repairable_length_only"
+    elif source_backed:
+        classification = "fail_closed_quality_gate"
+    else:
+        classification = "fail_closed_thin_source"
+    return {
+        "packet_id": packet.get("packet_id") or payload.get("packet_id") or data.get("digest") or "",
+        "category": category,
+        "selected_source_words": source_words,
+        "selected_source_blocks": source_blocks,
+        "story_confidence": packet.get("story_confidence"),
+        "quality_total": breakdown.total,
+        "quality_normalized": breakdown.normalized_score,
+        "quality_reasons": reasons,
+        "hard_fails": list(breakdown.hard_fails),
+        "soft_warnings": list(breakdown.soft_warnings),
+        "repair_eligible": repair_eligible,
+        "retry_classification": classification,
+        "fail_closed": not repair_eligible,
+        "source_backed": source_backed,
+        "article_words": len((article.get("content") or "").split()),
+        "title": article.get("title") or payload.get("title") or original.get("title") or "",
+    }
+
+
 def quarantine_rejected_outbox(items: list[tuple[Path, dict]], rejected_articles: list[dict]) -> int:
     """Move quality-gate rejects out of outbox so one bad draft cannot block publishing."""
     rejected_ids = {id(article) for article in rejected_articles}
@@ -659,8 +720,11 @@ def quarantine_rejected_outbox(items: list[tuple[Path, dict]], rejected_articles
         article = data.get("article")
         if id(article) not in rejected_ids:
             continue
+        breakdown = score_article(article)
         data["quality_gate_rejected_at"] = datetime.now(timezone.utc).isoformat()
         data["quality_gate_rejected"] = True
+        data["quality_gate_feedback"] = quality_gate_retry_classification(data, article, breakdown)
+        data["failure"] = "quality_gate_rejected: " + "; ".join(data["quality_gate_feedback"].get("quality_reasons") or ["unknown"])
         target = STAGED_ROOT / "failed" / path.name
         # Preserve any existing failed artifact rather than overwriting evidence.
         if target.exists():

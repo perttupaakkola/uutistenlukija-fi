@@ -87,6 +87,60 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(failed_status["failure_alert_buckets"]["quality"], 1)
         self.assertEqual(failed_status["failure_alert_buckets"]["writer_runtime"], 1)
 
+    def test_quality_gate_reject_quarantine_records_fail_closed_feedback(self) -> None:
+        record = _record("rich-quality-reject", source_words=360, blocks=3)
+        record["packet"]["packet_id"] = "pkt-rich-quality"
+        record["packet"]["category_hint"] = "Talous"
+        record["packet"]["story_confidence"] = 0.98
+        article = {
+            "title": "Trump asetti EU:lle määräajan tullikiistan ratkaisemiseksi",
+            "description": "Trump uhkaa EU:ta uusilla tulleilla, ellei sopua synny.",
+            "content": (
+                "Yhdysvaltain presidentti Donald Trump vaatii EU:lta ratkaisua 4. heinäkuuta mennessä ja uhkaa "
+                "10, 15, 30 ja 50 prosentin tulleilla. Neuvottelut jatkuvat Brysselissä, mutta päätöksiä ei vielä ole.\n\n"
+                "## Neuvottelut jatkuvat\n\n"
+                "EU:n edustajat arvioivat tilannetta ja korostavat, että sopimuksen toimeenpano vaatii jäsenmaiden hyväksyntää."
+            ),
+            "category": "Talous",
+            "source_text": "Trump ja EU neuvottelevat tulleista ilman näitä tarkkoja lukuja.",
+            "source_url": "https://example.com/story",
+        }
+        data = {**record, "article": article, "payload": {"packet_id": "pkt-rich-quality"}}
+        path = self._write("outbox", "pkt-rich-quality", data)
+
+        moved = staged_publish.quarantine_rejected_outbox([(path, data)], [article])
+
+        self.assertEqual(moved, 1)
+        failed = json.loads((self.root / "failed" / "pkt-rich-quality.json").read_text(encoding="utf-8"))
+        feedback = failed["quality_gate_feedback"]
+        self.assertEqual(feedback["packet_id"], "pkt-rich-quality")
+        self.assertEqual(feedback["category"], "Talous")
+        self.assertGreaterEqual(feedback["selected_source_words"], 360)
+        self.assertEqual(feedback["selected_source_blocks"], 3)
+        self.assertFalse(feedback["repair_eligible"])
+        self.assertEqual(feedback["retry_classification"], "fail_closed_quality_gate")
+        self.assertTrue(any("central unsourced number" in reason for reason in feedback["quality_reasons"]))
+        self.assertIn("quality_gate_rejected", failed["failure"])
+
+    def test_quality_gate_feedback_marks_source_backed_length_only_as_repairable(self) -> None:
+        record = _record("length-only", source_words=360, blocks=3)
+        record["packet"]["packet_id"] = "pkt-length-only"
+        article = {
+            "title": "Hallitus valmistelee säästöjä",
+            "description": "Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle.",
+            "content": "Hallitus valmistelee säästöjä ensi vuodelle. Valmistelu jatkuu ministeriöissä.\n\n## Tausta\n\nPäätöksiä arvioidaan myöhemmin.",
+            "category": "Kotimaa",
+            "image": "https://example.com/img.jpg",
+            "source_text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle."] * 70),
+            "source_url": "https://example.com/story",
+        }
+
+        feedback = staged_publish.quality_gate_retry_classification(record, article)
+
+        self.assertTrue(feedback["source_backed"])
+        self.assertTrue(feedback["repair_eligible"])
+        self.assertEqual(feedback["retry_classification"], "repairable_length_only")
+
     def test_priority_prefers_promising_packet_over_old_thin_fifo(self) -> None:
         thin_old = self._write("ready", "thin-old", _record("thin-old", source_words=45, blocks=1), age_hours=30)
         rich_newer = self._write("ready", "rich-newer", _record("rich-newer", source_words=420, blocks=3), age_hours=10)
