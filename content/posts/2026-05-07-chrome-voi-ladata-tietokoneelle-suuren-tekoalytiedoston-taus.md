@@ -40,7 +40,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/06/harva-tiesi-tata-google-chrome-lataa-tietokoneelle-4-gigatavun-tekoalytiedoston-jos-tilaa-on/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
