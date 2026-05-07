@@ -24,6 +24,21 @@ class StoryPacketTests(unittest.TestCase):
         self.assertIn("Kash Patel", packet["source_text"])
         self.assertNotIn("Washingtonin ampumisessa", packet["source_text"])
 
+
+    def test_talous_hint_survives_foreign_market_tokens(self) -> None:
+        article = {
+            "title": "Pörssijuhla jatkuu Wall Streetillä – Nousuhuuma ei tarttunut Nokiaan",
+            "description": "Markkinat odottavat Iranin konfliktin päättyvän pian.",
+            "source": "Kauppalehti",
+            "link": "https://www.kauppalehti.fi/uutiset/example",
+            "category_hint": "Talous",
+            "research": "[Lähde: Kauppalehti]\nOsakekurssit nousivat Wall Streetillä ja öljyn hinta laski.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Talous")
+
     def test_relevant_research_block_is_preserved(self) -> None:
         article = {
             "title": "Suomen vienti kasvaa nopeasti Saksaan",

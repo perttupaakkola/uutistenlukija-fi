@@ -250,10 +250,18 @@ def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
         ]
         if part
     ).lower()
+    hint = _normalize_ws(str(article.get("category_hint") or article.get("category") or ""))
+
+    # Trusted section hints should survive broad foreign-token matching for
+    # business/market items. Otherwise a Talous feed item about Wall Street,
+    # oil, China, Russia, or Iran gets counted as Ulkomaat and worsens the
+    # category-mix drift. Generic/local hints can still be overridden.
+    if hint in _ALLOWED_CATEGORIES and hint not in {"Kotimaa", "Uutiset"}:
+        return hint
+
     if any(token in title_and_desc for token in _FOREIGN_TOPIC_TOKENS):
         return "Ulkomaat"
 
-    hint = _normalize_ws(str(article.get("category_hint") or article.get("category") or ""))
     if hint in _ALLOWED_CATEGORIES:
         return hint
 
