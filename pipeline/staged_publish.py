@@ -353,6 +353,16 @@ CATEGORY_PRIORITY_BONUS = {
     "Talous": 4.0,
 }
 
+CATEGORY_WORKER_PRIORITY_BONUS = {
+    # OPE-28: give already-qualified Talous packets a bounded Monica-worker
+    # nudge so they are not buried behind generic ready backlog. This is
+    # intentionally smaller than source-quality components and requires a
+    # minimum evidence floor; it does not change Monica/source/publish gates.
+    "Talous": 3.0,
+}
+CATEGORY_WORKER_PRIORITY_MIN_WORDS = 250
+CATEGORY_WORKER_PRIORITY_MIN_BLOCKS = 1
+
 CATEGORY_SCAN_ENQUEUE_PRIORITY = ("Talous",)
 
 
@@ -379,6 +389,8 @@ def priority_score(path: Path) -> tuple[float, float, int, int, float, str]:
     # the oldest thin packets forever. This is deterministic for stable mtimes.
     score = age_hours + min(source_words, 800) / 80 + source_blocks * 3 + confidence * 4
     score += CATEGORY_PRIORITY_BONUS.get(category, 0.0)
+    if source_words >= CATEGORY_WORKER_PRIORITY_MIN_WORDS and source_blocks >= CATEGORY_WORKER_PRIORITY_MIN_BLOCKS:
+        score += CATEGORY_WORKER_PRIORITY_BONUS.get(category, 0.0)
     if source_words < 120:
         score -= 8
     if source_words < 80:
@@ -860,6 +872,11 @@ def ready_sample(path: Path) -> dict[str, Any]:
         "story_confidence": packet_confidence(data),
         "category": packet_category(packet, data.get("original_article") or {}),
         "category_priority_bonus": CATEGORY_PRIORITY_BONUS.get(packet_category(packet, data.get("original_article") or {}), 0.0),
+        "category_worker_priority_bonus": (
+            CATEGORY_WORKER_PRIORITY_BONUS.get(packet_category(packet, data.get("original_article") or {}), 0.0)
+            if source_words >= CATEGORY_WORKER_PRIORITY_MIN_WORDS and source_blocks >= CATEGORY_WORKER_PRIORITY_MIN_BLOCKS
+            else 0.0
+        ),
         "audit": packet_audit(data, path),
     }
 

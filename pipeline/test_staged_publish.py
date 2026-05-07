@@ -138,6 +138,24 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(len(selected), 1)
         self.assertEqual(staged_publish.article_category(selected[0]), "Kotimaa")
 
+    def test_talous_worker_bonus_requires_source_floor(self) -> None:
+        kotimaa_record = _record("kotimaa", source_words=320, blocks=1)
+        talous_record = _record("talous", source_words=320, blocks=1)
+        talous_record["packet"]["category_hint"] = "Talous"
+        talous_record["original_article"]["category_hint"] = "Talous"
+        thin_talous_record = _record("thin-talous", source_words=120, blocks=1)
+        thin_talous_record["packet"]["category_hint"] = "Talous"
+        thin_talous_record["original_article"]["category_hint"] = "Talous"
+
+        kotimaa = self._write("ready", "kotimaa", kotimaa_record, age_hours=1)
+        talous = self._write("ready", "talous", talous_record, age_hours=1)
+        thin_talous = self._write("ready", "thin-talous", thin_talous_record, age_hours=1)
+
+        self.assertGreater(staged_publish.priority_score(talous)[0], staged_publish.priority_score(kotimaa)[0])
+        self.assertLess(staged_publish.priority_score(thin_talous)[0], staged_publish.priority_score(talous)[0])
+        self.assertEqual(staged_publish.ready_sample(talous)["category_worker_priority_bonus"], 3.0)
+        self.assertEqual(staged_publish.ready_sample(thin_talous)["category_worker_priority_bonus"], 0.0)
+
     def test_ready_sample_is_dry_run_metadata_only(self) -> None:
         path = self._write("ready", "sample", _record("sample", source_words=250, blocks=2), age_hours=5)
 
