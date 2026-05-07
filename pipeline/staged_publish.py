@@ -100,6 +100,51 @@ def source_strength(article: dict) -> tuple[int, int, int, int]:
     return (len(research.split()), source_blocks, len(desc.split()), tier_score)
 
 
+
+
+def article_category(article: dict) -> str:
+    raw = str(
+        article.get("category_hint")
+        or article.get("category")
+        or article.get("_guessed_category")
+        or "?"
+    ).strip()
+    return raw or "?"
+
+
+def article_research_bucket(article: dict) -> str:
+    source = str(article.get("research_source") or "").strip().lower()
+    research = str(article.get("research") or article.get("research_text") or "").strip()
+    if source in {"multi", "research"}:
+        return "research_enriched"
+    if source == "rss":
+        return "research_fallback"
+    if research:
+        return "research_fallback"
+    return "research_empty"
+
+
+def category_counts(articles: list[dict]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for article in articles:
+        category = article_category(article)
+        counts[category] = counts.get(category, 0) + 1
+    return dict(sorted(counts.items()))
+
+
+def log_scan_stage(stage: str, articles: list[dict]) -> None:
+    log(f"scan-stage: {stage} total={len(articles)} categories={json.dumps(category_counts(articles), ensure_ascii=False, sort_keys=True)}")
+
+
+def log_scan_research_buckets(stage: str, articles: list[dict]) -> None:
+    by_category: dict[str, dict[str, int]] = {}
+    for article in articles:
+        category = article_category(article)
+        bucket = article_research_bucket(article)
+        by_category.setdefault(category, {})[bucket] = by_category.setdefault(category, {}).get(bucket, 0) + 1
+    log(f"scan-stage: {stage} total={len(articles)} buckets={json.dumps(by_category, ensure_ascii=False, sort_keys=True)}")
+
+
 def packet_original_article(data: dict) -> dict:
     packet = data.get("packet") or data
     return data.get("original_article") or reconstruct_original(packet)
@@ -409,6 +454,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
     fh_new = [a for a in fh_articles if a.get("_url_hash") not in seen_url_hashes]
     articles = rss_articles + fh_new
     log(f"scan: discovered rss={len(rss_articles)} firehose_new={len(fh_new)} total={len(articles)}")
+    log_scan_stage("discovered", articles)
     if not articles:
         return 0
 
@@ -419,6 +465,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
     if articles:
         articles = dedup_within_batch(articles)
     log(f"scan: dedup {pre}->{len(articles)}")
+    log_scan_stage("dedup", articles)
     if not articles:
         return 0
 
@@ -430,15 +477,20 @@ def cmd_scan(args: argparse.Namespace) -> int:
         filtered.append(a)
     articles = filtered
     log(f"scan: after staged cooldown {len(articles)}")
+    log_scan_stage("cooldown", articles)
     if not articles:
         return 0
 
     if args.max_research_candidates and len(articles) > args.max_research_candidates:
         articles = articles[: args.max_research_candidates]
+    log_scan_stage("research_candidates", articles)
     articles = enrich_with_research(articles)
+    log_scan_research_buckets("research_result", articles)
     articles = [a for a in articles if total_source_words(a) >= args.min_source_words]
+    log_scan_stage("min_source_words_pass", articles)
     articles = sorted(articles, key=source_strength, reverse=True)
     articles = articles[: args.max_packets]
+    log_scan_stage("queued_candidates", articles)
 
     queued = 0
     for article in articles:
