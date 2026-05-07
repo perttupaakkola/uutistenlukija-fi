@@ -146,6 +146,47 @@ def _extract_json_object(raw: str) -> dict:
             if isinstance(data, dict):
                 return data
         except json.JSONDecodeError:
+            pass
+
+        # Some provider/plugin warnings are appended before a valid JSON object,
+        # while stdout capture can also truncate the final newline or closing brace.
+        # Keep this fail-closed: only accept candidates with exactly one missing
+        # final object brace and no non-whitespace tail after the inferred object.
+        stripped = candidate.rstrip()
+        if stripped.endswith('}'):
+            continue
+        repair_start = stripped.find("{")
+        if repair_start == -1:
+            continue
+        repair_candidate = stripped[repair_start:]
+        balance = 0
+        in_string = False
+        escape = False
+        for ch in repair_candidate:
+            if escape:
+                escape = False
+                continue
+            if ch == "\\":
+                escape = True
+                continue
+            if ch == '"':
+                in_string = not in_string
+                continue
+            if in_string:
+                continue
+            if ch == "{":
+                balance += 1
+            elif ch == "}":
+                balance -= 1
+                if balance < 0:
+                    break
+        if balance != 1 or in_string or escape:
+            continue
+        try:
+            data = json.loads(repair_candidate + "}")
+            if isinstance(data, dict):
+                return data
+        except json.JSONDecodeError:
             continue
     raise ValueError("Monica response did not contain valid JSON object")
 

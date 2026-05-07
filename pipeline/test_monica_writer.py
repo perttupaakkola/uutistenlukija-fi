@@ -130,6 +130,16 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertEqual(payload["content_type"], "article")
 
+    def test_extract_json_object_repairs_single_missing_final_brace_after_warning(self):
+        raw = "plugin warning\n" + _good_payload()[:-1]
+        payload = _extract_json_object(raw)
+        self.assertIn("Hallitus valmistelee", payload["title"])
+
+    def test_extract_json_object_does_not_repair_truncated_string(self):
+        raw = "plugin warning\n" + _good_payload()[:-12]
+        with self.assertRaises(ValueError):
+            _extract_json_object(raw)
+
     @patch(PATCH_TARGET)
     def test_rewrite_articles_valid_output(self, run_mock):
         run_mock.return_value = self._result(_good_payload())
