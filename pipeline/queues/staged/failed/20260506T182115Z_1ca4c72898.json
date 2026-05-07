@@ -15,8 +15,8 @@
     "source_urls": [
       "https://www.kauppalehti.fi/uutiset/a/ca1d3b2a-76cb-4c4b-9593-5f3ff3f307f8"
     ],
-    "category_hint": "Ulkomaat",
-    "category": "Ulkomaat",
+    "category_hint": "Talous",
+    "category": "Talous",
     "story_confidence": 0.47,
     "language_mix": [
       "fi"
@@ -68,5 +68,8 @@
     "_guessed_category": "Talous",
     "research": "[Lähde: Yle]\nYhdysvaltain ydinpommikoneet lensivät yhdessä japanilaisten hävittäjien kanssa keskiviikkona Japaninmeren yllä. Yhteislento oli kuitti Kiinan ja Venäjän yhteiselle sotaharjoitukselle Japanin ja Etelä-Korean liepeillä.\n\nJapanin puolustusministeriö sanoi, että se halusi yhdessä Yhdysvaltain kanssa torpata yksipuoliset yritykset muuttaa voimalla alueen status quo -tilannetta.\n\nTaustalla oli myös Kiinan tiistaiset harjoitukset lentotukialuksillaan. Japani lähetti niiden vuoksi hävittäjiään ilmaan. Japanin puolustusministeriön mukaan kiinalaishävittäjät lukitsivat silloin tutkansa japanilaisiin hävittäjiin.\n\nSotilaskoneen tutkan lukitseminen kohteeseen tulkitaan rauhan aikana vihamieliseksi teoksi. Yhdysvallat arvosteli tekoa ja totesi olevansa Japanin horjumaton liittolainen.\n\nKiinan ja Japanin välit ovat kiristyneet sen jälkeen, kun Japanin pääministeri Sanae Takaichi kommentoi Taiwan-kysymystä marraskuun alussa. Takaichi sanoi, että Kiinan mahdollinen hyökkäys demokraattisesti hallittuun Taiwaniin voisi johtaa Japanin sotilaalliseen vastaukseen.",
     "research_source": "multi"
-  }
+  },
+  "failed_at": "2026-05-07T03:33:10.548344+00:00",
+  "failure": "Paketissa on vain yksi lyhyt lähdekatkelma eikä riittävästi varmistettuja tietoja 250 sanan julkaistavaan artikkeliin ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260506T182115Z_1ca4c72898\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa on vain yksi lyhyt lähdekatkelma eikä riittävästi varmistettuja tietoja 250 sanan julkaistavaan artikkeliin ilman keksittyjä yksityiskohtia.\"}"
 }
