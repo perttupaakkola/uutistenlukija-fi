@@ -39,7 +39,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittajat-kesalomien-siirto-tukisi-talouden-kasvua-olisi-jonkin-sortin-hulluutta-jattaa-potentiaali-hyodyntamatta/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
