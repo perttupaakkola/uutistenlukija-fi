@@ -14,7 +14,7 @@ Cron (Mondays 08:00 UTC = 10:00 Helsinki):
         >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/weekly-top-articles.log 2>&1
 
 GA4 property: 529369568
-Token file: /workspace/.secrets/analytics-tokens.json (or absolute path on host)
+Token file: prefer ~/.openclaw/workspace/.secrets/analytics-tokens.json
 """
 
 import argparse
@@ -32,10 +32,10 @@ METRICS_CHANNEL = "1482720741790060554"  # #metrics
 
 # Token file: workspace path works in sandbox, absolute path on host
 GA4_SECRETS_PATHS = [
-    "/workspace/.secrets/analytics-tokens.json",
-    "/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
-    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace/.secrets/analytics-tokens.json",
+    "/workspace/.secrets/analytics-tokens.json",
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
+    "/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace-max/projects/uutistenlukija/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace-alex/projects/uutistenlukija/.secrets/analytics-tokens.json",
 ]

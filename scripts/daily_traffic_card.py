@@ -21,6 +21,8 @@ from pathlib import Path
 PROJECT_DIR = Path(__file__).parent.parent
 # Try multiple candidate paths (same pattern as weekly-metrics-digest.py)
 _SECRETS_CANDIDATES = [
+    Path.home() / ".openclaw" / "workspace" / ".secrets" / "analytics-tokens.json",
+    Path("/workspace/.secrets/analytics-tokens.json"),
     PROJECT_DIR / ".secrets" / "analytics-tokens.json",
     PROJECT_DIR.parent / ".secrets" / "analytics-tokens.json",
     Path.home() / ".openclaw" / "workspace" / "projects" / "uutistenlukija" / ".secrets" / "analytics-tokens.json",

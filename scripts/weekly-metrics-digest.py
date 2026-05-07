@@ -12,7 +12,7 @@ Cron (Mondays 07:00 UTC = 09:00 Helsinki):
     0 7 * * 1 python3 /workspace/scripts/weekly-metrics-digest.py >> /workspace/logs/weekly-metrics-digest.log 2>&1
 
 GA4 property: 529369568
-Token file: /workspace/.secrets/analytics-tokens.json
+Token file: prefer ~/.openclaw/workspace/.secrets/analytics-tokens.json
 """
 
 import argparse
@@ -27,10 +27,10 @@ from datetime import datetime, timezone, timedelta
 # ── Config ────────────────────────────────────────────────────────────────────
 GA4_PROPERTY   = "529369568"
 GA4_SECRETS_PATHS = [
-    "/workspace/.secrets/analytics-tokens.json",
-    "/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
-    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace/.secrets/analytics-tokens.json",
+    "/workspace/.secrets/analytics-tokens.json",
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
+    "/workspace/projects/uutistenlukija/.secrets/analytics-tokens.json",
     "/home/pertt/.openclaw/workspace-max/projects/uutistenlukija/.secrets/analytics-tokens.json",
 ]
 GA4_SECRETS = next((p for p in GA4_SECRETS_PATHS if os.path.exists(p)),

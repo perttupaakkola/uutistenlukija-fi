@@ -20,7 +20,14 @@ from datetime import datetime, timezone, timedelta
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SECRETS_DIR = os.path.join(SCRIPT_DIR, "..", "..", "secrets")
-WORKSPACE_SECRETS = "/workspace/.secrets"
+WORKSPACE_SECRETS_CANDIDATES = [
+    "/home/pertt/.openclaw/workspace/.secrets",
+    "/workspace/.secrets",
+]
+WORKSPACE_SECRETS = next(
+    (path for path in WORKSPACE_SECRETS_CANDIDATES if os.path.isdir(path)),
+    WORKSPACE_SECRETS_CANDIDATES[0],
+)
 
 GA4_SECRETS    = os.path.join(WORKSPACE_SECRETS, "analytics-tokens.json")
 SC_SECRETS     = os.path.join(WORKSPACE_SECRETS, "search-console-tokens.json")

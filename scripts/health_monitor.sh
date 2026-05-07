@@ -33,6 +33,8 @@ fi
 
 WEBHOOK="${DISCORD_PIPELINE_WEBHOOK:-}"
 GENERAL_WEBHOOK="${DISCORD_GENERAL_WEBHOOK:-$WEBHOOK}"  # fallback to same webhook
+PIPELINE_RUN_STALE_HOURS="${PIPELINE_RUN_STALE_HOURS:-1}"
+CONTENT_STALE_HOURS="${CONTENT_STALE_HOURS:-6}"
 
 # ── State helpers ─────────────────────────────────────────────────────────────
 now=$(date +%s)
@@ -118,27 +120,64 @@ else
     site_status=$(get_field "$health_json" "status")
     last_published=$(get_field "$health_json" "lastPublished")
     article_count=$(get_field "$health_json" "articleCount")
+    generated_at=$(get_field "$health_json" "generatedAt")
+    pipeline_last_run=$(echo "$health_json" | python3 -c "import json,sys; d=json.load(sys.stdin); print((d.get('pipeline') or {}).get('lastRun',''))" 2>/dev/null || echo "")
 
-    log "status=$site_status lastPublished=$last_published articles=$article_count"
+    log "status=$site_status lastPublished=$last_published pipelineLastRun=$pipeline_last_run articles=$article_count"
 
-    if [[ "$site_status" == "degraded" ]]; then
-        # Calculate staleness if we have a timestamp
-        stale_msg=""
-        if [[ -n "$last_published" && "$last_published" != "None" && "$last_published" != "null" ]]; then
-            age_hours=$(python3 -c "
+    article_age_hours=""
+    if [[ -n "$last_published" && "$last_published" != "None" && "$last_published" != "null" ]]; then
+        article_age_hours=$(python3 -c "
 from datetime import datetime, timezone
-import sys
 try:
     lp = datetime.fromisoformat('$last_published'.replace('Z','+00:00'))
     age = (datetime.now(timezone.utc) - lp).total_seconds() / 3600
     print(f'{age:.1f}')
 except Exception:
-    print('?')
-" 2>/dev/null || echo "?")
-            stale_msg=" | Last article: **${age_hours}h ago**"
+    print('')
+" 2>/dev/null || echo "")
+    fi
+
+    pipeline_age_hours=""
+    freshness_ref="${pipeline_last_run:-$generated_at}"
+    if [[ -n "$freshness_ref" && "$freshness_ref" != "None" && "$freshness_ref" != "null" ]]; then
+        pipeline_age_hours=$(python3 -c "
+from datetime import datetime, timezone
+try:
+    ref = datetime.fromisoformat('$freshness_ref'.replace('Z','+00:00'))
+    age = (datetime.now(timezone.utc) - ref).total_seconds() / 3600
+    print(f'{age:.1f}')
+except Exception:
+    print('')
+" 2>/dev/null || echo "")
+    fi
+
+    article_is_stale="no"
+    if [[ -n "$article_age_hours" ]]; then
+        article_is_stale=$(python3 -c "print('yes' if float('${article_age_hours}') > float('${CONTENT_STALE_HOURS}') else 'no')" 2>/dev/null || echo "no")
+    fi
+
+    pipeline_run_is_stale="unknown"
+    if [[ -n "$pipeline_age_hours" ]]; then
+        pipeline_run_is_stale=$(python3 -c "print('yes' if float('${pipeline_age_hours}') > float('${PIPELINE_RUN_STALE_HOURS}') else 'no')" 2>/dev/null || echo "unknown")
+    fi
+
+    if [[ "$site_status" == "degraded" ]]; then
+        if [[ "$article_is_stale" == "yes" && "$pipeline_run_is_stale" == "no" ]]; then
+            condition="content_quiet"
+            alert_msg="ℹ️ **Content quiet** — last article **${article_age_hours}h ago**, but pipeline last ran **${pipeline_age_hours}h ago**. articles=${article_count:-?}"
+        else
+            stale_msg=""
+            if [[ -n "$article_age_hours" ]]; then
+                stale_msg=" | Last article: **${article_age_hours}h ago**"
+            fi
+            run_msg=""
+            if [[ -n "$pipeline_age_hours" ]]; then
+                run_msg=" | Pipeline last run: **${pipeline_age_hours}h ago**"
+            fi
+            condition="degraded"
+            alert_msg="⚠️ **Pipeline degraded** — \`status=degraded\`${stale_msg}${run_msg} | articles=${article_count:-?}"
         fi
-        condition="degraded"
-        alert_msg="⚠️ **Pipeline degraded** — \`status=degraded\`${stale_msg} | articles=${article_count:-?}"
     fi
 
     # Secondary degraded check: high error count (catches failures before 6h stale threshold)
@@ -158,21 +197,15 @@ except: print(0)
         fi
     fi
 
-    # Explicit stale check (belt + suspenders — catches cases where generator didn't set degraded)
-    if [[ "$condition" == "ok" && -n "$last_published" && "$last_published" != "None" && "$last_published" != "null" ]]; then
-        age_hours=$(python3 -c "
-from datetime import datetime, timezone
-try:
-    lp = datetime.fromisoformat('$last_published'.replace('Z','+00:00'))
-    age = (datetime.now(timezone.utc) - lp).total_seconds() / 3600
-    print(f'{age:.1f}')
-except Exception:
-    print('0')
-" 2>/dev/null || echo "0")
-        is_stale=$(python3 -c "print('yes' if float('${age_hours}') > 6 else 'no')" 2>/dev/null || echo "no")
-        if [[ "$is_stale" == "yes" ]]; then
+    # Explicit stale check (belt + suspenders) only if content is stale AND runtime also looks stale.
+    if [[ "$condition" == "ok" && "$article_is_stale" == "yes" ]]; then
+        if [[ "$pipeline_run_is_stale" == "yes" || "$pipeline_run_is_stale" == "unknown" ]]; then
             condition="stale"
-            alert_msg="⚠️ **Stale pipeline** — last article published **${age_hours}h ago** (threshold: 6h)"
+            if [[ -n "$pipeline_age_hours" ]]; then
+                alert_msg="⚠️ **Stale pipeline** — last article published **${article_age_hours}h ago** and pipeline last ran **${pipeline_age_hours}h ago**"
+            else
+                alert_msg="⚠️ **Stale pipeline** — last article published **${article_age_hours}h ago** and pipeline freshness could not be verified"
+            fi
         fi
     fi
 fi
@@ -188,10 +221,10 @@ secs_since_alert=$(( now - last_alert_time ))
 same_condition=$( [[ "$condition" == "$last_condition" ]] && echo "true" || echo "false" )
 should_alert=false
 
-if [[ "$condition" == "ok" ]]; then
+if [[ "$condition" == "ok" || "$condition" == "content_quiet" ]]; then
     # No alert needed — just update state
-    write_state "ok" "$last_alert_time" "0" "ok"
-    log "Status OK — no alert."
+    write_state "$condition" "$last_alert_time" "0" "$condition"
+    log "Status $condition — no alert."
     exit 0
 
 elif [[ "$condition" == "recovered" ]]; then

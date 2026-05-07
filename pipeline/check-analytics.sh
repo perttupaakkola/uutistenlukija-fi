@@ -26,7 +26,11 @@ if ! command -v jq &>/dev/null; then
     exit 0
 fi
 
-SECRETS_DIR="/workspace/.secrets"
+DEFAULT_SECRETS_DIR="/workspace/.secrets"
+if [[ -d "/home/pertt/.openclaw/workspace/.secrets" ]]; then
+    DEFAULT_SECRETS_DIR="/home/pertt/.openclaw/workspace/.secrets"
+fi
+SECRETS_DIR="${SECRETS_DIR:-$DEFAULT_SECRETS_DIR}"
 ANALYTICS_TOKENS="$SECRETS_DIR/analytics-tokens.json"
 SEARCH_CONSOLE_TOKENS="$SECRETS_DIR/search-console-tokens.json"
 OUTPUT_DIR="/workspace/projects/uutistenlukija/analytics"

@@ -9,10 +9,10 @@ from pathlib import Path
 SCRIPT_DIR  = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
 _SC_SECRETS = [
-    "/workspace/.secrets/search-console-tokens.json",
-    "/workspace/projects/uutistenlukija/.secrets/search-console-tokens.json",
-    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/.secrets/search-console-tokens.json",
     "/home/pertt/.openclaw/workspace/.secrets/search-console-tokens.json",
+    "/workspace/.secrets/search-console-tokens.json",
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/.secrets/search-console-tokens.json",
+    "/workspace/projects/uutistenlukija/.secrets/search-console-tokens.json",
 ]
 OUTPUT_FILE = PROJECT_DIR / "static" / "api" / "search-console-data.json"
 SITE_URL = "sc-domain:uutistenlukija.fi"
