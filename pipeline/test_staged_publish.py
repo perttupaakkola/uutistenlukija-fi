@@ -107,6 +107,19 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.ready_sample(talous_path)["category_priority_bonus"], 4.0)
         self.assertEqual(staged_publish.prioritized_ready_packets()[0], rich_path)
 
+    def test_priority_uses_original_talous_hint_when_saved_packet_still_says_ulkomaat(self) -> None:
+        stale_saved = _record("stale-saved", source_words=260, blocks=2)
+        stale_saved["packet"]["category_hint"] = "Ulkomaat"
+        stale_saved["packet"]["category"] = "Ulkomaat"
+        stale_saved["original_article"]["category_hint"] = "Talous"
+        stale_saved["original_article"]["_guessed_category"] = "Talous"
+        stale_path = self._write("ready", "stale-saved", stale_saved, age_hours=1)
+        kotimaa_path = self._write("ready", "kotimaa", _record("kotimaa", source_words=260, blocks=2), age_hours=1)
+
+        self.assertGreater(staged_publish.priority_score(stale_path)[0], staged_publish.priority_score(kotimaa_path)[0])
+        self.assertEqual(staged_publish.ready_sample(stale_path)["category"], "Talous")
+        self.assertEqual(staged_publish.ready_sample(stale_path)["category_priority_bonus"], 4.0)
+
     def test_ready_sample_is_dry_run_metadata_only(self) -> None:
         path = self._write("ready", "sample", _record("sample", source_words=250, blocks=2), age_hours=5)
 

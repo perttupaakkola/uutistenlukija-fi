@@ -286,8 +286,14 @@ CATEGORY_PRIORITY_BONUS = {
 }
 
 
-def packet_category(packet: dict) -> str:
-    return _normalize_ws(str(packet.get("category") or packet.get("category_hint") or ""))
+def packet_category(packet: dict, original_article: dict | None = None) -> str:
+    saved = _normalize_ws(str(packet.get("category") or packet.get("category_hint") or ""))
+    if saved == "Ulkomaat" and original_article:
+        original_hint = _normalize_ws(str(original_article.get("category_hint") or original_article.get("category") or ""))
+        guessed = _normalize_ws(str(original_article.get("_guessed_category") or ""))
+        if original_hint == "Talous" or guessed == "Talous":
+            return "Talous"
+    return saved
 
 
 def priority_score(path: Path) -> tuple[float, float, int, int, float, str]:
@@ -298,7 +304,7 @@ def priority_score(path: Path) -> tuple[float, float, int, int, float, str]:
     source_blocks = int(audit["source_blocks"])
     confidence = float(audit["story_confidence"])
     packet = data.get("packet") or data
-    category = packet_category(packet)
+    category = packet_category(packet, data.get("original_article") or {})
     # Age still matters, but source strength prevents the worker from burning
     # the oldest thin packets forever. This is deterministic for stable mtimes.
     score = age_hours + min(source_words, 800) / 80 + source_blocks * 3 + confidence * 4
@@ -776,8 +782,8 @@ def ready_sample(path: Path) -> dict[str, Any]:
         "source_words": source_words,
         "source_blocks": source_blocks,
         "story_confidence": packet_confidence(data),
-        "category": packet_category(packet),
-        "category_priority_bonus": CATEGORY_PRIORITY_BONUS.get(packet_category(packet), 0.0),
+        "category": packet_category(packet, data.get("original_article") or {}),
+        "category_priority_bonus": CATEGORY_PRIORITY_BONUS.get(packet_category(packet, data.get("original_article") or {}), 0.0),
         "audit": packet_audit(data, path),
     }
 
