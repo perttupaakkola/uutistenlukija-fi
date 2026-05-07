@@ -37,7 +37,6 @@ keywords:
 source_name: "HS Tuoreimmat"
 source_url: "https://www.hs.fi/popkulttuuri/art-2000011990427.html"
 source_domain: "hs.fi"
-briefing: true
 draft: false
 ---
 
