@@ -128,7 +128,10 @@ def _normalize_ws(text: str) -> str:
 
 
 def _extract_source_label(text: str) -> str:
-    first_line = (text or "").splitlines()[0].strip()
+    lines = (text or "").splitlines()
+    if not lines:
+        return ""
+    first_line = lines[0].strip()
     match = re.match(r"\[(?:Lähde|Source):\s*([^\]]+?)\]", first_line, flags=re.IGNORECASE)
     if not match:
         return ""
@@ -164,15 +167,78 @@ def _sanitize_source_block(text: str) -> str:
     return text.strip()
 
 
+def _source_sections(research_text: str) -> list[tuple[str, str]]:
+    sections: list[tuple[str, str]] = []
+    current_label = ""
+    current_lines: list[str] = []
+
+    for line in (research_text or "").splitlines():
+        label = _extract_source_label(line)
+        if label:
+            if current_lines:
+                sections.append((current_label, "\n".join(current_lines).strip()))
+            current_label = label
+            current_lines = []
+            continue
+        current_lines.append(line)
+
+    if current_lines:
+        sections.append((current_label, "\n".join(current_lines).strip()))
+    return sections
+
+
+def _chunk_source_paragraphs(label: str, text: str, source_type: str = "research") -> list[dict]:
+    paragraphs = [_sanitize_source_block(part) for part in _SOURCE_SPLIT_RE.split(text or "")]
+    paragraphs = [part for part in paragraphs if part]
+    chunks: list[dict] = []
+    current: list[str] = []
+    current_words = 0
+    target_words = 140
+
+    for paragraph in paragraphs:
+        words = len(paragraph.split())
+        if current and current_words + words > target_words:
+            clean = _normalize_ws(" ".join(current))
+            chunks.append(
+                {
+                    "source": label,
+                    "source_type": source_type,
+                    "text": clean,
+                    "word_count": len(clean.split()),
+                }
+            )
+            current = []
+            current_words = 0
+        current.append(paragraph)
+        current_words += words
+
+    if current:
+        clean = _normalize_ws(" ".join(current))
+        chunks.append(
+            {
+                "source": label,
+                "source_type": source_type,
+                "text": clean,
+                "word_count": len(clean.split()),
+            }
+        )
+    return chunks
+
+
 def _split_research_blocks(research_text: str) -> list[dict]:
     blocks: list[dict] = []
     if not research_text:
         return blocks
 
+    sections = _source_sections(research_text)
+    if sections:
+        for idx, (label, section_text) in enumerate(sections, start=1):
+            clean_label = label or f"source-{idx}"
+            blocks.extend(_chunk_source_paragraphs(clean_label, section_text))
+        return blocks
+
     parts = [part.strip() for part in _SOURCE_SPLIT_RE.split(research_text) if part.strip()]
     for idx, part in enumerate(parts, start=1):
-        if not part:
-            continue
         label = _extract_source_label(part) or f"source-{idx}"
         clean = _sanitize_source_block(part)
         if not clean:
@@ -186,7 +252,6 @@ def _split_research_blocks(research_text: str) -> list[dict]:
             }
         )
     return blocks
-
 
 def _fallback_source_blocks(article: dict) -> list[dict]:
     blocks: list[dict] = []

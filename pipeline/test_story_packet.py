@@ -26,6 +26,32 @@ class StoryPacketTests(unittest.TestCase):
 
 
 
+    def test_labeled_research_keeps_coherent_multi_paragraph_source_chunks(self) -> None:
+        paragraph = " ".join(
+            [
+                "Suomen Yrittäjät arvioi, että lomakauden siirto voisi pidentää matkailusesonkia ja lisätä palvelualojen kysyntää.",
+                "Järjestön mukaan muutos vaikuttaisi yritysten työvoiman tarpeeseen, investointien kannattavuuteen ja nuorten kesätyömahdollisuuksiin.",
+                "Ehdotusta perustellaan sillä, että viileämmät pohjoiset matkakohteet kiinnostavat eurooppalaisia matkailijoita yhä enemmän.",
+            ]
+            * 10
+        )
+        research = "[Lähde: Suomen Yrittäjät]\n" + "\n\n".join([paragraph] * 8)
+        article = {
+            "title": "Yrittäjät esittää kesälomien siirtoa talouden kasvutoimena",
+            "description": "Järjestön mukaan pidempi matkailusesonki voisi vahvistaa yritysten kasvua ja työllisyyttä.",
+            "source": "Suomen Yrittäjät",
+            "link": "https://www.yrittajat.fi/example",
+            "category_hint": "Talous",
+            "research": research,
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Talous")
+        self.assertGreaterEqual(len(packet["clean_source_blocks"]), 2)
+        self.assertGreaterEqual(sum(block["word_count"] for block in packet["clean_source_blocks"]), 300)
+        self.assertTrue(all(block["source"] == "Suomen Yrittäjät" for block in packet["clean_source_blocks"]))
+
     def test_talous_packet_keeps_long_business_context_block_with_generic_terms(self) -> None:
         business_text = " ".join(
             [
