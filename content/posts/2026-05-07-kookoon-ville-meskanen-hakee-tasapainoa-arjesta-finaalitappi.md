@@ -40,7 +40,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/Kotiasiat-kiritt%C3%A4v%C3%A4t-Ville-Meskasta-Oma-lapsi-on-vienyt-huomiota-pois-j%C3%A4%C3%A4kiekosta/269533"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
