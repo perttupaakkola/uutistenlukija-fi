@@ -550,6 +550,44 @@ def cmd_scan(args: argparse.Namespace) -> int:
     return 0
 
 
+
+def failed_writer_feedback(data: dict, payload: dict | None = None, issues: list[str] | None = None, raw_response: str = "") -> dict[str, Any]:
+    """Structured Monica-worker failure diagnostics for failed packet artifacts."""
+    packet = data.get("packet") or {}
+    original = data.get("original_article") or {}
+    payload = payload or data.get("payload") or {}
+    issues = issues or _basic_payload_issues(payload) if payload else []
+    source_words = packet_source_words(data)
+    source_blocks = packet_source_blocks(data)
+    content = str(payload.get("content") or "")
+    word_count = len(content.split())
+    source_backed = source_words >= 300 and source_blocks >= 2
+    near_miss = 240 <= word_count < 250 and any("content too short" in issue for issue in issues)
+    invalid_json = not payload and ("json" in str(data.get("failure") or raw_response).lower() or bool(raw_response))
+    if invalid_json:
+        classification = "writer_invalid_json"
+    elif near_miss:
+        classification = "repair_near_miss_short"
+    elif any("content too short" in issue or "lead paragraph too short" in issue for issue in issues):
+        classification = "writer_short_after_repair"
+    else:
+        classification = "writer_schema_invalid"
+    return {
+        "packet_id": packet.get("packet_id") or payload.get("packet_id") or data.get("digest") or "",
+        "category": packet.get("category") or packet.get("category_hint") or original.get("category_hint") or "?",
+        "selected_source_words": source_words,
+        "selected_source_blocks": source_blocks,
+        "story_confidence": packet.get("story_confidence"),
+        "final_word_count": word_count,
+        "issues": list(issues),
+        "source_backed": source_backed,
+        "near_miss_short": near_miss,
+        "retry_classification": classification,
+        "fail_closed": True,
+        "title": payload.get("title") or packet.get("headline_seed") or original.get("title") or "",
+    }
+
+
 def reconstruct_original(packet: dict) -> dict:
     snap = packet.get("article_snapshot") or {}
     return {
@@ -591,13 +629,13 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
             payload = repaired_payload
             if payload.get("status") == "INSUFFICIENT_CONFIDENCE":
                 reason = _normalize_ws(str(payload.get("reason") or "insufficient_confidence_after_repair"))
-                data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": reason, "raw_response": raw})
+                data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": reason, "raw_response": raw, "writer_failure_feedback": failed_writer_feedback(data, payload, [], raw)})
                 atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
                 writing.unlink(missing_ok=True)
                 return ("failed", reason)
             issues = _basic_payload_issues(payload)
         if issues:
-            data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": "; ".join(issues), "payload": payload, "raw_response": raw})
+            data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": "; ".join(issues), "payload": payload, "raw_response": raw, "writer_failure_feedback": failed_writer_feedback(data, payload, issues, raw)})
             atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
             writing.unlink(missing_ok=True)
             return ("failed", "; ".join(issues))
@@ -613,7 +651,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
         writing.unlink(missing_ok=True)
         return ("ok", article.get("title", "")[:100])
     except Exception as e:
-        data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": str(e), "raw_response": raw})
+        data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": str(e), "raw_response": raw, "writer_failure_feedback": failed_writer_feedback(data, None, [], raw_response=raw or str(e))})
         atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
         writing.unlink(missing_ok=True)
         return ("failed", str(e)[:200])

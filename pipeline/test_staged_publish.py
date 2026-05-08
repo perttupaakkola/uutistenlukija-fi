@@ -87,6 +87,37 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(failed_status["failure_alert_buckets"]["quality"], 1)
         self.assertEqual(failed_status["failure_alert_buckets"]["writer_runtime"], 1)
 
+    def test_failed_writer_feedback_classifies_near_miss_short_repair(self) -> None:
+        record = _record("near-miss", source_words=360, blocks=3)
+        record["packet"]["packet_id"] = "pkt-near-miss"
+        payload = {
+            "packet_id": "pkt-near-miss",
+            "title": "Lähes valmis artikkeli",
+            "content": " ".join(["sana"] * 248),
+            "category": "Talous",
+        }
+
+        feedback = staged_publish.failed_writer_feedback(record, payload, ["content too short: 248 words"])
+
+        self.assertEqual(feedback["packet_id"], "pkt-near-miss")
+        self.assertEqual(feedback["selected_source_words"], 366)
+        self.assertEqual(feedback["selected_source_blocks"], 3)
+        self.assertEqual(feedback["final_word_count"], 248)
+        self.assertTrue(feedback["near_miss_short"])
+        self.assertEqual(feedback["retry_classification"], "repair_near_miss_short")
+        self.assertTrue(feedback["fail_closed"])
+
+    def test_failed_writer_feedback_classifies_invalid_json(self) -> None:
+        record = _record("bad-json", source_words=111, blocks=4)
+        record["packet"]["packet_id"] = "pkt-bad-json"
+
+        feedback = staged_publish.failed_writer_feedback(record, None, [], raw_response="not valid json")
+
+        self.assertEqual(feedback["packet_id"], "pkt-bad-json")
+        self.assertEqual(feedback["retry_classification"], "writer_invalid_json")
+        self.assertEqual(feedback["final_word_count"], 0)
+        self.assertTrue(feedback["fail_closed"])
+
     def test_quality_gate_reject_quarantine_records_fail_closed_feedback(self) -> None:
         record = _record("rich-quality-reject", source_words=360, blocks=3)
         record["packet"]["packet_id"] = "pkt-rich-quality"

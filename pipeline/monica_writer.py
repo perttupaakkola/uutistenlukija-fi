@@ -47,6 +47,7 @@ SOURCE_BACKED_REPAIR_WORDS = 300
 SOURCE_BACKED_REPAIR_BLOCKS = 2
 SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS = 280
 SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS = 420
+SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS = 260
 
 OPENCLAW_CANDIDATES = (
     "/home/pertt/.openclaw/bin/openclaw",
@@ -345,9 +346,11 @@ def _build_repair_prompt(packet: dict, broken_payload: dict, issues: list[str]) 
         source_backed_rules = f"""
 Source-backed repair mode:
 - The packet has {source_words} source words across {source_blocks} source blocks, so a short draft is a repair target, not an automatic failure.
-- Expand to {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
-- Build 3–5 concise paragraphs plus at least two H2 subheadings.
+- The repaired article MUST be at least 250 Finnish words. Target {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
+- Before returning, count the words in `content`. If it is under 250 words, either add source-backed detail from the packet until it is at least {SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS} words, or return INSUFFICIENT_CONFIDENCE.
+- Build 4–6 concise paragraphs plus at least two H2 subheadings.
 - Use each source block to add concrete context: actors, figures/timing, cause, consequence, and what happens next when available.
+- Do not stop at 240–249 words. A 244–248 word repair is still invalid and will be quarantined.
 - Do not pad with generic economy commentary, advice, sentiment, or invented market context.
 """
     return f"""Fix the article JSON below and return ONLY a corrected JSON object.

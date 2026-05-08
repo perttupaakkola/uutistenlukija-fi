@@ -289,7 +289,9 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("Source-backed repair mode", prompt)
         self.assertIn("short draft is a repair target", prompt)
         self.assertIn("source_words: 360", prompt)
-        self.assertIn("Return INSUFFICIENT_CONFIDENCE", prompt)
+        self.assertIn("MUST be at least 250 Finnish words", prompt)
+        self.assertIn("Do not stop at 240–249 words", prompt)
+        self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
 
     @patch(PATCH_TARGET)
