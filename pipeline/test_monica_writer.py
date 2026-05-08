@@ -163,6 +163,19 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertEqual(article["category"], "Talous")
 
+
+    def test_merge_article_preserves_original_guessed_talous_over_packet_ulkomaat(self):
+        original = {**SAMPLE_ARTICLE, "category_hint": "", "_guessed_category": "Talous"}
+        packet = _source_packet(360, blocks=2)
+        packet["category"] = "Ulkomaat"
+        packet["category_hint"] = "Ulkomaat"
+        payload = json.loads(_good_payload())
+        payload["category"] = "Ulkomaat"
+
+        article = _merge_article(original, packet, payload)
+
+        self.assertEqual(article["category"], "Talous")
+
     @patch(PATCH_TARGET)
     def test_rewrite_articles_repairs_once(self, run_mock):
         broken_payload = {
