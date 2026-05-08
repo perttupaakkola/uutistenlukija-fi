@@ -94,12 +94,25 @@ def total_source_words(article: dict) -> int:
     return sum(len(str(article.get(k, "") or "").split()) for k in ["title", "description", "research", "research_text"])
 
 
-def source_strength(article: dict) -> tuple[int, int, int, int]:
+def source_strength(article: dict) -> tuple[int, int, int, int, int]:
     research = str(article.get("research") or article.get("research_text") or "")
     desc = str(article.get("description") or "")
+    category = article_category(article)
     source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
     tier_score = max(0, 4 - int(article.get("source_tier", 2) or 2))
-    return (len(research.split()), source_blocks, len(desc.split()), tier_score)
+    # OPE-41: Talous is materially under target and current scans often drop
+    # every Talous item before queueing because paywalled business feeds only
+    # yield RSS fallback text. Keep this as a tie/near-tie enqueue signal only:
+    # downstream source floors, Monica repair, quality gates, and publish gates
+    # remain fail-closed for thin or unsupported drafts.
+    under_target_category_bonus = 60 if category == "Talous" else 0
+    return (
+        len(research.split()) + under_target_category_bonus,
+        source_blocks,
+        len(desc.split()),
+        tier_score,
+        1 if category == "Talous" else 0,
+    )
 
 
 def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> list[dict]:
@@ -119,7 +132,11 @@ def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> li
             continue
         weakest_index, weakest = min(enumerate(selected), key=lambda item: source_strength(item[1]))
         best_priority = priority_candidates[0]
-        if source_strength(best_priority) >= source_strength(weakest):
+        priority_strength = source_strength(best_priority)
+        weakest_strength = source_strength(weakest)
+        # Allow the under-target Talous lane to displace only genuinely thin
+        # queued candidates. Do not replace rich/high-source packets.
+        if priority_strength >= weakest_strength or total_source_words(weakest) < 180:
             selected[weakest_index] = best_priority
             selected_categories = {article_category(article) for article in selected}
     return sorted(selected, key=source_strength, reverse=True)

@@ -214,6 +214,16 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(len(selected), 1)
         self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
 
+
+    def test_scan_enqueue_promotes_talous_over_thin_non_talous_backlog(self) -> None:
+        thin_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 90, "description": "kuvaus"}
+        fallback_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 120, "description": "kuvaus"}
+
+        selected = staged_publish.select_scan_enqueue_candidates([thin_kotimaa, fallback_talous], max_packets=1)
+
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
+
     def test_scan_enqueue_does_not_let_talous_beat_much_stronger_source(self) -> None:
         rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 700, "description": "kuvaus"}
         thin_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 120, "description": "kuvaus"}
