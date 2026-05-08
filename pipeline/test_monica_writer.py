@@ -9,11 +9,11 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, _packet_source_blocks, _packet_source_words, rewrite_articles
+    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, _packet_source_blocks, _packet_source_words, rewrite_articles
+    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -151,6 +151,17 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(article["category"], "Kotimaa")
         self.assertGreaterEqual(len(article["key_points"]), 2)
         self.assertIn("Hallitus valmistelee", article["content"])
+
+    def test_merge_article_preserves_packet_category_over_payload_guess(self):
+        original = {**SAMPLE_ARTICLE, "category_hint": "Talous"}
+        packet = _source_packet(360, blocks=2)
+        packet["category"] = "Talous"
+        payload = json.loads(_good_payload())
+        payload["category"] = "Ulkomaat"
+
+        article = _merge_article(original, packet, payload)
+
+        self.assertEqual(article["category"], "Talous")
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_repairs_once(self, run_mock):

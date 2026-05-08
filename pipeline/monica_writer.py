@@ -480,8 +480,11 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
     summary = _normalize_ws(payload.get("summary", ""))
     content = str(payload.get("content", "")).strip()
     category = _normalize_ws(payload.get("category", ""))
-    if category not in ALLOWED_CATEGORIES:
-        category = packet.get("category_hint", "Kotimaa")
+    packet_category = _normalize_ws(str(packet.get("category") or packet.get("category_hint") or ""))
+    if packet_category in ALLOWED_CATEGORIES:
+        category = packet_category
+    elif category not in ALLOWED_CATEGORIES:
+        category = "Kotimaa"
 
     tags = _normalize_tags(payload.get("tags", []))
     bullets = _normalize_summary_bullets(payload.get("summary_bullets", []), summary)
