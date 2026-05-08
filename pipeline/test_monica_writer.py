@@ -314,12 +314,13 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("short draft is a repair target", prompt)
         self.assertIn("source_words: 360", prompt)
         self.assertIn("MUST be at least 250 Finnish words", prompt)
+        self.assertIn("source_backed_writer_shortfall_unrepairable", prompt)
         self.assertIn("Do not stop at 240–249 words", prompt)
         self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
 
     def test_source_backed_near_miss_requires_rich_source_and_240s_word_count(self):
-        packet = _source_packet(360, blocks=2)
+        packet = _source_packet(360, blocks=3)
         payload = json.loads(_good_payload())
         payload["content"] = " ".join(["Sana"] * 247)
 
@@ -328,6 +329,12 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertFalse(_is_source_backed_near_miss(packet, payload, ["content too short: 239 words"]))
         payload["content"] = " ".join(["Sana"] * 247)
         self.assertFalse(_is_source_backed_near_miss(_source_packet(260, blocks=2), payload, ["content too short: 247 words"]))
+        self.assertFalse(_is_source_backed_near_miss(_source_packet(360, blocks=2), payload, ["content too short: 247 words"]))
+
+        for category in ("Teknologia", "Kotimaa", "Ulkomaat"):
+            packet = _source_packet(360, blocks=3)
+            packet["category"] = category
+            self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 247 words"]))
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_retries_source_backed_near_miss_once(self, run_mock):
@@ -356,6 +363,7 @@ class MonicaWriterTests(unittest.TestCase):
         original_packet["clean_source_blocks"] = [
             {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 40), "word_count": 240, "source": "Testi"},
             {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi 2"},
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 10), "word_count": 60, "source": "Testi 3"},
         ]
         with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=original_packet):
             rewritten = rewrite_articles([article])
@@ -365,6 +373,33 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(run_mock.call_count, 3)
         self.assertIn("near-miss", run_mock.call_args_list[2].args[0][-1])
         self.assertIn("source_words:", run_mock.call_args_list[2].args[0][-1])
+
+
+    @patch(PATCH_TARGET)
+    def test_rewrite_articles_quarantines_source_backed_near_miss_with_explicit_reason(self, run_mock):
+        near_miss_payload = json.loads(_good_payload())
+        near_miss_payload["content"] = " ".join(["Sana"] * 247)
+        packet = _source_packet(360, blocks=3)
+
+        run_mock.side_effect = [
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+        ]
+
+        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet), \
+             patch(f"{rewrite_articles.__module__}.save_writer_quarantine") as quarantine_mock:
+            rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+
+        self.assertEqual(rewritten, [])
+        self.assertEqual(run_mock.call_count, 3)
+        self.assertTrue(quarantine_mock.called)
+        self.assertEqual(quarantine_mock.call_args.args[1], "source_backed_writer_shortfall_unrepairable")
+        extra = quarantine_mock.call_args.kwargs["extra"]
+        self.assertEqual(extra["reason_code"], "source_backed_writer_shortfall_unrepairable")
+        self.assertEqual(extra["final_word_count"], 247)
+        self.assertGreaterEqual(extra["source_words"], 350)
+        self.assertGreaterEqual(extra["source_blocks"], 3)
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):
