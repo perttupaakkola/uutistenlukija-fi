@@ -40,7 +40,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/teollisuuden-nakymat-elpyivat-korjasivat-kertaheitolla-koko-alkuvuoden-tilannetta/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
