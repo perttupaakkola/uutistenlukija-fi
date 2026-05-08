@@ -63,14 +63,16 @@
         .then(function (items) {
           return (items || []).map(function (item) {
             var title = String(item.title || '');
-            var summary = String(item.summary || '');
+            var summary = String(item.summary || item.description || '');
             var category = String(item.category || '');
+            var url = String(item.url || item.slug || item.permalink || '#');
+            var publishedAt = String(item.published_at || item.date || item.publishedAt || '');
             return {
               title: title,
-              slug: String(item.slug || '#'),
+              slug: url,
               category: category,
               summary: summary,
-              published_at: String(item.published_at || ''),
+              published_at: publishedAt,
               haystack: normalize([title, summary, category].join(' '))
             };
           });
