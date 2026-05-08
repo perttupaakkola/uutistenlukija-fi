@@ -47,7 +47,7 @@ SOURCE_BACKED_REPAIR_WORDS = 300
 SOURCE_BACKED_REPAIR_BLOCKS = 2
 SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS = 280
 SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS = 420
-SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS = 260
+SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS = 280
 
 OPENCLAW_CANDIDATES = (
     "/home/pertt/.openclaw/bin/openclaw",
@@ -302,6 +302,16 @@ def _packet_source_blocks(packet: dict) -> int:
     return len([part for part in re.split(r"\n\s*\n|\n---\n", text) if _normalize_ws(part)])
 
 
+def _content_word_count(payload: dict) -> int:
+    return len(str(payload.get("content") or "").split())
+
+
+def _is_source_backed_near_miss(packet: dict, payload: dict, issues: list[str]) -> bool:
+    if not _is_source_backed_repair_candidate(packet, issues):
+        return False
+    return 240 <= _content_word_count(payload) < MIN_CONTENT_WORDS
+
+
 def _is_source_backed_repair_candidate(packet: dict, issues: list[str]) -> bool:
     joined = "; ".join(issues).lower()
     has_length_issue = "content too short" in joined or "lead paragraph too short" in joined
@@ -348,8 +358,9 @@ Source-backed repair mode:
 - The packet has {source_words} source words across {source_blocks} source blocks, so a short draft is a repair target, not an automatic failure.
 - The repaired article MUST be at least 250 Finnish words. Target {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
 - Before returning, count the words in `content`. If it is under 250 words, either add source-backed detail from the packet until it is at least {SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS} words, or return INSUFFICIENT_CONFIDENCE.
+- Treat 240–249 words as a failed repair. Do not return a near-miss; continue revising until the article is safely above the floor.
 - Build 4–6 concise paragraphs plus at least two H2 subheadings.
-- Use each source block to add concrete context: actors, figures/timing, cause, consequence, and what happens next when available.
+- Use available source blocks to add concrete context: actors, figures/timing, cause, consequence, and what happens next when available.
 - Do not stop at 240–249 words. A 244–248 word repair is still invalid and will be quarantined.
 - Do not pad with generic economy commentary, advice, sentiment, or invented market context.
 """
@@ -560,6 +571,20 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                     continue
                 raw = repaired_raw
                 issues = _basic_payload_issues(payload)
+
+                if _is_source_backed_near_miss(packet, payload, issues):
+                    near_miss_issues = list(issues)
+                    near_miss_payload = payload
+                    print(f"[monica]   near-miss repair pass: {'; '.join(near_miss_issues)}")
+                    repaired_raw = _run_monica(_build_repair_prompt(packet, near_miss_payload, near_miss_issues))
+                    try:
+                        payload = _extract_json_object(repaired_raw)
+                    except ValueError as e:
+                        save_writer_quarantine(packet, "dispatch_error", raw_response=repaired_raw, extra={"reason_code": "json_parse_failed", "error": str(e), "stage": "near_miss_repair_parse", "initial_payload": near_miss_payload, "initial_issues": near_miss_issues})
+                        print(f"[monica]   quarantine: dispatch_error ({e})")
+                        continue
+                    raw = repaired_raw
+                    issues = _basic_payload_issues(payload)
 
             if issues:
                 save_writer_quarantine(packet, "schema_invalid", raw_response=raw, extra={"issues": issues, "payload": payload})

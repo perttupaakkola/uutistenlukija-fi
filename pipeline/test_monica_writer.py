@@ -9,11 +9,11 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, rewrite_articles
+    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, rewrite_articles
+    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -317,6 +317,46 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("Do not stop at 240–249 words", prompt)
         self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
+
+    def test_source_backed_near_miss_requires_rich_source_and_240s_word_count(self):
+        packet = _source_packet(360, blocks=2)
+        payload = json.loads(_good_payload())
+        payload["content"] = " ".join(["Sana"] * 247)
+
+        self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 247 words"]))
+        payload["content"] = " ".join(["Sana"] * 239)
+        self.assertFalse(_is_source_backed_near_miss(packet, payload, ["content too short: 239 words"]))
+        payload["content"] = " ".join(["Sana"] * 247)
+        self.assertFalse(_is_source_backed_near_miss(_source_packet(260, blocks=2), payload, ["content too short: 247 words"]))
+
+    @patch(PATCH_TARGET)
+    def test_rewrite_articles_retries_source_backed_near_miss_once(self, run_mock):
+        near_miss_payload = json.loads(_good_payload())
+        near_miss_payload["content"] = " ".join(["Sana"] * 247)
+        repaired_payload = json.loads(_good_payload())
+        repaired_payload["content"] = _long_content()
+        source_text = "\n\n".join(["[Lähde: Testi %d]\nHallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle. %s" % (i, " ".join(["palvelu"] * 160)) for i in range(3)])
+        article = {
+            "title": "Hallitus valmistelee uusia säästöjä",
+            "description": source_text,
+            "link": "https://example.com/story",
+            "category_hint": "Kotimaa",
+            "research": source_text,
+        }
+
+        run_mock.side_effect = [
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(repaired_payload, ensure_ascii=False)),
+        ]
+
+        rewritten = rewrite_articles([article])
+
+        self.assertEqual(len(rewritten), 1)
+        self.assertGreaterEqual(len(rewritten[0]["content"].split()), 250)
+        self.assertEqual(run_mock.call_count, 3)
+        self.assertIn("near-miss", run_mock.call_args_list[2].args[0][-1])
+        self.assertIn("source_words:", run_mock.call_args_list[2].args[0][-1])
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):
