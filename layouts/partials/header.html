@@ -21,10 +21,10 @@
     </div>
 
     <div class="portal-actions" aria-label="Pikatoiminnot">
-      <span class="portal-weather" aria-label="Sää Helsingissä">
+      <button class="portal-weather" type="button" aria-label="Päivitä sää sijainnin perusteella" data-weather-widget data-weather-lat="60.17" data-weather-lon="24.94" data-weather-city="Helsinki">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <span><strong>18 °C</strong><small>Helsinki</small></span>
-      </span>
+        <span><strong data-weather-temp>-- °C</strong><small data-weather-city-label>Helsinki</small></span>
+      </button>
       <a class="portal-action portal-action--desktop" href="/paivan-tarkeimmat-uutiset/"><span class="portal-live-dot" aria-hidden="true"></span>Live</a>
       <a class="portal-action portal-action--desktop" href="/tila/">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"/></svg>

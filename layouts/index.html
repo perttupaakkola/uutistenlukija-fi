@@ -38,7 +38,7 @@
         <h2 id="front-lead-title"><a href="{{ $lead.RelPermalink }}">{{ $lead.Title }}</a></h2>
         {{ with $lead.Params.description }}<p>{{ . | truncate 185 }}</p>{{ else }}<p>{{ $lead.Summary | truncate 185 }}</p>{{ end }}
         <div class="portal-meta-row">
-          <span>Tallenna</span>
+          <a class="portal-save-link" href="{{ $lead.RelPermalink }}" aria-label="Lue ja tallenna myöhemmin: {{ $lead.Title }}">Lue juttu</a>
           <span>{{ partial "reading-time.html" $lead }}</span>
         </div>
       </div>
@@ -69,24 +69,31 @@
         <div class="portal-newsletter__icon" aria-hidden="true">✉</div>
         <h2>Pysy kartalla.</h2>
         <p>Tilaa Uutistenlukija-uutiskirje ja saat tärkeimmät uutiset joka aamu.</p>
-        <form class="portal-newsletter__form" action="/uutiskirje/" method="get">
-          <input type="email" name="email" placeholder="Sähköpostiosoite" aria-label="Sähköpostiosoite">
+        <form class="portal-newsletter__form js-newsletter-form" action="/api/subscribe" method="post" data-location="homepage-rail">
+          <input type="email" name="email" placeholder="Sähköpostiosoite" aria-label="Sähköpostiosoite" required>
+          <input type="hidden" name="source" value="homepage-rail">
           <button type="submit">Tilaa uutiskirje</button>
         </form>
+        <p class="portal-newsletter__status" data-newsletter-status aria-live="polite"></p>
       </section>
 
-      <section class="portal-market">
+      <section class="portal-market" data-market-widget>
         <div class="portal-module-head">
           <h2>Markkinat</h2>
           <a href="/categories/talous/">Katso kaikki</a>
         </div>
-        <div class="portal-tabs" aria-hidden="true"><span>Indeksit</span><span>Osakkeet</span><span>Valuutat</span></div>
-        <dl>
-          <div><dt>OMX Helsinki 25</dt><dd>4 512,35 <b>+0,68 %</b></dd></div>
-          <div><dt>OMX Stockholm 30</dt><dd>2 350,41 <b>+0,35 %</b></dd></div>
-          <div><dt>S&amp;P 500</dt><dd>5 321,41 <b class="negative">-0,12 %</b></dd></div>
-          <div><dt>Nasdaq 100</dt><dd>18 682,94 <b>+0,21 %</b></dd></div>
+        <div class="portal-tabs" role="tablist" aria-label="Markkinanäkymä">
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-market-tab="indices">Indeksit</button>
+          <button type="button" role="tab" aria-selected="false" data-market-tab="stocks">Osakkeet</button>
+          <button type="button" role="tab" aria-selected="false" data-market-tab="currencies">Valuutat</button>
+        </div>
+        <dl data-market-list aria-live="polite">
+          <div><dt>OMX Helsinki 25</dt><dd data-symbol="^OMXH25">Päivitetään…</dd></div>
+          <div><dt>OMX Stockholm 30</dt><dd data-symbol="^OMX">Päivitetään…</dd></div>
+          <div><dt>S&amp;P 500</dt><dd data-symbol="^GSPC">Päivitetään…</dd></div>
+          <div><dt>Nasdaq 100</dt><dd data-symbol="^NDX">Päivitetään…</dd></div>
         </dl>
+        <p class="portal-market__note" data-market-note>Viivästetty markkinadata, päivittyy selaimessa.</p>
       </section>
 
       <section class="portal-most-read">
