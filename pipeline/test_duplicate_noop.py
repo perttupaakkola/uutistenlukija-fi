@@ -6,6 +6,31 @@ import run_pipeline
 
 
 class DuplicateOnlyBatchTests(unittest.TestCase):
+    def test_firehose_only_zero_new_articles_is_successful_noop(self):
+        with patch.object(run_pipeline, "poll_firehose", return_value=[]), \
+             patch.object(run_pipeline, "_write_final_metrics") as metrics, \
+             patch.object(run_pipeline, "notify_discord_failure") as notify_failure:
+            ok = run_pipeline.run(quick=True, firehose_only=True, max_articles=3, dedup_window=48)
+
+        self.assertTrue(ok)
+        notify_failure.assert_not_called()
+        self.assertTrue(metrics.call_args.kwargs["success"])
+        self.assertEqual(metrics.call_args.kwargs["fetched"], 0)
+
+    def test_firehose_only_zero_articles_with_poll_error_is_failure(self):
+        with patch.object(run_pipeline, "poll_firehose", side_effect=RuntimeError("SSE timeout")), \
+             patch.object(run_pipeline, "_write_final_metrics") as metrics, \
+             patch.object(run_pipeline, "notify_discord_failure") as notify_failure:
+            ok = run_pipeline.run(quick=True, firehose_only=True, max_articles=3, dedup_window=48)
+
+        self.assertFalse(ok)
+        notify_failure.assert_called_once()
+        args, kwargs = notify_failure.call_args
+        self.assertEqual(args[0], "firehose")
+        self.assertIn("Firehose returned no articles", args[1])
+        self.assertIn("SSE timeout", kwargs["context"])
+        self.assertFalse(metrics.call_args.kwargs["success"])
+
     def test_all_thin_source_candidates_are_successful_noop(self):
         scanned = [{
             "title": "Thin source item",

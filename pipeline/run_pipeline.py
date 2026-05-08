@@ -510,8 +510,18 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
     steps["scanner"] = t_scan.to_dict()
 
     if not articles:
-        msg = "No articles found after scan"
-        notify_discord_failure("scanner", msg)
+        if firehose_only and not errors:
+            print("ℹ️  Firehose returned no new articles. Treating as a successful no-op.")
+            _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=True,
+                                 fetched=_m_fetched, sources=_m_sources)
+            return True
+
+        if firehose_only and errors:
+            msg = "Firehose returned no articles"
+            notify_discord_failure("firehose", msg, context="; ".join(errors))
+        else:
+            msg = "No articles found after scan"
+            notify_discord_failure("scanner", msg)
         errors.append(msg)
         _write_final_metrics(steps, errors, 0, time.time() - pipeline_start, success=False,
                              fetched=_m_fetched, sources=_m_sources)
