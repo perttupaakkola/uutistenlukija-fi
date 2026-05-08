@@ -40,7 +40,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/koiraharrastajat-valitsevat-tarkemmin-kuin-kissojen-ystavat-postikorttiyrittaja-tietaa-millaiset-aiheet-myyvat/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
