@@ -253,6 +253,109 @@ def _split_research_blocks(research_text: str) -> list[dict]:
         )
     return blocks
 
+_TEMPORAL_TOKENS = {
+    "maanantai",
+    "maanantaina",
+    "maanantain",
+    "tiistai",
+    "tiistaina",
+    "tiistain",
+    "keskiviikko",
+    "keskiviikkona",
+    "keskiviikon",
+    "torstai",
+    "torstaina",
+    "torstain",
+    "perjantai",
+    "perjantaina",
+    "perjantain",
+    "lauantai",
+    "lauantaina",
+    "lauantain",
+    "sunnuntai",
+    "sunnuntaina",
+    "sunnuntain",
+    "tänään",
+    "eilen",
+    "huomenna",
+}
+
+
+def _topical_support_tokens(text: str) -> set[str]:
+    tokens = _keyword_tokens(text)
+    return {token for token in tokens if token not in _COMMON_KEYWORDS and len(token) >= 5}
+
+
+def _temporal_tokens(text: str) -> set[str]:
+    lowered = (text or "").lower()
+    found: set[str] = set()
+    for token in _TEMPORAL_TOKENS:
+        if re.search(rf"(?<!\w){re.escape(token)}(?!\w)", lowered):
+            found.add(token)
+    return found
+
+def _source_group_key(block: dict) -> str:
+    source = _normalize_ws(str(block.get("source") or ""))
+    if source:
+        return source.lower()
+    return _normalize_ws(str(block.get("source_type") or "")).lower() or "unknown"
+
+
+def _has_specific_claim(text: str) -> bool:
+    tokens = _topical_support_tokens(text)
+    temporal = _temporal_tokens(text)
+    return bool(temporal or len(tokens) >= 4 or any(token[:1].isupper() for token in re.findall(r"\b[\wÄÖÅäöå-]{5,}\b", text or "")))
+
+
+def _supported_source_groups(article: dict, blocks: Iterable[dict]) -> set[str]:
+    title = str(article.get("title", "") or "")
+    description = str(article.get("description", "") or "")
+    claim_text = " ".join(part for part in [title, description] if part)
+    claim_tokens = _topical_support_tokens(title)
+    temporal_claims = _temporal_tokens(title)
+    if len(claim_tokens) < 2 and not temporal_claims:
+        return set()
+    high_specific_claim = len(claim_tokens) >= 6
+
+    supported: set[str] = set()
+    for block in blocks:
+        if str(block.get("source_type") or "") in {"description", "rss_description"}:
+            continue
+        text = _normalize_ws(str(block.get("text", "") or ""))
+        if not text:
+            continue
+        block_tokens = _topical_support_tokens(text)
+        token_overlap = claim_tokens & block_tokens
+        block_temporal = _temporal_tokens(text)
+        temporal_conflict = bool(temporal_claims and block_temporal and not (temporal_claims & block_temporal))
+        if temporal_conflict:
+            continue
+        required_overlap = 3 if len(claim_tokens) >= 4 else 2
+        if temporal_claims:
+            if temporal_claims & block_temporal and len(token_overlap) >= 1:
+                supported.add(_source_group_key(block))
+            continue
+        if high_specific_claim and len(token_overlap) >= 1 and any(neg in text.lower() for neg in ("ei kertonut", "ei kerrottu", "ei koske", "ei ollut")):
+            continue
+        if len(token_overlap) >= required_overlap:
+            supported.add(_source_group_key(block))
+    return supported
+
+
+def _filter_topically_supported_sources(article: dict, blocks: list[dict]) -> list[dict]:
+    if not blocks:
+        return blocks
+    supported_groups = _supported_source_groups(article, blocks)
+    title = str(article.get("title", "") or "")
+    title_tokens = _topical_support_tokens(title)
+    research_blocks = [block for block in blocks if str(block.get("source_type") or "") not in {"description", "rss_description"}]
+    research_words = sum(len(str(block.get("text", "") or "").split()) for block in research_blocks)
+    strict_claim = bool(_temporal_tokens(title) or (len(title_tokens) >= 6 and research_words >= 12))
+    if not supported_groups:
+        return [] if strict_claim else blocks
+    return [block for block in blocks if _source_group_key(block) in supported_groups]
+
+
 def _fallback_source_blocks(article: dict) -> list[dict]:
     blocks: list[dict] = []
     description = _sanitize_source_block(str(article.get("description", "") or ""))
@@ -420,7 +523,8 @@ def build_story_packet(article: dict) -> dict:
     research_text = article.get("research_text") or article.get("research") or ""
     all_blocks = _split_research_blocks(str(research_text))
     all_blocks.extend(_fallback_source_blocks(article))
-    selected_blocks = _select_best_sources(article, all_blocks)
+    supported_blocks = _filter_topically_supported_sources(article, all_blocks)
+    selected_blocks = _select_best_sources(article, supported_blocks)
     source_text = "\n\n".join(block["text"] for block in selected_blocks)
 
     inferred_category = _infer_category(article, selected_blocks)

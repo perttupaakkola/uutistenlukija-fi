@@ -350,7 +350,15 @@ class MonicaWriterTests(unittest.TestCase):
             self._result(json.dumps(repaired_payload, ensure_ascii=False)),
         ]
 
-        rewritten = rewrite_articles([article])
+        from pipeline.story_packet import build_story_packet as original_build_story_packet
+        original_packet = original_build_story_packet(article)
+        original_packet["source_text"] = " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 80)
+        original_packet["clean_source_blocks"] = [
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 40), "word_count": 240, "source": "Testi"},
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi 2"},
+        ]
+        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=original_packet):
+            rewritten = rewrite_articles([article])
 
         self.assertEqual(len(rewritten), 1)
         self.assertGreaterEqual(len(rewritten[0]["content"].split()), 250)

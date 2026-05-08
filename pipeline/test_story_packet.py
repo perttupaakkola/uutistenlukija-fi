@@ -9,7 +9,7 @@ from story_packet import build_story_packet
 class StoryPacketTests(unittest.TestCase):
     def test_irrelevant_research_block_is_dropped_in_favor_of_fallback(self) -> None:
         article = {
-            "title": 'Vakavia syytöksiä FBI:n johtajan ryyppäämisestä – Kash Patel kiistää: "Nähdään oikeudessa"',
+            "title": 'Kash Patel kiistää väitteet alkoholinkäytöstä',
             "description": "FBI:n johtaja Kash Patel on kiistänyt häntä koskevat väitteet runsaasta alkoholinkäytöstä, jotka nousivat esiin oikeusasiakirjoissa.",
             "source": "MTV Uutiset",
             "link": "https://www.mtvuutiset.fi/artikkeli/vakavia-syytoksia-fbi-n-johtajan-ryyppaamisesta-kash-patel-kiistaa-nahdaan-oikeudessa/9326240",
@@ -77,6 +77,69 @@ class StoryPacketTests(unittest.TestCase):
         self.assertEqual(len(packet["clean_source_blocks"]), 1)
         self.assertGreaterEqual(sum(block["word_count"] for block in packet["clean_source_blocks"]), 300)
         self.assertIn("liikevaihdon", packet["source_text"])
+
+    def test_specific_drone_trial_claim_drops_adjacent_old_drone_blocks(self) -> None:
+        article = {
+            "title": "Drooneja havainnoidaan uudella tavalla Kaakkois-Suomessa – Rajavartiolaitos ja yritykset sopivat havainnointijärjestelmän koekäytöstä",
+            "description": "",
+            "source": "Yle",
+            "link": "https://yle.fi/a/example",
+            "category_hint": "Kotimaa",
+            "research": "\n\n".join([
+                "[Lähde: Yle]\nSuomen ilmavoimien hävittäjät ovat jyrisseet sunnuntaiaamuna Kaakkois-Suomen taivaalla. Lennot liittyvät drooneihin, mutta drooneja ei ole tullut Suomen puolelle.",
+                "[Lähde: ksml.fi]\nMikko Hyppönen arvioi ukrainalaisten AN196-droonien kantamaa ja aiempia harhautumisia Suomenlahden alueella.",
+            ]),
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["clean_source_blocks"], [])
+        self.assertEqual(packet["story_confidence"], 0.15)
+
+    def test_euribor_weekday_mismatch_drops_tuesday_blocks_for_thursday_claim(self) -> None:
+        article = {
+            "title": "12 kuukauden euribor laski torstaina",
+            "description": "Euribor-korot peilaavat epävarmuutta markkinoilla.",
+            "source": "ksml.fi",
+            "link": "https://www.ksml.fi/example",
+            "category_hint": "Talous",
+            "research": "[Lähde: ksml.fi]\nMonien suomalaisten asuntolainoissa viitekorkona käytetty 12 kuukauden euribor laski tiistaina roimasti. Vuoden euribor tippui tiistaina 3,51 prosenttiin.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["clean_source_blocks"], [])
+        self.assertEqual(packet["story_confidence"], 0.25)
+
+    def test_strict_unsupported_claim_does_not_fall_back_to_headline_echo_description(self) -> None:
+        article = {
+            "title": "Rajavartiolaitos ja Elisa kokeilevat droonien havainnointijärjestelmää Kaakkois-Suomessa",
+            "description": "Rajavartiolaitos ja Elisa kokeilevat droonien havainnointijärjestelmää Kaakkois-Suomessa.",
+            "source": "Yle",
+            "link": "https://yle.fi/a/example",
+            "category_hint": "Kotimaa",
+            "research": "[Lähde: Yle]\nSuomen ilmavoimien hävittäjät lensivät sunnuntaina Kaakkois-Suomen yllä aiempien droonihavaintojen vuoksi. Puolustusvoimat ei kertonut uusista yritysyhteistyöhankkeista tai järjestelmäkokeiluista.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["clean_source_blocks"], [])
+
+    def test_supported_specific_claim_keeps_matching_source_blocks(self) -> None:
+        article = {
+            "title": "Rajavartiolaitos ja Elisa kokeilevat droonien havainnointijärjestelmää Kaakkois-Suomessa",
+            "description": "Sensofusion on mukana järjestelmän kokeilussa.",
+            "source": "Yle",
+            "link": "https://yle.fi/a/example",
+            "category_hint": "Kotimaa",
+            "research": "[Lähde: Yle]\nRajavartiolaitos, Elisa ja Sensofusion kokeilevat Kaakkois-Suomessa droonien havainnointijärjestelmää. Koekäyttö koskee rajaseudun valvontaa ja uusia havaintomenetelmiä.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertGreaterEqual(len(packet["clean_source_blocks"]), 1)
+        self.assertIn("Rajavartiolaitos", packet["source_text"])
+        self.assertIn("Sensofusion", packet["source_text"])
 
     def test_talous_hint_survives_foreign_market_tokens(self) -> None:
         article = {
