@@ -1,4 +1,4 @@
-const CACHE_NAME = 'uutistenlukija-v2';
+const CACHE_NAME = 'uutistenlukija-v3';
 const OFFLINE_URL = '/offline.html';
 const PRECACHE = ['/', '/css/style.css', OFFLINE_URL];
 
