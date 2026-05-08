@@ -59,22 +59,22 @@
 
   var marketSets = {
     indices: [
-      ['^OMXH25', 'OMX Helsinki 25'],
-      ['^OMX', 'OMX Stockholm 30'],
-      ['^GSPC', 'S&P 500'],
-      ['^NDX', 'Nasdaq 100']
+      ['BTC', 'Bitcoin', 'crypto', 'bitcoin'],
+      ['ETH', 'Ethereum', 'crypto', 'ethereum'],
+      ['USDC', 'USD Coin', 'crypto', 'usd-coin'],
+      ['SOL', 'Solana', 'crypto', 'solana']
     ],
     stocks: [
-      ['NOKIA.HE', 'Nokia'],
-      ['KNEBV.HE', 'Kone'],
-      ['NESTE.HE', 'Neste'],
-      ['SAMPO.HE', 'Sampo']
+      ['BTC', 'Bitcoin', 'crypto', 'bitcoin'],
+      ['ETH', 'Ethereum', 'crypto', 'ethereum'],
+      ['XRP', 'XRP', 'crypto', 'ripple'],
+      ['BNB', 'BNB', 'crypto', 'binancecoin']
     ],
     currencies: [
-      ['EURUSD=X', 'EUR/USD'],
-      ['EURSEK=X', 'EUR/SEK'],
-      ['EURNOK=X', 'EUR/NOK'],
-      ['BTC-EUR', 'Bitcoin/EUR']
+      ['EURUSD', 'EUR/USD', 'currency', 'usd'],
+      ['EURSEK', 'EUR/SEK', 'currency', 'sek'],
+      ['EURNOK', 'EUR/NOK', 'currency', 'nok'],
+      ['BTC', 'Bitcoin/EUR', 'crypto', 'bitcoin']
     ]
   };
 
@@ -102,37 +102,57 @@
         var symbol = row[0];
         var label = row[1];
         var q = quoteMap[symbol] || {};
-        var price = typeof q.regularMarketPrice === 'number' ? q.regularMarketPrice : q.regularMarketPreviousClose;
-        var change = typeof q.regularMarketChangePercent === 'number' ? q.regularMarketChangePercent : null;
+        var price = typeof q.price === 'number' ? q.price : null;
+        var change = typeof q.changePercent === 'number' ? q.changePercent : null;
         var changeText = change === null ? '' : ' <b class="' + (change < 0 ? 'negative' : '') + '">' + (change > 0 ? '+' : '') + change.toFixed(2).replace('.', ',') + ' %</b>';
         return '<div><dt>' + label + '</dt><dd>' + formatNumber(price) + changeText + '</dd></div>';
       }).join('');
+    }
+
+    function renderMarketRows(rows, cryptoData, currencyData) {
+      var cryptoMap = cryptoData || {};
+      var rates = ((currencyData || {}).eur) || {};
+      var quoteMap = {};
+      rows.forEach(function (row) {
+        if (row[2] === 'crypto') {
+          var q = cryptoMap[row[3]] || {};
+          quoteMap[row[0]] = {
+            price: q.eur,
+            changePercent: typeof q.eur_24h_change === 'number' ? q.eur_24h_change : null
+          };
+        } else {
+          quoteMap[row[0]] = { price: rates[row[3]], changePercent: null };
+        }
+      });
+      renderRows(rows, quoteMap);
+      return Object.keys(quoteMap).filter(function (key) { return typeof quoteMap[key].price === 'number'; }).length;
     }
 
     function loadSet(name) {
       var rows = marketSets[name] || marketSets.indices;
       skeleton(rows);
       if (note) note.textContent = 'Päivitetään markkinadataa…';
-      var symbols = rows.map(function (r) { return r[0]; }).join(',');
-      var url = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=' + encodeURIComponent(symbols);
-      fetch(url, { cache: 'no-store' })
-        .then(function (response) {
-          if (!response.ok) throw new Error('markets ' + response.status);
+
+      var cryptoIds = rows.filter(function (row) { return row[2] === 'crypto'; }).map(function (row) { return row[3]; });
+      var needsCurrency = rows.some(function (row) { return row[2] === 'currency'; });
+      var cryptoUrl = 'https://api.coingecko.com/api/v3/simple/price?ids=' + encodeURIComponent(cryptoIds.join(',')) + '&vs_currencies=eur&include_24hr_change=true';
+      var currencyUrl = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json';
+
+      Promise.all([
+        cryptoIds.length ? fetch(cryptoUrl, { cache: 'no-store' }).then(function (response) {
+          if (!response.ok) throw new Error('crypto ' + response.status);
           return response.json();
-        })
-        .then(function (data) {
-          var result = (((data || {}).quoteResponse || {}).result) || [];
-          var quoteMap = {};
-          result.forEach(function (q) { if (q.symbol) quoteMap[q.symbol] = q; });
-          renderRows(rows, quoteMap);
-          if (note) note.textContent = 'Viivästetty markkinadata, päivittyy selaimessa.';
-        })
-        .catch(function () {
-          if (note) note.textContent = 'Markkinadataa ei saatu juuri nyt. Siirry Talous-osioon lukemaan tuoreimmat uutiset.';
-          list.innerHTML = rows.map(function (row) {
-            return '<div><dt>' + row[1] + '</dt><dd>Ei saatavilla</dd></div>';
-          }).join('');
-        });
+        }).catch(function () { return {}; }) : Promise.resolve({}),
+        needsCurrency ? fetch(currencyUrl, { cache: 'no-store' }).then(function (response) {
+          if (!response.ok) throw new Error('currency ' + response.status);
+          return response.json();
+        }).catch(function () { return {}; }) : Promise.resolve({})
+      ]).then(function (payloads) {
+        var okCount = renderMarketRows(rows, payloads[0], payloads[1]);
+        if (note) {
+          note.textContent = okCount ? 'Viivästetty markkinadata, päivittyy selaimessa.' : 'Markkinadataa ei saatu juuri nyt. Siirry Talous-osioon lukemaan tuoreimmat uutiset.';
+        }
+      });
     }
 
     tabs.forEach(function (tab) {
