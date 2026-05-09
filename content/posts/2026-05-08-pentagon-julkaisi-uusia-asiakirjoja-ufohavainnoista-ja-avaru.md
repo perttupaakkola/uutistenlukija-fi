@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Yhdysvallat on julkaissut laajan joukon vuosikymmenten ajalta koottuja asiakirjoja, tallenteita ja raportteja tunnistamattomista lentävistä kohteista ja…"
+image: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/ulkomaat.jpg"
 summary: "Yhdysvallat on julkaissut laajan joukon vuosikymmenten ajalta koottuja asiakirjoja, tallenteita ja raportteja tunnistamattomista lentävistä kohteista ja poikkeavista ilmailmiöistä."
 summary_bullets:
   - "Pentagon on julkaissut 161 tiedostoa tunnistamattomista lentävistä kohteista ja poikkeavista ilmailmiöistä."
@@ -23,7 +28,6 @@ journalist_note: |
   Artikkeli perustuu paketin sisältämään BBC:n referoimaan aineistoon Pentagonin julkaisemista tiedostoista. Väitteet on rajattu asiakirjoissa kuvattuihin havaintoihin; havaintoja ei esitetä todisteina maan ulkopuolisesta elämästä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - yhdysvallat

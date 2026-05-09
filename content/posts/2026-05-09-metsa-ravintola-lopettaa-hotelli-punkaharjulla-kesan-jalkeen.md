@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Ravintolayrittäjät Sari Helin ja Ilkka Lääveri päättävät Metsä-ravintolan toiminnan Hotelli Punkaharjulla kesäkauden jälkeen. Päätökseen vaikuttivat kuo…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Ravintolayrittäjät Sari Helin ja Ilkka Lääveri päättävät Metsä-ravintolan toiminnan Hotelli Punkaharjulla kesäkauden jälkeen. Päätökseen vaikuttivat kuormittava työtahti, stressi ja terveyssyyt."
 summary_bullets:
   - "Sari Helin ja Ilkka Lääveri lopettavat Metsä-ravintolan toiminnan Hotelli Punkaharjulla kesän jälkeen."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun toimitukselliseen pakettiin. Epävarmat tulevaisuuden suunnitelmat on muotoiltu avoimina eikä niihin ole lisätty vahvistamattomia yksityiskohtia.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - hotelli punkaharju

@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Paahdetusta vihreästä teestä valmistettu hojicha on alkanut näkyä Britanniassa kahviloiden juoma- ja jälkiruokalistoilla matchan rinnalla."
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Paahdetusta vihreästä teestä valmistettu hojicha on alkanut näkyä Britanniassa kahviloiden juoma- ja jälkiruokalistoilla matchan rinnalla."
 summary_bullets:
   - "Hojicha on paahdettua japanilaista vihreää teetä, jonka maku on pähkinäinen ja kofeiinipitoisuus matala."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu paketissa annettuihin tietoihin hojichan leviämisestä Britannian kahvila- ja ravintolalistoille sekä vertailuun matchan kanssa.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - hojicha

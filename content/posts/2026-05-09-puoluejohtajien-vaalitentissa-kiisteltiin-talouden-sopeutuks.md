@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Eduskuntapuolueiden puheenjohtajat väittelivät julkisen talouden suunnasta Ylen Kohti vaaleja -tentissä. Riikka Purra torjui SDP:n arvostelua ja Petteri…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Eduskuntapuolueiden puheenjohtajat väittelivät julkisen talouden suunnasta Ylen Kohti vaaleja -tentissä. Riikka Purra torjui SDP:n arvostelua ja Petteri Orpo linjasi, ettei hallitus ole palauttamassa työttömyysturvan suojaosia."
 summary_bullets:
   - "Puoluejohtajat väittelivät julkisen talouden sopeutuksesta Ylen vaalitentissä."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu packetissa annettuun tenttikoosteeseen. Otsikkosiemenen pääministeritauti-väite jätettiin pois leipätekstistä, koska sitä ei tuettu lähdekatkelmissa tarkemmalla kontekstilla.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - politiikka

@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Tappara voitti KooKoon SM-liigan finaalisarjan neljännessä ottelussa ennätyksellisen pitkän taistelun jälkeen ja tasoitti sarjan tilanteeseen 2–2."
+image: "/images/categories/urheilu.jpg"
+image_alt: "Urheilu-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/urheilu.jpg"
 summary: "Tappara voitti KooKoon SM-liigan finaalisarjan neljännessä ottelussa ennätyksellisen pitkän taistelun jälkeen ja tasoitti sarjan tilanteeseen 2–2."
 summary_bullets:
   - "Tappara voitti KooKoon neljännessä finaalissa ajassa 129.54 syntyneellä ratkaisumaalilla."
@@ -23,7 +28,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Epätäydellistä viimeistä lähdekatkelmaa hyödynnettiin vain niiltä osin kuin tiedot olivat ehjiä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - sm-liiga

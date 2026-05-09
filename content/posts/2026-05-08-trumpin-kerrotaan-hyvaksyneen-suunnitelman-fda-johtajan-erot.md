@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Yhdysvaltain presidentin Donald Trumpin kerrotaan hyväksyneen suunnitelman, jonka mukaan FDA:n komissaari Marty Makary erotettaisiin tehtävästään. Ratka…"
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "Yhdysvaltain presidentin Donald Trumpin kerrotaan hyväksyneen suunnitelman, jonka mukaan FDA:n komissaari Marty Makary erotettaisiin tehtävästään. Ratkaisua ei kuitenkaan kuvata vielä lopulliseksi."
 summary_bullets:
   - "Trumpin kerrotaan hyväksyneen suunnitelman FDA-komissaari Marty Makaryn erottamisesta."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu packetissa annettuihin useiden medioiden raportoimiin tietoihin. Muotoilu pitää erottamissuunnitelman ehdollisena, koska lähdeaineisto korostaa päätöksen voivan vielä muuttua.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - yhdysvallat

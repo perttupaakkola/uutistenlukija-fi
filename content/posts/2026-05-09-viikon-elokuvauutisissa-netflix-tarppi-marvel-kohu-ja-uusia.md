@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Viikon elokuvauutisten kooste nostaa esiin Netflixiin kesäkuussa tulevan tunnetun elokuvasarjan, Marvel-tähden rajun Disney-kritiikin, Stephen King -fil…"
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "Viikon elokuvauutisten kooste nostaa esiin Netflixiin kesäkuussa tulevan tunnetun elokuvasarjan, Marvel-tähden rajun Disney-kritiikin, Stephen King -filmatisoinnin suoratoistolisäyksen sekä Finnkinon uuden kuukausilippumallin."
 summary_bullets:
   - "Netflixiin on tulossa 1. kesäkuuta maailmankuulu elokuvasarja."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu rajalliseen koosteaineistoon. Yksityiskohtia, kuten joidenkin teosten nimiä, ei lisätty, koska niitä ei ollut annetussa paketissa.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - elokuvat

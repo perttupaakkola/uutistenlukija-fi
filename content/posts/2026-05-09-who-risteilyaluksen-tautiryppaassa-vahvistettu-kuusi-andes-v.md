@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Maailman terveysjärjestö WHO:n mukaan risteilyalus MV Hondiuksella puhjenneessa tautiryppäässä on vahvistettu kuusi Andes-tyypin hantavirustapausta. Epä…"
+image: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/ulkomaat.jpg"
 summary: "Maailman terveysjärjestö WHO:n mukaan risteilyalus MV Hondiuksella puhjenneessa tautiryppäässä on vahvistettu kuusi Andes-tyypin hantavirustapausta. Epäiltyjä ja vahvistettuja tapauksia on yhteensä kahdeksan, ja kolme tartunnan saanutta on kuollut."
 summary_bullets:
   - "WHO:n mukaan MV Hondiuksella on vahvistettu kuusi Andes-tyypin hantavirustapausta."
@@ -22,7 +27,6 @@ journalist_note: |
   Kirjoitettu annetun paketin perusteella. Päivitetty kuuden vahvistetun tapauksen tieto on huomioitu otsikossa ja kärjessä; lähdetekstin torstainen viiden tapauksen tieto käsiteltiin vanhempana välitietona.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - who

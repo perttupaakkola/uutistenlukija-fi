@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Uusi tutkimus osoittaa, että kvanttipisteisiin perustuvia spinkubitteja voidaan siirtää pisteestä toiseen menettämättä kvantti-informaatiota. Löydös voi…"
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "Uusi tutkimus osoittaa, että kvanttipisteisiin perustuvia spinkubitteja voidaan siirtää pisteestä toiseen menettämättä kvantti-informaatiota. Löydös voi helpottaa virheenkorjausta ja suurten kvanttitietokoneiden rakentamista."
 summary_bullets:
   - "Tutkimus osoittaa, että kvanttipisteisiin perustuvia spinkubitteja voidaan siirtää pisteestä toiseen ilman kvantti-informaation katoamista."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Henkilöitä, tutkimusryhmää tai julkaisun tarkkoja teknisiä yksityiskohtia ei lisätty, koska niitä ei ollut paketissa vahvistettuna.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - kvanttitietokoneet

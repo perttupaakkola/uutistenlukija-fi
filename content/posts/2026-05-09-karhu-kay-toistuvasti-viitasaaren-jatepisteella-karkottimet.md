@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Viitasaaren Niinilahdessa karhu on kaatanut roskasäiliöitä ja palannut jätepisteelle äänikarkottimista huolimatta. Keski-Suomessa karhuhavainnot ovat yl…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Viitasaaren Niinilahdessa karhu on kaatanut roskasäiliöitä ja palannut jätepisteelle äänikarkottimista huolimatta. Keski-Suomessa karhuhavainnot ovat yleistyneet, ja asiantuntijat etsivät uusia keinoja ehkäistä vaarallisia kohtaamisia."
 summary_bullets:
   - "Viitasaaren Niinilahdessa karhu on käynyt toistuvasti jätteiden lajittelupisteellä."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annetun paketin tietoihin. Keskeiset faktat koskevat Viitasaaren Niinilahden jätepistettä, karkottimen heikkoa tehoa, Keski-Suomen havaintomääriä sekä tarvetta uusille karkotuskeinoille.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - karhut

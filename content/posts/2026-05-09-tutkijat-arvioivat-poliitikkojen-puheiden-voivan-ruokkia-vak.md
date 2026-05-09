@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Tampereen vappumarssin pahoinpitelyt ovat nostaneet esiin kysymyksen siitä, miten puolueet ja poliitikot suhtautuvat väkivaltaiseen aktivismiin ja ääril…"
+image: "/images/categories/tiede.jpg"
+image_alt: "Tiede-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/tiede.jpg"
 summary: "Tampereen vappumarssin pahoinpitelyt ovat nostaneet esiin kysymyksen siitä, miten puolueet ja poliitikot suhtautuvat väkivaltaiseen aktivismiin ja ääriliikkeiden saamaan näkyvyyteen."
 summary_bullets:
   - "Poliisi tutkii kolmea pahoinpitelyä Sinimustan liikkeen vappumarssin yhteydessä Tampereella."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun aineistoon. Muotoiltu uudelleen ilman lähdelabeleita ja ilman uusia väitteitä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - tampere

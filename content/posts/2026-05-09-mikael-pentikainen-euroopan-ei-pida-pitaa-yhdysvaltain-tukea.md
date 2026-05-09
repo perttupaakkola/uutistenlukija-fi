@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Suomen Yrittäjien toimitusjohtaja Mikael Pentikäinen kirjoittaa Eurooppa-päivän blogissaan, että Euroopan turvallisuusympäristö on muuttunut ja Yhdysval…"
+image: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/talous.jpg"
 summary: "Suomen Yrittäjien toimitusjohtaja Mikael Pentikäinen kirjoittaa Eurooppa-päivän blogissaan, että Euroopan turvallisuusympäristö on muuttunut ja Yhdysvaltain varaan rakentuvaa tukea ei voi pitää varmana kaikissa tilanteissa."
 summary_bullets:
   - "Mikael Pentikäinen arvioi, ettei Eurooppa voi pitää Yhdysvaltain tukea enää varmana kaikissa tilanteissa."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun blogia koskevaan aineistoon. Muotoiltu uutismaiseksi ilman lähdelabeleita ja ilman lähdeaineiston suoranaista toistoa.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - eurooppa

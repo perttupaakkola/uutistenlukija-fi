@@ -134,9 +134,15 @@ def _inject_image_fields(text: str, image_data: dict) -> str:
 
 # ── Main backfill logic ───────────────────────────────────────────────────────
 
+def _article_sort_key(path: Path) -> str:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    meta, _, _ = _parse_fm(text)
+    return str(meta.get("date") or path.name)
+
+
 def find_missing_image_articles(limit: int | None = None, offset: int = 0) -> list[Path]:
-    """Return list of article Paths that have no `image` front matter field."""
-    all_files = sorted(CONTENT_DIR.glob("*.md"))
+    """Return newest article Paths that have no `image` front matter field."""
+    all_files = sorted(CONTENT_DIR.glob("*.md"), key=_article_sort_key, reverse=True)
     missing = []
     for fpath in all_files:
         text = fpath.read_text(encoding="utf-8")
@@ -152,8 +158,22 @@ def find_missing_image_articles(limit: int | None = None, offset: int = 0) -> li
     return missing
 
 
+def _category_fallback_image(category: str) -> dict:
+    cat_slug = str(category or "Kotimaa").lower()
+    return {
+        "source": "category_fallback",
+        "url": f"/images/categories/{cat_slug}.jpg",
+        "thumb_url": f"/images/categories/{cat_slug}.jpg",
+        "alt": f"{category}-uutiset",
+        "credit": "",
+        "image_source_url": "",
+    }
+
+
 def fetch_image(title: str, category: str, slug: str, source: str, content: str = "") -> dict | None:
     """Try Unsplash then Pexels. Returns image data dict or None."""
+    if source == "category":
+        return _category_fallback_image(category)
     if source in ("unsplash", "both"):
         result = _unsplash.fetch_image_for_article(
             title, category, content=content, inter_request_delay=0
@@ -312,8 +332,8 @@ def main():
         idx = args.index("--source")
         if idx + 1 < len(args):
             source = args[idx + 1]
-            if source not in ("unsplash", "pexels", "both"):
-                print(f"Unknown source '{source}'. Use: unsplash, pexels, both", file=sys.stderr)
+            if source not in ("unsplash", "pexels", "both", "category"):
+                print(f"Unknown source '{source}'. Use: unsplash, pexels, both, category", file=sys.stderr)
                 sys.exit(1)
 
     if "--limit" in args:

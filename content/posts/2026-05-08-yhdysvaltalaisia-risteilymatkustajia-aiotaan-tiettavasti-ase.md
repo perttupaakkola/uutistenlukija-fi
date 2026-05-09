@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Yhdysvaltain viranomaiset valmistelevat tiettävästi amerikkalaisten matkustajien kotiuttamista Teneriffalta Nebraskaan sen jälkeen, kun MV Hondius -rist…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Yhdysvaltain viranomaiset valmistelevat tiettävästi amerikkalaisten matkustajien kotiuttamista Teneriffalta Nebraskaan sen jälkeen, kun MV Hondius -risteilyalukseen on liitetty hantavirusaltistuksia."
 summary_bullets:
   - "CDC:n henkilöstöä on tiettävästi lähetetty Kanariansaarille MV Hondius -alusta varten."
@@ -22,7 +27,6 @@ journalist_note: |
   Juttu perustuu annettuun lähdepakettiin. Osa keskeisistä tiedoista on raportoitu nimettömiin lähteisiin nojaten, joten artikkelissa käytetään varovaisia ilmaisuja kuten 'tiettävästi'.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - yhdysvallat

@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "MV Hondius -risteilyaluksen lähestyvä saapuminen Teneriffalle on herättänyt saarella huolta ja vastustusta. Espanjan hallitus on sopinut WHO:n kanssa, e…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "MV Hondius -risteilyaluksen lähestyvä saapuminen Teneriffalle on herättänyt saarella huolta ja vastustusta. Espanjan hallitus on sopinut WHO:n kanssa, että aluksen matkustajat saavat nousta maihin viikonloppuna."
 summary_bullets:
   - "MV Hondius -risteilyaluksen saapuminen Teneriffalle herättää huolta hantavirustapausten vuoksi."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu paketissa annettuihin tietoihin. Sisällössä ei ole lisätty paketin ulkopuolisia väitteitä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - teneriffa

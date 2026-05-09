@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Pohjois-Pohjanmaan hyvinvointialue Pohde ei muuta linjaansa vammaisten lasten aamu- ja iltapäivähoidon maksuissa, vaikka se hävisi hallinto-oikeudessa v…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Pohjois-Pohjanmaan hyvinvointialue Pohde ei muuta linjaansa vammaisten lasten aamu- ja iltapäivähoidon maksuissa, vaikka se hävisi hallinto-oikeudessa valtaosan kiistoista. Hyvinvointialue perustelee jatkoa uudella vammaispalvelulailla."
 summary_bullets:
   - "Pohde hävisi hallinto-oikeudessa valtaosan kiistoista, jotka koskivat vammaisten lasten maksutonta hoitoa."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun jäsenneltyyn aineistoon. Keskeneräinen viimeinen lähdekatkelma jätettiin käyttämättä siltä osin kuin se katkesi kesken virkkeen.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - pohde

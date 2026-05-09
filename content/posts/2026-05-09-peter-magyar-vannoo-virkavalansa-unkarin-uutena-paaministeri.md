@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Péter Magyarista on tulossa Unkarin uusi pääministeri sen jälkeen, kun hänen Tisza-puolueensa voitti parlamenttivaalit murskaavasti ja päätti Viktor Orb…"
+image: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/ulkomaat.jpg"
 summary: "Péter Magyarista on tulossa Unkarin uusi pääministeri sen jälkeen, kun hänen Tisza-puolueensa voitti parlamenttivaalit murskaavasti ja päätti Viktor Orbánin pitkän valtakauden."
 summary_bullets:
   - "Péter Magyarin on määrä vannoa virkavalansa Unkarin uutena pääministerinä lauantaina Budapestissa."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annetun paketoinnin tietoihin. Julkiseen tekstiin ei ole lisätty lähdemerkintöjä eikä paketista puuttuvia lisäväitteitä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - unkari

@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Canvas-oppimisalustaan kohdistunut kyberhyökkäys aiheutti käyttökatkoja yliopistoissa ja kouluissa Yhdysvalloissa, Kanadassa ja Australiassa. Häiriöt os…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Canvas-oppimisalustaan kohdistunut kyberhyökkäys aiheutti käyttökatkoja yliopistoissa ja kouluissa Yhdysvalloissa, Kanadassa ja Australiassa. Häiriöt osuivat monissa oppilaitoksissa lukuvuoden kiireiseen loppuvaiheeseen."
 summary_bullets:
   - "Canvas-oppimisalustaan kohdistunut kyberhyökkäys häiritsi kouluja ja yliopistoja useissa maissa."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu paketin vahvistettuihin tietoihin. Teknisiä yksityiskohtia ja mahdollisen tietovuodon laajuutta ei ole laajennettu, koska niitä ei ollut luotettavasti saatavilla annetussa aineistossa.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - kyberturvallisuus

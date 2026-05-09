@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Näyttelijä Aimo Räsänen seuraa poikiensa Aapelin ja Iivarin matkaa Tapparan SM-liigafinaaleissa. Hänen mukaansa jääkiekkoa ja teatteria yhdistää ennen k…"
+image: "/images/categories/urheilu.jpg"
+image_alt: "Urheilu-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/urheilu.jpg"
 summary: "Näyttelijä Aimo Räsänen seuraa poikiensa Aapelin ja Iivarin matkaa Tapparan SM-liigafinaaleissa. Hänen mukaansa jääkiekkoa ja teatteria yhdistää ennen kaikkea läsnäolo hetkessä."
 summary_bullets:
   - "Aimo Räsäsen pojat Aapeli ja Iivari kuuluvat SM-liigafinaaleita pelaavaan Tapparaan."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annetun aineiston vahvistamiin tietoihin. Yksityiskohtia finaalien tilanteesta tai otteluohjelmasta ei lisätty, koska niitä ei ollut paketissa.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - tappara

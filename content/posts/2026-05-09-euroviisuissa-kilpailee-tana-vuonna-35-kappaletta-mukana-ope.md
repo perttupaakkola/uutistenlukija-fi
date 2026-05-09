@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Vuoden 2026 Eurovision laulukilpailu käynnistyy Wienissä 35 maan voimin. Kilpailun kappaleissa korostuvat näyttävät laulusuoritukset, vahvat tarinat ja…"
+image: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/ulkomaat.jpg"
 summary: "Vuoden 2026 Eurovision laulukilpailu käynnistyy Wienissä 35 maan voimin. Kilpailun kappaleissa korostuvat näyttävät laulusuoritukset, vahvat tarinat ja myös kiistaa herättäneet sanoitukset."
 summary_bullets:
   - "Vuoden 2026 Euroviisuissa kilpailee 35 maata."
@@ -23,7 +28,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Yksityiskohtia ei ole laajennettu paketin ulkopuolelle.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - euroviisut

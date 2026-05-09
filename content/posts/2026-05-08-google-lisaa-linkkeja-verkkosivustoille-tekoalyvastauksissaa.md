@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Google aikoo tuoda AI Overviews- ja AI Mode -tekoälyvastauksiinsa lisää näkyviä linkkejä verkkosisältöihin. Muutokset koskevat muun muassa uusia lisäluk…"
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "Google aikoo tuoda AI Overviews- ja AI Mode -tekoälyvastauksiinsa lisää näkyviä linkkejä verkkosisältöihin. Muutokset koskevat muun muassa uusia lisälukemista ja asiantuntijanäkökulmia kokoavia osioita."
 summary_bullets:
   - "Google tuo AI Overviews- ja AI Mode -tekoälyvastauksiin lisää linkkejä verkkosivustoille."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Faktat on rajattu Googlen ilmoitettuihin käyttöliittymämuutoksiin ja niiden taustalla olevaan verkkosivustojen näkyvyyshuoleen; vaikutuksia liikenteeseen ei esitetä varmoina.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - google
