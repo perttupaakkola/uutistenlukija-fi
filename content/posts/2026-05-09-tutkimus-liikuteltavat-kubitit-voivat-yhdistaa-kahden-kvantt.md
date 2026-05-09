@@ -39,7 +39,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/science/2026/05/manufacturing-qubits-that-can-move/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
