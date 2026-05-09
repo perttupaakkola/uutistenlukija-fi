@@ -9,11 +9,11 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, rewrite_articles
+    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, rewrite_articles
+    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -315,26 +315,38 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("source_words: 360", prompt)
         self.assertIn("MUST be at least 250 Finnish words", prompt)
         self.assertIn("source_backed_writer_shortfall_unrepairable", prompt)
-        self.assertIn("Do not stop at 240–249 words", prompt)
+        self.assertIn("Do not stop at 210–249 words", prompt)
         self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
 
-    def test_source_backed_near_miss_requires_rich_source_and_240s_word_count(self):
-        packet = _source_packet(360, blocks=3)
+    def test_source_backed_near_miss_requires_source_confidence_and_210_249_words(self):
+        packet = _source_packet(180, blocks=2)
+        packet["story_confidence"] = 0.85
         payload = json.loads(_good_payload())
-        payload["content"] = " ".join(["Sana"] * 247)
+        payload["content"] = " ".join(["Sana"] * 211)
 
-        self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 247 words"]))
-        payload["content"] = " ".join(["Sana"] * 239)
-        self.assertFalse(_is_source_backed_near_miss(packet, payload, ["content too short: 239 words"]))
+        self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 211 words"]))
+        payload["content"] = " ".join(["Sana"] * 209)
+        self.assertFalse(_is_source_backed_near_miss(packet, payload, ["content too short: 209 words"]))
+        payload["content"] = " ".join(["Sana"] * 250)
+        self.assertFalse(_is_source_backed_near_miss(packet, payload, []))
         payload["content"] = " ".join(["Sana"] * 247)
-        self.assertFalse(_is_source_backed_near_miss(_source_packet(260, blocks=2), payload, ["content too short: 247 words"]))
-        self.assertFalse(_is_source_backed_near_miss(_source_packet(360, blocks=2), payload, ["content too short: 247 words"]))
+        self.assertFalse(_is_source_backed_near_miss(_source_packet(179, blocks=2), payload, ["content too short: 247 words"]))
+        self.assertFalse(_is_source_backed_near_miss(_source_packet(220, blocks=1), payload, ["content too short: 247 words"]))
+        low_confidence = _source_packet(360, blocks=2)
+        low_confidence["story_confidence"] = 0.84
+        self.assertFalse(_is_source_backed_near_miss(low_confidence, payload, ["content too short: 247 words"]))
 
         for category in ("Teknologia", "Kotimaa", "Ulkomaat"):
-            packet = _source_packet(360, blocks=3)
+            packet = _source_packet(220, blocks=2)
             packet["category"] = category
+            packet["story_confidence"] = 0.9
             self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 247 words"]))
+
+    def test_packet_story_confidence_prefers_story_confidence_over_payload_confidence(self):
+        packet = {"story_confidence": 0.91, "confidence": 0.2}
+        self.assertEqual(_packet_story_confidence(packet), 0.91)
+        self.assertEqual(_packet_story_confidence({"confidence": 0.86}), 0.86)
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_retries_source_backed_near_miss_once(self, run_mock):
@@ -360,10 +372,10 @@ class MonicaWriterTests(unittest.TestCase):
         from pipeline.story_packet import build_story_packet as original_build_story_packet
         original_packet = original_build_story_packet(article)
         original_packet["source_text"] = " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 80)
+        original_packet["story_confidence"] = 0.9
         original_packet["clean_source_blocks"] = [
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 40), "word_count": 240, "source": "Testi"},
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi 2"},
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 10), "word_count": 60, "source": "Testi 3"},
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi"},
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 15), "word_count": 90, "source": "Testi 2"},
         ]
         with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=original_packet):
             rewritten = rewrite_articles([article])
@@ -371,7 +383,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(len(rewritten), 1)
         self.assertGreaterEqual(len(rewritten[0]["content"].split()), 250)
         self.assertEqual(run_mock.call_count, 3)
-        self.assertIn("near-miss", run_mock.call_args_list[2].args[0][-1])
+        self.assertIn("source_backed_writer_shortfall", run_mock.call_args_list[2].args[0][-1])
         self.assertIn("source_words:", run_mock.call_args_list[2].args[0][-1])
 
 
@@ -379,7 +391,8 @@ class MonicaWriterTests(unittest.TestCase):
     def test_rewrite_articles_quarantines_source_backed_near_miss_with_explicit_reason(self, run_mock):
         near_miss_payload = json.loads(_good_payload())
         near_miss_payload["content"] = " ".join(["Sana"] * 247)
-        packet = _source_packet(360, blocks=3)
+        packet = _source_packet(220, blocks=2)
+        packet["story_confidence"] = 0.9
 
         run_mock.side_effect = [
             self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
@@ -398,8 +411,8 @@ class MonicaWriterTests(unittest.TestCase):
         extra = quarantine_mock.call_args.kwargs["extra"]
         self.assertEqual(extra["reason_code"], "source_backed_writer_shortfall_unrepairable")
         self.assertEqual(extra["final_word_count"], 247)
-        self.assertGreaterEqual(extra["source_words"], 350)
-        self.assertGreaterEqual(extra["source_blocks"], 3)
+        self.assertGreaterEqual(extra["source_words"], 180)
+        self.assertGreaterEqual(extra["source_blocks"], 2)
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):

@@ -45,8 +45,10 @@ MIN_CONTENT_WORDS = 250
 MIN_LEAD_WORDS = 30
 SOURCE_BACKED_REPAIR_WORDS = 300
 SOURCE_BACKED_REPAIR_BLOCKS = 2
-SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS = 350
-SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS = 3
+SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS = 180
+SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS = 2
+SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE = 0.85
+SOURCE_BACKED_NEAR_MISS_MIN_WORDS = 210
 SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS = 280
 SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS = 420
 SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS = 280
@@ -308,20 +310,36 @@ def _content_word_count(payload: dict) -> int:
     return len(str(payload.get("content") or "").split())
 
 
+def _packet_story_confidence(packet: dict) -> float:
+    for key in ("story_confidence", "confidence"):
+        try:
+            value = float(packet.get(key) or 0.0)
+        except (TypeError, ValueError):
+            value = 0.0
+        if value:
+            return value
+    return 0.0
+
+
+def _has_length_issue(issues: list[str]) -> bool:
+    joined = "; ".join(issues).lower()
+    return "content too short" in joined or "lead paragraph too short" in joined
+
+
 def _is_source_backed_near_miss(packet: dict, payload: dict, issues: list[str]) -> bool:
-    if not _is_source_backed_repair_candidate(packet, issues):
+    if not _has_length_issue(issues):
+        return False
+    if _packet_story_confidence(packet) < SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE:
         return False
     if _packet_source_words(packet) < SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS:
         return False
     if _packet_source_blocks(packet) < SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS:
         return False
-    return 240 <= _content_word_count(payload) < MIN_CONTENT_WORDS
+    return SOURCE_BACKED_NEAR_MISS_MIN_WORDS <= _content_word_count(payload) < MIN_CONTENT_WORDS
 
 
 def _is_source_backed_repair_candidate(packet: dict, issues: list[str]) -> bool:
-    joined = "; ".join(issues).lower()
-    has_length_issue = "content too short" in joined or "lead paragraph too short" in joined
-    if not has_length_issue:
+    if not _has_length_issue(issues):
         return False
     return _packet_source_words(packet) >= SOURCE_BACKED_REPAIR_WORDS and _packet_source_blocks(packet) >= SOURCE_BACKED_REPAIR_BLOCKS
 
@@ -363,12 +381,12 @@ def _build_repair_prompt(packet: dict, broken_payload: dict, issues: list[str]) 
 Source-backed repair mode:
 - The packet has {source_words} source words across {source_blocks} source blocks, so a short draft is a repair target, not an automatic failure.
 - The repaired article MUST be at least 250 Finnish words. Target {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
-- For source-backed near-misses with at least {SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS} source words and {SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS} source blocks, treat 240–249 words as a writer shortfall: make one final expansion pass using concrete selected-source facts from every available block.
+- For high-confidence source-backed near-misses with at least {SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS} source words, {SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS} source blocks, confidence >= {SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE}, and {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 output words, treat the short output as a writer shortfall: make one final expansion pass using concrete selected-source facts from every available block.
 - Before returning, count the words in `content`. If it is under 250 words, either add source-backed detail from the packet until it is at least {SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS} words, or return INSUFFICIENT_CONFIDENCE with reason `source_backed_writer_shortfall_unrepairable`.
-- Treat 240–249 words as a failed repair. Do not return a near-miss; continue revising until the article is safely above the floor or explicitly return `source_backed_writer_shortfall_unrepairable`.
+- Treat 210–249 source-backed output words as a failed repair. Do not return a near-miss; continue revising until the article is safely above the floor or explicitly return `source_backed_writer_shortfall_unrepairable`.
 - Build 4–6 concise paragraphs plus at least two H2 subheadings.
 - Use available source blocks to add concrete context: actors, figures/timing, cause, consequence, and what happens next when available.
-- Do not stop at 240–249 words. A 244–248 word repair is still invalid and will be quarantined.
+- Do not stop at 210–249 words. A 211-word or 244–248-word repair is still invalid and will be quarantined.
 - Do not pad with generic economy commentary, advice, sentiment, or invented market context.
 """
     return f"""Fix the article JSON below and return ONLY a corrected JSON object.
