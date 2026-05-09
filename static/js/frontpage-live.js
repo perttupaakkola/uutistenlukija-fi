@@ -61,20 +61,20 @@
     indices: [
       ['BTC', 'Bitcoin', 'crypto', 'bitcoin'],
       ['ETH', 'Ethereum', 'crypto', 'ethereum'],
-      ['USDC', 'USD Coin', 'crypto', 'usd-coin'],
-      ['SOL', 'Solana', 'crypto', 'solana']
+      ['SOL', 'Solana', 'crypto', 'solana'],
+      ['XRP', 'XRP', 'crypto', 'ripple']
     ],
     stocks: [
-      ['BTC', 'Bitcoin', 'crypto', 'bitcoin'],
-      ['ETH', 'Ethereum', 'crypto', 'ethereum'],
-      ['XRP', 'XRP', 'crypto', 'ripple'],
-      ['BNB', 'BNB', 'crypto', 'binancecoin']
+      ['NOKIA', 'Nokia', 'stock', 10.95, 'EUR'],
+      ['KONE', 'Kone', 'stock', 51.14, 'EUR'],
+      ['NESTE', 'Neste', 'stock', 27.35, 'EUR'],
+      ['SAMPO', 'Sampo', 'stock', 8.85, 'EUR']
     ],
     currencies: [
       ['EURUSD', 'EUR/USD', 'currency', 'usd'],
       ['EURSEK', 'EUR/SEK', 'currency', 'sek'],
       ['EURNOK', 'EUR/NOK', 'currency', 'nok'],
-      ['BTC', 'Bitcoin/EUR', 'crypto', 'bitcoin']
+      ['EURGBP', 'EUR/GBP', 'currency', 'gbp']
     ]
   };
 
@@ -120,6 +120,8 @@
             price: q.eur,
             changePercent: typeof q.eur_24h_change === 'number' ? q.eur_24h_change : null
           };
+        } else if (row[2] === 'stock') {
+          quoteMap[row[0]] = { price: row[3], changePercent: null };
         } else {
           quoteMap[row[0]] = { price: rates[row[3]], changePercent: null };
         }

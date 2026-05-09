@@ -30,6 +30,11 @@ class FrontpageInteractionTests(unittest.TestCase):
         self.assertIn("cdn.jsdelivr.net/npm/@fawazahmed0/currency-api", live_js)
         self.assertNotIn("query1.finance.yahoo.com", live_js)
         self.assertIn("loadSet(tab.getAttribute('data-market-tab'))", live_js)
+        self.assertIn("['NOKIA', 'Nokia', 'stock'", live_js)
+        self.assertIn("['EURGBP', 'EUR/GBP', 'currency', 'gbp']", live_js)
+        self.assertNotIn("Bitcoin/EUR", live_js)
+        self.assertNotIn("['XRP', 'XRP', 'crypto', 'ripple'],", live_js)
+        self.assertNotIn("['BNB', 'BNB', 'crypto', 'binancecoin']", live_js)
         self.assertNotIn("4 512,35", index)
 
     def test_homepage_newsletter_uses_async_subscription_handler(self) -> None:
