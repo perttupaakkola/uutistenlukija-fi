@@ -1,11 +1,31 @@
 {{- $text := .text | default "" -}}
 {{- $limit := .limit | default 155 -}}
+{{- $min := .min | default 40 -}}
 {{- $clean := $text | plainify | replaceRE `\s+` " " | strings.TrimSpace -}}
+{{- $weakEnd := `(?i)\s+(ja|sekä|tai|mutta|että|jotta|kun|jos|koska|vaan|eli|on|ovat|oli|olivat|tulee|joissa|jossa|jonka|jotka|sekä|kuten)$` -}}
 {{- if gt (len $clean) $limit -}}
-  {{- $cut := substr $clean 0 $limit -}}
-  {{- $clean = $cut | replaceRE `\s+\S*$` "" | replaceRE `[[:space:]]+` " " | strings.TrimSpace -}}
-  {{- if lt (len $clean) 40 -}}
-    {{- $clean = substr $cut 0 $limit | strings.TrimSpace -}}
+  {{- $cut := substr $clean 0 $limit | strings.TrimSpace -}}
+  {{- $sentence := $cut | replaceRE `^(.+[.!?])\s+[^.!?]*$` `$1` | strings.TrimSpace -}}
+  {{- if and (ne $sentence $cut) (ge (len $sentence) $min) -}}
+    {{- $clean = $sentence -}}
+  {{- else -}}
+    {{- $phrase := $cut | replaceRE `^(.+[,;:–-])\s+[^,;:–-]*$` `$1` | replaceRE `[,;:–-]+$` "" | strings.TrimSpace -}}
+    {{- if and (ne $phrase $cut) (ge (len $phrase) $min) -}}
+      {{- $clean = $phrase -}}
+    {{- else -}}
+      {{- $clean = $cut | replaceRE `\s+\S*$` "" | replaceRE `[[:space:]]+` " " | strings.TrimSpace -}}
+      {{- if lt (len $clean) $min -}}
+        {{- $clean = $cut -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $prev := "" -}}
+{{- range seq 1 4 -}}
+  {{- if eq $prev $clean -}}
+  {{- else -}}
+    {{- $prev = $clean -}}
+    {{- $clean = $clean | replaceRE $weakEnd "" | replaceRE `[[:space:],;:–-]+$` "" | strings.TrimSpace -}}
   {{- end -}}
 {{- end -}}
 {{- return $clean -}}

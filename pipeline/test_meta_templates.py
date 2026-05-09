@@ -62,6 +62,11 @@ class MetaTemplateTests(unittest.TestCase):
         self.assertIsNotNone(match, f"Missing metadata field: {selector}")
         return html.unescape(match.group(1))
 
+    def assert_clean_metadata_boundary(self, text: str) -> None:
+        self.assertNotIn("…", text)
+        self.assertFalse(text.endswith((" ", ",", ";", ":", "-", "–")))
+        self.assertNotRegex(text.lower(), r"\b(ja|sekä|tai|mutta|että|jotta|kun|jos|koska|on|ovat|oli|olivat|jossa|joissa|jonka|jotka)$")
+
     def test_article_meta_title_and_description_do_not_end_with_ellipsis(self) -> None:
         page = self.render_article(
             {
@@ -81,13 +86,52 @@ class MetaTemplateTests(unittest.TestCase):
         description = self.meta_content(page, "description")
         og_description = self.meta_content(page, "og_description")
 
-        self.assertNotIn("…", title)
+        self.assert_clean_metadata_boundary(title)
         self.assertLessEqual(len(title), 60)
         self.assertEqual(title, "Trumpin kerrotaan hyväksyneen suunnitelman | Uutistenlukija")
-        self.assertNotIn("…", description)
+        self.assert_clean_metadata_boundary(description)
         self.assertLessEqual(len(description), 155)
         self.assertEqual(description, og_description)
-        self.assertFalse(description.endswith((" ", ",", ".", ";", ":", "-", "–")))
+
+    def test_article_meta_description_prefers_sentence_boundary_over_connector_cut(self) -> None:
+        page = self.render_article(
+            {
+                "draft": True,
+                "title": "Pitkä otsikko testaa metadatan rajauksen",
+                "date": "2026-05-09T00:00:00Z",
+                "categories": ["Kotimaa"],
+                "description": (
+                    "Ensimmäinen virke kertoo olennaisen päätöksen taustan ja vaikutuksen lukijalle. "
+                    "Toinen virke jatkuisi rajan yli ja päättyisi muuten sanaan ja sekä ovat, "
+                    "jos metatieto katkaistaisiin mekaanisesti ilman toimituksellista rajaa."
+                ),
+            }
+        )
+
+        description = self.meta_content(page, "description")
+
+        self.assertEqual(description, "Ensimmäinen virke kertoo olennaisen päätöksen taustan ja vaikutuksen lukijalle.")
+        self.assert_clean_metadata_boundary(description)
+
+    def test_article_meta_description_strips_weak_connector_end_after_word_boundary_cut(self) -> None:
+        page = self.render_article(
+            {
+                "draft": True,
+                "title": "Pitkä otsikko testaa metadatan rajauksen",
+                "date": "2026-05-09T00:00:00Z",
+                "categories": ["Talous"],
+                "description": (
+                    "Markkinat reagoivat päätökseen varovaisesti aamupäivän aikana, kun yhtiöt "
+                    "arvioivat kustannuksia ja rahoittajat odottivat lisätietoja siitä että"
+                ),
+            }
+        )
+
+        description = self.meta_content(page, "description")
+
+        self.assert_clean_metadata_boundary(description)
+        self.assertFalse(description.endswith("että"))
+        self.assertLessEqual(len(description), 155)
 
 
 if __name__ == "__main__":
