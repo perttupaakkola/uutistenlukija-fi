@@ -344,6 +344,18 @@ def _is_source_backed_repair_candidate(packet: dict, issues: list[str]) -> bool:
     return _packet_source_words(packet) >= SOURCE_BACKED_REPAIR_WORDS and _packet_source_blocks(packet) >= SOURCE_BACKED_REPAIR_BLOCKS
 
 
+def _near_miss_repair_metadata(packet: dict, initial_payload: dict, final_payload: dict, final_issues: list[str]) -> dict[str, Any]:
+    return {
+        "repair_attempt": "source_backed_near_short",
+        "pre_repair_word_count": _content_word_count(initial_payload),
+        "post_repair_word_count": _content_word_count(final_payload),
+        "source_words": _packet_source_words(packet),
+        "source_blocks": _packet_source_blocks(packet),
+        "final_issues": list(final_issues),
+        "recovered": not final_issues and _content_word_count(final_payload) >= MIN_CONTENT_WORDS,
+    }
+
+
 def _build_prompt(packet: dict) -> str:
     schema_text = json.dumps(WRITER_SCHEMA, ensure_ascii=False, indent=2)
     packet_text = json.dumps(packet, ensure_ascii=False, indent=2)
@@ -584,6 +596,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                 print(f"[monica]   quarantine: insufficient confidence")
                 continue
 
+            repair_metadata = None
             issues = _basic_payload_issues(payload)
             if issues:
                 print(f"[monica]   repair pass: {'; '.join(issues)}")
@@ -610,10 +623,13 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                         continue
                     raw = repaired_raw
                     issues = _basic_payload_issues(payload)
+                    repair_metadata = _near_miss_repair_metadata(packet, near_miss_payload, payload, issues)
 
             if issues:
                 reason = "schema_invalid"
                 extra = {"issues": issues, "payload": payload}
+                if repair_metadata:
+                    extra.update(repair_metadata)
                 if _is_source_backed_near_miss(packet, payload, issues):
                     reason = "source_backed_writer_shortfall_unrepairable"
                     extra.update({
@@ -627,7 +643,11 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                 continue
 
             written_article = _merge_article(article, packet, payload)
-            save_packet({"packet_id": packet["packet_id"], "packet": packet, "response": payload, "raw_response": raw}, box="outbox")
+            outbox_packet = {"packet_id": packet["packet_id"], "packet": packet, "response": payload, "raw_response": raw}
+            if repair_metadata:
+                outbox_packet["repair"] = repair_metadata
+                written_article["monica_repair"] = repair_metadata
+            save_packet(outbox_packet, box="outbox")
             written.append(written_article)
             print(f"[monica]   ok: {written_article.get('title','')[:70]}")
 

@@ -9,11 +9,11 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
+    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
+    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -348,6 +348,23 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(_packet_story_confidence(packet), 0.91)
         self.assertEqual(_packet_story_confidence({"confidence": 0.86}), 0.86)
 
+
+    def test_near_miss_repair_metadata_records_recovered_runtime_proof(self):
+        packet = _source_packet(220, blocks=2)
+        initial_payload = json.loads(_good_payload())
+        initial_payload["content"] = " ".join(["Sana"] * 247)
+        final_payload = json.loads(_good_payload())
+        final_payload["content"] = " ".join(["Sana"] * 281)
+
+        metadata = _near_miss_repair_metadata(packet, initial_payload, final_payload, [])
+
+        self.assertEqual(metadata["repair_attempt"], "source_backed_near_short")
+        self.assertEqual(metadata["pre_repair_word_count"], 247)
+        self.assertEqual(metadata["post_repair_word_count"], 281)
+        self.assertGreaterEqual(metadata["source_words"], 180)
+        self.assertGreaterEqual(metadata["source_blocks"], 2)
+        self.assertTrue(metadata["recovered"])
+
     @patch(PATCH_TARGET)
     def test_rewrite_articles_retries_source_backed_near_miss_once(self, run_mock):
         near_miss_payload = json.loads(_good_payload())
@@ -385,6 +402,10 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(run_mock.call_count, 3)
         self.assertIn("source_backed_writer_shortfall", run_mock.call_args_list[2].args[0][-1])
         self.assertIn("source_words:", run_mock.call_args_list[2].args[0][-1])
+        self.assertEqual(rewritten[0]["monica_repair"]["repair_attempt"], "source_backed_near_short")
+        self.assertEqual(rewritten[0]["monica_repair"]["pre_repair_word_count"], 247)
+        self.assertGreaterEqual(rewritten[0]["monica_repair"]["post_repair_word_count"], 250)
+        self.assertTrue(rewritten[0]["monica_repair"]["recovered"])
 
 
     @patch(PATCH_TARGET)
