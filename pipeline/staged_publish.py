@@ -41,6 +41,9 @@ from research import enrich_with_research  # noqa: E402
 from dedup import filter_new_articles, check_published_duplicates, dedup_within_batch, mark_published  # noqa: E402
 from story_packet import build_story_packet  # noqa: E402
 from publisher import publish_articles, build_site  # noqa: E402
+from unsplash import fetch_images_for_articles as unsplash_fetch_images  # noqa: E402
+from pexels import fetch_images_for_articles as pexels_fetch_images  # noqa: E402
+from service_health import should_skip, record_success, record_failure  # noqa: E402
 from monica_writer import (  # noqa: E402
     _build_prompt,
     _build_repair_prompt,
@@ -706,6 +709,77 @@ def load_outbox(max_items: int) -> list[tuple[Path, dict]]:
     return out
 
 
+def article_needs_image(article: dict) -> bool:
+    return not article.get("image") or bool(article.get("image_category_fallback"))
+
+
+def clear_image_fallback(article: dict) -> None:
+    if article.get("image_category_fallback"):
+        for key in ["image", "image_thumb", "image_alt", "image_credit", "image_source_url", "image_caption", "image_placeholder"]:
+            article.pop(key, None)
+        article["image_category_fallback"] = False
+
+
+def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 1.2, pexels_delay: float = 0.5) -> dict[str, Any]:
+    """Add hero image fields to staged articles before markdown publish.
+
+    The staged flow bypasses run_pipeline.py step 2b, so do the same bounded
+    Unsplash → Pexels lookup here. This does not relax editorial gates; if image
+    providers are unavailable, articles continue to publish with existing
+    category fallback behavior and the missing-image state is reported.
+    """
+    total = len(articles)
+    if not total:
+        return {"total": 0, "images": 0, "unsplash": 0, "pexels": 0, "missing": 0}
+
+    unsplash_count = 0
+    pexels_count = 0
+
+    missing = [a for a in articles if article_needs_image(a)]
+    if missing and os.environ.get("UNSPLASH_ACCESS_KEY", ""):
+        skip, reason = should_skip("unsplash")
+        if skip:
+            log(f"images: unsplash skipped — {reason}")
+        else:
+            before = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
+            for article in missing:
+                clear_image_fallback(article)
+            unsplash_fetch_images(missing, delay=unsplash_delay)
+            after = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
+            unsplash_count = max(0, after - before)
+            if unsplash_count:
+                record_success("unsplash")
+            else:
+                record_failure("unsplash")
+
+    missing = [a for a in articles if article_needs_image(a)]
+    if missing and os.environ.get("PEXELS_API_KEY", ""):
+        skip, reason = should_skip("pexels")
+        if skip:
+            log(f"images: pexels skipped — {reason}")
+        else:
+            before = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
+            for article in missing:
+                clear_image_fallback(article)
+            pexels_fetch_images(missing, delay=pexels_delay)
+            after = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
+            pexels_count = max(0, after - before)
+            if pexels_count:
+                record_success("pexels")
+            else:
+                record_failure("pexels")
+
+    image_count = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
+    missing_count = sum(1 for a in articles if article_needs_image(a))
+    return {
+        "total": total,
+        "images": image_count,
+        "unsplash": unsplash_count,
+        "pexels": pexels_count,
+        "missing": missing_count,
+    }
+
+
 def quality_gate_retry_classification(data: dict, article: dict, breakdown: Any | None = None) -> dict[str, Any]:
     """Return structured fail-closed diagnostics for a post-Monica quality reject.
 
@@ -900,6 +974,13 @@ def cmd_publish(args: argparse.Namespace) -> int:
     if not articles:
         log("publish: all articles dropped as duplicates")
         return 0
+    image_summary = enrich_images_for_articles(articles)
+    log(
+        "publish: images "
+        f"{image_summary['images']}/{image_summary['total']} "
+        f"unsplash={image_summary['unsplash']} pexels={image_summary['pexels']} "
+        f"missing={image_summary['missing']}"
+    )
     if args.dry_run:
         log(f"publish: dry-run would publish {len(articles)} article(s)")
         for a in articles:

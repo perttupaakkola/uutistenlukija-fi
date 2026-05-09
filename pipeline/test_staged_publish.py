@@ -153,6 +153,46 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertTrue(any("central unsourced number" in reason for reason in feedback["quality_reasons"]))
         self.assertIn("quality_gate_rejected", failed["failure"])
 
+    def test_enrich_images_uses_unsplash_for_missing_article_images(self) -> None:
+        articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "sisältö"}]
+
+        def fake_unsplash(batch, delay=0):
+            batch[0]["image"] = "https://images.unsplash.com/photo-test"
+            batch[0]["image_alt"] = "Kuvaton artikkeli"
+            batch[0]["image_category_fallback"] = False
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key"}, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "unsplash_fetch_images", side_effect=fake_unsplash), \
+             patch.object(staged_publish, "record_success") as success:
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+
+        self.assertEqual(summary["images"], 1)
+        self.assertEqual(summary["unsplash"], 1)
+        self.assertEqual(summary["missing"], 0)
+        self.assertEqual(articles[0]["image"], "https://images.unsplash.com/photo-test")
+        success.assert_called_with("unsplash")
+
+    def test_enrich_images_clears_category_fallback_before_pexels_rescue(self) -> None:
+        articles = [{"title": "Fallback artikkeli", "category": "Kotimaa", "image": "/images/categories/kotimaa.jpg", "image_category_fallback": True}]
+
+        def fake_pexels(batch, delay=0):
+            self.assertNotIn("image", batch[0])
+            batch[0]["image"] = "/images/articles/fallback-hero.jpg"
+            batch[0]["image_category_fallback"] = False
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {"PEXELS_API_KEY": "key"}, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "pexels_fetch_images", side_effect=fake_pexels):
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+
+        self.assertEqual(summary["images"], 1)
+        self.assertEqual(summary["pexels"], 1)
+        self.assertEqual(articles[0]["image"], "/images/articles/fallback-hero.jpg")
+        self.assertFalse(articles[0]["image_category_fallback"])
+
     def test_quality_gate_feedback_marks_source_backed_length_only_as_repairable(self) -> None:
         record = _record("length-only", source_words=360, blocks=3)
         record["packet"]["packet_id"] = "pkt-length-only"
