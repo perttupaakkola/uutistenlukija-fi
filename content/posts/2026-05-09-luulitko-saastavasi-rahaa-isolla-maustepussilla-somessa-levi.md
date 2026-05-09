@@ -33,7 +33,6 @@ keywords:
   - "Meira"
 source_name: "Instagram / Treenipuro"
 source_url: "https://www.instagram.com/reel/DYCWeqstlCs/"
-briefing: true
 draft: false
 ---
 
