@@ -37,6 +37,15 @@ class FrontpageInteractionTests(unittest.TestCase):
         self.assertNotIn("['BNB', 'BNB', 'crypto', 'binancecoin']", live_js)
         self.assertNotIn("4 512,35", index)
 
+    def test_mobile_nav_stays_collapsed_without_horizontal_scroll(self) -> None:
+        css = self.read("static/css/portal-overhaul.css")
+
+        self.assertIn(".main-nav:not(.nav-open) { display: none !important; }", css)
+        self.assertIn(".site-header .main-nav.nav-open", css)
+        self.assertIn("width: 100% !important; max-width: 100% !important", css)
+        self.assertNotIn("width: max-content !important; min-width: 100% !important", css)
+        self.assertNotIn(".main-nav li:nth-child(n+6) { display: none; }", css)
+
     def test_homepage_newsletter_uses_async_subscription_handler(self) -> None:
         index = self.read("layouts/index.html")
         base = self.read("layouts/_default/baseof.html")
