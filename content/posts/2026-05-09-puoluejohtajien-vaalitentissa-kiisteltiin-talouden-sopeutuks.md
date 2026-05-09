@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/purra-antti-lindtman-karsii-paaministeritaudista/9335956"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
