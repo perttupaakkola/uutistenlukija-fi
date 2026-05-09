@@ -13,7 +13,7 @@
   {{- else if ne $desc "" -}}
     {{- /* Use existing .Description */ -}}
   {{- else -}}
-    {{- $contentText := .Content | plainify | truncate 160 -}}
+    {{- $contentText := partial "meta-boundary.html" (dict "text" .Content "limit" 155) -}}
     {{- if gt (len $contentText) 40 -}}
       {{- $desc = $contentText -}}
     {{- else -}}
@@ -38,7 +38,7 @@
   {{- $desc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) -}}
 {{- end -}}
 
-{{- $desc = $desc | plainify | replaceRE `\s+` " " | strings.TrimSpace | truncate 155 -}}
+{{- $desc = partial "meta-boundary.html" (dict "text" $desc "limit" 155) -}}
 
 {{- if not $desc }}{{ $desc = .Site.Params.description | default .Site.Title }}{{ end -}}
 {{- $desc -}}

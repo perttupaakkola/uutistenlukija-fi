@@ -1,0 +1,11 @@
+{{- $text := .text | default "" -}}
+{{- $limit := .limit | default 155 -}}
+{{- $clean := $text | plainify | replaceRE `\s+` " " | strings.TrimSpace -}}
+{{- if gt (len $clean) $limit -}}
+  {{- $cut := substr $clean 0 $limit -}}
+  {{- $clean = $cut | replaceRE `\s+\S*$` "" | replaceRE `[[:space:]]+` " " | strings.TrimSpace -}}
+  {{- if lt (len $clean) 40 -}}
+    {{- $clean = substr $cut 0 $limit | strings.TrimSpace -}}
+  {{- end -}}
+{{- end -}}
+{{- return $clean -}}
