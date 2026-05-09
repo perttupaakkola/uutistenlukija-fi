@@ -27,6 +27,7 @@ import urllib.error
 PIPELINE_DIR = Path(__file__).parent
 PROJECT_DIR = PIPELINE_DIR.parent
 METRICS_FILE = PIPELINE_DIR / "metrics.jsonl"
+STAGED_PUBLISHED_DIR = PIPELINE_DIR / "queues" / "staged" / "published"
 OUTPUT_FILE = PROJECT_DIR / "static" / "api" / "source-stats.json"
 DISCORD_WEBHOOK_ENV = "DISCORD_METRICS_WEBHOOK"
 
@@ -52,6 +53,64 @@ def load_entries(days: int = 7) -> list[dict]:
                     entries.append({"dt": dt, **entry})
             except Exception:
                 continue
+    return entries
+
+
+def _source_key_from_url(url: str) -> str:
+    """Return a stable source key from a URL when no source label exists."""
+    if not url:
+        return ""
+    try:
+        from urllib.parse import urlparse
+        host = urlparse(url).netloc.lower()
+        return host[4:] if host.startswith("www.") else host
+    except Exception:
+        return ""
+
+
+def _staged_source_name(artifact: dict) -> str:
+    """Extract the best source name from a staged published artifact."""
+    for section_name in ("article", "packet", "original_article", "payload"):
+        section = artifact.get(section_name) or {}
+        if not isinstance(section, dict):
+            continue
+        for key in ("source", "source_name", "source_domain"):
+            value = section.get(key)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+        source_names = section.get("source_names")
+        if isinstance(source_names, list):
+            for value in source_names:
+                if isinstance(value, str) and value.strip():
+                    return value.strip()
+        for key in ("source_url", "link", "url"):
+            value = section.get(key)
+            if isinstance(value, str) and value.strip():
+                host = _source_key_from_url(value)
+                if host:
+                    return host
+    return ""
+
+
+def load_staged_published_entries(days: int = 7, staged_dir: Path = STAGED_PUBLISHED_DIR) -> list[dict]:
+    """Load source metric entries from staged published queue artifacts."""
+    if not staged_dir.exists():
+        return []
+
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    entries = []
+    for path in staged_dir.glob("*.json"):
+        try:
+            artifact = json.loads(path.read_text(encoding="utf-8"))
+            ts_str = artifact.get("published_at") or artifact.get("completed_at") or artifact.get("created_at") or ""
+            dt = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
+            if dt < cutoff:
+                continue
+            source = _staged_source_name(artifact)
+            if source:
+                entries.append({"dt": dt, "ts": ts_str, "sources": {source: 1}, "metric_source": "staged_published", "artifact": path.name})
+        except Exception:
+            continue
     return entries
 
 
@@ -88,9 +147,12 @@ def compute_stats(entries: list[dict], stale_days: int = 3) -> dict:
 
     stale_count = sum(1 for s in stats if s["stale"])
 
+    metric_sources = sorted({entry.get("metric_source", "metrics_jsonl") for entry in entries})
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "window_days": 7,
+        "metric_sources": metric_sources,
         "total_articles": total_articles,
         "source_count": len(stats),
         "stale_count": stale_count,
@@ -146,9 +208,13 @@ def main():
     args = parser.parse_args()
 
     print(f"[source_stats] Loading last {args.days} days from {METRICS_FILE}...")
-    entries = load_entries(days=args.days)
-    print(f"[source_stats] Found {len(entries)} entries")
+    metrics_entries = load_entries(days=args.days)
+    print(f"[source_stats] Found {len(metrics_entries)} metrics.jsonl entries")
 
+    staged_entries = load_staged_published_entries(days=args.days)
+    print(f"[source_stats] Found {len(staged_entries)} staged published entries")
+
+    entries = metrics_entries + staged_entries
     report = compute_stats(entries, stale_days=3)
 
     print(f"[source_stats] Total articles: {report['total_articles']}, sources: {report['source_count']}, stale: {report['stale_count']}")
