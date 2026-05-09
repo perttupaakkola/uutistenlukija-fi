@@ -9,6 +9,8 @@ configured as an agent using GPT-5.4 monthly tokens.
 
 from __future__ import annotations
 
+import hashlib
+from datetime import datetime, timezone
 import json
 import math
 import os
@@ -344,16 +346,51 @@ def _is_source_backed_repair_candidate(packet: dict, issues: list[str]) -> bool:
     return _packet_source_words(packet) >= SOURCE_BACKED_REPAIR_WORDS and _packet_source_blocks(packet) >= SOURCE_BACKED_REPAIR_BLOCKS
 
 
+def _source_block_ids_for_repair(packet: dict) -> list[str]:
+    blocks = packet.get("clean_source_blocks")
+    if not isinstance(blocks, list):
+        return []
+    ids: list[str] = []
+    for index, block in enumerate(blocks):
+        if not isinstance(block, dict):
+            continue
+        text = _normalize_ws(str(block.get("text") or ""))
+        if not text:
+            continue
+        source = _normalize_ws(str(block.get("source") or block.get("name") or f"block-{index + 1}"))
+        digest = hashlib.sha1(text.encode("utf-8", errors="ignore")).hexdigest()[:10]
+        ids.append(f"{index + 1}:{source}:{digest}")
+    return ids
+
+
 def _near_miss_repair_metadata(packet: dict, initial_payload: dict, final_payload: dict, final_issues: list[str]) -> dict[str, Any]:
-    return {
+    pre_words = _content_word_count(initial_payload)
+    post_words = _content_word_count(final_payload)
+    source_words = _packet_source_words(packet)
+    source_blocks = _packet_source_blocks(packet)
+    recovered = not final_issues and post_words >= MIN_CONTENT_WORDS
+    repair_result = "published" if recovered else "still_short" if post_words < MIN_CONTENT_WORDS else "quality_gate_rejected"
+    metadata = {
         "repair_attempt": "source_backed_near_short",
-        "pre_repair_word_count": _content_word_count(initial_payload),
-        "post_repair_word_count": _content_word_count(final_payload),
-        "source_words": _packet_source_words(packet),
-        "source_blocks": _packet_source_blocks(packet),
+        "repair_attempted_at": datetime.now(timezone.utc).isoformat(),
+        "repair_trigger": f"pre_repair_word_count={pre_words}; selected_source_words={source_words}; selected_source_blocks={source_blocks}",
+        "pre_repair_word_count": pre_words,
+        "pre_repair_lead_word_count": len(str(initial_payload.get("content") or "").split("\n", 1)[0].split()),
+        "post_repair_word_count": post_words,
+        "post_repair_lead_word_count": len(str(final_payload.get("content") or "").split("\n", 1)[0].split()),
+        "selected_source_words_at_repair": source_words,
+        "selected_source_blocks_at_repair": source_blocks,
+        # Backward-compatible aliases used by earlier OPE-42 comments/tests.
+        "source_words": source_words,
+        "source_blocks": source_blocks,
+        "repair_added_word_count": max(0, post_words - pre_words),
+        "repair_result": repair_result,
+        "repair_rejection_reason": "; ".join(final_issues) if final_issues else "",
+        "source_block_ids_used_for_repair": _source_block_ids_for_repair(packet),
         "final_issues": list(final_issues),
-        "recovered": not final_issues and _content_word_count(final_payload) >= MIN_CONTENT_WORDS,
+        "recovered": recovered,
     }
+    return metadata
 
 
 def _build_prompt(packet: dict) -> str:

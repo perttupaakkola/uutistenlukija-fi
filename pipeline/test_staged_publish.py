@@ -327,6 +327,45 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(sample["source_words"], 120)
         self.assertEqual(sample["source_blocks"], 2)
 
+
+    @patch.object(staged_publish, "_run_monica")
+    def test_monica_worker_records_near_short_repair_markers_in_outbox(self, run_mock) -> None:
+        record = _record("worker-near-short", source_words=240, blocks=2)
+        record["packet"]["packet_id"] = "pkt-worker-near-short"
+        record["packet"]["story_confidence"] = 0.9
+        record["packet"]["clean_source_blocks"] = [
+            {"source": "Testi 1", "text": " ".join(["sana"] * 120), "word_count": 120},
+            {"source": "Testi 2", "text": " ".join(["sana"] * 120), "word_count": 120},
+        ]
+        path = self._write("ready", "worker-near-short", record, age_hours=1)
+        near_payload = {
+            "packet_id": "pkt-worker-near-short",
+            "title": "Lähes valmis artikkeli",
+            "summary": "Lähes valmis yhteenveto.",
+            "content": "Aloituskappale sisältää riittävästi sanoja ja kuvaa asian taustan, vaikutukset sekä jatkon lukijalle selkeästi, ja mukana on vielä lisää varmistavia sanoja lukijalle nyt, jotta pituusraja täyttyy varmasti tässä testissä nyt selvästi.\n\n## Tausta\n\n" + " ".join(["sana"] * 215),
+            "category": "Talous",
+            "tags": ["talous", "testi", "korjaus"],
+            "summary_bullets": ["Yksi asia", "Toinen asia", "Kolmas asia"],
+            "content_type": "article",
+            "editorial_reviewed": True,
+            "confidence": 0.9,
+            "journalist_note": " ",
+        }
+        repaired_payload = {**near_payload, "content": "Aloituskappale sisältää riittävästi sanoja ja kuvaa asian taustan, vaikutukset sekä jatkon lukijalle selkeästi, ja mukana on vielä lisää varmistavia sanoja lukijalle nyt, jotta pituusraja täyttyy varmasti tässä testissä nyt selvästi.\n\n## Tausta\n\n" + " ".join(["sana"] * 266)}
+        run_mock.side_effect = [json.dumps(near_payload), json.dumps(near_payload), json.dumps(repaired_payload)]
+
+        status, _ = staged_publish.process_one_packet(path, type("Args", (), {})())
+
+        self.assertEqual(status, "ok")
+        outbox = json.loads((self.root / "outbox" / "worker-near-short.json").read_text(encoding="utf-8"))
+        repair = outbox["repair"]
+        self.assertEqual(repair["repair_attempt"], "source_backed_near_short")
+        self.assertEqual(repair["pre_repair_word_count"], 247)
+        self.assertGreaterEqual(repair["post_repair_word_count"], 250)
+        self.assertEqual(repair["repair_result"], "published")
+        self.assertTrue(repair["source_block_ids_used_for_repair"])
+        self.assertEqual(outbox["article"]["monica_repair"]["repair_attempt"], "source_backed_near_short")
+
     def test_failed_status_extracts_nested_failure_reason_and_cleanup_bucket(self) -> None:
         self._write("failed", "expired", {**_record("expired", 100), "failure": {"reason": "stale_ready_expired age_h=10.1 max_age_h=10.0"}}, age_hours=12)
 

@@ -49,7 +49,9 @@ from monica_writer import (  # noqa: E402
     _build_repair_prompt,
     _basic_payload_issues,
     _extract_json_object,
+    _is_source_backed_near_miss,
     _merge_article,
+    _near_miss_repair_metadata,
     _normalize_ws,
     _packet_source_blocks as monica_packet_source_blocks,
     _packet_source_words as monica_packet_source_words,
@@ -663,6 +665,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
             atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
             writing.unlink(missing_ok=True)
             return ("failed", reason)
+        repair_metadata = None
         issues = _basic_payload_issues(payload)
         if issues:
             log(f"monica-worker: repair pass {'; '.join(issues)}")
@@ -677,12 +680,27 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
                 writing.unlink(missing_ok=True)
                 return ("failed", reason)
             issues = _basic_payload_issues(payload)
+            if _is_source_backed_near_miss(packet, payload, issues):
+                near_miss_payload = payload
+                near_miss_issues = list(issues) + ["source_backed_writer_shortfall: final expansion required"]
+                log(f"monica-worker: near-miss repair pass {'; '.join(near_miss_issues)}")
+                repaired_raw = _run_monica(_build_repair_prompt(packet, near_miss_payload, near_miss_issues))
+                repaired_payload = _extract_json_object(repaired_raw)
+                raw = repaired_raw
+                payload = repaired_payload
+                issues = _basic_payload_issues(payload)
+                repair_metadata = _near_miss_repair_metadata(packet, near_miss_payload, payload, issues)
         if issues:
-            data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": "; ".join(issues), "payload": payload, "raw_response": raw, "writer_failure_feedback": failed_writer_feedback(data, payload, issues, raw)})
+            feedback = failed_writer_feedback(data, payload, issues, raw)
+            if repair_metadata:
+                feedback.update(repair_metadata)
+            data.update({"failed_at": datetime.now(timezone.utc).isoformat(), "failure": "; ".join(issues), "payload": payload, "raw_response": raw, "writer_failure_feedback": feedback})
             atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
             writing.unlink(missing_ok=True)
             return ("failed", "; ".join(issues))
         article = _merge_article(original, packet, payload)
+        if repair_metadata:
+            article["monica_repair"] = repair_metadata
         out = {
             **data,
             "completed_at": datetime.now(timezone.utc).isoformat(),
@@ -690,6 +708,8 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
             "raw_response": raw,
             "article": article,
         }
+        if repair_metadata:
+            out["repair"] = repair_metadata
         atomic_write_json(STAGED_ROOT / "outbox" / writing.name, out)
         writing.unlink(missing_ok=True)
         return ("ok", article.get("title", "")[:100])

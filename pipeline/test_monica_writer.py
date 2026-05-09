@@ -361,8 +361,14 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(metadata["repair_attempt"], "source_backed_near_short")
         self.assertEqual(metadata["pre_repair_word_count"], 247)
         self.assertEqual(metadata["post_repair_word_count"], 281)
+        self.assertEqual(metadata["repair_result"], "published")
+        self.assertIn("pre_repair_word_count=247", metadata["repair_trigger"])
+        self.assertGreaterEqual(metadata["selected_source_words_at_repair"], 180)
+        self.assertGreaterEqual(metadata["selected_source_blocks_at_repair"], 2)
         self.assertGreaterEqual(metadata["source_words"], 180)
         self.assertGreaterEqual(metadata["source_blocks"], 2)
+        self.assertIn("repair_attempted_at", metadata)
+        self.assertTrue(metadata["source_block_ids_used_for_repair"])
         self.assertTrue(metadata["recovered"])
 
     @patch(PATCH_TARGET)
@@ -405,6 +411,8 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(rewritten[0]["monica_repair"]["repair_attempt"], "source_backed_near_short")
         self.assertEqual(rewritten[0]["monica_repair"]["pre_repair_word_count"], 247)
         self.assertGreaterEqual(rewritten[0]["monica_repair"]["post_repair_word_count"], 250)
+        self.assertEqual(rewritten[0]["monica_repair"]["repair_result"], "published")
+        self.assertTrue(rewritten[0]["monica_repair"]["source_block_ids_used_for_repair"])
         self.assertTrue(rewritten[0]["monica_repair"]["recovered"])
 
 
