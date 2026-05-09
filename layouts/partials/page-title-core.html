@@ -23,6 +23,6 @@
 {{- else if eq .RelPermalink "/404.html" -}}
   {{- $title = "Sivua ei löytynyt" -}}
 {{- else if .IsPage -}}
-  {{- $title = partial "meta-boundary.html" (dict "text" .Title "limit" 43) -}}
+  {{- $title = partial "meta-boundary.html" (dict "text" .Title "limit" 50 "min" 26) -}}
 {{- end -}}
 {{- return $title -}}
