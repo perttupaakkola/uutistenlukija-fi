@@ -39,7 +39,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittajien-pentikainen-eurooppa-ei-voi-olla-enaa-varma-etta-yhdysvallat-seisoo-sen-rinnalla-tilanteessa-kuin-tilanteessa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
