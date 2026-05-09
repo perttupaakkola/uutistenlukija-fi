@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/viikon-19-2026-10-elokuvauutista-netflix-marvel-king/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
