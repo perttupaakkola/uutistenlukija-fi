@@ -97,31 +97,50 @@ def total_source_words(article: dict) -> int:
     return sum(len(str(article.get(k, "") or "").split()) for k in ["title", "description", "research", "research_text"])
 
 
-def source_strength(article: dict) -> tuple[int, int, int, int, int]:
+def source_strength(article: dict) -> tuple[int, int, int, int, int, int]:
     research = str(article.get("research") or article.get("research_text") or "")
     desc = str(article.get("description") or "")
     category = article_category(article)
     source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
+    source_words = len(research.split())
     tier_score = max(0, 4 - int(article.get("source_tier", 2) or 2))
-    # OPE-41: Talous is materially under target and current scans often drop
-    # every Talous item before queueing because paywalled business feeds only
-    # yield RSS fallback text. Keep this as a tie/near-tie enqueue signal only:
-    # downstream source floors, Monica repair, quality gates, and publish gates
-    # remain fail-closed for thin or unsupported drafts.
-    under_target_category_bonus = 60 if category == "Talous" else 0
     return (
-        len(research.split()) + under_target_category_bonus,
+        source_words,
         source_blocks,
         len(desc.split()),
         tier_score,
         1 if category == "Talous" else 0,
+        total_source_words(article),
     )
+
+
+def category_enqueue_bonus(article: dict) -> int:
+    """Return bounded under-target category queue nudge after a real source floor."""
+    if article_category(article) == "Talous":
+        research_words = len(str(article.get("research") or article.get("research_text") or "").split())
+        if research_words >= 180:
+            return 40
+    return 0
+
+
+def passes_priority_source_floor(article: dict) -> bool:
+    if article_category(article) != "Talous":
+        return True
+    research_words = len(str(article.get("research") or article.get("research_text") or "").split())
+    return research_words >= 180
+
+
+def enqueue_strength(article: dict) -> tuple[int, int, int, int, int, int]:
+    strength = source_strength(article)
+    return (strength[0] + category_enqueue_bonus(article), *strength[1:])
 
 
 def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> list[dict]:
     if max_packets <= 0:
         return []
-    ordered = sorted(articles, key=source_strength, reverse=True)
+    eligible_priority = [article for article in articles if article_category(article) not in CATEGORY_SCAN_ENQUEUE_PRIORITY or passes_priority_source_floor(article)]
+    fallback_priority = [article for article in articles if article not in eligible_priority]
+    ordered = sorted(eligible_priority, key=enqueue_strength, reverse=True) + sorted(fallback_priority, key=source_strength, reverse=True)
     if len(ordered) <= max_packets:
         return ordered
 
@@ -130,7 +149,11 @@ def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> li
     for category in CATEGORY_SCAN_ENQUEUE_PRIORITY:
         if category in selected_categories:
             continue
-        priority_candidates = [article for article in ordered[max_packets:] if article_category(article) == category]
+        priority_candidates = [
+            article
+            for article in ordered[max_packets:]
+            if article_category(article) == category and passes_priority_source_floor(article)
+        ]
         if not priority_candidates:
             continue
         weakest_index, weakest = min(enumerate(selected), key=lambda item: source_strength(item[1]))

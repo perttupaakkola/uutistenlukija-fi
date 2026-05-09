@@ -255,11 +255,20 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
 
 
-    def test_scan_enqueue_promotes_talous_over_thin_non_talous_backlog(self) -> None:
+    def test_scan_enqueue_does_not_promote_thin_talous_fallback(self) -> None:
         thin_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 90, "description": "kuvaus"}
         fallback_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 120, "description": "kuvaus"}
 
         selected = staged_publish.select_scan_enqueue_candidates([thin_kotimaa, fallback_talous], max_packets=1)
+
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(staged_publish.article_category(selected[0]), "Kotimaa")
+
+    def test_scan_enqueue_promotes_talous_after_source_floor_over_thin_backlog(self) -> None:
+        thin_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 90, "description": "kuvaus"}
+        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 190, "description": "kuvaus"}
+
+        selected = staged_publish.select_scan_enqueue_candidates([thin_kotimaa, sourced_talous], max_packets=1)
 
         self.assertEqual(len(selected), 1)
         self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
