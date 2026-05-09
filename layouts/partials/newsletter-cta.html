@@ -23,7 +23,8 @@
 {{- end -}}
 
 {{- /* Standardized fallback benefit copy */ -}}
-{{- $defaults := .Site.Data.newsletter.defaults -}}
+{{- $site := cond (reflect.IsMap .) $ctx.Site .Site -}}
+{{- $defaults := $site.Data.newsletter.defaults -}}
 {{- $title = $title | default $defaults.title -}}
 {{- $text = $text | default $defaults.text -}}
 {{- $eyebrow = $eyebrow | default $defaults.eyebrow -}}
@@ -31,7 +32,9 @@
 {{- $placeholder := $placeholderOverride | default $defaults.placeholder | default "Sähköpostiosoitteesi" -}}
 {{- if eq $trust false }}{{- $trust = "" -}}{{- else -}}{{- $trust = $trust | default $defaults.trust -}}{{- end -}}
 
-{{- $source := $sourceOverride | default (cond ($ctx.IsPage | default false) "article" "page") -}}
+{{- $isPage := false -}}
+{{- with $ctx }}{{- $isPage = .IsPage | default false -}}{{- end -}}
+{{- $source := $sourceOverride | default (cond $isPage "article" "page") -}}
 <section id="newsletter-signup" class="newsletter-signup newsletter-signup--{{ $variant }}" aria-labelledby="newsletter-signup-heading">
   <div class="newsletter-signup__inner">
     <div class="newsletter-signup__copy">

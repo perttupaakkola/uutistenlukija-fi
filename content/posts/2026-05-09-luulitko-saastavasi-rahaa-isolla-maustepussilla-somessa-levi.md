@@ -14,7 +14,9 @@ journalist_note: |
   Juttu perustuu Instagram-reeliin ja siinä esitettyihin väitteisiin tuotteiden sisällöstä. Pakkausten ainesosat ja ravintosisällöt kannattaa tarkistaa aina suoraan tuoteselosteesta, koska vertailutuotteet eivät välttämättä ole täysin samoja.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
+image: "/images/articles/maustepussi-hintavertailu.svg"
+image_alt: "Kuvituskuva maustepusseista ja tuoteselosteesta hintavertailun yhteydessä"
+image_caption: "Kuvituskuva maustepussien hinta- ja sisältövertailusta."
 reading_time: 1
 tags:
   - mausteet
