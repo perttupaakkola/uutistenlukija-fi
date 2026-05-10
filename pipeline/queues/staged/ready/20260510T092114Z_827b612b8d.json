@@ -1,0 +1,124 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-10T09:21:14.988461+00:00",
+  "digest": "827b612b8d",
+  "packet": {
+    "packet_id": "20260510T092114Z_827b612b8d",
+    "created_at": "2026-05-10T09:21:14Z",
+    "headline_seed": "EK21: Sami Pajari iski takaisin!",
+    "description_seed": "IS seuraa Portugalin MM-rallin huipennusta.",
+    "link": "https://www.is.fi/ralli/art-2000011997607.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "SuomiF1",
+      "source-4",
+      "source-7",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ralli/art-2000011997607.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "EK21: Sami Pajari iski takaisin!"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "SuomiF1",
+        "source_type": "research",
+        "text": "Portugalin MM-rallin 16:s erikoiskoe tarjosi tapahtumaa, kun voittotaistossa vääntänyt Oliver Solberg kärsi rengasrikon.",
+        "word_count": 13,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Solbergin ongelmat nostivat Sami Pajarin osakkeita. Suomalainen ajoi jälleen vahvasti ja nousi takaisin palkintosijalle.",
+        "word_count": 14,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "Kilpailua johtaa ranskalaiskonkari Sébastien Ogier. Yhdeksänkertainen mestari kertoi ottaneen varovaisesti tien karujen urien johdosta. Tämä tarkoitti sitä, että sekä Neuville, että Pajari ottivat Ogieria kiinni. Koko kärkikolmikko mahtuu nyt 5,5 sekunnin sisään.",
+        "word_count": 32,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "– Hyvä pätkä jälleen. Mentiin aika rajoilla. Todella puhdas pätkä ja koitetaan jatkaa samaan malliin, summasi Pajari maalissa.",
+        "word_count": 18,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Portugalin MM-rallin 16:s erikoiskoe tarjosi tapahtumaa, kun voittotaistossa vääntänyt Oliver Solberg kärsi rengasrikon.\n\nSolbergin ongelmat nostivat Sami Pajarin osakkeita. Suomalainen ajoi jälleen vahvasti ja nousi takaisin palkintosijalle.\n\nKilpailua johtaa ranskalaiskonkari Sébastien Ogier. Yhdeksänkertainen mestari kertoi ottaneen varovaisesti tien karujen urien johdosta. Tämä tarkoitti sitä, että sekä Neuville, että Pajari ottivat Ogieria kiinni. Koko kärkikolmikko mahtuu nyt 5,5 sekunnin sisään.\n\n– Hyvä pätkä jälleen. Mentiin aika rajoilla. Todella puhdas pätkä ja koitetaan jatkaa samaan malliin, summasi Pajari maalissa.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 172,
+      "selected_blocks": 4,
+      "selected_source_words": 77,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "SuomiF1",
+        "source-2",
+        "source-3",
+        "source-4",
+        "source-5",
+        "source-6",
+        "source-7",
+        "source-8",
+        "source-9",
+        "IS Urheilu"
+      ],
+      "selected_sources": [
+        "SuomiF1",
+        "source-4",
+        "source-7",
+        "source-5"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "EK21: Sami Pajari iski takaisin!",
+      "description": "IS seuraa Portugalin MM-rallin huipennusta.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "EK21: Sami Pajari iski takaisin!",
+    "description": "IS seuraa Portugalin MM-rallin huipennusta.",
+    "link": "https://www.is.fi/ralli/art-2000011997607.html",
+    "published": "2026-05-10T09:16:00+00:00",
+    "source": "IS Urheilu",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "27e2f4bceea18de89e9a183dde0ab11f",
+    "_url_hash": "fc3ffafea15b8a3b94577cc565cfe0f91112fbc68d042960d3bff1d246e11b15",
+    "source_tier": 1,
+    "category_hint": "Urheilu",
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: SuomiF1]\nPortugalin MM-rallin 16:s erikoiskoe tarjosi tapahtumaa, kun voittotaistossa vääntänyt Oliver Solberg kärsi rengasrikon.\n\nOikea eturengas tyhjeni, vaikkei ruotsalainen osunut mihinkään. Vastaavia renkaan tyhjentymisiä on nähty valitettavan paljon Hankookin aikakaudella rallin MM-sarjassa. Solberg putosi kakkospaikalta aina viidenneksi saakka, mutta täyttä katastrofia ei tapahtunut, sillä ruotsalaisnuorukainen putosi vain vajaan 20 sekunnin päähän kärjestä.\n\n– En osaa sanoa. Ajoin kuitenkin koko ajan linjalla. Mitä tässä voi tehdä, ihmetteli Solberg.\n\nSolbergin ongelmat nostivat Sami Pajarin osakkeita. Suomalainen ajoi jälleen vahvasti ja nousi takaisin palkintosijalle.\n\n– Hyvä pätkä jälleen. Mentiin aika rajoilla. Todella puhdas pätkä ja koitetaan jatkaa samaan malliin, summasi Pajari maalissa.\n\nPajari nipisti myös toiseksi nousseen Thierry Neuvillen etumatkaa. Suomalainen on vain 1,6 sekunnin päässä belgialaisen kakkospaikasta.\n\nKilpailua johtaa ranskalaiskonkari Sébastien Ogier. Yhdeksänkertainen mestari kertoi ottaneen varovaisesti tien karujen urien johdosta. Tämä tarkoitti sitä, että sekä Neuville, että Pajari ottivat Ogieria kiinni. Koko kärkikolmikko mahtuu nyt 5,5 sekunnin sisään.\n\nLauantaina ajetaan vielä kolme erikoiskoetta. EK17 käynnistyy kello 18:35 Suomen aikaa. Kilpailun kokonaistilanne alle.\n\nPortugalin MM-ralli 2026: Erikoiskokeet, tv-lähetykset ja tilanne",
+    "research_source": "multi"
+  }
+}
