@@ -79,6 +79,8 @@ SOURCE_TRUST_TIERS: dict[str, int] = {
     "Lääkärilehti":       2,
     "Suomen Yrittäjät":   2,
     "Teknavi":            2,
+    "Finanssiala":        2,
+    "Arvopaperi":         2,
     # ── Tier 3: Aggregators / smaller sites ──────────────────────────────────
     "Hacker News Best":   3,
 }
@@ -156,6 +158,18 @@ RSS_FEEDS = [
     {
         "name": "Suomen Yrittäjät",
         "url": "https://www.yrittajat.fi/feed/?post_type=news&tax-organization=suomen-yrittajat",
+        "language": "fi",
+        "category_hint": "Talous",
+    },
+    {
+        "name": "Finanssiala",
+        "url": "https://www.finanssiala.fi/feed/",
+        "language": "fi",
+        "category_hint": "Talous",
+    },
+    {
+        "name": "Arvopaperi",
+        "url": "https://www.arvopaperi.fi/api/feed/v2/rss/ap",
         "language": "fi",
         "category_hint": "Talous",
     },
@@ -991,6 +1005,8 @@ def scan_all_feeds() -> List[Dict]:
         "Suomen Yrittäjät": 40,
         "Maaseudun Tulevaisuus": 35,
         "Yle Uutiset": 30,
+        "Finanssiala": 32,
+        "Arvopaperi": 28,
         "MTV Uutiset": 25,
         "Taloussanomat": 10,
         "Kauppalehti": 5,
@@ -1008,6 +1024,28 @@ def scan_all_feeds() -> List[Dict]:
             article.get("published", ""),
         )
 
+    def _diversify_talous_pool(pool, first_pass_per_source=2):
+        """Keep source-rich ordering, but prevent one stale source filling Talous.
+
+        OPE-51 live checks found Talous quota filled by five source-rich
+        Suomen Yrittäjät/KL items that were then all filtered as already
+        published. A bounded per-source first pass keeps fresh/open feeds in
+        the ready set without replaying old items or relaxing downstream gates.
+        """
+        ranked = sorted(pool, key=_talous_source_score, reverse=True)
+        first_pass = []
+        overflow = []
+        per_source = {}
+        for article in ranked:
+            source = article.get("source", "")
+            seen = per_source.get(source, 0)
+            if seen < first_pass_per_source:
+                first_pass.append(article)
+            else:
+                overflow.append(article)
+            per_source[source] = seen + 1
+        return first_pass + overflow
+
     # Pre-classify all unique articles
     for article in unique:
         article["_guessed_category"] = _guess_category(article)
@@ -1021,7 +1059,7 @@ def scan_all_feeds() -> List[Dict]:
     # min_source_words because several high-volume business feeds expose only
     # paywalled/JS-rendered bodies. Keep the quota, but prefer candidates with
     # richer RSS/source text before KL/IS-style thin packets burn the slots.
-    cat_pools["Talous"].sort(key=_talous_source_score, reverse=True)
+    cat_pools["Talous"] = _diversify_talous_pool(cat_pools["Talous"])
 
     # Fill quotas from each category pool
     selected = []
