@@ -471,40 +471,58 @@ def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int
 def _backfill_research_sources(
     selected: list[dict],
     all_blocks: list[dict],
+    article: dict | None = None,
     min_words: int = 80,
     max_sources: int = 4,
 ) -> list[dict]:
-    """Add source-rich research blocks when keyword selection leaves a thin packet.
+    """Add source-rich research blocks when strict selection leaves a thin packet.
 
-    Talous candidates from JS/paywalled feeds can pass the pipeline's combined
-    source-word check thanks to fetched research, but strict keyword overlap may
-    leave Monica with only a tiny RSS-description block. Do not lower gates or
-    invent source text; just preserve the longest already-fetched research block
-    as packet evidence when the selected packet is still below a usable size.
+    Do not lower Monica gates or invent source text. This only preserves
+    already-fetched research evidence in the packet when the primary relevance
+    selector has produced a zero/low-source packet despite rich candidates.
     """
     if _source_words(selected) >= min_words or len(selected) >= max_sources:
         return selected
 
-    selected_sources = {str(block.get("source", "")).lower() for block in selected if block.get("source")}
-    selected_text = " ".join(str(block.get("text", "")) for block in selected)
+    article_context = " ".join(
+        str((article or {}).get(field, "") or "")
+        for field in ("title", "description", "source")
+    )
+    selected_context = " ".join(str(block.get("text", "")) for block in selected)
+    context_tokens = _keyword_tokens(" ".join([article_context, selected_context]))
 
-    def _candidate_score(block: dict) -> tuple[int, int, int]:
+    selected_sources = {str(block.get("source", "")).lower() for block in selected if block.get("source")}
+
+    def _candidate_score(block: dict) -> tuple[int, int, int, int]:
+        text = str(block.get("text", ""))
         source = str(block.get("source", "")).lower()
+        overlap, strong = _keyword_overlap(context_tokens, text)
         source_match = int(bool(source and source in selected_sources))
-        overlap, strong = _keyword_overlap(_keyword_tokens(selected_text), str(block.get("text", "")))
-        return (source_match, strong + overlap, int(block.get("word_count", 0) or 0))
+        words = int(block.get("word_count", 0) or 0)
+        # For zero-source packets, candidate research is the only evidence we
+        # have. Keep the richest already-fetched block rather than sending an
+        # empty packet downstream; story_confidence still reflects weakness.
+        zero_packet_bonus = int(not selected)
+        return (source_match, strong + overlap, zero_packet_bonus, words)
 
     seen_text = {block.get("text", "") for block in selected}
-    candidates = [
-        block for block in all_blocks
-        if block.get("source_type") == "research"
-        and block.get("text") not in seen_text
-        and int(block.get("word_count", 0) or 0) >= 40
-        and _candidate_score(block)[:2] != (0, 0)
-    ]
-    candidates.sort(key=_candidate_score, reverse=True)
+    candidates = []
+    for block in all_blocks:
+        words = int(block.get("word_count", 0) or 0)
+        if (
+            block.get("source_type") != "research"
+            or block.get("text") in seen_text
+            or words < 40
+        ):
+            continue
+        score = _candidate_score(block)
+        if selected and score[:2] == (0, 0):
+            continue
+        candidates.append((score, block))
 
-    for block in candidates:
+    candidates.sort(key=lambda item: item[0], reverse=True)
+
+    for _, block in candidates:
         selected.append(block)
         seen_text.add(block.get("text", ""))
         if _source_words(selected) >= min_words or len(selected) >= max_sources:
@@ -587,7 +605,7 @@ def build_story_packet(article: dict) -> dict:
     all_blocks.extend(_fallback_source_blocks(article))
     supported_blocks = _filter_topically_supported_sources(article, all_blocks)
     selected_blocks = _select_best_sources(article, supported_blocks)
-    selected_blocks = _backfill_research_sources(selected_blocks, all_blocks)
+    selected_blocks = _backfill_research_sources(selected_blocks, all_blocks, article)
     source_text = "\n\n".join(block["text"] for block in selected_blocks)
     source_diagnostics = _source_diagnostics(all_blocks, selected_blocks)
 

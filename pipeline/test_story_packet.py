@@ -197,6 +197,25 @@ class StoryPacketTests(unittest.TestCase):
         self.assertEqual(packet["source_selection_outcome"], "zero_source_packet")
         self.assertTrue(packet["source_diagnostics"]["zero_source_packet"])
 
+    def test_zero_source_packet_preserves_rich_candidate_evidence(self) -> None:
+        candidate = " ".join(["valtiontalouden sopeutus vaikuttaa kuntien investointeihin"] * 65)
+        article = {
+            "title": "Markkinatilanne muuttui nopeasti",
+            "description": "",
+            "source": "Taloussanomat",
+            "link": "https://www.is.fi/taloussanomat/example-zero",
+            "category_hint": "Talous",
+            "research": f"[Lähde: Avoin lähde]\n{candidate}",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["source_selection_outcome"], "usable_source_packet")
+        self.assertGreaterEqual(packet["source_diagnostics"]["candidate_source_words"], 300)
+        self.assertGreaterEqual(packet["source_diagnostics"]["selected_source_words"], 300)
+        self.assertEqual(packet["source_diagnostics"]["selected_blocks"], 1)
+        self.assertIn("Avoin lähde", packet["source_diagnostics"]["selected_sources"])
+
 
 if __name__ == "__main__":
     unittest.main()
