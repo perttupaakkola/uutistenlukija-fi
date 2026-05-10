@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/teslan-fsdn-kohtalo-euroopassa-paatetaan-pian-pohjoismaissa-mietityttavat-erikoisolosuhteet/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
