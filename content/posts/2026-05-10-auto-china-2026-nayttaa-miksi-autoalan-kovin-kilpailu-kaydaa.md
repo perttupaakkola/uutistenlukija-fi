@@ -39,7 +39,6 @@ keywords:
 source_name: "Teknavi"
 source_url: "https://teknavi.fi/autot/uutinen-autot/auto-china-2026-kiinassa-kaydaan-nyt-autoalan-kovinta-kilpailua/"
 source_domain: "teknavi.fi"
-briefing: true
 draft: false
 ---
 
