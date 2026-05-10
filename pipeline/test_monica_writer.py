@@ -319,8 +319,26 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
 
+
+    def test_near_short_repair_prompt_uses_source_backed_rules_for_200_word_marker(self):
+        packet = _source_packet(216, blocks=3)
+        packet["story_confidence"] = 0.98
+        broken_payload = json.loads(_good_payload())
+        broken_payload["content"] = " ".join(["Sana"] * 248)
+
+        prompt = _build_repair_prompt(packet, broken_payload, [
+            "content too short: 248 words",
+            "source_backed_writer_shortfall: final expansion required",
+        ])
+
+        self.assertIn("Source-backed repair mode", prompt)
+        self.assertIn("source_words: 216", prompt)
+        self.assertIn("source_blocks: 3", prompt)
+        self.assertIn("MUST be at least 250 Finnish words", prompt)
+        self.assertIn("Do not stop at 210–249 words", prompt)
+
     def test_source_backed_near_miss_requires_source_confidence_and_210_249_words(self):
-        packet = _source_packet(180, blocks=2)
+        packet = _source_packet(200, blocks=2)
         packet["story_confidence"] = 0.85
         payload = json.loads(_good_payload())
         payload["content"] = " ".join(["Sana"] * 211)
@@ -331,7 +349,7 @@ class MonicaWriterTests(unittest.TestCase):
         payload["content"] = " ".join(["Sana"] * 250)
         self.assertFalse(_is_source_backed_near_miss(packet, payload, []))
         payload["content"] = " ".join(["Sana"] * 247)
-        self.assertFalse(_is_source_backed_near_miss(_source_packet(179, blocks=2), payload, ["content too short: 247 words"]))
+        self.assertFalse(_is_source_backed_near_miss(_source_packet(199, blocks=2), payload, ["content too short: 247 words"]))
         self.assertFalse(_is_source_backed_near_miss(_source_packet(220, blocks=1), payload, ["content too short: 247 words"]))
         low_confidence = _source_packet(360, blocks=2)
         low_confidence["story_confidence"] = 0.84
@@ -363,9 +381,9 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(metadata["post_repair_word_count"], 281)
         self.assertEqual(metadata["repair_result"], "published")
         self.assertIn("pre_repair_word_count=247", metadata["repair_trigger"])
-        self.assertGreaterEqual(metadata["selected_source_words_at_repair"], 180)
+        self.assertGreaterEqual(metadata["selected_source_words_at_repair"], 200)
         self.assertGreaterEqual(metadata["selected_source_blocks_at_repair"], 2)
-        self.assertGreaterEqual(metadata["source_words"], 180)
+        self.assertGreaterEqual(metadata["source_words"], 200)
         self.assertGreaterEqual(metadata["source_blocks"], 2)
         self.assertIn("repair_attempted_at", metadata)
         self.assertTrue(metadata["source_block_ids_used_for_repair"])
@@ -440,7 +458,7 @@ class MonicaWriterTests(unittest.TestCase):
         extra = quarantine_mock.call_args.kwargs["extra"]
         self.assertEqual(extra["reason_code"], "source_backed_writer_shortfall_unrepairable")
         self.assertEqual(extra["final_word_count"], 247)
-        self.assertGreaterEqual(extra["source_words"], 180)
+        self.assertGreaterEqual(extra["source_words"], 200)
         self.assertGreaterEqual(extra["source_blocks"], 2)
 
     @patch(PATCH_TARGET)

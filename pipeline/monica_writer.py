@@ -47,7 +47,7 @@ MIN_CONTENT_WORDS = 250
 MIN_LEAD_WORDS = 30
 SOURCE_BACKED_REPAIR_WORDS = 300
 SOURCE_BACKED_REPAIR_BLOCKS = 2
-SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS = 180
+SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS = 200
 SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS = 2
 SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE = 0.85
 SOURCE_BACKED_NEAR_MISS_MIN_WORDS = 210
@@ -423,7 +423,13 @@ Story packet:
 def _build_repair_prompt(packet: dict, broken_payload: dict, issues: list[str]) -> str:
     source_words = _packet_source_words(packet)
     source_blocks = _packet_source_blocks(packet)
-    source_backed = _is_source_backed_repair_candidate(packet, issues)
+    near_short_repair = any("source_backed_writer_shortfall" in issue for issue in issues)
+    source_backed = _is_source_backed_repair_candidate(packet, issues) or (
+        near_short_repair
+        and source_words >= SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS
+        and source_blocks >= SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS
+        and _packet_story_confidence(packet) >= SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE
+    )
     source_backed_rules = ""
     if source_backed:
         source_backed_rules = f"""
