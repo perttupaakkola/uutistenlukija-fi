@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 import urllib.request
 import urllib.error
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Optional
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse, parse_qs, urlunparse
@@ -1013,11 +1013,45 @@ def scan_all_feeds() -> List[Dict]:
         "Kauppalehti KL-Nyt": 5,
     }
 
+    def _recent_dedup_keys(max_age_days=7):
+        """Load recent published fingerprints/URL hashes for ordering only.
+
+        The authoritative dedup gate still runs later in staged_publish.py.
+        This non-mutating read only prevents Talous quota slots being burned
+        by stories already known to dedup within the same 7-day window.
+        """
+        cutoff = (datetime.now(timezone.utc) - timedelta(days=max_age_days)).isoformat()
+
+        def _load_recent(path):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+            except (OSError, json.JSONDecodeError):
+                return set()
+            if not isinstance(data, dict):
+                return set()
+            return {key for key, seen_at in data.items() if isinstance(seen_at, str) and seen_at > cutoff}
+
+        return (
+            _load_recent(PIPELINE_DIR / "published_fingerprints.json"),
+            _load_recent(PIPELINE_DIR / "published_url_hashes.json"),
+        )
+
+    _recent_fps, _recent_url_hashes = _recent_dedup_keys()
+
+    def _talous_is_recent_duplicate(article):
+        return (
+            bool(article.get("fingerprint") and article.get("fingerprint") in _recent_fps)
+            or bool(article.get("_url_hash") and article.get("_url_hash") in _recent_url_hashes)
+        )
+
     def _talous_source_score(article):
         desc_words = len((article.get("description") or "").split())
         source = article.get("source", "")
         tier = int(article.get("source_tier", 2) or 2)
+        fresh_score = 0 if _talous_is_recent_duplicate(article) else 1
         return (
+            fresh_score,
             TALOUS_SOURCE_RICHNESS.get(source, 15),
             min(desc_words, 120),
             3 - tier,
@@ -1025,26 +1059,33 @@ def scan_all_feeds() -> List[Dict]:
         )
 
     def _diversify_talous_pool(pool, first_pass_per_source=2):
-        """Keep source-rich ordering, but prevent one stale source filling Talous.
+        """Keep source-rich ordering, but prevent stale sources filling Talous.
 
-        OPE-51 live checks found Talous quota filled by five source-rich
-        Suomen Yrittäjät/KL items that were then all filtered as already
-        published. A bounded per-source first pass keeps fresh/open feeds in
-        the ready set without replaying old items or relaxing downstream gates.
+        OPE-51/OPE-56 live checks found Talous quota filled by source-rich
+        items that were then filtered as already published inside the 7-day
+        fingerprint/URL window. Prefer dedup-fresh items first, then apply a
+        bounded per-source pass so fresh/open feeds reach research without
+        replaying old items or relaxing downstream gates.
         """
         ranked = sorted(pool, key=_talous_source_score, reverse=True)
-        first_pass = []
-        overflow = []
-        per_source = {}
-        for article in ranked:
-            source = article.get("source", "")
-            seen = per_source.get(source, 0)
-            if seen < first_pass_per_source:
-                first_pass.append(article)
-            else:
-                overflow.append(article)
-            per_source[source] = seen + 1
-        return first_pass + overflow
+        fresh = [article for article in ranked if not _talous_is_recent_duplicate(article)]
+        stale = [article for article in ranked if _talous_is_recent_duplicate(article)]
+
+        def _bounded(items):
+            first_pass = []
+            overflow = []
+            per_source = {}
+            for article in items:
+                source = article.get("source", "")
+                seen = per_source.get(source, 0)
+                if seen < first_pass_per_source:
+                    first_pass.append(article)
+                else:
+                    overflow.append(article)
+                per_source[source] = seen + 1
+            return first_pass + overflow
+
+        return _bounded(fresh) + _bounded(stale)
 
     # Pre-classify all unique articles
     for article in unique:
