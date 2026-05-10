@@ -984,6 +984,30 @@ def scan_all_feeds() -> List[Dict]:
             return "Ulkomaat"
         return "Kotimaa"
 
+    TALOUS_SOURCE_RICHNESS = {
+        # Open/RSS-rich sources first. KL/IS pages are useful as signals but
+        # often provide no fetchable article body, so keep them behind feeds
+        # that usually carry enough source text for Monica packets.
+        "Suomen Yrittäjät": 40,
+        "Maaseudun Tulevaisuus": 35,
+        "Yle Uutiset": 30,
+        "MTV Uutiset": 25,
+        "Taloussanomat": 10,
+        "Kauppalehti": 5,
+        "Kauppalehti KL-Nyt": 5,
+    }
+
+    def _talous_source_score(article):
+        desc_words = len((article.get("description") or "").split())
+        source = article.get("source", "")
+        tier = int(article.get("source_tier", 2) or 2)
+        return (
+            TALOUS_SOURCE_RICHNESS.get(source, 15),
+            min(desc_words, 120),
+            3 - tier,
+            article.get("published", ""),
+        )
+
     # Pre-classify all unique articles
     for article in unique:
         article["_guessed_category"] = _guess_category(article)
@@ -992,6 +1016,12 @@ def scan_all_feeds() -> List[Dict]:
     cat_pools: Dict[str, list] = {c: [] for c in CATEGORIES}
     for article in unique:
         cat_pools[article["_guessed_category"]].append(article)
+
+    # Talous has repeatedly survived category selection but failed later on
+    # min_source_words because several high-volume business feeds expose only
+    # paywalled/JS-rendered bodies. Keep the quota, but prefer candidates with
+    # richer RSS/source text before KL/IS-style thin packets burn the slots.
+    cat_pools["Talous"].sort(key=_talous_source_score, reverse=True)
 
     # Fill quotas from each category pool
     selected = []

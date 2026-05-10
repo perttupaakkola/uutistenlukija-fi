@@ -225,6 +225,10 @@ def _chunk_source_paragraphs(label: str, text: str, source_type: str = "research
     return chunks
 
 
+def _source_words(blocks: list[dict]) -> int:
+    return sum(int(block.get("word_count", 0) or 0) for block in blocks)
+
+
 def _split_research_blocks(research_text: str) -> list[dict]:
     blocks: list[dict] = []
     if not research_text:
@@ -464,6 +468,64 @@ def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int
     return selected
 
 
+def _backfill_research_sources(
+    selected: list[dict],
+    all_blocks: list[dict],
+    min_words: int = 80,
+    max_sources: int = 4,
+) -> list[dict]:
+    """Add source-rich research blocks when keyword selection leaves a thin packet.
+
+    Talous candidates from JS/paywalled feeds can pass the pipeline's combined
+    source-word check thanks to fetched research, but strict keyword overlap may
+    leave Monica with only a tiny RSS-description block. Do not lower gates or
+    invent source text; just preserve the longest already-fetched research block
+    as packet evidence when the selected packet is still below a usable size.
+    """
+    if _source_words(selected) >= min_words or len(selected) >= max_sources:
+        return selected
+
+    selected_sources = {str(block.get("source", "")).lower() for block in selected if block.get("source")}
+    selected_text = " ".join(str(block.get("text", "")) for block in selected)
+
+    def _candidate_score(block: dict) -> tuple[int, int, int]:
+        source = str(block.get("source", "")).lower()
+        source_match = int(bool(source and source in selected_sources))
+        overlap, strong = _keyword_overlap(_keyword_tokens(selected_text), str(block.get("text", "")))
+        return (source_match, strong + overlap, int(block.get("word_count", 0) or 0))
+
+    seen_text = {block.get("text", "") for block in selected}
+    candidates = [
+        block for block in all_blocks
+        if block.get("source_type") == "research"
+        and block.get("text") not in seen_text
+        and int(block.get("word_count", 0) or 0) >= 40
+        and _candidate_score(block)[:2] != (0, 0)
+    ]
+    candidates.sort(key=_candidate_score, reverse=True)
+
+    for block in candidates:
+        selected.append(block)
+        seen_text.add(block.get("text", ""))
+        if _source_words(selected) >= min_words or len(selected) >= max_sources:
+            break
+    return selected
+
+
+def _source_diagnostics(all_blocks: list[dict], selected_blocks: list[dict]) -> dict:
+    selected_words = _source_words(selected_blocks)
+    return {
+        "candidate_blocks": len(all_blocks),
+        "candidate_source_words": _source_words(all_blocks),
+        "selected_blocks": len(selected_blocks),
+        "selected_source_words": selected_words,
+        "zero_source_packet": selected_words == 0,
+        "low_source_packet": 0 < selected_words < 80,
+        "candidate_sources": [block.get("source", "") for block in all_blocks if block.get("source")],
+        "selected_sources": [block.get("source", "") for block in selected_blocks if block.get("source")],
+    }
+
+
 def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
     title_and_desc = " ".join(
         part
@@ -525,7 +587,9 @@ def build_story_packet(article: dict) -> dict:
     all_blocks.extend(_fallback_source_blocks(article))
     supported_blocks = _filter_topically_supported_sources(article, all_blocks)
     selected_blocks = _select_best_sources(article, supported_blocks)
+    selected_blocks = _backfill_research_sources(selected_blocks, all_blocks)
     source_text = "\n\n".join(block["text"] for block in selected_blocks)
+    source_diagnostics = _source_diagnostics(all_blocks, selected_blocks)
 
     inferred_category = _infer_category(article, selected_blocks)
     packet = {
@@ -551,6 +615,12 @@ def build_story_packet(article: dict) -> dict:
         },
         "clean_source_blocks": selected_blocks,
         "source_text": source_text,
+        "source_diagnostics": source_diagnostics,
+        "source_selection_outcome": (
+            "zero_source_packet" if source_diagnostics["zero_source_packet"]
+            else "low_source_packet" if source_diagnostics["low_source_packet"]
+            else "usable_source_packet"
+        ),
         "editor_brief": (
             "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. "
             "Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita."

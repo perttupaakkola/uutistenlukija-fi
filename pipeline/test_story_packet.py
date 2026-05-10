@@ -3,7 +3,10 @@ from __future__ import annotations
 
 import unittest
 
-from story_packet import build_story_packet
+try:
+    from .story_packet import build_story_packet
+except ImportError:  # pragma: no cover
+    from story_packet import build_story_packet
 
 
 class StoryPacketTests(unittest.TestCase):
@@ -170,6 +173,29 @@ class StoryPacketTests(unittest.TestCase):
         self.assertEqual(packet["category_hint"], "Talous")
         self.assertIn("Suomen vienti Saksaan", packet["source_text"])
         self.assertIn("Yle", packet["source_names"]) 
+
+    def test_backfills_research_block_when_selected_packet_is_rss_thin(self) -> None:
+        research_words = " ".join(["Tokmannin markkinatilanne"] * 46)
+        article = {
+            "title": "Perustaja kritisoi Tokmannia",
+            "description": "Lyhyt RSS kuvaus ilman riittävää lähdepohjaa.",
+            "source": "Taloussanomat",
+            "link": "https://www.is.fi/taloussanomat/example",
+            "category_hint": "Talous",
+            "research": f"[Lähde: ksml.fi]\n{research_words}",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertGreaterEqual(packet["source_diagnostics"]["selected_source_words"], 80)
+        self.assertEqual(packet["source_selection_outcome"], "usable_source_packet")
+        self.assertIn("ksml.fi", packet["source_diagnostics"]["selected_sources"])
+
+    def test_marks_zero_source_packet_for_diagnostics(self) -> None:
+        packet = build_story_packet({"title": "Otsikko", "description": "", "category_hint": "Talous"})
+
+        self.assertEqual(packet["source_selection_outcome"], "zero_source_packet")
+        self.assertTrue(packet["source_diagnostics"]["zero_source_packet"])
 
 
 if __name__ == "__main__":
