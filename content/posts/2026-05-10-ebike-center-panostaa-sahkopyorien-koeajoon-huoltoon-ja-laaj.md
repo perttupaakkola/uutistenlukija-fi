@@ -40,7 +40,6 @@ keywords:
 source_name: "Teknavi"
 source_url: "https://teknavi.fi/uutinen/ebike-center-esittelyssa-suomen-suurin-sahkopyorien-erikoisliike-panostaa-kokemukseen-ja-palveluun/"
 source_domain: "teknavi.fi"
-briefing: true
 draft: false
 ---
 
