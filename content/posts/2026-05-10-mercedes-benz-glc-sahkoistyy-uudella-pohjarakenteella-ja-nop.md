@@ -39,7 +39,6 @@ keywords:
 source_name: "Teknavi"
 source_url: "https://teknavi.fi/autot/ajettu-autot/koeajossa-mercedes-benz-glc-sahkoinen-luksus-suv-joka-yhdistaa-suorituskyvyn-ja-mukavuuden/"
 source_domain: "teknavi.fi"
-briefing: true
 draft: false
 ---
 
