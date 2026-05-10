@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiilitestit/kuulokkeet/testi-samsung-galaxy-buds4-pro-kuulokkeet-tyylikas-lippulaivamalli-erityisesti-samsung-faneille/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
