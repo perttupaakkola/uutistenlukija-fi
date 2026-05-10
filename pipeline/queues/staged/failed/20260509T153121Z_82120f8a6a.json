@@ -68,5 +68,24 @@
     "_guessed_category": "Kotimaa",
     "research": "Viljelijä Heikki kertoi, että ei ole aiemmin kokenut vastaavaa. Lakimuutos valkoposkihanhien suojametsästyksen sallimiseksi on parhaillaan lausuntokierroksella. Maaseudun Tulevaisuus kertoi, kuinka valkoposkihanhet söivät maaninkalaisen Heikki Väänäsen pellolta 11 hehtaarin verran kuminaa alle viikossa. Kuusi vuotta kuminaa viljelykierrossa pitänyt Väänänen kertoi lehdelle, kuinka ensimmäiset tuhansien lintujen parvet saapuivat vapun jälkeisenä maanantaina.",
     "research_source": "rss"
+  },
+  "failed_at": "2026-05-10T01:23:44.047743+00:00",
+  "failure": "insufficient_confidence_after_repair",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"status\":\"INSUFFICIENT_CONFIDENCE\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260509T153121Z_82120f8a6a",
+    "category": "Kotimaa",
+    "selected_source_words": 49,
+    "selected_source_blocks": 1,
+    "story_confidence": 0.53,
+    "final_word_count": 0,
+    "issues": [
+      "missing keys: packet_id, title, summary, content, category, tags, summary_bullets, content_type, editorial_reviewed, confidence, journalist_note"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "MT: Valkoposki­hanhet söivät Heikin pellon tyhjäksi: 11 hehtaaria kuminaa meni alle viikossa"
   }
 }
