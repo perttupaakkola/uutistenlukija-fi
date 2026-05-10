@@ -39,7 +39,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/fa-uusi-verkkosivunsa-lobbaustavoitteet-entista-paremmin-esilla/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
