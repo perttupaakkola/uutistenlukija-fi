@@ -39,7 +39,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/googlen-tyontekijat-jarjestaytyvat-omaa-tyonantajaansa-vastaan-syyna-alkuperaisen-ai-lupauksen-pettaminen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
