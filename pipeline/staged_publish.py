@@ -120,7 +120,7 @@ def category_enqueue_bonus(article: dict) -> int:
     """Return bounded under-target category queue nudge after a real source floor."""
     if article_category(article) == "Talous":
         research_words = len(str(article.get("research") or article.get("research_text") or "").split())
-        if research_words >= 180:
+        if research_words >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS:
             return 40
     return 0
 
@@ -129,7 +129,7 @@ def passes_priority_source_floor(article: dict) -> bool:
     if article_category(article) != "Talous":
         return True
     research_words = len(str(article.get("research") or article.get("research_text") or "").split())
-    return research_words >= 180
+    return research_words >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS
 
 
 def enqueue_strength(article: dict) -> tuple[int, int, int, int, int, int]:
@@ -140,6 +140,7 @@ def enqueue_strength(article: dict) -> tuple[int, int, int, int, int, int]:
 def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> list[dict]:
     if max_packets <= 0:
         return []
+
     eligible_priority = [article for article in articles if article_category(article) not in CATEGORY_SCAN_ENQUEUE_PRIORITY or passes_priority_source_floor(article)]
     fallback_priority = [article for article in articles if article not in eligible_priority]
     ordered = sorted(eligible_priority, key=enqueue_strength, reverse=True) + sorted(fallback_priority, key=source_strength, reverse=True)
@@ -147,26 +148,26 @@ def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> li
         return ordered
 
     selected = ordered[:max_packets]
-    selected_categories = {article_category(article) for article in selected}
+    selected_ids = {id(article) for article in selected}
     for category in CATEGORY_SCAN_ENQUEUE_PRIORITY:
-        if category in selected_categories:
-            continue
-        priority_candidates = [
+        qualified_priority = [
             article
-            for article in ordered[max_packets:]
+            for article in ordered
             if article_category(article) == category and passes_priority_source_floor(article)
         ]
-        if not priority_candidates:
+        if not qualified_priority or any(id(article) in selected_ids for article in qualified_priority):
             continue
+
         weakest_index, weakest = min(enumerate(selected), key=lambda item: source_strength(item[1]))
-        best_priority = priority_candidates[0]
+        best_priority = qualified_priority[0]
         priority_strength = source_strength(best_priority)
         weakest_strength = source_strength(weakest)
-        # Allow the under-target Talous lane to displace only genuinely thin
-        # queued candidates. Do not replace rich/high-source packets.
-        if priority_strength >= weakest_strength or total_source_words(weakest) < 180:
+        # Keep at least one source-qualified under-target Talous candidate when
+        # scan enqueue is capped, but only displace thin/moderate candidates.
+        # Stronger source-rich non-Talous packets still win.
+        if priority_strength >= weakest_strength or source_strength(weakest)[0] < CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS:
             selected[weakest_index] = best_priority
-            selected_categories = {article_category(article) for article in selected}
+            selected_ids = {id(article) for article in selected}
     return sorted(selected, key=source_strength, reverse=True)
 
 
@@ -411,6 +412,7 @@ CATEGORY_WORKER_PRIORITY_MIN_WORDS = 250
 CATEGORY_WORKER_PRIORITY_MIN_BLOCKS = 1
 
 CATEGORY_SCAN_ENQUEUE_PRIORITY = ("Talous",)
+CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS = 180
 
 
 def packet_category(packet: dict, original_article: dict | None = None) -> str:

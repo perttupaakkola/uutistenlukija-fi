@@ -273,6 +273,18 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(len(selected), 1)
         self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
 
+
+    def test_scan_enqueue_keeps_source_qualified_talous_when_cap_drops_it(self) -> None:
+        rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 260, "description": "kuvaus"}
+        moderate_ulkomaat = {"title": "ulkomaat", "category_hint": "Ulkomaat", "research": "sana " * 170, "description": "kuvaus"}
+        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 190, "description": "kuvaus"}
+
+        selected = staged_publish.select_scan_enqueue_candidates([rich_kotimaa, moderate_ulkomaat, sourced_talous], max_packets=2)
+
+        self.assertEqual(len(selected), 2)
+        self.assertIn("Talous", {staged_publish.article_category(article) for article in selected})
+        self.assertNotIn(moderate_ulkomaat, selected)
+
     def test_scan_enqueue_does_not_let_talous_beat_much_stronger_source(self) -> None:
         rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 700, "description": "kuvaus"}
         thin_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 120, "description": "kuvaus"}
