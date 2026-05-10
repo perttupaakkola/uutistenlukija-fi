@@ -191,6 +191,21 @@ class StoryPacketTests(unittest.TestCase):
         self.assertEqual(packet["source_selection_outcome"], "usable_source_packet")
         self.assertIn("ksml.fi", packet["source_diagnostics"]["selected_sources"])
 
+    def test_description_tokens_can_support_source_selection(self) -> None:
+        article = {
+            "title": "I-P: Vaasalaispäiväkodin lasten mustelmat herättivät kysymyksiä",
+            "description": "Vaasan kaupunki tarkasti yksityiseen päiväkotiin kuuluvan ryhmän toimintaa, kun lasten mustelmista ja kuhmuista kerrottiin vanhemmille.",
+            "source": "Iltalehti",
+            "link": "https://www.iltalehti.fi/kotimaa/example",
+            "category_hint": "Kotimaa",
+            "research": "[Lähde: Ilkka-Pohjalainen]\nVaasan kaupunki teki tarkastuksen yksityisen päiväkodin Nappulakedon ryhmään. Lasten mustelmat ja kuhmut herättivät vanhemmissa kysymyksiä, ja päiväkodin toiminnassa todettiin epäkohtia.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertGreaterEqual(packet["source_diagnostics"]["selected_source_words"], 20)
+        self.assertIn("Ilkka-Pohjalainen", packet["source_diagnostics"]["selected_sources"])
+
     def test_marks_zero_source_packet_for_diagnostics(self) -> None:
         packet = build_story_packet({"title": "Otsikko", "description": "", "category_hint": "Talous"})
 

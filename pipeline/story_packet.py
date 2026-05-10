@@ -315,8 +315,10 @@ def _supported_source_groups(article: dict, blocks: Iterable[dict]) -> set[str]:
     title = str(article.get("title", "") or "")
     description = str(article.get("description", "") or "")
     claim_text = " ".join(part for part in [title, description] if part)
-    claim_tokens = _topical_support_tokens(title)
-    temporal_claims = _temporal_tokens(title)
+    title_tokens = _topical_support_tokens(title)
+    description_tokens = _topical_support_tokens(description)
+    claim_tokens = title_tokens | description_tokens
+    temporal_claims = _temporal_tokens(claim_text)
     if len(claim_tokens) < 2 and not temporal_claims:
         return set()
     high_specific_claim = len(claim_tokens) >= 6
@@ -329,12 +331,17 @@ def _supported_source_groups(article: dict, blocks: Iterable[dict]) -> set[str]:
         if not text:
             continue
         block_tokens = _topical_support_tokens(text)
-        token_overlap = claim_tokens & block_tokens
+        title_overlap = title_tokens & block_tokens
+        description_overlap = description_tokens & block_tokens
+        token_overlap = title_overlap | description_overlap
         block_temporal = _temporal_tokens(text)
         temporal_conflict = bool(temporal_claims and block_temporal and not (temporal_claims & block_temporal))
         if temporal_conflict:
             continue
-        required_overlap = 3 if len(claim_tokens) >= 4 else 2
+        required_overlap = 3 if len(title_tokens) >= 4 else 2
+        if len(title_overlap) >= required_overlap or (len(description_overlap) >= 2 and len(title_overlap) >= 1):
+            supported.add(_source_group_key(block))
+            continue
         if temporal_claims:
             if temporal_claims & block_temporal and len(token_overlap) >= 1:
                 supported.add(_source_group_key(block))
@@ -351,11 +358,16 @@ def _filter_topically_supported_sources(article: dict, blocks: list[dict]) -> li
         return blocks
     supported_groups = _supported_source_groups(article, blocks)
     title = str(article.get("title", "") or "")
+    description = str(article.get("description", "") or "")
+    claim_text = " ".join(part for part in [title, description] if part)
     title_tokens = _topical_support_tokens(title)
+    claim_tokens = _topical_support_tokens(claim_text)
     research_blocks = [block for block in blocks if str(block.get("source_type") or "") not in {"description", "rss_description"}]
     research_words = sum(len(str(block.get("text", "") or "").split()) for block in research_blocks)
-    strict_claim = bool(_temporal_tokens(title) or (len(title_tokens) >= 6 and research_words >= 12))
+    strict_claim = bool(_temporal_tokens(claim_text) or (len(claim_tokens) >= 6 and research_words >= 12))
     if not supported_groups:
+        if _is_business_context(article, _keyword_tokens(claim_text)):
+            return blocks
         return [] if strict_claim else blocks
     return [block for block in blocks if _source_group_key(block) in supported_groups]
 
@@ -398,8 +410,15 @@ def _is_business_context(article: dict, context_tokens: set[str]) -> bool:
     hint = _normalize_ws(str(article.get("category_hint") or article.get("category") or ""))
     source = _normalize_ws(str(article.get("source") or "")).lower()
     if hint == "Talous" or source in _BUSINESS_SOURCE_NAMES:
+        title = str(article.get("title", "") or "")
+        description = str(article.get("description", "") or "")
+        # Keep the category hint useful, but do not let it override explicit
+        # contradictory time markers in fetched sources (for example a
+        # Thursday euribor claim backed only by Tuesday source text).
+        if _temporal_tokens(title) or _temporal_tokens(description):
+            return False
         return True
-    return bool(context_tokens & _BUSINESS_CONTEXT_KEYWORDS)
+    return False
 
 
 def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int = 4) -> list[dict]:
