@@ -78,6 +78,51 @@ def stable_digest(article: dict) -> str:
     return hashlib.sha1(str(seed).encode("utf-8", errors="ignore")).hexdigest()[:10]
 
 
+
+def select_research_candidates(articles: list[dict], max_candidates: int | None) -> list[dict]:
+    if not max_candidates or max_candidates <= 0 or len(articles) <= max_candidates:
+        return articles
+    selected = list(articles[:max_candidates])
+    selected_ids = {id(article) for article in selected}
+    for category in CATEGORY_SCAN_ENQUEUE_PRIORITY:
+        priority_candidates = [article for article in articles if article_category(article) == category]
+        if not priority_candidates or any(id(article) in selected_ids for article in priority_candidates):
+            continue
+        # Preserve the first still-eligible under-target category item that
+        # survived cooldown. Research/source/editorial gates still decide later.
+        selected[-1] = priority_candidates[0]
+        selected_ids = {id(article) for article in selected}
+    return selected
+
+def staged_digest_status(digest: str, hours: int = 48) -> tuple[str, Path | None]:
+    cutoff = time.time() - hours * 3600
+    for box in ["ready", "writing", "outbox", "published", "failed"]:
+        for path in (STAGED_ROOT / box).glob("*.json"):
+            try:
+                if path.stat().st_mtime < cutoff:
+                    continue
+                data = json.loads(path.read_text(encoding="utf-8", errors="replace"))
+                path_digest = data.get("digest") or data.get("packet", {}).get("packet_id", "").rsplit("_", 1)[-1]
+                if str(path_digest) == digest:
+                    return box, path
+            except Exception:
+                continue
+    return "", None
+
+
+def should_skip_staged_cooldown(article: dict, hours: int = 48) -> bool:
+    digest = stable_digest(article)
+    status, _path = staged_digest_status(digest, hours=hours)
+    if not status:
+        return False
+    if article_category(article) == "Talous" and status == "failed":
+        # Keep source acquisition alive for the under-target Talous lane when
+        # the previous staged attempt failed. This only allows a fresh scan to
+        # re-enter research/selection; it does not bypass source, Monica, or
+        # editorial gates. Ready/writing/outbox/published still cooldown.
+        return False
+    return True
+
 def existing_digests(hours: int = 48) -> set[str]:
     cutoff = time.time() - hours * 3600
     out: set[str] = set()
@@ -118,18 +163,15 @@ def source_strength(article: dict) -> tuple[int, int, int, int, int, int]:
 
 def category_enqueue_bonus(article: dict) -> int:
     """Return bounded under-target category queue nudge after a real source floor."""
-    if article_category(article) == "Talous":
-        research_words = len(str(article.get("research") or article.get("research_text") or "").split())
-        if research_words >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS:
-            return 40
+    if article_category(article) == "Talous" and passes_priority_source_floor(article):
+        return 40
     return 0
 
 
 def passes_priority_source_floor(article: dict) -> bool:
     if article_category(article) != "Talous":
         return True
-    research_words = len(str(article.get("research") or article.get("research_text") or "").split())
-    return research_words >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS
+    return total_source_words(article) >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS
 
 
 def enqueue_strength(article: dict) -> tuple[int, int, int, int, int, int]:
@@ -165,7 +207,7 @@ def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> li
         # Keep at least one source-qualified under-target Talous candidate when
         # scan enqueue is capped, but only displace thin/moderate candidates.
         # Stronger source-rich non-Talous packets still win.
-        if priority_strength >= weakest_strength or source_strength(weakest)[0] < CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS:
+        if priority_strength >= weakest_strength or total_source_words(weakest) < 250:
             selected[weakest_index] = best_priority
             selected_ids = {id(article) for article in selected}
     return sorted(selected, key=source_strength, reverse=True)
@@ -555,10 +597,9 @@ def cmd_scan(args: argparse.Namespace) -> int:
     if not articles:
         return 0
 
-    already = existing_digests(hours=args.cooldown_hours)
     filtered = []
     for a in articles:
-        if stable_digest(a) in already:
+        if should_skip_staged_cooldown(a, hours=args.cooldown_hours):
             continue
         filtered.append(a)
     articles = filtered
@@ -567,8 +608,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
     if not articles:
         return 0
 
-    if args.max_research_candidates and len(articles) > args.max_research_candidates:
-        articles = articles[: args.max_research_candidates]
+    articles = select_research_candidates(articles, args.max_research_candidates)
     log_scan_stage("research_candidates", articles)
     articles = enrich_with_research(articles)
     log_scan_research_buckets("research_result", articles)

@@ -245,6 +245,41 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.ready_sample(stale_path)["category"], "Talous")
         self.assertEqual(staged_publish.ready_sample(stale_path)["category_priority_bonus"], 4.0)
 
+
+
+    def test_research_candidate_cap_keeps_talous_after_cooldown(self) -> None:
+        kotimaa = {"title": "kotimaa uutinen", "category_hint": "Kotimaa", "description": "kuvaus " * 6}
+        ulkomaat = {"title": "ulkomaat uutinen", "category_hint": "Ulkomaat", "description": "kuvaus " * 5}
+        talous = {"title": "talous uutinen", "category_hint": "Talous", "description": "kuvaus " * 4}
+
+        selected = staged_publish.select_research_candidates([kotimaa, ulkomaat, talous], max_candidates=2)
+
+        self.assertEqual(len(selected), 2)
+        self.assertIn("Talous", {staged_publish.article_category(article) for article in selected})
+        self.assertNotIn(ulkomaat, selected)
+
+    def test_talous_failed_staged_digest_can_reenter_scan_cooldown(self) -> None:
+        failed = _record("talous-failed", source_words=0, blocks=0)
+        failed["digest"] = "abc123def0"
+        failed["packet"]["category_hint"] = "Talous"
+        failed["original_article"]["category_hint"] = "Talous"
+        self._write("failed", "talous-failed", failed, age_hours=1)
+
+        article = {"title": "Talous failed", "url": "https://example.com/talous", "category_hint": "Talous"}
+        with patch.object(staged_publish, "stable_digest", return_value="abc123def0"):
+            self.assertFalse(staged_publish.should_skip_staged_cooldown(article, hours=24))
+
+    def test_non_talous_failed_staged_digest_still_obeys_cooldown(self) -> None:
+        failed = _record("kotimaa-failed", source_words=0, blocks=0)
+        failed["digest"] = "abc123def1"
+        failed["packet"]["category_hint"] = "Kotimaa"
+        failed["original_article"]["category_hint"] = "Kotimaa"
+        self._write("failed", "kotimaa-failed", failed, age_hours=1)
+
+        article = {"title": "Kotimaa failed", "url": "https://example.com/kotimaa", "category_hint": "Kotimaa"}
+        with patch.object(staged_publish, "stable_digest", return_value="abc123def1"):
+            self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=24))
+
     def test_scan_enqueue_keeps_under_target_talous_when_source_strength_ties(self) -> None:
         kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 220, "description": "kuvaus"}
         talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 220, "description": "kuvaus"}
@@ -282,6 +317,18 @@ class StagedPublishMetricsTests(unittest.TestCase):
         selected = staged_publish.select_scan_enqueue_candidates([rich_kotimaa, moderate_ulkomaat, sourced_talous], max_packets=2)
 
         self.assertEqual(len(selected), 2)
+        self.assertIn("Talous", {staged_publish.article_category(article) for article in selected})
+        self.assertNotIn(moderate_ulkomaat, selected)
+
+
+    def test_scan_enqueue_uses_total_source_floor_for_talous_candidate(self) -> None:
+        rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 410, "description": "kuvaus"}
+        moderate_ulkomaat = {"title": "ulkomaat", "category_hint": "Ulkomaat", "research": "sana " * 204, "description": "kuvaus " * 16}
+        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 116, "description": "kuvaus " * 64}
+        rich_urheilu = {"title": "urheilu", "category_hint": "Urheilu", "research": "sana " * 608, "description": "kuvaus"}
+
+        selected = staged_publish.select_scan_enqueue_candidates([rich_urheilu, rich_kotimaa, moderate_ulkomaat, sourced_talous], max_packets=3)
+
         self.assertIn("Talous", {staged_publish.article_category(article) for article in selected})
         self.assertNotIn(moderate_ulkomaat, selected)
 
