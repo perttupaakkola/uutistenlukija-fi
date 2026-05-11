@@ -1,0 +1,126 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-11T06:31:39.314460+00:00",
+  "digest": "5f63d3ac82",
+  "packet": {
+    "packet_id": "20260511T063139Z_5f63d3ac82",
+    "created_at": "2026-05-11T06:31:39Z",
+    "headline_seed": "Trump and Xi are set to meet. Where do US-China tariffs stand?",
+    "description_seed": "The first US presidential visit to China in almost 10 years will test a fragile tariff truce.",
+    "link": "https://www.bbc.com/news/articles/c3rz75rgn8zo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "EconoTimes",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c3rz75rgn8zo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump and Xi are set to meet. Where do US-China tariffs stand?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The first US presidential visit to China in almost 10 years will test a fragile tariff truce.",
+        "word_count": 17,
+        "keyword_overlap": 11,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Beijing has confirmed that US President Donald Trump will travel to China this week to meet Xi Jinping. The visit, from the 13 - 15 May, will be the first to China by a US president in nearly a decade - and comes at a pivotal moment for ties between the world's two largest economies. Executives from some of America's biggest companiess - including Boeing, Citigroup and Qualcomm - are expected to travel with Trump, potentially to make deals with Chinese firms. It will also mark a key test in the fragile trade truce between Washington and Beijing. In April 2025, Trump unveiled sweeping import taxes on countries across the world, friend or foe.",
+        "word_count": 114,
+        "keyword_overlap": 9,
+        "strong_overlap": 1
+      },
+      {
+        "source": "EconoTimes",
+        "source_type": "research",
+        "text": "U.S. President Donald Trump is expected to meet Chinese President Xi Jinping in May 2026 during his first trip to China in eight years, as tensions between the world’s two largest economies continue to reshape global trade, technology, and energy markets. Since Trump returned to the White House in 2025, Washington and Beijing have engaged in an intense economic rivalry marked by tariffs, sanctions, export controls, and strategic negotiations. In May 2026, China invoked its anti-sanctions law in response to U.S. blacklisting measures targeting Chinese refineries accused of purchasing Iranian oil. Beijing warned domestic firms against complying with American sanctions, signaling a tougher stance against U.S. pressure.",
+        "word_count": 107,
+        "keyword_overlap": 6,
+        "strong_overlap": 1
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The sweeping measures were a shock, especially for China, said policy researcher Ning Leng from Georgetown University. \"It was the first time they dealt with Trump seriously, and they probably did not expect him to go ahead with it,\" Ning said. At the time, China was much more reliant on trade with America. The US was a key importer of Chinese manufactured goods, putting its workers at risk if American buyers turned away due to Trump's tariffs. The tensions added to existing issues that have weighed on China's economy for years, including sluggish domestic consumption, high unemployment and a prolonged property crisis. Exports to the US offered a lifeline for Chinese jobs, but with Trump, that was now put at risk.",
+        "word_count": 121,
+        "keyword_overlap": 5,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The first US presidential visit to China in almost 10 years will test a fragile tariff truce.\n\nBeijing has confirmed that US President Donald Trump will travel to China this week to meet Xi Jinping. The visit, from the 13 - 15 May, will be the first to China by a US president in nearly a decade - and comes at a pivotal moment for ties between the world's two largest economies. Executives from some of America's biggest companiess - including Boeing, Citigroup and Qualcomm - are expected to travel with Trump, potentially to make deals with Chinese firms. It will also mark a key test in the fragile trade truce between Washington and Beijing. In April 2025, Trump unveiled sweeping import taxes on countries across the world, friend or foe.\n\nU.S. President Donald Trump is expected to meet Chinese President Xi Jinping in May 2026 during his first trip to China in eight years, as tensions between the world’s two largest economies continue to reshape global trade, technology, and energy markets. Since Trump returned to the White House in 2025, Washington and Beijing have engaged in an intense economic rivalry marked by tariffs, sanctions, export controls, and strategic negotiations. In May 2026, China invoked its anti-sanctions law in response to U.S. blacklisting measures targeting Chinese refineries accused of purchasing Iranian oil. Beijing warned domestic firms against complying with American sanctions, signaling a tougher stance against U.S. pressure.\n\nThe sweeping measures were a shock, especially for China, said policy researcher Ning Leng from Georgetown University. \"It was the first time they dealt with Trump seriously, and they probably did not expect him to go ahead with it,\" Ning said. At the time, China was much more reliant on trade with America. The US was a key importer of Chinese manufactured goods, putting its workers at risk if American buyers turned away due to Trump's tariffs. The tensions added to existing issues that have weighed on China's economy for years, including sluggish domestic consumption, high unemployment and a prolonged property crisis. Exports to the US offered a lifeline for Chinese jobs, but with Trump, that was now put at risk.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1011,
+      "selected_blocks": 4,
+      "selected_source_words": 359,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Council on Foreign Relations",
+        "Council on Foreign Relations",
+        "Council on Foreign Relations",
+        "Council on Foreign Relations",
+        "EconoTimes",
+        "EconoTimes",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "EconoTimes",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump and Xi are set to meet. Where do US-China tariffs stand?",
+      "description": "The first US presidential visit to China in almost 10 years will test a fragile tariff truce.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Trump and Xi are set to meet. Where do US-China tariffs stand?",
+    "description": "The first US presidential visit to China in almost 10 years will test a fragile tariff truce.",
+    "link": "https://www.bbc.com/news/articles/c3rz75rgn8zo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-11T05:39:27+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "0b2787496da09fe92c65a7abb0b0f1fc",
+    "_url_hash": "43abb48b97419294baca443fd3299fcb30d5bc39f879524ab412b224735368c0",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nBeijing has confirmed that US President Donald Trump will travel to China this week to meet Xi Jinping.\n\nThe visit, from the 13 - 15 May, will be the first to China by a US president in nearly a decade - and comes at a pivotal moment for ties between the world's two largest economies.\n\nExecutives from some of America's biggest companiess - including Boeing, Citigroup and Qualcomm - are expected to travel with Trump, potentially to make deals with Chinese firms. It will also mark a key test in the fragile trade truce between Washington and Beijing.\n\nIn April 2025, Trump unveiled sweeping import taxes on countries across the world, friend or foe.\n\nA major effect of that policy was a tit-for-tat trade war between the US and China that saw them hit each other with tariffs that topped 100%. The tariffs were paused after Trump and Xi's last face-to-face meeting in South Korea in October. But threats from both sides have continued.\n\nWith so much at stake, here's how we got here.\n\nTrump won the 2016 election vowing to make trade fairer for the US and to bring manufacturing jobs back to the country.\n\nIn 2018, he had announced tariffs on $250bn (£185bn) of Chinese imports - the moment that many analysts say the trade war started.\n\nThe same year, Trump imposed levies on other trading partners - including Mexico, Canada and Europe - which he said were also taking advantage of the US.\n\nThe sweeping measures were a shock, especially for China, said policy researcher Ning Leng from Georgetown University.\n\n\"It was the first time they dealt with Trump seriously, and they probably did not expect him to go ahead with it,\" Ning said.\n\nAt the time, China was much more reliant on trade with America.\n\nThe US was a key importer of Chinese manufactured goods, putting its workers at risk if American buyers turned away due to Trump's tariffs.\n\nThe tensions added to existing issues that have weighed on China's economy for years, including sluggish domestic consumption, high unemployment and a prolonged property crisis.\n\nExports to the US offered a lifeline for Chinese jobs, but with Trump, that was now put at risk.\n\n\"It's harder for one country to withstand a trade war with another that it has trade surplus with,\" Ning said.\n\nWhen Joe Biden succeeded Trump in 2021 he kept up the pressure on Beijing.\n\nHis administration chose to not lift Trump's tariffs on China, sharing a belief that the US needed to keep a lid on its rival's growth in sectors like technology, Ning said.\n\nBiden also \n\n---\n\n[Lähde: Council on Foreign Relations]\nNext week, U.S. President Donald Trump and Chinese President Xi Jinping will meet in Beijing for a highly anticipated summit, the first of four potential meetings over the next year. It is unclear what the scope of discussion will be and what will come out of this meeting. But that is all well and good. The world is a safer place when its two largest economies and most powerful countries are on speaking terms. As Trump wrote on Truth Social, “President Xi will give me a big, fat hug when I get there in a few weeks. We are working together smartly, and very well! Doesn’t that beat fighting???”\n\n“Not fighting” appears to be the new north star of the United States’ new China policy. This policy is defined, in large part, by low expectations, and the pursuit of what the Trump administration’s National Defense Strategy calls “a decent peace.”\n\nGone is any pretense of solving the major structural issues at the heart of the world’s most important bilateral relationship: China’s mercantilist economic model, its designs on absorbing Taiwan, and its active support of U.S. adversaries such as Iran and Russia, not to mention any discussion of freedom of navigation through the South China Sea. As such, the summit is unlikely to alter the character and course of the U.S.-China relationship long-term. It is about managing for stability, not solving outstanding concerns.\n\nThe appeal of this pragmatic, tactical, and transactional approach is understandable. Decades of ambitious, if wishful thinking about the United States’ ability to influence the Communist Party of China on core elements of its economic or national security priorities have borne little fruit. Having a clear-eyed view and pragmatic expectations is not necessarily a sign of weakness. But there is a difference between measured cynicism and complacency. At some point, the fundamental issues at the heart of the U.S.-China relationship will need to be resolved, lest they boil over.\n\nI was one of the few Americans in the room in Sunnylands, when former President Barack Obama and Xi rolled up their sleeves in June 2013. It was a rare moment for a real, substantive, and fairly unscripted conversation about some of the most significant issues in the relationship. But it was also the early innings of a strategic deadlock.So, what will Trump actually leave the summit with? First, if the past is prologue, we’re likely to see a number of commercial deals. The Chinese side is expected to announce or reaffirm buying comm\n\n---\n\n[Lähde: EconoTimes]\nU.S. President Donald Trump is expected to meet Chinese President Xi Jinping in May 2026 during his first trip to China in eight years, as tensions between the world’s two largest economies continue to reshape global trade, technology, and energy markets.\n\nSince Trump returned to the White House in 2025, Washington and Beijing have engaged in an intense economic rivalry marked by tariffs, sanctions, export controls, and strategic negotiations. In May 2026, China invoked its anti-sanctions law in response to U.S. blacklisting measures targeting Chinese refineries accused of purchasing Iranian oil. Beijing warned domestic firms against complying with American sanctions, signaling a tougher stance against U.S. pressure.\n\nThe dispute intensified in April after China’s State Council granted authorities broader powers to investigate foreign entities accused of disrupting supply chains or applying discriminatory trade measures. Chinese officials also explored tighter export restrictions on ad...",
+    "research_source": "multi"
+  }
+}
