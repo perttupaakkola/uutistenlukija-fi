@@ -30,6 +30,16 @@ METRICS_JSON = SCRIPT_DIR / "logs" / "metrics.json"
 METRICS_JSONL = SCRIPT_DIR / "logs" / "metrics.jsonl"
 STATE_FILE = SCRIPT_DIR / "logs" / "feed-health-state.json"
 RSS_HEALTH_STATE = SCRIPT_DIR / "logs" / "rss-health-state.json"
+RSS_HEALTH_LOG = SCRIPT_DIR / "logs" / "rss-health.json"
+RSS_HEALTH_API = PROJECT_DIR / "static" / "api" / "rss-feed-health.json"
+CANONICAL_GENERATOR = "pipeline/rss_health.py"
+
+RSS_SCORE_TO_LEGACY_STATUS = {
+    "fresh": "healthy",
+    "stale": "stale",
+    "dead": "dead",
+    "unreachable": "dead",
+}
 
 # Import RSS_FEEDS from scanner
 sys.path.insert(0, str(SCRIPT_DIR))
@@ -223,10 +233,64 @@ def _match_feed_contribution(feed_name: str, feed_domain: str, source_counts: Co
     return total
 
 
+
+def _feed_key(name: str) -> str:
+    return name.lower().replace(" ", "_")
+
+
+def _load_canonical_rss_health() -> dict:
+    """Load rss_health.py's API artifact or raw probe log as canonical reachability.
+
+    feed_health_report.py historically inferred feed health from contribution
+    counts. That creates false dead-feed alerts for live feeds that simply did
+    not contribute published articles in the last seven days. Prefer the live
+    RSS probe artifact whenever it exists.
+    """
+    for path in (RSS_HEALTH_API, RSS_HEALTH_LOG):
+        if not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if isinstance(data, dict) and isinstance(data.get("feeds"), list):
+            feeds = data["feeds"]
+            return {
+                "generated_at": data.get("generated_at"),
+                "schema": data.get("schema"),
+                "feeds_by_name": {str(feed.get("name") or "").lower(): feed for feed in feeds},
+            }
+        if isinstance(data, list):
+            return {
+                "generated_at": max((str(feed.get("checked_at") or "") for feed in data), default=None),
+                "schema": "uutistenlukija.rss_health.raw_log.v1",
+                "feeds_by_name": {str(feed.get("name") or "").lower(): feed for feed in data},
+            }
+    return {"generated_at": None, "schema": None, "feeds_by_name": {}}
+
+
+def _canonical_feed_status(feed_name: str, canonical: dict) -> tuple[str | None, dict | None]:
+    feed = canonical.get("feeds_by_name", {}).get(feed_name.lower())
+    if not feed:
+        return None, None
+    score = feed.get("score")
+    status = RSS_SCORE_TO_LEGACY_STATUS.get(str(score or ""))
+    return status, feed
+
+
+def _rss_last_success(canonical_feed: dict | None, fallback_last_success: str | None) -> str | None:
+    if not canonical_feed:
+        return fallback_last_success
+    if canonical_feed.get("checked_at") and str(canonical_feed.get("score")) in {"fresh", "stale"}:
+        return canonical_feed.get("checked_at")
+    return fallback_last_success
+
+
 def build_report(do_live: bool = False) -> dict:
     """Build the feed health report."""
     now = datetime.now(timezone.utc)
     state = _load_state()
+    canonical = _load_canonical_rss_health()
 
     # Gather article counts from all available sources
     source_counts = Counter()
@@ -243,7 +307,7 @@ def build_report(do_live: bool = False) -> dict:
         url = feed_info["url"]
         domain = urlparse(url).netloc.removeprefix("www.").removeprefix("feeds.")
         disabled = feed_info.get("disabled", False)
-        feed_key = name.lower().replace(" ", "_")
+        feed_key = _feed_key(name)
 
         # Get persisted state for this feed
         feed_state = state.get(feed_key, {})
@@ -252,10 +316,13 @@ def build_report(do_live: bool = False) -> dict:
 
         # Count contributions (skip for disabled feeds)
         contrib = 0 if disabled else _match_feed_contribution(name, domain, source_counts)
+        canonical_status, canonical_feed = _canonical_feed_status(name, canonical)
 
         # Determine status
         if disabled:
             status = "disabled"
+        elif canonical_status:
+            status = canonical_status
         elif consecutive_errors >= 10:
             status = "dead"
         elif contrib == 0 and last_success:
@@ -275,6 +342,12 @@ def build_report(do_live: bool = False) -> dict:
             feed_state["last_success"] = now.isoformat()
             feed_state["consecutive_errors"] = 0
 
+        if canonical_feed and status in {"healthy", "stale"}:
+            feed_state["last_success"] = _rss_last_success(canonical_feed, last_success)
+            feed_state["consecutive_errors"] = 0
+            last_success = feed_state.get("last_success")
+            consecutive_errors = 0
+
         entry = {
             "name": name,
             "url": url,
@@ -286,6 +359,12 @@ def build_report(do_live: bool = False) -> dict:
             "contrib_7d": contrib,
             "consecutive_errors": consecutive_errors,
             "last_success": last_success,
+            "canonical_source": CANONICAL_GENERATOR if canonical_feed else "contribution_counts",
+            "rss_score": canonical_feed.get("score") if canonical_feed else None,
+            "rss_checked_at": canonical_feed.get("checked_at") if canonical_feed else None,
+            "rss_http_status": canonical_feed.get("http_status") if canonical_feed else None,
+            "rss_entries": canonical_feed.get("entries", canonical_feed.get("entry_count")) if canonical_feed else None,
+            "rss_newest_age_h": canonical_feed.get("newest_age_h", canonical_feed.get("age_hours")) if canonical_feed else None,
         }
 
         if do_live and not disabled:
@@ -306,6 +385,8 @@ def build_report(do_live: bool = False) -> dict:
         "period_days": 7,
         "summary": summary,
         "total_articles_tracked": sum(source_counts.values()),
+        "canonical_source": CANONICAL_GENERATOR if canonical.get("feeds_by_name") else "contribution_counts",
+        "canonical_generated_at": canonical.get("generated_at"),
         "feeds": feeds,
     }
 
