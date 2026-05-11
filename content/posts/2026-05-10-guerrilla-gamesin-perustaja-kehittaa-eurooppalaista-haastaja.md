@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Arjan Brussee kehittää The Immense Engine -nimistä pelimoottoria, jonka tavoitteena on tarjota eurooppalainen vaihtoehto Unreal Enginelle ja Unitylle."
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "Arjan Brussee kehittää The Immense Engine -nimistä pelimoottoria, jonka tavoitteena on tarjota eurooppalainen vaihtoehto Unreal Enginelle ja Unitylle."
 summary_bullets:
   - "Arjan Brussee kehittää The Immense Engine -nimistä uutta pelimoottoria."
@@ -22,7 +27,6 @@ journalist_note: |
   Juttu perustuu annettuun lähdepakettiin. Väitteet on rajattu packetissa esitettyihin tietoihin, eikä mukaan ole lisätty ulkopuolisia faktoja.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - pelimoottorit

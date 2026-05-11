@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Elinkeinoelämän tutkimuslaitos Etla arvioi, että Suomen tehdasteollisuuden kasvu jatkuu tänä vuonna ja leviää myös rakentamiseen sekä palvelualoille, va…"
+image: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/ulkomaat.jpg"
 summary: "Elinkeinoelämän tutkimuslaitos Etla arvioi, että Suomen tehdasteollisuuden kasvu jatkuu tänä vuonna ja leviää myös rakentamiseen sekä palvelualoille, vaikka Persianlahden tilanne lisää epävarmuutta."
 summary_bullets:
   - "Etla arvioi tehdasteollisuuden kasvavan tänä vuonna noin kaksi prosenttia."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Sisältö on rajattu Etlan ennusteessa esitettyihin arvioihin eikä sisällä lähdepaketin ulkopuolisia lisäväitteitä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - etla

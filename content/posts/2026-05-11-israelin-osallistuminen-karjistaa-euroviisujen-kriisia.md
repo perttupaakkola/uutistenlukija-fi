@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Euroviisut on ajautunut poikkeukselliseen kiistaan Israelin osallistumisesta. Useiden maiden boikotti ja järjestäjän aiemmat ratkaisut ovat nostaneet es…"
+image: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/ulkomaat.jpg"
 summary: "Euroviisut on ajautunut poikkeukselliseen kiistaan Israelin osallistumisesta. Useiden maiden boikotti ja järjestäjän aiemmat ratkaisut ovat nostaneet esiin kysymyksen siitä, voiko kilpailu enää pitää kiinni epäpoliittisesta roolistaan."
 summary_bullets:
   - "Vuoden 2026 Euroviisut on ajautunut kriisiin Israelin osallistumisen vuoksi."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Kiistan osapuolten väitteet on esitetty varovaisesti, ja Israelin kiistävä kanta on mukana.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - euroviisut

@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Thaimaan entinen pääministeri Thaksin Shinawatra on vapautunut vankilasta, mutta hänen poliittinen vaikutusvaltansa herättää yhä kiivasta keskustelua ma…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Thaimaan entinen pääministeri Thaksin Shinawatra on vapautunut vankilasta, mutta hänen poliittinen vaikutusvaltansa herättää yhä kiivasta keskustelua maassa."
 summary_bullets:
   - "Thaimaan entinen pääministeri Thaksin Shinawatra on vapautunut vankilasta Bangkokissa."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Taustoituksessa on pidättäydytty vain paketissa mainittuihin tapahtumiin ja aikarajoihin.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - thaimaa

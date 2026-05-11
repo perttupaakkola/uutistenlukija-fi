@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Turun alueella rakennusalalla toimiva Agim Sopjan on pelannut shakkia lapsesta asti. Hänelle laji on perinne, harrastus ja tapa irrottautua yrittäjyyden…"
+image: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/talous.jpg"
 summary: "Turun alueella rakennusalalla toimiva Agim Sopjan on pelannut shakkia lapsesta asti. Hänelle laji on perinne, harrastus ja tapa irrottautua yrittäjyyden paineista."
 summary_bullets:
   - "Agim Sopjan perusti rakennusalan yrityksensä Suomessa vuonna 2007."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun jäsenneltyyn aineistoon. Tiedot on rajattu paketin varmistamiin faktoihin, eikä mukaan ole lisätty ulkopuolisia väitteitä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - yrittäjyys

@@ -50,6 +50,7 @@ import pexels as _pexels
 CONTENT_DIR = Path(__file__).parent.parent / "content" / "posts"
 LOGS_DIR = Path(__file__).parent / "logs"
 BACKFILL_LOG = LOGS_DIR / "image_backfill.json"
+RECENT_CUTOFF = "2026-05-04T07:00:00"
 
 BATCH_SIZE = 20         # articles per batch
 BATCH_PAUSE = 2.0       # seconds between batches (rate limit headroom)
@@ -112,7 +113,8 @@ def _inject_image_fields(text: str, image_data: dict) -> str:
         f'image_thumb: "{image_thumb}"',
     ]
 
-    # Remove any existing image_* fields first to avoid duplicates
+    # Remove any existing image/image_* fields first to avoid duplicates.
+    # Some generated posts carry image_alt without image; remove it too.
     cleaned = re.sub(r'^image(?:_\w+)?:.*\n?', '', text, flags=re.MULTILINE)
 
     # Find insertion point: after description line if it exists
@@ -140,7 +142,40 @@ def _article_sort_key(path: Path) -> str:
     return str(meta.get("date") or path.name)
 
 
-def find_missing_image_articles(limit: int | None = None, offset: int = 0) -> list[Path]:
+def _has_non_category_image(meta: dict) -> bool:
+    image = str(meta.get("image") or "").strip()
+    return bool(image and not image.startswith("/images/categories/"))
+
+
+def count_image_coverage_since(cutoff: str = RECENT_CUTOFF) -> dict:
+    total = missing = category = non_category = 0
+    newest_missing: list[str] = []
+    for fpath in sorted(CONTENT_DIR.glob("*.md"), key=_article_sort_key, reverse=True):
+        text = fpath.read_text(encoding="utf-8", errors="replace")
+        meta, _, _ = _parse_fm(text)
+        if meta.get("draft") is True or str(meta.get("date") or "") < cutoff:
+            continue
+        total += 1
+        image = str(meta.get("image") or "").strip()
+        if not image:
+            missing += 1
+            if len(newest_missing) < 20:
+                newest_missing.append(fpath.name)
+        elif image.startswith("/images/categories/"):
+            category += 1
+        else:
+            non_category += 1
+    return {
+        "cutoff": cutoff,
+        "total": total,
+        "missing": missing,
+        "category": category,
+        "non_category": non_category,
+        "newest_missing": newest_missing,
+    }
+
+
+def find_missing_image_articles(limit: int | None = None, offset: int = 0, since: str | None = None) -> list[Path]:
     """Return newest article Paths that have no `image` front matter field."""
     all_files = sorted(CONTENT_DIR.glob("*.md"), key=_article_sort_key, reverse=True)
     missing = []
@@ -148,6 +183,8 @@ def find_missing_image_articles(limit: int | None = None, offset: int = 0) -> li
         text = fpath.read_text(encoding="utf-8")
         meta, _, _ = _parse_fm(text)
         if meta.get("draft") is True:
+            continue
+        if since and str(meta.get("date") or "") < since:
             continue
         if not meta.get("image", "").strip():
             missing.append(fpath)
@@ -217,9 +254,10 @@ def run(
     limit: int | None = None,
     offset: int = 0,
     source: str = "both",
+    since: str | None = None,
 ) -> dict:
     """Main backfill entry point."""
-    missing = find_missing_image_articles(limit=limit, offset=offset)
+    missing = find_missing_image_articles(limit=limit, offset=offset, since=since)
     total = len(missing)
 
     print(f"🖼  Image backfill — {total} articles missing images (source={source}, dry_run={dry_run})")
@@ -341,12 +379,25 @@ def main():
         if idx + 1 < len(args):
             limit = int(args[idx + 1])
 
+
     if "--offset" in args:
         idx = args.index("--offset")
         if idx + 1 < len(args):
             offset = int(args[idx + 1])
 
-    run(dry_run=dry_run, limit=limit, offset=offset, source=source)
+    since = None
+    if "--since" in args:
+        idx = args.index("--since")
+        if idx + 1 < len(args):
+            since = args[idx + 1]
+
+    if "--coverage-since" in args:
+        idx = args.index("--coverage-since")
+        cutoff = args[idx + 1] if idx + 1 < len(args) else RECENT_CUTOFF
+        print(json.dumps(count_image_coverage_since(cutoff), ensure_ascii=False, indent=2))
+        return
+
+    run(dry_run=dry_run, limit=limit, offset=offset, source=source, since=since)
 
 
 if __name__ == "__main__":

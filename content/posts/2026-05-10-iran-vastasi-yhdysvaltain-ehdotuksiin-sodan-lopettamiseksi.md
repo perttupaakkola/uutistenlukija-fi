@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Iran on toimittanut vastauksensa Yhdysvaltain ehdotuksiin, joiden tavoitteena on lopettaa sota ja avata tie neuvotteluille. Vastauksen tai ehdotusten ta…"
+image: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/ulkomaat.jpg"
 summary: "Iran on toimittanut vastauksensa Yhdysvaltain ehdotuksiin, joiden tavoitteena on lopettaa sota ja avata tie neuvotteluille. Vastauksen tai ehdotusten tarkkaa sisältöä ei ole julkistettu."
 summary_bullets:
   - "Iran toimitti vastauksensa Yhdysvaltain ehdotuksiin Pakistanissa toimivien sovittelijoiden kautta."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu paketissa annettuihin tietoihin. Keskeisiä yksityiskohtia, kuten Iranin vastauksen ja Yhdysvaltain ehdotusten täsmällinen sisältö, ei ole julkistettu, joten ne on rajattu pois.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - iran

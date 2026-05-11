@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Insurance Europen suosituksissa korostetaan vakuutusalan merkitystä pitkän aikavälin sijoittajana ja Euroopan kilpailukyvyn vahvistajana."
+image: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/talous.jpg"
 summary: "Insurance Europen suosituksissa korostetaan vakuutusalan merkitystä pitkän aikavälin sijoittajana ja Euroopan kilpailukyvyn vahvistajana."
 summary_bullets:
   - "Insurance Europe haluaa vahvistaa vakuutusalan asemaa Euroopan pitkäjänteisenä pääoman lähteenä."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Väitteet on rajattu vakuutusalan ja Finanssiala ry:n esittämiin näkemyksiin, eikä keskeneräisestä lähdekatkelmasta johdettu uusia yksityiskohtia.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - vakuutusala

@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Espoon lippulaivamyymälässä toimiva Ebike Center rakentaa asemaansa sähköpyörien erikoisliikkeenä laajan valikoiman, koeajomahdollisuuksien ja huoltopal…"
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "Espoon lippulaivamyymälässä toimiva Ebike Center rakentaa asemaansa sähköpyörien erikoisliikkeenä laajan valikoiman, koeajomahdollisuuksien ja huoltopalvelujen varaan."
 summary_bullets:
   - "Ebike Centerin Espoon myymälässä on yli 200 sähköpyörää ja noin 50 koeajettavaa mallia."
@@ -23,7 +28,6 @@ journalist_note: |
   Artikkeli perustuu toimitettuun aineistoon. Väitteet on rajattu packetissa esitettyihin tietoihin, eikä keskeneräiseksi jäänyttä premium-segmenttiä koskevaa lausetta laajennettu.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - sähköpyörät

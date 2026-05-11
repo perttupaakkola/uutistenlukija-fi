@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Suomen miesten jääkiekkomaajoukkue vahvistuu useilla NHL-pelaajilla ennen Sveitsissä pelattavia MM-kisoja. Lopullinen MM-kokoonpano varmistuu Ruotsin EH…"
+image: "/images/categories/tiede.jpg"
+image_alt: "Tiede-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/tiede.jpg"
 summary: "Suomen miesten jääkiekkomaajoukkue vahvistuu useilla NHL-pelaajilla ennen Sveitsissä pelattavia MM-kisoja. Lopullinen MM-kokoonpano varmistuu Ruotsin EHT-turnauksen jälkeen."
 summary_bullets:
   - "Suomi saa useita NHL-vahvistuksia ennen jääkiekon MM-kisoja."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Faktat on rajattu pelaajalisäyksiin, EHT-valmistautumiseen, loukkaantumisiin ja MM-kisojen perustietoihin ilman lisäoletuksia.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - jääkiekko

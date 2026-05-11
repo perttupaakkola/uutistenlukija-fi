@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Teheranissa asuva iranilainen toisinajattelija kuvaa, kuinka sodan uhka, aiemmat pidätykset ja jatkuva pelko turvallisuusviranomaisten toimista ovat lis…"
+image: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/ulkomaat.jpg"
 summary: "Teheranissa asuva iranilainen toisinajattelija kuvaa, kuinka sodan uhka, aiemmat pidätykset ja jatkuva pelko turvallisuusviranomaisten toimista ovat lisänneet psyykkistä kuormitusta jo valmiiksi ankaran sorron keskellä."
 summary_bullets:
   - "Teheranissa asuva aktivisti kertoo sodan uhan lisänneen ahdistusta ja turvattomuutta."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu packetin BBC-aineistoon. Henkilön nimi on pseudonyymi, eikä yksityiskohtia ole laajennettu lähdeaineiston ulkopuolelle.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 2
 tags:
   - iran

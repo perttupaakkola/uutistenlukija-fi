@@ -64,6 +64,37 @@ def log(msg: str) -> None:
     print(f"[{datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}] {msg}")
 
 
+def load_env_files() -> None:
+    """Load project/pipeline env files for cron-safe provider credentials."""
+    for path in [PROJECT_DIR / ".env", PIPELINE_DIR / ".env", Path("/workspace/.env"), Path("/home/pertt/.openclaw/.env")]:
+        try:
+            if not path.exists():
+                continue
+            for line in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+                if not line or line.lstrip().startswith("#") or "=" not in line:
+                    continue
+                key, value = line.split("=", 1)
+                os.environ.setdefault(key.strip(), value.strip().strip('"\''))
+        except Exception:
+            continue
+
+
+def sync_image_provider_keys() -> None:
+    """Refresh imported image modules after env files are loaded."""
+    if os.environ.get("UNSPLASH_ACCESS_KEY"):
+        try:
+            import unsplash as _unsplash_module
+            _unsplash_module.UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
+        except Exception:
+            pass
+    if os.environ.get("PEXELS_API_KEY"):
+        try:
+            import pexels as _pexels_module
+            _pexels_module.PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
+        except Exception:
+            pass
+
+
 def atomic_write_json(path: Path, data: dict) -> None:
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -841,6 +872,9 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
     if not total:
         return {"total": 0, "images": 0, "unsplash": 0, "pexels": 0, "missing": 0}
 
+    load_env_files()
+    sync_image_provider_keys()
+
     unsplash_count = 0
     pexels_count = 0
 
@@ -1084,6 +1118,19 @@ def cmd_publish(args: argparse.Namespace) -> int:
         log("publish: all articles dropped as duplicates")
         return 0
     image_summary = enrich_images_for_articles(articles)
+    article_by_id = {id(article): article for article in articles}
+    for _, data in items:
+        article = data.get("article")
+        enriched = article_by_id.get(id(article))
+        if enriched is not None:
+            data["article"] = enriched
+            if enriched.get("image"):
+                data["image_enriched_at"] = datetime.now(timezone.utc).isoformat()
+                data["image_enrichment"] = {
+                    "image": enriched.get("image"),
+                    "image_thumb": enriched.get("image_thumb"),
+                    "image_category_fallback": bool(enriched.get("image_category_fallback")),
+                }
     log(
         "publish: images "
         f"{image_summary['images']}/{image_summary['total']} "

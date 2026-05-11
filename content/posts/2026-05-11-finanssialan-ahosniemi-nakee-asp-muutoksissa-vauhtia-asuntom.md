@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Finanssiala ry:n toimitusjohtaja Arno Ahosniemi pitää hallituksen kehysriihen ASP-lainamuutoksia odotettuina toimina, joiden arvioidaan tukevan ensiasun…"
+image: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/talous.jpg"
 summary: "Finanssiala ry:n toimitusjohtaja Arno Ahosniemi pitää hallituksen kehysriihen ASP-lainamuutoksia odotettuina toimina, joiden arvioidaan tukevan ensiasunnon ostajia, asuntokauppaa ja rakentamista."
 summary_bullets:
   - "ASP-lainan omasäästöosuus laskee viiteen prosenttiin ja enimmäislaina-aika nousee 40 vuoteen."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu Finanssiala ry:n julkaisuun ja siinä esitettyihin Ahosniemen arvioihin. Väitteet on rajattu lähdeaineistossa mainittuihin kehysriihikirjauksiin, ASP-muutoksiin ja pankkisääntelyä koskeviin arvioihin.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - asuntomarkkinat

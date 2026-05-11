@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Finanssiala ry:n verkkosivu-uudistus korostaa järjestön edunvalvontatavoitteita, selkeyttää sisältörakennetta ja päivittää sivuston teknistä ylläpitoa."
+image: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/talous.jpg"
 summary: "Finanssiala ry:n verkkosivu-uudistus korostaa järjestön edunvalvontatavoitteita, selkeyttää sisältörakennetta ja päivittää sivuston teknistä ylläpitoa."
 summary_bullets:
   - "Finanssiala ry on uudistanut verkkosivunsa ulkoasun, sisältörakenteen ja ylläpitotekniikan."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu toimitettuun aineistoon Finanssiala ry:n verkkosivu-uudistuksesta; väitteet on rajattu paketin sisältämiin tietoihin.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - finanssiala

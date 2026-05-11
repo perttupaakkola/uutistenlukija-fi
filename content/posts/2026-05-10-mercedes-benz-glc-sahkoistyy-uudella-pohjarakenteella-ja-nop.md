@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Täyssähköinen Mercedes-Benz GLC rakentuu sähköautoille suunnitellulle alustalle ja tuo malliin 800 voltin latausjärjestelmän, kaksimoottorisen voimalinj…"
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "Täyssähköinen Mercedes-Benz GLC rakentuu sähköautoille suunnitellulle alustalle ja tuo malliin 800 voltin latausjärjestelmän, kaksimoottorisen voimalinjan sekä vahvasti mukavuuteen painottuvan sisätilakokemuksen."
 summary_bullets:
   - "Täyssähköinen GLC käyttää sähköautoille suunniteltua pohjarakennetta."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu toimitettuun strukturoituun aineistoon; tekniset tiedot ja koeajohavainnot on rajattu paketissa esitettyihin tietoihin.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - mercedes-benz

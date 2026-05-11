@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Vuoden 2026 alussa voimaan tullut muutos nosti verovapaan perinnön rajan 20 000 eurosta 30 000 euroon. Asiantuntijoiden mukaan perintöveroa voi pienentä…"
+image: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/talous.jpg"
 summary: "Vuoden 2026 alussa voimaan tullut muutos nosti verovapaan perinnön rajan 20 000 eurosta 30 000 euroon. Asiantuntijoiden mukaan perintöveroa voi pienentää muun muassa testamentilla, lahjoituksilla ja jakamalla perintöä useammalle saajalle."
 summary_bullets:
   - "Vuoden 2026 alusta verovapaan perinnön raja nousi 20 000 eurosta 30 000 euroon."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu toimitettuun lähdepakettiin. Mukaan on otettu vain paketissa esiintyvät tiedot perintöveron rajan muutoksesta ja asiantuntijoiden esittämistä suunnittelukeinoista.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - perintövero

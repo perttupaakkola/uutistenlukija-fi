@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Työeläkeyhtiö Elo käyttää tekoälyä laajojen tietomassojen analysointiin, jotta asiakasyritykset voisivat havaita työkyvyttömyyden riskejä aiemmin ja keh…"
+image: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/talous.jpg"
 summary: "Työeläkeyhtiö Elo käyttää tekoälyä laajojen tietomassojen analysointiin, jotta asiakasyritykset voisivat havaita työkyvyttömyyden riskejä aiemmin ja kehittää työyhteisöjään ennen ongelmien kärjistymistä."
 summary_bullets:
   - "Elo käyttää tekoälyä työkyvyttömyysriskien varhaiseen tunnistamiseen laajoista tietomassoista."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Trunkattu kohta analyysin rajoista jätettiin pois, koska siitä ei ollut täyttä virkettä eikä varmistettavaa sisältöä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - tekoäly

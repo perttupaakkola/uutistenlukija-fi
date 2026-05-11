@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Seminaarikeskustelussa nousi esiin tarve määritellä nykyistä selvemmin, mihin julkisiin sosiaali- ja terveyspalveluihin kansalaisilla on oikeus ja mikä…"
+image: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/talous.jpg"
 summary: "Seminaarikeskustelussa nousi esiin tarve määritellä nykyistä selvemmin, mihin julkisiin sosiaali- ja terveyspalveluihin kansalaisilla on oikeus ja mikä jää omalle vastuulle."
 summary_bullets:
   - "Paneelissa keskusteltiin julkisen palvelulupauksen tarpeesta sosiaali- ja terveyspalveluissa."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun seminaaripakettiin. Lähdetekstissä viimeinen kappale katkesi, joten siitä ei tehty päätelmiä tulevista hallituslinjauksista.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - hoiva

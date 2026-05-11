@@ -56,6 +56,30 @@ class BackfillImagesTests(unittest.TestCase):
         self.assertEqual(result["thumb_url"], "/images/categories/talous.jpg")
         self.assertEqual(result["alt"], "Talous-uutiset")
 
+
+    def test_coverage_counts_recent_missing_category_and_non_category_images(self) -> None:
+        self._post("missing.md", "2026-05-11T00:00:00Z")
+        self._post("category.md", "2026-05-10T00:00:00Z", image="/images/categories/kotimaa.jpg")
+        self._post("article.md", "2026-05-09T00:00:00Z", image="/images/articles/article.jpg")
+        self._post("old.md", "2026-05-01T00:00:00Z")
+
+        coverage = backfill_images.count_image_coverage_since("2026-05-04T07:00:00")
+
+        self.assertEqual(coverage["total"], 3)
+        self.assertEqual(coverage["missing"], 1)
+        self.assertEqual(coverage["category"], 1)
+        self.assertEqual(coverage["non_category"], 1)
+        self.assertEqual(coverage["newest_missing"], ["missing.md"])
+
+    def test_find_missing_image_articles_can_limit_to_recent_cutoff(self) -> None:
+        old = self._post("old-missing.md", "2026-05-01T00:00:00Z")
+        recent = self._post("recent-missing.md", "2026-05-11T00:00:00Z")
+
+        missing = backfill_images.find_missing_image_articles(since="2026-05-04T07:00:00")
+
+        self.assertEqual(missing, [recent])
+        self.assertNotIn(old, missing)
+
     def test_inject_image_fields_does_not_leave_old_image_keys(self) -> None:
         text = "---\ntitle: Test\nimage_alt: old\ncategories: [Kotimaa]\n---\n\nBody\n"
         updated = backfill_images._inject_image_fields(text, {

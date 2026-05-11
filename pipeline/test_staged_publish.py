@@ -183,7 +183,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
             batch[0]["image_category_fallback"] = False
             return batch
 
-        with patch.dict(staged_publish.os.environ, {"PEXELS_API_KEY": "key"}, clear=False), \
+        with patch.dict(staged_publish.os.environ, {"PEXELS_API_KEY": "key", "UNSPLASH_ACCESS_KEY": ""}, clear=False), \
              patch.object(staged_publish, "should_skip", return_value=(False, None)), \
              patch.object(staged_publish, "pexels_fetch_images", side_effect=fake_pexels):
             summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
@@ -192,6 +192,63 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(summary["pexels"], 1)
         self.assertEqual(articles[0]["image"], "/images/articles/fallback-hero.jpg")
         self.assertFalse(articles[0]["image_category_fallback"])
+
+
+    def test_enrich_images_loads_project_env_for_staged_publish(self) -> None:
+        project_env = staged_publish.PROJECT_DIR / ".env"
+        old_text = project_env.read_text(encoding="utf-8") if project_env.exists() else None
+        old_pexels = staged_publish.os.environ.pop("PEXELS_API_KEY", None)
+        old_unsplash = staged_publish.os.environ.pop("UNSPLASH_ACCESS_KEY", None)
+        try:
+            project_env.write_text("PEXELS_API_KEY=project-key\n", encoding="utf-8")
+            articles = [{"title": "Env artikkeli", "category": "Kotimaa"}]
+
+            def fake_pexels(batch, delay=0):
+                batch[0]["image"] = "/images/articles/env-hero.jpg"
+                batch[0]["image_category_fallback"] = False
+                return batch
+
+            with patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+                 patch.object(staged_publish, "pexels_fetch_images", side_effect=fake_pexels), \
+                 patch.object(staged_publish, "unsplash_fetch_images", side_effect=lambda batch, delay=0: batch):
+                summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+
+            self.assertEqual(summary["pexels"], 1)
+            self.assertEqual(articles[0]["image"], "/images/articles/env-hero.jpg")
+        finally:
+            if old_text is None:
+                project_env.unlink(missing_ok=True)
+            else:
+                project_env.write_text(old_text, encoding="utf-8")
+            if old_pexels is not None:
+                staged_publish.os.environ["PEXELS_API_KEY"] = old_pexels
+            else:
+                staged_publish.os.environ.pop("PEXELS_API_KEY", None)
+            if old_unsplash is not None:
+                staged_publish.os.environ["UNSPLASH_ACCESS_KEY"] = old_unsplash
+            else:
+                staged_publish.os.environ.pop("UNSPLASH_ACCESS_KEY", None)
+
+    def test_publish_persists_enriched_image_metadata_to_published_queue(self) -> None:
+        article = {"title": "Kuvallinen julkaisu", "content": "sana " * 260, "category": "Kotimaa", "image": "/images/articles/pub.jpg", "image_category_fallback": False, "monica_packet_id": "pkt-image"}
+        data = {"article": article, "packet": {"packet_id": "pkt-image"}}
+        path = self._write("outbox", "pkt-image", data, age_hours=1)
+
+        with patch.object(staged_publish, "load_outbox", return_value=[(path, data)]), \
+             patch.object(staged_publish, "run_quality_gate", return_value=type("Gate", (), {"passed": [article], "rejected": []})()), \
+             patch.object(staged_publish, "check_published_duplicates", side_effect=lambda articles, window_hours=48: articles), \
+             patch.object(staged_publish, "dedup_within_batch", side_effect=lambda articles: articles), \
+             patch.object(staged_publish, "enrich_images_for_articles", return_value={"total": 1, "images": 1, "unsplash": 0, "pexels": 1, "missing": 0}), \
+             patch.object(staged_publish, "publish_articles", return_value=["content/posts/test.md"]), \
+             patch.object(staged_publish, "mark_published"), \
+             patch.object(staged_publish, "build_site", return_value=(True, "")), \
+             patch.object(staged_publish, "atomic_write_json", side_effect=lambda target, payload: target.write_text(json.dumps(payload), encoding="utf-8")):
+            rc = staged_publish.cmd_publish(type("Args", (), {"max_articles": 1, "dedup_window": 48, "dry_run": False, "git_push": False})())
+
+        self.assertEqual(rc, 0)
+        published = json.loads((self.root / "published" / "pkt-image.json").read_text(encoding="utf-8"))
+        self.assertEqual(published["article"]["image"], "/images/articles/pub.jpg")
+        self.assertEqual(published["image_enrichment"]["image"], "/images/articles/pub.jpg")
 
     def test_quality_gate_feedback_marks_source_backed_length_only_as_repairable(self) -> None:
         record = _record("length-only", source_words=360, blocks=3)

@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Eduskuntakäsittelyyn edennyt tietosuojalain muutos selventäisi, milloin vakuutusyhtiöt voivat käsitellä erityisiä henkilötietoja, kuten terveystietoja,…"
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "Eduskuntakäsittelyyn edennyt tietosuojalain muutos selventäisi, milloin vakuutusyhtiöt voivat käsitellä erityisiä henkilötietoja, kuten terveystietoja, vakuutusta haettaessa."
 summary_bullets:
   - "Tietosuojalain muutos on edennyt eduskuntakäsittelyyn."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu annettuun aineistoon. Julkinen teksti ei sisällä lähdelabeleita eikä lisää aineiston ulkopuolisia väitteitä.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - tietosuoja

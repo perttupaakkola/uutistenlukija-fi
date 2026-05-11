@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "M/V Hondius -alukselta evakuoidut 17 yhdysvaltalaista matkustajaa kuljetetaan Nebraskaan, missä CDC arvioi heidän mahdollista altistumisriskiään."
+image: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/kotimaa.jpg"
 summary: "M/V Hondius -alukselta evakuoidut 17 yhdysvaltalaista matkustajaa kuljetetaan Nebraskaan, missä CDC arvioi heidän mahdollista altistumisriskiään."
 summary_bullets:
   - "M/V Hondius -alukselta evakuoidut 17 yhdysvaltalaista matkustajaa palaavat Yhdysvaltoihin."
@@ -22,7 +27,6 @@ journalist_note: |
   Artikkeli perustuu paketin tietoihin. Tiedot matkustajien tilanteesta, testituloksista ja viranomaistoimista on rajattu vain lähdeaineistossa vahvistettuun.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - hantavirus

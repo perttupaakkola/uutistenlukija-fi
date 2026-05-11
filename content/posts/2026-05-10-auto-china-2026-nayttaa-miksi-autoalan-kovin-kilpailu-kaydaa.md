@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "Pekingin Auto China 2026 -näyttely korostaa Kiinan asemaa autoalan murroksen keskuksena. Yli sadan automerkin joukko, nopea teknologinen kehitys ja kova…"
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "Pekingin Auto China 2026 -näyttely korostaa Kiinan asemaa autoalan murroksen keskuksena. Yli sadan automerkin joukko, nopea teknologinen kehitys ja kova kilpailu muokkaavat koko alan suuntaa."
 summary_bullets:
   - "Auto China 2026 kokoaa Pekingissä yhteen yli sata automerkkiä."
@@ -22,7 +27,6 @@ journalist_note: |
   Kirjoitettu annetun lähdepaketin pohjalta ilman lisättyjä faktoja. Paketti on käyttökelpoinen, mutta perustuu käytännössä yhteen lähdeartikkeliin, joten taustoitus on pidetty varovaisena.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - auto china 2026

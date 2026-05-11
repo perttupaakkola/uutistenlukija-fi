@@ -9,6 +9,11 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 description: "iRobotin perustajan uusi yritys kehittää Familiar-nimistä tekoälyrobottia, jonka tarkoitus on tarjota seuraa ja vuorovaikutusta kodin arjessa siivoamise…"
+image: "/images/categories/teknologia.jpg"
+image_alt: "Teknologia-uutiset"
+image_credit: ""
+image_source_url: ""
+image_thumb: "/images/categories/teknologia.jpg"
 summary: "iRobotin perustajan uusi yritys kehittää Familiar-nimistä tekoälyrobottia, jonka tarkoitus on tarjota seuraa ja vuorovaikutusta kodin arjessa siivoamisen sijaan."
 summary_bullets:
   - "Colin Anglen uusi yritys kehittää Familiar-nimistä nelijalkaista tekoälyrobottia."
@@ -23,7 +28,6 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Markkinoilletulon ajankohta ja hintataso ovat yhtiön ennakkoarvioita, eivät vahvistettuja myyntitietoja.
 content_type: "article"
 editorial_reviewed: true
-image_alt: "Kuvituskuva"
 reading_time: 1
 tags:
   - robotiikka
