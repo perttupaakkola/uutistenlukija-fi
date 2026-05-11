@@ -1,0 +1,225 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-11T13:51:22.416243+00:00",
+  "digest": "9455333e9d",
+  "packet": {
+    "packet_id": "20260511T135122Z_9455333e9d",
+    "created_at": "2026-05-11T13:51:22Z",
+    "headline_seed": "Police find body believed to be of fugitive Australian shooter",
+    "description_seed": "A body found in New South Wales is thought to be that of a man wanted over a triple murder.",
+    "link": "https://www.bbc.com/news/articles/cdjp9vzxlz7o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "ABC (Australian Broadcasting Corporation)",
+      "ABC (Australian Broadcasting Corporation)"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cdjp9vzxlz7o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Police find body believed to be of fugitive Australian shooter"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A body found in New South Wales is thought to be that of a man wanted over the murder of three people in a small Australian town in January. Julian Ingram was on bail for domestic violence offences at the time of the killings of his pregnant ex-partner Sophie Quinn, her friend and her aunt in Lake Cargelligo, about 450km (280mi) west of Sydney. All were shot. Police said on Monday that a man's body, understood to be Ingram, was discovered beside an abandoned ute 50km (31mi) north-west of where the murders happened. He was last seen on January 22 and police say the body appears to have been there \"for some time\". It was discovered by wildlife officers out eradicating feral pests.",
+        "word_count": 123,
+        "keyword_overlap": 11,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A body found in New South Wales is thought to be that of a man wanted over a triple murder.",
+        "word_count": 20,
+        "keyword_overlap": 10,
+        "strong_overlap": 4
+      },
+      {
+        "source": "ABC (Australian Broadcasting Corporation)",
+        "source_type": "research",
+        "text": "Suspected triple-murderer Julian Ingram was on the run since the fatal shootings in late January. (Supplied: NSW Police) A body found in NSW's Central West is believed to be that of alleged triple murderer Julian Ingram. The 37-year-old has been on the run since January 22 when three people were shot dead in Lake Cargelligo. Police said the discovery of the body would bring \"closure\" and \"relief\" to the town. NSW Police believe a body found in the state's Central West is that of alleged triple murderer Julian Ingram. Aboriginal and Torres Strait Islander readers are advised that this article contains names and images of Indigenous people who have died used with permission from the family.",
+        "word_count": 116,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "ABC (Australian Broadcasting Corporation)",
+        "source_type": "research",
+        "text": "Western Region Commander, Assistant Commissioner Andrew Holland, has confirmed the ute was the same vehicle the wanted man was seen driving from the scene. \"Next to this vehicle, police have also located a male body in a very decomposed state,\" he said. \"Next to this body is a firearm and at this point believe the person laying next to the vehicle could be Julian Ingram, but he's yet to be formally identified. \"We believe that the identification at the scene, the clothing that the deceased is wearing, would lead us to believe that it is him.\" Assistant Commissioner Holland said it was \"unclear\" whether police had previously searched the area as part of the massive manhunt for the alleged killer.",
+        "word_count": 120,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "A body found in New South Wales is thought to be that of a man wanted over the murder of three people in a small Australian town in January. Julian Ingram was on bail for domestic violence offences at the time of the killings of his pregnant ex-partner Sophie Quinn, her friend and her aunt in Lake Cargelligo, about 450km (280mi) west of Sydney. All were shot. Police said on Monday that a man's body, understood to be Ingram, was discovered beside an abandoned ute 50km (31mi) north-west of where the murders happened. He was last seen on January 22 and police say the body appears to have been there \"for some time\". It was discovered by wildlife officers out eradicating feral pests.\n\nA body found in New South Wales is thought to be that of a man wanted over a triple murder.\n\nSuspected triple-murderer Julian Ingram was on the run since the fatal shootings in late January. (Supplied: NSW Police) A body found in NSW's Central West is believed to be that of alleged triple murderer Julian Ingram. The 37-year-old has been on the run since January 22 when three people were shot dead in Lake Cargelligo. Police said the discovery of the body would bring \"closure\" and \"relief\" to the town. NSW Police believe a body found in the state's Central West is that of alleged triple murderer Julian Ingram. Aboriginal and Torres Strait Islander readers are advised that this article contains names and images of Indigenous people who have died used with permission from the family.\n\nWestern Region Commander, Assistant Commissioner Andrew Holland, has confirmed the ute was the same vehicle the wanted man was seen driving from the scene. \"Next to this vehicle, police have also located a male body in a very decomposed state,\" he said. \"Next to this body is a firearm and at this point believe the person laying next to the vehicle could be Julian Ingram, but he's yet to be formally identified. \"We believe that the identification at the scene, the clothing that the deceased is wearing, would lead us to believe that it is him.\" Assistant Commissioner Holland said it was \"unclear\" whether police had previously searched the area as part of the massive manhunt for the alleged killer.",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 753,
+      "selected_blocks": 4,
+      "selected_source_words": 379,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Police find body believed to be of fugitive Australian shooter",
+      "description": "A body found in New South Wales is thought to be that of a man wanted over a triple murder.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Police find body believed to be of fugitive Australian shooter",
+    "description": "A body found in New South Wales is thought to be that of a man wanted over a triple murder.",
+    "link": "https://www.bbc.com/news/articles/cdjp9vzxlz7o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-11T09:44:29+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "00565d1a29638187e6e184533130eabd",
+    "_url_hash": "cafdd7fa6084d43933019dc491b6c4138ab81f341014042d554856abe521da77",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA body found in New South Wales is thought to be that of a man wanted over the murder of three people in a small Australian town in January.\n\nJulian Ingram was on bail for domestic violence offences at the time of the killings of his pregnant ex-partner Sophie Quinn, her friend and her aunt in Lake Cargelligo, about 450km (280mi) west of Sydney. All were shot.\n\nPolice said on Monday that a man's body, understood to be Ingram, was discovered beside an abandoned ute 50km (31mi) north-west of where the murders happened.\n\nHe was last seen on January 22 and police say the body appears to have been there \"for some time\".\n\nIt was discovered by wildlife officers out eradicating feral pests.\n\nAssistant commissioner Andrew Holland told reporters they have confirmed the vehicle they found was the one driven by Ingram.\n\n\"We believe that the identification at the scene, the clothing that the deceased is wearing, would lead us to believe that it is him,\" Holland said, ABC reported.\n\nOn 22 January, Ingram allegedly shot dead his former partner Sophie Quinn, her friend and a relative of Quinn. Quinn was reportedly seven-months pregnant and was due to give birth to a son in March.\n\nThe shootings also seriously injured a 19-year-old man, who has since been released from hospital, according to the police.\n\nShortly after the shootings, authorities deployed around 100 officers to search for Ingram.\n\nHolland said at the time that Ingram, an employee of the local council, had extensive local knowledge and could \"maintain an extended period in the local area without being detected.\n\nLake Cargelligo is located in the centre of New South Wales and has a population of about 1,500 people.\n\nOn Monday, Holland said the discovery of what they believed to be Ingram's body \"brings closure to this investigation\" and \"gives some solace to the town so they can relax\".\n\n---\n\n[Lähde: ABC (Australian Broadcasting Corporation)]\nSuspected triple-murderer Julian Ingram was on the run since the fatal shootings in late January. (Supplied: NSW Police)\n\nA body found in NSW's Central West is believed to be that of alleged triple murderer Julian Ingram.\n\nThe 37-year-old has been on the run since January 22 when three people were shot dead in Lake Cargelligo.\n\nPolice said the discovery of the body would bring \"closure\" and \"relief\" to the town.\n\nNSW Police believe a body found in the state's Central West is that of alleged triple murderer Julian Ingram.\n\nAboriginal and Torres Strait Islander readers are advised that this article contains names and images of Indigenous people who have died used with permission from the family.\n\nThe 37-year-old former council gardener has been on the run since January 22, when three people, including his pregnant ex-partner Sophie Quinn, were fatally shot in Lake Cargelligo.\n\nJohn Harris, 32, was shot dead while sitting in the car next to Ms Quinn.\n\nIt is alleged Mr Ingram then drove to Ms Quinn's aunt, Nerida Quinn's home, where he killed the 50-year-old.\n\nKaleb Macqueen, 19, who was at the home when Nerida Quinn was killed, survived after also being shot.\n\nNSW Police were alerted to the discovery of a body near an abandoned ute in a nature reserve about 50 kilometres north-west of Lake Cargelligo at 3:40pm on Monday.\n\nSophie Quinn, John Harris and Nerida Quinn were killed during the shooting spree in Lake Cargelligo. (Supplied)\n\nWestern Region Commander, Assistant Commissioner Andrew Holland, has confirmed the ute was the same vehicle the wanted man was seen driving from the scene.\n\n\"Next to this vehicle, police have also located a male body in a very decomposed state,\" he said.\n\n\"Next to this body is a firearm and at this point believe the person laying next to the vehicle could be Julian Ingram, but he's yet to be formally identified.\n\n\"We believe that the identification at the scene, the clothing that the deceased is wearing, would lead us to believe that it is him.\"\n\nAssistant Commissioner Holland said it was \"unclear\" whether police had previously searched the area as part of the massive manhunt for the alleged killer.\n\n\"The National Parks and Wildlife Service was carrying feral animal eradication in the area and they located the abandoned vehicle,\" he said.\n\n\"Obviously, it's a relief for those involved in the investigation and probably a bigger relief for the people of Lake Cargelligo, and the family involved.\n\n\"The families have been notified by po",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-11T17:44:14.798663+00:00",
+  "payload": {
+    "packet_id": "20260511T135122Z_9455333e9d",
+    "title": "Poliisi löysi ruumiin, jonka uskotaan olevan Australian kolmoissurmista etsitty mies",
+    "summary": "New South Walesissa löydetyn ruumiin uskotaan olevan Julian Ingram, jota etsittiin kolmen ihmisen ampumisesta Lake Cargelligossa tammikuussa. Virallinen tunnistaminen on vielä kesken.",
+    "content": "New South Walesin poliisi uskoo löytäneensä ruumiin, joka voi olla tammikuussa tapahtuneista kolmoissurmista etsitty Julian Ingram. Kolme ihmistä ammuttiin kuoliaaksi Lake Cargelligon pienessä kaupungissa, noin 450 kilometriä Sydneystä länteen. Poliisin mukaan ruumis löytyi hylätyn avolava-auton vierestä noin 50 kilometriä luoteeseen tapahtumapaikasta, mutta henkilöllisyyttä ei ole vielä vahvistettu virallisesti.\n\n## Ruumis löytyi hylätyn ajoneuvon vierestä\n\nPoliisin mukaan miesruumis löydettiin New South Walesin keskiosista ajoneuvon läheltä. Western Region Commanderin apulaiskomissaari Andrew Holland kertoi, että avolava-auto oli sama ajoneuvo, jolla etsityn miehen oli nähty poistuvan surmapaikalta. Ruumiin vierestä löytyi myös ampuma-ase.\n\nViranomaisten mukaan ruumis oli pitkälle maatunut. Hollandin mukaan paikalta tehdyt havainnot, mukaan lukien vainajan vaatetus, viittaavat siihen, että kyseessä voi olla 37-vuotias Julian Ingram. Poliisi on kuitenkin korostanut, että muodollinen tunnistaminen on yhä kesken.\n\nRuumiin löysivät villieläinviranomaiset, jotka olivat alueella hävittämässä haitallisina pidettyjä villiintyneitä eläimiä. Poliisin mukaan ruumis näyttää olleen löytöpaikalla jo jonkin aikaa. Holland sanoi myös, ettei ole selvää, oliko poliisi aiemmin etsinyt juuri tältä alueelta osana laajaa etsintää.\n\n## Ingramia etsittiin tammikuun ampumisten jälkeen\n\nIngram oli ollut karkuteillä 22. tammikuuta lähtien. Tuolloin kolme ihmistä ammuttiin kuoliaaksi Lake Cargelligossa. Uhrien joukossa olivat hänen raskaana ollut entinen puolisonsa Sophie Quinn sekä Quinnin ystävä ja täti.\n\nLähdetietojen mukaan Ingram oli tapahtumahetkellä vapaana takuita vastaan perheväkivaltaan liittyvistä rikosepäilyistä. Ampumisten jälkeen poliisi käynnisti laajan etsintäoperaation, joka jatkui kuukausia ja keskittyi New South Walesin keskiosiin.\n\n## Poliisi puhuu helpotuksesta yhteisölle\n\nNew South Walesin poliisi arvioi, että löytö voi tuoda Lake Cargelligon yhteisölle helpotusta ja jonkinlaista päätöstä pitkään jatkuneeseen epävarmuuteen. Samalla tapaus ei ole vielä päättynyt viranomaisten näkökulmasta: seuraavaksi keskeistä on ruumiin virallinen tunnistaminen sekä löytöpaikan ja olosuhteiden tarkempi selvittäminen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Australia",
+      "New South Wales",
+      "poliisi",
+      "henkirikos",
+      "Lake Cargelligo"
+    ],
+    "summary_bullets": [
+      "New South Walesissa löydetyn ruumiin uskotaan olevan Julian Ingram.",
+      "Ingramia etsittiin kolmen ihmisen ampumisesta Lake Cargelligossa tammikuussa.",
+      "Ruumis löytyi hylätyn avolava-auton vierestä, ja läheltä löytyi myös ampuma-ase."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu kahden lähteen yhteneviin tietoihin. Henkilöllisyys ei ole vielä virallisesti vahvistettu, joten teksti käyttää varovaista muotoilua."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260511T135122Z_9455333e9d\",\n  \"title\": \"Poliisi löysi ruumiin, jonka uskotaan olevan Australian kolmoissurmista etsitty mies\",\n  \"summary\": \"New South Walesissa löydetyn ruumiin uskotaan olevan Julian Ingram, jota etsittiin kolmen ihmisen ampumisesta Lake Cargelligossa tammikuussa. Virallinen tunnistaminen on vielä kesken.\",\n  \"content\": \"New South Walesin poliisi uskoo löytäneensä ruumiin, joka voi olla tammikuussa tapahtuneista kolmoissurmista etsitty Julian Ingram. Kolme ihmistä ammuttiin kuoliaaksi Lake Cargelligon pienessä kaupungissa, noin 450 kilometriä Sydneystä länteen. Poliisin mukaan ruumis löytyi hylätyn avolava-auton vierestä noin 50 kilometriä luoteeseen tapahtumapaikasta, mutta henkilöllisyyttä ei ole vielä vahvistettu virallisesti.\\n\\n## Ruumis löytyi hylätyn ajoneuvon vierestä\\n\\nPoliisin mukaan miesruumis löydettiin New South Walesin keskiosista ajoneuvon läheltä. Western Region Commanderin apulaiskomissaari Andrew Holland kertoi, että avolava-auto oli sama ajoneuvo, jolla etsityn miehen oli nähty poistuvan surmapaikalta. Ruumiin vierestä löytyi myös ampuma-ase.\\n\\nViranomaisten mukaan ruumis oli pitkälle maatunut. Hollandin mukaan paikalta tehdyt havainnot, mukaan lukien vainajan vaatetus, viittaavat siihen, että kyseessä voi olla 37-vuotias Julian Ingram. Poliisi on kuitenkin korostanut, että muodollinen tunnistaminen on yhä kesken.\\n\\nRuumiin löysivät villieläinviranomaiset, jotka olivat alueella hävittämässä haitallisina pidettyjä villiintyneitä eläimiä. Poliisin mukaan ruumis näyttää olleen löytöpaikalla jo jonkin aikaa. Holland sanoi myös, ettei ole selvää, oliko poliisi aiemmin etsinyt juuri tältä alueelta osana laajaa etsintää.\\n\\n## Ingramia etsittiin tammikuun ampumisten jälkeen\\n\\nIngram oli ollut karkuteillä 22. tammikuuta lähtien. Tuolloin kolme ihmistä ammuttiin kuoliaaksi Lake Cargelligossa. Uhrien joukossa olivat hänen raskaana ollut entinen puolisonsa Sophie Quinn sekä Quinnin ystävä ja täti.\\n\\nLähdetietojen mukaan Ingram oli tapahtumahetkellä vapaana takuita vastaan perheväkivaltaan liittyvistä rikosepäilyistä. Ampumisten jälkeen poliisi käynnisti laajan etsintäoperaation, joka jatkui kuukausia ja keskittyi New South Walesin keskiosiin.\\n\\n## Poliisi puhuu helpotuksesta yhteisölle\\n\\nNew South Walesin poliisi arvioi, että löytö voi tuoda Lake Cargelligon yhteisölle helpotusta ja jonkinlaista päätöstä pitkään jatkuneeseen epävarmuuteen. Samalla tapaus ei ole vielä päättynyt viranomaisten näkökulmasta: seuraavaksi keskeistä on ruumiin virallinen tunnistaminen sekä löytöpaikan ja olosuhteiden tarkempi selvittäminen.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Australia\",\n    \"New South Wales\",\n    \"poliisi\",\n    \"henkirikos\",\n    \"Lake Cargelligo\"\n  ],\n  \"summary_bullets\": [\n    \"New South Walesissa löydetyn ruumiin uskotaan olevan Julian Ingram.\",\n    \"Ingramia etsittiin kolmen ihmisen ampumisesta Lake Cargelligossa tammikuussa.\",\n    \"Ruumis löytyi hylätyn avolava-auton vierestä, ja läheltä löytyi myös ampuma-ase.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu kahden lähteen yhteneviin tietoihin. Henkilöllisyys ei ole vielä virallisesti vahvistettu, joten teksti käyttää varovaista muotoilua.\"\n}",
+  "article": {
+    "title": "Poliisi löysi ruumiin, jonka uskotaan olevan Australian kolmoissurmista etsitty mies",
+    "description": "New South Walesissa löydetyn ruumiin uskotaan olevan Julian Ingram, jota etsittiin kolmen ihmisen ampumisesta Lake Cargelligossa tammikuussa. Virallinen tunnistaminen on vielä kesken.",
+    "link": "https://www.bbc.com/news/articles/cdjp9vzxlz7o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-11T09:44:29+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "00565d1a29638187e6e184533130eabd",
+    "_url_hash": "cafdd7fa6084d43933019dc491b6c4138ab81f341014042d554856abe521da77",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA body found in New South Wales is thought to be that of a man wanted over the murder of three people in a small Australian town in January.\n\nJulian Ingram was on bail for domestic violence offences at the time of the killings of his pregnant ex-partner Sophie Quinn, her friend and her aunt in Lake Cargelligo, about 450km (280mi) west of Sydney. All were shot.\n\nPolice said on Monday that a man's body, understood to be Ingram, was discovered beside an abandoned ute 50km (31mi) north-west of where the murders happened.\n\nHe was last seen on January 22 and police say the body appears to have been there \"for some time\".\n\nIt was discovered by wildlife officers out eradicating feral pests.\n\nAssistant commissioner Andrew Holland told reporters they have confirmed the vehicle they found was the one driven by Ingram.\n\n\"We believe that the identification at the scene, the clothing that the deceased is wearing, would lead us to believe that it is him,\" Holland said, ABC reported.\n\nOn 22 January, Ingram allegedly shot dead his former partner Sophie Quinn, her friend and a relative of Quinn. Quinn was reportedly seven-months pregnant and was due to give birth to a son in March.\n\nThe shootings also seriously injured a 19-year-old man, who has since been released from hospital, according to the police.\n\nShortly after the shootings, authorities deployed around 100 officers to search for Ingram.\n\nHolland said at the time that Ingram, an employee of the local council, had extensive local knowledge and could \"maintain an extended period in the local area without being detected.\n\nLake Cargelligo is located in the centre of New South Wales and has a population of about 1,500 people.\n\nOn Monday, Holland said the discovery of what they believed to be Ingram's body \"brings closure to this investigation\" and \"gives some solace to the town so they can relax\".\n\n---\n\n[Lähde: ABC (Australian Broadcasting Corporation)]\nSuspected triple-murderer Julian Ingram was on the run since the fatal shootings in late January. (Supplied: NSW Police)\n\nA body found in NSW's Central West is believed to be that of alleged triple murderer Julian Ingram.\n\nThe 37-year-old has been on the run since January 22 when three people were shot dead in Lake Cargelligo.\n\nPolice said the discovery of the body would bring \"closure\" and \"relief\" to the town.\n\nNSW Police believe a body found in the state's Central West is that of alleged triple murderer Julian Ingram.\n\nAboriginal and Torres Strait Islander readers are advised that this article contains names and images of Indigenous people who have died used with permission from the family.\n\nThe 37-year-old former council gardener has been on the run since January 22, when three people, including his pregnant ex-partner Sophie Quinn, were fatally shot in Lake Cargelligo.\n\nJohn Harris, 32, was shot dead while sitting in the car next to Ms Quinn.\n\nIt is alleged Mr Ingram then drove to Ms Quinn's aunt, Nerida Quinn's home, where he killed the 50-year-old.\n\nKaleb Macqueen, 19, who was at the home when Nerida Quinn was killed, survived after also being shot.\n\nNSW Police were alerted to the discovery of a body near an abandoned ute in a nature reserve about 50 kilometres north-west of Lake Cargelligo at 3:40pm on Monday.\n\nSophie Quinn, John Harris and Nerida Quinn were killed during the shooting spree in Lake Cargelligo. (Supplied)\n\nWestern Region Commander, Assistant Commissioner Andrew Holland, has confirmed the ute was the same vehicle the wanted man was seen driving from the scene.\n\n\"Next to this vehicle, police have also located a male body in a very decomposed state,\" he said.\n\n\"Next to this body is a firearm and at this point believe the person laying next to the vehicle could be Julian Ingram, but he's yet to be formally identified.\n\n\"We believe that the identification at the scene, the clothing that the deceased is wearing, would lead us to believe that it is him.\"\n\nAssistant Commissioner Holland said it was \"unclear\" whether police had previously searched the area as part of the massive manhunt for the alleged killer.\n\n\"The National Parks and Wildlife Service was carrying feral animal eradication in the area and they located the abandoned vehicle,\" he said.\n\n\"Obviously, it's a relief for those involved in the investigation and probably a bigger relief for the people of Lake Cargelligo, and the family involved.\n\n\"The families have been notified by po",
+    "research_source": "multi",
+    "summary": "New South Walesissa löydetyn ruumiin uskotaan olevan Julian Ingram, jota etsittiin kolmen ihmisen ampumisesta Lake Cargelligossa tammikuussa. Virallinen tunnistaminen on vielä kesken.",
+    "content": "New South Walesin poliisi uskoo löytäneensä ruumiin, joka voi olla tammikuussa tapahtuneista kolmoissurmista etsitty Julian Ingram. Kolme ihmistä ammuttiin kuoliaaksi Lake Cargelligon pienessä kaupungissa, noin 450 kilometriä Sydneystä länteen. Poliisin mukaan ruumis löytyi hylätyn avolava-auton vierestä noin 50 kilometriä luoteeseen tapahtumapaikasta, mutta henkilöllisyyttä ei ole vielä vahvistettu virallisesti.\n\n## Ruumis löytyi hylätyn ajoneuvon vierestä\n\nPoliisin mukaan miesruumis löydettiin New South Walesin keskiosista ajoneuvon läheltä. Western Region Commanderin apulaiskomissaari Andrew Holland kertoi, että avolava-auto oli sama ajoneuvo, jolla etsityn miehen oli nähty poistuvan surmapaikalta. Ruumiin vierestä löytyi myös ampuma-ase.\n\nViranomaisten mukaan ruumis oli pitkälle maatunut. Hollandin mukaan paikalta tehdyt havainnot, mukaan lukien vainajan vaatetus, viittaavat siihen, että kyseessä voi olla 37-vuotias Julian Ingram. Poliisi on kuitenkin korostanut, että muodollinen tunnistaminen on yhä kesken.\n\nRuumiin löysivät villieläinviranomaiset, jotka olivat alueella hävittämässä haitallisina pidettyjä villiintyneitä eläimiä. Poliisin mukaan ruumis näyttää olleen löytöpaikalla jo jonkin aikaa. Holland sanoi myös, ettei ole selvää, oliko poliisi aiemmin etsinyt juuri tältä alueelta osana laajaa etsintää.\n\n## Ingramia etsittiin tammikuun ampumisten jälkeen\n\nIngram oli ollut karkuteillä 22. tammikuuta lähtien. Tuolloin kolme ihmistä ammuttiin kuoliaaksi Lake Cargelligossa. Uhrien joukossa olivat hänen raskaana ollut entinen puolisonsa Sophie Quinn sekä Quinnin ystävä ja täti.\n\nLähdetietojen mukaan Ingram oli tapahtumahetkellä vapaana takuita vastaan perheväkivaltaan liittyvistä rikosepäilyistä. Ampumisten jälkeen poliisi käynnisti laajan etsintäoperaation, joka jatkui kuukausia ja keskittyi New South Walesin keskiosiin.\n\n## Poliisi puhuu helpotuksesta yhteisölle\n\nNew South Walesin poliisi arvioi, että löytö voi tuoda Lake Cargelligon yhteisölle helpotusta ja jonkinlaista päätöstä pitkään jatkuneeseen epävarmuuteen. Samalla tapaus ei ole vielä päättynyt viranomaisten näkökulmasta: seuraavaksi keskeistä on ruumiin virallinen tunnistaminen sekä löytöpaikan ja olosuhteiden tarkempi selvittäminen.",
+    "category": "Kotimaa",
+    "tags": [
+      "australia",
+      "new south wales",
+      "poliisi",
+      "henkirikos",
+      "lake cargelligo"
+    ],
+    "summary_bullets": [
+      "New South Walesissa löydetyn ruumiin uskotaan olevan Julian Ingram.",
+      "Ingramia etsittiin kolmen ihmisen ampumisesta Lake Cargelligossa tammikuussa.",
+      "Ruumis löytyi hylätyn avolava-auton vierestä, ja läheltä löytyi myös ampuma-ase."
+    ],
+    "key_points": [
+      "New South Walesissa löydetyn ruumiin uskotaan olevan Julian Ingram.",
+      "Ingramia etsittiin kolmen ihmisen ampumisesta Lake Cargelligossa tammikuussa.",
+      "Ruumis löytyi hylätyn avolava-auton vierestä, ja läheltä löytyi myös ampuma-ase."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu kahden lähteen yhteneviin tietoihin. Henkilöllisyys ei ole vielä virallisesti vahvistettu, joten teksti käyttää varovaista muotoilua.",
+    "source_text": "A body found in New South Wales is thought to be that of a man wanted over the murder of three people in a small Australian town in January. Julian Ingram was on bail for domestic violence offences at the time of the killings of his pregnant ex-partner Sophie Quinn, her friend and her aunt in Lake Cargelligo, about 450km (280mi) west of Sydney. All were shot. Police said on Monday that a man's body, understood to be Ingram, was discovered beside an abandoned ute 50km (31mi) north-west of where the murders happened. He was last seen on January 22 and police say the body appears to have been there \"for some time\". It was discovered by wildlife officers out eradicating feral pests.\n\nA body found in New South Wales is thought to be that of a man wanted over a triple murder.\n\nSuspected triple-murderer Julian Ingram was on the run since the fatal shootings in late January. (Supplied: NSW Police) A body found in NSW's Central West is believed to be that of alleged triple murderer Julian Ingram. The 37-year-old has been on the run since January 22 when three people were shot dead in Lake Cargelligo. Police said the discovery of the body would bring \"closure\" and \"relief\" to the town. NSW Police believe a body found in the state's Central West is that of alleged triple murderer Julian Ingram. Aboriginal and Torres Strait Islander readers are advised that this article contains names and images of Indigenous people who have died used with permission from the family.\n\nWestern Region Commander, Assistant Commissioner Andrew Holland, has confirmed the ute was the same vehicle the wanted man was seen driving from the scene. \"Next to this vehicle, police have also located a male body in a very decomposed state,\" he said. \"Next to this body is a firearm and at this point believe the person laying next to the vehicle could be Julian Ingram, but he's yet to be formally identified. \"We believe that the identification at the scene, the clothing that the deceased is wearing, would lead us to believe that it is him.\" Assistant Commissioner Holland said it was \"unclear\" whether police had previously searched the area as part of the massive manhunt for the alleged killer.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260511T135122Z_9455333e9d"
+  },
+  "quality_gate_rejected_at": "2026-05-11T17:48:01.943303+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260511T135122Z_9455333e9d",
+    "category": "Kotimaa",
+    "selected_source_words": 379,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 7.98,
+    "quality_reasons": [
+      "length under target (263 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number in title/lead: 450, 50",
+      "unsourced_numbers: 450, 50"
+    ],
+    "hard_fails": [
+      "central unsourced number in title/lead: 450, 50"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 450, 50"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 263,
+    "title": "Poliisi löysi ruumiin, jonka uskotaan olevan Australian kolmoissurmista etsitty mies"
+  },
+  "failure": "quality_gate_rejected: length under target (263 words); missing: image; unsourced numbers; central unsourced number in title/lead: 450, 50; unsourced_numbers: 450, 50"
+}
