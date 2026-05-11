@@ -1,0 +1,121 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-11T08:01:24.975526+00:00",
+  "digest": "de99fd0f87",
+  "packet": {
+    "packet_id": "20260511T080124Z_de99fd0f87",
+    "created_at": "2026-05-11T08:01:24Z",
+    "headline_seed": "BBC tours England and Argentina's World Cup training grounds",
+    "description_seed": "Will Grant tested out one of the pitches where England captain Harry Kane and his team will train in Kansas City.",
+    "link": "https://www.bbc.com/news/videos/clypw107dqzo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC",
+      "The New York Times"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/clypw107dqzo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "BBC tours England and Argentina's World Cup training grounds"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Will Grant tested out one of the pitches where England captain Harry Kane and his team will train in Kansas City.",
+        "word_count": 21,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The BBC's Will Grant has been taking a look around the base camps that England and defending champions Argentina will call home during the FIFA World Cup. England will be based at Swope Soccer Village, while Argentina will train at the Sporting KC Training Center, both located in Kansas City. The Netherlands and Algeria have also chosen to stay in the area. The training sites will serve as hubs for match preparation, including practice sessions, player workouts, team meetings and day-to-day staff operations. Political editor Elizabeth Glinka explains the significance of the 14 elections across the region. Detectives release footage of the moment a burglary crime gang is arrested by police. Carlo Tritta is detained by police while at work as part of an investigation into online grooming.",
+        "word_count": 128,
+        "keyword_overlap": 10,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "The BBC's Will Grant has been taking a look around the base camps that England and defending champions Argentina will call home during the FIFA World Cup. England will be based at Swope Soccer Village, while Argentina will train at the Sporting KC Training Center, both located in Kansas City. The Netherlands and Algeria have also chosen to stay in the area. The training sites will serve as hubs for match preparation, including practice sessions, player workouts, team meetings and day-to-day staff operations. ---",
+        "word_count": 84,
+        "keyword_overlap": 10,
+        "strong_overlap": 4
+      },
+      {
+        "source": "The New York Times",
+        "source_type": "research",
+        "text": "When four unassuming Argentines settled in for breakfast at the Hotel Kansas City on Dec. 10, no one — not even their hosts — knew that this, a low-key visit to America’s 38th-largest city, would incite a heavyweight battle for World Cup base camps. The Argentines — soccer administrators and fitness coaches — were there to tour hotels and facilities. They were searching for a temporary World Cup home, a place where Lionel Messi and the reigning champs could live and train this summer. But they’d just been to Texas; next, they’d go to Miami. Kansas City, a relatively humble town tucked away in Middle America, the smallest of the 2026 World Cup’s metro areas, felt like an afterthought.",
+        "word_count": 119,
+        "keyword_overlap": 5,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Will Grant tested out one of the pitches where England captain Harry Kane and his team will train in Kansas City.\n\nThe BBC's Will Grant has been taking a look around the base camps that England and defending champions Argentina will call home during the FIFA World Cup. England will be based at Swope Soccer Village, while Argentina will train at the Sporting KC Training Center, both located in Kansas City. The Netherlands and Algeria have also chosen to stay in the area. The training sites will serve as hubs for match preparation, including practice sessions, player workouts, team meetings and day-to-day staff operations. Political editor Elizabeth Glinka explains the significance of the 14 elections across the region. Detectives release footage of the moment a burglary crime gang is arrested by police. Carlo Tritta is detained by police while at work as part of an investigation into online grooming.\n\nThe BBC's Will Grant has been taking a look around the base camps that England and defending champions Argentina will call home during the FIFA World Cup. England will be based at Swope Soccer Village, while Argentina will train at the Sporting KC Training Center, both located in Kansas City. The Netherlands and Algeria have also chosen to stay in the area. The training sites will serve as hubs for match preparation, including practice sessions, player workouts, team meetings and day-to-day staff operations. ---\n\nWhen four unassuming Argentines settled in for breakfast at the Hotel Kansas City on Dec. 10, no one — not even their hosts — knew that this, a low-key visit to America’s 38th-largest city, would incite a heavyweight battle for World Cup base camps. The Argentines — soccer administrators and fitness coaches — were there to tour hotels and facilities. They were searching for a temporary World Cup home, a place where Lionel Messi and the reigning champs could live and train this summer. But they’d just been to Texas; next, they’d go to Miami. Kansas City, a relatively humble town tucked away in Middle America, the smallest of the 2026 World Cup’s metro areas, felt like an afterthought.",
+    "source_diagnostics": {
+      "candidate_blocks": 6,
+      "candidate_source_words": 614,
+      "selected_blocks": 4,
+      "selected_source_words": 352,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "The New York Times",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "The New York Times"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "BBC tours England and Argentina's World Cup training grounds",
+      "description": "Will Grant tested out one of the pitches where England captain Harry Kane and his team will train in Kansas City.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "BBC tours England and Argentina's World Cup training grounds",
+    "description": "Will Grant tested out one of the pitches where England captain Harry Kane and his team will train in Kansas City.",
+    "link": "https://www.bbc.com/news/videos/clypw107dqzo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-11T07:53:53+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "723a43699ac54ee6e6fddaf0cb5b8b56",
+    "_url_hash": "88665c85cce3d5bfe5a02b6d7211fd5a1179fea455c9804eaf758df97b30ee04",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nThe BBC's Will Grant has been taking a look around the base camps that England and defending champions Argentina will call home during the FIFA World Cup.\n\nEngland will be based at Swope Soccer Village, while Argentina will train at the Sporting KC Training Center, both located in Kansas City.\n\nThe Netherlands and Algeria have also chosen to stay in the area.\n\nThe training sites will serve as hubs for match preparation, including practice sessions, player workouts, team meetings and day-to-day staff operations.\n\nPolitical editor Elizabeth Glinka explains the significance of the 14 elections across the region.\n\nDetectives release footage of the moment a burglary crime gang is arrested by police.\n\nCarlo Tritta is detained by police while at work as part of an investigation into online grooming.\n\nThe aircraft is the new gate guard at RAF Sculthorpe after standing at RAF Alconbury for 50 years.\n\nNational Highways says the scheme, which involves building a new 10-mile carriageway, is \"on track\".\n\nA romance fraudster who conned men into spending thousands of pounds on her has been jailed.\n\nLook back at how all the storms this year impacted the South West.\n\nJason Dozzell reacts as Max Dowman becomes the Premier League's youngest ever goalscorer.\n\nFootage shows the dog singing along to one of the star's songs at Immingham Dogs Home.\n\nA couple take it upon themselves to bring a sparkle back to dirty road signs in and around a city.\n\nKimi Antonelli is just one of the many F1 drivers who have honed their skills on a 'challenging\" track.\n\nEmily Bell will fly the flag for Croydon in the quarter-finals of the hit TV show.\n\nThe Hatters secure a place in the Vertu Trophy final with a 2-1 win over Northampton Town.\n\nThe US will be able to use UK bases for defensive strikes on Iranian missile sites, Sir Keir Starmer says.\n\nA group of walkers in jeans and trainers were escorted to safety from Helvellyn by two teenagers.\n\nThe mountain rescue team says it feels obliged to settle the debt on their behalf.\n\nMountain rescuers in Cumbria are testing the speedy leg attachments on the fells.\n\nTen minutes of stoppage time had to be added on after a squirrel invaded the pitch.\n\nMP Dan Norris has been arrested for a second time accused of a string of sexual offences.\n\n---\n\n[Lähde: BBC]\nThe BBC's Will Grant has been taking a look around the base camps that England and defending champions Argentina will call home during the FIFA World Cup.\n\nEngland will be based at Swope Soccer Village, while Argentina will train at the Sporting KC Training Center, both located in Kansas City.\n\nThe Netherlands and Algeria have also chosen to stay in the area.\n\nThe training sites will serve as hubs for match preparation, including practice sessions, player workouts, team meetings and day-to-day staff operations.\n\n---\n\n[Lähde: The New York Times]\nWhen four unassuming Argentines settled in for breakfast at the Hotel Kansas City on Dec. 10, no one — not even their hosts — knew that this, a low-key visit to America’s 38th-largest city, would incite a heavyweight battle for World Cup base camps.\n\nThe Argentines — soccer administrators and fitness coaches — were there to tour hotels and facilities. They were searching for a temporary World Cup home, a place where Lionel Messi and the reigning champs could live and train this summer. But they’d just been to Texas; next, they’d go to Miami. Kansas City, a relatively humble town tucked away in Middle America, the smallest of the 2026 World Cup’s metro areas, felt like an afterthought.",
+    "research_source": "multi"
+  }
+}
