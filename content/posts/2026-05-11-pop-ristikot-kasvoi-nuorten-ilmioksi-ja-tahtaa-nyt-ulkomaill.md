@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/anon-pop-ristikot-hurmasivat-suomalaisnuoret-jos-joku-olisi-sanonut-etta-paadyn-ristikkolehden-kustantajaksi-olisin-nauranut/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
