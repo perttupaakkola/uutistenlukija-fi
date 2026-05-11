@@ -349,14 +349,19 @@ class MonicaWriterTests(unittest.TestCase):
         payload["content"] = " ".join(["Sana"] * 250)
         self.assertFalse(_is_source_backed_near_miss(packet, payload, []))
         payload["content"] = " ".join(["Sana"] * 247)
-        self.assertFalse(_is_source_backed_near_miss(_source_packet(199, blocks=2), payload, ["content too short: 247 words"]))
+        reduced_floor_packet = _source_packet(180, blocks=2)
+        reduced_floor_packet["story_confidence"] = 0.85
+        self.assertTrue(_is_source_backed_near_miss(reduced_floor_packet, payload, ["content too short: 247 words"]))
+        below_floor_packet = _source_packet(178, blocks=2)
+        below_floor_packet["story_confidence"] = 0.85
+        self.assertFalse(_is_source_backed_near_miss(below_floor_packet, payload, ["content too short: 247 words"]))
         self.assertFalse(_is_source_backed_near_miss(_source_packet(220, blocks=1), payload, ["content too short: 247 words"]))
         low_confidence = _source_packet(360, blocks=2)
         low_confidence["story_confidence"] = 0.84
         self.assertFalse(_is_source_backed_near_miss(low_confidence, payload, ["content too short: 247 words"]))
 
         for category in ("Teknologia", "Kotimaa", "Ulkomaat"):
-            packet = _source_packet(220, blocks=2)
+            packet = _source_packet(180, blocks=2)
             packet["category"] = category
             packet["story_confidence"] = 0.9
             self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 247 words"]))
