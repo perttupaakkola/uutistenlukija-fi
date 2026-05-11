@@ -542,22 +542,20 @@ def check_feeds(dry_run: bool = False, force_alert: bool = False) -> list[dict]:
     return results
 
 
-def main():
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--force-alert", action="store_true", help="Post summary even if no state changes")
-    args = parser.parse_args()
-
-    results = check_feeds(dry_run=args.dry_run, force_alert=args.force_alert)
+def run_health_check(dry_run: bool = False, force_alert: bool = False) -> int:
+    results = check_feeds(dry_run=dry_run, force_alert=force_alert)
     if not results:
         return 1
 
     # Save full results
-    HEALTH_FILE.parent.mkdir(parents=True, exist_ok=True)
-    HEALTH_FILE.write_text(json.dumps(results, indent=2, ensure_ascii=False))
-    print(f"[rss_health] Written to {HEALTH_FILE}")
-    _write_unified_feed_health(results)
+    if dry_run:
+        print(f"[rss_health] [dry-run] Would write to {HEALTH_FILE}")
+        print(f"[rss_health] [dry-run] Would write unified feed health to {UNIFIED_FEED_HEALTH_FILE}")
+    else:
+        HEALTH_FILE.parent.mkdir(parents=True, exist_ok=True)
+        HEALTH_FILE.write_text(json.dumps(results, indent=2, ensure_ascii=False))
+        print(f"[rss_health] Written to {HEALTH_FILE}")
+        _write_unified_feed_health(results)
 
     # State-change detection
     prev_state = _load_state()
@@ -570,13 +568,16 @@ def main():
             changed.append((name, old, score))
 
     first_run = not bool(prev_state)
-    _save_state(new_state)
+    if dry_run:
+        print(f"[rss_health] [dry-run] Would write state to {STATE_FILE}")
+    else:
+        _save_state(new_state)
 
     # Determine what to post
     problem_count = sum(1 for r in results if r["score"] != SCORE_FRESH)
     webhook = WEBHOOK
 
-    if args.dry_run:
+    if dry_run:
         print("\n=== SUMMARY ===")
         print(_build_summary(results))
         if changed:
@@ -588,12 +589,21 @@ def main():
         _post_discord(_build_change_alert(changed), webhook)
 
     # Post full summary on first run, force_alert, or when problems exist + state changed
-    if first_run or args.force_alert or (problem_count > 0 and changed):
+    if first_run or force_alert or (problem_count > 0 and changed):
         _post_discord(_build_summary(results), webhook)
 
     # Always log summary to stdout
     print("\n" + _build_summary(results))
     return 0
+
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--force-alert", action="store_true", help="Post summary even if no state changes")
+    args = parser.parse_args()
+    return run_health_check(dry_run=args.dry_run, force_alert=args.force_alert)
 
 
 if __name__ == "__main__":
