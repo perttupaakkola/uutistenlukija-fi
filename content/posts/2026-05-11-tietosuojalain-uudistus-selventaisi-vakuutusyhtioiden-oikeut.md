@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/tuntematonta-riskia-ei-voi-vakuuttaa-uudistuva-tietosuojalaki-selventaa-vakuutusyhtioiden-tiedonsaantioikeutta/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
