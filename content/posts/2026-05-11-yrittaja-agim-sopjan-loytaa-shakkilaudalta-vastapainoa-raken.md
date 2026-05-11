@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/shakkipoyta-on-agim-sopjanille-tie-mielenrauhaan-jotkut-eivat-kesta-havita/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
