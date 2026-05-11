@@ -1,0 +1,214 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-11T22:41:32.512441+00:00",
+  "digest": "9adc542ac4",
+  "packet": {
+    "packet_id": "20260511T224132Z_9adc542ac4",
+    "created_at": "2026-05-11T22:41:32Z",
+    "headline_seed": "Linux bitten by second severe vulnerability in as many weeks",
+    "description_seed": "Linux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild. Immediate and significant threat The leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. Read full article Comments",
+    "link": "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/",
+    "source": "Ars Technica",
+    "source_names": [
+      "Ars Technica",
+      "Ars Technica",
+      "Ars Technica",
+      "Ars Technica"
+    ],
+    "source_urls": [
+      "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Linux bitten by second severe vulnerability in as many weeks"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ars Technica",
+        "source_type": "description",
+        "text": "Linux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild. Immediate and significant threat The leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. Read full article Comments",
+        "word_count": 186,
+        "keyword_overlap": 98,
+        "strong_overlap": 59
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "Linux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild.",
+        "word_count": 128,
+        "keyword_overlap": 73,
+        "strong_overlap": 42
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "The leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. “The ‘Dirty Frag’ vulnerability presents an immediate and significant threat to Linux systems, as it allows unauthorized users to gain root access by exploiting unpatched kernel flaws,” researchers from security firm Aviatrix wrote Monday. “With proof-of-concept exploits publicly available and signs of limited in-the-wild exploitation, organizations must act swiftly to apply patches and implement mitigations to protect their systems from potential compromise.”",
+        "word_count": 112,
+        "keyword_overlap": 40,
+        "strong_overlap": 23
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "Dirty Frag was discovered and disclosed late last week by researcher Hyunwoo Kim. The exploit chains together code for exploiting two vulnerabilities—tracked as CVE-2026-43284 and CVE-2026-43500. Shortly after the disclosure, someone else leaked key details, effectively making the vulnerability a zero-day. With that, Kim published the source code for the proof-of-concept exploit he had developed. While both vulnerabilities were patched in the Linux kernel, none of the distributions had incorporated the fix. At the time this post went live, several distributors had released patches. Known distributors included Debian, AlmaLinux, and Fedora. People who are interested in other distributions should check with the official provider. Both privilege escalation vulnerabilities stem from bugs in the kernel’s handling of page caches stored in memory, allowing untrusted users to modify them. They target caches in networking ---",
+        "word_count": 133,
+        "keyword_overlap": 20,
+        "strong_overlap": 8
+      }
+    ],
+    "source_text": "Linux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild. Immediate and significant threat The leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. Read full article Comments\n\nLinux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild.\n\nThe leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. “The ‘Dirty Frag’ vulnerability presents an immediate and significant threat to Linux systems, as it allows unauthorized users to gain root access by exploiting unpatched kernel flaws,” researchers from security firm Aviatrix wrote Monday. “With proof-of-concept exploits publicly available and signs of limited in-the-wild exploitation, organizations must act swiftly to apply patches and implement mitigations to protect their systems from potential compromise.”\n\nDirty Frag was discovered and disclosed late last week by researcher Hyunwoo Kim. The exploit chains together code for exploiting two vulnerabilities—tracked as CVE-2026-43284 and CVE-2026-43500. Shortly after the disclosure, someone else leaked key details, effectively making the vulnerability a zero-day. With that, Kim published the source code for the proof-of-concept exploit he had developed. While both vulnerabilities were patched in the Linux kernel, none of the distributions had incorporated the fix. At the time this post went live, several distributors had released patches. Known distributors included Debian, AlmaLinux, and Fedora. People who are interested in other distributions should check with the official provider. Both privilege escalation vulnerabilities stem from bugs in the kernel’s handling of page caches stored in memory, allowing untrusted users to modify them. They target caches in networking ---",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 957,
+      "selected_blocks": 4,
+      "selected_source_words": 559,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Hackaday",
+        "Hackaday",
+        "Hackaday",
+        "Hackaday",
+        "Ars Technica"
+      ],
+      "selected_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Linux bitten by second severe vulnerability in as many weeks",
+      "description": "Linux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild. Immediate and significant threat The leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. Read full article Comments",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Linux bitten by second severe vulnerability in as many weeks",
+    "description": "Linux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild. Immediate and significant threat The leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. Read full article Comments",
+    "link": "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/",
+    "published": "2026-05-11T22:28:19+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "33a9ab83d9fa223b89f1989662b025bc",
+    "_url_hash": "3e1b5d3b239fdbe5c891d5c3077ab65a08b0ffda709b462651531bd6c4496209",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nLinux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard.\n\nThe threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild.\n\nThe leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics.\n\n“The ‘Dirty Frag’ vulnerability presents an immediate and significant threat to Linux systems, as it allows unauthorized users to gain root access by exploiting unpatched kernel flaws,” researchers from security firm Aviatrix wrote Monday. “With proof-of-concept exploits publicly available and signs of limited in-the-wild exploitation, organizations must act swiftly to apply patches and implement mitigations to protect their systems from potential compromise.”\n\nDirty Frag was discovered and disclosed late last week by researcher Hyunwoo Kim. The exploit chains together code for exploiting two vulnerabilities—tracked as CVE-2026-43284 and CVE-2026-43500. Shortly after the disclosure, someone else leaked key details, effectively making the vulnerability a zero-day. With that, Kim published the source code for the proof-of-concept exploit he had developed. While both vulnerabilities were patched in the Linux kernel, none of the distributions had incorporated the fix.\n\nAt the time this post went live, several distributors had released patches. Known distributors included Debian, AlmaLinux, and Fedora. People who are interested in other distributions should check with the official provider.\n\nBoth privilege escalation vulnerabilities stem from bugs in the kernel’s handling of page caches stored in memory, allowing untrusted users to modify them. They target caches in networking\n\n---\n\n[Lähde: Hackaday]\nAfter the CopyFail vulnerability gave root access from any user on almost all distributions last week, this week we’ve got DirtyFrag. This chains the vulnerability in CopyFail (xfrm-ESP) and a new vulnerability in a RPC function which allows similar overwriting of the page cache.\n\nBoth vulnerabilities manipulate the Linux page cache where data from disk is stored for rapid access. The kernel will always prefer the cached version of a file, which means that anything that is able to manipulate the contents of the cache can effectively replace the contents of the file. Both of the vulnerabilities leverage a similar mechanism – picking a binary which is flagged to run as root, such as su, and replacing the contents that would prompt for the users password with a launcher to immediately run a shell.\n\nLike CopyFail, DirtyFrag requires the ability to execute code on the target in the first place, but turning almost any code or command execution vulnerability in any network service into root raises the impact significantly, allowing an attacker to break out of containers and privilege environments, or establish a persistent presence in the system when the original vulnerabilities are discovered and closed.\n\nThe previous mitigations to block specific kernel modules related to CopyFail are not sufficient to block the new vulnerabilities. At the time of writing this, there are no available patches from the distributions, however the vulnerable kernel modules can be temporarily disabled.\n\nCISA (the United States cyber security agency) has added CopyFail to the KEV, or Known Exploited Vulnerabilities list. Attacks on the KEV have been observed under active exploitation, which in the case of CopyFail is hardly a surprise.\n\nThe KEV is designed as a tool to allow security teams in government and commercial industry to prioritize the highest risk vulnerabilities – or at least give another source of data to point at when you say “we really need to patch this now”.\n\nOn the heels of the CopyFail vulnerability impacting almost all distributions, Ubuntu has had to face a prolonged distributed denial-of-service (DDoS) attack against the main infrastructure. Ars Technica reported at the beginning of the attack, and after several days, services appear to be restored. In the meantime, core services such as package updates, core repositories, and even the Ubuntu and Canonical websites were largely unreachable.\n\nAn Iraqi group claims responsibility for the attack, but it is unclear i",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-11T22:43:39.248524+00:00",
+  "payload": {
+    "packet_id": "20260511T224132Z_9adc542ac4",
+    "title": "Linuxia koettelee jälleen vakava haavoittuvuus",
+    "summary": "Dirty Frag -nimellä tunnettu Linux-haavoittuvuus voi antaa vähäoikeuksisille käyttäjille pääkäyttäjän oikeudet erityisesti jaetuissa palvelinympäristöissä.",
+    "content": "Linux-järjestelmistä on löytynyt uusi vakava haavoittuvuus, joka voi antaa konteille, virtuaalikoneita käyttäville käyttäjille ja muille vähäoikeuksisille käyttäjille mahdollisuuden saada pääkäyttäjän oikeudet palvelimella. Dirty Frag -nimellä tunnettu uhka on erityisen huolestuttava jaetuissa ympäristöissä, joissa samaa palvelinta käyttää useampi osapuoli.\n\n## Dirty Frag nostaa riskiä jaetuissa ympäristöissä\n\nDirty Frag liittyy kahteen Linux-ytimen haavoittuvuuteen, joita seurataan tunnisteilla CVE-2026-43284 ja CVE-2026-43500. Haavoittuvuudet koskevat ytimen tapaa käsitellä muistissa olevia sivuvälimuisteja. Niiden seurauksena epäluotettava käyttäjä voi muokata välimuistin sisältöä tavalla, joka voi johtaa oikeuksien korottamiseen.\n\nHyökkäys on kuvauksen perusteella erityisen merkittävä palveluissa, joissa käyttäjät jakavat samaa infrastruktuuria, kuten kontti- ja virtuaalikoneympäristöissä. Jos hyökkääjällä on jo jonkinlainen jalansija koneessa, haavoittuvuutta voidaan käyttää oikeuksien kasvattamiseen root-tasolle. Tämä tekee ongelmasta vakavan etenkin palveluntarjoajille, pilviympäristöille ja organisaatioille, jotka ajavat useiden käyttäjien työkuormia samoilla Linux-palvelimilla.\n\n## Hyväksikäyttökoodi vuoti verkkoon\n\nTilannetta pahentaa se, että hyväksikäyttökoodia on vuotanut julkisesti verkkoon. Kuvausten mukaan koodi toimii ennustettavasti eri Linux-jakeluissa eikä aiheuta kaatumisia, mikä voi tehdä käytöstä vaikeammin havaittavaa. Microsoftin kerrotaan havainneen merkkejä siitä, että hyökkääjät kokeilevat Dirty Fragia käytännössä.\n\nHaavoittuvuuden löysi ja julkisti tutkija Hyunwoo Kim viime viikon lopulla. Keskeisten yksityiskohtien vuotamisen jälkeen Kim julkaisi oman proof-of-concept-koodinsa. Linux-ytimeen korjaukset oli jo tehty, mutta jakelukohtainen tilanne oli aluksi puutteellinen. Myöhemmin ainakin Debianin, AlmaLinuxin ja Fedoran kerrotaan julkaisseen korjauksia.\n\n## Päivitysten tarkistaminen on keskeistä\n\nDirty Frag on toinen lyhyen ajan sisällä esiin noussut vakava Linux-oikeuksienkorotushaavoittuvuus. Aiemmin julkistettu Copy Fail kuvattiin samankaltaiseksi: hyväksikäyttö toimii vakaasti, ei välttämättä kaada järjestelmää ja voi jäädä huomaamatta.\n\nOrganisaatioiden kannattaa tarkistaa oman Linux-jakelunsa viralliset tietoturvatiedotteet ja asentaa saatavilla olevat kernel-päivitykset mahdollisimman nopeasti. Erityistä huomiota vaativat järjestelmät, joissa ajetaan kontteja, virtuaalikoneita tai muiden osapuolten koodia samalla palvelinalustalla.",
+    "category": "Teknologia",
+    "tags": [
+      "Linux",
+      "tietoturva",
+      "haavoittuvuudet",
+      "Dirty Frag",
+      "palvelimet"
+    ],
+    "summary_bullets": [
+      "Dirty Frag voi mahdollistaa pääkäyttäjän oikeuksien saamisen Linux-palvelimilla.",
+      "Riski korostuu jaetuissa kontti- ja virtuaalikoneympäristöissä.",
+      "Hyväksikäyttökoodia on vuotanut julkisesti, ja osalle jakeluista on jo julkaistu korjauksia."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu annetun paketin tietoihin. Jakelukohtainen korjaustilanne voi muuttua nopeasti, joten lukijoita ohjataan tarkistamaan oman jakelunsa viralliset päivitykset."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260511T224132Z_9adc542ac4\",\"title\":\"Linuxia koettelee jälleen vakava haavoittuvuus\",\"summary\":\"Dirty Frag -nimellä tunnettu Linux-haavoittuvuus voi antaa vähäoikeuksisille käyttäjille pääkäyttäjän oikeudet erityisesti jaetuissa palvelinympäristöissä.\",\"content\":\"Linux-järjestelmistä on löytynyt uusi vakava haavoittuvuus, joka voi antaa konteille, virtuaalikoneita käyttäville käyttäjille ja muille vähäoikeuksisille käyttäjille mahdollisuuden saada pääkäyttäjän oikeudet palvelimella. Dirty Frag -nimellä tunnettu uhka on erityisen huolestuttava jaetuissa ympäristöissä, joissa samaa palvelinta käyttää useampi osapuoli.\\n\\n## Dirty Frag nostaa riskiä jaetuissa ympäristöissä\\n\\nDirty Frag liittyy kahteen Linux-ytimen haavoittuvuuteen, joita seurataan tunnisteilla CVE-2026-43284 ja CVE-2026-43500. Haavoittuvuudet koskevat ytimen tapaa käsitellä muistissa olevia sivuvälimuisteja. Niiden seurauksena epäluotettava käyttäjä voi muokata välimuistin sisältöä tavalla, joka voi johtaa oikeuksien korottamiseen.\\n\\nHyökkäys on kuvauksen perusteella erityisen merkittävä palveluissa, joissa käyttäjät jakavat samaa infrastruktuuria, kuten kontti- ja virtuaalikoneympäristöissä. Jos hyökkääjällä on jo jonkinlainen jalansija koneessa, haavoittuvuutta voidaan käyttää oikeuksien kasvattamiseen root-tasolle. Tämä tekee ongelmasta vakavan etenkin palveluntarjoajille, pilviympäristöille ja organisaatioille, jotka ajavat useiden käyttäjien työkuormia samoilla Linux-palvelimilla.\\n\\n## Hyväksikäyttökoodi vuoti verkkoon\\n\\nTilannetta pahentaa se, että hyväksikäyttökoodia on vuotanut julkisesti verkkoon. Kuvausten mukaan koodi toimii ennustettavasti eri Linux-jakeluissa eikä aiheuta kaatumisia, mikä voi tehdä käytöstä vaikeammin havaittavaa. Microsoftin kerrotaan havainneen merkkejä siitä, että hyökkääjät kokeilevat Dirty Fragia käytännössä.\\n\\nHaavoittuvuuden löysi ja julkisti tutkija Hyunwoo Kim viime viikon lopulla. Keskeisten yksityiskohtien vuotamisen jälkeen Kim julkaisi oman proof-of-concept-koodinsa. Linux-ytimeen korjaukset oli jo tehty, mutta jakelukohtainen tilanne oli aluksi puutteellinen. Myöhemmin ainakin Debianin, AlmaLinuxin ja Fedoran kerrotaan julkaisseen korjauksia.\\n\\n## Päivitysten tarkistaminen on keskeistä\\n\\nDirty Frag on toinen lyhyen ajan sisällä esiin noussut vakava Linux-oikeuksienkorotushaavoittuvuus. Aiemmin julkistettu Copy Fail kuvattiin samankaltaiseksi: hyväksikäyttö toimii vakaasti, ei välttämättä kaada järjestelmää ja voi jäädä huomaamatta.\\n\\nOrganisaatioiden kannattaa tarkistaa oman Linux-jakelunsa viralliset tietoturvatiedotteet ja asentaa saatavilla olevat kernel-päivitykset mahdollisimman nopeasti. Erityistä huomiota vaativat järjestelmät, joissa ajetaan kontteja, virtuaalikoneita tai muiden osapuolten koodia samalla palvelinalustalla.\",\"category\":\"Teknologia\",\"tags\":[\"Linux\",\"tietoturva\",\"haavoittuvuudet\",\"Dirty Frag\",\"palvelimet\"],\"summary_bullets\":[\"Dirty Frag voi mahdollistaa pääkäyttäjän oikeuksien saamisen Linux-palvelimilla.\",\"Riski korostuu jaetuissa kontti- ja virtuaalikoneympäristöissä.\",\"Hyväksikäyttökoodia on vuotanut julkisesti, ja osalle jakeluista on jo julkaistu korjauksia.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"Artikkeli perustuu annetun paketin tietoihin. Jakelukohtainen korjaustilanne voi muuttua nopeasti, joten lukijoita ohjataan tarkistamaan oman jakelunsa viralliset päivitykset.\"}",
+  "article": {
+    "title": "Linuxia koettelee jälleen vakava haavoittuvuus",
+    "description": "Dirty Frag -nimellä tunnettu Linux-haavoittuvuus voi antaa vähäoikeuksisille käyttäjille pääkäyttäjän oikeudet erityisesti jaetuissa palvelinympäristöissä.",
+    "link": "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/",
+    "published": "2026-05-11T22:28:19+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "33a9ab83d9fa223b89f1989662b025bc",
+    "_url_hash": "3e1b5d3b239fdbe5c891d5c3077ab65a08b0ffda709b462651531bd6c4496209",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nLinux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard.\n\nThe threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild.\n\nThe leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics.\n\n“The ‘Dirty Frag’ vulnerability presents an immediate and significant threat to Linux systems, as it allows unauthorized users to gain root access by exploiting unpatched kernel flaws,” researchers from security firm Aviatrix wrote Monday. “With proof-of-concept exploits publicly available and signs of limited in-the-wild exploitation, organizations must act swiftly to apply patches and implement mitigations to protect their systems from potential compromise.”\n\nDirty Frag was discovered and disclosed late last week by researcher Hyunwoo Kim. The exploit chains together code for exploiting two vulnerabilities—tracked as CVE-2026-43284 and CVE-2026-43500. Shortly after the disclosure, someone else leaked key details, effectively making the vulnerability a zero-day. With that, Kim published the source code for the proof-of-concept exploit he had developed. While both vulnerabilities were patched in the Linux kernel, none of the distributions had incorporated the fix.\n\nAt the time this post went live, several distributors had released patches. Known distributors included Debian, AlmaLinux, and Fedora. People who are interested in other distributions should check with the official provider.\n\nBoth privilege escalation vulnerabilities stem from bugs in the kernel’s handling of page caches stored in memory, allowing untrusted users to modify them. They target caches in networking\n\n---\n\n[Lähde: Hackaday]\nAfter the CopyFail vulnerability gave root access from any user on almost all distributions last week, this week we’ve got DirtyFrag. This chains the vulnerability in CopyFail (xfrm-ESP) and a new vulnerability in a RPC function which allows similar overwriting of the page cache.\n\nBoth vulnerabilities manipulate the Linux page cache where data from disk is stored for rapid access. The kernel will always prefer the cached version of a file, which means that anything that is able to manipulate the contents of the cache can effectively replace the contents of the file. Both of the vulnerabilities leverage a similar mechanism – picking a binary which is flagged to run as root, such as su, and replacing the contents that would prompt for the users password with a launcher to immediately run a shell.\n\nLike CopyFail, DirtyFrag requires the ability to execute code on the target in the first place, but turning almost any code or command execution vulnerability in any network service into root raises the impact significantly, allowing an attacker to break out of containers and privilege environments, or establish a persistent presence in the system when the original vulnerabilities are discovered and closed.\n\nThe previous mitigations to block specific kernel modules related to CopyFail are not sufficient to block the new vulnerabilities. At the time of writing this, there are no available patches from the distributions, however the vulnerable kernel modules can be temporarily disabled.\n\nCISA (the United States cyber security agency) has added CopyFail to the KEV, or Known Exploited Vulnerabilities list. Attacks on the KEV have been observed under active exploitation, which in the case of CopyFail is hardly a surprise.\n\nThe KEV is designed as a tool to allow security teams in government and commercial industry to prioritize the highest risk vulnerabilities – or at least give another source of data to point at when you say “we really need to patch this now”.\n\nOn the heels of the CopyFail vulnerability impacting almost all distributions, Ubuntu has had to face a prolonged distributed denial-of-service (DDoS) attack against the main infrastructure. Ars Technica reported at the beginning of the attack, and after several days, services appear to be restored. In the meantime, core services such as package updates, core repositories, and even the Ubuntu and Canonical websites were largely unreachable.\n\nAn Iraqi group claims responsibility for the attack, but it is unclear i",
+    "research_source": "multi",
+    "summary": "Dirty Frag -nimellä tunnettu Linux-haavoittuvuus voi antaa vähäoikeuksisille käyttäjille pääkäyttäjän oikeudet erityisesti jaetuissa palvelinympäristöissä.",
+    "content": "Linux-järjestelmistä on löytynyt uusi vakava haavoittuvuus, joka voi antaa konteille, virtuaalikoneita käyttäville käyttäjille ja muille vähäoikeuksisille käyttäjille mahdollisuuden saada pääkäyttäjän oikeudet palvelimella. Dirty Frag -nimellä tunnettu uhka on erityisen huolestuttava jaetuissa ympäristöissä, joissa samaa palvelinta käyttää useampi osapuoli.\n\n## Dirty Frag nostaa riskiä jaetuissa ympäristöissä\n\nDirty Frag liittyy kahteen Linux-ytimen haavoittuvuuteen, joita seurataan tunnisteilla CVE-2026-43284 ja CVE-2026-43500. Haavoittuvuudet koskevat ytimen tapaa käsitellä muistissa olevia sivuvälimuisteja. Niiden seurauksena epäluotettava käyttäjä voi muokata välimuistin sisältöä tavalla, joka voi johtaa oikeuksien korottamiseen.\n\nHyökkäys on kuvauksen perusteella erityisen merkittävä palveluissa, joissa käyttäjät jakavat samaa infrastruktuuria, kuten kontti- ja virtuaalikoneympäristöissä. Jos hyökkääjällä on jo jonkinlainen jalansija koneessa, haavoittuvuutta voidaan käyttää oikeuksien kasvattamiseen root-tasolle. Tämä tekee ongelmasta vakavan etenkin palveluntarjoajille, pilviympäristöille ja organisaatioille, jotka ajavat useiden käyttäjien työkuormia samoilla Linux-palvelimilla.\n\n## Hyväksikäyttökoodi vuoti verkkoon\n\nTilannetta pahentaa se, että hyväksikäyttökoodia on vuotanut julkisesti verkkoon. Kuvausten mukaan koodi toimii ennustettavasti eri Linux-jakeluissa eikä aiheuta kaatumisia, mikä voi tehdä käytöstä vaikeammin havaittavaa. Microsoftin kerrotaan havainneen merkkejä siitä, että hyökkääjät kokeilevat Dirty Fragia käytännössä.\n\nHaavoittuvuuden löysi ja julkisti tutkija Hyunwoo Kim viime viikon lopulla. Keskeisten yksityiskohtien vuotamisen jälkeen Kim julkaisi oman proof-of-concept-koodinsa. Linux-ytimeen korjaukset oli jo tehty, mutta jakelukohtainen tilanne oli aluksi puutteellinen. Myöhemmin ainakin Debianin, AlmaLinuxin ja Fedoran kerrotaan julkaisseen korjauksia.\n\n## Päivitysten tarkistaminen on keskeistä\n\nDirty Frag on toinen lyhyen ajan sisällä esiin noussut vakava Linux-oikeuksienkorotushaavoittuvuus. Aiemmin julkistettu Copy Fail kuvattiin samankaltaiseksi: hyväksikäyttö toimii vakaasti, ei välttämättä kaada järjestelmää ja voi jäädä huomaamatta.\n\nOrganisaatioiden kannattaa tarkistaa oman Linux-jakelunsa viralliset tietoturvatiedotteet ja asentaa saatavilla olevat kernel-päivitykset mahdollisimman nopeasti. Erityistä huomiota vaativat järjestelmät, joissa ajetaan kontteja, virtuaalikoneita tai muiden osapuolten koodia samalla palvelinalustalla.",
+    "category": "Teknologia",
+    "tags": [
+      "linux",
+      "tietoturva",
+      "haavoittuvuudet",
+      "dirty frag",
+      "palvelimet"
+    ],
+    "summary_bullets": [
+      "Dirty Frag voi mahdollistaa pääkäyttäjän oikeuksien saamisen Linux-palvelimilla.",
+      "Riski korostuu jaetuissa kontti- ja virtuaalikoneympäristöissä.",
+      "Hyväksikäyttökoodia on vuotanut julkisesti, ja osalle jakeluista on jo julkaistu korjauksia."
+    ],
+    "key_points": [
+      "Dirty Frag voi mahdollistaa pääkäyttäjän oikeuksien saamisen Linux-palvelimilla.",
+      "Riski korostuu jaetuissa kontti- ja virtuaalikoneympäristöissä.",
+      "Hyväksikäyttökoodia on vuotanut julkisesti, ja osalle jakeluista on jo julkaistu korjauksia."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annetun paketin tietoihin. Jakelukohtainen korjaustilanne voi muuttua nopeasti, joten lukijoita ohjataan tarkistamaan oman jakelunsa viralliset päivitykset.",
+    "source_text": "Linux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild. Immediate and significant threat The leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. Read full article Comments\n\nLinux users have been bitten by yet another vulnerability that gives containers and untrusted users the ability to gain root access, marking the second time in as many weeks that a severe threat has caught defenders off guard. The threat, known as Dirty Frag, allows low-privilege users, including those using virtual machines, to gain root control of servers. Attacks are particularly suitable in shared environments, where a server is used by multiple parties. Hackers can also gain root as long as they have access to a separate exploit that gives a toehold into a machine. Exploit code was leaked online three days ago and works reliably across virtually all Linux distributions. Microsoft has said it has spotted signs that hackers are experimenting with Dirty Frag in the wild.\n\nThe leaked exploit is deterministic, meaning it works precisely the same way each time it’s run and across different Linux distributions. It causes no crashes, making it stealthy to run. A vulnerability known as Copy Fail, disclosed last week with no patches available to end users, possesses the same characteristics. “The ‘Dirty Frag’ vulnerability presents an immediate and significant threat to Linux systems, as it allows unauthorized users to gain root access by exploiting unpatched kernel flaws,” researchers from security firm Aviatrix wrote Monday. “With proof-of-concept exploits publicly available and signs of limited in-the-wild exploitation, organizations must act swiftly to apply patches and implement mitigations to protect their systems from potential compromise.”\n\nDirty Frag was discovered and disclosed late last week by researcher Hyunwoo Kim. The exploit chains together code for exploiting two vulnerabilities—tracked as CVE-2026-43284 and CVE-2026-43500. Shortly after the disclosure, someone else leaked key details, effectively making the vulnerability a zero-day. With that, Kim published the source code for the proof-of-concept exploit he had developed. While both vulnerabilities were patched in the Linux kernel, none of the distributions had incorporated the fix. At the time this post went live, several distributors had released patches. Known distributors included Debian, AlmaLinux, and Fedora. People who are interested in other distributions should check with the official provider. Both privilege escalation vulnerabilities stem from bugs in the kernel’s handling of page caches stored in memory, allowing untrusted users to modify them. They target caches in networking ---",
+    "writer_backend": "monica",
+    "writer_confidence": 0.9,
+    "degraded_mode": false,
+    "monica_packet_id": "20260511T224132Z_9adc542ac4",
+    "image": "https://images.unsplash.com/photo-1751448555253-f39c06e29d82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxMaW51eCUyMHNlcnZlciUyMHZ1bG5lcmFiaWxpdHklMjBzZWN1cml0eXxlbnwxfDB8fHwxNzc4NTM5Njg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1751448555253-f39c06e29d82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxMaW51eCUyMHNlcnZlciUyMHZ1bG5lcmFiaWxpdHklMjBzZWN1cml0eXxlbnwxfDB8fHwxNzc4NTM5Njg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Linuxia koettelee jälleen vakava haavoittuvuus",
+    "image_credit": "Photo by Zulfugar Karimov on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-security-and-privacy-dashboard-with-its-status--nBClEqKKVM?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-11T22:48:05.851268+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1751448555253-f39c06e29d82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxMaW51eCUyMHNlcnZlciUyMHZ1bG5lcmFiaWxpdHklMjBzZWN1cml0eXxlbnwxfDB8fHwxNzc4NTM5Njg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1751448555253-f39c06e29d82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxMaW51eCUyMHNlcnZlciUyMHZ1bG5lcmFiaWxpdHklMjBzZWN1cml0eXxlbnwxfDB8fHwxNzc4NTM5Njg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-11T22:48:31.650520+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-11-linuxia-koettelee-jalleen-vakava-haavoittuvuus.md"
+  ]
+}
