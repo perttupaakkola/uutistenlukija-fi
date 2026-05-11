@@ -25,6 +25,7 @@ import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
+import importlib
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -542,6 +543,20 @@ def check_feeds(dry_run: bool = False, force_alert: bool = False) -> list[dict]:
     return results
 
 
+def _refresh_legacy_feed_health_facade() -> None:
+    """Refresh static/api/feed-health.json after canonical RSS probe writes.
+
+    The legacy facade reads static/api/rss-feed-health.json as canonical input.
+    Running this after a real RSS probe keeps static API artifacts coherent even
+    when humans or agents invoke rss_health.py outside the scheduled cron order.
+    """
+    try:
+        feed_health_report = importlib.import_module("feed_health_report")
+        feed_health_report.refresh_report(do_live=False, save_state=True)
+    except Exception as exc:
+        print(f"[rss_health] WARNING: failed to refresh legacy feed health facade: {exc}", file=sys.stderr)
+
+
 def run_health_check(dry_run: bool = False, force_alert: bool = False) -> int:
     results = check_feeds(dry_run=dry_run, force_alert=force_alert)
     if not results:
@@ -573,6 +588,7 @@ def run_health_check(dry_run: bool = False, force_alert: bool = False) -> int:
     HEALTH_FILE.write_text(json.dumps(results, indent=2, ensure_ascii=False))
     print(f"[rss_health] Written to {HEALTH_FILE}")
     _write_unified_feed_health(results)
+    _refresh_legacy_feed_health_facade()
 
     first_run = not bool(prev_state)
     _save_state(new_state)

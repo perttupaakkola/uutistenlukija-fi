@@ -395,28 +395,32 @@ def build_report(do_live: bool = False, save_state: bool = True) -> dict:
     return report
 
 
-def main():
-    dry_run = "--dry-run" in sys.argv
-    do_live = "--live" in sys.argv
-
-    report = build_report(do_live=do_live, save_state=not dry_run)
-
-    if dry_run:
-        print(json.dumps(report, indent=2, ensure_ascii=False, default=str))
-        return
-
-    OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUT_FILE.write_text(
+def write_report(report: dict, out_file: Path = OUT_FILE) -> None:
+    """Write the legacy feed-health facade artifact."""
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+    out_file.write_text(
         json.dumps(report, indent=2, ensure_ascii=False, default=str),
         encoding="utf-8"
     )
-
     s = report["summary"]
-    print(f"[feed_health_report] Written: {OUT_FILE.relative_to(PROJECT_DIR)}"
+    try:
+        display_path = out_file.relative_to(PROJECT_DIR)
+    except ValueError:
+        display_path = out_file
+    print(f"[feed_health_report] Written: {display_path}"
           f" — {s['healthy']} healthy, {s['stale']} stale, {s['dead']} dead, {s['disabled']} disabled"
           f" ({report['total_articles_tracked']} articles tracked)")
 
-    # Alert if any feeds are dead (not just disabled)
+
+def refresh_report(do_live: bool = False, save_state: bool = True, out_file: Path = OUT_FILE) -> dict:
+    """Build and write the static legacy facade over canonical RSS health."""
+    report = build_report(do_live=do_live, save_state=save_state)
+    write_report(report, out_file=out_file)
+    return report
+
+
+def maybe_alert_dead_feeds(report: dict) -> None:
+    """Emit the legacy dead-feed alert side effect for CLI/live report runs only."""
     dead_feeds = [f["name"] for f in report["feeds"] if f["status"] == "dead"]
     if dead_feeds:
         webhook = os.environ.get("DISCORD_WEBHOOK_URL")
@@ -430,6 +434,20 @@ def main():
             except Exception:
                 pass
         print(f"[feed_health_report] ⚠️  Dead feeds: {', '.join(dead_feeds)}")
+
+
+def main():
+    dry_run = "--dry-run" in sys.argv
+    do_live = "--live" in sys.argv
+
+    report = build_report(do_live=do_live, save_state=not dry_run)
+
+    if dry_run:
+        print(json.dumps(report, indent=2, ensure_ascii=False, default=str))
+        return
+
+    write_report(report)
+    maybe_alert_dead_feeds(report)
 
 
 if __name__ == "__main__":

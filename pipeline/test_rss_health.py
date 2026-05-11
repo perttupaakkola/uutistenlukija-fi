@@ -31,6 +31,7 @@ class RssHealthDryRunTests(unittest.TestCase):
              mock.patch.object(rss_health, "UNIFIED_FEED_HEALTH_FILE", Path(tmp) / "rss-feed-health.json"), \
              mock.patch.object(rss_health, "STATE_FILE", Path(tmp) / "rss-health-state.json"), \
              mock.patch.object(rss_health, "EXTENDED_STATE_FILE", Path(tmp) / "rss-health-extended.json"), \
+             mock.patch.object(rss_health, "_refresh_legacy_feed_health_facade") as refresh_facade, \
              mock.patch.object(rss_health, "check_feeds", return_value=self._result()), \
              mock.patch("sys.argv", ["rss_health.py", "--dry-run"]):
             rc = rss_health.main()
@@ -38,6 +39,7 @@ class RssHealthDryRunTests(unittest.TestCase):
 
         self.assertEqual(rc, 0)
         self.assertEqual(written, [])
+        refresh_facade.assert_not_called()
 
     def test_non_dry_run_writes_artifacts_and_state(self):
         with tempfile.TemporaryDirectory() as tmp, \
@@ -45,6 +47,7 @@ class RssHealthDryRunTests(unittest.TestCase):
              mock.patch.object(rss_health, "UNIFIED_FEED_HEALTH_FILE", Path(tmp) / "rss-feed-health.json"), \
              mock.patch.object(rss_health, "STATE_FILE", Path(tmp) / "rss-health-state.json"), \
              mock.patch.object(rss_health, "WEBHOOK", ""), \
+             mock.patch.object(rss_health, "_refresh_legacy_feed_health_facade") as refresh_facade, \
              mock.patch.object(rss_health, "check_feeds", return_value=self._result()), \
              mock.patch("sys.argv", ["rss_health.py"]):
             rc = rss_health.main()
@@ -57,6 +60,8 @@ class RssHealthDryRunTests(unittest.TestCase):
             self.assertTrue(unified_file.exists())
             self.assertTrue(state_file.exists())
             self.assertEqual(json.loads(state_file.read_text()), {"Yle Uutiset": rss_health.SCORE_FRESH})
+            refresh_facade.assert_called_once_with()
+
 
 
 if __name__ == "__main__":
