@@ -547,17 +547,9 @@ def run_health_check(dry_run: bool = False, force_alert: bool = False) -> int:
     if not results:
         return 1
 
-    # Save full results
-    if dry_run:
-        print(f"[rss_health] [dry-run] Would write to {HEALTH_FILE}")
-        print(f"[rss_health] [dry-run] Would write unified feed health to {UNIFIED_FEED_HEALTH_FILE}")
-    else:
-        HEALTH_FILE.parent.mkdir(parents=True, exist_ok=True)
-        HEALTH_FILE.write_text(json.dumps(results, indent=2, ensure_ascii=False))
-        print(f"[rss_health] Written to {HEALTH_FILE}")
-        _write_unified_feed_health(results)
-
-    # State-change detection
+    # State-change detection. Dry-run is used as a safe verification probe, so
+    # keep it strictly non-mutating: no artifact writes, no state updates, no
+    # scanner edits, and no Discord alerts.
     prev_state = _load_state()
     new_state = {r["name"]: r["score"] for r in results}
     changed = []
@@ -567,23 +559,27 @@ def run_health_check(dry_run: bool = False, force_alert: bool = False) -> int:
         if old and old != score:
             changed.append((name, old, score))
 
-    first_run = not bool(prev_state)
-    if dry_run:
-        print(f"[rss_health] [dry-run] Would write state to {STATE_FILE}")
-    else:
-        _save_state(new_state)
-
-    # Determine what to post
-    problem_count = sum(1 for r in results if r["score"] != SCORE_FRESH)
-    webhook = WEBHOOK
-
     if dry_run:
         print("\n=== SUMMARY ===")
         print(_build_summary(results))
         if changed:
             print("\n=== CHANGES ===")
             print(_build_change_alert(changed))
+        print("\n[dry-run] No files, state, scanner config, or Discord alerts were written.")
         return 0
+
+    # Save full results
+    HEALTH_FILE.parent.mkdir(parents=True, exist_ok=True)
+    HEALTH_FILE.write_text(json.dumps(results, indent=2, ensure_ascii=False))
+    print(f"[rss_health] Written to {HEALTH_FILE}")
+    _write_unified_feed_health(results)
+
+    first_run = not bool(prev_state)
+    _save_state(new_state)
+
+    # Determine what to post
+    problem_count = sum(1 for r in results if r["score"] != SCORE_FRESH)
+    webhook = WEBHOOK
 
     if changed:
         _post_discord(_build_change_alert(changed), webhook)

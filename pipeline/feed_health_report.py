@@ -286,7 +286,7 @@ def _rss_last_success(canonical_feed: dict | None, fallback_last_success: str | 
     return fallback_last_success
 
 
-def build_report(do_live: bool = False) -> dict:
+def build_report(do_live: bool = False, save_state: bool = True) -> dict:
     """Build the feed health report."""
     now = datetime.now(timezone.utc)
     state = _load_state()
@@ -390,7 +390,8 @@ def build_report(do_live: bool = False) -> dict:
         "feeds": feeds,
     }
 
-    _save_state(state)
+    if save_state:
+        _save_state(state)
     return report
 
 
@@ -398,7 +399,7 @@ def main():
     dry_run = "--dry-run" in sys.argv
     do_live = "--live" in sys.argv
 
-    report = build_report(do_live=do_live)
+    report = build_report(do_live=do_live, save_state=not dry_run)
 
     if dry_run:
         print(json.dumps(report, indent=2, ensure_ascii=False, default=str))
