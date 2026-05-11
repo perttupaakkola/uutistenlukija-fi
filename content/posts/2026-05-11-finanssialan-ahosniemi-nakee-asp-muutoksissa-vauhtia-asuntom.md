@@ -39,7 +39,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/ahosniemi-asp-muutokset-vauhdittavat-asuntomarkkinoita/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
