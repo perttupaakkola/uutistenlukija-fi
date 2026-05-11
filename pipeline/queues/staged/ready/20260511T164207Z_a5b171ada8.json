@@ -1,0 +1,126 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-11T16:42:07.934667+00:00",
+  "digest": "a5b171ada8",
+  "packet": {
+    "packet_id": "20260511T164207Z_a5b171ada8",
+    "created_at": "2026-05-11T16:42:07Z",
+    "headline_seed": "Dozens of Nigerian fishermen feared dead after Chad air strikes on Boko Haram",
+    "description_seed": "A fishermen's leader tells the BBC that 40 people are feared dead - either in the strikes or drowning as they tried to flee.",
+    "link": "https://www.bbc.com/news/articles/cr5p85v446ro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Sahara Reporters",
+      "Leadership"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cr5p85v446ro?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Dozens of Nigerian fishermen feared dead after Chad air strikes on Boko Haram"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A fishermen's leader tells the BBC that 40 people are feared dead - either in the strikes or drowning as they tried to flee.",
+        "word_count": 24,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Dozens of Nigerian fishermen are feared dead after Chad's military launched air strikes on Boko Haram militants in the Lake Chad region, a local fishermen's leader has told the BBC. Abubakar Gamandi Usman, chairman of Lake Chad Basin Fisheries Association of Nigeria, said several of the union's members were missing and estimated more than 40 had died. No bodies have yet been recovered but Usman believes some fishermen were hit by the strikes, while others drowned after attempting to flee in overloaded boats. Authorities in Chad and Nigeria have not commented, but on Sunday Chad's presidency said it had carried out retaliatory \"intensive air strikes\" on Boko Haram strongholds.",
+        "word_count": 109,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Sahara Reporters",
+        "source_type": "research",
+        "text": "Abubakar Gamandi Usman, chairman of the Lake Chad Basin Fisheries Association of Nigeria, told the BBC that several members of the association are missing and estimated that more than 40 fishermen could have died in the incident. Some Nigerian fishermen have been feared dead following air strikes carried out by Chad’s military targeting Boko Haram positions in the Lake Chad region, with a local association leader warning that dozens may have been killed. Abubakar Gamandi Usman, chairman of the Lake Chad Basin Fisheries Association of Nigeria, told the BBC that several members of the association are missing and estimated that more than 40 fishermen could have died in the incident.",
+        "word_count": 110,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Leadership",
+        "source_type": "research",
+        "text": "Unspecified numbers of people are feared dead following air strikes reportedly carried out by the Chadian military on suspected Boko Haram enclaves in the Lake Chad region. The strikes were said to have targeted two islands believed to be occupied by insurgents operating within the Lake Chad basin. AFP quoted a member of a civilian militia group and an official of a fishermen’s union as saying that many fishermen and other residents may have been caught in the bombardment. The operation was reportedly carried out by Chadian fighter jets as part of ongoing offensives against jihadist groups active around Lake Chad.",
+        "word_count": 101,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "A fishermen's leader tells the BBC that 40 people are feared dead - either in the strikes or drowning as they tried to flee.\n\nDozens of Nigerian fishermen are feared dead after Chad's military launched air strikes on Boko Haram militants in the Lake Chad region, a local fishermen's leader has told the BBC. Abubakar Gamandi Usman, chairman of Lake Chad Basin Fisheries Association of Nigeria, said several of the union's members were missing and estimated more than 40 had died. No bodies have yet been recovered but Usman believes some fishermen were hit by the strikes, while others drowned after attempting to flee in overloaded boats. Authorities in Chad and Nigeria have not commented, but on Sunday Chad's presidency said it had carried out retaliatory \"intensive air strikes\" on Boko Haram strongholds.\n\nAbubakar Gamandi Usman, chairman of the Lake Chad Basin Fisheries Association of Nigeria, told the BBC that several members of the association are missing and estimated that more than 40 fishermen could have died in the incident. Some Nigerian fishermen have been feared dead following air strikes carried out by Chad’s military targeting Boko Haram positions in the Lake Chad region, with a local association leader warning that dozens may have been killed. Abubakar Gamandi Usman, chairman of the Lake Chad Basin Fisheries Association of Nigeria, told the BBC that several members of the association are missing and estimated that more than 40 fishermen could have died in the incident.\n\nUnspecified numbers of people are feared dead following air strikes reportedly carried out by the Chadian military on suspected Boko Haram enclaves in the Lake Chad region. The strikes were said to have targeted two islands believed to be occupied by insurgents operating within the Lake Chad basin. AFP quoted a member of a civilian militia group and an official of a fishermen’s union as saying that many fishermen and other residents may have been caught in the bombardment. The operation was reportedly carried out by Chadian fighter jets as part of ongoing offensives against jihadist groups active around Lake Chad.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 986,
+      "selected_blocks": 4,
+      "selected_source_words": 344,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Sahara Reporters",
+        "Sahara Reporters",
+        "Sahara Reporters",
+        "Sahara Reporters",
+        "Leadership",
+        "Leadership",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Sahara Reporters",
+        "Leadership"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Dozens of Nigerian fishermen feared dead after Chad air strikes on Boko Haram",
+      "description": "A fishermen's leader tells the BBC that 40 people are feared dead - either in the strikes or drowning as they tried to flee.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Dozens of Nigerian fishermen feared dead after Chad air strikes on Boko Haram",
+    "description": "A fishermen's leader tells the BBC that 40 people are feared dead - either in the strikes or drowning as they tried to flee.",
+    "link": "https://www.bbc.com/news/articles/cr5p85v446ro?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-11T16:30:04+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "ebdbd7fe884079d8b288fedc053046ea",
+    "_url_hash": "feefbce9097731a80db6baf71756492169e55b5b1483a2a2c661c40a3ad31de6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nDozens of Nigerian fishermen are feared dead after Chad's military launched air strikes on Boko Haram militants in the Lake Chad region, a local fishermen's leader has told the BBC.\n\nAbubakar Gamandi Usman, chairman of Lake Chad Basin Fisheries Association of Nigeria, said several of the union's members were missing and estimated more than 40 had died.\n\nNo bodies have yet been recovered but Usman believes some fishermen were hit by the strikes, while others drowned after attempting to flee in overloaded boats.\n\nAuthorities in Chad and Nigeria have not commented, but on Sunday Chad's presidency said it had carried out retaliatory \"intensive air strikes\" on Boko Haram strongholds.\n\nIn a statement on Facebook, the presidency said it had responded to \"unjustified attacks\" by Boko Haram, which took place last Monday and Wednesday and targeted Chadian military bases near Lake Chad, reportedly killing at least 24 soldiers and two generals.\n\nThe Lake Chad basin is a huge region of waterways and swampland shared by Nigeria, Chad, Niger and Cameroon. It has long been a stronghold for Boko Haram and its rival faction, Islamic State West Africa Province (Iswap).\n\n\"After Boko Haram attacked Chadian forces, they retreated to islands they operate from. Fishermen also inhabit these islands,\" Usman told the BBC.\n\nAfter Chad's air force began circling overhead on Friday, panic broke out, with both Boko Haram fighters and fishermen attempting to flee.\n\nThe search for the missing fishermen has been slow, Usman said, as some parts of Lake Chad are very deep. The local community also has limited access to canoes, as many are controlled by Boko Haram, Usman added.\n\n\"Boko Haram controls access to the fishing grounds, transporting fishermen to and from the fish market to the fishing site. Boko Haram collects taxes from these fishermen,\" he said.\n\nRecently, the region has seen a rise in attacks on security forces, as well as kidnappings and raids on communities.\n\nChadian military operations have been accused of causing civilian deaths before - in October 2024, the air force was said to have killed dozens of Nigerian fishermen during air strikes targeting Boko Haram fighters on Tilma Island in Lake Chad.\n\nNigeria's military has also been accused of claiming civilian lives during operations against armed groups and jihadist fighters, though authorities often describe such deaths as unintended collateral damage.\n\nMost recently, the armed forces denied media reports that civilians were\n\n---\n\n[Lähde: Sahara Reporters]\nAbubakar Gamandi Usman, chairman of the Lake Chad Basin Fisheries Association of Nigeria, told the BBC that several members of the association are missing and estimated that more than 40 fishermen could have died in the incident.\n\nSome Nigerian fishermen have been feared dead following air strikes carried out by Chad’s military targeting Boko Haram positions in the Lake Chad region, with a local association leader warning that dozens may have been killed.\n\nAbubakar Gamandi Usman, chairman of the Lake Chad Basin Fisheries Association of Nigeria, told the BBC that several members of the association are missing and estimated that more than 40 fishermen could have died in the incident.\n\nHe said no bodies had been recovered so far, but believed some fishermen were struck during the air operations, while others may have drowned as they attempted to flee in overcrowded boats on the lake.\n\nAuthorities in Chad and Nigeria have not issued official statements on the reported casualties.\n\nHowever, the Chadian presidency said on Sunday that it conducted retaliatory operations described as \"intensive air strikes\" against Boko Haram strongholds.\n\nIn a Facebook statement, the presidency said the strikes were in response to \"unjustified attacks\" by Boko Haram, which reportedly occurred on Monday and Wednesday, targeting Chadian military bases near Lake Chad and killing at least 24 soldiers and two generals.\n\nThe Lake Chad basin, shared by Nigeria, Chad, Niger and Cameroon, is a vast network of islands and waterways that has long been a stronghold for Boko Haram and its splinter faction, Islamic State West Africa Province (ISWAP).\n\nUsman said the violence unfolded after Boko Haram fighters retreated to islands that are also inhabited by fishing communities.\n\n\"After Boko Haram attacked Chadian forces, they retreated to islands they operate from. Fishermen also inhabit these islands,\" he told the BBC.\n\nHe added that panic spread after Chadian military aircraft were sighted on Friday, forcing both insurgents and fishermen to flee the islands at the same time.\n\nAccording to him, search efforts for missing fishermen have been slowed by deep waters in parts of the lake and limited access to boats, many of which are under the control of armed groups.\n\n\"Boko Haram controls access to the fishing grounds, transporting fishermen to and from the fish market to the fishing site. Boko Haram collects taxes from these fishermen,\" he said.\n\nThe region has witnessed repeated attacks on both \n\n---\n\n[Lähde: Leadership]\nUnspecified numbers of people are feared dead following air strikes reportedly carried out by the Chadian military on suspected Boko Haram enclaves in the Lake Chad region.\n\nThe strikes were said to have targeted two islands believed to be occupied by insurgents operating within the Lake Chad basin.\n\nAFP quoted a member of a civilian militia group and an official of a fishermen’s union as saying that many fishermen and other residents may have been caught in the bombardment.\n\nThe operation was reportedly carried out by Chadian fighter jets as part of ongoing offensives against jihadist groups active around Lake Chad.\n\nAlthough there has been no official confirmation of the casualty figure, local sources expressed fears that the death toll could be significant due to the number of people believed to have been on the islands at the time of the attacks.\n\nNeither the Chadian nor Nigerian authorities had issued an official statement on the incident as of the time of filing this report.\n\nThe...",
+    "research_source": "multi"
+  }
+}

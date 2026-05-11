@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/jos-osakesaastotilia-laajennetaan-mukaan-on-otettava-kaikki-rahastot/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
