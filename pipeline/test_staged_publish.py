@@ -439,6 +439,62 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(len(selected), 1)
         self.assertEqual(staged_publish.article_category(selected[0]), "Kotimaa")
 
+    def test_org_source_talous_guardrail_downranks_self_promotional_org_news(self) -> None:
+        article = {
+            "title": "Finanssiala uudisti verkkosivunsa ja nosti edunvalvontatavoitteet näkyviin",
+            "description": "Järjestön Tavoitteemme-osio kertoo sivuston uudesta ulkoasusta.",
+            "source": "Finanssiala",
+            "category_hint": "Talous",
+            "research": "[Lähde: Finanssiala]\n" + "sana " * 360,
+        }
+
+        guardrail = staged_publish.org_source_talous_guardrail(article)
+
+        self.assertEqual(guardrail["classification"], "down_rank_promotional_org_source")
+        self.assertGreater(staged_publish.org_source_talous_penalty(article), staged_publish.category_enqueue_bonus(article))
+
+    def test_org_source_talous_guardrail_keeps_attributed_policy_claim(self) -> None:
+        article = {
+            "title": "Finanssiala varoittaa osakesäästötilin rahastolaajennuksesta",
+            "description": "Finanssialan mukaan muutos voisi heikentää järjestelmän selkeyttä.",
+            "source": "Finanssiala",
+            "category_hint": "Talous",
+            "research": "[Lähde: Finanssiala]\n" + "sana " * 360,
+        }
+
+        guardrail = staged_publish.org_source_talous_guardrail(article)
+
+        self.assertEqual(guardrail["classification"], "ok_attributed_policy_claim")
+        self.assertEqual(staged_publish.org_source_talous_penalty(article), 0)
+
+    def test_org_source_talous_guardrail_allows_concrete_yrittajat_profile(self) -> None:
+        article = {
+            "title": "Yrittäjä Agim Sopjan löytää shakkilaudalta vastapainoa rakennusalan arkeen",
+            "description": "Yritysprofiili kertoo yrittäjän arjesta ja harrastuksesta ilman jäsen-CTA:ta.",
+            "source": "Suomen Yrittäjät",
+            "category_hint": "Talous",
+            "research": "[Lähde: Suomen Yrittäjät]\n" + "sana " * 360,
+        }
+
+        guardrail = staged_publish.org_source_talous_guardrail(article)
+
+        self.assertEqual(guardrail["classification"], "ok_company_profile")
+        self.assertEqual(staged_publish.org_source_talous_penalty(article), 0)
+
+    def test_scan_enqueue_downranks_promotional_org_source_talous_below_comparable_packet(self) -> None:
+        promotional = {
+            "title": "Finanssiala uudisti verkkosivunsa ja nosti edunvalvontatavoitteet näkyviin",
+            "description": "Tavoitteemme-osio ja sivuston ulkoasu esitellään järjestön omassa uutisessa.",
+            "source": "Finanssiala",
+            "category_hint": "Talous",
+            "research": "[Lähde: Finanssiala]\n" + "sana " * 360,
+        }
+        neutral = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 260, "description": "kuvaus"}
+
+        selected = staged_publish.select_scan_enqueue_candidates([promotional, neutral], max_packets=1)
+
+        self.assertEqual(selected, [neutral])
+
     def test_talous_worker_bonus_requires_source_floor(self) -> None:
         kotimaa_record = _record("kotimaa", source_words=320, blocks=1)
         talous_record = _record("talous", source_words=320, blocks=1)

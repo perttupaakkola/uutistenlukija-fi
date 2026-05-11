@@ -231,7 +231,11 @@ def passes_priority_source_floor(article: dict) -> bool:
 
 def enqueue_strength(article: dict) -> tuple[int, int, int, int, int, int]:
     strength = source_strength(article)
-    return (strength[0] + category_enqueue_bonus(article), *strength[1:])
+    return (strength[0] + category_enqueue_bonus(article) - org_source_talous_penalty(article), *strength[1:])
+
+
+def candidate_raw_strength(article: dict) -> int:
+    return source_strength(article)[0]
 
 
 def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> list[dict]:
@@ -257,15 +261,15 @@ def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> li
 
         weakest_index, weakest = min(enumerate(selected), key=lambda item: source_strength(item[1]))
         best_priority = qualified_priority[0]
-        priority_strength = source_strength(best_priority)
-        weakest_strength = source_strength(weakest)
+        priority_strength = enqueue_strength(best_priority)
+        weakest_strength = enqueue_strength(weakest)
         # Keep at least one source-qualified under-target Talous candidate when
         # scan enqueue is capped, but only displace thin/moderate candidates.
         # Stronger source-rich non-Talous packets still win.
         if priority_strength >= weakest_strength or total_source_words(weakest) < 250:
             selected[weakest_index] = best_priority
             selected_ids = {id(article) for article in selected}
-    return sorted(selected, key=source_strength, reverse=True)
+    return sorted(selected, key=enqueue_strength, reverse=True)
 
 
 
@@ -511,6 +515,108 @@ CATEGORY_WORKER_PRIORITY_MIN_BLOCKS = 1
 CATEGORY_SCAN_ENQUEUE_PRIORITY = ("Talous",)
 CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS = 180
 
+
+
+ORG_SOURCE_TALOUS_SOURCES = (
+    "finanssiala",
+    "suomen yrittäjät",
+    "yrittajat.fi",
+    "insurance europe",
+)
+
+ORG_SOURCE_SELF_PROMO_TERMS = (
+    "uudisti verkkosivunsa",
+    "verkkosivunsa",
+    "sivuston ulkoasu",
+    "tavoitteemme-osio",
+    "edunvalvontatavoitteet",
+    "lobbaustavoitteet",
+    "liity",
+    "jäsen",
+    "jäseneksi",
+    "tule mukaan",
+)
+
+ORG_SOURCE_VENDOR_OUTLOOK_TERMS = (
+    "markkinakatsaus",
+    "luottokumppani",
+    "kumppani",
+    "auttaa navigoimaan",
+    "tekemään oikeita päätöksiä",
+)
+
+ORG_SOURCE_POLICY_TERMS = (
+    "varoittaa",
+    "haluaa",
+    "vaatii",
+    "esittää",
+    "katsoo",
+    "arvioi",
+    "uudistus",
+    "selventäisi",
+    "pääomamarkkinoilla",
+    "terveystietoja",
+    "osakesäästötilin",
+)
+
+ORG_SOURCE_ATTRIBUTION_TERMS = (
+    "mukaan",
+    "katsoo",
+    "arvioi",
+    "varoittaa",
+    "haluaa",
+    "esittää",
+    "sanoo",
+)
+
+
+def _text_blob(article: dict) -> str:
+    return " ".join(
+        str(article.get(key) or "")
+        for key in ["title", "description", "research", "research_text", "source", "source_name", "link", "url"]
+    ).lower()
+
+
+def org_source_talous_guardrail(article: dict) -> dict[str, Any]:
+    """Classify org-source Talous promotional drift without blanket blocking.
+
+    The guardrail is intentionally a scoring hint for scan enqueueing, not a
+    source/editorial gate. It down-ranks low-public-interest association PR or
+    vendor outlooks, flags unattributed policy/evaluative claims, and leaves
+    concrete human-interest/company profiles alone.
+    """
+    if article_category(article) != "Talous":
+        return {"applies": False, "classification": "not_org_source_talous", "penalty": 0}
+
+    text = _text_blob(article)
+    if not any(source in text for source in ORG_SOURCE_TALOUS_SOURCES):
+        return {"applies": False, "classification": "not_org_source_talous", "penalty": 0}
+
+    title_desc = " ".join(str(article.get(key) or "") for key in ["title", "description"]).lower()
+    source_markers = re.findall(r"\[(?:lähde|source):\s*([^\]]+)\]", text, flags=re.IGNORECASE)
+    org_marker_count = sum(1 for marker in source_markers if any(source in marker.lower() for source in ORG_SOURCE_TALOUS_SOURCES))
+    has_independent_source = bool(source_markers) and org_marker_count < len(source_markers)
+    has_self_promo = any(term in text for term in ORG_SOURCE_SELF_PROMO_TERMS)
+    has_vendor_outlook = any(term in text for term in ORG_SOURCE_VENDOR_OUTLOOK_TERMS)
+    has_policy_claim = any(term in title_desc or term in text for term in ORG_SOURCE_POLICY_TERMS)
+    has_attribution = any(term in title_desc for term in ORG_SOURCE_ATTRIBUTION_TERMS) or any(source in title_desc for source in ("finanssiala", "yrittäjät", "vakuutusala", "insurance europe"))
+    self_promo_hits = [term for term in ORG_SOURCE_SELF_PROMO_TERMS if term in text]
+    cta_only = bool(self_promo_hits) and all(term in {"liity", "jäsen", "jäseneksi", "tule mukaan"} for term in self_promo_hits)
+    human_interest = bool(re.search(r"\b(yrittäjä|perustaja|yritys|kasvoi|tähtää|harrastus|shakki|rakennusalan)\b", title_desc)) and not has_vendor_outlook and not (has_self_promo and not cta_only)
+
+    if human_interest:
+        return {"applies": True, "classification": "ok_company_profile", "penalty": 0, "requires_attribution": False}
+    if (has_self_promo or has_vendor_outlook) and not has_independent_source:
+        return {"applies": True, "classification": "down_rank_promotional_org_source", "penalty": 160, "requires_attribution": True}
+    if has_policy_claim and not has_attribution:
+        return {"applies": True, "classification": "attribution_needed_org_source", "penalty": 80, "requires_attribution": True}
+    if has_policy_claim:
+        return {"applies": True, "classification": "ok_attributed_policy_claim", "penalty": 0, "requires_attribution": False}
+    return {"applies": True, "classification": "ok_org_source_talous", "penalty": 0, "requires_attribution": False}
+
+
+def org_source_talous_penalty(article: dict) -> int:
+    return int(org_source_talous_guardrail(article).get("penalty", 0) or 0)
 
 def packet_category(packet: dict, original_article: dict | None = None) -> str:
     saved = _normalize_ws(str(packet.get("category") or packet.get("category_hint") or ""))
