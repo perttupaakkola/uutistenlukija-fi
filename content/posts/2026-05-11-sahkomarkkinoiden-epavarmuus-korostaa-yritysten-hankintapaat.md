@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/sahkonhankinta-2026-epavarmat-markkinat-vaativat-osaavan-kumppanin/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

@@ -1,0 +1,124 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-11T18:31:36.366716+00:00",
+  "digest": "495c1e6f8c",
+  "packet": {
+    "packet_id": "20260511T183136Z_495c1e6f8c",
+    "created_at": "2026-05-11T18:31:36Z",
+    "headline_seed": "Portrait looted by Nazis found in home of Dutch SS leader's descendants",
+    "description_seed": "The painting is believed to have been plundered by high-ranking Nazi Hermann Goering during World War Two.",
+    "link": "https://www.bbc.com/news/articles/cgmpj0p9k08o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "The Guardian"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cgmpj0p9k08o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Portrait looted by Nazis found in home of Dutch SS leader's descendants"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The painting is believed to have been plundered by high-ranking Nazi Hermann Goering during World War Two.",
+        "word_count": 17,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Brand then searched the archives of a 1940 auction where much of Goudstikker's looted collection was sold and discovered an item under the number 92 titled \"Portrait of a Young Girl\" by Toon Kelder. Brand believes the painting had been plundered by Hermann Goering, one of the most powerful figures in the Nazi Party, when Goudstikker fled for Britain in 1940. It was then sold to Seyffardt at auction before be ---",
+        "word_count": 72,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A painting stolen from a Jewish art collector by the Nazis during World War Two has been found in the home of descendants of a notorious Dutch SS collaborator, an art detective says. Portrait of a Young Girl, by Dutch artist Toon Kelder, is believed to have hung for decades in the home of Hendrik Seyffardt's family, Arthur Brand said. He added later it had been handed over to his team. The painting belonged to a Jewish art dealer who died fleeing the Nazi invasion of the Netherlands, leaving a collection of more than 1,000 paintings. The case was brought to Brand's attention by a man who told him he was a descendant of Seyffardt \"disgusted\" to learn his family had kept the artwork for years.",
+        "word_count": 126,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Toon Kelder artwork from famed Goudstikker collection resurfaces with descendants of Hendrik Seyffardt An artwork looted by the Nazis from the renowned Goudstikker collection has resurfaced in the home of descendants of a notorious Dutch SS collaborator, according to an art detective. Portrait of a Young Girl, by the Dutch artist Toon Kelder, is believed to have hung for decades in the home of Hendrik Seyffardt’s family, Arthur Brand said, describing it as “the most bizarre case of my entire career”. The case has drawn parallels to a find that made global headlines in 2025, when an 18th-century Nazi-looted painting – also from the collection of the late Jewish art dealer Jacques Goudstikker – featured in a property ad in Argentina.",
+        "word_count": 121,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The painting is believed to have been plundered by high-ranking Nazi Hermann Goering during World War Two.\n\nBrand then searched the archives of a 1940 auction where much of Goudstikker's looted collection was sold and discovered an item under the number 92 titled \"Portrait of a Young Girl\" by Toon Kelder. Brand believes the painting had been plundered by Hermann Goering, one of the most powerful figures in the Nazi Party, when Goudstikker fled for Britain in 1940. It was then sold to Seyffardt at auction before be ---\n\nA painting stolen from a Jewish art collector by the Nazis during World War Two has been found in the home of descendants of a notorious Dutch SS collaborator, an art detective says. Portrait of a Young Girl, by Dutch artist Toon Kelder, is believed to have hung for decades in the home of Hendrik Seyffardt's family, Arthur Brand said. He added later it had been handed over to his team. The painting belonged to a Jewish art dealer who died fleeing the Nazi invasion of the Netherlands, leaving a collection of more than 1,000 paintings. The case was brought to Brand's attention by a man who told him he was a descendant of Seyffardt \"disgusted\" to learn his family had kept the artwork for years.\n\nToon Kelder artwork from famed Goudstikker collection resurfaces with descendants of Hendrik Seyffardt An artwork looted by the Nazis from the renowned Goudstikker collection has resurfaced in the home of descendants of a notorious Dutch SS collaborator, according to an art detective. Portrait of a Young Girl, by the Dutch artist Toon Kelder, is believed to have hung for decades in the home of Hendrik Seyffardt’s family, Arthur Brand said, describing it as “the most bizarre case of my entire career”. The case has drawn parallels to a find that made global headlines in 2025, when an 18th-century Nazi-looted painting – also from the collection of the late Jewish art dealer Jacques Goudstikker – featured in a property ad in Argentina.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 851,
+      "selected_blocks": 4,
+      "selected_source_words": 336,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Portrait looted by Nazis found in home of Dutch SS leader's descendants",
+      "description": "The painting is believed to have been plundered by high-ranking Nazi Hermann Goering during World War Two.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Portrait looted by Nazis found in home of Dutch SS leader's descendants",
+    "description": "The painting is believed to have been plundered by high-ranking Nazi Hermann Goering during World War Two.",
+    "link": "https://www.bbc.com/news/articles/cgmpj0p9k08o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-11T18:27:21+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "76c9732ae9050226ba36a0f58c9ffa36",
+    "_url_hash": "7c853325f1a0fed6dc0787bd1018af9e4875c985b6804ef69a1a53663d19fa1f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nA painting stolen from a Jewish art collector by the Nazis during World War Two has been found in the home of descendants of a notorious Dutch SS collaborator, an art detective says.\n\nPortrait of a Young Girl, by Dutch artist Toon Kelder, is believed to have hung for decades in the home of Hendrik Seyffardt's family, Arthur Brand said. He added later it had been handed over to his team.\n\nThe painting belonged to a Jewish art dealer who died fleeing the Nazi invasion of the Netherlands, leaving a collection of more than 1,000 paintings.\n\nThe case was brought to Brand's attention by a man who told him he was a descendant of Seyffardt \"disgusted\" to learn his family had kept the artwork for years.\n\nSeyffardt was a Dutch general who commanded a Waffen-SS unit of volunteers on the eastern front before he was assassinated by resistance fighters in 1943.\n\nShortly after learning he was related to the Nazi collaborator, the man approached his grandmother to ask about the painting's history.\n\nShe is said to have told him it had been purchased during World War Two and that it was \"Jewish looted art, stolen from [art dealer Jacques] Goudstikker. It is unsellable. Don't tell anyone.\"\n\nThe family, which changed their name at the end of the war, have admitted being in possession of the painting but denied knowing its true origin, according to a statement to Dutch media.\n\nAfter learning of the painting's history, the family member contacted Brand through an intermediary, believing the only way for it to be returned was for the story to be made public.\n\nThe family member told Dutch outlet De Telegraaf: \"I feel ashamed. The painting should be returned to the heirs of Goudstikker.\"\n\nIn a statement to the same newspaper, his grandmother said: \"I received it from my mother.\n\n\"Now that you confront me like this, I understand that Goudstikker's heirs want the painting back. I didn't know that.\"\n\nUpon being informed of the painting's existence, Brand launched his own investigation.\n\nHe discovered the painting had a label on the back and the number 92 etched into its frame.\n\nBrand then searched the archives of a 1940 auction where much of Goudstikker's looted collection was sold and discovered an item under the number 92 titled \"Portrait of a Young Girl\" by Toon Kelder.\n\nBrand believes the painting had been plundered by Hermann Goering, one of the most powerful figures in the Nazi Party, when Goudstikker fled for Britain in 1940.\n\nIt was then sold to Seyffardt at auction before be\n\n---\n\n[Lähde: The Guardian]\nToon Kelder artwork from famed Goudstikker collection resurfaces with descendants of Hendrik Seyffardt\n\nAn artwork looted by the Nazis from the renowned Goudstikker collection has resurfaced in the home of descendants of a notorious Dutch SS collaborator, according to an art detective.\n\nPortrait of a Young Girl, by the Dutch artist Toon Kelder, is believed to have hung for decades in the home of Hendrik Seyffardt’s family, Arthur Brand said, describing it as “the most bizarre case of my entire career”.\n\nThe case has drawn parallels to a find that made global headlines in 2025, when an 18th-century Nazi-looted painting – also from the collection of the late Jewish art dealer Jacques Goudstikker – featured in a property ad in Argentina.\n\nIn the Dutch case, Brand said he was approached by a man who had recently uncovered two disturbing family secrets: he was descended from Seyffardt and his family had displayed looted art for years.\n\nThe relative, who wanted to remain anonymous, told Brand he had seen the painting hanging in the hallway of Seyffardt’s granddaughter.\n\nSeyffardt, one of the highest-ranking Dutch collaborators with the Nazis, commanded a Waffen-SS unit of volunteers on the eastern front before being assassinated by resistance fighters in 1943. A Nazi state funeral was held for him in The Hague, with a wreath sent by Adolf Hitler.\n\nAccording to Brand, Seyffardt’s granddaughter initially said the painting was “Jewish looted art, stolen from Goudstikker. It is unsellable. Don’t tell anyone.”\n\nHowever, the family member wanted the story to go public and contacted Brand, who has solved numerous high-profile cases of stolen art. The family member told De Telegraaf: “I feel ashamed. The painting should be returned to the heirs of Goudstikker.”\n\nAccording to the Dutch daily newspaper, the family was discussing whether the painting should be returned to the Goudstikker heirs, adding that they had not known it was looted. “I received it from my mother. Now that you confront me like this, I understand that Goudstikker’s heirs want the painting back. I didn’t know that,” a relative was quoted as saying.\n\nBrand launched his own investigation, noting that painting had a Goudstikker label on the back and “92” carved into the frame. He searched the archives of an auction in 1940, where part of the looted Goudstikker collection was sold, and found item No 92: Portrait of a Young Girl.\n\nThe senior Nazi official Hermann Göring looted Goudstikker’s entire collectio",
+    "research_source": "multi"
+  }
+}
