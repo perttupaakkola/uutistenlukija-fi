@@ -51,7 +51,10 @@ DAYTIME_START_HEL = 6             # 06:00 Helsinki (UTC+2/+3)
 DAYTIME_END_HEL   = 23            # 23:00 Helsinki
 LOCK_STALE_MINUTES = 30           # stale lock threshold
 DEAD_LOCK_GRACE_MINUTES = 12      # avoid clearing fresh locks while child pipeline work may still be running
-DISK_WARN_GB       = 2.0          # warn if free < 2 GB
+DISK_WARN_GB       = 5.0          # warn if free < 5 GB
+DISK_WARN_USED_PCT = 90.0         # warn if root/project filesystem is >=90% used
+DISK_ERROR_GB      = 1.0          # error if free < 1 GB
+DISK_ERROR_USED_PCT = 97.0        # error if filesystem is >=97% used
 MEM_WARN_MB        = 200          # warn if available < 200 MB
 
 DEFAULT_DISCORD_ALERT_CHANNEL_ID = "1482082645553713366"  # #operations
@@ -399,7 +402,7 @@ def check_pipeline_lock() -> dict:
 
 
 def check_disk_space() -> dict:
-    """Warn if disk free space drops below DISK_WARN_GB."""
+    """Warn/error on low free space or high used percentage."""
     try:
         usage = shutil.disk_usage(_ROOT)
     except Exception as e:
@@ -409,9 +412,20 @@ def check_disk_space() -> dict:
     total_gb = usage.total / (1024 ** 3)
     used_pct = 100.0 * usage.used / usage.total
 
-    if free_gb < DISK_WARN_GB:
+    if free_gb < DISK_ERROR_GB or used_pct >= DISK_ERROR_USED_PCT:
+        status = "ERROR"
+        msg = (
+            f"Disk critical: {free_gb:.1f} GB free / {total_gb:.1f} GB "
+            f"({used_pct:.0f}% used; error thresholds <{DISK_ERROR_GB} GB "
+            f"or >={DISK_ERROR_USED_PCT:.0f}% used)"
+        )
+    elif free_gb < DISK_WARN_GB or used_pct >= DISK_WARN_USED_PCT:
         status = "WARN"
-        msg = f"Disk free: {free_gb:.1f} GB (<{DISK_WARN_GB} GB threshold)"
+        msg = (
+            f"Disk pressure: {free_gb:.1f} GB free / {total_gb:.1f} GB "
+            f"({used_pct:.0f}% used; warn thresholds <{DISK_WARN_GB} GB "
+            f"or >={DISK_WARN_USED_PCT:.0f}% used)"
+        )
     else:
         status = "OK"
         msg = f"Disk free: {free_gb:.1f} GB / {total_gb:.1f} GB ({used_pct:.0f}% used)"
