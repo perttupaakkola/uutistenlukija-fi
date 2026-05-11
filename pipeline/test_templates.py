@@ -177,6 +177,7 @@ def build_test_articles() -> list[TestArticle]:
             image="https://images.unsplash.com/photo-1497366754035-f200968a6e72",
             image_thumb="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=400",
             image_alt="Testikuva newsroom-ympäristöstä",
+            image_caption="",
             image_credit="Photo by Campaign Creators on Unsplash",
             image_source_url="https://unsplash.com/photos/QZ9tYzXq6j0",
             related_articles=[
@@ -248,6 +249,30 @@ def run_hugo_build(hugo_bin: str, destination: Path, timeout: int) -> BuildResul
         stderr = exc.stderr if isinstance(exc.stderr, str) else ""
         stdout = exc.stdout if isinstance(exc.stdout, str) else ""
         return BuildResult(124, stdout, stderr or f"Hugo build timed out after {timeout}s", timed_out=True)
+
+
+def assert_hero_credit_rendered(output_dir: Path) -> None:
+    """Validate credit-only hero metadata renders without requiring captions."""
+    sample = Path("content/posts/2026-05-11-sahkomarkkinoiden-epavarmuus-korostaa-yritysten-hankintapaat.md")
+    source_path = PROJECT_DIR / sample
+    if not source_path.exists():
+        # Older checkouts can still use this harness for generic template build coverage.
+        return
+    rel = sample.relative_to("content").with_suffix("") / "index.html"
+    output_path = output_dir / rel
+    if not output_path.exists():
+        raise AssertionError(f"hero credit sample output missing: {rel}")
+    html = output_path.read_text(encoding="utf-8", errors="replace")
+    required = [
+        "article-hero-caption",
+        "caption-credit",
+        "Photo by Jakub Żerdzicki on Unsplash",
+        "https://unsplash.com/photos/a-bunch-of-money-sitting-on-top-of-a-table-7tym9MfVNzw",
+        'rel="noopener nofollow"',
+    ]
+    missing = [needle for needle in required if needle not in html]
+    if missing:
+        raise AssertionError(f"hero credit render missing: {missing}")
 
 
 def parse_warnings(stderr: str) -> list[str]:
@@ -325,6 +350,13 @@ def main() -> int:
             return 1
         if result.returncode != 0:
             print("[templates] Hugo build failed")
+            return 1
+
+        try:
+            assert_hero_credit_rendered(destination)
+            print("[templates] Hero credit render check passed")
+        except AssertionError as exc:
+            print(f"[templates] Hero credit render check failed: {exc}")
             return 1
 
         print("[templates] Hugo build passed")
