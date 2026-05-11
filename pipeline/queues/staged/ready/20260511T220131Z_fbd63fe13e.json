@@ -1,0 +1,126 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-11T22:01:31.806572+00:00",
+  "digest": "fbd63fe13e",
+  "packet": {
+    "packet_id": "20260511T220131Z_fbd63fe13e",
+    "created_at": "2026-05-11T22:01:31Z",
+    "headline_seed": "Finally, texts between Android and iPhone users can be end-to-end encrypted",
+    "description_seed": "Google had urged Apple for years to support RCS texting to make communication between each company's devices more seamless.",
+    "link": "https://techcrunch.com/2026/05/11/finally-texts-between-android-and-iphone-users-can-be-end-to-end-encrypted/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "Android Authority",
+      "Gizmodo",
+      "TechCrunch"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/05/11/finally-texts-between-android-and-iphone-users-can-be-end-to-end-encrypted/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Finally, texts between Android and iPhone users can be end-to-end encrypted"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Google had urged Apple for years to support RCS texting to make communication between each company's devices more seamless.",
+        "word_count": 19,
+        "keyword_overlap": 14,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Android Authority",
+        "source_type": "research",
+        "text": "Affiliate links on Android Authority may earn us a commission. Learn more. Android users have long been able to enjoy private conversations over text due to end-to-end encryption (E2EE) on rich communication services (RCS). While this has not been the case for chats between Android and iPhone, Apple added interoperable E2EE for RCS to the recently rolled out iOS 26.5 release candidate. Now the privacy feature is finally here to keep your messages private, regardless of who you’re texting. Don’t want to miss the best from Android Authority? Both Google and Apple announced that E2EE for RCS is rolling out for cross-platform messaging starting today. For Android owners, you’ll need to be using the latest version of Google Messages. Meanwhile, the feature is rolling out in beta for iPhone users running stable iOS 26.5.",
+        "word_count": 134,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Gizmodo",
+        "source_type": "research",
+        "text": "Apple is finally making the whole ordeal of messaging Android users, aka green bubbles, more secure with end-to-end encrypted RCS messaging. On Monday, Apple pushed out the encrypted messaging feature as part of a beta in iOS 26.5 for iPhone users. Per Apple, end-to-end encrypted Rich Communication Services (RCS), which replaces the less-secure and less-feature-rich Short Message Service (SMS), prevents messages from being read during transmission between devices. This means even if someone were to intercept your messages, they wouldn’t be able to view them properly. In other words, your booty calls and nudes are safe to send to green bubblers.",
+        "word_count": 101,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "At long last, Android and iPhone users will be able to send each other end-to-end encrypted text messages. On Monday, end-to-end encrypted messaging is starting to roll out in beta for conversations between iPhone and Android users running the most up-to-date software. End-to-end encrypted (e2ee) messaging is an important privacy feature that makes users far less susceptible to surveillance by hackers, governments, or the companies that make these communication platforms. When these messages are sent between devices, they’re encrypted while in transit, making it near-impossible for anyone else to intercept and read the message. But until now, messages sent between iPhone and Android devices could not be end-to-end encrypted (e2ee), even though iMessage has been encrypted since its launch in 2011, and Android users have been able to communicate among themselves via e2ee since 2021. ---",
+        "word_count": 136,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Google had urged Apple for years to support RCS texting to make communication between each company's devices more seamless.\n\nAffiliate links on Android Authority may earn us a commission. Learn more. Android users have long been able to enjoy private conversations over text due to end-to-end encryption (E2EE) on rich communication services (RCS). While this has not been the case for chats between Android and iPhone, Apple added interoperable E2EE for RCS to the recently rolled out iOS 26.5 release candidate. Now the privacy feature is finally here to keep your messages private, regardless of who you’re texting. Don’t want to miss the best from Android Authority? Both Google and Apple announced that E2EE for RCS is rolling out for cross-platform messaging starting today. For Android owners, you’ll need to be using the latest version of Google Messages. Meanwhile, the feature is rolling out in beta for iPhone users running stable iOS 26.5.\n\nApple is finally making the whole ordeal of messaging Android users, aka green bubbles, more secure with end-to-end encrypted RCS messaging. On Monday, Apple pushed out the encrypted messaging feature as part of a beta in iOS 26.5 for iPhone users. Per Apple, end-to-end encrypted Rich Communication Services (RCS), which replaces the less-secure and less-feature-rich Short Message Service (SMS), prevents messages from being read during transmission between devices. This means even if someone were to intercept your messages, they wouldn’t be able to view them properly. In other words, your booty calls and nudes are safe to send to green bubblers.\n\nAt long last, Android and iPhone users will be able to send each other end-to-end encrypted text messages. On Monday, end-to-end encrypted messaging is starting to roll out in beta for conversations between iPhone and Android users running the most up-to-date software. End-to-end encrypted (e2ee) messaging is an important privacy feature that makes users far less susceptible to surveillance by hackers, governments, or the companies that make these communication platforms. When these messages are sent between devices, they’re encrypted while in transit, making it near-impossible for anyone else to intercept and read the message. But until now, messages sent between iPhone and Android devices could not be end-to-end encrypted (e2ee), even though iMessage has been encrypted since its launch in 2011, and Android users have been able to communicate among themselves via e2ee since 2021. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 1001,
+      "selected_blocks": 4,
+      "selected_source_words": 390,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "Gizmodo",
+        "Gizmodo",
+        "Gizmodo",
+        "Gizmodo",
+        "Android Authority",
+        "Android Authority",
+        "Droid Life",
+        "Droid Life",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "Android Authority",
+        "Gizmodo",
+        "TechCrunch"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Finally, texts between Android and iPhone users can be end-to-end encrypted",
+      "description": "Google had urged Apple for years to support RCS texting to make communication between each company's devices more seamless.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Finally, texts between Android and iPhone users can be end-to-end encrypted",
+    "description": "Google had urged Apple for years to support RCS texting to make communication between each company's devices more seamless.",
+    "link": "https://techcrunch.com/2026/05/11/finally-texts-between-android-and-iphone-users-can-be-end-to-end-encrypted/",
+    "published": "2026-05-11T21:59:34+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "03b091c7e43b9a8244c5245228737d39",
+    "_url_hash": "0a17ada1d4fdff2ab2f37d4f7c77c8550178061d0dc8668ef11bd4b199267e6a",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nAt long last, Android and iPhone users will be able to send each other end-to-end encrypted text messages. On Monday, end-to-end encrypted messaging is starting to roll out in beta for conversations between iPhone and Android users running the most up-to-date software.\n\nEnd-to-end encrypted (e2ee) messaging is an important privacy feature that makes users far less susceptible to surveillance by hackers, governments, or the companies that make these communication platforms. When these messages are sent between devices, they’re encrypted while in transit, making it near-impossible for anyone else to intercept and read the message. But until now, messages sent between iPhone and Android devices could not be end-to-end encrypted (e2ee), even though iMessage has been encrypted since its launch in 2011, and Android users have been able to communicate among themselves via e2ee since 2021.\n\n---\n\n[Lähde: Gizmodo]\nApple is finally making the whole ordeal of messaging Android users, aka green bubbles, more secure with end-to-end encrypted RCS messaging.\n\nOn Monday, Apple pushed out the encrypted messaging feature as part of a beta in iOS 26.5 for iPhone users. Per Apple, end-to-end encrypted Rich Communication Services (RCS), which replaces the less-secure and less-feature-rich Short Message Service (SMS), prevents messages from being read during transmission between devices. This means even if someone were to intercept your messages, they wouldn’t be able to view them properly. In other words, your booty calls and nudes are safe to send to green bubblers.\n\nUsers will see a lock icon next to the word “Encrypted” if a conversation with an RCS device is protected. “Encryption is on by default and will be automatically enabled over time for new and existing RCS conversations,” according to Apple.\n\nEncrypted RCS messaging is still beta even though it’s turned on by default after the update. If you’re not seeing RCS messages with the lock icon, you’ll need to check that your carrier and the recipient’s device (which must be using the latest version of Google Messages) supports it.\n\nApple first announced plans to encrypt RCS messages end-to-end in March 2025. “End-to-end encryption is a powerful privacy and security technology that iMessage has supported since the beginning, and now we are pleased to have helped lead a cross-industry effort to bring end-to-end encryption to the RCS Universal Profile published by the GSMA,” Apple told The Verge at the time.\n\nIf you have a compatible iPhone, there’s no reason not to update to iOS 26.5 as soon as possible. As always, make sure you do a backup first in case anything goes wrong.\n\niOS 26.5 also adds the new Pride Luminance wallpaper that celebrates LGBTQ+ communities, announced last week.\n\niOS 26.5 also adds the new Pride Luminance wallpaper pic.twitter.com/X4tccqLsHB\n\nEnd-to-end encrypted RCS messaging is a win for all consumers. As wireless carriers switch over to RCS, which allows compatibility with iMessage features like read receipts and emoji reaction tapbacks, it’s all the more vital that privacy is a top priority.\n\n---\n\n[Lähde: Android Authority]\nAffiliate links on Android Authority may earn us a commission. Learn more.\n\nAndroid users have long been able to enjoy private conversations over text due to end-to-end encryption (E2EE) on rich communication services (RCS). While this has not been the case for chats between Android and iPhone, Apple added interoperable E2EE for RCS to the recently rolled out iOS 26.5 release candidate. Now the privacy feature is finally here to keep your messages private, regardless of who you’re texting.\n\nDon’t want to miss the best from Android Authority?\n\nBoth Google and Apple announced that E2EE for RCS is rolling out for cross-platform messaging starting today. For Android owners, you’ll need to be using the latest version of Google Messages. Meanwhile, the feature is rolling out in beta for iPhone users running stable iOS 26.5.\n\nThe brands point out that not every iPhone will have access to E2EE for RCS. You’ll need to be messaging an iPhone owner who’s using a supported carrier. In the US, this includes AT&T, T-Mobile, Verizon, US Cellular, Spectrum, Mint Mobile, and more. You can check out the full list of supported US carriers on Apple’s support page.\n\nAccording to Apple, encryption will be enabled by default and applied to new and existing RCS conversations over time. Just like when securely messaging between Android devices, you should now see the same lock icon on chats with iPhone users. At the same time, iPhone users will know that their conversations are private if they see a new lock icon in their RCS chats.\n\nThank you for being part of our community. Read our Comment Policy before posting.\n\n---\n\n[Lähde: Droid Life]\nThanks to a list of changes for an iOS update last week, we were pretty sure that Apple and Google were ready to rollout end-to-end encryption (E2EE) for RCS between Android and iPhone devices. To kickstart the week, they both confirmed that to be the case. E2EE RCS is here.\n\nIn separate statements, Google and Apple said that this new feature is rolling out in beta for iPhone users running the latest iOS 26.5 update. It will also require carrier support on a list of carriers that I’d imagine will continue to grow.\n\nFor Android phones, you just need to use Google Messages (the latest version), which basically everyone does at this point. Samsung has even decided to force their phone owners onto it.\n\nTo know if you are in an encrypted RCS message with someone, you’ll see a lock icon in the message box. Google says that encryption is on by default too.\n\niPhone owners, please update to iOS 26.5 right away – you’ve been holding back our encryption all this time.\n\nAs for the supported carriers, Apple is keeping a list, but we’ve grabbed all of the US carriers for you below:\n\nAT&T, Boost Mobile, C Spire, Cellcom Wisconsin, Consumer Cellular, Cox Mobile, Cricket, Family Mobile, FirstNet, Metro by T-Mobile, Mint Mobile, Nex-Tech Wireless, PureTalk, Red Pocket, Spectrum, Strata, T-Mobile, Tr...",
+    "research_source": "multi"
+  }
+}
