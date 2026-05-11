@@ -94,8 +94,9 @@ def select_research_candidates(articles: list[dict], max_candidates: int | None)
         selected_ids = {id(article) for article in selected}
     return selected
 
-def staged_digest_status(digest: str, hours: int = 48) -> tuple[str, Path | None]:
+def staged_digest_statuses(digest: str, hours: int = 48) -> list[tuple[str, Path]]:
     cutoff = time.time() - hours * 3600
+    matches: list[tuple[str, Path]] = []
     for box in ["ready", "writing", "outbox", "published", "failed"]:
         for path in (STAGED_ROOT / box).glob("*.json"):
             try:
@@ -104,23 +105,46 @@ def staged_digest_status(digest: str, hours: int = 48) -> tuple[str, Path | None
                 data = json.loads(path.read_text(encoding="utf-8", errors="replace"))
                 path_digest = data.get("digest") or data.get("packet", {}).get("packet_id", "").rsplit("_", 1)[-1]
                 if str(path_digest) == digest:
-                    return box, path
+                    matches.append((box, path))
             except Exception:
                 continue
+    matches.sort(key=lambda item: item[1].stat().st_mtime, reverse=True)
+    return matches
+
+
+def staged_digest_status(digest: str, hours: int = 48) -> tuple[str, Path | None]:
+    statuses = staged_digest_statuses(digest, hours=hours)
+    if statuses:
+        return statuses[0]
     return "", None
+
+
+def staged_failed_retry_classification(data: dict) -> str:
+    if data.get("duplicate_rejected"):
+        return "duplicate"
+    if data.get("quality_gate_feedback", {}).get("retry_classification"):
+        return str(data["quality_gate_feedback"]["retry_classification"])
+    if data.get("writer_failure_feedback", {}).get("retry_classification"):
+        return str(data["writer_failure_feedback"]["retry_classification"])
+    return normalize_failure_reason(data.get("failure") or "")
 
 
 def should_skip_staged_cooldown(article: dict, hours: int = 48) -> bool:
     digest = stable_digest(article)
-    status, _path = staged_digest_status(digest, hours=hours)
-    if not status:
+    statuses = staged_digest_statuses(digest, hours=hours)
+    if not statuses:
         return False
-    if article_category(article) == "Talous" and status == "failed":
-        # Keep source acquisition alive for the under-target Talous lane when
-        # the previous staged attempt failed. This only allows a fresh scan to
-        # re-enter research/selection; it does not bypass source, Monica, or
-        # editorial gates. Ready/writing/outbox/published still cooldown.
-        return False
+    if article_category(article) == "Talous" and statuses[0][0] == "failed":
+        # Keep source acquisition alive for the under-target Talous lane only
+        # when the latest staged result might be fixed by a new source packet or
+        # writer pass. Terminal duplicate/quality-gate failures must cooldown;
+        # otherwise the same stable digest can loop through Monica every cycle.
+        try:
+            data = json.loads(statuses[0][1].read_text(encoding="utf-8", errors="replace"))
+        except Exception:
+            data = {}
+        if staged_failed_retry_classification(data) not in {"duplicate", "fail_closed_quality_gate"}:
+            return False
     return True
 
 def existing_digests(hours: int = 48) -> set[str]:

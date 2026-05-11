@@ -269,6 +269,47 @@ class StagedPublishMetricsTests(unittest.TestCase):
         with patch.object(staged_publish, "stable_digest", return_value="abc123def0"):
             self.assertFalse(staged_publish.should_skip_staged_cooldown(article, hours=24))
 
+    def test_talous_duplicate_failed_digest_obeys_terminal_cooldown(self) -> None:
+        failed = _record("talous-duplicate", source_words=360, blocks=3)
+        failed["digest"] = "abc123def2"
+        failed["packet"]["category_hint"] = "Talous"
+        failed["original_article"]["category_hint"] = "Talous"
+        failed["duplicate_rejected"] = True
+        self._write("failed", "talous-duplicate", failed, age_hours=1)
+
+        article = {"title": "Talous duplicate", "url": "https://example.com/talous-duplicate", "category_hint": "Talous"}
+        with patch.object(staged_publish, "stable_digest", return_value="abc123def2"):
+            self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=24))
+
+    def test_talous_fail_closed_quality_gate_obeys_terminal_cooldown(self) -> None:
+        failed = _record("talous-quality", source_words=360, blocks=3)
+        failed["digest"] = "abc123def3"
+        failed["packet"]["category_hint"] = "Talous"
+        failed["original_article"]["category_hint"] = "Talous"
+        failed["quality_gate_feedback"] = {"retry_classification": "fail_closed_quality_gate"}
+        self._write("failed", "talous-quality", failed, age_hours=1)
+
+        article = {"title": "Talous quality", "url": "https://example.com/talous-quality", "category_hint": "Talous"}
+        with patch.object(staged_publish, "stable_digest", return_value="abc123def3"):
+            self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=24))
+
+    def test_talous_newer_ready_digest_obeys_cooldown(self) -> None:
+        ready = _record("talous-ready", source_words=360, blocks=3)
+        ready["digest"] = "abc123def4"
+        ready["packet"]["category_hint"] = "Talous"
+        ready["original_article"]["category_hint"] = "Talous"
+        failed = _record("talous-terminal", source_words=360, blocks=3)
+        failed["digest"] = "abc123def4"
+        failed["packet"]["category_hint"] = "Talous"
+        failed["original_article"]["category_hint"] = "Talous"
+        failed["duplicate_rejected"] = True
+        self._write("ready", "talous-ready", ready, age_hours=0.5)
+        self._write("failed", "talous-terminal", failed, age_hours=1)
+
+        article = {"title": "Talous ready", "url": "https://example.com/talous-ready", "category_hint": "Talous"}
+        with patch.object(staged_publish, "stable_digest", return_value="abc123def4"):
+            self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=24))
+
     def test_non_talous_failed_staged_digest_still_obeys_cooldown(self) -> None:
         failed = _record("kotimaa-failed", source_words=0, blocks=0)
         failed["digest"] = "abc123def1"
