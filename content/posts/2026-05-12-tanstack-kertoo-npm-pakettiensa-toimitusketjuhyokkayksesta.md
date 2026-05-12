@@ -43,7 +43,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
