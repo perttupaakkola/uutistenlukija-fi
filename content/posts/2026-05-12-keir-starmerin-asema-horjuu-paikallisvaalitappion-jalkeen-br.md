@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/bbc-britanniassa-vaaditaan-keir-starmerin-eroa/9336924"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
