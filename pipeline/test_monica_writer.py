@@ -291,7 +291,12 @@ class MonicaWriterTests(unittest.TestCase):
         issues = ["content too short: 207 words", "lead paragraph too short: 22 words"]
 
         self.assertTrue(_is_source_backed_repair_candidate(_source_packet(320, blocks=2), issues))
-        self.assertFalse(_is_source_backed_repair_candidate(_source_packet(260, blocks=2), issues))
+        near_floor = _source_packet(180, blocks=2)
+        near_floor["story_confidence"] = 0.85
+        self.assertTrue(_is_source_backed_repair_candidate(near_floor, issues))
+        low_confidence = _source_packet(260, blocks=2)
+        low_confidence["story_confidence"] = 0.84
+        self.assertFalse(_is_source_backed_repair_candidate(low_confidence, issues))
         self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=1), issues))
         self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=2), ["not enough tags"]))
 
@@ -301,6 +306,7 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertEqual(_packet_source_words(packet), 120)
         self.assertEqual(_packet_source_blocks(packet), 2)
+        packet["story_confidence"] = 0.84
         self.assertFalse(_is_source_backed_repair_candidate(packet, ["content too short: 220 words"]))
 
     def test_repair_prompt_strengthens_source_backed_short_draft_without_lowering_gate(self):
@@ -314,6 +320,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("short draft is a repair target", prompt)
         self.assertIn("source_words: 360", prompt)
         self.assertIn("MUST be at least 250 Finnish words", prompt)
+        self.assertIn("first paragraph MUST be at least 30 words", prompt)
         self.assertIn("source_backed_writer_shortfall_unrepairable", prompt)
         self.assertIn("Do not stop at 210–249 words", prompt)
         self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
@@ -348,6 +355,8 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertFalse(_is_source_backed_near_miss(packet, payload, ["content too short: 209 words"]))
         payload["content"] = " ".join(["Sana"] * 250)
         self.assertFalse(_is_source_backed_near_miss(packet, payload, []))
+        payload["content"] = " ".join(["Sana"] * 29) + "\n\n" + " ".join(["Sana"] * 221)
+        self.assertTrue(_is_source_backed_near_miss(packet, payload, ["lead paragraph too short: 29 words"]))
         payload["content"] = " ".join(["Sana"] * 247)
         reduced_floor_packet = _source_packet(180, blocks=2)
         reduced_floor_packet["story_confidence"] = 0.85
@@ -463,8 +472,40 @@ class MonicaWriterTests(unittest.TestCase):
         extra = quarantine_mock.call_args.kwargs["extra"]
         self.assertEqual(extra["reason_code"], "source_backed_writer_shortfall_unrepairable")
         self.assertEqual(extra["final_word_count"], 247)
+        self.assertEqual(extra["final_lead_word_count"], 247)
         self.assertGreaterEqual(extra["source_words"], 200)
         self.assertGreaterEqual(extra["source_blocks"], 2)
+
+    @patch(PATCH_TARGET)
+    def test_rewrite_articles_quarantines_still_short_after_near_floor_repair(self, run_mock):
+        initial_payload = json.loads(_good_payload())
+        initial_payload["content"] = " ".join(["Sana"] * 244)
+        still_short_payload = json.loads(_good_payload())
+        still_short_payload["content"] = " ".join(["Sana"] * 231)
+        packet = _source_packet(199, blocks=3)
+        packet["story_confidence"] = 0.98
+        packet["category"] = "Talous"
+
+        run_mock.side_effect = [
+            self._result(json.dumps(initial_payload, ensure_ascii=False)),
+            self._result(json.dumps(still_short_payload, ensure_ascii=False)),
+            self._result(json.dumps(still_short_payload, ensure_ascii=False)),
+        ]
+
+        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet), \
+             patch(f"{rewrite_articles.__module__}.save_writer_quarantine") as quarantine_mock:
+            rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+
+        self.assertEqual(rewritten, [])
+        self.assertEqual(run_mock.call_count, 3)
+        self.assertTrue(quarantine_mock.called)
+        self.assertEqual(quarantine_mock.call_args.args[1], "source_backed_writer_shortfall_unrepairable")
+        extra = quarantine_mock.call_args.kwargs["extra"]
+        self.assertEqual(extra["reason_code"], "source_backed_writer_shortfall_unrepairable")
+        self.assertEqual(extra["source_words"], 198)
+        self.assertEqual(extra["source_blocks"], 3)
+        self.assertEqual(extra["final_word_count"], 231)
+        self.assertEqual(extra["repair_result"], "still_short")
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):

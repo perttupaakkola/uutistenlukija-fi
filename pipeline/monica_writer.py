@@ -312,6 +312,18 @@ def _content_word_count(payload: dict) -> int:
     return len(str(payload.get("content") or "").split())
 
 
+def _content_lead_word_count(payload: dict) -> int:
+    content = str(payload.get("content") or "").strip()
+    if not content:
+        return 0
+    first_paragraph = next((p.strip() for p in content.split("\n\n") if p.strip()), "")
+    return len(first_paragraph.split())
+
+
+def _is_payload_under_final_length_floor(payload: dict) -> bool:
+    return _content_word_count(payload) < MIN_CONTENT_WORDS or _content_lead_word_count(payload) < MIN_LEAD_WORDS
+
+
 def _packet_story_confidence(packet: dict) -> float:
     for key in ("story_confidence", "confidence"):
         try:
@@ -337,13 +349,21 @@ def _is_source_backed_near_miss(packet: dict, payload: dict, issues: list[str]) 
         return False
     if _packet_source_blocks(packet) < SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS:
         return False
-    return SOURCE_BACKED_NEAR_MISS_MIN_WORDS <= _content_word_count(payload) < MIN_CONTENT_WORDS
+    return _content_word_count(payload) >= SOURCE_BACKED_NEAR_MISS_MIN_WORDS and _is_payload_under_final_length_floor(payload)
 
 
 def _is_source_backed_repair_candidate(packet: dict, issues: list[str]) -> bool:
     if not _has_length_issue(issues):
         return False
-    return _packet_source_words(packet) >= SOURCE_BACKED_REPAIR_WORDS and _packet_source_blocks(packet) >= SOURCE_BACKED_REPAIR_BLOCKS
+    if _packet_source_blocks(packet) < SOURCE_BACKED_REPAIR_BLOCKS:
+        return False
+    return (
+        _packet_source_words(packet) >= SOURCE_BACKED_REPAIR_WORDS
+        or (
+            _packet_source_words(packet) >= SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS
+            and _packet_story_confidence(packet) >= SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE
+        )
+    )
 
 
 def _source_block_ids_for_repair(packet: dict) -> list[str]:
@@ -435,10 +455,10 @@ def _build_repair_prompt(packet: dict, broken_payload: dict, issues: list[str]) 
         source_backed_rules = f"""
 Source-backed repair mode:
 - The packet has {source_words} source words across {source_blocks} source blocks, so a short draft is a repair target, not an automatic failure.
-- The repaired article MUST be at least 250 Finnish words. Target {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
-- For high-confidence source-backed near-misses with at least {SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS} source words, {SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS} source blocks, confidence >= {SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE}, and {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 output words, treat the short output as a writer shortfall: make one final expansion pass using concrete selected-source facts from every available block.
-- Before returning, count the words in `content`. If it is under 250 words, either add source-backed detail from the packet until it is at least {SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS} words, or return INSUFFICIENT_CONFIDENCE with reason `source_backed_writer_shortfall_unrepairable`.
-- Treat 210–249 source-backed output words as a failed repair. Do not return a near-miss; continue revising until the article is safely above the floor or explicitly return `source_backed_writer_shortfall_unrepairable`.
+- The repaired article MUST be at least 250 Finnish words and the first paragraph MUST be at least 30 words. Target {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
+- For high-confidence source-backed near-misses with at least {SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS} source words, {SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS} source blocks, confidence >= {SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE}, and {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 output words or a too-short lead paragraph, treat the short output as a writer shortfall: make one final expansion pass using concrete selected-source facts from every available block.
+- Before returning, count the words in `content` and in the first paragraph. If content is under 250 words or the lead is under 30 words, either add source-backed detail from the packet until it is at least {SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS} words with a 30+ word lead, or return INSUFFICIENT_CONFIDENCE with reason `source_backed_writer_shortfall_unrepairable`.
+- Treat 210–249 source-backed output words and 1–29 word lead paragraphs as failed repairs. Do not return a near-miss; continue revising until the article is safely above both floors or explicitly return `source_backed_writer_shortfall_unrepairable`.
 - Build 4–6 concise paragraphs plus at least two H2 subheadings.
 - Use available source blocks to add concrete context: actors, figures/timing, cause, consequence, and what happens next when available.
 - Do not stop at 210–249 words. A 211-word or 244–248-word repair is still invalid and will be quarantined.
@@ -673,13 +693,14 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                 extra = {"issues": issues, "payload": payload}
                 if repair_metadata:
                     extra.update(repair_metadata)
-                if _is_source_backed_near_miss(packet, payload, issues):
+                if _is_source_backed_repair_candidate(packet, issues) and _is_payload_under_final_length_floor(payload):
                     reason = "source_backed_writer_shortfall_unrepairable"
                     extra.update({
                         "reason_code": "source_backed_writer_shortfall_unrepairable",
                         "source_words": _packet_source_words(packet),
                         "source_blocks": _packet_source_blocks(packet),
                         "final_word_count": _content_word_count(payload),
+                        "final_lead_word_count": _content_lead_word_count(payload),
                     })
                 save_writer_quarantine(packet, reason, raw_response=raw, extra=extra)
                 print(f"[monica]   quarantine: schema_invalid ({'; '.join(issues)})")
