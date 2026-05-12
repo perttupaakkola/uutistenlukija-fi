@@ -240,9 +240,12 @@ def category_enqueue_bonus(article: dict) -> int:
 def passes_priority_source_floor(article: dict) -> bool:
     if article_category(article) != "Talous":
         return True
+    research = str(article.get("research") or article.get("research_text") or "")
+    source_words = len(research.split())
+    source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
     if str(article.get("research_source") or "") == "rss_talous_source_backed":
-        return len(str(article.get("research") or "").split()) >= 45
-    return total_source_words(article) >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS
+        return source_words >= 120 and source_blocks >= 1
+    return source_words >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS and source_blocks >= 2
 
 
 def enqueue_strength(article: dict) -> tuple[int, int, int, int, int, int]:
@@ -293,7 +296,7 @@ def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> li
             if article_category(article) == category and passes_priority_source_floor(article)
         ]
         reserve_priority = [article for article in qualified_priority if scan_candidate_passes_talous_reserve(article)]
-        reserve_pool = reserve_priority or qualified_priority
+        reserve_pool = reserve_priority
         if not reserve_pool or any(id(article) in selected_ids for article in reserve_pool):
             continue
 
@@ -301,9 +304,9 @@ def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> li
         best_priority = reserve_pool[0]
         priority_strength = enqueue_strength(best_priority)
         weakest_strength = enqueue_strength(weakest)
-        # Keep at least one source-qualified under-target Talous candidate when
-        # scan enqueue is capped. Stronger source-rich non-Talous packets still
-        # win unless Talous passes the stricter source-backed reserve rule.
+        # Keep at least one source-backed under-target Talous candidate when
+        # scan enqueue is capped. Do not reserve weak 1-block / low-confidence
+        # Talous packets; those should wait for better sourcing or fail closed.
         if scan_candidate_passes_talous_reserve(best_priority) or priority_strength >= weakest_strength or total_source_words(weakest) < 250:
             selected[weakest_index] = best_priority
             selected_ids = {id(article) for article in selected}

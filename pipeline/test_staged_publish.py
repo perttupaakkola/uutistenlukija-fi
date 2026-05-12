@@ -446,7 +446,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
             "category_hint": "Talous",
             "source": "Taloussanomat",
             "research_source": "rss_talous_source_backed",
-            "research": "[Lähde: Taloussanomat]\n" + " ".join(["sana"] * 55),
+            "research": "[Lähde: Taloussanomat]\n" + " ".join(["sana"] * 125),
             "description": "Lyhyt kuvaus",
         }
 
@@ -530,8 +530,8 @@ class StagedPublishMetricsTests(unittest.TestCase):
             self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=24))
 
     def test_scan_enqueue_keeps_under_target_talous_when_source_strength_ties(self) -> None:
-        kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 220, "description": "kuvaus"}
-        talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 220, "description": "kuvaus"}
+        kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "[Lähde: Testi]\n" + "sana " * 220, "description": "kuvaus"}
+        talous = {"title": "talous", "category_hint": "Talous", "research": "[Lähde: A]\n" + "sana " * 110 + "\n\n[Lähde: B]\n" + "sana " * 110, "description": "kuvaus"}
 
         selected = staged_publish.select_scan_enqueue_candidates([kotimaa, talous], max_packets=1)
 
@@ -550,7 +550,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
     def test_scan_enqueue_promotes_talous_after_source_floor_over_thin_backlog(self) -> None:
         thin_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 90, "description": "kuvaus"}
-        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 190, "description": "kuvaus"}
+        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "[Lähde: A]\n" + "sana " * 95 + "\n\n[Lähde: B]\n" + "sana " * 95, "description": "kuvaus"}
 
         selected = staged_publish.select_scan_enqueue_candidates([thin_kotimaa, sourced_talous], max_packets=1)
 
@@ -561,7 +561,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
     def test_scan_enqueue_keeps_source_qualified_talous_when_cap_drops_it(self) -> None:
         rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 260, "description": "kuvaus"}
         moderate_ulkomaat = {"title": "ulkomaat", "category_hint": "Ulkomaat", "research": "sana " * 170, "description": "kuvaus"}
-        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 190, "description": "kuvaus"}
+        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "[Lähde: A]\n" + "sana " * 95 + "\n\n[Lähde: B]\n" + "sana " * 95, "description": "kuvaus"}
 
         selected = staged_publish.select_scan_enqueue_candidates([rich_kotimaa, moderate_ulkomaat, sourced_talous], max_packets=2)
 
@@ -579,6 +579,25 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
         self.assertEqual(len(selected), 1)
         self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
+
+    def test_scan_enqueue_reserve_rejects_weak_one_block_talous_packet(self) -> None:
+        teknologia = {"title": "teknologia", "category_hint": "Teknologia", "research": "[Lähde: Testi]\n" + "sana " * 220, "description": "kuvaus"}
+        tokmanni = {
+            "title": "Tokmanni aloittaa omien osakkeiden hankinnan",
+            "category_hint": "Talous",
+            "source": "Arvopaperi",
+            "research": "[Lähde: Arvopaperi]\n" + "sana " * 102,
+            "description": "Tokmanni aloittaa omien osakkeiden hankinnan.",
+            "story_confidence": 0.62,
+            "research_source": "multi",
+        }
+
+        self.assertFalse(staged_publish.passes_priority_source_floor(tokmanni))
+        self.assertFalse(staged_publish.scan_candidate_passes_talous_reserve(tokmanni))
+        selected = staged_publish.select_scan_enqueue_candidates([teknologia, tokmanni], max_packets=1)
+
+        self.assertEqual(staged_publish.article_category(selected[0]), "Teknologia")
+
 
     def test_scan_enqueue_reserve_preserves_promotional_talous_rejection(self) -> None:
         teknologia = {"title": "teknologia", "category_hint": "Teknologia", "research": "[Lähde: Testi]\n" + "sana " * 260, "description": "kuvaus"}
@@ -600,7 +619,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
     def test_scan_enqueue_uses_total_source_floor_for_talous_candidate(self) -> None:
         rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 410, "description": "kuvaus"}
         moderate_ulkomaat = {"title": "ulkomaat", "category_hint": "Ulkomaat", "research": "sana " * 204, "description": "kuvaus " * 16}
-        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 116, "description": "kuvaus " * 64}
+        sourced_talous = {"title": "talous", "category_hint": "Talous", "research": "[Lähde: A]\n" + "sana " * 100 + "\n\n[Lähde: B]\n" + "sana " * 100, "description": "kuvaus " * 16}
         rich_urheilu = {"title": "urheilu", "category_hint": "Urheilu", "research": "sana " * 608, "description": "kuvaus"}
 
         selected = staged_publish.select_scan_enqueue_candidates([rich_urheilu, rich_kotimaa, moderate_ulkomaat, sourced_talous], max_packets=3)
