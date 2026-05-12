@@ -43,7 +43,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/ai/2026/05/amazon-employees-are-tokenmaxxing-due-to-pressure-to-use-ai-tools/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
