@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kaksi-hantavirukselle-altistunutta-suomalaista-karanteeniin/9337264"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
