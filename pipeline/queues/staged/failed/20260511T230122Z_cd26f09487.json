@@ -1,0 +1,126 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-11T23:01:22.199102+00:00",
+  "digest": "cd26f09487",
+  "packet": {
+    "packet_id": "20260511T230122Z_cd26f09487",
+    "created_at": "2026-05-11T23:01:22Z",
+    "headline_seed": "TanStack NPM Packages Compromised",
+    "description_seed": "Article URL: https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 232 # Comments: 58",
+    "link": "https://github.com/TanStack/router/issues/7383",
+    "source": "Hacker News Best",
+    "source_names": [
+      "Bleeping Computer",
+      "The Hacker News",
+      "The Hacker News",
+      "Bleeping Computer"
+    ],
+    "source_urls": [
+      "https://github.com/TanStack/router/issues/7383"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "TanStack NPM Packages Compromised"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "Multiple official SAP npm packages were compromised in what is believed to be a TeamPCP supply-chain attack to steal credentials and authentication tokens from developers' systems. Security researchers report that the compromise impacted four packages, with the versions now deprecated on NPM: These packages support SAP's Cloud Application Programming Model (CAP) and Cloud MTA, which are commonly used in enterprise development. According to new reports by Aikido and Socket, the compromised packages were modified to include a malicious 'preinstall' script that executes automatically when the npm package is installed. This script launches a loader named setup.mjs that downloads the Bun JavaScript runtime from GitHub and uses it to execute a heavily obfuscated execution.js payload. The payload is an information-stealer used to steal a wide variety of credentials from both developer machines and CI/CD environments, including:",
+        "word_count": 135,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "The Hacker News",
+        "source_type": "research",
+        "text": "Cybersecurity researchers are sounding the alarm about a new supply chain attack campaign targeting SAP-related npm Packages with credential-stealing malware. According to reports from Aikido Security, Onapsis, OX Security, SafeDep, Socket, StepSecurity, and Google-owned Wiz, the campaign – calling itself the Mini Shai-Hulud – has affected the following packages associated with SAP's JavaScript and cloud application development ecosystem - \"The affected versions introduced new installation-time behavior that was not previously part of these packages' expected functionality,\" Socket said. \"The compromised releases added a preinstall script that acts as a runtime bootstrapper, downloading a platform-specific Bun ZIP from GitHub Releases, extracting it, and immediately executing the extracted Bun binary.\" \"The implementation also follows HTTP redirects without validating the destination and uses PowerShell with -ExecutionPolicy Bypass on Windows, increasing the risk for affected developer and CI/CD environments.\"",
+        "word_count": 135,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "The Hacker News",
+        "source_type": "research",
+        "text": "Wiz noted that the malicious packages match several features present in previous TeamPCP operations, indicating that the same threat actor is likely behind the latest campaign. The suspicious versions were published on April 29, 2026, between 09:55 UTC and 12:14 UTC. The poisoned packages introduce a new package.json preinstall hook that runs a file named \"setup.mjs,\" which acts as a loader for the Bun JavaScript runtime to execute the credential stealer and propagation framework (\"execution.js\"). According to Aikido, the malware is designed to harvest local developer credentials, GitHub and npm tokens, GitHub Actions secrets, and cloud secrets from AWS, Azure, GCP, and Kubernetes. The stolen data is encrypted and exfiltrated to public GitHub repositories created on the victim's own account with the description \"A Mini Shai-Hulud has Appeared.\" As of writing, there are more than 1,100 repositories with descriptions.",
+        "word_count": 139,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "The malware also relies on GitHub commit searches as a dead-drop mechanism to retrieve tokens and gain further access. \"The malware searches GitHub commits for this string and uses matching commit messages as a token dead-drop,\" explains Aikido. \"Commit messages matching OhNoWhatsGoingOnWithGitHub: are decoded into GitHub tokens and checked for repository access.\" Similar to previous attacks, the deployed payload also includes code to self-propagate to other packages. Using stolen npm or GitHub credentials, it attempts to modify other packages and repositories it gains access to, and injects the same malicious code to spread further.",
+        "word_count": 94,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Multiple official SAP npm packages were compromised in what is believed to be a TeamPCP supply-chain attack to steal credentials and authentication tokens from developers' systems. Security researchers report that the compromise impacted four packages, with the versions now deprecated on NPM: These packages support SAP's Cloud Application Programming Model (CAP) and Cloud MTA, which are commonly used in enterprise development. According to new reports by Aikido and Socket, the compromised packages were modified to include a malicious 'preinstall' script that executes automatically when the npm package is installed. This script launches a loader named setup.mjs that downloads the Bun JavaScript runtime from GitHub and uses it to execute a heavily obfuscated execution.js payload. The payload is an information-stealer used to steal a wide variety of credentials from both developer machines and CI/CD environments, including:\n\nCybersecurity researchers are sounding the alarm about a new supply chain attack campaign targeting SAP-related npm Packages with credential-stealing malware. According to reports from Aikido Security, Onapsis, OX Security, SafeDep, Socket, StepSecurity, and Google-owned Wiz, the campaign – calling itself the Mini Shai-Hulud – has affected the following packages associated with SAP's JavaScript and cloud application development ecosystem - \"The affected versions introduced new installation-time behavior that was not previously part of these packages' expected functionality,\" Socket said. \"The compromised releases added a preinstall script that acts as a runtime bootstrapper, downloading a platform-specific Bun ZIP from GitHub Releases, extracting it, and immediately executing the extracted Bun binary.\" \"The implementation also follows HTTP redirects without validating the destination and uses PowerShell with -ExecutionPolicy Bypass on Windows, increasing the risk for affected developer and CI/CD environments.\"\n\nWiz noted that the malicious packages match several features present in previous TeamPCP operations, indicating that the same threat actor is likely behind the latest campaign. The suspicious versions were published on April 29, 2026, between 09:55 UTC and 12:14 UTC. The poisoned packages introduce a new package.json preinstall hook that runs a file named \"setup.mjs,\" which acts as a loader for the Bun JavaScript runtime to execute the credential stealer and propagation framework (\"execution.js\"). According to Aikido, the malware is designed to harvest local developer credentials, GitHub and npm tokens, GitHub Actions secrets, and cloud secrets from AWS, Azure, GCP, and Kubernetes. The stolen data is encrypted and exfiltrated to public GitHub repositories created on the victim's own account with the description \"A Mini Shai-Hulud has Appeared.\" As of writing, there are more than 1,100 repositories with descriptions.\n\nThe malware also relies on GitHub commit searches as a dead-drop mechanism to retrieve tokens and gain further access. \"The malware searches GitHub commits for this string and uses matching commit messages as a token dead-drop,\" explains Aikido. \"Commit messages matching OhNoWhatsGoingOnWithGitHub: are decoded into GitHub tokens and checked for repository access.\" Similar to previous attacks, the deployed payload also includes code to self-propagate to other packages. Using stolen npm or GitHub credentials, it attempts to modify other packages and repositories it gains access to, and injects the same malicious code to spread further.",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 728,
+      "selected_blocks": 4,
+      "selected_source_words": 503,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "The Hacker News",
+        "The Hacker News",
+        "The Hacker News",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Hacker News Best"
+      ],
+      "selected_sources": [
+        "Bleeping Computer",
+        "The Hacker News",
+        "The Hacker News",
+        "Bleeping Computer"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "TanStack NPM Packages Compromised",
+      "description": "Article URL: https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 232 # Comments: 58",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "TanStack NPM Packages Compromised",
+    "description": "Article URL: https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 232 # Comments: 58",
+    "link": "https://github.com/TanStack/router/issues/7383",
+    "published": "2026-05-11T21:08:25+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "8d5b8a1238632394f5140654f5c6230b",
+    "_url_hash": "1873435f23eea8fcee0357af23b5516273815e6e800f9ad36db4f3a53732af8a",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: The Hacker News]\nCybersecurity researchers are sounding the alarm about a new supply chain attack campaign targeting SAP-related npm Packages with credential-stealing malware.\n\nAccording to reports from Aikido Security, Onapsis, OX Security, SafeDep, Socket, StepSecurity, and Google-owned Wiz, the campaign – calling itself the Mini Shai-Hulud – has affected the following packages associated with SAP's JavaScript and cloud application development ecosystem -\n\n\"The affected versions introduced new installation-time behavior that was not previously part of these packages' expected functionality,\" Socket said. \"The compromised releases added a preinstall script that acts as a runtime bootstrapper, downloading a platform-specific Bun ZIP from GitHub Releases, extracting it, and immediately executing the extracted Bun binary.\"\n\n\"The implementation also follows HTTP redirects without validating the destination and uses PowerShell with -ExecutionPolicy Bypass on Windows, increasing the risk for affected developer and CI/CD environments.\"\n\nWiz noted that the malicious packages match several features present in previous TeamPCP operations, indicating that the same threat actor is likely behind the latest campaign.\n\nThe suspicious versions were published on April 29, 2026, between 09:55 UTC and 12:14 UTC. The poisoned packages introduce a new package.json preinstall hook that runs a file named \"setup.mjs,\" which acts as a loader for the Bun JavaScript runtime to execute the credential stealer and propagation framework (\"execution.js\").\n\nAccording to Aikido, the malware is designed to harvest local developer credentials, GitHub and npm tokens, GitHub Actions secrets, and cloud secrets from AWS, Azure, GCP, and Kubernetes. The stolen data is encrypted and exfiltrated to public GitHub repositories created on the victim's own account with the description \"A Mini Shai-Hulud has Appeared.\" As of writing, there are more than 1,100 repositories with descriptions.\n\nIn addition, the 11.6 MB payload comes with capabilities to self-propagate through developer and release workflows, specifically using the GitHub and npm tokens to inject a malicious GitHub Actions workflow into the victim's repositories to steal repository secrets and publish poisoned versions of the npm packages to the registry.\n\nHowever, the latest incident bears significant differences from prior Shai-Hulud waves -\n\n\"This is one of the first supply chain attacks to target AI coding agent configurations as a persistence and prop\n\n---\n\n[Lähde: Bleeping Computer]\nMultiple official SAP npm packages were compromised in what is believed to be a TeamPCP supply-chain attack to steal credentials and authentication tokens from developers' systems.\n\nSecurity researchers report that the compromise impacted four packages, with the versions now deprecated on NPM:\n\nThese packages support SAP's Cloud Application Programming Model (CAP) and Cloud MTA, which are commonly used in enterprise development.\n\nAccording to new reports by Aikido and Socket, the compromised packages were modified to include a malicious 'preinstall' script that executes automatically when the npm package is installed.\n\nThis script launches a loader named setup.mjs that downloads the Bun JavaScript runtime from GitHub and uses it to execute a heavily obfuscated execution.js payload.\n\nThe payload is an information-stealer used to steal a wide variety of credentials from both developer machines and CI/CD environments, including:\n\nThe malware also attempts to extract secrets directly from the CI runner's memory, similar to how TeamPCP extracted credentials in previous supply-chain attacks.\n\n\"On CI runners, the payload executes an embedded Python script that reads /proc/<pid>/maps and /proc/<pid>/mem for the Runner.Worker process to extract every secret matching \"key\" :{ \"value\": \"...\", \"isSecret\":true} directly from runner memory, bypassing all log masking applied by the CI platform,\" explains Socket.\n\n\"This memory scanner for secrets is structurally identical to the one documented in the Bitwarden and Checkmarx incidents.\"\n\nOnce data is collected, it is encrypted and uploaded to public GitHub repositories under the victim's account. These repositories include the description, \"A Mini Shai-Hulud has Appeared\", which is also similar to the \"Shai-Hulud: The Third Coming\" string seen in the Bitwarden supply chain attack.\n\nThe malware also relies on GitHub commit searches as a dead-drop mechanism to retrieve tokens and gain further access.\n\n\"The malware searches GitHub commits for this string and uses matching commit messages as a token dead-drop,\" explains Aikido.\n\n\"Commit messages matching OhNoWhatsGoingOnWithGitHub:<base64> are decoded into GitHub tokens and checked for repository access.\"\n\nSimilar to previous attacks, the deployed payload also includes code to self-propagate to other packages.\n\nUsing stolen npm or GitHub credentials, it attempts to modify other packages and repositories it gains access to, and injects the same malicious code to spread further.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-11T23:23:16.819456+00:00",
+  "failure": "Otsikko ja linkki viittaavat TanStack-paketteihin, mutta varsinainen lähdeaineisto käsittelee SAP:n npm-paketteja. Ristiriita on liian suuri julkaistavan artikkelin kirjoittamiseen ilman faktariskiä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260511T230122Z_cd26f09487\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Otsikko ja linkki viittaavat TanStack-paketteihin, mutta varsinainen lähdeaineisto käsittelee SAP:n npm-paketteja. Ristiriita on liian suuri julkaistavan artikkelin kirjoittamiseen ilman faktariskiä.\"}"
+}
