@@ -44,7 +44,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kymmenien-tuhansien-yrittajien-yel-tulojen-tarkistukset-kayntiin-osalla-yrittajista-jo-toinen-kierros/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
