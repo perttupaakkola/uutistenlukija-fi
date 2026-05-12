@@ -129,6 +129,56 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertTrue(feedback["near_miss_short"])
         self.assertEqual(feedback["retry_classification"], "repair_near_miss_short")
 
+    def test_talous_ready_guardrail_fails_promotional_instagram_org_packet(self) -> None:
+        record = _record("finanssiala-promo", source_words=145, blocks=2)
+        record["packet"]["category_hint"] = "Talous"
+        record["packet"]["story_confidence"] = 0.79
+        record["original_article"].update({
+            "category_hint": "Talous",
+            "source": "Finanssiala",
+            "description": "Kesätyöntekijät ottavat Finanssialalle-Instagram-tilin haltuun. Ota tili seurantaan ja vinkkaa kaverille.",
+            "research": "[Lähde: Finanssiala]\nKesätyöntekijät ottavat Finanssialalle-Instagram-tilin haltuun. Ota Finanssialalle-Instagram seurantaan ja vinkkaa kaverille.",
+        })
+
+        guard = staged_publish.talous_packet_quality_guardrail(record)
+
+        self.assertEqual(guard["action"], "fail")
+        self.assertEqual(guard["reason"], "weak_talous_ready_promotional")
+
+    def test_talous_ready_guardrail_fails_borderline_political_entrepreneur_packet(self) -> None:
+        record = _record("yrittaja-eduskuntaan", source_words=169, blocks=2)
+        record["packet"]["category_hint"] = "Talous"
+        record["packet"]["headline_seed"] = "Yksi yrittäjä lisää eduskuntaan – Konkari palaa Arkadianmäelle"
+        record["packet"]["story_confidence"] = 0.83
+        record["original_article"].update({
+            "category_hint": "Talous",
+            "source": "Suomen Yrittäjät",
+            "title": "Yksi yrittäjä lisää eduskuntaan – Konkari palaa Arkadianmäelle",
+            "research": "[Lähde: Suomen Yrittäjät]\nPertti Hemmilä nousee eduskuntaan. YRITTÄJÄ, tule mukaan omiesi pariin! Liity Yrittäjiin.",
+        })
+
+        guard = staged_publish.talous_packet_quality_guardrail(record)
+
+        self.assertEqual(guard["action"], "fail")
+        self.assertEqual(guard["reason"], "weak_talous_ready_category_borderline")
+
+    def test_talous_ready_guardrail_keeps_publishable_market_packet(self) -> None:
+        record = _record("kamux", source_words=214, blocks=3)
+        record["packet"]["category_hint"] = "Talous"
+        record["packet"]["story_confidence"] = 0.98
+        record["original_article"].update({
+            "category_hint": "Talous",
+            "source": "Arvopaperi",
+            "description": "Kamuxin liikevaihto laski 12 prosenttia 205 miljoonaan euroon ja bruttokate parani.",
+            "research": "[Lähde: Arvopaperi]\nKamuxin liikevaihto laski alkuvuonna 12 prosenttia 205 miljoonaan euroon. Oikaistu liiketulos oli tappiolla. Bruttokate parani.",
+        })
+
+        guard = staged_publish.talous_packet_quality_guardrail(record)
+
+        self.assertEqual(guard["action"], "keep")
+        self.assertEqual(guard["reason"], "source_quality_ok")
+
+
     def test_talous_cooldown_requeues_when_recent_recoverable_failure_exists(self) -> None:
         article = {"title": "talous-recoverable", "link": "https://example.com/talous-recoverable", "category_hint": "Talous"}
         digest = staged_publish.stable_digest(article)

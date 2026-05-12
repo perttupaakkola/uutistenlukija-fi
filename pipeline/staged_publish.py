@@ -872,6 +872,85 @@ def reconstruct_original(packet: dict) -> dict:
     }
 
 
+
+
+def talous_packet_quality_guardrail(data: dict) -> dict[str, Any]:
+    """Fail weak Talous ready packets before Monica burns writer cycles.
+
+    This is a deterministic ready-supply quality filter, not a publish gate. It
+    only applies to Talous packets that already reached ready; strong source
+    packets proceed unchanged, weak org/promotional packets are failed closed so
+    better Talous candidates can occupy the ready lane.
+    """
+    packet = data.get("packet") or data
+    original = data.get("original_article") or reconstruct_original(packet)
+    category = packet_category(packet, original)
+    if category != "Talous":
+        return {"action": "keep", "reason": "not_talous"}
+
+    source_words = packet_source_words(data)
+    source_blocks = packet_source_blocks(data)
+    confidence = packet_confidence(data)
+    guard = org_source_talous_guardrail(original)
+    title = str(packet.get("headline_seed") or original.get("title") or "").lower()
+    text = _text_blob(original)
+    weak_source = source_words < 180 or source_blocks < 2 or confidence < 0.82
+    org_weak = bool(guard.get("applies")) and source_words < 220 and source_blocks <= 2
+    promotional = guard.get("classification") == "down_rank_promotional_org_source"
+    social_promo = any(term in text for term in ("instagram", "seurantaan", "vinkkaa", "kohokohtiin"))
+    category_borderline = ("eduskuntaan" in title or "kansanedustaja" in text) and source_words < 220
+
+    if promotional or social_promo:
+        return {
+            "action": "fail",
+            "reason": "weak_talous_ready_promotional",
+            "source_words": source_words,
+            "source_blocks": source_blocks,
+            "story_confidence": confidence,
+            "org_guardrail": guard,
+        }
+    if category_borderline:
+        return {
+            "action": "fail",
+            "reason": "weak_talous_ready_category_borderline",
+            "source_words": source_words,
+            "source_blocks": source_blocks,
+            "story_confidence": confidence,
+            "org_guardrail": guard,
+        }
+    if org_weak or weak_source:
+        return {
+            "action": "fail",
+            "reason": "weak_talous_ready_source_floor",
+            "source_words": source_words,
+            "source_blocks": source_blocks,
+            "story_confidence": confidence,
+            "org_guardrail": guard,
+        }
+    return {
+        "action": "keep",
+        "reason": "source_quality_ok",
+        "source_words": source_words,
+        "source_blocks": source_blocks,
+        "story_confidence": confidence,
+        "org_guardrail": guard,
+    }
+
+
+def quarantine_weak_talous_ready(path: Path, data: dict, guard: dict) -> None:
+    now = datetime.now(timezone.utc).isoformat()
+    data.update({
+        "failed_at": now,
+        "failure": guard["reason"],
+        "ready_quality_feedback": {**guard, "fail_closed": True},
+    })
+    target = STAGED_ROOT / "failed" / path.name
+    if target.exists():
+        target = STAGED_ROOT / "failed" / f"{path.stem}_{int(time.time())}{path.suffix}"
+    atomic_write_json(target, data)
+    path.unlink(missing_ok=True)
+
+
 def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
     writing = STAGED_ROOT / "writing" / path.name
     try:
@@ -879,6 +958,10 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
     except FileNotFoundError:
         return ("skipped", "missing")
     data = json.loads(writing.read_text(encoding="utf-8", errors="replace"))
+    guard = talous_packet_quality_guardrail(data)
+    if guard.get("action") == "fail":
+        quarantine_weak_talous_ready(writing, data, guard)
+        return ("failed", guard["reason"])
     packet = data.get("packet") or data
     original = data.get("original_article") or reconstruct_original(packet)
     raw = ""
