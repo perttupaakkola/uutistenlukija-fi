@@ -153,6 +153,29 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertTrue(any("central unsourced number" in reason for reason in feedback["quality_reasons"]))
         self.assertIn("quality_gate_rejected", failed["failure"])
 
+    def test_quality_gate_accepts_source_date_rephrased_as_finnish_ordinal(self) -> None:
+        article = {
+            "title": "Laura Welling nimitettiin Finanssiala ry:n johtajaksi",
+            "description": "Laura Welling aloittaa tehtävässä syyskuussa 2026.",
+            "content": (
+                "Laura Welling aloittaa Finanssiala ry:n johtajana 1. syyskuuta 2026. "
+                "Hän tulee tehtävään Taina Ahvenjärven tilalle ja liittyy samalla FA:n johtoryhmään.\n\n"
+                "## Tausta\n\n"
+                "Lähde kertoo aloituspäivän muodossa 1.9.2026, jonka toimituksellinen teksti "
+                "voi kirjoittaa suomenkielisenä päivämääränä ilman, että päivä muuttuu uudeksi luvuksi. "
+                "Tarkistus ei saa koventaa tällaista lähteistettyä päivämäärää keskiseksi luvuksi."
+            ),
+            "category": "Talous",
+            "image": "https://example.com/img.jpg",
+            "source_text": "Laura Welling aloittaa tehtävässään 1.9.2026 ja on osa FA:n johtoryhmää.",
+            "source_url": "https://example.com/story",
+        }
+
+        breakdown = staged_publish.score_article(article)
+
+        self.assertFalse(any("central unsourced number" in reason for reason in breakdown.hard_fails))
+        self.assertFalse(any("unsourced_numbers: 1" in reason for reason in breakdown.soft_warnings))
+
     def test_enrich_images_uses_unsplash_for_missing_article_images(self) -> None:
         articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "sisältö"}]
 

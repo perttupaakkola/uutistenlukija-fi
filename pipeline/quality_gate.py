@@ -107,8 +107,27 @@ def _extract_numbers(text: str) -> set[str]:
     return normalised
 
 
+def _with_number_aliases(numbers: set[str]) -> set[str]:
+    """Add conservative aliases for Finnish date ordinals.
+
+    Finnish prose often turns an ISO/source date like 1.9.2026 into
+    "1. syyskuuta 2026". The generic number extractor sees the latter
+    as a standalone "1" plus "2026", which made central-claim checks
+    reject otherwise source-backed Talous articles even when the exact date
+    was present in the source. Keep this narrow: only add day/month aliases
+    from already-sourced dotted numeric dates.
+    """
+    out = set(numbers)
+    for value in numbers:
+        match = re.fullmatch(r"(\d{1,2})\.(\d{1,2})(?:\.(?:19|20)\d{2})?", value)
+        if match:
+            day, month = match.group(1).lstrip("0") or "0", match.group(2).lstrip("0") or "0"
+            out.update({day, month})
+    return out
+
+
 def check_numbers_sourced(source_text: str, content: str, title: str = "") -> list[str]:
-    source_nums = _extract_numbers(source_text)
+    source_nums = _with_number_aliases(_extract_numbers(source_text))
     article_nums = _extract_numbers((title or "") + " " + (content or ""))
     return sorted(article_nums - source_nums)
 
