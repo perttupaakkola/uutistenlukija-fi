@@ -1,0 +1,209 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-12T00:31:18.869734+00:00",
+  "digest": "9c29db4e06",
+  "packet": {
+    "packet_id": "20260512T003118Z_9c29db4e06",
+    "created_at": "2026-05-12T00:31:18Z",
+    "headline_seed": "US in closely-guarded talks to open new bases in Greenland",
+    "description_seed": "It is seeking to open three bases in the south of the Arctic territory, according to multiple officials familiar with the talks.",
+    "link": "https://www.bbc.com/news/articles/cx21669452lo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cx21669452lo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US in closely-guarded talks to open new bases in Greenland"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The US has been holding regular negotiations with Denmark to expand its military presence in Greenland, according to multiple officials familiar with the discussions, with talks between both sides progressing in recent months. US officials are seeking to open three new bases in the south of the territory, a semi-autonomous part of Denmark, as they work to resolve a diplomatic crisis sparked by President Donald Trump when he threatened to seize Greenland by force. Trump said in January that the US should \"own\" Greenland to prevent Russia or China from taking it. He said this could happen the \"easy way \" or \"the hard way\".",
+        "word_count": 105,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "It is seeking to open three bases in the south of the Arctic territory, according to multiple officials familiar with the talks.",
+        "word_count": 22,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The White House confirmed the administration was engaged in high-level talks with Greenland and Denmark, but declined to comment on details of the negotiations. A White House official told the BBC the administration was very optimistic the talks were headed in the right direction. Denmark has previously expressed a willingness to discuss additional American military bases in Greenland, and its foreign ministry confirmed talks with the US were taking place. \"There is an ongoing diplomatic track with the United States. The Ministry of Foreign Affairs will not go into further detail at this time,\" a spokesperson said. US officials have floated an arrangement in which the three new military bases would be formally designated as US sovereign territory, according to one source with knowledge of the negotiations.",
+        "word_count": 127,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The bases would be in southern Greenland and primarily focus on surveillance of potential Russian and Chinese maritime activity in an area of the northern Atlantic between Greenland, Iceland and the United Kingdom known as the GIUK Gap, the officials who spoke to the BBC said. The two sides have not formally agreed to anything yet and the final number of bases could change, the sources said. One of the new bases would likely be located in Narsarsuaq, on the site of a former US military base that housed a small airport. Any other new military bases would likely also be located on sites in Greenland that have existing infrastructure such as airfields or ports, which could be upgraded at a lower cost than building new facilities, analysts said.",
+        "word_count": 129,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "The US has been holding regular negotiations with Denmark to expand its military presence in Greenland, according to multiple officials familiar with the discussions, with talks between both sides progressing in recent months. US officials are seeking to open three new bases in the south of the territory, a semi-autonomous part of Denmark, as they work to resolve a diplomatic crisis sparked by President Donald Trump when he threatened to seize Greenland by force. Trump said in January that the US should \"own\" Greenland to prevent Russia or China from taking it. He said this could happen the \"easy way \" or \"the hard way\".\n\nIt is seeking to open three bases in the south of the Arctic territory, according to multiple officials familiar with the talks.\n\nThe White House confirmed the administration was engaged in high-level talks with Greenland and Denmark, but declined to comment on details of the negotiations. A White House official told the BBC the administration was very optimistic the talks were headed in the right direction. Denmark has previously expressed a willingness to discuss additional American military bases in Greenland, and its foreign ministry confirmed talks with the US were taking place. \"There is an ongoing diplomatic track with the United States. The Ministry of Foreign Affairs will not go into further detail at this time,\" a spokesperson said. US officials have floated an arrangement in which the three new military bases would be formally designated as US sovereign territory, according to one source with knowledge of the negotiations.\n\nThe bases would be in southern Greenland and primarily focus on surveillance of potential Russian and Chinese maritime activity in an area of the northern Atlantic between Greenland, Iceland and the United Kingdom known as the GIUK Gap, the officials who spoke to the BBC said. The two sides have not formally agreed to anything yet and the final number of bases could change, the sources said. One of the new bases would likely be located in Narsarsuaq, on the site of a former US military base that housed a small airport. Any other new military bases would likely also be located on sites in Greenland that have existing infrastructure such as airfields or ports, which could be upgraded at a lower cost than building new facilities, analysts said.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 429,
+      "selected_blocks": 4,
+      "selected_source_words": 383,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US in closely-guarded talks to open new bases in Greenland",
+      "description": "It is seeking to open three bases in the south of the Arctic territory, according to multiple officials familiar with the talks.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US in closely-guarded talks to open new bases in Greenland",
+    "description": "It is seeking to open three bases in the south of the Arctic territory, according to multiple officials familiar with the talks.",
+    "link": "https://www.bbc.com/news/articles/cx21669452lo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-11T23:56:11+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4cf54d92d79f1e5dcc8806c556f73123",
+    "_url_hash": "93bc9253153706d40bd5e8d27c58a6d0894aad8dcbd81bfc76b2494f41be064a",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe US has been holding regular negotiations with Denmark to expand its military presence in Greenland, according to multiple officials familiar with the discussions, with talks between both sides progressing in recent months.\n\nUS officials are seeking to open three new bases in the south of the territory, a semi-autonomous part of Denmark, as they work to resolve a diplomatic crisis sparked by President Donald Trump when he threatened to seize Greenland by force.\n\nTrump said in January that the US should \"own\" Greenland to prevent Russia or China from taking it. He said this could happen the \"easy way \" or \"the hard way\".\n\nThe White House confirmed the administration was engaged in high-level talks with Greenland and Denmark, but declined to comment on details of the negotiations. A White House official told the BBC the administration was very optimistic the talks were headed in the right direction.\n\nDenmark has previously expressed a willingness to discuss additional American military bases in Greenland, and its foreign ministry confirmed talks with the US were taking place. \"There is an ongoing diplomatic track with the United States. The Ministry of Foreign Affairs will not go into further detail at this time,\" a spokesperson said.\n\nUS officials have floated an arrangement in which the three new military bases would be formally designated as US sovereign territory, according to one source with knowledge of the negotiations.\n\nThe bases would be in southern Greenland and primarily focus on surveillance of potential Russian and Chinese maritime activity in an area of the northern Atlantic between Greenland, Iceland and the United Kingdom known as the GIUK Gap, the officials who spoke to the BBC said.\n\nThe two sides have not formally agreed to anything yet and the final number of bases could change, the sources said. One of the new bases would likely be located in Narsarsuaq, on the site of a former US military base that housed a small airport.\n\nAny other new military bases would likely also be located on sites in Greenland that have existing infrastructure such as airfields or ports, which could be upgraded at a lower cost than building new facilities, analysts said.\n\nUS officials have not raised the possibility during talks of somehow seizing control of Greenland, something that Denmark and Nato have publicly rejected.\n\nDespite Trump's threats, the countries have been actively working towards a deal in recent months.\n\nThe talks have been confined to a sm",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-12T02:44:21.987285+00:00",
+  "payload": {
+    "packet_id": "20260512T003118Z_9c29db4e06",
+    "title": "Yhdysvallat neuvottelee uusista sotilastukikohdista Grönlantiin",
+    "summary": "Yhdysvallat käy Tanskan ja Grönlannin kanssa neuvotteluja sotilaallisen läsnäolonsa laajentamisesta Grönlannissa. Keskusteluissa on ollut esillä kolme uutta tukikohtaa alueen eteläosaan.",
+    "content": "Yhdysvallat on käynyt Tanskan kanssa säännöllisiä neuvotteluja sotilaallisen läsnäolonsa laajentamisesta Grönlannissa, joka on Tanskan itsehallinnollinen alue. Useiden keskusteluista tietävien viranomaislähteiden mukaan Washington tavoittelee kolmea uutta tukikohtaa Grönlannin eteläosiin, mutta osapuolet eivät ole vielä tehneet lopullista sopimusta.\n\n## Neuvottelut koskevat Grönlannin eteläosia\n\nValkoinen talo on vahvistanut, että Yhdysvaltain hallinto käy korkean tason keskusteluja Grönlannin ja Tanskan kanssa, mutta se ei ole kertonut neuvottelujen yksityiskohdista. Valkoisen talon virkamies sanoi BBC:lle hallinnon olevan hyvin optimistinen siitä, että keskustelut etenevät oikeaan suuntaan.\n\nTanskan ulkoministeriö on myös vahvistanut, että diplomaattinen keskusteluyhteys Yhdysvaltoihin on käynnissä. Tanska on aiemmin ilmaissut olevansa valmis keskustelemaan Yhdysvaltain lisätukikohdista Grönlannissa. Lähteen mukaan esillä on ollut järjestely, jossa kolme uutta sotilastukikohtaa määriteltäisiin muodollisesti Yhdysvaltain suvereeniksi alueeksi.\n\n## Tarkoituksena olisi meriliikenteen valvonta\n\nSuunnitellut tukikohdat sijaitsisivat Etelä-Grönlannissa. Viranomaislähteiden mukaan niiden päätehtävä olisi valvoa Venäjän ja Kiinan mahdollista merellistä toimintaa Pohjois-Atlantilla alueella, joka tunnetaan GIUK-aukkona. Se sijaitsee Grönlannin, Islannin ja Yhdistyneen kuningaskunnan välisellä merialueella.\n\nYksi mahdollinen uusi tukikohta olisi Narsarsuaqissa. Paikalla on aiemmin toiminut yhdysvaltalainen sotilastukikohta, johon kuului pieni lentokenttä. Muiden mahdollisten tukikohtien arvioidaan sijoittuvan paikkoihin, joissa on jo valmiiksi infrastruktuuria, kuten lentokenttiä tai satamia. Analyytikoiden mukaan olemassa olevia kohteita voitaisiin päivittää pienemmillä kustannuksilla kuin rakentaa kokonaan uusia laitoksia.\n\n## Sopimusta ei ole vielä tehty\n\nLähteiden mukaan osapuolet eivät ole vielä sopineet asiasta virallisesti, ja tukikohtien lopullinen määrä voi muuttua. Neuvottelut liittyvät myös diplomaattiseen kriisiin, joka syntyi presidentti Donald Trumpin aiemmista kommenteista. Trump sanoi tammikuussa, että Yhdysvaltojen pitäisi ”omistaa” Grönlanti estääkseen Venäjää tai Kiinaa ottamasta sitä. Hänen mukaansa tämä voisi tapahtua joko ”helposti” tai ”vaikeasti”.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Grönlanti",
+      "Tanska",
+      "Pohjois-Atlantti",
+      "turvallisuuspolitiikka"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat neuvottelee Tanskan ja Grönlannin kanssa sotilaallisen läsnäolonsa laajentamisesta.",
+      "Keskusteluissa on ollut esillä kolme uutta tukikohtaa Grönlannin eteläosiin.",
+      "Tukikohtien päätehtävä olisi seurata Venäjän ja Kiinan merellistä toimintaa Pohjois-Atlantilla."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Lopullista sopimusta ei ole tehty, ja tukikohtien määrä sekä sijainnit voivat muuttua."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260512T003118Z_9c29db4e06\",\"title\":\"Yhdysvallat neuvottelee uusista sotilastukikohdista Grönlantiin\",\"summary\":\"Yhdysvallat käy Tanskan ja Grönlannin kanssa neuvotteluja sotilaallisen läsnäolonsa laajentamisesta Grönlannissa. Keskusteluissa on ollut esillä kolme uutta tukikohtaa alueen eteläosaan.\",\"content\":\"Yhdysvallat on käynyt Tanskan kanssa säännöllisiä neuvotteluja sotilaallisen läsnäolonsa laajentamisesta Grönlannissa, joka on Tanskan itsehallinnollinen alue. Useiden keskusteluista tietävien viranomaislähteiden mukaan Washington tavoittelee kolmea uutta tukikohtaa Grönlannin eteläosiin, mutta osapuolet eivät ole vielä tehneet lopullista sopimusta.\\n\\n## Neuvottelut koskevat Grönlannin eteläosia\\n\\nValkoinen talo on vahvistanut, että Yhdysvaltain hallinto käy korkean tason keskusteluja Grönlannin ja Tanskan kanssa, mutta se ei ole kertonut neuvottelujen yksityiskohdista. Valkoisen talon virkamies sanoi BBC:lle hallinnon olevan hyvin optimistinen siitä, että keskustelut etenevät oikeaan suuntaan.\\n\\nTanskan ulkoministeriö on myös vahvistanut, että diplomaattinen keskusteluyhteys Yhdysvaltoihin on käynnissä. Tanska on aiemmin ilmaissut olevansa valmis keskustelemaan Yhdysvaltain lisätukikohdista Grönlannissa. Lähteen mukaan esillä on ollut järjestely, jossa kolme uutta sotilastukikohtaa määriteltäisiin muodollisesti Yhdysvaltain suvereeniksi alueeksi.\\n\\n## Tarkoituksena olisi meriliikenteen valvonta\\n\\nSuunnitellut tukikohdat sijaitsisivat Etelä-Grönlannissa. Viranomaislähteiden mukaan niiden päätehtävä olisi valvoa Venäjän ja Kiinan mahdollista merellistä toimintaa Pohjois-Atlantilla alueella, joka tunnetaan GIUK-aukkona. Se sijaitsee Grönlannin, Islannin ja Yhdistyneen kuningaskunnan välisellä merialueella.\\n\\nYksi mahdollinen uusi tukikohta olisi Narsarsuaqissa. Paikalla on aiemmin toiminut yhdysvaltalainen sotilastukikohta, johon kuului pieni lentokenttä. Muiden mahdollisten tukikohtien arvioidaan sijoittuvan paikkoihin, joissa on jo valmiiksi infrastruktuuria, kuten lentokenttiä tai satamia. Analyytikoiden mukaan olemassa olevia kohteita voitaisiin päivittää pienemmillä kustannuksilla kuin rakentaa kokonaan uusia laitoksia.\\n\\n## Sopimusta ei ole vielä tehty\\n\\nLähteiden mukaan osapuolet eivät ole vielä sopineet asiasta virallisesti, ja tukikohtien lopullinen määrä voi muuttua. Neuvottelut liittyvät myös diplomaattiseen kriisiin, joka syntyi presidentti Donald Trumpin aiemmista kommenteista. Trump sanoi tammikuussa, että Yhdysvaltojen pitäisi ”omistaa” Grönlanti estääkseen Venäjää tai Kiinaa ottamasta sitä. Hänen mukaansa tämä voisi tapahtua joko ”helposti” tai ”vaikeasti”.\",\"category\":\"Ulkomaat\",\"tags\":[\"Yhdysvallat\",\"Grönlanti\",\"Tanska\",\"Pohjois-Atlantti\",\"turvallisuuspolitiikka\"],\"summary_bullets\":[\"Yhdysvallat neuvottelee Tanskan ja Grönlannin kanssa sotilaallisen läsnäolonsa laajentamisesta.\",\"Keskusteluissa on ollut esillä kolme uutta tukikohtaa Grönlannin eteläosiin.\",\"Tukikohtien päätehtävä olisi seurata Venäjän ja Kiinan merellistä toimintaa Pohjois-Atlantilla.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"Artikkeli perustuu annettuun lähdepakettiin. Lopullista sopimusta ei ole tehty, ja tukikohtien määrä sekä sijainnit voivat muuttua.\"}",
+  "article": {
+    "title": "Yhdysvallat neuvottelee uusista sotilastukikohdista Grönlantiin",
+    "description": "Yhdysvallat käy Tanskan ja Grönlannin kanssa neuvotteluja sotilaallisen läsnäolonsa laajentamisesta Grönlannissa. Keskusteluissa on ollut esillä kolme uutta tukikohtaa alueen eteläosaan.",
+    "link": "https://www.bbc.com/news/articles/cx21669452lo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-11T23:56:11+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4cf54d92d79f1e5dcc8806c556f73123",
+    "_url_hash": "93bc9253153706d40bd5e8d27c58a6d0894aad8dcbd81bfc76b2494f41be064a",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe US has been holding regular negotiations with Denmark to expand its military presence in Greenland, according to multiple officials familiar with the discussions, with talks between both sides progressing in recent months.\n\nUS officials are seeking to open three new bases in the south of the territory, a semi-autonomous part of Denmark, as they work to resolve a diplomatic crisis sparked by President Donald Trump when he threatened to seize Greenland by force.\n\nTrump said in January that the US should \"own\" Greenland to prevent Russia or China from taking it. He said this could happen the \"easy way \" or \"the hard way\".\n\nThe White House confirmed the administration was engaged in high-level talks with Greenland and Denmark, but declined to comment on details of the negotiations. A White House official told the BBC the administration was very optimistic the talks were headed in the right direction.\n\nDenmark has previously expressed a willingness to discuss additional American military bases in Greenland, and its foreign ministry confirmed talks with the US were taking place. \"There is an ongoing diplomatic track with the United States. The Ministry of Foreign Affairs will not go into further detail at this time,\" a spokesperson said.\n\nUS officials have floated an arrangement in which the three new military bases would be formally designated as US sovereign territory, according to one source with knowledge of the negotiations.\n\nThe bases would be in southern Greenland and primarily focus on surveillance of potential Russian and Chinese maritime activity in an area of the northern Atlantic between Greenland, Iceland and the United Kingdom known as the GIUK Gap, the officials who spoke to the BBC said.\n\nThe two sides have not formally agreed to anything yet and the final number of bases could change, the sources said. One of the new bases would likely be located in Narsarsuaq, on the site of a former US military base that housed a small airport.\n\nAny other new military bases would likely also be located on sites in Greenland that have existing infrastructure such as airfields or ports, which could be upgraded at a lower cost than building new facilities, analysts said.\n\nUS officials have not raised the possibility during talks of somehow seizing control of Greenland, something that Denmark and Nato have publicly rejected.\n\nDespite Trump's threats, the countries have been actively working towards a deal in recent months.\n\nThe talks have been confined to a sm",
+    "research_source": "multi",
+    "summary": "Yhdysvallat käy Tanskan ja Grönlannin kanssa neuvotteluja sotilaallisen läsnäolonsa laajentamisesta Grönlannissa. Keskusteluissa on ollut esillä kolme uutta tukikohtaa alueen eteläosaan.",
+    "content": "Yhdysvallat on käynyt Tanskan kanssa säännöllisiä neuvotteluja sotilaallisen läsnäolonsa laajentamisesta Grönlannissa, joka on Tanskan itsehallinnollinen alue. Useiden keskusteluista tietävien viranomaislähteiden mukaan Washington tavoittelee kolmea uutta tukikohtaa Grönlannin eteläosiin, mutta osapuolet eivät ole vielä tehneet lopullista sopimusta.\n\n## Neuvottelut koskevat Grönlannin eteläosia\n\nValkoinen talo on vahvistanut, että Yhdysvaltain hallinto käy korkean tason keskusteluja Grönlannin ja Tanskan kanssa, mutta se ei ole kertonut neuvottelujen yksityiskohdista. Valkoisen talon virkamies sanoi BBC:lle hallinnon olevan hyvin optimistinen siitä, että keskustelut etenevät oikeaan suuntaan.\n\nTanskan ulkoministeriö on myös vahvistanut, että diplomaattinen keskusteluyhteys Yhdysvaltoihin on käynnissä. Tanska on aiemmin ilmaissut olevansa valmis keskustelemaan Yhdysvaltain lisätukikohdista Grönlannissa. Lähteen mukaan esillä on ollut järjestely, jossa kolme uutta sotilastukikohtaa määriteltäisiin muodollisesti Yhdysvaltain suvereeniksi alueeksi.\n\n## Tarkoituksena olisi meriliikenteen valvonta\n\nSuunnitellut tukikohdat sijaitsisivat Etelä-Grönlannissa. Viranomaislähteiden mukaan niiden päätehtävä olisi valvoa Venäjän ja Kiinan mahdollista merellistä toimintaa Pohjois-Atlantilla alueella, joka tunnetaan GIUK-aukkona. Se sijaitsee Grönlannin, Islannin ja Yhdistyneen kuningaskunnan välisellä merialueella.\n\nYksi mahdollinen uusi tukikohta olisi Narsarsuaqissa. Paikalla on aiemmin toiminut yhdysvaltalainen sotilastukikohta, johon kuului pieni lentokenttä. Muiden mahdollisten tukikohtien arvioidaan sijoittuvan paikkoihin, joissa on jo valmiiksi infrastruktuuria, kuten lentokenttiä tai satamia. Analyytikoiden mukaan olemassa olevia kohteita voitaisiin päivittää pienemmillä kustannuksilla kuin rakentaa kokonaan uusia laitoksia.\n\n## Sopimusta ei ole vielä tehty\n\nLähteiden mukaan osapuolet eivät ole vielä sopineet asiasta virallisesti, ja tukikohtien lopullinen määrä voi muuttua. Neuvottelut liittyvät myös diplomaattiseen kriisiin, joka syntyi presidentti Donald Trumpin aiemmista kommenteista. Trump sanoi tammikuussa, että Yhdysvaltojen pitäisi ”omistaa” Grönlanti estääkseen Venäjää tai Kiinaa ottamasta sitä. Hänen mukaansa tämä voisi tapahtua joko ”helposti” tai ”vaikeasti”.",
+    "category": "Ulkomaat",
+    "tags": [
+      "yhdysvallat",
+      "grönlanti",
+      "tanska",
+      "pohjois-atlantti",
+      "turvallisuuspolitiikka"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat neuvottelee Tanskan ja Grönlannin kanssa sotilaallisen läsnäolonsa laajentamisesta.",
+      "Keskusteluissa on ollut esillä kolme uutta tukikohtaa Grönlannin eteläosiin.",
+      "Tukikohtien päätehtävä olisi seurata Venäjän ja Kiinan merellistä toimintaa Pohjois-Atlantilla."
+    ],
+    "key_points": [
+      "Yhdysvallat neuvottelee Tanskan ja Grönlannin kanssa sotilaallisen läsnäolonsa laajentamisesta.",
+      "Keskusteluissa on ollut esillä kolme uutta tukikohtaa Grönlannin eteläosiin.",
+      "Tukikohtien päätehtävä olisi seurata Venäjän ja Kiinan merellistä toimintaa Pohjois-Atlantilla."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Lopullista sopimusta ei ole tehty, ja tukikohtien määrä sekä sijainnit voivat muuttua.",
+    "source_text": "The US has been holding regular negotiations with Denmark to expand its military presence in Greenland, according to multiple officials familiar with the discussions, with talks between both sides progressing in recent months. US officials are seeking to open three new bases in the south of the territory, a semi-autonomous part of Denmark, as they work to resolve a diplomatic crisis sparked by President Donald Trump when he threatened to seize Greenland by force. Trump said in January that the US should \"own\" Greenland to prevent Russia or China from taking it. He said this could happen the \"easy way \" or \"the hard way\".\n\nIt is seeking to open three bases in the south of the Arctic territory, according to multiple officials familiar with the talks.\n\nThe White House confirmed the administration was engaged in high-level talks with Greenland and Denmark, but declined to comment on details of the negotiations. A White House official told the BBC the administration was very optimistic the talks were headed in the right direction. Denmark has previously expressed a willingness to discuss additional American military bases in Greenland, and its foreign ministry confirmed talks with the US were taking place. \"There is an ongoing diplomatic track with the United States. The Ministry of Foreign Affairs will not go into further detail at this time,\" a spokesperson said. US officials have floated an arrangement in which the three new military bases would be formally designated as US sovereign territory, according to one source with knowledge of the negotiations.\n\nThe bases would be in southern Greenland and primarily focus on surveillance of potential Russian and Chinese maritime activity in an area of the northern Atlantic between Greenland, Iceland and the United Kingdom known as the GIUK Gap, the officials who spoke to the BBC said. The two sides have not formally agreed to anything yet and the final number of bases could change, the sources said. One of the new bases would likely be located in Narsarsuaq, on the site of a former US military base that housed a small airport. Any other new military bases would likely also be located on sites in Greenland that have existing infrastructure such as airfields or ports, which could be upgraded at a lower cost than building new facilities, analysts said.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.9,
+    "degraded_mode": false,
+    "monica_packet_id": "20260512T003118Z_9c29db4e06",
+    "image": "https://images.unsplash.com/photo-1654949371733-83f90f057682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtaWxpdGFyeSUyMGJhc2UlMjBHcmVlbmxhbmR8ZW58MXwwfHx8MTc3ODU1NDA4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1654949371733-83f90f057682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtaWxpdGFyeSUyMGJhc2UlMjBHcmVlbmxhbmR8ZW58MXwwfHx8MTc3ODU1NDA4NXww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Yhdysvallat neuvottelee uusista sotilastukikohdista Grönlantiin",
+    "image_credit": "Photo by 66 north on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-ship-in-the-water-e4f3Nh9uRSQ?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-12T02:48:07.130635+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1654949371733-83f90f057682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtaWxpdGFyeSUyMGJhc2UlMjBHcmVlbmxhbmR8ZW58MXwwfHx8MTc3ODU1NDA4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1654949371733-83f90f057682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxtaWxpdGFyeSUyMGJhc2UlMjBHcmVlbmxhbmR8ZW58MXwwfHx8MTc3ODU1NDA4NXww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-12T02:48:34.049110+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-12-yhdysvallat-neuvottelee-uusista-sotilastukikohdista-gronlant.md"
+  ]
+}
