@@ -54,7 +54,14 @@ fi
 printf '%s
 %s
 ' "$$" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$LOCK_FILE"
-trap 'rm -f "$LOCK_FILE"' EXIT
+TMP_SYNC_DIR=""
+cleanup_on_exit() {
+  rm -f "$LOCK_FILE"
+  if [ -n "${TMP_SYNC_DIR:-}" ] && [ -d "$TMP_SYNC_DIR" ]; then
+    rm -rf "$TMP_SYNC_DIR"
+  fi
+}
+trap cleanup_on_exit EXIT
 
 # Load .env
 if [ -f "$PROJECT_DIR/.env" ]; then
