@@ -440,6 +440,21 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
 
 
+    def test_talous_rss_source_backed_counts_as_enriched_and_passes_priority_floor(self) -> None:
+        article = {
+            "title": "Pörssi laski inflaatiolukujen jälkeen",
+            "category_hint": "Talous",
+            "source": "Taloussanomat",
+            "research_source": "rss_talous_source_backed",
+            "research": "[Lähde: Taloussanomat]\n" + " ".join(["sana"] * 55),
+            "description": "Lyhyt kuvaus",
+        }
+
+        self.assertEqual(staged_publish.article_research_bucket(article), "research_enriched")
+        self.assertTrue(staged_publish.passes_priority_source_floor(article))
+        self.assertGreater(staged_publish.category_enqueue_bonus(article), 0)
+
+
     def test_research_candidate_cap_keeps_talous_after_cooldown(self) -> None:
         kotimaa = {"title": "kotimaa uutinen", "category_hint": "Kotimaa", "description": "kuvaus " * 6}
         ulkomaat = {"title": "ulkomaat uutinen", "category_hint": "Ulkomaat", "description": "kuvaus " * 5}

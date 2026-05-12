@@ -240,6 +240,8 @@ def category_enqueue_bonus(article: dict) -> int:
 def passes_priority_source_floor(article: dict) -> bool:
     if article_category(article) != "Talous":
         return True
+    if str(article.get("research_source") or "") == "rss_talous_source_backed":
+        return len(str(article.get("research") or "").split()) >= 45
     return total_source_words(article) >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS
 
 
@@ -301,7 +303,7 @@ def article_category(article: dict) -> str:
 def article_research_bucket(article: dict) -> str:
     source = str(article.get("research_source") or "").strip().lower()
     research = str(article.get("research") or article.get("research_text") or "").strip()
-    if source in {"multi", "research"}:
+    if source in {"multi", "research", "rss_talous_source_backed"}:
         return "research_enriched"
     if source == "rss":
         return "research_fallback"

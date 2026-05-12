@@ -46,6 +46,8 @@ MAX_ADDITIONAL_SOURCES = 4   # extra sources beyond the original
 SEARCH_TIMEOUT = 8          # seconds for news search
 INTER_FETCH_DELAY = 0.8     # seconds between fetches (politeness)
 MIN_USEFUL_WORDS = 80       # sources with less are discarded as paywall/thin
+TALOUS_RSS_MIN_WORDS = 45   # bounded RSS fallback floor for business feeds
+TALOUS_RSS_MIN_SENTENCES = 2
 ARTICLE_RESEARCH_TIMEOUT = int(os.environ.get("ARTICLE_RESEARCH_TIMEOUT_SEC", "45"))
 
 # Domains known to hard-paywall — always skip (never get useful text)
@@ -478,6 +480,25 @@ def _rank_and_filter(results: List[dict], original_url: str) -> List[dict]:
 
 # ── Main Research Function ─────────────────────────────────────────────────────
 
+
+
+def _looks_like_talous_article(article: dict) -> bool:
+    blob = " ".join(str(article.get(k) or "") for k in ("category", "category_hint", "source", "title", "description", "link")).lower()
+    return any(term in blob for term in (
+        "talous", "kauppalehti", "taloussanomat", "arvopaperi", "finanssiala",
+        "yrittäj", "pörssi", "osake", "markkina", "yritys", "liikevaihto",
+    ))
+
+
+def _usable_talous_rss_fallback(article: dict, rss_text: str) -> bool:
+    if not _looks_like_talous_article(article):
+        return False
+    words = len(rss_text.split())
+    sentences = len(re.findall(r"[.!?](?:\s|$)", rss_text))
+    lower = rss_text.lower()
+    promo_hits = sum(1 for term in ("instagram", "seurantaan", "vinkkaa", "liity", "jäseneksi", "tule mukaan") if term in lower)
+    return words >= TALOUS_RSS_MIN_WORDS and sentences >= TALOUS_RSS_MIN_SENTENCES and promo_hits < 2
+
 def _research_article(article: dict) -> str:
     """Perform multi-source research for a single article.
     
@@ -617,9 +638,15 @@ def enrich_with_research(articles: list) -> list:
                 rss_words = len(rss_text.split())
 
                 if rss_words >= RSS_MIN_WORDS:
-                    print(f"[research]   → RSS fallback: {rss_words}w")
-                    article["research"] = rss_text
-                    article["research_source"] = "rss"
+                    if _usable_talous_rss_fallback(article, rss_text):
+                        label = article.get("source") or _get_domain(article.get("link", "")) or "RSS"
+                        print(f"[research]   → Talous RSS fallback promoted: {rss_words}w")
+                        article["research"] = f"[Lähde: {label}]\n{rss_text}"
+                        article["research_source"] = "rss_talous_source_backed"
+                    else:
+                        print(f"[research]   → RSS fallback: {rss_words}w")
+                        article["research"] = rss_text
+                        article["research_source"] = "rss"
                 else:
                     print(f"[research]   → No usable sources")
                     article["research"] = rss_text
