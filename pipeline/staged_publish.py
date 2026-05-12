@@ -254,6 +254,26 @@ def candidate_raw_strength(article: dict) -> int:
     return source_strength(article)[0]
 
 
+def scan_candidate_passes_talous_reserve(article: dict) -> bool:
+    """Return true for source-backed Talous candidates safe to reserve-queue.
+
+    This is a queue fairness rule, not a quality gate relaxation. It only
+    applies after source-word filtering and preserves org/promotional penalties
+    by requiring the existing enqueue penalty path to be clean.
+    """
+    if article_category(article) != "Talous":
+        return False
+    if not passes_priority_source_floor(article):
+        return False
+    if org_source_talous_penalty(article) > 0:
+        return False
+    research = str(article.get("research") or article.get("research_text") or "")
+    source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
+    source_words = len(research.split())
+    confidence = float(article.get("story_confidence") or article.get("confidence") or 0.85)
+    return source_words >= 180 and source_blocks >= 2 and confidence >= 0.82
+
+
 def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> list[dict]:
     if max_packets <= 0:
         return []
@@ -272,17 +292,19 @@ def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> li
             for article in ordered
             if article_category(article) == category and passes_priority_source_floor(article)
         ]
-        if not qualified_priority or any(id(article) in selected_ids for article in qualified_priority):
+        reserve_priority = [article for article in qualified_priority if scan_candidate_passes_talous_reserve(article)]
+        reserve_pool = reserve_priority or qualified_priority
+        if not reserve_pool or any(id(article) in selected_ids for article in reserve_pool):
             continue
 
         weakest_index, weakest = min(enumerate(selected), key=lambda item: source_strength(item[1]))
-        best_priority = qualified_priority[0]
+        best_priority = reserve_pool[0]
         priority_strength = enqueue_strength(best_priority)
         weakest_strength = enqueue_strength(weakest)
         # Keep at least one source-qualified under-target Talous candidate when
-        # scan enqueue is capped, but only displace thin/moderate candidates.
-        # Stronger source-rich non-Talous packets still win.
-        if priority_strength >= weakest_strength or total_source_words(weakest) < 250:
+        # scan enqueue is capped. Stronger source-rich non-Talous packets still
+        # win unless Talous passes the stricter source-backed reserve rule.
+        if scan_candidate_passes_talous_reserve(best_priority) or priority_strength >= weakest_strength or total_source_words(weakest) < 250:
             selected[weakest_index] = best_priority
             selected_ids = {id(article) for article in selected}
     return sorted(selected, key=enqueue_strength, reverse=True)

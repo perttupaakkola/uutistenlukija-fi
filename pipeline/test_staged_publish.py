@@ -570,6 +570,33 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertNotIn(moderate_ulkomaat, selected)
 
 
+    def test_scan_enqueue_reserves_source_backed_talous_when_cap_would_drop_it(self) -> None:
+        teknologia = {"title": "teknologia", "category_hint": "Teknologia", "research": "[Lähde: Testi]\n" + "sana " * 310, "description": "kuvaus"}
+        uutiset = {"title": "uutiset", "category_hint": "Uutiset", "research": "[Lähde: Testi]\n" + "sana " * 260, "description": "kuvaus"}
+        talous = {"title": "talous", "category_hint": "Talous", "research": "[Lähde: A]\n" + "sana " * 95 + "\n\n[Lähde: B]\n" + "sana " * 95, "description": "kuvaus", "story_confidence": 0.90}
+
+        selected = staged_publish.select_scan_enqueue_candidates([teknologia, uutiset, talous], max_packets=1)
+
+        self.assertEqual(len(selected), 1)
+        self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
+
+    def test_scan_enqueue_reserve_preserves_promotional_talous_rejection(self) -> None:
+        teknologia = {"title": "teknologia", "category_hint": "Teknologia", "research": "[Lähde: Testi]\n" + "sana " * 260, "description": "kuvaus"}
+        promo = {
+            "title": "Finanssiala uudisti verkkosivunsa",
+            "category_hint": "Talous",
+            "source": "Finanssiala",
+            "description": "Tavoitteemme-osio kertoo sivuston uudesta ulkoasusta.",
+            "research": "[Lähde: Finanssiala]\n" + "sana " * 300 + " uudisti verkkosivunsa tavoitteemme-osio",
+            "story_confidence": 0.98,
+        }
+
+        self.assertFalse(staged_publish.scan_candidate_passes_talous_reserve(promo))
+        selected = staged_publish.select_scan_enqueue_candidates([teknologia, promo], max_packets=1)
+
+        self.assertEqual(staged_publish.article_category(selected[0]), "Teknologia")
+
+
     def test_scan_enqueue_uses_total_source_floor_for_talous_candidate(self) -> None:
         rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 410, "description": "kuvaus"}
         moderate_ulkomaat = {"title": "ulkomaat", "category_hint": "Ulkomaat", "research": "sana " * 204, "description": "kuvaus " * 16}
