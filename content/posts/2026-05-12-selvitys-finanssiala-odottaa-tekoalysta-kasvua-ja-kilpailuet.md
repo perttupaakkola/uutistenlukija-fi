@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/selvitys-noin-85-prosenttia-finanssialan-yrityksista-uskoo-tekoalyn-tuomaan-kasvu-ja-kilpailuetuun/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
