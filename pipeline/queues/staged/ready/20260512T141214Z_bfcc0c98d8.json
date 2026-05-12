@@ -1,0 +1,123 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-12T14:12:14.628852+00:00",
+  "digest": "bfcc0c98d8",
+  "packet": {
+    "packet_id": "20260512T141214Z_bfcc0c98d8",
+    "created_at": "2026-05-12T14:12:14Z",
+    "headline_seed": "Mexico cancels plans to end school year early for World Cup",
+    "description_seed": "Parents were angry at a proposal to end classes on 5 June instead of 15 July due to the tournament and expected extreme heat.",
+    "link": "https://www.bbc.com/news/articles/cy02w7nzdg1o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "AOL",
+      "BBC World",
+      "Devdiscourse"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cy02w7nzdg1o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mexico cancels plans to end school year early for World Cup"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Parents were angry at a proposal to end classes on 5 June instead of 15 July due to the tournament and expected extreme heat.",
+        "word_count": 24,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "Parents in Mexico have criticised a plan to end the school year a month early so the country can accomodate increased travel during the Fifa World Cup this summer. Education Secretary Mario Delgado said the school year would end on 5 June, leaving parents across the country with less than four weeks to find additional childcare. After parents' and employers' associations objected, Mexican President Claudia Sheinbaum appeared to soften the announcement, describing it as a \"proposal\". Mexico, along with the US and Canada, is due to host the international football tournament from 11 June to 19 July. Delgado's announcement on Thursday cited both elevated traffic due to the World Cup and extreme heat forecast to hit the Latin American nation as factors in the decision to end the school year early, which he said was made \"unanimously\" with individual states.",
+        "word_count": 140,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The Mexican government has cancelled plans to end the school year more than a month early to ease traffic during the Fifa World Cup and an anticipated heatwave. Mexico is due to co-host the football tournament with the United States and Canada from 11 June to 19 July. The reversal comes after an outcry by parents who warned that it would disrupt their children's studies. Many families also said that they had been thrown into a tailspin, trying to arrange for weeks of childcare to cover the early finish. After the U-turn, classes will now finish on 15 July - and not on the proposed earlier date of 5 June.",
+        "word_count": 110,
+        "keyword_overlap": 11,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Devdiscourse",
+        "source_type": "research",
+        "text": "In a significant move on Monday, Mexico's education authorities have chosen to maintain the 2025-2026 academic calendar despite initial proposals for an earlier end. The school year will conclude on July 15, as previously scheduled, following widespread criticism from parents over potential disruptions linked to the World Cup. This decision, unanimously agreed upon by the federal education ministry and state authorities, comes in response to guidance from President Claudia Sheinbaum. The aim is to provide assurance and stability for millions of Mexican families who align their daily routines with the school calendar, according to Education Minister Mario Delgado. Previously, Delgado suggested ending the school year on June 5, due to high temperatures and logistical pressures in cities hosting the World Cup. Authorities have indicated that states may still adapt locally in extraordinary circumstances, such as extreme weather or tournament-related challenges.",
+        "word_count": 140,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Parents were angry at a proposal to end classes on 5 June instead of 15 July due to the tournament and expected extreme heat.\n\nParents in Mexico have criticised a plan to end the school year a month early so the country can accomodate increased travel during the Fifa World Cup this summer. Education Secretary Mario Delgado said the school year would end on 5 June, leaving parents across the country with less than four weeks to find additional childcare. After parents' and employers' associations objected, Mexican President Claudia Sheinbaum appeared to soften the announcement, describing it as a \"proposal\". Mexico, along with the US and Canada, is due to host the international football tournament from 11 June to 19 July. Delgado's announcement on Thursday cited both elevated traffic due to the World Cup and extreme heat forecast to hit the Latin American nation as factors in the decision to end the school year early, which he said was made \"unanimously\" with individual states.\n\nThe Mexican government has cancelled plans to end the school year more than a month early to ease traffic during the Fifa World Cup and an anticipated heatwave. Mexico is due to co-host the football tournament with the United States and Canada from 11 June to 19 July. The reversal comes after an outcry by parents who warned that it would disrupt their children's studies. Many families also said that they had been thrown into a tailspin, trying to arrange for weeks of childcare to cover the early finish. After the U-turn, classes will now finish on 15 July - and not on the proposed earlier date of 5 June.\n\nIn a significant move on Monday, Mexico's education authorities have chosen to maintain the 2025-2026 academic calendar despite initial proposals for an earlier end. The school year will conclude on July 15, as previously scheduled, following widespread criticism from parents over potential disruptions linked to the World Cup. This decision, unanimously agreed upon by the federal education ministry and state authorities, comes in response to guidance from President Claudia Sheinbaum. The aim is to provide assurance and stability for millions of Mexican families who align their daily routines with the school calendar, according to Education Minister Mario Delgado. Previously, Delgado suggested ending the school year on June 5, due to high temperatures and logistical pressures in cities hosting the World Cup. Authorities have indicated that states may still adapt locally in extraordinary circumstances, such as extreme weather or tournament-related challenges.",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 881,
+      "selected_blocks": 4,
+      "selected_source_words": 414,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "AOL",
+        "Devdiscourse",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "AOL",
+        "BBC World",
+        "Devdiscourse"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mexico cancels plans to end school year early for World Cup",
+      "description": "Parents were angry at a proposal to end classes on 5 June instead of 15 July due to the tournament and expected extreme heat.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mexico cancels plans to end school year early for World Cup",
+    "description": "Parents were angry at a proposal to end classes on 5 June instead of 15 July due to the tournament and expected extreme heat.",
+    "link": "https://www.bbc.com/news/articles/cy02w7nzdg1o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-12T10:52:14+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "9d20076750b1e93f2751397eba3a37a1",
+    "_url_hash": "78aa60811f12da00305d4ccbf977394f0ffbefb57e4e4e0563ed993e88384816",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe Mexican government has cancelled plans to end the school year more than a month early to ease traffic during the Fifa World Cup and an anticipated heatwave.\n\nMexico is due to co-host the football tournament with the United States and Canada from 11 June to 19 July.\n\nThe reversal comes after an outcry by parents who warned that it would disrupt their children's studies.\n\nMany families also said that they had been thrown into a tailspin, trying to arrange for weeks of childcare to cover the early finish.\n\nAfter the U-turn, classes will now finish on 15 July - and not on the proposed earlier date of 5 June.\n\nThe row was brought about by an announcement by the education minister on 7 May, when Mario Delgado said that \"an extraordinary heatwave, the World Cup and other factors\" had led to the decision to end the school year early.\n\nHowever, the announcement was met with anger by the National Union of Parents, which said that citing the World Cup as a reason to cancel classes was \"inexcusable\".\n\nMexican President Claudia Sheinbaum quickly clarified that cutting short classes had only been \"a proposal\".\n\nThe idea was finally quashed on Monday after the education ministry had held further consultations with parents and education think tanks.\n\nPresident Sheinbaum has assured visiting fans that they will encounter \"conditions of security\" in the country.\n\nSecurity arrangements have been under intense scrutiny since a wave of violence swept over the country following the death of notorious drug leader Nemesio \"El Mencho\" Oseguera two months ago.\n\nMembers of El Mencho's cartel burnt cars and spread terror in retaliation after their leader died of injuries sustained during a clash with soldiers deployed to arrest him.\n\nSheinbaum has also been adamant that works on the Azteca stadium in Mexico City and the capital's international airport will be concluded in time.\n\n---\n\n[Lähde: AOL]\nParents in Mexico have criticised a plan to end the school year a month early so the country can accomodate increased travel during the Fifa World Cup this summer.\n\nEducation Secretary Mario Delgado said the school year would end on 5 June, leaving parents across the country with less than four weeks to find additional childcare.\n\nAfter parents' and employers' associations objected, Mexican President Claudia Sheinbaum appeared to soften the announcement, describing it as a \"proposal\".\n\nMexico, along with the US and Canada, is due to host the international football tournament from 11 June to 19 July.\n\nDelgado's announcement on Thursday cited both elevated traffic due to the World Cup and extreme heat forecast to hit the Latin American nation as factors in the decision to end the school year early, which he said was made \"unanimously\" with individual states.\n\nThe official start of the next academic year would remain 31 August, he said, but added that two weeks of \"strengthening\" learning would take place leading up to that date so students did not fall behind.\n\nHowever, the sudden change of schedule prompted immediate anger from parents.\n\n\"The children are currently in the middle of their evaluations, and they've already been told that they'll be evaluated based on whatever they have. What kind of response is that?\" one told Mexican newspaper El Universal.\n\n\"They want the city empty for the tourists, and we're left wondering what we'll eat,\" another was quoted as saying, noting the cost of summer activities.\n\nThe National Union of Parents condemned the \"unilateral decision\", describing the use of the World Cup to cancel classes as \"inexcusable\".\n\n\"The matches will only be held in three cities,\" it said in a statement. \"Why affect almost 23 million students under this absurd pretext?\"\n\nMeanwhile Coparmex, an association of business owners, said the sudden alteration would create uncertainty for employees and employers alike.\n\nIt called for individual states to implement their own arrangements to accommodate for heatwaves and travel disruption while lessening the impact on the economy.\n\nDespite claims of unanimity, the governments of three states - two of which are hosting World Cup matches - spoke out against the plan, with one saying it would stick to the original school year.\n\nIn the face of this criticism, Sheinbaum used her daily news conference on Friday to recast the announcement as subject to further review.\n\n\"Since many Mexicans like soccer and are fo\n\n---\n\n[Lähde: Devdiscourse]\nIn a significant move on Monday, Mexico's education authorities have chosen to maintain the 2025-2026 academic calendar despite initial proposals for an earlier end. The school year will conclude on July 15, as previously scheduled, following widespread criticism from parents over potential disruptions linked to the World Cup.\n\nThis decision, unanimously agreed upon by the federal education ministry and state authorities, comes in response to guidance from President Claudia Sheinbaum. The aim is to provide assurance and stability for millions of Mexican families who align their daily routines with the school calendar, according to Education Minister Mario Delgado.\n\nPreviously, Delgado suggested ending the school year on June 5, due to high temperatures and logistical pressures in cities hosting the World Cup. Authorities have indicated that states may still adapt locally in extraordinary circumstances, such as extreme weather or tournament-related challenges.",
+    "research_source": "multi"
+  }
+}

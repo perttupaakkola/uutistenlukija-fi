@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/kaksi-poliisia-haastoi-matt-damonin-ja-ben-affleckin-oikeuteen-uuden-netflix-elokuvan-takia/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
