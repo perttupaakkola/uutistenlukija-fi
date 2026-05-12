@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/dead-spacen-alkuperainen-tuottaja-kertoi-faneille-huonot-uutiset/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
