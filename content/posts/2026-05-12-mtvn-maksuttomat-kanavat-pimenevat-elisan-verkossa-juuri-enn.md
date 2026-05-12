@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/12/mtv-ja-elisa-eivat-ole-loytaneet-sopua-kolmasosa-suomen-kotitalouksista-menettaa-maksuttomat-mtvn-tv-kanavat-juuri-ennen-jaakiekon-mm-kisoja/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
