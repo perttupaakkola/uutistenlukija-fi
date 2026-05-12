@@ -1,0 +1,216 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-12T00:51:36.585283+00:00",
+  "digest": "fc444c4833",
+  "packet": {
+    "packet_id": "20260512T005136Z_fc444c4833",
+    "created_at": "2026-05-12T00:51:36Z",
+    "headline_seed": "Postmortem: TanStack npm supply-chain compromise",
+    "description_seed": "https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 458 # Comments: 141",
+    "link": "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem",
+    "source": "Hacker News Best",
+    "source_names": [
+      "Hacker News Best",
+      "Hacker News Best",
+      "Hacker News Best",
+      "Hacker News Best"
+    ],
+    "source_urls": [
+      "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Postmortem: TanStack npm supply-chain compromise"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Hacker News Best",
+        "source_type": "description",
+        "text": "https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 458 # Comments: 141",
+        "word_count": 9,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Hacker News Best",
+        "source_type": "research",
+        "text": "On 2026-05-11 between 19:20 and 19:26 UTC, an attacker published 84 malicious versions across 42 @tanstack/* npm packages by combining: the pull_request_target \"Pwn Request\" pattern, GitHub Actions cache poisoning across the fork↔base trust boundary, and runtime memory extraction of an OIDC token from the GitHub Actions runner process. No npm tokens were stolen and the npm publish workflow itself was not compromised. The malicious versions were detected publicly within 20 minutes by an external researcher ashishkurmi working for stepsecurity. All affected versions have been deprecated; npm security has been engaged to pull tarballs from the registry. We have no evidence of npm credentials being stolen, but we strongly recommend that anyone who installed an affected version on 2026-05-11 rotate AWS, GCP, Kubernetes, Vault, GitHub, npm, and SSH credentials reachable from the install host. Tracking issue: TanStack/router#7383 GitHub Security Advisory: GHSA-g7cv-rxg3-hmpx",
+        "word_count": 140,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Hacker News Best",
+        "source_type": "research",
+        "text": "42 packages, 84 versions (two per package, published roughly 6 minutes apart). See the tracking issue for the full table. Confirmed-clean families: @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store, @tanstack/start (the meta-package, not @tanstack/start-*). When a developer or CI environment runs npm install, pnpm install, or yarn install against any affected version, npm resolves the malicious optionalDependencies entry, fetches the orphan payload commit from the fork network, runs its prepare lifecycle script, and executes a ~2.3 MB obfuscated router_init.js smuggled into the affected tarball. The script: Because the payload runs as part of npm install's lifecycle, anyone who installed an affected version on 2026-05-11 must treat the install host as potentially compromised. All times UTC. Local timestamps from GitHub API and npm registry. Three vulnerabilities chained together. Each is necessary for the attack; none alone is sufficient.",
+        "word_count": 135,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Hacker News Best",
+        "source_type": "research",
+        "text": "bundle-size.yml ran pull_request_target for fork PRs and, inside that trigger context, checked out the fork's PR-merge ref and ran a build: The author of the workflow attempted a trust split (the comment-pr job is separate from benchmark-pr, with a comment in the YAML noting the intent to keep benchmark-pr \"untrusted with read-only permissions\"). The split is correct in spirit but missed two facts: The malicious vite_setup.mjs was specifically designed to write data into the pnpm-store directory under a key th ---",
+        "word_count": 81,
+        "keyword_overlap": 0,
+        "strong_overlap": 0
+      }
+    ],
+    "source_text": "https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 458 # Comments: 141\n\nOn 2026-05-11 between 19:20 and 19:26 UTC, an attacker published 84 malicious versions across 42 @tanstack/* npm packages by combining: the pull_request_target \"Pwn Request\" pattern, GitHub Actions cache poisoning across the fork↔base trust boundary, and runtime memory extraction of an OIDC token from the GitHub Actions runner process. No npm tokens were stolen and the npm publish workflow itself was not compromised. The malicious versions were detected publicly within 20 minutes by an external researcher ashishkurmi working for stepsecurity. All affected versions have been deprecated; npm security has been engaged to pull tarballs from the registry. We have no evidence of npm credentials being stolen, but we strongly recommend that anyone who installed an affected version on 2026-05-11 rotate AWS, GCP, Kubernetes, Vault, GitHub, npm, and SSH credentials reachable from the install host. Tracking issue: TanStack/router#7383 GitHub Security Advisory: GHSA-g7cv-rxg3-hmpx\n\n42 packages, 84 versions (two per package, published roughly 6 minutes apart). See the tracking issue for the full table. Confirmed-clean families: @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store, @tanstack/start (the meta-package, not @tanstack/start-*). When a developer or CI environment runs npm install, pnpm install, or yarn install against any affected version, npm resolves the malicious optionalDependencies entry, fetches the orphan payload commit from the fork network, runs its prepare lifecycle script, and executes a ~2.3 MB obfuscated router_init.js smuggled into the affected tarball. The script: Because the payload runs as part of npm install's lifecycle, anyone who installed an affected version on 2026-05-11 must treat the install host as potentially compromised. All times UTC. Local timestamps from GitHub API and npm registry. Three vulnerabilities chained together. Each is necessary for the attack; none alone is sufficient.\n\nbundle-size.yml ran pull_request_target for fork PRs and, inside that trigger context, checked out the fork's PR-merge ref and ran a build: The author of the workflow attempted a trust split (the comment-pr job is separate from benchmark-pr, with a comment in the YAML noting the intent to keep benchmark-pr \"untrusted with read-only permissions\"). The split is correct in spirit but missed two facts: The malicious vite_setup.mjs was specifically designed to write data into the pnpm-store directory under a key th ---",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 878,
+      "selected_blocks": 4,
+      "selected_source_words": 365,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "SiliconANGLE",
+        "SiliconANGLE",
+        "SiliconANGLE",
+        "SiliconANGLE",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Hacker News Best"
+      ],
+      "selected_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Postmortem: TanStack npm supply-chain compromise",
+      "description": "https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 458 # Comments: 141",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Postmortem: TanStack npm supply-chain compromise",
+    "description": "https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 458 # Comments: 141",
+    "link": "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem",
+    "published": "2026-05-11T21:08:25+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "255546c58c123407605baf0376a2aa3a",
+    "_url_hash": "6fd4333f36e2cbc91622b87d01a25d99f8192e088feb453365806f9a68a1d79b",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nOn 2026-05-11 between 19:20 and 19:26 UTC, an attacker published 84 malicious versions across 42 @tanstack/* npm packages by combining: the pull_request_target \"Pwn Request\" pattern, GitHub Actions cache poisoning across the fork↔base trust boundary, and runtime memory extraction of an OIDC token from the GitHub Actions runner process. No npm tokens were stolen and the npm publish workflow itself was not compromised.\n\nThe malicious versions were detected publicly within 20 minutes by an external researcher ashishkurmi working for stepsecurity. All affected versions have been deprecated; npm security has been engaged to pull tarballs from the registry. We have no evidence of npm credentials being stolen, but we strongly recommend that anyone who installed an affected version on 2026-05-11 rotate AWS, GCP, Kubernetes, Vault, GitHub, npm, and SSH credentials reachable from the install host.\n\nTracking issue: TanStack/router#7383\nGitHub Security Advisory: GHSA-g7cv-rxg3-hmpx\n\n42 packages, 84 versions (two per package, published roughly 6 minutes apart). See the tracking issue for the full table. Confirmed-clean families: @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store, @tanstack/start (the meta-package, not @tanstack/start-*).\n\nWhen a developer or CI environment runs npm install, pnpm install, or yarn install against any affected version, npm resolves the malicious optionalDependencies entry, fetches the orphan payload commit from the fork network, runs its prepare lifecycle script, and executes a ~2.3 MB obfuscated router_init.js smuggled into the affected tarball. The script:\n\nBecause the payload runs as part of npm install's lifecycle, anyone who installed an affected version on 2026-05-11 must treat the install host as potentially compromised.\n\nAll times UTC. Local timestamps from GitHub API and npm registry.\n\nThree vulnerabilities chained together. Each is necessary for the attack; none alone is sufficient.\n\nbundle-size.yml ran pull_request_target for fork PRs and, inside that trigger context, checked out the fork's PR-merge ref and ran a build:\n\nThe author of the workflow attempted a trust split (the comment-pr job is separate from benchmark-pr, with a comment in the YAML noting the intent to keep benchmark-pr \"untrusted with read-only permissions\"). The split is correct in spirit but missed two facts:\n\nThe malicious vite_setup.mjs was specifically designed to write data into the pnpm-store directory under a key th\n\n---\n\n[Lähde: SiliconANGLE]\nAikido Security Ltd. today disclosed what is being described as the largest npm supply chain compromise to date, after attackers injected malware into 18 popular packages that together account for more than 2.6 billion weekly downloads.\n\nNpm packages are reusable blocks of JavaScript code published to the Node Package Manager registry that developers can install and use in their own projects. The packages provide common functionality, such as formatting text, connecting to databases, or handling user input, allowing developers to not have to write every aspect of a project from scratch and are highly popular.\n\nAccording to Aikido, attackers gained control of the maintainer account behind the libraries by using phished credentials with a fake npm support email that requested a two-factor authentication update. Upon gaining access, the attackers then inserted malicious code into the packages’ index.js files.\n\nThe malicious code was found to be designed to hijack cryptocurrency transactions by monitoring browser application programming interfaces such as fetch, XMLHttpRequest and wallet interfaces such as window.ethereum, redirecting funds to attacker-controlled addresses.\n\nThe breach was detected by Aikido within five minutes of publication and disclosed publicly within the hour, limiting potential damage despite the enormous download footprint of the affected packages. Bleeping Computer reports that the breached packages were available roughly between 9 a.m. and 11:30 a.m. today, Sept. 8.\n\nAmong the 18 libraries affected are widely used developer utilities such as chalk, with an estimated 300 million weekly downloads, debug, with about 358 million and ansi-styles, with more than 370 million. The modules form part of the underlying fabric of the JavaScript ecosystem, meaning the compromise had the potential to cascade into a vast number of downstream applications and services.\n\nThough no hacking group has claimed responsibility for the supply chain compromise, nor have links to a particular group been found, the attacks come after a report in July warned that the infamous North Korea-backed hacking group Lazarus was targeting open-source packages, including notably npm packages.\n\nDiscussing the seriousness of the news, Ensar Seker, chief information security officer at extended threat intelligence platform provider SOCRadar Cyber Intelligence Inc., told SiliconANGLE via email that the incident “represents a watershed moment in software supply chain security.\n\n---\n\n[Lähde: Bleeping Computer]\nUpdate 6/8/25: Article updated with new information.\n\nA significant supply chain attack hit NPM after 17 popular Gluestack '@react-native-aria' packages with over 1 million downloads were compromised to include malicious code that acts as a remote access trojan (RAT).\n\nBleepingComputer determined that the compromise began on June 6 at 4:33 PM EST, when a new version of the @react-native-aria/focus package was published to NPM. Since then, 17 of the 20 Gluestack @react-native-aria packages have been compromised on NPM, with the threat actors publishing a new version as recently as two hours ago.\n\nThe supply chain attack was discovered by cybersecurity firm Aikido Security, who discovered obfuscated code injected into the lib/index.js file for the following packages:\n\nThese packages are very popular, with approximately 1,020,000 weekly downloads, making this a massive supply chain attack that could have widespread consequences.\n\nThe malicious code is heavily obfuscated and is appended to...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-12T03:04:25.132535+00:00",
+  "payload": {
+    "packet_id": "20260512T005136Z_fc444c4833",
+    "title": "TanStack kertoo npm-pakettiensa toimitusketjuhyökkäyksestä",
+    "summary": "TanStackin mukaan hyökkääjä julkaisi 11. toukokuuta 2026 haitallisia versioita 42 @tanstack/*-paketista. Yhtiö kehottaa kyseisiä versioita asentaneita kehittäjiä käsittelemään asennusympäristön mahdollisesti vaarantuneena.",
+    "content": "TanStack on julkaissut jälkiarvion npm-toimitusketjuhyökkäyksestä, jossa hyökkääjä ehti 11. toukokuuta 2026 julkaista 84 haitallista versiota yhteensä 42 @tanstack/*-paketista. Tapauksen ydin oli usean GitHub Actions -ympäristön heikkouden ketjutus, ei npm-tunnusten varastaminen tai varsinaisen npm-julkaisutyönkulun murto.\n\n## Haitalliset versiot julkaistiin lyhyessä aikaikkunassa\n\nTanStackin mukaan haitalliset versiot julkaistiin 11. toukokuuta kello 19.20–19.26 UTC. Paketteja oli 42, ja kustakin julkaistiin kaksi versiota noin kuuden minuutin välein. Julkinen havainto tehtiin noin 20 minuutissa ulkopuolisen tietoturvatutkijan ashishkurmin toimesta, joka työskenteli StepSecuritylle.\n\nKaikki tunnistetut haitalliset versiot on merkitty vanhentuneiksi, ja npm:n tietoturvatiimiä on pyydetty poistamaan kyseiset tarball-paketit rekisteristä. TanStackin mukaan sillä ei ole näyttöä siitä, että npm-käyttäjätunnuksia tai -tokeneita olisi varastettu. Myöskään npm-julkaisuprosessin ei kerrota itsessään vaarantuneen. Tapaukseen liittyvät TanStack/router#7383-seurantaketju ja GitHubin tietoturvatiedote GHSA-g7cv-rxg3-hmpx.\n\nTanStack erottelee myös pakettilinjoja, joiden se sanoo olevan varmistetusti puhtaita. Näihin kuuluvat muun muassa @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store sekä @tanstack/start-metapaketti. Sen sijaan @tanstack/start-alkuiset paketit eivät kuulu tähän samaan puhtaaksi vahvistettujen listaan.\n\n## Hyökkäys hyödynsi GitHub Actions -ketjua\n\nJälkiarvion mukaan hyökkäys perustui kolmeen yhdessä käytettyyn tekijään: pull_request_target-malliin, GitHub Actions -välimuistin myrkyttämiseen fork- ja pääprojektin luottamusrajan yli sekä OIDC-tokenin poimimiseen ajonaikaisesti GitHub Actions -runnerin muistista. TanStack korostaa, että yksikään näistä tekijöistä ei olisi yksin riittänyt hyökkäyksen onnistumiseen.\n\nKäytännössä haitallinen sisältö saattoi käynnistyä, kun kehittäjä tai CI-ympäristö asensi kyseisen version npm-, pnpm- tai yarn-komennolla. Asennuksen yhteydessä haitallinen optionalDependencies-määritys johti orvon hyötykuormacommitin hakemiseen fork-verkosta, prepare-elinkaariskriptin ajamiseen ja noin 2,3 megatavun obfuskoidun router_init.js-tiedoston suorittamiseen.\n\n## Asennusympäristöt on syytä käsitellä vaarantuneina\n\nTämän vuoksi TanStack suosittelee, että jokainen haitallisen version 11. toukokuuta asentanut käsittelee asennuskoneen mahdollisesti vaarantuneena. Suositeltuihin varotoimiin kuuluu asennusympäristöstä tavoitettavien AWS-, GCP-, Kubernetes-, Vault-, GitHub-, npm- ja SSH-tunnisteiden kierrättäminen.\n\nJälkiarviossa mainitaan myös bundle-size.yml-työnkulku, joka ajoi pull_request_target-tapahtumaa forkatuista pull requesteista ja tarkisti forkista PR-merge-viitteen ennen build-vaihetta. Työnkulussa oli yritetty erottaa luotettu ja epäluotettu osa toisistaan, mutta TanStackin mukaan haitallinen vite_setup.mjs oli suunniteltu kirjoittamaan tietoja pnpm-store-hakemistoon tavalla, joka ohitti tämän jaon.",
+    "category": "Teknologia",
+    "tags": [
+      "TanStack",
+      "npm",
+      "toimitusketju",
+      "GitHub Actions",
+      "tietoturva"
+    ],
+    "summary_bullets": [
+      "Hyökkääjä julkaisi 84 haitallista versiota 42 @tanstack/*-paketista 11. toukokuuta 2026.",
+      "TanStackin mukaan npm-tokeneita ei varastettu eikä npm-julkaisutyönkulku itsessään vaarantunut.",
+      "Haitallisen version asentaneita kehotetaan käsittelemään asennusympäristö mahdollisesti vaarantuneena ja kierrättämään tunnisteet."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu annettuun jälkiarviopakettiin; yksityiskohtia ei laajennettu paketin ulkopuolelta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260512T005136Z_fc444c4833\",\n  \"title\": \"TanStack kertoo npm-pakettiensa toimitusketjuhyökkäyksestä\",\n  \"summary\": \"TanStackin mukaan hyökkääjä julkaisi 11. toukokuuta 2026 haitallisia versioita 42 @tanstack/*-paketista. Yhtiö kehottaa kyseisiä versioita asentaneita kehittäjiä käsittelemään asennusympäristön mahdollisesti vaarantuneena.\",\n  \"content\": \"TanStack on julkaissut jälkiarvion npm-toimitusketjuhyökkäyksestä, jossa hyökkääjä ehti 11. toukokuuta 2026 julkaista 84 haitallista versiota yhteensä 42 @tanstack/*-paketista. Tapauksen ydin oli usean GitHub Actions -ympäristön heikkouden ketjutus, ei npm-tunnusten varastaminen tai varsinaisen npm-julkaisutyönkulun murto.\\n\\n## Haitalliset versiot julkaistiin lyhyessä aikaikkunassa\\n\\nTanStackin mukaan haitalliset versiot julkaistiin 11. toukokuuta kello 19.20–19.26 UTC. Paketteja oli 42, ja kustakin julkaistiin kaksi versiota noin kuuden minuutin välein. Julkinen havainto tehtiin noin 20 minuutissa ulkopuolisen tietoturvatutkijan ashishkurmin toimesta, joka työskenteli StepSecuritylle.\\n\\nKaikki tunnistetut haitalliset versiot on merkitty vanhentuneiksi, ja npm:n tietoturvatiimiä on pyydetty poistamaan kyseiset tarball-paketit rekisteristä. TanStackin mukaan sillä ei ole näyttöä siitä, että npm-käyttäjätunnuksia tai -tokeneita olisi varastettu. Myöskään npm-julkaisuprosessin ei kerrota itsessään vaarantuneen. Tapaukseen liittyvät TanStack/router#7383-seurantaketju ja GitHubin tietoturvatiedote GHSA-g7cv-rxg3-hmpx.\\n\\nTanStack erottelee myös pakettilinjoja, joiden se sanoo olevan varmistetusti puhtaita. Näihin kuuluvat muun muassa @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store sekä @tanstack/start-metapaketti. Sen sijaan @tanstack/start-alkuiset paketit eivät kuulu tähän samaan puhtaaksi vahvistettujen listaan.\\n\\n## Hyökkäys hyödynsi GitHub Actions -ketjua\\n\\nJälkiarvion mukaan hyökkäys perustui kolmeen yhdessä käytettyyn tekijään: pull_request_target-malliin, GitHub Actions -välimuistin myrkyttämiseen fork- ja pääprojektin luottamusrajan yli sekä OIDC-tokenin poimimiseen ajonaikaisesti GitHub Actions -runnerin muistista. TanStack korostaa, että yksikään näistä tekijöistä ei olisi yksin riittänyt hyökkäyksen onnistumiseen.\\n\\nKäytännössä haitallinen sisältö saattoi käynnistyä, kun kehittäjä tai CI-ympäristö asensi kyseisen version npm-, pnpm- tai yarn-komennolla. Asennuksen yhteydessä haitallinen optionalDependencies-määritys johti orvon hyötykuormacommitin hakemiseen fork-verkosta, prepare-elinkaariskriptin ajamiseen ja noin 2,3 megatavun obfuskoidun router_init.js-tiedoston suorittamiseen.\\n\\n## Asennusympäristöt on syytä käsitellä vaarantuneina\\n\\nTämän vuoksi TanStack suosittelee, että jokainen haitallisen version 11. toukokuuta asentanut käsittelee asennuskoneen mahdollisesti vaarantuneena. Suositeltuihin varotoimiin kuuluu asennusympäristöstä tavoitettavien AWS-, GCP-, Kubernetes-, Vault-, GitHub-, npm- ja SSH-tunnisteiden kierrättäminen.\\n\\nJälkiarviossa mainitaan myös bundle-size.yml-työnkulku, joka ajoi pull_request_target-tapahtumaa forkatuista pull requesteista ja tarkisti forkista PR-merge-viitteen ennen build-vaihetta. Työnkulussa oli yritetty erottaa luotettu ja epäluotettu osa toisistaan, mutta TanStackin mukaan haitallinen vite_setup.mjs oli suunniteltu kirjoittamaan tietoja pnpm-store-hakemistoon tavalla, joka ohitti tämän jaon.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"TanStack\",\n    \"npm\",\n    \"toimitusketju\",\n    \"GitHub Actions\",\n    \"tietoturva\"\n  ],\n  \"summary_bullets\": [\n    \"Hyökkääjä julkaisi 84 haitallista versiota 42 @tanstack/*-paketista 11. toukokuuta 2026.\",\n    \"TanStackin mukaan npm-tokeneita ei varastettu eikä npm-julkaisutyönkulku itsessään vaarantunut.\",\n    \"Haitallisen version asentaneita kehotetaan käsittelemään asennusympäristö mahdollisesti vaarantuneena ja kierrättämään tunnisteet.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu annettuun jälkiarviopakettiin; yksityiskohtia ei laajennettu paketin ulkopuolelta.\"\n}",
+  "article": {
+    "title": "TanStack kertoo npm-pakettiensa toimitusketjuhyökkäyksestä",
+    "description": "TanStackin mukaan hyökkääjä julkaisi 11. toukokuuta 2026 haitallisia versioita 42 @tanstack/*-paketista. Yhtiö kehottaa kyseisiä versioita asentaneita kehittäjiä käsittelemään asennusympäristön mahdollisesti vaarantuneena.",
+    "link": "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem",
+    "published": "2026-05-11T21:08:25+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "255546c58c123407605baf0376a2aa3a",
+    "_url_hash": "6fd4333f36e2cbc91622b87d01a25d99f8192e088feb453365806f9a68a1d79b",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nOn 2026-05-11 between 19:20 and 19:26 UTC, an attacker published 84 malicious versions across 42 @tanstack/* npm packages by combining: the pull_request_target \"Pwn Request\" pattern, GitHub Actions cache poisoning across the fork↔base trust boundary, and runtime memory extraction of an OIDC token from the GitHub Actions runner process. No npm tokens were stolen and the npm publish workflow itself was not compromised.\n\nThe malicious versions were detected publicly within 20 minutes by an external researcher ashishkurmi working for stepsecurity. All affected versions have been deprecated; npm security has been engaged to pull tarballs from the registry. We have no evidence of npm credentials being stolen, but we strongly recommend that anyone who installed an affected version on 2026-05-11 rotate AWS, GCP, Kubernetes, Vault, GitHub, npm, and SSH credentials reachable from the install host.\n\nTracking issue: TanStack/router#7383\nGitHub Security Advisory: GHSA-g7cv-rxg3-hmpx\n\n42 packages, 84 versions (two per package, published roughly 6 minutes apart). See the tracking issue for the full table. Confirmed-clean families: @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store, @tanstack/start (the meta-package, not @tanstack/start-*).\n\nWhen a developer or CI environment runs npm install, pnpm install, or yarn install against any affected version, npm resolves the malicious optionalDependencies entry, fetches the orphan payload commit from the fork network, runs its prepare lifecycle script, and executes a ~2.3 MB obfuscated router_init.js smuggled into the affected tarball. The script:\n\nBecause the payload runs as part of npm install's lifecycle, anyone who installed an affected version on 2026-05-11 must treat the install host as potentially compromised.\n\nAll times UTC. Local timestamps from GitHub API and npm registry.\n\nThree vulnerabilities chained together. Each is necessary for the attack; none alone is sufficient.\n\nbundle-size.yml ran pull_request_target for fork PRs and, inside that trigger context, checked out the fork's PR-merge ref and ran a build:\n\nThe author of the workflow attempted a trust split (the comment-pr job is separate from benchmark-pr, with a comment in the YAML noting the intent to keep benchmark-pr \"untrusted with read-only permissions\"). The split is correct in spirit but missed two facts:\n\nThe malicious vite_setup.mjs was specifically designed to write data into the pnpm-store directory under a key th\n\n---\n\n[Lähde: SiliconANGLE]\nAikido Security Ltd. today disclosed what is being described as the largest npm supply chain compromise to date, after attackers injected malware into 18 popular packages that together account for more than 2.6 billion weekly downloads.\n\nNpm packages are reusable blocks of JavaScript code published to the Node Package Manager registry that developers can install and use in their own projects. The packages provide common functionality, such as formatting text, connecting to databases, or handling user input, allowing developers to not have to write every aspect of a project from scratch and are highly popular.\n\nAccording to Aikido, attackers gained control of the maintainer account behind the libraries by using phished credentials with a fake npm support email that requested a two-factor authentication update. Upon gaining access, the attackers then inserted malicious code into the packages’ index.js files.\n\nThe malicious code was found to be designed to hijack cryptocurrency transactions by monitoring browser application programming interfaces such as fetch, XMLHttpRequest and wallet interfaces such as window.ethereum, redirecting funds to attacker-controlled addresses.\n\nThe breach was detected by Aikido within five minutes of publication and disclosed publicly within the hour, limiting potential damage despite the enormous download footprint of the affected packages. Bleeping Computer reports that the breached packages were available roughly between 9 a.m. and 11:30 a.m. today, Sept. 8.\n\nAmong the 18 libraries affected are widely used developer utilities such as chalk, with an estimated 300 million weekly downloads, debug, with about 358 million and ansi-styles, with more than 370 million. The modules form part of the underlying fabric of the JavaScript ecosystem, meaning the compromise had the potential to cascade into a vast number of downstream applications and services.\n\nThough no hacking group has claimed responsibility for the supply chain compromise, nor have links to a particular group been found, the attacks come after a report in July warned that the infamous North Korea-backed hacking group Lazarus was targeting open-source packages, including notably npm packages.\n\nDiscussing the seriousness of the news, Ensar Seker, chief information security officer at extended threat intelligence platform provider SOCRadar Cyber Intelligence Inc., told SiliconANGLE via email that the incident “represents a watershed moment in software supply chain security.\n\n---\n\n[Lähde: Bleeping Computer]\nUpdate 6/8/25: Article updated with new information.\n\nA significant supply chain attack hit NPM after 17 popular Gluestack '@react-native-aria' packages with over 1 million downloads were compromised to include malicious code that acts as a remote access trojan (RAT).\n\nBleepingComputer determined that the compromise began on June 6 at 4:33 PM EST, when a new version of the @react-native-aria/focus package was published to NPM. Since then, 17 of the 20 Gluestack @react-native-aria packages have been compromised on NPM, with the threat actors publishing a new version as recently as two hours ago.\n\nThe supply chain attack was discovered by cybersecurity firm Aikido Security, who discovered obfuscated code injected into the lib/index.js file for the following packages:\n\nThese packages are very popular, with approximately 1,020,000 weekly downloads, making this a massive supply chain attack that could have widespread consequences.\n\nThe malicious code is heavily obfuscated and is appended to...",
+    "research_source": "multi",
+    "summary": "TanStackin mukaan hyökkääjä julkaisi 11. toukokuuta 2026 haitallisia versioita 42 @tanstack/*-paketista. Yhtiö kehottaa kyseisiä versioita asentaneita kehittäjiä käsittelemään asennusympäristön mahdollisesti vaarantuneena.",
+    "content": "TanStack on julkaissut jälkiarvion npm-toimitusketjuhyökkäyksestä, jossa hyökkääjä ehti 11. toukokuuta 2026 julkaista 84 haitallista versiota yhteensä 42 @tanstack/*-paketista. Tapauksen ydin oli usean GitHub Actions -ympäristön heikkouden ketjutus, ei npm-tunnusten varastaminen tai varsinaisen npm-julkaisutyönkulun murto.\n\n## Haitalliset versiot julkaistiin lyhyessä aikaikkunassa\n\nTanStackin mukaan haitalliset versiot julkaistiin 11. toukokuuta kello 19.20–19.26 UTC. Paketteja oli 42, ja kustakin julkaistiin kaksi versiota noin kuuden minuutin välein. Julkinen havainto tehtiin noin 20 minuutissa ulkopuolisen tietoturvatutkijan ashishkurmin toimesta, joka työskenteli StepSecuritylle.\n\nKaikki tunnistetut haitalliset versiot on merkitty vanhentuneiksi, ja npm:n tietoturvatiimiä on pyydetty poistamaan kyseiset tarball-paketit rekisteristä. TanStackin mukaan sillä ei ole näyttöä siitä, että npm-käyttäjätunnuksia tai -tokeneita olisi varastettu. Myöskään npm-julkaisuprosessin ei kerrota itsessään vaarantuneen. Tapaukseen liittyvät TanStack/router#7383-seurantaketju ja GitHubin tietoturvatiedote GHSA-g7cv-rxg3-hmpx.\n\nTanStack erottelee myös pakettilinjoja, joiden se sanoo olevan varmistetusti puhtaita. Näihin kuuluvat muun muassa @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store sekä @tanstack/start-metapaketti. Sen sijaan @tanstack/start-alkuiset paketit eivät kuulu tähän samaan puhtaaksi vahvistettujen listaan.\n\n## Hyökkäys hyödynsi GitHub Actions -ketjua\n\nJälkiarvion mukaan hyökkäys perustui kolmeen yhdessä käytettyyn tekijään: pull_request_target-malliin, GitHub Actions -välimuistin myrkyttämiseen fork- ja pääprojektin luottamusrajan yli sekä OIDC-tokenin poimimiseen ajonaikaisesti GitHub Actions -runnerin muistista. TanStack korostaa, että yksikään näistä tekijöistä ei olisi yksin riittänyt hyökkäyksen onnistumiseen.\n\nKäytännössä haitallinen sisältö saattoi käynnistyä, kun kehittäjä tai CI-ympäristö asensi kyseisen version npm-, pnpm- tai yarn-komennolla. Asennuksen yhteydessä haitallinen optionalDependencies-määritys johti orvon hyötykuormacommitin hakemiseen fork-verkosta, prepare-elinkaariskriptin ajamiseen ja noin 2,3 megatavun obfuskoidun router_init.js-tiedoston suorittamiseen.\n\n## Asennusympäristöt on syytä käsitellä vaarantuneina\n\nTämän vuoksi TanStack suosittelee, että jokainen haitallisen version 11. toukokuuta asentanut käsittelee asennuskoneen mahdollisesti vaarantuneena. Suositeltuihin varotoimiin kuuluu asennusympäristöstä tavoitettavien AWS-, GCP-, Kubernetes-, Vault-, GitHub-, npm- ja SSH-tunnisteiden kierrättäminen.\n\nJälkiarviossa mainitaan myös bundle-size.yml-työnkulku, joka ajoi pull_request_target-tapahtumaa forkatuista pull requesteista ja tarkisti forkista PR-merge-viitteen ennen build-vaihetta. Työnkulussa oli yritetty erottaa luotettu ja epäluotettu osa toisistaan, mutta TanStackin mukaan haitallinen vite_setup.mjs oli suunniteltu kirjoittamaan tietoja pnpm-store-hakemistoon tavalla, joka ohitti tämän jaon.",
+    "category": "Teknologia",
+    "tags": [
+      "tanstack",
+      "npm",
+      "toimitusketju",
+      "github actions",
+      "tietoturva"
+    ],
+    "summary_bullets": [
+      "Hyökkääjä julkaisi 84 haitallista versiota 42 @tanstack/*-paketista 11. toukokuuta 2026.",
+      "TanStackin mukaan npm-tokeneita ei varastettu eikä npm-julkaisutyönkulku itsessään vaarantunut.",
+      "Haitallisen version asentaneita kehotetaan käsittelemään asennusympäristö mahdollisesti vaarantuneena ja kierrättämään tunnisteet."
+    ],
+    "key_points": [
+      "Hyökkääjä julkaisi 84 haitallista versiota 42 @tanstack/*-paketista 11. toukokuuta 2026.",
+      "TanStackin mukaan npm-tokeneita ei varastettu eikä npm-julkaisutyönkulku itsessään vaarantunut.",
+      "Haitallisen version asentaneita kehotetaan käsittelemään asennusympäristö mahdollisesti vaarantuneena ja kierrättämään tunnisteet."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun jälkiarviopakettiin; yksityiskohtia ei laajennettu paketin ulkopuolelta.",
+    "source_text": "https://github.com/TanStack/router/issues/7383 Comments URL: https://news.ycombinator.com/item?id=48100706 Points: 458 # Comments: 141\n\nOn 2026-05-11 between 19:20 and 19:26 UTC, an attacker published 84 malicious versions across 42 @tanstack/* npm packages by combining: the pull_request_target \"Pwn Request\" pattern, GitHub Actions cache poisoning across the fork↔base trust boundary, and runtime memory extraction of an OIDC token from the GitHub Actions runner process. No npm tokens were stolen and the npm publish workflow itself was not compromised. The malicious versions were detected publicly within 20 minutes by an external researcher ashishkurmi working for stepsecurity. All affected versions have been deprecated; npm security has been engaged to pull tarballs from the registry. We have no evidence of npm credentials being stolen, but we strongly recommend that anyone who installed an affected version on 2026-05-11 rotate AWS, GCP, Kubernetes, Vault, GitHub, npm, and SSH credentials reachable from the install host. Tracking issue: TanStack/router#7383 GitHub Security Advisory: GHSA-g7cv-rxg3-hmpx\n\n42 packages, 84 versions (two per package, published roughly 6 minutes apart). See the tracking issue for the full table. Confirmed-clean families: @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store, @tanstack/start (the meta-package, not @tanstack/start-*). When a developer or CI environment runs npm install, pnpm install, or yarn install against any affected version, npm resolves the malicious optionalDependencies entry, fetches the orphan payload commit from the fork network, runs its prepare lifecycle script, and executes a ~2.3 MB obfuscated router_init.js smuggled into the affected tarball. The script: Because the payload runs as part of npm install's lifecycle, anyone who installed an affected version on 2026-05-11 must treat the install host as potentially compromised. All times UTC. Local timestamps from GitHub API and npm registry. Three vulnerabilities chained together. Each is necessary for the attack; none alone is sufficient.\n\nbundle-size.yml ran pull_request_target for fork PRs and, inside that trigger context, checked out the fork's PR-merge ref and ran a build: The author of the workflow attempted a trust split (the comment-pr job is separate from benchmark-pr, with a comment in the YAML noting the intent to keep benchmark-pr \"untrusted with read-only permissions\"). The split is correct in spirit but missed two facts: The malicious vite_setup.mjs was specifically designed to write data into the pnpm-store directory under a key th ---",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260512T005136Z_fc444c4833",
+    "image": "https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxHaXRIdWIlMjBBY3Rpb25zJTIwc2VjdXJpdHklMjBicmVhY2h8ZW58MXwwfHx8MTc3ODU1NTI4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxHaXRIdWIlMjBBY3Rpb25zJTIwc2VjdXJpdHklMjBicmVhY2h8ZW58MXwwfHx8MTc3ODU1NTI4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "TanStack kertoo npm-pakettiensa toimitusketjuhyökkäyksestä",
+    "image_credit": "Photo by Rubaitul Azad on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-white-dice-with-a-black-github-logo-on-it-HLQDfaJUTVI?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-12T03:08:06.085709+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxHaXRIdWIlMjBBY3Rpb25zJTIwc2VjdXJpdHklMjBicmVhY2h8ZW58MXwwfHx8MTc3ODU1NTI4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1654277041218-84424c78f0ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxHaXRIdWIlMjBBY3Rpb25zJTIwc2VjdXJpdHklMjBicmVhY2h8ZW58MXwwfHx8MTc3ODU1NTI4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-12T03:08:32.703025+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-12-tanstack-kertoo-npm-pakettiensa-toimitusketjuhyokkayksesta.md"
+  ]
+}
