@@ -160,22 +160,36 @@ def staged_failed_retry_classification(data: dict) -> str:
     return normalize_failure_reason(data.get("failure") or "")
 
 
+RECOVERABLE_TALOUS_FAILED_CLASSES = {
+    "repair_near_miss_short",
+    "writer_short_after_repair",
+    "writer_invalid_json",
+}
+
+
 def should_skip_staged_cooldown(article: dict, hours: int = 48) -> bool:
     digest = stable_digest(article)
     statuses = staged_digest_statuses(digest, hours=hours)
     if not statuses:
         return False
-    if article_category(article) == "Talous" and statuses[0][0] == "failed":
-        # Keep source acquisition alive for the under-target Talous lane only
-        # when the latest staged result might be fixed by a new source packet or
-        # writer pass. Terminal duplicate/quality-gate failures must cooldown;
-        # otherwise the same stable digest can loop through Monica every cycle.
-        try:
-            data = json.loads(statuses[0][1].read_text(encoding="utf-8", errors="replace"))
-        except Exception:
-            data = {}
-        if staged_failed_retry_classification(data) not in {"duplicate", "fail_closed_quality_gate"}:
-            return False
+    if article_category(article) == "Talous":
+        saw_failed = False
+        for box, path in statuses:
+            if box != "failed":
+                return True
+            saw_failed = True
+            # Keep source acquisition alive for the under-target Talous lane
+            # when a recent failure is a writer/runtime shortfall that may be
+            # fixed by a new packet or writer pass. Do not bypass cooldown for
+            # duplicate or quality-gate failures, and do not enqueue another
+            # copy when a digest is already ready/writing/outbox.
+            try:
+                data = json.loads(path.read_text(encoding="utf-8", errors="replace"))
+            except Exception:
+                data = {}
+            if staged_failed_retry_classification(data) not in RECOVERABLE_TALOUS_FAILED_CLASSES:
+                return True
+        return not saw_failed
     return True
 
 def existing_digests(hours: int = 48) -> set[str]:

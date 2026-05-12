@@ -129,6 +129,47 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertTrue(feedback["near_miss_short"])
         self.assertEqual(feedback["retry_classification"], "repair_near_miss_short")
 
+    def test_talous_cooldown_requeues_when_recent_recoverable_failure_exists(self) -> None:
+        article = {"title": "talous-recoverable", "link": "https://example.com/talous-recoverable", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
+        failed = _record("talous-recoverable", source_words=220, blocks=3)
+        failed["digest"] = digest
+        failed["packet"]["category_hint"] = "Talous"
+        failed["packet"]["story_confidence"] = 0.98
+        failed["failure"] = "content too short: 225 words"
+        failed["writer_failure_feedback"] = {"retry_classification": "repair_near_miss_short"}
+        self._write("failed", "old-talous", failed, age_hours=1)
+
+        self.assertFalse(staged_publish.should_skip_staged_cooldown(article, hours=48))
+
+    def test_talous_cooldown_still_skips_when_digest_already_ready(self) -> None:
+        article = {"title": "talous-ready", "link": "https://example.com/talous-ready", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
+        failed = _record("talous-ready", source_words=220, blocks=3)
+        failed["digest"] = digest
+        failed["packet"]["category_hint"] = "Talous"
+        failed["writer_failure_feedback"] = {"retry_classification": "repair_near_miss_short"}
+        ready = _record("talous-ready", source_words=220, blocks=3)
+        ready["digest"] = digest
+        ready["packet"]["category_hint"] = "Talous"
+        self._write("failed", "failed-talous-ready", failed, age_hours=1)
+        self._write("ready", "ready-talous-ready", ready, age_hours=0.1)
+
+        self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=48))
+
+    def test_talous_cooldown_does_not_requeue_quality_gate_failure(self) -> None:
+        article = {"title": "talous-quality", "link": "https://example.com/talous-quality", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
+        failed = _record("talous-quality", source_words=360, blocks=3)
+        failed["digest"] = digest
+        failed["packet"]["category_hint"] = "Talous"
+        failed["failure"] = "quality_gate_rejected: unsourced numbers"
+        failed["quality_gate_feedback"] = {"retry_classification": "fail_closed_quality_gate"}
+        self._write("failed", "failed-talous-quality", failed, age_hours=1)
+
+        self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=48))
+
+
     def test_failed_writer_feedback_classifies_invalid_json(self) -> None:
         record = _record("bad-json", source_words=111, blocks=4)
         record["packet"]["packet_id"] = "pkt-bad-json"
@@ -362,7 +403,6 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
     def test_talous_failed_staged_digest_can_reenter_scan_cooldown(self) -> None:
         failed = _record("talous-failed", source_words=0, blocks=0)
-        failed["digest"] = "abc123def0"
         failed["packet"]["category_hint"] = "Talous"
         failed["original_article"]["category_hint"] = "Talous"
         self._write("failed", "talous-failed", failed, age_hours=1)
@@ -372,15 +412,16 @@ class StagedPublishMetricsTests(unittest.TestCase):
             self.assertFalse(staged_publish.should_skip_staged_cooldown(article, hours=24))
 
     def test_talous_duplicate_failed_digest_obeys_terminal_cooldown(self) -> None:
+        article = {"title": "Talous duplicate", "url": "https://example.com/talous-duplicate", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
         failed = _record("talous-duplicate", source_words=360, blocks=3)
-        failed["digest"] = "abc123def2"
+        failed["digest"] = digest
         failed["packet"]["category_hint"] = "Talous"
         failed["original_article"]["category_hint"] = "Talous"
         failed["duplicate_rejected"] = True
         self._write("failed", "talous-duplicate", failed, age_hours=1)
 
-        article = {"title": "Talous duplicate", "url": "https://example.com/talous-duplicate", "category_hint": "Talous"}
-        with patch.object(staged_publish, "stable_digest", return_value="abc123def2"):
+        with patch.object(staged_publish, "stable_digest", return_value=digest):
             self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=24))
 
     def test_talous_fail_closed_quality_gate_obeys_terminal_cooldown(self) -> None:
