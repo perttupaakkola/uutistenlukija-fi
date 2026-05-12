@@ -809,9 +809,15 @@ def failed_writer_feedback(data: dict, payload: dict | None = None, issues: list
     source_blocks = packet_source_blocks(data)
     content = str(payload.get("content") or "")
     word_count = len(content.split())
+    category = packet.get("category") or packet.get("category_hint") or original.get("category_hint") or "?"
+    try:
+        story_confidence = float(packet.get("story_confidence") or 0.0)
+    except (TypeError, ValueError):
+        story_confidence = 0.0
     source_backed = (
         source_words >= 300
-        or (source_words >= 180 and source_blocks >= 2 and float(packet.get("story_confidence") or 0.0) >= 0.85)
+        or (source_words >= 180 and source_blocks >= 2 and story_confidence >= 0.85)
+        or (category == "Talous" and source_words >= 190 and source_blocks >= 3 and story_confidence >= 0.85)
     ) and source_blocks >= 2
     near_miss = 200 <= word_count < 250 and source_backed and any("content too short" in issue for issue in issues)
     invalid_json = not payload and ("json" in str(data.get("failure") or raw_response).lower() or bool(raw_response))
@@ -825,7 +831,7 @@ def failed_writer_feedback(data: dict, payload: dict | None = None, issues: list
         classification = "writer_schema_invalid"
     return {
         "packet_id": packet.get("packet_id") or payload.get("packet_id") or data.get("digest") or "",
-        "category": packet.get("category") or packet.get("category_hint") or original.get("category_hint") or "?",
+        "category": category,
         "selected_source_words": source_words,
         "selected_source_blocks": source_blocks,
         "story_confidence": packet.get("story_confidence"),

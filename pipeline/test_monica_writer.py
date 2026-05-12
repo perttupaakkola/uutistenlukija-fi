@@ -9,11 +9,11 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
+    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
+    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -378,6 +378,29 @@ class MonicaWriterTests(unittest.TestCase):
             packet["category"] = category
             packet["story_confidence"] = 0.9
             self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 247 words"]))
+
+    def test_talous_micro_near_miss_uses_three_blocks_and_high_confidence(self):
+        packet = _source_packet(199, blocks=3)
+        packet["category"] = "Talous"
+        packet["story_confidence"] = 0.98
+        payload = json.loads(_good_payload())
+        payload["content"] = " ".join(["Sana"] * 209)
+
+        self.assertTrue(_is_source_backed_talous_micro_near_miss(packet, payload, ["content too short: 209 words"]))
+        self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 209 words"]))
+        self.assertTrue(_is_source_backed_repair_candidate(packet, ["content too short: 209 words"]))
+
+        not_talous = dict(packet, category="Kotimaa")
+        self.assertFalse(_is_source_backed_talous_micro_near_miss(not_talous, payload, ["content too short: 209 words"]))
+        two_blocks = _source_packet(199, blocks=2)
+        two_blocks["category"] = "Talous"
+        two_blocks["story_confidence"] = 0.98
+        self.assertFalse(_is_source_backed_talous_micro_near_miss(two_blocks, payload, ["content too short: 209 words"]))
+        low_confidence = _source_packet(199, blocks=3)
+        low_confidence["category"] = "Talous"
+        low_confidence["story_confidence"] = 0.84
+        self.assertFalse(_is_source_backed_talous_micro_near_miss(low_confidence, payload, ["content too short: 209 words"]))
+
 
     def test_packet_story_confidence_prefers_story_confidence_over_payload_confidence(self):
         packet = {"story_confidence": 0.91, "confidence": 0.2}

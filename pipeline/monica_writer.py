@@ -54,6 +54,9 @@ SOURCE_BACKED_NEAR_MISS_MIN_WORDS = 200
 SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS = 280
 SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS = 420
 SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS = 280
+SOURCE_BACKED_TALOUS_MICRO_REPAIR_WORDS = 190
+SOURCE_BACKED_TALOUS_MICRO_REPAIR_BLOCKS = 3
+SOURCE_BACKED_TALOUS_MICRO_REPAIR_MIN_WORDS = 200
 
 OPENCLAW_CANDIDATES = (
     "/home/pertt/.openclaw/bin/openclaw",
@@ -340,7 +343,33 @@ def _has_length_issue(issues: list[str]) -> bool:
     return "content too short" in joined or "lead paragraph too short" in joined
 
 
+def _packet_category(packet: dict) -> str:
+    return str(packet.get("category") or packet.get("category_hint") or "")
+
+
+def _is_source_backed_talous_micro_near_miss(packet: dict, payload: dict, issues: list[str]) -> bool:
+    """Strict OPE-72 lane for thin-but-source-backed Talous near misses.
+
+    This is intentionally narrower than the generic near-miss path: it only
+    applies to Talous, requires three selected source blocks and high story
+    confidence, and still preserves the 250-word/30-word final floors.
+    """
+    if _packet_category(packet) != "Talous":
+        return False
+    if not _has_length_issue(issues):
+        return False
+    if _packet_story_confidence(packet) < SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE:
+        return False
+    if _packet_source_words(packet) < SOURCE_BACKED_TALOUS_MICRO_REPAIR_WORDS:
+        return False
+    if _packet_source_blocks(packet) < SOURCE_BACKED_TALOUS_MICRO_REPAIR_BLOCKS:
+        return False
+    return _content_word_count(payload) >= SOURCE_BACKED_TALOUS_MICRO_REPAIR_MIN_WORDS and _is_payload_under_final_length_floor(payload)
+
+
 def _is_source_backed_near_miss(packet: dict, payload: dict, issues: list[str]) -> bool:
+    if _is_source_backed_talous_micro_near_miss(packet, payload, issues):
+        return True
     if not _has_length_issue(issues):
         return False
     if _packet_story_confidence(packet) < SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE:
@@ -365,6 +394,12 @@ def _is_source_backed_repair_candidate(packet: dict, issues: list[str]) -> bool:
         _packet_source_words(packet) >= SOURCE_BACKED_REPAIR_WORDS
         or (
             _packet_source_words(packet) >= SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS
+            and _packet_story_confidence(packet) >= SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE
+        )
+        or (
+            _packet_category(packet) == "Talous"
+            and _packet_source_words(packet) >= SOURCE_BACKED_TALOUS_MICRO_REPAIR_WORDS
+            and _packet_source_blocks(packet) >= SOURCE_BACKED_TALOUS_MICRO_REPAIR_BLOCKS
             and _packet_story_confidence(packet) >= SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE
         )
     )
@@ -461,6 +496,7 @@ Source-backed repair mode:
 - The packet has {source_words} source words across {source_blocks} source blocks, so a short draft is a repair target, not an automatic failure.
 - The repaired article MUST be at least 250 Finnish words and the first paragraph MUST be at least 30 words. Target {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
 - For high-confidence source-backed near-misses with at least {SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS} source words, {SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS} source blocks, confidence >= {SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE}, and {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 output words or a too-short lead paragraph with at least {MIN_CONTENT_WORDS - 50} total words, treat the short output as a writer shortfall: make one final expansion pass using concrete selected-source facts from every available block.
+- For Talous only, the same final expansion requirement also applies to 200–249 word near-misses with at least {SOURCE_BACKED_TALOUS_MICRO_REPAIR_WORDS} selected source words, {SOURCE_BACKED_TALOUS_MICRO_REPAIR_BLOCKS} source blocks, and confidence >= {SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE}. This exists for narrow Suomen Yrittäjät / Finanssiala packets that are source-backed but selected-source constrained.
 - Before returning, count the words in `content` and in the first paragraph. If content is under 250 words or the lead is under 30 words, either add source-backed detail from the packet until it is at least {SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS} words with a 30+ word lead, or return INSUFFICIENT_CONFIDENCE with reason `source_backed_writer_shortfall_unrepairable`.
 - Treat 200–249 source-backed output words and 1–29 word lead paragraphs on otherwise near-complete drafts as failed repairs. Do not return a near-miss; continue revising until the article is safely above both floors or explicitly return `source_backed_writer_shortfall_unrepairable`.
 - Build 4–6 concise paragraphs plus at least two H2 subheadings.
