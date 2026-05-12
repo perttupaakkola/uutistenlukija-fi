@@ -1,0 +1,126 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-12T10:11:33.287613+00:00",
+  "digest": "fa8c9c5042",
+  "packet": {
+    "packet_id": "20260512T101133Z_fa8c9c5042",
+    "created_at": "2026-05-12T10:11:33Z",
+    "headline_seed": "Texas accuses Netflix of spying on users, including children",
+    "description_seed": "The lawsuit comes amid increased scrutiny over platform features like auto-play that deliver endless content to users.",
+    "link": "https://www.bbc.com/news/articles/c072dvv1rmro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "AOL",
+      "AOL",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c072dvv1rmro?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Texas accuses Netflix of spying on users, including children"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The lawsuit comes amid increased scrutiny over platform features like auto-play that deliver endless content to users.",
+        "word_count": 17,
+        "keyword_overlap": 15,
+        "strong_overlap": 9
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "Texas Attorney General Ken Paxton has accused Netflix of spying on its consumers, including children, by collecting their data without consent and creating \"addictive\" features The lawsuit alleges Netflix uses autoplay and other features to keep users engaged and monetize their data Netflix has denied the claims, stating the lawsuit is based on inaccurate information and that the company complies with privacy laws Texas Attorney General Ken Paxton has accused Netflix of spying on its consumers, including children, by collecting their data without consent and creating \"addictive\" features that keep users on its platform.",
+        "word_count": 94,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "Additionally, the suit accuses Netflix of using \"features that are designed to manipulate users to take actions Netflix wants them to take,\" per the press release, including the platform's autoplay feature that starts ​a new show when a different show ends. \"Netflix’s endgame is simple and lucrative: get children and families glued to the screen, harvest their data while they are stuck there, and ​then monetize the data for a handsome profit,\" the state's complaint alleges. \"When you watch Netflix, Netflix watches you.\" The suit also quotes Netflix co-founder and Chairman Reed Hastings as saying in 2020, \"we don't collect anything.\"",
+        "word_count": 101,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Netflix has been sued in Texas over claims it collects data belonging to children and adults in the US state without their consent, and uses \"addictive\" design to keep them hooked. Texas Attorney General Ken Paxton accused the streaming giant of \"spying\" on citizens saying it \"records and monetises billions\" of pieces of information about how users behave on the platform, despite suggesting otherwise. \"Every interaction on the platform became a data point revealing information about the user,\" his office said. Netflix has rejected the claims and says it will challenge them in court, according to a statement shared with Reuters. \"Respectfully to the great state of Texas and Attorney General Paxton, this lawsuit lacks merit and is based on inaccurate and distorted information,\" a Netflix spokesperson told the news agency.",
+        "word_count": 131,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The lawsuit comes amid increased scrutiny over platform features like auto-play that deliver endless content to users.\n\nTexas Attorney General Ken Paxton has accused Netflix of spying on its consumers, including children, by collecting their data without consent and creating \"addictive\" features The lawsuit alleges Netflix uses autoplay and other features to keep users engaged and monetize their data Netflix has denied the claims, stating the lawsuit is based on inaccurate information and that the company complies with privacy laws Texas Attorney General Ken Paxton has accused Netflix of spying on its consumers, including children, by collecting their data without consent and creating \"addictive\" features that keep users on its platform.\n\nAdditionally, the suit accuses Netflix of using \"features that are designed to manipulate users to take actions Netflix wants them to take,\" per the press release, including the platform's autoplay feature that starts ​a new show when a different show ends. \"Netflix’s endgame is simple and lucrative: get children and families glued to the screen, harvest their data while they are stuck there, and ​then monetize the data for a handsome profit,\" the state's complaint alleges. \"When you watch Netflix, Netflix watches you.\" The suit also quotes Netflix co-founder and Chairman Reed Hastings as saying in 2020, \"we don't collect anything.\"\n\nNetflix has been sued in Texas over claims it collects data belonging to children and adults in the US state without their consent, and uses \"addictive\" design to keep them hooked. Texas Attorney General Ken Paxton accused the streaming giant of \"spying\" on citizens saying it \"records and monetises billions\" of pieces of information about how users behave on the platform, despite suggesting otherwise. \"Every interaction on the platform became a data point revealing information about the user,\" his office said. Netflix has rejected the claims and says it will challenge them in court, according to a statement shared with Reuters. \"Respectfully to the great state of Texas and Attorney General Paxton, this lawsuit lacks merit and is based on inaccurate and distorted information,\" a Netflix spokesperson told the news agency.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 954,
+      "selected_blocks": 4,
+      "selected_source_words": 343,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "AOL",
+        "AOL",
+        "The Irish Times",
+        "The Irish Times",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "AOL",
+        "AOL",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Texas accuses Netflix of spying on users, including children",
+      "description": "The lawsuit comes amid increased scrutiny over platform features like auto-play that deliver endless content to users.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Texas accuses Netflix of spying on users, including children",
+    "description": "The lawsuit comes amid increased scrutiny over platform features like auto-play that deliver endless content to users.",
+    "link": "https://www.bbc.com/news/articles/c072dvv1rmro?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-12T10:01:54+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "8916ef64224132141ed45d3d3c47a1b2",
+    "_url_hash": "a002f37e002ae6a8effd677dcadfb4c27281d188ce183c973a6b9b7c2ff201c8",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nNetflix has been sued in Texas over claims it collects data belonging to children and adults in the US state without their consent, and uses \"addictive\" design to keep them hooked.\n\nTexas Attorney General Ken Paxton accused the streaming giant of \"spying\" on citizens saying it \"records and monetises billions\" of pieces of information about how users behave on the platform, despite suggesting otherwise.\n\n\"Every interaction on the platform became a data point revealing information about the user,\" his office said.\n\nNetflix has rejected the claims and says it will challenge them in court, according  to a statement shared with Reuters.\n\n\"Respectfully to the great state of Texas and Attorney General Paxton, this lawsuit lacks merit and is based on inaccurate and distorted information,\" a Netflix spokesperson told the news agency.\n\n\"Netflix takes our members' privacy seriously and complies with privacy and data protection laws everywhere we operate.\"\n\nThe BBC has approached Netflix for comment.\n\n\"When you watch Netflix, Netflix watches you,\" says the complaint filed on Monday  by Texas' top prosecutor.\n\nAccording to the filing, the streaming company championed itself as unlike other big tech firms in how it processed data and advertised to users.\n\nIt quotes the company's former boss Reed Hastings as having said in 2019 and 2020 that it did not and would not collect or monetise user data, such as to sell ads.\n\nBut the filing says Netflix used a combination of \"addictive\" design features, like auto-playing content, and extensive \"logging\" of user activity to keep people on the site.\n\nAmong billions of technical events it recorded were what users would click and linger on, and for how long, the filing adds.\n\nIn 2022, it says, the company also began \"leveraging the mountains of data it quietly extracted from the children and families it kept fixated on their screen\" - sharing this with commercial data brokers to help raise billions of dollars in revenue.\n\n\"In short, Netflix sold subscriptions to its programming as an escape from Big Tech surveillance: pay monthly, avoid tracking,\" the lawsuit states.\n\n\"Texans trusted that bargain. Netflix broke it - constructing the very data-collection system subscribers paid to escape.\"\n\nAttorney General Paxton's office said it believed the company had violated the state's laws, namely the Texas Deceptive Trade Practices Act which forbids \"false, deceptive, or misleading acts and practices in the course of trade and commerce\".\n\nTh\n\n---\n\n[Lähde: AOL]\nTexas Attorney General Ken Paxton has accused Netflix of spying on its consumers, including children, by collecting their data without consent and creating \"addictive\" features\n\nThe lawsuit alleges Netflix uses autoplay and other features to keep users engaged and monetize their data\n\nNetflix has denied the claims, stating the lawsuit is based on inaccurate information and that the company complies with privacy laws\n\nTexas Attorney General Ken Paxton has accused Netflix of spying on its consumers, including children, by collecting their data without consent and creating \"addictive\" features that keep users on its platform.\n\nIn a lawsuit filed in state court in Collin County on Monday, May 11, the State of Texas alleges that the Los Gatos, Calif.-based streaming service falsely told its users that it did not collect or share their data while tracking and selling information about their habits and preferences to commercial data ⁠brokers and advertising technology companies, earning the company billions of dollars per year, according to the complaint.\n\n\"Every interaction on the platform became a data point revealing information about the user. This tracking applied to not only adults’ accounts, but also kids’ profiles,\" the Attor­ney Gen­er­al's office said in a press release, alleging that the data of Netflix users is then \"shopped across Big Ad Tech’s shadowy network.\"\n\nAdditionally, the suit accuses Netflix of using \"features that are designed to manipulate users to take actions Netflix wants them to take,\" per the press release, including the platform's autoplay feature that starts ​a new show when a different show ends.\n\n\"Netflix’s endgame is simple and lucrative: get children and families glued to the screen, harvest their data while they are stuck there, and ​then monetize the data for a handsome profit,\" the state's complaint alleges. \"When you watch Netflix, Netflix watches you.\"\n\nThe suit also quotes Netflix co-founder and Chairman Reed Hastings as saying in 2020, \"we don't collect anything.\"\n\n\"Netflix's years-long bait-and-switch has led the company right to where it promised never to be: addicting children and families to its platform, mining those users for data, and then converting that data into lucrative intelligence for global advertising juggernauts,\" the suit alleges.\n\nIn a statement shared with PEOPLE, a Netflix spokesperson said that the lawsuit \"lacks merit,\" and is \"based on inaccurate and distorted information.\"\n\n\"Netflix takes our mem\n\n---\n\n[Lähde: The Irish Times]\nTexas sued Netflix on Monday, accusing the streaming company of spying on children and designing its platform to be addictive.\n\nKen Paxton, the Texas attorney general, said Netflix has for years falsely represented to consumers that it did not collect or share user data, when it actually tracked and sold viewers’ habits and preferences to commercial data brokers and advertising technology companies, making billions of dollars a year.\n\nThe California-based company was also accused of quietly using “dark patterns” to keep users watching, including an autoplay feature that starts a new show when a different show ends. Netflix did not immediately respond to requests for comment.\n\nTexas’s complaint follows a spate of lawsuits targeting tech companies over features that the plaintiffs have said are addictive and dangerous to children. In March, a Los Angeles jury found Meta and YouTube liable for designing addictive products that had harmed young people, opening the floodgates for thousands ...",
+    "research_source": "multi"
+  }
+}
