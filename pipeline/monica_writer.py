@@ -50,7 +50,7 @@ SOURCE_BACKED_REPAIR_BLOCKS = 2
 SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS = 180
 SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS = 2
 SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE = 0.85
-SOURCE_BACKED_NEAR_MISS_MIN_WORDS = 210
+SOURCE_BACKED_NEAR_MISS_MIN_WORDS = 200
 SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS = 280
 SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS = 420
 SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS = 280
@@ -349,7 +349,11 @@ def _is_source_backed_near_miss(packet: dict, payload: dict, issues: list[str]) 
         return False
     if _packet_source_blocks(packet) < SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS:
         return False
-    return _content_word_count(payload) >= SOURCE_BACKED_NEAR_MISS_MIN_WORDS and _is_payload_under_final_length_floor(payload)
+    word_count = _content_word_count(payload)
+    return (
+        word_count >= SOURCE_BACKED_NEAR_MISS_MIN_WORDS
+        or (word_count >= MIN_CONTENT_WORDS - 50 and _content_lead_word_count(payload) < MIN_LEAD_WORDS)
+    ) and _is_payload_under_final_length_floor(payload)
 
 
 def _is_source_backed_repair_candidate(packet: dict, issues: list[str]) -> bool:
@@ -456,12 +460,12 @@ def _build_repair_prompt(packet: dict, broken_payload: dict, issues: list[str]) 
 Source-backed repair mode:
 - The packet has {source_words} source words across {source_blocks} source blocks, so a short draft is a repair target, not an automatic failure.
 - The repaired article MUST be at least 250 Finnish words and the first paragraph MUST be at least 30 words. Target {SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS}–{SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS} factual Finnish words using only details present in the packet.
-- For high-confidence source-backed near-misses with at least {SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS} source words, {SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS} source blocks, confidence >= {SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE}, and {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 output words or a too-short lead paragraph, treat the short output as a writer shortfall: make one final expansion pass using concrete selected-source facts from every available block.
+- For high-confidence source-backed near-misses with at least {SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS} source words, {SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS} source blocks, confidence >= {SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE}, and {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 output words or a too-short lead paragraph with at least {MIN_CONTENT_WORDS - 50} total words, treat the short output as a writer shortfall: make one final expansion pass using concrete selected-source facts from every available block.
 - Before returning, count the words in `content` and in the first paragraph. If content is under 250 words or the lead is under 30 words, either add source-backed detail from the packet until it is at least {SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS} words with a 30+ word lead, or return INSUFFICIENT_CONFIDENCE with reason `source_backed_writer_shortfall_unrepairable`.
-- Treat 210–249 source-backed output words and 1–29 word lead paragraphs as failed repairs. Do not return a near-miss; continue revising until the article is safely above both floors or explicitly return `source_backed_writer_shortfall_unrepairable`.
+- Treat 200–249 source-backed output words and 1–29 word lead paragraphs on otherwise near-complete drafts as failed repairs. Do not return a near-miss; continue revising until the article is safely above both floors or explicitly return `source_backed_writer_shortfall_unrepairable`.
 - Build 4–6 concise paragraphs plus at least two H2 subheadings.
 - Use available source blocks to add concrete context: actors, figures/timing, cause, consequence, and what happens next when available.
-- Do not stop at 210–249 words. A 211-word or 244–248-word repair is still invalid and will be quarantined.
+- Do not stop at 200–249 words. A 209-word, 211-word, or 244–248-word repair is still invalid and will be quarantined.
 - Do not pad with generic economy commentary, advice, sentiment, or invented market context.
 """
     return f"""Fix the article JSON below and return ONLY a corrected JSON object.

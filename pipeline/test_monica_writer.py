@@ -9,11 +9,11 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
+    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import OPENCLAW_CANDIDATES, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
+    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -322,7 +322,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("MUST be at least 250 Finnish words", prompt)
         self.assertIn("first paragraph MUST be at least 30 words", prompt)
         self.assertIn("source_backed_writer_shortfall_unrepairable", prompt)
-        self.assertIn("Do not stop at 210–249 words", prompt)
+        self.assertIn(f"Do not stop at {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 words", prompt)
         self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
 
@@ -342,9 +342,9 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("source_words: 216", prompt)
         self.assertIn("source_blocks: 3", prompt)
         self.assertIn("MUST be at least 250 Finnish words", prompt)
-        self.assertIn("Do not stop at 210–249 words", prompt)
+        self.assertIn(f"Do not stop at {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 words", prompt)
 
-    def test_source_backed_near_miss_requires_source_confidence_and_210_249_words(self):
+    def test_source_backed_near_miss_requires_source_confidence_and_200_249_words(self):
         packet = _source_packet(200, blocks=2)
         packet["story_confidence"] = 0.85
         payload = json.loads(_good_payload())
@@ -352,11 +352,15 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 211 words"]))
         payload["content"] = " ".join(["Sana"] * 209)
-        self.assertFalse(_is_source_backed_near_miss(packet, payload, ["content too short: 209 words"]))
+        self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 209 words"]))
+        payload["content"] = " ".join(["Sana"] * 199)
+        self.assertFalse(_is_source_backed_near_miss(packet, payload, ["content too short: 199 words"]))
         payload["content"] = " ".join(["Sana"] * 250)
         self.assertFalse(_is_source_backed_near_miss(packet, payload, []))
         payload["content"] = " ".join(["Sana"] * 29) + "\n\n" + " ".join(["Sana"] * 221)
         self.assertTrue(_is_source_backed_near_miss(packet, payload, ["lead paragraph too short: 29 words"]))
+        payload["content"] = " ".join(["Sana"] * 29) + "\n\n" + " ".join(["Sana"] * (MIN_CONTENT_WORDS - 80))
+        self.assertFalse(_is_source_backed_near_miss(packet, payload, ["lead paragraph too short: 29 words"]))
         payload["content"] = " ".join(["Sana"] * 247)
         reduced_floor_packet = _source_packet(180, blocks=2)
         reduced_floor_packet["story_confidence"] = 0.85

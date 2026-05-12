@@ -809,8 +809,11 @@ def failed_writer_feedback(data: dict, payload: dict | None = None, issues: list
     source_blocks = packet_source_blocks(data)
     content = str(payload.get("content") or "")
     word_count = len(content.split())
-    source_backed = source_words >= 300 and source_blocks >= 2
-    near_miss = 240 <= word_count < 250 and any("content too short" in issue for issue in issues)
+    source_backed = (
+        source_words >= 300
+        or (source_words >= 180 and source_blocks >= 2 and float(packet.get("story_confidence") or 0.0) >= 0.85)
+    ) and source_blocks >= 2
+    near_miss = 200 <= word_count < 250 and source_backed and any("content too short" in issue for issue in issues)
     invalid_json = not payload and ("json" in str(data.get("failure") or raw_response).lower() or bool(raw_response))
     if invalid_json:
         classification = "writer_invalid_json"
