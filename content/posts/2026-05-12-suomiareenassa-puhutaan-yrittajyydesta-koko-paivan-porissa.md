@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/suomiareenassa-puhutaan-tanakin-vuonna-koko-paiva-yrittajyydesta-yrittajilla-oma-lava-porissa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
