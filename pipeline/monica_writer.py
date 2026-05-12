@@ -281,10 +281,12 @@ def _basic_payload_issues(payload: dict) -> list[str]:
 
 
 def _source_block_words(block: dict[str, Any]) -> int:
+    text_word_count = len(str(block.get("text") or "").split())
     try:
-        return int(block.get("word_count") or 0)
+        declared_word_count = int(block.get("word_count") or 0)
     except (TypeError, ValueError):
-        return len(str(block.get("text") or "").split())
+        declared_word_count = 0
+    return max(declared_word_count, text_word_count)
 
 
 def _packet_source_words(packet: dict) -> int:
@@ -485,8 +487,15 @@ def _build_repair_prompt(packet: dict, broken_payload: dict, issues: list[str]) 
     near_short_repair = any("source_backed_writer_shortfall" in issue for issue in issues)
     source_backed = _is_source_backed_repair_candidate(packet, issues) or (
         near_short_repair
-        and source_words >= SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS
         and source_blocks >= SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS
+        and (
+            source_words >= SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS
+            or (
+                _packet_category(packet) == "Talous"
+                and source_words >= SOURCE_BACKED_TALOUS_MICRO_REPAIR_WORDS
+                and source_blocks >= SOURCE_BACKED_TALOUS_MICRO_REPAIR_BLOCKS
+            )
+        )
         and _packet_story_confidence(packet) >= SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE
     )
     source_backed_rules = ""

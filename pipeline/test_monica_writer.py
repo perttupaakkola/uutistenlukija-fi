@@ -379,6 +379,17 @@ class MonicaWriterTests(unittest.TestCase):
             packet["story_confidence"] = 0.9
             self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 247 words"]))
 
+    def test_source_word_count_uses_text_when_declared_block_word_count_is_low(self):
+        packet = {
+            "clean_source_blocks": [
+                {"text": " ".join(["sana"] * 90), "word_count": 50},
+                {"text": " ".join(["sana"] * 80), "word_count": 40},
+            ],
+            "source_text": " ".join(["sana"] * 500),
+        }
+
+        self.assertEqual(_packet_source_words(packet), 170)
+
     def test_talous_micro_near_miss_uses_three_blocks_and_high_confidence(self):
         packet = _source_packet(199, blocks=3)
         packet["category"] = "Talous"
@@ -400,6 +411,19 @@ class MonicaWriterTests(unittest.TestCase):
         low_confidence["category"] = "Talous"
         low_confidence["story_confidence"] = 0.84
         self.assertFalse(_is_source_backed_talous_micro_near_miss(low_confidence, payload, ["content too short: 209 words"]))
+
+    def test_talous_micro_near_short_repair_prompt_uses_source_backed_rules(self):
+        packet = _source_packet(199, blocks=3)
+        packet["category"] = "Talous"
+        packet["story_confidence"] = 0.98
+        broken_payload = json.loads(_good_payload())
+        broken_payload["content"] = " ".join(["Sana"] * 225)
+
+        prompt = _build_repair_prompt(packet, broken_payload, ["source_backed_writer_shortfall: final expansion required"])
+
+        self.assertIn("Source-backed repair mode", prompt)
+        self.assertIn("Talous only", prompt)
+        self.assertIn("source_words: 198", prompt)
 
 
     def test_packet_story_confidence_prefers_story_confidence_over_payload_confidence(self):
