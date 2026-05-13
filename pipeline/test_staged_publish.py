@@ -466,6 +466,23 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertIn("Talous", {staged_publish.article_category(article) for article in selected})
         self.assertNotIn(ulkomaat, selected)
 
+
+    def test_research_candidate_cap_keeps_two_talous_before_enrichment(self) -> None:
+        articles = [
+            {"title": "kotimaa yksi", "category_hint": "Kotimaa", "description": "kuvaus " * 6},
+            {"title": "kotimaa kaksi", "category_hint": "Kotimaa", "description": "kuvaus " * 6},
+            {"title": "ulkomaat yksi", "category_hint": "Ulkomaat", "description": "kuvaus " * 5},
+            {"title": "talous yksi", "category_hint": "Talous", "description": "kuvaus " * 4},
+            {"title": "talous kaksi", "category_hint": "Talous", "description": "kuvaus " * 4},
+        ]
+
+        selected = staged_publish.select_research_candidates(articles, max_candidates=3)
+
+        self.assertEqual(len(selected), 3)
+        categories = [staged_publish.article_category(article) for article in selected]
+        self.assertEqual(categories.count("Talous"), 2)
+        self.assertEqual(sum(1 for article in selected if article["title"].startswith("talous")), 2)
+
     def test_talous_failed_staged_digest_can_reenter_scan_cooldown(self) -> None:
         failed = _record("talous-failed", source_words=0, blocks=0)
         failed["packet"]["category_hint"] = "Talous"

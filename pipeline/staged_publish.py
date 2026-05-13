@@ -110,6 +110,9 @@ def stable_digest(article: dict) -> str:
 
 
 
+TALOUS_RESEARCH_MIN_CANDIDATES = 2
+
+
 def select_research_candidates(articles: list[dict], max_candidates: int | None) -> list[dict]:
     if not max_candidates or max_candidates <= 0 or len(articles) <= max_candidates:
         return articles
@@ -117,12 +120,29 @@ def select_research_candidates(articles: list[dict], max_candidates: int | None)
     selected_ids = {id(article) for article in selected}
     for category in CATEGORY_SCAN_ENQUEUE_PRIORITY:
         priority_candidates = [article for article in articles if article_category(article) == category]
-        if not priority_candidates or any(id(article) in selected_ids for article in priority_candidates):
+        if not priority_candidates:
             continue
-        # Preserve the first still-eligible under-target category item that
-        # survived cooldown. Research/source/editorial gates still decide later.
-        selected[-1] = priority_candidates[0]
-        selected_ids = {id(article) for article in selected}
+        selected_priority = [article for article in selected if article_category(article) == category]
+        target_count = min(len(priority_candidates), TALOUS_RESEARCH_MIN_CANDIDATES)
+        for candidate in priority_candidates:
+            if len(selected_priority) >= target_count:
+                break
+            if id(candidate) in selected_ids:
+                continue
+            # Preserve still-eligible under-target category items that survived
+            # cooldown before source acquisition. Research/source/editorial
+            # gates still decide later; this only prevents Talous from starving
+            # before enrichment when the candidate cap is tight.
+            replace_index = None
+            for index in range(len(selected) - 1, -1, -1):
+                if article_category(selected[index]) != category:
+                    replace_index = index
+                    break
+            if replace_index is None:
+                break
+            selected[replace_index] = candidate
+            selected_ids = {id(article) for article in selected}
+            selected_priority.append(candidate)
     return selected
 
 def staged_digest_statuses(digest: str, hours: int = 48) -> list[tuple[str, Path]]:
