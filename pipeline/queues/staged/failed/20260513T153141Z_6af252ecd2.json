@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-13T15:31:41.472560+00:00",
+  "digest": "6af252ecd2",
+  "packet": {
+    "packet_id": "20260513T153141Z_6af252ecd2",
+    "created_at": "2026-05-13T15:31:41Z",
+    "headline_seed": "Philippine Senate in lockdown after gunshots fired",
+    "description_seed": "Police commandos entered the building where a senator wanted by the International Criminal Court had sought refuge.",
+    "link": "https://www.bbc.com/news/articles/cnvp730yd52o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Straits Times",
+      "NBC News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cnvp730yd52o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Philippine Senate in lockdown after gunshots fired"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The Philippine Senate was locked down with military personnel seen entering the building where a senator wanted by the International Criminal Court had sought refuge. Rounds of gunfire were heard but officials have not revealed who who fired the shots. They said there were no casualties. Senator Ronald Dela Rosa said earlier he believed his arrest was imminent and urged Filipinos to prevent it. He is safe and with security personnel, officials said. He is accused by the ICC of killing dozens of people when he was police chief during former president Rodrigo Duterte's war on drugs, in which thousands of alleged dealers were shot and killed. Duterte has been held at The Hague since March 2025.",
+        "word_count": 117,
+        "keyword_overlap": 13,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Police commandos entered the building where a senator wanted by the International Criminal Court had sought refuge.",
+        "word_count": 17,
+        "keyword_overlap": 12,
+        "strong_overlap": 10
+      },
+      {
+        "source": "The Straits Times",
+        "source_type": "research",
+        "text": "Sign up now: Get insights on Asia's fast-moving developments Military personnel camouflage fatigues entering the Senate building as more than a dozen gunshots were heard at the Philippine Senate on May 13. MANILA – Volleys of gunshots were heard at the Philippine Senate on May 13 and people ran for cover after a top politician wanted by the International Criminal Court (ICC) said his arrest was imminent and security forces entered the building. There were no immediate reports of casualties, however, Senate Secretary Mark Llandro Mendoza told reporters following the chaos at the legislature in the capital Manila. Senator Ronald dela Rosa, a former police chief who was the main enforcer of former Philippine president Rodrigo Duterte’s bloody “war on drugs”, had earlier urged people to mobilise to prevent his arrest and handover to the ICC.",
+        "word_count": 136,
+        "keyword_overlap": 12,
+        "strong_overlap": 10
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "MANILA — Gunshots broke out at the Philippine Senate on Wednesday and people ran for cover after a top politician wanted by the International Criminal Court said his arrest was imminent and security forces entered the building. There were no immediate reports of casualties, Senate Secretary ⁠Mark Llandro Mendoza told reporters following the chaos at the legislature in the capital Manila. Senator Ronald dela Rosa, a former police chief who was the main enforcer of ex-Philippine President Rodrigo Duterte’s bloody “war on drugs”, had earlier urged people to mobilise to prevent his arrest and handover to the ICC. The Hague-based court on Monday unsealed an arrest warrant for dela Rosa on charges of crimes against humanity, the same that 81-year-old Duterte is accused of as he awaits trial in the ICC following his transfer last year.",
+        "word_count": 136,
+        "keyword_overlap": 12,
+        "strong_overlap": 10
+      }
+    ],
+    "source_text": "The Philippine Senate was locked down with military personnel seen entering the building where a senator wanted by the International Criminal Court had sought refuge. Rounds of gunfire were heard but officials have not revealed who who fired the shots. They said there were no casualties. Senator Ronald Dela Rosa said earlier he believed his arrest was imminent and urged Filipinos to prevent it. He is safe and with security personnel, officials said. He is accused by the ICC of killing dozens of people when he was police chief during former president Rodrigo Duterte's war on drugs, in which thousands of alleged dealers were shot and killed. Duterte has been held at The Hague since March 2025.\n\nPolice commandos entered the building where a senator wanted by the International Criminal Court had sought refuge.\n\nSign up now: Get insights on Asia's fast-moving developments Military personnel camouflage fatigues entering the Senate building as more than a dozen gunshots were heard at the Philippine Senate on May 13. MANILA – Volleys of gunshots were heard at the Philippine Senate on May 13 and people ran for cover after a top politician wanted by the International Criminal Court (ICC) said his arrest was imminent and security forces entered the building. There were no immediate reports of casualties, however, Senate Secretary Mark Llandro Mendoza told reporters following the chaos at the legislature in the capital Manila. Senator Ronald dela Rosa, a former police chief who was the main enforcer of former Philippine president Rodrigo Duterte’s bloody “war on drugs”, had earlier urged people to mobilise to prevent his arrest and handover to the ICC.\n\nMANILA — Gunshots broke out at the Philippine Senate on Wednesday and people ran for cover after a top politician wanted by the International Criminal Court said his arrest was imminent and security forces entered the building. There were no immediate reports of casualties, Senate Secretary ⁠Mark Llandro Mendoza told reporters following the chaos at the legislature in the capital Manila. Senator Ronald dela Rosa, a former police chief who was the main enforcer of ex-Philippine President Rodrigo Duterte’s bloody “war on drugs”, had earlier urged people to mobilise to prevent his arrest and handover to the ICC. The Hague-based court on Monday unsealed an arrest warrant for dela Rosa on charges of crimes against humanity, the same that 81-year-old Duterte is accused of as he awaits trial in the ICC following his transfer last year.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 1004,
+      "selected_blocks": 4,
+      "selected_source_words": 406,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "The Straits Times",
+        "The Straits Times",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "The Straits Times",
+        "NBC News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Philippine Senate in lockdown after gunshots fired",
+      "description": "Police commandos entered the building where a senator wanted by the International Criminal Court had sought refuge.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Philippine Senate in lockdown after gunshots fired",
+    "description": "Police commandos entered the building where a senator wanted by the International Criminal Court had sought refuge.",
+    "link": "https://www.bbc.com/news/articles/cnvp730yd52o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-13T15:04:16+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "7744f3be57337aec72d523417d39e348",
+    "_url_hash": "9a149bd66db901e92b6d6749254f8e0c11bb6a02911a15574f861cfe33dd9b0c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe Philippine Senate was locked down with military personnel seen entering the building where a senator wanted by the International Criminal Court had sought refuge.\n\nRounds of gunfire were heard but officials have not revealed who who fired the shots. They said there were no casualties.\n\nSenator Ronald Dela Rosa said earlier he believed his arrest was imminent and urged Filipinos to prevent it. He is safe and with security personnel, officials said.\n\nHe is accused by the ICC of killing dozens of people when he was police chief during former president Rodrigo Duterte's war on drugs, in which thousands of alleged dealers were shot and killed. Duterte has been held at The Hague since March 2025.\n\nTV footage showed police commandos in fatigues entering the Senate building in Manila early on Wednesday evening, with anti-riot policemen with shields and helmets surrounding the perimeter.\n\nProtesters outside the Senate demanded Dela Rosa's detention, calling for him to be sent to stand trial with Duterte.\n\nHis lawyers have appealed to the Supreme Court to block his extradition.\n\nThe senate building has been locked down since the shots, and senators are holed up inside.\n\nInterior Secretary Jonvic Remulla said the president had given \"strict instructions\" to secure the senators.\n\nDela Rosa is \"safe\" and with security personnel, he added.\n\n\"We are not here to arrest Senator Dela Rosa,\" he said. \"In fact, we are here to protect him. Let that be clear. I made that clear to his family.\"\n\nNo one has been arrested for the shooting, Remulla said.\n\nSenate speaker Alan Peter Cayetano asked the public to send \"any videos that could help with the investigation\".\n\nDuterte has refused to recognise the ICC proceedings, arguing that during his presidency in 2019 the Philippines had pulled out of the Rome Statute, the ICC's founding agreement.\n\nBut last month, judges in the ICC's Pre-Trial Chamber rejected that argument on the grounds that the alleged crimes had happened between 2011 and 2019 - while the Philippines was still a member of the ICC - paving the way for Duterte to stand trial.\n\nAdditional reporting by Simon Fraser and Ella Kipling\n\n---\n\n[Lähde: NBC News]\nMANILA — Gunshots broke out at the Philippine Senate on Wednesday and people ran for cover after a top politician wanted by the International Criminal Court said his arrest was imminent and security forces entered the building.\n\nThere were no immediate reports of casualties, Senate Secretary ⁠Mark Llandro Mendoza told reporters following the chaos at the legislature in the capital Manila.\n\nSenator Ronald dela Rosa, a former police chief who was the main enforcer of ex-Philippine President Rodrigo Duterte’s bloody “war on drugs”, had earlier urged people to mobilise to prevent his arrest and handover to the ICC.\n\nThe Hague-based court on Monday unsealed an arrest warrant for dela Rosa on charges of crimes against humanity, the same that 81-year-old Duterte is accused of as he awaits trial in the ICC following his transfer last year.\n\nDela Rosa, 64, ⁠has denied involvement in illegal killings.\n\n“I am appealing to you, I hope you ​can ⁠help me. Do not allow another Filipino to be brought to The Hague,” he said in a video on Facebook from his Senate office, where he has taken refuge since Monday when placed under legislative protection.\n\nSenate Secretary Mendoza said law enforcement officers believed to be from the ⁠National Bureau of Investigation had attempted to enter the Senate and fired as they retreated.\n\nBut NBI Director Melvin Matibag told GMA News that ​no agents had ⁠been deployed.\n\n“I spoke with the (justice) minister and he told ‌me to await instructions. We have no preparations whatsoever,” he said.\n\nMore than 10 military personnel in camouflage fatigues arrived, some carrying assault rifles, Reuters journalists saw.\n\nThe chief of the military’s public affairs office Xerxes Trinidad told Reuters the Senate had requested help to “assist them in securing the facility”.\n\nInterior Minister Jonvic Remulla ‌said it was unclear who fired shots and security footage would need to be checked. ‌He said dela Rosa was safe and he assured him no arrest would be made.\n\nThe office of the prosecutor at the ICC referred requests for comment to the court. The court’s press office did not immediately respond to a request for comment.\n\nDela Rosa was Duterte’s top lieutenant overseeing a fierce crackdown during which thousands of alleged drug dealers were slain, with human rights groups accusing police ⁠of systematic murders and cover-ups.\n\nPolice reject the allegations and say the more than 6,000 killed in anti-drugs operations were all armed and had resisted arrest.\n\n\n---\n\n[Lähde: The Straits Times]\nSign up now: Get insights on Asia's fast-moving developments\n\nMilitary personnel camouflage fatigues entering the Senate building as more than a dozen gunshots were heard at the Philippine Senate on May 13.\n\nMANILA – Volleys of gunshots were heard at the Philippine Senate on May 13 and people ran for cover after a top politician wanted by the International Criminal Court (ICC) said his arrest was imminent and security forces entered the building.\n\nThere were no immediate reports of casualties, however, Senate Secretary Mark Llandro Mendoza told reporters following the chaos at the legislature in the capital Manila.\n\nSenator Ronald dela Rosa, a former police chief who was the main enforcer of former Philippine president Rodrigo Duterte’s bloody “war on drugs”, had earlier urged people to mobilise to prevent his arrest and handover to the ICC.\n\nThe Hague-based court on May 11 unsealed an arrest warrant for Dela Rosa on charges of crimes against humanity, the same that 81-year-old Duterte is accused of as he awaits trial in the ICC following his transfer in 2025.\n\nDela Rosa, 64, has denied involvement in illegal killings.\n\n“I am appealing to you, I hope you can help me. Do not allow another Filipino to be brought to The Hague,” he said in a video on Facebook from his Senate office, where he has taken refuge since May 11 when...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-13T15:44:56.956779+00:00",
+  "failure": "content too short: 233 words",
+  "payload": {
+    "packet_id": "20260513T153141Z_6af252ecd2",
+    "title": "Filippiinien senaatti suljettiin laukausten jälkeen Manilassa",
+    "summary": "Filippiinien senaattirakennus asetettiin sulkutilaan Manilassa sen jälkeen, kun rakennuksessa kuultiin laukauksia ja turvallisuusjoukkoja nähtiin saapuvan paikalle. Kansainvälisen rikostuomioistuimen etsintäkuuluttama senaattori Ronald dela Rosa oli hakeutunut rakennukseen.",
+    "content": "Filippiinien senaatti suljettiin Manilassa keskiviikkona sen jälkeen, kun rakennuksessa kuultiin laukauksia ja ihmiset juoksivat suojaan. Turvallisuusjoukkoja, sotilashenkilöstöä ja poliisin kommandoyksiköitä nähtiin saapuvan senaattirakennukseen, jossa Kansainvälisen rikostuomioistuimen etsintäkuuluttama senaattori Ronald dela Rosa oli oleskellut.\n\n## Laukaukset aiheuttivat kaaosta senaatissa\n\nLaukauksia kuultiin Filippiinien senaatissa 13. toukokuuta. Lähdeaineiston mukaan laukauksia oli yli tusina, ja sotilashenkilöstöä nähtiin saapuvan rakennukseen maastopuvuissa. Viranomaiset eivät ole kertoneet, kuka laukaukset ampui tai mistä tilanteessa tarkalleen oli kyse.\n\nSenaatin sihteeri Mark Llandro Mendoza kertoi toimittajille, ettei välittömiä tietoja uhreista ollut. Viranomaisten mukaan dela Rosa oli turvassa ja turvallisuushenkilöstön seurassa. Tilanteen kerrottiin aiheuttaneen kaaosta pääkaupunki Manilan lainsäädäntörakennuksessa.\n\n## Dela Rosa odotti mahdollista pidätystä\n\nTilanne kärjistyi sen jälkeen, kun senaattori Ronald dela Rosa oli sanonut uskovansa pidätyksensä olevan lähellä. Hän oli aiemmin kehottanut filippiiniläisiä mobilisoitumaan estääkseen pidätyksensä ja luovuttamisensa Kansainväliselle rikostuomioistuimelle ICC:lle.\n\nDela Rosa on Filippiinien entinen poliisipäällikkö. Lähdeaineiston mukaan hän oli keskeinen toimeenpanija entisen presidentin Rodrigo Duterten huumeiden vastaisessa kampanjassa. ICC syyttää dela Rosaa rikoksista ihmisyyttä vastaan. Syytteet liittyvät lähdeaineiston mukaan kymmenien ihmisten surmaamiseen hänen toimiessaan poliisipäällikkönä, ja Duterten huumesodassa ammuttiin tuhansia väitettyjä huumekauppiaita.\n\n## ICC:n pidätysmääräys liittyy huumesotaan\n\nHaagissa toimiva ICC avasi maanantaina dela Rosaa koskevan pidätysmääräyksen. Sama syytekokonaisuus koskee myös 81-vuotiasta Dutertea, joka odottaa oikeudenkäyntiä ICC:ssä. Duterte on ollut Haagissa maaliskuusta 2025 lähtien.\n\nKeskiviikon tapahtumista ei lähdeaineiston perusteella vahvistettu pidätyksen toteutumista. Vahvistettua on, että senaattirakennus suljettiin turvallisuustilanteen vuoksi, laukauksia kuultiin, ihmiset hakeutuivat suojaan ja viranomaiset sanoivat, ettei välittömiä tietoja uhreista ollut.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Filippiinit",
+      "Manila",
+      "Ronald dela Rosa",
+      "Kansainvälinen rikostuomioistuin",
+      "Rodrigo Duterte"
+    ],
+    "summary_bullets": [
+      "Filippiinien senaatti asetettiin sulkutilaan Manilassa laukausten jälkeen.",
+      "Turvallisuusjoukkoja ja sotilashenkilöstöä nähtiin rakennuksessa, jossa senaattori Ronald dela Rosa oli oleskellut.",
+      "Viranomaisten mukaan välittömiä tietoja kuolonuhreista tai loukkaantuneista ei ollut.",
+      "Dela Rosaa koskeva ICC:n pidätysmääräys liittyy Duterten kauden huumesotaan."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Kirjoitettu usean lähdekatkelman pohjalta. Ampujaa, pidätyksen toteutumista tai mahdollisia myöhempiä seurauksia ei vahvistettu lähdeaineistossa, joten niitä ei esitetä faktoina."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260513T153141Z_6af252ecd2\",\"title\":\"Filippiinien senaatti suljettiin laukausten jälkeen Manilassa\",\"summary\":\"Filippiinien senaattirakennus asetettiin sulkutilaan Manilassa sen jälkeen, kun rakennuksessa kuultiin laukauksia ja turvallisuusjoukkoja nähtiin saapuvan paikalle. Kansainvälisen rikostuomioistuimen etsintäkuuluttama senaattori Ronald dela Rosa oli hakeutunut rakennukseen.\",\"content\":\"Filippiinien senaatti suljettiin Manilassa keskiviikkona sen jälkeen, kun rakennuksessa kuultiin laukauksia ja ihmiset juoksivat suojaan. Turvallisuusjoukkoja, sotilashenkilöstöä ja poliisin kommandoyksiköitä nähtiin saapuvan senaattirakennukseen, jossa Kansainvälisen rikostuomioistuimen etsintäkuuluttama senaattori Ronald dela Rosa oli oleskellut.\\n\\n## Laukaukset aiheuttivat kaaosta senaatissa\\n\\nLaukauksia kuultiin Filippiinien senaatissa 13. toukokuuta. Lähdeaineiston mukaan laukauksia oli yli tusina, ja sotilashenkilöstöä nähtiin saapuvan rakennukseen maastopuvuissa. Viranomaiset eivät ole kertoneet, kuka laukaukset ampui tai mistä tilanteessa tarkalleen oli kyse.\\n\\nSenaatin sihteeri Mark Llandro Mendoza kertoi toimittajille, ettei välittömiä tietoja uhreista ollut. Viranomaisten mukaan dela Rosa oli turvassa ja turvallisuushenkilöstön seurassa. Tilanteen kerrottiin aiheuttaneen kaaosta pääkaupunki Manilan lainsäädäntörakennuksessa.\\n\\n## Dela Rosa odotti mahdollista pidätystä\\n\\nTilanne kärjistyi sen jälkeen, kun senaattori Ronald dela Rosa oli sanonut uskovansa pidätyksensä olevan lähellä. Hän oli aiemmin kehottanut filippiiniläisiä mobilisoitumaan estääkseen pidätyksensä ja luovuttamisensa Kansainväliselle rikostuomioistuimelle ICC:lle.\\n\\nDela Rosa on Filippiinien entinen poliisipäällikkö. Lähdeaineiston mukaan hän oli keskeinen toimeenpanija entisen presidentin Rodrigo Duterten huumeiden vastaisessa kampanjassa. ICC syyttää dela Rosaa rikoksista ihmisyyttä vastaan. Syytteet liittyvät lähdeaineiston mukaan kymmenien ihmisten surmaamiseen hänen toimiessaan poliisipäällikkönä, ja Duterten huumesodassa ammuttiin tuhansia väitettyjä huumekauppiaita.\\n\\n## ICC:n pidätysmääräys liittyy huumesotaan\\n\\nHaagissa toimiva ICC avasi maanantaina dela Rosaa koskevan pidätysmääräyksen. Sama syytekokonaisuus koskee myös 81-vuotiasta Dutertea, joka odottaa oikeudenkäyntiä ICC:ssä. Duterte on ollut Haagissa maaliskuusta 2025 lähtien.\\n\\nKeskiviikon tapahtumista ei lähdeaineiston perusteella vahvistettu pidätyksen toteutumista. Vahvistettua on, että senaattirakennus suljettiin turvallisuustilanteen vuoksi, laukauksia kuultiin, ihmiset hakeutuivat suojaan ja viranomaiset sanoivat, ettei välittömiä tietoja uhreista ollut.\",\"category\":\"Ulkomaat\",\"tags\":[\"Filippiinit\",\"Manila\",\"Ronald dela Rosa\",\"Kansainvälinen rikostuomioistuin\",\"Rodrigo Duterte\"],\"summary_bullets\":[\"Filippiinien senaatti asetettiin sulkutilaan Manilassa laukausten jälkeen.\",\"Turvallisuusjoukkoja ja sotilashenkilöstöä nähtiin rakennuksessa, jossa senaattori Ronald dela Rosa oli oleskellut.\",\"Viranomaisten mukaan välittömiä tietoja kuolonuhreista tai loukkaantuneista ei ollut.\",\"Dela Rosaa koskeva ICC:n pidätysmääräys liittyy Duterten kauden huumesotaan.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"Kirjoitettu usean lähdekatkelman pohjalta. Ampujaa, pidätyksen toteutumista tai mahdollisia myöhempiä seurauksia ei vahvistettu lähdeaineistossa, joten niitä ei esitetä faktoina.\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260513T153141Z_6af252ecd2",
+    "category": "Kotimaa",
+    "selected_source_words": 406,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 233,
+    "issues": [
+      "content too short: 233 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Filippiinien senaatti suljettiin laukausten jälkeen Manilassa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-13T15:44:56.956150+00:00",
+    "repair_trigger": "pre_repair_word_count=246; selected_source_words=406; selected_source_blocks=4",
+    "pre_repair_word_count": 246,
+    "pre_repair_lead_word_count": 33,
+    "post_repair_word_count": 233,
+    "post_repair_lead_word_count": 33,
+    "selected_source_words_at_repair": 406,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 406,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 233 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:4e06dad9b8",
+      "2:BBC World:b50253db20",
+      "3:The Straits Times:bb927aba06",
+      "4:NBC News:7806bd0c03"
+    ],
+    "final_issues": [
+      "content too short: 233 words"
+    ],
+    "recovered": false
+  }
+}
