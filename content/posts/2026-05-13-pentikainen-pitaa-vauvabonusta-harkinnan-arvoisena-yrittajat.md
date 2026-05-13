@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/pentikainen-vauvabonus-harkinnanarvoinen-yrittajien-malli-vaikuttaisi-heti-eika-vuosien-paasta/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

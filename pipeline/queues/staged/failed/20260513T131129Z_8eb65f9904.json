@@ -1,0 +1,194 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-13T13:11:29.724914+00:00",
+  "digest": "8eb65f9904",
+  "packet": {
+    "packet_id": "20260513T131129Z_8eb65f9904",
+    "created_at": "2026-05-13T13:11:29Z",
+    "headline_seed": "What to know as Trump visits Xi in China",
+    "description_seed": "Trump has landed in Beijing for the first visit by a US leader since his own in 2017.",
+    "link": "https://www.bbc.com/news/articles/cyv2n7l1z14o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cyv2n7l1z14o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "What to know as Trump visits Xi in China"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Trump has landed in Beijing for the first visit by a US leader since his own in 2017.",
+        "word_count": 18,
+        "keyword_overlap": 8,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US President Donald Trump has arrived in Beijing on the first trip to China by an American leader since in his own previous visit, during his first term in 2017. He will hold two days of talks with Chinese President Xi Jinping, originally meant to be held in March but rescheduled after the US and Israel launched attacks on Iran. The main focus of the talks is expected to be the current tense trade relationship between the two superpowers. Trump said he would ask Xi to \"open up\" China's economy to major tech companies. He added that he also expected a \"long talk\" about Iran, though he insisted he did not need China's help to end the conflict.",
+        "word_count": 118,
+        "keyword_overlap": 8,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "The leaders last met in South Korea in October 2025 US President Donald Trump has arrived in Beijing on the first trip to China by an American leader since in his own previous visit, during his first term in 2017. He will hold two days of talks with Chinese President Xi Jinping, originally meant to be held in March but rescheduled after the US and Israel launched attacks on Iran. The main focus of the talks is expected to be the current tense trade relationship between the two superpowers. Trump said he would ask Xi to \"open up\" China's economy to major tech companies. He added that he also expected a \"long talk\" about Iran, though he insisted he did not need China's help to end the conflict.",
+        "word_count": 128,
+        "keyword_overlap": 8,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "He said Xi had been \"relatively good\" on Iran, adding that it would be an \"exciting trip\" and \"a lot of good things are going to happen\". Xi meanwhile is expected to press for an end to US arms sales to Taiwan, and an extension of the trade truce agreed in October that halted tariff escalation between the US and China. Commentary in Chinese media also suggested Beijing was looking for a \"better future\" with the US, and a relationship that would \"add more stability and certainty\" to a turbulent world. Trump arrived in Beijing on Air Force One on Wednesday evening local time, before main part of the visit starts on Thursday. The US president is expected to attend an arrival ceremony with Xi at the Great Hall of the People, before the two leaders hold bilateral talks.",
+        "word_count": 139,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Trump has landed in Beijing for the first visit by a US leader since his own in 2017.\n\nUS President Donald Trump has arrived in Beijing on the first trip to China by an American leader since in his own previous visit, during his first term in 2017. He will hold two days of talks with Chinese President Xi Jinping, originally meant to be held in March but rescheduled after the US and Israel launched attacks on Iran. The main focus of the talks is expected to be the current tense trade relationship between the two superpowers. Trump said he would ask Xi to \"open up\" China's economy to major tech companies. He added that he also expected a \"long talk\" about Iran, though he insisted he did not need China's help to end the conflict.\n\nThe leaders last met in South Korea in October 2025 US President Donald Trump has arrived in Beijing on the first trip to China by an American leader since in his own previous visit, during his first term in 2017. He will hold two days of talks with Chinese President Xi Jinping, originally meant to be held in March but rescheduled after the US and Israel launched attacks on Iran. The main focus of the talks is expected to be the current tense trade relationship between the two superpowers. Trump said he would ask Xi to \"open up\" China's economy to major tech companies. He added that he also expected a \"long talk\" about Iran, though he insisted he did not need China's help to end the conflict.\n\nHe said Xi had been \"relatively good\" on Iran, adding that it would be an \"exciting trip\" and \"a lot of good things are going to happen\". Xi meanwhile is expected to press for an end to US arms sales to Taiwan, and an extension of the trade truce agreed in October that halted tariff escalation between the US and China. Commentary in Chinese media also suggested Beijing was looking for a \"better future\" with the US, and a relationship that would \"add more stability and certainty\" to a turbulent world. Trump arrived in Beijing on Air Force One on Wednesday evening local time, before main part of the visit starts on Thursday. The US president is expected to attend an arrival ceremony with Xi at the Great Hall of the People, before the two leaders hold bilateral talks.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1066,
+      "selected_blocks": 4,
+      "selected_source_words": 403,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC",
+        "Fox News",
+        "Fox News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "What to know as Trump visits Xi in China",
+      "description": "Trump has landed in Beijing for the first visit by a US leader since his own in 2017.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "What to know as Trump visits Xi in China",
+    "description": "Trump has landed in Beijing for the first visit by a US leader since his own in 2017.",
+    "link": "https://www.bbc.com/news/articles/cyv2n7l1z14o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-13T13:01:51+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "5ecfb1916d627f57284fb647211ff2e7",
+    "_url_hash": "6dc8151683199c749b879c7f1fc47830bc322561e867fe9233b8d9b29a917587",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS President Donald Trump has arrived in Beijing on the first trip to China by an American leader since in his own previous visit, during his first term in 2017.\n\nHe will hold two days of talks with Chinese President Xi Jinping, originally meant to be held in March but rescheduled after the US and Israel launched attacks on Iran.\n\nThe main focus of the talks is expected to be the current tense trade relationship between the two superpowers.\n\nTrump said he would ask Xi to \"open up\" China's economy to major tech companies.\n\nHe added that he also expected a \"long talk\" about Iran, though he insisted he did not need China's help to end the conflict.\n\nHe said Xi had been \"relatively good\" on Iran, adding that it would be an \"exciting trip\" and \"a lot of good things are going to happen\".\n\nXi meanwhile is expected to press for an end to US arms sales to Taiwan, and an extension of the trade truce agreed in October that halted tariff escalation between the US and China.\n\nCommentary in Chinese media also suggested Beijing was looking for a \"better future\" with the US, and a relationship that would \"add more stability and certainty\" to a turbulent world.\n\nTrump arrived in Beijing on Air Force One on Wednesday evening local time, before main part of the visit starts on Thursday.\n\nThe US president is expected to attend an arrival ceremony with Xi at the Great Hall of the People, before the two leaders hold bilateral talks.\n\nA state banquet will be held later at the same venue.\n\nOn Friday, Trump will pay a visit to Zhongnanhai, a rarefied compound where China's leaders live and work. The visit will feature a \"friendship photo\" and handshake with Xi.\n\nAfter another bilateral meeting with Xi and a working lunch, Trump will return to the airport for a departure ceremony before heading back to the US.\n\nTrump is being accompanied on the visit by CEOs of major US businesses and tech companies.\n\nAmong those joining the president on his official trip to Beijing are Nvidia's Jensen Huang, Tim Cook of Apple, Elon Musk of Tesla and SpaceX, Larry Fink of BlackRock, as well as other executives from Meta, Visa, JP Morgan, Boeing, Cargill and more.\n\nThe late addition of Huang to the group is noteworthy as Nvidia's advanced artificial intelligence (AI) chips are a major focus of the rivalry between the US and China.\n\nHe had not been on the original list but was personally invited by Trump, and was spotted boarding Air Force One during a stopover in Alaska.\n\nThe issue has receded somew\n\n---\n\n[Lähde: BBC]\nThe leaders last met in South Korea in October 2025\n\nUS President Donald Trump has arrived in Beijing on the first trip to China by an American leader since in his own previous visit, during his first term in 2017.\n\nHe will hold two days of talks with Chinese President Xi Jinping, originally meant to be held in March but rescheduled after the US and Israel launched attacks on Iran.\n\nThe main focus of the talks is expected to be the current tense trade relationship between the two superpowers.\n\nTrump said he would ask Xi to \"open up\" China's economy to major tech companies.\n\nHe added that he also expected a \"long talk\" about Iran, though he insisted he did not need China's help to end the conflict.\n\nHe said Xi had been \"relatively good\" on Iran, adding that it would be an \"exciting trip\" and \"a lot of good things are going to happen\".\n\nXi meanwhile is expected to press for an end to US arms sales to Taiwan, and an extension of the trade truce agreed in October that halted tariff escalation between the US and China.\n\nCommentary in Chinese media also suggested Beijing was looking for a \"better future\" with the US, and a relationship that would \"add more stability and certainty\" to a turbulent world.\n\nHow the Trump-Xi summit could set superpower relations for many years to come\n\nTrump arrived in Beijing on Air Force One on Wednesday evening local time, before main part of the visit starts on Thursday.\n\nThe US president is expected to attend an arrival ceremony with Xi at the Great Hall of the People, before the two leaders hold bilateral talks.\n\nA state banquet will be held later at the same venue.\n\nOn Friday, Trump will pay a visit to Zhongnanhai, a rarefied compound where China's leaders live and work. The visit will feature a \"friendship photo\" and handshake with Xi.\n\nAfter another bilateral meeting with Xi and a working lunch, Trump will return to the airport for a departure ceremony before heading back to the US.\n\nElon Musk and Nvidia CEO Jensen Huang are among those taking part in the trip\n\nTrump is being accompanied on the visit by CEOs of major US businesses and tech companies.\n\nAmong those joining the president on his official trip to Beijing are Nvidia's Jensen Huang, Tim Cook of Apple, Elon Musk of Tesla and SpaceX, Larry Fink of BlackRock, as well as other executives from Meta, Visa, JP Morgan, Boeing, Cargill and more.\n\nThe late addition of Huang to the group is noteworthy as Nvidia's advanced artificial intelligence (AI) chips are a major focus o\n\n---\n\n[Lähde: Fox News]\nAir Force One touches down in Beijing, China at around 7:51 a.m. ET (Wednesday morning U.S. time and Wednesday night in China) at Beijing Capital International Airport.\n\nThe plane taxied for around eight minutes before doors opened to prep for the official red-carpet arrival.\n\nPresident Donald Trump deplaned at 8:08 a.m. ET to be greeted by Chinese Vice President H.E. Han Zheng, along with U.S. Ambassador to China David Perdue, Chinese Ambassador to the U.S H.E. Xie Feng and Executive Vice Minister of Foreign Affairs H.E. Ma Zhaoxu.\n\nFollowing him off the plane were Trump’s son, Eric, and Lara Trump, his daughter-in-law, as well as assorted travelers, including Space X chief Elon Musk.\n\nHe did not answer questions, instead climbing in a limo on the way to his hotel.\n\nThe pomp-filled welcoming ceremony included some 300 Chinese youth, a military honor guard and military band.\n\n“Welcome, welcome! Warm welcome!” the children chanted in Chinese.\n\nTrump has no public events beyond his arriv...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-13T13:44:49.352413+00:00",
+  "failure": "content too short: 229 words",
+  "payload": {
+    "packet_id": "20260513T131129Z_8eb65f9904",
+    "title": "Trump saapui Pekingiin tapaamaan Xi Jinpingiä",
+    "summary": "Yhdysvaltain presidentti Donald Trump on saapunut Pekingiin kaksipäiväiselle vierailulle, jonka keskiössä ovat Yhdysvaltain ja Kiinan kireät kauppasuhteet, Taiwan sekä Iran.",
+    "content": "Yhdysvaltain presidentti Donald Trump on saapunut Pekingiin ensimmäiselle Yhdysvaltain johtajan Kiinan-vierailulle sitten hänen oman vuoden 2017 matkansa. Trumpin on määrä käydä kahden päivän aikana keskusteluja Kiinan presidentin Xi Jinpingin kanssa tilanteessa, jossa maiden suhteita rasittavat erityisesti kauppa, teknologia, Taiwan ja Iran.\n\n## Kauppasuhde on vierailun pääaihe\n\nKeskustelujen keskeiseksi aiheeksi odotetaan Yhdysvaltojen ja Kiinan kireää kauppasuhdetta. Trump on sanonut aikovansa pyytää Xiä avaamaan Kiinan taloutta suurille teknologiayhtiöille. Xin puolestaan odotetaan tavoittelevan lokakuussa sovitun kaupparauhan jatkamista. Kyseinen järjestely pysäytti Yhdysvaltojen ja Kiinan välisen tullien kiristymisen.\n\nVierailu oli alun perin tarkoitus järjestää jo maaliskuussa, mutta sitä siirrettiin sen jälkeen, kun Yhdysvallat ja Israel olivat tehneet iskuja Iraniin. Trump ja Xi tapasivat edellisen kerran Etelä-Koreassa lokakuussa 2025, joten Pekingin-neuvottelut jatkavat johtajien viimeaikaista suoraa yhteydenpitoa.\n\n## Iran ja Taiwan nousevat neuvotteluihin\n\nTrump on sanonut odottavansa Iranista pitkää keskustelua Xin kanssa. Samalla hän on korostanut, ettei tarvitse Kiinan apua konfliktin päättämiseen. Trump on myös luonnehtinut Xin toimintaa Iranin suhteen suhteellisen hyväksi ja kuvannut matkaa myönteiseen sävyyn.\n\nTaiwan on toinen herkkä kysymys neuvottelujen taustalla. Xin odotetaan painostavan Yhdysvaltoja lopettamaan asemyyntinsä Taiwanille. Kiinalaisessa mediakommentoinnissa on puolestaan viitattu siihen, että Peking hakee Yhdysvaltojen kanssa parempaa tulevaisuutta sekä suhdetta, joka lisäisi vakautta ja ennakoitavuutta levottomassa maailmantilanteessa.\n\n## Varsinainen ohjelma alkaa torstaina\n\nTrump saapui Pekingiin Air Force Onella keskiviikkoiltana paikallista aikaa. Vierailun varsinaisen ohjelman on määrä alkaa torstaina. Trumpin odotetaan osallistuvan Xin kanssa vastaanottoseremoniaan Kansan suuressa salissa ennen kahdenvälisiä keskusteluja.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Kiina",
+      "Donald Trump",
+      "Xi Jinping",
+      "kauppapolitiikka",
+      "Taiwan",
+      "Iran"
+    ],
+    "summary_bullets": [
+      "Trump saapui Pekingiin ensimmäiselle Yhdysvaltain johtajan Kiinan-vierailulle sitten vuoden 2017.",
+      "Keskustelujen pääaiheiksi odotetaan kauppasuhdetta, teknologiaa, Taiwania ja Irania.",
+      "Vierailu siirrettiin maaliskuulta sen jälkeen, kun Yhdysvallat ja Israel olivat tehneet iskuja Iraniin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli on laajennettu vain packetin lähdeaineiston tukemilla tiedoilla: vierailun ajankohta, neuvottelujen aiheet, aiempi tapaaminen, kaupparauha, Taiwan, Iran ja torstain ohjelma."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260513T131129Z_8eb65f9904\",\"title\":\"Trump saapui Pekingiin tapaamaan Xi Jinpingiä\",\"summary\":\"Yhdysvaltain presidentti Donald Trump on saapunut Pekingiin kaksipäiväiselle vierailulle, jonka keskiössä ovat Yhdysvaltain ja Kiinan kireät kauppasuhteet, Taiwan sekä Iran.\",\"content\":\"Yhdysvaltain presidentti Donald Trump on saapunut Pekingiin ensimmäiselle Yhdysvaltain johtajan Kiinan-vierailulle sitten hänen oman vuoden 2017 matkansa. Trumpin on määrä käydä kahden päivän aikana keskusteluja Kiinan presidentin Xi Jinpingin kanssa tilanteessa, jossa maiden suhteita rasittavat erityisesti kauppa, teknologia, Taiwan ja Iran.\\n\\n## Kauppasuhde on vierailun pääaihe\\n\\nKeskustelujen keskeiseksi aiheeksi odotetaan Yhdysvaltojen ja Kiinan kireää kauppasuhdetta. Trump on sanonut aikovansa pyytää Xiä avaamaan Kiinan taloutta suurille teknologiayhtiöille. Xin puolestaan odotetaan tavoittelevan lokakuussa sovitun kaupparauhan jatkamista. Kyseinen järjestely pysäytti Yhdysvaltojen ja Kiinan välisen tullien kiristymisen.\\n\\nVierailu oli alun perin tarkoitus järjestää jo maaliskuussa, mutta sitä siirrettiin sen jälkeen, kun Yhdysvallat ja Israel olivat tehneet iskuja Iraniin. Trump ja Xi tapasivat edellisen kerran Etelä-Koreassa lokakuussa 2025, joten Pekingin-neuvottelut jatkavat johtajien viimeaikaista suoraa yhteydenpitoa.\\n\\n## Iran ja Taiwan nousevat neuvotteluihin\\n\\nTrump on sanonut odottavansa Iranista pitkää keskustelua Xin kanssa. Samalla hän on korostanut, ettei tarvitse Kiinan apua konfliktin päättämiseen. Trump on myös luonnehtinut Xin toimintaa Iranin suhteen suhteellisen hyväksi ja kuvannut matkaa myönteiseen sävyyn.\\n\\nTaiwan on toinen herkkä kysymys neuvottelujen taustalla. Xin odotetaan painostavan Yhdysvaltoja lopettamaan asemyyntinsä Taiwanille. Kiinalaisessa mediakommentoinnissa on puolestaan viitattu siihen, että Peking hakee Yhdysvaltojen kanssa parempaa tulevaisuutta sekä suhdetta, joka lisäisi vakautta ja ennakoitavuutta levottomassa maailmantilanteessa.\\n\\n## Varsinainen ohjelma alkaa torstaina\\n\\nTrump saapui Pekingiin Air Force Onella keskiviikkoiltana paikallista aikaa. Vierailun varsinaisen ohjelman on määrä alkaa torstaina. Trumpin odotetaan osallistuvan Xin kanssa vastaanottoseremoniaan Kansan suuressa salissa ennen kahdenvälisiä keskusteluja.\",\"category\":\"Ulkomaat\",\"tags\":[\"Yhdysvallat\",\"Kiina\",\"Donald Trump\",\"Xi Jinping\",\"kauppapolitiikka\",\"Taiwan\",\"Iran\"],\"summary_bullets\":[\"Trump saapui Pekingiin ensimmäiselle Yhdysvaltain johtajan Kiinan-vierailulle sitten vuoden 2017.\",\"Keskustelujen pääaiheiksi odotetaan kauppasuhdetta, teknologiaa, Taiwania ja Irania.\",\"Vierailu siirrettiin maaliskuulta sen jälkeen, kun Yhdysvallat ja Israel olivat tehneet iskuja Iraniin.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.92,\"journalist_note\":\"Artikkeli on laajennettu vain packetin lähdeaineiston tukemilla tiedoilla: vierailun ajankohta, neuvottelujen aiheet, aiempi tapaaminen, kaupparauha, Taiwan, Iran ja torstain ohjelma.\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260513T131129Z_8eb65f9904",
+    "category": "Ulkomaat",
+    "selected_source_words": 403,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 229,
+    "issues": [
+      "content too short: 229 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Trump saapui Pekingiin tapaamaan Xi Jinpingiä",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-13T13:44:49.352160+00:00",
+    "repair_trigger": "pre_repair_word_count=224; selected_source_words=403; selected_source_blocks=4",
+    "pre_repair_word_count": 224,
+    "pre_repair_lead_word_count": 41,
+    "post_repair_word_count": 229,
+    "post_repair_lead_word_count": 41,
+    "selected_source_words_at_repair": 403,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 403,
+    "source_blocks": 4,
+    "repair_added_word_count": 5,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 229 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:ea4b5a1504",
+      "2:BBC World:b4cc3c6f31",
+      "3:BBC:1d10a5e531",
+      "4:BBC World:e7b052dd4f"
+    ],
+    "final_issues": [
+      "content too short: 229 words"
+    ],
+    "recovered": false
+  }
+}
