@@ -1,0 +1,126 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-13T02:01:35.393897+00:00",
+  "digest": "faa69aae94",
+  "packet": {
+    "packet_id": "20260513T020135Z_faa69aae94",
+    "created_at": "2026-05-13T02:01:35Z",
+    "headline_seed": "Jason Collins, NBA's first openly gay player, dies aged 47",
+    "description_seed": "Collins shared late last year that he had been diagnosed with an aggressive form of brain cancer.",
+    "link": "https://www.bbc.com/news/articles/clyp8rdldk1o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "CBS News",
+      "USA TODAY"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clyp8rdldk1o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jason Collins, NBA's first openly gay player, dies aged 47"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Former pro-basketball player Jason Collins, the first active male athlete on a major American professional team sport to come out as gay, has died aged 47. Collins died after a \"valiant fight with glioblastoma\", an aggressive form of brain cancer, his family said in a statement shared by the National Basketball Association (NBA). He announced last year that he had been diagnosed with the cancer and was undergoing treatment to stop the spread of the inoperable disease. \"Jason Collins' impact and influence extended far beyond basketball as he helped make the NBA, WNBA and larger sports community more inclusive and welcoming for future generations,\" NBA Commissioner Adam Silver said on Tuesday. \"Jason will be remembered not only for breaking barriers, but also for the kindness and humanity that defined his life and touched so many others,\" Silver added.",
+        "word_count": 138,
+        "keyword_overlap": 16,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Collins shared late last year that he had been diagnosed with an aggressive form of brain cancer.",
+        "word_count": 17,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "Jason Collins, the NBA's first openly gay player, who went on to become a pioneer for inclusion and an ambassador for the league, has died, the NBA announced. He was 47. Collins spent 13 years as a player in the league for six different franchises. He revealed in 2013 that he was gay, an announcement that came toward the end of his playing career. Collins announced he was diagnosed with Stage 4 glioblastoma in December, which has an extremely low survival rate. In a statement through the NBA, the Collins' family said the former NBA player died \"after a valiant fight with glioblastoma.\"",
+        "word_count": 103,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "USA TODAY",
+        "source_type": "research",
+        "text": "Jason Collins, the first openly gay player in NBA history, has died after a battle with Stage 4 glioblastoma. He was 47. “We are heartbroken to share that Jason Collins, our beloved husband, son, brother and uncle, as died after a valiant fight with glioblastoma,” his family announced in a statement released by the NBA. “Jason changed lives in unexpected ways and was an inspiration to all who knew him and to those who admired him from afar. We are grateful for the outpouring of love and prayers over the past eight months and for the exceptional medical care Jason received from his doctors and nurses. Our family will miss him dearly.” NBA Commissioner Adam Silver remembered Collins for the lives he changed.",
+        "word_count": 123,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Former pro-basketball player Jason Collins, the first active male athlete on a major American professional team sport to come out as gay, has died aged 47. Collins died after a \"valiant fight with glioblastoma\", an aggressive form of brain cancer, his family said in a statement shared by the National Basketball Association (NBA). He announced last year that he had been diagnosed with the cancer and was undergoing treatment to stop the spread of the inoperable disease. \"Jason Collins' impact and influence extended far beyond basketball as he helped make the NBA, WNBA and larger sports community more inclusive and welcoming for future generations,\" NBA Commissioner Adam Silver said on Tuesday. \"Jason will be remembered not only for breaking barriers, but also for the kindness and humanity that defined his life and touched so many others,\" Silver added.\n\nCollins shared late last year that he had been diagnosed with an aggressive form of brain cancer.\n\nJason Collins, the NBA's first openly gay player, who went on to become a pioneer for inclusion and an ambassador for the league, has died, the NBA announced. He was 47. Collins spent 13 years as a player in the league for six different franchises. He revealed in 2013 that he was gay, an announcement that came toward the end of his playing career. Collins announced he was diagnosed with Stage 4 glioblastoma in December, which has an extremely low survival rate. In a statement through the NBA, the Collins' family said the former NBA player died \"after a valiant fight with glioblastoma.\"\n\nJason Collins, the first openly gay player in NBA history, has died after a battle with Stage 4 glioblastoma. He was 47. “We are heartbroken to share that Jason Collins, our beloved husband, son, brother and uncle, as died after a valiant fight with glioblastoma,” his family announced in a statement released by the NBA. “Jason changed lives in unexpected ways and was an inspiration to all who knew him and to those who admired him from afar. We are grateful for the outpouring of love and prayers over the past eight months and for the exceptional medical care Jason received from his doctors and nurses. Our family will miss him dearly.” NBA Commissioner Adam Silver remembered Collins for the lives he changed.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1035,
+      "selected_blocks": 4,
+      "selected_source_words": 381,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "USA TODAY",
+        "USA TODAY",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "USA TODAY"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jason Collins, NBA's first openly gay player, dies aged 47",
+      "description": "Collins shared late last year that he had been diagnosed with an aggressive form of brain cancer.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Jason Collins, NBA's first openly gay player, dies aged 47",
+    "description": "Collins shared late last year that he had been diagnosed with an aggressive form of brain cancer.",
+    "link": "https://www.bbc.com/news/articles/clyp8rdldk1o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-13T00:40:54+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "a6a799d831cd6b8ea0b88bcf5cd8bd09",
+    "_url_hash": "2309a91d12f61c06b130c319942d1d06bcdb39254255034f1825e88978c7260f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nFormer pro-basketball player Jason Collins, the first active male athlete on a major American professional team sport to come out as gay, has died aged 47.\n\nCollins died after a \"valiant fight with glioblastoma\", an aggressive form of brain cancer, his family said in a statement shared by the National Basketball Association (NBA).\n\nHe announced last year that he had been diagnosed with the cancer and was undergoing treatment to stop the spread of the inoperable disease.\n\n\"Jason Collins' impact and influence extended far beyond basketball as he helped make the NBA, WNBA and larger sports community more inclusive and welcoming for future generations,\" NBA Commissioner Adam Silver said on Tuesday.\n\n\"Jason will be remembered not only for breaking barriers, but also for the kindness and humanity that defined his life and touched so many others,\" Silver added.\n\nCollins said in December 2025 that the cancer was discovered after he was struggling to focus.\n\nThe brain tumour, he said, was like \"a monster with tentacles spreading across the underside of my brain the width of a baseball\".\n\nWithout treatment, he would be dead within three months, doctors told Collins.\n\nWhen revealing his diagnosis to the world, he said it reminded him of his decision to publicly come out as gay in 2013 in a front-page cover story for Sports Illustrated. The years since were \"the best of my life\", he said.\n\n\"Your life is so much better when you just show up as your true self, unafraid to be your true self, in public or private. This is me. This is what I'm dealing with.\"\n\nCollins was being treated with a drug called Avastin to slow the tumour's growth, and had been travelling to Singapore for a targeted form of chemotherapy.\n\nThe California native started his career in college, playing for Stanford University before going to the NBA. He played for six teams in his 13 seasons in the league, starting with the New Jersey Nets. He had previously been featured on Time Magazine's 100 most influential people list. He retired in 2014.\n\n\"Jason changed lives in unexpected ways and was an inspiration to all who knew him and to those who admired him from afar,\" his family said on Tuesday.\n\nHe started his coming out essay for Sports Illustrated in 2013, by writing: \"I'm a 34-year-old N.B.A. center. I'm Black and I'm gay.\"\n\nHe was a free agent at the time the essay was published, and so it remained unclear whether coming out would end his NBA career.\n\nWhile there were significant developments for th\n\n---\n\n[Lähde: CBS News]\nJason Collins, the NBA's first openly gay player, who went on to become a pioneer for inclusion and an ambassador for the league, has died, the NBA announced. He was 47.\n\nCollins spent 13 years as a player in the league for six different franchises. He revealed in 2013 that he was gay, an announcement that came toward the end of his playing career.\n\nCollins announced he was diagnosed with Stage 4 glioblastoma in December, which has an extremely low survival rate. In a statement through the NBA, the Collins' family said the former NBA player died \"after a valiant fight with glioblastoma.\"\n\n\"Jason changed lives in unexpected ways and was an inspiration to all who knew him and to those who admired him from afar,\" Collins' family said. \"We are grateful for the outpouring of love and prayers over the past eight months and for the exceptional medical care Jason received from his doctors and nurses. Our family will miss him dearly.\"\n\nJust last week, Collins received the inaugural Bill Walton Global Champion Award at the Green Sports Alliance Summit. He was too ill to attend and his twin brother, former NBA player Jarron Collins, accepted for him.\n\n\"I told my brother this before I came here: He's the bravest, strongest man I've ever known,\" Jarron Collins said while accepting that award.\n\nJason Collins averaged 3.6 points and 3.7 rebounds in his career. He helped the New Jersey Nets reach two NBA Finals and in his best season averaged 6.4 points and 6.1 rebounds for them in 2004-05. He retired in 2014 after playing with the Brooklyn Nets from February to November 2014.\n\n\"Jason Collins' impact and influence extended far beyond basketball as he helped make the NBA, WNBA and larger sports community more inclusive and welcoming for future generations,\" NBA Commissioner Adam Silver said in a statement. \"He exemplified outstanding leadership and professionalism throughout his 13-year NBA career and in his dedicated work as an NBA Cares Ambassador. Jason will be remembered not only for breaking barriers, but also for the kindness and humanity that defined his life and touched so many others.\n\nJason Collins revealed his sexuality in a first-person account for Sports Illustrated in April 2013.\n\n\"I'm a 34-year-old NBA center. I'm Black and I'm gay,\" he wrote in the opening of his first-person piece.\n\nHe was a free agent at the time, said he wanted to keep playing, and went on to play in 22 games with Brooklyn the following season.\n\n\"If I had my way, someone else would have \n\n---\n\n[Lähde: USA TODAY]\nJason Collins, the first openly gay player in NBA history, has died after a battle with Stage 4 glioblastoma. He was 47.\n\n“We are heartbroken to share that Jason Collins, our beloved husband, son, brother and uncle, as died after a valiant fight with glioblastoma,” his family announced in a statement released by the NBA. “Jason changed lives in unexpected ways and was an inspiration to all who knew him and to those who admired him from afar. We are grateful for the outpouring of love and prayers over the past eight months and for the exceptional medical care Jason received from his doctors and nurses. Our family will miss him dearly.”\n\nNBA Commissioner Adam Silver remembered Collins for the lives he changed.\n\n“Jason Collins’ impact and influence extended far beyond basketball as he helped make the NBA, WNBA and larger sports community more inclusive and welcoming for future generations,” Silver said in a statement released by the league. “He exemplified outstanding leadership and profe...",
+    "research_source": "multi"
+  }
+}
