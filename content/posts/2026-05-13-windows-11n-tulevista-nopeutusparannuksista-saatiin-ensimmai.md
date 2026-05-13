@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/microsoft-antoi-esimakua-windows-11n-tulevista-parannuksista-kaytannossa/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
