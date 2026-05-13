@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/food/2026/may/13/milka-maker-milked-shoppers-over-size-of-chocolate-bars-german-court-rules"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
