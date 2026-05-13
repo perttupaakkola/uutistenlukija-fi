@@ -84,3 +84,65 @@ For project health checks, set workdir explicitly to `/home/pertt/.openclaw/work
 - See Also: prior cwd mistake logged 2026-05-12 around OPE reconciliation
 
 ---
+
+## [ERR-20260513-001] linear_reconcile_wrong_cli_flags
+
+**Logged**: 2026-05-13T03:31:30Z
+**Priority**: medium
+**Status**: pending
+**Area**: automation
+
+### Summary
+During Linear OPE reconciliation I reused stale flags for project helper scripts: `talous_acquisition_diagnostics.py --window-hours` and `pipeline/health_check.py --json` are invalid in the current canonical repo.
+
+### Error
+```text
+usage: talous_acquisition_diagnostics.py [-h] [--hours HOURS] [--log LOG]
+talous_acquisition_diagnostics.py: error: unrecognized arguments: --window-hours 24
+
+usage: health_check.py [-h] [--alert] [--quiet]
+health_check.py: error: unrecognized arguments: --json
+```
+
+### Context
+- Task: autonomous Linear OPE reconciliation cycle.
+- Correct approach: inspect current script help or use known valid flags before claiming verification evidence.
+- Follow-up in same run: reran the diagnostics and health checks with valid commands before updating Linear.
+
+### Suggested Fix
+For recurring cron/reconcile scripts, prefer `python3 script.py --help` when command signatures may have changed, then record exact valid command in Linear evidence.
+
+### Metadata
+- Reproducible: yes
+- Related Files: projects/uutistenlukija/scripts/talous_acquisition_diagnostics.py, projects/uutistenlukija/pipeline/health_check.py
+- Tags: linear-reconcile, cli-flags, verification
+
+---
+
+## [ERR-20260513-002] trash-command-missing
+
+**Logged**: 2026-05-13T05:37:00Z
+**Priority**: low
+**Status**: pending
+**Area**: tooling
+
+### Summary
+The workspace guidance prefers `trash` over `rm`, but the `trash` command was unavailable in the uutistenlukija shell.
+
+### Error
+```text
+/bin/bash: line 1: trash: command not found
+```
+
+### Context
+Attempted to remove an unverified untracked `pipeline/test_scanner_quotas.py` file while cleaning up OPE-79 verification state. Used a recoverable local `.trash/20260513/` move instead of permanent deletion.
+
+### Suggested Fix
+When `trash` is unavailable, move files to a dated `.trash/` directory in the repo/workspace rather than using `rm` for non-irreversible cleanup.
+
+### Metadata
+- Reproducible: yes
+- Related Files: projects/uutistenlukija/.trash/20260513/test_scanner_quotas.py
+- Tags: cleanup, safety
+
+---
