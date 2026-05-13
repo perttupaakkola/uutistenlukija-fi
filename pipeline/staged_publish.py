@@ -654,6 +654,9 @@ ORG_SOURCE_POLICY_TERMS = (
     "pääomamarkkinoilla",
     "terveystietoja",
     "osakesäästötilin",
+    "vauvabonus",
+    "perheohjelma",
+    "kannustin",
 )
 
 ORG_SOURCE_ATTRIBUTION_TERMS = (
@@ -693,13 +696,17 @@ def org_source_talous_guardrail(article: dict) -> dict[str, Any]:
     source_markers = re.findall(r"\[(?:lähde|source):\s*([^\]]+)\]", text, flags=re.IGNORECASE)
     org_marker_count = sum(1 for marker in source_markers if any(source in marker.lower() for source in ORG_SOURCE_TALOUS_SOURCES))
     has_independent_source = bool(source_markers) and org_marker_count < len(source_markers)
-    has_self_promo = any(term in text for term in ORG_SOURCE_SELF_PROMO_TERMS)
+    self_promo_hits = [term for term in ORG_SOURCE_SELF_PROMO_TERMS if term in text]
+    generic_cta_terms = {"liity", "jäsen", "jäseneksi", "tule mukaan"}
+    title_desc_self_promo_hits = [term for term in ORG_SOURCE_SELF_PROMO_TERMS if term in title_desc and term not in generic_cta_terms]
+    # Yrittajat.fi pages often append generic membership CTA/footer text to the
+    # extracted research body. Treat that boilerplate differently from a story
+    # whose headline/description is itself a self-promotional org item.
+    has_self_promo = bool(title_desc_self_promo_hits) or any(term not in generic_cta_terms for term in self_promo_hits)
     has_vendor_outlook = any(term in text for term in ORG_SOURCE_VENDOR_OUTLOOK_TERMS)
     has_policy_claim = any(term in title_desc or term in text for term in ORG_SOURCE_POLICY_TERMS)
     has_attribution = any(term in title_desc for term in ORG_SOURCE_ATTRIBUTION_TERMS) or any(source in title_desc for source in ("finanssiala", "yrittäjät", "vakuutusala", "insurance europe"))
-    self_promo_hits = [term for term in ORG_SOURCE_SELF_PROMO_TERMS if term in text]
-    cta_only = bool(self_promo_hits) and all(term in {"liity", "jäsen", "jäseneksi", "tule mukaan"} for term in self_promo_hits)
-    human_interest = bool(re.search(r"\b(yrittäjä|perustaja|yritys|kasvoi|tähtää|harrastus|shakki|rakennusalan)\b", title_desc)) and not has_vendor_outlook and not (has_self_promo and not cta_only)
+    human_interest = bool(re.search(r"\b(yrittäjä|perustaja|yritys|kasvoi|tähtää|harrastus|shakki|rakennusalan|viljelij\w*|maatil\w*)\b", title_desc)) and not has_vendor_outlook and not has_self_promo
 
     if human_interest:
         return {"applies": True, "classification": "ok_company_profile", "penalty": 0, "requires_attribution": False}

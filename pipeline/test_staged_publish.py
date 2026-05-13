@@ -733,6 +733,44 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(guardrail["classification"], "ok_company_profile")
         self.assertEqual(staged_publish.org_source_talous_penalty(article), 0)
 
+    def test_org_source_talous_guardrail_ignores_generic_footer_cta_for_attributed_policy_story(self) -> None:
+        article = {
+            "title": "Pentikäinen: Vauvabonus harkinnanarvoinen – Yrittäjien malli vaikuttaisi heti eikä vuosien päästä",
+            "description": "Suomen Yrittäjien mukaan vauvabonus voisi vaikuttaa perheiden päätöksiin nopeasti.",
+            "source": "Suomen Yrittäjät",
+            "category_hint": "Talous",
+            "research": (
+                "[Lähde: Suomen Yrittäjät]\n"
+                + "Yrittäjien mukaan ehdotus 10000 euron vauvabonuksesta vaikuttaisi heti. " * 31
+                + "\n\nSivuston yleinen alatunniste: liity jäseneksi ja tule mukaan paikallisyhdistyksen toimintaan."
+            ),
+        }
+
+        guardrail = staged_publish.org_source_talous_guardrail(article)
+
+        self.assertEqual(guardrail["classification"], "ok_attributed_policy_claim")
+        self.assertTrue(staged_publish.passes_priority_source_floor(article))
+        self.assertTrue(staged_publish.scan_candidate_passes_talous_reserve(article))
+
+    def test_org_source_talous_guardrail_ignores_generic_footer_cta_for_farmer_loss_story(self) -> None:
+        article = {
+            "title": "Hanhet söivät viljelijän ensimmäisen, lehmille tärkeimmän nurmisadon",
+            "description": "Maatilayrittäjä kertoo, että hanhivahingot uhkaavat karjan rehunsaantia ja tilan taloutta.",
+            "source": "Suomen Yrittäjät",
+            "category_hint": "Talous",
+            "research": (
+                "[Lähde: Suomen Yrittäjät]\n"
+                + "Viljelijän mukaan hanhet söivät ensimmäisen nurmisadon ja aiheuttivat merkittävän taloudellisen menetyksen. " * 34
+                + "\n\nSivuston yleinen alatunniste: liity jäseneksi ja tule mukaan paikallisyhdistyksen toimintaan."
+            ),
+        }
+
+        guardrail = staged_publish.org_source_talous_guardrail(article)
+
+        self.assertEqual(guardrail["classification"], "ok_company_profile")
+        self.assertTrue(staged_publish.passes_priority_source_floor(article))
+        self.assertTrue(staged_publish.scan_candidate_passes_talous_reserve(article))
+
     def test_scan_enqueue_downranks_promotional_org_source_talous_below_comparable_packet(self) -> None:
         promotional = {
             "title": "Finanssiala uudisti verkkosivunsa ja nosti edunvalvontatavoitteet näkyviin",
