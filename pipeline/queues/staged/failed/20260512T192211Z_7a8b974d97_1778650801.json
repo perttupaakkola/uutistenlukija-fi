@@ -1,0 +1,90 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-12T19:22:11.648319+00:00",
+  "digest": "7a8b974d97",
+  "packet": {
+    "packet_id": "20260512T192211Z_7a8b974d97",
+    "created_at": "2026-05-12T19:22:11Z",
+    "headline_seed": "Putin: Saatana 2 tulee",
+    "description_seed": "Putin kehuskeli tiistaina ohjuksen tuhovoimalla. Venäjän presidentti Vladimir Putin on ilmoittanut, että mannertenvälinen ballistinen Sarmat-ohjus saatetaan taisteluvalmiuteen kuluvan vuoden loppuun mennessä. Uutistoimisto Tassin mukaan Putin kertoi asiasta saatuaan tiedon ohjuksen onnistuneesta koelaukaisusta.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/9b39f972-9ca6-4cf0-a8ba-bbd93c029338",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/9b39f972-9ca6-4cf0-a8ba-bbd93c029338"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Putin: Saatana 2 tulee"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Putin kehuskeli tiistaina ohjuksen tuhovoimalla. Venäjän presidentti Vladimir Putin on ilmoittanut, että mannertenvälinen ballistinen Sarmat-ohjus saatetaan taisteluvalmiuteen kuluvan vuoden loppuun mennessä. Uutistoimisto Tassin mukaan Putin kertoi asiasta saatuaan tiedon ohjuksen onnistuneesta koelaukaisusta.",
+        "word_count": 32,
+        "keyword_overlap": 25,
+        "strong_overlap": 23
+      }
+    ],
+    "source_text": "Putin kehuskeli tiistaina ohjuksen tuhovoimalla. Venäjän presidentti Vladimir Putin on ilmoittanut, että mannertenvälinen ballistinen Sarmat-ohjus saatetaan taisteluvalmiuteen kuluvan vuoden loppuun mennessä. Uutistoimisto Tassin mukaan Putin kertoi asiasta saatuaan tiedon ohjuksen onnistuneesta koelaukaisusta.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 64,
+      "selected_blocks": 1,
+      "selected_source_words": 32,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Putin: Saatana 2 tulee",
+      "description": "Putin kehuskeli tiistaina ohjuksen tuhovoimalla. Venäjän presidentti Vladimir Putin on ilmoittanut, että mannertenvälinen ballistinen Sarmat-ohjus saatetaan taisteluvalmiuteen kuluvan vuoden loppuun mennessä. Uutistoimisto Tassin mukaan Putin kertoi asiasta saatuaan tiedon ohjuksen onnistuneesta koelaukaisusta.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Putin: Saatana 2 tulee",
+    "description": "Putin kehuskeli tiistaina ohjuksen tuhovoimalla. Venäjän presidentti Vladimir Putin on ilmoittanut, että mannertenvälinen ballistinen Sarmat-ohjus saatetaan taisteluvalmiuteen kuluvan vuoden loppuun mennessä. Uutistoimisto Tassin mukaan Putin kertoi asiasta saatuaan tiedon ohjuksen onnistuneesta koelaukaisusta.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/9b39f972-9ca6-4cf0-a8ba-bbd93c029338",
+    "published": "2026-05-12T20:49:56+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "85ccd10f8c27fb7a772847b9be292599",
+    "_url_hash": "734bab70a409553175c9b2992208c3b0389fc073fb4982ae1f8abb1f4b8a98ee",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Putin kehuskeli tiistaina ohjuksen tuhovoimalla. Venäjän presidentti Vladimir Putin on ilmoittanut, että mannertenvälinen ballistinen Sarmat-ohjus saatetaan taisteluvalmiuteen kuluvan vuoden loppuun mennessä. Uutistoimisto Tassin mukaan Putin kertoi asiasta saatuaan tiedon ohjuksen onnistuneesta koelaukaisusta.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-13T05:40:01.601856+00:00",
+  "failure": "stale_ready_expired age_h=10.3 max_age_h=10.0"
+}

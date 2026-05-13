@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/12/google-esitteli-uuden-pause-point-ominaisuuden-androidille-pistaa-miettimaan-toisen-kerran-haluaako-sovellusta-sittenkaan-avata/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
