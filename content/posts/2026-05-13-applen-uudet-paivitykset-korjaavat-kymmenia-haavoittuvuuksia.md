@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/12/iphone-kannattaa-nyt-paivittaa-viimeisin-paivitys-korjaa-yli-50-haavoittuvuutta/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
