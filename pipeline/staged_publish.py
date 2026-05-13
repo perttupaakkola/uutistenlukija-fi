@@ -369,6 +369,32 @@ def log_scan_stage(stage: str, articles: list[dict]) -> None:
     log(f"scan-stage: {stage} total={len(articles)} categories={json.dumps(category_counts(articles), ensure_ascii=False, sort_keys=True)}")
 
 
+def talous_drop_candidates(articles: list[dict], max_examples: int = 5) -> list[dict]:
+    examples: list[dict] = []
+    for article in articles:
+        if article_category(article) != "Talous":
+            continue
+        examples.append({
+            "title": str(article.get("title") or "")[:100],
+            "source": str(article.get("source") or article.get("source_name") or "")[:60],
+            "source_words": len(str(article.get("research") or article.get("research_text") or "").split()),
+            "source_blocks": str(article.get("research") or article.get("research_text") or "").lower().count("[lähde:") + str(article.get("research") or article.get("research_text") or "").lower().count("[source:"),
+            "research_bucket": article_research_bucket(article),
+            "reserve_pass": scan_candidate_passes_talous_reserve(article),
+            "guardrail": org_source_talous_guardrail(article).get("classification"),
+        })
+        if len(examples) >= max_examples:
+            break
+    return examples
+
+
+def log_talous_enqueue_drop(before: list[dict], after: list[dict]) -> None:
+    before_count = category_counts(before).get("Talous", 0)
+    after_count = category_counts(after).get("Talous", 0)
+    if before_count and not after_count:
+        log("scan-stage-drop: talous_enqueue_drop " + json.dumps(talous_drop_candidates(before), ensure_ascii=False, sort_keys=True))
+
+
 def log_scan_research_buckets(stage: str, articles: list[dict]) -> None:
     by_category: dict[str, dict[str, int]] = {}
     for article in articles:
@@ -836,8 +862,10 @@ def cmd_scan(args: argparse.Namespace) -> int:
     log_scan_research_buckets("research_result", articles)
     articles = [a for a in articles if total_source_words(a) >= args.min_source_words]
     log_scan_stage("min_source_words_pass", articles)
+    pre_enqueue_articles = list(articles)
     articles = select_scan_enqueue_candidates(articles, args.max_packets)
     log_scan_stage("queued_candidates", articles)
+    log_talous_enqueue_drop(pre_enqueue_articles, articles)
 
     queued = 0
     for article in articles:

@@ -633,6 +633,25 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.article_category(selected[0]), "Teknologia")
 
 
+    def test_talous_enqueue_drop_examples_explain_source_passed_final_drop(self) -> None:
+        tokmanni = {
+            "title": "Tokmanni aloittaa omien osakkeiden hankinnan",
+            "category_hint": "Talous",
+            "source": "Arvopaperi",
+            "research": "[Lähde: Arvopaperi]\n" + "sana " * 102,
+            "description": "Tokmanni aloittaa omien osakkeiden hankinnan.",
+            "story_confidence": 0.62,
+            "research_source": "multi",
+        }
+
+        examples = staged_publish.talous_drop_candidates([tokmanni])
+
+        self.assertEqual(examples[0]["source"], "Arvopaperi")
+        self.assertEqual(examples[0]["source_blocks"], 1)
+        self.assertEqual(examples[0]["research_bucket"], "research_enriched")
+        self.assertFalse(examples[0]["reserve_pass"])
+
+
     def test_scan_enqueue_uses_total_source_floor_for_talous_candidate(self) -> None:
         rich_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 410, "description": "kuvaus"}
         moderate_ulkomaat = {"title": "ulkomaat", "category_hint": "Ulkomaat", "research": "sana " * 204, "description": "kuvaus " * 16}
