@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/hanhet-soivat-viljelijan-ensimmaisen-lehmille-tarkeimman-nurmisadon-en-tieda-jatkavatko-ne-ollenkaan-matkaansa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
