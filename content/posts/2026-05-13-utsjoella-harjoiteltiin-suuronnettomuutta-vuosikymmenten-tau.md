@@ -45,7 +45,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/suuronnettomuus-lapissa-nain-toimittaisiin/9337468"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
