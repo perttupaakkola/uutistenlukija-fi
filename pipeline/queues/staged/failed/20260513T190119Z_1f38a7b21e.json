@@ -103,5 +103,20 @@
     "_guessed_category": "Talous",
     "research": "[Lähde: Arvopaperi]\nUudet raportointikäytännöt otetaan käyttöön jo ensimmäisen neljänneksen tuloksen raportoinnissa. Yhtiön tammi-maaliskuun tulos julkaistaan perjantaina 15. toukokuuta.\n\nMuutos parantaa Bioretecin ydinliiketoiminnan suorituskyvyn läpinäkyvyyttä ja varmistaa yhdenmukaisuuden toimialan käytäntöjen kanssa.\n\nTerveysteknologiayhtiö Bioretec siirtyy raportoimaan toimialan raportointikäytäntöjen mukaisesti oikaistua myyntikatetta aiemmin raportoidun myyntikatteen sijaan. Uusi raportointikäytäntö otetaan käyttöön kuluvan vuoden ensimmäisestä neljänneksestä alkaen.\n\nBioretec julkaisee ensimmäisen neljänneksen tuloksensa perjantaina 15. toukokuuta.\n\nRaportointimuutoksen myötä strategiakauden 2026-2028 toinen taloudellinen tavoite päivitetään koskemaan oikaistua myyntikatetta aiemmin raportoidun myyntikatteen sijaan.\n\nBioretecin uudet taloudelliset tavoitteet kuluvalle strategiakaudelle ovat saavuttaa yli kymmenen miljoonan euron liikevaihto vuoteen 2028 mennessä ja säilyttää keskimäärin yli 70 prosentin oikaistu myyntikatemarginaali strategiakauden ajan.\n\nOikaistu myyntikate kuvaa yhtiön implanttimyynnin kannattavuutta ennen kaupallistamiseen liittyviä kuluja, kuten myyntikomissioita. Muutos parantaa Bioretecin ydinliiketoiminnan suorituskyvyn läpinäkyvyyttä ja varmistaa yhdenmukaisuuden toimialan käytäntöjen kanssa.\n\nAiemmin raportoidun myyntikatteen laskentakaava oli kokonaisliikevaihto vähennettynä varastojen muutoksella sekä materiaaleilla ja palveluilla. Jatkossa liikevaihtokomponentti sisältää ainoastaan liikevaihdon implanttien myynnistä, ja oikaistun myyntikatteen alapuolelle kirjataan muun muassa komissiot ja luonteeltaan kiinteät ulkoiset palvelut.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-05-13T22:23:01.289755+00:00",
+  "failure": "weak_talous_ready_source_floor",
+  "ready_quality_feedback": {
+    "action": "fail",
+    "reason": "weak_talous_ready_source_floor",
+    "source_words": 172,
+    "source_blocks": 3,
+    "story_confidence": 0.94,
+    "org_guardrail": {
+      "applies": false,
+      "classification": "not_org_source_talous",
+      "penalty": 0
+    },
+    "fail_closed": true
   }
 }

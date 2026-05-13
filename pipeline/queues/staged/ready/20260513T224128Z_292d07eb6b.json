@@ -1,0 +1,126 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-13T22:41:28.820699+00:00",
+  "digest": "292d07eb6b",
+  "packet": {
+    "packet_id": "20260513T224128Z_292d07eb6b",
+    "created_at": "2026-05-13T22:41:28Z",
+    "headline_seed": "Thief jailed after stealing unreleased Beyoncé music from car",
+    "description_seed": "The man smashed into a car and stole luggage containing hard drives with the singer's tracks.",
+    "link": "https://www.bbc.com/news/articles/cx213vnvxvwo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Guardian",
+      "Bossip"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cx213vnvxvwo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Thief jailed after stealing unreleased Beyoncé music from car"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A man who broke into a car and stole hard drives containing unreleased music by Beyoncé has been sentenced to two years in prison. Kelvin Evans, 41, pleaded guilty to charges including entering an automobile and criminal trespass last year in Atlanta, Georgia. A judge sentenced him to an additional three years of probation. Apparently at random, Evans broke into a Jeep Wagoneer rented by a choreographer and dancer for Beyoncé on 8 July 2025, as the singer's Cowboy Carter tour was coming to Atlanta. The two returned to find the vehicle's rear window smashed and their luggage gone. Investigators have not recovered the hard drives or other stolen items. Evans struck a plea deal in court on Tuesday ahead of his trial this week, according to court documents filed in Fulton County Superior Court.",
+        "word_count": 135,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The man smashed into a car and stole luggage containing hard drives with the singer's tracks.",
+        "word_count": 16,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Kelvin Evans pleads guilty to stealing hard drives and laptops from a car before singer’s Atlanta tour dates in 2025 A man arrested for stealing hard drives containing unreleased Beyoncé music has pleaded guilty in an Atlanta court on Tuesday. Kelvin Evans was arrested by the Atlanta police department in September in connection to a July 2025 car robbery where two suitcases containing Beyoncé music and tour plans were stolen from a rental car. In an Atlanta court this morning, Evans accepted a five-year sentence of which he will serve two years in custody. Previously he had pleaded not guilty and reportedly declined to take a deal in April, according to Rolling Stone. Evans was ordered to avoid the location of the theft in Atlanta and refrain from contact with the victim as part of his probation terms.",
+        "word_count": 138,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Bossip",
+        "source_type": "research",
+        "text": "The man accused of stealing unreleased Beyoncé music has been sentenced. The man in question, Kelvin Evans, pleaded guilty on Tuesday, May 12, according to reports from 11 Alive. This comes after unreleased music recorded by Beyoncé was stolen from members of her team while she was in Atlanta on tour last year. A jury trial was set to take place, but instead, Evans took a plea offer from prosecutors after previously rejecting deals. He was facing up to six years in prison, but with the deal accepted by the judge, he was given two years.",
+        "word_count": 96,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "A man who broke into a car and stole hard drives containing unreleased music by Beyoncé has been sentenced to two years in prison. Kelvin Evans, 41, pleaded guilty to charges including entering an automobile and criminal trespass last year in Atlanta, Georgia. A judge sentenced him to an additional three years of probation. Apparently at random, Evans broke into a Jeep Wagoneer rented by a choreographer and dancer for Beyoncé on 8 July 2025, as the singer's Cowboy Carter tour was coming to Atlanta. The two returned to find the vehicle's rear window smashed and their luggage gone. Investigators have not recovered the hard drives or other stolen items. Evans struck a plea deal in court on Tuesday ahead of his trial this week, according to court documents filed in Fulton County Superior Court.\n\nThe man smashed into a car and stole luggage containing hard drives with the singer's tracks.\n\nKelvin Evans pleads guilty to stealing hard drives and laptops from a car before singer’s Atlanta tour dates in 2025 A man arrested for stealing hard drives containing unreleased Beyoncé music has pleaded guilty in an Atlanta court on Tuesday. Kelvin Evans was arrested by the Atlanta police department in September in connection to a July 2025 car robbery where two suitcases containing Beyoncé music and tour plans were stolen from a rental car. In an Atlanta court this morning, Evans accepted a five-year sentence of which he will serve two years in custody. Previously he had pleaded not guilty and reportedly declined to take a deal in April, according to Rolling Stone. Evans was ordered to avoid the location of the theft in Atlanta and refrain from contact with the victim as part of his probation terms.\n\nThe man accused of stealing unreleased Beyoncé music has been sentenced. The man in question, Kelvin Evans, pleaded guilty on Tuesday, May 12, according to reports from 11 Alive. This comes after unreleased music recorded by Beyoncé was stolen from members of her team while she was in Atlanta on tour last year. A jury trial was set to take place, but instead, Evans took a plea offer from prosecutors after previously rejecting deals. He was facing up to six years in prison, but with the deal accepted by the judge, he was given two years.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1033,
+      "selected_blocks": 4,
+      "selected_source_words": 385,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "Bossip",
+        "Bossip",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "Bossip"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Thief jailed after stealing unreleased Beyoncé music from car",
+      "description": "The man smashed into a car and stole luggage containing hard drives with the singer's tracks.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Thief jailed after stealing unreleased Beyoncé music from car",
+    "description": "The man smashed into a car and stole luggage containing hard drives with the singer's tracks.",
+    "link": "https://www.bbc.com/news/articles/cx213vnvxvwo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-13T18:35:54+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "80b64d604b3cde228b3df4bedd8a9bd3",
+    "_url_hash": "b28a193b8a20445f6bb54b66f0927509d49684fd109703ff03ec30d21bbd5db8",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kulttuuri",
+    "research": "[Lähde: BBC World]\nA man who broke into a car and stole hard drives containing unreleased music by Beyoncé has been sentenced to two years in prison.\n\nKelvin Evans, 41, pleaded guilty to charges including entering an automobile and criminal trespass last year in Atlanta, Georgia. A judge sentenced him to an additional three years of probation.\n\nApparently at random, Evans broke into a Jeep Wagoneer rented by a choreographer and dancer for Beyoncé on 8 July 2025, as the singer's Cowboy Carter tour was coming to Atlanta.\n\nThe two returned to find the vehicle's rear window smashed and their luggage gone. Investigators have not recovered the hard drives or other stolen items.\n\nEvans struck a plea deal in court on Tuesday ahead of his trial this week, according to court documents filed in Fulton County Superior Court.\n\nThe records, obtained by the BBC, indicate that Evans was a repeat offender.\n\nHis lawyer told the judge his client was \"hoping for a future where he can make money legitimately and be part of society like the rest of us\", according to the BBC's US media partner CBS News.\n\nJury selection in the case began on Monday and prosecutors showed surveillance footage of a red Hyundai driven by Evans, pulling up next to the rental car in a parking garage.\n\nAnother surveillance video showed the same red Hyundai arriving at an apartment block, with Evans handling suitcases believed to belong to Beyoncé choreographer Christopher Grant and dancer Diandre Blue.\n\nGrant and Blue had told police that the items stolen from their rental car included two MacBook laptops, Apple headphones, luxury clothing and accessories, and hard drives that investigators said contained unreleased Beyoncé material.\n\nGrant also told authorities he was carrying \"personal sensitive information\" belonging to Beyoncé.\n\nProsecutors said the stolen laptops had tracking technology that placed the items at the address seen in the second video.\n\nAs part of his sentence, Evans has been ordered to stay away from the victims as well as the car park where the theft took place.\n\nHe has been in jail since his arrest in August last year. He was indicted by a grand jury in October and originally pleaded not guilty to charges in January.\n\nHe rejected a similar plea deal in March, according to CBS.\n\nThe break-in happened just before Beyoncé launched the four-night leg of her Cowboy Carter tour at Atlanta's Mercedes-Benz Stadium.\n\n---\n\n[Lähde: The Guardian]\nKelvin Evans pleads guilty to stealing hard drives and laptops from a car before singer’s Atlanta tour dates in 2025\n\nA man arrested for stealing hard drives containing unreleased Beyoncé music has pleaded guilty in an Atlanta court on Tuesday.\n\nKelvin Evans was arrested by the Atlanta police department in September in connection to a July 2025 car robbery where two suitcases containing Beyoncé music and tour plans were stolen from a rental car.\n\nIn an Atlanta court this morning, Evans accepted a five-year sentence of which he will serve two years in custody. Previously he had pleaded not guilty and reportedly declined to take a deal in April, according to Rolling Stone.\n\nEvans was ordered to avoid the location of the theft in Atlanta and refrain from contact with the victim as part of his probation terms.\n\nAccording to a July police report, Beyoncé choreographer Christopher Grant and dancer Diandre Blue called 911 to report a theft from their rental vehicle, a 2024 Jeep Wagoneer, before Beyoncé’s Cowboy Carter tour dates in Atlanta.\n\nAn October indictment stated that Evans entered the car on 8 July “with the intent to commit theft”.\n\nThe stolen hard drives contained “watermarked music, some unreleased music, footage plans for the show and past and future set list”, according to a police report. Clothing, designer sunglasses, laptops and AirPods headphones were also stolen, Grant and Blue said.\n\nLocal law enforcement searched for the location of one of the stolen laptops and the AirPods to try and locate the property. One police officer wrote in the report: “I conducted a suspicious stop in the area, due to the information that was relayed to me. There were several cars in the area also that the AirPods were pinging to in that area also.\n\n“After further investigation, a silver [redacted], which had traveled into zone 5 was moving at the same time as the tracking on the AirPods.”\n\nEvans was arrested several weeks after Grant and Blue filed a report, and was publicly named as the suspect in September. He was released on a $20,000 bond a month later.\n\nAt the time of his arrest, Atlanta police said that the stolen property had not been recovered. It is unclear whether it has since been found.\n\nBeyoncé’s Cowboy Carter was the highest-grossing tour of last year, earning the performer over $407m across 32 shows. She won the 2025 album of the year Grammy for the project, which was praised by the Guardian’s Michael Cragg as “a thrilling 27-track journey through and\n\n---\n\n[Lähde: Bossip]\nThe man accused of stealing unreleased Beyoncé music has been sentenced.\n\nThe man in question, Kelvin Evans, pleaded guilty on Tuesday, May 12, according to reports from 11 Alive. This comes after unreleased music recorded by Beyoncé was stolen from members of her team while she was in Atlanta on tour last year.\n\nA jury trial was set to take place, but instead, Evans took a plea offer from prosecutors after previously rejecting deals. He was facing up to six years in prison, but with the deal accepted by the judge, he was given two years.\n\nAfter being arrested in September 2025, Evans will get credit for time served. However, 11 Alive reports that he also had a previous parole violation and more than six other car break-in cases that were revealed in court on Tuesday, which makes how much jail time he has to serve unclear.\n\nIn court this week, prosecutors played video showing the theft at the Krog Street parking garage, saying that it would have been their evidence had the case gone to trial. Even though they felt they had a strong case, there was also a “sense of uncertainty as ...",
+    "research_source": "multi"
+  }
+}
