@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/noctua-julkaisi-mustanpuhuvat-nf-a12x25-g2-chromax-black-tuulettimet/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
