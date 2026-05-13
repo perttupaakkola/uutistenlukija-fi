@@ -44,7 +44,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/ai/2026/05/the-newest-ai-boom-pitch-host-a-mini-data-center-at-your-home/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
