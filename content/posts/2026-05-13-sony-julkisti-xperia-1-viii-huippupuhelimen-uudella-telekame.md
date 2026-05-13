@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/13/sony-julkisti-xperia-1-viii-huippupuhelimensa-varustettu-qualcommin-huippupiirilla-seka-uudella-telekameralla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
