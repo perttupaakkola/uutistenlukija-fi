@@ -188,6 +188,12 @@ def print_report(runs: list[dict], hours: int, log_path: Path) -> None:
         count = q["summary"][state].get("Talous", 0); words = q["word_stats"][state]
         print(f"  {state}: talous={count} median_source_words={median(words)} top_domains={dict(q['domains'][state].most_common(6))}")
     print(f"  failed_classes={dict(q['failures'].most_common(8))}")
+    passed = totals["min_source_words_pass"]["Talous"]
+    queued = totals["queued_candidates"]["Talous"]
+    conversion = (queued / passed * 100.0) if passed else 0.0
+    print(f"  source_pass_to_queue_conversion={queued}/{passed} ({conversion:.1f}%)")
+    if passed and queued < passed:
+        print(f"  conversion_gap_note=scan enqueue is capped by --max-packets per run; excess source-passing Talous candidates are expected to wait behind queue caps/dedup/cooldown, not disappear at research acquisition")
     print("\nexamples:")
     for state in ["ready", "failed", "published"]:
         print(f"  {state}:")

@@ -556,6 +556,53 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
 
 
+
+
+    def test_scan_enqueue_uses_full_packet_cap_when_priority_candidate_exists(self) -> None:
+        rich_talous = {
+            "title": "Talous",
+            "category_hint": "Talous",
+            "research": "[Lähde: A]\n" + "sana " * 140 + "\n\n[Lähde: B]\n" + "sana " * 140,
+            "description": "kuvaus",
+            "story_confidence": 0.95,
+        }
+        kotimaa = {"title": "Kotimaa", "category_hint": "Kotimaa", "research": "[Lähde: K]\n" + "sana " * 230, "description": "kuvaus"}
+        ulkomaat = {"title": "Ulkomaat", "category_hint": "Ulkomaat", "research": "[Lähde: U]\n" + "sana " * 210, "description": "kuvaus"}
+
+        selected = staged_publish.select_scan_enqueue_candidates([rich_talous, kotimaa, ulkomaat], max_packets=3)
+
+        self.assertEqual(len(selected), 3)
+        self.assertEqual(
+            {staged_publish.article_category(article) for article in selected},
+            {"Talous", "Kotimaa", "Ulkomaat"},
+        )
+
+
+
+    def test_scan_enqueue_can_fill_cap_with_multiple_source_backed_talous(self) -> None:
+        talous_articles = [
+            {
+                "title": f"talous {index}",
+                "category_hint": "Talous",
+                "research": "[Lähde: A]\n" + "sana " * 140 + "\n\n[Lähde: B]\n" + "sana " * 140,
+                "description": "kuvaus",
+                "story_confidence": 0.95,
+            }
+            for index in range(3)
+        ]
+        other_articles = [
+            {"title": f"kotimaa {index}", "category_hint": "Kotimaa", "research": "[Lähde: K]\n" + "sana " * (240 + index * 20), "description": "kuvaus"}
+            for index in range(5)
+        ]
+
+        selected = staged_publish.select_scan_enqueue_candidates(talous_articles + other_articles, max_packets=3)
+
+        self.assertEqual(len(selected), 3)
+        self.assertEqual(
+            [staged_publish.article_category(article) for article in selected],
+            ["Talous", "Talous", "Talous"],
+        )
+
     def test_scan_enqueue_does_not_promote_thin_talous_fallback(self) -> None:
         thin_kotimaa = {"title": "kotimaa", "category_hint": "Kotimaa", "research": "sana " * 90, "description": "kuvaus"}
         fallback_talous = {"title": "talous", "category_hint": "Talous", "research": "sana " * 120, "description": "kuvaus"}
