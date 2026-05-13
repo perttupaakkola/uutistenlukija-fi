@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/pojan-menehtyminen-vei-yritykselta-jatkajan-nyt-aimo-schroderus-81-ajaa-toimintaa-alas-en-tieda-mika-tata-alaa-vaivaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
