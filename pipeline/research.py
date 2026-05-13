@@ -48,6 +48,7 @@ INTER_FETCH_DELAY = 0.8     # seconds between fetches (politeness)
 MIN_USEFUL_WORDS = 80       # sources with less are discarded as paywall/thin
 TALOUS_RSS_MIN_WORDS = 45   # bounded RSS fallback floor for business feeds
 TALOUS_RSS_MIN_SENTENCES = 2
+TALOUS_ORIGINAL_THIN_MIN_WORDS = 40  # preserve bounded business-source bodies for fallback enrichment
 ARTICLE_RESEARCH_TIMEOUT = int(os.environ.get("ARTICLE_RESEARCH_TIMEOUT_SEC", "45"))
 
 # Domains known to hard-paywall — always skip (never get useful text)
@@ -490,14 +491,33 @@ def _looks_like_talous_article(article: dict) -> bool:
     ))
 
 
+def _clean_research_text(text: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", html_module.unescape(str(text or "")))
+    text = re.sub(r"\s{2,}", " ", text).strip()
+    return text
+
+
+def _talous_fallback_safety(text: str) -> bool:
+    lower = text.lower()
+    promo_hits = sum(1 for term in ("instagram", "seurantaan", "vinkkaa", "liity", "jäseneksi", "tule mukaan") if term in lower)
+    opinion_hits = sum(1 for term in ("vieraskynä", "kolumni", "mielipide") if term in lower)
+    return promo_hits < 2 and opinion_hits == 0
+
+
 def _usable_talous_rss_fallback(article: dict, rss_text: str) -> bool:
     if not _looks_like_talous_article(article):
         return False
     words = len(rss_text.split())
     sentences = len(re.findall(r"[.!?](?:\s|$)", rss_text))
-    lower = rss_text.lower()
-    promo_hits = sum(1 for term in ("instagram", "seurantaan", "vinkkaa", "liity", "jäseneksi", "tule mukaan") if term in lower)
-    return words >= TALOUS_RSS_MIN_WORDS and sentences >= TALOUS_RSS_MIN_SENTENCES and promo_hits < 2
+    return words >= TALOUS_RSS_MIN_WORDS and sentences >= TALOUS_RSS_MIN_SENTENCES and _talous_fallback_safety(rss_text)
+
+
+def _usable_talous_original_fallback(article: dict, original_text: str) -> bool:
+    if not _looks_like_talous_article(article):
+        return False
+    words = len(original_text.split())
+    sentences = len(re.findall(r"[.!?](?:\s|$)", original_text))
+    return words >= TALOUS_ORIGINAL_THIN_MIN_WORDS and sentences >= TALOUS_RSS_MIN_SENTENCES and _talous_fallback_safety(original_text)
 
 def _research_article(article: dict) -> str:
     """Perform multi-source research for a single article.
@@ -515,6 +535,7 @@ def _research_article(article: dict) -> str:
     language = article.get("language", "fi")
 
     sources_collected = []  # [(label, text)]
+    thin_original_fallback = None
 
     # ── 1. Fetch original source ──────────────────────────────────────────
     if original_url:
@@ -524,7 +545,12 @@ def _research_article(article: dict) -> str:
             sources_collected.append((label, original_text))
             print(f"[research]   Original: {len(original_text.split())}w from {_get_domain(original_url)}")
         elif original_text:
-            print(f"[research]   Original: only {len(original_text.split())}w (too thin, discarded)")
+            original_words = len(original_text.split())
+            print(f"[research]   Original: only {original_words}w (too thin, discarded)")
+            cleaned_original = _clean_research_text(original_text)
+            if _usable_talous_original_fallback(article, cleaned_original):
+                label = article.get("source") or _get_domain(original_url) or "Alkuperäinen lähde"
+                thin_original_fallback = (label, cleaned_original)
         else:
             print(f"[research]   Original: empty/blocked")
 
@@ -566,6 +592,11 @@ def _research_article(article: dict) -> str:
             print(f"[research]   - {domain}: empty/blocked")
 
     # ── 4. Combine ────────────────────────────────────────────────────────
+    if not sources_collected and thin_original_fallback:
+        label, text = thin_original_fallback
+        print(f"[research]   + {_get_domain(original_url)}: {len(text.split())}w bounded Talous original fallback")
+        sources_collected.append((label, text))
+
     if not sources_collected:
         return ""
 
@@ -633,8 +664,7 @@ def enrich_with_research(articles: list) -> list:
             else:
                 # Fallback: use RSS description
                 rss_raw = article.get("description", "").strip()
-                rss_text = re.sub(r"<[^>]+>", " ", html_module.unescape(rss_raw)).strip()
-                rss_text = re.sub(r"\s{2,}", " ", rss_text)
+                rss_text = _clean_research_text(rss_raw)
                 rss_words = len(rss_text.split())
 
                 if rss_words >= RSS_MIN_WORDS:

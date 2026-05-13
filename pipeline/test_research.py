@@ -20,6 +20,33 @@ class ResearchFallbackTests(unittest.TestCase):
         self.assertFalse(research._usable_talous_rss_fallback(article, text))
 
 
+    def test_talous_thin_original_fallback_is_bounded_and_labeled(self):
+        article = {
+            "title": "Yrittäjä arvioi tilansa talousnäkymiä",
+            "category_hint": "Talous",
+            "source": "Suomen Yrittäjät",
+            "link": "https://www.yrittajat.fi/uutiset/esimerkki",
+            "description": "",
+        }
+        thin_body = (
+            "Maatilayrittäjä kertoo investointien lykkääntyneen kustannuspaineen vuoksi. "
+            "Tilalla arvioidaan rehukustannusten, lainanhoitokulujen ja kysynnän muutosten "
+            "vaikuttavan loppuvuoden tulokseen. Yritys jatkaa toimintaa varovaisella kassasuunnittelulla. "
+            "Omistaja sanoo, että konehankintoja lykätään ja tuotannon kannattavuutta seurataan kuukausittain. "
+            "Pankin kanssa sovittu rahoitusvara antaa aikaa, mutta markkinahinta ratkaisee syksyn investoinnit."
+        )
+        self.assertGreaterEqual(len(thin_body.split()), research.TALOUS_ORIGINAL_THIN_MIN_WORDS)
+
+        self.assertTrue(research._usable_talous_original_fallback(article, thin_body))
+
+    def test_talous_thin_original_fallback_rejects_opinion_and_promo(self):
+        article = {"title": "Vieraskynä: talouspolitiikka on pielessä", "category_hint": "Talous", "source": "Talous"}
+        opinion = "Vieraskynä kertoo, miksi talouspolitiikka on kirjoittajan mielestä väärässä. Teksti sisältää arvion ja mielipiteen ilman neutraalia uutislähdettä."
+        promo = "Yrittäjä kertoo yrityksestään ja pyytää lukijoita seuraamaan Instagramissa. Liity jäseneksi ja tule mukaan paikallisyhdistyksen toimintaan."
+
+        self.assertFalse(research._usable_talous_original_fallback(article, opinion))
+        self.assertFalse(research._usable_talous_original_fallback(article, promo))
+
 
 if __name__ == "__main__":
     unittest.main()
