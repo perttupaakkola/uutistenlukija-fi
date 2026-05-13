@@ -265,7 +265,12 @@ def passes_priority_source_floor(article: dict) -> bool:
     source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
     if str(article.get("research_source") or "") == "rss_talous_source_backed":
         return source_words >= 120 and source_blocks >= 1
-    return source_words >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS and source_blocks >= 2
+    if source_blocks >= 2:
+        return source_words >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS
+    guard = org_source_talous_guardrail(article)
+    if source_blocks >= 1 and source_words >= 250 and guard.get("classification") in {"ok_company_profile", "ok_org_source_talous", "ok_attributed_policy_claim"}:
+        return True
+    return False
 
 
 def enqueue_strength(article: dict) -> tuple[int, int, int, int, int, int]:
@@ -294,7 +299,12 @@ def scan_candidate_passes_talous_reserve(article: dict) -> bool:
     source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
     source_words = len(research.split())
     confidence = float(article.get("story_confidence") or article.get("confidence") or 0.85)
-    return source_words >= 180 and source_blocks >= 2 and confidence >= 0.82
+    if confidence < 0.82:
+        return False
+    if source_words >= 180 and source_blocks >= 2:
+        return True
+    guard = org_source_talous_guardrail(article)
+    return source_words >= 250 and source_blocks >= 1 and guard.get("classification") in {"ok_company_profile", "ok_org_source_talous", "ok_attributed_policy_claim"}
 
 
 def select_scan_enqueue_candidates(articles: list[dict], max_packets: int) -> list[dict]:

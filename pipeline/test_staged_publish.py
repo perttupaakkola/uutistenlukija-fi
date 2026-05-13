@@ -616,6 +616,25 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.article_category(selected[0]), "Teknologia")
 
 
+    def test_scan_enqueue_reserves_substantive_one_block_talous_packet(self) -> None:
+        teknologia = {"title": "teknologia", "category_hint": "Teknologia", "research": "[Lähde: Testi]\n" + "sana " * 310, "description": "kuvaus"}
+        talous = {
+            "title": "Sijoittajat palasivat rahastomarkkinoille huhtikuussa",
+            "category_hint": "Talous",
+            "source": "Finanssiala",
+            "research": "[Lähde: Finanssiala]\n" + "sana " * 260,
+            "description": "Rahastomarkkinoiden nettomerkinnät kääntyivät huhtikuussa plussalle.",
+            "story_confidence": 0.96,
+            "research_source": "multi",
+        }
+
+        self.assertTrue(staged_publish.passes_priority_source_floor(talous))
+        self.assertTrue(staged_publish.scan_candidate_passes_talous_reserve(talous))
+        selected = staged_publish.select_scan_enqueue_candidates([teknologia, talous], max_packets=1)
+
+        self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
+
+
     def test_scan_enqueue_reserve_preserves_promotional_talous_rejection(self) -> None:
         teknologia = {"title": "teknologia", "category_hint": "Teknologia", "research": "[Lähde: Testi]\n" + "sana " * 260, "description": "kuvaus"}
         promo = {
