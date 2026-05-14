@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/may/14/accc-v-coles-down-down-federal-court-case"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
