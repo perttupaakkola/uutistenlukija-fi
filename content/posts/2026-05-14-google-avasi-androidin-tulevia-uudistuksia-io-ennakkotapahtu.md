@@ -44,7 +44,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/google-esitteli-the-android-show-i-o-edition-2026-tapahtumassa-androidin-lahitulevaisuuden-tuulia/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
