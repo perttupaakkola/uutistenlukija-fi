@@ -1,0 +1,209 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-14T13:02:17.219428+00:00",
+  "digest": "6ea70f3238",
+  "packet": {
+    "packet_id": "20260514T130217Z_6ea70f3238",
+    "created_at": "2026-05-14T13:02:17Z",
+    "headline_seed": "Australia has some of the world's costliest homes. Will scrapping tax breaks help?",
+    "description_seed": "The government hopes reforms will help young people enter the market, while critics say it will stifle supply.",
+    "link": "https://www.bbc.com/news/articles/cd7p88j84j3o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cd7p88j84j3o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Australia has some of the world's costliest homes. Will scrapping tax breaks help?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The government hopes reforms will help young people enter the market, while critics say it will stifle supply.",
+        "word_count": 18,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "While there's no dispute that Australia is in a housing crisis, solutions to it have divided the nation and paralysed politics for over a decade. Now the government is promising a polarising reform, scrapping lucrative tax breaks which it says will help tackle the intergenerational inequality which has come to define the market. Critics argue it could stifle the investment Australia needs to build more houses and could worsen the plight of renters. Others say the rule changes unfairly threaten the wealth they've spent their lives toiling for. But many younger Australians like Sebastian argue the social contract that hard work is rewarded has long been broken anyway.",
+        "word_count": 108,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "They feel they have been denied the kinds of opportunities their parents enjoyed, and hope the changes will begin rebalancing the playing field and bring housing security back in reach for future generations. Australia has some of the least affordable cities on Earth. The average property now costs almost 10 times an ordinary household's income, quadruple what it was about 25 years ago, and rents have doubled over a similar period. The simple fact is that Australia does not have enough homes for its growing population, which is driving unaffordability. Decades of inadequate investment in social housing, sluggish construction rates, and Australia's restrictive planning laws - which limit homes being built where most people want to live – have taken a toll. But there have long been arguments that housing tax breaks are also increasing strain on the system.",
+        "word_count": 139,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Sebastian Muñoz-Najar has only just finished primary school. The 13-year-old is still years away from learning how to drive. He cannot legally work. He's too young to even have a social media account. But he's already despairing about his future housing prospects. Amid near constant headlines about Australia's deepening housing crisis, the Adelaide student began worrying about what the future might look like for his generation. Armed with Google and a calculator, Sebastian was shocked to find that, if the current trajectory of house prices and wage growth continues, by the time he graduates from university the average house in his city will be 17 times his likely income. \"It's really sad to see how this issue is affecting the present generation's views on what Australia is - how their life should go,\" he told the BBC.",
+        "word_count": 137,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The government hopes reforms will help young people enter the market, while critics say it will stifle supply.\n\nWhile there's no dispute that Australia is in a housing crisis, solutions to it have divided the nation and paralysed politics for over a decade. Now the government is promising a polarising reform, scrapping lucrative tax breaks which it says will help tackle the intergenerational inequality which has come to define the market. Critics argue it could stifle the investment Australia needs to build more houses and could worsen the plight of renters. Others say the rule changes unfairly threaten the wealth they've spent their lives toiling for. But many younger Australians like Sebastian argue the social contract that hard work is rewarded has long been broken anyway.\n\nThey feel they have been denied the kinds of opportunities their parents enjoyed, and hope the changes will begin rebalancing the playing field and bring housing security back in reach for future generations. Australia has some of the least affordable cities on Earth. The average property now costs almost 10 times an ordinary household's income, quadruple what it was about 25 years ago, and rents have doubled over a similar period. The simple fact is that Australia does not have enough homes for its growing population, which is driving unaffordability. Decades of inadequate investment in social housing, sluggish construction rates, and Australia's restrictive planning laws - which limit homes being built where most people want to live – have taken a toll. But there have long been arguments that housing tax breaks are also increasing strain on the system.\n\nSebastian Muñoz-Najar has only just finished primary school. The 13-year-old is still years away from learning how to drive. He cannot legally work. He's too young to even have a social media account. But he's already despairing about his future housing prospects. Amid near constant headlines about Australia's deepening housing crisis, the Adelaide student began worrying about what the future might look like for his generation. Armed with Google and a calculator, Sebastian was shocked to find that, if the current trajectory of house prices and wage growth continues, by the time he graduates from university the average house in his city will be 17 times his likely income. \"It's really sad to see how this issue is affecting the present generation's views on what Australia is - how their life should go,\" he told the BBC.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 420,
+      "selected_blocks": 4,
+      "selected_source_words": 402,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Australia has some of the world's costliest homes. Will scrapping tax breaks help?",
+      "description": "The government hopes reforms will help young people enter the market, while critics say it will stifle supply.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Australia has some of the world's costliest homes. Will scrapping tax breaks help?",
+    "description": "The government hopes reforms will help young people enter the market, while critics say it will stifle supply.",
+    "link": "https://www.bbc.com/news/articles/cd7p88j84j3o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-12T20:28:03+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cc9b59179135dea0682d1e553fe5c43d",
+    "_url_hash": "d0d982a9d2575aa1bcc2f6b6b0b5c0b2d4923cbeadbf1411a241741afdebd7b6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Talous",
+    "research": "[Lähde: BBC World]\nSebastian Muñoz-Najar has only just finished primary school. The 13-year-old is still years away from learning how to drive. He cannot legally work. He's too young to even have a social media account.\n\nBut he's already despairing about his future housing prospects.\n\nAmid near constant headlines about Australia's deepening housing crisis, the Adelaide student began worrying about what the future might look like for his generation.\n\nArmed with Google and a calculator, Sebastian was shocked to find that, if the current trajectory of house prices and wage growth continues, by the time he graduates from university the average house in his city will be 17 times his likely income.\n\n\"It's really sad to see how this issue is affecting the present generation's views on what Australia is - how their life should go,\" he told the BBC.\n\nWhile there's no dispute that Australia is in a housing crisis, solutions to it have divided the nation and paralysed politics for over a decade.\n\nNow the government is promising a polarising reform, scrapping lucrative tax breaks which it says will help tackle the intergenerational inequality which has come to define the market.\n\nCritics argue it could stifle the investment Australia needs to build more houses and could worsen the plight of renters. Others say the rule changes unfairly threaten the wealth they've spent their lives toiling for.\n\nBut many younger Australians like Sebastian argue the social contract that hard work is rewarded has long been broken anyway.\n\nThey feel they have been denied the kinds of opportunities their parents enjoyed, and hope the changes will begin rebalancing the playing field and bring housing security back in reach for future generations.\n\nAustralia has some of the least affordable cities on Earth. The average property now costs almost 10 times an ordinary household's income, quadruple what it was about 25 years ago, and rents have doubled over a similar period.\n\nThe simple fact is that Australia does not have enough homes for its growing population, which is driving unaffordability.\n\nDecades of inadequate investment in social housing, sluggish construction rates, and Australia's restrictive planning laws - which limit homes being built where most people want to live – have taken a toll.\n\nBut there have long been arguments that housing tax breaks are also increasing strain on the system.\n\nThe main culprits are negative gearing, which allows owners of investment properties to detract any losses from th",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-14T13:43:46.248830+00:00",
+  "payload": {
+    "packet_id": "20260514T130217Z_6ea70f3238",
+    "title": "Australia hakee ratkaisua asuntokriisiin verotukia karsimalla",
+    "summary": "Australian hallitus lupaa uudistaa asuntosijoittamiseen liittyviä verotukia, jotta nuorten mahdollisuudet päästä asuntomarkkinoille paranisivat. Kriitikot pelkäävät, että muutos voi vähentää investointeja ja pahentaa vuokralaisten tilannetta.",
+    "content": "Australian hallitus aikoo puuttua maan syvään asuntokriisiin karsimalla tuottoisia verotukia, joiden se katsoo pahentaneen sukupolvien välistä eriarvoisuutta asuntomarkkinoilla. Uudistus jakaa mielipiteitä: hallituksen mukaan se voisi auttaa nuoria kohti omaa asuntoa, kun taas vastustajat varoittavat asuntotarjonnan ja vuokralaisten aseman heikentymisestä.\n\n## Asuminen on karannut monen ulottumattomiin\n\nAustraliassa asumisen kalleudesta on tullut yksi maan keskeisimmistä poliittisista kiistakysymyksistä. Asuntokriisistä sinänsä vallitsee laaja yhteisymmärrys, mutta ratkaisuista on kiistelty yli vuosikymmenen ajan.\n\nMaan kaupunkeja pidetään maailman vähiten kohtuuhintaisten joukossa. Keskimääräinen asunto maksaa nyt lähes kymmenen kertaa tavallisen kotitalouden vuositulot, kun suhde oli noin 25 vuotta sitten selvästi pienempi. Myös vuokrat ovat nousseet voimakkaasti samankaltaisella aikavälillä.\n\nKriisin taustalla on useita tekijöitä. Australiaan ei ole rakennettu riittävästi asuntoja kasvavalle väestölle. Sosiaaliseen asuntotuotantoon on investoitu pitkään liian vähän, rakentaminen on edennyt hitaasti ja kaavoitusta pidetään monin paikoin rajoittavana erityisesti alueilla, joilla ihmiset haluaisivat asua.\n\n## Verotukien rooli jakaa maan\n\nHallituksen ajama muutos kohdistuisi asuntosijoittajille hyödyllisiin verotukiin. Uudistuksen kannattajien mukaan nykyiset säännöt ovat lisänneet painetta järjestelmässä ja suosineet varallisuutta jo keränneitä omistajia nuorempien ostajien kustannuksella.\n\nKriitikot katsovat kuitenkin, että tukien karsiminen voisi vähentää investointeja juuri silloin, kun maa tarvitsee lisää asuntoja. Heidän mukaansa muutos voisi myös vaikeuttaa vuokralaisten asemaa, jos sijoittajien kiinnostus vuokra-asuntojen tarjoamiseen heikkenee. Osa vastustajista pitää uudistusta epäoikeudenmukaisena myös siksi, että se voi vaikuttaa vuosikymmenten aikana kertyneeseen varallisuuteen.\n\n## Nuoret epäilevät vanhaa lupausta\n\nAsuntomarkkinoiden kehitys on herättänyt huolta myös hyvin nuorissa australialaisissa. Adelaidessa asuva 13-vuotias Sebastian Muñoz-Najar on laskenut, että jos asuntojen hinnat ja palkkakehitys jatkuvat nykyisellä uralla, hänen kotikaupunkinsa keskimääräinen asunto voisi yliopistosta valmistumisen aikaan maksaa 17 kertaa hänen todennäköiset tulonsa.\n\nMonille nuorille kyse ei ole vain hinnoista, vaan myös luottamuksesta siihen, että työnteko johtaa turvalliseen tulevaisuuteen. Hallituksen uudistus pyrkii vastaamaan juuri tähän kokemukseen, mutta sen vaikutukset riippuvat siitä, onnistuuko Australia samalla lisäämään asuntojen tarjontaa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Australia",
+      "asuntomarkkinat",
+      "asuntokriisi",
+      "verotus",
+      "nuoret"
+    ],
+    "summary_bullets": [
+      "Australian hallitus haluaa karsia asuntosijoittamiseen liittyviä verotukia osana asuntokriisin ratkaisua.",
+      "Keskimääräinen asunto maksaa maassa lähes kymmenen kertaa tavallisen kotitalouden vuositulot.",
+      "Kriitikot varoittavat, että uudistus voi vähentää investointeja ja heikentää vuokralaisten asemaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Kategoria korjattu Australia-aiheen vuoksi Ulkomaat-luokkaan, vaikka paketissa oli Kotimaa-vihje."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260514T130217Z_6ea70f3238\",\"title\":\"Australia hakee ratkaisua asuntokriisiin verotukia karsimalla\",\"summary\":\"Australian hallitus lupaa uudistaa asuntosijoittamiseen liittyviä verotukia, jotta nuorten mahdollisuudet päästä asuntomarkkinoille paranisivat. Kriitikot pelkäävät, että muutos voi vähentää investointeja ja pahentaa vuokralaisten tilannetta.\",\"content\":\"Australian hallitus aikoo puuttua maan syvään asuntokriisiin karsimalla tuottoisia verotukia, joiden se katsoo pahentaneen sukupolvien välistä eriarvoisuutta asuntomarkkinoilla. Uudistus jakaa mielipiteitä: hallituksen mukaan se voisi auttaa nuoria kohti omaa asuntoa, kun taas vastustajat varoittavat asuntotarjonnan ja vuokralaisten aseman heikentymisestä.\\n\\n## Asuminen on karannut monen ulottumattomiin\\n\\nAustraliassa asumisen kalleudesta on tullut yksi maan keskeisimmistä poliittisista kiistakysymyksistä. Asuntokriisistä sinänsä vallitsee laaja yhteisymmärrys, mutta ratkaisuista on kiistelty yli vuosikymmenen ajan.\\n\\nMaan kaupunkeja pidetään maailman vähiten kohtuuhintaisten joukossa. Keskimääräinen asunto maksaa nyt lähes kymmenen kertaa tavallisen kotitalouden vuositulot, kun suhde oli noin 25 vuotta sitten selvästi pienempi. Myös vuokrat ovat nousseet voimakkaasti samankaltaisella aikavälillä.\\n\\nKriisin taustalla on useita tekijöitä. Australiaan ei ole rakennettu riittävästi asuntoja kasvavalle väestölle. Sosiaaliseen asuntotuotantoon on investoitu pitkään liian vähän, rakentaminen on edennyt hitaasti ja kaavoitusta pidetään monin paikoin rajoittavana erityisesti alueilla, joilla ihmiset haluaisivat asua.\\n\\n## Verotukien rooli jakaa maan\\n\\nHallituksen ajama muutos kohdistuisi asuntosijoittajille hyödyllisiin verotukiin. Uudistuksen kannattajien mukaan nykyiset säännöt ovat lisänneet painetta järjestelmässä ja suosineet varallisuutta jo keränneitä omistajia nuorempien ostajien kustannuksella.\\n\\nKriitikot katsovat kuitenkin, että tukien karsiminen voisi vähentää investointeja juuri silloin, kun maa tarvitsee lisää asuntoja. Heidän mukaansa muutos voisi myös vaikeuttaa vuokralaisten asemaa, jos sijoittajien kiinnostus vuokra-asuntojen tarjoamiseen heikkenee. Osa vastustajista pitää uudistusta epäoikeudenmukaisena myös siksi, että se voi vaikuttaa vuosikymmenten aikana kertyneeseen varallisuuteen.\\n\\n## Nuoret epäilevät vanhaa lupausta\\n\\nAsuntomarkkinoiden kehitys on herättänyt huolta myös hyvin nuorissa australialaisissa. Adelaidessa asuva 13-vuotias Sebastian Muñoz-Najar on laskenut, että jos asuntojen hinnat ja palkkakehitys jatkuvat nykyisellä uralla, hänen kotikaupunkinsa keskimääräinen asunto voisi yliopistosta valmistumisen aikaan maksaa 17 kertaa hänen todennäköiset tulonsa.\\n\\nMonille nuorille kyse ei ole vain hinnoista, vaan myös luottamuksesta siihen, että työnteko johtaa turvalliseen tulevaisuuteen. Hallituksen uudistus pyrkii vastaamaan juuri tähän kokemukseen, mutta sen vaikutukset riippuvat siitä, onnistuuko Australia samalla lisäämään asuntojen tarjontaa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Australia\",\"asuntomarkkinat\",\"asuntokriisi\",\"verotus\",\"nuoret\"],\"summary_bullets\":[\"Australian hallitus haluaa karsia asuntosijoittamiseen liittyviä verotukia osana asuntokriisin ratkaisua.\",\"Keskimääräinen asunto maksaa maassa lähes kymmenen kertaa tavallisen kotitalouden vuositulot.\",\"Kriitikot varoittavat, että uudistus voi vähentää investointeja ja heikentää vuokralaisten asemaa.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.86,\"journalist_note\":\"Artikkeli perustuu annettuun lähdepakettiin. Kategoria korjattu Australia-aiheen vuoksi Ulkomaat-luokkaan, vaikka paketissa oli Kotimaa-vihje.\"}",
+  "article": {
+    "title": "Australia hakee ratkaisua asuntokriisiin verotukia karsimalla",
+    "description": "Australian hallitus lupaa uudistaa asuntosijoittamiseen liittyviä verotukia, jotta nuorten mahdollisuudet päästä asuntomarkkinoille paranisivat. Kriitikot pelkäävät, että muutos voi vähentää investointeja ja pahentaa vuokralaisten tilannetta.",
+    "link": "https://www.bbc.com/news/articles/cd7p88j84j3o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-12T20:28:03+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cc9b59179135dea0682d1e553fe5c43d",
+    "_url_hash": "d0d982a9d2575aa1bcc2f6b6b0b5c0b2d4923cbeadbf1411a241741afdebd7b6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Talous",
+    "research": "[Lähde: BBC World]\nSebastian Muñoz-Najar has only just finished primary school. The 13-year-old is still years away from learning how to drive. He cannot legally work. He's too young to even have a social media account.\n\nBut he's already despairing about his future housing prospects.\n\nAmid near constant headlines about Australia's deepening housing crisis, the Adelaide student began worrying about what the future might look like for his generation.\n\nArmed with Google and a calculator, Sebastian was shocked to find that, if the current trajectory of house prices and wage growth continues, by the time he graduates from university the average house in his city will be 17 times his likely income.\n\n\"It's really sad to see how this issue is affecting the present generation's views on what Australia is - how their life should go,\" he told the BBC.\n\nWhile there's no dispute that Australia is in a housing crisis, solutions to it have divided the nation and paralysed politics for over a decade.\n\nNow the government is promising a polarising reform, scrapping lucrative tax breaks which it says will help tackle the intergenerational inequality which has come to define the market.\n\nCritics argue it could stifle the investment Australia needs to build more houses and could worsen the plight of renters. Others say the rule changes unfairly threaten the wealth they've spent their lives toiling for.\n\nBut many younger Australians like Sebastian argue the social contract that hard work is rewarded has long been broken anyway.\n\nThey feel they have been denied the kinds of opportunities their parents enjoyed, and hope the changes will begin rebalancing the playing field and bring housing security back in reach for future generations.\n\nAustralia has some of the least affordable cities on Earth. The average property now costs almost 10 times an ordinary household's income, quadruple what it was about 25 years ago, and rents have doubled over a similar period.\n\nThe simple fact is that Australia does not have enough homes for its growing population, which is driving unaffordability.\n\nDecades of inadequate investment in social housing, sluggish construction rates, and Australia's restrictive planning laws - which limit homes being built where most people want to live – have taken a toll.\n\nBut there have long been arguments that housing tax breaks are also increasing strain on the system.\n\nThe main culprits are negative gearing, which allows owners of investment properties to detract any losses from th",
+    "research_source": "multi",
+    "summary": "Australian hallitus lupaa uudistaa asuntosijoittamiseen liittyviä verotukia, jotta nuorten mahdollisuudet päästä asuntomarkkinoille paranisivat. Kriitikot pelkäävät, että muutos voi vähentää investointeja ja pahentaa vuokralaisten tilannetta.",
+    "content": "Australian hallitus aikoo puuttua maan syvään asuntokriisiin karsimalla tuottoisia verotukia, joiden se katsoo pahentaneen sukupolvien välistä eriarvoisuutta asuntomarkkinoilla. Uudistus jakaa mielipiteitä: hallituksen mukaan se voisi auttaa nuoria kohti omaa asuntoa, kun taas vastustajat varoittavat asuntotarjonnan ja vuokralaisten aseman heikentymisestä.\n\n## Asuminen on karannut monen ulottumattomiin\n\nAustraliassa asumisen kalleudesta on tullut yksi maan keskeisimmistä poliittisista kiistakysymyksistä. Asuntokriisistä sinänsä vallitsee laaja yhteisymmärrys, mutta ratkaisuista on kiistelty yli vuosikymmenen ajan.\n\nMaan kaupunkeja pidetään maailman vähiten kohtuuhintaisten joukossa. Keskimääräinen asunto maksaa nyt lähes kymmenen kertaa tavallisen kotitalouden vuositulot, kun suhde oli noin 25 vuotta sitten selvästi pienempi. Myös vuokrat ovat nousseet voimakkaasti samankaltaisella aikavälillä.\n\nKriisin taustalla on useita tekijöitä. Australiaan ei ole rakennettu riittävästi asuntoja kasvavalle väestölle. Sosiaaliseen asuntotuotantoon on investoitu pitkään liian vähän, rakentaminen on edennyt hitaasti ja kaavoitusta pidetään monin paikoin rajoittavana erityisesti alueilla, joilla ihmiset haluaisivat asua.\n\n## Verotukien rooli jakaa maan\n\nHallituksen ajama muutos kohdistuisi asuntosijoittajille hyödyllisiin verotukiin. Uudistuksen kannattajien mukaan nykyiset säännöt ovat lisänneet painetta järjestelmässä ja suosineet varallisuutta jo keränneitä omistajia nuorempien ostajien kustannuksella.\n\nKriitikot katsovat kuitenkin, että tukien karsiminen voisi vähentää investointeja juuri silloin, kun maa tarvitsee lisää asuntoja. Heidän mukaansa muutos voisi myös vaikeuttaa vuokralaisten asemaa, jos sijoittajien kiinnostus vuokra-asuntojen tarjoamiseen heikkenee. Osa vastustajista pitää uudistusta epäoikeudenmukaisena myös siksi, että se voi vaikuttaa vuosikymmenten aikana kertyneeseen varallisuuteen.\n\n## Nuoret epäilevät vanhaa lupausta\n\nAsuntomarkkinoiden kehitys on herättänyt huolta myös hyvin nuorissa australialaisissa. Adelaidessa asuva 13-vuotias Sebastian Muñoz-Najar on laskenut, että jos asuntojen hinnat ja palkkakehitys jatkuvat nykyisellä uralla, hänen kotikaupunkinsa keskimääräinen asunto voisi yliopistosta valmistumisen aikaan maksaa 17 kertaa hänen todennäköiset tulonsa.\n\nMonille nuorille kyse ei ole vain hinnoista, vaan myös luottamuksesta siihen, että työnteko johtaa turvalliseen tulevaisuuteen. Hallituksen uudistus pyrkii vastaamaan juuri tähän kokemukseen, mutta sen vaikutukset riippuvat siitä, onnistuuko Australia samalla lisäämään asuntojen tarjontaa.",
+    "category": "Kotimaa",
+    "tags": [
+      "australia",
+      "asuntomarkkinat",
+      "asuntokriisi",
+      "verotus",
+      "nuoret"
+    ],
+    "summary_bullets": [
+      "Australian hallitus haluaa karsia asuntosijoittamiseen liittyviä verotukia osana asuntokriisin ratkaisua.",
+      "Keskimääräinen asunto maksaa maassa lähes kymmenen kertaa tavallisen kotitalouden vuositulot.",
+      "Kriitikot varoittavat, että uudistus voi vähentää investointeja ja heikentää vuokralaisten asemaa."
+    ],
+    "key_points": [
+      "Australian hallitus haluaa karsia asuntosijoittamiseen liittyviä verotukia osana asuntokriisin ratkaisua.",
+      "Keskimääräinen asunto maksaa maassa lähes kymmenen kertaa tavallisen kotitalouden vuositulot.",
+      "Kriitikot varoittavat, että uudistus voi vähentää investointeja ja heikentää vuokralaisten asemaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Kategoria korjattu Australia-aiheen vuoksi Ulkomaat-luokkaan, vaikka paketissa oli Kotimaa-vihje.",
+    "source_text": "The government hopes reforms will help young people enter the market, while critics say it will stifle supply.\n\nWhile there's no dispute that Australia is in a housing crisis, solutions to it have divided the nation and paralysed politics for over a decade. Now the government is promising a polarising reform, scrapping lucrative tax breaks which it says will help tackle the intergenerational inequality which has come to define the market. Critics argue it could stifle the investment Australia needs to build more houses and could worsen the plight of renters. Others say the rule changes unfairly threaten the wealth they've spent their lives toiling for. But many younger Australians like Sebastian argue the social contract that hard work is rewarded has long been broken anyway.\n\nThey feel they have been denied the kinds of opportunities their parents enjoyed, and hope the changes will begin rebalancing the playing field and bring housing security back in reach for future generations. Australia has some of the least affordable cities on Earth. The average property now costs almost 10 times an ordinary household's income, quadruple what it was about 25 years ago, and rents have doubled over a similar period. The simple fact is that Australia does not have enough homes for its growing population, which is driving unaffordability. Decades of inadequate investment in social housing, sluggish construction rates, and Australia's restrictive planning laws - which limit homes being built where most people want to live – have taken a toll. But there have long been arguments that housing tax breaks are also increasing strain on the system.\n\nSebastian Muñoz-Najar has only just finished primary school. The 13-year-old is still years away from learning how to drive. He cannot legally work. He's too young to even have a social media account. But he's already despairing about his future housing prospects. Amid near constant headlines about Australia's deepening housing crisis, the Adelaide student began worrying about what the future might look like for his generation. Armed with Google and a calculator, Sebastian was shocked to find that, if the current trajectory of house prices and wage growth continues, by the time he graduates from university the average house in his city will be 17 times his likely income. \"It's really sad to see how this issue is affecting the present generation's views on what Australia is - how their life should go,\" he told the BBC.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260514T130217Z_6ea70f3238",
+    "image": "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBdXN0cmFsaWFuJTIwaG91c2luZyUyMGNyaXNpc3xlbnwxfDB8fHwxNzc4NzY2NDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBdXN0cmFsaWFuJTIwaG91c2luZyUyMGNyaXNpc3xlbnwxfDB8fHwxNzc4NzY2NDg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Australia hakee ratkaisua asuntokriisiin verotukia karsimalla",
+    "image_credit": "Photo by Maximillian Conacher on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/top-view-photo-of-houses-sPpe2D7VbpM?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-14T13:48:06.143020+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBdXN0cmFsaWFuJTIwaG91c2luZyUyMGNyaXNpc3xlbnwxfDB8fHwxNzc4NzY2NDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBdXN0cmFsaWFuJTIwaG91c2luZyUyMGNyaXNpc3xlbnwxfDB8fHwxNzc4NzY2NDg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-14T13:48:36.387310+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-14-australia-hakee-ratkaisua-asuntokriisiin-verotukia-karsimall.md"
+  ]
+}
