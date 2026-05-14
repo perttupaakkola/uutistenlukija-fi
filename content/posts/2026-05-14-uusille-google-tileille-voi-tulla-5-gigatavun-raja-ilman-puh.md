@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/14/google-tileihin-uusi-rajoitus-15-gigatavun-ilmainen-tallennustila-vaatii-nyt-puhelinnumeron-linkittamista/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
