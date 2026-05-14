@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/KooKoon-t%C3%A4hti-murtui-Halusin-kaataa-suuren-ja-mahtavan-Tapparan/269662"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
