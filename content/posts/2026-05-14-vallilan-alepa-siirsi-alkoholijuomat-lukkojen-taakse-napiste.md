@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kaupat-ja-alko-siirtavat-alkoholijuomat-lukkojen-taakse/9337982"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
