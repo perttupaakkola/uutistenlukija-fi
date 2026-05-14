@@ -1,0 +1,127 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-14T21:11:27.078158+00:00",
+  "digest": "210a0f1afb",
+  "packet": {
+    "packet_id": "20260514T211127Z_210a0f1afb",
+    "created_at": "2026-05-14T21:11:27Z",
+    "headline_seed": "OpenAI says Codex is coming to your phone",
+    "description_seed": "The update gives users enhanced flexibility over how they can manage their workflows.",
+    "link": "https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/",
+    "source": "TechCrunch",
+    "source_names": [
+      "Engadget",
+      "Android",
+      "Android",
+      "The Verge"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "OpenAI says Codex is coming to your phone"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Engadget",
+        "source_type": "research",
+        "text": "More than just being a response to Anthropic, which has offered Claude Code users a way to access their work on mobile since last fall, you can view today's release as another building block in OpenAI's ongoing super app project. In March, the company confirmed it was working on a single desktop app that would combine ChatGPT, Codex and its Atlas web browser into a cohesive experience. Building the scaffolding that gives people a way to access parts of that platform from their mobile device seems like a no-brainer. To try out the new integration, update the ChatGPT app on you phone and the Codex app on Mac. OpenAI says support for connecting the Windows app is coming soon. ---",
+        "word_count": 120,
+        "keyword_overlap": 9,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Android",
+        "source_type": "research",
+        "text": "OpenAI is developing a new feature for the ChatGPT Android app that will allow users to remotely control Codex coding sessions on their PCs. Found in version 1.2026.125, this update addresses a long-standing request from developers who want to manage AI agents from their smartphones—a feature already available on competing platforms like Claude. Artificial intelligence has already shifted how developers write and debug code. However, a specific missing piece has long frustrated OpenAI users. Some competitors have allowed developers to interact with their PC-based coding agents via mobile. Meanwhile, Codex users have been patiently waiting. Well, it seems that is finally about to change with a remote-control feature for ChatGPT‘s Codex on Android devices.",
+        "word_count": 114,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Android",
+        "source_type": "research",
+        "text": "For months, developers on Reddit and GitHub have been asking for a way to manage their Codex sessions remotely. The idea is simple: you start a complex coding task on your computer and monitor or guide the AI agent using your smartphone. Until now, users had to rely on unofficial hacks or switch to other platforms like Anthropic’s Claude to get this functionality. Recent findings in the ChatGPT Android app (version 1.2026.125) suggest that OpenAI has been paying attention. As spotted by Android Authority, several text strings hidden within the app’s code point directly to a new feature designed to bridge the gap between your phone and your desktop coding environment.",
+        "word_count": 111,
+        "keyword_overlap": 7,
+        "strong_overlap": 2
+      },
+      {
+        "source": "The Verge",
+        "source_type": "research",
+        "text": "Following the surge in popularity for Anthropic’s Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on “side quests,” shutting down projects like the Sora video-generation tool, and focusing on growing its enterprise business. The company’s push included the recently released major update for Codex that lets it operate apps on macOS — a potentially major step as part of its ambitions to make a desktop “superapp.”",
+        "word_count": 74,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "More than just being a response to Anthropic, which has offered Claude Code users a way to access their work on mobile since last fall, you can view today's release as another building block in OpenAI's ongoing super app project. In March, the company confirmed it was working on a single desktop app that would combine ChatGPT, Codex and its Atlas web browser into a cohesive experience. Building the scaffolding that gives people a way to access parts of that platform from their mobile device seems like a no-brainer. To try out the new integration, update the ChatGPT app on you phone and the Codex app on Mac. OpenAI says support for connecting the Windows app is coming soon. ---\n\nOpenAI is developing a new feature for the ChatGPT Android app that will allow users to remotely control Codex coding sessions on their PCs. Found in version 1.2026.125, this update addresses a long-standing request from developers who want to manage AI agents from their smartphones—a feature already available on competing platforms like Claude. Artificial intelligence has already shifted how developers write and debug code. However, a specific missing piece has long frustrated OpenAI users. Some competitors have allowed developers to interact with their PC-based coding agents via mobile. Meanwhile, Codex users have been patiently waiting. Well, it seems that is finally about to change with a remote-control feature for ChatGPT‘s Codex on Android devices.\n\nFor months, developers on Reddit and GitHub have been asking for a way to manage their Codex sessions remotely. The idea is simple: you start a complex coding task on your computer and monitor or guide the AI agent using your smartphone. Until now, users had to rely on unofficial hacks or switch to other platforms like Anthropic’s Claude to get this functionality. Recent findings in the ChatGPT Android app (version 1.2026.125) suggest that OpenAI has been paying attention. As spotted by Android Authority, several text strings hidden within the app’s code point directly to a new feature designed to bridge the gap between your phone and your desktop coding environment.\n\nFollowing the surge in popularity for Anthropic’s Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on “side quests,” shutting down projects like the Sora video-generation tool, and focusing on growing its enterprise business. The company’s push included the recently released major update for Codex that lets it operate apps on macOS — a potentially major step as part of its ambitions to make a desktop “superapp.”",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1017,
+      "selected_blocks": 4,
+      "selected_source_words": 419,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Engadget",
+        "Engadget",
+        "Engadget",
+        "The Verge",
+        "The Verge",
+        "The Verge",
+        "Android",
+        "Android",
+        "Android",
+        "Android",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "Engadget",
+        "Android",
+        "Android",
+        "The Verge"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "OpenAI says Codex is coming to your phone",
+      "description": "The update gives users enhanced flexibility over how they can manage their workflows.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "OpenAI says Codex is coming to your phone",
+    "description": "The update gives users enhanced flexibility over how they can manage their workflows.",
+    "link": "https://techcrunch.com/2026/05/14/openai-says-codex-is-coming-to-your-phone/",
+    "published": "2026-05-14T20:58:55+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "6da4b1b98400f4db76e3f581193e5229",
+    "_url_hash": "dfc7a8e8572b0c528cfe2dd8b5516bbe2aaff710d7e6682ec286a23b00bf6e60",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Engadget]\nSince debuting last spring, OpenAI's Codex coding app has seen standalone Mac and Windows releases, so it was only a matter of time before OpenAI gave people a way to access their Codex projects on mobile. Now it's doing just that. Starting today, all ChatGPT users, including those using the chatbot through OpenAI's Go and Free tiers, can use the software through the ChatGPT app on Android and iOS.\n\nTo be clear, you won't be using Codex to program on your phone. Instead, the ChatGPT mobile app is acting here as a intermediary between you and whatever environment you've set it up for your coding projects, whether that be a physical device like a Mac mini or a remote space managed by your company.\n\nThat might seem limiting, but it does mean your files, credentials and permissions stay secure on the machine where Codex is running. ChatGPT can still deliver updates — including screenshots and test results — while you're on the go, and you can prompt Codex from your phone. As a result, it's possible to get Codex working on something at home or the office, leave for the day, and the software can contact you when it needs a decision on how to move forward on a request, reducing downtime on tight projects.\n\n\"Under the hood, Codex uses a secure relay layer that keeps trusted machines reachable across devices without exposing them directly to the public internet,\" OpenAI explains. \"That relay also keeps active session state and context synced anywhere you're signed in with ChatGPT.\"\n\nMore than just being a response to Anthropic, which has offered Claude Code users a way to access their work on mobile since last fall, you can view today's release as another building block in OpenAI's ongoing super app project. In March, the company confirmed it was working on a single desktop app that would combine ChatGPT, Codex and its Atlas web browser into a cohesive experience. Building the scaffolding that gives people a way to access parts of that platform from their mobile device seems like a no-brainer.\n\nTo try out the new integration, update the ChatGPT app on you phone and the Codex app on Mac. OpenAI says support for connecting the Windows app is coming soon.\n\n---\n\n[Lähde: The Verge]\nYou’ll be able to tell the company’s desktop AI tool what to do from your iOS or Android phone.\n\nYou’ll be able to tell the company’s desktop AI tool what to do from your iOS or Android phone.\n\nOpenAI is going to let users access Codex, its desktop AI tool that can write code and use apps on your computer, from the ChatGPT app on your phone.\n\nFollowing the surge in popularity for Anthropic’s Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on “side quests,” shutting down projects like the Sora video-generation tool, and focusing on growing its enterprise business. The company’s push included the recently released major update for Codex that lets it operate apps on macOS — a potentially major step as part of its ambitions to make a desktop “superapp.”\n\nCodex in the ChatGPT mobile app lets you use your phone to tell Codex on your computer to work on a task. With your phone, you can “work across all of your threads, review outputs, approve commands, change models, or start something new” in Codex, according to a blog post. “Your files, credentials, permissions, and local setup stay on the machine where Codex is operating, while updates flow back to your phone in real time, including screenshots, terminal output, diffs, test results, and approvals.”\n\nThe feature is rolling out now as a preview on iOS and Android for all ChatGPT plans, including the free plan and the more affordable Go plan.\n\n---\n\n[Lähde: Android]\nOpenAI is developing a new feature for the ChatGPT Android app that will allow users to remotely control Codex coding sessions on their PCs. Found in version 1.2026.125, this update addresses a long-standing request from developers who want to manage AI agents from their smartphones—a feature already available on competing platforms like Claude.\n\nArtificial intelligence has already shifted how developers write and debug code. However, a specific missing piece has long frustrated OpenAI users. Some competitors have allowed developers to interact with their PC-based coding agents via mobile. Meanwhile, Codex users have been patiently waiting. Well, it seems that is finally about to change with a remote-control feature for ChatGPT‘s Codex on Android devices.\n\nFor months, developers on Reddit and GitHub have been asking for a way to manage their Codex sessions remotely. The idea is simple: you start a complex coding task on your computer and monitor or guide the AI agent using your smartphone. Until now, users had to rely on unofficial hacks or switch to other platforms like Anthropic’s Claude to get this functionality.\n\nRecent findings in the ChatGPT Android app (version 1.2026.125) suggest that OpenAI has been paying attention. As spotted by Android Authority, several text strings hidden within the app’s code point directly to a new feature designed to bridge the gap between your phone and your desktop coding environment.\n\nThe leaked information indicates that the ChatGPT app will soon act as a remote control for Codex. This would allow you to check progress, provide new instructions, or fix errors in a coding session running on your PC without being tied to your desk.\n\nThere are no images available that show the final interface in a fully functional state. However, preliminary screens suggest a native and streamlined integration (shown below). OpenAI basically seeks to offer the ability to steer the AI ​​​​agent from anywhere.\n\nThis move is a clear response to the growing popularity of “vibe coding” and autonomous agents. Developers are increasingly looking for tools that work across all their devices. With a remote-control feature, OpenAI is making Codex much more versatile for those who need to stay productive while away from their monitors.\n\nOpenAI hasn’t officially announced a release date yet. But the presence of these st...",
+    "research_source": "multi"
+  }
+}
