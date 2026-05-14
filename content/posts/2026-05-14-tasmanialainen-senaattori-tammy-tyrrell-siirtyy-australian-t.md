@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/may/14/tammy-tyrrell-independent-senator-tasmania-defected-labor-former-jacqui-lambie"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
