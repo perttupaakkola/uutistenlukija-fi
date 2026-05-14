@@ -1,0 +1,126 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-14T09:21:33.391055+00:00",
+  "digest": "436ccb1a8f",
+  "packet": {
+    "packet_id": "20260514T092133Z_436ccb1a8f",
+    "created_at": "2026-05-14T09:21:33Z",
+    "headline_seed": "Cuba has run out of diesel and oil, energy minister says",
+    "description_seed": "The minister says the situation in Cuba is \"extremely tense\", as a US-led blockade of oil to the country causes widespread power cuts.",
+    "link": "https://www.bbc.com/news/articles/cd7pyrj0vx7o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Guardian",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cd7pyrj0vx7o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Cuba has run out of diesel and oil, energy minister says"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The minister says the situation in Cuba is \"extremely tense\", as a US-led blockade of oil to the country causes widespread power cuts.",
+        "word_count": 23,
+        "keyword_overlap": 13,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Cuba has completely run out of diesel and fuel oil, the country's Energy Minister Vicente de la O Levy has said. In an interview with state-run media, de la O Levy said there were limited amounts of gas available, but that Cuba's energy system was in a \"critical\" state as a US-led blockade of oil to the country squeezed supply. Scattered protests against power cuts broke out in the capital Havana on Wednesday, the Reuters news agency reported. The US this week reiterated its offer of sending $100m (£74m) in aid to the country in exchange for \"meaningful reforms to Cuba's communist system\".",
+        "word_count": 103,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Minister Vicente de la O Levy says ‘Cuba is open to anyone that wants to sell us fuel’ as rolling power blackouts increase Cuba has completely run out of diesel and fuel oil, the country’s energy minister said on Wednesday, as Havana faces its worst rolling blackouts in decades amid a US blockade that has strangled the island of fuel. “We have absolutely no fuel (oil), and absolutely no diesel,” the energy minister, Vicente de la O Levy, said on state media, adding that the national grid was in a “critical” state. “We have no reserves.” Fuel oil is a product derived from crude oil distillation used to generate heat or power. The minister said blackouts had increased dramatically across Havana, with many neigbhourhoods in the capital without light for up to 22 hours a day.",
+        "word_count": 136,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "\"The sum of the different types of fuel: crude oil, fuel oil, of which we have absolutely none; diesel, of which we have absolutely none - I am being repetitive - the only thing we have is gas from our wells, where production has grown,\" de la O Levy said. Under the US blockade, parts of Havana have been plunged into 20 to 22-hour blackout periods, he continued. He also acknowledged that the situation in the country had been \"extremely tense\". Hospitals have been unable to function normally, while schools and government offices have been forced to close. Tourism, an economic engine for Cuba, has also been impacted.",
+        "word_count": 108,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The minister says the situation in Cuba is \"extremely tense\", as a US-led blockade of oil to the country causes widespread power cuts.\n\nCuba has completely run out of diesel and fuel oil, the country's Energy Minister Vicente de la O Levy has said. In an interview with state-run media, de la O Levy said there were limited amounts of gas available, but that Cuba's energy system was in a \"critical\" state as a US-led blockade of oil to the country squeezed supply. Scattered protests against power cuts broke out in the capital Havana on Wednesday, the Reuters news agency reported. The US this week reiterated its offer of sending $100m (£74m) in aid to the country in exchange for \"meaningful reforms to Cuba's communist system\".\n\nMinister Vicente de la O Levy says ‘Cuba is open to anyone that wants to sell us fuel’ as rolling power blackouts increase Cuba has completely run out of diesel and fuel oil, the country’s energy minister said on Wednesday, as Havana faces its worst rolling blackouts in decades amid a US blockade that has strangled the island of fuel. “We have absolutely no fuel (oil), and absolutely no diesel,” the energy minister, Vicente de la O Levy, said on state media, adding that the national grid was in a “critical” state. “We have no reserves.” Fuel oil is a product derived from crude oil distillation used to generate heat or power. The minister said blackouts had increased dramatically across Havana, with many neigbhourhoods in the capital without light for up to 22 hours a day.\n\n\"The sum of the different types of fuel: crude oil, fuel oil, of which we have absolutely none; diesel, of which we have absolutely none - I am being repetitive - the only thing we have is gas from our wells, where production has grown,\" de la O Levy said. Under the US blockade, parts of Havana have been plunged into 20 to 22-hour blackout periods, he continued. He also acknowledged that the situation in the country had been \"extremely tense\". Hospitals have been unable to function normally, while schools and government offices have been forced to close. Tourism, an economic engine for Cuba, has also been impacted.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1003,
+      "selected_blocks": 4,
+      "selected_source_words": 370,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "AOL",
+        "AOL",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Cuba has run out of diesel and oil, energy minister says",
+      "description": "The minister says the situation in Cuba is \"extremely tense\", as a US-led blockade of oil to the country causes widespread power cuts.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Cuba has run out of diesel and oil, energy minister says",
+    "description": "The minister says the situation in Cuba is \"extremely tense\", as a US-led blockade of oil to the country causes widespread power cuts.",
+    "link": "https://www.bbc.com/news/articles/cd7pyrj0vx7o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-14T09:06:23+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e3ab1558ebbdaaab4af14f3b0857801d",
+    "_url_hash": "ef478192231e94c159b6468a7eba2dceae9a0cbc24299604d95d766974a4f1f1",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nCuba has completely run out of diesel and fuel oil, the country's Energy Minister Vicente de la O Levy has said.\n\nIn an interview with state-run media, de la O Levy said there were limited amounts of gas available, but that Cuba's energy system was in a \"critical\" state as a US-led blockade of oil to the country squeezed supply.\n\nScattered protests against power cuts broke out in the capital Havana on Wednesday, the Reuters news agency reported.\n\nThe US this week reiterated its offer of sending $100m (£74m) in aid to the country in exchange for \"meaningful reforms to Cuba's communist system\".\n\n\"The sum of the different types of fuel: crude oil, fuel oil, of which we have absolutely none; diesel, of which we have absolutely none - I am being repetitive - the only thing we have is gas from our wells, where production has grown,\" de la O Levy said.\n\nUnder the US blockade, parts of Havana have been plunged into 20 to 22-hour blackout periods, he continued.\n\nHe also acknowledged that the situation in the country had been \"extremely tense\".\n\nHospitals have been unable to function normally, while schools and government offices have been forced to close. Tourism, an economic engine for Cuba, has also been impacted.\n\nCuba normally relies on Venezuela and Mexico to supply oil to its refinery system. However, the two countries have largely cut off supplies since US President Donald Trump threatened tariffs on countries that send fuel to Cuba.\n\nAs the island continues to grapple with these energy shortages, rare protests erupted in Havana on Wednesday evening.\n\nHundreds of Cubans took to the streets across the city, blocking roads with burning rubbish and shouting anti-government slogans.\n\nIt marked the biggest single night of demonstrations in the city since Cuba's energy crisis began in January, Reuters reported.\n\nResidents of the San Miguel del Padron neighbourhood could be heard shouting \"turn on the lights!\", the AFP news agency said.\n\nTaking to social media on Wednesday, Cuban President Miguel Diaz-Canel blamed the US for the energy shortages as he acknowledged the \"particularly tense\" situation across the island.\n\n\"This dramatic worsening has a single cause: the genocidal energy blockade to which the United States subjects our country, threatening irrational tariffs against any nation that supplies us with fuel,\" he wrote.\n\nLast week, US Secretary of State Marco Rubio said Havana had rejected a US offer of humanitarian aid worth $100m (£74m), a claim Cuba denie\n\n---\n\n[Lähde: The Guardian]\nMinister Vicente de la O Levy says ‘Cuba is open to anyone that wants to sell us fuel’ as rolling power blackouts increase\n\nCuba has completely run out of diesel and fuel oil, the country’s energy minister said on Wednesday, as Havana faces its worst rolling blackouts in decades amid a US blockade that has strangled the island of fuel.\n\n“We have absolutely no fuel (oil), and absolutely no diesel,” the energy minister, Vicente de la O Levy, said on state media, adding that the national grid was in a “critical” state. “We have no reserves.” Fuel oil is a product derived from crude oil distillation used to generate heat or power.\n\nThe minister said blackouts had increased dramatically across Havana, with many neigbhourhoods in the capital without light for up to 22 hours a day.\n\nThe national grid, De la O Levy said, was operating entirely on domestic crude oil, natural gas and renewable energy.\n\nCuba has installed 1,300 megawatts of solar power over the past two years, but much of that capacity is lost to grid instability amid the fuel shortages, he said, reducing efficiency and output.\n\nHe said Cuba continued negotiations to import fuel despite the blockade, but said rising global oil and transportation prices amid the US-Israeli war with Iran were further complicating that effort.\n\n“Cuba is open to anyone that wants to sell us fuel,” he said.\n\nNeither Mexico nor Venezuela, once top suppliers of oil to Cuba, has sent fuel to the island since the US president, Donald Trump’s January 2026 executive order threatening to slap tariffs on any country shipping fuel to the communist-run nation.\n\nOnly a single large oil tanker, the Russian-flagged Anatoly Kolodkin, has delivered crude oil to Cuba since December, providing temporary relief in April.\n\nThe renewed power cuts in Havana and beyond come as the US blockade on fuel imports to Cuba enters its fourth month, crippling public services across the Caribbean island of nearly 10 million people.\n\nThe UN last week called Trump’s fuel blockade unlawful, saying it had obstructed the “Cuban people’s right to development while undermining their rights to food, education, health, and water and sanitation.”\n\nIn March, Trump declared that he expects to have “the honour of taking Cuba”, amid US negotiations with Havana over the country’s future.\n\nThe US has sought to intensify pressure on Cuba, its longtime foe, since seizing Venezuelan president Nicolás Maduro in January. Trump has since cut off Venezuelan oil shipments to C\n\n---\n\n[Lähde: AOL]\nHAVANA, May 13 (Reuters) - Protests broke out across the Cuban capital of Havana on Wednesday evening as the city confronted its worst rolling blackouts in decades amid a U.S. blockade that has starved the island of fuel.\n\nCrowds of hundreds ‌of angry Cubans poured onto the streets in several outlying neighborhoods, blocking roads with burning piles of rubbish, banging pots and ‌shouting \"Turn on the lights!\" and \"The people, united, will never be defeated!\"\n\nReuters witnessed multiple groups of peaceful protesters in locations across the city, marking the largest single night of demonstrations in ​Havana since the energy crisis took hold.\n\nThe shortages and blackouts have dramatically worsened since January when U.S. President Donald Trump, who has said he wants to oust Cuba's communist-run government, imposed an embargo and threatened tariffs on any nation supplying the country with fuel.\n\nHavana resident Rodolfo Alonso, shirtless and sweating, said he had decided to protest after hi...",
+    "research_source": "multi"
+  }
+}
