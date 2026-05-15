@@ -1,0 +1,210 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-15T21:21:09.949606+00:00",
+  "digest": "7f5675b19d",
+  "packet": {
+    "packet_id": "20260515T212109Z_7f5675b19d",
+    "created_at": "2026-05-15T21:21:09Z",
+    "headline_seed": "Trump says 20-year nuclear programme suspension by Iran is enough",
+    "description_seed": "The US president says Tehran has to show \"real\" commitment to removing nuclear fuel and stopping uranium enrichment.",
+    "link": "https://www.bbc.com/news/articles/cgkpnnen5dzo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cgkpnnen5dzo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump says 20-year nuclear programme suspension by Iran is enough"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The US president says Tehran has to show \"real\" commitment to removing nuclear fuel and stopping uranium enrichment.",
+        "word_count": 18,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US President Donald Trump has said he would accept a 20-year suspension by Iran of its nuclear programme, in what appears to be confirmation of a shift in position away from a demand for a total end to it. Trump said it had to be a \"real 20 years\". Previously he has called on Iran to permanently cease enriching uranium - a stage in making a weapon - and to be prevented from ever acquiring nuclear weapons. But he also said his patience with Iran was running out, with no sign of a breakthrough in talks. Israeli and US forces began massive air strikes on Iran on 28 February. A ceasefire in place since last month and meant to facilitate talks has been largely observed, despite occasional exchanges of fire. Pakistan has been playing the role of mediator.",
+        "word_count": 138,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "When a reporter suggested that a 20-year suspension of Iran's nuclear programme was not enough, he replied: \"Twenty years is enough, but the level of guarantee from them, in other words it's got to be a real 20 years.\" He did no elaborate. US media reported in April that during a session of talks in the Pakistani capital, Islamabad, Vice-President JD Vance had responded to an Iranian proposal to cease enrichment for five years by insisting on a minimum of 20 years. However, this is thought to be the first time Trump himself has mentioned a 20-year time frame.",
+        "word_count": 99,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "However, both sides appear to be far apart, having rejected each other's most recent proposals to end the war. Iranian media said Tehran's proposal had included an immediate end to the war on all fronts - an apparent reference to Israeli attacks against its Shia ally Hezbollah in Lebanon - a halt to the US naval blockade of Iranian ports and guarantees of no further attacks on Iran. Speaking to reporters on Air Force One after talks in Beijing with Chinese President Xi Jinping, Trump said the two sides had agreed Tehran could not be allowed to have a nuclear weapon and must reopen the Strait of Hormuz, which it is currently blocking, prompting a rise in world oil prices.",
+        "word_count": 120,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The US president says Tehran has to show \"real\" commitment to removing nuclear fuel and stopping uranium enrichment.\n\nUS President Donald Trump has said he would accept a 20-year suspension by Iran of its nuclear programme, in what appears to be confirmation of a shift in position away from a demand for a total end to it. Trump said it had to be a \"real 20 years\". Previously he has called on Iran to permanently cease enriching uranium - a stage in making a weapon - and to be prevented from ever acquiring nuclear weapons. But he also said his patience with Iran was running out, with no sign of a breakthrough in talks. Israeli and US forces began massive air strikes on Iran on 28 February. A ceasefire in place since last month and meant to facilitate talks has been largely observed, despite occasional exchanges of fire. Pakistan has been playing the role of mediator.\n\nWhen a reporter suggested that a 20-year suspension of Iran's nuclear programme was not enough, he replied: \"Twenty years is enough, but the level of guarantee from them, in other words it's got to be a real 20 years.\" He did no elaborate. US media reported in April that during a session of talks in the Pakistani capital, Islamabad, Vice-President JD Vance had responded to an Iranian proposal to cease enrichment for five years by insisting on a minimum of 20 years. However, this is thought to be the first time Trump himself has mentioned a 20-year time frame.\n\nHowever, both sides appear to be far apart, having rejected each other's most recent proposals to end the war. Iranian media said Tehran's proposal had included an immediate end to the war on all fronts - an apparent reference to Israeli attacks against its Shia ally Hezbollah in Lebanon - a halt to the US naval blockade of Iranian ports and guarantees of no further attacks on Iran. Speaking to reporters on Air Force One after talks in Beijing with Chinese President Xi Jinping, Trump said the two sides had agreed Tehran could not be allowed to have a nuclear weapon and must reopen the Strait of Hormuz, which it is currently blocking, prompting a rise in world oil prices.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 453,
+      "selected_blocks": 4,
+      "selected_source_words": 375,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump says 20-year nuclear programme suspension by Iran is enough",
+      "description": "The US president says Tehran has to show \"real\" commitment to removing nuclear fuel and stopping uranium enrichment.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Trump says 20-year nuclear programme suspension by Iran is enough",
+    "description": "The US president says Tehran has to show \"real\" commitment to removing nuclear fuel and stopping uranium enrichment.",
+    "link": "https://www.bbc.com/news/articles/cgkpnnen5dzo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-15T21:17:05+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "9fd968e74375517451c9e5f69c6080fa",
+    "_url_hash": "f9a40567818b7fb8792f88fb34fdf5652861eb455601a54cea68ff1e8460df38",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS President Donald Trump has said he would accept a 20-year suspension by Iran of its nuclear programme, in what appears to be confirmation of a shift in position away from a demand for a total end to it.\n\nTrump said it had to be a \"real 20 years\". Previously he has called on Iran to permanently cease enriching uranium - a stage in making a weapon - and to be prevented from ever acquiring nuclear weapons.\n\nBut he also said his patience with Iran was running out, with no sign of a breakthrough in talks.\n\nIsraeli and US forces began massive air strikes on Iran on 28 February. A ceasefire in place since last month and meant to facilitate talks has been largely observed, despite occasional exchanges of fire.\n\nPakistan has been playing the role of mediator.\n\nHowever, both sides appear to be far apart, having rejected each other's most recent proposals to end the war.\n\nIranian media said Tehran's proposal had included an immediate end to the war on all fronts - an apparent reference to Israeli attacks against its Shia ally Hezbollah in Lebanon - a halt to the US naval blockade of Iranian ports and guarantees of no further attacks on Iran.\n\nSpeaking to reporters on Air Force One after talks in Beijing with Chinese President Xi Jinping, Trump said the two sides had agreed Tehran could not be allowed to have a nuclear weapon and must reopen the Strait of Hormuz, which it is currently blocking, prompting a rise in world oil prices.\n\nWhen a reporter suggested that a 20-year suspension of Iran's nuclear programme was not enough, he replied:  \"Twenty years is enough, but the level of guarantee from them, in other words it's got to be a real 20 years.\" He did no elaborate.\n\nUS media reported in April that during a session of talks in the Pakistani capital, Islamabad, Vice-President JD Vance had responded to an Iranian proposal to cease enrichment for five years by insisting on a minimum of 20 years.\n\nHowever, this is thought to be the first time Trump himself has mentioned a 20-year time frame.\n\nIn his first term as president, he withdrew from a 2015 nuclear agreement reached with Iran by the Obama administration. One of the reasons given was opposition to so-called \"sunset clauses\" which would have allowed some restrictions on Iran to expire over time.\n\nIsrael has so far not reacted to Trump's remarks. Prime Minister Benjamin Netanyahu has said that Iran's stockpile of enriched uranium must be \"taken out\" before the war against Iran can be considered over.\n\nNetanyahu ",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-15T21:23:57.246797+00:00",
+  "payload": {
+    "packet_id": "20260515T212109Z_7f5675b19d",
+    "title": "Trump hyväksyisi Iranilta 20 vuoden ydinohjelman keskeytyksen",
+    "summary": "Yhdysvaltain presidentti Donald Trump sanoo hyväksyvänsä Iranilta 20 vuoden tauon ydinohjelmassa, jos sitoumus on todellinen ja valvottavissa. Lausunto viittaa siihen, että Washingtonin kanta voi olla siirtymässä pois vaatimuksesta ydinohjelman täydellisestä lopettamisesta.",
+    "content": "Yhdysvaltain presidentti Donald Trump on sanonut, että Iranin 20 vuoden mittainen ydinohjelman keskeytys riittäisi, jos Teheran osoittaa sitoutuvansa aidosti ydinpolttoaineen poistamiseen ja uraanin rikastamisen lopettamiseen. Trumpin mukaan kyse ei voisi olla muodollisesta lupauksesta, vaan sen pitäisi olla “todelliset 20 vuotta”.\n\n## Vaatimus näyttää muuttuneen\n\nTrumpin kommentti vaikuttaa merkitsevän muutosta aiempaan linjaan. Aiemmin hän on vaatinut Irania lopettamaan uraanin rikastamisen pysyvästi ja estettäväksi hankkimasta ydinaseita koskaan. Uraanin rikastaminen on vaihe, jota voidaan käyttää myös ydinaseen valmistamisessa.\n\nToimittajan huomautettua, ettei 20 vuoden keskeytys välttämättä riittäisi, Trump vastasi, että 20 vuotta riittää, mutta takuiden tason on oltava todellinen. Hän ei tarkentanut, millaisia valvonta- tai takuumekanismeja Yhdysvallat edellyttäisi.\n\nYhdysvaltalaismedia on aiemmin kertonut, että varapresidentti JD Vance olisi huhtikuussa Pakistanin pääkaupungissa Islamabadissa käydyissä neuvotteluissa torjunut Iranin ehdottaman viiden vuoden rikastamistauon ja vaatinut vähintään 20 vuoden keskeytystä. Nyt Trumpin arvioidaan maininneen saman aikarajan itse ensimmäistä kertaa.\n\n## Neuvottelut ovat yhä kaukana ratkaisusta\n\nTrump sanoi samalla kärsivällisyytensä Iranin suhteen olevan loppumassa, eikä neuvotteluissa ole nähty selvää läpimurtoa. Pakistan on toiminut välittäjänä, kun osapuolet yrittävät löytää tietä ulos sodasta.\n\nIsraelin ja Yhdysvaltain joukot aloittivat laajat ilmaiskut Iraniin 28. helmikuuta. Viime kuusta asti voimassa ollut tulitauko, jonka tarkoituksena on ollut helpottaa neuvotteluja, on pääosin pitänyt, vaikka tulitusta on ajoittain vaihdettu.\n\nOsapuolet näyttävät silti olevan kaukana toisistaan. Iranilaismedian mukaan Teheranin ehdotus sisälsi sodan välittömän lopettamisen kaikilla rintamilla, Yhdysvaltain Iranin satamiin kohdistaman merisaarron päättämisen sekä takeet siitä, ettei Iraniin kohdistu uusia iskuja.\n\nTrump puhui toimittajille Air Force One -koneessa Pekingissä Kiinan presidentin Xi Jinpingin kanssa käytyjen keskustelujen jälkeen. Hänen mukaansa osapuolet olivat yhtä mieltä siitä, ettei Iranille voida sallia ydinaseita. Trump sanoi myös, että Iranin on avattava Hormuzinsalmi, jonka sulkeminen on nostanut maailman öljynhintoja.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Iran",
+      "Yhdysvallat",
+      "Donald Trump",
+      "ydinohjelma",
+      "uraanin rikastaminen",
+      "Hormuzinsalmi"
+    ],
+    "summary_bullets": [
+      "Trump sanoo hyväksyvänsä Iranilta 20 vuoden ydinohjelman keskeytyksen, jos takuut ovat todellisia.",
+      "Lausunto viittaa muutokseen aiemmasta vaatimuksesta ydinohjelman pysyvästä lopettamisesta.",
+      "Iranin ja Yhdysvaltain väliset neuvottelut ovat edelleen kaukana ratkaisusta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu annetun paketin BBC-aineistoon. Epävarmuus liittyy siihen, että yksityiskohtia valvontamekanismeista ja osapuolten ehdotusten tarkoista ehdoista ei ole lähdeaineistossa avattu."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\"packet_id\":\"20260515T212109Z_7f5675b19d\",\"title\":\"Trump hyväksyisi Iranilta 20 vuoden ydinohjelman keskeytyksen\",\"summary\":\"Yhdysvaltain presidentti Donald Trump sanoo hyväksyvänsä Iranilta 20 vuoden tauon ydinohjelmassa, jos sitoumus on todellinen ja valvottavissa. Lausunto viittaa siihen, että Washingtonin kanta voi olla siirtymässä pois vaatimuksesta ydinohjelman täydellisestä lopettamisesta.\",\"content\":\"Yhdysvaltain presidentti Donald Trump on sanonut, että Iranin 20 vuoden mittainen ydinohjelman keskeytys riittäisi, jos Teheran osoittaa sitoutuvansa aidosti ydinpolttoaineen poistamiseen ja uraanin rikastamisen lopettamiseen. Trumpin mukaan kyse ei voisi olla muodollisesta lupauksesta, vaan sen pitäisi olla “todelliset 20 vuotta”.\\n\\n## Vaatimus näyttää muuttuneen\\n\\nTrumpin kommentti vaikuttaa merkitsevän muutosta aiempaan linjaan. Aiemmin hän on vaatinut Irania lopettamaan uraanin rikastamisen pysyvästi ja estettäväksi hankkimasta ydinaseita koskaan. Uraanin rikastaminen on vaihe, jota voidaan käyttää myös ydinaseen valmistamisessa.\\n\\nToimittajan huomautettua, ettei 20 vuoden keskeytys välttämättä riittäisi, Trump vastasi, että 20 vuotta riittää, mutta takuiden tason on oltava todellinen. Hän ei tarkentanut, millaisia valvonta- tai takuumekanismeja Yhdysvallat edellyttäisi.\\n\\nYhdysvaltalaismedia on aiemmin kertonut, että varapresidentti JD Vance olisi huhtikuussa Pakistanin pääkaupungissa Islamabadissa käydyissä neuvotteluissa torjunut Iranin ehdottaman viiden vuoden rikastamistauon ja vaatinut vähintään 20 vuoden keskeytystä. Nyt Trumpin arvioidaan maininneen saman aikarajan itse ensimmäistä kertaa.\\n\\n## Neuvottelut ovat yhä kaukana ratkaisusta\\n\\nTrump sanoi samalla kärsivällisyytensä Iranin suhteen olevan loppumassa, eikä neuvotteluissa ole nähty selvää läpimurtoa. Pakistan on toiminut välittäjänä, kun osapuolet yrittävät löytää tietä ulos sodasta.\\n\\nIsraelin ja Yhdysvaltain joukot aloittivat laajat ilmaiskut Iraniin 28. helmikuuta. Viime kuusta asti voimassa ollut tulitauko, jonka tarkoituksena on ollut helpottaa neuvotteluja, on pääosin pitänyt, vaikka tulitusta on ajoittain vaihdettu.\\n\\nOsapuolet näyttävät silti olevan kaukana toisistaan. Iranilaismedian mukaan Teheranin ehdotus sisälsi sodan välittömän lopettamisen kaikilla rintamilla, Yhdysvaltain Iranin satamiin kohdistaman merisaarron päättämisen sekä takeet siitä, ettei Iraniin kohdistu uusia iskuja.\\n\\nTrump puhui toimittajille Air Force One -koneessa Pekingissä Kiinan presidentin Xi Jinpingin kanssa käytyjen keskustelujen jälkeen. Hänen mukaansa osapuolet olivat yhtä mieltä siitä, ettei Iranille voida sallia ydinaseita. Trump sanoi myös, että Iranin on avattava Hormuzinsalmi, jonka sulkeminen on nostanut maailman öljynhintoja.\",\"category\":\"Ulkomaat\",\"tags\":[\"Iran\",\"Yhdysvallat\",\"Donald Trump\",\"ydinohjelma\",\"uraanin rikastaminen\",\"Hormuzinsalmi\"],\"summary_bullets\":[\"Trump sanoo hyväksyvänsä Iranilta 20 vuoden ydinohjelman keskeytyksen, jos takuut ovat todellisia.\",\"Lausunto viittaa muutokseen aiemmasta vaatimuksesta ydinohjelman pysyvästä lopettamisesta.\",\"Iranin ja Yhdysvaltain väliset neuvottelut ovat edelleen kaukana ratkaisusta.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.86,\"journalist_note\":\"Artikkeli perustuu annetun paketin BBC-aineistoon. Epävarmuus liittyy siihen, että yksityiskohtia valvontamekanismeista ja osapuolten ehdotusten tarkoista ehdoista ei ole lähdeaineistossa avattu.\"}",
+  "article": {
+    "title": "Trump hyväksyisi Iranilta 20 vuoden ydinohjelman keskeytyksen",
+    "description": "Yhdysvaltain presidentti Donald Trump sanoo hyväksyvänsä Iranilta 20 vuoden tauon ydinohjelmassa, jos sitoumus on todellinen ja valvottavissa. Lausunto viittaa siihen, että Washingtonin kanta voi olla siirtymässä pois vaatimuksesta ydinohjelman täydellisestä lopettamisesta.",
+    "link": "https://www.bbc.com/news/articles/cgkpnnen5dzo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-15T21:17:05+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "9fd968e74375517451c9e5f69c6080fa",
+    "_url_hash": "f9a40567818b7fb8792f88fb34fdf5652861eb455601a54cea68ff1e8460df38",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS President Donald Trump has said he would accept a 20-year suspension by Iran of its nuclear programme, in what appears to be confirmation of a shift in position away from a demand for a total end to it.\n\nTrump said it had to be a \"real 20 years\". Previously he has called on Iran to permanently cease enriching uranium - a stage in making a weapon - and to be prevented from ever acquiring nuclear weapons.\n\nBut he also said his patience with Iran was running out, with no sign of a breakthrough in talks.\n\nIsraeli and US forces began massive air strikes on Iran on 28 February. A ceasefire in place since last month and meant to facilitate talks has been largely observed, despite occasional exchanges of fire.\n\nPakistan has been playing the role of mediator.\n\nHowever, both sides appear to be far apart, having rejected each other's most recent proposals to end the war.\n\nIranian media said Tehran's proposal had included an immediate end to the war on all fronts - an apparent reference to Israeli attacks against its Shia ally Hezbollah in Lebanon - a halt to the US naval blockade of Iranian ports and guarantees of no further attacks on Iran.\n\nSpeaking to reporters on Air Force One after talks in Beijing with Chinese President Xi Jinping, Trump said the two sides had agreed Tehran could not be allowed to have a nuclear weapon and must reopen the Strait of Hormuz, which it is currently blocking, prompting a rise in world oil prices.\n\nWhen a reporter suggested that a 20-year suspension of Iran's nuclear programme was not enough, he replied:  \"Twenty years is enough, but the level of guarantee from them, in other words it's got to be a real 20 years.\" He did no elaborate.\n\nUS media reported in April that during a session of talks in the Pakistani capital, Islamabad, Vice-President JD Vance had responded to an Iranian proposal to cease enrichment for five years by insisting on a minimum of 20 years.\n\nHowever, this is thought to be the first time Trump himself has mentioned a 20-year time frame.\n\nIn his first term as president, he withdrew from a 2015 nuclear agreement reached with Iran by the Obama administration. One of the reasons given was opposition to so-called \"sunset clauses\" which would have allowed some restrictions on Iran to expire over time.\n\nIsrael has so far not reacted to Trump's remarks. Prime Minister Benjamin Netanyahu has said that Iran's stockpile of enriched uranium must be \"taken out\" before the war against Iran can be considered over.\n\nNetanyahu ",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain presidentti Donald Trump sanoo hyväksyvänsä Iranilta 20 vuoden tauon ydinohjelmassa, jos sitoumus on todellinen ja valvottavissa. Lausunto viittaa siihen, että Washingtonin kanta voi olla siirtymässä pois vaatimuksesta ydinohjelman täydellisestä lopettamisesta.",
+    "content": "Yhdysvaltain presidentti Donald Trump on sanonut, että Iranin 20 vuoden mittainen ydinohjelman keskeytys riittäisi, jos Teheran osoittaa sitoutuvansa aidosti ydinpolttoaineen poistamiseen ja uraanin rikastamisen lopettamiseen. Trumpin mukaan kyse ei voisi olla muodollisesta lupauksesta, vaan sen pitäisi olla “todelliset 20 vuotta”.\n\n## Vaatimus näyttää muuttuneen\n\nTrumpin kommentti vaikuttaa merkitsevän muutosta aiempaan linjaan. Aiemmin hän on vaatinut Irania lopettamaan uraanin rikastamisen pysyvästi ja estettäväksi hankkimasta ydinaseita koskaan. Uraanin rikastaminen on vaihe, jota voidaan käyttää myös ydinaseen valmistamisessa.\n\nToimittajan huomautettua, ettei 20 vuoden keskeytys välttämättä riittäisi, Trump vastasi, että 20 vuotta riittää, mutta takuiden tason on oltava todellinen. Hän ei tarkentanut, millaisia valvonta- tai takuumekanismeja Yhdysvallat edellyttäisi.\n\nYhdysvaltalaismedia on aiemmin kertonut, että varapresidentti JD Vance olisi huhtikuussa Pakistanin pääkaupungissa Islamabadissa käydyissä neuvotteluissa torjunut Iranin ehdottaman viiden vuoden rikastamistauon ja vaatinut vähintään 20 vuoden keskeytystä. Nyt Trumpin arvioidaan maininneen saman aikarajan itse ensimmäistä kertaa.\n\n## Neuvottelut ovat yhä kaukana ratkaisusta\n\nTrump sanoi samalla kärsivällisyytensä Iranin suhteen olevan loppumassa, eikä neuvotteluissa ole nähty selvää läpimurtoa. Pakistan on toiminut välittäjänä, kun osapuolet yrittävät löytää tietä ulos sodasta.\n\nIsraelin ja Yhdysvaltain joukot aloittivat laajat ilmaiskut Iraniin 28. helmikuuta. Viime kuusta asti voimassa ollut tulitauko, jonka tarkoituksena on ollut helpottaa neuvotteluja, on pääosin pitänyt, vaikka tulitusta on ajoittain vaihdettu.\n\nOsapuolet näyttävät silti olevan kaukana toisistaan. Iranilaismedian mukaan Teheranin ehdotus sisälsi sodan välittömän lopettamisen kaikilla rintamilla, Yhdysvaltain Iranin satamiin kohdistaman merisaarron päättämisen sekä takeet siitä, ettei Iraniin kohdistu uusia iskuja.\n\nTrump puhui toimittajille Air Force One -koneessa Pekingissä Kiinan presidentin Xi Jinpingin kanssa käytyjen keskustelujen jälkeen. Hänen mukaansa osapuolet olivat yhtä mieltä siitä, ettei Iranille voida sallia ydinaseita. Trump sanoi myös, että Iranin on avattava Hormuzinsalmi, jonka sulkeminen on nostanut maailman öljynhintoja.",
+    "category": "Ulkomaat",
+    "tags": [
+      "iran",
+      "yhdysvallat",
+      "donald trump",
+      "ydinohjelma",
+      "uraanin rikastaminen"
+    ],
+    "summary_bullets": [
+      "Trump sanoo hyväksyvänsä Iranilta 20 vuoden ydinohjelman keskeytyksen, jos takuut ovat todellisia.",
+      "Lausunto viittaa muutokseen aiemmasta vaatimuksesta ydinohjelman pysyvästä lopettamisesta.",
+      "Iranin ja Yhdysvaltain väliset neuvottelut ovat edelleen kaukana ratkaisusta."
+    ],
+    "key_points": [
+      "Trump sanoo hyväksyvänsä Iranilta 20 vuoden ydinohjelman keskeytyksen, jos takuut ovat todellisia.",
+      "Lausunto viittaa muutokseen aiemmasta vaatimuksesta ydinohjelman pysyvästä lopettamisesta.",
+      "Iranin ja Yhdysvaltain väliset neuvottelut ovat edelleen kaukana ratkaisusta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annetun paketin BBC-aineistoon. Epävarmuus liittyy siihen, että yksityiskohtia valvontamekanismeista ja osapuolten ehdotusten tarkoista ehdoista ei ole lähdeaineistossa avattu.",
+    "source_text": "The US president says Tehran has to show \"real\" commitment to removing nuclear fuel and stopping uranium enrichment.\n\nUS President Donald Trump has said he would accept a 20-year suspension by Iran of its nuclear programme, in what appears to be confirmation of a shift in position away from a demand for a total end to it. Trump said it had to be a \"real 20 years\". Previously he has called on Iran to permanently cease enriching uranium - a stage in making a weapon - and to be prevented from ever acquiring nuclear weapons. But he also said his patience with Iran was running out, with no sign of a breakthrough in talks. Israeli and US forces began massive air strikes on Iran on 28 February. A ceasefire in place since last month and meant to facilitate talks has been largely observed, despite occasional exchanges of fire. Pakistan has been playing the role of mediator.\n\nWhen a reporter suggested that a 20-year suspension of Iran's nuclear programme was not enough, he replied: \"Twenty years is enough, but the level of guarantee from them, in other words it's got to be a real 20 years.\" He did no elaborate. US media reported in April that during a session of talks in the Pakistani capital, Islamabad, Vice-President JD Vance had responded to an Iranian proposal to cease enrichment for five years by insisting on a minimum of 20 years. However, this is thought to be the first time Trump himself has mentioned a 20-year time frame.\n\nHowever, both sides appear to be far apart, having rejected each other's most recent proposals to end the war. Iranian media said Tehran's proposal had included an immediate end to the war on all fronts - an apparent reference to Israeli attacks against its Shia ally Hezbollah in Lebanon - a halt to the US naval blockade of Iranian ports and guarantees of no further attacks on Iran. Speaking to reporters on Air Force One after talks in Beijing with Chinese President Xi Jinping, Trump said the two sides had agreed Tehran could not be allowed to have a nuclear weapon and must reopen the Strait of Hormuz, which it is currently blocking, prompting a rise in world oil prices.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260515T212109Z_7f5675b19d",
+    "image": "https://images.unsplash.com/photo-1656436075877-a20103919f4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxUcnVtcCUyMElyYW4lMjBudWNsZWFyJTIwcHJvZ3JhbSUyMG5lZ290aWF0aW9uc3xlbnwxfDB8fHwxNzc4ODgwNDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1656436075877-a20103919f4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxUcnVtcCUyMElyYW4lMjBudWNsZWFyJTIwcHJvZ3JhbSUyMG5lZ290aWF0aW9uc3xlbnwxfDB8fHwxNzc4ODgwNDgzfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Trump hyväksyisi Iranilta 20 vuoden ydinohjelman keskeytyksen",
+    "image_credit": "Photo by Akbar Nemati on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-red-and-white-flag-WKIkjULHGm0?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-15T21:28:04.564048+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1656436075877-a20103919f4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxUcnVtcCUyMElyYW4lMjBudWNsZWFyJTIwcHJvZ3JhbSUyMG5lZ290aWF0aW9uc3xlbnwxfDB8fHwxNzc4ODgwNDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1656436075877-a20103919f4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxUcnVtcCUyMElyYW4lMjBudWNsZWFyJTIwcHJvZ3JhbSUyMG5lZ290aWF0aW9uc3xlbnwxfDB8fHwxNzc4ODgwNDgzfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-15T21:28:35.339806+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-15-trump-hyvaksyisi-iranilta-20-vuoden-ydinohjelman-keskeytykse.md"
+  ]
+}
