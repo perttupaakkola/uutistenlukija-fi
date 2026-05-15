@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/05/14/what-the-jury-will-actually-decide-in-the-case-of-elon-musk-vs-sam-altman/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
