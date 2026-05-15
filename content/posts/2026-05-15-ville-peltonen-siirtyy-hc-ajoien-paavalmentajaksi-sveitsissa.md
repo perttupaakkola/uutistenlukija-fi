@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/HC-Ajoie-palkkasi-Ville-Peltosen-ja-julkaisi-avoimen-viestin-Viitt%C3%A4-viimeist%C3%A4-sijaa-ei-voi-pyyhki%C3%A4-pois-lehdist%C3%B6tiedotteella/269686"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
