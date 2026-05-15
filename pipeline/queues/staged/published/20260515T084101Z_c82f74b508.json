@@ -1,0 +1,213 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-15T08:41:01.182087+00:00",
+  "digest": "c82f74b508",
+  "packet": {
+    "packet_id": "20260515T084101Z_c82f74b508",
+    "created_at": "2026-05-15T08:41:01Z",
+    "headline_seed": "Trump brought top CEOs to Beijing but few big deals emerge",
+    "description_seed": "There were plenty of choreographed ceremonies but no sweeping trade breakthrough as Trump met Xi in Beijing.",
+    "link": "https://www.bbc.com/news/articles/clypj01189lo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clypj01189lo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump brought top CEOs to Beijing but few big deals emerge"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "There were plenty of choreographed ceremonies but no sweeping trade breakthrough as Trump met Xi in Beijing.",
+        "word_count": 17,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US President Donald Trump has now left Beijing saying he has struck \"fantastic trade deals, great for both countries\" after meeting his Chinese counterpart Xi Jinping. Trump, who was accompanied to China by a high-profile business delegation spanning agriculture, aviation, electric vehicles and artificial intelligence (AI) chips, described ties between the two countries as \"the world's most consequential economic relationship\". The two-day summit was defined more by warm rhetoric and symbolism than concrete economic outcomes, with day one featuring elaborate ceremonies and upbeat language but no sweeping trade breakthrough or significant business agreements. After concluding talks on Friday, Trump said the meeting had been \"very successful\", while Xi called it a \"historic and landmark\" visit. But despite the choreography, there was no major trade deal or structural agreement.",
+        "word_count": 128,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "There are still questions over the trade truce agreed in October, which saw Washington suspend steep tariff increases on Chinese goods while Beijing eased back from restricting rare earth exports. US Trade Representative Jamieson Greer, who was with Trump in China, told Bloomberg TV on Friday that it had not yet been decided whether to extend the truce beyond November. The White House said both leaders agreed to establish a \"Board of Trade\" to manage the relationship without having to reopen tariff negotiations. US Treasury Secretary Scott Bessent, who had been leading trade talks for Washington, said in a pre-recorded interview with CNBC that he expected progress on a mechanism to support future investment too. US officials have cautioned, however, that there is a lot of work to be done before these can be fully operational.",
+        "word_count": 136,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "In an interview with Fox News, Trump said China had agreed to order 200 Boeing planes, its first purchase of US-made commercial jets in nearly a decade, though a smaller number than analysts had expected. But Beijing stopped short of confirming any major purchases. Asked about Trump's comments, foreign ministry spokesperson Guo Jiakun did not directly address the figure, saying instead that the \"essence of China-US economic and trade relations is mutual benefit and win-win co-operation\". He added that both sides should work to implement the \"important consensus\" reached by the two leaders and bring greater stability to bilateral trade ties and the global economy. The BBC has contacted Boeing for comment.",
+        "word_count": 112,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "There were plenty of choreographed ceremonies but no sweeping trade breakthrough as Trump met Xi in Beijing.\n\nUS President Donald Trump has now left Beijing saying he has struck \"fantastic trade deals, great for both countries\" after meeting his Chinese counterpart Xi Jinping. Trump, who was accompanied to China by a high-profile business delegation spanning agriculture, aviation, electric vehicles and artificial intelligence (AI) chips, described ties between the two countries as \"the world's most consequential economic relationship\". The two-day summit was defined more by warm rhetoric and symbolism than concrete economic outcomes, with day one featuring elaborate ceremonies and upbeat language but no sweeping trade breakthrough or significant business agreements. After concluding talks on Friday, Trump said the meeting had been \"very successful\", while Xi called it a \"historic and landmark\" visit. But despite the choreography, there was no major trade deal or structural agreement.\n\nThere are still questions over the trade truce agreed in October, which saw Washington suspend steep tariff increases on Chinese goods while Beijing eased back from restricting rare earth exports. US Trade Representative Jamieson Greer, who was with Trump in China, told Bloomberg TV on Friday that it had not yet been decided whether to extend the truce beyond November. The White House said both leaders agreed to establish a \"Board of Trade\" to manage the relationship without having to reopen tariff negotiations. US Treasury Secretary Scott Bessent, who had been leading trade talks for Washington, said in a pre-recorded interview with CNBC that he expected progress on a mechanism to support future investment too. US officials have cautioned, however, that there is a lot of work to be done before these can be fully operational.\n\nIn an interview with Fox News, Trump said China had agreed to order 200 Boeing planes, its first purchase of US-made commercial jets in nearly a decade, though a smaller number than analysts had expected. But Beijing stopped short of confirming any major purchases. Asked about Trump's comments, foreign ministry spokesperson Guo Jiakun did not directly address the figure, saying instead that the \"essence of China-US economic and trade relations is mutual benefit and win-win co-operation\". He added that both sides should work to implement the \"important consensus\" reached by the two leaders and bring greater stability to bilateral trade ties and the global economy. The BBC has contacted Boeing for comment.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 402,
+      "selected_blocks": 4,
+      "selected_source_words": 393,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump brought top CEOs to Beijing but few big deals emerge",
+      "description": "There were plenty of choreographed ceremonies but no sweeping trade breakthrough as Trump met Xi in Beijing.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Trump brought top CEOs to Beijing but few big deals emerge",
+    "description": "There were plenty of choreographed ceremonies but no sweeping trade breakthrough as Trump met Xi in Beijing.",
+    "link": "https://www.bbc.com/news/articles/clypj01189lo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-15T08:38:51+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "2f309236e03eb0d295cfb8d87ee4d798",
+    "_url_hash": "071ec16d38cf0c85b9be1fc667d715c07c2e6f20c143d2ae8d0147582bfdb3ce",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS President Donald Trump has now left Beijing saying he has struck \"fantastic trade deals, great for both countries\" after meeting his Chinese counterpart Xi Jinping.\n\nTrump, who was accompanied to China by a high-profile business delegation spanning agriculture, aviation, electric vehicles and artificial intelligence (AI) chips, described ties between the two countries as \"the world's most consequential economic relationship\".\n\nThe two-day summit was defined more by warm rhetoric and symbolism than concrete economic outcomes, with day one featuring elaborate ceremonies and upbeat language but no sweeping trade breakthrough or significant business agreements.\n\nAfter concluding talks on Friday, Trump said the meeting had been \"very successful\", while Xi called it a \"historic and landmark\" visit.\n\nBut despite the choreography, there was no major trade deal or structural agreement.\n\nIn an interview with Fox News, Trump said China had agreed to order 200 Boeing planes, its first purchase of US-made commercial jets in nearly a decade, though a smaller number than analysts had expected.\n\nBut Beijing stopped short of confirming any major purchases.\n\nAsked about Trump's comments, foreign ministry spokesperson Guo Jiakun did not directly address the figure, saying instead that the \"essence of China-US economic and trade relations is mutual benefit and win-win co-operation\".\n\nHe added that both sides should work to implement the \"important consensus\" reached by the two leaders and bring greater stability to bilateral trade ties and the global economy.\n\nThe BBC has contacted Boeing for comment.\n\nThere are still questions over the trade truce agreed in October, which saw Washington suspend steep tariff increases on Chinese goods while Beijing eased back from restricting rare earth exports.\n\nUS Trade Representative Jamieson Greer, who was with Trump in China, told Bloomberg TV on Friday that it had not yet been decided whether to extend the truce beyond November.\n\nThe White House said both leaders agreed to establish a \"Board of Trade\" to manage the relationship without having to reopen tariff negotiations.\n\nUS Treasury Secretary Scott Bessent, who had been leading trade talks for Washington, said in a pre-recorded interview with CNBC that he expected progress on a mechanism to support future investment too.\n\nUS officials have cautioned, however, that there is a lot of work to be done before these can be fully operational.\n\nThis was a visit where optics mattered as mu",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-15T08:44:00.929985+00:00",
+  "payload": {
+    "packet_id": "20260515T084101Z_c82f74b508",
+    "title": "Trumpin Pekingin-vierailu toi suuryritykset näyttämölle, mutta läpimurto jäi puuttumaan",
+    "summary": "Yhdysvaltain presidentti Donald Trump tapasi Kiinan presidentin Xi Jinpingin Pekingissä kaksipäiväisessä huippukokouksessa, jossa korostuivat myönteiset puheet ja seremoniallinen näyttävyys. Suurta kauppa- tai rakenneratkaisua ei kuitenkaan julkistettu.",
+    "content": "Yhdysvaltain presidentti Donald Trump on päättänyt kaksipäiväisen vierailunsa Pekingissä ja kuvannut tapaamistaan Kiinan presidentin Xi Jinpingin kanssa erittäin onnistuneeksi, mutta vierailun konkreettiset taloustulokset jäivät lähdetietojen perusteella rajallisiksi. Trump matkusti Kiinaan korkean profiilin yritysvaltuuskunnan kanssa, mutta laajaa kauppasopimusta tai merkittäviä yrityskauppoja ei ilmoitettu.\n\n## Lämmin sävy, niukat tulokset\n\nVierailua sävyttivät näyttävät seremoniat ja sovittelevat lausunnot. Trump sanoi neuvottelujen jälkeen solmineensa Kiinan kanssa \"fantastisia kauppasopimuksia\", ja Xi kuvasi vierailua historialliseksi ja merkkittäväksi. Trump myös kutsui Yhdysvaltain ja Kiinan suhdetta maailman merkittävimmäksi taloussuhteeksi.\n\nNäiden lausuntojen rinnalla jäi kuitenkin avoimeksi, mitä uusia sitovia järjestelyjä maat todella saavuttivat. Tapaamisesta ei ilmoitettu suurta kauppaläpimurtoa, rakenteellista sopimusta eikä laajoja yrityssopimuksia, vaikka mukana oli yritysjohtajia muun muassa maatalouden, ilmailun, sähköautojen ja tekoälysirujen aloilta.\n\n## Kaupparauhan jatko on yhä auki\n\nYksi keskeinen kysymys koskee lokakuussa sovittua kaupparauhaa. Sen mukaan Washington lykkäsi jyrkkiä tullikorotuksia kiinalaistuotteille, kun taas Peking lievensi harvinaisten maametallien vientiin liittyviä rajoituksia. Yhdysvaltain kauppaedustaja Jamieson Greer sanoi perjantaina, ettei vielä ole päätetty, jatketaanko järjestelyä marraskuun jälkeen.\n\nValkoisen talon mukaan Trump ja Xi sopivat uuden kauppasuhdetta hallinnoivan elimen perustamisesta. Sen tarkoituksena olisi käsitellä maiden välistä taloussuhdetta ilman, että tullineuvotteluja avataan joka kerta uudelleen. Yhdysvaltain viranomaiset ovat kuitenkin varoittaneet, että järjestelyn saaminen täyteen toimintakuntoon vaatii vielä paljon työtä.\n\n## Boeing-tilauksesta ei vahvistusta Pekingistä\n\nTrump sanoi Fox Newsin haastattelussa, että Kiina olisi suostunut tilaamaan 200 Boeingin konetta. Kyse olisi ensimmäisestä yhdysvaltalaisten matkustajakoneiden ostosta lähes vuosikymmeneen, mutta määrä olisi silti pienempi kuin osa analyytikoista oli odottanut.\n\nPeking ei kuitenkaan vahvistanut suurta tilausta. Kiinan ulkoministeriön edustaja Guo Jiakun ei vastannut suoraan Trumpin esittämään lukumäärään, vaan korosti maiden taloussuhteen perustuvan keskinäiseen hyötyyn ja yhteistyöhön. Hän sanoi osapuolten pitäisi toteuttaa johtajien saavuttamaa yhteisymmärrystä ja vakauttaa kahdenvälistä kauppaa sekä maailmantaloutta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Kiina",
+      "Donald Trump",
+      "Xi Jinping",
+      "kauppapolitiikka",
+      "Boeing"
+    ],
+    "summary_bullets": [
+      "Trump tapasi Xi Jinpingin Pekingissä kaksipäiväisessä huippukokouksessa.",
+      "Vierailulla oli paljon seremonioita ja myönteisiä lausuntoja, mutta ei suurta kauppaläpimurtoa.",
+      "Lokakuussa sovitun kaupparauhan jatko marraskuun jälkeen on edelleen avoinna.",
+      "Trump puhui 200 Boeing-koneen tilauksesta, mutta Kiina ei vahvistanut lukua."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Epävarmuus koskee erityisesti Trumpin mainitsemaa Boeing-tilausta, jota Kiina ei lähdetietojen mukaan vahvistanut."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\"packet_id\":\"20260515T084101Z_c82f74b508\",\"title\":\"Trumpin Pekingin-vierailu toi suuryritykset näyttämölle, mutta läpimurto jäi puuttumaan\",\"summary\":\"Yhdysvaltain presidentti Donald Trump tapasi Kiinan presidentin Xi Jinpingin Pekingissä kaksipäiväisessä huippukokouksessa, jossa korostuivat myönteiset puheet ja seremoniallinen näyttävyys. Suurta kauppa- tai rakenneratkaisua ei kuitenkaan julkistettu.\",\"content\":\"Yhdysvaltain presidentti Donald Trump on päättänyt kaksipäiväisen vierailunsa Pekingissä ja kuvannut tapaamistaan Kiinan presidentin Xi Jinpingin kanssa erittäin onnistuneeksi, mutta vierailun konkreettiset taloustulokset jäivät lähdetietojen perusteella rajallisiksi. Trump matkusti Kiinaan korkean profiilin yritysvaltuuskunnan kanssa, mutta laajaa kauppasopimusta tai merkittäviä yrityskauppoja ei ilmoitettu.\\n\\n## Lämmin sävy, niukat tulokset\\n\\nVierailua sävyttivät näyttävät seremoniat ja sovittelevat lausunnot. Trump sanoi neuvottelujen jälkeen solmineensa Kiinan kanssa \\\"fantastisia kauppasopimuksia\\\", ja Xi kuvasi vierailua historialliseksi ja merkkittäväksi. Trump myös kutsui Yhdysvaltain ja Kiinan suhdetta maailman merkittävimmäksi taloussuhteeksi.\\n\\nNäiden lausuntojen rinnalla jäi kuitenkin avoimeksi, mitä uusia sitovia järjestelyjä maat todella saavuttivat. Tapaamisesta ei ilmoitettu suurta kauppaläpimurtoa, rakenteellista sopimusta eikä laajoja yrityssopimuksia, vaikka mukana oli yritysjohtajia muun muassa maatalouden, ilmailun, sähköautojen ja tekoälysirujen aloilta.\\n\\n## Kaupparauhan jatko on yhä auki\\n\\nYksi keskeinen kysymys koskee lokakuussa sovittua kaupparauhaa. Sen mukaan Washington lykkäsi jyrkkiä tullikorotuksia kiinalaistuotteille, kun taas Peking lievensi harvinaisten maametallien vientiin liittyviä rajoituksia. Yhdysvaltain kauppaedustaja Jamieson Greer sanoi perjantaina, ettei vielä ole päätetty, jatketaanko järjestelyä marraskuun jälkeen.\\n\\nValkoisen talon mukaan Trump ja Xi sopivat uuden kauppasuhdetta hallinnoivan elimen perustamisesta. Sen tarkoituksena olisi käsitellä maiden välistä taloussuhdetta ilman, että tullineuvotteluja avataan joka kerta uudelleen. Yhdysvaltain viranomaiset ovat kuitenkin varoittaneet, että järjestelyn saaminen täyteen toimintakuntoon vaatii vielä paljon työtä.\\n\\n## Boeing-tilauksesta ei vahvistusta Pekingistä\\n\\nTrump sanoi Fox Newsin haastattelussa, että Kiina olisi suostunut tilaamaan 200 Boeingin konetta. Kyse olisi ensimmäisestä yhdysvaltalaisten matkustajakoneiden ostosta lähes vuosikymmeneen, mutta määrä olisi silti pienempi kuin osa analyytikoista oli odottanut.\\n\\nPeking ei kuitenkaan vahvistanut suurta tilausta. Kiinan ulkoministeriön edustaja Guo Jiakun ei vastannut suoraan Trumpin esittämään lukumäärään, vaan korosti maiden taloussuhteen perustuvan keskinäiseen hyötyyn ja yhteistyöhön. Hän sanoi osapuolten pitäisi toteuttaa johtajien saavuttamaa yhteisymmärrystä ja vakauttaa kahdenvälistä kauppaa sekä maailmantaloutta.\",\"category\":\"Ulkomaat\",\"tags\":[\"Yhdysvallat\",\"Kiina\",\"Donald Trump\",\"Xi Jinping\",\"kauppapolitiikka\",\"Boeing\"],\"summary_bullets\":[\"Trump tapasi Xi Jinpingin Pekingissä kaksipäiväisessä huippukokouksessa.\",\"Vierailulla oli paljon seremonioita ja myönteisiä lausuntoja, mutta ei suurta kauppaläpimurtoa.\",\"Lokakuussa sovitun kaupparauhan jatko marraskuun jälkeen on edelleen avoinna.\",\"Trump puhui 200 Boeing-koneen tilauksesta, mutta Kiina ei vahvistanut lukua.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"Artikkeli perustuu annettuun lähdepakettiin. Epävarmuus koskee erityisesti Trumpin mainitsemaa Boeing-tilausta, jota Kiina ei lähdetietojen mukaan vahvistanut.\"}",
+  "article": {
+    "title": "Trumpin Pekingin-vierailu toi suuryritykset näyttämölle, mutta läpimurto jäi puuttumaan",
+    "description": "Yhdysvaltain presidentti Donald Trump tapasi Kiinan presidentin Xi Jinpingin Pekingissä kaksipäiväisessä huippukokouksessa, jossa korostuivat myönteiset puheet ja seremoniallinen näyttävyys. Suurta kauppa- tai rakenneratkaisua ei kuitenkaan julkistettu.",
+    "link": "https://www.bbc.com/news/articles/clypj01189lo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-15T08:38:51+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "2f309236e03eb0d295cfb8d87ee4d798",
+    "_url_hash": "071ec16d38cf0c85b9be1fc667d715c07c2e6f20c143d2ae8d0147582bfdb3ce",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS President Donald Trump has now left Beijing saying he has struck \"fantastic trade deals, great for both countries\" after meeting his Chinese counterpart Xi Jinping.\n\nTrump, who was accompanied to China by a high-profile business delegation spanning agriculture, aviation, electric vehicles and artificial intelligence (AI) chips, described ties between the two countries as \"the world's most consequential economic relationship\".\n\nThe two-day summit was defined more by warm rhetoric and symbolism than concrete economic outcomes, with day one featuring elaborate ceremonies and upbeat language but no sweeping trade breakthrough or significant business agreements.\n\nAfter concluding talks on Friday, Trump said the meeting had been \"very successful\", while Xi called it a \"historic and landmark\" visit.\n\nBut despite the choreography, there was no major trade deal or structural agreement.\n\nIn an interview with Fox News, Trump said China had agreed to order 200 Boeing planes, its first purchase of US-made commercial jets in nearly a decade, though a smaller number than analysts had expected.\n\nBut Beijing stopped short of confirming any major purchases.\n\nAsked about Trump's comments, foreign ministry spokesperson Guo Jiakun did not directly address the figure, saying instead that the \"essence of China-US economic and trade relations is mutual benefit and win-win co-operation\".\n\nHe added that both sides should work to implement the \"important consensus\" reached by the two leaders and bring greater stability to bilateral trade ties and the global economy.\n\nThe BBC has contacted Boeing for comment.\n\nThere are still questions over the trade truce agreed in October, which saw Washington suspend steep tariff increases on Chinese goods while Beijing eased back from restricting rare earth exports.\n\nUS Trade Representative Jamieson Greer, who was with Trump in China, told Bloomberg TV on Friday that it had not yet been decided whether to extend the truce beyond November.\n\nThe White House said both leaders agreed to establish a \"Board of Trade\" to manage the relationship without having to reopen tariff negotiations.\n\nUS Treasury Secretary Scott Bessent, who had been leading trade talks for Washington, said in a pre-recorded interview with CNBC that he expected progress on a mechanism to support future investment too.\n\nUS officials have cautioned, however, that there is a lot of work to be done before these can be fully operational.\n\nThis was a visit where optics mattered as mu",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain presidentti Donald Trump tapasi Kiinan presidentin Xi Jinpingin Pekingissä kaksipäiväisessä huippukokouksessa, jossa korostuivat myönteiset puheet ja seremoniallinen näyttävyys. Suurta kauppa- tai rakenneratkaisua ei kuitenkaan julkistettu.",
+    "content": "Yhdysvaltain presidentti Donald Trump on päättänyt kaksipäiväisen vierailunsa Pekingissä ja kuvannut tapaamistaan Kiinan presidentin Xi Jinpingin kanssa erittäin onnistuneeksi, mutta vierailun konkreettiset taloustulokset jäivät lähdetietojen perusteella rajallisiksi. Trump matkusti Kiinaan korkean profiilin yritysvaltuuskunnan kanssa, mutta laajaa kauppasopimusta tai merkittäviä yrityskauppoja ei ilmoitettu.\n\n## Lämmin sävy, niukat tulokset\n\nVierailua sävyttivät näyttävät seremoniat ja sovittelevat lausunnot. Trump sanoi neuvottelujen jälkeen solmineensa Kiinan kanssa \"fantastisia kauppasopimuksia\", ja Xi kuvasi vierailua historialliseksi ja merkkittäväksi. Trump myös kutsui Yhdysvaltain ja Kiinan suhdetta maailman merkittävimmäksi taloussuhteeksi.\n\nNäiden lausuntojen rinnalla jäi kuitenkin avoimeksi, mitä uusia sitovia järjestelyjä maat todella saavuttivat. Tapaamisesta ei ilmoitettu suurta kauppaläpimurtoa, rakenteellista sopimusta eikä laajoja yrityssopimuksia, vaikka mukana oli yritysjohtajia muun muassa maatalouden, ilmailun, sähköautojen ja tekoälysirujen aloilta.\n\n## Kaupparauhan jatko on yhä auki\n\nYksi keskeinen kysymys koskee lokakuussa sovittua kaupparauhaa. Sen mukaan Washington lykkäsi jyrkkiä tullikorotuksia kiinalaistuotteille, kun taas Peking lievensi harvinaisten maametallien vientiin liittyviä rajoituksia. Yhdysvaltain kauppaedustaja Jamieson Greer sanoi perjantaina, ettei vielä ole päätetty, jatketaanko järjestelyä marraskuun jälkeen.\n\nValkoisen talon mukaan Trump ja Xi sopivat uuden kauppasuhdetta hallinnoivan elimen perustamisesta. Sen tarkoituksena olisi käsitellä maiden välistä taloussuhdetta ilman, että tullineuvotteluja avataan joka kerta uudelleen. Yhdysvaltain viranomaiset ovat kuitenkin varoittaneet, että järjestelyn saaminen täyteen toimintakuntoon vaatii vielä paljon työtä.\n\n## Boeing-tilauksesta ei vahvistusta Pekingistä\n\nTrump sanoi Fox Newsin haastattelussa, että Kiina olisi suostunut tilaamaan 200 Boeingin konetta. Kyse olisi ensimmäisestä yhdysvaltalaisten matkustajakoneiden ostosta lähes vuosikymmeneen, mutta määrä olisi silti pienempi kuin osa analyytikoista oli odottanut.\n\nPeking ei kuitenkaan vahvistanut suurta tilausta. Kiinan ulkoministeriön edustaja Guo Jiakun ei vastannut suoraan Trumpin esittämään lukumäärään, vaan korosti maiden taloussuhteen perustuvan keskinäiseen hyötyyn ja yhteistyöhön. Hän sanoi osapuolten pitäisi toteuttaa johtajien saavuttamaa yhteisymmärrystä ja vakauttaa kahdenvälistä kauppaa sekä maailmantaloutta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "yhdysvallat",
+      "kiina",
+      "donald trump",
+      "xi jinping",
+      "kauppapolitiikka"
+    ],
+    "summary_bullets": [
+      "Trump tapasi Xi Jinpingin Pekingissä kaksipäiväisessä huippukokouksessa.",
+      "Vierailulla oli paljon seremonioita ja myönteisiä lausuntoja, mutta ei suurta kauppaläpimurtoa.",
+      "Lokakuussa sovitun kaupparauhan jatko marraskuun jälkeen on edelleen avoinna.",
+      "Trump puhui 200 Boeing-koneen tilauksesta, mutta Kiina ei vahvistanut lukua."
+    ],
+    "key_points": [
+      "Trump tapasi Xi Jinpingin Pekingissä kaksipäiväisessä huippukokouksessa.",
+      "Vierailulla oli paljon seremonioita ja myönteisiä lausuntoja, mutta ei suurta kauppaläpimurtoa.",
+      "Lokakuussa sovitun kaupparauhan jatko marraskuun jälkeen on edelleen avoinna.",
+      "Trump puhui 200 Boeing-koneen tilauksesta, mutta Kiina ei vahvistanut lukua."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Epävarmuus koskee erityisesti Trumpin mainitsemaa Boeing-tilausta, jota Kiina ei lähdetietojen mukaan vahvistanut.",
+    "source_text": "There were plenty of choreographed ceremonies but no sweeping trade breakthrough as Trump met Xi in Beijing.\n\nUS President Donald Trump has now left Beijing saying he has struck \"fantastic trade deals, great for both countries\" after meeting his Chinese counterpart Xi Jinping. Trump, who was accompanied to China by a high-profile business delegation spanning agriculture, aviation, electric vehicles and artificial intelligence (AI) chips, described ties between the two countries as \"the world's most consequential economic relationship\". The two-day summit was defined more by warm rhetoric and symbolism than concrete economic outcomes, with day one featuring elaborate ceremonies and upbeat language but no sweeping trade breakthrough or significant business agreements. After concluding talks on Friday, Trump said the meeting had been \"very successful\", while Xi called it a \"historic and landmark\" visit. But despite the choreography, there was no major trade deal or structural agreement.\n\nThere are still questions over the trade truce agreed in October, which saw Washington suspend steep tariff increases on Chinese goods while Beijing eased back from restricting rare earth exports. US Trade Representative Jamieson Greer, who was with Trump in China, told Bloomberg TV on Friday that it had not yet been decided whether to extend the truce beyond November. The White House said both leaders agreed to establish a \"Board of Trade\" to manage the relationship without having to reopen tariff negotiations. US Treasury Secretary Scott Bessent, who had been leading trade talks for Washington, said in a pre-recorded interview with CNBC that he expected progress on a mechanism to support future investment too. US officials have cautioned, however, that there is a lot of work to be done before these can be fully operational.\n\nIn an interview with Fox News, Trump said China had agreed to order 200 Boeing planes, its first purchase of US-made commercial jets in nearly a decade, though a smaller number than analysts had expected. But Beijing stopped short of confirming any major purchases. Asked about Trump's comments, foreign ministry spokesperson Guo Jiakun did not directly address the figure, saying instead that the \"essence of China-US economic and trade relations is mutual benefit and win-win co-operation\". He added that both sides should work to implement the \"important consensus\" reached by the two leaders and bring greater stability to bilateral trade ties and the global economy. The BBC has contacted Boeing for comment.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.9,
+    "degraded_mode": false,
+    "monica_packet_id": "20260515T084101Z_c82f74b508",
+    "image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc4Nzk0MDg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc4Nzk0MDg1fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Trumpin Pekingin-vierailu toi suuryritykset näyttämölle, mutta läpimurto jäi puuttumaan",
+    "image_credit": "Photo by Kyle Glenn on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/desk-globe-on-table-nXt5HtLmlgE?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-15T08:48:06.845303+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc4Nzk0MDg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3b3JsZCUyMGdsb2JlJTIwaW50ZXJuYXRpb25hbHxlbnwxfDB8fHwxNzc4Nzk0MDg1fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-15T08:48:37.429337+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-15-trumpin-pekingin-vierailu-toi-suuryritykset-nayttamolle-mutt.md"
+  ]
+}
