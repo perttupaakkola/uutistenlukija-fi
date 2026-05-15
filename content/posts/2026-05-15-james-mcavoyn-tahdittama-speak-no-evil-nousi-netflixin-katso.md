@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/netflixin-taman-hetken-katsotuin-elokuva-on-taysin-turha-tekele-ala-haaskaa-aikaasi-tahan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
