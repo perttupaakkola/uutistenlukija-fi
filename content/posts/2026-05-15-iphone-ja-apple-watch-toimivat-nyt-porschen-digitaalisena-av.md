@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/15/iphone-ja-apple-watch-voivat-toimia-nyt-porschen-avaimena-tuki-julkaistu-ensimmaisen-mallin-osalta/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 

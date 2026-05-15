@@ -1,0 +1,263 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-15T07:31:25.721999+00:00",
+  "digest": "c112a1403c",
+  "packet": {
+    "packet_id": "20260515T073125Z_c112a1403c",
+    "created_at": "2026-05-15T07:31:25Z",
+    "headline_seed": "US Supreme Court restores abortion pill access for now",
+    "description_seed": "Abortion pills are the most common method of terminating pregnancies in the US.",
+    "link": "https://www.bbc.com/news/articles/cx21x27d4jdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC",
+      "The Guardian",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cx21x27d4jdo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US Supreme Court restores abortion pill access for now"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The Supreme Court has ruled that the abortion pill mifepristone can continue to be accessed by mail. Two manufacturers that make the pill had asked the Supreme Court to intervene after a lower court placed significant restrictions on access to mifepristone as part of an ongoing lawsuit. Thursday's order from the high court blocks those limitations while litigation plays out. Access to the pill will likely remain until that lawsuit is decided, which could happen next year. Abortion pills are the most common method of terminating pregnancies in the US - especially in states where abortion is banned. The Supreme Court's most conservative justices, Clarence Thomas and Samuel Alito, dissented.",
+        "word_count": 110,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "The pharmaceutical company that makes the abortion pill mifepristone has asked the Supreme Court to intervene after a lower court placed significant restrictions on access to the pill by mail. In a decision issued on Friday, the Fifth Circuit Court of Appeals temporarily reinstated a requirement that abortion pills be obtained in person. That will, for now, curb access to abortion pills - the most common method of terminating pregnancies in the US - in states where abortion is banned. In 2023, the Food and Drug Administration (FDA) allowed doctors to send pills without seeing patients in person, giving women the ability to receive the pills by mail or at a pharmacy through telemedicine. How safe is the abortion pill mifepristone?",
+        "word_count": 121,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "In response to the supreme court’s decision to restore mail access to mifepristone, one of the two-drug regimen needed for medication abortion, Democrats welcomed the news, but noted this is part of a wider fight to further undermine safe and effective access to reproductive healthcare. “This fight is just beginning,” said Chuck Schumer, the top Senate Democrat. “We will stop at nothing to prevent the Republicans from putting a national abortion ban into effect.” Since the 2022 Dobbs decision, anti-abortion groups have attempted to limit access to abortion pills, mifepristone and misoprostol, now the most common method to terminate pregnancies in the US. “I urge the Court to move swiftly to permanently protect access to this critical medication for women,” said Senator Jacky Rosen, a Democrat from Nevada.",
+        "word_count": 128,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Abortion pills are the most common method of terminating pregnancies in the US.",
+        "word_count": 13,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The Supreme Court has ruled that the abortion pill mifepristone can continue to be accessed by mail. Two manufacturers that make the pill had asked the Supreme Court to intervene after a lower court placed significant restrictions on access to mifepristone as part of an ongoing lawsuit. Thursday's order from the high court blocks those limitations while litigation plays out. Access to the pill will likely remain until that lawsuit is decided, which could happen next year. Abortion pills are the most common method of terminating pregnancies in the US - especially in states where abortion is banned. The Supreme Court's most conservative justices, Clarence Thomas and Samuel Alito, dissented.\n\nThe pharmaceutical company that makes the abortion pill mifepristone has asked the Supreme Court to intervene after a lower court placed significant restrictions on access to the pill by mail. In a decision issued on Friday, the Fifth Circuit Court of Appeals temporarily reinstated a requirement that abortion pills be obtained in person. That will, for now, curb access to abortion pills - the most common method of terminating pregnancies in the US - in states where abortion is banned. In 2023, the Food and Drug Administration (FDA) allowed doctors to send pills without seeing patients in person, giving women the ability to receive the pills by mail or at a pharmacy through telemedicine. How safe is the abortion pill mifepristone?\n\nIn response to the supreme court’s decision to restore mail access to mifepristone, one of the two-drug regimen needed for medication abortion, Democrats welcomed the news, but noted this is part of a wider fight to further undermine safe and effective access to reproductive healthcare. “This fight is just beginning,” said Chuck Schumer, the top Senate Democrat. “We will stop at nothing to prevent the Republicans from putting a national abortion ban into effect.” Since the 2022 Dobbs decision, anti-abortion groups have attempted to limit access to abortion pills, mifepristone and misoprostol, now the most common method to terminate pregnancies in the US. “I urge the Court to move swiftly to permanently protect access to this critical medication for women,” said Senator Jacky Rosen, a Democrat from Nevada.\n\nAbortion pills are the most common method of terminating pregnancies in the US.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 967,
+      "selected_blocks": 4,
+      "selected_source_words": 372,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC",
+        "The Guardian",
+        "The Guardian",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC",
+        "The Guardian",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US Supreme Court restores abortion pill access for now",
+      "description": "Abortion pills are the most common method of terminating pregnancies in the US.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US Supreme Court restores abortion pill access for now",
+    "description": "Abortion pills are the most common method of terminating pregnancies in the US.",
+    "link": "https://www.bbc.com/news/articles/cx21x27d4jdo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-14T22:46:28+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "08f5c3c2d201e0840828899653c638a8",
+    "_url_hash": "15eda9451fca937550d6146e15be05a4efe713e4f67810ce53fe0df5d13abbec",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe Supreme Court has ruled that the abortion pill mifepristone can continue to be accessed by mail.\n\nTwo manufacturers that make the pill had asked the Supreme Court to intervene after a lower court placed significant restrictions on access to mifepristone as part of an ongoing lawsuit.\n\nThursday's order from the high court blocks those limitations while litigation plays out. Access to the pill will likely remain until that lawsuit is decided, which could happen next year.\n\nAbortion pills are the most common method of terminating pregnancies in the US - especially in states where abortion is banned.\n\nThe Supreme Court's most conservative justices, Clarence Thomas and Samuel Alito, dissented.\n\nIn 2023, the Food and Drug Administration (FDA) allowed doctors to send pills without seeing patients in person, giving women the ability to receive the pills by mail or at a pharmacy through telemedicine.\n\nThe state of Louisiana sued the FDA last October in an effort to prevent delivery of mifepristone.\n\nLouisiana argued that nationwide postage of the drug interfered with the state's own abortion ban.\n\nEarlier this month, in response to the lawsuit, an appeals court temporarily reinstated a requirement that abortion pills be obtained in person.\n\n\"Every abortion facilitated by FDA's action cancels Louisiana's ban on medical abortions and undermines its policy that 'every unborn child is human being from the moment of conception and is, therefore, a legal person,\" the appeals court wrote in that order.\n\nTwo mifepristone manufacturers then asked the Supreme Court to weigh in while they prepared to bring an emergency case before the court.\n\nThe ruling, which is called a stay, issued on Thursday was part of the court's emergency docket and came with no reasoning attached. It will remain in place until the justices decide whether to hear the manufacturers' case.\n\nThomas wrote in his dissent that since sending mifepristone by mail is illegal in Louisiana, the drug manufacturers are not entitled to block a court order \"based on lost profits from their criminal enterprise.\"\n\nMifepristone is the first of a two-pill regimen recommended by the FDA to end a pregnancy. It is widely available in states where abortion is legal.\n\nThe drugs' availability was expanded in April 2021, when the FDA said it would lift the in-person dispensing requirement for mifepristone for the duration of the Covid-19 pandemic.\n\nThe following year, the US Supreme Court overturned its decades old Roe v W\n\n---\n\n[Lähde: BBC]\nThe pharmaceutical company that makes the abortion pill mifepristone has asked the Supreme Court to intervene after a lower court placed significant restrictions on access to the pill by mail.\n\nIn a decision issued on Friday, the Fifth Circuit Court of Appeals temporarily reinstated a requirement that abortion pills be obtained in person.\n\nThat will, for now, curb access to abortion pills - the most common method of terminating pregnancies in the US - in states where abortion is banned.\n\nIn 2023, the Food and Drug Administration (FDA) allowed doctors to send pills without seeing patients in person, giving women the ability to receive the pills by mail or at a pharmacy through telemedicine.\n\nHow safe is the abortion pill mifepristone?\n\n\"Every abortion facilitated by FDA's action cancels Louisiana's ban on medical abortions and undermines its policy that 'every unborn child is human being from the moment of conception and is, therefore, a legal person,'\" the appeals court wrote in the order.\n\nThe decision - which stems from a lawsuit brought by the state of Louisiana - will remain in effect as the case plays out.\n\nOn Saturday, Danco Laboratories, the pharmaceutical company that makes mifepristone, asked the Supreme Court to intervene and pause the ruling, temporarily restoring access to the pill.\n\n\"The resulting chaos for patients, providers, pharmacies, and the drug-regulatory system is a quintessential irreparable harm that underscores the need for emergency relief from this Court,\" lawyers for Danco wrote in the filing.\n\nMifepristone is the first of a two-pill regimen recommended by the FDA to end a pregnancy. It is widely available in states where abortion is legal.\n\nThe drugs' availability was expanded in April 2021, when the FDA said it would lift the in-person dispensing requirement for mifepristone for the duration of the Covid-19 pandemic. In 2023, the FDA permanently lifted that requirement, meaning the medication could be sent by mail.\n\nIn 2024, the US Supreme Court unanimously rejected an effort to restrict access to mifepristone.\n\nBut the decision, which came two years after the court rescinded the nationwide guarantee to an abortion, left the door open to other attempts to limit the availability of the drug.\n\nFriday's appellate order overrides a lower court's ruling from earlier this month that paused the case while the Trump administration conducts an FDA review.\n\nLouisiana Attorney General Liz Murrill celebrated the court's decision, saying t\n\n---\n\n[Lähde: The Guardian]\nIn response to the supreme court’s decision to restore mail access to mifepristone, one of the two-drug regimen needed for medication abortion, Democrats welcomed the news, but noted this is part of a wider fight to further undermine safe and effective access to reproductive healthcare.\n\n“This fight is just beginning,” said Chuck Schumer, the top Senate Democrat. “We will stop at nothing to prevent the Republicans from putting a national abortion ban into effect.”\n\nSince the 2022 Dobbs decision, anti-abortion groups have attempted to limit access to abortion pills, mifepristone and misoprostol, now the most common method to terminate pregnancies in the US.\n\n“I urge the Court to move swiftly to permanently protect access to this critical medication for women,” said Senator Jacky Rosen, a Democrat from Nevada.\n\n“As this case proceeds, we must continue to fight back against Republican efforts to try to ban abortion nationwide,” said Democratic representative Pramila Jayapal of Washington ...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-15T07:45:32.844693+00:00",
+  "payload": {
+    "packet_id": "20260515T073125Z_c112a1403c",
+    "title": "Yhdysvaltain korkein oikeus pitää aborttipillerin postisaannin voimassa toistaiseksi",
+    "summary": "Yhdysvaltain korkein oikeus on estänyt alempien oikeusasteiden rajoitukset, jotka olisivat kaventaneet mifepristoni-aborttipillerin saatavuutta postitse oikeusprosessin aikana.",
+    "content": "Yhdysvaltain korkein oikeus on määrännyt, että mifepristoni-aborttipilleriä voidaan edelleen toimittaa postitse, kun lääkkeen saatavuutta koskeva oikeuskiista jatkuu. Päätös pysäyttää toistaiseksi alempien oikeusasteiden asettamat merkittävät rajoitukset, jotka olisivat vaikeuttaneet lääkkeen käyttöä erityisesti niissä osavaltioissa, joissa abortti on kielletty.\n\n## Päätös koskee postitse saatavaa lääkettä\n\nKorkeimman oikeuden määräys annettiin sen jälkeen, kun kaksi mifepristonia valmistavaa yhtiötä pyysi tuomioistuinta puuttumaan alempaan ratkaisuun. Aiempi päätös olisi palauttanut vaatimuksen, jonka mukaan aborttipillerit on hankittava henkilökohtaisesti.\n\nMifepristonia käytetään osana lääkkeellistä raskaudenkeskeytystä. Lähdeaineiston mukaan aborttipillerit ovat Yhdysvalloissa yleisin raskaudenkeskeytyksen menetelmä, ja niiden merkitys on korostunut etenkin osavaltioissa, joissa aborttipalvelujen saatavuutta on kiristetty.\n\nYhdysvaltain elintarvike- ja lääkevirasto FDA salli vuonna 2023 lääkärien lähettää pillereitä ilman, että potilaan täytyy tavata lääkäriä henkilökohtaisesti. Tämä mahdollisti lääkkeiden saamisen postitse tai apteekin kautta etälääketieteen avulla.\n\n## Oikeuskiista jatkuu\n\nKorkeimman oikeuden ratkaisu ei päätä varsinaista riitaa lääkkeen saatavuudesta. Määräys estää rajoitusten voimaantulon sillä aikaa, kun oikeusprosessi etenee. Lähdeaineiston mukaan saatavuus pysyy todennäköisesti voimassa ainakin siihen asti, kun oikeusjuttu ratkaistaan, mikä voi tapahtua ensi vuonna.\n\nTuomioistuimen konservatiivisista jäsenistä Clarence Thomas ja Samuel Alito olivat eri mieltä ratkaisusta. Päätös herätti välittömästi poliittisia reaktioita: demokraattien senaattijohto piti ratkaisua myönteisenä, mutta varoitti samalla, että kamppailu lääkkeellisen abortin saatavuudesta jatkuu.\n\nSenaatin demokraattijohtaja Chuck Schumer kuvasi kiistaa vasta alkaneeksi ja sanoi demokraattien vastustavan pyrkimyksiä kansalliseen aborttikieltoon. Nevadan demokraattisenaattori Jacky Rosen puolestaan kehotti tuomioistuinta suojaamaan lääkkeen saatavuuden pysyvästi.\n\n## Taustalla vuoden 2022 Dobbs-päätös\n\nKiista liittyy laajempaan tilanteeseen, joka syntyi Yhdysvalloissa vuoden 2022 Dobbs-päätöksen jälkeen. Sen jälkeen aborttia vastustavat ryhmät ovat pyrkineet rajoittamaan lääkkeelliseen aborttiin käytettävien mifepristonin ja misoprostolin saatavuutta.\n\nNyt annettu määräys tarkoittaa käytännössä, että postitse tapahtuva mifepristonin saatavuus jatkuu ainakin oikeusprosessin seuraavaan vaiheeseen saakka. Samalla se jättää avoimeksi, millaiseksi lääkkeellisen abortin saatavuus Yhdysvalloissa lopulta muodostuu.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "korkein oikeus",
+      "abortti",
+      "mifepristoni",
+      "terveydenhuolto"
+    ],
+    "summary_bullets": [
+      "Korkein oikeus esti rajoitukset, jotka olisivat kaventaneet mifepristonin saatavuutta postitse.",
+      "Päätös on väliaikainen ja voimassa oikeusprosessin jatkuessa.",
+      "Aborttipillerit ovat Yhdysvalloissa yleisin raskaudenkeskeytyksen menetelmä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.91,
+    "journalist_note": "Lähdepaketti tukee ydinuutista hyvin useasta lähdeblokista. Kategorian korjasin ulkomaihin, koska aihe koskee Yhdysvaltoja eikä kotimaan uutista."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\n  \"packet_id\": \"20260515T073125Z_c112a1403c\",\n  \"title\": \"Yhdysvaltain korkein oikeus pitää aborttipillerin postisaannin voimassa toistaiseksi\",\n  \"summary\": \"Yhdysvaltain korkein oikeus on estänyt alempien oikeusasteiden rajoitukset, jotka olisivat kaventaneet mifepristoni-aborttipillerin saatavuutta postitse oikeusprosessin aikana.\",\n  \"content\": \"Yhdysvaltain korkein oikeus on määrännyt, että mifepristoni-aborttipilleriä voidaan edelleen toimittaa postitse, kun lääkkeen saatavuutta koskeva oikeuskiista jatkuu. Päätös pysäyttää toistaiseksi alempien oikeusasteiden asettamat merkittävät rajoitukset, jotka olisivat vaikeuttaneet lääkkeen käyttöä erityisesti niissä osavaltioissa, joissa abortti on kielletty.\\n\\n## Päätös koskee postitse saatavaa lääkettä\\n\\nKorkeimman oikeuden määräys annettiin sen jälkeen, kun kaksi mifepristonia valmistavaa yhtiötä pyysi tuomioistuinta puuttumaan alempaan ratkaisuun. Aiempi päätös olisi palauttanut vaatimuksen, jonka mukaan aborttipillerit on hankittava henkilökohtaisesti.\\n\\nMifepristonia käytetään osana lääkkeellistä raskaudenkeskeytystä. Lähdeaineiston mukaan aborttipillerit ovat Yhdysvalloissa yleisin raskaudenkeskeytyksen menetelmä, ja niiden merkitys on korostunut etenkin osavaltioissa, joissa aborttipalvelujen saatavuutta on kiristetty.\\n\\nYhdysvaltain elintarvike- ja lääkevirasto FDA salli vuonna 2023 lääkärien lähettää pillereitä ilman, että potilaan täytyy tavata lääkäriä henkilökohtaisesti. Tämä mahdollisti lääkkeiden saamisen postitse tai apteekin kautta etälääketieteen avulla.\\n\\n## Oikeuskiista jatkuu\\n\\nKorkeimman oikeuden ratkaisu ei päätä varsinaista riitaa lääkkeen saatavuudesta. Määräys estää rajoitusten voimaantulon sillä aikaa, kun oikeusprosessi etenee. Lähdeaineiston mukaan saatavuus pysyy todennäköisesti voimassa ainakin siihen asti, kun oikeusjuttu ratkaistaan, mikä voi tapahtua ensi vuonna.\\n\\nTuomioistuimen konservatiivisista jäsenistä Clarence Thomas ja Samuel Alito olivat eri mieltä ratkaisusta. Päätös herätti välittömästi poliittisia reaktioita: demokraattien senaattijohto piti ratkaisua myönteisenä, mutta varoitti samalla, että kamppailu lääkkeellisen abortin saatavuudesta jatkuu.\\n\\nSenaatin demokraattijohtaja Chuck Schumer kuvasi kiistaa vasta alkaneeksi ja sanoi demokraattien vastustavan pyrkimyksiä kansalliseen aborttikieltoon. Nevadan demokraattisenaattori Jacky Rosen puolestaan kehotti tuomioistuinta suojaamaan lääkkeen saatavuuden pysyvästi.\\n\\n## Taustalla vuoden 2022 Dobbs-päätös\\n\\nKiista liittyy laajempaan tilanteeseen, joka syntyi Yhdysvalloissa vuoden 2022 Dobbs-päätöksen jälkeen. Sen jälkeen aborttia vastustavat ryhmät ovat pyrkineet rajoittamaan lääkkeelliseen aborttiin käytettävien mifepristonin ja misoprostolin saatavuutta.\\n\\nNyt annettu määräys tarkoittaa käytännössä, että postitse tapahtuva mifepristonin saatavuus jatkuu ainakin oikeusprosessin seuraavaan vaiheeseen saakka. Samalla se jättää avoimeksi, millaiseksi lääkkeellisen abortin saatavuus Yhdysvalloissa lopulta muodostuu.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"korkein oikeus\",\n    \"abortti\",\n    \"mifepristoni\",\n    \"terveydenhuolto\"\n  ],\n  \"summary_bullets\": [\n    \"Korkein oikeus esti rajoitukset, jotka olisivat kaventaneet mifepristonin saatavuutta postitse.\",\n    \"Päätös on väliaikainen ja voimassa oikeusprosessin jatkuessa.\",\n    \"Aborttipillerit ovat Yhdysvalloissa yleisin raskaudenkeskeytyksen menetelmä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.91,\n  \"journalist_note\": \"Lähdepaketti tukee ydinuutista hyvin useasta lähdeblokista. Kategorian korjasin ulkomaihin, koska aihe koskee Yhdysvaltoja eikä kotimaan uutista.\"\n}",
+  "article": {
+    "title": "Yhdysvaltain korkein oikeus pitää aborttipillerin postisaannin voimassa toistaiseksi",
+    "description": "Yhdysvaltain korkein oikeus on estänyt alempien oikeusasteiden rajoitukset, jotka olisivat kaventaneet mifepristoni-aborttipillerin saatavuutta postitse oikeusprosessin aikana.",
+    "link": "https://www.bbc.com/news/articles/cx21x27d4jdo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-14T22:46:28+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "08f5c3c2d201e0840828899653c638a8",
+    "_url_hash": "15eda9451fca937550d6146e15be05a4efe713e4f67810ce53fe0df5d13abbec",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe Supreme Court has ruled that the abortion pill mifepristone can continue to be accessed by mail.\n\nTwo manufacturers that make the pill had asked the Supreme Court to intervene after a lower court placed significant restrictions on access to mifepristone as part of an ongoing lawsuit.\n\nThursday's order from the high court blocks those limitations while litigation plays out. Access to the pill will likely remain until that lawsuit is decided, which could happen next year.\n\nAbortion pills are the most common method of terminating pregnancies in the US - especially in states where abortion is banned.\n\nThe Supreme Court's most conservative justices, Clarence Thomas and Samuel Alito, dissented.\n\nIn 2023, the Food and Drug Administration (FDA) allowed doctors to send pills without seeing patients in person, giving women the ability to receive the pills by mail or at a pharmacy through telemedicine.\n\nThe state of Louisiana sued the FDA last October in an effort to prevent delivery of mifepristone.\n\nLouisiana argued that nationwide postage of the drug interfered with the state's own abortion ban.\n\nEarlier this month, in response to the lawsuit, an appeals court temporarily reinstated a requirement that abortion pills be obtained in person.\n\n\"Every abortion facilitated by FDA's action cancels Louisiana's ban on medical abortions and undermines its policy that 'every unborn child is human being from the moment of conception and is, therefore, a legal person,\" the appeals court wrote in that order.\n\nTwo mifepristone manufacturers then asked the Supreme Court to weigh in while they prepared to bring an emergency case before the court.\n\nThe ruling, which is called a stay, issued on Thursday was part of the court's emergency docket and came with no reasoning attached. It will remain in place until the justices decide whether to hear the manufacturers' case.\n\nThomas wrote in his dissent that since sending mifepristone by mail is illegal in Louisiana, the drug manufacturers are not entitled to block a court order \"based on lost profits from their criminal enterprise.\"\n\nMifepristone is the first of a two-pill regimen recommended by the FDA to end a pregnancy. It is widely available in states where abortion is legal.\n\nThe drugs' availability was expanded in April 2021, when the FDA said it would lift the in-person dispensing requirement for mifepristone for the duration of the Covid-19 pandemic.\n\nThe following year, the US Supreme Court overturned its decades old Roe v W\n\n---\n\n[Lähde: BBC]\nThe pharmaceutical company that makes the abortion pill mifepristone has asked the Supreme Court to intervene after a lower court placed significant restrictions on access to the pill by mail.\n\nIn a decision issued on Friday, the Fifth Circuit Court of Appeals temporarily reinstated a requirement that abortion pills be obtained in person.\n\nThat will, for now, curb access to abortion pills - the most common method of terminating pregnancies in the US - in states where abortion is banned.\n\nIn 2023, the Food and Drug Administration (FDA) allowed doctors to send pills without seeing patients in person, giving women the ability to receive the pills by mail or at a pharmacy through telemedicine.\n\nHow safe is the abortion pill mifepristone?\n\n\"Every abortion facilitated by FDA's action cancels Louisiana's ban on medical abortions and undermines its policy that 'every unborn child is human being from the moment of conception and is, therefore, a legal person,'\" the appeals court wrote in the order.\n\nThe decision - which stems from a lawsuit brought by the state of Louisiana - will remain in effect as the case plays out.\n\nOn Saturday, Danco Laboratories, the pharmaceutical company that makes mifepristone, asked the Supreme Court to intervene and pause the ruling, temporarily restoring access to the pill.\n\n\"The resulting chaos for patients, providers, pharmacies, and the drug-regulatory system is a quintessential irreparable harm that underscores the need for emergency relief from this Court,\" lawyers for Danco wrote in the filing.\n\nMifepristone is the first of a two-pill regimen recommended by the FDA to end a pregnancy. It is widely available in states where abortion is legal.\n\nThe drugs' availability was expanded in April 2021, when the FDA said it would lift the in-person dispensing requirement for mifepristone for the duration of the Covid-19 pandemic. In 2023, the FDA permanently lifted that requirement, meaning the medication could be sent by mail.\n\nIn 2024, the US Supreme Court unanimously rejected an effort to restrict access to mifepristone.\n\nBut the decision, which came two years after the court rescinded the nationwide guarantee to an abortion, left the door open to other attempts to limit the availability of the drug.\n\nFriday's appellate order overrides a lower court's ruling from earlier this month that paused the case while the Trump administration conducts an FDA review.\n\nLouisiana Attorney General Liz Murrill celebrated the court's decision, saying t\n\n---\n\n[Lähde: The Guardian]\nIn response to the supreme court’s decision to restore mail access to mifepristone, one of the two-drug regimen needed for medication abortion, Democrats welcomed the news, but noted this is part of a wider fight to further undermine safe and effective access to reproductive healthcare.\n\n“This fight is just beginning,” said Chuck Schumer, the top Senate Democrat. “We will stop at nothing to prevent the Republicans from putting a national abortion ban into effect.”\n\nSince the 2022 Dobbs decision, anti-abortion groups have attempted to limit access to abortion pills, mifepristone and misoprostol, now the most common method to terminate pregnancies in the US.\n\n“I urge the Court to move swiftly to permanently protect access to this critical medication for women,” said Senator Jacky Rosen, a Democrat from Nevada.\n\n“As this case proceeds, we must continue to fight back against Republican efforts to try to ban abortion nationwide,” said Democratic representative Pramila Jayapal of Washington ...",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain korkein oikeus on estänyt alempien oikeusasteiden rajoitukset, jotka olisivat kaventaneet mifepristoni-aborttipillerin saatavuutta postitse oikeusprosessin aikana.",
+    "content": "Yhdysvaltain korkein oikeus on määrännyt, että mifepristoni-aborttipilleriä voidaan edelleen toimittaa postitse, kun lääkkeen saatavuutta koskeva oikeuskiista jatkuu. Päätös pysäyttää toistaiseksi alempien oikeusasteiden asettamat merkittävät rajoitukset, jotka olisivat vaikeuttaneet lääkkeen käyttöä erityisesti niissä osavaltioissa, joissa abortti on kielletty.\n\n## Päätös koskee postitse saatavaa lääkettä\n\nKorkeimman oikeuden määräys annettiin sen jälkeen, kun kaksi mifepristonia valmistavaa yhtiötä pyysi tuomioistuinta puuttumaan alempaan ratkaisuun. Aiempi päätös olisi palauttanut vaatimuksen, jonka mukaan aborttipillerit on hankittava henkilökohtaisesti.\n\nMifepristonia käytetään osana lääkkeellistä raskaudenkeskeytystä. Lähdeaineiston mukaan aborttipillerit ovat Yhdysvalloissa yleisin raskaudenkeskeytyksen menetelmä, ja niiden merkitys on korostunut etenkin osavaltioissa, joissa aborttipalvelujen saatavuutta on kiristetty.\n\nYhdysvaltain elintarvike- ja lääkevirasto FDA salli vuonna 2023 lääkärien lähettää pillereitä ilman, että potilaan täytyy tavata lääkäriä henkilökohtaisesti. Tämä mahdollisti lääkkeiden saamisen postitse tai apteekin kautta etälääketieteen avulla.\n\n## Oikeuskiista jatkuu\n\nKorkeimman oikeuden ratkaisu ei päätä varsinaista riitaa lääkkeen saatavuudesta. Määräys estää rajoitusten voimaantulon sillä aikaa, kun oikeusprosessi etenee. Lähdeaineiston mukaan saatavuus pysyy todennäköisesti voimassa ainakin siihen asti, kun oikeusjuttu ratkaistaan, mikä voi tapahtua ensi vuonna.\n\nTuomioistuimen konservatiivisista jäsenistä Clarence Thomas ja Samuel Alito olivat eri mieltä ratkaisusta. Päätös herätti välittömästi poliittisia reaktioita: demokraattien senaattijohto piti ratkaisua myönteisenä, mutta varoitti samalla, että kamppailu lääkkeellisen abortin saatavuudesta jatkuu.\n\nSenaatin demokraattijohtaja Chuck Schumer kuvasi kiistaa vasta alkaneeksi ja sanoi demokraattien vastustavan pyrkimyksiä kansalliseen aborttikieltoon. Nevadan demokraattisenaattori Jacky Rosen puolestaan kehotti tuomioistuinta suojaamaan lääkkeen saatavuuden pysyvästi.\n\n## Taustalla vuoden 2022 Dobbs-päätös\n\nKiista liittyy laajempaan tilanteeseen, joka syntyi Yhdysvalloissa vuoden 2022 Dobbs-päätöksen jälkeen. Sen jälkeen aborttia vastustavat ryhmät ovat pyrkineet rajoittamaan lääkkeelliseen aborttiin käytettävien mifepristonin ja misoprostolin saatavuutta.\n\nNyt annettu määräys tarkoittaa käytännössä, että postitse tapahtuva mifepristonin saatavuus jatkuu ainakin oikeusprosessin seuraavaan vaiheeseen saakka. Samalla se jättää avoimeksi, millaiseksi lääkkeellisen abortin saatavuus Yhdysvalloissa lopulta muodostuu.",
+    "category": "Kotimaa",
+    "tags": [
+      "yhdysvallat",
+      "korkein oikeus",
+      "abortti",
+      "mifepristoni",
+      "terveydenhuolto"
+    ],
+    "summary_bullets": [
+      "Korkein oikeus esti rajoitukset, jotka olisivat kaventaneet mifepristonin saatavuutta postitse.",
+      "Päätös on väliaikainen ja voimassa oikeusprosessin jatkuessa.",
+      "Aborttipillerit ovat Yhdysvalloissa yleisin raskaudenkeskeytyksen menetelmä."
+    ],
+    "key_points": [
+      "Korkein oikeus esti rajoitukset, jotka olisivat kaventaneet mifepristonin saatavuutta postitse.",
+      "Päätös on väliaikainen ja voimassa oikeusprosessin jatkuessa.",
+      "Aborttipillerit ovat Yhdysvalloissa yleisin raskaudenkeskeytyksen menetelmä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Lähdepaketti tukee ydinuutista hyvin useasta lähdeblokista. Kategorian korjasin ulkomaihin, koska aihe koskee Yhdysvaltoja eikä kotimaan uutista.",
+    "source_text": "The Supreme Court has ruled that the abortion pill mifepristone can continue to be accessed by mail. Two manufacturers that make the pill had asked the Supreme Court to intervene after a lower court placed significant restrictions on access to mifepristone as part of an ongoing lawsuit. Thursday's order from the high court blocks those limitations while litigation plays out. Access to the pill will likely remain until that lawsuit is decided, which could happen next year. Abortion pills are the most common method of terminating pregnancies in the US - especially in states where abortion is banned. The Supreme Court's most conservative justices, Clarence Thomas and Samuel Alito, dissented.\n\nThe pharmaceutical company that makes the abortion pill mifepristone has asked the Supreme Court to intervene after a lower court placed significant restrictions on access to the pill by mail. In a decision issued on Friday, the Fifth Circuit Court of Appeals temporarily reinstated a requirement that abortion pills be obtained in person. That will, for now, curb access to abortion pills - the most common method of terminating pregnancies in the US - in states where abortion is banned. In 2023, the Food and Drug Administration (FDA) allowed doctors to send pills without seeing patients in person, giving women the ability to receive the pills by mail or at a pharmacy through telemedicine. How safe is the abortion pill mifepristone?\n\nIn response to the supreme court’s decision to restore mail access to mifepristone, one of the two-drug regimen needed for medication abortion, Democrats welcomed the news, but noted this is part of a wider fight to further undermine safe and effective access to reproductive healthcare. “This fight is just beginning,” said Chuck Schumer, the top Senate Democrat. “We will stop at nothing to prevent the Republicans from putting a national abortion ban into effect.” Since the 2022 Dobbs decision, anti-abortion groups have attempted to limit access to abortion pills, mifepristone and misoprostol, now the most common method to terminate pregnancies in the US. “I urge the Court to move swiftly to permanently protect access to this critical medication for women,” said Senator Jacky Rosen, a Democrat from Nevada.\n\nAbortion pills are the most common method of terminating pregnancies in the US.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.91,
+    "degraded_mode": false,
+    "monica_packet_id": "20260515T073125Z_c112a1403c",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-05-15T07:45:32.844488+00:00",
+      "repair_trigger": "pre_repair_word_count=244; selected_source_words=372; selected_source_blocks=4",
+      "pre_repair_word_count": 244,
+      "pre_repair_lead_word_count": 39,
+      "post_repair_word_count": 276,
+      "post_repair_lead_word_count": 37,
+      "selected_source_words_at_repair": 372,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 372,
+      "source_blocks": 4,
+      "repair_added_word_count": 32,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:BBC World:16e3872ef1",
+        "2:BBC:feb14d4632",
+        "3:The Guardian:cceb1d38ac",
+        "4:BBC World:eb7f4af5fa"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image": "https://images.unsplash.com/photo-1568797157832-4281e91c2c32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc4ODI3Njg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1568797157832-4281e91c2c32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc4ODI3Njg2fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Yhdysvaltain korkein oikeus pitää aborttipillerin postisaannin voimassa toistaiseksi",
+    "image_credit": "Photo by Tapio Haaja on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/body-of-water-8eO6zSoCKS8?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-15T07:45:32.844488+00:00",
+    "repair_trigger": "pre_repair_word_count=244; selected_source_words=372; selected_source_blocks=4",
+    "pre_repair_word_count": 244,
+    "pre_repair_lead_word_count": 39,
+    "post_repair_word_count": 276,
+    "post_repair_lead_word_count": 37,
+    "selected_source_words_at_repair": 372,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 372,
+    "source_blocks": 4,
+    "repair_added_word_count": 32,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:16e3872ef1",
+      "2:BBC:feb14d4632",
+      "3:The Guardian:cceb1d38ac",
+      "4:BBC World:eb7f4af5fa"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-05-15T07:48:05.411564+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1568797157832-4281e91c2c32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc4ODI3Njg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1568797157832-4281e91c2c32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzc4ODI3Njg2fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-15T07:48:47.463765+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-15-yhdysvaltain-korkein-oikeus-pitaa-aborttipillerin-postisaann.md"
+  ]
+}
