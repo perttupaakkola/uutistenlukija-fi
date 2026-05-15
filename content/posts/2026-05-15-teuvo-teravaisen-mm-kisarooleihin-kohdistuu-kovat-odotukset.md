@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Kolumni/Teuvo-Ter%C3%A4v%C3%A4inen-nosti-itsens%C3%A4-kritiikin-yl%C3%A4puolelle-jo-ennen-MM-kisojen-alkua/269681"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
