@@ -15,6 +15,7 @@ import os
 import sys
 import urllib.request
 import urllib.error
+import urllib.parse
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -53,11 +54,43 @@ def get_ga4_token() -> str:
     if not ANALYTICS_TOKENS.exists():
         raise FileNotFoundError(f"Analytics tokens not found. Tried: {[str(p) for p in _SECRETS_CANDIDATES]}")
     data = json.loads(ANALYTICS_TOKENS.read_text())
+    refreshed = refresh_ga4_token(data)
+    if refreshed:
+        return refreshed
     token = data.get("access_token", "")
-    # Try refresh if needed
     if not token:
         raise ValueError("No access_token in analytics-tokens.json — refresh token first")
     return token
+
+
+def refresh_ga4_token(data: dict) -> str | None:
+    refresh_token = data.get("refresh_token")
+    client_id = data.get("client_id")
+    client_secret = data.get("client_secret")
+    if not (refresh_token and client_id and client_secret):
+        return None
+
+    payload = urllib.parse.urlencode({
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "refresh_token": refresh_token,
+        "grant_type": "refresh_token",
+    }).encode()
+    req = urllib.request.Request("https://oauth2.googleapis.com/token", data=payload, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            response = json.loads(resp.read())
+        data["access_token"] = response["access_token"]
+        ANALYTICS_TOKENS.write_text(json.dumps(data, indent=2) + "\n")
+        print("Refreshed GA4 access token")
+        return data["access_token"]
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"GA4 token refresh failed {e.code}: {body[:300]}")
+        return None
+    except (OSError, KeyError, json.JSONDecodeError, urllib.error.URLError) as e:
+        print(f"GA4 token refresh failed: {e}")
+        return None
 
 
 def ga4_report(token: str, start: str, end: str, metrics: list[str], dimensions: list[str] | None = None) -> dict:
@@ -123,6 +156,25 @@ def pct_change(current: float, baseline: float) -> str:
     return f"{sign}{change:.0f}%"
 
 
+def error_card(yesterday: str, detail: str) -> str:
+    date_fi = datetime.strptime(yesterday, "%Y-%m-%d").strftime("%-d.%-m.%Y")
+    return f"""⚠️ **Päivittäinen liikennekooste — {date_fi}**
+
+GA4-dataa ei voitu hakea, joten liikennelukuja ei julkaistu.
+Syy: {detail}
+
+Korjaus: GA4 OAuth pitää valtuuttaa uudelleen. Cron ja Discord-postauspolku toimivat, mutta token on vanhentunut tai peruttu."""
+
+
+def emit_message(msg: str, webhook: str, dry_run: bool) -> None:
+    print(msg)
+    if dry_run:
+        print("\n[DRY RUN — not posted]")
+        return
+    status = post_to_discord(msg, webhook)
+    print(f"Discord status: {status}")
+
+
 def main():
     dry_run = "--dry-run" in sys.argv
     webhook = os.environ.get("DISCORD_PIPELINE_WEBHOOK", "")
@@ -141,6 +193,7 @@ def main():
         token = get_ga4_token()
     except (FileNotFoundError, ValueError) as e:
         print(f"Token error: {e}")
+        emit_message(error_card(yesterday, str(e)), webhook, dry_run)
         sys.exit(1)
 
     metrics = ["screenPageViews", "sessions", "newUsers", "averageSessionDuration", "bounceRate"]
@@ -150,6 +203,7 @@ def main():
         baseline_report = ga4_report(token, week_start, week_end, metrics)
     except RuntimeError as e:
         print(f"GA4 error: {e}")
+        emit_message(error_card(yesterday, "GA4 OAuth2 authentication failed"), webhook, dry_run)
         sys.exit(1)
 
     # Yesterday stats
@@ -181,13 +235,7 @@ def main():
 ⏱️ Keskim. istunto: **{fmt_duration(avg_duration)}** (7pv ka: {fmt_duration(b_duration)})
 ↩️ Poistumisprosentti: **{bounce_rate:.1f}%** (7pv ka: {b_bounce:.1f}%){alert}"""
 
-    print(msg)
-
-    if dry_run:
-        print("\n[DRY RUN — not posted]")
-    else:
-        status = post_to_discord(msg, webhook)
-        print(f"Discord status: {status}")
+    emit_message(msg, webhook, dry_run)
 
 
 if __name__ == "__main__":
