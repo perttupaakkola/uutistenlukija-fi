@@ -85,5 +85,24 @@
     "_guessed_category": "Kotimaa",
     "research": "[Lähde: Keskisuomalainen]\nYhdysvalloissa Wall Streetillä eilen ennätyslukemissa jälleen sulkeutuneet pörssi-indeksit jatkoivat kipuamistaan torstaina Yhdysvaltain ja Kiinan päättäjien tapaamisen yhteydessä.\n\nLaaja-alainen S&P 500 -indeksi ja teknologiapainotteinen Nasdaq aukesivat molemmat lievään nousuun. Teollisuusindeksi Dow Jones avautui liki prosentin nousussa. Lievää nousua näkyi myös Euroopan pörsseissä.\n\nHelsingin pörssi oli runsaat 1,5 prosenttia vihreän puolella hieman ennen kaupankäynnin sulkeutumista.\n\nAasian pörssit sulkeutuivat torstaina hieman pakkasen puolella Tokiossa ja Shanghaissa. Hongkongissa pörssi sulkeutui samalle tasolle kuin avautuessaan.\n\nLähi-idän kriisin nostattama öljyn hinta jatkoi edelleen korkealla tasolla, vaikkakin hinnat olivat torstaina loivassa laskussa. Brent-laadun öljyn hinta oli iltapäivällä noin 105 dollaria barrelilta, kun yhdysvaltalainen WTI-laatu oli sadan dollarin tuntumassa.\n\nYhdysvaltain presidentin Donald Trumpin Kiinan-vierailu on herättänyt toiveita siitä, että tapaaminen presidentti Xi Jinpingin kanssa voisi tuoda ratkaisun Yhdysvaltain ja Iranin väliseen sotaan. Markkinoilla odotetaan, että Trump vakuuttaisi Xin painostamaan Irania, jotta maa avaisi Hormuzinsalmen liikenteelle uudelleen.\n\nTrumpin ja Xin odotetaan myös keskustelevan maiden välisen kauppasodan vuoden pituisen aselevon jatkamisesta. Nykytilanteesta sovittiin viime vuoden lokakuussa, kun johtajat tapasivat Etelä-Koreassa. Sopimuksen jatko on epävarma.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-05-15T01:23:47.562614+00:00",
+  "failure": "insufficient_confidence_after_repair",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260514T161128Z_ed50a042ad\",\n  \"status\": \"INSUFFICIENT_CONFIDENCE\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260514T161128Z_ed50a042ad",
+    "category": "Ulkomaat",
+    "selected_source_words": 138,
+    "selected_source_blocks": 1,
+    "story_confidence": 0.68,
+    "final_word_count": 0,
+    "issues": [
+      "missing keys: title, summary, content, category, tags, summary_bullets, content_type, editorial_reviewed, confidence, journalist_note"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "Trump Xin vieraana: Wall Streetin kurssit jatkoivat kipuamista"
   }
 }
