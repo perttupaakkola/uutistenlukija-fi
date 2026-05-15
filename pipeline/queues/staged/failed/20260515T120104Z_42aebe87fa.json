@@ -1,0 +1,186 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-15T12:01:04.122797+00:00",
+  "digest": "42aebe87fa",
+  "packet": {
+    "packet_id": "20260515T120104Z_42aebe87fa",
+    "created_at": "2026-05-15T12:01:04Z",
+    "headline_seed": "Boy, 15, shot dead in France as prosecutors blame drug war",
+    "description_seed": "Prosecutors in Nantes say the shooting was drug-related, but the victim's aunt says he was not involved.",
+    "link": "https://www.bbc.com/news/articles/cj9pze942j8o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cj9pze942j8o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Boy, 15, shot dead in France as prosecutors blame drug war"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Prosecutors in Nantes say the shooting was drug-related, but the victim's aunt says he was not involved.",
+        "word_count": 17,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "French prosecutors say a 15-year-old boy has been killed and a boy of 13 is fighting for his life in a suspected drugs-related shooting in the western city of Nantes. The attackers were wearing balaclavas and used automatic weapons, according to the country's Interior Minister Laurent Nuñez. The 13-year-old is in a critical condition and a third boy was also wounded. \"The shots were fired at three young men,\" said Nantes prosecutor Antoine Leroy, who believed the attack was a settling of scores in relation to drug offences. This was an assessment resolutely rejected by the 15-year-old boy's aunt, named as Paola, from Nantes' working-class neighbourhood of Port-Boyer. She told reporters her nephew \"was not a criminal\".",
+        "word_count": 117,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Angeline, 18, described hearing two bursts of around 10 gunshots, before seeing several people \"hooded and dressed in black\" running through the grass. The city's Mayor, Johanna Rolland, has condemned what she calls the \"drug trafficking that is plaguing the country\", and emphasised the distress and intense emotion\" this community was already going through after another fatal shooting at the end of last month. On that occasion, a man was killed and another seriously wounded in the same area in a shooting also linked to drug trafficking. The gunman used a pistol before escaping. Ms Rolland called for all police resources to be deployed to find the attackers this time around. In 2025, several French cities brought in night-time curfews against young people to try to combat drug-related violence.",
+        "word_count": 129,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "France's Ministry of Justice estimates that the number of teenagers involved in the illegal trade has risen more than four-fold in the past eight years.",
+        "word_count": 25,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Prosecutors in Nantes say the shooting was drug-related, but the victim's aunt says he was not involved.\n\nFrench prosecutors say a 15-year-old boy has been killed and a boy of 13 is fighting for his life in a suspected drugs-related shooting in the western city of Nantes. The attackers were wearing balaclavas and used automatic weapons, according to the country's Interior Minister Laurent Nuñez. The 13-year-old is in a critical condition and a third boy was also wounded. \"The shots were fired at three young men,\" said Nantes prosecutor Antoine Leroy, who believed the attack was a settling of scores in relation to drug offences. This was an assessment resolutely rejected by the 15-year-old boy's aunt, named as Paola, from Nantes' working-class neighbourhood of Port-Boyer. She told reporters her nephew \"was not a criminal\".\n\nAngeline, 18, described hearing two bursts of around 10 gunshots, before seeing several people \"hooded and dressed in black\" running through the grass. The city's Mayor, Johanna Rolland, has condemned what she calls the \"drug trafficking that is plaguing the country\", and emphasised the distress and intense emotion\" this community was already going through after another fatal shooting at the end of last month. On that occasion, a man was killed and another seriously wounded in the same area in a shooting also linked to drug trafficking. The gunman used a pistol before escaping. Ms Rolland called for all police resources to be deployed to find the attackers this time around. In 2025, several French cities brought in night-time curfews against young people to try to combat drug-related violence.\n\nFrance's Ministry of Justice estimates that the number of teenagers involved in the illegal trade has risen more than four-fold in the past eight years.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 411,
+      "selected_blocks": 4,
+      "selected_source_words": 288,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Boy, 15, shot dead in France as prosecutors blame drug war",
+      "description": "Prosecutors in Nantes say the shooting was drug-related, but the victim's aunt says he was not involved.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Boy, 15, shot dead in France as prosecutors blame drug war",
+    "description": "Prosecutors in Nantes say the shooting was drug-related, but the victim's aunt says he was not involved.",
+    "link": "https://www.bbc.com/news/articles/cj9pze942j8o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-15T11:49:18+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e89572b8c9bc16b72b6999164a6a339c",
+    "_url_hash": "a3095030e88a52e4662c82550dd0d45f90fbb095139e52d5dc847f20af3ccb0d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFrench prosecutors say a 15-year-old boy has been killed and a boy of 13 is fighting for his life in a suspected drugs-related shooting in the western city of Nantes.\n\nThe attackers were wearing balaclavas and used automatic weapons, according to the country's Interior Minister Laurent Nuñez.\n\nThe 13-year-old is in a critical condition and a third boy was also wounded.\n\n\"The shots were fired at three young men,\" said Nantes prosecutor Antoine Leroy, who believed the attack was a settling of scores in relation to drug offences.\n\nThis was an assessment resolutely rejected by the 15-year-old boy's aunt, named as Paola, from Nantes' working-class neighbourhood of Port-Boyer.\n\nShe told reporters her nephew \"was not a criminal\".\n\n\"You shouldn't mix everything up,\" said Paola. \"He was just in the wrong place at the wrong time. He wasn't involved in any of that; he had simply come to visit a friend.\"\n\nAs people gathered around the police cordon, the mother of one of the victims could be heard crying in despair from her car. It's an area where high-rise apartment blocks sit along the banks of the Erdre river.\n\n\"The boys were on their way to their grandmother's house,\" explains Stella, 35. \"I was home when it happened. A police officer called me to bring my son back and tell me my nephew was injured\".\n\n\"I feel like I'm in a nightmare and I'm angry because I almost lost my son.\"\n\nAngeline, 18, described hearing two bursts of around 10 gunshots, before seeing several people \"hooded and dressed in black\" running through the grass.\n\nThe city's Mayor, Johanna Rolland, has condemned what she calls the \"drug trafficking that is plaguing the country\", and emphasised the distress and intense emotion\" this community was already going through after another fatal shooting at the end of last month.\n\nOn that occasion, a man was killed and another seriously wounded in the same area in a shooting also linked to drug trafficking. The gunman used a pistol before escaping.\n\nMs Rolland called for all police resources to be deployed to find the attackers this time around.\n\nIn 2025, several French cities brought in night-time curfews against young people to try to combat drug-related violence.\n\nFrance's Ministry of Justice estimates that the number of teenagers involved in the illegal trade has risen more than four-fold in the past eight years.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-15T12:25:21.249230+00:00",
+  "failure": "content too short: 230 words",
+  "payload": {
+    "packet_id": "20260515T120104Z_42aebe87fa",
+    "title": "15-vuotias poika kuoli ampumisessa Nantesissa",
+    "summary": "Ranskan Nantesissa 15-vuotias poika on kuollut ja 13-vuotias poika loukkaantunut hengenvaarallisesti ampumisessa, jota syyttäjät pitävät huumerikollisuuteen liittyvänä välienselvittelynä.",
+    "content": "Ranskan länsiosassa sijaitsevassa Nantesissa 15-vuotias poika on kuollut ampumisessa, jota paikalliset syyttäjät epäilevät huumerikollisuuteen liittyväksi välienselvittelyksi. Samassa iskussa 13-vuotias poika loukkaantui kriittisesti ja kolmas poika haavoittui. Uhrin täti kiistää jyrkästi väitteen siitä, että hänen sisarenpoikansa olisi ollut mukana rikollisuudessa.\n\n## Ampujilla kerrotaan olleen automaattiaseita\n\nRanskan sisäministeri Laurent Nuñezin mukaan hyökkääjät käyttivät kommandopipoja ja automaattiaseita. Nantesin syyttäjä Antoine Leroy sanoi, että laukaukset kohdistuivat kolmeen nuoreen mieheen. Hänen arvionsa mukaan kyse oli huumerikoksiin liittyneestä tilien selvittelystä.\n\nTätä tulkintaa vastusti 15-vuotiaan uhrin täti, joka on nimetty Paolaksi. Hän on kotoisin Nantesin työväenluokkaisesta Port-Boyerin kaupunginosasta ja sanoi toimittajille, ettei hänen sisarenpoikansa ollut rikollinen.\n\n18-vuotias Angeline kuvasi kuulleensa kaksi noin kymmenen laukauksen sarjaa. Sen jälkeen hän näki useiden mustiin pukeutuneiden ja kasvonsa peittäneiden ihmisten juoksevan nurmikon poikki.\n\n## Kaupungissa pelätään huumeväkivallan pahenemista\n\nNantesin pormestari Johanna Rolland tuomitsi väkivallan ja viittasi huumekauppaan, jonka hän sanoi koettelevan maata. Hän korosti myös alueen asukkaiden järkytystä, sillä samassa kaupunginosassa tapahtui jo viime kuun lopulla toinen kuolemaan johtanut ampuminen.\n\nTuossa aiemmassa tapauksessa yksi mies kuoli ja toinen haavoittui vakavasti. Myös se ampuminen yhdistettiin huumekauppaan. Ampuja käytti tuolloin pistoolia ja pakeni paikalta.\n\nRolland vaati, että kaikki poliisin käytettävissä olevat voimavarat otetaan käyttöön uusimman ampumisen tekijöiden löytämiseksi. Ranskassa on viime vuosina yritetty vastata huumeväkivaltaan myös paikallisilla rajoituksilla: vuonna 2025 useat kaupungit ottivat käyttöön nuoriin kohdistuvia yöaikaisia ulkonaliikkumiskieltoja.\n\nRanskan oikeusministeriön arvion mukaan laittomaan huumekauppaan osallistuvien teini-ikäisten määrä on kasvanut yli nelinkertaiseksi kahdeksassa vuodessa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Ranska",
+      "Nantes",
+      "ampuminen",
+      "huumerikollisuus",
+      "nuoret"
+    ],
+    "summary_bullets": [
+      "15-vuotias poika kuoli ja 13-vuotias loukkaantui kriittisesti Nantesissa tapahtuneessa ampumisessa.",
+      "Syyttäjän mukaan teko liittyi huumerikollisuuden välienselvittelyyn, mutta uhrin täti kiistää pojan olleen rikollinen.",
+      "Nantesin pormestari vaatii poliisilta kaikkia voimavaroja tekijöiden löytämiseksi."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Juttu perustuu yhteen koottuun lähdepakettiin. Keskeinen epävarmuus koskee motiivia: syyttäjä arvioi teon liittyvän huumerikollisuuteen, mutta uhrin omainen kiistää uhrin osallisuuden."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\"packet_id\":\"20260515T120104Z_42aebe87fa\",\"title\":\"15-vuotias poika kuoli ampumisessa Nantesissa\",\"summary\":\"Ranskan Nantesissa 15-vuotias poika on kuollut ja 13-vuotias poika loukkaantunut hengenvaarallisesti ampumisessa, jota syyttäjät pitävät huumerikollisuuteen liittyvänä välienselvittelynä.\",\"content\":\"Ranskan länsiosassa sijaitsevassa Nantesissa 15-vuotias poika on kuollut ampumisessa, jota paikalliset syyttäjät epäilevät huumerikollisuuteen liittyväksi välienselvittelyksi. Samassa iskussa 13-vuotias poika loukkaantui kriittisesti ja kolmas poika haavoittui. Uhrin täti kiistää jyrkästi väitteen siitä, että hänen sisarenpoikansa olisi ollut mukana rikollisuudessa.\\n\\n## Ampujilla kerrotaan olleen automaattiaseita\\n\\nRanskan sisäministeri Laurent Nuñezin mukaan hyökkääjät käyttivät kommandopipoja ja automaattiaseita. Nantesin syyttäjä Antoine Leroy sanoi, että laukaukset kohdistuivat kolmeen nuoreen mieheen. Hänen arvionsa mukaan kyse oli huumerikoksiin liittyneestä tilien selvittelystä.\\n\\nTätä tulkintaa vastusti 15-vuotiaan uhrin täti, joka on nimetty Paolaksi. Hän on kotoisin Nantesin työväenluokkaisesta Port-Boyerin kaupunginosasta ja sanoi toimittajille, ettei hänen sisarenpoikansa ollut rikollinen.\\n\\n18-vuotias Angeline kuvasi kuulleensa kaksi noin kymmenen laukauksen sarjaa. Sen jälkeen hän näki useiden mustiin pukeutuneiden ja kasvonsa peittäneiden ihmisten juoksevan nurmikon poikki.\\n\\n## Kaupungissa pelätään huumeväkivallan pahenemista\\n\\nNantesin pormestari Johanna Rolland tuomitsi väkivallan ja viittasi huumekauppaan, jonka hän sanoi koettelevan maata. Hän korosti myös alueen asukkaiden järkytystä, sillä samassa kaupunginosassa tapahtui jo viime kuun lopulla toinen kuolemaan johtanut ampuminen.\\n\\nTuossa aiemmassa tapauksessa yksi mies kuoli ja toinen haavoittui vakavasti. Myös se ampuminen yhdistettiin huumekauppaan. Ampuja käytti tuolloin pistoolia ja pakeni paikalta.\\n\\nRolland vaati, että kaikki poliisin käytettävissä olevat voimavarat otetaan käyttöön uusimman ampumisen tekijöiden löytämiseksi. Ranskassa on viime vuosina yritetty vastata huumeväkivaltaan myös paikallisilla rajoituksilla: vuonna 2025 useat kaupungit ottivat käyttöön nuoriin kohdistuvia yöaikaisia ulkonaliikkumiskieltoja.\\n\\nRanskan oikeusministeriön arvion mukaan laittomaan huumekauppaan osallistuvien teini-ikäisten määrä on kasvanut yli nelinkertaiseksi kahdeksassa vuodessa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Ranska\",\"Nantes\",\"ampuminen\",\"huumerikollisuus\",\"nuoret\"],\"summary_bullets\":[\"15-vuotias poika kuoli ja 13-vuotias loukkaantui kriittisesti Nantesissa tapahtuneessa ampumisessa.\",\"Syyttäjän mukaan teko liittyi huumerikollisuuden välienselvittelyyn, mutta uhrin täti kiistää pojan olleen rikollinen.\",\"Nantesin pormestari vaatii poliisilta kaikkia voimavaroja tekijöiden löytämiseksi.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.92,\"journalist_note\":\"Juttu perustuu yhteen koottuun lähdepakettiin. Keskeinen epävarmuus koskee motiivia: syyttäjä arvioi teon liittyvän huumerikollisuuteen, mutta uhrin omainen kiistää uhrin osallisuuden.\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260515T120104Z_42aebe87fa",
+    "category": "Kotimaa",
+    "selected_source_words": 288,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 230,
+    "issues": [
+      "content too short: 230 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "15-vuotias poika kuoli ampumisessa Nantesissa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-15T12:25:21.248477+00:00",
+    "repair_trigger": "pre_repair_word_count=230; selected_source_words=288; selected_source_blocks=4",
+    "pre_repair_word_count": 230,
+    "pre_repair_lead_word_count": 39,
+    "post_repair_word_count": 230,
+    "post_repair_lead_word_count": 39,
+    "selected_source_words_at_repair": 288,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 288,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 230 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:84f32343e9",
+      "2:BBC World:9556824e49",
+      "3:BBC World:44c404cc21",
+      "4:BBC World:bc457bc462"
+    ],
+    "final_issues": [
+      "content too short: 230 words"
+    ],
+    "recovered": false
+  }
+}
