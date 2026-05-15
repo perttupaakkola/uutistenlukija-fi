@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/tv-and-radio/2026/may/15/canada-eurovision-song-contest"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
