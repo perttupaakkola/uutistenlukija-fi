@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/jim-carreyn-uusin-elokuva-tulee-netflixiin-pian-myos-keanu-reeves-on-mukana/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
