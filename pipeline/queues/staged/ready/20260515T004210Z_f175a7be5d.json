@@ -1,0 +1,98 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-15T00:42:10.550898+00:00",
+  "digest": "f175a7be5d",
+  "packet": {
+    "packet_id": "20260515T004210Z_f175a7be5d",
+    "created_at": "2026-05-15T00:42:10Z",
+    "headline_seed": "Water drops on soap bubble films act like merging galaxies",
+    "description_seed": "Water droplets on soap films orbited and merged like colliding galaxies, a technique that could help scientists study the cosmos.",
+    "link": "https://www.sciencenews.org/article/water-soap-film-galaxies-study-cosmos",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/water-soap-film-galaxies-study-cosmos"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Water drops on soap bubble films act like merging galaxies"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "Water droplets on soap films orbited and merged like colliding galaxies, a technique that could help scientists study the cosmos.",
+        "word_count": 20,
+        "keyword_overlap": 16,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "The physics of merging galaxies has popped up in an unexpected place: the stuff of soap bubbles. Water droplets placed on a flat soap film act like galaxies that orbit one another before coalescing. As they merge, the water droplets take on shapes reminiscent of those that appear in astronomical images of colliding galaxies, physicist Jean-Paul Martischang and colleagues report in the April PNAS Nexus. The water droplets might eventually be useful for studying gravitational attraction in a laboratory, to better understand how galaxies collide and coalesce.",
+        "word_count": 87,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Water droplets on soap films orbited and merged like colliding galaxies, a technique that could help scientists study the cosmos.\n\nThe physics of merging galaxies has popped up in an unexpected place: the stuff of soap bubbles. Water droplets placed on a flat soap film act like galaxies that orbit one another before coalescing. As they merge, the water droplets take on shapes reminiscent of those that appear in astronomical images of colliding galaxies, physicist Jean-Paul Martischang and colleagues report in the April PNAS Nexus. The water droplets might eventually be useful for studying gravitational attraction in a laboratory, to better understand how galaxies collide and coalesce.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 107,
+      "selected_blocks": 2,
+      "selected_source_words": 107,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Water drops on soap bubble films act like merging galaxies",
+      "description": "Water droplets on soap films orbited and merged like colliding galaxies, a technique that could help scientists study the cosmos.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Water drops on soap bubble films act like merging galaxies",
+    "description": "Water droplets on soap films orbited and merged like colliding galaxies, a technique that could help scientists study the cosmos.",
+    "link": "https://www.sciencenews.org/article/water-soap-film-galaxies-study-cosmos",
+    "published": "2026-05-14T17:00:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "3ff17a48a112b978ae11945ab2129ff5",
+    "_url_hash": "b24d64853b7d228bfffa3cde55053418abd7c879417379796520d7d33467ad3a",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nThe physics of merging galaxies has popped up in an unexpected place: the stuff of soap bubbles.\n\nWater droplets placed on a flat soap film act like galaxies that orbit one another before coalescing. As they merge, the water droplets take on shapes reminiscent of those that appear in astronomical images of colliding galaxies, physicist Jean-Paul Martischang and colleagues report in the April PNAS Nexus. The water droplets might eventually be useful for studying gravitational attraction in a laboratory, to better understand how galaxies collide and coalesce.",
+    "research_source": "multi"
+  }
+}
