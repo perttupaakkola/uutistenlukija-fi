@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-16T20:41:28.511552+00:00",
+  "digest": "9eefd66df1",
+  "packet": {
+    "packet_id": "20260516T204128Z_9eefd66df1",
+    "created_at": "2026-05-16T20:41:28Z",
+    "headline_seed": "Canadian from hantavirus-hit cruise ship tests positive",
+    "description_seed": "The individual is one of four former passengers on the MV Hondius isolating on Vancouver Island, British Columbia.",
+    "link": "https://www.bbc.com/news/articles/c2k2p057ezno?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "CBC.ca",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c2k2p057ezno?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Canadian from hantavirus-hit cruise ship tests positive"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A Canadian who sailed on the cruise ship MV Hondius which was hit by a hantavirus outbreak in April has tested positive for the disease, officials in the province of British Columbia say. The individual, one of four people isolating on Vancouver Island after leaving the ship, had developed mild symptoms. The province's senior health officer said the four had not had any contact with the public since arriving in Canada. The case brings the total number of infections to 11, all among cruise passengers. Three people who travelled on the ship have died, with two confirmed to have had the virus. British Columbia health officer Bonnie Henry said the person's test came back as a presumptive positive on Friday, meaning that it still remains to be confirmed by a national microbiology lab.",
+        "word_count": 133,
+        "keyword_overlap": 13,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The individual is one of four former passengers on the MV Hondius isolating on Vancouver Island, British Columbia.",
+        "word_count": 18,
+        "keyword_overlap": 10,
+        "strong_overlap": 9
+      },
+      {
+        "source": "CBC.ca",
+        "source_type": "research",
+        "text": "FULL UPDATE | Canadian in isolation tests 'presumptive positive' for hantavirus after leaving cruise ship: B.C.'s top doctor One of four Canadians isolating in British Columbia after leaving the cruise ship affected by a hantavirus outbreak has tested \"presumptive positive,\" B.C.'s top doctor said Saturday. Dr. Bonnie Henry, provincial health officer, said the patient was hospitalized after developing mild symptoms, including fever and headache, two days ago. The test came back with the presumptive positive result on Friday. It still needs to be confirmed by a national microbiology lab in Winnipeg, but means the patient will be treated as having the illness. \"Clearly, this is not what we hoped for, but it is what we planned for,\" Henry said.",
+        "word_count": 119,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "\"Clearly, this is not what we hoped for, but it is what we planned for,\" she said, quoted by national broadcaster CBC. \"I want to emphasise that hantavirus is a very different virus than the other respiratory viruses that we've been dealing with - like Covid, like influenza, like measles - and it remains one that we do not consider to have pandemic potential,\" Dr Henry added. Of the six Canadians who were on the Dutch ship, two are self-isolating at their home in Ontario. Two more couples are isolating on Vancouver Island, one from British Columbia and the other from Yukon. The person who tested positive is from Yukon. None of the other five have tested positive so far.",
+        "word_count": 120,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "A Canadian who sailed on the cruise ship MV Hondius which was hit by a hantavirus outbreak in April has tested positive for the disease, officials in the province of British Columbia say. The individual, one of four people isolating on Vancouver Island after leaving the ship, had developed mild symptoms. The province's senior health officer said the four had not had any contact with the public since arriving in Canada. The case brings the total number of infections to 11, all among cruise passengers. Three people who travelled on the ship have died, with two confirmed to have had the virus. British Columbia health officer Bonnie Henry said the person's test came back as a presumptive positive on Friday, meaning that it still remains to be confirmed by a national microbiology lab.\n\nThe individual is one of four former passengers on the MV Hondius isolating on Vancouver Island, British Columbia.\n\nFULL UPDATE | Canadian in isolation tests 'presumptive positive' for hantavirus after leaving cruise ship: B.C.'s top doctor One of four Canadians isolating in British Columbia after leaving the cruise ship affected by a hantavirus outbreak has tested \"presumptive positive,\" B.C.'s top doctor said Saturday. Dr. Bonnie Henry, provincial health officer, said the patient was hospitalized after developing mild symptoms, including fever and headache, two days ago. The test came back with the presumptive positive result on Friday. It still needs to be confirmed by a national microbiology lab in Winnipeg, but means the patient will be treated as having the illness. \"Clearly, this is not what we hoped for, but it is what we planned for,\" Henry said.\n\n\"Clearly, this is not what we hoped for, but it is what we planned for,\" she said, quoted by national broadcaster CBC. \"I want to emphasise that hantavirus is a very different virus than the other respiratory viruses that we've been dealing with - like Covid, like influenza, like measles - and it remains one that we do not consider to have pandemic potential,\" Dr Henry added. Of the six Canadians who were on the Dutch ship, two are self-isolating at their home in Ontario. Two more couples are isolating on Vancouver Island, one from British Columbia and the other from Yukon. The person who tested positive is from Yukon. None of the other five have tested positive so far.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 997,
+      "selected_blocks": 4,
+      "selected_source_words": 390,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "CBC.ca",
+        "CBC.ca",
+        "CBC.ca",
+        "CBC.ca",
+        "The Globe and Mail",
+        "The Globe and Mail",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "CBC.ca",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Canadian from hantavirus-hit cruise ship tests positive",
+      "description": "The individual is one of four former passengers on the MV Hondius isolating on Vancouver Island, British Columbia.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Canadian from hantavirus-hit cruise ship tests positive",
+    "description": "The individual is one of four former passengers on the MV Hondius isolating on Vancouver Island, British Columbia.",
+    "link": "https://www.bbc.com/news/articles/c2k2p057ezno?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-16T20:36:53+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "164da8c2eed3bad5884523859e025831",
+    "_url_hash": "bd4393d69a8cefd8920fad110a00bdfa36e092cb274f10928c1da9f4f9261ea8",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA Canadian who sailed on the cruise ship MV Hondius which was hit by a hantavirus outbreak in April has tested positive for the disease, officials in the province of British Columbia say.\n\nThe individual, one of four people isolating on Vancouver Island after leaving the ship, had developed mild symptoms.\n\nThe province's senior health officer said the four had not had any contact with the public since arriving in Canada.\n\nThe case brings the total number of infections to 11, all among cruise passengers. Three people who travelled on the ship have died, with two confirmed to have had the virus.\n\nBritish Columbia health officer Bonnie Henry said the person's test came back as a presumptive positive on Friday, meaning that it still remains to be confirmed by a national microbiology lab.\n\n\"Clearly, this is not what we hoped for, but it is what we planned for,\" she said, quoted by national broadcaster CBC.\n\n\"I want to emphasise that hantavirus is a very different virus than the other respiratory viruses that we've been dealing with - like Covid, like influenza, like measles - and it remains one that we do not consider to have pandemic potential,\" Dr Henry added.\n\nOf the six Canadians who were on the Dutch ship, two are self-isolating at their home in Ontario.\n\nTwo more couples are isolating on Vancouver Island, one from British Columbia and the other from Yukon. The person who tested positive is from Yukon.\n\nNone of the other five have tested positive so far.\n\nThe cruise ship, which set sail from Argentina on 1 April, finally docked in Tenerife, in Spain's Canary Islands, less than a week ago, allowing its 147 passengers and crew from 23 countries to leave and go into isolation.\n\nThe WHO has recommended 42 days of isolation for each person. The Canadians were initially required to isolate for 21 days but Dr Henry said that timeline could now be adjusted.\n\nHantaviruses are usually carried by rodents, but human transmission of the Andes strain - which the WHO believes some of the ship's passengers contracted in South America - is possible.\n\nSymptoms can include fever, extreme fatigue, muscle aches, stomach pain, vomiting, diarrhoea and shortness of breath.\n\nOfficials say the risk of a major outbreak is very low.\n\n---\n\n[Lähde: CBC.ca]\nFULL UPDATE | Canadian in isolation tests 'presumptive positive' for hantavirus after leaving cruise ship: B.C.'s top doctor\n\nOne of four Canadians isolating in British Columbia after leaving the cruise ship affected by a hantavirus outbreak has tested \"presumptive positive,\" B.C.'s top doctor said Saturday.\n\nDr. Bonnie Henry, provincial health officer, said the patient was hospitalized after developing  mild symptoms, including fever and headache, two days ago.\n\nThe test came back with the presumptive positive result on Friday. It still needs to be confirmed by a national microbiology lab in Winnipeg, but means the patient will be treated as having the illness.\n\n\"Clearly, this is not what we hoped for, but it is what we planned for,\" Henry said.\n\n\"I know news like this can be very concerning and can cause us to think about what we went through together over the last number of years, but I want to emphasize that hantavirus is a very different virus than the other respiratory viruses that we've been dealing with — like COVID, like influenza, like measles — and it remains one that we do not consider to have pandemic potential.\"\n\nFour cruise ship passengers starting isolating on Vancouver Island after returning to Canada on Sunday. Three of the four people who were isolating in accommodation arranged by the health authority have been brought to hospitals in Victoria, and the fourth person is still isolating at home.\n\nThe province previously said they were an Island resident in their 70s, another person from B.C. in their 50s who currently lives abroad, and a couple from the Yukon in their 70s.\n\nThe person with the presumptive test result is one of the Yukon individuals, Henry said. That person's partner was evaluated for \"very minor symptoms,\" but has tested negative.\n\nProtocols 'are working' after Canadian tests presumptive positive for hantavirus: B.C.'s top doctor\n\nThe third person who had been staying in the Island Health lodging has not tested positive, either, but was hospitalized for monitoring \"out of an abundance of caution.\"\n\nThey are being monitored in negative pressure rooms, which are kept at a lower air pressure than surrounding spaces so air flows inside, rather than out into the hospital, when health-care workers open the door.\n\n\"There's no need to delay seeking care in Island Health today should you or your family need it,\" Dr. Réka Gustafson, Island Health's chief medical health officer, said Saturday. \"Our hospitals care for patients with s\n\n---\n\n[Lähde: The Globe and Mail]\nPassengers are sprayed with disinfectant by Spanish government officials after disembarking from the hantavirus-stricken cruise ship MV Hondius at Tenerife airport on Sunday.Arturo Rodriguez/The Associated Press\n\nThe last remaining passengers on a cruise ship hit by a deadly hantavirus outbreak disembarked Monday and boarded flights to more than 20 countries to enter quarantine. A French woman was the latest to be confirmed as infected, while an American was suspected of infection after initial testing.\n\nPassengers began flying home aboard military and government planes Sunday after the MV Hondius anchored in the Canary Islands. Personnel in full-body protective gear and breathing masks escorted the travellers from ship to shore in Tenerife, an effort that concluded Monday.\n\n“If they stayed longer on the ship, the situation could have been difficult,” said Tedros Adhanom Ghebreyesus, director-general of the World Health Organization. He said citizens of the countries passengers are returning to should know “there is nothing to fear, the risk is low, this is not another COVID.”\n\nThree cruise ship passengers have died, and six people with confirmed or suspected cases of hantavirus are being quarantined, according to the WHO. The lab resul...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-16T20:45:08.955521+00:00",
+  "failure": "content too short: 248 words",
+  "payload": {
+    "packet_id": "20260516T204128Z_9eefd66df1",
+    "title": "Kanadalaisella risteilymatkustajalla alustava positiivinen hantavirustulos",
+    "summary": "Brittiläisen Kolumbian terveysviranomaiset kertovat, että yhdellä MV Hondius -risteilyalukselta palanneella kanadalaisella on alustava positiivinen hantavirustulos. Tapaus liittyy huhtikuussa havaittuun aluksen tautiryppääseen.",
+    "content": "Kanadan Brittiläisessä Kolumbiassa yksi MV Hondius -risteilyalukselta palannut matkustaja on saanut alustavan positiivisen hantavirustuloksen, provinssin terveysviranomaiset kertovat. Henkilö on yksi neljästä entisestä matkustajasta, jotka ovat olleet eristyksissä Vancouverinsaarella alukselta poistumisensa jälkeen, eikä viranomaisten mukaan heillä ole ollut kontaktia yleisöön Kanadaan paluunsa jälkeen.\n\n## Tulos odottaa laboratorion vahvistusta\n\nBrittiläisen Kolumbian johtava terveysviranomainen Bonnie Henry sanoi, että testitulos valmistui perjantaina alustavasti positiivisena. Se tarkoittaa, että tulos on vielä vahvistettava kansallisessa mikrobiologian laboratoriossa Winnipegissä. Potilasta kuitenkin hoidetaan tartunnan saaneena.\n\nCBC:n mukaan potilas vietiin sairaalaan sen jälkeen, kun hänelle oli ilmaantunut lieviä oireita kaksi päivää aiemmin. Oireisiin kuuluivat kuume ja päänsärky. Henry kuvasi tilannetta sellaiseksi, jota viranomaiset eivät toivoneet, mutta johon ne olivat varautuneet.\n\n## Kuusi kanadalaista oli samalla aluksella\n\nTartunnan saanut henkilö on Yukonista. Hän kuuluu kuuden kanadalaisen ryhmään, joka oli ollut mukana hollantilaisella MV Hondius -aluksella. Kaksi heistä on eristyksissä kotonaan Ontariossa. Kaksi muuta pariskuntaa on eristyksissä Vancouverinsaarella, toinen Brittiläisestä Kolumbiasta ja toinen Yukonista.\n\nMuiden viiden kanadalaisen ei ole kerrottu tähän mennessä saaneen positiivista testitulosta. Vancouverinsaarella eristyksissä olevat neljä henkilöä ovat viranomaisten mukaan pysyneet ilman kontaktia yleisöön siitä lähtien, kun he saapuivat Kanadaan.\n\n## Alukseen liittyy useita tartuntoja\n\nMV Hondiusiin liittyvien hantavirustartuntojen kokonaismäärä on viranomaistietojen mukaan noussut yhteentoista. Kaikki tapaukset ovat olleet risteilymatkustajilla. Kolme aluksella matkustanutta ihmistä on kuollut, ja kahdella heistä on vahvistettu olleen virus.\n\nHenry korosti, että hantavirus poikkeaa esimerkiksi koronaviruksesta, influenssasta ja tuhkarokosta. Hänen mukaansa sitä ei pidetä viruksena, jolla olisi pandemiapotentiaalia. Tapauksessa noudatetaan silti varotoimia, koska tartuntaepäily liittyy jo aiemmin useisiin sairastumisiin ja kuolemiin johtaneeseen risteilyalukseen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kanada",
+      "hantavirus",
+      "risteilyalus",
+      "Brittiläinen Kolumbia",
+      "MV Hondius"
+    ],
+    "summary_bullets": [
+      "Yhdellä MV Hondius -alukselta palanneella kanadalaisella on alustava positiivinen hantavirustulos.",
+      "Henkilö on ollut eristyksissä Vancouverinsaarella eikä viranomaisten mukaan ole ollut kontaktissa yleisöön Kanadaan paluun jälkeen.",
+      "Alukseen liittyvien tartuntojen määrä on noussut yhteentoista, ja kolme matkustajaa on kuollut."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu annettuihin BBC:n ja CBC:n lähdetietoihin. Testitulos kuvataan alustavana, koska kansallisen laboratorion vahvistus puuttuu."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\n  \"packet_id\": \"20260516T204128Z_9eefd66df1\",\n  \"title\": \"Kanadalaisella risteilymatkustajalla alustava positiivinen hantavirustulos\",\n  \"summary\": \"Brittiläisen Kolumbian terveysviranomaiset kertovat, että yhdellä MV Hondius -risteilyalukselta palanneella kanadalaisella on alustava positiivinen hantavirustulos. Tapaus liittyy huhtikuussa havaittuun aluksen tautiryppääseen.\",\n  \"content\": \"Kanadan Brittiläisessä Kolumbiassa yksi MV Hondius -risteilyalukselta palannut matkustaja on saanut alustavan positiivisen hantavirustuloksen, provinssin terveysviranomaiset kertovat. Henkilö on yksi neljästä entisestä matkustajasta, jotka ovat olleet eristyksissä Vancouverinsaarella alukselta poistumisensa jälkeen, eikä viranomaisten mukaan heillä ole ollut kontaktia yleisöön Kanadaan paluunsa jälkeen.\\n\\n## Tulos odottaa laboratorion vahvistusta\\n\\nBrittiläisen Kolumbian johtava terveysviranomainen Bonnie Henry sanoi, että testitulos valmistui perjantaina alustavasti positiivisena. Se tarkoittaa, että tulos on vielä vahvistettava kansallisessa mikrobiologian laboratoriossa Winnipegissä. Potilasta kuitenkin hoidetaan tartunnan saaneena.\\n\\nCBC:n mukaan potilas vietiin sairaalaan sen jälkeen, kun hänelle oli ilmaantunut lieviä oireita kaksi päivää aiemmin. Oireisiin kuuluivat kuume ja päänsärky. Henry kuvasi tilannetta sellaiseksi, jota viranomaiset eivät toivoneet, mutta johon ne olivat varautuneet.\\n\\n## Kuusi kanadalaista oli samalla aluksella\\n\\nTartunnan saanut henkilö on Yukonista. Hän kuuluu kuuden kanadalaisen ryhmään, joka oli ollut mukana hollantilaisella MV Hondius -aluksella. Kaksi heistä on eristyksissä kotonaan Ontariossa. Kaksi muuta pariskuntaa on eristyksissä Vancouverinsaarella, toinen Brittiläisestä Kolumbiasta ja toinen Yukonista.\\n\\nMuiden viiden kanadalaisen ei ole kerrottu tähän mennessä saaneen positiivista testitulosta. Vancouverinsaarella eristyksissä olevat neljä henkilöä ovat viranomaisten mukaan pysyneet ilman kontaktia yleisöön siitä lähtien, kun he saapuivat Kanadaan.\\n\\n## Alukseen liittyy useita tartuntoja\\n\\nMV Hondiusiin liittyvien hantavirustartuntojen kokonaismäärä on viranomaistietojen mukaan noussut yhteentoista. Kaikki tapaukset ovat olleet risteilymatkustajilla. Kolme aluksella matkustanutta ihmistä on kuollut, ja kahdella heistä on vahvistettu olleen virus.\\n\\nHenry korosti, että hantavirus poikkeaa esimerkiksi koronaviruksesta, influenssasta ja tuhkarokosta. Hänen mukaansa sitä ei pidetä viruksena, jolla olisi pandemiapotentiaalia. Tapauksessa noudatetaan silti varotoimia, koska tartuntaepäily liittyy jo aiemmin useisiin sairastumisiin ja kuolemiin johtaneeseen risteilyalukseen.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kanada\",\n    \"hantavirus\",\n    \"risteilyalus\",\n    \"Brittiläinen Kolumbia\",\n    \"MV Hondius\"\n  ],\n  \"summary_bullets\": [\n    \"Yhdellä MV Hondius -alukselta palanneella kanadalaisella on alustava positiivinen hantavirustulos.\",\n    \"Henkilö on ollut eristyksissä Vancouverinsaarella eikä viranomaisten mukaan ole ollut kontaktissa yleisöön Kanadaan paluun jälkeen.\",\n    \"Alukseen liittyvien tartuntojen määrä on noussut yhteentoista, ja kolme matkustajaa on kuollut.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.92,\n  \"journalist_note\": \"Artikkeli perustuu annettuihin BBC:n ja CBC:n lähdetietoihin. Testitulos kuvataan alustavana, koska kansallisen laboratorion vahvistus puuttuu.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260516T204128Z_9eefd66df1",
+    "category": "Kotimaa",
+    "selected_source_words": 390,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 248,
+    "issues": [
+      "content too short: 248 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Kanadalaisella risteilymatkustajalla alustava positiivinen hantavirustulos",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-16T20:45:08.955278+00:00",
+    "repair_trigger": "pre_repair_word_count=248; selected_source_words=390; selected_source_blocks=4",
+    "pre_repair_word_count": 248,
+    "pre_repair_lead_word_count": 42,
+    "post_repair_word_count": 248,
+    "post_repair_lead_word_count": 42,
+    "selected_source_words_at_repair": 390,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 390,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 248 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:75e6614956",
+      "2:BBC World:30c5985b46",
+      "3:CBC.ca:697146cc2f",
+      "4:BBC World:aee5f3c247"
+    ],
+    "final_issues": [
+      "content too short: 248 words"
+    ],
+    "recovered": false
+  }
+}
