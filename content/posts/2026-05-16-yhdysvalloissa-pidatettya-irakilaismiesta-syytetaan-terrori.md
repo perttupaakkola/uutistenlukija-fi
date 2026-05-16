@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/may/16/mohammad-baqer-saad-dawood-al-saadi-iran-guards-hayi"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
