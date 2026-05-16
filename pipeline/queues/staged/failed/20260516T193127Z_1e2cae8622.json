@@ -1,0 +1,189 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-16T19:31:27.287132+00:00",
+  "digest": "1e2cae8622",
+  "packet": {
+    "packet_id": "20260516T193127Z_1e2cae8622",
+    "created_at": "2026-05-16T19:31:27Z",
+    "headline_seed": "Man drives car into pedestrians in Italy, injuring eight",
+    "description_seed": "Seven people were injured, two seriously, before passers-by gave chase and stopped the man.",
+    "link": "https://www.bbc.com/news/articles/cyv28pd4n22o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "PBS",
+      "Newsweek"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cyv28pd4n22o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Man drives car into pedestrians in Italy, injuring eight"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Seven people were injured, two seriously, before passers-by gave chase and stopped the man.",
+        "word_count": 14,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A man has driven his car into pedestrians in the northern Italian city of Modena, injuring eight people, four seriously, officials say. They include a woman who reportedly had both her legs crushed. Passers-by gave chase and managed to detain the man, in his 30s, and hand him over to police. Prime Minister Giorgia Meloni described the incident as \"extremely serious\". City Mayor Massimo Mezzeti added that it would be \"even more serious\" if it turned out to be a premeditated attack. The incident occurred around 16:30 (14:30 GMT), when the speeding car hit the pedestrians in the centre of Modena, south-east of Milan. \"We saw the car approaching, it was heading for the curb,\" an eyewitness said. \"It suddenly accelerated - it was going at least 100km/h (62mph).\" \"We saw people flying,\" the witness told Italian media.",
+        "word_count": 138,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "PBS",
+        "source_type": "research",
+        "text": "Associated Press Associated Press ROME (AP) — A car plowed into pedestrians in the northern Italian city of Modena on Saturday, injuring eight people, four of them critically, local authorities said. Mayor Massimo Mezzetti said no one was killed in the dramatic crash but four victims were in serious condition. He said a woman was pinned against a shop window and required the amputation of both legs. The driver is a 31-year-old man born in Bergamo and raised in the province of Modena, Mezzetti said. He was detained and was being questioned at police headquarters as authorities worked to determine whether he was under the influence of substances or acted deliberately, the mayor said. Mezzetti said the vehicle entered one of the city's main streets and \"drove onto the sidewalk, sending several people flying,\" before crashing into the shop window.",
+        "word_count": 140,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Newsweek",
+        "source_type": "research",
+        "text": "Authorities say the vehicle veered onto the sidewalk along one of Modena’s main streets, sending several people flying before crashing into a shop window. Emergency services—including police, carabinieri, and financial police—cordoned off the area as ambulances treated the victims. Several of the most critically injured were airlifted to hospitals in Modena and Bologna. The unnamed driver— a 31‑year‑old man from the region with ties to Maghreb—attempted to flee but was stopped by bystanders and then detained by police, Mezzetti said. Mezzetti called the crash a “very serious act,” adding that if it were intentional, “it would be even more serious.” Italian Premier Giorgia Meloni described the incident as “extremely serious” and thanked citizens who intervened to stop the suspect.",
+        "word_count": 119,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Seven people were injured, two seriously, before passers-by gave chase and stopped the man.\n\nA man has driven his car into pedestrians in the northern Italian city of Modena, injuring eight people, four seriously, officials say. They include a woman who reportedly had both her legs crushed. Passers-by gave chase and managed to detain the man, in his 30s, and hand him over to police. Prime Minister Giorgia Meloni described the incident as \"extremely serious\". City Mayor Massimo Mezzeti added that it would be \"even more serious\" if it turned out to be a premeditated attack. The incident occurred around 16:30 (14:30 GMT), when the speeding car hit the pedestrians in the centre of Modena, south-east of Milan. \"We saw the car approaching, it was heading for the curb,\" an eyewitness said. \"It suddenly accelerated - it was going at least 100km/h (62mph).\" \"We saw people flying,\" the witness told Italian media.\n\nAssociated Press Associated Press ROME (AP) — A car plowed into pedestrians in the northern Italian city of Modena on Saturday, injuring eight people, four of them critically, local authorities said. Mayor Massimo Mezzetti said no one was killed in the dramatic crash but four victims were in serious condition. He said a woman was pinned against a shop window and required the amputation of both legs. The driver is a 31-year-old man born in Bergamo and raised in the province of Modena, Mezzetti said. He was detained and was being questioned at police headquarters as authorities worked to determine whether he was under the influence of substances or acted deliberately, the mayor said. Mezzetti said the vehicle entered one of the city's main streets and \"drove onto the sidewalk, sending several people flying,\" before crashing into the shop window.\n\nAuthorities say the vehicle veered onto the sidewalk along one of Modena’s main streets, sending several people flying before crashing into a shop window. Emergency services—including police, carabinieri, and financial police—cordoned off the area as ambulances treated the victims. Several of the most critically injured were airlifted to hospitals in Modena and Bologna. The unnamed driver— a 31‑year‑old man from the region with ties to Maghreb—attempted to flee but was stopped by bystanders and then detained by police, Mezzetti said. Mezzetti called the crash a “very serious act,” adding that if it were intentional, “it would be even more serious.” Italian Premier Giorgia Meloni described the incident as “extremely serious” and thanked citizens who intervened to stop the suspect.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 964,
+      "selected_blocks": 4,
+      "selected_source_words": 411,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "PBS",
+        "PBS",
+        "PBS",
+        "Newsweek",
+        "Newsweek",
+        "Newsweek",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "PBS",
+        "Newsweek"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Man drives car into pedestrians in Italy, injuring eight",
+      "description": "Seven people were injured, two seriously, before passers-by gave chase and stopped the man.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Man drives car into pedestrians in Italy, injuring eight",
+    "description": "Seven people were injured, two seriously, before passers-by gave chase and stopped the man.",
+    "link": "https://www.bbc.com/news/articles/cyv28pd4n22o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-16T18:21:52+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "87ebcf4a6ad56d9f00ed3c89eaf8c8f0",
+    "_url_hash": "61cadd139178f73cb8710b99554b056e07b92eb007c12fc831bf43afedcb36b3",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA man has driven his car into pedestrians in the northern Italian city of Modena, injuring eight people, four seriously, officials say.\n\nThey include a woman who reportedly had both her legs crushed.\n\nPassers-by gave chase and managed to detain the man, in his 30s, and hand him over to police.\n\nPrime Minister Giorgia Meloni described the incident as \"extremely serious\". City Mayor Massimo Mezzeti added that it would be \"even more serious\" if it turned out to be a premeditated attack.\n\nThe incident occurred around 16:30 (14:30 GMT), when the speeding car hit the pedestrians in the centre of Modena, south-east of Milan.\n\n\"We saw the car approaching, it was heading for the curb,\" an eyewitness said.\n\n\"It suddenly accelerated - it was going at least 100km/h (62mph).\"\n\n\"We saw people flying,\" the witness told Italian media.\n\nModena's mayor said it appeared the driver \"deliberately drove on to the pavement, hitting several people and crashing into a shop window\".\n\n\"He then got out of his car and brandished a knife,\" Mezzetti said.\n\nOne man who tried to stop him was lightly injured before others joined him to overpower the attacker.\n\nThe mayor said the suspect was an Italian national born in Bergamo, \"but of Maghreb origins\". He lives in the province of Modena.\n\nItaly's far-right Deputy Prime Minister Matteo Salvini named the suspect on X as Salim El Koudri.\n\n---\n\n[Lähde: PBS]\nAssociated Press\n                \n                \n                    Associated Press\n\nROME (AP) — A car plowed into pedestrians in the northern Italian city of Modena on Saturday, injuring eight people, four of them critically, local authorities said.\n\nMayor Massimo Mezzetti said no one was killed in the dramatic crash but four victims were in serious condition. He said a woman was pinned against a shop window and required the amputation of both legs.\n\nThe driver is a 31-year-old man born in Bergamo and raised in the province of Modena, Mezzetti said. He was detained and was being questioned at police headquarters as authorities worked to determine whether he was under the influence of substances or acted deliberately, the mayor said.\n\nMezzetti said the vehicle entered one of the city's main streets and \"drove onto the sidewalk, sending several people flying,\" before crashing into the shop window.\n\nAt least eight people were injured, four of them in very serious condition, according to the mayor. Victims were taken to hospitals in Modena and Bologna, including by helicopter for the most critical cases.\n\nThe driver attempted to flee but was stopped first by some of the citizens involved in the crash and then by police and taken to headquarters for questioning.\n\nWitnesses reported the man was holding a knife, but he did not manage to stab anyone, the mayor said, adding that investigators are still working to determine whether the act was deliberate or linked to other causes.\n\n\"Whatever the nature, it is a very serious act,\" Mezzetti said. \"If it were an attack, it would be even more serious.\"\n\nItalian Premier Giorgia Meloni called the incident \"extremely serious\" in a social media post and expressed solidarity with the victims and their families.\n\nMeloni thanked citizens who intervened to help stop the suspect and praised law enforcement, adding she was in contact with local authorities and expected the suspect to be held fully accountable.\n\nEmergency services, including police, carabinieri and financial police, responded to the scene, which was cordoned off as ambulances treated victims in the street.\n\nSupport trusted journalism and civil dialogue.\n\nAssociated Press\n                \n                \n                    Associated Press\n\n---\n\n[Lähde: Newsweek]\nA driver plowed his car into pedestrians on a busy street in the northern Italian city of Modena on Saturday, injuring eight people, the Associated Press reported.\n\nMayor Massimo Mezzetti said no one was killed but four victims were in serious condition. He said one woman was pinned against a shop window and required the amputation of both legs.\n\nWitnesses said the man was holding a knife, but didn't stab anyone, according to Mezzetti, adding that investigators are still working to determine if the act was deliberate or linked to other causes. He was detained and was being questioned by police who are also investigating whether the knife played any role in the incident.\n\nSaturday's crash comes just two weeks after a car plowed into a crowd in central Leipzig, Germany, killing two people and injuring 25 others.\n\nAuthorities say the vehicle veered onto the sidewalk along one of Modena’s main streets, sending several people flying before crashing into a shop window.\n\nEmergency services—including police, carabinieri, and financial police—cordoned off the area as ambulances treated the victims. Several of the most critically injured were airlifted to hospitals in Modena and Bologna.\n\nThe unnamed driver— a 31‑year‑old man from the region with ties to Maghreb—attempted to flee but was stopped by bystanders and then detained by police, Mezzetti said.\n\nMezzetti called the crash a “very serious act,” adding that if it were intentional, “it would be even more serious.”\n\nItalian Premier Giorgia Meloni described the incident as “extremely serious” and thanked citizens who intervened to stop the suspect.\n\n\"I express my closeness to the injured people and their families. I also extend my thanks to the citizens who bravely intervened to stop the perpetrator and to the law enforcement agencies for their response,\" she wrote in an X post. \"I trust that the perpetrator will be held fully accountable for his actions.\"\n\nPolice are reviewing surveillance footage, interviewing witnesses, and awaiting toxicology results to see if the suspect was impaired. The suspect is expected to remain in custody as investigators build their case.\n\nProsecutors are expected to decide in the coming days whether to pursue charges of attempted homicide, negligent injury, or terrorism‑related offenses depending on what the investigation uncovers.\n\nThe...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-16T19:45:06.508294+00:00",
+  "failure": "content too short: 245 words",
+  "payload": {
+    "packet_id": "20260516T193127Z_1e2cae8622",
+    "title": "Auto ajoi jalankulkijoiden päälle Modenassa, kahdeksan loukkaantui",
+    "summary": "Pohjois-Italiassa Modenan keskustassa auto ajoi jalkakäytävälle ja törmäsi jalankulkijoihin. Paikallisviranomaisten mukaan kahdeksan ihmistä loukkaantui, heistä neljä vakavasti. Kuljettaja otettiin kiinni sivullisten puututtua tilanteeseen.",
+    "content": "Pohjois-Italiassa Modenan kaupungissa auto ajoi lauantaina jalankulkijoiden päälle kaupungin keskustassa, ja paikallisviranomaisten mukaan kahdeksan ihmistä loukkaantui. Neljän loukkaantuneen tila on kuvattu vakavaksi tai kriittiseksi, mutta pormestari Massimo Mezzettin mukaan kukaan ei kuollut tapahtumassa.\n\n## Auto nousi jalkakäytävälle keskustassa\n\nTapaus sattui Modenan keskustassa noin kello 16.30 paikallista aikaa. Viranomaisten mukaan auto ajautui yhdelle kaupungin pääkaduista ja nousi jalkakäytävälle, jossa se osui useisiin ihmisiin ennen törmäystä liikkeen ikkunaan. Modena sijaitsee Pohjois-Italiassa Milanon kaakkoispuolella.\n\nSilminnäkijän mukaan auto lähestyi reunakiveystä ja kiihdytti äkillisesti. Todistajan arvion mukaan ajonopeus oli vähintään noin 100 kilometriä tunnissa. Paikallisille tiedotusvälineille puhunut todistaja kuvasi nähneensä ihmisten sinkoutuvan törmäyksen voimasta.\n\nPormestari Mezzettin mukaan yksi loukkaantuneista jäi auton ja liikkeen ikkunan väliin. Hänen mukaansa naisen molemmat jalat jouduttiin amputoimaan. Vakavimmin loukkaantuneita vietiin sairaaloihin Modenaan ja Bolognaan, ja osa heistä kuljetettiin hoitoon helikopterilla.\n\n## Sivulliset pysäyttivät kuljettajan\n\nViranomaisten mukaan kuljettaja yritti paeta paikalta, mutta sivulliset lähtivät hänen peräänsä ja pysäyttivät hänet. Sen jälkeen mies luovutettiin poliisille. Kuljettajaksi on kerrottu 31-vuotias mies, joka on syntynyt Bergamossa ja kasvanut Modenan maakunnassa.\n\nPoliisi kuulusteli miestä tapahtuman jälkeen poliisiasemalla. Viranomaiset selvittävät, oliko hän päihteiden vaikutuksen alaisena tai toimiko hän tahallisesti. Tapahtuman motiivista ei ole kerrottu varmistettua tietoa.\n\n## Tutkinta jatkuu\n\nItalian pääministeri Giorgia Meloni kuvasi tapausta erittäin vakavaksi ja kiitti kansalaisia, jotka puuttuivat tilanteeseen. Mezzetti sanoi, että teko olisi vielä vakavampi, jos se osoittautuu tahalliseksi hyökkäykseksi.\n\nOnnettomuusalue eristettiin pelastustoimien ja poliisitutkinnan ajaksi. Paikalle hälytettiin ambulansseja sekä poliisin, karabinieerien ja talouspoliisin yksiköitä. Viranomaiset jatkavat tapahtumien kulun selvittämistä kuljettajan kuulustelujen ja muun tutkinnan perusteella.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Italia",
+      "Modena",
+      "liikenneonnettomuudet",
+      "poliisi"
+    ],
+    "summary_bullets": [
+      "Auto ajoi jalankulkijoiden päälle Modenan keskustassa Pohjois-Italiassa.",
+      "Kahdeksan ihmistä loukkaantui, heistä neljä vakavasti tai kriittisesti.",
+      "Sivulliset pysäyttivät kuljettajan, ja poliisi selvittää, oliko teko tahallinen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.91,
+    "journalist_note": "Useisiin lähteisiin perustuva paketti on pääosin yhteneväinen. Varovaisuus säilytetty motiivin, päihteiden ja tahallisuuden osalta, koska ne ovat tutkinnan kohteena."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\n  \"packet_id\": \"20260516T193127Z_1e2cae8622\",\n  \"title\": \"Auto ajoi jalankulkijoiden päälle Modenassa, kahdeksan loukkaantui\",\n  \"summary\": \"Pohjois-Italiassa Modenan keskustassa auto ajoi jalkakäytävälle ja törmäsi jalankulkijoihin. Paikallisviranomaisten mukaan kahdeksan ihmistä loukkaantui, heistä neljä vakavasti. Kuljettaja otettiin kiinni sivullisten puututtua tilanteeseen.\",\n  \"content\": \"Pohjois-Italiassa Modenan kaupungissa auto ajoi lauantaina jalankulkijoiden päälle kaupungin keskustassa, ja paikallisviranomaisten mukaan kahdeksan ihmistä loukkaantui. Neljän loukkaantuneen tila on kuvattu vakavaksi tai kriittiseksi, mutta pormestari Massimo Mezzettin mukaan kukaan ei kuollut tapahtumassa.\\n\\n## Auto nousi jalkakäytävälle keskustassa\\n\\nTapaus sattui Modenan keskustassa noin kello 16.30 paikallista aikaa. Viranomaisten mukaan auto ajautui yhdelle kaupungin pääkaduista ja nousi jalkakäytävälle, jossa se osui useisiin ihmisiin ennen törmäystä liikkeen ikkunaan. Modena sijaitsee Pohjois-Italiassa Milanon kaakkoispuolella.\\n\\nSilminnäkijän mukaan auto lähestyi reunakiveystä ja kiihdytti äkillisesti. Todistajan arvion mukaan ajonopeus oli vähintään noin 100 kilometriä tunnissa. Paikallisille tiedotusvälineille puhunut todistaja kuvasi nähneensä ihmisten sinkoutuvan törmäyksen voimasta.\\n\\nPormestari Mezzettin mukaan yksi loukkaantuneista jäi auton ja liikkeen ikkunan väliin. Hänen mukaansa naisen molemmat jalat jouduttiin amputoimaan. Vakavimmin loukkaantuneita vietiin sairaaloihin Modenaan ja Bolognaan, ja osa heistä kuljetettiin hoitoon helikopterilla.\\n\\n## Sivulliset pysäyttivät kuljettajan\\n\\nViranomaisten mukaan kuljettaja yritti paeta paikalta, mutta sivulliset lähtivät hänen peräänsä ja pysäyttivät hänet. Sen jälkeen mies luovutettiin poliisille. Kuljettajaksi on kerrottu 31-vuotias mies, joka on syntynyt Bergamossa ja kasvanut Modenan maakunnassa.\\n\\nPoliisi kuulusteli miestä tapahtuman jälkeen poliisiasemalla. Viranomaiset selvittävät, oliko hän päihteiden vaikutuksen alaisena tai toimiko hän tahallisesti. Tapahtuman motiivista ei ole kerrottu varmistettua tietoa.\\n\\n## Tutkinta jatkuu\\n\\nItalian pääministeri Giorgia Meloni kuvasi tapausta erittäin vakavaksi ja kiitti kansalaisia, jotka puuttuivat tilanteeseen. Mezzetti sanoi, että teko olisi vielä vakavampi, jos se osoittautuu tahalliseksi hyökkäykseksi.\\n\\nOnnettomuusalue eristettiin pelastustoimien ja poliisitutkinnan ajaksi. Paikalle hälytettiin ambulansseja sekä poliisin, karabinieerien ja talouspoliisin yksiköitä. Viranomaiset jatkavat tapahtumien kulun selvittämistä kuljettajan kuulustelujen ja muun tutkinnan perusteella.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Italia\",\n    \"Modena\",\n    \"liikenneonnettomuudet\",\n    \"poliisi\"\n  ],\n  \"summary_bullets\": [\n    \"Auto ajoi jalankulkijoiden päälle Modenan keskustassa Pohjois-Italiassa.\",\n    \"Kahdeksan ihmistä loukkaantui, heistä neljä vakavasti tai kriittisesti.\",\n    \"Sivulliset pysäyttivät kuljettajan, ja poliisi selvittää, oliko teko tahallinen.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.91,\n  \"journalist_note\": \"Useisiin lähteisiin perustuva paketti on pääosin yhteneväinen. Varovaisuus säilytetty motiivin, päihteiden ja tahallisuuden osalta, koska ne ovat tutkinnan kohteena.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260516T193127Z_1e2cae8622",
+    "category": "Kotimaa",
+    "selected_source_words": 411,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 245,
+    "issues": [
+      "content too short: 245 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Auto ajoi jalankulkijoiden päälle Modenassa, kahdeksan loukkaantui",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-16T19:45:06.507659+00:00",
+    "repair_trigger": "pre_repair_word_count=240; selected_source_words=411; selected_source_blocks=4",
+    "pre_repair_word_count": 240,
+    "pre_repair_lead_word_count": 33,
+    "post_repair_word_count": 245,
+    "post_repair_lead_word_count": 33,
+    "selected_source_words_at_repair": 411,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 411,
+    "source_blocks": 4,
+    "repair_added_word_count": 5,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 245 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:f996b06dc7",
+      "2:BBC World:dea50f4a52",
+      "3:PBS:41e1616819",
+      "4:Newsweek:5b566d9bfe"
+    ],
+    "final_issues": [
+      "content too short: 245 words"
+    ],
+    "recovered": false
+  }
+}

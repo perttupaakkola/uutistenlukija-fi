@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrityksille-iso-uudistus-mobilepayhin-tata-muutos-tarkoittaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
