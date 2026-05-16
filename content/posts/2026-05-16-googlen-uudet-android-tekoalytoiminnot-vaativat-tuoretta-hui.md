@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/16/googlen-esitteleman-gemini-intelligencen-laitevaatimukset-ovat-kovat-vain-viimeisimmat-huippupuhelimet-saamassa-tuen/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
