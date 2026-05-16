@@ -44,7 +44,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/05/16/users-turn-to-jailbreaking-their-older-kindles-as-amazon-ends-support/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
