@@ -43,7 +43,6 @@ keywords:
 source_name: "Ilta-Sanomat"
 source_url: "https://www.is.fi/ulkomaat/art-2000012011399.html"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
