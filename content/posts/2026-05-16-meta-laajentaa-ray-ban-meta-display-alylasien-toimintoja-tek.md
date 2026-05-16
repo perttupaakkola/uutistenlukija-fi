@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/16/meta-tuo-merkittavia-paivityksia-ray-ban-meta-display-alylaseille-avautuvat-sovelluksille-ja-saavat-lisaa-tekoalya/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
