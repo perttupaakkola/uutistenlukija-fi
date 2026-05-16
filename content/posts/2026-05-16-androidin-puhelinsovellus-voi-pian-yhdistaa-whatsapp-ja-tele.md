@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiiliuutiset/yksi-androidin-toivotuimmista-uudistuksista-on-vihdoin-tapahtumassa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
