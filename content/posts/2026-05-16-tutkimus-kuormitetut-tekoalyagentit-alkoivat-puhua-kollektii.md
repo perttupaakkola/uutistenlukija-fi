@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/ylikuormitetut-tekoalyt-omaksuivat-marxilaisia-nakemyksia-jattivat-toisilleen-salaviesteja-tiedostoihin/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
