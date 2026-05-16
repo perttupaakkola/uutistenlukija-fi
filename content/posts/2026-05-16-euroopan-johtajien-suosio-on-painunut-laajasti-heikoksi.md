@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/ng-interactive/2026/may/16/down-and-then-out-in-paris-and-london-why-starmer-isnt-the-only-one-with-a-popularity-problem"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
