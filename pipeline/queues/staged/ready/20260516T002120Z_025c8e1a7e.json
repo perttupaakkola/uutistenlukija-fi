@@ -1,0 +1,125 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-16T00:21:20.363052+00:00",
+  "digest": "025c8e1a7e",
+  "packet": {
+    "packet_id": "20260516T002120Z_025c8e1a7e",
+    "created_at": "2026-05-16T00:21:20Z",
+    "headline_seed": "Five Italians die during cave scuba dive in Maldives",
+    "description_seed": "Four of the Italians were part of a team from the University of Genoa.",
+    "link": "https://www.bbc.com/news/articles/c62e0p7rd2ro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "AOL",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c62e0p7rd2ro?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Five Italians die during cave scuba dive in Maldives"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Five Italians have died in a scuba diving accident in the Maldives, the foreign ministry in Rome has said. \"The divers are believed to have died while attempting to explore caves at a depth of 50 metres (164ft),\" the ministry said, adding that this happened in Vaavu Atoll. Four of the divers were part of a University of Genoa team, including professor of ecology Monica Montefalcone, her daughter and two researchers. The Maldives' military said one body had been found in a cave about 60m underwater, and the other four divers were believed to be also there. It said divers with special equipment had been sent to the area, describing a search operation as a very high risk. Italy's foreign ministry said on Friday that officials were working with the Maldivian authorities to search for the bodies.",
+        "word_count": 137,
+        "keyword_overlap": 11,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Four of the Italians were part of a team from the University of Genoa.",
+        "word_count": 14,
+        "keyword_overlap": 8,
+        "strong_overlap": 2
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "Five Italian divers died in the Maldives after disappearing during a scuba expedition near Vaavu Atoll, as authorities continued a difficult underwater recovery operation on Friday. Maldivian officials said the group, which included an instructor, was believed to have been exploring a deep underwater cave when the accident happened on Thursday. One body was recovered from around 60 metres below the surface, while the remaining four divers were believed to still be inside the same cave. “The cave is so deep that divers even with the best equipment do not try to approach,” presidential spokesperson Mohamed Hussain Shareef said. Italy’s Foreign Ministry said the divers had apparently been attempting to explore caves at a depth of about 50 metres, adding that the exact circumstances of the tragedy remain under investigation.",
+        "word_count": 130,
+        "keyword_overlap": 8,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "It said in an earlier statement that another 20 Italian nationals aboard the Duke of York yacht, from which the five divers took off, are unharmed and receiving assistance from the Embassy of Italy in Colombo, Sri Lanka. The ministry added that the yacht is waiting for weather conditions to improve before returning to the Maldives' capital, Male. The incident is believed to be the worst single diving accident in the tiny Indian Ocean nation, a popular tourist destination because of its string of coral islands. The five Italians entered the water on Thursday morning, local media reported. The crew of the diving vessel they were travelling on reported them missing when they failed to resurface later on.",
+        "word_count": 118,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Five Italians have died in a scuba diving accident in the Maldives, the foreign ministry in Rome has said. \"The divers are believed to have died while attempting to explore caves at a depth of 50 metres (164ft),\" the ministry said, adding that this happened in Vaavu Atoll. Four of the divers were part of a University of Genoa team, including professor of ecology Monica Montefalcone, her daughter and two researchers. The Maldives' military said one body had been found in a cave about 60m underwater, and the other four divers were believed to be also there. It said divers with special equipment had been sent to the area, describing a search operation as a very high risk. Italy's foreign ministry said on Friday that officials were working with the Maldivian authorities to search for the bodies.\n\nFour of the Italians were part of a team from the University of Genoa.\n\nFive Italian divers died in the Maldives after disappearing during a scuba expedition near Vaavu Atoll, as authorities continued a difficult underwater recovery operation on Friday. Maldivian officials said the group, which included an instructor, was believed to have been exploring a deep underwater cave when the accident happened on Thursday. One body was recovered from around 60 metres below the surface, while the remaining four divers were believed to still be inside the same cave. “The cave is so deep that divers even with the best equipment do not try to approach,” presidential spokesperson Mohamed Hussain Shareef said. Italy’s Foreign Ministry said the divers had apparently been attempting to explore caves at a depth of about 50 metres, adding that the exact circumstances of the tragedy remain under investigation.\n\nIt said in an earlier statement that another 20 Italian nationals aboard the Duke of York yacht, from which the five divers took off, are unharmed and receiving assistance from the Embassy of Italy in Colombo, Sri Lanka. The ministry added that the yacht is waiting for weather conditions to improve before returning to the Maldives' capital, Male. The incident is believed to be the worst single diving accident in the tiny Indian Ocean nation, a popular tourist destination because of its string of coral islands. The five Italians entered the water on Thursday morning, local media reported. The crew of the diving vessel they were travelling on reported them missing when they failed to resurface later on.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 964,
+      "selected_blocks": 4,
+      "selected_source_words": 399,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "Newsday",
+        "Newsday",
+        "Newsday",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Five Italians die during cave scuba dive in Maldives",
+      "description": "Four of the Italians were part of a team from the University of Genoa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Five Italians die during cave scuba dive in Maldives",
+    "description": "Four of the Italians were part of a team from the University of Genoa.",
+    "link": "https://www.bbc.com/news/articles/c62e0p7rd2ro?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-15T21:33:38+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4a545e4a346142c686e03dca132d75c8",
+    "_url_hash": "3980da8ba720c3f8b651b18db4cae6e2338c0a323acd21964493934f15c42aa9",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kulttuuri",
+    "research": "[Lähde: BBC World]\nFive Italians have died in a scuba diving accident in the Maldives, the foreign ministry in Rome has said.\n\n\"The divers are believed to have died while attempting to explore caves at a depth of 50 metres (164ft),\" the ministry said, adding that this happened in Vaavu Atoll.\n\nFour of the divers were part of a University of Genoa team, including professor of ecology Monica Montefalcone, her daughter and two researchers.\n\nThe Maldives' military said one body had been found in a cave about 60m underwater, and the other four divers were believed to be also there.\n\nIt said divers with special equipment had been sent to the area, describing a search operation as a very high risk.\n\nItaly's foreign ministry said on Friday that officials were working with the Maldivian authorities to search for the bodies.\n\nIt said in an earlier statement that another 20 Italian nationals aboard the Duke of York yacht, from which the five divers took off, are unharmed and receiving assistance from the Embassy of Italy in Colombo, Sri Lanka.\n\nThe ministry added that the yacht is waiting for weather conditions to improve before returning to the Maldives' capital, Male.\n\nThe incident is believed to be the worst single diving accident in the tiny Indian Ocean nation, a popular tourist destination because of its string of coral islands.\n\nThe five Italians entered the water on Thursday morning, local media reported.\n\nThe crew of the diving vessel they were travelling on reported them missing when they failed to resurface later on.\n\nPolice said the weather was rough in the area, about 100km (62 miles) south of Male. A yellow warning was issued for passenger boats and fishermen.\n\nThe University of Genoa later named the victims as Montefalcone, her daughter Giorgia Sommacal, who was also a student, research fellow Muriel Oddenino and marine biology graduate Federico Gualtieri.\n\nThe fifth victim has been named as boat operations manager and diving instructor Gianluca Benedetti.\n\nIn a statement on X, the University of Genoa expressed its \"deepest condolences\" to the victims.\n\nItaly's ambassador to Sri Lanka, Damiano Francovigh, confirmed to broadcaster Sky TG24 that one body has been recovered while the other four had yet to be located.\n\nAccording to initial reconstructions, the cave the five divers entered is divided into three large rooms connected by narrow passages, the Italian foreign ministry said.\n\nA second dive by Coast Guard divers took place on Friday morning, exploring two of the th\n\n---\n\n[Lähde: AOL]\nFive Italian divers died in the Maldives after disappearing during a scuba expedition near Vaavu Atoll, as authorities continued a difficult underwater recovery operation on Friday.\n\nMaldivian officials said the group, which included an instructor, was believed to have been exploring a deep underwater cave when the accident happened on Thursday.\n\nOne body was recovered from around 60 metres below the surface, while the remaining four divers were believed to still be inside the same cave.\n\n“The cave is so deep that divers even with the best equipment do not try to approach,” presidential spokesperson Mohamed Hussain Shareef said.\n\nItaly’s Foreign Ministry said the divers had apparently been attempting to explore caves at a depth of about 50 metres, adding that the exact circumstances of the tragedy remain under investigation.\n\nAuthorities launched a large-scale rescue and recovery effort involving coast guard vessels, aircraft and dive teams. A first search operation failed to locate the remaining bodies, and officials said rough sea conditions were complicating further dives.\n\nThe group had been diving near Alimathaa in Vaavu Atoll and was reported missing after failing to resurface by midday Thursday. Weather conditions in the area were described as poor, with a yellow alert in effect at the time of the accident.\n\nItalian diplomats and technical experts were assisting the operation, while the Italian Embassy remained in contact with the victims’ families.\n\nThe Maldives, a popular destination for diving tourism, has recorded several fatal marine accidents in recent years, though incidents of this scale are rare.\n\n---\n\n[Lähde: Newsday]\nThis undated handout picture released by Greenpeace Italia on Friday, May 15, 2026 shows Monica Montefalcone one of the five Italian scuba divers who died near Alimathaa in the Maldives archipelago while exploring an underwater cave. Credit: AP/Greenpeace\n\nMALE, Maldives — A high-risk operation to recover the bodies of four Italian divers from deep inside an underwater cave in the Maldives was suspended on Friday after rough seas repeatedly hampered efforts.\n\nSpeaking a day after the body of a fifth member of the dive group was recovered on Thursday, Italy’s Foreign Minister Antonio Tajani said despite the poor weather conditions everything possible would be done to bring the victims home.\n\nThe cause of the deaths remained under investigation. The recovery operation is expected to resume on Saturday.\n\n“Unfortunately, the searches are suspended due to bad weather, but we will do everything possible to recover the bodies of our compatriots,\" Tajani told a political event in Italy.\n\nItaly’s Foreign Ministry said the dive group had “apparently died while attempting to explore caves at a depth of 50 meters (164 feet)” in the Vaavu Atoll on Thursday.\n\nGet the latest breaking news as it happens.\n\nBy clicking Sign up, you agree to our privacy policy.\n\nThe victims were identified as Monica Montefalcone, an associate ecology professor at the University of Genoa, her daughter Giorgia Sommacal, marine biologist Federico Gualtieri, researcher Muriel Oddenino and diving instructor Gianluca Benedetti, according to the Maldivian government.\n\nBenedetti’s body was recovered on Thursday.\n\nA jetty is seen on a resort on Male Attol in Maldives, Thursday, Feb. 16, 2012. Credit: AP/Gemunu Amarasinghe\n\nMontefalcone’s husband, Carlo Sommacal, said he believed something unexpected must have occurred and ruled out recklessness on her part.\n\n“Something must...",
+    "research_source": "multi"
+  }
+}
