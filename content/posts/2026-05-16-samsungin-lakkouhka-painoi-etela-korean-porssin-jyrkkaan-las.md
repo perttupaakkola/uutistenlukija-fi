@@ -43,7 +43,6 @@ keywords:
 source_name: "Arvopaperi"
 source_url: "https://www.arvopaperi.fi/uutiset/a/69b5d93d-54e4-4af7-b260-3a3e64d20cc2"
 source_domain: "arvopaperi.fi"
-briefing: true
 draft: false
 ---
 
