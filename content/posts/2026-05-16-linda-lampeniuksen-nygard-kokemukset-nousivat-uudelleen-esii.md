@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/peter-nygard-aiheutti-kipean-piinan-linda-lampeniukselle-han-ja-kuusi-muuta-naista-kertoivat-mtv-lle-tarinansa/9338778"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
