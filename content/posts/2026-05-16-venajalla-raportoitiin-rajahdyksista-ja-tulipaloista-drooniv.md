@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/ukraina-iski-venajalle-useita-tulipaloja/9338994"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
