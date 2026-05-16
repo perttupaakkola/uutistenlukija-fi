@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/vakivaltaa-ja-nakyvyytta-tutkija-aarioikeiston-tavoite-onnistui-tampereen-vappumarssilla/9337802"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
