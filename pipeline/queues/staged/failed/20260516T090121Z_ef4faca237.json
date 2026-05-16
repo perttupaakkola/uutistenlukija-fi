@@ -93,5 +93,20 @@
     "_guessed_category": "Talous",
     "research": "[Lähde: Yle Uutiset]\nYhdysvalloissa New Yorkin pörssit sulkeutuivat perjantaina laskussa.\n\nLaaja-alainen S&P 500 -indeksi sulkeutui 1,2 prosenttia miinuksella ja teknologiapainotteinen Nasdaq oli puolestaan 1,5 prosentin laskussa. Teollisuusindeksi Dow Jones oli 1,1 prosenttia pakkasella.\n\nPörssikurssit laskivat raakaöljyn hinnan nousun seurauksena, mikä on herättänyt pelkoa maailmanlaajuisesta inflaatiosta. Raakaöljyn hintoja on puolestaan nostanut epätietoisuus Yhdysvaltain ja Iranin välisen hauraan tulitauon jatkumisesta sekä Hormuzinsalmen sulku.\n\nLisäksi sijoittajat pettyivät, kun Yhdysvaltain presidentin Donald Trumpin ja Kiinan presidentin Xi Jinpingin odotettu huippukokous Pekingissä ei tuottanut merkittäviä läpimurtoja Lähi-idän sodan tai kauppasuhteiden osalta.\n\nYhdysvalloissa perjantai on Jerome Powellin viimeinen päivä maan keskuspankin Fedin pääjohtajana. Hänen seuraajansa Kevin Warsh joutuu mahdollisesti nostamaan korkoja, jos Iranin sodan pitkittyminen johtaa sitkeään inflaatioon.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-05-16T09:43:01.329566+00:00",
+  "failure": "weak_talous_ready_source_floor",
+  "ready_quality_feedback": {
+    "action": "fail",
+    "reason": "weak_talous_ready_source_floor",
+    "source_words": 124,
+    "source_blocks": 2,
+    "story_confidence": 0.76,
+    "org_guardrail": {
+      "applies": false,
+      "classification": "not_org_source_talous",
+      "penalty": 0
+    },
+    "fail_closed": true
   }
 }
