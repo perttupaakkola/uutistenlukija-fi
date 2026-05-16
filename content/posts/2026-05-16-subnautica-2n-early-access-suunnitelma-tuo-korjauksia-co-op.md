@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/subnautica-2n-kehittajat-paljastivat-millaisia-paivityksia-peliin-on-luvassa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
