@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/may/16/peacock-italy-punta-marina-tensions"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 

@@ -1,0 +1,215 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-16T18:01:45.488809+00:00",
+  "digest": "b881fae9f9",
+  "packet": {
+    "packet_id": "20260516T180145Z_b881fae9f9",
+    "created_at": "2026-05-16T18:01:45Z",
+    "headline_seed": "Whale found dead near Danish island after German rescue operation",
+    "description_seed": "Wildlife experts had previous criticised the operation, saying it would only cause the animal more distress.",
+    "link": "https://www.bbc.com/news/articles/c1l28lql137o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "TheJournal.ie",
+      "Newsday"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c1l28lql137o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Whale found dead near Danish island after German rescue operation"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Wildlife experts had previous criticised the operation, saying it would only cause the animal more distress.",
+        "word_count": 16,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A humpback whale rescued after beaching itself in Germany has been found dead near a Danish island. The whale was first spotted stuck on a sandbank on 23 March, off the island of Poel on Germany's Baltic coast. It swam free in early May after a water-filled barge carried it into the North Sea. The operation was privately funded by two German entrepreneurs and spurred intense public debate, with critics suggesting it would only cause the animal distress. A whale carcass was reportedly spotted on Thursday off the Danish island of Anholt, located between Denmark and Sweden. Authorities were not immediately able to confirm it was the same whale. In a statement the Danish Environmental Protection Agency said conditions on Saturday made it possible for the whale's identity to be verified, and its tracking device retrieved.",
+        "word_count": 136,
+        "keyword_overlap": 14,
+        "strong_overlap": 6
+      },
+      {
+        "source": "TheJournal.ie",
+        "source_type": "research",
+        "text": "A HUMPBACK WHALE that underwent a rescue operation in Germany two weeks ago after beaching itself there has been found dead near a Danish island, officials said. “It can now be confirmed that the stranded humpback whale near Anholt is the same whale that was previously stranded in Germany and was the subject of rescue attempts,” Jane Hansen, division head at the Danish Environmental Protection Agency, said in a statement to news agency AFP. The whale, dubbed “Timmy” in Germany’s media, was initially spotted stuck on a sandbank on 23 March. After various failed attempts it was finally put in a barge and released into the North Sea off Denmark on 2 May.",
+        "word_count": 113,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Newsday",
+        "source_type": "research",
+        "text": "The humpback whale recovered from a shallow bay off Wismar is being transported towards the North Sea in a flooded cargo ship just before the Danish border in Fehmarn, Germany, Wednesday, April 29, 2026. Credit: AP/Philip Dulian BERLIN — A humpback whale found dead this week off a Danish island has been identified as the animal released two weeks ago in a spectacular and contentious rescue effort, after repeatedly becoming stranded off Germany's Baltic Sea coast, authorities said Saturday. The dead whale was stranded on Thursday just off the small island of Anholt in the Kattegat, the broad strait between Denmark and Sweden that connects the Baltic Sea to the North Sea.",
+        "word_count": 112,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Wildlife experts had previous criticised the operation, saying it would only cause the animal more distress.\n\nA humpback whale rescued after beaching itself in Germany has been found dead near a Danish island. The whale was first spotted stuck on a sandbank on 23 March, off the island of Poel on Germany's Baltic coast. It swam free in early May after a water-filled barge carried it into the North Sea. The operation was privately funded by two German entrepreneurs and spurred intense public debate, with critics suggesting it would only cause the animal distress. A whale carcass was reportedly spotted on Thursday off the Danish island of Anholt, located between Denmark and Sweden. Authorities were not immediately able to confirm it was the same whale. In a statement the Danish Environmental Protection Agency said conditions on Saturday made it possible for the whale's identity to be verified, and its tracking device retrieved.\n\nA HUMPBACK WHALE that underwent a rescue operation in Germany two weeks ago after beaching itself there has been found dead near a Danish island, officials said. “It can now be confirmed that the stranded humpback whale near Anholt is the same whale that was previously stranded in Germany and was the subject of rescue attempts,” Jane Hansen, division head at the Danish Environmental Protection Agency, said in a statement to news agency AFP. The whale, dubbed “Timmy” in Germany’s media, was initially spotted stuck on a sandbank on 23 March. After various failed attempts it was finally put in a barge and released into the North Sea off Denmark on 2 May.\n\nThe humpback whale recovered from a shallow bay off Wismar is being transported towards the North Sea in a flooded cargo ship just before the Danish border in Fehmarn, Germany, Wednesday, April 29, 2026. Credit: AP/Philip Dulian BERLIN — A humpback whale found dead this week off a Danish island has been identified as the animal released two weeks ago in a spectacular and contentious rescue effort, after repeatedly becoming stranded off Germany's Baltic Sea coast, authorities said Saturday. The dead whale was stranded on Thursday just off the small island of Anholt in the Kattegat, the broad strait between Denmark and Sweden that connects the Baltic Sea to the North Sea.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 1028,
+      "selected_blocks": 4,
+      "selected_source_words": 377,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Newsday",
+        "Newsday",
+        "Newsday",
+        "Newsday",
+        "TheJournal.ie",
+        "TheJournal.ie",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "TheJournal.ie",
+        "Newsday"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Whale found dead near Danish island after German rescue operation",
+      "description": "Wildlife experts had previous criticised the operation, saying it would only cause the animal more distress.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Whale found dead near Danish island after German rescue operation",
+    "description": "Wildlife experts had previous criticised the operation, saying it would only cause the animal more distress.",
+    "link": "https://www.bbc.com/news/articles/c1l28lql137o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-16T17:01:28+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "414d165be14c3262aa5f0d6fee974f8c",
+    "_url_hash": "c9c14e7f46a674f31cf3d089d848df741668ca26ab8cdd93cda230b4dc4868c7",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA humpback whale rescued after beaching itself in Germany has been found dead near a Danish island.\n\nThe whale was first spotted stuck on a sandbank on 23 March, off the island of Poel on Germany's Baltic coast.\n\nIt swam free in early May after a water-filled barge carried it into the North Sea.\n\nThe operation was privately funded by two German entrepreneurs and spurred intense public debate, with critics suggesting it would only cause the animal distress.\n\nA whale carcass was reportedly spotted on Thursday off the Danish island of Anholt, located between Denmark and Sweden.\n\nAuthorities were not immediately able to confirm it was the same whale. In a statement the Danish Environmental Protection Agency said conditions on Saturday made it possible for the whale's identity to be verified, and its tracking device retrieved.\n\nThe agency told AFP \"there are no concrete plans to remove the whale from the area or to perform a necropsy, and it is not currently considered to pose a problem in the area\".\n\nBut it stressed that people should not approach the whale because it might carry diseases that can be transmitted to humans.\n\nThere may also be a risk of explosion, it added, because of large volumes of internal gas caused by decomposition.\n\nThe whale, nicknamed \"Timmy\" or \"Hope\" by rescuers and German media, became stranded on Timmendorfer Beach in Lübeck Bay on 23 March.\n\nAt first it freed itself but became stuck again several times.\n\nGerman authorities attempted a number of rescues before announcing they were giving up.\n\nEntrepreneurs Karin Walter-Mommert and Walter Gunz later funded a private rescue, fitting the whale with a tracking device and coaxing it onto a water-filled transport ship called Fortuna B.\n\nTill Backhaus, the environment minister in the northern state of Mecklenburg-Vorpommern, hailed the operation as a success and an \"example for Germany of what can be done\".\n\nBut wildlife groups have been sceptical about the whale's future after its release into the North Sea.\n\nThe German Oceanographic Museum warned that the whale was at risk of drowning because it was so weak.\n\nWhale and Dolphin Conservation was especially downbeat, warning that the whale had no long-term chance of survival and had suffered skin damage because of the lack of salinity in the waters along Germany's Baltic Sea coast.\n\n---\n\n[Lähde: Newsday]\nThe humpback whale recovered from a shallow bay off Wismar is being transported towards the North Sea in a flooded cargo ship just before the Danish border in Fehmarn, Germany, Wednesday, April 29, 2026. Credit: AP/Philip Dulian\n\nBERLIN — A humpback whale found dead this week off a Danish island has been identified as the animal released two weeks ago in a spectacular and contentious rescue effort, after repeatedly becoming stranded off Germany's Baltic Sea coast, authorities said Saturday.\n\nThe dead whale was stranded on Thursday just off the small island of Anholt in the Kattegat, the broad strait between Denmark and Sweden that connects the Baltic Sea to the North Sea.\n\nThe site is south of the location about 70 kilometers (around 45 miles) from Skagen, on the northern tip of Denmark, where the whale that gained the nicknames “Timmy” and “Hope” was released on May 2 after being transported toward the North Sea in a barge.\n\n“It can now be confirmed that the stranded humpback whale near Anholt is the same whale that was previously stranded in Germany and was the subject of rescue attempts,\" Jane Hansen, head of division at the Danish Environmental Protection Agency, said in an emailed statement.\n\nShe added that conditions on Saturday made it possible for a Danish Nature Agency employee to locate and retrieve a tracking device that was still fastened to the whale's back, and “the position and appearance of the device confirm that this is the same whale that had previously been observed and handled in German waters.”\n\nGet the latest breaking news as it happens.\n\nBy clicking Sign up, you agree to our privacy policy.\n\nThe finding brought a sad end to weeks of efforts to guide the mammal back to its natural habitat in the Atlantic Ocean.\n\nThe whale was first spotted off the German coast on March 3. It's not clear why it swam into the Baltic Sea, which is far from its habitat and it wasn’t suited to, although some experts said it may have lost its way while swimming after a shoal of herring or during migration.\n\nThe humpback whale, stranded in the Baltic Sea, has arrived in the barge intended for its transportation near the island of Poel, Germany, Tuesday, April 28, 2026. Credit: AP/Stefan Sauer\n\nIn late March, it was rescued from shallow water in the German Baltic resort town of Timmendorfer Strand with the help of an excavator, but it soon ran into trouble again nearby. Local media produced dayslong livestreams, and news sites alerted readers to the smallest\n\n---\n\n[Lähde: TheJournal.ie]\nA HUMPBACK WHALE that underwent a rescue operation in Germany two weeks ago after beaching itself there has been found dead near a Danish island, officials said.\n\n“It can now be confirmed that the stranded humpback whale near Anholt is the same whale that was previously stranded in Germany and was the subject of rescue attempts,” Jane Hansen, division head at the Danish Environmental Protection Agency, said in a statement to news agency AFP.\n\nThe whale, dubbed “Timmy” in Germany’s media, was initially spotted stuck on a sandbank on 23 March. After various failed attempts it was finally put in a barge and released into the North Sea off Denmark on 2 May.\n\nThe whale carcass was first spotted off the coast of the Danish island Anholt in the Kattegatt sea between Sweden and Denmark on Thursday, but authorities were at first not able to confirm it was the same whale.\n\n“Conditions today made it possible for a local employee from the Danish Nature Agency to locate and retrieve an attached tracking device that was still fastened to the whale’s back.\n\n“The position and appearance of the device confirm that this is the same whale that had previously been...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-16T18:04:40.738978+00:00",
+  "payload": {
+    "packet_id": "20260516T180145Z_b881fae9f9",
+    "title": "Saksan pelastusoperaatiossa siirretty ryhävalas löytyi kuolleena Tanskan edustalta",
+    "summary": "Maaliskuussa Saksan Itämeren rannikolla hiekkasärkälle juuttunut ryhävalas on tunnistettu samaksi eläimeksi, joka löytyi kuolleena Tanskan Anholtin saaren läheltä. Pelastusoperaatio oli herättänyt Saksassa kiivasta keskustelua.",
+    "content": "Maaliskuussa Saksan Itämeren rannikolla matalikolle juuttunut ryhävalas on löytynyt kuolleena Tanskan Anholtin saaren läheltä. Tanskan ympäristöviranomaiset ovat vahvistaneet, että kyseessä on sama valas, jota yritettiin aiemmin pelastaa Saksassa ja joka kuljetettiin lopulta vesitäytteisellä aluksella kohti Pohjanmerta.\n\n## Valas juuttui matalikolle maaliskuussa\n\nRyhävalas havaittiin ensimmäisen kerran 23. maaliskuuta hiekkasärkällä Poelin saaren edustalla Saksan Itämeren rannikolla. Eläin oli juuttunut matalaan veteen, ja sen tilanne keräsi Saksassa laajaa huomiota.\n\nUseiden epäonnistuneiden yritysten jälkeen valas siirrettiin vesitäytteisellä rahtialuksella tai proomulla pois matalasta lahdesta. Lähdeaineiston mukaan siirtoa tehtiin huhtikuun lopussa Wismarin edustalta kohti Pohjanmerta, Fehmarnin ja Tanskan rajan suunnassa. Valas vapautettiin Pohjanmeren puolelle Tanskan edustalla 2. toukokuuta. Saksalaismediassa valasta kutsuttiin nimellä Timmy.\n\nPelastusoperaatio oli poikkeuksellinen ja kiistanalainen. Se oli lähteiden mukaan kahden saksalaisen yrittäjän yksityisesti rahoittama. Osa luonnonvaraisten eläinten asiantuntijoista arvosteli hanketta jo etukäteen ja arvioi, että toimet voisivat lisätä eläimen stressiä sen sijaan, että ne parantaisivat sen selviytymismahdollisuuksia.\n\n## Ruho löytyi Anholtin läheltä\n\nValaan ruho havaittiin torstaina Anholtin saaren edustalla Kattegatissa. Anholt sijaitsee Tanskan ja Ruotsin välisellä merialueella, joka yhdistää Itämeren ja Pohjanmeren.\n\nTanskan viranomaiset eivät aluksi pystyneet varmistamaan, oliko kyseessä sama eläin, joka oli aiemmin ollut pelastusyritysten kohteena Saksassa. Lauantaina olosuhteet kuitenkin sallivat tunnistamisen, ja viranomaiset saivat talteen myös valaaseen kiinnitetyn seurantalaitteen.\n\nTanskan ympäristöviraston osastopäällikkö Jane Hansen kertoi lausunnossa, että Anholtin lähellä rantautuneeksi todettu ryhävalas on nyt voitu vahvistaa samaksi valaaksi, joka oli aiemmin juuttunut Saksassa ja jota yritettiin pelastaa.\n\n## Kiista jatkui kuoleman jälkeen\n\nTiedossa ei ole, mikä lopulta aiheutti valaan kuoleman. Tapaus nosti jo ennen ruhon löytymistä esiin kysymyksiä siitä, milloin suuren merinisäkkään pelastaminen on perusteltua ja milloin voimakkaat toimet voivat lisätä eläimen kärsimystä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "ryhävalas",
+      "Tanska",
+      "Saksa",
+      "Anholt",
+      "eläimet",
+      "Itämeri"
+    ],
+    "summary_bullets": [
+      "Saksassa maaliskuussa matalikolle juuttunut ryhävalas on löytynyt kuolleena Tanskan Anholtin saaren läheltä.",
+      "Tanskan ympäristöviranomaiset vahvistivat, että kyseessä oli sama valas, jota yritettiin aiemmin pelastaa Saksassa.",
+      "Pelastusoperaatio herätti kritiikkiä, sillä osa asiantuntijoista arvioi sen voivan lisätä eläimen stressiä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Lähdeaineisto tukee ydintietoja useasta lähteestä. Kuolinsyytä ei kerrottu, joten sitä ei arvioitu artikkelissa."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\n  \"packet_id\": \"20260516T180145Z_b881fae9f9\",\n  \"title\": \"Saksan pelastusoperaatiossa siirretty ryhävalas löytyi kuolleena Tanskan edustalta\",\n  \"summary\": \"Maaliskuussa Saksan Itämeren rannikolla hiekkasärkälle juuttunut ryhävalas on tunnistettu samaksi eläimeksi, joka löytyi kuolleena Tanskan Anholtin saaren läheltä. Pelastusoperaatio oli herättänyt Saksassa kiivasta keskustelua.\",\n  \"content\": \"Maaliskuussa Saksan Itämeren rannikolla matalikolle juuttunut ryhävalas on löytynyt kuolleena Tanskan Anholtin saaren läheltä. Tanskan ympäristöviranomaiset ovat vahvistaneet, että kyseessä on sama valas, jota yritettiin aiemmin pelastaa Saksassa ja joka kuljetettiin lopulta vesitäytteisellä aluksella kohti Pohjanmerta.\\n\\n## Valas juuttui matalikolle maaliskuussa\\n\\nRyhävalas havaittiin ensimmäisen kerran 23. maaliskuuta hiekkasärkällä Poelin saaren edustalla Saksan Itämeren rannikolla. Eläin oli juuttunut matalaan veteen, ja sen tilanne keräsi Saksassa laajaa huomiota.\\n\\nUseiden epäonnistuneiden yritysten jälkeen valas siirrettiin vesitäytteisellä rahtialuksella tai proomulla pois matalasta lahdesta. Lähdeaineiston mukaan siirtoa tehtiin huhtikuun lopussa Wismarin edustalta kohti Pohjanmerta, Fehmarnin ja Tanskan rajan suunnassa. Valas vapautettiin Pohjanmeren puolelle Tanskan edustalla 2. toukokuuta. Saksalaismediassa valasta kutsuttiin nimellä Timmy.\\n\\nPelastusoperaatio oli poikkeuksellinen ja kiistanalainen. Se oli lähteiden mukaan kahden saksalaisen yrittäjän yksityisesti rahoittama. Osa luonnonvaraisten eläinten asiantuntijoista arvosteli hanketta jo etukäteen ja arvioi, että toimet voisivat lisätä eläimen stressiä sen sijaan, että ne parantaisivat sen selviytymismahdollisuuksia.\\n\\n## Ruho löytyi Anholtin läheltä\\n\\nValaan ruho havaittiin torstaina Anholtin saaren edustalla Kattegatissa. Anholt sijaitsee Tanskan ja Ruotsin välisellä merialueella, joka yhdistää Itämeren ja Pohjanmeren.\\n\\nTanskan viranomaiset eivät aluksi pystyneet varmistamaan, oliko kyseessä sama eläin, joka oli aiemmin ollut pelastusyritysten kohteena Saksassa. Lauantaina olosuhteet kuitenkin sallivat tunnistamisen, ja viranomaiset saivat talteen myös valaaseen kiinnitetyn seurantalaitteen.\\n\\nTanskan ympäristöviraston osastopäällikkö Jane Hansen kertoi lausunnossa, että Anholtin lähellä rantautuneeksi todettu ryhävalas on nyt voitu vahvistaa samaksi valaaksi, joka oli aiemmin juuttunut Saksassa ja jota yritettiin pelastaa.\\n\\n## Kiista jatkui kuoleman jälkeen\\n\\nTiedossa ei ole, mikä lopulta aiheutti valaan kuoleman. Tapaus nosti jo ennen ruhon löytymistä esiin kysymyksiä siitä, milloin suuren merinisäkkään pelastaminen on perusteltua ja milloin voimakkaat toimet voivat lisätä eläimen kärsimystä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"ryhävalas\",\n    \"Tanska\",\n    \"Saksa\",\n    \"Anholt\",\n    \"eläimet\",\n    \"Itämeri\"\n  ],\n  \"summary_bullets\": [\n    \"Saksassa maaliskuussa matalikolle juuttunut ryhävalas on löytynyt kuolleena Tanskan Anholtin saaren läheltä.\",\n    \"Tanskan ympäristöviranomaiset vahvistivat, että kyseessä oli sama valas, jota yritettiin aiemmin pelastaa Saksassa.\",\n    \"Pelastusoperaatio herätti kritiikkiä, sillä osa asiantuntijoista arvioi sen voivan lisätä eläimen stressiä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.92,\n  \"journalist_note\": \"Lähdeaineisto tukee ydintietoja useasta lähteestä. Kuolinsyytä ei kerrottu, joten sitä ei arvioitu artikkelissa.\"\n}",
+  "article": {
+    "title": "Saksan pelastusoperaatiossa siirretty ryhävalas löytyi kuolleena Tanskan edustalta",
+    "description": "Maaliskuussa Saksan Itämeren rannikolla hiekkasärkälle juuttunut ryhävalas on tunnistettu samaksi eläimeksi, joka löytyi kuolleena Tanskan Anholtin saaren läheltä. Pelastusoperaatio oli herättänyt Saksassa kiivasta keskustelua.",
+    "link": "https://www.bbc.com/news/articles/c1l28lql137o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-16T17:01:28+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "414d165be14c3262aa5f0d6fee974f8c",
+    "_url_hash": "c9c14e7f46a674f31cf3d089d848df741668ca26ab8cdd93cda230b4dc4868c7",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA humpback whale rescued after beaching itself in Germany has been found dead near a Danish island.\n\nThe whale was first spotted stuck on a sandbank on 23 March, off the island of Poel on Germany's Baltic coast.\n\nIt swam free in early May after a water-filled barge carried it into the North Sea.\n\nThe operation was privately funded by two German entrepreneurs and spurred intense public debate, with critics suggesting it would only cause the animal distress.\n\nA whale carcass was reportedly spotted on Thursday off the Danish island of Anholt, located between Denmark and Sweden.\n\nAuthorities were not immediately able to confirm it was the same whale. In a statement the Danish Environmental Protection Agency said conditions on Saturday made it possible for the whale's identity to be verified, and its tracking device retrieved.\n\nThe agency told AFP \"there are no concrete plans to remove the whale from the area or to perform a necropsy, and it is not currently considered to pose a problem in the area\".\n\nBut it stressed that people should not approach the whale because it might carry diseases that can be transmitted to humans.\n\nThere may also be a risk of explosion, it added, because of large volumes of internal gas caused by decomposition.\n\nThe whale, nicknamed \"Timmy\" or \"Hope\" by rescuers and German media, became stranded on Timmendorfer Beach in Lübeck Bay on 23 March.\n\nAt first it freed itself but became stuck again several times.\n\nGerman authorities attempted a number of rescues before announcing they were giving up.\n\nEntrepreneurs Karin Walter-Mommert and Walter Gunz later funded a private rescue, fitting the whale with a tracking device and coaxing it onto a water-filled transport ship called Fortuna B.\n\nTill Backhaus, the environment minister in the northern state of Mecklenburg-Vorpommern, hailed the operation as a success and an \"example for Germany of what can be done\".\n\nBut wildlife groups have been sceptical about the whale's future after its release into the North Sea.\n\nThe German Oceanographic Museum warned that the whale was at risk of drowning because it was so weak.\n\nWhale and Dolphin Conservation was especially downbeat, warning that the whale had no long-term chance of survival and had suffered skin damage because of the lack of salinity in the waters along Germany's Baltic Sea coast.\n\n---\n\n[Lähde: Newsday]\nThe humpback whale recovered from a shallow bay off Wismar is being transported towards the North Sea in a flooded cargo ship just before the Danish border in Fehmarn, Germany, Wednesday, April 29, 2026. Credit: AP/Philip Dulian\n\nBERLIN — A humpback whale found dead this week off a Danish island has been identified as the animal released two weeks ago in a spectacular and contentious rescue effort, after repeatedly becoming stranded off Germany's Baltic Sea coast, authorities said Saturday.\n\nThe dead whale was stranded on Thursday just off the small island of Anholt in the Kattegat, the broad strait between Denmark and Sweden that connects the Baltic Sea to the North Sea.\n\nThe site is south of the location about 70 kilometers (around 45 miles) from Skagen, on the northern tip of Denmark, where the whale that gained the nicknames “Timmy” and “Hope” was released on May 2 after being transported toward the North Sea in a barge.\n\n“It can now be confirmed that the stranded humpback whale near Anholt is the same whale that was previously stranded in Germany and was the subject of rescue attempts,\" Jane Hansen, head of division at the Danish Environmental Protection Agency, said in an emailed statement.\n\nShe added that conditions on Saturday made it possible for a Danish Nature Agency employee to locate and retrieve a tracking device that was still fastened to the whale's back, and “the position and appearance of the device confirm that this is the same whale that had previously been observed and handled in German waters.”\n\nGet the latest breaking news as it happens.\n\nBy clicking Sign up, you agree to our privacy policy.\n\nThe finding brought a sad end to weeks of efforts to guide the mammal back to its natural habitat in the Atlantic Ocean.\n\nThe whale was first spotted off the German coast on March 3. It's not clear why it swam into the Baltic Sea, which is far from its habitat and it wasn’t suited to, although some experts said it may have lost its way while swimming after a shoal of herring or during migration.\n\nThe humpback whale, stranded in the Baltic Sea, has arrived in the barge intended for its transportation near the island of Poel, Germany, Tuesday, April 28, 2026. Credit: AP/Stefan Sauer\n\nIn late March, it was rescued from shallow water in the German Baltic resort town of Timmendorfer Strand with the help of an excavator, but it soon ran into trouble again nearby. Local media produced dayslong livestreams, and news sites alerted readers to the smallest\n\n---\n\n[Lähde: TheJournal.ie]\nA HUMPBACK WHALE that underwent a rescue operation in Germany two weeks ago after beaching itself there has been found dead near a Danish island, officials said.\n\n“It can now be confirmed that the stranded humpback whale near Anholt is the same whale that was previously stranded in Germany and was the subject of rescue attempts,” Jane Hansen, division head at the Danish Environmental Protection Agency, said in a statement to news agency AFP.\n\nThe whale, dubbed “Timmy” in Germany’s media, was initially spotted stuck on a sandbank on 23 March. After various failed attempts it was finally put in a barge and released into the North Sea off Denmark on 2 May.\n\nThe whale carcass was first spotted off the coast of the Danish island Anholt in the Kattegatt sea between Sweden and Denmark on Thursday, but authorities were at first not able to confirm it was the same whale.\n\n“Conditions today made it possible for a local employee from the Danish Nature Agency to locate and retrieve an attached tracking device that was still fastened to the whale’s back.\n\n“The position and appearance of the device confirm that this is the same whale that had previously been...",
+    "research_source": "multi",
+    "summary": "Maaliskuussa Saksan Itämeren rannikolla hiekkasärkälle juuttunut ryhävalas on tunnistettu samaksi eläimeksi, joka löytyi kuolleena Tanskan Anholtin saaren läheltä. Pelastusoperaatio oli herättänyt Saksassa kiivasta keskustelua.",
+    "content": "Maaliskuussa Saksan Itämeren rannikolla matalikolle juuttunut ryhävalas on löytynyt kuolleena Tanskan Anholtin saaren läheltä. Tanskan ympäristöviranomaiset ovat vahvistaneet, että kyseessä on sama valas, jota yritettiin aiemmin pelastaa Saksassa ja joka kuljetettiin lopulta vesitäytteisellä aluksella kohti Pohjanmerta.\n\n## Valas juuttui matalikolle maaliskuussa\n\nRyhävalas havaittiin ensimmäisen kerran 23. maaliskuuta hiekkasärkällä Poelin saaren edustalla Saksan Itämeren rannikolla. Eläin oli juuttunut matalaan veteen, ja sen tilanne keräsi Saksassa laajaa huomiota.\n\nUseiden epäonnistuneiden yritysten jälkeen valas siirrettiin vesitäytteisellä rahtialuksella tai proomulla pois matalasta lahdesta. Lähdeaineiston mukaan siirtoa tehtiin huhtikuun lopussa Wismarin edustalta kohti Pohjanmerta, Fehmarnin ja Tanskan rajan suunnassa. Valas vapautettiin Pohjanmeren puolelle Tanskan edustalla 2. toukokuuta. Saksalaismediassa valasta kutsuttiin nimellä Timmy.\n\nPelastusoperaatio oli poikkeuksellinen ja kiistanalainen. Se oli lähteiden mukaan kahden saksalaisen yrittäjän yksityisesti rahoittama. Osa luonnonvaraisten eläinten asiantuntijoista arvosteli hanketta jo etukäteen ja arvioi, että toimet voisivat lisätä eläimen stressiä sen sijaan, että ne parantaisivat sen selviytymismahdollisuuksia.\n\n## Ruho löytyi Anholtin läheltä\n\nValaan ruho havaittiin torstaina Anholtin saaren edustalla Kattegatissa. Anholt sijaitsee Tanskan ja Ruotsin välisellä merialueella, joka yhdistää Itämeren ja Pohjanmeren.\n\nTanskan viranomaiset eivät aluksi pystyneet varmistamaan, oliko kyseessä sama eläin, joka oli aiemmin ollut pelastusyritysten kohteena Saksassa. Lauantaina olosuhteet kuitenkin sallivat tunnistamisen, ja viranomaiset saivat talteen myös valaaseen kiinnitetyn seurantalaitteen.\n\nTanskan ympäristöviraston osastopäällikkö Jane Hansen kertoi lausunnossa, että Anholtin lähellä rantautuneeksi todettu ryhävalas on nyt voitu vahvistaa samaksi valaaksi, joka oli aiemmin juuttunut Saksassa ja jota yritettiin pelastaa.\n\n## Kiista jatkui kuoleman jälkeen\n\nTiedossa ei ole, mikä lopulta aiheutti valaan kuoleman. Tapaus nosti jo ennen ruhon löytymistä esiin kysymyksiä siitä, milloin suuren merinisäkkään pelastaminen on perusteltua ja milloin voimakkaat toimet voivat lisätä eläimen kärsimystä.",
+    "category": "Kotimaa",
+    "tags": [
+      "ryhävalas",
+      "tanska",
+      "saksa",
+      "anholt",
+      "eläimet"
+    ],
+    "summary_bullets": [
+      "Saksassa maaliskuussa matalikolle juuttunut ryhävalas on löytynyt kuolleena Tanskan Anholtin saaren läheltä.",
+      "Tanskan ympäristöviranomaiset vahvistivat, että kyseessä oli sama valas, jota yritettiin aiemmin pelastaa Saksassa.",
+      "Pelastusoperaatio herätti kritiikkiä, sillä osa asiantuntijoista arvioi sen voivan lisätä eläimen stressiä."
+    ],
+    "key_points": [
+      "Saksassa maaliskuussa matalikolle juuttunut ryhävalas on löytynyt kuolleena Tanskan Anholtin saaren läheltä.",
+      "Tanskan ympäristöviranomaiset vahvistivat, että kyseessä oli sama valas, jota yritettiin aiemmin pelastaa Saksassa.",
+      "Pelastusoperaatio herätti kritiikkiä, sillä osa asiantuntijoista arvioi sen voivan lisätä eläimen stressiä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Lähdeaineisto tukee ydintietoja useasta lähteestä. Kuolinsyytä ei kerrottu, joten sitä ei arvioitu artikkelissa.",
+    "source_text": "Wildlife experts had previous criticised the operation, saying it would only cause the animal more distress.\n\nA humpback whale rescued after beaching itself in Germany has been found dead near a Danish island. The whale was first spotted stuck on a sandbank on 23 March, off the island of Poel on Germany's Baltic coast. It swam free in early May after a water-filled barge carried it into the North Sea. The operation was privately funded by two German entrepreneurs and spurred intense public debate, with critics suggesting it would only cause the animal distress. A whale carcass was reportedly spotted on Thursday off the Danish island of Anholt, located between Denmark and Sweden. Authorities were not immediately able to confirm it was the same whale. In a statement the Danish Environmental Protection Agency said conditions on Saturday made it possible for the whale's identity to be verified, and its tracking device retrieved.\n\nA HUMPBACK WHALE that underwent a rescue operation in Germany two weeks ago after beaching itself there has been found dead near a Danish island, officials said. “It can now be confirmed that the stranded humpback whale near Anholt is the same whale that was previously stranded in Germany and was the subject of rescue attempts,” Jane Hansen, division head at the Danish Environmental Protection Agency, said in a statement to news agency AFP. The whale, dubbed “Timmy” in Germany’s media, was initially spotted stuck on a sandbank on 23 March. After various failed attempts it was finally put in a barge and released into the North Sea off Denmark on 2 May.\n\nThe humpback whale recovered from a shallow bay off Wismar is being transported towards the North Sea in a flooded cargo ship just before the Danish border in Fehmarn, Germany, Wednesday, April 29, 2026. Credit: AP/Philip Dulian BERLIN — A humpback whale found dead this week off a Danish island has been identified as the animal released two weeks ago in a spectacular and contentious rescue effort, after repeatedly becoming stranded off Germany's Baltic Sea coast, authorities said Saturday. The dead whale was stranded on Thursday just off the small island of Anholt in the Kattegat, the broad strait between Denmark and Sweden that connects the Baltic Sea to the North Sea.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260516T180145Z_b881fae9f9",
+    "image": "https://images.unsplash.com/photo-1718312541171-328ac207d9eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3aGFsZSUyMHJlc2N1ZSUyMG9wZXJhdGlvbiUyMERlbm1hcmt8ZW58MXwwfHx8MTc3ODk1NDg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1718312541171-328ac207d9eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3aGFsZSUyMHJlc2N1ZSUyMG9wZXJhdGlvbiUyMERlbm1hcmt8ZW58MXwwfHx8MTc3ODk1NDg4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Saksan pelastusoperaatiossa siirretty ryhävalas löytyi kuolleena Tanskan edustalta",
+    "image_credit": "Photo by Jan Ferchof on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-person-riding-a-surfboard-on-a-wave-in-the-ocean-6QVxXXsiX4A?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-16T18:08:06.514463+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1718312541171-328ac207d9eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3aGFsZSUyMHJlc2N1ZSUyMG9wZXJhdGlvbiUyMERlbm1hcmt8ZW58MXwwfHx8MTc3ODk1NDg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1718312541171-328ac207d9eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHx3aGFsZSUyMHJlc2N1ZSUyMG9wZXJhdGlvbiUyMERlbm1hcmt8ZW58MXwwfHx8MTc3ODk1NDg4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-16T18:08:37.429578+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-16-saksan-pelastusoperaatiossa-siirretty-ryhavalas-loytyi-kuoll.md"
+  ]
+}
