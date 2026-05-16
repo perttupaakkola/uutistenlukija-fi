@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/kuka-sanoo-ettei-sahkoauto-voisi-olla-hauska-renault-pyrkii-korjaamaan-tilanteen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
