@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/Maalin-p%C3%A4%C3%A4lle-hyppimist%C3%A4-ja-kiekolla-pelaamista-%E2%80%93-Joonas-Korpisalo-otti-kikat-k%C3%A4ytt%C3%B6%C3%B6n/269711"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

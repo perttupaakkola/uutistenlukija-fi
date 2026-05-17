@@ -94,5 +94,20 @@
     "_guessed_category": "Talous",
     "research": "[Lähde: Arvopaperi]\nPörssin aukioloajat ja arkipyhien vaikutus kaupankäyntiin ovat aiheita, jotka puhuttavat säännöllisesti. Kun pörssi on kiinni markkinavapaan vuoksi, osakekauppa on seisahduksissa. Helsingin pörssi on tavallisesti auki aina arkipäivisin, jolloin kaupankäynti alkaa kello 10.00 aamulla ja päättyy 18.30 illalla pörssin sulkeutuessa. Vuoden kiertoon mahtuu kuitenkin useampia niin sanottuja markkinavapaita, jolloin pörssi on kiinni. Silloin kaupankäynti pysähtyy, mikä tarkoittaa, että sijoittajat eivät voi ostaa tai myydä osakkeita. Kiinniolot vaihtelevat maittain vuoden juhlapyhien mukaan. Esimerkiksi toukokuussa pörssi on kiinni helatorstain lisäksi vapunpäivänä.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-05-17T06:43:01.293279+00:00",
+  "failure": "weak_talous_ready_source_floor",
+  "ready_quality_feedback": {
+    "action": "fail",
+    "reason": "weak_talous_ready_source_floor",
+    "source_words": 89,
+    "source_blocks": 2,
+    "story_confidence": 0.7,
+    "org_guardrail": {
+      "applies": false,
+      "classification": "not_org_source_talous",
+      "penalty": 0
+    },
+    "fail_closed": true
   }
 }
