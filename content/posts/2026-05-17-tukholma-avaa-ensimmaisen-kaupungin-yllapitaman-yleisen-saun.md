@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/may/17/a-place-for-everybody-stockholm-to-open-its-first-publicly-run-sauna"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
