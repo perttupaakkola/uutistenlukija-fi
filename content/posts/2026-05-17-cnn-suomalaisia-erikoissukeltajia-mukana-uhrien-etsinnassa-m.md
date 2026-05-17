@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/cnn-suomalaissukeltajia-mukana-etsimassa-onnettomuuden-uhreja-malediiveilla/9339692"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 

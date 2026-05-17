@@ -1,0 +1,209 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-17T23:41:22.234765+00:00",
+  "digest": "ec29877f31",
+  "packet": {
+    "packet_id": "20260517T234122Z_ec29877f31",
+    "created_at": "2026-05-17T23:41:22Z",
+    "headline_seed": "From escaping child marriage 'to an old pervert' to becoming Sierra Leone's first lady",
+    "description_seed": "BBC World Service exclusive: the private world of one of Africa's most powerful political women.",
+    "link": "https://www.bbc.com/news/articles/cvgzpz7zyd4o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cvgzpz7zyd4o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "From escaping child marriage 'to an old pervert' to becoming Sierra Leone's first lady"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "BBC World Service exclusive: the private world of one of Africa's most powerful political women.",
+        "word_count": 15,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "As the country's first lady, Fatima Bio is seen as a compelling yet divisive figure - some young people see her as a refreshing voice in politics, who speaks up for women and girls, while others say she has overstepped her remit and that she is too vocal and too involved in the running of her husband's party. She has been booed and jeered at by MPs and criticised over a video that she shared on her social media channels featuring a notorious drugs dealer, whom she denies knowing. She quickly stops laughing and composes herself to tell us the story that inspired her to champion a law banning child marriage in Sierra Leone, which came into effect in 2024.",
+        "word_count": 120,
+        "keyword_overlap": 7,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "She was almost a child bride herself. By the time she turned 13, her father, a diamond miner from Kano district, had arranged her marriage to a man in his 30s, whom she had known as an uncle figure since she was a little girl. \"There was no discussion. It was decided,\" she says. But just before the wedding, when she turned 16 in 1996, Sierra Leone's civil war caused enough distraction to allow her to escape with the help of relatives and seek asylum in the UK. Fatima Bio landed in London on Christmas Eve at Gatwick Airport wearing a T-shirt, she says, shocked by the cold, but relieved to have the opportunity of a new life. She moved in with a distant relative.",
+        "word_count": 125,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "It takes Fatima Bio only a moment to respond when we ask what it was like to be an asylum seeker in London. \"Better than being married to an old pervert,\" she says deadpan, before laughing - a reference to her father's plans to marry her off as a teenager. A lot has changed since then. In the years that followed, she became an actress, then met a man in London when she was interviewing him about influential Sierra Leoneans in the diaspora and married him. He was Julius Bio - and he is now Sierra Leone's president.",
+        "word_count": 98,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "BBC World Service exclusive: the private world of one of Africa's most powerful political women.\n\nAs the country's first lady, Fatima Bio is seen as a compelling yet divisive figure - some young people see her as a refreshing voice in politics, who speaks up for women and girls, while others say she has overstepped her remit and that she is too vocal and too involved in the running of her husband's party. She has been booed and jeered at by MPs and criticised over a video that she shared on her social media channels featuring a notorious drugs dealer, whom she denies knowing. She quickly stops laughing and composes herself to tell us the story that inspired her to champion a law banning child marriage in Sierra Leone, which came into effect in 2024.\n\nShe was almost a child bride herself. By the time she turned 13, her father, a diamond miner from Kano district, had arranged her marriage to a man in his 30s, whom she had known as an uncle figure since she was a little girl. \"There was no discussion. It was decided,\" she says. But just before the wedding, when she turned 16 in 1996, Sierra Leone's civil war caused enough distraction to allow her to escape with the help of relatives and seek asylum in the UK. Fatima Bio landed in London on Christmas Eve at Gatwick Airport wearing a T-shirt, she says, shocked by the cold, but relieved to have the opportunity of a new life. She moved in with a distant relative.\n\nIt takes Fatima Bio only a moment to respond when we ask what it was like to be an asylum seeker in London. \"Better than being married to an old pervert,\" she says deadpan, before laughing - a reference to her father's plans to marry her off as a teenager. A lot has changed since then. In the years that followed, she became an actress, then met a man in London when she was interviewing him about influential Sierra Leoneans in the diaspora and married him. He was Julius Bio - and he is now Sierra Leone's president.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 473,
+      "selected_blocks": 4,
+      "selected_source_words": 358,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "From escaping child marriage 'to an old pervert' to becoming Sierra Leone's first lady",
+      "description": "BBC World Service exclusive: the private world of one of Africa's most powerful political women.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "From escaping child marriage 'to an old pervert' to becoming Sierra Leone's first lady",
+    "description": "BBC World Service exclusive: the private world of one of Africa's most powerful political women.",
+    "link": "https://www.bbc.com/news/articles/cvgzpz7zyd4o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-17T23:01:51+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cfe531ff346e167442ed73795ec7ce44",
+    "_url_hash": "a4cffbc04327e39417ce342a1461726171def1d8c015fe3d974f1b8470b548da",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIt takes Fatima Bio only a moment to respond when we ask what it was like to be an asylum seeker in London.\n\n\"Better than being married to an old pervert,\" she says deadpan, before laughing - a reference to her father's plans to marry her off as a teenager.\n\nA lot has changed since then. In the years that followed, she became an actress, then met a man in London when she was interviewing him about influential Sierra Leoneans in the diaspora and married him. He was Julius Bio - and he is now Sierra Leone's president.\n\nAs the country's first lady, Fatima Bio is seen as a compelling yet divisive figure - some young people see her as a refreshing voice in politics, who speaks up for women and girls, while others say she has overstepped her remit and that she is too vocal and too involved in the running of her husband's party.\n\nShe has been booed and jeered at by MPs and criticised over a video that she shared on her social media channels featuring a notorious drugs dealer, whom she denies knowing.\n\nShe quickly stops laughing and composes herself to tell us the story that inspired her to champion a law banning child marriage in Sierra Leone, which came into effect in 2024.\n\nShe was almost a child bride herself. By the time she turned 13, her father, a diamond miner from Kano district, had arranged her marriage to a man in his 30s, whom she had known as an uncle figure since she was a little girl.\n\n\"There was no discussion. It was decided,\" she says.\n\nBut just before the wedding, when she turned 16 in 1996, Sierra Leone's civil war caused enough distraction to allow her to escape with the help of relatives and seek asylum in the UK.\n\nFatima Bio landed in London on Christmas Eve at Gatwick Airport wearing a T-shirt, she says, shocked by the cold, but relieved to have the opportunity of a new life. She moved in with a distant relative.\n\n\"England was my amazing grace. I went to England, I got my voice,\" the first lady adds. \"I got my independence, and then I was able to fight for myself. And now I can fight for as many young people as possible.\"\n\nSomething else she gained in the UK was a council flat in Southwark in central London, a home she still keeps today where her children live.\n\nAs a form of social housing, council homes are usually cheaper to rent than private accommodation and applicants have to meet certain criteria.\n\nThe fact that a sitting first lady, who lives in a presidential mansion in the capital, Freetown, retains a tenancy has drawn criticism in ",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-17T23:43:47.210122+00:00",
+  "payload": {
+    "packet_id": "20260517T234122Z_ec29877f31",
+    "title": "Fatima Bion tie vei lapsiavioliiton uhalta Sierra Leonen ensimmäiseksi naiseksi",
+    "summary": "Sierra Leonen ensimmäinen nainen Fatima Bio kertoo paenneensa teini-ikäisenä järjestettyä avioliittoa ja päätyneensä turvapaikanhakijaksi Britanniaan. Kokemus on sittemmin vaikuttanut hänen työhönsä lapsiavioliittojen kieltämiseksi Sierra Leonessa.",
+    "content": "Fatima Bio, Sierra Leonen presidentin Julius Bion puoliso, kertoo olleensa itse lähellä joutua lapsiavioliittoon ennen kuin hän pakeni sisällissodan keskellä Britanniaan. Nykyisin maan ensimmäisenä naisena toimiva Bio on noussut näkyväksi ja jakavaksi poliittiseksi hahmoksi, joka on ajanut erityisesti naisten ja tyttöjen asemaa sekä tukenut lapsiavioliitot kieltävää lakia.\n\n## Järjestetty avioliitto keskeytyi sodan keskellä\n\nBion mukaan hänen isänsä, Kano districtistä kotoisin ollut timanttikaivostyöläinen, oli järjestänyt hänelle avioliiton jo hänen ollessaan 13-vuotias. Sulhanen oli kolmekymppinen mies, jonka Bio oli tuntenut lapsuudestaan saakka eräänlaisena setähahmona.\n\nBio kuvaa järjestelyä päätökseksi, josta ei hänen mukaansa keskusteltu hänen kanssaan. Hänen kertomansa mukaan avioliitto oli määrä toteuttaa, kun hän täytti 16 vuotta vuonna 1996. Sierra Leonen sisällissota loi kuitenkin tilanteen, jossa hän onnistui sukulaisten avulla pakenemaan ja hakemaan turvapaikkaa Britanniasta.\n\nBio saapui Lontooseen jouluaattona Gatwickin lentokentälle. Hän on kuvannut olleensa kylmästä järkyttynyt, mutta samalla helpottunut uudesta mahdollisuudesta. Britanniassa hän muutti etäisen sukulaisen luo.\n\n## Kokemus nousi osaksi julkista roolia\n\nKun Biolta kysyttiin, millaista oli olla turvapaikanhakija Lontoossa, hän vastasi sen olleen parempi vaihtoehto kuin joutua naimisiin ”vanhan perverssin” kanssa. Kommentti viittasi hänen isänsä aikomukseen naittaa hänet teini-ikäisenä huomattavasti vanhemmalle miehelle.\n\nMyöhemmin Bio ryhtyi näyttelijäksi. Hän tapasi Lontoossa Julius Bion haastatellessaan Sierra Leonen diasporan vaikutusvaltaisia henkilöitä. Pari meni naimisiin, ja Julius Bio on nykyisin Sierra Leonen presidentti.\n\nEnsimmäisenä naisena Fatima Bio herättää vahvoja reaktioita. Osa nuorista pitää häntä tuoreena äänenä politiikassa ja naisten sekä tyttöjen puolustajana. Hänen arvostelijansa taas katsovat, että hän on ylittänyt roolinsa rajat ja osallistuu liian näkyvästi miehensä puolueen toimintaan.\n\nBio on myös kohdannut julkista kritiikkiä. Häntä on buuattu parlamentissa, ja häntä arvosteltiin videosta, jonka hän jakoi sosiaalisen median kanavissaan. Videolla esiintyi tunnettu huumekauppias, jonka Bio on kiistänyt tuntevansa.\n\nBion oma lapsuus- ja pakokokemus on kuitenkin keskeinen osa hänen julkista perusteluaan työlleen. Sierra Leonessa tuli vuonna 2024 voimaan laki, joka kieltää lapsiavioliitot. Bio on kertonut oman tarinansa olleen yksi syy siihen, miksi hän ryhtyi ajamaan asiaa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Sierra Leone",
+      "Fatima Bio",
+      "lapsiavioliitot",
+      "naisten oikeudet",
+      "Julius Bio"
+    ],
+    "summary_bullets": [
+      "Fatima Bio kertoo paenneensa teini-ikäisenä järjestettyä avioliittoa Sierra Leonesta Britanniaan.",
+      "Hänestä tuli myöhemmin Sierra Leonen presidentin Julius Bion puoliso ja maan ensimmäinen nainen.",
+      "Bio on ajanut lapsiavioliittojen kieltoa, mutta hänen julkinen roolinsa jakaa mielipiteitä Sierra Leonessa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu yhteen laajaan lähdepakettiin. Henkilöiden taustasta, lapsiavioliittoa koskevasta kertomuksesta ja julkisesta kritiikistä on kirjoitettu vain paketin tukemien tietojen pohjalta."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\"packet_id\":\"20260517T234122Z_ec29877f31\",\"title\":\"Fatima Bion tie vei lapsiavioliiton uhalta Sierra Leonen ensimmäiseksi naiseksi\",\"summary\":\"Sierra Leonen ensimmäinen nainen Fatima Bio kertoo paenneensa teini-ikäisenä järjestettyä avioliittoa ja päätyneensä turvapaikanhakijaksi Britanniaan. Kokemus on sittemmin vaikuttanut hänen työhönsä lapsiavioliittojen kieltämiseksi Sierra Leonessa.\",\"content\":\"Fatima Bio, Sierra Leonen presidentin Julius Bion puoliso, kertoo olleensa itse lähellä joutua lapsiavioliittoon ennen kuin hän pakeni sisällissodan keskellä Britanniaan. Nykyisin maan ensimmäisenä naisena toimiva Bio on noussut näkyväksi ja jakavaksi poliittiseksi hahmoksi, joka on ajanut erityisesti naisten ja tyttöjen asemaa sekä tukenut lapsiavioliitot kieltävää lakia.\\n\\n## Järjestetty avioliitto keskeytyi sodan keskellä\\n\\nBion mukaan hänen isänsä, Kano districtistä kotoisin ollut timanttikaivostyöläinen, oli järjestänyt hänelle avioliiton jo hänen ollessaan 13-vuotias. Sulhanen oli kolmekymppinen mies, jonka Bio oli tuntenut lapsuudestaan saakka eräänlaisena setähahmona.\\n\\nBio kuvaa järjestelyä päätökseksi, josta ei hänen mukaansa keskusteltu hänen kanssaan. Hänen kertomansa mukaan avioliitto oli määrä toteuttaa, kun hän täytti 16 vuotta vuonna 1996. Sierra Leonen sisällissota loi kuitenkin tilanteen, jossa hän onnistui sukulaisten avulla pakenemaan ja hakemaan turvapaikkaa Britanniasta.\\n\\nBio saapui Lontooseen jouluaattona Gatwickin lentokentälle. Hän on kuvannut olleensa kylmästä järkyttynyt, mutta samalla helpottunut uudesta mahdollisuudesta. Britanniassa hän muutti etäisen sukulaisen luo.\\n\\n## Kokemus nousi osaksi julkista roolia\\n\\nKun Biolta kysyttiin, millaista oli olla turvapaikanhakija Lontoossa, hän vastasi sen olleen parempi vaihtoehto kuin joutua naimisiin ”vanhan perverssin” kanssa. Kommentti viittasi hänen isänsä aikomukseen naittaa hänet teini-ikäisenä huomattavasti vanhemmalle miehelle.\\n\\nMyöhemmin Bio ryhtyi näyttelijäksi. Hän tapasi Lontoossa Julius Bion haastatellessaan Sierra Leonen diasporan vaikutusvaltaisia henkilöitä. Pari meni naimisiin, ja Julius Bio on nykyisin Sierra Leonen presidentti.\\n\\nEnsimmäisenä naisena Fatima Bio herättää vahvoja reaktioita. Osa nuorista pitää häntä tuoreena äänenä politiikassa ja naisten sekä tyttöjen puolustajana. Hänen arvostelijansa taas katsovat, että hän on ylittänyt roolinsa rajat ja osallistuu liian näkyvästi miehensä puolueen toimintaan.\\n\\nBio on myös kohdannut julkista kritiikkiä. Häntä on buuattu parlamentissa, ja häntä arvosteltiin videosta, jonka hän jakoi sosiaalisen median kanavissaan. Videolla esiintyi tunnettu huumekauppias, jonka Bio on kiistänyt tuntevansa.\\n\\nBion oma lapsuus- ja pakokokemus on kuitenkin keskeinen osa hänen julkista perusteluaan työlleen. Sierra Leonessa tuli vuonna 2024 voimaan laki, joka kieltää lapsiavioliitot. Bio on kertonut oman tarinansa olleen yksi syy siihen, miksi hän ryhtyi ajamaan asiaa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Sierra Leone\",\"Fatima Bio\",\"lapsiavioliitot\",\"naisten oikeudet\",\"Julius Bio\"],\"summary_bullets\":[\"Fatima Bio kertoo paenneensa teini-ikäisenä järjestettyä avioliittoa Sierra Leonesta Britanniaan.\",\"Hänestä tuli myöhemmin Sierra Leonen presidentin Julius Bion puoliso ja maan ensimmäinen nainen.\",\"Bio on ajanut lapsiavioliittojen kieltoa, mutta hänen julkinen roolinsa jakaa mielipiteitä Sierra Leonessa.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.86,\"journalist_note\":\"Artikkeli perustuu yhteen laajaan lähdepakettiin. Henkilöiden taustasta, lapsiavioliittoa koskevasta kertomuksesta ja julkisesta kritiikistä on kirjoitettu vain paketin tukemien tietojen pohjalta.\"}",
+  "article": {
+    "title": "Fatima Bion tie vei lapsiavioliiton uhalta Sierra Leonen ensimmäiseksi naiseksi",
+    "description": "Sierra Leonen ensimmäinen nainen Fatima Bio kertoo paenneensa teini-ikäisenä järjestettyä avioliittoa ja päätyneensä turvapaikanhakijaksi Britanniaan. Kokemus on sittemmin vaikuttanut hänen työhönsä lapsiavioliittojen kieltämiseksi Sierra Leonessa.",
+    "link": "https://www.bbc.com/news/articles/cvgzpz7zyd4o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-17T23:01:51+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cfe531ff346e167442ed73795ec7ce44",
+    "_url_hash": "a4cffbc04327e39417ce342a1461726171def1d8c015fe3d974f1b8470b548da",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIt takes Fatima Bio only a moment to respond when we ask what it was like to be an asylum seeker in London.\n\n\"Better than being married to an old pervert,\" she says deadpan, before laughing - a reference to her father's plans to marry her off as a teenager.\n\nA lot has changed since then. In the years that followed, she became an actress, then met a man in London when she was interviewing him about influential Sierra Leoneans in the diaspora and married him. He was Julius Bio - and he is now Sierra Leone's president.\n\nAs the country's first lady, Fatima Bio is seen as a compelling yet divisive figure - some young people see her as a refreshing voice in politics, who speaks up for women and girls, while others say she has overstepped her remit and that she is too vocal and too involved in the running of her husband's party.\n\nShe has been booed and jeered at by MPs and criticised over a video that she shared on her social media channels featuring a notorious drugs dealer, whom she denies knowing.\n\nShe quickly stops laughing and composes herself to tell us the story that inspired her to champion a law banning child marriage in Sierra Leone, which came into effect in 2024.\n\nShe was almost a child bride herself. By the time she turned 13, her father, a diamond miner from Kano district, had arranged her marriage to a man in his 30s, whom she had known as an uncle figure since she was a little girl.\n\n\"There was no discussion. It was decided,\" she says.\n\nBut just before the wedding, when she turned 16 in 1996, Sierra Leone's civil war caused enough distraction to allow her to escape with the help of relatives and seek asylum in the UK.\n\nFatima Bio landed in London on Christmas Eve at Gatwick Airport wearing a T-shirt, she says, shocked by the cold, but relieved to have the opportunity of a new life. She moved in with a distant relative.\n\n\"England was my amazing grace. I went to England, I got my voice,\" the first lady adds. \"I got my independence, and then I was able to fight for myself. And now I can fight for as many young people as possible.\"\n\nSomething else she gained in the UK was a council flat in Southwark in central London, a home she still keeps today where her children live.\n\nAs a form of social housing, council homes are usually cheaper to rent than private accommodation and applicants have to meet certain criteria.\n\nThe fact that a sitting first lady, who lives in a presidential mansion in the capital, Freetown, retains a tenancy has drawn criticism in ",
+    "research_source": "multi",
+    "summary": "Sierra Leonen ensimmäinen nainen Fatima Bio kertoo paenneensa teini-ikäisenä järjestettyä avioliittoa ja päätyneensä turvapaikanhakijaksi Britanniaan. Kokemus on sittemmin vaikuttanut hänen työhönsä lapsiavioliittojen kieltämiseksi Sierra Leonessa.",
+    "content": "Fatima Bio, Sierra Leonen presidentin Julius Bion puoliso, kertoo olleensa itse lähellä joutua lapsiavioliittoon ennen kuin hän pakeni sisällissodan keskellä Britanniaan. Nykyisin maan ensimmäisenä naisena toimiva Bio on noussut näkyväksi ja jakavaksi poliittiseksi hahmoksi, joka on ajanut erityisesti naisten ja tyttöjen asemaa sekä tukenut lapsiavioliitot kieltävää lakia.\n\n## Järjestetty avioliitto keskeytyi sodan keskellä\n\nBion mukaan hänen isänsä, Kano districtistä kotoisin ollut timanttikaivostyöläinen, oli järjestänyt hänelle avioliiton jo hänen ollessaan 13-vuotias. Sulhanen oli kolmekymppinen mies, jonka Bio oli tuntenut lapsuudestaan saakka eräänlaisena setähahmona.\n\nBio kuvaa järjestelyä päätökseksi, josta ei hänen mukaansa keskusteltu hänen kanssaan. Hänen kertomansa mukaan avioliitto oli määrä toteuttaa, kun hän täytti 16 vuotta vuonna 1996. Sierra Leonen sisällissota loi kuitenkin tilanteen, jossa hän onnistui sukulaisten avulla pakenemaan ja hakemaan turvapaikkaa Britanniasta.\n\nBio saapui Lontooseen jouluaattona Gatwickin lentokentälle. Hän on kuvannut olleensa kylmästä järkyttynyt, mutta samalla helpottunut uudesta mahdollisuudesta. Britanniassa hän muutti etäisen sukulaisen luo.\n\n## Kokemus nousi osaksi julkista roolia\n\nKun Biolta kysyttiin, millaista oli olla turvapaikanhakija Lontoossa, hän vastasi sen olleen parempi vaihtoehto kuin joutua naimisiin ”vanhan perverssin” kanssa. Kommentti viittasi hänen isänsä aikomukseen naittaa hänet teini-ikäisenä huomattavasti vanhemmalle miehelle.\n\nMyöhemmin Bio ryhtyi näyttelijäksi. Hän tapasi Lontoossa Julius Bion haastatellessaan Sierra Leonen diasporan vaikutusvaltaisia henkilöitä. Pari meni naimisiin, ja Julius Bio on nykyisin Sierra Leonen presidentti.\n\nEnsimmäisenä naisena Fatima Bio herättää vahvoja reaktioita. Osa nuorista pitää häntä tuoreena äänenä politiikassa ja naisten sekä tyttöjen puolustajana. Hänen arvostelijansa taas katsovat, että hän on ylittänyt roolinsa rajat ja osallistuu liian näkyvästi miehensä puolueen toimintaan.\n\nBio on myös kohdannut julkista kritiikkiä. Häntä on buuattu parlamentissa, ja häntä arvosteltiin videosta, jonka hän jakoi sosiaalisen median kanavissaan. Videolla esiintyi tunnettu huumekauppias, jonka Bio on kiistänyt tuntevansa.\n\nBion oma lapsuus- ja pakokokemus on kuitenkin keskeinen osa hänen julkista perusteluaan työlleen. Sierra Leonessa tuli vuonna 2024 voimaan laki, joka kieltää lapsiavioliitot. Bio on kertonut oman tarinansa olleen yksi syy siihen, miksi hän ryhtyi ajamaan asiaa.",
+    "category": "Kotimaa",
+    "tags": [
+      "sierra leone",
+      "fatima bio",
+      "lapsiavioliitot",
+      "naisten oikeudet",
+      "julius bio"
+    ],
+    "summary_bullets": [
+      "Fatima Bio kertoo paenneensa teini-ikäisenä järjestettyä avioliittoa Sierra Leonesta Britanniaan.",
+      "Hänestä tuli myöhemmin Sierra Leonen presidentin Julius Bion puoliso ja maan ensimmäinen nainen.",
+      "Bio on ajanut lapsiavioliittojen kieltoa, mutta hänen julkinen roolinsa jakaa mielipiteitä Sierra Leonessa."
+    ],
+    "key_points": [
+      "Fatima Bio kertoo paenneensa teini-ikäisenä järjestettyä avioliittoa Sierra Leonesta Britanniaan.",
+      "Hänestä tuli myöhemmin Sierra Leonen presidentin Julius Bion puoliso ja maan ensimmäinen nainen.",
+      "Bio on ajanut lapsiavioliittojen kieltoa, mutta hänen julkinen roolinsa jakaa mielipiteitä Sierra Leonessa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu yhteen laajaan lähdepakettiin. Henkilöiden taustasta, lapsiavioliittoa koskevasta kertomuksesta ja julkisesta kritiikistä on kirjoitettu vain paketin tukemien tietojen pohjalta.",
+    "source_text": "BBC World Service exclusive: the private world of one of Africa's most powerful political women.\n\nAs the country's first lady, Fatima Bio is seen as a compelling yet divisive figure - some young people see her as a refreshing voice in politics, who speaks up for women and girls, while others say she has overstepped her remit and that she is too vocal and too involved in the running of her husband's party. She has been booed and jeered at by MPs and criticised over a video that she shared on her social media channels featuring a notorious drugs dealer, whom she denies knowing. She quickly stops laughing and composes herself to tell us the story that inspired her to champion a law banning child marriage in Sierra Leone, which came into effect in 2024.\n\nShe was almost a child bride herself. By the time she turned 13, her father, a diamond miner from Kano district, had arranged her marriage to a man in his 30s, whom she had known as an uncle figure since she was a little girl. \"There was no discussion. It was decided,\" she says. But just before the wedding, when she turned 16 in 1996, Sierra Leone's civil war caused enough distraction to allow her to escape with the help of relatives and seek asylum in the UK. Fatima Bio landed in London on Christmas Eve at Gatwick Airport wearing a T-shirt, she says, shocked by the cold, but relieved to have the opportunity of a new life. She moved in with a distant relative.\n\nIt takes Fatima Bio only a moment to respond when we ask what it was like to be an asylum seeker in London. \"Better than being married to an old pervert,\" she says deadpan, before laughing - a reference to her father's plans to marry her off as a teenager. A lot has changed since then. In the years that followed, she became an actress, then met a man in London when she was interviewing him about influential Sierra Leoneans in the diaspora and married him. He was Julius Bio - and he is now Sierra Leone's president.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260517T234122Z_ec29877f31",
+    "image": "https://images.unsplash.com/photo-1629145185593-5339038e644f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxGYXRpbWElMjBCaW8lMjBwb2xpdGljaWFuJTIwcG9ydHJhaXR8ZW58MXwwfHx8MTc3OTA2MTY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1629145185593-5339038e644f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxGYXRpbWElMjBCaW8lMjBwb2xpdGljaWFuJTIwcG9ydHJhaXR8ZW58MXwwfHx8MTc3OTA2MTY4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Fatima Bion tie vei lapsiavioliiton uhalta Sierra Leonen ensimmäiseksi naiseksi",
+    "image_credit": "Photo by Kuzzat Altay on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/woman-in-black-blazer-and-white-and-blue-hijab-YVcRz_7IzAc?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-17T23:48:06.476502+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1629145185593-5339038e644f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxGYXRpbWElMjBCaW8lMjBwb2xpdGljaWFuJTIwcG9ydHJhaXR8ZW58MXwwfHx8MTc3OTA2MTY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1629145185593-5339038e644f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxGYXRpbWElMjBCaW8lMjBwb2xpdGljaWFuJTIwcG9ydHJhaXR8ZW58MXwwfHx8MTc3OTA2MTY4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-17T23:48:39.738886+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-17-fatima-bion-tie-vei-lapsiavioliiton-uhalta-sierra-leonen-ens.md"
+  ]
+}
