@@ -1,0 +1,88 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-17T08:11:16.039822+00:00",
+  "digest": "99c734575f",
+  "packet": {
+    "packet_id": "20260517T081116Z_99c734575f",
+    "created_at": "2026-05-17T08:11:16Z",
+    "headline_seed": "Tämän takia Suomi liputtaa tänään – Kello 12 jylisee Tampereella ja Kuopiossa",
+    "description_seed": "Sunnuntaina vietetään kaatuneiden muistopäivää. Tänään liputetaan sodissa kaatuneiden kunniaksi. Kaatuneitten muistopäivänä kunnioitetaan kaikkia niitä, jotka ovat kuolleet Suomen aluetta ja suomalaisia koskettaneissa sodissa tai rauhanturvaamistehtävissä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/b02a3567-a3a6-42c2-87ed-e64a368901ea",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/b02a3567-a3a6-42c2-87ed-e64a368901ea"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tämän takia Suomi liputtaa tänään – Kello 12 jylisee Tampereella ja Kuopiossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Sunnuntaina vietetään kaatuneiden muistopäivää. Tänään liputetaan sodissa kaatuneiden kunniaksi. Kaatuneitten muistopäivänä kunnioitetaan kaikkia niitä, jotka ovat kuolleet Suomen aluetta ja suomalaisia koskettaneissa sodissa tai rauhanturvaamistehtävissä.",
+        "word_count": 25,
+        "keyword_overlap": 20,
+        "strong_overlap": 18
+      }
+    ],
+    "source_text": "Sunnuntaina vietetään kaatuneiden muistopäivää. Tänään liputetaan sodissa kaatuneiden kunniaksi. Kaatuneitten muistopäivänä kunnioitetaan kaikkia niitä, jotka ovat kuolleet Suomen aluetta ja suomalaisia koskettaneissa sodissa tai rauhanturvaamistehtävissä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 50,
+      "selected_blocks": 1,
+      "selected_source_words": 25,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tämän takia Suomi liputtaa tänään – Kello 12 jylisee Tampereella ja Kuopiossa",
+      "description": "Sunnuntaina vietetään kaatuneiden muistopäivää. Tänään liputetaan sodissa kaatuneiden kunniaksi. Kaatuneitten muistopäivänä kunnioitetaan kaikkia niitä, jotka ovat kuolleet Suomen aluetta ja suomalaisia koskettaneissa sodissa tai rauhanturvaamistehtävissä.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Tämän takia Suomi liputtaa tänään – Kello 12 jylisee Tampereella ja Kuopiossa",
+    "description": "Sunnuntaina vietetään kaatuneiden muistopäivää. Tänään liputetaan sodissa kaatuneiden kunniaksi. Kaatuneitten muistopäivänä kunnioitetaan kaikkia niitä, jotka ovat kuolleet Suomen aluetta ja suomalaisia koskettaneissa sodissa tai rauhanturvaamistehtävissä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/b02a3567-a3a6-42c2-87ed-e64a368901ea",
+    "published": "2026-05-17T10:19:26+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "b0ca0e362576d2837804108c9bf52ab1",
+    "_url_hash": "03c9b19ea743d3ff16e7457b2bacc8a5a1a00d9514f82bf5e132f88f1cf4b5a3",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Sunnuntaina vietetään kaatuneiden muistopäivää. Tänään liputetaan sodissa kaatuneiden kunniaksi. Kaatuneitten muistopäivänä kunnioitetaan kaikkia niitä, jotka ovat kuolleet Suomen aluetta ja suomalaisia koskettaneissa sodissa tai rauhanturvaamistehtävissä.",
+    "research_source": "none"
+  }
+}
