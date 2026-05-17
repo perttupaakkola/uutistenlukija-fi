@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/17/samsung-galaxy-a37-5g-testi/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
