@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/17/youtube-laajentaa-deepfake-tunnistuksen-kaikille-kayttajille-tekoalyvideot-omilla-kasvoilla-voi-nyt-poistaa-helpommin/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
