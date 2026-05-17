@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/17/oneplus-joutui-vetamaan-paivityksen-saatavilta-vakavien-ongelmien-jalkeen-saattoi-jumittaa-laitteet-kayttokelvottomiksi/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
