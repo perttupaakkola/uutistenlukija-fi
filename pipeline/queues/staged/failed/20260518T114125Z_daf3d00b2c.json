@@ -1,0 +1,199 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-18T11:41:25.550871+00:00",
+  "digest": "daf3d00b2c",
+  "packet": {
+    "packet_id": "20260518T114125Z_daf3d00b2c",
+    "created_at": "2026-05-18T11:41:25Z",
+    "headline_seed": "Bodies of missing Italian divers found in Maldives",
+    "description_seed": "The bodies of all five Italian divers who died in the Maldives last week have now been found, officials tell the BBC.",
+    "link": "https://www.bbc.com/news/articles/c332mngz25vo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "LBC",
+      "CBS News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c332mngz25vo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Bodies of missing Italian divers found in Maldives"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The bodies of four Italian divers who went missing during a scuba diving accident in the Maldives last week have been located, officials have confirmed to the BBC. One body, belonging to a fifth member of the group, had already been located after the incident on Thursday. The Italian nationals were found inside a 60-metre-deep (197ft) cave in Vaavu Atoll by a joint team of highly trained Finnish and Maldivian divers, according to local authorities. A rescue diver also died on Saturday while searching for the bodies of the group. \"Further dives [are] to be carried out in the coming days to recover the bodies,\" Mohamed Hossain Shareef, a Maldivian government spokesperson, said in a message to the BBC.",
+        "word_count": 119,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The bodies of all five Italian divers who died in the Maldives last week have now been found, officials tell the BBC.",
+        "word_count": 22,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "LBC",
+        "source_type": "research",
+        "text": "The bodies of four divers have been found in the Maldives, after they went missing last week. The five Italians had been attempting to explore a series of underwater caves at a depth of around 50 metres (165 ft) but failed to resurface. The bodies of all the scuba divers have now been located after a frantic search, after one of the missing was found last week. The initial search was suspended after local military diver Sergeant Major Mohammed Mahdi died during a perilous mission to try to reach them. Last Thursday, Mr Benedetti's body was found near the mouth of the deep cave. A search for the bodies was halted on Friday due to poor weather but the mission resumed on Saturday. The incident was the worst single diving accident in the Maldives, according to officials.",
+        "word_count": 137,
+        "keyword_overlap": 12,
+        "strong_overlap": 5
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "Rome — Italy's Foreign Ministry said Monday rescuers have located the bodies of four Italian divers who were believed to be deep inside an underwater cave in a Maldive atoll. Searches had resumed on Monday after being suspended following the death of a local military diver during a perilous mission to try to reach them. The five Italian divers were believed to have died while exploring a cave at a depth of about 160 feet in Vaavu Atoll on Thursday, according to Italy's Foreign Ministry. The recreational diving limit in the Maldives is 98 feet. The body of one Italian - a diving instructor - was found earlier outside the cave.",
+        "word_count": 111,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "The bodies of four Italian divers who went missing during a scuba diving accident in the Maldives last week have been located, officials have confirmed to the BBC. One body, belonging to a fifth member of the group, had already been located after the incident on Thursday. The Italian nationals were found inside a 60-metre-deep (197ft) cave in Vaavu Atoll by a joint team of highly trained Finnish and Maldivian divers, according to local authorities. A rescue diver also died on Saturday while searching for the bodies of the group. \"Further dives [are] to be carried out in the coming days to recover the bodies,\" Mohamed Hossain Shareef, a Maldivian government spokesperson, said in a message to the BBC.\n\nThe bodies of all five Italian divers who died in the Maldives last week have now been found, officials tell the BBC.\n\nThe bodies of four divers have been found in the Maldives, after they went missing last week. The five Italians had been attempting to explore a series of underwater caves at a depth of around 50 metres (165 ft) but failed to resurface. The bodies of all the scuba divers have now been located after a frantic search, after one of the missing was found last week. The initial search was suspended after local military diver Sergeant Major Mohammed Mahdi died during a perilous mission to try to reach them. Last Thursday, Mr Benedetti's body was found near the mouth of the deep cave. A search for the bodies was halted on Friday due to poor weather but the mission resumed on Saturday. The incident was the worst single diving accident in the Maldives, according to officials.\n\nRome — Italy's Foreign Ministry said Monday rescuers have located the bodies of four Italian divers who were believed to be deep inside an underwater cave in a Maldive atoll. Searches had resumed on Monday after being suspended following the death of a local military diver during a perilous mission to try to reach them. The five Italian divers were believed to have died while exploring a cave at a depth of about 160 feet in Vaavu Atoll on Thursday, according to Italy's Foreign Ministry. The recreational diving limit in the Maldives is 98 feet. The body of one Italian - a diving instructor - was found earlier outside the cave.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1022,
+      "selected_blocks": 4,
+      "selected_source_words": 389,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "LBC",
+        "LBC",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "LBC",
+        "CBS News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Bodies of missing Italian divers found in Maldives",
+      "description": "The bodies of all five Italian divers who died in the Maldives last week have now been found, officials tell the BBC.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Bodies of missing Italian divers found in Maldives",
+    "description": "The bodies of all five Italian divers who died in the Maldives last week have now been found, officials tell the BBC.",
+    "link": "https://www.bbc.com/news/articles/c332mngz25vo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-18T11:20:00+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "5eeb7d34fcd9488ca654bacb1183097b",
+    "_url_hash": "8a21525e3caa29d97c962c83c8b28e3becd4f90c2a033298b7700de69b337608",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe bodies of four Italian divers who went missing during a scuba diving accident in the Maldives last week have been located, officials have confirmed to the BBC.\n\nOne body, belonging to a fifth member of the group, had already been located after the incident on Thursday.\n\nThe Italian nationals were found inside a 60-metre-deep (197ft) cave in Vaavu Atoll by a joint team of highly trained Finnish and Maldivian divers, according to local authorities.\n\nA rescue diver also died on Saturday while searching for the bodies of the group.\n\n\"Further dives [are] to be carried out in the coming days to recover the bodies,\" Mohamed Hossain Shareef, a Maldivian government spokesperson, said in a message to the BBC.\n\nThe incident is believed to be the worst single diving accident in the tiny Indian Ocean nation, a popular tourist destination because of its string of coral islands.\n\nFour of the Italian divers were part of a University of Genoa team: Prof Monica Montefalcone, her daughter Giorgia Sommacal, and researchers Muriel Oddenino and Federico Gualtieri.\n\nThe fifth Italian victim was boat operations manager and diving instructor Gianluca Benedetti.\n\nThe Maldivian rescue diver who died while searching for their bodies has also been named as Staff Sgt Mohamed Mahdhee.\n\nA Maldivian government spokesperson told the BBC that Mahdhee was part of a group of eight rescue divers who were trying to locate the bodies on Saturday.\n\n\"Eight rescue divers went into the water today. When they surfaced, they realised Mr Mahdhee didn't come up,\" Shareef previously told the BBC.\n\nThe other divers immediately went into the water again and they found Mahdhee was unconscious.\n\nIt is believed that the four bodies of the Italian group were located in the same underwater cave where the military found the first body on the day of the accident.\n\n---\n\n[Lähde: NBC News]\nItaly’s Foreign Ministry said Monday rescuers have located the bodies of four Italian divers believed to be deep inside an underwater cave in a Maldive atoll.\n\nThe searches had resumed on Monday after being suspended following the death of a local military diver during a perilous mission to try to reach them.\n\nFive Italian divers are believed to have died while exploring a cave at a depth of about 160 feet in Vaavu Atoll on Thursday, according to Italy’s Foreign Ministry. The recreational diving limit in the Maldives is 98 feet.\n\nThe body of one Italian — a diving instructor — was found earlier outside the cave.\n\n---\n\n[Lähde: CBS News]\nRome — Italy's Foreign Ministry said Monday rescuers have located the bodies of four Italian divers who were believed to be deep inside an underwater cave in a Maldive atoll.\n\nSearches had resumed on Monday after being suspended following the death of a local military diver during a perilous mission to try to reach them.\n\nThe five Italian divers were believed to have died while exploring a cave at a depth of about 160 feet in Vaavu Atoll on Thursday, according to Italy's Foreign Ministry. The recreational diving limit in the Maldives is 98 feet.\n\nThe body of one Italian - a diving instructor - was found earlier outside the cave.\n\nThree Finnish divers had arrived in the Maldives Sunday to draw up a fresh plan in the search for the bodies of the other four, who were believed to be inside the cave system.\n\nMaldives presidential spokesperson Mohamed Hussain Shareef said the search was suspended after Mohamed Mahudhee, a member of the Maldivian National Defense Force, died of underwater decompression sickness after being transferred to a hospital in the capital on Saturday.\n\nMahudhee was buried with military honors in a funeral attended by President Mohamed Muizzu on Saturday night. The diver was part of the group that had briefed Muizzu on a rescue plan when he visited the search site on Friday.\n\nShareef said Sunday that the three Finnish divers, experts in deep and cave diving, joined the Maldives coastguard in a meeting aimed at mapping a new search strategy.\n\nRough weather had repeatedly hampered rescue efforts.\n\nInitial teams had already dived to identify and mark the entrance to the cave system where the Italians disappeared. The cause of the deaths remains under investigation.\n\nThe victims have been identified as Monica Montefalcone, an associate professor of ecology at the University of Genoa; her daughter, Giorgia Sommacal; marine biologist Federico Gualtieri; researcher Muriel Oddenino; and diving instructor Gianluca Benedetti, according to the Maldivian government.\n\nBenedetti's body was the one recovered on Thursday from near the mouth of the cave.\n\nMontefalcone and Oddenino were in the Maldives on an official scientific mission to monitor marine environments and study the effects of climate change on tropical biodiversity, the University of Genoa said in a statement Friday. However, the scuba diving activity during which the deadly accident occurred was not part of the planned research and was \"undertaken privately,\" it said.\n\nThe statement also sai\n\n---\n\n[Lähde: LBC]\nThe bodies of four divers have been found in the Maldives, after they went missing last week.\n\nThe five Italians had been attempting to explore a series of underwater caves at a depth of around 50 metres (165 ft) but failed to resurface.\n\nThe bodies of all the scuba divers have now been located after a frantic search, after one of the missing was found last week.\n\nThe initial search was suspended after local military diver Sergeant Major Mohammed Mahdi died during a perilous mission to try to reach them.\n\nLast Thursday, Mr Benedetti's body was found near the mouth of the deep cave.\n\nA search for the bodies was halted on Friday due to poor weather but the mission resumed on Saturday.\n\nThe incident was the worst single diving accident in the Maldives, according to officials.\n\nItalian media reported that the divers were reported missing at around 1.45pm by the crew of the vessel they were travelling on.\n\nThe body of one of the divers was found in a cave about 60 metres deep, the other tourists were also believed to have been in...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-18T13:04:42.866464+00:00",
+  "payload": {
+    "packet_id": "20260518T114125Z_daf3d00b2c",
+    "title": "Malediiveilla kadonneiden italialaissukeltajien ruumiit on löydetty",
+    "summary": "Viiden italialaissukeltajan ruumiit on löydetty Malediiveilla viime viikolla tapahtuneen sukellusonnettomuuden jälkeen. Etsintöihin osallistui myös suomalaisia sukeltajia.",
+    "content": "Viiden italialaissukeltajan ruumiit on löydetty Malediiveilla sen jälkeen, kun ryhmä katosi viime viikolla sukellusonnettomuudessa Vaavun atollilla. Paikallisviranomaisten mukaan neljä ruumista paikannettiin syvästä vedenalaisesta luolasta, ja yhden ryhmän jäsenen ruumis oli löydetty jo aiemmin torstain onnettomuuden jälkeen.\n\n## Sukeltajat löytyivät Vaavun atollilta\n\nItalialaiset olivat lähdetietojen mukaan tutkimassa vedenalaisia luolia, kun he eivät nousseet takaisin pintaan. Ruumiit löydettiin noin 50–60 metrin syvyydessä sijaitsevasta luolasta Vaavun atollilla. CBS:n mukaan Italian ulkoministeriö kertoi maanantaina, että neljän italialaisen ruumiit oli paikannettu syvällä vedenalaisessa luolassa. Yhden italialaisen, sukelluskouluttajaksi kuvatun henkilön, ruumis oli löydetty aiemmin luolan ulkopuolelta. LBC:n mukaan viime torstaina löydetty ruumis oli lähellä syvän luolan suuaukkoa.\n\nPaikallisviranomaisten mukaan etsintöihin osallistui erityiskoulutettuja malediivilaisia ja suomalaisia sukeltajia. BBC:n siteeraaman Malediivien hallituksen edustajan Mohamed Hossain Shareefin mukaan ruumiiden nostamiseksi on määrä tehdä lisää sukelluksia tulevina päivinä. Lähteiden mukaan etsintöjä jouduttiin keskeyttämään huonon sään vuoksi perjantaina, mutta operaatio jatkui myöhemmin.\n\n## Etsinnöissä kuoli paikallinen sukeltaja\n\nPelastusoperaatio muuttui entistä vakavammaksi, kun paikallinen sotilassukeltaja, kersanttimajuri Mohammed Mahdi, kuoli vaarallisessa tehtävässä yrittäessään tavoittaa kadonneita. BBC:n mukaan pelastussukeltaja kuoli lauantaina etsintöjen aikana, ja CBS kertoi etsintöjen jatkuneen maanantaina keskeytyksen jälkeen.\n\nItalian ulkoministeriön mukaan sukeltajien uskottiin kuolleen torstaina, kun he olivat tutkimassa luolaa Vaavun atollilla. CBS:n mukaan Malediiveilla virkistyssukelluksen raja on 98 jalkaa eli noin 30 metriä, kun taas onnettomuuspaikan syvyydeksi on kuvattu noin 160 jalkaa tai 50–60 metriä.\n\n## Onnettomuutta pidetään poikkeuksellisen vakavana\n\nLBC:n mukaan viranomaiset ovat kuvanneet tapausta Malediivien pahimmaksi yksittäiseksi sukellusonnettomuudeksi. Kaikkien viiden italialaissukeltajan ruumiit on nyt paikannettu, mutta lähdetietojen perusteella operaatio ei ole vielä päättynyt, sillä ruumiiden nostaminen edellyttää lisää sukelluksia vaikeissa ja vaarallisissa olosuhteissa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Malediivit",
+      "Italia",
+      "sukellusonnettomuus",
+      "Vaavun atolli",
+      "pelastusoperaatio"
+    ],
+    "summary_bullets": [
+      "Viiden Malediiveilla kadonneen italialaissukeltajan ruumiit on löydetty.",
+      "Neljän ruumiit paikannettiin vedenalaisesta luolasta Vaavun atollilla, yksi oli löydetty aiemmin.",
+      "Etsintöihin osallistui malediivilaisia ja suomalaisia sukeltajia, ja operaatiossa kuoli myös paikallinen pelastussukeltaja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.91,
+    "journalist_note": "Paketissa oli useita lähteitä ja riittävä ydinnäyttö tapahtumista. Luokitus muutettu Kotimaasta Ulkomaihin, koska tapahtuma koskee Malediiveja ja italialaisia sukeltajia; suomalaiset mainitaan vain etsintäryhmän osana."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\n  \"packet_id\": \"20260518T114125Z_daf3d00b2c\",\n  \"title\": \"Malediiveilla kadonneiden italialaissukeltajien ruumiit on löydetty\",\n  \"summary\": \"Viiden italialaissukeltajan ruumiit on löydetty Malediiveilla viime viikolla tapahtuneen sukellusonnettomuuden jälkeen. Etsintöihin osallistui myös suomalaisia sukeltajia.\",\n  \"content\": \"Viiden italialaissukeltajan ruumiit on löydetty Malediiveilla sen jälkeen, kun ryhmä katosi viime viikolla sukellusonnettomuudessa Vaavun atollilla. Paikallisviranomaisten mukaan neljä ruumista paikannettiin syvästä vedenalaisesta luolasta, ja yhden ryhmän jäsenen ruumis oli löydetty jo aiemmin torstain onnettomuuden jälkeen.\\n\\n## Sukeltajat löytyivät Vaavun atollilta\\n\\nItalialaiset olivat lähdetietojen mukaan tutkimassa vedenalaisia luolia, kun he eivät nousseet takaisin pintaan. Ruumiit löydettiin noin 50–60 metrin syvyydessä sijaitsevasta luolasta Vaavun atollilla. CBS:n mukaan Italian ulkoministeriö kertoi maanantaina, että neljän italialaisen ruumiit oli paikannettu syvällä vedenalaisessa luolassa. Yhden italialaisen, sukelluskouluttajaksi kuvatun henkilön, ruumis oli löydetty aiemmin luolan ulkopuolelta. LBC:n mukaan viime torstaina löydetty ruumis oli lähellä syvän luolan suuaukkoa.\\n\\nPaikallisviranomaisten mukaan etsintöihin osallistui erityiskoulutettuja malediivilaisia ja suomalaisia sukeltajia. BBC:n siteeraaman Malediivien hallituksen edustajan Mohamed Hossain Shareefin mukaan ruumiiden nostamiseksi on määrä tehdä lisää sukelluksia tulevina päivinä. Lähteiden mukaan etsintöjä jouduttiin keskeyttämään huonon sään vuoksi perjantaina, mutta operaatio jatkui myöhemmin.\\n\\n## Etsinnöissä kuoli paikallinen sukeltaja\\n\\nPelastusoperaatio muuttui entistä vakavammaksi, kun paikallinen sotilassukeltaja, kersanttimajuri Mohammed Mahdi, kuoli vaarallisessa tehtävässä yrittäessään tavoittaa kadonneita. BBC:n mukaan pelastussukeltaja kuoli lauantaina etsintöjen aikana, ja CBS kertoi etsintöjen jatkuneen maanantaina keskeytyksen jälkeen.\\n\\nItalian ulkoministeriön mukaan sukeltajien uskottiin kuolleen torstaina, kun he olivat tutkimassa luolaa Vaavun atollilla. CBS:n mukaan Malediiveilla virkistyssukelluksen raja on 98 jalkaa eli noin 30 metriä, kun taas onnettomuuspaikan syvyydeksi on kuvattu noin 160 jalkaa tai 50–60 metriä.\\n\\n## Onnettomuutta pidetään poikkeuksellisen vakavana\\n\\nLBC:n mukaan viranomaiset ovat kuvanneet tapausta Malediivien pahimmaksi yksittäiseksi sukellusonnettomuudeksi. Kaikkien viiden italialaissukeltajan ruumiit on nyt paikannettu, mutta lähdetietojen perusteella operaatio ei ole vielä päättynyt, sillä ruumiiden nostaminen edellyttää lisää sukelluksia vaikeissa ja vaarallisissa olosuhteissa.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Malediivit\",\n    \"Italia\",\n    \"sukellusonnettomuus\",\n    \"Vaavun atolli\",\n    \"pelastusoperaatio\"\n  ],\n  \"summary_bullets\": [\n    \"Viiden Malediiveilla kadonneen italialaissukeltajan ruumiit on löydetty.\",\n    \"Neljän ruumiit paikannettiin vedenalaisesta luolasta Vaavun atollilla, yksi oli löydetty aiemmin.\",\n    \"Etsintöihin osallistui malediivilaisia ja suomalaisia sukeltajia, ja operaatiossa kuoli myös paikallinen pelastussukeltaja.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.91,\n  \"journalist_note\": \"Paketissa oli useita lähteitä ja riittävä ydinnäyttö tapahtumista. Luokitus muutettu Kotimaasta Ulkomaihin, koska tapahtuma koskee Malediiveja ja italialaisia sukeltajia; suomalaiset mainitaan vain etsintäryhmän osana.\"\n}",
+  "article": {
+    "title": "Malediiveilla kadonneiden italialaissukeltajien ruumiit on löydetty",
+    "description": "Viiden italialaissukeltajan ruumiit on löydetty Malediiveilla viime viikolla tapahtuneen sukellusonnettomuuden jälkeen. Etsintöihin osallistui myös suomalaisia sukeltajia.",
+    "link": "https://www.bbc.com/news/articles/c332mngz25vo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-18T11:20:00+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "5eeb7d34fcd9488ca654bacb1183097b",
+    "_url_hash": "8a21525e3caa29d97c962c83c8b28e3becd4f90c2a033298b7700de69b337608",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe bodies of four Italian divers who went missing during a scuba diving accident in the Maldives last week have been located, officials have confirmed to the BBC.\n\nOne body, belonging to a fifth member of the group, had already been located after the incident on Thursday.\n\nThe Italian nationals were found inside a 60-metre-deep (197ft) cave in Vaavu Atoll by a joint team of highly trained Finnish and Maldivian divers, according to local authorities.\n\nA rescue diver also died on Saturday while searching for the bodies of the group.\n\n\"Further dives [are] to be carried out in the coming days to recover the bodies,\" Mohamed Hossain Shareef, a Maldivian government spokesperson, said in a message to the BBC.\n\nThe incident is believed to be the worst single diving accident in the tiny Indian Ocean nation, a popular tourist destination because of its string of coral islands.\n\nFour of the Italian divers were part of a University of Genoa team: Prof Monica Montefalcone, her daughter Giorgia Sommacal, and researchers Muriel Oddenino and Federico Gualtieri.\n\nThe fifth Italian victim was boat operations manager and diving instructor Gianluca Benedetti.\n\nThe Maldivian rescue diver who died while searching for their bodies has also been named as Staff Sgt Mohamed Mahdhee.\n\nA Maldivian government spokesperson told the BBC that Mahdhee was part of a group of eight rescue divers who were trying to locate the bodies on Saturday.\n\n\"Eight rescue divers went into the water today. When they surfaced, they realised Mr Mahdhee didn't come up,\" Shareef previously told the BBC.\n\nThe other divers immediately went into the water again and they found Mahdhee was unconscious.\n\nIt is believed that the four bodies of the Italian group were located in the same underwater cave where the military found the first body on the day of the accident.\n\n---\n\n[Lähde: NBC News]\nItaly’s Foreign Ministry said Monday rescuers have located the bodies of four Italian divers believed to be deep inside an underwater cave in a Maldive atoll.\n\nThe searches had resumed on Monday after being suspended following the death of a local military diver during a perilous mission to try to reach them.\n\nFive Italian divers are believed to have died while exploring a cave at a depth of about 160 feet in Vaavu Atoll on Thursday, according to Italy’s Foreign Ministry. The recreational diving limit in the Maldives is 98 feet.\n\nThe body of one Italian — a diving instructor — was found earlier outside the cave.\n\n---\n\n[Lähde: CBS News]\nRome — Italy's Foreign Ministry said Monday rescuers have located the bodies of four Italian divers who were believed to be deep inside an underwater cave in a Maldive atoll.\n\nSearches had resumed on Monday after being suspended following the death of a local military diver during a perilous mission to try to reach them.\n\nThe five Italian divers were believed to have died while exploring a cave at a depth of about 160 feet in Vaavu Atoll on Thursday, according to Italy's Foreign Ministry. The recreational diving limit in the Maldives is 98 feet.\n\nThe body of one Italian - a diving instructor - was found earlier outside the cave.\n\nThree Finnish divers had arrived in the Maldives Sunday to draw up a fresh plan in the search for the bodies of the other four, who were believed to be inside the cave system.\n\nMaldives presidential spokesperson Mohamed Hussain Shareef said the search was suspended after Mohamed Mahudhee, a member of the Maldivian National Defense Force, died of underwater decompression sickness after being transferred to a hospital in the capital on Saturday.\n\nMahudhee was buried with military honors in a funeral attended by President Mohamed Muizzu on Saturday night. The diver was part of the group that had briefed Muizzu on a rescue plan when he visited the search site on Friday.\n\nShareef said Sunday that the three Finnish divers, experts in deep and cave diving, joined the Maldives coastguard in a meeting aimed at mapping a new search strategy.\n\nRough weather had repeatedly hampered rescue efforts.\n\nInitial teams had already dived to identify and mark the entrance to the cave system where the Italians disappeared. The cause of the deaths remains under investigation.\n\nThe victims have been identified as Monica Montefalcone, an associate professor of ecology at the University of Genoa; her daughter, Giorgia Sommacal; marine biologist Federico Gualtieri; researcher Muriel Oddenino; and diving instructor Gianluca Benedetti, according to the Maldivian government.\n\nBenedetti's body was the one recovered on Thursday from near the mouth of the cave.\n\nMontefalcone and Oddenino were in the Maldives on an official scientific mission to monitor marine environments and study the effects of climate change on tropical biodiversity, the University of Genoa said in a statement Friday. However, the scuba diving activity during which the deadly accident occurred was not part of the planned research and was \"undertaken privately,\" it said.\n\nThe statement also sai\n\n---\n\n[Lähde: LBC]\nThe bodies of four divers have been found in the Maldives, after they went missing last week.\n\nThe five Italians had been attempting to explore a series of underwater caves at a depth of around 50 metres (165 ft) but failed to resurface.\n\nThe bodies of all the scuba divers have now been located after a frantic search, after one of the missing was found last week.\n\nThe initial search was suspended after local military diver Sergeant Major Mohammed Mahdi died during a perilous mission to try to reach them.\n\nLast Thursday, Mr Benedetti's body was found near the mouth of the deep cave.\n\nA search for the bodies was halted on Friday due to poor weather but the mission resumed on Saturday.\n\nThe incident was the worst single diving accident in the Maldives, according to officials.\n\nItalian media reported that the divers were reported missing at around 1.45pm by the crew of the vessel they were travelling on.\n\nThe body of one of the divers was found in a cave about 60 metres deep, the other tourists were also believed to have been in...",
+    "research_source": "multi",
+    "summary": "Viiden italialaissukeltajan ruumiit on löydetty Malediiveilla viime viikolla tapahtuneen sukellusonnettomuuden jälkeen. Etsintöihin osallistui myös suomalaisia sukeltajia.",
+    "content": "Viiden italialaissukeltajan ruumiit on löydetty Malediiveilla sen jälkeen, kun ryhmä katosi viime viikolla sukellusonnettomuudessa Vaavun atollilla. Paikallisviranomaisten mukaan neljä ruumista paikannettiin syvästä vedenalaisesta luolasta, ja yhden ryhmän jäsenen ruumis oli löydetty jo aiemmin torstain onnettomuuden jälkeen.\n\n## Sukeltajat löytyivät Vaavun atollilta\n\nItalialaiset olivat lähdetietojen mukaan tutkimassa vedenalaisia luolia, kun he eivät nousseet takaisin pintaan. Ruumiit löydettiin noin 50–60 metrin syvyydessä sijaitsevasta luolasta Vaavun atollilla. CBS:n mukaan Italian ulkoministeriö kertoi maanantaina, että neljän italialaisen ruumiit oli paikannettu syvällä vedenalaisessa luolassa. Yhden italialaisen, sukelluskouluttajaksi kuvatun henkilön, ruumis oli löydetty aiemmin luolan ulkopuolelta. LBC:n mukaan viime torstaina löydetty ruumis oli lähellä syvän luolan suuaukkoa.\n\nPaikallisviranomaisten mukaan etsintöihin osallistui erityiskoulutettuja malediivilaisia ja suomalaisia sukeltajia. BBC:n siteeraaman Malediivien hallituksen edustajan Mohamed Hossain Shareefin mukaan ruumiiden nostamiseksi on määrä tehdä lisää sukelluksia tulevina päivinä. Lähteiden mukaan etsintöjä jouduttiin keskeyttämään huonon sään vuoksi perjantaina, mutta operaatio jatkui myöhemmin.\n\n## Etsinnöissä kuoli paikallinen sukeltaja\n\nPelastusoperaatio muuttui entistä vakavammaksi, kun paikallinen sotilassukeltaja, kersanttimajuri Mohammed Mahdi, kuoli vaarallisessa tehtävässä yrittäessään tavoittaa kadonneita. BBC:n mukaan pelastussukeltaja kuoli lauantaina etsintöjen aikana, ja CBS kertoi etsintöjen jatkuneen maanantaina keskeytyksen jälkeen.\n\nItalian ulkoministeriön mukaan sukeltajien uskottiin kuolleen torstaina, kun he olivat tutkimassa luolaa Vaavun atollilla. CBS:n mukaan Malediiveilla virkistyssukelluksen raja on 98 jalkaa eli noin 30 metriä, kun taas onnettomuuspaikan syvyydeksi on kuvattu noin 160 jalkaa tai 50–60 metriä.\n\n## Onnettomuutta pidetään poikkeuksellisen vakavana\n\nLBC:n mukaan viranomaiset ovat kuvanneet tapausta Malediivien pahimmaksi yksittäiseksi sukellusonnettomuudeksi. Kaikkien viiden italialaissukeltajan ruumiit on nyt paikannettu, mutta lähdetietojen perusteella operaatio ei ole vielä päättynyt, sillä ruumiiden nostaminen edellyttää lisää sukelluksia vaikeissa ja vaarallisissa olosuhteissa.",
+    "category": "Kotimaa",
+    "tags": [
+      "malediivit",
+      "italia",
+      "sukellusonnettomuus",
+      "vaavun atolli",
+      "pelastusoperaatio"
+    ],
+    "summary_bullets": [
+      "Viiden Malediiveilla kadonneen italialaissukeltajan ruumiit on löydetty.",
+      "Neljän ruumiit paikannettiin vedenalaisesta luolasta Vaavun atollilla, yksi oli löydetty aiemmin.",
+      "Etsintöihin osallistui malediivilaisia ja suomalaisia sukeltajia, ja operaatiossa kuoli myös paikallinen pelastussukeltaja."
+    ],
+    "key_points": [
+      "Viiden Malediiveilla kadonneen italialaissukeltajan ruumiit on löydetty.",
+      "Neljän ruumiit paikannettiin vedenalaisesta luolasta Vaavun atollilla, yksi oli löydetty aiemmin.",
+      "Etsintöihin osallistui malediivilaisia ja suomalaisia sukeltajia, ja operaatiossa kuoli myös paikallinen pelastussukeltaja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Paketissa oli useita lähteitä ja riittävä ydinnäyttö tapahtumista. Luokitus muutettu Kotimaasta Ulkomaihin, koska tapahtuma koskee Malediiveja ja italialaisia sukeltajia; suomalaiset mainitaan vain etsintäryhmän osana.",
+    "source_text": "The bodies of four Italian divers who went missing during a scuba diving accident in the Maldives last week have been located, officials have confirmed to the BBC. One body, belonging to a fifth member of the group, had already been located after the incident on Thursday. The Italian nationals were found inside a 60-metre-deep (197ft) cave in Vaavu Atoll by a joint team of highly trained Finnish and Maldivian divers, according to local authorities. A rescue diver also died on Saturday while searching for the bodies of the group. \"Further dives [are] to be carried out in the coming days to recover the bodies,\" Mohamed Hossain Shareef, a Maldivian government spokesperson, said in a message to the BBC.\n\nThe bodies of all five Italian divers who died in the Maldives last week have now been found, officials tell the BBC.\n\nThe bodies of four divers have been found in the Maldives, after they went missing last week. The five Italians had been attempting to explore a series of underwater caves at a depth of around 50 metres (165 ft) but failed to resurface. The bodies of all the scuba divers have now been located after a frantic search, after one of the missing was found last week. The initial search was suspended after local military diver Sergeant Major Mohammed Mahdi died during a perilous mission to try to reach them. Last Thursday, Mr Benedetti's body was found near the mouth of the deep cave. A search for the bodies was halted on Friday due to poor weather but the mission resumed on Saturday. The incident was the worst single diving accident in the Maldives, according to officials.\n\nRome — Italy's Foreign Ministry said Monday rescuers have located the bodies of four Italian divers who were believed to be deep inside an underwater cave in a Maldive atoll. Searches had resumed on Monday after being suspended following the death of a local military diver during a perilous mission to try to reach them. The five Italian divers were believed to have died while exploring a cave at a depth of about 160 feet in Vaavu Atoll on Thursday, according to Italy's Foreign Ministry. The recreational diving limit in the Maldives is 98 feet. The body of one Italian - a diving instructor - was found earlier outside the cave.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.91,
+    "degraded_mode": false,
+    "monica_packet_id": "20260518T114125Z_daf3d00b2c"
+  },
+  "duplicate_rejected_at": "2026-05-18T13:08:01.948973+00:00",
+  "duplicate_rejected": true
+}
