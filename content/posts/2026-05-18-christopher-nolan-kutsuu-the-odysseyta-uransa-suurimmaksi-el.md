@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/christopher-nolan-kertoi-miksi-the-odyssey-on-ohjaajan-uran-isoin-elokuva/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
