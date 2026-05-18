@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/teetko-toita-yrittajana-ja-palkkatoissa-3-faktaa-vakuuttamisesta/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
