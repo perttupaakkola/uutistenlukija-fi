@@ -704,3 +704,20 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   background: #101214 !important;
   color: var(--portal-text);
 }
+[data-theme="dark"] .portal-lead {
+  background: #101214;
+  color: var(--portal-text);
+}
+[data-theme="dark"] .portal-lead__body,
+[data-theme="dark"] .portal-lead__body a,
+[data-theme="dark"] .portal-lead__time,
+[data-theme="dark"] .portal-lead p,
+[data-theme="dark"] .portal-meta-row,
+[data-theme="dark"] .portal-save-link {
+  color: var(--portal-text) !important;
+}
+[data-theme="dark"] .portal-lead .portal-kicker,
+[data-theme="dark"] .portal-teaser__meta,
+[data-theme="dark"] .portal-row-card .portal-kicker {
+  color: #8ab4ff;
+}
