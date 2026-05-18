@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/huippumakihyppaaja-ryhtyi-rakennusalan-yrittajaksi-viidessa-vuodessa-jo-13-tyontekijaa-en-nae-merkittavia-riskeja/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
