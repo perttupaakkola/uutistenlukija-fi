@@ -94,5 +94,24 @@
     "_guessed_category": "Teknologia",
     "research": "[Lähde: muropaketti.com]\nRockstarin emoyhtiö Take-Twon toimitusjohtaja uskoo GTA 6:n ilmestyvän ajallaan.\n\nRockstarin emoyhtiö Take-Twon toimitusjohtaja Strauss Zelnick on vahvistanut, että Grand Theft Auto 6:n kehitys on edelleen aikataulussa ja sen julkaisu on määrä toteutua 19. marraskuuta. Keskustelussa podcast-juontaja David Senran kanssa Zelnick korosti, ettei yhtiön julkaisusuunnitelmiin ole tehty muutoksia huolimatta jatkuvista viivästyshuhuista.\n\nZelnickin mukaan peli on noin 18 kuukautta alkuperäisestä aikataulustaan jäljessä, mutta nykyinen julkaisupäivä on hänen mukaansa edelleen lukittu. Toistaiseksi peli on kuitenkin ilmestymässä vain PlayStation 5:lle ja Xbox Seriesille, eli PC-pelaajien odotus saattaa olla vielä hyvinkin pitkä.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-05-18T02:04:09.007261+00:00",
+  "failure": "insufficient_confidence_after_repair",
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\"status\":\"INSUFFICIENT_CONFIDENCE\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260517T182119Z_4b342d348a",
+    "category": "Teknologia",
+    "selected_source_words": 165,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.83,
+    "final_word_count": 0,
+    "issues": [
+      "missing keys: packet_id, title, summary, content, category, tags, summary_bullets, content_type, editorial_reviewed, confidence, journalist_note"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "Take-Twon toimitusjohtaja kertoi hyviä uutisia kaikille GTA 6:ta odottaville pelaajille, kunhan ei pelaa PC:llä"
   }
 }
