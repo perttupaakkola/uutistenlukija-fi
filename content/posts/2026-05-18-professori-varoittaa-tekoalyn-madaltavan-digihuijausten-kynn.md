@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/tekoaly-on-leivanpaahdin-joka-ei-tieda-kirjoittaako-koodia-vai-huijaako-ihmisia/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 

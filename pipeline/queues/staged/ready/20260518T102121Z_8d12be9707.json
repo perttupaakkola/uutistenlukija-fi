@@ -1,0 +1,120 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-18T10:21:21.328824+00:00",
+  "digest": "8d12be9707",
+  "packet": {
+    "packet_id": "20260518T102121Z_8d12be9707",
+    "created_at": "2026-05-18T10:21:21Z",
+    "headline_seed": "At least six Americans exposed to Ebola in DR Congo, US media report",
+    "description_seed": "One of the six Americans believed to have been exposed is experiencing symptoms, according to media reports.",
+    "link": "https://www.bbc.com/news/articles/cq6pz60p996o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cq6pz60p996o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "At least six Americans exposed to Ebola in DR Congo, US media report"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "One of the six Americans believed to have been exposed is experiencing symptoms, according to media reports.",
+        "word_count": 17,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "At least six Americans have been exposed to the Ebola virus in the Democratic Republic of Congo, sources have told CBS News, the BBC's US partner. One person is believed to be experiencing symptoms, while three others are said to have faced a high-risk contact or exposure. It is unclear whether any of them have been infected. The US Centers for Disease Control and Prevention (CDC) said it was supporting the \"safe withdrawal of a small number of Americans who are directly affected\", but did not confirm how many. The World Health Organization (WHO) has declared the outbreak in DR Congo as an international emergency, with 336 suspected cases and 88 deaths reported. The current strain of Ebola is caused by the Bundibugyo virus, for which there are no approved drugs or vaccines.",
+        "word_count": 133,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "There are also two confirmed cases and one death in Uganda, according to the CDC. The US government is reportedly looking to arrange transport for the small group of Americans in DR Congo to a safe quarantine location, a source told health news site STAT. Quoting a source, the site adds that the group could be taken to a US military base in Germany, though this has not been confirmed. During a press conference on Sunday, the CDC declined to answer direct questions about the US citizens reportedly affected, adding that the risk to the US remained low. The US has also issued a Level Four travel advisory - its most severe level - warning against travel to the DR Congo.",
+        "word_count": 121,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The WHO has said the outbreak in DR Congo's eastern Ituri province is a public health emergency of international concern, but did not meet the criteria of a pandemic. The agency has also warned it could potentially be \"a much larger outbreak\" than what is currently being detected and reported, with significant risk of local and regional spread. More than 28,600 people were infected by Ebola during the 2014-2016 outbreak in West Africa, the largest outbreak of the virus since its discovery in 1976. The disease spread to a number of countries within and outside of West Africa, including Guinea, Sierra Leone, the United States, the United Kingdom and Italy, killing 11,325 people.",
+        "word_count": 113,
+        "keyword_overlap": 2,
+        "strong_overlap": 0
+      }
+    ],
+    "source_text": "One of the six Americans believed to have been exposed is experiencing symptoms, according to media reports.\n\nAt least six Americans have been exposed to the Ebola virus in the Democratic Republic of Congo, sources have told CBS News, the BBC's US partner. One person is believed to be experiencing symptoms, while three others are said to have faced a high-risk contact or exposure. It is unclear whether any of them have been infected. The US Centers for Disease Control and Prevention (CDC) said it was supporting the \"safe withdrawal of a small number of Americans who are directly affected\", but did not confirm how many. The World Health Organization (WHO) has declared the outbreak in DR Congo as an international emergency, with 336 suspected cases and 88 deaths reported. The current strain of Ebola is caused by the Bundibugyo virus, for which there are no approved drugs or vaccines.\n\nThere are also two confirmed cases and one death in Uganda, according to the CDC. The US government is reportedly looking to arrange transport for the small group of Americans in DR Congo to a safe quarantine location, a source told health news site STAT. Quoting a source, the site adds that the group could be taken to a US military base in Germany, though this has not been confirmed. During a press conference on Sunday, the CDC declined to answer direct questions about the US citizens reportedly affected, adding that the risk to the US remained low. The US has also issued a Level Four travel advisory - its most severe level - warning against travel to the DR Congo.\n\nThe WHO has said the outbreak in DR Congo's eastern Ituri province is a public health emergency of international concern, but did not meet the criteria of a pandemic. The agency has also warned it could potentially be \"a much larger outbreak\" than what is currently being detected and reported, with significant risk of local and regional spread. More than 28,600 people were infected by Ebola during the 2014-2016 outbreak in West Africa, the largest outbreak of the virus since its discovery in 1976. The disease spread to a number of countries within and outside of West Africa, including Guinea, Sierra Leone, the United States, the United Kingdom and Italy, killing 11,325 people.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 436,
+      "selected_blocks": 4,
+      "selected_source_words": 384,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "At least six Americans exposed to Ebola in DR Congo, US media report",
+      "description": "One of the six Americans believed to have been exposed is experiencing symptoms, according to media reports.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "At least six Americans exposed to Ebola in DR Congo, US media report",
+    "description": "One of the six Americans believed to have been exposed is experiencing symptoms, according to media reports.",
+    "link": "https://www.bbc.com/news/articles/cq6pz60p996o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-18T10:07:57+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "456a19062aee166e8fa0070bb1954cfd",
+    "_url_hash": "3bca116fbec88f5394da1cb9a9fd94f793a554451e6ebe6b4c568772cfcb3463",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAt least six Americans have been exposed to the Ebola virus in the Democratic Republic of Congo, sources have told CBS News, the BBC's US partner.\n\nOne person is believed to be experiencing symptoms, while three others are said to have faced a high-risk contact or exposure. It is unclear whether any of them have been infected.\n\nThe US Centers for Disease Control and Prevention (CDC) said it was supporting the \"safe withdrawal of a small number of Americans who are directly affected\", but did not confirm how many.\n\nThe World Health Organization (WHO) has declared the outbreak in DR Congo as an international emergency, with 336 suspected cases and 88 deaths reported.\n\nThe current strain of Ebola is caused by the Bundibugyo virus, for which there are no approved drugs or vaccines.\n\nThere are also two confirmed cases and one death in Uganda, according to the CDC.\n\nThe US government is reportedly looking to arrange transport for the small group of Americans in DR Congo to a safe quarantine location, a source told health news site STAT.\n\nQuoting a source, the site adds that the group could be taken to a US military base in Germany, though this has not been confirmed.\n\nDuring a press conference on Sunday, the CDC declined to answer direct questions about the US citizens reportedly affected, adding that the risk to the US remained low.\n\nThe US has also issued a Level Four travel advisory - its most severe level - warning against travel to the DR Congo.\n\nThe WHO has said the outbreak in DR Congo's eastern Ituri province is a public health emergency of international concern, but did not meet the criteria of a pandemic.\n\nThe agency has also warned it could potentially be \"a much larger outbreak\" than what is currently being detected and reported, with significant risk of local and regional spread.\n\nMore than 28,600 people were infected by Ebola during the 2014-2016 outbreak in West Africa, the largest outbreak of the virus since its discovery in 1976.\n\nThe disease spread to a number of countries within and outside of West Africa, including Guinea, Sierra Leone, the United States, the United Kingdom and Italy, killing 11,325 people.\n\nJean Kaseya, director general of Africa Centres for Disease Control and Prevention, warned that in the absence of vaccines and effective medicines people should follow public health measures, including the guidance about handling the funerals of those who have died from the disease.\n\n\"We don't want people infected because of funerals,\" he",
+    "research_source": "multi"
+  }
+}
