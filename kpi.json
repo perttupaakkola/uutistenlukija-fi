@@ -1,23 +1,29 @@
 {
   "description": "Uutistenlukija.fi KPIs — updated by Felix/Max on each flywheel cycle",
-  "lastUpdated": "2026-05-04T07:40:00Z",
+  "lastUpdated": "2026-05-18T07:10:00Z",
   "metrics": {
     "articles": {
-      "total": null,
-      "publishedToday": null,
-      "lastPublishRun": null,
-      "note": "Count Hugo content files: find site/content -name *.md | wc -l"
+      "total": 2129,
+      "publishedToday": 8,
+      "publishedThisWeek": 214,
+      "lastPublishRun": "2026-05-18T06:08:06Z",
+      "note": "Weekly count uses article date in filename; mtime-based count is inflated by queue/content churn."
     },
     "pipeline": {
-      "lastRunSuccess": null,
-      "lastRunTime": null,
-      "failuresLast24h": null,
-      "note": "Check pipeline/logs/ for recent runs"
+      "lastRunSuccess": true,
+      "lastRunTime": "2026-05-18T07:00:08.745117+00:00",
+      "successRateRecent14": 100,
+      "failuresLast24h": 0,
+      "cronHealthyJobs": 15,
+      "note": "Weekly review 2026-05-18: health_check OK and cron_health_monitor --dry-run reported all 15 jobs healthy."
     },
     "traffic": {
-      "dailyVisitors": null,
-      "source": "GA4 (G-967GVZH75X) — not yet accessible from CLI",
-      "note": "GA4/GSC external APIs still blocked/unknown from CLI; business-control-panel now exposes a safe_public monetization signal while analytics credentials are repaired."
+      "dailyVisitors": 1,
+      "dailyPageviews": 1,
+      "searchConsoleClicks7d": 8,
+      "searchConsoleImpressions7d": 940,
+      "source": "GA4 + Search Console daily-report.json",
+      "note": "Analytics OAuth is restored, but current traffic is still tiny; Iris owns OPE-88/OPE-89 growth readout and acquisition experiment packaging."
     },
     "seo": {
       "indexedPages": null,
@@ -29,11 +35,13 @@
       "note": "First measurable business loop shipped: /mainosta/ and advertiser CTA clicks emit monetization_signal; watch static/api/business-control-panel.json monetization.status and GA4 event when consented."
     },
     "team": {
-      "activeAgents": null,
-      "tasksCompletedThisWeek": null,
-      "flywheel_ideasPosted": 19,
-      "flywheel_ideasExecuted": 2,
-      "note": "Execution rate needs to improve from 10% to >50%"
+      "activeAgents": 6,
+      "tasksCompletedThisWeek": 1,
+      "activeLinearIssues": 5,
+      "flywheel_ideasPosted": 213,
+      "flywheel_ideasExecuted": 50,
+      "flywheelExecutionRate": 0.37,
+      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active work: OPE-9, OPE-88, OPE-89, OPE-90, OPE-91."
     }
   }
 }
