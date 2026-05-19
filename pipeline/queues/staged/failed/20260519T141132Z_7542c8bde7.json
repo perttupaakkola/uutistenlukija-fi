@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-19T14:11:32.280093+00:00",
+  "digest": "7542c8bde7",
+  "packet": {
+    "packet_id": "20260519T141132Z_7542c8bde7",
+    "created_at": "2026-05-19T14:11:32Z",
+    "headline_seed": "Anti-government demonstrators and police clash in Bolivia",
+    "description_seed": "Protesters have been calling for the president to resign after weeks-long unrest.",
+    "link": "https://www.bbc.com/news/videos/cx21349w77go?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "Anadolu Agency",
+      "BBC World",
+      "Hindustan Times"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cx21349w77go?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Anti-government demonstrators and police clash in Bolivia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Protesters have been calling for the president to resign after weeks-long unrest.",
+        "word_count": 12,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Anadolu Agency",
+        "source_type": "research",
+        "text": "Clashes erupted Thursday between miners protesting against the government and security forces in Bolivia, as demonstrators demanding the government's resignation marched through the South American country's administrative capital, La Paz. The unrest began when miners affiliated with the Bolivian Workers' Center (COB) attempted to march toward the Government Palace in downtown La Paz. Security forces intervened with tear gas to disperse the protesters, as some miners reportedly threw Molotov cocktails during the confrontation. Several demonstrators were injured in the clashes. Police blocked roads leading to the Government Palace with barricades as protesters set up their own roadblocks and called for the resignation of Bolivian President Rodrigo Paz's government. The Bolivian Workers' Center warned that larger-scale protests would be organized if their demands are not met.",
+        "word_count": 125,
+        "keyword_overlap": 6,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Protesters gathered in Bolivia's capital on Monday demanding the resignation of President Rodrigo Paz. Law enforcement officers deployed tear gas to control the crowds in La Paz as the latest demonstration formed part of weeks-long unrest within the country over economic pressures. Farmers, miners, teachers and indigenous communities were among thousands of protesters who took the street to call for higher wages and an end to the privatisation of state-owned companies Video from the city showed protestors chanting, starting fires and throwing objects. Public prosecutor Attorney General Roger Mariaca said an arrest warrant would be issued for the head of the largest union COB - Mario Argollo - accusing him of terrorism and inciting protests against the government. Shakira's appearance followed shows by Lady Gaga and Madonna, who have also performed on Copacabana beach in previous years.",
+        "word_count": 137,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Hindustan Times",
+        "source_type": "research",
+        "text": "Bolivian riot police on Monday clashed with throngs of demonstrators demanding the resignation of embattled President Rodrigo Paz, AFP observed. The center-right leader took office less than six months ago following two decades of socialist rule, promising to end the South American country's worst economic crisis in four decades. He scrapped two-decade-old fuel subsidies that had drained the treasury's international dollar reserves, but so far he has failed to stabilize fuel supplies. Thousands of farmers, miners, teachers, workers from other sectors and Indigenous communities have led weeks-long protests that have blocked routes into La Paz and caused supplies to run low and the majority of shops in the capital to shutter. The demonstrators are calling for wage increases, economic stability and an end to the privatization of state-owned companies.",
+        "word_count": 129,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Protesters have been calling for the president to resign after weeks-long unrest.\n\nClashes erupted Thursday between miners protesting against the government and security forces in Bolivia, as demonstrators demanding the government's resignation marched through the South American country's administrative capital, La Paz. The unrest began when miners affiliated with the Bolivian Workers' Center (COB) attempted to march toward the Government Palace in downtown La Paz. Security forces intervened with tear gas to disperse the protesters, as some miners reportedly threw Molotov cocktails during the confrontation. Several demonstrators were injured in the clashes. Police blocked roads leading to the Government Palace with barricades as protesters set up their own roadblocks and called for the resignation of Bolivian President Rodrigo Paz's government. The Bolivian Workers' Center warned that larger-scale protests would be organized if their demands are not met.\n\nProtesters gathered in Bolivia's capital on Monday demanding the resignation of President Rodrigo Paz. Law enforcement officers deployed tear gas to control the crowds in La Paz as the latest demonstration formed part of weeks-long unrest within the country over economic pressures. Farmers, miners, teachers and indigenous communities were among thousands of protesters who took the street to call for higher wages and an end to the privatisation of state-owned companies Video from the city showed protestors chanting, starting fires and throwing objects. Public prosecutor Attorney General Roger Mariaca said an arrest warrant would be issued for the head of the largest union COB - Mario Argollo - accusing him of terrorism and inciting protests against the government. Shakira's appearance followed shows by Lady Gaga and Madonna, who have also performed on Copacabana beach in previous years.\n\nBolivian riot police on Monday clashed with throngs of demonstrators demanding the resignation of embattled President Rodrigo Paz, AFP observed. The center-right leader took office less than six months ago following two decades of socialist rule, promising to end the South American country's worst economic crisis in four decades. He scrapped two-decade-old fuel subsidies that had drained the treasury's international dollar reserves, but so far he has failed to stabilize fuel supplies. Thousands of farmers, miners, teachers, workers from other sectors and Indigenous communities have led weeks-long protests that have blocked routes into La Paz and caused supplies to run low and the majority of shops in the capital to shutter. The demonstrators are calling for wage increases, economic stability and an end to the privatization of state-owned companies.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 930,
+      "selected_blocks": 4,
+      "selected_source_words": 403,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Hindustan Times",
+        "Hindustan Times",
+        "Hindustan Times",
+        "Anadolu Agency",
+        "Anadolu Agency",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "Anadolu Agency",
+        "BBC World",
+        "Hindustan Times"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Anti-government demonstrators and police clash in Bolivia",
+      "description": "Protesters have been calling for the president to resign after weeks-long unrest.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Anti-government demonstrators and police clash in Bolivia",
+    "description": "Protesters have been calling for the president to resign after weeks-long unrest.",
+    "link": "https://www.bbc.com/news/videos/cx21349w77go?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-19T11:37:51+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cfcdb7e013fc358fd60632c43cf170ff",
+    "_url_hash": "c9c4175042f4c5e0a05f192acc38fb008a06a56707673146203718877d34e540",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nProtesters gathered in Bolivia's capital on Monday demanding the resignation of President Rodrigo Paz.\n\nLaw enforcement officers deployed tear gas to control the crowds in La Paz as the latest demonstration formed part of weeks-long unrest within the country over economic pressures.\n\nFarmers, miners, teachers and indigenous communities were among thousands of protesters who took the street to call for higher wages and an end to the privatisation of state-owned companies\n\nVideo from the city showed protestors chanting, starting fires and throwing objects.\n\nPublic prosecutor Attorney General Roger Mariaca said an arrest warrant would be issued for the head of the largest union COB - Mario Argollo - accusing him of terrorism and inciting protests against the government.\n\nShakira's appearance followed shows by Lady Gaga and Madonna, who have also performed on Copacabana beach in previous years.\n\nJournalists are now able to upload their work to a website so that if anything were to happen to them, their work could still be published.\n\nThe BBC takes a closer look at major renovations at Benito Juárez International Airport aimed at boosting capacity ahead of the 2026 World Cup.\n\nFootage released by the attorney general's office shows large groups of men in prison attending the trial via video link.\n\nAround 80 firefighters and 20 fire trucks tackled the blaze, the state's military fire department said, adding that no one was hurt.\n\nThe BBC's Will Grant spoke to several Cubans as the country grapples with severe electricity shortages, which is attributed in part to US sanctions.\n\nBBC international correspondent Quentin Sommerville travelled to Culiacán in northern Sinaloa state following an explosion in violence.\n\nBBC's Will Grant visits Puerto Vallarta, a popular coastal resort town, to see the damage.\n\nThe BBC's Will Grant describes how locals are feeling in Guadalajara, the capital of Jalisco, Mexico, after a wave of violence hit the streets.\n\nNemesio Oseguera Cervantes, known as \"El Mencho\", was killed during a security operation to arrest him, Mexico's defence ministry has said.\n\nOne hundred and fifty eight captive-bred juvenile tortoises were released on the Galápagos island of Floreana.\n\nRio de Janeiro's iconic Carnival parades began with a tribute to Brazil's President Lula, illustrating his rise from poverty to power.\n\nAbout 8.2 million people participated in the first drill of the year, achieving an average evacuation time of 1 minute and 52 seconds.\n\nA r\n\n---\n\n[Lähde: Hindustan Times]\nBolivian riot police on Monday clashed with throngs of demonstrators demanding the resignation of embattled President Rodrigo Paz, AFP observed.\n\nThe center-right leader took office less than six months ago following two decades of socialist rule, promising to end the South American country's worst economic crisis in four decades.\n\nHe scrapped two-decade-old fuel subsidies that had drained the treasury's international dollar reserves, but so far he has failed to stabilize fuel supplies.\n\nThousands of farmers, miners, teachers, workers from other sectors and Indigenous communities have led weeks-long protests that have blocked routes into La Paz and caused supplies to run low and the majority of shops in the capital to shutter.\n\nThe demonstrators are calling for wage increases, economic stability and an end to the privatization of state-owned companies.\n\nThe country's largest trade union, the Bolivian Workers' Center , has also joined calls for Paz to step down.\n\n\"We want him to resign because he's incompetent. Bolivia is going through a moment of chaos,\" 60-year-old farmer Ivan Alarcon, who traveled around 90 kilometres from Caquiaviri in western Bolivia to protest, told AFP.\n\nRiot police used tear gas to prevent protesting miners from entering the main square, where government buildings are located, while the demonstrators hurled explosives and stones back at them.\n\nSupporters of former socialist president Evo Morales, who was in power from 2006 to 2019, arrived in La Paz on Monday after marching for seven days from Oruro, about 180 kilometers south of the capital.\n\nAfter clashing with protesters Saturday, police and military forces managed to temporarily open some roads into La Paz as the city suffered severe shortages of food, medicine and fuel.\n\nOne protester died in those skirmishes after falling into a ditch, deputy interior minister Hernan Paredes said Monday.\n\nProtesters regained their positions on Saturday and resumed their blockades on Monday.\n\nThe Bolivian Highway Administration reported at least 28 roadblocks on the country's highways on Monday.\n\nAlthough the government has struck deals with several protest groups, including urban teachers and some miners, others have issued calls to ramp up pressure.\n\nLandlocked Bolivia is in the midst of its worst economic ordeal in the past four decades, with year-on-year inflation hitting 14 percent in April.\n\nThis article was generated from an automated news agency feed without modifications to text.\n\n---\n\n[Lähde: Anadolu Agency]\nClashes erupted Thursday between miners protesting against the government and security forces in Bolivia, as demonstrators demanding the government's resignation marched through the South American country's administrative capital, La Paz.\n\nThe unrest began when miners affiliated with the Bolivian Workers' Center (COB) attempted to march toward the Government Palace in downtown La Paz.\n\nSecurity forces intervened with tear gas to disperse the protesters, as some miners reportedly threw Molotov cocktails during the confrontation. Several demonstrators were injured in the clashes.\n\nPolice blocked roads leading to the Government Palace with barricades as protesters set up their own roadblocks and called for the resignation of Bolivian President Rodrigo Paz's government.\n\nThe Bolivian Workers' Center warned that larger-scale protests would be organized if their demands are not met.\n\nMiners, labor unions, and social organizations have been protesting for months over ongoing fuel supply shortages, ...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-19T14:14:57.424424+00:00",
+  "failure": "content too short: 231 words",
+  "payload": {
+    "packet_id": "20260519T141132Z_7542c8bde7",
+    "title": "Boliviassa poliisi ja hallituksen vastaiset mielenosoittajat ottivat yhteen La Pazissa",
+    "summary": "Bolivian pääkaupungissa La Pazissa on nähty yhteenottoja poliisin ja hallituksen vastaisten mielenosoittajien välillä. Mielenosoittajat vaativat presidentti Rodrigo Pazin eroa viikkoja jatkuneen levottomuuden ja talouspaineiden keskellä.",
+    "content": "Bolivian hallituksen vastaiset mielenosoitukset ovat kärjistyneet yhteenotoiksi poliisin kanssa pääkaupunki La Pazissa, kun tuhannet ihmiset ovat vaatineet presidentti Rodrigo Pazin hallituksen eroa. Protestit ovat jatkuneet viikkoja, ja niiden taustalla ovat talouspaineet, polttoaineen saatavuusongelmat sekä vaatimukset palkankorotuksista ja valtionyhtiöiden yksityistämisen lopettamisesta.\n\n## Poliisi käytti kyynelkaasua\n\nLa Pazissa mellakkapoliisi käytti kyynelkaasua väkijoukkojen hajottamiseksi, kun mielenosoittajat pyrkivät etenemään kaupungin keskustassa kohti hallituspalatsia. Poliisi sulki palatsille johtavia teitä esteillä, ja mielenosoittajat pystyttivät omia tiesulkujaan.\n\nMielenosoituksiin on osallistunut muun muassa kaivostyöläisiä, maanviljelijöitä, opettajia, muiden alojen työntekijöitä sekä alkuperäiskansojen edustajia. Videokuvissa kaupungista näkyi mielenosoittajia huutamassa iskulauseita, sytyttämässä tulia ja heittämässä esineitä. Torstaina kaivostyöläisten ja turvallisuusjoukkojen välisissä yhteenotoissa kerrottiin loukkaantuneen useita mielenosoittajia, ja joidenkin kaivostyöläisten kerrottiin heittäneen polttopulloja.\n\n## Talouskriisi kiristää painetta\n\nPresidentti Paz nousi valtaan alle kuusi kuukautta sitten kahden vuosikymmenen sosialistisen valtakauden jälkeen. Hän lupasi puuttua Bolivian pahimpaan talouskriisiin neljään vuosikymmeneen. Hänen hallituksensa on poistanut pitkään voimassa olleita polttoainetukia, joiden on kerrottu rasittaneen maan kansainvälisiä dollarivarantoja.\n\nToimet eivät ole rauhoittaneet tilannetta. Polttoainetoimitusten ongelmat ovat jatkuneet, ja protestit sekä tiesulut ovat vaikeuttaneet kuljetuksia La Paziin. Lähdetietojen mukaan tämä on aiheuttanut toimitusvaikeuksia ja johtanut siihen, että suuri osa pääkaupungin kaupoista on sulkenut ovensa.\n\n## Ammattiliitto varoitti protestien laajenemisesta\n\nMielenosoittajat vaativat taloudellista vakautta, palkkojen nostamista ja hallituksen suunnan muuttamista. Bolivian työntekijöiden keskusjärjestö COB on varoittanut laajemmista protesteista, jos vaatimuksiin ei vastata.\n\nSyyttäjäviranomaisten mukaan COB:n johtajaa Mario Argolloa vastaan aiotaan antaa pidätysmääräys. Häntä syytetään terrorismista ja protestien lietsomisesta hallitusta vastaan.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Bolivia",
+      "La Paz",
+      "mielenosoitukset",
+      "Rodrigo Paz",
+      "talouskriisi"
+    ],
+    "summary_bullets": [
+      "Poliisi ja hallituksen vastaiset mielenosoittajat ottivat yhteen La Pazissa.",
+      "Protestoijat vaativat presidentti Rodrigo Pazin eroa ja talouspolitiikan muutosta.",
+      "Levottomuuksien taustalla ovat talouskriisi, polttoaineongelmat ja palkkavaatimukset."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu usean lähdelohkon yhteneviin tietoihin La Pazin yhteenotoista ja protestien taloustaustasta. Lähdeaineistossa ollut selvästi asiaan kuulumaton viittaus musiikkiesiintyjiin jätettiin pois."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260519T141132Z_7542c8bde7\",\n  \"title\": \"Boliviassa poliisi ja hallituksen vastaiset mielenosoittajat ottivat yhteen La Pazissa\",\n  \"summary\": \"Bolivian pääkaupungissa La Pazissa on nähty yhteenottoja poliisin ja hallituksen vastaisten mielenosoittajien välillä. Mielenosoittajat vaativat presidentti Rodrigo Pazin eroa viikkoja jatkuneen levottomuuden ja talouspaineiden keskellä.\",\n  \"content\": \"Bolivian hallituksen vastaiset mielenosoitukset ovat kärjistyneet yhteenotoiksi poliisin kanssa pääkaupunki La Pazissa, kun tuhannet ihmiset ovat vaatineet presidentti Rodrigo Pazin hallituksen eroa. Protestit ovat jatkuneet viikkoja, ja niiden taustalla ovat talouspaineet, polttoaineen saatavuusongelmat sekä vaatimukset palkankorotuksista ja valtionyhtiöiden yksityistämisen lopettamisesta.\\n\\n## Poliisi käytti kyynelkaasua\\n\\nLa Pazissa mellakkapoliisi käytti kyynelkaasua väkijoukkojen hajottamiseksi, kun mielenosoittajat pyrkivät etenemään kaupungin keskustassa kohti hallituspalatsia. Poliisi sulki palatsille johtavia teitä esteillä, ja mielenosoittajat pystyttivät omia tiesulkujaan.\\n\\nMielenosoituksiin on osallistunut muun muassa kaivostyöläisiä, maanviljelijöitä, opettajia, muiden alojen työntekijöitä sekä alkuperäiskansojen edustajia. Videokuvissa kaupungista näkyi mielenosoittajia huutamassa iskulauseita, sytyttämässä tulia ja heittämässä esineitä. Torstaina kaivostyöläisten ja turvallisuusjoukkojen välisissä yhteenotoissa kerrottiin loukkaantuneen useita mielenosoittajia, ja joidenkin kaivostyöläisten kerrottiin heittäneen polttopulloja.\\n\\n## Talouskriisi kiristää painetta\\n\\nPresidentti Paz nousi valtaan alle kuusi kuukautta sitten kahden vuosikymmenen sosialistisen valtakauden jälkeen. Hän lupasi puuttua Bolivian pahimpaan talouskriisiin neljään vuosikymmeneen. Hänen hallituksensa on poistanut pitkään voimassa olleita polttoainetukia, joiden on kerrottu rasittaneen maan kansainvälisiä dollarivarantoja.\\n\\nToimet eivät ole rauhoittaneet tilannetta. Polttoainetoimitusten ongelmat ovat jatkuneet, ja protestit sekä tiesulut ovat vaikeuttaneet kuljetuksia La Paziin. Lähdetietojen mukaan tämä on aiheuttanut toimitusvaikeuksia ja johtanut siihen, että suuri osa pääkaupungin kaupoista on sulkenut ovensa.\\n\\n## Ammattiliitto varoitti protestien laajenemisesta\\n\\nMielenosoittajat vaativat taloudellista vakautta, palkkojen nostamista ja hallituksen suunnan muuttamista. Bolivian työntekijöiden keskusjärjestö COB on varoittanut laajemmista protesteista, jos vaatimuksiin ei vastata.\\n\\nSyyttäjäviranomaisten mukaan COB:n johtajaa Mario Argolloa vastaan aiotaan antaa pidätysmääräys. Häntä syytetään terrorismista ja protestien lietsomisesta hallitusta vastaan.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Bolivia\",\n    \"La Paz\",\n    \"mielenosoitukset\",\n    \"Rodrigo Paz\",\n    \"talouskriisi\"\n  ],\n  \"summary_bullets\": [\n    \"Poliisi ja hallituksen vastaiset mielenosoittajat ottivat yhteen La Pazissa.\",\n    \"Protestoijat vaativat presidentti Rodrigo Pazin eroa ja talouspolitiikan muutosta.\",\n    \"Levottomuuksien taustalla ovat talouskriisi, polttoaineongelmat ja palkkavaatimukset.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu usean lähdelohkon yhteneviin tietoihin La Pazin yhteenotoista ja protestien taloustaustasta. Lähdeaineistossa ollut selvästi asiaan kuulumaton viittaus musiikkiesiintyjiin jätettiin pois.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260519T141132Z_7542c8bde7",
+    "category": "Kotimaa",
+    "selected_source_words": 403,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 231,
+    "issues": [
+      "content too short: 231 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Boliviassa poliisi ja hallituksen vastaiset mielenosoittajat ottivat yhteen La Pazissa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-19T14:14:57.424145+00:00",
+    "repair_trigger": "pre_repair_word_count=234; selected_source_words=403; selected_source_blocks=4",
+    "pre_repair_word_count": 234,
+    "pre_repair_lead_word_count": 40,
+    "post_repair_word_count": 231,
+    "post_repair_lead_word_count": 40,
+    "selected_source_words_at_repair": 403,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 403,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 231 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:99037d6ffc",
+      "2:Anadolu Agency:f319e786de",
+      "3:BBC World:52a7187fa3",
+      "4:Hindustan Times:7b2d027e2b"
+    ],
+    "final_issues": [
+      "content too short: 231 words"
+    ],
+    "recovered": false
+  }
+}
