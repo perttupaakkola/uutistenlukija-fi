@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/yhdysvallat-lisannyt-kuuban-tiedustelupalvelun-pakotelistalleen/9340336"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
