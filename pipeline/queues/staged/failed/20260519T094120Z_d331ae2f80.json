@@ -1,0 +1,197 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-19T09:41:20.968984+00:00",
+  "digest": "d331ae2f80",
+  "packet": {
+    "packet_id": "20260519T094120Z_d331ae2f80",
+    "created_at": "2026-05-19T09:41:20Z",
+    "headline_seed": "Ebola may be spreading faster than first thought, WHO doctor warns",
+    "description_seed": "Hundreds of cases are suspected in central Africa but experts fear the actual number may be much higher.",
+    "link": "https://www.bbc.com/news/articles/ceqp11gn1l8o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/ceqp11gn1l8o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ebola may be spreading faster than first thought, WHO doctor warns"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Hundreds of cases are suspected in central Africa but experts fear the actual number may be much higher.",
+        "word_count": 18,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "An Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned. Dr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas. Officials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda. But modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases. WHO chief Tedros Adhanom Ghebreyesus, who declared the outbreak an international emergency last week, said he was \"deeply concerned about the scale and speed of the epidemic\".",
+        "word_count": 139,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "The outbreak, which started in DR Congo, has also spread to neighbouring Uganda An Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned. Dr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas. Officials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda. But modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases.",
+        "word_count": 125,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The outbreak has spread to the province of South Kivu, where the population has been affected by a humanitarian crisis for many years, she added. There has also been a case in eastern DR Congo's biggest city, Goma, which has a population of around 850,000 people and under the control of Rwandan-backed rebels. High levels of insecurity in several provinces mean people move around often, increasing the risk and spread of the virus. Several African countries are taking precautions by tightening border screenings and preparing health facilities. Neighbouring Rwanda has also closed its borders with DR Congo. An American citizen, believed to be missionary group doctor Peter Stafford, is being evacuated from DR Congo after developing symptoms over the weekend. Germany's health ministry told the BBC a US citizen was being taken to the country for treatment.",
+        "word_count": 137,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Hundreds of cases are suspected in central Africa but experts fear the actual number may be much higher.\n\nAn Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned. Dr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas. Officials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda. But modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases. WHO chief Tedros Adhanom Ghebreyesus, who declared the outbreak an international emergency last week, said he was \"deeply concerned about the scale and speed of the epidemic\".\n\nThe outbreak, which started in DR Congo, has also spread to neighbouring Uganda An Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned. Dr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas. Officials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda. But modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases.\n\nThe outbreak has spread to the province of South Kivu, where the population has been affected by a humanitarian crisis for many years, she added. There has also been a case in eastern DR Congo's biggest city, Goma, which has a population of around 850,000 people and under the control of Rwandan-backed rebels. High levels of insecurity in several provinces mean people move around often, increasing the risk and spread of the virus. Several African countries are taking precautions by tightening border screenings and preparing health facilities. Neighbouring Rwanda has also closed its borders with DR Congo. An American citizen, believed to be missionary group doctor Peter Stafford, is being evacuated from DR Congo after developing symptoms over the weekend. Germany's health ministry told the BBC a US citizen was being taken to the country for treatment.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 828,
+      "selected_blocks": 4,
+      "selected_source_words": 419,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ebola may be spreading faster than first thought, WHO doctor warns",
+      "description": "Hundreds of cases are suspected in central Africa but experts fear the actual number may be much higher.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ebola may be spreading faster than first thought, WHO doctor warns",
+    "description": "Hundreds of cases are suspected in central Africa but experts fear the actual number may be much higher.",
+    "link": "https://www.bbc.com/news/articles/ceqp11gn1l8o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-19T09:33:56+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "a61dad41cd0b4b50703cb58275db669f",
+    "_url_hash": "42b34e30a2b7f2988545fe40e452e45d30629da280e35be26b8666ade1d2d49c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAn Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned.\n\nDr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas.\n\nOfficials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda.\n\nBut modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases.\n\nWHO chief Tedros Adhanom Ghebreyesus, who declared the outbreak an international emergency last week, said he was \"deeply concerned about the scale and speed of the epidemic\".\n\nIt is feared the outbreak may have been ongoing for several weeks before it was first detected on 24 April.\n\nThere is no vaccine for the strain of Ebola virus fuelling the latest rise in cases, but the WHO is evaluating whether other drugs may provide protection.\n\nSpeaking to BBC World Service Newsday, Ancia said DR Congo's Ituri province, the epicentre of the outbreak, is a \"very unsecured area with lots of movement of population\", making it difficult for the agency to investigate and help control the disease.\n\nShe continued: \"The more we are investigating this outbreak, the more we realise that it has already disseminated at least a little bit across border and also in other provinces.\"\n\nThe outbreak has spread to the province of South Kivu, where the population has been affected by a humanitarian crisis for many years, she added.\n\nThere has also been a case in eastern DR Congo's biggest city, Goma, which has a population of around 850,000 people and under the control of Rwandan-backed rebels.\n\nHigh levels of insecurity in several provinces mean people move around often, increasing the risk and spread of the virus.\n\nSeveral African countries are taking precautions by tightening border screenings and preparing health facilities. Neighbouring Rwanda has also closed its borders with DR Congo.\n\nAn American citizen, believed to be missionary group doctor Peter Stafford, is being evacuated from DR Congo after developing symptoms over the weekend.\n\nGermany's health ministry told the BBC a US citizen was being taken to the country for treatment.\n\nThe US Centers for Disease Control and Prevention (CDC) said\n\n---\n\n[Lähde: BBC]\nThe outbreak, which started in DR Congo, has also spread to neighbouring Uganda\n\nAn Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned.\n\nDr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas.\n\nOfficials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda.\n\nBut modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases.\n\nWHO chief Tedros Adhanom Ghebreyesus, who declared the outbreak an international emergency last week, said he was \"deeply concerned about the scale and speed of the epidemic\".\n\nIt is feared the outbreak may have been ongoing for several weeks before it was first detected on 24 April.\n\nThere is no vaccine for the strain of Ebola virus fuelling the latest rise in cases, but the WHO is evaluating whether other drugs may provide protection.\n\nSpeaking to BBC World Service Newsday, Ancia said DR Congo's Ituri province, the epicentre of the outbreak, is a \"very unsecured area with lots of movement of population\", making it difficult for the agency to investigate and help control the disease.\n\nShe continued: \"The more we are investigating this outbreak, the more we realise that it has already disseminated at least a little bit across border and also in other provinces.\"\n\nThe outbreak has spread to the province of South Kivu, where the population has been affected by a humanitarian crisis for many years, she added.\n\nThere has also been a case in eastern DR Congo's biggest city, Goma, which has a population of around 850,000 people and under the control of Rwandan-backed rebels.\n\nHigh levels of insecurity in several provinces mean people move around often, increasing the risk and spread of the virus.\n\nSeveral African countries are taking precautions by tightening border screenings and preparing health facilities. Neighbouring Rwanda has also closed its borders with DR Congo.\n\nAn American citizen, believed to be missionary group doctor Peter Stafford, is being evacuated from DR Congo after developing symptoms over the weekend.\n\nGermany's health ministry told the BBC a US citizen was being taken to the cou",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-19T09:44:45.617082+00:00",
+  "payload": {
+    "packet_id": "20260519T094120Z_d331ae2f80",
+    "title": "WHO-lääkäri varoittaa ebolan leviävän Kongossa arvioitua nopeammin",
+    "summary": "Kongon demokraattisessa tasavallassa alkanut ebolaepidemia on tappanut ainakin 131 ihmistä, ja WHO:n edustajan mukaan tartunnat voivat levitä aiemmin arvioitua nopeammin.",
+    "content": "Kongon demokraattisessa tasavallassa alkanut ebolaepidemia saattaa levitä nopeammin kuin aluksi arvioitiin, Maailman terveysjärjestön WHO:n edustaja varoittaa. Viranomaisten mukaan maassa epäiltiin tiistaina yli 513 tartuntaa ja ainakin 131 ihmistä on kuollut. Naapurimaa Ugandassa on raportoitu yksi kuolemantapaus, mikä osoittaa, ettei epidemia rajoitu enää vain lähtömaahansa.\n\n## Tartuntoja voi olla havaittua enemmän\n\nWHO:n edustaja Anne Ancia sanoi BBC:lle, että mitä pidemmälle järjestön tutkimukset etenevät, sitä selvemmäksi käy, että tapauksia on levinnyt myös muille alueille. Asiantuntijat pelkäävät, että todellinen tartuntamäärä voi olla virallisia lukuja huomattavasti suurempi.\n\nLontoossa toimivan MRC Centre for Global Infectious Disease Analysis -keskuksen maanantaina julkaistu mallinnus viittasi merkittävään alihavaitsemiseen. Mallinnuksen mukaan ei voida sulkea pois mahdollisuutta, että tapauksia olisi jo ollut yli tuhat.\n\nWHO:n pääjohtaja Tedros Adhanom Ghebreyesus julisti epidemian kansainväliseksi terveysuhaksi viime viikolla. Hän kuvasi olevansa syvästi huolissaan epidemian mittakaavasta ja nopeudesta.\n\n## Epävakaus vaikeuttaa torjuntaa\n\nEpidemia on levinnyt Kongon demokraattisessa tasavallassa myös Etelä-Kivun maakuntaan, jossa väestö on kärsinyt humanitaarisesta kriisistä pitkään. Tapaus on todettu myös Gomassa, joka on itäisen Kongon suurin kaupunki. Kaupungissa asuu noin 850 000 ihmistä, ja se on Ruandan tukemien kapinallisten hallinnassa.\n\nUseiden maakuntien heikko turvallisuustilanne vaikeuttaa terveysviranomaisten työtä. Ihmisten jatkuva liikkuminen lisää riskiä, että virus leviää uusille alueille ennen kuin tartuntaketjut saadaan jäljitettyä.\n\n## Naapurimaat kiristävät varotoimia\n\nUseat Afrikan maat ovat kiristäneet varotoimiaan muun muassa tehostamalla rajatarkastuksia ja valmistelemalla terveydenhuollon yksiköitä mahdollisia tapauksia varten. Rwanda on sulkenut rajansa Kongon demokraattisen tasavallan kanssa.\n\nLisäksi yhdysvaltalainen kansalainen on määrä evakuoida Kongosta hoitoon Saksaan oireiden ilmaannuttua viikonloppuna. Hänen uskotaan olevan lähetysjärjestössä toimiva lääkäri Peter Stafford. Saksan terveysministeriö kertoi BBC:lle, että yhdysvaltalainen on matkalla maahan hoitoa varten.",
+    "category": "Ulkomaat",
+    "tags": [
+      "ebola",
+      "Kongon demokraattinen tasavalta",
+      "WHO",
+      "Uganda",
+      "Rwanda"
+    ],
+    "summary_bullets": [
+      "Kongon demokraattisessa tasavallassa epäillään yli 513 ebolatapausta.",
+      "Ainakin 131 ihmistä on kuollut, ja Ugandassa on raportoitu yksi kuolemantapaus.",
+      "Mallinnuksen mukaan todellinen tapausmäärä voi olla selvästi virallisia lukuja suurempi."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.89,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Kategoria korjattu ulkomaanuutiseksi, koska tapahtumat koskevat Keski-Afrikkaa eikä Suomen kotimaan uutisia."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260519T094120Z_d331ae2f80\",\n  \"title\": \"WHO-lääkäri varoittaa ebolan leviävän Kongossa arvioitua nopeammin\",\n  \"summary\": \"Kongon demokraattisessa tasavallassa alkanut ebolaepidemia on tappanut ainakin 131 ihmistä, ja WHO:n edustajan mukaan tartunnat voivat levitä aiemmin arvioitua nopeammin.\",\n  \"content\": \"Kongon demokraattisessa tasavallassa alkanut ebolaepidemia saattaa levitä nopeammin kuin aluksi arvioitiin, Maailman terveysjärjestön WHO:n edustaja varoittaa. Viranomaisten mukaan maassa epäiltiin tiistaina yli 513 tartuntaa ja ainakin 131 ihmistä on kuollut. Naapurimaa Ugandassa on raportoitu yksi kuolemantapaus, mikä osoittaa, ettei epidemia rajoitu enää vain lähtömaahansa.\\n\\n## Tartuntoja voi olla havaittua enemmän\\n\\nWHO:n edustaja Anne Ancia sanoi BBC:lle, että mitä pidemmälle järjestön tutkimukset etenevät, sitä selvemmäksi käy, että tapauksia on levinnyt myös muille alueille. Asiantuntijat pelkäävät, että todellinen tartuntamäärä voi olla virallisia lukuja huomattavasti suurempi.\\n\\nLontoossa toimivan MRC Centre for Global Infectious Disease Analysis -keskuksen maanantaina julkaistu mallinnus viittasi merkittävään alihavaitsemiseen. Mallinnuksen mukaan ei voida sulkea pois mahdollisuutta, että tapauksia olisi jo ollut yli tuhat.\\n\\nWHO:n pääjohtaja Tedros Adhanom Ghebreyesus julisti epidemian kansainväliseksi terveysuhaksi viime viikolla. Hän kuvasi olevansa syvästi huolissaan epidemian mittakaavasta ja nopeudesta.\\n\\n## Epävakaus vaikeuttaa torjuntaa\\n\\nEpidemia on levinnyt Kongon demokraattisessa tasavallassa myös Etelä-Kivun maakuntaan, jossa väestö on kärsinyt humanitaarisesta kriisistä pitkään. Tapaus on todettu myös Gomassa, joka on itäisen Kongon suurin kaupunki. Kaupungissa asuu noin 850 000 ihmistä, ja se on Ruandan tukemien kapinallisten hallinnassa.\\n\\nUseiden maakuntien heikko turvallisuustilanne vaikeuttaa terveysviranomaisten työtä. Ihmisten jatkuva liikkuminen lisää riskiä, että virus leviää uusille alueille ennen kuin tartuntaketjut saadaan jäljitettyä.\\n\\n## Naapurimaat kiristävät varotoimia\\n\\nUseat Afrikan maat ovat kiristäneet varotoimiaan muun muassa tehostamalla rajatarkastuksia ja valmistelemalla terveydenhuollon yksiköitä mahdollisia tapauksia varten. Rwanda on sulkenut rajansa Kongon demokraattisen tasavallan kanssa.\\n\\nLisäksi yhdysvaltalainen kansalainen on määrä evakuoida Kongosta hoitoon Saksaan oireiden ilmaannuttua viikonloppuna. Hänen uskotaan olevan lähetysjärjestössä toimiva lääkäri Peter Stafford. Saksan terveysministeriö kertoi BBC:lle, että yhdysvaltalainen on matkalla maahan hoitoa varten.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"ebola\",\n    \"Kongon demokraattinen tasavalta\",\n    \"WHO\",\n    \"Uganda\",\n    \"Rwanda\"\n  ],\n  \"summary_bullets\": [\n    \"Kongon demokraattisessa tasavallassa epäillään yli 513 ebolatapausta.\",\n    \"Ainakin 131 ihmistä on kuollut, ja Ugandassa on raportoitu yksi kuolemantapaus.\",\n    \"Mallinnuksen mukaan todellinen tapausmäärä voi olla selvästi virallisia lukuja suurempi.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.89,\n  \"journalist_note\": \"Artikkeli perustuu annettuun lähdepakettiin. Kategoria korjattu ulkomaanuutiseksi, koska tapahtumat koskevat Keski-Afrikkaa eikä Suomen kotimaan uutisia.\"\n}",
+  "article": {
+    "title": "WHO-lääkäri varoittaa ebolan leviävän Kongossa arvioitua nopeammin",
+    "description": "Kongon demokraattisessa tasavallassa alkanut ebolaepidemia on tappanut ainakin 131 ihmistä, ja WHO:n edustajan mukaan tartunnat voivat levitä aiemmin arvioitua nopeammin.",
+    "link": "https://www.bbc.com/news/articles/ceqp11gn1l8o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-19T09:33:56+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "a61dad41cd0b4b50703cb58275db669f",
+    "_url_hash": "42b34e30a2b7f2988545fe40e452e45d30629da280e35be26b8666ade1d2d49c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAn Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned.\n\nDr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas.\n\nOfficials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda.\n\nBut modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases.\n\nWHO chief Tedros Adhanom Ghebreyesus, who declared the outbreak an international emergency last week, said he was \"deeply concerned about the scale and speed of the epidemic\".\n\nIt is feared the outbreak may have been ongoing for several weeks before it was first detected on 24 April.\n\nThere is no vaccine for the strain of Ebola virus fuelling the latest rise in cases, but the WHO is evaluating whether other drugs may provide protection.\n\nSpeaking to BBC World Service Newsday, Ancia said DR Congo's Ituri province, the epicentre of the outbreak, is a \"very unsecured area with lots of movement of population\", making it difficult for the agency to investigate and help control the disease.\n\nShe continued: \"The more we are investigating this outbreak, the more we realise that it has already disseminated at least a little bit across border and also in other provinces.\"\n\nThe outbreak has spread to the province of South Kivu, where the population has been affected by a humanitarian crisis for many years, she added.\n\nThere has also been a case in eastern DR Congo's biggest city, Goma, which has a population of around 850,000 people and under the control of Rwandan-backed rebels.\n\nHigh levels of insecurity in several provinces mean people move around often, increasing the risk and spread of the virus.\n\nSeveral African countries are taking precautions by tightening border screenings and preparing health facilities. Neighbouring Rwanda has also closed its borders with DR Congo.\n\nAn American citizen, believed to be missionary group doctor Peter Stafford, is being evacuated from DR Congo after developing symptoms over the weekend.\n\nGermany's health ministry told the BBC a US citizen was being taken to the country for treatment.\n\nThe US Centers for Disease Control and Prevention (CDC) said\n\n---\n\n[Lähde: BBC]\nThe outbreak, which started in DR Congo, has also spread to neighbouring Uganda\n\nAn Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned.\n\nDr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas.\n\nOfficials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda.\n\nBut modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases.\n\nWHO chief Tedros Adhanom Ghebreyesus, who declared the outbreak an international emergency last week, said he was \"deeply concerned about the scale and speed of the epidemic\".\n\nIt is feared the outbreak may have been ongoing for several weeks before it was first detected on 24 April.\n\nThere is no vaccine for the strain of Ebola virus fuelling the latest rise in cases, but the WHO is evaluating whether other drugs may provide protection.\n\nSpeaking to BBC World Service Newsday, Ancia said DR Congo's Ituri province, the epicentre of the outbreak, is a \"very unsecured area with lots of movement of population\", making it difficult for the agency to investigate and help control the disease.\n\nShe continued: \"The more we are investigating this outbreak, the more we realise that it has already disseminated at least a little bit across border and also in other provinces.\"\n\nThe outbreak has spread to the province of South Kivu, where the population has been affected by a humanitarian crisis for many years, she added.\n\nThere has also been a case in eastern DR Congo's biggest city, Goma, which has a population of around 850,000 people and under the control of Rwandan-backed rebels.\n\nHigh levels of insecurity in several provinces mean people move around often, increasing the risk and spread of the virus.\n\nSeveral African countries are taking precautions by tightening border screenings and preparing health facilities. Neighbouring Rwanda has also closed its borders with DR Congo.\n\nAn American citizen, believed to be missionary group doctor Peter Stafford, is being evacuated from DR Congo after developing symptoms over the weekend.\n\nGermany's health ministry told the BBC a US citizen was being taken to the cou",
+    "research_source": "multi",
+    "summary": "Kongon demokraattisessa tasavallassa alkanut ebolaepidemia on tappanut ainakin 131 ihmistä, ja WHO:n edustajan mukaan tartunnat voivat levitä aiemmin arvioitua nopeammin.",
+    "content": "Kongon demokraattisessa tasavallassa alkanut ebolaepidemia saattaa levitä nopeammin kuin aluksi arvioitiin, Maailman terveysjärjestön WHO:n edustaja varoittaa. Viranomaisten mukaan maassa epäiltiin tiistaina yli 513 tartuntaa ja ainakin 131 ihmistä on kuollut. Naapurimaa Ugandassa on raportoitu yksi kuolemantapaus, mikä osoittaa, ettei epidemia rajoitu enää vain lähtömaahansa.\n\n## Tartuntoja voi olla havaittua enemmän\n\nWHO:n edustaja Anne Ancia sanoi BBC:lle, että mitä pidemmälle järjestön tutkimukset etenevät, sitä selvemmäksi käy, että tapauksia on levinnyt myös muille alueille. Asiantuntijat pelkäävät, että todellinen tartuntamäärä voi olla virallisia lukuja huomattavasti suurempi.\n\nLontoossa toimivan MRC Centre for Global Infectious Disease Analysis -keskuksen maanantaina julkaistu mallinnus viittasi merkittävään alihavaitsemiseen. Mallinnuksen mukaan ei voida sulkea pois mahdollisuutta, että tapauksia olisi jo ollut yli tuhat.\n\nWHO:n pääjohtaja Tedros Adhanom Ghebreyesus julisti epidemian kansainväliseksi terveysuhaksi viime viikolla. Hän kuvasi olevansa syvästi huolissaan epidemian mittakaavasta ja nopeudesta.\n\n## Epävakaus vaikeuttaa torjuntaa\n\nEpidemia on levinnyt Kongon demokraattisessa tasavallassa myös Etelä-Kivun maakuntaan, jossa väestö on kärsinyt humanitaarisesta kriisistä pitkään. Tapaus on todettu myös Gomassa, joka on itäisen Kongon suurin kaupunki. Kaupungissa asuu noin 850 000 ihmistä, ja se on Ruandan tukemien kapinallisten hallinnassa.\n\nUseiden maakuntien heikko turvallisuustilanne vaikeuttaa terveysviranomaisten työtä. Ihmisten jatkuva liikkuminen lisää riskiä, että virus leviää uusille alueille ennen kuin tartuntaketjut saadaan jäljitettyä.\n\n## Naapurimaat kiristävät varotoimia\n\nUseat Afrikan maat ovat kiristäneet varotoimiaan muun muassa tehostamalla rajatarkastuksia ja valmistelemalla terveydenhuollon yksiköitä mahdollisia tapauksia varten. Rwanda on sulkenut rajansa Kongon demokraattisen tasavallan kanssa.\n\nLisäksi yhdysvaltalainen kansalainen on määrä evakuoida Kongosta hoitoon Saksaan oireiden ilmaannuttua viikonloppuna. Hänen uskotaan olevan lähetysjärjestössä toimiva lääkäri Peter Stafford. Saksan terveysministeriö kertoi BBC:lle, että yhdysvaltalainen on matkalla maahan hoitoa varten.",
+    "category": "Kotimaa",
+    "tags": [
+      "ebola",
+      "kongon demokraattinen tasavalta",
+      "who",
+      "uganda",
+      "rwanda"
+    ],
+    "summary_bullets": [
+      "Kongon demokraattisessa tasavallassa epäillään yli 513 ebolatapausta.",
+      "Ainakin 131 ihmistä on kuollut, ja Ugandassa on raportoitu yksi kuolemantapaus.",
+      "Mallinnuksen mukaan todellinen tapausmäärä voi olla selvästi virallisia lukuja suurempi."
+    ],
+    "key_points": [
+      "Kongon demokraattisessa tasavallassa epäillään yli 513 ebolatapausta.",
+      "Ainakin 131 ihmistä on kuollut, ja Ugandassa on raportoitu yksi kuolemantapaus.",
+      "Mallinnuksen mukaan todellinen tapausmäärä voi olla selvästi virallisia lukuja suurempi."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Kategoria korjattu ulkomaanuutiseksi, koska tapahtumat koskevat Keski-Afrikkaa eikä Suomen kotimaan uutisia.",
+    "source_text": "Hundreds of cases are suspected in central Africa but experts fear the actual number may be much higher.\n\nAn Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned. Dr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas. Officials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda. But modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases. WHO chief Tedros Adhanom Ghebreyesus, who declared the outbreak an international emergency last week, said he was \"deeply concerned about the scale and speed of the epidemic\".\n\nThe outbreak, which started in DR Congo, has also spread to neighbouring Uganda An Ebola outbreak which has killed at least 131 people in the Democratic Republic of Congo may be spreading faster than originally thought, a World Health Organization (WHO) representative has warned. Dr Anne Ancia told the BBC that the more the agency investigates, the clearer it becomes that cases have spread to other areas. Officials said more than 513 cases were suspected in DR Congo as of Tuesday, while one person has died in neighbouring Uganda. But modelling by the London-based MRC Centre for Global Infectious Disease Analysis released on Monday suggested there had been \"substantial\" under-detection, and that it could not rule out there had already been more than 1,000 cases.\n\nThe outbreak has spread to the province of South Kivu, where the population has been affected by a humanitarian crisis for many years, she added. There has also been a case in eastern DR Congo's biggest city, Goma, which has a population of around 850,000 people and under the control of Rwandan-backed rebels. High levels of insecurity in several provinces mean people move around often, increasing the risk and spread of the virus. Several African countries are taking precautions by tightening border screenings and preparing health facilities. Neighbouring Rwanda has also closed its borders with DR Congo. An American citizen, believed to be missionary group doctor Peter Stafford, is being evacuated from DR Congo after developing symptoms over the weekend. Germany's health ministry told the BBC a US citizen was being taken to the country for treatment.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.89,
+    "degraded_mode": false,
+    "monica_packet_id": "20260519T094120Z_d331ae2f80"
+  },
+  "duplicate_rejected_at": "2026-05-19T09:58:02.663093+00:00",
+  "duplicate_rejected": true
+}
