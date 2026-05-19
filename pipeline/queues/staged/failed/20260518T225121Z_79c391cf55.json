@@ -85,5 +85,24 @@
     "_guessed_category": "Ulkomaat",
     "research": "[Lähde: Yle]\nYhdysvalloissa Kaliforniassa ainakin viisi ihmistä on kuollut joukkoampumisessa moskeijassa. Paikallisen poliisin mukaan kolme ihmistä kuoli, kun teini-ikäiset ampujat avasivat tulen San Diegon islamilaisen keskuksen edustalla maanantaina. Yksi kuolleista oli moskeijan turvamies\n\nPoliisin mukaan myös epäillyt ampujat ovat kuolleet. Poliisi uskoo heidän ampuneen itsensä.\n\nEpäillyt olivat iältään 17- ja 19-vuotiaita.\n\nIslamilaisen keskuksen yhteydessä olevassa koulussa oli lapsia paikalla ampumisen tapahtuessa. San Diegon poliisipäällikkö Scott Wahlin mukaan yksikään lapsi ei haavoittunut.\n\nViranomaiset tutkivat tapahtunutta viharikoksena.\n\nEduskunnan puolustusvaliokunta kokoontuu tänään keskustelemaan Suomen viime perjantain drooniuhasta.\n\nPuolustusvaliokunnan puheenjohtaja, kokoomuksen Heikki Autto kertoi aiemmin STT:lle, että kokouksessa on määrä keskustella myös vaaratiedottamisesta. Tapaamisessa ovat kuultavina kokoomuksen puolustusministeri Antti Häkkänen, perussuomalaisten sisäministeri Mari Rantanen ja Ilmavoimien komentaja, kenraalimajuri Timo Herranen.\n\nVarhain viime perjantaina Uudellemaalle annettiin vaaratiedote mahdollisesta Suomeen harhautuneesta droonista. Myöhemmin viranomaiset tiedottivat, ettei drooneja lopulta suuntautunut Suomeen lainkaan.\n\nPirkanmaan käräjäoikeus antaa tänään tuomionsa Pirkkalan skuuttiturmassa.\n\nOnnettomuudessa kuoli yksi 15-vuotias tyttö ja toinen loukkaantui. Turma tapahtui, kun saman sähköpotkulaudan kyydissä olleet tytöt ja henkilöauto törmäsivät suojatiellä viime heinäkuussa.\n\nSkuuttia ohjannut tyttö kuoli törmäyksessä saamiinsa vammoihin sairaalassa.\n\nHenkilöauton kuljettajaa syytetään muun muassa kuolemantuottamuksesta ja vammantuottamuksesta.\n\nKuljettaja kiistää syytteet. Hänen mukaansa tilanne oli niin yllättävä, että hän ei ehtinyt jarruttaa lainkaan ennen törmäystä.\n\nLasten ja nuorten ADHD-diagnoosit ovat lisääntyneet nopeammin kuin ADHD-lääkkeiden käyttö.\n\nTurun kaupunginvaltuusto on päättänyt, että Turkuun rakennetaan raitiotie. Päätös raitiotiehankkeen tukemisesta syntyi valtuustossa myöhään maanantaina pitkän kokouksen ja tiukan äänestyksen jälkeen äänin 36–31.\n\nPäätös on ehdollinen, sillä Turku edellyttää valtiolta 30 prosentin osuutta ratikan rakentamiskustannuksista. Raitiotien hinnaksi on arvioitu noin 465 miljoonaa euroa.\n\nKaupungin pitää myös odottaa mahdollisia valituksia tai oikaisupäätöksiä valtuuston päätökseen.\n\nRaitiotieliikenne Turussa voisi alkaa jo vuonna 2033.\n\nAsuntojen hintojen kääntymi",
     "research_source": "multi"
+  },
+  "failed_at": "2026-05-19T08:34:16.514705+00:00",
+  "failure": "insufficient_confidence_after_repair",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260518T225121Z_79c391cf55\",\"status\":\"INSUFFICIENT_CONFIDENCE\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260518T225121Z_79c391cf55",
+    "category": "Ulkomaat",
+    "selected_source_words": 140,
+    "selected_source_blocks": 1,
+    "story_confidence": 0.68,
+    "final_word_count": 0,
+    "issues": [
+      "missing keys: title, summary, content, category, tags, summary_bullets, content_type, editorial_reviewed, confidence, journalist_note"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "Ainakin viisi kuollutta ammuskelussa San Diegossa"
   }
 }
