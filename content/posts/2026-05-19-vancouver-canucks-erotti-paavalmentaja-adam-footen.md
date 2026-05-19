@@ -44,7 +44,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Lis%C3%A4%C3%A4-valmentajapotkuja-NHLssa-t%C3%A4ll%C3%A4-kertaa-vuorossa-Vancouver-Canucks/269764"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
