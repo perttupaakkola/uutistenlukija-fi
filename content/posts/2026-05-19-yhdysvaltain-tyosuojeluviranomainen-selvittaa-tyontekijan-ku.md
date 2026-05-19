@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/05/18/osha-probing-worker-death-at-spacexs-starbase-site/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
