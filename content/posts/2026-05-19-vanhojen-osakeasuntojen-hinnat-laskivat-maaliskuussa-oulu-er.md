@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/asuntojen-hinnat-nousivat-vain-yhdessa-suurista-kaupungeista-vantaalla-romahdus/9340412"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
