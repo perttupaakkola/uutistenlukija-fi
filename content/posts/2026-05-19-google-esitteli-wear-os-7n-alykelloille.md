@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/19/google-julkisti-wear-os-7n-alykelloihin-luvassa-merkittava-kayttoliittymauudistus-ja-gemini-tekoalya/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
