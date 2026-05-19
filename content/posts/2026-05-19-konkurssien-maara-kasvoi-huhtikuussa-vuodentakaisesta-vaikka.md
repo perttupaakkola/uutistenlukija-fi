@@ -44,7 +44,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/konkurssien-maara-kasvaa-yha-valoa-nakyvissa-mutta-yksinyrittajien-tilanne-on-vaikea/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
