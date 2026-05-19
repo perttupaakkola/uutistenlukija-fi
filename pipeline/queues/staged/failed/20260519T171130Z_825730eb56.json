@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-19T17:11:30.279233+00:00",
+  "digest": "825730eb56",
+  "packet": {
+    "packet_id": "20260519T171130Z_825730eb56",
+    "created_at": "2026-05-19T17:11:30Z",
+    "headline_seed": "Janne Yläjoen uutisanalyysi | Droonin alasampumista Baltiassa edelsi Venäjän suora uhkaus",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9464090",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9464090"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Janne Yläjoen uutisanalyysi | Droonin alasampumista Baltiassa edelsi Venäjän suora uhkaus"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 92,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Janne Yläjoen uutisanalyysi | Droonin alasampumista Baltiassa edelsi Venäjän suora uhkaus",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Janne Yläjoen uutisanalyysi | Droonin alasampumista Baltiassa edelsi Venäjän suora uhkaus",
+    "description": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9464090",
+    "published": "2026-05-19T19:09:01+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "1596ded72349fcf38afe10ef497b45cc",
+    "_url_hash": "202731c5b90f5967601203394d46e7e29a946939d1cdd92bf471b5e52bc994ea",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nOletetun ukrainalaisdroonin välitön alasampuminen Viron ilmatilassa tiistaina vähän puolenpäivän jälkeen kuvaa nykyisen tilanteen herkkyyttä.\n\nVenäjän mediassa – muun muassa Kommersant-lehdessä – oli julkaistu vain tuntia aiemmin otteita Venäjän ulkomaantiedustelun SVR:n aamuisesta raportista, jossa esitettiin huikeita väitteitä Ukrainan suunnitelmista iskeä drooneilla Venäjälle Latvian ilmatilan kautta.\n\nLatvia esitettiin raportissa Venäjän kostoa pelkäävänä, mutta Ukrainan vaatimuksiin taipuneena maana, joka on jo päästänyt Ukrainan droonijoukot viiteen raportissa nimettyyn sotilastukikohtaansa.\n\nTämän vuoksi SVR esitti poikkeuksellisen suoran uhkauksen: ”On syytä huomata, että Latvian alueella sijaitsevien päätöksentekokeskusten koordinaatit ovat hyvin tiedossa, eikä maan Nato-jäsenyys suojaa terroristien rikoskumppaneita oikeudenmukaiselta kostolta”.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-19T17:13:17.818153+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä varmistettavia ydinfaktoja tapahtumasta.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260519T171130Z_825730eb56\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä varmistettavia ydinfaktoja tapahtumasta.\"}"
+}
