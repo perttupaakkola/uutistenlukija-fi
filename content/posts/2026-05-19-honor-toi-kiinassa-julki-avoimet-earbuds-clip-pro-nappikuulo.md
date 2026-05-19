@@ -44,7 +44,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/20/honor-julkisti-klipsirakenteen-avoimet-earbuds-clip-pro-nappikuulokkeet-kiinassa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
