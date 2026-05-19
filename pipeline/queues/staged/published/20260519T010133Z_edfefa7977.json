@@ -1,0 +1,214 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-19T01:01:33.646574+00:00",
+  "digest": "edfefa7977",
+  "packet": {
+    "packet_id": "20260519T010133Z_edfefa7977",
+    "created_at": "2026-05-19T01:01:33Z",
+    "headline_seed": "Three killed in suspected hate crime at San Diego mosque",
+    "description_seed": "A note left by one of the teenage suspects contains general \"hate rhetoric\", investigators say.",
+    "link": "https://www.bbc.com/news/articles/c5y7q66gq56o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "Al Jazeera",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c5y7q66gq56o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Three killed in suspected hate crime at San Diego mosque"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A note left by one of the teenage suspects contains general \"hate rhetoric\", investigators say.",
+        "word_count": 15,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Al Jazeera",
+        "source_type": "research",
+        "text": "Authorities in the United States say three people have been killed at a complex housing a mosque and an Islamic school in San Diego in a suspected hate-motivated attack. San Diego Police chief Scott Wahl said the two shooters in the incident at the Islamic Center of San Diego (ICSD) in southern California on Monday were also found dead of apparent self-inflicted gunshot wounds. “Because of the Islamic centre location, we are considering this a hate crime until it’s not,” Wahl told reporters. The suspects were two males, believed to be aged 17 and 19, according to the police chief. Wahl said one of the victims was a security guard at the Islamic centre, who played a “pivotal role” in ensuring that the incident did not become far worse.",
+        "word_count": 129,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Three people have been killed in a shooting at a mosque in San Diego, California, which officials believe was perpetrated by two teenage attackers. The shooting took place on Monday morning as officers were investigating a call about a possibly suicidal teen who had run away from home. At 11:43 local time (19:43 BST), police were called to a shooting at the Islamic Center of San Diego, and found three victims who had been shot in the front of the building. Shortly after, they received another call that shots had been fired nearby at a landscaper from a vehicle. When officers arrived at the second scene, they found the suspects - ages 17 and 18 - dead of self-inflicted wounds.",
+        "word_count": 120,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The woman said he had gone with a companion, and both were dressed in camouflage. A note the youth left behind included \"generalised hate rhetoric and hate speech\". Wahl said police found the suspect's behaviour to be \"not consistent\" with someone who is considered suicidal. Investigators then went to a local high school, where one of the teens studied, as well as a shopping mall where the car had been reported seen. Wahl added that the motive for the attack is currently not known, but presumed to be a hate crime due to the location and the prominence of the mosque. He added that the note contained no specific threat to the mosque, or to any other location or individual.",
+        "word_count": 120,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "A note left by one of the teenage suspects contains general \"hate rhetoric\", investigators say.\n\nAuthorities in the United States say three people have been killed at a complex housing a mosque and an Islamic school in San Diego in a suspected hate-motivated attack. San Diego Police chief Scott Wahl said the two shooters in the incident at the Islamic Center of San Diego (ICSD) in southern California on Monday were also found dead of apparent self-inflicted gunshot wounds. “Because of the Islamic centre location, we are considering this a hate crime until it’s not,” Wahl told reporters. The suspects were two males, believed to be aged 17 and 19, according to the police chief. Wahl said one of the victims was a security guard at the Islamic centre, who played a “pivotal role” in ensuring that the incident did not become far worse.\n\nThree people have been killed in a shooting at a mosque in San Diego, California, which officials believe was perpetrated by two teenage attackers. The shooting took place on Monday morning as officers were investigating a call about a possibly suicidal teen who had run away from home. At 11:43 local time (19:43 BST), police were called to a shooting at the Islamic Center of San Diego, and found three victims who had been shot in the front of the building. Shortly after, they received another call that shots had been fired nearby at a landscaper from a vehicle. When officers arrived at the second scene, they found the suspects - ages 17 and 18 - dead of self-inflicted wounds.\n\nThe woman said he had gone with a companion, and both were dressed in camouflage. A note the youth left behind included \"generalised hate rhetoric and hate speech\". Wahl said police found the suspect's behaviour to be \"not consistent\" with someone who is considered suicidal. Investigators then went to a local high school, where one of the teens studied, as well as a shopping mall where the car had been reported seen. Wahl added that the motive for the attack is currently not known, but presumed to be a hate crime due to the location and the prominence of the mosque. He added that the note contained no specific threat to the mosque, or to any other location or individual.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 949,
+      "selected_blocks": 4,
+      "selected_source_words": 384,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Washington Examiner",
+        "Al Jazeera",
+        "Al Jazeera",
+        "Al Jazeera",
+        "Al Jazeera",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "Al Jazeera",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Three killed in suspected hate crime at San Diego mosque",
+      "description": "A note left by one of the teenage suspects contains general \"hate rhetoric\", investigators say.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Three killed in suspected hate crime at San Diego mosque",
+    "description": "A note left by one of the teenage suspects contains general \"hate rhetoric\", investigators say.",
+    "link": "https://www.bbc.com/news/articles/c5y7q66gq56o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-19T00:54:14+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "6d0159b26d6542bf571d414834a527e4",
+    "_url_hash": "9f90af02375b53d431ac52253a8e88f9dba1f16628e90aa860c818715fe84dcf",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nThree people have been killed in a shooting at a mosque in San Diego, California, which officials believe was perpetrated by two teenage attackers.\n\nThe shooting took place on Monday morning as officers were investigating a call about a possibly suicidal teen who had run away from home.\n\nAt 11:43 local time (19:43 BST), police were called to a shooting at the Islamic Center of San Diego, and found three victims who had been shot in the front of the building.\n\nShortly after, they received another call that shots had been fired nearby at a landscaper from a vehicle. When officers arrived at the second scene, they found the suspects - ages 17 and 18 - dead of self-inflicted wounds.\n\nAmong the deceased victims was a security guard who worked at the centre and heroically prevented more people from dying, officials said without providing further details.\n\nThe incident is being investigated as a hate crime, according to the FBI, due to writings found by one of the suspect's mother.\n\nPolice were first called to the centre at 11:43 local time (19:43 BST) and \"observed what appeared to be three deceased victims out front\", San Diego Police Chief Scott Wahl said during a news conference on Monday.\n\n\"There were no officers involved in firing their weapons,\" Wahl said, and there was no sign of any gunman.\n\nBefore the attack, the mother of one of the suspects had called officers at 9:42 local time, and reported that when her son left, he took several of her guns and her car.\n\nThe woman said he had gone with a companion, and both were dressed in camouflage. A note the youth left behind included \"generalised hate rhetoric and hate speech\".\n\nWahl said police found the suspect's behaviour to be \"not consistent\" with someone who is considered suicidal. Investigators then went to a local high school, where one of the teens studied, as well as a shopping mall where the car had been reported seen.\n\nWahl added that the motive for the attack is currently not known, but presumed to be a hate crime due to the location and the prominence of the mosque. He added that the note contained no specific threat to the mosque, or to any other location or individual.\n\nWhen the shooting took place, officers were still speaking to the mother and were only a few blocks away from the mosque.\n\nThose officers, upon finding the three victims outside the building, rushed inside and began following active shooter protocols.\n\nWhile they were clearing rooms, more reports came in of another shooting near\n\n---\n\n[Lähde: Washington Examiner]\nSan Diego Police Chief Scott Wahl said “hate rhetoric” was involved in the deadly shooting at a San Diego mosque that left five people dead, including the two suspects.\n\nWahl said the shooting that took place on Monday morning at the Islamic Center of San Diego is being investigated as a hate crime.\n\nThe two suspects were found dead from self-inflicted gunshot wounds in a vehicle near the Islamic center. NBC reported that police identified the suspects as Cain Clark, 17, and Caleb Vazquez, 19.\n\n---\n\n[Lähde: Al Jazeera]\nAuthorities in the United States say three people have been killed at a complex housing a mosque and an Islamic school in San Diego in a suspected hate-motivated attack.\n\nSan Diego Police chief Scott Wahl said the two shooters in the incident at the Islamic Center of San Diego (ICSD) in southern California on Monday were also found dead of apparent self-inflicted gunshot wounds.\n\n“Because of the Islamic centre location, we are considering this a hate crime until it’s not,” Wahl told reporters.\n\nThe suspects were two males, believed to be aged 17 and 19, according to the police chief.\n\nWahl said one of the victims was a security guard at the Islamic centre, who played a “pivotal role” in ensuring that the incident did not become far worse.\n\nHe added that authorities are investigating and working “figure out and piece together exactly what led to this moment”.\n\nAll three victims were adults. Children at the school were not physically harmed, according to authorities.\n\nThe San Diego Police Department had reported an active shooter incident at the ICSD before saying that the threat was “neutralised”.\n\nTaha Hassane, the imam of the mosque, described the ICSD as a place for people — including non-Muslims — to come together and pray, learn and celebrate.\n\n“It is extremely outrageous to target a place of worship. Our Islamic Center is a place of worship,” Hassane said.\n\nSan Diego Mayor Todd Gloria stressed that “hate has no place” in the city.\n\n“To our local Muslim community, our prayers are with you,” Gloria said. “I want to assure our Muslim community that we will do everything it takes to make sure that you can feel safe in this city, and no resource will be spared in making sure that our religious institutions and locations are protected in this sensitive time.”\n\nThe ICSD is located in a residential area in the Clairemont neighbourhood of San Diego, north of the city’s downtown.\n\nThe identities of the shooters remain unclear. But the incident comes amid heightened Islamophobia in the US, with many politicians and commentators regularly attacking the Muslim community.\n\nFor example, Congressman Randy Fine, an ally of President Donald Trump, said late last year that Muslims should “be destroyed”.\n\nLater on Monday, Laura Loomer, a right-wing activist close to Trump, said the ICSD should be raided by the Federal Bureau of Investigation (FBI) and immigration authorities.\n\nShe shared a 2023 social media post by the wife of the mosque’s imam accusing Israel of killing",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-19T01:03:50.124647+00:00",
+  "payload": {
+    "packet_id": "20260519T010133Z_edfefa7977",
+    "title": "Kolme kuoli ampumisessa San Diegon islamilaiskeskuksessa",
+    "summary": "Viranomaiset tutkivat San Diegossa tapahtunutta ampumista epäiltynä viharikoksena. Kolme ihmistä kuoli Islamic Center of San Diegon edustalla, ja kaksi nuorta epäiltyä löydettiin myöhemmin kuolleina ilmeisesti itse aiheutettuihin ampumavammoihin.",
+    "content": "Kolme ihmistä on kuollut ampumisessa San Diegossa sijaitsevassa islamilaiskeskuksessa, jossa toimii moskeija ja islamilainen koulu. Poliisi tutkii tapausta epäiltynä viharikoksena tapahtumapaikan ja keskuksen näkyvän aseman vuoksi, mutta viranomaisten mukaan hyökkäyksen tarkka motiivi ei ole vielä selvillä.\n\n## Poliisi löysi uhrit keskuksen edustalta\n\nSan Diegon poliisipäällikkö Scott Wahlin mukaan poliisi sai maanantaina kello 11.43 paikallista aikaa ilmoituksen ampumisesta Islamic Center of San Diegossa Etelä-Kaliforniassa. Paikalta löydettiin kolme ihmistä, joita oli ammuttu rakennuksen etuosassa.\n\nYksi kuolleista oli islamilaiskeskuksen vartija. Wahlin mukaan vartijalla oli keskeinen rooli siinä, ettei tilanne muuttunut vielä pahemmaksi. Viranomaiset eivät lähdetietojen perusteella ole kertoneet uhrien nimiä.\n\nPoliisi oli jo ennen ampumisilmoitusta selvittämässä tapausta, jossa kotoaan lähteneen nuoren epäiltiin mahdollisesti olevan itsetuhoinen. Poliisin mukaan nuori oli lähtenyt liikkeelle toisen henkilön kanssa, ja molempien kerrottiin pukeutuneen maastokuvioisiin vaatteisiin.\n\n## Epäillyt löydettiin kuolleina toiselta tapahtumapaikalta\n\nPian moskeijalla tapahtuneen ampumisen jälkeen poliisi sai toisen ilmoituksen laukauksista lähellä sijaitsevalla alueella. Ilmoituksen mukaan ajoneuvosta oli ammuttu maisematyöntekijää kohti. Kun poliisit saapuivat toiselle paikalle, he löysivät kaksi nuorta miesepäiltyä kuolleina. Viranomaisten mukaan he näyttävät kuolleen itse aiheutettuihin ampumavammoihin.\n\nLähteissä epäiltyjen iästä on hieman vaihtelevia tietoja, mutta poliisin mukaan kyse oli kahdesta nuoresta miehestä. Ainakin toisen kerrottiin opiskelleen paikallisessa lukiossa. Tutkijat tarkistivat myös koulun sekä ostoskeskuksen, jossa epäiltyjen auton oli kerrottu aiemmin nähdyn.\n\n## Viesti sisälsi yleistä vihapuhetta\n\nWahlin mukaan yhden epäillyn jättämässä viestissä oli yleistä viharetoriikkaa ja vihapuhetta. Poliisin mukaan viestissä ei kuitenkaan ollut yksilöityä uhkausta moskeijaa, muuta paikkaa tai tiettyä henkilöä vastaan.\n\nPoliisipäällikkö sanoi, että epäillyn toiminta ei vastannut sitä, mitä poliisi pitäisi tyypillisenä itsetuhoisena käyttäytymisenä. Hänen mukaansa tapausta pidetään viharikoksena, kunnes tutkinta osoittaa toisin, koska isku kohdistui islamilaiskeskukseen. Samalla viranomaiset korostavat, ettei motiivista ole vielä lopullista varmuutta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "San Diego",
+      "Yhdysvallat",
+      "ampuminen",
+      "viharikos",
+      "moskeija"
+    ],
+    "summary_bullets": [
+      "Kolme ihmistä kuoli ampumisessa San Diegon islamilaiskeskuksessa.",
+      "Kaksi nuorta epäiltyä löydettiin myöhemmin kuolleina ilmeisesti itse aiheutettuihin ampumavammoihin.",
+      "Poliisi tutkii tapausta epäiltynä viharikoksena, mutta motiivia ei ole vielä vahvistettu."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin BBC:n ja Al Jazeeran tietoihin. Epäiltyjen tarkkoja ikiä ei yksilöity, koska lähteissä oli ristiriita 17/18 ja 17/19 välillä."
+  },
+  "raw_response": "plugin \"lossless-claw\" runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current(). Source: /home/pertt/.openclaw/extensions/lossless-claw/dist/index.js\n{\"packet_id\":\"20260519T010133Z_edfefa7977\",\"title\":\"Kolme kuoli ampumisessa San Diegon islamilaiskeskuksessa\",\"summary\":\"Viranomaiset tutkivat San Diegossa tapahtunutta ampumista epäiltynä viharikoksena. Kolme ihmistä kuoli Islamic Center of San Diegon edustalla, ja kaksi nuorta epäiltyä löydettiin myöhemmin kuolleina ilmeisesti itse aiheutettuihin ampumavammoihin.\",\"content\":\"Kolme ihmistä on kuollut ampumisessa San Diegossa sijaitsevassa islamilaiskeskuksessa, jossa toimii moskeija ja islamilainen koulu. Poliisi tutkii tapausta epäiltynä viharikoksena tapahtumapaikan ja keskuksen näkyvän aseman vuoksi, mutta viranomaisten mukaan hyökkäyksen tarkka motiivi ei ole vielä selvillä.\\n\\n## Poliisi löysi uhrit keskuksen edustalta\\n\\nSan Diegon poliisipäällikkö Scott Wahlin mukaan poliisi sai maanantaina kello 11.43 paikallista aikaa ilmoituksen ampumisesta Islamic Center of San Diegossa Etelä-Kaliforniassa. Paikalta löydettiin kolme ihmistä, joita oli ammuttu rakennuksen etuosassa.\\n\\nYksi kuolleista oli islamilaiskeskuksen vartija. Wahlin mukaan vartijalla oli keskeinen rooli siinä, ettei tilanne muuttunut vielä pahemmaksi. Viranomaiset eivät lähdetietojen perusteella ole kertoneet uhrien nimiä.\\n\\nPoliisi oli jo ennen ampumisilmoitusta selvittämässä tapausta, jossa kotoaan lähteneen nuoren epäiltiin mahdollisesti olevan itsetuhoinen. Poliisin mukaan nuori oli lähtenyt liikkeelle toisen henkilön kanssa, ja molempien kerrottiin pukeutuneen maastokuvioisiin vaatteisiin.\\n\\n## Epäillyt löydettiin kuolleina toiselta tapahtumapaikalta\\n\\nPian moskeijalla tapahtuneen ampumisen jälkeen poliisi sai toisen ilmoituksen laukauksista lähellä sijaitsevalla alueella. Ilmoituksen mukaan ajoneuvosta oli ammuttu maisematyöntekijää kohti. Kun poliisit saapuivat toiselle paikalle, he löysivät kaksi nuorta miesepäiltyä kuolleina. Viranomaisten mukaan he näyttävät kuolleen itse aiheutettuihin ampumavammoihin.\\n\\nLähteissä epäiltyjen iästä on hieman vaihtelevia tietoja, mutta poliisin mukaan kyse oli kahdesta nuoresta miehestä. Ainakin toisen kerrottiin opiskelleen paikallisessa lukiossa. Tutkijat tarkistivat myös koulun sekä ostoskeskuksen, jossa epäiltyjen auton oli kerrottu aiemmin nähdyn.\\n\\n## Viesti sisälsi yleistä vihapuhetta\\n\\nWahlin mukaan yhden epäillyn jättämässä viestissä oli yleistä viharetoriikkaa ja vihapuhetta. Poliisin mukaan viestissä ei kuitenkaan ollut yksilöityä uhkausta moskeijaa, muuta paikkaa tai tiettyä henkilöä vastaan.\\n\\nPoliisipäällikkö sanoi, että epäillyn toiminta ei vastannut sitä, mitä poliisi pitäisi tyypillisenä itsetuhoisena käyttäytymisenä. Hänen mukaansa tapausta pidetään viharikoksena, kunnes tutkinta osoittaa toisin, koska isku kohdistui islamilaiskeskukseen. Samalla viranomaiset korostavat, ettei motiivista ole vielä lopullista varmuutta.\",\"category\":\"Ulkomaat\",\"tags\":[\"San Diego\",\"Yhdysvallat\",\"ampuminen\",\"viharikos\",\"moskeija\"],\"summary_bullets\":[\"Kolme ihmistä kuoli ampumisessa San Diegon islamilaiskeskuksessa.\",\"Kaksi nuorta epäiltyä löydettiin myöhemmin kuolleina ilmeisesti itse aiheutettuihin ampumavammoihin.\",\"Poliisi tutkii tapausta epäiltynä viharikoksena, mutta motiivia ei ole vielä vahvistettu.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.86,\"journalist_note\":\"Artikkeli perustuu paketissa olleisiin BBC:n ja Al Jazeeran tietoihin. Epäiltyjen tarkkoja ikiä ei yksilöity, koska lähteissä oli ristiriita 17/18 ja 17/19 välillä.\"}",
+  "article": {
+    "title": "Kolme kuoli ampumisessa San Diegon islamilaiskeskuksessa",
+    "description": "Viranomaiset tutkivat San Diegossa tapahtunutta ampumista epäiltynä viharikoksena. Kolme ihmistä kuoli Islamic Center of San Diegon edustalla, ja kaksi nuorta epäiltyä löydettiin myöhemmin kuolleina ilmeisesti itse aiheutettuihin ampumavammoihin.",
+    "link": "https://www.bbc.com/news/articles/c5y7q66gq56o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-19T00:54:14+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "6d0159b26d6542bf571d414834a527e4",
+    "_url_hash": "9f90af02375b53d431ac52253a8e88f9dba1f16628e90aa860c818715fe84dcf",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nThree people have been killed in a shooting at a mosque in San Diego, California, which officials believe was perpetrated by two teenage attackers.\n\nThe shooting took place on Monday morning as officers were investigating a call about a possibly suicidal teen who had run away from home.\n\nAt 11:43 local time (19:43 BST), police were called to a shooting at the Islamic Center of San Diego, and found three victims who had been shot in the front of the building.\n\nShortly after, they received another call that shots had been fired nearby at a landscaper from a vehicle. When officers arrived at the second scene, they found the suspects - ages 17 and 18 - dead of self-inflicted wounds.\n\nAmong the deceased victims was a security guard who worked at the centre and heroically prevented more people from dying, officials said without providing further details.\n\nThe incident is being investigated as a hate crime, according to the FBI, due to writings found by one of the suspect's mother.\n\nPolice were first called to the centre at 11:43 local time (19:43 BST) and \"observed what appeared to be three deceased victims out front\", San Diego Police Chief Scott Wahl said during a news conference on Monday.\n\n\"There were no officers involved in firing their weapons,\" Wahl said, and there was no sign of any gunman.\n\nBefore the attack, the mother of one of the suspects had called officers at 9:42 local time, and reported that when her son left, he took several of her guns and her car.\n\nThe woman said he had gone with a companion, and both were dressed in camouflage. A note the youth left behind included \"generalised hate rhetoric and hate speech\".\n\nWahl said police found the suspect's behaviour to be \"not consistent\" with someone who is considered suicidal. Investigators then went to a local high school, where one of the teens studied, as well as a shopping mall where the car had been reported seen.\n\nWahl added that the motive for the attack is currently not known, but presumed to be a hate crime due to the location and the prominence of the mosque. He added that the note contained no specific threat to the mosque, or to any other location or individual.\n\nWhen the shooting took place, officers were still speaking to the mother and were only a few blocks away from the mosque.\n\nThose officers, upon finding the three victims outside the building, rushed inside and began following active shooter protocols.\n\nWhile they were clearing rooms, more reports came in of another shooting near\n\n---\n\n[Lähde: Washington Examiner]\nSan Diego Police Chief Scott Wahl said “hate rhetoric” was involved in the deadly shooting at a San Diego mosque that left five people dead, including the two suspects.\n\nWahl said the shooting that took place on Monday morning at the Islamic Center of San Diego is being investigated as a hate crime.\n\nThe two suspects were found dead from self-inflicted gunshot wounds in a vehicle near the Islamic center. NBC reported that police identified the suspects as Cain Clark, 17, and Caleb Vazquez, 19.\n\n---\n\n[Lähde: Al Jazeera]\nAuthorities in the United States say three people have been killed at a complex housing a mosque and an Islamic school in San Diego in a suspected hate-motivated attack.\n\nSan Diego Police chief Scott Wahl said the two shooters in the incident at the Islamic Center of San Diego (ICSD) in southern California on Monday were also found dead of apparent self-inflicted gunshot wounds.\n\n“Because of the Islamic centre location, we are considering this a hate crime until it’s not,” Wahl told reporters.\n\nThe suspects were two males, believed to be aged 17 and 19, according to the police chief.\n\nWahl said one of the victims was a security guard at the Islamic centre, who played a “pivotal role” in ensuring that the incident did not become far worse.\n\nHe added that authorities are investigating and working “figure out and piece together exactly what led to this moment”.\n\nAll three victims were adults. Children at the school were not physically harmed, according to authorities.\n\nThe San Diego Police Department had reported an active shooter incident at the ICSD before saying that the threat was “neutralised”.\n\nTaha Hassane, the imam of the mosque, described the ICSD as a place for people — including non-Muslims — to come together and pray, learn and celebrate.\n\n“It is extremely outrageous to target a place of worship. Our Islamic Center is a place of worship,” Hassane said.\n\nSan Diego Mayor Todd Gloria stressed that “hate has no place” in the city.\n\n“To our local Muslim community, our prayers are with you,” Gloria said. “I want to assure our Muslim community that we will do everything it takes to make sure that you can feel safe in this city, and no resource will be spared in making sure that our religious institutions and locations are protected in this sensitive time.”\n\nThe ICSD is located in a residential area in the Clairemont neighbourhood of San Diego, north of the city’s downtown.\n\nThe identities of the shooters remain unclear. But the incident comes amid heightened Islamophobia in the US, with many politicians and commentators regularly attacking the Muslim community.\n\nFor example, Congressman Randy Fine, an ally of President Donald Trump, said late last year that Muslims should “be destroyed”.\n\nLater on Monday, Laura Loomer, a right-wing activist close to Trump, said the ICSD should be raided by the Federal Bureau of Investigation (FBI) and immigration authorities.\n\nShe shared a 2023 social media post by the wife of the mosque’s imam accusing Israel of killing",
+    "research_source": "multi",
+    "summary": "Viranomaiset tutkivat San Diegossa tapahtunutta ampumista epäiltynä viharikoksena. Kolme ihmistä kuoli Islamic Center of San Diegon edustalla, ja kaksi nuorta epäiltyä löydettiin myöhemmin kuolleina ilmeisesti itse aiheutettuihin ampumavammoihin.",
+    "content": "Kolme ihmistä on kuollut ampumisessa San Diegossa sijaitsevassa islamilaiskeskuksessa, jossa toimii moskeija ja islamilainen koulu. Poliisi tutkii tapausta epäiltynä viharikoksena tapahtumapaikan ja keskuksen näkyvän aseman vuoksi, mutta viranomaisten mukaan hyökkäyksen tarkka motiivi ei ole vielä selvillä.\n\n## Poliisi löysi uhrit keskuksen edustalta\n\nSan Diegon poliisipäällikkö Scott Wahlin mukaan poliisi sai maanantaina kello 11.43 paikallista aikaa ilmoituksen ampumisesta Islamic Center of San Diegossa Etelä-Kaliforniassa. Paikalta löydettiin kolme ihmistä, joita oli ammuttu rakennuksen etuosassa.\n\nYksi kuolleista oli islamilaiskeskuksen vartija. Wahlin mukaan vartijalla oli keskeinen rooli siinä, ettei tilanne muuttunut vielä pahemmaksi. Viranomaiset eivät lähdetietojen perusteella ole kertoneet uhrien nimiä.\n\nPoliisi oli jo ennen ampumisilmoitusta selvittämässä tapausta, jossa kotoaan lähteneen nuoren epäiltiin mahdollisesti olevan itsetuhoinen. Poliisin mukaan nuori oli lähtenyt liikkeelle toisen henkilön kanssa, ja molempien kerrottiin pukeutuneen maastokuvioisiin vaatteisiin.\n\n## Epäillyt löydettiin kuolleina toiselta tapahtumapaikalta\n\nPian moskeijalla tapahtuneen ampumisen jälkeen poliisi sai toisen ilmoituksen laukauksista lähellä sijaitsevalla alueella. Ilmoituksen mukaan ajoneuvosta oli ammuttu maisematyöntekijää kohti. Kun poliisit saapuivat toiselle paikalle, he löysivät kaksi nuorta miesepäiltyä kuolleina. Viranomaisten mukaan he näyttävät kuolleen itse aiheutettuihin ampumavammoihin.\n\nLähteissä epäiltyjen iästä on hieman vaihtelevia tietoja, mutta poliisin mukaan kyse oli kahdesta nuoresta miehestä. Ainakin toisen kerrottiin opiskelleen paikallisessa lukiossa. Tutkijat tarkistivat myös koulun sekä ostoskeskuksen, jossa epäiltyjen auton oli kerrottu aiemmin nähdyn.\n\n## Viesti sisälsi yleistä vihapuhetta\n\nWahlin mukaan yhden epäillyn jättämässä viestissä oli yleistä viharetoriikkaa ja vihapuhetta. Poliisin mukaan viestissä ei kuitenkaan ollut yksilöityä uhkausta moskeijaa, muuta paikkaa tai tiettyä henkilöä vastaan.\n\nPoliisipäällikkö sanoi, että epäillyn toiminta ei vastannut sitä, mitä poliisi pitäisi tyypillisenä itsetuhoisena käyttäytymisenä. Hänen mukaansa tapausta pidetään viharikoksena, kunnes tutkinta osoittaa toisin, koska isku kohdistui islamilaiskeskukseen. Samalla viranomaiset korostavat, ettei motiivista ole vielä lopullista varmuutta.",
+    "category": "Kotimaa",
+    "tags": [
+      "san diego",
+      "yhdysvallat",
+      "ampuminen",
+      "viharikos",
+      "moskeija"
+    ],
+    "summary_bullets": [
+      "Kolme ihmistä kuoli ampumisessa San Diegon islamilaiskeskuksessa.",
+      "Kaksi nuorta epäiltyä löydettiin myöhemmin kuolleina ilmeisesti itse aiheutettuihin ampumavammoihin.",
+      "Poliisi tutkii tapausta epäiltynä viharikoksena, mutta motiivia ei ole vielä vahvistettu."
+    ],
+    "key_points": [
+      "Kolme ihmistä kuoli ampumisessa San Diegon islamilaiskeskuksessa.",
+      "Kaksi nuorta epäiltyä löydettiin myöhemmin kuolleina ilmeisesti itse aiheutettuihin ampumavammoihin.",
+      "Poliisi tutkii tapausta epäiltynä viharikoksena, mutta motiivia ei ole vielä vahvistettu."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin BBC:n ja Al Jazeeran tietoihin. Epäiltyjen tarkkoja ikiä ei yksilöity, koska lähteissä oli ristiriita 17/18 ja 17/19 välillä.",
+    "source_text": "A note left by one of the teenage suspects contains general \"hate rhetoric\", investigators say.\n\nAuthorities in the United States say three people have been killed at a complex housing a mosque and an Islamic school in San Diego in a suspected hate-motivated attack. San Diego Police chief Scott Wahl said the two shooters in the incident at the Islamic Center of San Diego (ICSD) in southern California on Monday were also found dead of apparent self-inflicted gunshot wounds. “Because of the Islamic centre location, we are considering this a hate crime until it’s not,” Wahl told reporters. The suspects were two males, believed to be aged 17 and 19, according to the police chief. Wahl said one of the victims was a security guard at the Islamic centre, who played a “pivotal role” in ensuring that the incident did not become far worse.\n\nThree people have been killed in a shooting at a mosque in San Diego, California, which officials believe was perpetrated by two teenage attackers. The shooting took place on Monday morning as officers were investigating a call about a possibly suicidal teen who had run away from home. At 11:43 local time (19:43 BST), police were called to a shooting at the Islamic Center of San Diego, and found three victims who had been shot in the front of the building. Shortly after, they received another call that shots had been fired nearby at a landscaper from a vehicle. When officers arrived at the second scene, they found the suspects - ages 17 and 18 - dead of self-inflicted wounds.\n\nThe woman said he had gone with a companion, and both were dressed in camouflage. A note the youth left behind included \"generalised hate rhetoric and hate speech\". Wahl said police found the suspect's behaviour to be \"not consistent\" with someone who is considered suicidal. Investigators then went to a local high school, where one of the teens studied, as well as a shopping mall where the car had been reported seen. Wahl added that the motive for the attack is currently not known, but presumed to be a hate crime due to the location and the prominence of the mosque. He added that the note contained no specific threat to the mosque, or to any other location or individual.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260519T010133Z_edfefa7977",
+    "image": "https://images.unsplash.com/photo-1650225541654-69c6a9bf5dae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxJc2xhbWljJTIwY2VudGVyJTIwU2FuJTIwRGllZ28lMjBzaG9vdGluZ3xlbnwxfDB8fHwxNzc5MTUyODg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1650225541654-69c6a9bf5dae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxJc2xhbWljJTIwY2VudGVyJTIwU2FuJTIwRGllZ28lMjBzaG9vdGluZ3xlbnwxfDB8fHwxNzc5MTUyODg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Kolme kuoli ampumisessa San Diegon islamilaiskeskuksessa",
+    "image_credit": "Photo by Samuel Ramos on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-large-building-with-palm-trees-in-front-of-it-TOUn1dnC5vg?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-19T01:08:05.790797+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1650225541654-69c6a9bf5dae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxJc2xhbWljJTIwY2VudGVyJTIwU2FuJTIwRGllZ28lMjBzaG9vdGluZ3xlbnwxfDB8fHwxNzc5MTUyODg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1650225541654-69c6a9bf5dae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxJc2xhbWljJTIwY2VudGVyJTIwU2FuJTIwRGllZ28lMjBzaG9vdGluZ3xlbnwxfDB8fHwxNzc5MTUyODg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-19T01:08:38.429248+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-19-kolme-kuoli-ampumisessa-san-diegon-islamilaiskeskuksessa.md"
+  ]
+}
