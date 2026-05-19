@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/turun-katupuukotuksesta-vankeutta-alaikainen-puukotti-pillereiden-takia/9340796"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
