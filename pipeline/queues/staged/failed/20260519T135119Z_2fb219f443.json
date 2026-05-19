@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-19T13:51:19.895549+00:00",
+  "digest": "2fb219f443",
+  "packet": {
+    "packet_id": "20260519T135119Z_2fb219f443",
+    "created_at": "2026-05-19T13:51:19Z",
+    "headline_seed": "Valitettava suunta jatkuu: Tänä keväänä lähes 450 havaintoa junaraiteilla törttöilleistä",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/8719c432-d317-46a0-9d8f-ee256729ffce",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/uutiset/8719c432-d317-46a0-9d8f-ee256729ffce"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Valitettava suunta jatkuu: Tänä keväänä lähes 450 havaintoa junaraiteilla törttöilleistä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 164,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Suomenmaa",
+        "Suomenmaa"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Valitettava suunta jatkuu: Tänä keväänä lähes 450 havaintoa junaraiteilla törttöilleistä",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Valitettava suunta jatkuu: Tänä keväänä lähes 450 havaintoa junaraiteilla törttöilleistä",
+    "description": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/8719c432-d317-46a0-9d8f-ee256729ffce",
+    "published": "2026-05-19T13:45:00+00:00",
+    "source": "Maaseudun Tulevaisuus",
+    "source_domain": "maaseuduntulevaisuus.fi",
+    "language": "fi",
+    "fingerprint": "a9e27f8430a51a18234b130ed4aa00fb",
+    "_url_hash": "bad977eed369e194c4cf8bf585ce8acd99fc40643f2383e9a36acb1c1e4b9e0c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Suomenmaa]\nLuvattomasta liikkumisesta ja ilkivallasta raiteilla on tehty tänä vuonna jo lähes 450 kirjausta, kertoo Fintrafficin rataliikennekeskus. Vastaavaan aikaan viime vuonna kirjauksia oli tehty miltei sama määrä, mikä on noin 20 kirjausta enemmän kuin vuonna 2024.\n\nSuurin osa luvattomista radalla liikkujista tehdyistä kirjauksista tehtiin Helsingin ohjauskeskuksen alueella.\n\nToissa vuonna luvaton rata-alueilla liikkuminen aiheutti noin parituhatta junien myöhästymistä.\n\nFintrafficin rataliikennekeskus muistuttaa tiedotteessa, että luvaton liikkuminen raiteilla on hengenvaarallista sekä laissa kielletty.\n\n– Moni ei ehkä ajattele tekevänsä mitään vaarallista oikaistessaan radan yli tai liikkuessaan raiteiden läheisyydessä. Todellisuudessa tilanteet voivat muuttua hengenvaarallisiksi hyvin nopeasti, ja samalla vaikutukset näkyvät koko junaliikenteessä, sanoo raideliikenteenohjauksen häiriöjohtamisen päällikkö Antti Ukkonen Fintrafficista tiedotteessa.\n\nVahinko voi sattua myös silloin, vaikkei ihminen olisi raiteella, sillä vauhdissa olevan junan ilmavirta voi pahimmassa tapauksessa kaataa radan lähellä oleskelevan ihmisen raiteille.\n\nFintraffic muistuttaa, että rautatien saa ylittää vain tasoristeyksistä ja juna-asemien turvallisten kulkureittien kautta.\n\nUutista korjattu 19.5.2026 klo 15.11: Luvaton rata-alueilla liikkuminen aiheutti noin parituhatta junien myöhästymistä toissa vuonna, ei viime vuonna, kuten jutussa alun perin luki.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-19T13:53:19.033286+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai varmennettuja perustietoja, joten vähintään 250 sanan artikkeli vaatisi keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260519T135119Z_2fb219f443\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai varmennettuja perustietoja, joten vähintään 250 sanan artikkeli vaatisi keksittyjä yksityiskohtia.\"}"
+}
