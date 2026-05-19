@@ -44,7 +44,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/asus-juhlistaa-rogn-20-vuotista-taivalta-rog-crosshair-2006-emolevylla/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
