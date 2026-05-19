@@ -43,7 +43,6 @@ keywords:
 source_name: "HS Tuoreimmat"
 source_url: "https://www.hs.fi/urheilu/art-2000012019549.html"
 source_domain: "hs.fi"
-briefing: true
 draft: false
 ---
 

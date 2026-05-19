@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-19T20:31:19.705167+00:00",
+  "digest": "946028449b",
+  "packet": {
+    "packet_id": "20260519T203119Z_946028449b",
+    "created_at": "2026-05-19T20:31:19Z",
+    "headline_seed": "Tällainen on pahamaineinen ”hailuola”, josta suomalais­sukeltajat pelastavat nyt hukkuneita",
+    "description_seed": "Suomalaiset sukeltajat ovat löytäneet neljän kadonneen italialaissukeltajan ruumiit syvältä Intian valtameressä sijaitsevasta luolastosta. Viides sukeltaja löytyi kuolleena jo aiemmin.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012019193.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012019193.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tällainen on pahamaineinen ”hailuola”, josta suomalais­sukeltajat pelastavat nyt hukkuneita"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 119,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tällainen on pahamaineinen ”hailuola”, josta suomalais­sukeltajat pelastavat nyt hukkuneita",
+      "description": "Suomalaiset sukeltajat ovat löytäneet neljän kadonneen italialaissukeltajan ruumiit syvältä Intian valtameressä sijaitsevasta luolastosta. Viides sukeltaja löytyi kuolleena jo aiemmin.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tällainen on pahamaineinen ”hailuola”, josta suomalais­sukeltajat pelastavat nyt hukkuneita",
+    "description": "Suomalaiset sukeltajat ovat löytäneet neljän kadonneen italialaissukeltajan ruumiit syvältä Intian valtameressä sijaitsevasta luolastosta. Viides sukeltaja löytyi kuolleena jo aiemmin.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012019193.html",
+    "published": "2026-05-19T20:25:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "f00b1f95d669ee28f5b1964c2153792e",
+    "_url_hash": "96f48b60c6904b5607d1bcadc491d4bb641a241ac1c20e984208b9e85b09a5f4",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Sportti]\nArsenal on voittanut Valioliigan kaudella 2025-26. Lontoolaisseuran pitkään odotettu mestaruus varmistui tiistai-iltana.\n\nArsenalin mestaruus varmistui Manchester Cityn pistemenetykseen. City jäi Bournemouthin vieraana 1-1-tulokseen.\n\nBournemouthin voittomaalin laukoi Junior Kroupi avauspuoliskolla. 19-vuotias ranskalaishyökkääjä on viimeistellyt 13 maalia tällä kaudella.\n\nCity tuli tasoihin lisäajalla Erling Haalandin maalilla, mutta liian myöhään.\n\nArsenal pääsee näin juhlimaan mestaruutta 22 vuoden odotuksen jälkeen. Mikel Artetan valmentama ryhmä voi saavuttaa myös Mestarien liigan voiton ensimmäistä kertaa historiassaan kohdatessaan finaalissa PSG:n ensi viikon lauantaina.\n\nBournemouth varmisti pisteellä paikkansa ensi kauden europeleissä.\n\nJalkapallo    19.05.2026 - 22:26     Joni Ahokas\n\nJalkapallo    19.05.2026 - 21:39     Joni Ahokas\n\nJalkapallo    19.05.2026 - 21:13     Joni Ahokas",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-19T20:33:18.594776+00:00",
+  "failure": "Paketti sisältää vain otsikko- ja kuvaussiemenen, ei lähdetekstiä tai varmistettuja yksityiskohtia 250 sanan artikkeliin ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260519T203119Z_946028449b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää vain otsikko- ja kuvaussiemenen, ei lähdetekstiä tai varmistettuja yksityiskohtia 250 sanan artikkeliin ilman keksittyjä tietoja.\"}"
+}
