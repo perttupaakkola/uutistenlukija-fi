@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/ukraina-paljasti-uuden-aseen-video-nayttaa-rakettien-sylkijan/9339988"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
