@@ -118,6 +118,7 @@ def _post_via_discord_bot(body: str) -> bool:
         data=payload,
         headers={
             "Content-Type": "application/json",
+            "User-Agent": "Hermes-Uutistenlukija/1.0",
             "Authorization": f"Bot {token}",
             "User-Agent": DISCORD_HTTP_USER_AGENT,
         },

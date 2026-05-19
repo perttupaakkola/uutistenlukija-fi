@@ -105,6 +105,7 @@ def ga4_report(token: str, start: str, end: str, metrics: list[str], dimensions:
     req = urllib.request.Request(url, data=data, headers={
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
+            "User-Agent": "Hermes-Uutistenlukija/1.0",
     })
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:

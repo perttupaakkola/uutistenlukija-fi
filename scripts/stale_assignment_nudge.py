@@ -147,6 +147,7 @@ def post_message(channel_id: str, content: str, dry_run: bool):
         {
             "Authorization": f"Bot {DISCORD_BOT_TOKEN}",
             "Content-Type": "application/json",
+            "User-Agent": "Hermes-Uutistenlukija/1.0",
         },
         method="POST",
     )

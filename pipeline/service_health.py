@@ -104,7 +104,7 @@ def _notify(msg: str) -> None:
         payload = json.dumps({"content": msg}).encode()
         req = urllib.request.Request(
             webhook, data=payload,
-            headers={"Content-Type": "application/json"},
+            headers={"Content-Type": "application/json", "User-Agent": "Hermes-Uutistenlukija/1.0"},
             method="POST",
         )
         urllib.request.urlopen(req, timeout=10)

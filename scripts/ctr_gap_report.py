@@ -152,7 +152,7 @@ def post_to_discord(message: str) -> bool:
         return False
     payload = json.dumps({"content": message}).encode()
     req = urllib.request.Request(
-        webhook, data=payload, headers={"Content-Type": "application/json"}
+        webhook, data=payload, headers={"Content-Type": "application/json", "User-Agent": "Hermes-Uutistenlukija/1.0"}
     )
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:

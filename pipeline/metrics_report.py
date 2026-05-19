@@ -232,7 +232,7 @@ def post(message: str, webhook: str) -> bool:
     req = urllib.request.Request(
         webhook,
         data=payload,
-        headers={"Content-Type": "application/json"},
+        headers={"Content-Type": "application/json", "User-Agent": "Hermes-Uutistenlukija/1.0"},
         method="POST",
     )
     try:

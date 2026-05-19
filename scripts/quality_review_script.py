@@ -130,7 +130,7 @@ def maybe_post_discord(text: str) -> None:
     if not webhook:
         return
     payload = json.dumps({"content": text[:1900]}).encode("utf-8")
-    req = urllib.request.Request(webhook, data=payload, headers={"Content-Type": "application/json"}, method="POST")
+    req = urllib.request.Request(webhook, data=payload, headers={"Content-Type": "application/json", "User-Agent": "Hermes-Uutistenlukija/1.0"}, method="POST")
     try:
         urllib.request.urlopen(req, timeout=10).read()
     except Exception as e:

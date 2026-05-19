@@ -386,7 +386,7 @@ def _post_chunk(message: str, webhook: str) -> bool:
     payload = json.dumps({"content": message}).encode("utf-8")
     req = urllib.request.Request(
         webhook, data=payload,
-        headers={"Content-Type": "application/json"}, method="POST"
+        headers={"Content-Type": "application/json", "User-Agent": "Hermes-Uutistenlukija/1.0"}, method="POST"
     )
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:

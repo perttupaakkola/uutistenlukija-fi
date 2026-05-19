@@ -127,6 +127,7 @@ def post_via_discord_bot(channel_id: str, msg: str) -> bool:
         data=data,
         headers={
             "Content-Type": "application/json",
+            "User-Agent": "Hermes-Uutistenlukija/1.0",
             "Authorization": f"Bot {token}",
             "User-Agent": DISCORD_HTTP_USER_AGENT,
         },

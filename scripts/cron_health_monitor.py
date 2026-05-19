@@ -36,23 +36,40 @@ for ENV_FILE in ENV_FILES:
             os.environ.setdefault(k.strip(), v.strip())
 
 DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN") or os.environ.get("OPENCLAW_DISCORD_BOT_TOKEN", "")
-DISCORD_HTTP_USER_AGENT = "Mozilla/5.0"
+DISCORD_WEBHOOK_URL = (
+    os.environ.get("DISCORD_OPERATIONS_WEBHOOK")
+    or os.environ.get("DISCORD_PIPELINE_WEBHOOK")
+    or os.environ.get("DISCORD_WEBHOOK_OPS")
+    or ""
+)
+DISCORD_HTTP_USER_AGENT = "Hermes-Uutistenlukija/1.0"
 
 def post_to_discord(content):
-    if not DISCORD_BOT_TOKEN:
-        print("[cron-health] Missing Discord bot token (DISCORD_BOT_TOKEN / OPENCLAW_DISCORD_BOT_TOKEN)", file=sys.stderr)
-        return False
     payload = json.dumps({"content": content}).encode()
-    req = urllib.request.Request(
-        f"https://discord.com/api/v10/channels/{OPERATIONS_CHANNEL}/messages",
-        payload,
-        {
-            "Authorization": f"Bot {DISCORD_BOT_TOKEN}",
-            "Content-Type": "application/json",
-            "User-Agent": DISCORD_HTTP_USER_AGENT,
-        },
-        method="POST",
-    )
+    if DISCORD_WEBHOOK_URL:
+        req = urllib.request.Request(
+            DISCORD_WEBHOOK_URL,
+            payload,
+            {
+                "Content-Type": "application/json",
+                "User-Agent": DISCORD_HTTP_USER_AGENT,
+            },
+            method="POST",
+        )
+    elif DISCORD_BOT_TOKEN:
+        req = urllib.request.Request(
+            f"https://discord.com/api/v10/channels/{OPERATIONS_CHANNEL}/messages",
+            payload,
+            {
+                "Authorization": f"Bot {DISCORD_BOT_TOKEN}",
+                "Content-Type": "application/json",
+                "User-Agent": DISCORD_HTTP_USER_AGENT,
+            },
+            method="POST",
+        )
+    else:
+        print("[cron-health] Missing Discord webhook and bot token", file=sys.stderr)
+        return False
     try:
         urllib.request.urlopen(req, timeout=15)
         return True

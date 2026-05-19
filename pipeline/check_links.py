@@ -203,7 +203,7 @@ def notify_discord(broken: Dict[str, List[str]], total_broken: int) -> None:
     req = urllib.request.Request(
         DISCORD_WEBHOOK_URL,
         data=payload,
-        headers={"Content-Type": "application/json"},
+        headers={"Content-Type": "application/json", "User-Agent": "Hermes-Uutistenlukija/1.0"},
         method="POST",
     )
     try:
