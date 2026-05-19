@@ -275,6 +275,27 @@ def assert_hero_credit_rendered(output_dir: Path) -> None:
         raise AssertionError(f"hero credit render missing: {missing}")
 
 
+def assert_article_source_attribution_rendered(output_dir: Path) -> None:
+    sample = Path("content/posts/2026-05-18-professori-varoittaa-tekoalyn-madaltavan-digihuijausten-kynn.md")
+    source_path = PROJECT_DIR / sample
+    if not source_path.exists():
+        return
+    rel = sample.relative_to("content").with_suffix("") / "index.html"
+    output_path = output_dir / rel
+    if not output_path.exists():
+        raise AssertionError(f"source attribution sample output missing: {rel}")
+    html = output_path.read_text(encoding="utf-8", errors="replace")
+    required = [
+        "source-attribution",
+        "Pohjautuu lähteeseen",
+        "Finanssiala",
+        'rel="noopener nofollow"',
+    ]
+    missing = [needle for needle in required if needle not in html]
+    if missing:
+        raise AssertionError(f"source attribution render missing: {missing}")
+
+
 def parse_warnings(stderr: str) -> list[str]:
     warnings: list[str] = []
     seen: set[str] = set()
@@ -355,8 +376,10 @@ def main() -> int:
         try:
             assert_hero_credit_rendered(destination)
             print("[templates] Hero credit render check passed")
+            assert_article_source_attribution_rendered(destination)
+            print("[templates] Source attribution render check passed")
         except AssertionError as exc:
-            print(f"[templates] Hero credit render check failed: {exc}")
+            print(f"[templates] Template render check failed: {exc}")
             return 1
 
         print("[templates] Hugo build passed")
@@ -376,4 +399,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

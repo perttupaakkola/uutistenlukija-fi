@@ -391,6 +391,40 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 .portal-article-rail__box { border-top: 3px solid #111; padding-top: 12px; display: grid; gap: 4px; margin-bottom: 18px; }
 .portal-article-rail__box strong { color: #111; font-size: 18px; }
 .portal-article-main .content, .portal-article-main .article-body, .portal-article-main .article-content { max-width: 720px !important; margin: 0 !important; }
+.portal-article-main .source-attribution {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 22px;
+  padding: 10px 12px;
+  border: 1px solid var(--portal-line);
+  border-left: 3px solid #111;
+  border-radius: 6px;
+  color: var(--portal-muted);
+  font-size: 13px;
+  line-height: 1.4;
+  background: #fff;
+}
+.portal-article-main .source-attribution__label { color: #111; font-weight: 700; }
+.portal-article-main .source-attribution__link {
+  color: #111;
+  margin-left: 0;
+  max-width: 100%;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .portal-article-main .source-attribution {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 18px;
+  }
+}
 .portal-article-main p { font-size: 19px; line-height: 1.72; margin: 0 0 1.25em; color: #111; }
 .portal-article-main h2 { font-size: 30px; line-height: 1.2; margin: 1.6em 0 .6em; }
 .portal-article-main h3 { font-size: 23px; line-height: 1.25; margin: 1.4em 0 .55em; }

@@ -8,6 +8,7 @@
 {{- if eq .showSummary true }}{{ partial "article-summary.html" $page }}{{ end }}
 {{- if eq .showKeyFacts true }}{{ partial "key-facts.html" $page }}{{ end }}
 {{- if eq .showToc true }}{{ partial "toc.html" $page }}{{ end }}
+{{- if eq .showSource true }}{{ partial "article-source-attribution.html" $page }}{{ end }}
 
 {{- if eq .metaVariant "single" }}
 <div class="article-meta">

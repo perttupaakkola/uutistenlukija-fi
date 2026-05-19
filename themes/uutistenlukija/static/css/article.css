@@ -85,17 +85,39 @@
 }
 
 .single-article .source-attribution {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+  margin: 0 0 1.25rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent) 5%, var(--card-bg));
   font-family: var(--font-sans);
   font-size: 0.85rem;
+  line-height: 1.4;
   color: var(--text-secondary);
+}
+
+.single-article .source-attribution__label {
+  font-weight: 700;
+  color: var(--text);
 }
 
 .single-article .source-attribution a {
   color: var(--accent);
   text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .single-article .source-attribution {
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.82rem;
+  }
 }
 .author-box {
   display: flex;
