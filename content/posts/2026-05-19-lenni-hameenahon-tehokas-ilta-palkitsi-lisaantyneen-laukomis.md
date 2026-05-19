@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/Leijonien-tehomies-Lenni-H%C3%A4meenaho-kehitt%C3%A4%C3%A4-laukaustaan-koko-ajan/269744"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
