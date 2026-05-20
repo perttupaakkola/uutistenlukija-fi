@@ -2,7 +2,7 @@
 """Report Talous acquisition losses by scan stage and staged queue state."""
 from __future__ import annotations
 
-import argparse, json, re
+import argparse, hashlib, json, re
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -12,6 +12,7 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 LOG_PATH = PROJECT_DIR / "pipeline" / "logs" / "staged-scan.log"
 STAGED_ROOT = PROJECT_DIR / "pipeline" / "queues" / "staged"
 STAGE_RE = re.compile(r"^\[(?P<ts>[^\]]+)\] scan-stage: (?P<stage>[a-z_]+) total=(?P<total>\d+) (?P<kind>categories|buckets)=(?P<data>\{.*\})$")
+DROP_RE = re.compile(r"^\[(?P<ts>[^\]]+)\] scan-stage-drop: talous_enqueue_drop (?P<data>\[.*\])$")
 RESEARCH_ITEM_RE = re.compile(r"^\[research\] \(\d+/\d+\) (?P<title>.*)$")
 RESEARCH_ORIGINAL_RE = re.compile(r"^\[research\]\s+Original: (?P<original>.*)$")
 RESEARCH_RESULT_RE = re.compile(r"^\[research\]\s+→ (?P<result>.*)$")
@@ -41,10 +42,20 @@ def load_scan_runs(log_path: Path, hours: int) -> list[dict]:
                 continue
             stage = m.group("stage")
             if stage == "discovered" or current is None:
-                current = {"ts": ts, "stages": {}, "research_items": []}
+                current = {"ts": ts, "stages": {}, "research_items": [], "talous_enqueue_drops": []}
                 runs.append(current)
             current["stages"][stage] = {"total": int(m.group("total")), m.group("kind"): json.loads(m.group("data"))}
             current_research = None
+            continue
+        drop = DROP_RE.match(line)
+        if drop:
+            ts = parse_ts(drop.group("ts"))
+            if ts < cutoff:
+                continue
+            if current is None:
+                current = {"ts": ts, "stages": {}, "research_items": [], "talous_enqueue_drops": []}
+                runs.append(current)
+            current.setdefault("talous_enqueue_drops", []).extend(json.loads(drop.group("data")))
             continue
         if current is None:
             continue
@@ -123,6 +134,31 @@ def median(values: list[int]) -> int:
     return values[len(values) // 2]
 
 
+def diagnostic_candidate_id(drop: dict) -> str:
+    saved = str(drop.get("candidate_id") or "").strip()
+    if saved:
+        return saved
+    seed = f"{drop.get('title','')}|{drop.get('source','')}"
+    return hashlib.sha1(seed.encode("utf-8", errors="ignore")).hexdigest()[:10]
+
+
+def diagnostic_drop_reason(drop: dict) -> str:
+    saved = str(drop.get("drop_reason") or "").strip()
+    if saved:
+        return saved
+    if drop.get("guardrail") == "down_rank_promotional_org_source":
+        return "org_source_guardrail_penalty"
+    source_words = int(drop.get("source_words") or 0)
+    source_blocks = int(drop.get("source_blocks") or 0)
+    if source_blocks < 1:
+        return "source_floor_no_labeled_source"
+    if source_blocks < 2 and source_words < 250:
+        return "source_floor_one_block_too_short"
+    if not drop.get("reserve_pass"):
+        return "reserve_floor_not_met"
+    return "queue_cap_displaced_by_stronger_candidates"
+
+
 def queue_summary(hours: int) -> dict:
     cutoff = cutoff_for(hours)
     summary = {"ready": Counter(), "failed": Counter(), "published": Counter()}
@@ -160,7 +196,8 @@ def print_report(runs: list[dict], hours: int, log_path: Path) -> None:
     print(f"scan_runs={len(runs)} log={log_path}")
     stage_names = ["discovered", "dedup", "cooldown", "research_candidates", "research_result", "min_source_words_pass", "queued_candidates"]
     totals = {stage: Counter() for stage in stage_names}
-    research_buckets, original_buckets, result_buckets = Counter(), Counter(), Counter()
+    research_buckets, original_buckets, result_buckets, drop_reasons = Counter(), Counter(), Counter(), Counter()
+    drop_examples: list[dict] = []
     for run in runs:
         for stage in stage_names:
             info = run["stages"].get(stage) or {}
@@ -174,6 +211,10 @@ def print_report(runs: list[dict], hours: int, log_path: Path) -> None:
             title = item.get("title", "").lower()
             if any(token in title for token in ["osinko", "salk", "pörss", "tokmanni", "talous", "yrittäj", "sähköauto"]):
                 original_buckets[item.get("original") or "unknown"] += 1; result_buckets[item.get("result") or "unknown"] += 1
+        for drop in run.get("talous_enqueue_drops", []):
+            drop_reasons[diagnostic_drop_reason(drop)] += 1
+            if len(drop_examples) < 5:
+                drop_examples.append(drop)
     print("\nby_stage_talous:")
     for stage in stage_names:
         c = totals[stage]
@@ -194,6 +235,20 @@ def print_report(runs: list[dict], hours: int, log_path: Path) -> None:
     print(f"  source_pass_to_queue_conversion={queued}/{passed} ({conversion:.1f}%)")
     if passed and queued < passed:
         print(f"  conversion_gap_note=scan enqueue is capped by --max-packets per run; excess source-passing Talous candidates are expected to wait behind queue caps/dedup/cooldown, not disappear at research acquisition")
+    print("\ntalous_enqueue_drops:")
+    print(f"  drop_reasons={dict(drop_reasons.most_common(8))}")
+    for drop in drop_examples:
+        print(
+            "  - "
+            f"candidate_id={diagnostic_candidate_id(drop)} "
+            f"title={str(drop.get('title',''))[:80]} "
+            f"source={drop.get('source','')} "
+            f"source_words={drop.get('source_words',0)} "
+            f"source_blocks={drop.get('source_blocks',0)} "
+            f"guardrail={drop.get('guardrail','')} "
+            f"reserve_pass={drop.get('reserve_pass')} "
+            f"drop_reason={diagnostic_drop_reason(drop)}"
+        )
     print("\nexamples:")
     for state in ["ready", "failed", "published"]:
         print(f"  {state}:")

@@ -713,9 +713,28 @@ class StagedPublishMetricsTests(unittest.TestCase):
         examples = staged_publish.talous_drop_candidates([tokmanni])
 
         self.assertEqual(examples[0]["source"], "Arvopaperi")
+        self.assertEqual(examples[0]["candidate_id"], staged_publish.stable_digest(tokmanni))
         self.assertEqual(examples[0]["source_blocks"], 1)
         self.assertEqual(examples[0]["research_bucket"], "research_enriched")
         self.assertFalse(examples[0]["reserve_pass"])
+        self.assertEqual(examples[0]["drop_reason"], "source_floor_one_block_too_short")
+
+    def test_talous_enqueue_drop_examples_mark_promotional_guardrail_drop(self) -> None:
+        promo = {
+            "title": "Finanssiala uudisti verkkosivunsa",
+            "category_hint": "Talous",
+            "source": "Finanssiala",
+            "description": "Tavoitteemme-osio kertoo sivuston uudesta ulkoasusta.",
+            "research": "[Lähde: Finanssiala]\n" + "sana " * 300 + " uudisti verkkosivunsa tavoitteemme-osio",
+            "story_confidence": 0.98,
+            "research_source": "multi",
+        }
+
+        examples = staged_publish.talous_drop_candidates([promo])
+
+        self.assertEqual(examples[0]["guardrail"], "down_rank_promotional_org_source")
+        self.assertFalse(examples[0]["reserve_pass"])
+        self.assertEqual(examples[0]["drop_reason"], "org_source_guardrail_penalty")
 
 
     def test_scan_enqueue_uses_total_source_floor_for_talous_candidate(self) -> None:

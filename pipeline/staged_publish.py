@@ -379,19 +379,46 @@ def log_scan_stage(stage: str, articles: list[dict]) -> None:
     log(f"scan-stage: {stage} total={len(articles)} categories={json.dumps(category_counts(articles), ensure_ascii=False, sort_keys=True)}")
 
 
+def talous_enqueue_drop_reason(article: dict) -> str:
+    if article_category(article) != "Talous":
+        return "not_talous"
+    source_words = len(str(article.get("research") or article.get("research_text") or "").split())
+    source_blocks = str(article.get("research") or article.get("research_text") or "").lower().count("[lähde:") + str(article.get("research") or article.get("research_text") or "").lower().count("[source:")
+    if org_source_talous_penalty(article) > 0:
+        return "org_source_guardrail_penalty"
+    if not passes_priority_source_floor(article):
+        if source_blocks < 1:
+            return "source_floor_no_labeled_source"
+        if source_blocks < 2 and source_words < 250:
+            return "source_floor_one_block_too_short"
+        return "source_floor_not_met"
+    if not scan_candidate_passes_talous_reserve(article):
+        try:
+            confidence = float(article.get("story_confidence") or article.get("confidence") or 0.85)
+        except (TypeError, ValueError):
+            confidence = 0.0
+        if confidence < 0.82:
+            return "reserve_confidence_floor"
+        return "reserve_floor_not_met"
+    return "queue_cap_displaced_by_stronger_candidates"
+
+
 def talous_drop_candidates(articles: list[dict], max_examples: int = 5) -> list[dict]:
     examples: list[dict] = []
     for article in articles:
         if article_category(article) != "Talous":
             continue
+        title = str(article.get("title") or "")
         examples.append({
-            "title": str(article.get("title") or "")[:100],
+            "candidate_id": stable_digest(article),
+            "title": title[:100],
             "source": str(article.get("source") or article.get("source_name") or "")[:60],
             "source_words": len(str(article.get("research") or article.get("research_text") or "").split()),
             "source_blocks": str(article.get("research") or article.get("research_text") or "").lower().count("[lähde:") + str(article.get("research") or article.get("research_text") or "").lower().count("[source:"),
             "research_bucket": article_research_bucket(article),
             "reserve_pass": scan_candidate_passes_talous_reserve(article),
             "guardrail": org_source_talous_guardrail(article).get("classification"),
+            "drop_reason": talous_enqueue_drop_reason(article),
         })
         if len(examples) >= max_examples:
             break
