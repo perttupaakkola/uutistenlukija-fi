@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kokenut-puolustusalan-asiantuntija-hoputtaa-yrityksia-kriisivalmiuteen-puhutaan-vain-kahvipoytakeskusteluissa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
