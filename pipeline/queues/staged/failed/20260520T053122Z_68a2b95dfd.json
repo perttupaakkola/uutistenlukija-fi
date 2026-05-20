@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-20T05:31:22.567353+00:00",
+  "digest": "68a2b95dfd",
+  "packet": {
+    "packet_id": "20260520T053122Z_68a2b95dfd",
+    "created_at": "2026-05-20T05:31:22Z",
+    "headline_seed": "Nurmi­järveläinen Miika törmäsi erikoiseen näkyyn pihatöissä",
+    "description_seed": "Miika kuvasi tutkijan mukaan harvinaisen näyn. Koiraat tappelivat siitä, ketä lykästää kevään lämmössä. Nurmijärveläinen Miika Lyly törmäsi hätkähdyttävään näkyyn pihatöiden tiimellyksessä. – Ensin se vähän säikäytti kun olin siinä vieressä, hän sanoo.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/c770d315-f734-4590-b97b-30f5733c9571",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/c770d315-f734-4590-b97b-30f5733c9571"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nurmi­järveläinen Miika törmäsi erikoiseen näkyyn pihatöissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Miika kuvasi tutkijan mukaan harvinaisen näyn. Koiraat tappelivat siitä, ketä lykästää kevään lämmössä. Nurmijärveläinen Miika Lyly törmäsi hätkähdyttävään näkyyn pihatöiden tiimellyksessä. – Ensin se vähän säikäytti kun olin siinä vieressä, hän sanoo.",
+        "word_count": 32,
+        "keyword_overlap": 25,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Miika kuvasi tutkijan mukaan harvinaisen näyn. Koiraat tappelivat siitä, ketä lykästää kevään lämmössä. Nurmijärveläinen Miika Lyly törmäsi hätkähdyttävään näkyyn pihatöiden tiimellyksessä. – Ensin se vähän säikäytti kun olin siinä vieressä, hän sanoo.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 64,
+      "selected_blocks": 1,
+      "selected_source_words": 32,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nurmi­järveläinen Miika törmäsi erikoiseen näkyyn pihatöissä",
+      "description": "Miika kuvasi tutkijan mukaan harvinaisen näyn. Koiraat tappelivat siitä, ketä lykästää kevään lämmössä. Nurmijärveläinen Miika Lyly törmäsi hätkähdyttävään näkyyn pihatöiden tiimellyksessä. – Ensin se vähän säikäytti kun olin siinä vieressä, hän sanoo.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Nurmi­järveläinen Miika törmäsi erikoiseen näkyyn pihatöissä",
+    "description": "Miika kuvasi tutkijan mukaan harvinaisen näyn. Koiraat tappelivat siitä, ketä lykästää kevään lämmössä. Nurmijärveläinen Miika Lyly törmäsi hätkähdyttävään näkyyn pihatöiden tiimellyksessä. – Ensin se vähän säikäytti kun olin siinä vieressä, hän sanoo.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/c770d315-f734-4590-b97b-30f5733c9571",
+    "published": "2026-05-20T08:16:18+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "32942c6fa4958b1f88488c74d30fe8e6",
+    "_url_hash": "1f1fd9953927ba59de661aa9dfc895c0ad30c0dffcf5a5b663f6374a95b9f61c",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Miika kuvasi tutkijan mukaan harvinaisen näyn. Koiraat tappelivat siitä, ketä lykästää kevään lämmössä. Nurmijärveläinen Miika Lyly törmäsi hätkähdyttävään näkyyn pihatöiden tiimellyksessä. – Ensin se vähän säikäytti kun olin siinä vieressä, hän sanoo.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-20T05:33:20.578264+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteainesta tai keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260520T053122Z_68a2b95dfd\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteainesta tai keksittyjä yksityiskohtia.\"}"
+}
