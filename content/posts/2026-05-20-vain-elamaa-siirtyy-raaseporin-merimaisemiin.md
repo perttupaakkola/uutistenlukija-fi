@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/vain-elamaa-loysi-uuden-kodin-suosikkiohjelma-jatkossa-merellisissa-maisemissa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
