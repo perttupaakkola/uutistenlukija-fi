@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/tanaan-tvssa-brad-pitt-on-taydellinen-taukki-mutta-on-liian-tyhma-tajutakseen-sita-itse/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
