@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-20T08:31:26.586227+00:00",
+  "digest": "3c93fc1ada",
+  "packet": {
+    "packet_id": "20260520T083126Z_3c93fc1ada",
+    "created_at": "2026-05-20T08:31:26Z",
+    "headline_seed": "Turvallisuus | Liettuassa annettiin ilma­hälytys drooni­uhan vuoksi",
+    "description_seed": "Liettuan presidentin ja pääministerin kerrotaan suojautuneen drooniuhan vuoksi.",
+    "link": "https://www.hs.fi/maailma/art-2000012019626.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/maailma/art-2000012019626.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Turvallisuus | Liettuassa annettiin ilma­hälytys drooni­uhan vuoksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 124,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Turvallisuus | Liettuassa annettiin ilma­hälytys drooni­uhan vuoksi",
+      "description": "Liettuan presidentin ja pääministerin kerrotaan suojautuneen drooniuhan vuoksi.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Turvallisuus | Liettuassa annettiin ilma­hälytys drooni­uhan vuoksi",
+    "description": "Liettuan presidentin ja pääministerin kerrotaan suojautuneen drooniuhan vuoksi.",
+    "link": "https://www.hs.fi/maailma/art-2000012019626.html",
+    "published": "2026-05-20T08:13:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "737c05ba06f819c5f8f739ece2d25466",
+    "_url_hash": "03f6eba9b7d67a4508845821957389f1794b6bfc99d4d6b6f2d0915645b92a3e",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nLiettuassa Vilnan lentokenttä suljettiin jälleen sunnuntai-iltana. Lentokentällä havaittiin ”tunnistamaton lentävä esine”.\n\nAsiasta kertoi Ylen toimittaja Mika Mäkeläinen, jonka Finnairin lento Vilnasta Helsinkiin peruttiin tapahtuneen vuoksi. Mäkeläinen istui jo koneessa, kun kapteeni kuulutti, että Vilnan lentokenttä on suljettu ainakin seuraavaksi neljäksi tunniksi.\n\nMäkeläisen mukaan 68 matkustajaa ja neljä miehistön jäsentä vietiin takaisin terminaaliin. Finnairin lennon AY1108 oli määrä lähteä Vilnasta sunnuntai-iltana kello 21.20. Uusi lähtöaika on maanantaiaamuna kello 9.20.\n\nVilnan lentoasema tiedotti sosiaalisessa mediassa, että lentokentän toiminta on väliaikaisesti keskeytetty. Alustavien tietojen mukaan kyseessä on jälleen ilmatilaan tunkeutuneet sääpallot.\n\nIlmatilarajoitukset olivat voimassa varhain maanantaihin asti.\n\nLiettuassa sääpallot ovat häirinneet lentoliikennettä useita kertoja lokakuun aikana, viimeksi eilen lauantaina. Tämä on jo viides kerta lokakuun aikana, kun lentokenttä suljetaan.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-20T08:33:27.305922+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä tai varmistettuja ydintietoja, eikä 250 sanan julkaistavaa artikkelia voi kirjoittaa ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260520T083126Z_3c93fc1ada\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä tai varmistettuja ydintietoja, eikä 250 sanan julkaistavaa artikkelia voi kirjoittaa ilman keksittyjä yksityiskohtia.\"}"
+}

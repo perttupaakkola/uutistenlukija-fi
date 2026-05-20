@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/finanssisektori-pysyi-vahvana-2025-ja-se-on-koko-suomen-etu/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
