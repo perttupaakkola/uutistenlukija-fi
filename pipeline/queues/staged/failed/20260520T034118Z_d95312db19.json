@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-20T03:41:18.089111+00:00",
+  "digest": "d95312db19",
+  "packet": {
+    "packet_id": "20260520T034118Z_d95312db19",
+    "created_at": "2026-05-20T03:41:18Z",
+    "headline_seed": "Huumekauppias lähes tappoi miehen – kuolema senteistä kiinni",
+    "description_seed": "Huumekauppa muuttui puukotukseksi asiakkaan luultua huumekauppiasta toiseksi henkilöksi.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/huumekauppias-lahes-tappoi-miehen-kuolema-senteista-kiinni/9340142",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/huumekauppias-lahes-tappoi-miehen-kuolema-senteista-kiinni/9340142"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Huumekauppias lähes tappoi miehen – kuolema senteistä kiinni"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 139,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "MTV Uutiset",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Huumekauppias lähes tappoi miehen – kuolema senteistä kiinni",
+      "description": "Huumekauppa muuttui puukotukseksi asiakkaan luultua huumekauppiasta toiseksi henkilöksi.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Huumekauppias lähes tappoi miehen – kuolema senteistä kiinni",
+    "description": "Huumekauppa muuttui puukotukseksi asiakkaan luultua huumekauppiasta toiseksi henkilöksi.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/huumekauppias-lahes-tappoi-miehen-kuolema-senteista-kiinni/9340142",
+    "published": "2026-05-20T03:30:00+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "457e1f24cb17226dcfdf4c1402b7eb4f",
+    "_url_hash": "953609d10431af198f0071345504c9bea4389e55f8476f2888bcc811f8e431fb",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: MTV Uutiset]\nHuumekauppa muuttui tapon yritykseksi sen jälkeen, kun ostaja luuli huumekauppiasta vihamiehekseen. Diileri vastasi puukottamalla nuorukaista.\n\nHuumeita myynyt mies tuomittiin vankeuteen hänen puukotettua kimppuunsa hyökännyttä asiakasta.\n\nPuukotus tapahtui Kotkassa viime vuoden tammikuussa.\n\nToisilleen entuudestaan tuntemattomat nuoret miehet olivat sopineet huumausainekaupat vähäisestä määrästä kannabista ja amfetamiinia pikaviestipalvelu Telegramissa.\n\nKauppapaikkaa oli kerran jo vaihdettu, koska myyjä nimimerkiltään Din€ero ei ollut saapunut kauppapaikalle kolmannen henkilön kanssa, mitä huumeita ostamaan saapunut OGpete ei pitänyt sopivana.\n\n– Emmä oo ottaas koko apinalaumaa kaupoille, ostaja ihmetteli.\n\n– Yleens kaupat hoidetaan yksin, hän valisti.\n\nToinen kauppapaikka sovittiin paikallisen baarin lähistölle. Tällä kertaa kumpikin tulisi yksin.\n\nVaikka uusi kauppapaikka sovittiin viestin perusteella hyvässä hengessä, oli tilanne mahdollisesti vaikuttanut ostajan toimintaan.\n\nKun myyjä saapui paikalle, oli ostaja sekoittanut tämän toiseen henkilöön, jonka kanssa hänellä oli ollut kinaa, ja käynyt myyjän kimppuun.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-20T03:43:18.531670+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä tai riittäviä varmistettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260520T034118Z_d95312db19\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä tai riittäviä varmistettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.\"}"
+}
