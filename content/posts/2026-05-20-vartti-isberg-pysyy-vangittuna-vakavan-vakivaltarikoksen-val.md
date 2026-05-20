@@ -45,7 +45,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/mtv-n-tiedot-romanivaikuttaja-vartti-isbergin-rikosjutussa-myos-muita-epailtyja/9341180"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
