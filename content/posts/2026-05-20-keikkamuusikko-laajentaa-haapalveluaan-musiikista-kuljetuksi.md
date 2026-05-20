@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/live-keikkojen-heikentynyt-kysynta-synnytti-idean-musiikin-lisaksi-antilta-ja-riikalta-saa-haihin-kyydit-ja-kuvaukset/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
