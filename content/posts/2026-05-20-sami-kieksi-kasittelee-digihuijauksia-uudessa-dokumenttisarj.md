@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/dokumentaristi-sami-kieksi-sukeltaa-digihuijausten-maailmaan-fa-kumppanina-uudessa-tv-sarjassa/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
