@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/may/20/mahmoud-ahmadinejad-the-us-and-israels-unlikely-choice-to-lead-iran"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
