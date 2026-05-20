@@ -43,7 +43,6 @@ keywords:
 source_name: "Science News"
 source_url: "https://www.sciencenews.org/article/freediving-physical-mental-limits-risks"
 source_domain: "sciencenews.org"
-briefing: true
 draft: false
 ---
 
