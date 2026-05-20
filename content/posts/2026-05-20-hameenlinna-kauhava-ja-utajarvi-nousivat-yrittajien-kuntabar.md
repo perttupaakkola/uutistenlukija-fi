@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/lahes-12-000-vastasi-naissa-kunnissa-on-paras-yrittaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
