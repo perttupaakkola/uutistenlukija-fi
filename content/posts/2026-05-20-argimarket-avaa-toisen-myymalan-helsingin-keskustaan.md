@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/toimistotyolaiset-ottivat-heti-omakseen-pienen-ruokakaupan-nyt-yrittajaveljekset-avaavat-toisen-myymalan/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
