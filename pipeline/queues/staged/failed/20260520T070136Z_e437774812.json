@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-20T07:01:36.840390+00:00",
+  "digest": "e437774812",
+  "packet": {
+    "packet_id": "20260520T070136Z_e437774812",
+    "created_at": "2026-05-20T07:01:36Z",
+    "headline_seed": "Ikean työntekijöille karu uutinen",
+    "description_seed": "Ikean huhtikuun alussa alkaneet muutosneuvottelut päättyivät. Ikea irtisanoo kuusi työsuhdetta muutosneuvottelujen tuloksena. Huhtikuun alussa alkaneet palvelutoimiston muutosneuvottelut päättyivät 6. toukokuuta. Neuvottelujen piirissä oli 109 työntekijää, joista kuuden työsuhde päättyy.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/4969b9b3-af2a-4982-941c-7794aa67543d",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/4969b9b3-af2a-4982-941c-7794aa67543d"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ikean työntekijöille karu uutinen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Ikean huhtikuun alussa alkaneet muutosneuvottelut päättyivät. Ikea irtisanoo kuusi työsuhdetta muutosneuvottelujen tuloksena. Huhtikuun alussa alkaneet palvelutoimiston muutosneuvottelut päättyivät 6. toukokuuta. Neuvottelujen piirissä oli 109 työntekijää, joista kuuden työsuhde päättyy.",
+        "word_count": 29,
+        "keyword_overlap": 21,
+        "strong_overlap": 18
+      }
+    ],
+    "source_text": "Ikean huhtikuun alussa alkaneet muutosneuvottelut päättyivät. Ikea irtisanoo kuusi työsuhdetta muutosneuvottelujen tuloksena. Huhtikuun alussa alkaneet palvelutoimiston muutosneuvottelut päättyivät 6. toukokuuta. Neuvottelujen piirissä oli 109 työntekijää, joista kuuden työsuhde päättyy.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 58,
+      "selected_blocks": 1,
+      "selected_source_words": 29,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ikean työntekijöille karu uutinen",
+      "description": "Ikean huhtikuun alussa alkaneet muutosneuvottelut päättyivät. Ikea irtisanoo kuusi työsuhdetta muutosneuvottelujen tuloksena. Huhtikuun alussa alkaneet palvelutoimiston muutosneuvottelut päättyivät 6. toukokuuta. Neuvottelujen piirissä oli 109 työntekijää, joista kuuden työsuhde päättyy.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Ikean työntekijöille karu uutinen",
+    "description": "Ikean huhtikuun alussa alkaneet muutosneuvottelut päättyivät. Ikea irtisanoo kuusi työsuhdetta muutosneuvottelujen tuloksena. Huhtikuun alussa alkaneet palvelutoimiston muutosneuvottelut päättyivät 6. toukokuuta. Neuvottelujen piirissä oli 109 työntekijää, joista kuuden työsuhde päättyy.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/4969b9b3-af2a-4982-941c-7794aa67543d",
+    "published": "2026-05-20T09:40:22+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "12132e865cfdf7c689134fe4a009a183",
+    "_url_hash": "67aeb7336872337af6349cac8f8067a9652a7e1e561f800b9960bda23cbe3f61",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Ikean huhtikuun alussa alkaneet muutosneuvottelut päättyivät. Ikea irtisanoo kuusi työsuhdetta muutosneuvottelujen tuloksena. Huhtikuun alussa alkaneet palvelutoimiston muutosneuvottelut päättyivät 6. toukokuuta. Neuvottelujen piirissä oli 109 työntekijää, joista kuuden työsuhde päättyy.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-20T07:03:20.128141+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytettä tai lisätietojen keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260520T070136Z_e437774812\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytettä tai lisätietojen keksimistä.\"}"
+}
