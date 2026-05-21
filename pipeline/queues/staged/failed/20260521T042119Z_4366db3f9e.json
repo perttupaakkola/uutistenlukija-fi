@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T04:21:19.273117+00:00",
+  "digest": "4366db3f9e",
+  "packet": {
+    "packet_id": "20260521T042119Z_4366db3f9e",
+    "created_at": "2026-05-21T04:21:19Z",
+    "headline_seed": "Kirja: Ior Bockin veli kuoli luotiin hämärissä olosuhteissa",
+    "description_seed": "Ior Bock tuli tunnetuksi ensin värikkäänä Suomenlinnan oppaana ja sitten Lemminkäisen luolan etsijänä. Uusi kirja kertoo myös hänen elämänsä synkistä puolista. Bock ensin halvaantui puukotuksessa ja sitten toinen puukotus päätti hänen elämänsä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012018982.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012018982.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kirja: Ior Bockin veli kuoli luotiin hämärissä olosuhteissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Ior Bock tuli tunnetuksi ensin värikkäänä Suomenlinnan oppaana ja sitten Lemminkäisen luolan etsijänä. Uusi kirja kertoo myös hänen elämänsä synkistä puolista. Bock ensin halvaantui puukotuksessa ja sitten toinen puukotus päätti hänen elämänsä.",
+        "word_count": 32,
+        "keyword_overlap": 21,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Ior Bock tuli tunnetuksi ensin värikkäänä Suomenlinnan oppaana ja sitten Lemminkäisen luolan etsijänä. Uusi kirja kertoo myös hänen elämänsä synkistä puolista. Bock ensin halvaantui puukotuksessa ja sitten toinen puukotus päätti hänen elämänsä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 64,
+      "selected_blocks": 1,
+      "selected_source_words": 32,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kirja: Ior Bockin veli kuoli luotiin hämärissä olosuhteissa",
+      "description": "Ior Bock tuli tunnetuksi ensin värikkäänä Suomenlinnan oppaana ja sitten Lemminkäisen luolan etsijänä. Uusi kirja kertoo myös hänen elämänsä synkistä puolista. Bock ensin halvaantui puukotuksessa ja sitten toinen puukotus päätti hänen elämänsä.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Kirja: Ior Bockin veli kuoli luotiin hämärissä olosuhteissa",
+    "description": "Ior Bock tuli tunnetuksi ensin värikkäänä Suomenlinnan oppaana ja sitten Lemminkäisen luolan etsijänä. Uusi kirja kertoo myös hänen elämänsä synkistä puolista. Bock ensin halvaantui puukotuksessa ja sitten toinen puukotus päätti hänen elämänsä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012018982.html",
+    "published": "2026-05-21T04:15:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "b6d7bc130bb2b6aa02b87a03e2d294a5",
+    "_url_hash": "e2a05da1102e85bccc924ed71ea2590a321f30b75cbd0101d716429ec93db6d1",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Ior Bock tuli tunnetuksi ensin värikkäänä Suomenlinnan oppaana ja sitten Lemminkäisen luolan etsijänä. Uusi kirja kertoo myös hänen elämänsä synkistä puolista. Bock ensin halvaantui puukotuksessa ja sitten toinen puukotus päätti hänen elämänsä.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-21T04:23:18.256197+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteainesta tai keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T042119Z_4366db3f9e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteainesta tai keksittyjä yksityiskohtia.\"}"
+}
