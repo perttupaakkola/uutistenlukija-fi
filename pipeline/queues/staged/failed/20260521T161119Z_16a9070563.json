@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T16:11:19.665093+00:00",
+  "digest": "16a9070563",
+  "packet": {
+    "packet_id": "20260521T161119Z_16a9070563",
+    "created_at": "2026-05-21T16:11:19Z",
+    "headline_seed": "Seuranta | Leijonat virittelee maalijuhlia",
+    "description_seed": "HS seuraa MM-kisojen seitsemättä pelipäivää.",
+    "link": "https://www.hs.fi/urheilu/art-2000012022933.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/urheilu/art-2000012022933.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Seuranta | Leijonat virittelee maalijuhlia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 154,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Keskisuomalainen",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Seuranta | Leijonat virittelee maalijuhlia",
+      "description": "HS seuraa MM-kisojen seitsemättä pelipäivää.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Seuranta | Leijonat virittelee maalijuhlia",
+    "description": "HS seuraa MM-kisojen seitsemättä pelipäivää.",
+    "link": "https://www.hs.fi/urheilu/art-2000012022933.html",
+    "published": "2026-05-21T16:08:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "e666e6cf551a4d7ac47ee85c785afaa5",
+    "_url_hash": "42b677b0c5a4e1f8d12e1c13c3bb8d9266239996f01830e31f38caf10a3a98e9",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nJääkiekon MM-kisoissa Sveitsissä pelaava Suomen miesten jääkiekkomaajoukkue viettää keskiviikkona välipäivää, mutta harjoitteli normaalisti torstaina koittavan Latvia-ottelun alla. Päävalmentaja Antti Pennanen on Helsingin Sanomien mukaan muokannut Leijonien kentällisiä maanantain USA-ottelun jälkeen uuteen muottiin.\n\nAleksander Barkovin rinnalle ykkösketjuun nousivat Lenni Hämeenaho ja Janne Kuokkanen, kun taas Anton Lundellin johtama kakkosketju sai laidoilleen Sakari Mannisen ja Jesse Puljujärven. Aatu Räty ja Eemil Erholtz puolestaan saivat kolmoskentällisen toiseen laitaan Patrik Puistolan. Hannes Björnisen johtama neloskentällinen oli ainoa, joka säilyi koskemattomana USA-otteluun nähden.\n\nMaanantaina pelin kesken jättänyt puolustaja Urho Vaakanainen puuttui keskiviikkona Suomen harjoitusvahvuudesta, minkä takia hänen paikkansa ykköspakkiparissa nappasi Henri Jokiharju. Mikko Lehtonen puolestaan sai vierelleen Vili Saarijärven, kun taas Mikael Seppälä harjoitteli seitsemäntenä puolustajana.\n\nVaakanaisen ohella Leijonien harjoitusvahvuudesta puuttuivat myös NHL:stä kisoihin saapuvat Mikael Granlund ja Konsta Helenius.\n\nSuomi on pelannut MM-kisoissa kolme ottelua ja voittanut niistä jokaisen. Seuraavan kerran Leijonat nähdään tositoimissa siis torstaina, jolloin vastaan asettuu A-lohkossa kuudentena oleva Latvia.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T16:13:21.596927+00:00",
+  "failure": "Lähdeaineisto puuttuu: paketissa ei ole valittuja lähdekatkelmia eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T161119Z_16a9070563\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu: paketissa ei ole valittuja lähdekatkelmia eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

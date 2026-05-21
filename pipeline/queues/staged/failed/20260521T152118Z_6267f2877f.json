@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T15:21:18.589440+00:00",
+  "digest": "6267f2877f",
+  "packet": {
+    "packet_id": "20260521T152118Z_6267f2877f",
+    "created_at": "2026-05-21T15:21:18Z",
+    "headline_seed": "Lahden Kesänäyttämö possuilee tänä kesänä",
+    "description_seed": "Nuoret näyttelijät pääsevät näyttämään laulutaitojaan.",
+    "link": "https://www.ess.fi/paikalliset/9470493",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9470493"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahden Kesänäyttämö possuilee tänä kesänä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 147,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahden Kesänäyttämö possuilee tänä kesänä",
+      "description": "Nuoret näyttelijät pääsevät näyttämään laulutaitojaan.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lahden Kesänäyttämö possuilee tänä kesänä",
+    "description": "Nuoret näyttelijät pääsevät näyttämään laulutaitojaan.",
+    "link": "https://www.ess.fi/paikalliset/9470493",
+    "published": "2026-05-21T17:30:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "eb601fe9011ea7ae9d38b769ef6ddc5d",
+    "_url_hash": "0be130c6132a94261991d52d58e16ed616314bbfe185ea0ea74b72182593b7b2",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nPikku-Vesijärven puiston ilme muuttuu tänä kesänä, kun puistossa sijaitseva kioskirakennus puretaan.\n\nKunnossapitohortonomi Maija Näveri Lahden kaupungilta kertoo, että kioskin purkamiselle ei vielä ole tarkkaa päivämäärää, mutta tarkoitus on tehdä se alkukesällä.\n\nKioskin tilalle rakennetaan oleskelualue.\n\n– Grillipaikan oleskelualuetta laajennetaan. Alueelle tuodaan pari pöytäryhmää lisää ja tehdään istutuksia, Näveri sanoo.\n\nPuistoon voi tänä kesänä saada luvan siirrettäville myyntipaikoille, joissa voi myydä evästä. Myös puiston läpi kulkevalle Satamaradanraitille on varattu paikkoja mahdollisille kioskeille.\n\nPikku-Vesijärven puiston kioskirakennusta ei ole suunniteltu ympärivuotiseen käyttöön. Vuosien aikana rakennus on kärsinyt sade‑ ja sulamisvesiongelmista, ja myös tekniset järjestelmät ovat tulleet käyttöikänsä päähän.\n\nKioskissa on ollut kahvilatoimintaa kesäisin, mutta viime kesänä se toimi varastorakennuksena.\n\n– Rakennus on ollut huonossa kunnossa jo pidemmän aikaa, eikä sitä enää voi käyttää kahvilana tai muussakaan käytössä, Näveri kertoo.\n\nPuistoon on ideoitu uutta kahvilatoimintaa Kariniemenkadun reunalle, mutta ennen kuin asia etenee, kaupunki odottaa Kisapuiston ratkaisuja.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T15:23:19.357126+00:00",
+  "failure": "Lähdeteksti puuttuu kokonaan ja käytettävissä on vain otsikkosiemen sekä lyhyt kuvaus, joten 250 sanan julkaistavaa artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T152118Z_6267f2877f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeteksti puuttuu kokonaan ja käytettävissä on vain otsikkosiemen sekä lyhyt kuvaus, joten 250 sanan julkaistavaa artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}

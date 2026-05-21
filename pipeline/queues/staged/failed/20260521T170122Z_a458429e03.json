@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T17:01:22.007194+00:00",
+  "digest": "a458429e03",
+  "packet": {
+    "packet_id": "20260521T170122Z_a458429e03",
+    "created_at": "2026-05-21T17:01:22Z",
+    "headline_seed": "Norja lähellä jättimäistä paukkua MM-kisoissa – raju pettymys jatkoajalla",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9470725",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9470725"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Norja lähellä jättimäistä paukkua MM-kisoissa – raju pettymys jatkoajalla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 176,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Sportti"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Norja lähellä jättimäistä paukkua MM-kisoissa – raju pettymys jatkoajalla",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Norja lähellä jättimäistä paukkua MM-kisoissa – raju pettymys jatkoajalla",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9470725",
+    "published": "2026-05-21T19:52:27+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "1706ac8df658759f3c8d28e75fb13627",
+    "_url_hash": "572481e56451f398c13b97c8fe6aa9bc692cbb0e3eb12874229bb2671ded7032",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Sportti]\nRuotsi jatkoi lauantaina jääkiekon MM-kisojen A-lohkossa voittojen tiellä, kun Tre Kronor kaatoi Norjan 3-2.\n\nOttelun avauserä oli maaliton, vaikka Norja ajautui todelliseen jäähysumaan ja tarjosi näin Ruotsille lukuisia ylivoimamahdollisuuksia.Norja otti avauserässä peräti neljä kahden minuutin jäähyä.\n\nToiseen erään Ruotsi sai kuitenkin lentävän lähdön. Erää oli pelattu vain 56 sekuntia, kun Detroit Red Wingsin NHL-tähti Gustav Nyquist nousi väkevästi maalille ja teki puolustuksen estelyistä huolimatta 1-0-maalin.\n\nSeuraavaa maalia saatiin odotella aina kolmannen erän alkuun. Johan Fransson laukoi viivasta ja Martin Lundberg pääsi ampumaan irtokiekosta Ruotsin jo 2-0-johtoon. Osuma syntyi alivoimalla.\n\nNorja pääsi peliin mukaan vain minuuttia myöhemmin. Mathis Olimb laukoi ensin ja Mats Olsen jatkoi kiekon riparista sisään.\n\nMaalintekokilpailua jatkettiin seuraavaksi jälleen Ruotsin komennossa, kun Robert Rosen iski ajassa 51.47 ylivoimalla Ruotsin 3-1-johtoon. Norja pääsi vielä kaventamaan lukemat 2-3:een pari minuuttia ennen loppua Andreas Martinsenin osumalla, mutta Ruotsin johtoasema kesti loppuun saakka.\n\nRuotsi on A-lohkossa nyt toisena ja Norja kuudentena. Samaan aikaan pelatussa B-lohkon ottelussa Suomi kaatoi Ranskan 3-1.\n\nJääkiekko    21.05.2026 - 19:43     Joni Ahokas\n\nJääkiekko    21.05.2026 - 18:43     Joni Ahokas\n\nJääkiekko    21.05.2026 - 18:01     Joni Ahokas",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T17:03:18.616862+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai varmistettuja perustietoja tapahtumasta; otsikkovihje yksin ei riitä julkaistavaan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T170122Z_a458429e03\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai varmistettuja perustietoja tapahtumasta; otsikkovihje yksin ei riitä julkaistavaan uutiseen.\"}"
+}

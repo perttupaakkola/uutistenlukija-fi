@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/film/2026/may/21/mick-jagger-josh-oconnor-father-new-film-alice-rohrwacher-three-incestuous-sisters"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
