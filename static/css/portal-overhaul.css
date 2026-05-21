@@ -304,7 +304,7 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 .portal-opinion-card { display: grid; grid-template-columns: 76px minmax(0,1fr); gap: 14px; padding: 14px; border: 1px solid var(--portal-line); border-radius: 7px; }
 .portal-opinion-card img { width: 76px; height: 76px; object-fit: cover; border-radius: 7px; }
 .portal-opinion-card h3 { margin: 5px 0 8px; font-size: 16px; line-height: 1.25; }
-.portal-opinion-card time { color: var(--portal-muted); font-size: 13px; }
+.portal-opinion-card__time { color: var(--portal-muted); font-size: 13px; }
 .portal-river { border-top: 1px solid var(--portal-line); padding-top: 22px; }
 .portal-river__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0 24px; }
 .portal-row-card { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--portal-line); }
@@ -312,7 +312,7 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 .portal-row-card__thumb img { width: 100%; height: 100%; object-fit: cover; }
 .portal-row-card h3 { margin: 4px 0 6px; font-size: 17px; line-height: 1.2; }
 .portal-row-card p { margin: 0 0 6px; color: var(--portal-muted); font-size: 14px; line-height: 1.35; }
-.portal-row-card time { color: var(--portal-muted); font-size: 12px; }
+.portal-row-card__time { color: var(--portal-muted); font-size: 12px; }
 .portal-day-digest {
   display: grid;
   grid-template-columns: minmax(240px, .7fr) minmax(0, 1fr);
@@ -409,7 +409,7 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   font-size: 17px;
   line-height: 1.2;
 }
-.portal-topic-card time {
+.portal-topic-card__time {
   color: var(--portal-muted);
   font-size: 12px;
 }

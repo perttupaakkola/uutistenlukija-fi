@@ -146,7 +146,7 @@
       <article class="portal-topic-card">
         <a href="/categories/{{ lower $cat | urlize }}/" class="portal-topic-card__label">{{ $cat }}</a>
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <time>{{ partial "relative-date.html" . }}</time>
+        <span class="portal-topic-card__time">{{ partial "relative-date.html" . }}</span>
       </article>
       {{ end }}
       {{ end }}
@@ -170,7 +170,7 @@
         <div>
           <span class="portal-kicker">{{ $cat }}</span>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <time>{{ partial "relative-date.html" . }}</time>
+          <span class="portal-opinion-card__time">{{ partial "relative-date.html" . }}</span>
         </div>
       </article>
       {{ end }}
@@ -194,7 +194,7 @@
           <span class="portal-kicker">{{ $cat }}</span>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p>{{ .Summary | truncate 120 }}</p>
-          <time>{{ partial "relative-date.html" . }}</time>
+          <span class="portal-row-card__time">{{ partial "relative-date.html" . }}</span>
         </div>
       </article>
       {{ end }}
