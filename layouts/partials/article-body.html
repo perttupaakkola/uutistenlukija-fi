@@ -57,16 +57,23 @@
 
 {{- if eq .showAuthorBox true }}
   {{ with $page.Params.author }}
+  {{- $authorName := . -}}
+  {{- $authorTitle := $page.Params.author_title -}}
+  {{- $authorBio := $page.Params.author_bio -}}
+  {{- if eq $authorName "Toimitus" -}}
+    {{- $authorTitle = "Uutistenlukija.fi" -}}
+    {{- $authorBio = "Suomen nopein tapa seurata päivän puheenaiheita." -}}
+  {{- end -}}
   <div class="{{ $authorBoxClass }}">
     {{ with $page.Params.author_image }}
     <img src="{{ . }}" alt="{{ $page.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="{{ $authorImageSize }}" height="{{ $authorImageSize }}">
     {{ end }}
     <div class="author-info">
-      <span class="author-name">{{ $page.Params.author }}</span>
-      {{ with $page.Params.author_title }}
+      <span class="author-name">{{ $authorName }}</span>
+      {{ with $authorTitle }}
       <span class="author-role">{{ . }}</span>
       {{ end }}
-      {{ with $page.Params.author_bio }}
+      {{ with $authorBio }}
       <p class="author-bio">{{ . }}</p>
       {{ end }}
     </div>
