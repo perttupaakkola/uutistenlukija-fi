@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T01:11:17.515507+00:00",
+  "digest": "2843722e5f",
+  "packet": {
+    "packet_id": "20260521T011117Z_2843722e5f",
+    "created_at": "2026-05-21T01:11:17Z",
+    "headline_seed": "Puolustusvoimien kalustoa huoltava Millog tähyää nyt ulkomaille – Uusi toimitusjohtaja hehkuttaa päänavausta Ranskaan",
+    "description_seed": "Millogin toimitusjohtaja Janne Tarvainen teki pitkän uran lentokonemoottoreiden ja -kaluston kanssa, kunnes hänet napattiin Millogille. Nyt hän pitää huolen, että Puolustusvoimien kalusto on toimintakunnossa myös force majeure -tilanteissa.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/fc61fdd5-07ef-422e-bc5e-52937b2dcd28",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/fc61fdd5-07ef-422e-bc5e-52937b2dcd28"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Puolustusvoimien kalustoa huoltava Millog tähyää nyt ulkomaille – Uusi toimitusjohtaja hehkuttaa päänavausta Ranskaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Millogin toimitusjohtaja Janne Tarvainen teki pitkän uran lentokonemoottoreiden ja -kaluston kanssa, kunnes hänet napattiin Millogille. Nyt hän pitää huolen, että Puolustusvoimien kalusto on toimintakunnossa myös force majeure -tilanteissa.",
+        "word_count": 28,
+        "keyword_overlap": 23,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Millogin toimitusjohtaja Janne Tarvainen teki pitkän uran lentokonemoottoreiden ja -kaluston kanssa, kunnes hänet napattiin Millogille. Nyt hän pitää huolen, että Puolustusvoimien kalusto on toimintakunnossa myös force majeure -tilanteissa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 56,
+      "selected_blocks": 1,
+      "selected_source_words": 28,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Puolustusvoimien kalustoa huoltava Millog tähyää nyt ulkomaille – Uusi toimitusjohtaja hehkuttaa päänavausta Ranskaan",
+      "description": "Millogin toimitusjohtaja Janne Tarvainen teki pitkän uran lentokonemoottoreiden ja -kaluston kanssa, kunnes hänet napattiin Millogille. Nyt hän pitää huolen, että Puolustusvoimien kalusto on toimintakunnossa myös force majeure -tilanteissa.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Puolustusvoimien kalustoa huoltava Millog tähyää nyt ulkomaille – Uusi toimitusjohtaja hehkuttaa päänavausta Ranskaan",
+    "description": "Millogin toimitusjohtaja Janne Tarvainen teki pitkän uran lentokonemoottoreiden ja -kaluston kanssa, kunnes hänet napattiin Millogille. Nyt hän pitää huolen, että Puolustusvoimien kalusto on toimintakunnossa myös force majeure -tilanteissa.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/fc61fdd5-07ef-422e-bc5e-52937b2dcd28",
+    "published": "2026-05-21T01:00:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "7bbf1a089e17553ad7c9bb134dfec99a",
+    "_url_hash": "46b941de100dc6d82753a5e2dce6b5777128512b9fcb81b12800fe80ee36f501",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Millogin toimitusjohtaja Janne Tarvainen teki pitkän uran lentokonemoottoreiden ja -kaluston kanssa, kunnes hänet napattiin Millogille. Nyt hän pitää huolen, että Puolustusvoimien kalusto on toimintakunnossa myös force majeure -tilanteissa.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-21T01:13:20.272693+00:00",
+  "failure": "Lähdeaineisto on liian niukka eikä sisällä riittävästi vahvistettuja yksityiskohtia 250 sanan uutiseen ilman täyteainesta tai keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T011117Z_2843722e5f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka eikä sisällä riittävästi vahvistettuja yksityiskohtia 250 sanan uutiseen ilman täyteainesta tai keksittyjä tietoja.\"}"
+}

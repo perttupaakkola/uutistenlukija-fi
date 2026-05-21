@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T00:31:20.097060+00:00",
+  "digest": "0dcba1b6ba",
+  "packet": {
+    "packet_id": "20260521T003120Z_0dcba1b6ba",
+    "created_at": "2026-05-21T00:31:20Z",
+    "headline_seed": "Jensen Huang says he’s found a ‘brand new’ $200B market for Nvidia",
+    "description_seed": "The next big thing for Nvidia will be CPUs for AI agents, $200 billion worth, CEO Jensen Huang predicts.",
+    "link": "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/",
+    "source": "TechCrunch",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jensen Huang says he’s found a ‘brand new’ $200B market for Nvidia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "The next big thing for Nvidia will be CPUs for AI agents, $200 billion worth, CEO Jensen Huang predicts.",
+        "word_count": 19,
+        "keyword_overlap": 11,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The next big thing for Nvidia will be CPUs for AI agents, $200 billion worth, CEO Jensen Huang predicts.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 38,
+      "selected_blocks": 1,
+      "selected_source_words": 19,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jensen Huang says he’s found a ‘brand new’ $200B market for Nvidia",
+      "description": "The next big thing for Nvidia will be CPUs for AI agents, $200 billion worth, CEO Jensen Huang predicts.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Jensen Huang says he’s found a ‘brand new’ $200B market for Nvidia",
+    "description": "The next big thing for Nvidia will be CPUs for AI agents, $200 billion worth, CEO Jensen Huang predicts.",
+    "link": "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/",
+    "published": "2026-05-21T00:28:31+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "06316f4c954f8d0e1abcda5f7638a9ba",
+    "_url_hash": "c79fa0aac27383ba5e325a31c9f9c8ec8bbd23c877b4f53873b9b9361fc3b539",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "The next big thing for Nvidia will be CPUs for AI agents, $200 billion worth, CEO Jensen Huang predicts.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-21T00:33:19.456094+00:00",
+  "failure": "Lähdeaineisto on liian niukka: paketissa on vain yksi lyhyt väite ilman riittävää kontekstia, tarkkoja tietoja tai vahvistavia lähteitä 250 sanan julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T003120Z_0dcba1b6ba\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: paketissa on vain yksi lyhyt väite ilman riittävää kontekstia, tarkkoja tietoja tai vahvistavia lähteitä 250 sanan julkaistavaan artikkeliin.\"}"
+}
