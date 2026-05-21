@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T18:31:24.481532+00:00",
+  "digest": "c2e738dae3",
+  "packet": {
+    "packet_id": "20260521T183124Z_c2e738dae3",
+    "created_at": "2026-05-21T18:31:24Z",
+    "headline_seed": "Ravituloksia | Seinäjoki",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9470835",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9470835"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ravituloksia | Seinäjoki"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 200,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ravituloksia | Seinäjoki",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ravituloksia | Seinäjoki",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9470835",
+    "published": "2026-05-21T21:26:41+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "f40f777e64eb98a37ae4c7d18908ed2b",
+    "_url_hash": "2b9868fa0b2091139b18d6dba785d615d9051afb566775627ab3c86672faffd2",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSeinäjoella suunnitellaan merkittäviä muutoksia keskustan liikenteeseen. Keskeisin muutos on Valtionkadun-Ruukintien osittainen kaventaminen nelikaistaisesta ”maantiemäisestä” väylästä kaksikaistaiseksi.\n\nKavennuksia suunnitellaan aseman kohdalle, Torikadun ja Puskantien väliselle matkalle.\n\nPuskantien ja Valtionkadun risteykseen aiotaan rakentaa kiertoliittymä, samoin Torikadun ja Ruukintien risteykseen.\n\nMuutoksilla halutaan rauhoittaa keskustan liikennettä, lisätä turvallisuutta ja kävelypainotteisuutta.\n\n– Pyritään luomaan keskustamaisempi ympäristö ja yhdistämään asema paremmin osaksi keskustaa, selittää kaupungininsinööri Joonas Kauppinen.\n\n– Kävellen, pyörällä ja myös autolla on silti hyvä keskustaan tulla, lisää Kauppinen.\n\nLisäksi suunnitelmiin sisältyy myös Kauppakadun muuttaminen jälleen kaksisuuntaiseksi. Sen on tarkoitus helpottaa keskustassa asiointia.\n\nSuunnitelmissa keskustan alue määritellään ”hitaan liikkumisen alueeksi”.\n\nValtionkadun ja Ruukintien läpikulkuliikennettä halutaan vähentää ja ohjata enemmän Vapaudentielle sekä myös Pohjan kaupunginosaan Sammonkadulle.\n\nValtionkatu ja Ruukintie ovat suunnitelmissa neljän korttelin mitalta kaksikaistaisia, mutta reunoille mahtuu myös kadunvarsipysäköintiä, bussipysäkit ja taksipaikat.\n\nKatujen keskialueelle on suunnitteilla runsaasti kasvillisuutta ja istutuksia. Kasvillisuutta kaavaillaan mm. bussi- ja pyöräkatoksiin.\n\nKoko keskustan liikennehankkeen alustava kustannusarvio on 5,7 miljoonaa euroa. Se sisältää myös viherrakentamisen ja oleskelualueita.\n\nKaupunkiympäristölautakunta käsittelee muutoksia keskiviikkona ja tekee esityksen kaupunginhallitukselle.\n\nKyse on vasta yleisvaiheen suunnittelusta ja periaatepäätöksestä, jonka jälkeen varsinainen tarkempi katusuunnittelu alkaa.\n\n– Aseman kakkosvaiheen suunnittelu vaikuttaa myös tähän, kyse on isosta kokonaisuudesta, muistuttaa Kauppinen.\n\nAseman kakkosvaihe tarkoittaa asema-alueen pohjoispuolen suunnittelua, joka on vasta käynnistymässä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T18:33:22.663268+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä, tuloksia, ajankohtaa tai muita varmennettavia yksityiskohtia, joiden pohjalta voisi kirjoittaa vähintään 250 sanan uutisen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T183124Z_c2e738dae3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä, tuloksia, ajankohtaa tai muita varmennettavia yksityiskohtia, joiden pohjalta voisi kirjoittaa vähintään 250 sanan uutisen ilman keksittyjä tietoja.\"}"
+}
