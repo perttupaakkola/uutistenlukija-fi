@@ -58,7 +58,6 @@
         <div>
           <div class="portal-teaser__meta"><span class="portal-kicker">{{ $cat }}</span><span>{{ partial "relative-date.html" . }}</span></div>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <span class="portal-comment-count">▢ {{ mod .WordCount 23 }}</span>
         </div>
       </article>
       {{ end }}

@@ -386,6 +386,21 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(published["article"]["image"], "/images/articles/pub.jpg")
         self.assertEqual(published["image_enrichment"]["image"], "/images/articles/pub.jpg")
 
+    def test_git_deploy_includes_generated_article_images(self) -> None:
+        commands: list[list[str]] = []
+
+        def fake_run(cmd, **kwargs):
+            commands.append(cmd)
+            return type("Result", (), {"returncode": 0, "stdout": "", "stderr": ""})()
+
+        with patch.object(staged_publish, "refresh_static_status"), \
+             patch.object(staged_publish.subprocess, "run", side_effect=fake_run):
+            rc = staged_publish.run_git_deploy(1)
+
+        self.assertEqual(rc, 0)
+        git_add = next(cmd for cmd in commands if cmd[:3] == ["git", "add", "-A"])
+        self.assertIn("static/images/articles/", git_add)
+
     def test_quality_gate_feedback_marks_source_backed_length_only_as_repairable(self) -> None:
         record = _record("length-only", source_words=360, blocks=3)
         record["packet"]["packet_id"] = "pkt-length-only"

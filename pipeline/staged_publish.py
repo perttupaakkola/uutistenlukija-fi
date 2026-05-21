@@ -1403,6 +1403,7 @@ def run_git_deploy(created_count: int) -> int:
             "add",
             "-A",
             "content/",
+            "static/images/articles/",
             "static/api/",
             "static/metrics/",
             "static/search-index.json",
