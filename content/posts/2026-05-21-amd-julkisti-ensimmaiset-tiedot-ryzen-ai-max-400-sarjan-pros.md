@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/amd-julkisti-ensimmaisten-ryzen-ai-max-400-sarjan-prosessoreiden-tiedot/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
