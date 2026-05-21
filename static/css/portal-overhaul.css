@@ -425,6 +425,18 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   }
 }
 .portal-article-main p { font-size: 19px; line-height: 1.72; margin: 0 0 1.25em; color: #111; }
+.portal-article-main .newsletter-signup--article_bottom_latest p {
+  width: auto !important;
+  max-width: none !important;
+  margin: 0;
+  color: var(--text-secondary);
+}
+.portal-article-main .newsletter-signup--article_bottom_latest .newsletter-signup__eyebrow {
+  color: var(--accent);
+}
+.portal-article-main .newsletter-signup--article_bottom_latest .newsletter-signup__title {
+  color: var(--text);
+}
 .portal-article-main h2 { font-size: 30px; line-height: 1.2; margin: 1.6em 0 .6em; }
 .portal-article-main h3 { font-size: 23px; line-height: 1.25; margin: 1.4em 0 .55em; }
 .summary-bullets, .key-facts, .article-summary, .article-trust-note, .newsletter-cta, .author-box, .ad-slot {

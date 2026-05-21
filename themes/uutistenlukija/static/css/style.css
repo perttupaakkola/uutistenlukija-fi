@@ -2984,6 +2984,52 @@ body.is-home .highlights-row--top {
 .newsletter-signup--home .newsletter-signup__inner {
   padding: 1.5rem;
 }
+.newsletter-signup--article_bottom_latest {
+  margin: 1.5rem 0 2rem;
+}
+.newsletter-signup--article_bottom_latest .newsletter-signup__inner {
+  gap: 0.8rem;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface-alt) 68%, var(--card-bg) 32%);
+  box-shadow: none;
+}
+.newsletter-signup--article_bottom_latest .newsletter-signup__eyebrow {
+  margin-bottom: 0.25rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.065em;
+}
+.newsletter-signup--article_bottom_latest .newsletter-signup__title {
+  max-width: 22rem;
+  font-size: 1.25rem;
+  line-height: 1.22;
+}
+.newsletter-signup--article_bottom_latest .newsletter-signup__text,
+.newsletter-signup--article_bottom_latest .newsletter-signup__note {
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+.newsletter-signup--article_bottom_latest .newsletter-signup__form {
+  display: grid;
+  gap: 0.65rem;
+}
+.newsletter-signup--article_bottom_latest .newsletter-signup__input,
+.newsletter-signup--article_bottom_latest .newsletter-signup__button {
+  width: 100%;
+  min-height: 46px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+.newsletter-signup--article_bottom_latest .newsletter-signup__input {
+  flex: 0 0 auto;
+  padding: 0 0.9rem;
+}
+.newsletter-signup--article_bottom_latest .newsletter-signup__button {
+  padding: 0 1rem;
+}
 .newsletter-signup__eyebrow {
   margin: 0 0 0.35rem;
   font-family: var(--font-sans);
@@ -3083,6 +3129,16 @@ body.is-home .highlights-row--top {
   .newsletter-signup__input {
     flex: 0 0 auto;
     width: 100%;
+  }
+  .newsletter-signup--article_bottom_latest .newsletter-signup__inner {
+    padding: 0.95rem;
+  }
+  .newsletter-signup--article_bottom_latest .newsletter-signup__title {
+    font-size: 1.18rem;
+  }
+  .newsletter-signup--article_bottom_latest .newsletter-signup__text,
+  .newsletter-signup--article_bottom_latest .newsletter-signup__note {
+    font-size: 0.9rem;
   }
 }
 
