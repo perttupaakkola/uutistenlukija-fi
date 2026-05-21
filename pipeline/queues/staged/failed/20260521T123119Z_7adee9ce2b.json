@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T12:31:19.195502+00:00",
+  "digest": "7adee9ce2b",
+  "packet": {
+    "packet_id": "20260521T123119Z_7adee9ce2b",
+    "created_at": "2026-05-21T12:31:19Z",
+    "headline_seed": "Suomalaissukeltaja kertoo HS:lle lohduttomasta näystä Malediivien ”hailuolassa” – ihmettelee yhtä asiaa",
+    "description_seed": "Sukellustehtävä oli psyykkisesti ja fyysisesti haastava.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012023634.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012023634.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomalaissukeltaja kertoo HS:lle lohduttomasta näystä Malediivien ”hailuolassa” – ihmettelee yhtä asiaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 108,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomalaissukeltaja kertoo HS:lle lohduttomasta näystä Malediivien ”hailuolassa” – ihmettelee yhtä asiaa",
+      "description": "Sukellustehtävä oli psyykkisesti ja fyysisesti haastava.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suomalaissukeltaja kertoo HS:lle lohduttomasta näystä Malediivien ”hailuolassa” – ihmettelee yhtä asiaa",
+    "description": "Sukellustehtävä oli psyykkisesti ja fyysisesti haastava.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012023634.html",
+    "published": "2026-05-21T11:34:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "c8d95ac2910061a972e324b8ba473ffd",
+    "_url_hash": "32c7438e8c8a27398fd9171d4e13b06304017ff924d6d04f1f0ec180e6def2fd",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Helsingin Uutiset]\nVuoristoradan matkustajat pelastettiin noin puolen tunnin odotuksen jälkeen.\n\nPelastuslaitos sai tehtävän Linnanmäelle perjantaina kello 18.47. Hälytys saapui nimikkeellä ihmisen pelastaminen ylhäältä tai alhaalta. Tällä kertaa kyse oli ensin mainitusta.\n\nTilanne oli kuitenkin jo ratkennut ennen kuin pelastajat ehtivät paikalle.\n\n– Pelastuslaitoksella ei tehtävää. Huvipuiston henkilökunta sai itse asiakkaat pois vikaantuneesta laitteesta. Pelastuslaitoksella ei aiheesta enempää tiedotettavaa, tiedotteessa kerrottiin.\n\nIlta-Sanomat kertoo jumittuneen laitteen olevan vuoristorata Ukko.\n\nHuvipuiston turvallisuus- ja vastuullisuusjohtaja Satu Orismaa kertoi IS:lle laitteen ehtineen olla jumittuneena puolisen tuntia.\n\nLukijan IS:lle lähettämän kuvan perusteella laita jumittui ensimmäiseen pystysuoraan nousuun. Matkustajat joutuivat odottamaan pelastusta selät kohti maata.\n\nOrismaa kertoo Ilta-Sanomille, että vikaa selvitetään.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T12:33:22.612678+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T123119Z_7adee9ce2b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
