@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T04:51:21.368269+00:00",
+  "digest": "88c336bda4",
+  "packet": {
+    "packet_id": "20260521T045121Z_88c336bda4",
+    "created_at": "2026-05-21T04:51:21Z",
+    "headline_seed": "Alaikäiset saavat alkoholia helposti – ryhmäpaine kannustaa juomiseen",
+    "description_seed": "Yli 70 prosenttia nuorista pitää alkoholin hankkimista alaikäisenä erittäin tai melko helppona, kertoo EHYT ry:n kysely.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/alaikaiset-saavat-alkoholia-helposti-ryhmapaine-kannustaa-juomiseen/9341586",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/alaikaiset-saavat-alkoholia-helposti-ryhmapaine-kannustaa-juomiseen/9341586"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Alaikäiset saavat alkoholia helposti – ryhmäpaine kannustaa juomiseen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 105,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Seiska",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Alaikäiset saavat alkoholia helposti – ryhmäpaine kannustaa juomiseen",
+      "description": "Yli 70 prosenttia nuorista pitää alkoholin hankkimista alaikäisenä erittäin tai melko helppona, kertoo EHYT ry:n kysely.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Alaikäiset saavat alkoholia helposti – ryhmäpaine kannustaa juomiseen",
+    "description": "Yli 70 prosenttia nuorista pitää alkoholin hankkimista alaikäisenä erittäin tai melko helppona, kertoo EHYT ry:n kysely.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/alaikaiset-saavat-alkoholia-helposti-ryhmapaine-kannustaa-juomiseen/9341586",
+    "published": "2026-05-21T04:31:40+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "700ce85462b5f41a5aeb1edc0d4954dd",
+    "_url_hash": "acac76519f56c46feb5177e166f0d7623748f5ada7a89b51a67dcc1cd3bb3883",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Seiska]\nKeskusrikospoliisi tiedotti joulukuun alussa verkossa toimineen Silkkitie-verkkokaupan sulkemisesta.\n\nVerkkokaupat mahdollistavat anonyymin huumekaupan, minkä takia myös alaikäiset pystyvät ostamaan huumeita ja myyjät pysyvät tuntemattomina.\n\n– Huumeiden saatavuus on kasvanut räjähdysmäisesti viidessä vuodessa, ja nuoret pystyvät ostamaan huumeita helpommin kuin tupakkaa tai alkoholia. Kuusivuotiaat ovat nuorimpia tapaamiani kannabiksen kokeilijoita. 10-vuotiaillakin on jo vakavia päihderiippuvuuksia, ja 13-vuotiaat käyttävät metamfetamiinia säännöllisesti, Carita Huvinen kertoo.\n\nRikkaan suomalaisperheen poika, 17, perusti jättimäisen huumekaupan: Kadun kaksoiselämääni!\n\nCarita, 46, on pyörittänyt työkseen lukuisia lastensuojelulaitoksia. Hän on halunnut keskittyä erityisesti nuoriin, joille ei ole löytynyt pysyvää paikkaa muualta.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T04:53:38.523020+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä tai valittuja lähdekatkelmia, joten 250 sanan julkaistavaa artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T045121Z_88c336bda4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä tai valittuja lähdekatkelmia, joten 250 sanan julkaistavaa artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}

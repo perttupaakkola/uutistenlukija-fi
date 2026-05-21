@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T06:01:19.861606+00:00",
+  "digest": "ba8226a172",
+  "packet": {
+    "packet_id": "20260521T060119Z_ba8226a172",
+    "created_at": "2026-05-21T06:01:19Z",
+    "headline_seed": "Venäjä yllätti ydinase­harjoituksella – ISW: yritys peittää heikkoutta",
+    "description_seed": "Harjoitukseen osallistuvat ydintriadin kaikki osat.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012021632.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012021632.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Venäjä yllätti ydinase­harjoituksella – ISW: yritys peittää heikkoutta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 107,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Venäjä yllätti ydinase­harjoituksella – ISW: yritys peittää heikkoutta",
+      "description": "Harjoitukseen osallistuvat ydintriadin kaikki osat.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Venäjä yllätti ydinase­harjoituksella – ISW: yritys peittää heikkoutta",
+    "description": "Harjoitukseen osallistuvat ydintriadin kaikki osat.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012021632.html",
+    "published": "2026-05-21T05:31:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "07973016b294ceedfc446264375dfe4f",
+    "_url_hash": "02b1c246480258eaf9c70dc1efbd71ffed2e91476ea64880f24d53f13a7e3d04",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Helsingin Uutiset]\nVuoristoradan matkustajat pelastettiin noin puolen tunnin odotuksen jälkeen.\n\nPelastuslaitos sai tehtävän Linnanmäelle perjantaina kello 18.47. Hälytys saapui nimikkeellä ihmisen pelastaminen ylhäältä tai alhaalta. Tällä kertaa kyse oli ensin mainitusta.\n\nTilanne oli kuitenkin jo ratkennut ennen kuin pelastajat ehtivät paikalle.\n\n– Pelastuslaitoksella ei tehtävää. Huvipuiston henkilökunta sai itse asiakkaat pois vikaantuneesta laitteesta. Pelastuslaitoksella ei aiheesta enempää tiedotettavaa, tiedotteessa kerrottiin.\n\nIlta-Sanomat kertoo jumittuneen laitteen olevan vuoristorata Ukko.\n\nHuvipuiston turvallisuus- ja vastuullisuusjohtaja Satu Orismaa kertoi IS:lle laitteen ehtineen olla jumittuneena puolisen tuntia.\n\nLukijan IS:lle lähettämän kuvan perusteella laita jumittui ensimmäiseen pystysuoraan nousuun. Matkustajat joutuivat odottamaan pelastusta selät kohti maata.\n\nOrismaa kertoo Ilta-Sanomille, että vikaa selvitetään.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T06:03:19.402709+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä eikä riittäviä varmistettuja faktoja vähintään 250 sanan julkaistavaan artikkeliin ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T060119Z_ba8226a172\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä eikä riittäviä varmistettuja faktoja vähintään 250 sanan julkaistavaan artikkeliin ilman keksittyjä tietoja.\"}"
+}

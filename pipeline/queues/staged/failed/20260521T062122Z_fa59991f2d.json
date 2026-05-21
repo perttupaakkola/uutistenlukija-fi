@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T06:21:22.103067+00:00",
+  "digest": "fa59991f2d",
+  "packet": {
+    "packet_id": "20260521T062122Z_fa59991f2d",
+    "created_at": "2026-05-21T06:21:22Z",
+    "headline_seed": "Kyselyt | Oletko jonottanut Helsingin kaupungin asuntoa vuosia? Vastaa kyselyyn",
+    "description_seed": "HS kerää kokemuksia Helsingin kaupungin asuntojonoista.",
+    "link": "https://www.hs.fi/helsinki/art-2000012021458.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/helsinki/art-2000012021458.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kyselyt | Oletko jonottanut Helsingin kaupungin asuntoa vuosia? Vastaa kyselyyn"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 180,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset",
+        "Verkkouutiset",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kyselyt | Oletko jonottanut Helsingin kaupungin asuntoa vuosia? Vastaa kyselyyn",
+      "description": "HS kerää kokemuksia Helsingin kaupungin asuntojonoista.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kyselyt | Oletko jonottanut Helsingin kaupungin asuntoa vuosia? Vastaa kyselyyn",
+    "description": "HS kerää kokemuksia Helsingin kaupungin asuntojonoista.",
+    "link": "https://www.hs.fi/helsinki/art-2000012021458.html",
+    "published": "2026-05-21T06:19:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "12cd1e670a6c82af6a9913b02d741af8",
+    "_url_hash": "ccf5cf6c49b0b6e5081690ee5aa8191f8a8367f2faa94d0efd623c4cb6ac6576",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Helsingin Uutiset]\nTilanne vaikuttaa erityisesti niihin, jotka etsivät kohtuuhintaista vuokra- tai asumisoikeusasuntoa Helsingistä.\n\nHelsingissä aloitettiin viime vuonna 838 uuden asunnon rakentaminen, kun tavoite oli 1 500 asuntoa. Valtion tukeman asuntorakentamisen keskuksen eli Varken vuokra-asuntojen ja asumisoikeusasuntojen rakennushankkeita aloitettiin 712.\n\nVuokra-asuntojen osuus jäi noin 300 asuntoa alle tavoitteen. Vuokra-asuntojen puute korostuu kaupungin omassa tuotannossa.\n\nKaupungin oman asuntotuotannon osuus koko kaupungin alkaneista asunnoista oli viime vuonna noin 26 prosenttia. Tilanne vaikuttaa erityisesti niihin, jotka etsivät kohtuuhintaista vuokra- tai asumisoikeusasuntoa Helsingistä.\n\nHitas-asuntoja ja asumisoikeusasuntoja rakennettiin tavoitetta enemmän.\n\n---\n\n[Lähde: Verkkouutiset]\nTilanne Helsingin vuokramarkkinoilla on historiallinen. Kun vuonna 2015 vapaarahoitteisia vuokra-asuntoja oli tarjolla 3,1 jokaista tuhatta asukasta kohti, maaliskuussa 2026 sama luku oli 10,1. Tarjonta on siis yli kolminkertaistunut reilussa vuosikymmenessä.\n\nSuurimmissa kaupungeissa vuokra-asunnoista on ylitarjontaa, mutta pääkaupunkiseudulla asuntoja on vapaana eniten.\n\nSuomen Vuokranantajat ry:n ekonomisti Eemeli Karlsson on mallintanut markkinatilannetta tarkasti. Johtopäätös on tyly: vaikka uusia asuntohankkeita ei hyväksyttäisi enää yhtään, ylitarjonta ei sula vuoden 2015 tasolle kuin aikaisintaan vuonna 2029.\n\n– Edelleenkään 2020-luvulla ei ole yhtään vuotta Helsingissä, jolloin asuntoja valmistuisi vähemmän kuin asuntokuntien määrä on kasvanut, Karlsson toteaa Verkkouutisille.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T06:23:19.082423+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja faktoja 250 sanan uutisartikkeliin ilman täydennysten keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T062122Z_fa59991f2d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja faktoja 250 sanan uutisartikkeliin ilman täydennysten keksimistä.\"}"
+}

@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/live/2026/may/21/australia-news-live-penny-wong-israel-flotilla-budget-capital-gains-negative-gearing-anthony-albanese-jim-chalmers-ntwnfb"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
