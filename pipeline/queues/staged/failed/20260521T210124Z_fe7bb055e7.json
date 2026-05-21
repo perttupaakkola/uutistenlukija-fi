@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T21:01:24.102876+00:00",
+  "digest": "fe7bb055e7",
+  "packet": {
+    "packet_id": "20260521T210124Z_fe7bb055e7",
+    "created_at": "2026-05-21T21:01:24Z",
+    "headline_seed": "Danes try to tow dead whale from island beach after failed German rescue",
+    "description_seed": "An environmental team want to move the whale from Anholt to the Danish mainland, but they have had to pause the operation.",
+    "link": "https://www.bbc.com/news/articles/c62xrkre9vzo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c62xrkre9vzo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Danes try to tow dead whale from island beach after failed German rescue"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Danish environment officials have begun an operation to move the carcass of a humpback whale from an island beach across the sea to mainland Denmark. The dead whale was discovered on the shores of Anholt island last weekend, two weeks after a private mission to save the humpback from being stranded on Germany's Baltic Sea coast ended in failure. Denmark's environmental protection agency said the carcass, not far from the beach, was causing significant disruption, and decided it should be transported by sea to the port of Grenaa, about 57km (35 miles) to the south-west. Islanders had earlier been urged to keep away from the whale because of the risk of infection. One woman on Anholt said before the operation to move it had begun: \"It's around 20-30m (65-100ft) from the beach but it's drifting along the beach.\"",
+        "word_count": 138,
+        "keyword_overlap": 13,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "An environmental team want to move the whale from Anholt to the Danish mainland, but they have had to pause the operation.",
+        "word_count": 22,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The whale has gained in size in recent days because of a build-up of gas as the carcass decomposes, and there is widespread concern it might explode. \"That's nature. I know some people are worried, but I'm not,\" the islander told the BBC. Early on Thursday, an emergency response team arrived off the coast of Anholt to begin the operation to move the whale, first by towing the carcass into deeper water and then transporting it with a larger boat to Grenaa. However, Jane Hansen from the environmental protection agency said that the operation had not been a success: \"After several attempts, the whale has now become stranded on a sandbank some distance from the shore.\" \"The operation has therefore been temporarily paused while the emergency response team explores alternative options for transporting the whale,\" she added.",
+        "word_count": 137,
+        "keyword_overlap": 8,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Some German tourists have appeared on the island in recent days to follow developments about the whale that some media outlets labelled \"Timmy\" - named after the sandban ---",
+        "word_count": 29,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Danish environment officials have begun an operation to move the carcass of a humpback whale from an island beach across the sea to mainland Denmark. The dead whale was discovered on the shores of Anholt island last weekend, two weeks after a private mission to save the humpback from being stranded on Germany's Baltic Sea coast ended in failure. Denmark's environmental protection agency said the carcass, not far from the beach, was causing significant disruption, and decided it should be transported by sea to the port of Grenaa, about 57km (35 miles) to the south-west. Islanders had earlier been urged to keep away from the whale because of the risk of infection. One woman on Anholt said before the operation to move it had begun: \"It's around 20-30m (65-100ft) from the beach but it's drifting along the beach.\"\n\nAn environmental team want to move the whale from Anholt to the Danish mainland, but they have had to pause the operation.\n\nThe whale has gained in size in recent days because of a build-up of gas as the carcass decomposes, and there is widespread concern it might explode. \"That's nature. I know some people are worried, but I'm not,\" the islander told the BBC. Early on Thursday, an emergency response team arrived off the coast of Anholt to begin the operation to move the whale, first by towing the carcass into deeper water and then transporting it with a larger boat to Grenaa. However, Jane Hansen from the environmental protection agency said that the operation had not been a success: \"After several attempts, the whale has now become stranded on a sandbank some distance from the shore.\" \"The operation has therefore been temporarily paused while the emergency response team explores alternative options for transporting the whale,\" she added.\n\nSome German tourists have appeared on the island in recent days to follow developments about the whale that some media outlets labelled \"Timmy\" - named after the sandban ---",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 859,
+      "selected_blocks": 4,
+      "selected_source_words": 326,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Yahoo News Canada",
+        "Yahoo News Canada",
+        "Yahoo News Canada",
+        "Yahoo News Canada",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Danes try to tow dead whale from island beach after failed German rescue",
+      "description": "An environmental team want to move the whale from Anholt to the Danish mainland, but they have had to pause the operation.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Danes try to tow dead whale from island beach after failed German rescue",
+    "description": "An environmental team want to move the whale from Anholt to the Danish mainland, but they have had to pause the operation.",
+    "link": "https://www.bbc.com/news/articles/c62xrkre9vzo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-21T20:40:08+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "85d5311e76aef3d74ad300330509931c",
+    "_url_hash": "052584dd629d9d50283495d8c392277a049670141597e08ac9de64d4008a8b33",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nDanish environment officials have begun an operation to move the carcass of a humpback whale from an island beach across the sea to mainland Denmark.\n\nThe dead whale was discovered on the shores of Anholt island last weekend, two weeks after a private mission to save the humpback from being stranded on Germany's Baltic Sea coast ended in failure.\n\nDenmark's environmental protection agency said the carcass, not far from the beach, was causing significant disruption, and decided it should be transported by sea to the port of Grenaa, about 57km (35 miles) to the south-west.\n\nIslanders had earlier been urged to keep away from the whale because of the risk of infection.\n\nOne woman on Anholt said before the operation to move it had begun: \"It's around 20-30m (65-100ft) from the beach but it's drifting along the beach.\"\n\nThe whale has gained in size in recent days because of a build-up of gas as the carcass decomposes, and there is widespread concern it might explode.\n\n\"That's nature. I know some people are worried, but I'm not,\" the islander told the BBC.\n\nEarly on Thursday, an emergency response team arrived off the coast of Anholt to begin the operation to move the whale, first by towing the carcass into deeper water and then transporting it with a larger boat to Grenaa.\n\nHowever, Jane Hansen from the environmental protection agency said that the operation had not been a success: \"After several attempts, the whale has now become stranded on a sandbank some distance from the shore.\"\n\n\"The operation has therefore been temporarily paused while the emergency response team explores alternative options for transporting the whale,\" she added.\n\nThe agency said it still aimed to take the whale to the harbour at Grenaa for a post-mortem examination as well as to allow researchers to collect \"valuable scientific samples\".\n\nHowever, the next attempt is unlikely to take place before the end of Denmark's long public holiday weekend.\n\nExactly how the whale ended up on an island off Denmark's East Jutland coast in the Kattegat strait is a mystery. The barge that carried the mammal away from Germany released it into the sea about 70km (45 miles) from the northern tip of Denmark.\n\nThe saga has transfixed Germans since early March, and has left islanders on Anholt bemused by the continued interest in the story.\n\nSome German tourists have appeared on the island in recent days to follow developments about the whale that some media outlets labelled \"Timmy\" - named after the sandban\n\n---\n\n[Lähde: Yahoo News Canada]\nDanish environment officials have begun an operation to move the carcass of a humpback whale from an island beach across the sea to mainland Denmark.\n\nThe dead whale was discovered on the shores of Anholt island last weekend, two weeks after a private mission to save the humpback from being stranded on Germany's Baltic Sea coast ended in failure.\n\nDenmark's environmental protection agency said the carcass, not far from the beach, was causing significant disruption, and decided it should be transported by sea to the port of Grenaa, about 57km (35 miles) to the south-west.\n\nIslanders had earlier been urged to keep away from the whale because of the risk of infection.\n\nOne woman on Anholt said before the operation to move it had begun: \"It's around 20-30m (65-100ft) from the beach but it's drifting along the beach.\"\n\nThe whale has gained in size in recent days because of a build-up of gas as the carcass decomposes, and there is widespread concern it might explode.\n\n\"That's nature. I know some people are worried, but I'm not,\" the islander told the BBC.\n\nEarly on Thursday, an emergency response team arrived off the coast of Anholt to begin the operation to move the whale, first by towing the carcass into deeper water and then transporting it with a larger boat to Grenaa.\n\nHowever, Jane Hansen from the environmental protection agency said that the operation had not been a success: \"After several attempts, the whale has now become stranded on a sandbank some distance from the shore.\"\n\n\"The operation has therefore been temporarily paused while the emergency response team explores alternative options for transporting the whale,\" she added.\n\nThe agency said it still aimed to take the whale to the harbour at Grenaa for a post-mortem examination as well as to allow researchers to collect \"valuable scientific samples\".\n\nHowever, the next attempt is unlikely to take place before the end of Denmark's long public holiday weekend.\n\nExactly how the whale ended up on an island off Denmark's East Jutland coast in the Kattegat strait is a mystery. The barge that carried the mammal away from Germany released it into the sea about 70km (45 miles) from the northern tip of Denmark.\n\nThe saga has transfixed Germans since early March, and has left islanders on Anholt bemused by the continued interest in the story.\n\nSome German tourists have appeared on the island in recent days to follow developments about the whale that some media outlets labelled \"Timmy\" - named after the sandban",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T21:04:48.875657+00:00",
+  "failure": "content too short: 241 words",
+  "payload": {
+    "packet_id": "20260521T210124Z_fe7bb055e7",
+    "title": "Kuolleen ryhävalaan siirto Tanskan Anholtin rannalta keskeytyi",
+    "summary": "Tanskan ympäristöviranomaiset yrittävät siirtää kuolleen ryhävalaan Anholtin saaren rannalta mantereelle, mutta operaatio on toistaiseksi keskeytetty valaan juututtua hiekkasärkälle.",
+    "content": "Tanskan ympäristöviranomaiset ovat yrittäneet siirtää kuolleen ryhävalaan ruhon Anholtin saaren rannalta meriteitse Grenaan satamaan, mutta operaatio ei ole edennyt suunnitellusti. Valas on ollut lähellä rantaa ja aiheuttanut viranomaisten mukaan merkittävää häiriötä, minkä lisäksi saaren asukkaita on kehotettu pysymään loitolla tartuntariskin vuoksi.\n\n## Ruho halutaan kuljettaa mantereelle\n\nKuollut ryhävalas löydettiin Anholtin rannalta viime viikonloppuna. Tanskan ympäristönsuojeluvirasto päätti, että ruho kuljetetaan meritse Grenaan satamaan, joka sijaitsee noin 57 kilometrin päässä saaresta lounaaseen.\n\nViranomaisten suunnitelmana oli ensin hinata ruho syvempään veteen ja siirtää se sen jälkeen suuremmalla aluksella mantereelle. Torstaina Anholtin edustalle saapui pelastus- ja valmiusryhmä aloittamaan siirtoa.\n\nOperaatio osoittautui kuitenkin vaikeaksi. Ympäristönsuojeluviraston Jane Hansenin mukaan useiden yritysten jälkeen valas päätyi hiekkasärkälle jonkin matkan päähän rannasta. Tämän vuoksi siirto keskeytettiin väliaikaisesti, kun ryhmä selvittää muita vaihtoehtoja ruhon kuljettamiseksi pois alueelta.\n\n## Hajoava ruho herättää huolta\n\nValas on kasvanut viime päivinä kooltaan, koska hajoamisessa syntyvä kaasu on kertynyt ruhon sisään. Tämän vuoksi on herännyt huolta siitä, että ruho voisi revetä tai räjähtää. Eräs Anholtin asukas kuvasi valaan olleen ennen siirtoyritystä noin 20–30 metrin päässä rannasta ja ajautuneen rantaviivan suuntaisesti.\n\nViranomaiset ovat kehottaneet ihmisiä pitämään etäisyyttä valaaseen mahdollisen infektiovaaran takia. Tapaus on herättänyt huomiota myös saaren ulkopuolella, ja Anholtille on saapunut saksalaisia matkailijoita seuraamaan tilanteen etenemistä.\n\nValas oli aiemmin yhteydessä Saksassa epäonnistuneeseen yksityiseen pelastusyritykseen. Se löydettiin Tanskasta noin kaksi viikkoa sen jälkeen, kun yritys pelastaa ryhävalas rantautumiselta Saksan Itämeren rannikolla oli päättynyt tuloksetta. Tanskan viranomaiset arvioivat nyt, miten ruho saadaan siirrettyä turvallisesti pois Anholtin rannan läheisyydestä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Tanska",
+      "Anholt",
+      "ryhävalas",
+      "ympäristöviranomaiset",
+      "Grenaa"
+    ],
+    "summary_bullets": [
+      "Tanskan viranomaiset yrittävät siirtää kuolleen ryhävalaan Anholtin saarelta Grenaan satamaan.",
+      "Operaatio keskeytettiin, kun valas juuttui hiekkasärkälle useiden siirtoyritysten jälkeen.",
+      "Saaren asukkaita on kehotettu pysymään loitolla ruhosta tartuntariskin vuoksi."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Perustuu annettuun lähdepakettiin. Kategoria korjattu Ulkomaat-luokkaan, koska tapahtuma sijoittuu Tanskaan eikä Suomeen."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260521T210124Z_fe7bb055e7\",\n  \"title\": \"Kuolleen ryhävalaan siirto Tanskan Anholtin rannalta keskeytyi\",\n  \"summary\": \"Tanskan ympäristöviranomaiset yrittävät siirtää kuolleen ryhävalaan Anholtin saaren rannalta mantereelle, mutta operaatio on toistaiseksi keskeytetty valaan juututtua hiekkasärkälle.\",\n  \"content\": \"Tanskan ympäristöviranomaiset ovat yrittäneet siirtää kuolleen ryhävalaan ruhon Anholtin saaren rannalta meriteitse Grenaan satamaan, mutta operaatio ei ole edennyt suunnitellusti. Valas on ollut lähellä rantaa ja aiheuttanut viranomaisten mukaan merkittävää häiriötä, minkä lisäksi saaren asukkaita on kehotettu pysymään loitolla tartuntariskin vuoksi.\\n\\n## Ruho halutaan kuljettaa mantereelle\\n\\nKuollut ryhävalas löydettiin Anholtin rannalta viime viikonloppuna. Tanskan ympäristönsuojeluvirasto päätti, että ruho kuljetetaan meritse Grenaan satamaan, joka sijaitsee noin 57 kilometrin päässä saaresta lounaaseen.\\n\\nViranomaisten suunnitelmana oli ensin hinata ruho syvempään veteen ja siirtää se sen jälkeen suuremmalla aluksella mantereelle. Torstaina Anholtin edustalle saapui pelastus- ja valmiusryhmä aloittamaan siirtoa.\\n\\nOperaatio osoittautui kuitenkin vaikeaksi. Ympäristönsuojeluviraston Jane Hansenin mukaan useiden yritysten jälkeen valas päätyi hiekkasärkälle jonkin matkan päähän rannasta. Tämän vuoksi siirto keskeytettiin väliaikaisesti, kun ryhmä selvittää muita vaihtoehtoja ruhon kuljettamiseksi pois alueelta.\\n\\n## Hajoava ruho herättää huolta\\n\\nValas on kasvanut viime päivinä kooltaan, koska hajoamisessa syntyvä kaasu on kertynyt ruhon sisään. Tämän vuoksi on herännyt huolta siitä, että ruho voisi revetä tai räjähtää. Eräs Anholtin asukas kuvasi valaan olleen ennen siirtoyritystä noin 20–30 metrin päässä rannasta ja ajautuneen rantaviivan suuntaisesti.\\n\\nViranomaiset ovat kehottaneet ihmisiä pitämään etäisyyttä valaaseen mahdollisen infektiovaaran takia. Tapaus on herättänyt huomiota myös saaren ulkopuolella, ja Anholtille on saapunut saksalaisia matkailijoita seuraamaan tilanteen etenemistä.\\n\\nValas oli aiemmin yhteydessä Saksassa epäonnistuneeseen yksityiseen pelastusyritykseen. Se löydettiin Tanskasta noin kaksi viikkoa sen jälkeen, kun yritys pelastaa ryhävalas rantautumiselta Saksan Itämeren rannikolla oli päättynyt tuloksetta. Tanskan viranomaiset arvioivat nyt, miten ruho saadaan siirrettyä turvallisesti pois Anholtin rannan läheisyydestä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Tanska\",\n    \"Anholt\",\n    \"ryhävalas\",\n    \"ympäristöviranomaiset\",\n    \"Grenaa\"\n  ],\n  \"summary_bullets\": [\n    \"Tanskan viranomaiset yrittävät siirtää kuolleen ryhävalaan Anholtin saarelta Grenaan satamaan.\",\n    \"Operaatio keskeytettiin, kun valas juuttui hiekkasärkälle useiden siirtoyritysten jälkeen.\",\n    \"Saaren asukkaita on kehotettu pysymään loitolla ruhosta tartuntariskin vuoksi.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Perustuu annettuun lähdepakettiin. Kategoria korjattu Ulkomaat-luokkaan, koska tapahtuma sijoittuu Tanskaan eikä Suomeen.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260521T210124Z_fe7bb055e7",
+    "category": "Kotimaa",
+    "selected_source_words": 326,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 241,
+    "issues": [
+      "content too short: 241 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Kuolleen ryhävalaan siirto Tanskan Anholtin rannalta keskeytyi",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-21T21:04:48.875440+00:00",
+    "repair_trigger": "pre_repair_word_count=241; selected_source_words=326; selected_source_blocks=4",
+    "pre_repair_word_count": 241,
+    "pre_repair_lead_word_count": 41,
+    "post_repair_word_count": 241,
+    "post_repair_lead_word_count": 41,
+    "selected_source_words_at_repair": 326,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 326,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 241 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:b1332f9a52",
+      "2:BBC World:572ebd9230",
+      "3:BBC World:ae7de9b275",
+      "4:BBC World:609dbf28b1"
+    ],
+    "final_issues": [
+      "content too short: 241 words"
+    ],
+    "recovered": false
+  }
+}

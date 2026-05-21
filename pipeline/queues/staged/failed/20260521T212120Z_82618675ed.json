@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T21:21:20.401530+00:00",
+  "digest": "82618675ed",
+  "packet": {
+    "packet_id": "20260521T212120Z_82618675ed",
+    "created_at": "2026-05-21T21:21:20Z",
+    "headline_seed": "Trump: Tuhansia sotilaita Puolaan",
+    "description_seed": "Yhdysvaltain presidentti Donald Trump ylistää suhdettaan Puolan presidentti Karol Nawrockiin. Yhdysvallat lähettää 5 000 amerikkalaissotilasta Puolaan, kertoo Yhdysvaltain presidentti Donald Trump. Trump kehuu suhdettaan Puolan presidentti Karol Nawrockiin ja kertoo tukeneensa häntä viime vuonna järjestetyissä vaaleissa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/fdf3a41c-601f-4b1b-a69b-4cba5063bceb",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/fdf3a41c-601f-4b1b-a69b-4cba5063bceb"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump: Tuhansia sotilaita Puolaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Yhdysvaltain presidentti Donald Trump ylistää suhdettaan Puolan presidentti Karol Nawrockiin. Yhdysvallat lähettää 5 000 amerikkalaissotilasta Puolaan, kertoo Yhdysvaltain presidentti Donald Trump. Trump kehuu suhdettaan Puolan presidentti Karol Nawrockiin ja kertoo tukeneensa häntä viime vuonna järjestetyissä vaaleissa.",
+        "word_count": 36,
+        "keyword_overlap": 20,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Yhdysvaltain presidentti Donald Trump ylistää suhdettaan Puolan presidentti Karol Nawrockiin. Yhdysvallat lähettää 5 000 amerikkalaissotilasta Puolaan, kertoo Yhdysvaltain presidentti Donald Trump. Trump kehuu suhdettaan Puolan presidentti Karol Nawrockiin ja kertoo tukeneensa häntä viime vuonna järjestetyissä vaaleissa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 72,
+      "selected_blocks": 1,
+      "selected_source_words": 36,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump: Tuhansia sotilaita Puolaan",
+      "description": "Yhdysvaltain presidentti Donald Trump ylistää suhdettaan Puolan presidentti Karol Nawrockiin. Yhdysvallat lähettää 5 000 amerikkalaissotilasta Puolaan, kertoo Yhdysvaltain presidentti Donald Trump. Trump kehuu suhdettaan Puolan presidentti Karol Nawrockiin ja kertoo tukeneensa häntä viime vuonna järjestetyissä vaaleissa.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Trump: Tuhansia sotilaita Puolaan",
+    "description": "Yhdysvaltain presidentti Donald Trump ylistää suhdettaan Puolan presidentti Karol Nawrockiin. Yhdysvallat lähettää 5 000 amerikkalaissotilasta Puolaan, kertoo Yhdysvaltain presidentti Donald Trump. Trump kehuu suhdettaan Puolan presidentti Karol Nawrockiin ja kertoo tukeneensa häntä viime vuonna järjestetyissä vaaleissa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/fdf3a41c-601f-4b1b-a69b-4cba5063bceb",
+    "published": "2026-05-22T00:00:30+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "08d34f990e5184c95e0b47d403fb7f9f",
+    "_url_hash": "36f53ba79d83f2c14d3707cbbb650dee61ad86d479c4b53d838309c5bdf13010",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Yhdysvaltain presidentti Donald Trump ylistää suhdettaan Puolan presidentti Karol Nawrockiin. Yhdysvallat lähettää 5 000 amerikkalaissotilasta Puolaan, kertoo Yhdysvaltain presidentti Donald Trump. Trump kehuu suhdettaan Puolan presidentti Karol Nawrockiin ja kertoo tukeneensa häntä viime vuonna järjestetyissä vaaleissa.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-21T21:23:21.603695+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä taustatietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260521T212120Z_82618675ed\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä taustatietoja.\"}"
+}

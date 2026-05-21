@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-21T21:31:27.712048+00:00",
+  "digest": "a54a78a6c0",
+  "packet": {
+    "packet_id": "20260521T213127Z_a54a78a6c0",
+    "created_at": "2026-05-21T21:31:27Z",
+    "headline_seed": "Angry crowd sets Ebola hospital tents on fire in DR Congo",
+    "description_seed": "Grieving relatives and friends of a suspected Ebola victim were prevented from taking his body for burial.",
+    "link": "https://www.bbc.com/news/articles/cp8p2g8yp8do?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "South China Morning Post",
+      "Devdiscourse"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cp8p2g8yp8do?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Angry crowd sets Ebola hospital tents on fire in DR Congo"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Grieving relatives and friends of a suspected Ebola victim were prevented from taking his body for burial.",
+        "word_count": 17,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "An angry crowd set alight a section of a hospital at the epicentre of the Ebola outbreak in the eastern Democratic Republic of Congo after family and friends of a young man thought to have died from the virus were prevented from taking his body away for burial. \"They started throwing projectiles at the hospital. They even set fire to tents that were being used as isolation wards,\" local politician Luc Malembe Malembe told the BBC about the scene he witnessed at Rwampara General Hospital. In the chaos, police fired warning shots to disperse the crowd. The body of a dead Ebola victim is highly infectious and the authorities need to ensure safe burial to stop the spread of the virus.",
+        "word_count": 121,
+        "keyword_overlap": 15,
+        "strong_overlap": 6
+      },
+      {
+        "source": "South China Morning Post",
+        "source_type": "research",
+        "text": "Residents set fire to tents at an Ebola centre in Rwampara after a victim’s family were stopped from retrieving his body for burial Police fired warning shots and tear gas ⁠as part of a dispute in northeastern DR Congo over the burial of a suspected Ebola victim, a footballer who played for local teams, that saw protesters burn down tents for Ebola patients, Reuters witnesses said. The incident highlighted the struggle Congolese authorities could face to enforce the safe burials of people with confirmed and suspected cases that are required to help contain the outbreak. It took place in the town ‌of Rwampara, which has been hit hard by the latest Ebola outbreak caused by the Bundibugyo strain of Ebola, for which there is no approved vaccine or treatment.",
+        "word_count": 129,
+        "keyword_overlap": 10,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Devdiscourse",
+        "source_type": "research",
+        "text": "People set fire to an Ebola treatment centre in a town at the heart of the outbreak in eastern Congo on Thursday after being stopped from retrieving the body of a local man, a senior police officer said, as fear and anger grow over a health crisis that doctors are struggling to contain. The arson attack in Rwampara reflects the challenges of health workers trying to curb a rare Ebola virus by using stringent measures that might clash with local customs, such as burial rites. The disease has been spreading for weeks in a region lacking in health facilities and where armed conflict has displaced many people. There are 148 suspected deaths and nearly 600 suspected cases in the outbreak. The World Health Organisation has declared it a public health emergency of international concern.",
+        "word_count": 134,
+        "keyword_overlap": 7,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Grieving relatives and friends of a suspected Ebola victim were prevented from taking his body for burial.\n\nAn angry crowd set alight a section of a hospital at the epicentre of the Ebola outbreak in the eastern Democratic Republic of Congo after family and friends of a young man thought to have died from the virus were prevented from taking his body away for burial. \"They started throwing projectiles at the hospital. They even set fire to tents that were being used as isolation wards,\" local politician Luc Malembe Malembe told the BBC about the scene he witnessed at Rwampara General Hospital. In the chaos, police fired warning shots to disperse the crowd. The body of a dead Ebola victim is highly infectious and the authorities need to ensure safe burial to stop the spread of the virus.\n\nResidents set fire to tents at an Ebola centre in Rwampara after a victim’s family were stopped from retrieving his body for burial Police fired warning shots and tear gas ⁠as part of a dispute in northeastern DR Congo over the burial of a suspected Ebola victim, a footballer who played for local teams, that saw protesters burn down tents for Ebola patients, Reuters witnesses said. The incident highlighted the struggle Congolese authorities could face to enforce the safe burials of people with confirmed and suspected cases that are required to help contain the outbreak. It took place in the town ‌of Rwampara, which has been hit hard by the latest Ebola outbreak caused by the Bundibugyo strain of Ebola, for which there is no approved vaccine or treatment.\n\nPeople set fire to an Ebola treatment centre in a town at the heart of the outbreak in eastern Congo on Thursday after being stopped from retrieving the body of a local man, a senior police officer said, as fear and anger grow over a health crisis that doctors are struggling to contain. The arson attack in Rwampara reflects the challenges of health workers trying to curb a rare Ebola virus by using stringent measures that might clash with local customs, such as burial rites. The disease has been spreading for weeks in a region lacking in health facilities and where armed conflict has displaced many people. There are 148 suspected deaths and nearly 600 suspected cases in the outbreak. The World Health Organisation has declared it a public health emergency of international concern.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 835,
+      "selected_blocks": 4,
+      "selected_source_words": 401,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Devdiscourse",
+        "Devdiscourse",
+        "South China Morning Post",
+        "South China Morning Post",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "South China Morning Post",
+        "Devdiscourse"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Angry crowd sets Ebola hospital tents on fire in DR Congo",
+      "description": "Grieving relatives and friends of a suspected Ebola victim were prevented from taking his body for burial.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Angry crowd sets Ebola hospital tents on fire in DR Congo",
+    "description": "Grieving relatives and friends of a suspected Ebola victim were prevented from taking his body for burial.",
+    "link": "https://www.bbc.com/news/articles/cp8p2g8yp8do?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-21T20:12:25+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "8ea6fbd218336a12c0d3382014c0155e",
+    "_url_hash": "b3efe972d8dddc8f17dd1f45c1a8f5ec8c3e3ca0e1d18c5808669a11912811e9",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAn angry crowd set alight a section of a hospital at the epicentre of the Ebola outbreak in the eastern Democratic Republic of Congo after family and friends of a young man thought to have died from the virus were prevented from taking his body away for burial.\n\n\"They started throwing projectiles at the hospital. They even set fire to tents that were being used as isolation wards,\" local politician Luc Malembe Malembe told the BBC about the scene he witnessed at Rwampara General Hospital.\n\nIn the chaos, police fired warning shots to disperse the crowd.\n\nThe body of a dead Ebola victim is highly infectious and the authorities need to ensure safe burial to stop the spread of the virus.\n\nMedical workers at the Rwampara hospital, located near the city of Bunia in Ituri province, where almost all of the cases have been reported, were placed under military protection as the police moved in to restore order.\n\nA healthcare worker was injured by stone-throwing protesters before law enforcement agents intervened, a hospital worker told the AFP news agency.\n\nThe man who died was a popular figure in the local community and those upset by his death did not \"grasp the reality of the disease,\" Jean Claude Mukendi, who is co-ordinating the security response to Ebola in Ituri, told the Associated Press.\n\nWitnesses told Reuters the young man was a footballer who had played with several local teams. His mother told the news agency she believed her son had died of typhoid fever, not Ebola.\n\nMalembe said the crowd did not believe the virus, which has so far killed more than 130 in eastern DR Congo, was real.\n\n\"People are not properly informed or sensitised about what is happening. For a certain segment of the population, especially in remote areas, Ebola is an invention by outsiders - it does not exist,\" the politician said.\n\n\"They believe it is the NGOs and hospitals creating this to make money, and this is tragic.\"\n\nHe said two tents had been burned down, along with a body that had been due to be buried.\n\nThe World Health Organization (WHO) recommends \"safe and dignified burials\" for Ebola victims, with trained teams using protective equipment to handle bodies.\n\nSix patients had been receiving treatment in the tents on the grounds of the hospital - and it was reported they may have fled in the mayhem.\n\nBut according to the medical charity Alima, which reportedly ran the tents, they are all accounted for and \"are currently being cared for at the hospital\".\n\nThe unrest came as\n\n---\n\n[Lähde: Devdiscourse]\nPeople set fire to an Ebola treatment centre in a town at the heart of the outbreak in eastern Congo on Thursday after being stopped from retrieving the body of a local man, a senior police officer said, as fear and anger grow over a health crisis that doctors are struggling to contain.\n\nThe arson attack in Rwampara reflects the challenges of health workers trying to curb a rare Ebola virus by using stringent measures that might clash with local customs, such as burial rites.\n\nThe disease has been spreading for weeks in a region lacking in health facilities and where armed conflict has displaced many people.\n\nThere are 148 suspected deaths and nearly 600 suspected cases in the outbreak. The World Health Organisation has declared it a public health emergency of international concern.\n\n(This story has not been edited by Devdiscourse staff and is auto-generated from a syndicated feed.)\n\n---\n\n[Lähde: South China Morning Post]\nResidents set fire to tents at an Ebola centre in Rwampara after a victim’s family were stopped from retrieving his body for burial\n\nPolice fired warning shots and tear gas ⁠as part of a dispute in northeastern DR Congo over the burial of a suspected Ebola victim, a footballer who played for local teams, that saw protesters burn down tents for Ebola patients, Reuters witnesses said.\n\nThe incident highlighted the struggle Congolese authorities could face to enforce the safe burials of people with confirmed and suspected cases that are required to help contain the outbreak.\n\nIt took place in the town ‌of Rwampara, which has been hit hard by the latest Ebola outbreak caused by the Bundibugyo strain of Ebola, for which there is no approved vaccine or treatment.\n\nBodies of Ebola victims are highly infectious after death, and unsafe burials – in which family members handle the body without proper protective equipment – are a leading driver of transmission.\n\nThe first known case in the current outbreak died in Bunia, Ituri’s provincial capital, on April 24 and the virus spread after his body was returned home to the nearby town of Mongbwalu and mourners gathered around him and touched him during a funeral.\n\nOn Thursday morning, the family of footballer Eli Munongo Wangu refused a safe burial for him, disputed that the virus had killed him and demanded to ‌take his body, the Reuters witnesses said.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-21T21:35:02.094882+00:00",
+  "failure": "content too short: 245 words",
+  "payload": {
+    "packet_id": "20260521T213127Z_a54a78a6c0",
+    "title": "Väkijoukko sytytti ebolakeskuksen telttoja tuleen Itä-Kongossa",
+    "summary": "Rwamparassa Kongon demokraattisen tasavallan itäosassa väkijoukko hyökkäsi sairaala-alueelle sen jälkeen, kun epäillyn ebolauhrin läheisiä estettiin viemästä ruumista haudattavaksi. Poliisi hajotti joukon varoituslaukauksilla ja kyynelkaasulla.",
+    "content": "Väkijoukko sytytti torstaina tuleen ebolakeskuksen telttoja Rwamparassa Kongon demokraattisen tasavallan itäosassa, kun epäiltyyn ebolaan kuolleen paikallisen miehen omaisia ja ystäviä estettiin viemästä hänen ruumistaan haudattavaksi. Tapauksen taustalla on viranomaisten vaatimus turvallisista hautauksista, sillä ebolaan kuolleen ruumis voi olla erittäin tartuttava ja levittää virusta eteenpäin.\n\n## Kiista hautauksesta johti väkivaltaan\n\nTilanne kärjistyi Rwamparan yleissairaalassa, joka sijaitsee viimeisimmän ebolaepidemian keskuksena pidetyllä alueella Itä-Kongossa. Paikallinen poliitikko Luc Malembe Malembe kertoi nähneensä, kuinka ihmiset heittivät sairaalaa kohti esineitä ja sytyttivät tuleen telttoja, joita käytettiin eristysosastoina.\n\nPoliisi ampui varoituslaukauksia väkijoukon hajottamiseksi. Lähdetietojen mukaan poliisi käytti tilanteessa myös kyynelkaasua. Mielenosoittajat olivat suuttuneet siitä, ettei epäillyn ebolauhrin ruumista annettu perheelle ja ystäville perinteistä hautausta varten. Miehen on kerrottu olleen paikallisissa joukkueissa pelannut jalkapalloilija.\n\n## Turvalliset hautaukset ovat epidemian torjunnan ytimessä\n\nEbolan torjunnassa hautauskäytännöt ovat erityisen herkkiä, koska ne koskevat sekä kansanterveyttä että paikallisia suru- ja hautausperinteitä. Viranomaiset ja terveydenhuollon työntekijät pyrkivät estämään tartuntoja varmistamalla, että vahvistettujen ja epäiltyjen ebolatapausten vainajat haudataan turvallisesti. Samalla tiukat toimet voivat lisätä epäluuloa ja vihaa yhteisöissä, joissa pelko taudista on jo suuri.\n\nRwampara on kärsinyt rajusti uusimmasta ebolaepidemiasta. Tautia aiheuttaa Bundibugyo-ebolakanta, johon ei lähdetietojen mukaan ole hyväksyttyä rokotetta tai hoitoa. Alueella terveydenhuollon resurssit ovat rajalliset, ja aseellinen konflikti on ajanut monia ihmisiä kodeistaan. Epidemian yhteydessä on raportoitu lähes 600 epäiltyä tartuntaa ja 148 epäiltyä kuolemaa.\n\n## WHO on julistanut kansainvälisen hätätilan\n\nMaailman terveysjärjestö on julistanut tilanteen kansainväliseksi kansanterveysuhaksi. Rwamparan välikohtaus osoittaa, kuinka vaikeaa epidemian hallinta voi olla, kun terveysviranomaisten välttämättömät torjuntatoimet törmäävät paikallisiin hautausperinteisiin ja yhteisöjen pelkoon.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kongon demokraattinen tasavalta",
+      "Ebola",
+      "Rwampara",
+      "terveys",
+      "Afrikka"
+    ],
+    "summary_bullets": [
+      "Väkijoukko sytytti ebolakeskuksen telttoja tuleen Rwamparassa Itä-Kongossa.",
+      "Kiista alkoi, kun epäillyn ebolauhrin läheisiä estettiin viemästä ruumista haudattavaksi.",
+      "Poliisi hajotti väkijoukon varoituslaukauksilla ja kyynelkaasulla.",
+      "Turvalliset hautaukset ovat keskeisiä ebolan leviämisen estämisessä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Artikkeli perustuu useista lähdekatkelmista yhteneviin tietoihin Rwamparan sairaala-alueen välikohtauksesta, turvallisten hautausten merkityksestä ja epidemiatilanteesta. Epäillyt tapaus- ja kuolemaluvut on esitetty epäiltyinä, koska lähdeaineisto käyttää samaa varausta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260521T213127Z_a54a78a6c0\",\n  \"title\": \"Väkijoukko sytytti ebolakeskuksen telttoja tuleen Itä-Kongossa\",\n  \"summary\": \"Rwamparassa Kongon demokraattisen tasavallan itäosassa väkijoukko hyökkäsi sairaala-alueelle sen jälkeen, kun epäillyn ebolauhrin läheisiä estettiin viemästä ruumista haudattavaksi. Poliisi hajotti joukon varoituslaukauksilla ja kyynelkaasulla.\",\n  \"content\": \"Väkijoukko sytytti torstaina tuleen ebolakeskuksen telttoja Rwamparassa Kongon demokraattisen tasavallan itäosassa, kun epäiltyyn ebolaan kuolleen paikallisen miehen omaisia ja ystäviä estettiin viemästä hänen ruumistaan haudattavaksi. Tapauksen taustalla on viranomaisten vaatimus turvallisista hautauksista, sillä ebolaan kuolleen ruumis voi olla erittäin tartuttava ja levittää virusta eteenpäin.\\n\\n## Kiista hautauksesta johti väkivaltaan\\n\\nTilanne kärjistyi Rwamparan yleissairaalassa, joka sijaitsee viimeisimmän ebolaepidemian keskuksena pidetyllä alueella Itä-Kongossa. Paikallinen poliitikko Luc Malembe Malembe kertoi nähneensä, kuinka ihmiset heittivät sairaalaa kohti esineitä ja sytyttivät tuleen telttoja, joita käytettiin eristysosastoina.\\n\\nPoliisi ampui varoituslaukauksia väkijoukon hajottamiseksi. Lähdetietojen mukaan poliisi käytti tilanteessa myös kyynelkaasua. Mielenosoittajat olivat suuttuneet siitä, ettei epäillyn ebolauhrin ruumista annettu perheelle ja ystäville perinteistä hautausta varten. Miehen on kerrottu olleen paikallisissa joukkueissa pelannut jalkapalloilija.\\n\\n## Turvalliset hautaukset ovat epidemian torjunnan ytimessä\\n\\nEbolan torjunnassa hautauskäytännöt ovat erityisen herkkiä, koska ne koskevat sekä kansanterveyttä että paikallisia suru- ja hautausperinteitä. Viranomaiset ja terveydenhuollon työntekijät pyrkivät estämään tartuntoja varmistamalla, että vahvistettujen ja epäiltyjen ebolatapausten vainajat haudataan turvallisesti. Samalla tiukat toimet voivat lisätä epäluuloa ja vihaa yhteisöissä, joissa pelko taudista on jo suuri.\\n\\nRwampara on kärsinyt rajusti uusimmasta ebolaepidemiasta. Tautia aiheuttaa Bundibugyo-ebolakanta, johon ei lähdetietojen mukaan ole hyväksyttyä rokotetta tai hoitoa. Alueella terveydenhuollon resurssit ovat rajalliset, ja aseellinen konflikti on ajanut monia ihmisiä kodeistaan. Epidemian yhteydessä on raportoitu lähes 600 epäiltyä tartuntaa ja 148 epäiltyä kuolemaa.\\n\\n## WHO on julistanut kansainvälisen hätätilan\\n\\nMaailman terveysjärjestö on julistanut tilanteen kansainväliseksi kansanterveysuhaksi. Rwamparan välikohtaus osoittaa, kuinka vaikeaa epidemian hallinta voi olla, kun terveysviranomaisten välttämättömät torjuntatoimet törmäävät paikallisiin hautausperinteisiin ja yhteisöjen pelkoon.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kongon demokraattinen tasavalta\",\n    \"Ebola\",\n    \"Rwampara\",\n    \"terveys\",\n    \"Afrikka\"\n  ],\n  \"summary_bullets\": [\n    \"Väkijoukko sytytti ebolakeskuksen telttoja tuleen Rwamparassa Itä-Kongossa.\",\n    \"Kiista alkoi, kun epäillyn ebolauhrin läheisiä estettiin viemästä ruumista haudattavaksi.\",\n    \"Poliisi hajotti väkijoukon varoituslaukauksilla ja kyynelkaasulla.\",\n    \"Turvalliset hautaukset ovat keskeisiä ebolan leviämisen estämisessä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Artikkeli perustuu useista lähdekatkelmista yhteneviin tietoihin Rwamparan sairaala-alueen välikohtauksesta, turvallisten hautausten merkityksestä ja epidemiatilanteesta. Epäillyt tapaus- ja kuolemaluvut on esitetty epäiltyinä, koska lähdeaineisto käyttää samaa varausta.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260521T213127Z_a54a78a6c0",
+    "category": "Kotimaa",
+    "selected_source_words": 401,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 245,
+    "issues": [
+      "content too short: 245 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Väkijoukko sytytti ebolakeskuksen telttoja tuleen Itä-Kongossa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-21T21:35:02.094627+00:00",
+    "repair_trigger": "pre_repair_word_count=242; selected_source_words=401; selected_source_blocks=4",
+    "pre_repair_word_count": 242,
+    "pre_repair_lead_word_count": 41,
+    "post_repair_word_count": 245,
+    "post_repair_lead_word_count": 44,
+    "selected_source_words_at_repair": 401,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 401,
+    "source_blocks": 4,
+    "repair_added_word_count": 3,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 245 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:8a9bfea748",
+      "2:BBC World:d994cf1cfe",
+      "3:South China Morning Post:385a0bc7d3",
+      "4:Devdiscourse:80fdcf3705"
+    ],
+    "final_issues": [
+      "content too short: 245 words"
+    ],
+    "recovered": false
+  }
+}
