@@ -1,0 +1,195 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-22T23:11:17.100609+00:00",
+  "digest": "48a55c9b57",
+  "packet": {
+    "packet_id": "20260522T231117Z_48a55c9b57",
+    "created_at": "2026-05-22T23:11:17Z",
+    "headline_seed": "AI is being used to resurrect the voices of dead pilots",
+    "description_seed": "People used AI on a spectrogram image of cockpit recordings to reconstruct them, forcing the NTSB to temporarily block access to its docket system.",
+    "link": "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "Ars Technica",
+      "Ars Technica"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "AI is being used to resurrect the voices of dead pilots"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "People used AI on a spectrogram image of cockpit recordings to reconstruct them, forcing the NTSB to temporarily block access to its docket system.",
+        "word_count": 24,
+        "keyword_overlap": 15,
+        "strong_overlap": 10
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "In the latest sign of these AI-heavy times, the National Transportation Safety Board temporarily removed access to its docket system after discovering that voices of pilots who were killed in a UPS plane crash last year had been recreated using AI and were circulating on the internet. NTSB is prohibited by federal law from including cockpit audio recordings in its docket system, which otherwise contains troves of data on investigations and has historically been open to the public. But the accident docket for this flight included a spectrogram file of the voice recorder. A spectrogram uses a mathematical process to turn sound signals, including low and high frequencies, into an image. ---",
+        "word_count": 112,
+        "keyword_overlap": 11,
+        "strong_overlap": 9
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "Pilots’ voices from the last seconds of a fatal cargo plane crash have been re-created by Internet sleuths using software and AI tools. The spread of reconstructed audio recordings has prompted a US government agency to suspend all public access to its database of civil transportation accidents—because federal law prohibits investigators from publicly releasing audio from cockpit voice recorders. The US National Transportation Safety Board (NTSB) usually shares factual reports and evidence gathered from investigations of aircraft crashes and other civil transportation incidents. But on May 21, the NTSB announced that the online docket system containing such information was “temporarily unavailable” as it reviewed the publicly available materials that had enabled people to re-create cockpit audio recordings from aircraft disasters.",
+        "word_count": 120,
+        "keyword_overlap": 10,
+        "strong_overlap": 9
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "“​​The NTSB is aware that advances in image recognition and computational methods have enabled individuals to reconstruct approximations of cockpit voice recorder audio from sound spectrum imagery released as part of NTSB investigations, including the ongoing investigation of the crash last year of UPS flight 2976 in Louisville, Kentucky,” according to an NTSB statement. “The NTSB does not release cockpit audio recordings.” UPS flight 2976 was a United Parcel Service MD-11F cargo aircraft that crashed shortly after takeoff from Louisville, Kentucky, on November 4, 2025, following a structural failure that led to an engine physically detaching as the aircraft left the ground. The three pilots aboard the aircraft, including a relief pilot, were killed. Another 12 people on the ground were killed, with 23 people being injured.",
+        "word_count": 127,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "People used AI on a spectrogram image of cockpit recordings to reconstruct them, forcing the NTSB to temporarily block access to its docket system.\n\nIn the latest sign of these AI-heavy times, the National Transportation Safety Board temporarily removed access to its docket system after discovering that voices of pilots who were killed in a UPS plane crash last year had been recreated using AI and were circulating on the internet. NTSB is prohibited by federal law from including cockpit audio recordings in its docket system, which otherwise contains troves of data on investigations and has historically been open to the public. But the accident docket for this flight included a spectrogram file of the voice recorder. A spectrogram uses a mathematical process to turn sound signals, including low and high frequencies, into an image. ---\n\nPilots’ voices from the last seconds of a fatal cargo plane crash have been re-created by Internet sleuths using software and AI tools. The spread of reconstructed audio recordings has prompted a US government agency to suspend all public access to its database of civil transportation accidents—because federal law prohibits investigators from publicly releasing audio from cockpit voice recorders. The US National Transportation Safety Board (NTSB) usually shares factual reports and evidence gathered from investigations of aircraft crashes and other civil transportation incidents. But on May 21, the NTSB announced that the online docket system containing such information was “temporarily unavailable” as it reviewed the publicly available materials that had enabled people to re-create cockpit audio recordings from aircraft disasters.\n\n“​​The NTSB is aware that advances in image recognition and computational methods have enabled individuals to reconstruct approximations of cockpit voice recorder audio from sound spectrum imagery released as part of NTSB investigations, including the ongoing investigation of the crash last year of UPS flight 2976 in Louisville, Kentucky,” according to an NTSB statement. “The NTSB does not release cockpit audio recordings.” UPS flight 2976 was a United Parcel Service MD-11F cargo aircraft that crashed shortly after takeoff from Louisville, Kentucky, on November 4, 2025, following a structural failure that led to an engine physically detaching as the aircraft left the ground. The three pilots aboard the aircraft, including a relief pilot, were killed. Another 12 people on the ground were killed, with 23 people being injured.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 520,
+      "selected_blocks": 4,
+      "selected_source_words": 383,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "Ars Technica",
+        "Ars Technica"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "AI is being used to resurrect the voices of dead pilots",
+      "description": "People used AI on a spectrogram image of cockpit recordings to reconstruct them, forcing the NTSB to temporarily block access to its docket system.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "AI is being used to resurrect the voices of dead pilots",
+    "description": "People used AI on a spectrogram image of cockpit recordings to reconstruct them, forcing the NTSB to temporarily block access to its docket system.",
+    "link": "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/",
+    "published": "2026-05-22T23:03:33+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "5be4cd424e37f03bf2c8cfc61f726a50",
+    "_url_hash": "5b8344dc5a0589303c60f0f49bc09ebef4b6649db824bd1c9bdf3f63a583d0ce",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nIn the latest sign of these AI-heavy times, the National Transportation Safety Board temporarily removed access to its docket system after discovering that voices of pilots who were killed in a UPS plane crash last year had been recreated using AI and were circulating on the internet.\n\nNTSB is prohibited by federal law from including cockpit audio recordings in its docket system, which otherwise contains troves of data on investigations and has historically been open to the public. But the accident docket for this flight included a spectrogram file of the voice recorder. A spectrogram uses a mathematical process to turn sound signals, including low and high frequencies, into an image.\n\n---\n\n[Lähde: Ars Technica]\nPilots’ voices from the last seconds of a fatal cargo plane crash have been re-created by Internet sleuths using software and AI tools. The spread of reconstructed audio recordings has prompted a US government agency to suspend all public access to its database of civil transportation accidents—because federal law prohibits investigators from publicly releasing audio from cockpit voice recorders.\n\nThe US National Transportation Safety Board (NTSB) usually shares factual reports and evidence gathered from investigations of aircraft crashes and other civil transportation incidents. But on May 21, the NTSB announced that the online docket system containing such information was “temporarily unavailable” as it reviewed the publicly available materials that had enabled people to re-create cockpit audio recordings from aircraft disasters.\n\n“​​The NTSB is aware that advances in image recognition and computational methods have enabled individuals to reconstruct approximations of cockpit voice recorder audio from sound spectrum imagery released as part of NTSB investigations, including the ongoing investigation of the crash last year of UPS flight 2976 in Louisville, Kentucky,” according to an NTSB statement. “The NTSB does not release cockpit audio recordings.”\n\nUPS flight 2976 was a United Parcel Service MD-11F cargo aircraft that crashed shortly after takeoff from Louisville, Kentucky, on November 4, 2025, following a structural failure that led to an engine physically detaching as the aircraft left the ground. The three pilots aboard the aircraft, including a relief pilot, were killed. Another 12 people on the ground were killed, with 23 people being injured.\n\nThe US Congress enacted a federal law in 1990 prohibiting the NTSB from publicly sharing any part of a cockpit voice or video recorder to protect the privacy of air crews. That law followed airline pilots’ pushback over the controversial TV station airing of a cockpit conversation relating to the August 1988 crash of Delta Air Lines Flight 1141 at Dallas-Fort Worth International Airport.\n\n“It’s been an important factor for decades in having airline pilots be willing to have their voices recorded at their normal workplace, day in and day out, with the threat of being killed during their workday,” Ben Berman, an accident investigator and analyst who previously worked for the NTSB and flew a Boeing 737 for United Airlines, told Ars. “People are horrified with the idea of their last moments being made public a",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-22T23:13:44.898010+00:00",
+  "payload": {
+    "packet_id": "20260522T231117Z_48a55c9b57",
+    "title": "Tekoälyllä palautetut ohjaajien äänet sulkivat turmatutkinnan tietokannan Yhdysvalloissa",
+    "summary": "Yhdysvaltain liikenneturvallisuusviranomainen NTSB keskeytti väliaikaisesti julkisen pääsyn tutkinta-aineistojensa tietokantaan, kun verkossa oli alettu levittää tekoälyllä rekonstruoituja ohjaamoääniä UPS:n rahtikoneen kuolemaan johtaneesta turmasta.",
+    "content": "Yhdysvaltain liikenneturvallisuusviranomainen NTSB on sulkenut väliaikaisesti julkisen pääsyn onnettomuustutkintojen aineistoja sisältävään tietokantaansa, kun kävi ilmi, että verkossa oli rekonstruoitu tekoälyn ja laskennallisten menetelmien avulla kuolleiden lentäjien ääniä UPS:n rahtikoneen turmasta. Tapauksessa ei ollut kyse varsinaisten ohjaamoäänitteiden julkaisemisesta, vaan siitä, että tutkinta-aineistossa ollut äänispektrikuva oli mahdollistanut äänen likimääräisen palauttamisen.\n\n## Äänikuva muuttui kuunneltavaksi\n\nNTSB ei Yhdysvaltain liittovaltion lain vuoksi julkaise ohjaamoäänitteitä osana julkisia tutkinta-aineistojaan. Virasto julkaisee kuitenkin tavallisesti laajasti muuta faktapohjaista aineistoa siviililiikenteen onnettomuuksista, kuten raportteja ja teknisiä todisteita.\n\nTässä tapauksessa UPS:n lennon 2976 tutkinta-aineistoon sisältyi ohjaamon äänitallentimen aineistosta tehty spektrogrammi. Spektrogrammi on kuva, joka esittää äänen taajuuksia ja voimakkuuksia matemaattisesti muunnettuna visuaaliseksi muodoksi. Uusien kuvantunnistus- ja laskentamenetelmien avulla ulkopuoliset henkilöt pystyivät käyttämään tällaista kuvaa äänitallenteen likimääräiseen rekonstruointiin.\n\nNTSB:n mukaan sen tietoon tuli, että tällaisia ohjaamoäänien likiarvoisia palautuksia oli tehty ja niitä oli levinnyt verkossa. Virasto ilmoitti 21. toukokuuta, että sen julkinen verkkotietokanta on väliaikaisesti poissa käytöstä, kun se tarkistaa, mitä julkisesti saatavilla oleva aineisto mahdollistaa.\n\n## Turma liittyy UPS:n lentoon 2976\n\nUPS:n lento 2976 oli United Parcel Servicen MD-11F-rahtikone, joka putosi pian nousun jälkeen Louisvillessä, Kentuckyssa, 4. marraskuuta 2025. Lähdeaineiston mukaan turmaa edelsi rakenteellinen vika, jonka seurauksena moottori irtosi koneesta sen ollessa lähdössä ilmaan.\n\nKoneessa olleet kolme ohjaamomiehistön jäsentä, mukaan lukien lepovuorossa ollut lentäjä, kuolivat. Lisäksi maassa kuoli 12 ihmistä ja 23 loukkaantui.\n\nTapaus nostaa esiin uudenlaisen ongelman viranomaisten avoimessa aineistonjaossa. Materiaali, jota ei itsessään ole tarkoitettu kuunneltavaksi ääneksi, voi kehittyvien tekoäly- ja analyysityökalujen avulla paljastaa tietoa, jonka julkistamista laki rajoittaa. NTSB:n väliaikainen sulku koskee siksi paitsi yksittäistä tutkintaa myös sitä, millä tavoin virasto voi jatkossa julkaista teknistä aineistoa vaarantamatta ohjaamoäänitteitä koskevia rajoituksia.",
+    "category": "Teknologia",
+    "tags": [
+      "tekoäly",
+      "lentoturvallisuus",
+      "NTSB",
+      "UPS",
+      "onnettomuustutkinta"
+    ],
+    "summary_bullets": [
+      "NTSB sulki väliaikaisesti julkisen onnettomuustutkintojen tietokantansa tarkistusta varten.",
+      "Verkossa oli rekonstruoitu tekoälyllä ohjaajien ääniä UPS:n lennon 2976 turmaan liittyvästä spektrogrammista.",
+      "Yhdysvaltain laki estää viranomaista julkaisemasta varsinaisia ohjaamoäänitteitä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.91,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin TechCrunchin ja Ars Technican tietoihin sekä NTSB:n lausunnosta referoituihin kohtiin. Ei lisätty lähteiden ulkopuolisia teknisiä tai tutkinnallisia yksityiskohtia."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260522T231117Z_48a55c9b57\",\"title\":\"Tekoälyllä palautetut ohjaajien äänet sulkivat turmatutkinnan tietokannan Yhdysvalloissa\",\"summary\":\"Yhdysvaltain liikenneturvallisuusviranomainen NTSB keskeytti väliaikaisesti julkisen pääsyn tutkinta-aineistojensa tietokantaan, kun verkossa oli alettu levittää tekoälyllä rekonstruoituja ohjaamoääniä UPS:n rahtikoneen kuolemaan johtaneesta turmasta.\",\"content\":\"Yhdysvaltain liikenneturvallisuusviranomainen NTSB on sulkenut väliaikaisesti julkisen pääsyn onnettomuustutkintojen aineistoja sisältävään tietokantaansa, kun kävi ilmi, että verkossa oli rekonstruoitu tekoälyn ja laskennallisten menetelmien avulla kuolleiden lentäjien ääniä UPS:n rahtikoneen turmasta. Tapauksessa ei ollut kyse varsinaisten ohjaamoäänitteiden julkaisemisesta, vaan siitä, että tutkinta-aineistossa ollut äänispektrikuva oli mahdollistanut äänen likimääräisen palauttamisen.\\n\\n## Äänikuva muuttui kuunneltavaksi\\n\\nNTSB ei Yhdysvaltain liittovaltion lain vuoksi julkaise ohjaamoäänitteitä osana julkisia tutkinta-aineistojaan. Virasto julkaisee kuitenkin tavallisesti laajasti muuta faktapohjaista aineistoa siviililiikenteen onnettomuuksista, kuten raportteja ja teknisiä todisteita.\\n\\nTässä tapauksessa UPS:n lennon 2976 tutkinta-aineistoon sisältyi ohjaamon äänitallentimen aineistosta tehty spektrogrammi. Spektrogrammi on kuva, joka esittää äänen taajuuksia ja voimakkuuksia matemaattisesti muunnettuna visuaaliseksi muodoksi. Uusien kuvantunnistus- ja laskentamenetelmien avulla ulkopuoliset henkilöt pystyivät käyttämään tällaista kuvaa äänitallenteen likimääräiseen rekonstruointiin.\\n\\nNTSB:n mukaan sen tietoon tuli, että tällaisia ohjaamoäänien likiarvoisia palautuksia oli tehty ja niitä oli levinnyt verkossa. Virasto ilmoitti 21. toukokuuta, että sen julkinen verkkotietokanta on väliaikaisesti poissa käytöstä, kun se tarkistaa, mitä julkisesti saatavilla oleva aineisto mahdollistaa.\\n\\n## Turma liittyy UPS:n lentoon 2976\\n\\nUPS:n lento 2976 oli United Parcel Servicen MD-11F-rahtikone, joka putosi pian nousun jälkeen Louisvillessä, Kentuckyssa, 4. marraskuuta 2025. Lähdeaineiston mukaan turmaa edelsi rakenteellinen vika, jonka seurauksena moottori irtosi koneesta sen ollessa lähdössä ilmaan.\\n\\nKoneessa olleet kolme ohjaamomiehistön jäsentä, mukaan lukien lepovuorossa ollut lentäjä, kuolivat. Lisäksi maassa kuoli 12 ihmistä ja 23 loukkaantui.\\n\\nTapaus nostaa esiin uudenlaisen ongelman viranomaisten avoimessa aineistonjaossa. Materiaali, jota ei itsessään ole tarkoitettu kuunneltavaksi ääneksi, voi kehittyvien tekoäly- ja analyysityökalujen avulla paljastaa tietoa, jonka julkistamista laki rajoittaa. NTSB:n väliaikainen sulku koskee siksi paitsi yksittäistä tutkintaa myös sitä, millä tavoin virasto voi jatkossa julkaista teknistä aineistoa vaarantamatta ohjaamoäänitteitä koskevia rajoituksia.\",\"category\":\"Teknologia\",\"tags\":[\"tekoäly\",\"lentoturvallisuus\",\"NTSB\",\"UPS\",\"onnettomuustutkinta\"],\"summary_bullets\":[\"NTSB sulki väliaikaisesti julkisen onnettomuustutkintojen tietokantansa tarkistusta varten.\",\"Verkossa oli rekonstruoitu tekoälyllä ohjaajien ääniä UPS:n lennon 2976 turmaan liittyvästä spektrogrammista.\",\"Yhdysvaltain laki estää viranomaista julkaisemasta varsinaisia ohjaamoäänitteitä.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.91,\"journalist_note\":\"Artikkeli perustuu paketissa annettuihin TechCrunchin ja Ars Technican tietoihin sekä NTSB:n lausunnosta referoituihin kohtiin. Ei lisätty lähteiden ulkopuolisia teknisiä tai tutkinnallisia yksityiskohtia.\"}",
+  "article": {
+    "title": "Tekoälyllä palautetut ohjaajien äänet sulkivat turmatutkinnan tietokannan Yhdysvalloissa",
+    "description": "Yhdysvaltain liikenneturvallisuusviranomainen NTSB keskeytti väliaikaisesti julkisen pääsyn tutkinta-aineistojensa tietokantaan, kun verkossa oli alettu levittää tekoälyllä rekonstruoituja ohjaamoääniä UPS:n rahtikoneen kuolemaan johtaneesta turmasta.",
+    "link": "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/",
+    "published": "2026-05-22T23:03:33+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "5be4cd424e37f03bf2c8cfc61f726a50",
+    "_url_hash": "5b8344dc5a0589303c60f0f49bc09ebef4b6649db824bd1c9bdf3f63a583d0ce",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nIn the latest sign of these AI-heavy times, the National Transportation Safety Board temporarily removed access to its docket system after discovering that voices of pilots who were killed in a UPS plane crash last year had been recreated using AI and were circulating on the internet.\n\nNTSB is prohibited by federal law from including cockpit audio recordings in its docket system, which otherwise contains troves of data on investigations and has historically been open to the public. But the accident docket for this flight included a spectrogram file of the voice recorder. A spectrogram uses a mathematical process to turn sound signals, including low and high frequencies, into an image.\n\n---\n\n[Lähde: Ars Technica]\nPilots’ voices from the last seconds of a fatal cargo plane crash have been re-created by Internet sleuths using software and AI tools. The spread of reconstructed audio recordings has prompted a US government agency to suspend all public access to its database of civil transportation accidents—because federal law prohibits investigators from publicly releasing audio from cockpit voice recorders.\n\nThe US National Transportation Safety Board (NTSB) usually shares factual reports and evidence gathered from investigations of aircraft crashes and other civil transportation incidents. But on May 21, the NTSB announced that the online docket system containing such information was “temporarily unavailable” as it reviewed the publicly available materials that had enabled people to re-create cockpit audio recordings from aircraft disasters.\n\n“​​The NTSB is aware that advances in image recognition and computational methods have enabled individuals to reconstruct approximations of cockpit voice recorder audio from sound spectrum imagery released as part of NTSB investigations, including the ongoing investigation of the crash last year of UPS flight 2976 in Louisville, Kentucky,” according to an NTSB statement. “The NTSB does not release cockpit audio recordings.”\n\nUPS flight 2976 was a United Parcel Service MD-11F cargo aircraft that crashed shortly after takeoff from Louisville, Kentucky, on November 4, 2025, following a structural failure that led to an engine physically detaching as the aircraft left the ground. The three pilots aboard the aircraft, including a relief pilot, were killed. Another 12 people on the ground were killed, with 23 people being injured.\n\nThe US Congress enacted a federal law in 1990 prohibiting the NTSB from publicly sharing any part of a cockpit voice or video recorder to protect the privacy of air crews. That law followed airline pilots’ pushback over the controversial TV station airing of a cockpit conversation relating to the August 1988 crash of Delta Air Lines Flight 1141 at Dallas-Fort Worth International Airport.\n\n“It’s been an important factor for decades in having airline pilots be willing to have their voices recorded at their normal workplace, day in and day out, with the threat of being killed during their workday,” Ben Berman, an accident investigator and analyst who previously worked for the NTSB and flew a Boeing 737 for United Airlines, told Ars. “People are horrified with the idea of their last moments being made public a",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain liikenneturvallisuusviranomainen NTSB keskeytti väliaikaisesti julkisen pääsyn tutkinta-aineistojensa tietokantaan, kun verkossa oli alettu levittää tekoälyllä rekonstruoituja ohjaamoääniä UPS:n rahtikoneen kuolemaan johtaneesta turmasta.",
+    "content": "Yhdysvaltain liikenneturvallisuusviranomainen NTSB on sulkenut väliaikaisesti julkisen pääsyn onnettomuustutkintojen aineistoja sisältävään tietokantaansa, kun kävi ilmi, että verkossa oli rekonstruoitu tekoälyn ja laskennallisten menetelmien avulla kuolleiden lentäjien ääniä UPS:n rahtikoneen turmasta. Tapauksessa ei ollut kyse varsinaisten ohjaamoäänitteiden julkaisemisesta, vaan siitä, että tutkinta-aineistossa ollut äänispektrikuva oli mahdollistanut äänen likimääräisen palauttamisen.\n\n## Äänikuva muuttui kuunneltavaksi\n\nNTSB ei Yhdysvaltain liittovaltion lain vuoksi julkaise ohjaamoäänitteitä osana julkisia tutkinta-aineistojaan. Virasto julkaisee kuitenkin tavallisesti laajasti muuta faktapohjaista aineistoa siviililiikenteen onnettomuuksista, kuten raportteja ja teknisiä todisteita.\n\nTässä tapauksessa UPS:n lennon 2976 tutkinta-aineistoon sisältyi ohjaamon äänitallentimen aineistosta tehty spektrogrammi. Spektrogrammi on kuva, joka esittää äänen taajuuksia ja voimakkuuksia matemaattisesti muunnettuna visuaaliseksi muodoksi. Uusien kuvantunnistus- ja laskentamenetelmien avulla ulkopuoliset henkilöt pystyivät käyttämään tällaista kuvaa äänitallenteen likimääräiseen rekonstruointiin.\n\nNTSB:n mukaan sen tietoon tuli, että tällaisia ohjaamoäänien likiarvoisia palautuksia oli tehty ja niitä oli levinnyt verkossa. Virasto ilmoitti 21. toukokuuta, että sen julkinen verkkotietokanta on väliaikaisesti poissa käytöstä, kun se tarkistaa, mitä julkisesti saatavilla oleva aineisto mahdollistaa.\n\n## Turma liittyy UPS:n lentoon 2976\n\nUPS:n lento 2976 oli United Parcel Servicen MD-11F-rahtikone, joka putosi pian nousun jälkeen Louisvillessä, Kentuckyssa, 4. marraskuuta 2025. Lähdeaineiston mukaan turmaa edelsi rakenteellinen vika, jonka seurauksena moottori irtosi koneesta sen ollessa lähdössä ilmaan.\n\nKoneessa olleet kolme ohjaamomiehistön jäsentä, mukaan lukien lepovuorossa ollut lentäjä, kuolivat. Lisäksi maassa kuoli 12 ihmistä ja 23 loukkaantui.\n\nTapaus nostaa esiin uudenlaisen ongelman viranomaisten avoimessa aineistonjaossa. Materiaali, jota ei itsessään ole tarkoitettu kuunneltavaksi ääneksi, voi kehittyvien tekoäly- ja analyysityökalujen avulla paljastaa tietoa, jonka julkistamista laki rajoittaa. NTSB:n väliaikainen sulku koskee siksi paitsi yksittäistä tutkintaa myös sitä, millä tavoin virasto voi jatkossa julkaista teknistä aineistoa vaarantamatta ohjaamoäänitteitä koskevia rajoituksia.",
+    "category": "Teknologia",
+    "tags": [
+      "tekoäly",
+      "lentoturvallisuus",
+      "ntsb",
+      "ups",
+      "onnettomuustutkinta"
+    ],
+    "summary_bullets": [
+      "NTSB sulki väliaikaisesti julkisen onnettomuustutkintojen tietokantansa tarkistusta varten.",
+      "Verkossa oli rekonstruoitu tekoälyllä ohjaajien ääniä UPS:n lennon 2976 turmaan liittyvästä spektrogrammista.",
+      "Yhdysvaltain laki estää viranomaista julkaisemasta varsinaisia ohjaamoäänitteitä."
+    ],
+    "key_points": [
+      "NTSB sulki väliaikaisesti julkisen onnettomuustutkintojen tietokantansa tarkistusta varten.",
+      "Verkossa oli rekonstruoitu tekoälyllä ohjaajien ääniä UPS:n lennon 2976 turmaan liittyvästä spektrogrammista.",
+      "Yhdysvaltain laki estää viranomaista julkaisemasta varsinaisia ohjaamoäänitteitä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin TechCrunchin ja Ars Technican tietoihin sekä NTSB:n lausunnosta referoituihin kohtiin. Ei lisätty lähteiden ulkopuolisia teknisiä tai tutkinnallisia yksityiskohtia.",
+    "source_text": "People used AI on a spectrogram image of cockpit recordings to reconstruct them, forcing the NTSB to temporarily block access to its docket system.\n\nIn the latest sign of these AI-heavy times, the National Transportation Safety Board temporarily removed access to its docket system after discovering that voices of pilots who were killed in a UPS plane crash last year had been recreated using AI and were circulating on the internet. NTSB is prohibited by federal law from including cockpit audio recordings in its docket system, which otherwise contains troves of data on investigations and has historically been open to the public. But the accident docket for this flight included a spectrogram file of the voice recorder. A spectrogram uses a mathematical process to turn sound signals, including low and high frequencies, into an image. ---\n\nPilots’ voices from the last seconds of a fatal cargo plane crash have been re-created by Internet sleuths using software and AI tools. The spread of reconstructed audio recordings has prompted a US government agency to suspend all public access to its database of civil transportation accidents—because federal law prohibits investigators from publicly releasing audio from cockpit voice recorders. The US National Transportation Safety Board (NTSB) usually shares factual reports and evidence gathered from investigations of aircraft crashes and other civil transportation incidents. But on May 21, the NTSB announced that the online docket system containing such information was “temporarily unavailable” as it reviewed the publicly available materials that had enabled people to re-create cockpit audio recordings from aircraft disasters.\n\n“​​The NTSB is aware that advances in image recognition and computational methods have enabled individuals to reconstruct approximations of cockpit voice recorder audio from sound spectrum imagery released as part of NTSB investigations, including the ongoing investigation of the crash last year of UPS flight 2976 in Louisville, Kentucky,” according to an NTSB statement. “The NTSB does not release cockpit audio recordings.” UPS flight 2976 was a United Parcel Service MD-11F cargo aircraft that crashed shortly after takeoff from Louisville, Kentucky, on November 4, 2025, following a structural failure that led to an engine physically detaching as the aircraft left the ground. The three pilots aboard the aircraft, including a relief pilot, were killed. Another 12 people on the ground were killed, with 23 people being injured.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.91,
+    "degraded_mode": false,
+    "monica_packet_id": "20260522T231117Z_48a55c9b57"
+  },
+  "duplicate_rejected_at": "2026-05-22T23:18:02.026827+00:00",
+  "duplicate_rejected": true
+}

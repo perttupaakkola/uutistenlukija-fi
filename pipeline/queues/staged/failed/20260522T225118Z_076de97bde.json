@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-22T22:51:18.977491+00:00",
+  "digest": "076de97bde",
+  "packet": {
+    "packet_id": "20260522T225118Z_076de97bde",
+    "created_at": "2026-05-22T22:51:18Z",
+    "headline_seed": "Suomi–Iso-Britannia | Epäreilut jaot – puolustajat laukoivat britit kumoon",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9474986",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9474986"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomi–Iso-Britannia | Epäreilut jaot – puolustajat laukoivat britit kumoon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 117,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keski-Uusimaa"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomi–Iso-Britannia | Epäreilut jaot – puolustajat laukoivat britit kumoon",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suomi–Iso-Britannia | Epäreilut jaot – puolustajat laukoivat britit kumoon",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9474986",
+    "published": "2026-05-23T00:10:51+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "a4cadea70e2b989174187616c4983810",
+    "_url_hash": "5a6a10650b780e5ce6b0b431981a0eb4bcdf64f6c388c3a923d318e622b1e46d",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keski-Uusimaa]\nLeijonat kaatoi Iso-Britannian neljän ketjun voimin. Suomen luistelunopeus oli briteille myrkkyä läpi ottelun, eikä jääkiekon lilliputtimaa onnistunut käytännössä missään vaiheessa saamaan otetta pelissä. Nollapelin pelanneelle Joonas Korpisalolle merkattiin vain yhdeksän torjuntaa.\n\nIson-Britannian maalivahti Mat Robson pelasi huikaisevan ottelun pysäyttäen peräti 43 laukausta. Ottelu oli vielä avauserän jälkeen lukemissa 1–0 Robsonin huippupelastuksien ansiosta.\n\nLopulta toisessa ja kolmannessa erässä Suomen materiaalietu oli liikaa ja puolustajat Ville Heinola, Mikko Lehtonen ja Henri Jokiharju laukoivat Leijonat viidenteen peräkkäiseen voittoon MM-jäillä.\n\nVille Heinola viimeisteli Suomen kaksi ensimmäistä osumaa komeilla laukauksilla. Maalien lisäksi Heinola hallitsi peliä kiekon kanssa mielin määrin. On jopa pieni ihme, että hänen maalisaldonsa jäi vain kahteen.\n\nSuomen osalta turnaus jatkuu sunnuntaina, kun vastaan asettuu Itävalta. Ottelu alkaa klo 21.20.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-22T22:53:18.484440+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä vahvistettuja perustietoja ottelusta, ajankohdasta, lajista tai lopputuloksesta.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260522T225118Z_076de97bde\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä vahvistettuja perustietoja ottelusta, ajankohdasta, lajista tai lopputuloksesta.\"}"
+}

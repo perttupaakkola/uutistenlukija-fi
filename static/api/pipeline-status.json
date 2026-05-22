@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-05-22T22:28:43+00:00",
+  "generated_at": "2026-05-22T23:28:43+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,16 +12,17 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 32,
-    "rejected": 1,
+    "published": 33,
+    "rejected": 2,
     "publish_rate": 0,
-    "last_published_ts": "2026-05-22T22:28:05.165981+00:00"
+    "last_published_ts": "2026-05-22T23:28:05.523659+00:00"
   },
   "reject_reasons": {
+    "missing: image": 2,
+    "unsourced numbers": 2,
+    "central unsourced number in ti": 2,
     "length under target (257 words": 1,
-    "missing: image": 1,
-    "unsourced numbers": 1,
-    "central unsourced number in ti": 1
+    "length under target (271 words": 1
   },
   "feeds": {
     "total": 40,
@@ -42,15 +43,15 @@
     ],
     [
       "yhdysvaltain",
-      19
+      21
     ],
     [
       "vuonna",
-      19
+      20
     ],
     [
       "yhtiön",
-      18
+      19
     ]
   ]
 }
