@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-22T07:01:25.588892+00:00",
+  "digest": "da0a924e54",
+  "packet": {
+    "packet_id": "20260522T070125Z_da0a924e54",
+    "created_at": "2026-05-22T07:01:25Z",
+    "headline_seed": "Naton Rutte: Euroopassa on kuultu USA:n huolia Hormuzinsalmesta ja Iranista",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9471477",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9471477"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Naton Rutte: Euroopassa on kuultu USA:n huolia Hormuzinsalmesta ja Iranista"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 218,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Salon Seudun Sanomat",
+        "Salon Seudun Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Naton Rutte: Euroopassa on kuultu USA:n huolia Hormuzinsalmesta ja Iranista",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Naton Rutte: Euroopassa on kuultu USA:n huolia Hormuzinsalmesta ja Iranista",
+    "description": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9471477",
+    "published": "2026-05-22T09:55:46+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "70bd01530d3c1a6a2867048221010c8d",
+    "_url_hash": "e3509f6c834465816be9e89a02e4f0c96ee9d648a2706bc9f9d8965a95d96e9b",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Salon Seudun Sanomat]\nNaton pääsihteerin Mark Rutten mukaan Euroopassa on yhä enemmän vastattu Yhdysvaltain huoliin, joiden mukaan sen Nato-liittolaiset eivät ole auttaneet tarpeeksi sodassa Irania vastaan ja Hormuzinsalmen avaamisessa.\n\nNaton ulkoministerikokoukseen aamulla saapuneen Rutten mukaan monet eurooppalaiset jäsenmaat ovat antaneet tukikohtiaan Yhdysvaltain käyttöön. Lisäksi eurooppalaiset maat ovat sijoittaneet laivojaan ja muuta kalustoa jo valmiiksi Lähi-idän alueelle, jotta ne voisivat auttaa seuraavassa vaiheessa merenkulun vapauden turvaamisessa.\n\nRuotsiin viime yönä saapunut Yhdysvaltain ulkoministeri Marco Rubio toisti ennen lähtöään Yhdysvaltain ja presidentti Donald Trumpin pettymyksen siihen, ettei Yhdysvallat ole saanut Euroopasta tarpeeksi tukea toimilleen Irania ja sen ydinaseohjelmaa vastaan.\n\nNato-kokouksen alla hämmennystä ovat herättäneen Yhdysvaltain yllättävät ja osin ristiriitaiset ilmoitukset sen joukkojen määrien muutoksista Euroopassa. Perjantain vastaisena yönä Trump ilmoitti vaihteeksi Yhdysvaltain lisäävän sotilaidensa määrä Puolassa 5 000:lla.\n\nRutten mukaan ilmoitus on tervetullut. Pääsihteeri kuitenkin korosti, että kehitys taakanjaon siirrosta Yhdysvalloilta enemmän Euroopalle jatkuu Natossa kaikesta huolimatta.\n\nUlkoministerikokouksessa puhutaan myös Ukrainan tukemisesta. Rutte vakuutti, että Ukrainaan virtaa yhä myös yhdysvaltalaisia aseita, joiden ostamisen eurooppalaiset ovat kustantaneet PURL-ohjelman puitteissa. Rutten mukaan Ukrainan sotilaallisen tuen jakautuminen Euroopan Nato-maiden kesken pitäisi kuitenkin saada tasapuolisemmaksi ja oikeudenmukaisemmaksi.\n\n– Tällä hetkellä kuusi tai seitsemän maata kantaa päävastuun, Rutte kuvaili.\n\nTorstaina illalla Naton ulkoministerikokouksen aloittaneelle epäviralliselle illalliselle osallistui myös Ukrainan ulkoministeri Andri Sybiha.\n\nRuotsin ensimmäisessä ministeritason Nato-kokouksessa Suomea edustaa ulkoministeri Elina Valtonen (kok.). Kokouksessa pohjustetaan Naton huippukokouksen asialistaa Ankarassa heinäkuussa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-22T07:03:22.707502+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä tai tarkistettavia yksityiskohtia, ja story_confidence on hyvin matala.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260522T070125Z_da0a924e54\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä tai tarkistettavia yksityiskohtia, ja story_confidence on hyvin matala.\"}"
+}
