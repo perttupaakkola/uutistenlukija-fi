@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/05/22/blue-origin-cleared-to-fly-new-glenn-mega-rocket-after-april-mishap/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
