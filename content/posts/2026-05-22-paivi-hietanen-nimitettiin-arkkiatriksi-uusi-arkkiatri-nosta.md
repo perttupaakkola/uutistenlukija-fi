@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/uusi-arkkiatri-paivi-hietanen-on-huolissaan-epatasa-arvosta-terveydenhuollossa/9342658"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
