@@ -1,9 +1,10 @@
 ---
-title: "Suomalainen Swype astuu Foodoran tilalle – haastaa Woltin ruokalähettimarkkinoilla"
+title: "Swype haastaa Woltin Foodoran lähdettyä Suomesta"
+seo_title: "Swype haastaa Woltin Foodoran lähdettyä Suomesta"
 date: 2026-03-20T10:38:06.246418+00:00
 categories:
   - Kotimaa
-description: "Suomalainen tilausalusta Swype lanseeraa ruokakuljetuspalvelunsa Suomessa juuri Foodoran vetäytymisen jälkeen ja tavoittelee markkinan valloitusta."
+description: "Swype pyrkii Foodoran jättämään tilaan Suomessa. Juttu kertoo, miten yhtiö aikoo erottautua Woltista ja mitä se merkitsee ruokalähettimarkkinalle."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
 image_thumb: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=80&w=400"
 image_alt: "Kotimaa: Suomalainen Swype haastaa Woltin ruokalähettimarkkinoilla"
@@ -29,4 +30,6 @@ Uusi suomalainen tilausalusta Swype on astunut Suomen ruokalähettimarkkinoille 
 
 Swypen toimitusjohtaja Casper Normanin mukaan ruoka-alustojen kenttä Suomessa on ollut pitkään duopoli, ja Foodoran lähtö tarjoaa mahdollisuuden rikkoa tämä malli. Hän korostaa, että Swype ei aio tarjota ilmaisia kotiinkuljetuksia, vaan asiakkailta peritään maksua, jotta kuljettajien palkat voivat pysyä korkeina. Tämän toivotaan myös parantavan kuljettajien työolosuhteita.
 
-Mikäli Swype onnistuu laajentamaan markkinaosuuttaan ja houkuttelemaan asiakkaita, yritys voi saada merkittävää jalansijaa kilpailutilanteessa. Ruokalähettimarkkinoiden kehitys tulee olemaan seurannassa, sillä kilpailu Woltin ja muiden mahdollisten toimijoiden kanssa jatkuu.
+Mikäli Swype onnistuu laajentamaan markkinaosuuttaan ja houkuttelemaan asiakkaita, yritys voi saada jalansijaa kilpailutilanteessa. Ruokalähettimarkkinoiden kehitys tulee olemaan seurannassa, sillä kilpailu Woltin ja muiden mahdollisten toimijoiden kanssa jatkuu.
+
+Woltin asemaa ruokalähettimarkkinoilla käsitellään myös jutussa [Korkein hallinto-oikeus tyrmäsi Woltin valituksen lähettien työsuhteista](/posts/2026-03-19-korkein-hallinto-oikeus-tyrmasi-woltin-valituksen-lahettien/).
