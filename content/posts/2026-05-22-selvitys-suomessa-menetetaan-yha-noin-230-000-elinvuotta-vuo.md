@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/nain-monta-elinvuotta-suomessa-menetetaan-ennenaikaisesti-yksi-syy-yli-muiden/9341832"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
