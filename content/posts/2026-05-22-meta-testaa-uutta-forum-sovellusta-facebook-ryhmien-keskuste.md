@@ -44,7 +44,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/22/meta-julkaisi-uuden-forum-sovelluksen-kokoaa-facebook-ryhmat-yhteen-ja-haastaa-redditin/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
