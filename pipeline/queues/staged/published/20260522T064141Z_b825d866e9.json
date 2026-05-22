@@ -1,0 +1,215 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-22T06:41:41.525420+00:00",
+  "digest": "b825d866e9",
+  "packet": {
+    "packet_id": "20260522T064141Z_b825d866e9",
+    "created_at": "2026-05-22T06:41:41Z",
+    "headline_seed": "US to send 5,000 more troops to Poland, Trump says",
+    "description_seed": "The announcement comes a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country.",
+    "link": "https://www.bbc.com/news/articles/cedpz9669deo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "NPR"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cedpz9669deo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US to send 5,000 more troops to Poland, Trump says"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "President Donald Trump has said the US will be sending an additional 5,000 troops to Poland, a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country. Writing on Truth Social, Trump said the decision was based on the US's relationship with Polish President Karol Nawrocki, whom he backed during presidential elections last year. The US president did not provide further details on whether the additional troops were part of the previous planned deployment or a different operation. The White House has signalled in recent weeks that it intends to reduce its overall troop levels in Europe as part of its \"America First\" agenda. Earlier this month, the US also announced it would withdraw 5,000 troops from Germany after a row between Trump and German Chancellor Friedrich Merz over the war with Iran.",
+        "word_count": 137,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The announcement comes a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country.",
+        "word_count": 18,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Rubio said \"some of those issues\" will be discussed at the summit, adding that Trump remained very upset and disappointed with Nato allies. Trump's announcement on Thursday comes a week after the defence department abruptly said it was cancelling the deployment of 4,000 troops to Poland. US Defence Secretary Pete Hegseth later said the cancellation was \"a temporary delay\" of the planned deployment and the US will continue to ensure it \"retains a strong military presence\" in Poland. Nawrocki has long been a staunch Trump supporter and earned his endorsement before winning Poland's presidential election. Speaking to the BBC's Radio 4 Today programme in January, the Polish president said Trump is the only world leader capable of stopping Vladimir Putin and ending the war in Ukraine. Despite Trump's previous criticism of the Nato alliance and his European counterparts, Nawrocki insisted",
+        "word_count": 140,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "NPR",
+        "source_type": "research",
+        "text": "Trump and the Pentagon have said in recent weeks that they were drawing down at least 5,000 troops in Germany after Chancellor Friedrich Merz said the U.S. was being \"humiliated\" by the Iranian leadership and criticized what he called a lack of strategy in the war. Trump then told reporters at the beginning of the month that the U.S. would be \"cutting a lot further than 5,000.\" As of last week, some 4,000 troops from the Army's 2nd Armored Brigade Combat Team, 1st Cavalry Division were no longer en route to Poland. The Associated Press reported that the canceled deployment was part of an effort to comply with Trump's order to reduce the number of troops in Europe. A deployment to Germany of personnel trained to fire long-range missiles also was halted.",
+        "word_count": 132,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "President Donald Trump has said the US will be sending an additional 5,000 troops to Poland, a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country. Writing on Truth Social, Trump said the decision was based on the US's relationship with Polish President Karol Nawrocki, whom he backed during presidential elections last year. The US president did not provide further details on whether the additional troops were part of the previous planned deployment or a different operation. The White House has signalled in recent weeks that it intends to reduce its overall troop levels in Europe as part of its \"America First\" agenda. Earlier this month, the US also announced it would withdraw 5,000 troops from Germany after a row between Trump and German Chancellor Friedrich Merz over the war with Iran.\n\nThe announcement comes a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country.\n\nRubio said \"some of those issues\" will be discussed at the summit, adding that Trump remained very upset and disappointed with Nato allies. Trump's announcement on Thursday comes a week after the defence department abruptly said it was cancelling the deployment of 4,000 troops to Poland. US Defence Secretary Pete Hegseth later said the cancellation was \"a temporary delay\" of the planned deployment and the US will continue to ensure it \"retains a strong military presence\" in Poland. Nawrocki has long been a staunch Trump supporter and earned his endorsement before winning Poland's presidential election. Speaking to the BBC's Radio 4 Today programme in January, the Polish president said Trump is the only world leader capable of stopping Vladimir Putin and ending the war in Ukraine. Despite Trump's previous criticism of the Nato alliance and his European counterparts, Nawrocki insisted\n\nTrump and the Pentagon have said in recent weeks that they were drawing down at least 5,000 troops in Germany after Chancellor Friedrich Merz said the U.S. was being \"humiliated\" by the Iranian leadership and criticized what he called a lack of strategy in the war. Trump then told reporters at the beginning of the month that the U.S. would be \"cutting a lot further than 5,000.\" As of last week, some 4,000 troops from the Army's 2nd Armored Brigade Combat Team, 1st Cavalry Division were no longer en route to Poland. The Associated Press reported that the canceled deployment was part of an effort to comply with Trump's order to reduce the number of troops in Europe. A deployment to Germany of personnel trained to fire long-range missiles also was halted.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 809,
+      "selected_blocks": 4,
+      "selected_source_words": 427,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NPR",
+        "NPR",
+        "NPR",
+        "NPR",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NPR"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US to send 5,000 more troops to Poland, Trump says",
+      "description": "The announcement comes a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US to send 5,000 more troops to Poland, Trump says",
+    "description": "The announcement comes a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country.",
+    "link": "https://www.bbc.com/news/articles/cedpz9669deo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-22T03:25:48+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "b461100f9108c6a82325ba7c39f55b70",
+    "_url_hash": "addf84e59a10ee3fc35cac7b74d63a2d90e5ff8a50f2a16ac158a5e10472f17b",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nPresident Donald Trump has said the US will be sending an additional 5,000 troops to Poland, a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country.\n\nWriting on Truth Social, Trump said the decision was based on the US's relationship with Polish President Karol Nawrocki, whom he backed during presidential elections last year.\n\nThe US president did not provide further details on whether the additional troops were part of the previous planned deployment or a different operation.\n\nThe White House has signalled in recent weeks that it intends to reduce its overall troop levels in Europe as part of its \"America First\" agenda.\n\nEarlier this month, the US also announced it would withdraw 5,000 troops from Germany after a row between Trump and German Chancellor Friedrich Merz over the war with Iran.\n\nTrump previously criticised Merz over his suggestion that the US had been \"humiliated\" by Iranian negotiators.\n\nIt is unclear whether the additional troops for Poland were part of those withdrawing from Germany or a separate group.\n\nHe has also been critical of Washington's Nato allies for their unwillingness to join the US in pressuring Iran over the Strait of Hormuz.\n\nForeign ministers from Nato countries will meet in Sweden on Friday at a summit that includes US Secretary of State Marco Rubio.\n\nRubio is expected to call for increased burden sharing from Washington's Nato partners.\n\nAhead of the meeting, the BBC asked him about unconfirmed reports that the US could shrink its total troop numbers available in the event of an attack on a Nato country.\n\nRubio said \"some of those issues\" will be discussed at the summit, adding that Trump remained very upset and disappointed with Nato allies.\n\nTrump's announcement on Thursday comes a week after the defence department abruptly said it was cancelling the deployment of 4,000 troops to Poland.\n\nUS Defence Secretary Pete Hegseth later said the cancellation was \"a temporary delay\" of the planned deployment and the US will continue to ensure it \"retains a strong military presence\" in Poland.\n\nNawrocki has long been a staunch Trump supporter and earned his endorsement before winning Poland's presidential election.\n\nSpeaking to the BBC's Radio 4 Today programme in January, the Polish president said Trump is the only world leader capable of stopping Vladimir Putin and ending the war in Ukraine.\n\nDespite Trump's previous criticism of the Nato alliance and his European counterparts, Nawrocki insisted\n\n---\n\n[Lähde: NPR]\nPresident Donald Trump attends an event about loosening a federal refrigerant rule, in the Oval Office at the White House, Thursday, May 21, 2026, in Washington.\n                \n                    \n                    Jacquelyn Martin/AP\n                    \n                \n                hide caption\n\nWASHINGTON — President Donald Trump on Thursday said the U.S. will send an additional 5,000 troops to Poland, stirring confusion following weeks of changing statements from Trump and his administration about reducing — not increasing — the American military footprint in Europe.\n\nThe Trump administration has said it was reducing levels in Europe by about 5,000 troops, and U.S. officials confirmed about 4,000 service members were no longer deploying to Poland. Trump's social media announcement raises more uncertainty for European allies that have been blindsided by the changes as the administration has complained about NATO members not shouldering enough of the burden of their own defense and failing to do more to support the Iran war.\n\n\"Based on the successful Election of the now President of Poland, Karol Nawrocki, who I was proud to Endorse, and our relationship with him, I am pleased to announce that the United States will be sending an additional 5,000 Troops to Poland,\" Trump said on Truth Social.\n\nTrump and the Pentagon have said in recent weeks that they were drawing down at least 5,000 troops in Germany after Chancellor Friedrich Merz said the U.S. was being \"humiliated\" by the Iranian leadership and criticized what he called a lack of strategy in the war.\n\nTrump then told reporters at the beginning of the month that the U.S. would be \"cutting a lot further than 5,000.\"\n\nAs of last week, some 4,000 troops from the Army's 2nd Armored Brigade Combat Team, 1st Cavalry Division were no longer en route to Poland. The Associated Press reported that the canceled deployment was part of an effort to comply with Trump's order to reduce the number of troops in Europe. A deployment to Germany of personnel trained to fire long-range missiles also was halted.\n\nDemocratic and Republican lawmakers alike criticized the reductions as sending the wrong signal both to allies and Russian President Vladimir Putin during the 4-year-old war in Ukraine.\n\nRepublican Rep. Don Bacon of Nebraska said during a congressional hearing that he spoke with Polish officials and they were \"blindsided.\" He called the decision \"reprehensible\" and said it was \"an embarrassment to our cou",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-22T06:43:46.755222+00:00",
+  "payload": {
+    "packet_id": "20260522T064141Z_b825d866e9",
+    "title": "Trump sanoo Yhdysvaltojen lähettävän 5 000 lisäsotilasta Puolaan",
+    "summary": "Yhdysvaltain presidentti Donald Trump on ilmoittanut, että Yhdysvallat lähettää 5 000 lisäsotilasta Puolaan. Ilmoitus seuraa tilannetta, jossa Pentagon perui aiemmin suunnitellun 4 000 sotilaan siirron Puolaan.",
+    "content": "Yhdysvaltain presidentti Donald Trump sanoo maan lähettävän 5 000 lisäsotilasta Puolaan. Ilmoitus tuli noin viikko sen jälkeen, kun Yhdysvaltain puolustusministeriö perui suunnitellun 4 000 sotilaan siirron Puolaan, eikä Trump täsmentänyt, onko uusi lisäys yhteydessä aiemmin peruttuun järjestelyyn vai erilliseen operaatioon.\n\n## Ilmoitus seuraa peruttua siirtoa\n\nTrump kertoi päätöksestä Truth Social -palvelussa. Hänen mukaansa ratkaisu perustui Yhdysvaltojen suhteeseen Puolan presidentti Karol Nawrockiin, jota Trump tuki Puolan presidentinvaalien alla.\n\nPentagon oli aiemmin ilmoittanut, ettei noin 4 000 sotilaan suunniteltu lähettäminen Puolaan toteudu alkuperäisellä tavalla. Yhdysvaltain puolustusministeri Pete Hegseth kuvasi perumista myöhemmin väliaikaiseksi viivästykseksi ja sanoi Yhdysvaltojen huolehtivan siitä, että sillä säilyy vahva sotilaallinen läsnäolo Puolassa.\n\nAvoimeksi jää, korvaako Trumpin ilmoittama 5 000 sotilaan lisäys aiemmin pysäytetyn siirron vai tarkoittaako se uutta kokonaisuutta. Lähdetietojen perusteella Yhdysvaltain hallinto ei ole antanut asiasta tarkempaa julkista erittelyä.\n\n## Euroopan joukkojen määrä tarkastelussa\n\nIlmoitus sijoittuu laajempaan keskusteluun Yhdysvaltojen joukkojen määrästä Euroopassa. Valkoinen talo on viime viikkoina viestinyt pyrkivänsä pienentämään Yhdysvaltojen kokonaissotilasmäärää Euroopassa osana Trumpin America First -linjaa.\n\nYhdysvallat on ilmoittanut myös vetävänsä vähintään 5 000 sotilasta Saksasta. Taustalla on ollut kiista Trumpin ja Saksan liittokansleri Friedrich Merzin välillä Iranin sotaan liittyvistä näkemyksistä. Trump on lisäksi sanonut, että vähennyksiä voisi tulla enemmänkin.\n\nPuolan asema on silti Yhdysvaltojen Euroopan-politiikassa erityinen, sillä maa on Naton itäisen sivustan keskeisiä jäsenvaltioita ja Ukrainan sodan vuoksi turvallisuuspoliittisesti tärkeällä alueella. Nawrocki on profiloitunut Trumpin tukijana ja sanonut aiemmin pitävänsä Trumpia johtajana, joka kykenee pysäyttämään Vladimir Putinin ja päättämään Ukrainan sodan.\n\nTrumpin ilmoitus vahvistaa ainakin poliittisesti viestiä siitä, että Washington haluaa korostaa suhdettaan Puolaan, vaikka se samaan aikaan arvioi uudelleen sotilaallista läsnäoloaan muualla Euroopassa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Puola",
+      "Donald Trump",
+      "Nato",
+      "Eurooppa",
+      "puolustuspolitiikka"
+    ],
+    "summary_bullets": [
+      "Donald Trump sanoo Yhdysvaltojen lähettävän 5 000 lisäsotilasta Puolaan.",
+      "Ilmoitus tuli viikko sen jälkeen, kun Pentagon perui 4 000 sotilaan suunnitellun siirron Puolaan.",
+      "Yhdysvallat on samaan aikaan viestinyt vähentävänsä joukkojaan Euroopassa, muun muassa Saksassa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu packetin BBC- ja NPR-lähdekatkelmiin. Keskeinen epävarmuus on se, liittyykö 5 000 sotilaan lisäys aiemmin peruttuun 4 000 sotilaan siirtoon vai onko kyse erillisestä järjestelystä; tämä on kerrottu tekstissä avoimesti."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260522T064141Z_b825d866e9\",\"title\":\"Trump sanoo Yhdysvaltojen lähettävän 5 000 lisäsotilasta Puolaan\",\"summary\":\"Yhdysvaltain presidentti Donald Trump on ilmoittanut, että Yhdysvallat lähettää 5 000 lisäsotilasta Puolaan. Ilmoitus seuraa tilannetta, jossa Pentagon perui aiemmin suunnitellun 4 000 sotilaan siirron Puolaan.\",\"content\":\"Yhdysvaltain presidentti Donald Trump sanoo maan lähettävän 5 000 lisäsotilasta Puolaan. Ilmoitus tuli noin viikko sen jälkeen, kun Yhdysvaltain puolustusministeriö perui suunnitellun 4 000 sotilaan siirron Puolaan, eikä Trump täsmentänyt, onko uusi lisäys yhteydessä aiemmin peruttuun järjestelyyn vai erilliseen operaatioon.\\n\\n## Ilmoitus seuraa peruttua siirtoa\\n\\nTrump kertoi päätöksestä Truth Social -palvelussa. Hänen mukaansa ratkaisu perustui Yhdysvaltojen suhteeseen Puolan presidentti Karol Nawrockiin, jota Trump tuki Puolan presidentinvaalien alla.\\n\\nPentagon oli aiemmin ilmoittanut, ettei noin 4 000 sotilaan suunniteltu lähettäminen Puolaan toteudu alkuperäisellä tavalla. Yhdysvaltain puolustusministeri Pete Hegseth kuvasi perumista myöhemmin väliaikaiseksi viivästykseksi ja sanoi Yhdysvaltojen huolehtivan siitä, että sillä säilyy vahva sotilaallinen läsnäolo Puolassa.\\n\\nAvoimeksi jää, korvaako Trumpin ilmoittama 5 000 sotilaan lisäys aiemmin pysäytetyn siirron vai tarkoittaako se uutta kokonaisuutta. Lähdetietojen perusteella Yhdysvaltain hallinto ei ole antanut asiasta tarkempaa julkista erittelyä.\\n\\n## Euroopan joukkojen määrä tarkastelussa\\n\\nIlmoitus sijoittuu laajempaan keskusteluun Yhdysvaltojen joukkojen määrästä Euroopassa. Valkoinen talo on viime viikkoina viestinyt pyrkivänsä pienentämään Yhdysvaltojen kokonaissotilasmäärää Euroopassa osana Trumpin America First -linjaa.\\n\\nYhdysvallat on ilmoittanut myös vetävänsä vähintään 5 000 sotilasta Saksasta. Taustalla on ollut kiista Trumpin ja Saksan liittokansleri Friedrich Merzin välillä Iranin sotaan liittyvistä näkemyksistä. Trump on lisäksi sanonut, että vähennyksiä voisi tulla enemmänkin.\\n\\nPuolan asema on silti Yhdysvaltojen Euroopan-politiikassa erityinen, sillä maa on Naton itäisen sivustan keskeisiä jäsenvaltioita ja Ukrainan sodan vuoksi turvallisuuspoliittisesti tärkeällä alueella. Nawrocki on profiloitunut Trumpin tukijana ja sanonut aiemmin pitävänsä Trumpia johtajana, joka kykenee pysäyttämään Vladimir Putinin ja päättämään Ukrainan sodan.\\n\\nTrumpin ilmoitus vahvistaa ainakin poliittisesti viestiä siitä, että Washington haluaa korostaa suhdettaan Puolaan, vaikka se samaan aikaan arvioi uudelleen sotilaallista läsnäoloaan muualla Euroopassa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Yhdysvallat\",\"Puola\",\"Donald Trump\",\"Nato\",\"Eurooppa\",\"puolustuspolitiikka\"],\"summary_bullets\":[\"Donald Trump sanoo Yhdysvaltojen lähettävän 5 000 lisäsotilasta Puolaan.\",\"Ilmoitus tuli viikko sen jälkeen, kun Pentagon perui 4 000 sotilaan suunnitellun siirron Puolaan.\",\"Yhdysvallat on samaan aikaan viestinyt vähentävänsä joukkojaan Euroopassa, muun muassa Saksassa.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.86,\"journalist_note\":\"Artikkeli perustuu packetin BBC- ja NPR-lähdekatkelmiin. Keskeinen epävarmuus on se, liittyykö 5 000 sotilaan lisäys aiemmin peruttuun 4 000 sotilaan siirtoon vai onko kyse erillisestä järjestelystä; tämä on kerrottu tekstissä avoimesti.\"}",
+  "article": {
+    "title": "Trump sanoo Yhdysvaltojen lähettävän 5 000 lisäsotilasta Puolaan",
+    "description": "Yhdysvaltain presidentti Donald Trump on ilmoittanut, että Yhdysvallat lähettää 5 000 lisäsotilasta Puolaan. Ilmoitus seuraa tilannetta, jossa Pentagon perui aiemmin suunnitellun 4 000 sotilaan siirron Puolaan.",
+    "link": "https://www.bbc.com/news/articles/cedpz9669deo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-22T03:25:48+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "b461100f9108c6a82325ba7c39f55b70",
+    "_url_hash": "addf84e59a10ee3fc35cac7b74d63a2d90e5ff8a50f2a16ac158a5e10472f17b",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nPresident Donald Trump has said the US will be sending an additional 5,000 troops to Poland, a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country.\n\nWriting on Truth Social, Trump said the decision was based on the US's relationship with Polish President Karol Nawrocki, whom he backed during presidential elections last year.\n\nThe US president did not provide further details on whether the additional troops were part of the previous planned deployment or a different operation.\n\nThe White House has signalled in recent weeks that it intends to reduce its overall troop levels in Europe as part of its \"America First\" agenda.\n\nEarlier this month, the US also announced it would withdraw 5,000 troops from Germany after a row between Trump and German Chancellor Friedrich Merz over the war with Iran.\n\nTrump previously criticised Merz over his suggestion that the US had been \"humiliated\" by Iranian negotiators.\n\nIt is unclear whether the additional troops for Poland were part of those withdrawing from Germany or a separate group.\n\nHe has also been critical of Washington's Nato allies for their unwillingness to join the US in pressuring Iran over the Strait of Hormuz.\n\nForeign ministers from Nato countries will meet in Sweden on Friday at a summit that includes US Secretary of State Marco Rubio.\n\nRubio is expected to call for increased burden sharing from Washington's Nato partners.\n\nAhead of the meeting, the BBC asked him about unconfirmed reports that the US could shrink its total troop numbers available in the event of an attack on a Nato country.\n\nRubio said \"some of those issues\" will be discussed at the summit, adding that Trump remained very upset and disappointed with Nato allies.\n\nTrump's announcement on Thursday comes a week after the defence department abruptly said it was cancelling the deployment of 4,000 troops to Poland.\n\nUS Defence Secretary Pete Hegseth later said the cancellation was \"a temporary delay\" of the planned deployment and the US will continue to ensure it \"retains a strong military presence\" in Poland.\n\nNawrocki has long been a staunch Trump supporter and earned his endorsement before winning Poland's presidential election.\n\nSpeaking to the BBC's Radio 4 Today programme in January, the Polish president said Trump is the only world leader capable of stopping Vladimir Putin and ending the war in Ukraine.\n\nDespite Trump's previous criticism of the Nato alliance and his European counterparts, Nawrocki insisted\n\n---\n\n[Lähde: NPR]\nPresident Donald Trump attends an event about loosening a federal refrigerant rule, in the Oval Office at the White House, Thursday, May 21, 2026, in Washington.\n                \n                    \n                    Jacquelyn Martin/AP\n                    \n                \n                hide caption\n\nWASHINGTON — President Donald Trump on Thursday said the U.S. will send an additional 5,000 troops to Poland, stirring confusion following weeks of changing statements from Trump and his administration about reducing — not increasing — the American military footprint in Europe.\n\nThe Trump administration has said it was reducing levels in Europe by about 5,000 troops, and U.S. officials confirmed about 4,000 service members were no longer deploying to Poland. Trump's social media announcement raises more uncertainty for European allies that have been blindsided by the changes as the administration has complained about NATO members not shouldering enough of the burden of their own defense and failing to do more to support the Iran war.\n\n\"Based on the successful Election of the now President of Poland, Karol Nawrocki, who I was proud to Endorse, and our relationship with him, I am pleased to announce that the United States will be sending an additional 5,000 Troops to Poland,\" Trump said on Truth Social.\n\nTrump and the Pentagon have said in recent weeks that they were drawing down at least 5,000 troops in Germany after Chancellor Friedrich Merz said the U.S. was being \"humiliated\" by the Iranian leadership and criticized what he called a lack of strategy in the war.\n\nTrump then told reporters at the beginning of the month that the U.S. would be \"cutting a lot further than 5,000.\"\n\nAs of last week, some 4,000 troops from the Army's 2nd Armored Brigade Combat Team, 1st Cavalry Division were no longer en route to Poland. The Associated Press reported that the canceled deployment was part of an effort to comply with Trump's order to reduce the number of troops in Europe. A deployment to Germany of personnel trained to fire long-range missiles also was halted.\n\nDemocratic and Republican lawmakers alike criticized the reductions as sending the wrong signal both to allies and Russian President Vladimir Putin during the 4-year-old war in Ukraine.\n\nRepublican Rep. Don Bacon of Nebraska said during a congressional hearing that he spoke with Polish officials and they were \"blindsided.\" He called the decision \"reprehensible\" and said it was \"an embarrassment to our cou",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain presidentti Donald Trump on ilmoittanut, että Yhdysvallat lähettää 5 000 lisäsotilasta Puolaan. Ilmoitus seuraa tilannetta, jossa Pentagon perui aiemmin suunnitellun 4 000 sotilaan siirron Puolaan.",
+    "content": "Yhdysvaltain presidentti Donald Trump sanoo maan lähettävän 5 000 lisäsotilasta Puolaan. Ilmoitus tuli noin viikko sen jälkeen, kun Yhdysvaltain puolustusministeriö perui suunnitellun 4 000 sotilaan siirron Puolaan, eikä Trump täsmentänyt, onko uusi lisäys yhteydessä aiemmin peruttuun järjestelyyn vai erilliseen operaatioon.\n\n## Ilmoitus seuraa peruttua siirtoa\n\nTrump kertoi päätöksestä Truth Social -palvelussa. Hänen mukaansa ratkaisu perustui Yhdysvaltojen suhteeseen Puolan presidentti Karol Nawrockiin, jota Trump tuki Puolan presidentinvaalien alla.\n\nPentagon oli aiemmin ilmoittanut, ettei noin 4 000 sotilaan suunniteltu lähettäminen Puolaan toteudu alkuperäisellä tavalla. Yhdysvaltain puolustusministeri Pete Hegseth kuvasi perumista myöhemmin väliaikaiseksi viivästykseksi ja sanoi Yhdysvaltojen huolehtivan siitä, että sillä säilyy vahva sotilaallinen läsnäolo Puolassa.\n\nAvoimeksi jää, korvaako Trumpin ilmoittama 5 000 sotilaan lisäys aiemmin pysäytetyn siirron vai tarkoittaako se uutta kokonaisuutta. Lähdetietojen perusteella Yhdysvaltain hallinto ei ole antanut asiasta tarkempaa julkista erittelyä.\n\n## Euroopan joukkojen määrä tarkastelussa\n\nIlmoitus sijoittuu laajempaan keskusteluun Yhdysvaltojen joukkojen määrästä Euroopassa. Valkoinen talo on viime viikkoina viestinyt pyrkivänsä pienentämään Yhdysvaltojen kokonaissotilasmäärää Euroopassa osana Trumpin America First -linjaa.\n\nYhdysvallat on ilmoittanut myös vetävänsä vähintään 5 000 sotilasta Saksasta. Taustalla on ollut kiista Trumpin ja Saksan liittokansleri Friedrich Merzin välillä Iranin sotaan liittyvistä näkemyksistä. Trump on lisäksi sanonut, että vähennyksiä voisi tulla enemmänkin.\n\nPuolan asema on silti Yhdysvaltojen Euroopan-politiikassa erityinen, sillä maa on Naton itäisen sivustan keskeisiä jäsenvaltioita ja Ukrainan sodan vuoksi turvallisuuspoliittisesti tärkeällä alueella. Nawrocki on profiloitunut Trumpin tukijana ja sanonut aiemmin pitävänsä Trumpia johtajana, joka kykenee pysäyttämään Vladimir Putinin ja päättämään Ukrainan sodan.\n\nTrumpin ilmoitus vahvistaa ainakin poliittisesti viestiä siitä, että Washington haluaa korostaa suhdettaan Puolaan, vaikka se samaan aikaan arvioi uudelleen sotilaallista läsnäoloaan muualla Euroopassa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "yhdysvallat",
+      "puola",
+      "donald trump",
+      "nato",
+      "eurooppa"
+    ],
+    "summary_bullets": [
+      "Donald Trump sanoo Yhdysvaltojen lähettävän 5 000 lisäsotilasta Puolaan.",
+      "Ilmoitus tuli viikko sen jälkeen, kun Pentagon perui 4 000 sotilaan suunnitellun siirron Puolaan.",
+      "Yhdysvallat on samaan aikaan viestinyt vähentävänsä joukkojaan Euroopassa, muun muassa Saksassa."
+    ],
+    "key_points": [
+      "Donald Trump sanoo Yhdysvaltojen lähettävän 5 000 lisäsotilasta Puolaan.",
+      "Ilmoitus tuli viikko sen jälkeen, kun Pentagon perui 4 000 sotilaan suunnitellun siirron Puolaan.",
+      "Yhdysvallat on samaan aikaan viestinyt vähentävänsä joukkojaan Euroopassa, muun muassa Saksassa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin BBC- ja NPR-lähdekatkelmiin. Keskeinen epävarmuus on se, liittyykö 5 000 sotilaan lisäys aiemmin peruttuun 4 000 sotilaan siirtoon vai onko kyse erillisestä järjestelystä; tämä on kerrottu tekstissä avoimesti.",
+    "source_text": "President Donald Trump has said the US will be sending an additional 5,000 troops to Poland, a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country. Writing on Truth Social, Trump said the decision was based on the US's relationship with Polish President Karol Nawrocki, whom he backed during presidential elections last year. The US president did not provide further details on whether the additional troops were part of the previous planned deployment or a different operation. The White House has signalled in recent weeks that it intends to reduce its overall troop levels in Europe as part of its \"America First\" agenda. Earlier this month, the US also announced it would withdraw 5,000 troops from Germany after a row between Trump and German Chancellor Friedrich Merz over the war with Iran.\n\nThe announcement comes a week after the Pentagon cancelled a planned deployment of 4,000 troops to the country.\n\nRubio said \"some of those issues\" will be discussed at the summit, adding that Trump remained very upset and disappointed with Nato allies. Trump's announcement on Thursday comes a week after the defence department abruptly said it was cancelling the deployment of 4,000 troops to Poland. US Defence Secretary Pete Hegseth later said the cancellation was \"a temporary delay\" of the planned deployment and the US will continue to ensure it \"retains a strong military presence\" in Poland. Nawrocki has long been a staunch Trump supporter and earned his endorsement before winning Poland's presidential election. Speaking to the BBC's Radio 4 Today programme in January, the Polish president said Trump is the only world leader capable of stopping Vladimir Putin and ending the war in Ukraine. Despite Trump's previous criticism of the Nato alliance and his European counterparts, Nawrocki insisted\n\nTrump and the Pentagon have said in recent weeks that they were drawing down at least 5,000 troops in Germany after Chancellor Friedrich Merz said the U.S. was being \"humiliated\" by the Iranian leadership and criticized what he called a lack of strategy in the war. Trump then told reporters at the beginning of the month that the U.S. would be \"cutting a lot further than 5,000.\" As of last week, some 4,000 troops from the Army's 2nd Armored Brigade Combat Team, 1st Cavalry Division were no longer en route to Poland. The Associated Press reported that the canceled deployment was part of an effort to comply with Trump's order to reduce the number of troops in Europe. A deployment to Germany of personnel trained to fire long-range missiles also was halted.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260522T064141Z_b825d866e9",
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image": "/images/articles/trump-sanoo-yhdysvaltojen-lahettavan-5-000-lisasotilasta-puo-hero.jpg",
+    "image_thumb": "/images/articles/trump-sanoo-yhdysvaltojen-lahettavan-5-000-lisasotilasta-puo-thumb.jpg",
+    "image_alt": "Trump sanoo Yhdysvaltojen lähettävän 5 000 lisäsotilasta Puolaan",
+    "image_credit": "Photo by SHOX ART on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/swieto-wojska-polskiego-2024-zolnierze-na-rynku-we-wroclawiu-27794269/",
+    "image_caption": "",
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEFAgT/xAAkEAACAgECBQUAAAAAAAAAAAABAgMRABIhBBMiMUFCUVKRsf/EABYBAQEBAAAAAAAAAAAAAAAAAAIBA//EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhH/2gAMAwEAAhEDEQA/AEo47lrDSxRg+gbDbvml41gIpEBcg6GX5n3/ADKBNRMx3pbo+cjyLyJYVvXqdZWvyT3GYuRmMzDPM7yCCA2xvWN7+8M7Hk6uwwxdpf/Z"
+  },
+  "image_enriched_at": "2026-05-22T06:48:11.509763+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/trump-sanoo-yhdysvaltojen-lahettavan-5-000-lisasotilasta-puo-hero.jpg",
+    "image_thumb": "/images/articles/trump-sanoo-yhdysvaltojen-lahettavan-5-000-lisasotilasta-puo-thumb.jpg",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-22T06:48:48.058665+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-22-trump-sanoo-yhdysvaltojen-lahettavan-5-000-lisasotilasta-puo.md"
+  ]
+}
