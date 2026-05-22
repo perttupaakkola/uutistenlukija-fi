@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/poliisi-sai-jo-huhtikuussa-ilmoituksen-riihimaen-rajahteesta-taman-takia-poliisi-ei-voinut-selvittaa-asiaa-heti/9342516"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
