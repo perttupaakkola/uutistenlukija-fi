@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-22T00:11:19.287632+00:00",
+  "digest": "14ab1f7d81",
+  "packet": {
+    "packet_id": "20260522T001119Z_14ab1f7d81",
+    "created_at": "2026-05-22T00:11:19Z",
+    "headline_seed": "Näppis | Turkuun tulee ratikka, Lahteen myös!",
+    "description_seed": "Möysän rannan laiturit on näköjään suunniteltu kalastajille ja esteetön liuska turvakaiteella lapsille. Kaupunginjohtaja on saanut paljon hyvää aikaan Orimattilassa, miksi sitä ei haluta nähdä?",
+    "link": "https://www.ess.fi/paakirjoitus-mielipide/9466267",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paakirjoitus-mielipide/9466267"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näppis | Turkuun tulee ratikka, Lahteen myös!"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Möysän rannan laiturit on näköjään suunniteltu kalastajille ja esteetön liuska turvakaiteella lapsille. Kaupunginjohtaja on saanut paljon hyvää aikaan Orimattilassa, miksi sitä ei haluta nähdä?",
+        "word_count": 24,
+        "keyword_overlap": 20,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Möysän rannan laiturit on näköjään suunniteltu kalastajille ja esteetön liuska turvakaiteella lapsille. Kaupunginjohtaja on saanut paljon hyvää aikaan Orimattilassa, miksi sitä ei haluta nähdä?",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 48,
+      "selected_blocks": 1,
+      "selected_source_words": 24,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näppis | Turkuun tulee ratikka, Lahteen myös!",
+      "description": "Möysän rannan laiturit on näköjään suunniteltu kalastajille ja esteetön liuska turvakaiteella lapsille. Kaupunginjohtaja on saanut paljon hyvää aikaan Orimattilassa, miksi sitä ei haluta nähdä?",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Näppis | Turkuun tulee ratikka, Lahteen myös!",
+    "description": "Möysän rannan laiturit on näköjään suunniteltu kalastajille ja esteetön liuska turvakaiteella lapsille. Kaupunginjohtaja on saanut paljon hyvää aikaan Orimattilassa, miksi sitä ei haluta nähdä?",
+    "link": "https://www.ess.fi/paakirjoitus-mielipide/9466267",
+    "published": "2026-05-22T03:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "1c1d56991b75c433ab4a8d1ebf969e03",
+    "_url_hash": "fc26f54a5d61a43e679868fe72f0835d84778081f8f9368af00e83606e77b91a",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Möysän rannan laiturit on näköjään suunniteltu kalastajille ja esteetön liuska turvakaiteella lapsille. Kaupunginjohtaja on saanut paljon hyvää aikaan Orimattilassa, miksi sitä ei haluta nähdä?",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-22T00:13:19.032086+00:00",
+  "failure": "Lähdeaineisto on hyvin niukka ja koostuu mielipidepalstan lyhyistä huomioista, eikä se tue vähintään 250 sanan uutisartikkelia ilman tulkintaa tai keksittyjä lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260522T001119Z_14ab1f7d81\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on hyvin niukka ja koostuu mielipidepalstan lyhyistä huomioista, eikä se tue vähintään 250 sanan uutisartikkelia ilman tulkintaa tai keksittyjä lisätietoja.\"}"
+}
