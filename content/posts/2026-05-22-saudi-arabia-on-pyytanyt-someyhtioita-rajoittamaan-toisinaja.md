@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/media/2026/may/22/instagram-x-social-media-platforms-blocking-saudi-dissidents-accounts"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 

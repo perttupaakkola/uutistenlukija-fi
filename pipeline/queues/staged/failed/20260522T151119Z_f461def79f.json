@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-22T15:11:19.326572+00:00",
+  "digest": "f461def79f",
+  "packet": {
+    "packet_id": "20260522T151119Z_f461def79f",
+    "created_at": "2026-05-22T15:11:19Z",
+    "headline_seed": "Päijät-Hämeen rahasto myönsi puoli miljoonaa apurahoja – katso lista kaikista saajista",
+    "description_seed": "Maakuntarahastolta liikeni tänä vuonna hieman enemmän rahaa kuin viimeksi. Jakokierroksella painottuu lasten ja nuorten asia.",
+    "link": "https://www.ess.fi/paikalliset/9474536",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9474536"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Päijät-Hämeen rahasto myönsi puoli miljoonaa apurahoja – katso lista kaikista saajista"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 129,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Päijät-Hämeen rahasto myönsi puoli miljoonaa apurahoja – katso lista kaikista saajista",
+      "description": "Maakuntarahastolta liikeni tänä vuonna hieman enemmän rahaa kuin viimeksi. Jakokierroksella painottuu lasten ja nuorten asia.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Päijät-Hämeen rahasto myönsi puoli miljoonaa apurahoja – katso lista kaikista saajista",
+    "description": "Maakuntarahastolta liikeni tänä vuonna hieman enemmän rahaa kuin viimeksi. Jakokierroksella painottuu lasten ja nuorten asia.",
+    "link": "https://www.ess.fi/paikalliset/9474536",
+    "published": "2026-05-22T18:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "ee40dcc351df733f40b4ca7cafb9fd3b",
+    "_url_hash": "252c844c4d77b257e67d0ccfcbfde65ed29681cd72b813112332c1eb756517c7",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nPäijät-Hämeen hyvinvointialueen vuoden 2025 tulos jää noin 9 miljoonaa euroa miinukselle. Hyvinvointialue sai valtiolta rahoitusta 955 miljoonaa euroa, toimintakulut olivat noin 1,1 miljardia euroa. Muut tulot eivät riittäneet kuromaan erotusta umpeen.\n\nValtio seuraa hyvinvointialueiden taloudenpitoa. Päijät-Hämeen hyvinvointialueen olisi lain mukaan pitänyt kattaa vuoden 2022 valmisteluvaiheesta tullut ja sen jälkeen syntynyt alijäämänsä vuoden 2025 loppuun mennessä.\n\nHyvinvointialueen taseeseen on kertynyt runsaat 90 miljoonaa euroa alijäämää.\n\nPäijät-Hämeen hyvinvointialue hakee alijäämän kattamiselle lisäaikaa, jos eduskunta hyväksyy muutoksen hyvinvointialueesta annettuun lakiin. Lakiesityksen mukaan hyvinvointialueet voivat saada lisäaikaa alijäämän kattamiselle.\n\nHeikosti säästötavoitteisiin päässeet hyvinvointialueet ovat joutuneet arviointimenettelyyn, jossa valtio rajaa hyvinvointialueiden päätösvaltaa.\n\nVuoden 2025 tilinpäätöstiedot ilmenevät Päijät-Hämeen aluehallituksen esityslistalta. Aluehallituksen on määrä hyväksyä tilinpäätös ensi maanantaina eli 30. maaliskuuta.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-22T15:13:20.195940+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä eikä riittäviä tarkistettavia tietoja apurahojen saajista, ajankohdasta tai jakopäätöksen yksityiskohdista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260522T151119Z_f461def79f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä eikä riittäviä tarkistettavia tietoja apurahojen saajista, ajankohdasta tai jakopäätöksen yksityiskohdista.\"}"
+}
