@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/koulujen-kesalomien-alkua-halutaan-siirtaa-kahdella-viikolla/9342534"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
