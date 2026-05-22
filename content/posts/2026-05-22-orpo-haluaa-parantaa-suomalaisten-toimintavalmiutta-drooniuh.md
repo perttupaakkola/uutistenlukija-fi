@@ -43,7 +43,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.iltalehti.fi/politiikka/a/6c6d72e4-874a-4854-8958-e80195d6405e"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
