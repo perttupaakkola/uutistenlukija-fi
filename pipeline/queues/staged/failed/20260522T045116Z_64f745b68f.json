@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-22T04:51:16.573335+00:00",
+  "digest": "64f745b68f",
+  "packet": {
+    "packet_id": "20260522T045116Z_64f745b68f",
+    "created_at": "2026-05-22T04:51:16Z",
+    "headline_seed": "Oululaismies havahtui keskellä yötä huutoihin – Teki sankariteon",
+    "description_seed": "Paikallinen mies pelasti hukkuvan nuoren miehen Oulujoesta keskellä yötä. Nukkumaan menossa oululaismies kuuli ikkunastaan avun huutoja Oulujoesta perjantain vastaisena yönä noin puoli kolmelta. Mies lähti selvittämään tilannetta ja näki keskellä jokea henkilön hädässä. Kyseessä oli pelastuslaitoksen mukaan nuori mies.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/dbd6d696-c690-4624-8d07-9b963520710d",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/dbd6d696-c690-4624-8d07-9b963520710d"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.52,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Oululaismies havahtui keskellä yötä huutoihin – Teki sankariteon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Paikallinen mies pelasti hukkuvan nuoren miehen Oulujoesta keskellä yötä. Nukkumaan menossa oululaismies kuuli ikkunastaan avun huutoja Oulujoesta perjantain vastaisena yönä noin puoli kolmelta. Mies lähti selvittämään tilannetta ja näki keskellä jokea henkilön hädässä. Kyseessä oli pelastuslaitoksen mukaan nuori mies.",
+        "word_count": 39,
+        "keyword_overlap": 32,
+        "strong_overlap": 21
+      }
+    ],
+    "source_text": "Paikallinen mies pelasti hukkuvan nuoren miehen Oulujoesta keskellä yötä. Nukkumaan menossa oululaismies kuuli ikkunastaan avun huutoja Oulujoesta perjantain vastaisena yönä noin puoli kolmelta. Mies lähti selvittämään tilannetta ja näki keskellä jokea henkilön hädässä. Kyseessä oli pelastuslaitoksen mukaan nuori mies.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 78,
+      "selected_blocks": 1,
+      "selected_source_words": 39,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Oululaismies havahtui keskellä yötä huutoihin – Teki sankariteon",
+      "description": "Paikallinen mies pelasti hukkuvan nuoren miehen Oulujoesta keskellä yötä. Nukkumaan menossa oululaismies kuuli ikkunastaan avun huutoja Oulujoesta perjantain vastaisena yönä noin puoli kolmelta. Mies lähti selvittämään tilannetta ja näki keskellä jokea henkilön hädässä. Kyseessä oli pelastuslaitoksen mukaan nuori mies.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Oululaismies havahtui keskellä yötä huutoihin – Teki sankariteon",
+    "description": "Paikallinen mies pelasti hukkuvan nuoren miehen Oulujoesta keskellä yötä. Nukkumaan menossa oululaismies kuuli ikkunastaan avun huutoja Oulujoesta perjantain vastaisena yönä noin puoli kolmelta. Mies lähti selvittämään tilannetta ja näki keskellä jokea henkilön hädässä. Kyseessä oli pelastuslaitoksen mukaan nuori mies.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/dbd6d696-c690-4624-8d07-9b963520710d",
+    "published": "2026-05-22T07:42:58+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "0338e67330409a3d6765864b459ce3d6",
+    "_url_hash": "ec6701a45f1f62c260f61d966b51909f85d914351b4cfefdbeca91ae1db6ab80",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Paikallinen mies pelasti hukkuvan nuoren miehen Oulujoesta keskellä yötä. Nukkumaan menossa oululaismies kuuli ikkunastaan avun huutoja Oulujoesta perjantain vastaisena yönä noin puoli kolmelta. Mies lähti selvittämään tilannetta ja näki keskellä jokea henkilön hädässä. Kyseessä oli pelastuslaitoksen mukaan nuori mies.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-22T04:53:19.228494+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260522T045116Z_64f745b68f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai keksittyjä yksityiskohtia.\"}"
+}
