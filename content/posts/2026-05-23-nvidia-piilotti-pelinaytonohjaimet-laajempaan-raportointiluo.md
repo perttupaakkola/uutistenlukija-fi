@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/nvidia-on-jo-niin-tekoalyvetoinen-ettei-pelinaytonohjaimista-kannata-enaa-edes-puhua-erikseen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
