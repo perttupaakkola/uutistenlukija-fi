@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T15:31:20.256402+00:00",
+  "digest": "fc2751ed43",
+  "packet": {
+    "packet_id": "20260523T153120Z_fc2751ed43",
+    "created_at": "2026-05-23T15:31:20Z",
+    "headline_seed": "18-vuotias nainen kateissa Helsingissä",
+    "description_seed": "Poliisin mukaan nainen on voinut liikkua Korkeasaaren alueella. Poliisi pyytää havaintoja Helsingissä kadonneesta 18-vuotiaasta. Nuori nainen voi liikkua Korkeasaaren alueella, mutta myös muualla Helsingissä. Hänellä voi olla yllään mustat vaatteet ja valkoiset kengät.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/9bf2adf9-3870-4adc-b88c-22cb78c7c91c",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/9bf2adf9-3870-4adc-b88c-22cb78c7c91c"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "18-vuotias nainen kateissa Helsingissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Poliisin mukaan nainen on voinut liikkua Korkeasaaren alueella. Poliisi pyytää havaintoja Helsingissä kadonneesta 18-vuotiaasta. Nuori nainen voi liikkua Korkeasaaren alueella, mutta myös muualla Helsingissä. Hänellä voi olla yllään mustat vaatteet ja valkoiset kengät.",
+        "word_count": 33,
+        "keyword_overlap": 22,
+        "strong_overlap": 19
+      }
+    ],
+    "source_text": "Poliisin mukaan nainen on voinut liikkua Korkeasaaren alueella. Poliisi pyytää havaintoja Helsingissä kadonneesta 18-vuotiaasta. Nuori nainen voi liikkua Korkeasaaren alueella, mutta myös muualla Helsingissä. Hänellä voi olla yllään mustat vaatteet ja valkoiset kengät.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 66,
+      "selected_blocks": 1,
+      "selected_source_words": 33,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "18-vuotias nainen kateissa Helsingissä",
+      "description": "Poliisin mukaan nainen on voinut liikkua Korkeasaaren alueella. Poliisi pyytää havaintoja Helsingissä kadonneesta 18-vuotiaasta. Nuori nainen voi liikkua Korkeasaaren alueella, mutta myös muualla Helsingissä. Hänellä voi olla yllään mustat vaatteet ja valkoiset kengät.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "18-vuotias nainen kateissa Helsingissä",
+    "description": "Poliisin mukaan nainen on voinut liikkua Korkeasaaren alueella. Poliisi pyytää havaintoja Helsingissä kadonneesta 18-vuotiaasta. Nuori nainen voi liikkua Korkeasaaren alueella, mutta myös muualla Helsingissä. Hänellä voi olla yllään mustat vaatteet ja valkoiset kengät.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/9bf2adf9-3870-4adc-b88c-22cb78c7c91c",
+    "published": "2026-05-23T17:27:35+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "06000df214f0426dd091be3f076461e2",
+    "_url_hash": "4152657192e6dd4d9230873192bf13082a5db836bcc3977e6bc155bfcc79af0f",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Poliisin mukaan nainen on voinut liikkua Korkeasaaren alueella. Poliisi pyytää havaintoja Helsingissä kadonneesta 18-vuotiaasta. Nuori nainen voi liikkua Korkeasaaren alueella, mutta myös muualla Helsingissä. Hänellä voi olla yllään mustat vaatteet ja valkoiset kengät.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-23T15:33:19.245870+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman toistoa tai keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260523T153120Z_fc2751ed43\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman toistoa tai keksittyjä yksityiskohtia.\"}"
+}

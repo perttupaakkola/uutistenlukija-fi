@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
