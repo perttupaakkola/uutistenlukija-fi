@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/may/23/anthony-albanese-visibly-emotional-after-defending-labors-capital-gains-tax-and-negative-gearing-changes"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
