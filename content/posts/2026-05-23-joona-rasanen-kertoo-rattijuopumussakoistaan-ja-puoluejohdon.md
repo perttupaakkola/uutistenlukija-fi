@@ -44,7 +44,6 @@ keywords:
 source_name: "Ilta-Sanomat"
 source_url: "https://www.is.fi/politiikka/art-2000012028632.html"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
