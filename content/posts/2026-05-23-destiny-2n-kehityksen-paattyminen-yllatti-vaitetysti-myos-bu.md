@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/destiny-2n-kehityksen-paattyminen-tuli-yllatyksena-myos-bungien-kehittajille/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
