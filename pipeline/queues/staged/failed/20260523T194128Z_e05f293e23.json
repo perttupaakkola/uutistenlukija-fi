@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T19:41:28.686676+00:00",
+  "digest": "e05f293e23",
+  "packet": {
+    "packet_id": "20260523T194128Z_e05f293e23",
+    "created_at": "2026-05-23T19:41:28Z",
+    "headline_seed": "Nascar champion Kyle Busch died of pneumonia and sepsis, family says",
+    "description_seed": "The driver died aged 41 on Thursday after \"overwhelming complications\" from the illnesses.",
+    "link": "https://www.bbc.com/news/articles/ceqpwx5741no?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "Fox News",
+      "BBC World",
+      "Steelers Wire"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/ceqpwx5741no?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nascar champion Kyle Busch died of pneumonia and sepsis, family says"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Nascar champion Kyle Busch died after severe pneumonia progressed into sepsis, his family has said in a statement released to The Athletic. A medical evaluation showed the illness resulted \"in rapid and overwhelming associated complications,\" the statement said. Busch died suddenly aged 41 on Thursday after what his family had described as a \"severe illness\". In a statement, Nascar described Busch as a \"rare talent, one who comes along once in a generation\". He had won two Cup Series titles and 63 races. Busch was in the middle of his 22nd season in Nascar's top division at the time of his death. He had been expected to compete in an upcoming race this weekend, the Coca-Cola 600, at the Charlotte Motor Speedway in North Carolina. He is survived by his parents, his wife, and two young children.",
+        "word_count": 137,
+        "keyword_overlap": 13,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Fox News",
+        "source_type": "research",
+        "text": "Fox News senior medical analyst Dr. Marc Siegel discusses NASCAR champion Kyle Busch's death reportedly due to a case of severe pneumonia. NASCAR star Kyle Busch’s cause of death was revealed Saturday as severe pneumonia that progressed into sepsis, according to a statement released by his family. The two-time Cup Series champion, 41, died on Thursday after a brief hospitalization with a \"severe illness.\" \"The medical evaluation provided to the Busch Family concluded that severe pneumonia progressed into sepsis, resulting in rapid and overwhelming associated complications,\" read the statement, which was shared in a news release and reported by FOX Sports’ Bob Pockrass on Saturday. Busch’s tragic case underscores the dangers pneumonia can pose, especially when left untreated or when symptoms quickly intensify. NASCAR CHAMPION KYLE BUSCH’S CAUSE OF DEATH REVEALED BY FAMILY",
+        "word_count": 133,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The driver died aged 41 on Thursday after \"overwhelming complications\" from the illnesses.",
+        "word_count": 13,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Steelers Wire",
+        "source_type": "research",
+        "text": "The world learned the cause of death for NASCAR legend Kyle Busch, whose death shook the racing world and has left it trembling and mourning for days. Busch died May 21 after being hospitalized for what was described only as a \"severe illness\" the day before. The Busch family released a statement May 23 that the popular driver's death was caused by \"severe pneumonia (that) progressed into sepsis,\" a terrifying diagnosis that causes the body to attack itself as it fights infection.",
+        "word_count": 82,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Nascar champion Kyle Busch died after severe pneumonia progressed into sepsis, his family has said in a statement released to The Athletic. A medical evaluation showed the illness resulted \"in rapid and overwhelming associated complications,\" the statement said. Busch died suddenly aged 41 on Thursday after what his family had described as a \"severe illness\". In a statement, Nascar described Busch as a \"rare talent, one who comes along once in a generation\". He had won two Cup Series titles and 63 races. Busch was in the middle of his 22nd season in Nascar's top division at the time of his death. He had been expected to compete in an upcoming race this weekend, the Coca-Cola 600, at the Charlotte Motor Speedway in North Carolina. He is survived by his parents, his wife, and two young children.\n\nFox News senior medical analyst Dr. Marc Siegel discusses NASCAR champion Kyle Busch's death reportedly due to a case of severe pneumonia. NASCAR star Kyle Busch’s cause of death was revealed Saturday as severe pneumonia that progressed into sepsis, according to a statement released by his family. The two-time Cup Series champion, 41, died on Thursday after a brief hospitalization with a \"severe illness.\" \"The medical evaluation provided to the Busch Family concluded that severe pneumonia progressed into sepsis, resulting in rapid and overwhelming associated complications,\" read the statement, which was shared in a news release and reported by FOX Sports’ Bob Pockrass on Saturday. Busch’s tragic case underscores the dangers pneumonia can pose, especially when left untreated or when symptoms quickly intensify. NASCAR CHAMPION KYLE BUSCH’S CAUSE OF DEATH REVEALED BY FAMILY\n\nThe driver died aged 41 on Thursday after \"overwhelming complications\" from the illnesses.\n\nThe world learned the cause of death for NASCAR legend Kyle Busch, whose death shook the racing world and has left it trembling and mourning for days. Busch died May 21 after being hospitalized for what was described only as a \"severe illness\" the day before. The Busch family released a statement May 23 that the popular driver's death was caused by \"severe pneumonia (that) progressed into sepsis,\" a terrifying diagnosis that causes the body to attack itself as it fights infection.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 981,
+      "selected_blocks": 4,
+      "selected_source_words": 365,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Fox News",
+        "Fox News",
+        "Fox News",
+        "Steelers Wire",
+        "Steelers Wire",
+        "Steelers Wire",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "Fox News",
+        "BBC World",
+        "Steelers Wire"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nascar champion Kyle Busch died of pneumonia and sepsis, family says",
+      "description": "The driver died aged 41 on Thursday after \"overwhelming complications\" from the illnesses.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nascar champion Kyle Busch died of pneumonia and sepsis, family says",
+    "description": "The driver died aged 41 on Thursday after \"overwhelming complications\" from the illnesses.",
+    "link": "https://www.bbc.com/news/articles/ceqpwx5741no?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-23T17:33:30+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "1d37095752704bac281005253db6f0e5",
+    "_url_hash": "113d9d606635bb69e2e94b731b0fb848fa1c556a4feb47483b66d767665ecb0d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nNascar champion Kyle Busch died after severe pneumonia progressed into sepsis, his family has said in a statement released to The Athletic.\n\nA medical evaluation showed the illness resulted \"in rapid and overwhelming associated complications,\" the statement said.\n\nBusch died suddenly aged 41 on Thursday after what his family had described as a \"severe illness\".\n\nIn a statement, Nascar described Busch as a \"rare talent, one who comes along once in a generation\". He had won two Cup Series titles and 63 races.\n\nBusch was in the middle of his 22nd season in Nascar's top division at the time of his death.\n\nHe had been expected to compete in an upcoming race this weekend, the Coca-Cola 600, at the Charlotte Motor Speedway in North Carolina.\n\nHe is survived by his parents, his wife, and two young children.\n\nAt a press conference, Nascar CEO Steve O'Donnell said the races would continue, as Busch would be upset if they did not go ahead.\n\n\"So we're going to honour his memory,\" O'Donnell said.\n\nBusch's number and his truck were on display ahead of the event, according to local media.\n\n\"Kyle Busch lived just about every chapter of what you could do in Nascar,\" said O'Donnell, who described the late driver as fierce, competitive and \"always good for a great quote\".\n\nO'Connell also praised Busch's charity work, citing the foundation he started with his wife to support awareness and advancement for IVF and infertility treatments.\n\nIn addition to his winning record, Busch also built a larger than life persona in the racing world and was known by the nickname \"Rowdy\".\n\nOther tributes poured in following the announcement of Busch's sudden death.\n\n\"Absolutely cannot comprehend this news,\" former teammate Denny Hamlin wrote on social media. \"We just need to think of his family during this time. We love you KB.\"\n\nOver the course of his 20-year career, Busch won 234 races in NASCAR's top three series, more than any driver in history, according to ESPN.\n\n---\n\n[Lähde: Fox News]\nFox News senior medical analyst Dr. Marc Siegel discusses NASCAR champion Kyle Busch's death reportedly due to a case of severe pneumonia.\n\nNASCAR star Kyle Busch’s cause of death was revealed Saturday as severe pneumonia that progressed into sepsis, according to a statement released by his family. The two-time Cup Series champion, 41, died on Thursday after a brief hospitalization with a \"severe illness.\"\n\n\"The medical evaluation provided to the Busch Family concluded that severe pneumonia progressed into sepsis, resulting in rapid and overwhelming associated complications,\" read the statement, which was shared in a news release and reported by FOX Sports’ Bob Pockrass on Saturday.\n\nBusch’s tragic case underscores the dangers pneumonia can pose, especially when left untreated or when symptoms quickly intensify.\n\nNASCAR CHAMPION KYLE BUSCH’S CAUSE OF DEATH REVEALED BY FAMILY\n\nPneumonia is a respiratory infection that fill the lungs with fluid, making breathing difficult. It can be caused by bacteria, viruses or fungi, according to multiple medical sources.\n\nSymptoms typically include cough, fever, chills, chest pain and shortness of breath.\n\nNASCAR star Kyle Busch’s cause of death was revealed Saturday as severe pneumonia that progressed into sepsis. (James Gilbert/Getty Images)\n\nBusch reportedly had a sinus infection that worsened prior to his death. \"This upper respiratory sinus infection progressed to pneumonia,\" Fox News senior medical analyst Dr. Marc Siegel told Fox News Digital.\n\nBacterial pneumonia is normally more severe than viral pneumonia, according to Siegel.\n\nSURGE IN WALKING PNEUMONIA AFFECTS THESE HIGH-RISK GROUPS, SAYS DR. MARC SIEGEL\n\nThe doctor noted that the physical stress associated with racing simulators — which are designed to mimic the intense G-forces that drivers experience on the track — could potentially aggravate already inflamed lungs during recovery from pneumonia, though direct research on simulator-related effects is limited.\n\nNASCAR Sprint Cup Series driver Kyle Busch stands with his wife Samantha Busch and son Brexton Busch prior to the Pennsylvania 400 at Pocono Raceway in August 2016 in Pennsylvania. (Matthew O'Haren-Imagn Images)\n\nIn severe cases, the infection in the lungs can spread into the bloodstream, triggering a widespread, life-threatening inflammatory response known as sepsis — particularly in vulnerable patients or when treatment is delayed, according to Siegel.\n\nSepsis can quickly lead to tissue damage, org\n\n---\n\n[Lähde: Steelers Wire]\nThe world learned the cause of death for NASCAR legend Kyle Busch, whose death shook the racing world and has left it trembling and mourning for days.\n\nBusch died May 21 after being hospitalized for what was described only as a \"severe illness\" the day before. The Busch family released a statement May 23 that the popular driver's death was caused by \"severe pneumonia (that) progressed into sepsis,\" a terrifying diagnosis that causes the body to attack itself as it fights infection.\n\n\"Rowdy\" was among the most beloved (and sometimes hated) personalities in the sport. Busch, 41, was a two-time NASCAR Cup Series champion who won more races among NASCAR's three national series — the Cup Series, the second-tier O'Reilly Series and the Truck Series — than anyone in history. And even that wasn't enough: Busch also had been in talks for year about attempting \"The Double,\" driving the famed Indianapolis 500 and Coca-Cola 600 in the same day, like his brother Kurt Busch did in 2014.\n\nBusch was planning on racing in the Truck Series race and the Coke 600 this weekend at Charlotte Motor Speedway. His No. 8 car was pulled from active duty, saved for his 11-year-old son, Brexton, if and when he decides to give NASCAR a try. As Richard Childress Racing's remodeled No. 33 car was brought to the garage at Charlotte, the other teams gave an impromptu moment of silence in honor of Busch.\n\nHere's what we know about Busch's cause of death and what comes next:\n\nKyle Busch had been battling medical issues for weeks leading to his de...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-23T19:44:55.661108+00:00",
+  "failure": "content too short: 238 words",
+  "payload": {
+    "packet_id": "20260523T194128Z_e05f293e23",
+    "title": "Kyle Busch kuoli keuhkokuumeen ja sepsiksen komplikaatioihin, perhe kertoo",
+    "summary": "Nascarin kaksinkertainen Cup Series -mestari Kyle Busch kuoli 41-vuotiaana torstaina. Perheen mukaan vaikea keuhkokuume eteni sepsikseksi ja johti nopeasti vakaviin komplikaatioihin.",
+    "content": "Nascar-kuljettaja Kyle Busch kuoli 41-vuotiaana sen jälkeen, kun vaikea keuhkokuume eteni sepsikseksi, hänen perheensä kertoi lauantaina julkaistussa lausunnossa. Perheen mukaan lääketieteellinen arvio osoitti, että sairaus johti nopeasti vakaviin ja ylivoimaisiin komplikaatioihin. Busch kuoli torstaina äkillisesti sen jälkeen, kun hänen tilaansa oli aiemmin kuvattu vakavaksi sairaudeksi.\n\n## Perhe täsmensi kuolinsyyn\n\nPerheen lausunnon mukaan Buschin kuoleman taustalla oli vaikea keuhkokuume, joka eteni sepsikseksi. Kuolinsyy julkistettiin lauantaina sen jälkeen, kun 41-vuotiaan kuljettajan oli kerrottu olleen lyhyesti sairaalahoidossa vakavan sairauden vuoksi.\n\nSteelers Wiren mukaan Busch kuoli 21. toukokuuta, ja perheen lausunto kuolinsyystä julkaistiin 23. toukokuuta. Fox Newsin mukaan lausunnossa todettiin, että lääketieteellinen arvio oli toimitettu Buschin perheelle ja että komplikaatiot etenivät nopeasti. Lähteissä ei kerrottu tarkemmin, milloin keuhkokuume oli alkanut tai kuinka kauan hänen tilansa oli heikentynyt ennen sairaalahoitoa.\n\n## Ura jatkui Nascarin huipulla\n\nBusch oli kuollessaan kesken 22. kautensa Nascarin korkeimmalla sarjatasolla. Hän oli voittanut urallaan kaksi Cup Series -mestaruutta ja 63 kilpailua, mikä teki hänestä yhden sarjan näkyvimmistä kuljettajista.\n\nNascar kuvasi Buschia lausunnossaan harvinaiseksi lahjakkuudeksi, jollainen tulee vastaan vain kerran sukupolvessa. Hänen oli määrä kilpailla vielä samana viikonloppuna Coca-Cola 600 -kilpailussa Charlotte Motor Speedwaylla Pohjois-Carolinassa.\n\n## Autourheiluyhteisö suree\n\nBuschin kuolema järkytti autourheilun seuraajia ja Nascar-yhteisöä, sillä hän oli edelleen aktiivinen kuljettaja sarjan pääluokassa. Hänet tunnettiin pitkän uransa lisäksi mestaruuksistaan ja suuresta kilpailuvoittojen määrästä.\n\nBuschia jäävät kaipaamaan hänen vanhempansa, vaimonsa ja kaksi pientä lastaan. Perheen julkaisemien tietojen perusteella kuolinsyy liittyi sairauden nopeaan etenemiseen, eikä lähteissä kuvattu muita yksityiskohtia hänen viimeisistä päivistään.",
+    "category": "Urheilu",
+    "tags": [
+      "Nascar",
+      "Kyle Busch",
+      "autourheilu",
+      "Yhdysvallat",
+      "sepsis"
+    ],
+    "summary_bullets": [
+      "Kyle Busch kuoli 41-vuotiaana torstaina.",
+      "Perheen mukaan vaikea keuhkokuume eteni sepsikseksi.",
+      "Busch voitti urallaan kaksi Nascar Cup Series -mestaruutta ja 63 kilpailua."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.96,
+    "journalist_note": "Luotettu ydintieto perustuu perheen lausuntoon ja useiden lähteiden yhteneviin tietoihin. Kategoria korjattu urheiluksi, koska packetin Kotimaa-luokitus ei vastaa aiheen sisältöä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260523T194128Z_e05f293e23\",\n  \"title\": \"Kyle Busch kuoli keuhkokuumeen ja sepsiksen komplikaatioihin, perhe kertoo\",\n  \"summary\": \"Nascarin kaksinkertainen Cup Series -mestari Kyle Busch kuoli 41-vuotiaana torstaina. Perheen mukaan vaikea keuhkokuume eteni sepsikseksi ja johti nopeasti vakaviin komplikaatioihin.\",\n  \"content\": \"Nascar-kuljettaja Kyle Busch kuoli 41-vuotiaana sen jälkeen, kun vaikea keuhkokuume eteni sepsikseksi, hänen perheensä kertoi lauantaina julkaistussa lausunnossa. Perheen mukaan lääketieteellinen arvio osoitti, että sairaus johti nopeasti vakaviin ja ylivoimaisiin komplikaatioihin. Busch kuoli torstaina äkillisesti sen jälkeen, kun hänen tilaansa oli aiemmin kuvattu vakavaksi sairaudeksi.\\n\\n## Perhe täsmensi kuolinsyyn\\n\\nPerheen lausunnon mukaan Buschin kuoleman taustalla oli vaikea keuhkokuume, joka eteni sepsikseksi. Kuolinsyy julkistettiin lauantaina sen jälkeen, kun 41-vuotiaan kuljettajan oli kerrottu olleen lyhyesti sairaalahoidossa vakavan sairauden vuoksi.\\n\\nSteelers Wiren mukaan Busch kuoli 21. toukokuuta, ja perheen lausunto kuolinsyystä julkaistiin 23. toukokuuta. Fox Newsin mukaan lausunnossa todettiin, että lääketieteellinen arvio oli toimitettu Buschin perheelle ja että komplikaatiot etenivät nopeasti. Lähteissä ei kerrottu tarkemmin, milloin keuhkokuume oli alkanut tai kuinka kauan hänen tilansa oli heikentynyt ennen sairaalahoitoa.\\n\\n## Ura jatkui Nascarin huipulla\\n\\nBusch oli kuollessaan kesken 22. kautensa Nascarin korkeimmalla sarjatasolla. Hän oli voittanut urallaan kaksi Cup Series -mestaruutta ja 63 kilpailua, mikä teki hänestä yhden sarjan näkyvimmistä kuljettajista.\\n\\nNascar kuvasi Buschia lausunnossaan harvinaiseksi lahjakkuudeksi, jollainen tulee vastaan vain kerran sukupolvessa. Hänen oli määrä kilpailla vielä samana viikonloppuna Coca-Cola 600 -kilpailussa Charlotte Motor Speedwaylla Pohjois-Carolinassa.\\n\\n## Autourheiluyhteisö suree\\n\\nBuschin kuolema järkytti autourheilun seuraajia ja Nascar-yhteisöä, sillä hän oli edelleen aktiivinen kuljettaja sarjan pääluokassa. Hänet tunnettiin pitkän uransa lisäksi mestaruuksistaan ja suuresta kilpailuvoittojen määrästä.\\n\\nBuschia jäävät kaipaamaan hänen vanhempansa, vaimonsa ja kaksi pientä lastaan. Perheen julkaisemien tietojen perusteella kuolinsyy liittyi sairauden nopeaan etenemiseen, eikä lähteissä kuvattu muita yksityiskohtia hänen viimeisistä päivistään.\",\n  \"category\": \"Urheilu\",\n  \"tags\": [\n    \"Nascar\",\n    \"Kyle Busch\",\n    \"autourheilu\",\n    \"Yhdysvallat\",\n    \"sepsis\"\n  ],\n  \"summary_bullets\": [\n    \"Kyle Busch kuoli 41-vuotiaana torstaina.\",\n    \"Perheen mukaan vaikea keuhkokuume eteni sepsikseksi.\",\n    \"Busch voitti urallaan kaksi Nascar Cup Series -mestaruutta ja 63 kilpailua.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.96,\n  \"journalist_note\": \"Luotettu ydintieto perustuu perheen lausuntoon ja useiden lähteiden yhteneviin tietoihin. Kategoria korjattu urheiluksi, koska packetin Kotimaa-luokitus ei vastaa aiheen sisältöä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260523T194128Z_e05f293e23",
+    "category": "Kotimaa",
+    "selected_source_words": 365,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 238,
+    "issues": [
+      "content too short: 238 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Kyle Busch kuoli keuhkokuumeen ja sepsiksen komplikaatioihin, perhe kertoo",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-23T19:44:55.660860+00:00",
+    "repair_trigger": "pre_repair_word_count=244; selected_source_words=365; selected_source_blocks=4",
+    "pre_repair_word_count": 244,
+    "pre_repair_lead_word_count": 46,
+    "post_repair_word_count": 238,
+    "post_repair_lead_word_count": 45,
+    "selected_source_words_at_repair": 365,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 365,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 238 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:f66998235f",
+      "2:Fox News:5fedcb12c0",
+      "3:BBC World:15c57d7524",
+      "4:Steelers Wire:c52d50f41c"
+    ],
+    "final_issues": [
+      "content too short: 238 words"
+    ],
+    "recovered": false
+  }
+}

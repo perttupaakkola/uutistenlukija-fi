@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T19:21:23.690130+00:00",
+  "digest": "32eb28b1d0",
+  "packet": {
+    "packet_id": "20260523T192123Z_32eb28b1d0",
+    "created_at": "2026-05-23T19:21:23Z",
+    "headline_seed": "Uutta tietoa ebola­epidemian alkuperästä",
+    "description_seed": "Nyt leviävä virusvariantti on uudenlainen.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012029049.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012029049.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Uutta tietoa ebola­epidemian alkuperästä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 213,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "Stara",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Uutta tietoa ebola­epidemian alkuperästä",
+      "description": "Nyt leviävä virusvariantti on uudenlainen.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Uutta tietoa ebola­epidemian alkuperästä",
+    "description": "Nyt leviävä virusvariantti on uudenlainen.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012029049.html",
+    "published": "2026-05-23T19:19:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "ace6454c3fe10083a66e90297ececc80",
+    "_url_hash": "571531dbc3923cdcd86f0b91f7ead11bf664dd5275187ae090bc7f856b9ee4aa",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Stara]\nNightwish-yhtyeen alkuperäisenä laulajana kuuluisaksi noussut laulaja Tarja Turunen paljasti hiljattain julkaisevansa uuden sooloalbumin Frisson Noir. Esimakua levyn antimista saatiin jo eeppisen At Sea -kappaleen muodossa.\n\nNyt tulevasta albumista on tihkunut uutta tietoa. Frisson Noiria on etukäteen kuvailtu paluuksi metallimusiikin pariin ja artistin uran raskaimmaksi julkaisuksi.\n\nAlbumilla kuullaan useampaa vierailevaa tähteä. Heistä yksi on rumpali Chad Smith, joka on ollut yhdysvaltalaisen rockyhtye Red Hot Chili Peppersin jäsen vuodesta 1988 lähtien.\n\nSmith on vuosien saatossa tehnyt yhteistyötä myös sellaisten nimien, kuin Ozzy Osbourne, Iggy Pop, Lady Gaga, Johnny Cash ja Charli XCX kanssa. Smith oli mukana myös Turusen vuonna 2016 ilmestyneellä The Shadow Self -albumilla.\n\nLevyllä vierailee myös brittiläisen, aikoinaan kohuakin herättäneen Cradle of Filth -yhtyeen nokkamies Dani Filth. Vieraileviin tähtiin kuuluu myös Turusen entinen Nightwish-bändikaveri ja suomalaisen metallimusiikin pitkän linjan tekijä Marko Hietala.\n\nFrisson Noirin on miksannut yhdysvaltalainen musiikkituottaja Neal Avron. Grammy-palkittu tuottaja on työskennellyt aiemmin muun muassa Linkin Parkin, Twenty One Pilotsin, Weezerin ja Disturbedin kanssa.\n\nTurusen edellinen kokonaan uutta materiaalia sisältänyt albumi oli vuonna 2019 julkaistu In the Raw. Kyseisen albumin jälkeen artisti on julkaissut kokoelmalevyn ja Dark Christmas -joulualbumin.\n\nTarja Turusen Frisson Noir ilmestyy 12. kesäkuuta 2026.\n\nVoit lukea lisää juuri tähän artikkeliin liittyvistä teemoista ja aiheista, kuten Tarja Turunen tai laajemmin samasta aihealueesta Viihdeuutiset -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-23T19:23:18.882273+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä eikä riittäviä varmistettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260523T192123Z_32eb28b1d0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä eikä riittäviä varmistettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
