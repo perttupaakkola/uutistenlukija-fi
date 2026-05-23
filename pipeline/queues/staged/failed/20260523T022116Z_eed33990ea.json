@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T02:21:16.303977+00:00",
+  "digest": "eed33990ea",
+  "packet": {
+    "packet_id": "20260523T022116Z_eed33990ea",
+    "created_at": "2026-05-23T02:21:16Z",
+    "headline_seed": "Kun puhveli muuttui Leijonaksi",
+    "description_seed": "NHL:n pudotuspeleistä MM-kisoihin kiidätetty Konsta Helenius hyppäsi kaukaloon perjantaina Iso-Britanniaa vastaan.",
+    "link": "https://www.jatkoaika.com/Kuvat/Timanttikuva/Kun-puhveli-muuttui-Leijonaksi/269812",
+    "source": "Jatkoaika.com",
+    "source_names": [],
+    "source_urls": [
+      "https://www.jatkoaika.com/Kuvat/Timanttikuva/Kun-puhveli-muuttui-Leijonaksi/269812"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kun puhveli muuttui Leijonaksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 115,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Leijonat",
+        "Jatkoaika.com"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kun puhveli muuttui Leijonaksi",
+      "description": "NHL:n pudotuspeleistä MM-kisoihin kiidätetty Konsta Helenius hyppäsi kaukaloon perjantaina Iso-Britanniaa vastaan.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kun puhveli muuttui Leijonaksi",
+    "description": "NHL:n pudotuspeleistä MM-kisoihin kiidätetty Konsta Helenius hyppäsi kaukaloon perjantaina Iso-Britanniaa vastaan.",
+    "link": "https://www.jatkoaika.com/Kuvat/Timanttikuva/Kun-puhveli-muuttui-Leijonaksi/269812",
+    "published": "2026-05-22T20:04:48+00:00",
+    "source": "Jatkoaika.com",
+    "source_domain": "jatkoaika.com",
+    "language": "fi",
+    "fingerprint": "a4c15a5b5267236e8bd31c5ffc42b9ff",
+    "_url_hash": "04045279c3e46a5eda6e12ff26ef5b8a4b81b6c518066e95b518c62e7ba02e5f",
+    "source_tier": 2,
+    "category_hint": "Urheilu",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: Leijonat]\nSuomi-Latvia 21.5.2026. Leijonat kohtaa torstaina illalla jääkiekon MM-kisojen Latvian. Ottelu alkaa kello 17.20.\n\nLeijonien ja Latvian välistä ottelua voi seurata suorana MTV3-kanavalla sekä MTV:n ja Viaplayn maksukanavilla ja suoratoistopalveluissa.\n\nLeijonien ottelua ennakoidaan MTV:n studiossa, jossa juontajina toimii Suvi Puukangas. Asiantuntijoina nähdään Karri Kivi ja Juhamatti Aaltonen.\n\nMyös Sami Kapanen vahvistaa asiantuntijatiimiä. Kapanen on paikan päällä Zürichissä.\n\nOttelun selostaa MTV:llä Jani Alkio, joka saa vierelleen kommentaattoriksi Lasse Kukkosen.\n\nLIVE-SEURANTA: Seuraa Suomi–Latvia-ottelua hetki hetkeltä\n\nMTV:n kanavilla näet suorana kaikki Leijonien ottelut, välierät ja finaalin. Myös pronssiottelu näkyy suorana, mikäli Leijonat pelaa siellä.\n\nMaksullinen Viaplay näyttää suorana kaikki jääkiekon MM-ottelut toukokuussa 2026. Viaplaylla pääselostajana toimii Antti Mäkinen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-23T02:23:19.281564+00:00",
+  "failure": "Lähdeaineisto on liian niukka: paketissa ei ole valittuja lähdekatkelmia eikä riittävästi vahvistettuja faktoja 250 sanan uutiseen ilman täydennysten keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260523T022116Z_eed33990ea\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: paketissa ei ole valittuja lähdekatkelmia eikä riittävästi vahvistettuja faktoja 250 sanan uutiseen ilman täydennysten keksimistä.\"}"
+}

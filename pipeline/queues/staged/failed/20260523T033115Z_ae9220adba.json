@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T03:31:15.588293+00:00",
+  "digest": "ae9220adba",
+  "packet": {
+    "packet_id": "20260523T033115Z_ae9220adba",
+    "created_at": "2026-05-23T03:31:15Z",
+    "headline_seed": "Näissä Helsingin pörssin osakkeissa tuloskasvu yhdistyy nyt halpaan arvostukseen: Kokosimme 3 taulukkoa",
+    "description_seed": "Suomalaisosakkeiden vahvasta vedosta huolimatta Helsingin pörssistä löytyy kourallinen yhtiöitä, joiden tuloksen odotetaan kasvavan tänä ja ensi vuonna eikä hinta huimaa päätä, kun p/e-luku on kympin hujakoilla.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/d01ff5ed-76f0-495f-80f4-51d552656c04",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/d01ff5ed-76f0-495f-80f4-51d552656c04"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näissä Helsingin pörssin osakkeissa tuloskasvu yhdistyy nyt halpaan arvostukseen: Kokosimme 3 taulukkoa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Suomalaisosakkeiden vahvasta vedosta huolimatta Helsingin pörssistä löytyy kourallinen yhtiöitä, joiden tuloksen odotetaan kasvavan tänä ja ensi vuonna eikä hinta huimaa päätä, kun p/e-luku on kympin hujakoilla.",
+        "word_count": 26,
+        "keyword_overlap": 23,
+        "strong_overlap": 18
+      }
+    ],
+    "source_text": "Suomalaisosakkeiden vahvasta vedosta huolimatta Helsingin pörssistä löytyy kourallinen yhtiöitä, joiden tuloksen odotetaan kasvavan tänä ja ensi vuonna eikä hinta huimaa päätä, kun p/e-luku on kympin hujakoilla.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 1,
+      "selected_source_words": 26,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näissä Helsingin pörssin osakkeissa tuloskasvu yhdistyy nyt halpaan arvostukseen: Kokosimme 3 taulukkoa",
+      "description": "Suomalaisosakkeiden vahvasta vedosta huolimatta Helsingin pörssistä löytyy kourallinen yhtiöitä, joiden tuloksen odotetaan kasvavan tänä ja ensi vuonna eikä hinta huimaa päätä, kun p/e-luku on kympin hujakoilla.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Näissä Helsingin pörssin osakkeissa tuloskasvu yhdistyy nyt halpaan arvostukseen: Kokosimme 3 taulukkoa",
+    "description": "Suomalaisosakkeiden vahvasta vedosta huolimatta Helsingin pörssistä löytyy kourallinen yhtiöitä, joiden tuloksen odotetaan kasvavan tänä ja ensi vuonna eikä hinta huimaa päätä, kun p/e-luku on kympin hujakoilla.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/d01ff5ed-76f0-495f-80f4-51d552656c04",
+    "published": "2026-05-23T03:10:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "87e1aa3d0132f0e1d8f642a58e0741bf",
+    "_url_hash": "03a30ce72b6f7c34e5deb56a6a397fa54a1368dcbc4a1d98830525bddddc14a8",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Suomalaisosakkeiden vahvasta vedosta huolimatta Helsingin pörssistä löytyy kourallinen yhtiöitä, joiden tuloksen odotetaan kasvavan tänä ja ensi vuonna eikä hinta huimaa päätä, kun p/e-luku on kympin hujakoilla.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-23T03:33:33.020608+00:00",
+  "failure": "Lähdeaineisto on liian niukka: paketissa ei ole yhtiöitä, taulukkotietoja, ajankohtaa tai muita tarkistettavia yksityiskohtia 250 sanan uutiseen ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex plugin thread config eligibility\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=a6989264-fc8f-4a24-967f-3f20d820c204 sessionKey=agent:monica:explicit:monica-pipeline-1d3ef42d-5b9d-49d6-986a-d58d019d8ade lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-1d3ef42d-5b9d-49d6-986a-d58d019d8ade\n{\"packet_id\":\"20260523T033115Z_ae9220adba\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: paketissa ei ole yhtiöitä, taulukkotietoja, ajankohtaa tai muita tarkistettavia yksityiskohtia 250 sanan uutiseen ilman keksittyjä faktoja.\"}"
+}
