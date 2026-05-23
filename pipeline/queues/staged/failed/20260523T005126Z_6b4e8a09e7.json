@@ -1,0 +1,140 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T00:51:26.143061+00:00",
+  "digest": "6b4e8a09e7",
+  "packet": {
+    "packet_id": "20260523T005126Z_6b4e8a09e7",
+    "created_at": "2026-05-23T00:51:26Z",
+    "headline_seed": "Physics explains why gold stays pristine",
+    "description_seed": "Metals like copper oxidize — reacting with oxygen in the air — but gold doesn’t, thanks to a quick switch in atom arrangement on its surface.",
+    "link": "https://www.sciencenews.org/article/physics-explains-gold-shiny-oxidize",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/physics-explains-gold-shiny-oxidize"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.78,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Physics explains why gold stays pristine"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "Metals like copper oxidize — reacting with oxygen in the air — but gold doesn’t, thanks to a quick switch in atom arrangement on its surface.",
+        "word_count": 26,
+        "keyword_overlap": 15,
+        "strong_overlap": 9
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "Steel rusts over time; copper goes green. But gold seems impervious to the elements. Scientists have now discovered a new detail behind how gold stays so pristine. Atoms on the surface of gold rearrange into a geometry that hinders oxidation, the process that causes many metals to tarnish. Without that rearrangement, gold would begin to oxidize in seconds, researchers report May 21 in Physical Review Letters. For a metal to become oxidized, it must first split the surrounding air’s oxygen molecules, which each consist of two oxygen atoms. Then the oxygen atoms can form compounds that stick to the surface of the metal. So the researchers calculated how well gold’s surfaces could split oxygen.",
+        "word_count": 114,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Metals like copper oxidize — reacting with oxygen in the air — but gold doesn’t, thanks to a quick switch in atom arrangement on its surface.\n\nSteel rusts over time; copper goes green. But gold seems impervious to the elements. Scientists have now discovered a new detail behind how gold stays so pristine. Atoms on the surface of gold rearrange into a geometry that hinders oxidation, the process that causes many metals to tarnish. Without that rearrangement, gold would begin to oxidize in seconds, researchers report May 21 in Physical Review Letters. For a metal to become oxidized, it must first split the surrounding air’s oxygen molecules, which each consist of two oxygen atoms. Then the oxygen atoms can form compounds that stick to the surface of the metal. So the researchers calculated how well gold’s surfaces could split oxygen.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 140,
+      "selected_blocks": 2,
+      "selected_source_words": 140,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Physics explains why gold stays pristine",
+      "description": "Metals like copper oxidize — reacting with oxygen in the air — but gold doesn’t, thanks to a quick switch in atom arrangement on its surface.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Physics explains why gold stays pristine",
+    "description": "Metals like copper oxidize — reacting with oxygen in the air — but gold doesn’t, thanks to a quick switch in atom arrangement on its surface.",
+    "link": "https://www.sciencenews.org/article/physics-explains-gold-shiny-oxidize",
+    "published": "2026-05-22T17:00:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "29f41e9fc201df58d5fc2c115779b8c9",
+    "_url_hash": "23f2f78803b498777942a286ffb6e0eb318fd2e5394162faa98ed338d7d07d01",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nSteel rusts over time; copper goes green. But gold seems impervious to the elements. Scientists have now discovered a new detail behind how gold stays so pristine.\n\nAtoms on the surface of gold rearrange into a geometry that hinders oxidation, the process that causes many metals to tarnish. Without that rearrangement, gold would begin to oxidize in seconds, researchers report May 21 in Physical Review Letters.\n\nFor a metal to become oxidized, it must first split the surrounding air’s oxygen molecules, which each consist of two oxygen atoms. Then the oxygen atoms can form compounds that stick to the surface of the metal. So the researchers calculated how well gold’s surfaces could split oxygen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-23T00:54:11.452608+00:00",
+  "failure": "content too short: 225 words",
+  "payload": {
+    "packet_id": "20260523T005126Z_6b4e8a09e7",
+    "title": "Kullan pinta vaihtaa järjestystä ja torjuu hapettumista",
+    "summary": "Tutkijoiden mukaan kullan poikkeuksellinen kestävyys liittyy sen pinnan atomien nopeaan uudelleenjärjestymiseen. Järjestys vaikeuttaa hapen hajottamista, mikä on hapettumisen ensimmäinen edellytys monilla metalleilla.",
+    "content": "Kulta säilyy kiiltävänä tavalla, joka erottaa sen monista arjessa tutuista metalleista: teräs ruostuu ajan mittaan ja kupari voi vihertyä, mutta kullan pinnalla tapahtuva atomien järjestäytyminen näyttää estävän hapettumisen käynnistymistä. Tutkijat raportoivat Physical Review Letters -julkaisussa 21. toukokuuta, että kullan pinnan atomit asettuvat geometriaan, joka vaikeuttaa hapen molekyylien pilkkomista ja siten hapettumisen etenemistä.\n\n## Hapettuminen alkaa hapen pilkkoutumisesta\n\nMonien metallien tummuminen, ruostuminen tai muu pinnan muuttuminen liittyy hapettumiseen. Prosessin alkuvaiheessa metallin pinnan täytyy pystyä hajottamaan ilmassa olevia happimolekyylejä. Yksi happimolekyyli koostuu kahdesta happiatomista. Kun molekyyli hajoaa, yksittäiset happiatomit voivat muodostaa metallin pinnalle yhdisteitä, jotka jäävät siihen kiinni.\n\nKullan kohdalla tutkijat tarkastelivat juuri tätä ratkaisevaa vaihetta: kuinka hyvin kullan erilaiset pinnat voisivat pilkkoa happea. Laskelmien perusteella pinnan atomien järjestyksellä on keskeinen merkitys. Kun atomit järjestäytyvät tiettyyn geometriaan, hapen hajottaminen vaikeutuu, eikä hapettuminen pääse samalla tavalla alkuun.\n\n## Pieni muutos pinnalla selittää suuren eron\n\nTutkimuksen mukaan kulta ei ole täysin sivussa hapettumisen perusmekanismeista siksi, että happi olisi sille merkityksetön, vaan siksi, että pinnan atomirakenne tekee hapen käsittelystä vaikeaa. Lähdetietojen mukaan ilman tätä uudelleenjärjestymistä kulta alkaisi hapettua sekunneissa.\n\nHavainto tarkentaa kuvaa siitä, miksi kulta on niin poikkeuksellisen vakaa verrattuna esimerkiksi kupariin ja teräkseen. Kyse ei ole vain yleisestä jalometallin maineesta, vaan atomitason järjestelystä, joka vaikuttaa aivan hapettumisen alkuvaiheeseen. Samalla tutkimus korostaa, kuinka pieniltä näyttävät muutokset metallin pinnalla voivat ratkaista sen, muuttuuko pinta nopeasti vai säilyykö se pitkään lähes muuttumattomana.",
+    "category": "Tiede",
+    "tags": [
+      "kulta",
+      "hapettuminen",
+      "metallit",
+      "fysiikka",
+      "materiaalitiede"
+    ],
+    "summary_bullets": [
+      "Kullan pinnan atomit järjestäytyvät tavalla, joka vaikeuttaa hapettumista.",
+      "Hapettuminen edellyttää ensin happimolekyylien pilkkoutumista metallin pinnalla.",
+      "Tutkijat raportoivat havainnosta Physical Review Letters -julkaisussa 21. toukokuuta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.78,
+    "journalist_note": "Artikkeli perustuu annettuun Science News -lähdepakettiin ja rajaa väitteet lähteessä kuvattuun kullan pinnan atomijärjestykseen sekä hapettumisen alkuvaiheeseen."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260523T005126Z_6b4e8a09e7\",\"title\":\"Kullan pinta vaihtaa järjestystä ja torjuu hapettumista\",\"summary\":\"Tutkijoiden mukaan kullan poikkeuksellinen kestävyys liittyy sen pinnan atomien nopeaan uudelleenjärjestymiseen. Järjestys vaikeuttaa hapen hajottamista, mikä on hapettumisen ensimmäinen edellytys monilla metalleilla.\",\"content\":\"Kulta säilyy kiiltävänä tavalla, joka erottaa sen monista arjessa tutuista metalleista: teräs ruostuu ajan mittaan ja kupari voi vihertyä, mutta kullan pinnalla tapahtuva atomien järjestäytyminen näyttää estävän hapettumisen käynnistymistä. Tutkijat raportoivat Physical Review Letters -julkaisussa 21. toukokuuta, että kullan pinnan atomit asettuvat geometriaan, joka vaikeuttaa hapen molekyylien pilkkomista ja siten hapettumisen etenemistä.\\n\\n## Hapettuminen alkaa hapen pilkkoutumisesta\\n\\nMonien metallien tummuminen, ruostuminen tai muu pinnan muuttuminen liittyy hapettumiseen. Prosessin alkuvaiheessa metallin pinnan täytyy pystyä hajottamaan ilmassa olevia happimolekyylejä. Yksi happimolekyyli koostuu kahdesta happiatomista. Kun molekyyli hajoaa, yksittäiset happiatomit voivat muodostaa metallin pinnalle yhdisteitä, jotka jäävät siihen kiinni.\\n\\nKullan kohdalla tutkijat tarkastelivat juuri tätä ratkaisevaa vaihetta: kuinka hyvin kullan erilaiset pinnat voisivat pilkkoa happea. Laskelmien perusteella pinnan atomien järjestyksellä on keskeinen merkitys. Kun atomit järjestäytyvät tiettyyn geometriaan, hapen hajottaminen vaikeutuu, eikä hapettuminen pääse samalla tavalla alkuun.\\n\\n## Pieni muutos pinnalla selittää suuren eron\\n\\nTutkimuksen mukaan kulta ei ole täysin sivussa hapettumisen perusmekanismeista siksi, että happi olisi sille merkityksetön, vaan siksi, että pinnan atomirakenne tekee hapen käsittelystä vaikeaa. Lähdetietojen mukaan ilman tätä uudelleenjärjestymistä kulta alkaisi hapettua sekunneissa.\\n\\nHavainto tarkentaa kuvaa siitä, miksi kulta on niin poikkeuksellisen vakaa verrattuna esimerkiksi kupariin ja teräkseen. Kyse ei ole vain yleisestä jalometallin maineesta, vaan atomitason järjestelystä, joka vaikuttaa aivan hapettumisen alkuvaiheeseen. Samalla tutkimus korostaa, kuinka pieniltä näyttävät muutokset metallin pinnalla voivat ratkaista sen, muuttuuko pinta nopeasti vai säilyykö se pitkään lähes muuttumattomana.\",\"category\":\"Tiede\",\"tags\":[\"kulta\",\"hapettuminen\",\"metallit\",\"fysiikka\",\"materiaalitiede\"],\"summary_bullets\":[\"Kullan pinnan atomit järjestäytyvät tavalla, joka vaikeuttaa hapettumista.\",\"Hapettuminen edellyttää ensin happimolekyylien pilkkoutumista metallin pinnalla.\",\"Tutkijat raportoivat havainnosta Physical Review Letters -julkaisussa 21. toukokuuta.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.78,\"journalist_note\":\"Artikkeli perustuu annettuun Science News -lähdepakettiin ja rajaa väitteet lähteessä kuvattuun kullan pinnan atomijärjestykseen sekä hapettumisen alkuvaiheeseen.\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260523T005126Z_6b4e8a09e7",
+    "category": "Tiede",
+    "selected_source_words": 140,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.78,
+    "final_word_count": 225,
+    "issues": [
+      "content too short: 225 words"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Kullan pinta vaihtaa järjestystä ja torjuu hapettumista"
+  }
+}
