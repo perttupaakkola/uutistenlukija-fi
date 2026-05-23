@@ -44,7 +44,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/23/googlen-pixel-watch-kelloissa-pahoja-ongelmia-ekg-mittauskaan-ei-toimi/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
