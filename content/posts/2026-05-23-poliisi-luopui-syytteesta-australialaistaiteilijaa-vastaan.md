@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/may/23/police-drop-case-against-artist-who-depicted-prominent-australians-in-uniforms-with-nazi-symbols-ntwnfb"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
