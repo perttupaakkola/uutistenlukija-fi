@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/23/virolainen-startup-yritys-sai-hyvaksynnan-autoille-ilman-kuljettajaa-ensimmaisena-eussa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 

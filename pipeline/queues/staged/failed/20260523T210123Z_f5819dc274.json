@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T21:01:23.989569+00:00",
+  "digest": "f5819dc274",
+  "packet": {
+    "packet_id": "20260523T210123Z_f5819dc274",
+    "created_at": "2026-05-23T21:01:23Z",
+    "headline_seed": "Juuri nyt | Iso tulipalo Kalasatamassa – näin liekit lyövät kerrostalossa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9476220",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9476220"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Juuri nyt | Iso tulipalo Kalasatamassa – näin liekit lyövät kerrostalossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 93,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Juuri nyt | Iso tulipalo Kalasatamassa – näin liekit lyövät kerrostalossa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Juuri nyt | Iso tulipalo Kalasatamassa – näin liekit lyövät kerrostalossa",
+    "description": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9476220",
+    "published": "2026-05-23T21:28:30+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "ff0165912d2b4b305cf247215a513bd9",
+    "_url_hash": "4367666fee8fdbf64fe28e811b39a12f7949f0ed90e6eafa1dde633a5242ad84",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Helsingin Uutiset]\nKalasataman Leonkadulla on syttynyt suuri rakennuspalo. Pelastuslaitos sai hälytyksen noin kello 21.\n\nHelsingin Uutisten lukijoiden lähettämistä kuvasta näkee, että palosta syntyi runsaasti savua ja rakennuksen katto oli ilmiliekeissä.\n\nPalo näytti aluksi sammuvan, mutta Helsingin Uutisten lukijoiden lähettämien kuvien mukaan tilanne paheni kello 22 jälkeen.\n\nHelsingin pelastuslaitoksen mukaan palo on syttynyt parvekkeella. Pelastuslaitos kertoo MTV:lle. että se levisi ilmaraon kautta  kattorakenteisiin.\n\nEnsitietojen mukaan paikalle hälytettiin kuusi yksikköä. Yle kertoo, että paikka on Lumon vuokratalo, johon hälytettiin 17 yksikköä.  Palo on Ylen silminnäkijähavaintojen mukaan ainakin rakennuksen kerhotiloissa. Pelastuslaitos kertoo Ylelle, että sammutustöissä menee useita tunteja.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-23T21:03:18.024912+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä eikä varmistettuja tietoja tapahtumapaikasta, ajankohdasta, viranomaisista tai seurauksista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260523T210123Z_f5819dc274\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä eikä varmistettuja tietoja tapahtumapaikasta, ajankohdasta, viranomaisista tai seurauksista.\"}"
+}
