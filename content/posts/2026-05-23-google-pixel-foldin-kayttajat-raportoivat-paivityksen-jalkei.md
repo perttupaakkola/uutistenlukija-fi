@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/23/paivitys-toi-googlen-taittuvanayttoiseen-puhelimeen-todella-ikavan-ohjelmistovian-koko-toinen-naytto-voi-pimentya/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
