@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/may/23/three-die-in-horrific-south-sydney-vehicle-crash-after-police-welfare-check"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
