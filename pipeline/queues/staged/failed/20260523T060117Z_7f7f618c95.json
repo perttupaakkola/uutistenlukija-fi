@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T06:01:17.330433+00:00",
+  "digest": "7f7f618c95",
+  "packet": {
+    "packet_id": "20260523T060117Z_7f7f618c95",
+    "created_at": "2026-05-23T06:01:17Z",
+    "headline_seed": "Awak Kuier tehtaili piste-ennätyksensä WNBA-liigassa – Dallasin tähtikaksikolla karu iltapuhde",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9475092",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9475092"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Awak Kuier tehtaili piste-ennätyksensä WNBA-liigassa – Dallasin tähtikaksikolla karu iltapuhde"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 133,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Awak Kuier tehtaili piste-ennätyksensä WNBA-liigassa – Dallasin tähtikaksikolla karu iltapuhde",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Awak Kuier tehtaili piste-ennätyksensä WNBA-liigassa – Dallasin tähtikaksikolla karu iltapuhde",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9475092",
+    "published": "2026-05-23T08:26:15+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "d087da72d6e5cf209aa0d6eb2e1d41e2",
+    "_url_hash": "81db58a38c86a52d68d02866af2e251e0866809266e1e5fead7a214fe823d0a9",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nAwak Kuier jatkoi hyviä esityksiään koripallon naisten Euroopan ykkössarja Euroliigassa keskiviikkona.\n\nJussi Ahokkaan valmentama jääkiekkojoukkue Kitchener Rangers aloitti Kanadan juniorisarjojen välisen Memorial Cup -mestaruusturnauksen murskaavalla tahdilla.\n\nVegas Golden Knights on yllättäen kuskin paikalla NHL-välieräsarjassa. Colorado Avalanche tarvitsee nyt pienen ihmeen yltääkseen Stanley Cupin finaaleihin.\n\nKysyimme Ylen verkkosivuilla, miksi miesten jääkiekon MM-kisat jätetään katsomatta. Eniten miesten MM-lätkässä tympi kisojen heikko taso.\n\nVille Heinola pohtii, että pitääkö hänen jo ottaa yhteyttä kotipaikkakuntansa baariin. Päävalmentaja Antti Pennanen kiitteli pelaajien asennetta.\n\nAwak Kuier oli Dallas Wingsin paras pisteiden tekijä, kun joukkue hävisi Atlanta Dreamille Yhdysvaltojen naisten koripalloliiga WNBA:ssa.\n\nFormula 1 -sarjan Kanadan gp:ssä Mercedes-kuski George Russell ajoi sprinttikisan aika-ajon ykköspaikalle.\n\nWikström on jaetulla viidennellä sijalla golfin naisten Euroopan-kiertueen kilpailussa Marokon Rabatissa\n\nOttelussa HJK meni johtoon Lassi Lappalaisen maalilla jo kuudennella minuutilla.\n\nHallitseva mestari Fenerbahce joutui Olympiakosin jyräämäksi.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-23T06:03:23.106296+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260523T060117Z_7f7f618c95\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
