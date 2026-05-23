@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-23T18:21:16.481148+00:00",
+  "digest": "887caced5e",
+  "packet": {
+    "packet_id": "20260523T182116Z_887caced5e",
+    "created_at": "2026-05-23T18:21:16Z",
+    "headline_seed": "Niilo, 8, sai hirmuisen vonkaleen – edessä jo uusi tavoite",
+    "description_seed": "Niilon isä Keijo Mäkelä kehuu kalavesiä Keuruun ympäristössä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012028926.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012028926.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Niilo, 8, sai hirmuisen vonkaleen – edessä jo uusi tavoite"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 118,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Niilo, 8, sai hirmuisen vonkaleen – edessä jo uusi tavoite",
+      "description": "Niilon isä Keijo Mäkelä kehuu kalavesiä Keuruun ympäristössä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Niilo, 8, sai hirmuisen vonkaleen – edessä jo uusi tavoite",
+    "description": "Niilon isä Keijo Mäkelä kehuu kalavesiä Keuruun ympäristössä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012028926.html",
+    "published": "2026-05-23T18:09:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "7f8eef8af6638498187713504913e297",
+    "_url_hash": "04c515aa9cc805c6ea723cc4a42c1568453c15ce56eb7337ef9dc4708c66e030",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nSTT:n haastattelemat kokoomuksen piirien puheenjohtajat tyrmäävät puolueensa pormestariehdokkaana Helsingissä hetken aikaa olleen Kirsi Pihan ajatukset perussuomalaisille flirttailusta.\n\nHe eivät tunnista sitä, että puolueen sisällä käytäisiin valtakamppailua konservatiivien ja liberaalien välillä. Piha julkaisi hiljattain 60-sivuisen pamfletin, jossa hän muun muassa kirjoitti, että kokoomukseen on pesiytynyt perussuomalaisiin kallellaan oleva klikki, joka näkyy ja kuuluu ulospäin.\n\nVarsinais-Suomen kokoomuksen piirijohtaja Ville Valkonen sanoo, että kokoomus on tietoisesti pyrkinyt siihen, että puolueessa on sekä liberaaleja että konservatiiveja. Hän sanoo, että kokoomus ehkä jopa ylpeilee sillä.\n\n– Meillä on kansanedustajina sellaisia henkilöitä kuin Saara-Sofia Sirén erittäin liberaalista päädystä ja sitten sellaisia kuin Wille Rydman, joka itsekin on kertonut olevansa konservatiivi, ja viime kaudella oli Susanna Koski.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-23T18:23:19.390246+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä eikä riittäviä varmennettuja perustietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260523T182116Z_887caced5e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä eikä riittäviä varmennettuja perustietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.\"}"
+}

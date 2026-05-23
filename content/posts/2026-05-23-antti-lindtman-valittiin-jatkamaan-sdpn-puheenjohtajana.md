@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/suora-lahetys-kello-17-40-lindtman-valitaan-sdp-n-puheejohtajaksi/9343050"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
