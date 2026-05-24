@@ -1,0 +1,215 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T01:31:15.321476+00:00",
+  "digest": "0e59634706",
+  "packet": {
+    "packet_id": "20260524T013115Z_0e59634706",
+    "created_at": "2026-05-24T01:31:15Z",
+    "headline_seed": "East Africa wants to curb imports of used clothes. But it's not easy",
+    "description_seed": "Kenya, Uganda and Tanzania are major importers of used garments from the West and China.",
+    "link": "https://www.bbc.com/news/articles/c2l2k5pxrgdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c2l2k5pxrgdo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "East Africa wants to curb imports of used clothes. But it's not easy"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Kenya, Uganda and Tanzania are major importers of used garments from the West and China.",
+        "word_count": 15,
+        "keyword_overlap": 10,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Days later, the treasury in neighbouring Kenya attempted to change the way it taxed used clothing, saying its proposed system would simplify things for importers. But following a backlash from Kenyans worried that this would lead to price rises, the proposal was swiftly dropped from the Finance Bill. In a bid to support homegrown clothing manufacturers, Kenya already applies a 30% customs duty to imports of used clothing - 5% more than it costs to ship in new clothes. According to trade data platform the Observatory of Economic Complexity (OEC), Kenya is currently Africa's leading importer of second-hand clothing or \"mitumba\" as they are known in Swahili. The mitumba-loving nation received almost 180,000 tonnes of used clothing in 2022 - a 76% increase on the amount imported in 2013, UN trade data shows.",
+        "word_count": 133,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Elizabeth Paul, who owns Kuya Creations in Tanzania's main city of Dar es Salaam, agrees: \"In my shop, the minimum price of a dress is 50,000 Tanzanian shillings (£14.50; $19.20). People tell me: 'For 50,000 I can get 10 second-hand dresses, so let me buy those.'\" A decade ago, the EAC decried the influx of second-hand clothing and was primed to impose a ban across its member states. After some strong-arming from the US, the proposal fell apart but now the debate has resurfaced. Uganda, a country whose president once criticised second-hand clothing as coming from white \"dead people\", has introduced an additional 30% tax on imports in an effort to boost the local garment industry and protect the environment.",
+        "word_count": 120,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "In neighbouring Uganda, second-hand clothes are the most sought-after garments, followed by imported new clothing and, lastly, locally manufactured clothing, the government-funded ---",
+        "word_count": 23,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Kenya, Uganda and Tanzania are major importers of used garments from the West and China.\n\nDays later, the treasury in neighbouring Kenya attempted to change the way it taxed used clothing, saying its proposed system would simplify things for importers. But following a backlash from Kenyans worried that this would lead to price rises, the proposal was swiftly dropped from the Finance Bill. In a bid to support homegrown clothing manufacturers, Kenya already applies a 30% customs duty to imports of used clothing - 5% more than it costs to ship in new clothes. According to trade data platform the Observatory of Economic Complexity (OEC), Kenya is currently Africa's leading importer of second-hand clothing or \"mitumba\" as they are known in Swahili. The mitumba-loving nation received almost 180,000 tonnes of used clothing in 2022 - a 76% increase on the amount imported in 2013, UN trade data shows.\n\nElizabeth Paul, who owns Kuya Creations in Tanzania's main city of Dar es Salaam, agrees: \"In my shop, the minimum price of a dress is 50,000 Tanzanian shillings (£14.50; $19.20). People tell me: 'For 50,000 I can get 10 second-hand dresses, so let me buy those.'\" A decade ago, the EAC decried the influx of second-hand clothing and was primed to impose a ban across its member states. After some strong-arming from the US, the proposal fell apart but now the debate has resurfaced. Uganda, a country whose president once criticised second-hand clothing as coming from white \"dead people\", has introduced an additional 30% tax on imports in an effort to boost the local garment industry and protect the environment.\n\nIn neighbouring Uganda, second-hand clothes are the most sought-after garments, followed by imported new clothing and, lastly, locally manufactured clothing, the government-funded ---",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 820,
+      "selected_blocks": 4,
+      "selected_source_words": 291,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "AOL",
+        "AOL",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "East Africa wants to curb imports of used clothes. But it's not easy",
+      "description": "Kenya, Uganda and Tanzania are major importers of used garments from the West and China.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "East Africa wants to curb imports of used clothes. But it's not easy",
+    "description": "Kenya, Uganda and Tanzania are major importers of used garments from the West and China.",
+    "link": "https://www.bbc.com/news/articles/c2l2k5pxrgdo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-23T23:55:13+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "37420ebb34a9a250123154178cbcef24",
+    "_url_hash": "86d4516f74fe1966d2f8000543c92293abe1eba0aaf92224789f5dcf72a8b135",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nNot even heavy rain can keep shoppers away from Gikomba, a lively Kenyan market that stands as the largest open-air trading hub in East Africa.\n\nSections of the site were waterlogged on the day the BBC visited, yet shoppers, some wearing rubber boots, still inched their way through the congested pathways, hunting for Gikomba's speciality - second-hand clothing.\n\nThe trade in garments imported from the US, Europe and China poses a perennial problem for the East African Community (EAC), a regional bloc of which Kenya is a member. How can the region build a thriving fashion industry when it is saturated with cheap cast-offs?\n\n\"We're competing with second-hand clothing, but we can't compete on price,\" Zia Bett, founder of Kenyan womenswear brand Zia Africa, tells the BBC.\n\nElizabeth Paul, who owns Kuya Creations in Tanzania's main city of Dar es Salaam, agrees: \"In my shop, the minimum price of a dress is 50,000 Tanzanian shillings (£14.50; $19.20). People tell me: 'For 50,000 I can get 10 second-hand dresses, so let me buy those.'\"\n\nA decade ago, the EAC decried the influx of second-hand clothing and was primed to impose a ban across its member states. After some strong-arming from the US, the proposal fell apart but now the debate has resurfaced.\n\nUganda, a country whose president once criticised second-hand clothing as coming from white \"dead people\", has introduced an additional 30% tax on imports in an effort to boost the local garment industry and protect the environment.\n\nDays later, the treasury in neighbouring Kenya attempted to change the way it taxed used clothing, saying its proposed system would simplify things for importers. But following a backlash from Kenyans worried that this would lead to price rises, the proposal was swiftly dropped from the Finance Bill.\n\nIn a bid to support homegrown clothing manufacturers, Kenya already applies a 30% customs duty to imports of used clothing - 5% more than it costs to ship in new clothes.\n\nAccording to trade data platform the Observatory of Economic Complexity (OEC), Kenya is currently Africa's leading importer of second-hand clothing or \"mitumba\" as they are known in Swahili.\n\nThe mitumba-loving nation received almost 180,000 tonnes of used clothing in 2022 - a 76% increase on the amount imported in 2013, UN trade data shows.\n\nIn neighbouring Uganda, second-hand clothes are the most sought-after garments, followed by imported new clothing and, lastly, locally manufactured clothing, the government-funded \n\n---\n\n[Lähde: AOL]\nNot even heavy rain can keep shoppers away from Gikomba, a lively Kenyan market that stands as the largest open-air trading hub in East Africa.\n\nSections of the site were waterlogged on the day the BBC visited, yet shoppers, some wearing rubber boots, still inched their way through the congested pathways, hunting for Gikomba's speciality - second-hand clothing.\n\nThe trade in garments imported from the US, Europe and China poses a perennial problem for the East African Community (EAC), a regional bloc of which Kenya is a member. How can the region build a thriving fashion industry when it is saturated with cheap cast-offs?\n\n\"We're competing with second-hand clothing, but we can't compete on price,\" Zia Bett, founder of Kenyan womenswear brand Zia Africa, tells the BBC.\n\nElizabeth Paul, who owns Kuya Creations in Tanzania's main city of Dar es Salaam, agrees: \"In my shop, the minimum price of a dress is 50,000 Tanzanian shillings (£14.50; $19.20). People tell me: 'For 50,000 I can get 10 second-hand dresses, so let me buy those.'\"\n\nA decade ago, the EAC decried the influx of second-hand clothing and was primed to impose a ban across its member states. After some strong-arming from the US, the proposal fell apart but now the debate has resurfaced.\n\nUganda, a country whose president once criticised second-hand clothing as coming from white \"dead people\", has introduced an additional 30% tax on importsin an effort to boost the local garment industry and protect the environment.\n\nDays later, the treasury in neighbouring Kenya attempted to change the way it taxed used clothing, saying its proposed system would simplify things for importers. But following a backlash from Kenyans worried that this would lead to price rises, the proposal was swiftly dropped from the Finance Bill.\n\nIn a bid to support homegrown clothing manufacturers, Kenya already applies a 30% customs duty to imports of used clothing - 5% more than it costs to ship in new clothes.\n\nAccording to trade data platform the Observatory of Economic Complexity (OEC), Kenya is currently Africa's leading importer of second-hand clothing or \"mitumba\" as they are known in Swahili.\n\nThe mitumba-loving nation received almost 180,000 tonnes of used clothing in 2022 - a 76% increase on the amount imported in 2013, UN trade data shows.\n\nIn neighbouring Uganda, second-hand clothes are the most sought-after garments, followed by imported new clothing and, lastly, locally manufactured clothing, the government-funded E",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-24T01:34:15.906766+00:00",
+  "payload": {
+    "packet_id": "20260524T013115Z_0e59634706",
+    "title": "Itä-Afrikka yrittää vähentää käytettyjen vaatteiden tuontia",
+    "summary": "Kenya, Uganda ja Tansania ovat suuria käytettyjen vaatteiden tuojia, mutta tuonnin rajoittaminen on osoittautunut poliittisesti ja taloudellisesti vaikeaksi.",
+    "content": "Kenya, Uganda ja Tansania etsivät keinoja vähentää käytettyjen vaatteiden tuontia länsimaista ja Kiinasta, mutta yritykset ovat törmänneet kuluttajien hintahuoliin ja paikallisen vaateteollisuuden heikkoon kilpailuasemaan. Käytetyt vaatteet ovat monille ostajille selvästi edullisempi vaihtoehto kuin uudet tai paikallisesti valmistetut vaatteet, mikä tekee rajoituksista poliittisesti hankalia.\n\n## Kenya joutui perääntymään veromuutoksesta\n\nKeniassa valtiovarainhallinto yritti hiljattain muuttaa käytettyjen vaatteiden verotusta. Ehdotuksen mukaan järjestelmä olisi yksinkertaistanut tuontia, mutta se herätti nopeasti vastustusta. Monet kenialaiset pelkäsivät muutoksen nostavan vaatteiden hintoja, ja ehdotus poistettiin pian maan rahoituslakiesityksestä.\n\nKenya pyrkii jo nyt tukemaan kotimaista vaatetuotantoa tullipolitiikalla. Käytettyjen vaatteiden tuonnista peritään 30 prosentin tulli, mikä on viisi prosenttiyksikköä enemmän kuin uusien vaatteiden tuonnista. Silti käytettyjen vaatteiden kauppa on kasvanut voimakkaasti.\n\nKauppatilastojen mukaan Kenya on Afrikan johtava käytettyjen vaatteiden tuoja. Maahan saapui vuonna 2022 lähes 180 000 tonnia käytettyjä vaatteita. Määrä oli YK:n kauppatietojen perusteella 76 prosenttia suurempi kuin vuonna 2013. Swahiliksi käytetyistä vaatteista käytetään nimitystä mitumba.\n\n## Paikalliset valmistajat kilpailevat hinnalla\n\nTansaniassa paikalliset vaateyrittäjät kuvaavat kilpailutilannetta vaikeaksi. Dar es Salaamissa Kuya Creationsia omistava Elizabeth Paul kertoo, että hänen liikkeessään mekon vähimmäishinta on 50 000 Tansanian shillinkiä, eli lähteen mukaan noin 14,50 puntaa tai 19,20 dollaria. Asiakkaat vertaavat summaa käytettyihin vaatteisiin ja sanovat voivansa saada samalla rahalla useita käytettyjä mekkoja.\n\nItä-Afrikan yhteisö arvosteli käytettyjen vaatteiden virtaa alueelle jo noin vuosikymmen sitten ja valmisteli tuolloin tuontikieltoa jäsenmailleen. Hanke kuitenkin kaatui Yhdysvaltojen painostuksen jälkeen. Nyt keskustelu on noussut uudelleen esiin, kun maat etsivät keinoja suojata omaa vaatetuotantoaan.\n\n## Uganda kiristää tuonnin verotusta\n\nUganda on ottanut käyttöön 30 prosentin lisäveron käytettyjen vaatteiden tuonnille. Tavoitteena on vahvistaa paikallista vaateteollisuutta ja vähentää ympäristöhaittoja. Käytetyt vaatteet ovat silti Ugandassa kysytyimpiä vaatteita, ja niiden jälkeen tulevat uudet tuontivaatteet. Paikallisesti valmistetut vaatteet jäävät lähdetiedon mukaan kysynnässä viimeiseksi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Itä-Afrikka",
+      "Kenya",
+      "Uganda",
+      "Tansania",
+      "vaateteollisuus",
+      "tuonti"
+    ],
+    "summary_bullets": [
+      "Kenya, Uganda ja Tansania ovat merkittäviä käytettyjen vaatteiden tuojia.",
+      "Kenya luopui veromuutoksesta hintojen nousua pelänneen vastustuksen jälkeen.",
+      "Uganda on lisännyt käytettyjen vaatteiden tuontiveroa tukeakseen paikallista vaateteollisuutta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu packetin tietoihin käytettyjen vaatteiden tuonnista, verotoimista ja paikallisen vaateteollisuuden hintapaineista. Category vaihdettu Kotimaa-vihjeestä Ulkomaat-luokkaan aiheen perusteella."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260524T013115Z_0e59634706\",\n  \"title\": \"Itä-Afrikka yrittää vähentää käytettyjen vaatteiden tuontia\",\n  \"summary\": \"Kenya, Uganda ja Tansania ovat suuria käytettyjen vaatteiden tuojia, mutta tuonnin rajoittaminen on osoittautunut poliittisesti ja taloudellisesti vaikeaksi.\",\n  \"content\": \"Kenya, Uganda ja Tansania etsivät keinoja vähentää käytettyjen vaatteiden tuontia länsimaista ja Kiinasta, mutta yritykset ovat törmänneet kuluttajien hintahuoliin ja paikallisen vaateteollisuuden heikkoon kilpailuasemaan. Käytetyt vaatteet ovat monille ostajille selvästi edullisempi vaihtoehto kuin uudet tai paikallisesti valmistetut vaatteet, mikä tekee rajoituksista poliittisesti hankalia.\\n\\n## Kenya joutui perääntymään veromuutoksesta\\n\\nKeniassa valtiovarainhallinto yritti hiljattain muuttaa käytettyjen vaatteiden verotusta. Ehdotuksen mukaan järjestelmä olisi yksinkertaistanut tuontia, mutta se herätti nopeasti vastustusta. Monet kenialaiset pelkäsivät muutoksen nostavan vaatteiden hintoja, ja ehdotus poistettiin pian maan rahoituslakiesityksestä.\\n\\nKenya pyrkii jo nyt tukemaan kotimaista vaatetuotantoa tullipolitiikalla. Käytettyjen vaatteiden tuonnista peritään 30 prosentin tulli, mikä on viisi prosenttiyksikköä enemmän kuin uusien vaatteiden tuonnista. Silti käytettyjen vaatteiden kauppa on kasvanut voimakkaasti.\\n\\nKauppatilastojen mukaan Kenya on Afrikan johtava käytettyjen vaatteiden tuoja. Maahan saapui vuonna 2022 lähes 180 000 tonnia käytettyjä vaatteita. Määrä oli YK:n kauppatietojen perusteella 76 prosenttia suurempi kuin vuonna 2013. Swahiliksi käytetyistä vaatteista käytetään nimitystä mitumba.\\n\\n## Paikalliset valmistajat kilpailevat hinnalla\\n\\nTansaniassa paikalliset vaateyrittäjät kuvaavat kilpailutilannetta vaikeaksi. Dar es Salaamissa Kuya Creationsia omistava Elizabeth Paul kertoo, että hänen liikkeessään mekon vähimmäishinta on 50 000 Tansanian shillinkiä, eli lähteen mukaan noin 14,50 puntaa tai 19,20 dollaria. Asiakkaat vertaavat summaa käytettyihin vaatteisiin ja sanovat voivansa saada samalla rahalla useita käytettyjä mekkoja.\\n\\nItä-Afrikan yhteisö arvosteli käytettyjen vaatteiden virtaa alueelle jo noin vuosikymmen sitten ja valmisteli tuolloin tuontikieltoa jäsenmailleen. Hanke kuitenkin kaatui Yhdysvaltojen painostuksen jälkeen. Nyt keskustelu on noussut uudelleen esiin, kun maat etsivät keinoja suojata omaa vaatetuotantoaan.\\n\\n## Uganda kiristää tuonnin verotusta\\n\\nUganda on ottanut käyttöön 30 prosentin lisäveron käytettyjen vaatteiden tuonnille. Tavoitteena on vahvistaa paikallista vaateteollisuutta ja vähentää ympäristöhaittoja. Käytetyt vaatteet ovat silti Ugandassa kysytyimpiä vaatteita, ja niiden jälkeen tulevat uudet tuontivaatteet. Paikallisesti valmistetut vaatteet jäävät lähdetiedon mukaan kysynnässä viimeiseksi.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Itä-Afrikka\",\n    \"Kenya\",\n    \"Uganda\",\n    \"Tansania\",\n    \"vaateteollisuus\",\n    \"tuonti\"\n  ],\n  \"summary_bullets\": [\n    \"Kenya, Uganda ja Tansania ovat merkittäviä käytettyjen vaatteiden tuojia.\",\n    \"Kenya luopui veromuutoksesta hintojen nousua pelänneen vastustuksen jälkeen.\",\n    \"Uganda on lisännyt käytettyjen vaatteiden tuontiveroa tukeakseen paikallista vaateteollisuutta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu packetin tietoihin käytettyjen vaatteiden tuonnista, verotoimista ja paikallisen vaateteollisuuden hintapaineista. Category vaihdettu Kotimaa-vihjeestä Ulkomaat-luokkaan aiheen perusteella.\"\n}",
+  "article": {
+    "title": "Itä-Afrikka yrittää vähentää käytettyjen vaatteiden tuontia",
+    "description": "Kenya, Uganda ja Tansania ovat suuria käytettyjen vaatteiden tuojia, mutta tuonnin rajoittaminen on osoittautunut poliittisesti ja taloudellisesti vaikeaksi.",
+    "link": "https://www.bbc.com/news/articles/c2l2k5pxrgdo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-23T23:55:13+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "37420ebb34a9a250123154178cbcef24",
+    "_url_hash": "86d4516f74fe1966d2f8000543c92293abe1eba0aaf92224789f5dcf72a8b135",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nNot even heavy rain can keep shoppers away from Gikomba, a lively Kenyan market that stands as the largest open-air trading hub in East Africa.\n\nSections of the site were waterlogged on the day the BBC visited, yet shoppers, some wearing rubber boots, still inched their way through the congested pathways, hunting for Gikomba's speciality - second-hand clothing.\n\nThe trade in garments imported from the US, Europe and China poses a perennial problem for the East African Community (EAC), a regional bloc of which Kenya is a member. How can the region build a thriving fashion industry when it is saturated with cheap cast-offs?\n\n\"We're competing with second-hand clothing, but we can't compete on price,\" Zia Bett, founder of Kenyan womenswear brand Zia Africa, tells the BBC.\n\nElizabeth Paul, who owns Kuya Creations in Tanzania's main city of Dar es Salaam, agrees: \"In my shop, the minimum price of a dress is 50,000 Tanzanian shillings (£14.50; $19.20). People tell me: 'For 50,000 I can get 10 second-hand dresses, so let me buy those.'\"\n\nA decade ago, the EAC decried the influx of second-hand clothing and was primed to impose a ban across its member states. After some strong-arming from the US, the proposal fell apart but now the debate has resurfaced.\n\nUganda, a country whose president once criticised second-hand clothing as coming from white \"dead people\", has introduced an additional 30% tax on imports in an effort to boost the local garment industry and protect the environment.\n\nDays later, the treasury in neighbouring Kenya attempted to change the way it taxed used clothing, saying its proposed system would simplify things for importers. But following a backlash from Kenyans worried that this would lead to price rises, the proposal was swiftly dropped from the Finance Bill.\n\nIn a bid to support homegrown clothing manufacturers, Kenya already applies a 30% customs duty to imports of used clothing - 5% more than it costs to ship in new clothes.\n\nAccording to trade data platform the Observatory of Economic Complexity (OEC), Kenya is currently Africa's leading importer of second-hand clothing or \"mitumba\" as they are known in Swahili.\n\nThe mitumba-loving nation received almost 180,000 tonnes of used clothing in 2022 - a 76% increase on the amount imported in 2013, UN trade data shows.\n\nIn neighbouring Uganda, second-hand clothes are the most sought-after garments, followed by imported new clothing and, lastly, locally manufactured clothing, the government-funded \n\n---\n\n[Lähde: AOL]\nNot even heavy rain can keep shoppers away from Gikomba, a lively Kenyan market that stands as the largest open-air trading hub in East Africa.\n\nSections of the site were waterlogged on the day the BBC visited, yet shoppers, some wearing rubber boots, still inched their way through the congested pathways, hunting for Gikomba's speciality - second-hand clothing.\n\nThe trade in garments imported from the US, Europe and China poses a perennial problem for the East African Community (EAC), a regional bloc of which Kenya is a member. How can the region build a thriving fashion industry when it is saturated with cheap cast-offs?\n\n\"We're competing with second-hand clothing, but we can't compete on price,\" Zia Bett, founder of Kenyan womenswear brand Zia Africa, tells the BBC.\n\nElizabeth Paul, who owns Kuya Creations in Tanzania's main city of Dar es Salaam, agrees: \"In my shop, the minimum price of a dress is 50,000 Tanzanian shillings (£14.50; $19.20). People tell me: 'For 50,000 I can get 10 second-hand dresses, so let me buy those.'\"\n\nA decade ago, the EAC decried the influx of second-hand clothing and was primed to impose a ban across its member states. After some strong-arming from the US, the proposal fell apart but now the debate has resurfaced.\n\nUganda, a country whose president once criticised second-hand clothing as coming from white \"dead people\", has introduced an additional 30% tax on importsin an effort to boost the local garment industry and protect the environment.\n\nDays later, the treasury in neighbouring Kenya attempted to change the way it taxed used clothing, saying its proposed system would simplify things for importers. But following a backlash from Kenyans worried that this would lead to price rises, the proposal was swiftly dropped from the Finance Bill.\n\nIn a bid to support homegrown clothing manufacturers, Kenya already applies a 30% customs duty to imports of used clothing - 5% more than it costs to ship in new clothes.\n\nAccording to trade data platform the Observatory of Economic Complexity (OEC), Kenya is currently Africa's leading importer of second-hand clothing or \"mitumba\" as they are known in Swahili.\n\nThe mitumba-loving nation received almost 180,000 tonnes of used clothing in 2022 - a 76% increase on the amount imported in 2013, UN trade data shows.\n\nIn neighbouring Uganda, second-hand clothes are the most sought-after garments, followed by imported new clothing and, lastly, locally manufactured clothing, the government-funded E",
+    "research_source": "multi",
+    "summary": "Kenya, Uganda ja Tansania ovat suuria käytettyjen vaatteiden tuojia, mutta tuonnin rajoittaminen on osoittautunut poliittisesti ja taloudellisesti vaikeaksi.",
+    "content": "Kenya, Uganda ja Tansania etsivät keinoja vähentää käytettyjen vaatteiden tuontia länsimaista ja Kiinasta, mutta yritykset ovat törmänneet kuluttajien hintahuoliin ja paikallisen vaateteollisuuden heikkoon kilpailuasemaan. Käytetyt vaatteet ovat monille ostajille selvästi edullisempi vaihtoehto kuin uudet tai paikallisesti valmistetut vaatteet, mikä tekee rajoituksista poliittisesti hankalia.\n\n## Kenya joutui perääntymään veromuutoksesta\n\nKeniassa valtiovarainhallinto yritti hiljattain muuttaa käytettyjen vaatteiden verotusta. Ehdotuksen mukaan järjestelmä olisi yksinkertaistanut tuontia, mutta se herätti nopeasti vastustusta. Monet kenialaiset pelkäsivät muutoksen nostavan vaatteiden hintoja, ja ehdotus poistettiin pian maan rahoituslakiesityksestä.\n\nKenya pyrkii jo nyt tukemaan kotimaista vaatetuotantoa tullipolitiikalla. Käytettyjen vaatteiden tuonnista peritään 30 prosentin tulli, mikä on viisi prosenttiyksikköä enemmän kuin uusien vaatteiden tuonnista. Silti käytettyjen vaatteiden kauppa on kasvanut voimakkaasti.\n\nKauppatilastojen mukaan Kenya on Afrikan johtava käytettyjen vaatteiden tuoja. Maahan saapui vuonna 2022 lähes 180 000 tonnia käytettyjä vaatteita. Määrä oli YK:n kauppatietojen perusteella 76 prosenttia suurempi kuin vuonna 2013. Swahiliksi käytetyistä vaatteista käytetään nimitystä mitumba.\n\n## Paikalliset valmistajat kilpailevat hinnalla\n\nTansaniassa paikalliset vaateyrittäjät kuvaavat kilpailutilannetta vaikeaksi. Dar es Salaamissa Kuya Creationsia omistava Elizabeth Paul kertoo, että hänen liikkeessään mekon vähimmäishinta on 50 000 Tansanian shillinkiä, eli lähteen mukaan noin 14,50 puntaa tai 19,20 dollaria. Asiakkaat vertaavat summaa käytettyihin vaatteisiin ja sanovat voivansa saada samalla rahalla useita käytettyjä mekkoja.\n\nItä-Afrikan yhteisö arvosteli käytettyjen vaatteiden virtaa alueelle jo noin vuosikymmen sitten ja valmisteli tuolloin tuontikieltoa jäsenmailleen. Hanke kuitenkin kaatui Yhdysvaltojen painostuksen jälkeen. Nyt keskustelu on noussut uudelleen esiin, kun maat etsivät keinoja suojata omaa vaatetuotantoaan.\n\n## Uganda kiristää tuonnin verotusta\n\nUganda on ottanut käyttöön 30 prosentin lisäveron käytettyjen vaatteiden tuonnille. Tavoitteena on vahvistaa paikallista vaateteollisuutta ja vähentää ympäristöhaittoja. Käytetyt vaatteet ovat silti Ugandassa kysytyimpiä vaatteita, ja niiden jälkeen tulevat uudet tuontivaatteet. Paikallisesti valmistetut vaatteet jäävät lähdetiedon mukaan kysynnässä viimeiseksi.",
+    "category": "Kotimaa",
+    "tags": [
+      "itä-afrikka",
+      "kenya",
+      "uganda",
+      "tansania",
+      "vaateteollisuus"
+    ],
+    "summary_bullets": [
+      "Kenya, Uganda ja Tansania ovat merkittäviä käytettyjen vaatteiden tuojia.",
+      "Kenya luopui veromuutoksesta hintojen nousua pelänneen vastustuksen jälkeen.",
+      "Uganda on lisännyt käytettyjen vaatteiden tuontiveroa tukeakseen paikallista vaateteollisuutta."
+    ],
+    "key_points": [
+      "Kenya, Uganda ja Tansania ovat merkittäviä käytettyjen vaatteiden tuojia.",
+      "Kenya luopui veromuutoksesta hintojen nousua pelänneen vastustuksen jälkeen.",
+      "Uganda on lisännyt käytettyjen vaatteiden tuontiveroa tukeakseen paikallista vaateteollisuutta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin tietoihin käytettyjen vaatteiden tuonnista, verotoimista ja paikallisen vaateteollisuuden hintapaineista. Category vaihdettu Kotimaa-vihjeestä Ulkomaat-luokkaan aiheen perusteella.",
+    "source_text": "Kenya, Uganda and Tanzania are major importers of used garments from the West and China.\n\nDays later, the treasury in neighbouring Kenya attempted to change the way it taxed used clothing, saying its proposed system would simplify things for importers. But following a backlash from Kenyans worried that this would lead to price rises, the proposal was swiftly dropped from the Finance Bill. In a bid to support homegrown clothing manufacturers, Kenya already applies a 30% customs duty to imports of used clothing - 5% more than it costs to ship in new clothes. According to trade data platform the Observatory of Economic Complexity (OEC), Kenya is currently Africa's leading importer of second-hand clothing or \"mitumba\" as they are known in Swahili. The mitumba-loving nation received almost 180,000 tonnes of used clothing in 2022 - a 76% increase on the amount imported in 2013, UN trade data shows.\n\nElizabeth Paul, who owns Kuya Creations in Tanzania's main city of Dar es Salaam, agrees: \"In my shop, the minimum price of a dress is 50,000 Tanzanian shillings (£14.50; $19.20). People tell me: 'For 50,000 I can get 10 second-hand dresses, so let me buy those.'\" A decade ago, the EAC decried the influx of second-hand clothing and was primed to impose a ban across its member states. After some strong-arming from the US, the proposal fell apart but now the debate has resurfaced. Uganda, a country whose president once criticised second-hand clothing as coming from white \"dead people\", has introduced an additional 30% tax on imports in an effort to boost the local garment industry and protect the environment.\n\nIn neighbouring Uganda, second-hand clothes are the most sought-after garments, followed by imported new clothing and, lastly, locally manufactured clothing, the government-funded ---",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260524T013115Z_0e59634706",
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image": "/images/articles/ita-afrikka-yrittaa-vahentaa-kaytettyjen-vaatteiden-tuontia-hero.jpg",
+    "image_thumb": "/images/articles/ita-afrikka-yrittaa-vahentaa-kaytettyjen-vaatteiden-tuontia-thumb.jpg",
+    "image_alt": "Itä-Afrikka yrittää vähentää käytettyjen vaatteiden tuontia",
+    "image_credit": "Photo by Enoch Wafula on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/vibrant-nairobi-market-stalls-displaying-african-textiles-35856106/",
+    "image_caption": "",
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACMQAAICAgICAQUAAAAAAAAAAAECAxEABBIhBRMVMUFDUdH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAwDAQACEQMRAD8ASKaOELq/HLIiflaQ8aurr9402/BoTThdYvKZCWDP0ftYx5NZY9VlDufYbJJuu66ys3jdYBm4W0jWxNG7zJQaw07ZR5HZjJEWrEik2B7Thlfidfk3FpE7+gI/mGPSMv/Z"
+  },
+  "image_enriched_at": "2026-05-24T01:38:07.357443+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/ita-afrikka-yrittaa-vahentaa-kaytettyjen-vaatteiden-tuontia-hero.jpg",
+    "image_thumb": "/images/articles/ita-afrikka-yrittaa-vahentaa-kaytettyjen-vaatteiden-tuontia-thumb.jpg",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-24T01:38:46.588303+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-24-ita-afrikka-yrittaa-vahentaa-kaytettyjen-vaatteiden-tuontia.md"
+  ]
+}
