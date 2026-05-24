@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/vihreat-aanesti-velkajarrusta-puolue-tiukensi-kantaansa/9343228"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
