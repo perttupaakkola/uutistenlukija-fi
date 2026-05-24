@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T11:01:21.569717+00:00",
+  "digest": "2834b2d89d",
+  "packet": {
+    "packet_id": "20260524T110121Z_2834b2d89d",
+    "created_at": "2026-05-24T11:01:21Z",
+    "headline_seed": "Sofia Virralta lähti ääni: \"Me luvattiin ne parhaat bileet\"",
+    "description_seed": "IS seuraa vihreiden puoluekokouksen käänteitä ja vääntöä velkajarrusta.",
+    "link": "https://www.is.fi/politiikka/art-2000012010381.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/politiikka/art-2000012010381.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sofia Virralta lähti ääni: \"Me luvattiin ne parhaat bileet\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 196,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hymy",
+        "Hymy",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sofia Virralta lähti ääni: \"Me luvattiin ne parhaat bileet\"",
+      "description": "IS seuraa vihreiden puoluekokouksen käänteitä ja vääntöä velkajarrusta.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Sofia Virralta lähti ääni: \"Me luvattiin ne parhaat bileet\"",
+    "description": "IS seuraa vihreiden puoluekokouksen käänteitä ja vääntöä velkajarrusta.",
+    "link": "https://www.is.fi/politiikka/art-2000012010381.html",
+    "published": "2026-05-24T10:57:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "2a865b9f2b6720be11aea625ebe4a333",
+    "_url_hash": "c74c8b40775e400015e4a5cc1be2520eb39d52505c9dc53e36db70a5d2517157",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Hymy]\nSofia Virta teki irtioton minilomalla. Takana on ero ja varmasti myös siksi pieni loma teki terää.\n\nEikä vaikuta siltä, että eroa on jääty itkemään. Virta on laittanut itsensä hyvin vetävän oloiseksi ihoa myötäilevässä ilta-asussa, ja tyttöporukalla hän olikin valmiina illanviettoon.\n\nVihreiden puheenjohtaja julkaisi Instagramissa kuvan, jossa hän on peilin edessä ja valmiina viettämään yhden yön minilomaa Tallinnassa. Kuvassa Sofialla on yllään musta, vartaloa myötäilevä asu, ja nyt hän on erityisesti katseita vangitseva.\n\nLue myös: Sofia Virta erosi parisuhteestaan: ”Kiitos kun seisoit vierellä myrskyissä”\n\nSähäkkä muutenkin, mutta epäilemättä Virta on saanut tuossa asussa yhden jos toisenkin suorastaan pysähtymään – ja katsomaan taakseen niskat väärinä.\n\nPuoluekannasta riippumatta, kaikki poliitikot tarvitsevat irtiottoja tiukan ja vaativan työnsä ohessa. Nyt oli Sofian vuoro vaihtaa vapaalle.\n\n– En edes muista milloin olisin ollut reissussa ystävien kanssa, en varmaan minin syntymän jälkeen! Ehkä Emmian kanssa yli kymmenen vuotta sitten? Joten kyllä, nautin jokaisesta hetkestä yhden yön miniloman aikana, Virta kirjoittaa.\n\nSofian erottua pitkästä suhteestaan, on kaikesta päätellen elämä uomissaan ja sinkkukevät lähtenyt vauhdikkaasti rullaamaan.\n\n– Kiitos ystävät kun lähditte (todella!!) extempore mukaan kun mun elämään ilmestyi lyhyellä varoajalla (ja hämmentävänä poikkeuksena) vapaa viikonloppu, Sofia kirjoittaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T11:03:25.289010+00:00",
+  "failure": "Packetissa ei ole valittua lähdeaineistoa eikä riittäviä tarkistettavia faktoja vähintään 250 sanan julkaistavaan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T110121Z_2834b2d89d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdeaineistoa eikä riittäviä tarkistettavia faktoja vähintään 250 sanan julkaistavaan uutiseen.\"}"
+}

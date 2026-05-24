@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T10:51:19.514592+00:00",
+  "digest": "b521046d4c",
+  "packet": {
+    "packet_id": "20260524T105119Z_b521046d4c",
+    "created_at": "2026-05-24T10:51:19Z",
+    "headline_seed": "Poliisi määräsi sakkoja ja ajokieltoja sekä kirjasi rikosilmoituksen Päijät-Hämeessä pidetystä mopomiitistä",
+    "description_seed": "",
+    "link": "https://www.ess.fi/paikalliset/9476681",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9476681"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Poliisi määräsi sakkoja ja ajokieltoja sekä kirjasi rikosilmoituksen Päijät-Hämeessä pidetystä mopomiitistä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 111,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Poliisi määräsi sakkoja ja ajokieltoja sekä kirjasi rikosilmoituksen Päijät-Hämeessä pidetystä mopomiitistä",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Poliisi määräsi sakkoja ja ajokieltoja sekä kirjasi rikosilmoituksen Päijät-Hämeessä pidetystä mopomiitistä",
+    "description": "",
+    "link": "https://www.ess.fi/paikalliset/9476681",
+    "published": "2026-05-24T13:41:59+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "b3b95dcd2ab9b23498d18ab1f62f593a",
+    "_url_hash": "57598a92c0df19c69cb82d3da686680f5189fa286f4c3c929d8c7a50fb89a18c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nLapin poliisin liikenneyksikkö on valvonut liikennettä pääsiäisen aikaan.\n\nPoliisin tiedotteen mukaan liikenneyksikkö ei tavannut liikenteessä rattijuopumuksia, mutta ylinopeuksia kirjattiin runsaasti.\n\nPääsiäisen ajan valvonnan aikana kirjoitettiin yhteensä noin 40 maksullista seuraamusta lähinnä ylinopeuksista sekä 3 ajokieltoa. Kaikki ajokiellot tulivat kovan ylinopeuden seurauksena.\n\nPuhallutuksia tehtiin hieman yli 200 kappaletta, mutta yhtään rattijuoppoa ei tämän valvonnan yhteydessä tavattu liikenteessä.\n\nLapin poliisilaitoksen liikenneryhmä valvoi liikennettä pääsiäisen aikana Länsi-Lapin tunturikeskusten alueella tien päällä ja maastossa alueen moottorikelkkareiteillä.\n\nAlueella oli paljon ihmisiä liikkeellä ja sen myötä myös liikennemäärät olivat aika-ajoin runsaat. Päätiet olivat pääasiassa sulat ja ajo-olosuhteet muutoinkin hyvät, jonka myötä ajonopeudet ylittivät toisinaan poliisin puuttumiskynnyksen.\n\nMoottorikelkkareiteillä oli paljon moottorikelkkaliikennettä, jossa poliisi valvoi ajonopeuksia sekä puhallutti kuljettajia.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T10:53:21.527003+00:00",
+  "failure": "Paketti sisältää vain otsikkotason tiedon eikä riittäviä lähdekatkelmia, ajankohtaa, paikkaa tai yksityiskohtia julkaistavan artikkelin kirjoittamiseen ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T105119Z_b521046d4c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää vain otsikkotason tiedon eikä riittäviä lähdekatkelmia, ajankohtaa, paikkaa tai yksityiskohtia julkaistavan artikkelin kirjoittamiseen ilman keksittyjä faktoja.\"}"
+}
