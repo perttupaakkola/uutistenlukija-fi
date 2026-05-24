@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T20:01:15.509084+00:00",
+  "digest": "4af20140f0",
+  "packet": {
+    "packet_id": "20260524T200115Z_4af20140f0",
+    "created_at": "2026-05-24T20:01:15Z",
+    "headline_seed": "Nainen pelasti kauhusta kankean lapsen iäkkään miehen kynsistä Kuopiossa",
+    "description_seed": "Päihtynyt iäkäs mies alkoi väkisin suudella 13-vuotiasta lasta bussipysäkillä. 65-vuotias savolaismies kajosi lapseen bussipysäkillä Kuopiossa keskellä päivää. Inhottava tilanne tapahtui toukokuussa vuosi sitten. Mies ei tuntenut lasta ennalta.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/a81e7103-b08b-4677-8e74-746fcb78c392",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/a81e7103-b08b-4677-8e74-746fcb78c392"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nainen pelasti kauhusta kankean lapsen iäkkään miehen kynsistä Kuopiossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Päihtynyt iäkäs mies alkoi väkisin suudella 13-vuotiasta lasta bussipysäkillä. 65-vuotias savolaismies kajosi lapseen bussipysäkillä Kuopiossa keskellä päivää. Inhottava tilanne tapahtui toukokuussa vuosi sitten. Mies ei tuntenut lasta ennalta.",
+        "word_count": 28,
+        "keyword_overlap": 23,
+        "strong_overlap": 18
+      }
+    ],
+    "source_text": "Päihtynyt iäkäs mies alkoi väkisin suudella 13-vuotiasta lasta bussipysäkillä. 65-vuotias savolaismies kajosi lapseen bussipysäkillä Kuopiossa keskellä päivää. Inhottava tilanne tapahtui toukokuussa vuosi sitten. Mies ei tuntenut lasta ennalta.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 56,
+      "selected_blocks": 1,
+      "selected_source_words": 28,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nainen pelasti kauhusta kankean lapsen iäkkään miehen kynsistä Kuopiossa",
+      "description": "Päihtynyt iäkäs mies alkoi väkisin suudella 13-vuotiasta lasta bussipysäkillä. 65-vuotias savolaismies kajosi lapseen bussipysäkillä Kuopiossa keskellä päivää. Inhottava tilanne tapahtui toukokuussa vuosi sitten. Mies ei tuntenut lasta ennalta.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Nainen pelasti kauhusta kankean lapsen iäkkään miehen kynsistä Kuopiossa",
+    "description": "Päihtynyt iäkäs mies alkoi väkisin suudella 13-vuotiasta lasta bussipysäkillä. 65-vuotias savolaismies kajosi lapseen bussipysäkillä Kuopiossa keskellä päivää. Inhottava tilanne tapahtui toukokuussa vuosi sitten. Mies ei tuntenut lasta ennalta.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/a81e7103-b08b-4677-8e74-746fcb78c392",
+    "published": "2026-05-24T22:27:10+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "2d2d42cfcd705ce739925290a82df6d8",
+    "_url_hash": "481c6de6a5c81b9b82069b04b5013edb62d4e00b365283acba23713e9aec6b6c",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Päihtynyt iäkäs mies alkoi väkisin suudella 13-vuotiasta lasta bussipysäkillä. 65-vuotias savolaismies kajosi lapseen bussipysäkillä Kuopiossa keskellä päivää. Inhottava tilanne tapahtui toukokuussa vuosi sitten. Mies ei tuntenut lasta ennalta.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-24T20:03:21.467007+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan uutiseen ilman täyteainetta tai tarkentamattomien tietojen lisäämistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T200115Z_4af20140f0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan uutiseen ilman täyteainetta tai tarkentamattomien tietojen lisäämistä.\"}"
+}

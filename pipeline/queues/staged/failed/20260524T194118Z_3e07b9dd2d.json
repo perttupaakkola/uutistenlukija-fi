@@ -1,0 +1,101 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T19:41:18.341123+00:00",
+  "digest": "3e07b9dd2d",
+  "packet": {
+    "packet_id": "20260524T194118Z_3e07b9dd2d",
+    "created_at": "2026-05-24T19:41:18Z",
+    "headline_seed": "Xreal, Google’s smartglasses partner, thinks it has finally mastered this notoriously tricky industry",
+    "description_seed": "Chi Xu, the founder and CEO of XREAL, thinks the smart glasses business has finally reached a turning point.",
+    "link": "https://techcrunch.com/2026/05/24/xreal-googles-smartglasses-partner-thinks-it-has-finally-mastered-this-notoriously-tricky-industry/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/05/24/xreal-googles-smartglasses-partner-thinks-it-has-finally-mastered-this-notoriously-tricky-industry/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.75,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Xreal, Google’s smartglasses partner, thinks it has finally mastered this notoriously tricky industry"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Chi Xu, the founder and CEO of XREAL, thinks the smart glasses business has finally reached a turning point.",
+        "word_count": 19,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "The smart glasses industry has long been a tortured dream of Silicon Valley. The premise is appealing enough: What if, to enjoy the benefits of mobile computing, people didn’t have to stare at their phones all day long and could, instead, simply wear a lightweight computing device on their face? Science fiction fans (a demographic that is strong in the tech industry) can see this vision perfectly. However, the industry has — for much of the last decade — resembled a financial black hole into which gargantuan investments have been sunk and from which little to no profit has ever emerged.",
+        "word_count": 101,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Chi Xu, the founder and CEO of XREAL, thinks the smart glasses business has finally reached a turning point.\n\nThe smart glasses industry has long been a tortured dream of Silicon Valley. The premise is appealing enough: What if, to enjoy the benefits of mobile computing, people didn’t have to stare at their phones all day long and could, instead, simply wear a lightweight computing device on their face? Science fiction fans (a demographic that is strong in the tech industry) can see this vision perfectly. However, the industry has — for much of the last decade — resembled a financial black hole into which gargantuan investments have been sunk and from which little to no profit has ever emerged.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 120,
+      "selected_blocks": 2,
+      "selected_source_words": 120,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Xreal, Google’s smartglasses partner, thinks it has finally mastered this notoriously tricky industry",
+      "description": "Chi Xu, the founder and CEO of XREAL, thinks the smart glasses business has finally reached a turning point.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Xreal, Google’s smartglasses partner, thinks it has finally mastered this notoriously tricky industry",
+    "description": "Chi Xu, the founder and CEO of XREAL, thinks the smart glasses business has finally reached a turning point.",
+    "link": "https://techcrunch.com/2026/05/24/xreal-googles-smartglasses-partner-thinks-it-has-finally-mastered-this-notoriously-tricky-industry/",
+    "published": "2026-05-24T19:00:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "921b87c3165975944ce0c7a3001abf51",
+    "_url_hash": "2677baf56931fbfcc24edb389081e4be5354428a026fbd9a36814763850416a8",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nThe smart glasses industry has long been a tortured dream of Silicon Valley. The premise is appealing enough: What if, to enjoy the benefits of mobile computing, people didn’t have to stare at their phones all day long and could, instead, simply wear a lightweight computing device on their face? Science fiction fans (a demographic that is strong in the tech industry) can see this vision perfectly.\n\nHowever, the industry has — for much of the last decade — resembled a financial black hole into which gargantuan investments have been sunk and from which little to no profit has ever emerged.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T19:43:32.349958+00:00",
+  "failure": "Lähdeaineisto sisältää vain niukan väitteen XREALin toimitusjohtajan näkemyksestä ja yleistä taustaa älylasialasta; siitä ei voi kirjoittaa vähintään 250 sanan uutista ilman täyteainesta tai lisäoletuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T194118Z_3e07b9dd2d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto sisältää vain niukan väitteen XREALin toimitusjohtajan näkemyksestä ja yleistä taustaa älylasialasta; siitä ei voi kirjoittaa vähintään 250 sanan uutista ilman täyteainesta tai lisäoletuksia.\"}"
+}

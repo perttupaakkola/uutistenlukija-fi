@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T19:51:24.605554+00:00",
+  "digest": "4184d8b23d",
+  "packet": {
+    "packet_id": "20260524T195124Z_4184d8b23d",
+    "created_at": "2026-05-24T19:51:24Z",
+    "headline_seed": "Tukholman-lennon kamala käänne – lentokoneen ikkuna halkesi: ”Hidastui merkittävästi”",
+    "description_seed": "Berliinistä Ruotsiin suunnannut kone päätyi Tanskaan.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012030152.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012030152.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tukholman-lennon kamala käänne – lentokoneen ikkuna halkesi: ”Hidastui merkittävästi”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 116,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tukholman-lennon kamala käänne – lentokoneen ikkuna halkesi: ”Hidastui merkittävästi”",
+      "description": "Berliinistä Ruotsiin suunnannut kone päätyi Tanskaan.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tukholman-lennon kamala käänne – lentokoneen ikkuna halkesi: ”Hidastui merkittävästi”",
+    "description": "Berliinistä Ruotsiin suunnannut kone päätyi Tanskaan.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012030152.html",
+    "published": "2026-05-24T19:42:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "c7685a805b205bbd861d51d9a187954c",
+    "_url_hash": "bf308e8444cba85a042bb7d3f0f25ba9a12b96a4ac779063dcd35f4a90d88c4a",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: ksml.fi]\nSTT:n haastattelemat kokoomuksen piirien puheenjohtajat tyrmäävät puolueensa pormestariehdokkaana Helsingissä hetken aikaa olleen Kirsi Pihan ajatukset perussuomalaisille flirttailusta.\n\nHe eivät tunnista sitä, että puolueen sisällä käytäisiin valtakamppailua konservatiivien ja liberaalien välillä. Piha julkaisi hiljattain 60-sivuisen pamfletin, jossa hän muun muassa kirjoitti, että kokoomukseen on pesiytynyt perussuomalaisiin kallellaan oleva klikki, joka näkyy ja kuuluu ulospäin.\n\nVarsinais-Suomen kokoomuksen piirijohtaja Ville Valkonen sanoo, että kokoomus on tietoisesti pyrkinyt siihen, että puolueessa on sekä liberaaleja että konservatiiveja. Hän sanoo, että kokoomus ehkä jopa ylpeilee sillä.\n\n– Meillä on kansanedustajina sellaisia henkilöitä kuin Saara-Sofia Sirén erittäin liberaalista päädystä ja sitten sellaisia kuin Wille Rydman, joka itsekin on kertonut olevansa konservatiivi, ja viime kaudella oli Susanna Koski.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T19:53:24.911096+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai varmennettuja yksityiskohtia, joiden perusteella voisi kirjoittaa vähintään 250 sanan uutisen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T195124Z_4184d8b23d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai varmennettuja yksityiskohtia, joiden perusteella voisi kirjoittaa vähintään 250 sanan uutisen ilman keksittyjä tietoja.\"}"
+}

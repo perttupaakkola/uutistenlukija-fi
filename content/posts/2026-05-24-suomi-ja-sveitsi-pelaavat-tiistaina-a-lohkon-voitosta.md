@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Artikkeli/Suomi-pelaa-tiistaina-lohkovoitosta-%E2%80%93-Ruotsin-ja-Yhdysvaltojen-jatkopaikat-eiv%C3%A4t-ole-en%C3%A4%C3%A4-t%C3%A4ysin-omissa-k%C3%A4siss%C3%A4/269824"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
