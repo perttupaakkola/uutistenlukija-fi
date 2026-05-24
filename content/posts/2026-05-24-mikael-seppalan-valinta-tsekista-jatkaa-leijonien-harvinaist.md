@@ -44,7 +44,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Artikkeli/Mikael-Sepp%C3%A4l%C3%A4-T%C5%A1ekist%C3%A4-oli-vain-j%C3%A4%C3%A4vuoren-huippu-%E2%80%93-katso-eksoottisimmat-sarjat-joista-Leijoniin-on-valittu-MM-pelaajia/269761"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
