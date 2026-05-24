@@ -1,0 +1,85 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T22:01:22.400994+00:00",
+  "digest": "985cca7f02",
+  "packet": {
+    "packet_id": "20260524T220122Z_985cca7f02",
+    "created_at": "2026-05-24T22:01:22Z",
+    "headline_seed": "Claude is not your architect. Stop letting it pretend",
+    "description_seed": "Article URL: https://www.hollandtech.net/claude-is-not-your-architect/ Comments URL: https://news.ycombinator.com/item?id=48259784 Points: 180 # Comments: 126",
+    "link": "https://www.hollandtech.net/claude-is-not-your-architect/",
+    "source": "Hacker News Best",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hollandtech.net/claude-is-not-your-architect/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Claude is not your architect. Stop letting it pretend"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 942,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "The Next Web",
+        "The Next Web",
+        "The Next Web",
+        "MIT Technology Review",
+        "MIT Technology Review",
+        "Hacker News Best"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Claude is not your architect. Stop letting it pretend",
+      "description": "Article URL: https://www.hollandtech.net/claude-is-not-your-architect/ Comments URL: https://news.ycombinator.com/item?id=48259784 Points: 180 # Comments: 126",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Claude is not your architect. Stop letting it pretend",
+    "description": "Article URL: https://www.hollandtech.net/claude-is-not-your-architect/ Comments URL: https://news.ycombinator.com/item?id=48259784 Points: 180 # Comments: 126",
+    "link": "https://www.hollandtech.net/claude-is-not-your-architect/",
+    "published": "2026-05-24T18:28:11+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "04841790f72ba8bd473029ab36df0c42",
+    "_url_hash": "6fa5c47a5f6321035086ef3247341a615d7b575d18b24738244cc628a195053e",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "fix_parser_or_demote",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nI’ve seen it three times in the last month. Three different organisations, three different tech stacks, the same pattern.\n\nSomeone has an idea. Maybe a product manager, maybe a team lead, maybe the CTO after a conference. They open Claude, or ChatGPT, or Copilot — doesn’t matter which — and ask it what they should build. The AI does what it always does: validates the idea enthusiastically, suggests an architecture, and starts sketching components. It’s articulate. It’s confident. It sounds like a very senior engineer who’s thought deeply about the problem.\n\nIt hasn’t thought about the problem at all. It’s pattern-matching against its training data and producing the most plausible-sounding response. But it sounds so good that nobody pushes back.\n\nBefore you know it, Claude is the architect.\n\nAI agents are pathologically agreeable. Ask Claude if your idea is good and it’ll tell you it’s good. Ask it if a microservices architecture makes sense for your three-person team and it’ll explain why microservices are an excellent choice. Ask it if you should build a custom ML pipeline instead of using a managed service and it’ll enthusiastically lay out the design.\n\nIt’s not lying. It’s not even wrong, necessarily. It’s just incapable of the thing that makes a real architect valuable: saying “no.”\n\nA good architect’s most important skill isn’t designing systems. It’s knowing which systems not to build. It’s pushing back on complexity. It’s asking “why?” five times until the actual requirement emerges from the aspirational nonsense. It’s telling the CTO that their conference-inspired idea is a terrible fit for the team they actually have.\n\nClaude will never do this. It’s trained to be helpful. Helpful means agreeable. Agreeable means you get an attaboy and a Jenga tower that passes for architecture.\n\nHere’s what the AI-designed architecture looks like in practice.\n\nIt’s technically sound. The components make sense in isolation. The patterns are recognisable — event-driven here, CQRS there, a service mesh because why not. It looks like something a senior architect would produce. It passes the squint test.\n\nBut it wasn’t designed for your team. It wasn’t designed for your constraints. It wasn’t designed for the boring reality of your production environment — the VPC lockdowns, the legacy integrations, the team that’s never operated Kubernetes in production, the compliance requirements that mean half the managed services are off-limits.\n\nIt was designed for the median of\n\n---\n\n[Lähde: The Next Web]\nA small group communicating via a private Discord channel accessed Claude Mythos Preview by guessing the model’s URL on the same day Anthropic announced Project Glasswing. Anthropic says it is investigating and has found no evidence of impact to its core systems. The breach highlights the risks of restricting access to frontier AI capabilities through vendor environments rather than technical controls.\n\nA small group of unauthorised users gained access to Claude Mythos Preview, Anthropic’s closely restricted cybersecurity AI model, on the same day the company publicly announced the model’s existence, apparently by guessing the model’s URL based on familiarity with Anthropic’s URL formatting conventions for other models, according to a Bloomberg News report published on 21 April.\n\nThe group, whose members communicate via a private Discord channel dedicated to gathering intelligence on unreleased AI models, has been using Mythos regularly since gaining access and provided Bloomberg with proof in the form of screenshots and a live demonstration.\n\nAnthropic confirmed it is investigating the claims: “We’re investigating a report claiming unauthorised access to Claude Mythos Preview through one of our third-party vendor environments.”\n\nTNW City Coworking space - Where your best work happens\n\nA workspace designed for growth, collaboration, and endless networking opportunities in the heart of tech.\n\nThe company said there is currently no evidence that the access has impacted Anthropic’s core systems or extended beyond the vendor environment in question.\n\nAn individual currently employed at a third-party contractor working with Anthropic appears to have been involved, at least in part, in facilitating the group’s access, the outlet reported.\n\nThe significance of the breach is inseparable from the nature of the model. Anthropic announced Mythos Preview and the accompanying Project Glasswing initiative on 7 April 2026.\n\nThe company withheld the model from general release specifically because of its offensive cyber capabilities: in testing, Mythos autonomously discovered thousands of previously unknown zero-day vulnerabilities across every major operating system and every major web browser, and wrote working exploits, including chaining together four vulnerabilities in a browser to escape both renderer and operating system sandboxes, a feat that would typically require months of expert work.\n\nAnthropic engineers with no formal security training asked the model to find\n\n---\n\n[Lähde: MIT Technology Review]\nThe vibes were strong at Code with Claude, Anthropic’s two-day event for software developers in London that kicked off on May 19, the same day as Google’s I/O in Palo Alto. (A coincidence, not a flex, Anthropic staffers assured me.)\n\n“Who here has shipped a pull request in the last week that was completely written by Claude?” Jeremy Hadfield, an engineer at Anthropic, asked from the main stage. Almost half the people in the packed room—many sitting with laptops on their knees, coding or prompting as they watched the talks—raised their hands.\n\nPull requests are fixes or updates to existing software that are submitted for review before they go live. They are the bread and butter of software development, the chunks of code that most professional developers spend their lives writing—or did until now.\n\n“Who here has shipped a pull request that was completely written by Claude where they did not read the code at all?” Hadfield asked next. Nervous laughter. Most of the hands stayed up.\n\nIt’s ...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T22:03:22.858188+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T220122Z_985cca7f02\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
