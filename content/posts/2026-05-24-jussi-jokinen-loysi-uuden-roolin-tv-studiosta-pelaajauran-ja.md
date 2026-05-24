@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/Kaukalosta-studion-kirkkaisiin-valoihin-%E2%80%93-Jussi-Jokinen-valjasti-peli%C3%A4lyns%C3%A4-asiantuntijaty%C3%B6h%C3%B6n/269809"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
