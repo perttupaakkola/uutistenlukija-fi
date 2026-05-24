@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T16:11:22.970953+00:00",
+  "digest": "37a685e9cd",
+  "packet": {
+    "packet_id": "20260524T161122Z_37a685e9cd",
+    "created_at": "2026-05-24T16:11:22Z",
+    "headline_seed": "Leijonien ketjut uusiksi Itävalta-otteluun – Vaakanainen yhä sivussa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9477060",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9477060"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Leijonien ketjut uusiksi Itävalta-otteluun – Vaakanainen yhä sivussa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 127,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Leijonat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Leijonien ketjut uusiksi Itävalta-otteluun – Vaakanainen yhä sivussa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Leijonien ketjut uusiksi Itävalta-otteluun – Vaakanainen yhä sivussa",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9477060",
+    "published": "2026-05-24T18:34:59+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "86851c0c420e8fd4b304263dc1f004d4",
+    "_url_hash": "878a308c2728db4b226999da80b663d59410be581684ce6965b364a5dc766e46",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Leijonat]\nZÜRICH. Leijonat palasi sunnuntaina jäälle puoliltapäivin pelipäivän aamuharjoituksissa. Joukkue kohtaa MM-kisojen alkusarjan toiseksi viimeisessä ottelussa Itävallan kello 21.20 alkaen.\n\nJäillä nähtiin jälleen muutoksia ketjuihin, kun päävalmentaja Antti Pennanen oli ruuvannut kokoonpanoja uuteen uskoon.\n\nAatu Räty ja Anton Lundell ovat vaihtaneet paikkaa. Sama kokeilu nähtiin jo perjantain Britannia-ottelun päätöserän lopussa.\n\nUusissa ketjuissa Lundellin laidalla pelaavat Patrik Puistola ja Lenni Hämeenaho, kun taas Rädyn ketjussa ovat Jesse Puljujärvi ja Sakari Manninen.\n\nPuolustuspäässä saatiin myös positiivisia uutisia, kun kaksi viime peliä loukkaantumisen takia sivussa ollut Urho Vaakanainen oli mukana aamujäillä. Näyttää siltä, että Leijonat saa New York Rangersin puolustajan takaisin vahvistamaan alakertaa.\n\nAloittava maalivahti ei ole vielä tiedossa.\n\nMikael Granlund–Aleksander Barkov–Konsta Helenius\n\nPatrik Puistola–Anton Lundell–Lenni Hämeenaho\n\nSakari Manninen–Aatu Räty–Jesse Puljujärvi\n\nSaku Mäenalanen–Hannes Björninen–Waltteri Merelä\n\nYlimääräiset hyökkääjät: Janne Kuokkanen, Sami Päivärinta",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T16:13:22.864899+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä tai riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T161122Z_37a685e9cd\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä tai riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
