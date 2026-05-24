@@ -424,6 +424,22 @@ def build_panel(now: datetime | None = None) -> dict[str, Any]:
     now = now or utcnow()
     content = content_summary(now)
     pipeline = pipeline_summary(now)
+    raw_last_24h = pipeline.get("last_24h")
+    last_24h: dict[str, Any] = raw_last_24h if isinstance(raw_last_24h, dict) else {}
+    generated_count = int(last_24h.get("article_count") or 0)
+    published_count = int(content.get("published_last_24h_local") or 0)
+    last_24h["generated_article_count"] = generated_count
+    last_24h["published_article_count_local"] = published_count
+    # For the public/operator-facing 24h article count, prefer what actually
+    # exists on the site. The scanner metrics can legitimately be 0 when the
+    # staged publisher/Monica path produced fresh articles, and reporting that
+    # as "0 articles" creates a false yellow drift alert.
+    if published_count > generated_count:
+        last_24h["article_count"] = published_count
+        last_24h["article_count_source"] = "content/posts frontmatter"
+    else:
+        last_24h["article_count_source"] = "pipeline/logs/metrics.json"
+    pipeline["last_24h"] = last_24h
     queues = queue_summary(now)
     categories = category_drift()
     analytics = analytics_status(now)

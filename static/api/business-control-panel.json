@@ -2,115 +2,114 @@
   "analytics": {
     "ga4": {
       "daily_traffic_log": {
-        "age_minutes": 513.3,
+        "age_minutes": 1430.6,
         "exists": true,
         "status": "error_seen"
       },
       "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
       "status": "blocked_or_unknown",
       "weekly_metrics_log": {
-        "age_minutes": 3393.3,
+        "age_minutes": 8630.6,
         "exists": true,
         "status": "error_seen"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 3333.3,
-        "data_source": "frontmatter_synthetic",
-        "generated_at": "2026-05-04T08:00:01.756093Z",
+        "age_minutes": 5501.4,
+        "data_source": "google_search_console",
+        "generated_at": "2026-05-20T11:09:10.649857Z",
         "source": "static/api/ctr-gap-report.json",
-        "total_gaps_found": 20
+        "total_gaps_found": 6
       },
       "fetch_log": {
-        "age_minutes": 543.3,
+        "age_minutes": 20.6,
         "exists": true,
         "status": "error_seen"
       },
-      "reason": "no local GSC export; CTR gap report uses frontmatter fallback",
-      "status": "blocked"
+      "reason": "local GSC-derived report present",
+      "status": "local_report_present"
     },
     "source": "local public/static reports and pipeline/logs only; external analytics APIs not queried"
   },
   "category_drift": {
     "alerts": [
-      "Talous: 9.3% (-10.7% under target 20%)",
-      "Tiede: 8.8% (+5.8% over target 3%)",
-      "Ulkomaat: 28.5% (+8.5% over target 20%)"
+      "Talous: 10.2% (-9.8% under target 20%)",
+      "Ulkomaat: 27.7% (+7.7% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 509,
-        "delta": 3.8,
-        "pct": 28.8,
+        "count": 669,
+        "delta": 4.2,
+        "pct": 29.2,
         "status": "ok",
         "target_pct": 25
       },
       {
         "category": "Kulttuuri",
         "count": 68,
-        "delta": -3.2,
-        "pct": 3.8,
+        "delta": -4.0,
+        "pct": 3.0,
         "status": "ok",
         "target_pct": 7
       },
       {
         "category": "Talous",
-        "count": 164,
-        "delta": -10.7,
-        "pct": 9.3,
+        "count": 235,
+        "delta": -9.8,
+        "pct": 10.2,
         "status": "under",
         "target_pct": 20
       },
       {
         "category": "Teknologia",
-        "count": 209,
-        "delta": -3.2,
-        "pct": 11.8,
+        "count": 314,
+        "delta": -1.3,
+        "pct": 13.7,
         "status": "ok",
         "target_pct": 15
       },
       {
         "category": "Tiede",
-        "count": 156,
-        "delta": 5.8,
-        "pct": 8.8,
-        "status": "over",
+        "count": 183,
+        "delta": 5.0,
+        "pct": 8.0,
+        "status": "ok",
         "target_pct": 3
       },
       {
         "category": "Ulkomaat",
-        "count": 503,
-        "delta": 8.5,
-        "pct": 28.5,
+        "count": 636,
+        "delta": 7.7,
+        "pct": 27.7,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
-        "count": 159,
-        "delta": -1.0,
-        "pct": 9.0,
+        "count": 188,
+        "delta": -1.8,
+        "pct": 8.2,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-05-06T07:30:02.271830+00:00",
+    "generated_at": "2026-05-23T07:30:01.825589+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 1768
+    "total_articles": 2293
   },
   "content": {
-    "article_count_local": 1775,
-    "last_publish_age_minutes": 5.3,
-    "last_publish_at": "2026-05-06T15:28:01.414495Z",
+    "article_count_local": 2332,
+    "last_publish_age_minutes": 22.5,
+    "last_publish_at": "2026-05-24T06:28:05.976552Z",
     "latest_article": {
-      "category": "Talous",
-      "slug": "2026-05-06-nokian-kurssiralli-nosti-yhtion-takaisin-helsingin-porssin-k",
-      "title": "Nokian kurssiralli nosti yhtiön takaisin Helsingin pörssin kärkeen"
+      "category": "Tiede",
+      "slug": "2026-05-24-analyysi-nalkaa-kaytetaan-yha-useammin-sodankaynnin-valineen",
+      "title": "Analyysi: Nälkää käytetään yhä useammin sodankäynnin välineenä"
     },
-    "published_last_24h_local": 23,
+    "published_last_24h_local": 39,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -130,7 +129,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-05-06T15:33:22.339447Z",
+  "generated_at": "2026-05-24T06:50:37.414956Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -161,47 +160,49 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 0,
-      "failure": 144,
+      "article_count": 39,
+      "article_count_source": "content/posts frontmatter",
+      "failure": 0,
+      "generated_article_count": 0,
+      "published_article_count_local": 39,
       "runs_total": 144,
       "skipped": 0,
-      "success": 0,
-      "top_error_reasons": [
-        {
-          "count": 144,
-          "reason": "No articles found after scan"
-        }
-      ]
+      "success": 144,
+      "top_error_reasons": []
     },
-    "last_run_age_minutes": 3.2,
+    "last_run_age_minutes": 0.5,
     "last_run_article_count": 0,
-    "last_run_at": "2026-05-06T15:30:08.126576Z",
-    "last_run_success": false,
+    "last_run_at": "2026-05-24T06:50:08.663621Z",
+    "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-05-06T15:28:01.414495+00:00",
+        "last_published_ts": "2026-05-24T06:28:05.976552+00:00",
         "publish_rate": 0,
-        "published": 23,
-        "rejected": 2
+        "published": 39,
+        "rejected": 6
       },
       "feeds": {
         "disabled": 0,
         "disabled_names": [],
-        "healthy": 38,
+        "healthy": 40,
         "stale": 0,
         "stale_names": [],
-        "total": 38
+        "total": 40
       },
-      "generated_at": "2026-05-06T15:28:23+00:00",
+      "generated_at": "2026-05-24T06:28:48+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "central unsourced number in ti": 2,
-        "length under target (253 words": 1,
-        "missing: image": 2,
-        "unsourced numbers": 2
+        "central unsourced number in ti": 4,
+        "keyword_stuffing": 2,
+        "length under target (251 words": 1,
+        "length under target (266 words": 1,
+        "length under target (279 words": 1,
+        "length under target (285 words": 1,
+        "missing: image": 6,
+        "unsourced numbers": 4
       },
       "runs": {
         "error": 0,
@@ -213,24 +214,24 @@
       "status": "ok",
       "trending": [
         [
-          "perusteella",
-          26
-        ],
-        [
-          "enemmän",
-          16
-        ],
-        [
-          "aiempaa",
-          14
+          "jälkeen",
+          44
         ],
         [
           "mukaansa",
-          14
+          34
         ],
         [
-          "siihen",
-          14
+          "trump",
+          24
+        ],
+        [
+          "iranin",
+          24
+        ],
+        [
+          "ettei",
+          21
         ]
       ]
     },
@@ -239,34 +240,29 @@
   "queues": {
     "queues": {
       "monica/inbox": {
-        "count": 6594,
-        "newest_item_age_minutes": 4435.4,
-        "oldest_item_age_minutes": 26290.4
+        "count": 6598,
+        "newest_item_age_minutes": 7207.0,
+        "oldest_item_age_minutes": 51687.7
       },
       "monica/outbox": {
-        "count": 1573,
-        "newest_item_age_minutes": 5333.7,
-        "oldest_item_age_minutes": 25687.4
+        "count": 1575,
+        "newest_item_age_minutes": 10092.4,
+        "oldest_item_age_minutes": 51084.7
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 4434.7,
-        "oldest_item_age_minutes": 26290.4
+        "newest_item_age_minutes": 29832.0,
+        "oldest_item_age_minutes": 51687.7
       },
       "staged/failed": {
-        "count": 978,
-        "newest_item_age_minutes": 30.0,
-        "oldest_item_age_minutes": 7186.1
+        "count": 2838,
+        "newest_item_age_minutes": 5.6,
+        "oldest_item_age_minutes": 32583.4
       },
       "staged/published": {
-        "count": 73,
-        "newest_item_age_minutes": 5.0,
-        "oldest_item_age_minutes": 6844.9
-      },
-      "staged/ready": {
-        "count": 47,
-        "newest_item_age_minutes": 2.1,
-        "oldest_item_age_minutes": 592.1
+        "count": 629,
+        "newest_item_age_minutes": 21.8,
+        "oldest_item_age_minutes": 32242.2
       }
     },
     "source": "pipeline/queues/*.json file counts only"
@@ -274,5 +270,5 @@
   "safe_public": true,
   "schema_version": "1.0",
   "site": "uutistenlukija.fi",
-  "status": "attention"
+  "status": "ok"
 }
