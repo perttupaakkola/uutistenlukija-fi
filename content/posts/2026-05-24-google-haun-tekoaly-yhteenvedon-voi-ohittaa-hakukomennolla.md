@@ -42,7 +42,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/24/tiesitko-taman-kikan-nain-tekoaly-yhteenveto-ei-ilmesty-google-hakuusi/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
