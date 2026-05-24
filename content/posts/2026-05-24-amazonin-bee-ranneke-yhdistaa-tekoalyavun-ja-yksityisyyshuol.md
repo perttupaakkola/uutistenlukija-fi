@@ -44,7 +44,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 

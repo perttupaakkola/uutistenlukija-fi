@@ -1,0 +1,90 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T19:01:22.786097+00:00",
+  "digest": "93ea29930e",
+  "packet": {
+    "packet_id": "20260524T190122Z_93ea29930e",
+    "created_at": "2026-05-24T19:01:22Z",
+    "headline_seed": "Aurinkopaneeleille lisää tehoa oudolla keinolla: Jopa 12 % enemmän, jos ne asennetaan veteen",
+    "description_seed": "Kelluvat aurinkovoimalat ovat yleistyneet etenkin Aasiassa, jossa maa-alaa on rajoitetusti. Uudessa tutkimuksessa selvisi, että kelluva aurinkovoimala tuotti paremmin kuin verrokki maalla.",
+    "link": "https://www.tivi.fi/uutiset/a/f61a752d-9ab3-405e-b879-e7b3bfe49b99",
+    "source": "Tivi",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tivi.fi/uutiset/a/f61a752d-9ab3-405e-b879-e7b3bfe49b99"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Aurinkopaneeleille lisää tehoa oudolla keinolla: Jopa 12 % enemmän, jos ne asennetaan veteen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Kelluvat aurinkovoimalat ovat yleistyneet etenkin Aasiassa, jossa maa-alaa on rajoitetusti. Uudessa tutkimuksessa selvisi, että kelluva aurinkovoimala tuotti paremmin kuin verrokki maalla.",
+        "word_count": 21,
+        "keyword_overlap": 20,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Kelluvat aurinkovoimalat ovat yleistyneet etenkin Aasiassa, jossa maa-alaa on rajoitetusti. Uudessa tutkimuksessa selvisi, että kelluva aurinkovoimala tuotti paremmin kuin verrokki maalla.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 42,
+      "selected_blocks": 1,
+      "selected_source_words": 21,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tivi"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Aurinkopaneeleille lisää tehoa oudolla keinolla: Jopa 12 % enemmän, jos ne asennetaan veteen",
+      "description": "Kelluvat aurinkovoimalat ovat yleistyneet etenkin Aasiassa, jossa maa-alaa on rajoitetusti. Uudessa tutkimuksessa selvisi, että kelluva aurinkovoimala tuotti paremmin kuin verrokki maalla.",
+      "category_hint": "",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Aurinkopaneeleille lisää tehoa oudolla keinolla: Jopa 12 % enemmän, jos ne asennetaan veteen",
+    "description": "Kelluvat aurinkovoimalat ovat yleistyneet etenkin Aasiassa, jossa maa-alaa on rajoitetusti. Uudessa tutkimuksessa selvisi, että kelluva aurinkovoimala tuotti paremmin kuin verrokki maalla.",
+    "link": "https://www.tivi.fi/uutiset/a/f61a752d-9ab3-405e-b879-e7b3bfe49b99",
+    "published": "2026-05-24T18:15:00+00:00",
+    "source": "Tivi",
+    "source_domain": "tivi.fi",
+    "language": "fi",
+    "fingerprint": "cef6221dc68237e332f8954712b0f5c9",
+    "_url_hash": "b963274ed4c7ae4e0d5ebdeb1188417d775def2aa5cca41f546b60211edac4e8",
+    "source_tier": 2,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Kelluvat aurinkovoimalat ovat yleistyneet etenkin Aasiassa, jossa maa-alaa on rajoitetusti. Uudessa tutkimuksessa selvisi, että kelluva aurinkovoimala tuotti paremmin kuin verrokki maalla.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-24T19:03:22.859036+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T190122Z_93ea29930e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.\"}"
+}
