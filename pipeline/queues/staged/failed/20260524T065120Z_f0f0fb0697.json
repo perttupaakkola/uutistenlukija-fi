@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T06:51:20.239001+00:00",
+  "digest": "f0f0fb0697",
+  "packet": {
+    "packet_id": "20260524T065120Z_f0f0fb0697",
+    "created_at": "2026-05-24T06:51:20Z",
+    "headline_seed": "Valvontakamera paljasti puuvarkauden Mikkelin mökillä – syyllinen oli yllättävä",
+    "description_seed": "Varas ehti viedä useamman viikon aikana kymmenkunta halkoa.",
+    "link": "https://yle.fi/a/74-20227609?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20227609?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Valvontakamera paljasti puuvarkauden Mikkelin mökillä – syyllinen oli yllättävä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 220,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Valvontakamera paljasti puuvarkauden Mikkelin mökillä – syyllinen oli yllättävä",
+      "description": "Varas ehti viedä useamman viikon aikana kymmenkunta halkoa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Valvontakamera paljasti puuvarkauden Mikkelin mökillä – syyllinen oli yllättävä",
+    "description": "Varas ehti viedä useamman viikon aikana kymmenkunta halkoa.",
+    "link": "https://yle.fi/a/74-20227609?origin=rss",
+    "published": "2026-05-24T09:35:09+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "c89eddb51de1db7e899d711c8d18113e",
+    "_url_hash": "6e6e1f5095717c8f64a9a1678ebf558d2aa9e80a8310df5a50cb81e28eb6f36c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Yle Uutiset]\nHelsinkiläisten Sari Ahtiaisen ja Kai Aron mökkivarastosta Mikkelissä katosi salaperäisesti puita viikoittain.\n\n– Meillä kaadettiin haapa, ja pinosta hävisi puita. Ihmeteltiin, että mitä tämä nyt on, pariskunta kertoo.\n\nPariskunta mietti, että voisiko asialla olla vastarannalla asuva majava.\n\nEpäilysten varmistamiseksi he asensivat valvontakameran pihalle. Pian yön pimeinä tunteina kamera tallensi todisteen: järvestä nousi majava ja lähti raahaamaan halkoja mukanaan.\n\n– Se oli aika hellyttävä ja iso otus. En tiennyt, että majavat ovat noin pulskia, Ahtiainen sanoo.\n\nMajava kerkesi viedä useamman viikon aikana kymmenkunta halkoa järveen. Osa puista jäi kellumaan järveen, osa oli purettu rantaan.\n\nPadonrakennuspuuhissa majava ei ollut, vaan syömässä.\n\nRavintolan löytänyt majava kuori puita evääkseen – jäljelle jäi vain kuoritut puukappaleet.\n\nVarkauksien estämiseksi pariskunta alkoi suojata halkovarastoa. Pinon päälle laitettiin muun muassa ovi, jotta majava ei pääsisi kaivamaan puita esiin.\n\n– Seuraavana yönä, kun paremmin oli laitettu päivällä ne pinot sinne suojaan, niin se tosiaan käveli siinä ympäriinsä, ja sitten sen jälkeen se ei ole enää tullut. Ilmeisesti totesi, että tämä apaja on suljettu nyt – ravintola on kiinni, Ahtiainen kertoo ja naurahtaa.\n\nMajava on ahkeroinut muutenkin. Omistajat kertovat, että lehtipuut ovat hävinneet tontilta. Taitava metsuri kun on kyseessä, niin puut ovat kuitenkin kaatuneet järveä päin.\n\n– Snackibaari oli siinä. Herkullinen buffet hänelle, Ahtiainen ja Aro kertovat ja naureskelevat majavan suljetusta ravintolasta.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T06:53:28.323519+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja yksityiskohtia vähintään 250 sanan julkaistavaan artikkeliin ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T065120Z_f0f0fb0697\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja yksityiskohtia vähintään 250 sanan julkaistavaan artikkeliin ilman keksittyjä tietoja.\"}"
+}

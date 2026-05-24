@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T07:31:30.204260+00:00",
+  "digest": "c91ceee436",
+  "packet": {
+    "packet_id": "20260524T073130Z_c91ceee436",
+    "created_at": "2026-05-24T07:31:30Z",
+    "headline_seed": "Man killed in shark attack off Australia's north-east coast",
+    "description_seed": "The 39-year-old was fatally injured while swimming out at a shoal off the Cassowary Coast in Queensland.",
+    "link": "https://www.bbc.com/news/articles/cn9pq5l2d14o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "CBS News",
+      "CBS News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cn9pq5l2d14o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Man killed in shark attack off Australia's north-east coast"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A man has died after being attacked by a shark off the coast of the north-eastern Australian state of Queensland, police have confirmed. Emergency services were called to a boat ramp on the Cassowary Coast, between the cities of Cairns and Townsville, just before noon local time on Sunday, following reports of a 39-year-old being attacked while swimming out at a nearby shoal. Queensland Police said in a statement that the man was retrieved from the water but died from his injuries. It is the second fatal shark attack in Australian coastal waters in as many weeks, after a 38-year-old was killed while spearfishing near Perth, in Western Australia, last Saturday. In that incident, the man had been bitten on the lower legs and could not be revived.",
+        "word_count": 128,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The 39-year-old was fatally injured while swimming out at a shoal off the Cassowary Coast in Queensland.",
+        "word_count": 17,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "A shark fatally mauled a diver off an Australian tourist island on Saturday, police said, marking the country's second fatal shark attack so far this year. The 38-year-old man had been spearfishing with friends when he was attacked on a coral reef off Rottnest Island near Australia's southwest coast, Western Australia Police Sergeant Michael Wear said. \"The friends have witnessed the horrific event,\" Wear said. The victim was near a dive boat when he was bitten on the legs, Wear said. He was then taken by that boat 1,100 yards to the island, where paramedics could not resuscitate him. Lifeguards reported a 16-foot white shark had been seen in the vicinity before the attack, and the state's Department of Primary Industries and Regional Development told AFP the man had been bitten by a great white.",
+        "word_count": 135,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "The attack was Australia's first shark fatality since January, when a 12-year-old boy died in a hospital days after he was mauled by a bull shark in Sydney Harbor. The attack that killed the boy was one of four recorded in the span of two days, which prompted officials to close dozens of the city's beaches. In November, a shark killed a woman and seriously wounded a man at a national park beach on Australia's east coast in a rare instance of the predator attacking two people. Rottnest Island's last fatal shark attack was in 2011, in which a 32-year-old diver died. Australia has averaged more than three fatal shark attacks a year in recent decades.",
+        "word_count": 116,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "A man has died after being attacked by a shark off the coast of the north-eastern Australian state of Queensland, police have confirmed. Emergency services were called to a boat ramp on the Cassowary Coast, between the cities of Cairns and Townsville, just before noon local time on Sunday, following reports of a 39-year-old being attacked while swimming out at a nearby shoal. Queensland Police said in a statement that the man was retrieved from the water but died from his injuries. It is the second fatal shark attack in Australian coastal waters in as many weeks, after a 38-year-old was killed while spearfishing near Perth, in Western Australia, last Saturday. In that incident, the man had been bitten on the lower legs and could not be revived.\n\nThe 39-year-old was fatally injured while swimming out at a shoal off the Cassowary Coast in Queensland.\n\nA shark fatally mauled a diver off an Australian tourist island on Saturday, police said, marking the country's second fatal shark attack so far this year. The 38-year-old man had been spearfishing with friends when he was attacked on a coral reef off Rottnest Island near Australia's southwest coast, Western Australia Police Sergeant Michael Wear said. \"The friends have witnessed the horrific event,\" Wear said. The victim was near a dive boat when he was bitten on the legs, Wear said. He was then taken by that boat 1,100 yards to the island, where paramedics could not resuscitate him. Lifeguards reported a 16-foot white shark had been seen in the vicinity before the attack, and the state's Department of Primary Industries and Regional Development told AFP the man had been bitten by a great white.\n\nThe attack was Australia's first shark fatality since January, when a 12-year-old boy died in a hospital days after he was mauled by a bull shark in Sydney Harbor. The attack that killed the boy was one of four recorded in the span of two days, which prompted officials to close dozens of the city's beaches. In November, a shark killed a woman and seriously wounded a man at a national park beach on Australia's east coast in a rare instance of the predator attacking two people. Rottnest Island's last fatal shark attack was in 2011, in which a 32-year-old diver died. Australia has averaged more than three fatal shark attacks a year in recent decades.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 834,
+      "selected_blocks": 4,
+      "selected_source_words": 396,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "New York Post",
+        "New York Post",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "CBS News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Man killed in shark attack off Australia's north-east coast",
+      "description": "The 39-year-old was fatally injured while swimming out at a shoal off the Cassowary Coast in Queensland.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Man killed in shark attack off Australia's north-east coast",
+    "description": "The 39-year-old was fatally injured while swimming out at a shoal off the Cassowary Coast in Queensland.",
+    "link": "https://www.bbc.com/news/articles/cn9pq5l2d14o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-24T07:12:37+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "1f268d4f13fe2bbe612c2f11d88fbdea",
+    "_url_hash": "af0ff6b936f4039cd5fecbd1cb8740f8c570c5fc9ba563b3aa978f075a73c1b1",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA man has died after being attacked by a shark off the coast of the north-eastern Australian state of Queensland, police have confirmed.\n\nEmergency services were called to a boat ramp on the Cassowary Coast, between the cities of Cairns and Townsville, just before noon local time on Sunday, following reports of a 39-year-old being attacked while swimming out at a nearby shoal.\n\nQueensland Police said in a statement that the man was retrieved from the water but died from his injuries.\n\nIt is the second fatal shark attack in Australian coastal waters in as many weeks, after a 38-year-old was killed while spearfishing near Perth, in Western Australia, last Saturday.\n\nIn that incident, the man had been bitten on the lower legs and could not be revived.\n\nQueensland Police did not reveal details of the injuries sustained by the latest victim, nor did it disclose the man's identity.\n\nIt said it will now prepare a report for the coroner on the \"sudden and non-suspicious\" death.\n\n\"As the matter is before the coroner, it would be inappropriate to comment further,\" the force added.\n\nShark attacks around Australia are more common than in many other parts of the world, though they are often not fatal.\n\nThere were four encounters with sharks across Australia in January, according to the Australian Shark-Incident Database figures show, only one of which was fatal.\n\nPopular swimming and surfing spots tend to have measures to protect against attacks.\n\n---\n\n[Lähde: CBS News]\nA shark fatally mauled a diver off an Australian tourist island on Saturday, police said, marking the country's second fatal shark attack so far this year.\n\nThe 38-year-old man had been spearfishing with friends when he was attacked on a coral reef off Rottnest Island near Australia's southwest coast, Western Australia Police Sergeant Michael Wear said.\n\n\"The friends have witnessed the horrific event,\" Wear said.\n\nThe victim was near a dive boat when he was bitten on the legs, Wear said. He was then taken by that boat 1,100 yards to the island, where paramedics could not resuscitate him.\n\nLifeguards reported a 16-foot white shark had been seen in the vicinity before the attack, and the state's Department of Primary Industries and Regional Development told AFP the man had been bitten by a great white.\n\nOfficials did not name the victim but he was identified as Steven Mattaboni by family members, the Australian Broadcasting Corporation reported.\n\nMattaboni's wife, Shirene, said the family's \"hearts are irrevocably broken.\"\n\n\"Steven was a devoted father to our two beautiful daughters — one who turns three next month and our four-month-old baby,\" she said in a statement.\n\nIn a social media post, Western Australia Premier Roger Cook called the shark attack \"deeply distressing\" and thanked first responders and emergency personnel for their efforts.\n\n\"It is a devastating time for all involved,\" Cook said.\n\nThe attack was Australia's first shark fatality since January, when a 12-year-old boy died in a hospital days after he was mauled by a bull shark in Sydney Harbor. The attack that killed the boy was one of four recorded in the span of two days, which prompted officials to close dozens of the city's beaches.\n\nIn November, a shark killed a woman and seriously wounded a man at a national park beach on Australia's east coast in a rare instance of the predator attacking two people.\n\nRottnest Island's last fatal shark attack was in 2011, in which a 32-year-old diver died.\n\nAustralia has averaged more than three fatal shark attacks a year in recent decades.\n\nThere have been nearly 1,300 shark incidents around Australia since 1791, of which more than 260 resulted in death, according to a database of the predators' encounters with humans.\n\nAustralian scientists believe increasingly crowded waters and rising ocean temperatures are swaying sharks' migratory patterns, which may be contributing to a rise in attacks.\n\nAgence  France-Presse\n                  \n        contribu\n\n---\n\n[Lähde: New York Post]\nSee more of our coverage in your search results.\n\nAn Australian man died after being attacked by a shark while swimming off the nation’s western coast Saturday morning — the second deadly mauling in Australia this year, police said.\n\nThe unidentified 38-year-old swimmer was savaged by the marine predator at Horseshoe Reef near Rottnest Island, a popular tourist spot about 19 miles west of Perth, and was pronounced dead after being pulled to shore, local authorities said in a statement.\n\nGrim footage from local outlets showed a large police presence and a helicopter with a stretcher at the scene.\n\nState police have since warned beach visitors to exercise caution in the waters around the island.\n\nThe fatal incident comes months after a young boy was bitten by a shark and died in Sydney Harbour in January, amid a vicious string of shark attacks along the east coast.\n\nRoughly 20 shark encounters occur in Australia each year, with most unfolding along the country’s east and southwest seaboard, according to Australia’s Institute of Health and Welfare.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T07:35:04.656724+00:00",
+  "failure": "lead paragraph too short: 29 words",
+  "payload": {
+    "packet_id": "20260524T073130Z_c91ceee436",
+    "title": "Mies kuoli hain hyökkäyksessä Queenslandin rannikolla Australiassa",
+    "summary": "39-vuotias mies kuoli hain hyökkäyksessä uidessaan Queenslandin Cassowary Coastin edustalla. Poliisin mukaan hänet saatiin vedestä, mutta hän menehtyi vammoihinsa.",
+    "content": "39-vuotias mies on kuollut hain hyökkäyksessä Australian koillisrannikolla Queenslandissa. Poliisin mukaan hyökkäys tapahtui sunnuntaina paikallista aikaa, kun mies oli uimassa matalikolla Cassowary Coastin edustalla Cairnsin ja Townsvillen välisellä rannikkoalueella.\n\n## Hätäpalvelut kutsuttiin veneluiskalle\n\nViranomaiset saivat ilmoituksen tapauksesta hieman ennen puoltapäivää paikallista aikaa. Hätäpalvelut hälytettiin Cassowary Coastilla sijaitsevalle veneluiskalle sen jälkeen, kun 39-vuotiaan miehen kerrottiin joutuneen hain hyökkäyksen kohteeksi läheisellä matalikolla.\n\nQueenslandin poliisin mukaan mies saatiin nostettua vedestä, mutta hän kuoli saamiinsa vammoihin. Lähdetiedoissa ei vahvisteta miehen henkilöllisyyttä, hyökkäyksen täsmällistä kohtaa tai sitä, mikä hailaji oli kyseessä. Poliisin tiedoissa keskeistä on, että hyökkäys tapahtui miehen ollessa uimassa rannikolla sijaitsevan matalikon luona.\n\n## Toinen kuolemaan johtanut hyökkäys lyhyessä ajassa\n\nTapaus on toinen kuolemaan johtanut hain hyökkäys Australian rannikkovesillä kahden viikon sisällä. Edellinen tapaus sattui Länsi-Australiassa Perthin lähellä sijaitsevan Rottnest Islandin edustalla, missä 38-vuotias mies kuoli ollessaan harppuunakalastamassa ystäviensä kanssa.\n\nLänsi-Australian poliisin mukaan mies oli koralliriutan luona ja lähellä sukellusvenettä, kun hai puri häntä jalkoihin. Hänet kuljetettiin veneellä noin 1 100 jaardin matka saarelle, mutta ensihoitajat eivät saaneet häntä elvytettyä. Alueella oli ennen hyökkäystä ilmoitettu nähdyn noin 16-jalkainen valkohai, ja osavaltion viranomaisen mukaan miestä puri valkohai.\n\n## Aiemmat tapaukset ovat johtaneet rantatoimiin\n\nRottnest Islandin tapausta kuvattiin Australian vuoden toiseksi kuolemaan johtaneeksi hain hyökkäykseksi. Tammikuussa 12-vuotias poika kuoli sairaalassa päiviä sen jälkeen, kun härkähai oli raadellut häntä Sydneyn satamassa. Se oli yksi neljästä kahden päivän aikana kirjatusta hyökkäyksestä, joiden jälkeen viranomaiset sulkivat kymmeniä kaupungin rantoja.\n\nMarraskuussa hai tappoi naisen ja haavoitti vakavasti miestä kansallispuiston rannalla Australian itärannikolla. Rottnest Islandin edellinen kuolemaan johtanut hain hyökkäys oli vuonna 2011, jolloin 32-vuotias sukeltaja kuoli. Australia on kirjannut viime vuosikymmeninä keskimäärin yli kolme kuolemaan johtanutta hain hyökkäystä vuodessa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Australia",
+      "Queensland",
+      "haihyökkäys",
+      "Cassowary Coast",
+      "Rottnest Island"
+    ],
+    "summary_bullets": [
+      "39-vuotias mies kuoli hain hyökkäyksessä Queenslandin Cassowary Coastin edustalla.",
+      "Poliisin mukaan mies oli uimassa läheisellä matalikolla ja hänet saatiin vedestä, mutta hän menehtyi vammoihinsa.",
+      "Tapaus on toinen kuolemaan johtanut hain hyökkäys Australian rannikkovesillä kahden viikon sisällä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.94,
+    "journalist_note": "Artikkeli perustuu paketissa vahvistettuihin poliisi- ja viranomaistietoihin. Hain lajia Queenslandin tapauksessa, uhrin henkilöllisyyttä tai mahdollisia rajoituksia Cassowary Coastin ranta-alueilla ei ole vahvistettu, joten niitä ei lisätty."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260524T073130Z_c91ceee436\",\n  \"title\": \"Mies kuoli hain hyökkäyksessä Queenslandin rannikolla Australiassa\",\n  \"summary\": \"39-vuotias mies kuoli hain hyökkäyksessä uidessaan Queenslandin Cassowary Coastin edustalla. Poliisin mukaan hänet saatiin vedestä, mutta hän menehtyi vammoihinsa.\",\n  \"content\": \"39-vuotias mies on kuollut hain hyökkäyksessä Australian koillisrannikolla Queenslandissa. Poliisin mukaan hyökkäys tapahtui sunnuntaina paikallista aikaa, kun mies oli uimassa matalikolla Cassowary Coastin edustalla Cairnsin ja Townsvillen välisellä rannikkoalueella.\\n\\n## Hätäpalvelut kutsuttiin veneluiskalle\\n\\nViranomaiset saivat ilmoituksen tapauksesta hieman ennen puoltapäivää paikallista aikaa. Hätäpalvelut hälytettiin Cassowary Coastilla sijaitsevalle veneluiskalle sen jälkeen, kun 39-vuotiaan miehen kerrottiin joutuneen hain hyökkäyksen kohteeksi läheisellä matalikolla.\\n\\nQueenslandin poliisin mukaan mies saatiin nostettua vedestä, mutta hän kuoli saamiinsa vammoihin. Lähdetiedoissa ei vahvisteta miehen henkilöllisyyttä, hyökkäyksen täsmällistä kohtaa tai sitä, mikä hailaji oli kyseessä. Poliisin tiedoissa keskeistä on, että hyökkäys tapahtui miehen ollessa uimassa rannikolla sijaitsevan matalikon luona.\\n\\n## Toinen kuolemaan johtanut hyökkäys lyhyessä ajassa\\n\\nTapaus on toinen kuolemaan johtanut hain hyökkäys Australian rannikkovesillä kahden viikon sisällä. Edellinen tapaus sattui Länsi-Australiassa Perthin lähellä sijaitsevan Rottnest Islandin edustalla, missä 38-vuotias mies kuoli ollessaan harppuunakalastamassa ystäviensä kanssa.\\n\\nLänsi-Australian poliisin mukaan mies oli koralliriutan luona ja lähellä sukellusvenettä, kun hai puri häntä jalkoihin. Hänet kuljetettiin veneellä noin 1 100 jaardin matka saarelle, mutta ensihoitajat eivät saaneet häntä elvytettyä. Alueella oli ennen hyökkäystä ilmoitettu nähdyn noin 16-jalkainen valkohai, ja osavaltion viranomaisen mukaan miestä puri valkohai.\\n\\n## Aiemmat tapaukset ovat johtaneet rantatoimiin\\n\\nRottnest Islandin tapausta kuvattiin Australian vuoden toiseksi kuolemaan johtaneeksi hain hyökkäykseksi. Tammikuussa 12-vuotias poika kuoli sairaalassa päiviä sen jälkeen, kun härkähai oli raadellut häntä Sydneyn satamassa. Se oli yksi neljästä kahden päivän aikana kirjatusta hyökkäyksestä, joiden jälkeen viranomaiset sulkivat kymmeniä kaupungin rantoja.\\n\\nMarraskuussa hai tappoi naisen ja haavoitti vakavasti miestä kansallispuiston rannalla Australian itärannikolla. Rottnest Islandin edellinen kuolemaan johtanut hain hyökkäys oli vuonna 2011, jolloin 32-vuotias sukeltaja kuoli. Australia on kirjannut viime vuosikymmeninä keskimäärin yli kolme kuolemaan johtanutta hain hyökkäystä vuodessa.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Australia\",\n    \"Queensland\",\n    \"haihyökkäys\",\n    \"Cassowary Coast\",\n    \"Rottnest Island\"\n  ],\n  \"summary_bullets\": [\n    \"39-vuotias mies kuoli hain hyökkäyksessä Queenslandin Cassowary Coastin edustalla.\",\n    \"Poliisin mukaan mies oli uimassa läheisellä matalikolla ja hänet saatiin vedestä, mutta hän menehtyi vammoihinsa.\",\n    \"Tapaus on toinen kuolemaan johtanut hain hyökkäys Australian rannikkovesillä kahden viikon sisällä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.94,\n  \"journalist_note\": \"Artikkeli perustuu paketissa vahvistettuihin poliisi- ja viranomaistietoihin. Hain lajia Queenslandin tapauksessa, uhrin henkilöllisyyttä tai mahdollisia rajoituksia Cassowary Coastin ranta-alueilla ei ole vahvistettu, joten niitä ei lisätty.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260524T073130Z_c91ceee436",
+    "category": "Kotimaa",
+    "selected_source_words": 396,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 270,
+    "issues": [
+      "lead paragraph too short: 29 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Mies kuoli hain hyökkäyksessä Queenslandin rannikolla Australiassa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-24T07:35:04.656475+00:00",
+    "repair_trigger": "pre_repair_word_count=290; selected_source_words=396; selected_source_blocks=4",
+    "pre_repair_word_count": 290,
+    "pre_repair_lead_word_count": 29,
+    "post_repair_word_count": 270,
+    "post_repair_lead_word_count": 29,
+    "selected_source_words_at_repair": 396,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 396,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "quality_gate_rejected",
+    "repair_rejection_reason": "lead paragraph too short: 29 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:c51b32f1cc",
+      "2:BBC World:5da2a940ba",
+      "3:CBS News:ab26806ecb",
+      "4:CBS News:7ce5157685"
+    ],
+    "final_issues": [
+      "lead paragraph too short: 29 words"
+    ],
+    "recovered": false
+  }
+}

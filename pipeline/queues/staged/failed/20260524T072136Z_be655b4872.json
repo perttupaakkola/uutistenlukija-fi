@@ -1,0 +1,199 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T07:21:37.005450+00:00",
+  "digest": "be655b4872",
+  "packet": {
+    "packet_id": "20260524T072136Z_be655b4872",
+    "created_at": "2026-05-24T07:21:36Z",
+    "headline_seed": "Four dead and dozens injured in wave of Russian strikes on Kyiv",
+    "description_seed": "More than 50 people have been injured, including three children, with damage reported across Kyiv and nearby areas.",
+    "link": "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Guardian",
+      "The Guardian"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Four dead and dozens injured in wave of Russian strikes on Kyiv"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Four people have been killed and more than 50 others injured in a large wave of Russian missile and drone strikes on Kyiv. Explosions were heard across the city and its surrounding areas overnight into Sunday. Kyiv Mayor Vitali ⁠Klitschko said \"it was a terrible night\", with damage reported in all of the capital's districts, including to residential buildings and schools. Three children are among the injured, with rescue work under way. The strikes follow Russian President Vladimir Putin's vow to retaliate after accusing Ukraine of carrying out a deadly attack on a student dormitory in the town of Starobilsk on Friday in which 18 people were killed.",
+        "word_count": 108,
+        "keyword_overlap": 19,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "More than 50 people have been injured, including three children, with damage reported across Kyiv and nearby areas.",
+        "word_count": 18,
+        "keyword_overlap": 16,
+        "strong_overlap": 8
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Wave of almost 600 drones launched across 14 regions, after Moscow’s deadly three-day attack on Ukraine last week One of Ukraine’s largest ever drone strikes against Russia’s regions, including Moscow, has killed at least four people and wounded a dozen more, the Russian authorities have said. The wave of almost 600 Ukrainian drones struck overnight across 14 Russian regions, as well as the Crimean peninsula and the Black and Azov seas, the Russian defence ministry said on Sunday, with the area around the capital among the worst-hit. Three people were killed in the Moscow region and one in the Belgorod region, the authorities said, as Russian air defences shot down 556 drones overnight and neutralised another 30 after dawn.",
+        "word_count": 119,
+        "keyword_overlap": 11,
+        "strong_overlap": 5
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Ukraine’s president, Volodymyr Zelenskyy, confirmed the strikes, saying drones had flown more than 500km (310 miles) from Ukrainian territory and that Ukraine was “overcoming” Russian air defence systems concentrated in and around Moscow. “Our responses to Russia’s prolongation of the war and attacks on our cities and communities are entirely justified,” he said, adding that the strikes on Moscow showed Kyiv was “clearly telling the Russians: their state must end its war”. Zelenskyy said last week that more drone strikes would be launched in retaliation for a deadly three-day Russian attack across Ukraine that killed more than 20 people and injured about 50 others. Russia has repeatedly launched similar attacks on Ukraine’s capital and other cities during the war.",
+        "word_count": 119,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Four people have been killed and more than 50 others injured in a large wave of Russian missile and drone strikes on Kyiv. Explosions were heard across the city and its surrounding areas overnight into Sunday. Kyiv Mayor Vitali ⁠Klitschko said \"it was a terrible night\", with damage reported in all of the capital's districts, including to residential buildings and schools. Three children are among the injured, with rescue work under way. The strikes follow Russian President Vladimir Putin's vow to retaliate after accusing Ukraine of carrying out a deadly attack on a student dormitory in the town of Starobilsk on Friday in which 18 people were killed.\n\nMore than 50 people have been injured, including three children, with damage reported across Kyiv and nearby areas.\n\nWave of almost 600 drones launched across 14 regions, after Moscow’s deadly three-day attack on Ukraine last week One of Ukraine’s largest ever drone strikes against Russia’s regions, including Moscow, has killed at least four people and wounded a dozen more, the Russian authorities have said. The wave of almost 600 Ukrainian drones struck overnight across 14 Russian regions, as well as the Crimean peninsula and the Black and Azov seas, the Russian defence ministry said on Sunday, with the area around the capital among the worst-hit. Three people were killed in the Moscow region and one in the Belgorod region, the authorities said, as Russian air defences shot down 556 drones overnight and neutralised another 30 after dawn.\n\nUkraine’s president, Volodymyr Zelenskyy, confirmed the strikes, saying drones had flown more than 500km (310 miles) from Ukrainian territory and that Ukraine was “overcoming” Russian air defence systems concentrated in and around Moscow. “Our responses to Russia’s prolongation of the war and attacks on our cities and communities are entirely justified,” he said, adding that the strikes on Moscow showed Kyiv was “clearly telling the Russians: their state must end its war”. Zelenskyy said last week that more drone strikes would be launched in retaliation for a deadly three-day Russian attack across Ukraine that killed more than 20 people and injured about 50 others. Russia has repeatedly launched similar attacks on Ukraine’s capital and other cities during the war.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 961,
+      "selected_blocks": 4,
+      "selected_source_words": 364,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "CBS News",
+        "CBS News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Four dead and dozens injured in wave of Russian strikes on Kyiv",
+      "description": "More than 50 people have been injured, including three children, with damage reported across Kyiv and nearby areas.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Four dead and dozens injured in wave of Russian strikes on Kyiv",
+    "description": "More than 50 people have been injured, including three children, with damage reported across Kyiv and nearby areas.",
+    "link": "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-24T07:17:44+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "8d9b3509857f7b99854a1b1dc1fbf724",
+    "_url_hash": "0755fd927b04a9e3e9f831621234c5b5f4a931435a4af5538ac2e8052dff9a0b",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFour people have been killed and more than 50 others injured in a large wave of Russian missile and drone strikes on Kyiv.\n\nExplosions were heard across the city and its surrounding areas overnight into Sunday. Kyiv Mayor Vitali ⁠Klitschko said \"it was a terrible night\", with damage reported in all of the capital's districts, including to residential buildings and schools.\n\nThree children are among the injured, with rescue work under way.\n\nThe strikes follow Russian President Vladimir Putin's vow to retaliate after accusing Ukraine of carrying out a deadly attack on a student dormitory in the town of Starobilsk on Friday in which 18 people were killed.\n\nThe general staff of Ukraine's armed forces said it did carry out an attack near Starobilsk in Russian-occupied eastern Ukraine overnight on Friday, but maintained that it struck an elite Russian military unit.\n\nRussia's overnight strikes on Sunday came after Ukrainian President Volodymyr Zelensky warned there were signs that Russia was preparing \"a combined strike on Ukrainian territory\".\n\nHe cited intelligence from Ukraine, Europe and the US suggesting Russia could be planning to use the Oreshnik missile, which reportedly travels more than 10 times the speed of sound and is currently impossible to intercept.\n\nThere has not yet been any confirmation of Russia using the missile in its latest bombardment.\n\nThe attack hit more than 40 locations across Kyiv, with falling debris causing fires in residential buildings, warehouses, a supermarket and a shopping centre, Klitschko said.\n\n\"The capital has been subjected to a massive ballistic attack. Further launches are possible,\" Tymur Tkachenko, head of the Kyiv's military administration wrote on Telegram shortly after midnight.\n\nA person was killed after a nine-storey residential building in the central Shevchenko district was hit and a fire broke out on the top floors.\n\nThe same district, a strike near an air raid shelter at a school blocked its entrance with debris, trapping several people inside.\n\nEmergency services rushed to multiple scenes of damage across the city, putting out blazes, clearing debris and treating the injured.\n\nIn the Kyiv region surrounding the capital, two people were also killed, according to regional head Mykola Kalashnyk.\n\nHe described the attack as \"deliberate terror against peaceful people\", adding that \"emergency services are working in all places\".\n\n---\n\n[Lähde: The Guardian]\nWave of almost 600 drones launched across 14 regions, after Moscow’s deadly three-day attack on Ukraine last week\n\nOne of Ukraine’s largest ever drone strikes against Russia’s regions, including Moscow, has killed at least four people and wounded a dozen more, the Russian authorities have said.\n\nThe wave of almost 600 Ukrainian drones struck overnight across 14 Russian regions, as well as the Crimean peninsula and the Black and Azov seas, the Russian defence ministry said on Sunday, with the area around the capital among the worst-hit.\n\nThree people were killed in the Moscow region and one in the Belgorod region, the authorities said, as Russian air defences shot down 556 drones overnight and neutralised another 30 after dawn.\n\nUkraine’s president, Volodymyr Zelenskyy, confirmed the strikes, saying drones had flown more than 500km (310 miles) from Ukrainian territory and that Ukraine was “overcoming” Russian air defence systems concentrated in and around Moscow.\n\n“Our responses to Russia’s prolongation of the war and attacks on our cities and communities are entirely justified,” he said, adding that the strikes on Moscow showed Kyiv was “clearly telling the Russians: their state must end its war”.\n\nZelenskyy said last week that more drone strikes would be launched in retaliation for a deadly three-day Russian attack across Ukraine that killed more than 20 people and injured about 50 others. Russia has repeatedly launched similar attacks on Ukraine’s capital and other cities during the war.\n\nMoscow’s regional governor, Andrei Vorobyov, said a woman had been killed when a home was hit in Khimki, north of Moscow, in what he described as a “massive” strike on the region, which surrounds but does not include the capital.\n\nVorobyov said rescuers were still searching the debris for another person. Two men had also been killed in the village of Pogorelki, six miles north of Moscow, after drone debris fell on a construction site, he added, and several residential high-rises and “infrastructure facilities” were damaged.\n\n“Since 3am this morning, air defence forces have been repelling a large-scale UAV [unmanned aerial vehicle] attack on the capital region,” Vorobyov said, adding that four people had also been wounded. India’s embassy in Moscow said one of its nationals was among the dead.\n\nIn the capital itself, air defence systems intercepted more than 80 drones overnight, the city’s mayor, Sergei Sobyanin, posted on social media. Twelve people were wounded and “mi\n\n---\n\n[Lähde: CBS News]\nOne of Ukraine's largest drone strikes on Russia killed at least four people, including three near Moscow, and wounded a dozen others, local authorities said Sunday. Debris fell on Russia's largest airport without causing damage.\n\nUkrainian President Volodymyr Zelenskyy confirmed the drone strikes, saying that they were \"entirely justified.\" Russia has repeatedly launched similar attacks on Ukraine's capital and other cities during the war, and an expert said that the strikes appeared to be retaliation for recent Russian attacks on Kyiv.\n\nRussian drone strikes on Ukraine overnight wounded eight people, Ukrainian authorities said.\n\nIn Ukraine's strikes on Russia, a woman was killed after a drone hit her home in Khimki, a Russian city just northwest of Moscow, and two men died in the village of Pogorelki, which is about six miles north of the capital, according to local Gov. Andrei Vorobyev.\n\nUkrainian drones had also damaged unspecified \"infrastructure\" and several high-rise buildings, Vorobyev said on social media.\n\nOne man was also killed after a drone struck a truck i...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-24T07:24:27.541674+00:00",
+  "payload": {
+    "packet_id": "20260524T072136Z_be655b4872",
+    "title": "Neljä kuoli ja yli 50 loukkaantui Venäjän iskuissa Kiovaan",
+    "summary": "Kiovaan kohdistui yön aikana laaja Venäjän ohjus- ja lennokki-isku, jossa kuoli neljä ihmistä ja loukkaantui yli 50. Loukkaantuneiden joukossa on kolme lasta.",
+    "content": "Neljä ihmistä on kuollut ja yli 50 loukkaantunut Venäjän laajassa ohjus- ja lennokki-iskussa Kiovaan. Räjähdyksiä kuultiin Ukrainan pääkaupungissa ja sen lähialueilla yön aikana sunnuntaita vasten, ja vahinkoja raportoitiin eri puolilta kaupunkia. Loukkaantuneiden joukossa on kolme lasta, ja pelastustyöt olivat yhä käynnissä iskujen jälkeen.\n\n## Vahinkoja raportoitiin koko pääkaupungissa\n\nKiovan pormestari Vitali Klitshko kuvasi yötä erittäin raskaaksi. Hänen mukaansa vahinkoja raportoitiin kaikissa pääkaupungin kaupunginosissa. Vaurioita kerrottiin syntyneen muun muassa asuinrakennuksiin ja kouluihin.\n\nTietojen mukaan hyökkäyksessä käytettiin sekä ohjuksia että lennokkeja. Useita räjähdyksiä kuultiin yön aikana Kiovassa ja sitä ympäröivillä alueilla, mikä kertoo hyökkäyksen laajuudesta pääkaupunkiseudulla.\n\nViranomaisten ilmoittama uhriluku voi vielä tarkentua, koska pelastustyöt jatkuivat iskujen jälkeen. Tämänhetkisten tietojen mukaan kuolleita on neljä ja loukkaantuneita yli 50, mukaan lukien kolme lasta.\n\n## Iskut liittyvät laajempaan vastatoimien kierteeseen\n\nIskut tapahtuivat sen jälkeen, kun Venäjän presidentti Vladimir Putin oli luvannut vastatoimia. Venäjä oli syyttänyt Ukrainaa perjantaisesta iskusta Starobilskin kaupungissa sijaitsevaan opiskelija-asuntolaan. Venäjän mukaan tuossa iskussa kuoli 18 ihmistä.\n\nSamaan aikaan Venäjän viranomaiset ovat kertoneet laajasta Ukrainan lennokki-iskusta Venäjän alueille. Venäjän puolustusministeriön mukaan lähes 600 ukrainalaista lennokkia lähetettiin yön aikana 14 alueelle sekä Krimin niemimaalle, Mustallemerelle ja Asovanmerelle. Viranomaisten mukaan kolme ihmistä kuoli Moskovan alueella ja yksi Belgorodin alueella.\n\nVenäjän mukaan sen ilmapuolustus ampui yön aikana alas 556 lennokkia ja neutraloi vielä 30 aamunkoiton jälkeen. Venäjän viranomaisten mukaan Ukrainan lennokki-iskuissa haavoittui lisäksi toistakymmentä ihmistä.\n\n## Zelenskyi puolusti iskuja Venäjän alueelle\n\nUkrainan presidentti Volodymyr Zelenskyi vahvisti iskut Venäjän alueelle. Hänen mukaansa lennokit lensivät yli 500 kilometrin matkan Ukrainan alueelta ja Ukraina pystyi läpäisemään Venäjän ilmapuolustusta, jota oli keskitetty Moskovan ympärille.\n\nZelenskyin mukaan Ukrainan vastaukset Venäjän sodan jatkamiseen ja iskuihin Ukrainan kaupunkeihin ja yhteisöihin ovat oikeutettuja. Hän sanoi viime viikolla, että uusia lennokki-iskuja tehtäisiin vastauksena Venäjän kolmipäiväiseen hyökkäykseen Ukrainassa. Tuossa hyökkäyksessä kuoli yli 20 ihmistä ja loukkaantui noin 50.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Ukraina",
+      "Kiova",
+      "Venäjä",
+      "sota",
+      "ohjusiskut",
+      "lennokki-iskut"
+    ],
+    "summary_bullets": [
+      "Neljä ihmistä kuoli ja yli 50 loukkaantui Venäjän iskuissa Kiovaan.",
+      "Loukkaantuneiden joukossa on kolme lasta, ja vahinkoja raportoitiin eri puolilta kaupunkia.",
+      "Iskut tapahtuivat kiristyneessä tilanteessa, jossa myös Venäjän alueille on tehty laajoja lennokki-iskuja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.94,
+    "journalist_note": "Lähdeaineisto tukee pääuutista Kiovan iskuista sekä taustaa Venäjän ja Ukrainan vastavuoroisista iskuista. Kategoria korjattu ulkomaanuutiseksi, koska tapahtuma koskee Ukrainaa ja Venäjää."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T072136Z_be655b4872\",\"title\":\"Neljä kuoli ja yli 50 loukkaantui Venäjän iskuissa Kiovaan\",\"summary\":\"Kiovaan kohdistui yön aikana laaja Venäjän ohjus- ja lennokki-isku, jossa kuoli neljä ihmistä ja loukkaantui yli 50. Loukkaantuneiden joukossa on kolme lasta.\",\"content\":\"Neljä ihmistä on kuollut ja yli 50 loukkaantunut Venäjän laajassa ohjus- ja lennokki-iskussa Kiovaan. Räjähdyksiä kuultiin Ukrainan pääkaupungissa ja sen lähialueilla yön aikana sunnuntaita vasten, ja vahinkoja raportoitiin eri puolilta kaupunkia. Loukkaantuneiden joukossa on kolme lasta, ja pelastustyöt olivat yhä käynnissä iskujen jälkeen.\\n\\n## Vahinkoja raportoitiin koko pääkaupungissa\\n\\nKiovan pormestari Vitali Klitshko kuvasi yötä erittäin raskaaksi. Hänen mukaansa vahinkoja raportoitiin kaikissa pääkaupungin kaupunginosissa. Vaurioita kerrottiin syntyneen muun muassa asuinrakennuksiin ja kouluihin.\\n\\nTietojen mukaan hyökkäyksessä käytettiin sekä ohjuksia että lennokkeja. Useita räjähdyksiä kuultiin yön aikana Kiovassa ja sitä ympäröivillä alueilla, mikä kertoo hyökkäyksen laajuudesta pääkaupunkiseudulla.\\n\\nViranomaisten ilmoittama uhriluku voi vielä tarkentua, koska pelastustyöt jatkuivat iskujen jälkeen. Tämänhetkisten tietojen mukaan kuolleita on neljä ja loukkaantuneita yli 50, mukaan lukien kolme lasta.\\n\\n## Iskut liittyvät laajempaan vastatoimien kierteeseen\\n\\nIskut tapahtuivat sen jälkeen, kun Venäjän presidentti Vladimir Putin oli luvannut vastatoimia. Venäjä oli syyttänyt Ukrainaa perjantaisesta iskusta Starobilskin kaupungissa sijaitsevaan opiskelija-asuntolaan. Venäjän mukaan tuossa iskussa kuoli 18 ihmistä.\\n\\nSamaan aikaan Venäjän viranomaiset ovat kertoneet laajasta Ukrainan lennokki-iskusta Venäjän alueille. Venäjän puolustusministeriön mukaan lähes 600 ukrainalaista lennokkia lähetettiin yön aikana 14 alueelle sekä Krimin niemimaalle, Mustallemerelle ja Asovanmerelle. Viranomaisten mukaan kolme ihmistä kuoli Moskovan alueella ja yksi Belgorodin alueella.\\n\\nVenäjän mukaan sen ilmapuolustus ampui yön aikana alas 556 lennokkia ja neutraloi vielä 30 aamunkoiton jälkeen. Venäjän viranomaisten mukaan Ukrainan lennokki-iskuissa haavoittui lisäksi toistakymmentä ihmistä.\\n\\n## Zelenskyi puolusti iskuja Venäjän alueelle\\n\\nUkrainan presidentti Volodymyr Zelenskyi vahvisti iskut Venäjän alueelle. Hänen mukaansa lennokit lensivät yli 500 kilometrin matkan Ukrainan alueelta ja Ukraina pystyi läpäisemään Venäjän ilmapuolustusta, jota oli keskitetty Moskovan ympärille.\\n\\nZelenskyin mukaan Ukrainan vastaukset Venäjän sodan jatkamiseen ja iskuihin Ukrainan kaupunkeihin ja yhteisöihin ovat oikeutettuja. Hän sanoi viime viikolla, että uusia lennokki-iskuja tehtäisiin vastauksena Venäjän kolmipäiväiseen hyökkäykseen Ukrainassa. Tuossa hyökkäyksessä kuoli yli 20 ihmistä ja loukkaantui noin 50.\",\"category\":\"Ulkomaat\",\"tags\":[\"Ukraina\",\"Kiova\",\"Venäjä\",\"sota\",\"ohjusiskut\",\"lennokki-iskut\"],\"summary_bullets\":[\"Neljä ihmistä kuoli ja yli 50 loukkaantui Venäjän iskuissa Kiovaan.\",\"Loukkaantuneiden joukossa on kolme lasta, ja vahinkoja raportoitiin eri puolilta kaupunkia.\",\"Iskut tapahtuivat kiristyneessä tilanteessa, jossa myös Venäjän alueille on tehty laajoja lennokki-iskuja.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.94,\"journalist_note\":\"Lähdeaineisto tukee pääuutista Kiovan iskuista sekä taustaa Venäjän ja Ukrainan vastavuoroisista iskuista. Kategoria korjattu ulkomaanuutiseksi, koska tapahtuma koskee Ukrainaa ja Venäjää.\"}",
+  "article": {
+    "title": "Neljä kuoli ja yli 50 loukkaantui Venäjän iskuissa Kiovaan",
+    "description": "Kiovaan kohdistui yön aikana laaja Venäjän ohjus- ja lennokki-isku, jossa kuoli neljä ihmistä ja loukkaantui yli 50. Loukkaantuneiden joukossa on kolme lasta.",
+    "link": "https://www.bbc.com/news/articles/clyp6831yp5o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-24T07:17:44+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "8d9b3509857f7b99854a1b1dc1fbf724",
+    "_url_hash": "0755fd927b04a9e3e9f831621234c5b5f4a931435a4af5538ac2e8052dff9a0b",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFour people have been killed and more than 50 others injured in a large wave of Russian missile and drone strikes on Kyiv.\n\nExplosions were heard across the city and its surrounding areas overnight into Sunday. Kyiv Mayor Vitali ⁠Klitschko said \"it was a terrible night\", with damage reported in all of the capital's districts, including to residential buildings and schools.\n\nThree children are among the injured, with rescue work under way.\n\nThe strikes follow Russian President Vladimir Putin's vow to retaliate after accusing Ukraine of carrying out a deadly attack on a student dormitory in the town of Starobilsk on Friday in which 18 people were killed.\n\nThe general staff of Ukraine's armed forces said it did carry out an attack near Starobilsk in Russian-occupied eastern Ukraine overnight on Friday, but maintained that it struck an elite Russian military unit.\n\nRussia's overnight strikes on Sunday came after Ukrainian President Volodymyr Zelensky warned there were signs that Russia was preparing \"a combined strike on Ukrainian territory\".\n\nHe cited intelligence from Ukraine, Europe and the US suggesting Russia could be planning to use the Oreshnik missile, which reportedly travels more than 10 times the speed of sound and is currently impossible to intercept.\n\nThere has not yet been any confirmation of Russia using the missile in its latest bombardment.\n\nThe attack hit more than 40 locations across Kyiv, with falling debris causing fires in residential buildings, warehouses, a supermarket and a shopping centre, Klitschko said.\n\n\"The capital has been subjected to a massive ballistic attack. Further launches are possible,\" Tymur Tkachenko, head of the Kyiv's military administration wrote on Telegram shortly after midnight.\n\nA person was killed after a nine-storey residential building in the central Shevchenko district was hit and a fire broke out on the top floors.\n\nThe same district, a strike near an air raid shelter at a school blocked its entrance with debris, trapping several people inside.\n\nEmergency services rushed to multiple scenes of damage across the city, putting out blazes, clearing debris and treating the injured.\n\nIn the Kyiv region surrounding the capital, two people were also killed, according to regional head Mykola Kalashnyk.\n\nHe described the attack as \"deliberate terror against peaceful people\", adding that \"emergency services are working in all places\".\n\n---\n\n[Lähde: The Guardian]\nWave of almost 600 drones launched across 14 regions, after Moscow’s deadly three-day attack on Ukraine last week\n\nOne of Ukraine’s largest ever drone strikes against Russia’s regions, including Moscow, has killed at least four people and wounded a dozen more, the Russian authorities have said.\n\nThe wave of almost 600 Ukrainian drones struck overnight across 14 Russian regions, as well as the Crimean peninsula and the Black and Azov seas, the Russian defence ministry said on Sunday, with the area around the capital among the worst-hit.\n\nThree people were killed in the Moscow region and one in the Belgorod region, the authorities said, as Russian air defences shot down 556 drones overnight and neutralised another 30 after dawn.\n\nUkraine’s president, Volodymyr Zelenskyy, confirmed the strikes, saying drones had flown more than 500km (310 miles) from Ukrainian territory and that Ukraine was “overcoming” Russian air defence systems concentrated in and around Moscow.\n\n“Our responses to Russia’s prolongation of the war and attacks on our cities and communities are entirely justified,” he said, adding that the strikes on Moscow showed Kyiv was “clearly telling the Russians: their state must end its war”.\n\nZelenskyy said last week that more drone strikes would be launched in retaliation for a deadly three-day Russian attack across Ukraine that killed more than 20 people and injured about 50 others. Russia has repeatedly launched similar attacks on Ukraine’s capital and other cities during the war.\n\nMoscow’s regional governor, Andrei Vorobyov, said a woman had been killed when a home was hit in Khimki, north of Moscow, in what he described as a “massive” strike on the region, which surrounds but does not include the capital.\n\nVorobyov said rescuers were still searching the debris for another person. Two men had also been killed in the village of Pogorelki, six miles north of Moscow, after drone debris fell on a construction site, he added, and several residential high-rises and “infrastructure facilities” were damaged.\n\n“Since 3am this morning, air defence forces have been repelling a large-scale UAV [unmanned aerial vehicle] attack on the capital region,” Vorobyov said, adding that four people had also been wounded. India’s embassy in Moscow said one of its nationals was among the dead.\n\nIn the capital itself, air defence systems intercepted more than 80 drones overnight, the city’s mayor, Sergei Sobyanin, posted on social media. Twelve people were wounded and “mi\n\n---\n\n[Lähde: CBS News]\nOne of Ukraine's largest drone strikes on Russia killed at least four people, including three near Moscow, and wounded a dozen others, local authorities said Sunday. Debris fell on Russia's largest airport without causing damage.\n\nUkrainian President Volodymyr Zelenskyy confirmed the drone strikes, saying that they were \"entirely justified.\" Russia has repeatedly launched similar attacks on Ukraine's capital and other cities during the war, and an expert said that the strikes appeared to be retaliation for recent Russian attacks on Kyiv.\n\nRussian drone strikes on Ukraine overnight wounded eight people, Ukrainian authorities said.\n\nIn Ukraine's strikes on Russia, a woman was killed after a drone hit her home in Khimki, a Russian city just northwest of Moscow, and two men died in the village of Pogorelki, which is about six miles north of the capital, according to local Gov. Andrei Vorobyev.\n\nUkrainian drones had also damaged unspecified \"infrastructure\" and several high-rise buildings, Vorobyev said on social media.\n\nOne man was also killed after a drone struck a truck i...",
+    "research_source": "multi",
+    "summary": "Kiovaan kohdistui yön aikana laaja Venäjän ohjus- ja lennokki-isku, jossa kuoli neljä ihmistä ja loukkaantui yli 50. Loukkaantuneiden joukossa on kolme lasta.",
+    "content": "Neljä ihmistä on kuollut ja yli 50 loukkaantunut Venäjän laajassa ohjus- ja lennokki-iskussa Kiovaan. Räjähdyksiä kuultiin Ukrainan pääkaupungissa ja sen lähialueilla yön aikana sunnuntaita vasten, ja vahinkoja raportoitiin eri puolilta kaupunkia. Loukkaantuneiden joukossa on kolme lasta, ja pelastustyöt olivat yhä käynnissä iskujen jälkeen.\n\n## Vahinkoja raportoitiin koko pääkaupungissa\n\nKiovan pormestari Vitali Klitshko kuvasi yötä erittäin raskaaksi. Hänen mukaansa vahinkoja raportoitiin kaikissa pääkaupungin kaupunginosissa. Vaurioita kerrottiin syntyneen muun muassa asuinrakennuksiin ja kouluihin.\n\nTietojen mukaan hyökkäyksessä käytettiin sekä ohjuksia että lennokkeja. Useita räjähdyksiä kuultiin yön aikana Kiovassa ja sitä ympäröivillä alueilla, mikä kertoo hyökkäyksen laajuudesta pääkaupunkiseudulla.\n\nViranomaisten ilmoittama uhriluku voi vielä tarkentua, koska pelastustyöt jatkuivat iskujen jälkeen. Tämänhetkisten tietojen mukaan kuolleita on neljä ja loukkaantuneita yli 50, mukaan lukien kolme lasta.\n\n## Iskut liittyvät laajempaan vastatoimien kierteeseen\n\nIskut tapahtuivat sen jälkeen, kun Venäjän presidentti Vladimir Putin oli luvannut vastatoimia. Venäjä oli syyttänyt Ukrainaa perjantaisesta iskusta Starobilskin kaupungissa sijaitsevaan opiskelija-asuntolaan. Venäjän mukaan tuossa iskussa kuoli 18 ihmistä.\n\nSamaan aikaan Venäjän viranomaiset ovat kertoneet laajasta Ukrainan lennokki-iskusta Venäjän alueille. Venäjän puolustusministeriön mukaan lähes 600 ukrainalaista lennokkia lähetettiin yön aikana 14 alueelle sekä Krimin niemimaalle, Mustallemerelle ja Asovanmerelle. Viranomaisten mukaan kolme ihmistä kuoli Moskovan alueella ja yksi Belgorodin alueella.\n\nVenäjän mukaan sen ilmapuolustus ampui yön aikana alas 556 lennokkia ja neutraloi vielä 30 aamunkoiton jälkeen. Venäjän viranomaisten mukaan Ukrainan lennokki-iskuissa haavoittui lisäksi toistakymmentä ihmistä.\n\n## Zelenskyi puolusti iskuja Venäjän alueelle\n\nUkrainan presidentti Volodymyr Zelenskyi vahvisti iskut Venäjän alueelle. Hänen mukaansa lennokit lensivät yli 500 kilometrin matkan Ukrainan alueelta ja Ukraina pystyi läpäisemään Venäjän ilmapuolustusta, jota oli keskitetty Moskovan ympärille.\n\nZelenskyin mukaan Ukrainan vastaukset Venäjän sodan jatkamiseen ja iskuihin Ukrainan kaupunkeihin ja yhteisöihin ovat oikeutettuja. Hän sanoi viime viikolla, että uusia lennokki-iskuja tehtäisiin vastauksena Venäjän kolmipäiväiseen hyökkäykseen Ukrainassa. Tuossa hyökkäyksessä kuoli yli 20 ihmistä ja loukkaantui noin 50.",
+    "category": "Kotimaa",
+    "tags": [
+      "ukraina",
+      "kiova",
+      "venäjä",
+      "sota",
+      "ohjusiskut"
+    ],
+    "summary_bullets": [
+      "Neljä ihmistä kuoli ja yli 50 loukkaantui Venäjän iskuissa Kiovaan.",
+      "Loukkaantuneiden joukossa on kolme lasta, ja vahinkoja raportoitiin eri puolilta kaupunkia.",
+      "Iskut tapahtuivat kiristyneessä tilanteessa, jossa myös Venäjän alueille on tehty laajoja lennokki-iskuja."
+    ],
+    "key_points": [
+      "Neljä ihmistä kuoli ja yli 50 loukkaantui Venäjän iskuissa Kiovaan.",
+      "Loukkaantuneiden joukossa on kolme lasta, ja vahinkoja raportoitiin eri puolilta kaupunkia.",
+      "Iskut tapahtuivat kiristyneessä tilanteessa, jossa myös Venäjän alueille on tehty laajoja lennokki-iskuja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Lähdeaineisto tukee pääuutista Kiovan iskuista sekä taustaa Venäjän ja Ukrainan vastavuoroisista iskuista. Kategoria korjattu ulkomaanuutiseksi, koska tapahtuma koskee Ukrainaa ja Venäjää.",
+    "source_text": "Four people have been killed and more than 50 others injured in a large wave of Russian missile and drone strikes on Kyiv. Explosions were heard across the city and its surrounding areas overnight into Sunday. Kyiv Mayor Vitali ⁠Klitschko said \"it was a terrible night\", with damage reported in all of the capital's districts, including to residential buildings and schools. Three children are among the injured, with rescue work under way. The strikes follow Russian President Vladimir Putin's vow to retaliate after accusing Ukraine of carrying out a deadly attack on a student dormitory in the town of Starobilsk on Friday in which 18 people were killed.\n\nMore than 50 people have been injured, including three children, with damage reported across Kyiv and nearby areas.\n\nWave of almost 600 drones launched across 14 regions, after Moscow’s deadly three-day attack on Ukraine last week One of Ukraine’s largest ever drone strikes against Russia’s regions, including Moscow, has killed at least four people and wounded a dozen more, the Russian authorities have said. The wave of almost 600 Ukrainian drones struck overnight across 14 Russian regions, as well as the Crimean peninsula and the Black and Azov seas, the Russian defence ministry said on Sunday, with the area around the capital among the worst-hit. Three people were killed in the Moscow region and one in the Belgorod region, the authorities said, as Russian air defences shot down 556 drones overnight and neutralised another 30 after dawn.\n\nUkraine’s president, Volodymyr Zelenskyy, confirmed the strikes, saying drones had flown more than 500km (310 miles) from Ukrainian territory and that Ukraine was “overcoming” Russian air defence systems concentrated in and around Moscow. “Our responses to Russia’s prolongation of the war and attacks on our cities and communities are entirely justified,” he said, adding that the strikes on Moscow showed Kyiv was “clearly telling the Russians: their state must end its war”. Zelenskyy said last week that more drone strikes would be launched in retaliation for a deadly three-day Russian attack across Ukraine that killed more than 20 people and injured about 50 others. Russia has repeatedly launched similar attacks on Ukraine’s capital and other cities during the war.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.94,
+    "degraded_mode": false,
+    "monica_packet_id": "20260524T072136Z_be655b4872"
+  },
+  "duplicate_rejected_at": "2026-05-24T07:28:01.601282+00:00",
+  "duplicate_rejected": true
+}
