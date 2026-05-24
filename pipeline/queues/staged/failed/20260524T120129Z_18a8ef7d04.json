@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T12:01:29.186360+00:00",
+  "digest": "18a8ef7d04",
+  "packet": {
+    "packet_id": "20260524T120129Z_18a8ef7d04",
+    "created_at": "2026-05-24T12:01:29Z",
+    "headline_seed": "People trapped under collapsed building in Philippines",
+    "description_seed": "A search operation has so far rescued 24 people with no deaths reported at the site, in a city near the capital Manila.",
+    "link": "https://www.bbc.com/news/articles/cgqpklv42jeo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "ABC (Australian Broadcasting Corporation)",
+      "BBC World",
+      "The Mirror"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cgqpklv42jeo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "People trapped under collapsed building in Philippines"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Around 20 people are feared to still be trapped under the rubble of a building that collapsed early on Sunday morning in a city near the Philippine capital, Manila. A search operation has so far rescued 24 people from the site in Angeles and two from a nearby hotel that was struck by falling debris, with no deaths reported. The nine-storey building had still been under construction when it suddenly gave way around 03:00 local time on Sunday (19:00 GMT on Saturday). Officials are now investigating the cause of the collapse. Many of those trapped are thought to be construction workers who were unable to escape in time. Images from the scene show a mangled heap of scaffolding and concrete splaying out onto the street, covered by green safety netting.",
+        "word_count": 130,
+        "keyword_overlap": 16,
+        "strong_overlap": 11
+      },
+      {
+        "source": "ABC (Australian Broadcasting Corporation)",
+        "source_type": "research",
+        "text": "Topic:Disasters, Accidents and Emergency Incidents Workers survey the collapsed building in Angeles City. (Facebook: Angeles City Information Office) Twenty-three people are feared to be trapped under rubble after a building collapsed in the Philippines. Twenty-four people have been rescued since the collapse and no deaths have been reported. Officials say rescuers are in contact with two of those trapped, with the rescue operation ongoing. More than 20 people have been trapped under the rubble of a building under construction in the Philippines that collapsed, officials said, as rescue efforts continued. A nine-storey building under construction collapsed in Angeles City, north of the Philippine capital Manila, early Sunday morning local time.",
+        "word_count": 110,
+        "keyword_overlap": 14,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A search operation has so far rescued 24 people with no deaths reported at the site, in a city near the capital Manila.",
+        "word_count": 23,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "The Mirror",
+        "source_type": "research",
+        "text": "At least 21 people are missing after a nine-story building under construction in the Philippines collapsed on Sunday morning. The building collapsed after a fierce thunderstorm in Angeles City in the country's Pampanga province. Rescuers have been \"hearing voices\" in the rubble, while 24 workers managed to dash to safety or were rescued, police and other officials said. More than 100 police and other government personnel were scrambling to rescue those believed to still be trapped in the rubble, police Brig. Gen. Jess Mendez said. Mendez and other officials at the scene said there were no immediate reports of deaths but some of those who got out safely sustained injuries.",
+        "word_count": 110,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Around 20 people are feared to still be trapped under the rubble of a building that collapsed early on Sunday morning in a city near the Philippine capital, Manila. A search operation has so far rescued 24 people from the site in Angeles and two from a nearby hotel that was struck by falling debris, with no deaths reported. The nine-storey building had still been under construction when it suddenly gave way around 03:00 local time on Sunday (19:00 GMT on Saturday). Officials are now investigating the cause of the collapse. Many of those trapped are thought to be construction workers who were unable to escape in time. Images from the scene show a mangled heap of scaffolding and concrete splaying out onto the street, covered by green safety netting.\n\nTopic:Disasters, Accidents and Emergency Incidents Workers survey the collapsed building in Angeles City. (Facebook: Angeles City Information Office) Twenty-three people are feared to be trapped under rubble after a building collapsed in the Philippines. Twenty-four people have been rescued since the collapse and no deaths have been reported. Officials say rescuers are in contact with two of those trapped, with the rescue operation ongoing. More than 20 people have been trapped under the rubble of a building under construction in the Philippines that collapsed, officials said, as rescue efforts continued. A nine-storey building under construction collapsed in Angeles City, north of the Philippine capital Manila, early Sunday morning local time.\n\nA search operation has so far rescued 24 people with no deaths reported at the site, in a city near the capital Manila.\n\nAt least 21 people are missing after a nine-story building under construction in the Philippines collapsed on Sunday morning. The building collapsed after a fierce thunderstorm in Angeles City in the country's Pampanga province. Rescuers have been \"hearing voices\" in the rubble, while 24 workers managed to dash to safety or were rescued, police and other officials said. More than 100 police and other government personnel were scrambling to rescue those believed to still be trapped in the rubble, police Brig. Gen. Jess Mendez said. Mendez and other officials at the scene said there were no immediate reports of deaths but some of those who got out safely sustained injuries.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 982,
+      "selected_blocks": 4,
+      "selected_source_words": 373,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)",
+        "South China Morning Post",
+        "The Mirror",
+        "The Mirror",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "ABC (Australian Broadcasting Corporation)",
+        "BBC World",
+        "The Mirror"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "People trapped under collapsed building in Philippines",
+      "description": "A search operation has so far rescued 24 people with no deaths reported at the site, in a city near the capital Manila.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "People trapped under collapsed building in Philippines",
+    "description": "A search operation has so far rescued 24 people with no deaths reported at the site, in a city near the capital Manila.",
+    "link": "https://www.bbc.com/news/articles/cgqpklv42jeo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-24T11:51:25+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4c7b2059a8f7edf8afdaf61e65c34f95",
+    "_url_hash": "c108161427db4b16273e68bfe2d99091001bdbeb8097709b91590d10e9fce718",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAround 20 people are feared to still be trapped under the rubble of a building that collapsed early on Sunday morning in a city near the Philippine capital, Manila.\n\nA search operation has so far rescued 24 people from the site in Angeles and two from a nearby hotel that was struck by falling debris, with no deaths reported.\n\nThe nine-storey building had still been under construction when it suddenly gave way around 03:00 local time on Sunday (19:00 GMT on Saturday). Officials are now investigating the cause of the collapse.\n\nMany of those trapped are thought to be construction workers who were unable to escape in time.\n\nImages from the scene show a mangled heap of scaffolding and concrete splaying out onto the street, covered by green safety netting.\n\nCity information officer Jay Pelayo told news agency AFP that the building's walls and scaffolding surrounding it had buckled, likely trapping people in a pile of debris.\n\n\"There are big chunks of concrete, and we need equipment to lift them up,\" he said. \"That is what's challenging for the rescue right now.\"\n\nFive people have been confirmed as trapped, two of whom have been able to make contact with rescue workers, according to Reuters, with more feared to be under the rubble.\n\nAn eyewitness told the Daily Tribune newspaper that she heard a loud rumbling moments before the collapse. She said she briefly lost consciousness, waking up to see debris covering two streets.\n\nAngeles sits around 90km (50 miles) to the north-west of Manila, on Luzon, the largest and most populous island in the Philippines.\n\nConstruction work in the far east Asian nation is frequently beset by poor planning and project management, as well as design errors, research suggests.\n\nA landfill collapse in Cebu in January killed 11 waste workers, with others pulled from under the rubbish.\n\n---\n\n[Lähde: ABC (Australian Broadcasting Corporation)]\nTopic:Disasters, Accidents and Emergency Incidents\n\nWorkers survey the collapsed building in Angeles City. (Facebook: Angeles City Information Office)\n\nTwenty-three people are feared to be trapped under rubble after a building collapsed in the Philippines.\n\nTwenty-four people have been rescued since the collapse and no deaths have been reported.\n\nOfficials say rescuers are in contact with two of those trapped, with the rescue operation ongoing.\n\nMore than 20 people have been trapped under the rubble of a building under construction in the Philippines that collapsed, officials said, as rescue efforts continued.\n\nA nine-storey building under construction collapsed in Angeles City, north of the Philippine capital Manila, early Sunday morning local time.\n\nMaria Leah Sajili, information officer at the regional Bureau of Fire Protection, told a press briefing that five people were confirmed trapped, including two in contact with rescuers, and 18 more were feared under the rubble.\n\n\"We have a figure of 18 workers from the list of construction workers on duty today, but no feedback yet from their families,\" she said.\n\nTwenty-four people have been rescued since the collapse and no deaths have been reported.\n\nAmong those rescued was a 51-year-old Malaysian national who was staying ​in ‌a nearby budget hotel, which was damaged when the concrete structure collapsed.\n\nAmong the rescued was a 51-year-old Malaysian national who was staying in a nearby budget hotel, which was damaged when the concrete structure collapsed, Jay Pelayo, the Angeles city information officer, told Reuters in a phone interview.\n\nHe had earlier told the Manila-based DZBB radio station that 30 to 40 people were feared trapped, based on information from a site foreman who was among those who escaped.\n\nSearch operations are underway for people feared trapped in the rubble. (Facebook: Angeles City Information Office)\n\nOfficials said the cause of the collapse is under investigation, but records showed the building was intended as a nine-storey condo-hotel under the approved permit, but a 10th floor for a pool was being constructed.\n\nMr Pelayo also said rescue efforts could be challenging as the structure was made of concrete, making it difficult to move debris.\n\nPhotos shared by the Angeles City Information Office showed the building reduced to a heap of concrete and twisted metal, covered in green netting.\n\nThe nine-storey building was under construction before it collapsed. (Facebook: Angeles City \n\n---\n\n[Lähde: South China Morning Post]\nThe nine-storey building’s walls and scaffolding buckled, trapping workers in a pile of debris\n\nTwo of those feared trapped were communicating with rescuers on Sunday, said an official in Angeles City, about 80km (50 miles) north of Manila.\n\nCity information officer Jay Pelayo said the nine-storey building’s walls and scaffolding buckled, likely trapping people in a pile of debris.\n\n“Our rescuers are doing their best to pull the survivors out of the rubble,” he said.\n\nRescuers conducting an initial assessment “heard someone crying out in pain” from under the rubble, said Maria Leah Sajili, the Bureau of Fire Protection’s regional spokesperson.\n\nThe building had been under construction for over two years.\n\n---\n\n[Lähde: The Mirror]\nAt least 21 people are missing after a nine-story building under construction in the Philippines collapsed on Sunday morning.\n\nThe building collapsed after a fierce thunderstorm in Angeles City in the country's Pampanga province. Rescuers have been \"hearing voices\" in the rubble, while 24 workers managed to dash to safety or were rescued, police and other officials said.\n\nMore than 100 police and other government personnel were scrambling to rescue those believed to still be trapped in the rubble, police Brig. Gen. Jess Mendez said.\n\nMendez and other officials at the scene said there were no immediate reports of deaths but some of those who got out safely sustained injuries.\n\nMost of the 21 people who remained unaccounted for are believed to be workers at the building, according to Francis Pangilinan, who heads Angeles City's disaster mitigation office and was at the scene.\n\nTwo other people, including a Malaysian tourist, were injured wh...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T12:05:02.938332+00:00",
+  "failure": "content too short: 233 words",
+  "payload": {
+    "packet_id": "20260524T120129Z_18a8ef7d04",
+    "title": "Kymmeniä pelätään olevan raunioissa rakennuksen romahdettua Filippiineillä",
+    "summary": "Rakenteilla ollut yhdeksänkerroksinen rakennus romahti Angeles Cityssä Filippiineillä varhain sunnuntaina. Pelastustyöt jatkuvat, ja viranomaisten mukaan 24 ihmistä on saatu turvaan eikä kuolonuhreista ole raportoitu.",
+    "content": "Rakenteilla ollut yhdeksänkerroksinen rakennus romahti varhain sunnuntaiaamuna Angeles Cityssä Filippiineillä, Manilan pohjoispuolella. Viranomaisten mukaan pelastajat ovat saaneet tähän mennessä turvaan 24 ihmistä, eikä tapahtumapaikalta ole ilmoitettu kuolonuhreja. Raunioihin pelätään silti jääneen vielä noin parikymmentä ihmistä.\n\n## Pelastustyöt jatkuvat raunioissa\n\nRakennus antoi periksi noin kello 3 paikallista aikaa sunnuntaina. Useiden raunioihin jääneiden uskotaan olevan rakennustyöntekijöitä, jotka eivät ehtineet poistua työmaalta romahduksen tapahtuessa. Viranomaisten mukaan etsintä- ja pelastustyö jatkuu edelleen sortuneen rakennuksen alueella.\n\nPelastajien kerrotaan olleen yhteydessä ainakin kahteen raunioissa olevaan ihmiseen. Paikalla työskentelee yli sata poliisia ja muuta viranomaista, jotka etsivät kadonneita ja yrittävät päästä loukkuun jääneiden luo. Pelastajien on kerrottu kuulleen ääniä raunioista.\n\nRomahduksen yhteydessä putoavaa rakennusjätettä osui myös läheiseen hotelliin. Sieltä on saatu turvaan kaksi ihmistä. Osa rakennuksesta poistuneista tai pelastetuista on saanut vammoja, mutta niiden vakavuudesta ei ole annettu tarkkoja tietoja.\n\n## Syy romahdukseen selvitetään\n\nViranomaiset tutkivat, miksi rakennus romahti. Yhden lähdetiedon mukaan romahdusta edelsi voimakas ukkosmyrsky alueella, mutta sen mahdollista yhteyttä onnettomuuteen ei ole vahvistettu. Rakennus oli yhä keskeneräinen, kun se sortui Angeles Cityssä Pampangan provinssissa.\n\nPaikalta otetuissa kuvissa näkyy kadulle levinnyttä betonia, vääntynyttä rakennustelinettä ja vihreää suojaverkkoa. Romahdus tapahtui Angeles Cityssä, joka sijaitsee Manilan pohjoispuolella.\n\nTiedot kadonneiden määrästä vaihtelevat hieman eri viranomais- ja medialähteissä: joidenkin arvioiden mukaan raunioissa on noin 20 ihmistä, toisten mukaan 21 tai 23. Yhteistä tiedoille on, että etsintä- ja pelastustyö on edelleen käynnissä ja viranomaiset pitävät mahdollisena, että ihmisiä on yhä loukussa sortuneen rakennuksen alla.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Filippiinit",
+      "onnettomuudet",
+      "rakennusromahdus",
+      "pelastustyöt",
+      "Angeles City"
+    ],
+    "summary_bullets": [
+      "Rakenteilla ollut yhdeksänkerroksinen rakennus romahti Angeles Cityssä varhain sunnuntaina.",
+      "Viranomaisten mukaan 24 ihmistä on pelastettu eikä kuolonuhreista ole raportoitu.",
+      "Noin parikymmentä ihmistä pelätään olevan yhä raunioissa, ja pelastustyöt jatkuvat."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.91,
+    "journalist_note": "Lähteissä on pieniä eroja kadonneiden arvioidussa määrässä, joten jutussa käytetään varovaista muotoilua noin paristakymmenestä raunioihin mahdollisesti jääneestä ihmisestä. Kategoria korjattu ulkomaanuutiseksi, koska tapahtuma on Filippiineillä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260524T120129Z_18a8ef7d04\",\n  \"title\": \"Kymmeniä pelätään olevan raunioissa rakennuksen romahdettua Filippiineillä\",\n  \"summary\": \"Rakenteilla ollut yhdeksänkerroksinen rakennus romahti Angeles Cityssä Filippiineillä varhain sunnuntaina. Pelastustyöt jatkuvat, ja viranomaisten mukaan 24 ihmistä on saatu turvaan eikä kuolonuhreista ole raportoitu.\",\n  \"content\": \"Rakenteilla ollut yhdeksänkerroksinen rakennus romahti varhain sunnuntaiaamuna Angeles Cityssä Filippiineillä, Manilan pohjoispuolella. Viranomaisten mukaan pelastajat ovat saaneet tähän mennessä turvaan 24 ihmistä, eikä tapahtumapaikalta ole ilmoitettu kuolonuhreja. Raunioihin pelätään silti jääneen vielä noin parikymmentä ihmistä.\\n\\n## Pelastustyöt jatkuvat raunioissa\\n\\nRakennus antoi periksi noin kello 3 paikallista aikaa sunnuntaina. Useiden raunioihin jääneiden uskotaan olevan rakennustyöntekijöitä, jotka eivät ehtineet poistua työmaalta romahduksen tapahtuessa. Viranomaisten mukaan etsintä- ja pelastustyö jatkuu edelleen sortuneen rakennuksen alueella.\\n\\nPelastajien kerrotaan olleen yhteydessä ainakin kahteen raunioissa olevaan ihmiseen. Paikalla työskentelee yli sata poliisia ja muuta viranomaista, jotka etsivät kadonneita ja yrittävät päästä loukkuun jääneiden luo. Pelastajien on kerrottu kuulleen ääniä raunioista.\\n\\nRomahduksen yhteydessä putoavaa rakennusjätettä osui myös läheiseen hotelliin. Sieltä on saatu turvaan kaksi ihmistä. Osa rakennuksesta poistuneista tai pelastetuista on saanut vammoja, mutta niiden vakavuudesta ei ole annettu tarkkoja tietoja.\\n\\n## Syy romahdukseen selvitetään\\n\\nViranomaiset tutkivat, miksi rakennus romahti. Yhden lähdetiedon mukaan romahdusta edelsi voimakas ukkosmyrsky alueella, mutta sen mahdollista yhteyttä onnettomuuteen ei ole vahvistettu. Rakennus oli yhä keskeneräinen, kun se sortui Angeles Cityssä Pampangan provinssissa.\\n\\nPaikalta otetuissa kuvissa näkyy kadulle levinnyttä betonia, vääntynyttä rakennustelinettä ja vihreää suojaverkkoa. Romahdus tapahtui Angeles Cityssä, joka sijaitsee Manilan pohjoispuolella.\\n\\nTiedot kadonneiden määrästä vaihtelevat hieman eri viranomais- ja medialähteissä: joidenkin arvioiden mukaan raunioissa on noin 20 ihmistä, toisten mukaan 21 tai 23. Yhteistä tiedoille on, että etsintä- ja pelastustyö on edelleen käynnissä ja viranomaiset pitävät mahdollisena, että ihmisiä on yhä loukussa sortuneen rakennuksen alla.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Filippiinit\",\n    \"onnettomuudet\",\n    \"rakennusromahdus\",\n    \"pelastustyöt\",\n    \"Angeles City\"\n  ],\n  \"summary_bullets\": [\n    \"Rakenteilla ollut yhdeksänkerroksinen rakennus romahti Angeles Cityssä varhain sunnuntaina.\",\n    \"Viranomaisten mukaan 24 ihmistä on pelastettu eikä kuolonuhreista ole raportoitu.\",\n    \"Noin parikymmentä ihmistä pelätään olevan yhä raunioissa, ja pelastustyöt jatkuvat.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.91,\n  \"journalist_note\": \"Lähteissä on pieniä eroja kadonneiden arvioidussa määrässä, joten jutussa käytetään varovaista muotoilua noin paristakymmenestä raunioihin mahdollisesti jääneestä ihmisestä. Kategoria korjattu ulkomaanuutiseksi, koska tapahtuma on Filippiineillä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260524T120129Z_18a8ef7d04",
+    "category": "Kotimaa",
+    "selected_source_words": 373,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 233,
+    "issues": [
+      "content too short: 233 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Kymmeniä pelätään olevan raunioissa rakennuksen romahdettua Filippiineillä",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-24T12:05:02.938089+00:00",
+    "repair_trigger": "pre_repair_word_count=207; selected_source_words=373; selected_source_blocks=4",
+    "pre_repair_word_count": 207,
+    "pre_repair_lead_word_count": 35,
+    "post_repair_word_count": 233,
+    "post_repair_lead_word_count": 35,
+    "selected_source_words_at_repair": 373,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 373,
+    "source_blocks": 4,
+    "repair_added_word_count": 26,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 233 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:10e94cdf61",
+      "2:ABC (Australian Broadcasting Corporation):9bfc3b4866",
+      "3:BBC World:2bd0efdc5c",
+      "4:The Mirror:05de8598de"
+    ],
+    "final_issues": [
+      "content too short: 233 words"
+    ],
+    "recovered": false
+  }
+}
