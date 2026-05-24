@@ -1,0 +1,105 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-24T21:41:19.013783+00:00",
+  "digest": "cf45cfd628",
+  "packet": {
+    "packet_id": "20260524T214119Z_cf45cfd628",
+    "created_at": "2026-05-24T21:41:19Z",
+    "headline_seed": "Everyone is navigating AI security in real time — even Google",
+    "description_seed": "We're in the transition period -- all of us.",
+    "link": "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.72,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Everyone is navigating AI security in real time — even Google"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "I recently had the opportunity to sit down with Francis de Souza, COO of Google Cloud, backstage at an event in Los Angeles. Amid the din around us, de Souza, who speaks in the calm, measured manner of a university professor, offered useful advice for companies navigating the AI security moment we’re all living through, noting that “there’ll be a transition period, and then I think we get to this better place.” He wasn’t speaking about Google at that moment, but it’s clear that even Google is still figuring things out. ---",
+        "word_count": 92,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "We're in the transition period -- all of us.",
+        "word_count": 9,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "I recently had the opportunity to sit down with Francis de Souza, COO of Google Cloud, backstage at an event in Los Angeles. Amid the din around us, de Souza, who speaks in the calm, measured manner of a university professor, offered useful advice for companies navigating the AI security moment we’re all living through, noting that “there’ll be a transition period, and then I think we get to this better place.” He wasn’t speaking about Google at that moment, but it’s clear that even Google is still figuring things out. ---\n\nWe're in the transition period -- all of us.",
+    "source_diagnostics": {
+      "candidate_blocks": 6,
+      "candidate_source_words": 465,
+      "selected_blocks": 2,
+      "selected_source_words": 101,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "SiliconANGLE",
+        "SiliconANGLE",
+        "SiliconANGLE",
+        "SiliconANGLE",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Everyone is navigating AI security in real time — even Google",
+      "description": "We're in the transition period -- all of us.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Everyone is navigating AI security in real time — even Google",
+    "description": "We're in the transition period -- all of us.",
+    "link": "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/",
+    "published": "2026-05-24T21:39:21+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "41d56eb307b6e8d05e0d8149c03065f2",
+    "_url_hash": "92c4a655c9a7736ef835f4081620cc8d584bfdcbed1b3427d66d725bb34e19ca",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nI recently had the opportunity to sit down with Francis de Souza, COO of Google Cloud, backstage at an event in Los Angeles. Amid the din around us, de Souza, who speaks in the calm, measured manner of a university professor, offered useful advice for companies navigating the AI security moment we’re all living through, noting that “there’ll be a transition period, and then I think we get to this better place.”\n\nHe wasn’t speaking about Google at that moment, but it’s clear that even Google is still figuring things out.\n\n---\n\n[Lähde: SiliconANGLE]\nGoogle Cloud today showcased a major expansion of its cybersecurity portfolio, centered on agentic artificial intelligence and deeper threat intelligence integration.\n\nThe announcements, made at the RSAC conference in San Francisco, see Google aggressively advancing a unified, AI-driven security platform designed to operate at machine speed as cyber threats become faster, more automated and more sophisticated.\n\nAs part of that push, Google also repeated today that it has completed its acquisition of Wiz Inc., a company known for its agentless approach to identifying risks across cloud environments. Google plans to integrate Wiz’s technology into its broader platform to create an AI-ready security solution that spans multicloud infrastructure to simplify security operations for organizations while enabling faster detection and response to threats.\n\nBuilding on that foundation, leading the list of announcements is a strategy described as an “agentic security operations center” powered by its latest Gemini AI models. Google is introducing adaptive AI agents that can investigate alerts, synthesize intelligence and assist in remediation workflows in real time, which replace the need to rely on static playbooks.\n\nThe new Triage and Investigation agent is designed to autonomously analyze alerts, gather supporting evidence and deliver reasoned verdicts to help security teams reduce response times and cut through growing volumes of false positives. The new agent is now available in preview within Google Security Operations.\n\nGoogle is also extending its agentic approach by allowing customers to build their own enterprise-ready security agents through support for Model Context Protocol servers. The capability removes the need for organizations to host their own MCP client infrastructure to deliver unified governance and control over custom agents, with general availability expected in early April.\n\nThe push toward agentic AI comes as Google highlights a rapidly evolving threat landscape in its newly released Mandiant M-Trends 2026 report.\n\nThe report details how attackers are reducing the window for defenders to respond from hours to as little as 22 seconds. Adversaries were also found to be moving beyond experimentation of AI to deploying adaptive tools and autonomous agents capable of modifying their own behavior during attacks.\n\nTo counter the shift identified in the Mandiant report, Google is placing greater emphasis on integrating frontline threat intelligence ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-24T21:43:23.352620+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260524T214119Z_cf45cfd628\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.\"}"
+}

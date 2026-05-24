@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/take-two-uskoo-gta-6n-vetovoimaan-vaikka-pelikonsolit-kallistuvatkin-kaiken-aikaa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
