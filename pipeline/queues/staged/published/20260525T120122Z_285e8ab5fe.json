@@ -1,0 +1,211 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-25T12:01:22.169478+00:00",
+  "digest": "285e8ab5fe",
+  "packet": {
+    "packet_id": "20260525T120122Z_285e8ab5fe",
+    "created_at": "2026-05-25T12:01:22Z",
+    "headline_seed": "Clashes as Venezuelan prisoners protest over alleged mistreatment",
+    "description_seed": "The prisoners insisted their protest was peaceful but that security forces deployed to quell it opened fire.",
+    "link": "https://www.bbc.com/news/articles/c0l22wrx44po?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "Newsday"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c0l22wrx44po?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Clashes as Venezuelan prisoners protest over alleged mistreatment"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Violent clashes have erupted between inmates and security personnel at a prison in the Venezuelan state of Barinas. Extra security forces were deployed to the jail after prisoners climbed the roof and burned mattresses in protest at their alleged mistreatment. Witnesses reported hearing explosions and inmates said they had been shot at. Organisations lobbying for prisoners' rights have long denounced the poor conditions at many of Venezuela's penitentiaries. Non-governmental organisation Venezuelan Prison Observatory (OVP) said that the inmates at the jail, known as Injuba, had been complaining for more than a week about their treatment under the prison's new director. They allege they were violently searched, kept in solitary confinement and mistreated. The prison director has so far not publicly commented, nor has the government of interim President Delcy Rodríguez.",
+        "word_count": 130,
+        "keyword_overlap": 11,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The prisoners insisted their protest was peaceful but that security forces deployed to quell it opened fire.",
+        "word_count": 17,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "In footage published by OVP, groups of inmates can be seen protesting on the roof, with some burning mattresses. In one video, a man can be seen showing wounds on his torso and his arm, with another man shouting \"they're shooting at us\". Others can be heard joining into chants of \"we want justice\". In another recording shared by OVP, a woman wearing dark glasses and a face mask addresses Rodríguez directly and demands that the minister of prisons and Injuba's director resign. She insists that their protest is peaceful before stating their demands, which include medicine for prisoners who have tuberculosis. OVP has long drawn attention to the poor conditions in Venezuelan jails, with the organisation warning that many do not meet the \"minimum standards\" which should be guaranteed by law.",
+        "word_count": 132,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Newsday",
+        "source_type": "research",
+        "text": "These wives and mothers had already participated for 37 days in a protest that transformed a dead-end street in Caracas into a tent city. The women had prayed, chanted slogans, posted their pleas on social media. They had chained themselves together. They had screamed, hoping their cries might be heard by prisoners held behind thick concrete walls. The release of the 17 inmates that frigid February morning was bittersweet for Mendoza and Rosales. They felt a surge of pride at each emotional reunion outside the jail walls. Yet, they felt defeated. Their own husbands’ names were not called.",
+        "word_count": 98,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Violent clashes have erupted between inmates and security personnel at a prison in the Venezuelan state of Barinas. Extra security forces were deployed to the jail after prisoners climbed the roof and burned mattresses in protest at their alleged mistreatment. Witnesses reported hearing explosions and inmates said they had been shot at. Organisations lobbying for prisoners' rights have long denounced the poor conditions at many of Venezuela's penitentiaries. Non-governmental organisation Venezuelan Prison Observatory (OVP) said that the inmates at the jail, known as Injuba, had been complaining for more than a week about their treatment under the prison's new director. They allege they were violently searched, kept in solitary confinement and mistreated. The prison director has so far not publicly commented, nor has the government of interim President Delcy Rodríguez.\n\nThe prisoners insisted their protest was peaceful but that security forces deployed to quell it opened fire.\n\nIn footage published by OVP, groups of inmates can be seen protesting on the roof, with some burning mattresses. In one video, a man can be seen showing wounds on his torso and his arm, with another man shouting \"they're shooting at us\". Others can be heard joining into chants of \"we want justice\". In another recording shared by OVP, a woman wearing dark glasses and a face mask addresses Rodríguez directly and demands that the minister of prisons and Injuba's director resign. She insists that their protest is peaceful before stating their demands, which include medicine for prisoners who have tuberculosis. OVP has long drawn attention to the poor conditions in Venezuelan jails, with the organisation warning that many do not meet the \"minimum standards\" which should be guaranteed by law.\n\nThese wives and mothers had already participated for 37 days in a protest that transformed a dead-end street in Caracas into a tent city. The women had prayed, chanted slogans, posted their pleas on social media. They had chained themselves together. They had screamed, hoping their cries might be heard by prisoners held behind thick concrete walls. The release of the 17 inmates that frigid February morning was bittersweet for Mendoza and Rosales. They felt a surge of pride at each emotional reunion outside the jail walls. Yet, they felt defeated. Their own husbands’ names were not called.",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 803,
+      "selected_blocks": 4,
+      "selected_source_words": 377,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Newsday",
+        "Newsday",
+        "Newsday",
+        "Newsday",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Newsday"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Clashes as Venezuelan prisoners protest over alleged mistreatment",
+      "description": "The prisoners insisted their protest was peaceful but that security forces deployed to quell it opened fire.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Clashes as Venezuelan prisoners protest over alleged mistreatment",
+    "description": "The prisoners insisted their protest was peaceful but that security forces deployed to quell it opened fire.",
+    "link": "https://www.bbc.com/news/articles/c0l22wrx44po?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-25T11:13:45+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "11c5377d9018d5d6107645a4c69f14dd",
+    "_url_hash": "14be1060a86c1079b99b7eb53a89c934214682e67f5973a3b0fb484ae6e7105e",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nViolent clashes have erupted between inmates and security personnel at a prison in the Venezuelan state of Barinas.\n\nExtra security forces were deployed to the jail after prisoners climbed the roof and burned mattresses in protest at their alleged mistreatment.\n\nWitnesses reported hearing explosions and inmates said they had been shot at.\n\nOrganisations lobbying for prisoners' rights have long denounced the poor conditions at many of Venezuela's penitentiaries.\n\nNon-governmental organisation Venezuelan Prison Observatory (OVP) said that the inmates at the jail, known as Injuba, had been complaining for more than a week about their treatment under the prison's new director.\n\nThey allege they were violently searched, kept in solitary confinement and mistreated.\n\nThe prison director has so far not publicly commented, nor has the government of interim President Delcy Rodríguez.\n\nIn footage published by OVP, groups of inmates can be seen protesting on the roof, with some burning mattresses.\n\nIn one video, a man can be seen showing wounds on his torso and his arm, with another man shouting \"they're shooting at us\".\n\nOthers can be heard joining into chants of \"we want justice\".\n\nIn another recording shared by OVP, a woman wearing dark glasses and a face mask addresses Rodríguez directly and demands that the minister of prisons and Injuba's director resign.\n\nShe insists that their protest is peaceful before stating their demands, which include medicine for prisoners who have tuberculosis.\n\nOVP has long drawn attention to the poor conditions in Venezuelan jails, with the organisation warning that many do not meet the \"minimum standards\" which should be guaranteed by law.\n\nSince the United States seized Venezuelan leader Nicolás Maduro in a military operation in the capital, Caracas, on 3 January, US pressure has led to the release of hundreds of political prisoners.\n\nHowever, more than 400 are still behind bars, according to pressure group Foro Penal.\n\nWhile Injuba is not one of the prisons where most political prisoners are usually kept, Venezuela's Committee for the Freedom of Political Prisoners expressed its solidarity with the inmates there, alleging that \"punishment, hunger, solitary confinement, torture and inhumane conditions\" were being used to control and subdue prisoners and \"formed part of prison policy\".\n\nIn March, the United Nations' High Commissioner for Human Rights, Volker Türk, said that his office had been receiving reports alleging that detainee\n\n---\n\n[Lähde: Newsday]\nMileidy Mendoza and her children ride a bus from Caracas to visit her husband, Eric Diaz, imprisoned on political grounds at the Yare prison complex in San Francisco de Yare, Venezuela, Sunday, April 5, 2026. Credit: AP/Ariana Cubillos\n\nCARACAS, Venezuela — Mileidy Mendoza and Sandra Rosales stood vigil at the gates of a detention center in Venezuela’s capital as a police officer barked names into the night.\n\nWith each call, a prisoner stumbled out the doors and into another woman’s tearful embrace. Fifteen men and two women. All alleged political prisoners. All freed just hours into Valentine’s Day thanks to the work of Mendoza, Rosales and more than two dozen other women who dared to challenge their authoritarian government.\n\nThese wives and mothers had already participated for 37 days in a protest that transformed a dead-end street in Caracas into a tent city. The women had prayed, chanted slogans, posted their pleas on social media. They had chained themselves together. They had screamed, hoping their cries might be heard by prisoners held behind thick concrete walls.\n\nThe release of the 17 inmates that frigid February morning was bittersweet for Mendoza and Rosales. They felt a surge of pride at each emotional reunion outside the jail walls. Yet, they felt defeated. Their own husbands’ names were not called.\n\nThe two women, who had no previous experience in politics, were part of a movement that sprang up after the U.S. military attacked Venezuela on Jan. 3 and captured and removed its president, Nicolás Maduro. The protest tested the wives' health and determination in ways that continue to haunt them. It has also challenged an authoritarian government's willingness to restrain its repressive impulses.\n\nGet the latest breaking news as it happens.\n\nBy clicking Sign up, you agree to our privacy policy.\n\nUnder pressure from the U.S. government, Venezuela announced in January that it would free political prisoners, giving hope to families of detained dissidents. About 150 protesters, mostly wives and mothers, set up outside the doors of jails and prisons suspected of holding political detainees. Their demonstration became a key test of how far the U.S. intervention can clear the way for the restoration of civil liberties in Venezuela after Maduro was replaced by his loyal vice president.\n\nThe Trump administration has praised the government of acting President Delcy Rodríguez for its pledge to release political prisoners. But human rights groups say Venezu",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-25T12:05:04.911318+00:00",
+  "payload": {
+    "packet_id": "20260525T120122Z_285e8ab5fe",
+    "title": "Vankien protesti johti yhteenottoihin Venezuelassa",
+    "summary": "Venezuelan Barinasin osavaltiossa sijaitsevassa Injuban vankilassa on puhjennut väkivaltaisia yhteenottoja, kun vangit protestoivat väitettyä kaltoinkohtelua vastaan. Vankien mukaan turvallisuusjoukot avasivat tulen protestin aikana.",
+    "content": "Venezuelan Barinasin osavaltiossa sijaitsevassa Injuban vankilassa on puhjennut väkivaltaisia yhteenottoja vankien ja turvallisuushenkilöstön välillä sen jälkeen, kun vangit nousivat vankilan katolle ja polttivat patjoja protestoidakseen väitettyä kaltoinkohtelua vastaan. Vankien mukaan protesti oli rauhanomainen, mutta paikalle lähetetyt turvallisuusjoukot avasivat tulen sen tukahduttamiseksi.\n\n## Vangit kertoivat ampumisesta\n\nSilminnäkijöiden mukaan vankilan alueelta kuului räjähdyksiä. Vangit puolestaan kertoivat, että heitä oli ammuttu. Vankien oikeuksia seuraavan Venezuelan Prison Observatoryn eli OVP:n julkaisemassa kuvamateriaalissa näkyy ryhmiä vankeja protestoimassa katolla. Osassa kuvista vangit polttavat patjoja.\n\nYhdellä videolla mies näyttää haavoja vartalossaan ja käsivarressaan samalla, kun toinen mies huutaa, että heitä ammutaan. Muilla tallenteilla kuullaan vankien vaativan oikeutta. OVP:n jakamassa toisessa tallenteessa nainen puhuttelee suoraan väliaikaista presidenttiä Delcy Rodríguezia ja vaatii vankiloista vastaavan ministerin sekä Injuban johtajan eroa.\n\nNaisen mukaan protesti on rauhanomainen. Hän esittää myös vaatimuksia, joihin kuuluu lääkkeitä tuberkuloosia sairastaville vangeille.\n\n## Valitukset olivat jatkuneet yli viikon\n\nOVP:n mukaan Injuban vangit olivat valittaneet kohtelustaan jo yli viikon ajan vankilan uuden johtajan alaisuudessa. Vankien väitteiden mukaan heihin on kohdistettu väkivaltaisia tarkastuksia, heitä on pidetty eristyksissä ja heitä on kohdeltu kaltoin.\n\nVankilan johtaja ei ole lähdetietojen mukaan kommentoinut väitteitä julkisesti. Myöskään Rodríguezin hallinto ei ole julkisesti vastannut esitettyihin syytöksiin.\n\n## Vankilaolot ovat olleet pitkään kiistan kohteena\n\nVankien oikeuksia puolustavat järjestöt ovat jo pitkään arvostelleet Venezuelan vankiloiden oloja. OVP on varoittanut, että monet maan vankilat eivät täytä laissa turvattuja vähimmäisvaatimuksia. Injuban tapahtumat kytkeytyvät tähän laajempaan huoleen vankien kohtelusta, terveydenhuollosta ja viranomaisten toiminnasta maan rangaistuslaitoksissa.\n\nVankien läheisten protestit ovat nousseet Venezuelassa esiin myös aiemmin. Lähdeaineistossa kuvataan Caracasissa järjestettyä 37 päivän mielenosoitusta, jossa vaimot ja äidit rakensivat telttaleirin, rukoilivat, huusivat iskulauseita, jakoivat vetoomuksia sosiaalisessa mediassa ja kahlitsivat itsensä yhteen saadakseen vankien tilanteen kuuluviin. Tuolloin 17 vangin vapautus toi osalle perheistä helpotusta, mutta kaikkien läheisten nimiä ei kutsuttu.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Venezuela",
+      "vankilat",
+      "protestit",
+      "ihmisoikeudet"
+    ],
+    "summary_bullets": [
+      "Injuban vankilassa Barinasissa puhkesi yhteenottoja vankien ja turvallisuusjoukkojen välillä.",
+      "Vangit protestoivat väitettyä kaltoinkohtelua vastaan ja sanoivat protestin olleen rauhanomainen.",
+      "Vankien oikeuksia seuraava OVP on arvostellut Venezuelan vankilaoloja pitkään."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin lähdetietoihin. Newsday-taustalohkoa käytettiin vain yleisenä kontekstina vankien läheisten aiemmista protesteista Venezuelassa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260525T120122Z_285e8ab5fe\",\n  \"title\": \"Vankien protesti johti yhteenottoihin Venezuelassa\",\n  \"summary\": \"Venezuelan Barinasin osavaltiossa sijaitsevassa Injuban vankilassa on puhjennut väkivaltaisia yhteenottoja, kun vangit protestoivat väitettyä kaltoinkohtelua vastaan. Vankien mukaan turvallisuusjoukot avasivat tulen protestin aikana.\",\n  \"content\": \"Venezuelan Barinasin osavaltiossa sijaitsevassa Injuban vankilassa on puhjennut väkivaltaisia yhteenottoja vankien ja turvallisuushenkilöstön välillä sen jälkeen, kun vangit nousivat vankilan katolle ja polttivat patjoja protestoidakseen väitettyä kaltoinkohtelua vastaan. Vankien mukaan protesti oli rauhanomainen, mutta paikalle lähetetyt turvallisuusjoukot avasivat tulen sen tukahduttamiseksi.\\n\\n## Vangit kertoivat ampumisesta\\n\\nSilminnäkijöiden mukaan vankilan alueelta kuului räjähdyksiä. Vangit puolestaan kertoivat, että heitä oli ammuttu. Vankien oikeuksia seuraavan Venezuelan Prison Observatoryn eli OVP:n julkaisemassa kuvamateriaalissa näkyy ryhmiä vankeja protestoimassa katolla. Osassa kuvista vangit polttavat patjoja.\\n\\nYhdellä videolla mies näyttää haavoja vartalossaan ja käsivarressaan samalla, kun toinen mies huutaa, että heitä ammutaan. Muilla tallenteilla kuullaan vankien vaativan oikeutta. OVP:n jakamassa toisessa tallenteessa nainen puhuttelee suoraan väliaikaista presidenttiä Delcy Rodríguezia ja vaatii vankiloista vastaavan ministerin sekä Injuban johtajan eroa.\\n\\nNaisen mukaan protesti on rauhanomainen. Hän esittää myös vaatimuksia, joihin kuuluu lääkkeitä tuberkuloosia sairastaville vangeille.\\n\\n## Valitukset olivat jatkuneet yli viikon\\n\\nOVP:n mukaan Injuban vangit olivat valittaneet kohtelustaan jo yli viikon ajan vankilan uuden johtajan alaisuudessa. Vankien väitteiden mukaan heihin on kohdistettu väkivaltaisia tarkastuksia, heitä on pidetty eristyksissä ja heitä on kohdeltu kaltoin.\\n\\nVankilan johtaja ei ole lähdetietojen mukaan kommentoinut väitteitä julkisesti. Myöskään Rodríguezin hallinto ei ole julkisesti vastannut esitettyihin syytöksiin.\\n\\n## Vankilaolot ovat olleet pitkään kiistan kohteena\\n\\nVankien oikeuksia puolustavat järjestöt ovat jo pitkään arvostelleet Venezuelan vankiloiden oloja. OVP on varoittanut, että monet maan vankilat eivät täytä laissa turvattuja vähimmäisvaatimuksia. Injuban tapahtumat kytkeytyvät tähän laajempaan huoleen vankien kohtelusta, terveydenhuollosta ja viranomaisten toiminnasta maan rangaistuslaitoksissa.\\n\\nVankien läheisten protestit ovat nousseet Venezuelassa esiin myös aiemmin. Lähdeaineistossa kuvataan Caracasissa järjestettyä 37 päivän mielenosoitusta, jossa vaimot ja äidit rakensivat telttaleirin, rukoilivat, huusivat iskulauseita, jakoivat vetoomuksia sosiaalisessa mediassa ja kahlitsivat itsensä yhteen saadakseen vankien tilanteen kuuluviin. Tuolloin 17 vangin vapautus toi osalle perheistä helpotusta, mutta kaikkien läheisten nimiä ei kutsuttu.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Venezuela\",\n    \"vankilat\",\n    \"protestit\",\n    \"ihmisoikeudet\"\n  ],\n  \"summary_bullets\": [\n    \"Injuban vankilassa Barinasissa puhkesi yhteenottoja vankien ja turvallisuusjoukkojen välillä.\",\n    \"Vangit protestoivat väitettyä kaltoinkohtelua vastaan ja sanoivat protestin olleen rauhanomainen.\",\n    \"Vankien oikeuksia seuraava OVP on arvostellut Venezuelan vankilaoloja pitkään.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu paketissa olleisiin lähdetietoihin. Newsday-taustalohkoa käytettiin vain yleisenä kontekstina vankien läheisten aiemmista protesteista Venezuelassa.\"\n}",
+  "article": {
+    "title": "Vankien protesti johti yhteenottoihin Venezuelassa",
+    "description": "Venezuelan Barinasin osavaltiossa sijaitsevassa Injuban vankilassa on puhjennut väkivaltaisia yhteenottoja, kun vangit protestoivat väitettyä kaltoinkohtelua vastaan. Vankien mukaan turvallisuusjoukot avasivat tulen protestin aikana.",
+    "link": "https://www.bbc.com/news/articles/c0l22wrx44po?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-25T11:13:45+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "11c5377d9018d5d6107645a4c69f14dd",
+    "_url_hash": "14be1060a86c1079b99b7eb53a89c934214682e67f5973a3b0fb484ae6e7105e",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nViolent clashes have erupted between inmates and security personnel at a prison in the Venezuelan state of Barinas.\n\nExtra security forces were deployed to the jail after prisoners climbed the roof and burned mattresses in protest at their alleged mistreatment.\n\nWitnesses reported hearing explosions and inmates said they had been shot at.\n\nOrganisations lobbying for prisoners' rights have long denounced the poor conditions at many of Venezuela's penitentiaries.\n\nNon-governmental organisation Venezuelan Prison Observatory (OVP) said that the inmates at the jail, known as Injuba, had been complaining for more than a week about their treatment under the prison's new director.\n\nThey allege they were violently searched, kept in solitary confinement and mistreated.\n\nThe prison director has so far not publicly commented, nor has the government of interim President Delcy Rodríguez.\n\nIn footage published by OVP, groups of inmates can be seen protesting on the roof, with some burning mattresses.\n\nIn one video, a man can be seen showing wounds on his torso and his arm, with another man shouting \"they're shooting at us\".\n\nOthers can be heard joining into chants of \"we want justice\".\n\nIn another recording shared by OVP, a woman wearing dark glasses and a face mask addresses Rodríguez directly and demands that the minister of prisons and Injuba's director resign.\n\nShe insists that their protest is peaceful before stating their demands, which include medicine for prisoners who have tuberculosis.\n\nOVP has long drawn attention to the poor conditions in Venezuelan jails, with the organisation warning that many do not meet the \"minimum standards\" which should be guaranteed by law.\n\nSince the United States seized Venezuelan leader Nicolás Maduro in a military operation in the capital, Caracas, on 3 January, US pressure has led to the release of hundreds of political prisoners.\n\nHowever, more than 400 are still behind bars, according to pressure group Foro Penal.\n\nWhile Injuba is not one of the prisons where most political prisoners are usually kept, Venezuela's Committee for the Freedom of Political Prisoners expressed its solidarity with the inmates there, alleging that \"punishment, hunger, solitary confinement, torture and inhumane conditions\" were being used to control and subdue prisoners and \"formed part of prison policy\".\n\nIn March, the United Nations' High Commissioner for Human Rights, Volker Türk, said that his office had been receiving reports alleging that detainee\n\n---\n\n[Lähde: Newsday]\nMileidy Mendoza and her children ride a bus from Caracas to visit her husband, Eric Diaz, imprisoned on political grounds at the Yare prison complex in San Francisco de Yare, Venezuela, Sunday, April 5, 2026. Credit: AP/Ariana Cubillos\n\nCARACAS, Venezuela — Mileidy Mendoza and Sandra Rosales stood vigil at the gates of a detention center in Venezuela’s capital as a police officer barked names into the night.\n\nWith each call, a prisoner stumbled out the doors and into another woman’s tearful embrace. Fifteen men and two women. All alleged political prisoners. All freed just hours into Valentine’s Day thanks to the work of Mendoza, Rosales and more than two dozen other women who dared to challenge their authoritarian government.\n\nThese wives and mothers had already participated for 37 days in a protest that transformed a dead-end street in Caracas into a tent city. The women had prayed, chanted slogans, posted their pleas on social media. They had chained themselves together. They had screamed, hoping their cries might be heard by prisoners held behind thick concrete walls.\n\nThe release of the 17 inmates that frigid February morning was bittersweet for Mendoza and Rosales. They felt a surge of pride at each emotional reunion outside the jail walls. Yet, they felt defeated. Their own husbands’ names were not called.\n\nThe two women, who had no previous experience in politics, were part of a movement that sprang up after the U.S. military attacked Venezuela on Jan. 3 and captured and removed its president, Nicolás Maduro. The protest tested the wives' health and determination in ways that continue to haunt them. It has also challenged an authoritarian government's willingness to restrain its repressive impulses.\n\nGet the latest breaking news as it happens.\n\nBy clicking Sign up, you agree to our privacy policy.\n\nUnder pressure from the U.S. government, Venezuela announced in January that it would free political prisoners, giving hope to families of detained dissidents. About 150 protesters, mostly wives and mothers, set up outside the doors of jails and prisons suspected of holding political detainees. Their demonstration became a key test of how far the U.S. intervention can clear the way for the restoration of civil liberties in Venezuela after Maduro was replaced by his loyal vice president.\n\nThe Trump administration has praised the government of acting President Delcy Rodríguez for its pledge to release political prisoners. But human rights groups say Venezu",
+    "research_source": "multi",
+    "summary": "Venezuelan Barinasin osavaltiossa sijaitsevassa Injuban vankilassa on puhjennut väkivaltaisia yhteenottoja, kun vangit protestoivat väitettyä kaltoinkohtelua vastaan. Vankien mukaan turvallisuusjoukot avasivat tulen protestin aikana.",
+    "content": "Venezuelan Barinasin osavaltiossa sijaitsevassa Injuban vankilassa on puhjennut väkivaltaisia yhteenottoja vankien ja turvallisuushenkilöstön välillä sen jälkeen, kun vangit nousivat vankilan katolle ja polttivat patjoja protestoidakseen väitettyä kaltoinkohtelua vastaan. Vankien mukaan protesti oli rauhanomainen, mutta paikalle lähetetyt turvallisuusjoukot avasivat tulen sen tukahduttamiseksi.\n\n## Vangit kertoivat ampumisesta\n\nSilminnäkijöiden mukaan vankilan alueelta kuului räjähdyksiä. Vangit puolestaan kertoivat, että heitä oli ammuttu. Vankien oikeuksia seuraavan Venezuelan Prison Observatoryn eli OVP:n julkaisemassa kuvamateriaalissa näkyy ryhmiä vankeja protestoimassa katolla. Osassa kuvista vangit polttavat patjoja.\n\nYhdellä videolla mies näyttää haavoja vartalossaan ja käsivarressaan samalla, kun toinen mies huutaa, että heitä ammutaan. Muilla tallenteilla kuullaan vankien vaativan oikeutta. OVP:n jakamassa toisessa tallenteessa nainen puhuttelee suoraan väliaikaista presidenttiä Delcy Rodríguezia ja vaatii vankiloista vastaavan ministerin sekä Injuban johtajan eroa.\n\nNaisen mukaan protesti on rauhanomainen. Hän esittää myös vaatimuksia, joihin kuuluu lääkkeitä tuberkuloosia sairastaville vangeille.\n\n## Valitukset olivat jatkuneet yli viikon\n\nOVP:n mukaan Injuban vangit olivat valittaneet kohtelustaan jo yli viikon ajan vankilan uuden johtajan alaisuudessa. Vankien väitteiden mukaan heihin on kohdistettu väkivaltaisia tarkastuksia, heitä on pidetty eristyksissä ja heitä on kohdeltu kaltoin.\n\nVankilan johtaja ei ole lähdetietojen mukaan kommentoinut väitteitä julkisesti. Myöskään Rodríguezin hallinto ei ole julkisesti vastannut esitettyihin syytöksiin.\n\n## Vankilaolot ovat olleet pitkään kiistan kohteena\n\nVankien oikeuksia puolustavat järjestöt ovat jo pitkään arvostelleet Venezuelan vankiloiden oloja. OVP on varoittanut, että monet maan vankilat eivät täytä laissa turvattuja vähimmäisvaatimuksia. Injuban tapahtumat kytkeytyvät tähän laajempaan huoleen vankien kohtelusta, terveydenhuollosta ja viranomaisten toiminnasta maan rangaistuslaitoksissa.\n\nVankien läheisten protestit ovat nousseet Venezuelassa esiin myös aiemmin. Lähdeaineistossa kuvataan Caracasissa järjestettyä 37 päivän mielenosoitusta, jossa vaimot ja äidit rakensivat telttaleirin, rukoilivat, huusivat iskulauseita, jakoivat vetoomuksia sosiaalisessa mediassa ja kahlitsivat itsensä yhteen saadakseen vankien tilanteen kuuluviin. Tuolloin 17 vangin vapautus toi osalle perheistä helpotusta, mutta kaikkien läheisten nimiä ei kutsuttu.",
+    "category": "Kotimaa",
+    "tags": [
+      "venezuela",
+      "vankilat",
+      "protestit",
+      "ihmisoikeudet"
+    ],
+    "summary_bullets": [
+      "Injuban vankilassa Barinasissa puhkesi yhteenottoja vankien ja turvallisuusjoukkojen välillä.",
+      "Vangit protestoivat väitettyä kaltoinkohtelua vastaan ja sanoivat protestin olleen rauhanomainen.",
+      "Vankien oikeuksia seuraava OVP on arvostellut Venezuelan vankilaoloja pitkään."
+    ],
+    "key_points": [
+      "Injuban vankilassa Barinasissa puhkesi yhteenottoja vankien ja turvallisuusjoukkojen välillä.",
+      "Vangit protestoivat väitettyä kaltoinkohtelua vastaan ja sanoivat protestin olleen rauhanomainen.",
+      "Vankien oikeuksia seuraava OVP on arvostellut Venezuelan vankilaoloja pitkään."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin lähdetietoihin. Newsday-taustalohkoa käytettiin vain yleisenä kontekstina vankien läheisten aiemmista protesteista Venezuelassa.",
+    "source_text": "Violent clashes have erupted between inmates and security personnel at a prison in the Venezuelan state of Barinas. Extra security forces were deployed to the jail after prisoners climbed the roof and burned mattresses in protest at their alleged mistreatment. Witnesses reported hearing explosions and inmates said they had been shot at. Organisations lobbying for prisoners' rights have long denounced the poor conditions at many of Venezuela's penitentiaries. Non-governmental organisation Venezuelan Prison Observatory (OVP) said that the inmates at the jail, known as Injuba, had been complaining for more than a week about their treatment under the prison's new director. They allege they were violently searched, kept in solitary confinement and mistreated. The prison director has so far not publicly commented, nor has the government of interim President Delcy Rodríguez.\n\nThe prisoners insisted their protest was peaceful but that security forces deployed to quell it opened fire.\n\nIn footage published by OVP, groups of inmates can be seen protesting on the roof, with some burning mattresses. In one video, a man can be seen showing wounds on his torso and his arm, with another man shouting \"they're shooting at us\". Others can be heard joining into chants of \"we want justice\". In another recording shared by OVP, a woman wearing dark glasses and a face mask addresses Rodríguez directly and demands that the minister of prisons and Injuba's director resign. She insists that their protest is peaceful before stating their demands, which include medicine for prisoners who have tuberculosis. OVP has long drawn attention to the poor conditions in Venezuelan jails, with the organisation warning that many do not meet the \"minimum standards\" which should be guaranteed by law.\n\nThese wives and mothers had already participated for 37 days in a protest that transformed a dead-end street in Caracas into a tent city. The women had prayed, chanted slogans, posted their pleas on social media. They had chained themselves together. They had screamed, hoping their cries might be heard by prisoners held behind thick concrete walls. The release of the 17 inmates that frigid February morning was bittersweet for Mendoza and Rosales. They felt a surge of pride at each emotional reunion outside the jail walls. Yet, they felt defeated. Their own husbands’ names were not called.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260525T120122Z_285e8ab5fe",
+    "image": "https://images.unsplash.com/photo-1699123104797-8e4f9cfef1e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwcmlzb24lMjBwcm90ZXN0JTIwVmVuZXp1ZWxhfGVufDF8MHx8fDE3Nzk3MTA4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1699123104797-8e4f9cfef1e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwcmlzb24lMjBwcm90ZXN0JTIwVmVuZXp1ZWxhfGVufDF8MHx8fDE3Nzk3MTA4ODV8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Vankien protesti johti yhteenottoihin Venezuelassa",
+    "image_credit": "Photo by Leonardo Guillen on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-sign-that-is-in-the-grass-near-a-tree--FRZrypUj2c?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-25T12:08:08.955939+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1699123104797-8e4f9cfef1e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwcmlzb24lMjBwcm90ZXN0JTIwVmVuZXp1ZWxhfGVufDF8MHx8fDE3Nzk3MTA4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1699123104797-8e4f9cfef1e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxwcmlzb24lMjBwcm90ZXN0JTIwVmVuZXp1ZWxhfGVufDF8MHx8fDE3Nzk3MTA4ODV8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-25T12:08:57.665506+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-25-kalasataman-palotalon-asukas-joutui-evakkoon-savun-keskelta.md",
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-25-vankien-protesti-johti-yhteenottoihin-venezuelassa.md"
+  ]
+}

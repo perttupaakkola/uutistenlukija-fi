@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/emme-saaneet-hanta-rauhoittumaan-sirpa-selvittaa-tilanteita-koulussaan-joka-viikko/9341268"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
