@@ -37,6 +37,7 @@ OUTPUT_DIR="/workspace/projects/uutistenlukija/analytics"
 OUTPUT_FILE="$OUTPUT_DIR/daily-report.json"
 PROJECT_DIR="/home/pertt/.openclaw/workspace/projects/uutistenlukija"
 SENTINEL_SCRIPT="$PROJECT_DIR/scripts/analytics_oauth_sentinel.py"
+FRESHNESS_EVIDENCE_SCRIPT="$PROJECT_DIR/scripts/analytics_freshness_evidence.py"
 PROPERTY_ID="529369568"
 SC_SITE="sc-domain:uutistenlukija.fi"
 TODAY=$(date -u +%Y-%m-%d)
@@ -103,6 +104,13 @@ flush_oauth_sentinel() {
             "${args[@]}" \
             --source-command "SECRETS_DIR=$SECRETS_DIR bash pipeline/check-analytics.sh" \
             --source-log "pipeline/logs/analytics.log" || true
+    fi
+}
+
+record_freshness_evidence() {
+    if [[ -x "$FRESHNESS_EVIDENCE_SCRIPT" || -f "$FRESHNESS_EVIDENCE_SCRIPT" ]]; then
+        python3 "$FRESHNESS_EVIDENCE_SCRIPT" \
+            --source-command "SECRETS_DIR=$SECRETS_DIR bash pipeline/check-analytics.sh" || true
     fi
 }
 
@@ -333,6 +341,7 @@ PYEOF
 
 echo "$REPORT" > "$OUTPUT_FILE"
 echo "[check-analytics] Report written to $OUTPUT_FILE"
+record_freshness_evidence
 
 if [[ "$PRINT_SUMMARY" == "true" ]]; then
     echo ""
