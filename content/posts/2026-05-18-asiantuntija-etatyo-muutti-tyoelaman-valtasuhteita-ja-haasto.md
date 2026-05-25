@@ -2,7 +2,7 @@
 title: "Asiantuntija: Etätyö muutti työelämän valtasuhteita ja haastoi johtamisen"
 date: 2026-05-18T02:48:07.576774+00:00
 categories:
-  - Tiede
+  - Talous
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
