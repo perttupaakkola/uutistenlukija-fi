@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-25T20:51:13.773413+00:00",
+  "digest": "b50b4df63b",
+  "packet": {
+    "packet_id": "20260525T205113Z_b50b4df63b",
+    "created_at": "2026-05-25T20:51:13Z",
+    "headline_seed": "Hai tappoi 39-vuotiaan miehen",
+    "description_seed": "Alueella, jolla hyökkäys tapahtui, liikkuu yleisesti härkä- ja tiikerihaita.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012029357.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012029357.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hai tappoi 39-vuotiaan miehen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 107,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hai tappoi 39-vuotiaan miehen",
+      "description": "Alueella, jolla hyökkäys tapahtui, liikkuu yleisesti härkä- ja tiikerihaita.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Hai tappoi 39-vuotiaan miehen",
+    "description": "Alueella, jolla hyökkäys tapahtui, liikkuu yleisesti härkä- ja tiikerihaita.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012029357.html",
+    "published": "2026-05-25T20:47:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "7429237e253f668a486b14ed2a1fed9c",
+    "_url_hash": "8d520b1a63e4c0b6b40e7eb8e64ee111f66278e2b1855caf5cbc4fec49074405",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Yle]\nMies kuoli hain hyökkäyksessä Australiassa, paikallinen poliisi kertoi sunnuntaina.\n\nTapaus sattui mantereen pohjoisosassa, Hull Headsin kaupungin lähistöllä Queenslandissa.\n\nPoliisin mukaan 39-vuotias mies joutui hain hyökkäyksen kohteeksi Kennedy Shoal -nimisessä riuttakohteessa. Mies kuoli vammoihinsa venelaiturilla sen jälkeen, kun hänet oli nostettu vedestä.\n\nKyseessä on jo toinen kuolemaan johtanut haihyökkäys Australian vesillä toukokuun aikana. Aiemmin toukokuussa 38-vuotias mies kuoli hain hyökkäyksessä Länsi-Australiassa lähellä Perthin kaupunkia.\n\nHaihyökkäykset ovat Australiassa edelleen harvinaisia. Australian yleisradio ABC:n mukaan 2020-luvulla Australiassa on kirjattu vuosittain keskimäärin 27 purematapausta, joista keskimäärin kolme johtaa kuolemaan.\n\nVuonna 2025 hainpuremia kirjattiin koko maassa yhteensä 23 kappaletta. Tapauksista viisi johti kuolemaan.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-25T20:54:04.439431+00:00",
+  "failure": "Paketissa ei ole riittävää lähdetekstiä, paikkaa, ajankohtaa tai muita varmistettuja yksityiskohtia julkaistavan uutisartikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260525T205113Z_b50b4df63b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole riittävää lähdetekstiä, paikkaa, ajankohtaa tai muita varmistettuja yksityiskohtia julkaistavan uutisartikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
