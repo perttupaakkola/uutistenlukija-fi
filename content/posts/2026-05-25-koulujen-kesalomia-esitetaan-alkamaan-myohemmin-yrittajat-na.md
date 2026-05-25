@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/opetusministeri-ehdottaa-kesalomien-siirtoa-kahdella-viikolla-yrittajat-matkailuala-ja-perheet-hyotyisivat/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
