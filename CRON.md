@@ -20,7 +20,8 @@ All times UTC. Last synced from live `crontab -l` on 2026-03-28.
 
 ## Every 6 hours
 - **:00** — check_pipeline_silence.sh (alert if no publish in 6h) → pipeline-silence.log
-- **:00** — disk_monitor.sh (alert #operations if >80%) → disk_monitor.log
+- **:00** — scripts/disk_space_monitor.sh (warn at >=80%, critical at >=90%) → disk_monitor.log
+  - Legacy crontab path `pipeline/disk_monitor.sh` is a compatibility wrapper for the canonical script.
 - **:15** — check-analytics.sh → analytics.log
 
 ## Daily

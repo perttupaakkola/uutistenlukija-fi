@@ -1,50 +1,115 @@
 #!/usr/bin/env bash
-# Disk space monitor — posts Discord alert when usage exceeds thresholds
-# Runs via cron every 6 hours
+# Disk space monitor - records root/home usage and optionally posts alerts.
+# Runs via cron every 6 hours.
 set -euo pipefail
 
-THRESHOLD_WARN=80
-THRESHOLD_CRIT=90
-STATUS_FILE="/home/pertt/.openclaw/workspace/projects/uutistenlukija/data/disk_space_status.json"
+PROJECT_ROOT="/home/pertt/.openclaw/workspace/projects/uutistenlukija"
+THRESHOLD_WARN="${DISK_MONITOR_WARN_PCT:-80}"
+THRESHOLD_CRIT="${DISK_MONITOR_CRIT_PCT:-90}"
+STATUS_FILE="${DISK_MONITOR_STATUS_FILE:-$PROJECT_ROOT/data/disk_space_status.json}"
 WEBHOOK_URL="${DISCORD_PIPELINE_WEBHOOK:-}"
+DRY_RUN=0
+NO_ALERT=0
+
+usage() {
+    cat <<'EOF'
+Usage: scripts/disk_space_monitor.sh [--dry-run] [--no-alert]
+
+Options:
+  --dry-run   Print the status JSON without writing data/disk_space_status.json.
+  --no-alert  Do not post to Discord even if a webhook is configured.
+EOF
+}
+
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --dry-run)
+            DRY_RUN=1
+            ;;
+        --no-alert)
+            NO_ALERT=1
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            echo "Unknown argument: $1" >&2
+            usage >&2
+            exit 2
+            ;;
+    esac
+    shift
+done
 
 mkdir -p "$(dirname "$STATUS_FILE")"
 
-check_partition() {
+partition_pct() {
     local mount="$1"
-    local usage
-    usage=$(df "$mount" 2>/dev/null | awk 'NR==2 {gsub(/%/,"",$5); print $5}')
-    echo "$usage"
+    df -P "$mount" 2>/dev/null | awk 'NR==2 {gsub(/%/,"",$5); print $5}'
 }
 
-root_usage=$(check_partition "/")
-home_usage=$(check_partition "/home")
-now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+partition_available_kb() {
+    local mount="$1"
+    df -P "$mount" 2>/dev/null | awk 'NR==2 {print $4}'
+}
 
-# Write status file
-cat > "$STATUS_FILE" <<EOF
+status_for_usage() {
+    local root_pct="$1"
+    local home_pct="$2"
+    if [ "$root_pct" -ge "$THRESHOLD_CRIT" ] || [ "$home_pct" -ge "$THRESHOLD_CRIT" ]; then
+        echo "critical"
+    elif [ "$root_pct" -ge "$THRESHOLD_WARN" ] || [ "$home_pct" -ge "$THRESHOLD_WARN" ]; then
+        echo "warning"
+    else
+        echo "ok"
+    fi
+}
+
+root_usage=$(partition_pct "/")
+home_usage=$(partition_pct "/home")
+root_available_kb=$(partition_available_kb "/")
+home_available_kb=$(partition_available_kb "/home")
+now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+status=$(status_for_usage "$root_usage" "$home_usage")
+
+status_json=$(cat <<EOF
 {
   "timestamp": "$now",
+  "status": "$status",
+  "threshold_warn_pct": $THRESHOLD_WARN,
+  "threshold_crit_pct": $THRESHOLD_CRIT,
   "root_pct": $root_usage,
+  "root_available_kb": $root_available_kb,
   "home_pct": $home_usage,
-  "status": "$([ "$root_usage" -ge "$THRESHOLD_CRIT" ] || [ "$home_usage" -ge "$THRESHOLD_CRIT" ] && echo "critical" || ([ "$root_usage" -ge "$THRESHOLD_WARN" ] || [ "$home_usage" -ge "$THRESHOLD_WARN" ] && echo "warning" || echo "ok"))"
+  "home_available_kb": $home_available_kb,
+  "source": "scripts/disk_space_monitor.sh"
 }
 EOF
+)
 
-# Only post to Discord if threshold exceeded
-if [ "$root_usage" -ge "$THRESHOLD_CRIT" ] || [ "$home_usage" -ge "$THRESHOLD_CRIT" ]; then
-    msg="🚨 **CRITICAL: Disk space >90%** — root: ${root_usage}%, /home: ${home_usage}%"
-elif [ "$root_usage" -ge "$THRESHOLD_WARN" ] || [ "$home_usage" -ge "$THRESHOLD_WARN" ]; then
-    msg="⚠️ **Disk space >80%** — root: ${root_usage}%, /home: ${home_usage}%"
+if [ "$DRY_RUN" -eq 1 ]; then
+    printf '%s\n' "$status_json"
 else
-    exit 0  # All good, stay silent
+    printf '%s\n' "$status_json" > "$STATUS_FILE"
 fi
 
-# Post alert if webhook is set
-if [ -n "$WEBHOOK_URL" ]; then
+if [ "$status" = "critical" ]; then
+    msg="CRITICAL: Disk space >=${THRESHOLD_CRIT}% - root: ${root_usage}%, /home: ${home_usage}%"
+elif [ "$status" = "warning" ]; then
+    msg="WARNING: Disk space >=${THRESHOLD_WARN}% - root: ${root_usage}%, /home: ${home_usage}%"
+else
+    msg="OK: Disk space below thresholds - root: ${root_usage}%, /home: ${home_usage}%"
+fi
+
+if [ "$status" != "ok" ] && [ "$DRY_RUN" -eq 1 ]; then
+    echo "$msg" >&2
+elif [ "$status" != "ok" ]; then
+    echo "$msg"
+fi
+
+if [ "$status" != "ok" ] && [ "$NO_ALERT" -eq 0 ] && [ -n "$WEBHOOK_URL" ]; then
     curl -s -X POST "$WEBHOOK_URL" \
         -H "Content-Type: application/json" \
         -d "{\"content\": \"$msg\"}" >/dev/null 2>&1
 fi
-
-echo "$msg"
