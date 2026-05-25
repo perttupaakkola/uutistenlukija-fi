@@ -44,7 +44,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Avalanchen-kolmen-maalin-johto-suli-toisessa-er%C3%A4ss%C3%A4-Golden-Knights-on-voiton-p%C3%A4%C3%A4ss%C3%A4-finaalipaikasta/269831"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
