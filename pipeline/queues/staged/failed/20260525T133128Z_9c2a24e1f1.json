@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-25T13:31:28.126150+00:00",
+  "digest": "9c2a24e1f1",
+  "packet": {
+    "packet_id": "20260525T133128Z_9c2a24e1f1",
+    "created_at": "2026-05-25T13:31:28Z",
+    "headline_seed": "Moment of gas explosion at China coal mine",
+    "description_seed": "At least 82 people have been killed and two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say.",
+    "link": "https://www.bbc.com/news/videos/cedpp9ldnl9o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "NPR",
+      "NBC News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cedpp9ldnl9o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Moment of gas explosion at China coal mine"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "At least 82 people have been killed and at least two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say. Surveillance footage aired by state media on Monday showed the moment of the blast from inside Liushenyu Coal Mine in Shanxi province. The incident is the worst mining disaster in China since 2009, and Chinese President Xi Jinping said no effort must be spared in the search and rescue operation. The cause of the gas explosion has not yet been revealed, but state media reported that the levels of carbon monoxide in the mine were found to have \"exceeded limits\". A North Korean women's football team played in South Korea marking the first time athletes from the North have crossed the border in nearly 8 years.",
+        "word_count": 134,
+        "keyword_overlap": 15,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "At least 82 people have been killed and two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say.",
+        "word_count": 26,
+        "keyword_overlap": 14,
+        "strong_overlap": 7
+      },
+      {
+        "source": "NPR",
+        "source_type": "research",
+        "text": "This photo released by Xinhua News Agency, shows a scene at the rescue site of the Liushenyu coal mine in Changzhi city, China's Shanxi Province, Saturday, May 23, 2026. Cao Yang/XinHua via AP hide caption BEIJING — A gas explosion at a coal mine in China's northern Shanxi province killed at least 82 people, local officials said Saturday, in what was the country's deadliest mining accident in recent years. The official Xinhua News Agency said the accident at Changzhi city's Liushenyu coal mine happened on Friday evening. At a news conference late Saturday, local authorities said 82 were dead and that more than 120 people were hospitalized. Two were still missing. The death toll was a revised, lower number from earlier reports by state broadcaster CCTV that said 90 had died.",
+        "word_count": 131,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "BEIJING — A gas explosion at a coal mine in China’s northern province of Shanxi killed at least 90 people, state media reported Saturday. China’s official news agency Xinhua said the accident at Changzhi city’s Liushenyu coal mine happened on Friday evening. Around 247 workers were on duty at the time. Nine miners were still unaccounted for as of Saturday afternoon, Xinhua said, and more than 120 people were hospitalized. Chinese President Xi Jinping called for an all-out effort to rescue...",
+        "word_count": 81,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "At least 82 people have been killed and at least two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say. Surveillance footage aired by state media on Monday showed the moment of the blast from inside Liushenyu Coal Mine in Shanxi province. The incident is the worst mining disaster in China since 2009, and Chinese President Xi Jinping said no effort must be spared in the search and rescue operation. The cause of the gas explosion has not yet been revealed, but state media reported that the levels of carbon monoxide in the mine were found to have \"exceeded limits\". A North Korean women's football team played in South Korea marking the first time athletes from the North have crossed the border in nearly 8 years.\n\nAt least 82 people have been killed and two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say.\n\nThis photo released by Xinhua News Agency, shows a scene at the rescue site of the Liushenyu coal mine in Changzhi city, China's Shanxi Province, Saturday, May 23, 2026. Cao Yang/XinHua via AP hide caption BEIJING — A gas explosion at a coal mine in China's northern Shanxi province killed at least 82 people, local officials said Saturday, in what was the country's deadliest mining accident in recent years. The official Xinhua News Agency said the accident at Changzhi city's Liushenyu coal mine happened on Friday evening. At a news conference late Saturday, local authorities said 82 were dead and that more than 120 people were hospitalized. Two were still missing. The death toll was a revised, lower number from earlier reports by state broadcaster CCTV that said 90 had died.\n\nBEIJING — A gas explosion at a coal mine in China’s northern province of Shanxi killed at least 90 people, state media reported Saturday. China’s official news agency Xinhua said the accident at Changzhi city’s Liushenyu coal mine happened on Friday evening. Around 247 workers were on duty at the time. Nine miners were still unaccounted for as of Saturday afternoon, Xinhua said, and more than 120 people were hospitalized. Chinese President Xi Jinping called for an all-out effort to rescue...",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 984,
+      "selected_blocks": 4,
+      "selected_source_words": 372,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NPR",
+        "NPR",
+        "NPR",
+        "Global Times",
+        "NBC News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "NPR",
+        "NBC News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Moment of gas explosion at China coal mine",
+      "description": "At least 82 people have been killed and two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Moment of gas explosion at China coal mine",
+    "description": "At least 82 people have been killed and two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say.",
+    "link": "https://www.bbc.com/news/videos/cedpp9ldnl9o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-25T10:20:57+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "7e16b22da0c3d7a247ad6768bdfb7351",
+    "_url_hash": "dd744553b845e2b2ff80d50da15d274251681e8eccb1ab2460779767d6f28da1",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAt least 82 people have been killed and at least two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say.\n\nSurveillance footage aired by state media on Monday showed the moment of the blast from inside Liushenyu Coal Mine in Shanxi province.\n\nThe incident is the worst mining disaster in China since 2009, and Chinese President Xi Jinping said no effort must be spared in the search and rescue operation.\n\nThe cause of the gas explosion has not yet been revealed, but state media reported that the levels of carbon monoxide in the mine were found to have \"exceeded limits\".\n\nA North Korean women's football team played in South Korea marking the first time athletes from the North have crossed the border in nearly 8 years.\n\nPakistan says it hit 'military and terrorist infrastructure' - but the UN and victims' families reject this claim.\n\nOfficials said the group had been hiking up the active volcano despite a climbing ban.\n\nA glamping facility was destroyed by the raging torrent in Bogor, West Java on 4 May.\n\nThousands of people have been displaced after a fire destroyed around 1,000 homes in Malaysia's Sabah state.\n\nThe escape of Neukgu, a two-year-old wolf, from a zoo in the city of Daejon captured national attention.\n\nThe Philippine President challenged anyone questioning his fitness to join him in the gym.\n\nK-pop stars BTS kicked off their marathon world tour in South Korea, with a heavy nod to their new album Arirang.\n\nThe megastars kick off their grandest tour, the largest in K-pop history, in Seoul on Thursday after a nearly four-year hiatus.\n\nMin Aung Hlaing presided over his last military parade in Myanmar before he takes up the role of president.\n\nDrivers are queuing for hours at petrol stations in Myanmar as the Iran war continues to send shockwaves across the globe.\n\nBBC News Asia Business Correspondent Suranajana Tewari spoke to people taking to the streets of Manila.\n\nSome 260,000 fans are expected to watch BTS perform together on Saturday for the first time since 2022.\n\nEleven people were killed and dozens injured when a huge blaze engulfed a car parts factory in the central city of Daejeon.\n\nSenior Kashmir leader Farooq Abdullah escaped unhurt after the incident and the suspect is in custody.\n\nA young Japanese macaque at the Ichikawa City Zoo in Japan went viral, after videos showed him playing with a soft toy that zookeepers gave him for comfort.\n\nWanted for multiple counts of theft, the suspect was caught ou\n\n---\n\n[Lähde: NPR]\nThis photo released by Xinhua News Agency, shows a scene at the rescue site of the Liushenyu coal mine in Changzhi city, China's Shanxi Province, Saturday, May 23, 2026.\n                \n                    \n                    Cao Yang/XinHua via AP\n                    \n                \n                hide caption\n\nBEIJING — A gas explosion at a coal mine in China's northern Shanxi province killed at least 82 people, local officials said Saturday, in what was the country's deadliest mining accident in recent years.\n\nThe official Xinhua News Agency said the accident at Changzhi city's Liushenyu coal mine happened on Friday evening.\n\nAt a news conference late Saturday, local authorities said 82 were dead and that more than 120 people were hospitalized. Two were still missing. The death toll was a revised, lower number from earlier reports by state broadcaster CCTV that said 90 had died.\n\nThe scene at the coal mine was \"chaotic\" in the immediate aftermath of the accident, they said, and figures provided at the time were initial and not definite.\n\nThe explosion was under investigation, local officials said, adding there were \"serious violations\" of the law by the mine's operator. They did not elaborate on any specific violations.\n\nEarlier on Saturday, Xinhua reported that rescue work was pressing on a day after the accident, with hundreds of rescuers and medical personnel sent to the site. Among the injured, many were hurt by toxic gas, according to CCTV.\n\nIn this photo released by Xinhua News Agency, rescue workers pass by an ambulance in the aftermath of an explosion at Changzhi city's Liushenyu coal mine in Qinyuan county, northern China's Shanxi Province on Saturday, May 23, 2026.\n                \n                    \n                    Cao Yang/Xinhua via AP\n                    \n                \n                hide caption\n\nChinese President Xi Jinping has called for an all-out effort to rescue the missing, Xinhua reported. Xi also called for a \"thorough investigation\" and accountability \"in accordance with the law.\"\n\nXinhua later reported that those responsible for the company involved in the mine accident have been \"placed under control,\" citing the local emergency management bureau.\n\nAn investigation team sent by China's powerful State Council, equivalent to the country's Cabinet, would be conducting a \"rigorous and uncompromising\" probe into the deadly explosion, a separate Xinhua report said following Xi's remarks.\n\nWang Yong, one of the hospital\n\n---\n\n[Lähde: Global Times]\nRescuers work on the site following a gas explosion at the Liushenyu coal mine in Qinyuan county, North China's Shanxi Province, on May 23, 2026. Photo: VCG\n\nRescue efforts continued on Sunday after a gas explosion hit Liushenyu coal mine in Qinyuan county of Changzhi, ...\n\nIn a mine located in Hami city, Northwest China's Xinjiang Uygur Autonomous Region, a fleet of 91 homegrown ...\n\nA coal mine in Xieqiao town, Fuyang city, East China's Anhui Province, experienced a gas explosion around Monday ...\n\n---\n\n[Lähde: NBC News]\nBEIJING — A gas explosion at a coal mine in China’s northern province of Shanxi killed at least 90 people, state media reported Saturday.\n\nChina’s official news agency Xinhua said the accident at Changzhi city’s Liushenyu coal mine happened on Friday evening. Around 247 workers were on duty at the time.\n\nNine miners were still unaccounted for as of Saturday afternoon, Xinhua said, and more than 120 people were hospitalized.\n\nChinese President Xi Jinping called for an all-out effort to rescue...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-25T13:36:10.778768+00:00",
+  "failure": "content too short: 231 words",
+  "payload": {
+    "packet_id": "20260525T133128Z_9c2a24e1f1",
+    "title": "Kaasuräjähdys surmasi ainakin 82 ihmistä hiilikaivoksessa Pohjois-Kiinassa",
+    "summary": "Shanxin maakunnassa Pohjois-Kiinassa sijaitsevassa Liushenyun hiilikaivoksessa tapahtunut kaasuräjähdys on surmannut viranomaisten mukaan ainakin 82 ihmistä. Kaksi ihmistä on edelleen kateissa ja yli 120 on joutunut sairaalahoitoon.",
+    "content": "Shanxin maakunnassa Pohjois-Kiinassa sijaitsevassa Liushenyun hiilikaivoksessa tapahtunut kaasuräjähdys on surmannut paikallisten viranomaisten mukaan ainakin 82 ihmistä. Kaksi ihmistä on edelleen kateissa, ja yli 120 ihmistä on toimitettu sairaalahoitoon Changzhin kaupungissa sattuneen onnettomuuden jälkeen.\n\n## Räjähdys tapahtui Liushenyun kaivoksessa\n\nKiinan virallisen uutistoimiston Xinhuan mukaan onnettomuus tapahtui perjantai-iltana Liushenyun hiilikaivoksessa Changzhin kaupungissa Shanxin maakunnassa. NBC:n välittämän valtiollisen median tiedon mukaan kaivoksessa oli tapahtumahetkellä työvuorossa noin 247 työntekijää.\n\nPaikalliset viranomaiset kertoivat lauantai-iltana järjestetyssä tiedotustilaisuudessa, että kuolleita oli 82 ja kaksi ihmistä oli yhä kateissa. Uhriluku tarkentui aiemmista valtiollisen CCTV:n tiedoista, joissa kuolleiden määräksi oli kerrottu 90. Aiemmin lauantaina kadoksissa olevien määräksi oli ilmoitettu yhdeksän.\n\n## Pelastustyöt ja tutkinta jatkuvat\n\nValtiollinen media julkaisi maanantaina valvontakamerakuvaa, jonka kerrottiin näyttävän räjähdyksen hetken kaivoksen sisältä. Xinhua julkaisi myös kuvan pelastuspaikalta Liushenyun kaivoksella Changzhissa. BBC:n mukaan onnettomuutta on kuvattu Kiinan vakavimmaksi kaivosonnettomuudeksi sitten vuoden 2009.\n\nKiinan presidentti Xi Jinping on vaatinut, että etsintä- ja pelastustoimissa tehdään kaikki mahdollinen. Pelastustyöt jatkuivat alueella, kun viranomaiset etsivät yhä kateissa olevia ja selvittivät sairaalahoitoon joutuneiden tilannetta.\n\nRäjähdyksen tarkkaa syytä ei ole toistaiseksi kerrottu julkisuuteen. Valtiollisen median mukaan kaivoksessa mitatut häkäpitoisuudet olivat ylittäneet sallitut rajat. Tiedossa ei kuitenkaan ole, mikä johti kaasun kertymiseen tai itse räjähdykseen.\n\n## Uhriluvut perustuivat viranomaistietoihin\n\nLähteissä oli eroja ensimmäisissä uhrimäärissä ja kadonneiden lukumäärissä. Tässä jutussa käytetään paikallisten viranomaisten tiedotustilaisuudessa antamaa tarkennettua lukua, jonka mukaan kuolleita on ainakin 82 ja kaksi ihmistä on kateissa. Yli 120 ihmisen kerrottiin joutuneen sairaalahoitoon.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kiina",
+      "kaivosonnettomuus",
+      "Shanxi",
+      "hiilikaivos",
+      "räjähdys"
+    ],
+    "summary_bullets": [
+      "Ainakin 82 ihmistä on kuollut kaasuräjähdyksessä Liushenyun hiilikaivoksessa Shanxin maakunnassa.",
+      "Kaksi ihmistä on edelleen kateissa ja yli 120 on joutunut sairaalahoitoon.",
+      "Räjähdyksen syytä ei ole kerrottu, mutta kaivoksessa havaittiin raja-arvot ylittäneitä häkäpitoisuuksia."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Uhrimääräksi valittu viranomaisten myöhemmin tarkentama 82, vaikka yksi lähde mainitsi aiemman 90 kuolleen arvion. Ajankohdassa lähteissä on epäselvyyttä, joten jutussa käytetään tarkinta usean lähteen tukemaa tietoa perjantai-illasta eikä toisteta ristiriitaista sunnuntai-mainintaa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260525T133128Z_9c2a24e1f1\",\n  \"title\": \"Kaasuräjähdys surmasi ainakin 82 ihmistä hiilikaivoksessa Pohjois-Kiinassa\",\n  \"summary\": \"Shanxin maakunnassa Pohjois-Kiinassa sijaitsevassa Liushenyun hiilikaivoksessa tapahtunut kaasuräjähdys on surmannut viranomaisten mukaan ainakin 82 ihmistä. Kaksi ihmistä on edelleen kateissa ja yli 120 on joutunut sairaalahoitoon.\",\n  \"content\": \"Shanxin maakunnassa Pohjois-Kiinassa sijaitsevassa Liushenyun hiilikaivoksessa tapahtunut kaasuräjähdys on surmannut paikallisten viranomaisten mukaan ainakin 82 ihmistä. Kaksi ihmistä on edelleen kateissa, ja yli 120 ihmistä on toimitettu sairaalahoitoon Changzhin kaupungissa sattuneen onnettomuuden jälkeen.\\n\\n## Räjähdys tapahtui Liushenyun kaivoksessa\\n\\nKiinan virallisen uutistoimiston Xinhuan mukaan onnettomuus tapahtui perjantai-iltana Liushenyun hiilikaivoksessa Changzhin kaupungissa Shanxin maakunnassa. NBC:n välittämän valtiollisen median tiedon mukaan kaivoksessa oli tapahtumahetkellä työvuorossa noin 247 työntekijää.\\n\\nPaikalliset viranomaiset kertoivat lauantai-iltana järjestetyssä tiedotustilaisuudessa, että kuolleita oli 82 ja kaksi ihmistä oli yhä kateissa. Uhriluku tarkentui aiemmista valtiollisen CCTV:n tiedoista, joissa kuolleiden määräksi oli kerrottu 90. Aiemmin lauantaina kadoksissa olevien määräksi oli ilmoitettu yhdeksän.\\n\\n## Pelastustyöt ja tutkinta jatkuvat\\n\\nValtiollinen media julkaisi maanantaina valvontakamerakuvaa, jonka kerrottiin näyttävän räjähdyksen hetken kaivoksen sisältä. Xinhua julkaisi myös kuvan pelastuspaikalta Liushenyun kaivoksella Changzhissa. BBC:n mukaan onnettomuutta on kuvattu Kiinan vakavimmaksi kaivosonnettomuudeksi sitten vuoden 2009.\\n\\nKiinan presidentti Xi Jinping on vaatinut, että etsintä- ja pelastustoimissa tehdään kaikki mahdollinen. Pelastustyöt jatkuivat alueella, kun viranomaiset etsivät yhä kateissa olevia ja selvittivät sairaalahoitoon joutuneiden tilannetta.\\n\\nRäjähdyksen tarkkaa syytä ei ole toistaiseksi kerrottu julkisuuteen. Valtiollisen median mukaan kaivoksessa mitatut häkäpitoisuudet olivat ylittäneet sallitut rajat. Tiedossa ei kuitenkaan ole, mikä johti kaasun kertymiseen tai itse räjähdykseen.\\n\\n## Uhriluvut perustuivat viranomaistietoihin\\n\\nLähteissä oli eroja ensimmäisissä uhrimäärissä ja kadonneiden lukumäärissä. Tässä jutussa käytetään paikallisten viranomaisten tiedotustilaisuudessa antamaa tarkennettua lukua, jonka mukaan kuolleita on ainakin 82 ja kaksi ihmistä on kateissa. Yli 120 ihmisen kerrottiin joutuneen sairaalahoitoon.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kiina\",\n    \"kaivosonnettomuus\",\n    \"Shanxi\",\n    \"hiilikaivos\",\n    \"räjähdys\"\n  ],\n  \"summary_bullets\": [\n    \"Ainakin 82 ihmistä on kuollut kaasuräjähdyksessä Liushenyun hiilikaivoksessa Shanxin maakunnassa.\",\n    \"Kaksi ihmistä on edelleen kateissa ja yli 120 on joutunut sairaalahoitoon.\",\n    \"Räjähdyksen syytä ei ole kerrottu, mutta kaivoksessa havaittiin raja-arvot ylittäneitä häkäpitoisuuksia.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.9,\n  \"journalist_note\": \"Uhrimääräksi valittu viranomaisten myöhemmin tarkentama 82, vaikka yksi lähde mainitsi aiemman 90 kuolleen arvion. Ajankohdassa lähteissä on epäselvyyttä, joten jutussa käytetään tarkinta usean lähteen tukemaa tietoa perjantai-illasta eikä toisteta ristiriitaista sunnuntai-mainintaa.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260525T133128Z_9c2a24e1f1",
+    "category": "Kotimaa",
+    "selected_source_words": 372,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 231,
+    "issues": [
+      "content too short: 231 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Kaasuräjähdys surmasi ainakin 82 ihmistä hiilikaivoksessa Pohjois-Kiinassa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-25T13:36:10.778508+00:00",
+    "repair_trigger": "pre_repair_word_count=233; selected_source_words=372; selected_source_blocks=4",
+    "pre_repair_word_count": 233,
+    "pre_repair_lead_word_count": 33,
+    "post_repair_word_count": 231,
+    "post_repair_lead_word_count": 33,
+    "selected_source_words_at_repair": 372,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 372,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 231 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:96b2385b59",
+      "2:BBC World:e18f66eb24",
+      "3:NPR:093c165b51",
+      "4:NBC News:308ec9b514"
+    ],
+    "final_issues": [
+      "content too short: 231 words"
+    ],
+    "recovered": false
+  }
+}
