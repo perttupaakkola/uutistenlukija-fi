@@ -35,11 +35,14 @@ ANALYTICS_TOKENS="$SECRETS_DIR/analytics-tokens.json"
 SEARCH_CONSOLE_TOKENS="$SECRETS_DIR/search-console-tokens.json"
 OUTPUT_DIR="/workspace/projects/uutistenlukija/analytics"
 OUTPUT_FILE="$OUTPUT_DIR/daily-report.json"
+PROJECT_DIR="/home/pertt/.openclaw/workspace/projects/uutistenlukija"
+SENTINEL_SCRIPT="$PROJECT_DIR/scripts/analytics_oauth_sentinel.py"
 PROPERTY_ID="529369568"
 SC_SITE="sc-domain:uutistenlukija.fi"
 TODAY=$(date -u +%Y-%m-%d)
 YESTERDAY=$(date -u -d "yesterday" +%Y-%m-%d)
 SEVEN_DAYS_AGO=$(date -u -d "7 days ago" +%Y-%m-%d)
+OAUTH_FAILED_SERVICES=()
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -81,9 +84,32 @@ get_token() {
     echo "$tok"
 }
 
+record_oauth_sentinel() {
+    local service="$1"
+    OAUTH_FAILED_SERVICES+=("$service")
+}
+
+flush_oauth_sentinel() {
+    if [[ "${#OAUTH_FAILED_SERVICES[@]}" -eq 0 ]]; then
+        return
+    fi
+    if [[ -x "$SENTINEL_SCRIPT" || -f "$SENTINEL_SCRIPT" ]]; then
+        local args=()
+        local service
+        for service in "${OAUTH_FAILED_SERVICES[@]}"; do
+            args+=(--service "$service")
+        done
+        python3 "$SENTINEL_SCRIPT" \
+            "${args[@]}" \
+            --source-command "SECRETS_DIR=$SECRETS_DIR bash pipeline/check-analytics.sh" \
+            --source-log "pipeline/logs/analytics.log" || true
+    fi
+}
+
 # ── GA4: refresh access token ─────────────────────────────────────────────────
 echo "[check-analytics] Refreshing GA4 token..."
 GA4_TOKEN=$(refresh_token "$ANALYTICS_TOKENS") || {
+    record_oauth_sentinel ga4
     echo "[check-analytics] Falling back to stored GA4 token"
     GA4_TOKEN=$(get_token "$ANALYTICS_TOKENS")
 }
@@ -150,9 +176,11 @@ SOURCES_RAW=$(curl -s -X POST \
 # ── Search Console: refresh token ─────────────────────────────────────────────
 echo "[check-analytics] Refreshing Search Console token..."
 SC_TOKEN=$(refresh_token "$SEARCH_CONSOLE_TOKENS") || {
+    record_oauth_sentinel search_console
     echo "[check-analytics] Falling back to stored SC token"
     SC_TOKEN=$(get_token "$SEARCH_CONSOLE_TOKENS")
 }
+flush_oauth_sentinel
 
 # ── Search Console: top queries (last 7 days) ────────────────────────────────
 echo "[check-analytics] Fetching Search Console queries..."

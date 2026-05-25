@@ -2,7 +2,7 @@
 """fetch_search_console.py — Pull GSC data → static/api/search-console-data.json
 Cron: daily 06:30 UTC. Usage: python3 scripts/fetch_search_console.py [--days 28] [--dry-run]
 """
-import argparse, json, os, sys, urllib.request, urllib.error, urllib.parse
+import argparse, json, os, subprocess, sys, urllib.request, urllib.error, urllib.parse
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -16,6 +16,7 @@ _SC_SECRETS = [
 ]
 OUTPUT_FILE = PROJECT_DIR / "static" / "api" / "search-console-data.json"
 SITE_URL = "sc-domain:uutistenlukija.fi"
+SENTINEL_SCRIPT = PROJECT_DIR / "scripts" / "analytics_oauth_sentinel.py"
 
 
 def find_secrets():
@@ -40,6 +41,24 @@ def refresh_token(f):
         return tok
     except Exception as e:
         print(f"[fetch_sc] refresh failed: {e}", file=sys.stderr); return None
+
+
+def record_oauth_sentinel():
+    if not SENTINEL_SCRIPT.exists():
+        return
+    subprocess.run(
+        [
+            "python3",
+            str(SENTINEL_SCRIPT),
+            "--service",
+            "search_console",
+            "--source-command",
+            "scripts/run_with_project_env.sh python3 scripts/fetch_search_console.py",
+            "--source-log",
+            "pipeline/logs/fetch-search-console.log",
+        ],
+        check=False,
+    )
 
 
 def fetch_rows(token, days=28):
@@ -79,7 +98,9 @@ def main():
         print("[fetch_sc] no token file found", file=sys.stderr); return 1
     print(f"[fetch_sc] using: {secrets}")
     token = refresh_token(secrets)
-    if not token: return 1
+    if not token:
+        record_oauth_sentinel()
+        return 1
 
     rows = fetch_rows(token, args.days)
     if not rows:

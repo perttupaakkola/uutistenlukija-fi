@@ -12,6 +12,7 @@ Cron (daily 07:00 UTC):
 """
 import json
 import os
+import subprocess
 import sys
 import urllib.request
 import urllib.error
@@ -29,6 +30,7 @@ _SECRETS_CANDIDATES = [
     Path.home() / ".openclaw" / "workspace" / "projects" / "uutistenlukija" / ".secrets" / "analytics-tokens.json",
 ]
 ANALYTICS_TOKENS = next((p for p in _SECRETS_CANDIDATES if p.exists()), _SECRETS_CANDIDATES[0])
+SENTINEL_SCRIPT = PROJECT_DIR / "scripts" / "analytics_oauth_sentinel.py"
 ENV_FILES = [
     PROJECT_DIR / ".env",
     PROJECT_DIR / "pipeline" / ".env",
@@ -87,10 +89,29 @@ def refresh_ga4_token(data: dict) -> str | None:
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")
         print(f"GA4 token refresh failed {e.code}: {body[:300]}")
+        record_oauth_sentinel()
         return None
     except (OSError, KeyError, json.JSONDecodeError, urllib.error.URLError) as e:
         print(f"GA4 token refresh failed: {e}")
         return None
+
+
+def record_oauth_sentinel() -> None:
+    if not SENTINEL_SCRIPT.exists():
+        return
+    subprocess.run(
+        [
+            "python3",
+            str(SENTINEL_SCRIPT),
+            "--service",
+            "ga4",
+            "--source-command",
+            "scripts/run_with_project_env.sh python3 scripts/daily_traffic_card.py --dry-run",
+            "--source-log",
+            "pipeline/logs/daily-traffic-card.log",
+        ],
+        check=False,
+    )
 
 
 def ga4_report(token: str, start: str, end: str, metrics: list[str], dimensions: list[str] | None = None) -> dict:
