@@ -1,6 +1,6 @@
 # CRON.md — Scheduled Pipeline Jobs
 
-All times UTC. Last synced from live `crontab -l` on 2026-03-28.
+All times UTC. Last synced from live `crontab -l` on 2026-05-25 for disk monitor schedule.
 
 ---
 
@@ -21,7 +21,8 @@ All times UTC. Last synced from live `crontab -l` on 2026-03-28.
 ## Every 6 hours
 - **:00** — check_pipeline_silence.sh (alert if no publish in 6h) → pipeline-silence.log
 - **:00** — scripts/disk_space_monitor.sh (warn at >=80%, critical at >=90%) → disk_monitor.log
-  - Legacy crontab path `pipeline/disk_monitor.sh` is a compatibility wrapper for the canonical script.
+  - Live crontab should contain only this canonical Uutistenlukija disk monitor entry.
+  - Legacy path `pipeline/disk_monitor.sh` remains as a manual/backward-compatible wrapper, but is not scheduled.
 - **:15** — check-analytics.sh → analytics.log
 
 ## Daily

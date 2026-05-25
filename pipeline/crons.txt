@@ -70,8 +70,8 @@
 # Pipeline health monitor (every 15 min — /api/health.json + pipeline degraded + stale >6h → #operations)
 */15 * * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/health_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/health-monitor.log 2>&1
 
-# Disk monitor (every 6h)
-0 */6 * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/disk_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/disk_monitor.log 2>&1
+# Disk monitor (every 6h; canonical entry)
+0 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/disk_space_monitor.sh >> pipeline/logs/disk_monitor.log 2>&1
 
 # Log rotation (Sundays 06:00 UTC)
 0 6 * * 0 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/rotate_logs.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/rotate_logs.log 2>&1
