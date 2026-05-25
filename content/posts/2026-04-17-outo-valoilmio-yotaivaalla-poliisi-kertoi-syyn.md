@@ -2,7 +2,7 @@
 title: "Outo valoilmiö yötaivaalla: Poliisi kertoi syyn"
 date: 2026-04-17T01:43:29.103797+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

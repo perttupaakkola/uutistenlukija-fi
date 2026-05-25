@@ -2,7 +2,7 @@
 title: "Uhrin paon estänyt tuomittiin Helsingin karaoketaposta – mies tapettiin juomariidan jälkeen"
 date: 2026-04-14T14:02:59.814175+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

@@ -2,7 +2,7 @@
 title: "Mies ampui perheenäidin, 31, kuoliaaksi lasten edessä – oikeuden­käynnissä heti viivästys"
 date: 2026-04-16T06:32:56.874849+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

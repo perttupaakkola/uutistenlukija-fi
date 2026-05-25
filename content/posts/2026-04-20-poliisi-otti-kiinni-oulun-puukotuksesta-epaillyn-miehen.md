@@ -2,7 +2,7 @@
 title: "Poliisi otti kiinni Oulun puukotuksesta epäillyn miehen"
 date: 2026-04-20T13:30:59.859193+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

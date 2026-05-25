@@ -2,7 +2,7 @@
 title: "Orimattila rakensi kahden miljoonan euron koulun – myy kiinteistöä nyt 50 000 euron lähtöhinnalla"
 date: 2026-04-15T15:13:38.207805+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

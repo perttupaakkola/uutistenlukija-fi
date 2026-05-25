@@ -2,7 +2,7 @@
 title: "SDP lähtee puoluekokoukseen johtoasemasta, mutta vaalivoitto ei ole varma"
 date: 2026-05-21T02:48:05.642674+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

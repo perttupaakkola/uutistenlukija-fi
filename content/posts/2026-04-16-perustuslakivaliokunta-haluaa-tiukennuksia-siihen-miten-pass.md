@@ -2,7 +2,7 @@
 title: "Pe­rus­tus­la­ki­va­lio­kun­ta haluaa tiukennuksia siihen, miten passien sormenjälkiä voisi luovuttaa vakavien rikosten tutkintaan"
 date: 2026-04-16T09:53:21.616973+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

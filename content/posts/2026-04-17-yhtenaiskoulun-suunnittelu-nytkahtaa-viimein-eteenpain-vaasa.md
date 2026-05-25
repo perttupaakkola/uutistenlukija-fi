@@ -2,7 +2,7 @@
 title: "Yhtenäiskoulun suunnittelu nytkähtää viimein eteenpäin Vaasassa – vuosien valituskierre päättyy"
 date: 2026-04-17T08:43:02.781292+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

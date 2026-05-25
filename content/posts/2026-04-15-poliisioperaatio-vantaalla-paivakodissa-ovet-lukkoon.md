@@ -2,7 +2,7 @@
 title: "Poliisi­operaatio Vantaalla – Päiväkodissa ovet lukkoon"
 date: 2026-04-15T09:12:58.902919+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

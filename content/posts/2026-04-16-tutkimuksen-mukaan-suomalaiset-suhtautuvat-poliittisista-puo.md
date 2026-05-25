@@ -2,7 +2,7 @@
 title: "Tutkimuksen mukaan suomalaiset suhtautuvat poliittisista puolueista kaikkein myönteisimmin SDP:hen ja keskustaan."
 date: 2026-04-16T10:52:59.518680+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

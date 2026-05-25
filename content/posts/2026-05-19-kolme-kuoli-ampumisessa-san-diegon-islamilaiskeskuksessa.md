@@ -2,7 +2,7 @@
 title: "Kolme kuoli ampumisessa San Diegon islamilaiskeskuksessa"
 date: 2026-05-19T01:08:05.790921+00:00
 categories:
-  - Tiede
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

@@ -2,7 +2,7 @@
 title: "Australian tealit keskustelevat mahdollisesta uudesta puolueesta"
 date: 2026-05-24T22:48:04.984892+00:00
 categories:
-  - Tiede
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

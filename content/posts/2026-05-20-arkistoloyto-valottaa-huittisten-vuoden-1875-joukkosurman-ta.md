@@ -2,7 +2,7 @@
 title: "Arkistolöytö valottaa Huittisten vuoden 1875 joukkosurman taustoja"
 date: 2026-05-20T10:48:07.341381+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

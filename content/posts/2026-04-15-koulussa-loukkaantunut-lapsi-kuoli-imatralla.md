@@ -2,7 +2,7 @@
 title: "Koulussa loukkaantunut lapsi kuoli Imatralla"
 date: 2026-04-15T06:42:44.519460+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

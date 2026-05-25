@@ -2,7 +2,7 @@
 title: "29-vuotias oululaismies murhasi ja raiskasi törkeästi naisen"
 date: 2026-04-09T08:23:42.525996+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

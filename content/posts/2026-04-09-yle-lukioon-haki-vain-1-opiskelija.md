@@ -2,7 +2,7 @@
 title: "Yle: Lukioon haki vain 1 opiskelija"
 date: 2026-04-09T05:03:21.600125+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

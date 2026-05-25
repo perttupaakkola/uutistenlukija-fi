@@ -2,7 +2,7 @@
 title: "Dramaattinen video Yhdysvalloista: Rehtori taltuttaa henkensä uhalla kouluampujan"
 date: 2026-04-15T13:23:59.432424+00:00
 categories:
-  - Tiede
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

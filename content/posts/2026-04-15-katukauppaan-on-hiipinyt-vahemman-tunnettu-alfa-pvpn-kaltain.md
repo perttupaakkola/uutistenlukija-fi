@@ -2,7 +2,7 @@
 title: "Katukauppaan on hiipinyt vähemmän tunnettu alfa-PVP:n kaltainen huume – tällaisesta aineesta on kyse"
 date: 2026-04-15T04:53:16.565518+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
