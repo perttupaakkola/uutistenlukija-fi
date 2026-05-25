@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-25T02:11:13.121632+00:00",
+  "digest": "0da51eb8d5",
+  "packet": {
+    "packet_id": "20260525T021113Z_0da51eb8d5",
+    "created_at": "2026-05-25T02:11:13Z",
+    "headline_seed": "Ukraina tarvitsee 10 000 uutta väestönsuojaa – hollolalaisyritys hakee jalansijaa",
+    "description_seed": "Elementtiyrityksen edustajat käyvät neuvottelumatkoilla sotaa käyvässä maassa. Tähtäin on etenkin jälleenrakennusvaiheessa, jolloin suomalaisilla käytännöillä toteutettujen väestönsuojien edut pääsevät esiin. Suhteiden luominen vaatii pitkäjänteisyyttä ja kulttuurierojen tuntemusta.",
+    "link": "https://www.ess.fi/paikalliset/9476629",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9476629"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ukraina tarvitsee 10 000 uutta väestönsuojaa – hollolalaisyritys hakee jalansijaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Elementtiyrityksen edustajat käyvät neuvottelumatkoilla sotaa käyvässä maassa. Tähtäin on etenkin jälleenrakennusvaiheessa, jolloin suomalaisilla käytännöillä toteutettujen väestönsuojien edut pääsevät esiin. Suhteiden luominen vaatii pitkäjänteisyyttä ja kulttuurierojen tuntemusta.",
+        "word_count": 26,
+        "keyword_overlap": 24,
+        "strong_overlap": 21
+      }
+    ],
+    "source_text": "Elementtiyrityksen edustajat käyvät neuvottelumatkoilla sotaa käyvässä maassa. Tähtäin on etenkin jälleenrakennusvaiheessa, jolloin suomalaisilla käytännöillä toteutettujen väestönsuojien edut pääsevät esiin. Suhteiden luominen vaatii pitkäjänteisyyttä ja kulttuurierojen tuntemusta.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 1,
+      "selected_source_words": 26,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ukraina tarvitsee 10 000 uutta väestönsuojaa – hollolalaisyritys hakee jalansijaa",
+      "description": "Elementtiyrityksen edustajat käyvät neuvottelumatkoilla sotaa käyvässä maassa. Tähtäin on etenkin jälleenrakennusvaiheessa, jolloin suomalaisilla käytännöillä toteutettujen väestönsuojien edut pääsevät esiin. Suhteiden luominen vaatii pitkäjänteisyyttä ja kulttuurierojen tuntemusta.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Ukraina tarvitsee 10 000 uutta väestönsuojaa – hollolalaisyritys hakee jalansijaa",
+    "description": "Elementtiyrityksen edustajat käyvät neuvottelumatkoilla sotaa käyvässä maassa. Tähtäin on etenkin jälleenrakennusvaiheessa, jolloin suomalaisilla käytännöillä toteutettujen väestönsuojien edut pääsevät esiin. Suhteiden luominen vaatii pitkäjänteisyyttä ja kulttuurierojen tuntemusta.",
+    "link": "https://www.ess.fi/paikalliset/9476629",
+    "published": "2026-05-25T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "e2cf3d29c1b0cf513f5977630e0529f0",
+    "_url_hash": "2a44f7d8839867b6201383b12f2157d49ca8628d626a9491def991821de42219",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Elementtiyrityksen edustajat käyvät neuvottelumatkoilla sotaa käyvässä maassa. Tähtäin on etenkin jälleenrakennusvaiheessa, jolloin suomalaisilla käytännöillä toteutettujen väestönsuojien edut pääsevät esiin. Suhteiden luominen vaatii pitkäjänteisyyttä ja kulttuurierojen tuntemusta.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-25T02:13:26.933355+00:00",
+  "failure": "Lähdeaineisto on liian niukka eikä yksilöi yritystä, neuvottelujen ajankohtaa tai 10 000 väestönsuojan tarpeen taustaa riittävän luotettavasti julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260525T021113Z_0da51eb8d5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka eikä yksilöi yritystä, neuvottelujen ajankohtaa tai 10 000 väestönsuojan tarpeen taustaa riittävän luotettavasti julkaistavaan artikkeliin.\"}"
+}
