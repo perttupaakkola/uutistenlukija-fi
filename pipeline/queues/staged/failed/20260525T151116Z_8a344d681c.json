@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-25T15:11:16.767795+00:00",
+  "digest": "8a344d681c",
+  "packet": {
+    "packet_id": "20260525T151116Z_8a344d681c",
+    "created_at": "2026-05-25T15:11:16Z",
+    "headline_seed": "Väkivaltatilanne Espoossa – poliisi paikalla",
+    "description_seed": "Tilanteesta ei ole vaaraa sivullisille.",
+    "link": "https://www.is.fi/kotimaa/art-2000012032675.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012032675.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Väkivaltatilanne Espoossa – poliisi paikalla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 178,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "Stara",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Väkivaltatilanne Espoossa – poliisi paikalla",
+      "description": "Tilanteesta ei ole vaaraa sivullisille.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Väkivaltatilanne Espoossa – poliisi paikalla",
+    "description": "Tilanteesta ei ole vaaraa sivullisille.",
+    "link": "https://www.is.fi/kotimaa/art-2000012032675.html",
+    "published": "2026-05-25T15:05:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "2fcf242fe43c774a41fa38ce6f75d273",
+    "_url_hash": "9e9b2f12b438ffa002e0107782ba3a62977f398228c046a8b3dde0ff5d041f77",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Stara]\nEspoossa viikonloppuna järjestetyt kotibileet lähtivät käsistä niin pahasti, että juhlintaan puuttui lopulta poliisi. Huolta ovat aiheuttaneet alaikäisten läsnäolo juhlissa sekä huumeiden käyttö.\n\nLänsi-Uudenmaan poliisi sai lauantaina 21. maaliskuuta tehtävän Espoon Kivenlahteen hätäkeskuksen kautta. Hätäkeskukseen tehtyjen useiden ilmoitusten mukaan nuorilla oli käynnissä häiritsevät kotibileet.\n\nIlmoituksissa oli ilmaistu myös huoli siitä, että alaikäiset käyttivät juhlissa mahdollisesti päihteitä. Tehtäväpaikalle lähti muutama poliisipartio. Poliisin arvion mukaan talossa oli viettämässä iltaa yli sata nuorta.\n\nPoliisin tapaamista henkilöistä kaikki olivat yhtä lukuun ottamatta alle 18-vuotiaita. Poliisin tekemien havaintojen mukaa juhlissa oli viitteitä kannabiksen ja kokaiinin käytöstä.\n\nTalo osoittautui vuokratuksi juhlakäyttöön lyhytvuokrauspalvelun kautta. Poliisi keskeytti juhlat ja tyhjensi rakennuksen epäiltyään, että alaikäiset käyttivät tilaisuudessa päihteitä.\n\nPoliisi tutkii asiaa rikosnimikkeellä huumausainerikos. Länsi-Uudenmaan poliisi pyytää alaikäisten lasten huoltajia pitämään silmällä sitä, missä seurassa lapset viettävät vapaa-aikaa erityisesti viikonloppuisin.\n\n– Kehotamme myös keskustelemaan huumausaineiden käytön vaarallisuudesta ja siitä koituvista seurauksista. Huumausaineiden käytön haittavaikutukset voivat olla moniulotteisia, kertoo poliisin tiedotteessa rikoskomisario Mikko Alakärppä.\n\nVoit lukea lisää juuri tähän artikkeliin liittyvistä teemoista ja aiheista, kuten bileet, Espoo, Poliisi Suomi tai laajemmin samasta aihealueesta Uutiset -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-25T15:13:39.994389+00:00",
+  "failure": "Lähdeaineisto puuttuu lähes kokonaan, eikä tiedossa ole riittävästi varmistettuja yksityiskohtia julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260525T151116Z_8a344d681c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu lähes kokonaan, eikä tiedossa ole riittävästi varmistettuja yksityiskohtia julkaistavaan artikkeliin.\"}"
+}
