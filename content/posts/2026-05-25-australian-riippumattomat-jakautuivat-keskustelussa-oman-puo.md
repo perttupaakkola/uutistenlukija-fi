@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/may/25/zali-steggall-teals-forming-own-party-independents-alliance"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
