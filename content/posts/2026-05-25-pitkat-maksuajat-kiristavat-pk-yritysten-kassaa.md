@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/pitkat-maksuajat-kiristavat-pk-yrityksen-kassaa-laskurahoituksella-rahat-kayttoon-nopeammin/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

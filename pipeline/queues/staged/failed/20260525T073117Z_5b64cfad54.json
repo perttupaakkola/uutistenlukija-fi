@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-25T07:31:17.576133+00:00",
+  "digest": "5b64cfad54",
+  "packet": {
+    "packet_id": "20260525T073117Z_5b64cfad54",
+    "created_at": "2026-05-25T07:31:17Z",
+    "headline_seed": "Öljyä – Kuutostiellä liikenne sekaisin",
+    "description_seed": "Tiellä on öljyä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012030937.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012030937.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Öljyä – Kuutostiellä liikenne sekaisin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 113,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Öljyä – Kuutostiellä liikenne sekaisin",
+      "description": "Tiellä on öljyä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Öljyä – Kuutostiellä liikenne sekaisin",
+    "description": "Tiellä on öljyä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012030937.html",
+    "published": "2026-05-25T07:25:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "687b03fdca64d92a6423d08da3cbacb0",
+    "_url_hash": "21873198e87ae8b0de33a3a3deea48146052b204e6a954a1428b4b3cb167ce2a",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nKuubaa lähestyy parhaillaan kaksi säiliölaivaa, jotka tuovat öljyä ja maakaasua pahasta energiapulasta kärsivään Kuubaan.\n\nYhdysvaltain presidentti Donald Trump määräsi Kuuban saartoon tammikuussa. Trump vetosi Kuuban aiheuttamaan kansalliseen hätätilaan, mutta hän ei ole täsmentänyt, millaisesta hädästä on kysymys.\n\nFinancial Times -lehden mukaan Hongkongin lipun alla kulkevan tankkeri Sea Horsen on määrä saapua Kuubaan maanantaina 23.3. Mukanaan laivalla on 27 000 tonnia venäläistä öljyä.\n\nTämän lisäksi 4. huhtikuuta Kuubaan saapuisi Venäjän lipun alla seilaava säiliölaiva, jonka tankeissa on 100 000 tonnia öljyä, kertoo ukrainalainen Kyiv Independent -lehti.\n\nTrumpin uhkauksen mukaan Kuuballe öljyä vieville maille asetetaan kauppapakotteita. Venäjän ja Yhdysvaltain välinen kauppa on kuitenkin hyvin vähäistä, joten on epäselvää, millaisia sanktioita Venäjälle koituisi.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-25T07:33:34.831252+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä, paikkaa, ajankohtaa tai vahvistettuja seurauksia, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260525T073117Z_5b64cfad54\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä, paikkaa, ajankohtaa tai vahvistettuja seurauksia, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}
