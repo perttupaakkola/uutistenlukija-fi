@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-25T03:31:19.559312+00:00",
+  "digest": "3e4dc508f3",
+  "packet": {
+    "packet_id": "20260525T033119Z_3e4dc508f3",
+    "created_at": "2026-05-25T03:31:19Z",
+    "headline_seed": "Hän on Vladimir Putinin ”lopun nopeuttaja” – maanpakoon joutunut Roman Dobrohotov aikoo palata pian Moskovaan",
+    "description_seed": "Jos Vladimir Putin paljastaisi oman inhokkilistansa, toimittaja Roman Dobrohotov olisi kärkisijoilla. Tärkeimmäksi päämääräkseen hän nimeää Putinin lopun ”nopeuttamisen”.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012017106.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012017106.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hän on Vladimir Putinin ”lopun nopeuttaja” – maanpakoon joutunut Roman Dobrohotov aikoo palata pian Moskovaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 112,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hän on Vladimir Putinin ”lopun nopeuttaja” – maanpakoon joutunut Roman Dobrohotov aikoo palata pian Moskovaan",
+      "description": "Jos Vladimir Putin paljastaisi oman inhokkilistansa, toimittaja Roman Dobrohotov olisi kärkisijoilla. Tärkeimmäksi päämääräkseen hän nimeää Putinin lopun ”nopeuttamisen”.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Hän on Vladimir Putinin ”lopun nopeuttaja” – maanpakoon joutunut Roman Dobrohotov aikoo palata pian Moskovaan",
+    "description": "Jos Vladimir Putin paljastaisi oman inhokkilistansa, toimittaja Roman Dobrohotov olisi kärkisijoilla. Tärkeimmäksi päämääräkseen hän nimeää Putinin lopun ”nopeuttamisen”.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012017106.html",
+    "published": "2026-05-25T03:05:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "2c5e6ed40dc6cff5c8a8ccb7599ff071",
+    "_url_hash": "1a1fcff67add50a35387e928f4286255e2938fd98358e9f2eeae9c66226b9122",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: ksml.fi]\nVenäjän opposition näkyvin hahmo, siperialaisessa sairaalassa hoidossa oleva Aleksei Navalnyi pyritään lennättämään hoitoon Saksaan. Saksasta on lähdössä keskiyöllä paikallista aikaa ambulanssilento kohti Omskia. Lennolla on mukana koomapotilaiden hoitoon erikoistuneita lääkäreitä.\n\nNavalnyin on tarkoitus saada hoitoa Berliinissä, jos hän on perjantaina tarpeeksi hyvässä kunnossa siirtoa varten, kertoo saksalainen Bild-lehti .\n\nCinema For Peace Foundation -järjestön johtaja Jaka Bizilj kertoo uutistoimisto AFP:lle, että järjestö on ollut yhteydessä viranomaisiin Venäjällä siirron yksityiskohdista. Luvan saaminen siirtoon ei ole kuitenkaan vielä täysin varmistettu.\n\n– Toivomme, että saamme kaikki luvat siirtoa varten ja selvityksen potilaan terveydentilasta yön aikana, Bizilj sanoo.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-25T03:33:28.578109+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai varmennettuja taustatietoja, joten julkaistavaa artikkelia ei voi kirjoittaa ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260525T033119Z_3e4dc508f3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai varmennettuja taustatietoja, joten julkaistavaa artikkelia ei voi kirjoittaa ilman keksittyjä faktoja.\"}"
+}
