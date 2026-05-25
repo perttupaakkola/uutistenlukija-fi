@@ -2,7 +2,7 @@
 title: "Poliisi sai Riihimäen räjähteestä ilmoituksen jo huhtikuussa"
 date: 2026-05-22T10:18:07.558065+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

@@ -2,7 +2,7 @@
 title: "Opettaja kertoo levottomuuden lisääntyneen koulussa – oppilaitoksista tehtiin yli 6 500 rikosilmoitusta vuodessa"
 date: 2026-05-25T03:18:05.830942+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

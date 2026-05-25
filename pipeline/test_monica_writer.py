@@ -199,6 +199,55 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertEqual(article["category"], "Kotimaa")
 
+    def test_merge_article_demotes_tiede_school_crime_stats_to_kotimaa(self):
+        original = {
+            **SAMPLE_ARTICLE,
+            "title": "Opettaja kertoo levottomuuden lisääntyneen koulussa – oppilaitoksista tehtiin yli 6 500 rikosilmoitusta vuodessa",
+            "description": "Poliisihallituksen tilastojen mukaan oppi- ja tutkimuslaitoksista tehtiin viime vuonna yli 6 500 rikosilmoitusta.",
+            "category_hint": "Tiede",
+        }
+        packet = _source_packet(360, blocks=2)
+        packet["category"] = "Tiede"
+        packet["category_hint"] = "Tiede"
+        payload = json.loads(_good_payload())
+        payload["category"] = "Tiede"
+        payload["title"] = original["title"]
+        payload["summary"] = original["description"]
+        payload["content"] = (
+            "Pitkään opettajana työskennellyt Sirpa kertoo selvittelevänsä "
+            "koulussa tapahtuneita oppilaiden välisiä tilanteita. "
+            "Poliisihallituksen tilastoissa oppi- ja tutkimuslaitoksista "
+            "tehtiin viime vuonna yli 6 500 rikosilmoitusta."
+        )
+
+        article = _merge_article(original, packet, payload)
+
+        self.assertEqual(article["category"], "Kotimaa")
+
+    def test_merge_article_demotes_tiede_riihimaki_explosive_to_kotimaa(self):
+        original = {
+            **SAMPLE_ARTICLE,
+            "title": "Poliisi sai Riihimäen räjähteestä ilmoituksen jo huhtikuussa",
+            "description": "Hämeen poliisi selvittää pellolta löytyneen räjähteen tapahtumaketjua.",
+            "category_hint": "Tiede",
+        }
+        packet = _source_packet(360, blocks=2)
+        packet["category"] = "Tiede"
+        packet["category_hint"] = "Tiede"
+        payload = json.loads(_good_payload())
+        payload["category"] = "Tiede"
+        payload["title"] = original["title"]
+        payload["summary"] = original["description"]
+        payload["content"] = (
+            "Hämeen poliisi selvittää Riihimäen jäähallin läheltä löytyneen "
+            "räjähteen tapahtumaketjua. Poliisi sai asiasta ilmoituksen jo "
+            "huhtikuussa ja löytö on raivattu."
+        )
+
+        article = _merge_article(original, packet, payload)
+
+        self.assertEqual(article["category"], "Kotimaa")
+
     @patch(PATCH_TARGET)
     def test_rewrite_articles_repairs_once(self, run_mock):
         broken_payload = {

@@ -9,7 +9,7 @@ import re
 _SCHOOL_POLICE_TERMS = re.compile(
     r"\b("
     r"poliisi|poliisin|poliisia|poliisioperaatio|rikos|rikoksen|rikoksia|rikosnimike|"
-    r"ase|aseistaut|ampu|ammu|ammuskel|räjähd|kiinni|pidätt|vangit|tuomio|"
+    r"ase|aseistaut|ampu|ammu|ammuskel|räjäh|kiinni|pidätt|vangit|tuomio|"
     r"koulu|koulussa|koulun|oppilaitos|oppilaitoks|ammattikorkeakoulu|"
     r"samk|kampus|päiväkoti|yhtenäiskoulu"
     r")",
@@ -18,9 +18,9 @@ _SCHOOL_POLICE_TERMS = re.compile(
 
 _SCIENCE_ANGLE_TERMS = re.compile(
     r"\b("
-    r"tiede|tieteell|tutkimus|tutkimuksessa|tutkija|tutkijat|professori|"
+    r"tiede|tieteell|tutkimus(?!laitos|laitoks)|tutkimuksessa|tutkija|tutkijat|professori|"
     r"väitös|väitöskirja|vertaisarvio|tiedelehti|julkaistu|aineisto|"
-    r"menetelmä|laboratorio|havaitsi|selvitti|löytö|löysivät|analyysi"
+    r"menetelmä|laboratorio|havaitsi|selvitti|löysivät|analyysi"
     r")",
     re.IGNORECASE,
 )

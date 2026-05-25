@@ -69,6 +69,34 @@ class StoryPacketTests(unittest.TestCase):
 
         self.assertEqual(packet["category_hint"], "Kotimaa")
 
+    def test_school_crime_stats_do_not_keep_tiede_hint_from_tutkimuslaitos(self) -> None:
+        article = {
+            "title": "Opettaja kertoo levottomuuden lisääntyneen koulussa – oppilaitoksista tehtiin yli 6 500 rikosilmoitusta vuodessa",
+            "description": "Poliisihallituksen tilastojen mukaan oppi- ja tutkimuslaitoksista tehtiin viime vuonna yli 6 500 rikosilmoitusta.",
+            "source": "MTV Uutiset",
+            "link": "https://www.mtvuutiset.fi/example",
+            "category_hint": "Tiede",
+            "research": "[Lähde: MTV]\nPoliisihallituksen tilastoissa oppi- ja tutkimuslaitokset kattavat päiväkoteja, kouluja ja yliopistoja. Yleisin tutkittu rikosnimike oli pahoinpitely.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Kotimaa")
+
+    def test_riihimaki_explosive_police_story_does_not_keep_tiede_hint(self) -> None:
+        article = {
+            "title": "Poliisi sai Riihimäen räjähteestä ilmoituksen jo huhtikuussa",
+            "description": "Hämeen poliisin mukaan pellolta löytynyt räjähde oli todennäköisesti sama, josta poliisille ilmoitettiin jo aiemmin.",
+            "source": "MTV Uutiset",
+            "link": "https://www.mtvuutiset.fi/example",
+            "category_hint": "Tiede",
+            "research": "[Lähde: MTV]\nPoliisi selvittää Riihimäen jäähallin läheltä löytyneen räjähteen tapahtumaketjua. Löydöstä on tehty ilmoitus valtakunnan syyttäjän toimistoon.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Kotimaa")
+
     def test_research_story_can_keep_tiede_hint_with_school_terms(self) -> None:
         article = {
             "title": "Yliopiston tutkimus selvitti koulujen sisäilman vaikutuksia",
