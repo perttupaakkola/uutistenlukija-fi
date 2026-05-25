@@ -1,29 +1,29 @@
 {
   "description": "Uutistenlukija.fi KPIs — updated by Felix/Max on each flywheel cycle",
-  "lastUpdated": "2026-05-18T07:10:00Z",
+  "lastUpdated": "2026-05-25T07:04:00Z",
   "metrics": {
     "articles": {
-      "total": 2129,
-      "publishedToday": 8,
-      "publishedThisWeek": 214,
-      "lastPublishRun": "2026-05-18T06:08:06Z",
-      "note": "Weekly count uses article date in filename; mtime-based count is inflated by queue/content churn."
+      "total": 2372,
+      "publishedToday": 12,
+      "publishedThisWeek": 259,
+      "lastPublishRun": "2026-05-25T06:58:07Z",
+      "note": "publishedThisWeek is the completed week ending 2026-05-24 from weekly-ops-report.log; today is partial."
     },
     "pipeline": {
       "lastRunSuccess": true,
-      "lastRunTime": "2026-05-18T07:00:08.745117+00:00",
+      "lastRunTime": "2026-05-25T07:00:10.011346+00:00",
       "successRateRecent14": 100,
       "failuresLast24h": 0,
       "cronHealthyJobs": 15,
-      "note": "Weekly review 2026-05-18: health_check OK and cron_health_monitor --dry-run reported all 15 jobs healthy."
+      "note": "Weekly review 2026-05-25: site HTTP 200, static health OK, last 14 metrics runs succeeded, latest cron-health log reports all 15 jobs healthy; disk is high at 89%."
     },
     "traffic": {
-      "dailyVisitors": 1,
-      "dailyPageviews": 1,
-      "searchConsoleClicks7d": 8,
-      "searchConsoleImpressions7d": 940,
+      "dailyVisitors": 0,
+      "dailyPageviews": 0,
+      "searchConsoleClicks7d": 0,
+      "searchConsoleImpressions7d": 0,
       "source": "GA4 + Search Console daily-report.json",
-      "note": "Analytics OAuth is restored, but current traffic is still tiny; Iris owns OPE-88/OPE-89 growth readout and acquisition experiment packaging."
+      "note": "Current analytics report is not trustworthy: GA4/Search Console refresh logs show invalid_grant and Hermes asked Perttu for OAuth reauthorization on 2026-05-25."
     },
     "seo": {
       "indexedPages": null,
@@ -35,13 +35,13 @@
       "note": "First measurable business loop shipped: /mainosta/ and advertiser CTA clicks emit monetization_signal; watch static/api/business-control-panel.json monetization.status and GA4 event when consented."
     },
     "team": {
-      "activeAgents": 6,
-      "tasksCompletedThisWeek": 1,
-      "activeLinearIssues": 5,
+      "activeAgents": 2,
+      "tasksCompletedThisWeek": 0,
+      "activeLinearIssues": 1,
       "flywheel_ideasPosted": 213,
       "flywheel_ideasExecuted": 50,
       "flywheelExecutionRate": 0.37,
-      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active work: OPE-9, OPE-88, OPE-89, OPE-90, OPE-91."
+      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Fresh root mirror shows active work: OPE-9 only."
     }
   }
 }
