@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kalasataman-palotalossa-ollut-valtteri-kuin-olisi-ollut-ukkospilven-sisalla-talta-sisalla-nayttaa/9343710"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
