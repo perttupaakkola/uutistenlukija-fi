@@ -44,7 +44,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/hanna-muutti-tuupovaaraan-ja-alkoi-tehda-perinnejalkineita-modernien-supikkaiden-tekeminen-suosikkilaulajalle-sai-kehon-ja-mielen-maitohapoille/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
