@@ -55,6 +55,34 @@ class StoryPacketTests(unittest.TestCase):
         self.assertGreaterEqual(sum(block["word_count"] for block in packet["clean_source_blocks"]), 300)
         self.assertTrue(all(block["source"] == "Suomen Yrittäjät" for block in packet["clean_source_blocks"]))
 
+    def test_school_police_incident_does_not_keep_tiede_hint(self) -> None:
+        article = {
+            "title": "Poliisi otti kiinni Samkin tiloissa liikkuneen aseistautuneen henkilön",
+            "description": "Poliisi kertoo ottaneensa kiinni Satakunnan ammattikorkeakoulun kampuksella maastopuvussa liikkuneen henkilön.",
+            "source": "Etelä-Suomen Sanomat",
+            "link": "https://www.ess.fi/example",
+            "category_hint": "Tiede",
+            "research": "[Lähde: ESS]\nPoliisi on ottanut kiinni Porissa Satakunnan ammattikorkeakoulussa henkilön, jonka epäillään liikkuneen tiloissa aseistautuneena.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Kotimaa")
+
+    def test_research_story_can_keep_tiede_hint_with_school_terms(self) -> None:
+        article = {
+            "title": "Yliopiston tutkimus selvitti koulujen sisäilman vaikutuksia",
+            "description": "Tutkijat analysoivat laajan aineiston ja julkaisivat tulokset tieteellisessä lehdessä.",
+            "source": "Yle Tiede",
+            "link": "https://yle.fi/example",
+            "category_hint": "Tiede",
+            "research": "[Lähde: Yle Tiede]\nTutkimuksessa selvitettiin koulujen sisäilman vaikutuksia oppilaiden hyvinvointiin usean vuoden aineistolla.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Tiede")
+
     def test_talous_packet_keeps_long_business_context_block_with_generic_terms(self) -> None:
         business_text = " ".join(
             [

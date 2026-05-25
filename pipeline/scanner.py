@@ -20,6 +20,11 @@ from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse, parse_qs, urlunparse
 
 try:
+    from .category_guard import category_text, protect_tiede_category
+except ImportError:  # pragma: no cover - direct script execution from pipeline cwd
+    from category_guard import category_text, protect_tiede_category
+
+try:
     from feed_health import get_global_health, save_global_health
     _FEED_HEALTH_AVAILABLE = True
 except ImportError:
@@ -988,11 +993,11 @@ def scan_all_feeds() -> List[Dict]:
         """Guess category from source hint, title, or description."""
         hint = article.get("category_hint", "")
         if hint in CATEGORIES:
-            return hint
+            return protect_tiede_category(hint, category_text(article))
         text = (article.get("title", "") + " " + article.get("description", "")).lower()
         for cat, keywords in CATEGORY_KEYWORDS.items():
             if any(kw in text for kw in keywords):
-                return cat
+                return protect_tiede_category(cat, category_text(article))
         # English sources default to Ulkomaat
         if article.get("language") == "en":
             return "Ulkomaat"

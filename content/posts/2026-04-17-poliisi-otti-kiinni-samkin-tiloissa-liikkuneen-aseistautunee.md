@@ -2,7 +2,7 @@
 title: "Poliisi otti kiinni Samkin tiloissa liikkuneen aseistautuneen maastopukuhenkilön"
 date: 2026-04-17T07:53:29.441602+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

@@ -176,6 +176,29 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertEqual(article["category"], "Talous")
 
+    def test_merge_article_demotes_tiede_school_police_incident_to_kotimaa(self):
+        original = {
+            **SAMPLE_ARTICLE,
+            "title": "Poliisi otti kiinni Samkin tiloissa liikkuneen aseistautuneen henkilön",
+            "description": "Poliisi kertoo tilanteesta Satakunnan ammattikorkeakoulun kampuksella.",
+            "category_hint": "Tiede",
+        }
+        packet = _source_packet(360, blocks=2)
+        packet["category"] = "Tiede"
+        packet["category_hint"] = "Tiede"
+        payload = json.loads(_good_payload())
+        payload["category"] = "Tiede"
+        payload["title"] = original["title"]
+        payload["summary"] = original["description"]
+        payload["content"] = (
+            "Poliisi on ottanut kiinni Porissa Satakunnan ammattikorkeakoulussa "
+            "henkilön, jonka epäillään liikkuneen tiloissa aseistautuneena."
+        )
+
+        article = _merge_article(original, packet, payload)
+
+        self.assertEqual(article["category"], "Kotimaa")
+
     @patch(PATCH_TARGET)
     def test_rewrite_articles_repairs_once(self, run_mock):
         broken_payload = {

@@ -13,6 +13,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
+try:
+    from .category_guard import category_text, protect_tiede_category
+except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
+    from category_guard import category_text, protect_tiede_category
+
 _ALLOWED_CATEGORIES = {
     "Kotimaa",
     "Ulkomaat",
@@ -561,13 +566,19 @@ def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
     # oil, China, Russia, or Iran gets counted as Ulkomaat and worsens the
     # category-mix drift. Generic/local hints can still be overridden.
     if hint in _ALLOWED_CATEGORIES and hint not in {"Kotimaa", "Uutiset"}:
-        return hint
+        return protect_tiede_category(
+            hint,
+            category_text(article, " ".join(block.get("text", "") for block in selected_blocks)),
+        )
 
     if any(token in title_and_desc for token in _FOREIGN_TOPIC_TOKENS):
         return "Ulkomaat"
 
     if hint in _ALLOWED_CATEGORIES:
-        return hint
+        return protect_tiede_category(
+            hint,
+            category_text(article, " ".join(block.get("text", "") for block in selected_blocks)),
+        )
 
     combined = " ".join(block.get("text", "") for block in selected_blocks).lower()
     if any(token in combined for token in _FOREIGN_TOPIC_TOKENS):

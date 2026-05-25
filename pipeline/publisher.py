@@ -13,6 +13,11 @@ import unicodedata
 
 from writers import assign_writer
 
+try:
+    from .category_guard import category_text, protect_tiede_category
+except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
+    from category_guard import category_text, protect_tiede_category
+
 
 CONTENT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "posts")
 SITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -63,6 +68,11 @@ def _apply_keyword_category_override(article: dict, category: str) -> str:
     )
     if not haystack.strip():
         return category
+
+    guarded = protect_tiede_category(category, category_text(article))
+    if guarded != category:
+        print(f"[publisher] Category override: {category} → {guarded} (school/police incident)")
+        return guarded
 
     # Weather → Kotimaa (fires from any category, typically catches Tiede misclassification)
     weather_score = _keyword_score(haystack, WEATHER_KEYWORDS)
