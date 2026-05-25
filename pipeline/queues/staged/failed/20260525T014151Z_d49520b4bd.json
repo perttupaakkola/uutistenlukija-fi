@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-25T01:41:51.153373+00:00",
+  "digest": "d49520b4bd",
+  "packet": {
+    "packet_id": "20260525T014151Z_d49520b4bd",
+    "created_at": "2026-05-25T01:41:51Z",
+    "headline_seed": "Lähes 200 km maanalaista raidetunnelia, hintalappu 40 miljardia – Tällainen on Euroopan suurin infrahanke",
+    "description_seed": "Pariisin metrolaajennus Grand Paris Express on Euroopan suurin infrahanke Uutta rataa on tulossa 200 kilometriä. Hintalappu on 40 miljardia euroa. Tekniikka&Talous kävi paikan päällä tutustumassa jättihankkeeseen.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/66238313-2b2f-4cda-b55e-25f73a8c78c4",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/66238313-2b2f-4cda-b55e-25f73a8c78c4"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lähes 200 km maanalaista raidetunnelia, hintalappu 40 miljardia – Tällainen on Euroopan suurin infrahanke"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Pariisin metrolaajennus Grand Paris Express on Euroopan suurin infrahanke Uutta rataa on tulossa 200 kilometriä. Hintalappu on 40 miljardia euroa. Tekniikka&Talous kävi paikan päällä tutustumassa jättihankkeeseen.",
+        "word_count": 26,
+        "keyword_overlap": 20,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Pariisin metrolaajennus Grand Paris Express on Euroopan suurin infrahanke Uutta rataa on tulossa 200 kilometriä. Hintalappu on 40 miljardia euroa. Tekniikka&Talous kävi paikan päällä tutustumassa jättihankkeeseen.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 1,
+      "selected_source_words": 26,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lähes 200 km maanalaista raidetunnelia, hintalappu 40 miljardia – Tällainen on Euroopan suurin infrahanke",
+      "description": "Pariisin metrolaajennus Grand Paris Express on Euroopan suurin infrahanke Uutta rataa on tulossa 200 kilometriä. Hintalappu on 40 miljardia euroa. Tekniikka&Talous kävi paikan päällä tutustumassa jättihankkeeseen.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Lähes 200 km maanalaista raidetunnelia, hintalappu 40 miljardia – Tällainen on Euroopan suurin infrahanke",
+    "description": "Pariisin metrolaajennus Grand Paris Express on Euroopan suurin infrahanke Uutta rataa on tulossa 200 kilometriä. Hintalappu on 40 miljardia euroa. Tekniikka&Talous kävi paikan päällä tutustumassa jättihankkeeseen.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/66238313-2b2f-4cda-b55e-25f73a8c78c4",
+    "published": "2026-05-25T01:32:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "bfaba0d11fbbeab0a4ff1ff2f24bfd89",
+    "_url_hash": "9638f62bca59c38a691a9834ed916bd169ab872d0722ddaf83cc9428dfda0acb",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Pariisin metrolaajennus Grand Paris Express on Euroopan suurin infrahanke Uutta rataa on tulossa 200 kilometriä. Hintalappu on 40 miljardia euroa. Tekniikka&Talous kävi paikan päällä tutustumassa jättihankkeeseen.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-25T01:43:25.174246+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai varmistamattomia lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260525T014151Z_d49520b4bd\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai varmistamattomia lisätietoja.\"}"
+}
