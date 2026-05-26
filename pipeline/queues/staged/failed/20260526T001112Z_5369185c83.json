@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-26T00:11:12.453779+00:00",
+  "digest": "5369185c83",
+  "packet": {
+    "packet_id": "20260526T001112Z_5369185c83",
+    "created_at": "2026-05-26T00:11:12Z",
+    "headline_seed": "Näppis | Nuorisotyöttömyys on yhteiskuntamme syöpä, ei kannata olla kateellinen",
+    "description_seed": "LSL:n aikataulu jaettava kotiin, niin kuin se tapahtui ennenkin. Nykyaika mennyt valitettavasti suuntaan, että ei osata kommunikoida. Pakkoko on tunkea reitille, missä työ käynnissä.",
+    "link": "https://www.ess.fi/paakirjoitus-mielipide/9479349",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paakirjoitus-mielipide/9479349"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näppis | Nuorisotyöttömyys on yhteiskuntamme syöpä, ei kannata olla kateellinen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "LSL:n aikataulu jaettava kotiin, niin kuin se tapahtui ennenkin. Nykyaika mennyt valitettavasti suuntaan, että ei osata kommunikoida. Pakkoko on tunkea reitille, missä työ käynnissä.",
+        "word_count": 24,
+        "keyword_overlap": 19,
+        "strong_overlap": 14
+      }
+    ],
+    "source_text": "LSL:n aikataulu jaettava kotiin, niin kuin se tapahtui ennenkin. Nykyaika mennyt valitettavasti suuntaan, että ei osata kommunikoida. Pakkoko on tunkea reitille, missä työ käynnissä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 48,
+      "selected_blocks": 1,
+      "selected_source_words": 24,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näppis | Nuorisotyöttömyys on yhteiskuntamme syöpä, ei kannata olla kateellinen",
+      "description": "LSL:n aikataulu jaettava kotiin, niin kuin se tapahtui ennenkin. Nykyaika mennyt valitettavasti suuntaan, että ei osata kommunikoida. Pakkoko on tunkea reitille, missä työ käynnissä.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Näppis | Nuorisotyöttömyys on yhteiskuntamme syöpä, ei kannata olla kateellinen",
+    "description": "LSL:n aikataulu jaettava kotiin, niin kuin se tapahtui ennenkin. Nykyaika mennyt valitettavasti suuntaan, että ei osata kommunikoida. Pakkoko on tunkea reitille, missä työ käynnissä.",
+    "link": "https://www.ess.fi/paakirjoitus-mielipide/9479349",
+    "published": "2026-05-26T03:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "cdfaf2ee00f671fae5d81aa15f70161b",
+    "_url_hash": "c3e3725383a59a2fea654243acad238b75b588ec943fbe80f4e9feea86d8c6d5",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "LSL:n aikataulu jaettava kotiin, niin kuin se tapahtui ennenkin. Nykyaika mennyt valitettavasti suuntaan, että ei osata kommunikoida. Pakkoko on tunkea reitille, missä työ käynnissä.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-26T00:13:59.117265+00:00",
+  "failure": "Lähdeaineisto on hyvin niukka ja koostuu irrallisista mielipidekatkelmista, joiden perusteella ei voi kirjoittaa vähintään 250 sanan uutisartikkelia ilman lisäoletuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=9639e45b-392c-4c9e-ad4c-83c535690290 sessionKey=agent:monica:explicit:monica-pipeline-dd2212a4-6781-4f1d-94b6-a849b9bd8c7d lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-dd2212a4-6781-4f1d-94b6-a849b9bd8c7d\n{\"packet_id\":\"20260526T001112Z_5369185c83\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on hyvin niukka ja koostuu irrallisista mielipidekatkelmista, joiden perusteella ei voi kirjoittaa vähintään 250 sanan uutisartikkelia ilman lisäoletuksia.\"}"
+}
