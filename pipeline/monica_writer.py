@@ -606,6 +606,15 @@ def _run_openclaw_command(cmd: list[str]) -> str:
             check=False,
         )
     except subprocess.TimeoutExpired as e:
+        stdout = e.stdout or ""
+        if isinstance(stdout, bytes):
+            stdout = stdout.decode("utf-8", errors="replace")
+        if stdout.strip():
+            try:
+                _extract_json_object(stdout)
+                return stdout.strip()
+            except ValueError:
+                pass
         raise RuntimeError(f"Monica writer command timed out after {e.timeout} seconds") from e
     except FileNotFoundError as e:
         searched = ", ".join(OPENCLAW_CANDIDATES)

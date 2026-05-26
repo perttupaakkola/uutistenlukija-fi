@@ -3,17 +3,18 @@ from __future__ import annotations
 
 import json
 import os
+import subprocess
 import tempfile
 import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
+    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, rewrite_articles
+    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
 
@@ -294,6 +295,22 @@ class MonicaWriterTests(unittest.TestCase):
             quarantine = json.load(f)
         self.assertEqual(quarantine["reason"], "dispatch_error")
         self.assertEqual(quarantine["extra"].get("reason_code"), "timeout")
+
+    @patch(PATCH_TARGET)
+    def test_run_openclaw_command_accepts_complete_json_from_timeout_stdout(self, run_mock):
+        run_mock.side_effect = subprocess.TimeoutExpired(["openclaw"], 360, output="progress\n" + _good_payload())
+
+        raw = _run_openclaw_command(["openclaw"])
+
+        self.assertIn("Hallitus valmistelee", raw)
+        self.assertEqual(_extract_json_object(raw)["category"], "Kotimaa")
+
+    @patch(PATCH_TARGET)
+    def test_run_openclaw_command_rejects_incomplete_timeout_stdout(self, run_mock):
+        run_mock.side_effect = subprocess.TimeoutExpired(["openclaw"], 360, output="progress\n" + _good_payload()[:-20])
+
+        with self.assertRaises(RuntimeError):
+            _run_openclaw_command(["openclaw"])
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_quarantine_context_overflow_has_reason_code(self, run_mock):

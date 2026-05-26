@@ -211,6 +211,19 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(failed["writer_failure_feedback"]["retry_classification"], "writer_runtime")
         self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=48))
 
+    def test_talous_cooldown_does_not_requeue_stale_timeout_misclassified_as_invalid_json(self) -> None:
+        article = {"title": "talous-timeout-stale", "link": "https://example.com/talous-timeout-stale", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
+        failed = _record("talous-timeout-stale", source_words=283, blocks=3)
+        failed["digest"] = digest
+        failed["packet"]["category_hint"] = "Talous"
+        failed["failure"] = "Monica writer command timed out after 360 seconds"
+        failed["writer_failure_feedback"] = {"retry_classification": "writer_invalid_json"}
+        self._write("failed", "failed-talous-timeout-stale", failed, age_hours=1)
+
+        self.assertEqual(staged_publish.staged_failed_retry_classification(failed), "writer_runtime")
+        self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=48))
+
     def test_talous_cooldown_still_skips_when_digest_already_ready(self) -> None:
         article = {"title": "talous-ready", "link": "https://example.com/talous-ready", "category_hint": "Talous"}
         digest = staged_publish.stable_digest(article)
@@ -249,6 +262,18 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(feedback["retry_classification"], "writer_invalid_json")
         self.assertEqual(feedback["final_word_count"], 0)
         self.assertTrue(feedback["fail_closed"])
+
+    def test_talous_cooldown_does_not_requeue_invalid_json_noise(self) -> None:
+        article = {"title": "talous-bad-json", "link": "https://example.com/talous-bad-json", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
+        failed = _record("talous-bad-json", source_words=283, blocks=3)
+        failed["digest"] = digest
+        failed["packet"]["category_hint"] = "Talous"
+        failed["failure"] = "Monica response did not contain valid JSON object"
+        failed["writer_failure_feedback"] = {"retry_classification": "writer_invalid_json"}
+        self._write("failed", "failed-talous-bad-json", failed, age_hours=1)
+
+        self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=48))
 
     def test_quality_gate_reject_quarantine_records_fail_closed_feedback(self) -> None:
         record = _record("rich-quality-reject", source_words=360, blocks=3)

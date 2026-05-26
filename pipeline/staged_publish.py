@@ -173,17 +173,19 @@ def staged_digest_status(digest: str, hours: int = 48) -> tuple[str, Path | None
 def staged_failed_retry_classification(data: dict) -> str:
     if data.get("duplicate_rejected"):
         return "duplicate"
+    normalized_failure = normalize_failure_reason(data.get("failure") or "")
+    if normalized_failure == "writer_runtime":
+        return normalized_failure
     if data.get("quality_gate_feedback", {}).get("retry_classification"):
         return str(data["quality_gate_feedback"]["retry_classification"])
     if data.get("writer_failure_feedback", {}).get("retry_classification"):
         return str(data["writer_failure_feedback"]["retry_classification"])
-    return normalize_failure_reason(data.get("failure") or "")
+    return normalized_failure
 
 
 RECOVERABLE_TALOUS_FAILED_CLASSES = {
     "repair_near_miss_short",
     "writer_short_after_repair",
-    "writer_invalid_json",
 }
 
 
