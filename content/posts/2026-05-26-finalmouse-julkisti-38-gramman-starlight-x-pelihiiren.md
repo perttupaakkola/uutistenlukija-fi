@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/finalmouse-julkaisi-alle-40-gramman-pelihiiren-huippuominaisuuksin/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
