@@ -1,0 +1,116 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-26T01:51:12.735000+00:00",
+  "digest": "d92ff10dd3",
+  "packet": {
+    "packet_id": "20260526T015112Z_d92ff10dd3",
+    "created_at": "2026-05-26T01:51:12Z",
+    "headline_seed": "The science of us",
+    "description_seed": "Editor in chief Nancy Shute introduces a new social sciences column that explores what it means to be human.",
+    "link": "https://www.sciencenews.org/article/the-science-of-us-june-2026",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/the-science-of-us-june-2026"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.81,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "The science of us"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "Editor in chief Nancy Shute introduces a new social sciences column that explores what it means to be human.",
+        "word_count": 19,
+        "keyword_overlap": 13,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "Humans are complicated creatures; studying them is complicated, too. The social sciences contain as many as 12 core disciplines, depending on who’s counting. And they range widely, from anthropology, psychology and sociology to more quantitative fields like economics and demographics. Being able to grasp the vast variations in human activity, from one person’s mental state to the movements of nations, is essential for navigating the chaotic times we live in. To keep you current on the science behind hot button issues in the news, we’re expanding our coverage of the social sciences with a new column, Being Human, in this issue. First up: whether trying to encourage people to have more babies, an idea being put forth by pronatalist movements in the United States and elsewhere, will help reverse falling birth rates, and whether that should be a goal.",
+        "word_count": 139,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Editor in chief Nancy Shute introduces a new social sciences column that explores what it means to be human.\n\nHumans are complicated creatures; studying them is complicated, too. The social sciences contain as many as 12 core disciplines, depending on who’s counting. And they range widely, from anthropology, psychology and sociology to more quantitative fields like economics and demographics. Being able to grasp the vast variations in human activity, from one person’s mental state to the movements of nations, is essential for navigating the chaotic times we live in. To keep you current on the science behind hot button issues in the news, we’re expanding our coverage of the social sciences with a new column, Being Human, in this issue. First up: whether trying to encourage people to have more babies, an idea being put forth by pronatalist movements in the United States and elsewhere, will help reverse falling birth rates, and whether that should be a goal.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 158,
+      "selected_blocks": 2,
+      "selected_source_words": 158,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "The science of us",
+      "description": "Editor in chief Nancy Shute introduces a new social sciences column that explores what it means to be human.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "The science of us",
+    "description": "Editor in chief Nancy Shute introduces a new social sciences column that explores what it means to be human.",
+    "link": "https://www.sciencenews.org/article/the-science-of-us-june-2026",
+    "published": "2026-05-23T11:00:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "a5f22eb14212cc25566210f0efdd1fa7",
+    "_url_hash": "749e39bef79b559a2206898fa819c2483454bfefe59a1df2b4d242867093b034",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "stale_source",
+    "fresh_source_quota_eligible": false,
+    "stale_source": true,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nHumans are complicated creatures; studying them is complicated, too. The social sciences contain as many as 12 core disciplines, depending on who’s counting. And they range widely, from anthropology, psychology and sociology to more quantitative fields like economics and demographics. Being able to grasp the vast variations in human activity, from one person’s mental state to the movements of nations, is essential for navigating the chaotic times we live in.\n\nTo keep you current on the science behind hot button issues in the news, we’re expanding our coverage of the social sciences with a new column, Being Human, in this issue. First up: whether trying to encourage people to have more babies, an idea being put forth by pronatalist movements in the United States and elsewhere, will help reverse falling birth rates, and whether that should be a goal.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-26T01:59:01.367768+00:00",
+  "failure": "Monica writer command timed out after 360 seconds",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260526T015112Z_d92ff10dd3",
+    "category": "Tiede",
+    "selected_source_words": 158,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.81,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_invalid_json",
+    "fail_closed": true,
+    "title": "The science of us"
+  }
+}
