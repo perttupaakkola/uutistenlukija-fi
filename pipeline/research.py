@@ -519,6 +519,28 @@ def _usable_talous_original_fallback(article: dict, original_text: str) -> bool:
     sentences = len(re.findall(r"[.!?](?:\s|$)", original_text))
     return words >= TALOUS_ORIGINAL_THIN_MIN_WORDS and sentences >= TALOUS_RSS_MIN_SENTENCES and _talous_fallback_safety(original_text)
 
+
+def _talous_rss_supplement(article: dict, existing_sources: list[tuple[str, str]]) -> tuple[str, str] | None:
+    """Return a bounded Talous RSS excerpt when fetched sources are still shallow."""
+    if not existing_sources or len(existing_sources) >= 2:
+        return None
+
+    rss_text = _clean_research_text(article.get("description", ""))
+    if not _usable_talous_rss_fallback(article, rss_text):
+        return None
+
+    # Avoid adding the RSS excerpt when the fetched article already contains it
+    # verbatim. RSS summaries are useful for blocked originals, not duplication.
+    needle = " ".join(rss_text.lower().split()[:18])
+    for _, existing_text in existing_sources:
+        haystack = " ".join(str(existing_text or "").lower().split())
+        if needle and needle in haystack:
+            return None
+
+    label = article.get("source") or _get_domain(article.get("link", "")) or "RSS"
+    return (label, rss_text)
+
+
 def _research_article(article: dict) -> str:
     """Perform multi-source research for a single article.
     
@@ -590,6 +612,12 @@ def _research_article(article: dict) -> str:
             print(f"[research]   - {domain}: {word_count}w (too thin, skipped)")
         else:
             print(f"[research]   - {domain}: empty/blocked")
+
+    rss_supplement = _talous_rss_supplement(article, sources_collected)
+    if rss_supplement:
+        label, text = rss_supplement
+        print(f"[research]   + RSS: {len(text.split())}w bounded Talous supplement")
+        sources_collected.append((label, text))
 
     # ── 4. Combine ────────────────────────────────────────────────────────
     if not sources_collected and thin_original_fallback:

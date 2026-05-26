@@ -1,6 +1,10 @@
 import unittest
+from unittest.mock import patch
 
-import research
+try:
+    from . import research
+except ImportError:  # pragma: no cover - direct execution from pipeline cwd
+    import research
 
 
 class ResearchFallbackTests(unittest.TestCase):
@@ -46,6 +50,67 @@ class ResearchFallbackTests(unittest.TestCase):
 
         self.assertFalse(research._usable_talous_original_fallback(article, opinion))
         self.assertFalse(research._usable_talous_original_fallback(article, promo))
+
+    def test_talous_rss_supplement_adds_safe_context_to_one_source_result(self):
+        article = {
+            "title": "Pk-yritysten maksuajat pitenevät",
+            "category_hint": "Talous",
+            "source": "Suomen Yrittäjät",
+            "link": "https://www.yrittajat.fi/uutiset/maksuajat",
+            "description": (
+                "Pk-yritysten maksuajat ovat pidentyneet alkuvuonna useilla toimialoilla. "
+                "Yrittäjäjärjestön mukaan viiveet kiristävät kassaa, vaikeuttavat investointeja "
+                "ja lisäävät tarvetta lyhytaikaiselle rahoitukselle. Yritykset seuraavat "
+                "asiakaskohtaisia maksuehtoja aiempaa tarkemmin ja pyrkivät varmistamaan "
+                "sopimusten ehdot ennen toimituksia. Tilanne koskee erityisesti pieniä "
+                "alihankkijoita, joiden kulut erääntyvät ennen asiakkaiden maksuja "
+                "ja varaston täydentämistä."
+            ),
+        }
+        fetched_source = (
+            "Avoin lähde kertoo, että pienyritysten maksuviiveet ovat kasvaneet. "
+            * 20
+        )
+
+        with patch.object(research, "fetch_article_text", side_effect=["", fetched_source]), \
+             patch.object(research, "_search_news", return_value=[{"url": "https://example.com/maksuajat", "source": "Example"}]), \
+             patch.object(research.time, "sleep", return_value=None):
+            text = research._research_article(article)
+
+        self.assertIn("[Lähde: Example]", text)
+        self.assertIn("[Lähde: Suomen Yrittäjät]", text)
+        self.assertIn("Pk-yritysten maksuajat ovat pidentyneet", text)
+
+    def test_talous_rss_supplement_rejects_promotional_context(self):
+        article = {
+            "title": "Kurkista finanssialan arkeen",
+            "category_hint": "Talous",
+            "source": "Finanssiala",
+            "link": "https://www.finanssiala.fi/uutiset/kesatyo",
+            "description": (
+                "Ota Finanssialalle-Instagram seurantaan ja vinkkaa kaverille. "
+                "Liity mukaan seuraamaan kohokohtia ja uratarinoita."
+            ),
+        }
+        existing = [("Example", "Avoin lähde kertoo kesätyöstä ja yritysten henkilöstötarpeista. " * 12)]
+
+        self.assertIsNone(research._talous_rss_supplement(article, existing))
+
+    def test_talous_rss_supplement_does_not_duplicate_existing_text(self):
+        article = {
+            "title": "Osakemarkkina avautui laskuun",
+            "category_hint": "Talous",
+            "source": "Arvopaperi",
+            "link": "https://www.arvopaperi.fi/uutiset/markkina",
+            "description": (
+                "Osakemarkkina avautui laskuun korko-odotusten muuttuessa. "
+                "Sijoittajat seuraavat keskuspankin viestejä ja yhtiöiden tulosnäkymiä. "
+                "Pankkisektorin kurssit laskivat, mutta teknologiayhtiöt pitivät indeksit lähellä eilistä tasoa."
+            ),
+        }
+        existing = [("Example", article["description"] + " Lisää taustaa markkinoista.")]
+
+        self.assertIsNone(research._talous_rss_supplement(article, existing))
 
 
 if __name__ == "__main__":
