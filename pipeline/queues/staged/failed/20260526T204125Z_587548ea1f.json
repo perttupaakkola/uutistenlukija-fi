@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-26T20:41:25.534469+00:00",
+  "digest": "587548ea1f",
+  "packet": {
+    "packet_id": "20260526T204125Z_587548ea1f",
+    "created_at": "2026-05-26T20:41:25Z",
+    "headline_seed": "Trump kävi terveys­tarkastuksessa – julistaa ”täydellisiä” tuloksia",
+    "description_seed": "Presidentin terveydentila on puhuttanut aika ajoin.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012035631.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012035631.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump kävi terveys­tarkastuksessa – julistaa ”täydellisiä” tuloksia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 155,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "NHL Suomi",
+        "NHL Suomi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump kävi terveys­tarkastuksessa – julistaa ”täydellisiä” tuloksia",
+      "description": "Presidentin terveydentila on puhuttanut aika ajoin.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Trump kävi terveys­tarkastuksessa – julistaa ”täydellisiä” tuloksia",
+    "description": "Presidentin terveydentila on puhuttanut aika ajoin.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012035631.html",
+    "published": "2026-05-26T20:37:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "369d6f03c31a94449f32a993826c7160",
+    "_url_hash": "43e341f28b650fa0b656a8c348627cfd9f571782298e471e823b33fe1f6a5a7a",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: NHL Suomi]\nNykyisin sveitsiläistä Geneve-Servette HC:ta seuratasolla edustava Jesse Puljujärvi on noussut NHL-spekulaatioihin loistavien otteidensa ansiosta.\n\nIlta-Sanomat haastatteli MM-kisoissa paikan päällä olevia NHL-seurojen pelaajatarkkailijoita, joiden viesti oli kuitenkin tyly. Ainakaan kyseiset NHL-scoutit eivät näet suomalaishyökkääjällä käyttöä NHL:ssä.\n\nPelaajatarkkailijat kommentoivat Puljujärven otteita IS:lle paljastamatta nimiään.\n\n– En oikein näe NHL:ää enää mahdollisena, koska ei Puljujärvi juuri ole muuttunut aiemmasta. Voihan toki olla, että joku vielä antaa mahdollisuuden, mutta epäilen.\n\n– Selkeästi hän pystyy pelaamaan Euroopassa ja MM-kisoissa top 6 -roolissa ja tekemään pisteitä. Mutta hänen luistelunsa on edelleen aika laajaa kaarrosta, kuten on aina ollutkin, pelaajatarkkailijat kertoivat IS:lle.\n\nLeijonat-tähden tekemisessä pelaajatarkkailijat ovat kiinnittäneet huomiota muun muassa siihen, että otteet ailahtelevat paljon.\n\n– Pelin sisälläkin hänen suorittamisensa on niin epätasaista. Jotkut vaihdot saattavat olla ihan dynamiittia, äijää lentää tieltä ja asioita tapahtuu, mutta sen jälkeen voi olla taas pitkä pätkä, ettei tapahdu oikein mitään. Kaartelua ja isoja lenkkejä. Tasaisuus puuttuu, yksi pelaajatarkkailija huomauttaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-26T20:43:21.132488+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260526T204125Z_587548ea1f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
