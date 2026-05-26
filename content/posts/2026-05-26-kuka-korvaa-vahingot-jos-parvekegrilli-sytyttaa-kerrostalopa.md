@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kuka-maksaa-jos-parvekegrilli-sytyttaa-kerrostalon-palamaan/9343938"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
