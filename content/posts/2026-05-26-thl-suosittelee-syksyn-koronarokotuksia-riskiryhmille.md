@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/thl-suosittelee-jalleen-koronarokotuksia-riskiryhmille/9344432"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
