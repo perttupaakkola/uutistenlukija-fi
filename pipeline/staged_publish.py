@@ -233,12 +233,66 @@ def total_source_words(article: dict) -> int:
     return sum(len(str(article.get(k, "") or "").split()) for k in ["title", "description", "research", "research_text"])
 
 
-def source_strength(article: dict) -> tuple[int, int, int, int, int, int]:
+def raw_research_source_evidence(article: dict) -> tuple[int, int]:
     research = str(article.get("research") or article.get("research_text") or "")
+    return (
+        len(research.split()),
+        research.lower().count("[lähde:") + research.lower().count("[source:"),
+    )
+
+
+def selected_source_evidence(article: dict) -> tuple[int, int]:
+    """Return post-selection source words/blocks for Talous enqueue decisions."""
+    if isinstance(article.get("_selected_source_evidence"), dict):
+        evidence = article["_selected_source_evidence"]
+        return int(evidence.get("source_words", 0) or 0), int(evidence.get("source_blocks", 0) or 0)
+
+    raw_words, raw_blocks = raw_research_source_evidence(article)
+    evidence = {
+        "source_words": raw_words,
+        "source_blocks": raw_blocks,
+        "basis": "raw_research",
+    }
+    if article_category(article) == "Talous":
+        try:
+            packet = build_story_packet(article)
+            diagnostics = packet.get("source_diagnostics") or {}
+            selected_blocks = packet.get("clean_source_blocks") or []
+            selected_words = int(diagnostics.get("selected_source_words", 0) or 0)
+            selected_count = len(selected_blocks)
+            basis = "selected_sources" if selected_blocks else "raw_research_no_selected_sources"
+            if selected_words < 80 and raw_words > selected_words:
+                selected_words = raw_words
+                selected_count = raw_blocks
+                basis = "raw_research_selected_under_floor"
+            elif selected_words < 180 and raw_words >= 180 and raw_blocks >= 2:
+                selected_words = raw_words
+                selected_count = raw_blocks
+                basis = "raw_research_selected_under_floor"
+            evidence = {
+                "source_words": selected_words,
+                "source_blocks": selected_count,
+                "basis": basis,
+                "candidate_source_words": int(diagnostics.get("candidate_source_words", 0) or 0),
+                "candidate_blocks": int(diagnostics.get("candidate_blocks", 0) or 0),
+            }
+        except Exception as exc:
+            evidence["basis"] = f"raw_research_fallback:{exc.__class__.__name__}"
+    article["_selected_source_evidence"] = evidence
+    return int(evidence["source_words"]), int(evidence["source_blocks"])
+
+
+def annotate_selected_source_evidence(articles: list[dict]) -> list[dict]:
+    for article in articles:
+        if article_category(article) == "Talous":
+            selected_source_evidence(article)
+    return articles
+
+
+def source_strength(article: dict) -> tuple[int, int, int, int, int, int]:
     desc = str(article.get("description") or "")
     category = article_category(article)
-    source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
-    source_words = len(research.split())
+    source_words, source_blocks = selected_source_evidence(article) if category == "Talous" else raw_research_source_evidence(article)
     tier_score = max(0, 4 - int(article.get("source_tier", 2) or 2))
     return (
         source_words,
@@ -260,9 +314,7 @@ def category_enqueue_bonus(article: dict) -> int:
 def passes_priority_source_floor(article: dict) -> bool:
     if article_category(article) != "Talous":
         return True
-    research = str(article.get("research") or article.get("research_text") or "")
-    source_words = len(research.split())
-    source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
+    source_words, source_blocks = selected_source_evidence(article)
     confidence = float(article.get("story_confidence") or article.get("confidence") or 0.85)
     if str(article.get("research_source") or "") == "rss_talous_source_backed":
         return source_words >= 120 and source_blocks >= 1
@@ -298,9 +350,7 @@ def scan_candidate_passes_talous_reserve(article: dict) -> bool:
         return False
     if org_source_talous_penalty(article) > 0:
         return False
-    research = str(article.get("research") or article.get("research_text") or "")
-    source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
-    source_words = len(research.split())
+    source_words, source_blocks = selected_source_evidence(article)
     confidence = float(article.get("story_confidence") or article.get("confidence") or 0.85)
     if confidence < 0.82:
         return False
@@ -387,8 +437,7 @@ def log_scan_stage(stage: str, articles: list[dict]) -> None:
 def talous_enqueue_drop_reason(article: dict) -> str:
     if article_category(article) != "Talous":
         return "not_talous"
-    source_words = len(str(article.get("research") or article.get("research_text") or "").split())
-    source_blocks = str(article.get("research") or article.get("research_text") or "").lower().count("[lähde:") + str(article.get("research") or article.get("research_text") or "").lower().count("[source:")
+    source_words, source_blocks = selected_source_evidence(article)
     if org_source_talous_penalty(article) > 0:
         return "org_source_guardrail_penalty"
     if not passes_priority_source_floor(article):
@@ -418,8 +467,9 @@ def talous_drop_candidates(articles: list[dict], max_examples: int = 5) -> list[
             "candidate_id": stable_digest(article),
             "title": title[:100],
             "source": str(article.get("source") or article.get("source_name") or "")[:60],
-            "source_words": len(str(article.get("research") or article.get("research_text") or "").split()),
-            "source_blocks": str(article.get("research") or article.get("research_text") or "").lower().count("[lähde:") + str(article.get("research") or article.get("research_text") or "").lower().count("[source:"),
+            "source_words": selected_source_evidence(article)[0],
+            "source_blocks": selected_source_evidence(article)[1],
+            "source_evidence_basis": article.get("_selected_source_evidence", {}).get("basis"),
             "research_bucket": article_research_bucket(article),
             "reserve_pass": scan_candidate_passes_talous_reserve(article),
             "guardrail": org_source_talous_guardrail(article).get("classification"),
@@ -911,6 +961,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
     log_scan_research_buckets("research_result", articles)
     articles = [a for a in articles if total_source_words(a) >= args.min_source_words]
     log_scan_stage("min_source_words_pass", articles)
+    articles = annotate_selected_source_evidence(articles)
     pre_enqueue_articles = list(articles)
     articles = select_scan_enqueue_candidates(articles, args.max_packets)
     log_scan_stage("queued_candidates", articles)

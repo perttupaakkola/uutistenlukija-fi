@@ -715,6 +715,43 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
 
 
+    def test_scan_enqueue_uses_selected_source_blocks_after_research_selection(self) -> None:
+        teknologia = {"title": "teknologia", "category_hint": "Teknologia", "research": "[Lähde: Testi]\n" + "sana " * 310, "description": "kuvaus"}
+        paragraph_a = (
+            "Verkkokaupan peruuttamistoiminto auttaa yritystä käsittelemään asiakkaan peruutuksen, "
+            "maksun palautuksen ja sopimusehdot neutraalisti kuluttajakaupassa. "
+        ) * 6
+        paragraph_b = (
+            "Yrittäjän verkkokaupan sopimusehdot kertovat asiakkaalle määräajat, hyvityksen, "
+            "peruutuslomakkeen ja palautusmaksun käytännön vaikutukset. "
+        ) * 6
+        paragraph_c = (
+            "Yritys voi vähentää riitoja, kun verkkokaupan peruuttamistoiminto näyttää "
+            "kuluttajalle palautuksen etenemisen ja kauppiaan velvoitteet. "
+        ) * 6
+        talous = {
+            "title": "Verkkokaupan peruuttamistoiminto muuttaa yrittäjän arkea",
+            "category_hint": "Talous",
+            "source": "Suomen Yrittäjät",
+            "research": "[Lähde: Suomen Yrittäjät]\n" + "\n\n".join([paragraph_a, paragraph_b, paragraph_c]),
+            "description": "Yritysten verkkokaupan lakisääteinen peruuttamistoiminto vaikuttaa maksun palautuksiin.",
+            "story_confidence": 0.85,
+            "research_source": "multi",
+        }
+
+        raw_words, raw_blocks = staged_publish.raw_research_source_evidence(talous)
+        selected_words, selected_blocks = staged_publish.selected_source_evidence(talous)
+        selected = staged_publish.select_scan_enqueue_candidates([teknologia, talous], max_packets=1)
+
+        self.assertEqual(raw_blocks, 1)
+        self.assertLess(raw_words, 250)
+        self.assertGreaterEqual(selected_words, 180)
+        self.assertGreaterEqual(selected_blocks, 2)
+        self.assertTrue(staged_publish.passes_priority_source_floor(talous))
+        self.assertTrue(staged_publish.scan_candidate_passes_talous_reserve(talous))
+        self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
+
+
     def test_scan_enqueue_rejects_lower_confidence_one_block_talous_packet(self) -> None:
         talous = {
             "title": "Yrittäjä tarkistaa luottotiedot ennen sopimuksia",
@@ -763,6 +800,27 @@ class StagedPublishMetricsTests(unittest.TestCase):
         selected = staged_publish.select_scan_enqueue_candidates([teknologia, promo], max_packets=1)
 
         self.assertEqual(staged_publish.article_category(selected[0]), "Teknologia")
+
+
+    def test_scan_enqueue_rejects_thin_selected_source_talous_fragments(self) -> None:
+        for words in (49, 100):
+            with self.subTest(words=words):
+                talous = {
+                    "title": f"Finanssialan lyhyt talouskatkelma {words}",
+                    "category_hint": "Talous",
+                    "source": "Finanssiala",
+                    "research": "[Lähde: Finanssiala]\n" + "markkina " * words,
+                    "description": "Lyhyt talouskatkelma ei riitä julkaistavaksi.",
+                    "story_confidence": 0.98,
+                    "research_source": "multi",
+                }
+
+                selected_words, selected_blocks = staged_publish.selected_source_evidence(talous)
+
+                self.assertLessEqual(selected_words, 100)
+                self.assertEqual(selected_blocks, 1)
+                self.assertFalse(staged_publish.passes_priority_source_floor(talous))
+                self.assertFalse(staged_publish.scan_candidate_passes_talous_reserve(talous))
 
 
     def test_talous_enqueue_drop_examples_explain_source_passed_final_drop(self) -> None:
