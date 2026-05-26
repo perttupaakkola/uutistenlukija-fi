@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/corsairin-vengeance-ddr5-muisteissa-kaytetaan-nyt-myos-kiinalaisen-cxmtn-piireja/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
