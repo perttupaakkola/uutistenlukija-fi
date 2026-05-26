@@ -44,7 +44,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittajat-pitkia-maksuaikoja-valvova-viranomainen-perustettava-nopeasti-vaitetaan-etta-on-sovittu-vaikka-todellisuudessa-on-saneltu/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

@@ -2,28 +2,28 @@
   "analytics": {
     "ga4": {
       "daily_traffic_log": {
-        "age_minutes": 1430.6,
+        "age_minutes": 746.2,
         "exists": true,
         "status": "error_seen"
       },
       "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
       "status": "blocked_or_unknown",
       "weekly_metrics_log": {
-        "age_minutes": 8630.6,
+        "age_minutes": 2186.2,
         "exists": true,
         "status": "error_seen"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 5501.4,
+        "age_minutes": 2126.2,
         "data_source": "google_search_console",
-        "generated_at": "2026-05-20T11:09:10.649857Z",
+        "generated_at": "2026-05-25T08:00:02.008624Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 6
       },
       "fetch_log": {
-        "age_minutes": 20.6,
+        "age_minutes": 776.2,
         "exists": true,
         "status": "error_seen"
       },
@@ -34,30 +34,31 @@
   },
   "category_drift": {
     "alerts": [
+      "Kotimaa: 30.4% (+5.4% over target 25%)",
       "Talous: 10.2% (-9.8% under target 20%)",
-      "Ulkomaat: 27.7% (+7.7% over target 20%)"
+      "Ulkomaat: 27.8% (+7.8% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 669,
-        "delta": 4.2,
-        "pct": 29.2,
-        "status": "ok",
+        "count": 731,
+        "delta": 5.4,
+        "pct": 30.4,
+        "status": "over",
         "target_pct": 25
       },
       {
         "category": "Kulttuuri",
         "count": 68,
-        "delta": -4.0,
-        "pct": 3.0,
+        "delta": -4.2,
+        "pct": 2.8,
         "status": "ok",
         "target_pct": 7
       },
       {
         "category": "Talous",
-        "count": 235,
+        "count": 245,
         "delta": -9.8,
         "pct": 10.2,
         "status": "under",
@@ -65,51 +66,51 @@
       },
       {
         "category": "Teknologia",
-        "count": 314,
-        "delta": -1.3,
-        "pct": 13.7,
+        "count": 336,
+        "delta": -1.0,
+        "pct": 14.0,
         "status": "ok",
         "target_pct": 15
       },
       {
         "category": "Tiede",
-        "count": 183,
-        "delta": 5.0,
-        "pct": 8.0,
+        "count": 160,
+        "delta": 3.6,
+        "pct": 6.6,
         "status": "ok",
         "target_pct": 3
       },
       {
         "category": "Ulkomaat",
-        "count": 636,
-        "delta": 7.7,
-        "pct": 27.7,
+        "count": 670,
+        "delta": 7.8,
+        "pct": 27.8,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
-        "count": 188,
+        "count": 198,
         "delta": -1.8,
         "pct": 8.2,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-05-23T07:30:01.825589+00:00",
+    "generated_at": "2026-05-26T07:30:02.214060+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 2293
+    "total_articles": 2408
   },
   "content": {
-    "article_count_local": 2332,
-    "last_publish_age_minutes": 22.5,
-    "last_publish_at": "2026-05-24T06:28:05.976552Z",
+    "article_count_local": 2418,
+    "last_publish_age_minutes": 48.1,
+    "last_publish_at": "2026-05-26T18:38:08.520022Z",
     "latest_article": {
-      "category": "Tiede",
-      "slug": "2026-05-24-analyysi-nalkaa-kaytetaan-yha-useammin-sodankaynnin-valineen",
-      "title": "Analyysi: Nälkää käytetään yhä useammin sodankäynnin välineenä"
+      "category": "Kotimaa",
+      "slug": "2026-05-26-naomi-osaka-savaytti-ranskan-avoimissa-kultaisessa-asussa",
+      "title": "Naomi Osaka säväytti Ranskan avoimissa kultaisessa asussa"
     },
-    "published_last_24h_local": 39,
+    "published_last_24h_local": 27,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -129,7 +130,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-05-24T06:50:37.414956Z",
+  "generated_at": "2026-05-26T19:26:15.058035Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -160,28 +161,28 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 39,
+      "article_count": 27,
       "article_count_source": "content/posts frontmatter",
       "failure": 0,
       "generated_article_count": 0,
-      "published_article_count_local": 39,
+      "published_article_count_local": 27,
       "runs_total": 144,
       "skipped": 0,
       "success": 144,
       "top_error_reasons": []
     },
-    "last_run_age_minutes": 0.5,
+    "last_run_age_minutes": 6.1,
     "last_run_article_count": 0,
-    "last_run_at": "2026-05-24T06:50:08.663621Z",
+    "last_run_at": "2026-05-26T19:20:10.014221Z",
     "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-05-24T06:28:05.976552+00:00",
+        "last_published_ts": "2026-05-26T18:38:08.520022+00:00",
         "publish_rate": 0,
-        "published": 39,
-        "rejected": 6
+        "published": 28,
+        "rejected": 3
       },
       "feeds": {
         "disabled": 0,
@@ -191,18 +192,16 @@
         "stale_names": [],
         "total": 40
       },
-      "generated_at": "2026-05-24T06:28:48+00:00",
+      "generated_at": "2026-05-26T18:39:08+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "central unsourced number in ti": 4,
-        "keyword_stuffing": 2,
-        "length under target (251 words": 1,
-        "length under target (266 words": 1,
-        "length under target (279 words": 1,
-        "length under target (285 words": 1,
-        "missing: image": 6,
-        "unsourced numbers": 4
+        "central unsourced number in ti": 2,
+        "keyword_stuffing": 1,
+        "length under target (269 words": 1,
+        "length under target (283 words": 1,
+        "missing: image": 3,
+        "unsourced numbers": 2
       },
       "runs": {
         "error": 0,
@@ -214,24 +213,24 @@
       "status": "ok",
       "trending": [
         [
-          "jälkeen",
-          44
-        ],
-        [
           "mukaansa",
-          34
+          23
         ],
         [
-          "trump",
-          24
+          "jälkeen",
+          17
         ],
         [
-          "iranin",
-          24
+          "vuoden",
+          15
         ],
         [
-          "ettei",
-          21
+          "järjestön",
+          14
+        ],
+        [
+          "arvioi",
+          14
         ]
       ]
     },
@@ -241,28 +240,38 @@
     "queues": {
       "monica/inbox": {
         "count": 6598,
-        "newest_item_age_minutes": 7207.0,
-        "oldest_item_age_minutes": 51687.7
+        "newest_item_age_minutes": 10842.6,
+        "oldest_item_age_minutes": 55323.3
       },
       "monica/outbox": {
         "count": 1575,
-        "newest_item_age_minutes": 10092.4,
-        "oldest_item_age_minutes": 51084.7
+        "newest_item_age_minutes": 13728.1,
+        "oldest_item_age_minutes": 54720.3
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 29832.0,
-        "oldest_item_age_minutes": 51687.7
+        "newest_item_age_minutes": 33467.6,
+        "oldest_item_age_minutes": 55323.3
       },
       "staged/failed": {
-        "count": 2838,
-        "newest_item_age_minutes": 5.6,
-        "oldest_item_age_minutes": 32583.4
+        "count": 3097,
+        "newest_item_age_minutes": 2.2,
+        "oldest_item_age_minutes": 36219.0
       },
       "staged/published": {
-        "count": 629,
-        "newest_item_age_minutes": 21.8,
-        "oldest_item_age_minutes": 32242.2
+        "count": 715,
+        "newest_item_age_minutes": 47.1,
+        "oldest_item_age_minutes": 35877.8
+      },
+      "staged/ready": {
+        "count": 1,
+        "newest_item_age_minutes": 24.8,
+        "oldest_item_age_minutes": 24.8
+      },
+      "staged/writing": {
+        "count": 2,
+        "newest_item_age_minutes": 1014.9,
+        "oldest_item_age_minutes": 1274.9
       }
     },
     "source": "pipeline/queues/*.json file counts only"
