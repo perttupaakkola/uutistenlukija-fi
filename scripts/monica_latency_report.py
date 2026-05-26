@@ -13,6 +13,7 @@ from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MONICA_LOG = PROJECT_ROOT / "pipeline" / "logs" / "staged-monica-worker.log"
+DISPATCH_LOG = PROJECT_ROOT / "pipeline" / "logs" / "monica-dispatch-timing.jsonl"
 FAILED_DIR = PROJECT_ROOT / "pipeline" / "queues" / "staged" / "failed"
 DEFAULT_OUTPUT = PROJECT_ROOT / "artifacts" / "monica-latency-report.json"
 
@@ -29,6 +30,13 @@ REPAIR_RE = re.compile(r"monica-worker: (?P<kind>repair pass|near-miss repair pa
 
 def parse_ts(value: str) -> datetime:
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def display_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(PROJECT_ROOT))
+    except ValueError:
+        return str(path)
 
 
 def percentile(values: list[int], pct: float) -> int | None:
@@ -141,7 +149,7 @@ def parse_worker_log(path: Path, cutoff: datetime) -> dict[str, Any]:
     )
 
     return {
-        "log_path": str(path.relative_to(PROJECT_ROOT)),
+        "log_path": display_path(path),
         "runs": len(runs),
         "packet_attempts": len(packet_attempts),
         "status_counts": dict(Counter(status["status"] for status in statuses)),
@@ -199,13 +207,64 @@ def parse_failed_artifacts(path: Path, cutoff: datetime) -> dict[str, Any]:
         )
 
     return {
-        "failed_dir": str(path.relative_to(PROJECT_ROOT)),
+        "failed_dir": display_path(path),
         "artifacts": len(rows),
         "buckets": dict(Counter(row["bucket"] for row in rows)),
         "retry_classifications": dict(Counter(str(row["retry_classification"] or "missing") for row in rows)),
         "timeout_artifacts": [
             row for row in rows if row["bucket"] == "timeout"
         ][-50:],
+    }
+
+
+def parse_dispatch_timing(path: Path, cutoff: datetime) -> dict[str, Any]:
+    rows: list[dict[str, Any]] = []
+    for line in path.read_text(encoding="utf-8", errors="replace").splitlines() if path.exists() else []:
+        try:
+            row = json.loads(line)
+            started = parse_ts(str(row.get("started_at") or ""))
+            if started < cutoff:
+                continue
+            rows.append(row)
+        except Exception:
+            continue
+
+    durations = [int(row.get("duration_ms") or 0) for row in rows if row.get("duration_ms") is not None]
+    timeout_rows = [row for row in rows if row.get("timed_out")]
+    load_values = [float(row["load1"]) for row in rows if isinstance(row.get("load1"), int | float)]
+    process_values = [
+        int(row["openclaw_related_processes"])
+        for row in rows
+        if isinstance(row.get("openclaw_related_processes"), int)
+    ]
+    timeout_load_values = [
+        float(row["load1"])
+        for row in timeout_rows
+        if isinstance(row.get("load1"), int | float)
+    ]
+
+    return {
+        "log_path": display_path(path),
+        "records": len(rows),
+        "outcomes": dict(Counter(str(row.get("outcome") or "unknown") for row in rows)),
+        "modes": dict(Counter(str(row.get("mode") or "unknown") for row in rows)),
+        "timeout_records": len(timeout_rows),
+        "duration_ms": {
+            "min": min(durations) if durations else None,
+            "median": statistics.median(durations) if durations else None,
+            "p90": percentile(durations, 0.9),
+            "max": max(durations) if durations else None,
+        },
+        "load1": {
+            "median": statistics.median(load_values) if load_values else None,
+            "max": max(load_values) if load_values else None,
+            "timeout_median": statistics.median(timeout_load_values) if timeout_load_values else None,
+            "timeout_max": max(timeout_load_values) if timeout_load_values else None,
+        },
+        "openclaw_related_processes": {
+            "median": statistics.median(process_values) if process_values else None,
+            "max": max(process_values) if process_values else None,
+        },
     }
 
 
@@ -228,6 +287,7 @@ def main() -> int:
             "secret_values_included": False,
         },
         "worker_log": parse_worker_log(MONICA_LOG, cutoff),
+        "dispatch_timing": parse_dispatch_timing(DISPATCH_LOG, cutoff),
         "failed_artifacts": parse_failed_artifacts(FAILED_DIR, cutoff),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -237,6 +297,7 @@ def main() -> int:
         "summary "
         f"attempts={report['worker_log']['packet_attempts']} "
         f"timeouts={report['worker_log']['failure_buckets'].get('timeout', 0)} "
+        f"dispatch_records={report['dispatch_timing']['records']} "
         f"ok={report['worker_log']['status_counts'].get('ok', 0)} "
         f"failed_artifacts={report['failed_artifacts']['artifacts']}"
     )

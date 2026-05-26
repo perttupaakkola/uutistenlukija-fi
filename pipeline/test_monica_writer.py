@@ -6,6 +6,7 @@ import os
 import subprocess
 import tempfile
 import unittest
+from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -13,10 +14,12 @@ try:
     from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
+    TIMING_LOG_PATCH_TARGET = "pipeline.monica_writer.MONICA_DISPATCH_TIMING_LOG"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
     from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
+    TIMING_LOG_PATCH_TARGET = "monica_writer.MONICA_DISPATCH_TIMING_LOG"
 
 
 SAMPLE_ARTICLE = {
@@ -104,8 +107,11 @@ class MonicaWriterTests(unittest.TestCase):
         os.environ["MONICA_QUEUE_DIR"] = self.tmpdir.name
         os.environ["MONICA_OPENCLAW_CMD"] = "openclaw"
         os.environ["MONICA_OPENCLAW_LOCAL"] = "1"
+        self.timing_log_patch = patch(TIMING_LOG_PATCH_TARGET, Path(self.tmpdir.name) / "dispatch.jsonl")
+        self.timing_log_patch.start()
 
     def tearDown(self):
+        self.timing_log_patch.stop()
         self.tmpdir.cleanup()
         for key in ("MONICA_QUEUE_DIR", "MONICA_OPENCLAW_CMD", "MONICA_OPENCLAW_LOCAL"):
             os.environ.pop(key, None)
@@ -311,6 +317,22 @@ class MonicaWriterTests(unittest.TestCase):
 
         with self.assertRaises(RuntimeError):
             _run_openclaw_command(["openclaw"])
+
+    @patch(PATCH_TARGET)
+    def test_run_openclaw_command_writes_redacted_dispatch_timing(self, run_mock):
+        timing_log = os.path.join(self.tmpdir.name, "dispatch.jsonl")
+        run_mock.return_value = self._result(_good_payload())
+
+        with patch(TIMING_LOG_PATCH_TARGET, Path(timing_log)):
+            _run_openclaw_command(["openclaw", "agent", "--agent", "monica", "--session-id", "secret-session", "--message", "prompt text"])
+
+        row = json.loads(Path(timing_log).read_text(encoding="utf-8").splitlines()[0])
+        self.assertEqual(row["schema"], "uutistenlukija.monica_dispatch_timing.v1")
+        self.assertEqual(row["outcome"], "success")
+        self.assertEqual(row["mode"], "gateway")
+        self.assertIn("session_id_hash", row)
+        self.assertNotIn("secret-session", json.dumps(row))
+        self.assertNotIn("prompt text", json.dumps(row))
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_quarantine_context_overflow_has_reason_code(self, run_mock):

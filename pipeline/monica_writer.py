@@ -18,6 +18,7 @@ import re
 import shlex
 import shutil
 import subprocess
+import time
 import uuid
 from pathlib import Path
 from typing import Any
@@ -45,6 +46,10 @@ ALLOWED_CATEGORIES = {
 DEFAULT_MONICA_AGENT = os.environ.get("MONICA_OPENCLAW_AGENT", "monica")
 DEFAULT_OPENCLAW_CMD = os.environ.get("MONICA_OPENCLAW_CMD", "openclaw")
 DEFAULT_TIMEOUT_SEC = int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", "240"))
+MONICA_DISPATCH_TIMING_LOG = Path(os.environ.get(
+    "MONICA_DISPATCH_TIMING_LOG",
+    str(Path(__file__).resolve().parent / "logs" / "monica-dispatch-timing.jsonl"),
+))
 MIN_CONTENT_WORDS = 250
 MIN_LEAD_WORDS = 30
 SOURCE_BACKED_REPAIR_WORDS = 300
@@ -596,40 +601,138 @@ def _dispatch_reason_code(error: BaseException | str) -> str:
     return "dispatch_failed"
 
 
+def _redacted_dispatch_metadata(cmd: list[str]) -> dict[str, Any]:
+    metadata: dict[str, Any] = {
+        "mode": "gateway",
+        "agent": os.environ.get("MONICA_OPENCLAW_AGENT", DEFAULT_MONICA_AGENT),
+        "executable": Path(cmd[0]).name if cmd else "",
+        "session_id_hash": "",
+    }
+    if "--local" in cmd:
+        metadata["mode"] = "local"
+    if "--session-id" in cmd:
+        try:
+            session_id = cmd[cmd.index("--session-id") + 1]
+            metadata["session_id_hash"] = hashlib.sha256(session_id.encode("utf-8")).hexdigest()[:12]
+        except (IndexError, ValueError):
+            metadata["session_id_hash"] = "unavailable"
+    return metadata
+
+
+def _safe_process_snapshot() -> dict[str, Any]:
+    snapshot: dict[str, Any] = {}
+    try:
+        snapshot["load1"] = round(os.getloadavg()[0], 2)
+    except OSError:
+        pass
+    try:
+        count = 0
+        for cmdline in Path("/proc").glob("[0-9]*/cmdline"):
+            text = cmdline.read_text(encoding="utf-8", errors="ignore").replace("\x00", " ").lower()
+            if "openclaw" in text or "hermes" in text or "codex" in text:
+                count += 1
+        snapshot["openclaw_related_processes"] = count
+    except Exception:
+        snapshot["openclaw_related_processes"] = None
+    return snapshot
+
+
+def _append_dispatch_timing(record: dict[str, Any]) -> None:
+    try:
+        MONICA_DISPATCH_TIMING_LOG.parent.mkdir(parents=True, exist_ok=True)
+        with MONICA_DISPATCH_TIMING_LOG.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")
+    except Exception:
+        # Dispatch logging must never block article handling.
+        return
+
+
 def _run_openclaw_command(cmd: list[str]) -> str:
+    started_at = datetime.now(timezone.utc)
+    started = time.monotonic()
+    metadata = _redacted_dispatch_metadata(cmd)
+    timeout_sec = int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", str(DEFAULT_TIMEOUT_SEC)))
+    outcome = "unknown"
+    reason_code = ""
+    timed_out = False
+    returncode: int | None = None
     try:
         result = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
-            timeout=int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", str(DEFAULT_TIMEOUT_SEC))),
+            timeout=timeout_sec,
             check=False,
         )
     except subprocess.TimeoutExpired as e:
+        timed_out = True
+        reason_code = "timeout"
         stdout = e.stdout or ""
         if isinstance(stdout, bytes):
             stdout = stdout.decode("utf-8", errors="replace")
         if stdout.strip():
             try:
                 _extract_json_object(stdout)
+                outcome = "success_timeout_stdout_salvaged"
                 return stdout.strip()
             except ValueError:
                 pass
+        outcome = "timeout"
         raise RuntimeError(f"Monica writer command timed out after {e.timeout} seconds") from e
     except FileNotFoundError as e:
+        outcome = "cli_missing"
+        reason_code = "cli_missing"
         searched = ", ".join(OPENCLAW_CANDIDATES)
         raise RuntimeError(
             f"Monica writer command failed: {e}. Checked PATH and candidates: {searched}"
         ) from e
-    if result.returncode != 0:
-        stderr = (result.stderr or "").strip()
-        stdout = (result.stdout or "").strip()
-        detail = stderr or stdout or f"exit {result.returncode}"
-        raise RuntimeError(f"Monica writer command failed: {detail}")
-    text = (result.stdout or "").strip()
-    if not text:
-        raise RuntimeError("Monica writer returned empty output")
-    return text
+    except Exception:
+        outcome = "dispatch_exception"
+        reason_code = "dispatch_failed"
+        raise
+    finally:
+        duration_ms = int((time.monotonic() - started) * 1000)
+        if outcome != "unknown":
+            _append_dispatch_timing({
+                "schema": "uutistenlukija.monica_dispatch_timing.v1",
+                "started_at": started_at.isoformat(),
+                "duration_ms": duration_ms,
+                "timeout_sec": timeout_sec,
+                "timed_out": timed_out,
+                "outcome": outcome,
+                "reason_code": reason_code,
+                **metadata,
+                **_safe_process_snapshot(),
+            })
+    returncode = result.returncode
+    try:
+        if result.returncode != 0:
+            stderr = (result.stderr or "").strip()
+            stdout = (result.stdout or "").strip()
+            detail = stderr or stdout or f"exit {result.returncode}"
+            outcome = "nonzero_exit"
+            reason_code = "dispatch_failed"
+            raise RuntimeError(f"Monica writer command failed: {detail}")
+        text = (result.stdout or "").strip()
+        if not text:
+            outcome = "empty_output"
+            reason_code = "dispatch_failed"
+            raise RuntimeError("Monica writer returned empty output")
+        outcome = "success"
+        return text
+    finally:
+        _append_dispatch_timing({
+            "schema": "uutistenlukija.monica_dispatch_timing.v1",
+            "started_at": started_at.isoformat(),
+            "duration_ms": int((time.monotonic() - started) * 1000),
+            "timeout_sec": timeout_sec,
+            "timed_out": timed_out,
+            "outcome": outcome,
+            "reason_code": reason_code,
+            "returncode": returncode,
+            **metadata,
+            **_safe_process_snapshot(),
+        })
 
 
 def _run_monica(prompt: str) -> str:
