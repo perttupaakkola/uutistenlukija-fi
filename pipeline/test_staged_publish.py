@@ -192,6 +192,25 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
         self.assertFalse(staged_publish.should_skip_staged_cooldown(article, hours=48))
 
+    def test_talous_cooldown_does_not_requeue_writer_runtime_timeout(self) -> None:
+        article = {"title": "talous-timeout", "link": "https://example.com/talous-timeout", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
+        failed = _record("talous-timeout", source_words=283, blocks=3)
+        failed["digest"] = digest
+        failed["packet"]["category_hint"] = "Talous"
+        failed["packet"]["story_confidence"] = 0.98
+        failed["failure"] = "Monica writer command timed out after 360 seconds"
+        failed["writer_failure_feedback"] = staged_publish.failed_writer_feedback(
+            failed,
+            None,
+            [],
+            raw_response="Monica writer command timed out after 360 seconds",
+        )
+        self._write("failed", "failed-talous-timeout", failed, age_hours=1)
+
+        self.assertEqual(failed["writer_failure_feedback"]["retry_classification"], "writer_runtime")
+        self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=48))
+
     def test_talous_cooldown_still_skips_when_digest_already_ready(self) -> None:
         article = {"title": "talous-ready", "link": "https://example.com/talous-ready", "category_hint": "Talous"}
         digest = staged_publish.stable_digest(article)
@@ -676,6 +695,38 @@ class StagedPublishMetricsTests(unittest.TestCase):
         selected = staged_publish.select_scan_enqueue_candidates([teknologia, tokmanni], max_packets=1)
 
         self.assertEqual(staged_publish.article_category(selected[0]), "Teknologia")
+
+
+    def test_scan_enqueue_reserves_high_confidence_one_block_talous_packet(self) -> None:
+        teknologia = {"title": "teknologia", "category_hint": "Teknologia", "research": "[Lähde: Testi]\n" + "sana " * 310, "description": "kuvaus"}
+        talous = {
+            "title": "Yrittäjä tarkistaa luottotiedot ennen sopimuksia",
+            "category_hint": "Talous",
+            "source": "Suomen Yrittäjät",
+            "research": "[Lähde: Suomen Yrittäjät]\n" + "Luottotiedot auttavat yritystä arvioimaan maksukykyä ennen sopimuksia. " * 27,
+            "description": "Pk-yrityksen riskienhallintaa käsittelevä juttu kertoo luottotietojen käytöstä.",
+            "story_confidence": 0.96,
+        }
+
+        self.assertTrue(staged_publish.passes_priority_source_floor(talous))
+        self.assertTrue(staged_publish.scan_candidate_passes_talous_reserve(talous))
+        selected = staged_publish.select_scan_enqueue_candidates([teknologia, talous], max_packets=1)
+
+        self.assertEqual(staged_publish.article_category(selected[0]), "Talous")
+
+
+    def test_scan_enqueue_rejects_lower_confidence_one_block_talous_packet(self) -> None:
+        talous = {
+            "title": "Yrittäjä tarkistaa luottotiedot ennen sopimuksia",
+            "category_hint": "Talous",
+            "source": "Suomen Yrittäjät",
+            "research": "[Lähde: Suomen Yrittäjät]\n" + "Luottotiedot auttavat yritystä arvioimaan maksukykyä ennen sopimuksia. " * 27,
+            "description": "Pk-yrityksen riskienhallintaa käsittelevä juttu kertoo luottotietojen käytöstä.",
+            "story_confidence": 0.72,
+        }
+
+        self.assertFalse(staged_publish.passes_priority_source_floor(talous))
+        self.assertFalse(staged_publish.scan_candidate_passes_talous_reserve(talous))
 
 
     def test_scan_enqueue_reserves_substantive_one_block_talous_packet(self) -> None:

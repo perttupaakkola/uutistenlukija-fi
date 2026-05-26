@@ -263,11 +263,14 @@ def passes_priority_source_floor(article: dict) -> bool:
     research = str(article.get("research") or article.get("research_text") or "")
     source_words = len(research.split())
     source_blocks = research.lower().count("[lähde:") + research.lower().count("[source:")
+    confidence = float(article.get("story_confidence") or article.get("confidence") or 0.85)
     if str(article.get("research_source") or "") == "rss_talous_source_backed":
         return source_words >= 120 and source_blocks >= 1
     if source_blocks >= 2:
         return source_words >= CATEGORY_SCAN_ENQUEUE_MIN_RESEARCH_WORDS
     guard = org_source_talous_guardrail(article)
+    if source_blocks >= 1 and source_words >= 180 and confidence >= 0.90 and guard.get("classification") in {"ok_company_profile", "ok_org_source_talous", "ok_attributed_policy_claim"}:
+        return True
     if source_blocks >= 1 and source_words >= 250 and guard.get("classification") in {"ok_company_profile", "ok_org_source_talous", "ok_attributed_policy_claim"}:
         return True
     return False
@@ -304,6 +307,8 @@ def scan_candidate_passes_talous_reserve(article: dict) -> bool:
     if source_words >= 180 and source_blocks >= 2:
         return True
     guard = org_source_talous_guardrail(article)
+    if source_words >= 180 and source_blocks >= 1 and confidence >= 0.90 and guard.get("classification") in {"ok_company_profile", "ok_org_source_talous", "ok_attributed_policy_claim"}:
+        return True
     return source_words >= 250 and source_blocks >= 1 and guard.get("classification") in {"ok_company_profile", "ok_org_source_talous", "ok_attributed_policy_claim"}
 
 
@@ -953,8 +958,12 @@ def failed_writer_feedback(data: dict, payload: dict | None = None, issues: list
         or (category == "Talous" and source_words >= 190 and source_blocks >= 3 and story_confidence >= 0.85)
     ) and source_blocks >= 2
     near_miss = 200 <= word_count < 250 and source_backed and any("content too short" in issue for issue in issues)
-    invalid_json = not payload and ("json" in str(data.get("failure") or raw_response).lower() or bool(raw_response))
-    if invalid_json:
+    failure_text = str(data.get("failure") or raw_response or "").lower()
+    runtime_failure = any(token in failure_text for token in ("timed out", "timeout", "context overflow", "gatewayclientrequesterror", "failovererror", "oauth token"))
+    invalid_json = not payload and "json" in failure_text
+    if runtime_failure:
+        classification = "writer_runtime"
+    elif invalid_json:
         classification = "writer_invalid_json"
     elif near_miss:
         classification = "repair_near_miss_short"
