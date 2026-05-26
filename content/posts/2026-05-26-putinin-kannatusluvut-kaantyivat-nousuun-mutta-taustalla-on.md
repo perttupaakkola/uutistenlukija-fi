@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/putinille-uudet-epailyttavat-luvut-lahestyva-katastrofi/9343990"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
