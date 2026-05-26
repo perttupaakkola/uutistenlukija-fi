@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-26T16:11:24.975679+00:00",
+  "digest": "c4665a2140",
+  "packet": {
+    "packet_id": "20260526T161124Z_c4665a2140",
+    "created_at": "2026-05-26T16:11:24Z",
+    "headline_seed": "Leijonille loistouutinen Sveitsi-otteluun – tässä kentälliset",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9483124",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9483124"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Leijonille loistouutinen Sveitsi-otteluun – tässä kentälliset"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 139,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Leijonat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Leijonille loistouutinen Sveitsi-otteluun – tässä kentälliset",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Leijonille loistouutinen Sveitsi-otteluun – tässä kentälliset",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9483124",
+    "published": "2026-05-26T18:37:29+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "3a971116ecde4ccace7769a82fcf2007",
+    "_url_hash": "1645f235e5f9bd78135b7bc9ca94bb3ca77b430141a2af3fc70c992e99a798c3",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Leijonat]\nLeijonat kohtaa tiistaina MM-kisojen lohkovaiheen päätösottelussaan turnausisäntä Sveitsin. Molemmat joukkueet ovat voittaneet kaikki kuusi otteluaan, joten panoksena tänään on lohkovoitto.\n\nSuomi on saanut erinomaisia uutisia otteluun lähdettäessä. Viikko sitten maanantaina USA-ottelussa loukkaantunut puolustaja Urho Vaakanainen palaa kokoonpanoon ja nappaa seiskapakin tontin haltuunsa. Näin ollen Mikael Seppälä jää kokoonpanosta sivuun.\n\nLeijonien maalilla jatkaa Justus Annunen, jolle startti on viides tässä turnauksessa.\n\nSuomen ja Sveitsin välinen ottelu alkaa kello 21.20. Ottelu on katsottavissa Viaplayn ja MTV:n kanavilta.\n\n1:64 Mikael Granlund – 16 Aleksander Barkov – 94 Konsta Helenius41 Ville Heinola – 10 Henri Jokiharju\n\n2:21 Patrik Puistola – 15 Anton Lundell – 92 Lenni Hämeenaho4 Mikko Lehtonen – 18 Vili Saarijärvi\n\n3:65 Sakari Manninen – 34 Aatu Räty – 13 Jesse Puljujärvi3 Olli Määttä — 33 Nikolas Matinpalo\n\n4:80 Saku Mäenalanen – 24 Hannes Björninen – 19 Waltteri Merelä58 Urho Vaakanainen",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-26T16:13:58.645870+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä tai tarkistettavia faktoja kentällisistä, ottelun ajankohdasta tai uutisen sisällöstä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=c71fc0f6-f245-4755-9bd2-12309adcf529 sessionKey=agent:monica:explicit:monica-pipeline-5eee76e0-ea14-4a33-abe3-5ea392f752f1 lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-5eee76e0-ea14-4a33-abe3-5ea392f752f1\n{\"packet_id\":\"20260526T161124Z_c4665a2140\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä tai tarkistettavia faktoja kentällisistä, ottelun ajankohdasta tai uutisen sisällöstä.\"}"
+}

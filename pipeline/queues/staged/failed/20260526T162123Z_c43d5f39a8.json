@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-26T16:21:23.005662+00:00",
+  "digest": "c43d5f39a8",
+  "packet": {
+    "packet_id": "20260526T162123Z_c43d5f39a8",
+    "created_at": "2026-05-26T16:21:23Z",
+    "headline_seed": "IL: Päiväkodin työntekijät löysivät kuolleen miehen leikkipuistosta Lahdessa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/paikalliset/9483117",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9483117"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "IL: Päiväkodin työntekijät löysivät kuolleen miehen leikkipuistosta Lahdessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 101,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "IL: Päiväkodin työntekijät löysivät kuolleen miehen leikkipuistosta Lahdessa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "IL: Päiväkodin työntekijät löysivät kuolleen miehen leikkipuistosta Lahdessa",
+    "description": "",
+    "link": "https://www.ess.fi/paikalliset/9483117",
+    "published": "2026-05-26T18:43:59+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "db876ecad88f5fdf2a96ec84ff2ba38c",
+    "_url_hash": "3d89655b284563d9fa0289d930a3fbdeaa8dc41d1e11f06217a80b9669d630e3",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nFormula ykkösten MM-sarjan takavuosien suomalaiskuljettaja Mika Saloa puukotettiin Thaimaassa, kertovat esimerkiksi Uuno-sivusto ja Ilta-Sanomat.\n\nSalon vaimo Annica Salo vahvisti asian torstaina Ilta-Sanomille. Lehden mukaan Saloa puukotettiin kadulla tiistai-iltana paikallista aikaa. Tilanteessa Salon ohitti mopo, josta häntä ilmeisesti viillettiin. Saloa hoidettiin paikallisessa sairaalassa.\n\n– Haavan tikannut lääkäri totesi, että se oli selvästi veitsellä tehty. Myöhemmin sain kuulla, että sairaalaan oli tuotu viisi muuta uhria. Heillä oli samanlaisia vammoja, Mika Salo kertoi Uunolle.\n\nSalo ajoi autourheilun kuninkuusluokassa vuosina 1994–2000 ja 2002. Hän ylsi kahdessa kilpailussa palkintokorokkeelle, kun ajoi kerran toiseksi ja kerran kolmanneksi kaudella 1999. Salo tuurasi tuolloin Ferrarilla loukkaantunutta saksalaistähti Michael Schumacheria.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-26T16:23:56.891720+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=34c01be3-7a24-4710-95b8-7f4414bd3da0 sessionKey=agent:monica:explicit:monica-pipeline-4cd2de63-54cf-43c1-a1a4-e8d6bb56b535 lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-4cd2de63-54cf-43c1-a1a4-e8d6bb56b535\n{\"packet_id\":\"20260526T162123Z_c43d5f39a8\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
