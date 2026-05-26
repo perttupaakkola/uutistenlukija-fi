@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-26T08:21:37.095243+00:00",
+  "digest": "24a0b9a547",
+  "packet": {
+    "packet_id": "20260526T082137Z_24a0b9a547",
+    "created_at": "2026-05-26T08:21:37Z",
+    "headline_seed": "Ylen lähetyksissä häikkää – tässä syy",
+    "description_seed": "Tilanne alkoi ennen aamuyhdeksää.",
+    "link": "https://www.is.fi/kotimaa/art-2000012033677.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012033677.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ylen lähetyksissä häikkää – tässä syy"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 146,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ylen lähetyksissä häikkää – tässä syy",
+      "description": "Tilanne alkoi ennen aamuyhdeksää.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ylen lähetyksissä häikkää – tässä syy",
+    "description": "Tilanne alkoi ennen aamuyhdeksää.",
+    "link": "https://www.is.fi/kotimaa/art-2000012033677.html",
+    "published": "2026-05-26T08:12:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "514b028cc2d8223ade2e6db5db10d363",
+    "_url_hash": "24585572785cfda20f8589a09ed1abaf13e84ff1b945cc26f39ad375fbd4aba8",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nTurun messukeskuksen omistajat haluavat irtautua yhtiön nykyisistä tiloista Artukaisissa, kertoo Turun Sanomat.\n\nMessukeskuksen rakennukset ovat Turun Messukeskus Oy:n omistamia, mutta ne sijaitsevat kaupungin vuokratontilla.\n\nTurun Sanomien haastattelema messukeskuksen toimitusjohtaja Päivi Rytsä kertoo, että tiloista luopuminen ei tarkoita messutoiminnan loppumista, vaan tarkoituksena on jatkaa toimintaa muualla.\n\nYksi vaihtoehto on siirtyä ratapihalle, jonne suunnitellaan jättimäistä uutta areenaa, elämyskeskusta ja jossa sijaitsee jo tapahtumatalo Logomo.\n\nPäivi Rytsä on Logomon entinen toimitusjohtaja. Lisäksi hän kuuluu elämyskeskusta valmistelevan Turun Ratapihan Kehitys Oy:n ja jääkiekkoseura HC TPS Oy:n hallituksiin. Hän aloitti messukeskuksen toimitusjohtajana maaliskuun alussa.\n\nViime vuodet ovat olleet Turun Messukeskus Oy:lle tappiollisia.\n\nToiminta kääntyi rankasti tappiolle koronapandemian alkaessa vuonna 2020, kun yhtiö teki 1,8 miljoonan euron liikevaihdolla 373 000 euron tappion. Sen jälkeen tappioita on saatu vähennettyä vuosittain. Vuoden 2023 tilinpäätös ei ole vielä julkinen.\n\nMessukeskus Oy:n omistavat Turun kaupunki, Turun kauppakamari ja Pro Agria Farman säätiö.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-26T08:23:58.044877+00:00",
+  "failure": "Paketti ei sisällä valittua lähdetekstiä eikä riittäviä varmennettuja yksityiskohtia julkaistavan uutisen kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=725d80c5-a3eb-4e05-b921-65b71fd6402c sessionKey=agent:monica:explicit:monica-pipeline-2cbb1b47-ac9b-4c63-b57a-d27c61721e3d lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-2cbb1b47-ac9b-4c63-b57a-d27c61721e3d\n{\"packet_id\":\"20260526T082137Z_24a0b9a547\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä valittua lähdetekstiä eikä riittäviä varmennettuja yksityiskohtia julkaistavan uutisen kirjoittamiseen.\"}"
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-26T07:31:22.865042+00:00",
+  "digest": "1d4cbfa0ff",
+  "packet": {
+    "packet_id": "20260526T073122Z_1d4cbfa0ff",
+    "created_at": "2026-05-26T07:31:22Z",
+    "headline_seed": "Miksi Etelä-Suomessa on haissut? Yle: Tässä vastaus",
+    "description_seed": "Savun haju levisi ainakin Forssaan asti.",
+    "link": "https://www.is.fi/kotimaa/art-2000012033076.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012033076.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Miksi Etelä-Suomessa on haissut? Yle: Tässä vastaus"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 143,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Seiska",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Miksi Etelä-Suomessa on haissut? Yle: Tässä vastaus",
+      "description": "Savun haju levisi ainakin Forssaan asti.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Miksi Etelä-Suomessa on haissut? Yle: Tässä vastaus",
+    "description": "Savun haju levisi ainakin Forssaan asti.",
+    "link": "https://www.is.fi/kotimaa/art-2000012033076.html",
+    "published": "2026-05-26T07:29:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "a7b77830199236fcb9a9d046fa77c373",
+    "_url_hash": "528e6c1f63696e5f2be3c3b2b4ab90b131ac063b84b847bca9797e36cac47213",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Seiska]\nMuusikko kertoi viime kesänä sairastuneensa syöpään.\n\nMuusikko Hannu \"Tuomari\" Nurmio, 74, paljasti heinäkuussa 2024 sairastuneensa eturauhassyöpään. Tuomari kertoi tilanteestaan tuolloin Docrates -syöpäsairaalan haastattelussa.\n\nNyt lähes vuosi myöhemmin Espanjan Aurinkorannikolle matkustanut Dumari kertoo kuulumisiaan Fuengirola.fi -sivustolle.\n\nTuomari kertoo hänelle kuuluvan hyvää, vaikka eläkeläisen elämänmenoon on ollut totuttelemista. Kärsimättömäksi ihmiseksi tunnustautuvan muusikon on hankala ottaa rauhassa, mutta eteläisen Euroopan lämmössä vauhdin hiljentäminen on hieman helpompaa.\n\nSyitä tahdin rauhoittamiselle on useampi. Lähes jo selätetty eturauhassyöpä ei hieman yllättäen kuitenkaan ole niistä ensimmäinen. Sen sijaan musiikkiteollisuuden oravanpyörä ei tunnu Tuomarista enää mielekkäältä.\n\n– Olen ollut kuin automaattisessa myllyssä. Haluan päästä irti siitä pyörästä, joka pyörittää minua, enkä minä sitä.\n\nTuomari toteaa sivustolle, ettei halua enää tehdä kappaleita velvollisuudesta, vaan puhtaasti inspiraatiosta. Juuri siihen Espanjan aurinko tarjoaa oivan tilaisuuden.\n\n– Kun istuskelee täällä terassilla ja käy välillä kävelyllä tuolla puutarhassa, Tuomari kuvailee.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-26T07:34:00.826959+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja tapahtumapaikasta, ajankohdasta, syystä tai viranomaisarvioista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=ae35d6cc-0acb-4e97-a97c-03e3c425ac1c sessionKey=agent:monica:explicit:monica-pipeline-861797df-9c71-434f-a045-a7696472db70 lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-861797df-9c71-434f-a045-a7696472db70\n{\"packet_id\":\"20260526T073122Z_1d4cbfa0ff\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja tapahtumapaikasta, ajankohdasta, syystä tai viranomaisarvioista.\"}"
+}
