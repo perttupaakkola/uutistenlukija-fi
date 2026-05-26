@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittajat-palkkaa-ei-tarvitse-maksaa-jos-drooniuhka-estaa-tyomatkan/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
