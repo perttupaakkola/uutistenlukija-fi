@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kymmenet-tuhannet-yritykset-jattaneet-tilinpaatoksen-ilmoittamatta-paperiversiot-pian-historiaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
