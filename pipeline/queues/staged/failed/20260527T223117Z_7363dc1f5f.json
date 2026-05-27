@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T22:31:17.755836+00:00",
+  "digest": "7363dc1f5f",
+  "packet": {
+    "packet_id": "20260527T223117Z_7363dc1f5f",
+    "created_at": "2026-05-27T22:31:17Z",
+    "headline_seed": "Hallitus puuttui peliin: Donald Trumpin kaimaa ei teurasteta",
+    "description_seed": "Bangladeshin hallitus pelasti viraalin puhvelin. Someilmiöksi noussut harvinainen albiinopuhveli, lempinimeltään Donald Trump, säästyi viime hetkillä rituaaliteurastukselta, kertoo uutistoimisto Reuters. Yhdysvaltain presidentin kaima oli jo ehditty myydä rituaaliteurastettavaksi Id al-Adha -juhlallisuuksia varten Bangladeshissa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/ac14a925-d980-40ae-959b-41e187c30643",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/ac14a925-d980-40ae-959b-41e187c30643"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hallitus puuttui peliin: Donald Trumpin kaimaa ei teurasteta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Bangladeshin hallitus pelasti viraalin puhvelin. Someilmiöksi noussut harvinainen albiinopuhveli, lempinimeltään Donald Trump, säästyi viime hetkillä rituaaliteurastukselta, kertoo uutistoimisto Reuters. Yhdysvaltain presidentin kaima oli jo ehditty myydä rituaaliteurastettavaksi Id al-Adha -juhlallisuuksia varten Bangladeshissa.",
+        "word_count": 32,
+        "keyword_overlap": 28,
+        "strong_overlap": 24
+      }
+    ],
+    "source_text": "Bangladeshin hallitus pelasti viraalin puhvelin. Someilmiöksi noussut harvinainen albiinopuhveli, lempinimeltään Donald Trump, säästyi viime hetkillä rituaaliteurastukselta, kertoo uutistoimisto Reuters. Yhdysvaltain presidentin kaima oli jo ehditty myydä rituaaliteurastettavaksi Id al-Adha -juhlallisuuksia varten Bangladeshissa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 64,
+      "selected_blocks": 1,
+      "selected_source_words": 32,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hallitus puuttui peliin: Donald Trumpin kaimaa ei teurasteta",
+      "description": "Bangladeshin hallitus pelasti viraalin puhvelin. Someilmiöksi noussut harvinainen albiinopuhveli, lempinimeltään Donald Trump, säästyi viime hetkillä rituaaliteurastukselta, kertoo uutistoimisto Reuters. Yhdysvaltain presidentin kaima oli jo ehditty myydä rituaaliteurastettavaksi Id al-Adha -juhlallisuuksia varten Bangladeshissa.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Hallitus puuttui peliin: Donald Trumpin kaimaa ei teurasteta",
+    "description": "Bangladeshin hallitus pelasti viraalin puhvelin. Someilmiöksi noussut harvinainen albiinopuhveli, lempinimeltään Donald Trump, säästyi viime hetkillä rituaaliteurastukselta, kertoo uutistoimisto Reuters. Yhdysvaltain presidentin kaima oli jo ehditty myydä rituaaliteurastettavaksi Id al-Adha -juhlallisuuksia varten Bangladeshissa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/ac14a925-d980-40ae-959b-41e187c30643",
+    "published": "2026-05-28T00:00:09+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "d906529d2de736aaaab4f01b300342ea",
+    "_url_hash": "6985f6a5a6ce57714821fa341af6466e012a2f2ac0dbc423573e55d1446cd212",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Bangladeshin hallitus pelasti viraalin puhvelin. Someilmiöksi noussut harvinainen albiinopuhveli, lempinimeltään Donald Trump, säästyi viime hetkillä rituaaliteurastukselta, kertoo uutistoimisto Reuters. Yhdysvaltain presidentin kaima oli jo ehditty myydä rituaaliteurastettavaksi Id al-Adha -juhlallisuuksia varten Bangladeshissa.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-27T22:33:48.731302+00:00",
+  "failure": "Lähdeaineisto on vain 32 sanan mittainen ja sisältää liian vähän varmistettuja yksityiskohtia vähintään 250 sanan julkaistavaan artikkeliin ilman täytettä tai oletuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T223117Z_7363dc1f5f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on vain 32 sanan mittainen ja sisältää liian vähän varmistettuja yksityiskohtia vähintään 250 sanan julkaistavaan artikkeliin ilman täytettä tai oletuksia.\"}"
+}
