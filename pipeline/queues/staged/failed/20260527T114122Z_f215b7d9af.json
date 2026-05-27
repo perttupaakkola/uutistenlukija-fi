@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T11:41:22.771116+00:00",
+  "digest": "f215b7d9af",
+  "packet": {
+    "packet_id": "20260527T114122Z_f215b7d9af",
+    "created_at": "2026-05-27T11:41:22Z",
+    "headline_seed": "Kommentti: Trumpin henkilö­kohtainen ilmoitus herättää kysymyksiä",
+    "description_seed": "Donald Trumpin väitteet omasta terveydentilasta eivät vakuuta, kirjoittaa ulkomaantoimittaja Jari Himanen. Yhdysvalloissa Donald Trump lateli jälleen tiistaina perinteisen terveystarkastuksensa jälkeen väsyneet litaniat. – Kaikki sujui täydellisesti, hän ilmoitti sosiaalisessa mediassa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/af608517-0f6d-4c72-909d-f5a8bcd28758",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/af608517-0f6d-4c72-909d-f5a8bcd28758"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kommentti: Trumpin henkilö­kohtainen ilmoitus herättää kysymyksiä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Donald Trumpin väitteet omasta terveydentilasta eivät vakuuta, kirjoittaa ulkomaantoimittaja Jari Himanen. Yhdysvalloissa Donald Trump lateli jälleen tiistaina perinteisen terveystarkastuksensa jälkeen väsyneet litaniat. – Kaikki sujui täydellisesti, hän ilmoitti sosiaalisessa mediassa.",
+        "word_count": 30,
+        "keyword_overlap": 26,
+        "strong_overlap": 22
+      }
+    ],
+    "source_text": "Donald Trumpin väitteet omasta terveydentilasta eivät vakuuta, kirjoittaa ulkomaantoimittaja Jari Himanen. Yhdysvalloissa Donald Trump lateli jälleen tiistaina perinteisen terveystarkastuksensa jälkeen väsyneet litaniat. – Kaikki sujui täydellisesti, hän ilmoitti sosiaalisessa mediassa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 60,
+      "selected_blocks": 1,
+      "selected_source_words": 30,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kommentti: Trumpin henkilö­kohtainen ilmoitus herättää kysymyksiä",
+      "description": "Donald Trumpin väitteet omasta terveydentilasta eivät vakuuta, kirjoittaa ulkomaantoimittaja Jari Himanen. Yhdysvalloissa Donald Trump lateli jälleen tiistaina perinteisen terveystarkastuksensa jälkeen väsyneet litaniat. – Kaikki sujui täydellisesti, hän ilmoitti sosiaalisessa mediassa.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Kommentti: Trumpin henkilö­kohtainen ilmoitus herättää kysymyksiä",
+    "description": "Donald Trumpin väitteet omasta terveydentilasta eivät vakuuta, kirjoittaa ulkomaantoimittaja Jari Himanen. Yhdysvalloissa Donald Trump lateli jälleen tiistaina perinteisen terveystarkastuksensa jälkeen väsyneet litaniat. – Kaikki sujui täydellisesti, hän ilmoitti sosiaalisessa mediassa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/af608517-0f6d-4c72-909d-f5a8bcd28758",
+    "published": "2026-05-27T14:19:45+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "2c169c1d1d91205837d97f2300485a1e",
+    "_url_hash": "5f943204ed73510de31204af459a2dafd2cdf35d89443e895172c99a86384ad1",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Donald Trumpin väitteet omasta terveydentilasta eivät vakuuta, kirjoittaa ulkomaantoimittaja Jari Himanen. Yhdysvalloissa Donald Trump lateli jälleen tiistaina perinteisen terveystarkastuksensa jälkeen väsyneet litaniat. – Kaikki sujui täydellisesti, hän ilmoitti sosiaalisessa mediassa.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-27T11:43:26.361130+00:00",
+  "failure": "Lähdeaineisto on vain noin 30 sanaa ja perustuu kommenttitekstin tiivistelmään, joten 250 sanan uutisartikkelia ei voi kirjoittaa ilman olennaista täydennystä tai tulkintaa.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T114122Z_f215b7d9af\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on vain noin 30 sanaa ja perustuu kommenttitekstin tiivistelmään, joten 250 sanan uutisartikkelia ei voi kirjoittaa ilman olennaista täydennystä tai tulkintaa.\"}"
+}
