@@ -44,7 +44,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/ala-tee-paatoksia-sokkona-vaan-tarkista-ensin-luottotiedot/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
