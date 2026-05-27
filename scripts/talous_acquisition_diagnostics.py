@@ -253,7 +253,13 @@ def print_report(runs: list[dict], hours: int, log_path: Path) -> None:
     for state in ["ready", "failed", "published"]:
         print(f"  {state}:")
         for ex in q["examples"][state]: print(f"    - {ex}")
-    print("\nrecommendation: next OPE-70 fix should target Talous research acquisition/search enrichment before queue reserve/worker priority. Recent scans repeatedly lose Talous at research_result/min_source_words_pass, usually as research_fallback/empty from blocked or thin originals.")
+    print(
+        "\nrecommendation: keep the active Talous recovery work focused on source-backed "
+        "conversion and Monica runtime/queue evidence; do not relax writer, ready, or "
+        "publish quality gates. Use the stage counts, enqueue-drop reasons, and failed "
+        "classes above as the current bottleneck evidence instead of carrying forward a "
+        "stale OPE identifier."
+    )
 
 
 def main() -> int:
