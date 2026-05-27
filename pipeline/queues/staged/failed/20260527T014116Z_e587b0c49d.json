@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T01:41:16.509120+00:00",
+  "digest": "e587b0c49d",
+  "packet": {
+    "packet_id": "20260527T014116Z_e587b0c49d",
+    "created_at": "2026-05-27T01:41:16Z",
+    "headline_seed": "Suomalainen tekniikka tunnistaa naamioituneen sotalaivan, vaikka se ei näy tutkassa tai kuulu radiossa",
+    "description_seed": "Sotalaiva ei pian pääse piiloon häivetekniikalla tai naamioverkoilla. Suomalaisyhtiö Kuva Space rakentaa kirjastoa, jonka avulla satelliitti voi muutaman vuoden kuluttua tunnistaa kaikki maailman laivat.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/726448aa-35e4-42c1-8ecc-99f519ef46d2",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/726448aa-35e4-42c1-8ecc-99f519ef46d2"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomalainen tekniikka tunnistaa naamioituneen sotalaivan, vaikka se ei näy tutkassa tai kuulu radiossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Sotalaiva ei pian pääse piiloon häivetekniikalla tai naamioverkoilla. Suomalaisyhtiö Kuva Space rakentaa kirjastoa, jonka avulla satelliitti voi muutaman vuoden kuluttua tunnistaa kaikki maailman laivat.",
+        "word_count": 24,
+        "keyword_overlap": 20,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Sotalaiva ei pian pääse piiloon häivetekniikalla tai naamioverkoilla. Suomalaisyhtiö Kuva Space rakentaa kirjastoa, jonka avulla satelliitti voi muutaman vuoden kuluttua tunnistaa kaikki maailman laivat.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 48,
+      "selected_blocks": 1,
+      "selected_source_words": 24,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomalainen tekniikka tunnistaa naamioituneen sotalaivan, vaikka se ei näy tutkassa tai kuulu radiossa",
+      "description": "Sotalaiva ei pian pääse piiloon häivetekniikalla tai naamioverkoilla. Suomalaisyhtiö Kuva Space rakentaa kirjastoa, jonka avulla satelliitti voi muutaman vuoden kuluttua tunnistaa kaikki maailman laivat.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Suomalainen tekniikka tunnistaa naamioituneen sotalaivan, vaikka se ei näy tutkassa tai kuulu radiossa",
+    "description": "Sotalaiva ei pian pääse piiloon häivetekniikalla tai naamioverkoilla. Suomalaisyhtiö Kuva Space rakentaa kirjastoa, jonka avulla satelliitti voi muutaman vuoden kuluttua tunnistaa kaikki maailman laivat.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/726448aa-35e4-42c1-8ecc-99f519ef46d2",
+    "published": "2026-05-27T01:00:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "bd1ded0c6f1988c6186d62b230bccd7e",
+    "_url_hash": "1d618f9e29d30d0743e083ad9ce265bde547ae727f41f0429b2fb0f7222340c0",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Sotalaiva ei pian pääse piiloon häivetekniikalla tai naamioverkoilla. Suomalaisyhtiö Kuva Space rakentaa kirjastoa, jonka avulla satelliitti voi muutaman vuoden kuluttua tunnistaa kaikki maailman laivat.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-27T01:43:21.034198+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai pääteltyjä lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T014116Z_e587b0c49d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai pääteltyjä lisätietoja.\"}"
+}

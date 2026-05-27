@@ -1,0 +1,216 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T01:51:32.418674+00:00",
+  "digest": "fffe698ba5",
+  "packet": {
+    "packet_id": "20260527T015132Z_fffe698ba5",
+    "created_at": "2026-05-27T01:51:32Z",
+    "headline_seed": "White House erects UFC cage ahead of US 250th anniversary celebrations",
+    "description_seed": "Workers were seen assembling domed arches and a staging area on the South Lawn in preparation for next month's event.",
+    "link": "https://www.bbc.com/news/articles/cz622647eg3o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Newsday",
+      "Yahoo Sports"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cz622647eg3o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "White House erects UFC cage ahead of US 250th anniversary celebrations"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Workers were seen assembling domed arches and a staging area on the South Lawn in preparation for next month's event.",
+        "word_count": 20,
+        "keyword_overlap": 14,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The White House has begun construction on a UFC fighting cage on its South Lawn ahead of next month's event to celebrate 250 years of American independence. Workers were seen assembling domed arches and a staging area, which based on online renderings, will form an octagon-shaped ring surrounded by a wire-mesh fence and thousands of temporary seats. US President Donald Trump previously said the project will be the \"biggest event\" the UFC has ever had, featuring an \"arena right outside the front door of the White House\". Dubbed UFC Freedom 250, the event is due to take place on 14 June, with the UFC set to spend around $60m (£44.3m) on the project. Despite the large-scale promotion, the event will be headlined by just two championship title fights.",
+        "word_count": 128,
+        "keyword_overlap": 17,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Newsday",
+        "source_type": "research",
+        "text": "Equipment being placed on the South Lawn of the White House is seen from the Washington Monument, Tuesday, May 26, 2026, in Washington. The UFC is holding a mixed martial arts fight on June 14 as part of America 250 celebrations. Credit: AP/Mark Schiefelbein WASHINGTON — Yet another White House construction project is underway, though this one is meant to be only temporary. Crews are erecting an octagon-shaped cage on the South Lawn that will host next month's UFC bout, helping mark the nation's 250th anniversary — and President Donald Trump 's 80th birthday.",
+        "word_count": 94,
+        "keyword_overlap": 11,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Yahoo Sports",
+        "source_type": "research",
+        "text": "Construction on the Ultimate Fighting Championship Octagon is underway on the White House South Lawn ahead of President Donald Trump’s planned fights this summer to commemorate the 250th anniversary of the United States. The event, dubbed \"UFC Freedom Fights 250,\" will take place on June 14 -- coinciding with the president’s birthday and Flag Day -- and feature a lightweight title matchup between undisputed champion Ilia Topuria and interim title holder Justin Gaethje alongside four other fights. \"Selected fighters\" will take home prize money -- some of which will come from Crypto.com, according to UFC. The scaffolding -- which will frame and light the cage where the fight is occurring, according to renderings shared by UFC -- is visible from the White House North Lawn, cresting over the historic West Wing and Oval Office.",
+        "word_count": 134,
+        "keyword_overlap": 9,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Workers were seen assembling domed arches and a staging area on the South Lawn in preparation for next month's event.\n\nThe White House has begun construction on a UFC fighting cage on its South Lawn ahead of next month's event to celebrate 250 years of American independence. Workers were seen assembling domed arches and a staging area, which based on online renderings, will form an octagon-shaped ring surrounded by a wire-mesh fence and thousands of temporary seats. US President Donald Trump previously said the project will be the \"biggest event\" the UFC has ever had, featuring an \"arena right outside the front door of the White House\". Dubbed UFC Freedom 250, the event is due to take place on 14 June, with the UFC set to spend around $60m (£44.3m) on the project. Despite the large-scale promotion, the event will be headlined by just two championship title fights.\n\nEquipment being placed on the South Lawn of the White House is seen from the Washington Monument, Tuesday, May 26, 2026, in Washington. The UFC is holding a mixed martial arts fight on June 14 as part of America 250 celebrations. Credit: AP/Mark Schiefelbein WASHINGTON — Yet another White House construction project is underway, though this one is meant to be only temporary. Crews are erecting an octagon-shaped cage on the South Lawn that will host next month's UFC bout, helping mark the nation's 250th anniversary — and President Donald Trump 's 80th birthday.\n\nConstruction on the Ultimate Fighting Championship Octagon is underway on the White House South Lawn ahead of President Donald Trump’s planned fights this summer to commemorate the 250th anniversary of the United States. The event, dubbed \"UFC Freedom Fights 250,\" will take place on June 14 -- coinciding with the president’s birthday and Flag Day -- and feature a lightweight title matchup between undisputed champion Ilia Topuria and interim title holder Justin Gaethje alongside four other fights. \"Selected fighters\" will take home prize money -- some of which will come from Crypto.com, according to UFC. The scaffolding -- which will frame and light the cage where the fight is occurring, according to renderings shared by UFC -- is visible from the White House North Lawn, cresting over the historic West Wing and Oval Office.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1020,
+      "selected_blocks": 4,
+      "selected_source_words": 376,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Newsday",
+        "Newsday",
+        "Newsday",
+        "Newsday",
+        "Yahoo Sports",
+        "Yahoo Sports",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Newsday",
+        "Yahoo Sports"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "White House erects UFC cage ahead of US 250th anniversary celebrations",
+      "description": "Workers were seen assembling domed arches and a staging area on the South Lawn in preparation for next month's event.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "White House erects UFC cage ahead of US 250th anniversary celebrations",
+    "description": "Workers were seen assembling domed arches and a staging area on the South Lawn in preparation for next month's event.",
+    "link": "https://www.bbc.com/news/articles/cz622647eg3o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-27T00:17:31+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "9a4daddea08d8db97ffa4ab38d41f77a",
+    "_url_hash": "f3c263cd2ac762ec2ce5d67969006c7938245a2d3f1d9922618488b106967201",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe White House has begun construction on a UFC fighting cage on its South Lawn ahead of next month's event to celebrate 250 years of American independence.\n\nWorkers were seen assembling domed arches and a staging area, which based on online renderings, will form an octagon-shaped ring surrounded by a wire-mesh fence and thousands of temporary seats.\n\nUS President Donald Trump previously said the project will be the \"biggest event\" the UFC has ever had, featuring an \"arena right outside the front door of the White House\".\n\nDubbed UFC Freedom 250, the event is due to take place on 14 June, with the UFC set to spend around $60m (£44.3m) on the project.\n\nDespite the large-scale promotion, the event will be headlined by just two championship title fights.\n\nBrazil's Alex Pereira will go up against France's Ciryl Gane for the interim UFC heavyweight crown, while Georgian Ilia Topuria is set to take on current interim champion Justin Gaethje for the lightweight bout.\n\nUFC president Dana White said earlier this month that 4,300 people will watch the event on the South Lawn, most of whom will be members of the military, while 85,000 tickets will be made available for free to members of the public to watch the event at the nearby Ellipse Park.\n\nThe UFC said no tickets will be on general sale to the public.\n\n\"I have never seen anybody want anything so much as people want those tickets,\" Trump previously said on the demand.\n\nThe promotion will also offer \"high roller\" packages for some VIP guests, granting them special access at the event. The UFC did not confirm the cost, but guests will reportedly need to fork out $1.5m, according to respected MMA journalist Ariel Helwani.\n\nThe UFC said it will not profit from the event, according to its parent company TKO Group Holdings, with president Mark Shapiro saying the show is \"an investment for the long term\".\n\nThe White House has hosted recreational sports and events in the past, but the UFC's show will mark the first professional live sporting event to take place on the grounds.\n\nThe event marks another White House construction in a series of projects by the Trump administration to remake the residence.\n\nSince returning to the White House, Trump has added gold details to the Oval Office, paved over the rose garden to install a patio space, refurbished the bathroom attached to the Lincoln bedroom, and demolished the East Wing to make room for a new ballroom.\n\n---\n\n[Lähde: Newsday]\nEquipment being placed on the South Lawn of the White House is seen from the Washington Monument, Tuesday, May 26, 2026, in Washington. The UFC is holding a mixed martial arts fight on June 14 as part of America 250 celebrations. Credit: AP/Mark Schiefelbein\n\nWASHINGTON — Yet another White House construction project is underway, though this one is meant to be only temporary.\n\nCrews are erecting an octagon-shaped cage on the South Lawn that will host next month's UFC bout, helping mark the nation's 250th anniversary — and President Donald Trump 's 80th birthday.\n\nOnline renderings depict what the completed, wire-mesh-fence-ringed fight space is expected to look like ahead of the June 14 event. It will be ringed by a red, white and blue stage under a towering arch featuring stars and stripes patterns and two large screens carrying the action live.\n\nThe cage and stage will themselves be surrounded by thousands of temporary seats, including ringside space for a full marching band that can set the entire scene to blaring music.\n\nThe project is part of a series of events celebrating the semiquincentennial of the Declaration of Independence's signing on July 4, 1776. Other planned functions include an IndyCar race that will pass by the White House and the Great American State Fair taking place on the National Mall.\n\nGet the latest breaking news as it happens.\n\nBy clicking Sign up, you agree to our privacy policy.\n\nTrump has said that the finished UFC project will feature “a 5,000-seat arena right outside the front door of the White House.” Additional large screens broadcasting the fights will be set up in a park at the nearby Ellipse, and the UFC has said it plans to issue as many as 85,000 free tickets to accommodate spectators at both locations.\n\n“I have never seen anybody want anything so much as people want those tickets,” Trump said recently of demand to attend the UFC fight, adding, “That's gonna be something.”\n\nPresident Donald Trump meets with UFC fighters, from left, Alex Pereira, Ilia Topuria, Justin Gaethje, and Ciryl Gane, Wednesday, May 6, 2026, in the Oval Office of the White House, in Washington. Credit: AP/Jacquelyn Martin\n\nThe card has been panned by fans online as underwhelming, featuring just two championship fights. Brazil’s Alex Pereira will meet France’s Ciryl Gane for the interim UFC heavyweight title. Then Spanish-Georgian lightweight champion Ilia Topuria takes on interim champ Justin Gaethje, one of just two Americans who currently hold \n\n---\n\n[Lähde: Yahoo Sports]\nConstruction on the Ultimate Fighting Championship Octagon is underway on the White House South Lawn ahead of President Donald Trump’s planned fights this summer to commemorate the 250th anniversary of the United States.\n\nThe event, dubbed \"UFC Freedom Fights 250,\" will take place on June 14 -- coinciding with the president’s birthday and Flag Day -- and feature a lightweight title matchup between undisputed champion Ilia Topuria and interim title holder Justin Gaethje alongside four other fights.\n\n\"Selected fighters\" will take home prize money -- some of which will come from Crypto.com, according to UFC.\n\nThe scaffolding -- which will frame and light the cage where the fight is occurring, according to renderings shared by UFC -- is visible from the White House North Lawn, cresting over the historic West Wing and Oval Office.\n\nTrump has repeatedly touted the popularity of the fight, claiming at the congressional picnic earlier this month that he had \"never seen anybody want anything so much as people want those tickets.\"\n\nIn an Oval Office event feat...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-27T01:54:38.695667+00:00",
+  "payload": {
+    "packet_id": "20260527T015132Z_fffe698ba5",
+    "title": "Valkoisen talon nurmikolle rakennetaan UFC-kehää Yhdysvaltain 250-vuotisjuhliin",
+    "summary": "Valkoisen talon eteläisellä nurmikolla on aloitettu väliaikaisen UFC-otteluareenan rakentaminen kesäkuussa järjestettävää Yhdysvaltain itsenäisyyden 250-vuotisjuhlaan liittyvää tapahtumaa varten.",
+    "content": "Valkoisen talon eteläisellä nurmikolla Washingtonissa on aloitettu UFC-ottelukehän ja katsomorakenteiden rakentaminen kesäkuun 14. päiväksi suunniteltua tapahtumaa varten. Rakenteilla oleva tapahtumapaikka liittyy Yhdysvaltain itsenäisyyden 250-vuotisjuhlallisuuksiin, ja paikalla on nähty työntekijöitä kokoamassa kaarimaisia rakenteita sekä näyttämöaluetta väliaikaiselle areenalle.\n\n## Kehä nousee Valkoisen talon eteläiselle nurmikolle\n\nSuunnitelmien mukaan Valkoisen talon South Lawn -alueelle rakennetaan kahdeksankulmainen UFC-ottelukehä, jota ympäröivät verkkomainen aita ja väliaikaiset katsomot. Verkossa nähtyjen havainnekuvien perusteella rakenteisiin kuuluu myös telineitä ja valaistus, joilla kehää rajataan ja valaistaan otteluiltaa varten.\n\nRakennustöitä kuvattiin tiistaina 26. toukokuuta Washingtonissa. Kalustoa oli nähtävissä Washington Monumentilta, ja osa rakennustelineistä näkyi myös Valkoisen talon pohjoisen nurmialueen suunnasta. Telineiden kerrottiin kohoavan historiallisen West Wingin ja Oval Officen taustalla.\n\nTapahtuma on nimetty lähteestä riippuen UFC Freedom 250- tai UFC Freedom Fights 250 -nimellä. Sen on määrä järjestyä 14. kesäkuuta, jolloin Yhdysvalloissa vietetään myös lipun päivää. Päivä osuu lisäksi presidentti Donald Trumpin 80-vuotissyntymäpäivään.\n\n## Tapahtuma osa America 250 -juhlavuotta\n\nTapahtuman tarkoituksena on juhlistaa Yhdysvaltain itsenäisyyden 250-vuotisjuhlavuotta. UFC:n on kerrottu käyttävän hankkeeseen noin 60 miljoonaa dollaria eli noin 44,3 miljoonaa puntaa. Trump on aiemmin kuvannut tapahtumaa UFC:n kaikkien aikojen suurimmaksi ja puhunut areenasta, joka sijaitsee käytännössä Valkoisen talon oven edessä.\n\n## Otteluohjelmasta on kerrottu eri yksityiskohtia\n\nOtteluohjelmasta on kerrottu, että tapahtumassa nähdään mestaruusotteluita. Yhden raportin mukaan mukana olisi kevytsarjan mestaruusottelu kiistattoman mestarin Ilia Topurian ja väliaikaisen mestarin Justin Gaethjen välillä sekä neljä muuta ottelua. Toisen tiedon mukaan laajasta näkyvyydestä huolimatta tapahtuma rakentuu kahden mestaruusottelun varaan.\n\nLisäksi osalle ottelijoista on määrä maksaa palkintorahoja, joista osa tulee UFC:n mukaan Crypto.comilta. Valkoisen talon alueelle rakennettava vapaaottelutapahtuma on herättänyt huomiota jo rakennusvaiheessa, koska se yhdistää presidentin virka-asunnon, kansallisen juhlavuoden ja kaupallisen urheilutapahtuman poikkeuksellisella tavalla.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Valkoinen talo",
+      "UFC",
+      "Donald Trump",
+      "America 250"
+    ],
+    "summary_bullets": [
+      "Valkoisen talon eteläiselle nurmikolle rakennetaan väliaikaista UFC-otteluareenaa.",
+      "Tapahtuma on määrä järjestää 14. kesäkuuta osana Yhdysvaltain 250-vuotisjuhlallisuuksia.",
+      "Rakenteisiin kuuluu kahdeksankulmainen kehä, telineitä, valaistusta ja väliaikaisia katsomoita."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Otteluohjelmaa koskevissa tiedoissa on lähteiden välillä eroja, joten ne on esitetty varovaisesti ilman varmistamattomien yksityiskohtien korostamista."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260527T015132Z_fffe698ba5\",\n  \"title\": \"Valkoisen talon nurmikolle rakennetaan UFC-kehää Yhdysvaltain 250-vuotisjuhliin\",\n  \"summary\": \"Valkoisen talon eteläisellä nurmikolla on aloitettu väliaikaisen UFC-otteluareenan rakentaminen kesäkuussa järjestettävää Yhdysvaltain itsenäisyyden 250-vuotisjuhlaan liittyvää tapahtumaa varten.\",\n  \"content\": \"Valkoisen talon eteläisellä nurmikolla Washingtonissa on aloitettu UFC-ottelukehän ja katsomorakenteiden rakentaminen kesäkuun 14. päiväksi suunniteltua tapahtumaa varten. Rakenteilla oleva tapahtumapaikka liittyy Yhdysvaltain itsenäisyyden 250-vuotisjuhlallisuuksiin, ja paikalla on nähty työntekijöitä kokoamassa kaarimaisia rakenteita sekä näyttämöaluetta väliaikaiselle areenalle.\\n\\n## Kehä nousee Valkoisen talon eteläiselle nurmikolle\\n\\nSuunnitelmien mukaan Valkoisen talon South Lawn -alueelle rakennetaan kahdeksankulmainen UFC-ottelukehä, jota ympäröivät verkkomainen aita ja väliaikaiset katsomot. Verkossa nähtyjen havainnekuvien perusteella rakenteisiin kuuluu myös telineitä ja valaistus, joilla kehää rajataan ja valaistaan otteluiltaa varten.\\n\\nRakennustöitä kuvattiin tiistaina 26. toukokuuta Washingtonissa. Kalustoa oli nähtävissä Washington Monumentilta, ja osa rakennustelineistä näkyi myös Valkoisen talon pohjoisen nurmialueen suunnasta. Telineiden kerrottiin kohoavan historiallisen West Wingin ja Oval Officen taustalla.\\n\\nTapahtuma on nimetty lähteestä riippuen UFC Freedom 250- tai UFC Freedom Fights 250 -nimellä. Sen on määrä järjestyä 14. kesäkuuta, jolloin Yhdysvalloissa vietetään myös lipun päivää. Päivä osuu lisäksi presidentti Donald Trumpin 80-vuotissyntymäpäivään.\\n\\n## Tapahtuma osa America 250 -juhlavuotta\\n\\nTapahtuman tarkoituksena on juhlistaa Yhdysvaltain itsenäisyyden 250-vuotisjuhlavuotta. UFC:n on kerrottu käyttävän hankkeeseen noin 60 miljoonaa dollaria eli noin 44,3 miljoonaa puntaa. Trump on aiemmin kuvannut tapahtumaa UFC:n kaikkien aikojen suurimmaksi ja puhunut areenasta, joka sijaitsee käytännössä Valkoisen talon oven edessä.\\n\\n## Otteluohjelmasta on kerrottu eri yksityiskohtia\\n\\nOtteluohjelmasta on kerrottu, että tapahtumassa nähdään mestaruusotteluita. Yhden raportin mukaan mukana olisi kevytsarjan mestaruusottelu kiistattoman mestarin Ilia Topurian ja väliaikaisen mestarin Justin Gaethjen välillä sekä neljä muuta ottelua. Toisen tiedon mukaan laajasta näkyvyydestä huolimatta tapahtuma rakentuu kahden mestaruusottelun varaan.\\n\\nLisäksi osalle ottelijoista on määrä maksaa palkintorahoja, joista osa tulee UFC:n mukaan Crypto.comilta. Valkoisen talon alueelle rakennettava vapaaottelutapahtuma on herättänyt huomiota jo rakennusvaiheessa, koska se yhdistää presidentin virka-asunnon, kansallisen juhlavuoden ja kaupallisen urheilutapahtuman poikkeuksellisella tavalla.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Valkoinen talo\",\n    \"UFC\",\n    \"Donald Trump\",\n    \"America 250\"\n  ],\n  \"summary_bullets\": [\n    \"Valkoisen talon eteläiselle nurmikolle rakennetaan väliaikaista UFC-otteluareenaa.\",\n    \"Tapahtuma on määrä järjestää 14. kesäkuuta osana Yhdysvaltain 250-vuotisjuhlallisuuksia.\",\n    \"Rakenteisiin kuuluu kahdeksankulmainen kehä, telineitä, valaistusta ja väliaikaisia katsomoita.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.9,\n  \"journalist_note\": \"Artikkeli perustuu annettuun lähdepakettiin. Otteluohjelmaa koskevissa tiedoissa on lähteiden välillä eroja, joten ne on esitetty varovaisesti ilman varmistamattomien yksityiskohtien korostamista.\"\n}",
+  "article": {
+    "title": "Valkoisen talon nurmikolle rakennetaan UFC-kehää Yhdysvaltain 250-vuotisjuhliin",
+    "description": "Valkoisen talon eteläisellä nurmikolla on aloitettu väliaikaisen UFC-otteluareenan rakentaminen kesäkuussa järjestettävää Yhdysvaltain itsenäisyyden 250-vuotisjuhlaan liittyvää tapahtumaa varten.",
+    "link": "https://www.bbc.com/news/articles/cz622647eg3o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-27T00:17:31+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "9a4daddea08d8db97ffa4ab38d41f77a",
+    "_url_hash": "f3c263cd2ac762ec2ce5d67969006c7938245a2d3f1d9922618488b106967201",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe White House has begun construction on a UFC fighting cage on its South Lawn ahead of next month's event to celebrate 250 years of American independence.\n\nWorkers were seen assembling domed arches and a staging area, which based on online renderings, will form an octagon-shaped ring surrounded by a wire-mesh fence and thousands of temporary seats.\n\nUS President Donald Trump previously said the project will be the \"biggest event\" the UFC has ever had, featuring an \"arena right outside the front door of the White House\".\n\nDubbed UFC Freedom 250, the event is due to take place on 14 June, with the UFC set to spend around $60m (£44.3m) on the project.\n\nDespite the large-scale promotion, the event will be headlined by just two championship title fights.\n\nBrazil's Alex Pereira will go up against France's Ciryl Gane for the interim UFC heavyweight crown, while Georgian Ilia Topuria is set to take on current interim champion Justin Gaethje for the lightweight bout.\n\nUFC president Dana White said earlier this month that 4,300 people will watch the event on the South Lawn, most of whom will be members of the military, while 85,000 tickets will be made available for free to members of the public to watch the event at the nearby Ellipse Park.\n\nThe UFC said no tickets will be on general sale to the public.\n\n\"I have never seen anybody want anything so much as people want those tickets,\" Trump previously said on the demand.\n\nThe promotion will also offer \"high roller\" packages for some VIP guests, granting them special access at the event. The UFC did not confirm the cost, but guests will reportedly need to fork out $1.5m, according to respected MMA journalist Ariel Helwani.\n\nThe UFC said it will not profit from the event, according to its parent company TKO Group Holdings, with president Mark Shapiro saying the show is \"an investment for the long term\".\n\nThe White House has hosted recreational sports and events in the past, but the UFC's show will mark the first professional live sporting event to take place on the grounds.\n\nThe event marks another White House construction in a series of projects by the Trump administration to remake the residence.\n\nSince returning to the White House, Trump has added gold details to the Oval Office, paved over the rose garden to install a patio space, refurbished the bathroom attached to the Lincoln bedroom, and demolished the East Wing to make room for a new ballroom.\n\n---\n\n[Lähde: Newsday]\nEquipment being placed on the South Lawn of the White House is seen from the Washington Monument, Tuesday, May 26, 2026, in Washington. The UFC is holding a mixed martial arts fight on June 14 as part of America 250 celebrations. Credit: AP/Mark Schiefelbein\n\nWASHINGTON — Yet another White House construction project is underway, though this one is meant to be only temporary.\n\nCrews are erecting an octagon-shaped cage on the South Lawn that will host next month's UFC bout, helping mark the nation's 250th anniversary — and President Donald Trump 's 80th birthday.\n\nOnline renderings depict what the completed, wire-mesh-fence-ringed fight space is expected to look like ahead of the June 14 event. It will be ringed by a red, white and blue stage under a towering arch featuring stars and stripes patterns and two large screens carrying the action live.\n\nThe cage and stage will themselves be surrounded by thousands of temporary seats, including ringside space for a full marching band that can set the entire scene to blaring music.\n\nThe project is part of a series of events celebrating the semiquincentennial of the Declaration of Independence's signing on July 4, 1776. Other planned functions include an IndyCar race that will pass by the White House and the Great American State Fair taking place on the National Mall.\n\nGet the latest breaking news as it happens.\n\nBy clicking Sign up, you agree to our privacy policy.\n\nTrump has said that the finished UFC project will feature “a 5,000-seat arena right outside the front door of the White House.” Additional large screens broadcasting the fights will be set up in a park at the nearby Ellipse, and the UFC has said it plans to issue as many as 85,000 free tickets to accommodate spectators at both locations.\n\n“I have never seen anybody want anything so much as people want those tickets,” Trump said recently of demand to attend the UFC fight, adding, “That's gonna be something.”\n\nPresident Donald Trump meets with UFC fighters, from left, Alex Pereira, Ilia Topuria, Justin Gaethje, and Ciryl Gane, Wednesday, May 6, 2026, in the Oval Office of the White House, in Washington. Credit: AP/Jacquelyn Martin\n\nThe card has been panned by fans online as underwhelming, featuring just two championship fights. Brazil’s Alex Pereira will meet France’s Ciryl Gane for the interim UFC heavyweight title. Then Spanish-Georgian lightweight champion Ilia Topuria takes on interim champ Justin Gaethje, one of just two Americans who currently hold \n\n---\n\n[Lähde: Yahoo Sports]\nConstruction on the Ultimate Fighting Championship Octagon is underway on the White House South Lawn ahead of President Donald Trump’s planned fights this summer to commemorate the 250th anniversary of the United States.\n\nThe event, dubbed \"UFC Freedom Fights 250,\" will take place on June 14 -- coinciding with the president’s birthday and Flag Day -- and feature a lightweight title matchup between undisputed champion Ilia Topuria and interim title holder Justin Gaethje alongside four other fights.\n\n\"Selected fighters\" will take home prize money -- some of which will come from Crypto.com, according to UFC.\n\nThe scaffolding -- which will frame and light the cage where the fight is occurring, according to renderings shared by UFC -- is visible from the White House North Lawn, cresting over the historic West Wing and Oval Office.\n\nTrump has repeatedly touted the popularity of the fight, claiming at the congressional picnic earlier this month that he had \"never seen anybody want anything so much as people want those tickets.\"\n\nIn an Oval Office event feat...",
+    "research_source": "multi",
+    "summary": "Valkoisen talon eteläisellä nurmikolla on aloitettu väliaikaisen UFC-otteluareenan rakentaminen kesäkuussa järjestettävää Yhdysvaltain itsenäisyyden 250-vuotisjuhlaan liittyvää tapahtumaa varten.",
+    "content": "Valkoisen talon eteläisellä nurmikolla Washingtonissa on aloitettu UFC-ottelukehän ja katsomorakenteiden rakentaminen kesäkuun 14. päiväksi suunniteltua tapahtumaa varten. Rakenteilla oleva tapahtumapaikka liittyy Yhdysvaltain itsenäisyyden 250-vuotisjuhlallisuuksiin, ja paikalla on nähty työntekijöitä kokoamassa kaarimaisia rakenteita sekä näyttämöaluetta väliaikaiselle areenalle.\n\n## Kehä nousee Valkoisen talon eteläiselle nurmikolle\n\nSuunnitelmien mukaan Valkoisen talon South Lawn -alueelle rakennetaan kahdeksankulmainen UFC-ottelukehä, jota ympäröivät verkkomainen aita ja väliaikaiset katsomot. Verkossa nähtyjen havainnekuvien perusteella rakenteisiin kuuluu myös telineitä ja valaistus, joilla kehää rajataan ja valaistaan otteluiltaa varten.\n\nRakennustöitä kuvattiin tiistaina 26. toukokuuta Washingtonissa. Kalustoa oli nähtävissä Washington Monumentilta, ja osa rakennustelineistä näkyi myös Valkoisen talon pohjoisen nurmialueen suunnasta. Telineiden kerrottiin kohoavan historiallisen West Wingin ja Oval Officen taustalla.\n\nTapahtuma on nimetty lähteestä riippuen UFC Freedom 250- tai UFC Freedom Fights 250 -nimellä. Sen on määrä järjestyä 14. kesäkuuta, jolloin Yhdysvalloissa vietetään myös lipun päivää. Päivä osuu lisäksi presidentti Donald Trumpin 80-vuotissyntymäpäivään.\n\n## Tapahtuma osa America 250 -juhlavuotta\n\nTapahtuman tarkoituksena on juhlistaa Yhdysvaltain itsenäisyyden 250-vuotisjuhlavuotta. UFC:n on kerrottu käyttävän hankkeeseen noin 60 miljoonaa dollaria eli noin 44,3 miljoonaa puntaa. Trump on aiemmin kuvannut tapahtumaa UFC:n kaikkien aikojen suurimmaksi ja puhunut areenasta, joka sijaitsee käytännössä Valkoisen talon oven edessä.\n\n## Otteluohjelmasta on kerrottu eri yksityiskohtia\n\nOtteluohjelmasta on kerrottu, että tapahtumassa nähdään mestaruusotteluita. Yhden raportin mukaan mukana olisi kevytsarjan mestaruusottelu kiistattoman mestarin Ilia Topurian ja väliaikaisen mestarin Justin Gaethjen välillä sekä neljä muuta ottelua. Toisen tiedon mukaan laajasta näkyvyydestä huolimatta tapahtuma rakentuu kahden mestaruusottelun varaan.\n\nLisäksi osalle ottelijoista on määrä maksaa palkintorahoja, joista osa tulee UFC:n mukaan Crypto.comilta. Valkoisen talon alueelle rakennettava vapaaottelutapahtuma on herättänyt huomiota jo rakennusvaiheessa, koska se yhdistää presidentin virka-asunnon, kansallisen juhlavuoden ja kaupallisen urheilutapahtuman poikkeuksellisella tavalla.",
+    "category": "Ulkomaat",
+    "tags": [
+      "yhdysvallat",
+      "valkoinen talo",
+      "ufc",
+      "donald trump",
+      "america 250"
+    ],
+    "summary_bullets": [
+      "Valkoisen talon eteläiselle nurmikolle rakennetaan väliaikaista UFC-otteluareenaa.",
+      "Tapahtuma on määrä järjestää 14. kesäkuuta osana Yhdysvaltain 250-vuotisjuhlallisuuksia.",
+      "Rakenteisiin kuuluu kahdeksankulmainen kehä, telineitä, valaistusta ja väliaikaisia katsomoita."
+    ],
+    "key_points": [
+      "Valkoisen talon eteläiselle nurmikolle rakennetaan väliaikaista UFC-otteluareenaa.",
+      "Tapahtuma on määrä järjestää 14. kesäkuuta osana Yhdysvaltain 250-vuotisjuhlallisuuksia.",
+      "Rakenteisiin kuuluu kahdeksankulmainen kehä, telineitä, valaistusta ja väliaikaisia katsomoita."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Otteluohjelmaa koskevissa tiedoissa on lähteiden välillä eroja, joten ne on esitetty varovaisesti ilman varmistamattomien yksityiskohtien korostamista.",
+    "source_text": "Workers were seen assembling domed arches and a staging area on the South Lawn in preparation for next month's event.\n\nThe White House has begun construction on a UFC fighting cage on its South Lawn ahead of next month's event to celebrate 250 years of American independence. Workers were seen assembling domed arches and a staging area, which based on online renderings, will form an octagon-shaped ring surrounded by a wire-mesh fence and thousands of temporary seats. US President Donald Trump previously said the project will be the \"biggest event\" the UFC has ever had, featuring an \"arena right outside the front door of the White House\". Dubbed UFC Freedom 250, the event is due to take place on 14 June, with the UFC set to spend around $60m (£44.3m) on the project. Despite the large-scale promotion, the event will be headlined by just two championship title fights.\n\nEquipment being placed on the South Lawn of the White House is seen from the Washington Monument, Tuesday, May 26, 2026, in Washington. The UFC is holding a mixed martial arts fight on June 14 as part of America 250 celebrations. Credit: AP/Mark Schiefelbein WASHINGTON — Yet another White House construction project is underway, though this one is meant to be only temporary. Crews are erecting an octagon-shaped cage on the South Lawn that will host next month's UFC bout, helping mark the nation's 250th anniversary — and President Donald Trump 's 80th birthday.\n\nConstruction on the Ultimate Fighting Championship Octagon is underway on the White House South Lawn ahead of President Donald Trump’s planned fights this summer to commemorate the 250th anniversary of the United States. The event, dubbed \"UFC Freedom Fights 250,\" will take place on June 14 -- coinciding with the president’s birthday and Flag Day -- and feature a lightweight title matchup between undisputed champion Ilia Topuria and interim title holder Justin Gaethje alongside four other fights. \"Selected fighters\" will take home prize money -- some of which will come from Crypto.com, according to UFC. The scaffolding -- which will frame and light the cage where the fight is occurring, according to renderings shared by UFC -- is visible from the White House North Lawn, cresting over the historic West Wing and Oval Office.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.9,
+    "degraded_mode": false,
+    "monica_packet_id": "20260527T015132Z_fffe698ba5",
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image": "/images/articles/valkoisen-talon-nurmikolle-rakennetaan-ufc-kehaa-yhdysvaltai-hero.jpg",
+    "image_thumb": "/images/articles/valkoisen-talon-nurmikolle-rakennetaan-ufc-kehaa-yhdysvaltai-thumb.jpg",
+    "image_alt": "Valkoisen talon nurmikolle rakennetaan UFC-kehää Yhdysvaltain 250-vuotisjuhliin",
+    "image_credit": "Photo by Duren Williams on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/two-men-boxing-11391881/",
+    "image_caption": "",
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBAgP/xAAhEAACAgEDBQEAAAAAAAAAAAABAgADEQQSYRMhMTJRgf/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERIf/aAAwDAQACEQMRAD8Az6712UhkDjea8BfY89/MnVU201DcyEls+uCB8P7F63WOSxYBg24EKMg8Q1F+oKGx72Y9hg+PsV0iWJQtaEFhBZcjiEXWap2ck4zCLAxn/9k="
+  },
+  "image_enriched_at": "2026-05-27T01:58:07.578268+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/valkoisen-talon-nurmikolle-rakennetaan-ufc-kehaa-yhdysvaltai-hero.jpg",
+    "image_thumb": "/images/articles/valkoisen-talon-nurmikolle-rakennetaan-ufc-kehaa-yhdysvaltai-thumb.jpg",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-27T01:58:52.503616+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-27-valkoisen-talon-nurmikolle-rakennetaan-ufc-kehaa-yhdysvaltai.md"
+  ]
+}

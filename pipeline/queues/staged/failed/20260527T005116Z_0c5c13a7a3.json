@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T00:51:16.229457+00:00",
+  "digest": "0c5c13a7a3",
+  "packet": {
+    "packet_id": "20260527T005116Z_0c5c13a7a3",
+    "created_at": "2026-05-27T00:51:16Z",
+    "headline_seed": "Näppis | Puuttukaa ylin johto nyt viimeistään tähän asiaan, älkääkä vähentäkö rivimiehityksestä",
+    "description_seed": "Ehdotan Mustankallion tunnelia jalankulkijoille ja pyöräilijöille. Kunnioitus pyhäpäivään ja rauhaan joiltakin hukassa. Tippa tuli linssiin. Olen ylpeä näistä nuorista.",
+    "link": "https://www.ess.fi/paakirjoitus-mielipide/9481123",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paakirjoitus-mielipide/9481123"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näppis | Puuttukaa ylin johto nyt viimeistään tähän asiaan, älkääkä vähentäkö rivimiehityksestä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Ehdotan Mustankallion tunnelia jalankulkijoille ja pyöräilijöille. Kunnioitus pyhäpäivään ja rauhaan joiltakin hukassa. Tippa tuli linssiin. Olen ylpeä näistä nuorista.",
+        "word_count": 19,
+        "keyword_overlap": 17,
+        "strong_overlap": 13
+      }
+    ],
+    "source_text": "Ehdotan Mustankallion tunnelia jalankulkijoille ja pyöräilijöille. Kunnioitus pyhäpäivään ja rauhaan joiltakin hukassa. Tippa tuli linssiin. Olen ylpeä näistä nuorista.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 38,
+      "selected_blocks": 1,
+      "selected_source_words": 19,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näppis | Puuttukaa ylin johto nyt viimeistään tähän asiaan, älkääkä vähentäkö rivimiehityksestä",
+      "description": "Ehdotan Mustankallion tunnelia jalankulkijoille ja pyöräilijöille. Kunnioitus pyhäpäivään ja rauhaan joiltakin hukassa. Tippa tuli linssiin. Olen ylpeä näistä nuorista.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Näppis | Puuttukaa ylin johto nyt viimeistään tähän asiaan, älkääkä vähentäkö rivimiehityksestä",
+    "description": "Ehdotan Mustankallion tunnelia jalankulkijoille ja pyöräilijöille. Kunnioitus pyhäpäivään ja rauhaan joiltakin hukassa. Tippa tuli linssiin. Olen ylpeä näistä nuorista.",
+    "link": "https://www.ess.fi/paakirjoitus-mielipide/9481123",
+    "published": "2026-05-27T03:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "c9cee860ed6938d63c41fd33977b16ad",
+    "_url_hash": "218394c85113571123d53760e599fd5e3a34d256725719a587d52a4f072d3fed",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Ehdotan Mustankallion tunnelia jalankulkijoille ja pyöräilijöille. Kunnioitus pyhäpäivään ja rauhaan joiltakin hukassa. Tippa tuli linssiin. Olen ylpeä näistä nuorista.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-27T00:53:22.767569+00:00",
+  "failure": "Lähdeaineisto on liian niukka ja koostuu irrallisista mielipidepoiminnoista, joista ei voi varmistaa uutisen ydinfaktoja tai kirjoittaa vähintään 250 sanan artikkelia ilman täydennyksiä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T005116Z_0c5c13a7a3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka ja koostuu irrallisista mielipidepoiminnoista, joista ei voi varmistaa uutisen ydinfaktoja tai kirjoittaa vähintään 250 sanan artikkelia ilman täydennyksiä.\"}"
+}

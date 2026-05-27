@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T01:11:30.733611+00:00",
+  "digest": "e700422d1c",
+  "packet": {
+    "packet_id": "20260527T011130Z_e700422d1c",
+    "created_at": "2026-05-27T01:11:30Z",
+    "headline_seed": "Watch: UFC arena construction begins at White House ahead of fight",
+    "description_seed": "The massive structure will host a cage fight as part of celebrations marking the 250th anniversary of the US Declaration of Independence.",
+    "link": "https://www.bbc.com/news/videos/cz7253q4g4jo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "USA TODAY",
+      "BBC World",
+      "USA TODAY"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cz7253q4g4jo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Watch: UFC arena construction begins at White House ahead of fight"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The massive structure will host a cage fight as part of celebrations marking the 250th anniversary of the US Declaration of Independence.",
+        "word_count": 22,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "USA TODAY",
+        "source_type": "research",
+        "text": "Construction has begun at the White House ahead of UFC Freedom 250, according to photos circulating on social media. The most famous address in the United States, 1600 Pennsylvania Avenue, is beginning to look a lot like a fight venue. With the June 14 fight less than three weeks away, crews have begun work on the temporary arena that will host the UFC Freedom 250, a fight card that is as much a celebration as it is a sporting event. The promotion released renderings last week showing the planned setup, including \"the claw,\" a massive lighting and cover structure that was built in Europe and shipped to the United States specifically for the occasion. Dana White's stated vision is to keep the White House visible as the backdrop for every fight.",
+        "word_count": 131,
+        "keyword_overlap": 10,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Preparations are underway at the White House South Lawn for an upcoming Ultimate Fighting Championship (UFC) event. The cage fight is scheduled to take place 14 June as part of the America 250 celebrations. US President Donald Trump said UFC president Dana White, a longtime ally, will build “a 5,000-seat arena right outside the front door of the White House”, along with eight large screens in a nearby park for fans to watch from a distance. BBC's Carl Nasman was at the event, where he asked enthusiasts about World Cup ticket prices and what the sport means to the US. The plans include permanent human habitation on the Earth's only natural satellite by 2032. Hugh Schofield reports from Paris as a heat dome settled over Western Europe bringing temperatures above the average for May.",
+        "word_count": 134,
+        "keyword_overlap": 9,
+        "strong_overlap": 1
+      },
+      {
+        "source": "USA TODAY",
+        "source_type": "research",
+        "text": "The venue will seat roughly 5,000 people, a mix of military members and guests invited by the UFC and the White House. No tickets are going on sale. Another 100,000 fans can watch on screens set up at the nearby Ellipse.",
+        "word_count": 41,
+        "keyword_overlap": 4,
+        "strong_overlap": 0
+      }
+    ],
+    "source_text": "The massive structure will host a cage fight as part of celebrations marking the 250th anniversary of the US Declaration of Independence.\n\nConstruction has begun at the White House ahead of UFC Freedom 250, according to photos circulating on social media. The most famous address in the United States, 1600 Pennsylvania Avenue, is beginning to look a lot like a fight venue. With the June 14 fight less than three weeks away, crews have begun work on the temporary arena that will host the UFC Freedom 250, a fight card that is as much a celebration as it is a sporting event. The promotion released renderings last week showing the planned setup, including \"the claw,\" a massive lighting and cover structure that was built in Europe and shipped to the United States specifically for the occasion. Dana White's stated vision is to keep the White House visible as the backdrop for every fight.\n\nPreparations are underway at the White House South Lawn for an upcoming Ultimate Fighting Championship (UFC) event. The cage fight is scheduled to take place 14 June as part of the America 250 celebrations. US President Donald Trump said UFC president Dana White, a longtime ally, will build “a 5,000-seat arena right outside the front door of the White House”, along with eight large screens in a nearby park for fans to watch from a distance. BBC's Carl Nasman was at the event, where he asked enthusiasts about World Cup ticket prices and what the sport means to the US. The plans include permanent human habitation on the Earth's only natural satellite by 2032. Hugh Schofield reports from Paris as a heat dome settled over Western Europe bringing temperatures above the average for May.\n\nThe venue will seat roughly 5,000 people, a mix of military members and guests invited by the UFC and the White House. No tickets are going on sale. Another 100,000 fans can watch on screens set up at the nearby Ellipse.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 844,
+      "selected_blocks": 4,
+      "selected_source_words": 328,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "USA TODAY",
+        "USA TODAY",
+        "USA TODAY",
+        "USA TODAY",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "USA TODAY",
+        "BBC World",
+        "USA TODAY"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Watch: UFC arena construction begins at White House ahead of fight",
+      "description": "The massive structure will host a cage fight as part of celebrations marking the 250th anniversary of the US Declaration of Independence.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Watch: UFC arena construction begins at White House ahead of fight",
+    "description": "The massive structure will host a cage fight as part of celebrations marking the 250th anniversary of the US Declaration of Independence.",
+    "link": "https://www.bbc.com/news/videos/cz7253q4g4jo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-26T23:14:19+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "bf8462397b397878f1bedd16e2ae2679",
+    "_url_hash": "d43d60729c0609377bf1ffdcce6ffba94e93ea517838239eca65996bad1812ee",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kulttuuri",
+    "research": "[Lähde: BBC World]\nPreparations are underway at the White House South Lawn for an upcoming Ultimate Fighting Championship (UFC) event. The cage fight is scheduled to take place 14 June as part of the America 250 celebrations.\n\nUS President Donald Trump said UFC president Dana White, a longtime ally, will build “a 5,000-seat arena right outside the front door of the White House”, along with eight large screens in a nearby park for fans to watch from a distance.\n\nBBC's Carl Nasman was at the event, where he asked enthusiasts about World Cup ticket prices and what the sport means to the US.\n\nThe plans include permanent human habitation on the Earth's only natural satellite by 2032.\n\nHugh Schofield reports from Paris as a heat dome settled over Western Europe bringing temperatures above the average for May.\n\nThe Department of Homeland security said in a statement that the detainees receive \"medical, dental, and mental health services as available\".\n\nSimon King explains how long the heatwave will last.\n\nTexas police say a father tried to cross a flooded road after heavy rains inundated the area, urging motorists not to do the same. Neither the driver nor the baby was hurt.\n\nTemperatures in Wales reached 32.2C on bank holiday Monday, its hottest May day on record.\n\nFinding Emily star, Coalville's Spike Fearn, wants more films made in Leicestershire.\n\nThe driver and passengers of the car managed to escape before the bridge gave way in Xiaogan.\n\nAs the UK experiences a spell of scorching May weather, the BBC's Elizabeth Rizzini has some useful advice.\n\nAlmost 90 drones fell from the sky over Sydney's Darling Harbour during a popular winter light show.\n\nCristo Fernández, well known for playing a footballer in the popular TV series Ted Lasso, tells the BBC it is a \"dream come true\" to sign with a US pro football team.\n\nOrange County residents had to evacuate following the threat of a failing chemical tank exploding.\n\nThe BBC's Shaimaa Khalil explains why the achievement by Greek swimmer Kristian Gkolomeev will not be accepted by official sporting bodies.\n\nWatch the latest news summary from BBC World News. International news updated 24 hours a day.\n\nThe BBC's Sumedha Pal described how difficult it was to be standing in the streets of Delhi as temperatures rose to 45C .\n\nThousands of people gathered in the baking heat to watch competitors from all over the world chase a 7lb (3kg) wheel of Double Gloucester cheese down the 1:2 gradient slope.\n\nHe tried to escape on foot after driving at \n\n---\n\n[Lähde: USA TODAY]\nConstruction has begun at the White House ahead of UFC Freedom 250, according to photos circulating on social media. The most famous address in the United States, 1600 Pennsylvania Avenue, is beginning to look a lot like a fight venue.\n\nWith the June 14 fight less than three weeks away, crews have begun work on the temporary arena that will host the UFC Freedom 250, a fight card that is as much a celebration as it is a sporting event. The promotion released renderings last week showing the planned setup, including \"the claw,\" a massive lighting and cover structure that was built in Europe and shipped to the United States specifically for the occasion. Dana White's stated vision is to keep the White House visible as the backdrop for every fight.\n\nThe venue will seat roughly 5,000 people, a mix of military members and guests invited by the UFC and the White House. No tickets are going on sale. Another 100,000 fans can watch on screens set up at the nearby Ellipse.\n\nWhite says UFC and it's parent company TKO Group Holdings are picking up the tab. TKO president Mark Shapiro acknowledged on a financial call that the cost is a \"moving target\" expected to exceed $60 million. The promotion does not expect to turn a profit, but is counting on roughly $30 million in corporate sponsorships to offset expected losses. While the UFC is covering the restoration of the South Lawn after the event, it is not covering the cost for security, which will be significant. That will be coordinated between the Secret Service and local law enforcement at the tax payers' expense.\n\nMore: UFC Freedom 250 event at White House offering $1.5M sponsorship packages\n\nThe card is headlined by Georgian-Spanish lightweight champion Ilia Topuria, who is putting his belt on the line against interim champion Justin Gaethje of Safford, Arizona. Alex Pereira of Brazil faces France's Ciryl Gane for the interim heavyweight title in the co-main event. Sean O'Malley takes on Canada's Aiemann Zahabi in a bantamweight bout. Weigh-ins will be held at the Lincoln Memorial.\n\nUFC Freedom 250 falls not just on Flag Day, but also President Donald Trump's 80th birthday. Trump and UFC CEO Dana White are close friends. White spoke at Trump's 2020 and 2016 Republican National Convention appearances and was a prominent campaign surrogate. Trump has also been at several UFC fights with White.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-27T01:15:01.647721+00:00",
+  "failure": "content too short: 219 words",
+  "payload": {
+    "packet_id": "20260527T011130Z_e700422d1c",
+    "title": "UFC-areenan rakentaminen alkoi Valkoisella talolla ennen kesäkuun otteluiltaa",
+    "summary": "Valkoisen talon alueella on aloitettu väliaikaisen UFC-areenan rakentaminen tapahtumaa varten, joka liittyy Yhdysvaltain itsenäisyysjulistuksen 250-vuotisjuhlallisuuksiin. Otteluilta on määrä järjestää 14. kesäkuuta.",
+    "content": "Valkoisen talon alueella Washingtonissa on aloitettu valmistelut poikkeuksellista UFC-otteluiltaa varten, jonka on määrä tuoda väliaikainen kamppailu-urheiluareena Yhdysvaltain tunnetuimman osoitteen yhteyteen. UFC Freedom 250 -tapahtuma on suunniteltu järjestettäväksi 14. kesäkuuta osana Yhdysvaltain itsenäisyysjulistuksen 250-vuotisjuhlallisuuksia.\n\n## Väliaikainen ottelupaikka Valkoisen talon edustalle\n\nRakennustyöt ovat käynnistyneet Valkoisen talon eteläisellä nurmialueella. Tapahtumaa varten rakennetaan kamppailu-urheilulle soveltuva väliaikainen areena, jonka keskiössä on UFC:n häkkiotteluille tyypillinen ottelualue.\n\nSuunnitelmien mukaan tapahtumapaikkaan mahtuu noin 5 000 katsojaa. Yleisön kerrotaan koostuvan muun muassa sotilashenkilöstöstä sekä UFC:n ja Valkoisen talon kutsuvieraista. Tapahtumaan ei ole tulossa yleiseen myyntiin lippuja.\n\n## Etäyleisölle näyttöjä Ellipselle\n\nLaajemmalle yleisölle otteluiltaa on tarkoitus näyttää Valkoisen talon läheisyydessä sijaitsevalla Ellipse-puistoalueella. Presidentti Donald Trump on puhunut kahdeksasta suuresta näytöstä, joiden kautta fanit voisivat seurata tapahtumaa etäämpää. Arvioiden mukaan näyttöalue voisi palvella jopa 100 000 katsojaa.\n\nUFC Freedom 250 on tarkoitus järjestää osana America 250 -kokonaisuutta, jolla merkitään Yhdysvaltain itsenäisyysjulistuksen 250-vuotisjuhlaa. Trump on sanonut, että UFC:n johtaja Dana White rakentaa Valkoisen talon läheisyyteen noin 5 000-paikkaisen areenan. White on Trumpin pitkäaikainen liittolainen.\n\n## Suunnitelmissa suuri katto- ja valaisurakenne\n\nUFC on julkaissut ennakkoon havainnekuvia tapahtuma-alueesta. Suunnitelmiin kuuluu suuri valaistus- ja kattorakenne, jonka tarkoituksena on rajata ottelualue mutta jättää Valkoinen talo näkyviin tapahtuman taustalle.\n\nRakenteen kerrotaan valmistetun Euroopassa ja toimitetun Yhdysvaltoihin tätä tilaisuutta varten. Rakennustöiden eteneminen kertoo, että tapahtuman käytännön valmistelut ovat siirtyneet näkyvään vaiheeseen alle kolme viikkoa ennen suunniteltua otteluiltaa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Valkoinen talo",
+      "UFC",
+      "Donald Trump",
+      "America 250"
+    ],
+    "summary_bullets": [
+      "Valkoisen talon alueelle rakennetaan väliaikaista UFC-areenaa.",
+      "UFC Freedom 250 on määrä järjestää 14. kesäkuuta osana America 250 -juhlallisuuksia.",
+      "Areenalle suunnitellaan noin 5 000 kutsuvierasta, eikä lippuja myydä yleisölle.",
+      "Lähialueelle on tarkoitus pystyttää suuria näyttöjä etäyleisöä varten."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Packetissa oli yksi selvästi muuhun uutiseen kuulumaton lähdekatkelman loppuosa, joka jätettiin pois. Artikkeli perustuu vain tapahtumaa, paikkaa, päivämäärää, yleisöjärjestelyjä ja areenasuunnitelmia koskeviin yhteneviin tietoihin."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260527T011130Z_e700422d1c\",\n  \"title\": \"UFC-areenan rakentaminen alkoi Valkoisella talolla ennen kesäkuun otteluiltaa\",\n  \"summary\": \"Valkoisen talon alueella on aloitettu väliaikaisen UFC-areenan rakentaminen tapahtumaa varten, joka liittyy Yhdysvaltain itsenäisyysjulistuksen 250-vuotisjuhlallisuuksiin. Otteluilta on määrä järjestää 14. kesäkuuta.\",\n  \"content\": \"Valkoisen talon alueella Washingtonissa on aloitettu valmistelut poikkeuksellista UFC-otteluiltaa varten, jonka on määrä tuoda väliaikainen kamppailu-urheiluareena Yhdysvaltain tunnetuimman osoitteen yhteyteen. UFC Freedom 250 -tapahtuma on suunniteltu järjestettäväksi 14. kesäkuuta osana Yhdysvaltain itsenäisyysjulistuksen 250-vuotisjuhlallisuuksia.\\n\\n## Väliaikainen ottelupaikka Valkoisen talon edustalle\\n\\nRakennustyöt ovat käynnistyneet Valkoisen talon eteläisellä nurmialueella. Tapahtumaa varten rakennetaan kamppailu-urheilulle soveltuva väliaikainen areena, jonka keskiössä on UFC:n häkkiotteluille tyypillinen ottelualue.\\n\\nSuunnitelmien mukaan tapahtumapaikkaan mahtuu noin 5 000 katsojaa. Yleisön kerrotaan koostuvan muun muassa sotilashenkilöstöstä sekä UFC:n ja Valkoisen talon kutsuvieraista. Tapahtumaan ei ole tulossa yleiseen myyntiin lippuja.\\n\\n## Etäyleisölle näyttöjä Ellipselle\\n\\nLaajemmalle yleisölle otteluiltaa on tarkoitus näyttää Valkoisen talon läheisyydessä sijaitsevalla Ellipse-puistoalueella. Presidentti Donald Trump on puhunut kahdeksasta suuresta näytöstä, joiden kautta fanit voisivat seurata tapahtumaa etäämpää. Arvioiden mukaan näyttöalue voisi palvella jopa 100 000 katsojaa.\\n\\nUFC Freedom 250 on tarkoitus järjestää osana America 250 -kokonaisuutta, jolla merkitään Yhdysvaltain itsenäisyysjulistuksen 250-vuotisjuhlaa. Trump on sanonut, että UFC:n johtaja Dana White rakentaa Valkoisen talon läheisyyteen noin 5 000-paikkaisen areenan. White on Trumpin pitkäaikainen liittolainen.\\n\\n## Suunnitelmissa suuri katto- ja valaisurakenne\\n\\nUFC on julkaissut ennakkoon havainnekuvia tapahtuma-alueesta. Suunnitelmiin kuuluu suuri valaistus- ja kattorakenne, jonka tarkoituksena on rajata ottelualue mutta jättää Valkoinen talo näkyviin tapahtuman taustalle.\\n\\nRakenteen kerrotaan valmistetun Euroopassa ja toimitetun Yhdysvaltoihin tätä tilaisuutta varten. Rakennustöiden eteneminen kertoo, että tapahtuman käytännön valmistelut ovat siirtyneet näkyvään vaiheeseen alle kolme viikkoa ennen suunniteltua otteluiltaa.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Valkoinen talo\",\n    \"UFC\",\n    \"Donald Trump\",\n    \"America 250\"\n  ],\n  \"summary_bullets\": [\n    \"Valkoisen talon alueelle rakennetaan väliaikaista UFC-areenaa.\",\n    \"UFC Freedom 250 on määrä järjestää 14. kesäkuuta osana America 250 -juhlallisuuksia.\",\n    \"Areenalle suunnitellaan noin 5 000 kutsuvierasta, eikä lippuja myydä yleisölle.\",\n    \"Lähialueelle on tarkoitus pystyttää suuria näyttöjä etäyleisöä varten.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Packetissa oli yksi selvästi muuhun uutiseen kuulumaton lähdekatkelman loppuosa, joka jätettiin pois. Artikkeli perustuu vain tapahtumaa, paikkaa, päivämäärää, yleisöjärjestelyjä ja areenasuunnitelmia koskeviin yhteneviin tietoihin.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260527T011130Z_e700422d1c",
+    "category": "Ulkomaat",
+    "selected_source_words": 328,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 219,
+    "issues": [
+      "content too short: 219 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "UFC-areenan rakentaminen alkoi Valkoisella talolla ennen kesäkuun otteluiltaa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-27T01:15:01.647347+00:00",
+    "repair_trigger": "pre_repair_word_count=248; selected_source_words=328; selected_source_blocks=4",
+    "pre_repair_word_count": 248,
+    "pre_repair_lead_word_count": 33,
+    "post_repair_word_count": 219,
+    "post_repair_lead_word_count": 33,
+    "selected_source_words_at_repair": 328,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 328,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 219 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:6a41e98558",
+      "2:USA TODAY:3a11a756db",
+      "3:BBC World:cbe17a5845",
+      "4:USA TODAY:a88d646e1d"
+    ],
+    "final_issues": [
+      "content too short: 219 words"
+    ],
+    "recovered": false
+  }
+}
