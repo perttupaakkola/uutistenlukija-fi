@@ -1,0 +1,140 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T05:21:13.966081+00:00",
+  "digest": "d8d2e16860",
+  "packet": {
+    "packet_id": "20260527T052113Z_d8d2e16860",
+    "created_at": "2026-05-27T05:21:13Z",
+    "headline_seed": "Työttömyys on lisääntynyt kaikissa ikäryhmissä",
+    "description_seed": "Työttömien määrä nousi viime vuoden huhtikuusta.",
+    "link": "https://yle.fi/a/74-20228116?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "Yle Uutiset"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20228116?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.81,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Työttömyys on lisääntynyt kaikissa ikäryhmissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Työttömiä työnhakijoita oli huhtikuun lopussa yhteensä 333 200, mikä on 20 000 eli kuusi prosenttia enemmän kuin vuotta aikaisemmin, kertoo työllisyys-, kehittämis- ja hallintokeskus (KEHA). Uusia avoimia työpaikkoja ilmoitettiin huhtikuussa Työmarkkinatorille 37 000 eli 5 700 vähemmän kuin edellisen vuoden huhtikuussa. Kaikkiaan huhtikuussa oli avoinna 67 100 työpaikkaa, mikä on noin 20 prosenttia vähemmän kuin vuosi sitten. Pitkäaikaistyöttömiä, eli yhtäjaksoisesti vähintään vuoden työttömänä työnhakijana olleita, oli huhtikuussa 139 200. Määrä on vajaat 20 prosenttia suurempi kuin vuotta aikaisemmin. Yli kaksi vuotta yhtäjaksoisesti työttömänä olleita oli 72 500, mikä on 25 prosenttia enemmän kuin viime vuoden huhtikuussa. Työttömyys kasvoi vuoden takaiseen verrattuna kaikissa ikäryhmissä. Nuoria, alle 25-vuotiaita työttömiä työnhakijoita oli 41 000 eli 5 000 enemmän kuin vuosi sitten. Työttömistä työnhakijoista 84 500 oli yli 55-vuotiaita, mikä on 3 800 enemmän kuin vuosi sitten.",
+        "word_count": 133,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Työttömien ja aktivointipalveluiden piirissä olevista koostuva laaja työttömyys nousi vuoden takaisesta 12 600 henkilöllä eli kolme prosenttia. Yhteensä laajan työttömyyden piiriin kuului 424 800 työnhakijaa.",
+        "word_count": 25,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Työttömiä työnhakijoita oli huhtikuun lopussa yhteensä 333 200, mikä on 20 000 eli kuusi prosenttia enemmän kuin vuotta aikaisemmin, kertoo työllisyys-, kehittämis- ja hallintokeskus (KEHA). Uusia avoimia työpaikkoja ilmoitettiin huhtikuussa Työmarkkinatorille 37 000 eli 5 700 vähemmän kuin edellisen vuoden huhtikuussa. Kaikkiaan huhtikuussa oli avoinna 67 100 työpaikkaa, mikä on noin 20 prosenttia vähemmän kuin vuosi sitten. Pitkäaikaistyöttömiä, eli yhtäjaksoisesti vähintään vuoden työttömänä työnhakijana olleita, oli huhtikuussa 139 200. Määrä on vajaat 20 prosenttia suurempi kuin vuotta aikaisemmin. Yli kaksi vuotta yhtäjaksoisesti työttömänä olleita oli 72 500, mikä on 25 prosenttia enemmän kuin viime vuoden huhtikuussa. Työttömyys kasvoi vuoden takaiseen verrattuna kaikissa ikäryhmissä. Nuoria, alle 25-vuotiaita työttömiä työnhakijoita oli 41 000 eli 5 000 enemmän kuin vuosi sitten. Työttömistä työnhakijoista 84 500 oli yli 55-vuotiaita, mikä on 3 800 enemmän kuin vuosi sitten.\n\nTyöttömien ja aktivointipalveluiden piirissä olevista koostuva laaja työttömyys nousi vuoden takaisesta 12 600 henkilöllä eli kolme prosenttia. Yhteensä laajan työttömyyden piiriin kuului 424 800 työnhakijaa.",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 164,
+      "selected_blocks": 2,
+      "selected_source_words": 158,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ],
+      "selected_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Työttömyys on lisääntynyt kaikissa ikäryhmissä",
+      "description": "Työttömien määrä nousi viime vuoden huhtikuusta.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Työttömyys on lisääntynyt kaikissa ikäryhmissä",
+    "description": "Työttömien määrä nousi viime vuoden huhtikuusta.",
+    "link": "https://yle.fi/a/74-20228116?origin=rss",
+    "published": "2026-05-27T08:09:48+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "2c0ac0a2b9b879ac3b00d8c8d7ad1a93",
+    "_url_hash": "086c0602284103d8c8d0543386937cdd98f7b49ad52582c1df20700fa422e860",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Yle Uutiset]\nTyöttömiä työnhakijoita oli huhtikuun lopussa yhteensä 333 200, mikä on 20 000 eli kuusi prosenttia enemmän kuin vuotta aikaisemmin, kertoo työllisyys-, kehittämis- ja hallintokeskus (KEHA).\n\nUusia avoimia työpaikkoja ilmoitettiin huhtikuussa Työmarkkinatorille 37 000 eli 5 700 vähemmän kuin edellisen vuoden huhtikuussa.\n\nKaikkiaan huhtikuussa oli avoinna 67 100 työpaikkaa, mikä on noin 20 prosenttia vähemmän kuin vuosi sitten.\n\nPitkäaikaistyöttömiä, eli yhtäjaksoisesti vähintään vuoden työttömänä työnhakijana olleita, oli huhtikuussa 139 200. Määrä on vajaat 20 prosenttia suurempi kuin vuotta aikaisemmin.\n\nYli kaksi vuotta yhtäjaksoisesti työttömänä olleita oli 72 500, mikä on 25 prosenttia enemmän kuin viime vuoden huhtikuussa.\n\nTyöttömyys kasvoi vuoden takaiseen verrattuna kaikissa ikäryhmissä.\n\nNuoria, alle 25-vuotiaita työttömiä työnhakijoita oli 41 000 eli 5 000 enemmän kuin vuosi sitten.\n\nTyöttömistä työnhakijoista 84 500 oli yli 55-vuotiaita, mikä on 3 800 enemmän kuin vuosi sitten.\n\nTyöttömien ja aktivointipalveluiden piirissä olevista koostuva laaja työttömyys nousi vuoden takaisesta 12 600 henkilöllä eli kolme prosenttia. Yhteensä laajan työttömyyden piiriin kuului 424 800 työnhakijaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-27T05:24:32.498286+00:00",
+  "failure": "content too short: 248 words",
+  "payload": {
+    "packet_id": "20260527T052113Z_d8d2e16860",
+    "title": "Työttömyys kasvoi huhtikuussa kaikissa ikäryhmissä",
+    "summary": "Huhtikuun lopussa oli 333 200 työtöntä työnhakijaa, mikä on 20 000 enemmän kuin vuotta aiemmin. Myös pitkäaikaistyöttömyys ja laaja työttömyys kasvoivat.",
+    "content": "Työttömien työnhakijoiden määrä kasvoi huhtikuussa selvästi vuoden takaiseen verrattuna. Huhtikuun lopussa työttömiä työnhakijoita oli 333 200, mikä on 20 000 henkilöä eli kuusi prosenttia enemmän kuin edellisen vuoden huhtikuussa, kertoo työllisyys-, kehittämis- ja hallintokeskus KEHA. Kasvu näkyi keskuksen tietojen mukaan kaikissa ikäryhmissä.\n\n## Avoimia työpaikkoja oli aiempaa vähemmän\n\nTyöttömien määrän kasvuun yhdistyi avoimien työpaikkojen väheneminen. Huhtikuussa Työmarkkinatorille ilmoitettiin 37 000 uutta avointa työpaikkaa. Määrä oli 5 700 pienempi kuin vuotta aiemmin.\n\nKaikkiaan huhtikuun aikana avoinna oli 67 100 työpaikkaa. Se on noin 20 prosenttia vähemmän kuin edellisen vuoden huhtikuussa. Lukujen perusteella työmarkkinoilla oli keväällä samanaikaisesti enemmän työttömiä työnhakijoita ja vähemmän avoimia paikkoja kuin vuotta aiemmin.\n\n## Pitkäaikaistyöttömyys kasvoi\n\nPitkäaikaistyöttömien määrä nousi huomattavasti. Vähintään vuoden yhtäjaksoisesti työttömänä työnhakijana olleita oli huhtikuussa 139 200. Määrä oli vajaat 20 prosenttia suurempi kuin vuotta aiemmin.\n\nMyös kaikkein pisimpään työttömänä olleiden määrä kasvoi. Yli kaksi vuotta yhtäjaksoisesti työttömänä olleita oli 72 500, mikä on 25 prosenttia enemmän kuin edellisen vuoden huhtikuussa.\n\nIkäryhmittäin tarkasteltuna kasvu näkyi sekä nuorissa että vanhemmissa työnhakijoissa. Alle 25-vuotiaita työttömiä työnhakijoita oli 41 000, eli 5 000 enemmän kuin vuotta aiemmin. Yli 55-vuotiaita työttömiä työnhakijoita oli 84 500, mikä on 3 800 enemmän kuin edellisen vuoden huhtikuussa.\n\n## Laaja työttömyys nousi yli 424 000 henkilöön\n\nTyöttömistä ja aktivointipalveluiden piirissä olevista koostuva laaja työttömyys kasvoi vuoden takaisesta 12 600 henkilöllä. Nousua oli kolme prosenttia.\n\nHuhtikuussa laajan työttömyyden piirissä oli yhteensä 424 800 työnhakijaa. Luku sisältää työttömien työnhakijoiden lisäksi aktivointipalveluissa olevat henkilöt, ja se kuvaa siksi varsinaista työttömien työnhakijoiden määrää laajempaa työmarkkinatilannetta.",
+    "category": "Kotimaa",
+    "tags": [
+      "työttömyys",
+      "työllisyys",
+      "työmarkkinat",
+      "pitkäaikaistyöttömyys",
+      "KEHA-keskus"
+    ],
+    "summary_bullets": [
+      "Työttömiä työnhakijoita oli huhtikuun lopussa 333 200, eli 20 000 enemmän kuin vuotta aiemmin.",
+      "Avoimia työpaikkoja oli huhtikuussa yhteensä 67 100, noin 20 prosenttia vähemmän kuin vuotta aiemmin.",
+      "Pitkäaikaistyöttömiä oli 139 200, ja laajan työttömyyden piirissä oli 424 800 työnhakijaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.81,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin KEHA-keskuksen lukuihin Ylen uutisoimana. Tietoja ei ole laajennettu packetin ulkopuolelle."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260527T052113Z_d8d2e16860\",\n  \"title\": \"Työttömyys kasvoi huhtikuussa kaikissa ikäryhmissä\",\n  \"summary\": \"Huhtikuun lopussa oli 333 200 työtöntä työnhakijaa, mikä on 20 000 enemmän kuin vuotta aiemmin. Myös pitkäaikaistyöttömyys ja laaja työttömyys kasvoivat.\",\n  \"content\": \"Työttömien työnhakijoiden määrä kasvoi huhtikuussa selvästi vuoden takaiseen verrattuna. Huhtikuun lopussa työttömiä työnhakijoita oli 333 200, mikä on 20 000 henkilöä eli kuusi prosenttia enemmän kuin edellisen vuoden huhtikuussa, kertoo työllisyys-, kehittämis- ja hallintokeskus KEHA. Kasvu näkyi keskuksen tietojen mukaan kaikissa ikäryhmissä.\\n\\n## Avoimia työpaikkoja oli aiempaa vähemmän\\n\\nTyöttömien määrän kasvuun yhdistyi avoimien työpaikkojen väheneminen. Huhtikuussa Työmarkkinatorille ilmoitettiin 37 000 uutta avointa työpaikkaa. Määrä oli 5 700 pienempi kuin vuotta aiemmin.\\n\\nKaikkiaan huhtikuun aikana avoinna oli 67 100 työpaikkaa. Se on noin 20 prosenttia vähemmän kuin edellisen vuoden huhtikuussa. Lukujen perusteella työmarkkinoilla oli keväällä samanaikaisesti enemmän työttömiä työnhakijoita ja vähemmän avoimia paikkoja kuin vuotta aiemmin.\\n\\n## Pitkäaikaistyöttömyys kasvoi\\n\\nPitkäaikaistyöttömien määrä nousi huomattavasti. Vähintään vuoden yhtäjaksoisesti työttömänä työnhakijana olleita oli huhtikuussa 139 200. Määrä oli vajaat 20 prosenttia suurempi kuin vuotta aiemmin.\\n\\nMyös kaikkein pisimpään työttömänä olleiden määrä kasvoi. Yli kaksi vuotta yhtäjaksoisesti työttömänä olleita oli 72 500, mikä on 25 prosenttia enemmän kuin edellisen vuoden huhtikuussa.\\n\\nIkäryhmittäin tarkasteltuna kasvu näkyi sekä nuorissa että vanhemmissa työnhakijoissa. Alle 25-vuotiaita työttömiä työnhakijoita oli 41 000, eli 5 000 enemmän kuin vuotta aiemmin. Yli 55-vuotiaita työttömiä työnhakijoita oli 84 500, mikä on 3 800 enemmän kuin edellisen vuoden huhtikuussa.\\n\\n## Laaja työttömyys nousi yli 424 000 henkilöön\\n\\nTyöttömistä ja aktivointipalveluiden piirissä olevista koostuva laaja työttömyys kasvoi vuoden takaisesta 12 600 henkilöllä. Nousua oli kolme prosenttia.\\n\\nHuhtikuussa laajan työttömyyden piirissä oli yhteensä 424 800 työnhakijaa. Luku sisältää työttömien työnhakijoiden lisäksi aktivointipalveluissa olevat henkilöt, ja se kuvaa siksi varsinaista työttömien työnhakijoiden määrää laajempaa työmarkkinatilannetta.\",\n  \"category\": \"Kotimaa\",\n  \"tags\": [\n    \"työttömyys\",\n    \"työllisyys\",\n    \"työmarkkinat\",\n    \"pitkäaikaistyöttömyys\",\n    \"KEHA-keskus\"\n  ],\n  \"summary_bullets\": [\n    \"Työttömiä työnhakijoita oli huhtikuun lopussa 333 200, eli 20 000 enemmän kuin vuotta aiemmin.\",\n    \"Avoimia työpaikkoja oli huhtikuussa yhteensä 67 100, noin 20 prosenttia vähemmän kuin vuotta aiemmin.\",\n    \"Pitkäaikaistyöttömiä oli 139 200, ja laajan työttömyyden piirissä oli 424 800 työnhakijaa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.81,\n  \"journalist_note\": \"Artikkeli perustuu paketissa annettuihin KEHA-keskuksen lukuihin Ylen uutisoimana. Tietoja ei ole laajennettu packetin ulkopuolelle.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260527T052113Z_d8d2e16860",
+    "category": "Kotimaa",
+    "selected_source_words": 158,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.81,
+    "final_word_count": 248,
+    "issues": [
+      "content too short: 248 words"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Työttömyys kasvoi huhtikuussa kaikissa ikäryhmissä"
+  }
+}
