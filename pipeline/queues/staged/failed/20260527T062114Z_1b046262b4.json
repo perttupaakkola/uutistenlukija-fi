@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T06:21:14.418726+00:00",
+  "digest": "1b046262b4",
+  "packet": {
+    "packet_id": "20260527T062114Z_1b046262b4",
+    "created_at": "2026-05-27T06:21:14Z",
+    "headline_seed": "Tavaraa lentää ihmisten niskaan Helsingissä – Nyt puhuu Jimi, joka todisti ilmiötä: ”Vaarallista”",
+    "description_seed": "Helsingin Malmilla tapahtuu outoja. Poliisi ei ole saanut nuoria tekijöitä kiinni. Nuorisojoukko piinaa kadulla kulkijoita Helsingin Malmilla. Paikallinen Jimi Ollas näki 2. toukokuuta, kun nuoret kiipeilivät Malmin K-citymarketin parkkihallin katon reunalla.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/a73ef7de-e4ac-4ae9-be07-65464e7ac742",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/a73ef7de-e4ac-4ae9-be07-65464e7ac742"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tavaraa lentää ihmisten niskaan Helsingissä – Nyt puhuu Jimi, joka todisti ilmiötä: ”Vaarallista”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Helsingin Malmilla tapahtuu outoja. Poliisi ei ole saanut nuoria tekijöitä kiinni. Nuorisojoukko piinaa kadulla kulkijoita Helsingin Malmilla. Paikallinen Jimi Ollas näki 2. toukokuuta, kun nuoret kiipeilivät Malmin K-citymarketin parkkihallin katon reunalla.",
+        "word_count": 31,
+        "keyword_overlap": 25,
+        "strong_overlap": 21
+      }
+    ],
+    "source_text": "Helsingin Malmilla tapahtuu outoja. Poliisi ei ole saanut nuoria tekijöitä kiinni. Nuorisojoukko piinaa kadulla kulkijoita Helsingin Malmilla. Paikallinen Jimi Ollas näki 2. toukokuuta, kun nuoret kiipeilivät Malmin K-citymarketin parkkihallin katon reunalla.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 62,
+      "selected_blocks": 1,
+      "selected_source_words": 31,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tavaraa lentää ihmisten niskaan Helsingissä – Nyt puhuu Jimi, joka todisti ilmiötä: ”Vaarallista”",
+      "description": "Helsingin Malmilla tapahtuu outoja. Poliisi ei ole saanut nuoria tekijöitä kiinni. Nuorisojoukko piinaa kadulla kulkijoita Helsingin Malmilla. Paikallinen Jimi Ollas näki 2. toukokuuta, kun nuoret kiipeilivät Malmin K-citymarketin parkkihallin katon reunalla.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Tavaraa lentää ihmisten niskaan Helsingissä – Nyt puhuu Jimi, joka todisti ilmiötä: ”Vaarallista”",
+    "description": "Helsingin Malmilla tapahtuu outoja. Poliisi ei ole saanut nuoria tekijöitä kiinni. Nuorisojoukko piinaa kadulla kulkijoita Helsingin Malmilla. Paikallinen Jimi Ollas näki 2. toukokuuta, kun nuoret kiipeilivät Malmin K-citymarketin parkkihallin katon reunalla.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/a73ef7de-e4ac-4ae9-be07-65464e7ac742",
+    "published": "2026-05-27T09:01:58+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "e2f7241f2aa8a11a3961fe214fb2e801",
+    "_url_hash": "db995fa6ca883e33592bcebf4bd05de7f7a038adfab360b14858270fc8f54572",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Helsingin Malmilla tapahtuu outoja. Poliisi ei ole saanut nuoria tekijöitä kiinni. Nuorisojoukko piinaa kadulla kulkijoita Helsingin Malmilla. Paikallinen Jimi Ollas näki 2. toukokuuta, kun nuoret kiipeilivät Malmin K-citymarketin parkkihallin katon reunalla.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-27T06:23:21.742366+00:00",
+  "failure": "Lähdeaineisto on liian niukka eikä tue vähintään 250 sanan julkaistavaa artikkelia ilman lisäoletuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T062114Z_1b046262b4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka eikä tue vähintään 250 sanan julkaistavaa artikkelia ilman lisäoletuksia.\"}"
+}
