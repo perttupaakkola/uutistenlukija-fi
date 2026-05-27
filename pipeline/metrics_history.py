@@ -19,8 +19,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 PIPELINE_DIR = Path(__file__).parent
+PROJECT_DIR = PIPELINE_DIR.parent
 METRICS_FILE = PIPELINE_DIR / "logs" / "metrics.json"
 HISTORY_FILE = PIPELINE_DIR / "logs" / "metrics_history.json"
+CONTENT_DIR = PROJECT_DIR / "content" / "posts"
 
 
 def _load_runs() -> list[dict]:
@@ -53,6 +55,51 @@ def _safe_step(run: dict, *step_names: str) -> dict:
     return {}
 
 
+def _parse_frontmatter_date(text: str) -> datetime | None:
+    """Return Hugo frontmatter date/publishDate as UTC, if present."""
+    lines = text.splitlines()
+    if not lines or lines[0].strip() not in {"---", "+++"}:
+        return None
+    for line in lines[1:80]:
+        stripped = line.strip()
+        if stripped in {"---", "+++"}:
+            break
+        if not (stripped.startswith("date:") or stripped.startswith("publishDate:")):
+            continue
+        raw = stripped.split(":", 1)[1].strip().strip('"\'')
+        if not raw:
+            continue
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            try:
+                parsed = datetime.strptime(raw[:19], "%Y-%m-%dT%H:%M:%S")
+            except ValueError:
+                try:
+                    parsed = datetime.strptime(raw[:10], "%Y-%m-%d")
+                except ValueError:
+                    continue
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
+    return None
+
+
+def _published_content_by_day() -> dict[str, int]:
+    """Count actual Hugo posts by UTC publish date."""
+    counts: dict[str, int] = defaultdict(int)
+    if not CONTENT_DIR.exists():
+        return counts
+    for path in CONTENT_DIR.glob("*.md"):
+        try:
+            published_at = _parse_frontmatter_date(path.read_text(encoding="utf-8", errors="replace"))
+        except OSError:
+            continue
+        if published_at:
+            counts[published_at.strftime("%Y-%m-%d")] += 1
+    return counts
+
+
 def aggregate(runs: list[dict]) -> list[dict]:
     """Group runs by UTC day and compute daily aggregates."""
     by_day: dict[str, list[dict]] = defaultdict(list)
@@ -61,12 +108,16 @@ def aggregate(runs: list[dict]) -> list[dict]:
         if day != "unknown":
             by_day[day].append(run)
 
+    content_by_day = _published_content_by_day()
     results = []
     for day in sorted(by_day.keys()):
         day_runs = by_day[day]
         total_runs = len(day_runs)
         success_runs = sum(1 for r in day_runs if r.get("success"))
-        articles_published = sum(r.get("article_count", 0) for r in day_runs)
+        generated_articles = sum(r.get("article_count", 0) for r in day_runs)
+        published_from_content = int(content_by_day.get(day, 0))
+        articles_published = max(generated_articles, published_from_content)
+        articles_published_source = "content/posts frontmatter" if published_from_content > generated_articles else "pipeline/logs/metrics.json"
 
         # Scanner totals (newer records may have total/rss_count/firehose_count)
         scanned = sum(_safe_step(r, "scanner").get("total", 0) for r in day_runs)
@@ -135,7 +186,10 @@ def aggregate(runs: list[dict]) -> list[dict]:
                 "firehose_in": fh_in,
                 "after_dedup": after_dedup,
                 "rewritten": rewritten,
+                "generated": generated_articles,
                 "published": articles_published,
+                "published_from_content": published_from_content,
+                "published_source": articles_published_source,
             },
             "images": {
                 "total": img_total,

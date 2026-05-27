@@ -25,7 +25,10 @@ import urllib.error
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-METRICS_FILE = Path(__file__).parent / "logs" / "metrics.json"
+PIPELINE_DIR = Path(__file__).parent
+PROJECT_DIR = PIPELINE_DIR.parent
+METRICS_FILE = PIPELINE_DIR / "logs" / "metrics.json"
+CONTENT_DIR = PROJECT_DIR / "content" / "posts"
 
 WEBHOOK = (
     os.environ.get("DISCORD_METRICS_WEBHOOK")
@@ -100,6 +103,57 @@ def _pct(num: int, denom: int) -> str:
     return f"{num / denom * 100:.0f}%"
 
 
+def _parse_frontmatter_date(text: str) -> datetime | None:
+    """Return Hugo frontmatter date/publishDate as UTC, if present."""
+    lines = text.splitlines()
+    if not lines or lines[0].strip() not in {"---", "+++"}:
+        return None
+    for line in lines[1:80]:
+        stripped = line.strip()
+        if stripped in {"---", "+++"}:
+            break
+        if not (stripped.startswith("date:") or stripped.startswith("publishDate:")):
+            continue
+        raw = stripped.split(":", 1)[1].strip().strip('"\'')
+        if not raw:
+            continue
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            try:
+                parsed = datetime.strptime(raw[:19], "%Y-%m-%dT%H:%M:%S")
+            except ValueError:
+                try:
+                    parsed = datetime.strptime(raw[:10], "%Y-%m-%d")
+                except ValueError:
+                    continue
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
+    return None
+
+
+def _published_content_count(hours: int) -> int:
+    """Count actual published content files in the lookback window.
+
+    The scanner metrics can be 0 when the staged Monica publisher created posts.
+    Operator-facing reports should prefer real on-disk Hugo posts over raw scanner
+    run counts so we do not report "0 articles" while the site is publishing.
+    """
+    if not CONTENT_DIR.exists():
+        return 0
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    count = 0
+    for path in CONTENT_DIR.glob("*.md"):
+        try:
+            published_at = _parse_frontmatter_date(path.read_text(encoding="utf-8", errors="replace"))
+        except OSError:
+            continue
+        if published_at and published_at >= cutoff:
+            count += 1
+    return count
+
+
 # ── Report builder ────────────────────────────────────────────────────────────
 
 def build_report(records: list[dict], hours: int) -> str:
@@ -119,7 +173,10 @@ def build_report(records: list[dict], hours: int) -> str:
     after_dedup = _sum(records, "steps.dedup.remaining")
     rewritten = _sum(records, "steps.rewriter.output_count")
     qg_passed = _sum(records, "steps.quality_gate.passed")
-    published = sum(r.get("article_count", 0) for r in records)
+    generated = sum(r.get("article_count", 0) for r in records)
+    published_from_content = _published_content_count(hours)
+    published = max(generated, published_from_content)
+    published_source = "content/posts frontmatter" if published_from_content > generated else "pipeline/logs/metrics.json"
 
     # Image sources
     # Only count image stats from runs where the images step actually ran
@@ -181,6 +238,8 @@ def build_report(records: list[dict], hours: int) -> str:
         dropped_qg = rewritten - qg_passed
         lines.append(f"  Laadun tarkistus: **{qg_passed}** hyväksytty" + (f"  (-{dropped_qg} hylätty)" if dropped_qg else ""))
     lines.append(f"  ✅ Julkaistu: **{published}** artikkelia")
+    if published_source == "content/posts frontmatter":
+        lines.append(f"  Lähde: julkaistut Hugo-artikkelit (pipeline-ajot kirjasivat {generated})")
 
     # Image breakdown
     if runs_with_images and (img_total or img_fallback or img_none):

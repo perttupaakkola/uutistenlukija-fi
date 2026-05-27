@@ -1,0 +1,604 @@
+{
+  "cutoff": "2026-05-25T19:50:25.443933+00:00",
+  "dispatch_timing": {
+    "duration_ms": {
+      "max": null,
+      "median": null,
+      "min": null,
+      "p90": null
+    },
+    "load1": {
+      "max": null,
+      "median": null,
+      "timeout_max": null,
+      "timeout_median": null
+    },
+    "log_path": "pipeline/logs/monica-dispatch-timing.jsonl",
+    "modes": {},
+    "openclaw_related_processes": {
+      "max": null,
+      "median": null
+    },
+    "outcomes": {},
+    "records": 0,
+    "timeout_records": 0
+  },
+  "failed_artifacts": {
+    "artifacts": 110,
+    "buckets": {
+      "other": 2,
+      "schema_invalid": 2,
+      "source_insufficient_or_mismatch": 51,
+      "timeout": 35,
+      "writer_short": 20
+    },
+    "failed_dir": "pipeline/queues/staged/failed",
+    "retry_classifications": {
+      "missing": 53,
+      "repair_near_miss_short": 8,
+      "writer_invalid_json": 35,
+      "writer_schema_invalid": 2,
+      "writer_short_after_repair": 12
+    },
+    "timeout_artifacts": [
+      {
+        "artifact": "20260526T141151Z_509b87106d.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T14:19:01.257639+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 41
+      },
+      {
+        "artifact": "20260526T000118Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T00:11:42.543848+00:00",
+        "raw_response_bytes": 4103,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T014113Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T01:51:38.978646+00:00",
+        "raw_response_bytes": 4118,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T132136Z_7e60171694.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T13:29:01.957229+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 2,
+        "source_words": 268
+      },
+      {
+        "artifact": "20260525T234116Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-25T23:49:01.753408+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T021115Z_482cb85278.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T02:20:20.045794+00:00",
+        "raw_response_bytes": 3355,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 132
+      },
+      {
+        "artifact": "20260526T100128Z_0e3fb0ba00.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T10:09:01.903670+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 83
+      },
+      {
+        "artifact": "20260526T042114Z_0e052c9dfd.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T04:29:01.557777+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 4,
+        "source_words": 297
+      },
+      {
+        "artifact": "20260526T020115Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T02:10:22.709893+00:00",
+        "raw_response_bytes": 3926,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T113211Z_d3238626af.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T11:39:02.116131+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 64
+      },
+      {
+        "artifact": "20260526T003117Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T00:50:17.455634+00:00",
+        "raw_response_bytes": 4026,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T171126Z_416fdfac74.json",
+        "bucket": "timeout",
+        "category": "Ulkomaat",
+        "mtime": "2026-05-26T17:19:02.115069+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 4,
+        "source_words": 428
+      },
+      {
+        "artifact": "20260526T104219Z_5fca514701.json",
+        "bucket": "timeout",
+        "category": "Ulkomaat",
+        "mtime": "2026-05-26T10:49:01.417064+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 4,
+        "source_words": 462
+      },
+      {
+        "artifact": "20260526T075120Z_356180b801.json",
+        "bucket": "timeout",
+        "category": "Ulkomaat",
+        "mtime": "2026-05-26T07:59:01.749257+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 34
+      },
+      {
+        "artifact": "20260526T034116Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T03:50:16.608029+00:00",
+        "raw_response_bytes": 3582,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T090127Z_d452ec327e.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T09:09:02.075961+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 2,
+        "source_words": 258
+      },
+      {
+        "artifact": "20260526T144136Z_724ee09484.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T14:49:01.706733+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 128
+      },
+      {
+        "artifact": "20260526T030121Z_616b4f9470.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T03:09:01.481006+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 177
+      },
+      {
+        "artifact": "20260526T051117Z_fdc05c8e35.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T05:19:02.093395+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 42
+      },
+      {
+        "artifact": "20260525T223116Z_42da25186f.json",
+        "bucket": "timeout",
+        "category": "Urheilu",
+        "mtime": "2026-05-25T22:39:01.230420+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 201
+      },
+      {
+        "artifact": "20260526T095135Z_b4f09fb2e6.json",
+        "bucket": "timeout",
+        "category": "Ulkomaat",
+        "mtime": "2026-05-26T09:59:01.382483+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 4,
+        "source_words": 406
+      },
+      {
+        "artifact": "20260526T062123Z_2a58f5cb57.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T06:29:01.805036+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 4,
+        "source_words": 330
+      },
+      {
+        "artifact": "20260526T013115Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T01:39:02.018202+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T080133Z_7504852965.json",
+        "bucket": "timeout",
+        "category": "Ulkomaat",
+        "mtime": "2026-05-26T08:09:02.079081+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 2,
+        "source_words": 231
+      },
+      {
+        "artifact": "20260525T233114Z_3b42f170bd.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-25T23:39:01.483151+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 290
+      },
+      {
+        "artifact": "20260526T105121Z_737706f391.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T10:59:01.862124+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 2,
+        "source_words": 134
+      },
+      {
+        "artifact": "20260526T131201Z_fdcfb312d7.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T13:20:17.442665+00:00",
+        "raw_response_bytes": 3950,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 253
+      },
+      {
+        "artifact": "20260526T175121Z_5981319da0.json",
+        "bucket": "timeout",
+        "category": "Ulkomaat",
+        "mtime": "2026-05-26T17:59:01.633824+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 61
+      },
+      {
+        "artifact": "20260525T224118Z_f7bba89083.json",
+        "bucket": "timeout",
+        "category": "Teknologia",
+        "mtime": "2026-05-25T22:49:01.497406+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 4,
+        "source_words": 466
+      },
+      {
+        "artifact": "20260526T033124Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T03:39:01.598310+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T180126Z_a77206ec62.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T18:10:21.829455+00:00",
+        "raw_response_bytes": 3467,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 1,
+        "source_words": 129
+      },
+      {
+        "artifact": "20260526T015112Z_d92ff10dd3.json",
+        "bucket": "timeout",
+        "category": "Tiede",
+        "mtime": "2026-05-26T01:59:01.367791+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 2,
+        "source_words": 158
+      },
+      {
+        "artifact": "20260526T120209Z_857a709eb1.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T12:09:01.584472+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 280
+      },
+      {
+        "artifact": "20260526T005117Z_8dc8853347.json",
+        "bucket": "timeout",
+        "category": "Talous",
+        "mtime": "2026-05-26T00:59:02.178755+00:00",
+        "raw_response_bytes": 0,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 283
+      },
+      {
+        "artifact": "20260526T145215Z_8ba86b5656.json",
+        "bucket": "timeout",
+        "category": "Kotimaa",
+        "mtime": "2026-05-26T15:00:17.998477+00:00",
+        "raw_response_bytes": 3711,
+        "retry_classification": "writer_invalid_json",
+        "source_blocks": 3,
+        "source_words": 180
+      }
+    ]
+  },
+  "generated_at": "2026-05-26T19:50:25.443933+00:00",
+  "redaction": {
+    "prompt_text_included": false,
+    "raw_response_text_included": false,
+    "secret_values_included": false
+  },
+  "schema": "uutistenlukija.monica_latency_report.v1",
+  "window_hours": 24.0,
+  "worker_log": {
+    "duration_s": {
+      "ge_350": 39,
+      "max": 540,
+      "median": 152,
+      "min": 0,
+      "p90": 361
+    },
+    "failure_buckets": {
+      "other": 2,
+      "source_insufficient_or_mismatch": 49,
+      "timeout": 35,
+      "writer_short": 20
+    },
+    "log_path": "pipeline/logs/staged-monica-worker.log",
+    "packet_attempts": 136,
+    "recent_timeout_attempts": [
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T042114Z_0e052c9dfd.json",
+        "source_blocks": 4,
+        "source_words": 297,
+        "stage": "initial",
+        "timestamp": "2026-05-26T04:23:01+00:00"
+      },
+      {
+        "duration_s": 361,
+        "packet_file": "20260526T051117Z_fdc05c8e35.json",
+        "source_blocks": 1,
+        "source_words": 42,
+        "stage": "initial",
+        "timestamp": "2026-05-26T05:13:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T062123Z_2a58f5cb57.json",
+        "source_blocks": 4,
+        "source_words": 330,
+        "stage": "initial",
+        "timestamp": "2026-05-26T06:23:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T075120Z_356180b801.json",
+        "source_blocks": 1,
+        "source_words": 34,
+        "stage": "initial",
+        "timestamp": "2026-05-26T07:53:01+00:00"
+      },
+      {
+        "duration_s": 361,
+        "packet_file": "20260526T080133Z_7504852965.json",
+        "source_blocks": 2,
+        "source_words": 231,
+        "stage": "initial",
+        "timestamp": "2026-05-26T08:03:01+00:00"
+      },
+      {
+        "duration_s": 361,
+        "packet_file": "20260526T090127Z_d452ec327e.json",
+        "source_blocks": 2,
+        "source_words": 258,
+        "stage": "initial",
+        "timestamp": "2026-05-26T09:03:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T095135Z_b4f09fb2e6.json",
+        "source_blocks": 4,
+        "source_words": 406,
+        "stage": "initial",
+        "timestamp": "2026-05-26T09:53:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T100128Z_0e3fb0ba00.json",
+        "source_blocks": 1,
+        "source_words": 83,
+        "stage": "initial",
+        "timestamp": "2026-05-26T10:03:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T104219Z_5fca514701.json",
+        "source_blocks": 4,
+        "source_words": 462,
+        "stage": "initial",
+        "timestamp": "2026-05-26T10:43:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T105121Z_737706f391.json",
+        "source_blocks": 2,
+        "source_words": 134,
+        "stage": "initial",
+        "timestamp": "2026-05-26T10:53:01+00:00"
+      },
+      {
+        "duration_s": 361,
+        "packet_file": "20260526T113211Z_d3238626af.json",
+        "source_blocks": 1,
+        "source_words": 64,
+        "stage": "initial",
+        "timestamp": "2026-05-26T11:33:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T120209Z_857a709eb1.json",
+        "source_blocks": 3,
+        "source_words": 280,
+        "stage": "initial",
+        "timestamp": "2026-05-26T12:03:01+00:00"
+      },
+      {
+        "duration_s": 436,
+        "packet_file": "20260526T131201Z_fdcfb312d7.json",
+        "source_blocks": 3,
+        "source_words": 253,
+        "stage": "repair",
+        "timestamp": "2026-05-26T13:13:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T132136Z_7e60171694.json",
+        "source_blocks": 2,
+        "source_words": 268,
+        "stage": "initial",
+        "timestamp": "2026-05-26T13:23:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T141151Z_509b87106d.json",
+        "source_blocks": 1,
+        "source_words": 41,
+        "stage": "initial",
+        "timestamp": "2026-05-26T14:13:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T144136Z_724ee09484.json",
+        "source_blocks": 1,
+        "source_words": 128,
+        "stage": "initial",
+        "timestamp": "2026-05-26T14:43:01+00:00"
+      },
+      {
+        "duration_s": 437,
+        "packet_file": "20260526T145215Z_8ba86b5656.json",
+        "source_blocks": 3,
+        "source_words": 180,
+        "stage": "repair",
+        "timestamp": "2026-05-26T14:53:01+00:00"
+      },
+      {
+        "duration_s": 361,
+        "packet_file": "20260526T171126Z_416fdfac74.json",
+        "source_blocks": 4,
+        "source_words": 428,
+        "stage": "initial",
+        "timestamp": "2026-05-26T17:13:01+00:00"
+      },
+      {
+        "duration_s": 360,
+        "packet_file": "20260526T175121Z_5981319da0.json",
+        "source_blocks": 1,
+        "source_words": 61,
+        "stage": "initial",
+        "timestamp": "2026-05-26T17:53:01+00:00"
+      },
+      {
+        "duration_s": 440,
+        "packet_file": "20260526T180126Z_a77206ec62.json",
+        "source_blocks": 1,
+        "source_words": 129,
+        "stage": "repair",
+        "timestamp": "2026-05-26T18:03:01+00:00"
+      }
+    ],
+    "repair_runs": 44,
+    "runs": 137,
+    "skip_reasons": {
+      "high_load": 7
+    },
+    "status_counts": {
+      "failed": 106,
+      "ok": 30
+    },
+    "timeout_runs": 35,
+    "timeout_source_word_buckets": {
+      "100_199": 7,
+      "200_299": 17,
+      "gte_300": 5,
+      "lt_100": 6
+    },
+    "timeout_stages": {
+      "initial": 26,
+      "near_miss_repair": 2,
+      "repair": 7
+    }
+  }
+}

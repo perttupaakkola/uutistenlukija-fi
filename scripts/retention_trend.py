@@ -151,6 +151,38 @@ def extract_metric(report: dict, name: str) -> float:
         return 0.0
 
 
+def extract_new_returning(report: dict) -> tuple[float, float, float, float]:
+    """Return (new_users, returning_users, sessions, total_users).
+
+    GA4 Data API no longer exposes a `returningUsers` metric.  Use the
+    `newVsReturning` dimension and activeUsers instead; this mirrors the GA4 UI
+    concept and keeps the weekly retention report working after API schema drift.
+    """
+    metric_headers = [h["name"] for h in report.get("metricHeaders", [])]
+
+    def metric(row: dict, name: str) -> float:
+        if name not in metric_headers:
+            return 0.0
+        idx = metric_headers.index(name)
+        try:
+            return float(row["metricValues"][idx]["value"])
+        except (IndexError, KeyError, ValueError):
+            return 0.0
+
+    new_users = returning = sessions = total = 0.0
+    for row in report.get("rows", []):
+        cohort = (row.get("dimensionValues") or [{}])[0].get("value", "").lower()
+        users = metric(row, "activeUsers") or metric(row, "totalUsers") or metric(row, "newUsers")
+        row_sessions = metric(row, "sessions")
+        sessions += row_sessions
+        total += users
+        if cohort == "new":
+            new_users += users
+        elif cohort == "returning":
+            returning += users
+    return new_users, returning, sessions, total
+
+
 def post_to_discord(message: str, webhook: str) -> int | None:
     payload = json.dumps({"content": message}).encode()
     req = urllib.request.Request(
@@ -222,23 +254,20 @@ def main():
         print(f"Token error: {e}")
         sys.exit(1)
 
-    metrics = ["newUsers", "returningUsers", "sessions", "totalUsers"]
+    metrics = ["activeUsers", "sessions", "totalUsers", "newUsers"]
 
     try:
-        this_week = ga4_report(token, ws, we, metrics)
-        prev_week = ga4_report(token, pws, pwe, metrics)
+        this_week = ga4_report(token, ws, we, metrics, dimensions=["newVsReturning"])
+        prev_week = ga4_report(token, pws, pwe, metrics, dimensions=["newVsReturning"])
     except RuntimeError as e:
         print(f"GA4 error: {e}")
         sys.exit(1)
 
-    new_users = extract_metric(this_week, "newUsers")
-    returning = extract_metric(this_week, "returningUsers")
-    sessions = extract_metric(this_week, "sessions")
-    total = extract_metric(this_week, "totalUsers") or (new_users + returning) or 1
+    new_users, returning, sessions, total = extract_new_returning(this_week)
+    total = total or (new_users + returning) or 1
 
-    prev_new = extract_metric(prev_week, "newUsers")
-    prev_returning = extract_metric(prev_week, "returningUsers")
-    prev_total = extract_metric(prev_week, "totalUsers") or (prev_new + prev_returning) or 1
+    prev_new, prev_returning, _prev_sessions, prev_total = extract_new_returning(prev_week)
+    prev_total = prev_total or (prev_new + prev_returning) or 1
 
     return_rate = returning / total * 100
     prev_return_rate = prev_returning / prev_total * 100
