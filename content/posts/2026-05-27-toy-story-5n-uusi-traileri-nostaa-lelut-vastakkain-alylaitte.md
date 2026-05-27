@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/viimeinen-traileri-ja-juliste-esittelevat-toy-story-5n-alylaitepahikset-jatko-osan-ensi-ilta-on-kesakuussa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

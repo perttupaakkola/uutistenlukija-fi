@@ -1,0 +1,211 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T21:31:17.214688+00:00",
+  "digest": "329c0acaeb",
+  "packet": {
+    "packet_id": "20260527T213117Z_329c0acaeb",
+    "created_at": "2026-05-27T21:31:17Z",
+    "headline_seed": "Websites have a new way to spy on visitors: analyzing their SSD activity",
+    "description_seed": "Over the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories , device fingerprints , and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all . Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. A side channel based on contention The technique, laid out in a research paper , exploits a side channel , a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data. Read full article Comments",
+    "link": "https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/",
+    "source": "Ars Technica",
+    "source_names": [
+      "Ars Technica",
+      "Ars Technica",
+      "Ars Technica",
+      "Ars Technica"
+    ],
+    "source_urls": [
+      "https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Websites have a new way to spy on visitors: analyzing their SSD activity"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ars Technica",
+        "source_type": "description",
+        "text": "Over the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories , device fingerprints , and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all . Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. A side channel based on contention The technique, laid out in a research paper , exploits a side channel , a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data. Read full article Comments",
+        "word_count": 151,
+        "keyword_overlap": 86,
+        "strong_overlap": 52
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "Over the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories, device fingerprints, and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all. Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. The technique, laid out in a research paper, exploits a side channel, a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data.",
+        "word_count": 136,
+        "keyword_overlap": 80,
+        "strong_overlap": 49
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "The attack that FROST uses is known as a contention side channel, which measures the interaction of various processes all using (or competing for) a given resource. By measuring the timing of certain I/O (input-output) operations of the SSD a visitor is using, the researchers were able to determine the websites open in other tabs—even on other browsers—and the apps that were open on the visitor’s device. FROST requires no interaction from the visitor other than opening the site hosting the attack.",
+        "word_count": 82,
+        "keyword_overlap": 16,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "“Web browsers have evolved from simple document viewers into complex platforms capable of running sophisticated applications,” the paper authors wrote. “Companies like Google, Microsoft, and Adobe have developed full-fledged office suites, photo- and video editors, or even integrated development environments (IDEs) that run entirely within the browser.” The authors went on to note: “While these features enhance the capabilities of web applications and allow completely novel use cases, they also increase the browser’s attack surface, and some have already been shown to introduce new vulnerabilities.” Unlike previous contention side-channel attacks on SSDs, FROST runs exclusively in the browser. It uses JavaScript that interacts with the OPFS (origin private file system), an allocated storage space that’s reserved for a specific site to run code needed to complete a given task. Websites can create one with no interaction required by the visitor.",
+        "word_count": 140,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Over the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories , device fingerprints , and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all . Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. A side channel based on contention The technique, laid out in a research paper , exploits a side channel , a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data. Read full article Comments\n\nOver the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories, device fingerprints, and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all. Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. The technique, laid out in a research paper, exploits a side channel, a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data.\n\nThe attack that FROST uses is known as a contention side channel, which measures the interaction of various processes all using (or competing for) a given resource. By measuring the timing of certain I/O (input-output) operations of the SSD a visitor is using, the researchers were able to determine the websites open in other tabs—even on other browsers—and the apps that were open on the visitor’s device. FROST requires no interaction from the visitor other than opening the site hosting the attack.\n\n“Web browsers have evolved from simple document viewers into complex platforms capable of running sophisticated applications,” the paper authors wrote. “Companies like Google, Microsoft, and Adobe have developed full-fledged office suites, photo- and video editors, or even integrated development environments (IDEs) that run entirely within the browser.” The authors went on to note: “While these features enhance the capabilities of web applications and allow completely novel use cases, they also increase the browser’s attack surface, and some have already been shown to introduce new vulnerabilities.” Unlike previous contention side-channel attacks on SSDs, FROST runs exclusively in the browser. It uses JavaScript that interacts with the OPFS (origin private file system), an allocated storage space that’s reserved for a specific site to run code needed to complete a given task. Websites can create one with no interaction required by the visitor.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 530,
+      "selected_blocks": 4,
+      "selected_source_words": 509,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica"
+      ],
+      "selected_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Websites have a new way to spy on visitors: analyzing their SSD activity",
+      "description": "Over the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories , device fingerprints , and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all . Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. A side channel based on contention The technique, laid out in a research paper , exploits a side channel , a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data. Read full article Comments",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Websites have a new way to spy on visitors: analyzing their SSD activity",
+    "description": "Over the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories , device fingerprints , and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all . Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. A side channel based on contention The technique, laid out in a research paper , exploits a side channel , a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data. Read full article Comments",
+    "link": "https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/",
+    "published": "2026-05-27T20:56:03+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "be92d949fd901c6930e54b0b75d752d1",
+    "_url_hash": "62cac8a9aa41fd53761607c18df9771f3353c36977281ed00c5bd86752e75ac7",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nOver the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories, device fingerprints, and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all.\n\nNow sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices.\n\nThe technique, laid out in a research paper, exploits a side channel, a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data.\n\nThe attack that FROST uses is known as a contention side channel, which measures the interaction of various processes all using (or competing for) a given resource. By measuring the timing of certain I/O (input-output) operations of the SSD a visitor is using, the researchers were able to determine the websites open in other tabs—even on other browsers—and the apps that were open on the visitor’s device. FROST requires no interaction from the visitor other than opening the site hosting the attack.\n\n“Web browsers have evolved from simple document viewers into complex platforms capable of running sophisticated applications,” the paper authors wrote. “Companies like Google, Microsoft, and Adobe have developed full-fledged office suites, photo- and video editors, or even integrated development environments (IDEs) that run entirely within the browser.” The authors went on to note: “While these features enhance the capabilities of web applications and allow completely novel use cases, they also increase the browser’s attack surface, and some have already been shown to introduce new vulnerabilities.”\n\nUnlike previous contention side-channel attacks on SSDs, FROST runs exclusively in the browser. It uses JavaScript that interacts with the OPFS (origin private file system), an allocated storage space that’s reserved for a specific site to run code needed to complete a given task. Websites can create one with no interaction required by the visitor.\n\nWhile each file system is sandboxed, meaning it’s isolated from other websites and from the device system itself, the JavaScript ca",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-27T21:34:01.395759+00:00",
+  "payload": {
+    "packet_id": "20260527T213117Z_329c0acaeb",
+    "title": "Tutkijat kuvasivat uuden tavan seurata verkkokävijöitä SSD-levyn ajoitusten avulla",
+    "summary": "FROST-niminen menetelmä hyödyntää selaimen ja SSD-tallennuksen ajoituksia ja voi paljastaa, mitä sivuja ja sovelluksia käyttäjällä on auki.",
+    "content": "Tutkijat ovat kuvanneet uuden verkkoselaimessa toimivan seurantamenetelmän, joka mittaa käyttäjän SSD-levyyn liittyviä hienovaraisia ajoituseroja. FROSTiksi nimetty tekniikka voi tutkimuksen mukaan auttaa päättelemään, mitä muita verkkosivuja käyttäjällä on avoinna ja mitä sovelluksia laitteella on käynnissä, kun käyttäjä avaa hyökkäystä isännöivän sivuston.\n\n## Sivukanava syntyy jaetusta resurssista\n\nFROST tulee sanoista fingerprinting remotely using OPFS-based SSD timing. Menetelmä perustuu niin sanottuun contention side channel -hyökkäykseen eli sivukanavaan, jossa päätelmiä tehdään useiden prosessien kilpaillessa samasta resurssista. Tässä tapauksessa tarkkailun kohteena ovat SSD-levyn I/O-toimintojen ajoitukset.\n\nAjatus ei ole, että sivusto lukisi suoraan muiden välilehtien tai sovellusten sisältöä. Sen sijaan se mittaa, kuinka kauan tietyt tallennusoperaatiot kestävät, ja etsii näistä mittauksista malleja. Tutkijoiden mukaan tällainen ajoitustieto voi riittää päättelemään, mitä sivustoja on auki muissa välilehdissä, jopa toisissa selaimissa, sekä mitä sovelluksia laitteella on käynnissä.\n\nMenetelmä ei vaadi käyttäjältä muuta toimintaa kuin hyökkäävän sivun avaamisen. Tämä tekee havainnosta huolestuttavan yksityisyyden kannalta, koska hyökkäys voi tapahtua tavallisen verkkosivun yhteydessä ilman erillistä lupapyyntöä tai näkyvää varoitusta.\n\n## Selainten uudet ominaisuudet kasvattavat hyökkäyspintaa\n\nTutkimuksessa FROSTin kuvataan toimivan kokonaan selaimessa. Se käyttää JavaScriptiä ja selainten OPFS-ominaisuutta, eli Origin Private File System -tallennustilaa. OPFS on sivustokohtainen tallennusalue, jonka avulla verkkosovellukset voivat suorittaa tehtäviä tehokkaammin selaimen sisällä.\n\nTaustalla on laajempi muutos: selaimet eivät ole enää vain dokumenttien katseluohjelmia, vaan niissä ajetaan yhä raskaampia sovelluksia. Toimisto-ohjelmat, kuva- ja videoeditorit sekä kehitysympäristöt voivat toimia kokonaan verkkoselaimessa. Samalla selaimen käytettävissä olevat paikalliset resurssit ovat monipuolistuneet.\n\nTutkijoiden mukaan tämä kehitys laajentaa selaimen hyökkäyspintaa. FROST on esimerkki siitä, miten hyödylliseksi tarkoitettu selainominaisuus voi muodostaa uuden yksityisyysriskin, kun sitä yhdistetään tarkkoihin ajoitusmittauksiin. Kyse on tutkimuksessa esitetystä tekniikasta, ei todisteesta laajasta aktiivisesta hyväksikäytöstä, mutta havainto korostaa tarvetta arvioida selainten tallennusrajapintojen sivuvaikutuksia entistä tarkemmin.",
+    "category": "Teknologia",
+    "tags": [
+      "tietoturva",
+      "yksityisyys",
+      "selaimet",
+      "SSD",
+      "verkkoseuranta"
+    ],
+    "summary_bullets": [
+      "FROST mittaa selaimessa SSD-levyn tallennusoperaatioiden ajoituksia.",
+      "Tutkijoiden mukaan tekniikka voi paljastaa avoimia sivustoja ja käynnissä olevia sovelluksia.",
+      "Menetelmä toimii ilman käyttäjän lisätoimia, jos tämä avaa hyökkäystä isännöivän sivun."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.91,
+    "journalist_note": "Artikkeli perustuu annettuun tutkimusta kuvaavaan lähdepakettiin; aktiivisesta laajamittaisesta hyväksikäytöstä ei paketissa esitetty näyttöä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T213117Z_329c0acaeb\",\"title\":\"Tutkijat kuvasivat uuden tavan seurata verkkokävijöitä SSD-levyn ajoitusten avulla\",\"summary\":\"FROST-niminen menetelmä hyödyntää selaimen ja SSD-tallennuksen ajoituksia ja voi paljastaa, mitä sivuja ja sovelluksia käyttäjällä on auki.\",\"content\":\"Tutkijat ovat kuvanneet uuden verkkoselaimessa toimivan seurantamenetelmän, joka mittaa käyttäjän SSD-levyyn liittyviä hienovaraisia ajoituseroja. FROSTiksi nimetty tekniikka voi tutkimuksen mukaan auttaa päättelemään, mitä muita verkkosivuja käyttäjällä on avoinna ja mitä sovelluksia laitteella on käynnissä, kun käyttäjä avaa hyökkäystä isännöivän sivuston.\\n\\n## Sivukanava syntyy jaetusta resurssista\\n\\nFROST tulee sanoista fingerprinting remotely using OPFS-based SSD timing. Menetelmä perustuu niin sanottuun contention side channel -hyökkäykseen eli sivukanavaan, jossa päätelmiä tehdään useiden prosessien kilpaillessa samasta resurssista. Tässä tapauksessa tarkkailun kohteena ovat SSD-levyn I/O-toimintojen ajoitukset.\\n\\nAjatus ei ole, että sivusto lukisi suoraan muiden välilehtien tai sovellusten sisältöä. Sen sijaan se mittaa, kuinka kauan tietyt tallennusoperaatiot kestävät, ja etsii näistä mittauksista malleja. Tutkijoiden mukaan tällainen ajoitustieto voi riittää päättelemään, mitä sivustoja on auki muissa välilehdissä, jopa toisissa selaimissa, sekä mitä sovelluksia laitteella on käynnissä.\\n\\nMenetelmä ei vaadi käyttäjältä muuta toimintaa kuin hyökkäävän sivun avaamisen. Tämä tekee havainnosta huolestuttavan yksityisyyden kannalta, koska hyökkäys voi tapahtua tavallisen verkkosivun yhteydessä ilman erillistä lupapyyntöä tai näkyvää varoitusta.\\n\\n## Selainten uudet ominaisuudet kasvattavat hyökkäyspintaa\\n\\nTutkimuksessa FROSTin kuvataan toimivan kokonaan selaimessa. Se käyttää JavaScriptiä ja selainten OPFS-ominaisuutta, eli Origin Private File System -tallennustilaa. OPFS on sivustokohtainen tallennusalue, jonka avulla verkkosovellukset voivat suorittaa tehtäviä tehokkaammin selaimen sisällä.\\n\\nTaustalla on laajempi muutos: selaimet eivät ole enää vain dokumenttien katseluohjelmia, vaan niissä ajetaan yhä raskaampia sovelluksia. Toimisto-ohjelmat, kuva- ja videoeditorit sekä kehitysympäristöt voivat toimia kokonaan verkkoselaimessa. Samalla selaimen käytettävissä olevat paikalliset resurssit ovat monipuolistuneet.\\n\\nTutkijoiden mukaan tämä kehitys laajentaa selaimen hyökkäyspintaa. FROST on esimerkki siitä, miten hyödylliseksi tarkoitettu selainominaisuus voi muodostaa uuden yksityisyysriskin, kun sitä yhdistetään tarkkoihin ajoitusmittauksiin. Kyse on tutkimuksessa esitetystä tekniikasta, ei todisteesta laajasta aktiivisesta hyväksikäytöstä, mutta havainto korostaa tarvetta arvioida selainten tallennusrajapintojen sivuvaikutuksia entistä tarkemmin.\",\"category\":\"Teknologia\",\"tags\":[\"tietoturva\",\"yksityisyys\",\"selaimet\",\"SSD\",\"verkkoseuranta\"],\"summary_bullets\":[\"FROST mittaa selaimessa SSD-levyn tallennusoperaatioiden ajoituksia.\",\"Tutkijoiden mukaan tekniikka voi paljastaa avoimia sivustoja ja käynnissä olevia sovelluksia.\",\"Menetelmä toimii ilman käyttäjän lisätoimia, jos tämä avaa hyökkäystä isännöivän sivun.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.91,\"journalist_note\":\"Artikkeli perustuu annettuun tutkimusta kuvaavaan lähdepakettiin; aktiivisesta laajamittaisesta hyväksikäytöstä ei paketissa esitetty näyttöä.\"}",
+  "article": {
+    "title": "Tutkijat kuvasivat uuden tavan seurata verkkokävijöitä SSD-levyn ajoitusten avulla",
+    "description": "FROST-niminen menetelmä hyödyntää selaimen ja SSD-tallennuksen ajoituksia ja voi paljastaa, mitä sivuja ja sovelluksia käyttäjällä on auki.",
+    "link": "https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/",
+    "published": "2026-05-27T20:56:03+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "be92d949fd901c6930e54b0b75d752d1",
+    "_url_hash": "62cac8a9aa41fd53761607c18df9771f3353c36977281ed00c5bd86752e75ac7",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nOver the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories, device fingerprints, and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all.\n\nNow sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices.\n\nThe technique, laid out in a research paper, exploits a side channel, a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data.\n\nThe attack that FROST uses is known as a contention side channel, which measures the interaction of various processes all using (or competing for) a given resource. By measuring the timing of certain I/O (input-output) operations of the SSD a visitor is using, the researchers were able to determine the websites open in other tabs—even on other browsers—and the apps that were open on the visitor’s device. FROST requires no interaction from the visitor other than opening the site hosting the attack.\n\n“Web browsers have evolved from simple document viewers into complex platforms capable of running sophisticated applications,” the paper authors wrote. “Companies like Google, Microsoft, and Adobe have developed full-fledged office suites, photo- and video editors, or even integrated development environments (IDEs) that run entirely within the browser.” The authors went on to note: “While these features enhance the capabilities of web applications and allow completely novel use cases, they also increase the browser’s attack surface, and some have already been shown to introduce new vulnerabilities.”\n\nUnlike previous contention side-channel attacks on SSDs, FROST runs exclusively in the browser. It uses JavaScript that interacts with the OPFS (origin private file system), an allocated storage space that’s reserved for a specific site to run code needed to complete a given task. Websites can create one with no interaction required by the visitor.\n\nWhile each file system is sandboxed, meaning it’s isolated from other websites and from the device system itself, the JavaScript ca",
+    "research_source": "multi",
+    "summary": "FROST-niminen menetelmä hyödyntää selaimen ja SSD-tallennuksen ajoituksia ja voi paljastaa, mitä sivuja ja sovelluksia käyttäjällä on auki.",
+    "content": "Tutkijat ovat kuvanneet uuden verkkoselaimessa toimivan seurantamenetelmän, joka mittaa käyttäjän SSD-levyyn liittyviä hienovaraisia ajoituseroja. FROSTiksi nimetty tekniikka voi tutkimuksen mukaan auttaa päättelemään, mitä muita verkkosivuja käyttäjällä on avoinna ja mitä sovelluksia laitteella on käynnissä, kun käyttäjä avaa hyökkäystä isännöivän sivuston.\n\n## Sivukanava syntyy jaetusta resurssista\n\nFROST tulee sanoista fingerprinting remotely using OPFS-based SSD timing. Menetelmä perustuu niin sanottuun contention side channel -hyökkäykseen eli sivukanavaan, jossa päätelmiä tehdään useiden prosessien kilpaillessa samasta resurssista. Tässä tapauksessa tarkkailun kohteena ovat SSD-levyn I/O-toimintojen ajoitukset.\n\nAjatus ei ole, että sivusto lukisi suoraan muiden välilehtien tai sovellusten sisältöä. Sen sijaan se mittaa, kuinka kauan tietyt tallennusoperaatiot kestävät, ja etsii näistä mittauksista malleja. Tutkijoiden mukaan tällainen ajoitustieto voi riittää päättelemään, mitä sivustoja on auki muissa välilehdissä, jopa toisissa selaimissa, sekä mitä sovelluksia laitteella on käynnissä.\n\nMenetelmä ei vaadi käyttäjältä muuta toimintaa kuin hyökkäävän sivun avaamisen. Tämä tekee havainnosta huolestuttavan yksityisyyden kannalta, koska hyökkäys voi tapahtua tavallisen verkkosivun yhteydessä ilman erillistä lupapyyntöä tai näkyvää varoitusta.\n\n## Selainten uudet ominaisuudet kasvattavat hyökkäyspintaa\n\nTutkimuksessa FROSTin kuvataan toimivan kokonaan selaimessa. Se käyttää JavaScriptiä ja selainten OPFS-ominaisuutta, eli Origin Private File System -tallennustilaa. OPFS on sivustokohtainen tallennusalue, jonka avulla verkkosovellukset voivat suorittaa tehtäviä tehokkaammin selaimen sisällä.\n\nTaustalla on laajempi muutos: selaimet eivät ole enää vain dokumenttien katseluohjelmia, vaan niissä ajetaan yhä raskaampia sovelluksia. Toimisto-ohjelmat, kuva- ja videoeditorit sekä kehitysympäristöt voivat toimia kokonaan verkkoselaimessa. Samalla selaimen käytettävissä olevat paikalliset resurssit ovat monipuolistuneet.\n\nTutkijoiden mukaan tämä kehitys laajentaa selaimen hyökkäyspintaa. FROST on esimerkki siitä, miten hyödylliseksi tarkoitettu selainominaisuus voi muodostaa uuden yksityisyysriskin, kun sitä yhdistetään tarkkoihin ajoitusmittauksiin. Kyse on tutkimuksessa esitetystä tekniikasta, ei todisteesta laajasta aktiivisesta hyväksikäytöstä, mutta havainto korostaa tarvetta arvioida selainten tallennusrajapintojen sivuvaikutuksia entistä tarkemmin.",
+    "category": "Teknologia",
+    "tags": [
+      "tietoturva",
+      "yksityisyys",
+      "selaimet",
+      "ssd",
+      "verkkoseuranta"
+    ],
+    "summary_bullets": [
+      "FROST mittaa selaimessa SSD-levyn tallennusoperaatioiden ajoituksia.",
+      "Tutkijoiden mukaan tekniikka voi paljastaa avoimia sivustoja ja käynnissä olevia sovelluksia.",
+      "Menetelmä toimii ilman käyttäjän lisätoimia, jos tämä avaa hyökkäystä isännöivän sivun."
+    ],
+    "key_points": [
+      "FROST mittaa selaimessa SSD-levyn tallennusoperaatioiden ajoituksia.",
+      "Tutkijoiden mukaan tekniikka voi paljastaa avoimia sivustoja ja käynnissä olevia sovelluksia.",
+      "Menetelmä toimii ilman käyttäjän lisätoimia, jos tämä avaa hyökkäystä isännöivän sivun."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun tutkimusta kuvaavaan lähdepakettiin; aktiivisesta laajamittaisesta hyväksikäytöstä ei paketissa esitetty näyttöä.",
+    "source_text": "Over the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories , device fingerprints , and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all . Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. A side channel based on contention The technique, laid out in a research paper , exploits a side channel , a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data. Read full article Comments\n\nOver the decades, there has been no shortage of sites using clever techniques to covertly track visitors’ browsing histories, device fingerprints, and log keystrokes and mouse movements in real time. Even Meta and Yandex were recently caught joining in the privacy-invasive free-for-all. Now sites have a new way to spy on their visitors: measuring subtle interactions with their solid-state drives. The technique, named FROST (fingerprinting remotely using OPFS-based SSD timing), allows sites to monitor other sites a visitor is viewing and what apps are open on their devices. The technique, laid out in a research paper, exploits a side channel, a form of leak resulting from physical manifestations such as electromagnetic emanations, data caches, or the time required to complete a task. By measuring the manifestations, attackers can decrypt encrypted traffic and infer other confidential data.\n\nThe attack that FROST uses is known as a contention side channel, which measures the interaction of various processes all using (or competing for) a given resource. By measuring the timing of certain I/O (input-output) operations of the SSD a visitor is using, the researchers were able to determine the websites open in other tabs—even on other browsers—and the apps that were open on the visitor’s device. FROST requires no interaction from the visitor other than opening the site hosting the attack.\n\n“Web browsers have evolved from simple document viewers into complex platforms capable of running sophisticated applications,” the paper authors wrote. “Companies like Google, Microsoft, and Adobe have developed full-fledged office suites, photo- and video editors, or even integrated development environments (IDEs) that run entirely within the browser.” The authors went on to note: “While these features enhance the capabilities of web applications and allow completely novel use cases, they also increase the browser’s attack surface, and some have already been shown to introduce new vulnerabilities.” Unlike previous contention side-channel attacks on SSDs, FROST runs exclusively in the browser. It uses JavaScript that interacts with the OPFS (origin private file system), an allocated storage space that’s reserved for a specific site to run code needed to complete a given task. Websites can create one with no interaction required by the visitor.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.91,
+    "degraded_mode": false,
+    "monica_packet_id": "20260527T213117Z_329c0acaeb",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMHRlY2hub2xvZ3klMjByZXNlYXJjaHxlbnwxfDB8fHwxNzc5OTE3ODgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMHRlY2hub2xvZ3klMjByZXNlYXJjaHxlbnwxfDB8fHwxNzc5OTE3ODgzfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Tutkijat kuvasivat uuden tavan seurata verkkokävijöitä SSD-levyn ajoitusten avulla",
+    "image_credit": "Photo by Alexandre Debiève on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/macro-photography-of-black-circuit-board-FO7JIlwjOtU?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-27T21:38:05.616248+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMHRlY2hub2xvZ3klMjByZXNlYXJjaHxlbnwxfDB8fHwxNzc5OTE3ODgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMHRlY2hub2xvZ3klMjByZXNlYXJjaHxlbnwxfDB8fHwxNzc5OTE3ODgzfDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-27T21:38:58.315752+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-27-tutkijat-kuvasivat-uuden-tavan-seurata-verkkokavijoita-ssd-l.md"
+  ]
+}
