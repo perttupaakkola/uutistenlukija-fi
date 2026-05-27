@@ -1,0 +1,209 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T02:01:20.468313+00:00",
+  "digest": "f70a9b551f",
+  "packet": {
+    "packet_id": "20260527T020120Z_f70a9b551f",
+    "created_at": "2026-05-27T02:01:20Z",
+    "headline_seed": "Hundreds of children die within months as measles cases soar in Bangladesh",
+    "description_seed": "The country has recorded more than 60,000 suspected cases of measles in just over two months.",
+    "link": "https://www.bbc.com/news/articles/cwy2d5d7wn5o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cwy2d5d7wn5o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hundreds of children die within months as measles cases soar in Bangladesh"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The country has recorded more than 60,000 suspected cases of measles in just over two months.",
+        "word_count": 16,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "In just over two months, the number of suspected cases of measles have reached over sixty thousand in Bangladesh, according to the health ministry. The exact number has not been confirmed, as many are waiting for results from the laboratory. Highly contagious, measles spreads quickly through coughs and sneezes and is particularly dangerous for unvaccinated young children under the age of 5. There are multiple reports of parents struggling to find space for their sick children in Bangladesh's hospitals. UNICEF told the BBC that during field visits the hospitals they went to were overwhel",
+        "word_count": 94,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "On 8th March Al Amin took Akira to hospital, suffering with what he thought was a normal fever. She improved, went home, then started developing a rash, a high fever and sores in her mouth. She was discharged and readmitted to hospital a total of five times, Al Amin says; only on the fifth occasion did a doctor tell him she was suffering from measles. Akira was put on life support. She died 27 days after she was first admitted. Over 500 children with suspected and confirmed cases of measles have died in Bangladesh since March, according to the country's health ministry.",
+        "word_count": 102,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Akira was always a fast learner, her father Al Amin says with pride. At 6 months she was already saying her first words. At just over 4 years old, she had started to say some words in English. \"She was never short of love from both families. She was the crown of all.\" Al Amin, who lives with with his family in the Bangladeshi capital of Dhaka, says his daughter had all her vaccines, apart from measles. They took her four times to get it; twice she was turned away because she had a cold. \"Don't stress,\" he says the health care worker told them, \"the vaccine can be administered up until she reaches 5.\" The third and fourth time, he says, they were told the vaccine was unavailable.",
+        "word_count": 129,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "The country has recorded more than 60,000 suspected cases of measles in just over two months.\n\nIn just over two months, the number of suspected cases of measles have reached over sixty thousand in Bangladesh, according to the health ministry. The exact number has not been confirmed, as many are waiting for results from the laboratory. Highly contagious, measles spreads quickly through coughs and sneezes and is particularly dangerous for unvaccinated young children under the age of 5. There are multiple reports of parents struggling to find space for their sick children in Bangladesh's hospitals. UNICEF told the BBC that during field visits the hospitals they went to were overwhel\n\nOn 8th March Al Amin took Akira to hospital, suffering with what he thought was a normal fever. She improved, went home, then started developing a rash, a high fever and sores in her mouth. She was discharged and readmitted to hospital a total of five times, Al Amin says; only on the fifth occasion did a doctor tell him she was suffering from measles. Akira was put on life support. She died 27 days after she was first admitted. Over 500 children with suspected and confirmed cases of measles have died in Bangladesh since March, according to the country's health ministry.\n\nAkira was always a fast learner, her father Al Amin says with pride. At 6 months she was already saying her first words. At just over 4 years old, she had started to say some words in English. \"She was never short of love from both families. She was the crown of all.\" Al Amin, who lives with with his family in the Bangladeshi capital of Dhaka, says his daughter had all her vaccines, apart from measles. They took her four times to get it; twice she was turned away because she had a cold. \"Don't stress,\" he says the health care worker told them, \"the vaccine can be administered up until she reaches 5.\" The third and fourth time, he says, they were told the vaccine was unavailable.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 449,
+      "selected_blocks": 4,
+      "selected_source_words": 341,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hundreds of children die within months as measles cases soar in Bangladesh",
+      "description": "The country has recorded more than 60,000 suspected cases of measles in just over two months.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Hundreds of children die within months as measles cases soar in Bangladesh",
+    "description": "The country has recorded more than 60,000 suspected cases of measles in just over two months.",
+    "link": "https://www.bbc.com/news/articles/cwy2d5d7wn5o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-27T01:34:42+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "81176a4ba353429f8d24a86fe55518e6",
+    "_url_hash": "ee9967607e90d02c98b4014b99af6713711302e336840e9bfb726d801086033c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAkira was always a fast learner, her father Al Amin says with pride.\n\nAt 6 months she was already saying her first words. At just over 4 years old, she had started to say some words in English.\n\n\"She was never short of love from both families. She was the crown of all.\"\n\nAl Amin, who lives with with his family in the Bangladeshi capital of Dhaka, says his daughter had all her vaccines, apart from measles.\n\nThey took her four times to get it; twice she was turned away because she had a cold. \"Don't stress,\" he says the health care worker told them, \"the vaccine can be administered up until she reaches 5.\" The third and fourth time, he says, they were told the vaccine was unavailable.\n\nOn 8th March Al Amin took Akira to hospital, suffering with what he thought was a normal fever. She improved, went home, then started developing a rash, a high fever and sores in her mouth. She was discharged and readmitted to hospital a total of five times, Al Amin says; only on the fifth occasion did a doctor tell him she was suffering from measles.\n\nAkira was put on life support. She died 27 days after she was first admitted.\n\nOver 500 children with suspected and confirmed cases of measles have died in Bangladesh since March, according to the country's health ministry.\n\nThe health minister said last week that doctors and nurses treating those with the virus have had their Eid holiday leave cancelled and the government has been running a mass vaccination campaign to slow the spread and save lives.\n\nAl Amin says he and his wife still torture themselves, thinking that their daughter may have picked up the virus in the hospital.\n\n\"From the ticket counter line to the x-ray room, there was a measles patient everywhere,\" he says.\n\nHe is angry; that his child couldn't get a vaccine, that her symptoms were missed, that he feels the hospitals failed to keep patients with measles apart from others.\n\nIn just over two months, the number of suspected cases of measles have reached over sixty thousand in Bangladesh, according to the health ministry. The exact number has not been confirmed, as many are waiting for results from the laboratory.\n\nHighly contagious, measles spreads quickly through coughs and sneezes and is particularly dangerous for unvaccinated young children under the age of 5.\n\nThere are multiple reports of parents struggling to find space for their sick children in Bangladesh's hospitals.\n\nUNICEF told the BBC that during field visits the hospitals they went to were overwhel",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-27T02:03:55.801798+00:00",
+  "payload": {
+    "packet_id": "20260527T020120Z_f70a9b551f",
+    "title": "Tuhkarokkoepidemia on vaatinut yli 500 lapsen hengen Bangladeshissa",
+    "summary": "Bangladeshissa on kirjattu yli 60 000 epäiltyä tuhkarokkotapausta hieman yli kahdessa kuukaudessa. Maan terveysministeriön mukaan yli 500 lasta on kuollut epäiltyihin ja vahvistettuihin tapauksiin maaliskuusta lähtien.",
+    "content": "Bangladeshissa nopeasti levinnyt tuhkarokkoepidemia on johtanut yli 500 lapsen kuolemaan maaliskuusta lähtien, maan terveysministeriön tietojen mukaan. Epäiltyjä tartuntoja on kirjattu hieman yli kahden kuukauden aikana yli 60 000, mutta tarkka määrä ei ole vielä varmistunut, koska osa laboratoriotuloksista on edelleen kesken.\n\n## Tautitapaukset kuormittavat sairaaloita\n\nTuhkarokko leviää herkästi yskimisen ja aivastamisen välityksellä. Se on erityisen vaarallinen rokottamattomille pienille lapsille, etenkin alle viisivuotiaille. Bangladeshista on raportoitu tilanteista, joissa vanhemmat ovat joutuneet etsimään tilaa sairastuneille lapsilleen jo ennestään täysistä sairaaloista.\n\nUnicefin mukaan sen kenttäkäynneillä näkemät sairaalat olivat pahoin kuormittuneita. Tämä lisää huolta siitä, pystytäänkö sairastuneet lapset tunnistamaan ja hoitamaan ajoissa, kun tartuntojen määrä kasvaa nopeasti.\n\n## Yhden perheen tarina kuvaa viiveitä hoidossa\n\nDhakassa asuva Al Amin vei nelivuotiaan tyttärensä Akiran sairaalaan 8. maaliskuuta, kun tämä sairastui kuumeeseen. Aluksi kyse näytti tavalliselta kuumeelta, ja lapsi pääsi kotiin. Pian hänelle kuitenkin nousi ihottuma ja korkea kuume, ja suuhun ilmaantui haavaumia.\n\nIsän kertoman mukaan Akira kotiutettiin ja otettiin uudelleen sairaalaan yhteensä viisi kertaa. Vasta viidennellä kerralla lääkäri sanoi, että kyse oli tuhkarokosta. Lapsi joutui hengitystä tukevaan hoitoon ja kuoli 27 päivää ensimmäisen sairaalakäynnin jälkeen.\n\nAl Aminin mukaan Akira oli saanut muut rokotuksensa, mutta ei tuhkarokkorokotetta. Perhe oli yrittänyt saada rokotteen neljä kertaa: kahdesti lasta ei rokotettu flunssan vuoksi, ja kahdella myöhemmällä kerralla perheelle kerrottiin, ettei rokotetta ollut saatavilla.\n\n## Rokotuskattavuus ratkaisee epidemian suunnan\n\nTuhkarokko on ehkäistävissä rokotuksella, mutta se voi levitä nopeasti yhteisöissä, joissa rokotussuoja jää puutteelliseksi. Bangladeshissa viranomaislukujen ja sairaaloista kerrottujen havaintojen perusteella epidemia on jo aiheuttanut vakavan lasten terveyttä koskevan kriisin.\n\nTällä hetkellä keskeinen epävarmuus liittyy tapausmäärien lopulliseen vahvistamiseen. Jo raportoidut luvut kertovat kuitenkin laajasta tartunta-aallosta, jonka vakavimmat seuraukset kohdistuvat lapsiin.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Bangladesh",
+      "tuhkarokko",
+      "lapset",
+      "terveys",
+      "rokotukset"
+    ],
+    "summary_bullets": [
+      "Bangladeshissa on kirjattu yli 60 000 epäiltyä tuhkarokkotapausta hieman yli kahdessa kuukaudessa.",
+      "Maan terveysministeriön mukaan yli 500 lasta on kuollut epäiltyihin ja vahvistettuihin tapauksiin maaliskuusta lähtien.",
+      "Tuhkarokko on erityisen vaarallinen rokottamattomille alle viisivuotiaille lapsille."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Perustuu toimitettuun lähdepakettiin. Tapausmäärien lopullinen tarkkuus on epävarma, koska osa laboratoriotuloksista on vielä kesken."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T020120Z_f70a9b551f\",\"title\":\"Tuhkarokkoepidemia on vaatinut yli 500 lapsen hengen Bangladeshissa\",\"summary\":\"Bangladeshissa on kirjattu yli 60 000 epäiltyä tuhkarokkotapausta hieman yli kahdessa kuukaudessa. Maan terveysministeriön mukaan yli 500 lasta on kuollut epäiltyihin ja vahvistettuihin tapauksiin maaliskuusta lähtien.\",\"content\":\"Bangladeshissa nopeasti levinnyt tuhkarokkoepidemia on johtanut yli 500 lapsen kuolemaan maaliskuusta lähtien, maan terveysministeriön tietojen mukaan. Epäiltyjä tartuntoja on kirjattu hieman yli kahden kuukauden aikana yli 60 000, mutta tarkka määrä ei ole vielä varmistunut, koska osa laboratoriotuloksista on edelleen kesken.\\n\\n## Tautitapaukset kuormittavat sairaaloita\\n\\nTuhkarokko leviää herkästi yskimisen ja aivastamisen välityksellä. Se on erityisen vaarallinen rokottamattomille pienille lapsille, etenkin alle viisivuotiaille. Bangladeshista on raportoitu tilanteista, joissa vanhemmat ovat joutuneet etsimään tilaa sairastuneille lapsilleen jo ennestään täysistä sairaaloista.\\n\\nUnicefin mukaan sen kenttäkäynneillä näkemät sairaalat olivat pahoin kuormittuneita. Tämä lisää huolta siitä, pystytäänkö sairastuneet lapset tunnistamaan ja hoitamaan ajoissa, kun tartuntojen määrä kasvaa nopeasti.\\n\\n## Yhden perheen tarina kuvaa viiveitä hoidossa\\n\\nDhakassa asuva Al Amin vei nelivuotiaan tyttärensä Akiran sairaalaan 8. maaliskuuta, kun tämä sairastui kuumeeseen. Aluksi kyse näytti tavalliselta kuumeelta, ja lapsi pääsi kotiin. Pian hänelle kuitenkin nousi ihottuma ja korkea kuume, ja suuhun ilmaantui haavaumia.\\n\\nIsän kertoman mukaan Akira kotiutettiin ja otettiin uudelleen sairaalaan yhteensä viisi kertaa. Vasta viidennellä kerralla lääkäri sanoi, että kyse oli tuhkarokosta. Lapsi joutui hengitystä tukevaan hoitoon ja kuoli 27 päivää ensimmäisen sairaalakäynnin jälkeen.\\n\\nAl Aminin mukaan Akira oli saanut muut rokotuksensa, mutta ei tuhkarokkorokotetta. Perhe oli yrittänyt saada rokotteen neljä kertaa: kahdesti lasta ei rokotettu flunssan vuoksi, ja kahdella myöhemmällä kerralla perheelle kerrottiin, ettei rokotetta ollut saatavilla.\\n\\n## Rokotuskattavuus ratkaisee epidemian suunnan\\n\\nTuhkarokko on ehkäistävissä rokotuksella, mutta se voi levitä nopeasti yhteisöissä, joissa rokotussuoja jää puutteelliseksi. Bangladeshissa viranomaislukujen ja sairaaloista kerrottujen havaintojen perusteella epidemia on jo aiheuttanut vakavan lasten terveyttä koskevan kriisin.\\n\\nTällä hetkellä keskeinen epävarmuus liittyy tapausmäärien lopulliseen vahvistamiseen. Jo raportoidut luvut kertovat kuitenkin laajasta tartunta-aallosta, jonka vakavimmat seuraukset kohdistuvat lapsiin.\",\"category\":\"Ulkomaat\",\"tags\":[\"Bangladesh\",\"tuhkarokko\",\"lapset\",\"terveys\",\"rokotukset\"],\"summary_bullets\":[\"Bangladeshissa on kirjattu yli 60 000 epäiltyä tuhkarokkotapausta hieman yli kahdessa kuukaudessa.\",\"Maan terveysministeriön mukaan yli 500 lasta on kuollut epäiltyihin ja vahvistettuihin tapauksiin maaliskuusta lähtien.\",\"Tuhkarokko on erityisen vaarallinen rokottamattomille alle viisivuotiaille lapsille.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"Perustuu toimitettuun lähdepakettiin. Tapausmäärien lopullinen tarkkuus on epävarma, koska osa laboratoriotuloksista on vielä kesken.\"}",
+  "article": {
+    "title": "Tuhkarokkoepidemia on vaatinut yli 500 lapsen hengen Bangladeshissa",
+    "description": "Bangladeshissa on kirjattu yli 60 000 epäiltyä tuhkarokkotapausta hieman yli kahdessa kuukaudessa. Maan terveysministeriön mukaan yli 500 lasta on kuollut epäiltyihin ja vahvistettuihin tapauksiin maaliskuusta lähtien.",
+    "link": "https://www.bbc.com/news/articles/cwy2d5d7wn5o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-27T01:34:42+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "81176a4ba353429f8d24a86fe55518e6",
+    "_url_hash": "ee9967607e90d02c98b4014b99af6713711302e336840e9bfb726d801086033c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAkira was always a fast learner, her father Al Amin says with pride.\n\nAt 6 months she was already saying her first words. At just over 4 years old, she had started to say some words in English.\n\n\"She was never short of love from both families. She was the crown of all.\"\n\nAl Amin, who lives with with his family in the Bangladeshi capital of Dhaka, says his daughter had all her vaccines, apart from measles.\n\nThey took her four times to get it; twice she was turned away because she had a cold. \"Don't stress,\" he says the health care worker told them, \"the vaccine can be administered up until she reaches 5.\" The third and fourth time, he says, they were told the vaccine was unavailable.\n\nOn 8th March Al Amin took Akira to hospital, suffering with what he thought was a normal fever. She improved, went home, then started developing a rash, a high fever and sores in her mouth. She was discharged and readmitted to hospital a total of five times, Al Amin says; only on the fifth occasion did a doctor tell him she was suffering from measles.\n\nAkira was put on life support. She died 27 days after she was first admitted.\n\nOver 500 children with suspected and confirmed cases of measles have died in Bangladesh since March, according to the country's health ministry.\n\nThe health minister said last week that doctors and nurses treating those with the virus have had their Eid holiday leave cancelled and the government has been running a mass vaccination campaign to slow the spread and save lives.\n\nAl Amin says he and his wife still torture themselves, thinking that their daughter may have picked up the virus in the hospital.\n\n\"From the ticket counter line to the x-ray room, there was a measles patient everywhere,\" he says.\n\nHe is angry; that his child couldn't get a vaccine, that her symptoms were missed, that he feels the hospitals failed to keep patients with measles apart from others.\n\nIn just over two months, the number of suspected cases of measles have reached over sixty thousand in Bangladesh, according to the health ministry. The exact number has not been confirmed, as many are waiting for results from the laboratory.\n\nHighly contagious, measles spreads quickly through coughs and sneezes and is particularly dangerous for unvaccinated young children under the age of 5.\n\nThere are multiple reports of parents struggling to find space for their sick children in Bangladesh's hospitals.\n\nUNICEF told the BBC that during field visits the hospitals they went to were overwhel",
+    "research_source": "multi",
+    "summary": "Bangladeshissa on kirjattu yli 60 000 epäiltyä tuhkarokkotapausta hieman yli kahdessa kuukaudessa. Maan terveysministeriön mukaan yli 500 lasta on kuollut epäiltyihin ja vahvistettuihin tapauksiin maaliskuusta lähtien.",
+    "content": "Bangladeshissa nopeasti levinnyt tuhkarokkoepidemia on johtanut yli 500 lapsen kuolemaan maaliskuusta lähtien, maan terveysministeriön tietojen mukaan. Epäiltyjä tartuntoja on kirjattu hieman yli kahden kuukauden aikana yli 60 000, mutta tarkka määrä ei ole vielä varmistunut, koska osa laboratoriotuloksista on edelleen kesken.\n\n## Tautitapaukset kuormittavat sairaaloita\n\nTuhkarokko leviää herkästi yskimisen ja aivastamisen välityksellä. Se on erityisen vaarallinen rokottamattomille pienille lapsille, etenkin alle viisivuotiaille. Bangladeshista on raportoitu tilanteista, joissa vanhemmat ovat joutuneet etsimään tilaa sairastuneille lapsilleen jo ennestään täysistä sairaaloista.\n\nUnicefin mukaan sen kenttäkäynneillä näkemät sairaalat olivat pahoin kuormittuneita. Tämä lisää huolta siitä, pystytäänkö sairastuneet lapset tunnistamaan ja hoitamaan ajoissa, kun tartuntojen määrä kasvaa nopeasti.\n\n## Yhden perheen tarina kuvaa viiveitä hoidossa\n\nDhakassa asuva Al Amin vei nelivuotiaan tyttärensä Akiran sairaalaan 8. maaliskuuta, kun tämä sairastui kuumeeseen. Aluksi kyse näytti tavalliselta kuumeelta, ja lapsi pääsi kotiin. Pian hänelle kuitenkin nousi ihottuma ja korkea kuume, ja suuhun ilmaantui haavaumia.\n\nIsän kertoman mukaan Akira kotiutettiin ja otettiin uudelleen sairaalaan yhteensä viisi kertaa. Vasta viidennellä kerralla lääkäri sanoi, että kyse oli tuhkarokosta. Lapsi joutui hengitystä tukevaan hoitoon ja kuoli 27 päivää ensimmäisen sairaalakäynnin jälkeen.\n\nAl Aminin mukaan Akira oli saanut muut rokotuksensa, mutta ei tuhkarokkorokotetta. Perhe oli yrittänyt saada rokotteen neljä kertaa: kahdesti lasta ei rokotettu flunssan vuoksi, ja kahdella myöhemmällä kerralla perheelle kerrottiin, ettei rokotetta ollut saatavilla.\n\n## Rokotuskattavuus ratkaisee epidemian suunnan\n\nTuhkarokko on ehkäistävissä rokotuksella, mutta se voi levitä nopeasti yhteisöissä, joissa rokotussuoja jää puutteelliseksi. Bangladeshissa viranomaislukujen ja sairaaloista kerrottujen havaintojen perusteella epidemia on jo aiheuttanut vakavan lasten terveyttä koskevan kriisin.\n\nTällä hetkellä keskeinen epävarmuus liittyy tapausmäärien lopulliseen vahvistamiseen. Jo raportoidut luvut kertovat kuitenkin laajasta tartunta-aallosta, jonka vakavimmat seuraukset kohdistuvat lapsiin.",
+    "category": "Kotimaa",
+    "tags": [
+      "bangladesh",
+      "tuhkarokko",
+      "lapset",
+      "terveys",
+      "rokotukset"
+    ],
+    "summary_bullets": [
+      "Bangladeshissa on kirjattu yli 60 000 epäiltyä tuhkarokkotapausta hieman yli kahdessa kuukaudessa.",
+      "Maan terveysministeriön mukaan yli 500 lasta on kuollut epäiltyihin ja vahvistettuihin tapauksiin maaliskuusta lähtien.",
+      "Tuhkarokko on erityisen vaarallinen rokottamattomille alle viisivuotiaille lapsille."
+    ],
+    "key_points": [
+      "Bangladeshissa on kirjattu yli 60 000 epäiltyä tuhkarokkotapausta hieman yli kahdessa kuukaudessa.",
+      "Maan terveysministeriön mukaan yli 500 lasta on kuollut epäiltyihin ja vahvistettuihin tapauksiin maaliskuusta lähtien.",
+      "Tuhkarokko on erityisen vaarallinen rokottamattomille alle viisivuotiaille lapsille."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Perustuu toimitettuun lähdepakettiin. Tapausmäärien lopullinen tarkkuus on epävarma, koska osa laboratoriotuloksista on vielä kesken.",
+    "source_text": "The country has recorded more than 60,000 suspected cases of measles in just over two months.\n\nIn just over two months, the number of suspected cases of measles have reached over sixty thousand in Bangladesh, according to the health ministry. The exact number has not been confirmed, as many are waiting for results from the laboratory. Highly contagious, measles spreads quickly through coughs and sneezes and is particularly dangerous for unvaccinated young children under the age of 5. There are multiple reports of parents struggling to find space for their sick children in Bangladesh's hospitals. UNICEF told the BBC that during field visits the hospitals they went to were overwhel\n\nOn 8th March Al Amin took Akira to hospital, suffering with what he thought was a normal fever. She improved, went home, then started developing a rash, a high fever and sores in her mouth. She was discharged and readmitted to hospital a total of five times, Al Amin says; only on the fifth occasion did a doctor tell him she was suffering from measles. Akira was put on life support. She died 27 days after she was first admitted. Over 500 children with suspected and confirmed cases of measles have died in Bangladesh since March, according to the country's health ministry.\n\nAkira was always a fast learner, her father Al Amin says with pride. At 6 months she was already saying her first words. At just over 4 years old, she had started to say some words in English. \"She was never short of love from both families. She was the crown of all.\" Al Amin, who lives with with his family in the Bangladeshi capital of Dhaka, says his daughter had all her vaccines, apart from measles. They took her four times to get it; twice she was turned away because she had a cold. \"Don't stress,\" he says the health care worker told them, \"the vaccine can be administered up until she reaches 5.\" The third and fourth time, he says, they were told the vaccine was unavailable.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.9,
+    "degraded_mode": false,
+    "monica_packet_id": "20260527T020120Z_f70a9b551f",
+    "image": "/images/articles/tuhkarokkoepidemia-on-vaatinut-yli-500-lapsen-hengen-banglad-hero.jpg",
+    "image_thumb": "/images/articles/tuhkarokkoepidemia-on-vaatinut-yli-500-lapsen-hengen-banglad-thumb.jpg",
+    "image_alt": "Tuhkarokkoepidemia on vaatinut yli 500 lapsen hengen Bangladeshissa",
+    "image_credit": "Photo by Mumtahina Tanni on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/children-sitting-inside-large-diameter-pipes-5471157/",
+    "image_caption": "",
+    "image_category_fallback": false,
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQAG/8QAJhAAAgEDAgQHAAAAAAAAAAAAAQIDAAQREiEFBhNRIjFCYXGBkf/EABUBAQEAAAAAAAAAAAAAAAAAAAAD/8QAGREAAwEBAQAAAAAAAAAAAAAAAAECExEh/9oADAMBAAIRAxEAPwA5eKXtw9xi7LJKNowcED27UzZ8ztDbrG9uZtC4DiUZbyAz8mstar1TnChn8O65A+qfTg0Yg1Kyj1AaB+VF1wupVeC6cy2zDLwzLucYXVkd9qqHeKSFzHBMY0XYKFGKqaMZyf/Z"
+  },
+  "image_enriched_at": "2026-05-27T02:08:06.094375+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/tuhkarokkoepidemia-on-vaatinut-yli-500-lapsen-hengen-banglad-hero.jpg",
+    "image_thumb": "/images/articles/tuhkarokkoepidemia-on-vaatinut-yli-500-lapsen-hengen-banglad-thumb.jpg",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-27T02:08:50.762228+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-27-tuhkarokkoepidemia-on-vaatinut-yli-500-lapsen-hengen-banglad.md"
+  ]
+}
