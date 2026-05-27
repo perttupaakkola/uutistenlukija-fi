@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T02:21:18.903006+00:00",
+  "digest": "50e0f7d7d6",
+  "packet": {
+    "packet_id": "20260527T022118Z_50e0f7d7d6",
+    "created_at": "2026-05-27T02:21:18Z",
+    "headline_seed": "KKV kertoo suomalaisille tutun alan kartellista",
+    "description_seed": "Kartellista kerrotaan lisää kello 12.30.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/kkv-kertoo-suomalaisille-tutun-alan-kartellista/9344544",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/kkv-kertoo-suomalaisille-tutun-alan-kartellista/9344544"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "KKV kertoo suomalaisille tutun alan kartellista"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 122,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "KKV kertoo suomalaisille tutun alan kartellista",
+      "description": "Kartellista kerrotaan lisää kello 12.30.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "KKV kertoo suomalaisille tutun alan kartellista",
+    "description": "Kartellista kerrotaan lisää kello 12.30.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/kkv-kertoo-suomalaisille-tutun-alan-kartellista/9344544",
+    "published": "2026-05-27T02:15:43+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "8805d1fed62b49a5a7fd6f69eefa5b2c",
+    "_url_hash": "407a12bf55afb211af63f1a44b4f7aa0baa643defc1ab5feaad3ca74676ac903",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nKartellin hyöty tulee heti, mutta mahdollinen korvausvastuu vasta vuosien päästä. Kilpailu- ja kuluttajavirasto kertoo keskiviikkona kartellista \"kuluttajille tutulla alalla\".\n\nKartelleja tutkinut Turun yliopiston taloustieteen professori Janne Tukiainen on sitä mieltä, että nykyinen järjestelmä ei riitä kartellien kitkemiseen.\n\n– Pitäisi vakavasti pohtia sitä, että kartelleista seuraisi henkilökohtainen rikosvastuu. Suomessa ei ole tällaista. Siitä, että laitat salaisilla kilpailunrajoituksilla kuluttajat maksamaan liian korkeaa hintaa, pitäisi tulla jopa vankilatuomioita yrityspäättäjille, Tukiainen sanoo.\n\n– Yrityksille saattaa tulla seuraamuksia vasta parinkymmenen vuoden päästä, ja siellä ovat sitten ihan eri ihmiset päättäjinä. Kartellin hyöty yritykselle tulee heti korkeampien hintojen muodossa, mutta mahdolliset haitat maksetaan paljon myöhemmin. Sanktiot eivät kohdistu oikeisiin henkilöihin.\n\nKilpailu- ja kuluttajavirasto (KKV) kertoo keskiviikkona tiedotustilaisuudessa valtakunnallisesta kartellista ”kaikille kuluttajille tutulla alalla”.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-27T02:23:22.078907+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman arvailua.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T022118Z_50e0f7d7d6\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman arvailua.\"}"
+}

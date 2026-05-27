@@ -1,0 +1,90 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T02:41:16.062110+00:00",
+  "digest": "bf47232cd6",
+  "packet": {
+    "packet_id": "20260527T024116Z_bf47232cd6",
+    "created_at": "2026-05-27T02:41:16Z",
+    "headline_seed": "Kielimalleilla on pikkulapsen muisti – Jotkut asiat unohtuvat heti, toisista ei pääse irti millään",
+    "description_seed": "Monet ovat kokeneet tekoälykielimallien ongelmaksi sen, että ne eivät muista asioita, joita on käyty läpi jopa samassa keskustelussa. Kielimalli saattaa vetää johtopäätöksiä asioista, joita sille on kerrottu vuosia sitten, kirjoittaa toimittaja Saku Arjanmaa.",
+    "link": "https://www.tivi.fi/uutiset/a/29655640-dddb-468d-8eb9-8ff3ce515d06",
+    "source": "Tivi",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tivi.fi/uutiset/a/29655640-dddb-468d-8eb9-8ff3ce515d06"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kielimalleilla on pikkulapsen muisti – Jotkut asiat unohtuvat heti, toisista ei pääse irti millään"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Monet ovat kokeneet tekoälykielimallien ongelmaksi sen, että ne eivät muista asioita, joita on käyty läpi jopa samassa keskustelussa. Kielimalli saattaa vetää johtopäätöksiä asioista, joita sille on kerrottu vuosia sitten, kirjoittaa toimittaja Saku Arjanmaa.",
+        "word_count": 33,
+        "keyword_overlap": 27,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Monet ovat kokeneet tekoälykielimallien ongelmaksi sen, että ne eivät muista asioita, joita on käyty läpi jopa samassa keskustelussa. Kielimalli saattaa vetää johtopäätöksiä asioista, joita sille on kerrottu vuosia sitten, kirjoittaa toimittaja Saku Arjanmaa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 66,
+      "selected_blocks": 1,
+      "selected_source_words": 33,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tivi"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kielimalleilla on pikkulapsen muisti – Jotkut asiat unohtuvat heti, toisista ei pääse irti millään",
+      "description": "Monet ovat kokeneet tekoälykielimallien ongelmaksi sen, että ne eivät muista asioita, joita on käyty läpi jopa samassa keskustelussa. Kielimalli saattaa vetää johtopäätöksiä asioista, joita sille on kerrottu vuosia sitten, kirjoittaa toimittaja Saku Arjanmaa.",
+      "category_hint": "",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Kielimalleilla on pikkulapsen muisti – Jotkut asiat unohtuvat heti, toisista ei pääse irti millään",
+    "description": "Monet ovat kokeneet tekoälykielimallien ongelmaksi sen, että ne eivät muista asioita, joita on käyty läpi jopa samassa keskustelussa. Kielimalli saattaa vetää johtopäätöksiä asioista, joita sille on kerrottu vuosia sitten, kirjoittaa toimittaja Saku Arjanmaa.",
+    "link": "https://www.tivi.fi/uutiset/a/29655640-dddb-468d-8eb9-8ff3ce515d06",
+    "published": "2026-05-27T02:30:00+00:00",
+    "source": "Tivi",
+    "source_domain": "tivi.fi",
+    "language": "fi",
+    "fingerprint": "b7604fd07a2b618fe55086bcf88c6810",
+    "_url_hash": "88b551f86f9a9e434a194a4e78767830c5d1c5d27fc001db0096482ad1cfd704",
+    "source_tier": 2,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Monet ovat kokeneet tekoälykielimallien ongelmaksi sen, että ne eivät muista asioita, joita on käyty läpi jopa samassa keskustelussa. Kielimalli saattaa vetää johtopäätöksiä asioista, joita sille on kerrottu vuosia sitten, kirjoittaa toimittaja Saku Arjanmaa.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-27T02:43:22.239861+00:00",
+  "failure": "Lähdeaineisto on liian lyhyt ja niukka vähintään 250 sanan julkaistavan uutisartikkelin kirjoittamiseen ilman täyteaineistoa tai keksittyjä lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260527T024116Z_bf47232cd6\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian lyhyt ja niukka vähintään 250 sanan julkaistavan uutisartikkelin kirjoittamiseen ilman täyteaineistoa tai keksittyjä lisätietoja.\"}"
+}

@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-27T03:11:28.237732+00:00",
+  "digest": "41a83f4df6",
+  "packet": {
+    "packet_id": "20260527T031128Z_41a83f4df6",
+    "created_at": "2026-05-27T03:11:28Z",
+    "headline_seed": "One killed and others missing after chemical explosion at US paper mill",
+    "description_seed": "Nine others were injured and another nine are missing after a tank ruptured at a paper mill in Longview, Washington.",
+    "link": "https://www.bbc.com/news/articles/cj9ppm94xw9o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Yahoo News Canada",
+      "CBS News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cj9ppm94xw9o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "One killed and others missing after chemical explosion at US paper mill"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "At least one person has been killed and nine others are still missing after a major chemical explosion at a paper mill in Washington, authorities said. The explosion occurred at 07:15 PDT (15:15 GMT) at the Nippon Dynawave Packaging facility in Longview, 130 miles (210km) south of Seattle. A further nine people have been injured in the spill, including 8 employees and one firefighter, the Longview Fire Department said Tuesday evening, adding that the tank remains unstable. The explosion occurred due a \"rupture of a tank containing white liquor\", the company said in a statement. White liquor is a highly corrosive chemical used in the paper-making process. \"Recovery efforts remain complex due to ongoing safety concerns at the site,\" the fire department said in an evening update.",
+        "word_count": 127,
+        "keyword_overlap": 13,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Nine others were injured and another nine are missing after a tank ruptured at a paper mill in Longview, Washington.",
+        "word_count": 20,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Yahoo News Canada",
+        "source_type": "research",
+        "text": "At least one person has been killed and nine others are unaccounted for after a chemical tank imploded in the US. The incident happened at a pulp and paper mill in Washington state at 7.15am local time on Tuesday (3.15pm UK time). At least nine other people, including a responding firefighter, were injured in the spill at the Nippon Dynawave Packaging facility in Longview. A number of those injured suffered burns or inhalation injuries, authorities said, with the severity of the injuries ranging from minor to critical. The tank contained a chemical known as \"white liquor\", a corrosive substance used to break down wood to make kraft paper. Officials are yet to determine the cause of the implosion, but said there is no immediate threat to the public.",
+        "word_count": 128,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "At least one person was killed and nine workers were unaccounted for following the implosion of a chemical tank at a pulp and paper mill in southern Washington state on Tuesday, local authorities said. The tank's rupture at Nippon Dynawave Packaging Co. facility in Longview, a city located along the southern Washington border with Oregon, injured eight employees and one firefighter, the Longview Fire Department said. The department didn't say whether the person who was killed was a worker. Officials said the families of all nine employees who remain unaccounted for have been notified.",
+        "word_count": 94,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "At least one person has been killed and nine others are still missing after a major chemical explosion at a paper mill in Washington, authorities said. The explosion occurred at 07:15 PDT (15:15 GMT) at the Nippon Dynawave Packaging facility in Longview, 130 miles (210km) south of Seattle. A further nine people have been injured in the spill, including 8 employees and one firefighter, the Longview Fire Department said Tuesday evening, adding that the tank remains unstable. The explosion occurred due a \"rupture of a tank containing white liquor\", the company said in a statement. White liquor is a highly corrosive chemical used in the paper-making process. \"Recovery efforts remain complex due to ongoing safety concerns at the site,\" the fire department said in an evening update.\n\nNine others were injured and another nine are missing after a tank ruptured at a paper mill in Longview, Washington.\n\nAt least one person has been killed and nine others are unaccounted for after a chemical tank imploded in the US. The incident happened at a pulp and paper mill in Washington state at 7.15am local time on Tuesday (3.15pm UK time). At least nine other people, including a responding firefighter, were injured in the spill at the Nippon Dynawave Packaging facility in Longview. A number of those injured suffered burns or inhalation injuries, authorities said, with the severity of the injuries ranging from minor to critical. The tank contained a chemical known as \"white liquor\", a corrosive substance used to break down wood to make kraft paper. Officials are yet to determine the cause of the implosion, but said there is no immediate threat to the public.\n\nAt least one person was killed and nine workers were unaccounted for following the implosion of a chemical tank at a pulp and paper mill in southern Washington state on Tuesday, local authorities said. The tank's rupture at Nippon Dynawave Packaging Co. facility in Longview, a city located along the southern Washington border with Oregon, injured eight employees and one firefighter, the Longview Fire Department said. The department didn't say whether the person who was killed was a worker. Officials said the families of all nine employees who remain unaccounted for have been notified.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 957,
+      "selected_blocks": 4,
+      "selected_source_words": 369,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "Yahoo News Canada",
+        "Yahoo News Canada",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Yahoo News Canada",
+        "CBS News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "One killed and others missing after chemical explosion at US paper mill",
+      "description": "Nine others were injured and another nine are missing after a tank ruptured at a paper mill in Longview, Washington.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "One killed and others missing after chemical explosion at US paper mill",
+    "description": "Nine others were injured and another nine are missing after a tank ruptured at a paper mill in Longview, Washington.",
+    "link": "https://www.bbc.com/news/articles/cj9ppm94xw9o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-27T03:02:27+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "941194d40d4f137de890683988c3aa3a",
+    "_url_hash": "bebd027b1f38d7c6e1fa1e8a47eafe9e2c83350c720cd9955aa04170a0b38997",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAt least one person has been killed and nine others are still missing after a major chemical explosion at a paper mill in Washington, authorities said.\n\nThe explosion occurred at 07:15 PDT (15:15 GMT) at the Nippon Dynawave Packaging facility in Longview, 130 miles (210km) south of Seattle.\n\nA further nine people have been injured in the spill, including 8 employees and one firefighter, the Longview Fire Department said Tuesday evening, adding that the tank remains unstable.\n\nThe explosion occurred due a \"rupture of a tank containing white liquor\", the company said in a statement. White liquor is a highly corrosive chemical used in the paper-making process.\n\n\"Recovery efforts remain complex due to ongoing safety concerns at the site,\" the fire department said in an evening update.\n\n\"Currently, the tank remains unstable, creating hazardous conditions for emergency personnel,\" the statement continued. \"Responders are continuing efforts to structurally reinforce and stabilize the site before additional recovery operations can safely proceed.\"\n\nWhile investigators originally believed the tank contained about 80,000 gallons (300,000 litres) of white liquor, officials later said the tank held approximately 900,000 gallons (3,406,000 litres).\n\nAbout 90,000 gallons (340,000 litres) \"may remain inside the damaged tank\", the fire department said.\n\nCowlitz Fire and Rescue Chief Scott Goldstein said during an earlier news conference that 10 people had been injured and transported to hospital.\n\nNine of the people injured are employees at the factory, and one is a firefighter, Goldstein said at the time. Their injuries range from \"critical severe to minor\", and include burn and inhalation injuries. The company statement said there were \"multiple critical injuries\".\n\nThe scene is stable, the chief said, but the public should stay away from the area as firefighting efforts continue. He said the fire does not pose any threat to the larger community.\n\n\"The scene remains in the recovery phase as emergency responders continue operations,\" the Longview Fire Department said in a statement.\n\n\"No identifying information regarding injured or deceased individuals will be released at this time pending notification of family members.\"\n\nWhite liquor is an alkaline chemical containing sodium hydroxide and sodium sulfide.\n\nWashington Governor Bob Ferguson said state ecology workers have been sent to the site to assist local officials.\n\n\"I'm deeply saddened to hear that there have been f\n\n---\n\n[Lähde: CBS News]\nAt least one person was killed and nine workers were unaccounted for following the implosion of a chemical tank at a pulp and paper mill in southern Washington state on Tuesday, local authorities said.\n\nThe tank's rupture at Nippon Dynawave Packaging Co. facility in Longview, a city located along the southern Washington border with Oregon, injured eight employees and one firefighter, the Longview Fire Department said. The department didn't say whether the person who was killed was a worker.\n\nOfficials said the families of all nine employees who remain unaccounted for have been notified.\n\nA spokesperson for PeaceHealth St. John Medical Center in Longview confirmed to CBS News that the hospital received nine patients from the incident, one of whom was deceased. Four others have been transferred to the Legacy Oregon Burn Center in Portland, Oregon, PeaceHealth said. Legacy Health confirmed to CBS News in a statement it was treating patients from the incident, but it was not clear if there were any others beyond the four who had been transferred from the PeaceHealth facility.\n\nAuthorities said some victims had suffered burns or inhalation injuries, and that the severity of the injuries ranged from minor to critical.\n\nAuthorities said there was no immediate threat to the public, but the tank's unstable condition is \"creating hazardous conditions for emergency personnel.\"\n\nThe Longview Fire Department said a tank containing white liquor had ruptured. White liquor is a chemical commonly used in paper and pulp processing, which consists of sodium hydroxide and sodium sulfide.\n\nCowlitz Fire and Rescue Chief Scott Goldstein previously said the 80,000-gallon tank that imploded was about 60% full, but authorities later reported the tank held approximately 900,000 gallons of white liquor. Local authorities now estimate roughly 90,000 gallons of material may remain inside the damaged tank.\n\nIt was too early to determine the cause of the implosion, Goldstein said.\n\n\"We're dealing with life safety concerns and incident stabilization at this point,\" he said.\n\nAs of Tuesday evening, officials said the tank remained unstable, posing a dangerous challenge for recovery efforts, though they hoped to stabilize it and remove the white liquor on Wednesday.\n\n\"On behalf of the people in the state of Washington, I want all those individuals to know that we stand with you,\" Gov. Bob Ferguson said at a news conference. \"We'll be here to do everything we can to help with the situation, \n\n---\n\n[Lähde: Yahoo News Canada]\nAt least one person has been killed and nine others are unaccounted for after a chemical tank imploded in the US.\n\nThe incident happened at a pulp and paper mill in Washington state at 7.15am local time on Tuesday (3.15pm UK time).\n\nAt least nine other people, including a responding firefighter, were injured in the spill at the Nippon Dynawave Packaging facility in Longview.\n\nA number of those injured suffered burns or inhalation injuries, authorities said, with the severity of the injuries ranging from minor to critical.\n\nThe tank contained a chemical known as \"white liquor\", a corrosive substance used to break down wood to make kraft paper.\n\nOfficials are yet to determine the cause of the implosion, but said there is no immediate threat to the public.\n\nIn a statement, the Longview Fire Department said the tank \"remains unstable\", which was creating \"hazardous conditions for emergency personnel\".\n\nIt added: \"Responders are continuing efforts to structurally reinforce and stabilise the...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-27T03:14:57.738902+00:00",
+  "failure": "content too short: 201 words",
+  "payload": {
+    "packet_id": "20260527T031128Z_41a83f4df6",
+    "title": "Yksi kuollut ja yhdeksän kateissa kemikaalisäiliön räjähdyksen jälkeen paperitehtaalla Yhdysvalloissa",
+    "summary": "Washingtonin osavaltiossa sijaitsevalla paperitehtaalla tapahtunut kemikaalisäiliön rikkoutuminen on vaatinut ainakin yhden kuolonuhrin. Yhdeksän ihmistä on kateissa ja yhdeksän loukkaantunut.",
+    "content": "Ainakin yksi ihminen on kuollut ja yhdeksän on edelleen kateissa kemikaalisäiliön räjähdyksen jälkeen paperitehtaalla Longview’ssa Washingtonin osavaltiossa Yhdysvalloissa. Paikallisviranomaisten mukaan lisäksi yhdeksän ihmistä loukkaantui Nippon Dynawave Packagingin laitoksella sattuneessa onnettomuudessa tiistaina aamulla paikallista aikaa.\n\n## Säiliössä oli syövyttävää kemikaalia\n\nLongview’n palolaitoksen mukaan onnettomuus tapahtui noin kello 7.15 paikallista aikaa. Laitos sijaitsee Longview’n kaupungissa Washingtonin eteläosassa, lähellä Oregonin rajaa ja noin 210 kilometriä Seattlesta etelään.\n\nYhtiön mukaan räjähdys liittyi säiliön rikkoutumiseen. Säiliössä oli niin sanottua valkolipeää, joka on paperinvalmistuksessa käytettävä voimakkaasti syövyttävä kemikaali. Sitä käytetään puun käsittelyssä muun muassa kraftpaperin valmistusprosessissa.\n\nViranomaisten mukaan loukkaantuneiden joukossa oli kahdeksan työntekijää ja yksi pelastustehtäviin osallistunut palomies. Osa loukkaantuneista sai palovammoja tai hengitysteiden altistumiseen liittyviä vammoja. Vammojen vakavuus vaihteli viranomaisten mukaan lievistä kriittisiin.\n\n## Pelastustyöt jatkuivat turvallisuusriskien keskellä\n\nPalolaitos kertoi tiistai-iltana, että säiliö oli edelleen epävakaa. Tämän vuoksi etsintä- ja pelastustyöt olivat vaikeita ja niihin liittyi yhä turvallisuusriskejä.\n\nViranomaiset ovat ilmoittaneet, että yhdeksän kateissa olevan työntekijän perheille on kerrottu tilanteesta. Kuolleen henkilön henkilöllisyydestä tai siitä, oliko hän tehtaan työntekijä, ei ole kerrottu julkisuuteen.\n\n## Tarkkaa syytä selvitetään\n\nOnnettomuuden tarkkaa syytä ei ollut vielä vahvistettu. Viranomaiset ovat kuitenkin arvioineet, ettei tapahtumasta aiheudu välitöntä vaaraa ympäröivälle yleisölle. Tilanne tehtaalla pysyi silti viranomaisten seurannassa kemikaalin ja vaurioituneen säiliön vuoksi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Washington",
+      "Longview",
+      "paperiteollisuus",
+      "kemikaalionnettomuus"
+    ],
+    "summary_bullets": [
+      "Ainakin yksi ihminen kuoli kemikaalisäiliön räjähdyksessä paperitehtaalla Washingtonin osavaltiossa.",
+      "Yhdeksän ihmistä on kateissa ja yhdeksän loukkaantui, heidän joukossaan yksi palomies.",
+      "Säiliössä oli syövyttävää valkolipeää, ja viranomaiset pitivät pelastustöitä yhä riskialttiina."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu useiden lähteiden yhteneviin tietoihin viranomaisten ja yhtiön ilmoituksista. Kuolleen henkilöllisyyttä ja onnettomuuden lopullista syytä ei ole vahvistettu."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260527T031128Z_41a83f4df6\",\n  \"title\": \"Yksi kuollut ja yhdeksän kateissa kemikaalisäiliön räjähdyksen jälkeen paperitehtaalla Yhdysvalloissa\",\n  \"summary\": \"Washingtonin osavaltiossa sijaitsevalla paperitehtaalla tapahtunut kemikaalisäiliön rikkoutuminen on vaatinut ainakin yhden kuolonuhrin. Yhdeksän ihmistä on kateissa ja yhdeksän loukkaantunut.\",\n  \"content\": \"Ainakin yksi ihminen on kuollut ja yhdeksän on edelleen kateissa kemikaalisäiliön räjähdyksen jälkeen paperitehtaalla Longview’ssa Washingtonin osavaltiossa Yhdysvalloissa. Paikallisviranomaisten mukaan lisäksi yhdeksän ihmistä loukkaantui Nippon Dynawave Packagingin laitoksella sattuneessa onnettomuudessa tiistaina aamulla paikallista aikaa.\\n\\n## Säiliössä oli syövyttävää kemikaalia\\n\\nLongview’n palolaitoksen mukaan onnettomuus tapahtui noin kello 7.15 paikallista aikaa. Laitos sijaitsee Longview’n kaupungissa Washingtonin eteläosassa, lähellä Oregonin rajaa ja noin 210 kilometriä Seattlesta etelään.\\n\\nYhtiön mukaan räjähdys liittyi säiliön rikkoutumiseen. Säiliössä oli niin sanottua valkolipeää, joka on paperinvalmistuksessa käytettävä voimakkaasti syövyttävä kemikaali. Sitä käytetään puun käsittelyssä muun muassa kraftpaperin valmistusprosessissa.\\n\\nViranomaisten mukaan loukkaantuneiden joukossa oli kahdeksan työntekijää ja yksi pelastustehtäviin osallistunut palomies. Osa loukkaantuneista sai palovammoja tai hengitysteiden altistumiseen liittyviä vammoja. Vammojen vakavuus vaihteli viranomaisten mukaan lievistä kriittisiin.\\n\\n## Pelastustyöt jatkuivat turvallisuusriskien keskellä\\n\\nPalolaitos kertoi tiistai-iltana, että säiliö oli edelleen epävakaa. Tämän vuoksi etsintä- ja pelastustyöt olivat vaikeita ja niihin liittyi yhä turvallisuusriskejä.\\n\\nViranomaiset ovat ilmoittaneet, että yhdeksän kateissa olevan työntekijän perheille on kerrottu tilanteesta. Kuolleen henkilön henkilöllisyydestä tai siitä, oliko hän tehtaan työntekijä, ei ole kerrottu julkisuuteen.\\n\\n## Tarkkaa syytä selvitetään\\n\\nOnnettomuuden tarkkaa syytä ei ollut vielä vahvistettu. Viranomaiset ovat kuitenkin arvioineet, ettei tapahtumasta aiheudu välitöntä vaaraa ympäröivälle yleisölle. Tilanne tehtaalla pysyi silti viranomaisten seurannassa kemikaalin ja vaurioituneen säiliön vuoksi.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Washington\",\n    \"Longview\",\n    \"paperiteollisuus\",\n    \"kemikaalionnettomuus\"\n  ],\n  \"summary_bullets\": [\n    \"Ainakin yksi ihminen kuoli kemikaalisäiliön räjähdyksessä paperitehtaalla Washingtonin osavaltiossa.\",\n    \"Yhdeksän ihmistä on kateissa ja yhdeksän loukkaantui, heidän joukossaan yksi palomies.\",\n    \"Säiliössä oli syövyttävää valkolipeää, ja viranomaiset pitivät pelastustöitä yhä riskialttiina.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu useiden lähteiden yhteneviin tietoihin viranomaisten ja yhtiön ilmoituksista. Kuolleen henkilöllisyyttä ja onnettomuuden lopullista syytä ei ole vahvistettu.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260527T031128Z_41a83f4df6",
+    "category": "Ulkomaat",
+    "selected_source_words": 369,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 201,
+    "issues": [
+      "content too short: 201 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Yksi kuollut ja yhdeksän kateissa kemikaalisäiliön räjähdyksen jälkeen paperitehtaalla Yhdysvalloissa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-27T03:14:57.738406+00:00",
+    "repair_trigger": "pre_repair_word_count=201; selected_source_words=369; selected_source_blocks=4",
+    "pre_repair_word_count": 201,
+    "pre_repair_lead_word_count": 34,
+    "post_repair_word_count": 201,
+    "post_repair_lead_word_count": 34,
+    "selected_source_words_at_repair": 369,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 369,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 201 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:214f9a0a7f",
+      "2:BBC World:7c179b50bf",
+      "3:Yahoo News Canada:b93e3c56bf",
+      "4:CBS News:6708052445"
+    ],
+    "final_issues": [
+      "content too short: 201 words"
+    ],
+    "recovered": false
+  }
+}
