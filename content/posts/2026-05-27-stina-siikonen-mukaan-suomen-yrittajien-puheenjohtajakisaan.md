@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittajien-puheenjohtajakisassa-mukana-nyt-kaksi-ehdokasta/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
