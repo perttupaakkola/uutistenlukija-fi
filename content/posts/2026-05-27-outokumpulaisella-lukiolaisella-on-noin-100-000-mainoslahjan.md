@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/luka-poutiainen-19-lahettaa-yrityksille-50-sahkopostia-paivassa-syyna-ei-ole-tyonhaku/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
