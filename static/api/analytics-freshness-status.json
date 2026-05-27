@@ -1,6 +1,6 @@
 {
   "status": "blocked_oauth_reauthorization_required",
-  "checked_at": "2026-05-27T12:15:03+00:00",
+  "checked_at": "2026-05-27T18:15:04+00:00",
   "max_age_hours": 30.0,
   "source_command": "SECRETS_DIR=/home/pertt/.openclaw/workspace/.secrets bash pipeline/check-analytics.sh",
   "safe_source_commands": [
@@ -21,26 +21,26 @@
       "exists": true,
       "read_status": "ok",
       "generated_at": "2026-05-27",
-      "file_mtime": "2026-05-27T12:15:03+00:00",
+      "file_mtime": "2026-05-27T18:15:04+00:00",
       "age_hours": 0.0,
       "fresh": true,
       "property_id": "529369568",
       "site": "sc-domain:uutistenlukija.fi",
       "counts": {
-        "daily_pageview_rows": 0,
-        "top_pages_7d": 0,
-        "traffic_sources_7d": 0,
-        "search_console_top_queries": 0
+        "daily_pageview_rows": 2,
+        "top_pages_7d": 10,
+        "traffic_sources_7d": 4,
+        "search_console_top_queries": 10
       }
     },
     "search_console": {
       "artifact": "static/api/search-console-data.json",
       "exists": true,
       "read_status": "ok",
-      "generated_at": "2026-05-24T06:30:02.294558+00:00",
-      "file_mtime": "2026-05-24T08:28:50+00:00",
-      "age_hours": 75.77,
-      "fresh": false,
+      "generated_at": "2026-05-27T14:03:49.236693+00:00",
+      "file_mtime": "2026-05-27T14:03:49+00:00",
+      "age_hours": 4.19,
+      "fresh": true,
       "site": "sc-domain:uutistenlukija.fi",
       "days": 28,
       "row_count": 500
