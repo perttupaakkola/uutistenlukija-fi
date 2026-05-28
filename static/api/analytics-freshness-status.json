@@ -1,8 +1,8 @@
 {
-  "status": "blocked_oauth_reauthorization_required",
-  "checked_at": "2026-05-28T14:48:14+00:00",
+  "status": "fresh",
+  "checked_at": "2026-05-28T16:02:28+00:00",
   "max_age_hours": 30.0,
-  "source_command": "SECRETS_DIR=/home/pertt/.openclaw/workspace/.secrets bash pipeline/check-analytics.sh",
+  "source_command": "post-reauth validation commands",
   "safe_source_commands": [
     "cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && SECRETS_DIR=/home/pertt/.openclaw/workspace/.secrets bash pipeline/check-analytics.sh",
     "cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && scripts/run_with_project_env.sh python3 scripts/daily_traffic_card.py --dry-run",
@@ -14,15 +14,16 @@
     "pipeline/logs/fetch-search-console.log"
   ],
   "redaction_policy": "Counts, timestamps, public property/site identifiers, safe command names, and log paths only. No credentials, token values, OAuth response bodies, Authorization headers, raw GA4 rows, raw Search Console queries, or account email are stored.",
-  "blocked_by": "OPE-133",
+  "blocked_by": null,
   "artifacts": {
     "daily_report": {
       "artifact": "analytics/daily-report.json",
       "exists": true,
       "read_status": "ok",
       "generated_at": "2026-05-28",
-      "file_mtime": "2026-05-28T14:48:14+00:00",
-      "age_hours": 0.0,
+      "file_mtime": "2026-05-28T15:57:05+00:00",
+      "age_hours": 0.09,
+      "evidence_at": "2026-05-28T15:57:05+00:00",
       "fresh": true,
       "property_id": "529369568",
       "site": "sc-domain:uutistenlukija.fi",
@@ -39,7 +40,8 @@
       "read_status": "ok",
       "generated_at": "2026-05-28T06:30:01.613645+00:00",
       "file_mtime": "2026-05-28T06:30:01+00:00",
-      "age_hours": 8.3,
+      "age_hours": 9.54,
+      "evidence_at": "2026-05-28T06:30:01+00:00",
       "fresh": true,
       "site": "sc-domain:uutistenlukija.fi",
       "days": 28,
@@ -47,28 +49,15 @@
     },
     "oauth_blocker": {
       "artifact": "analytics/oauth-failure-sentinel.json",
-      "exists": true,
-      "read_status": "ok",
-      "checked_at": "2026-05-27T12:15:02+00:00",
-      "file_mtime": "2026-05-27T12:15:02+00:00",
-      "blocked": true,
-      "blocked_by": "OPE-133",
-      "services": [
-        {
-          "service": "ga4",
-          "status": "blocked_human_reauthorization_required",
-          "error_class": "oauth_invalid_grant",
-          "reauth_command": "cd /home/pertt/.openclaw/workspace && python3 scripts/reauth_ga4.py",
-          "validation_command": "cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && scripts/run_with_project_env.sh python3 scripts/daily_traffic_card.py --dry-run"
-        },
-        {
-          "service": "search_console",
-          "status": "blocked_human_reauthorization_required",
-          "error_class": "oauth_invalid_grant",
-          "reauth_command": "cd /home/pertt/.openclaw/workspace && python3 scripts/reauth_search_console.py",
-          "validation_command": "cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && scripts/run_with_project_env.sh python3 scripts/fetch_search_console.py --dry-run"
-        }
-      ]
+      "exists": false,
+      "read_status": "missing",
+      "checked_at": null,
+      "file_mtime": null,
+      "evidence_at": null,
+      "blocked": false,
+      "superseded_by_fresh_validation": false,
+      "blocked_by": null,
+      "services": []
     }
   }
 }
