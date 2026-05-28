@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/28/googlen-voi-nyt-asettaa-painottamaan-suosikkilahdesivustoja-ai-yhteenvedoissakin/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
