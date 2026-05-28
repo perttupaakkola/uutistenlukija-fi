@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-28T17:31:20.837400+00:00",
+  "digest": "8a93312a48",
+  "packet": {
+    "packet_id": "20260528T173120Z_8a93312a48",
+    "created_at": "2026-05-28T17:31:20Z",
+    "headline_seed": "Leijonat vakuuttavasti mitalipeleihin – katso tästä puolivälierän maalikooste",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9489832",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9489832"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Leijonat vakuuttavasti mitalipeleihin – katso tästä puolivälierän maalikooste"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 126,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Kymen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Leijonat vakuuttavasti mitalipeleihin – katso tästä puolivälierän maalikooste",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Leijonat vakuuttavasti mitalipeleihin – katso tästä puolivälierän maalikooste",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9489832",
+    "published": "2026-05-28T19:53:34+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "de96a47eb9d50e39d01f80cf1b953a2d",
+    "_url_hash": "d486cb3627e91823055c4d091c12c17e0fcfa7f3d32117fdb40ab0cc68bf43eb",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Kymen Sanomat]\nSuomi kaatoi Tshekin jääkiekon MM-kisojen puolivälierässä maalein 4–1 (2–0, 1–1, 1–0).\n\nLeijonat aloitti ottelun vahvasti ja siirtyi avauserässä kahden maalin johtoon. Toisessa erässä kumpikin joukkue onnistui kertaalleen, mutta päätöserässä maaliverkkoja heilutti ainoastaan Suomi.\n\nJesse Puljujärvi petaa ja Sakari Manninen laukoo Suomen edelle! 🇫🇮🚨#ViaplayMMlätkä #Leijonat #MMkisat #lupanauttia #ihankaikki pic.twitter.com/MdNgdMr4OF\n\nLenni Hämeenaho pyssyttää ja Anton Lundell on ensimmäisenä paikalla lyömässä karat pussiin!🏒💰 #ViaplayMMlätkä #Leijonat #MMkisat #lupanauttia #ihankaikki pic.twitter.com/2FxpCzoEWc\n\nGranlund ➡️ Barkov ➡️ Helenius 🚨Ei tätä kolmikkoa näin hyvään paikkaan parane päästää, mutta kyllä se kelpaa! ✌️#ViaplayMMlätkä #Leijonat #MMkisat #lupanauttia #ihankaikki pic.twitter.com/Yb22R5y12Z\n\nFilip Hronek iskee Tshekin ensimmäisen kahden miehen ylivoimalla! 🇨🇿#ViaplayMMlätkä #Leijonat #MMkisat #lupanauttia #ihankaikki pic.twitter.com/HK1YKpzqto\n\nLenni Hämeenaho karkaa läpiajoon ja pistää kiekon tyylillä Josef Korenarin putkista sisään! 🔥#ViaplayMMlätkä #Leijonat #MMkisat #lupanauttia #ihankaikki pic.twitter.com/ia08TKwKj1\n\nLeijonien turnaus jatkuu lauantaina välierissä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-28T17:33:21.181073+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja faktoja julkaistavan vähintään 250 sanan uutisartikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260528T173120Z_8a93312a48\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja faktoja julkaistavan vähintään 250 sanan uutisartikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
