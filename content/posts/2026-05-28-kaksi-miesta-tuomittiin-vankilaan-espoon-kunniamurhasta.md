@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/mies-ampui-raskaana-olleen-perheenaidin-lasten-silmien-edessa-kaksi-vankilaan-espoon-kunniamurhasta/9345420"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
