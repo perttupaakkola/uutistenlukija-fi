@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/tullin-haaviin-jai-miljoonia-laittomasti-maahantuotuja-savukkeita/9345184"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
