@@ -92,6 +92,8 @@ record_oauth_sentinel() {
 
 flush_oauth_sentinel() {
     if [[ "${#OAUTH_FAILED_SERVICES[@]}" -eq 0 ]]; then
+        rm -f "$PROJECT_DIR/analytics/oauth-failure-sentinel.json" \
+              "$PROJECT_DIR/static/api/analytics-oauth-status.json"
         return
     fi
     if [[ -x "$SENTINEL_SCRIPT" || -f "$SENTINEL_SCRIPT" ]]; then

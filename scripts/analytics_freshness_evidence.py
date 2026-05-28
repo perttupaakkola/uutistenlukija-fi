@@ -69,6 +69,10 @@ def age_hours(value: datetime | None, now: datetime) -> float | None:
     return round(max((now - value).total_seconds(), 0) / 3600, 2)
 
 
+def newer_or_same(left: datetime | None, right: datetime | None) -> bool:
+    return left is not None and right is not None and left >= right
+
+
 def rel(path: Path) -> str:
     return str(path.relative_to(PROJECT_DIR))
 
@@ -91,6 +95,7 @@ def summarize_daily_report(data: dict[str, Any] | None, error: str | None, now: 
         "generated_at": data.get("generated_at") if data else None,
         "file_mtime": file_mtime(DAILY_REPORT),
         "age_hours": age_hours(evidence_time, now),
+        "evidence_at": evidence_time.isoformat() if evidence_time else None,
         "fresh": not stale and error is None,
         "property_id": data.get("property_id") if data else None,
         "site": data.get("site") if data else None,
@@ -117,6 +122,7 @@ def summarize_search_console(data: dict[str, Any] | None, error: str | None, now
         "generated_at": data.get("generated_at") if data else None,
         "file_mtime": file_mtime(SEARCH_CONSOLE_REPORT),
         "age_hours": age_hours(evidence_time, now),
+        "evidence_at": evidence_time.isoformat() if evidence_time else None,
         "fresh": not stale and error is None,
         "site": data.get("site") if data else None,
         "days": data.get("days") if data else None,
@@ -124,7 +130,12 @@ def summarize_search_console(data: dict[str, Any] | None, error: str | None, now
     }
 
 
-def summarize_oauth_blocker(data: dict[str, Any] | None, error: str | None) -> dict[str, Any]:
+def summarize_oauth_blocker(
+    data: dict[str, Any] | None,
+    error: str | None,
+    daily_summary: dict[str, Any],
+    search_console_summary: dict[str, Any],
+) -> dict[str, Any]:
     services = []
     if data and isinstance(data.get("services"), list):
         for service in data["services"]:
@@ -140,14 +151,26 @@ def summarize_oauth_blocker(data: dict[str, Any] | None, error: str | None) -> d
                 }
             )
 
-    blocked = bool(data and data.get("status") == "blocked_human_reauthorization_required")
+    checked_at = parse_time(data.get("checked_at") if data else None)
+    mtime = parse_time(file_mtime(OAUTH_SENTINEL))
+    evidence_at = checked_at or mtime
+    fresh_validation_after_sentinel = bool(
+        daily_summary.get("fresh")
+        and search_console_summary.get("fresh")
+        and newer_or_same(parse_time(daily_summary.get("evidence_at")), evidence_at)
+        and newer_or_same(parse_time(search_console_summary.get("evidence_at")), evidence_at)
+    )
+    raw_blocked = bool(data and data.get("status") == "blocked_human_reauthorization_required")
+    blocked = raw_blocked and not fresh_validation_after_sentinel
     return {
         "artifact": rel(OAUTH_SENTINEL),
         "exists": OAUTH_SENTINEL.exists(),
         "read_status": "ok" if error is None else error,
         "checked_at": data.get("checked_at") if data else None,
         "file_mtime": file_mtime(OAUTH_SENTINEL),
+        "evidence_at": evidence_at.isoformat() if evidence_at else None,
         "blocked": blocked,
+        "superseded_by_fresh_validation": raw_blocked and fresh_validation_after_sentinel,
         "blocked_by": data.get("blocked_by") if data else None,
         "services": services,
     }
@@ -161,7 +184,7 @@ def build_payload(max_age_hours: float, source_command: str) -> dict[str, Any]:
 
     daily_summary = summarize_daily_report(daily, daily_error, now, max_age_hours)
     search_console_summary = summarize_search_console(search_console, search_console_error, now, max_age_hours)
-    oauth_summary = summarize_oauth_blocker(oauth, oauth_error)
+    oauth_summary = summarize_oauth_blocker(oauth, oauth_error, daily_summary, search_console_summary)
 
     blocked = oauth_summary["blocked"]
     fresh = bool(daily_summary["fresh"] and search_console_summary["fresh"] and not blocked)
