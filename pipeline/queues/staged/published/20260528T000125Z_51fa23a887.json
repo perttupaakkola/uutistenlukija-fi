@@ -1,0 +1,216 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-28T00:01:25.367152+00:00",
+  "digest": "51fa23a887",
+  "packet": {
+    "packet_id": "20260528T000125Z_51fa23a887",
+    "created_at": "2026-05-28T00:01:25Z",
+    "headline_seed": "We analysed thousands of Trump's posts - here's what we found",
+    "description_seed": "The BBC's Ros Atkins and BBC Verify sifted through thousands of the president's posts.",
+    "link": "https://www.bbc.com/news/videos/cpvp30gpd0ko?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "AOL",
+      "AOL"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cpvp30gpd0ko?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "We analysed thousands of Trump's posts - here's what we found"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The BBC's Ros Atkins and BBC Verify sifted through thousands of the president's posts.",
+        "word_count": 14,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "In 2026, Donald Trump's use of social media has escalated. The BBC sifted through thousands of posts on his platform Truth Social to analyse what the President has been saying and when. What was the busiest day? When are the busiest hours? What type of content does President Trump share? Ros Atkins explains what he's found. Want to learn more about Trump's posts? A longer version of this video is available here as part of a series on YouTube. Produced by Katerina Karelli. Graphics by Sally Nicholls and Mesut Ersoz. BBC's Carl Nasman was at the event, where he asked enthusiasts about World Cup ticket prices and what the sport means to the US. The plans include permanent human habitation on the Earth's only natural satellite by 2032.",
+        "word_count": 128,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "President Donald Trump’s use of Truth Social to share his thoughts has exploded in the last month with many posts coming in the early morning hours, an analysis has found. In fact, the president posted on Truth Social 565 times in April, according to the Daily Beast. That amounts to about 18 posts a day from the commander-in-chief, with a third happening overnight. The total is also more than double the 250 times he posted in April 2018 during his first term in the White House. Trump’s posts over the last month have stirred up controversy, including one of an AI image depicting him as Jesus, another photoshop of him threatening Iran and posts criticizing the 2020 election. They come as Trump has been pictured with his eyes closed at meetings and press events.",
+        "word_count": 134,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "It’s unclear if Trump has made all the posts on social media, or if some have come from Natalie Harp, who is an executive assistant to the president, but also known to help with his social media accounts. The Independent has reached out to the White House for comment about the posting spree. White House spokesman Davis Ingle defended the posts to the Daily Beast saying America loves them. “President Trump is the most transparent and accessible President in American history to the media, and his return to the White House saved the legacy media from going out of business,” Ingle told the outlet. “The press knows that they can’t get enough of Trump, and the American people appreciate hearing his first-hand insights on topics of importance to our country.”",
+        "word_count": 130,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The BBC's Ros Atkins and BBC Verify sifted through thousands of the president's posts.\n\nIn 2026, Donald Trump's use of social media has escalated. The BBC sifted through thousands of posts on his platform Truth Social to analyse what the President has been saying and when. What was the busiest day? When are the busiest hours? What type of content does President Trump share? Ros Atkins explains what he's found. Want to learn more about Trump's posts? A longer version of this video is available here as part of a series on YouTube. Produced by Katerina Karelli. Graphics by Sally Nicholls and Mesut Ersoz. BBC's Carl Nasman was at the event, where he asked enthusiasts about World Cup ticket prices and what the sport means to the US. The plans include permanent human habitation on the Earth's only natural satellite by 2032.\n\nPresident Donald Trump’s use of Truth Social to share his thoughts has exploded in the last month with many posts coming in the early morning hours, an analysis has found. In fact, the president posted on Truth Social 565 times in April, according to the Daily Beast. That amounts to about 18 posts a day from the commander-in-chief, with a third happening overnight. The total is also more than double the 250 times he posted in April 2018 during his first term in the White House. Trump’s posts over the last month have stirred up controversy, including one of an AI image depicting him as Jesus, another photoshop of him threatening Iran and posts criticizing the 2020 election. They come as Trump has been pictured with his eyes closed at meetings and press events.\n\nIt’s unclear if Trump has made all the posts on social media, or if some have come from Natalie Harp, who is an executive assistant to the president, but also known to help with his social media accounts. The Independent has reached out to the White House for comment about the posting spree. White House spokesman Davis Ingle defended the posts to the Daily Beast saying America loves them. “President Trump is the most transparent and accessible President in American history to the media, and his return to the White House saved the legacy media from going out of business,” Ingle told the outlet. “The press knows that they can’t get enough of Trump, and the American people appreciate hearing his first-hand insights on topics of importance to our country.”",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 866,
+      "selected_blocks": 4,
+      "selected_source_words": 406,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "AOL",
+        "AOL",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "We analysed thousands of Trump's posts - here's what we found",
+      "description": "The BBC's Ros Atkins and BBC Verify sifted through thousands of the president's posts.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "We analysed thousands of Trump's posts - here's what we found",
+    "description": "The BBC's Ros Atkins and BBC Verify sifted through thousands of the president's posts.",
+    "link": "https://www.bbc.com/news/videos/cpvp30gpd0ko?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-27T23:21:41+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cf47926b4d30d6de56c2785b194c330e",
+    "_url_hash": "da77b88055e656827257b90b1edb9f1a2ae325d91709c6557e4030bdf23facbc",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIn 2026, Donald Trump's use of social media has escalated. The BBC sifted through thousands of posts on his platform Truth Social to analyse what the President has been saying and when.\n\nWhat was the busiest day? When are the busiest hours? What type of content does President Trump share? Ros Atkins explains what he's found. Want to learn more about Trump's posts?\n\nA longer version of this video is available here as part of a series on YouTube.\n\nProduced by Katerina Karelli. Graphics by Sally Nicholls and Mesut Ersoz.\n\nBBC's Carl Nasman was at the event, where he asked enthusiasts about World Cup ticket prices and what the sport means to the US.\n\nThe plans include permanent human habitation on the Earth's only natural satellite by 2032.\n\nElon Musk's SpaceX has successfully launched its Starship V3 rocket, which landed in a planned fiery explosion on Friday.\n\nActress Anya Taylor-Joy and designer Donatella Versace delivered tributes to the singer during the ceremony.\n\nThe late-night host will appear behind his CBS desk for the final time after the network announced last summer that the show would end after 11 seasons.\n\nAs part of the ongoing investigation into the crash that killed 14 people, officials released footage showing the engine detaching during takeoff.\n\nBody cam footage shows the moment a baby was thrown from a window and caught by an officer during a house fire.\n\nThe president, who claims the building is a ‘gift’ to the US, says it will include a hospital and research facilities.\n\nThe Sandy Fire ignited in the city of Simi Valley and spread across 1,364 acres (550 hectares) with minimal containment as of Tuesday, officials said.\n\nThomas Massie, the Republican congressman from Kentucky who led the release of the Epstein files, is running against a Trump-backed primary challenger.\n\nTwo teenage attackers fatally shot three men at a mosque in San Diego, California, in a suspected hate crime, before taking their own lives, say police.\n\nBBC's Lily Jamali was at court during the trial, as Musk accused Altman of breaching a non-profit contract by shifting the ChatGPT-maker to a for-profit company.\n\nSakshi Venkatraman reports from an eerily quiet rail station as a strike by Long Island Rail Road workers caused delays for thousands of commuters.\n\nFour crew members safely ejected from US Navy jets and are in a stable condition after the collision.\n\nThe company said the vehicles, which use AI to drive, had encountered \"a routing problem\" that kept taking the\n\n---\n\n[Lähde: AOL]\nPresident Donald Trump’s use of Truth Social to share his thoughts has exploded in the last month with many posts coming in the early morning hours, an analysis has found.\n\nIn fact, the president posted on Truth Social 565 times in April, according to the Daily Beast. That amounts to about 18 posts a day from the commander-in-chief, with a third happening overnight. The total is also more than double the 250 times he posted in April 2018 during his first term in the White House.\n\nTrump’s posts over the last month have stirred up controversy, including one of an AI image depicting him as Jesus, another photoshop of him threatening Iran and posts criticizing the 2020 election.\n\nThey come as Trump has been pictured with his eyes closed at meetings and press events.\n\nIt’s unclear if Trump has made all the posts on social media, or if some have come from Natalie Harp, who is an executive assistant to the president, but also known to help with his social media accounts.\n\nThe Independent has reached out to the White House for comment about the posting spree. White House spokesman Davis Ingle defended the posts to the Daily Beast saying America loves them.\n\n“President Trump is the most transparent and accessible President in American history to the media, and his return to the White House saved the legacy media from going out of business,” Ingle told the outlet. “The press knows that they can’t get enough of Trump, and the American people appreciate hearing his first-hand insights on topics of importance to our country.”\n\nOne of Trump’s most controversial posts last month came at 2:49 a.m. on April 13 when the president posted an image of himself as a Jesus-like figure. The image showed Trump in a white robe, laying his hands on the head of a man in a bed. He was surrounded by heavenly light and patriotic imagery. The post was immediately met with outrage from both sides of the political aisle.\n\n“This should be deleted immediately,” wrote Sean Feucht, a Christian activist who is partnering with the Trump administration for events related to America’s 250th birthday. “There’s no context where this is acceptable.”\n\nTrump tried to defend the post that was later deleted from his account.\n\n“I did post it and I thought it was me as a doctor and had to do with Red Cross,” Trump told reporters. “It’s supposed to be me as a doctor, making people better. And I do make people better. I make people a lot better.”\n\nTrump’s spree posting was also noted on April 17 when the pres",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-28T00:05:18.546744+00:00",
+  "payload": {
+    "packet_id": "20260528T000125Z_51fa23a887",
+    "title": "BBC analysoi tuhansia Trumpin Truth Social -julkaisuja",
+    "summary": "BBC:n Ros Atkins ja BBC Verify ovat käyneet läpi tuhansia Donald Trumpin Truth Social -julkaisuja selvittääkseen, mitä Yhdysvaltain presidentti on palvelussa kirjoittanut ja milloin hänen julkaisutahtinsa on ollut vilkkainta.",
+    "content": "BBC:n Ros Atkins ja BBC Verify ovat analysoineet tuhansia Yhdysvaltain presidentti Donald Trumpin Truth Social -julkaisuja. Tarkastelun tarkoituksena oli selvittää, mitä Trump on palvelussa sanonut, millaisina ajankohtina hän julkaisee viestejä ja millaista sisältöä hän jakaa seuraajilleen vuonna 2026.\n\n## Julkaisutahti on noussut esiin\n\nBBC:n mukaan Trumpin sosiaalisen median käyttö on kiihtynyt vuonna 2026. Analyysissä käytiin läpi hänen omalla Truth Social -alustallaan julkaistuja viestejä ja tarkasteltiin muun muassa vilkkaimpia päiviä, aktiivisimpia kellonaikoja sekä jaetun sisällön luonnetta. BBC:n videoanalyysin esittelee Ros Atkins, ja pidempi versio on julkaistu osana YouTube-sarjaa.\n\nErillisessä analyysissä on kerrottu, että Trump julkaisi Truth Socialissa huhtikuussa 565 kertaa. Se tarkoittaisi keskimäärin noin 18 julkaisua päivässä. Samojen tietojen mukaan noin kolmasosa julkaisuista tehtiin yön tunteina. Määrän on kuvattu olevan yli kaksinkertainen verrattuna huhtikuuhun 2018, jolloin Trump oli ensimmäisellä presidenttikaudellaan Valkoisessa talossa.\n\n## Sisältö on herättänyt huomiota\n\nTrumpin viimeaikaiset julkaisut ovat herättäneet myös arvostelua ja keskustelua. Esimerkkeinä on mainittu tekoälyllä tehty kuva, jossa Trump esitettiin Jeesuksena, Irania koskenut muokattu kuva sekä vuoden 2020 presidentinvaaleja arvostelleet julkaisut. Julkaisuryöppyä on käsitelty myös samaan aikaan, kun Trumpista on julkaistu kuvia, joissa hänen silmänsä ovat olleet kiinni kokouksissa ja lehdistötilaisuuksissa.\n\nKaikkien julkaisujen tekijästä ei ole täyttä varmuutta. Lähdetietojen mukaan on epäselvää, onko Trump kirjoittanut kaikki viestit itse vai onko osa julkaisuista voinut tulla Natalie Harpilta, presidentin avustajalta, jonka on kerrottu auttavan myös hänen sosiaalisen median tiliensä kanssa. The Independent on pyytänyt Valkoiselta talolta kommenttia julkaisumäärästä.\n\n## Valkoinen talo puolustaa viestintää\n\nValkoisen talon edustaja Davis Ingle on puolustanut presidentin julkaisuja Daily Beastille ja kuvannut niitä osoitukseksi Trumpin suorasta yhteydestä yleisöön. BBC:n videoanalyysi keskittyy siihen, millaisen kokonaiskuvan laaja julkaisuaineisto antaa presidentin viestinnästä. Se ei ratkaise, kuka yksittäiset julkaisut on kirjoittanut, mutta nostaa esiin Trumpin Truth Social -käytön määrän, ajoituksen ja sisällön poliittisen merkityksen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Donald Trump",
+      "Truth Social",
+      "Yhdysvallat",
+      "sosiaalinen media",
+      "BBC"
+    ],
+    "summary_bullets": [
+      "BBC ja BBC Verify analysoivat tuhansia Donald Trumpin Truth Social -julkaisuja.",
+      "Tarkastelu keskittyi julkaisujen määrään, ajoitukseen ja sisältötyyppeihin.",
+      "Erillisten tietojen mukaan Trump julkaisi huhtikuussa 565 kertaa, noin 18 kertaa päivässä.",
+      "Osa julkaisuista on herättänyt kiistaa, ja kaikkien viestien kirjoittajasta ei ole täyttä varmuutta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu paketin BBC- ja AOL-lähdekatkelmiin. Mukaan ei otettu lähdetekstin selvästi asiaan kuulumattomia kohtia jalkapallosta ja kuuhankkeista."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260528T000125Z_51fa23a887\",\n  \"title\": \"BBC analysoi tuhansia Trumpin Truth Social -julkaisuja\",\n  \"summary\": \"BBC:n Ros Atkins ja BBC Verify ovat käyneet läpi tuhansia Donald Trumpin Truth Social -julkaisuja selvittääkseen, mitä Yhdysvaltain presidentti on palvelussa kirjoittanut ja milloin hänen julkaisutahtinsa on ollut vilkkainta.\",\n  \"content\": \"BBC:n Ros Atkins ja BBC Verify ovat analysoineet tuhansia Yhdysvaltain presidentti Donald Trumpin Truth Social -julkaisuja. Tarkastelun tarkoituksena oli selvittää, mitä Trump on palvelussa sanonut, millaisina ajankohtina hän julkaisee viestejä ja millaista sisältöä hän jakaa seuraajilleen vuonna 2026.\\n\\n## Julkaisutahti on noussut esiin\\n\\nBBC:n mukaan Trumpin sosiaalisen median käyttö on kiihtynyt vuonna 2026. Analyysissä käytiin läpi hänen omalla Truth Social -alustallaan julkaistuja viestejä ja tarkasteltiin muun muassa vilkkaimpia päiviä, aktiivisimpia kellonaikoja sekä jaetun sisällön luonnetta. BBC:n videoanalyysin esittelee Ros Atkins, ja pidempi versio on julkaistu osana YouTube-sarjaa.\\n\\nErillisessä analyysissä on kerrottu, että Trump julkaisi Truth Socialissa huhtikuussa 565 kertaa. Se tarkoittaisi keskimäärin noin 18 julkaisua päivässä. Samojen tietojen mukaan noin kolmasosa julkaisuista tehtiin yön tunteina. Määrän on kuvattu olevan yli kaksinkertainen verrattuna huhtikuuhun 2018, jolloin Trump oli ensimmäisellä presidenttikaudellaan Valkoisessa talossa.\\n\\n## Sisältö on herättänyt huomiota\\n\\nTrumpin viimeaikaiset julkaisut ovat herättäneet myös arvostelua ja keskustelua. Esimerkkeinä on mainittu tekoälyllä tehty kuva, jossa Trump esitettiin Jeesuksena, Irania koskenut muokattu kuva sekä vuoden 2020 presidentinvaaleja arvostelleet julkaisut. Julkaisuryöppyä on käsitelty myös samaan aikaan, kun Trumpista on julkaistu kuvia, joissa hänen silmänsä ovat olleet kiinni kokouksissa ja lehdistötilaisuuksissa.\\n\\nKaikkien julkaisujen tekijästä ei ole täyttä varmuutta. Lähdetietojen mukaan on epäselvää, onko Trump kirjoittanut kaikki viestit itse vai onko osa julkaisuista voinut tulla Natalie Harpilta, presidentin avustajalta, jonka on kerrottu auttavan myös hänen sosiaalisen median tiliensä kanssa. The Independent on pyytänyt Valkoiselta talolta kommenttia julkaisumäärästä.\\n\\n## Valkoinen talo puolustaa viestintää\\n\\nValkoisen talon edustaja Davis Ingle on puolustanut presidentin julkaisuja Daily Beastille ja kuvannut niitä osoitukseksi Trumpin suorasta yhteydestä yleisöön. BBC:n videoanalyysi keskittyy siihen, millaisen kokonaiskuvan laaja julkaisuaineisto antaa presidentin viestinnästä. Se ei ratkaise, kuka yksittäiset julkaisut on kirjoittanut, mutta nostaa esiin Trumpin Truth Social -käytön määrän, ajoituksen ja sisällön poliittisen merkityksen.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Donald Trump\",\n    \"Truth Social\",\n    \"Yhdysvallat\",\n    \"sosiaalinen media\",\n    \"BBC\"\n  ],\n  \"summary_bullets\": [\n    \"BBC ja BBC Verify analysoivat tuhansia Donald Trumpin Truth Social -julkaisuja.\",\n    \"Tarkastelu keskittyi julkaisujen määrään, ajoitukseen ja sisältötyyppeihin.\",\n    \"Erillisten tietojen mukaan Trump julkaisi huhtikuussa 565 kertaa, noin 18 kertaa päivässä.\",\n    \"Osa julkaisuista on herättänyt kiistaa, ja kaikkien viestien kirjoittajasta ei ole täyttä varmuutta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu paketin BBC- ja AOL-lähdekatkelmiin. Mukaan ei otettu lähdetekstin selvästi asiaan kuulumattomia kohtia jalkapallosta ja kuuhankkeista.\"\n}",
+  "article": {
+    "title": "BBC analysoi tuhansia Trumpin Truth Social -julkaisuja",
+    "description": "BBC:n Ros Atkins ja BBC Verify ovat käyneet läpi tuhansia Donald Trumpin Truth Social -julkaisuja selvittääkseen, mitä Yhdysvaltain presidentti on palvelussa kirjoittanut ja milloin hänen julkaisutahtinsa on ollut vilkkainta.",
+    "link": "https://www.bbc.com/news/videos/cpvp30gpd0ko?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-27T23:21:41+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cf47926b4d30d6de56c2785b194c330e",
+    "_url_hash": "da77b88055e656827257b90b1edb9f1a2ae325d91709c6557e4030bdf23facbc",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIn 2026, Donald Trump's use of social media has escalated. The BBC sifted through thousands of posts on his platform Truth Social to analyse what the President has been saying and when.\n\nWhat was the busiest day? When are the busiest hours? What type of content does President Trump share? Ros Atkins explains what he's found. Want to learn more about Trump's posts?\n\nA longer version of this video is available here as part of a series on YouTube.\n\nProduced by Katerina Karelli. Graphics by Sally Nicholls and Mesut Ersoz.\n\nBBC's Carl Nasman was at the event, where he asked enthusiasts about World Cup ticket prices and what the sport means to the US.\n\nThe plans include permanent human habitation on the Earth's only natural satellite by 2032.\n\nElon Musk's SpaceX has successfully launched its Starship V3 rocket, which landed in a planned fiery explosion on Friday.\n\nActress Anya Taylor-Joy and designer Donatella Versace delivered tributes to the singer during the ceremony.\n\nThe late-night host will appear behind his CBS desk for the final time after the network announced last summer that the show would end after 11 seasons.\n\nAs part of the ongoing investigation into the crash that killed 14 people, officials released footage showing the engine detaching during takeoff.\n\nBody cam footage shows the moment a baby was thrown from a window and caught by an officer during a house fire.\n\nThe president, who claims the building is a ‘gift’ to the US, says it will include a hospital and research facilities.\n\nThe Sandy Fire ignited in the city of Simi Valley and spread across 1,364 acres (550 hectares) with minimal containment as of Tuesday, officials said.\n\nThomas Massie, the Republican congressman from Kentucky who led the release of the Epstein files, is running against a Trump-backed primary challenger.\n\nTwo teenage attackers fatally shot three men at a mosque in San Diego, California, in a suspected hate crime, before taking their own lives, say police.\n\nBBC's Lily Jamali was at court during the trial, as Musk accused Altman of breaching a non-profit contract by shifting the ChatGPT-maker to a for-profit company.\n\nSakshi Venkatraman reports from an eerily quiet rail station as a strike by Long Island Rail Road workers caused delays for thousands of commuters.\n\nFour crew members safely ejected from US Navy jets and are in a stable condition after the collision.\n\nThe company said the vehicles, which use AI to drive, had encountered \"a routing problem\" that kept taking the\n\n---\n\n[Lähde: AOL]\nPresident Donald Trump’s use of Truth Social to share his thoughts has exploded in the last month with many posts coming in the early morning hours, an analysis has found.\n\nIn fact, the president posted on Truth Social 565 times in April, according to the Daily Beast. That amounts to about 18 posts a day from the commander-in-chief, with a third happening overnight. The total is also more than double the 250 times he posted in April 2018 during his first term in the White House.\n\nTrump’s posts over the last month have stirred up controversy, including one of an AI image depicting him as Jesus, another photoshop of him threatening Iran and posts criticizing the 2020 election.\n\nThey come as Trump has been pictured with his eyes closed at meetings and press events.\n\nIt’s unclear if Trump has made all the posts on social media, or if some have come from Natalie Harp, who is an executive assistant to the president, but also known to help with his social media accounts.\n\nThe Independent has reached out to the White House for comment about the posting spree. White House spokesman Davis Ingle defended the posts to the Daily Beast saying America loves them.\n\n“President Trump is the most transparent and accessible President in American history to the media, and his return to the White House saved the legacy media from going out of business,” Ingle told the outlet. “The press knows that they can’t get enough of Trump, and the American people appreciate hearing his first-hand insights on topics of importance to our country.”\n\nOne of Trump’s most controversial posts last month came at 2:49 a.m. on April 13 when the president posted an image of himself as a Jesus-like figure. The image showed Trump in a white robe, laying his hands on the head of a man in a bed. He was surrounded by heavenly light and patriotic imagery. The post was immediately met with outrage from both sides of the political aisle.\n\n“This should be deleted immediately,” wrote Sean Feucht, a Christian activist who is partnering with the Trump administration for events related to America’s 250th birthday. “There’s no context where this is acceptable.”\n\nTrump tried to defend the post that was later deleted from his account.\n\n“I did post it and I thought it was me as a doctor and had to do with Red Cross,” Trump told reporters. “It’s supposed to be me as a doctor, making people better. And I do make people better. I make people a lot better.”\n\nTrump’s spree posting was also noted on April 17 when the pres",
+    "research_source": "multi",
+    "summary": "BBC:n Ros Atkins ja BBC Verify ovat käyneet läpi tuhansia Donald Trumpin Truth Social -julkaisuja selvittääkseen, mitä Yhdysvaltain presidentti on palvelussa kirjoittanut ja milloin hänen julkaisutahtinsa on ollut vilkkainta.",
+    "content": "BBC:n Ros Atkins ja BBC Verify ovat analysoineet tuhansia Yhdysvaltain presidentti Donald Trumpin Truth Social -julkaisuja. Tarkastelun tarkoituksena oli selvittää, mitä Trump on palvelussa sanonut, millaisina ajankohtina hän julkaisee viestejä ja millaista sisältöä hän jakaa seuraajilleen vuonna 2026.\n\n## Julkaisutahti on noussut esiin\n\nBBC:n mukaan Trumpin sosiaalisen median käyttö on kiihtynyt vuonna 2026. Analyysissä käytiin läpi hänen omalla Truth Social -alustallaan julkaistuja viestejä ja tarkasteltiin muun muassa vilkkaimpia päiviä, aktiivisimpia kellonaikoja sekä jaetun sisällön luonnetta. BBC:n videoanalyysin esittelee Ros Atkins, ja pidempi versio on julkaistu osana YouTube-sarjaa.\n\nErillisessä analyysissä on kerrottu, että Trump julkaisi Truth Socialissa huhtikuussa 565 kertaa. Se tarkoittaisi keskimäärin noin 18 julkaisua päivässä. Samojen tietojen mukaan noin kolmasosa julkaisuista tehtiin yön tunteina. Määrän on kuvattu olevan yli kaksinkertainen verrattuna huhtikuuhun 2018, jolloin Trump oli ensimmäisellä presidenttikaudellaan Valkoisessa talossa.\n\n## Sisältö on herättänyt huomiota\n\nTrumpin viimeaikaiset julkaisut ovat herättäneet myös arvostelua ja keskustelua. Esimerkkeinä on mainittu tekoälyllä tehty kuva, jossa Trump esitettiin Jeesuksena, Irania koskenut muokattu kuva sekä vuoden 2020 presidentinvaaleja arvostelleet julkaisut. Julkaisuryöppyä on käsitelty myös samaan aikaan, kun Trumpista on julkaistu kuvia, joissa hänen silmänsä ovat olleet kiinni kokouksissa ja lehdistötilaisuuksissa.\n\nKaikkien julkaisujen tekijästä ei ole täyttä varmuutta. Lähdetietojen mukaan on epäselvää, onko Trump kirjoittanut kaikki viestit itse vai onko osa julkaisuista voinut tulla Natalie Harpilta, presidentin avustajalta, jonka on kerrottu auttavan myös hänen sosiaalisen median tiliensä kanssa. The Independent on pyytänyt Valkoiselta talolta kommenttia julkaisumäärästä.\n\n## Valkoinen talo puolustaa viestintää\n\nValkoisen talon edustaja Davis Ingle on puolustanut presidentin julkaisuja Daily Beastille ja kuvannut niitä osoitukseksi Trumpin suorasta yhteydestä yleisöön. BBC:n videoanalyysi keskittyy siihen, millaisen kokonaiskuvan laaja julkaisuaineisto antaa presidentin viestinnästä. Se ei ratkaise, kuka yksittäiset julkaisut on kirjoittanut, mutta nostaa esiin Trumpin Truth Social -käytön määrän, ajoituksen ja sisällön poliittisen merkityksen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "donald trump",
+      "truth social",
+      "yhdysvallat",
+      "sosiaalinen media",
+      "bbc"
+    ],
+    "summary_bullets": [
+      "BBC ja BBC Verify analysoivat tuhansia Donald Trumpin Truth Social -julkaisuja.",
+      "Tarkastelu keskittyi julkaisujen määrään, ajoitukseen ja sisältötyyppeihin.",
+      "Erillisten tietojen mukaan Trump julkaisi huhtikuussa 565 kertaa, noin 18 kertaa päivässä.",
+      "Osa julkaisuista on herättänyt kiistaa, ja kaikkien viestien kirjoittajasta ei ole täyttä varmuutta."
+    ],
+    "key_points": [
+      "BBC ja BBC Verify analysoivat tuhansia Donald Trumpin Truth Social -julkaisuja.",
+      "Tarkastelu keskittyi julkaisujen määrään, ajoitukseen ja sisältötyyppeihin.",
+      "Erillisten tietojen mukaan Trump julkaisi huhtikuussa 565 kertaa, noin 18 kertaa päivässä.",
+      "Osa julkaisuista on herättänyt kiistaa, ja kaikkien viestien kirjoittajasta ei ole täyttä varmuutta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin BBC- ja AOL-lähdekatkelmiin. Mukaan ei otettu lähdetekstin selvästi asiaan kuulumattomia kohtia jalkapallosta ja kuuhankkeista.",
+    "source_text": "The BBC's Ros Atkins and BBC Verify sifted through thousands of the president's posts.\n\nIn 2026, Donald Trump's use of social media has escalated. The BBC sifted through thousands of posts on his platform Truth Social to analyse what the President has been saying and when. What was the busiest day? When are the busiest hours? What type of content does President Trump share? Ros Atkins explains what he's found. Want to learn more about Trump's posts? A longer version of this video is available here as part of a series on YouTube. Produced by Katerina Karelli. Graphics by Sally Nicholls and Mesut Ersoz. BBC's Carl Nasman was at the event, where he asked enthusiasts about World Cup ticket prices and what the sport means to the US. The plans include permanent human habitation on the Earth's only natural satellite by 2032.\n\nPresident Donald Trump’s use of Truth Social to share his thoughts has exploded in the last month with many posts coming in the early morning hours, an analysis has found. In fact, the president posted on Truth Social 565 times in April, according to the Daily Beast. That amounts to about 18 posts a day from the commander-in-chief, with a third happening overnight. The total is also more than double the 250 times he posted in April 2018 during his first term in the White House. Trump’s posts over the last month have stirred up controversy, including one of an AI image depicting him as Jesus, another photoshop of him threatening Iran and posts criticizing the 2020 election. They come as Trump has been pictured with his eyes closed at meetings and press events.\n\nIt’s unclear if Trump has made all the posts on social media, or if some have come from Natalie Harp, who is an executive assistant to the president, but also known to help with his social media accounts. The Independent has reached out to the White House for comment about the posting spree. White House spokesman Davis Ingle defended the posts to the Daily Beast saying America loves them. “President Trump is the most transparent and accessible President in American history to the media, and his return to the White House saved the legacy media from going out of business,” Ingle told the outlet. “The press knows that they can’t get enough of Trump, and the American people appreciate hearing his first-hand insights on topics of importance to our country.”",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260528T000125Z_51fa23a887",
+    "image": "https://images.unsplash.com/photo-1730992907035-65ec4eaea035?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxEb25hbGQlMjBUcnVtcCUyMHNvY2lhbCUyMG1lZGlhJTIwcG9zdHN8ZW58MXwwfHx8MTc3OTkyNjg4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1730992907035-65ec4eaea035?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxEb25hbGQlMjBUcnVtcCUyMHNvY2lhbCUyMG1lZGlhJTIwcG9zdHN8ZW58MXwwfHx8MTc3OTkyNjg4NXww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "BBC analysoi tuhansia Trumpin Truth Social -julkaisuja",
+    "image_credit": "Photo by The Now Time on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-newspaper-sitting-on-top-of-a-metal-dishwasher-KXUKLB-_Sb0?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-28T00:08:06.592746+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1730992907035-65ec4eaea035?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxEb25hbGQlMjBUcnVtcCUyMHNvY2lhbCUyMG1lZGlhJTIwcG9zdHN8ZW58MXwwfHx8MTc3OTkyNjg4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1730992907035-65ec4eaea035?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxEb25hbGQlMjBUcnVtcCUyMHNvY2lhbCUyMG1lZGlhJTIwcG9zdHN8ZW58MXwwfHx8MTc3OTkyNjg4NXww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-28T00:08:58.657547+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-28-bbc-analysoi-tuhansia-trumpin-truth-social-julkaisuja.md"
+  ]
+}
