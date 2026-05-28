@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/paaministeri-orpo-lupaa-etta-sunnuntaikorvauksiin-ei-kosketa/9345454"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
