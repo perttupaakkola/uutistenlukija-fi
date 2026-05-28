@@ -1,0 +1,259 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-28T21:51:22.436447+00:00",
+  "digest": "12919de6dc",
+  "packet": {
+    "packet_id": "20260528T215122Z_12919de6dc",
+    "created_at": "2026-05-28T21:51:22Z",
+    "headline_seed": "The internet is being rebuilt for machines",
+    "description_seed": "As AI agents move from experiments to production, AWS, Cloudflare, and others are redesigning cloud infrastructure for a future dominated by machine-generated internet traffic instead of human users.",
+    "link": "https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "The Next Web",
+      "The Next Web"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "The internet is being rebuilt for machines"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "As AI agents move from experiments to production, AWS, Cloudflare, and others are redesigning cloud infrastructure for a future dominated by machine-generated internet traffic instead of human users.",
+        "word_count": 28,
+        "keyword_overlap": 18,
+        "strong_overlap": 13
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "Cloud infrastructure has long been designed around humans who search, click, scroll, and stream in a steady and predictable fashion. AI agents behave differently. They can unleash a swell of activity, spinning up multiple sub-agents that query hundreds of databases, search documents, and call APIs in seconds and then disappear as quickly as they arrived. Under that premise, Amazon is redesigning a core piece of its cloud infrastructure. On Thursday, AWS launched its next generation of OpenSearch Serverless, a fully managed search and vector database — essentially a system for storing and retrieving information at scale — that’s designed specifically for agentic workloads. AWS says the new system can instantly scale up when agents trigger tasks and scale back down to zero when idle. ---",
+        "word_count": 125,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "The Next Web",
+        "source_type": "research",
+        "text": "The news organisations’ argument is coherent even if its consequences are troubling. AI companies training large language models need vast quantities of high-quality text. Archived news content is exactly that: structured, dated, attributed, high-quality writing accumulated over decades. The Internet Archive’s Wayback Machine makes enormous quantities of that content accessible via API and URL interface, an ideal source for model training pipelines. A 2023 Washington Post analysis found that data from the Internet Archive had appeared in major AI training datasets. For publishers already engaged in copyright lawsuits against OpenAI, Perplexity, and others, the Archive is a gap in their defences. “The issue is that Times content on the Internet Archive is being used by AI companies in violation of copyright law to directly compete with u",
+        "word_count": 127,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "The Next Web",
+        "source_type": "research",
+        "text": "The New York Times, CNN, USA Today, The Guardian, and at least 241 other news organisations across nine countries have moved to restrict the Archive’s crawlers, a decision the Archive’s own director has called being ‘collateral damage’ in a war that is not really about them. The Internet Archive has preserved more than one trillion web pages since 1996. Courts cite it. Journalists use it to prove articles were edited after publication. Historians treat it as a primary source. It is, by most measures, one of the most significant public information infrastructure projects of the internet era. And it is now being systematically blocked by the news publishers whose work it has preserved, because of a problem those publishers are genuinely not wrong about: AI companies are using archived news content to train models without permission or payment.",
+        "word_count": 138,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "As AI agents move from experiments to production, AWS, Cloudflare, and others are redesigning cloud infrastructure for a future dominated by machine-generated internet traffic instead of human users.\n\nCloud infrastructure has long been designed around humans who search, click, scroll, and stream in a steady and predictable fashion. AI agents behave differently. They can unleash a swell of activity, spinning up multiple sub-agents that query hundreds of databases, search documents, and call APIs in seconds and then disappear as quickly as they arrived. Under that premise, Amazon is redesigning a core piece of its cloud infrastructure. On Thursday, AWS launched its next generation of OpenSearch Serverless, a fully managed search and vector database — essentially a system for storing and retrieving information at scale — that’s designed specifically for agentic workloads. AWS says the new system can instantly scale up when agents trigger tasks and scale back down to zero when idle. ---\n\nThe news organisations’ argument is coherent even if its consequences are troubling. AI companies training large language models need vast quantities of high-quality text. Archived news content is exactly that: structured, dated, attributed, high-quality writing accumulated over decades. The Internet Archive’s Wayback Machine makes enormous quantities of that content accessible via API and URL interface, an ideal source for model training pipelines. A 2023 Washington Post analysis found that data from the Internet Archive had appeared in major AI training datasets. For publishers already engaged in copyright lawsuits against OpenAI, Perplexity, and others, the Archive is a gap in their defences. “The issue is that Times content on the Internet Archive is being used by AI companies in violation of copyright law to directly compete with u\n\nThe New York Times, CNN, USA Today, The Guardian, and at least 241 other news organisations across nine countries have moved to restrict the Archive’s crawlers, a decision the Archive’s own director has called being ‘collateral damage’ in a war that is not really about them. The Internet Archive has preserved more than one trillion web pages since 1996. Courts cite it. Journalists use it to prove articles were edited after publication. Historians treat it as a primary source. It is, by most measures, one of the most significant public information infrastructure projects of the internet era. And it is now being systematically blocked by the news publishers whose work it has preserved, because of a problem those publishers are genuinely not wrong about: AI companies are using archived news content to train models without permission or payment.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 545,
+      "selected_blocks": 4,
+      "selected_source_words": 418,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "The Next Web",
+        "The Next Web",
+        "The Next Web",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "The Next Web",
+        "The Next Web"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "The internet is being rebuilt for machines",
+      "description": "As AI agents move from experiments to production, AWS, Cloudflare, and others are redesigning cloud infrastructure for a future dominated by machine-generated internet traffic instead of human users.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "The internet is being rebuilt for machines",
+    "description": "As AI agents move from experiments to production, AWS, Cloudflare, and others are redesigning cloud infrastructure for a future dominated by machine-generated internet traffic instead of human users.",
+    "link": "https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/",
+    "published": "2026-05-28T21:24:01+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "0b4c7afaf98082a892d381f572158f40",
+    "_url_hash": "78c0c807a5289ffed86400059083d008bdef0c78eb28ae9ee94d9f78c448528d",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nCloud infrastructure has long been designed around humans who search, click, scroll, and stream in a steady and predictable fashion. AI agents behave differently. They can unleash a swell of activity, spinning up multiple sub-agents that query hundreds of databases, search documents, and call APIs in seconds and then disappear as quickly as they arrived.\n\nUnder that premise, Amazon is redesigning a core piece of its cloud infrastructure. On Thursday, AWS launched its next generation of OpenSearch Serverless, a fully managed search and vector database — essentially a system for storing and retrieving information at scale — that’s designed specifically for agentic workloads. AWS says the new system can instantly scale up when agents trigger tasks and scale back down to zero when idle.\n\n---\n\n[Lähde: The Next Web]\nThe New York Times, CNN, USA Today, The Guardian, and at least 241 other news organisations across nine countries have moved to restrict the Archive’s crawlers, a decision the Archive’s own director has called being ‘collateral damage’ in a war that is not really about them.\n\nThe Internet Archive has preserved more than one trillion web pages since 1996. Courts cite it. Journalists use it to prove articles were edited after publication. Historians treat it as a primary source. It is, by most measures, one of the most significant public information infrastructure projects of the internet era.\n\nAnd it is now being systematically blocked by the news publishers whose work it has preserved, because of a problem those publishers are genuinely not wrong about: AI companies are using archived news content to train models without permission or payment.\n\nAccording to an analysis by AI-detection startup Originality AI, 23 major news publications are blocking ia_archiverbot, the main web crawler the Internet Archive uses for the Wayback Machine.\n\nThe latest rumblings from the EU tech scene, a story from our wise ol' founder Boris, and some questionable AI art. It's free, every week, in your inbox. Sign up now!\n\nIn total, 241 news sites across nine countries explicitly disallow at least one of the Archive’s four crawling bots. USA Today Co., the largest newspaper publisher in the US, accounts for a large share of the blocked sites, effectively removing hundreds of local publications from the historical record.\n\nThe New York Times implemented what Wayback Machine director Mark Graham described as a ‘hard block’ starting in late 2025.\n\nThe news organisations’ argument is coherent even if its consequences are troubling. AI companies training large language models need vast quantities of high-quality text.\n\nArchived news content is exactly that: structured, dated, attributed, high-quality writing accumulated over decades. The Internet Archive’s Wayback Machine makes enormous quantities of that content accessible via API and URL interface, an ideal source for model training pipelines.\n\nA 2023 Washington Post analysis found that data from the Internet Archive had appeared in major AI training datasets. For publishers already engaged in copyright lawsuits against OpenAI, Perplexity, and others, the Archive is a gap in their defences.\n\n“The issue is that Times content on the Internet Archive is being used by AI companies in violation of copyright law to directly compete with u",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-28T21:55:03.771115+00:00",
+  "payload": {
+    "packet_id": "20260528T215122Z_12919de6dc",
+    "title": "Internetin rakenteita muokataan tekoälyagenttien käyttöön",
+    "summary": "Tekoälyagenttien siirtyminen kokeiluista tuotantokäyttöön muuttaa pilvi-infrastruktuurin vaatimuksia. AWS on julkaissut uuden OpenSearch Serverless -version, ja sama koneellisen liikenteen kasvu näkyy myös kiistoissa verkkoarkistojen käytöstä tekoälyn koulutusaineistona.",
+    "content": "Tekoälyagenttien yleistyminen on alkanut muuttaa sitä, millaiselle käytölle internetin ja pilvipalvelujen perusrakenteita suunnitellaan. Ihmiskäyttäjien sijaan yhä suurempi osa kuormasta voi syntyä ohjelmistoista, jotka tekevät hetkessä hakuja, kutsuvat rajapintoja ja käsittelevät suuria määriä tietoa.\n\n## Ihmisten rytmistä agenttien purskeisiin\n\nPilvi-infrastruktuuri on pitkään rakennettu käytölle, jossa ihmiset hakevat tietoa, klikkaavat linkkejä, selaavat sivuja ja katsovat sisältöjä melko ennakoitavassa tahdissa. Tekoälyagentit eivät kuitenkaan toimi samalla tavalla. Ne voivat käynnistää useita alitehtäviä, kysellä satoja tietokantoja, etsiä asiakirjoista tietoa ja kutsua ohjelmointirajapintoja muutamassa sekunnissa.\n\nTällainen liikenne voi syntyä nopeasti ja myös päättyä nopeasti. Se tekee kuormasta vaikeammin ennakoitavaa kuin perinteinen verkkokäyttö, jossa käyttäjämäärät ja käyttötavat muuttuvat usein tasaisemmin. Siksi infrastruktuurin on kyettävä vastaamaan äkillisiin piikkeihin ilman, että kapasiteettia pidetään jatkuvasti varattuna tyhjäkäyntiä varten.\n\n## AWS uudistaa hakupalveluaan\n\nAmazonin pilviyksikkö AWS on vastannut muutokseen julkaisemalla torstaina uuden sukupolven OpenSearch Serverless -palvelustaan. Kyse on täysin hallinnoidusta haku- ja vektoritietokannasta, jonka tarkoitus on tallentaa ja hakea tietoa suuressa mittakaavassa.\n\nAWS:n mukaan uusi järjestelmä on suunniteltu erityisesti agenttipohjaisille työkuormille. Palvelun kerrotaan pystyvän kasvattamaan kapasiteettiaan heti, kun agentit käynnistävät tehtäviä, ja skaalautumaan takaisin nollaan, kun käyttöä ei ole. Tämä vastaa tilanteeseen, jossa agentti voi hetkellisesti synnyttää suuren määrän hakuja ja rajapintakutsuja ja kadota sen jälkeen yhtä nopeasti.\n\n## Arkistot joutuvat samaan paineeseen\n\nKoneellisen käytön kasvu näkyy myös muualla verkon infrastruktuurissa. Suuret kielimallit tarvitsevat valtavia määriä laadukasta tekstiä, ja vuosikymmenten aikana kertynyt uutisaineisto on niille arvokasta koulutusmateriaalia. Internet Archiven Wayback Machine tarjoaa arkistoitua verkkosisältöä rajapintojen ja osoitteiden kautta, ja vuoden 2023 Washington Postin analyysin mukaan Internet Archivesta peräisin olevaa dataa oli esiintynyt merkittävissä tekoälyn koulutusaineistoissa.\n\nThe New York Times, CNN, USA Today, The Guardian ja vähintään 241 muuta uutisorganisaatiota yhdeksässä maassa ovat ryhtyneet rajoittamaan Archiven indeksoijia. Internet Archive on säilyttänyt yli biljoona verkkosivua vuodesta 1996 lähtien, ja sitä käyttävät muun muassa tuomioistuimet, toimittajat ja historioitsijat. Rajoitusten taustalla on kustantajien huoli siitä, että tekoäly-yhtiöt käyttävät arkistoitua uutisaineistoa mallien kouluttamiseen ilman lupaa tai korvausta.",
+    "category": "Teknologia",
+    "tags": [
+      "tekoäly",
+      "pilvipalvelut",
+      "AWS",
+      "internet",
+      "infrastruktuuri"
+    ],
+    "summary_bullets": [
+      "Tekoälyagentit voivat aiheuttaa pilvipalveluille nopeita ja vaikeasti ennakoitavia kuormituspiikkejä.",
+      "AWS julkaisi uuden OpenSearch Serverless -version agenttipohjaisia työkuormia varten.",
+      "Koneellisen käytön kasvu näkyy myös kiistoissa siitä, miten verkkoarkistoja käytetään tekoälyn koulutusaineistona."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli laajennettiin source-backed writer shortfall -korjauksena käyttäen packetin TechCrunch- ja The Next Web -katkelmien faktatietoja ilman lähteiden ulkopuolista lisäystä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260528T215122Z_12919de6dc\",\n  \"title\": \"Internetin rakenteita muokataan tekoälyagenttien käyttöön\",\n  \"summary\": \"Tekoälyagenttien siirtyminen kokeiluista tuotantokäyttöön muuttaa pilvi-infrastruktuurin vaatimuksia. AWS on julkaissut uuden OpenSearch Serverless -version, ja sama koneellisen liikenteen kasvu näkyy myös kiistoissa verkkoarkistojen käytöstä tekoälyn koulutusaineistona.\",\n  \"content\": \"Tekoälyagenttien yleistyminen on alkanut muuttaa sitä, millaiselle käytölle internetin ja pilvipalvelujen perusrakenteita suunnitellaan. Ihmiskäyttäjien sijaan yhä suurempi osa kuormasta voi syntyä ohjelmistoista, jotka tekevät hetkessä hakuja, kutsuvat rajapintoja ja käsittelevät suuria määriä tietoa.\\n\\n## Ihmisten rytmistä agenttien purskeisiin\\n\\nPilvi-infrastruktuuri on pitkään rakennettu käytölle, jossa ihmiset hakevat tietoa, klikkaavat linkkejä, selaavat sivuja ja katsovat sisältöjä melko ennakoitavassa tahdissa. Tekoälyagentit eivät kuitenkaan toimi samalla tavalla. Ne voivat käynnistää useita alitehtäviä, kysellä satoja tietokantoja, etsiä asiakirjoista tietoa ja kutsua ohjelmointirajapintoja muutamassa sekunnissa.\\n\\nTällainen liikenne voi syntyä nopeasti ja myös päättyä nopeasti. Se tekee kuormasta vaikeammin ennakoitavaa kuin perinteinen verkkokäyttö, jossa käyttäjämäärät ja käyttötavat muuttuvat usein tasaisemmin. Siksi infrastruktuurin on kyettävä vastaamaan äkillisiin piikkeihin ilman, että kapasiteettia pidetään jatkuvasti varattuna tyhjäkäyntiä varten.\\n\\n## AWS uudistaa hakupalveluaan\\n\\nAmazonin pilviyksikkö AWS on vastannut muutokseen julkaisemalla torstaina uuden sukupolven OpenSearch Serverless -palvelustaan. Kyse on täysin hallinnoidusta haku- ja vektoritietokannasta, jonka tarkoitus on tallentaa ja hakea tietoa suuressa mittakaavassa.\\n\\nAWS:n mukaan uusi järjestelmä on suunniteltu erityisesti agenttipohjaisille työkuormille. Palvelun kerrotaan pystyvän kasvattamaan kapasiteettiaan heti, kun agentit käynnistävät tehtäviä, ja skaalautumaan takaisin nollaan, kun käyttöä ei ole. Tämä vastaa tilanteeseen, jossa agentti voi hetkellisesti synnyttää suuren määrän hakuja ja rajapintakutsuja ja kadota sen jälkeen yhtä nopeasti.\\n\\n## Arkistot joutuvat samaan paineeseen\\n\\nKoneellisen käytön kasvu näkyy myös muualla verkon infrastruktuurissa. Suuret kielimallit tarvitsevat valtavia määriä laadukasta tekstiä, ja vuosikymmenten aikana kertynyt uutisaineisto on niille arvokasta koulutusmateriaalia. Internet Archiven Wayback Machine tarjoaa arkistoitua verkkosisältöä rajapintojen ja osoitteiden kautta, ja vuoden 2023 Washington Postin analyysin mukaan Internet Archivesta peräisin olevaa dataa oli esiintynyt merkittävissä tekoälyn koulutusaineistoissa.\\n\\nThe New York Times, CNN, USA Today, The Guardian ja vähintään 241 muuta uutisorganisaatiota yhdeksässä maassa ovat ryhtyneet rajoittamaan Archiven indeksoijia. Internet Archive on säilyttänyt yli biljoona verkkosivua vuodesta 1996 lähtien, ja sitä käyttävät muun muassa tuomioistuimet, toimittajat ja historioitsijat. Rajoitusten taustalla on kustantajien huoli siitä, että tekoäly-yhtiöt käyttävät arkistoitua uutisaineistoa mallien kouluttamiseen ilman lupaa tai korvausta.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"tekoäly\",\n    \"pilvipalvelut\",\n    \"AWS\",\n    \"internet\",\n    \"infrastruktuuri\"\n  ],\n  \"summary_bullets\": [\n    \"Tekoälyagentit voivat aiheuttaa pilvipalveluille nopeita ja vaikeasti ennakoitavia kuormituspiikkejä.\",\n    \"AWS julkaisi uuden OpenSearch Serverless -version agenttipohjaisia työkuormia varten.\",\n    \"Koneellisen käytön kasvu näkyy myös kiistoissa siitä, miten verkkoarkistoja käytetään tekoälyn koulutusaineistona.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli laajennettiin source-backed writer shortfall -korjauksena käyttäen packetin TechCrunch- ja The Next Web -katkelmien faktatietoja ilman lähteiden ulkopuolista lisäystä.\"\n}",
+  "article": {
+    "title": "Internetin rakenteita muokataan tekoälyagenttien käyttöön",
+    "description": "Tekoälyagenttien siirtyminen kokeiluista tuotantokäyttöön muuttaa pilvi-infrastruktuurin vaatimuksia. AWS on julkaissut uuden OpenSearch Serverless -version, ja sama koneellisen liikenteen kasvu näkyy myös kiistoissa verkkoarkistojen käytöstä tekoälyn koulutusaineistona.",
+    "link": "https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/",
+    "published": "2026-05-28T21:24:01+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "0b4c7afaf98082a892d381f572158f40",
+    "_url_hash": "78c0c807a5289ffed86400059083d008bdef0c78eb28ae9ee94d9f78c448528d",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nCloud infrastructure has long been designed around humans who search, click, scroll, and stream in a steady and predictable fashion. AI agents behave differently. They can unleash a swell of activity, spinning up multiple sub-agents that query hundreds of databases, search documents, and call APIs in seconds and then disappear as quickly as they arrived.\n\nUnder that premise, Amazon is redesigning a core piece of its cloud infrastructure. On Thursday, AWS launched its next generation of OpenSearch Serverless, a fully managed search and vector database — essentially a system for storing and retrieving information at scale — that’s designed specifically for agentic workloads. AWS says the new system can instantly scale up when agents trigger tasks and scale back down to zero when idle.\n\n---\n\n[Lähde: The Next Web]\nThe New York Times, CNN, USA Today, The Guardian, and at least 241 other news organisations across nine countries have moved to restrict the Archive’s crawlers, a decision the Archive’s own director has called being ‘collateral damage’ in a war that is not really about them.\n\nThe Internet Archive has preserved more than one trillion web pages since 1996. Courts cite it. Journalists use it to prove articles were edited after publication. Historians treat it as a primary source. It is, by most measures, one of the most significant public information infrastructure projects of the internet era.\n\nAnd it is now being systematically blocked by the news publishers whose work it has preserved, because of a problem those publishers are genuinely not wrong about: AI companies are using archived news content to train models without permission or payment.\n\nAccording to an analysis by AI-detection startup Originality AI, 23 major news publications are blocking ia_archiverbot, the main web crawler the Internet Archive uses for the Wayback Machine.\n\nThe latest rumblings from the EU tech scene, a story from our wise ol' founder Boris, and some questionable AI art. It's free, every week, in your inbox. Sign up now!\n\nIn total, 241 news sites across nine countries explicitly disallow at least one of the Archive’s four crawling bots. USA Today Co., the largest newspaper publisher in the US, accounts for a large share of the blocked sites, effectively removing hundreds of local publications from the historical record.\n\nThe New York Times implemented what Wayback Machine director Mark Graham described as a ‘hard block’ starting in late 2025.\n\nThe news organisations’ argument is coherent even if its consequences are troubling. AI companies training large language models need vast quantities of high-quality text.\n\nArchived news content is exactly that: structured, dated, attributed, high-quality writing accumulated over decades. The Internet Archive’s Wayback Machine makes enormous quantities of that content accessible via API and URL interface, an ideal source for model training pipelines.\n\nA 2023 Washington Post analysis found that data from the Internet Archive had appeared in major AI training datasets. For publishers already engaged in copyright lawsuits against OpenAI, Perplexity, and others, the Archive is a gap in their defences.\n\n“The issue is that Times content on the Internet Archive is being used by AI companies in violation of copyright law to directly compete with u",
+    "research_source": "multi",
+    "summary": "Tekoälyagenttien siirtyminen kokeiluista tuotantokäyttöön muuttaa pilvi-infrastruktuurin vaatimuksia. AWS on julkaissut uuden OpenSearch Serverless -version, ja sama koneellisen liikenteen kasvu näkyy myös kiistoissa verkkoarkistojen käytöstä tekoälyn koulutusaineistona.",
+    "content": "Tekoälyagenttien yleistyminen on alkanut muuttaa sitä, millaiselle käytölle internetin ja pilvipalvelujen perusrakenteita suunnitellaan. Ihmiskäyttäjien sijaan yhä suurempi osa kuormasta voi syntyä ohjelmistoista, jotka tekevät hetkessä hakuja, kutsuvat rajapintoja ja käsittelevät suuria määriä tietoa.\n\n## Ihmisten rytmistä agenttien purskeisiin\n\nPilvi-infrastruktuuri on pitkään rakennettu käytölle, jossa ihmiset hakevat tietoa, klikkaavat linkkejä, selaavat sivuja ja katsovat sisältöjä melko ennakoitavassa tahdissa. Tekoälyagentit eivät kuitenkaan toimi samalla tavalla. Ne voivat käynnistää useita alitehtäviä, kysellä satoja tietokantoja, etsiä asiakirjoista tietoa ja kutsua ohjelmointirajapintoja muutamassa sekunnissa.\n\nTällainen liikenne voi syntyä nopeasti ja myös päättyä nopeasti. Se tekee kuormasta vaikeammin ennakoitavaa kuin perinteinen verkkokäyttö, jossa käyttäjämäärät ja käyttötavat muuttuvat usein tasaisemmin. Siksi infrastruktuurin on kyettävä vastaamaan äkillisiin piikkeihin ilman, että kapasiteettia pidetään jatkuvasti varattuna tyhjäkäyntiä varten.\n\n## AWS uudistaa hakupalveluaan\n\nAmazonin pilviyksikkö AWS on vastannut muutokseen julkaisemalla torstaina uuden sukupolven OpenSearch Serverless -palvelustaan. Kyse on täysin hallinnoidusta haku- ja vektoritietokannasta, jonka tarkoitus on tallentaa ja hakea tietoa suuressa mittakaavassa.\n\nAWS:n mukaan uusi järjestelmä on suunniteltu erityisesti agenttipohjaisille työkuormille. Palvelun kerrotaan pystyvän kasvattamaan kapasiteettiaan heti, kun agentit käynnistävät tehtäviä, ja skaalautumaan takaisin nollaan, kun käyttöä ei ole. Tämä vastaa tilanteeseen, jossa agentti voi hetkellisesti synnyttää suuren määrän hakuja ja rajapintakutsuja ja kadota sen jälkeen yhtä nopeasti.\n\n## Arkistot joutuvat samaan paineeseen\n\nKoneellisen käytön kasvu näkyy myös muualla verkon infrastruktuurissa. Suuret kielimallit tarvitsevat valtavia määriä laadukasta tekstiä, ja vuosikymmenten aikana kertynyt uutisaineisto on niille arvokasta koulutusmateriaalia. Internet Archiven Wayback Machine tarjoaa arkistoitua verkkosisältöä rajapintojen ja osoitteiden kautta, ja vuoden 2023 Washington Postin analyysin mukaan Internet Archivesta peräisin olevaa dataa oli esiintynyt merkittävissä tekoälyn koulutusaineistoissa.\n\nThe New York Times, CNN, USA Today, The Guardian ja vähintään 241 muuta uutisorganisaatiota yhdeksässä maassa ovat ryhtyneet rajoittamaan Archiven indeksoijia. Internet Archive on säilyttänyt yli biljoona verkkosivua vuodesta 1996 lähtien, ja sitä käyttävät muun muassa tuomioistuimet, toimittajat ja historioitsijat. Rajoitusten taustalla on kustantajien huoli siitä, että tekoäly-yhtiöt käyttävät arkistoitua uutisaineistoa mallien kouluttamiseen ilman lupaa tai korvausta.",
+    "category": "Teknologia",
+    "tags": [
+      "tekoäly",
+      "pilvipalvelut",
+      "aws",
+      "internet",
+      "infrastruktuuri"
+    ],
+    "summary_bullets": [
+      "Tekoälyagentit voivat aiheuttaa pilvipalveluille nopeita ja vaikeasti ennakoitavia kuormituspiikkejä.",
+      "AWS julkaisi uuden OpenSearch Serverless -version agenttipohjaisia työkuormia varten.",
+      "Koneellisen käytön kasvu näkyy myös kiistoissa siitä, miten verkkoarkistoja käytetään tekoälyn koulutusaineistona."
+    ],
+    "key_points": [
+      "Tekoälyagentit voivat aiheuttaa pilvipalveluille nopeita ja vaikeasti ennakoitavia kuormituspiikkejä.",
+      "AWS julkaisi uuden OpenSearch Serverless -version agenttipohjaisia työkuormia varten.",
+      "Koneellisen käytön kasvu näkyy myös kiistoissa siitä, miten verkkoarkistoja käytetään tekoälyn koulutusaineistona."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli laajennettiin source-backed writer shortfall -korjauksena käyttäen packetin TechCrunch- ja The Next Web -katkelmien faktatietoja ilman lähteiden ulkopuolista lisäystä.",
+    "source_text": "As AI agents move from experiments to production, AWS, Cloudflare, and others are redesigning cloud infrastructure for a future dominated by machine-generated internet traffic instead of human users.\n\nCloud infrastructure has long been designed around humans who search, click, scroll, and stream in a steady and predictable fashion. AI agents behave differently. They can unleash a swell of activity, spinning up multiple sub-agents that query hundreds of databases, search documents, and call APIs in seconds and then disappear as quickly as they arrived. Under that premise, Amazon is redesigning a core piece of its cloud infrastructure. On Thursday, AWS launched its next generation of OpenSearch Serverless, a fully managed search and vector database — essentially a system for storing and retrieving information at scale — that’s designed specifically for agentic workloads. AWS says the new system can instantly scale up when agents trigger tasks and scale back down to zero when idle. ---\n\nThe news organisations’ argument is coherent even if its consequences are troubling. AI companies training large language models need vast quantities of high-quality text. Archived news content is exactly that: structured, dated, attributed, high-quality writing accumulated over decades. The Internet Archive’s Wayback Machine makes enormous quantities of that content accessible via API and URL interface, an ideal source for model training pipelines. A 2023 Washington Post analysis found that data from the Internet Archive had appeared in major AI training datasets. For publishers already engaged in copyright lawsuits against OpenAI, Perplexity, and others, the Archive is a gap in their defences. “The issue is that Times content on the Internet Archive is being used by AI companies in violation of copyright law to directly compete with u\n\nThe New York Times, CNN, USA Today, The Guardian, and at least 241 other news organisations across nine countries have moved to restrict the Archive’s crawlers, a decision the Archive’s own director has called being ‘collateral damage’ in a war that is not really about them. The Internet Archive has preserved more than one trillion web pages since 1996. Courts cite it. Journalists use it to prove articles were edited after publication. Historians treat it as a primary source. It is, by most measures, one of the most significant public information infrastructure projects of the internet era. And it is now being systematically blocked by the news publishers whose work it has preserved, because of a problem those publishers are genuinely not wrong about: AI companies are using archived news content to train models without permission or payment.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260528T215122Z_12919de6dc",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-05-28T21:55:03.770845+00:00",
+      "repair_trigger": "pre_repair_word_count=243; selected_source_words=418; selected_source_blocks=4",
+      "pre_repair_word_count": 243,
+      "pre_repair_lead_word_count": 34,
+      "post_repair_word_count": 311,
+      "post_repair_lead_word_count": 33,
+      "selected_source_words_at_repair": 418,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 418,
+      "source_blocks": 4,
+      "repair_added_word_count": 68,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:TechCrunch:4e57dea65b",
+        "2:TechCrunch:49c7a9dda6",
+        "3:The Next Web:736d514929",
+        "4:The Next Web:462c77b1b6"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image": "https://images.unsplash.com/photo-1690627931320-16ac56eb2588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxjbG91ZCUyMGNvbXB1dGluZyUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4MDAwNTQ4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1690627931320-16ac56eb2588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxjbG91ZCUyMGNvbXB1dGluZyUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4MDAwNTQ4NXww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Internetin rakenteita muokataan tekoälyagenttien käyttöön",
+    "image_credit": "Photo by Hazel Z on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-computer-screen-with-a-cloud-shaped-object-on-top-of-it-FocSgUZ10JM?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-28T21:55:03.770845+00:00",
+    "repair_trigger": "pre_repair_word_count=243; selected_source_words=418; selected_source_blocks=4",
+    "pre_repair_word_count": 243,
+    "pre_repair_lead_word_count": 34,
+    "post_repair_word_count": 311,
+    "post_repair_lead_word_count": 33,
+    "selected_source_words_at_repair": 418,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 418,
+    "source_blocks": 4,
+    "repair_added_word_count": 68,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:TechCrunch:4e57dea65b",
+      "2:TechCrunch:49c7a9dda6",
+      "3:The Next Web:736d514929",
+      "4:The Next Web:462c77b1b6"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-05-28T21:58:07.169644+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1690627931320-16ac56eb2588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxjbG91ZCUyMGNvbXB1dGluZyUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4MDAwNTQ4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1690627931320-16ac56eb2588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxjbG91ZCUyMGNvbXB1dGluZyUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4MDAwNTQ4NXww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-28T21:58:54.045905+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-28-internetin-rakenteita-muokataan-tekoalyagenttien-kayttoon.md"
+  ]
+}

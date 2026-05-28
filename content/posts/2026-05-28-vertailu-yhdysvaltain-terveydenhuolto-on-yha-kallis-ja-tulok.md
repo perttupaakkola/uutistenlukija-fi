@@ -43,7 +43,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/health/2026/05/us-healthcare-still-stupidly-expensive-with-pathetic-outcomes-study-finds/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
