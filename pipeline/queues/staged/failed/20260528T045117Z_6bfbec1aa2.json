@@ -1,0 +1,194 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-28T04:51:17.455487+00:00",
+  "digest": "6bfbec1aa2",
+  "packet": {
+    "packet_id": "20260528T045117Z_6bfbec1aa2",
+    "created_at": "2026-05-28T04:51:17Z",
+    "headline_seed": "Oil prices jump after US launches new attacks on Iran",
+    "description_seed": "The strikes come despite a ceasefire between Tehran and Washington as the two countries hold peace talks.",
+    "link": "https://www.bbc.com/news/articles/cp3p62xddq4o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "EconoTimes",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cp3p62xddq4o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Oil prices jump after US launches new attacks on Iran"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Oil prices have jumped after the US carried out new attacks on Iran, targeting a military site in Bandar Abbas, a strategic port city. The US Central Command (Centcom) said its forces also shot down four Iranian drones \"that posed a threat around the Strait of Hormuz\". Global oil benchmark Brent rose by 3.75% to $97.83 (£73.15) a barrel, while US-traded crude was 4% higher at $92.22. The strikes come despite a ceasefire between Tehran and Washington as the two countries hold talks to end the three-month-long conflict that has effectively closed the key Strait of Hormuz waterway, pushing up the cost of energy around the world. Around a fifth of global oil and liquefied natural gas (LNG) supplies usually passes through the strait.",
+        "word_count": 124,
+        "keyword_overlap": 14,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The strikes come despite a ceasefire between Tehran and Washington as the two countries hold peace talks.",
+        "word_count": 17,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "EconoTimes",
+        "source_type": "research",
+        "text": "According to Reuters, several explosions were heard in Bandar Abbas, a key Iranian port city, after the U.S. reportedly targeted another Iranian military facility. American officials described the operation as an act of “self-defense” and stated that ceasefire discussions with Iran were still ongoing despite the renewed attacks. Investor sentiment shifted again after U.S. President Donald Trump dismissed reports claiming Iran planned to fully reopen commercial shipping through the Strait of Hormuz within 30 days. Trump also rejected suggestions that Iran and Oman could jointly manage the strategic waterway and indicated that a final peace deal had not yet been reached.",
+        "word_count": 101,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Shortly afer the US and Israel launched attacks on Iran on 28 February, Tehran responded by threatening to attack vessels using the shipping route. ---",
+        "word_count": 25,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Oil prices have jumped after the US carried out new attacks on Iran, targeting a military site in Bandar Abbas, a strategic port city. The US Central Command (Centcom) said its forces also shot down four Iranian drones \"that posed a threat around the Strait of Hormuz\". Global oil benchmark Brent rose by 3.75% to $97.83 (£73.15) a barrel, while US-traded crude was 4% higher at $92.22. The strikes come despite a ceasefire between Tehran and Washington as the two countries hold talks to end the three-month-long conflict that has effectively closed the key Strait of Hormuz waterway, pushing up the cost of energy around the world. Around a fifth of global oil and liquefied natural gas (LNG) supplies usually passes through the strait.\n\nThe strikes come despite a ceasefire between Tehran and Washington as the two countries hold peace talks.\n\nAccording to Reuters, several explosions were heard in Bandar Abbas, a key Iranian port city, after the U.S. reportedly targeted another Iranian military facility. American officials described the operation as an act of “self-defense” and stated that ceasefire discussions with Iran were still ongoing despite the renewed attacks. Investor sentiment shifted again after U.S. President Donald Trump dismissed reports claiming Iran planned to fully reopen commercial shipping through the Strait of Hormuz within 30 days. Trump also rejected suggestions that Iran and Oman could jointly manage the strategic waterway and indicated that a final peace deal had not yet been reached.\n\nShortly afer the US and Israel launched attacks on Iran on 28 February, Tehran responded by threatening to attack vessels using the shipping route. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 6,
+      "candidate_source_words": 459,
+      "selected_blocks": 4,
+      "selected_source_words": 267,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "EconoTimes",
+        "EconoTimes",
+        "EconoTimes",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "EconoTimes",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Oil prices jump after US launches new attacks on Iran",
+      "description": "The strikes come despite a ceasefire between Tehran and Washington as the two countries hold peace talks.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Oil prices jump after US launches new attacks on Iran",
+    "description": "The strikes come despite a ceasefire between Tehran and Washington as the two countries hold peace talks.",
+    "link": "https://www.bbc.com/news/articles/cp3p62xddq4o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-28T04:30:00+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "072cbfa839e1ac0b7ec4cd636ea0af86",
+    "_url_hash": "86e89f03ecde5491b3e6104b48d5f9e97d03a3e916f8fdb905d1c78f6ea43cca",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nOil prices have jumped after the US carried out new attacks on Iran, targeting a military site in Bandar Abbas, a strategic port city.\n\nThe US Central Command (Centcom) said its forces also shot down four Iranian drones \"that posed a threat around the Strait of Hormuz\".\n\nGlobal oil benchmark Brent rose by 3.75% to $97.83 (£73.15) a barrel, while US-traded crude was 4% higher at $92.22.\n\nThe strikes come despite a ceasefire between Tehran and Washington as the two countries hold talks to end the three-month-long conflict that has effectively closed the key Strait of Hormuz waterway, pushing up the cost of energy around the world.\n\nAround a fifth of global oil and liquefied natural gas (LNG) supplies usually passes through the strait.\n\nShortly afer the US and Israel launched attacks on Iran on 28 February, Tehran responded by threatening to attack vessels using the shipping route.\n\n---\n\n[Lähde: EconoTimes]\nOil prices climbed sharply during early Asian trading on Thursday after reports emerged that the United States launched another military strike on Iran, increasing fears of further disruption to global crude supplies and uncertainty surrounding a potential peace agreement.\n\nBrent crude futures rose 1.9% to $96.03 per barrel, while West Texas Intermediate (WTI) crude gained 1.9% to trade at $90.36 per barrel. The rebound came after heavy losses earlier this week, driven by hopes that tensions in the Middle East could ease and shipping routes through the Strait of Hormuz might reopen soon.\n\nAccording to Reuters, several explosions were heard in Bandar Abbas, a key Iranian port city, after the U.S. reportedly targeted another Iranian military facility. American officials described the operation as an act of “self-defense” and stated that ceasefire discussions with Iran were still ongoing despite the renewed attacks.\n\nInvestor sentiment shifted again after U.S. President Donald Trump dismissed reports claiming Iran planned to fully reopen commercial shipping through the Strait of Hormuz within 30 days. Trump also rejected suggestions that Iran and Oman could jointly manage the strategic waterway and indicated that a final peace deal had not yet been reached.\n\nThe Strait of Hormuz remains one of the world’s most critical oil transit routes, carrying nearly 20% of global oil supplies. Although some ships have recently resumed passage, shipping activity is still significantly below normal levels due to ongoing regional instability.\n\nOil markets had previously declined on optimism surrounding a possible U.S.-Iran agreement, with Brent crude briefly falling below $100 per barrel. However, continued disagreements over Iran’s nuclear program and maritime control in the Gulf region are keeping traders cautious.\n\nAnalysts expect oil price volatility to remain high as geopolitical tensions continue to influence global energy markets in 2026.",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-28T04:54:32.283540+00:00",
+  "payload": {
+    "packet_id": "20260528T045117Z_6bfbec1aa2",
+    "title": "Öljyn hinta nousi Yhdysvaltain uusien Iran-iskujen jälkeen",
+    "summary": "Öljyn hinnat nousivat, kun Yhdysvallat teki uusia iskuja Iraniin ja kertoi pudottaneensa neljä iranilaista droonia Hormuzinsalmen alueella.",
+    "content": "Öljyn maailmanmarkkinahinnat ovat nousseet sen jälkeen, kun Yhdysvallat teki uusia iskuja Iraniin ja kohdisti operaation sotilaskohteeseen Bandar Abbasissa, strategisesti tärkeässä iranilaisessa satamakaupungissa. Iskut tehtiin tilanteessa, jossa Teheranin ja Washingtonin välillä on ollut tulitauko ja neuvottelut kolmen kuukauden konfliktin päättämisestä ovat lähdetietojen mukaan yhä käynnissä.\n\n## Iskut kohdistuivat Bandar Abbasiin\n\nYhdysvaltain keskisen sotilasjohdon Centcomin mukaan maan joukot ampuivat alas myös neljä iranilaista droonia, joiden se katsoi muodostaneen uhan Hormuzinsalmen ympäristössä. Bandar Abbas on keskeinen satamakaupunki lähellä salmea, jolla on suuri merkitys kansainväliselle energiakaupalle.\n\nLähdetietojen mukaan kaupungissa kuultiin useita räjähdyksiä sen jälkeen, kun Yhdysvallat oli kohdistuksen mukaan iskenyt uuteen iranilaiseen sotilaskohteeseen. Yhdysvaltalaisviranomaiset ovat kuvanneet operaatiota itsepuolustukseksi. Samalla ne ovat sanoneet, että tulitaukokeskustelut Iranin kanssa jatkuvat iskuista huolimatta.\n\n## Markkinat reagoivat Hormuzin tilanteeseen\n\nÖljyn hinta nousi iskujen jälkeen selvästi. Kansainvälinen Brent-viiteöljy kallistui 3,75 prosenttia 97,83 dollariin barrelilta. Yhdysvalloissa kaupankäynnin kohteena oleva raakaöljy nousi 4 prosenttia 92,22 dollariin barrelilta.\n\nHintareaktion taustalla on erityisesti huoli Hormuzinsalmen tilanteesta. Noin viidennes maailman öljyn ja nesteytetyn maakaasun toimituksista kulkee tavallisesti salmen kautta. Konflikti on lähdetietojen mukaan käytännössä sulkenut tärkeän väylän, mikä on nostanut energian hintaa eri puolilla maailmaa.\n\nSijoittajien tunnelmaa heilutti myös se, että Yhdysvaltain presidentti Donald Trump torjui väitteitä, joiden mukaan Iran olisi avaamassa kaupallisen merenkulun Hormuzinsalmessa kokonaan uudelleen 30 päivän kuluessa. Trump hylkäsi myös ajatukset siitä, että Iran ja Oman voisivat hallinnoida strategista vesiväylää yhdessä, ja viittasi siihen, ettei lopullista rauhansopimusta ole vielä saavutettu.\n\nIran on aiemmin uhannut iskeä aluksiin, jotka käyttävät kyseistä merireittiä. Tämä on lisännyt epävarmuutta alueella, jossa sotilaalliset toimet, tulitaukoneuvottelut ja energiavirtojen jatkuvuus kytkeytyvät nyt tiiviisti toisiinsa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Iran",
+      "Yhdysvallat",
+      "öljy",
+      "Hormuzinsalmi",
+      "energia"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat teki uusia iskuja Iraniin ja kertoi pudottaneensa neljä iranilaista droonia.",
+      "Brent-öljyn hinta nousi 3,75 prosenttia 97,83 dollariin barrelilta.",
+      "Hormuzinsalmen tilanne huolestuttaa markkinoita, koska sen kautta kulkee suuri osa maailman öljy- ja LNG-toimituksista."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu packetin lähdetietoihin. EconoTimesin Reuters-viittaus on käsitelty varovasti lähdetietona, eikä epävarmoja tai ristiriitaisia yksityiskohtia ole laajennettu."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260528T045117Z_6bfbec1aa2\",\"title\":\"Öljyn hinta nousi Yhdysvaltain uusien Iran-iskujen jälkeen\",\"summary\":\"Öljyn hinnat nousivat, kun Yhdysvallat teki uusia iskuja Iraniin ja kertoi pudottaneensa neljä iranilaista droonia Hormuzinsalmen alueella.\",\"content\":\"Öljyn maailmanmarkkinahinnat ovat nousseet sen jälkeen, kun Yhdysvallat teki uusia iskuja Iraniin ja kohdisti operaation sotilaskohteeseen Bandar Abbasissa, strategisesti tärkeässä iranilaisessa satamakaupungissa. Iskut tehtiin tilanteessa, jossa Teheranin ja Washingtonin välillä on ollut tulitauko ja neuvottelut kolmen kuukauden konfliktin päättämisestä ovat lähdetietojen mukaan yhä käynnissä.\\n\\n## Iskut kohdistuivat Bandar Abbasiin\\n\\nYhdysvaltain keskisen sotilasjohdon Centcomin mukaan maan joukot ampuivat alas myös neljä iranilaista droonia, joiden se katsoi muodostaneen uhan Hormuzinsalmen ympäristössä. Bandar Abbas on keskeinen satamakaupunki lähellä salmea, jolla on suuri merkitys kansainväliselle energiakaupalle.\\n\\nLähdetietojen mukaan kaupungissa kuultiin useita räjähdyksiä sen jälkeen, kun Yhdysvallat oli kohdistuksen mukaan iskenyt uuteen iranilaiseen sotilaskohteeseen. Yhdysvaltalaisviranomaiset ovat kuvanneet operaatiota itsepuolustukseksi. Samalla ne ovat sanoneet, että tulitaukokeskustelut Iranin kanssa jatkuvat iskuista huolimatta.\\n\\n## Markkinat reagoivat Hormuzin tilanteeseen\\n\\nÖljyn hinta nousi iskujen jälkeen selvästi. Kansainvälinen Brent-viiteöljy kallistui 3,75 prosenttia 97,83 dollariin barrelilta. Yhdysvalloissa kaupankäynnin kohteena oleva raakaöljy nousi 4 prosenttia 92,22 dollariin barrelilta.\\n\\nHintareaktion taustalla on erityisesti huoli Hormuzinsalmen tilanteesta. Noin viidennes maailman öljyn ja nesteytetyn maakaasun toimituksista kulkee tavallisesti salmen kautta. Konflikti on lähdetietojen mukaan käytännössä sulkenut tärkeän väylän, mikä on nostanut energian hintaa eri puolilla maailmaa.\\n\\nSijoittajien tunnelmaa heilutti myös se, että Yhdysvaltain presidentti Donald Trump torjui väitteitä, joiden mukaan Iran olisi avaamassa kaupallisen merenkulun Hormuzinsalmessa kokonaan uudelleen 30 päivän kuluessa. Trump hylkäsi myös ajatukset siitä, että Iran ja Oman voisivat hallinnoida strategista vesiväylää yhdessä, ja viittasi siihen, ettei lopullista rauhansopimusta ole vielä saavutettu.\\n\\nIran on aiemmin uhannut iskeä aluksiin, jotka käyttävät kyseistä merireittiä. Tämä on lisännyt epävarmuutta alueella, jossa sotilaalliset toimet, tulitaukoneuvottelut ja energiavirtojen jatkuvuus kytkeytyvät nyt tiiviisti toisiinsa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Iran\",\"Yhdysvallat\",\"öljy\",\"Hormuzinsalmi\",\"energia\"],\"summary_bullets\":[\"Yhdysvallat teki uusia iskuja Iraniin ja kertoi pudottaneensa neljä iranilaista droonia.\",\"Brent-öljyn hinta nousi 3,75 prosenttia 97,83 dollariin barrelilta.\",\"Hormuzinsalmen tilanne huolestuttaa markkinoita, koska sen kautta kulkee suuri osa maailman öljy- ja LNG-toimituksista.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.86,\"journalist_note\":\"Artikkeli perustuu packetin lähdetietoihin. EconoTimesin Reuters-viittaus on käsitelty varovasti lähdetietona, eikä epävarmoja tai ristiriitaisia yksityiskohtia ole laajennettu.\"}",
+  "article": {
+    "title": "Öljyn hinta nousi Yhdysvaltain uusien Iran-iskujen jälkeen",
+    "description": "Öljyn hinnat nousivat, kun Yhdysvallat teki uusia iskuja Iraniin ja kertoi pudottaneensa neljä iranilaista droonia Hormuzinsalmen alueella.",
+    "link": "https://www.bbc.com/news/articles/cp3p62xddq4o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-28T04:30:00+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "072cbfa839e1ac0b7ec4cd636ea0af86",
+    "_url_hash": "86e89f03ecde5491b3e6104b48d5f9e97d03a3e916f8fdb905d1c78f6ea43cca",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nOil prices have jumped after the US carried out new attacks on Iran, targeting a military site in Bandar Abbas, a strategic port city.\n\nThe US Central Command (Centcom) said its forces also shot down four Iranian drones \"that posed a threat around the Strait of Hormuz\".\n\nGlobal oil benchmark Brent rose by 3.75% to $97.83 (£73.15) a barrel, while US-traded crude was 4% higher at $92.22.\n\nThe strikes come despite a ceasefire between Tehran and Washington as the two countries hold talks to end the three-month-long conflict that has effectively closed the key Strait of Hormuz waterway, pushing up the cost of energy around the world.\n\nAround a fifth of global oil and liquefied natural gas (LNG) supplies usually passes through the strait.\n\nShortly afer the US and Israel launched attacks on Iran on 28 February, Tehran responded by threatening to attack vessels using the shipping route.\n\n---\n\n[Lähde: EconoTimes]\nOil prices climbed sharply during early Asian trading on Thursday after reports emerged that the United States launched another military strike on Iran, increasing fears of further disruption to global crude supplies and uncertainty surrounding a potential peace agreement.\n\nBrent crude futures rose 1.9% to $96.03 per barrel, while West Texas Intermediate (WTI) crude gained 1.9% to trade at $90.36 per barrel. The rebound came after heavy losses earlier this week, driven by hopes that tensions in the Middle East could ease and shipping routes through the Strait of Hormuz might reopen soon.\n\nAccording to Reuters, several explosions were heard in Bandar Abbas, a key Iranian port city, after the U.S. reportedly targeted another Iranian military facility. American officials described the operation as an act of “self-defense” and stated that ceasefire discussions with Iran were still ongoing despite the renewed attacks.\n\nInvestor sentiment shifted again after U.S. President Donald Trump dismissed reports claiming Iran planned to fully reopen commercial shipping through the Strait of Hormuz within 30 days. Trump also rejected suggestions that Iran and Oman could jointly manage the strategic waterway and indicated that a final peace deal had not yet been reached.\n\nThe Strait of Hormuz remains one of the world’s most critical oil transit routes, carrying nearly 20% of global oil supplies. Although some ships have recently resumed passage, shipping activity is still significantly below normal levels due to ongoing regional instability.\n\nOil markets had previously declined on optimism surrounding a possible U.S.-Iran agreement, with Brent crude briefly falling below $100 per barrel. However, continued disagreements over Iran’s nuclear program and maritime control in the Gulf region are keeping traders cautious.\n\nAnalysts expect oil price volatility to remain high as geopolitical tensions continue to influence global energy markets in 2026.",
+    "research_source": "multi",
+    "summary": "Öljyn hinnat nousivat, kun Yhdysvallat teki uusia iskuja Iraniin ja kertoi pudottaneensa neljä iranilaista droonia Hormuzinsalmen alueella.",
+    "content": "Öljyn maailmanmarkkinahinnat ovat nousseet sen jälkeen, kun Yhdysvallat teki uusia iskuja Iraniin ja kohdisti operaation sotilaskohteeseen Bandar Abbasissa, strategisesti tärkeässä iranilaisessa satamakaupungissa. Iskut tehtiin tilanteessa, jossa Teheranin ja Washingtonin välillä on ollut tulitauko ja neuvottelut kolmen kuukauden konfliktin päättämisestä ovat lähdetietojen mukaan yhä käynnissä.\n\n## Iskut kohdistuivat Bandar Abbasiin\n\nYhdysvaltain keskisen sotilasjohdon Centcomin mukaan maan joukot ampuivat alas myös neljä iranilaista droonia, joiden se katsoi muodostaneen uhan Hormuzinsalmen ympäristössä. Bandar Abbas on keskeinen satamakaupunki lähellä salmea, jolla on suuri merkitys kansainväliselle energiakaupalle.\n\nLähdetietojen mukaan kaupungissa kuultiin useita räjähdyksiä sen jälkeen, kun Yhdysvallat oli kohdistuksen mukaan iskenyt uuteen iranilaiseen sotilaskohteeseen. Yhdysvaltalaisviranomaiset ovat kuvanneet operaatiota itsepuolustukseksi. Samalla ne ovat sanoneet, että tulitaukokeskustelut Iranin kanssa jatkuvat iskuista huolimatta.\n\n## Markkinat reagoivat Hormuzin tilanteeseen\n\nÖljyn hinta nousi iskujen jälkeen selvästi. Kansainvälinen Brent-viiteöljy kallistui 3,75 prosenttia 97,83 dollariin barrelilta. Yhdysvalloissa kaupankäynnin kohteena oleva raakaöljy nousi 4 prosenttia 92,22 dollariin barrelilta.\n\nHintareaktion taustalla on erityisesti huoli Hormuzinsalmen tilanteesta. Noin viidennes maailman öljyn ja nesteytetyn maakaasun toimituksista kulkee tavallisesti salmen kautta. Konflikti on lähdetietojen mukaan käytännössä sulkenut tärkeän väylän, mikä on nostanut energian hintaa eri puolilla maailmaa.\n\nSijoittajien tunnelmaa heilutti myös se, että Yhdysvaltain presidentti Donald Trump torjui väitteitä, joiden mukaan Iran olisi avaamassa kaupallisen merenkulun Hormuzinsalmessa kokonaan uudelleen 30 päivän kuluessa. Trump hylkäsi myös ajatukset siitä, että Iran ja Oman voisivat hallinnoida strategista vesiväylää yhdessä, ja viittasi siihen, ettei lopullista rauhansopimusta ole vielä saavutettu.\n\nIran on aiemmin uhannut iskeä aluksiin, jotka käyttävät kyseistä merireittiä. Tämä on lisännyt epävarmuutta alueella, jossa sotilaalliset toimet, tulitaukoneuvottelut ja energiavirtojen jatkuvuus kytkeytyvät nyt tiiviisti toisiinsa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "iran",
+      "yhdysvallat",
+      "öljy",
+      "hormuzinsalmi",
+      "energia"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat teki uusia iskuja Iraniin ja kertoi pudottaneensa neljä iranilaista droonia.",
+      "Brent-öljyn hinta nousi 3,75 prosenttia 97,83 dollariin barrelilta.",
+      "Hormuzinsalmen tilanne huolestuttaa markkinoita, koska sen kautta kulkee suuri osa maailman öljy- ja LNG-toimituksista."
+    ],
+    "key_points": [
+      "Yhdysvallat teki uusia iskuja Iraniin ja kertoi pudottaneensa neljä iranilaista droonia.",
+      "Brent-öljyn hinta nousi 3,75 prosenttia 97,83 dollariin barrelilta.",
+      "Hormuzinsalmen tilanne huolestuttaa markkinoita, koska sen kautta kulkee suuri osa maailman öljy- ja LNG-toimituksista."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin lähdetietoihin. EconoTimesin Reuters-viittaus on käsitelty varovasti lähdetietona, eikä epävarmoja tai ristiriitaisia yksityiskohtia ole laajennettu.",
+    "source_text": "Oil prices have jumped after the US carried out new attacks on Iran, targeting a military site in Bandar Abbas, a strategic port city. The US Central Command (Centcom) said its forces also shot down four Iranian drones \"that posed a threat around the Strait of Hormuz\". Global oil benchmark Brent rose by 3.75% to $97.83 (£73.15) a barrel, while US-traded crude was 4% higher at $92.22. The strikes come despite a ceasefire between Tehran and Washington as the two countries hold talks to end the three-month-long conflict that has effectively closed the key Strait of Hormuz waterway, pushing up the cost of energy around the world. Around a fifth of global oil and liquefied natural gas (LNG) supplies usually passes through the strait.\n\nThe strikes come despite a ceasefire between Tehran and Washington as the two countries hold peace talks.\n\nAccording to Reuters, several explosions were heard in Bandar Abbas, a key Iranian port city, after the U.S. reportedly targeted another Iranian military facility. American officials described the operation as an act of “self-defense” and stated that ceasefire discussions with Iran were still ongoing despite the renewed attacks. Investor sentiment shifted again after U.S. President Donald Trump dismissed reports claiming Iran planned to fully reopen commercial shipping through the Strait of Hormuz within 30 days. Trump also rejected suggestions that Iran and Oman could jointly manage the strategic waterway and indicated that a final peace deal had not yet been reached.\n\nShortly afer the US and Israel launched attacks on Iran on 28 February, Tehran responded by threatening to attack vessels using the shipping route. ---",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260528T045117Z_6bfbec1aa2"
+  },
+  "duplicate_rejected_at": "2026-05-28T04:58:01.335420+00:00",
+  "duplicate_rejected": true
+}
