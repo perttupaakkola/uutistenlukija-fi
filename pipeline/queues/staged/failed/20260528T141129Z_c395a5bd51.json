@@ -177,5 +177,36 @@
     "writer_confidence": 0.88,
     "degraded_mode": false,
     "monica_packet_id": "20260528T141129Z_c395a5bd51"
-  }
+  },
+  "quality_gate_rejected_at": "2026-05-28T14:38:02.074566+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260528T141129Z_c395a5bd51",
+    "category": "Kotimaa",
+    "selected_source_words": 256,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "quality_total": 60,
+    "quality_normalized": 8.02,
+    "quality_reasons": [
+      "length under target (290 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number in title/lead: 14",
+      "unsourced_numbers: 14"
+    ],
+    "hard_fails": [
+      "central unsourced number in title/lead: 14"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 14"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 290,
+    "title": "Auerin julkaisematon vankilahaastattelu nousee esiin 14 vuoden takaa"
+  },
+  "failure": "quality_gate_rejected: length under target (290 words); missing: image; unsourced numbers; central unsourced number in title/lead: 14; unsourced_numbers: 14"
 }
