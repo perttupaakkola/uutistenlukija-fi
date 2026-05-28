@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-28T01:31:15.929693+00:00",
+  "digest": "840762b79d",
+  "packet": {
+    "packet_id": "20260528T013115Z_840762b79d",
+    "created_at": "2026-05-28T01:31:15Z",
+    "headline_seed": "Keskipalkka jopa 9000 e/kk – T&T selvitti aurinkovoima-alan yritysten palkat Suomessa",
+    "description_seed": "Energia-ala tunnetaan hyvänä palkanmaksajana. Aurinkovoiman kehittäjien palkkataso ei jää siitä jälkeen, vaikka ala on melko uusi Suomessa. Tekniikka&Talous selvitti alan palkkoja yhtiöittäin.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/ad8d9d37-c784-482e-84ba-14fb21c69eda",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/ad8d9d37-c784-482e-84ba-14fb21c69eda"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Keskipalkka jopa 9000 e/kk – T&T selvitti aurinkovoima-alan yritysten palkat Suomessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Energia-ala tunnetaan hyvänä palkanmaksajana. Aurinkovoiman kehittäjien palkkataso ei jää siitä jälkeen, vaikka ala on melko uusi Suomessa. Tekniikka&Talous selvitti alan palkkoja yhtiöittäin.",
+        "word_count": 22,
+        "keyword_overlap": 16,
+        "strong_overlap": 12
+      }
+    ],
+    "source_text": "Energia-ala tunnetaan hyvänä palkanmaksajana. Aurinkovoiman kehittäjien palkkataso ei jää siitä jälkeen, vaikka ala on melko uusi Suomessa. Tekniikka&Talous selvitti alan palkkoja yhtiöittäin.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 44,
+      "selected_blocks": 1,
+      "selected_source_words": 22,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Keskipalkka jopa 9000 e/kk – T&T selvitti aurinkovoima-alan yritysten palkat Suomessa",
+      "description": "Energia-ala tunnetaan hyvänä palkanmaksajana. Aurinkovoiman kehittäjien palkkataso ei jää siitä jälkeen, vaikka ala on melko uusi Suomessa. Tekniikka&Talous selvitti alan palkkoja yhtiöittäin.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Keskipalkka jopa 9000 e/kk – T&T selvitti aurinkovoima-alan yritysten palkat Suomessa",
+    "description": "Energia-ala tunnetaan hyvänä palkanmaksajana. Aurinkovoiman kehittäjien palkkataso ei jää siitä jälkeen, vaikka ala on melko uusi Suomessa. Tekniikka&Talous selvitti alan palkkoja yhtiöittäin.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/ad8d9d37-c784-482e-84ba-14fb21c69eda",
+    "published": "2026-05-28T01:03:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "b9b37182fc1ee4573bb70a92e7b76c04",
+    "_url_hash": "34bf756d08e9e43a7533c3badf8b20705574a40a1646405da6101ddde6a41c9d",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Energia-ala tunnetaan hyvänä palkanmaksajana. Aurinkovoiman kehittäjien palkkataso ei jää siitä jälkeen, vaikka ala on melko uusi Suomessa. Tekniikka&Talous selvitti alan palkkoja yhtiöittäin.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-28T01:33:50.870935+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman toistoa tai keksittyjä lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260528T013115Z_840762b79d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman toistoa tai keksittyjä lisätietoja.\"}"
+}
