@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T08:51:24.712138+00:00",
+  "digest": "d0be0f7936",
+  "packet": {
+    "packet_id": "20260529T085124Z_d0be0f7936",
+    "created_at": "2026-05-29T08:51:24Z",
+    "headline_seed": "Autoilija törmäsi lapseen Espoossa",
+    "description_seed": "Lapsi ylitti suojatietä, kun autoilija törmäsi lapsen pyörään. Niittykummussa Espoossa sattui torstaina autoilijan ja pyöräilevän lapsen yhteentörmäys suojatiellä. Törmäys tapahtui Vuoritontuntiellä. Poliisi tutkii tapahtunutta liikenneturvallisuuden vaarantamisena.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/2817d052-8d25-4bcc-8f98-1984730575bd",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/2817d052-8d25-4bcc-8f98-1984730575bd"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Autoilija törmäsi lapseen Espoossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Lapsi ylitti suojatietä, kun autoilija törmäsi lapsen pyörään. Niittykummussa Espoossa sattui torstaina autoilijan ja pyöräilevän lapsen yhteentörmäys suojatiellä. Törmäys tapahtui Vuoritontuntiellä. Poliisi tutkii tapahtunutta liikenneturvallisuuden vaarantamisena.",
+        "word_count": 26,
+        "keyword_overlap": 23,
+        "strong_overlap": 22
+      }
+    ],
+    "source_text": "Lapsi ylitti suojatietä, kun autoilija törmäsi lapsen pyörään. Niittykummussa Espoossa sattui torstaina autoilijan ja pyöräilevän lapsen yhteentörmäys suojatiellä. Törmäys tapahtui Vuoritontuntiellä. Poliisi tutkii tapahtunutta liikenneturvallisuuden vaarantamisena.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 1,
+      "selected_source_words": 26,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Autoilija törmäsi lapseen Espoossa",
+      "description": "Lapsi ylitti suojatietä, kun autoilija törmäsi lapsen pyörään. Niittykummussa Espoossa sattui torstaina autoilijan ja pyöräilevän lapsen yhteentörmäys suojatiellä. Törmäys tapahtui Vuoritontuntiellä. Poliisi tutkii tapahtunutta liikenneturvallisuuden vaarantamisena.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Autoilija törmäsi lapseen Espoossa",
+    "description": "Lapsi ylitti suojatietä, kun autoilija törmäsi lapsen pyörään. Niittykummussa Espoossa sattui torstaina autoilijan ja pyöräilevän lapsen yhteentörmäys suojatiellä. Törmäys tapahtui Vuoritontuntiellä. Poliisi tutkii tapahtunutta liikenneturvallisuuden vaarantamisena.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/2817d052-8d25-4bcc-8f98-1984730575bd",
+    "published": "2026-05-29T11:41:33+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "89af657edc390f51a8aa2a6abc8d9395",
+    "_url_hash": "0024d9fa29bd29bb17ee394383f335688d2c6e11530316a73fdd7965dd7b9de0",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Lapsi ylitti suojatietä, kun autoilija törmäsi lapsen pyörään. Niittykummussa Espoossa sattui torstaina autoilijan ja pyöräilevän lapsen yhteentörmäys suojatiellä. Törmäys tapahtui Vuoritontuntiellä. Poliisi tutkii tapahtunutta liikenneturvallisuuden vaarantamisena.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-29T08:53:16.245534+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T085124Z_d0be0f7936\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.\"}"
+}
