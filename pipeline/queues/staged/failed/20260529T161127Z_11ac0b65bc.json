@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T16:11:27.819731+00:00",
+  "digest": "11ac0b65bc",
+  "packet": {
+    "packet_id": "20260529T161127Z_11ac0b65bc",
+    "created_at": "2026-05-29T16:11:27Z",
+    "headline_seed": "Lahden ja Heinolan välillä maastopalo vaikeakulkuisessa maastossa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/paikalliset/9493962",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9493962"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahden ja Heinolan välillä maastopalo vaikeakulkuisessa maastossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 150,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "itahame",
+        "itahame"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahden ja Heinolan välillä maastopalo vaikeakulkuisessa maastossa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lahden ja Heinolan välillä maastopalo vaikeakulkuisessa maastossa",
+    "description": "",
+    "link": "https://www.ess.fi/paikalliset/9493962",
+    "published": "2026-05-29T19:01:18+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "0e86d3019c2416a1402d46a01df6109e",
+    "_url_hash": "efd63a2dd69682a9b35f1b4ed96f8de219b27a327d897ecb4bf7fe840017d96e",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: itahame]\nKuomalla on ollut taloudellisia vaikeuksia ja yhtiössä on käyty vuoden sisään kahdet muutosneuvottelut.\n\nMäntyharjulla ja toistaiseksi myös Ristiinan Kuomiokoskella kenkiä valmistava Kuomikoski oy on siirtänyt osan kenkiensä valmistuksesta ulkomaille, kertoo Yle.\n\nKuoma kertoo verkkosivuillaan, että kengät valmistetaan Mäntyharjulla ja Kuomiokoskella. Osa kenkien valmistuksesta tapahtuu kuitenkin myös muissa Euroopan ja Aasian maissa. Tämä tieto lisättiin Kuoman verkkosivuille vasta, kun Yle kysyi yritykseltä asiasta.\n\nEsimerkiksi Kuoman suosituin kenkämalli eli putkivarsisaappaat on 70-prosenttisesti valmistettu Suomessa. Varren ompelutyö tehdään Latviassa. Ylen toinen jutussa esille nostama kenkämalli on Kulkija, jonka kotimaisuusaste on 55 prosenttia.\n\nKuomalla on Avainlippu-merkki, jonka kriteerien mukaan tuote täytyy olla Suomessa valmistettu ja sen kotimaisuusaste on vähintään 50 prosenttia tuotteen omakustannusarvosta. Tuotteen ei siis tarvitse olla täysin Suomessa valmistettu.\n\nKuomalla on ollut taloudellisia vaikeuksia ja yhtiössä on käyty vuoden sisään kahdet muutosneuvottelut. Loppuvuodesta irtisanottiin 12 henkilötyövuotta ja keväällä seitsemän. Lisäksi yhtiö keskittää kaikki toimintonsa Mäntyharjulle kesän aikana ja kenkien valmistus Kuomiokoskella loppuu.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T16:13:17.909257+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T161127Z_11ac0b65bc\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
