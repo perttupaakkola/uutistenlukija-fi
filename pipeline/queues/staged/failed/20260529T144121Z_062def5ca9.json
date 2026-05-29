@@ -1,0 +1,187 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T14:41:21.565293+00:00",
+  "digest": "062def5ca9",
+  "packet": {
+    "packet_id": "20260529T144121Z_062def5ca9",
+    "created_at": "2026-05-29T14:41:21Z",
+    "headline_seed": "Nato condemns Russian 'recklessness' after drone hits Romanian residential block",
+    "description_seed": "Romania will hold an emergency meeting following the incident, in which two people were injured.",
+    "link": "https://www.bbc.com/news/articles/c93x4nxlkjeo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c93x4nxlkjeo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nato condemns Russian 'recklessness' after drone hits Romanian residential block"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Romania will hold an emergency meeting following the incident, in which two people were injured.",
+        "word_count": 15,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "President Dan also convened an emergency meeting of Romania's Supreme Defence Council, describing the Russian drone strike as \"the most serious incident to have affected Romanian territory since the start of Russia's",
+        "word_count": 32,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A Russian drone has hit a block of flats in Romania, causing a fire and injuring two people, Romanian officials say. The incident happened on Friday in the eastern town of Galați - near Romania's border with Ukraine. Nato and EU allies of Romania have rallied to the support of the fellow member. Nato's secretary general said \"Russia's reckless behaviour is a danger to us all\", while the head of the European Commission said Moscow's \"war of aggression had crossed yet another line\". Russian drones have strayed across Romania's border a number of times during the four-year war with Ukraine, but it is the first time Romanian citizens have been hurt. Russia has yet to comment on the incident.",
+        "word_count": 119,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Romania's emergency situations authority said the drone's entire explosive payload detonated and caused a fire on the 10th floor of the residential building. Two people with abrasions required medical treatment and were taken to the Galați County Emergency Clinical Hospital. About 70 people were evacuated as the fire was put out. Romania's defence ministry said two F-16 fighter jets were scrambled after the drones were detected. Brig Gen Gheorghe Maxim said the army had only had four minutes from when the drone was detected to the moment of impact. The ministry added in a later update that it appeared the \"entire load\" of the Geran 2 drone - also known as a Shahed 136 - had exploded on impact.",
+        "word_count": 119,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Romania will hold an emergency meeting following the incident, in which two people were injured.\n\nPresident Dan also convened an emergency meeting of Romania's Supreme Defence Council, describing the Russian drone strike as \"the most serious incident to have affected Romanian territory since the start of Russia's\n\nA Russian drone has hit a block of flats in Romania, causing a fire and injuring two people, Romanian officials say. The incident happened on Friday in the eastern town of Galați - near Romania's border with Ukraine. Nato and EU allies of Romania have rallied to the support of the fellow member. Nato's secretary general said \"Russia's reckless behaviour is a danger to us all\", while the head of the European Commission said Moscow's \"war of aggression had crossed yet another line\". Russian drones have strayed across Romania's border a number of times during the four-year war with Ukraine, but it is the first time Romanian citizens have been hurt. Russia has yet to comment on the incident.\n\nRomania's emergency situations authority said the drone's entire explosive payload detonated and caused a fire on the 10th floor of the residential building. Two people with abrasions required medical treatment and were taken to the Galați County Emergency Clinical Hospital. About 70 people were evacuated as the fire was put out. Romania's defence ministry said two F-16 fighter jets were scrambled after the drones were detected. Brig Gen Gheorghe Maxim said the army had only had four minutes from when the drone was detected to the moment of impact. The ministry added in a later update that it appeared the \"entire load\" of the Geran 2 drone - also known as a Shahed 136 - had exploded on impact.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 420,
+      "selected_blocks": 4,
+      "selected_source_words": 285,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nato condemns Russian 'recklessness' after drone hits Romanian residential block",
+      "description": "Romania will hold an emergency meeting following the incident, in which two people were injured.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nato condemns Russian 'recklessness' after drone hits Romanian residential block",
+    "description": "Romania will hold an emergency meeting following the incident, in which two people were injured.",
+    "link": "https://www.bbc.com/news/articles/c93x4nxlkjeo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-29T12:56:30+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "581fe4b61e35031eb93b82e19429295b",
+    "_url_hash": "f4fc092b75f02a12bd32d51a1806ad3460345b11f0bcd6336eabb304c5789179",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA Russian drone has hit a block of flats in Romania, causing a fire and injuring two people, Romanian officials say.\n\nThe incident happened on Friday in the eastern town of Galați - near Romania's border with Ukraine.\n\nNato and EU allies of Romania have rallied to the support of the fellow member. Nato's secretary general said \"Russia's reckless behaviour is a danger to us all\", while the head of the European Commission said Moscow's \"war of aggression had crossed yet another line\".\n\nRussian drones have strayed across Romania's border a number of times during the four-year war with Ukraine, but it is the first time Romanian citizens have been hurt. Russia has yet to comment on the incident.\n\nRomania's emergency situations authority said the drone's entire explosive payload detonated and caused a fire on the 10th floor of the residential building.\n\nTwo people with abrasions required medical treatment and were taken to the Galați County Emergency Clinical Hospital. About 70 people were evacuated as the fire was put out.\n\nRomania's defence ministry said two F-16 fighter jets were scrambled after the drones were detected. Brig Gen Gheorghe Maxim said the army had only had four minutes from when the drone was detected to the moment of impact.\n\nThe ministry added in a later update that it appeared the \"entire load\" of the Geran 2 drone - also known as a Shahed 136 - had exploded on impact.\n\nGen Maxim said Romanian forces were under significant constraints, as they could not fire munitions that violated Ukrainian airspace. \"Ukraine is at war, but Romania is at peace. We cannot launch a projectile into Ukrainian airspace,\" he said.\n\nRomania's military has sought to reassure the public that it was not an attack on the country but rather \"a conflict at our border, with consequences for the local population\".\n\nThe foreign ministry in Bucharest summoned the Russian ambassador in response to the drone strike.\n\nRomanian President Nicușor Dan said his administration would expel the Russian consul in the Black Sea port of Constanța and shut down the consulate. Russia's defence ministry spokeswoman Maria Zakharova said Moscow \"won't take long\" to respond.\n\nRussian President Vladimir Putin has been informed about the incident, his spokesman Dmitry Peskov said.\n\nPresident Dan also convened an emergency meeting of Romania's Supreme Defence Council, describing the Russian drone strike as \"the most serious incident to have affected Romanian territory since the start of Russia's",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T14:44:43.561663+00:00",
+  "failure": "content too short: 220 words",
+  "payload": {
+    "packet_id": "20260529T144121Z_062def5ca9",
+    "title": "Nato tuomitsi Venäjän ”holtittomuuden” droonin osuttua asuintaloon Romaniassa",
+    "summary": "Romanian viranomaisten mukaan venäläinen drooni osui asuinkerrostaloon Galațissa lähellä Ukrainan rajaa. Kaksi ihmistä sai vammoja, noin 70 evakuoitiin ja Romania kutsui koolle hätäkokouksen.",
+    "content": "Venäläinen drooni on osunut asuinkerrostaloon Romanian itäosassa Galațin kaupungissa lähellä Ukrainan rajaa, Romanian viranomaiset kertovat. Isku sytytti tulipalon asuinrakennuksen kymmenennessä kerroksessa, kaksi ihmistä vietiin sairaalahoitoon hiertymien vuoksi ja noin 70 ihmistä evakuoitiin palon sammuttamisen ajaksi.\n\n## Droonin räjähdelasti sytytti palon\n\nRomanian hätätilanneviranomaisen mukaan droonin koko räjähdelasti räjähti osumassa. Viranomaiset kertoivat, että palo syttyi kerrostalon kymmenennessä kerroksessa ja että evakuointi tehtiin sammutustöiden ajaksi.\n\nKaksi hiertymiä saanutta ihmistä tarvitsi lääkärinhoitoa, ja heidät vietiin Galațin piirikunnan päivystyssairaalaan. Romanian puolustusministeriön mukaan kaksi F-16-hävittäjää nousi ilmaan sen jälkeen, kun drooneja oli havaittu. Prikaatikenraali Gheorghe Maximin mukaan armeijalla oli vain neljä minuuttia aikaa droonin havaitsemisesta osumaan.\n\nMinisteriö arvioi myöhemmässä päivityksessään, että kyseessä oli Geran 2 -drooni, joka tunnetaan myös Shahed 136 -nimellä. Viranomaisten mukaan koko kuorma näytti räjähtäneen törmäyksessä.\n\n## Romania kutsui hätäkokouksen\n\nRomanian presidentti Dan kutsui koolle maan ylimmän puolustusneuvoston hätäkokouksen. Hän kuvasi iskua vakavimmaksi Romanian alueeseen kohdistuneeksi välikohtaukseksi sen jälkeen, kun Venäjän laajamittainen sota Ukrainassa alkoi.\n\nNato ja EU:n edustajat ilmaisivat tukensa Romanialle, joka on sekä Naton että Euroopan unionin jäsen. Naton pääsihteeri sanoi Venäjän holtittoman toiminnan olevan vaara kaikille. Euroopan komission johdon mukaan Moskovan hyökkäyssota oli ylittänyt jälleen uuden rajan.\n\n## Ensimmäiset romanialaisuhrit\n\nVenäläisiä drooneja on aiemminkin ajautunut Romanian rajan yli Ukrainan sodan aikana. Lähdetietojen mukaan tämä on kuitenkin ensimmäinen kerta, kun Romanian kansalaisia on loukkaantunut tällaisessa tilanteessa. Venäjä ei ollut kommentoinut tapausta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Romania",
+      "Nato",
+      "Venäjä",
+      "Ukrainan sota",
+      "drooni",
+      "Galați"
+    ],
+    "summary_bullets": [
+      "Venäläinen drooni osui asuinkerrostaloon Romanian Galațissa lähellä Ukrainan rajaa.",
+      "Kaksi ihmistä sai lieviä vammoja ja noin 70 ihmistä evakuoitiin palon vuoksi.",
+      "Romania kutsui koolle hätäkokouksen, ja Nato sekä EU ilmaisivat tukensa maalle."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Artikkeli perustuu paketin viranomaistietoihin ja liittolaisten reaktioihin. Venäjän kommenttia ei ollut saatavilla lähdeaineistossa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260529T144121Z_062def5ca9\",\n  \"title\": \"Nato tuomitsi Venäjän ”holtittomuuden” droonin osuttua asuintaloon Romaniassa\",\n  \"summary\": \"Romanian viranomaisten mukaan venäläinen drooni osui asuinkerrostaloon Galațissa lähellä Ukrainan rajaa. Kaksi ihmistä sai vammoja, noin 70 evakuoitiin ja Romania kutsui koolle hätäkokouksen.\",\n  \"content\": \"Venäläinen drooni on osunut asuinkerrostaloon Romanian itäosassa Galațin kaupungissa lähellä Ukrainan rajaa, Romanian viranomaiset kertovat. Isku sytytti tulipalon asuinrakennuksen kymmenennessä kerroksessa, kaksi ihmistä vietiin sairaalahoitoon hiertymien vuoksi ja noin 70 ihmistä evakuoitiin palon sammuttamisen ajaksi.\\n\\n## Droonin räjähdelasti sytytti palon\\n\\nRomanian hätätilanneviranomaisen mukaan droonin koko räjähdelasti räjähti osumassa. Viranomaiset kertoivat, että palo syttyi kerrostalon kymmenennessä kerroksessa ja että evakuointi tehtiin sammutustöiden ajaksi.\\n\\nKaksi hiertymiä saanutta ihmistä tarvitsi lääkärinhoitoa, ja heidät vietiin Galațin piirikunnan päivystyssairaalaan. Romanian puolustusministeriön mukaan kaksi F-16-hävittäjää nousi ilmaan sen jälkeen, kun drooneja oli havaittu. Prikaatikenraali Gheorghe Maximin mukaan armeijalla oli vain neljä minuuttia aikaa droonin havaitsemisesta osumaan.\\n\\nMinisteriö arvioi myöhemmässä päivityksessään, että kyseessä oli Geran 2 -drooni, joka tunnetaan myös Shahed 136 -nimellä. Viranomaisten mukaan koko kuorma näytti räjähtäneen törmäyksessä.\\n\\n## Romania kutsui hätäkokouksen\\n\\nRomanian presidentti Dan kutsui koolle maan ylimmän puolustusneuvoston hätäkokouksen. Hän kuvasi iskua vakavimmaksi Romanian alueeseen kohdistuneeksi välikohtaukseksi sen jälkeen, kun Venäjän laajamittainen sota Ukrainassa alkoi.\\n\\nNato ja EU:n edustajat ilmaisivat tukensa Romanialle, joka on sekä Naton että Euroopan unionin jäsen. Naton pääsihteeri sanoi Venäjän holtittoman toiminnan olevan vaara kaikille. Euroopan komission johdon mukaan Moskovan hyökkäyssota oli ylittänyt jälleen uuden rajan.\\n\\n## Ensimmäiset romanialaisuhrit\\n\\nVenäläisiä drooneja on aiemminkin ajautunut Romanian rajan yli Ukrainan sodan aikana. Lähdetietojen mukaan tämä on kuitenkin ensimmäinen kerta, kun Romanian kansalaisia on loukkaantunut tällaisessa tilanteessa. Venäjä ei ollut kommentoinut tapausta.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Romania\",\n    \"Nato\",\n    \"Venäjä\",\n    \"Ukrainan sota\",\n    \"drooni\",\n    \"Galați\"\n  ],\n  \"summary_bullets\": [\n    \"Venäläinen drooni osui asuinkerrostaloon Romanian Galațissa lähellä Ukrainan rajaa.\",\n    \"Kaksi ihmistä sai lieviä vammoja ja noin 70 ihmistä evakuoitiin palon vuoksi.\",\n    \"Romania kutsui koolle hätäkokouksen, ja Nato sekä EU ilmaisivat tukensa maalle.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Artikkeli perustuu paketin viranomaistietoihin ja liittolaisten reaktioihin. Venäjän kommenttia ei ollut saatavilla lähdeaineistossa.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260529T144121Z_062def5ca9",
+    "category": "Kotimaa",
+    "selected_source_words": 285,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 220,
+    "issues": [
+      "content too short: 220 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Nato tuomitsi Venäjän ”holtittomuuden” droonin osuttua asuintaloon Romaniassa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-29T14:44:43.561059+00:00",
+    "repair_trigger": "pre_repair_word_count=217; selected_source_words=285; selected_source_blocks=4",
+    "pre_repair_word_count": 217,
+    "pre_repair_lead_word_count": 35,
+    "post_repair_word_count": 220,
+    "post_repair_lead_word_count": 35,
+    "selected_source_words_at_repair": 285,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 285,
+    "source_blocks": 4,
+    "repair_added_word_count": 3,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 220 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:9d52c95840",
+      "2:BBC World:2514cf15a9",
+      "3:BBC World:7fec65ffc7",
+      "4:BBC World:a1d9045e3b"
+    ],
+    "final_issues": [
+      "content too short: 220 words"
+    ],
+    "recovered": false
+  }
+}

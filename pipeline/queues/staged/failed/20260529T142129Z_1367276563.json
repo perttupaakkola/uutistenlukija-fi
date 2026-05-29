@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T14:21:29.086748+00:00",
+  "digest": "1367276563",
+  "packet": {
+    "packet_id": "20260529T142129Z_1367276563",
+    "created_at": "2026-05-29T14:21:29Z",
+    "headline_seed": "Keskipohjanmaa: Karhu rynnisti kohti metsuria",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/metsa/21736cca-7ad2-4aee-822e-7d816490e3cd",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/metsa/21736cca-7ad2-4aee-822e-7d816490e3cd"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Keskipohjanmaa: Karhu rynnisti kohti metsuria"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 140,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Keskipohjanmaa: Karhu rynnisti kohti metsuria",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Keskipohjanmaa: Karhu rynnisti kohti metsuria",
+    "description": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/metsa/21736cca-7ad2-4aee-822e-7d816490e3cd",
+    "published": "2026-05-29T13:58:32+00:00",
+    "source": "Maaseudun Tulevaisuus",
+    "source_domain": "maaseuduntulevaisuus.fi",
+    "language": "fi",
+    "fingerprint": "6f970ccd6f95c36f9e13752ebb7b4042",
+    "_url_hash": "f7b27a4e4f016b129367d3dc5183bd1f7fe3bab9b44ce1d377a7f33aee1336f8",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nTasavallan presidentti Alexander Stubb vierailli perjantaina Kokkolassa. Hän kommentoi vierailullaan Suomen tuoretta päätöstä liittyä Palestiina-julkilausumaan Keskipohjanmaa-lehdelle. Aiemmin päivällä ulkoministeri Elina Valtonen kertoi, että Suomi liittyy lausumaan mukaan.\n\n– Pidän tätä ulkoministerin päätöstä julkilausumaan liittymisestä hyvänä askeleena kohti kahden valtion mallia, Stubb sanoo.\n\nHänen mukaansa kahden valtion malli on Suomen pitkän ajan tavoite. Milloin Suomi voisi tunnustaa Palestiinan valtion, on Stubbin mukaan pitkälti valtioneuvoston käsissä.\n\nPresidentti Alexander Stubb kertoi aikaisemmin Ylelle, että on valmis hyväksymään valtioneuvoston esityksen Palestiinan valtion tunnustamisesta, jos hän sellaisen esityksen valtioneuvostolta saa.\n\nStubb sanoo toivovansa, että Suomi tunnustaisi Palestiinan, mutta hän ei ota kantaa hallituksen sisäisiin ristiriitoihin asiasta. Hän sanoo, että seuraavat viikot varmasti osoittavat, voiko hallitus sellaisen esityksen presidentille antaa.\n\nTasavallan presidentti Alexander Stubb vieraili Kokkolassa perjantaina tavaten muun muassa koululaisia, nuorisovaltuutettuja sekä kansalaisia.\n\nStubb osallistui myös konttisataman vihkiäisiin Kokkolan satamassa. Tilaisuus oli osa sataman 200-vuotisjuhlavuotta.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T14:23:14.788089+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä, ajankohtaa, paikkaa tai vahvistettuja yksityiskohtia, joten 250 sanan julkaistavaa uutista ei voi kirjoittaa keksimättä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T142129Z_1367276563\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä, ajankohtaa, paikkaa tai vahvistettuja yksityiskohtia, joten 250 sanan julkaistavaa uutista ei voi kirjoittaa keksimättä tietoja.\"}"
+}
