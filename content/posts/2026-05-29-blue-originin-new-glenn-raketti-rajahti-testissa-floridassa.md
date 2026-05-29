@@ -44,7 +44,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/05/28/blue-origins-new-glenn-rocket-explodes-during-testing-in-florida/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
