@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T18:11:47.918201+00:00",
+  "digest": "6d785b8648",
+  "packet": {
+    "packet_id": "20260529T181147Z_6d785b8648",
+    "created_at": "2026-05-29T18:11:47Z",
+    "headline_seed": "Pesäpallotilastoja | Naisten Superpesis",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9494176",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9494176"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pesäpallotilastoja | Naisten Superpesis"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 134,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pesäpallotilastoja | Naisten Superpesis",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pesäpallotilastoja | Naisten Superpesis",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9494176",
+    "published": "2026-05-29T21:02:28+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "02f5b6dc222c7fed7181b5f63af46269",
+    "_url_hash": "52552868a1e17352787a7926318f96719c718d7844ea8b08feed43d3c45839e5",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nFera, Rauma–Jussittaret, Seinäjoki 0-2 (1-4, 0-1)\n\nJussittaret, Seinäjoki: 2 1 1 0 = 4 0 1 0 = 1 2\n\nPalkitut: II Pinja Toivonen, I Ilona Hakoniemi.\n\nPalkitut: II Liinu Turpela, I Aino-Kaisa Mantere.\n\nOulun Lippo Naiset–Joensuun Maila 0-2 (0-1, 0-10)\n\nOulun Lippo Naiset: 0 0 0 0 = 0 0 0 0 0 = 0 0\n\nJoensuun Maila: 1 0 0 = 1 1 2 1 6 = 10 2\n\nPalkitut: I Jonna Heinula, II Venla Ronkainen.\n\nPalkitut: I Emilia Linna, II Johanna Pirskanen.\n\nRoihuttaret, Helsinki–Mailattaret, Vaasa 2-0 (4-0, 3-2)\n\nRoihuttaret, Helsinki: 1 1 2 = 4 0 0 1 2 = 3 2\n\nMailattaret, Vaasa: 0 0 0 0 = 0 0 0 2 0 = 2 0\n\nPalkitut: I Sohvi Korhonen, II Salli Palola.\n\nPalkitut: I Emma Mustonen, II Oona Winter.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T18:13:15.712418+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä eikä tarkistettavia faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T181147Z_6d785b8648\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä eikä tarkistettavia faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

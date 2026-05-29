@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T18:01:30.753938+00:00",
+  "digest": "53c50c191f",
+  "packet": {
+    "packet_id": "20260529T180130Z_53c50c191f",
+    "created_at": "2026-05-29T18:01:30Z",
+    "headline_seed": "Pesäpallotuloksia | Miesten Superpesis",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9494154",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9494154"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pesäpallotuloksia | Miesten Superpesis"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 86,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pesäpallotuloksia | Miesten Superpesis",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pesäpallotuloksia | Miesten Superpesis",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9494154",
+    "published": "2026-05-29T20:57:41+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "6ce6bae5864102055f9b680cf03ddedb",
+    "_url_hash": "af310791a05205e5c24b722527725e14043563aad8a32ac5446677fcfcc28068",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nKoskenkorvan Urheilijat–Manse PP, Tampere 0-2 (1-3, 0-5)\n\nKouvolan Pallonlyöjät–Kempeleen Kiri 1-0 (2-2, 8-1)\n\nAlajärven Ankkurit–Sotkamon Jymy 0-2 (0-7, 2-5)\n\nKiteen Pallo–Vimpelin Veto 0-2 (0-3, 2-4)\n\nPattijoen Urheilijat, Raahe 3 2 1 0 1 13 10 5\n\nKoskenkorvan Urheilijat 2 0 0 0 2 2 11 0\n\nSeuraavat ottelut: 10. 5. Koskenkorvan Urheilijat–Manse PP, Tampere, Kouvolan Pallonlyöjät–Kempeleen Kiri, Alajärven Ankkurit–Sotkamon Jymy, Kiteen Pallo–Vimpelin Veto, 12. 5. Pattijoen Urheilijat, Raahe–Joensuun Maila, 13. 5. Imatran Pallo-Veikot–Manse PP, Tampere, Koskenkorvan Urheilijat–Alajärven Ankkurit, Kempeleen Kiri–Kiteen Pallo, 14. 5. Vimpelin Veto–Hyvinkään Tahko.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T18:03:15.644053+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä, ottelutuloksia, ajankohtaa tai muita tarkistettavia tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T180130Z_53c50c191f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä, ottelutuloksia, ajankohtaa tai muita tarkistettavia tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
