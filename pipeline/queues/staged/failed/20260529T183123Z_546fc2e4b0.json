@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T18:31:23.163354+00:00",
+  "digest": "546fc2e4b0",
+  "packet": {
+    "packet_id": "20260529T183123Z_546fc2e4b0",
+    "created_at": "2026-05-29T18:31:23Z",
+    "headline_seed": "Tapanilla meni kuppi nurin Vintedissä – Myi vaatteen, jäi tyhjin käsin: ”En voi suositella”",
+    "description_seed": "Vintedissä asioinut Tapani kyseenalaistaa kauppa-alustan luotettavuuden. Tapani myi muuttonsa yhteydessä merkkiliivinsä käytettyjen tuotteiden kauppapaikka Vintedissä. Hyväkuntoinen vaate maksoi kaupassa 300 euroa, ja Tapani myi sen sovelluksessa 65 eurolla.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/0bcfca60-38e0-4c74-8abc-1735ee323b9c",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/0bcfca60-38e0-4c74-8abc-1735ee323b9c"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tapanilla meni kuppi nurin Vintedissä – Myi vaatteen, jäi tyhjin käsin: ”En voi suositella”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Vintedissä asioinut Tapani kyseenalaistaa kauppa-alustan luotettavuuden. Tapani myi muuttonsa yhteydessä merkkiliivinsä käytettyjen tuotteiden kauppapaikka Vintedissä. Hyväkuntoinen vaate maksoi kaupassa 300 euroa, ja Tapani myi sen sovelluksessa 65 eurolla.",
+        "word_count": 28,
+        "keyword_overlap": 18,
+        "strong_overlap": 17
+      }
+    ],
+    "source_text": "Vintedissä asioinut Tapani kyseenalaistaa kauppa-alustan luotettavuuden. Tapani myi muuttonsa yhteydessä merkkiliivinsä käytettyjen tuotteiden kauppapaikka Vintedissä. Hyväkuntoinen vaate maksoi kaupassa 300 euroa, ja Tapani myi sen sovelluksessa 65 eurolla.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 56,
+      "selected_blocks": 1,
+      "selected_source_words": 28,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tapanilla meni kuppi nurin Vintedissä – Myi vaatteen, jäi tyhjin käsin: ”En voi suositella”",
+      "description": "Vintedissä asioinut Tapani kyseenalaistaa kauppa-alustan luotettavuuden. Tapani myi muuttonsa yhteydessä merkkiliivinsä käytettyjen tuotteiden kauppapaikka Vintedissä. Hyväkuntoinen vaate maksoi kaupassa 300 euroa, ja Tapani myi sen sovelluksessa 65 eurolla.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Tapanilla meni kuppi nurin Vintedissä – Myi vaatteen, jäi tyhjin käsin: ”En voi suositella”",
+    "description": "Vintedissä asioinut Tapani kyseenalaistaa kauppa-alustan luotettavuuden. Tapani myi muuttonsa yhteydessä merkkiliivinsä käytettyjen tuotteiden kauppapaikka Vintedissä. Hyväkuntoinen vaate maksoi kaupassa 300 euroa, ja Tapani myi sen sovelluksessa 65 eurolla.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/0bcfca60-38e0-4c74-8abc-1735ee323b9c",
+    "published": "2026-05-29T21:24:37+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "72c03848489e415b9d40cbaf3c5c74b0",
+    "_url_hash": "c094d827910fe48ecc29b280a710950a9dca5aaf1d2a66c3408c32766d9a7cf7",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Vintedissä asioinut Tapani kyseenalaistaa kauppa-alustan luotettavuuden. Tapani myi muuttonsa yhteydessä merkkiliivinsä käytettyjen tuotteiden kauppapaikka Vintedissä. Hyväkuntoinen vaate maksoi kaupassa 300 euroa, ja Tapani myi sen sovelluksessa 65 eurolla.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-29T18:33:15.711510+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan uutiseen ilman olennaisten faktojen keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T183123Z_546fc2e4b0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan uutiseen ilman olennaisten faktojen keksimistä.\"}"
+}

@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/007-first-light-myi-hurjan-hyvin-jo-ensimmaisen-vuorokauden-aikana/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
