@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/venajan-turvallisuuspalvelun-pomo-arisee-suomelle-uhka/9345764"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
