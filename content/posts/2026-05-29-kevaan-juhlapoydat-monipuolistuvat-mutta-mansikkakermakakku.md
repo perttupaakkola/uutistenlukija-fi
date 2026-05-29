@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kevaan-juhlapoydat-monipuolistuvat-yksi-kestosuosikki-pitaa-pintansa-toisen-klassikon-uudessa-tulemisessa-hiipumista/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

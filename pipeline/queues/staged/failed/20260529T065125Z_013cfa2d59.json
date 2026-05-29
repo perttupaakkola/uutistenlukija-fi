@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T06:51:25.174956+00:00",
+  "digest": "013cfa2d59",
+  "packet": {
+    "packet_id": "20260529T065125Z_013cfa2d59",
+    "created_at": "2026-05-29T06:51:25Z",
+    "headline_seed": "Vakava ulostulo antisemitismistä Suomessa",
+    "description_seed": "Kansanedustajat korostavat, että Israelin politiikkaa saa kritisoida.",
+    "link": "https://www.is.fi/politiikka/art-2000012041691.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/politiikka/art-2000012041691.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vakava ulostulo antisemitismistä Suomessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 95,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vakava ulostulo antisemitismistä Suomessa",
+      "description": "Kansanedustajat korostavat, että Israelin politiikkaa saa kritisoida.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Vakava ulostulo antisemitismistä Suomessa",
+    "description": "Kansanedustajat korostavat, että Israelin politiikkaa saa kritisoida.",
+    "link": "https://www.is.fi/politiikka/art-2000012041691.html",
+    "published": "2026-05-29T06:47:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "22b51215162825ca5e3a20efcfab61e1",
+    "_url_hash": "3b48bb326646e3c98cb0531a8bf90c67a2eb6fa96b5ab27314f00181392629a8",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nKanadalais-suomalainen koripallovalmentaja Gordon Herbert on Fox Sports Australian mukaan erittäin lähellä päävalmentajasopimusta New Zealand Breakersin kanssa.\n\nUusiseelantilaisseuraa luotsaa tämän kauden loppuun Petteri Koponen, joka jättää tehtävänsä kuluvan kauden jälkeen.\n\nHerbert, 67, toimii tällä hetkellä Kanadan maajoukkueen päävalmentajana. Suomessa vuoden valmentajaksi 2023 valittu Herbert on meritoitunut kansainvälisesti. Hän luotsasi Saksan maailmanmestaruuteen vuonna 2023. Hänet on valittu vuoden valmentajaksi Suomen lisäksi myös Saksassa ja Ranskassa.\n\nHerbert saapui Suomeen pelaamaan 1980-luvulla. Peliuransa jälkeen hän on valmentanut Suomessa, Itävallassa, Saksassa, Ranskassa ja Kanadassa. Ennen Kanadan maajoukkuepestiään Herbert valmensi saksalaisessa huippuseurassa Bayern Münchenissä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T06:53:26.586008+00:00",
+  "failure": "Paketti ei sisällä valittua lähdetekstiä eikä todennettavia yksityiskohtia julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T065125Z_013cfa2d59\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä valittua lähdetekstiä eikä todennettavia yksityiskohtia julkaistavan artikkelin kirjoittamiseen.\"}"
+}
