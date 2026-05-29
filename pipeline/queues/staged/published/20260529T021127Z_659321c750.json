@@ -1,0 +1,211 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T02:11:27.471345+00:00",
+  "digest": "659321c750",
+  "packet": {
+    "packet_id": "20260529T021127Z_659321c750",
+    "created_at": "2026-05-29T02:11:27Z",
+    "headline_seed": "Italy restores lucky testicles on bull mosaic worn down by tourists",
+    "description_seed": "The artwork is the centre of a tradition that involves visitors performing three spins on it for good fortune.",
+    "link": "https://www.bbc.com/news/articles/c1m215npjp2o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Guardian",
+      "The Guardian"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c1m215npjp2o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Italy restores lucky testicles on bull mosaic worn down by tourists"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The artwork is the centre of a tradition that involves visitors performing three spins on it for good fortune.",
+        "word_count": 19,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A famous bull mosaic in one of Italy's grand arcades is getting some much-needed care after being worn down by tourists honouring a tradition involving its delicate body parts. As the legend goes, tourists in Milan who grind their heels on the bull's testicles and spin in place three times are guaranteed good fortune and are destined to return. Visitors twirling clockwise for luck have left a small crater on the bull's \"lucky spot\". \"Thousands of people every day have performed the famous heel-spinning gesture,\" city councillors said. \"The pink tiles that make up its testicles are being worn away.\"",
+        "word_count": 100,
+        "keyword_overlap": 14,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "The artwork in a 19th-century shopping arcade has been damaged by visitors honouring an unusual tradition A floor mosaic of an anatomically detailed bull in one of Milan’s grand arcades is getting a sensitive makeover after being worn down by thousands of passersby honouring an unusual tradition. Legend has it that grinding your heel on the bull’s testicles at the Galleria Vittorio Emanuele II guarantees you will return to the city. “Because of constant pirouettes on the heel made by tourists visiting Milan, the pink tesserae that make up its testicles have been worn down, forming a small crater,” city authorities said. The beige mosaic is part of the flooring in the 19th-century shopping arcade, near the Duomo cathedral. It represents Turin, which was then the capital of Italy.",
+        "word_count": 129,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Gianluca Galli, a restorer, worked on the mosaic on Thursday as tourists milled around and looked at the windows of the first Prada store. “It’s probably a charming gesture, but also quite damaging for a work of art,” Galli said of the curious tradition. He cut pieces of stone by hand after looking at designs from the period and taking an impression of the original bits. He said he would use epoxy resins instead of the original lime, and sand mortar to glue them down to better withstand tourists’ heels. Unable to pirouette on the bull during the restoration, tourists performed a similar act on a neighbouring she-wolf mosaic representing Rome. The bull was last restored in 2017.",
+        "word_count": 118,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The artwork is the centre of a tradition that involves visitors performing three spins on it for good fortune.\n\nA famous bull mosaic in one of Italy's grand arcades is getting some much-needed care after being worn down by tourists honouring a tradition involving its delicate body parts. As the legend goes, tourists in Milan who grind their heels on the bull's testicles and spin in place three times are guaranteed good fortune and are destined to return. Visitors twirling clockwise for luck have left a small crater on the bull's \"lucky spot\". \"Thousands of people every day have performed the famous heel-spinning gesture,\" city councillors said. \"The pink tiles that make up its testicles are being worn away.\"\n\nThe artwork in a 19th-century shopping arcade has been damaged by visitors honouring an unusual tradition A floor mosaic of an anatomically detailed bull in one of Milan’s grand arcades is getting a sensitive makeover after being worn down by thousands of passersby honouring an unusual tradition. Legend has it that grinding your heel on the bull’s testicles at the Galleria Vittorio Emanuele II guarantees you will return to the city. “Because of constant pirouettes on the heel made by tourists visiting Milan, the pink tesserae that make up its testicles have been worn down, forming a small crater,” city authorities said. The beige mosaic is part of the flooring in the 19th-century shopping arcade, near the Duomo cathedral. It represents Turin, which was then the capital of Italy.\n\nGianluca Galli, a restorer, worked on the mosaic on Thursday as tourists milled around and looked at the windows of the first Prada store. “It’s probably a charming gesture, but also quite damaging for a work of art,” Galli said of the curious tradition. He cut pieces of stone by hand after looking at designs from the period and taking an impression of the original bits. He said he would use epoxy resins instead of the original lime, and sand mortar to glue them down to better withstand tourists’ heels. Unable to pirouette on the bull during the restoration, tourists performed a similar act on a neighbouring she-wolf mosaic representing Rome. The bull was last restored in 2017.",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 648,
+      "selected_blocks": 4,
+      "selected_source_words": 366,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Italy restores lucky testicles on bull mosaic worn down by tourists",
+      "description": "The artwork is the centre of a tradition that involves visitors performing three spins on it for good fortune.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Italy restores lucky testicles on bull mosaic worn down by tourists",
+    "description": "The artwork is the centre of a tradition that involves visitors performing three spins on it for good fortune.",
+    "link": "https://www.bbc.com/news/articles/c1m215npjp2o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-29T02:01:44+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "89cdcec58a856592d1024f74ea42aefa",
+    "_url_hash": "f729caaf88fcdc8b4c58524cefc7d50811ef7dfd443c8e00a22b20718cf66e11",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kulttuuri",
+    "research": "[Lähde: BBC World]\nA famous bull mosaic in one of Italy's grand arcades is getting some much-needed care after being worn down by tourists honouring a tradition involving its delicate body parts.\n\nAs the legend goes, tourists in Milan who grind their heels on the bull's testicles and spin in place three times are guaranteed good fortune and are destined to return.\n\nVisitors twirling clockwise for luck have left a small crater on the bull's \"lucky spot\".\n\n\"Thousands of people every day have performed the famous heel-spinning gesture,\"   city councillors said. \"The pink tiles that make up its testicles are being worn away.\"\n\nThe beige and blue mosaic of a prancing bull surrounded by a coat of arms is located in the city's historic 19th-Century Galleria Vittorio Emanuele II arcade. It is representative of the city of Turin, which was the first capital of Italy.\n\nRestoration began this week, with a small construction site erected around the mosaic and a restorer working to return the artwork to its former glory, Milan's city council said in a statement.\n\nArtisan Gianluca Galli was seen kneeling before the mosaic, working to cut new pieces of stone by hand as curious onlookers gathered around him.\n\nOf the spinning ritual, which was popular among Milanese in the 19th Century, Galli told AFP news agency: \"It's probably a charming gesture, but also quite damaging for a work of art.\"\n\nCity councillors Emmanuel Conte and Marco Granelli said the last restoration of the bull mosaic was in 2017.\n\n\"The Galleria is a living heritage, which can wear away precisely because it is loved and experienced: we take care of it so that it continues to be so,\" they added.\n\n---\n\n[Lähde: The Guardian]\nThe artwork in a 19th-century shopping arcade has been damaged by visitors honouring an unusual tradition\n\nA floor mosaic of an anatomically detailed bull in one of Milan’s grand arcades is getting a sensitive makeover after being worn down by thousands of passersby honouring an unusual tradition.\n\nLegend has it that grinding your heel on the bull’s testicles at the Galleria Vittorio Emanuele II guarantees you will return to the city.\n\n“Because of constant pirouettes on the heel made by tourists visiting Milan, the pink tesserae that make up its testicles have been worn down, forming a small crater,” city authorities said.\n\nThe beige mosaic is part of the flooring in the 19th-century shopping arcade, near the Duomo cathedral. It represents Turin, which was then the capital of Italy.\n\nGianluca Galli, a restorer, worked on the mosaic on Thursday as tourists milled around and looked at the windows of the first Prada store. “It’s probably a charming gesture, but also quite damaging for a work of art,” Galli said of the curious tradition.\n\nHe cut pieces of stone by hand after looking at designs from the period and taking an impression of the original bits. He said he would use epoxy resins instead of the original lime, and sand mortar to glue them down to better withstand tourists’ heels.\n\nUnable to pirouette on the bull during the restoration, tourists performed a similar act on a neighbouring she-wolf mosaic representing Rome. The bull was last restored in 2017.\n\nEmmanuel Conte and Marco Granelli, from Milan city council, said the arcade’s “lucky spot” had become worn out over time. “The gallery is a living heritage site, which can wear out precisely because it is loved and frequented,” they added.\n\nGalli said he was proud of his work and would like to “encourage young people to take up this profession, because Italy is very much in need of male and female restorers”.\n\nHe added: “I know it’s a demanding job, because you have to travel from site to site ... but it is also a job regarded in Italy as a privilege.”",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-29T02:13:47.786642+00:00",
+  "payload": {
+    "packet_id": "20260529T021127Z_659321c750",
+    "title": "Milanon kuuluisaa härkämosaiikkia korjataan turistien onnenrituaalin jäljiltä",
+    "summary": "Milanon Galleria Vittorio Emanuele II -kauppakäytävän lattiaan kuuluvaa härkämosaiikkia kunnostetaan, koska turistien vuosia jatkunut onnenrituaali on kuluttanut teoksen herkkää kohtaa ja jättänyt siihen pienen kuopan.",
+    "content": "Milanon historiallisessa Galleria Vittorio Emanuele II -kauppakäytävässä korjataan kuuluisaa lattiam画aiikkia, jonka härkäaihe on kulunut turistien suositun onnenrituaalin takia. Perinteen mukaan vierailijat painavat kantapäänsä härän kivisiin sukuelimiin ja pyörähtävät paikallaan kolme kertaa, mikä tarinan mukaan tuo onnea ja lupaa paluun kaupunkiin.\n\n## Onnenrituaali kulutti mosaiikkia\n\nKyseessä on 1800-luvun kauppakäytävän lattiaan kuuluva mosaiikki lähellä Milanon tuomiokirkkoa. Teos esittää Torinoa, joka oli aikanaan Italian pääkaupunki. Mosaiikin anatomisesti yksityiskohtainen härkä on vuosien mittaan noussut yhdeksi gallerian tunnetuimmista pysähdyspaikoista, koska matkailijat ovat toistaneet rituaalia sen päällä päivittäin.\n\nKaupungin viranomaisten mukaan jatkuvat kantapäällä tehdyt pyörähdykset ovat kuluttaneet vaaleanpunaisia kivipaloja, joista härän sukuelimet muodostuvat. Kuluma on edennyt niin pitkälle, että kohtaan on syntynyt pieni kuoppa. Viranomaiset ovat kuvanneet perinnettä hyvin suosituksi, mutta sen vaikutus taideteokseen on ollut selvä.\n\n## Restauroija vaihtaa kiviä käsityönä\n\nRestauroija Gianluca Galli työskenteli mosaiikin parissa torstaina samaan aikaan, kun turistit liikkuivat gallerian käytävillä ja katselivat liikkeiden ikkunoita. Gallin mukaan ele voi olla viehättävä osa matkailuperinnettä, mutta se on myös vahingollinen taideteokselle.\n\nKorjauksessa hän leikkasi kivipaloja käsin tutkittuaan aikakauden malleja ja otettuaan jäljennöksen alkuperäisistä osista. Galli kertoi käyttävänsä alkuperäisen kalkin sijasta epoksihartseja sekä hiekkalaastia, jotta uudet palat kestäisivät paremmin turistien kantapäitä.\n\n## Vierailijat etsivät korvaavan paikan\n\nKun härkämosaiikin päällä ei voinut restauroinnin aikana pyörähtää, osa kävijöistä siirsi rituaalinsa viereiseen naarassutta esittävään mosaiikkiin, joka symboloi Roomaa. Härkämosaiikki kunnostettiin edellisen kerran vuonna 2017, mutta matkailijoiden jatkuva liike on jälleen tehnyt korjauksesta tarpeellisen.\n\nTapaus kertoo siitä, miten matkailun perinteet voivat muuttua osaksi kaupunkien nähtävyyksien vetovoimaa, mutta samalla rasittaa hauraita historiallisia pintoja. Milanossa korjaus pyrkii säilyttämään sekä mosaiikin ulkonäön että sen paikan matkailijoiden suosimana rituaalikohteena.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Milano",
+      "Italia",
+      "matkailu",
+      "kulttuuriperintö",
+      "restaurointi"
+    ],
+    "summary_bullets": [
+      "Milanon Galleria Vittorio Emanuele II:n härkämosaiikkia korjataan turistien onnenrituaalin aiheuttaman kulumisen takia.",
+      "Perinteessä vierailijat painavat kantapäänsä härän sukuelimiin ja pyörähtävät kolme kertaa onnen toivossa.",
+      "Restauroinnissa käytetään käsin leikattuja kivipaloja ja kestävämpiä kiinnitysmateriaaleja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.94,
+    "journalist_note": "Lähdeaineisto on yhtenäinen ja tukee jutun ydintä. Julkaisukategoria korjattu ulkomaanuutiseksi, koska tapahtumapaikka on Milano Italiassa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T021127Z_659321c750\",\"title\":\"Milanon kuuluisaa härkämosaiikkia korjataan turistien onnenrituaalin jäljiltä\",\"summary\":\"Milanon Galleria Vittorio Emanuele II -kauppakäytävän lattiaan kuuluvaa härkämosaiikkia kunnostetaan, koska turistien vuosia jatkunut onnenrituaali on kuluttanut teoksen herkkää kohtaa ja jättänyt siihen pienen kuopan.\",\"content\":\"Milanon historiallisessa Galleria Vittorio Emanuele II -kauppakäytävässä korjataan kuuluisaa lattiam画aiikkia, jonka härkäaihe on kulunut turistien suositun onnenrituaalin takia. Perinteen mukaan vierailijat painavat kantapäänsä härän kivisiin sukuelimiin ja pyörähtävät paikallaan kolme kertaa, mikä tarinan mukaan tuo onnea ja lupaa paluun kaupunkiin.\\n\\n## Onnenrituaali kulutti mosaiikkia\\n\\nKyseessä on 1800-luvun kauppakäytävän lattiaan kuuluva mosaiikki lähellä Milanon tuomiokirkkoa. Teos esittää Torinoa, joka oli aikanaan Italian pääkaupunki. Mosaiikin anatomisesti yksityiskohtainen härkä on vuosien mittaan noussut yhdeksi gallerian tunnetuimmista pysähdyspaikoista, koska matkailijat ovat toistaneet rituaalia sen päällä päivittäin.\\n\\nKaupungin viranomaisten mukaan jatkuvat kantapäällä tehdyt pyörähdykset ovat kuluttaneet vaaleanpunaisia kivipaloja, joista härän sukuelimet muodostuvat. Kuluma on edennyt niin pitkälle, että kohtaan on syntynyt pieni kuoppa. Viranomaiset ovat kuvanneet perinnettä hyvin suosituksi, mutta sen vaikutus taideteokseen on ollut selvä.\\n\\n## Restauroija vaihtaa kiviä käsityönä\\n\\nRestauroija Gianluca Galli työskenteli mosaiikin parissa torstaina samaan aikaan, kun turistit liikkuivat gallerian käytävillä ja katselivat liikkeiden ikkunoita. Gallin mukaan ele voi olla viehättävä osa matkailuperinnettä, mutta se on myös vahingollinen taideteokselle.\\n\\nKorjauksessa hän leikkasi kivipaloja käsin tutkittuaan aikakauden malleja ja otettuaan jäljennöksen alkuperäisistä osista. Galli kertoi käyttävänsä alkuperäisen kalkin sijasta epoksihartseja sekä hiekkalaastia, jotta uudet palat kestäisivät paremmin turistien kantapäitä.\\n\\n## Vierailijat etsivät korvaavan paikan\\n\\nKun härkämosaiikin päällä ei voinut restauroinnin aikana pyörähtää, osa kävijöistä siirsi rituaalinsa viereiseen naarassutta esittävään mosaiikkiin, joka symboloi Roomaa. Härkämosaiikki kunnostettiin edellisen kerran vuonna 2017, mutta matkailijoiden jatkuva liike on jälleen tehnyt korjauksesta tarpeellisen.\\n\\nTapaus kertoo siitä, miten matkailun perinteet voivat muuttua osaksi kaupunkien nähtävyyksien vetovoimaa, mutta samalla rasittaa hauraita historiallisia pintoja. Milanossa korjaus pyrkii säilyttämään sekä mosaiikin ulkonäön että sen paikan matkailijoiden suosimana rituaalikohteena.\",\"category\":\"Ulkomaat\",\"tags\":[\"Milano\",\"Italia\",\"matkailu\",\"kulttuuriperintö\",\"restaurointi\"],\"summary_bullets\":[\"Milanon Galleria Vittorio Emanuele II:n härkämosaiikkia korjataan turistien onnenrituaalin aiheuttaman kulumisen takia.\",\"Perinteessä vierailijat painavat kantapäänsä härän sukuelimiin ja pyörähtävät kolme kertaa onnen toivossa.\",\"Restauroinnissa käytetään käsin leikattuja kivipaloja ja kestävämpiä kiinnitysmateriaaleja.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.94,\"journalist_note\":\"Lähdeaineisto on yhtenäinen ja tukee jutun ydintä. Julkaisukategoria korjattu ulkomaanuutiseksi, koska tapahtumapaikka on Milano Italiassa.\"}",
+  "article": {
+    "title": "Milanon kuuluisaa härkämosaiikkia korjataan turistien onnenrituaalin jäljiltä",
+    "description": "Milanon Galleria Vittorio Emanuele II -kauppakäytävän lattiaan kuuluvaa härkämosaiikkia kunnostetaan, koska turistien vuosia jatkunut onnenrituaali on kuluttanut teoksen herkkää kohtaa ja jättänyt siihen pienen kuopan.",
+    "link": "https://www.bbc.com/news/articles/c1m215npjp2o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-29T02:01:44+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "89cdcec58a856592d1024f74ea42aefa",
+    "_url_hash": "f729caaf88fcdc8b4c58524cefc7d50811ef7dfd443c8e00a22b20718cf66e11",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kulttuuri",
+    "research": "[Lähde: BBC World]\nA famous bull mosaic in one of Italy's grand arcades is getting some much-needed care after being worn down by tourists honouring a tradition involving its delicate body parts.\n\nAs the legend goes, tourists in Milan who grind their heels on the bull's testicles and spin in place three times are guaranteed good fortune and are destined to return.\n\nVisitors twirling clockwise for luck have left a small crater on the bull's \"lucky spot\".\n\n\"Thousands of people every day have performed the famous heel-spinning gesture,\"   city councillors said. \"The pink tiles that make up its testicles are being worn away.\"\n\nThe beige and blue mosaic of a prancing bull surrounded by a coat of arms is located in the city's historic 19th-Century Galleria Vittorio Emanuele II arcade. It is representative of the city of Turin, which was the first capital of Italy.\n\nRestoration began this week, with a small construction site erected around the mosaic and a restorer working to return the artwork to its former glory, Milan's city council said in a statement.\n\nArtisan Gianluca Galli was seen kneeling before the mosaic, working to cut new pieces of stone by hand as curious onlookers gathered around him.\n\nOf the spinning ritual, which was popular among Milanese in the 19th Century, Galli told AFP news agency: \"It's probably a charming gesture, but also quite damaging for a work of art.\"\n\nCity councillors Emmanuel Conte and Marco Granelli said the last restoration of the bull mosaic was in 2017.\n\n\"The Galleria is a living heritage, which can wear away precisely because it is loved and experienced: we take care of it so that it continues to be so,\" they added.\n\n---\n\n[Lähde: The Guardian]\nThe artwork in a 19th-century shopping arcade has been damaged by visitors honouring an unusual tradition\n\nA floor mosaic of an anatomically detailed bull in one of Milan’s grand arcades is getting a sensitive makeover after being worn down by thousands of passersby honouring an unusual tradition.\n\nLegend has it that grinding your heel on the bull’s testicles at the Galleria Vittorio Emanuele II guarantees you will return to the city.\n\n“Because of constant pirouettes on the heel made by tourists visiting Milan, the pink tesserae that make up its testicles have been worn down, forming a small crater,” city authorities said.\n\nThe beige mosaic is part of the flooring in the 19th-century shopping arcade, near the Duomo cathedral. It represents Turin, which was then the capital of Italy.\n\nGianluca Galli, a restorer, worked on the mosaic on Thursday as tourists milled around and looked at the windows of the first Prada store. “It’s probably a charming gesture, but also quite damaging for a work of art,” Galli said of the curious tradition.\n\nHe cut pieces of stone by hand after looking at designs from the period and taking an impression of the original bits. He said he would use epoxy resins instead of the original lime, and sand mortar to glue them down to better withstand tourists’ heels.\n\nUnable to pirouette on the bull during the restoration, tourists performed a similar act on a neighbouring she-wolf mosaic representing Rome. The bull was last restored in 2017.\n\nEmmanuel Conte and Marco Granelli, from Milan city council, said the arcade’s “lucky spot” had become worn out over time. “The gallery is a living heritage site, which can wear out precisely because it is loved and frequented,” they added.\n\nGalli said he was proud of his work and would like to “encourage young people to take up this profession, because Italy is very much in need of male and female restorers”.\n\nHe added: “I know it’s a demanding job, because you have to travel from site to site ... but it is also a job regarded in Italy as a privilege.”",
+    "research_source": "multi",
+    "summary": "Milanon Galleria Vittorio Emanuele II -kauppakäytävän lattiaan kuuluvaa härkämosaiikkia kunnostetaan, koska turistien vuosia jatkunut onnenrituaali on kuluttanut teoksen herkkää kohtaa ja jättänyt siihen pienen kuopan.",
+    "content": "Milanon historiallisessa Galleria Vittorio Emanuele II -kauppakäytävässä korjataan kuuluisaa lattiam画aiikkia, jonka härkäaihe on kulunut turistien suositun onnenrituaalin takia. Perinteen mukaan vierailijat painavat kantapäänsä härän kivisiin sukuelimiin ja pyörähtävät paikallaan kolme kertaa, mikä tarinan mukaan tuo onnea ja lupaa paluun kaupunkiin.\n\n## Onnenrituaali kulutti mosaiikkia\n\nKyseessä on 1800-luvun kauppakäytävän lattiaan kuuluva mosaiikki lähellä Milanon tuomiokirkkoa. Teos esittää Torinoa, joka oli aikanaan Italian pääkaupunki. Mosaiikin anatomisesti yksityiskohtainen härkä on vuosien mittaan noussut yhdeksi gallerian tunnetuimmista pysähdyspaikoista, koska matkailijat ovat toistaneet rituaalia sen päällä päivittäin.\n\nKaupungin viranomaisten mukaan jatkuvat kantapäällä tehdyt pyörähdykset ovat kuluttaneet vaaleanpunaisia kivipaloja, joista härän sukuelimet muodostuvat. Kuluma on edennyt niin pitkälle, että kohtaan on syntynyt pieni kuoppa. Viranomaiset ovat kuvanneet perinnettä hyvin suosituksi, mutta sen vaikutus taideteokseen on ollut selvä.\n\n## Restauroija vaihtaa kiviä käsityönä\n\nRestauroija Gianluca Galli työskenteli mosaiikin parissa torstaina samaan aikaan, kun turistit liikkuivat gallerian käytävillä ja katselivat liikkeiden ikkunoita. Gallin mukaan ele voi olla viehättävä osa matkailuperinnettä, mutta se on myös vahingollinen taideteokselle.\n\nKorjauksessa hän leikkasi kivipaloja käsin tutkittuaan aikakauden malleja ja otettuaan jäljennöksen alkuperäisistä osista. Galli kertoi käyttävänsä alkuperäisen kalkin sijasta epoksihartseja sekä hiekkalaastia, jotta uudet palat kestäisivät paremmin turistien kantapäitä.\n\n## Vierailijat etsivät korvaavan paikan\n\nKun härkämosaiikin päällä ei voinut restauroinnin aikana pyörähtää, osa kävijöistä siirsi rituaalinsa viereiseen naarassutta esittävään mosaiikkiin, joka symboloi Roomaa. Härkämosaiikki kunnostettiin edellisen kerran vuonna 2017, mutta matkailijoiden jatkuva liike on jälleen tehnyt korjauksesta tarpeellisen.\n\nTapaus kertoo siitä, miten matkailun perinteet voivat muuttua osaksi kaupunkien nähtävyyksien vetovoimaa, mutta samalla rasittaa hauraita historiallisia pintoja. Milanossa korjaus pyrkii säilyttämään sekä mosaiikin ulkonäön että sen paikan matkailijoiden suosimana rituaalikohteena.",
+    "category": "Kotimaa",
+    "tags": [
+      "milano",
+      "italia",
+      "matkailu",
+      "kulttuuriperintö",
+      "restaurointi"
+    ],
+    "summary_bullets": [
+      "Milanon Galleria Vittorio Emanuele II:n härkämosaiikkia korjataan turistien onnenrituaalin aiheuttaman kulumisen takia.",
+      "Perinteessä vierailijat painavat kantapäänsä härän sukuelimiin ja pyörähtävät kolme kertaa onnen toivossa.",
+      "Restauroinnissa käytetään käsin leikattuja kivipaloja ja kestävämpiä kiinnitysmateriaaleja."
+    ],
+    "key_points": [
+      "Milanon Galleria Vittorio Emanuele II:n härkämosaiikkia korjataan turistien onnenrituaalin aiheuttaman kulumisen takia.",
+      "Perinteessä vierailijat painavat kantapäänsä härän sukuelimiin ja pyörähtävät kolme kertaa onnen toivossa.",
+      "Restauroinnissa käytetään käsin leikattuja kivipaloja ja kestävämpiä kiinnitysmateriaaleja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Lähdeaineisto on yhtenäinen ja tukee jutun ydintä. Julkaisukategoria korjattu ulkomaanuutiseksi, koska tapahtumapaikka on Milano Italiassa.",
+    "source_text": "The artwork is the centre of a tradition that involves visitors performing three spins on it for good fortune.\n\nA famous bull mosaic in one of Italy's grand arcades is getting some much-needed care after being worn down by tourists honouring a tradition involving its delicate body parts. As the legend goes, tourists in Milan who grind their heels on the bull's testicles and spin in place three times are guaranteed good fortune and are destined to return. Visitors twirling clockwise for luck have left a small crater on the bull's \"lucky spot\". \"Thousands of people every day have performed the famous heel-spinning gesture,\" city councillors said. \"The pink tiles that make up its testicles are being worn away.\"\n\nThe artwork in a 19th-century shopping arcade has been damaged by visitors honouring an unusual tradition A floor mosaic of an anatomically detailed bull in one of Milan’s grand arcades is getting a sensitive makeover after being worn down by thousands of passersby honouring an unusual tradition. Legend has it that grinding your heel on the bull’s testicles at the Galleria Vittorio Emanuele II guarantees you will return to the city. “Because of constant pirouettes on the heel made by tourists visiting Milan, the pink tesserae that make up its testicles have been worn down, forming a small crater,” city authorities said. The beige mosaic is part of the flooring in the 19th-century shopping arcade, near the Duomo cathedral. It represents Turin, which was then the capital of Italy.\n\nGianluca Galli, a restorer, worked on the mosaic on Thursday as tourists milled around and looked at the windows of the first Prada store. “It’s probably a charming gesture, but also quite damaging for a work of art,” Galli said of the curious tradition. He cut pieces of stone by hand after looking at designs from the period and taking an impression of the original bits. He said he would use epoxy resins instead of the original lime, and sand mortar to glue them down to better withstand tourists’ heels. Unable to pirouette on the bull during the restoration, tourists performed a similar act on a neighbouring she-wolf mosaic representing Rome. The bull was last restored in 2017.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.94,
+    "degraded_mode": false,
+    "monica_packet_id": "20260529T021127Z_659321c750",
+    "image": "https://images.unsplash.com/photo-1620475655006-0f0c6a10a221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxNaWxhbiUyMEdhbGxlcmlhJTIwVml0dG9yaW8lMjBFbWFudWVsZSUyMElJJTIwYnVsbCUyMG1vc2FpY3xlbnwxfDB8fHwxNzgwMDIxMDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1620475655006-0f0c6a10a221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxNaWxhbiUyMEdhbGxlcmlhJTIwVml0dG9yaW8lMjBFbWFudWVsZSUyMElJJTIwYnVsbCUyMG1vc2FpY3xlbnwxfDB8fHwxNzgwMDIxMDg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Milanon kuuluisaa härkämosaiikkia korjataan turistien onnenrituaalin jäljiltä",
+    "image_credit": "Photo by Maksym Harbar on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/brown-concrete-building-during-daytime-cfeygjbqTgg?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-05-29T02:18:06.187773+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1620475655006-0f0c6a10a221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxNaWxhbiUyMEdhbGxlcmlhJTIwVml0dG9yaW8lMjBFbWFudWVsZSUyMElJJTIwYnVsbCUyMG1vc2FpY3xlbnwxfDB8fHwxNzgwMDIxMDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1620475655006-0f0c6a10a221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxNaWxhbiUyMEdhbGxlcmlhJTIwVml0dG9yaW8lMjBFbWFudWVsZSUyMElJJTIwYnVsbCUyMG1vc2FpY3xlbnwxfDB8fHwxNzgwMDIxMDg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-29T02:18:55.224149+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-29-milanon-kuuluisaa-harkamosaiikkia-korjataan-turistien-onnenr.md"
+  ]
+}
