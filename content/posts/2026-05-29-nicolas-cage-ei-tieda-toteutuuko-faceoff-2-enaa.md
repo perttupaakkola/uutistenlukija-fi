@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/nicolas-cagen-klassikkoleffa-ei-ehka-saakaan-jatkoa-kun-ohjaaja-lahti-kavelemaan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

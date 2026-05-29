@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T12:21:25.024524+00:00",
+  "digest": "37f712d41a",
+  "packet": {
+    "packet_id": "20260529T122125Z_37f712d41a",
+    "created_at": "2026-05-29T12:21:25Z",
+    "headline_seed": "Suojelupoliisiin kohdistunut jättimäinen rikostutkinta valmistui – kymmenen epäiltyä",
+    "description_seed": "Valtakunnansyyttäjän toimisto on saanut valmiiksi suojelupoliisiin kohdistuneen rikostutkinnan.",
+    "link": "https://yle.fi/a/74-20228807?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20228807?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suojelupoliisiin kohdistunut jättimäinen rikostutkinta valmistui – kymmenen epäiltyä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 132,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suojelupoliisiin kohdistunut jättimäinen rikostutkinta valmistui – kymmenen epäiltyä",
+      "description": "Valtakunnansyyttäjän toimisto on saanut valmiiksi suojelupoliisiin kohdistuneen rikostutkinnan.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suojelupoliisiin kohdistunut jättimäinen rikostutkinta valmistui – kymmenen epäiltyä",
+    "description": "Valtakunnansyyttäjän toimisto on saanut valmiiksi suojelupoliisiin kohdistuneen rikostutkinnan.",
+    "link": "https://yle.fi/a/74-20228807?origin=rss",
+    "published": "2026-05-29T15:12:09+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "064250c3f50ef2d0103362617cb7e245",
+    "_url_hash": "ee83d882c0790829f68028aa57d103aefe9eff55e15964d24ae24d2e3484751b",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle Uutiset]\nEsitutkinta on valmistunut suojelupoliisin (supo) tiedustelutoimintaan liittyvässä asiassa, tiedottaa syyttäjälaitos.\n\nSyyttäjän mukaan asiassa on syytä epäillä, että suojelupoliisin toiminnassa on käytetty eräitä siviilihenkilöitä siten, että he ovat saaneet tietää salassa pidettävää tietoa ja voineet käsitellä salassa pidettävää tietoa valvomattomasti.\n\nErään toiminnassa käytetyn siviilihenkilön laitteeseen kohdistuneen tietomurron vuoksi salassa pidettäviä tietoja on paljastunut kokonaan ulkopuoliselle taholle, tiedotteessa kerrotaan.\n\nLisäksi syyttäjä epäilee, ettei suojelupoliisin toiminnassa ole noudatettu kaikkia salaisten tiedonhankintakeinojen ja siviilitiedustelun säännöksiä ja määräyksiä.\n\nSyyttäjälaitoksen mukaan esitutkinnassa on epäilty rikoksesta yhteensä kymmentä henkilöä, jotka pääosin ovat suojelupoliisissa järjestelystä vastanneita virkamiehiä.\n\nRikosnimikkeinä ovat muun muassa turvallisuussalaisuuden paljastaminen, virka-aseman väärinkäyttäminen, virkasalaisuuden rikkominen ja virkavelvollisuuden rikkominen.\n\nAsia on siirretty syyteharkintaan kaikkien rikoksesta epäiltynä kuultujen osalta. Syyttäjänä asiassa toimii apulaisvaltakunnansyyttäjä Jukka Rappe.\n\nSyyttäjä ei tiedota asiasta tässä vaiheessa enempää.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T12:23:27.693257+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä tai riittäviä varmennettuja yksityiskohtia 250 sanan julkaistavan artikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T122125Z_37f712d41a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä tai riittäviä varmennettuja yksityiskohtia 250 sanan julkaistavan artikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
