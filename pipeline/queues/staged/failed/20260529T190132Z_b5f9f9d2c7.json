@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T19:01:32.023278+00:00",
+  "digest": "b5f9f9d2c7",
+  "packet": {
+    "packet_id": "20260529T190132Z_b5f9f9d2c7",
+    "created_at": "2026-05-29T19:01:32Z",
+    "headline_seed": "Suomen keihäskaksikko jäi kolmen kärjestä Puolassa – Keskitalo otti aidoissa osumia",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9494303",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9494303"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomen keihäskaksikko jäi kolmen kärjestä Puolassa – Keskitalo otti aidoissa osumia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 193,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomen keihäskaksikko jäi kolmen kärjestä Puolassa – Keskitalo otti aidoissa osumia",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suomen keihäskaksikko jäi kolmen kärjestä Puolassa – Keskitalo otti aidoissa osumia",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9494303",
+    "published": "2026-05-29T21:48:18+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "91bb93beaf4d22c6ef3287527422f4c3",
+    "_url_hash": "793ee3d3ea33befe45ef8a91a4328121b65eb780933e37c334d86d09397cd507",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSuomen naisten cheer-maajoukkue saavutti MM-hopeaa Yhdysvaltojen Orlandossa kisatussa finaalissa.\n\nSuomen joukkue jäi alle kahden pisteen päähän kultamitalin voittaneesta Yhdysvaltojen joukkueesta. Suomen cheerleadingliiton mukaan ohjelmat olivat hyvin samaa tasoa, mutta lopputulos kääntyi lopulta Yhdysvaltojen hyväksi permantoakrobatiassa.\n\nViime vuonna naisten cheer-maajoukkue oli kolmas. Vuosi sitten käydyissä MM-kisoissa Suomi otti MM-kultaa tyttöjen cheer-sarjassa.\n\n– Vähän tämä on tietysti ristiriitainen päätös kaudelle, kun se maailmanmestaruus jäi. Sen puoleen tosi harmi, mutta päällimmäinen tunne on kuitenkin kiitollisuus ja onnellisuus meidän joukkueesta, sanoo kapteeni Emma Hytönen tiedotteessa.\n\nYhdysvallat sai naisten cheer-sarjassa tasan 88 pistettä. Hopeamitalille taipunut Suomi sai 86,79 pistettä ja pronssille yltänyt Ruotsi 84,36 pistettä.\n\nSuomen sekacheer-maajoukkue ylsi sarjansa viidenneksi 75,36 pisteellä. Joukkue onnistui parantamaan tulostaan viime vuodesta.\n\n– Ollaan selkeästi otettu joukkueena askelia oikeaan suuntaan, sanoo joukkueen jäsen Henri Haukkovaara.\n\n– Samalla tiellä kun jatketaan ja tehdään kovaa duunia ja luotetaan siihen, että kun työtä jaksaa tehdä pitkäjänteisest, se kantaa kyllä vielä hedelmää.\n\nVoiton vei sekacheer-sarjassakin Yhdysvallat, jonka joukkue sai 86,14 pistettä. Hopeamitalin sai Meksiko 78,21 pisteellä ja pronssin Saksa 78,07 pisteellä.\n\nKorjaus klo 7.57: Viime vuonna Suomi oli kolmas eikä voittanut naisten cheer-sarjassa kultaa, kuten uutisessa alun perin väitettiin. Viime vuonna Suomi sai kultaa tyttöjen sarjassa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T19:03:16.716493+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T190132Z_b5f9f9d2c7\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T20:01:32.017601+00:00",
+  "digest": "a71920fbde",
+  "packet": {
+    "packet_id": "20260529T200132Z_a71920fbde",
+    "created_at": "2026-05-29T20:01:32Z",
+    "headline_seed": "Suosittu ranta Teneriffalla suljettiin bakteeri­vaaran vuoksi",
+    "description_seed": "Vedessä mitattiin enterokokkeja.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012044067.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012044067.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suosittu ranta Teneriffalla suljettiin bakteeri­vaaran vuoksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 104,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suosittu ranta Teneriffalla suljettiin bakteeri­vaaran vuoksi",
+      "description": "Vedessä mitattiin enterokokkeja.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suosittu ranta Teneriffalla suljettiin bakteeri­vaaran vuoksi",
+    "description": "Vedessä mitattiin enterokokkeja.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012044067.html",
+    "published": "2026-05-29T19:16:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "98b14da5127bb3a823e63382a6df04a8",
+    "_url_hash": "034feeff74817003f318548ecf7f8f21f1cdb7f3e362b461ed441daecd35689a",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Keskisuomalainen]\nFormula ykkösten MM-sarjan takavuosien suomalaiskuljettaja Mika Saloa puukotettiin Thaimaassa, kertovat esimerkiksi Uuno-sivusto ja Ilta-Sanomat.\n\nSalon vaimo Annica Salo vahvisti asian torstaina Ilta-Sanomille. Lehden mukaan Saloa puukotettiin kadulla tiistai-iltana paikallista aikaa. Tilanteessa Salon ohitti mopo, josta häntä ilmeisesti viillettiin. Saloa hoidettiin paikallisessa sairaalassa.\n\n– Haavan tikannut lääkäri totesi, että se oli selvästi veitsellä tehty. Myöhemmin sain kuulla, että sairaalaan oli tuotu viisi muuta uhria. Heillä oli samanlaisia vammoja, Mika Salo kertoi Uunolle.\n\nSalo ajoi autourheilun kuninkuusluokassa vuosina 1994–2000 ja 2002. Hän ylsi kahdessa kilpailussa palkintokorokkeelle, kun ajoi kerran toiseksi ja kerran kolmanneksi kaudella 1999. Salo tuurasi tuolloin Ferrarilla loukkaantunutta saksalaistähti Michael Schumacheria.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T20:03:20.438469+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja 250 sanan uutiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T200132Z_a71920fbde\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja 250 sanan uutiseen ilman keksittyjä yksityiskohtia.\"}"
+}

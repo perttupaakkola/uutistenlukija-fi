@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/iranin-lahteet-trump-valehtelee-sopimuksesta/9346102"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
