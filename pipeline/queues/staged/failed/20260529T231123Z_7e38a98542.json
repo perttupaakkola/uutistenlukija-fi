@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-29T23:11:23.313300+00:00",
+  "digest": "7e38a98542",
+  "packet": {
+    "packet_id": "20260529T231123Z_7e38a98542",
+    "created_at": "2026-05-29T23:11:23Z",
+    "headline_seed": "Tämä kaupunki on ykkönen lukiovertailussa",
+    "description_seed": "Oululaislukiot nappasivat molemmat kärkipaikat STT:n kevään lukiovertailussa.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/tama-kaupunki-on-ykkonen-lukiovertailussa/9346018",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/tama-kaupunki-on-ykkonen-lukiovertailussa/9346018"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tämä kaupunki on ykkönen lukiovertailussa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 137,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tämä kaupunki on ykkönen lukiovertailussa",
+      "description": "Oululaislukiot nappasivat molemmat kärkipaikat STT:n kevään lukiovertailussa.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tämä kaupunki on ykkönen lukiovertailussa",
+    "description": "Oululaislukiot nappasivat molemmat kärkipaikat STT:n kevään lukiovertailussa.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/tama-kaupunki-on-ykkonen-lukiovertailussa/9346018",
+    "published": "2026-05-29T23:00:00+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "e8e7eec8713efe112ce61aed039c222c",
+    "_url_hash": "a796146f094a6f91d16565ed7a161e7aa7a4ee813b2d644dffb9840d288a4def",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSedu Ähtärin ja Ähtärin lukion oppilaat pääsevät muuttamaan kampukselle 1. joulukuuta.\n\nKampuksella opiskelee jatkossa yhteensä 450 ammattikoulun ja lukion opiskelijaa.\n\nKampuksen rakentaminen alkoi elokuussa 2023. Sen hinnaksi tulee vajaat noin 17,8 miljoonaa euroa.\n\nSeinäjoen koulutuskuntayhtymä Sedu omistaa Tuomarniemen alueen. Lukio-opetuksen järjestävä Ähtärin kaupunki on Sedulla vuokralla.\n\nRehtori Pasi Artikaisen mukaan Sedulla on alueen suhteen pitkän tähtäimen kehittämissuunnitelmia.\n\nAntikaisen mukaan tavoite on uudistaa alueen kaavaa ja muun muassa kehittää opiskelijoiden majoitusmahdollisuuksia alueella.\n\nTuomarniemi sijaitsee Inhassa muutaman kilometrin päässä Ähtärin keskustasta. Siellä on koulutettu metsäalan ammattilaisia vuodesta 1903 alkaen, jolloin Tuomarniemelle perustettiin metsänvartijakoulu.\n\nÄhtärin lukio oli joitain vuosia sitten väistötiloissa Tuomarniemellä, mutta joutui siirtymään kampuksen rakentamisen alueelta toisiin väliaikaistiloihin. Lukio toimii tällä hetkellä entisen sairaalan tiloissa.\n\nUusi kampus tarjoaa metsäalan, kone- ja tuotantotekniikan, sähkö- ja automaatiotekniikan, sosiaali- ja terveysalan, matkailualan sekä lukio-opintoja.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-29T23:13:17.859011+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260529T231123Z_7e38a98542\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
