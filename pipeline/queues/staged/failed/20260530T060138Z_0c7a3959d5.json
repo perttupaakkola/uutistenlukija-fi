@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T06:01:38.956348+00:00",
+  "digest": "0c7a3959d5",
+  "packet": {
+    "packet_id": "20260530T060138Z_0c7a3959d5",
+    "created_at": "2026-05-30T06:01:38Z",
+    "headline_seed": "Viiden vuoden takainen voittaja Castren vaikeuksissa LPGA-kiertueen golfissa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9494464",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9494464"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Viiden vuoden takainen voittaja Castren vaikeuksissa LPGA-kiertueen golfissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 96,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Viiden vuoden takainen voittaja Castren vaikeuksissa LPGA-kiertueen golfissa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Viiden vuoden takainen voittaja Castren vaikeuksissa LPGA-kiertueen golfissa",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9494464",
+    "published": "2026-05-30T08:50:18+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "d948efdd14bf6424ae38ed2c43b5b677",
+    "_url_hash": "90b7de12c0bffce78cb73032dd94d8eab9d00b998de22213c2b3b8d02dd8c9db",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSatakunnan käräjäoikeus on tuominnut pohjoissatakuntalaisen naisen viiden vuoden eläintenpitokieltoon ja 50 päiväsakkoon eläinsuojelurikoksesta.\n\nOikeuden mukaan kymmeniä nautoja pitänyt nainen laiminlöi vuoden 2023 helmikuun ja maalikuun 2024 välisenä aikana eli runsaan vuoden ajan eläinten riittävästä hyvinvoinnista huolehtimisen.\n\nKäräjäoikeus katsoo, että naisen laiminlyönnit aiheuttivat eläimille tarpeetonta kärsimystä kivun, nälän, janon ja kylmyyden muodossa.\n\nTuomion perusteluissa todetaan, että vaikka tuomitun tarkoituksena ei ole ollut aiheuttaa eläimilleen kärsimystä, kyse on joka tapauksessa törkeän huolimattomasta menettelystä.\n\nTuomitun pitämät tai omistuksessa olevat eläimet määrättiin valtiolle menetetyiksi. Oikeuden määrämä eläintenpitokielto päättyy 28.2.2031.\n\nSatakunnan käräjäoikeuden antama tuomio ei ole lainvoimainen. Siitä voi valittaa hovioikeuteen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T06:03:16.452134+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T060138Z_0c7a3959d5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

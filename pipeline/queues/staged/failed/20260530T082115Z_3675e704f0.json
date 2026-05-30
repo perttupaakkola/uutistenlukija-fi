@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T08:21:15.229562+00:00",
+  "digest": "3675e704f0",
+  "packet": {
+    "packet_id": "20260530T082115Z_3675e704f0",
+    "created_at": "2026-05-30T08:21:15Z",
+    "headline_seed": "Tänään on lämmintä, huomenna pilvet lisääntyvät",
+    "description_seed": "Päivän lämpötilat liikkuvat monin paikoin 18–21 asteessa.",
+    "link": "https://yle.fi/a/74-20228897?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20228897?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tänään on lämmintä, huomenna pilvet lisääntyvät"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 168,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tänään on lämmintä, huomenna pilvet lisääntyvät",
+      "description": "Päivän lämpötilat liikkuvat monin paikoin 18–21 asteessa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tänään on lämmintä, huomenna pilvet lisääntyvät",
+    "description": "Päivän lämpötilat liikkuvat monin paikoin 18–21 asteessa.",
+    "link": "https://yle.fi/a/74-20228897?origin=rss",
+    "published": "2026-05-30T11:09:29+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "1792831bea69ad7030e33b94751c116b",
+    "_url_hash": "613d85b025b9a846e6a8a6988bce8757173f46c77642244075f841a2559d3426",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Yle Uutiset]\nLakkiaisia ja päättäjäisiä juhlitaan enimmäkseen lämpimässä säässä.\n\nForecan mukaan viime päivien tuulet tyyntyvät viikonlopuksi ja lakkiaispäivä on suuressa osassa maata aurinkoinen ja poutainen. Päivän lämpötilat ovat monin paikoin 18:n ja 21 asteen välillä.\n\nPilvistä säätä on odotettavissa Lappiin sekä itärajan tuntumaan Kymenlaaksosta Pohjois-Karjalaan ulottuvalle alueelle. Paikoin voi sataa heikosti, ja pohjoistuuli puhaltaa kohtalaisesti.\n\nIdän pilvisillä alueilla ja Etelä-Lapissa lämpötilat ovat 13 ja 17 asteen välillä. Pohjois- ja Keski-Lapissa jäädään viileämpiin 5–13 asteen lukemiin.\n\nSunnuntaina sää pysyy enimmäkseen poutaisena, mutta pilvisyys lisääntyy suuressa osassa maata. Sateita saadaan vielä Etelä-Lapissa ja Koillismaalla, ja maan etelä- ja keskiosassa voi tulla sadekuuroja.\n\nSunnuntai on viileimmillään Lapissa, jossa lämpötilat asettuvat pilvisyydestä riippuen 5 ja 15 asteen välille. Lämpimintä on maan länsiosassa, jossa päivälämpötila kohoaa 18–22 asteeseen. Maan etelä- ja keskiosissa lämpöä saadaan 15–18 astetta.\n\nEnsi viikolla sää on ympäri maata vaihteleva, mutta pääasiassa kesäinen, Ilmatieteen laitoksen päivystävä meteorologi kertoi STT:lle lauantaiaamuna.\n\nSateita liikkuu ensi viikolla ympäri maata. Alkuviikolla sateet osuvat maan keskivaiheille ja mahdollisesti myös länsipuolelle.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T08:23:22.706286+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä tarkistettuja tietoja julkaistavan sääuutisen kirjoittamiseen ilman täydennyksiä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T082115Z_3675e704f0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä tarkistettuja tietoja julkaistavan sääuutisen kirjoittamiseen ilman täydennyksiä.\"}"
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T09:51:24.977329+00:00",
+  "digest": "9ed001a071",
+  "packet": {
+    "packet_id": "20260530T095124Z_9ed001a071",
+    "created_at": "2026-05-30T09:51:24Z",
+    "headline_seed": "Suurlupaus Enni Virjoselta hirmuinen avaus, Saga Vanninen kaukana tasoltaan",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9494607",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9494607"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suurlupaus Enni Virjoselta hirmuinen avaus, Saga Vanninen kaukana tasoltaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 208,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suurlupaus Enni Virjoselta hirmuinen avaus, Saga Vanninen kaukana tasoltaan",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suurlupaus Enni Virjoselta hirmuinen avaus, Saga Vanninen kaukana tasoltaan",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9494607",
+    "published": "2026-05-30T12:46:14+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "1d951765e5206f045562dda62424c158",
+    "_url_hash": "37d660c28993024243ab32c2544acb1c87fef21920f90d50d6b5656377bba3f4",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSuomessa on naisten ja tyttöjen puolella mielenkiintoinen ottelubuumi. Saga Vanninen, 22, on jo moninkertainen arvokisamitalisti ja seitsenottelun SE-nainen pistein 6 563.\n\n18-vuotias Enni Virjonen puolestaan on rikkonut Vannisen nimissä olleita junioriennätyksiä ja otteli viime kesänä Tampereen alle 20-vuotiaiden EM-kisoissa pronssille.\n\nVuonna 2010 syntynyt Alisa Launonen murskaa niin Vannisen kuin Virjosenkin ennätyksiä. Lauantaina Tampereella hän tehtaili 17-vuotiaiden tyttöjen viisiottelussa 16-vuotiaiden SE-pisteet 4 213.\n\nVirjosen nimissä on 17-vuotiaiden Suomen ennätys 4 287, mutta Launosella on vielä ensi vuonna aikaa viedä se nimiinsä.\n\nLaunonen rikkoi avauslajissa 60 metrin aidoissa Virjosen 16-vuotiaiden Suomen ennätysajan lukemin 8,42. Korkeudessa hän kurotti 171, työnsi kolmen kilon kuulaa ennätykseensä 12,69, ponkaisi pituutta 607 ja rynnisti 800 metrillä 2.26,82.\n\nLaunosen potentiaali on valtava, sillä esimerkiksi korkeudessa hän on hypännyt parhaimmillaan ikäiselleen huippulukemat 182. Vertailun vuoksi seitsemän vuotta vanhemman Vannisen korkeusennätys on viime vuodelta 181.\n\n800 metrillä hän juoksi viime talvena 15-vuotiaaksi ottelijaksi vinhaa kyytiä 2.24,28. Vanninen pääsi samaiseen kyytiin 18-vuotiaana.\n\n17-vuotiaiden sarjassa hopealle otteli Espoon Tapioiden Isabella Tuulari, hänkin hienoilla pisteillä 3 921.\n\n– Tänään korkeushypyssä iski migreeni. Päätä särki enkä nähnyt kunnolla. Siihen nähden tulos 171 oli ihan hyvä. Onneksi migreeni hellitti kuulantyönnössä ja tein ennätykseni. Lähdin 800 metrillä juoksemaan 2.30:n aikaa, mutta menikin 2.26, Launonen kommentoi SUL:n tiedotteessa.\n\nLaunonen täyttää 16 vuotta helmikuun 4. päivä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T09:53:18.083918+00:00",
+  "failure": "Packetissa ei ole käytettävää lähdetekstiä tai varmennettuja perustietoja, eikä artikkelia voi kirjoittaa ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T095124Z_9ed001a071\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole käytettävää lähdetekstiä tai varmennettuja perustietoja, eikä artikkelia voi kirjoittaa ilman keksittyjä faktoja.\"}"
+}

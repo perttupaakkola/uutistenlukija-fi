@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-05-30T05:29:04+00:00",
+  "generated_at": "2026-05-30T13:39:04+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,34 +12,36 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 31,
-    "rejected": 6,
+    "published": 38,
+    "rejected": 3,
     "publish_rate": 0,
-    "last_published_ts": "2026-05-30T05:28:06.016411+00:00"
+    "last_published_ts": "2026-05-30T13:38:05.697516+00:00"
   },
   "reject_reasons": {
-    "missing: image": 6,
-    "unsourced numbers": 5,
-    "central unsourced number in ti": 5,
+    "missing: image": 3,
     "filler phrases": 2,
-    "length under target (269 words": 1,
-    "length under target (278 words": 1,
-    "length under target (261 words": 1,
-    "length under target (266 words": 1
+    "length under target (277 words": 1,
+    "unsourced numbers": 1,
+    "central unsourced number in ti": 1,
+    "score 30/40 norm=6.95/10 (leng": 1,
+    "length under target (258 words": 1,
+    "score 40/40 norm=4.76/10 (leng": 1
   },
   "feeds": {
     "total": 40,
-    "healthy": 39,
+    "healthy": 40,
     "disabled": 0,
-    "stale": 1,
-    "stale_names": [
-      "Yle Teknologia"
-    ],
+    "stale": 0,
+    "stale_names": [],
     "disabled_names": []
   },
   "trending": [
     [
-      "venäjän",
+      "mukaansa",
+      35
+    ],
+    [
+      "kanssa",
       24
     ],
     [
@@ -47,16 +49,12 @@
       22
     ],
     [
-      "mukaansa",
-      19
-    ],
-    [
-      "erityisesti",
-      16
-    ],
-    [
       "vuonna",
-      15
+      20
+    ],
+    [
+      "määrä",
+      18
     ]
   ]
 }

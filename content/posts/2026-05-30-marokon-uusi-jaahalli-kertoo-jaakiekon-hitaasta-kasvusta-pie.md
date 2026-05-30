@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/Marokon-uusi-j%C3%A4%C3%A4halli-ja-naisten-l%C3%A4tk%C3%A4%C3%A4-Iranissa-%E2%80%93-pienet-kiekkomaat-kehittyv%C3%A4t-askel-kerrallaan/269883"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

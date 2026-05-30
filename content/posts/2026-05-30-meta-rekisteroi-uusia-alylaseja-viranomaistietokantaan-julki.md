@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/05/30/paljastus-viranomaistietokannasta-metalta-tulossa-uusia-alylaseja-pian-julkistusta-huhutaan-jo-kesakuulle/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
