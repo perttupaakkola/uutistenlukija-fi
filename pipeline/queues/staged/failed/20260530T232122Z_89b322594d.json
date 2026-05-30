@@ -1,0 +1,140 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T23:21:22.602918+00:00",
+  "digest": "89b322594d",
+  "packet": {
+    "packet_id": "20260530T232122Z_89b322594d",
+    "created_at": "2026-05-30T23:21:22Z",
+    "headline_seed": "Here’s how to make an origami torus with the fewest folds possible",
+    "description_seed": "A mathematician found the most efficient way to fold paper into a doughnutlike shape.",
+    "link": "https://www.sciencenews.org/article/origami-torus-fewest-folds-math",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/origami-torus-fewest-folds-math"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.77,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Here’s how to make an origami torus with the fewest folds possible"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "A mathematician found the most efficient way to fold paper into a doughnutlike shape.",
+        "word_count": 14,
+        "keyword_overlap": 9,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "This is a human-written story voiced by AI. Got feedback? Take our survey . (See our AI policy here .) Folding a flat piece of paper into a torus — a shape with a hole in the middle — demands origami skill. That’s something mathematician Richard Evan Schwartz lacks. Yet he answered a lingering mathematical question about the process. His work — performed mainly on a computer rather than with paper — reveals the smallest number of folds needed to make a paper torus. The paper must have at least 24 folds, forming 16 triangles that meet at eight points, or vertices, Schwartz reports in the May 26 Proceedings of the National Academy of Sciences.",
+        "word_count": 115,
+        "keyword_overlap": 10,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "A mathematician found the most efficient way to fold paper into a doughnutlike shape.\n\nThis is a human-written story voiced by AI. Got feedback? Take our survey . (See our AI policy here .) Folding a flat piece of paper into a torus — a shape with a hole in the middle — demands origami skill. That’s something mathematician Richard Evan Schwartz lacks. Yet he answered a lingering mathematical question about the process. His work — performed mainly on a computer rather than with paper — reveals the smallest number of folds needed to make a paper torus. The paper must have at least 24 folds, forming 16 triangles that meet at eight points, or vertices, Schwartz reports in the May 26 Proceedings of the National Academy of Sciences.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 129,
+      "selected_blocks": 2,
+      "selected_source_words": 129,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Here’s how to make an origami torus with the fewest folds possible",
+      "description": "A mathematician found the most efficient way to fold paper into a doughnutlike shape.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Here’s how to make an origami torus with the fewest folds possible",
+    "description": "A mathematician found the most efficient way to fold paper into a doughnutlike shape.",
+    "link": "https://www.sciencenews.org/article/origami-torus-fewest-folds-math",
+    "published": "2026-05-29T15:00:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "4f1b5d9057079ac89433fbafdf9747e3",
+    "_url_hash": "514d4c7a6112efadc54758271993b33a8f1f0ea251f1d97eb5ee0d762a997cd4",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nThis is a human-written story voiced by AI. Got feedback?\t\t\t\n\t\t\t\tTake our survey\t\t\t.\n\t\t\t(See our AI policy \t\t\t\n\t\t\t\there\t\t\t.)\n\nFolding a flat piece of paper into a torus — a shape with a hole in the middle — demands origami skill. That’s something mathematician Richard Evan Schwartz lacks. Yet he answered a lingering mathematical question about the process.\n\nHis work — performed mainly on a computer rather than with paper — reveals the smallest number of folds needed to make a paper torus. The paper must have at least 24 folds, forming 16 triangles that meet at eight points, or vertices, Schwartz reports in the May 26 Proceedings of the National Academy of Sciences.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T23:24:02.288594+00:00",
+  "failure": "content too short: 248 words",
+  "payload": {
+    "packet_id": "20260530T232122Z_89b322594d",
+    "title": "Matemaatikko selvitti paperitoruksen vähimmäistaitokset",
+    "summary": "Richard Evan Schwartz on ratkaissut matemaattisen kysymyksen siitä, kuinka vähillä taitoksilla tasaisesta paperista voidaan muodostaa torus eli donitsia muistuttava muoto, jonka keskellä on reikä.",
+    "content": "Matemaatikko Richard Evan Schwartz on selvittänyt, kuinka monta taitosta paperiin vähintään tarvitaan, jotta litteästä arkista voidaan muodostaa torus eli muoto, jonka keskellä on reikä. Hänen työnsä mukaan paperitorus vaatii ainakin 24 taitosta, ja ratkaisu perustui pääosin tietokoneella tehtyyn matemaattiseen tarkasteluun perinteisen käsin taitellun origamin sijaan.\n\n## Origamin muoto kohtasi matematiikan\n\nTorus tunnetaan arkikielessä donitsia muistuttavana muotona. Sen tekeminen paperista on origamitehtävänä vaativa, koska litteän pinnan on asetuttava kolmiulotteiseksi muodoksi, jossa on aukko keskellä. Lähdeaineiston mukaan Schwartz ei itse pidä origamitaitojaan vahvoina, mutta hän pystyi silti vastaamaan taittelua koskevaan avoimeen matemaattiseen kysymykseen.\n\nTutkimuksen ydin ei ollut uuden näyttävän taitteluohjeen esittely vaan rajan määrittäminen. Schwartz tarkasteli, mikä on pienin taitosten määrä, jolla paperista voidaan ylipäätään saada aikaan torus. Tällainen kysymys kuuluu geometrian ja origamin rajapintaan: paperin pinta, taitosten lukumäärä ja kohtauspisteet määräävät, millainen kolmiulotteinen rakenne voi syntyä.\n\n## Vähimmäismäärä on 24 taitosta\n\nSchwartzin tuloksen mukaan paperissa on oltava vähintään 24 taitosta, jotta torus voidaan muodostaa. Rakenne koostuu 16 kolmiosta, jotka kohtaavat kahdeksassa pisteessä eli kärjessä. Nämä luvut kuvaavat vähimmäisrakennetta, eivät vain yhtä satunnaista tapaa hahmotella donitsimaista muotoa.\n\nTulos kertoo, millaisia rajoja geometria asettaa paperin taittamiselle. Origami näyttää usein käsityöltä tai taiteelta, mutta sen taustalla voi olla täsmällinen matemaattinen ongelma: kuinka monta taitosta tarvitaan, mihin muodot jakautuvat ja missä pinnat kohtaavat.\n\n## Tulos julkaistiin PNAS-julkaisussa\n\nSchwartz raportoi tuloksestaan 26. toukokuuta Proceedings of the National Academy of Sciences -julkaisussa. Lähdetekstin mukaan työ tehtiin pääosin tietokoneella eikä paperia taittelemalla. Näin näennäisen leikkisä kysymys paperidonitsista muuttui laskennalliseksi ongelmaksi, johon Schwartz esitti pienimmän toimivan taitosmäärän.",
+    "category": "Tiede",
+    "tags": [
+      "origami",
+      "matematiikka",
+      "geometria",
+      "torus",
+      "tutkimus"
+    ],
+    "summary_bullets": [
+      "Richard Evan Schwartz selvitti paperitoruksen vähimmäistaitosten määrän.",
+      "Tuloksen mukaan torus vaatii vähintään 24 taitosta.",
+      "Rakenne muodostuu 16 kolmiosta, jotka kohtaavat kahdeksassa kärjessä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.77,
+    "journalist_note": "Artikkeli perustuu packetin yhteen tutkimusuutislähteeseen. Vuosilukua ei täsmennetty lähdetekstissä, joten sitä ei lisätty."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260530T232122Z_89b322594d\",\n  \"title\": \"Matemaatikko selvitti paperitoruksen vähimmäistaitokset\",\n  \"summary\": \"Richard Evan Schwartz on ratkaissut matemaattisen kysymyksen siitä, kuinka vähillä taitoksilla tasaisesta paperista voidaan muodostaa torus eli donitsia muistuttava muoto, jonka keskellä on reikä.\",\n  \"content\": \"Matemaatikko Richard Evan Schwartz on selvittänyt, kuinka monta taitosta paperiin vähintään tarvitaan, jotta litteästä arkista voidaan muodostaa torus eli muoto, jonka keskellä on reikä. Hänen työnsä mukaan paperitorus vaatii ainakin 24 taitosta, ja ratkaisu perustui pääosin tietokoneella tehtyyn matemaattiseen tarkasteluun perinteisen käsin taitellun origamin sijaan.\\n\\n## Origamin muoto kohtasi matematiikan\\n\\nTorus tunnetaan arkikielessä donitsia muistuttavana muotona. Sen tekeminen paperista on origamitehtävänä vaativa, koska litteän pinnan on asetuttava kolmiulotteiseksi muodoksi, jossa on aukko keskellä. Lähdeaineiston mukaan Schwartz ei itse pidä origamitaitojaan vahvoina, mutta hän pystyi silti vastaamaan taittelua koskevaan avoimeen matemaattiseen kysymykseen.\\n\\nTutkimuksen ydin ei ollut uuden näyttävän taitteluohjeen esittely vaan rajan määrittäminen. Schwartz tarkasteli, mikä on pienin taitosten määrä, jolla paperista voidaan ylipäätään saada aikaan torus. Tällainen kysymys kuuluu geometrian ja origamin rajapintaan: paperin pinta, taitosten lukumäärä ja kohtauspisteet määräävät, millainen kolmiulotteinen rakenne voi syntyä.\\n\\n## Vähimmäismäärä on 24 taitosta\\n\\nSchwartzin tuloksen mukaan paperissa on oltava vähintään 24 taitosta, jotta torus voidaan muodostaa. Rakenne koostuu 16 kolmiosta, jotka kohtaavat kahdeksassa pisteessä eli kärjessä. Nämä luvut kuvaavat vähimmäisrakennetta, eivät vain yhtä satunnaista tapaa hahmotella donitsimaista muotoa.\\n\\nTulos kertoo, millaisia rajoja geometria asettaa paperin taittamiselle. Origami näyttää usein käsityöltä tai taiteelta, mutta sen taustalla voi olla täsmällinen matemaattinen ongelma: kuinka monta taitosta tarvitaan, mihin muodot jakautuvat ja missä pinnat kohtaavat.\\n\\n## Tulos julkaistiin PNAS-julkaisussa\\n\\nSchwartz raportoi tuloksestaan 26. toukokuuta Proceedings of the National Academy of Sciences -julkaisussa. Lähdetekstin mukaan työ tehtiin pääosin tietokoneella eikä paperia taittelemalla. Näin näennäisen leikkisä kysymys paperidonitsista muuttui laskennalliseksi ongelmaksi, johon Schwartz esitti pienimmän toimivan taitosmäärän.\",\n  \"category\": \"Tiede\",\n  \"tags\": [\n    \"origami\",\n    \"matematiikka\",\n    \"geometria\",\n    \"torus\",\n    \"tutkimus\"\n  ],\n  \"summary_bullets\": [\n    \"Richard Evan Schwartz selvitti paperitoruksen vähimmäistaitosten määrän.\",\n    \"Tuloksen mukaan torus vaatii vähintään 24 taitosta.\",\n    \"Rakenne muodostuu 16 kolmiosta, jotka kohtaavat kahdeksassa kärjessä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.77,\n  \"journalist_note\": \"Artikkeli perustuu packetin yhteen tutkimusuutislähteeseen. Vuosilukua ei täsmennetty lähdetekstissä, joten sitä ei lisätty.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260530T232122Z_89b322594d",
+    "category": "Tiede",
+    "selected_source_words": 129,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.77,
+    "final_word_count": 248,
+    "issues": [
+      "content too short: 248 words"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Matemaatikko selvitti paperitoruksen vähimmäistaitokset"
+  }
+}
