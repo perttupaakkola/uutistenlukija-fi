@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T01:11:28.794588+00:00",
+  "digest": "020a455acc",
+  "packet": {
+    "packet_id": "20260530T011128Z_020a455acc",
+    "created_at": "2026-05-30T01:11:28Z",
+    "headline_seed": "Yhdysvalloilta jälleen isku väitettyyn huumeveneeseen",
+    "description_seed": "Yhdysvaltojen asevoimien mukaan perjantaina tehdyssä iskussa itäisellä Tyynellämerellä kuoli kolme ihmistä.",
+    "link": "https://yle.fi/a/74-20228867?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20228867?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Yhdysvalloilta jälleen isku väitettyyn huumeveneeseen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 109,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Yle Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Yhdysvalloilta jälleen isku väitettyyn huumeveneeseen",
+      "description": "Yhdysvaltojen asevoimien mukaan perjantaina tehdyssä iskussa itäisellä Tyynellämerellä kuoli kolme ihmistä.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Yhdysvalloilta jälleen isku väitettyyn huumeveneeseen",
+    "description": "Yhdysvaltojen asevoimien mukaan perjantaina tehdyssä iskussa itäisellä Tyynellämerellä kuoli kolme ihmistä.",
+    "link": "https://yle.fi/a/74-20228867?origin=rss",
+    "published": "2026-05-30T03:46:21+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "7a372ab3b65d545847eacccdccfa736a",
+    "_url_hash": "97673886e1cc3cd5ad3b5250e3da76f24e3939ca6c2bae1e0741a34caf0b2ad6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Keskisuomalainen]\nYhdysvaltojen asevoimat kertoi tiistaina iskeneensä jälleen väitettyyn huumeveneeseen Tyynellä valtamerellä. Iskussa kuoli ainakin yksi ihminen ja kaksi muuta joutui veden varaan, kertoi armeijan Etelä- ja Keski-Amerikan sotatoimialueen päämaja (Southcom) viestipalvelu X:ssä.\n\nPäämaja kertoi hälyttäneensä heti iskun jälkeen Yhdysvaltojen rannikkovartioston, jotta se aloittaisi veden varaan joutuneiden etsinnät.\n\nYhdysvallat on kuluneiden kuukausien aikana tehnyt kymmenittäin vastaavia iskuja, joissa on kuollut liki 200 ihmistä. Yhdysvallat ei ole kuitenkaan toimittanut pitäviä todisteita siitä, että iskujen kohteina olleet alukset olisivat todella kuljettaneet huumeita.\n\nUseiden oikeusoppineiden mukaan kansainvälisillä vesillä tapahtuneet iskut ovat laittomia, koska ne ovat kohdistuneet siviileihin, jotka eivät aiheuta välitöntä uhkaa Yhdysvalloille.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T01:13:16.873791+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä eikä riittävästi vahvistettuja yksityiskohtia 250 sanan julkaistavaan uutiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T011128Z_020a455acc\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä eikä riittävästi vahvistettuja yksityiskohtia 250 sanan julkaistavaan uutiseen ilman keksittyjä tietoja.\"}"
+}
