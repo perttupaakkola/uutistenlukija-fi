@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/Leijonat-pyrkii-fyysisyydell%C3%A4-turhauttamaan-Kanadan-ja-ottamaan-tilan-pois-%E2%80%93-%E2%80%9CPidet%C3%A4%C3%A4n-Sidney-Crosby-puolustusalueella%E2%80%9D/269902"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
