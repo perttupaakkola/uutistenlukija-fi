@@ -24,6 +24,9 @@ jobs:
           DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
         run: bash scripts/validate_templates.sh
 
+      - name: Validate portal CSS contract
+        run: python3 scripts/validate_portal_css_contract.py
+
       - name: Validate critical pipeline script permissions
         run: bash scripts/validate_critical_scripts.sh
 
