@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/teslan-robotaksien-maara-ei-todellakaan-mene-luvattuun-suuntaan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
