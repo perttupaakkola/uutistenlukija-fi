@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T02:01:27.535515+00:00",
+  "digest": "466541bf1a",
+  "packet": {
+    "packet_id": "20260530T020127Z_466541bf1a",
+    "created_at": "2026-05-30T02:01:27Z",
+    "headline_seed": "Ukrainan uusi ase on uskomattoman nopea – Ja vaarallinen",
+    "description_seed": "Eurooppalainen huippuohjus on varustettu epätavallisella moottoriratkaisulla, mikä tekee siitä vaikean torjuttavan.",
+    "link": "https://www.tivi.fi/uutiset/a/326060ec-78e3-49b4-9cbe-3a1caecbdbb3",
+    "source": "Tivi",
+    "source_names": [],
+    "source_urls": [
+      "https://www.tivi.fi/uutiset/a/326060ec-78e3-49b4-9cbe-3a1caecbdbb3"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ukrainan uusi ase on uskomattoman nopea – Ja vaarallinen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 149,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Verkkouutiset",
+        "Tivi"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ukrainan uusi ase on uskomattoman nopea – Ja vaarallinen",
+      "description": "Eurooppalainen huippuohjus on varustettu epätavallisella moottoriratkaisulla, mikä tekee siitä vaikean torjuttavan.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ukrainan uusi ase on uskomattoman nopea – Ja vaarallinen",
+    "description": "Eurooppalainen huippuohjus on varustettu epätavallisella moottoriratkaisulla, mikä tekee siitä vaikean torjuttavan.",
+    "link": "https://www.tivi.fi/uutiset/a/326060ec-78e3-49b4-9cbe-3a1caecbdbb3",
+    "published": "2026-05-30T01:45:00+00:00",
+    "source": "Tivi",
+    "source_domain": "tivi.fi",
+    "language": "fi",
+    "fingerprint": "b29c9206c4772445dbf43932cbe0e5bd",
+    "_url_hash": "e0f29693b59295d19e6a02c6dae79106f053b6d9c0acaf281b400bcfd2c8ed21",
+    "source_tier": 2,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Verkkouutiset]\nVenäjä teki tällä viikolla sodan tähän saakka laajimman kamikaze-droonihyökkäyksen Ukrainaan. Ukraina kuitenkin onnistui tuhoamaan jopa 97 prosenttia hyökkääjän käyttämistä iranilaisista Shahed-drooneista.\n\nSalaisuus piilee Ukrainan kehittämissä erittäin edullisissa torjuntadrooneissa, kertoo valtion innovaatioalusta Brave1:n toimitusjohtaja Andrii Hrytseniuk. Droonit voivat lentää ilmassa tuntikausia ja lopulta tuhota vihollisen droonin, kun sellainen havaitaan.\n\n– Ukraina on kehittänyt täysin uuden aseluokan. Torjuntadroonien potentiaali on valtava, ja niiden suurin etu on niiden halpa hinta, Hrytseniuk sanoo.\n\nTällä hetkellä yli 150 yhtiötä valmistaa Ukrainassa torjuntadrooneja. Osa drooneista maksaa alle tuhat euroa mutta voi lentää tekoälyavusteisesti yli 300 kilometrin tuntivauhtia. Ne ovat siis erittäin halpa vaihtoehto miljoonien eurojen hintaisille Patriot-ohjuksille.\n\n– Ukrainassa valmistetaan yli 2 000 torjuntadroonia päivässä. Eikä se edes ole enimmäismäärä, johon pystymme, Hrytseniuk sanoo.\n\nHänen mukaansa drooneilta puolustautumisessa olennaisinta on nopeus ja puolustusvälineiden halpa hinta. Torjuntadroonien tulisi aina olla edullisempia kuin hyökkäysdroonien, hän paaluttaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T02:03:18.470001+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä tai varmennettavia faktatietoja artikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T020127Z_466541bf1a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä tai varmennettavia faktatietoja artikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}

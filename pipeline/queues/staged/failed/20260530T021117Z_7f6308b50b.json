@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T02:11:17.856053+00:00",
+  "digest": "7f6308b50b",
+  "packet": {
+    "packet_id": "20260530T021117Z_7f6308b50b",
+    "created_at": "2026-05-30T02:11:17Z",
+    "headline_seed": "Kaarlo Isomäki pakeni teloittajiltaan vuonna 1918 – nyt hänen perinnöstään jaetaan rahaa Lahden ylioppilaille",
+    "description_seed": "Tekaistujen syytösten kohteeksi joutunut opettaja haettiin jo ammuttavaksi, mutta hän päätti ottaa kohtalon omiin käsiinsä ja selviytyi kymmenien päivien ajan maakuopassa. Dramaattisen hetken seuraukset näkyvät yli sata vuotta myöhemmin Lahden lukioiden valmistujaisissa.",
+    "link": "https://www.ess.fi/paikalliset/9491037",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9491037"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kaarlo Isomäki pakeni teloittajiltaan vuonna 1918 – nyt hänen perinnöstään jaetaan rahaa Lahden ylioppilaille"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Tekaistujen syytösten kohteeksi joutunut opettaja haettiin jo ammuttavaksi, mutta hän päätti ottaa kohtalon omiin käsiinsä ja selviytyi kymmenien päivien ajan maakuopassa. Dramaattisen hetken seuraukset näkyvät yli sata vuotta myöhemmin Lahden lukioiden valmistujaisissa.",
+        "word_count": 32,
+        "keyword_overlap": 27,
+        "strong_overlap": 22
+      }
+    ],
+    "source_text": "Tekaistujen syytösten kohteeksi joutunut opettaja haettiin jo ammuttavaksi, mutta hän päätti ottaa kohtalon omiin käsiinsä ja selviytyi kymmenien päivien ajan maakuopassa. Dramaattisen hetken seuraukset näkyvät yli sata vuotta myöhemmin Lahden lukioiden valmistujaisissa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 64,
+      "selected_blocks": 1,
+      "selected_source_words": 32,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kaarlo Isomäki pakeni teloittajiltaan vuonna 1918 – nyt hänen perinnöstään jaetaan rahaa Lahden ylioppilaille",
+      "description": "Tekaistujen syytösten kohteeksi joutunut opettaja haettiin jo ammuttavaksi, mutta hän päätti ottaa kohtalon omiin käsiinsä ja selviytyi kymmenien päivien ajan maakuopassa. Dramaattisen hetken seuraukset näkyvät yli sata vuotta myöhemmin Lahden lukioiden valmistujaisissa.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Kaarlo Isomäki pakeni teloittajiltaan vuonna 1918 – nyt hänen perinnöstään jaetaan rahaa Lahden ylioppilaille",
+    "description": "Tekaistujen syytösten kohteeksi joutunut opettaja haettiin jo ammuttavaksi, mutta hän päätti ottaa kohtalon omiin käsiinsä ja selviytyi kymmenien päivien ajan maakuopassa. Dramaattisen hetken seuraukset näkyvät yli sata vuotta myöhemmin Lahden lukioiden valmistujaisissa.",
+    "link": "https://www.ess.fi/paikalliset/9491037",
+    "published": "2026-05-30T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "e0f2868b47381557a684ffd07144198b",
+    "_url_hash": "7284a2aaae803d80ce2a5a867dbf197acea4c80528dea7756226af43f8512efe",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Tekaistujen syytösten kohteeksi joutunut opettaja haettiin jo ammuttavaksi, mutta hän päätti ottaa kohtalon omiin käsiinsä ja selviytyi kymmenien päivien ajan maakuopassa. Dramaattisen hetken seuraukset näkyvät yli sata vuotta myöhemmin Lahden lukioiden valmistujaisissa.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-05-30T02:13:18.821006+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täydennysten keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T021117Z_7f6308b50b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täydennysten keksimistä.\"}"
+}
