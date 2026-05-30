@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/2000-luvun-hittielokuvan-sankari-erin-brockovich-otti-nyt-kohteekseen-datakeskukset/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
