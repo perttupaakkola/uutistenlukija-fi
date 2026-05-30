@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T22:41:19.029113+00:00",
+  "digest": "86ab3fecfb",
+  "packet": {
+    "packet_id": "20260530T224119Z_86ab3fecfb",
+    "created_at": "2026-05-30T22:41:19Z",
+    "headline_seed": "Jääkiekko | Antti Pennanen vaikeni siitä, mitä hän sanoi joukkueelleen erätauolla: ”Ei ole siitä kiinni, mitä valmentaja sanoo”",
+    "description_seed": "Leijonat pani Kanadan tylysti polvilleen MM-välierässä. Suomen päävalmentaja Antti Pennanen muistutti, että hienon voiton jälkeen on tärkeää myös hieman rauhoittua ennen finaalia.",
+    "link": "https://www.hs.fi/urheilu/art-2000012045363.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/urheilu/art-2000012045363.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jääkiekko | Antti Pennanen vaikeni siitä, mitä hän sanoi joukkueelleen erätauolla: ”Ei ole siitä kiinni, mitä valmentaja sanoo”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Leijonat pani Kanadan tylysti polvilleen MM-välierässä. Suomen päävalmentaja Antti Pennanen muistutti, että hienon voiton jälkeen on tärkeää myös hieman rauhoittua ennen finaalia.",
+        "word_count": 22,
+        "keyword_overlap": 19,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Leijonat pani Kanadan tylysti polvilleen MM-välierässä. Suomen päävalmentaja Antti Pennanen muistutti, että hienon voiton jälkeen on tärkeää myös hieman rauhoittua ennen finaalia.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 44,
+      "selected_blocks": 1,
+      "selected_source_words": 22,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jääkiekko | Antti Pennanen vaikeni siitä, mitä hän sanoi joukkueelleen erätauolla: ”Ei ole siitä kiinni, mitä valmentaja sanoo”",
+      "description": "Leijonat pani Kanadan tylysti polvilleen MM-välierässä. Suomen päävalmentaja Antti Pennanen muistutti, että hienon voiton jälkeen on tärkeää myös hieman rauhoittua ennen finaalia.",
+      "category_hint": "Uutiset",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Jääkiekko | Antti Pennanen vaikeni siitä, mitä hän sanoi joukkueelleen erätauolla: ”Ei ole siitä kiinni, mitä valmentaja sanoo”",
+    "description": "Leijonat pani Kanadan tylysti polvilleen MM-välierässä. Suomen päävalmentaja Antti Pennanen muistutti, että hienon voiton jälkeen on tärkeää myös hieman rauhoittua ennen finaalia.",
+    "link": "https://www.hs.fi/urheilu/art-2000012045363.html",
+    "published": "2026-05-30T21:37:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "332ffc9ad183b60847d96841a19ab584",
+    "_url_hash": "d6976273408611c9e78e8f479e9a182f5f5337de5c53274533dba1da9652c24a",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "Leijonat pani Kanadan tylysti polvilleen MM-välierässä. Suomen päävalmentaja Antti Pennanen muistutti, että hienon voiton jälkeen on tärkeää myös hieman rauhoittua ennen finaalia.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-05-30T22:43:14.959026+00:00",
+  "failure": "Lähdeaineisto on liian niukka: paketissa on vain lyhyt kuvaus ilman ottelun ajankohtaa, lopputulosta, finaalivastustajaa tai muuta vahvistettua kontekstia 250 sanan julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T224119Z_86ab3fecfb\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: paketissa on vain lyhyt kuvaus ilman ottelun ajankohtaa, lopputulosta, finaalivastustajaa tai muuta vahvistettua kontekstia 250 sanan julkaistavaan artikkeliin.\"}"
+}

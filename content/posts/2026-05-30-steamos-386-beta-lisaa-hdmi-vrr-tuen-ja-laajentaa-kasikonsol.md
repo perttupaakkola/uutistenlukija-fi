@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/steamos-3-8-6-beta-tuo-tuen-uusille-kasikonsoleille-ja-vrrlle-hdmin-kautta/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
