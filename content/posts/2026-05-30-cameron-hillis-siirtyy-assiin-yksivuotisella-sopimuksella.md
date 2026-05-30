@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Kiekko-Espoosta-l%C3%A4htenyt-Cameron-Hillis-siirtyy-Poriin-kehittym%C3%A4%C3%A4n-%E2%80%9D%C3%84ssiss%C3%A4-siihen-on-hieno-mahdollisuus%E2%80%9D/269915"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
