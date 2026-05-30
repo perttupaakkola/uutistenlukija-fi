@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T17:31:18.992696+00:00",
+  "digest": "f95be883aa",
+  "packet": {
+    "packet_id": "20260530T173118Z_f95be883aa",
+    "created_at": "2026-05-30T17:31:18Z",
+    "headline_seed": "Poliisilta painava viesti vanhemmille: Tänä yönä kannattaa vastata tuntemattomaan numeroon",
+    "description_seed": "Suomen suuri juhlaviikonloppu on täällä: lakkiaisia, kevätjuhlia ja valmistujaisia. IS seuraa.",
+    "link": "https://www.is.fi/kotimaa/art-2000012034069.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012034069.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Poliisilta painava viesti vanhemmille: Tänä yönä kannattaa vastata tuntemattomaan numeroon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 183,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "Stara",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Poliisilta painava viesti vanhemmille: Tänä yönä kannattaa vastata tuntemattomaan numeroon",
+      "description": "Suomen suuri juhlaviikonloppu on täällä: lakkiaisia, kevätjuhlia ja valmistujaisia. IS seuraa.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Poliisilta painava viesti vanhemmille: Tänä yönä kannattaa vastata tuntemattomaan numeroon",
+    "description": "Suomen suuri juhlaviikonloppu on täällä: lakkiaisia, kevätjuhlia ja valmistujaisia. IS seuraa.",
+    "link": "https://www.is.fi/kotimaa/art-2000012034069.html",
+    "published": "2026-05-30T17:26:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "fd0b3b8653595600e3518f33b07eda99",
+    "_url_hash": "7dcb0618889eb39460d06b8d9fa7a0b130f2a51766a084192e811cd5bea5c3a6",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Stara]\nRovaniemellä todistettiin äskettäin hyvin huolestuttavaa ilmiötä. Poliisi joutui nimittäin puuttumaan nuorten vaaralliseen, tuleen liittyvään toimintaan.\n\nHätäkeskus sai ilmoituksia nuorista pojista, jotka olivat sytyttäneet ainakin kaksi pientä tulipaloa Rovaniemen Korkalovaarassa. Sivulliset olivat onnistuneet sammuttamaan palot ennen niiden leviämistä.\n\nLapin poliisilaitoksen mukaan varsinkin jälkimmäiseen paloon liittyi riski, että tuli olisi voinut levitä läheisiin puihin. Vaaran mahdollisuus oli siis läsnä.\n\nPoliisi ei onnistunut etsinnöistä huolimatta tavoittamaan palot sytyttänyttä poikaporukkaa. Tapauksesta on kirjattu rikosilmoitus, ja poliisi tutkii asiaa varomattomana käsittelynä.\n\nRovaniemellä ilmeni samoin aikoihin myös toinen nuoriin liittyvä, joskin vähemmän vaarallinen tapaus. Poliisi sai ilmoituksen paikallisen koulun katolla nähdyistä ihmisistä.\n\nPoliisi tapasi paikalta nuoria, jotka kertoivat olemassa kolaamassa lunta katolta hyppyriä varten. Nuorten tarkoitus oli tehdä temppuja suksilla.\n\nPoliisin mukaan nuoret eivät olleet kysyneet kiinteistön omistajalta lupaa toiminnalle.\n\nPoliisi kehottaa vanhempia valvomaan lastensa tekemisiä ja käymään läpi toisten omaisuuden kunnioittamiseen liittyviä pelisääntöjä. Poliisi myös muistuttaa, että vaikka rikosoikeudellinen vastuu alkaa 15-vuotiaana, ovat myös nuoremmat vahingonkorvausvelvollisia.\n\nVoit lukea lisää juuri tähän artikkeliin liittyvistä teemoista ja aiheista, kuten Poliisi Suomi, Rovaniemi, tulipalo tai laajemmin samasta aihealueesta Uutiset -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T17:33:14.677829+00:00",
+  "failure": "Lähdeaineisto puuttuu: paketissa ei ole valittuja lähdeblokkeja eikä tarkistettavia yksityiskohtia artikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T173118Z_f95be883aa\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu: paketissa ei ole valittuja lähdeblokkeja eikä tarkistettavia yksityiskohtia artikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
