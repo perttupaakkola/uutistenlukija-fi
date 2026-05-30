@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/nain-poliisi-valvoo-koulujen-paattajaisia-helsingissa/9344076"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 

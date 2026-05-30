@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T16:41:29.686939+00:00",
+  "digest": "22dfd9fef7",
+  "packet": {
+    "packet_id": "20260530T164129Z_22dfd9fef7",
+    "created_at": "2026-05-30T16:41:29Z",
+    "headline_seed": "'I will sleep with fear': Romanians shaken after Russian drone strike",
+    "description_seed": "A Russian drone hit a block of flats in Romania on Friday, causing a fire and injuring two people, Romanian officials say.",
+    "link": "https://www.bbc.com/news/videos/c4g5kxl9k1ro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC",
+      "Stars and Stripes"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/c4g5kxl9k1ro?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "'I will sleep with fear': Romanians shaken after Russian drone strike"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A Russian drone hit a block of flats in Romania on Friday, causing a fire and injuring two people, Romanian officials say.",
+        "word_count": 22,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The BBC visited a block of flats in Romania's eastern town of Galați, near the border with Ukraine, after it was hit by a Russian drone strike that injured two people on Friday. A resident of the building said he was afraid after the drone strike. \"If i go back to my flat tonight, I will sleep with fear,\" he told BBC's Eastern Europe correspondent Sarah Rainsford. Romanian President Nicușor Dan said the drone was likely hit by Ukrainian air defences over Kyiv's territory, altering its trajectory, though Moscow questioned whether it was Russian. Jordan Adams speaks to BBC News NI after finishing his 33rd marathon in Dublin. Jordan and Cian Adams finish their Irish marathon challenge at Merrion Square in Dublin city centre.",
+        "word_count": 124,
+        "keyword_overlap": 14,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "The BBC visited a block of flats in Romania's eastern town of Galați, near the border with Ukraine, after it was hit by a Russian drone strike that injured two people on Friday. A resident of the building said he was afraid after the drone strike. \"If i go back to my flat tonight, I will sleep with fear,\" he told BBC's Eastern Europe correspondent Sarah Rainsford. Romanian President Nicușor Dan said the drone was likely hit by Ukrainian air defences over Kyiv's territory, altering its trajectory, though Moscow questioned whether it was Russian. ---",
+        "word_count": 95,
+        "keyword_overlap": 14,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Stars and Stripes",
+        "source_type": "research",
+        "text": "In this photo posted to X Friday by Romanian Foreign Affairs Minister Oana-Silvia Toiu, flames and smoke rise from the rooftop of a 10-story apartment block in Galati, Romania, after a Russian drone hit the building during an overnight attack on neighboring Ukraine, May 29, 2026. Romania, a NATO member shares a 650-kilometer border with Ukraine. (IGSU) A Russian drone entered NATO ally Romania’s airspace and crashed into a residential building early Friday, injuring two people and prompting broad condemnation of the Kremlin and its ongoing war in Ukraine. The drone crashed into the roof of an apartment building in Galati during a Russian attack on civilian and infrastructure targets in neighboring Ukraine, Romania’s Defense Ministry said in a statement Friday.",
+        "word_count": 121,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "A Russian drone hit a block of flats in Romania on Friday, causing a fire and injuring two people, Romanian officials say.\n\nThe BBC visited a block of flats in Romania's eastern town of Galați, near the border with Ukraine, after it was hit by a Russian drone strike that injured two people on Friday. A resident of the building said he was afraid after the drone strike. \"If i go back to my flat tonight, I will sleep with fear,\" he told BBC's Eastern Europe correspondent Sarah Rainsford. Romanian President Nicușor Dan said the drone was likely hit by Ukrainian air defences over Kyiv's territory, altering its trajectory, though Moscow questioned whether it was Russian. Jordan Adams speaks to BBC News NI after finishing his 33rd marathon in Dublin. Jordan and Cian Adams finish their Irish marathon challenge at Merrion Square in Dublin city centre.\n\nThe BBC visited a block of flats in Romania's eastern town of Galați, near the border with Ukraine, after it was hit by a Russian drone strike that injured two people on Friday. A resident of the building said he was afraid after the drone strike. \"If i go back to my flat tonight, I will sleep with fear,\" he told BBC's Eastern Europe correspondent Sarah Rainsford. Romanian President Nicușor Dan said the drone was likely hit by Ukrainian air defences over Kyiv's territory, altering its trajectory, though Moscow questioned whether it was Russian. ---\n\nIn this photo posted to X Friday by Romanian Foreign Affairs Minister Oana-Silvia Toiu, flames and smoke rise from the rooftop of a 10-story apartment block in Galati, Romania, after a Russian drone hit the building during an overnight attack on neighboring Ukraine, May 29, 2026. Romania, a NATO member shares a 650-kilometer border with Ukraine. (IGSU) A Russian drone entered NATO ally Romania’s airspace and crashed into a residential building early Friday, injuring two people and prompting broad condemnation of the Kremlin and its ongoing war in Ukraine. The drone crashed into the roof of an apartment building in Galati during a Russian attack on civilian and infrastructure targets in neighboring Ukraine, Romania’s Defense Ministry said in a statement Friday.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 912,
+      "selected_blocks": 4,
+      "selected_source_words": 362,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "Stars and Stripes",
+        "Stars and Stripes",
+        "Stars and Stripes",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "Stars and Stripes"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "'I will sleep with fear': Romanians shaken after Russian drone strike",
+      "description": "A Russian drone hit a block of flats in Romania on Friday, causing a fire and injuring two people, Romanian officials say.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "'I will sleep with fear': Romanians shaken after Russian drone strike",
+    "description": "A Russian drone hit a block of flats in Romania on Friday, causing a fire and injuring two people, Romanian officials say.",
+    "link": "https://www.bbc.com/news/videos/c4g5kxl9k1ro?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-30T16:21:28+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "9aeb71a5e9a5e1951263322914459983",
+    "_url_hash": "4ec19a547de157ccbb001f708ca1d7f1b921b08793fecbd57324b0bde5329a3b",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe BBC visited a block of flats in Romania's eastern town of Galați, near the border with Ukraine, after it was hit by a Russian drone strike that injured two people on Friday.\n\nA resident of the building said he was afraid after the drone strike.\n\n\"If i go back to my flat tonight, I will sleep with fear,\" he told BBC's Eastern Europe correspondent Sarah Rainsford.\n\nRomanian President Nicușor Dan said the drone was likely hit by Ukrainian air defences over Kyiv's territory, altering its trajectory, though Moscow questioned whether it was Russian.\n\nJordan Adams speaks to BBC News NI after finishing his 33rd marathon in Dublin.\n\nJordan and Cian Adams finish their Irish marathon challenge at Merrion Square in Dublin city centre.\n\nHugh Schofield reports from Paris as a heat dome settled over Western Europe bringing temperatures above the average for May.\n\nAlmost 60 firefighters tackled the blaze at Cherrymore Kitchens & Bedrooms, a family-run business in Donegal Town.\n\nThe monumental structure was created by Parisan artist JR - often dubbed the French Banksy\n\nHundreds of people gathered to remember Yves Sakila, who died after an incident in Dublin city centre\n\nThe 27-year-old's tune Bangaranga won Bulgaria its first ever title in the song contest.\n\nBulgarian singer Dara stormed to victory in the contest, while Ukraine broke the record for the longest note ever sung at Eurovision.\n\nThe Princess of Wales received an enthusiastic welcome from Italian crowds, on her return to overseas visits following her treatment for cancer.\n\nThe BBC's Guy Hedgecoe reports from Tenerife, where some locals fear the ship's arrival could bring health risks.\n\nPeople on Tenerife in the Canary Islands have told the BBC they are concerned about the arrival of MV Hondius.\n\nThe Ukrainian army spotted the woman using a drone and sent the machine to her rescue as she was trying to leave her war-torn village.\n\nThe BBC's Jessica Parker visits Pripyat, which was abandoned in 1986 after an explosion at the nearby Chernobyl nuclear power plant.\n\nA proposed three-year deal with Paris is aimed at stopping migrants crossing the Channel on small boats.\n\nOne of the charity draw organisers tells BBC Radio 4's Front Row about calling the painting's new owner.\n\nThe pro-EU leader's Tisza party has won a landslide victory, bringing to an end Viktor Orbán's 16 years in power.\n\nRajini Vaidyanathan broadcasts from outside Hungary's parliament as crowds hear about the prime minister's concession.\n\nThe BBC's\n\n---\n\n[Lähde: BBC]\nThe BBC visited a block of flats in Romania's eastern town of Galați, near the border with Ukraine, after it was hit by a Russian drone strike that injured two people on Friday.\n\nA resident of the building said he was afraid after the drone strike.\n\n\"If i go back to my flat tonight, I will sleep with fear,\" he told BBC's Eastern Europe correspondent Sarah Rainsford.\n\nRomanian President Nicușor Dan said the drone was likely hit by Ukrainian air defences over Kyiv's territory, altering its trajectory, though Moscow questioned whether it was Russian.\n\n---\n\n[Lähde: Stars and Stripes]\nIn this photo posted to X Friday by Romanian Foreign Affairs Minister Oana-Silvia Toiu, flames and smoke rise from the rooftop of a 10-story apartment block in Galati, Romania, after a Russian drone hit the building during an overnight attack on neighboring Ukraine, May 29, 2026. Romania, a NATO member shares a 650-kilometer border with Ukraine. (IGSU)\n\nA Russian drone entered NATO ally Romania’s airspace and crashed into a residential building early Friday, injuring two people and prompting broad condemnation of the Kremlin and its ongoing war in Ukraine.\n\nThe drone crashed into the roof of an apartment building in Galati during a Russian attack on civilian and infrastructure targets in neighboring Ukraine, Romania’s Defense Ministry said in a statement Friday.\n\nGalati is about 110 miles northwest of Mihail Kogalniceanu Air Base, an important NATO operations hub that also hosts U.S. forces.\n\nRussian drones have crossed into Romanian territory several times since Moscow launched a full-scale invasion of Ukraine in February 2022, but this incursion appears to be the first in which injuries to civilians were reported.\n\nEmergency crews extinguished a fire caused by the impact and evacuated about 70 residents from the building that was struck, according to the statement. Two people were injured and received medical treatment, it added.\n\nRomanian military radar systems detected aerial targets approaching the country’s airspace overnight, triggering air raid warnings in Tulcea and Galati counties.\n\nTwo Romanian air force F-16 fighter jets and an IAR-330 helicopter were deployed to monitor the situation, the ministry said.\n\nDmitry Medvedev, deputy chair ‌of Russia’s Security Council, appeared to address the drone incident in a post on X.\n\n“Citizens of EU countries, You should realize your authorities have unilaterally entered into a war with Russia. So be vigilant and don’t be surprised by anything. The peaceful sleep is over. But you know who to ask why!” Medvedev said.\n\nEuropean leaders swiftly condemned Russia and warned that the war in Ukraine continues to threaten neighboring countries.\n\nNATO Secretary-General Mark Rutte said Russia’s “reckless behavior is a danger to us all,” adding that “the implications of their illegal war of aggression don’t stop at the border.”\n\nHe said he had spoken with Romanian President Nicusor Dan afterward.\n\n“I assured him of NATO’s absolute solidarity with Romania and expressed sympathy for those injured in the incident,” Rutte ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T16:44:39.303854+00:00",
+  "failure": "content too short: 245 words",
+  "payload": {
+    "packet_id": "20260530T164129Z_22dfd9fef7",
+    "title": "Venäläisdrooni osui kerrostaloon Romanian Galațissa, kaksi loukkaantui",
+    "summary": "Romanian viranomaisten mukaan venäläisdrooni osui perjantaina asuinkerrostaloon Galațissa lähellä Ukrainan rajaa. Isku aiheutti tulipalon, loukkasi kahta ihmistä ja herätti pelkoa talon asukkaissa.",
+    "content": "Venäläisdrooni osui perjantaina asuinkerrostaloon Romanian itäosassa sijaitsevassa Galațin kaupungissa, Romanian viranomaiset kertovat. Isku aiheutti rakennuksessa tulipalon ja loukkasi kahta ihmistä kaupungissa, joka sijaitsee lähellä Ukrainan vastaista rajaa ja on siksi seurannut Venäjän Ukrainaan kohdistamia iskuja aivan lähietäisyydeltä.\n\n## Drooni putosi kerrostalon katolle\n\nRomanian puolustusministeriön mukaan drooni putosi asuinkerrostalon katolle Galațissa Venäjän Ukrainaan kohdistaman yöllisen hyökkäyksen aikana. Ministeriön mukaan Venäjä iski hyökkäyksessä siviili- ja infrastruktuurikohteisiin naapurimaassa Ukrainassa.\n\nRomanian ulkoministeri Oana-Silvia Toiun X-palvelussa julkaisemassa kuvassa rakennuksen katolta nousi liekkejä ja savua osuman jälkeen. Kyseessä oli kymmenkerroksinen asuinkerrostalo. Romanian viranomaisten mukaan kaksi ihmistä loukkaantui, kun drooni päätyi Romanian ilmatilaan ja osui rakennukseen.\n\nGalați sijaitsee Itä-Romaniassa lähellä Ukrainaa. Romania kuuluu Natoon ja jakaa Ukrainan kanssa noin 650 kilometrin pituisen rajan, minkä vuoksi tapaus koskee myös liittokunnan jäsenmaan ilmatilaa ja rajaseudun turvallisuutta.\n\n## Asukkaat kuvaavat pelkoa\n\nBBC vieraili iskun jälkeen kerrostalolla Galațissa. Yksi rakennuksen asukas kertoi pelkäävänsä paluuta asuntoonsa. Hän sanoi BBC:n Itä-Euroopan kirjeenvaihtajalle Sarah Rainsfordille, että jos hän palaa asuntoonsa samana iltana, hän nukkuu pelon vallassa.\n\nRomanian presidentti Nicușor Dan sanoi, että drooni oli todennäköisesti osunut Ukrainan ilmapuolustukseen Ukrainan alueella ja muuttanut sen vuoksi lentorataansa. Moskova puolestaan kyseenalaisti tiedon siitä, että kyse olisi ollut venäläisestä droonista.\n\n## Tapaus liitetään Ukrainan sotaan\n\nRomanian viranomaisten mukaan tapaus liittyi Venäjän hyökkäykseen Ukrainaa vastaan. Drooni lensi Romanian ilmatilaan ennen kuin se iskeytyi asuinrakennukseen Galațissa.\n\nIsku on herättänyt laajaa arvostelua Venäjää ja sen Ukrainassa käymää sotaa kohtaan. Romanian kannalta tapaus korostaa sitä, miten Ukrainaan kohdistuvat ilmaiskut voivat aiheuttaa konkreettisia seurauksia myös rajan toisella puolella.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Romania",
+      "Galați",
+      "Ukraina",
+      "Venäjä",
+      "drooni",
+      "Nato"
+    ],
+    "summary_bullets": [
+      "Romanian viranomaisten mukaan venäläisdrooni osui perjantaina kerrostaloon Galațissa.",
+      "Isku aiheutti tulipalon ja loukkasi kahta ihmistä.",
+      "Romanian presidentin mukaan droonin lentorata saattoi muuttua Ukrainan ilmapuolustuksen osuman jälkeen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin viranomaistietoihin ja uutislähteiden yhteneviin tietoihin. Mukana ollut BBC:n maratonaiheinen katkelma jätettiin pois asiaan kuulumattomana."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260530T164129Z_22dfd9fef7\",\n  \"title\": \"Venäläisdrooni osui kerrostaloon Romanian Galațissa, kaksi loukkaantui\",\n  \"summary\": \"Romanian viranomaisten mukaan venäläisdrooni osui perjantaina asuinkerrostaloon Galațissa lähellä Ukrainan rajaa. Isku aiheutti tulipalon, loukkasi kahta ihmistä ja herätti pelkoa talon asukkaissa.\",\n  \"content\": \"Venäläisdrooni osui perjantaina asuinkerrostaloon Romanian itäosassa sijaitsevassa Galațin kaupungissa, Romanian viranomaiset kertovat. Isku aiheutti rakennuksessa tulipalon ja loukkasi kahta ihmistä kaupungissa, joka sijaitsee lähellä Ukrainan vastaista rajaa ja on siksi seurannut Venäjän Ukrainaan kohdistamia iskuja aivan lähietäisyydeltä.\\n\\n## Drooni putosi kerrostalon katolle\\n\\nRomanian puolustusministeriön mukaan drooni putosi asuinkerrostalon katolle Galațissa Venäjän Ukrainaan kohdistaman yöllisen hyökkäyksen aikana. Ministeriön mukaan Venäjä iski hyökkäyksessä siviili- ja infrastruktuurikohteisiin naapurimaassa Ukrainassa.\\n\\nRomanian ulkoministeri Oana-Silvia Toiun X-palvelussa julkaisemassa kuvassa rakennuksen katolta nousi liekkejä ja savua osuman jälkeen. Kyseessä oli kymmenkerroksinen asuinkerrostalo. Romanian viranomaisten mukaan kaksi ihmistä loukkaantui, kun drooni päätyi Romanian ilmatilaan ja osui rakennukseen.\\n\\nGalați sijaitsee Itä-Romaniassa lähellä Ukrainaa. Romania kuuluu Natoon ja jakaa Ukrainan kanssa noin 650 kilometrin pituisen rajan, minkä vuoksi tapaus koskee myös liittokunnan jäsenmaan ilmatilaa ja rajaseudun turvallisuutta.\\n\\n## Asukkaat kuvaavat pelkoa\\n\\nBBC vieraili iskun jälkeen kerrostalolla Galațissa. Yksi rakennuksen asukas kertoi pelkäävänsä paluuta asuntoonsa. Hän sanoi BBC:n Itä-Euroopan kirjeenvaihtajalle Sarah Rainsfordille, että jos hän palaa asuntoonsa samana iltana, hän nukkuu pelon vallassa.\\n\\nRomanian presidentti Nicușor Dan sanoi, että drooni oli todennäköisesti osunut Ukrainan ilmapuolustukseen Ukrainan alueella ja muuttanut sen vuoksi lentorataansa. Moskova puolestaan kyseenalaisti tiedon siitä, että kyse olisi ollut venäläisestä droonista.\\n\\n## Tapaus liitetään Ukrainan sotaan\\n\\nRomanian viranomaisten mukaan tapaus liittyi Venäjän hyökkäykseen Ukrainaa vastaan. Drooni lensi Romanian ilmatilaan ennen kuin se iskeytyi asuinrakennukseen Galațissa.\\n\\nIsku on herättänyt laajaa arvostelua Venäjää ja sen Ukrainassa käymää sotaa kohtaan. Romanian kannalta tapaus korostaa sitä, miten Ukrainaan kohdistuvat ilmaiskut voivat aiheuttaa konkreettisia seurauksia myös rajan toisella puolella.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Romania\",\n    \"Galați\",\n    \"Ukraina\",\n    \"Venäjä\",\n    \"drooni\",\n    \"Nato\"\n  ],\n  \"summary_bullets\": [\n    \"Romanian viranomaisten mukaan venäläisdrooni osui perjantaina kerrostaloon Galațissa.\",\n    \"Isku aiheutti tulipalon ja loukkasi kahta ihmistä.\",\n    \"Romanian presidentin mukaan droonin lentorata saattoi muuttua Ukrainan ilmapuolustuksen osuman jälkeen.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu paketissa olleisiin viranomaistietoihin ja uutislähteiden yhteneviin tietoihin. Mukana ollut BBC:n maratonaiheinen katkelma jätettiin pois asiaan kuulumattomana.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260530T164129Z_22dfd9fef7",
+    "category": "Kotimaa",
+    "selected_source_words": 362,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 245,
+    "issues": [
+      "content too short: 245 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Venäläisdrooni osui kerrostaloon Romanian Galațissa, kaksi loukkaantui",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-05-30T16:44:39.303357+00:00",
+    "repair_trigger": "pre_repair_word_count=234; selected_source_words=362; selected_source_blocks=4",
+    "pre_repair_word_count": 234,
+    "pre_repair_lead_word_count": 27,
+    "post_repair_word_count": 245,
+    "post_repair_lead_word_count": 37,
+    "selected_source_words_at_repair": 362,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 362,
+    "source_blocks": 4,
+    "repair_added_word_count": 11,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 245 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:a88d499210",
+      "2:BBC World:1a851a29c7",
+      "3:BBC:7ba1dec645",
+      "4:Stars and Stripes:630745896c"
+    ],
+    "final_issues": [
+      "content too short: 245 words"
+    ],
+    "recovered": false
+  }
+}
