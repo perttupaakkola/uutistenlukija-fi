@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-30T21:11:21.797311+00:00",
+  "digest": "90e306a96d",
+  "packet": {
+    "packet_id": "20260530T211121Z_90e306a96d",
+    "created_at": "2026-05-30T21:11:21Z",
+    "headline_seed": "Suomi–Kanada | Barkovin dominointi ja tehokas kakkoserä olivat liikaa NHL-tähdille",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9495743",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9495743"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomi–Kanada | Barkovin dominointi ja tehokas kakkoserä olivat liikaa NHL-tähdille"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 136,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomi–Kanada | Barkovin dominointi ja tehokas kakkoserä olivat liikaa NHL-tähdille",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suomi–Kanada | Barkovin dominointi ja tehokas kakkoserä olivat liikaa NHL-tähdille",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9495743",
+    "published": "2026-05-30T23:45:48+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "0e4169ce3d8e6e81eaccbdd48398fb15",
+    "_url_hash": "aae27093fa9ff4876052b7c7cecce41fb7934ac175fa6f80a6c5baabe2162867",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nLeijonat aloitti ottelun pirteästi, mutta ensimmäiselle erätauolle mentiin tehokkaasti viimeistelleen Kanadan johdossa. Käänne nähtiin toisessa erässä, kun Suomi iski kolme maalia ja karkasi kahden osuman etumatkalle.\n\nSUOMI ISKEE HETI TOISEN ERÄN ALKUUN KAPTEENIN JOHDOLLA! 🔥🔥#ViaplayMMlätkä #Leijonat #MMkisat #lupanauttia #ihankaikki pic.twitter.com/KUnXQSRXZx\n\nKONSTA HELENIUS ja AATU RÄTY iskevät maalit mieheen vajaaseen kahteen minuuttiin ja Leijonat siirtyvät kahden maalin johtoon! 🦁🚨#ViaplayMMlätkä #Leijonat #MMkisat #lupanauttia #ihankaikki pic.twitter.com/LFCnAAvF2I\n\nMaalivahtien välinen kamppailu kääntyi lopulta selvästi Justus Annusen nimiin. Erityisesti toisen erän lopussa ja päätöserässä suomalaisvahti venyi useisiin huipputorjuntoihin ja piti Suomen edellä. Kanadan Jet Greaves ei vastaavasti onnistunut ratkaisuhetkillä pitämään joukkuettaan mukana pelissä.\n\nAleksander Barkov pelasi uskomattoman ottelun ja onnistui pimentämään Kanadan kärkipelaajat täysin. Kokonaisvaltaisen pelaamisen lisäksi Barkov viimeisteli toisessa erässä tärkeän 2–2-tasoitusmaalin ja nappasi syötön Heleniuksen 3–2-voittomaaliin.\n\nLeijonat kohtaa sunnuntaina MM-finaalissa kisaisäntä Sveitsin kello 21.20 alkaen. Suomi tavoittelee historiansa viidettä maailmanmestaruutta.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-05-30T21:13:20.004403+00:00",
+  "failure": "Paketti sisältää vain otsikkotason väitteen eikä lainkaan valittua lähdetekstiä tai tarkistettavia ottelutietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260530T211121Z_90e306a96d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää vain otsikkotason väitteen eikä lainkaan valittua lähdetekstiä tai tarkistettavia ottelutietoja.\"}"
+}
