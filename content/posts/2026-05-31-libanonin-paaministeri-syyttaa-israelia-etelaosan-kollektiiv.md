@@ -45,7 +45,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/may/31/israel-pursuing-scorced-earth-policy-says-lebanon-pm-as-more-airstrikes-hit-countrys-south"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
