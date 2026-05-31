@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/may/31/yves-sakila-death-congolese-man-ireland-race-relations"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
