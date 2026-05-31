@@ -43,7 +43,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://consumerrights.wiki/w/Microsoft_Office_2019_and_2021_for_Mac_view-only_conversion_(2026)"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
