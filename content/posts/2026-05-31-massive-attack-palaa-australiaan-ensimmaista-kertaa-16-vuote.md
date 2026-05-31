@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/music/2026/jun/01/massive-attack-australia-tour-august-sydney-melbourne-brisbane"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
