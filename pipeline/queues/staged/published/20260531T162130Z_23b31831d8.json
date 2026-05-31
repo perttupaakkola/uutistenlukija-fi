@@ -1,0 +1,213 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-31T16:21:30.849685+00:00",
+  "digest": "23b31831d8",
+  "packet": {
+    "packet_id": "20260531T162130Z_23b31831d8",
+    "created_at": "2026-05-31T16:21:30Z",
+    "headline_seed": "Blast kills dozens in rebel-held village in Myanmar",
+    "description_seed": "Insurgents say it was caused by explosives being used for mining close to the Chinese border.",
+    "link": "https://www.bbc.com/news/articles/cglp7p787njo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "ABC7",
+      "ABC7"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cglp7p787njo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Blast kills dozens in rebel-held village in Myanmar"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "An explosion has killed at least 55 people and wounded dozens more in a village in a region of Myanmar, formerly known as Burma, under insurgent control. A source familiar with the situation on the ground in Kaung Tat, a village in Namkham Township in Shan State, near the Chinese border, told BBC Burma that 25 women and 30 men had died. Other reports gave slightly different casualty figures. Rescue teams were searching for and extracting people trapped beneath rubble, the source added. The Ta'ang National Liberation Army (TNLA), which controls the area and which has been engaged in bitter fighting with Myanmar's military junta, said explosives used in mining and quarrying had exploded. Residents described scenes of devastation and confusion following the explosion.",
+        "word_count": 124,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Insurgents say it was caused by explosives being used for mining close to the Chinese border.",
+        "word_count": 16,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "ABC7",
+        "source_type": "research",
+        "text": "A blast on Sunday at a building in northeastern Myanmar said to have been storing explosives for mining has killed more than 45 people, according to rescue workers and independent media reports. About 70 other people were injured in the explosion that took place around noon in the village of Kaungtup, in Namhkam township. The area, located about 2 miles south of the Chinese border, is under the control of the Ta'ang National Liberation Army, an ethnic armed group which has engaged in sporadic fighting against Myanmar's central government. A rescue worker who rushed to the site of the blast told The Associated Press that 46 bodies, including six children, had been recovered by Sunday evening and taken for cremation.",
+        "word_count": 120,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "ABC7",
+        "source_type": "research",
+        "text": "The rescuer, who spoke on condition of anonymity for security reasons, said 74 injured people had been transported to the township hospital and rescue operations were continuing. Another rescuer in Namhkam, who also spoke on condition of anonymity, said about 40 people were killed and more than 100 houses near the blast site were damaged. Myanmar media outlets, including Shan State's online Shwe Phee Myay news agency, reported death tolls ranging from 50 to 55. They published photos and videos showing smoke from the explosion and damaged buildings and debris in its aftermath. Chinese state broadcaster CCTV reported the explosion caused multiple deaths and injuries, with many residential houses being severely damaged, but did not give figures.",
+        "word_count": 117,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "An explosion has killed at least 55 people and wounded dozens more in a village in a region of Myanmar, formerly known as Burma, under insurgent control. A source familiar with the situation on the ground in Kaung Tat, a village in Namkham Township in Shan State, near the Chinese border, told BBC Burma that 25 women and 30 men had died. Other reports gave slightly different casualty figures. Rescue teams were searching for and extracting people trapped beneath rubble, the source added. The Ta'ang National Liberation Army (TNLA), which controls the area and which has been engaged in bitter fighting with Myanmar's military junta, said explosives used in mining and quarrying had exploded. Residents described scenes of devastation and confusion following the explosion.\n\nInsurgents say it was caused by explosives being used for mining close to the Chinese border.\n\nA blast on Sunday at a building in northeastern Myanmar said to have been storing explosives for mining has killed more than 45 people, according to rescue workers and independent media reports. About 70 other people were injured in the explosion that took place around noon in the village of Kaungtup, in Namhkam township. The area, located about 2 miles south of the Chinese border, is under the control of the Ta'ang National Liberation Army, an ethnic armed group which has engaged in sporadic fighting against Myanmar's central government. A rescue worker who rushed to the site of the blast told The Associated Press that 46 bodies, including six children, had been recovered by Sunday evening and taken for cremation.\n\nThe rescuer, who spoke on condition of anonymity for security reasons, said 74 injured people had been transported to the township hospital and rescue operations were continuing. Another rescuer in Namhkam, who also spoke on condition of anonymity, said about 40 people were killed and more than 100 houses near the blast site were damaged. Myanmar media outlets, including Shan State's online Shwe Phee Myay news agency, reported death tolls ranging from 50 to 55. They published photos and videos showing smoke from the explosion and damaged buildings and debris in its aftermath. Chinese state broadcaster CCTV reported the explosion caused multiple deaths and injuries, with many residential houses being severely damaged, but did not give figures.",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 699,
+      "selected_blocks": 4,
+      "selected_source_words": 377,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "ABC7",
+        "ABC7",
+        "ABC7",
+        "ABC7",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "ABC7",
+        "ABC7"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Blast kills dozens in rebel-held village in Myanmar",
+      "description": "Insurgents say it was caused by explosives being used for mining close to the Chinese border.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Blast kills dozens in rebel-held village in Myanmar",
+    "description": "Insurgents say it was caused by explosives being used for mining close to the Chinese border.",
+    "link": "https://www.bbc.com/news/articles/cglp7p787njo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-31T16:17:25+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "c91afc89c2868f52201f9f94de99e428",
+    "_url_hash": "53d3aa032a1ff958913571fa00c976bbdd5d9bd39ca4a4e5be794093cfe5d527",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAn explosion has killed at least 55 people and wounded dozens more in a village in a region of Myanmar, formerly known as Burma, under insurgent control.\n\nA source familiar with the situation on the ground in Kaung Tat, a village in Namkham Township in Shan State, near the Chinese border, told BBC Burma that 25 women and 30 men had died. Other reports gave slightly different casualty figures.\n\nRescue teams were searching for and extracting people trapped beneath rubble, the source added.\n\nThe Ta'ang National Liberation Army (TNLA), which controls the area and which has been engaged in bitter fighting with Myanmar's military junta, said explosives used in mining and quarrying had exploded.\n\nResidents described scenes of devastation and confusion following the explosion.\n\nOne wrote on social media that many people had initially believed the blast was caused by an air strike.\n\nChildren were among the dead and hundreds of homes had been damaged, affecting almost an entire neighborhood, according to the post.\n\n\"By sheer luck, my phone saved my life,\" the resident wrote.\n\n\"I was sitting in my bedroom eating noodles and looking at my phone. If I had been eating in the kitchen, I probably would not be alive today.\"\n\nThe resident, who said she had suffered a minor leg injury and her own home had been destroyed, described scenes of panic and grief in the aftermath of the blast.\n\n\"People were crying, calling out for their parents,\" she wrote. \"It felt as if the world had come to an end.\"\n\nShe questioned why a facility containing explosives had been allowed to operate close to residential areas, saying families of those killed would not be satisfied unless the authorities provided a full explanation.\n\n---\n\n[Lähde: ABC7]\nA blast on Sunday at a building in northeastern Myanmar said to have been storing explosives for mining has killed more than 45 people, according to rescue workers and independent media reports.\n\nAbout 70 other people were injured in the explosion that took place around noon in the village of Kaungtup, in Namhkam township.\n\nThe area, located about 2 miles south of the Chinese border, is under the control of the Ta'ang National Liberation Army, an ethnic armed group which has engaged in sporadic fighting against Myanmar's central government.\n\nA rescue worker who rushed to the site of the blast told The Associated Press that 46 bodies, including six children, had been recovered by Sunday evening and taken for cremation.\n\nThe rescuer, who spoke on condition of anonymity for security reasons, said 74 injured people had been transported to the township hospital and rescue operations were continuing.\n\nAnother rescuer in Namhkam, who also spoke on condition of anonymity, said about 40 people were killed and more than 100 houses near the blast site were damaged.\n\nMyanmar media outlets, including Shan State's online Shwe Phee Myay news agency, reported death tolls ranging from 50 to 55. They published photos and videos showing smoke from the explosion and damaged buildings and debris in its aftermath.\n\nChinese state broadcaster CCTV reported the explosion caused multiple deaths and injuries, with many residential houses being severely damaged, but did not give figures.\n\nIt said that according to preliminary investigations, the blast occurred at a site where large quantities of explosives used for mining operations were stored.\n\nLocal authorities are currently providing relief, medical care and resettlement assistance to affected residents, said the report.\n\nThe Ta'ang National Liberation Army, or TNLA, said in a statement released on its Telegram channel that gelignite had been stored by the group's economic department for use in mining and stone quarrying sites, and that an investigation into the cause of the explosion is underway.\n\nGelignite is widely used in mining and rock blasting, but can become highly unstable over time and if poorly stored.\n\nThe Ta'ang National Liberation Army, or TNLA, is a member of the rebel Three Brotherhood Alliance, and has controlled the Namhkam area since the alliance and its allies launched a major offensive against the military in northeastern Myanmar in late 2023. The alliance members and other ethnic armed groups have long fough",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-05-31T16:23:48.102988+00:00",
+  "payload": {
+    "packet_id": "20260531T162130Z_23b31831d8",
+    "title": "Räjähdys surmasi kymmeniä kapinallisten hallitsemassa kylässä Myanmarissa",
+    "summary": "Koillis-Myanmarissa lähellä Kiinan rajaa tapahtunut räjähdys on surmannut kymmeniä ihmisiä ja haavoittanut useita kymmeniä. Aluetta hallitseva Ta'angin kansallinen vapautusarmeija kertoo räjähdyksen liittyneen kaivos- ja louhintakäytössä olleisiin räjähteisiin.",
+    "content": "Koillis-Myanmarissa Shan-osavaltiossa sijaitsevassa kylässä tapahtunut voimakas räjähdys on surmannut ainakin kymmeniä ihmisiä ja haavoittanut useita muita. Tiedot uhrimääristä vaihtelevat, mutta paikallisten pelastajien, alueellisten medioiden ja BBC Burman tietojen mukaan kuolleita on raportoitu noin 45:stä vähintään 55:een. Räjähdyspaikka sijaitsee Namhkamissa lähellä Kiinan rajaa alueella, jota hallitsee etninen aseellinen ryhmä Ta'angin kansallinen vapautusarmeija.\n\n## Uhrimäärästä on eri arvioita\n\nBBC Burmalle tilanteen tunteva lähde kertoi, että Kaung Tat -nimisessä kylässä olisi kuollut 55 ihmistä, heistä 25 naista ja 30 miestä. Muiden raporttien mukaan kuolleita on hieman vähemmän tai saman suuntaisesti noin 50–55.\n\nAssociated Pressin välittämien tietojen mukaan sunnuntaina puolenpäivän aikaan sattunut räjähdys tapahtui rakennuksessa, jossa kerrottiin säilytetyn kaivostoimintaan tarkoitettuja räjähteitä. Yksi paikalle kiirehtineistä pelastajista kertoi, että sunnuntai-iltaan mennessä oli löydetty 46 ruumista, mukaan lukien kuusi lasta. Hänen mukaansa 74 loukkaantunutta oli kuljetettu Namhkamin sairaalaan.\n\nPelastustyöt jatkuivat räjähdyksen jälkeen, ja ihmisiä etsittiin raunioista. Paikalliset asukkaat kuvasivat tuhon ja sekasorron leimaamaa tilannetta kylässä.\n\n## Räjähdyksen syyksi epäillään louhintaräjähteitä\n\nAluetta hallitseva Ta'angin kansallinen vapautusarmeija eli TNLA sanoi räjähdyksen johtuneen kaivos- ja louhintakäytössä olleista räjähteistä. Rakennuksen kerrottiin sijainneen noin muutaman kilometrin päässä Kiinan rajasta.\n\nToinen Namhkamin alueella toimiva pelastaja arvioi, että kuolleita olisi noin 40 ja että yli sata taloa olisi vaurioitunut räjähdyksen lähellä. Shan-osavaltion paikalliset mediat julkaisivat kuvia ja videoita, joissa näkyi savua, vaurioituneita rakennuksia ja räjähdyksen jälkeistä romua. Kiinan valtiollinen CCTV kertoi useista kuolleista ja loukkaantuneista sekä vakavia vaurioita kärsineistä asuintaloista, mutta ei ilmoittanut uhrilukuja.\n\nMyanmar on ollut sisäisessä konfliktissa sotilasjuntan kaapattua vallan vuonna 2021. TNLA on yksi etnisistä aseellisista ryhmistä, jotka ovat käyneet taisteluja maan keskushallintoa vastaan. Räjähdys tapahtui alueella, joka ei ole sotilasjuntan suorassa hallinnassa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Myanmar",
+      "Shan-osavaltio",
+      "räjähdys",
+      "Ta'angin kansallinen vapautusarmeija",
+      "Kiina"
+    ],
+    "summary_bullets": [
+      "Koillis-Myanmarissa tapahtunut räjähdys on surmannut kymmeniä ihmisiä lähellä Kiinan rajaa.",
+      "Uhrimääristä on eri arvioita: raportit vaihtelevat noin 45 kuolleesta vähintään 55 kuolleeseen.",
+      "Aluetta hallitseva TNLA sanoo räjähdyksen liittyneen kaivos- ja louhintakäytössä olleisiin räjähteisiin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Lähteissä on hieman toisistaan poikkeavia uhrilukuja, joten artikkelissa uhrimäärä ilmaistaan vaihteluvälinä ja korostetaan tietojen epävarmuutta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260531T162130Z_23b31831d8\",\"title\":\"Räjähdys surmasi kymmeniä kapinallisten hallitsemassa kylässä Myanmarissa\",\"summary\":\"Koillis-Myanmarissa lähellä Kiinan rajaa tapahtunut räjähdys on surmannut kymmeniä ihmisiä ja haavoittanut useita kymmeniä. Aluetta hallitseva Ta'angin kansallinen vapautusarmeija kertoo räjähdyksen liittyneen kaivos- ja louhintakäytössä olleisiin räjähteisiin.\",\"content\":\"Koillis-Myanmarissa Shan-osavaltiossa sijaitsevassa kylässä tapahtunut voimakas räjähdys on surmannut ainakin kymmeniä ihmisiä ja haavoittanut useita muita. Tiedot uhrimääristä vaihtelevat, mutta paikallisten pelastajien, alueellisten medioiden ja BBC Burman tietojen mukaan kuolleita on raportoitu noin 45:stä vähintään 55:een. Räjähdyspaikka sijaitsee Namhkamissa lähellä Kiinan rajaa alueella, jota hallitsee etninen aseellinen ryhmä Ta'angin kansallinen vapautusarmeija.\\n\\n## Uhrimäärästä on eri arvioita\\n\\nBBC Burmalle tilanteen tunteva lähde kertoi, että Kaung Tat -nimisessä kylässä olisi kuollut 55 ihmistä, heistä 25 naista ja 30 miestä. Muiden raporttien mukaan kuolleita on hieman vähemmän tai saman suuntaisesti noin 50–55.\\n\\nAssociated Pressin välittämien tietojen mukaan sunnuntaina puolenpäivän aikaan sattunut räjähdys tapahtui rakennuksessa, jossa kerrottiin säilytetyn kaivostoimintaan tarkoitettuja räjähteitä. Yksi paikalle kiirehtineistä pelastajista kertoi, että sunnuntai-iltaan mennessä oli löydetty 46 ruumista, mukaan lukien kuusi lasta. Hänen mukaansa 74 loukkaantunutta oli kuljetettu Namhkamin sairaalaan.\\n\\nPelastustyöt jatkuivat räjähdyksen jälkeen, ja ihmisiä etsittiin raunioista. Paikalliset asukkaat kuvasivat tuhon ja sekasorron leimaamaa tilannetta kylässä.\\n\\n## Räjähdyksen syyksi epäillään louhintaräjähteitä\\n\\nAluetta hallitseva Ta'angin kansallinen vapautusarmeija eli TNLA sanoi räjähdyksen johtuneen kaivos- ja louhintakäytössä olleista räjähteistä. Rakennuksen kerrottiin sijainneen noin muutaman kilometrin päässä Kiinan rajasta.\\n\\nToinen Namhkamin alueella toimiva pelastaja arvioi, että kuolleita olisi noin 40 ja että yli sata taloa olisi vaurioitunut räjähdyksen lähellä. Shan-osavaltion paikalliset mediat julkaisivat kuvia ja videoita, joissa näkyi savua, vaurioituneita rakennuksia ja räjähdyksen jälkeistä romua. Kiinan valtiollinen CCTV kertoi useista kuolleista ja loukkaantuneista sekä vakavia vaurioita kärsineistä asuintaloista, mutta ei ilmoittanut uhrilukuja.\\n\\nMyanmar on ollut sisäisessä konfliktissa sotilasjuntan kaapattua vallan vuonna 2021. TNLA on yksi etnisistä aseellisista ryhmistä, jotka ovat käyneet taisteluja maan keskushallintoa vastaan. Räjähdys tapahtui alueella, joka ei ole sotilasjuntan suorassa hallinnassa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Myanmar\",\"Shan-osavaltio\",\"räjähdys\",\"Ta'angin kansallinen vapautusarmeija\",\"Kiina\"],\"summary_bullets\":[\"Koillis-Myanmarissa tapahtunut räjähdys on surmannut kymmeniä ihmisiä lähellä Kiinan rajaa.\",\"Uhrimääristä on eri arvioita: raportit vaihtelevat noin 45 kuolleesta vähintään 55 kuolleeseen.\",\"Aluetta hallitseva TNLA sanoo räjähdyksen liittyneen kaivos- ja louhintakäytössä olleisiin räjähteisiin.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.86,\"journalist_note\":\"Lähteissä on hieman toisistaan poikkeavia uhrilukuja, joten artikkelissa uhrimäärä ilmaistaan vaihteluvälinä ja korostetaan tietojen epävarmuutta.\"}",
+  "article": {
+    "title": "Räjähdys surmasi kymmeniä kapinallisten hallitsemassa kylässä Myanmarissa",
+    "description": "Koillis-Myanmarissa lähellä Kiinan rajaa tapahtunut räjähdys on surmannut kymmeniä ihmisiä ja haavoittanut useita kymmeniä. Aluetta hallitseva Ta'angin kansallinen vapautusarmeija kertoo räjähdyksen liittyneen kaivos- ja louhintakäytössä olleisiin räjähteisiin.",
+    "link": "https://www.bbc.com/news/articles/cglp7p787njo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-31T16:17:25+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "c91afc89c2868f52201f9f94de99e428",
+    "_url_hash": "53d3aa032a1ff958913571fa00c976bbdd5d9bd39ca4a4e5be794093cfe5d527",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAn explosion has killed at least 55 people and wounded dozens more in a village in a region of Myanmar, formerly known as Burma, under insurgent control.\n\nA source familiar with the situation on the ground in Kaung Tat, a village in Namkham Township in Shan State, near the Chinese border, told BBC Burma that 25 women and 30 men had died. Other reports gave slightly different casualty figures.\n\nRescue teams were searching for and extracting people trapped beneath rubble, the source added.\n\nThe Ta'ang National Liberation Army (TNLA), which controls the area and which has been engaged in bitter fighting with Myanmar's military junta, said explosives used in mining and quarrying had exploded.\n\nResidents described scenes of devastation and confusion following the explosion.\n\nOne wrote on social media that many people had initially believed the blast was caused by an air strike.\n\nChildren were among the dead and hundreds of homes had been damaged, affecting almost an entire neighborhood, according to the post.\n\n\"By sheer luck, my phone saved my life,\" the resident wrote.\n\n\"I was sitting in my bedroom eating noodles and looking at my phone. If I had been eating in the kitchen, I probably would not be alive today.\"\n\nThe resident, who said she had suffered a minor leg injury and her own home had been destroyed, described scenes of panic and grief in the aftermath of the blast.\n\n\"People were crying, calling out for their parents,\" she wrote. \"It felt as if the world had come to an end.\"\n\nShe questioned why a facility containing explosives had been allowed to operate close to residential areas, saying families of those killed would not be satisfied unless the authorities provided a full explanation.\n\n---\n\n[Lähde: ABC7]\nA blast on Sunday at a building in northeastern Myanmar said to have been storing explosives for mining has killed more than 45 people, according to rescue workers and independent media reports.\n\nAbout 70 other people were injured in the explosion that took place around noon in the village of Kaungtup, in Namhkam township.\n\nThe area, located about 2 miles south of the Chinese border, is under the control of the Ta'ang National Liberation Army, an ethnic armed group which has engaged in sporadic fighting against Myanmar's central government.\n\nA rescue worker who rushed to the site of the blast told The Associated Press that 46 bodies, including six children, had been recovered by Sunday evening and taken for cremation.\n\nThe rescuer, who spoke on condition of anonymity for security reasons, said 74 injured people had been transported to the township hospital and rescue operations were continuing.\n\nAnother rescuer in Namhkam, who also spoke on condition of anonymity, said about 40 people were killed and more than 100 houses near the blast site were damaged.\n\nMyanmar media outlets, including Shan State's online Shwe Phee Myay news agency, reported death tolls ranging from 50 to 55. They published photos and videos showing smoke from the explosion and damaged buildings and debris in its aftermath.\n\nChinese state broadcaster CCTV reported the explosion caused multiple deaths and injuries, with many residential houses being severely damaged, but did not give figures.\n\nIt said that according to preliminary investigations, the blast occurred at a site where large quantities of explosives used for mining operations were stored.\n\nLocal authorities are currently providing relief, medical care and resettlement assistance to affected residents, said the report.\n\nThe Ta'ang National Liberation Army, or TNLA, said in a statement released on its Telegram channel that gelignite had been stored by the group's economic department for use in mining and stone quarrying sites, and that an investigation into the cause of the explosion is underway.\n\nGelignite is widely used in mining and rock blasting, but can become highly unstable over time and if poorly stored.\n\nThe Ta'ang National Liberation Army, or TNLA, is a member of the rebel Three Brotherhood Alliance, and has controlled the Namhkam area since the alliance and its allies launched a major offensive against the military in northeastern Myanmar in late 2023. The alliance members and other ethnic armed groups have long fough",
+    "research_source": "multi",
+    "summary": "Koillis-Myanmarissa lähellä Kiinan rajaa tapahtunut räjähdys on surmannut kymmeniä ihmisiä ja haavoittanut useita kymmeniä. Aluetta hallitseva Ta'angin kansallinen vapautusarmeija kertoo räjähdyksen liittyneen kaivos- ja louhintakäytössä olleisiin räjähteisiin.",
+    "content": "Koillis-Myanmarissa Shan-osavaltiossa sijaitsevassa kylässä tapahtunut voimakas räjähdys on surmannut ainakin kymmeniä ihmisiä ja haavoittanut useita muita. Tiedot uhrimääristä vaihtelevat, mutta paikallisten pelastajien, alueellisten medioiden ja BBC Burman tietojen mukaan kuolleita on raportoitu noin 45:stä vähintään 55:een. Räjähdyspaikka sijaitsee Namhkamissa lähellä Kiinan rajaa alueella, jota hallitsee etninen aseellinen ryhmä Ta'angin kansallinen vapautusarmeija.\n\n## Uhrimäärästä on eri arvioita\n\nBBC Burmalle tilanteen tunteva lähde kertoi, että Kaung Tat -nimisessä kylässä olisi kuollut 55 ihmistä, heistä 25 naista ja 30 miestä. Muiden raporttien mukaan kuolleita on hieman vähemmän tai saman suuntaisesti noin 50–55.\n\nAssociated Pressin välittämien tietojen mukaan sunnuntaina puolenpäivän aikaan sattunut räjähdys tapahtui rakennuksessa, jossa kerrottiin säilytetyn kaivostoimintaan tarkoitettuja räjähteitä. Yksi paikalle kiirehtineistä pelastajista kertoi, että sunnuntai-iltaan mennessä oli löydetty 46 ruumista, mukaan lukien kuusi lasta. Hänen mukaansa 74 loukkaantunutta oli kuljetettu Namhkamin sairaalaan.\n\nPelastustyöt jatkuivat räjähdyksen jälkeen, ja ihmisiä etsittiin raunioista. Paikalliset asukkaat kuvasivat tuhon ja sekasorron leimaamaa tilannetta kylässä.\n\n## Räjähdyksen syyksi epäillään louhintaräjähteitä\n\nAluetta hallitseva Ta'angin kansallinen vapautusarmeija eli TNLA sanoi räjähdyksen johtuneen kaivos- ja louhintakäytössä olleista räjähteistä. Rakennuksen kerrottiin sijainneen noin muutaman kilometrin päässä Kiinan rajasta.\n\nToinen Namhkamin alueella toimiva pelastaja arvioi, että kuolleita olisi noin 40 ja että yli sata taloa olisi vaurioitunut räjähdyksen lähellä. Shan-osavaltion paikalliset mediat julkaisivat kuvia ja videoita, joissa näkyi savua, vaurioituneita rakennuksia ja räjähdyksen jälkeistä romua. Kiinan valtiollinen CCTV kertoi useista kuolleista ja loukkaantuneista sekä vakavia vaurioita kärsineistä asuintaloista, mutta ei ilmoittanut uhrilukuja.\n\nMyanmar on ollut sisäisessä konfliktissa sotilasjuntan kaapattua vallan vuonna 2021. TNLA on yksi etnisistä aseellisista ryhmistä, jotka ovat käyneet taisteluja maan keskushallintoa vastaan. Räjähdys tapahtui alueella, joka ei ole sotilasjuntan suorassa hallinnassa.",
+    "category": "Kotimaa",
+    "tags": [
+      "myanmar",
+      "shan-osavaltio",
+      "räjähdys",
+      "ta'angin kansallinen vapautusarmeija",
+      "kiina"
+    ],
+    "summary_bullets": [
+      "Koillis-Myanmarissa tapahtunut räjähdys on surmannut kymmeniä ihmisiä lähellä Kiinan rajaa.",
+      "Uhrimääristä on eri arvioita: raportit vaihtelevat noin 45 kuolleesta vähintään 55 kuolleeseen.",
+      "Aluetta hallitseva TNLA sanoo räjähdyksen liittyneen kaivos- ja louhintakäytössä olleisiin räjähteisiin."
+    ],
+    "key_points": [
+      "Koillis-Myanmarissa tapahtunut räjähdys on surmannut kymmeniä ihmisiä lähellä Kiinan rajaa.",
+      "Uhrimääristä on eri arvioita: raportit vaihtelevat noin 45 kuolleesta vähintään 55 kuolleeseen.",
+      "Aluetta hallitseva TNLA sanoo räjähdyksen liittyneen kaivos- ja louhintakäytössä olleisiin räjähteisiin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Lähteissä on hieman toisistaan poikkeavia uhrilukuja, joten artikkelissa uhrimäärä ilmaistaan vaihteluvälinä ja korostetaan tietojen epävarmuutta.",
+    "source_text": "An explosion has killed at least 55 people and wounded dozens more in a village in a region of Myanmar, formerly known as Burma, under insurgent control. A source familiar with the situation on the ground in Kaung Tat, a village in Namkham Township in Shan State, near the Chinese border, told BBC Burma that 25 women and 30 men had died. Other reports gave slightly different casualty figures. Rescue teams were searching for and extracting people trapped beneath rubble, the source added. The Ta'ang National Liberation Army (TNLA), which controls the area and which has been engaged in bitter fighting with Myanmar's military junta, said explosives used in mining and quarrying had exploded. Residents described scenes of devastation and confusion following the explosion.\n\nInsurgents say it was caused by explosives being used for mining close to the Chinese border.\n\nA blast on Sunday at a building in northeastern Myanmar said to have been storing explosives for mining has killed more than 45 people, according to rescue workers and independent media reports. About 70 other people were injured in the explosion that took place around noon in the village of Kaungtup, in Namhkam township. The area, located about 2 miles south of the Chinese border, is under the control of the Ta'ang National Liberation Army, an ethnic armed group which has engaged in sporadic fighting against Myanmar's central government. A rescue worker who rushed to the site of the blast told The Associated Press that 46 bodies, including six children, had been recovered by Sunday evening and taken for cremation.\n\nThe rescuer, who spoke on condition of anonymity for security reasons, said 74 injured people had been transported to the township hospital and rescue operations were continuing. Another rescuer in Namhkam, who also spoke on condition of anonymity, said about 40 people were killed and more than 100 houses near the blast site were damaged. Myanmar media outlets, including Shan State's online Shwe Phee Myay news agency, reported death tolls ranging from 50 to 55. They published photos and videos showing smoke from the explosion and damaged buildings and debris in its aftermath. Chinese state broadcaster CCTV reported the explosion caused multiple deaths and injuries, with many residential houses being severely damaged, but did not give figures.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260531T162130Z_23b31831d8",
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image": "/images/articles/rajahdys-surmasi-kymmenia-kapinallisten-hallitsemassa-kylass-hero.jpg",
+    "image_thumb": "/images/articles/rajahdys-surmasi-kymmenia-kapinallisten-hallitsemassa-kylass-thumb.jpg",
+    "image_alt": "Räjähdys surmasi kymmeniä kapinallisten hallitsemassa kylässä Myanmarissa",
+    "image_credit": "Photo by Zaonar Saizainalin on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/town-surrounded-by-mountains-and-hills-at-dusk-18783416/",
+    "image_caption": "",
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYBAwT/xAAfEAACAgEEAwAAAAAAAAAAAAABAgARBQMSIYEyUaL/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/AMmlkGIBVjXuXrlHUWX+ouPaG7vqpC6rKeaPUy1GcZpq8jCLm5m5uoQzCuv/2Q=="
+  },
+  "image_enriched_at": "2026-05-31T16:28:09.099465+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/rajahdys-surmasi-kymmenia-kapinallisten-hallitsemassa-kylass-hero.jpg",
+    "image_thumb": "/images/articles/rajahdys-surmasi-kymmenia-kapinallisten-hallitsemassa-kylass-thumb.jpg",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-05-31T16:29:04.167918+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-05-31-rajahdys-surmasi-kymmenia-kapinallisten-hallitsemassa-kylass.md"
+  ]
+}
