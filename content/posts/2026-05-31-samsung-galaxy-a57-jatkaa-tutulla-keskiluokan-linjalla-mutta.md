@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiilitestit/puhelimet/testi-samsung-galaxy-a57-puhelin-ei-herata-suurempia-tunteita-puolesta-eika-vastaan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
