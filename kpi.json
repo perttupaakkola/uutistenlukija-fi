@@ -1,29 +1,29 @@
 {
   "description": "Uutistenlukija.fi KPIs — updated by Felix/Max on each flywheel cycle",
-  "lastUpdated": "2026-05-25T07:04:00Z",
+  "lastUpdated": "2026-06-01T07:05:00Z",
   "metrics": {
     "articles": {
-      "total": 2372,
-      "publishedToday": 12,
-      "publishedThisWeek": 259,
-      "lastPublishRun": "2026-05-25T06:58:07Z",
-      "note": "publishedThisWeek is the completed week ending 2026-05-24 from weekly-ops-report.log; today is partial."
+      "total": 2635,
+      "publishedToday": 43,
+      "publishedThisWeek": 295,
+      "lastPublishRun": "2026-06-01T06:58:06Z",
+      "note": "Weekly review 2026-06-01: publishedThisWeek is last 7 days by local post mtime; today is partial."
     },
     "pipeline": {
       "lastRunSuccess": true,
-      "lastRunTime": "2026-05-25T07:00:10.011346+00:00",
+      "lastRunTime": "2026-06-01T07:00:02+00:00",
       "successRateRecent14": 100,
       "failuresLast24h": 0,
       "cronHealthyJobs": 15,
-      "note": "Weekly review 2026-05-25: site HTTP 200, static health OK, last 14 metrics runs succeeded, latest cron-health log reports all 15 jobs healthy; disk is high at 89%."
+      "note": "Weekly review 2026-06-01: site HTTP 200, static pipeline status OK, last 14 metrics runs succeeded, latest cron-health reports all 15 jobs healthy; disk improved to 72%."
     },
     "traffic": {
-      "dailyVisitors": 0,
-      "dailyPageviews": 0,
-      "searchConsoleClicks7d": 0,
-      "searchConsoleImpressions7d": 0,
+      "dailyVisitors": 1,
+      "dailyPageviews": 1,
+      "searchConsoleClicks7d": 25,
+      "searchConsoleImpressions7d": 1091,
       "source": "GA4 + Search Console daily-report.json",
-      "note": "Current analytics report is not trustworthy: GA4/Search Console refresh logs show invalid_grant and Hermes asked Perttu for OAuth reauthorization on 2026-05-25."
+      "note": "Weekly review 2026-06-01: analytics freshness artifact is fresh, GA4/GSC are unblocked, and weekly metrics posted; Google refresh-token expiry remains watchlisted around 2026-06-03 16:59 EEST."
     },
     "seo": {
       "indexedPages": null,
@@ -32,16 +32,16 @@
     "revenue": {
       "monthlyEuros": 0,
       "source": "advertiser-lead-cta-v1 monetization signal",
-      "note": "First measurable business loop shipped: /mainosta/ and advertiser CTA clicks emit monetization_signal; watch static/api/business-control-panel.json monetization.status and GA4 event when consented."
+      "note": "Revenue remains 0 EUR/month. Monetization status is lead_capture_tracking_active; ads are disabled and AdSense is not configured."
     },
     "team": {
-      "activeAgents": 2,
+      "activeAgents": 3,
       "tasksCompletedThisWeek": 0,
-      "activeLinearIssues": 1,
+      "activeLinearIssues": 3,
       "flywheel_ideasPosted": 213,
       "flywheel_ideasExecuted": 50,
       "flywheelExecutionRate": 0.37,
-      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Fresh root mirror shows active work: OPE-9 only."
+      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active OPE: OPE-9 Felix, OPE-154 Sara, OPE-155 Max; owner/lane labels validate."
     }
   }
 }

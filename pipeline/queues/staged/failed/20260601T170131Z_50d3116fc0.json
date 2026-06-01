@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T17:01:31.392456+00:00",
+  "digest": "50d3116fc0",
+  "packet": {
+    "packet_id": "20260601T170131Z_50d3116fc0",
+    "created_at": "2026-06-01T17:01:31Z",
+    "headline_seed": "K-kauppias laittoi kaupan kiinni Leijonien takia",
+    "description_seed": "K-kauppias Iida Salo halusi huomioida K-supermarketissa sunnuntain jääkiekon MM-finaalin, joka päättyi suomalaisten kannalta onnellisesti. Jokelan K-supermarket sulki ovensa tunnin aiemmin sunnuntaina Leijonien MM-finaalin takia. Idea poikkeuksellisesta sulkemisesta tuli kauppias Iida Salolta.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/f9287ecd-d416-4b79-8649-4bde944fe5e4",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/f9287ecd-d416-4b79-8649-4bde944fe5e4"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "K-kauppias laittoi kaupan kiinni Leijonien takia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "K-kauppias Iida Salo halusi huomioida K-supermarketissa sunnuntain jääkiekon MM-finaalin, joka päättyi suomalaisten kannalta onnellisesti. Jokelan K-supermarket sulki ovensa tunnin aiemmin sunnuntaina Leijonien MM-finaalin takia. Idea poikkeuksellisesta sulkemisesta tuli kauppias Iida Salolta.",
+        "word_count": 31,
+        "keyword_overlap": 28,
+        "strong_overlap": 22
+      }
+    ],
+    "source_text": "K-kauppias Iida Salo halusi huomioida K-supermarketissa sunnuntain jääkiekon MM-finaalin, joka päättyi suomalaisten kannalta onnellisesti. Jokelan K-supermarket sulki ovensa tunnin aiemmin sunnuntaina Leijonien MM-finaalin takia. Idea poikkeuksellisesta sulkemisesta tuli kauppias Iida Salolta.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 62,
+      "selected_blocks": 1,
+      "selected_source_words": 31,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "K-kauppias laittoi kaupan kiinni Leijonien takia",
+      "description": "K-kauppias Iida Salo halusi huomioida K-supermarketissa sunnuntain jääkiekon MM-finaalin, joka päättyi suomalaisten kannalta onnellisesti. Jokelan K-supermarket sulki ovensa tunnin aiemmin sunnuntaina Leijonien MM-finaalin takia. Idea poikkeuksellisesta sulkemisesta tuli kauppias Iida Salolta.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "K-kauppias laittoi kaupan kiinni Leijonien takia",
+    "description": "K-kauppias Iida Salo halusi huomioida K-supermarketissa sunnuntain jääkiekon MM-finaalin, joka päättyi suomalaisten kannalta onnellisesti. Jokelan K-supermarket sulki ovensa tunnin aiemmin sunnuntaina Leijonien MM-finaalin takia. Idea poikkeuksellisesta sulkemisesta tuli kauppias Iida Salolta.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/f9287ecd-d416-4b79-8649-4bde944fe5e4",
+    "published": "2026-06-01T19:39:33+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "695896984cb301611b67410e8f5cef43",
+    "_url_hash": "7f7c97beb04c18a39f820083360a4bb5b66e3646e11475a213aa92f1e741ed48",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "K-kauppias Iida Salo halusi huomioida K-supermarketissa sunnuntain jääkiekon MM-finaalin, joka päättyi suomalaisten kannalta onnellisesti. Jokelan K-supermarket sulki ovensa tunnin aiemmin sunnuntaina Leijonien MM-finaalin takia. Idea poikkeuksellisesta sulkemisesta tuli kauppias Iida Salolta.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-01T17:03:15.849506+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260601T170131Z_50d3116fc0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.\"}"
+}
