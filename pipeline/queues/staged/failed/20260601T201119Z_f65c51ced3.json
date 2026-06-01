@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T20:11:19.133968+00:00",
+  "digest": "f65c51ced3",
+  "packet": {
+    "packet_id": "20260601T201119Z_f65c51ced3",
+    "created_at": "2026-06-01T20:11:19Z",
+    "headline_seed": "EU sopuun maahanmuuttopolitiikan tiukennuksista",
+    "description_seed": "EU on päässyt sopuun jäsenmaiden yhteisistä maahanmuuttopolitiikan tiukennuksista.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/eu-sopuun-maahanmuuttopolitiikan-tiukennuksista/9347720",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/eu-sopuun-maahanmuuttopolitiikan-tiukennuksista/9347720"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "EU sopuun maahanmuuttopolitiikan tiukennuksista"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 88,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "EU sopuun maahanmuuttopolitiikan tiukennuksista",
+      "description": "EU on päässyt sopuun jäsenmaiden yhteisistä maahanmuuttopolitiikan tiukennuksista.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "EU sopuun maahanmuuttopolitiikan tiukennuksista",
+    "description": "EU on päässyt sopuun jäsenmaiden yhteisistä maahanmuuttopolitiikan tiukennuksista.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/eu-sopuun-maahanmuuttopolitiikan-tiukennuksista/9347720",
+    "published": "2026-06-01T19:52:29+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "e0d28981b55d9ca02c57f4fa56e23282",
+    "_url_hash": "727292c248e525394c544c6ef492c394bbe18461a73e7f97cc5f821aa0e55c2e",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nBritannia ja Euroopan unioni pääsivät  jouluaattona sopuun uudesta kauppa- ja yhteistyösopimuksesta. STT kokosi yhteen sopimuksen ydinkohdat.\n\nBritannian ero Euroopan unionista tuli voimaan alkuvuodesta, mutta kauppasuhde on jatkunut ennallaan siirtymäajan turvin. Siirtymäaika loppuu vuodenvaihteessa, jolloin maa jättää EU:n sisämarkkinat ja tulliliiton.\n\nSen takia ratkaisua haettiin kuumeisesti viime hetkiin saakka. Jos ratkaisua ei olisi syntynyt, Britannian ja EU:n välille olisi muodostunut tulliraja ja kaupankäynti olisi vaikeutunut huomattavasti rajamuodollisuuksien vuoksi.\n\nIhmisten, tavaroiden, palveluiden ja pääoman vapaa liikkuvuus Britannian ja EU:n välillä kuitenkin päättyy.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-01T20:13:15.880653+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä eikä riittäviä vahvistettuja yksityiskohtia julkaistavan vähintään 250 sanan uutisen kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260601T201119Z_f65c51ced3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä eikä riittäviä vahvistettuja yksityiskohtia julkaistavan vähintään 250 sanan uutisen kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
