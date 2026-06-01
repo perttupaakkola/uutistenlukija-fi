@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T01:51:31.211433+00:00",
+  "digest": "be63a57758",
+  "packet": {
+    "packet_id": "20260601T015131Z_be63a57758",
+    "created_at": "2026-06-01T01:51:31Z",
+    "headline_seed": "MM-kultajuhlat | Jotkut onnistuivat kiipeämään suojatun Mantan päälle",
+    "description_seed": "Jo etukäteen Mantalle saapuneet Leijonien fanit juhlivat Suomen voittoa. Suomi!-huudot kaikuivat, ja tuntemattomatkin saivat haleja.",
+    "link": "https://www.hs.fi/helsinki/art-2000012046220.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/helsinki/art-2000012046220.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "MM-kultajuhlat | Jotkut onnistuivat kiipeämään suojatun Mantan päälle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 95,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Satakunnan Kansa",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "MM-kultajuhlat | Jotkut onnistuivat kiipeämään suojatun Mantan päälle",
+      "description": "Jo etukäteen Mantalle saapuneet Leijonien fanit juhlivat Suomen voittoa. Suomi!-huudot kaikuivat, ja tuntemattomatkin saivat haleja.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "MM-kultajuhlat | Jotkut onnistuivat kiipeämään suojatun Mantan päälle",
+    "description": "Jo etukäteen Mantalle saapuneet Leijonien fanit juhlivat Suomen voittoa. Suomi!-huudot kaikuivat, ja tuntemattomatkin saivat haleja.",
+    "link": "https://www.hs.fi/helsinki/art-2000012046220.html",
+    "published": "2026-06-01T01:38:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "4ab700e2cae6de0c2b6426054f6dbea0",
+    "_url_hash": "4e734f515ff8b8bab0a61a1d1523bb25b82406ee04def2f15341788ffefde097",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Satakunnan Kansa]\nAutojen nopeudet olivat törmäyshetkellä alhaiset, mutta molemmat autot vaurioituivat hinauskuntoon.\n\nKuvituskuva. Kuva: Pekka Söderlund / Arkisto\n\nKaksi henkilöautoa törmäsi toisiinsa lievästi nokakkain Merikarvialla sunnuntaina kello 15.37. Onnettomuuspaikka oli valtatie 8:lla Strikantien ja Tuorilan välillä.\n\nToisessa autossa oli kaksi henkilöä, toisessa pelkästään kuljettaja. Yksi osallisista kuljetettiin jatkohoitoon lievästi loukkaantuneena.\n\nAutojen nopeudet olivat törmäyshetkellä alhaiset, mutta molemmat autot vaurioituivat hinauskuntoon.\n\nPaikalla on hetkellinen liikennehaitta, ja vähän aikaa kaistoista vain toinen on käytössä. Tieosuudella on jonkin verran siivottavaa, kertoo päivystävä palomestari Jussi Jalonen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-01T01:53:18.610064+00:00",
+  "failure": "Lähdeaineisto puuttuu käytännössä kokonaan, eikä paketissa ole tarpeeksi varmistettuja yksityiskohtia julkaistavaan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260601T015131Z_be63a57758\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu käytännössä kokonaan, eikä paketissa ole tarpeeksi varmistettuja yksityiskohtia julkaistavaan uutiseen.\"}"
+}
