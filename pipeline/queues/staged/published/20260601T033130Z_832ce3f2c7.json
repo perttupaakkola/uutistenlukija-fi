@@ -1,0 +1,264 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T03:31:30.390249+00:00",
+  "digest": "832ce3f2c7",
+  "packet": {
+    "packet_id": "20260601T033130Z_832ce3f2c7",
+    "created_at": "2026-06-01T03:31:30Z",
+    "headline_seed": "Secret tunnels and unregistered workers: China's coal mine disaster is a reminder of darker days",
+    "description_seed": "China's worst coal mining disaster in 15 years comes amid an ambitious pivot towards green energy.",
+    "link": "https://www.bbc.com/news/articles/cpwpeg57777o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "China Digital Times",
+      "World Socialist Web Site"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cpwpeg57777o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Secret tunnels and unregistered workers: China's coal mine disaster is a reminder of darker days"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "China's worst coal mining disaster in more than 15 years happened as the country continues its ambitious pivot towards green energy - a reminder that it is still struggling to shake off its dependency on an industry that has proven dangerous so many times in the past. \"Everyone knew this was a high-methane mine,\" says Chen, a miner who previously worked at the Liushenyu coal mine for two years. \"My feeling is there must still be miners inside. The tunnels underground are complicated and criss-crossed. There are hidden mine faces.\" With a mine like this, Chen says, \"it was only a matter of time\" until disaster struck. Hopes of finding survivors have been all but extinguished at the Liushenyu coal mine.",
+        "word_count": 121,
+        "keyword_overlap": 14,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "China's worst coal mining disaster in 15 years comes amid an ambitious pivot towards green energy.",
+        "word_count": 16,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "China Digital Times",
+        "source_type": "research",
+        "text": "Public anger and attendant online censorship are running high after a May 22 gas explosion at Liushenyu coal mine in Shanxi province killed at least 82 miners and injured 128 others. While the cause of the accident remains under investigation by a team assembled by China’s State Council, Xinhua reported earlier this week that “concealed mining tunnels, falsified drawings and outsourced and unregistered ⁠miners, who had not been provided with required life-saving location trackers, were contributing factors to the deadly incident.” It was China’s deadliest mining accident in nearly 17 years, after a 2009 gas explosion at a mine in Heilongjiang province that killed 108 people.",
+        "word_count": 106,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "World Socialist Web Site",
+        "source_type": "research",
+        "text": "The tragic deaths of at least 82 workers in last Friday’s gas explosion at the Liushenyu Coal Mine in Shanxi Province has exposed the brutal face of capitalist exploitation in China. Details slowly emerging from official investigations point to systematic flouting of safety regulations in mines in the drive for production and profit. The state-owned Xinhua news agency has revealed that the privately-owned mine operated by the Shanxi Tongzhou Coal Group had “hidden” shafts mined by outsourced and unregistered contractors. Of the 247 workers in the mine at the time of the explosion, 123, or nearly half, were not carrying mandated location trackers and were not logged as being underground, which can only indicate large-scale and unsafe illegal operations.",
+        "word_count": 119,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "China's worst coal mining disaster in more than 15 years happened as the country continues its ambitious pivot towards green energy - a reminder that it is still struggling to shake off its dependency on an industry that has proven dangerous so many times in the past. \"Everyone knew this was a high-methane mine,\" says Chen, a miner who previously worked at the Liushenyu coal mine for two years. \"My feeling is there must still be miners inside. The tunnels underground are complicated and criss-crossed. There are hidden mine faces.\" With a mine like this, Chen says, \"it was only a matter of time\" until disaster struck. Hopes of finding survivors have been all but extinguished at the Liushenyu coal mine.\n\nChina's worst coal mining disaster in 15 years comes amid an ambitious pivot towards green energy.\n\nPublic anger and attendant online censorship are running high after a May 22 gas explosion at Liushenyu coal mine in Shanxi province killed at least 82 miners and injured 128 others. While the cause of the accident remains under investigation by a team assembled by China’s State Council, Xinhua reported earlier this week that “concealed mining tunnels, falsified drawings and outsourced and unregistered ⁠miners, who had not been provided with required life-saving location trackers, were contributing factors to the deadly incident.” It was China’s deadliest mining accident in nearly 17 years, after a 2009 gas explosion at a mine in Heilongjiang province that killed 108 people.\n\nThe tragic deaths of at least 82 workers in last Friday’s gas explosion at the Liushenyu Coal Mine in Shanxi Province has exposed the brutal face of capitalist exploitation in China. Details slowly emerging from official investigations point to systematic flouting of safety regulations in mines in the drive for production and profit. The state-owned Xinhua news agency has revealed that the privately-owned mine operated by the Shanxi Tongzhou Coal Group had “hidden” shafts mined by outsourced and unregistered contractors. Of the 247 workers in the mine at the time of the explosion, 123, or nearly half, were not carrying mandated location trackers and were not logged as being underground, which can only indicate large-scale and unsafe illegal operations.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 996,
+      "selected_blocks": 4,
+      "selected_source_words": 362,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "World Socialist Web Site",
+        "World Socialist Web Site",
+        "World Socialist Web Site",
+        "World Socialist Web Site",
+        "China Digital Times",
+        "China Digital Times",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "China Digital Times",
+        "World Socialist Web Site"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Secret tunnels and unregistered workers: China's coal mine disaster is a reminder of darker days",
+      "description": "China's worst coal mining disaster in 15 years comes amid an ambitious pivot towards green energy.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Secret tunnels and unregistered workers: China's coal mine disaster is a reminder of darker days",
+    "description": "China's worst coal mining disaster in 15 years comes amid an ambitious pivot towards green energy.",
+    "link": "https://www.bbc.com/news/articles/cpwpeg57777o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-31T23:32:04+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cae8d5baa318ca7bcb390fb887acfad4",
+    "_url_hash": "642f9c2059a6f0c94d471da2e4bb6a20703b1d6402b92db14a2e1bc05ba0c063",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIn Shanxi, the province that sits at the heart of China's coal-mining industry, there's long been a saying: \"Only go down a coal pit when you have no other way out.\"\n\nFor decades, life in these pits was intertwined with tragedy.\n\nIt became so common that it gave rise to other sayings: about how miners were \"exchanging their lives for money\" or \"staking their lives for tomorrow\" when they ventured into underground tunnels where they died from gas explosions, flooding and shaft collapses.\n\nOver the past decade, safety reforms steadily erased the industry's deadly  reputation, and those days were thought to be behind China - until 22 May, when a blast at the Liushenyu coal mine in Shanxi killed 82 people and injured more than 120 others.\n\nChina's worst coal mining disaster in more than 15 years happened as the country continues its ambitious pivot towards green energy - a reminder that it is still struggling to shake off its dependency on an industry that has proven dangerous so many times in the past.\n\n\"Everyone knew this was a high-methane mine,\" says Chen, a miner who previously worked at the Liushenyu coal mine for two years.\n\n\"My feeling is there must still be miners inside. The tunnels underground are complicated and criss-crossed. There are hidden mine faces.\"\n\nWith a mine like this, Chen says, \"it was only a matter of time\" until disaster struck.\n\nHopes of finding survivors have been all but extinguished at the Liushenyu coal mine.\n\n\"The explosion swept to the entrance and knocked all of us down. We could not see anyone; the dust was incredibly thick,\" a survivor later told China's state-run news outlet CCTV. \"After running for more than 10 minutes, my consciousness blurred. I was terrified.\"\n\nAuthorities are yet to confirm the cause of the blast, but experts tell the BBC that such explosions typically happen when a build-up of methane gas or coal dust comes into contact with an ignition source.\n\nAnd that even in inherently risky mine environments, human error most often proves to be the fatal factor: management failure, flawed safety systems and flouted protocols.\n\nA properly designed coal mine is \"fully capable of preventing an explosion through systematic safeguards,\" explains Hong Chen, a professor at Jiangnan University's Institute for National Security and Green Development.\n\n\"Based on the coal mine safety management and technical systems we have in place today, let me be very clear about this: this accident should not have happened.\"\n\nInitial f\n\n---\n\n[Lähde: World Socialist Web Site]\nThe tragic deaths of at least 82 workers in last Friday’s gas explosion at the Liushenyu Coal Mine in Shanxi Province has exposed the brutal face of capitalist exploitation in China. Details slowly emerging from official investigations point to systematic flouting of safety regulations in mines in the drive for production and profit.\n\nThe state-owned Xinhua news agency has revealed that the privately-owned mine operated by the Shanxi Tongzhou Coal Group had “hidden” shafts mined by outsourced and unregistered contractors. Of the 247 workers in the mine at the time of the explosion, 123, or nearly half, were not carrying mandated location trackers and were not logged as being underground, which can only indicate large-scale and unsafe illegal operations.\n\nMining corporations such as the Shanxi Tongzhou Coal Group resort to such methods to evade regulations that place upper limits set for each mine on production and the number of miners on any shift. By doing so, the mine owners not only increase output, which is sold illegally, but also avoid taxes on coal extraction. The hidden shafts are, of course, not subject to the same safety requirements as other areas of the mine.\n\nIn the case of the Liushenyu Coal Mine, management maintained two separate sets of mine plans—known colloquially in Chinese as “yin-yang drawings”—a false one for inspectors to examine and the actual mine blueprint needed for daily operations that was kept hidden.\n\nWhen tipped off about an inspection, the hidden shafts were simply covered up. According to news agency Xinhua, the mine “used wire mesh and woven plastic sacks sprayed with mortar, to make fake doors that looked very much like the rock wall of the mine tunnel.” Whenever inspectors came, the doors would be shut and smeared with coal ash as a further disguise.\n\nHidden shafts had to be worked by hidden workers—subcontracted labourers who were not logged on the official entry record and were not provided with required-location trackers. The falsified mine plans and shift numbers, as well as the lack of location trackers, clearly created major problems for rescue teams and contributed to the high death toll. Many of the deaths and injuries were not just immediately from the blast but were the result of suffocation and toxic gas inhalation.\n\nThe Liushenyu mine was listed by China’s National Mine Safety Administration as one with “severe safety hazards,” in particular high gas levels, making it prone to explosions. The operation of a\n\n---\n\n[Lähde: China Digital Times]\nPublic anger and attendant online censorship are running high after a May 22 gas explosion at Liushenyu coal mine in Shanxi province killed at least 82 miners and injured 128 others. While the cause of the accident remains under investigation by a team assembled by China’s State Council, Xinhua reported earlier this week that “concealed mining tunnels, falsified drawings and outsourced and unregistered ⁠miners, who had not been provided with required life-saving location trackers, were contributing factors to the deadly incident.” It was China’s deadliest mining accident in nearly 17 years, after a 2009 gas explosion at a mine in Heilongjiang province that killed 108 people.\n\nIn addition to expressions of sympathy for the victims and and concern about mine safety in general, many initial online reactions were critical of what appeared to be a cover-up of the true death toll—at least, until higher authorities in Beijing issued a directive demanding the timely and accurate release of inf...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-01T03:35:11.343935+00:00",
+  "payload": {
+    "packet_id": "20260601T033130Z_832ce3f2c7",
+    "title": "Kiinan kaivosturma nosti esiin salatut tunnelit ja rekisteröimättömät työntekijät",
+    "summary": "Shanxin maakunnassa tapahtunut Liushenyun hiilikaivoksen kaasuräjähdys on Kiinan vakavin kaivosturma lähes kahteen vuosikymmeneen. Tutkinnassa on noussut esiin piilotettuja kaivoskäytäviä, väärennettyjä piirustuksia ja työntekijöitä, joita ei ollut merkitty maan alle.",
+    "content": "Shanxin maakunnassa sijaitsevan Liushenyun hiilikaivoksen kaasuräjähdys on vaatinut ainakin 82 kaivostyöläisen hengen ja loukannut 128 ihmistä. Tapaus on Kiinan vakavin kaivosturma noin 15–17 vuoteen, ja se on nostanut uudelleen esiin maan hiiliteollisuuden turvallisuusongelmat aikana, jolloin Kiina pyrkii samaan aikaan lisäämään vihreän energian osuutta.\n\n## Tutkinnassa piilotettuja käytäviä\n\nRäjähdys tapahtui 22. toukokuuta Liushenyun hiilikaivoksessa Shanxin maakunnassa. Kiinan valtioneuvoston kokoama tutkintaryhmä selvittää onnettomuuden syytä, mutta viranomaislähteiden mukaan turmaan vaikuttivat useat vakavat puutteet kaivoksen toiminnassa.\n\nTutkinnassa on kerrottu piilotetuista kaivoskäytävistä, väärennetyistä kaivospiirustuksista sekä ulkoistetuista ja rekisteröimättömistä työntekijöistä. Osa työntekijöistä ei ollut saanut pakollisia paikannuslaitteita, joiden avulla maan alla olevien sijaintia voidaan seurata hätätilanteessa.\n\nKaivoksessa oli räjähdyksen aikaan 247 työntekijää. Näistä 123:n kerrotaan olleen ilman vaadittuja paikannuslaitteita eikä heitä ollut merkitty maan alle. Tämä on vaikeuttanut kokonaiskuvan muodostamista siitä, kuinka moni oli onnettomuushetkellä kaivoksen eri osissa.\n\n## Hiilen varjo vihreän siirtymän yllä\n\nLiushenyun kaivos oli entisen työntekijän mukaan tunnettu korkeasta metaanipitoisuudestaan. Hän kuvasi maanalaista käytäväverkostoa monimutkaiseksi ja risteileväksi ja arvioi, että kaivoksessa saattoi olla myös salattuja louhintakohtia. Hänen mukaansa vaarallinen tilanne oli ollut tiedossa, ja pelastustoiveiden on kerrottu hiipuneen lähes kokonaan.\n\nTurma on herättänyt Kiinassa julkista suuttumusta. Samalla tapaukseen liittyvä keskustelu on joutunut verkkosensuurin kohteeksi, mikä kertoo onnettomuuden poliittisesta herkkyydestä. Kaivosta operoi Shanxi Tongzhou Coal Group, ja esiin nousseet tiedot viittaavat laajoihin puutteisiin siinä, miten työntekijöitä ja maanalaista toimintaa valvottiin.\n\nKiinan energiapolitiikka on viime vuosina painottanut uusiutuvan energian ja vihreän siirtymän tavoitteita, mutta maa on yhä vahvasti riippuvainen hiilestä. Liushenyun räjähdys muistuttaa, että hiiliteollisuuden turvallisuusongelmat eivät ole kadonneet, vaikka energiajärjestelmää pyritään uudistamaan. Aiempi vertailukohta on vuoden 2009 Heilongjiangin kaivosräjähdys, jossa kuoli 108 ihmistä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kiina",
+      "kaivosturma",
+      "hiilikaivos",
+      "Shanxi",
+      "työturvallisuus"
+    ],
+    "summary_bullets": [
+      "Liushenyun hiilikaivoksen kaasuräjähdyksessä Shanxissa kuoli ainakin 82 työntekijää ja 128 loukkaantui.",
+      "Tutkinnassa on noussut esiin piilotettuja kaivoskäytäviä, väärennettyjä piirustuksia ja rekisteröimättömiä työntekijöitä.",
+      "Tapaus korostaa Kiinan riippuvuutta hiilestä, vaikka maa pyrkii vahvistamaan vihreää energiantuotantoa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Perustuu paketissa olleisiin useisiin lähdekatkelmiin. Julkiseen tekstiin jätettiin pois lähdelabelit ja ideologisesti latautunut tulkintakieli; faktat rajattiin vahvistettuihin kuolonuhri-, loukkaantumis-, tutkinta- ja turvallisuuspuutetietoihin."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260601T033130Z_832ce3f2c7\",\n  \"title\": \"Kiinan kaivosturma nosti esiin salatut tunnelit ja rekisteröimättömät työntekijät\",\n  \"summary\": \"Shanxin maakunnassa tapahtunut Liushenyun hiilikaivoksen kaasuräjähdys on Kiinan vakavin kaivosturma lähes kahteen vuosikymmeneen. Tutkinnassa on noussut esiin piilotettuja kaivoskäytäviä, väärennettyjä piirustuksia ja työntekijöitä, joita ei ollut merkitty maan alle.\",\n  \"content\": \"Shanxin maakunnassa sijaitsevan Liushenyun hiilikaivoksen kaasuräjähdys on vaatinut ainakin 82 kaivostyöläisen hengen ja loukannut 128 ihmistä. Tapaus on Kiinan vakavin kaivosturma noin 15–17 vuoteen, ja se on nostanut uudelleen esiin maan hiiliteollisuuden turvallisuusongelmat aikana, jolloin Kiina pyrkii samaan aikaan lisäämään vihreän energian osuutta.\\n\\n## Tutkinnassa piilotettuja käytäviä\\n\\nRäjähdys tapahtui 22. toukokuuta Liushenyun hiilikaivoksessa Shanxin maakunnassa. Kiinan valtioneuvoston kokoama tutkintaryhmä selvittää onnettomuuden syytä, mutta viranomaislähteiden mukaan turmaan vaikuttivat useat vakavat puutteet kaivoksen toiminnassa.\\n\\nTutkinnassa on kerrottu piilotetuista kaivoskäytävistä, väärennetyistä kaivospiirustuksista sekä ulkoistetuista ja rekisteröimättömistä työntekijöistä. Osa työntekijöistä ei ollut saanut pakollisia paikannuslaitteita, joiden avulla maan alla olevien sijaintia voidaan seurata hätätilanteessa.\\n\\nKaivoksessa oli räjähdyksen aikaan 247 työntekijää. Näistä 123:n kerrotaan olleen ilman vaadittuja paikannuslaitteita eikä heitä ollut merkitty maan alle. Tämä on vaikeuttanut kokonaiskuvan muodostamista siitä, kuinka moni oli onnettomuushetkellä kaivoksen eri osissa.\\n\\n## Hiilen varjo vihreän siirtymän yllä\\n\\nLiushenyun kaivos oli entisen työntekijän mukaan tunnettu korkeasta metaanipitoisuudestaan. Hän kuvasi maanalaista käytäväverkostoa monimutkaiseksi ja risteileväksi ja arvioi, että kaivoksessa saattoi olla myös salattuja louhintakohtia. Hänen mukaansa vaarallinen tilanne oli ollut tiedossa, ja pelastustoiveiden on kerrottu hiipuneen lähes kokonaan.\\n\\nTurma on herättänyt Kiinassa julkista suuttumusta. Samalla tapaukseen liittyvä keskustelu on joutunut verkkosensuurin kohteeksi, mikä kertoo onnettomuuden poliittisesta herkkyydestä. Kaivosta operoi Shanxi Tongzhou Coal Group, ja esiin nousseet tiedot viittaavat laajoihin puutteisiin siinä, miten työntekijöitä ja maanalaista toimintaa valvottiin.\\n\\nKiinan energiapolitiikka on viime vuosina painottanut uusiutuvan energian ja vihreän siirtymän tavoitteita, mutta maa on yhä vahvasti riippuvainen hiilestä. Liushenyun räjähdys muistuttaa, että hiiliteollisuuden turvallisuusongelmat eivät ole kadonneet, vaikka energiajärjestelmää pyritään uudistamaan. Aiempi vertailukohta on vuoden 2009 Heilongjiangin kaivosräjähdys, jossa kuoli 108 ihmistä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kiina\",\n    \"kaivosturma\",\n    \"hiilikaivos\",\n    \"Shanxi\",\n    \"työturvallisuus\"\n  ],\n  \"summary_bullets\": [\n    \"Liushenyun hiilikaivoksen kaasuräjähdyksessä Shanxissa kuoli ainakin 82 työntekijää ja 128 loukkaantui.\",\n    \"Tutkinnassa on noussut esiin piilotettuja kaivoskäytäviä, väärennettyjä piirustuksia ja rekisteröimättömiä työntekijöitä.\",\n    \"Tapaus korostaa Kiinan riippuvuutta hiilestä, vaikka maa pyrkii vahvistamaan vihreää energiantuotantoa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Perustuu paketissa olleisiin useisiin lähdekatkelmiin. Julkiseen tekstiin jätettiin pois lähdelabelit ja ideologisesti latautunut tulkintakieli; faktat rajattiin vahvistettuihin kuolonuhri-, loukkaantumis-, tutkinta- ja turvallisuuspuutetietoihin.\"\n}",
+  "article": {
+    "title": "Kiinan kaivosturma nosti esiin salatut tunnelit ja rekisteröimättömät työntekijät",
+    "description": "Shanxin maakunnassa tapahtunut Liushenyun hiilikaivoksen kaasuräjähdys on Kiinan vakavin kaivosturma lähes kahteen vuosikymmeneen. Tutkinnassa on noussut esiin piilotettuja kaivoskäytäviä, väärennettyjä piirustuksia ja työntekijöitä, joita ei ollut merkitty maan alle.",
+    "link": "https://www.bbc.com/news/articles/cpwpeg57777o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-31T23:32:04+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cae8d5baa318ca7bcb390fb887acfad4",
+    "_url_hash": "642f9c2059a6f0c94d471da2e4bb6a20703b1d6402b92db14a2e1bc05ba0c063",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIn Shanxi, the province that sits at the heart of China's coal-mining industry, there's long been a saying: \"Only go down a coal pit when you have no other way out.\"\n\nFor decades, life in these pits was intertwined with tragedy.\n\nIt became so common that it gave rise to other sayings: about how miners were \"exchanging their lives for money\" or \"staking their lives for tomorrow\" when they ventured into underground tunnels where they died from gas explosions, flooding and shaft collapses.\n\nOver the past decade, safety reforms steadily erased the industry's deadly  reputation, and those days were thought to be behind China - until 22 May, when a blast at the Liushenyu coal mine in Shanxi killed 82 people and injured more than 120 others.\n\nChina's worst coal mining disaster in more than 15 years happened as the country continues its ambitious pivot towards green energy - a reminder that it is still struggling to shake off its dependency on an industry that has proven dangerous so many times in the past.\n\n\"Everyone knew this was a high-methane mine,\" says Chen, a miner who previously worked at the Liushenyu coal mine for two years.\n\n\"My feeling is there must still be miners inside. The tunnels underground are complicated and criss-crossed. There are hidden mine faces.\"\n\nWith a mine like this, Chen says, \"it was only a matter of time\" until disaster struck.\n\nHopes of finding survivors have been all but extinguished at the Liushenyu coal mine.\n\n\"The explosion swept to the entrance and knocked all of us down. We could not see anyone; the dust was incredibly thick,\" a survivor later told China's state-run news outlet CCTV. \"After running for more than 10 minutes, my consciousness blurred. I was terrified.\"\n\nAuthorities are yet to confirm the cause of the blast, but experts tell the BBC that such explosions typically happen when a build-up of methane gas or coal dust comes into contact with an ignition source.\n\nAnd that even in inherently risky mine environments, human error most often proves to be the fatal factor: management failure, flawed safety systems and flouted protocols.\n\nA properly designed coal mine is \"fully capable of preventing an explosion through systematic safeguards,\" explains Hong Chen, a professor at Jiangnan University's Institute for National Security and Green Development.\n\n\"Based on the coal mine safety management and technical systems we have in place today, let me be very clear about this: this accident should not have happened.\"\n\nInitial f\n\n---\n\n[Lähde: World Socialist Web Site]\nThe tragic deaths of at least 82 workers in last Friday’s gas explosion at the Liushenyu Coal Mine in Shanxi Province has exposed the brutal face of capitalist exploitation in China. Details slowly emerging from official investigations point to systematic flouting of safety regulations in mines in the drive for production and profit.\n\nThe state-owned Xinhua news agency has revealed that the privately-owned mine operated by the Shanxi Tongzhou Coal Group had “hidden” shafts mined by outsourced and unregistered contractors. Of the 247 workers in the mine at the time of the explosion, 123, or nearly half, were not carrying mandated location trackers and were not logged as being underground, which can only indicate large-scale and unsafe illegal operations.\n\nMining corporations such as the Shanxi Tongzhou Coal Group resort to such methods to evade regulations that place upper limits set for each mine on production and the number of miners on any shift. By doing so, the mine owners not only increase output, which is sold illegally, but also avoid taxes on coal extraction. The hidden shafts are, of course, not subject to the same safety requirements as other areas of the mine.\n\nIn the case of the Liushenyu Coal Mine, management maintained two separate sets of mine plans—known colloquially in Chinese as “yin-yang drawings”—a false one for inspectors to examine and the actual mine blueprint needed for daily operations that was kept hidden.\n\nWhen tipped off about an inspection, the hidden shafts were simply covered up. According to news agency Xinhua, the mine “used wire mesh and woven plastic sacks sprayed with mortar, to make fake doors that looked very much like the rock wall of the mine tunnel.” Whenever inspectors came, the doors would be shut and smeared with coal ash as a further disguise.\n\nHidden shafts had to be worked by hidden workers—subcontracted labourers who were not logged on the official entry record and were not provided with required-location trackers. The falsified mine plans and shift numbers, as well as the lack of location trackers, clearly created major problems for rescue teams and contributed to the high death toll. Many of the deaths and injuries were not just immediately from the blast but were the result of suffocation and toxic gas inhalation.\n\nThe Liushenyu mine was listed by China’s National Mine Safety Administration as one with “severe safety hazards,” in particular high gas levels, making it prone to explosions. The operation of a\n\n---\n\n[Lähde: China Digital Times]\nPublic anger and attendant online censorship are running high after a May 22 gas explosion at Liushenyu coal mine in Shanxi province killed at least 82 miners and injured 128 others. While the cause of the accident remains under investigation by a team assembled by China’s State Council, Xinhua reported earlier this week that “concealed mining tunnels, falsified drawings and outsourced and unregistered ⁠miners, who had not been provided with required life-saving location trackers, were contributing factors to the deadly incident.” It was China’s deadliest mining accident in nearly 17 years, after a 2009 gas explosion at a mine in Heilongjiang province that killed 108 people.\n\nIn addition to expressions of sympathy for the victims and and concern about mine safety in general, many initial online reactions were critical of what appeared to be a cover-up of the true death toll—at least, until higher authorities in Beijing issued a directive demanding the timely and accurate release of inf...",
+    "research_source": "multi",
+    "summary": "Shanxin maakunnassa tapahtunut Liushenyun hiilikaivoksen kaasuräjähdys on Kiinan vakavin kaivosturma lähes kahteen vuosikymmeneen. Tutkinnassa on noussut esiin piilotettuja kaivoskäytäviä, väärennettyjä piirustuksia ja työntekijöitä, joita ei ollut merkitty maan alle.",
+    "content": "Shanxin maakunnassa sijaitsevan Liushenyun hiilikaivoksen kaasuräjähdys on vaatinut ainakin 82 kaivostyöläisen hengen ja loukannut 128 ihmistä. Tapaus on Kiinan vakavin kaivosturma noin 15–17 vuoteen, ja se on nostanut uudelleen esiin maan hiiliteollisuuden turvallisuusongelmat aikana, jolloin Kiina pyrkii samaan aikaan lisäämään vihreän energian osuutta.\n\n## Tutkinnassa piilotettuja käytäviä\n\nRäjähdys tapahtui 22. toukokuuta Liushenyun hiilikaivoksessa Shanxin maakunnassa. Kiinan valtioneuvoston kokoama tutkintaryhmä selvittää onnettomuuden syytä, mutta viranomaislähteiden mukaan turmaan vaikuttivat useat vakavat puutteet kaivoksen toiminnassa.\n\nTutkinnassa on kerrottu piilotetuista kaivoskäytävistä, väärennetyistä kaivospiirustuksista sekä ulkoistetuista ja rekisteröimättömistä työntekijöistä. Osa työntekijöistä ei ollut saanut pakollisia paikannuslaitteita, joiden avulla maan alla olevien sijaintia voidaan seurata hätätilanteessa.\n\nKaivoksessa oli räjähdyksen aikaan 247 työntekijää. Näistä 123:n kerrotaan olleen ilman vaadittuja paikannuslaitteita eikä heitä ollut merkitty maan alle. Tämä on vaikeuttanut kokonaiskuvan muodostamista siitä, kuinka moni oli onnettomuushetkellä kaivoksen eri osissa.\n\n## Hiilen varjo vihreän siirtymän yllä\n\nLiushenyun kaivos oli entisen työntekijän mukaan tunnettu korkeasta metaanipitoisuudestaan. Hän kuvasi maanalaista käytäväverkostoa monimutkaiseksi ja risteileväksi ja arvioi, että kaivoksessa saattoi olla myös salattuja louhintakohtia. Hänen mukaansa vaarallinen tilanne oli ollut tiedossa, ja pelastustoiveiden on kerrottu hiipuneen lähes kokonaan.\n\nTurma on herättänyt Kiinassa julkista suuttumusta. Samalla tapaukseen liittyvä keskustelu on joutunut verkkosensuurin kohteeksi, mikä kertoo onnettomuuden poliittisesta herkkyydestä. Kaivosta operoi Shanxi Tongzhou Coal Group, ja esiin nousseet tiedot viittaavat laajoihin puutteisiin siinä, miten työntekijöitä ja maanalaista toimintaa valvottiin.\n\nKiinan energiapolitiikka on viime vuosina painottanut uusiutuvan energian ja vihreän siirtymän tavoitteita, mutta maa on yhä vahvasti riippuvainen hiilestä. Liushenyun räjähdys muistuttaa, että hiiliteollisuuden turvallisuusongelmat eivät ole kadonneet, vaikka energiajärjestelmää pyritään uudistamaan. Aiempi vertailukohta on vuoden 2009 Heilongjiangin kaivosräjähdys, jossa kuoli 108 ihmistä.",
+    "category": "Kotimaa",
+    "tags": [
+      "kiina",
+      "kaivosturma",
+      "hiilikaivos",
+      "shanxi",
+      "työturvallisuus"
+    ],
+    "summary_bullets": [
+      "Liushenyun hiilikaivoksen kaasuräjähdyksessä Shanxissa kuoli ainakin 82 työntekijää ja 128 loukkaantui.",
+      "Tutkinnassa on noussut esiin piilotettuja kaivoskäytäviä, väärennettyjä piirustuksia ja rekisteröimättömiä työntekijöitä.",
+      "Tapaus korostaa Kiinan riippuvuutta hiilestä, vaikka maa pyrkii vahvistamaan vihreää energiantuotantoa."
+    ],
+    "key_points": [
+      "Liushenyun hiilikaivoksen kaasuräjähdyksessä Shanxissa kuoli ainakin 82 työntekijää ja 128 loukkaantui.",
+      "Tutkinnassa on noussut esiin piilotettuja kaivoskäytäviä, väärennettyjä piirustuksia ja rekisteröimättömiä työntekijöitä.",
+      "Tapaus korostaa Kiinan riippuvuutta hiilestä, vaikka maa pyrkii vahvistamaan vihreää energiantuotantoa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Perustuu paketissa olleisiin useisiin lähdekatkelmiin. Julkiseen tekstiin jätettiin pois lähdelabelit ja ideologisesti latautunut tulkintakieli; faktat rajattiin vahvistettuihin kuolonuhri-, loukkaantumis-, tutkinta- ja turvallisuuspuutetietoihin.",
+    "source_text": "China's worst coal mining disaster in more than 15 years happened as the country continues its ambitious pivot towards green energy - a reminder that it is still struggling to shake off its dependency on an industry that has proven dangerous so many times in the past. \"Everyone knew this was a high-methane mine,\" says Chen, a miner who previously worked at the Liushenyu coal mine for two years. \"My feeling is there must still be miners inside. The tunnels underground are complicated and criss-crossed. There are hidden mine faces.\" With a mine like this, Chen says, \"it was only a matter of time\" until disaster struck. Hopes of finding survivors have been all but extinguished at the Liushenyu coal mine.\n\nChina's worst coal mining disaster in 15 years comes amid an ambitious pivot towards green energy.\n\nPublic anger and attendant online censorship are running high after a May 22 gas explosion at Liushenyu coal mine in Shanxi province killed at least 82 miners and injured 128 others. While the cause of the accident remains under investigation by a team assembled by China’s State Council, Xinhua reported earlier this week that “concealed mining tunnels, falsified drawings and outsourced and unregistered ⁠miners, who had not been provided with required life-saving location trackers, were contributing factors to the deadly incident.” It was China’s deadliest mining accident in nearly 17 years, after a 2009 gas explosion at a mine in Heilongjiang province that killed 108 people.\n\nThe tragic deaths of at least 82 workers in last Friday’s gas explosion at the Liushenyu Coal Mine in Shanxi Province has exposed the brutal face of capitalist exploitation in China. Details slowly emerging from official investigations point to systematic flouting of safety regulations in mines in the drive for production and profit. The state-owned Xinhua news agency has revealed that the privately-owned mine operated by the Shanxi Tongzhou Coal Group had “hidden” shafts mined by outsourced and unregistered contractors. Of the 247 workers in the mine at the time of the explosion, 123, or nearly half, were not carrying mandated location trackers and were not logged as being underground, which can only indicate large-scale and unsafe illegal operations.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260601T033130Z_832ce3f2c7",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-06-01T03:35:11.343310+00:00",
+      "repair_trigger": "pre_repair_word_count=231; selected_source_words=362; selected_source_blocks=4",
+      "pre_repair_word_count": 231,
+      "pre_repair_lead_word_count": 43,
+      "post_repair_word_count": 259,
+      "post_repair_lead_word_count": 43,
+      "selected_source_words_at_repair": 362,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 362,
+      "source_blocks": 4,
+      "repair_added_word_count": 28,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:BBC World:01ccf38999",
+        "2:BBC World:1c2fca4a87",
+        "3:China Digital Times:b69f7180ff",
+        "4:World Socialist Web Site:1ce0efdbb2"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image": "/images/articles/kiinan-kaivosturma-nosti-esiin-salatut-tunnelit-ja-rekistero-hero.jpg",
+    "image_thumb": "/images/articles/kiinan-kaivosturma-nosti-esiin-salatut-tunnelit-ja-rekistero-thumb.jpg",
+    "image_alt": "Kiinan kaivosturma nosti esiin salatut tunnelit ja rekisteröimättömät työntekijät",
+    "image_credit": "Photo by Marjan Taghipour on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/a-grayscale-of-men-working-in-a-mine-13690241/",
+    "image_caption": "",
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDBv/EAB4QAAICAQUBAAAAAAAAAAAAAAECAAMRBBIhMVFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMxoWte0IjgcHs/Ia1FDKVbeu3vz5I03PQwaptp9ERclDkDOeT7AkYRwgf/Z"
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-01T03:35:11.343310+00:00",
+    "repair_trigger": "pre_repair_word_count=231; selected_source_words=362; selected_source_blocks=4",
+    "pre_repair_word_count": 231,
+    "pre_repair_lead_word_count": 43,
+    "post_repair_word_count": 259,
+    "post_repair_lead_word_count": 43,
+    "selected_source_words_at_repair": 362,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 362,
+    "source_blocks": 4,
+    "repair_added_word_count": 28,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:01ccf38999",
+      "2:BBC World:1c2fca4a87",
+      "3:China Digital Times:b69f7180ff",
+      "4:World Socialist Web Site:1ce0efdbb2"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-06-01T03:38:06.966444+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/kiinan-kaivosturma-nosti-esiin-salatut-tunnelit-ja-rekistero-hero.jpg",
+    "image_thumb": "/images/articles/kiinan-kaivosturma-nosti-esiin-salatut-tunnelit-ja-rekistero-thumb.jpg",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-01T03:39:05.164597+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-01-kiinan-kaivosturma-nosti-esiin-salatut-tunnelit-ja-rekistero.md"
+  ]
+}
