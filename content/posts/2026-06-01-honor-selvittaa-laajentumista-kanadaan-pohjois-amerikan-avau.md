@@ -45,7 +45,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/01/honor-pohtii-uutta-avausta-tahtaa-kiinalaisvalmistajille-haastaville-pohjois-amerikan-markkinoille-kanadan-kautta/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
