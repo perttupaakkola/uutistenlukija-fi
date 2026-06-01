@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T12:41:33.935215+00:00",
+  "digest": "ea3445d87f",
+  "packet": {
+    "packet_id": "20260601T124133Z_ea3445d87f",
+    "created_at": "2026-06-01T12:41:33Z",
+    "headline_seed": "Seuraamme | Juhlahumu Leijonien ympärillä kiihtyy",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9498830",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9498830"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Seuraamme | Juhlahumu Leijonien ympärillä kiihtyy"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 218,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "Stara"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Seuraamme | Juhlahumu Leijonien ympärillä kiihtyy",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Seuraamme | Juhlahumu Leijonien ympärillä kiihtyy",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9498830",
+    "published": "2026-06-01T15:30:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "af9b7f8fa0b4c786c16fbe19f56ba329",
+    "_url_hash": "4b92ce08929a488318db057bd70ebf00ce21151ab92e5d48885c8c29f984b6b9",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Stara]\nSuomalaisten lasten uimataito on heikentynyt selvästi viime vuosikymmeninä. Aiemmin uiminen kuului lähes jokaisen lapsen perustaitoihin. Nykyisin vain noin puolet kuudesluokkalaisista täyttää virallisen uimataidon määritelmän.\n\nHuoli lasten vesiturvallisuudesta on kasvanut eri puolilla Suomea. Suomessa on uintipaikka koko maassa muutaman kilometrin säteellä jokaisesta asumuksesta, jos mukaan lasketaan kaikki luonnonvesistöt ilman uimarantaa.\n\nNyt asiaan pyritään puuttumaan entistä voimakkaammin. Esimerkiksi Porin kaupunki kertoo käynnistäneensä uusia toimenpiteitä lasten ja nuorten uimataidon vahvistamiseksi. Taitoa parannetaan osana Vesivarmat koululaiset -hanketta.\n\nVuonna 2022 tehdyn valtakunnallisen tutkimuksen mukaan vain 55 prosenttia kuudesluokkalaisista osasi uida riittävän hyvin.\n\nVirallisen määritelmän mukaan uimataitoinen henkilö pystyy pudottuaan syvään veteen uimaan yhtäjaksoisesti 200 metriä, josta 50 metriä selällään. Porissa noin 76 prosenttia kuudesluokkalaisista on uimataitoisia. Silti myös siellä katsotaan, että tilanteeseen täytyy puuttua nopeasti.\n\n– Olemme tiedostaneet Porissa, että uimataitoon pitää panostaa entistä enemmän, kertoo uimalaitosvastaava Jan Hydén kaupungin tiedotteessa.\n\nUimataitoon pitää panostaa entistä enemmän.\n\nYksi suurimmista muutoksista on se, että uimaopetusta aloitetaan aiempaa nuoremmille lapsille. Porissa on kevään aikana pilotoitu uimakouluja jo ensimmäisen luokan oppilaille. Ensi lukuvuonna kaikki ykkösluokkalaiset pääsevät mukaan opetukseen.\n\nTaustalla on ajatus siitä, että mitä aikaisemmin lapset tottuvat veteen, sitä helpommin uimataito kehittyy. Kaupungin mukaan myös perheiden rooli on ratkaiseva, sillä pelkkä koulun uimaopetus ei riitä ylläpitämään taitoa.\n\nVoit lukea lisää juuri tähän artikkeliin liittyvistä teemoista ja aiheista, kuten uima-allas, uimaranta, uiminen tai laajemmin samasta aihealueesta Terveys -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-01T12:43:31.682587+00:00",
+  "failure": "paketissa ei ole valittua lähdetekstiä tai tarkistettavia perustietoja uutisen kirjoittamiseen",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260601T124133Z_ea3445d87f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"paketissa ei ole valittua lähdetekstiä tai tarkistettavia perustietoja uutisen kirjoittamiseen\"}"
+}

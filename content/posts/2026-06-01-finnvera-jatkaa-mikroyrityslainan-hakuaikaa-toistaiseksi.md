@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/finnveralta-hyvia-uutisia-jatkaa-suositun-lainan-hakuaikaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

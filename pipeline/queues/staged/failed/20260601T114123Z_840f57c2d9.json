@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T11:41:23.163089+00:00",
+  "digest": "840f57c2d9",
+  "packet": {
+    "packet_id": "20260601T114123Z_840f57c2d9",
+    "created_at": "2026-06-01T11:41:23Z",
+    "headline_seed": "Nuori äiti ja kolme poikaa paloivat hengiltä – Savonlinnan julma perhesurma ensi viikolla oikeuteen",
+    "description_seed": "Savonlinnan perhesurman oikeuskäsittely alkaa ensi viikolla. Syyttäjä vaatii perheenisälle rangaistusta neloismurhasta.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/nuori-aiti-ja-kolme-poikaa-paloivat-hengilta-savonlinnan-julma-perhesurma-ensi-viikolla-oikeuteen/9347224",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/nuori-aiti-ja-kolme-poikaa-paloivat-hengilta-savonlinnan-julma-perhesurma-ensi-viikolla-oikeuteen/9347224"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nuori äiti ja kolme poikaa paloivat hengiltä – Savonlinnan julma perhesurma ensi viikolla oikeuteen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 116,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nuori äiti ja kolme poikaa paloivat hengiltä – Savonlinnan julma perhesurma ensi viikolla oikeuteen",
+      "description": "Savonlinnan perhesurman oikeuskäsittely alkaa ensi viikolla. Syyttäjä vaatii perheenisälle rangaistusta neloismurhasta.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nuori äiti ja kolme poikaa paloivat hengiltä – Savonlinnan julma perhesurma ensi viikolla oikeuteen",
+    "description": "Savonlinnan perhesurman oikeuskäsittely alkaa ensi viikolla. Syyttäjä vaatii perheenisälle rangaistusta neloismurhasta.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/nuori-aiti-ja-kolme-poikaa-paloivat-hengilta-savonlinnan-julma-perhesurma-ensi-viikolla-oikeuteen/9347224",
+    "published": "2026-06-01T10:36:44+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "eaa3c2d01a7d689cb586ea986f33e935",
+    "_url_hash": "f2405b3ff33fbbcdf08ad40b2a6e96c311c1be2431f726584bcccdba58475840",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nPoliisi epäilee, että Savonlinnan omakotitalon tulipalossa lauantaina kuolivat talossa asuneet äiti ja hänen kolme pientä lastaan. Itä-Suomen poliisi kertoi asiasta tiedotteessaan sunnuntaina alkuiltapäivästä.\n\nPoliisin tiedot ovat nyt tarkentuneet, sillä aiemmin poliisi on kertonut uhreista sen, että talosta löytyi neljä ruumista ja että talossa asui perhe. Mediassa on kuitenkin liikkunut lauantaista saakka tietoja, joiden mukaan uhrit olivat äiti ja kolme lasta.\n\nRikoskomisario Markku Kärpänen Itä-Suomen poliisilaitokselta sanoo STT:lle, että poliisi vahvistaa nyt osaltaan nämä epäilyt. Hänen mukaansa epäily perustuu tietoihin, joita poliisi on saanut lähialueen ihmisiltä heitä jututtaessaan.\n\n– Monestihan on niin, että jos tulipalossa menehtyy ihmisiä, epäily on, että he ovat talon asukkaita, Kärpänen lisää.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-01T11:43:29.592893+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260601T114123Z_840f57c2d9\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.\"}"
+}
