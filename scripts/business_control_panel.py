@@ -285,6 +285,10 @@ def analytics_status(now: datetime) -> dict[str, Any]:
         PROJECT_DIR / "static" / "api" / "ctr-gap-report.json",
         PROJECT_DIR / "public" / "api" / "ctr-gap-report.json",
     ])
+    freshness_path, freshness = newest_existing_json([
+        PROJECT_DIR / "static" / "api" / "analytics-freshness-status.json",
+        PROJECT_DIR / "analytics" / "post-reauth-freshness-evidence.json",
+    ])
     traffic_log = LOG_DIR / "daily-traffic-card.log"
     weekly_log = LOG_DIR / "weekly-metrics-digest.log"
     gsc_log = LOG_DIR / "fetch-search-console.log"
@@ -305,17 +309,109 @@ def analytics_status(now: datetime) -> dict[str, Any]:
         has_error = any(term in tail for term in ["error", "failed", "not found", "no access_token", "cannot run"])
         return {"exists": True, "age_minutes": age_minutes(mtime, now), "status": "error_seen" if has_error else "log_present"}
 
+    traffic_log_probe = log_probe(traffic_log)
+    weekly_log_probe = log_probe(weekly_log)
+    gsc_log_probe = log_probe(gsc_log)
+
+    def artifact_summary(payload: Any, keys: list[str]) -> dict[str, Any]:
+        if not isinstance(payload, dict):
+            return {}
+        return {key: payload.get(key) for key in keys if key in payload}
+
+    freshness_payload: dict[str, Any] = freshness if isinstance(freshness, dict) else {}
+    raw_artifacts = freshness_payload.get("artifacts")
+    artifacts: dict[str, Any] = raw_artifacts if isinstance(raw_artifacts, dict) else {}
+    raw_daily_artifact = artifacts.get("daily_report")
+    raw_search_artifact = artifacts.get("search_console")
+    raw_oauth_artifact = artifacts.get("oauth_blocker")
+    daily_artifact: dict[str, Any] = raw_daily_artifact if isinstance(raw_daily_artifact, dict) else {}
+    search_artifact: dict[str, Any] = raw_search_artifact if isinstance(raw_search_artifact, dict) else {}
+    oauth_artifact: dict[str, Any] = raw_oauth_artifact if isinstance(raw_oauth_artifact, dict) else {}
+    freshness_status = freshness_payload.get("status") if freshness_payload else None
+    freshness_checked_at = freshness_payload.get("checked_at") if freshness_payload else None
+    source_command = freshness_payload.get("source_command") if freshness_payload else None
+    freshness_summary = {
+        "source": str(freshness_path.relative_to(PROJECT_DIR)) if freshness_path and freshness_path.is_relative_to(PROJECT_DIR) else None,
+        "status": freshness_status or "missing",
+        "checked_at": freshness_checked_at,
+        "age_minutes": age_minutes(parse_dt(freshness_checked_at), now),
+        "source_command": sanitize_reason(source_command) if source_command else None,
+        "blocked_by": freshness_payload.get("blocked_by") if freshness_payload else None,
+        "daily_report": artifact_summary(daily_artifact, ["artifact", "fresh", "property_id", "site", "counts", "age_hours", "evidence_at"]),
+        "search_console": artifact_summary(search_artifact, ["artifact", "fresh", "site", "days", "row_count", "age_hours", "evidence_at"]),
+        "oauth_blocker": artifact_summary(oauth_artifact, ["blocked", "superseded_by_fresh_validation", "blocked_by", "services"]),
+    }
+
+    if freshness_status == "fresh" and daily_artifact.get("fresh") and search_artifact.get("fresh"):
+        for probe in (traffic_log_probe, weekly_log_probe, gsc_log_probe):
+            if probe.get("status") == "error_seen":
+                probe["superseded_by_freshness_status"] = True
+        return {
+            "source": "redacted local analytics freshness artifact plus public/static reports; external analytics APIs not queried by this script",
+            "freshness": freshness_summary,
+            "ga4": {
+                "status": "fresh",
+                "reason": "fresh GA4 validation artifact present",
+                "daily_report": freshness_summary["daily_report"],
+                "daily_traffic_log": traffic_log_probe,
+                "weekly_metrics_log": weekly_log_probe,
+            },
+            "gsc": {
+                "status": "fresh",
+                "reason": "fresh Search Console validation artifact present",
+                "search_console_report": freshness_summary["search_console"],
+                "ctr_gap_report": {
+                    "source": str(ctr_path.relative_to(PROJECT_DIR)) if ctr_path else None,
+                    "generated_at": iso(gsc_generated),
+                    "age_minutes": age_minutes(gsc_generated, now),
+                    "data_source": gsc_source,
+                    "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
+                },
+                "fetch_log": gsc_log_probe,
+            },
+        }
+
+    if freshness_status == "blocked_oauth_reauthorization_required" or bool(oauth_artifact.get("blocked")):
+        blocked_reason = "OAuth reauthorization required by latest analytics freshness artifact"
+        return {
+            "source": "redacted local analytics freshness artifact plus public/static reports; external analytics APIs not queried by this script",
+            "freshness": freshness_summary,
+            "ga4": {
+                "status": "blocked",
+                "reason": blocked_reason,
+                "daily_report": freshness_summary["daily_report"],
+                "daily_traffic_log": traffic_log_probe,
+                "weekly_metrics_log": weekly_log_probe,
+            },
+            "gsc": {
+                "status": "blocked",
+                "reason": blocked_reason,
+                "search_console_report": freshness_summary["search_console"],
+                "ctr_gap_report": {
+                    "source": str(ctr_path.relative_to(PROJECT_DIR)) if ctr_path else None,
+                    "generated_at": iso(gsc_generated),
+                    "age_minutes": age_minutes(gsc_generated, now),
+                    "data_source": gsc_source,
+                    "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
+                },
+                "fetch_log": gsc_log_probe,
+            },
+        }
+
     return {
         "source": "local public/static reports and pipeline/logs only; external analytics APIs not queried",
+        "freshness": freshness_summary,
         "ga4": {
-            "status": "blocked_or_unknown",
-            "reason": "no fresh external credentials/API calls used; see local GA4 cron logs for last known state",
-            "daily_traffic_log": log_probe(traffic_log),
-            "weekly_metrics_log": log_probe(weekly_log),
+            "status": "stale_or_incomplete" if freshness_status else "blocked_or_unknown",
+            "reason": "no fresh GA4 validation artifact present; see local GA4 cron logs for last known state",
+            "daily_report": freshness_summary["daily_report"],
+            "daily_traffic_log": traffic_log_probe,
+            "weekly_metrics_log": weekly_log_probe,
         },
         "gsc": {
-            "status": "blocked" if gsc_blocked else "local_report_present",
-            "reason": gsc_reason,
+            "status": "stale_or_incomplete" if freshness_status else ("blocked" if gsc_blocked else "local_report_present"),
+            "reason": "no fresh Search Console validation artifact present" if freshness_status else gsc_reason,
+            "search_console_report": freshness_summary["search_console"],
             "ctr_gap_report": {
                 "source": str(ctr_path.relative_to(PROJECT_DIR)) if ctr_path else None,
                 "generated_at": iso(gsc_generated),
@@ -323,7 +419,7 @@ def analytics_status(now: datetime) -> dict[str, Any]:
                 "data_source": gsc_source,
                 "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
             },
-            "fetch_log": log_probe(gsc_log),
+            "fetch_log": gsc_log_probe,
         },
     }
 

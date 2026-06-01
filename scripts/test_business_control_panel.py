@@ -49,6 +49,40 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(data["pipeline"]["last_24h"]["article_count"], 2)
         self.assertEqual(data["pipeline"]["last_24h"]["article_count_source"], "content/posts frontmatter")
 
+    def test_fresh_analytics_evidence_supersedes_stale_log_errors(self) -> None:
+        """Fresh redacted GA4/GSC evidence must not be reported as blocked because old log tails contain errors."""
+        now = datetime(2026, 6, 1, 8, 0, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            log_dir = root / "pipeline" / "logs"
+            status_path = root / "static" / "api" / "analytics-freshness-status.json"
+            log_dir.mkdir(parents=True)
+            status_path.parent.mkdir(parents=True)
+            (log_dir / "daily-traffic-card.log").write_text("old invalid_grant error\nnewer run ok\n", encoding="utf-8")
+            (log_dir / "fetch-search-console.log").write_text("old refresh failed\nnewer run got rows\n", encoding="utf-8")
+            status_path.write_text(
+                '{'
+                '"status":"fresh",'
+                '"checked_at":"2026-06-01T07:55:00+00:00",'
+                '"source_command":"SECRETS_DIR=/home/pertt/.openclaw/workspace/.secrets bash pipeline/check-analytics.sh",'
+                '"artifacts":{'
+                '"daily_report":{"artifact":"analytics/daily-report.json","fresh":true,"property_id":"529369568","counts":{"daily_pageview_rows":1,"top_pages_7d":10,"search_console_top_queries":10}},'
+                '"search_console":{"artifact":"static/api/search-console-data.json","fresh":true,"site":"sc-domain:uutistenlukija.fi","row_count":293},'
+                '"oauth_blocker":{"blocked":false}'
+                '}'
+                '}',
+                encoding="utf-8",
+            )
+
+            with patch.object(panel, "PROJECT_DIR", root), patch.object(panel, "LOG_DIR", log_dir):
+                analytics = panel.analytics_status(now)
+
+        self.assertEqual(analytics["freshness"]["status"], "fresh")
+        self.assertEqual(analytics["ga4"]["status"], "fresh")
+        self.assertEqual(analytics["gsc"]["status"], "fresh")
+        self.assertEqual(analytics["ga4"]["reason"], "fresh GA4 validation artifact present")
+        self.assertEqual(analytics["gsc"]["reason"], "fresh Search Console validation artifact present")
+
 
 if __name__ == "__main__":
     unittest.main()

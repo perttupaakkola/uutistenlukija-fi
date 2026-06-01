@@ -84,6 +84,7 @@ class AnalyticsFreshnessEvidenceTest(unittest.TestCase):
         sentinel_time = datetime(2026, 5, 28, 10, 0, tzinfo=timezone.utc)
         report_time = datetime(2026, 5, 28, 12, 0, tzinfo=timezone.utc)
         self.write_reports(report_time=report_time, sentinel_time=sentinel_time)
+        setattr(self.module, "utc_now", lambda: datetime(2026, 5, 28, 13, 0, tzinfo=timezone.utc))
 
         payload = self.module.build_payload(max_age_hours=30, source_command="test")
 
