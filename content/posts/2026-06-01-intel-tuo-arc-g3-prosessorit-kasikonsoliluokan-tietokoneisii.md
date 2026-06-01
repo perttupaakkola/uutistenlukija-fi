@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/intel-julkaisi-arc-g-prosessorit-kasikonsoliluokan-tietokoneisiin-panther-lake/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
