@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/ukrainan-robottiarmeija-kylvaa-kauhua-etaohjattavan-tappamisen-maailma/9346756"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
