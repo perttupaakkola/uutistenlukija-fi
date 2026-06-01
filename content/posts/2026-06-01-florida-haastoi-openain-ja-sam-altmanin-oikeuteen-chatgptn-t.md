@@ -44,7 +44,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/06/01/florida-sues-openai-sam-altman-in-first-of-its-kind-lawsuit-over-violent-incidents/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 

@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T21:11:22.025684+00:00",
+  "digest": "ae3a7f6bd4",
+  "packet": {
+    "packet_id": "20260601T211122Z_ae3a7f6bd4",
+    "created_at": "2026-06-01T21:11:22Z",
+    "headline_seed": "Henkilöauto suistui tieltä Iitissä",
+    "description_seed": "Auto vaurioitui hinauskuntoon.",
+    "link": "https://www.ess.fi/paikalliset/9499785",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9499785"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.65,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Henkilöauto suistui tieltä Iitissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Ylöjärvellä Lintuharjuntiellä henkilöauto suistui ulos tieltä ja törmäsi puuhun lauantaina hieman ennen aamuneljää. Ajoneuvossa oli kaksi henkilöä, joista toinen pelastettiin ulos ajoneuvosta. Yksi henkilö loukkaantui ja sai vakavia vammoja. Hänet kuljetettiin sairaalaan, kertoo Pirkanmaan pelastuslaitos. Olosuhteet paikalla olivat lumiset. Onnettomuuden syystä ei ole tietoa. Pelastus- ja raivaustöiden aikaan tie oli suljettu liikenteeltä, mutta tieosuus avattiin normaalille liikenteelle noin puoli seitsemän aikaan aamulla. Ilmatieteen laitos varoittaa lauantaina huonosta ajokelistä maan etelä- ja itäosissa lumisateen ja pöllyävän lumen vuoksi. Varoitus huonosta ajokelistä koskee eteläisimpien maakuntien lisäksi Satakuntaa, Pirkanmaata, Etelä-Savoa, Keski-Suomea, Pohjois-Savoa ja Pohjois-Karjalaa. Myös Fintrafficin tieliikennekeskus varoittaa, että lumisade, pöllyävä lumi ja jäiset tienpinnat heikentävät ajokeliä maan keski- ja eteläosissa. Varsinkin risteys- ja liittymäalueet voivat olla Fintrafficin mukaan erittäin liukkaita.",
+        "word_count": 118,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Ylöjärvellä Lintuharjuntiellä henkilöauto suistui ulos tieltä ja törmäsi puuhun lauantaina hieman ennen aamuneljää. Ajoneuvossa oli kaksi henkilöä, joista toinen pelastettiin ulos ajoneuvosta. Yksi henkilö loukkaantui ja sai vakavia vammoja. Hänet kuljetettiin sairaalaan, kertoo Pirkanmaan pelastuslaitos. Olosuhteet paikalla olivat lumiset. Onnettomuuden syystä ei ole tietoa. Pelastus- ja raivaustöiden aikaan tie oli suljettu liikenteeltä, mutta tieosuus avattiin normaalille liikenteelle noin puoli seitsemän aikaan aamulla. Ilmatieteen laitos varoittaa lauantaina huonosta ajokelistä maan etelä- ja itäosissa lumisateen ja pöllyävän lumen vuoksi. Varoitus huonosta ajokelistä koskee eteläisimpien maakuntien lisäksi Satakuntaa, Pirkanmaata, Etelä-Savoa, Keski-Suomea, Pohjois-Savoa ja Pohjois-Karjalaa. Myös Fintrafficin tieliikennekeskus varoittaa, että lumisade, pöllyävä lumi ja jäiset tienpinnat heikentävät ajokeliä maan keski- ja eteläosissa. Varsinkin risteys- ja liittymäalueet voivat olla Fintrafficin mukaan erittäin liukkaita.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 121,
+      "selected_blocks": 1,
+      "selected_source_words": 118,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "Yle"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Henkilöauto suistui tieltä Iitissä",
+      "description": "Auto vaurioitui hinauskuntoon.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Henkilöauto suistui tieltä Iitissä",
+    "description": "Auto vaurioitui hinauskuntoon.",
+    "link": "https://www.ess.fi/paikalliset/9499785",
+    "published": "2026-06-01T23:28:01+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "a009974edc1f54364ad5cf648c1be5fc",
+    "_url_hash": "77ededc989e34c63102fb4987a3863328a4241c99b23b1184ac2d1301e3a5e3d",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nYlöjärvellä Lintuharjuntiellä henkilöauto suistui ulos tieltä ja törmäsi puuhun lauantaina hieman ennen aamuneljää.\n\nAjoneuvossa oli kaksi henkilöä, joista toinen pelastettiin ulos ajoneuvosta.\n\nYksi henkilö loukkaantui ja sai vakavia vammoja. Hänet kuljetettiin sairaalaan, kertoo Pirkanmaan pelastuslaitos.\n\nOlosuhteet paikalla olivat lumiset. Onnettomuuden syystä ei ole tietoa.\n\nPelastus- ja raivaustöiden aikaan tie oli suljettu liikenteeltä, mutta tieosuus avattiin normaalille liikenteelle noin puoli seitsemän aikaan aamulla.\n\nIlmatieteen laitos varoittaa lauantaina huonosta ajokelistä maan etelä- ja itäosissa lumisateen ja pöllyävän lumen vuoksi.\n\nVaroitus huonosta ajokelistä koskee eteläisimpien maakuntien lisäksi Satakuntaa, Pirkanmaata, Etelä-Savoa, Keski-Suomea, Pohjois-Savoa ja Pohjois-Karjalaa.\n\nMyös Fintrafficin tieliikennekeskus varoittaa, että lumisade, pöllyävä lumi ja jäiset tienpinnat heikentävät ajokeliä maan keski- ja eteläosissa.\n\nVarsinkin risteys- ja liittymäalueet voivat olla Fintrafficin mukaan erittäin liukkaita.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-01T21:13:19.029303+00:00",
+  "failure": "Otsikkotiedon Iitti ja lähdeaineiston Ylöjärvi ovat ristiriidassa, eikä paketti tue varmaa julkaistavaa artikkelia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260601T211122Z_ae3a7f6bd4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Otsikkotiedon Iitti ja lähdeaineiston Ylöjärvi ovat ristiriidassa, eikä paketti tue varmaa julkaistavaa artikkelia.\"}"
+}
