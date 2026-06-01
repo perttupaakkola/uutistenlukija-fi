@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/viisi-syyta-miksi-yrittajan-kannattaa-valita-fossiilivapaa-sahkosopimus/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

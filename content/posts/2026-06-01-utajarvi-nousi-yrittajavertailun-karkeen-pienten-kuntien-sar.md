@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/aurinkopuisto-vetytehdas-ja-datakeskus-alle-3-000-asukkaan-utajarvi-paistattelee-otsikoissa-kunnanjohtaja-perustelee/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
