@@ -1,0 +1,215 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T21:51:27.021337+00:00",
+  "digest": "d2982e9097",
+  "packet": {
+    "packet_id": "20260601T215127Z_d2982e9097",
+    "created_at": "2026-06-01T21:51:27Z",
+    "headline_seed": "Two possible Ebola cases in Brazil ruled out as patients test negative",
+    "description_seed": "The two patients had recently returned from the DR Congo and Uganda respectively.",
+    "link": "https://www.bbc.com/news/articles/c99lzgxzx2do?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "NBC News",
+      "CBS News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c99lzgxzx2do?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Two possible Ebola cases in Brazil ruled out as patients test negative"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Two suspected cases of Ebola in Brazil have been cleared after both patients tested negative for the virus, local health authorities have said. The individuals were monitored in Brazil's two biggest cities after returning from African countries, with both showing related symptoms. São Paulo health authorities said in a statement that Ebola had been ruled out for a 37-year-old man who had travelled to the DR Congo, which is at the centre of the outbreak. He had already tested positive for meningitis. Another patient in Rio de Janeiro, who had recently travelled to Uganda, also tested negative for Ebola after testing positive for malaria. Local authorities said the man in São Paulo had \"exhibited symptoms such as fever\", while the man in Rio de Janeiro, from Belgium, had shown \"viral symptoms such as cough, chills and diarrhoea\".",
+        "word_count": 137,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The two patients had recently returned from the DR Congo and Uganda respectively.",
+        "word_count": 13,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "The World Health Organization’s top doctor traveled to the epicenter of the Ebola outbreak in the Democratic Republic of the Congo over the weekend, as suspected cases and deaths continue to mount. Dr. Tedros Adhanom Ghebreyesus, WHO’s director-general, visited Congo’s eastern province of Ituri, and on Monday was expected to meet with the country’s president. More than 1,100 cases are suspected in what has quickly become the third-largest Ebola outbreak since the virus was discovered half a century ago. More than 350 deaths are suspected. No cases have been confirmed outside of Congo and neighboring Uganda. Ebola tests came back negative on Sunday and Monday for two patients in Brazil — one in Rio de Janeiro and the other in Sao Paulo — whom doctors had suspected might have Ebola.",
+        "word_count": 130,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "The reports from Brazil came the same day that World Health Organization chief Director-General Tedros Adhanom Ghebreyesus reported five patients in Africa had recovered from the Bundibugyo virus, a rare strain fueling the current outbreak. Bundibugyo has no approved treatment or vaccine. Tedros said these five cases exemplify that recovery from the illness is still possible. The WHO had said Friday that one patient recovered from the Bundibugyo virus, marking the first documented recovery of a person with a confirmed case since this outbreak began. \"Four people will be discharged today and there was one that was discharged the day before yesterday,\" Tedros said during the opening of a new Ebola treatment center in Bunia, the provincial capital of Ituri in eastern Congo, which is at the center of the current outbreak.",
+        "word_count": 132,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Two suspected cases of Ebola in Brazil have been cleared after both patients tested negative for the virus, local health authorities have said. The individuals were monitored in Brazil's two biggest cities after returning from African countries, with both showing related symptoms. São Paulo health authorities said in a statement that Ebola had been ruled out for a 37-year-old man who had travelled to the DR Congo, which is at the centre of the outbreak. He had already tested positive for meningitis. Another patient in Rio de Janeiro, who had recently travelled to Uganda, also tested negative for Ebola after testing positive for malaria. Local authorities said the man in São Paulo had \"exhibited symptoms such as fever\", while the man in Rio de Janeiro, from Belgium, had shown \"viral symptoms such as cough, chills and diarrhoea\".\n\nThe two patients had recently returned from the DR Congo and Uganda respectively.\n\nThe World Health Organization’s top doctor traveled to the epicenter of the Ebola outbreak in the Democratic Republic of the Congo over the weekend, as suspected cases and deaths continue to mount. Dr. Tedros Adhanom Ghebreyesus, WHO’s director-general, visited Congo’s eastern province of Ituri, and on Monday was expected to meet with the country’s president. More than 1,100 cases are suspected in what has quickly become the third-largest Ebola outbreak since the virus was discovered half a century ago. More than 350 deaths are suspected. No cases have been confirmed outside of Congo and neighboring Uganda. Ebola tests came back negative on Sunday and Monday for two patients in Brazil — one in Rio de Janeiro and the other in Sao Paulo — whom doctors had suspected might have Ebola.\n\nThe reports from Brazil came the same day that World Health Organization chief Director-General Tedros Adhanom Ghebreyesus reported five patients in Africa had recovered from the Bundibugyo virus, a rare strain fueling the current outbreak. Bundibugyo has no approved treatment or vaccine. Tedros said these five cases exemplify that recovery from the illness is still possible. The WHO had said Friday that one patient recovered from the Bundibugyo virus, marking the first documented recovery of a person with a confirmed case since this outbreak began. \"Four people will be discharged today and there was one that was discharged the day before yesterday,\" Tedros said during the opening of a new Ebola treatment center in Bunia, the provincial capital of Ituri in eastern Congo, which is at the center of the current outbreak.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 969,
+      "selected_blocks": 4,
+      "selected_source_words": 412,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "NBC News",
+        "NBC News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "CBS News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Two possible Ebola cases in Brazil ruled out as patients test negative",
+      "description": "The two patients had recently returned from the DR Congo and Uganda respectively.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Two possible Ebola cases in Brazil ruled out as patients test negative",
+    "description": "The two patients had recently returned from the DR Congo and Uganda respectively.",
+    "link": "https://www.bbc.com/news/articles/c99lzgxzx2do?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-01T21:40:19+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "62f8f7af2b72365bc83a640c7d2f53b3",
+    "_url_hash": "17d94a0a0decf2c818df11b8800e275290fde46932424c7240e8f96f258f0099",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nTwo suspected cases of Ebola in Brazil have been cleared after both patients tested negative for the virus, local health authorities have said.\n\nThe individuals were monitored in Brazil's two biggest cities after returning from African countries, with both showing related symptoms.\n\nSão Paulo health authorities said in a statement that Ebola had been ruled out for a 37-year-old man who had travelled to the DR Congo, which is at the centre of the outbreak. He had already tested positive for meningitis.\n\nAnother patient in Rio de Janeiro, who had recently travelled to Uganda, also tested negative for Ebola after testing positive for malaria.\n\nLocal authorities said the man in São Paulo had \"exhibited symptoms such as fever\", while the man in Rio de Janeiro, from Belgium, had shown \"viral symptoms such as cough, chills and diarrhoea\".\n\nIf the cases had been positive, they would have been the first infection cases outside Africa since the outbreak began in DR Congo.\n\nThere are now more than 1,000 suspected Ebola cases in DR Congo, with at least 246 deaths. Cases are concentrated in the country's Ituri, North and South Kivu provinces.\n\nUganda has reported nine confirmed cases and one death.\n\nThe current outbreak has been caused by a rare strain of Ebola known as Bundibugyo, which has no proven vaccine and kills about a third of those infected.\n\nThree new vaccines are being developed to tackle the Bundibugyo strain, including by the International Aids Vaccine Initiative (IAVI), the University of Oxford and the pharma company Moderna.\n\nEbola viruses normally infect animals, typically fruit bats, but outbreaks among humans can sometimes start when people eat or handle infected animals.\n\nIt spreads through direct contact with the bodily fluids of an infected person, including sweat, saliva, blood, semen, excrement, urine and vomit.\n\n---\n\n[Lähde: CBS News]\nOne of two patients being monitored by Brazilian health authorities for possible Ebola infection in Sao Paulo and Rio de Janeiro has tested negative, officials said Sunday. The possible infections have sparked further concern over the deadly virus outbreak in central Africa spreading abroad.\n\nA 37-year-old man from the Democratic Republic of the Congo, where the outbreak has been concentrated, \"exhibited symptoms such as fever, meeting the definition of a suspected case\" of Ebola, the Sao Paulo state government said in a statement on Saturday.\n\nWhile initial tests did not detect the Ebola virus in the patient, he is being monitored and isolated as a precautionary measure at a specialized infectious disease facility, the statement said.\n\nThe health department in Rio de Janeiro state meanwhile reported that it had activated safety protocols after a man from Uganda showed \"viral symptoms such as cough, chills, and diarrhea.\"\n\nThe Rio city government said in an email to AFP that the patient tested positive for malaria Saturday evening and \"the case remains under investigation.\"\n\nBrazil's Health Minister said Sunday that the man's tests showed \"negative results for Ebola,\" but he will stay in quarantine until the end of the investigation, AFP reported.\n\nThe Sao Paulo government said that despite the suspected case, \"the technical assessment indicates that the risk of the disease being introduced into Brazil and South America remains very low.\"\n\nThe reports from Brazil came the same day that World Health Organization chief Director-General Tedros Adhanom Ghebreyesus reported five patients in Africa had recovered from the Bundibugyo virus, a rare strain fueling the current outbreak. Bundibugyo has no approved treatment or vaccine.\n\nTedros said these five cases exemplify that recovery from the illness is still possible. The WHO had said Friday that one patient recovered from the Bundibugyo virus, marking the first documented recovery of a person with a confirmed case since this outbreak began.\n\n\"Four people will be discharged today and there was one that was discharged the day before yesterday,\" Tedros said during the opening of a new Ebola treatment center in Bunia, the provincial capital of Ituri in eastern Congo, which is at the center of the current outbreak.\n\n\"Of course, we're still working on vaccines and treatments but that doesn't mean that people cannot recover from Ebola,\" he added.\n\nAt least 906 suspected cases of the virus and 223 deaths, among the sus\n\n---\n\n[Lähde: NBC News]\nThe World Health Organization’s top doctor traveled to the epicenter of the Ebola outbreak in the Democratic Republic of the Congo over the weekend, as suspected cases and deaths continue to mount.\n\nDr. Tedros Adhanom Ghebreyesus, WHO’s director-general, visited Congo’s eastern province of Ituri, and on Monday was expected to meet with the country’s president.\n\nMore than 1,100 cases are suspected in what has quickly become the third-largest Ebola outbreak since the virus was discovered half a century ago. More than 350 deaths are suspected.\n\nNo cases have been confirmed outside of Congo and neighboring Uganda. Ebola tests came back negative on Sunday and Monday for two patients in Brazil — one in Rio de Janeiro and the other in Sao Paulo — whom doctors had suspected might have Ebola.\n\nEchoing the fears of many global health experts and doctors, the International Rescue Committee, a global humanitarian organization, warned Monday that the outbreak is likely significantly larger and more advanced than official figures suggest because of delayed detection and poor contact tracing.\n\n“With only 20% of contacts currently being traced, health authorities are struggling to identify and isolate new chains of transmission,” it said in a statement.\n\nAfter visiting a newly opened Ebola treatment facility in Bunia on Sunday, Tedros emphasized that early medical intervention can save lives.\n\n“Even without vaccines or specific therapeutics, people can survive Ebola disease caused by the Bundibugyo virus if they receive timely healthcare and seek treatment as soon as symptoms appear,” he said in a post on X on Monday.\n\nOn Sunday, WHO ...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-01T21:54:17.243438+00:00",
+  "payload": {
+    "packet_id": "20260601T215127Z_d2982e9097",
+    "title": "Brasiliassa tutkitut mahdolliset ebolatapaukset osoittautuivat negatiivisiksi",
+    "summary": "Brasilian terveysviranomaiset ovat sulkeneet pois kaksi epäiltyä ebolatapausta sen jälkeen, kun São Paulossa ja Rio de Janeirossa seurannassa olleiden potilaiden testit olivat negatiivisia.",
+    "content": "Brasilian terveysviranomaiset ovat sulkeneet pois kaksi mahdollista ebolatapausta, kun kahden Afrikasta palanneen potilaan testit osoittautuivat negatiivisiksi. Potilaita seurattiin São Paulossa ja Rio de Janeirossa, koska heillä oli oireita hiljattain Kongon demokraattiseen tasavaltaan ja Ugandaan suuntautuneiden matkojen jälkeen.\n\n## Potilailla todettiin muita sairauksia\n\nSão Paulossa tutkittu potilas oli 37-vuotias mies, joka oli matkustanut Kongon demokraattisessa tasavallassa. Paikallisten terveysviranomaisten mukaan hänellä oli muun muassa kuumetta, mutta ebola suljettiin pois testien perusteella. Hänellä oli jo todettu aivokalvontulehdus.\n\nRio de Janeirossa seurannassa ollut toinen potilas oli hiljattain matkustanut Ugandassa. Hänen kerrottiin olevan Belgiasta, ja hänellä kuvattiin olleen virusoireita, kuten yskää, vilunväristyksiä ja ripulia. Myös hänen ebolatestinsä oli negatiivinen. Potilaalla todettiin malaria.\n\nBrasilialaisviranomaisten tiedot merkitsevät, ettei näiden kahden epäilyn perusteella vahvistettu ebolatartuntaa Brasiliassa. Tapaukset nousivat tarkkailuun, koska potilaat olivat palanneet maista, jotka liittyvät Afrikassa käynnissä olevaan tautitilanteeseen.\n\n## Afrikan epidemiatilanne jatkuu vakavana\n\nMaailman terveysjärjestön pääjohtaja Tedros Adhanom Ghebreyesus vieraili viikonloppuna Kongon demokraattisen tasavallan Iturin maakunnassa, jota pidetään nykyisen epidemian keskusalueena. Hänen odotettiin maanantaina tapaavan maan presidentin. Epäiltyjä tapauksia on kerrottu olevan yli 1 100 ja epäiltyjä kuolemia yli 350.\n\nEpidemiaa on kuvattu nopeasti kasvaneeksi ja kolmanneksi suurimmaksi ebolaepidemiaksi sen jälkeen, kun virus löydettiin noin puoli vuosisataa sitten. Vahvistettuja tapauksia ei lähdetietojen mukaan ole todettu Kongon demokraattisen tasavallan ja sen naapurimaan Ugandan ulkopuolella.\n\n## WHO kertoi myös toipumisista\n\nBrasilian testitulosten kanssa samana päivänä WHO kertoi viiden potilaan toipuneen Bundibugyo-viruksen aiheuttamasta taudista. Kyseessä on harvinainen ebolaviruksen muoto, joka liittyy nykyiseen epidemiaan. Sille ei ole hyväksyttyä hoitoa tai rokotetta.\n\nWHO:n mukaan yksi potilas oli aiemmin kirjattu epidemian ensimmäiseksi dokumentoiduksi toipuneeksi vahvistetusta Bundibugyo-tapauksesta. Tedros kertoi Buniaan avatussa uudessa ebolan hoitokeskuksessa, että neljä muuta potilasta oli määrä kotiuttaa ja yksi oli kotiutettu jo aiemmin.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Ebola",
+      "Brasilia",
+      "Kongon demokraattinen tasavalta",
+      "Uganda",
+      "WHO",
+      "terveys"
+    ],
+    "summary_bullets": [
+      "Kaksi Brasiliassa tutkittua mahdollista ebolatapausta on suljettu pois negatiivisten testitulosten jälkeen.",
+      "São Paulossa tutkitulla potilaalla todettiin aivokalvontulehdus ja Rio de Janeirossa tutkitulla potilaalla malaria.",
+      "WHO:n mukaan Afrikan epidemiatilanteessa on yli 1 100 epäiltyä tapausta ja yli 350 epäiltyä kuolemaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli on laajennettu vain paketissa annetuilla tiedoilla. Kategoria korjattu kotimaan sijasta ulkomaihin, koska uutinen koskee Brasiliaa ja Afrikan tautitilannetta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260601T215127Z_d2982e9097\",\n  \"title\": \"Brasiliassa tutkitut mahdolliset ebolatapaukset osoittautuivat negatiivisiksi\",\n  \"summary\": \"Brasilian terveysviranomaiset ovat sulkeneet pois kaksi epäiltyä ebolatapausta sen jälkeen, kun São Paulossa ja Rio de Janeirossa seurannassa olleiden potilaiden testit olivat negatiivisia.\",\n  \"content\": \"Brasilian terveysviranomaiset ovat sulkeneet pois kaksi mahdollista ebolatapausta, kun kahden Afrikasta palanneen potilaan testit osoittautuivat negatiivisiksi. Potilaita seurattiin São Paulossa ja Rio de Janeirossa, koska heillä oli oireita hiljattain Kongon demokraattiseen tasavaltaan ja Ugandaan suuntautuneiden matkojen jälkeen.\\n\\n## Potilailla todettiin muita sairauksia\\n\\nSão Paulossa tutkittu potilas oli 37-vuotias mies, joka oli matkustanut Kongon demokraattisessa tasavallassa. Paikallisten terveysviranomaisten mukaan hänellä oli muun muassa kuumetta, mutta ebola suljettiin pois testien perusteella. Hänellä oli jo todettu aivokalvontulehdus.\\n\\nRio de Janeirossa seurannassa ollut toinen potilas oli hiljattain matkustanut Ugandassa. Hänen kerrottiin olevan Belgiasta, ja hänellä kuvattiin olleen virusoireita, kuten yskää, vilunväristyksiä ja ripulia. Myös hänen ebolatestinsä oli negatiivinen. Potilaalla todettiin malaria.\\n\\nBrasilialaisviranomaisten tiedot merkitsevät, ettei näiden kahden epäilyn perusteella vahvistettu ebolatartuntaa Brasiliassa. Tapaukset nousivat tarkkailuun, koska potilaat olivat palanneet maista, jotka liittyvät Afrikassa käynnissä olevaan tautitilanteeseen.\\n\\n## Afrikan epidemiatilanne jatkuu vakavana\\n\\nMaailman terveysjärjestön pääjohtaja Tedros Adhanom Ghebreyesus vieraili viikonloppuna Kongon demokraattisen tasavallan Iturin maakunnassa, jota pidetään nykyisen epidemian keskusalueena. Hänen odotettiin maanantaina tapaavan maan presidentin. Epäiltyjä tapauksia on kerrottu olevan yli 1 100 ja epäiltyjä kuolemia yli 350.\\n\\nEpidemiaa on kuvattu nopeasti kasvaneeksi ja kolmanneksi suurimmaksi ebolaepidemiaksi sen jälkeen, kun virus löydettiin noin puoli vuosisataa sitten. Vahvistettuja tapauksia ei lähdetietojen mukaan ole todettu Kongon demokraattisen tasavallan ja sen naapurimaan Ugandan ulkopuolella.\\n\\n## WHO kertoi myös toipumisista\\n\\nBrasilian testitulosten kanssa samana päivänä WHO kertoi viiden potilaan toipuneen Bundibugyo-viruksen aiheuttamasta taudista. Kyseessä on harvinainen ebolaviruksen muoto, joka liittyy nykyiseen epidemiaan. Sille ei ole hyväksyttyä hoitoa tai rokotetta.\\n\\nWHO:n mukaan yksi potilas oli aiemmin kirjattu epidemian ensimmäiseksi dokumentoiduksi toipuneeksi vahvistetusta Bundibugyo-tapauksesta. Tedros kertoi Buniaan avatussa uudessa ebolan hoitokeskuksessa, että neljä muuta potilasta oli määrä kotiuttaa ja yksi oli kotiutettu jo aiemmin.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Ebola\",\n    \"Brasilia\",\n    \"Kongon demokraattinen tasavalta\",\n    \"Uganda\",\n    \"WHO\",\n    \"terveys\"\n  ],\n  \"summary_bullets\": [\n    \"Kaksi Brasiliassa tutkittua mahdollista ebolatapausta on suljettu pois negatiivisten testitulosten jälkeen.\",\n    \"São Paulossa tutkitulla potilaalla todettiin aivokalvontulehdus ja Rio de Janeirossa tutkitulla potilaalla malaria.\",\n    \"WHO:n mukaan Afrikan epidemiatilanteessa on yli 1 100 epäiltyä tapausta ja yli 350 epäiltyä kuolemaa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.92,\n  \"journalist_note\": \"Artikkeli on laajennettu vain paketissa annetuilla tiedoilla. Kategoria korjattu kotimaan sijasta ulkomaihin, koska uutinen koskee Brasiliaa ja Afrikan tautitilannetta.\"\n}",
+  "article": {
+    "title": "Brasiliassa tutkitut mahdolliset ebolatapaukset osoittautuivat negatiivisiksi",
+    "description": "Brasilian terveysviranomaiset ovat sulkeneet pois kaksi epäiltyä ebolatapausta sen jälkeen, kun São Paulossa ja Rio de Janeirossa seurannassa olleiden potilaiden testit olivat negatiivisia.",
+    "link": "https://www.bbc.com/news/articles/c99lzgxzx2do?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-01T21:40:19+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "62f8f7af2b72365bc83a640c7d2f53b3",
+    "_url_hash": "17d94a0a0decf2c818df11b8800e275290fde46932424c7240e8f96f258f0099",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nTwo suspected cases of Ebola in Brazil have been cleared after both patients tested negative for the virus, local health authorities have said.\n\nThe individuals were monitored in Brazil's two biggest cities after returning from African countries, with both showing related symptoms.\n\nSão Paulo health authorities said in a statement that Ebola had been ruled out for a 37-year-old man who had travelled to the DR Congo, which is at the centre of the outbreak. He had already tested positive for meningitis.\n\nAnother patient in Rio de Janeiro, who had recently travelled to Uganda, also tested negative for Ebola after testing positive for malaria.\n\nLocal authorities said the man in São Paulo had \"exhibited symptoms such as fever\", while the man in Rio de Janeiro, from Belgium, had shown \"viral symptoms such as cough, chills and diarrhoea\".\n\nIf the cases had been positive, they would have been the first infection cases outside Africa since the outbreak began in DR Congo.\n\nThere are now more than 1,000 suspected Ebola cases in DR Congo, with at least 246 deaths. Cases are concentrated in the country's Ituri, North and South Kivu provinces.\n\nUganda has reported nine confirmed cases and one death.\n\nThe current outbreak has been caused by a rare strain of Ebola known as Bundibugyo, which has no proven vaccine and kills about a third of those infected.\n\nThree new vaccines are being developed to tackle the Bundibugyo strain, including by the International Aids Vaccine Initiative (IAVI), the University of Oxford and the pharma company Moderna.\n\nEbola viruses normally infect animals, typically fruit bats, but outbreaks among humans can sometimes start when people eat or handle infected animals.\n\nIt spreads through direct contact with the bodily fluids of an infected person, including sweat, saliva, blood, semen, excrement, urine and vomit.\n\n---\n\n[Lähde: CBS News]\nOne of two patients being monitored by Brazilian health authorities for possible Ebola infection in Sao Paulo and Rio de Janeiro has tested negative, officials said Sunday. The possible infections have sparked further concern over the deadly virus outbreak in central Africa spreading abroad.\n\nA 37-year-old man from the Democratic Republic of the Congo, where the outbreak has been concentrated, \"exhibited symptoms such as fever, meeting the definition of a suspected case\" of Ebola, the Sao Paulo state government said in a statement on Saturday.\n\nWhile initial tests did not detect the Ebola virus in the patient, he is being monitored and isolated as a precautionary measure at a specialized infectious disease facility, the statement said.\n\nThe health department in Rio de Janeiro state meanwhile reported that it had activated safety protocols after a man from Uganda showed \"viral symptoms such as cough, chills, and diarrhea.\"\n\nThe Rio city government said in an email to AFP that the patient tested positive for malaria Saturday evening and \"the case remains under investigation.\"\n\nBrazil's Health Minister said Sunday that the man's tests showed \"negative results for Ebola,\" but he will stay in quarantine until the end of the investigation, AFP reported.\n\nThe Sao Paulo government said that despite the suspected case, \"the technical assessment indicates that the risk of the disease being introduced into Brazil and South America remains very low.\"\n\nThe reports from Brazil came the same day that World Health Organization chief Director-General Tedros Adhanom Ghebreyesus reported five patients in Africa had recovered from the Bundibugyo virus, a rare strain fueling the current outbreak. Bundibugyo has no approved treatment or vaccine.\n\nTedros said these five cases exemplify that recovery from the illness is still possible. The WHO had said Friday that one patient recovered from the Bundibugyo virus, marking the first documented recovery of a person with a confirmed case since this outbreak began.\n\n\"Four people will be discharged today and there was one that was discharged the day before yesterday,\" Tedros said during the opening of a new Ebola treatment center in Bunia, the provincial capital of Ituri in eastern Congo, which is at the center of the current outbreak.\n\n\"Of course, we're still working on vaccines and treatments but that doesn't mean that people cannot recover from Ebola,\" he added.\n\nAt least 906 suspected cases of the virus and 223 deaths, among the sus\n\n---\n\n[Lähde: NBC News]\nThe World Health Organization’s top doctor traveled to the epicenter of the Ebola outbreak in the Democratic Republic of the Congo over the weekend, as suspected cases and deaths continue to mount.\n\nDr. Tedros Adhanom Ghebreyesus, WHO’s director-general, visited Congo’s eastern province of Ituri, and on Monday was expected to meet with the country’s president.\n\nMore than 1,100 cases are suspected in what has quickly become the third-largest Ebola outbreak since the virus was discovered half a century ago. More than 350 deaths are suspected.\n\nNo cases have been confirmed outside of Congo and neighboring Uganda. Ebola tests came back negative on Sunday and Monday for two patients in Brazil — one in Rio de Janeiro and the other in Sao Paulo — whom doctors had suspected might have Ebola.\n\nEchoing the fears of many global health experts and doctors, the International Rescue Committee, a global humanitarian organization, warned Monday that the outbreak is likely significantly larger and more advanced than official figures suggest because of delayed detection and poor contact tracing.\n\n“With only 20% of contacts currently being traced, health authorities are struggling to identify and isolate new chains of transmission,” it said in a statement.\n\nAfter visiting a newly opened Ebola treatment facility in Bunia on Sunday, Tedros emphasized that early medical intervention can save lives.\n\n“Even without vaccines or specific therapeutics, people can survive Ebola disease caused by the Bundibugyo virus if they receive timely healthcare and seek treatment as soon as symptoms appear,” he said in a post on X on Monday.\n\nOn Sunday, WHO ...",
+    "research_source": "multi",
+    "summary": "Brasilian terveysviranomaiset ovat sulkeneet pois kaksi epäiltyä ebolatapausta sen jälkeen, kun São Paulossa ja Rio de Janeirossa seurannassa olleiden potilaiden testit olivat negatiivisia.",
+    "content": "Brasilian terveysviranomaiset ovat sulkeneet pois kaksi mahdollista ebolatapausta, kun kahden Afrikasta palanneen potilaan testit osoittautuivat negatiivisiksi. Potilaita seurattiin São Paulossa ja Rio de Janeirossa, koska heillä oli oireita hiljattain Kongon demokraattiseen tasavaltaan ja Ugandaan suuntautuneiden matkojen jälkeen.\n\n## Potilailla todettiin muita sairauksia\n\nSão Paulossa tutkittu potilas oli 37-vuotias mies, joka oli matkustanut Kongon demokraattisessa tasavallassa. Paikallisten terveysviranomaisten mukaan hänellä oli muun muassa kuumetta, mutta ebola suljettiin pois testien perusteella. Hänellä oli jo todettu aivokalvontulehdus.\n\nRio de Janeirossa seurannassa ollut toinen potilas oli hiljattain matkustanut Ugandassa. Hänen kerrottiin olevan Belgiasta, ja hänellä kuvattiin olleen virusoireita, kuten yskää, vilunväristyksiä ja ripulia. Myös hänen ebolatestinsä oli negatiivinen. Potilaalla todettiin malaria.\n\nBrasilialaisviranomaisten tiedot merkitsevät, ettei näiden kahden epäilyn perusteella vahvistettu ebolatartuntaa Brasiliassa. Tapaukset nousivat tarkkailuun, koska potilaat olivat palanneet maista, jotka liittyvät Afrikassa käynnissä olevaan tautitilanteeseen.\n\n## Afrikan epidemiatilanne jatkuu vakavana\n\nMaailman terveysjärjestön pääjohtaja Tedros Adhanom Ghebreyesus vieraili viikonloppuna Kongon demokraattisen tasavallan Iturin maakunnassa, jota pidetään nykyisen epidemian keskusalueena. Hänen odotettiin maanantaina tapaavan maan presidentin. Epäiltyjä tapauksia on kerrottu olevan yli 1 100 ja epäiltyjä kuolemia yli 350.\n\nEpidemiaa on kuvattu nopeasti kasvaneeksi ja kolmanneksi suurimmaksi ebolaepidemiaksi sen jälkeen, kun virus löydettiin noin puoli vuosisataa sitten. Vahvistettuja tapauksia ei lähdetietojen mukaan ole todettu Kongon demokraattisen tasavallan ja sen naapurimaan Ugandan ulkopuolella.\n\n## WHO kertoi myös toipumisista\n\nBrasilian testitulosten kanssa samana päivänä WHO kertoi viiden potilaan toipuneen Bundibugyo-viruksen aiheuttamasta taudista. Kyseessä on harvinainen ebolaviruksen muoto, joka liittyy nykyiseen epidemiaan. Sille ei ole hyväksyttyä hoitoa tai rokotetta.\n\nWHO:n mukaan yksi potilas oli aiemmin kirjattu epidemian ensimmäiseksi dokumentoiduksi toipuneeksi vahvistetusta Bundibugyo-tapauksesta. Tedros kertoi Buniaan avatussa uudessa ebolan hoitokeskuksessa, että neljä muuta potilasta oli määrä kotiuttaa ja yksi oli kotiutettu jo aiemmin.",
+    "category": "Kotimaa",
+    "tags": [
+      "ebola",
+      "brasilia",
+      "kongon demokraattinen tasavalta",
+      "uganda",
+      "who"
+    ],
+    "summary_bullets": [
+      "Kaksi Brasiliassa tutkittua mahdollista ebolatapausta on suljettu pois negatiivisten testitulosten jälkeen.",
+      "São Paulossa tutkitulla potilaalla todettiin aivokalvontulehdus ja Rio de Janeirossa tutkitulla potilaalla malaria.",
+      "WHO:n mukaan Afrikan epidemiatilanteessa on yli 1 100 epäiltyä tapausta ja yli 350 epäiltyä kuolemaa."
+    ],
+    "key_points": [
+      "Kaksi Brasiliassa tutkittua mahdollista ebolatapausta on suljettu pois negatiivisten testitulosten jälkeen.",
+      "São Paulossa tutkitulla potilaalla todettiin aivokalvontulehdus ja Rio de Janeirossa tutkitulla potilaalla malaria.",
+      "WHO:n mukaan Afrikan epidemiatilanteessa on yli 1 100 epäiltyä tapausta ja yli 350 epäiltyä kuolemaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli on laajennettu vain paketissa annetuilla tiedoilla. Kategoria korjattu kotimaan sijasta ulkomaihin, koska uutinen koskee Brasiliaa ja Afrikan tautitilannetta.",
+    "source_text": "Two suspected cases of Ebola in Brazil have been cleared after both patients tested negative for the virus, local health authorities have said. The individuals were monitored in Brazil's two biggest cities after returning from African countries, with both showing related symptoms. São Paulo health authorities said in a statement that Ebola had been ruled out for a 37-year-old man who had travelled to the DR Congo, which is at the centre of the outbreak. He had already tested positive for meningitis. Another patient in Rio de Janeiro, who had recently travelled to Uganda, also tested negative for Ebola after testing positive for malaria. Local authorities said the man in São Paulo had \"exhibited symptoms such as fever\", while the man in Rio de Janeiro, from Belgium, had shown \"viral symptoms such as cough, chills and diarrhoea\".\n\nThe two patients had recently returned from the DR Congo and Uganda respectively.\n\nThe World Health Organization’s top doctor traveled to the epicenter of the Ebola outbreak in the Democratic Republic of the Congo over the weekend, as suspected cases and deaths continue to mount. Dr. Tedros Adhanom Ghebreyesus, WHO’s director-general, visited Congo’s eastern province of Ituri, and on Monday was expected to meet with the country’s president. More than 1,100 cases are suspected in what has quickly become the third-largest Ebola outbreak since the virus was discovered half a century ago. More than 350 deaths are suspected. No cases have been confirmed outside of Congo and neighboring Uganda. Ebola tests came back negative on Sunday and Monday for two patients in Brazil — one in Rio de Janeiro and the other in Sao Paulo — whom doctors had suspected might have Ebola.\n\nThe reports from Brazil came the same day that World Health Organization chief Director-General Tedros Adhanom Ghebreyesus reported five patients in Africa had recovered from the Bundibugyo virus, a rare strain fueling the current outbreak. Bundibugyo has no approved treatment or vaccine. Tedros said these five cases exemplify that recovery from the illness is still possible. The WHO had said Friday that one patient recovered from the Bundibugyo virus, marking the first documented recovery of a person with a confirmed case since this outbreak began. \"Four people will be discharged today and there was one that was discharged the day before yesterday,\" Tedros said during the opening of a new Ebola treatment center in Bunia, the provincial capital of Ituri in eastern Congo, which is at the center of the current outbreak.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260601T215127Z_d2982e9097",
+    "image": "https://images.unsplash.com/photo-1669236087921-ae82f743ec6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxTJUMzJUEzbyUyMFBhdWxvJTIwaGVhbHRoJTIwb2ZmaWNpYWxzfGVufDF8MHx8fDE3ODAzNTEwODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1669236087921-ae82f743ec6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxTJUMzJUEzbyUyMFBhdWxvJTIwaGVhbHRoJTIwb2ZmaWNpYWxzfGVufDF8MHx8fDE3ODAzNTEwODN8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Brasiliassa tutkitut mahdolliset ebolatapaukset osoittautuivat negatiivisiksi",
+    "image_credit": "Photo by Ian Talmacs on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-building-with-a-fence-around-it-qmDkvJcU0H8?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-01T21:58:05.009791+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1669236087921-ae82f743ec6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxTJUMzJUEzbyUyMFBhdWxvJTIwaGVhbHRoJTIwb2ZmaWNpYWxzfGVufDF8MHx8fDE3ODAzNTEwODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1669236087921-ae82f743ec6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxTJUMzJUEzbyUyMFBhdWxvJTIwaGVhbHRoJTIwb2ZmaWNpYWxzfGVufDF8MHx8fDE3ODAzNTEwODN8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-01T21:59:00.622485+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-01-brasiliassa-tutkitut-mahdolliset-ebolatapaukset-osoittautuiv.md"
+  ]
+}
