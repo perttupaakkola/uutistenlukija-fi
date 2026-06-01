@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T02:31:21.028445+00:00",
+  "digest": "71c08d4c58",
+  "packet": {
+    "packet_id": "20260601T023121Z_71c08d4c58",
+    "created_at": "2026-06-01T02:31:21Z",
+    "headline_seed": "Perinteikäs lahtelaisyhtiö siirtyi uudelle yrittäjälle puolisattumalta – nyt tähtäimessä on mahdollisuuksien muuttaminen todeksi",
+    "description_seed": "40 vuotta toiminut yritys sai liiketoiminnalleen jatkajan, jolla on sekä kokemusta että halua kehittää vakiintunutta yritystä seuraaville vuosikymmenille.",
+    "link": "https://www.ess.fi/paikalliset/9496215",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9496215"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Perinteikäs lahtelaisyhtiö siirtyi uudelle yrittäjälle puolisattumalta – nyt tähtäimessä on mahdollisuuksien muuttaminen todeksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 140,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Perinteikäs lahtelaisyhtiö siirtyi uudelle yrittäjälle puolisattumalta – nyt tähtäimessä on mahdollisuuksien muuttaminen todeksi",
+      "description": "40 vuotta toiminut yritys sai liiketoiminnalleen jatkajan, jolla on sekä kokemusta että halua kehittää vakiintunutta yritystä seuraaville vuosikymmenille.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Perinteikäs lahtelaisyhtiö siirtyi uudelle yrittäjälle puolisattumalta – nyt tähtäimessä on mahdollisuuksien muuttaminen todeksi",
+    "description": "40 vuotta toiminut yritys sai liiketoiminnalleen jatkajan, jolla on sekä kokemusta että halua kehittää vakiintunutta yritystä seuraaville vuosikymmenille.",
+    "link": "https://www.ess.fi/paikalliset/9496215",
+    "published": "2026-06-01T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "1bf3d59c6c345edfdb415a34ff5391ef",
+    "_url_hash": "7bf7857d1dd1e3a09e4d5a89cd9dd6ee47095bafab868292a7844e329ddfb304",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nViisi potilasta on toipunut harvinaisesta ebolatyypistä, Maailman terveysjärjestö WHO:n pääjohtaja Tedros Adhanom Ghebreyesus kertoi sunnuntaina vieraillessaan Kongon itäosassa sijaitsevassa Buniassa. Asiasta uutisoi muun muassa New York Post.\n\n– Neljä ihmistä kotiutetaan tänään ja yksi kotiutettiin toissapäivänä, pääjohtaja sanoi uuden ebolahoitokeskuksen avajaisissa Buniassa.\n\n– Tietysti työskentelemme edelleen rokotteiden ja hoitojen parissa, mutta se ei tarkoita, etteivät ihmiset voisi toipua ebolasta, hän lisäsi.\n\nWHO ilmoitti perjantaina ensimmäisestä ebolatartunnasta toipuneesta ihmisestä Kongon demokraattisessa tasavallassa. Nyt leviävälle Bundibugyo-kannalle ei ole vielä rokotetta, mutta varhainen hoitoonpääsy voi parantaa eloonjäämisastetta huomattavasti.\n\nLääkärit ilman rajoja -järjestön mukaan ebolatilanne Iturin maakunnassa Kongon demokraattisen tasavallan koillisosassa on erittäin hälyttävä. Afrikan tautienehkäisy- ja -valvontakeskuksen mukaan Kongossa on ollut toukokuun puolivälin jälkeen ainakin noin 1 100 epäiltyä tautitapausta ja noin 250 epäiltyä ebolakuolemaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-01T02:33:18.731566+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260601T023121Z_71c08d4c58\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.\"}"
+}
