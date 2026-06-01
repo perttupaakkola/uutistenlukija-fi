@@ -43,7 +43,6 @@ keywords:
 source_name: "IS Urheilu"
 source_url: "https://www.is.fi/jaakiekko/art-2000012046865.html"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
