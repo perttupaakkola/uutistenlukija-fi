@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T03:41:20.288776+00:00",
+  "digest": "c7412c9cab",
+  "packet": {
+    "packet_id": "20260602T034120Z_c7412c9cab",
+    "created_at": "2026-06-02T03:41:20Z",
+    "headline_seed": "Vakiotaksikuski kosketteli naismatkustajaa Päijät-Hämeessä – rikos pahensi uhrin sairauskohtauksia",
+    "description_seed": "Oikeuden mukaan teon moitittavuutta lisäsi se, että nainen oli riippuvainen mieskuljettajasta, joka oli rikoksen aikana työtehtävissä.",
+    "link": "https://www.ess.fi/paikalliset/9499798",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9499798"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vakiotaksikuski kosketteli naismatkustajaa Päijät-Hämeessä – rikos pahensi uhrin sairauskohtauksia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 157,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Keskisuomalainen",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vakiotaksikuski kosketteli naismatkustajaa Päijät-Hämeessä – rikos pahensi uhrin sairauskohtauksia",
+      "description": "Oikeuden mukaan teon moitittavuutta lisäsi se, että nainen oli riippuvainen mieskuljettajasta, joka oli rikoksen aikana työtehtävissä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Vakiotaksikuski kosketteli naismatkustajaa Päijät-Hämeessä – rikos pahensi uhrin sairauskohtauksia",
+    "description": "Oikeuden mukaan teon moitittavuutta lisäsi se, että nainen oli riippuvainen mieskuljettajasta, joka oli rikoksen aikana työtehtävissä.",
+    "link": "https://www.ess.fi/paikalliset/9499798",
+    "published": "2026-06-02T06:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "a439a4f3a62e34ce12a3a77ce28cca29",
+    "_url_hash": "14d43cfac681cf663ea1af9fed24d525a91ce4ad47b5cc878e47e3ad2130f627",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nVenäjä on jälleen tehnyt öisiä iskuja Ukrainaan tiistain vastaisena yönä, ukrainalaisviranomaiset kertovat. Ainakin neljä ihmistä on kuollut ja kymmenet haavoittuneet eri puolilla maata.\n\nViranomaisten mukaan Venäjä on tehnyt iskuja ohjuksilla ja drooneilla. Pääkaupungissa Kiovassa kuultiin useita räjähdyksiä, ja kaupungin sotilashallinnon mukaan Venäjä on tehnyt iskuja ballistisilla ohjuksilla.\n\nViranomaisten mukaan ilmapuolustus on toiminnassa, ja ihmisiä on kehotettu hakeutumaan suojaan.\n\nKiovan pormestarin Vitali Klitshko kertoo, että iskut ovat haavoittaneet useita ihmisiä sekä sytyttäneet tulipaloja eri puolilla kaupunkia. Lisäksi hyökkäys aiheutti sähkökatkoja useilla alueilla.\n\nVenäjä on viime aikoina tehnyt yhä useammin iskuja Kiovaan. Esimerkiksi Venäjän helatorstaina tekemät iskut Kiovassa surmasivat yli 20 ihmistä.\n\nÖisiä iskuja oli myös Ukrainan itäosassa. Viranomaisten mukaan Dnipron kaupungissa Venäjän iskut ovat surmanneet ainakin neljä ihmistä ja haavoittaneet toistakymmentä. Lisäksi ainakin kymmenen ihmisen kerrotaan haavoittuneen Harkovassa.\n\nVenäjällä puolestaan viranomaiset kertovat, että yksi ihminen kuoli maanantaina Kurskin alueella Ukrainan tekemässä drooni-iskussa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T03:43:15.813491+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T034120Z_c7412c9cab\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.\"}"
+}

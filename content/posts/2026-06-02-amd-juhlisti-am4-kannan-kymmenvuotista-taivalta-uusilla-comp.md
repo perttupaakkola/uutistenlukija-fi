@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/amd-juhlisti-computex-messuilla-am4-kannan-10-vuotista-taivalta/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
