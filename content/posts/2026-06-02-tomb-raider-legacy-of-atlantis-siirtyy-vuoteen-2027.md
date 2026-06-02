@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/uusi-tomb-raider-ei-ennatakaan-talle-vuodelle/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
