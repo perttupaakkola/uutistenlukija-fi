@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T01:21:19.575588+00:00",
+  "digest": "67537e2d08",
+  "packet": {
+    "packet_id": "20260602T012119Z_67537e2d08",
+    "created_at": "2026-06-02T01:21:19Z",
+    "headline_seed": "Ukrainan sota | Kiova valtavan ilmaiskun kohteena",
+    "description_seed": "Kiovassa on raportoitu useista räjähdyksistä.",
+    "link": "https://www.hs.fi/maailma/art-2000012049678.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/maailma/art-2000012049678.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ukrainan sota | Kiova valtavan ilmaiskun kohteena"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 142,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Satakunnan Kansa",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ukrainan sota | Kiova valtavan ilmaiskun kohteena",
+      "description": "Kiovassa on raportoitu useista räjähdyksistä.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ukrainan sota | Kiova valtavan ilmaiskun kohteena",
+    "description": "Kiovassa on raportoitu useista räjähdyksistä.",
+    "link": "https://www.hs.fi/maailma/art-2000012049678.html",
+    "published": "2026-06-02T00:42:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "f810c3ef7a529f2c6942cf692a7fb2fa",
+    "_url_hash": "c14d4ef430ae0003e3bcdd096ec181f31b4e70a7e83c1fbf7a93dfc867c0d208",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Satakunnan Kansa]\nMaastoa paloi Harjavallassa, Eurassa ja Porissa.\n\nKuvituskuva. Kuva: Mikael Smrha / Arkisto\n\nMaastopalot työllistivät Satakunnan pelastuslaitosta maanantaina iltapäivällä.\n\nKello 13.15 pelastuslaitos sai hälytyksen sammuttamaan maastopaloa Harjavallan Taunonkadulla. Metsässä oli tuntemattomasta syystä syttynyt vajaan hehtaarin laajuinen palo.\n\n”Alue oli matalaa metsikköä – ihmisen korkuista taimikkoa ja aluskasvillisuutta. Palo on saatu sammutettua, ja jälkivartiointi on käynnissä”, kertoo päivystävä palomestari Juho Salminen.\n\nEuran Tarvaistentiellä paloi metsäpalstalla turvesuon takana noin 10 kertaa 10 metrin kokoinen alue. Palo sai alkunsa ilmeisesti kaivinkoneen telan kipinästä.\n\nKaivinkoneen kuljettaja hälytti pelastuslaitoksen paikalle kello 12.22 ja sai palon rajattua kauhalla tamppaamalla. Pelastuslaitos varmisti tilanteen, Salminen jatkaa.\n\nRåforsintiellä Porin Ahlaisissa syttyi lähes identtinen palo kuin sunnuntaina. Pelastuslaitos sai hälytyksen sammuttamaan maastopaloa kello 12.41.\n\n”Aluskasvillisuutta ja haketta paloi hakkuualueella muutama neliömetri”, kertoo päivystävä palomestari Tero Järvelä.\n\nPelastuslaitos sai palon sammutettua. Tälläkin kertaa syttymissyy oli ilmeisesti metsäkoneesta lähtenyt kipinä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T01:23:15.338826+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja yksityiskohtia 250 sanan artikkeliin ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T012119Z_67537e2d08\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja yksityiskohtia 250 sanan artikkeliin ilman keksittyjä tietoja.\"}"
+}
