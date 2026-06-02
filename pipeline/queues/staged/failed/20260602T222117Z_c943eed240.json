@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T22:21:17.455534+00:00",
+  "digest": "c943eed240",
+  "packet": {
+    "packet_id": "20260602T222117Z_c943eed240",
+    "created_at": "2026-06-02T22:21:17Z",
+    "headline_seed": "Cyberdecks are having a moment, rejecting big tech surveillance with style and substance",
+    "description_seed": "Over the last few months, these DIY hardware communities have exploded in popularity as people on social media show off their solar-powered game emulators, pocket-sized ereaders, and clamshell purse computers.",
+    "link": "https://techcrunch.com/2026/06/02/cyberdeck-tiktok-trend-reject-big-tech/",
+    "source": "TechCrunch",
+    "source_names": [],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/02/cyberdeck-tiktok-trend-reject-big-tech/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Cyberdecks are having a moment, rejecting big tech surveillance with style and substance"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 115,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Cyberdecks are having a moment, rejecting big tech surveillance with style and substance",
+      "description": "Over the last few months, these DIY hardware communities have exploded in popularity as people on social media show off their solar-powered game emulators, pocket-sized ereaders, and clamshell purse computers.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Cyberdecks are having a moment, rejecting big tech surveillance with style and substance",
+    "description": "Over the last few months, these DIY hardware communities have exploded in popularity as people on social media show off their solar-powered game emulators, pocket-sized ereaders, and clamshell purse computers.",
+    "link": "https://techcrunch.com/2026/06/02/cyberdeck-tiktok-trend-reject-big-tech/",
+    "published": "2026-06-02T20:20:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "bf19afbdbed9c89497287591f44dab82",
+    "_url_hash": "94e3e2f3fd8976e22d288d45296589235b54b1edffb1b9fa2016c734f65be343",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nWhen I reach out to the self-proclaimed “open source baddie” CC for an interview, I’m pretty sure she’s emailing me back from a pink mermaid purse.\n\n“I’m just having so much fun,” she tells me about her seashell cyberdeck. “It’s a Tamagotchi. It’s also an e-reader. It’s networked to my vault and my servers, so it has access to all of my server data, which has all my PDFs, and books, and notes, and everything… It’s also connected to my local AI setup at home.”",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T22:23:16.034609+00:00",
+  "failure": "Paketti ei sisällä valittua lähdetekstiä eikä riittävästi varmistettuja faktoja vähintään 250 sanan julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T222117Z_c943eed240\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä valittua lähdetekstiä eikä riittävästi varmistettuja faktoja vähintään 250 sanan julkaistavaan artikkeliin.\"}"
+}
