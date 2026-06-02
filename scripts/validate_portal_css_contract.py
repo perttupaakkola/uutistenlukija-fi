@@ -44,6 +44,14 @@ OBSOLETE_HEADER_SELECTORS = [
     ".logo-img",
 ]
 
+MOBILE_SURFACE_LINK_GUARDS = [
+    ".portal-lead h2 a",
+    ".portal-save-link",
+    ".portal-mobile-section-head h2",
+    ".portal-teaser h3 a",
+    ".portal-row-card h3 a",
+]
+
 
 def require(path: Path) -> str:
     if not path.exists():
@@ -78,6 +86,12 @@ def main() -> int:
                 failures.append(
                     f"{label} styles obsolete header selector {selector}; "
                     "update CSS to target live portal-* header markup"
+                )
+
+        for selector in MOBILE_SURFACE_LINK_GUARDS:
+            if selector not in css:
+                failures.append(
+                    f"{label} is missing mobile light-surface color guard for {selector}"
                 )
 
     if failures:

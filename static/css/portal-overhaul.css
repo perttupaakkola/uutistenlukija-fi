@@ -701,6 +701,13 @@ main.container { padding-top: 0; padding-bottom: 48px; }
     text-shadow: none;
   }
   .portal-lead h2 a { display: block; max-width: 100%; overflow-wrap: anywhere; word-break: break-word; }
+  .portal-lead h2 a,
+  .portal-save-link,
+  .portal-mobile-section-head h2,
+  .portal-teaser h3 a,
+  .portal-row-card h3 a {
+    color: var(--portal-ink) !important;
+  }
   .portal-lead p { font-size: 15.5px; line-height: 1.45; margin-bottom: 10px; color: #253044; }
   .portal-center-list { display: grid; gap: 0; }
   .portal-mobile-section-head {
