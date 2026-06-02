@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/paattajilta-vahva-tuki-fan-hallitusohjelmatavoitteille/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
