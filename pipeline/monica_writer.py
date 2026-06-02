@@ -53,15 +53,15 @@ MONICA_DISPATCH_TIMING_LOG = Path(os.environ.get(
 MIN_CONTENT_WORDS = 250
 MIN_LEAD_WORDS = 30
 SOURCE_BACKED_REPAIR_WORDS = 300
-SOURCE_BACKED_REPAIR_BLOCKS = 2
-SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS = 180
-SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS = 2
+SOURCE_BACKED_REPAIR_BLOCKS = 3
+SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS = 250
+SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS = 3
 SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE = 0.85
 SOURCE_BACKED_NEAR_MISS_MIN_WORDS = 200
 SOURCE_BACKED_REPAIR_MIN_TARGET_WORDS = 280
 SOURCE_BACKED_REPAIR_MAX_TARGET_WORDS = 420
 SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS = 280
-SOURCE_BACKED_TALOUS_MICRO_REPAIR_WORDS = 190
+SOURCE_BACKED_TALOUS_MICRO_REPAIR_WORDS = 250
 SOURCE_BACKED_TALOUS_MICRO_REPAIR_BLOCKS = 3
 SOURCE_BACKED_TALOUS_MICRO_REPAIR_MIN_WORDS = 200
 
@@ -461,9 +461,28 @@ def _near_miss_repair_metadata(packet: dict, initial_payload: dict, final_payloa
     return metadata
 
 
+def _source_backed_near_short_hint(packet: dict) -> str:
+    source_words = _packet_source_words(packet)
+    source_blocks = _packet_source_blocks(packet)
+    if (
+        source_words >= SOURCE_BACKED_NEAR_MISS_REPAIR_WORDS
+        and source_blocks >= SOURCE_BACKED_NEAR_MISS_REPAIR_BLOCKS
+        and _packet_story_confidence(packet) >= SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE
+    ):
+        return (
+            f"\nSource-backed near-short rule: this packet has {source_words} source words across "
+            f"{source_blocks} source blocks. Do not fail closed only because a first draft lands "
+            "just below 250 words; write or repair a compact 250-320 word article using only "
+            "those sourced facts. Return INSUFFICIENT_CONFIDENCE only for contradiction or truly "
+            "missing core facts."
+        )
+    return ""
+
+
 def _build_prompt(packet: dict) -> str:
     schema_text = json.dumps(WRITER_SCHEMA, ensure_ascii=False, indent=2)
     packet_text = json.dumps(packet, ensure_ascii=False, indent=2)
+    source_repair_hint = _source_backed_near_short_hint(packet)
     return f"""You are Monica, the final Finnish writer/editor for uutistenlukija.fi.
 
 Write exactly one publication-quality Finnish news article from the structured packet below.
@@ -476,7 +495,7 @@ Hard rules:
 - No duplicated opener, no repeated paragraphs, no generic AI ending
 - No invented facts
 - If the evidence is too weak or contradictory, return: {{"packet_id":"{packet['packet_id']}","status":"INSUFFICIENT_CONFIDENCE","reason":"short reason"}}
-- Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE
+- Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE{source_repair_hint}
 - The first paragraph must be at least 30 words and summarize the verified core of the story
 - Include at least two H2 subheadings inside `content`
 

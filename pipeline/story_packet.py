@@ -457,10 +457,9 @@ def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int
 
         overlap, strong = _keyword_overlap(context_tokens, text)
         if context_tokens and not is_fallback:
-            if strong == 0 and overlap < 3:
-                if not (business_context and words >= 80):
-                    continue
             if overlap < 1:
+                continue
+            if strong == 0 and overlap < 3:
                 if not (business_context and words >= 80):
                     continue
 
@@ -519,13 +518,18 @@ def _backfill_research_sources(
         return (source_match, strong + overlap, int(block.get("word_count", 0) or 0))
 
     seen_text = {block.get("text", "") for block in selected}
-    candidates = [
-        block for block in all_blocks
-        if block.get("source_type") == "research"
-        and block.get("text") not in seen_text
-        and int(block.get("word_count", 0) or 0) >= 40
-        and _candidate_score(block)[:2] != (0, 0)
-    ]
+    candidates = []
+    for block in all_blocks:
+        if block.get("source_type") != "research":
+            continue
+        if block.get("text") in seen_text:
+            continue
+        if int(block.get("word_count", 0) or 0) < 40:
+            continue
+        score = _candidate_score(block)
+        if score[1] == 0:
+            continue
+        candidates.append(block)
     candidates.sort(key=_candidate_score, reverse=True)
 
     for block in candidates:

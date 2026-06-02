@@ -11,12 +11,12 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
+    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
     TIMING_LOG_PATCH_TARGET = "pipeline.monica_writer.MONICA_DISPATCH_TIMING_LOG"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
+    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
     TIMING_LOG_PATCH_TARGET = "monica_writer.MONICA_DISPATCH_TIMING_LOG"
@@ -401,14 +401,15 @@ class MonicaWriterTests(unittest.TestCase):
     def test_source_backed_repair_candidate_requires_words_blocks_and_length_issue(self):
         issues = ["content too short: 207 words", "lead paragraph too short: 22 words"]
 
-        self.assertTrue(_is_source_backed_repair_candidate(_source_packet(320, blocks=2), issues))
-        near_floor = _source_packet(180, blocks=2)
+        self.assertTrue(_is_source_backed_repair_candidate(_source_packet(360, blocks=3), issues))
+        near_floor = _source_packet(252, blocks=3)
         near_floor["story_confidence"] = 0.85
         self.assertTrue(_is_source_backed_repair_candidate(near_floor, issues))
-        low_confidence = _source_packet(260, blocks=2)
+        low_confidence = _source_packet(260, blocks=3)
         low_confidence["story_confidence"] = 0.84
         self.assertFalse(_is_source_backed_repair_candidate(low_confidence, issues))
         self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=1), issues))
+        self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=2), issues))
         self.assertFalse(_is_source_backed_repair_candidate(_source_packet(320, blocks=2), ["not enough tags"]))
 
     def test_packet_source_words_prefers_clean_selected_blocks_over_full_source_text(self):
@@ -421,7 +422,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertFalse(_is_source_backed_repair_candidate(packet, ["content too short: 220 words"]))
 
     def test_repair_prompt_strengthens_source_backed_short_draft_without_lowering_gate(self):
-        packet = _source_packet(360, blocks=2)
+        packet = _source_packet(360, blocks=3)
         broken_payload = json.loads(_good_payload())
         broken_payload["content"] = " ".join(["Sana"] * 207)
 
@@ -437,9 +438,21 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
 
+    def test_source_backed_near_short_hint_requires_250_words_and_three_blocks(self):
+        rich_packet = _source_packet(252, blocks=3)
+        rich_packet["story_confidence"] = 0.9
+        too_few_words = _source_packet(249, blocks=3)
+        too_few_words["story_confidence"] = 0.9
+        too_few_blocks = _source_packet(320, blocks=2)
+        too_few_blocks["story_confidence"] = 0.9
+
+        self.assertIn("Source-backed near-short rule", _build_prompt(rich_packet))
+        self.assertIn("compact 250-320 word article", _build_prompt(rich_packet))
+        self.assertNotIn("Source-backed near-short rule", _build_prompt(too_few_words))
+        self.assertNotIn("Source-backed near-short rule", _build_prompt(too_few_blocks))
 
     def test_near_short_repair_prompt_uses_source_backed_rules_for_200_word_marker(self):
-        packet = _source_packet(216, blocks=3)
+        packet = _source_packet(252, blocks=3)
         packet["story_confidence"] = 0.98
         broken_payload = json.loads(_good_payload())
         broken_payload["content"] = " ".join(["Sana"] * 248)
@@ -450,13 +463,13 @@ class MonicaWriterTests(unittest.TestCase):
         ])
 
         self.assertIn("Source-backed repair mode", prompt)
-        self.assertIn("source_words: 216", prompt)
+        self.assertIn("source_words: 252", prompt)
         self.assertIn("source_blocks: 3", prompt)
         self.assertIn("MUST be at least 250 Finnish words", prompt)
         self.assertIn(f"Do not stop at {SOURCE_BACKED_NEAR_MISS_MIN_WORDS}–249 words", prompt)
 
     def test_source_backed_near_miss_requires_source_confidence_and_200_249_words(self):
-        packet = _source_packet(200, blocks=2)
+        packet = _source_packet(252, blocks=3)
         packet["story_confidence"] = 0.85
         payload = json.loads(_good_payload())
         payload["content"] = " ".join(["Sana"] * 211)
@@ -473,19 +486,19 @@ class MonicaWriterTests(unittest.TestCase):
         payload["content"] = " ".join(["Sana"] * 29) + "\n\n" + " ".join(["Sana"] * (MIN_CONTENT_WORDS - 80))
         self.assertFalse(_is_source_backed_near_miss(packet, payload, ["lead paragraph too short: 29 words"]))
         payload["content"] = " ".join(["Sana"] * 247)
-        reduced_floor_packet = _source_packet(180, blocks=2)
+        reduced_floor_packet = _source_packet(252, blocks=3)
         reduced_floor_packet["story_confidence"] = 0.85
         self.assertTrue(_is_source_backed_near_miss(reduced_floor_packet, payload, ["content too short: 247 words"]))
-        below_floor_packet = _source_packet(178, blocks=2)
+        below_floor_packet = _source_packet(249, blocks=3)
         below_floor_packet["story_confidence"] = 0.85
         self.assertFalse(_is_source_backed_near_miss(below_floor_packet, payload, ["content too short: 247 words"]))
-        self.assertFalse(_is_source_backed_near_miss(_source_packet(220, blocks=1), payload, ["content too short: 247 words"]))
-        low_confidence = _source_packet(360, blocks=2)
+        self.assertFalse(_is_source_backed_near_miss(_source_packet(260, blocks=2), payload, ["content too short: 247 words"]))
+        low_confidence = _source_packet(360, blocks=3)
         low_confidence["story_confidence"] = 0.84
         self.assertFalse(_is_source_backed_near_miss(low_confidence, payload, ["content too short: 247 words"]))
 
         for category in ("Teknologia", "Kotimaa", "Ulkomaat"):
-            packet = _source_packet(180, blocks=2)
+            packet = _source_packet(252, blocks=3)
             packet["category"] = category
             packet["story_confidence"] = 0.9
             self.assertTrue(_is_source_backed_near_miss(packet, payload, ["content too short: 247 words"]))
@@ -502,7 +515,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(_packet_source_words(packet), 170)
 
     def test_talous_micro_near_miss_uses_three_blocks_and_high_confidence(self):
-        packet = _source_packet(199, blocks=3)
+        packet = _source_packet(252, blocks=3)
         packet["category"] = "Talous"
         packet["story_confidence"] = 0.98
         payload = json.loads(_good_payload())
@@ -514,17 +527,17 @@ class MonicaWriterTests(unittest.TestCase):
 
         not_talous = dict(packet, category="Kotimaa")
         self.assertFalse(_is_source_backed_talous_micro_near_miss(not_talous, payload, ["content too short: 209 words"]))
-        two_blocks = _source_packet(199, blocks=2)
+        two_blocks = _source_packet(252, blocks=2)
         two_blocks["category"] = "Talous"
         two_blocks["story_confidence"] = 0.98
         self.assertFalse(_is_source_backed_talous_micro_near_miss(two_blocks, payload, ["content too short: 209 words"]))
-        low_confidence = _source_packet(199, blocks=3)
+        low_confidence = _source_packet(252, blocks=3)
         low_confidence["category"] = "Talous"
         low_confidence["story_confidence"] = 0.84
         self.assertFalse(_is_source_backed_talous_micro_near_miss(low_confidence, payload, ["content too short: 209 words"]))
 
     def test_talous_micro_near_short_repair_prompt_uses_source_backed_rules(self):
-        packet = _source_packet(199, blocks=3)
+        packet = _source_packet(252, blocks=3)
         packet["category"] = "Talous"
         packet["story_confidence"] = 0.98
         broken_payload = json.loads(_good_payload())
@@ -534,7 +547,7 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertIn("Source-backed repair mode", prompt)
         self.assertIn("Talous only", prompt)
-        self.assertIn("source_words: 198", prompt)
+        self.assertIn("source_words: 252", prompt)
 
 
     def test_packet_story_confidence_prefers_story_confidence_over_payload_confidence(self):
@@ -544,7 +557,7 @@ class MonicaWriterTests(unittest.TestCase):
 
 
     def test_near_miss_repair_metadata_records_recovered_runtime_proof(self):
-        packet = _source_packet(220, blocks=2)
+        packet = _source_packet(252, blocks=3)
         initial_payload = json.loads(_good_payload())
         initial_payload["content"] = " ".join(["Sana"] * 247)
         final_payload = json.loads(_good_payload())
@@ -557,10 +570,10 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(metadata["post_repair_word_count"], 281)
         self.assertEqual(metadata["repair_result"], "published")
         self.assertIn("pre_repair_word_count=247", metadata["repair_trigger"])
-        self.assertGreaterEqual(metadata["selected_source_words_at_repair"], 200)
-        self.assertGreaterEqual(metadata["selected_source_blocks_at_repair"], 2)
-        self.assertGreaterEqual(metadata["source_words"], 200)
-        self.assertGreaterEqual(metadata["source_blocks"], 2)
+        self.assertGreaterEqual(metadata["selected_source_words_at_repair"], 250)
+        self.assertGreaterEqual(metadata["selected_source_blocks_at_repair"], 3)
+        self.assertGreaterEqual(metadata["source_words"], 250)
+        self.assertGreaterEqual(metadata["source_blocks"], 3)
         self.assertIn("repair_attempted_at", metadata)
         self.assertTrue(metadata["source_block_ids_used_for_repair"])
         self.assertTrue(metadata["recovered"])
@@ -593,6 +606,7 @@ class MonicaWriterTests(unittest.TestCase):
         original_packet["clean_source_blocks"] = [
             {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi"},
             {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 15), "word_count": 90, "source": "Testi 2"},
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 12), "word_count": 72, "source": "Testi 3"},
         ]
         with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=original_packet):
             rewritten = rewrite_articles([article])
@@ -614,7 +628,7 @@ class MonicaWriterTests(unittest.TestCase):
     def test_rewrite_articles_quarantines_source_backed_near_miss_with_explicit_reason(self, run_mock):
         near_miss_payload = json.loads(_good_payload())
         near_miss_payload["content"] = " ".join(["Sana"] * 247)
-        packet = _source_packet(220, blocks=2)
+        packet = _source_packet(252, blocks=3)
         packet["story_confidence"] = 0.9
 
         run_mock.side_effect = [
@@ -635,8 +649,8 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(extra["reason_code"], "source_backed_writer_shortfall_unrepairable")
         self.assertEqual(extra["final_word_count"], 247)
         self.assertEqual(extra["final_lead_word_count"], 247)
-        self.assertGreaterEqual(extra["source_words"], 200)
-        self.assertGreaterEqual(extra["source_blocks"], 2)
+        self.assertGreaterEqual(extra["source_words"], 250)
+        self.assertGreaterEqual(extra["source_blocks"], 3)
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_quarantines_still_short_after_near_floor_repair(self, run_mock):
@@ -644,7 +658,7 @@ class MonicaWriterTests(unittest.TestCase):
         initial_payload["content"] = " ".join(["Sana"] * 244)
         still_short_payload = json.loads(_good_payload())
         still_short_payload["content"] = " ".join(["Sana"] * 231)
-        packet = _source_packet(199, blocks=3)
+        packet = _source_packet(252, blocks=3)
         packet["story_confidence"] = 0.98
         packet["category"] = "Talous"
 
@@ -664,7 +678,7 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(quarantine_mock.call_args.args[1], "source_backed_writer_shortfall_unrepairable")
         extra = quarantine_mock.call_args.kwargs["extra"]
         self.assertEqual(extra["reason_code"], "source_backed_writer_shortfall_unrepairable")
-        self.assertEqual(extra["source_words"], 198)
+        self.assertEqual(extra["source_words"], 252)
         self.assertEqual(extra["source_blocks"], 3)
         self.assertEqual(extra["final_word_count"], 231)
         self.assertEqual(extra["repair_result"], "still_short")

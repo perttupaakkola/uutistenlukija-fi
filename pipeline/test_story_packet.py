@@ -231,7 +231,7 @@ class StoryPacketTests(unittest.TestCase):
         self.assertIn("Yle", packet["source_names"]) 
 
     def test_backfills_research_block_when_selected_packet_is_rss_thin(self) -> None:
-        research_words = " ".join(["Tokmannin markkinatilanne"] * 46)
+        research_words = " ".join(["Tokmannin perustaja kritisoi markkinatilannetta"] * 46)
         article = {
             "title": "Perustaja kritisoi Tokmannia",
             "description": "Lyhyt RSS kuvaus ilman riittävää lähdepohjaa.",
@@ -246,6 +246,42 @@ class StoryPacketTests(unittest.TestCase):
         self.assertGreaterEqual(packet["source_diagnostics"]["selected_source_words"], 80)
         self.assertEqual(packet["source_selection_outcome"], "usable_source_packet")
         self.assertIn("ksml.fi", packet["source_diagnostics"]["selected_sources"])
+
+    def test_talous_packet_drops_unrelated_rich_business_context_block(self) -> None:
+        finanssiala = " ".join(
+            [
+                "Finanssiala arvioi eläkejärjestelmän kestävyyttä ja työeläkemaksujen kehitystä.",
+                "Järjestön mukaan sijoitustuotot, väestön ikääntyminen ja työllisyys vaikuttavat eläkkeiden rahoitukseen.",
+                "Eläketurvan pitkän aikavälin tasapaino vaatii vakaata maksupohjaa ja selkeitä päätöksiä.",
+            ]
+            * 8
+        )
+        unrelated = " ".join(
+            [
+                "Yle kertoo Hormuzinsalmen kiristyneestä turvallisuustilanteesta ja presidentti Stubbin ulkopoliittisista arvioista.",
+                "Öljykuljetusten häiriöt voivat vaikuttaa kansainvälisiin energiamarkkinoihin ja sotilaalliseen varautumiseen.",
+            ]
+            * 10
+        )
+        article = {
+            "title": "Finanssiala arvioi eläkejärjestelmän kestävyyttä",
+            "description": "Työeläkemaksut ja sijoitustuotot vaikuttavat eläkkeiden pitkän aikavälin rahoitukseen.",
+            "source": "Finanssiala",
+            "link": "https://www.finanssiala.fi/example",
+            "category_hint": "Talous",
+            "research": "\n\n---\n\n".join(
+                [
+                    f"[Lähde: Finanssiala]\n{finanssiala}",
+                    f"[Lähde: Yle]\n{unrelated}",
+                ]
+            ),
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertIn("Finanssiala", packet["source_diagnostics"]["selected_sources"])
+        self.assertNotIn("Yle", packet["source_diagnostics"]["selected_sources"])
+        self.assertNotIn("Hormuzinsalmen", packet["source_text"])
 
     def test_description_tokens_can_support_source_selection(self) -> None:
         article = {
