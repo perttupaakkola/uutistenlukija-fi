@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T04:01:22.861017+00:00",
+  "digest": "403ed6d014",
+  "packet": {
+    "packet_id": "20260602T040122Z_403ed6d014",
+    "created_at": "2026-06-02T04:01:22Z",
+    "headline_seed": "Prätkäkaupoista ravintolayrittäjäksi – Lahden Ace Cafe sai uuden vetäjän",
+    "description_seed": "Moottoripyörämuseon ravintolatoiminta siirtyi keväällä Amarjit Thindin johtamalle yritykselle. Alun perin Thind tuli Suomeen tietokoneinsinööriksi.",
+    "link": "https://www.ess.fi/paikalliset/9499796",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9499796"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Prätkäkaupoista ravintolayrittäjäksi – Lahden Ace Cafe sai uuden vetäjän"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 102,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Prätkäkaupoista ravintolayrittäjäksi – Lahden Ace Cafe sai uuden vetäjän",
+      "description": "Moottoripyörämuseon ravintolatoiminta siirtyi keväällä Amarjit Thindin johtamalle yritykselle. Alun perin Thind tuli Suomeen tietokoneinsinööriksi.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Prätkäkaupoista ravintolayrittäjäksi – Lahden Ace Cafe sai uuden vetäjän",
+    "description": "Moottoripyörämuseon ravintolatoiminta siirtyi keväällä Amarjit Thindin johtamalle yritykselle. Alun perin Thind tuli Suomeen tietokoneinsinööriksi.",
+    "link": "https://www.ess.fi/paikalliset/9499796",
+    "published": "2026-06-02T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "bd916595c0f4e7f5fafe15e7a90e62a6",
+    "_url_hash": "67585819bee460755fcbc91aa806f912ae908d9acb5f35660cac326a2b5fd810",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nHelsingissä ravintola Grön on saanut toisen Michelin-tähtensä. Suomessa kahden tähden Michelin-ravintolan paikkaa on aiemmin pitänyt yksin Helsingissä sijaitseva Palace.\n\nKeittiömestari Toni Kostianin Grön tarjoaa kotimaisiin ja pohjoismaisiin raaka-aineisiin perustuvan kausittain vaihtuvan menun.\n\nLisäksi Helsingissä sijaitseva ravintola Boreal sai ensimmäisen Michelin-tähtensä. Keittiömestari Pasha Demin saapui Suomeen Venäjältä noin neljä vuotta sitten.\n\nMichelin-tähtiä on nyt kaikkiaan kahdeksalla suomalaisravintolalla. Yhden tähden statuksensa pitivät Helsingissä Demo, Olo sekä Finnjävel Salonki, Porvoossa Vår ja Turussa Kaskis.\n\nRavintola-alan Michelin-tähdet julkistettiin Pohjoismaiden osalta maanantai-iltana Kööpenhaminassa. Michelin-tähti on kansainvälinen luokitus maailman parhaille ravintoloille ja niiden keittiömestareille.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T04:03:15.585523+00:00",
+  "failure": "Lähdeaineisto puuttuu käytännössä kokonaan, eikä paketti tue 250 sanan julkaistavaa artikkelia ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T040122Z_403ed6d014\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu käytännössä kokonaan, eikä paketti tue 250 sanan julkaistavaa artikkelia ilman keksittyjä yksityiskohtia.\"}"
+}

@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T04:21:28.736473+00:00",
+  "digest": "5bf73f893d",
+  "packet": {
+    "packet_id": "20260602T042128Z_5bf73f893d",
+    "created_at": "2026-06-02T04:21:28Z",
+    "headline_seed": "Six people killed in Iowa domestic dispute, police say",
+    "description_seed": "The suspected shooter was found dead near a bridge with a self-inflicted gunshot wound, authorities say.",
+    "link": "https://www.bbc.com/news/articles/cg4p7e6301do?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "UPI",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cg4p7e6301do?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Six people killed in Iowa domestic dispute, police say"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "UPI",
+        "source_type": "research",
+        "text": "June 1 (UPI) -- At least seven people, including the suspected shooter, are dead Monday following a series of shootings in an Iowa city that authorities said stemmed from a domestic dispute. The suspect was identified as Ryan Willis McFarland, 52, of Muscatine, located along the eastern Iowa border with Illinois. Authorities said he shot six people, all believed to be family members, before dying from a self-inflicted gunshot wound that was fired after being confronted by police on the Riverfront Trail near a pedestrian bridge.",
+        "word_count": 86,
+        "keyword_overlap": 15,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Six people were killed in the US state of Iowa after a series of shootings that appeared to stem from a domestic dispute, police said. The suspected shooter also was found dead with a self-inflicted gunshot wound, according to the Muscatine Police Department. The victims are believed to be family members of the suspect, identified as Ryan Willis McFarland, 52, of Muscatine, the department said. Muscatine Police Chief Anthony Kies called the shooting an \"act of evil\". The shootings took place on Monday at multiple locations within the city of Muscatine. Police received a report of a shooting just after noon on Monday. When officers responded to a home, they found four people with gunshot wounds, police said. All four victims were pronounced dead at the scene.",
+        "word_count": 127,
+        "keyword_overlap": 14,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The suspected shooter was found dead near a bridge with a self-inflicted gunshot wound, authorities say.",
+        "word_count": 16,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "McFarland had left the residence before officers arrived, but officials found him shortly after on a riverfront trail near a pedestrian bridge. He had a self‑inflicted gunshot wound, police said, and received medical aid, but was pronounced dead at the scene. Detectives later found another man dead from an apparent gunshot wound in a different residence. A further search led officers to a business, where they found another victim, also dead of an apparent gunshot wound. Online maps show a metal workshop at the address provided by police. \"Preliminary findings indicate the shootings stemmed from a domestic‑related dispute,\" McFarland police said in a statement. \"All victims are believed to be family members of the deceased suspect.\" Kies did not give the names or ages of the victims and noted that the investigation is ongoing.",
+        "word_count": 134,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "June 1 (UPI) -- At least seven people, including the suspected shooter, are dead Monday following a series of shootings in an Iowa city that authorities said stemmed from a domestic dispute. The suspect was identified as Ryan Willis McFarland, 52, of Muscatine, located along the eastern Iowa border with Illinois. Authorities said he shot six people, all believed to be family members, before dying from a self-inflicted gunshot wound that was fired after being confronted by police on the Riverfront Trail near a pedestrian bridge.\n\nSix people were killed in the US state of Iowa after a series of shootings that appeared to stem from a domestic dispute, police said. The suspected shooter also was found dead with a self-inflicted gunshot wound, according to the Muscatine Police Department. The victims are believed to be family members of the suspect, identified as Ryan Willis McFarland, 52, of Muscatine, the department said. Muscatine Police Chief Anthony Kies called the shooting an \"act of evil\". The shootings took place on Monday at multiple locations within the city of Muscatine. Police received a report of a shooting just after noon on Monday. When officers responded to a home, they found four people with gunshot wounds, police said. All four victims were pronounced dead at the scene.\n\nThe suspected shooter was found dead near a bridge with a self-inflicted gunshot wound, authorities say.\n\nMcFarland had left the residence before officers arrived, but officials found him shortly after on a riverfront trail near a pedestrian bridge. He had a self‑inflicted gunshot wound, police said, and received medical aid, but was pronounced dead at the scene. Detectives later found another man dead from an apparent gunshot wound in a different residence. A further search led officers to a business, where they found another victim, also dead of an apparent gunshot wound. Online maps show a metal workshop at the address provided by police. \"Preliminary findings indicate the shootings stemmed from a domestic‑related dispute,\" McFarland police said in a statement. \"All victims are believed to be family members of the deceased suspect.\" Kies did not give the names or ages of the victims and noted that the investigation is ongoing.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 967,
+      "selected_blocks": 4,
+      "selected_source_words": 363,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "UPI",
+        "UPI",
+        "UPI",
+        "UPI",
+        "Republic World",
+        "Republic World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "UPI",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Six people killed in Iowa domestic dispute, police say",
+      "description": "The suspected shooter was found dead near a bridge with a self-inflicted gunshot wound, authorities say.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Six people killed in Iowa domestic dispute, police say",
+    "description": "The suspected shooter was found dead near a bridge with a self-inflicted gunshot wound, authorities say.",
+    "link": "https://www.bbc.com/news/articles/cg4p7e6301do?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-02T03:50:34+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "8071b4ceb90a57bf9caf31dbaf1361b6",
+    "_url_hash": "0aba38a7097bbbb12364a626f069a261e56527e5d669e2145d895a1b5720b00e",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nSix people were killed in the US state of Iowa after a series of shootings that appeared to stem from a domestic dispute, police said.\n\nThe suspected shooter also was found dead with a self-inflicted gunshot wound, according to the Muscatine Police Department.\n\nThe victims are believed to be family members of the suspect, identified as Ryan Willis McFarland, 52, of Muscatine, the department said.\n\nMuscatine Police Chief Anthony Kies called the shooting an \"act of evil\".\n\nThe shootings took place on Monday at multiple locations within the city of Muscatine.\n\nPolice received a report of a shooting just after noon on Monday. When officers responded to a home, they found four people with gunshot wounds, police said.\n\nAll four victims were pronounced dead at the scene.\n\nMcFarland had left the residence before officers arrived, but officials found him shortly after on a riverfront trail near a pedestrian bridge.\n\nHe had a self‑inflicted gunshot wound, police said, and received medical aid, but was pronounced dead at the scene.\n\nDetectives later found another man dead from an apparent gunshot wound in a different residence. A further search led officers to a business, where they found another victim, also dead of an apparent gunshot wound.\n\nOnline maps show a metal workshop at the address provided by police.\n\n\"Preliminary findings indicate the shootings stemmed from a domestic‑related dispute,\" McFarland police said in a statement. \"All victims are believed to be family members of the deceased suspect.\"\n\nKies did not give the names or ages of the victims and noted that the investigation is ongoing.\n\nHe confirmed the suspect had an existing criminal record but did not share any further details.\n\nMuscatine, in the southwest of Iowa, sits on the Mississippi River and has a population of approximately 23,500 people, according to US government data published last year.\n\nMayor Brad Bark wrote in a post on Facebook: \"Our hearts are heavy tonight after the tragic shootings that claimed innocent lives.\"\n\n---\n\n[Lähde: UPI]\nJune 1 (UPI) -- At least seven people, including the suspected shooter, are dead Monday following a series of shootings in an Iowa city that authorities said stemmed from a domestic dispute.\n\nThe suspect was identified as Ryan Willis McFarland, 52, of Muscatine, located along the eastern Iowa border with Illinois.\n\nAuthorities said he shot six people, all believed to be family members, before dying from a self-inflicted gunshot wound that was fired after being confronted by police on the Riverfront Trail near a pedestrian bridge.\n\n\"Today, I simply do not have the words [for] this act of evil and what it has done to our community,\" Muscatine Police Chief Anthony Kies told reporters at a press briefing.\nRelated\nMissing New Mexico mother found dead 1 year after vanishing\nHawaii police charge 36-year-old in seniors' murders\nAuthorities arrest alleged killer of Va. sheriff's deputy\n\nThe identities of the victims were not made public, but Kies said they are all believed to be related to McFarland.\n\nThe investigation began at about 12:12 p.m. CDT when police received a report of a shooting at 210 Park Avenue. Officers arrived to find four people who had sustained gunshot wounds and were pronounced dead at the scene.\n\nMcFarland was identified as a suspect and was then confronted. EMS personnel rendered aid after McFarland shot himself, but he was soon after pronounced dead at the scene, Kies said.\n\nAs the investigation progressed, investigators developed information indicating there may be additional victims, leading to the discovery of two men dead from apparent gunshots -- one inside a 1509 Mill Street residence and the other inside a 808 Grandview Avenue business.\n\n\"Preliminary findings indicate that the shootings stemmed from a domestic-related dispute,\" Muscatine Police Department said in a release.\n\nKies told reporters that the suspect had a criminal record, but would not elaborate. The weapon used in the shooting was also not mentioned.\n\nThe investigation is ongoing, authorities said.\n\nAccording to The Gun Violence Archive, the Muscatine incident is the second mass shooting involving four or more victims in the United States in the last 24 hours. There have also been more than 163 mass shootings in the country so far this year, the organization's statistics show.\n\n---\n\n[Lähde: Republic World]\nNew Delhi: A quiet community in Muscatine, Iowa, is reeling after a horrific domestic-related shooting spree on Tuesday claimed the lives of seven people, including the gunman, as per reports.\n\nAuthorities confirmed that the suspect, who ultimately died by suicide after being cornered by police, targeted multiple locations throughout the city in an attack that authorities say claimed the lives of his own family members.\n\nThe Muscatine Police Department reported that the incident began around 12:12 p.m. on Tuesday, when officers were dispatched to a home at 210 Park Avenue following reports of gunfire.\n\nFollowing the crime, emergency responders and law enforcement were promptly dispatched to the location. “Upon entering the residence, officers located four individuals who had sustained gunshot wounds. All four victims were pronounced deceased at the scene,\" the statement said.\n\nReportedly, the authorities identified the suspect as 52-year-old Ryan Willis McFarland of Muscatine, who had already fled the residence by the time officers arrived.\n\nDuring a media briefing, an officer told reporters, “First and foremost, there is not an active threat to our community.\"\n\nThe officer said McFarland was quickly identified after the initial shooting.\n\n“The adult male suspect had left the residence before law enforcement’s arrival, but was quickly identified as Ryan Willis McFarland, 52 years, Muscatine, Iowa,\" he said, according to reports.\n\nOfficers later tracked McFarland to the Riverfront Trail, where he died from a self-inflicted gunshot wound during the encounter. “While talking to Ryan Willis McFarland, he took his own life,\" the officer said during the ...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T04:24:41.081846+00:00",
+  "failure": "content too short: 235 words",
+  "payload": {
+    "packet_id": "20260602T042128Z_5bf73f893d",
+    "title": "Poliisi: kuusi ihmistä kuoli perheeseen liittyneissä ampumisissa Iowassa",
+    "summary": "Yhdysvaltain Iowassa kuusi ihmistä on kuollut Muscatinen kaupungissa tapahtuneissa ampumisissa, joiden poliisi arvioi alustavasti liittyneen perheen sisäiseen riitaan. Epäilty ampuja löydettiin myöhemmin kuolleena.",
+    "content": "Yhdysvaltain Iowan osavaltiossa kuusi ihmistä on kuollut Muscatinen kaupungissa tapahtuneissa ampumisissa, joiden poliisi arvioi alustavasti saaneen alkunsa perheeseen liittyneestä riidasta. Viranomaisten mukaan epäilty ampuja oli 52-vuotias Ryan Willis McFarland, joka oli kotoisin Muscatinesta. Myös hän kuoli tapahtumasarjan aikana itse aiheutettuun ampumahaavaan.\n\n## Ampumisia useissa paikoissa\n\nMuscatinen poliisin mukaan ilmoitus ampumisesta saatiin maanantaina hieman puolenpäivän jälkeen paikallista aikaa. Kun poliisit saapuivat asunnolle, he löysivät neljä ihmistä, joilla oli ampumahaavoja. Kaikki neljä todettiin kuolleiksi tapahtumapaikalla.\n\nPoliisin mukaan McFarland oli poistunut asunnosta ennen viranomaisten saapumista. Hänet löydettiin pian tämän jälkeen Riverfront Trail -nimiseltä joenvarren reitiltä läheltä jalankulkusiltaa. Viranomaisten mukaan McFarlandilla oli itse aiheutettu ampumahaava. Hänelle annettiin ensiapua, mutta hänet todettiin kuolleeksi paikan päällä.\n\nTutkinnan edetessä poliisit löysivät vielä yhden miehen kuolleena toisesta asunnosta. Lisäksi etsinnät johtivat liiketilaan, josta löydettiin kuudes uhri. Myös näiden kahden uhrin kuoleman arvioidaan johtuneen ampumisesta. Lähdetietojen mukaan poliisin ilmoittamassa osoitteessa sijaitsee karttapalvelujen perusteella metallipaja.\n\n## Uhrit uskotaan epäillyn perheenjäseniksi\n\nViranomaisten alustavien tietojen mukaan ampumiset liittyivät kotiväkivaltaan tai perheen sisäiseen riitaan. Poliisi on kertonut, että kaikkien uhrien uskotaan olleen epäillyn perheenjäseniä. Uhrien nimiä tai ikiä ei ole julkistettu.\n\nMuscatinen poliisipäällikkö Anthony Kies kuvasi tekoa vakavaksi ja sanoi tutkinnan jatkuvan. Poliisi ei ole kertonut julkisuuteen tarkempaa motiivia eikä sitä, miten eri tapahtumapaikat liittyivät toisiinsa.\n\n## Tapahtumat sijoittuivat Muscatineen\n\nMuscatine sijaitsee Iowan itäosassa Illinoisin osavaltion rajan tuntumassa. Viranomaisten julkistamien tietojen mukaan tapahtumasarja päättyi epäillyn kuolemaan joenvarren reitillä, mutta poliisi jatkaa tapahtumien kulun ja eri tapahtumapaikkojen yhteyden selvittämistä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Iowa",
+      "ampuminen",
+      "poliisi",
+      "kotiväkivalta"
+    ],
+    "summary_bullets": [
+      "Kuusi ihmistä kuoli ampumisissa Muscatinen kaupungissa Iowassa.",
+      "Poliisin mukaan uhrit olivat todennäköisesti epäillyn ampujan perheenjäseniä.",
+      "Epäilty, 52-vuotias Ryan Willis McFarland, löydettiin kuolleena itse aiheutetun ampumahaavan jälkeen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin viranomaistietoihin. Uhrien nimiä, ikiä ja tarkkaa motiivia ei ole vahvistettu, joten niitä ei ole lisätty."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260602T042128Z_5bf73f893d\",\n  \"title\": \"Poliisi: kuusi ihmistä kuoli perheeseen liittyneissä ampumisissa Iowassa\",\n  \"summary\": \"Yhdysvaltain Iowassa kuusi ihmistä on kuollut Muscatinen kaupungissa tapahtuneissa ampumisissa, joiden poliisi arvioi alustavasti liittyneen perheen sisäiseen riitaan. Epäilty ampuja löydettiin myöhemmin kuolleena.\",\n  \"content\": \"Yhdysvaltain Iowan osavaltiossa kuusi ihmistä on kuollut Muscatinen kaupungissa tapahtuneissa ampumisissa, joiden poliisi arvioi alustavasti saaneen alkunsa perheeseen liittyneestä riidasta. Viranomaisten mukaan epäilty ampuja oli 52-vuotias Ryan Willis McFarland, joka oli kotoisin Muscatinesta. Myös hän kuoli tapahtumasarjan aikana itse aiheutettuun ampumahaavaan.\\n\\n## Ampumisia useissa paikoissa\\n\\nMuscatinen poliisin mukaan ilmoitus ampumisesta saatiin maanantaina hieman puolenpäivän jälkeen paikallista aikaa. Kun poliisit saapuivat asunnolle, he löysivät neljä ihmistä, joilla oli ampumahaavoja. Kaikki neljä todettiin kuolleiksi tapahtumapaikalla.\\n\\nPoliisin mukaan McFarland oli poistunut asunnosta ennen viranomaisten saapumista. Hänet löydettiin pian tämän jälkeen Riverfront Trail -nimiseltä joenvarren reitiltä läheltä jalankulkusiltaa. Viranomaisten mukaan McFarlandilla oli itse aiheutettu ampumahaava. Hänelle annettiin ensiapua, mutta hänet todettiin kuolleeksi paikan päällä.\\n\\nTutkinnan edetessä poliisit löysivät vielä yhden miehen kuolleena toisesta asunnosta. Lisäksi etsinnät johtivat liiketilaan, josta löydettiin kuudes uhri. Myös näiden kahden uhrin kuoleman arvioidaan johtuneen ampumisesta. Lähdetietojen mukaan poliisin ilmoittamassa osoitteessa sijaitsee karttapalvelujen perusteella metallipaja.\\n\\n## Uhrit uskotaan epäillyn perheenjäseniksi\\n\\nViranomaisten alustavien tietojen mukaan ampumiset liittyivät kotiväkivaltaan tai perheen sisäiseen riitaan. Poliisi on kertonut, että kaikkien uhrien uskotaan olleen epäillyn perheenjäseniä. Uhrien nimiä tai ikiä ei ole julkistettu.\\n\\nMuscatinen poliisipäällikkö Anthony Kies kuvasi tekoa vakavaksi ja sanoi tutkinnan jatkuvan. Poliisi ei ole kertonut julkisuuteen tarkempaa motiivia eikä sitä, miten eri tapahtumapaikat liittyivät toisiinsa.\\n\\n## Tapahtumat sijoittuivat Muscatineen\\n\\nMuscatine sijaitsee Iowan itäosassa Illinoisin osavaltion rajan tuntumassa. Viranomaisten julkistamien tietojen mukaan tapahtumasarja päättyi epäillyn kuolemaan joenvarren reitillä, mutta poliisi jatkaa tapahtumien kulun ja eri tapahtumapaikkojen yhteyden selvittämistä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Iowa\",\n    \"ampuminen\",\n    \"poliisi\",\n    \"kotiväkivalta\"\n  ],\n  \"summary_bullets\": [\n    \"Kuusi ihmistä kuoli ampumisissa Muscatinen kaupungissa Iowassa.\",\n    \"Poliisin mukaan uhrit olivat todennäköisesti epäillyn ampujan perheenjäseniä.\",\n    \"Epäilty, 52-vuotias Ryan Willis McFarland, löydettiin kuolleena itse aiheutetun ampumahaavan jälkeen.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketissa annettuihin viranomaistietoihin. Uhrien nimiä, ikiä ja tarkkaa motiivia ei ole vahvistettu, joten niitä ei ole lisätty.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260602T042128Z_5bf73f893d",
+    "category": "Kotimaa",
+    "selected_source_words": 363,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 235,
+    "issues": [
+      "content too short: 235 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Poliisi: kuusi ihmistä kuoli perheeseen liittyneissä ampumisissa Iowassa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-02T04:24:41.081229+00:00",
+    "repair_trigger": "pre_repair_word_count=240; selected_source_words=363; selected_source_blocks=4",
+    "pre_repair_word_count": 240,
+    "pre_repair_lead_word_count": 38,
+    "post_repair_word_count": 235,
+    "post_repair_lead_word_count": 41,
+    "selected_source_words_at_repair": 363,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 363,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 235 words",
+    "source_block_ids_used_for_repair": [
+      "1:UPI:f9dd50fed7",
+      "2:BBC World:9c1ff64c26",
+      "3:BBC World:d20b5a3ea9",
+      "4:BBC World:64538687f0"
+    ],
+    "final_issues": [
+      "content too short: 235 words"
+    ],
+    "recovered": false
+  }
+}
