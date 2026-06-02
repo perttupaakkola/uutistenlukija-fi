@@ -44,7 +44,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/02/asus-julkisti-snapdragon-x2-elitella-varustetun-minitietokoneen-korkea-tekoalysuorituskyky-vain-07-litran-kokoisessa-laitteessa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
