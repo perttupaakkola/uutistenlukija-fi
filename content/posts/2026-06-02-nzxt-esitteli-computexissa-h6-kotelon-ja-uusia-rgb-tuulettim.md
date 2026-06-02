@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/nzxt-julkaisi-computexissa-uuden-kotelon-ja-joukon-rgb-tuulettimia/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 

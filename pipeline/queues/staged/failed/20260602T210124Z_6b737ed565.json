@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T21:01:24.430389+00:00",
+  "digest": "6b737ed565",
+  "packet": {
+    "packet_id": "20260602T210124Z_6b737ed565",
+    "created_at": "2026-06-02T21:01:24Z",
+    "headline_seed": "Mies kateissa Helsingissä – oletko nähnyt?",
+    "description_seed": "Poliisi pyytää havaintoja Helsingissä kadonneesta miehestä.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/mies-kateissa-helsingissa-oletko-nahnyt/9348244",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/mies-kateissa-helsingissa-oletko-nahnyt/9348244"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mies kateissa Helsingissä – oletko nähnyt?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 162,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Keskisuomalainen",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mies kateissa Helsingissä – oletko nähnyt?",
+      "description": "Poliisi pyytää havaintoja Helsingissä kadonneesta miehestä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mies kateissa Helsingissä – oletko nähnyt?",
+    "description": "Poliisi pyytää havaintoja Helsingissä kadonneesta miehestä.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/mies-kateissa-helsingissa-oletko-nahnyt/9348244",
+    "published": "2026-06-02T20:28:43+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "6eaa722487591c6a65700723dc356cb8",
+    "_url_hash": "ead4c6a44075d9a56a3e77017cee98cf41b2e5f06055cb36508f606a0e6a1762",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nPoliisin mukaan 26-vuotias mies löi uhria veitsellä ainakin kahdesti, minkä lisäksi hän potki ja löi tätä.\n\nHelsingin käräjäoikeudessa alkaa tänään oikeudenkäynti epäillystä murhasta, joka tapahtui maaliskuussa Malminkartanon juna-aseman lähellä.\n\nPoliisi sai 18. maaliskuuta iltayhdentoista aikaan ilmoituksen Luutnantintiellä tapahtuneesta pahoinpitelystä. Hätäkeskusilmoituksen teki sivullinen, joka oli nähnyt tilanteen. Paikalle saapui poliisin ja ensihoidon yksiköitä. Väkivallanteon uhri, noin 80-vuotias mies, löytyi paikalta kuolleena.\n\nPoliisi tavoitti epäillyn lähistöltä ravintolasta. 26-vuotias mies oli poliisin mukaan erittäin päihtynyt alkoholista ja huumeeksi luokiteltavista lääkkeistä.\n\nPoliisin mukaan epäilty kohdisti uhriin voimakasta väkivaltaa. Mies löi uhria veitsellä ainakin kahdesti, minkä lisäksi hän potki ja löi tätä, poliisi sanoi tiedotteessaan toukokuun alussa esitutkinnan valmistuttua.\n\nVäkivallanteko kesti poliisin mukaan useita minuutteja. Epäilty poistui välillä uhrin luota, mutta palasi poliisin mukaan jatkamaan väkivaltaa. Poliisi kertoi epäillyn kuvanneen tekoa puhelimellaan.\n\nPoliisin mukaan uhri ja epäilty eivät tunteneet toisiaan entuudestaan. Epäilty on esitutkinnassa myöntänyt syyllistyneensä tappoon. Hän on vedonnut muistamattomuuteen, mistä syystä teolle ei ole saatu selvää motiivia, poliisi kertoi.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T21:03:24.716312+00:00",
+  "failure": "Lähdeaineisto puuttuu eikä packet sisällä riittäviä vahvistettuja tietoja julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T210124Z_6b737ed565\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu eikä packet sisällä riittäviä vahvistettuja tietoja julkaistavaan artikkeliin.\"}"
+}
