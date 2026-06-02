@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T16:41:28.381329+00:00",
+  "digest": "26648a1d6f",
+  "packet": {
+    "packet_id": "20260602T164128Z_26648a1d6f",
+    "created_at": "2026-06-02T16:41:28Z",
+    "headline_seed": "FC Lahden huoltopäällikkö vaihtuu – Jarkko Koskinen siirtyy Päijät-Hämeen urheiluakatemian päälliköksi",
+    "description_seed": "\"Ensi viikon alussa alamme perata vaihtoehtoja\", kertoo FC Lahden toimitusjohtaja Markus Mujunen.",
+    "link": "https://www.ess.fi/urheilu/9503057",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9503057"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "FC Lahden huoltopäällikkö vaihtuu – Jarkko Koskinen siirtyy Päijät-Hämeen urheiluakatemian päälliköksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 131,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "sss",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "FC Lahden huoltopäällikkö vaihtuu – Jarkko Koskinen siirtyy Päijät-Hämeen urheiluakatemian päälliköksi",
+      "description": "\"Ensi viikon alussa alamme perata vaihtoehtoja\", kertoo FC Lahden toimitusjohtaja Markus Mujunen.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "FC Lahden huoltopäällikkö vaihtuu – Jarkko Koskinen siirtyy Päijät-Hämeen urheiluakatemian päälliköksi",
+    "description": "\"Ensi viikon alussa alamme perata vaihtoehtoja\", kertoo FC Lahden toimitusjohtaja Markus Mujunen.",
+    "link": "https://www.ess.fi/urheilu/9503057",
+    "published": "2026-06-02T19:30:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "06cc6bcb53203a4b759f64877d6c5d25",
+    "_url_hash": "fe7569b618b196176c6f983fe1347a4e7864cff2a02efc0b06e8a7b146fd06c8",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: sss]\nColumbus Blue Jacketsin yhdysvaltalaistähden Zach Werenskin hieno jääkiekkovuosi täydentyi NHL-kauden parhaan puolustajan tittelillä.\n\nWerenski, 28, vastaanotti liigan parhaalle puolustajalle annettavan Norris-palkinnon ikimuistoisella tavalla kotonaan Michiganissa. Werenski ja hänen vaimonsa olivat kutsuneet sukulaisiaan ja ystäviään kylään esitelläkseen vieraille parin viikon ikään ehtineen esikoispoikansa, kun NHL yllätti puolustajan palkintopystillä kesken kokoontumisen.\n\nVain Werenskin vaimo ja veli tiesivät NHL:n yllätyksestä.\n\n– Olen aivan sanaton. Tämä on mahtavaa. Kiitos kaikille, Werenski huokaili NHL:n verkkosivujen mukaan.\n\nWerenski pelasi Columbuksessa tällä kaudella 75 runkosarjaottelua tehopistein 22+59=81. Puolustajien pistepörssissä hän oli toinen.\n\nWerenski jätti Norris-äänestyksessä taakseen Coloradon Cale Makarin ja Buffalon Rasmus Dahlinin. Norris-palkinto on Werenskille uran ensimmäinen.\n\nVaikka Columbuksen kausi päättyikin runkosarjaan, jäi Werenskin kausi plussan puolelle. Yhdysvaltalaispuolustaja oli helmikuussa mukana voittamassa maalleen jääkiekon olympiakultaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T16:43:15.985531+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä tai varmistettuja yksityiskohtia, joiden perusteella voisi kirjoittaa vähintään 250 sanan jutun ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T164128Z_26648a1d6f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä tai varmistettuja yksityiskohtia, joiden perusteella voisi kirjoittaa vähintään 250 sanan jutun ilman keksittyjä tietoja.\"}"
+}

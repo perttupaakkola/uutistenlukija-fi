@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T17:21:21.605282+00:00",
+  "digest": "d4d2377424",
+  "packet": {
+    "packet_id": "20260602T172121Z_d4d2377424",
+    "created_at": "2026-06-02T17:21:21Z",
+    "headline_seed": "Kesän tulo näkyy lisääntyvinä ukkosina ja helteinä",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/20b15afa-50d5-4a81-947b-9e36664ff5a8",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/uutiset/20b15afa-50d5-4a81-947b-9e36664ff5a8"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kesän tulo näkyy lisääntyvinä ukkosina ja helteinä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 193,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "Stara"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kesän tulo näkyy lisääntyvinä ukkosina ja helteinä",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kesän tulo näkyy lisääntyvinä ukkosina ja helteinä",
+    "description": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/20b15afa-50d5-4a81-947b-9e36664ff5a8",
+    "published": "2026-06-02T16:45:00+00:00",
+    "source": "Maaseudun Tulevaisuus",
+    "source_domain": "maaseuduntulevaisuus.fi",
+    "language": "fi",
+    "fingerprint": "b42add0009a41782db516bd652ea3e59",
+    "_url_hash": "84fbe9926adf64b480a15f518498fc475a3d3bd221043009b4d70746bab715d6",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Stara]\nHuhtikuu on hädin tuskin ehtinyt vielä alkaa, mutta kesän säästä on saatu jo ensimmäinen pitkän jakson ennuste. Sen perusteella Suomen kesä saattaa olla pääosin lämmin.\n\nEuroopan keskipitkien sääennusteiden keskuksen ECMWF:n tuore vuodenaikaennuste ulottuu toukokuusta heinäkuulle.\n\nEnnusteen perusteella jakso on Suomessa ja laajemmin Euroopassa 0,5-2 astetta keskimääräistä lämpimämpi, kertoo Foreca.\n\nEnnuste voi toteutua monella tavalla. Sää saattaa olla tasaisen lämmintä, tai lämmin poikkeama voi johtua esimerkiksi voimakkaista hellejaksoista.\n\nEnnuste ei myöskään sulje pois kylmien jaksojen mahdollisuutta. Ne kuuluvat sään normaaliin vaihteluun pohjoisessa Euroopassa. Kesän sademäärä on ennusteen mukaan tavanomainen tai tavanomaista suurempi.\n\nSadetta on kuitenkin haastavaa ennustaa pitkällä aikavälillä, eikä sateinenkaan sää välttämättä tarkoita jatkuvia pilvisiä ja harmaita päiviä. Ennusteen mukaan sateiset säät painottuisivat maan pohjoisosaan.\n\nSuomeen kesäksi ennustettuun lämpöön ja sateisiin voi vaikuttaa osittain meriveden lämpö. Pohjanmeren, Norjanmeren ja Pohjoisen jäämeren pintalämpötila on ollut huhtikuun alussa ajankohdan keskiarvoa korkeampi, mikä voi vaikuttaa Suomen ja muiden pohjoismaiden säähän vielä kesällä.\n\nTerminen kesä alkaa Suomen etelä- ja keskiosassa keskimäärin toukokuun lopulla ja Lapissa kesäkuun loppupuolella. Termisen kesän katsotaan alkaneen, kun vuorokauden keskilämpötila nousee pysyvämmin yli 10 asteeseen.\n\nVoit lukea lisää juuri tähän artikkeliin liittyvistä teemoista ja aiheista, kuten kesä tai laajemmin samasta aihealueesta Uutiset -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T17:23:15.572045+00:00",
+  "failure": "Lähdeaineisto puuttuu käytännössä kokonaan, eikä yksittäinen otsikkomainen väite riitä vähintään 250 sanan julkaistavaan uutiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T172121Z_d4d2377424\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu käytännössä kokonaan, eikä yksittäinen otsikkomainen väite riitä vähintään 250 sanan julkaistavaan uutiseen ilman keksittyjä tietoja.\"}"
+}
