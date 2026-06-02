@@ -1,0 +1,226 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-01T23:51:22.285712+00:00",
+  "digest": "804f4a9fdc",
+  "packet": {
+    "packet_id": "20260601T235122Z_804f4a9fdc",
+    "created_at": "2026-06-01T23:51:22Z",
+    "headline_seed": "The math of choosing a restaurant meal is revealed in Richard Feynman’s notes",
+    "description_seed": "Physicist Richard Feynman turned a lunch dilemma into a math problem. Researchers finally cracked his notes and found people approximate his solution on their own.",
+    "link": "https://www.sciencenews.org/article/math-restaurant-meal-feynman",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News",
+      "The Guardian",
+      "The Guardian"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/math-restaurant-meal-feynman"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "The math of choosing a restaurant meal is revealed in Richard Feynman’s notes"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "Physicist Richard Feynman turned a lunch dilemma into a math problem. Researchers finally cracked his notes and found people approximate his solution on their own.",
+        "word_count": 25,
+        "keyword_overlap": 18,
+        "strong_overlap": 12
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "A famed physicist’s scribbles reveal the answer to a quintessential dilemma: When dining out, is it better to stick with an old favorite, or try something new? Nobel Prize–winning physicist Richard Feynman, known for his love of problem-solving, pondered this question with a lunch companion in the 1970s. Feynman turned this into a math problem and solved it on the spot — in his inscrutable handwriting.Feynman, who died in 1988, never formally published his solution. It remained undeciphered until a team of researchers recognized, in Feynman’s scrawl, a solution to a class of mathematical questions known as stopping problems. That allowed them to make sense of the scribbles. Feynman — living up to his reputation — found the optimal solution, computational cognitive scientist Brian Christian and colleagues report in the June 2 Proceedings of the National Academy of Sciences. ---",
+        "word_count": 140,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Late physicist turned issue of when to stop searching for a better place to eat into mathematical problem When it comes to exploring a new city, it can be tricky to know when to stop searching for a different restaurant to try every night, or to visit the first place you love on repeat. Now researchers have found that the late physicist and Nobel laureate Richard Feynman devised a mathematical equation that can tackle the conundrum – at least when the range of options is known – and they believe the approach is similar to tactics people use intuitively.",
+        "word_count": 99,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Writing in the Proceedings of the National Academy of Sciences, researchers describe how Feynman’s interest was sparked by a lunch with his friend Ralph Leighton at a Thai restaurant in California in the 1970s. Leighton, the researchers note, was debating whether to stick with his favourite meal of ginger chicken or try a new dish. Feynman turned the issue into a mathematical problem, but his work remained concealed in handwritten notes. “The notes remained inscrutable for decades, until we managed to decipher them and reconstruct Feynman’s original problem and solution,” the team wrote. Rather than focusing on which dish to choose, using Feynman’s solution, the researchers reframed the conundrum in terms of choosing which restaurant to dine at when visiting a city for a certain number of nights.",
+        "word_count": 128,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Physicist Richard Feynman turned a lunch dilemma into a math problem. Researchers finally cracked his notes and found people approximate his solution on their own.\n\nA famed physicist’s scribbles reveal the answer to a quintessential dilemma: When dining out, is it better to stick with an old favorite, or try something new? Nobel Prize–winning physicist Richard Feynman, known for his love of problem-solving, pondered this question with a lunch companion in the 1970s. Feynman turned this into a math problem and solved it on the spot — in his inscrutable handwriting.Feynman, who died in 1988, never formally published his solution. It remained undeciphered until a team of researchers recognized, in Feynman’s scrawl, a solution to a class of mathematical questions known as stopping problems. That allowed them to make sense of the scribbles. Feynman — living up to his reputation — found the optimal solution, computational cognitive scientist Brian Christian and colleagues report in the June 2 Proceedings of the National Academy of Sciences. ---\n\nLate physicist turned issue of when to stop searching for a better place to eat into mathematical problem When it comes to exploring a new city, it can be tricky to know when to stop searching for a different restaurant to try every night, or to visit the first place you love on repeat. Now researchers have found that the late physicist and Nobel laureate Richard Feynman devised a mathematical equation that can tackle the conundrum – at least when the range of options is known – and they believe the approach is similar to tactics people use intuitively.\n\nWriting in the Proceedings of the National Academy of Sciences, researchers describe how Feynman’s interest was sparked by a lunch with his friend Ralph Leighton at a Thai restaurant in California in the 1970s. Leighton, the researchers note, was debating whether to stick with his favourite meal of ginger chicken or try a new dish. Feynman turned the issue into a mathematical problem, but his work remained concealed in handwritten notes. “The notes remained inscrutable for decades, until we managed to decipher them and reconstruct Feynman’s original problem and solution,” the team wrote. Rather than focusing on which dish to choose, using Feynman’s solution, the researchers reframed the conundrum in terms of choosing which restaurant to dine at when visiting a city for a certain number of nights.",
+    "source_diagnostics": {
+      "candidate_blocks": 6,
+      "candidate_source_words": 587,
+      "selected_blocks": 4,
+      "selected_source_words": 392,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News",
+        "The Guardian",
+        "The Guardian"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "The math of choosing a restaurant meal is revealed in Richard Feynman’s notes",
+      "description": "Physicist Richard Feynman turned a lunch dilemma into a math problem. Researchers finally cracked his notes and found people approximate his solution on their own.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "The math of choosing a restaurant meal is revealed in Richard Feynman’s notes",
+    "description": "Physicist Richard Feynman turned a lunch dilemma into a math problem. Researchers finally cracked his notes and found people approximate his solution on their own.",
+    "link": "https://www.sciencenews.org/article/math-restaurant-meal-feynman",
+    "published": "2026-06-01T19:00:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "32ee26020dbbcda0c2d2c78c9b733591",
+    "_url_hash": "b67720463cee5d0496bcbd7b96bcf90c1b91cd438371c2151addd105499bdfe8",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nA famed physicist’s scribbles reveal the answer to a quintessential dilemma: When dining out, is it better to stick with an old favorite, or try something new?\n\nNobel Prize–winning physicist Richard Feynman, known for his love of problem-solving, pondered this question with a lunch companion in the 1970s. Feynman turned this into a math problem and solved it on the spot — in his inscrutable handwriting.Feynman, who died in 1988, never formally published his solution. It remained undeciphered until a team of researchers recognized, in Feynman’s scrawl, a solution to a class of mathematical questions known as stopping problems. That allowed them to make sense of the scribbles. Feynman — living up to his reputation — found the optimal solution, computational cognitive scientist Brian Christian and colleagues report in the June 2 Proceedings of the National Academy of Sciences.\n\n---\n\n[Lähde: The Guardian]\nLate physicist turned issue of when to stop searching for a better place to eat into mathematical problem\n\nWhen it comes to exploring a new city, it can be tricky to know when to stop searching for a different restaurant to try every night, or to visit the first place you love on repeat.\n\nNow researchers have found that the late physicist and Nobel laureate Richard Feynman devised a mathematical equation that can tackle the conundrum – at least when the range of options is known – and they believe the approach is similar to tactics people use intuitively.\n\n“The essence of the problem is that the value of exploring, of looking around and trying something new, decreases the opportunities you’re going to have to make use of that information,” said Prof Tom Griffiths of Princeton University, a co-author of the study.\n\nThe team note the dilemma is a form of “stopping problem” – a situation where it is necessary to decide when to stop one action and start another.\n\nGriffiths noted the restaurant problem has specific features – including the chance to go back to a venue.\n\nWriting in the Proceedings of the National Academy of Sciences, researchers describe how Feynman’s interest was sparked by a lunch with his friend Ralph Leighton at a Thai restaurant in California in the 1970s. Leighton, the researchers note, was debating whether to stick with his favourite meal of ginger chicken or try a new dish.\n\nFeynman turned the issue into a mathematical problem, but his work remained concealed in handwritten notes.\n\n“The notes remained inscrutable for decades, until we managed to decipher them and reconstruct Feynman’s original problem and solution,” the team wrote.\n\nRather than focusing on which dish to choose, using Feynman’s solution, the researchers reframed the conundrum in terms of choosing which restaurant to dine at when visiting a city for a certain number of nights.\n\nAccording to Feynman’s approach, in this context, people should try a different restaurant each night until they find one that exceeds a particular threshold that reflects a desired quality.\n\nIn Feynman’s equations this threshold is not fixed. Instead it declines more and more rapidly as the number of days left in the city reduces. In other words, as the days go by there is increasingly less motivation to hunt for an amazing dining spot, because the time you will have to enjoy it has decreased.\n\n“The thresholds are being guided by the best thing you might be able to find if you kept looking,” said G",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-01T23:53:35.620342+00:00",
+  "payload": {
+    "packet_id": "20260601T235122Z_804f4a9fdc",
+    "title": "Richard Feynmanin muistiinpanot paljastivat ravintolavalinnan matematiikkaa",
+    "summary": "Tutkijat ovat tulkinneet Richard Feynmanin vuosikymmeniä epäselvinä säilyneet muistiinpanot, joissa fyysikko muotoili ravintolavalinnan pysäytysongelmaksi. Ratkaisu liittyy siihen, milloin uuden vaihtoehdon etsiminen kannattaa lopettaa.",
+    "content": "Nobel-palkittu fyysikko Richard Feynman muutti 1970-luvulla arkisen lounaspulman matemaattiseksi ongelmaksi: kannattaako pitäytyä tutussa suosikissa vai kokeilla jotakin uutta. Nyt tutkijat ovat tulkinneet hänen pitkään vaikeaselkoisina säilyneet käsinkirjoitetut muistiinpanonsa ja yhdistäneet ne pysäytysongelmien matematiikkaan.\n\n## Lounasvalinnasta tutkimuskohteeksi\n\nFeynmanin kiinnostus sai alkunsa lounaalla hänen ystävänsä Ralph Leightonin kanssa thaimaalaisessa ravintolassa Kaliforniassa 1970-luvulla. Leighton pohti, valitsisiko jälleen suosikkiannoksensa vai kokeilisiko uutta ruokaa. Feynman käsitteli kysymystä matemaattisena valintatilanteena ja ratkaisi sen muistiinpanoihinsa.\n\nMuistiinpanot jäivät kuitenkin vuosikymmeniksi käytännössä hyödyntämättä, koska Feynman ei julkaissut ratkaisuaan virallisesti ja hänen käsialansa oli vaikeasti tulkittavaa. Feynman kuoli vuonna 1988, mutta hänen pohdintansa säilyi aineistona, jonka merkitys avautui vasta myöhemmin tutkijoille.\n\nTutkijaryhmä tunnisti muistiinpanoista ratkaisun ongelmaluokkaan, jota kutsutaan pysäytysongelmiksi. Niissä etsitään parasta hetkeä lopettaa vaihtoehtojen tutkiminen ja tehdä valinta. Sama asetelma voi näkyä esimerkiksi tilanteessa, jossa matkailija pohtii, kuinka kauan uudessa kaupungissa kannattaa etsiä uusia ravintoloita ennen kuin palaa jo hyväksi havaittuun paikkaan.\n\n## Ihmiset näyttävät lähestyvän samaa logiikkaa\n\nTutkijoiden mukaan Feynmanin ratkaisu oli optimaalinen tilanteessa, jossa vaihtoehtojen määrä tunnetaan. Heidän työnsä julkaistaan Proceedings of the National Academy of Sciences -tiedejulkaisun kesäkuun 2. päivän numerossa. Tutkimuksessa mukana ollut laskennallinen kognitiotieteilijä Brian Christian kollegoineen raportoi, että ihmiset näyttävät arjessa lähestyvän samankaltaista ratkaisua intuitiivisesti.\n\nAlkuperäinen kysymys koski annoksen valintaa, mutta tutkijat muotoilivat sen laajemmin ravintolan valinnaksi usean illan aikana. Tällöin ongelma ei ole vain makuasia, vaan myös päätös siitä, milloin uuden etsiminen ei enää todennäköisesti paranna lopputulosta.\n\nHavainto tekee Feynmanin muistiinpanoista kiinnostavan esimerkin siitä, miten arkinen pulma voi paljastaa yleisemmän matemaattisen rakenteen. Se myös korostaa, että ihmiset voivat käyttää monimutkaisia päätössääntöjä likimääräisesti ilman, että he osaavat pukea niitä yhtälöiksi.",
+    "category": "Tiede",
+    "tags": [
+      "Richard Feynman",
+      "matematiikka",
+      "päätöksenteko",
+      "pysäytysongelmat",
+      "tutkimus"
+    ],
+    "summary_bullets": [
+      "Richard Feynman muotoili 1970-luvulla lounasvalinnan matemaattiseksi ongelmaksi.",
+      "Tutkijat ovat tulkinneet hänen aiemmin vaikeaselkoiset muistiinpanonsa pysäytysongelman ratkaisuksi.",
+      "Ratkaisu liittyy siihen, milloin uusien vaihtoehtojen etsiminen kannattaa lopettaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin; mukana vain lähteissä tuetut tiedot Feynmanin muistiinpanoista, ravintolavalinnan mallinnuksesta ja PNAS-julkaisusta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260601T235122Z_804f4a9fdc\",\"title\":\"Richard Feynmanin muistiinpanot paljastivat ravintolavalinnan matematiikkaa\",\"summary\":\"Tutkijat ovat tulkinneet Richard Feynmanin vuosikymmeniä epäselvinä säilyneet muistiinpanot, joissa fyysikko muotoili ravintolavalinnan pysäytysongelmaksi. Ratkaisu liittyy siihen, milloin uuden vaihtoehdon etsiminen kannattaa lopettaa.\",\"content\":\"Nobel-palkittu fyysikko Richard Feynman muutti 1970-luvulla arkisen lounaspulman matemaattiseksi ongelmaksi: kannattaako pitäytyä tutussa suosikissa vai kokeilla jotakin uutta. Nyt tutkijat ovat tulkinneet hänen pitkään vaikeaselkoisina säilyneet käsinkirjoitetut muistiinpanonsa ja yhdistäneet ne pysäytysongelmien matematiikkaan.\\n\\n## Lounasvalinnasta tutkimuskohteeksi\\n\\nFeynmanin kiinnostus sai alkunsa lounaalla hänen ystävänsä Ralph Leightonin kanssa thaimaalaisessa ravintolassa Kaliforniassa 1970-luvulla. Leighton pohti, valitsisiko jälleen suosikkiannoksensa vai kokeilisiko uutta ruokaa. Feynman käsitteli kysymystä matemaattisena valintatilanteena ja ratkaisi sen muistiinpanoihinsa.\\n\\nMuistiinpanot jäivät kuitenkin vuosikymmeniksi käytännössä hyödyntämättä, koska Feynman ei julkaissut ratkaisuaan virallisesti ja hänen käsialansa oli vaikeasti tulkittavaa. Feynman kuoli vuonna 1988, mutta hänen pohdintansa säilyi aineistona, jonka merkitys avautui vasta myöhemmin tutkijoille.\\n\\nTutkijaryhmä tunnisti muistiinpanoista ratkaisun ongelmaluokkaan, jota kutsutaan pysäytysongelmiksi. Niissä etsitään parasta hetkeä lopettaa vaihtoehtojen tutkiminen ja tehdä valinta. Sama asetelma voi näkyä esimerkiksi tilanteessa, jossa matkailija pohtii, kuinka kauan uudessa kaupungissa kannattaa etsiä uusia ravintoloita ennen kuin palaa jo hyväksi havaittuun paikkaan.\\n\\n## Ihmiset näyttävät lähestyvän samaa logiikkaa\\n\\nTutkijoiden mukaan Feynmanin ratkaisu oli optimaalinen tilanteessa, jossa vaihtoehtojen määrä tunnetaan. Heidän työnsä julkaistaan Proceedings of the National Academy of Sciences -tiedejulkaisun kesäkuun 2. päivän numerossa. Tutkimuksessa mukana ollut laskennallinen kognitiotieteilijä Brian Christian kollegoineen raportoi, että ihmiset näyttävät arjessa lähestyvän samankaltaista ratkaisua intuitiivisesti.\\n\\nAlkuperäinen kysymys koski annoksen valintaa, mutta tutkijat muotoilivat sen laajemmin ravintolan valinnaksi usean illan aikana. Tällöin ongelma ei ole vain makuasia, vaan myös päätös siitä, milloin uuden etsiminen ei enää todennäköisesti paranna lopputulosta.\\n\\nHavainto tekee Feynmanin muistiinpanoista kiinnostavan esimerkin siitä, miten arkinen pulma voi paljastaa yleisemmän matemaattisen rakenteen. Se myös korostaa, että ihmiset voivat käyttää monimutkaisia päätössääntöjä likimääräisesti ilman, että he osaavat pukea niitä yhtälöiksi.\",\"category\":\"Tiede\",\"tags\":[\"Richard Feynman\",\"matematiikka\",\"päätöksenteko\",\"pysäytysongelmat\",\"tutkimus\"],\"summary_bullets\":[\"Richard Feynman muotoili 1970-luvulla lounasvalinnan matemaattiseksi ongelmaksi.\",\"Tutkijat ovat tulkinneet hänen aiemmin vaikeaselkoiset muistiinpanonsa pysäytysongelman ratkaisuksi.\",\"Ratkaisu liittyy siihen, milloin uusien vaihtoehtojen etsiminen kannattaa lopettaa.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.98,\"journalist_note\":\"Artikkeli perustuu annettuun lähdepakettiin; mukana vain lähteissä tuetut tiedot Feynmanin muistiinpanoista, ravintolavalinnan mallinnuksesta ja PNAS-julkaisusta.\"}",
+  "article": {
+    "title": "Richard Feynmanin muistiinpanot paljastivat ravintolavalinnan matematiikkaa",
+    "description": "Tutkijat ovat tulkinneet Richard Feynmanin vuosikymmeniä epäselvinä säilyneet muistiinpanot, joissa fyysikko muotoili ravintolavalinnan pysäytysongelmaksi. Ratkaisu liittyy siihen, milloin uuden vaihtoehdon etsiminen kannattaa lopettaa.",
+    "link": "https://www.sciencenews.org/article/math-restaurant-meal-feynman",
+    "published": "2026-06-01T19:00:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "32ee26020dbbcda0c2d2c78c9b733591",
+    "_url_hash": "b67720463cee5d0496bcbd7b96bcf90c1b91cd438371c2151addd105499bdfe8",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nA famed physicist’s scribbles reveal the answer to a quintessential dilemma: When dining out, is it better to stick with an old favorite, or try something new?\n\nNobel Prize–winning physicist Richard Feynman, known for his love of problem-solving, pondered this question with a lunch companion in the 1970s. Feynman turned this into a math problem and solved it on the spot — in his inscrutable handwriting.Feynman, who died in 1988, never formally published his solution. It remained undeciphered until a team of researchers recognized, in Feynman’s scrawl, a solution to a class of mathematical questions known as stopping problems. That allowed them to make sense of the scribbles. Feynman — living up to his reputation — found the optimal solution, computational cognitive scientist Brian Christian and colleagues report in the June 2 Proceedings of the National Academy of Sciences.\n\n---\n\n[Lähde: The Guardian]\nLate physicist turned issue of when to stop searching for a better place to eat into mathematical problem\n\nWhen it comes to exploring a new city, it can be tricky to know when to stop searching for a different restaurant to try every night, or to visit the first place you love on repeat.\n\nNow researchers have found that the late physicist and Nobel laureate Richard Feynman devised a mathematical equation that can tackle the conundrum – at least when the range of options is known – and they believe the approach is similar to tactics people use intuitively.\n\n“The essence of the problem is that the value of exploring, of looking around and trying something new, decreases the opportunities you’re going to have to make use of that information,” said Prof Tom Griffiths of Princeton University, a co-author of the study.\n\nThe team note the dilemma is a form of “stopping problem” – a situation where it is necessary to decide when to stop one action and start another.\n\nGriffiths noted the restaurant problem has specific features – including the chance to go back to a venue.\n\nWriting in the Proceedings of the National Academy of Sciences, researchers describe how Feynman’s interest was sparked by a lunch with his friend Ralph Leighton at a Thai restaurant in California in the 1970s. Leighton, the researchers note, was debating whether to stick with his favourite meal of ginger chicken or try a new dish.\n\nFeynman turned the issue into a mathematical problem, but his work remained concealed in handwritten notes.\n\n“The notes remained inscrutable for decades, until we managed to decipher them and reconstruct Feynman’s original problem and solution,” the team wrote.\n\nRather than focusing on which dish to choose, using Feynman’s solution, the researchers reframed the conundrum in terms of choosing which restaurant to dine at when visiting a city for a certain number of nights.\n\nAccording to Feynman’s approach, in this context, people should try a different restaurant each night until they find one that exceeds a particular threshold that reflects a desired quality.\n\nIn Feynman’s equations this threshold is not fixed. Instead it declines more and more rapidly as the number of days left in the city reduces. In other words, as the days go by there is increasingly less motivation to hunt for an amazing dining spot, because the time you will have to enjoy it has decreased.\n\n“The thresholds are being guided by the best thing you might be able to find if you kept looking,” said G",
+    "research_source": "multi",
+    "summary": "Tutkijat ovat tulkinneet Richard Feynmanin vuosikymmeniä epäselvinä säilyneet muistiinpanot, joissa fyysikko muotoili ravintolavalinnan pysäytysongelmaksi. Ratkaisu liittyy siihen, milloin uuden vaihtoehdon etsiminen kannattaa lopettaa.",
+    "content": "Nobel-palkittu fyysikko Richard Feynman muutti 1970-luvulla arkisen lounaspulman matemaattiseksi ongelmaksi: kannattaako pitäytyä tutussa suosikissa vai kokeilla jotakin uutta. Nyt tutkijat ovat tulkinneet hänen pitkään vaikeaselkoisina säilyneet käsinkirjoitetut muistiinpanonsa ja yhdistäneet ne pysäytysongelmien matematiikkaan.\n\n## Lounasvalinnasta tutkimuskohteeksi\n\nFeynmanin kiinnostus sai alkunsa lounaalla hänen ystävänsä Ralph Leightonin kanssa thaimaalaisessa ravintolassa Kaliforniassa 1970-luvulla. Leighton pohti, valitsisiko jälleen suosikkiannoksensa vai kokeilisiko uutta ruokaa. Feynman käsitteli kysymystä matemaattisena valintatilanteena ja ratkaisi sen muistiinpanoihinsa.\n\nMuistiinpanot jäivät kuitenkin vuosikymmeniksi käytännössä hyödyntämättä, koska Feynman ei julkaissut ratkaisuaan virallisesti ja hänen käsialansa oli vaikeasti tulkittavaa. Feynman kuoli vuonna 1988, mutta hänen pohdintansa säilyi aineistona, jonka merkitys avautui vasta myöhemmin tutkijoille.\n\nTutkijaryhmä tunnisti muistiinpanoista ratkaisun ongelmaluokkaan, jota kutsutaan pysäytysongelmiksi. Niissä etsitään parasta hetkeä lopettaa vaihtoehtojen tutkiminen ja tehdä valinta. Sama asetelma voi näkyä esimerkiksi tilanteessa, jossa matkailija pohtii, kuinka kauan uudessa kaupungissa kannattaa etsiä uusia ravintoloita ennen kuin palaa jo hyväksi havaittuun paikkaan.\n\n## Ihmiset näyttävät lähestyvän samaa logiikkaa\n\nTutkijoiden mukaan Feynmanin ratkaisu oli optimaalinen tilanteessa, jossa vaihtoehtojen määrä tunnetaan. Heidän työnsä julkaistaan Proceedings of the National Academy of Sciences -tiedejulkaisun kesäkuun 2. päivän numerossa. Tutkimuksessa mukana ollut laskennallinen kognitiotieteilijä Brian Christian kollegoineen raportoi, että ihmiset näyttävät arjessa lähestyvän samankaltaista ratkaisua intuitiivisesti.\n\nAlkuperäinen kysymys koski annoksen valintaa, mutta tutkijat muotoilivat sen laajemmin ravintolan valinnaksi usean illan aikana. Tällöin ongelma ei ole vain makuasia, vaan myös päätös siitä, milloin uuden etsiminen ei enää todennäköisesti paranna lopputulosta.\n\nHavainto tekee Feynmanin muistiinpanoista kiinnostavan esimerkin siitä, miten arkinen pulma voi paljastaa yleisemmän matemaattisen rakenteen. Se myös korostaa, että ihmiset voivat käyttää monimutkaisia päätössääntöjä likimääräisesti ilman, että he osaavat pukea niitä yhtälöiksi.",
+    "category": "Tiede",
+    "tags": [
+      "richard feynman",
+      "matematiikka",
+      "päätöksenteko",
+      "pysäytysongelmat",
+      "tutkimus"
+    ],
+    "summary_bullets": [
+      "Richard Feynman muotoili 1970-luvulla lounasvalinnan matemaattiseksi ongelmaksi.",
+      "Tutkijat ovat tulkinneet hänen aiemmin vaikeaselkoiset muistiinpanonsa pysäytysongelman ratkaisuksi.",
+      "Ratkaisu liittyy siihen, milloin uusien vaihtoehtojen etsiminen kannattaa lopettaa."
+    ],
+    "key_points": [
+      "Richard Feynman muotoili 1970-luvulla lounasvalinnan matemaattiseksi ongelmaksi.",
+      "Tutkijat ovat tulkinneet hänen aiemmin vaikeaselkoiset muistiinpanonsa pysäytysongelman ratkaisuksi.",
+      "Ratkaisu liittyy siihen, milloin uusien vaihtoehtojen etsiminen kannattaa lopettaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin; mukana vain lähteissä tuetut tiedot Feynmanin muistiinpanoista, ravintolavalinnan mallinnuksesta ja PNAS-julkaisusta.",
+    "source_text": "Physicist Richard Feynman turned a lunch dilemma into a math problem. Researchers finally cracked his notes and found people approximate his solution on their own.\n\nA famed physicist’s scribbles reveal the answer to a quintessential dilemma: When dining out, is it better to stick with an old favorite, or try something new? Nobel Prize–winning physicist Richard Feynman, known for his love of problem-solving, pondered this question with a lunch companion in the 1970s. Feynman turned this into a math problem and solved it on the spot — in his inscrutable handwriting.Feynman, who died in 1988, never formally published his solution. It remained undeciphered until a team of researchers recognized, in Feynman’s scrawl, a solution to a class of mathematical questions known as stopping problems. That allowed them to make sense of the scribbles. Feynman — living up to his reputation — found the optimal solution, computational cognitive scientist Brian Christian and colleagues report in the June 2 Proceedings of the National Academy of Sciences. ---\n\nLate physicist turned issue of when to stop searching for a better place to eat into mathematical problem When it comes to exploring a new city, it can be tricky to know when to stop searching for a different restaurant to try every night, or to visit the first place you love on repeat. Now researchers have found that the late physicist and Nobel laureate Richard Feynman devised a mathematical equation that can tackle the conundrum – at least when the range of options is known – and they believe the approach is similar to tactics people use intuitively.\n\nWriting in the Proceedings of the National Academy of Sciences, researchers describe how Feynman’s interest was sparked by a lunch with his friend Ralph Leighton at a Thai restaurant in California in the 1970s. Leighton, the researchers note, was debating whether to stick with his favourite meal of ginger chicken or try a new dish. Feynman turned the issue into a mathematical problem, but his work remained concealed in handwritten notes. “The notes remained inscrutable for decades, until we managed to decipher them and reconstruct Feynman’s original problem and solution,” the team wrote. Rather than focusing on which dish to choose, using Feynman’s solution, the researchers reframed the conundrum in terms of choosing which restaurant to dine at when visiting a city for a certain number of nights.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260601T235122Z_804f4a9fdc"
+  },
+  "quality_gate_rejected_at": "2026-06-01T23:58:01.674960+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260601T235122Z_804f4a9fdc",
+    "category": "Tiede",
+    "selected_source_words": 392,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 7.96,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (257 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number in title/lead: 1970",
+      "unsourced_numbers: 1970"
+    ],
+    "hard_fails": [
+      "central unsourced number in title/lead: 1970"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 1970"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 257,
+    "title": "Richard Feynmanin muistiinpanot paljastivat ravintolavalinnan matematiikkaa"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (257 words); missing: image; unsourced numbers; central unsourced number in title/lead: 1970; unsourced_numbers: 1970"
+}
