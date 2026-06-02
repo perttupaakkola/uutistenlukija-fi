@@ -1,19 +1,19 @@
 {
   "analytics": {
     "freshness": {
-      "age_minutes": 286.5,
+      "age_minutes": 28.6,
       "blocked_by": null,
-      "checked_at": "2026-06-01T18:15:04+00:00",
+      "checked_at": "2026-06-02T06:15:05+00:00",
       "daily_report": {
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 2,
+          "daily_pageview_rows": 1,
           "search_console_top_queries": 10,
           "top_pages_7d": 10,
-          "traffic_sources_7d": 5
+          "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-06-01T18:15:04+00:00",
+        "evidence_at": "2026-06-02T06:15:05+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
@@ -25,7 +25,7 @@
         "superseded_by_fresh_validation": false
       },
       "search_console": {
-        "age_hours": 10.77,
+        "age_hours": 22.77,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
         "evidence_at": "2026-06-01T07:29:06+00:00",
@@ -42,18 +42,18 @@
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 2,
+          "daily_pageview_rows": 1,
           "search_console_top_queries": 10,
           "top_pages_7d": 10,
-          "traffic_sources_7d": 5
+          "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-06-01T18:15:04+00:00",
+        "evidence_at": "2026-06-02T06:15:05+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
       },
       "daily_traffic_log": {
-        "age_minutes": 961.5,
+        "age_minutes": 1423.6,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -61,7 +61,7 @@
       "reason": "fresh GA4 validation artifact present",
       "status": "fresh",
       "weekly_metrics_log": {
-        "age_minutes": 961.5,
+        "age_minutes": 1423.6,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -69,21 +69,21 @@
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 901.5,
+        "age_minutes": 1363.7,
         "data_source": "google_search_console",
         "generated_at": "2026-06-01T08:00:01.476207Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 2
       },
       "fetch_log": {
-        "age_minutes": 991.5,
+        "age_minutes": 13.7,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
       },
       "reason": "fresh Search Console validation artifact present",
       "search_console_report": {
-        "age_hours": 10.77,
+        "age_hours": 22.77,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
         "evidence_at": "2026-06-01T07:29:06+00:00",
@@ -97,31 +97,31 @@
   },
   "category_drift": {
     "alerts": [
-      "Kotimaa: 30.9% (+5.9% over target 25%)",
+      "Kotimaa: 30.7% (+5.7% over target 25%)",
       "Talous: 10.1% (-9.9% under target 20%)",
-      "Ulkomaat: 27.5% (+7.5% over target 20%)"
+      "Ulkomaat: 27.4% (+7.4% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 815,
-        "delta": 5.9,
-        "pct": 30.9,
+        "count": 823,
+        "delta": 5.7,
+        "pct": 30.7,
         "status": "over",
         "target_pct": 25
       },
       {
         "category": "Kulttuuri",
         "count": 68,
-        "delta": -4.4,
-        "pct": 2.6,
+        "delta": -4.5,
+        "pct": 2.5,
         "status": "ok",
         "target_pct": 7
       },
       {
         "category": "Talous",
-        "count": 266,
+        "count": 271,
         "delta": -9.9,
         "pct": 10.1,
         "status": "under",
@@ -129,15 +129,15 @@
       },
       {
         "category": "Teknologia",
-        "count": 377,
-        "delta": -0.7,
-        "pct": 14.3,
+        "count": 393,
+        "delta": -0.3,
+        "pct": 14.7,
         "status": "ok",
         "target_pct": 15
       },
       {
         "category": "Tiede",
-        "count": 175,
+        "count": 176,
         "delta": 3.6,
         "pct": 6.6,
         "status": "ok",
@@ -145,35 +145,35 @@
       },
       {
         "category": "Ulkomaat",
-        "count": 725,
-        "delta": 7.5,
-        "pct": 27.5,
+        "count": 733,
+        "delta": 7.4,
+        "pct": 27.4,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
-        "count": 211,
+        "count": 213,
         "delta": -2.0,
         "pct": 8.0,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-06-01T07:30:01.523157+00:00",
+    "generated_at": "2026-06-02T06:43:41.825575+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 2637
+    "total_articles": 2677
   },
   "content": {
-    "article_count_local": 2665,
-    "last_publish_age_minutes": 3.5,
-    "last_publish_at": "2026-06-01T22:58:05.182627Z",
+    "article_count_local": 2677,
+    "last_publish_age_minutes": 45.6,
+    "last_publish_at": "2026-06-02T05:58:06.526500Z",
     "latest_article": {
-      "category": "Urheilu",
-      "slug": "2026-06-01-norjan-mm-pronssi-kertoo-myos-laajemmasta-suunnasta-nhl-lupa",
-      "title": "Norjan MM-pronssi kertoo myös laajemmasta suunnasta: NHL-lupaukset vahvistavat kiekkomaan tulevaisuutta"
+      "category": "Kotimaa",
+      "slug": "2026-06-02-oajn-aineisto-moni-alle-18-vuotias-ammattiopiskelija-saa-ope",
+      "title": "OAJ:n aineisto: Moni alle 18-vuotias ammattiopiskelija saa opetusta alle vähimmäistason"
     },
-    "published_last_24h_local": 45,
+    "published_last_24h_local": 43,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -193,7 +193,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-06-01T23:01:33.438069Z",
+  "generated_at": "2026-06-02T06:43:41.934957Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -224,28 +224,28 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 45,
+      "article_count": 43,
       "article_count_source": "content/posts frontmatter",
       "failure": 0,
       "generated_article_count": 0,
-      "published_article_count_local": 45,
+      "published_article_count_local": 43,
       "runs_total": 144,
       "skipped": 0,
       "success": 144,
       "top_error_reasons": []
     },
-    "last_run_age_minutes": 1.4,
+    "last_run_age_minutes": 3.6,
     "last_run_article_count": 0,
-    "last_run_at": "2026-06-01T23:00:08.637719Z",
+    "last_run_at": "2026-06-02T06:40:08.349528Z",
     "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-06-01T22:58:05.182627+00:00",
+        "last_published_ts": "2026-06-02T05:58:06.526500+00:00",
         "publish_rate": 0,
-        "published": 45,
-        "rejected": 4
+        "published": 43,
+        "rejected": 6
       },
       "feeds": {
         "disabled": 0,
@@ -255,16 +255,17 @@
         "stale_names": [],
         "total": 40
       },
-      "generated_at": "2026-06-01T22:58:59+00:00",
+      "generated_at": "2026-06-02T05:59:01+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "central unsourced number in ti": 4,
-        "language borderline Finnish si": 1,
+        "central unsourced number in ti": 6,
+        "language borderline Finnish si": 2,
+        "length under target (257 words": 1,
         "length under target (259 words": 2,
-        "length under target (264 words": 1,
-        "missing: image": 4,
-        "unsourced numbers": 4
+        "length under target (264 words": 2,
+        "missing: image": 6,
+        "unsourced numbers": 6
       },
       "runs": {
         "error": 0,
@@ -276,23 +277,23 @@
       "status": "ok",
       "trending": [
         [
-          "jälkeen",
-          44
-        ],
-        [
-          "iranin",
-          26
-        ],
-        [
           "mukaansa",
-          25
+          35
         ],
         [
-          "kertoo",
-          22
+          "jälkeen",
+          31
+        ],
+        [
+          "prosenttia",
+          27
         ],
         [
           "kanssa",
+          21
+        ],
+        [
+          "iranin",
           21
         ]
       ]
@@ -303,33 +304,33 @@
     "queues": {
       "monica/inbox": {
         "count": 6598,
-        "newest_item_age_minutes": 19697.9,
-        "oldest_item_age_minutes": 64178.6
+        "newest_item_age_minutes": 20160.1,
+        "oldest_item_age_minutes": 64640.7
       },
       "monica/outbox": {
         "count": 1575,
-        "newest_item_age_minutes": 22583.4,
-        "oldest_item_age_minutes": 63575.6
+        "newest_item_age_minutes": 23045.5,
+        "oldest_item_age_minutes": 64037.8
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 42322.9,
-        "oldest_item_age_minutes": 64178.6
+        "newest_item_age_minutes": 42785.1,
+        "oldest_item_age_minutes": 64640.7
       },
       "staged/failed": {
-        "count": 3755,
-        "newest_item_age_minutes": 18.3,
-        "oldest_item_age_minutes": 45074.3
+        "count": 3785,
+        "newest_item_age_minutes": 0.3,
+        "oldest_item_age_minutes": 45536.5
       },
       "staged/published": {
-        "count": 921,
-        "newest_item_age_minutes": 2.6,
-        "oldest_item_age_minutes": 44733.1
+        "count": 933,
+        "newest_item_age_minutes": 44.7,
+        "oldest_item_age_minutes": 45195.3
       },
       "staged/writing": {
         "count": 3,
-        "newest_item_age_minutes": 6710.1,
-        "oldest_item_age_minutes": 10130.2
+        "newest_item_age_minutes": 7172.3,
+        "oldest_item_age_minutes": 10592.4
       }
     },
     "source": "pipeline/queues/*.json file counts only"

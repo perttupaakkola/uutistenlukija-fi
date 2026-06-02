@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T06:41:23.648239+00:00",
+  "digest": "2a32b17734",
+  "packet": {
+    "packet_id": "20260602T064123Z_2a32b17734",
+    "created_at": "2026-06-02T06:41:23Z",
+    "headline_seed": "Törkeistä rikoksista syytetty Niko Ranta-aho teki oikeudessa paljastuksen yksityiselämästään",
+    "description_seed": "Vankilasta vapautunut Niko Ranta-aho saapuu jälleen oikeuteen. Nyt myös hänen isäänsä syytetään rikoksista.",
+    "link": "https://www.is.fi/kotimaa/art-2000012048561.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012048561.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Törkeistä rikoksista syytetty Niko Ranta-aho teki oikeudessa paljastuksen yksityiselämästään"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 182,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Törkeistä rikoksista syytetty Niko Ranta-aho teki oikeudessa paljastuksen yksityiselämästään",
+      "description": "Vankilasta vapautunut Niko Ranta-aho saapuu jälleen oikeuteen. Nyt myös hänen isäänsä syytetään rikoksista.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Törkeistä rikoksista syytetty Niko Ranta-aho teki oikeudessa paljastuksen yksityiselämästään",
+    "description": "Vankilasta vapautunut Niko Ranta-aho saapuu jälleen oikeuteen. Nyt myös hänen isäänsä syytetään rikoksista.",
+    "link": "https://www.is.fi/kotimaa/art-2000012048561.html",
+    "published": "2026-06-02T06:37:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "1c8a4f6f71517447a34621422a8b033d",
+    "_url_hash": "ad426ad397fab14c80e9fd3a3144f4a4454e87e1aacc5173013167024a7647f3",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSyyttäjä vaatii vankeusrangaistuksia kahdelle törkeistä huumausainerikoksista epäillylle henkilölle. Rikosten epäillään tapahtuneen Imatralla vuoden 2024 keväällä.\n\nSyytteitä käsiteltiin tänään keskiviikkona Etelä-Karjalan käräjäoikeudessa Lappeenrannassa.\n\nAluesyyttäjä Kirsi Maria Kursin mukaan epäillyt ovat hankkineet yhteensä 300 grammaa amfetamiinia, jonka he ovat keskenään sopimallaan tavalla jakaneet puoliksi.\n\nTämän jälkeen kaksikon epäillään levittäneen tai yrittäneen levittää huumeita eteenpäin. Huumeiden kauppapaikkana toimi toisen syytetyn ylläpitämä ryhmä viestipalvelu Telegramissa, johon huumeiden myyjät ja ostajat ovat voineet jättää oman myynti- ja ostoilmoituksensa.\n\nToisen syytetyistä epäillään pitäneen hallussaan ja yrittäneen myydä eteenpäin myös kokaiinia.\n\nSyyttäjä toteaa haastehakemuksessa, että rikoksen kohteena on ollut suuri määrä erittäin vaarallista huumausainetta. Hän mainitse huumekauppojen asiakkaiden lukumäärää, mutta kuvaa amfetamiinin määrää niin isoksi, että siitä oli mahdollista levittää huumaustainetta suurelle määrälle ihmisiä.\n\nRikoskokonaisuudessa on epäiltynä myös kolmas henkilö. Hänen ei katsota osallistuneen huumeiden hankkimiseen tai levittämiseen, mutta hän on syytettynä avunannosta rikokseen.\n\nHaastehakemuksen mukaan kolmas henkilö oli lähtenyt mukaan kohtauspaikalle, jossa toinen amfetamiinin myynnistä syytetty aikoi tavata huumeiden ostajan. Kolmas syytetty oli pyydetty mukaan antamaan myyjälle henkistä tukea ja turvaa. Tilanne keskeytyi poliisin väliintuloon.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T06:43:22.159933+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä eikä riittävästi varmistettuja yksityiskohtia vähintään 250 sanan uutisartikkeliin ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T064123Z_2a32b17734\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä eikä riittävästi varmistettuja yksityiskohtia vähintään 250 sanan uutisartikkeliin ilman keksittyjä tietoja.\"}"
+}
