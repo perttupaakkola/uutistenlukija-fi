@@ -1,19 +1,19 @@
 {
   "analytics": {
     "freshness": {
-      "age_minutes": 28.6,
+      "age_minutes": 158.6,
       "blocked_by": null,
-      "checked_at": "2026-06-02T06:15:05+00:00",
+      "checked_at": "2026-06-02T12:15:04+00:00",
       "daily_report": {
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 1,
+          "daily_pageview_rows": 2,
           "search_console_top_queries": 10,
           "top_pages_7d": 10,
           "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-06-02T06:15:05+00:00",
+        "evidence_at": "2026-06-02T12:15:04+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
@@ -25,10 +25,10 @@
         "superseded_by_fresh_validation": false
       },
       "search_console": {
-        "age_hours": 22.77,
+        "age_hours": 5.75,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-06-01T07:29:06+00:00",
+        "evidence_at": "2026-06-02T06:30:01+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -42,18 +42,18 @@
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 1,
+          "daily_pageview_rows": 2,
           "search_console_top_queries": 10,
           "top_pages_7d": 10,
           "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-06-02T06:15:05+00:00",
+        "evidence_at": "2026-06-02T12:15:04+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
       },
       "daily_traffic_log": {
-        "age_minutes": 1423.6,
+        "age_minutes": 473.6,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -61,7 +61,7 @@
       "reason": "fresh GA4 validation artifact present",
       "status": "fresh",
       "weekly_metrics_log": {
-        "age_minutes": 1423.6,
+        "age_minutes": 1913.6,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -69,24 +69,24 @@
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 1363.7,
+        "age_minutes": 1853.6,
         "data_source": "google_search_console",
         "generated_at": "2026-06-01T08:00:01.476207Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 2
       },
       "fetch_log": {
-        "age_minutes": 13.7,
+        "age_minutes": 503.6,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
       },
       "reason": "fresh Search Console validation artifact present",
       "search_console_report": {
-        "age_hours": 22.77,
+        "age_hours": 5.75,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-06-01T07:29:06+00:00",
+        "evidence_at": "2026-06-02T06:30:01+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -98,14 +98,14 @@
   "category_drift": {
     "alerts": [
       "Kotimaa: 30.7% (+5.7% over target 25%)",
-      "Talous: 10.1% (-9.9% under target 20%)",
-      "Ulkomaat: 27.4% (+7.4% over target 20%)"
+      "Talous: 10.3% (-9.7% under target 20%)",
+      "Ulkomaat: 27.3% (+7.3% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 823,
+        "count": 824,
         "delta": 5.7,
         "pct": 30.7,
         "status": "over",
@@ -121,15 +121,15 @@
       },
       {
         "category": "Talous",
-        "count": 271,
-        "delta": -9.9,
-        "pct": 10.1,
+        "count": 278,
+        "delta": -9.7,
+        "pct": 10.3,
         "status": "under",
         "target_pct": 20
       },
       {
         "category": "Teknologia",
-        "count": 393,
+        "count": 394,
         "delta": -0.3,
         "pct": 14.7,
         "status": "ok",
@@ -137,7 +137,7 @@
       },
       {
         "category": "Tiede",
-        "count": 176,
+        "count": 177,
         "delta": 3.6,
         "pct": 6.6,
         "status": "ok",
@@ -146,34 +146,34 @@
       {
         "category": "Ulkomaat",
         "count": 733,
-        "delta": 7.4,
-        "pct": 27.4,
+        "delta": 7.3,
+        "pct": 27.3,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
         "count": 213,
-        "delta": -2.0,
-        "pct": 8.0,
+        "delta": -2.1,
+        "pct": 7.9,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-06-02T06:43:41.825575+00:00",
+    "generated_at": "2026-06-02T14:53:39.732920+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 2677
+    "total_articles": 2687
   },
   "content": {
-    "article_count_local": 2677,
-    "last_publish_age_minutes": 45.6,
-    "last_publish_at": "2026-06-02T05:58:06.526500Z",
+    "article_count_local": 2687,
+    "last_publish_age_minutes": 35.6,
+    "last_publish_at": "2026-06-02T14:18:06.415662Z",
     "latest_article": {
-      "category": "Kotimaa",
-      "slug": "2026-06-02-oajn-aineisto-moni-alle-18-vuotias-ammattiopiskelija-saa-ope",
-      "title": "OAJ:n aineisto: Moni alle 18-vuotias ammattiopiskelija saa opetusta alle vähimmäistason"
+      "category": "Talous",
+      "slug": "2026-06-02-risto-siilasmaa-pohtii-f-securen-seuraavaa-vaihetta-porssiss",
+      "title": "Risto Siilasmaa pohtii F-Securen seuraavaa vaihetta pörssissä"
     },
-    "published_last_24h_local": 43,
+    "published_last_24h_local": 38,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -193,7 +193,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-06-02T06:43:41.934957Z",
+  "generated_at": "2026-06-02T14:53:39.757912Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -224,28 +224,28 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 43,
+      "article_count": 38,
       "article_count_source": "content/posts frontmatter",
       "failure": 0,
       "generated_article_count": 0,
-      "published_article_count_local": 43,
+      "published_article_count_local": 38,
       "runs_total": 144,
       "skipped": 0,
       "success": 144,
       "top_error_reasons": []
     },
-    "last_run_age_minutes": 3.6,
+    "last_run_age_minutes": 3.5,
     "last_run_article_count": 0,
-    "last_run_at": "2026-06-02T06:40:08.349528Z",
+    "last_run_at": "2026-06-02T14:50:07.473219Z",
     "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-06-02T05:58:06.526500+00:00",
+        "last_published_ts": "2026-06-02T14:18:06.415662+00:00",
         "publish_rate": 0,
-        "published": 43,
-        "rejected": 6
+        "published": 38,
+        "rejected": 4
       },
       "feeds": {
         "disabled": 0,
@@ -255,17 +255,17 @@
         "stale_names": [],
         "total": 40
       },
-      "generated_at": "2026-06-02T05:59:01+00:00",
+      "generated_at": "2026-06-02T14:19:03+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "central unsourced number in ti": 6,
-        "language borderline Finnish si": 2,
+        "central unsourced number in ti": 4,
+        "language borderline Finnish si": 1,
         "length under target (257 words": 1,
-        "length under target (259 words": 2,
-        "length under target (264 words": 2,
-        "missing: image": 6,
-        "unsourced numbers": 6
+        "length under target (259 words": 1,
+        "length under target (264 words": 1,
+        "missing: image": 4,
+        "unsourced numbers": 4
       },
       "runs": {
         "error": 0,
@@ -278,23 +278,23 @@
       "trending": [
         [
           "mukaansa",
-          35
-        ],
-        [
-          "jälkeen",
-          31
+          36
         ],
         [
           "prosenttia",
-          27
+          31
         ],
         [
           "kanssa",
+          23
+        ],
+        [
+          "perusteella",
           21
         ],
         [
-          "iranin",
-          21
+          "jälkeen",
+          19
         ]
       ]
     },
@@ -304,33 +304,33 @@
     "queues": {
       "monica/inbox": {
         "count": 6598,
-        "newest_item_age_minutes": 20160.1,
-        "oldest_item_age_minutes": 64640.7
+        "newest_item_age_minutes": 20650.0,
+        "oldest_item_age_minutes": 65130.7
       },
       "monica/outbox": {
         "count": 1575,
-        "newest_item_age_minutes": 23045.5,
-        "oldest_item_age_minutes": 64037.8
+        "newest_item_age_minutes": 23535.5,
+        "oldest_item_age_minutes": 64527.7
       },
       "monica/quarantine": {
         "count": 5020,
-        "newest_item_age_minutes": 42785.1,
-        "oldest_item_age_minutes": 64640.7
+        "newest_item_age_minutes": 43275.0,
+        "oldest_item_age_minutes": 65130.7
       },
       "staged/failed": {
-        "count": 3785,
-        "newest_item_age_minutes": 0.3,
-        "oldest_item_age_minutes": 45536.5
+        "count": 3824,
+        "newest_item_age_minutes": 0.5,
+        "oldest_item_age_minutes": 46026.4
       },
       "staged/published": {
-        "count": 933,
-        "newest_item_age_minutes": 44.7,
-        "oldest_item_age_minutes": 45195.3
+        "count": 943,
+        "newest_item_age_minutes": 34.6,
+        "oldest_item_age_minutes": 45685.2
       },
       "staged/writing": {
         "count": 3,
-        "newest_item_age_minutes": 7172.3,
-        "oldest_item_age_minutes": 10592.4
+        "newest_item_age_minutes": 7662.2,
+        "oldest_item_age_minutes": 11082.4
       }
     },
     "source": "pipeline/queues/*.json file counts only"
