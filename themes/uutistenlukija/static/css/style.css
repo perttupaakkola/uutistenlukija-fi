@@ -1708,8 +1708,8 @@ pre code {
 .article-summary {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  border-radius: 6px;
+  border-left: 4px solid var(--accent);
+  border-radius: 2px;
   margin-bottom: 1.5rem;
   font-family: var(--font-sans);
 }
@@ -2977,9 +2977,10 @@ body.is-home .highlights-row--top {
   gap: 1rem;
   padding: 1.25rem;
   border: 1px solid var(--border);
-  border-radius: 16px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,249,251,0.98));
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  border-top: 3px solid var(--accent);
+  border-radius: 4px;
+  background: var(--card-bg);
+  box-shadow: none;
 }
 .newsletter-signup--home .newsletter-signup__inner {
   padding: 1.5rem;
@@ -2991,7 +2992,8 @@ body.is-home .highlights-row--top {
   gap: 0.8rem;
   padding: 1rem;
   border-left: 4px solid var(--accent);
-  border-radius: 8px;
+  border-top: 1px solid var(--border);
+  border-radius: 2px;
   background: color-mix(in srgb, var(--surface-alt) 68%, var(--card-bg) 32%);
   box-shadow: none;
 }
@@ -3020,7 +3022,7 @@ body.is-home .highlights-row--top {
 .newsletter-signup--article_bottom_latest .newsletter-signup__button {
   width: 100%;
   min-height: 46px;
-  border-radius: 8px;
+  border-radius: 4px;
   font-family: var(--font-sans);
   font-size: 1rem;
 }
@@ -3061,7 +3063,7 @@ body.is-home .highlights-row--top {
   min-height: 48px;
   padding: 0.8rem 0.95rem;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 4px;
   background: var(--bg);
   color: var(--text);
   font: inherit;
@@ -3075,7 +3077,7 @@ body.is-home .highlights-row--top {
   min-height: 48px;
   padding: 0.8rem 1.1rem;
   border: 0;
-  border-radius: 12px;
+  border-radius: 4px;
   background: var(--accent);
   color: #fff;
   font: inherit;
@@ -3120,7 +3122,7 @@ body.is-home .highlights-row--top {
 @media (max-width: 640px) {
   .newsletter-signup__inner {
     padding: 1rem;
-    border-radius: 14px;
+    border-radius: 4px;
   }
   .newsletter-signup__form {
     flex-direction: column;
@@ -3149,7 +3151,7 @@ body.is-home .highlights-row--top {
   border-left: 4px solid #b58900;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 [data-theme="dark"] .journalist-note {
   background: #1e1c14;
@@ -3219,8 +3221,9 @@ body.is-home .highlights-row--top {
   margin: 1.1rem 0 1.35rem;
   padding: 0.8rem 0.95rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  background: #f8fafc;
+  border-left: 4px solid var(--accent);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--surface-alt) 42%, var(--card-bg) 58%);
   font-family: var(--font-sans);
 }
 .source-article-link__icon {
@@ -3230,8 +3233,8 @@ body.is-home .highlights-row--top {
   width: 1.9rem;
   height: 1.9rem;
   flex: 0 0 1.9rem;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.08);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--accent) 9%, var(--card-bg));
   color: var(--accent);
 }
 .source-article-link__body {
@@ -3273,8 +3276,8 @@ body.is-home .highlights-row--top {
   font-family: var(--font-sans);
   font-size: 0.95rem;
   text-align: center;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-alt) 18%, transparent), color-mix(in srgb, var(--surface-alt) 42%, transparent));
-  border-radius: 12px;
+  background: color-mix(in srgb, var(--surface-alt) 34%, transparent);
+  border-radius: 2px;
 }
 .article-end-note p {
   margin: 0;
@@ -3284,8 +3287,8 @@ body.is-home .highlights-row--top {
 .article-outro-topic-prompt {
   margin: 1.25rem 0 2.5rem;
   padding: 1rem 1.15rem;
-  border-radius: 12px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-alt) 24%, transparent), color-mix(in srgb, var(--surface-alt) 52%, transparent));
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--surface-alt) 48%, transparent);
   border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
   color: var(--text-secondary);
   font-family: var(--font-sans);
