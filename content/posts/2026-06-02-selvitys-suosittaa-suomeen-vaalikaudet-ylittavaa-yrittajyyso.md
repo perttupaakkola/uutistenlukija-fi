@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/selvitys-suomeen-vaalikaudet-ylittava-parlamentaarinen-yrittajyysohjelma-yrittajat-tarvitsevat-ennakoitavissa-olevan-toimintaympariston/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
