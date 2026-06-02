@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/elisa-tommola-metsaranta-menetti-tyonsa-rtvn-konkurssissa-nyt-han-myy-jalleen-laattoja-vaikeinta-oli-uskaltaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
