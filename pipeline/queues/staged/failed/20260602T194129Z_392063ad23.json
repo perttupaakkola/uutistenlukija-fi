@@ -1,0 +1,139 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T19:41:29.475773+00:00",
+  "digest": "392063ad23",
+  "packet": {
+    "packet_id": "20260602T194129Z_392063ad23",
+    "created_at": "2026-06-02T19:41:29Z",
+    "headline_seed": "White House Correspondents' Dinner rescheduled after shooting incident",
+    "description_seed": "The annual dinner, which was held in April this year, was interrupted when a gunman stormed a security checkpoint.",
+    "link": "https://www.bbc.com/news/articles/clypky99g0vo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "South China Morning Post",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clypky99g0vo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "White House Correspondents' Dinner rescheduled after shooting incident"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "South China Morning Post",
+        "source_type": "research",
+        "text": "The White House Correspondents’ Dinner will see increased security after it was interrupted by a gunman storming a security checkpoint US President Donald Trump will attend ⁠the rescheduled White House Correspondents’ Association dinner on July 24, he said in a social media post on Tuesday, after the annual event was postponed following a shooting. The black-tie gathering of journalists and politicians in Washington was postponed after a ‌suspect stormed a security checkpoint and fired a shotgun outside the event on April 25, with Trump present. Trump and first lady Melania Trump were safely rushed out of the dinner.",
+        "word_count": 98,
+        "keyword_overlap": 14,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The annual dinner, which was held in April this year, was interrupted when a gunman stormed a security checkpoint.",
+        "word_count": 19,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The annual White House Correspondents' Dinner has been rescheduled after the original event on April 25 was suspended after a gunman attempted to access the venue, resulting in an exchange of fire with Secret Service agents. The new event will be held on July 24 with \"significantly enhanced safety measures and new access procedures\", Weijia Jiang, president of the White House Correspondents' Association (WHCA), wrote in a letter to members. US President Donald Trump said he would attend the rescheduled dinner, which will be held at the Waldorf Astoria in Washington DC. The April shooting saw Trump and Vice-President JD Vance, among others, rushed off stage by Secret Service agents. The suspect was subdued by agents on the scene, and one Secret Service agent was injured by shotgun fire, according to the Department of Justice.",
+        "word_count": 135,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Trump said he has accepted an invitation to speak at the rescheduled event, adding that he's not sure if he will \"give the same rather nasty statements\" that he had planned to in April. \"But we will soon find out,\" the president said. The April event - attended by the president, vice-president, members of Congress and Trump's cabinet, and hundreds of journalists - was already underway when a gunman stormed through a security checkpoint. The suspect was later identified as 31-year-old Cole Tomas Allen, who police said was armed with the shotgun, a handgun and knives. At a press conference immediately after the shooting, Trump said he would work to get the event rescheduled in the following 30 days.",
+        "word_count": 119,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "The White House Correspondents’ Dinner will see increased security after it was interrupted by a gunman storming a security checkpoint US President Donald Trump will attend ⁠the rescheduled White House Correspondents’ Association dinner on July 24, he said in a social media post on Tuesday, after the annual event was postponed following a shooting. The black-tie gathering of journalists and politicians in Washington was postponed after a ‌suspect stormed a security checkpoint and fired a shotgun outside the event on April 25, with Trump present. Trump and first lady Melania Trump were safely rushed out of the dinner.\n\nThe annual dinner, which was held in April this year, was interrupted when a gunman stormed a security checkpoint.\n\nThe annual White House Correspondents' Dinner has been rescheduled after the original event on April 25 was suspended after a gunman attempted to access the venue, resulting in an exchange of fire with Secret Service agents. The new event will be held on July 24 with \"significantly enhanced safety measures and new access procedures\", Weijia Jiang, president of the White House Correspondents' Association (WHCA), wrote in a letter to members. US President Donald Trump said he would attend the rescheduled dinner, which will be held at the Waldorf Astoria in Washington DC. The April shooting saw Trump and Vice-President JD Vance, among others, rushed off stage by Secret Service agents. The suspect was subdued by agents on the scene, and one Secret Service agent was injured by shotgun fire, according to the Department of Justice.\n\nTrump said he has accepted an invitation to speak at the rescheduled event, adding that he's not sure if he will \"give the same rather nasty statements\" that he had planned to in April. \"But we will soon find out,\" the president said. The April event - attended by the president, vice-president, members of Congress and Trump's cabinet, and hundreds of journalists - was already underway when a gunman stormed through a security checkpoint. The suspect was later identified as 31-year-old Cole Tomas Allen, who police said was armed with the shotgun, a handgun and knives. At a press conference immediately after the shooting, Trump said he would work to get the event rescheduled in the following 30 days.",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 621,
+      "selected_blocks": 4,
+      "selected_source_words": 371,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "South China Morning Post",
+        "South China Morning Post",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "South China Morning Post",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "White House Correspondents' Dinner rescheduled after shooting incident",
+      "description": "The annual dinner, which was held in April this year, was interrupted when a gunman stormed a security checkpoint.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "White House Correspondents' Dinner rescheduled after shooting incident",
+    "description": "The annual dinner, which was held in April this year, was interrupted when a gunman stormed a security checkpoint.",
+    "link": "https://www.bbc.com/news/articles/clypky99g0vo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-02T19:24:49+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "a0d28c216e5942e2f3f0781410fc4272",
+    "_url_hash": "fd866f1267e8e53018ec2e3d439d9b10e1ec525936caeb5ef2c935d96cc9039d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe annual White House Correspondents' Dinner has been rescheduled after the original event on April 25 was suspended after a gunman attempted to access the venue, resulting in an exchange of fire with Secret Service agents.\n\nThe new event will be held on July 24 with \"significantly enhanced safety measures and new access procedures\", Weijia Jiang, president of the White House Correspondents' Association (WHCA), wrote in a letter to members.\n\nUS President Donald Trump said he would attend the rescheduled dinner, which will be held at the Waldorf Astoria in Washington DC.\n\nThe April shooting saw Trump and Vice-President JD Vance, among others, rushed off stage by Secret Service agents.\n\nThe suspect was subdued by agents on the scene, and one Secret Service agent was injured by shotgun fire, according to the Department of Justice.\n\nTrump said the rescheduling of the event, which is meant to honour journalists and the freedom of the press, is a \"sign of Strength and Fortitude\".\n\n\"This announcement is a very good thing in that we cannot allow Lunatics to change our way of life, or even its scheduling,\" the president wrote on social media.\n\nThe WHCA spent the last several weeks raising funds to make sure that its members who purchased tickets to the April event do not have to pay again for the July event, which will be a \"more intimate gathering\", Jiang said.\n\nThe association is also offering financial support to scholarship winners who wish to travel back to Washington DC for the dinner, Jiang said.\n\nTrump said he has accepted an invitation to speak at the rescheduled event, adding that he's not sure if he will \"give the same rather nasty statements\" that he had planned to in April.\n\n\"But we will soon find out,\" the president said.\n\nThe April event - attended by the president, vice-president, members of Congress and Trump's cabinet, and hundreds of journalists - was already underway when a gunman stormed through a security checkpoint.\n\nThe suspect was later identified as 31-year-old Cole Tomas Allen, who police said was armed with the shotgun, a handgun and knives.\n\nAt a press conference immediately after the shooting, Trump said he would work to get the event rescheduled in the following 30 days.\n\nThe Waldorf Astoria, where Trump says the July event will take place, was first converted from an old post office into a luxury hotel by the Trump Organization more than a decade ago. The Trump family leased the building in 2012 and opened the Trump International Ho\n\n---\n\n[Lähde: South China Morning Post]\nThe White House Correspondents’ Dinner will see increased security after it was interrupted by a gunman storming a security checkpoint\n\nUS President Donald Trump will attend ⁠the rescheduled White House Correspondents’ Association dinner on July 24, he said in a social media post on Tuesday, after the annual event was postponed following a shooting.\n\nThe black-tie gathering of journalists and politicians in Washington was postponed after a ‌suspect stormed a security checkpoint and fired a shotgun outside the event on April 25, with Trump present.\n\nTrump and first lady Melania Trump were safely rushed out of the dinner.\n\nTrump – who has a history of maligning the media – posted that Jiang asked ‌him to attend and speak, and that he accepted. He added: “I don’t know whether or not I will give the same rather nasty statements, at least as ‌it concerns certain people, but we will soon find out.”\n\nTrump said the event would ⁠take place at ⁠the Waldorf Astoria hotel in Washington. The Trump Organisation developed the hotel, once a federal office building, and sold it in ‌2022.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T19:43:41.494965+00:00",
+  "failure": "Monica response did not contain valid JSON object",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T194129Z_392063ad23\",\"title\":\"Valkoisen talon kirjeenvaihtajien illallinen järjestetään uudelleen heinäkuussa\",\"summary\":\"Valkoisen talon kirjeenvaihtajien vuosittainen illallinen on määrä järjestää uudelleen 24. heinäkuuta sen jälkeen, kun huhtikuun tapahtuma keskeytettiin aseellisen välikohtauksen vuoksi. Presidentti Donald Trumpin kerrotaan osallistuvan uuteen tilaisuuteen Washingtonissa.\",\"content\":\"Valkoisen talon kirjeenvaihtajien vuosittainen illallinen järjestetään uudelleen 24. heinäkuuta Washingtonissa sen jälkeen, kun huhtikuun 25. päivän tapahtuma keskeytettiin aseellisen välikohtauksen vuoksi. Yhdysvaltain presidentti Donald Trump on ilmoittanut osallistuvansa uudelleen järjestettävään tilaisuuteen, jonka turvallisuusjärjestelyjä kiristetään aiempaan verrattuna.\\n\\n## Tapahtuma siirretään heinäkuulle\\n\\nUusi tilaisuus pidetään Waldorf Astoriassa Washington DC:ssä. Valkoisen talon kirjeenvaihtajien yhdistyksen puheenjohtaja Weijia Jiang kerti jäsenille lähetetyssä kirjeen, että uudessa tapahtumassa on käytössä merkittävästi vahvistettuja turvallisuustoimia ja uusia kulkumenettelyjä.\\n\\nIllallinen oli alun perin tarkoitus järjestää huhtikuussa, mutta se keskeytettiin sen jälkeen, kun aseistettu mies yritti päästä tapahtumapaikalle turvatarkastuspisteen kautta. Tilanteessa syntyi tulenvaihto Secret Servicen agenttien kanssa.\\n\\nHuhtikuun tapahtuma oli jo käynnissä, ja paikalla oli presidentin ja varapresidentti JD Vancen lisäksi kongressin jäseniä, hallinnon edustajia ja satoja toimittajia. Trump ja useita muita paikalla olleita vietiin pois lavalta Secret Servicen toimesta. Myös ensimmäinen nainen Melania Trump vietiin turvaan illalliselta.\\n\\n## Epäilty otettiin kiinni tapahtumapaikalla\\n\\nViranomaisten mukaan epäilty saatiin taltutettua paikan päällä. Yhdysvaltain oikeusministeriön mukaan yksi Secret Servicen agentti haavoittui haulikon tulituksessa.\\n\\nPoliisi on tunnistanut epäillyksi 31-vuotiaan Cole Tomas Allenin. Viranomaisten mukaan hänellä oli mukanaan haulikko, käsiase ja veitsiä.\\n\\nTrump on sanonut hyväksyneensä kutsun puhua uudelleen järjestettävässä tilaisuudessa. Hän on myös viitannut aiemmin huhtikuun välikohtauksen jälkeen pyrkivänsä siihen, että tapahtuma saataisiin järjestettyä uudelleen  päivän kulu vuoroka.\\.\\n\\nKirjeenvaihtajien illallinen on Washingtonissa perinteikäs mustan solmion tilaisuus, jossa kohtaavat poliittiset päättäjät, hallinnon edustajat ja toimittajat. Huhtikuun tapahtuman keskeytyminen johti nyt sekä uuteen ajankohtaan että tiukennettuihin kulkujärjestelyihin.\",\"category\":\"Ulkomaat\",\"tags\":[\"Yhdysvallat\",\"Washington\",\"Donald Trump\",\"Secret Service\",\"media\"],\"summary_bullets\":[\"Valkoisen talon kirjeenvaihtajien illallinen järjestetään uudelleen 24. heinäkuuta Washingtonissa.\",\"Huhtikuun tapahtuma keskeytyi, kun aseistettu mies yritti päästä tapahtumapaikalle turvatarkastuspisteen kautta.\",\"Uuteen tilaisuuteen on luvassa vahvistettuja turvallisuustoimia ja uusia kulkumenettelyjä.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.98,\"journalist_note\":\"Artikkeli perustuu paketissa annettuihin lähdetietoihin. Epäillyn henkilöllisyys, aseistus, tapahtumapaikka, uusi päiv ja turvallisuusmuutokset on rajattu lähdeaineiston tietoihin.\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260602T194129Z_392063ad23",
+    "category": "Ulkomaat",
+    "selected_source_words": 371,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "White House Correspondents' Dinner rescheduled after shooting incident"
+  }
+}
