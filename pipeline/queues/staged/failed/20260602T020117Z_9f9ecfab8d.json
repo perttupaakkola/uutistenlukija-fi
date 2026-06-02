@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T02:01:17.775613+00:00",
+  "digest": "9f9ecfab8d",
+  "packet": {
+    "packet_id": "20260602T020117Z_9f9ecfab8d",
+    "created_at": "2026-06-02T02:01:17Z",
+    "headline_seed": "Pietarsaaressa vaarallisen aineen onnettomuus",
+    "description_seed": "Pietarsaari OSTP Pietarsaaren tehtaalla on tapahtunut fluorivetyhappovuoto.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/pietarsaaressa-vaarallisen-aineen-onnettomuus/9347726",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/pietarsaaressa-vaarallisen-aineen-onnettomuus/9347726"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pietarsaaressa vaarallisen aineen onnettomuus"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 95,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Seiska",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pietarsaaressa vaarallisen aineen onnettomuus",
+      "description": "Pietarsaari OSTP Pietarsaaren tehtaalla on tapahtunut fluorivetyhappovuoto.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pietarsaaressa vaarallisen aineen onnettomuus",
+    "description": "Pietarsaari OSTP Pietarsaaren tehtaalla on tapahtunut fluorivetyhappovuoto.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/pietarsaaressa-vaarallisen-aineen-onnettomuus/9347726",
+    "published": "2026-06-01T21:02:15+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "982f8309136842427444a2a19452dd8a",
+    "_url_hash": "7593f22267610dc878be83259d064dfa9fcb2f0d079bde0364d8a8d3a2c2c46e",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Seiska]\nMTV:n entinen juontaja Janika Nieminen on poistunut kaikessa hiljaisuudessa sinkkumarkkinoilta.Hän paljastaa Seiskalle seurustelevansa entisen jääkiekkoilija Semir Ben-Amorin kanssa.- Juu, näin on! Tunnemme toisemme jo parin kymmenen vuoden takaa, joten kyse ei ole uudesta tuttavuudesta, Janika kertoo Seiskalle.\n\nParasta mitä mulle on tapahtunut ❤ @herkku18 #love\n\nHenkilön  Janika Nieminen 🎤👩🏼 (@janikajuontaja) jakama julkaisu Loka 31, 2018 kello 12.04 PDT\n\nJannika on julkaissut rakkaansa kanssa yhteiskuvan Instagram-sivuillaan.- Parasta, mitä mulle on tapahtunut, Janika kirjoittaa yhteiskuvan yhteyteen.Semir on aiemmin seurustellut Black Sabbath -yhtyeen kitaristin Tony Iommin tyttären Toni Marie Iommin kanssa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T02:03:16.460848+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai riittäviä varmennettuja yksityiskohtia julkaistavan vähintään 250 sanan uutisen kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T020117Z_9f9ecfab8d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai riittäviä varmennettuja yksityiskohtia julkaistavan vähintään 250 sanan uutisen kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}

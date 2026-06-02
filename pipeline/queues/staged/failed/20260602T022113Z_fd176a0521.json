@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T02:21:13.582378+00:00",
+  "digest": "fd176a0521",
+  "packet": {
+    "packet_id": "20260602T022113Z_fd176a0521",
+    "created_at": "2026-06-02T02:21:13Z",
+    "headline_seed": "Kuukausiennuste julki – helteet häämöttävät",
+    "description_seed": "Kuukausiennuste yltää jo juhannuksen yli.",
+    "link": "https://www.is.fi/kotimaa/art-2000012049598.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012049598.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kuukausiennuste julki – helteet häämöttävät"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 168,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "Stara",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kuukausiennuste julki – helteet häämöttävät",
+      "description": "Kuukausiennuste yltää jo juhannuksen yli.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kuukausiennuste julki – helteet häämöttävät",
+    "description": "Kuukausiennuste yltää jo juhannuksen yli.",
+    "link": "https://www.is.fi/kotimaa/art-2000012049598.html",
+    "published": "2026-06-02T02:15:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "522b5a3d553e3c6fc396f4f44e673052",
+    "_url_hash": "24c7d8db5e7d3d4117d0132d75e80c2510a8bf32dfd4df7729937f39247132cc",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Stara]\nKovimmat helteet ovat hellittämässä Suomessa. Tuoreen kuukausiennusteen mukaan sää muuttuu elokuun alussa sateisemmaksi. Lämpimät ja helteisetkin ilmat ovat edelleen mahdollisia, vaikka yli 30 asteen lämpötilat ovat väistymässä.\n\n– Kylmä säärintama ylittää loppuviikolla Suomea useamman päivän ajan. Rintaman pohjoispuolella sää pysyy vielä kuumana, mutta rintaman jälkipuolella lämpötilat ovat viileämpiä. Sää on etenkin rintamavyöhykkeellä epävakaista, kertoo meteorologi Joanna Rinne Forecan sääblogissa.\n\nKuukausiennuste näyttää 4. elokuuta alkavalle viikolle tavanomaista lämpimämpää säätä. Tiedossa on sadealueita erityisesti maan etelä- ja keskiosassa. Sadetta voi tulla viikon aikana paikoin reilusti yli 50 millimetriä.\n\nSään ennustetaan jatkuvan keskimääräistä lämpimämpänä myös 11. elokuuta alkavalla viikolla. Viikon sademäärä saattaa jäädä puolestaan ajankohdan keskiarvoa pienemmäksi. On mahdollista, että matalapainesää vaihtuu jälleen korkeapainesäähän ainakin osaksi viikkoa.\n\nKuukausiennusteen mukaan on mahdollista, että keskimääräistä lämpimämpi sää jatkuu myös 18. ja 25. elokuuta alkavilla viikoilla. Sademäärä vaikuttaisi myös edelleen kallistuvan vähäsateiseen suuntaan. Kyseisten viikkojen ennustettavuus on kuitenkin jo heikko.\n\nVoit lukea lisää juuri tähän artikkeliin liittyvistä teemoista ja aiheista, kuten aurinko, kesä tai laajemmin samasta aihealueesta Viihdeuutiset -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T02:23:15.452060+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T022113Z_fd176a0521\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.\"}"
+}
