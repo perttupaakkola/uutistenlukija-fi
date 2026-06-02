@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T13:21:23.687982+00:00",
+  "digest": "cc346630cc",
+  "packet": {
+    "packet_id": "20260602T132123Z_cc346630cc",
+    "created_at": "2026-06-02T13:21:23Z",
+    "headline_seed": "Ilotulitehtaan räjähdys sotki suomalaisen Leonan, 17, suunnitelmat Maltalla",
+    "description_seed": "Kaksi miestä loukkaantui ja useita nautoja kuoli.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012048144.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012048144.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ilotulitehtaan räjähdys sotki suomalaisen Leonan, 17, suunnitelmat Maltalla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 180,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "helsinginuutiset",
+        "helsinginuutiset",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ilotulitehtaan räjähdys sotki suomalaisen Leonan, 17, suunnitelmat Maltalla",
+      "description": "Kaksi miestä loukkaantui ja useita nautoja kuoli.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ilotulitehtaan räjähdys sotki suomalaisen Leonan, 17, suunnitelmat Maltalla",
+    "description": "Kaksi miestä loukkaantui ja useita nautoja kuoli.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012048144.html",
+    "published": "2026-06-02T13:10:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "1989846228affa7d4c483e83a619d870",
+    "_url_hash": "e8c6528a1a65a36e7a7a3465336e8c7128513f4585ff913a5611d9bc314d95fe",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: helsinginuutiset]\nLänsiulapanpolun rantareitillä on jyrkästä alamäestä ilmoittavat liikennemerkit.\n\nPyöräilijä kaatui Länsiulapanpolun rantareitillä Lauttasaaressa ja vaati korvauksia Helsingin kaupungilta.\n\nOnnettomuus tapahtui viime vuoden heinäkuussa.\n\nPyöräilijän mukaan hän havaitsi alamäkeä ajaessaan tienpinnan olevan huonossa kunnossa ja pyrki hidastamaan nopeuttaan jarruttamalla. Jarrutusyrityksestä huolimatta pyöräilijä menetti polkupyöränsä hallinnan ja kaatui mäen alaosassa.\n\nHän esitti kaupungille 4 368,87 euron vahingonkorvausvaatimuksen.\n\nSää oli tapahtumahetkellä selkeä ja tienpinta kuiva.\n\nKyseinen vahinkopaikka on kivituhkapintainen puistokäytävä.\n\nKaupunki selvitti asiaa vahingonkorvausvaatimuksen saatuaan.\n\nSelvityksen mukaan vahinkopaikka tarkastettiin viimeisimmän kerran ennen vahinkoa kesäkuun puolivälissä 2025 Tarkastuskäynnillä ei ilmennyt toimenpiteitä edellyttävää korjaustarvetta.\n\nKaupungille ei myöskään annettu muita palautteita vahinkopaikan kunnossapidosta vahinkopäivänä tai kesän 2025 ajalta. Kaupungille ei ole esitetty myöskään muita vastaavia vahingonkorvausvaatimuksia.\n\n– Saatujen selvitysten perusteella vahinkopaikkaa on ollut käyttötarkoituksensa mukaisessa tyydyttävässä kunnossa, kaupungin päätöksessä todetaan.\n\nKaupungin mukaan Länsiulapanpolun rantareitillä on myös jyrkästä alamäestä ilmoittavat liikennemerkit.\n\n– Polkupyöräilijän on sovitettava nopeutensa sellaiseksi, että hän säilyttää ajoneuvon hallinnan ja kykenee pysäyttämään sen väylän epätasaisuuksista tai muista ennakoitavista seikoista huolimatta, kaupungin päätöksessä todetaan.\n\nNäin ollen kaupunki katsoi, ettei se ole laiminlyönyt kunnossapitolain mukaisia tehtäviään, eikä ole asiassa korvausvelvollinen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T13:23:16.326569+00:00",
+  "failure": "Packet has no usable source text and only sparse unverified facts, so a 250+ word article would require invention.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T132123Z_cc346630cc\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packet has no usable source text and only sparse unverified facts, so a 250+ word article would require invention.\"}"
+}

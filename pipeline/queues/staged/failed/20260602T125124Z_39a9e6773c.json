@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T12:51:24.102356+00:00",
+  "digest": "39a9e6773c",
+  "packet": {
+    "packet_id": "20260602T125124Z_39a9e6773c",
+    "created_at": "2026-06-02T12:51:24Z",
+    "headline_seed": "Jyri Häkämies on nimitetty Reaktorin neuvonantajaksi",
+    "description_seed": "Eläköitynyt EK:n toimitusjohtaja on nimitetty Reaktorin neuvonantajaksi.",
+    "link": "https://www.tivi.fi/uutiset/a/5a96272f-7ba8-485f-b89f-85e31ac86e7e",
+    "source": "Tivi",
+    "source_names": [],
+    "source_urls": [
+      "https://www.tivi.fi/uutiset/a/5a96272f-7ba8-485f-b89f-85e31ac86e7e"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jyri Häkämies on nimitetty Reaktorin neuvonantajaksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 108,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Tivi"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jyri Häkämies on nimitetty Reaktorin neuvonantajaksi",
+      "description": "Eläköitynyt EK:n toimitusjohtaja on nimitetty Reaktorin neuvonantajaksi.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Jyri Häkämies on nimitetty Reaktorin neuvonantajaksi",
+    "description": "Eläköitynyt EK:n toimitusjohtaja on nimitetty Reaktorin neuvonantajaksi.",
+    "link": "https://www.tivi.fi/uutiset/a/5a96272f-7ba8-485f-b89f-85e31ac86e7e",
+    "published": "2026-06-02T10:25:03+00:00",
+    "source": "Tivi",
+    "source_domain": "tivi.fi",
+    "language": "fi",
+    "fingerprint": "178ab332d3a4dbf7c549fb7c3ffecadc",
+    "_url_hash": "bb9fbb637f1c0a8c705b2b014552481fa281f811f2b2b3f89530a9f0ca6507f5",
+    "source_tier": 2,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nElinkeinoelämän Keskusliiton (EK) pitkäaikainen toimitusjohtaja Jyri Häkämies aloittaa Kotkan-Haminan seudun kehittämisyhtiö Cursorin neuvonantajana.\n\nCursor toimii Etelä-Kymenlaaksossa ja Loviisassa. Yhtiön palveluksessa on 45 henkilöä ja sen tehtävä on tukea ja kehittää paikallisia yrityksiä, houkutella investointeja alueelle sekä kehittää alueen matkailua.\n\nCursorin hallituksen puheenjohtaja Ari-Pekka Saari kertoo, että Cursorin yksi keskeinen tavoite on saada akkuteollisuuden ja datakeskusten investointeja Suomeen.\n\n– Jyri Häkämies tulee kokemuksellaan ja osaamisellaan tuomaan paljon lisäarvoa Cursorin toimintaan, Saari sanoo.\n\nHäkämies toimii neuvonantajan tehtävässä ilman rahallista korvausta.\n\nHäkämies jää suunnitellusti eläkkeelle EK:sta ensi toukokuussa. Ennen valintaansa EK:n toimitusjohtajaksi vuonna 2012 Häkämies toimi kansanedustajana sekä elinkeino- ja puolustusministerinä kolmessa eri hallituksessa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T12:53:12.661388+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260602T125124Z_39a9e6773c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

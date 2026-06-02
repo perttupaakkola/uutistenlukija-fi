@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/k-kauppias-latkaisi-samalle-varhaisperunalle-kaksi-hintaa-facebook-julkaisun-suosio-rajahti-hammastyttavaa-ja-ilahduttavaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
