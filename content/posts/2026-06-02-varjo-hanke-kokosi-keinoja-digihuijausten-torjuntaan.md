@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/tutkimushanke-listasi-konsteja-petostorjuntaan-finanssialalta-vahva-kannatus/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
