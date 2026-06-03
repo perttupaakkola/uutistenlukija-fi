@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-03T00:41:23.391366+00:00",
+  "digest": "b0d121a5fa",
+  "packet": {
+    "packet_id": "20260603T004123Z_b0d121a5fa",
+    "created_at": "2026-06-03T00:41:23Z",
+    "headline_seed": "Näppis | Ristilippumaat voittivat kaikki mitalit MM-jääkiekossa!",
+    "description_seed": "Kyllä Leijonat ovat voittonsa ansainneet, ei ollut sattuma eikä pelkkää tuuria. Ehkä autio kaupunki olisi jonkinlainen turistikohde. Loppu jutussa oli onnellinen, ja se tuntui todella hyvälle.",
+    "link": "https://www.ess.fi/paakirjoitus-mielipide/9500875",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paakirjoitus-mielipide/9500875"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näppis | Ristilippumaat voittivat kaikki mitalit MM-jääkiekossa!"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näppis | Ristilippumaat voittivat kaikki mitalit MM-jääkiekossa!",
+      "description": "Kyllä Leijonat ovat voittonsa ansainneet, ei ollut sattuma eikä pelkkää tuuria. Ehkä autio kaupunki olisi jonkinlainen turistikohde. Loppu jutussa oli onnellinen, ja se tuntui todella hyvälle.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Näppis | Ristilippumaat voittivat kaikki mitalit MM-jääkiekossa!",
+    "description": "Kyllä Leijonat ovat voittonsa ansainneet, ei ollut sattuma eikä pelkkää tuuria. Ehkä autio kaupunki olisi jonkinlainen turistikohde. Loppu jutussa oli onnellinen, ja se tuntui todella hyvälle.",
+    "link": "https://www.ess.fi/paakirjoitus-mielipide/9500875",
+    "published": "2026-06-03T03:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "a9277976ae39e113efb0629ffe3d3252",
+    "_url_hash": "70bbdfb6fa0ceb2a68199d36d47096b30fb05ceb9492485debc43b051206e88b",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Kyllä Leijonat ovat voittonsa ansainneet, ei ollut sattuma eikä pelkkää tuuria. Ehkä autio kaupunki olisi jonkinlainen turistikohde. Loppu jutussa oli onnellinen, ja se tuntui todella hyvälle.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-03T00:43:21.065512+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja vähintään 250 sanan uutisartikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260603T004123Z_b0d121a5fa\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja vähintään 250 sanan uutisartikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
