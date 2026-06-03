@@ -1,0 +1,140 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-02T23:41:26.718448+00:00",
+  "digest": "10f4324bc8",
+  "packet": {
+    "packet_id": "20260602T234126Z_10f4324bc8",
+    "created_at": "2026-06-02T23:41:26Z",
+    "headline_seed": "Microsoft’s quantum chip got an upgrade. Critics are still skeptical",
+    "description_seed": "Swapping materials in its Majorana 2 chip boosted the effectiveness of quantum bits that rely on the math of topology to reduce errors, Microsoft says.",
+    "link": "https://www.sciencenews.org/article/microsoft-quantum-chip-upgrade-majorana",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/microsoft-quantum-chip-upgrade-majorana"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.77,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Microsoft’s quantum chip got an upgrade. Critics are still skeptical"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "Swapping materials in its Majorana 2 chip boosted the effectiveness of quantum bits that rely on the math of topology to reduce errors, Microsoft says.",
+        "word_count": 25,
+        "keyword_overlap": 16,
+        "strong_overlap": 10
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "Errors are a big problem for quantum computers, befuddling calculations and hindering the machines’ potential to outperform traditional computers. Microsoft’s new quantum chip could bring hope — for those who believe the company’s claims. Microsoft has unveiled an improved version of its quantum chip, which is designed to resist errors. But the upgrade hasn’t convinced harsh critics of the company’s previous efforts. Last year, Microsoft reported that it had developed a new kind of a quantum chip that protects information based on principles of topology, the field of mathematics dealing with the geometry of structures with holes. That claim immediately drew skepticism from scientists.",
+        "word_count": 104,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Swapping materials in its Majorana 2 chip boosted the effectiveness of quantum bits that rely on the math of topology to reduce errors, Microsoft says.\n\nErrors are a big problem for quantum computers, befuddling calculations and hindering the machines’ potential to outperform traditional computers. Microsoft’s new quantum chip could bring hope — for those who believe the company’s claims. Microsoft has unveiled an improved version of its quantum chip, which is designed to resist errors. But the upgrade hasn’t convinced harsh critics of the company’s previous efforts. Last year, Microsoft reported that it had developed a new kind of a quantum chip that protects information based on principles of topology, the field of mathematics dealing with the geometry of structures with holes. That claim immediately drew skepticism from scientists.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 129,
+      "selected_blocks": 2,
+      "selected_source_words": 129,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Microsoft’s quantum chip got an upgrade. Critics are still skeptical",
+      "description": "Swapping materials in its Majorana 2 chip boosted the effectiveness of quantum bits that rely on the math of topology to reduce errors, Microsoft says.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Microsoft’s quantum chip got an upgrade. Critics are still skeptical",
+    "description": "Swapping materials in its Majorana 2 chip boosted the effectiveness of quantum bits that rely on the math of topology to reduce errors, Microsoft says.",
+    "link": "https://www.sciencenews.org/article/microsoft-quantum-chip-upgrade-majorana",
+    "published": "2026-06-02T18:15:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "acb404f889f62fdcb617c9421beb5c33",
+    "_url_hash": "f2f1a092dee3bef011ec8c3213a9f47ccacad9942cd2802040b8256c40ef297e",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nErrors are a big problem for quantum computers, befuddling calculations and hindering the machines’ potential to outperform traditional computers. Microsoft’s new quantum chip could bring hope — for those who believe the company’s claims.\n\nMicrosoft has unveiled an improved version of its quantum chip, which is designed to resist errors. But the upgrade hasn’t convinced harsh critics of the company’s previous efforts.\n\nLast year, Microsoft reported that it had developed a new kind of a quantum chip that protects information based on principles of topology, the field of mathematics dealing with the geometry of structures with holes. That claim immediately drew skepticism from scientists.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-02T23:44:03.064212+00:00",
+  "failure": "content too short: 248 words",
+  "payload": {
+    "packet_id": "20260602T234126Z_10f4324bc8",
+    "title": "Microsoft kertoo parantaneensa kvanttipiiriään, mutta epäilyt jatkuvat",
+    "summary": "Microsoftin mukaan Majorana 2 -kvanttipiirin materiaalimuutos on parantanut topologiaan tukeutuvien kubittien toimintaa. Yhtiön väite ei kuitenkaan ole poistanut tutkijakritiikkiä, joka kohdistuu sen aiempiin ilmoituksiin virheitä sietävästä kvanttipiiristä.",
+    "content": "Microsoft kertoo parantaneensa Majorana 2 -kvanttipiiriään vaihtamalla sen materiaaleja. Yhtiön mukaan muutos tehosti kubitteja, joiden tarkoitus on hyödyntää topologian matematiikkaa kvanttilaskennan virheiden vähentämiseksi. Ilmoitus on merkittävä, koska virheet ovat yksi kvanttitietokoneiden keskeisistä esteistä, mutta se ei ole vakuuttanut kaikkia tutkijoita.\n\n## Virheet hidastavat kvanttilaskentaa\n\nKvanttitietokoneiden kehityksessä virheet voivat sekoittaa laskentaa ja estää koneita saavuttamasta sitä etua, jota niiltä odotetaan perinteisiin tietokoneisiin verrattuna. Siksi virheiden vähentäminen on olennainen tavoite, kun kvanttilaskennasta pyritään rakentamaan käytännössä hyödyllisiä järjestelmiä.\n\nMicrosoftin lähestymistapa perustuu yhtiön mukaan topologiaan. Topologia on matematiikan ala, joka käsittelee rakenteiden geometrisia ominaisuuksia, kuten aukkoja. Microsoft on kuvannut kehittävänsä kvanttipiiriä, jossa informaatio suojautuisi tällaisten periaatteiden avulla ja olisi näin vähemmän altis laskentaa häiritseville virheille.\n\n## Majorana 2 sai materiaalimuutoksen\n\nUudessa päivityksessä Microsoft kertoo vaihtaneensa Majorana 2 -piirin materiaaleja. Yhtiön mukaan tämä paransi niiden kubittien tehokkuutta, joiden on tarkoitus nojata topologiseen rakenteeseen virheiden vähentämisessä.\n\nLähdeaineiston perusteella päivitys ei kuitenkaan muuta sitä, että Microsoftin väitteisiin suhtaudutaan varauksella. Yhtiö kertoi jo viime vuonna kehittäneensä uudenlaisen kvanttipiirin, joka suojaisi informaatiota topologian periaatteiden avulla. Tuolloin ilmoitus herätti nopeasti epäilyjä tutkijoiden keskuudessa.\n\n## Kriitikot eivät ole vakuuttuneet\n\nMicrosoftin uusi ilmoitus voi yhtiön näkökulmasta tukea sen aiempaa linjaa, mutta kriitikot odottavat edelleen vahvempaa näyttöä. Epäily koskee sitä, osoittavatko yhtiön tulokset riittävästi, että piiri toimii väitetyllä tavalla ja että topologiaan perustuva suojaus todella auttaa ratkaisemaan kvanttilaskennan virheongelmaa.\n\nKiistan taustalla on suurempi kysymys: millä tekniikalla kvanttitietokoneista voidaan tehdä riittävän luotettavia. Microsoftin Majorana 2 -päivitys on yksi uusi väite tässä kehityksessä, mutta lähdetietojen perusteella osa tutkijoista pitää yhtiön näyttöä yhä epävarmana.",
+    "category": "Tiede",
+    "tags": [
+      "kvanttitietokoneet",
+      "Microsoft",
+      "kvanttilaskenta",
+      "topologia",
+      "teknologia"
+    ],
+    "summary_bullets": [
+      "Microsoft kertoo parantaneensa Majorana 2 -kvanttipiiriään materiaalimuutoksilla.",
+      "Yhtiön mukaan piiri hyödyntää topologiaa kvanttilaskennan virheiden vähentämiseen.",
+      "Osa tutkijoista suhtautuu edelleen epäillen Microsoftin väitteisiin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.77,
+    "journalist_note": "Artikkeli perustuu toimitettuun Science News -aineistoon. Yksityiskohtia ei laajennettu väitteisiin, joita paketissa ei tuettu."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260602T234126Z_10f4324bc8\",\n  \"title\": \"Microsoft kertoo parantaneensa kvanttipiiriään, mutta epäilyt jatkuvat\",\n  \"summary\": \"Microsoftin mukaan Majorana 2 -kvanttipiirin materiaalimuutos on parantanut topologiaan tukeutuvien kubittien toimintaa. Yhtiön väite ei kuitenkaan ole poistanut tutkijakritiikkiä, joka kohdistuu sen aiempiin ilmoituksiin virheitä sietävästä kvanttipiiristä.\",\n  \"content\": \"Microsoft kertoo parantaneensa Majorana 2 -kvanttipiiriään vaihtamalla sen materiaaleja. Yhtiön mukaan muutos tehosti kubitteja, joiden tarkoitus on hyödyntää topologian matematiikkaa kvanttilaskennan virheiden vähentämiseksi. Ilmoitus on merkittävä, koska virheet ovat yksi kvanttitietokoneiden keskeisistä esteistä, mutta se ei ole vakuuttanut kaikkia tutkijoita.\\n\\n## Virheet hidastavat kvanttilaskentaa\\n\\nKvanttitietokoneiden kehityksessä virheet voivat sekoittaa laskentaa ja estää koneita saavuttamasta sitä etua, jota niiltä odotetaan perinteisiin tietokoneisiin verrattuna. Siksi virheiden vähentäminen on olennainen tavoite, kun kvanttilaskennasta pyritään rakentamaan käytännössä hyödyllisiä järjestelmiä.\\n\\nMicrosoftin lähestymistapa perustuu yhtiön mukaan topologiaan. Topologia on matematiikan ala, joka käsittelee rakenteiden geometrisia ominaisuuksia, kuten aukkoja. Microsoft on kuvannut kehittävänsä kvanttipiiriä, jossa informaatio suojautuisi tällaisten periaatteiden avulla ja olisi näin vähemmän altis laskentaa häiritseville virheille.\\n\\n## Majorana 2 sai materiaalimuutoksen\\n\\nUudessa päivityksessä Microsoft kertoo vaihtaneensa Majorana 2 -piirin materiaaleja. Yhtiön mukaan tämä paransi niiden kubittien tehokkuutta, joiden on tarkoitus nojata topologiseen rakenteeseen virheiden vähentämisessä.\\n\\nLähdeaineiston perusteella päivitys ei kuitenkaan muuta sitä, että Microsoftin väitteisiin suhtaudutaan varauksella. Yhtiö kertoi jo viime vuonna kehittäneensä uudenlaisen kvanttipiirin, joka suojaisi informaatiota topologian periaatteiden avulla. Tuolloin ilmoitus herätti nopeasti epäilyjä tutkijoiden keskuudessa.\\n\\n## Kriitikot eivät ole vakuuttuneet\\n\\nMicrosoftin uusi ilmoitus voi yhtiön näkökulmasta tukea sen aiempaa linjaa, mutta kriitikot odottavat edelleen vahvempaa näyttöä. Epäily koskee sitä, osoittavatko yhtiön tulokset riittävästi, että piiri toimii väitetyllä tavalla ja että topologiaan perustuva suojaus todella auttaa ratkaisemaan kvanttilaskennan virheongelmaa.\\n\\nKiistan taustalla on suurempi kysymys: millä tekniikalla kvanttitietokoneista voidaan tehdä riittävän luotettavia. Microsoftin Majorana 2 -päivitys on yksi uusi väite tässä kehityksessä, mutta lähdetietojen perusteella osa tutkijoista pitää yhtiön näyttöä yhä epävarmana.\",\n  \"category\": \"Tiede\",\n  \"tags\": [\n    \"kvanttitietokoneet\",\n    \"Microsoft\",\n    \"kvanttilaskenta\",\n    \"topologia\",\n    \"teknologia\"\n  ],\n  \"summary_bullets\": [\n    \"Microsoft kertoo parantaneensa Majorana 2 -kvanttipiiriään materiaalimuutoksilla.\",\n    \"Yhtiön mukaan piiri hyödyntää topologiaa kvanttilaskennan virheiden vähentämiseen.\",\n    \"Osa tutkijoista suhtautuu edelleen epäillen Microsoftin väitteisiin.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.77,\n  \"journalist_note\": \"Artikkeli perustuu toimitettuun Science News -aineistoon. Yksityiskohtia ei laajennettu väitteisiin, joita paketissa ei tuettu.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260602T234126Z_10f4324bc8",
+    "category": "Tiede",
+    "selected_source_words": 129,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.77,
+    "final_word_count": 248,
+    "issues": [
+      "content too short: 248 words"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Microsoft kertoo parantaneensa kvanttipiiriään, mutta epäilyt jatkuvat"
+  }
+}
