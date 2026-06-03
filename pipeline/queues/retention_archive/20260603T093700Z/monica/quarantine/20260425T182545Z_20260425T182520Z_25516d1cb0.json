@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-25T18:25:45Z",
+  "reason": "aineisto on liian niukka eikä sisällä riittävästi varmennettuja ottelutietoja 250 sanan uutisjuttuun",
+  "packet": {
+    "packet_id": "20260425T182520Z_25516d1cb0",
+    "created_at": "2026-04-25T18:25:20Z",
+    "headline_seed": "Rumat lukemat! SaiPa lyötiin tylysti – Tappara voitti uskomattoman trillerin",
+    "description_seed": "IS seurasi isojen panosten otteluita.",
+    "link": "https://www.is.fi/sm-liiga/art-2000011967609.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "source-3",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.is.fi/sm-liiga/art-2000011967609.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.55,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Rumat lukemat! SaiPa lyötiin tylysti – Tappara voitti uskomattoman trillerin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Torjunnat: Heljanko Tappara 8 +6+5 + 1 = 20 Pavlat Ilves 6 +10+4 + 2 = 22",
+        "word_count": 17,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "SM-liigan finaalipaikat menivät nyt katkolle Tapparalle ja KooKoolle. Yle seurasi tapahtumia tässä artikkelissa.",
+        "word_count": 13,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Torjunnat: Heljanko Tappara 8 +6+5 + 1 = 20 Pavlat Ilves 6 +10+4 + 2 = 22\n\nSM-liigan finaalipaikat menivät nyt katkolle Tapparalle ja KooKoolle. Yle seurasi tapahtumia tässä artikkelissa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Rumat lukemat! SaiPa lyötiin tylysti – Tappara voitti uskomattoman trillerin",
+      "description": "IS seurasi isojen panosten otteluita.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=2dde8607-5a8d-4399-967d-6d2564f461e3 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T182520Z_25516d1cb0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on liian niukka eikä sisällä riittävästi varmennettuja ottelutietoja 250 sanan uutisjuttuun\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

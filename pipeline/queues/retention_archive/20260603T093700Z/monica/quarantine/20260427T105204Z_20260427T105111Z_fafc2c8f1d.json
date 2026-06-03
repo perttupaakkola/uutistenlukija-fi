@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T10:52:04Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T105111Z_fafc2c8f1d",
+    "created_at": "2026-04-27T10:51:11Z",
+    "headline_seed": "Helsingin Roihuvuoressa paloi useita autoja – poliisi epäilee teosta kolmea alaikäistä",
+    "description_seed": "Tutkinnan yhteydessä nuorten puhelimista löytyi myös väkivalta­kuvamateriaalia. Autokatospalo sattui huhtikuun alussa.",
+    "link": "https://yle.fi/a/74-20222897?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "Yle Uutiset",
+      "source-12",
+      "ksml.fi"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222897?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Helsingin Roihuvuoressa paloi useita autoja – poliisi epäilee teosta kolmea alaikäistä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Tutkinnan yhteydessä nuorten puhelimista löytyi myös väkivalta­kuvamateriaalia. Autokatospalo sattui huhtikuun alussa.",
+        "word_count": 11,
+        "keyword_overlap": 11,
+        "strong_overlap": 11
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Poliisi epäilee kolmea alaikäistä nuorta Helsingin Roihuvuoressa pääsiäisenä tapahtuneesta autokatospalosta. Epäillyistä kaksi on 16-vuotiaita ja yksi 14-vuotias.",
+        "word_count": 17,
+        "keyword_overlap": 6,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Roihuvuoressa paloi huhtikuun alussa kerrostalon autokatos ja kahdeksan henkilöautoa. Törkeästä vahingonteosta epäillään kolmea alaikäistä nuorta, joilta löytyy taustalta myös aiempaa rikollisuutta.",
+        "word_count": 21,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Naapurin toiminta pelasti useita autoja Helsingin Roihuvuoressa, kertoo Helsingin Sanomat. Kun taloyhtiön autokatoksessa syttyi tulipalo lauantain vastaisena yön, ei helsinkiläinen Leila Sheik Ahmed epäröinyt toimia. Hän kävi kaikki naapurien ovet läpi ja varoitti pihalla roihuavasta tulipalosta.",
+        "word_count": 36,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Tutkinnan yhteydessä nuorten puhelimista löytyi myös väkivalta­kuvamateriaalia. Autokatospalo sattui huhtikuun alussa.\n\nPoliisi epäilee kolmea alaikäistä nuorta Helsingin Roihuvuoressa pääsiäisenä tapahtuneesta autokatospalosta. Epäillyistä kaksi on 16-vuotiaita ja yksi 14-vuotias.\n\nRoihuvuoressa paloi huhtikuun alussa kerrostalon autokatos ja kahdeksan henkilöautoa. Törkeästä vahingonteosta epäillään kolmea alaikäistä nuorta, joilta löytyy taustalta myös aiempaa rikollisuutta.\n\nNaapurin toiminta pelasti useita autoja Helsingin Roihuvuoressa, kertoo Helsingin Sanomat. Kun taloyhtiön autokatoksessa syttyi tulipalo lauantain vastaisena yön, ei helsinkiläinen Leila Sheik Ahmed epäröinyt toimia. Hän kävi kaikki naapurien ovet läpi ja varoitti pihalla roihuavasta tulipalosta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Helsingin Roihuvuoressa paloi useita autoja – poliisi epäilee teosta kolmea alaikäistä",
+      "description": "Tutkinnan yhteydessä nuorten puhelimista löytyi myös väkivalta­kuvamateriaalia. Autokatospalo sattui huhtikuun alussa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=24897 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=24902 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

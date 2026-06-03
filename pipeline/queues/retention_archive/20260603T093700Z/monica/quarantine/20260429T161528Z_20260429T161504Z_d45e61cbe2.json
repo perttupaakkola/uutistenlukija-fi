@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-29T16:15:28Z",
+  "reason": "Lähdeaineistossa on liian vähän varmennettuja tietoja yleisöwc:iden kunnosta, havainnoista ja asiayhteydestä 250 sanan uutisartikkeliin ilman oletuksia.",
+  "packet": {
+    "packet_id": "20260429T161504Z_d45e61cbe2",
+    "created_at": "2026-04-29T16:15:04Z",
+    "headline_seed": "Lahden torin vessa ei hurmaa siisteydellä, paperia sentään löytyi",
+    "description_seed": "ESS kiersi katsomassa, miltä Lahden yleisöwc:t näyttävät ennen kesäkauden alkua.",
+    "link": "https://www.ess.fi/paikalliset/9415241",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Etelä-Suomen Sanomat",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9415241"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.62,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahden torin vessa ei hurmaa siisteydellä, paperia sentään löytyi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Etelä-Suomen Sanomat",
+        "source_type": "description",
+        "text": "ESS kiersi katsomassa, miltä Lahden yleisöwc:t näyttävät ennen kesäkauden alkua.",
+        "word_count": 10,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Lahden kaupunkiympäristölautakunta osoitti helmikuun puolivälissä torin kehittämiseen 500 000 euroa investointirahaa. Tänä vuonna tavoitteena on laatia torille yleissuunnitelma sekä toteuttamisohjelma. Työtä tehdään yhdessä asukkaiden ja eri sidosryhmien kanssa järjestettävissä tilaisuuksissa.",
+        "word_count": 30,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "ESS kiersi katsomassa, miltä Lahden yleisöwc:t näyttävät ennen kesäkauden alkua.\n\nLahden kaupunkiympäristölautakunta osoitti helmikuun puolivälissä torin kehittämiseen 500 000 euroa investointirahaa. Tänä vuonna tavoitteena on laatia torille yleissuunnitelma sekä toteuttamisohjelma. Työtä tehdään yhdessä asukkaiden ja eri sidosryhmien kanssa järjestettävissä tilaisuuksissa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahden torin vessa ei hurmaa siisteydellä, paperia sentään löytyi",
+      "description": "ESS kiersi katsomassa, miltä Lahden yleisöwc:t näyttävät ennen kesäkauden alkua.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T161504Z_d45e61cbe2\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on liian vähän varmennettuja tietoja yleisöwc:iden kunnosta, havainnoista ja asiayhteydestä 250 sanan uutisartikkeliin ilman oletuksia.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

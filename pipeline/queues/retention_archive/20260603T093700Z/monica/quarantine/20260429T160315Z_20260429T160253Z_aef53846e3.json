@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-29T16:03:15Z",
+  "reason": "Lähdeaineistossa on liian vähän varmennettuja tietoja puheen asiayhteydestä, lainauksista ja tapahtuman kokonaisuudesta 250 sanan uutisartikkeliin ilman oletuksia.",
+  "packet": {
+    "packet_id": "20260429T160253Z_aef53846e3",
+    "created_at": "2026-04-29T16:02:53Z",
+    "headline_seed": "Viron presidentti: Armeijamme syntyi uudelleen Suomessa",
+    "description_seed": "Santahaminassa puhunut presidentti Alar Karis muistutti, että Viron puolustus­voimien nykyinen ylin johto sai upseerin­koulutuksensa Suomessa.",
+    "link": "https://yle.fi/a/74-20223427?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-2",
+      "source-16",
+      "source-6"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20223427?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Viron presidentti: Armeijamme syntyi uudelleen Suomessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Santahaminassa puhunut presidentti Alar Karis muistutti, että Viron puolustus­voimien nykyinen ylin johto sai upseerin­koulutuksensa Suomessa.",
+        "word_count": 15,
+        "keyword_overlap": 15,
+        "strong_overlap": 9
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Presidentti Alar Karis muistutti opiskelijoille, että Maanpuolustuskorkeakoululla oli tärkeä rooli Viron puolustusvoimien uudelleen rakentamisessa 1990-luvun alussa.",
+        "word_count": 16,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-16",
+        "source_type": "research",
+        "text": "Viron presidentti Karis uskoo, että kauempana olevien Euroopan maiden johto on alkanut ymmärtää, että myös he ovat nykyisin lähellä Venäjää.",
+        "word_count": 20,
+        "keyword_overlap": 5,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Tasavallan presidentti Alexander Stubbin mielestä amerikkalaisille on tärkeää, että tärkeimmät arktisen alueen maat, kuten Suomi, Ruotsi, Norja ja Grönlannin omistava Tanska kuuluvat Yhdysvaltain johtamaan Naton Norfolkin esikuntaan.",
+        "word_count": 27,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Santahaminassa puhunut presidentti Alar Karis muistutti, että Viron puolustus­voimien nykyinen ylin johto sai upseerin­koulutuksensa Suomessa.\n\nPresidentti Alar Karis muistutti opiskelijoille, että Maanpuolustuskorkeakoululla oli tärkeä rooli Viron puolustusvoimien uudelleen rakentamisessa 1990-luvun alussa.\n\nViron presidentti Karis uskoo, että kauempana olevien Euroopan maiden johto on alkanut ymmärtää, että myös he ovat nykyisin lähellä Venäjää.\n\nTasavallan presidentti Alexander Stubbin mielestä amerikkalaisille on tärkeää, että tärkeimmät arktisen alueen maat, kuten Suomi, Ruotsi, Norja ja Grönlannin omistava Tanska kuuluvat Yhdysvaltain johtamaan Naton Norfolkin esikuntaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Viron presidentti: Armeijamme syntyi uudelleen Suomessa",
+      "description": "Santahaminassa puhunut presidentti Alar Karis muistutti, että Viron puolustus­voimien nykyinen ylin johto sai upseerin­koulutuksensa Suomessa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T160253Z_aef53846e3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on liian vähän varmennettuja tietoja puheen asiayhteydestä, lainauksista ja tapahtuman kokonaisuudesta 250 sanan uutisartikkeliin ilman oletuksia.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

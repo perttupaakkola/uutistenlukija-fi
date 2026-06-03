@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T10:36:04Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T103509Z_467a79c52c",
+    "created_at": "2026-04-27T10:35:09Z",
+    "headline_seed": "Suspected gunman at Washington press dinner identified as 31-year-old Californian",
+    "description_seed": "The man arrested at the event attended by President Trump has been named in US media as Cole Tomas Allen from California.",
+    "link": "https://www.bbc.com/news/articles/cr717nglye0o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-19",
+      "BBC"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cr717nglye0o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.86,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suspected gunman at Washington press dinner identified as 31-year-old Californian"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The man arrested at the event attended by President Trump has been named in US media as Cole Tomas Allen from California.",
+        "word_count": 22,
+        "keyword_overlap": 13,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The man arrested after shots were fired inside the hotel where the White House Correspondents' Dinner was being held on Saturday night has been named by law enforcement officials as Cole Tomas Allen.",
+        "word_count": 33,
+        "keyword_overlap": 7,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-19",
+        "source_type": "research",
+        "text": "The 31-year-old suspect, who described himself as a mechanical engineer, game developer and teacher, is from Torrance in the Los Angeles region of California.",
+        "word_count": 24,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "President Trump shared this photo appearing to show the shirtless suspect on the floor of the Washington Hilton hotel",
+        "word_count": 19,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "The man arrested at the event attended by President Trump has been named in US media as Cole Tomas Allen from California.\n\nThe man arrested after shots were fired inside the hotel where the White House Correspondents' Dinner was being held on Saturday night has been named by law enforcement officials as Cole Tomas Allen.\n\nThe 31-year-old suspect, who described himself as a mechanical engineer, game developer and teacher, is from Torrance in the Los Angeles region of California.\n\nPresident Trump shared this photo appearing to show the shirtless suspect on the floor of the Washington Hilton hotel",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suspected gunman at Washington press dinner identified as 31-year-old Californian",
+      "description": "The man arrested at the event attended by President Trump has been named in US media as Cole Tomas Allen from California.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=26152 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=26155 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

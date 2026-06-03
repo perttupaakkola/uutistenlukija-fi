@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-29T12:42:23Z",
+  "reason": "Paketti sisältää vain niukat tiedot Fedin korko-odotuksesta ja yhden yleisen arvion öljyn hinnasta. Aineisto ei riitä vähintään 250 sanan julkaistavaan talousuutiseen ilman puuttuvia taustatietoja tai lisäoletuksia.",
+  "packet": {
+    "packet_id": "20260429T124200Z_a2cc1417cf",
+    "created_at": "2026-04-29T12:42:00Z",
+    "headline_seed": "KOROT JA VALUUTAT: Fed päättää koroista – Öljyn hinta kipuaa kohti 115 dollaria",
+    "description_seed": "Yhdysvaltain keskuspankin odotetaan pitävän ohjauskorkonsa ennallaan tämän päivän kokouksessaan. Keskiviikon korkokokous jäänee Fedin pääjohtaja Jerome Powellin viimeiseksi.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/e7680956-98f8-4b0b-97e5-3153ecdafa93",
+    "source": "Kauppalehti KL-Nyt",
+    "source_names": [
+      "Kauppalehti KL-Nyt",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/e7680956-98f8-4b0b-97e5-3153ecdafa93"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.63,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "KOROT JA VALUUTAT: Fed päättää koroista – Öljyn hinta kipuaa kohti 115 dollaria"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti KL-Nyt",
+        "source_type": "description",
+        "text": "Yhdysvaltain keskuspankin odotetaan pitävän ohjauskorkonsa ennallaan tämän päivän kokouksessaan. Keskiviikon korkokokous jäänee Fedin pääjohtaja Jerome Powellin viimeiseksi.",
+        "word_count": 17,
+        "keyword_overlap": 17,
+        "strong_overlap": 15
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Tarkkaa arviota hinnannousulle ja kestolle on von Gerichin mukaan vielä vaikea antaa. Hinnat ovat todennäköisemmin 70–80 dollaria tynnyriltä kuin yli 100 dollaria. Osa on kuitenkin ennakoinut jopa 120 dollaria tynnyrihintaa.",
+        "word_count": 30,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Yhdysvaltain keskuspankin odotetaan pitävän ohjauskorkonsa ennallaan tämän päivän kokouksessaan. Keskiviikon korkokokous jäänee Fedin pääjohtaja Jerome Powellin viimeiseksi.\n\nTarkkaa arviota hinnannousulle ja kestolle on von Gerichin mukaan vielä vaikea antaa. Hinnat ovat todennäköisemmin 70–80 dollaria tynnyriltä kuin yli 100 dollaria. Osa on kuitenkin ennakoinut jopa 120 dollaria tynnyrihintaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "KOROT JA VALUUTAT: Fed päättää koroista – Öljyn hinta kipuaa kohti 115 dollaria",
+      "description": "Yhdysvaltain keskuspankin odotetaan pitävän ohjauskorkonsa ennallaan tämän päivän kokouksessaan. Keskiviikon korkokokous jäänee Fedin pääjohtaja Jerome Powellin viimeiseksi.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T124200Z_a2cc1417cf\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää vain niukat tiedot Fedin korko-odotuksesta ja yhden yleisen arvion öljyn hinnasta. Aineisto ei riitä vähintään 250 sanan julkaistavaan talousuutiseen ilman puuttuvia taustatietoja tai lisäoletuksia.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

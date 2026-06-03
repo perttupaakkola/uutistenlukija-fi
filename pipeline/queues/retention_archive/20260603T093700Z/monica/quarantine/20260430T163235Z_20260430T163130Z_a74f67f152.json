@@ -1,0 +1,90 @@
+{
+  "ts": "2026-04-30T16:32:35Z",
+  "reason": "schema_invalid",
+  "packet": {
+    "packet_id": "20260430T163130Z_a74f67f152",
+    "created_at": "2026-04-30T16:31:30Z",
+    "headline_seed": "Helsingin ratikoiden uusi väritys jakaa mielipiteitä – ”Piristävää”, sanoo Leena Nordman",
+    "description_seed": "Anni Sinnemäki ja Paavo Arhinmäki närkästyivät, kun poliitikoilta ei kysytty näkemystä värien uudistuksesta.",
+    "link": "https://yle.fi/a/74-20223650?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-4",
+      "Yle Uutiset",
+      "source-10"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20223650?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.8,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Helsingin ratikoiden uusi väritys jakaa mielipiteitä – ”Piristävää”, sanoo Leena Nordman"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Anni Sinnemäki ja Paavo Arhinmäki närkästyivät, kun poliitikoilta ei kysytty näkemystä värien uudistuksesta.",
+        "word_count": 13,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Keskustelu ratikoiden väreistä virisi keskiviikkona, kun Helsingin kaupunginvaltuuston toinen varapuheenjohtaja Anni Sinnemäki (vihr.) ja apulaispormestari Paavo Arhinmäki (vas.) vaativat Helsingin Sanomissa vanhojen värien palauttamista katukuvan vaalimiseksi.",
+        "word_count": 26,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Helsingin raitiovaunujen uusi väritys ei miellytä kaikkien silmää.",
+        "word_count": 8,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "– Ihan hyvä uudistus. On piristävää, kun näkee uusia värejä, vaihtelu virkistää, kommentoi Leena Nordman.",
+        "word_count": 15,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Anni Sinnemäki ja Paavo Arhinmäki närkästyivät, kun poliitikoilta ei kysytty näkemystä värien uudistuksesta.\n\nKeskustelu ratikoiden väreistä virisi keskiviikkona, kun Helsingin kaupunginvaltuuston toinen varapuheenjohtaja Anni Sinnemäki (vihr.) ja apulaispormestari Paavo Arhinmäki (vas.) vaativat Helsingin Sanomissa vanhojen värien palauttamista katukuvan vaalimiseksi.\n\nHelsingin raitiovaunujen uusi väritys ei miellytä kaikkien silmää.\n\n– Ihan hyvä uudistus. On piristävää, kun näkee uusia värejä, vaihtelu virkistää, kommentoi Leena Nordman.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Helsingin ratikoiden uusi väritys jakaa mielipiteitä – ”Piristävää”, sanoo Leena Nordman",
+      "description": "Anni Sinnemäki ja Paavo Arhinmäki närkästyivät, kun poliitikoilta ei kysytty näkemystä värien uudistuksesta.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T163130Z_a74f67f152\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Alkuperäinen aineisto ei tue 280–420 sanan faktapohjaista artikkelia ilman täytemaista tulkintaa: päätösprosessi, värien tarkka muutos, kustannukset ja jatkotoimet puuttuvat.\"}",
+  "extra": {
+    "issues": [
+      "missing keys: title, summary, content, category, tags, summary_bullets, content_type, editorial_reviewed, confidence, journalist_note"
+    ],
+    "payload": {
+      "packet_id": "20260430T163130Z_a74f67f152",
+      "status": "INSUFFICIENT_CONFIDENCE",
+      "reason": "Alkuperäinen aineisto ei tue 280–420 sanan faktapohjaista artikkelia ilman täytemaista tulkintaa: päätösprosessi, värien tarkka muutos, kustannukset ja jatkotoimet puuttuvat."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T17:29:43Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T172849Z_ff6a281649",
+    "created_at": "2026-04-27T17:28:49Z",
+    "headline_seed": "Pro-Palestine activists appear in court over attack on Israeli arms factory in Germany",
+    "description_seed": "Families say ‘Ulm 5’ have been detained under extreme prison conditions since arrest last September Five pro-Palestinian activists have appeared in court over an attack on an Israeli arms company in Germany, charged with causing approximately €1m of damage. Prosecutors say the defendants, aged 25 to 40, trespassed and yelled pro-Palestinian statements as they destroyed office equipment, sensitive measuring devices and smashed windows at a site linked to Elbit Systems in the southern city of Ulm. Continue reading...",
+    "link": "https://www.theguardian.com/world/2026/apr/27/pro-palestine-activists-face-trial-attack-israel-arms-factory-germany",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-3",
+      "source-2",
+      "The Guardian World"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/apr/27/pro-palestine-activists-face-trial-attack-israel-arms-factory-germany"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.96,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pro-Palestine activists appear in court over attack on Israeli arms factory in Germany"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Families say ‘Ulm 5’ have been detained under extreme prison conditions since arrest last September Five pro-Palestinian activists have appeared in court over an attack on an Israeli arms company in Germany, charged with causing approximately €1m of damage. Prosecutors say the defendants, aged 25 to 40, trespassed and yelled pro-Palestinian statements as they destroyed office equipment, sensitive measuring devices and smashed windows at a site linked to Elbit Systems in the southern city of Ulm. Continue reading...",
+        "word_count": 78,
+        "keyword_overlap": 51,
+        "strong_overlap": 36
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Prosecutors say the defendants, aged 25 to 40, trespassed and yelled pro-Palestinian statements as they destroyed office equipment, sensitive measuring devices and smashed windows at a site linked to Elbit Systems in the southern city of Ulm.",
+        "word_count": 37,
+        "keyword_overlap": 22,
+        "strong_overlap": 17
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Five pro-Palestinian activists have appeared in court over an attack on an Israeli arms company in Germany, charged with causing approximately €1m of damage.",
+        "word_count": 24,
+        "keyword_overlap": 17,
+        "strong_overlap": 11
+      },
+      {
+        "source": "The Guardian World",
+        "source_type": "research",
+        "text": "Families say ‘Ulm 5’ have been detained under extreme prison conditions since arrest last September",
+        "word_count": 15,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Families say ‘Ulm 5’ have been detained under extreme prison conditions since arrest last September Five pro-Palestinian activists have appeared in court over an attack on an Israeli arms company in Germany, charged with causing approximately €1m of damage. Prosecutors say the defendants, aged 25 to 40, trespassed and yelled pro-Palestinian statements as they destroyed office equipment, sensitive measuring devices and smashed windows at a site linked to Elbit Systems in the southern city of Ulm. Continue reading...\n\nProsecutors say the defendants, aged 25 to 40, trespassed and yelled pro-Palestinian statements as they destroyed office equipment, sensitive measuring devices and smashed windows at a site linked to Elbit Systems in the southern city of Ulm.\n\nFive pro-Palestinian activists have appeared in court over an attack on an Israeli arms company in Germany, charged with causing approximately €1m of damage.\n\nFamilies say ‘Ulm 5’ have been detained under extreme prison conditions since arrest last September",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pro-Palestine activists appear in court over attack on Israeli arms factory in Germany",
+      "description": "Families say ‘Ulm 5’ have been detained under extreme prison conditions since arrest last September Five pro-Palestinian activists have appeared in court over an attack on an Israeli arms company in Germany, charged with causing approximately €1m of damage. Prosecutors say the defendants, aged 25 to 40, trespassed and yelled pro-Palestinian statements as they destroyed office equipment, sensitive measuring devices and smashed windows at a site linked to Elbit Systems in the southern city of Ulm. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25701 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25704 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

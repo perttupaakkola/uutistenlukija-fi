@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T17:40:21Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T173927Z_e110eaea25",
+    "created_at": "2026-04-26T17:39:27Z",
+    "headline_seed": "Final steps taken before audacious plan to tow whale stranded in Germany to North Sea",
+    "description_seed": "Millionaire funded operation called ‘pure animal cruelty’ after environment minister sent threats on social media Final preparations are reportedly under way for a millionaire funded plan to tow a sickly humpback whale into the North Sea. The 12-tonne whale, nicknamed Timmy, has been stranded on the Baltic Sea coastline for almost a month. A barge resembling a giant steel aquarium will attempt to transport Timmy 400km (248 miles) towards the North Sea, and then hopefully back to the Atlantic Ocean from where it is believed to have arrived. Continue reading...",
+    "link": "https://www.theguardian.com/world/2026/apr/26/final-steps-audacious-plan-tow-whale-stranded-germany-north-sea-timmy",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-3",
+      "The Guardian World",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/apr/26/final-steps-audacious-plan-tow-whale-stranded-germany-north-sea-timmy"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Final steps taken before audacious plan to tow whale stranded in Germany to North Sea"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Millionaire funded operation called ‘pure animal cruelty’ after environment minister sent threats on social media Final preparations are reportedly under way for a millionaire funded plan to tow a sickly humpback whale into the North Sea. The 12-tonne whale, nicknamed Timmy, has been stranded on the Baltic Sea coastline for almost a month. A barge resembling a giant steel aquarium will attempt to transport Timmy 400km (248 miles) towards the North Sea, and then hopefully back to the Atlantic Ocean from where it is believed to have arrived. Continue reading...",
+        "word_count": 90,
+        "keyword_overlap": 56,
+        "strong_overlap": 31
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "The 12-tonne whale, nicknamed Timmy, has been stranded on the Baltic Sea coastline for almost a month. A barge resembling a giant steel aquarium will attempt to transport Timmy 400km (248 miles) towards the North Sea, and then hopefully back to the Atlantic Ocean from where it is believed to have arrived.",
+        "word_count": 52,
+        "keyword_overlap": 32,
+        "strong_overlap": 15
+      },
+      {
+        "source": "The Guardian World",
+        "source_type": "research",
+        "text": "Millionaire funded operation called ‘pure animal cruelty’ after environment minister sent threats on social media",
+        "word_count": 15,
+        "keyword_overlap": 14,
+        "strong_overlap": 10
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Final preparations are reportedly under way for a millionaire funded plan to tow a sickly humpback whale into the North Sea.",
+        "word_count": 21,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Millionaire funded operation called ‘pure animal cruelty’ after environment minister sent threats on social media Final preparations are reportedly under way for a millionaire funded plan to tow a sickly humpback whale into the North Sea. The 12-tonne whale, nicknamed Timmy, has been stranded on the Baltic Sea coastline for almost a month. A barge resembling a giant steel aquarium will attempt to transport Timmy 400km (248 miles) towards the North Sea, and then hopefully back to the Atlantic Ocean from where it is believed to have arrived. Continue reading...\n\nThe 12-tonne whale, nicknamed Timmy, has been stranded on the Baltic Sea coastline for almost a month. A barge resembling a giant steel aquarium will attempt to transport Timmy 400km (248 miles) towards the North Sea, and then hopefully back to the Atlantic Ocean from where it is believed to have arrived.\n\nMillionaire funded operation called ‘pure animal cruelty’ after environment minister sent threats on social media\n\nFinal preparations are reportedly under way for a millionaire funded plan to tow a sickly humpback whale into the North Sea.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Final steps taken before audacious plan to tow whale stranded in Germany to North Sea",
+      "description": "Millionaire funded operation called ‘pure animal cruelty’ after environment minister sent threats on social media Final preparations are reportedly under way for a millionaire funded plan to tow a sickly humpback whale into the North Sea. The 12-tonne whale, nicknamed Timmy, has been stranded on the Baltic Sea coastline for almost a month. A barge resembling a giant steel aquarium will attempt to transport Timmy 400km (248 miles) towards the North Sea, and then hopefully back to the Atlantic Ocean from where it is believed to have arrived. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25999 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=26002 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

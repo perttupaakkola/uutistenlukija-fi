@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-28T18:13:25Z",
+  "reason": "Paketti sisältää liian vähän varmennettuja tietoja tarkastusten perusteista, aikataulusta ja viranomaislinjauksista julkaistavaan uutiseen.",
+  "packet": {
+    "packet_id": "20260428T181306Z_ba8ccf6a87",
+    "created_at": "2026-04-28T18:13:06Z",
+    "headline_seed": "ABC:n televisioasemille määrättiin aikaistettuja tarkastuksia Jimmy Kimmel -kiistan vuoksi",
+    "description_seed": "Trump on painostanut ABC-televisiokanavaa.",
+    "link": "https://yle.fi/a/74-20223222?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20223222?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.63,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "ABC:n televisioasemille määrättiin aikaistettuja tarkastuksia Jimmy Kimmel -kiistan vuoksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Yhdysvaltain viestintävirasto (FCC) aikoo määrätä aikaistettuja tarkastuksia kahdeksalle Disneyn omistamalle ABC-kanavan televisioasemalle, kertoo uutistoimisto Reutersin lähde.",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Yhdysvaltain presidentti Donald Trump on vaatinut, että Disneyn ja ABC:n pitäisi erottaa tunnettu juontaja Jimmy Kimmel välittömästi. Trump vaatii kanavalta toimia, sillä Kimmel vitsaili viime viikon torstaina ohjelmassaan lauantaisesta kirjeenvaihtajien juhlaillallisesta Washingtonissa.",
+        "word_count": 32,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Yhdysvaltain viestintävirasto (FCC) aikoo määrätä aikaistettuja tarkastuksia kahdeksalle Disneyn omistamalle ABC-kanavan televisioasemalle, kertoo uutistoimisto Reutersin lähde.\n\nYhdysvaltain presidentti Donald Trump on vaatinut, että Disneyn ja ABC:n pitäisi erottaa tunnettu juontaja Jimmy Kimmel välittömästi. Trump vaatii kanavalta toimia, sillä Kimmel vitsaili viime viikon torstaina ohjelmassaan lauantaisesta kirjeenvaihtajien juhlaillallisesta Washingtonissa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "ABC:n televisioasemille määrättiin aikaistettuja tarkastuksia Jimmy Kimmel -kiistan vuoksi",
+      "description": "Trump on painostanut ABC-televisiokanavaa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260428T181306Z_ba8ccf6a87\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää liian vähän varmennettuja tietoja tarkastusten perusteista, aikataulusta ja viranomaislinjauksista julkaistavaan uutiseen.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

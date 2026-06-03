@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T18:29:26Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T182832Z_66c07e14b4",
+    "created_at": "2026-04-27T18:28:32Z",
+    "headline_seed": "French coastguard rescues more than 100 migrants crossing Channel",
+    "description_seed": "A boat carrying 106 people broke down at sea, while others were rescued attempting to board the vessel.",
+    "link": "https://www.bbc.com/news/articles/c3v6v4qd7qqo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-8",
+      "source-12"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c3v6v4qd7qqo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.88,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "French coastguard rescues more than 100 migrants crossing Channel"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A boat carrying 106 people broke down at sea, while others were rescued attempting to board the vessel.",
+        "word_count": 18,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The French coastguard has rescued 106 people travelling in a single boat after it broke down during an attempt to cross the English Channel.",
+        "word_count": 24,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "On Thursday, Home Secretary Shabana Mahmood signed a three-year agreement with France that would see riot-trained police sent to beaches along the northern coast to stop migrants crossing the Channel in small boats.",
+        "word_count": 33,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Between 1 January and 22 April 2026, a total of 6,077 people crossed the English Channel by small boat from France, down by 37% for the same period the previous year.",
+        "word_count": 31,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "A boat carrying 106 people broke down at sea, while others were rescued attempting to board the vessel.\n\nThe French coastguard has rescued 106 people travelling in a single boat after it broke down during an attempt to cross the English Channel.\n\nOn Thursday, Home Secretary Shabana Mahmood signed a three-year agreement with France that would see riot-trained police sent to beaches along the northern coast to stop migrants crossing the Channel in small boats.\n\nBetween 1 January and 22 April 2026, a total of 6,077 people crossed the English Channel by small boat from France, down by 37% for the same period the previous year.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "French coastguard rescues more than 100 migrants crossing Channel",
+      "description": "A boat carrying 106 people broke down at sea, while others were rescued attempting to board the vessel.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25956 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25958 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T07:40:17Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T074011Z_3e31211328",
+    "created_at": "2026-04-27T07:40:11Z",
+    "headline_seed": "Syökö historian painolasti Ilvestä? Nyt puhuvat pelaajat ja valmennus",
+    "description_seed": "2-0-johdon hukkaaminen välieräsarjassa on nostanut pintaan tutun keskustelun Tampereen Ilveksen ympärillä. Ilveksen on voitettava tänään Tappara, jos se mielii jatkaa välieräsarjaa.",
+    "link": "https://yle.fi/a/74-20222787?origin=rss",
+    "source": "Yle Urheilu",
+    "source_names": [
+      "Yle Urheilu",
+      "source-9",
+      "source-6",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222787?origin=rss"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Syökö historian painolasti Ilvestä? Nyt puhuvat pelaajat ja valmennus"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Urheilu",
+        "source_type": "description",
+        "text": "2-0-johdon hukkaaminen välieräsarjassa on nostanut pintaan tutun keskustelun Tampereen Ilveksen ympärillä. Ilveksen on voitettava tänään Tappara, jos se mielii jatkaa välieräsarjaa.",
+        "word_count": 21,
+        "keyword_overlap": 16,
+        "strong_overlap": 15
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Kokeneet Ilves-pelaajat Jarkko Parikka ja Matias Mäntykivi kieltävät historian painavan hartioilla. Kaksikko tunnistaa seuran ympärillä pyörivän keskustelun, mutta ei ota siitä painetta.",
+        "word_count": 22,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Aiemmin Ilvestä luotsannut maajoukkueluotsi Antti Pennanen vertasi pari vuotta takaperin Ilvestä Toronto Maple Leafsiin. Pennasen mukaan historian taakka ja yhteisön paine vaikuttavat pelaajiin tiukoissa paikoissa niin Tampereella kuin Torontossa.",
+        "word_count": 29,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Siinä, missä paikalliskilpailija Tapparaa pidetään kylmänä voittokoneena, Ilveksen ympärillä leijuu häviämisen aura. Joukkueen viimeisin mestaruus on 41 vuoden takaa.",
+        "word_count": 19,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "2-0-johdon hukkaaminen välieräsarjassa on nostanut pintaan tutun keskustelun Tampereen Ilveksen ympärillä. Ilveksen on voitettava tänään Tappara, jos se mielii jatkaa välieräsarjaa.\n\nKokeneet Ilves-pelaajat Jarkko Parikka ja Matias Mäntykivi kieltävät historian painavan hartioilla. Kaksikko tunnistaa seuran ympärillä pyörivän keskustelun, mutta ei ota siitä painetta.\n\nAiemmin Ilvestä luotsannut maajoukkueluotsi Antti Pennanen vertasi pari vuotta takaperin Ilvestä Toronto Maple Leafsiin. Pennasen mukaan historian taakka ja yhteisön paine vaikuttavat pelaajiin tiukoissa paikoissa niin Tampereella kuin Torontossa.\n\nSiinä, missä paikalliskilpailija Tapparaa pidetään kylmänä voittokoneena, Ilveksen ympärillä leijuu häviämisen aura. Joukkueen viimeisin mestaruus on 41 vuoden takaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Syökö historian painolasti Ilvestä? Nyt puhuvat pelaajat ja valmennus",
+      "description": "2-0-johdon hukkaaminen välieräsarjassa on nostanut pintaan tutun keskustelun Tampereen Ilveksen ympärillä. Ilveksen on voitettava tänään Tappara, jos se mielii jatkaa välieräsarjaa.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [plugins] discord failed during register from /home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/extensions/discord/index.js: Error: ENOENT: no such file or directory, copyfile '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-2026.4.24-d93dee314dad/dist/extensions/discord/reply-delivery-1yqnujqr.js' -> '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-unknown-cb6851bc448e/dist/extensions/.plugin-discord-uZqyGq/plugin/reply-delivery-1yqnujqr.js'\n[openclaw] Failed to start CLI: PluginLoadFailureError: plugin load failed: discord: Error: ENOENT: no such file or directory, copyfile '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-2026.4.24-d93dee314dad/dist/extensions/discord/reply-delivery-1yqnujqr.js' -> '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-unknown-cb6851bc448e/dist/extensions/.plugin-discord-uZqyGq/plugin/reply-delivery-1yqnujqr.js'\n    at maybeThrowOnPluginLoadError (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:2712:8)\n    at loadOpenClawPlugins (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:3588:3)\n    at resolveRuntimePluginRegistry (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:2443:9)\n    at resolveOrLoadRuntimePluginRegistry (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/runtime-registry-loader-CO1cck7F.js:37:7)\n    at ensurePluginRegistryLoaded (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/runtime-registry-loader-CO1cck7F.js:68:2)\n    at ensureCliPluginRegistryLoaded (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:20:3)\n    at async ensureCliCommandBootstrap (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:47:2)\n    at async ensureCliExecutionBootstrap (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:295:2)\n    at async Object.callback (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/program-C2pnmt5C.js:85:3)\n    at async Command.parseAsync (/home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/node_modules/commander/lib/command.js:1122:5)"
+  }
+}

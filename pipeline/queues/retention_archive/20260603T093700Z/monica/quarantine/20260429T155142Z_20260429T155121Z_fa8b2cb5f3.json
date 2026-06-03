@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-29T15:51:42Z",
+  "reason": "Lähdeaineisto ei riitä täsmälliseen 250 sanan uutiseen ilman olennaisia lisätietoja öljyn hinnasta, ajankohdasta ja saarron taustasta.",
+  "packet": {
+    "packet_id": "20260429T155121Z_fa8b2cb5f3",
+    "created_at": "2026-04-29T15:51:21Z",
+    "headline_seed": "Oil price jumps above $117 after reports of 'extended' Iran blockade",
+    "description_seed": "The price of crude oil has swung sharply as uncertainty over the war in the Middle East continues.",
+    "link": "https://www.bbc.com/news/articles/cj4pxr0gr02o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-6",
+      "source-25"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cj4pxr0gr02o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Oil price jumps above $117 after reports of 'extended' Iran blockade"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The price of crude oil has swung sharply as uncertainty over the war in the Middle East continues.",
+        "word_count": 18,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Oil prices have soared following reports that the US is preparing for an 'extended' blockade of Iran.",
+        "word_count": 17,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "The meeting follows separate reports from the Wall Street Journal that US President Donald Trump has instructed aides to prepare to extend the ongoing blockade of Iran's ports, in an effort to squeeze the country's economy.",
+        "word_count": 36,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-25",
+        "source_type": "research",
+        "text": "Moreover, various reports have it that China continues to use the lane to receive oil.",
+        "word_count": 15,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "The price of crude oil has swung sharply as uncertainty over the war in the Middle East continues.\n\nOil prices have soared following reports that the US is preparing for an 'extended' blockade of Iran.\n\nThe meeting follows separate reports from the Wall Street Journal that US President Donald Trump has instructed aides to prepare to extend the ongoing blockade of Iran's ports, in an effort to squeeze the country's economy.\n\nMoreover, various reports have it that China continues to use the lane to receive oil.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Oil price jumps above $117 after reports of 'extended' Iran blockade",
+      "description": "The price of crude oil has swung sharply as uncertainty over the war in the Middle East continues.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T155121Z_fa8b2cb5f3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto ei riitä täsmälliseen 250 sanan uutiseen ilman olennaisia lisätietoja öljyn hinnasta, ajankohdasta ja saarron taustasta.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

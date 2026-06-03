@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-29T20:22:01Z",
+  "reason": "Lähdeaineistossa on ristiriita otsikon ja sisältöblokien välillä osakkeen kurssireaktiosta, ja tuloskauden ajanjaksotiedot jäävät epäselviksi.",
+  "packet": {
+    "packet_id": "20260429T202140Z_2f0bdabf16",
+    "created_at": "2026-04-29T20:21:40Z",
+    "headline_seed": "Metan tulos ylitti ennusteet, osake laskee jälkimarkkinoilla",
+    "description_seed": "Metan osakekohtainen tulos kasvoi ensimmäisellä neljänneksellä 62 prosenttia vertailukaudesta.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/5a64fd0e-8dfe-47f9-9a79-45a0dfda4e5e",
+    "source": "Kauppalehti",
+    "source_names": [
+      "Kauppalehti",
+      "source-2",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/5a64fd0e-8dfe-47f9-9a79-45a0dfda4e5e"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Metan tulos ylitti ennusteet, osake laskee jälkimarkkinoilla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti",
+        "source_type": "description",
+        "text": "Metan osakekohtainen tulos kasvoi ensimmäisellä neljänneksellä 62 prosenttia vertailukaudesta.",
+        "word_count": 9,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Tulos ylitti markkinoiden odotukset, mikä johti Metan osakkeen nousuun. Yhtiön osakkeen arvo nousi yli kuusi prosenttia noin 507 dollariin jälkipörssissä tulosjulkistuksen jälkeen.",
+        "word_count": 22,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Yhtiön liikevaihto oli huhti-kesäkuussa 39 miljardia dollaria, joka on noin 22 prosenttia enemmän kuin vastaavana ajanjaksona vuosi sitten.",
+        "word_count": 18,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Metan osakekohtainen tulos kasvoi ensimmäisellä neljänneksellä 62 prosenttia vertailukaudesta.\n\nTulos ylitti markkinoiden odotukset, mikä johti Metan osakkeen nousuun. Yhtiön osakkeen arvo nousi yli kuusi prosenttia noin 507 dollariin jälkipörssissä tulosjulkistuksen jälkeen.\n\nYhtiön liikevaihto oli huhti-kesäkuussa 39 miljardia dollaria, joka on noin 22 prosenttia enemmän kuin vastaavana ajanjaksona vuosi sitten.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Metan tulos ylitti ennusteet, osake laskee jälkimarkkinoilla",
+      "description": "Metan osakekohtainen tulos kasvoi ensimmäisellä neljänneksellä 62 prosenttia vertailukaudesta.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T202140Z_2f0bdabf16\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on ristiriita otsikon ja sisältöblokien välillä osakkeen kurssireaktiosta, ja tuloskauden ajanjaksotiedot jäävät epäselviksi.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

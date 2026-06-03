@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T08:09:54Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T080901Z_af72948725",
+    "created_at": "2026-04-27T08:09:01Z",
+    "headline_seed": "\"Aki Kaurismäki on elokuvallinen veljeni\", sanoo kulttiohjaaja Jim Jarmusch",
+    "description_seed": "Veteraaniohjaajan uusi teos Father Mother Sister Brother voitti Venetsian elokuvafestivaalin pääpalkinnon.",
+    "link": "https://www.ess.fi/uutissuomalainen/9406443",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Etelä-Suomen Sanomat",
+      "source-11",
+      "source-7",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9406443"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.88,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "\"Aki Kaurismäki on elokuvallinen veljeni\", sanoo kulttiohjaaja Jim Jarmusch"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Etelä-Suomen Sanomat",
+        "source_type": "description",
+        "text": "Veteraaniohjaajan uusi teos Father Mother Sister Brother voitti Venetsian elokuvafestivaalin pääpalkinnon.",
+        "word_count": 11,
+        "keyword_overlap": 11,
+        "strong_overlap": 9
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "Kaurismäen tapaan myös Jarmusch saa elokuviensa ensi-illat maailman arvostetuimmille festivaaleille. Father Mother Sister Brother on eräänlainen uran huipennus: se voitti syyskuussa Venetsian elokuvajuhlien pääpalkinnon, Kultaisen leijonan.",
+        "word_count": 26,
+        "keyword_overlap": 8,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "Tuttua lakonisuutta tarjoaa myös Jarmuschin uusi Father Mother Sister Brother. Episodielokuvan rooleissa nähdään muiden muassa vanha luottotähti, muusikkona parhaiten tunnettu Tom Waits, kahdessa edellisessäkin ohjaajan elokuvassa esiintynyt näyttelijä Adam Driver sekä Cate Blanchett ja Charlotte Rampling.",
+        "word_count": 36,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Jarmusch oli yksi päävieraista Sodankylän elokuvajuhlilla, kun ne järjestettiin vasta toista kertaa vuonna 1987. Hän myös näytteli pienet roolit Kaurismäen veljesten elokuvissa Helsinki Napoli All Night Long (1987) ja Leningrad Cowboys Go America (1991).",
+        "word_count": 34,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Veteraaniohjaajan uusi teos Father Mother Sister Brother voitti Venetsian elokuvafestivaalin pääpalkinnon.\n\nKaurismäen tapaan myös Jarmusch saa elokuviensa ensi-illat maailman arvostetuimmille festivaaleille. Father Mother Sister Brother on eräänlainen uran huipennus: se voitti syyskuussa Venetsian elokuvajuhlien pääpalkinnon, Kultaisen leijonan.\n\nTuttua lakonisuutta tarjoaa myös Jarmuschin uusi Father Mother Sister Brother. Episodielokuvan rooleissa nähdään muiden muassa vanha luottotähti, muusikkona parhaiten tunnettu Tom Waits, kahdessa edellisessäkin ohjaajan elokuvassa esiintynyt näyttelijä Adam Driver sekä Cate Blanchett ja Charlotte Rampling.\n\nJarmusch oli yksi päävieraista Sodankylän elokuvajuhlilla, kun ne järjestettiin vasta toista kertaa vuonna 1987. Hän myös näytteli pienet roolit Kaurismäen veljesten elokuvissa Helsinki Napoli All Night Long (1987) ja Leningrad Cowboys Go America (1991).",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "\"Aki Kaurismäki on elokuvallinen veljeni\", sanoo kulttiohjaaja Jim Jarmusch",
+      "description": "Veteraaniohjaajan uusi teos Father Mother Sister Brother voitti Venetsian elokuvafestivaalin pääpalkinnon.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=24924 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=24927 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T09:20:40Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T091945Z_b047d31e47",
+    "created_at": "2026-04-27T09:19:45Z",
+    "headline_seed": "HSBC ‘reviewing’ private school perk for bankers in Hong Kong",
+    "description_seed": "Hundreds of senior staff in territory benefit from nearly £30,000-a-year grant per child not available to staff in group’s other hubs HSBC is reportedly reviewing a perk that covers school fees for bankers in Hong Kong as part of a big overhaul of the bank under chief executive Georges Elhedery. Europe’s largest bank is considering whether to scrap the perk for new employees or make changes to total compensation, Bloomberg News reported . No decisions have been made yet. Continue reading...",
+    "link": "https://www.theguardian.com/business/2026/apr/27/hsbc-reviewing-private-school-perk-for-bankers-in-hong-kong",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-3",
+      "source-2",
+      "The Guardian World"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/business/2026/apr/27/hsbc-reviewing-private-school-perk-for-bankers-in-hong-kong"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.96,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "HSBC ‘reviewing’ private school perk for bankers in Hong Kong"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Hundreds of senior staff in territory benefit from nearly £30,000-a-year grant per child not available to staff in group’s other hubs HSBC is reportedly reviewing a perk that covers school fees for bankers in Hong Kong as part of a big overhaul of the bank under chief executive Georges Elhedery. Europe’s largest bank is considering whether to scrap the perk for new employees or make changes to total compensation, Bloomberg News reported . No decisions have been made yet. Continue reading...",
+        "word_count": 81,
+        "keyword_overlap": 52,
+        "strong_overlap": 28
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Europe’s largest bank is considering whether to scrap the perk for new employees or make changes to total compensation, Bloomberg News reported. No decisions have been made yet.",
+        "word_count": 28,
+        "keyword_overlap": 19,
+        "strong_overlap": 10
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "HSBC is reportedly reviewing a perk that covers school fees for bankers in Hong Kong as part of a big overhaul of the bank under chief executive Georges Elhedery.",
+        "word_count": 29,
+        "keyword_overlap": 19,
+        "strong_overlap": 9
+      },
+      {
+        "source": "The Guardian World",
+        "source_type": "research",
+        "text": "Hundreds of senior staff in territory benefit from nearly £30,000-a-year grant per child not available to staff in group’s other hubs",
+        "word_count": 21,
+        "keyword_overlap": 14,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Hundreds of senior staff in territory benefit from nearly £30,000-a-year grant per child not available to staff in group’s other hubs HSBC is reportedly reviewing a perk that covers school fees for bankers in Hong Kong as part of a big overhaul of the bank under chief executive Georges Elhedery. Europe’s largest bank is considering whether to scrap the perk for new employees or make changes to total compensation, Bloomberg News reported . No decisions have been made yet. Continue reading...\n\nEurope’s largest bank is considering whether to scrap the perk for new employees or make changes to total compensation, Bloomberg News reported. No decisions have been made yet.\n\nHSBC is reportedly reviewing a perk that covers school fees for bankers in Hong Kong as part of a big overhaul of the bank under chief executive Georges Elhedery.\n\nHundreds of senior staff in territory benefit from nearly £30,000-a-year grant per child not available to staff in group’s other hubs",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "HSBC ‘reviewing’ private school perk for bankers in Hong Kong",
+      "description": "Hundreds of senior staff in territory benefit from nearly £30,000-a-year grant per child not available to staff in group’s other hubs HSBC is reportedly reviewing a perk that covers school fees for bankers in Hong Kong as part of a big overhaul of the bank under chief executive Georges Elhedery. Europe’s largest bank is considering whether to scrap the perk for new employees or make changes to total compensation, Bloomberg News reported . No decisions have been made yet. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=26051 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=26054 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

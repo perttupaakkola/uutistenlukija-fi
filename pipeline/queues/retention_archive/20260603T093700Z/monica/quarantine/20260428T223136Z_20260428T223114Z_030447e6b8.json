@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T22:31:36Z",
+  "reason": "Paketti sisältää liian vähän varmennettuja tietoja pelastusoperaation kulusta ja siinä on mukana asiaan kuulumaton lähdekatkelma.",
+  "packet": {
+    "packet_id": "20260428T223114Z_030447e6b8",
+    "created_at": "2026-04-28T22:31:14Z",
+    "headline_seed": "Watch: Elderly woman rescued by robot from Ukraine's frontline",
+    "description_seed": "The Ukrainian army spotted the woman using a drone and sent the machine to her rescue as she was trying to leave her war-torn village.",
+    "link": "https://www.bbc.com/news/videos/cpqpjw1zdvjo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-2",
+      "source-15"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cpqpjw1zdvjo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Watch: Elderly woman rescued by robot from Ukraine's frontline"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The Ukrainian army spotted the woman using a drone and sent the machine to her rescue as she was trying to leave her war-torn village.",
+        "word_count": 25,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Footage shared by Ukraine's 3rd Army Corps showed the moment an elderly woman trying to leave her wrecked village was rescued by a robot.",
+        "word_count": 24,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "The Ukrainian army spotted the woman using a drone and sent the machine to her rescue.",
+        "word_count": 16,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-15",
+        "source_type": "research",
+        "text": "Video released by the Italian fire brigade shows the wolf being rescued from under a bridge.",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The Ukrainian army spotted the woman using a drone and sent the machine to her rescue as she was trying to leave her war-torn village.\n\nFootage shared by Ukraine's 3rd Army Corps showed the moment an elderly woman trying to leave her wrecked village was rescued by a robot.\n\nThe Ukrainian army spotted the woman using a drone and sent the machine to her rescue.\n\nVideo released by the Italian fire brigade shows the wolf being rescued from under a bridge.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Watch: Elderly woman rescued by robot from Ukraine's frontline",
+      "description": "The Ukrainian army spotted the woman using a drone and sent the machine to her rescue as she was trying to leave her war-torn village.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260428T223114Z_030447e6b8\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää liian vähän varmennettuja tietoja pelastusoperaation kulusta ja siinä on mukana asiaan kuulumaton lähdekatkelma.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

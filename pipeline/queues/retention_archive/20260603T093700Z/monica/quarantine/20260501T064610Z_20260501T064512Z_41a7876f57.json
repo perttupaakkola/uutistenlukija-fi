@@ -1,0 +1,84 @@
+{
+  "ts": "2026-05-01T06:46:10Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260501T064512Z_41a7876f57",
+    "created_at": "2026-05-01T06:45:12Z",
+    "headline_seed": "Tekoäly voi mullistaa verot – Asiantuntija varoittaa: \"Investoinnit menevät Ruotsiin\"",
+    "description_seed": "Tekoälyn vaikutukset työhön ja verotukseen herättävät pohdintaa.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/292f2087-011d-4542-bb9f-21dd51d00462",
+    "source": "Kauppalehti",
+    "source_names": [
+      "source-12",
+      "source-13",
+      "source-4",
+      "source-14"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/292f2087-011d-4542-bb9f-21dd51d00462"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tekoäly voi mullistaa verot – Asiantuntija varoittaa: \"Investoinnit menevät Ruotsiin\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "”Jos me laitetaan robottivero, sitten investoinnit menevät Ruotsiin, Viroon tai sinne missä ei ole veroa.”",
+        "word_count": 15,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Etlan tutkimusjohtaja Antti Kauhanen arvioi, että keskustelu työn verotuksen tulevaisuudesta on vielä ennenaikaista. Hänen mukaansa ei ole näyttöä siitä, että tekoäly olisi toistaiseksi heikentänyt työllisyyttä Suomessa, joten verotuksen suuria linjamuutoksia ei kannata tehdä oletusten varassa.",
+        "word_count": 35,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Työ- ja elinkeinoministeriön alivaltiosihteeri Elina Pylkkänen korostaa, että verotuksen kannalta ratkaisevaa on työn tuottavuus. Jos tekoäly nostaa tuottavuutta, se voi näkyä palkkojen kasvuna ja vahvistaa veropohjaa.",
+        "word_count": 26,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-14",
+        "source_type": "research",
+        "text": "Markkinaraadissa kysyttiin tällä viikolla, viekö tekoäly meiltä työpaikat. Ohjelmassa keskusteltiin myös siitä, miten tekoäly muuttaa työn tekemistä ja voiko palkkatyötä enää verottaa entiseen tapaan.",
+        "word_count": 24,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "”Jos me laitetaan robottivero, sitten investoinnit menevät Ruotsiin, Viroon tai sinne missä ei ole veroa.”\n\nEtlan tutkimusjohtaja Antti Kauhanen arvioi, että keskustelu työn verotuksen tulevaisuudesta on vielä ennenaikaista. Hänen mukaansa ei ole näyttöä siitä, että tekoäly olisi toistaiseksi heikentänyt työllisyyttä Suomessa, joten verotuksen suuria linjamuutoksia ei kannata tehdä oletusten varassa.\n\nTyö- ja elinkeinoministeriön alivaltiosihteeri Elina Pylkkänen korostaa, että verotuksen kannalta ratkaisevaa on työn tuottavuus. Jos tekoäly nostaa tuottavuutta, se voi näkyä palkkojen kasvuna ja vahvistaa veropohjaa.\n\nMarkkinaraadissa kysyttiin tällä viikolla, viekö tekoäly meiltä työpaikat. Ohjelmassa keskusteltiin myös siitä, miten tekoäly muuttaa työn tekemistä ja voiko palkkatyötä enää verottaa entiseen tapaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tekoäly voi mullistaa verot – Asiantuntija varoittaa: \"Investoinnit menevät Ruotsiin\"",
+      "description": "Tekoälyn vaikutukset työhön ja verotukseen herättävät pohdintaa.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Monica writer command failed: gateway connect failed: Error: gateway closed (1000): \nEMBEDDED FALLBACK: Gateway agent failed; running embedded agent: GatewayTransportError: gateway closed (1000 normal closure): no close reason\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/pertt/.openclaw/openclaw.json\nBind: loopback\n[agent/embedded] [trace:embedded-run] startup stages: runId=boot-2026-05-01_06-43-58-631-3a44b3b0 sessionId=boot-2026-05-01_06-43-58-631-3a44b3b0 phase=attempt-dispatch totalMs=11279 stages=workspace:1ms@1ms,runtime-plugins:953ms@954ms,hooks:0ms@954ms,model-resolution:5213ms@6167ms,auth:3362ms@9529ms,context-engine:1ms@9530ms,attempt-dispatch:1749ms@11279ms\n[tools] tools.allow allowlist contains unknown entries (web_search). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.\n[diagnostic] lane task error: lane=main durationMs=33509 error=\"SessionWriteLockTimeoutError: session file locked (timeout 10000ms): pid=2159704 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=33513 error=\"SessionWriteLockTimeoutError: session file locked (timeout 10000ms): pid=2159704 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock\"\nSessionWriteLockTimeoutError: session file locked (timeout 10000ms): pid=2159704 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock"
+  }
+}

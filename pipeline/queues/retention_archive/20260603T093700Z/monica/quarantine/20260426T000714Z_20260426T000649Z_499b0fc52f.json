@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T00:07:14Z",
+  "reason": "aineisto on osin toisen käden kooste, sisältää keskeneräisen sitaatin ja liian vähän varmistettuja yksityiskohtia julkaistavaan uutisjuttuun",
+  "packet": {
+    "packet_id": "20260426T000649Z_499b0fc52f",
+    "created_at": "2026-04-26T00:06:49Z",
+    "headline_seed": "Trump fires all 24 members of the U.S. National Science Foundation",
+    "description_seed": "Article URL: https://www.science.org/content/article/trump-fires-nsf-s-oversight-board Comments URL: https://news.ycombinator.com/item?id=47905283 Points: 191 # Comments: 54",
+    "link": "https://www.science.org/content/article/trump-fires-nsf-s-oversight-board",
+    "source": "Hacker News Best",
+    "source_names": [
+      "Hacker News Best",
+      "source-3",
+      "source-5",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.science.org/content/article/trump-fires-nsf-s-oversight-board"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump fires all 24 members of the U.S. National Science Foundation"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Hacker News Best",
+        "source_type": "description",
+        "text": "Article URL: https://www.science.org/content/article/trump-fires-nsf-s-oversight-board Comments URL: https://news.ycombinator.com/item?id=47905283 Points: 191 # Comments: 54",
+        "word_count": 11,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Multiple sources are reporting that the Trump administration has dismissed the entire National Science Board (NSB). The NSB advises the president and Congress on the National Science Foundation (NSF), which has already been funding research at historically low levels and has seen significant delays in doling out that funding. The NSF has been fundamental in helping develop technology used in MRIs, cellphones, and it even helped get Duolingo get off the ground.",
+        "word_count": 72,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "“This is the latest stupid move made by a president who continues to harm science and American innovation. The NSB is apolitical. It advises the president on the future of NSF. It unfortunately is no surprise a president who has attacked NSF from day one would seek to destroy the board that helps guide the Foundation. Will the president fill the NSB with MAGA loyalists who won’t stand up to him as he hands over our leadership in science to our adversaries? A real bozo the clown move.”",
+        "word_count": 88,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "In a statement, Zoe Lofgren, the ranking Democrat on the House Science, Space, and Technology Committee, said:",
+        "word_count": 17,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Article URL: https://www.science.org/content/article/trump-fires-nsf-s-oversight-board Comments URL: https://news.ycombinator.com/item?id=47905283 Points: 191 # Comments: 54\n\nMultiple sources are reporting that the Trump administration has dismissed the entire National Science Board (NSB). The NSB advises the president and Congress on the National Science Foundation (NSF), which has already been funding research at historically low levels and has seen significant delays in doling out that funding. The NSF has been fundamental in helping develop technology used in MRIs, cellphones, and it even helped get Duolingo get off the ground.\n\n“This is the latest stupid move made by a president who continues to harm science and American innovation. The NSB is apolitical. It advises the president on the future of NSF. It unfortunately is no surprise a president who has attacked NSF from day one would seek to destroy the board that helps guide the Foundation. Will the president fill the NSB with MAGA loyalists who won’t stand up to him as he hands over our leadership in science to our adversaries? A real bozo the clown move.”\n\nIn a statement, Zoe Lofgren, the ranking Democrat on the House Science, Space, and Technology Committee, said:",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump fires all 24 members of the U.S. National Science Foundation",
+      "description": "Article URL: https://www.science.org/content/article/trump-fires-nsf-s-oversight-board Comments URL: https://news.ycombinator.com/item?id=47905283 Points: 191 # Comments: 54",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=98c07fa6-9ff3-43cb-8213-d294f8a58d3d sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260426T000649Z_499b0fc52f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on osin toisen käden kooste, sisältää keskeneräisen sitaatin ja liian vähän varmistettuja yksityiskohtia julkaistavaan uutisjuttuun\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "ts": "2026-04-29T21:19:37Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260429T211537Z_aedf68670c",
+    "created_at": "2026-04-29T21:15:37Z",
+    "headline_seed": "Osa potilaista sai lumeleikkauksen, osa oikean: selvisi, että maailman yleisimpiin kuuluva polvileikkaus voikin olla haitallinen",
+    "description_seed": "Suomalaistutkimuksen mukaan polven nivelkierukan osapoistosta voi olla haittaa. Leikkaus on maailmassa hyvin yleinen. Suomessa sitä on vähennetty viime vuosina.",
+    "link": "https://yle.fi/a/74-20223147?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "Yle Uutiset",
+      "source-13",
+      "source-9"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20223147?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Osa potilaista sai lumeleikkauksen, osa oikean: selvisi, että maailman yleisimpiin kuuluva polvileikkaus voikin olla haitallinen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Suomalaistutkimuksen mukaan polven nivelkierukan osapoistosta voi olla haittaa. Leikkaus on maailmassa hyvin yleinen. Suomessa sitä on vähennetty viime vuosina.",
+        "word_count": 19,
+        "keyword_overlap": 14,
+        "strong_overlap": 10
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Uuden suomalaistutkimuksen mukaan maailman yleisimpiin ortopedisiin toimenpiteisiin kuuluva polvileikkaus voi olla haitallinen.",
+        "word_count": 12,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Jo useissa aiemmissa, eri maissa tehdyissä tutkimuksissa on parinkymmenen viime vuoden aikana saatu näyttöä siitä, että suurelle osalle potilaista polven nivelkierukan osapoisto on turha.",
+        "word_count": 24,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Kun näihin uusiin tutkimustuloksiin yhdistetään kansainvälisten rekisteri- ja seurantatutkimusten tuloksia, leikkaus näyttää Järvisen mukaan myös nopeuttavan polven nivelrikkoa. Lisäksi toimenpide näyttää lisäävään todennäköisyyttä myöhemmälle tekonivelleikkaukselle ja huonontavan sen ennustetta.",
+        "word_count": 29,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Suomalaistutkimuksen mukaan polven nivelkierukan osapoistosta voi olla haittaa. Leikkaus on maailmassa hyvin yleinen. Suomessa sitä on vähennetty viime vuosina.\n\nUuden suomalaistutkimuksen mukaan maailman yleisimpiin ortopedisiin toimenpiteisiin kuuluva polvileikkaus voi olla haitallinen.\n\nJo useissa aiemmissa, eri maissa tehdyissä tutkimuksissa on parinkymmenen viime vuoden aikana saatu näyttöä siitä, että suurelle osalle potilaista polven nivelkierukan osapoisto on turha.\n\nKun näihin uusiin tutkimustuloksiin yhdistetään kansainvälisten rekisteri- ja seurantatutkimusten tuloksia, leikkaus näyttää Järvisen mukaan myös nopeuttavan polven nivelrikkoa. Lisäksi toimenpide näyttää lisäävään todennäköisyyttä myöhemmälle tekonivelleikkaukselle ja huonontavan sen ennustetta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Osa potilaista sai lumeleikkauksen, osa oikean: selvisi, että maailman yleisimpiin kuuluva polvileikkaus voikin olla haitallinen",
+      "description": "Suomalaistutkimuksen mukaan polven nivelkierukan osapoistosta voi olla haittaa. Leikkaus on maailmassa hyvin yleinen. Suomessa sitä on vähennetty viime vuosina.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260429T211537Z_aedf68670c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE\\n- The first paragraph must be at least 30 words and summarize the verified core of the story\\n- Include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260429T211537Z_aedf68670c\",\\n  \"created_at\": \"2026-04-29T21:15:37Z\",\\n  \"headline_seed\": \"Osa potilaista sai lumeleikkauksen, osa oikean: selvisi, että maailman yleisimpiin kuuluva polvileikkaus voikin olla haitallinen\",\\n  \"description_seed\": \"Suomalaistutkimuksen mukaan polven nivelkierukan osapoistosta voi olla haittaa. Leikkaus on maailmassa hyvin yleinen. Suomessa sitä on vähennetty viime vuosina.\",\\n  \"link\": \"https://yle.fi/a/74-20223147?origin=rss\",\\n  \"source\": \"Yle Uutiset\",\\n  \"source_names\": [\\n    \"Yle Uutiset\",\\n    \"Yle Uutiset\",\\n    \"source-13\",\\n    \"source-9\"\\n  ],\\n  \"source_urls\": [\\n    \"https://yle.fi/a/74-20223147?origin=rss\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.84,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Osa potilaista sai lumeleikkauksen, osa oikean: selvisi, että maailman yleisimpiin kuuluva polvileikkaus voikin olla haitallinen\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Yle Uutiset\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Suomalaistutkimuksen mukaan polven nivelkierukan osapoistosta voi olla haittaa. Leikkaus on maailmassa hyvin yleinen. Suomessa sitä on vähennetty viime vuosina.\",\\n      \"word_count\": 19,\\n      \"keyword_overlap\": 14,\\n      \"strong_overlap\": 10\\n    },\\n    {\\n      \"source\": \"Yle Uutiset\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Uuden suomalaistutkimuksen mukaan maailman yleisimpiin ortopedisiin toimenpiteisiin kuuluva polvileikkaus voi olla haitallinen.\",\\n      \"word_count\": 12,\\n      \"keyword_overlap\": 7,\\n      \"strong_overlap\": 6\\n    },\\n    {\\n      \"source\": \"source-13\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Jo useissa aiemmissa, eri maissa tehdyissä tutkimuksissa on parinkymmenen viime vuoden aikana saatu näyttöä siitä, että suurelle osalle potilaista polven nivelkierukan osapoisto on turha.\",\\n      \"word_count\": 24,\\n      \"keyword_overlap\": 5,\\n      \"strong_overlap\": 3\\n    },\\n    {\\n      \"source\": \"source-9\",\\n      \"source_type\": \"research\",\\n      \"text\": \"Kun näihin uusiin tutkimustuloksiin yhdistetään kansainvälisten rekisteri- ja seurantatutkimusten tuloksia, leikkaus näyttää Järvisen mukaan myös nopeuttavan polven nivelrikkoa. Lisäksi toimenpide näyttää lisäävään todennäköisyyttä myöhemmälle tekonivelleikkaukselle ja huonontavan sen ennustetta.\",\\n      \"word_count\": 29,\\n      \"keyword_overlap\": 2,\\n      \"strong_overlap\": 2\\n    }\\n  ],\\n  \"source_text\": \"Suomalaistutkimuksen mukaan polven nivelkierukan osapoistosta voi olla haittaa. Leikkaus on maailmassa hyvin yleinen. Suomessa sitä on vähennetty viime vuosina.\\\\n\\\\nUuden suomalaistutkimuksen mukaan maailman yleisimpiin ortopedisiin toimenpiteisiin kuuluva polvileikkaus voi olla haitallinen.\\\\n\\\\nJo useissa aiemmissa, eri maissa tehdyissä tutkimuksissa on parinkymmenen viime vuoden aikana saatu näyttöä siitä, että suurelle osalle potilaista polven nivelkierukan osapoisto on turha.\\\\n\\\\nKun näihin uusiin tutkimustuloksiin yhdistetään kansainvälisten rekisteri- ja seurantatutkimusten tuloksia, leikkaus näyttää Järvisen mukaan myös nopeuttavan polven nivelrikkoa. Lisäksi toimenpide näyttää lisäävään todennäköisyyttä myöhemmälle tekonivelleikkaukselle ja huonontavan sen ennustetta.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Osa potilaista sai lumeleikkauksen, osa oikean: selvisi, että maailman yleisimpiin kuuluva polvileikkaus voikin olla haitallinen\",\\n    \"description\": \"Suomalaistutkimuksen mukaan polven nivelkierukan osapoistosta voi olla haittaa. Leikkaus on maailmassa hyvin yleinen. Suomessa sitä on vähennetty viime vuosina.\",\\n    \"category_hint\": \"\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

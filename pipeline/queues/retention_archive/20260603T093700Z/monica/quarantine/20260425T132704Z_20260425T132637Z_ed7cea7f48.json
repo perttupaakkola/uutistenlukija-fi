@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-25T13:27:04Z",
+  "reason": "aineisto on liian niukka eikä sisällä riittävästi tarkkoja tietoja konkurssipesän tilanteesta 250 sanan varmennettuun uutisjuttuun",
+  "packet": {
+    "packet_id": "20260425T132637Z_ed7cea7f48",
+    "created_at": "2026-04-25T13:26:37Z",
+    "headline_seed": "Anttilan konkurssi on yhä kesken",
+    "description_seed": "Tavarataloketjun konkurssi on monella tapaa historiallinen.",
+    "link": "https://www.ess.fi/paikalliset/9403830",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-3",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9403830"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.58,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Anttilan konkurssi on yhä kesken"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "– Meillä on edelleen sellaisia velkojia, käytännössä Anttilan entisiä vuokranantajia, joilta emme ole saaneet täsmennystä siitä, mitkä ovat heidän saatavansa, sanoo konkurssipesän hoitaja, asianajaja Mikko Tiilikka.",
+        "word_count": 26,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Tavarataloyhtiö Anttila ajautui konkurssiin vuosikymmen sitten, heinäkuussa 2016. Anttilan konkurssipesä on kuitenkin yhä auki eikä sen kaikkia varoja ole jaettu velkojille, kertoo Länsiväylä.",
+        "word_count": 23,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "– Meillä on edelleen sellaisia velkojia, käytännössä Anttilan entisiä vuokranantajia, joilta emme ole saaneet täsmennystä siitä, mitkä ovat heidän saatavansa, sanoo konkurssipesän hoitaja, asianajaja Mikko Tiilikka.\n\nTavarataloyhtiö Anttila ajautui konkurssiin vuosikymmen sitten, heinäkuussa 2016. Anttilan konkurssipesä on kuitenkin yhä auki eikä sen kaikkia varoja ole jaettu velkojille, kertoo Länsiväylä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Anttilan konkurssi on yhä kesken",
+      "description": "Tavarataloketjun konkurssi on monella tapaa historiallinen.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=3a7c7174-9514-4eb3-b38f-4f73062246d9 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T132637Z_ed7cea7f48\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on liian niukka eikä sisällä riittävästi tarkkoja tietoja konkurssipesän tilanteesta 250 sanan varmennettuun uutisjuttuun\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

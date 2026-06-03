@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T05:09:00Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T050807Z_ce56f009c1",
+    "created_at": "2026-04-27T05:08:07Z",
+    "headline_seed": "Porin suunnitellun vanadiini­laitoksen rahoitus saattaa varmistua tänä vuonna – vanadiinin tarve kasvaa Euroopassa",
+    "description_seed": "Hanketta edistävän Novana-yhtiön toimitusjohtaja Johanna Lamminen sanoo, että epävarmuus sijoittajien piirissä on kuitenkin jatkunut edelleen.",
+    "link": "https://yle.fi/a/74-20222591?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-6",
+      "source-3",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222591?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Porin suunnitellun vanadiini­laitoksen rahoitus saattaa varmistua tänä vuonna – vanadiinin tarve kasvaa Euroopassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Hanketta edistävän Novana-yhtiön toimitusjohtaja Johanna Lamminen sanoo, että epävarmuus sijoittajien piirissä on kuitenkin jatkunut edelleen.",
+        "word_count": 15,
+        "keyword_overlap": 13,
+        "strong_overlap": 12
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Varmuudella Johanna Lamminen ei tietenkään voi luvata, että Porin-laitoksen rahoitus varmistuu tämän vuoden aikana. Alan investointeja jarruttanut ilmapiiri ei ole varsinaisesti muuttunut, vaikka vanadiinin kysyntä Euroopassa on kasvanut.",
+        "word_count": 28,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Kriittisten mineraalien yhtiö Novanan toimitusjohtaja Johanna Lamminen sanoo, että laitoksen rakentamisen tarve Porin Tahkoluotoon on entisestään kasvanut.",
+        "word_count": 17,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "– Vanadiini on entistä kriittisempi raaka-aine Euroopassa puolustusteollisuuden kasvun myötä. Samalla sähkön varastointitarve esimerkiksi datakeskushankkeiden myötä kasvaa, Lamminen sanoo.",
+        "word_count": 19,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Hanketta edistävän Novana-yhtiön toimitusjohtaja Johanna Lamminen sanoo, että epävarmuus sijoittajien piirissä on kuitenkin jatkunut edelleen.\n\nVarmuudella Johanna Lamminen ei tietenkään voi luvata, että Porin-laitoksen rahoitus varmistuu tämän vuoden aikana. Alan investointeja jarruttanut ilmapiiri ei ole varsinaisesti muuttunut, vaikka vanadiinin kysyntä Euroopassa on kasvanut.\n\nKriittisten mineraalien yhtiö Novanan toimitusjohtaja Johanna Lamminen sanoo, että laitoksen rakentamisen tarve Porin Tahkoluotoon on entisestään kasvanut.\n\n– Vanadiini on entistä kriittisempi raaka-aine Euroopassa puolustusteollisuuden kasvun myötä. Samalla sähkön varastointitarve esimerkiksi datakeskushankkeiden myötä kasvaa, Lamminen sanoo.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Porin suunnitellun vanadiini­laitoksen rahoitus saattaa varmistua tänä vuonna – vanadiinin tarve kasvaa Euroopassa",
+      "description": "Hanketta edistävän Novana-yhtiön toimitusjohtaja Johanna Lamminen sanoo, että epävarmuus sijoittajien piirissä on kuitenkin jatkunut edelleen.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [channels] failed to load bundled channel discord: ENOTEMPTY: directory not empty, rmdir '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-2026.4.24-d93dee314dad/dist/extensions/node_modules/openclaw/plugin-sdk'\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25498 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25501 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

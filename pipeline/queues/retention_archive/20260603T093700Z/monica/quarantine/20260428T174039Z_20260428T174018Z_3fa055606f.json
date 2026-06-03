@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-28T17:40:39Z",
+  "reason": "Paketti on ristiriitainen ja liian niukka: otsikko, kuvaus ja lähdeteksti eivät tue toisiaan riittävästi julkaistavaan uutiseen.",
+  "packet": {
+    "packet_id": "20260428T174018Z_3fa055606f",
+    "created_at": "2026-04-28T17:40:18Z",
+    "headline_seed": "Bahamalta löytyi kokaiini­haita",
+    "description_seed": "Tutkijat epäilevät syyksi esimerkiksi laivojen jätevesiä.",
+    "link": "https://www.is.fi/ulkomaat/art-2000011973628.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-5"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000011973628.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.44,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Bahamalta löytyi kokaiini­haita"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Kahden kuukauden jälkeen tutkijat poistivat huumeet altaasta ja tekivät testejä satunnaisesti valituilla kaloilla kummastakin koeryhmästä. Tätä varten rakennettiin allas, jonka toiselle puolelle virtasi metamfetamiinia sisältävää vettä.",
+        "word_count": 26,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Kahden kuukauden jälkeen tutkijat poistivat huumeet altaasta ja tekivät testejä satunnaisesti valituilla kaloilla kummastakin koeryhmästä. Tätä varten rakennettiin allas, jonka toiselle puolelle virtasi metamfetamiinia sisältävää vettä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Bahamalta löytyi kokaiini­haita",
+      "description": "Tutkijat epäilevät syyksi esimerkiksi laivojen jätevesiä.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260428T174018Z_3fa055606f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti on ristiriitainen ja liian niukka: otsikko, kuvaus ja lähdeteksti eivät tue toisiaan riittävästi julkaistavaan uutiseen.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

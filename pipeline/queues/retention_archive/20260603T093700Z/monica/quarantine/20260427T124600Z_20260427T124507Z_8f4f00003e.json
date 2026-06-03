@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T12:46:00Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T124507Z_8f4f00003e",
+    "created_at": "2026-04-27T12:45:07Z",
+    "headline_seed": "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’",
+    "description_seed": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme The Israeli military on Monday said it had begun hitting Hezbollah positions in Lebanon’s Bekaa region, amid a ceasefire that began earlier this month. “The IDF has begun to strike Hezbollah infrastructure sites in the Bekaa valley and in additional areas across southern Lebanon,” it said in a brief statement on social media. Continue reading...",
+    "link": "https://www.theguardian.com/world/live/2026/apr/27/middle-east-crisis-iran-us-israel-lebanon-trump-araghchi-putin-hormuz-oil-latest-news-updates",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "The Guardian World",
+      "source-4",
+      "source-16"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2026/apr/27/middle-east-crisis-iran-us-israel-lebanon-trump-araghchi-putin-hormuz-oil-latest-news-updates"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme The Israeli military on Monday said it had begun hitting Hezbollah positions in Lebanon’s Bekaa region, amid a ceasefire that began earlier this month. “The IDF has begun to strike Hezbollah infrastructure sites in the Bekaa valley and in additional areas across southern Lebanon,” it said in a brief statement on social media. Continue reading...",
+        "word_count": 75,
+        "keyword_overlap": 41,
+        "strong_overlap": 27
+      },
+      {
+        "source": "The Guardian World",
+        "source_type": "research",
+        "text": "Iran is offering to end its chokehold on the strait of Hormuz without addressing its nuclear program, two regional officials with knowledge of the proposal said Monday.",
+        "word_count": 27,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "The new proposal, passed to the United States by Pakistan, likely won’t be supported by US president Donald Trump, who wants to end Iran’s atomic program as part of an overall deal to reopen the strait of Hormuz and make the ceasefire permanent.",
+        "word_count": 43,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-16",
+        "source_type": "research",
+        "text": "Earlier, Iran seized two cargo ships in the Strait of Hormuz, after Donald Trump extended the US-Iran ceasefire. BBC Verify has located the attacks here",
+        "word_count": 25,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme The Israeli military on Monday said it had begun hitting Hezbollah positions in Lebanon’s Bekaa region, amid a ceasefire that began earlier this month. “The IDF has begun to strike Hezbollah infrastructure sites in the Bekaa valley and in additional areas across southern Lebanon,” it said in a brief statement on social media. Continue reading...\n\nIran is offering to end its chokehold on the strait of Hormuz without addressing its nuclear program, two regional officials with knowledge of the proposal said Monday.\n\nThe new proposal, passed to the United States by Pakistan, likely won’t be supported by US president Donald Trump, who wants to end Iran’s atomic program as part of an overall deal to reopen the strait of Hormuz and make the ceasefire permanent.\n\nEarlier, Iran seized two cargo ships in the Strait of Hormuz, after Donald Trump extended the US-Iran ceasefire. BBC Verify has located the attacks here",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’",
+      "description": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme The Israeli military on Monday said it had begun hitting Hezbollah positions in Lebanon’s Bekaa region, amid a ceasefire that began earlier this month. “The IDF has begun to strike Hezbollah infrastructure sites in the Bekaa valley and in additional areas across southern Lebanon,” it said in a brief statement on social media. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25626 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25628 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

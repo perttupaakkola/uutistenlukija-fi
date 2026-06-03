@@ -1,0 +1,90 @@
+{
+  "ts": "2026-04-30T21:32:10Z",
+  "reason": "schema_invalid",
+  "packet": {
+    "packet_id": "20260430T213120Z_05d95fb104",
+    "created_at": "2026-04-30T21:31:20Z",
+    "headline_seed": "Brazil’s congress approves bill reducing prison sentence of former president Jair Bolsonaro",
+    "description_seed": "President Lula’s veto of the bill was overturned by Brazil’s congress and senate, meaning it now awaits confirmation by supreme court Brazil’s largely conservative congress has approved a bill reducing the prison sentence of the far-right former president Jair Bolsonaro, who was convicted last year of attempting a coup. The bill had initially been passed by congress in December, but president Luiz Inácio Lula da Silva vetoed it in January in a symbolic move marking three years since Bolsonaro supporters ransacked the capital, Brasília. Continue reading...",
+    "link": "https://www.theguardian.com/world/2026/apr/30/brazils-congress-approves-bill-reducing-prison-sentence-of-former-president-jair-bolsonaro",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-2",
+      "source-3",
+      "The Guardian World"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/apr/30/brazils-congress-approves-bill-reducing-prison-sentence-of-former-president-jair-bolsonaro"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Brazil’s congress approves bill reducing prison sentence of former president Jair Bolsonaro"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "President Lula’s veto of the bill was overturned by Brazil’s congress and senate, meaning it now awaits confirmation by supreme court Brazil’s largely conservative congress has approved a bill reducing the prison sentence of the far-right former president Jair Bolsonaro, who was convicted last year of attempting a coup. The bill had initially been passed by congress in December, but president Luiz Inácio Lula da Silva vetoed it in January in a symbolic move marking three years since Bolsonaro supporters ransacked the capital, Brasília. Continue reading...",
+        "word_count": 86,
+        "keyword_overlap": 48,
+        "strong_overlap": 32
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Brazil’s largely conservative congress has approved a bill reducing the prison sentence of the far-right former president Jair Bolsonaro, who was convicted last year of attempting a coup.",
+        "word_count": 28,
+        "keyword_overlap": 19,
+        "strong_overlap": 14
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "The bill had initially been passed by congress in December, but president Luiz Inácio Lula da Silva vetoed it in January in a symbolic move marking three years since Bolsonaro supporters ransacked the capital, Brasília.",
+        "word_count": 35,
+        "keyword_overlap": 23,
+        "strong_overlap": 13
+      },
+      {
+        "source": "The Guardian World",
+        "source_type": "research",
+        "text": "President Lula’s veto of the bill was overturned by Brazil’s congress and senate, meaning it now awaits confirmation by supreme court",
+        "word_count": 21,
+        "keyword_overlap": 13,
+        "strong_overlap": 9
+      }
+    ],
+    "source_text": "President Lula’s veto of the bill was overturned by Brazil’s congress and senate, meaning it now awaits confirmation by supreme court Brazil’s largely conservative congress has approved a bill reducing the prison sentence of the far-right former president Jair Bolsonaro, who was convicted last year of attempting a coup. The bill had initially been passed by congress in December, but president Luiz Inácio Lula da Silva vetoed it in January in a symbolic move marking three years since Bolsonaro supporters ransacked the capital, Brasília. Continue reading...\n\nBrazil’s largely conservative congress has approved a bill reducing the prison sentence of the far-right former president Jair Bolsonaro, who was convicted last year of attempting a coup.\n\nThe bill had initially been passed by congress in December, but president Luiz Inácio Lula da Silva vetoed it in January in a symbolic move marking three years since Bolsonaro supporters ransacked the capital, Brasília.\n\nPresident Lula’s veto of the bill was overturned by Brazil’s congress and senate, meaning it now awaits confirmation by supreme court",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Brazil’s congress approves bill reducing prison sentence of former president Jair Bolsonaro",
+      "description": "President Lula’s veto of the bill was overturned by Brazil’s congress and senate, meaning it now awaits confirmation by supreme court Brazil’s largely conservative congress has approved a bill reducing the prison sentence of the far-right former president Jair Bolsonaro, who was convicted last year of attempting a coup. The bill had initially been passed by congress in December, but president Luiz Inácio Lula da Silva vetoed it in January in a symbolic move marking three years since Bolsonaro supporters ransacked the capital, Brasília. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T213120Z_05d95fb104\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto ei tue vähintään 250 faktapohjaista sanaa ilman toistoa, täytettä tai varmistamattomia päätelmiä.\"}",
+  "extra": {
+    "issues": [
+      "missing keys: title, summary, content, category, tags, summary_bullets, content_type, editorial_reviewed, confidence, journalist_note"
+    ],
+    "payload": {
+      "packet_id": "20260430T213120Z_05d95fb104",
+      "status": "INSUFFICIENT_CONFIDENCE",
+      "reason": "Aineisto ei tue vähintään 250 faktapohjaista sanaa ilman toistoa, täytettä tai varmistamattomia päätelmiä."
+    }
+  }
+}

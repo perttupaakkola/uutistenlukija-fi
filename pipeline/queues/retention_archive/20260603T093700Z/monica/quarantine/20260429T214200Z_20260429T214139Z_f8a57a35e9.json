@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-29T21:42:00Z",
+  "reason": "Lähdeaineisto on ristiriitaista ja käsittelee pääosin muita otteluita kuin otsikon Atlético–Arsenal-välierää.",
+  "packet": {
+    "packet_id": "20260429T214139Z_f8a57a35e9",
+    "created_at": "2026-04-29T21:41:39Z",
+    "headline_seed": "Trilleri Mestarien liigassa – Arsenal selvisi pinteestä",
+    "description_seed": "Atletico Madrid ja Arsenal avasivat välieränsä Madridissa.",
+    "link": "https://www.is.fi/mestarienliiga/art-2000011976921.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "source-9",
+      "Yle",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.is.fi/mestarienliiga/art-2000011976921.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.76,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trilleri Mestarien liigassa – Arsenal selvisi pinteestä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Real Madrid on voittanut Manchester Cityn Mestarien liigassa neljä kertaa viiden kauden aikana. Yhteismaalit olivat tällä kertaa 5–1 espanjalaisjätille.",
+        "word_count": 19,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Arsenal eteni Mestarien liigan puolivälieriin voitettuaan Leverkusenin 2–0 tiistain ottelussa. Eberechi Eze iski upean kaukolaukausmaalin ensimmäisellä puoliajalla ja Declan Rice viimeisteli voiton toisella jaksolla.",
+        "word_count": 24,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Voitto oli Arsenalille täydellinen valmistautuminen sunnuntain Liigacupin finaaliin, jossa vastassa on Manchester City. Arsenal johtaa myös Valioliigaa yhdeksän pisteen erolla ja on mukana FA Cupissa.",
+        "word_count": 25,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Real Madrid on voittanut Manchester Cityn Mestarien liigassa neljä kertaa viiden kauden aikana. Yhteismaalit olivat tällä kertaa 5–1 espanjalaisjätille.\n\nArsenal eteni Mestarien liigan puolivälieriin voitettuaan Leverkusenin 2–0 tiistain ottelussa. Eberechi Eze iski upean kaukolaukausmaalin ensimmäisellä puoliajalla ja Declan Rice viimeisteli voiton toisella jaksolla.\n\nVoitto oli Arsenalille täydellinen valmistautuminen sunnuntain Liigacupin finaaliin, jossa vastassa on Manchester City. Arsenal johtaa myös Valioliigaa yhdeksän pisteen erolla ja on mukana FA Cupissa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trilleri Mestarien liigassa – Arsenal selvisi pinteestä",
+      "description": "Atletico Madrid ja Arsenal avasivat välieränsä Madridissa.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T214139Z_f8a57a35e9\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on ristiriitaista ja käsittelee pääosin muita otteluita kuin otsikon Atlético–Arsenal-välierää.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

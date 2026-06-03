@@ -1,0 +1,103 @@
+{
+  "packet_id": "20260429T201136Z_306eea9d55",
+  "packet": {
+    "packet_id": "20260429T201136Z_306eea9d55",
+    "created_at": "2026-04-29T20:11:36Z",
+    "headline_seed": "HERMES.md: Anthropic bug causes $200 extra charge, refuses refund",
+    "description_seed": "Article URL: https://github.com/anthropics/claude-code/issues/53262 Comments URL: https://news.ycombinator.com/item?id=47952722 Points: 401 # Comments: 139",
+    "link": "https://github.com/anthropics/claude-code/issues/53262",
+    "source": "Hacker News Best",
+    "source_names": [
+      "Hacker News Best",
+      "Hacker News Best",
+      "source-3",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://github.com/anthropics/claude-code/issues/53262"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.91,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "HERMES.md: Anthropic bug causes $200 extra charge, refuses refund"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Hacker News Best",
+        "source_type": "description",
+        "text": "Article URL: https://github.com/anthropics/claude-code/issues/53262 Comments URL: https://news.ycombinator.com/item?id=47952722 Points: 401 # Comments: 139",
+        "word_count": 11,
+        "keyword_overlap": 13,
+        "strong_overlap": 9
+      },
+      {
+        "source": "Hacker News Best",
+        "source_type": "research",
+        "text": "When a git repository's recent commit history contains the case-sensitive string HERMES.md, Claude Code routes API requests to \"extra usage\" billing instead of the included Max plan quota. This silently burned through $200 in extra usage credits while my Max 20x plan capacity remained largely untouched (13% weekly usage).",
+        "word_count": 49,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "The trigger is the string HERMES.md in git commit messages — not the presence of a file with that name on disk. Claude Code includes recent commits in its system prompt, and something server-side routes the request differently when this string is present.",
+        "word_count": 43,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Systematic binary search: cloning affected repos, testing orphan branches, then isolating individual commit message strings until HERMES.md was identified as the exact trigger.",
+        "word_count": 23,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Article URL: https://github.com/anthropics/claude-code/issues/53262 Comments URL: https://news.ycombinator.com/item?id=47952722 Points: 401 # Comments: 139\n\nWhen a git repository's recent commit history contains the case-sensitive string HERMES.md, Claude Code routes API requests to \"extra usage\" billing instead of the included Max plan quota. This silently burned through $200 in extra usage credits while my Max 20x plan capacity remained largely untouched (13% weekly usage).\n\nThe trigger is the string HERMES.md in git commit messages — not the presence of a file with that name on disk. Claude Code includes recent commits in its system prompt, and something server-side routes the request differently when this string is present.\n\nSystematic binary search: cloning affected repos, testing orphan branches, then isolating individual commit message strings until HERMES.md was identified as the exact trigger.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "HERMES.md: Anthropic bug causes $200 extra charge, refuses refund",
+      "description": "Article URL: https://github.com/anthropics/claude-code/issues/53262 Comments URL: https://news.ycombinator.com/item?id=47952722 Points: 401 # Comments: 139",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "response": {
+    "packet_id": "20260429T201136Z_306eea9d55",
+    "title": "Gitin commit-viestiin liittyvä bugi ohjasi Claude Code -käyttöä lisälaskutukseen",
+    "summary": "Hacker Newsissa huomiota saanut GitHub-raportti väittää, että Claude Code ohjasi käyttöä lisälaskutukseen, jos git-varaston viimeaikaisissa commit-viesteissä esiintyi merkkijono HERMES.md. Raportin mukaan virhe kulutti noin 200 dollarin verran ylimääräisiä käyttöhyvityksiä, vaikka käyttäjän Max-paketin kiintiötä oli yhä runsaasti jäljellä.",
+    "content": "GitHubissa julkaistu virheraportti on nostanut esiin poikkeuksellisen laskutusongelman Claude Code -palvelussa. Raportin mukaan palvelun API-kutsut ohjautuivat mukana tulevan Max-paketin kiintiön sijasta erilliseen lisälaskutukseen silloin, kun git-varaston viimeaikaisessa commit-historiassa esiintyi tarkalleen merkkijono HERMES.md. Julkaisijan mukaan seurauksena oli noin 200 dollarin ylimääräinen veloitus, vaikka hänen Max 20x -pakettinsa viikkokäytöstä oli kulunut vain 13 prosenttia.\n\n## Bugi liittyi commit-viesteihin, ei tiedostoon\n\nRaportin mukaan ongelman aiheuttaja ei ollut HERMES.md-niminen tiedosto projektissa, vaan nimenomaan saman merkkijonon esiintyminen gitin commit-viesteissä. Tämä on olennainen yksityiskohta, koska se viittaa siihen, että palvelu käsittelee myös viimeaikaista commit-historiaa osana omaa sisäistä toimintalogiikkaansa.\n\nAineiston mukaan Claude Code sisällyttää viimeisimpiä committeja järjestelmäkehotteeseensa. Raportin tehnyt käyttäjä arvioi, että jokin palvelimen puolella muuttaa pyyntöjen reititystä, jos kyseinen merkkijono on mukana. Tällöin käyttö ei enää vähennä Max-paketin sisältyvää kapasiteettia, vaan alkaa kuluttaa erillistä maksullista käyttöä.\n\n## Ongelmaa selvitettiin järjestelmällisesti\n\nVirheraportissa kuvataan, että ongelmaa tutkittiin systemaattisella rajauksella. Käyttäjä kloonasi ongelmaan liittyviä varastoja, testasi erillisiä orphan-haaroja ja eristi lopulta yksittäisiä commit-viestien merkkijonoja. Tämän niin sanotun binäärihaun avulla HERMES.md tunnistettiin täsmälliseksi laukaisijaksi.\n\nTällainen selvitystapa vahvistaa ainakin sitä, että raportin laatija pyrki sulkemaan pois muita mahdollisia syitä ennen johtopäätöksen tekemistä. Käytettävissä olevien tietojen perusteella kyse ei siis ollut satunnaisesta epäilystä, vaan toistettavaksi väitetystä havainnosta, joka liittyi hyvin tarkkaan ehtoon.\n\n## Tapaus herätti laajaa kiinnostusta\n\nTapaus nousi nopeasti näkyväksi myös Hacker Newsissa, jossa siihen liittyvällä keskustelulla oli satoja pisteitä ja runsaasti kommentteja. Tämä kertoo siitä, että aihe on herättänyt kiinnostusta erityisesti kehittäjäyhteisössä, jossa laskutuksen ennakoitavuus ja työkalujen luotettavuus ovat keskeisiä kysymyksiä.\n\nSaatavilla olevassa aineistossa ei ollut vahvistusta siitä, miten palveluntarjoaja on vastannut raporttiin tai onko ongelma jo korjattu. Varmaa kuitenkin on, että julkaistu bugikuvaus yhdistää tarkan teknisen laukaisijan, poikkeavan laskutusreitityksen ja käyttäjän mukaan merkittävän lisäveloituksen. Jos havainto pitää paikkansa laajemminkin, kyse on sekä teknisestä että luottamukseen liittyvästä ongelmasta kehittäjille suunnatussa työkalussa.",
+    "category": "Teknologia",
+    "tags": [
+      "Claude Code",
+      "Anthropic",
+      "bugit",
+      "laskutus",
+      "git"
+    ],
+    "summary_bullets": [
+      "GitHub-raportin mukaan merkkijono HERMES.md commit-viesteissä ohjasi Claude Code -käyttöä lisälaskutukseen.",
+      "Raportin mukaan ylimääräisiä käyttöhyvityksiä kului noin 200 dollarin edestä.",
+      "Ongelma liittyi commit-historiaan, ei HERMES.md-nimiseen tiedostoon projektissa.",
+      "Virhettä selvitettiin systemaattisella testauksella ja commit-viestien eristämisellä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.84,
+    "journalist_note": "Artikkeli perustuu GitHubissa julkaistuun virheraporttiin ja sitä kuvaavaan yhteenvetoon. Aineistossa ei ollut palveluntarjoajan vahvistusta, vastausta tai tietoa mahdollisesta korjauksesta, joten väitteet on syytä ymmärtää raportin esittäjän kuvauksena."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T201136Z_306eea9d55\",\"title\":\"Gitin commit-viestiin liittyvä bugi ohjasi Claude Code -käyttöä lisälaskutukseen\",\"summary\":\"Hacker Newsissa huomiota saanut GitHub-raportti väittää, että Claude Code ohjasi käyttöä lisälaskutukseen, jos git-varaston viimeaikaisissa commit-viesteissä esiintyi merkkijono HERMES.md. Raportin mukaan virhe kulutti noin 200 dollarin verran ylimääräisiä käyttöhyvityksiä, vaikka käyttäjän Max-paketin kiintiötä oli yhä runsaasti jäljellä.\",\"content\":\"GitHubissa julkaistu virheraportti on nostanut esiin poikkeuksellisen laskutusongelman Claude Code -palvelussa. Raportin mukaan palvelun API-kutsut ohjautuivat mukana tulevan Max-paketin kiintiön sijasta erilliseen lisälaskutukseen silloin, kun git-varaston viimeaikaisessa commit-historiassa esiintyi tarkalleen merkkijono HERMES.md. Julkaisijan mukaan seurauksena oli noin 200 dollarin ylimääräinen veloitus, vaikka hänen Max 20x -pakettinsa viikkokäytöstä oli kulunut vain 13 prosenttia.\\n\\n## Bugi liittyi commit-viesteihin, ei tiedostoon\\n\\nRaportin mukaan ongelman aiheuttaja ei ollut HERMES.md-niminen tiedosto projektissa, vaan nimenomaan saman merkkijonon esiintyminen gitin commit-viesteissä. Tämä on olennainen yksityiskohta, koska se viittaa siihen, että palvelu käsittelee myös viimeaikaista commit-historiaa osana omaa sisäistä toimintalogiikkaansa.\\n\\nAineiston mukaan Claude Code sisällyttää viimeisimpiä committeja järjestelmäkehotteeseensa. Raportin tehnyt käyttäjä arvioi, että jokin palvelimen puolella muuttaa pyyntöjen reititystä, jos kyseinen merkkijono on mukana. Tällöin käyttö ei enää vähennä Max-paketin sisältyvää kapasiteettia, vaan alkaa kuluttaa erillistä maksullista käyttöä.\\n\\n## Ongelmaa selvitettiin järjestelmällisesti\\n\\nVirheraportissa kuvataan, että ongelmaa tutkittiin systemaattisella rajauksella. Käyttäjä kloonasi ongelmaan liittyviä varastoja, testasi erillisiä orphan-haaroja ja eristi lopulta yksittäisiä commit-viestien merkkijonoja. Tämän niin sanotun binäärihaun avulla HERMES.md tunnistettiin täsmälliseksi laukaisijaksi.\\n\\nTällainen selvitystapa vahvistaa ainakin sitä, että raportin laatija pyrki sulkemaan pois muita mahdollisia syitä ennen johtopäätöksen tekemistä. Käytettävissä olevien tietojen perusteella kyse ei siis ollut satunnaisesta epäilystä, vaan toistettavaksi väitetystä havainnosta, joka liittyi hyvin tarkkaan ehtoon.\\n\\n## Tapaus herätti laajaa kiinnostusta\\n\\nTapaus nousi nopeasti näkyväksi myös Hacker Newsissa, jossa siihen liittyvällä keskustelulla oli satoja pisteitä ja runsaasti kommentteja. Tämä kertoo siitä, että aihe on herättänyt kiinnostusta erityisesti kehittäjäyhteisössä, jossa laskutuksen ennakoitavuus ja työkalujen luotettavuus ovat keskeisiä kysymyksiä.\\n\\nSaatavilla olevassa aineistossa ei ollut vahvistusta siitä, miten palveluntarjoaja on vastannut raporttiin tai onko ongelma jo korjattu. Varmaa kuitenkin on, että julkaistu bugikuvaus yhdistää tarkan teknisen laukaisijan, poikkeavan laskutusreitityksen ja käyttäjän mukaan merkittävän lisäveloituksen. Jos havainto pitää paikkansa laajemminkin, kyse on sekä teknisestä että luottamukseen liittyvästä ongelmasta kehittäjille suunnatussa työkalussa.\",\"category\":\"Teknologia\",\"tags\":[\"Claude Code\",\"Anthropic\",\"bugit\",\"laskutus\",\"git\"],\"summary_bullets\":[\"GitHub-raportin mukaan merkkijono HERMES.md commit-viesteissä ohjasi Claude Code -käyttöä lisälaskutukseen.\",\"Raportin mukaan ylimääräisiä käyttöhyvityksiä kului noin 200 dollarin edestä.\",\"Ongelma liittyi commit-historiaan, ei HERMES.md-nimiseen tiedostoon projektissa.\",\"Virhettä selvitettiin systemaattisella testauksella ja commit-viestien eristämisellä.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.84,\"journalist_note\":\"Artikkeli perustuu GitHubissa julkaistuun virheraporttiin ja sitä kuvaavaan yhteenvetoon. Aineistossa ei ollut palveluntarjoajan vahvistusta, vastausta tai tietoa mahdollisesta korjauksesta, joten väitteet on syytä ymmärtää raportin esittäjän kuvauksena.\"}"
+}

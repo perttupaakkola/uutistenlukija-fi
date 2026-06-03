@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-28T13:09:01Z",
+  "reason": "aineisto sisältää asiaan liittymätöntä viljasatotietoa eikä riitä puunkäytön muutosta avaavaan yhtenäiseen uutiseen",
+  "packet": {
+    "packet_id": "20260428T130755Z_02b57143a3",
+    "created_at": "2026-04-28T13:07:55Z",
+    "headline_seed": "Puun käyttö kasvoi hieman viime vuonna",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/metsa/482d3c46-5dff-48bd-b419-471200f6e3bd",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [
+      "source-21",
+      "Demokraatti",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/metsa/482d3c46-5dff-48bd-b419-471200f6e3bd"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.65,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Puun käyttö kasvoi hieman viime vuonna"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-21",
+        "source_type": "research",
+        "text": "Metsäteollisuuden raaka-aineeksi hakatun puun määrä kasvoi hieman, kun taas energian tuotantoon hakatun runkopuun määrä pieneni kahdeksan prosenttia. Yli puolet energian tuotantoon hakatusta puusta meni pientalojen polttopuuksi ja loput metsähakkeen raaka-aineeksi energiantuotantolaitoksille.",
+        "word_count": 31,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Demokraatti",
+        "source_type": "research",
+        "text": "Suomessa hakattiin viime vuonna runsaat 74 miljoonaa kuutiometriä runkopuuta, kertoo Luonnonvarakeskus. Se oli prosentin vähemmän kuin vuotta aiemmin.",
+        "word_count": 18,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Suomen pelloilta korjattiin viime vuonna viljasatoa 3,4 miljardia kiloa, kertoo Luonnonvarakeskus Luke.",
+        "word_count": 12,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Metsäteollisuuden raaka-aineeksi hakatun puun määrä kasvoi hieman, kun taas energian tuotantoon hakatun runkopuun määrä pieneni kahdeksan prosenttia. Yli puolet energian tuotantoon hakatusta puusta meni pientalojen polttopuuksi ja loput metsähakkeen raaka-aineeksi energiantuotantolaitoksille.\n\nSuomessa hakattiin viime vuonna runsaat 74 miljoonaa kuutiometriä runkopuuta, kertoo Luonnonvarakeskus. Se oli prosentin vähemmän kuin vuotta aiemmin.\n\nSuomen pelloilta korjattiin viime vuonna viljasatoa 3,4 miljardia kiloa, kertoo Luonnonvarakeskus Luke.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Puun käyttö kasvoi hieman viime vuonna",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=974329f7-e67b-4b23-959f-6d31d195d36a sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T130755Z_02b57143a3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto sisältää asiaan liittymätöntä viljasatotietoa eikä riitä puunkäytön muutosta avaavaan yhtenäiseen uutiseen\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

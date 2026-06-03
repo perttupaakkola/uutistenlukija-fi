@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-29T18:12:40Z",
+  "reason": "Lähdeaineistossa on liian vähän varmennettuja taustatietoja Virtasen urasta ja siirron kokonaismerkityksestä 250 sanan uutisartikkeliin ilman täytesisältöä.",
+  "packet": {
+    "packet_id": "20260429T181153Z_0f81773d7b",
+    "created_at": "2026-04-29T18:11:53Z",
+    "headline_seed": "Santeri Virtanen siirtyy Lukkoon kahden vuoden sopimuksella",
+    "description_seed": "Lukko on jälleen vahvistanut joukkuettaan, kun Santeri Virtanen saapuu Raumalle.",
+    "link": "https://www.jatkoaika.com/Uutiset/Santeri-Virtanen-siirtyy-Lukkoon-kahden-vuoden-sopimuksella/269363",
+    "source": "Jatkoaika.com",
+    "source_names": [
+      "Jatkoaika.com",
+      "source-3",
+      "Jatkoaika.com",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.jatkoaika.com/Uutiset/Santeri-Virtanen-siirtyy-Lukkoon-kahden-vuoden-sopimuksella/269363"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Santeri Virtanen siirtyy Lukkoon kahden vuoden sopimuksella"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Jatkoaika.com",
+        "source_type": "description",
+        "text": "Lukko on jälleen vahvistanut joukkuettaan, kun Santeri Virtanen saapuu Raumalle.",
+        "word_count": 10,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "– Isona syynä oli tietenkin sellainen kosketuspinta Lukkoon, joka on syntynyt Kallen kautta. Hän toimi silloin kiekkolehtorina Turussa, kun saavuin nuorena poikana sinne. Ja sitä kautta aina takaraivossa on ollut sellainen ajatus, että jos joskus päästään yhteisymmärrykseen, niin olisi mukava tulla Raumalle pelaamaan, Virtanen itse kommentoi siirtoaan.",
+        "word_count": 47,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Jatkoaika.com",
+        "source_type": "research",
+        "text": "Rauman Lukko tiedottaa tehneensä kahden vuoden sopimuksen hyökkääjä Santeri Virtasen kanssa.",
+        "word_count": 11,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "– Saadaan joukkueeseen erinomaisen ikäinen suomalainen sentteri, joka on erittäin tunnollinen kahden suunnan pelaaja. Pystyy tuomaan meille lisää hyökkäysvoimaa ja sitten taas toisaalta on myös todella luotettava puolustussuuntaan, kertoo Lukon urheilujohtaja Kalle Sahlstedt.",
+        "word_count": 33,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Lukko on jälleen vahvistanut joukkuettaan, kun Santeri Virtanen saapuu Raumalle.\n\n– Isona syynä oli tietenkin sellainen kosketuspinta Lukkoon, joka on syntynyt Kallen kautta. Hän toimi silloin kiekkolehtorina Turussa, kun saavuin nuorena poikana sinne. Ja sitä kautta aina takaraivossa on ollut sellainen ajatus, että jos joskus päästään yhteisymmärrykseen, niin olisi mukava tulla Raumalle pelaamaan, Virtanen itse kommentoi siirtoaan.\n\nRauman Lukko tiedottaa tehneensä kahden vuoden sopimuksen hyökkääjä Santeri Virtasen kanssa.\n\n– Saadaan joukkueeseen erinomaisen ikäinen suomalainen sentteri, joka on erittäin tunnollinen kahden suunnan pelaaja. Pystyy tuomaan meille lisää hyökkäysvoimaa ja sitten taas toisaalta on myös todella luotettava puolustussuuntaan, kertoo Lukon urheilujohtaja Kalle Sahlstedt.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Santeri Virtanen siirtyy Lukkoon kahden vuoden sopimuksella",
+      "description": "Lukko on jälleen vahvistanut joukkuettaan, kun Santeri Virtanen saapuu Raumalle.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T181153Z_0f81773d7b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on liian vähän varmennettuja taustatietoja Virtasen urasta ja siirron kokonaismerkityksestä 250 sanan uutisartikkeliin ilman täytesisältöä.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

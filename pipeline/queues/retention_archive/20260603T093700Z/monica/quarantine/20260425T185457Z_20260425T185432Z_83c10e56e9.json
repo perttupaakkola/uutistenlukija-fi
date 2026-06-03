@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-25T18:54:57Z",
+  "reason": "otsikko ja lähdeteksti ovat pahasti ristiriidassa, eikä aineisto tue varmennettua uutisjuttua Chicagon ampumistapauksesta",
+  "packet": {
+    "packet_id": "20260425T185432Z_83c10e56e9",
+    "created_at": "2026-04-25T18:54:32Z",
+    "headline_seed": "Ampumistapaus sairaalassa Chicagossa – poliisi kuollut",
+    "description_seed": "Epäilty ampuja pakeni paikalta panttivangin kanssa.",
+    "link": "https://www.is.fi/ulkomaat/art-2000011967957.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-9",
+      "source-3",
+      "source-4",
+      "source-17"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000011967957.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ampumistapaus sairaalassa Chicagossa – poliisi kuollut"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Poliisin voimankäytön seurauksena on Suomessa kuollut kaikkiaan 14 ihmistä 2000-luvulla. Viime vuonna tapauksia oli kaksi. Syyskuussa poliisi ampui teräaseella toista poliisia uhanneen miehen Espoossa. Heinäkuussa poliisi ampui Helsingissä puukon kanssa poliisia lähestyneen miehen, jota etälamautin ei pysäyttänyt.",
+        "word_count": 37,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Torstaina Torniossa tapahtuneessa välikohtauksessa poliisi ampui kohti miestä, joka oli Lapin poliisin mukaan ensin ampunut kohti poliiseja useita kertoja. Poliisin mukaan kukaan ei loukkaantunut tilanteessa. Miehen ampuma laukaus osui poliisiautoon.",
+        "word_count": 30,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Koko Suomessa poliisi käyttää asetta virkatehtävissä 20-30 kertaa vuodessa, kertoo Poliisihallitus. Luvussa ovat mukana myös varoituslaukaukset. Määrä on pysynyt tasaisena pitkään.",
+        "word_count": 21,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-17",
+        "source_type": "research",
+        "text": "Poliisi pyrkii Poliisihallituksen mukaan välttämään aseen käyttöä viimeiseen saakka. Sen sijaan poliisi käyttää esimerkiksi etäl",
+        "word_count": 15,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Poliisin voimankäytön seurauksena on Suomessa kuollut kaikkiaan 14 ihmistä 2000-luvulla. Viime vuonna tapauksia oli kaksi. Syyskuussa poliisi ampui teräaseella toista poliisia uhanneen miehen Espoossa. Heinäkuussa poliisi ampui Helsingissä puukon kanssa poliisia lähestyneen miehen, jota etälamautin ei pysäyttänyt.\n\nTorstaina Torniossa tapahtuneessa välikohtauksessa poliisi ampui kohti miestä, joka oli Lapin poliisin mukaan ensin ampunut kohti poliiseja useita kertoja. Poliisin mukaan kukaan ei loukkaantunut tilanteessa. Miehen ampuma laukaus osui poliisiautoon.\n\nKoko Suomessa poliisi käyttää asetta virkatehtävissä 20-30 kertaa vuodessa, kertoo Poliisihallitus. Luvussa ovat mukana myös varoituslaukaukset. Määrä on pysynyt tasaisena pitkään.\n\nPoliisi pyrkii Poliisihallituksen mukaan välttämään aseen käyttöä viimeiseen saakka. Sen sijaan poliisi käyttää esimerkiksi etäl",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ampumistapaus sairaalassa Chicagossa – poliisi kuollut",
+      "description": "Epäilty ampuja pakeni paikalta panttivangin kanssa.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=81657ea4-12b6-4633-ae05-cda3953b2202 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T185432Z_83c10e56e9\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"otsikko ja lähdeteksti ovat pahasti ristiriidassa, eikä aineisto tue varmennettua uutisjuttua Chicagon ampumistapauksesta\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

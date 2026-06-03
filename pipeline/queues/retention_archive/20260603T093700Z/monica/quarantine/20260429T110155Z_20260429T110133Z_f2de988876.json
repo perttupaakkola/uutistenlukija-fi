@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-29T11:01:55Z",
+  "reason": "Paketti tukee väitettä eduskuntaan pyrkimisestä, mutta muu aineisto käsittelee pääosin Jone Nikulan sydänkohtausta eikä tuo riittävästi varmennettuja lisätietoja itse poliittisesta pyrkimyksestä. Aineisto ei riitä julkaistavaan vähintään 250 sanan uutiseen ilman täyttöä.",
+  "packet": {
+    "packet_id": "20260429T110133Z_f2de988876",
+    "created_at": "2026-04-29T11:01:33Z",
+    "headline_seed": "Eeva: Jone Nikula pyrkii eduskuntaan",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9413569",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-25",
+      "eeva.fi",
+      "Como",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9413569"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.74,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Eeva: Jone Nikula pyrkii eduskuntaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-25",
+        "source_type": "research",
+        "text": "– Aikaisemminkin on pyydetty. Nyt on oikea hetki kokeilla, pääsisinkö eduskuntaan. Epäkiitollista työtähän siellä tehdään, mutta minulle asioiden hinkuttaminen ja kompromissiin pyrkiminen sopivat, paljasti Nikula haastattelussa.",
+        "word_count": 26,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "eeva.fi",
+        "source_type": "research",
+        "text": "Kun juontaja Jone Nikula selvisi sydänkohtauksesta, hän ei kokenut suurta valaistumista eikä alkanut pelätä kuolemaa. Elämä jatkuu kuten ennenkin, ja juuri niin on hyvä.",
+        "word_count": 24,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Como",
+        "source_type": "research",
+        "text": "Radio Cityn juontaja Jone Nikula oli pitkään poissa töistä. Syynä oli hänen saama sydänkohtaus, joka oli iskenyt keskellä työpäivää.",
+        "word_count": 19,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Näin sanoo Jone Nikula kolmisen kuukautta sen jälkeen, kun heräsi työpaikkansa lattialta sydämen käynnistyslätkät rinnassaan.",
+        "word_count": 15,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "– Aikaisemminkin on pyydetty. Nyt on oikea hetki kokeilla, pääsisinkö eduskuntaan. Epäkiitollista työtähän siellä tehdään, mutta minulle asioiden hinkuttaminen ja kompromissiin pyrkiminen sopivat, paljasti Nikula haastattelussa.\n\nKun juontaja Jone Nikula selvisi sydänkohtauksesta, hän ei kokenut suurta valaistumista eikä alkanut pelätä kuolemaa. Elämä jatkuu kuten ennenkin, ja juuri niin on hyvä.\n\nRadio Cityn juontaja Jone Nikula oli pitkään poissa töistä. Syynä oli hänen saama sydänkohtaus, joka oli iskenyt keskellä työpäivää.\n\nNäin sanoo Jone Nikula kolmisen kuukautta sen jälkeen, kun heräsi työpaikkansa lattialta sydämen käynnistyslätkät rinnassaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Eeva: Jone Nikula pyrkii eduskuntaan",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T110133Z_f2de988876\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti tukee väitettä eduskuntaan pyrkimisestä, mutta muu aineisto käsittelee pääosin Jone Nikulan sydänkohtausta eikä tuo riittävästi varmennettuja lisätietoja itse poliittisesta pyrkimyksestä. Aineisto ei riitä julkaistavaan vähintään 250 sanan uutiseen ilman täyttöä.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

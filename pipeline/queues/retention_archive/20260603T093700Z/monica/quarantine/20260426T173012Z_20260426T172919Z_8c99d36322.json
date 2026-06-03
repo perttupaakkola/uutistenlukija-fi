@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T17:30:12Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T172919Z_8c99d36322",
+    "created_at": "2026-04-26T17:29:19Z",
+    "headline_seed": "Trump raivosi alaisilleen tuntikausia – WSJ: hävittäjän putoaminen Iranissa oli liikaa",
+    "description_seed": "Iranin sota ei ole mennyt Yhdysvaltain presidentti Donald Trumpin toiveiden mukaisesti.",
+    "link": "https://www.tivi.fi/uutiset/a/b7bb01f4-72ea-4216-99af-03071fe38fa8",
+    "source": "Tivi",
+    "source_names": [
+      "Tivi",
+      "source-2",
+      "source-7",
+      "source-14"
+    ],
+    "source_urls": [
+      "https://www.tivi.fi/uutiset/a/b7bb01f4-72ea-4216-99af-03071fe38fa8"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.82,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump raivosi alaisilleen tuntikausia – WSJ: hävittäjän putoaminen Iranissa oli liikaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Tivi",
+        "source_type": "description",
+        "text": "Iranin sota ei ole mennyt Yhdysvaltain presidentti Donald Trumpin toiveiden mukaisesti.",
+        "word_count": 11,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Yhdysvaltain presidentti Donald Trumpin mukaan maan sotatoimet Iranissa ovat päättymässä. Trump kommentoi asiaa yhdysvaltalaismedia NBC Newsin haastattelussa.",
+        "word_count": 17,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "Presidentti Donald Trump sanoo, että Iran voi ottaa yhteyttä Yhdysvaltoihin, jos se haluaa neuvotella maiden välisen sodan lopettamisesta.",
+        "word_count": 18,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-14",
+        "source_type": "research",
+        "text": "Hän kävi lyhyesti Omanissa poistuttuaan Pakistanista eilen. Iranin presidentti Masoud Pezeshkian sanoi eilen, ettei Iranin hallinto ryhdy ”pakotettuihin neuvotteluihin” Yhdysvaltojen kanssa paineen ja uhkausten alla.",
+        "word_count": 25,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Iranin sota ei ole mennyt Yhdysvaltain presidentti Donald Trumpin toiveiden mukaisesti.\n\nYhdysvaltain presidentti Donald Trumpin mukaan maan sotatoimet Iranissa ovat päättymässä. Trump kommentoi asiaa yhdysvaltalaismedia NBC Newsin haastattelussa.\n\nPresidentti Donald Trump sanoo, että Iran voi ottaa yhteyttä Yhdysvaltoihin, jos se haluaa neuvotella maiden välisen sodan lopettamisesta.\n\nHän kävi lyhyesti Omanissa poistuttuaan Pakistanista eilen. Iranin presidentti Masoud Pezeshkian sanoi eilen, ettei Iranin hallinto ryhdy ”pakotettuihin neuvotteluihin” Yhdysvaltojen kanssa paineen ja uhkausten alla.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump raivosi alaisilleen tuntikausia – WSJ: hävittäjän putoaminen Iranissa oli liikaa",
+      "description": "Iranin sota ei ole mennyt Yhdysvaltain presidentti Donald Trumpin toiveiden mukaisesti.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25619 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25622 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

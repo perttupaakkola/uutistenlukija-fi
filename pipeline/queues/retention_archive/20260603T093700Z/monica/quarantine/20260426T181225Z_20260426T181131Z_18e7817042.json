@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T18:12:25Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T181131Z_18e7817042",
+    "created_at": "2026-04-26T18:11:31Z",
+    "headline_seed": "Demokratiaa uhmaavien johtajien pojat rynnivät juomabisnekseen – Trump ja Kadyrov yhdistetään nyt energiajuomiin",
+    "description_seed": "Tänä keväänä omia tehojuomiaan markkinoivat sekä Yhdysvaltain presidentin Donald Trumpin että Tšetšenian itsevaltaisen johtajan Ramzan Kadyrovin poika.",
+    "link": "https://yle.fi/a/74-20222568?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-5",
+      "source-6",
+      "source-13"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222568?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.8,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Demokratiaa uhmaavien johtajien pojat rynnivät juomabisnekseen – Trump ja Kadyrov yhdistetään nyt energiajuomiin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Tänä keväänä omia tehojuomiaan markkinoivat sekä Yhdysvaltain presidentin Donald Trumpin että Tšetšenian itsevaltaisen johtajan Ramzan Kadyrovin poika.",
+        "word_count": 17,
+        "keyword_overlap": 16,
+        "strong_overlap": 11
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Tšetšenia on osa Venäjää. Tasavallan johtaja ja Adam Kadyrovin isä Ramzan Kadyrov on presidentti Vladimir Putinin läheinen liittolainen.",
+        "word_count": 18,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Uusi aluevaltaus on Kadyrovin klaanille täyskäännös. Ramzan Kadyrov kielsi aiemmin energiajuomien myynnin Tšetšeniassa.",
+        "word_count": 13,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Nimitys seurasi suurta kohua, joka syntyi Ramzan Kadyrovin julkaistua pojastaan videon Telegram-tilillään.",
+        "word_count": 12,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Tänä keväänä omia tehojuomiaan markkinoivat sekä Yhdysvaltain presidentin Donald Trumpin että Tšetšenian itsevaltaisen johtajan Ramzan Kadyrovin poika.\n\nTšetšenia on osa Venäjää. Tasavallan johtaja ja Adam Kadyrovin isä Ramzan Kadyrov on presidentti Vladimir Putinin läheinen liittolainen.\n\nUusi aluevaltaus on Kadyrovin klaanille täyskäännös. Ramzan Kadyrov kielsi aiemmin energiajuomien myynnin Tšetšeniassa.\n\nNimitys seurasi suurta kohua, joka syntyi Ramzan Kadyrovin julkaistua pojastaan videon Telegram-tilillään.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Demokratiaa uhmaavien johtajien pojat rynnivät juomabisnekseen – Trump ja Kadyrov yhdistetään nyt energiajuomiin",
+      "description": "Tänä keväänä omia tehojuomiaan markkinoivat sekä Yhdysvaltain presidentin Donald Trumpin että Tšetšenian itsevaltaisen johtajan Ramzan Kadyrovin poika.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25832 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25835 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

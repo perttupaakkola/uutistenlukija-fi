@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T17:09:28Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T170833Z_d8c22924ff",
+    "created_at": "2026-04-26T17:08:33Z",
+    "headline_seed": "Netanyahu orders army to 'vigorously attack' Hezbollah in Lebanon",
+    "description_seed": "The Israeli PM's directive comes as six people were killed by strikes in Lebanon despite a ceasefire being extended by three weeks.",
+    "link": "https://www.bbc.com/news/articles/c5yv1nvd4gjo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-2",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c5yv1nvd4gjo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Netanyahu orders army to 'vigorously attack' Hezbollah in Lebanon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The Israeli PM's directive comes as six people were killed by strikes in Lebanon despite a ceasefire being extended by three weeks.",
+        "word_count": 22,
+        "keyword_overlap": 14,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Israel's Prime Minister Benjamin Netanyahu has ordered his military to \"vigorously attack Hezbollah targets\" in Lebanon, two days after a ceasefire was extended by three weeks.",
+        "word_count": 26,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Fresh Israeli attacks followed the directive, which came after at least six people were killed in strikes on southern Lebanon on Saturday.",
+        "word_count": 22,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Earlier on Saturday, Israeli strikes on a truck and a motorbike in the town of Yohmor al-Shaqeef in the Nabatieh district killed four people, Lebanon's health ministry said, according to Agence-France-Presse.",
+        "word_count": 31,
+        "keyword_overlap": 5,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The Israeli PM's directive comes as six people were killed by strikes in Lebanon despite a ceasefire being extended by three weeks.\n\nIsrael's Prime Minister Benjamin Netanyahu has ordered his military to \"vigorously attack Hezbollah targets\" in Lebanon, two days after a ceasefire was extended by three weeks.\n\nFresh Israeli attacks followed the directive, which came after at least six people were killed in strikes on southern Lebanon on Saturday.\n\nEarlier on Saturday, Israeli strikes on a truck and a motorbike in the town of Yohmor al-Shaqeef in the Nabatieh district killed four people, Lebanon's health ministry said, according to Agence-France-Presse.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Netanyahu orders army to 'vigorously attack' Hezbollah in Lebanon",
+      "description": "The Israeli PM's directive comes as six people were killed by strikes in Lebanon despite a ceasefire being extended by three weeks.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25723 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25727 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

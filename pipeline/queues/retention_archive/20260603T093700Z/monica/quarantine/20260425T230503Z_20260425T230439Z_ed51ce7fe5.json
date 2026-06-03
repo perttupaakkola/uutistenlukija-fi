@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-25T23:05:03Z",
+  "reason": "otsikko ja kuvaus eivät vastaa riittävästi lähdetekstiä, ja aineisto on liian niukka 250 sanan varmennettuun urheilujuttuun",
+  "packet": {
+    "packet_id": "20260425T230439Z_ed51ce7fe5",
+    "created_at": "2026-04-25T23:04:39Z",
+    "headline_seed": "Sebastian Aho latoi ratkaisumaalit lopussa – ensimmäinen NHL-joukkue eteni jatkoon pudotuspeleissä",
+    "description_seed": "Tunteet käyvät todella kuumana Ottawassa.",
+    "link": "https://www.is.fi/nhl/art-2000011968112.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "source-22",
+      "source-2",
+      "ksml.fi",
+      "source-17"
+    ],
+    "source_urls": [
+      "https://www.is.fi/nhl/art-2000011968112.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.79,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sebastian Aho latoi ratkaisumaalit lopussa – ensimmäinen NHL-joukkue eteni jatkoon pudotuspeleissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-22",
+        "source_type": "research",
+        "text": "Dallas Stars varmisti toisena joukkueena paikkansa pudotuspeleissä, vaikka hävisi Vegas Golden Knightsille 2–3. Stars on Keskisessä divisioonassa toisena, ja divisioonaa johtava Colorado Avalanche varmisti jo aiemmin paikkansa kevään huipennuksessa.",
+        "word_count": 29,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Carolinan kärkinimiä ottelussa oli joukkueen suomalainen tähtipelaaja Sebastian Aho, joka syötti joukkueensa avausmaalin ja teki itse toisen osuman. Aholla on nyt kasassa kuluvalta kaudelta tehot 24+44.",
+        "word_count": 26,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Sebastian Aho ja Mikael Granlund olivat jääkiekon NHL:ssä suomalaiset maalintekijät varhain maanantaina Suomen aikaa päättyneessä pelipäivässä.",
+        "word_count": 16,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-17",
+        "source_type": "research",
+        "text": "Ahosta tuli Carolinan seurahistorian ensimmäinen pelaaja, joka on tehnyt vähintään 25 maalia kahdeksalla kaudella.",
+        "word_count": 14,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Dallas Stars varmisti toisena joukkueena paikkansa pudotuspeleissä, vaikka hävisi Vegas Golden Knightsille 2–3. Stars on Keskisessä divisioonassa toisena, ja divisioonaa johtava Colorado Avalanche varmisti jo aiemmin paikkansa kevään huipennuksessa.\n\nCarolinan kärkinimiä ottelussa oli joukkueen suomalainen tähtipelaaja Sebastian Aho, joka syötti joukkueensa avausmaalin ja teki itse toisen osuman. Aholla on nyt kasassa kuluvalta kaudelta tehot 24+44.\n\nSebastian Aho ja Mikael Granlund olivat jääkiekon NHL:ssä suomalaiset maalintekijät varhain maanantaina Suomen aikaa päättyneessä pelipäivässä.\n\nAhosta tuli Carolinan seurahistorian ensimmäinen pelaaja, joka on tehnyt vähintään 25 maalia kahdeksalla kaudella.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sebastian Aho latoi ratkaisumaalit lopussa – ensimmäinen NHL-joukkue eteni jatkoon pudotuspeleissä",
+      "description": "Tunteet käyvät todella kuumana Ottawassa.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=3d10b478-e7ba-41aa-8c8f-a5b05dc1b7ad sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T230439Z_ed51ce7fe5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"otsikko ja kuvaus eivät vastaa riittävästi lähdetekstiä, ja aineisto on liian niukka 250 sanan varmennettuun urheilujuttuun\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

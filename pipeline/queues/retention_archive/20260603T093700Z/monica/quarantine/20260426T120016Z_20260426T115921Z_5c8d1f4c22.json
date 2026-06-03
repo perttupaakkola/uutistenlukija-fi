@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-26T12:00:16Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T115921Z_5c8d1f4c22",
+    "created_at": "2026-04-26T11:59:21Z",
+    "headline_seed": "Sabastian Sawe painoi maratonin maailmanennätyksen alle kahteen tuntiin",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9405128",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Yle",
+      "source-3",
+      "source-7"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9405128"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.7,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sabastian Sawe painoi maratonin maailmanennätyksen alle kahteen tuntiin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Kenian Sabastian Sawe paineli uuden maratonjuoksun maailmanennätyksen 1.59.30 Lontoon maratonilla. Hän on ensimmäinen ihminen, joka alitti maratonjuoksussa kahden tunnin rajan virallisessa maratonkisassa.",
+        "word_count": 22,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Lontoon maraton oli todella kovatasoinen, sillä myös toiseksi tullut Yomif Kejelcha 1.59.41 ja kolmanneksi juossut Jacob kiplimo 2.00.28 juoksivat alle vanhan maailmanennätyksen.",
+        "word_count": 22,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "Sawen maailmanennätykseen voi hakea perspektiiviä Cooperin testissä. Cooperin testi on koululiikunnassakin useasti hyödynnetty juoksutesti, jossa juostaan 12 minuuttia putkeen. Sawen maratonjuoksuvauhti tarkoittaisi 10 Cooperin testiä putkeen keskiarvona 4 237 metriä. Jos maratonin maailmanennätysjuoksu jaettaisiin 100 metrin juoksuihin, 100 metrin keskiarvoaika uudessa maratonin maailmanennätyksessä on 16,99 sekuntia.",
+        "word_count": 46,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Kenian Sabastian Sawe paineli uuden maratonjuoksun maailmanennätyksen 1.59.30 Lontoon maratonilla. Hän on ensimmäinen ihminen, joka alitti maratonjuoksussa kahden tunnin rajan virallisessa maratonkisassa.\n\nLontoon maraton oli todella kovatasoinen, sillä myös toiseksi tullut Yomif Kejelcha 1.59.41 ja kolmanneksi juossut Jacob kiplimo 2.00.28 juoksivat alle vanhan maailmanennätyksen.\n\nSawen maailmanennätykseen voi hakea perspektiiviä Cooperin testissä. Cooperin testi on koululiikunnassakin useasti hyödynnetty juoksutesti, jossa juostaan 12 minuuttia putkeen. Sawen maratonjuoksuvauhti tarkoittaisi 10 Cooperin testiä putkeen keskiarvona 4 237 metriä. Jos maratonin maailmanennätysjuoksu jaettaisiin 100 metrin juoksuihin, 100 metrin keskiarvoaika uudessa maratonin maailmanennätyksessä on 16,99 sekuntia.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sabastian Sawe painoi maratonin maailmanennätyksen alle kahteen tuntiin",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=26468 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=26473 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

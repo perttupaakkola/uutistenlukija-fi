@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T14:36:51Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T143557Z_27fb48deb6",
+    "created_at": "2026-04-27T14:35:57Z",
+    "headline_seed": "Tietomurrot | Aleksanteri Kivimäki vaatii syytteidensä hylkäämistä",
+    "description_seed": "Hovioikeus tuomitsi Aleksanteri Kivimäen lähes seitsemäksi vuodeksi vankeuteen.",
+    "link": "https://www.hs.fi/suomi/art-2000011965930.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "HS Tuoreimmat",
+      "source-17",
+      "source-4",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/suomi/art-2000011965930.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.8,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tietomurrot | Aleksanteri Kivimäki vaatii syytteidensä hylkäämistä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "HS Tuoreimmat",
+        "source_type": "description",
+        "text": "Hovioikeus tuomitsi Aleksanteri Kivimäen lähes seitsemäksi vuodeksi vankeuteen.",
+        "word_count": 8,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-17",
+        "source_type": "research",
+        "text": "Kivimäki tuomittiin käräjäoikeudessa kuuden vuoden ja kolmen kuukauden vankeuteen muun muassa törkeästä tietomurrosta. Hovioikeus korotti rangaistuksen kuuteen vuoteen ja 11 kuukauteen vankeutta.",
+        "word_count": 22,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Helsingin hovioikeus tuomitsi Kivimäen helmikuun lopulla kuuden vuoden ja 11 kuukauden vankeusrangaistukseen.",
+        "word_count": 12,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Jaarin mukaan Kivimäki vaatii hovioikeuden tuomion kumoamista tai muuttamista rangaistuksen osalta. Hän ei halua kommentoida valituksen perusteita tässä vaiheessa.",
+        "word_count": 19,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Hovioikeus tuomitsi Aleksanteri Kivimäen lähes seitsemäksi vuodeksi vankeuteen.\n\nKivimäki tuomittiin käräjäoikeudessa kuuden vuoden ja kolmen kuukauden vankeuteen muun muassa törkeästä tietomurrosta. Hovioikeus korotti rangaistuksen kuuteen vuoteen ja 11 kuukauteen vankeutta.\n\nHelsingin hovioikeus tuomitsi Kivimäen helmikuun lopulla kuuden vuoden ja 11 kuukauden vankeusrangaistukseen.\n\nJaarin mukaan Kivimäki vaatii hovioikeuden tuomion kumoamista tai muuttamista rangaistuksen osalta. Hän ei halua kommentoida valituksen perusteita tässä vaiheessa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tietomurrot | Aleksanteri Kivimäki vaatii syytteidensä hylkäämistä",
+      "description": "Hovioikeus tuomitsi Aleksanteri Kivimäen lähes seitsemäksi vuodeksi vankeuteen.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25667 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25670 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-30T18:14:49Z",
+  "reason": "Aineisto sisältää vain yhden lyhyen tiedon lehden lopettamisesta ja talousvaikeuksista; se ei riitä vähintään 250 sanan julkaistavaan artikkeliin ilman lisätietojen keksimistä.",
+  "packet": {
+    "packet_id": "20260430T181431Z_92e68823a6",
+    "created_at": "2026-04-30T18:14:31Z",
+    "headline_seed": "Itäsuomalainen-lehden 120-vuotinen julkaiseminen päättyy välittömästi",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/9176e046-7967-44f8-9b61-e500412f02ff",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/uutiset/9176e046-7967-44f8-9b61-e500412f02ff"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.37,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Itäsuomalainen-lehden 120-vuotinen julkaiseminen päättyy välittömästi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Joensuussa ilmestyneen SDP:n aluelehden Itäsuomalaisen ilmestyminen päättyy. Lehden julkaiseminen päättyy välittömästi taloudellisten vaikeuksien vuoksi.",
+        "word_count": 14,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Joensuussa ilmestyneen SDP:n aluelehden Itäsuomalaisen ilmestyminen päättyy. Lehden julkaiseminen päättyy välittömästi taloudellisten vaikeuksien vuoksi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Itäsuomalainen-lehden 120-vuotinen julkaiseminen päättyy välittömästi",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T181431Z_92e68823a6\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto sisältää vain yhden lyhyen tiedon lehden lopettamisesta ja talousvaikeuksista; se ei riitä vähintään 250 sanan julkaistavaan artikkeliin ilman lisätietojen keksimistä.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

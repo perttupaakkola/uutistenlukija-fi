@@ -1,0 +1,75 @@
+{
+  "ts": "2026-05-03T09:35:15Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260503T093434Z_8e9eee1e1f",
+    "created_at": "2026-05-03T09:34:34Z",
+    "headline_seed": "Huge crowd attends free Shakira Copacabana beach concert",
+    "description_seed": "Shakira's appearance followed shows by Lady Gaga and Madonna, who have also performed on Copacabana beach in previous years.",
+    "link": "https://www.bbc.com/news/videos/c8r8j50zxnno?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/c8r8j50zxnno?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.76,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Huge crowd attends free Shakira Copacabana beach concert"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Shakira's appearance followed shows by Lady Gaga and Madonna, who have also performed on Copacabana beach in previous years.",
+        "word_count": 19,
+        "keyword_overlap": 14,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Shakira performed her greatest hits to a vast crowd at a free concert on Copacabana beach in Rio de Janeiro on Saturday night.",
+        "word_count": 23,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "However, BBC Verify analysis of a previous 2025 Lady Gaga concert on Copacabana beach found these crowd numbers are likely inflated.",
+        "word_count": 21,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Shakira's appearance followed shows by Lady Gaga and Madonna, who have also performed on Copacabana beach in previous years.\n\nShakira performed her greatest hits to a vast crowd at a free concert on Copacabana beach in Rio de Janeiro on Saturday night.\n\nHowever, BBC Verify analysis of a previous 2025 Lady Gaga concert on Copacabana beach found these crowd numbers are likely inflated.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Huge crowd attends free Shakira Copacabana beach concert",
+      "description": "Shakira's appearance followed shows by Lady Gaga and Madonna, who have also performed on Copacabana beach in previous years.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "context_overflow",
+    "error": "Monica writer context overflow after reset"
+  }
+}

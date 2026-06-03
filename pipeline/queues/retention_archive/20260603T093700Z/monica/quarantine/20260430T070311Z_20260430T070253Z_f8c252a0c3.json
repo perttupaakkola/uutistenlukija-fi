@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-30T07:03:11Z",
+  "reason": "Aineistossa ei ole riittävästi yksilöityjä tietoja Helenin esittämistä hintaa hillitsevistä tekijöistä täyteen uutisartikkeliin.",
+  "packet": {
+    "packet_id": "20260430T070253Z_f8c252a0c3",
+    "created_at": "2026-04-30T07:02:53Z",
+    "headline_seed": "Näin sähkön hinta voi pysyä alhaalla – Iso tuottaja tietää",
+    "description_seed": "Miljoonan asiakkaan sähköyhtiö Helen kertoo tekijöistä, jotka voivat hyvinkin hillitä sähkön hintaa tänä vuonna.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/965407a4-57aa-474b-b799-2610224db99b",
+    "source": "Kauppalehti",
+    "source_names": [
+      "Kauppalehti",
+      "source-2",
+      "Stara"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/965407a4-57aa-474b-b799-2610224db99b"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.76,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näin sähkön hinta voi pysyä alhaalla – Iso tuottaja tietää"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti",
+        "source_type": "description",
+        "text": "Miljoonan asiakkaan sähköyhtiö Helen kertoo tekijöistä, jotka voivat hyvinkin hillitä sähkön hintaa tänä vuonna.",
+        "word_count": 14,
+        "keyword_overlap": 12,
+        "strong_overlap": 10
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Nyt säiden viimein lämmettyä myös sähkön hinta on laskenut melko tavanomaisiin lukemiin. Siinä missä esimerkiksi eilen maanantaina nähtiin vielä hurja hintapiikki näyttäytyivät tiistai ja keskiviikko selvästi maltillisempina.",
+        "word_count": 27,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Stara",
+        "source_type": "research",
+        "text": "Toisin kuin vielä viime vuoden lopulla ennustettiin, sähkön hinta on ollut alkuvuoden poikkeuksellisen korkealla. Siinä olivat ennen kaikkea paukkupakkaset jotka lisäsivät lämmityksen tarvetta ja sähkönkulutusta.",
+        "word_count": 25,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Miljoonan asiakkaan sähköyhtiö Helen kertoo tekijöistä, jotka voivat hyvinkin hillitä sähkön hintaa tänä vuonna.\n\nNyt säiden viimein lämmettyä myös sähkön hinta on laskenut melko tavanomaisiin lukemiin. Siinä missä esimerkiksi eilen maanantaina nähtiin vielä hurja hintapiikki näyttäytyivät tiistai ja keskiviikko selvästi maltillisempina.\n\nToisin kuin vielä viime vuoden lopulla ennustettiin, sähkön hinta on ollut alkuvuoden poikkeuksellisen korkealla. Siinä olivat ennen kaikkea paukkupakkaset jotka lisäsivät lämmityksen tarvetta ja sähkönkulutusta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näin sähkön hinta voi pysyä alhaalla – Iso tuottaja tietää",
+      "description": "Miljoonan asiakkaan sähköyhtiö Helen kertoo tekijöistä, jotka voivat hyvinkin hillitä sähkön hintaa tänä vuonna.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T070253Z_f8c252a0c3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineistossa ei ole riittävästi yksilöityjä tietoja Helenin esittämistä hintaa hillitsevistä tekijöistä täyteen uutisartikkeliin.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

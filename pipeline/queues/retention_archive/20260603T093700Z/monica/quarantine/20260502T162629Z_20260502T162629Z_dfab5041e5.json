@@ -1,0 +1,84 @@
+{
+  "ts": "2026-05-02T16:26:29Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260502T162629Z_dfab5041e5",
+    "created_at": "2026-05-02T16:26:29Z",
+    "headline_seed": "California to begin ticketing driverless cars that violate traffic laws",
+    "description_seed": "Under the new rules, police will be able to issue tickets directly to the car's manufacturer when an autonomous vehicle breaks a traffic law.",
+    "link": "https://www.bbc.com/news/articles/clypjx3rg2go?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-15",
+      "source-9"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clypjx3rg2go?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.86,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "California to begin ticketing driverless cars that violate traffic laws"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Under the new rules, police will be able to issue tickets directly to the car's manufacturer when an autonomous vehicle breaks a traffic law.",
+        "word_count": 24,
+        "keyword_overlap": 14,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Driverless cars are becoming more common in some California cities, but when the autonomous vehicles violate traffic laws, police haven't been able to ticket them - until now.",
+        "word_count": 28,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-15",
+        "source_type": "research",
+        "text": "California police officers will soon be able to issue traffic tickets to driverless cars and require manufacturers to move them out of the way during emergencies.",
+        "word_count": 26,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "When the vehicles violate traffic laws, some police have been stumped as to how to hold the driverless cars accountable.",
+        "word_count": 20,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Under the new rules, police will be able to issue tickets directly to the car's manufacturer when an autonomous vehicle breaks a traffic law.\n\nDriverless cars are becoming more common in some California cities, but when the autonomous vehicles violate traffic laws, police haven't been able to ticket them - until now.\n\nCalifornia police officers will soon be able to issue traffic tickets to driverless cars and require manufacturers to move them out of the way during emergencies.\n\nWhen the vehicles violate traffic laws, some police have been stumped as to how to hold the driverless cars accountable.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "California to begin ticketing driverless cars that violate traffic laws",
+      "description": "Under the new rules, police will be able to issue tickets directly to the car's manufacturer when an autonomous vehicle breaks a traffic law.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Monica writer command failed: [Errno 2] No such file or directory: 'openclaw'. Checked PATH and candidates: /home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw, /usr/local/bin/openclaw, /usr/bin/openclaw"
+  }
+}

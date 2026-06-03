@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T20:29:38Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T202845Z_f59d3aa64a",
+    "created_at": "2026-04-27T20:28:45Z",
+    "headline_seed": "Consumers lost $2.1 billion to social media scams in 2025, FTC reports",
+    "description_seed": "The agency reports that losses from social media scams have increased eightfold, and that social media scams resulted in higher losses than any other method scammers used to contact consumers.",
+    "link": "https://techcrunch.com/2026/04/27/consumers-lost-2-1-billion-to-social-media-scams-in-2025-ftc-reports/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "source-8",
+      "Bleeping Computer"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/04/27/consumers-lost-2-1-billion-to-social-media-scams-in-2025-ftc-reports/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.97,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Consumers lost $2.1 billion to social media scams in 2025, FTC reports"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "Americans lost $2.1 billion to social media scams in 2025, according to a new report from the U.S. Federal Trade Commission (FTC). The agency reports that losses from social media scams have increased eightfold, and that social media scams resulted in higher losses than any other method scammers used to contact consumers.",
+        "word_count": 52,
+        "keyword_overlap": 23,
+        "strong_overlap": 13
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "The agency reports that losses from social media scams have increased eightfold, and that social media scams resulted in higher losses than any other method scammers used to contact consumers.",
+        "word_count": 30,
+        "keyword_overlap": 20,
+        "strong_overlap": 12
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "\"In 2025, nearly 30% of people who reported losing money to a scam said that it started on social media, with reported losses reaching a staggering $2.1 billion. Social media scams produced far more in losses—an eightfold increase since 2020—than any other contact method used by scammers to reach consumers,\" the FTC warned today.",
+        "word_count": 54,
+        "keyword_overlap": 15,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "The U.S. Federal Trade Commission (FTC) warned of a massive increase in losses from social media scams since 2020, exceeding $2.1 billion in 2025.",
+        "word_count": 24,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Americans lost $2.1 billion to social media scams in 2025, according to a new report from the U.S. Federal Trade Commission (FTC). The agency reports that losses from social media scams have increased eightfold, and that social media scams resulted in higher losses than any other method scammers used to contact consumers.\n\nThe agency reports that losses from social media scams have increased eightfold, and that social media scams resulted in higher losses than any other method scammers used to contact consumers.\n\n\"In 2025, nearly 30% of people who reported losing money to a scam said that it started on social media, with reported losses reaching a staggering $2.1 billion. Social media scams produced far more in losses—an eightfold increase since 2020—than any other contact method used by scammers to reach consumers,\" the FTC warned today.\n\nThe U.S. Federal Trade Commission (FTC) warned of a massive increase in losses from social media scams since 2020, exceeding $2.1 billion in 2025.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Consumers lost $2.1 billion to social media scams in 2025, FTC reports",
+      "description": "The agency reports that losses from social media scams have increased eightfold, and that social media scams resulted in higher losses than any other method scammers used to contact consumers.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25001 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25006 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

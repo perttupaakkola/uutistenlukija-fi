@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T13:33:14Z",
+  "reason": "aineisto on liian niukka eikä varmista kuolemantapauksen kulkua tai koiran lopettamista riittävän tarkasti",
+  "packet": {
+    "packet_id": "20260428T133156Z_da7bc744b2",
+    "created_at": "2026-04-28T13:31:56Z",
+    "headline_seed": "Naisen puremisesta epäilty koira lopetettiin läheisen päätöksestä – nainen löytyi kuolleena asunnosta",
+    "description_seed": "Poliisin tiedotteen mukaan kuolleena löytynyt nainen oli saanut vakavia vammoja.",
+    "link": "https://www.is.fi/kotimaa/art-2000011971750.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "source-2",
+      "source-10",
+      "Voice.fi"
+    ],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000011971750.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.79,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Naisen puremisesta epäilty koira lopetettiin läheisen päätöksestä – nainen löytyi kuolleena asunnosta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Poliisin tiedotteen mukaan kuolleena löytynyt nainen oli saanut vakavia vammoja.",
+        "word_count": 10,
+        "keyword_overlap": 8,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Poliisin mukaan naisessa havaittiin vakavia vammoja, joiden epäillään liittyvän asunnossa olleeseen koiraan.",
+        "word_count": 12,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Asunnossa oli tapahtumahetkellä myös muita koiria, mutta poliisin mukaan niiden liikkumista oli rajoitettu, eikä niiden epäillä aiheuttaneen vammoja naiselle.",
+        "word_count": 19,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Voice.fi",
+        "source_type": "research",
+        "text": "Länsi-Uudenmaan poliisi tutkii Siuntiossa tapahtunutta kuolemantapausta, jossa keski-ikäinen nainen löytyi menehtyneenä yksityisasunnosta sunnuntaina 26. huhtikuuta.",
+        "word_count": 15,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Poliisin tiedotteen mukaan kuolleena löytynyt nainen oli saanut vakavia vammoja.\n\nPoliisin mukaan naisessa havaittiin vakavia vammoja, joiden epäillään liittyvän asunnossa olleeseen koiraan.\n\nAsunnossa oli tapahtumahetkellä myös muita koiria, mutta poliisin mukaan niiden liikkumista oli rajoitettu, eikä niiden epäillä aiheuttaneen vammoja naiselle.\n\nLänsi-Uudenmaan poliisi tutkii Siuntiossa tapahtunutta kuolemantapausta, jossa keski-ikäinen nainen löytyi menehtyneenä yksityisasunnosta sunnuntaina 26. huhtikuuta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Naisen puremisesta epäilty koira lopetettiin läheisen päätöksestä – nainen löytyi kuolleena asunnosta",
+      "description": "Poliisin tiedotteen mukaan kuolleena löytynyt nainen oli saanut vakavia vammoja.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=8dd1cd10-494a-400e-b05e-bc20cfe4b9bf sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T133156Z_da7bc744b2\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on liian niukka eikä varmista kuolemantapauksen kulkua tai koiran lopettamista riittävän tarkasti\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

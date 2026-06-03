@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T07:15:42Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T071537Z_da49fdf597",
+    "created_at": "2026-04-27T07:15:37Z",
+    "headline_seed": "Mali defence minister killed as country hit by wave of rebel attacks",
+    "description_seed": "A wave of coordinated attacks by jihadist militants and separatists has spread through the country.",
+    "link": "https://www.bbc.com/news/articles/c5yvy7v66ndo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "News.az",
+      "source-2",
+      "NBC News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c5yvy7v66ndo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.9,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mali defence minister killed as country hit by wave of rebel attacks"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A wave of coordinated attacks by jihadist militants and separatists has spread through the country.",
+        "word_count": 15,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      },
+      {
+        "source": "News.az",
+        "source_type": "research",
+        "text": "Mali’s Defence Minister Sadio Camara has been killed following a wave of coordinated attacks targeting military sites across the country, News.az reports, citing Al Jazeera.",
+        "word_count": 25,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Multiple news outlets reported the death of Sadio Camara, part of a wave of coordinated attacks by jihadist militants and separatists carried out across the country.",
+        "word_count": 26,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "DAKAR, Senegal — Mali's defense minister was killed in a sweeping attack by jihadis and rebels who seized several towns and military bases, authorities said Sunday, the latest violence in the junta-run country that has long battled militants linked to al-Qaida and the Islamic State group as well as a separatist rebellion in the north.",
+        "word_count": 55,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "A wave of coordinated attacks by jihadist militants and separatists has spread through the country.\n\nMali’s Defence Minister Sadio Camara has been killed following a wave of coordinated attacks targeting military sites across the country, News.az reports, citing Al Jazeera.\n\nMultiple news outlets reported the death of Sadio Camara, part of a wave of coordinated attacks by jihadist militants and separatists carried out across the country.\n\nDAKAR, Senegal — Mali's defense minister was killed in a sweeping attack by jihadis and rebels who seized several towns and military bases, authorities said Sunday, the latest violence in the junta-run country that has long battled militants linked to al-Qaida and the Islamic State group as well as a separatist rebellion in the north.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mali defence minister killed as country hit by wave of rebel attacks",
+      "description": "A wave of coordinated attacks by jihadist militants and separatists has spread through the country.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [plugins] discord failed during register from /home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/extensions/discord/index.js: Error: ENOTEMPTY: directory not empty, rmdir '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-unknown-cb6851bc448e/dist/extensions/node_modules/openclaw/plugin-sdk'\n[openclaw] Failed to start CLI: PluginLoadFailureError: plugin load failed: discord: Error: ENOTEMPTY: directory not empty, rmdir '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-unknown-cb6851bc448e/dist/extensions/node_modules/openclaw/plugin-sdk'\n    at maybeThrowOnPluginLoadError (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:2712:8)\n    at loadOpenClawPlugins (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:3588:3)\n    at resolveRuntimePluginRegistry (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:2443:9)\n    at resolveOrLoadRuntimePluginRegistry (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/runtime-registry-loader-CO1cck7F.js:37:7)\n    at ensurePluginRegistryLoaded (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/runtime-registry-loader-CO1cck7F.js:68:2)\n    at ensureCliPluginRegistryLoaded (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:20:3)\n    at async ensureCliCommandBootstrap (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:47:2)\n    at async ensureCliExecutionBootstrap (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:295:2)\n    at async Object.callback (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/program-C2pnmt5C.js:85:3)\n    at async Command.parseAsync (/home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/node_modules/commander/lib/command.js:1122:5)"
+  }
+}

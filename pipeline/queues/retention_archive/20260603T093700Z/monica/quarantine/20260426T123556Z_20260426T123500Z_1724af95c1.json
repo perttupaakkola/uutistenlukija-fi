@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T12:35:56Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T123500Z_1724af95c1",
+    "created_at": "2026-04-26T12:35:00Z",
+    "headline_seed": "Video shows correspondents' dinner suspect charge checkpoint",
+    "description_seed": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+    "link": "https://www.bbc.com/news/videos/cj0v0484dmmo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "CBS News",
+      "National Post"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cj0v0484dmmo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.9,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Video shows correspondents' dinner suspect charge checkpoint"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+        "word_count": 19,
+        "keyword_overlap": 16,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US police say the suspected gunman at the White House correspondents' dinner had multiple weapons on him when he charged a security checkpoint.",
+        "word_count": 23,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "Details are beginning to emerge about the suspect who opened fire outside the ballroom where President Trump and other top officials were attending the White House Correspondents' Dinner Saturday night. The president and first lady Melania Trump were safely evacuated, and none of the attendees were seriously injured, authorities said.",
+        "word_count": 50,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "National Post",
+        "source_type": "research",
+        "text": "\"A man charged a security checkpoint armed with multiple weapons, and he was taken down by some very brave members of Secret Service.\" - President Donald J. Trump pic.twitter.com/N3UTveVNFM",
+        "word_count": 29,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.\n\nUS police say the suspected gunman at the White House correspondents' dinner had multiple weapons on him when he charged a security checkpoint.\n\nDetails are beginning to emerge about the suspect who opened fire outside the ballroom where President Trump and other top officials were attending the White House Correspondents' Dinner Saturday night. The president and first lady Melania Trump were safely evacuated, and none of the attendees were seriously injured, authorities said.\n\n\"A man charged a security checkpoint armed with multiple weapons, and he was taken down by some very brave members of Secret Service.\" - President Donald J. Trump pic.twitter.com/N3UTveVNFM",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Video shows correspondents' dinner suspect charge checkpoint",
+      "description": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25645 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25650 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

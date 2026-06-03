@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T11:48:58Z",
+  "reason": "aineistossa sähkön hintaluvuista on ristiriitaisia ja epätarkkoja tietoja",
+  "packet": {
+    "packet_id": "20260428T114750Z_265e0437d4",
+    "created_at": "2026-04-28T11:47:50Z",
+    "headline_seed": "Sähkön hinta nousee keskiviikkona selvästi – Huippu illalla",
+    "description_seed": "Sähkön hinta kohoaa korkealle tasolle aamulla ja illalla. Nousu on merkittävä verrattuna tiistain mataliin hintoihin.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/9c8f0c0f-008c-441e-8fce-21c48b4f56fe",
+    "source": "Kauppalehti KL-Nyt",
+    "source_names": [
+      "Kauppalehti KL-Nyt",
+      "source-13",
+      "source-3",
+      "source-14"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/9c8f0c0f-008c-441e-8fce-21c48b4f56fe"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.81,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sähkön hinta nousee keskiviikkona selvästi – Huippu illalla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti KL-Nyt",
+        "source_type": "description",
+        "text": "Sähkön hinta kohoaa korkealle tasolle aamulla ja illalla. Nousu on merkittävä verrattuna tiistain mataliin hintoihin.",
+        "word_count": 15,
+        "keyword_overlap": 13,
+        "strong_overlap": 11
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Hintavaihtelut ovat kuitenkin suuria. Vuorokauden kallein tunti nousee huomenna 0,57 senttiin myöhään illalla, kun taas halvimmat tunnit sijoittuvat iltapäivään ja yöhön.",
+        "word_count": 21,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Kalleimmillaan sähkö on myöhään illalla, kun se nousee illalla yhdentoista aikoihin vajaaseen senttiin kilowattitunnilta.",
+        "word_count": 14,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-14",
+        "source_type": "research",
+        "text": "Hintojen raju heittely johtuu pörssisähkön luonteesta. Sähkön hinta muodostuu Nord Pool -sähköpörssissä kysynnän ja tarjonnan mukaan.",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Sähkön hinta kohoaa korkealle tasolle aamulla ja illalla. Nousu on merkittävä verrattuna tiistain mataliin hintoihin.\n\nHintavaihtelut ovat kuitenkin suuria. Vuorokauden kallein tunti nousee huomenna 0,57 senttiin myöhään illalla, kun taas halvimmat tunnit sijoittuvat iltapäivään ja yöhön.\n\nKalleimmillaan sähkö on myöhään illalla, kun se nousee illalla yhdentoista aikoihin vajaaseen senttiin kilowattitunnilta.\n\nHintojen raju heittely johtuu pörssisähkön luonteesta. Sähkön hinta muodostuu Nord Pool -sähköpörssissä kysynnän ja tarjonnan mukaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sähkön hinta nousee keskiviikkona selvästi – Huippu illalla",
+      "description": "Sähkön hinta kohoaa korkealle tasolle aamulla ja illalla. Nousu on merkittävä verrattuna tiistain mataliin hintoihin.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=b0a8bfc3-9d90-4c91-988d-dbf3cde4a44a sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T114750Z_265e0437d4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineistossa sähkön hintaluvuista on ristiriitaisia ja epätarkkoja tietoja\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-24T19:42:36Z",
+  "reason": "aineisto vahvistaa vain voittajan nimen ja finaalin perustiedot, eikä se riitä 250 sanan uutisjuttuun ilman toistoa tai lisäoletuksia",
+  "packet": {
+    "packet_id": "20260424T194211Z_1353cb8018",
+    "created_at": "2026-04-24T19:42:11Z",
+    "headline_seed": "Tässä on Voice of Finlandin voittaja – \"En odottanut tätä\"",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9403617",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-12",
+      "Keski-Uusimaa"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9403617"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tässä on Voice of Finlandin voittaja – \"En odottanut tätä\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "The Voice of Finlandin voittaja kruunataan suorassa finaalilähetyksessä perjantaina 24. huhtikuuta. Kilpailijoiden lisäksi finaalilähetyksessä esiintyvät Arttu Wiskari sekä Haloo Helsinki.",
+        "word_count": 20,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Keski-Uusimaa",
+        "source_type": "research",
+        "text": "The Voice of Finlandin 15. kauden voitti Jose Carlos, Nelonen Media tiedottaa.",
+        "word_count": 12,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The Voice of Finlandin voittaja kruunataan suorassa finaalilähetyksessä perjantaina 24. huhtikuuta. Kilpailijoiden lisäksi finaalilähetyksessä esiintyvät Arttu Wiskari sekä Haloo Helsinki.\n\nThe Voice of Finlandin 15. kauden voitti Jose Carlos, Nelonen Media tiedottaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tässä on Voice of Finlandin voittaja – \"En odottanut tätä\"",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=379666dd-ad2c-480f-b249-74b74a9fec25 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260424T194211Z_1353cb8018\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto vahvistaa vain voittajan nimen ja finaalin perustiedot, eikä se riitä 250 sanan uutisjuttuun ilman toistoa tai lisäoletuksia\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

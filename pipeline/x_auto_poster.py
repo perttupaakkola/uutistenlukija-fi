@@ -33,6 +33,7 @@ SCRIPT_DIR    = os.path.dirname(os.path.abspath(__file__))
 CONTENT_DIR   = os.path.join(SCRIPT_DIR, "..", "content", "posts")
 LOG_DIR       = os.path.join(SCRIPT_DIR, "logs")
 POSTED_FILE   = os.path.join(LOG_DIR, "x-posted.json")
+BLOCKED_FILE  = os.path.join(LOG_DIR, "x-posting-blocked.json")
 X_TOKENS_FILE = "/workspace/.secrets/x-tokens.json"
 SITE_BASE_URL = "https://uutistenlukija.fi"
 MAX_POSTED_LOG = 2000   # keep last N URLs in posted log
@@ -162,6 +163,32 @@ def save_posted_url(url: str):
         }, f, indent=2)
 
 
+def load_posting_blocker() -> dict | None:
+    if not os.path.exists(BLOCKED_FILE):
+        return None
+    try:
+        with open(BLOCKED_FILE) as f:
+            data = json.load(f)
+        if data.get("active"):
+            return data
+    except Exception:
+        return {"active": True, "reason": "unreadable_blocker_file", "path": BLOCKED_FILE}
+    return None
+
+
+def save_posting_blocker(reason: str, detail: str, status_code: int | None = None):
+    os.makedirs(LOG_DIR, exist_ok=True)
+    with open(BLOCKED_FILE, "w") as f:
+        json.dump({
+            "active": True,
+            "reason": reason,
+            "status_code": status_code,
+            "detail": detail[:500],
+            "blocked_at": datetime.now(timezone.utc).isoformat(),
+            "clearance": "Remove this file only after Perttu approves public X posting and the API/billing blocker is fixed.",
+        }, f, indent=2, ensure_ascii=False)
+
+
 # ── Tweet composer ─────────────────────────────────────────────────────────────
 
 CATEGORY_EMOJIS = {
@@ -257,6 +284,12 @@ def post_tweet(text: str, dry_run: bool = False) -> dict:
         # Check for token expiry (401)
         if e.code == 401:
             print("[x] Token expired — run scripts/refresh-x-token.sh", file=sys.stderr)
+            save_posting_blocker("x_token_unauthorized", body, e.code)
+        elif e.code == 402:
+            print("[x] X API credits depleted — public posting blocked until credits are restored", file=sys.stderr)
+            save_posting_blocker("x_api_credits_depleted", body, e.code)
+        elif e.code in (403, 429):
+            save_posting_blocker(f"x_api_http_{e.code}", body, e.code)
         return {"error": e.code, "body": body}
 
 
@@ -265,11 +298,22 @@ def post_tweet(text: str, dry_run: bool = False) -> dict:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run",   action="store_true")
+    parser.add_argument("--force",     action="store_true", help="Ignore x-posting-blocked.json after approval/blocker fix")
     parser.add_argument("--hours",     type=int, default=3, help="Look back N hours for articles")
     parser.add_argument("--max-posts", type=int, default=2, help="Max tweets per run")
     args = parser.parse_args()
 
     os.makedirs(LOG_DIR, exist_ok=True)
+
+    if not args.dry_run and not args.force:
+        blocker = load_posting_blocker()
+        if blocker:
+            print(
+                f"[x_poster] Public posting blocked: {blocker.get('reason')} "
+                f"(since {blocker.get('blocked_at', '?')}). "
+                f"Run --dry-run for drafts; use --force only after approval/blocker fix."
+            )
+            return
 
     posted_urls = load_posted_urls()
     articles = load_recent_articles(hours=args.hours)

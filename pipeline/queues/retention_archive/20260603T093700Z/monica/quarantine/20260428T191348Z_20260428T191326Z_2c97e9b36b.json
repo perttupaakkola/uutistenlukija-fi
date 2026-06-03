@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-28T19:13:48Z",
+  "reason": "Paketti sisältää liian vähän varmennettuja tietoja pelaajan tilanteesta, sarjan tapahtumista ja huolen syystä julkaistavaan uutiseen.",
+  "packet": {
+    "packet_id": "20260428T191326Z_2c97e9b36b",
+    "created_at": "2026-04-28T19:13:26Z",
+    "headline_seed": "Lopun alkua? Connor McDavidista huolestuttava tieto",
+    "description_seed": "NHL:n pistepörssin voittaja ei ole säkenöinyt pudotuspelisarjassa Anaheimia vastaan.",
+    "link": "https://www.is.fi/nhl/art-2000011974073.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "IS Urheilu"
+    ],
+    "source_urls": [
+      "https://www.is.fi/nhl/art-2000011974073.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.46,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lopun alkua? Connor McDavidista huolestuttava tieto"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "IS Urheilu",
+        "source_type": "description",
+        "text": "NHL:n pistepörssin voittaja ei ole säkenöinyt pudotuspelisarjassa Anaheimia vastaan.",
+        "word_count": 9,
+        "keyword_overlap": 6,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "NHL:n pistepörssin voittaja ei ole säkenöinyt pudotuspelisarjassa Anaheimia vastaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lopun alkua? Connor McDavidista huolestuttava tieto",
+      "description": "NHL:n pistepörssin voittaja ei ole säkenöinyt pudotuspelisarjassa Anaheimia vastaan.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260428T191326Z_2c97e9b36b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää liian vähän varmennettuja tietoja pelaajan tilanteesta, sarjan tapahtumista ja huolen syystä julkaistavaan uutiseen.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

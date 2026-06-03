@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T20:55:57Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T205503Z_da49fdf597",
+    "created_at": "2026-04-26T20:55:03Z",
+    "headline_seed": "Mali defence minister killed as country hit by wave of rebel attacks",
+    "description_seed": "A wave of coordinated attacks by jihadist militants and separatists has spread through the country.",
+    "link": "https://www.bbc.com/news/articles/c5yvy7v66ndo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "News.az",
+      "TheCable",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c5yvy7v66ndo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mali defence minister killed as country hit by wave of rebel attacks"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A wave of coordinated attacks by jihadist militants and separatists has spread through the country.",
+        "word_count": 15,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      },
+      {
+        "source": "News.az",
+        "source_type": "research",
+        "text": "Mali’s Defence Minister Sadio Camara has been killed following a wave of coordinated attacks targeting military sites across the country, News.az reports, citing Al Jazeera.",
+        "word_count": 25,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "TheCable",
+        "source_type": "research",
+        "text": "Sadio Camara, Mali’s defence minister, has been killed in a coordinated wave of attacks on military targets across the country.",
+        "word_count": 20,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "On Sunday afternoon, multiple news outlets reported the death of Sadio Camara, part of a wave of coordinated attacks by jihadist militants and separatists carried out across the country.",
+        "word_count": 29,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "A wave of coordinated attacks by jihadist militants and separatists has spread through the country.\n\nMali’s Defence Minister Sadio Camara has been killed following a wave of coordinated attacks targeting military sites across the country, News.az reports, citing Al Jazeera.\n\nSadio Camara, Mali’s defence minister, has been killed in a coordinated wave of attacks on military targets across the country.\n\nOn Sunday afternoon, multiple news outlets reported the death of Sadio Camara, part of a wave of coordinated attacks by jihadist militants and separatists carried out across the country.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mali defence minister killed as country hit by wave of rebel attacks",
+      "description": "A wave of coordinated attacks by jihadist militants and separatists has spread through the country.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25592 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25594 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

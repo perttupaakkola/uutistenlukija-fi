@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T01:09:29Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T010835Z_434584eb61",
+    "created_at": "2026-04-28T01:08:35Z",
+    "headline_seed": "Jälleen NHL-apuja Leijonille: Nikolas Matinpalo vahvistaa MM-joukkuetta",
+    "description_seed": "Leijonat sai jälleen yhden NHL-vahvistuksen toukokuun MM-kisoihin.",
+    "link": "https://www.jatkoaika.com/Uutiset/J%C3%A4lleen-NHL-apuja-Leijonille-Nikolas-Matinpalo-vahvistaa-MM-joukkuetta/269325",
+    "source": "Jatkoaika.com",
+    "source_names": [
+      "Sportti.com",
+      "Jatkoaika.com",
+      "source-5",
+      "source-17"
+    ],
+    "source_urls": [
+      "https://www.jatkoaika.com/Uutiset/J%C3%A4lleen-NHL-apuja-Leijonille-Nikolas-Matinpalo-vahvistaa-MM-joukkuetta/269325"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.82,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jälleen NHL-apuja Leijonille: Nikolas Matinpalo vahvistaa MM-joukkuetta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Sportti.com",
+        "source_type": "research",
+        "text": "Nikolas Matinpalo vahvistaa Leijonia toukokuun miesten jääkiekon MM-kisoissa Sveitsissä. Jääkiekkoliitto tiedotti puolustajan liittymisestä ryhmään maanantai-iltana.",
+        "word_count": 15,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Jatkoaika.com",
+        "source_type": "research",
+        "text": "Puolustaja Nikolas Matinpalo vahvistaa Leijonia 15. toukokuuta alkavissa MM-kisoissa Sveitsissä.",
+        "word_count": 10,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Matinpalo on Suomen kahdeksas NHL-vahvistus aiemmin ilmoitettujen Anton Lundellin, Olli Määtän, Aleksander Barkovin, Justus Annusen, Ville Heinolan, Lenni Hämeenahon ja Urho Vaakanaisen lisäksi. Lisäksi Topias Vilén ja Aatu Räty hakevat paikkaansa leirityksen kautta.",
+        "word_count": 33,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-17",
+        "source_type": "research",
+        "text": "Matinpalo on esiintynyt aiemmin kahdesti MM-jäillä. Puolustaja oli myös mukana Milano Cortinan olympialaisissa saavuttamassa Leijonien kanssa pronssimitalit.",
+        "word_count": 17,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Nikolas Matinpalo vahvistaa Leijonia toukokuun miesten jääkiekon MM-kisoissa Sveitsissä. Jääkiekkoliitto tiedotti puolustajan liittymisestä ryhmään maanantai-iltana.\n\nPuolustaja Nikolas Matinpalo vahvistaa Leijonia 15. toukokuuta alkavissa MM-kisoissa Sveitsissä.\n\nMatinpalo on Suomen kahdeksas NHL-vahvistus aiemmin ilmoitettujen Anton Lundellin, Olli Määtän, Aleksander Barkovin, Justus Annusen, Ville Heinolan, Lenni Hämeenahon ja Urho Vaakanaisen lisäksi. Lisäksi Topias Vilén ja Aatu Räty hakevat paikkaansa leirityksen kautta.\n\nMatinpalo on esiintynyt aiemmin kahdesti MM-jäillä. Puolustaja oli myös mukana Milano Cortinan olympialaisissa saavuttamassa Leijonien kanssa pronssimitalit.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jälleen NHL-apuja Leijonille: Nikolas Matinpalo vahvistaa MM-joukkuetta",
+      "description": "Leijonat sai jälleen yhden NHL-vahvistuksen toukokuun MM-kisoihin.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25361 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25366 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

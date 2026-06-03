@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T10:08:31Z",
+  "reason": "aineisto jää yleisen linjauksen tasolle eikä sisällä riittävästi uutta, yksilöityä uutiskontekstia",
+  "packet": {
+    "packet_id": "20260428T100727Z_8e923fe318",
+    "created_at": "2026-04-28T10:07:27Z",
+    "headline_seed": "WMA: Pääsy terveydenhuoltoon on perustavaa laatua oleva ihmisoikeus",
+    "description_seed": "Maailman Lääkäriliiton päivitetty linjaus tuo esiin, että pelko ja turvattomuus voivat estää siirtolaisia hakeutumasta hoitoon.",
+    "link": "http://www.laakarilehti.fi/terveydenhuolto/wma-paasy-terveydenhuoltoon-on-perustavaa-laatua-oleva-ihmisoikeus/",
+    "source": "Lääkärilehti",
+    "source_names": [
+      "Lääkärilehti",
+      "Lääkärilehti",
+      "source-5",
+      "source-4"
+    ],
+    "source_urls": [
+      "http://www.laakarilehti.fi/terveydenhuolto/wma-paasy-terveydenhuoltoon-on-perustavaa-laatua-oleva-ihmisoikeus/"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "WMA: Pääsy terveydenhuoltoon on perustavaa laatua oleva ihmisoikeus"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Lääkärilehti",
+        "source_type": "research",
+        "text": "Maailman Lääkäriliiton päivitetty linjaus tuo esiin, että pelko ja turvattomuus voivat estää siirtolaisia hakeutumasta terveydenhuoltoon.",
+        "word_count": 15,
+        "keyword_overlap": 13,
+        "strong_overlap": 9
+      },
+      {
+        "source": "Lääkärilehti",
+        "source_type": "description",
+        "text": "Maailman Lääkäriliiton päivitetty linjaus tuo esiin, että pelko ja turvattomuus voivat estää siirtolaisia hakeutumasta hoitoon.",
+        "word_count": 15,
+        "keyword_overlap": 13,
+        "strong_overlap": 9
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Kannanotossa tuodaan esiin, että pelko ja turvattomuus voivat estää ihmisiä hakeutumasta kiireelliseen hoitoon. Ne voivat myös vaikeuttaa lääkärien mahdollisuuksia toteuttaa ammatillisia ja eettisiä velvollisuuksiaan.",
+        "word_count": 24,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Päivitetty linjaus korostaa lisääntyvää haavoittuvuutta, jonka monet siirtolaiset kohtaavat maailmanlaajuisesti. Pakolaisten, turvapaikanhakijoiden ja paperittomien siirtolaisten pääsy terveydenhuoltoon on usein heikko oikeudellisten, sosiaalisten, taloudellisten tai poliittisten syiden vuoksi.",
+        "word_count": 27,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Maailman Lääkäriliiton päivitetty linjaus tuo esiin, että pelko ja turvattomuus voivat estää siirtolaisia hakeutumasta terveydenhuoltoon.\n\nMaailman Lääkäriliiton päivitetty linjaus tuo esiin, että pelko ja turvattomuus voivat estää siirtolaisia hakeutumasta hoitoon.\n\nKannanotossa tuodaan esiin, että pelko ja turvattomuus voivat estää ihmisiä hakeutumasta kiireelliseen hoitoon. Ne voivat myös vaikeuttaa lääkärien mahdollisuuksia toteuttaa ammatillisia ja eettisiä velvollisuuksiaan.\n\nPäivitetty linjaus korostaa lisääntyvää haavoittuvuutta, jonka monet siirtolaiset kohtaavat maailmanlaajuisesti. Pakolaisten, turvapaikanhakijoiden ja paperittomien siirtolaisten pääsy terveydenhuoltoon on usein heikko oikeudellisten, sosiaalisten, taloudellisten tai poliittisten syiden vuoksi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "WMA: Pääsy terveydenhuoltoon on perustavaa laatua oleva ihmisoikeus",
+      "description": "Maailman Lääkäriliiton päivitetty linjaus tuo esiin, että pelko ja turvattomuus voivat estää siirtolaisia hakeutumasta hoitoon.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=a1fbbfd7-182d-4d1b-9dbd-d4c09cc3d461 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T100727Z_8e923fe318\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto jää yleisen linjauksen tasolle eikä sisällä riittävästi uutta, yksilöityä uutiskontekstia\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

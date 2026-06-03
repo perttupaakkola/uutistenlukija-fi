@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-25T22:36:39Z",
+  "reason": "otsikko ja kuvaus eivät vastaa lähdetekstiä, ja aineisto on liian niukka 250 sanan varmennettuun urheilujuttuun",
+  "packet": {
+    "packet_id": "20260425T223615Z_ed51ce7fe5",
+    "created_at": "2026-04-25T22:36:15Z",
+    "headline_seed": "Sebastian Aho latoi ratkaisumaalit lopussa – ensimmäinen NHL-joukkue eteni jatkoon pudotuspeleissä",
+    "description_seed": "Tunteet käyvät todella kuumana Ottawassa.",
+    "link": "https://www.is.fi/nhl/art-2000011968112.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "source-9",
+      "ksml.fi",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.is.fi/nhl/art-2000011968112.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.7,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sebastian Aho latoi ratkaisumaalit lopussa – ensimmäinen NHL-joukkue eteni jatkoon pudotuspeleissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Dallas Stars varmisti toisena joukkueena paikkansa pudotuspeleissä, vaikka hävisi Vegas Golden Knightsille 2–3. Stars on Keskisessä divisioonassa toisena, ja divisioonaa johtava Colorado Avalanche varmisti jo aiemmin paikkansa kevään huipennuksessa.",
+        "word_count": 29,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Sebastian Aho ja Mikael Granlund olivat jääkiekon NHL:ssä suomalaiset maalintekijät varhain maanantaina Suomen aikaa päättyneessä pelipäivässä.",
+        "word_count": 16,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Ahosta tuli Carolinan seurahistorian ensimmäinen pelaaja, joka on tehnyt vähintään 25 maalia kahdeksalla kaudella.",
+        "word_count": 14,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Dallas Stars varmisti toisena joukkueena paikkansa pudotuspeleissä, vaikka hävisi Vegas Golden Knightsille 2–3. Stars on Keskisessä divisioonassa toisena, ja divisioonaa johtava Colorado Avalanche varmisti jo aiemmin paikkansa kevään huipennuksessa.\n\nSebastian Aho ja Mikael Granlund olivat jääkiekon NHL:ssä suomalaiset maalintekijät varhain maanantaina Suomen aikaa päättyneessä pelipäivässä.\n\nAhosta tuli Carolinan seurahistorian ensimmäinen pelaaja, joka on tehnyt vähintään 25 maalia kahdeksalla kaudella.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sebastian Aho latoi ratkaisumaalit lopussa – ensimmäinen NHL-joukkue eteni jatkoon pudotuspeleissä",
+      "description": "Tunteet käyvät todella kuumana Ottawassa.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=a14d98f2-8677-42cc-8594-9876c4b48291 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T223615Z_ed51ce7fe5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"otsikko ja kuvaus eivät vastaa lähdetekstiä, ja aineisto on liian niukka 250 sanan varmennettuun urheilujuttuun\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

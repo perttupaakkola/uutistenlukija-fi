@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-26T06:52:10Z",
+  "reason": "aineisto on liian niukka eikä sisällä riittävästi varmennettuja tietoja epäillystä tai tapahtumista 250 sanan uutisjuttuun",
+  "packet": {
+    "packet_id": "20260426T065102Z_d2419ec384",
+    "created_at": "2026-04-26T06:51:02Z",
+    "headline_seed": "CNN: Tämä Washingtonin ampujasta tiedetään – opettaja ja tuore maisteri",
+    "description_seed": "Kolmekymppisen opettajan epäillään avanneen tulen Valkoisen talon kirjeenvaihtajien illallisella.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/cnn-tama-washingtonin-ampujasta-tiedetaan-opettaja-ja-tuore-maisteri/9329614",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/cnn-tama-washingtonin-ampujasta-tiedetaan-opettaja-ja-tuore-maisteri/9329614"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.6,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "CNN: Tämä Washingtonin ampujasta tiedetään – opettaja ja tuore maisteri"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Kolmekymppisen opettajan epäillään avanneen tulen Valkoisen talon kirjeenvaihtajien illallisella.",
+        "word_count": 9,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Yhdysvaltain tiedotusvälineet ovat kaivaneet nopeasti tietoja miehestä, joka ampui eilen illalla Washingtonin hotelli Hiltonissa, jossa oli paikalla myös presidentti Donald Trump.",
+        "word_count": 21,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Kolmekymppisen opettajan epäillään avanneen tulen Valkoisen talon kirjeenvaihtajien illallisella.\n\nYhdysvaltain tiedotusvälineet ovat kaivaneet nopeasti tietoja miehestä, joka ampui eilen illalla Washingtonin hotelli Hiltonissa, jossa oli paikalla myös presidentti Donald Trump.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "CNN: Tämä Washingtonin ampujasta tiedetään – opettaja ja tuore maisteri",
+      "description": "Kolmekymppisen opettajan epäillään avanneen tulen Valkoisen talon kirjeenvaihtajien illallisella.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=f008a44c-810f-4a90-b9cb-ae85877c57d8 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260426T065102Z_d2419ec384\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on liian niukka eikä sisällä riittävästi varmennettuja tietoja epäillystä tai tapahtumista 250 sanan uutisjuttuun\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

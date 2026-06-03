@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T00:07:00Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T000606Z_d3ab363fbb",
+    "created_at": "2026-04-27T00:06:06Z",
+    "headline_seed": "Trump and officials 'likely' targets of press dinner shooting suspect, authorities believe",
+    "description_seed": "The suspect is expected to be charged with assault of a federal officer and using a firearm during a crime of violence, officials have said.",
+    "link": "https://www.bbc.com/news/articles/c2d8dg57rzdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-27",
+      "source-13"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c2d8dg57rzdo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.91,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump and officials 'likely' targets of press dinner shooting suspect, authorities believe"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The suspect is expected to be charged with assault of a federal officer and using a firearm during a crime of violence, officials have said.",
+        "word_count": 25,
+        "keyword_overlap": 15,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US President Donald Trump and his officials were the \"likely\" targets of a suspected gunman who attempted to storm the White House Correspondents' Dinner, acting US Attorney General Todd Blanche has said.",
+        "word_count": 32,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-27",
+        "source_type": "research",
+        "text": "He said: \"Although we don’t yet have the details about the motives behind last night's shooting at the White House Correspondents Dinner, it’s incumbent upon all us to reject the idea that violence has any place in our democracy.",
+        "word_count": 39,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Officials said law enforcement exchanged fire with the alleged attacker and intercepted him, and \"believe\" the suspect fired his weapon. He was not struck, but was taken to hospital for evaluation.",
+        "word_count": 31,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The suspect is expected to be charged with assault of a federal officer and using a firearm during a crime of violence, officials have said.\n\nUS President Donald Trump and his officials were the \"likely\" targets of a suspected gunman who attempted to storm the White House Correspondents' Dinner, acting US Attorney General Todd Blanche has said.\n\nHe said: \"Although we don’t yet have the details about the motives behind last night's shooting at the White House Correspondents Dinner, it’s incumbent upon all us to reject the idea that violence has any place in our democracy.\n\nOfficials said law enforcement exchanged fire with the alleged attacker and intercepted him, and \"believe\" the suspect fired his weapon. He was not struck, but was taken to hospital for evaluation.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump and officials 'likely' targets of press dinner shooting suspect, authorities believe",
+      "description": "The suspect is expected to be charged with assault of a federal officer and using a firearm during a crime of violence, officials have said.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25562 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25564 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

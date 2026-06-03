@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T09:51:50Z",
+  "reason": "Aineistossa on liian vähän varmistettuja tietoja valaan tilanteen tarkasta sijainnista, pelastusoperaation kulusta ja lopputuloksesta täyteen uutisartikkeliin.",
+  "packet": {
+    "packet_id": "20260430T095130Z_d1d5754855",
+    "created_at": "2026-04-30T09:51:30Z",
+    "headline_seed": "Stranded whale ferried out of German waters in barge",
+    "description_seed": "The final operation to save the whale is being closely followed, after the failure of earlier attempts.",
+    "link": "https://www.bbc.com/news/articles/clyp559l06no?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-2",
+      "BBC World",
+      "source-18"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clyp559l06no?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Stranded whale ferried out of German waters in barge"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The final operation to save the whale is being closely followed, after the failure of earlier attempts.",
+        "word_count": 17,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "The final operation to save the whale is being closely followed across Germany, after the failure of earlier attempts to lure it away from the coast.",
+        "word_count": 26,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "More than five weeks after a humpback whale became stranded in shallow waters on the German coast, a barge has ferried the animal out of German waters, en route to the North Sea.",
+        "word_count": 33,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-18",
+        "source_type": "research",
+        "text": "The mammal's sticky situation and the freedom operation that followed captured massive national attention, with early attempts to lure it back into the open initially failing.",
+        "word_count": 26,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The final operation to save the whale is being closely followed, after the failure of earlier attempts.\n\nThe final operation to save the whale is being closely followed across Germany, after the failure of earlier attempts to lure it away from the coast.\n\nMore than five weeks after a humpback whale became stranded in shallow waters on the German coast, a barge has ferried the animal out of German waters, en route to the North Sea.\n\nThe mammal's sticky situation and the freedom operation that followed captured massive national attention, with early attempts to lure it back into the open initially failing.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Stranded whale ferried out of German waters in barge",
+      "description": "The final operation to save the whale is being closely followed, after the failure of earlier attempts.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T095130Z_d1d5754855\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineistossa on liian vähän varmistettuja tietoja valaan tilanteen tarkasta sijainnista, pelastusoperaation kulusta ja lopputuloksesta täyteen uutisartikkeliin.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

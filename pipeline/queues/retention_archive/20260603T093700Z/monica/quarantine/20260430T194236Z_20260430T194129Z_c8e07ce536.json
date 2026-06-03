@@ -1,0 +1,109 @@
+{
+  "ts": "2026-04-30T19:42:36Z",
+  "reason": "schema_invalid",
+  "packet": {
+    "packet_id": "20260430T194129Z_c8e07ce536",
+    "created_at": "2026-04-30T19:41:29Z",
+    "headline_seed": "Hackers are actively exploiting a bug in cPanel, used by millions of websites",
+    "description_seed": "Web hosts are scrambling to fix the bug under active attack by hackers. One company said hackers have been abusing the bug for months.",
+    "link": "https://techcrunch.com/2026/04/30/hackers-are-actively-exploiting-a-bug-in-cpanel-used-by-millions-of-websites/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "Martin Cid Magazine",
+      "Bleeping Computer",
+      "source-30"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/04/30/hackers-are-actively-exploiting-a-bug-in-cpanel-used-by-millions-of-websites/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hackers are actively exploiting a bug in cPanel, used by millions of websites"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Web hosts are scrambling to fix the bug under active attack by hackers. One company said hackers have been abusing the bug for months.",
+        "word_count": 24,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Martin Cid Magazine",
+        "source_type": "research",
+        "text": "A critical authentication bypass in cPanel and WHM let attackers walk through the front door of any internet-facing control panel without needing a username or password. The flaw, tracked as CVE-2026-41940 with a CVSS score of 9.8 out of 10, affects every supported version of the software, which manages roughly 70 million domains worldwide. Hosting researchers say active exploits were already running in the wild when the emergency patch dropped — meaning the question for many web hosts is no longer whether their servers are vulnerable, but whether they were already breached before they could update.",
+        "word_count": 96,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "The critical CVE-2026-41940 authentication bypass vulnerability in cPanel, WHM, and WP Squared is being actively exploited in the wild and has been leveraged in attempts since late February.",
+        "word_count": 28,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-30",
+        "source_type": "research",
+        "text": "The vulnerability sits in cPanel’s session-loading and saving logic, internally tracked as CPANEL-52908. In plain terms, an attacker could send a malformed login request that handed them session credentials to an account they had never authenticated as — including, in the worst cases, root-level access to WHM, the server-side dashboard that controls hosted accounts, mail routing, SSL certificates, and database services. Six release branches needed urgent patching: 11.110.0.97, 11.118.0.63, 11.126.0.54, 11.132.0.29, 11.134.0.20, and 11.136.0.5. Servers still running end-of-life cPanel versions will not receive a patch at all and should be treated as actively compromised.",
+        "word_count": 94,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Web hosts are scrambling to fix the bug under active attack by hackers. One company said hackers have been abusing the bug for months.\n\nA critical authentication bypass in cPanel and WHM let attackers walk through the front door of any internet-facing control panel without needing a username or password. The flaw, tracked as CVE-2026-41940 with a CVSS score of 9.8 out of 10, affects every supported version of the software, which manages roughly 70 million domains worldwide. Hosting researchers say active exploits were already running in the wild when the emergency patch dropped — meaning the question for many web hosts is no longer whether their servers are vulnerable, but whether they were already breached before they could update.\n\nThe critical CVE-2026-41940 authentication bypass vulnerability in cPanel, WHM, and WP Squared is being actively exploited in the wild and has been leveraged in attempts since late February.\n\nThe vulnerability sits in cPanel’s session-loading and saving logic, internally tracked as CPANEL-52908. In plain terms, an attacker could send a malformed login request that handed them session credentials to an account they had never authenticated as — including, in the worst cases, root-level access to WHM, the server-side dashboard that controls hosted accounts, mail routing, SSL certificates, and database services. Six release branches needed urgent patching: 11.110.0.97, 11.118.0.63, 11.126.0.54, 11.132.0.29, 11.134.0.20, and 11.136.0.5. Servers still running end-of-life cPanel versions will not receive a patch at all and should be treated as actively compromised.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hackers are actively exploiting a bug in cPanel, used by millions of websites",
+      "description": "Web hosts are scrambling to fix the bug under active attack by hackers. One company said hackers have been abusing the bug for months.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T194129Z_c8e07ce536\",\"title\":\"Hyökkääjät käyttävät aktiivisesti kriittistä cPanel-haavoittuvuutta\",\"summary\":\"cPanelin, WHM:n ja WP Squaredin kriittistä tunnistautumisen ohitushaavoittuvuutta käytetään aktiivisesti hyökkäyksissä. Haavoittuvuus tunnetaan tunnisteella CVE-2026-41940, ja se vaikuttaa tuettuihin ohjelmistoversioihin.\",\"content\":\"Verkkohotellien käyttämästä cPanelista on paljastunut kriittinen haavoittuvuus, jota hyökkääjät käyttävät aktiivisesti. Haavoittuvuus tunnetaan tunnisteella CVE-2026-41940, ja se koskee cPanelia, WHM:ää ja WP Squaredia. Kyse on tunnistautumisen ohituksesta, joka voi pahimmillaan antaa hyökkääjälle pääsyn hallintapaneeliin ilman käyttäjätunnusta tai salasanaa, mikä tekee korjaamisesta kiireellistä palvelinylläpitäjille.\\n\\n## Haavoittuvuus koskee laajasti palvelimia\\n\\nHaavoittuvuudelle on annettu vakavuusarvio 9,8 asteikolla 0–10. Aineiston mukaan se vaikuttaa kaikkiin ohjelmiston tuettuihin versioihin. cPanelin kaltaisia hallintatyökaluja käytetään laajasti verkkosivustojen ja palvelinympäristöjen ylläpidossa, ja ohjelmiston kerrotaan hallinnoivan noin 70 miljoonaa verkkotunnusta maailmanlaajuisesti.\\n\\nOngelma sijaitsee cPanelin istuntojen lataus- ja tallennuslogiikassa. Sisäisesti haavoittuvuutta seurataan tunnisteella CPANEL-52908. Käytännössä hyökkääjä voisi lähettää muokatun kirjautumispyynnön, jonka seurauksena hän saisi istuntotunnisteet tilille, jolle häntä ei ole tunnistettu.\\n\\nPahimmissa tapauksissa hyökkääjä voisi päästä WHM:n pääkäyttäjätason hallintaan. WHM on palvelinpuolen hallintanäkymä, jolla hallitaan muun muassa asiakastilejä, sähköpostireititystä, SSL-varmenteita ja tietokantapalveluita. Tällainen pääsy voisi antaa hyökkääjälle laajan vaikutusvallan palvelimella ylläpidettyihin verkkosivustoihin ja palveluihin.\\n\\n## Korjauksilla on kiire\\n\\nAineiston mukaan haavoittuvuutta on hyödynnetty yrityksissä jo helmikuun lopulta lähtien. Tämä tekee tilanteesta kiireellisen verkkohotelleille ja palvelinylläpitäjille: kyse ei ole vain teoreettisesta riskistä, vaan jo aktiivisesti käytetystä hyökkäysreitistä.\\n\\nKuusi julkaisuhaaraa tarvitsi kiireellisen korjauksen: 11.110.0.97, 11.118.0.63, 11.126.0.54, 11.132.0.29, 11.134.0.20 ja 11.136.0.5. Palvelimet, joissa on käytössä elinkaarensa päässä oleva cPanel-versio, eivät aineiston mukaan saa korjausta lainkaan.\\n\\nTämän vuoksi vanhoja, päivitystuen ulkopuolella olevia asennuksia kehotetaan pitämään vakavasti vaarantuneina. Ylläpitäjien kannalta olennaista on asentaa korjaukset nopeasti ja selvittää, onko palvelimia mahdollisesti käytetty hyväksi jo ennen päivitystä. Tilanne korostaa myös sitä, että internetiin avoinna olevat hallintapaneelit on pidettävä tuetuissa ja nopeasti paikattavissa versioissa.\",\"category\":\"Teknologia\",\"tags\":[\"cPanel\",\"WHM\",\"kyberturvallisuus\",\"haavoittuvuus\",\"CVE-2026-41940\",\"verkkohotellit\"],\"summary_bullets\":[\"cPanelin, WHM:n ja WP Squaredin haavoittuvuutta CVE-2026-41940 käytetään aktiivisesti hyökkäyksissä.\",\"Haavoittuvuus voi mahdollistaa tunnistautumisen ohituksen ja pahimmillaan pääsyn WHM-hallintaan.\",\"Tuetuille versioille on julkaistu kiireellisiä korjauksia, mutta elinkaarensa päässä olevat versiot eivät saa paikkausta.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"Artikkeli perustuu annettuihin tietoihin CVE-2026-41940-haavoittuvuudesta, aktiivisesta hyväksikäytöstä, vaikutetuista cPanel/WHM/WP Squared -ympäristöistä ja kiireellisistä korjausversioista.\"}",
+  "extra": {
+    "issues": [
+      "content too short: 245 words"
+    ],
+    "payload": {
+      "packet_id": "20260430T194129Z_c8e07ce536",
+      "title": "Hyökkääjät käyttävät aktiivisesti kriittistä cPanel-haavoittuvuutta",
+      "summary": "cPanelin, WHM:n ja WP Squaredin kriittistä tunnistautumisen ohitushaavoittuvuutta käytetään aktiivisesti hyökkäyksissä. Haavoittuvuus tunnetaan tunnisteella CVE-2026-41940, ja se vaikuttaa tuettuihin ohjelmistoversioihin.",
+      "content": "Verkkohotellien käyttämästä cPanelista on paljastunut kriittinen haavoittuvuus, jota hyökkääjät käyttävät aktiivisesti. Haavoittuvuus tunnetaan tunnisteella CVE-2026-41940, ja se koskee cPanelia, WHM:ää ja WP Squaredia. Kyse on tunnistautumisen ohituksesta, joka voi pahimmillaan antaa hyökkääjälle pääsyn hallintapaneeliin ilman käyttäjätunnusta tai salasanaa, mikä tekee korjaamisesta kiireellistä palvelinylläpitäjille.\n\n## Haavoittuvuus koskee laajasti palvelimia\n\nHaavoittuvuudelle on annettu vakavuusarvio 9,8 asteikolla 0–10. Aineiston mukaan se vaikuttaa kaikkiin ohjelmiston tuettuihin versioihin. cPanelin kaltaisia hallintatyökaluja käytetään laajasti verkkosivustojen ja palvelinympäristöjen ylläpidossa, ja ohjelmiston kerrotaan hallinnoivan noin 70 miljoonaa verkkotunnusta maailmanlaajuisesti.\n\nOngelma sijaitsee cPanelin istuntojen lataus- ja tallennuslogiikassa. Sisäisesti haavoittuvuutta seurataan tunnisteella CPANEL-52908. Käytännössä hyökkääjä voisi lähettää muokatun kirjautumispyynnön, jonka seurauksena hän saisi istuntotunnisteet tilille, jolle häntä ei ole tunnistettu.\n\nPahimmissa tapauksissa hyökkääjä voisi päästä WHM:n pääkäyttäjätason hallintaan. WHM on palvelinpuolen hallintanäkymä, jolla hallitaan muun muassa asiakastilejä, sähköpostireititystä, SSL-varmenteita ja tietokantapalveluita. Tällainen pääsy voisi antaa hyökkääjälle laajan vaikutusvallan palvelimella ylläpidettyihin verkkosivustoihin ja palveluihin.\n\n## Korjauksilla on kiire\n\nAineiston mukaan haavoittuvuutta on hyödynnetty yrityksissä jo helmikuun lopulta lähtien. Tämä tekee tilanteesta kiireellisen verkkohotelleille ja palvelinylläpitäjille: kyse ei ole vain teoreettisesta riskistä, vaan jo aktiivisesti käytetystä hyökkäysreitistä.\n\nKuusi julkaisuhaaraa tarvitsi kiireellisen korjauksen: 11.110.0.97, 11.118.0.63, 11.126.0.54, 11.132.0.29, 11.134.0.20 ja 11.136.0.5. Palvelimet, joissa on käytössä elinkaarensa päässä oleva cPanel-versio, eivät aineiston mukaan saa korjausta lainkaan.\n\nTämän vuoksi vanhoja, päivitystuen ulkopuolella olevia asennuksia kehotetaan pitämään vakavasti vaarantuneina. Ylläpitäjien kannalta olennaista on asentaa korjaukset nopeasti ja selvittää, onko palvelimia mahdollisesti käytetty hyväksi jo ennen päivitystä. Tilanne korostaa myös sitä, että internetiin avoinna olevat hallintapaneelit on pidettävä tuetuissa ja nopeasti paikattavissa versioissa.",
+      "category": "Teknologia",
+      "tags": [
+        "cPanel",
+        "WHM",
+        "kyberturvallisuus",
+        "haavoittuvuus",
+        "CVE-2026-41940",
+        "verkkohotellit"
+      ],
+      "summary_bullets": [
+        "cPanelin, WHM:n ja WP Squaredin haavoittuvuutta CVE-2026-41940 käytetään aktiivisesti hyökkäyksissä.",
+        "Haavoittuvuus voi mahdollistaa tunnistautumisen ohituksen ja pahimmillaan pääsyn WHM-hallintaan.",
+        "Tuetuille versioille on julkaistu kiireellisiä korjauksia, mutta elinkaarensa päässä olevat versiot eivät saa paikkausta."
+      ],
+      "content_type": "news",
+      "editorial_reviewed": true,
+      "confidence": 0.9,
+      "journalist_note": "Artikkeli perustuu annettuihin tietoihin CVE-2026-41940-haavoittuvuudesta, aktiivisesta hyväksikäytöstä, vaikutetuista cPanel/WHM/WP Squared -ympäristöistä ja kiireellisistä korjausversioista."
+    }
+  }
+}

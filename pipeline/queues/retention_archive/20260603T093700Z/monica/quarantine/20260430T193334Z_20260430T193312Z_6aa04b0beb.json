@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-30T19:33:34Z",
+  "reason": "Aineisto tukee vain öljyn ja polttoaineiden hintatietoja, mutta ei otsikon Wall Street -nousua; 250 sanan artikkeli vaatisi lisätietojen keksimistä.",
+  "packet": {
+    "packet_id": "20260430T193312Z_6aa04b0beb",
+    "created_at": "2026-04-30T19:33:12Z",
+    "headline_seed": "Wall Street vahvassa nousussa – KL seuraa",
+    "description_seed": "Brent-viiteöljyn hinta kävi torstaina aamulla 126 dollarissa tynnyriltä.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/580f9798-a7f6-4408-b848-e14dac1449da",
+    "source": "Kauppalehti",
+    "source_names": [
+      "Kauppalehti",
+      "Yle",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/580f9798-a7f6-4408-b848-e14dac1449da"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Wall Street vahvassa nousussa – KL seuraa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti",
+        "source_type": "description",
+        "text": "Brent-viiteöljyn hinta kävi torstaina aamulla 126 dollarissa tynnyriltä.",
+        "word_count": 8,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Öljyn hinta on torstaina ollut korkeimmillaan Iranin sodan alkamisen jälkeen. Brent-öljy maksaa nyt yli 125 dollaria tynnyriltä.",
+        "word_count": 17,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Dieselin hinta oli torstaina ennen puoltapäivää korkeimmillaan 2,46 euroa litralta, käy ilmi Polttoaine.net -sivustolta. Bensiinin ylin hinta puolestaan oli 2,20 euroa litralta.",
+        "word_count": 22,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Brent-viiteöljyn hinta kävi torstaina aamulla 126 dollarissa tynnyriltä.\n\nÖljyn hinta on torstaina ollut korkeimmillaan Iranin sodan alkamisen jälkeen. Brent-öljy maksaa nyt yli 125 dollaria tynnyriltä.\n\nDieselin hinta oli torstaina ennen puoltapäivää korkeimmillaan 2,46 euroa litralta, käy ilmi Polttoaine.net -sivustolta. Bensiinin ylin hinta puolestaan oli 2,20 euroa litralta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Wall Street vahvassa nousussa – KL seuraa",
+      "description": "Brent-viiteöljyn hinta kävi torstaina aamulla 126 dollarissa tynnyriltä.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T193312Z_6aa04b0beb\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto tukee vain öljyn ja polttoaineiden hintatietoja, mutta ei otsikon Wall Street -nousua; 250 sanan artikkeli vaatisi lisätietojen keksimistä.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T07:08:38Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T070744Z_9cd89a5132",
+    "created_at": "2026-04-28T07:07:44Z",
+    "headline_seed": "Terveystaloustieteen professori: Nopeat säästöt eivät ratkaise ongelmaa",
+    "description_seed": "Mika Kortelaisen mukaan vankka tutkimusnäyttö osoittaa, että perusterveydenhuollon asiakasmaksujen nosto vähentää palveluiden käyttöä.",
+    "link": "http://www.laakarilehti.fi/terveydenhuolto/terveystaloustieteen-professori-nopeat-saastot-eivat-ratkaise-ongelmaa/",
+    "source": "Lääkärilehti",
+    "source_names": [
+      "Lääkärilehti",
+      "source-6",
+      "source-16",
+      "Lääkärilehti"
+    ],
+    "source_urls": [
+      "http://www.laakarilehti.fi/terveydenhuolto/terveystaloustieteen-professori-nopeat-saastot-eivat-ratkaise-ongelmaa/"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.82,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Terveystaloustieteen professori: Nopeat säästöt eivät ratkaise ongelmaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Lääkärilehti",
+        "source_type": "description",
+        "text": "Mika Kortelaisen mukaan vankka tutkimusnäyttö osoittaa, että perusterveydenhuollon asiakasmaksujen nosto vähentää palveluiden käyttöä.",
+        "word_count": 13,
+        "keyword_overlap": 12,
+        "strong_overlap": 9
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "– Suomalaiset, pohjoismaiset ja kansainväliset tutkimustulokset ovat osoittaneet, että jos perusterveydenhuollon asiakasmaksuja nostetaan, se vähentää palveluiden käyttöä. Erityisesti käyttö vähenee käyntimäärissä mitattuna pienituloisilla, kuten työttömillä ja eläkeläisillä.",
+        "word_count": 27,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-16",
+        "source_type": "research",
+        "text": "– Tulos on linjassa niiden tulosten kanssa, joita muistakin Pohjoismaista on saatu perusterveydenhuollon asiakasmaksujen nostojen vaikutuksista.",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Lääkärilehti",
+        "source_type": "research",
+        "text": "– Jos tavoitteena on hyvin toimiva terveydenhuoltojärjestelmä, siihen asiakasmaksujen korotukset eivät välttämättä vastaa, Mika Kortelainen sanoo.",
+        "word_count": 16,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Mika Kortelaisen mukaan vankka tutkimusnäyttö osoittaa, että perusterveydenhuollon asiakasmaksujen nosto vähentää palveluiden käyttöä.\n\n– Suomalaiset, pohjoismaiset ja kansainväliset tutkimustulokset ovat osoittaneet, että jos perusterveydenhuollon asiakasmaksuja nostetaan, se vähentää palveluiden käyttöä. Erityisesti käyttö vähenee käyntimäärissä mitattuna pienituloisilla, kuten työttömillä ja eläkeläisillä.\n\n– Tulos on linjassa niiden tulosten kanssa, joita muistakin Pohjoismaista on saatu perusterveydenhuollon asiakasmaksujen nostojen vaikutuksista.\n\n– Jos tavoitteena on hyvin toimiva terveydenhuoltojärjestelmä, siihen asiakasmaksujen korotukset eivät välttämättä vastaa, Mika Kortelainen sanoo.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Terveystaloustieteen professori: Nopeat säästöt eivät ratkaise ongelmaa",
+      "description": "Mika Kortelaisen mukaan vankka tutkimusnäyttö osoittaa, että perusterveydenhuollon asiakasmaksujen nosto vähentää palveluiden käyttöä.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25365 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25369 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

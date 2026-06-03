@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-29T10:41:44Z",
+  "reason": "Aineisto on liian suppea eikä kerro riittävästi hyökkäyksistä, tilanteen taustasta tai vaikutuksista julkaistavaan uutiseen.",
+  "packet": {
+    "packet_id": "20260429T104123Z_30387c7922",
+    "created_at": "2026-04-29T10:41:23Z",
+    "headline_seed": "France urges citizens to leave Mali after rebel attacks",
+    "description_seed": "The UK has issued similar advice, telling citizens who stay, that they do so at their own risk.",
+    "link": "https://www.bbc.com/news/articles/cp3pdgvpn27o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-2",
+      "source-6"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cp3pdgvpn27o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "France urges citizens to leave Mali after rebel attacks"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The UK has issued similar advice, telling citizens who stay, that they do so at their own risk.",
+        "word_count": 18,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "France has urged its citizens to leave Mali \"as soon as possible\", after a weekend of co-ordinated attacks by separatist fighters and Islamist militants.",
+        "word_count": 24,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "In an update on Wednesday, the advice also warned French citizens not to travel to the West African nation, describing the situation as \"extremely volatile\".",
+        "word_count": 25,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "The foreign ministry of France, Mali's former colonial power, said: \"French nationals are advised to make arrangements to leave Mali temporarily as soon as possible on the commercial flights that are still available.\"",
+        "word_count": 33,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The UK has issued similar advice, telling citizens who stay, that they do so at their own risk.\n\nFrance has urged its citizens to leave Mali \"as soon as possible\", after a weekend of co-ordinated attacks by separatist fighters and Islamist militants.\n\nIn an update on Wednesday, the advice also warned French citizens not to travel to the West African nation, describing the situation as \"extremely volatile\".\n\nThe foreign ministry of France, Mali's former colonial power, said: \"French nationals are advised to make arrangements to leave Mali temporarily as soon as possible on the commercial flights that are still available.\"",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "France urges citizens to leave Mali after rebel attacks",
+      "description": "The UK has issued similar advice, telling citizens who stay, that they do so at their own risk.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T104123Z_30387c7922\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto on liian suppea eikä kerro riittävästi hyökkäyksistä, tilanteen taustasta tai vaikutuksista julkaistavaan uutiseen.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

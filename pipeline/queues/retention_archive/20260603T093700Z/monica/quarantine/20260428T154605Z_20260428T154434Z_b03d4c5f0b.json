@@ -1,0 +1,84 @@
+{
+  "ts": "2026-04-28T15:46:05Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T154434Z_b03d4c5f0b",
+    "created_at": "2026-04-28T15:44:34Z",
+    "headline_seed": "Vantaan ja Keravan hyvinvointialue kattaa alijäämänsä suunniteltua nopeammin",
+    "description_seed": "Palkitsee henkilöstönsä nostamalla kulttuuri- ja liikuntasetelin arvoa.",
+    "link": "http://www.laakarilehti.fi/terveydenhuolto/vantaan-ja-keravan-hyvinvointialue-kattaa-alijaamansa-suunniteltua-nopeammin/",
+    "source": "Lääkärilehti",
+    "source_names": [
+      "source-2",
+      "source-7",
+      "source-26",
+      "source-16"
+    ],
+    "source_urls": [
+      "http://www.laakarilehti.fi/terveydenhuolto/vantaan-ja-keravan-hyvinvointialue-kattaa-alijaamansa-suunniteltua-nopeammin/"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vantaan ja Keravan hyvinvointialue kattaa alijäämänsä suunniteltua nopeammin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Vantaan ja Keravan hyvinvointialue on aikeissa kattaa alijäämänsä jo tänä vuonna, eli lakisääteisessä määräajassa.",
+        "word_count": 14,
+        "keyword_overlap": 5,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "Tiedotteen mukaan merkittävin syy talousarvion muuttamiselle on onnistunut uudistusohjelma, jossa henkilöstö on ollut keskeisessä roolissa. Aluehallitus päätti siksi, että henkilöstöä palkitaan nostamalla koko henkilöstölle jaettavan kulttuuri- ja liikuntasetelin arvoa.",
+        "word_count": 29,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-26",
+        "source_type": "research",
+        "text": "Vantaan ja Keravan hyvinvointialue on myös ryhtynyt työnjohdollisiin toimenpiteisiin yksikössä. Lahnalampi-Lahtinen ei kuitenkaan kommentoi, onko kyse irtisanomisista tai kuinka montaa työntekijää toimenpiteet koskevat.",
+        "word_count": 23,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-16",
+        "source_type": "research",
+        "text": "Vantaan ja Keravan hyvinvointialueen aluehallitus on päättänyt tiistaina jatkaa tilapäistä sulkua aiottua pidempään.",
+        "word_count": 13,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Vantaan ja Keravan hyvinvointialue on aikeissa kattaa alijäämänsä jo tänä vuonna, eli lakisääteisessä määräajassa.\n\nTiedotteen mukaan merkittävin syy talousarvion muuttamiselle on onnistunut uudistusohjelma, jossa henkilöstö on ollut keskeisessä roolissa. Aluehallitus päätti siksi, että henkilöstöä palkitaan nostamalla koko henkilöstölle jaettavan kulttuuri- ja liikuntasetelin arvoa.\n\nVantaan ja Keravan hyvinvointialue on myös ryhtynyt työnjohdollisiin toimenpiteisiin yksikössä. Lahnalampi-Lahtinen ei kuitenkaan kommentoi, onko kyse irtisanomisista tai kuinka montaa työntekijää toimenpiteet koskevat.\n\nVantaan ja Keravan hyvinvointialueen aluehallitus on päättänyt tiistaina jatkaa tilapäistä sulkua aiottua pidempään.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vantaan ja Keravan hyvinvointialue kattaa alijäämänsä suunniteltua nopeammin",
+      "description": "Palkitsee henkilöstönsä nostamalla kulttuuri- ja liikuntasetelin arvoa.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\nContext overflow: prompt too large for the model. Try /reset (or /new) to start a fresh session, or use a larger-context model.",
+  "extra": {
+    "error": "Monica response did not contain valid JSON",
+    "stage": "initial_parse"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T22:42:34Z",
+  "reason": "Aineisto sisältää vain vähän varmistettuja tietoja eikä tue vähintään 250 sanan artikkelia ilman täytettä tai päätelmiä.",
+  "packet": {
+    "packet_id": "20260430T224216Z_eebd5102b8",
+    "created_at": "2026-04-30T22:42:16Z",
+    "headline_seed": "Trump haukkui nyt vuorostaan Italian ja Espanjan",
+    "description_seed": "Trump jatkoi torstaina myös Saksan liittokansleri Friedrich Merzin arvostelemista.",
+    "link": "https://yle.fi/a/74-20223690?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-4",
+      "source-8",
+      "Yle Uutiset"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20223690?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.8,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump haukkui nyt vuorostaan Italian ja Espanjan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Trump jatkoi torstaina myös Saksan liittokansleri Friedrich Merzin arvostelemista.",
+        "word_count": 9,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Viime päivinä erityisesti suhteet Saksan kanssa ovat kärjistyneet sen jälkeen, kun Saksan liittokansleri Friedrich Merz oli sanonut, että Iran nöyryyttää Yhdysvaltoja rauhanneuvotteluissa.",
+        "word_count": 22,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Saksan ulkoministeri Johann Wadephul sanoi torstaina, että Saksa on varautunut siihen, että amerikkalaisjoukkojen määrä maassa voi vähentyä.",
+        "word_count": 17,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Presidentti Donald Trump ilmoitti torstaina harkitsevansa Yhdysvaltain joukkojen vähentämistä Espanjassa ja Italiassa.",
+        "word_count": 12,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Trump jatkoi torstaina myös Saksan liittokansleri Friedrich Merzin arvostelemista.\n\nViime päivinä erityisesti suhteet Saksan kanssa ovat kärjistyneet sen jälkeen, kun Saksan liittokansleri Friedrich Merz oli sanonut, että Iran nöyryyttää Yhdysvaltoja rauhanneuvotteluissa.\n\nSaksan ulkoministeri Johann Wadephul sanoi torstaina, että Saksa on varautunut siihen, että amerikkalaisjoukkojen määrä maassa voi vähentyä.\n\nPresidentti Donald Trump ilmoitti torstaina harkitsevansa Yhdysvaltain joukkojen vähentämistä Espanjassa ja Italiassa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump haukkui nyt vuorostaan Italian ja Espanjan",
+      "description": "Trump jatkoi torstaina myös Saksan liittokansleri Friedrich Merzin arvostelemista.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T224216Z_eebd5102b8\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto sisältää vain vähän varmistettuja tietoja eikä tue vähintään 250 sanan artikkelia ilman täytettä tai päätelmiä.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

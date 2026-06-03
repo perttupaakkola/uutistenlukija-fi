@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T06:41:06Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T064012Z_e70fe4cf76",
+    "created_at": "2026-04-27T06:40:12Z",
+    "headline_seed": "Lääkärien yöaikainen varallaolopäivystys päättyy Iisalmessa ja Varkaudessa",
+    "description_seed": "Vastedes puhelinkonsultaatiot tehdään yöllä Kysin päivystykseen.",
+    "link": "http://www.laakarilehti.fi/terveydenhuolto/laakarien-yoaikainen-varallaolopaivystys-paattyy-iisalmessa-ja-varkaudessa/",
+    "source": "Lääkärilehti",
+    "source_names": [
+      "source-2",
+      "source-20",
+      "source-23",
+      "source-24"
+    ],
+    "source_urls": [
+      "http://www.laakarilehti.fi/terveydenhuolto/laakarien-yoaikainen-varallaolopaivystys-paattyy-iisalmessa-ja-varkaudessa/"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lääkärien yöaikainen varallaolopäivystys päättyy Iisalmessa ja Varkaudessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Pohjois-Savon hyvinvointialue päätti, että Iisalmen ja Varkauden osastoilla päättyy lääkärien yöaikainen varallaolopäivystys 1. toukokuuta.",
+        "word_count": 14,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-20",
+        "source_type": "research",
+        "text": "Päivystysmaksu nousi Iisalmessa ja Varkaudessa vuodenvaihteessa 28 eurosta 71 euroon. Syynä on, että molemmissa paikoissa toiminta on osa KYS akuutin toimintaa, jossa on sairaalatasoinen varustus.",
+        "word_count": 25,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-23",
+        "source_type": "research",
+        "text": "– Iisalmessa ja Varkaudessa on vaikea päästä päiväaikaiselle kiirevastaanotolle. Tämän takia niissä ohjaudutaan kalliimpaan erikoissairaanhoitoon, sanoo Raatikainen.",
+        "word_count": 17,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-24",
+        "source_type": "research",
+        "text": "Jos perusterveydenhuollon vastaanottoaikoja olisi riittävästi, erikoissairaanhoidon päivystykseen ohjattaisiin vain ne potilaat, jotka sinne kuuluvat. Esimerkiksi hengenvaara, kuten kova rintakipu tai voimakas hengenahdistus on päivystysasia.",
+        "word_count": 24,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Pohjois-Savon hyvinvointialue päätti, että Iisalmen ja Varkauden osastoilla päättyy lääkärien yöaikainen varallaolopäivystys 1. toukokuuta.\n\nPäivystysmaksu nousi Iisalmessa ja Varkaudessa vuodenvaihteessa 28 eurosta 71 euroon. Syynä on, että molemmissa paikoissa toiminta on osa KYS akuutin toimintaa, jossa on sairaalatasoinen varustus.\n\n– Iisalmessa ja Varkaudessa on vaikea päästä päiväaikaiselle kiirevastaanotolle. Tämän takia niissä ohjaudutaan kalliimpaan erikoissairaanhoitoon, sanoo Raatikainen.\n\nJos perusterveydenhuollon vastaanottoaikoja olisi riittävästi, erikoissairaanhoidon päivystykseen ohjattaisiin vain ne potilaat, jotka sinne kuuluvat. Esimerkiksi hengenvaara, kuten kova rintakipu tai voimakas hengenahdistus on päivystysasia.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lääkärien yöaikainen varallaolopäivystys päättyy Iisalmessa ja Varkaudessa",
+      "description": "Vastedes puhelinkonsultaatiot tehdään yöllä Kysin päivystykseen.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25392 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25397 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

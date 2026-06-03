@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-29T19:11:39Z",
+  "reason": "Lähdeaineistossa on liian vähän tarkkoja tietoja väittelyn sisällöstä, sitaateista ja keskustelun kulusta 250 sanan uutisartikkeliin.",
+  "packet": {
+    "packet_id": "20260429T191118Z_5829e2de6a",
+    "created_at": "2026-04-29T19:11:18Z",
+    "headline_seed": "Lindtman ja Orpo kohtasivat Ylen A-studiossa, puhetta riitti \"kankkulan kaivosta\" ja \"soutuveneestä\"",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9415528",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Yle",
+      "source-13",
+      "source-3",
+      "source-8"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9415528"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.7,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lindtman ja Orpo kohtasivat Ylen A-studiossa, puhetta riitti \"kankkulan kaivosta\" ja \"soutuveneestä\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Keskiviikkoillan A-studiossa ovat vieraana pääministeri Petteri Orpo (kok.) ja SDP:n puheenjohtaja Antti Lindtman.",
+        "word_count": 13,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Lindtman vahvistaa A-studiossa kantansa siitä, että Suomen taloudellinen tilanne saataisiin kohenemaan nopeammin, jos eduskuntavaaleja aikaistettaisiin.",
+        "word_count": 15,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Illan lähetyksessä Orpo ja Lindtman vastasivat kysymyksiin ja debatoivat muun muassa Suomen turvallisuustilanteesta ja siitä, millaista talouspolitiikkaa Suomessa pitäisi tehdä.",
+        "word_count": 20,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Orpo sanoo A-studiossa, että retoriikka, jossa puhutaan taivaspaikoista, ei ole hyvää retoriikkaa.",
+        "word_count": 12,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Keskiviikkoillan A-studiossa ovat vieraana pääministeri Petteri Orpo (kok.) ja SDP:n puheenjohtaja Antti Lindtman.\n\nLindtman vahvistaa A-studiossa kantansa siitä, että Suomen taloudellinen tilanne saataisiin kohenemaan nopeammin, jos eduskuntavaaleja aikaistettaisiin.\n\nIllan lähetyksessä Orpo ja Lindtman vastasivat kysymyksiin ja debatoivat muun muassa Suomen turvallisuustilanteesta ja siitä, millaista talouspolitiikkaa Suomessa pitäisi tehdä.\n\nOrpo sanoo A-studiossa, että retoriikka, jossa puhutaan taivaspaikoista, ei ole hyvää retoriikkaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lindtman ja Orpo kohtasivat Ylen A-studiossa, puhetta riitti \"kankkulan kaivosta\" ja \"soutuveneestä\"",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T191118Z_5829e2de6a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on liian vähän tarkkoja tietoja väittelyn sisällöstä, sitaateista ja keskustelun kulusta 250 sanan uutisartikkeliin.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

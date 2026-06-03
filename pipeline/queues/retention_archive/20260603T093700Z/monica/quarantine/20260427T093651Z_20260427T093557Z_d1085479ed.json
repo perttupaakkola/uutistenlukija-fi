@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T09:36:51Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T093557Z_d1085479ed",
+    "created_at": "2026-04-27T09:35:57Z",
+    "headline_seed": "Minja Koskela: Työaikaa pitää lyhentää",
+    "description_seed": "Koskelan mielestä viikonlopulle osuvat juhlapyhät voitaisiin korvata maanantaille lisättävällä ylimääräisellä arkivapaalla.",
+    "link": "https://www.is.fi/politiikka/art-2000011969344.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "source-29",
+      "source-12",
+      "source-9"
+    ],
+    "source_urls": [
+      "https://www.is.fi/politiikka/art-2000011969344.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Minja Koskela: Työaikaa pitää lyhentää"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Koskelan mielestä viikonlopulle osuvat juhlapyhät voitaisiin korvata maanantaille lisättävällä ylimääräisellä arkivapaalla.",
+        "word_count": 11,
+        "keyword_overlap": 11,
+        "strong_overlap": 11
+      },
+      {
+        "source": "source-29",
+        "source_type": "research",
+        "text": "Vasemmistoliiton puheenjohtaja Minja Koskela menee vielä pidemmälle ehdottomalla omassa tiedotteessaan, että työntekijöiden arkivapaita voitaisiin lisätä Suomessa, korvaamalla esimerkiksi viikonlopulle osuvat juhlapyhät maanantaille annettavalla ylimääräisellä arkivapaalla.",
+        "word_count": 25,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Yhdeksi talouden kirittäjäksi Koskela esittää valtion asuntorahaston palauttamista entiselleen, erilliseksi valtion budjetista. Koskelan mukaan asuntorahaston sulauttaminen budjettitalouteen on heikentänyt mahdollisuuksia reagoida nopeasti rakennusalan vaikeuksiin.",
+        "word_count": 24,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Koskelan mukaan hallitus on leikannut pelkästään ammatillisesta koulutuksesta 120 miljoonaa euroa. Sen lisäksi aikauiskoulutustuki pitää Koskelan mukaan palauttaa.",
+        "word_count": 18,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Koskelan mielestä viikonlopulle osuvat juhlapyhät voitaisiin korvata maanantaille lisättävällä ylimääräisellä arkivapaalla.\n\nVasemmistoliiton puheenjohtaja Minja Koskela menee vielä pidemmälle ehdottomalla omassa tiedotteessaan, että työntekijöiden arkivapaita voitaisiin lisätä Suomessa, korvaamalla esimerkiksi viikonlopulle osuvat juhlapyhät maanantaille annettavalla ylimääräisellä arkivapaalla.\n\nYhdeksi talouden kirittäjäksi Koskela esittää valtion asuntorahaston palauttamista entiselleen, erilliseksi valtion budjetista. Koskelan mukaan asuntorahaston sulauttaminen budjettitalouteen on heikentänyt mahdollisuuksia reagoida nopeasti rakennusalan vaikeuksiin.\n\nKoskelan mukaan hallitus on leikannut pelkästään ammatillisesta koulutuksesta 120 miljoonaa euroa. Sen lisäksi aikauiskoulutustuki pitää Koskelan mukaan palauttaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Minja Koskela: Työaikaa pitää lyhentää",
+      "description": "Koskelan mielestä viikonlopulle osuvat juhlapyhät voitaisiin korvata maanantaille lisättävällä ylimääräisellä arkivapaalla.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25344 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25352 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

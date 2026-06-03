@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T17:54:49Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T175355Z_3fb2fc4d1f",
+    "created_at": "2026-04-27T17:53:55Z",
+    "headline_seed": "Plane crash in South Sudan kills all 15 on board",
+    "description_seed": "The authorities are investigating but early reports suggest bad weather and poor visibility may be to blame.",
+    "link": "https://www.bbc.com/news/articles/cg737x2pe4ko?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-15",
+      "source-34",
+      "source-41"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cg737x2pe4ko?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Plane crash in South Sudan kills all 15 on board"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The authorities are investigating but early reports suggest bad weather and poor visibility may be to blame.",
+        "word_count": 17,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-15",
+        "source_type": "research",
+        "text": "Officials have sent a team to the crash site for investigations but initial reports suggested the aircraft may have come down \"due to adverse weather conditions, particularly low visibility\", the SSCAA added in a statement.",
+        "word_count": 35,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-34",
+        "source_type": "research",
+        "text": "Preliminary reports suggested the aircraft may have crashed due to bad weather, particularly low visibility, SSCAA said.",
+        "word_count": 17,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-41",
+        "source_type": "research",
+        "text": "It said initial reports indicated the cause as \"adverse weather conditions, particularly low visibility\".",
+        "word_count": 14,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The authorities are investigating but early reports suggest bad weather and poor visibility may be to blame.\n\nOfficials have sent a team to the crash site for investigations but initial reports suggested the aircraft may have come down \"due to adverse weather conditions, particularly low visibility\", the SSCAA added in a statement.\n\nPreliminary reports suggested the aircraft may have crashed due to bad weather, particularly low visibility, SSCAA said.\n\nIt said initial reports indicated the cause as \"adverse weather conditions, particularly low visibility\".",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Plane crash in South Sudan kills all 15 on board",
+      "description": "The authorities are investigating but early reports suggest bad weather and poor visibility may be to blame.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25145 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25150 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

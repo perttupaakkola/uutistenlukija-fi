@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T13:52:45Z",
+  "reason": "Aineistossa on olennainen päivämääräristiriita: kuvauksessa konkurssi asetettiin torstaina, mutta lähdekatkelmat sanovat käräjäoikeuden päättäneen asiasta tiistaina. Tätä ei voi turvallisesti julkaista ilman varmistusta.",
+  "packet": {
+    "packet_id": "20260430T135226Z_095a32d16c",
+    "created_at": "2026-04-30T13:52:26Z",
+    "headline_seed": "Askon ja Sotkan omistajan omistaja pantiin konkurssiin",
+    "description_seed": "Helsingin käräjäoikeus asetti yhtiön konkurssiin torstaina.",
+    "link": "https://www.ess.fi/paikalliset/9419238",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Yle",
+      "source-3",
+      "source-10",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9419238"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Askon ja Sotkan omistajan omistaja pantiin konkurssiin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Helsingin käräjäoikeus on asettanut Askon ja Sotkan omistavan Indoor Group oy:n konkurssiin.",
+        "word_count": 12,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Helsingin käräjäoikeus on päättänyt tänään tiistaina asettaa Indoor Groupin konkurssiin ensin vireille tulleesta Unico Finlandin hakemuksesta. Käräjäoikeus toteaa päätöksessään, että konkurssiin asettamisen edellytykset ovat olleet olemassa myös velallisen oman konkurssihakemuksen osalta.",
+        "word_count": 31,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Asko- ja Sotka-huonekaluketjujen omistaja Indoor Group on asetettu konkurssiin tänään puoliltapäivin Helsingin käräjäoikeudessa.",
+        "word_count": 13,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Indoor Groupin Helsingin käräjäoikeudelle jättämän selvityksen mukaan yhtiön velat ovat yhteensä 55,8 miljoonaa euroa. Varoja sillä on yhteensä 18,5 miljoonaa.",
+        "word_count": 20,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Helsingin käräjäoikeus on asettanut Askon ja Sotkan omistavan Indoor Group oy:n konkurssiin.\n\nHelsingin käräjäoikeus on päättänyt tänään tiistaina asettaa Indoor Groupin konkurssiin ensin vireille tulleesta Unico Finlandin hakemuksesta. Käräjäoikeus toteaa päätöksessään, että konkurssiin asettamisen edellytykset ovat olleet olemassa myös velallisen oman konkurssihakemuksen osalta.\n\nAsko- ja Sotka-huonekaluketjujen omistaja Indoor Group on asetettu konkurssiin tänään puoliltapäivin Helsingin käräjäoikeudessa.\n\nIndoor Groupin Helsingin käräjäoikeudelle jättämän selvityksen mukaan yhtiön velat ovat yhteensä 55,8 miljoonaa euroa. Varoja sillä on yhteensä 18,5 miljoonaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Askon ja Sotkan omistajan omistaja pantiin konkurssiin",
+      "description": "Helsingin käräjäoikeus asetti yhtiön konkurssiin torstaina.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T135226Z_095a32d16c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineistossa on olennainen päivämääräristiriita: kuvauksessa konkurssi asetettiin torstaina, mutta lähdekatkelmat sanovat käräjäoikeuden päättäneen asiasta tiistaina. Tätä ei voi turvallisesti julkaista ilman varmistusta.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

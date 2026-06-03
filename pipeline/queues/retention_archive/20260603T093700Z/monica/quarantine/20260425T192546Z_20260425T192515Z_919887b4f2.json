@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-25T19:25:46Z",
+  "reason": "otsikko ja aineisto ovat ristiriidassa, eikä oikeaa riviä tai riittäviä tietoja varmennettuun uutisjuttuun ole mukana",
+  "packet": {
+    "packet_id": "20260425T192515Z_919887b4f2",
+    "created_at": "2026-04-25T19:25:15Z",
+    "headline_seed": "Lotossa 4 000 000 euron potti: Tässä oikea rivi",
+    "description_seed": "Illan lottoarvonnassa oli tarjolla 4 000 000 euron potti.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/lotossa-4-000-000-euron-potti-tassa-oikea-rivi/9329526",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "Hymy"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/lotossa-4-000-000-euron-potti-tassa-oikea-rivi/9329526"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.59,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lotossa 4 000 000 euron potti: Tässä oikea rivi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Illan lottoarvonnassa oli tarjolla 4 000 000 euron potti.",
+        "word_count": 9,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Hymy",
+        "source_type": "research",
+        "text": "Lotossa ei löytynyt kierroksella 16/2026 täysosumia. Ensi viikolla potissa on tarjolla neljä miljoonaa euroa.",
+        "word_count": 14,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Illan lottoarvonnassa oli tarjolla 4 000 000 euron potti.\n\nLotossa ei löytynyt kierroksella 16/2026 täysosumia. Ensi viikolla potissa on tarjolla neljä miljoonaa euroa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lotossa 4 000 000 euron potti: Tässä oikea rivi",
+      "description": "Illan lottoarvonnassa oli tarjolla 4 000 000 euron potti.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=6100d642-ba84-473d-9296-f363a1f2ebae sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T192515Z_919887b4f2\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"otsikko ja aineisto ovat ristiriidassa, eikä oikeaa riviä tai riittäviä tietoja varmennettuun uutisjuttuun ole mukana\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

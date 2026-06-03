@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T13:56:39Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T135544Z_8e734474c3",
+    "created_at": "2026-04-26T13:55:44Z",
+    "headline_seed": "Armed groups launch coordinated attacks across Mali",
+    "description_seed": "Witnesses report clashes in the centre and north, in what has been described as the largest jihadist attack in years.",
+    "link": "https://www.bbc.com/news/articles/clyx7nnrkqdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "WSKG",
+      "BBC World",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clyx7nnrkqdo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.89,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Armed groups launch coordinated attacks across Mali"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Witnesses report clashes in the centre and north, in what has been described as the largest jihadist attack in years.",
+        "word_count": 20,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "WSKG",
+        "source_type": "research",
+        "text": "LAGOS, Nigeria—In Mali, West Africa, armed groups including Islamist militants have launched one of the largest coordinated attacks seen in recent years, targeting multiple cities across the country.",
+        "word_count": 28,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Explosions and sustained gunfire were reported in Mali's capital, Bamako, as armed groups launched co-ordinated attacks across the country into Sunday.",
+        "word_count": 21,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Reports suggest the assault by the separatist Azawad Liberation Front (FLA) - which seeks a breakaway ethnic Tuareg state - was primarily focused on northern cities, while the jihadist group Jama'at Nusrat al-Islam wal-Muslimin (JNIM) had staged simultaneous attacks on multiple locations across the country.",
+        "word_count": 45,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Witnesses report clashes in the centre and north, in what has been described as the largest jihadist attack in years.\n\nLAGOS, Nigeria—In Mali, West Africa, armed groups including Islamist militants have launched one of the largest coordinated attacks seen in recent years, targeting multiple cities across the country.\n\nExplosions and sustained gunfire were reported in Mali's capital, Bamako, as armed groups launched co-ordinated attacks across the country into Sunday.\n\nReports suggest the assault by the separatist Azawad Liberation Front (FLA) - which seeks a breakaway ethnic Tuareg state - was primarily focused on northern cities, while the jihadist group Jama'at Nusrat al-Islam wal-Muslimin (JNIM) had staged simultaneous attacks on multiple locations across the country.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Armed groups launch coordinated attacks across Mali",
+      "description": "Witnesses report clashes in the centre and north, in what has been described as the largest jihadist attack in years.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=26274 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=26277 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

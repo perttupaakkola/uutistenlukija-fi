@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-30T10:01:42Z",
+  "reason": "Aineistossa on ristiriitaista ja ilmeisen epäolennaista lisätietoa, eikä onnettomuuden kulusta, vaikutuksista tai osapuolista ole riittävästi varmistettuja tietoja.",
+  "packet": {
+    "packet_id": "20260430T100122Z_606c70f528",
+    "created_at": "2026-04-30T10:01:22Z",
+    "headline_seed": "Onnettomuus Kouvolassa – Valtatie poikki",
+    "description_seed": "Poliisi on paikalla. Kouvolassa on tapahtunut liikenneonnettomuus, Kaakkois-Suomen poliisilaitos tiedottaa. Onnettomuuspaikka on Kotkan valtatiellä, Äpäkiventien risteyksessä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/5b29e7ab-69b9-423d-8074-9afc782cd958",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti",
+      "Yle",
+      "source-13"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/5b29e7ab-69b9-423d-8074-9afc782cd958"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Onnettomuus Kouvolassa – Valtatie poikki"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Poliisi on paikalla. Kouvolassa on tapahtunut liikenneonnettomuus, Kaakkois-Suomen poliisilaitos tiedottaa. Onnettomuuspaikka on Kotkan valtatiellä, Äpäkiventien risteyksessä.",
+        "word_count": 16,
+        "keyword_overlap": 13,
+        "strong_overlap": 13
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Poliisi epäilee yhtä ihmistä törkeästä kuolemantuottamuksesta ja palvelusrikoksesta Kouvolassa Vekaranjärven varuskunta-alueella sattuneessa onnettomuudessa.",
+        "word_count": 13,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Polttoaine­jakelu on ollut poikki Teboilin asemilla jo puolisen vuotta. Yrittäjän on vaikea vaihtaa ketjua, jos huoltamo­kiinteistö on Teboilin oma.",
+        "word_count": 19,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Poliisi on paikalla. Kouvolassa on tapahtunut liikenneonnettomuus, Kaakkois-Suomen poliisilaitos tiedottaa. Onnettomuuspaikka on Kotkan valtatiellä, Äpäkiventien risteyksessä.\n\nPoliisi epäilee yhtä ihmistä törkeästä kuolemantuottamuksesta ja palvelusrikoksesta Kouvolassa Vekaranjärven varuskunta-alueella sattuneessa onnettomuudessa.\n\nPolttoaine­jakelu on ollut poikki Teboilin asemilla jo puolisen vuotta. Yrittäjän on vaikea vaihtaa ketjua, jos huoltamo­kiinteistö on Teboilin oma.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Onnettomuus Kouvolassa – Valtatie poikki",
+      "description": "Poliisi on paikalla. Kouvolassa on tapahtunut liikenneonnettomuus, Kaakkois-Suomen poliisilaitos tiedottaa. Onnettomuuspaikka on Kotkan valtatiellä, Äpäkiventien risteyksessä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T100122Z_606c70f528\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineistossa on ristiriitaista ja ilmeisen epäolennaista lisätietoa, eikä onnettomuuden kulusta, vaikutuksista tai osapuolista ole riittävästi varmistettuja tietoja.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

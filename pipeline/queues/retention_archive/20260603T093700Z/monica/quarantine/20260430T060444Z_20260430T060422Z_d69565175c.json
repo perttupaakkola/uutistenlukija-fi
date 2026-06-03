@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-30T06:04:44Z",
+  "reason": "Aineistosta puuttuvat bensan hintataso, vertailuluvut ja yhteys huhtikuun inflaatiotietoihin, joten täyttä uutisartikkelia ei voi kirjoittaa luotettavasti.",
+  "packet": {
+    "packet_id": "20260430T060422Z_d69565175c",
+    "created_at": "2026-04-30T06:04:22Z",
+    "headline_seed": "Bensan keskihinta pomppasi haamurajan yli huhtikuussa",
+    "description_seed": "Kuluttajahinnat nousivat 2,3 prosenttia huhtikuussa.",
+    "link": "https://www.is.fi/taloussanomat/art-2000011977172.html",
+    "source": "Taloussanomat",
+    "source_names": [
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.is.fi/taloussanomat/art-2000011977172.html"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.44,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Bensan keskihinta pomppasi haamurajan yli huhtikuussa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Siihen päälle nousivat polttoaineiden hinnat, mikä vaikuttaa erityisesti samoihin perheisiin, joissa maksetaan jo jättisuuria sähkölaskuja. Nyt myös asuntolainojen korot ovat kääntyneet jyrkkään nousuun.",
+        "word_count": 23,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Siihen päälle nousivat polttoaineiden hinnat, mikä vaikuttaa erityisesti samoihin perheisiin, joissa maksetaan jo jättisuuria sähkölaskuja. Nyt myös asuntolainojen korot ovat kääntyneet jyrkkään nousuun.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Bensan keskihinta pomppasi haamurajan yli huhtikuussa",
+      "description": "Kuluttajahinnat nousivat 2,3 prosenttia huhtikuussa.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T060422Z_d69565175c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineistosta puuttuvat bensan hintataso, vertailuluvut ja yhteys huhtikuun inflaatiotietoihin, joten täyttä uutisartikkelia ei voi kirjoittaa luotettavasti.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

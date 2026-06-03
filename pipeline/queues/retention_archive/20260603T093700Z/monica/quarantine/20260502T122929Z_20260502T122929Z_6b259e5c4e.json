@@ -1,0 +1,84 @@
+{
+  "ts": "2026-05-02T12:29:29Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260502T122929Z_6b259e5c4e",
+    "created_at": "2026-05-02T12:29:29Z",
+    "headline_seed": "Sähkön hinta pomppaa sunnuntaina",
+    "description_seed": "Pörssisähkön hinta kohoaa sunnuntai-iltana yli 15 senttiin kilowattitunnilta, mikä on selvästi tyypillistä hintatasoa korkeampi. Päivällä hinnat pysyvät kuitenkin vielä matalina.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/f47ea4ef-1ce4-4285-9631-11933718ac54",
+    "source": "Kauppalehti KL-Nyt",
+    "source_names": [
+      "Kauppalehti KL-Nyt",
+      "source-2",
+      "source-4",
+      "source-15"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/f47ea4ef-1ce4-4285-9631-11933718ac54"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.9,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sähkön hinta pomppaa sunnuntaina"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti KL-Nyt",
+        "source_type": "description",
+        "text": "Pörssisähkön hinta kohoaa sunnuntai-iltana yli 15 senttiin kilowattitunnilta, mikä on selvästi tyypillistä hintatasoa korkeampi. Päivällä hinnat pysyvät kuitenkin vielä matalina.",
+        "word_count": 20,
+        "keyword_overlap": 17,
+        "strong_overlap": 14
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Sähkön hinta pomppaa yön ja varhaisaamun edullisemmista hinnoista tuntuvasti jo seitsemältä, jolloin hinta nousee lähes 30 senttiin. Sen jälkeen kahdeksalta hinta nousee 42 senttiin ja yhdeksältä runsaaseen 43 senttiin kilowattitunnilta.",
+        "word_count": 30,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Vielä kello 10–11 välillä pörssisähkö maksaa lähes 30 senttiä kilowattitunnilta, minkä jälkeen hinta putoaa 15 senttiin ja kello 12 jo alle 10 senttiin. Loppupäivän ajan sähkö on melko edullista, ja kello 20 eteenpäin hinta on enää alle sentin kilowattitunnilta.",
+        "word_count": 39,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-15",
+        "source_type": "research",
+        "text": "Viime vuosina sähkön hintojen heilahtelu on alkanut luoda aivan uutta bisnestä, sähkövarastoja. Niiden suuret akut ladataan silloin, kun hinnat ovat pohjalukemissa. Hintojen noustessa akkujen sähkö voidaan myydä takaisin sähkömarkkinoille.",
+        "word_count": 29,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Pörssisähkön hinta kohoaa sunnuntai-iltana yli 15 senttiin kilowattitunnilta, mikä on selvästi tyypillistä hintatasoa korkeampi. Päivällä hinnat pysyvät kuitenkin vielä matalina.\n\nSähkön hinta pomppaa yön ja varhaisaamun edullisemmista hinnoista tuntuvasti jo seitsemältä, jolloin hinta nousee lähes 30 senttiin. Sen jälkeen kahdeksalta hinta nousee 42 senttiin ja yhdeksältä runsaaseen 43 senttiin kilowattitunnilta.\n\nVielä kello 10–11 välillä pörssisähkö maksaa lähes 30 senttiä kilowattitunnilta, minkä jälkeen hinta putoaa 15 senttiin ja kello 12 jo alle 10 senttiin. Loppupäivän ajan sähkö on melko edullista, ja kello 20 eteenpäin hinta on enää alle sentin kilowattitunnilta.\n\nViime vuosina sähkön hintojen heilahtelu on alkanut luoda aivan uutta bisnestä, sähkövarastoja. Niiden suuret akut ladataan silloin, kun hinnat ovat pohjalukemissa. Hintojen noustessa akkujen sähkö voidaan myydä takaisin sähkömarkkinoille.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sähkön hinta pomppaa sunnuntaina",
+      "description": "Pörssisähkön hinta kohoaa sunnuntai-iltana yli 15 senttiin kilowattitunnilta, mikä on selvästi tyypillistä hintatasoa korkeampi. Päivällä hinnat pysyvät kuitenkin vielä matalina.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Monica writer command failed: [Errno 2] No such file or directory: 'openclaw'. Checked PATH and candidates: /home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw, /usr/local/bin/openclaw, /usr/bin/openclaw"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-25T12:01:14Z",
+  "reason": "aineisto ei tue otsikon keskeistä väitettä ottelun keskeyttämisestä, ja vahvistetut tiedot jäävät muutenkin liian niukoiksi 250 sanan uutisjuttuun",
+  "packet": {
+    "packet_id": "20260425T115749Z_33886c9570",
+    "created_at": "2026-04-25T11:57:49Z",
+    "headline_seed": "Veikkausliigassa pelaava FC Lahti tehostaa turvatoimia otteluissaan – peli keskeytetään, jos soihdut syttyvät",
+    "description_seed": "Otteluiden turvatoimia kiristetään poliisin määräyksestä, koska edellisessä pelissä sytytettiin kiellettyjä pyroteknisiä soihtuja.",
+    "link": "https://yle.fi/a/74-20222681?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-3",
+      "Yle Uutiset",
+      "source-8"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222681?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.81,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Veikkausliigassa pelaava FC Lahti tehostaa turvatoimia otteluissaan – peli keskeytetään, jos soihdut syttyvät"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Otteluiden turvatoimia kiristetään poliisin määräyksestä, koska edellisessä pelissä sytytettiin kiellettyjä pyroteknisiä soihtuja.",
+        "word_count": 12,
+        "keyword_overlap": 12,
+        "strong_overlap": 11
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "FC Lahden kaupallisen johtajan Markus Mujusen mukaan toimet tehdään poliisin määräyksestä, koska aiemmassa kotiottelussa sytytettiin palamaan pyroteknisiä soihtuja fanikatsomossa.",
+        "word_count": 19,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Jalkapallon Veikkausliigassa pelaava FC Lahti vahvistaa turvatoimia jo tänään lauantaina iltapäivällä käytävään kotiotteluunsa.",
+        "word_count": 13,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "FC Lahden viikko sitten pelaamassa kotiottelussa sytytetyt soihdut häiritsivät yleisöä ja aiheuttivat vaaraa katsojien turvallisuudelle muun muassa runsaan savun takia.",
+        "word_count": 20,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Otteluiden turvatoimia kiristetään poliisin määräyksestä, koska edellisessä pelissä sytytettiin kiellettyjä pyroteknisiä soihtuja.\n\nFC Lahden kaupallisen johtajan Markus Mujusen mukaan toimet tehdään poliisin määräyksestä, koska aiemmassa kotiottelussa sytytettiin palamaan pyroteknisiä soihtuja fanikatsomossa.\n\nJalkapallon Veikkausliigassa pelaava FC Lahti vahvistaa turvatoimia jo tänään lauantaina iltapäivällä käytävään kotiotteluunsa.\n\nFC Lahden viikko sitten pelaamassa kotiottelussa sytytetyt soihdut häiritsivät yleisöä ja aiheuttivat vaaraa katsojien turvallisuudelle muun muassa runsaan savun takia.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Veikkausliigassa pelaava FC Lahti tehostaa turvatoimia otteluissaan – peli keskeytetään, jos soihdut syttyvät",
+      "description": "Otteluiden turvatoimia kiristetään poliisin määräyksestä, koska edellisessä pelissä sytytettiin kiellettyjä pyroteknisiä soihtuja.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=a11c8a4e-f892-4101-9a1b-bbe006ee91bf sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T115749Z_33886c9570\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto ei tue otsikon keskeistä väitettä ottelun keskeyttämisestä, ja vahvistetut tiedot jäävät muutenkin liian niukoiksi 250 sanan uutisjuttuun\"}\n[agent/embedded] [context-engine] maintenance(turn) changed transcript rewrittenEntries=0 bytesFreed=0 sessionKey=agent:monica:main",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

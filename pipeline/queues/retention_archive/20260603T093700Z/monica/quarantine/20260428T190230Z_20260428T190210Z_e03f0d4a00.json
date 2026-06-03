@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T19:02:30Z",
+  "reason": "Paketti sisältää liian vähän varmennettuja tietoja uhrien määrästä, tapahtumien kulusta ja motiivista julkaistavaan vähintään 250 sanan uutiseen.",
+  "packet": {
+    "packet_id": "20260428T190210Z_e03f0d4a00",
+    "created_at": "2026-04-28T19:02:10Z",
+    "headline_seed": "89-year-old man arrested over Athens double shooting",
+    "description_seed": "Multiple people injured when gunman opened fire inside a social security office and later an appeals court An 89-year-old man has been arrested on suspicion of shooting and wounding several people in attacks on government buildings in Athens. Hours after the double shooting in the Greek capital, authorities announced a suspect had been detained in the western port city of Patras, reportedly attempting to flee to Italy. His arrest followed a countrywide manhunt. Continue reading...",
+    "link": "https://www.theguardian.com/world/2026/apr/28/89-year-old-man-arrested-greece-athens-double-shooting",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-3",
+      "source-2",
+      "The Guardian World"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/apr/28/89-year-old-man-arrested-greece-athens-double-shooting"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.95,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "89-year-old man arrested over Athens double shooting"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Multiple people injured when gunman opened fire inside a social security office and later an appeals court An 89-year-old man has been arrested on suspicion of shooting and wounding several people in attacks on government buildings in Athens. Hours after the double shooting in the Greek capital, authorities announced a suspect had been detained in the western port city of Patras, reportedly attempting to flee to Italy. His arrest followed a countrywide manhunt. Continue reading...",
+        "word_count": 75,
+        "keyword_overlap": 48,
+        "strong_overlap": 36
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Hours after the double shooting in the Greek capital, authorities announced a suspect had been detained in the western port city of Patras, reportedly attempting to flee to Italy. His arrest followed a countrywide manhunt.",
+        "word_count": 35,
+        "keyword_overlap": 23,
+        "strong_overlap": 15
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "An 89-year-old man has been arrested on suspicion of shooting and wounding several people in attacks on government buildings in Athens.",
+        "word_count": 21,
+        "keyword_overlap": 12,
+        "strong_overlap": 11
+      },
+      {
+        "source": "The Guardian World",
+        "source_type": "research",
+        "text": "Multiple people injured when gunman opened fire inside a social security office and later an appeals court",
+        "word_count": 17,
+        "keyword_overlap": 14,
+        "strong_overlap": 10
+      }
+    ],
+    "source_text": "Multiple people injured when gunman opened fire inside a social security office and later an appeals court An 89-year-old man has been arrested on suspicion of shooting and wounding several people in attacks on government buildings in Athens. Hours after the double shooting in the Greek capital, authorities announced a suspect had been detained in the western port city of Patras, reportedly attempting to flee to Italy. His arrest followed a countrywide manhunt. Continue reading...\n\nHours after the double shooting in the Greek capital, authorities announced a suspect had been detained in the western port city of Patras, reportedly attempting to flee to Italy. His arrest followed a countrywide manhunt.\n\nAn 89-year-old man has been arrested on suspicion of shooting and wounding several people in attacks on government buildings in Athens.\n\nMultiple people injured when gunman opened fire inside a social security office and later an appeals court",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "89-year-old man arrested over Athens double shooting",
+      "description": "Multiple people injured when gunman opened fire inside a social security office and later an appeals court An 89-year-old man has been arrested on suspicion of shooting and wounding several people in attacks on government buildings in Athens. Hours after the double shooting in the Greek capital, authorities announced a suspect had been detained in the western port city of Patras, reportedly attempting to flee to Italy. His arrest followed a countrywide manhunt. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260428T190210Z_e03f0d4a00\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää liian vähän varmennettuja tietoja uhrien määrästä, tapahtumien kulusta ja motiivista julkaistavaan vähintään 250 sanan uutiseen.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

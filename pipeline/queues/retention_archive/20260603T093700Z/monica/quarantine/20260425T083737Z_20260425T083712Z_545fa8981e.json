@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-25T08:37:37Z",
+  "reason": "otsikko ja lähdeaineisto ovat ristiriidassa, sillä paketti puhuu droonitoimista mutta lähdeblokit käsittelevät ydinaselinjauksia",
+  "packet": {
+    "packet_id": "20260425T083712Z_545fa8981e",
+    "created_at": "2026-04-25T08:37:12Z",
+    "headline_seed": "Keskustan Kaikkonen vaati nopeita droonitoimia: \"Hallituksen eväät on syöty\"",
+    "description_seed": "Antti Kaikkonen arvosteli keskustan puoluevaltuuston kokouksessa Helsingissä hallituksen toimia.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/keskustan-kaikkonen-vaati-nopeita-droonitoimia-pitaa-saada-kayttoon-lahikuukausina-ei-joskus-ensi-vuonna/9329420",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "source-9",
+      "Yle",
+      "source-13"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/keskustan-kaikkonen-vaati-nopeita-droonitoimia-pitaa-saada-kayttoon-lahikuukausina-ei-joskus-ensi-vuonna/9329420"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.82,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Keskustan Kaikkonen vaati nopeita droonitoimia: \"Hallituksen eväät on syöty\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Antti Kaikkonen arvosteli keskustan puoluevaltuuston kokouksessa Helsingissä hallituksen toimia.",
+        "word_count": 9,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Antti Kaikkonen tekee esityksen puolueiden lausumasta, koska hänen mukaansa hallituksen esitys ydinaseita koskevien rajoitteiden purkamisesta lähti liikkeelle ”vähän huonolla asennolla”.",
+        "word_count": 20,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Keskustan puheenjohtaja Antti Kaikkonen esittää, että eduskuntapuolueet tai suurin osa niistä sitoutuisi siihen, ettei ydinaseita sijoiteta Suomeen rauhan aikana.",
+        "word_count": 19,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Kaikkosen siis harmittelee menettelytapaa, jonka hallitus valitsi ydinaselinjauksessaan. Hän yrittää nyt kuroa kapeammaksi sitä kuilua, joka syntyi hallituksen ilmoituksen jälkeen etenkin hallituksen sekä vasemmistopuolueiden ja vihreiden välille.",
+        "word_count": 27,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Antti Kaikkonen arvosteli keskustan puoluevaltuuston kokouksessa Helsingissä hallituksen toimia.\n\nAntti Kaikkonen tekee esityksen puolueiden lausumasta, koska hänen mukaansa hallituksen esitys ydinaseita koskevien rajoitteiden purkamisesta lähti liikkeelle ”vähän huonolla asennolla”.\n\nKeskustan puheenjohtaja Antti Kaikkonen esittää, että eduskuntapuolueet tai suurin osa niistä sitoutuisi siihen, ettei ydinaseita sijoiteta Suomeen rauhan aikana.\n\nKaikkosen siis harmittelee menettelytapaa, jonka hallitus valitsi ydinaselinjauksessaan. Hän yrittää nyt kuroa kapeammaksi sitä kuilua, joka syntyi hallituksen ilmoituksen jälkeen etenkin hallituksen sekä vasemmistopuolueiden ja vihreiden välille.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Keskustan Kaikkonen vaati nopeita droonitoimia: \"Hallituksen eväät on syöty\"",
+      "description": "Antti Kaikkonen arvosteli keskustan puoluevaltuuston kokouksessa Helsingissä hallituksen toimia.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=a23b81e7-5552-41e5-adb3-b5f1eeb0da56 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T083712Z_545fa8981e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"otsikko ja lähdeaineisto ovat ristiriidassa, sillä paketti puhuu droonitoimista mutta lähdeblokit käsittelevät ydinaselinjauksia\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

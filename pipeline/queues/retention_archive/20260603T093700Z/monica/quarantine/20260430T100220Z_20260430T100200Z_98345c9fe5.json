@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-30T10:02:20Z",
+  "reason": "Aineistossa on liian vähän varmistettuja tietoja palvelun laajuudesta, saatavuudesta ja vaikutuksista täyteen uutisartikkeliin.",
+  "packet": {
+    "packet_id": "20260430T100200Z_98345c9fe5",
+    "created_at": "2026-04-30T10:02:00Z",
+    "headline_seed": "Uber Eats toimii nyt Suomessa",
+    "description_seed": "Uber Eatsin aloitusta Suomessa on uumoiltu jo ainakin lokakuusta lähtien.",
+    "link": "https://yle.fi/a/74-20223577?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "Yle Uutiset"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20223577?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.6,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Uber Eats toimii nyt Suomessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Uber Eatsin aloitusta Suomessa on uumoiltu jo ainakin lokakuusta lähtien.",
+        "word_count": 10,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Ruokalähettipalvelu Uber Eats on aloittanut toimintansa Suomessa. Asiasta ilmoittaa muun muassa Uber-sovellus. Taksisovellus Uberilla voi nyt tilata myös ruokaa tai kuljetuttaa esimerkiksi tavaroita.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 0
+      }
+    ],
+    "source_text": "Uber Eatsin aloitusta Suomessa on uumoiltu jo ainakin lokakuusta lähtien.\n\nRuokalähettipalvelu Uber Eats on aloittanut toimintansa Suomessa. Asiasta ilmoittaa muun muassa Uber-sovellus. Taksisovellus Uberilla voi nyt tilata myös ruokaa tai kuljetuttaa esimerkiksi tavaroita.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Uber Eats toimii nyt Suomessa",
+      "description": "Uber Eatsin aloitusta Suomessa on uumoiltu jo ainakin lokakuusta lähtien.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T100200Z_98345c9fe5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineistossa on liian vähän varmistettuja tietoja palvelun laajuudesta, saatavuudesta ja vaikutuksista täyteen uutisartikkeliin.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T10:59:22Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T105828Z_e72b66d391",
+    "created_at": "2026-04-26T10:58:28Z",
+    "headline_seed": "Trumpin puhe välikohtauksen jälkeen oli ”erittäin kiinnostava”, sanoo professori: ”Hänellä on kyky hallita julkisuutta”",
+    "description_seed": "Professori Benita Heiskanen näkee kolme syytä siihen, miksi Trumpiin liittyy poikkeuksellisen paljon väkivaltaisia välikohtauksia.",
+    "link": "https://yle.fi/a/74-20222745?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-6",
+      "source-15",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222745?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trumpin puhe välikohtauksen jälkeen oli ”erittäin kiinnostava”, sanoo professori: ”Hänellä on kyky hallita julkisuutta”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Professori Benita Heiskanen näkee kolme syytä siihen, miksi Trumpiin liittyy poikkeuksellisen paljon väkivaltaisia välikohtauksia.",
+        "word_count": 14,
+        "keyword_overlap": 14,
+        "strong_overlap": 10
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "– Hänellä on kyky hallita julkisuutta aina, kun jotain tapahtuu. Hänellä oli selkeät kohdat, jotka hän halusi tuoda esiin, Heiskanen toteaa.",
+        "word_count": 21,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-15",
+        "source_type": "research",
+        "text": "Professori Benita Heiskanen ei ota kantaa siihen, pitääkö hän tätä mahdollisena, mutta toteaa, että samanlaisia kysymyksiä on nostettu esiin aikaisemminkin – esimerkiksi vuonna 2024, kun Trumpia ammuttiin kampanjatilaisuudessa.",
+        "word_count": 28,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Epäillyn motiivi ei ole tiedossa, mutta Trumpiin on aiemmin kohdistunut salamurhayrityksiä. Välikohtauksen jälkeen pitämässään tiedotustilaisuudessa Trump totesi, että tällaisten yritysten kohteeksi joutuvat ”suuret nimet”, uutisoi BBC.",
+        "word_count": 26,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Professori Benita Heiskanen näkee kolme syytä siihen, miksi Trumpiin liittyy poikkeuksellisen paljon väkivaltaisia välikohtauksia.\n\n– Hänellä on kyky hallita julkisuutta aina, kun jotain tapahtuu. Hänellä oli selkeät kohdat, jotka hän halusi tuoda esiin, Heiskanen toteaa.\n\nProfessori Benita Heiskanen ei ota kantaa siihen, pitääkö hän tätä mahdollisena, mutta toteaa, että samanlaisia kysymyksiä on nostettu esiin aikaisemminkin – esimerkiksi vuonna 2024, kun Trumpia ammuttiin kampanjatilaisuudessa.\n\nEpäillyn motiivi ei ole tiedossa, mutta Trumpiin on aiemmin kohdistunut salamurhayrityksiä. Välikohtauksen jälkeen pitämässään tiedotustilaisuudessa Trump totesi, että tällaisten yritysten kohteeksi joutuvat ”suuret nimet”, uutisoi BBC.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trumpin puhe välikohtauksen jälkeen oli ”erittäin kiinnostava”, sanoo professori: ”Hänellä on kyky hallita julkisuutta”",
+      "description": "Professori Benita Heiskanen näkee kolme syytä siihen, miksi Trumpiin liittyy poikkeuksellisen paljon väkivaltaisia välikohtauksia.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25176 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25181 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

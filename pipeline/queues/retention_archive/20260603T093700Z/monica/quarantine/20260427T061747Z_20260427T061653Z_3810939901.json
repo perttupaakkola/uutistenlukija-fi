@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T06:17:47Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T061653Z_3810939901",
+    "created_at": "2026-04-27T06:16:53Z",
+    "headline_seed": "Kuluttajien luottamus laski edelleen – aniharva uskoo taloustilanteen parantuvan",
+    "description_seed": "Enää noin joka seitsemäs kuluttaja uskoo Suomen taloustilanteen parantuvan seuraavan vuoden aikana.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/kuluttajien-luottamus-laski-edelleen-aniharva-uskoo-taloustilanteen-parantuvan/9329946",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "source-2",
+      "source-14",
+      "Demokraatti"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/kuluttajien-luottamus-laski-edelleen-aniharva-uskoo-taloustilanteen-parantuvan/9329946"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kuluttajien luottamus laski edelleen – aniharva uskoo taloustilanteen parantuvan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Enää noin joka seitsemäs kuluttaja uskoo Suomen taloustilanteen parantuvan seuraavan vuoden aikana.",
+        "word_count": 12,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Kuluttajien arviot oman talouden nykytilasta sekä odotukset omasta ja Suomen taloudesta vuoden kuluttua olivat maaliskuussa hyvin matalalla tasolla. Lähes puolet kuluttajista uskoi, että Suomen talous heikkenee seuraavan vuoden aikana, kun taas vain 18 prosenttia ajatteli taloustilanteen parantuvan.",
+        "word_count": 37,
+        "keyword_overlap": 6,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-14",
+        "source_type": "research",
+        "text": "Lisäksi enää noin 14 prosenttia kuluttajista uskoo Suomen taloustilanteen parantuvan seuraavan vuoden aikana, ja melkein puolet ennakoi maan talouden taantuvan",
+        "word_count": 20,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Demokraatti",
+        "source_type": "research",
+        "text": "Kuluttajien luottamus laski huhtikuussa edelleen. Odotukset omasta ja Suomen taloudesta vuoden kuluttua vajosivat entistäkin alemmaksi.",
+        "word_count": 15,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Enää noin joka seitsemäs kuluttaja uskoo Suomen taloustilanteen parantuvan seuraavan vuoden aikana.\n\nKuluttajien arviot oman talouden nykytilasta sekä odotukset omasta ja Suomen taloudesta vuoden kuluttua olivat maaliskuussa hyvin matalalla tasolla. Lähes puolet kuluttajista uskoi, että Suomen talous heikkenee seuraavan vuoden aikana, kun taas vain 18 prosenttia ajatteli taloustilanteen parantuvan.\n\nLisäksi enää noin 14 prosenttia kuluttajista uskoo Suomen taloustilanteen parantuvan seuraavan vuoden aikana, ja melkein puolet ennakoi maan talouden taantuvan\n\nKuluttajien luottamus laski huhtikuussa edelleen. Odotukset omasta ja Suomen taloudesta vuoden kuluttua vajosivat entistäkin alemmaksi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kuluttajien luottamus laski edelleen – aniharva uskoo taloustilanteen parantuvan",
+      "description": "Enää noin joka seitsemäs kuluttaja uskoo Suomen taloustilanteen parantuvan seuraavan vuoden aikana.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25674 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25679 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

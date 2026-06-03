@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T08:40:55Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T084000Z_9f4707d86a",
+    "created_at": "2026-04-27T08:40:00Z",
+    "headline_seed": "Opiskelijat leikkasivat lasten hiuksia ilmaiseksi Kuopiossa – ”Muuten ei olisi ollut varaa”, sanoo viiden lapsen äiti",
+    "description_seed": "Savon ammattiopisto ja hyvän­tekeväisyys­järjestö Hope mahdollistivat ilmaisen hiustenleikkuun lähes 40 lapselle ja nuorelle.",
+    "link": "https://yle.fi/a/74-20221780?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-7",
+      "source-13",
+      "source-12"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20221780?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.8,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Opiskelijat leikkasivat lasten hiuksia ilmaiseksi Kuopiossa – ”Muuten ei olisi ollut varaa”, sanoo viiden lapsen äiti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Savon ammattiopisto ja hyvän­tekeväisyys­järjestö Hope mahdollistivat ilmaisen hiustenleikkuun lähes 40 lapselle ja nuorelle.",
+        "word_count": 13,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "Mukaan pääsi nelisenkymmentä ennakkoon ilmoittautunutta lasta ja nuorta. Hiuksia leikkasivat ammattiopiston ensimmäisen vuosikurssin opiskelijat.",
+        "word_count": 14,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "– Olen itsekin kokenut sen, että aina ei ole mahdollisuutta käydä kampaajalla. Tämä on huippujuttu, kun voimme tehdä hyvää ilmaiseksi, Jussila sanoo.",
+        "word_count": 22,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Opiskelija Saana Jussila lähti mielellään mukaan leikkaamaan hiuksia. Samalla hän sai mahdollisuuden oppia asiakastyötä.",
+        "word_count": 14,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Savon ammattiopisto ja hyvän­tekeväisyys­järjestö Hope mahdollistivat ilmaisen hiustenleikkuun lähes 40 lapselle ja nuorelle.\n\nMukaan pääsi nelisenkymmentä ennakkoon ilmoittautunutta lasta ja nuorta. Hiuksia leikkasivat ammattiopiston ensimmäisen vuosikurssin opiskelijat.\n\n– Olen itsekin kokenut sen, että aina ei ole mahdollisuutta käydä kampaajalla. Tämä on huippujuttu, kun voimme tehdä hyvää ilmaiseksi, Jussila sanoo.\n\nOpiskelija Saana Jussila lähti mielellään mukaan leikkaamaan hiuksia. Samalla hän sai mahdollisuuden oppia asiakastyötä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Opiskelijat leikkasivat lasten hiuksia ilmaiseksi Kuopiossa – ”Muuten ei olisi ollut varaa”, sanoo viiden lapsen äiti",
+      "description": "Savon ammattiopisto ja hyvän­tekeväisyys­järjestö Hope mahdollistivat ilmaisen hiustenleikkuun lähes 40 lapselle ja nuorelle.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=24938 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=24941 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

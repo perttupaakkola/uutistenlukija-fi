@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T15:11:48Z",
+  "reason": "Aineisto on yhä liian niukka turvalliseen 250+ sanan onnettomuusuutiseen: tarkat loukkaantumistiedot, bussin matkustajamäärä, tapahtumien syy ja viranomaisten jatkotoimet puuttuvat.",
+  "packet": {
+    "packet_id": "20260430T151127Z_1f2b982564",
+    "created_at": "2026-04-30T15:11:27Z",
+    "headline_seed": "Trainee driver crashes bus into River Seine",
+    "description_seed": "The driver hit a parked car and veered off the road into the river - about 12 miles south of Paris - early on Thursday.",
+    "link": "https://www.bbc.com/news/articles/cm2pyxpwmdro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-25",
+      "source-46"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cm2pyxpwmdro?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.88,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trainee driver crashes bus into River Seine"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The driver hit a parked car and veered off the road into the river - about 12 miles south of Paris - early on Thursday.",
+        "word_count": 25,
+        "keyword_overlap": 12,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A trainee drove a bus into the River Seine after hitting a parked car and veering off the road on Thursday morning, officials have said.",
+        "word_count": 25,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-25",
+        "source_type": "research",
+        "text": "JUVISY-SUR-ORGE, France – Four people were rescued from the River Seine near Paris on April 30 after a bus driven by a trainee driver collided with a parked vehicle before plunging into the water, officials said.",
+        "word_count": 36,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-46",
+        "source_type": "research",
+        "text": "A trainee bus driver has plunged a coach into the River Seine as rescuers dived to rapidly haul passengers from the water.",
+        "word_count": 22,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "The driver hit a parked car and veered off the road into the river - about 12 miles south of Paris - early on Thursday.\n\nA trainee drove a bus into the River Seine after hitting a parked car and veering off the road on Thursday morning, officials have said.\n\nJUVISY-SUR-ORGE, France – Four people were rescued from the River Seine near Paris on April 30 after a bus driven by a trainee driver collided with a parked vehicle before plunging into the water, officials said.\n\nA trainee bus driver has plunged a coach into the River Seine as rescuers dived to rapidly haul passengers from the water.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trainee driver crashes bus into River Seine",
+      "description": "The driver hit a parked car and veered off the road into the river - about 12 miles south of Paris - early on Thursday.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T151127Z_1f2b982564\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto on yhä liian niukka turvalliseen 250+ sanan onnettomuusuutiseen: tarkat loukkaantumistiedot, bussin matkustajamäärä, tapahtumien syy ja viranomaisten jatkotoimet puuttuvat.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

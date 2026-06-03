@@ -1,0 +1,57 @@
+{
+  "ts": "2026-05-01T08:11:39Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260501T080739Z_e7067507a4",
+    "created_at": "2026-05-01T08:07:39Z",
+    "headline_seed": "Tasa-arvo | Suurin uhka miesten tasa-arvolle ovat miehet itse",
+    "description_seed": "Nuorilla miehillä on paljon paineita olla maskuliininen ja miehinen mies. Mutta ei naisia vaan muita miehiä varten. Jotta ei tulisi pilkatuksi.",
+    "link": "https://www.hs.fi/mielipide/art-2000011916339.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "HS Tuoreimmat"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/mielipide/art-2000011916339.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tasa-arvo | Suurin uhka miesten tasa-arvolle ovat miehet itse"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "HS Tuoreimmat",
+        "source_type": "description",
+        "text": "Nuorilla miehillä on paljon paineita olla maskuliininen ja miehinen mies. Mutta ei naisia vaan muita miehiä varten. Jotta ei tulisi pilkatuksi.",
+        "word_count": 21,
+        "keyword_overlap": 17,
+        "strong_overlap": 11
+      }
+    ],
+    "source_text": "Nuorilla miehillä on paljon paineita olla maskuliininen ja miehinen mies. Mutta ei naisia vaan muita miehiä varten. Jotta ei tulisi pilkatuksi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tasa-arvo | Suurin uhka miesten tasa-arvolle ovat miehet itse",
+      "description": "Nuorilla miehillä on paljon paineita olla maskuliininen ja miehinen mies. Mutta ei naisia vaan muita miehiä varten. Jotta ei tulisi pilkatuksi.",
+      "category_hint": "Uutiset",
+      "research_source": "none"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260501T080739Z_e7067507a4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE\\n- The first paragraph must be at least 30 words and summarize the verified core of the story\\n- Include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260501T080739Z_e7067507a4\",\\n  \"created_at\": \"2026-05-01T08:07:39Z\",\\n  \"headline_seed\": \"Tasa-arvo | Suurin uhka miesten tasa-arvolle ovat miehet itse\",\\n  \"description_seed\": \"Nuorilla miehillä on paljon paineita olla maskuliininen ja miehinen mies. Mutta ei naisia vaan muita miehiä varten. Jotta ei tulisi pilkatuksi.\",\\n  \"link\": \"https://www.hs.fi/mielipide/art-2000011916339.html\",\\n  \"source\": \"HS Tuoreimmat\",\\n  \"source_names\": [\\n    \"HS Tuoreimmat\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.hs.fi/mielipide/art-2000011916339.html\"\\n  ],\\n  \"category_hint\": \"Uutiset\",\\n  \"category\": \"Uutiset\",\\n  \"story_confidence\": 0.48,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Tasa-arvo | Suurin uhka miesten tasa-arvolle ovat miehet itse\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"HS Tuoreimmat\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Nuorilla miehillä on paljon paineita olla maskuliininen ja miehinen mies. Mutta ei naisia vaan muita miehiä varten. Jotta ei tulisi pilkatuksi.\",\\n      \"word_count\": 21,\\n      \"keyword_overlap\": 17,\\n      \"strong_overlap\": 11\\n    }\\n  ],\\n  \"source_text\": \"Nuorilla miehillä on paljon paineita olla maskuliininen ja miehinen mies. Mutta ei naisia vaan muita miehiä varten. Jotta ei tulisi pilkatuksi.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Tasa-arvo | Suurin uhka miesten tasa-arvolle ovat miehet itse\",\\n    \"description\": \"Nuorilla miehillä on paljon paineita olla maskuliininen ja miehinen mies. Mutta ei naisia vaan muita miehiä varten. Jotta ei tulisi pilkatuksi.\",\\n    \"category_hint\": \"Uutiset\",\\n    \"research_source\": \"none\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

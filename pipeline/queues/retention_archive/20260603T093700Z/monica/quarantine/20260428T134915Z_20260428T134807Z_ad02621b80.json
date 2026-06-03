@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T13:49:15Z",
+  "reason": "aineisto ei varmista siirron perustietoja riittävän selvästi ja nojaa lähes pelkästään pelaajan omiin kommentteihin",
+  "packet": {
+    "packet_id": "20260428T134807Z_ad02621b80",
+    "created_at": "2026-04-28T13:48:07Z",
+    "headline_seed": "Lukko hankki pelaajan Ruotsista",
+    "description_seed": "Aapo Vanninen vaihtaa Örebrosta Raumalle.",
+    "link": "https://www.is.fi/sm-liiga/art-2000011973568.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "source-2",
+      "source-12",
+      "source-13",
+      "source-14"
+    ],
+    "source_urls": [
+      "https://www.is.fi/sm-liiga/art-2000011973568.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lukko hankki pelaajan Ruotsista"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Aapo Vanninen edusti Suomea vuosi sitten alle 18-vuotiaiden MM-kisoissa. Kuva: Tim Austen / All Over Press",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "”Pari vuotta sitten tuli mahdollisuus lähteä Ruotsiin ja olin kuullut paljon hyvää sieltä. Samalla halusin nähdä myös vähän erilaista kiekkokulttuuria ja näin, että siellä on hyvä paikka kehittyä myös pelaajana mahdollisimman paljon”, Vanninen kertaa.",
+        "word_count": 34,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "”Viime kauden lopulla tuli ajatus siitä, että paluu Suomeen voisi olla ajankohtainen ja Lukon kanssa mielenkiinto oli molemmin puolista, joten lopulta oli aika helppo ja vaivaton päätös tulla Raumalle.”",
+        "word_count": 29,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-14",
+        "source_type": "research",
+        "text": "Vanninen kuvailee itseään monikäyttöiseksi pelaajaksi, joka pystyy pelaamaan monia rooleja. Hän on sentteri, jota NHL:n varausanalyyseissä on kehuttu pelintekijän kyvyistään.",
+        "word_count": 20,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Aapo Vanninen edusti Suomea vuosi sitten alle 18-vuotiaiden MM-kisoissa. Kuva: Tim Austen / All Over Press\n\n”Pari vuotta sitten tuli mahdollisuus lähteä Ruotsiin ja olin kuullut paljon hyvää sieltä. Samalla halusin nähdä myös vähän erilaista kiekkokulttuuria ja näin, että siellä on hyvä paikka kehittyä myös pelaajana mahdollisimman paljon”, Vanninen kertaa.\n\n”Viime kauden lopulla tuli ajatus siitä, että paluu Suomeen voisi olla ajankohtainen ja Lukon kanssa mielenkiinto oli molemmin puolista, joten lopulta oli aika helppo ja vaivaton päätös tulla Raumalle.”\n\nVanninen kuvailee itseään monikäyttöiseksi pelaajaksi, joka pystyy pelaamaan monia rooleja. Hän on sentteri, jota NHL:n varausanalyyseissä on kehuttu pelintekijän kyvyistään.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lukko hankki pelaajan Ruotsista",
+      "description": "Aapo Vanninen vaihtaa Örebrosta Raumalle.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=867f73ff-4179-4242-ace5-002b9daf4311 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T134807Z_ad02621b80\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto ei varmista siirron perustietoja riittävän selvästi ja nojaa lähes pelkästään pelaajan omiin kommentteihin\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

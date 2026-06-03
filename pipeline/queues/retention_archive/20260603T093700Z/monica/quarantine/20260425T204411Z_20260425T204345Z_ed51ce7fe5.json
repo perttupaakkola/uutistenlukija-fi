@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-25T20:44:11Z",
+  "reason": "otsikko ja kuvaus eivät vastaa lähdetekstiä, ja aineisto on liian niukka varmennettuun uutisjuttuun",
+  "packet": {
+    "packet_id": "20260425T204345Z_ed51ce7fe5",
+    "created_at": "2026-04-25T20:43:45Z",
+    "headline_seed": "Nyt rysähti pelottavasti NHL:ssä – Sebastian Ahon joukkuekaveri aivan pihalla taklauksen jälkeen: ”Hän ei edes tiedä missä on”",
+    "description_seed": "Tunteet käyvät todella kuumana Ottawassa.",
+    "link": "https://www.is.fi/nhl/art-2000011968112.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "source-2",
+      "ksml.fi"
+    ],
+    "source_urls": [
+      "https://www.is.fi/nhl/art-2000011968112.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.57,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nyt rysähti pelottavasti NHL:ssä – Sebastian Ahon joukkuekaveri aivan pihalla taklauksen jälkeen: ”Hän ei edes tiedä missä on”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Carolinan kärkinimiä ottelussa oli joukkueen suomalainen tähtipelaaja Sebastian Aho, joka syötti joukkueensa avausmaalin ja teki itse toisen osuman. Aholla on nyt kasassa kuluvalta kaudelta tehot 24+44.",
+        "word_count": 26,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Sebastian Aho ja Mikael Granlund olivat jääkiekon NHL:ssä suomalaiset maalintekijät varhain maanantaina Suomen aikaa päättyneessä pelipäivässä.",
+        "word_count": 16,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Carolinan kärkinimiä ottelussa oli joukkueen suomalainen tähtipelaaja Sebastian Aho, joka syötti joukkueensa avausmaalin ja teki itse toisen osuman. Aholla on nyt kasassa kuluvalta kaudelta tehot 24+44.\n\nSebastian Aho ja Mikael Granlund olivat jääkiekon NHL:ssä suomalaiset maalintekijät varhain maanantaina Suomen aikaa päättyneessä pelipäivässä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nyt rysähti pelottavasti NHL:ssä – Sebastian Ahon joukkuekaveri aivan pihalla taklauksen jälkeen: ”Hän ei edes tiedä missä on”",
+      "description": "Tunteet käyvät todella kuumana Ottawassa.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=a3815f69-fe94-45b9-9387-19bcf1cf9e26 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260425T204345Z_ed51ce7fe5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"otsikko ja kuvaus eivät vastaa lähdetekstiä, ja aineisto on liian niukka varmennettuun uutisjuttuun\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

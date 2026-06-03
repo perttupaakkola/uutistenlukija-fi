@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T11:05:06Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T110412Z_25859f7ca5",
+    "created_at": "2026-04-27T11:04:12Z",
+    "headline_seed": "Michael Jackson biopic smashes box office record",
+    "description_seed": "The film received poor reviews but has stormed the box office, taking $217m (£160m) globally.",
+    "link": "https://www.bbc.com/news/articles/crl1lpzp4z5o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-2",
+      "NewsX"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/crl1lpzp4z5o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.96,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Michael Jackson biopic smashes box office record"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The film received poor reviews but has stormed the box office, taking $217m (£160m) globally.",
+        "word_count": 15,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The new musical film about Michael Jackson has stormed the worldwide box office, scoring the highest opening weekend ever for a biopic.",
+        "word_count": 22,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "The singer's nephew Jaafar Jackson portrays him in Michael, which has taken $217m (£160m) globally since it opened on Wednesday.",
+        "word_count": 20,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "NewsX",
+        "source_type": "research",
+        "text": "The new film Michael has already made a strong impression, breaking a record on Rotten Tomatoes soon after its opening weekend. Directed by Antoine Fuqua, the movie tells the life story of Michael Jackson, offering a deep dive into both his extraordinary career and his complicated personal life. It takes viewers back to his early days as part of The Jackson 5 and follows his journey all the way to global superstardom. Alongside his rise to fame, the film also explores the struggles and pressures he faced behind the scenes, as well as under the constant glare of public attention.",
+        "word_count": 100,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The film received poor reviews but has stormed the box office, taking $217m (£160m) globally.\n\nThe new musical film about Michael Jackson has stormed the worldwide box office, scoring the highest opening weekend ever for a biopic.\n\nThe singer's nephew Jaafar Jackson portrays him in Michael, which has taken $217m (£160m) globally since it opened on Wednesday.\n\nThe new film Michael has already made a strong impression, breaking a record on Rotten Tomatoes soon after its opening weekend. Directed by Antoine Fuqua, the movie tells the life story of Michael Jackson, offering a deep dive into both his extraordinary career and his complicated personal life. It takes viewers back to his early days as part of The Jackson 5 and follows his journey all the way to global superstardom. Alongside his rise to fame, the film also explores the struggles and pressures he faced behind the scenes, as well as under the constant glare of public attention.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Michael Jackson biopic smashes box office record",
+      "description": "The film received poor reviews but has stormed the box office, taking $217m (£160m) globally.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25405 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25411 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

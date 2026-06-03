@@ -1,0 +1,57 @@
+{
+  "ts": "2026-05-01T18:28:12Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260501T182812Z_14418e698c",
+    "created_at": "2026-05-01T18:28:12Z",
+    "headline_seed": "Saunominen parantaa vastustuskykyä",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/koti/000ddcc1-7263-45f6-a004-86b78ef412ff",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/koti/000ddcc1-7263-45f6-a004-86b78ef412ff"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.41,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Saunominen parantaa vastustuskykyä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Fermentointi tekee kimchistä hapanta, tulista ja hyvin aromikasta. Se lisää hyvien bakteerien määrää. Uusi tutkimus pyrkii nyt osoittamaan, että kimchi voi parantaa elimistön vastustuskykyä ja tasapainottaa immuunijärjestelmää. Kyseessä on ensimmäinen kerta, kun kimchin vaikutuksia on tutkittu näin tarkasti.",
+        "word_count": 38,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Fermentointi tekee kimchistä hapanta, tulista ja hyvin aromikasta. Se lisää hyvien bakteerien määrää. Uusi tutkimus pyrkii nyt osoittamaan, että kimchi voi parantaa elimistön vastustuskykyä ja tasapainottaa immuunijärjestelmää. Kyseessä on ensimmäinen kerta, kun kimchin vaikutuksia on tutkittu näin tarkasti.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Saunominen parantaa vastustuskykyä",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Monica writer command failed: [Errno 2] No such file or directory: 'openclaw'. Checked PATH and candidates: /home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw, /usr/local/bin/openclaw, /usr/bin/openclaw"
+  }
+}

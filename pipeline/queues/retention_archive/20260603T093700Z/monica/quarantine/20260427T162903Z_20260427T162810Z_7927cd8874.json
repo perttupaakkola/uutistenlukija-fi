@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T16:29:03Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T162810Z_7927cd8874",
+    "created_at": "2026-04-27T16:28:10Z",
+    "headline_seed": "EU faces ‘China shock’ as EV imports drive Beijing’s record surplus with bloc",
+    "description_seed": "China sold goods worth about $148bn to EU in first quarter of year, but imported just $65bn The EU is experiencing a prolonged “China shock” as a flood of Chinese EVs into Europe helped push Beijing to a record surplus with the bloc. New data showed China’s trade surplus – where its exports to the EU exceeded imports from the bloc – was $83bn (£61bn) in the first three months of 2026. Continue reading...",
+    "link": "https://www.theguardian.com/world/2026/apr/27/eu-faces-china-shock-as-ev-imports-drive-beijings-record-surplus-with-bloc",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-2",
+      "source-3",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/apr/27/eu-faces-china-shock-as-ev-imports-drive-beijings-record-surplus-with-bloc"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "EU faces ‘China shock’ as EV imports drive Beijing’s record surplus with bloc"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "China sold goods worth about $148bn to EU in first quarter of year, but imported just $65bn The EU is experiencing a prolonged “China shock” as a flood of Chinese EVs into Europe helped push Beijing to a record surplus with the bloc. New data showed China’s trade surplus – where its exports to the EU exceeded imports from the bloc – was $83bn (£61bn) in the first three months of 2026. Continue reading...",
+        "word_count": 74,
+        "keyword_overlap": 41,
+        "strong_overlap": 17
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "The EU is experiencing a prolonged “China shock” as a flood of Chinese EVs into Europe helped push Beijing to a record surplus with the bloc.",
+        "word_count": 26,
+        "keyword_overlap": 15,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "New data showed China’s trade surplus – where its exports to the EU exceeded imports from the bloc – was $83bn (£61bn) in the first three months of 2026.",
+        "word_count": 29,
+        "keyword_overlap": 17,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "China sold goods worth about $148bn to the EU in the first quarter, but imported just $65bn from the bloc, according to analysis of 2026 customs data by Mercator Institute for China Studies (Merics). The surplus for the whole of 2025 stood at €360bn.",
+        "word_count": 44,
+        "keyword_overlap": 16,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "China sold goods worth about $148bn to EU in first quarter of year, but imported just $65bn The EU is experiencing a prolonged “China shock” as a flood of Chinese EVs into Europe helped push Beijing to a record surplus with the bloc. New data showed China’s trade surplus – where its exports to the EU exceeded imports from the bloc – was $83bn (£61bn) in the first three months of 2026. Continue reading...\n\nThe EU is experiencing a prolonged “China shock” as a flood of Chinese EVs into Europe helped push Beijing to a record surplus with the bloc.\n\nNew data showed China’s trade surplus – where its exports to the EU exceeded imports from the bloc – was $83bn (£61bn) in the first three months of 2026.\n\nChina sold goods worth about $148bn to the EU in the first quarter, but imported just $65bn from the bloc, according to analysis of 2026 customs data by Mercator Institute for China Studies (Merics). The surplus for the whole of 2025 stood at €360bn.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "EU faces ‘China shock’ as EV imports drive Beijing’s record surplus with bloc",
+      "description": "China sold goods worth about $148bn to EU in first quarter of year, but imported just $65bn The EU is experiencing a prolonged “China shock” as a flood of Chinese EVs into Europe helped push Beijing to a record surplus with the bloc. New data showed China’s trade surplus – where its exports to the EU exceeded imports from the bloc – was $83bn (£61bn) in the first three months of 2026. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25405 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25408 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

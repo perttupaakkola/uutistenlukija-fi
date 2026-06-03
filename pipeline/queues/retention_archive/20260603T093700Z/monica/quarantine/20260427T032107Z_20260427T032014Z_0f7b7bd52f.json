@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T03:21:07Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T032014Z_0f7b7bd52f",
+    "created_at": "2026-04-27T03:20:14Z",
+    "headline_seed": "Kalle Rovanperä kykeni vain kerran samaan kuin Sami Pajari nyt – asiantuntija pitää MM-sarjan tilannetta kammottavana",
+    "description_seed": "Sami Pajari on ajanut neljä kertaa putkeen palkinto­korokkeelle. Henri Haapamäki on iloinen suomalaisen menestyksestä, mutta Toyotan ylivoima huolestutaa.",
+    "link": "https://yle.fi/a/74-20222767?origin=rss",
+    "source": "Yle Urheilu",
+    "source_names": [
+      "Yle Urheilu",
+      "source-12",
+      "source-14",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222767?origin=rss"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.88,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kalle Rovanperä kykeni vain kerran samaan kuin Sami Pajari nyt – asiantuntija pitää MM-sarjan tilannetta kammottavana"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Urheilu",
+        "source_type": "description",
+        "text": "Sami Pajari on ajanut neljä kertaa putkeen palkinto­korokkeelle. Henri Haapamäki on iloinen suomalaisen menestyksestä, mutta Toyotan ylivoima huolestutaa.",
+        "word_count": 18,
+        "keyword_overlap": 17,
+        "strong_overlap": 13
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Mittasuhteita menestykselle saadaan historiasta. Kaksinkertainen maailmanmestari Kalle Rovanperä pystyi ajamaan neljässä peräkkäisessä MM-rallissa palkintokorokkeelle vain kerran. Se tapahtui toisella mestaruuskaudella vuonna 2023.",
+        "word_count": 22,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-14",
+        "source_type": "research",
+        "text": "– Sami on näyttänyt tänä vuonna, että vauhtia alkaa löytyä. Ei voi missään nimessä sanoa, että vauhti olisi samanlaista kuin Kallella tai vaikka Oliverilla on ollut. Ei ole ollut sellaista muiden lyömistä laudalta pois, Haapamäki sanoo kuullessaan tilastofaktasta.",
+        "word_count": 38,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "– Solberg ajaa käsittämättömän kovalla yritystasolla. Kun ajaa noin kovalla yrityksellä, virheen mahdollisuus on koko ajan läsnä. Nyt niitä virheitä on hänelle tullut, Yle Urheilun ralliasiantuntija Henri Haapamäki sanoo.",
+        "word_count": 29,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Sami Pajari on ajanut neljä kertaa putkeen palkinto­korokkeelle. Henri Haapamäki on iloinen suomalaisen menestyksestä, mutta Toyotan ylivoima huolestutaa.\n\nMittasuhteita menestykselle saadaan historiasta. Kaksinkertainen maailmanmestari Kalle Rovanperä pystyi ajamaan neljässä peräkkäisessä MM-rallissa palkintokorokkeelle vain kerran. Se tapahtui toisella mestaruuskaudella vuonna 2023.\n\n– Sami on näyttänyt tänä vuonna, että vauhtia alkaa löytyä. Ei voi missään nimessä sanoa, että vauhti olisi samanlaista kuin Kallella tai vaikka Oliverilla on ollut. Ei ole ollut sellaista muiden lyömistä laudalta pois, Haapamäki sanoo kuullessaan tilastofaktasta.\n\n– Solberg ajaa käsittämättömän kovalla yritystasolla. Kun ajaa noin kovalla yrityksellä, virheen mahdollisuus on koko ajan läsnä. Nyt niitä virheitä on hänelle tullut, Yle Urheilun ralliasiantuntija Henri Haapamäki sanoo.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kalle Rovanperä kykeni vain kerran samaan kuin Sami Pajari nyt – asiantuntija pitää MM-sarjan tilannetta kammottavana",
+      "description": "Sami Pajari on ajanut neljä kertaa putkeen palkinto­korokkeelle. Henri Haapamäki on iloinen suomalaisen menestyksestä, mutta Toyotan ylivoima huolestutaa.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [plugins] discord failed during register from /home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/extensions/discord/index.js: Error: ENOTEMPTY: directory not empty, rmdir '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-unknown-cb6851bc448e/dist/extensions/node_modules/openclaw/plugin-sdk'\n[plugins] 1 plugin(s) failed to initialize (register: discord). Run 'openclaw plugins list' for details.\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25254 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25257 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

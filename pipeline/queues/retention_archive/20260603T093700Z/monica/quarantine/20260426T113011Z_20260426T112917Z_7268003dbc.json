@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-26T11:30:11Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T112917Z_7268003dbc",
+    "created_at": "2026-04-26T11:29:17Z",
+    "headline_seed": "Pääministeri Orpo vastaa ajankohtaisiin kysymyksiin – seuraa Pääministerin haastattelutuntia tästä",
+    "description_seed": "Seuraamme lähetystä tässä artikkelissa. Lisäksi voit kuunnella sitä Yle Areenassa ja Radio Suomessa.",
+    "link": "https://yle.fi/a/74-20222754?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-17",
+      "source-18"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222754?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pääministeri Orpo vastaa ajankohtaisiin kysymyksiin – seuraa Pääministerin haastattelutuntia tästä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Seuraamme lähetystä tässä artikkelissa. Lisäksi voit kuunnella sitä Yle Areenassa ja Radio Suomessa.",
+        "word_count": 13,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-17",
+        "source_type": "research",
+        "text": "Pääministeri Petteri Orpo (kok.) vastaa ajankohtaisiin kysymyksiin Pääministerin haastattelutunnilla. Kuluneella viikolla saatiin päätökseen istuvan hallituksen viimeinen kehysriihi, jossa sovittiin vuosien 2027–2030 julkisen talouden suunnitelmasta.",
+        "word_count": 24,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-18",
+        "source_type": "research",
+        "text": "Lähetystä voit seurata tästä artikkelista, Areenasta ja Radio Suomesta kello 14.02 alkaen.",
+        "word_count": 12,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Seuraamme lähetystä tässä artikkelissa. Lisäksi voit kuunnella sitä Yle Areenassa ja Radio Suomessa.\n\nPääministeri Petteri Orpo (kok.) vastaa ajankohtaisiin kysymyksiin Pääministerin haastattelutunnilla. Kuluneella viikolla saatiin päätökseen istuvan hallituksen viimeinen kehysriihi, jossa sovittiin vuosien 2027–2030 julkisen talouden suunnitelmasta.\n\nLähetystä voit seurata tästä artikkelista, Areenasta ja Radio Suomesta kello 14.02 alkaen.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pääministeri Orpo vastaa ajankohtaisiin kysymyksiin – seuraa Pääministerin haastattelutuntia tästä",
+      "description": "Seuraamme lähetystä tässä artikkelissa. Lisäksi voit kuunnella sitä Yle Areenassa ja Radio Suomessa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25567 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25572 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

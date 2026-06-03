@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T10:00:21Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T095926Z_ec52c27d61",
+    "created_at": "2026-04-26T09:59:26Z",
+    "headline_seed": "Useita ihmisiä purtu Lemmikki­messuilla: Asian­tuntijalta painava viesti",
+    "description_seed": "Koirien lukutaito on heikolla tolalla, sanoo asiantuntija. Koirien käyttäytymisen asiantuntija Emmi Hakio on seurannut uutisointia Lemmikkimessujen tapahtumista kauhistuneena. Useita ihmisiä purtiin messujen aikana lauantaina koirien toimesta. Yksi uhreista oli 5-vuotias lapsi.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/5da20bcc-60d4-4d6f-92a0-9b204c2c951c",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti",
+      "Satakunnan Kansa",
+      "source-6",
+      "source-11"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/5da20bcc-60d4-4d6f-92a0-9b204c2c951c"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Useita ihmisiä purtu Lemmikki­messuilla: Asian­tuntijalta painava viesti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Koirien lukutaito on heikolla tolalla, sanoo asiantuntija. Koirien käyttäytymisen asiantuntija Emmi Hakio on seurannut uutisointia Lemmikkimessujen tapahtumista kauhistuneena. Useita ihmisiä purtiin messujen aikana lauantaina koirien toimesta. Yksi uhreista oli 5-vuotias lapsi.",
+        "word_count": 31,
+        "keyword_overlap": 24,
+        "strong_overlap": 20
+      },
+      {
+        "source": "Satakunnan Kansa",
+        "source_type": "research",
+        "text": "Koirat ovat purreet useita ihmisiä lauantaina Lemmikkimessuilla. Myös koiranpentua purtiin vatsan seudulle.",
+        "word_count": 12,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Lemmikkimessuilla on tapahtunut useita pureviin koiriin liittyviä välikohtauksia lauantaina Helsingin messukeskuksessa. Yhdessä tapauksessa koira puri lasta, kertoo Messukeskuksen viestintäasiantuntija Teija Armanto.",
+        "word_count": 21,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "Aiemmin lauantaina kerrottiin, että koira kävi koiranpennun kimppuun niin ikään Lemmikkimessuilla lauantaina. Venäjänbolonkapentu Camilla joutui koiran hampaisiin, kertoo Camillan omistaja Viktoria Toiviainen.",
+        "word_count": 22,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Koirien lukutaito on heikolla tolalla, sanoo asiantuntija. Koirien käyttäytymisen asiantuntija Emmi Hakio on seurannut uutisointia Lemmikkimessujen tapahtumista kauhistuneena. Useita ihmisiä purtiin messujen aikana lauantaina koirien toimesta. Yksi uhreista oli 5-vuotias lapsi.\n\nKoirat ovat purreet useita ihmisiä lauantaina Lemmikkimessuilla. Myös koiranpentua purtiin vatsan seudulle.\n\nLemmikkimessuilla on tapahtunut useita pureviin koiriin liittyviä välikohtauksia lauantaina Helsingin messukeskuksessa. Yhdessä tapauksessa koira puri lasta, kertoo Messukeskuksen viestintäasiantuntija Teija Armanto.\n\nAiemmin lauantaina kerrottiin, että koira kävi koiranpennun kimppuun niin ikään Lemmikkimessuilla lauantaina. Venäjänbolonkapentu Camilla joutui koiran hampaisiin, kertoo Camillan omistaja Viktoria Toiviainen.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Useita ihmisiä purtu Lemmikki­messuilla: Asian­tuntijalta painava viesti",
+      "description": "Koirien lukutaito on heikolla tolalla, sanoo asiantuntija. Koirien käyttäytymisen asiantuntija Emmi Hakio on seurannut uutisointia Lemmikkimessujen tapahtumista kauhistuneena. Useita ihmisiä purtiin messujen aikana lauantaina koirien toimesta. Yksi uhreista oli 5-vuotias lapsi.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25821 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25824 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

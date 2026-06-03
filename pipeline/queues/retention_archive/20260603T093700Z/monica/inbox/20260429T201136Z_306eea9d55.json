@@ -1,0 +1,75 @@
+{
+  "packet_id": "20260429T201136Z_306eea9d55",
+  "created_at": "2026-04-29T20:11:36Z",
+  "headline_seed": "HERMES.md: Anthropic bug causes $200 extra charge, refuses refund",
+  "description_seed": "Article URL: https://github.com/anthropics/claude-code/issues/53262 Comments URL: https://news.ycombinator.com/item?id=47952722 Points: 401 # Comments: 139",
+  "link": "https://github.com/anthropics/claude-code/issues/53262",
+  "source": "Hacker News Best",
+  "source_names": [
+    "Hacker News Best",
+    "Hacker News Best",
+    "source-3",
+    "source-5"
+  ],
+  "source_urls": [
+    "https://github.com/anthropics/claude-code/issues/53262"
+  ],
+  "category_hint": "Teknologia",
+  "category": "Teknologia",
+  "story_confidence": 0.91,
+  "language_mix": [
+    "fi"
+  ],
+  "facts": {
+    "who": [],
+    "what": [
+      "HERMES.md: Anthropic bug causes $200 extra charge, refuses refund"
+    ],
+    "where": [],
+    "when": [],
+    "why": [],
+    "consequences": []
+  },
+  "clean_source_blocks": [
+    {
+      "source": "Hacker News Best",
+      "source_type": "description",
+      "text": "Article URL: https://github.com/anthropics/claude-code/issues/53262 Comments URL: https://news.ycombinator.com/item?id=47952722 Points: 401 # Comments: 139",
+      "word_count": 11,
+      "keyword_overlap": 13,
+      "strong_overlap": 9
+    },
+    {
+      "source": "Hacker News Best",
+      "source_type": "research",
+      "text": "When a git repository's recent commit history contains the case-sensitive string HERMES.md, Claude Code routes API requests to \"extra usage\" billing instead of the included Max plan quota. This silently burned through $200 in extra usage credits while my Max 20x plan capacity remained largely untouched (13% weekly usage).",
+      "word_count": 49,
+      "keyword_overlap": 2,
+      "strong_overlap": 1
+    },
+    {
+      "source": "source-3",
+      "source_type": "research",
+      "text": "The trigger is the string HERMES.md in git commit messages — not the presence of a file with that name on disk. Claude Code includes recent commits in its system prompt, and something server-side routes the request differently when this string is present.",
+      "word_count": 43,
+      "keyword_overlap": 1,
+      "strong_overlap": 1
+    },
+    {
+      "source": "source-5",
+      "source_type": "research",
+      "text": "Systematic binary search: cloning affected repos, testing orphan branches, then isolating individual commit message strings until HERMES.md was identified as the exact trigger.",
+      "word_count": 23,
+      "keyword_overlap": 1,
+      "strong_overlap": 1
+    }
+  ],
+  "source_text": "Article URL: https://github.com/anthropics/claude-code/issues/53262 Comments URL: https://news.ycombinator.com/item?id=47952722 Points: 401 # Comments: 139\n\nWhen a git repository's recent commit history contains the case-sensitive string HERMES.md, Claude Code routes API requests to \"extra usage\" billing instead of the included Max plan quota. This silently burned through $200 in extra usage credits while my Max 20x plan capacity remained largely untouched (13% weekly usage).\n\nThe trigger is the string HERMES.md in git commit messages — not the presence of a file with that name on disk. Claude Code includes recent commits in its system prompt, and something server-side routes the request differently when this string is present.\n\nSystematic binary search: cloning affected repos, testing orphan branches, then isolating individual commit message strings until HERMES.md was identified as the exact trigger.",
+  "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+  "article_snapshot": {
+    "title": "HERMES.md: Anthropic bug causes $200 extra charge, refuses refund",
+    "description": "Article URL: https://github.com/anthropics/claude-code/issues/53262 Comments URL: https://news.ycombinator.com/item?id=47952722 Points: 401 # Comments: 139",
+    "category_hint": "Teknologia",
+    "research_source": "multi"
+  }
+}

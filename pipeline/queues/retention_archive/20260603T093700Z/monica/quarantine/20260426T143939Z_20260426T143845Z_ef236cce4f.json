@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T14:39:39Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T143845Z_ef236cce4f",
+    "created_at": "2026-04-26T14:38:45Z",
+    "headline_seed": "'You just didn't know': Gary O'Donoghue describes confusion and fear at correspondents' dinner",
+    "description_seed": "Police say a man charged security outside of the dining room and was armed with multiple weapons.",
+    "link": "https://www.bbc.com/news/videos/c8dldp2mdego?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-3",
+      "source-36",
+      "source-31"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/c8dldp2mdego?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.86,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "'You just didn't know': Gary O'Donoghue describes confusion and fear at correspondents' dinner"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Police say a man charged security outside of the dining room and was armed with multiple weapons.",
+        "word_count": 17,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Chief US correspondent Gary O'Donoghue was at the dinner and describes the scene in the room after the gunshots were heard.",
+        "word_count": 21,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-36",
+        "source_type": "research",
+        "text": "Reacting to last night's shooting at the Whire House Correspondents' Dinner, former UK ambassador to the US Kim Darroch tells the BBC's Laura Kuenssberg there are \"certainty security problems\" with the event.",
+        "word_count": 32,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-31",
+        "source_type": "research",
+        "text": "The BBC's chief North America correspondent, Gary O'Donoghue, attended the White House Correspondents' Dinner in Washington last night. Earlier, he described the scenes inside the ballroom",
+        "word_count": 26,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Police say a man charged security outside of the dining room and was armed with multiple weapons.\n\nChief US correspondent Gary O'Donoghue was at the dinner and describes the scene in the room after the gunshots were heard.\n\nReacting to last night's shooting at the Whire House Correspondents' Dinner, former UK ambassador to the US Kim Darroch tells the BBC's Laura Kuenssberg there are \"certainty security problems\" with the event.\n\nThe BBC's chief North America correspondent, Gary O'Donoghue, attended the White House Correspondents' Dinner in Washington last night. Earlier, he described the scenes inside the ballroom",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "'You just didn't know': Gary O'Donoghue describes confusion and fear at correspondents' dinner",
+      "description": "Police say a man charged security outside of the dining room and was armed with multiple weapons.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25494 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25499 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

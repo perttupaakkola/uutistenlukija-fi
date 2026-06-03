@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-29T17:22:42Z",
+  "reason": "Lähdeaineistossa on liian vähän varmennettuja tietoja Panaman kanavan liikenteestä, Hormuzinsalmen tilanteesta ja tapahtumien yhteydestä 250 sanan uutisartikkeliin ilman oletuksia.",
+  "packet": {
+    "packet_id": "20260429T172200Z_38ded3cc1d",
+    "created_at": "2026-04-29T17:22:00Z",
+    "headline_seed": "Hormuzinsalmen sulku lisännyt liikennettä Panaman kanavassa – Trump uhkaili jälleen Irania",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/df774f9f-29eb-4644-8f6c-e0e11b1fc9c0",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [
+      "source-2",
+      "source-8"
+    ],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/uutiset/df774f9f-29eb-4644-8f6c-e0e11b1fc9c0"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hormuzinsalmen sulku lisännyt liikennettä Panaman kanavassa – Trump uhkaili jälleen Irania"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Yhdysvaltain presidentti Donald Trump vaati maanantaina jälleen Irania avaamaan Hormuzinsalmen laivaliikenteelle tai muuten Yhdysvallat tuhoaa maan öljylähteet, voimalaitokset ja Khargin saaren.",
+        "word_count": 21,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Öljyn hinta on noussut viisi prosenttia. Hintaan vaikuttavat pelot Hormuzinsalmen sulun jatkumisesta.",
+        "word_count": 12,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Yhdysvaltain presidentti Donald Trump vaati maanantaina jälleen Irania avaamaan Hormuzinsalmen laivaliikenteelle tai muuten Yhdysvallat tuhoaa maan öljylähteet, voimalaitokset ja Khargin saaren.\n\nÖljyn hinta on noussut viisi prosenttia. Hintaan vaikuttavat pelot Hormuzinsalmen sulun jatkumisesta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hormuzinsalmen sulku lisännyt liikennettä Panaman kanavassa – Trump uhkaili jälleen Irania",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T172200Z_38ded3cc1d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on liian vähän varmennettuja tietoja Panaman kanavan liikenteestä, Hormuzinsalmen tilanteesta ja tapahtumien yhteydestä 250 sanan uutisartikkeliin ilman oletuksia.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

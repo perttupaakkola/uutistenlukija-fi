@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T14:41:22Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T144028Z_cdfc07a696",
+    "created_at": "2026-04-27T14:40:28Z",
+    "headline_seed": "Kuluttajien luottamus talouteen laskee entisestään – asiantuntija: ”Näkymät hirveän pessimistisiä”",
+    "description_seed": "Odotukset omasta ja Suomen taloudesta vuoden kuluttua vajosivat huhtikuussa entistäkin alemmaksi, kertoo Tilastokeskus.",
+    "link": "https://yle.fi/a/74-20222864?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-2",
+      "source-8",
+      "Yle Uutiset"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222864?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.81,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kuluttajien luottamus talouteen laskee entisestään – asiantuntija: ”Näkymät hirveän pessimistisiä”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Odotukset omasta ja Suomen taloudesta vuoden kuluttua vajosivat huhtikuussa entistäkin alemmaksi, kertoo Tilastokeskus.",
+        "word_count": 13,
+        "keyword_overlap": 10,
+        "strong_overlap": 10
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Tilastokeskus kertoi tänään maanantaina kuluttajien mielialojen laskeneen huhtikuussa entisestään. Odotukset omasta ja Suomen taloudesta vuoden kuluttua ovat olleet laskussa koko kuluneen vuoden ajan. Vielä marraskuussa näytti huomattavasti valoisammalta.",
+        "word_count": 28,
+        "keyword_overlap": 9,
+        "strong_overlap": 9
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "– Esimerkiksi vuosi sitten tullit olivat meidän kyselyssä suurin syy sille, miksi ihmiset oli huolissaan omasta tai Suomen taloudesta.",
+        "word_count": 19,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Suomalaisten usko omaan ja julkiseen talouteen on heikkoa.",
+        "word_count": 8,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Odotukset omasta ja Suomen taloudesta vuoden kuluttua vajosivat huhtikuussa entistäkin alemmaksi, kertoo Tilastokeskus.\n\nTilastokeskus kertoi tänään maanantaina kuluttajien mielialojen laskeneen huhtikuussa entisestään. Odotukset omasta ja Suomen taloudesta vuoden kuluttua ovat olleet laskussa koko kuluneen vuoden ajan. Vielä marraskuussa näytti huomattavasti valoisammalta.\n\n– Esimerkiksi vuosi sitten tullit olivat meidän kyselyssä suurin syy sille, miksi ihmiset oli huolissaan omasta tai Suomen taloudesta.\n\nSuomalaisten usko omaan ja julkiseen talouteen on heikkoa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kuluttajien luottamus talouteen laskee entisestään – asiantuntija: ”Näkymät hirveän pessimistisiä”",
+      "description": "Odotukset omasta ja Suomen taloudesta vuoden kuluttua vajosivat huhtikuussa entistäkin alemmaksi, kertoo Tilastokeskus.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25097 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25099 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

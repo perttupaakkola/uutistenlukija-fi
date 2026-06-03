@@ -1,0 +1,57 @@
+{
+  "ts": "2026-05-01T12:56:42Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260501T125242Z_5f466779a3",
+    "created_at": "2026-05-01T12:52:42Z",
+    "headline_seed": "Lidlin aukiolo­aikoihin iso muutos",
+    "description_seed": "Lidl pidentää aukioloaikojaan toukokuun 4. päivästä alkaen. Päivittäistavaraketju Lidlin aukioloajat muuttuvat. Lidl tiedottaa, että 4. toukokuuta alkaen se avaa lähes kaikki myymälänsä arkisin jo aamuseitsemältä. Vain kourallinen myymälöitä jatkaa tähänastisilla aukioloajoilla. Myös iltojen aukioloaikoja pidennetään Lidleissä. Vastedes suurin osa liikkeistä sulkee ovensa vasta kello 22.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/598b152f-2719-4ac3-964a-7ead0823f4fc",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/598b152f-2719-4ac3-964a-7ead0823f4fc"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.53,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lidlin aukiolo­aikoihin iso muutos"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Lidl pidentää aukioloaikojaan toukokuun 4. päivästä alkaen. Päivittäistavaraketju Lidlin aukioloajat muuttuvat. Lidl tiedottaa, että 4. toukokuuta alkaen se avaa lähes kaikki myymälänsä arkisin jo aamuseitsemältä. Vain kourallinen myymälöitä jatkaa tähänastisilla aukioloajoilla. Myös iltojen aukioloaikoja pidennetään Lidleissä. Vastedes suurin osa liikkeistä sulkee ovensa vasta kello 22.",
+        "word_count": 45,
+        "keyword_overlap": 36,
+        "strong_overlap": 29
+      }
+    ],
+    "source_text": "Lidl pidentää aukioloaikojaan toukokuun 4. päivästä alkaen. Päivittäistavaraketju Lidlin aukioloajat muuttuvat. Lidl tiedottaa, että 4. toukokuuta alkaen se avaa lähes kaikki myymälänsä arkisin jo aamuseitsemältä. Vain kourallinen myymälöitä jatkaa tähänastisilla aukioloajoilla. Myös iltojen aukioloaikoja pidennetään Lidleissä. Vastedes suurin osa liikkeistä sulkee ovensa vasta kello 22.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lidlin aukiolo­aikoihin iso muutos",
+      "description": "Lidl pidentää aukioloaikojaan toukokuun 4. päivästä alkaen. Päivittäistavaraketju Lidlin aukioloajat muuttuvat. Lidl tiedottaa, että 4. toukokuuta alkaen se avaa lähes kaikki myymälänsä arkisin jo aamuseitsemältä. Vain kourallinen myymälöitä jatkaa tähänastisilla aukioloajoilla. Myös iltojen aukioloaikoja pidennetään Lidleissä. Vastedes suurin osa liikkeistä sulkee ovensa vasta kello 22.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260501T125242Z_5f466779a3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE\\n- The first paragraph must be at least 30 words and summarize the verified core of the story\\n- Include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260501T125242Z_5f466779a3\",\\n  \"created_at\": \"2026-05-01T12:52:42Z\",\\n  \"headline_seed\": \"Lidlin aukiolo\\xadaikoihin iso muutos\",\\n  \"description_seed\": \"Lidl pidentää aukioloaikojaan toukokuun 4. päivästä alkaen. Päivittäistavaraketju Lidlin aukioloajat muuttuvat. Lidl tiedottaa, että 4. toukokuuta alkaen se avaa lähes kaikki myymälänsä arkisin jo aamuseitsemältä. Vain kourallinen myymälöitä jatkaa tähänastisilla aukioloajoilla. Myös iltojen aukioloaikoja pidennetään Lidleissä. Vastedes suurin osa liikkeistä sulkee ovensa vasta kello 22.\",\\n  \"link\": \"https://www.iltalehti.fi/kotimaa/a/598b152f-2719-4ac3-964a-7ead0823f4fc\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/kotimaa/a/598b152f-2719-4ac3-964a-7ead0823f4fc\"\\n  ],\\n  \"category_hint\": \"Kotimaa\",\\n  \"category\": \"Kotimaa\",\\n  \"story_confidence\": 0.53,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Lidlin aukiolo\\xadaikoihin iso muutos\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Lidl pidentää aukioloaikojaan toukokuun 4. päivästä alkaen. Päivittäistavaraketju Lidlin aukioloajat muuttuvat. Lidl tiedottaa, että 4. toukokuuta alkaen se avaa lähes kaikki myymälänsä arkisin jo aamuseitsemältä. Vain kourallinen myymälöitä jatkaa tähänastisilla aukioloajoilla. Myös iltojen aukioloaikoja pidennetään Lidleissä. Vastedes suurin osa liikkeistä sulkee ovensa vasta kello 22.\",\\n      \"word_count\": 45,\\n      \"keyword_overlap\": 36,\\n      \"strong_overlap\": 29\\n    }\\n  ],\\n  \"source_text\": \"Lidl pidentää aukioloaikojaan toukokuun 4. päivästä alkaen. Päivittäistavaraketju Lidlin aukioloajat muuttuvat. Lidl tiedottaa, että 4. toukokuuta alkaen se avaa lähes kaikki myymälänsä arkisin jo aamuseitsemältä. Vain kourallinen myymälöitä jatkaa tähänastisilla aukioloajoilla. Myös iltojen aukioloaikoja pidennetään Lidleissä. Vastedes suurin osa liikkeistä sulkee ovensa vasta kello 22.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Lidlin aukiolo\\xadaikoihin iso muutos\",\\n    \"description\": \"Lidl pidentää aukioloaikojaan toukokuun 4. päivästä alkaen. Päivittäistavaraketju Lidlin aukioloajat muuttuvat. Lidl tiedottaa, että 4. toukokuuta alkaen se avaa lähes kaikki myymälänsä arkisin jo aamuseitsemältä. Vain kourallinen myymälöitä jatkaa tähänastisilla aukioloajoilla. Myös iltojen aukioloaikoja pidennetään Lidleissä. Vastedes suurin osa liikkeistä sulkee ovensa vasta kello 22.\",\\n    \"category_hint\": \"Kotimaa\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

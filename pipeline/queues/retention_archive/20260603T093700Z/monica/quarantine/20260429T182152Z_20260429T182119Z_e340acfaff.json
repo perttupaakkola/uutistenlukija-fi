@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-29T18:21:52Z",
+  "reason": "Lähdeaineistossa on liian vähän tarkkoja ja ristiriidattomia tietoja lasten kommenteista sekä oikeuden päätöksen sisällöstä 250 sanan uutisartikkeliin.",
+  "packet": {
+    "packet_id": "20260429T182119Z_e340acfaff",
+    "created_at": "2026-04-29T18:21:19Z",
+    "headline_seed": "Näin Anneli Auerin lapset kommentoivat oikeuden päätöstä",
+    "description_seed": "Anneli Auerin lapset kokevat, etteivät tule koskaan saamaan täyttä oikeutta.",
+    "link": "https://www.is.fi/turun-seutu/art-2000011976846.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "Suomenmaa",
+      "source-11",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.is.fi/turun-seutu/art-2000011976846.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näin Anneli Auerin lapset kommentoivat oikeuden päätöstä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Anneli Auerin lapset kokevat, etteivät tule koskaan saamaan täyttä oikeutta.",
+        "word_count": 10,
+        "keyword_overlap": 10,
+        "strong_overlap": 9
+      },
+      {
+        "source": "Suomenmaa",
+        "source_type": "research",
+        "text": "Varsinais-Suomen käräjäoikeus antaa tänään tuomionsa Anneli Auerin ja hänen entisen miesystävänsä seksuaali- ja väkivaltarikossyytteistä. Oikeuden päätöstä odotetaan kello kymmenen aikaan.",
+        "word_count": 20,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "Auerin lapset sijoitettiin Auerin veljelle ja tämän vaimolle keväällä 2010 sen jälkeen, kun Auer oli vangittu epäiltynä miehensä ja lastensa isän murhasta. Sijaisvanhempien luona kolme nuorinta lasta alkoivat kertoa rajuja tarinoita isänsä henkirikoksesta sekä seksuaali- ja väki",
+        "word_count": 37,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Auer ja Jens Kukka tuomittiin vuonna 2013 vuosien vankeusrangaistuksiin, mutta toissa vuonna korkein oikeus päätyi purkamaan tuomion pääosin. Tuomion purku liittyi siihen, että asianomistajina olleet Auerin lapset ovat aikuistuttuaan kertoneet, että heidän aiemmat kertomuksensa eivät pidä paikkaansa.",
+        "word_count": 37,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Anneli Auerin lapset kokevat, etteivät tule koskaan saamaan täyttä oikeutta.\n\nVarsinais-Suomen käräjäoikeus antaa tänään tuomionsa Anneli Auerin ja hänen entisen miesystävänsä seksuaali- ja väkivaltarikossyytteistä. Oikeuden päätöstä odotetaan kello kymmenen aikaan.\n\nAuerin lapset sijoitettiin Auerin veljelle ja tämän vaimolle keväällä 2010 sen jälkeen, kun Auer oli vangittu epäiltynä miehensä ja lastensa isän murhasta. Sijaisvanhempien luona kolme nuorinta lasta alkoivat kertoa rajuja tarinoita isänsä henkirikoksesta sekä seksuaali- ja väki\n\nAuer ja Jens Kukka tuomittiin vuonna 2013 vuosien vankeusrangaistuksiin, mutta toissa vuonna korkein oikeus päätyi purkamaan tuomion pääosin. Tuomion purku liittyi siihen, että asianomistajina olleet Auerin lapset ovat aikuistuttuaan kertoneet, että heidän aiemmat kertomuksensa eivät pidä paikkaansa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näin Anneli Auerin lapset kommentoivat oikeuden päätöstä",
+      "description": "Anneli Auerin lapset kokevat, etteivät tule koskaan saamaan täyttä oikeutta.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T182119Z_e340acfaff\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on liian vähän tarkkoja ja ristiriidattomia tietoja lasten kommenteista sekä oikeuden päätöksen sisällöstä 250 sanan uutisartikkeliin.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

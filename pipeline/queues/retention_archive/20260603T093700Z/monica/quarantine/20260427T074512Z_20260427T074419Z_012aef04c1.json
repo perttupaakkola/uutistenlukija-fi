@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T07:45:12Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T074419Z_012aef04c1",
+    "created_at": "2026-04-27T07:44:19Z",
+    "headline_seed": "The Chinese sports brand taking on Nike and Adidas",
+    "description_seed": "Now one of the biggest sportswear firms, Anta's rise follows a playbook adopted by many Chinese giants.",
+    "link": "https://www.bbc.com/news/articles/c87r2d850q4o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-35",
+      "source-38",
+      "source-37"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c87r2d850q4o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "The Chinese sports brand taking on Nike and Adidas"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Now one of the biggest sportswear firms, Anta's rise follows a playbook adopted by many Chinese giants.",
+        "word_count": 17,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-35",
+        "source_type": "research",
+        "text": "For instance, Anta Sports, a leading sportswear firm, is sponsoring Chinese players' podium uniforms and several Chinese national teams taking part in swimming, artistic swimming and gymnastics, among others.",
+        "word_count": 29,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-38",
+        "source_type": "research",
+        "text": "Not to lag behind, second-tier Chinese sportswear brands are sponsoring other countries' national teams or niche sports like bicycle motocross. Peak Sports, a well-known Chinese sports equipment maker, is sponsoring as many as 11 n...",
+        "word_count": 35,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-37",
+        "source_type": "research",
+        "text": "Li Ning, another prominent Chinese sportswear brand, sponsored some of the most decorated Chinese national teams taking part in table tennis, diving and shooting.",
+        "word_count": 24,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Now one of the biggest sportswear firms, Anta's rise follows a playbook adopted by many Chinese giants.\n\nFor instance, Anta Sports, a leading sportswear firm, is sponsoring Chinese players' podium uniforms and several Chinese national teams taking part in swimming, artistic swimming and gymnastics, among others.\n\nNot to lag behind, second-tier Chinese sportswear brands are sponsoring other countries' national teams or niche sports like bicycle motocross. Peak Sports, a well-known Chinese sports equipment maker, is sponsoring as many as 11 n...\n\nLi Ning, another prominent Chinese sportswear brand, sponsored some of the most decorated Chinese national teams taking part in table tennis, diving and shooting.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "The Chinese sports brand taking on Nike and Adidas",
+      "description": "Now one of the biggest sportswear firms, Anta's rise follows a playbook adopted by many Chinese giants.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25603 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25606 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-29T18:32:40Z",
+  "reason": "Lähdeaineistossa on liian vähän varmennettuja tietoja puhelun sisällöstä, Lähi-idän sodan osuudesta ja tulitaukosuunnitelman tarkemmista ehdoista.",
+  "packet": {
+    "packet_id": "20260429T183220Z_59b7497bcf",
+    "created_at": "2026-04-29T18:32:20Z",
+    "headline_seed": "Trump ja Putin keskustelivat Lähi-idän sodasta",
+    "description_seed": "Putin kertoi Trumpille myös harkitsevansa voitonpäivän tulitaukoa Ukrainaan.",
+    "link": "https://www.ess.fi/uutissuomalainen/9415441",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Etelä-Suomen Sanomat",
+      "source-5",
+      "source-7"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9415441"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump ja Putin keskustelivat Lähi-idän sodasta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Etelä-Suomen Sanomat",
+        "source_type": "description",
+        "text": "Putin kertoi Trumpille myös harkitsevansa voitonpäivän tulitaukoa Ukrainaan.",
+        "word_count": 8,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Putin kertoi Trumpille myös harkitsevansa tulitauon julistamista Ukrainaan Venäjän voitonpäivän ajaksi. Putin julisti myös viime vuonna voitonpäivän ajaksi kolmen päivän tulitauon, joka ei juurikaan pitänyt.",
+        "word_count": 25,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "Kreml kertoi aikaisemmin tänään, että voitonpäivän juhlassa ei tänä vuonna nähdä lainkaan raskasta sotakalustoa, kuten tankkeja.",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Putin kertoi Trumpille myös harkitsevansa voitonpäivän tulitaukoa Ukrainaan.\n\nPutin kertoi Trumpille myös harkitsevansa tulitauon julistamista Ukrainaan Venäjän voitonpäivän ajaksi. Putin julisti myös viime vuonna voitonpäivän ajaksi kolmen päivän tulitauon, joka ei juurikaan pitänyt.\n\nKreml kertoi aikaisemmin tänään, että voitonpäivän juhlassa ei tänä vuonna nähdä lainkaan raskasta sotakalustoa, kuten tankkeja.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump ja Putin keskustelivat Lähi-idän sodasta",
+      "description": "Putin kertoi Trumpille myös harkitsevansa voitonpäivän tulitaukoa Ukrainaan.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T183220Z_59b7497bcf\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on liian vähän varmennettuja tietoja puhelun sisällöstä, Lähi-idän sodan osuudesta ja tulitaukosuunnitelman tarkemmista ehdoista.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

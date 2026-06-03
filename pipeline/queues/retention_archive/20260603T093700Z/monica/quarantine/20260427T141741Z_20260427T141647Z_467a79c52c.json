@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T14:17:41Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T141647Z_467a79c52c",
+    "created_at": "2026-04-27T14:16:47Z",
+    "headline_seed": "What we're learning about suspected Washington press dinner gunman",
+    "description_seed": "The man arrested at the event attended by President Trump is due in court on Monday.",
+    "link": "https://www.bbc.com/news/articles/cr717nglye0o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "source-17",
+      "BBC World",
+      "source-29",
+      "Denver Westword"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cr717nglye0o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.94,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "What we're learning about suspected Washington press dinner gunman"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-17",
+        "source_type": "research",
+        "text": "WASHINGTON - A suspected gunman believed to be from California opened fire outside the Washington Hilton, where the annual dinner of White House correspondents was being held, prompting a massive law enforcement response and the evacuation of President Donald Trump and other attendees.",
+        "word_count": 43,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The man arrested at the event attended by President Trump is due in court on Monday.",
+        "word_count": 16,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-29",
+        "source_type": "research",
+        "text": "Guests take cover after a un-kown safety event took place as President Donald Trump was to speak to attendees of the annual White House Correspondents Association Dinner April 25, 2026 in Washington, DC. According to reports, President Donald Trump,",
+        "word_count": 39,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Denver Westword",
+        "source_type": "research",
+        "text": "The alleged shooter at Saturday night’s White House Correspondents’ Dinner in Washington, D.C., wrote a “manifesto” ahead of his planned attack, President Donald Trump said in a Sunday morning interview on Fox News and later in the day on the CBS show 60 Minutes.",
+        "word_count": 44,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "WASHINGTON - A suspected gunman believed to be from California opened fire outside the Washington Hilton, where the annual dinner of White House correspondents was being held, prompting a massive law enforcement response and the evacuation of President Donald Trump and other attendees.\n\nThe man arrested at the event attended by President Trump is due in court on Monday.\n\nGuests take cover after a un-kown safety event took place as President Donald Trump was to speak to attendees of the annual White House Correspondents Association Dinner April 25, 2026 in Washington, DC. According to reports, President Donald Trump,\n\nThe alleged shooter at Saturday night’s White House Correspondents’ Dinner in Washington, D.C., wrote a “manifesto” ahead of his planned attack, President Donald Trump said in a Sunday morning interview on Fox News and later in the day on the CBS show 60 Minutes.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "What we're learning about suspected Washington press dinner gunman",
+      "description": "The man arrested at the event attended by President Trump is due in court on Monday.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25764 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25766 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

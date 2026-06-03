@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T06:11:49Z",
+  "reason": "aineisto on liian niukka eikä tue otsikon väitettä epäillyn kuvasta, joten 250 sanan varmennettua uutisjuttua ei voi tehdä turvallisesti",
+  "packet": {
+    "packet_id": "20260426T061038Z_9c5c63c924",
+    "created_at": "2026-04-26T06:10:38Z",
+    "headline_seed": "Ampumavälikohtaus Valkoisen talon illallisilla – Trump evakuoitu, julkaisi kuvan epäillystä",
+    "description_seed": "Trumpin isännöimillä kirjeenvaihtajien illallisella kuultiin laukauksia. Trump evakuoitiin juhlatilasta nopeasti.",
+    "link": "https://www.is.fi/ulkomaat/art-2000011968145.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "source-4",
+      "source-13",
+      "source-9"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000011968145.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.79,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ampumavälikohtaus Valkoisen talon illallisilla – Trump evakuoitu, julkaisi kuvan epäillystä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Trumpin isännöimillä kirjeenvaihtajien illallisella kuultiin laukauksia. Trump evakuoitiin juhlatilasta nopeasti.",
+        "word_count": 10,
+        "keyword_overlap": 10,
+        "strong_overlap": 9
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Hilton-hotellissa käynnissä olleet illalliset keskeytyivät laukausten ääniin. Juhlasalissa olleet presidentti Donald Trump ja ensimmäinen nainen Melania Trump evakuoitiin nopeasti pois juhlatilasta.",
+        "word_count": 21,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Myös varapresidentti J.D. Vance ja kaikki Trumpin hallinnon paikalla olleet jäsenet evakuoitiin nopeasti.",
+        "word_count": 13,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Yhdysvaltain presidentti Donald Trump vietiin turvaan Valkoisen talon illallisilla. Kuva: Bo Erickson, Reuters",
+        "word_count": 13,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Trumpin isännöimillä kirjeenvaihtajien illallisella kuultiin laukauksia. Trump evakuoitiin juhlatilasta nopeasti.\n\nHilton-hotellissa käynnissä olleet illalliset keskeytyivät laukausten ääniin. Juhlasalissa olleet presidentti Donald Trump ja ensimmäinen nainen Melania Trump evakuoitiin nopeasti pois juhlatilasta.\n\nMyös varapresidentti J.D. Vance ja kaikki Trumpin hallinnon paikalla olleet jäsenet evakuoitiin nopeasti.\n\nYhdysvaltain presidentti Donald Trump vietiin turvaan Valkoisen talon illallisilla. Kuva: Bo Erickson, Reuters",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ampumavälikohtaus Valkoisen talon illallisilla – Trump evakuoitu, julkaisi kuvan epäillystä",
+      "description": "Trumpin isännöimillä kirjeenvaihtajien illallisella kuultiin laukauksia. Trump evakuoitiin juhlatilasta nopeasti.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "[agent/embedded] [context-engine] deferred turn maintenance queued taskId=7f45ecc2-4581-4ef0-b378-eac59933c59e sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260426T061038Z_9c5c63c924\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on liian niukka eikä tue otsikon väitettä epäillyn kuvasta, joten 250 sanan varmennettua uutisjuttua ei voi tehdä turvallisesti\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

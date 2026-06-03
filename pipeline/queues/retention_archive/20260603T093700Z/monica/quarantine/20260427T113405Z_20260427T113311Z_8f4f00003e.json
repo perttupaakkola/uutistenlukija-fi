@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T11:34:05Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T113311Z_8f4f00003e",
+    "created_at": "2026-04-27T11:33:11Z",
+    "headline_seed": "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’",
+    "description_seed": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme US president Donald Trump will hold talks on the Iran war on Monday with his top security advisors, US media reported, as negotiations between the rival parties seemed to reach an impasse. Tehran’s top diplomat blamed Washington on Monday for the failure of talks in Pakistan this month – the first and only round of negotiations in a bid to strike a deal to end the conflict that has engulfed the Middle East and strangled the global economy. Continue reading...",
+    "link": "https://www.theguardian.com/world/live/2026/apr/27/middle-east-crisis-iran-us-israel-lebanon-trump-araghchi-putin-hormuz-oil-latest-news-updates",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-12",
+      "source-13",
+      "Times Now"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2026/apr/27/middle-east-crisis-iran-us-israel-lebanon-trump-araghchi-putin-hormuz-oil-latest-news-updates"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme US president Donald Trump will hold talks on the Iran war on Monday with his top security advisors, US media reported, as negotiations between the rival parties seemed to reach an impasse. Tehran’s top diplomat blamed Washington on Monday for the failure of talks in Pakistan this month – the first and only round of negotiations in a bid to strike a deal to end the conflict that has engulfed the Middle East and strangled the global economy. Continue reading...",
+        "word_count": 100,
+        "keyword_overlap": 52,
+        "strong_overlap": 33
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "US president Donald Trump will hold talks on the Iran war on Monday with his top security advisors, US media reported, as negotiations between the rival parties seemed to reach an impasse.",
+        "word_count": 32,
+        "keyword_overlap": 20,
+        "strong_overlap": 11
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Tehran’s top diplomat blamed Washington on Monday for the failure of talks in Pakistan this month – the first and only roun",
+        "word_count": 22,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Times Now",
+        "source_type": "research",
+        "text": "A day after round 2 of the US and Iran peace talks failed to take off in Islamabad, Pakistan mediators are trying to revive the mediation efforts. On Saturday, April 25, Iran's foreign minister Seyed Abbas Araghchi had left Islamabad without waiting for US envoys. Trump had also cancelled the scheduled visit of his officials saying Washington was having all the cards and added that if Tehran wants, it can call them (US) at any time. Iran conveyed to Pakistan that they will not participate in any direct or indirect talks until US lifts Strait of Hormuz blockade.",
+        "word_count": 98,
+        "keyword_overlap": 13,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme US president Donald Trump will hold talks on the Iran war on Monday with his top security advisors, US media reported, as negotiations between the rival parties seemed to reach an impasse. Tehran’s top diplomat blamed Washington on Monday for the failure of talks in Pakistan this month – the first and only round of negotiations in a bid to strike a deal to end the conflict that has engulfed the Middle East and strangled the global economy. Continue reading...\n\nUS president Donald Trump will hold talks on the Iran war on Monday with his top security advisors, US media reported, as negotiations between the rival parties seemed to reach an impasse.\n\nTehran’s top diplomat blamed Washington on Monday for the failure of talks in Pakistan this month – the first and only roun\n\nA day after round 2 of the US and Iran peace talks failed to take off in Islamabad, Pakistan mediators are trying to revive the mediation efforts. On Saturday, April 25, Iran's foreign minister Seyed Abbas Araghchi had left Islamabad without waiting for US envoys. Trump had also cancelled the scheduled visit of his officials saying Washington was having all the cards and added that if Tehran wants, it can call them (US) at any time. Iran conveyed to Pakistan that they will not participate in any direct or indirect talks until US lifts Strait of Hormuz blockade.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’",
+      "description": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme US president Donald Trump will hold talks on the Iran war on Monday with his top security advisors, US media reported, as negotiations between the rival parties seemed to reach an impasse. Tehran’s top diplomat blamed Washington on Monday for the failure of talks in Pakistan this month – the first and only round of negotiations in a bid to strike a deal to end the conflict that has engulfed the Middle East and strangled the global economy. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25980 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25982 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T06:02:33Z",
+  "reason": "Aineisto perustuu anonyymeihin lähteisiin ja siitä puuttuvat tarkat hintatiedot, vahvistetut sotilaalliset päätökset sekä riittävä tausta turvalliseen uutisartikkeliin.",
+  "packet": {
+    "packet_id": "20260430T060211Z_860dfe7e95",
+    "created_at": "2026-04-30T06:02:11Z",
+    "headline_seed": "Oil jumps to highest price since 2022 after report Trump to be briefed on new Iran options",
+    "description_seed": "Axios reported that US Central Command has prepared a plan for a wave of \"short and powerful\" strikes on Iran.",
+    "link": "https://www.bbc.com/news/articles/cx21m88rd14o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-19",
+      "source-22",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cx21m88rd14o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.89,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Oil jumps to highest price since 2022 after report Trump to be briefed on new Iran options"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Axios reported that US Central Command has prepared a plan for a wave of \"short and powerful\" strikes on Iran.",
+        "word_count": 20,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-19",
+        "source_type": "research",
+        "text": "US Central Command has prepared a plan for a wave of \"short and powerful\" strikes on Iran in a move aimed to break the deadlock in negotiations with Tehran, news site Axios reported. The BBC has contacted US Central Command and the White House for comment.",
+        "word_count": 46,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-22",
+        "source_type": "research",
+        "text": "The Axios report cited anonymous sources, saying the proposed wave of strikes would be likely to include infrastructure targets.",
+        "word_count": 19,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Oil prices jumped on Thursday in Asia after a report that the US military is set to brief President Donald Trump on new plans for potential action in the Iran war.",
+        "word_count": 31,
+        "keyword_overlap": 5,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Axios reported that US Central Command has prepared a plan for a wave of \"short and powerful\" strikes on Iran.\n\nUS Central Command has prepared a plan for a wave of \"short and powerful\" strikes on Iran in a move aimed to break the deadlock in negotiations with Tehran, news site Axios reported. The BBC has contacted US Central Command and the White House for comment.\n\nThe Axios report cited anonymous sources, saying the proposed wave of strikes would be likely to include infrastructure targets.\n\nOil prices jumped on Thursday in Asia after a report that the US military is set to brief President Donald Trump on new plans for potential action in the Iran war.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Oil jumps to highest price since 2022 after report Trump to be briefed on new Iran options",
+      "description": "Axios reported that US Central Command has prepared a plan for a wave of \"short and powerful\" strikes on Iran.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T060211Z_860dfe7e95\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto perustuu anonyymeihin lähteisiin ja siitä puuttuvat tarkat hintatiedot, vahvistetut sotilaalliset päätökset sekä riittävä tausta turvalliseen uutisartikkeliin.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

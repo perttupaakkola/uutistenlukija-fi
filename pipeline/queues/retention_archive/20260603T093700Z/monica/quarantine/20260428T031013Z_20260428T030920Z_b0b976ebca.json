@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T03:10:13Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T030920Z_b0b976ebca",
+    "created_at": "2026-04-28T03:09:20Z",
+    "headline_seed": "Tätä ei ole aiemmin koettu: Aurinkosähkö kasvaa nyt rajusti, tuulisähkön rakentaminen romahtaa",
+    "description_seed": "Aurinkosähköpuistoja rakennetaan maahan parhaillaan kiivaasti. Aurinkovoimaa valmistuu Suomeen tänä vuonna selvästi enemmän kuin tuulivoimaa.",
+    "link": "https://yle.fi/a/74-20220564?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-6",
+      "source-4",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20220564?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tätä ei ole aiemmin koettu: Aurinkosähkö kasvaa nyt rajusti, tuulisähkön rakentaminen romahtaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Aurinkosähköpuistoja rakennetaan maahan parhaillaan kiivaasti. Aurinkovoimaa valmistuu Suomeen tänä vuonna selvästi enemmän kuin tuulivoimaa.",
+        "word_count": 14,
+        "keyword_overlap": 14,
+        "strong_overlap": 12
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Aurinkovoimaa valmistuukin tänä vuonna enemmän kuin tuulivoimaa. Tätä ei ole Suomessa aiemmin koettu, historiallinen käänne siis.",
+        "word_count": 16,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Uutta aurinkosähköä rakennetaan Suomeen nyt huimaa vauhtia. Vielä vuonna 2020 määrä oli pyöreät nolla megawattia aurinkovoimaa. Tänä vuonna uutta aurinkosähkökapasiteettia rakennetaan jo lähes 500 megawattia.",
+        "word_count": 25,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Tuulivoimarakentaminen puolestaan romahtaa murto-osaan ennätysvuodesta. Vuonna 2022 uutta tuulivoimakapasiteettia valmistui 2 430 megawattia ja vielä vime vuonnakin tuulivoimaa nousi yli tuhat megawattia. Tänä vuonna jäädään vain 180 megawattiin, arvioi teollisen tuuli- ja aurinkovoiman edunvalvontajärjestö Suomen uusiutuvat.",
+        "word_count": 36,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Aurinkosähköpuistoja rakennetaan maahan parhaillaan kiivaasti. Aurinkovoimaa valmistuu Suomeen tänä vuonna selvästi enemmän kuin tuulivoimaa.\n\nAurinkovoimaa valmistuukin tänä vuonna enemmän kuin tuulivoimaa. Tätä ei ole Suomessa aiemmin koettu, historiallinen käänne siis.\n\nUutta aurinkosähköä rakennetaan Suomeen nyt huimaa vauhtia. Vielä vuonna 2020 määrä oli pyöreät nolla megawattia aurinkovoimaa. Tänä vuonna uutta aurinkosähkökapasiteettia rakennetaan jo lähes 500 megawattia.\n\nTuulivoimarakentaminen puolestaan romahtaa murto-osaan ennätysvuodesta. Vuonna 2022 uutta tuulivoimakapasiteettia valmistui 2 430 megawattia ja vielä vime vuonnakin tuulivoimaa nousi yli tuhat megawattia. Tänä vuonna jäädään vain 180 megawattiin, arvioi teollisen tuuli- ja aurinkovoiman edunvalvontajärjestö Suomen uusiutuvat.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tätä ei ole aiemmin koettu: Aurinkosähkö kasvaa nyt rajusti, tuulisähkön rakentaminen romahtaa",
+      "description": "Aurinkosähköpuistoja rakennetaan maahan parhaillaan kiivaasti. Aurinkovoimaa valmistuu Suomeen tänä vuonna selvästi enemmän kuin tuulivoimaa.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25641 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25643 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

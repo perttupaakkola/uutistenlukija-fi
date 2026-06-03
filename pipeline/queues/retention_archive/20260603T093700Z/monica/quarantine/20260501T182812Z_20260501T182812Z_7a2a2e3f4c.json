@@ -1,0 +1,84 @@
+{
+  "ts": "2026-05-01T18:28:12Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260501T182812Z_7a2a2e3f4c",
+    "created_at": "2026-05-01T18:28:12Z",
+    "headline_seed": "French PM fuels row with trip to buy baguettes",
+    "description_seed": "Sébastien Lecornu visited a boulangerie on Labour Day, defying unions who say 1 May must remain a mandatory rest day.",
+    "link": "https://www.bbc.com/news/articles/czx2rnk9y9go?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-3",
+      "source-12"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/czx2rnk9y9go?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "French PM fuels row with trip to buy baguettes"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Sébastien Lecornu visited a boulangerie on Labour Day, defying unions who say 1 May must remain a mandatory rest day.",
+        "word_count": 20,
+        "keyword_overlap": 11,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "French Prime Minister Sébastien Lecornu has visited a village bakery to buy several baguettes on Labour Day, reigniting a row with unions who argue that 1 May should remain a compulsory rest day.",
+        "word_count": 33,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "The visit was part of a government drive to exempt independent bakeries and flower shops from mandatory rest on Labour Day - a public holiday across the country.",
+        "word_count": 28,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Meanwhile, labour unions say staff in many cases could be pressured by their employers to volunteer to work or risk their employment contracts.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Sébastien Lecornu visited a boulangerie on Labour Day, defying unions who say 1 May must remain a mandatory rest day.\n\nFrench Prime Minister Sébastien Lecornu has visited a village bakery to buy several baguettes on Labour Day, reigniting a row with unions who argue that 1 May should remain a compulsory rest day.\n\nThe visit was part of a government drive to exempt independent bakeries and flower shops from mandatory rest on Labour Day - a public holiday across the country.\n\nMeanwhile, labour unions say staff in many cases could be pressured by their employers to volunteer to work or risk their employment contracts.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "French PM fuels row with trip to buy baguettes",
+      "description": "Sébastien Lecornu visited a boulangerie on Labour Day, defying unions who say 1 May must remain a mandatory rest day.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Monica writer command failed: [Errno 2] No such file or directory: 'openclaw'. Checked PATH and candidates: /home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw, /usr/local/bin/openclaw, /usr/bin/openclaw"
+  }
+}

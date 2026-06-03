@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T06:11:03Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T061008Z_1b290be539",
+    "created_at": "2026-04-28T06:10:08Z",
+    "headline_seed": "Koirat purivat Messu­keskuksessa – Kennel­liitto älähtää",
+    "description_seed": "Kennelliitto muistuttaa asioista, jotka koiran hankkijan täytyy ottaa huomioon.",
+    "link": "https://www.is.fi/kotimaa/art-2000011971614.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Ilta-Sanomat",
+      "source-2",
+      "source-8",
+      "source-11"
+    ],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000011971614.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Koirat purivat Messu­keskuksessa – Kennel­liitto älähtää"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ilta-Sanomat",
+        "source_type": "description",
+        "text": "Kennelliitto muistuttaa asioista, jotka koiran hankkijan täytyy ottaa huomioon.",
+        "word_count": 9,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Yle uutisoi viikonloppuna, että koirat purivat Helsingin Messukeskuksessa järjestetyillä lemmikki­messuilla ihmisiä ja toisiaan. Useat paikalla olijat, mukaan lukien yksi lapsi, hakeutuivat tapahtuman ensiapupisteelle purematapausten vuoksi. Lisäksi tapahtumaan osallistunut koira puri toista pienempää koiraa.",
+        "word_count": 33,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Kennelliitto muistuttaa, että koiria kohtaavien ihmisten on syytä kysyä aina lupa ennen kuin koskee vieraisiin koiriin.",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "Kennelliitto kertoo, että koirien aggressiiviseen käytökseen puututaan kaikissa liiton tapahtumissa. Seurauksena voi olla esimerkiksi määräaikainen kielto osallistua tapahtumiin.",
+        "word_count": 18,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Kennelliitto muistuttaa asioista, jotka koiran hankkijan täytyy ottaa huomioon.\n\nYle uutisoi viikonloppuna, että koirat purivat Helsingin Messukeskuksessa järjestetyillä lemmikki­messuilla ihmisiä ja toisiaan. Useat paikalla olijat, mukaan lukien yksi lapsi, hakeutuivat tapahtuman ensiapupisteelle purematapausten vuoksi. Lisäksi tapahtumaan osallistunut koira puri toista pienempää koiraa.\n\nKennelliitto muistuttaa, että koiria kohtaavien ihmisten on syytä kysyä aina lupa ennen kuin koskee vieraisiin koiriin.\n\nKennelliitto kertoo, että koirien aggressiiviseen käytökseen puututaan kaikissa liiton tapahtumissa. Seurauksena voi olla esimerkiksi määräaikainen kielto osallistua tapahtumiin.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Koirat purivat Messu­keskuksessa – Kennel­liitto älähtää",
+      "description": "Kennelliitto muistuttaa asioista, jotka koiran hankkijan täytyy ottaa huomioon.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25434 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25437 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

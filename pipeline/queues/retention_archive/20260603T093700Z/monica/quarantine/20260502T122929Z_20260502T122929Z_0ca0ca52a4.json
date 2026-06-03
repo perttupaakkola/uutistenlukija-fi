@@ -1,0 +1,84 @@
+{
+  "ts": "2026-05-02T12:29:29Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260502T122929Z_0ca0ca52a4",
+    "created_at": "2026-05-02T12:29:29Z",
+    "headline_seed": "Leijonien toisen erän hurja repäisy riitti voittoon Sveitsistä",
+    "description_seed": "Leijonat kesti Sveitsin loppukirin jääkiekon EHT-turnauksessa Ceske Budejovicessä.",
+    "link": "https://yle.fi/a/74-20223811?origin=rss",
+    "source": "Yle Urheilu",
+    "source_names": [
+      "Yle Urheilu",
+      "Yle Urheilu",
+      "source-2",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20223811?origin=rss"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Leijonien toisen erän hurja repäisy riitti voittoon Sveitsistä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Urheilu",
+        "source_type": "description",
+        "text": "Leijonat kesti Sveitsin loppukirin jääkiekon EHT-turnauksessa Ceske Budejovicessä.",
+        "word_count": 8,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Yle Urheilu",
+        "source_type": "research",
+        "text": "Suomen miesten jääkiekkomaajoukkue vei voiton Sveitsistä EHT-turnauksen ottelussa Ceske Budejovicessä. Suomi nujersi Sveitsin 5–3-lukemin.",
+        "word_count": 14,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Leijonat karkasi toisessa erässä jo 5–0-johtoon, mutta Sveitsi piristyi kolmanteen erään ja nousi kahden maalin päähän. Leijonien maalilla Emil Larmi joutui hetkittäin venymään kunnon pelastuksiin.",
+        "word_count": 25,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Leijonista Patrik Puistola ja Aku Räty onnistuivat avauserässä. Toisessa erässä Sami Päivärinta, Valtteri Ojantakanen ja Janne Kuokkanen jatkoivat Leijonien hurjastelua. Kuokkanen teki maalinsa ylivoimalla. Suomi johti kamppailua 32 minuutin jälkeen 5–0.",
+        "word_count": 31,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Leijonat kesti Sveitsin loppukirin jääkiekon EHT-turnauksessa Ceske Budejovicessä.\n\nSuomen miesten jääkiekkomaajoukkue vei voiton Sveitsistä EHT-turnauksen ottelussa Ceske Budejovicessä. Suomi nujersi Sveitsin 5–3-lukemin.\n\nLeijonat karkasi toisessa erässä jo 5–0-johtoon, mutta Sveitsi piristyi kolmanteen erään ja nousi kahden maalin päähän. Leijonien maalilla Emil Larmi joutui hetkittäin venymään kunnon pelastuksiin.\n\nLeijonista Patrik Puistola ja Aku Räty onnistuivat avauserässä. Toisessa erässä Sami Päivärinta, Valtteri Ojantakanen ja Janne Kuokkanen jatkoivat Leijonien hurjastelua. Kuokkanen teki maalinsa ylivoimalla. Suomi johti kamppailua 32 minuutin jälkeen 5–0.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Leijonien toisen erän hurja repäisy riitti voittoon Sveitsistä",
+      "description": "Leijonat kesti Sveitsin loppukirin jääkiekon EHT-turnauksessa Ceske Budejovicessä.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Monica writer command failed: [Errno 2] No such file or directory: 'openclaw'. Checked PATH and candidates: /home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw, /usr/local/bin/openclaw, /usr/bin/openclaw"
+  }
+}

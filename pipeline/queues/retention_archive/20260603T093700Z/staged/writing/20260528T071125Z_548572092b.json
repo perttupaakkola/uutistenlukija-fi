@@ -1,0 +1,120 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-05-28T07:11:25.586509+00:00",
+  "digest": "548572092b",
+  "packet": {
+    "packet_id": "20260528T071125Z_548572092b",
+    "created_at": "2026-05-28T07:11:25Z",
+    "headline_seed": "Sixteen pupils killed in Kenya school fire, local police say",
+    "description_seed": "Search-and-rescue operations are ongoing, with the number of casualties yet to be confirmed.",
+    "link": "https://www.bbc.com/news/articles/cx21kkxq81po?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "CBS News",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cx21kkxq81po?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sixteen pupils killed in Kenya school fire, local police say"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Search-and-rescue operations are ongoing, with the number of casualties yet to be confirmed.",
+        "word_count": 13,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Sixteen students have been killed in a fire at a boarding school in Gilgil, about 120km (77 miles) west of the Kenyan capital, Nairobi, a policeman told journalists at the scene. The fire at the Utumishi Girls school started in the early hours of Thursday morning when the students were asleep, according to the Kenya Red Cross and police. Police said search and rescue operations were under way with authorities yet to establish the cause of the fire. The Kenya Red Cross said emergency responders were on ground to offer support. \"It is a sad and saddening situation,\" police commander Masoud Mwinyi said, speaking to parents and crowds outside the school.",
+        "word_count": 111,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "Gilgil, Kenya — A fire at a school for girls in central Kenya has caused an unknown number of deaths, according to police, who said search teams have been deployed. The Reuters news service reported that police said some 15 students were killed. French news agency AFP cits local reports as saying dozens of girls were hospitalized. Reuters said broadcaster Citizen Television quoted county police official Masoud Mwinyi as telling distraught parents outside the school it is a \"distressing and saddening situation.\" Authorities were trying to account for all the students at Utumishi Girls School in the Gilgil area. The fire broke out early Thursday morning in the boarding school's accommodation section. The cause hasn't been determined. School fires are common in Kenyan boarding schools, with some caused by arson and others by electrical faults.",
+        "word_count": 135,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Fires are not uncommon in Kenyan boarding schools, with several deadly incidents reported in recent years. The failure to follow safety guidelines have frequently been blamed for the high number of casualties. Mwinyi said investigations were ongoing. The school has been cordoned off, with only parents being allowed inside. Go to BBCAfrica.com for more news from the African continent. Follow us on Twitter @BBCAfrica, on Facebook at BBC Africa or on Instagram at bbcafrica ---",
+        "word_count": 75,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Search-and-rescue operations are ongoing, with the number of casualties yet to be confirmed.\n\nSixteen students have been killed in a fire at a boarding school in Gilgil, about 120km (77 miles) west of the Kenyan capital, Nairobi, a policeman told journalists at the scene. The fire at the Utumishi Girls school started in the early hours of Thursday morning when the students were asleep, according to the Kenya Red Cross and police. Police said search and rescue operations were under way with authorities yet to establish the cause of the fire. The Kenya Red Cross said emergency responders were on ground to offer support. \"It is a sad and saddening situation,\" police commander Masoud Mwinyi said, speaking to parents and crowds outside the school.\n\nGilgil, Kenya — A fire at a school for girls in central Kenya has caused an unknown number of deaths, according to police, who said search teams have been deployed. The Reuters news service reported that police said some 15 students were killed. French news agency AFP cits local reports as saying dozens of girls were hospitalized. Reuters said broadcaster Citizen Television quoted county police official Masoud Mwinyi as telling distraught parents outside the school it is a \"distressing and saddening situation.\" Authorities were trying to account for all the students at Utumishi Girls School in the Gilgil area. The fire broke out early Thursday morning in the boarding school's accommodation section. The cause hasn't been determined. School fires are common in Kenyan boarding schools, with some caused by arson and others by electrical faults.\n\nFires are not uncommon in Kenyan boarding schools, with several deadly incidents reported in recent years. The failure to follow safety guidelines have frequently been blamed for the high number of casualties. Mwinyi said investigations were ongoing. The school has been cordoned off, with only parents being allowed inside. Go to BBCAfrica.com for more news from the African continent. Follow us on Twitter @BBCAfrica, on Facebook at BBC Africa or on Instagram at bbcafrica ---",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 394,
+      "selected_blocks": 4,
+      "selected_source_words": 334,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "CBS News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sixteen pupils killed in Kenya school fire, local police say",
+      "description": "Search-and-rescue operations are ongoing, with the number of casualties yet to be confirmed.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Sixteen pupils killed in Kenya school fire, local police say",
+    "description": "Search-and-rescue operations are ongoing, with the number of casualties yet to be confirmed.",
+    "link": "https://www.bbc.com/news/articles/cx21kkxq81po?at_medium=RSS&at_campaign=rss",
+    "published": "2026-05-28T07:03:36+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "71a116bb638c1d213c842b1bbfd4bc0e",
+    "_url_hash": "7b076c0636c74bfe5024c32682f18715bca1bc1abe15e0b88a47bd52a58ba29e",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nSixteen students have been killed in a fire at a boarding school in Gilgil, about 120km (77 miles) west of the Kenyan capital, Nairobi, a policeman told journalists at the scene.\n\nThe fire at the Utumishi Girls school started in the early hours of Thursday morning when the students were asleep, according to the Kenya Red Cross and police.\n\nPolice said search and rescue operations were under way with authorities yet to establish the cause of the fire. The Kenya Red Cross said emergency responders were on ground to offer support.\n\n\"It is a sad and saddening situation,\" police commander Masoud Mwinyi said, speaking to parents and crowds outside the school.\n\nFires are not uncommon in Kenyan boarding schools, with several deadly incidents reported in recent years. The failure to follow safety guidelines have frequently been blamed for the high number of casualties.\n\nMwinyi said investigations were ongoing. The school has been cordoned off, with only parents being allowed inside.\n\nGo to BBCAfrica.com for more news from the African continent.\n\nFollow us on Twitter @BBCAfrica, on Facebook at BBC Africa or on Instagram at bbcafrica\n\n---\n\n[Lähde: CBS News]\nGilgil, Kenya — A fire at a school for girls in central Kenya has caused an unknown number of deaths, according to police, who said search teams have been deployed.\n\nThe Reuters news service reported that police said some 15 students were killed. French news agency AFP cits local reports as saying dozens of girls were hospitalized.\n\nReuters said broadcaster Citizen Television quoted county police official Masoud Mwinyi as telling distraught parents outside the school it is a \"distressing and saddening situation.\"\n\nAuthorities were trying to account for all the students at Utumishi Girls School in the Gilgil area.\n\nThe fire broke out early Thursday morning in the boarding school's accommodation section. The cause hasn't been determined.\n\nSchool fires are common in Kenyan boarding schools, with some caused by arson and others by electrical faults.\n\nKenya's deadliest recent school fire occurred in 2001 when 67 students died in a dormitory fire in Machakos County.\n\nIn 2024, 21 students burned to death in a school fire in central Kenya. President William Ruto declared three days of mourning.\n\nIn 2017, 10 students died in a school fire in the capital Nairobi. A student was charged with murder.",
+    "research_source": "multi"
+  }
+}

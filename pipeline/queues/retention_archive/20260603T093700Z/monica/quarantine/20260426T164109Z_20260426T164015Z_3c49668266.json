@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T16:41:09Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T164015Z_3c49668266",
+    "created_at": "2026-04-26T16:40:15Z",
+    "headline_seed": "”Päätin, etten ansaitse jatkaa” – Elias Kuosmanen oli luovuttanut, kun yksi salireissu muutti kaiken",
+    "description_seed": "Painija Elias Kuosmanen oli päättänyt lopettaa uransa, kun yksi salireissu muutti kaiken. Seuraavana vuonna hän ylsi uransa suurimpaan saavutukseen.",
+    "link": "https://yle.fi/a/74-20218144?origin=rss",
+    "source": "Yle Urheilu",
+    "source_names": [
+      "Yle Urheilu",
+      "source-6",
+      "Yle Urheilu",
+      "source-8"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20218144?origin=rss"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "”Päätin, etten ansaitse jatkaa” – Elias Kuosmanen oli luovuttanut, kun yksi salireissu muutti kaiken"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Urheilu",
+        "source_type": "description",
+        "text": "Painija Elias Kuosmanen oli päättänyt lopettaa uransa, kun yksi salireissu muutti kaiken. Seuraavana vuonna hän ylsi uransa suurimpaan saavutukseen.",
+        "word_count": 19,
+        "keyword_overlap": 15,
+        "strong_overlap": 12
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Uralla on ollut useita vaikeita päätöksiä. Aina kun Kuosmanen on harkinnut lopettamista, hän on lopulta päättänyt jatkaa.",
+        "word_count": 17,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Yle Urheilu",
+        "source_type": "research",
+        "text": "– Sellainen jatkuva menestyjän ura ei ole minun. Olen sellainen, joka joutuu taistelemaan vastoinkäymisten läpi. Välillä tulee onnistumisia, sanoo Elias Kuosmanen.",
+        "word_count": 21,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Päätös uran lopettamisesta oli todella lähellä. Jos Kuosmanen olisi tehnyt sen, Suomen miespainijoiden ensimmäinen MM-mitali viiteentoista vuoteen olisi jäänyt saamatta.",
+        "word_count": 20,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Painija Elias Kuosmanen oli päättänyt lopettaa uransa, kun yksi salireissu muutti kaiken. Seuraavana vuonna hän ylsi uransa suurimpaan saavutukseen.\n\nUralla on ollut useita vaikeita päätöksiä. Aina kun Kuosmanen on harkinnut lopettamista, hän on lopulta päättänyt jatkaa.\n\n– Sellainen jatkuva menestyjän ura ei ole minun. Olen sellainen, joka joutuu taistelemaan vastoinkäymisten läpi. Välillä tulee onnistumisia, sanoo Elias Kuosmanen.\n\nPäätös uran lopettamisesta oli todella lähellä. Jos Kuosmanen olisi tehnyt sen, Suomen miespainijoiden ensimmäinen MM-mitali viiteentoista vuoteen olisi jäänyt saamatta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "”Päätin, etten ansaitse jatkaa” – Elias Kuosmanen oli luovuttanut, kun yksi salireissu muutti kaiken",
+      "description": "Painija Elias Kuosmanen oli päättänyt lopettaa uransa, kun yksi salireissu muutti kaiken. Seuraavana vuonna hän ylsi uransa suurimpaan saavutukseen.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25500 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25503 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

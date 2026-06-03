@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-28T08:25:36Z",
+  "reason": "aineisto on niukka ja osin aiheeltaan ristiriitainen, eikä siitä synny varmennettua 250 sanan uutista",
+  "packet": {
+    "packet_id": "20260428T082428Z_9e8ad4dfd5",
+    "created_at": "2026-04-28T08:24:28Z",
+    "headline_seed": "Vienti | Suomalaiset yritykset eivät kulje ovista, joita EU avaa viennille",
+    "description_seed": "Meillä on paljon vähemmän kansainvälistymiseen halukkaita ja pystyviä yrityksiä kuin esimerkiksi Ruotsissa tai Saksassa.",
+    "link": "https://www.hs.fi/paakirjoitukset/art-2000011964611.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "HS Tuoreimmat",
+      "source-6",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/paakirjoitukset/art-2000011964611.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.75,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vienti | Suomalaiset yritykset eivät kulje ovista, joita EU avaa viennille"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "HS Tuoreimmat",
+        "source_type": "description",
+        "text": "Meillä on paljon vähemmän kansainvälistymiseen halukkaita ja pystyviä yrityksiä kuin esimerkiksi Ruotsissa tai Saksassa.",
+        "word_count": 14,
+        "keyword_overlap": 11,
+        "strong_overlap": 10
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Eurooppa on tällä hetkellä riippuvainen muista maista mikrosirujen valmistuksessa. Virkkusen mukaan Euroopassa pitäisi pystyä tuottamaan kehittyneempiä mikrosiruja, joita käytetään esimerkiksi tekoälyssä.",
+        "word_count": 21,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "– Yksittäinen yritys tai jäsenmaakin on liian pieni viemään tällaista hanketta eteenpäin. Sen takia on tärkeä koota yhteen kiinnostuneet yritykset ja jäsenmaat, Virkkunen kertoo.",
+        "word_count": 24,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Meillä on paljon vähemmän kansainvälistymiseen halukkaita ja pystyviä yrityksiä kuin esimerkiksi Ruotsissa tai Saksassa.\n\nEurooppa on tällä hetkellä riippuvainen muista maista mikrosirujen valmistuksessa. Virkkusen mukaan Euroopassa pitäisi pystyä tuottamaan kehittyneempiä mikrosiruja, joita käytetään esimerkiksi tekoälyssä.\n\n– Yksittäinen yritys tai jäsenmaakin on liian pieni viemään tällaista hanketta eteenpäin. Sen takia on tärkeä koota yhteen kiinnostuneet yritykset ja jäsenmaat, Virkkunen kertoo.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vienti | Suomalaiset yritykset eivät kulje ovista, joita EU avaa viennille",
+      "description": "Meillä on paljon vähemmän kansainvälistymiseen halukkaita ja pystyviä yrityksiä kuin esimerkiksi Ruotsissa tai Saksassa.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=c985e313-1ae9-4175-8d42-33b318c5e675 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T082428Z_9e8ad4dfd5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on niukka ja osin aiheeltaan ristiriitainen, eikä siitä synny varmennettua 250 sanan uutista\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

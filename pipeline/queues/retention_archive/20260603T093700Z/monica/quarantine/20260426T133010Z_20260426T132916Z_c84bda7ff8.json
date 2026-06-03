@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T13:30:10Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T132916Z_c84bda7ff8",
+    "created_at": "2026-04-26T13:29:16Z",
+    "headline_seed": "Anna lapsen hypätä rapakkoon ja kiivetä puuhun – riskileikeillä on tärkeä tehtävä",
+    "description_seed": "Jos lapsi ei leikkiessään saa ottaa riskejä, siitä voi seurata myöhemmin jopa ahdistus­häiriöitä. Rajoja koetteleva leikki opettaa lasta kohtaamaan elämän haasteita.",
+    "link": "https://yle.fi/a/74-20221654?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-12",
+      "source-18",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20221654?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Anna lapsen hypätä rapakkoon ja kiivetä puuhun – riskileikeillä on tärkeä tehtävä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Jos lapsi ei leikkiessään saa ottaa riskejä, siitä voi seurata myöhemmin jopa ahdistus­häiriöitä. Rajoja koetteleva leikki opettaa lasta kohtaamaan elämän haasteita.",
+        "word_count": 21,
+        "keyword_overlap": 18,
+        "strong_overlap": 13
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "– Riskileikki opettaa toiminnan ohjausta, tarkkaavaisuutta, monenlaista ongelmanratkaisutaitoa ja myös arvioimaan riskejä, Kangas kuvailee.",
+        "word_count": 14,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-18",
+        "source_type": "research",
+        "text": "Jos lapsi ei saa leikeissä koetella rajojaan, sillä voi olla myöhemmin elämässä jopa mielenterveyteen liittyviä seurauksia. Uusimpien tutkimusten mukaan sillä voi olla yhteys myös myöhemmin elämässä koettuun ahdistukseen.",
+        "word_count": 28,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Jos lapsi ei saa testata rajojaan leikissä, seuraukset voivat näkyä hänen elämässään myöhemmin.",
+        "word_count": 13,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Jos lapsi ei leikkiessään saa ottaa riskejä, siitä voi seurata myöhemmin jopa ahdistus­häiriöitä. Rajoja koetteleva leikki opettaa lasta kohtaamaan elämän haasteita.\n\n– Riskileikki opettaa toiminnan ohjausta, tarkkaavaisuutta, monenlaista ongelmanratkaisutaitoa ja myös arvioimaan riskejä, Kangas kuvailee.\n\nJos lapsi ei saa leikeissä koetella rajojaan, sillä voi olla myöhemmin elämässä jopa mielenterveyteen liittyviä seurauksia. Uusimpien tutkimusten mukaan sillä voi olla yhteys myös myöhemmin elämässä koettuun ahdistukseen.\n\nJos lapsi ei saa testata rajojaan leikissä, seuraukset voivat näkyä hänen elämässään myöhemmin.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Anna lapsen hypätä rapakkoon ja kiivetä puuhun – riskileikeillä on tärkeä tehtävä",
+      "description": "Jos lapsi ei leikkiessään saa ottaa riskejä, siitä voi seurata myöhemmin jopa ahdistus­häiriöitä. Rajoja koetteleva leikki opettaa lasta kohtaamaan elämän haasteita.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25860 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25864 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-28T07:39:24Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T073826Z_164411c219",
+    "created_at": "2026-04-28T07:38:26Z",
+    "headline_seed": "Fazerin suvun miljonääri, 51, oikeuden eteen törkeästä rikoksesta – näin hän reagoi",
+    "description_seed": "Jan Fazer vältteli mediaa vetäytymällä vessaan ja kurkistamalla, vieläkö kuvaajia oli edustalla passissa.",
+    "link": "https://www.is.fi/taloussanomat/art-2000011970130.html",
+    "source": "Taloussanomat",
+    "source_names": [
+      "Taloussanomat"
+    ],
+    "source_urls": [
+      "https://www.is.fi/taloussanomat/art-2000011970130.html"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.47,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Fazerin suvun miljonääri, 51, oikeuden eteen törkeästä rikoksesta – näin hän reagoi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Taloussanomat",
+        "source_type": "description",
+        "text": "Jan Fazer vältteli mediaa vetäytymällä vessaan ja kurkistamalla, vieläkö kuvaajia oli edustalla passissa.",
+        "word_count": 13,
+        "keyword_overlap": 10,
+        "strong_overlap": 9
+      }
+    ],
+    "source_text": "Jan Fazer vältteli mediaa vetäytymällä vessaan ja kurkistamalla, vieläkö kuvaajia oli edustalla passissa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Fazerin suvun miljonääri, 51, oikeuden eteen törkeästä rikoksesta – näin hän reagoi",
+      "description": "Jan Fazer vältteli mediaa vetäytymällä vessaan ja kurkistamalla, vieläkö kuvaajia oli edustalla passissa.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25973 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25975 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

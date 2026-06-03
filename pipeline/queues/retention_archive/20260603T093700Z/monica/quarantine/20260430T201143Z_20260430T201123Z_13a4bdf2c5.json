@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T20:11:43Z",
+  "reason": "Aineisto sisältää vain Belgian pääministerin lyhyitä perusteluja ja maininnan seitsemän ydinreaktorin haltuunotosta, mutta ei riittävästi yksityiskohtia 250 sanan faktapohjaiseen artikkeliin ilman lisätietojen keksimistä.",
+  "packet": {
+    "packet_id": "20260430T201123Z_13a4bdf2c5",
+    "created_at": "2026-04-30T20:11:23Z",
+    "headline_seed": "Belgium plans to nationalise nuclear power plants",
+    "description_seed": "Prime Minister Bart De Wever said the move would see \"less dependence on fossil fuel imports and more control over our own supply\".",
+    "link": "https://www.bbc.com/news/articles/c4g05jg87wko?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-20",
+      "source-4",
+      "source-2"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c4g05jg87wko?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.88,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Belgium plans to nationalise nuclear power plants"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Prime Minister Bart De Wever said the move would see \"less dependence on fossil fuel imports and more control over our own supply\".",
+        "word_count": 23,
+        "keyword_overlap": 16,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-20",
+        "source_type": "research",
+        "text": "De Wever framed the decision as a cornerstone of Belgium’s energy strategy. “This government chooses safe, affordable, and sustainable energy,” he said. “With less dependence on fossil imports and more control over our own supply.”",
+        "word_count": 35,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "\"This government is choosing safe, affordable and sustainable energy, with less dependence on fossil fuel imports and more control over our own supply,\" De Wever posted on X.",
+        "word_count": 28,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Prime Minister Bart De Wever said the deal would involve \"a full takeover\" of the nuclear fleet, including Belgium's seven ageing nuclear reactors.",
+        "word_count": 23,
+        "keyword_overlap": 8,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Prime Minister Bart De Wever said the move would see \"less dependence on fossil fuel imports and more control over our own supply\".\n\nDe Wever framed the decision as a cornerstone of Belgium’s energy strategy. “This government chooses safe, affordable, and sustainable energy,” he said. “With less dependence on fossil imports and more control over our own supply.”\n\n\"This government is choosing safe, affordable and sustainable energy, with less dependence on fossil fuel imports and more control over our own supply,\" De Wever posted on X.\n\nPrime Minister Bart De Wever said the deal would involve \"a full takeover\" of the nuclear fleet, including Belgium's seven ageing nuclear reactors.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Belgium plans to nationalise nuclear power plants",
+      "description": "Prime Minister Bart De Wever said the move would see \"less dependence on fossil fuel imports and more control over our own supply\".",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T201123Z_13a4bdf2c5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto sisältää vain Belgian pääministerin lyhyitä perusteluja ja maininnan seitsemän ydinreaktorin haltuunotosta, mutta ei riittävästi yksityiskohtia 250 sanan faktapohjaiseen artikkeliin ilman lisätietojen keksimistä.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "ts": "2026-04-28T17:35:04Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T173030Z_dc8fe57de5",
+    "created_at": "2026-04-28T17:30:30Z",
+    "headline_seed": "Hurjat huhut: Orbánin kaarti karkaa",
+    "description_seed": "Viktor Orbánin mukaan Unkarin ex-valtapuolueen on nyt rakennettava itsensä uudelleen. The Guardianin mukaan Orbánin liittolaiset siirtävät varojaan ulkomaille. Unkarin väistyvä pääministeri Viktor Orbán, 62, tarjoutui eroamaan Fidesz-puolueen puheenjohtajan paikalta murskatappion jälkeen, kertovat paikallismedia Telexin lähteet puoluekokouksesta. Fideszin johto ei myöntänyt Orbánille välitöntä eroa, vaan siirsi päätöksen puoluekokoukseen 13. kesäkuuta. Telexin mukaan Orbán sanoi olevansa valmis jatkamaan johdossa, jos saa puolueen tuen.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/6f3aba6c-9a5a-45ef-b9e5-8db04d3ac366",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/6f3aba6c-9a5a-45ef-b9e5-8db04d3ac366"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.55,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hurjat huhut: Orbánin kaarti karkaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Viktor Orbánin mukaan Unkarin ex-valtapuolueen on nyt rakennettava itsensä uudelleen. The Guardianin mukaan Orbánin liittolaiset siirtävät varojaan ulkomaille. Unkarin väistyvä pääministeri Viktor Orbán, 62, tarjoutui eroamaan Fidesz-puolueen puheenjohtajan paikalta murskatappion jälkeen, kertovat paikallismedia Telexin lähteet puoluekokouksesta. Fideszin johto ei myöntänyt Orbánille välitöntä eroa, vaan siirsi päätöksen puoluekokoukseen 13. kesäkuuta. Telexin mukaan Orbán sanoi olevansa valmis jatkamaan johdossa, jos saa puolueen tuen.",
+        "word_count": 61,
+        "keyword_overlap": 42,
+        "strong_overlap": 36
+      }
+    ],
+    "source_text": "Viktor Orbánin mukaan Unkarin ex-valtapuolueen on nyt rakennettava itsensä uudelleen. The Guardianin mukaan Orbánin liittolaiset siirtävät varojaan ulkomaille. Unkarin väistyvä pääministeri Viktor Orbán, 62, tarjoutui eroamaan Fidesz-puolueen puheenjohtajan paikalta murskatappion jälkeen, kertovat paikallismedia Telexin lähteet puoluekokouksesta. Fideszin johto ei myöntänyt Orbánille välitöntä eroa, vaan siirsi päätöksen puoluekokoukseen 13. kesäkuuta. Telexin mukaan Orbán sanoi olevansa valmis jatkamaan johdossa, jos saa puolueen tuen.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hurjat huhut: Orbánin kaarti karkaa",
+      "description": "Viktor Orbánin mukaan Unkarin ex-valtapuolueen on nyt rakennettava itsensä uudelleen. The Guardianin mukaan Orbánin liittolaiset siirtävät varojaan ulkomaille. Unkarin väistyvä pääministeri Viktor Orbán, 62, tarjoutui eroamaan Fidesz-puolueen puheenjohtajan paikalta murskatappion jälkeen, kertovat paikallismedia Telexin lähteet puoluekokouksesta. Fideszin johto ei myöntänyt Orbánille välitöntä eroa, vaan siirsi päätöksen puoluekokoukseen 13. kesäkuuta. Telexin mukaan Orbán sanoi olevansa valmis jatkamaan johdossa, jos saa puolueen tuen.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Monica writer command failed: [tools] tools.allow allowlist contains unknown entries (web_search). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.\n[diagnostic] lane task error: lane=main durationMs=75092 error=\"SessionWriteLockTimeoutError: session file locked (timeout 10000ms): pid=1522449 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=75094 error=\"SessionWriteLockTimeoutError: session file locked (timeout 10000ms): pid=1522449 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock\"\nSessionWriteLockTimeoutError: session file locked (timeout 10000ms): pid=1522449 /home/pertt/.openclaw/agents/monica/sessions/1f8211cb-8387-4a69-bfa4-e644f218751e.jsonl.lock"
+  }
+}

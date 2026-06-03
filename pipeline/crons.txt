@@ -16,8 +16,10 @@
 # X / Twitter OAuth2 token refresh (every 2h) — managed by OpenClaw scripts
 0 */2 * * * /home/pertt/.openclaw/workspace/scripts/refresh-x-token.sh >> /home/pertt/.openclaw/workspace/logs/x-token-refresh.log 2>&1
 
-# X auto-poster (2x daily: 17:00 + 20:00 UTC)
-0 17,20 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 pipeline/x_auto_poster.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/x-poster.log 2>&1
+# X auto-poster target cadence after approval/billing restore: 6x daily, 1 curated article each run.
+# Times are UTC because this VPS crontab runs in UTC: 05,08,11,14,17,20 UTC = 08,11,14,17,20,23 Helsinki summer time.
+# Actual public posting remains fail-closed while pipeline/logs/x-posting-blocked.json exists.
+0 5,8,11,14,17,20 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && python3 pipeline/x_auto_poster.py --max-posts 1 >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/x-poster.log 2>&1
 
 # Daily metrics report (06:00 UTC)
 0 6 * * * /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/metrics_cron.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/metrics-cron.log 2>&1

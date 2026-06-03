@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-28T17:40:18Z",
+  "reason": "Paketti on sisäisesti ristiriitainen ja sisältää liian vähän varmennettuja tietoja otsikon tapahtumasta julkaistavaan uutiseen.",
+  "packet": {
+    "packet_id": "20260428T173957Z_a60663986b",
+    "created_at": "2026-04-28T17:39:57Z",
+    "headline_seed": "Käärme tappoi turistin suosikkikohteessa",
+    "description_seed": "Käärmeenlumoojan show meni pahasti pieleen.",
+    "link": "https://www.is.fi/ulkomaat/art-2000011971658.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-3",
+      "Stara"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000011971658.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.59,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Käärme tappoi turistin suosikkikohteessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Verkkopyton on pituudeltaan samaa luokkaa kuin FIFAn standardikokoinen jalkapallomaali. Guinnessin mukaan käärme olisi saattanut olla nukutettuna noin 10 prosenttia pidempi, eli lähes 7,9 metriä pitkä. Matelijaa ei kuitenkaan haluttu nukuttaa mahdollisten terveysriskien vuoksi.",
+        "word_count": 33,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Stara",
+        "source_type": "research",
+        "text": "Indonesian metsien kätköistä on löytynyt käärme, jolla on pituutta useamman ihmisen edestä. Verkkopyton on julistettu virallisesti maailman pisimmäksi elossa olevaksi käärmeeksi.",
+        "word_count": 21,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Verkkopyton on pituudeltaan samaa luokkaa kuin FIFAn standardikokoinen jalkapallomaali. Guinnessin mukaan käärme olisi saattanut olla nukutettuna noin 10 prosenttia pidempi, eli lähes 7,9 metriä pitkä. Matelijaa ei kuitenkaan haluttu nukuttaa mahdollisten terveysriskien vuoksi.\n\nIndonesian metsien kätköistä on löytynyt käärme, jolla on pituutta useamman ihmisen edestä. Verkkopyton on julistettu virallisesti maailman pisimmäksi elossa olevaksi käärmeeksi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Käärme tappoi turistin suosikkikohteessa",
+      "description": "Käärmeenlumoojan show meni pahasti pieleen.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260428T173957Z_a60663986b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti on sisäisesti ristiriitainen ja sisältää liian vähän varmennettuja tietoja otsikon tapahtumasta julkaistavaan uutiseen.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

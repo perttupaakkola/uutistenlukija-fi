@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T15:41:14Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T154020Z_22f02735c4",
+    "created_at": "2026-04-26T15:40:20Z",
+    "headline_seed": "Edes pääministeri ei tunnu tietävän, että Suomen asehankinnat eivät edellytä ulkopoliittista arviota",
+    "description_seed": "Suomen asehankinnat Israelista ovat taajaan esillä. Siitä, millä mittapuulla ostoksia tehdään, vallitsee epätietoisuutta politiikan huipulla saakka.",
+    "link": "https://yle.fi/a/74-20218318?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-5",
+      "Yle Uutiset",
+      "source-10"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20218318?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.88,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Edes pääministeri ei tunnu tietävän, että Suomen asehankinnat eivät edellytä ulkopoliittista arviota"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Suomen asehankinnat Israelista ovat taajaan esillä. Siitä, millä mittapuulla ostoksia tehdään, vallitsee epätietoisuutta politiikan huipulla saakka.",
+        "word_count": 16,
+        "keyword_overlap": 16,
+        "strong_overlap": 13
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Kuitenkin pääministeri Petteri Orpo (kok.) olettaa, että ulkoministeriö tekee poikkeuksetta Suomen asekaupoista arvion. Orpo tuntuu pitävän itsestäänselvänä, että ulkopoliittisten näkökohtien pitää vaikuttaa tällaisissa asioissa.",
+        "word_count": 24,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Suomen asekaupat etenkin Israelin kanssa ovat nousseet esille poikkeuksellisen rujon Gazan sodan alkamisen jälkeen. Asiaa puitiin tällä viikolla perjantaina eduskunnassakin: siellä äänestettiin kansalaisaloitteesta, jossa toivotaan asehankintojen sääntelyn lisäämistä.",
+        "word_count": 28,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Pääministeri kommentoi asiaa erityisavustajansa Veera Svahnin välityksellä: ”Pääministeri puhui haastattelutunnilla 1.6. ”asekaupasta”. Ulkoministeriö vastaa vientivalvonnasta. Suomella ei ole ollut maakohtaisia vientilinjoja tai periaatepäätöksiä, vaan jokainen tapaus käsitellään erikseen, noudattaen tarkkaa tapauskohtaista kokonaisharkintaa. Puolustushankinnoissa harkinnan tekee puolustusministeriö, joka noudattaa hankinnoissaan EU:n ja YK:n p",
+        "word_count": 43,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Suomen asehankinnat Israelista ovat taajaan esillä. Siitä, millä mittapuulla ostoksia tehdään, vallitsee epätietoisuutta politiikan huipulla saakka.\n\nKuitenkin pääministeri Petteri Orpo (kok.) olettaa, että ulkoministeriö tekee poikkeuksetta Suomen asekaupoista arvion. Orpo tuntuu pitävän itsestäänselvänä, että ulkopoliittisten näkökohtien pitää vaikuttaa tällaisissa asioissa.\n\nSuomen asekaupat etenkin Israelin kanssa ovat nousseet esille poikkeuksellisen rujon Gazan sodan alkamisen jälkeen. Asiaa puitiin tällä viikolla perjantaina eduskunnassakin: siellä äänestettiin kansalaisaloitteesta, jossa toivotaan asehankintojen sääntelyn lisäämistä.\n\nPääministeri kommentoi asiaa erityisavustajansa Veera Svahnin välityksellä: ”Pääministeri puhui haastattelutunnilla 1.6. ”asekaupasta”. Ulkoministeriö vastaa vientivalvonnasta. Suomella ei ole ollut maakohtaisia vientilinjoja tai periaatepäätöksiä, vaan jokainen tapaus käsitellään erikseen, noudattaen tarkkaa tapauskohtaista kokonaisharkintaa. Puolustushankinnoissa harkinnan tekee puolustusministeriö, joka noudattaa hankinnoissaan EU:n ja YK:n p",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Edes pääministeri ei tunnu tietävän, että Suomen asehankinnat eivät edellytä ulkopoliittista arviota",
+      "description": "Suomen asehankinnat Israelista ovat taajaan esillä. Siitä, millä mittapuulla ostoksia tehdään, vallitsee epätietoisuutta politiikan huipulla saakka.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25000 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25004 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-27T02:11:00Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T021007Z_43eb38d126",
+    "created_at": "2026-04-27T02:10:07Z",
+    "headline_seed": "Ukraina tuhoaa Venäjän energiainfraa nyt sellaista vauhtia, ettei sitä ehditä korjata",
+    "description_seed": "Pitkän kantaman iskuilla ei yksin voiteta sotaa, mutta ukrainalaisten kehittämää iskukykyä ei tule väheksyä, arvioi Fabian Hoffmann. Ukrainan Venäjän energiainfrastruktuuriin kohdistama strateginen ilmaiskujen sarja on saavuttanut uuden huippunsa. Vaikuttaakin siltä, että ukrainalaiset kykenevät nyt aiheuttamaan energiainfraan kumulatiivisesti enemmän vaurioita kuin mitä Venäjä kykenee korjaamaan ja/tai korvaamaan, kirjoittaa Oslon yliopiston ohjusteknologian tutkija Fabian Hoffmann Substackissa. Iskuja on kohdistettu muun muassa Itämeren-öljyterminaaleihin Ust-Lugassa ja Primorskissa, minkä johdosta hyökkäyslennokkeja on lentänyt Suomeen asti.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/18ffbaaf-8fe5-4e57-9a58-5adb8bad42fb",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/18ffbaaf-8fe5-4e57-9a58-5adb8bad42fb"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.57,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ukraina tuhoaa Venäjän energiainfraa nyt sellaista vauhtia, ettei sitä ehditä korjata"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Pitkän kantaman iskuilla ei yksin voiteta sotaa, mutta ukrainalaisten kehittämää iskukykyä ei tule väheksyä, arvioi Fabian Hoffmann. Ukrainan Venäjän energiainfrastruktuuriin kohdistama strateginen ilmaiskujen sarja on saavuttanut uuden huippunsa. Vaikuttaakin siltä, että ukrainalaiset kykenevät nyt aiheuttamaan energiainfraan kumulatiivisesti enemmän vaurioita kuin mitä Venäjä kykenee korjaamaan ja/tai korvaamaan, kirjoittaa Oslon yliopiston ohjusteknologian tutkija Fabian Hoffmann Substackissa. Iskuja on kohdistettu muun muassa Itämeren-öljyterminaaleihin Ust-Lugassa ja Primorskissa, minkä johdosta hyökkäyslennokkeja on lentänyt Suomeen asti.",
+        "word_count": 70,
+        "keyword_overlap": 60,
+        "strong_overlap": 46
+      }
+    ],
+    "source_text": "Pitkän kantaman iskuilla ei yksin voiteta sotaa, mutta ukrainalaisten kehittämää iskukykyä ei tule väheksyä, arvioi Fabian Hoffmann. Ukrainan Venäjän energiainfrastruktuuriin kohdistama strateginen ilmaiskujen sarja on saavuttanut uuden huippunsa. Vaikuttaakin siltä, että ukrainalaiset kykenevät nyt aiheuttamaan energiainfraan kumulatiivisesti enemmän vaurioita kuin mitä Venäjä kykenee korjaamaan ja/tai korvaamaan, kirjoittaa Oslon yliopiston ohjusteknologian tutkija Fabian Hoffmann Substackissa. Iskuja on kohdistettu muun muassa Itämeren-öljyterminaaleihin Ust-Lugassa ja Primorskissa, minkä johdosta hyökkäyslennokkeja on lentänyt Suomeen asti.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ukraina tuhoaa Venäjän energiainfraa nyt sellaista vauhtia, ettei sitä ehditä korjata",
+      "description": "Pitkän kantaman iskuilla ei yksin voiteta sotaa, mutta ukrainalaisten kehittämää iskukykyä ei tule väheksyä, arvioi Fabian Hoffmann. Ukrainan Venäjän energiainfrastruktuuriin kohdistama strateginen ilmaiskujen sarja on saavuttanut uuden huippunsa. Vaikuttaakin siltä, että ukrainalaiset kykenevät nyt aiheuttamaan energiainfraan kumulatiivisesti enemmän vaurioita kuin mitä Venäjä kykenee korjaamaan ja/tai korvaamaan, kirjoittaa Oslon yliopiston ohjusteknologian tutkija Fabian Hoffmann Substackissa. Iskuja on kohdistettu muun muassa Itämeren-öljyterminaaleihin Ust-Lugassa ja Primorskissa, minkä johdosta hyökkäyslennokkeja on lentänyt Suomeen asti.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25290 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25295 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-29T16:57:07Z",
+  "reason": "Lähdeaineisto ei sisällä jutun ydinfaktoja, vaan vain toimittajan taustatietoja, joten tapahtumaa ei voi varmentaa.",
+  "packet": {
+    "packet_id": "20260429T165415Z_a60b0e67e6",
+    "created_at": "2026-04-29T16:54:15Z",
+    "headline_seed": "Miehet pakenivat poliisia varastettu vene perässään Pohjan­maalla",
+    "description_seed": "Toinen epäillyistä oli päihtynyt.",
+    "link": "https://www.is.fi/kotimaa/art-2000011976438.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-3"
+    ],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000011976438.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.47,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Miehet pakenivat poliisia varastettu vene perässään Pohjan­maalla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Mäkinen on työskennellyt Ilta-Sanomissa vuodesta 2004 asti. Sitä ennen hän toimi rikos- ja oikeustoimittajana STT:ssä. Hänet on palkittu työstään sekä STT:n että Ilta-Sanomien omilla palkinnoilla. Hän oli myös toinen kirjoittaja viime vuonna julkaistussa kirjassa Katiska, joka kertoo samannimisestä huumevyyhdestä.",
+        "word_count": 39,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Mäkinen on työskennellyt Ilta-Sanomissa vuodesta 2004 asti. Sitä ennen hän toimi rikos- ja oikeustoimittajana STT:ssä. Hänet on palkittu työstään sekä STT:n että Ilta-Sanomien omilla palkinnoilla. Hän oli myös toinen kirjoittaja viime vuonna julkaistussa kirjassa Katiska, joka kertoo samannimisestä huumevyyhdestä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Miehet pakenivat poliisia varastettu vene perässään Pohjan­maalla",
+      "description": "Toinen epäillyistä oli päihtynyt.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=34549d83-f6a7-4bdd-97ef-b14d7a29ccc8 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260429T165415Z_a60b0e67e6\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto ei sisällä jutun ydinfaktoja, vaan vain toimittajan taustatietoja, joten tapahtumaa ei voi varmentaa.\"}\n[agent/embedded] [context-engine] maintenance(turn) changed transcript rewrittenEntries=0 bytesFreed=0 sessionKey=agent:monica:main",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

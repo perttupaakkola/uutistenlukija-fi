@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T05:17:09Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T051615Z_d3ab363fbb",
+    "created_at": "2026-04-27T05:16:15Z",
+    "headline_seed": "Trump says he 'wasn't worried' during Washington press dinner shooting",
+    "description_seed": "CBS News, the BBC's US partner, reports the suspect wrote a document saying he wanted to target Trump administration officials. He is due in court on Monday.",
+    "link": "https://www.bbc.com/news/articles/c2d8dg57rzdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-2",
+      "source-3",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c2d8dg57rzdo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.91,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump says he 'wasn't worried' during Washington press dinner shooting"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "CBS News, the BBC's US partner, reports the suspect wrote a document saying he wanted to target Trump administration officials. He is due in court on Monday.",
+        "word_count": 27,
+        "keyword_overlap": 14,
+        "strong_overlap": 10
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "\"I wasn't worried. I understand life. We live in a crazy world,\" Trump said during an interview with CBS News programme 60 Minutes, one day after the shooting at a Washington DC hotel on Saturday night.",
+        "word_count": 36,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "US media named Cole Tomas Allen, 31, as the suspect, who was arrested after police said he opened fire near a security checkpoint during the event. He is due to appear in court on Monday.",
+        "word_count": 35,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US President Donald Trump says he \"wasn't worried\" while he was being evacuated from the White House Correspondents' Dinner, after a gunman attempted to storm the ballroom.",
+        "word_count": 27,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "CBS News, the BBC's US partner, reports the suspect wrote a document saying he wanted to target Trump administration officials. He is due in court on Monday.\n\n\"I wasn't worried. I understand life. We live in a crazy world,\" Trump said during an interview with CBS News programme 60 Minutes, one day after the shooting at a Washington DC hotel on Saturday night.\n\nUS media named Cole Tomas Allen, 31, as the suspect, who was arrested after police said he opened fire near a security checkpoint during the event. He is due to appear in court on Monday.\n\nUS President Donald Trump says he \"wasn't worried\" while he was being evacuated from the White House Correspondents' Dinner, after a gunman attempted to storm the ballroom.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump says he 'wasn't worried' during Washington press dinner shooting",
+      "description": "CBS News, the BBC's US partner, reports the suspect wrote a document saying he wanted to target Trump administration officials. He is due in court on Monday.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25682 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25686 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

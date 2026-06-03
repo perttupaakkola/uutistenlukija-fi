@@ -1,0 +1,45 @@
+{
+  "ts": "2026-04-28T14:29:43Z",
+  "reason": "aineistosta puuttuvat jutun keskeiset faktat, lähdesisältö ja aihekuvaus",
+  "packet": {
+    "packet_id": "20260428T142813Z_f662742560",
+    "created_at": "2026-04-28T14:28:13Z",
+    "headline_seed": "Pyhä, pyhä arkipyhä!",
+    "description_seed": "",
+    "link": "https://www.hs.fi/kulttuuri/art-2000011972649.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/kulttuuri/art-2000011972649.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pyhä, pyhä arkipyhä!"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pyhä, pyhä arkipyhä!",
+      "description": "",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=2094db1b-0178-4a97-ad53-865c27a25de3 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T142813Z_f662742560\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineistosta puuttuvat jutun keskeiset faktat, lähdesisältö ja aihekuvaus\"}\n[agent/embedded] [context-engine] maintenance(turn) changed transcript rewrittenEntries=0 bytesFreed=0 sessionKey=agent:monica:main",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

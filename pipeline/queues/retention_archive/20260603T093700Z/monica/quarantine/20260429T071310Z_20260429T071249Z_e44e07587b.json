@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-29T07:13:10Z",
+  "reason": "Lähdeaineistossa on ristiriita otsikon ja kurssiliikettä kuvaavien tietojen välillä, eikä kokonaisuus riitä luotettavaan uutiseen.",
+  "packet": {
+    "packet_id": "20260429T071249Z_e44e07587b",
+    "created_at": "2026-04-29T07:12:49Z",
+    "headline_seed": "Nesteen osake selvässä nousussa – OP:n Antti Saari: ”Vielä on aika paljon matkaa”",
+    "description_seed": "OP:n Antti Saari kommentoi Nesteen tulosraporttia suorassa Talousaamu-ohjelmassa.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/5641a77b-f304-4098-9fa7-265381fe1444",
+    "source": "Kauppalehti KL-Nyt",
+    "source_names": [
+      "Kauppalehti KL-Nyt",
+      "Yle",
+      "source-6",
+      "source-8"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/5641a77b-f304-4098-9fa7-265381fe1444"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.82,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nesteen osake selvässä nousussa – OP:n Antti Saari: ”Vielä on aika paljon matkaa”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti KL-Nyt",
+        "source_type": "description",
+        "text": "OP:n Antti Saari kommentoi Nesteen tulosraporttia suorassa Talousaamu-ohjelmassa.",
+        "word_count": 8,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Nesteen osake kävi torstaina Helsingin pörssissä enimmillään jopa kahdeksan prosentin laskussa. Kaupankäynnin sulkeutuessa päivän pudotus jäi lievempään noin neljään prosenttiin.",
+        "word_count": 20,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "OP:n Kaurolan mukaan Nesteen tuotannon käyttöaste uusiutuvien polttoaineissa näyttäisi olevan tänä vuonna noin 75 prosentin luokkaa, mikä on selvästi alhaisempi taso kuin mihin yhtiö parhaimpina vuosina kyennyt.",
+        "word_count": 27,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Miksi Neste ei uskaltanut luvata uusiutuviin polttoaineisiin kasvua? Nesteen toimitusjohtaja Heikki Malisen mukaan tuotantolaitokset eivät ole joutokäytössä.",
+        "word_count": 17,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "OP:n Antti Saari kommentoi Nesteen tulosraporttia suorassa Talousaamu-ohjelmassa.\n\nNesteen osake kävi torstaina Helsingin pörssissä enimmillään jopa kahdeksan prosentin laskussa. Kaupankäynnin sulkeutuessa päivän pudotus jäi lievempään noin neljään prosenttiin.\n\nOP:n Kaurolan mukaan Nesteen tuotannon käyttöaste uusiutuvien polttoaineissa näyttäisi olevan tänä vuonna noin 75 prosentin luokkaa, mikä on selvästi alhaisempi taso kuin mihin yhtiö parhaimpina vuosina kyennyt.\n\nMiksi Neste ei uskaltanut luvata uusiutuviin polttoaineisiin kasvua? Nesteen toimitusjohtaja Heikki Malisen mukaan tuotantolaitokset eivät ole joutokäytössä.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nesteen osake selvässä nousussa – OP:n Antti Saari: ”Vielä on aika paljon matkaa”",
+      "description": "OP:n Antti Saari kommentoi Nesteen tulosraporttia suorassa Talousaamu-ohjelmassa.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T071249Z_e44e07587b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on ristiriita otsikon ja kurssiliikettä kuvaavien tietojen välillä, eikä kokonaisuus riitä luotettavaan uutiseen.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

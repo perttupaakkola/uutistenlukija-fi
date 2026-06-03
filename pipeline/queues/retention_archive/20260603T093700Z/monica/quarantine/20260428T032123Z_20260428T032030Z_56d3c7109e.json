@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T03:21:23Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T032030Z_56d3c7109e",
+    "created_at": "2026-04-28T03:20:30Z",
+    "headline_seed": "Miikka Muurinen pelaa pian päivittäin tulevien NBA-tähtien kanssa – Hanno Möttölä kertoo, mikä yliopisto­sarjassa odottaa",
+    "description_seed": "Suomen ensimmäinen NBA-pelaaja Hanno Möttölä kävi saman reitin kuin Muurinen. Edessä on kova työ.",
+    "link": "https://yle.fi/a/74-20222977?origin=rss",
+    "source": "Yle Urheilu",
+    "source_names": [
+      "Yle Urheilu",
+      "ksml.fi",
+      "source-8",
+      "source-12"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222977?origin=rss"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.82,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Miikka Muurinen pelaa pian päivittäin tulevien NBA-tähtien kanssa – Hanno Möttölä kertoo, mikä yliopisto­sarjassa odottaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Urheilu",
+        "source_type": "description",
+        "text": "Suomen ensimmäinen NBA-pelaaja Hanno Möttölä kävi saman reitin kuin Muurinen. Edessä on kova työ.",
+        "word_count": 14,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Miikka Muurinen pelaa 11. huhtikuuta Portlandissa Nike Hoop Summit -tapahtumassa maailman parhaiden lukioikäisten joukkueessa Yhdysvaltain joukkuetta vastaan. Yhdysvaltain koripalloliitto USA Basketball julkaisi tiedot kokoonpanoista.",
+        "word_count": 24,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "– Calipari on valmentanut parin vuosikymmenen ajan nuoria pelaaja, jotka ovat pompahtaneet vuoden jälkeen NBA:han. Muurinen saa varmasti hyvää oppia sieltä, Möttölä toteaa.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "– Mielenkiintoista nähdä, miten Miikka ja nämä muut nuoret ottavat rotaatiossa paikkansa, Möttölä pohtii.",
+        "word_count": 14,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Suomen ensimmäinen NBA-pelaaja Hanno Möttölä kävi saman reitin kuin Muurinen. Edessä on kova työ.\n\nMiikka Muurinen pelaa 11. huhtikuuta Portlandissa Nike Hoop Summit -tapahtumassa maailman parhaiden lukioikäisten joukkueessa Yhdysvaltain joukkuetta vastaan. Yhdysvaltain koripalloliitto USA Basketball julkaisi tiedot kokoonpanoista.\n\n– Calipari on valmentanut parin vuosikymmenen ajan nuoria pelaaja, jotka ovat pompahtaneet vuoden jälkeen NBA:han. Muurinen saa varmasti hyvää oppia sieltä, Möttölä toteaa.\n\n– Mielenkiintoista nähdä, miten Miikka ja nämä muut nuoret ottavat rotaatiossa paikkansa, Möttölä pohtii.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Miikka Muurinen pelaa pian päivittäin tulevien NBA-tähtien kanssa – Hanno Möttölä kertoo, mikä yliopisto­sarjassa odottaa",
+      "description": "Suomen ensimmäinen NBA-pelaaja Hanno Möttölä kävi saman reitin kuin Muurinen. Edessä on kova työ.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=24981 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=24986 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T19:10:25Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T190932Z_265ff2b8ea",
+    "created_at": "2026-04-27T19:09:32Z",
+    "headline_seed": "Washingtonin ampuja syytteeseen Yhdysvaltain presidentin murhayrityksestä",
+    "description_seed": "Cole Tomas Allen sai syytteen Yhdysvaltain presidentin murhayrityksestä.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/valkoisen-talon-ampuja-syytteeseen-yhdysvaltain-presidentin-murhayrityksesta/9330374",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "source-2",
+      "source-12",
+      "Verkkouutiset"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/valkoisen-talon-ampuja-syytteeseen-yhdysvaltain-presidentin-murhayrityksesta/9330374"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.9,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Washingtonin ampuja syytteeseen Yhdysvaltain presidentin murhayrityksestä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Cole Tomas Allen sai syytteen Yhdysvaltain presidentin murhayrityksestä.",
+        "word_count": 8,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Washingtonin Hilton-hotellissa järjestetty Valkoisen talon kirjeenvaihtajien vuotuinen illallinen keskeytyi, kun muualla hotellirakennuksessa ammuttiin laukauksia. Tilaisuuteen osallistuneet presidentti Donald Trump, varapresidentti J. D. Vance ja muut korkea-arvoiset yhdysvaltalaispäättäjät evakuoitiin juhlasalista. Ampuja ei onnistunut tunkeutumaan itse juhlatilaan, mutta turvakameratallenteen perusteella mies onnistui juoksemaan ainakin yhden turvatarkastuksen läpi.",
+        "word_count": 45,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Ampuja oli tuolloin John Hinckley Jr. Aseena oli .22 kaliiberinen pistooli, jolla ampuja ampui kuusi laukausta. Presidentillisen kirjaston luonnehdinnan mukaan Reagan haavoittui kimmokkeesta vasemman kainalon alapuolelle. Reaganin haavoittuminen huomattiin vasta siinä vaiheessa, kun hän yski verta. Yhdysvaltain salainen palvelu on myöhemmin julkaissut audio-nauhoitteen tapahtumapaikalta.",
+        "word_count": 44,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Verkkouutiset",
+        "source_type": "research",
+        "text": "Washingtonin viimeöisestä ammuskelusta epäilty 31-mies toimi kaikesta päätelleen yksin, kertoo Yhdysvaltojen vt. oikeusministeri Todd Blanche ABC:n ja NBC:n haastatteluissa. Epäilty tullaan ministerin mukaan asettamaan syytteeseen maanantaina.",
+        "word_count": 26,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Cole Tomas Allen sai syytteen Yhdysvaltain presidentin murhayrityksestä.\n\nWashingtonin Hilton-hotellissa järjestetty Valkoisen talon kirjeenvaihtajien vuotuinen illallinen keskeytyi, kun muualla hotellirakennuksessa ammuttiin laukauksia. Tilaisuuteen osallistuneet presidentti Donald Trump, varapresidentti J. D. Vance ja muut korkea-arvoiset yhdysvaltalaispäättäjät evakuoitiin juhlasalista. Ampuja ei onnistunut tunkeutumaan itse juhlatilaan, mutta turvakameratallenteen perusteella mies onnistui juoksemaan ainakin yhden turvatarkastuksen läpi.\n\nAmpuja oli tuolloin John Hinckley Jr. Aseena oli .22 kaliiberinen pistooli, jolla ampuja ampui kuusi laukausta. Presidentillisen kirjaston luonnehdinnan mukaan Reagan haavoittui kimmokkeesta vasemman kainalon alapuolelle. Reaganin haavoittuminen huomattiin vasta siinä vaiheessa, kun hän yski verta. Yhdysvaltain salainen palvelu on myöhemmin julkaissut audio-nauhoitteen tapahtumapaikalta.\n\nWashingtonin viimeöisestä ammuskelusta epäilty 31-mies toimi kaikesta päätelleen yksin, kertoo Yhdysvaltojen vt. oikeusministeri Todd Blanche ABC:n ja NBC:n haastatteluissa. Epäilty tullaan ministerin mukaan asettamaan syytteeseen maanantaina.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Washingtonin ampuja syytteeseen Yhdysvaltain presidentin murhayrityksestä",
+      "description": "Cole Tomas Allen sai syytteen Yhdysvaltain presidentin murhayrityksestä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25374 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25379 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T11:18:22Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T111728Z_63c55c67e6",
+    "created_at": "2026-04-27T11:17:28Z",
+    "headline_seed": "Oil prices rise as US-Iran peace talks stall",
+    "description_seed": "President Trump said the US had cancelled plans to send a team to Pakistan for negotiations.",
+    "link": "https://www.bbc.com/news/articles/c15d57pv925o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-3",
+      "EconoTimes",
+      "source-23"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c15d57pv925o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.97,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Oil prices rise as US-Iran peace talks stall"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "President Trump said the US had cancelled plans to send a team to Pakistan for negotiations.",
+        "word_count": 16,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "US President Donald Trump said on Saturday that Washington had cancelled plans to send a team to Pakistan for negotiations with their Iranian counterparts.",
+        "word_count": 24,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "EconoTimes",
+        "source_type": "research",
+        "text": "Global attention has shifted back to escalating US-Iran tensions as diplomatic efforts to end the ongoing conflict show little progress. President Donald Trump stated that Iran could initiate negotiations if it is willing to comply with key conditions, emphasizing that Tehran must never develop nuclear weapons. This statement comes amid stalled peace talks and increasing geopolitical uncertainty in the Middle East, which continues to affect global oil prices and economic stability.",
+        "word_count": 71,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-23",
+        "source_type": "research",
+        "text": "Domestically, Trump faces mounting pressure to resolve the conflict, as public support declines. At the same time, Iran’s leadership appears unified in resisting negotiations under pressure. The ongoing situation underscores the complexity of US-Iran relations and highlights the broader impact of Middle East instability on global markets and security.",
+        "word_count": 49,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "President Trump said the US had cancelled plans to send a team to Pakistan for negotiations.\n\nUS President Donald Trump said on Saturday that Washington had cancelled plans to send a team to Pakistan for negotiations with their Iranian counterparts.\n\nGlobal attention has shifted back to escalating US-Iran tensions as diplomatic efforts to end the ongoing conflict show little progress. President Donald Trump stated that Iran could initiate negotiations if it is willing to comply with key conditions, emphasizing that Tehran must never develop nuclear weapons. This statement comes amid stalled peace talks and increasing geopolitical uncertainty in the Middle East, which continues to affect global oil prices and economic stability.\n\nDomestically, Trump faces mounting pressure to resolve the conflict, as public support declines. At the same time, Iran’s leadership appears unified in resisting negotiations under pressure. The ongoing situation underscores the complexity of US-Iran relations and highlights the broader impact of Middle East instability on global markets and security.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Oil prices rise as US-Iran peace talks stall",
+      "description": "President Trump said the US had cancelled plans to send a team to Pakistan for negotiations.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25749 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25752 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T20:58:45Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T205839Z_8bc7a308e2",
+    "created_at": "2026-04-26T20:58:39Z",
+    "headline_seed": "Did Trump save eight Iranian women from execution?",
+    "description_seed": "The US president says he saved eight Iranian women from execution, but Iran says otherwise.",
+    "link": "https://www.bbc.com/news/videos/cx2e2lg2ny9o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-2",
+      "BBC World",
+      "source-9"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cx2e2lg2ny9o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Did Trump save eight Iranian women from execution?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The US president says he saved eight Iranian women from execution, but Iran says otherwise.",
+        "word_count": 15,
+        "keyword_overlap": 10,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Iran responded by saying that none of the women Trump mentioned were never facing execution and accused the president of fake reports.",
+        "word_count": 22,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US President Donald Trump claimed that his intervention helped save eight women arrested in Iran from the death penalty.",
+        "word_count": 19,
+        "keyword_overlap": 7,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Pro-government demonstrators poured onto the streets of the Iranian capital after the announcement of the two-week conditional ceasefire between the US and Iran.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The US president says he saved eight Iranian women from execution, but Iran says otherwise.\n\nIran responded by saying that none of the women Trump mentioned were never facing execution and accused the president of fake reports.\n\nUS President Donald Trump claimed that his intervention helped save eight women arrested in Iran from the death penalty.\n\nPro-government demonstrators poured onto the streets of the Iranian capital after the announcement of the two-week conditional ceasefire between the US and Iran.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Did Trump save eight Iranian women from execution?",
+      "description": "The US president says he saved eight Iranian women from execution, but Iran says otherwise.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [plugins] discord failed during register from /home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/extensions/discord/index.js: Error: ENOTEMPTY: directory not empty, rmdir '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-unknown-cb6851bc448e/dist/extensions/node_modules/openclaw/plugin-sdk'\n[openclaw] Failed to start CLI: PluginLoadFailureError: plugin load failed: discord: Error: ENOTEMPTY: directory not empty, rmdir '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-unknown-cb6851bc448e/dist/extensions/node_modules/openclaw/plugin-sdk'\n    at maybeThrowOnPluginLoadError (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:2712:8)\n    at loadOpenClawPlugins (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:3588:3)\n    at resolveRuntimePluginRegistry (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/loader-NucjcOgv.js:2443:9)\n    at resolveOrLoadRuntimePluginRegistry (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/runtime-registry-loader-CO1cck7F.js:37:7)\n    at ensurePluginRegistryLoaded (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/runtime-registry-loader-CO1cck7F.js:68:2)\n    at ensureCliPluginRegistryLoaded (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:20:3)\n    at async ensureCliCommandBootstrap (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:47:2)\n    at async ensureCliExecutionBootstrap (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/command-execution-startup-Ch01qcCp.js:295:2)\n    at async Object.callback (file:///home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/program-C2pnmt5C.js:85:3)\n    at async Command.parseAsync (/home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/node_modules/commander/lib/command.js:1122:5)"
+  }
+}

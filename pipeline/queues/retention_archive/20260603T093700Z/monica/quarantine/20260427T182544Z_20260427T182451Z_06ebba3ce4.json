@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T18:25:44Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T182451Z_06ebba3ce4",
+    "created_at": "2026-04-27T18:24:51Z",
+    "headline_seed": "Russian fighters confirm withdrawal from northern Mali city after separatist attacks",
+    "description_seed": "Ethnic Tuareg fighters say they are in control of Kidal following a weekend of nationwide attacks, alongside Islamist groups.",
+    "link": "https://www.bbc.com/news/articles/c3w3wyq4v14o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-19",
+      "UPI"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c3w3wyq4v14o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.91,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Russian fighters confirm withdrawal from northern Mali city after separatist attacks"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Ethnic Tuareg fighters say they are in control of Kidal following a weekend of nationwide attacks, alongside Islamist groups.",
+        "word_count": 19,
+        "keyword_overlap": 13,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "After a weekend of co-ordinated attacks across Mali by separatist fighters and Islamist militants, Russian forces who are in the country helping protect the military government have confirmed they have pulled out of the northern city of Kidal.",
+        "word_count": 38,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-19",
+        "source_type": "research",
+        "text": "Russia's Africa Corps said on social media that they have pulled out of Kidal in northern Mali as the separatist group Azawad Liberation Front has taken control of the city. Azawad Liberation Front said Russian forces agreed to withdraw permanently.",
+        "word_count": 40,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "UPI",
+        "source_type": "research",
+        "text": "April 27 (UPI) -- Russian forces began withdrawing from the city of Kidal, Mali, on Monday after a weekend of attacks across the country by Al-Qaeda-linked militants.",
+        "word_count": 27,
+        "keyword_overlap": 8,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Ethnic Tuareg fighters say they are in control of Kidal following a weekend of nationwide attacks, alongside Islamist groups.\n\nAfter a weekend of co-ordinated attacks across Mali by separatist fighters and Islamist militants, Russian forces who are in the country helping protect the military government have confirmed they have pulled out of the northern city of Kidal.\n\nRussia's Africa Corps said on social media that they have pulled out of Kidal in northern Mali as the separatist group Azawad Liberation Front has taken control of the city. Azawad Liberation Front said Russian forces agreed to withdraw permanently.\n\nApril 27 (UPI) -- Russian forces began withdrawing from the city of Kidal, Mali, on Monday after a weekend of attacks across the country by Al-Qaeda-linked militants.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Russian fighters confirm withdrawal from northern Mali city after separatist attacks",
+      "description": "Ethnic Tuareg fighters say they are in control of Kidal following a weekend of nationwide attacks, alongside Islamist groups.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25079 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25082 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T12:34:00Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T123306Z_8f4f00003e",
+    "created_at": "2026-04-27T12:33:06Z",
+    "headline_seed": "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’",
+    "description_seed": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme Lebanese president Joseph Aoun said Monday that direct negotiations with Israel were aimed at ending the conflict with Hezbollah, while accusing those who drew Lebanon into war of “treason” in an implicit rebuke to the Iran-backed armed group. “My goal is to reach an end to the state of war with Israel, similar to the armistice agreement” of 1949, Aoun said in a statement, adding that “I assure you that I will not accept reaching a humiliating agreement”. Continue reading...",
+    "link": "https://www.theguardian.com/world/live/2026/apr/27/middle-east-crisis-iran-us-israel-lebanon-trump-araghchi-putin-hormuz-oil-latest-news-updates",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-8",
+      "source-9",
+      "The Guardian World"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2026/apr/27/middle-east-crisis-iran-us-israel-lebanon-trump-araghchi-putin-hormuz-oil-latest-news-updates"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme Lebanese president Joseph Aoun said Monday that direct negotiations with Israel were aimed at ending the conflict with Hezbollah, while accusing those who drew Lebanon into war of “treason” in an implicit rebuke to the Iran-backed armed group. “My goal is to reach an end to the state of war with Israel, similar to the armistice agreement” of 1949, Aoun said in a statement, adding that “I assure you that I will not accept reaching a humiliating agreement”. Continue reading...",
+        "word_count": 100,
+        "keyword_overlap": 53,
+        "strong_overlap": 34
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Lebanese president Joseph Aoun said Monday that direct negotiations with Israel were aimed at ending the conflict with Hezbollah, while accusing those who drew Lebanon into war of “treason” in an implicit rebuke to the Iran-backed armed group.",
+        "word_count": 38,
+        "keyword_overlap": 28,
+        "strong_overlap": 16
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "“My goal is to reach an end to the state of war with Israel, similar to the armistice agreement” of 1949, Aoun said in a statement, adding that “I assure you that I will not accept reaching a humiliating agreement”.",
+        "word_count": 40,
+        "keyword_overlap": 19,
+        "strong_overlap": 10
+      },
+      {
+        "source": "The Guardian World",
+        "source_type": "research",
+        "text": "Iran is offering to end its chokehold on the strait of Hormuz without addressing its nuclear program, two regional officials with knowledge of the proposal said Monday.",
+        "word_count": 27,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme Lebanese president Joseph Aoun said Monday that direct negotiations with Israel were aimed at ending the conflict with Hezbollah, while accusing those who drew Lebanon into war of “treason” in an implicit rebuke to the Iran-backed armed group. “My goal is to reach an end to the state of war with Israel, similar to the armistice agreement” of 1949, Aoun said in a statement, adding that “I assure you that I will not accept reaching a humiliating agreement”. Continue reading...\n\nLebanese president Joseph Aoun said Monday that direct negotiations with Israel were aimed at ending the conflict with Hezbollah, while accusing those who drew Lebanon into war of “treason” in an implicit rebuke to the Iran-backed armed group.\n\n“My goal is to reach an end to the state of war with Israel, similar to the armistice agreement” of 1949, Aoun said in a statement, adding that “I assure you that I will not accept reaching a humiliating agreement”.\n\nIran is offering to end its chokehold on the strait of Hormuz without addressing its nuclear program, two regional officials with knowledge of the proposal said Monday.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Middle East crisis live: Iran ‘offers to end chokehold on strait of Hormuz’",
+      "description": "Sources say country wants US to end its blockade as part of proposal but has not addressed its nuclear programme Lebanese president Joseph Aoun said Monday that direct negotiations with Israel were aimed at ending the conflict with Hezbollah, while accusing those who drew Lebanon into war of “treason” in an implicit rebuke to the Iran-backed armed group. “My goal is to reach an end to the state of war with Israel, similar to the armistice agreement” of 1949, Aoun said in a statement, adding that “I assure you that I will not accept reaching a humiliating agreement”. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25763 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25766 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

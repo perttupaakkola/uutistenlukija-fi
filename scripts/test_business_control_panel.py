@@ -83,6 +83,30 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(analytics["ga4"]["reason"], "fresh GA4 validation artifact present")
         self.assertEqual(analytics["gsc"]["reason"], "fresh Search Console validation artifact present")
 
+    def test_queue_summary_excludes_retention_archives(self) -> None:
+        """Archived queue artifacts are evidence, not live backlog."""
+        now = datetime(2026, 6, 3, 9, 0, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            live = root / "pipeline" / "queues" / "staged" / "failed"
+            archive = root / "pipeline" / "queues" / "staged" / "failed_archive" / "20260603T090000Z"
+            manifests = root / "pipeline" / "queues" / "staged" / "failed_archive" / "manifests"
+            legacy_archive = root / "pipeline" / "queues" / "monica" / "archive" / "20260603T090000Z"
+            live.mkdir(parents=True)
+            archive.mkdir(parents=True)
+            manifests.mkdir(parents=True)
+            legacy_archive.mkdir(parents=True)
+            (live / "current.json").write_text("{}", encoding="utf-8")
+            (archive / "old.json").write_text("{}", encoding="utf-8")
+            (manifests / "manifest.json").write_text("{}", encoding="utf-8")
+            (legacy_archive / "old.json").write_text("{}", encoding="utf-8")
+
+            with patch.object(panel, "QUEUE_DIR", root / "pipeline" / "queues"):
+                queues = panel.queue_summary(now)["queues"]
+
+        self.assertEqual(set(queues), {"staged/failed"})
+        self.assertEqual(queues["staged/failed"]["count"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

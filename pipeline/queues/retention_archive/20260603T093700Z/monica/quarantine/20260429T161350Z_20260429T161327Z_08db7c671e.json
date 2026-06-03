@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-29T16:13:50Z",
+  "reason": "Lähdeaineistossa on liian vähän varmennettuja tietoja kaupasta, haastattelun sisällöstä ja asiayhteydestä 250 sanan uutisartikkeliin ilman oletuksia.",
+  "packet": {
+    "packet_id": "20260429T161327Z_08db7c671e",
+    "created_at": "2026-04-29T16:13:27Z",
+    "headline_seed": "HS-haastattelu | Antti Herlin juhli Koneen jättikauppaa viisi minuuttia",
+    "description_seed": "Koneen suuromistaja Antti Herlin teki keskiviikkona Suomen historian suurimman yrityskaupan. Hän juhlisti onnistumista vain viiden minuutin ajan. Niin isä aikanaan opetti.",
+    "link": "https://www.hs.fi/visio/art-2000011975349.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "HS Tuoreimmat"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/visio/art-2000011975349.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "HS-haastattelu | Antti Herlin juhli Koneen jättikauppaa viisi minuuttia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "HS Tuoreimmat",
+        "source_type": "description",
+        "text": "Koneen suuromistaja Antti Herlin teki keskiviikkona Suomen historian suurimman yrityskaupan. Hän juhlisti onnistumista vain viiden minuutin ajan. Niin isä aikanaan opetti.",
+        "word_count": 21,
+        "keyword_overlap": 19,
+        "strong_overlap": 14
+      }
+    ],
+    "source_text": "Koneen suuromistaja Antti Herlin teki keskiviikkona Suomen historian suurimman yrityskaupan. Hän juhlisti onnistumista vain viiden minuutin ajan. Niin isä aikanaan opetti.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "HS-haastattelu | Antti Herlin juhli Koneen jättikauppaa viisi minuuttia",
+      "description": "Koneen suuromistaja Antti Herlin teki keskiviikkona Suomen historian suurimman yrityskaupan. Hän juhlisti onnistumista vain viiden minuutin ajan. Niin isä aikanaan opetti.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260429T161327Z_08db7c671e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineistossa on liian vähän varmennettuja tietoja kaupasta, haastattelun sisällöstä ja asiayhteydestä 250 sanan uutisartikkeliin ilman oletuksia.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

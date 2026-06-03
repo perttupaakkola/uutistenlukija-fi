@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T05:09:30Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T050837Z_6aa04b0beb",
+    "created_at": "2026-04-28T05:08:37Z",
+    "headline_seed": "Öljyn hinta koholla, sijoittajat odottavat seuraavaa siirtoa Hormuzinsalmella – KL seuraa",
+    "description_seed": "Markkinoilla odotetaan jännityksellä seuraavia siirtoja Hormuzinsalmella, jossa Iran ja Yhdysvallat ovat ajautuneet pattitilanteeseen tulitauosta huolimatta.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/580f9798-a7f6-4408-b848-e14dac1449da",
+    "source": "Kauppalehti",
+    "source_names": [
+      "Kauppalehti",
+      "source-13",
+      "source-4",
+      "source-12"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/580f9798-a7f6-4408-b848-e14dac1449da"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Öljyn hinta koholla, sijoittajat odottavat seuraavaa siirtoa Hormuzinsalmella – KL seuraa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Kauppalehti",
+        "source_type": "description",
+        "text": "Markkinoilla odotetaan jännityksellä seuraavia siirtoja Hormuzinsalmella, jossa Iran ja Yhdysvallat ovat ajautuneet pattitilanteeseen tulitauosta huolimatta.",
+        "word_count": 15,
+        "keyword_overlap": 14,
+        "strong_overlap": 11
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Kuwait ja Yhdistyneet arabiemiirikunnat ovat tänään kertoneet torjuneensa Iranin hyökkäyksiä, vaikka Yhdysvallat ja Iran sopivat kahden viikon tulitauosta viime yönä. Myös Iranissa öljynjalostamo on joutunut iskujen kohteeksi tulitauon julistamisen jälkeen.",
+        "word_count": 30,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "– Öljyn hinnat ovat edelleen huomattavasti korkeammalla kuin missä olimme ennen sodan alkua. Markkinoilla ei missään nimessä ajatella, että nyt ollaan selvillä vesillä.",
+        "word_count": 23,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Kysymys on myös siitä, voivatko laivanvarustamot luottaa nyt saavutettuun sopuun. Vaikka Iran sanoisi, että Hormuzinsalmella on turvallista liikkua, niin uskaltavatko varustamot oikeasti lähettää sinne tankkereitaan?",
+        "word_count": 25,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Markkinoilla odotetaan jännityksellä seuraavia siirtoja Hormuzinsalmella, jossa Iran ja Yhdysvallat ovat ajautuneet pattitilanteeseen tulitauosta huolimatta.\n\nKuwait ja Yhdistyneet arabiemiirikunnat ovat tänään kertoneet torjuneensa Iranin hyökkäyksiä, vaikka Yhdysvallat ja Iran sopivat kahden viikon tulitauosta viime yönä. Myös Iranissa öljynjalostamo on joutunut iskujen kohteeksi tulitauon julistamisen jälkeen.\n\n– Öljyn hinnat ovat edelleen huomattavasti korkeammalla kuin missä olimme ennen sodan alkua. Markkinoilla ei missään nimessä ajatella, että nyt ollaan selvillä vesillä.\n\nKysymys on myös siitä, voivatko laivanvarustamot luottaa nyt saavutettuun sopuun. Vaikka Iran sanoisi, että Hormuzinsalmella on turvallista liikkua, niin uskaltavatko varustamot oikeasti lähettää sinne tankkereitaan?",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Öljyn hinta koholla, sijoittajat odottavat seuraavaa siirtoa Hormuzinsalmella – KL seuraa",
+      "description": "Markkinoilla odotetaan jännityksellä seuraavia siirtoja Hormuzinsalmella, jossa Iran ja Yhdysvallat ovat ajautuneet pattitilanteeseen tulitauosta huolimatta.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25056 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25061 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

@@ -219,7 +219,16 @@ def queue_summary(now: datetime) -> dict[str, Any]:
     if not QUEUE_DIR.exists():
         return {"source": "pipeline/queues", "queues": queues}
     for root, dirs, files in os.walk(QUEUE_DIR):
-        dirs[:] = [d for d in dirs if not d.startswith(".") and d != "__pycache__"]
+        # Queue retention moves old artifacts into reversible archive folders.
+        # Those files are useful evidence, but they are no longer live backlog;
+        # do not let archive manifests make the operator panel look backed up.
+        dirs[:] = [
+            d for d in dirs
+            if not d.startswith(".")
+            and d != "__pycache__"
+            and d not in {"archive", "archives", "manifests"}
+            and not d.endswith("_archive")
+        ]
         json_files = [Path(root) / f for f in files if f.endswith(".json")]
         if not json_files:
             continue

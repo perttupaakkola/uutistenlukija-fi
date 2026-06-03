@@ -1,0 +1,75 @@
+{
+  "packet_id": "20260427T233759Z_d7cad135ef",
+  "created_at": "2026-04-27T23:37:59Z",
+  "headline_seed": "Open source package with 1 million monthly downloads stole user credentials",
+  "description_seed": "Open source software with more than 1 million monthly downloads was compromised after a threat actor exploited a vulnerability in the developers’ account workflow that gave access to its signing keys and other sensitive information. On Friday, unknown attackers exploited the vulnerability to push a new version of element-data , a command-line interface that helps users monitor performance and anomalies in machine-learning systems. When run, the malicious package scoured systems for sensitive data, including user profiles, warehouse credentials, cloud provider keys, API tokens, and SSH keys, developers said . The malicious version was tagged as 0.23.3 and was published to the developers’ Python Package Index and Docker image accounts. It was removed about 12 hours later, on Saturday. Elementary Cloud, the Elementary dbt package, and all other CLI versions weren't affected. Assume compromise “Users who installed 0.23.3, or who pulled and ran the affected Docker image, should assume that any credentials accessible to the environment where it ran may have been exposed,” the developers wrote. Read full article Comments",
+  "link": "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/",
+  "source": "Ars Technica",
+  "source_names": [
+    "Ars Technica",
+    "source-2",
+    "Ars Technica",
+    "source-4"
+  ],
+  "source_urls": [
+    "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/"
+  ],
+  "category_hint": "Teknologia",
+  "category": "Teknologia",
+  "story_confidence": 0.98,
+  "language_mix": [
+    "fi"
+  ],
+  "facts": {
+    "who": [],
+    "what": [
+      "Open source package with 1 million monthly downloads stole user credentials"
+    ],
+    "where": [],
+    "when": [],
+    "why": [],
+    "consequences": []
+  },
+  "clean_source_blocks": [
+    {
+      "source": "Ars Technica",
+      "source_type": "description",
+      "text": "Open source software with more than 1 million monthly downloads was compromised after a threat actor exploited a vulnerability in the developers’ account workflow that gave access to its signing keys and other sensitive information. On Friday, unknown attackers exploited the vulnerability to push a new version of element-data , a command-line interface that helps users monitor performance and anomalies in machine-learning systems. When run, the malicious package scoured systems for sensitive data, including user profiles, warehouse credentials, cloud provider keys, API tokens, and SSH keys, developers said . The malicious version was tagged as 0.23.3 and was published to the developers’ Python Package Index and Docker image accounts. It was removed about 12 hours later, on Saturday. Elementary Cloud, the Elementary dbt package, and all other CLI versions weren't affected. Assume compromise “Users who installed 0.23.3, or who pulled and ran the affected Docker image, should assume that any credentials accessible to the environment where it ran may have been exposed,” the developers wrote. Read full article Comments",
+      "word_count": 169,
+      "keyword_overlap": 87,
+      "strong_overlap": 57
+    },
+    {
+      "source": "source-2",
+      "source_type": "research",
+      "text": "On Friday, unknown attackers exploited the vulnerability to push a new version of element-data, a command-line interface that helps users monitor performance and anomalies in machine-learning systems. When run, the malicious package scoured systems for sensitive data, including user profiles, warehouse credentials, cloud provider keys, API tokens, and SSH keys, developers said. The malicious version was tagged as 0.23.3 and was published to the developers’ Python Package Index and Docker image accounts. It was removed about 12 hours later, on Saturday. Elementary Cloud, the Elementary dbt package, and all other CLI versions weren’t affected.",
+      "word_count": 94,
+      "keyword_overlap": 52,
+      "strong_overlap": 35
+    },
+    {
+      "source": "Ars Technica",
+      "source_type": "research",
+      "text": "Open source software with more than 1 million monthly downloads was compromised after a threat actor exploited a vulnerability in the developers’ account workflow that gave access to its signing keys and other sensitive information.",
+      "word_count": 35,
+      "keyword_overlap": 26,
+      "strong_overlap": 16
+    },
+    {
+      "source": "source-4",
+      "source_type": "research",
+      "text": "The threat actor gained access to the developers’ account by exploiting a vulnerability in a GitHub action they created. By posting malicious code to a pull request, the attackers were able to run a bash script that ran inside the developer’s account. The bash script retrieved the sensitive data. With the account tokens and signing keys, the attacker went on to publish a malicious element-data package that was nearly indistinguishable from a legitimate one.",
+      "word_count": 74,
+      "keyword_overlap": 17,
+      "strong_overlap": 12
+    }
+  ],
+  "source_text": "Open source software with more than 1 million monthly downloads was compromised after a threat actor exploited a vulnerability in the developers’ account workflow that gave access to its signing keys and other sensitive information. On Friday, unknown attackers exploited the vulnerability to push a new version of element-data , a command-line interface that helps users monitor performance and anomalies in machine-learning systems. When run, the malicious package scoured systems for sensitive data, including user profiles, warehouse credentials, cloud provider keys, API tokens, and SSH keys, developers said . The malicious version was tagged as 0.23.3 and was published to the developers’ Python Package Index and Docker image accounts. It was removed about 12 hours later, on Saturday. Elementary Cloud, the Elementary dbt package, and all other CLI versions weren't affected. Assume compromise “Users who installed 0.23.3, or who pulled and ran the affected Docker image, should assume that any credentials accessible to the environment where it ran may have been exposed,” the developers wrote. Read full article Comments\n\nOn Friday, unknown attackers exploited the vulnerability to push a new version of element-data, a command-line interface that helps users monitor performance and anomalies in machine-learning systems. When run, the malicious package scoured systems for sensitive data, including user profiles, warehouse credentials, cloud provider keys, API tokens, and SSH keys, developers said. The malicious version was tagged as 0.23.3 and was published to the developers’ Python Package Index and Docker image accounts. It was removed about 12 hours later, on Saturday. Elementary Cloud, the Elementary dbt package, and all other CLI versions weren’t affected.\n\nOpen source software with more than 1 million monthly downloads was compromised after a threat actor exploited a vulnerability in the developers’ account workflow that gave access to its signing keys and other sensitive information.\n\nThe threat actor gained access to the developers’ account by exploiting a vulnerability in a GitHub action they created. By posting malicious code to a pull request, the attackers were able to run a bash script that ran inside the developer’s account. The bash script retrieved the sensitive data. With the account tokens and signing keys, the attacker went on to publish a malicious element-data package that was nearly indistinguishable from a legitimate one.",
+  "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+  "article_snapshot": {
+    "title": "Open source package with 1 million monthly downloads stole user credentials",
+    "description": "Open source software with more than 1 million monthly downloads was compromised after a threat actor exploited a vulnerability in the developers’ account workflow that gave access to its signing keys and other sensitive information. On Friday, unknown attackers exploited the vulnerability to push a new version of element-data , a command-line interface that helps users monitor performance and anomalies in machine-learning systems. When run, the malicious package scoured systems for sensitive data, including user profiles, warehouse credentials, cloud provider keys, API tokens, and SSH keys, developers said . The malicious version was tagged as 0.23.3 and was published to the developers’ Python Package Index and Docker image accounts. It was removed about 12 hours later, on Saturday. Elementary Cloud, the Elementary dbt package, and all other CLI versions weren't affected. Assume compromise “Users who installed 0.23.3, or who pulled and ran the affected Docker image, should assume that any credentials accessible to the environment where it ran may have been exposed,” the developers wrote. Read full article Comments",
+    "category_hint": "Teknologia",
+    "research_source": "multi"
+  }
+}

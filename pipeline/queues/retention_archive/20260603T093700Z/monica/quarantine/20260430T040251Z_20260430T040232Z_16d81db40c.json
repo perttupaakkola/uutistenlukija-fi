@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T04:02:51Z",
+  "reason": "Aineisto on ristiriitainen ja sekoittaa väitetyn vakoilujutun muihin droonitapahtumiin, joten jutun ydinfaktoja ei voi varmistaa luotettavasti.",
+  "packet": {
+    "packet_id": "20260430T040232Z_16d81db40c",
+    "created_at": "2026-04-30T04:02:32Z",
+    "headline_seed": "Viron puolustusministeri MTV:lle: Myös oman maan kansalaiset vakoilevat Venäjälle",
+    "description_seed": "Viron suojelupoliisi Kapo on ottanut kiinni vuoden aikana kahdeksan Venäjän agenttia, mikä on ennätysmäärä.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/viron-puolustusministeri-mtv-lle-myos-oman-maan-kansalaiset-vakoilevat-venajalle/9331710",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "ksml.fi",
+      "source-2",
+      "source-11"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/viron-puolustusministeri-mtv-lle-myos-oman-maan-kansalaiset-vakoilevat-venajalle/9331710"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Viron puolustusministeri MTV:lle: Myös oman maan kansalaiset vakoilevat Venäjälle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Viron suojelupoliisi Kapo on ottanut kiinni vuoden aikana kahdeksan Venäjän agenttia, mikä on ennätysmäärä.",
+        "word_count": 14,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Venäjän ilmatilasta lentänyt drooni osui Virossa sijaitsevan Auveren voimalaitoksen savupiippuun keskiviikkona aamuyöstä, Viron yleisradioyhtiö ERR kertoo.",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Myös Latvian puolustusministeriö kertoo Venäjän ilmatilasta lentäneen droonin iskeytyneen maahan maan itäisella Kraslavan alueella keskiviikkoaamuna.",
+        "word_count": 15,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "Juttua korjattu 30.3. kello 14.17: Jutussa väitettiin aiemmin virheellisesti, että Kraslavan alueella maahan iskeytynyt drooni olisi ollut venäläinen. Todellisuudessa drooni oli peräisin Venäjän ilmatilasta. Korjattu myös otsikosta virheellinen tieto venäläisestä droonista.",
+        "word_count": 31,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Viron suojelupoliisi Kapo on ottanut kiinni vuoden aikana kahdeksan Venäjän agenttia, mikä on ennätysmäärä.\n\nVenäjän ilmatilasta lentänyt drooni osui Virossa sijaitsevan Auveren voimalaitoksen savupiippuun keskiviikkona aamuyöstä, Viron yleisradioyhtiö ERR kertoo.\n\nMyös Latvian puolustusministeriö kertoo Venäjän ilmatilasta lentäneen droonin iskeytyneen maahan maan itäisella Kraslavan alueella keskiviikkoaamuna.\n\nJuttua korjattu 30.3. kello 14.17: Jutussa väitettiin aiemmin virheellisesti, että Kraslavan alueella maahan iskeytynyt drooni olisi ollut venäläinen. Todellisuudessa drooni oli peräisin Venäjän ilmatilasta. Korjattu myös otsikosta virheellinen tieto venäläisestä droonista.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Viron puolustusministeri MTV:lle: Myös oman maan kansalaiset vakoilevat Venäjälle",
+      "description": "Viron suojelupoliisi Kapo on ottanut kiinni vuoden aikana kahdeksan Venäjän agenttia, mikä on ennätysmäärä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T040232Z_16d81db40c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto on ristiriitainen ja sekoittaa väitetyn vakoilujutun muihin droonitapahtumiin, joten jutun ydinfaktoja ei voi varmistaa luotettavasti.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

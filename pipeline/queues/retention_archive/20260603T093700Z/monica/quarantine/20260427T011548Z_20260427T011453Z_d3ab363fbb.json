@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T01:15:48Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T011453Z_d3ab363fbb",
+    "created_at": "2026-04-27T01:14:53Z",
+    "headline_seed": "Trump and officials 'likely' targets of press dinner shooting suspect, authorities believe",
+    "description_seed": "The suspect is expected to be charged with assault of a federal officer and using a firearm during a crime of violence, officials have said.",
+    "link": "https://www.bbc.com/news/articles/c2d8dg57rzdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "Hindustan Times",
+      "BBC World",
+      "source-38"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c2d8dg57rzdo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.94,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump and officials 'likely' targets of press dinner shooting suspect, authorities believe"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The suspect is expected to be charged with assault of a federal officer and using a firearm during a crime of violence, officials have said.",
+        "word_count": 25,
+        "keyword_overlap": 15,
+        "strong_overlap": 10
+      },
+      {
+        "source": "Hindustan Times",
+        "source_type": "research",
+        "text": "President Donald Trump and officials in his administration were the likely targets of a suspect who fired on a security agent guarding the White House Correspondents’ Association dinner in Washington, US acting Attorney General Todd Blanche said on Sunday.",
+        "word_count": 39,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US President Donald Trump and his officials were the \"likely\" targets of a suspected gunman who attempted to storm the White House Correspondents' Dinner, acting US Attorney General Todd Blanche has said.",
+        "word_count": 32,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-38",
+        "source_type": "research",
+        "text": "Cole Tomas Allen, the 31-year-old suspected shooter from California railed against Trump administration policies and referred to himself as a “friendly federal assassin” in writings sent to family members minutes before the shooting that authorities increasingly believe was politically motivated, according to a law enforcement official familiar with the investigation.",
+        "word_count": 50,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "The suspect is expected to be charged with assault of a federal officer and using a firearm during a crime of violence, officials have said.\n\nPresident Donald Trump and officials in his administration were the likely targets of a suspect who fired on a security agent guarding the White House Correspondents’ Association dinner in Washington, US acting Attorney General Todd Blanche said on Sunday.\n\nUS President Donald Trump and his officials were the \"likely\" targets of a suspected gunman who attempted to storm the White House Correspondents' Dinner, acting US Attorney General Todd Blanche has said.\n\nCole Tomas Allen, the 31-year-old suspected shooter from California railed against Trump administration policies and referred to himself as a “friendly federal assassin” in writings sent to family members minutes before the shooting that authorities increasingly believe was politically motivated, according to a law enforcement official familiar with the investigation.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump and officials 'likely' targets of press dinner shooting suspect, authorities believe",
+      "description": "The suspect is expected to be charged with assault of a federal officer and using a firearm during a crime of violence, officials have said.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25416 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25421 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

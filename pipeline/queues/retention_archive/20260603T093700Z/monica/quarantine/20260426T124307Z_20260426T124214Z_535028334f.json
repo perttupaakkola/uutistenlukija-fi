@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T12:43:07Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T124214Z_535028334f",
+    "created_at": "2026-04-26T12:42:14Z",
+    "headline_seed": "Maailman isoimmat mediat innostuivat suomalaistutkimuksista – puolen tunnin löylyt terästävät immuunipuolustusta",
+    "description_seed": "Professori Jari Laukkasen ryhmän saunatutkimuksista ovat uutisoineet BBC, New York Times, Reuters, CNN ja monet muut.",
+    "link": "https://yle.fi/a/74-20221492?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-10",
+      "source-2",
+      "source-13"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20221492?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Maailman isoimmat mediat innostuivat suomalaistutkimuksista – puolen tunnin löylyt terästävät immuunipuolustusta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Professori Jari Laukkasen ryhmän saunatutkimuksista ovat uutisoineet BBC, New York Times, Reuters, CNN ja monet muut.",
+        "word_count": 16,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-10",
+        "source_type": "research",
+        "text": "Laukkasen ryhmän tutkimukset ovat saaneet laajaa kansainvälistä huomiota. Häntä ovat haastatelleet maailman tunnetuimmat mediatalot, kuten BBC, New York Times, CNN, Reuters ja monet muut.",
+        "word_count": 24,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "– Tämän tutkimuksen mukaan saunominen voi vapauttaa verenkiertoon valkosoluja, jotka ovat hyvin keskeisiä elimistön puolustautumisessa erilaisia sairauksia vastaan, kertoo Itä-Suomen yliopiston sisätautien professori Jari Laukkanen.",
+        "word_count": 25,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Mikä saunomisessa sitten vaikuttaa terveyteen niin monitahoisesti? Tähän Laukkasen ryhmä on pyrkinyt pureutumaan viimeisimmissä tutkimuksissaan, mutta osittain syyt ovat yhä hämärän peitossa.",
+        "word_count": 22,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Professori Jari Laukkasen ryhmän saunatutkimuksista ovat uutisoineet BBC, New York Times, Reuters, CNN ja monet muut.\n\nLaukkasen ryhmän tutkimukset ovat saaneet laajaa kansainvälistä huomiota. Häntä ovat haastatelleet maailman tunnetuimmat mediatalot, kuten BBC, New York Times, CNN, Reuters ja monet muut.\n\n– Tämän tutkimuksen mukaan saunominen voi vapauttaa verenkiertoon valkosoluja, jotka ovat hyvin keskeisiä elimistön puolustautumisessa erilaisia sairauksia vastaan, kertoo Itä-Suomen yliopiston sisätautien professori Jari Laukkanen.\n\nMikä saunomisessa sitten vaikuttaa terveyteen niin monitahoisesti? Tähän Laukkasen ryhmä on pyrkinyt pureutumaan viimeisimmissä tutkimuksissaan, mutta osittain syyt ovat yhä hämärän peitossa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Maailman isoimmat mediat innostuivat suomalaistutkimuksista – puolen tunnin löylyt terästävät immuunipuolustusta",
+      "description": "Professori Jari Laukkasen ryhmän saunatutkimuksista ovat uutisoineet BBC, New York Times, Reuters, CNN ja monet muut.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [plugins] discord failed during register from /home/pertt/.openclaw/tools/node-v22.22.0/lib/node_modules/openclaw/dist/extensions/discord/index.js: Error: ENOTEMPTY: directory not empty, rmdir '/home/pertt/.openclaw/plugin-runtime-deps/openclaw-unknown-cb6851bc448e/dist/extensions/node_modules/openclaw/plugin-sdk'\n[plugins] 1 plugin(s) failed to initialize (register: discord). Run 'openclaw plugins list' for details.\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25248 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25251 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

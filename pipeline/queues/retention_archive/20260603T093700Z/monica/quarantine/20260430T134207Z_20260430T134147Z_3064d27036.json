@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T13:42:07Z",
+  "reason": "Aineisto on liian niukka 250+ sanan uutiseen ilman täytemäistä taustoitusta: se kertoo vain lakittajan, lähetysajan, lakin materiaalit ja tämän vuoden teeman.",
+  "packet": {
+    "packet_id": "20260430T134147Z_3064d27036",
+    "created_at": "2026-04-30T13:41:47Z",
+    "headline_seed": "Manta saa taas lakkinsa, ja sen sisällä on salaisuus – seuraa suoraa lähetystä kello 17.30 alkaen",
+    "description_seed": "Tänä vuonna Havis Amandan patsaan lakittaa Helsingin yliopiston ylioppilas­kunta. Yle näyttää tilaisuuden suorana kello 17.30 alkaen.",
+    "link": "https://yle.fi/a/74-20223306?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "source-3",
+      "source-9",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20223306?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.81,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Manta saa taas lakkinsa, ja sen sisällä on salaisuus – seuraa suoraa lähetystä kello 17.30 alkaen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Tänä vuonna Havis Amandan patsaan lakittaa Helsingin yliopiston ylioppilas­kunta. Yle näyttää tilaisuuden suorana kello 17.30 alkaen.",
+        "word_count": 16,
+        "keyword_overlap": 15,
+        "strong_overlap": 11
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Yle näyttää tilaisuuden suorana verkkosivuillaan. Lähetystä voi seurata tässä artikkelissa ja Yle Areenassa kello 17.30 alkaen.",
+        "word_count": 16,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "Havis Amandan lakki on tänä vuonna valmistettu kierrätysmateriaaleista ja ylioppilaslakkeja valmistavan C. L. Seifertin lakkituotannon ylijäämämateriaaleista.",
+        "word_count": 16,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Lakituksen teemana on tänä vuonna Itämeri ja sen hyvinvointi, kertoo Helsingin yliopistossa pohjoismaisia kieliä opiskeleva Ella-Kaisa Lehtinen.",
+        "word_count": 17,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Tänä vuonna Havis Amandan patsaan lakittaa Helsingin yliopiston ylioppilas­kunta. Yle näyttää tilaisuuden suorana kello 17.30 alkaen.\n\nYle näyttää tilaisuuden suorana verkkosivuillaan. Lähetystä voi seurata tässä artikkelissa ja Yle Areenassa kello 17.30 alkaen.\n\nHavis Amandan lakki on tänä vuonna valmistettu kierrätysmateriaaleista ja ylioppilaslakkeja valmistavan C. L. Seifertin lakkituotannon ylijäämämateriaaleista.\n\nLakituksen teemana on tänä vuonna Itämeri ja sen hyvinvointi, kertoo Helsingin yliopistossa pohjoismaisia kieliä opiskeleva Ella-Kaisa Lehtinen.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Manta saa taas lakkinsa, ja sen sisällä on salaisuus – seuraa suoraa lähetystä kello 17.30 alkaen",
+      "description": "Tänä vuonna Havis Amandan patsaan lakittaa Helsingin yliopiston ylioppilas­kunta. Yle näyttää tilaisuuden suorana kello 17.30 alkaen.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T134147Z_3064d27036\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto on liian niukka 250+ sanan uutiseen ilman täytemäistä taustoitusta: se kertoo vain lakittajan, lähetysajan, lakin materiaalit ja tämän vuoden teeman.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

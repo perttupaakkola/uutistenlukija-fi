@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-28T09:12:25Z",
+  "reason": "aineisto sisältää vain yhden sitaatin eikä riittäviä perustietoja kiertueesta tai sen osallistujista",
+  "packet": {
+    "packet_id": "20260428T091124Z_aa04cdf9cb",
+    "created_at": "2026-04-28T09:11:24Z",
+    "headline_seed": "Iskelmälegendat historialliselle yhteiskiertueelle: \"Tämä on Suomen kansalle hieno palvelus\"",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9409524",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-6"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9409524"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.39,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Iskelmälegendat historialliselle yhteiskiertueelle: \"Tämä on Suomen kansalle hieno palvelus\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "– On harvinaista, että meidän ikäiset kaverit vielä pyydetään tällaiselle kiertueelle. Ei sellaista ennen nähty. Tämä on Suomen kansalle hieno palvelus, sanoo puolestaan Pasi Kaunisto.",
+        "word_count": 25,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "– On harvinaista, että meidän ikäiset kaverit vielä pyydetään tällaiselle kiertueelle. Ei sellaista ennen nähty. Tämä on Suomen kansalle hieno palvelus, sanoo puolestaan Pasi Kaunisto.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Iskelmälegendat historialliselle yhteiskiertueelle: \"Tämä on Suomen kansalle hieno palvelus\"",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=2e57ff83-31de-4779-8d07-88d9a31acc13 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T091124Z_aa04cdf9cb\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto sisältää vain yhden sitaatin eikä riittäviä perustietoja kiertueesta tai sen osallistujista\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

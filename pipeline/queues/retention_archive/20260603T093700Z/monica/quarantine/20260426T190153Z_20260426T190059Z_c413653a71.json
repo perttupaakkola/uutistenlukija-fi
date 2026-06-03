@@ -1,0 +1,56 @@
+{
+  "ts": "2026-04-26T19:01:53Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T190059Z_c413653a71",
+    "created_at": "2026-04-26T19:00:59Z",
+    "headline_seed": "Suomen hallitus päätti: Yli 110 M€ lisää teihin ja ratoihin sodan takia – Osa ”Natolle kriittisistä” hankkeista salaisia: Tässä 7 hankkeen lista, jonka saa laillisesti paljastaa",
+    "description_seed": "Hallitus käynnistää sotilaallisen liikkuvuuden hankkeita, jotka sen mukaan ovat välttämättömiä. Mukana on siltojen vahvistamista ja eurooppalaisen raideyhteyden jatkosuunnittelua Torniosta Kemiin ja pohjoisen suuntaan.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/24e94474-8495-49dd-8cbf-1d976f3c30bc",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "Tekniikka & Talous"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/24e94474-8495-49dd-8cbf-1d976f3c30bc"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomen hallitus päätti: Yli 110 M€ lisää teihin ja ratoihin sodan takia – Osa ”Natolle kriittisistä” hankkeista salaisia: Tässä 7 hankkeen lista, jonka saa laillisesti paljastaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Tekniikka & Talous",
+        "source_type": "description",
+        "text": "Hallitus käynnistää sotilaallisen liikkuvuuden hankkeita, jotka sen mukaan ovat välttämättömiä. Mukana on siltojen vahvistamista ja eurooppalaisen raideyhteyden jatkosuunnittelua Torniosta Kemiin ja pohjoisen suuntaan.",
+        "word_count": 23,
+        "keyword_overlap": 17,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Hallitus käynnistää sotilaallisen liikkuvuuden hankkeita, jotka sen mukaan ovat välttämättömiä. Mukana on siltojen vahvistamista ja eurooppalaisen raideyhteyden jatkosuunnittelua Torniosta Kemiin ja pohjoisen suuntaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomen hallitus päätti: Yli 110 M€ lisää teihin ja ratoihin sodan takia – Osa ”Natolle kriittisistä” hankkeista salaisia: Tässä 7 hankkeen lista, jonka saa laillisesti paljastaa",
+      "description": "Hallitus käynnistää sotilaallisen liikkuvuuden hankkeita, jotka sen mukaan ovat välttämättömiä. Mukana on siltojen vahvistamista ja eurooppalaisen raideyhteyden jatkosuunnittelua Torniosta Kemiin ja pohjoisen suuntaan.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25259 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25262 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

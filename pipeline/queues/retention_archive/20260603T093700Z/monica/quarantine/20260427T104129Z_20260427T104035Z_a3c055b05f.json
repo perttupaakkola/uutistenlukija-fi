@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T10:41:29Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T104035Z_a3c055b05f",
+    "created_at": "2026-04-27T10:40:35Z",
+    "headline_seed": "At least 42 killed in Chad after water well dispute escalates",
+    "description_seed": "The dispute was initially between two families before escalating into a cycle of reprisal attacks.",
+    "link": "https://www.bbc.com/news/articles/cr717plvxvgo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-2",
+      "BBC World",
+      "source-9"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cr717plvxvgo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "At least 42 killed in Chad after water well dispute escalates"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The dispute was initially between two families before escalating into a cycle of reprisal attacks.",
+        "word_count": 15,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "The conflict in Wadi Fira province, initially between two families, is said to have escalated into a cycle of reprisal attacks that spread over a wide area, with villages burned down.",
+        "word_count": 31,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "At least 42 people have been killed and 10 injured in fighting between rival ethnic groups in eastern Chad in a conflict that began as a dispute over a water well, officials say.",
+        "word_count": 33,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-9",
+        "source_type": "research",
+        "text": "According to the International Crisis Group think-tank, 1,000 people were killed and 2,000 injured in about 100 clashes between 2021 and 2024.",
+        "word_count": 22,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "The dispute was initially between two families before escalating into a cycle of reprisal attacks.\n\nThe conflict in Wadi Fira province, initially between two families, is said to have escalated into a cycle of reprisal attacks that spread over a wide area, with villages burned down.\n\nAt least 42 people have been killed and 10 injured in fighting between rival ethnic groups in eastern Chad in a conflict that began as a dispute over a water well, officials say.\n\nAccording to the International Crisis Group think-tank, 1,000 people were killed and 2,000 injured in about 100 clashes between 2021 and 2024.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "At least 42 killed in Chad after water well dispute escalates",
+      "description": "The dispute was initially between two families before escalating into a cycle of reprisal attacks.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25581 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25585 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

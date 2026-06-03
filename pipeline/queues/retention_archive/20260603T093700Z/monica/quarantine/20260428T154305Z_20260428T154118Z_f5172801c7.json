@@ -1,0 +1,84 @@
+{
+  "ts": "2026-04-28T15:43:05Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T154118Z_f5172801c7",
+    "created_at": "2026-04-28T15:41:18Z",
+    "headline_seed": "Suspected gunman aged 89 held in Greece after five wounded",
+    "description_seed": "Five people were left with non-life-threatening injuries, according to Greece's state broadcaster ERT.",
+    "link": "https://www.bbc.com/news/articles/cyv2pmz2v86o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-12",
+      "BBC World",
+      "AOL"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cyv2pmz2v86o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.83,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suspected gunman aged 89 held in Greece after five wounded"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Five people were left with non-life-threatening injuries, according to Greece's state broadcaster ERT.",
+        "word_count": 13,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "The five people - a man and four women - were left with non-life-threatening injuries in the shootings.",
+        "word_count": 18,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Police in Greece have arrested an 89-year-old man following a double shooting which left five people injured.",
+        "word_count": 17,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "ATHENS, April 28 (Reuters) - Police arrested an 89-year-old suspected of wounding five ‌people in two separate gun attacks ‌in Athens on Tuesday, the Greek citizens' protection ​ministry said.",
+        "word_count": 29,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Five people were left with non-life-threatening injuries, according to Greece's state broadcaster ERT.\n\nThe five people - a man and four women - were left with non-life-threatening injuries in the shootings.\n\nPolice in Greece have arrested an 89-year-old man following a double shooting which left five people injured.\n\nATHENS, April 28 (Reuters) - Police arrested an 89-year-old suspected of wounding five ‌people in two separate gun attacks ‌in Athens on Tuesday, the Greek citizens' protection ​ministry said.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suspected gunman aged 89 held in Greece after five wounded",
+      "description": "Five people were left with non-life-threatening injuries, according to Greece's state broadcaster ERT.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\nContext overflow: prompt too large for the model. Try /reset (or /new) to start a fresh session, or use a larger-context model.",
+  "extra": {
+    "error": "Monica response did not contain valid JSON",
+    "stage": "initial_parse"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T14:38:45Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T143751Z_69c5e3c392",
+    "created_at": "2026-04-26T14:37:51Z",
+    "headline_seed": "Patient allegedly attacks several nurses, police and member of the public at Sydney hospital",
+    "description_seed": "Calls for more security measures after man, 51, arrested over alleged assaults at Prince of Wales hospital Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily news podcast A hospital attack that left a nurse seriously injured has fuelled calls for improved safety and security after several violent incidents in emergency departments. Police restrained a 51-year-old patient after he allegedly assaulted several nurses, police and a member of the public in a Saturday night melee at Sydney’s Prince of Wales hospital. Continue reading...",
+    "link": "https://www.theguardian.com/australia-news/2026/apr/26/patient-shot-with-taser-after-allegedly-injuring-nurse-and-others-in-sydney-hospital-ntwnfb",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-26",
+      "source-5",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/australia-news/2026/apr/26/patient-shot-with-taser-after-allegedly-injuring-nurse-and-others-in-sydney-hospital-ntwnfb"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Patient allegedly attacks several nurses, police and member of the public at Sydney hospital"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Calls for more security measures after man, 51, arrested over alleged assaults at Prince of Wales hospital Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily news podcast A hospital attack that left a nurse seriously injured has fuelled calls for improved safety and security after several violent incidents in emergency departments. Police restrained a 51-year-old patient after he allegedly assaulted several nurses, police and a member of the public in a Saturday night melee at Sydney’s Prince of Wales hospital. Continue reading...",
+        "word_count": 93,
+        "keyword_overlap": 53,
+        "strong_overlap": 37
+      },
+      {
+        "source": "source-26",
+        "source_type": "research",
+        "text": "Police restrained a 51-year-old patient after he allegedly assaulted several nurses, police and a member of the public in a Saturday night melee at Sydney's Prince of Wales Hospital.",
+        "word_count": 29,
+        "keyword_overlap": 18,
+        "strong_overlap": 14
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Police restrained a 51-year-old patient after he allegedly assaulted several nurses, police and a member of the public in a Saturday night melee at Sydney’s Prince of Wales hospital.",
+        "word_count": 29,
+        "keyword_overlap": 18,
+        "strong_overlap": 14
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "A hospital attack that left a nurse seriously injured has fuelled calls for improved safety and security after several violent incidents in emergency departments.",
+        "word_count": 24,
+        "keyword_overlap": 18,
+        "strong_overlap": 13
+      }
+    ],
+    "source_text": "Calls for more security measures after man, 51, arrested over alleged assaults at Prince of Wales hospital Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily news podcast A hospital attack that left a nurse seriously injured has fuelled calls for improved safety and security after several violent incidents in emergency departments. Police restrained a 51-year-old patient after he allegedly assaulted several nurses, police and a member of the public in a Saturday night melee at Sydney’s Prince of Wales hospital. Continue reading...\n\nPolice restrained a 51-year-old patient after he allegedly assaulted several nurses, police and a member of the public in a Saturday night melee at Sydney's Prince of Wales Hospital.\n\nPolice restrained a 51-year-old patient after he allegedly assaulted several nurses, police and a member of the public in a Saturday night melee at Sydney’s Prince of Wales hospital.\n\nA hospital attack that left a nurse seriously injured has fuelled calls for improved safety and security after several violent incidents in emergency departments.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Patient allegedly attacks several nurses, police and member of the public at Sydney hospital",
+      "description": "Calls for more security measures after man, 51, arrested over alleged assaults at Prince of Wales hospital Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily news podcast A hospital attack that left a nurse seriously injured has fuelled calls for improved safety and security after several violent incidents in emergency departments. Police restrained a 51-year-old patient after he allegedly assaulted several nurses, police and a member of the public in a Saturday night melee at Sydney’s Prince of Wales hospital. Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25309 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25312 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

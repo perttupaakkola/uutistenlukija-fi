@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T14:10:36Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T140942Z_f890aa9609",
+    "created_at": "2026-04-26T14:09:42Z",
+    "headline_seed": "Tekoälyn käyttö voi laiskistaa",
+    "description_seed": "Paitsi laiskistumiseen, tekoäly saattaa johtaa ”kognitiiviseen antautumiseen”.",
+    "link": "https://www.kauppalehti.fi/uutiset/a/8cc623da-a987-4daf-b667-9359c0449ef6",
+    "source": "Kauppalehti",
+    "source_names": [
+      "ksml.fi",
+      "source-27",
+      "source-24",
+      "source-32"
+    ],
+    "source_urls": [
+      "https://www.kauppalehti.fi/uutiset/a/8cc623da-a987-4daf-b667-9359c0449ef6"
+    ],
+    "category_hint": "Talous",
+    "category": "Talous",
+    "story_confidence": 0.92,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tekoälyn käyttö voi laiskistaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "ksml.fi",
+        "source_type": "research",
+        "text": "Tekoäly kiinnostaa. Sen todisti Laukaan kansalaisopiston maksuton ja kaikille avoin Tutustu tekoälyyn -kurssi, joka täyttyi viimeistä paikkaa myöten. Kolmen kerran tapaamisiin ei tarvinnut aiempaa tietämystä tai kokemusta aiheesta. Kurssi oli suunnattu erityisesti ikääntyville, työttömille ja oppimisvaikeuksia kokeville, mutta se houkutteli etenkin eläkeläisiä. Tekoälyn hyödyntämiseen arjessa tutustuttiin yhdessä opettaja Maija Valtolan johdolla.",
+        "word_count": 51,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-27",
+        "source_type": "research",
+        "text": "Tutkimus toteutettiin Lancasterin yliopistossa. Tutkijoiden mukaan tekoäly voi joskus peilata ihmisten käytöstä. Se saattaa siis vastata samalla tavalla kuin käyttäjä, jos keskustelu muuttuu aggressiiviseksi.",
+        "word_count": 24,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-24",
+        "source_type": "research",
+        "text": "Kun keskustelu kiristyi, tekoälyn vastaukset alkoivat heijastaa samaa vihamielistä sävyä kuin käyttäjällä oli. Joissakin tapauksissa tekoäly tuotti suoria loukkauksia ja kirosanoja.",
+        "word_count": 21,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-32",
+        "source_type": "research",
+        "text": "– Kävimme kurssin alussa yleiskatsauksen tekoälyyn sekä tutustuimme tiedonhakuun. Seuraavilla kerroilla harjoittelemme tekstin ja kuvien tuottamista. Tekoäly voi auttaa esimerkiksi aiheiden ideoinnissa, tekstin rakenteen kehittelyssä tai sitä voi pyytää tuottamaan tekstin tai kuvan, Valtola kertoi.",
+        "word_count": 35,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Tekoäly kiinnostaa. Sen todisti Laukaan kansalaisopiston maksuton ja kaikille avoin Tutustu tekoälyyn -kurssi, joka täyttyi viimeistä paikkaa myöten. Kolmen kerran tapaamisiin ei tarvinnut aiempaa tietämystä tai kokemusta aiheesta. Kurssi oli suunnattu erityisesti ikääntyville, työttömille ja oppimisvaikeuksia kokeville, mutta se houkutteli etenkin eläkeläisiä. Tekoälyn hyödyntämiseen arjessa tutustuttiin yhdessä opettaja Maija Valtolan johdolla.\n\nTutkimus toteutettiin Lancasterin yliopistossa. Tutkijoiden mukaan tekoäly voi joskus peilata ihmisten käytöstä. Se saattaa siis vastata samalla tavalla kuin käyttäjä, jos keskustelu muuttuu aggressiiviseksi.\n\nKun keskustelu kiristyi, tekoälyn vastaukset alkoivat heijastaa samaa vihamielistä sävyä kuin käyttäjällä oli. Joissakin tapauksissa tekoäly tuotti suoria loukkauksia ja kirosanoja.\n\n– Kävimme kurssin alussa yleiskatsauksen tekoälyyn sekä tutustuimme tiedonhakuun. Seuraavilla kerroilla harjoittelemme tekstin ja kuvien tuottamista. Tekoäly voi auttaa esimerkiksi aiheiden ideoinnissa, tekstin rakenteen kehittelyssä tai sitä voi pyytää tuottamaan tekstin tai kuvan, Valtola kertoi.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tekoälyn käyttö voi laiskistaa",
+      "description": "Paitsi laiskistumiseen, tekoäly saattaa johtaa ”kognitiiviseen antautumiseen”.",
+      "category_hint": "Talous",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25218 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25224 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

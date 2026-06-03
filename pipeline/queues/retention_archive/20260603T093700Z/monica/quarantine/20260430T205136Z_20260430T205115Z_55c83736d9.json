@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T20:51:36Z",
+  "reason": "Aineisto sisältää vain lyhyet perustiedot Marjamäen siirtymisestä EV Zugiin, eikä tue 250 sanan faktapohjaista artikkelia ilman toistoa tai lisätietojen keksimistä.",
+  "packet": {
+    "packet_id": "20260430T205115Z_55c83736d9",
+    "created_at": "2026-04-30T20:51:15Z",
+    "headline_seed": "Lauri Marjamäki siirtyy EV Zugin päävalmentajaksi",
+    "description_seed": "EHC Klotenista lähtenyt Lauri Marjamäki sai töitä Sveitsin liigan sisältä.",
+    "link": "https://www.jatkoaika.com/Uutiset/Lauri-Marjam%C3%A4ki-siirtyy-EV-Zugin-p%C3%A4%C3%A4valmentajaksi/269384",
+    "source": "Jatkoaika.com",
+    "source_names": [
+      "Jatkoaika.com",
+      "source-13",
+      "Sportti.com",
+      "source-7"
+    ],
+    "source_urls": [
+      "https://www.jatkoaika.com/Uutiset/Lauri-Marjam%C3%A4ki-siirtyy-EV-Zugin-p%C3%A4%C3%A4valmentajaksi/269384"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.79,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lauri Marjamäki siirtyy EV Zugin päävalmentajaksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Jatkoaika.com",
+        "source_type": "description",
+        "text": "EHC Klotenista lähtenyt Lauri Marjamäki sai töitä Sveitsin liigan sisältä.",
+        "word_count": 10,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-13",
+        "source_type": "research",
+        "text": "Marjamäki siirtyy Zugiin toisesta Sveitsin pääsarjaseurasta EHC Klotenista. Sopimusta entisessä seurassa olisi ollut vielä vuosi jäljellä.",
+        "word_count": 16,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Sportti.com",
+        "source_type": "research",
+        "text": "Lauri Marjamäki on saanut uusia töitä. Leijonien entinen päävalmentaja siirtyy Sveitsin pääsarjaa NLA:ta pelaavan EV Zugin käskyttäjäksi.",
+        "word_count": 17,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "48-vuotias Marjamäki siirtyy uuteen tehtäväänsä EHC Klotenista ja aloittaa työnsä uudessa joukkueessa toukokuun alussa.",
+        "word_count": 14,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "EHC Klotenista lähtenyt Lauri Marjamäki sai töitä Sveitsin liigan sisältä.\n\nMarjamäki siirtyy Zugiin toisesta Sveitsin pääsarjaseurasta EHC Klotenista. Sopimusta entisessä seurassa olisi ollut vielä vuosi jäljellä.\n\nLauri Marjamäki on saanut uusia töitä. Leijonien entinen päävalmentaja siirtyy Sveitsin pääsarjaa NLA:ta pelaavan EV Zugin käskyttäjäksi.\n\n48-vuotias Marjamäki siirtyy uuteen tehtäväänsä EHC Klotenista ja aloittaa työnsä uudessa joukkueessa toukokuun alussa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lauri Marjamäki siirtyy EV Zugin päävalmentajaksi",
+      "description": "EHC Klotenista lähtenyt Lauri Marjamäki sai töitä Sveitsin liigan sisältä.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T205115Z_55c83736d9\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto sisältää vain lyhyet perustiedot Marjamäen siirtymisestä EV Zugiin, eikä tue 250 sanan faktapohjaista artikkelia ilman toistoa tai lisätietojen keksimistä.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

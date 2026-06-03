@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T14:23:59Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T142305Z_d3f33dd7f1",
+    "created_at": "2026-04-27T14:23:05Z",
+    "headline_seed": "Koripallo | Miikka Muurinen valitsi Arkansasin yliopiston",
+    "description_seed": "Miikka Muurinen pelaa ensi kaudella Arkansas Razorbacksissa.",
+    "link": "https://www.hs.fi/urheilu/art-2000011971060.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "Yle",
+      "source-4",
+      "source-2",
+      "source-8"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/urheilu/art-2000011971060.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.86,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Koripallo | Miikka Muurinen valitsi Arkansasin yliopiston"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "19-vuotiaan Miikka Muurisen ensi kauden suunnitelmat ovat selvillä. Hän paljasti sosiaalisessa mediassa, että hän on sitoutunut University of Arkansasin riveihin.",
+        "word_count": 20,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "– Kävin Arkansasissa vierailulla puolitoistavuotta sitten. Sen jälkeen he ovat laittaneet melkein viikoittain viestiä ja kyselleet kuulumisia. Arkansas on aidosti näyttänyt, että he haluavat minut sinne, kertoo Muurinen Yle Urheilulle puhelimitse Yhdysvalloista.",
+        "word_count": 32,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Muurisen mukaan valinta oli helppo, sillä Arkansas oli pitänyt suomalaislupaukseen yhteyttä jo noin puolentoista vuoden ajan. Loppuvaiheessa 211-senttinen Muurinen teki valinnan kuuden opinahjon välillä.",
+        "word_count": 24,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Calipari siirtyi Arkansasin yliopiston päävalmentajaksi kaksi vuotta sitten. Tätä ennen yhdysvaltalaisvalmentaja luotsasi peräti 15 vuoden ajan Kentucky Wildcatsin yliopistojoukkuetta.",
+        "word_count": 19,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "19-vuotiaan Miikka Muurisen ensi kauden suunnitelmat ovat selvillä. Hän paljasti sosiaalisessa mediassa, että hän on sitoutunut University of Arkansasin riveihin.\n\n– Kävin Arkansasissa vierailulla puolitoistavuotta sitten. Sen jälkeen he ovat laittaneet melkein viikoittain viestiä ja kyselleet kuulumisia. Arkansas on aidosti näyttänyt, että he haluavat minut sinne, kertoo Muurinen Yle Urheilulle puhelimitse Yhdysvalloista.\n\nMuurisen mukaan valinta oli helppo, sillä Arkansas oli pitänyt suomalaislupaukseen yhteyttä jo noin puolentoista vuoden ajan. Loppuvaiheessa 211-senttinen Muurinen teki valinnan kuuden opinahjon välillä.\n\nCalipari siirtyi Arkansasin yliopiston päävalmentajaksi kaksi vuotta sitten. Tätä ennen yhdysvaltalaisvalmentaja luotsasi peräti 15 vuoden ajan Kentucky Wildcatsin yliopistojoukkuetta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Koripallo | Miikka Muurinen valitsi Arkansasin yliopiston",
+      "description": "Miikka Muurinen pelaa ensi kaudella Arkansas Razorbacksissa.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25309 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25312 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

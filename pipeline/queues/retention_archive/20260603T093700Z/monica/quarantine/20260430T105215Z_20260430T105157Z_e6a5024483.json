@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T10:52:15Z",
+  "reason": "Aineistossa on liian vähän varmistettuja tietoja Bottaksen kirjoituksen sisällöstä, ja mukana on myös aiheen kannalta epäolennaista F1-uutistekstiä.",
+  "packet": {
+    "packet_id": "20260430T105157Z_e6a5024483",
+    "created_at": "2026-04-30T10:51:57Z",
+    "headline_seed": "Valtteri Bottas kertoo, kuinka hänen mielenterveytensä romahti",
+    "description_seed": "Valtteri Bottas avautui elämänsä vaikeista vaiheista The Player’s Tribunessa julkaistussa kirjoituksessaan.",
+    "link": "https://www.is.fi/formula1/art-2000011978465.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "IS Urheilu",
+      "Sportti",
+      "source-2",
+      "source-4"
+    ],
+    "source_urls": [
+      "https://www.is.fi/formula1/art-2000011978465.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Valtteri Bottas kertoo, kuinka hänen mielenterveytensä romahti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "IS Urheilu",
+        "source_type": "description",
+        "text": "Valtteri Bottas avautui elämänsä vaikeista vaiheista The Player’s Tribunessa julkaistussa kirjoituksessaan.",
+        "word_count": 11,
+        "keyword_overlap": 10,
+        "strong_overlap": 10
+      },
+      {
+        "source": "Sportti",
+        "source_type": "research",
+        "text": "F1-kausi jatkuu tulevana viikonloppuna Japanissa, jossa ajetaan kauden kolmas osakilpailu. Valtteri Bottas ehti pienen tauon aikana katsella aiempien kisojen huippuhetkiä.",
+        "word_count": 20,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Bottas palasi Kiinasta takaisin Monacossa sijaitsevaan kotiinsa ja vietti lepohetken pyöräillen ja katsellen alkukauden kisojen huippuhetkiä. Samalla hän pääsi näkemään eri perspektiivistä miltä kilpailut näyttävät katsojan silmin.",
+        "word_count": 27,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "– Katselin huippuhetkiä, kun pääsin kotiin ja minusta se näytti aika hyvältä. Oli mukava nähdä Ferrarin ja Mercedeksen taistelevan sijoituksista, Bottas totesi Pit Debriefin mukaan.",
+        "word_count": 25,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Valtteri Bottas avautui elämänsä vaikeista vaiheista The Player’s Tribunessa julkaistussa kirjoituksessaan.\n\nF1-kausi jatkuu tulevana viikonloppuna Japanissa, jossa ajetaan kauden kolmas osakilpailu. Valtteri Bottas ehti pienen tauon aikana katsella aiempien kisojen huippuhetkiä.\n\nBottas palasi Kiinasta takaisin Monacossa sijaitsevaan kotiinsa ja vietti lepohetken pyöräillen ja katsellen alkukauden kisojen huippuhetkiä. Samalla hän pääsi näkemään eri perspektiivistä miltä kilpailut näyttävät katsojan silmin.\n\n– Katselin huippuhetkiä, kun pääsin kotiin ja minusta se näytti aika hyvältä. Oli mukava nähdä Ferrarin ja Mercedeksen taistelevan sijoituksista, Bottas totesi Pit Debriefin mukaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Valtteri Bottas kertoo, kuinka hänen mielenterveytensä romahti",
+      "description": "Valtteri Bottas avautui elämänsä vaikeista vaiheista The Player’s Tribunessa julkaistussa kirjoituksessaan.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T105157Z_e6a5024483\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineistossa on liian vähän varmistettuja tietoja Bottaksen kirjoituksen sisällöstä, ja mukana on myös aiheen kannalta epäolennaista F1-uutistekstiä.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

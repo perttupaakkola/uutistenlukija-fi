@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T08:08:03Z",
+  "reason": "aineisto yhdistää pääkonttorihankkeen ja työoloepäilyt ilman riittävää varmistettua yhteyttä tai tarpeeksi tietoja 250 sanan uutiseen",
+  "packet": {
+    "packet_id": "20260428T080636Z_774b97cb5b",
+    "created_at": "2026-04-28T08:06:36Z",
+    "headline_seed": "Meyerin Turun telakan tuotantotiloihin mullistus – 700 henkeä siirtyy pois alueelta",
+    "description_seed": "Meyer Turulle rakennetaan uusi 38,5 miljoonaa euroa maksava pääkonttori Turun telakka-alueen läheisyyteen.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/4ebe4433-0a30-44f8-93f7-497dcfb3d3a0",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "Tekniikka & Talous",
+      "source-2",
+      "Yle",
+      "source-6"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/4ebe4433-0a30-44f8-93f7-497dcfb3d3a0"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.84,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Meyerin Turun telakan tuotantotiloihin mullistus – 700 henkeä siirtyy pois alueelta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Tekniikka & Talous",
+        "source_type": "description",
+        "text": "Meyer Turulle rakennetaan uusi 38,5 miljoonaa euroa maksava pääkonttori Turun telakka-alueen läheisyyteen.",
+        "word_count": 12,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "STT uutisoi tänään, että ukrainalaisilta työntekijöiltä on jäänyt isoja palkkasummia saamatta Turun telakan alihankkijayrityksissä. Lisäksi he ovat tehneet muun muassa ylipitkiä työpäiviä sekä viikonloppu- ja yövuoroja lisittä.",
+        "word_count": 27,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Työministeri Matias Marttinen (kok.) tuomitsee Meyerin Turun telakalla paljastuneen ulkomaisen työvoiman hyväksikäytön. Marttisen vastuulle kuuluu harmaan talouden ja talousrikollisuuden torjunta.",
+        "word_count": 20,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "– Odotan, että Meyerin telakka selvittää asian ja alihankkijoiden työolot perinpohjaisesti ja tekee tarvittavat muutokset mahdollisimman ripeästi, jotta tällainen toiminta saadaan välittömästi katkaistua, Marttinen jatkaa.",
+        "word_count": 25,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Meyer Turulle rakennetaan uusi 38,5 miljoonaa euroa maksava pääkonttori Turun telakka-alueen läheisyyteen.\n\nSTT uutisoi tänään, että ukrainalaisilta työntekijöiltä on jäänyt isoja palkkasummia saamatta Turun telakan alihankkijayrityksissä. Lisäksi he ovat tehneet muun muassa ylipitkiä työpäiviä sekä viikonloppu- ja yövuoroja lisittä.\n\nTyöministeri Matias Marttinen (kok.) tuomitsee Meyerin Turun telakalla paljastuneen ulkomaisen työvoiman hyväksikäytön. Marttisen vastuulle kuuluu harmaan talouden ja talousrikollisuuden torjunta.\n\n– Odotan, että Meyerin telakka selvittää asian ja alihankkijoiden työolot perinpohjaisesti ja tekee tarvittavat muutokset mahdollisimman ripeästi, jotta tällainen toiminta saadaan välittömästi katkaistua, Marttinen jatkaa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Meyerin Turun telakan tuotantotiloihin mullistus – 700 henkeä siirtyy pois alueelta",
+      "description": "Meyer Turulle rakennetaan uusi 38,5 miljoonaa euroa maksava pääkonttori Turun telakka-alueen läheisyyteen.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=5c973392-2bc1-4075-b3b9-e26f703c4f21 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T080636Z_774b97cb5b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto yhdistää pääkonttorihankkeen ja työoloepäilyt ilman riittävää varmistettua yhteyttä tai tarpeeksi tietoja 250 sanan uutiseen\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

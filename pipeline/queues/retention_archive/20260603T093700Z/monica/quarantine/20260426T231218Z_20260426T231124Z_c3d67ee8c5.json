@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T23:12:18Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T231124Z_c3d67ee8c5",
+    "created_at": "2026-04-26T23:11:24Z",
+    "headline_seed": "Sipri: Maailman sotilasmenojen kasvu hidastui USA:n Ukraina-tuen loputtua",
+    "description_seed": "Tukholman kansainvälisen rauhantutkimus­instituutin Siprin mukaan sotilasmenojen kasvu todennäköisesti jatkuu tulevina vuosina.",
+    "link": "https://yle.fi/a/74-20222791?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "Yle Uutiset",
+      "Salon Seudun Sanomat",
+      "source-11"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222791?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.86,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sipri: Maailman sotilasmenojen kasvu hidastui USA:n Ukraina-tuen loputtua"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "description",
+        "text": "Tukholman kansainvälisen rauhantutkimus­instituutin Siprin mukaan sotilasmenojen kasvu todennäköisesti jatkuu tulevina vuosina.",
+        "word_count": 11,
+        "keyword_overlap": 11,
+        "strong_overlap": 10
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Maailman sotilasmenot kasvoivat viime vuonna hieman alle kolme prosenttia vuoteen 2024 verrattuna, kertoo Tukholman kansainvälinen rauhantutkimusinstituutti Sipri. Kasvu hidastui selvästi aiemmasta, mikä johtuu Siprin mukaan suurelta osin Yhdysvaltain sotilasmenojen selvästä laskusta.",
+        "word_count": 31,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Salon Seudun Sanomat",
+        "source_type": "research",
+        "text": "Maailman sotilasmenot kasvoivat viime vuonna vajaat kolme prosenttia vuoteen 2024 verrattuna, kertoo Tukholman kansainvälinen rauhantutkimusinstituutti Sipri. Kasvu hidastui selvästi aiemmasta, mikä johtuu Siprin mukaan suurelta osin Yhdysvaltain sotilasmenojen selvästä laskusta.",
+        "word_count": 30,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "– Kasvu todennäköisesti jatkuu vuonna 2026 ja sen jälkeenkin, kun otetaan huomioon nykyisten kriisien laajuus ja monien valtioiden pitkän tähtäimen sotilasmenotavoitteet, sanoo tutkija Xiao Liang Siprin tiedotteessa.",
+        "word_count": 27,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Tukholman kansainvälisen rauhantutkimus­instituutin Siprin mukaan sotilasmenojen kasvu todennäköisesti jatkuu tulevina vuosina.\n\nMaailman sotilasmenot kasvoivat viime vuonna hieman alle kolme prosenttia vuoteen 2024 verrattuna, kertoo Tukholman kansainvälinen rauhantutkimusinstituutti Sipri. Kasvu hidastui selvästi aiemmasta, mikä johtuu Siprin mukaan suurelta osin Yhdysvaltain sotilasmenojen selvästä laskusta.\n\nMaailman sotilasmenot kasvoivat viime vuonna vajaat kolme prosenttia vuoteen 2024 verrattuna, kertoo Tukholman kansainvälinen rauhantutkimusinstituutti Sipri. Kasvu hidastui selvästi aiemmasta, mikä johtuu Siprin mukaan suurelta osin Yhdysvaltain sotilasmenojen selvästä laskusta.\n\n– Kasvu todennäköisesti jatkuu vuonna 2026 ja sen jälkeenkin, kun otetaan huomioon nykyisten kriisien laajuus ja monien valtioiden pitkän tähtäimen sotilasmenotavoitteet, sanoo tutkija Xiao Liang Siprin tiedotteessa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sipri: Maailman sotilasmenojen kasvu hidastui USA:n Ukraina-tuen loputtua",
+      "description": "Tukholman kansainvälisen rauhantutkimus­instituutin Siprin mukaan sotilasmenojen kasvu todennäköisesti jatkuu tulevina vuosina.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25264 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25269 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

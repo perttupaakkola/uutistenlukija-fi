@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T15:47:50Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T154655Z_5545da5b5c",
+    "created_at": "2026-04-27T15:46:55Z",
+    "headline_seed": "Data center demand drives 66% surge in natural gas power plant costs",
+    "description_seed": "Natural gas power plant costs have nearly doubled in two years and take 23% longer to build as data center electricity demand skyrockets.",
+    "link": "https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "source-11",
+      "Wired",
+      "source-7"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Data center demand drives 66% surge in natural gas power plant costs"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Natural gas power plant costs have nearly doubled in two years and take 23% longer to build as data center electricity demand skyrockets.",
+        "word_count": 23,
+        "keyword_overlap": 16,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "The infrastructure on this list of large natural gas projects reviewed by WIRED is being developed to largely bypass the grid and provide power solely for data centers, a trend known as behind-the-meter power. As data center developers face long waits for connections to traditional utilities, and amid mounting public resistance to the possibility of higher energy bills, making their own power is becoming an increasingly popular option. These projects have either been announced or are under construction, with companies already submitting air permit application materials with state agencies.",
+        "word_count": 89,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "New gas projects linked to just 11 data center campuses around the US have the potential to create more greenhouse gases than the country of Morocco emitted in 2024. Emissions estimates from air permit documents examined by WIRED show that these natural gas projects—which are being built to power data centers to serve some of the US’s most powerful AI companies, including OpenAI, Meta, Microsoft, and xAI—have the potential to emit more than 129 million tons of greenhouse gases per year.",
+        "word_count": 81,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-7",
+        "source_type": "research",
+        "text": "The findings show how the data center boom is shaping the electricity mix and putting upward pressure on costs, a factor that could raise bills for consumers. Gas is the dominant fuel for energy projects tied to artificial intelligence. At the same time, there is a shortage of gas turbines, which make up roughly 20 to 30 percent of the overall cost of a gas plant.",
+        "word_count": 66,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Natural gas power plant costs have nearly doubled in two years and take 23% longer to build as data center electricity demand skyrockets.\n\nThe infrastructure on this list of large natural gas projects reviewed by WIRED is being developed to largely bypass the grid and provide power solely for data centers, a trend known as behind-the-meter power. As data center developers face long waits for connections to traditional utilities, and amid mounting public resistance to the possibility of higher energy bills, making their own power is becoming an increasingly popular option. These projects have either been announced or are under construction, with companies already submitting air permit application materials with state agencies.\n\nNew gas projects linked to just 11 data center campuses around the US have the potential to create more greenhouse gases than the country of Morocco emitted in 2024. Emissions estimates from air permit documents examined by WIRED show that these natural gas projects—which are being built to power data centers to serve some of the US’s most powerful AI companies, including OpenAI, Meta, Microsoft, and xAI—have the potential to emit more than 129 million tons of greenhouse gases per year.\n\nThe findings show how the data center boom is shaping the electricity mix and putting upward pressure on costs, a factor that could raise bills for consumers. Gas is the dominant fuel for energy projects tied to artificial intelligence. At the same time, there is a shortage of gas turbines, which make up roughly 20 to 30 percent of the overall cost of a gas plant.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Data center demand drives 66% surge in natural gas power plant costs",
+      "description": "Natural gas power plant costs have nearly doubled in two years and take 23% longer to build as data center electricity demand skyrockets.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25358 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25361 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

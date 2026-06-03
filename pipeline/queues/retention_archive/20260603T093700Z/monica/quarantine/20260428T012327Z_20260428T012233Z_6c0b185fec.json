@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-28T01:23:27Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T012233Z_6c0b185fec",
+    "created_at": "2026-04-28T01:22:33Z",
+    "headline_seed": "Viimeistenkin pitää tarkistaa veroilmoitusten tiedot tänään",
+    "description_seed": "",
+    "link": "https://yle.fi/a/74-20222999?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "source-2",
+      "source-5"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20222999?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.52,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Viimeistenkin pitää tarkistaa veroilmoitusten tiedot tänään"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Noin 1,8 miljoonalla suomalaisella on veroilmoituksen määräpäivä tänään, muistuttaa Verohallinto. Se tarkoittaa, että viimeistenkin pitää tarkistaa ja korjata esitäytetyn veroilmoituksen tiedot tämän päivän aikana.",
+        "word_count": 24,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-5",
+        "source_type": "research",
+        "text": "Valtaosalla veroilmoituksen tiedot ovat valmiiksi oikein. Verohallinnon mukaan ilmoitus tulee aina kuitenkin tarkistaa ja korjata puutteet ja virheet.",
+        "word_count": 18,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Noin 1,8 miljoonalla suomalaisella on veroilmoituksen määräpäivä tänään, muistuttaa Verohallinto. Se tarkoittaa, että viimeistenkin pitää tarkistaa ja korjata esitäytetyn veroilmoituksen tiedot tämän päivän aikana.\n\nValtaosalla veroilmoituksen tiedot ovat valmiiksi oikein. Verohallinnon mukaan ilmoitus tulee aina kuitenkin tarkistaa ja korjata puutteet ja virheet.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Viimeistenkin pitää tarkistaa veroilmoitusten tiedot tänään",
+      "description": "",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25439 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25442 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

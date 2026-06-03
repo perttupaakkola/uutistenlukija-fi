@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T18:26:51Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T182558Z_6c026fbb5c",
+    "created_at": "2026-04-26T18:25:58Z",
+    "headline_seed": "Putin tapaa Iranin ulkoministerin Moskovassa",
+    "description_seed": "IS seuraa tässä artikkelissa tilannetta Lähi-idässä.",
+    "link": "https://www.is.fi/ulkomaat/art-2000011917601.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-3",
+      "source-12",
+      "source-26",
+      "source-29"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000011917601.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.89,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Putin tapaa Iranin ulkoministerin Moskovassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Iranilaisen valtiollisen Isna-uutistoimiston mukaan Iranin ulkoministeri Abbas Araghchin ja Venäjän presidentti Vladimir Putinin on määrä tavata huomenna Moskovassa. Venäjä on Iranin merkittävä tukija.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Iranin ulkoministeri Abbas Araghchi on palannut Pakistaniin sunnuntaina, valton media raportoi. Toistaiseksi on epäselvää, ketä hän tapaa ja mitä mahdollisia neuvotteluja on luvassa.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-26",
+        "source_type": "research",
+        "text": "Trump sanoi, että Yhdysvallat on neuvotteluissa niskan päällä ja että iranilaiset voivat halutessaan soittaa asiasta puhelimitse. Hänen mukaansa Yhdysvallat vain tuhlaa aikaa matkustamiseen ja turhissa neuvotteluissa istumiseen. Trump sanoi lisäksi, että Iranin johdon keskuudessa olisi sisäistä kiistaa.",
+        "word_count": 37,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-29",
+        "source_type": "research",
+        "text": "Kun presidentiltä kysyttiin tarjouksen yksityiskohdista, hän vastasi CNN:n mukaan Iranin tarjonneen paljon mutta ei vielä riittävästi. Trump sanoi aiemmin uutistoimisto Reutersille, että Iran oli aikeissa tehdä tarjouksen, joka tyydyttäisi Yhdysvaltojen vaatimukset.",
+        "word_count": 31,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Iranilaisen valtiollisen Isna-uutistoimiston mukaan Iranin ulkoministeri Abbas Araghchin ja Venäjän presidentti Vladimir Putinin on määrä tavata huomenna Moskovassa. Venäjä on Iranin merkittävä tukija.\n\nIranin ulkoministeri Abbas Araghchi on palannut Pakistaniin sunnuntaina, valton media raportoi. Toistaiseksi on epäselvää, ketä hän tapaa ja mitä mahdollisia neuvotteluja on luvassa.\n\nTrump sanoi, että Yhdysvallat on neuvotteluissa niskan päällä ja että iranilaiset voivat halutessaan soittaa asiasta puhelimitse. Hänen mukaansa Yhdysvallat vain tuhlaa aikaa matkustamiseen ja turhissa neuvotteluissa istumiseen. Trump sanoi lisäksi, että Iranin johdon keskuudessa olisi sisäistä kiistaa.\n\nKun presidentiltä kysyttiin tarjouksen yksityiskohdista, hän vastasi CNN:n mukaan Iranin tarjonneen paljon mutta ei vielä riittävästi. Trump sanoi aiemmin uutistoimisto Reutersille, että Iran oli aikeissa tehdä tarjouksen, joka tyydyttäisi Yhdysvaltojen vaatimukset.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Putin tapaa Iranin ulkoministerin Moskovassa",
+      "description": "IS seuraa tässä artikkelissa tilannetta Lähi-idässä.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=24692 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=24695 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

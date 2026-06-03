@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T07:47:54Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T074701Z_799d72b4bd",
+    "created_at": "2026-04-27T07:47:01Z",
+    "headline_seed": "Ei vain bakteereja ja viruksia",
+    "description_seed": "– Voi olla mielikuva, että työskentelemme yksin kammioissamme, mutta oikeasti työ on sosiaalista ja moniammatillista, kertoo Anne Toivonen.",
+    "link": "http://www.laakarilehti.fi/kliininen-tyo/ei-vain-bakteereja-ja-viruksia/",
+    "source": "Lääkärilehti",
+    "source_names": [
+      "Lääkärilehti",
+      "source-12",
+      "source-23",
+      "Lääkärilehti"
+    ],
+    "source_urls": [
+      "http://www.laakarilehti.fi/kliininen-tyo/ei-vain-bakteereja-ja-viruksia/"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ei vain bakteereja ja viruksia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Lääkärilehti",
+        "source_type": "description",
+        "text": "– Voi olla mielikuva, että työskentelemme yksin kammioissamme, mutta oikeasti työ on sosiaalista ja moniammatillista, kertoo Anne Toivonen.",
+        "word_count": 18,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "source-12",
+        "source_type": "research",
+        "text": "Yle uutisoi torstaina, että uskonnoton oppilas saa Hämeenlinnalta 1 500 euron hyvityksen syrjinnän vuoksi. Syrjintä tapahtui koulun tilaisuudessa, jonka piti olla kaikille sopiva, mutta olikin sisällöltään kristillinen.",
+        "word_count": 27,
+        "keyword_overlap": 3,
+        "strong_overlap": 0
+      },
+      {
+        "source": "source-23",
+        "source_type": "research",
+        "text": "– Suomessa usein ajatellaan, että kristinusko kuuluu kaikille. Mutta emme voi puhua vain yhdestä uskonnosta.",
+        "word_count": 15,
+        "keyword_overlap": 3,
+        "strong_overlap": 0
+      },
+      {
+        "source": "Lääkärilehti",
+        "source_type": "research",
+        "text": "Pääset lukemaan artikkelin, kun kirjaudut jäsenalueelle Fimnet-tunnuksillasi. Kirjautuminen pysyy käytössäsi olevan laitteen muistissa, jos et erikseen kirjaudu ulos sivulta. Jos luet lehteä yhteisessä käytössä olevalla koneella, muista myös kirjautua ulos sivustolta.",
+        "word_count": 31,
+        "keyword_overlap": 0,
+        "strong_overlap": 0
+      }
+    ],
+    "source_text": "– Voi olla mielikuva, että työskentelemme yksin kammioissamme, mutta oikeasti työ on sosiaalista ja moniammatillista, kertoo Anne Toivonen.\n\nYle uutisoi torstaina, että uskonnoton oppilas saa Hämeenlinnalta 1 500 euron hyvityksen syrjinnän vuoksi. Syrjintä tapahtui koulun tilaisuudessa, jonka piti olla kaikille sopiva, mutta olikin sisällöltään kristillinen.\n\n– Suomessa usein ajatellaan, että kristinusko kuuluu kaikille. Mutta emme voi puhua vain yhdestä uskonnosta.\n\nPääset lukemaan artikkelin, kun kirjaudut jäsenalueelle Fimnet-tunnuksillasi. Kirjautuminen pysyy käytössäsi olevan laitteen muistissa, jos et erikseen kirjaudu ulos sivulta. Jos luet lehteä yhteisessä käytössä olevalla koneella, muista myös kirjautua ulos sivustolta.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ei vain bakteereja ja viruksia",
+      "description": "– Voi olla mielikuva, että työskentelemme yksin kammioissamme, mutta oikeasti työ on sosiaalista ja moniammatillista, kertoo Anne Toivonen.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25574 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25577 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

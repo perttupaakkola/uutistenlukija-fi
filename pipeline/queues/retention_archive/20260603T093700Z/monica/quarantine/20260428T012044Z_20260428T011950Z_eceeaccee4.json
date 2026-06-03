@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T01:20:44Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T011950Z_eceeaccee4",
+    "created_at": "2026-04-28T01:19:50Z",
+    "headline_seed": "‘Shortcomings and failures’ could sink Aukus nuclear submarines plan, UK inquiry warns",
+    "description_seed": "Australia is dependent upon UK’s ability to deliver new submarines, but report finds ‘cracks are already beginning to show’ “Cracks are already beginning to show” in the UK’s funding for the Aukus agreement that could see the ambitious nuclear submarine plan derailed, threatening Australia’s security, a British parliamentary inquiry has found. UK shipbuilding has been under-funded for decades, and its current submarine availability is “critically low”, the House of Commons defence committee’s report found . Continue reading...",
+    "link": "https://www.theguardian.com/world/2026/apr/28/aukus-nuclear-submarines-funding-uk-inquiry",
+    "source": "The Guardian World",
+    "source_names": [
+      "The Guardian World",
+      "source-2",
+      "source-3",
+      "The Guardian World"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/2026/apr/28/aukus-nuclear-submarines-funding-uk-inquiry"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.95,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "‘Shortcomings and failures’ could sink Aukus nuclear submarines plan, UK inquiry warns"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian World",
+        "source_type": "description",
+        "text": "Australia is dependent upon UK’s ability to deliver new submarines, but report finds ‘cracks are already beginning to show’ “Cracks are already beginning to show” in the UK’s funding for the Aukus agreement that could see the ambitious nuclear submarine plan derailed, threatening Australia’s security, a British parliamentary inquiry has found. UK shipbuilding has been under-funded for decades, and its current submarine availability is “critically low”, the House of Commons defence committee’s report found . Continue reading...",
+        "word_count": 77,
+        "keyword_overlap": 41,
+        "strong_overlap": 31
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "“Cracks are already beginning to show” in the UK’s funding for the Aukus agreement that could derail the ambitious nuclear submarine plan, a British parliamentary inquiry has found, highlighting a threat to Australia’s security.",
+        "word_count": 34,
+        "keyword_overlap": 19,
+        "strong_overlap": 13
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "UK shipbuilding has been under-funded for decades and the country’s submarine availability is “critically low”, the House of Commons defence committee’s report found.",
+        "word_count": 23,
+        "keyword_overlap": 13,
+        "strong_overlap": 10
+      },
+      {
+        "source": "The Guardian World",
+        "source_type": "research",
+        "text": "Australia is dependent upon UK’s ability to deliver new submarines, but report finds ‘cracks are already beginning to show’",
+        "word_count": 19,
+        "keyword_overlap": 12,
+        "strong_overlap": 9
+      }
+    ],
+    "source_text": "Australia is dependent upon UK’s ability to deliver new submarines, but report finds ‘cracks are already beginning to show’ “Cracks are already beginning to show” in the UK’s funding for the Aukus agreement that could see the ambitious nuclear submarine plan derailed, threatening Australia’s security, a British parliamentary inquiry has found. UK shipbuilding has been under-funded for decades, and its current submarine availability is “critically low”, the House of Commons defence committee’s report found . Continue reading...\n\n“Cracks are already beginning to show” in the UK’s funding for the Aukus agreement that could derail the ambitious nuclear submarine plan, a British parliamentary inquiry has found, highlighting a threat to Australia’s security.\n\nUK shipbuilding has been under-funded for decades and the country’s submarine availability is “critically low”, the House of Commons defence committee’s report found.\n\nAustralia is dependent upon UK’s ability to deliver new submarines, but report finds ‘cracks are already beginning to show’",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "‘Shortcomings and failures’ could sink Aukus nuclear submarines plan, UK inquiry warns",
+      "description": "Australia is dependent upon UK’s ability to deliver new submarines, but report finds ‘cracks are already beginning to show’ “Cracks are already beginning to show” in the UK’s funding for the Aukus agreement that could see the ambitious nuclear submarine plan derailed, threatening Australia’s security, a British parliamentary inquiry has found. UK shipbuilding has been under-funded for decades, and its current submarine availability is “critically low”, the House of Commons defence committee’s report found . Continue reading...",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25233 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25238 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

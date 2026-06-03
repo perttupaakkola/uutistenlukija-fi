@@ -1,0 +1,65 @@
+{
+  "ts": "2026-04-27T15:22:34Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T152141Z_7e43d90efe",
+    "created_at": "2026-04-27T15:21:41Z",
+    "headline_seed": "Lähes 3 000 tavista haki supon vakoojaksi",
+    "description_seed": "Suojelupoliisi kertoo saaneensa 2 850 hakemusta henkilötiedustelijoiden eli vakoojien paikkoihin.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/lahes-3-000-tavista-haki-supon-vakoojaksi/9330248",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "source-11"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/lahes-3-000-tavista-haki-supon-vakoojaksi/9330248"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.6,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lähes 3 000 tavista haki supon vakoojaksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Suojelupoliisi kertoo saaneensa 2 850 hakemusta henkilötiedustelijoiden eli vakoojien paikkoihin.",
+        "word_count": 10,
+        "keyword_overlap": 6,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-11",
+        "source_type": "research",
+        "text": "Henkilötiedustelijoiden keräämällä tiedolla vastapuolten suunnitelmista, aikomuksista ja kyvyistä luodaan tilaa ulko- ja turvallisuuspoliittiselle päätöksenteolle. Supon mukaan Venäjä ja Kiina vakoilevat Suomea kaikkein eniten.",
+        "word_count": 23,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Suojelupoliisi kertoo saaneensa 2 850 hakemusta henkilötiedustelijoiden eli vakoojien paikkoihin.\n\nHenkilötiedustelijoiden keräämällä tiedolla vastapuolten suunnitelmista, aikomuksista ja kyvyistä luodaan tilaa ulko- ja turvallisuuspoliittiselle päätöksenteolle. Supon mukaan Venäjä ja Kiina vakoilevat Suomea kaikkein eniten.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lähes 3 000 tavista haki supon vakoojaksi",
+      "description": "Suojelupoliisi kertoo saaneensa 2 850 hakemusta henkilötiedustelijoiden eli vakoojien paikkoihin.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25507 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25510 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

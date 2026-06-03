@@ -1,0 +1,84 @@
+{
+  "ts": "2026-04-28T15:52:58Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260428T155143Z_807777480f",
+    "created_at": "2026-04-28T15:51:43Z",
+    "headline_seed": "Lahden suurin akku varastoi valtavan määrän lämpöä – saatat käyttää sitä aamusuihkun aikaan",
+    "description_seed": "Lahti Energia on ottanut käyttöön kaukolämpöakun, joka varastoi lämpöä halvan sähkön aikana ja purkaa sitä kulutushuippuihin. Kymmeniä metrejä korkea säiliön avulla on mahdollista vähentää fossiilisten polttoaineiden käyttöä ja tasata kaukolämmön hintakehitystä.",
+    "link": "https://www.ess.fi/paikalliset/9411508",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Etelä-Suomen Sanomat",
+      "source-4",
+      "Yle",
+      "source-6"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9411508"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.86,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahden suurin akku varastoi valtavan määrän lämpöä – saatat käyttää sitä aamusuihkun aikaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Etelä-Suomen Sanomat",
+        "source_type": "description",
+        "text": "Lahti Energia on ottanut käyttöön kaukolämpöakun, joka varastoi lämpöä halvan sähkön aikana ja purkaa sitä kulutushuippuihin. Kymmeniä metrejä korkea säiliön avulla on mahdollista vähentää fossiilisten polttoaineiden käyttöä ja tasata kaukolämmön hintakehitystä.",
+        "word_count": 31,
+        "keyword_overlap": 26,
+        "strong_overlap": 24
+      },
+      {
+        "source": "source-4",
+        "source_type": "research",
+        "text": "Virtasen mukaan hiekka-akkuun päädyttiin, koska hiekka varastoi lämpöä huomattavasti tehokkaammin kuin vesiakku.",
+        "word_count": 12,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "Lahti Energia rakentaa Asikkalan Vääksyyn toistaiseksi maailman suurimman hiekka-akun. Hankkeesta vastaavan päällikön Sami-Pekka Virtasen mukaan hiekka-akkusäiliön halkaisija on noin 15 metriä ja korkeus noin 14 metriä. Kokonaispainoksi kertyy yli 3 000 tonnia.",
+        "word_count": 32,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-6",
+        "source_type": "research",
+        "text": "Hiekka-akun toimintaperiaate on yksinkertainen: säiliössä olevaan hiekkaan puhalletaan sähkövastusten kautta noin 600-asteista ilmaa, joka kuumentaa ja varastoi lämmön tavalliseen hiekkaan.",
+        "word_count": 20,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Lahti Energia on ottanut käyttöön kaukolämpöakun, joka varastoi lämpöä halvan sähkön aikana ja purkaa sitä kulutushuippuihin. Kymmeniä metrejä korkea säiliön avulla on mahdollista vähentää fossiilisten polttoaineiden käyttöä ja tasata kaukolämmön hintakehitystä.\n\nVirtasen mukaan hiekka-akkuun päädyttiin, koska hiekka varastoi lämpöä huomattavasti tehokkaammin kuin vesiakku.\n\nLahti Energia rakentaa Asikkalan Vääksyyn toistaiseksi maailman suurimman hiekka-akun. Hankkeesta vastaavan päällikön Sami-Pekka Virtasen mukaan hiekka-akkusäiliön halkaisija on noin 15 metriä ja korkeus noin 14 metriä. Kokonaispainoksi kertyy yli 3 000 tonnia.\n\nHiekka-akun toimintaperiaate on yksinkertainen: säiliössä olevaan hiekkaan puhalletaan sähkövastusten kautta noin 600-asteista ilmaa, joka kuumentaa ja varastoi lämmön tavalliseen hiekkaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahden suurin akku varastoi valtavan määrän lämpöä – saatat käyttää sitä aamusuihkun aikaan",
+      "description": "Lahti Energia on ottanut käyttöön kaukolämpöakun, joka varastoi lämpöä halvan sähkön aikana ja purkaa sitä kulutushuippuihin. Kymmeniä metrejä korkea säiliön avulla on mahdollista vähentää fossiilisten polttoaineiden käyttöä ja tasata kaukolämmön hintakehitystä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\n[agent/embedded] auto-compaction succeeded for openai-codex/gpt-5.4; retrying prompt\nContext overflow: prompt too large for the model. Try /reset (or /new) to start a fresh session, or use a larger-context model.",
+  "extra": {
+    "error": "Monica response did not contain valid JSON",
+    "stage": "initial_parse"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T18:38:04Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T183710Z_1724af95c1",
+    "created_at": "2026-04-26T18:37:10Z",
+    "headline_seed": "Video shows correspondents' dinner suspect charge checkpoint",
+    "description_seed": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+    "link": "https://www.bbc.com/news/videos/cj0v0484dmmo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "source-35",
+      "BBC World",
+      "source-22"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cj0v0484dmmo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.9,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Video shows correspondents' dinner suspect charge checkpoint"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+        "word_count": 19,
+        "keyword_overlap": 16,
+        "strong_overlap": 8
+      },
+      {
+        "source": "source-35",
+        "source_type": "research",
+        "text": "WASHINGTON (7News) — President Donald Trump and First Lady Melania Trump were safely evacuated from the White House Correspondents’ Dinner on Saturday after a gunman rushed a Secret Service checkpoint inside the Washington Hilton, officials said.",
+        "word_count": 36,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US police say the suspected gunman at the White House correspondents' dinner had multiple weapons on him when he charged a security checkpoint.",
+        "word_count": 23,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-22",
+        "source_type": "research",
+        "text": "In an uncaptioned post on Truth Social, a shirtless man - believed to be the gunman at a shooting incident at the White House Correspondents' dinner on Apr 25, 2026, is seen lying prone on the ground. (Photo: Truth Social/Donald Trump)",
+        "word_count": 41,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.\n\nWASHINGTON (7News) — President Donald Trump and First Lady Melania Trump were safely evacuated from the White House Correspondents’ Dinner on Saturday after a gunman rushed a Secret Service checkpoint inside the Washington Hilton, officials said.\n\nUS police say the suspected gunman at the White House correspondents' dinner had multiple weapons on him when he charged a security checkpoint.\n\nIn an uncaptioned post on Truth Social, a shirtless man - believed to be the gunman at a shooting incident at the White House Correspondents' dinner on Apr 25, 2026, is seen lying prone on the ground. (Photo: Truth Social/Donald Trump)",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Video shows correspondents' dinner suspect charge checkpoint",
+      "description": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25530 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25535 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

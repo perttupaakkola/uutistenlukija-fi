@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-30T09:21:59Z",
+  "reason": "Aineistossa on liian vähän varmistettuja tietoja vaikutuksista Helsingissä, kuten liikennejärjestelyistä, turvallisuusohjeista tai tapahtuma-aikatauluista, täyteen uutisartikkeliin.",
+  "packet": {
+    "packet_id": "20260430T092141Z_b177e0daac",
+    "created_at": "2026-04-30T09:21:41Z",
+    "headline_seed": "Näin Mantan lakitus vaikuttaa Helsingissä",
+    "description_seed": "Iltalehti seuraa opiskelijoiden, työläisten ja kevään juhlaa tässä päivittyvässä artikkelissa. Vapun juhlinta alkaa ympäri Suomen jo torstaina ja jatkuu perinteisillä vappumarsseilla ja -piknikeillä perjantaina. Iltalehti seuraa vapun tapahtumia tässä jutussa.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/e696b6fe-562e-4005-8442-16c4dadea341",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti",
+      "source-8",
+      "source-2",
+      "source-3"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/e696b6fe-562e-4005-8442-16c4dadea341"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.85,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näin Mantan lakitus vaikuttaa Helsingissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Iltalehti seuraa opiskelijoiden, työläisten ja kevään juhlaa tässä päivittyvässä artikkelissa. Vapun juhlinta alkaa ympäri Suomen jo torstaina ja jatkuu perinteisillä vappumarsseilla ja -piknikeillä perjantaina. Iltalehti seuraa vapun tapahtumia tässä jutussa.",
+        "word_count": 30,
+        "keyword_overlap": 22,
+        "strong_overlap": 19
+      },
+      {
+        "source": "source-8",
+        "source_type": "research",
+        "text": "Helsingin lisäksi patsaita lakitetaan tänään myös ainakin Tampereella, Turussa, Jyväskylässä ja Oulussa. Lisäksi vappuaattoa vietetään ympäri Suomen erilaisin vappuriennoin esimerkiksi vapputoreilla.",
+        "word_count": 21,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Helsingissä ylioppilaslakin saa perinteisesti Havis Amandan eli Mantan patsas Kauppatorin kupeessa. Tänä vuonna Havis Amandan lakittaa Helsingin yliopiston ylioppilaskunta (HYY).",
+        "word_count": 20,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-3",
+        "source_type": "research",
+        "text": "Mantan lakitus kerää Mantan aukiolle ja Esplanadille peräti 80 000 juhlijaa vuosittain. Tänä vuonna Mantan lakituksen teemana on Itämeri.",
+        "word_count": 19,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Iltalehti seuraa opiskelijoiden, työläisten ja kevään juhlaa tässä päivittyvässä artikkelissa. Vapun juhlinta alkaa ympäri Suomen jo torstaina ja jatkuu perinteisillä vappumarsseilla ja -piknikeillä perjantaina. Iltalehti seuraa vapun tapahtumia tässä jutussa.\n\nHelsingin lisäksi patsaita lakitetaan tänään myös ainakin Tampereella, Turussa, Jyväskylässä ja Oulussa. Lisäksi vappuaattoa vietetään ympäri Suomen erilaisin vappuriennoin esimerkiksi vapputoreilla.\n\nHelsingissä ylioppilaslakin saa perinteisesti Havis Amandan eli Mantan patsas Kauppatorin kupeessa. Tänä vuonna Havis Amandan lakittaa Helsingin yliopiston ylioppilaskunta (HYY).\n\nMantan lakitus kerää Mantan aukiolle ja Esplanadille peräti 80 000 juhlijaa vuosittain. Tänä vuonna Mantan lakituksen teemana on Itämeri.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näin Mantan lakitus vaikuttaa Helsingissä",
+      "description": "Iltalehti seuraa opiskelijoiden, työläisten ja kevään juhlaa tässä päivittyvässä artikkelissa. Vapun juhlinta alkaa ympäri Suomen jo torstaina ja jatkuu perinteisillä vappumarsseilla ja -piknikeillä perjantaina. Iltalehti seuraa vapun tapahtumia tässä jutussa.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260430T092141Z_b177e0daac\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineistossa on liian vähän varmistettuja tietoja vaikutuksista Helsingissä, kuten liikennejärjestelyistä, turvallisuusohjeista tai tapahtuma-aikatauluista, täyteen uutisartikkeliin.\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

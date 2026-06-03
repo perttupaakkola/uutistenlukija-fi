@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-28T11:10:19Z",
+  "reason": "aineisto on ristiriitainen ja sekoittaa Ateenan ampumisen muihin Lähi-idän iskuihin",
+  "packet": {
+    "packet_id": "20260428T110909Z_e683d13fa3",
+    "created_at": "2026-04-28T11:09:09Z",
+    "headline_seed": "Useita haavoittunut ampumisessa Ateenassa – epäilty on 89-vuotias mies",
+    "description_seed": "Aseistanut mies on avannut tulen Ateenan keskustassa ja haavoittanut useita.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/useita-haavoittunut-ampumisessa-ateenassa-epailty-on-89-vuotias-mies/9330778",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset",
+      "source-2",
+      "source-14"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/useita-haavoittunut-ampumisessa-ateenassa-epailty-on-89-vuotias-mies/9330778"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Useita haavoittunut ampumisessa Ateenassa – epäilty on 89-vuotias mies"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "description",
+        "text": "Aseistanut mies on avannut tulen Ateenan keskustassa ja haavoittanut useita.",
+        "word_count": 10,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Libanonissa ainakin kolme ihmistä on kuollut ja useita haavoittunut iskussa maan eteläosassa lähellä Tyren kaupunkia, raportoi Libanonin valtiollinen NNA-uutistoimisto. Median mukaan varhain maanantaina on tehty useita iskuja.",
+        "word_count": 27,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "source-14",
+        "source_type": "research",
+        "text": "Lisäksi yli tuhat ihmistä on haavoittunut iskuissa, terveysministeriö kertoi qatarilaismedia al-Jazeeran mukaan.",
+        "word_count": 12,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Aseistanut mies on avannut tulen Ateenan keskustassa ja haavoittanut useita.\n\nLibanonissa ainakin kolme ihmistä on kuollut ja useita haavoittunut iskussa maan eteläosassa lähellä Tyren kaupunkia, raportoi Libanonin valtiollinen NNA-uutistoimisto. Median mukaan varhain maanantaina on tehty useita iskuja.\n\nLisäksi yli tuhat ihmistä on haavoittunut iskuissa, terveysministeriö kertoi qatarilaismedia al-Jazeeran mukaan.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Useita haavoittunut ampumisessa Ateenassa – epäilty on 89-vuotias mies",
+      "description": "Aseistanut mies on avannut tulen Ateenan keskustassa ja haavoittanut useita.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=e367ae51-abc1-43da-936b-c5663e47d821 sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T110909Z_e683d13fa3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on ristiriitainen ja sekoittaa Ateenan ampumisen muihin Lähi-idän iskuihin\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

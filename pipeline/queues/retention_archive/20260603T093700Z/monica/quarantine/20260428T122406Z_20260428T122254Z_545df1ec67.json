@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-28T12:24:06Z",
+  "reason": "aineisto on liian niukka eikä yksilöi saarron luonnetta, aluksen kulkua tai tapahtuman aikajanaa riittävästi",
+  "packet": {
+    "packet_id": "20260428T122254Z_545df1ec67",
+    "created_at": "2026-04-28T12:22:54Z",
+    "headline_seed": "Russian superyacht sails through Strait of Hormuz despite blockade",
+    "description_seed": "The 141m-long vessel, linked to a close ally of Russian President Vladimir Putin, cleared the waterway despite an ongoing blockade.",
+    "link": "https://www.bbc.com/news/articles/cm2pn8zdxdjo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Mirror",
+      "The Independent"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cm2pn8zdxdjo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.87,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Russian superyacht sails through Strait of Hormuz despite blockade"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The 141m-long vessel, linked to a close ally of Russian President Vladimir Putin, cleared the waterway despite an ongoing blockade.",
+        "word_count": 20,
+        "keyword_overlap": 14,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A superyacht linked to one of Russian President Vladimir Putin's key allies has sailed through the Strait of Hormuz, despite the ongoing blockade of the critical shipping channel.",
+        "word_count": 28,
+        "keyword_overlap": 12,
+        "strong_overlap": 11
+      },
+      {
+        "source": "The Mirror",
+        "source_type": "research",
+        "text": "A superyacht linked to a sanctioned Russian oligarch and key Putin ally has glided through the Strait of Hormuz despite the ongoing blockades.",
+        "word_count": 23,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "The Independent",
+        "source_type": "research",
+        "text": "A superyacht linked to the sanctioned Russian billionaire Alexey Mordashov has navigated the Strait of Hormuz, a highly sensitive shipping lane at the epicentre of the US-Iran conflict, shipping data has revealed.",
+        "word_count": 32,
+        "keyword_overlap": 5,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The 141m-long vessel, linked to a close ally of Russian President Vladimir Putin, cleared the waterway despite an ongoing blockade.\n\nA superyacht linked to one of Russian President Vladimir Putin's key allies has sailed through the Strait of Hormuz, despite the ongoing blockade of the critical shipping channel.\n\nA superyacht linked to a sanctioned Russian oligarch and key Putin ally has glided through the Strait of Hormuz despite the ongoing blockades.\n\nA superyacht linked to the sanctioned Russian billionaire Alexey Mordashov has navigated the Strait of Hormuz, a highly sensitive shipping lane at the epicentre of the US-Iran conflict, shipping data has revealed.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Russian superyacht sails through Strait of Hormuz despite blockade",
+      "description": "The 141m-long vessel, linked to a close ally of Russian President Vladimir Putin, cleared the waterway despite an ongoing blockade.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=c5ea75b8-f9f3-4e60-b79a-89386141bf5f sessionKey=agent:monica:main lane=context-engine-turn-maintenance:agent:monica:main\n{\"packet_id\":\"20260428T122254Z_545df1ec67\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"aineisto on liian niukka eikä yksilöi saarron luonnetta, aluksen kulkua tai tapahtuman aikajanaa riittävästi\"}",
+  "extra": {
+    "status": "INSUFFICIENT_CONFIDENCE"
+  }
+}

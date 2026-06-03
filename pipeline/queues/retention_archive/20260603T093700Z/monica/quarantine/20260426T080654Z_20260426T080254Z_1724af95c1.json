@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-26T08:06:54Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260426T080254Z_1724af95c1",
+    "created_at": "2026-04-26T08:02:54Z",
+    "headline_seed": "Video shows correspondents' dinner suspect charge checkpoint",
+    "description_seed": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+    "link": "https://www.bbc.com/news/videos/cj0v0484dmmo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "NBC News",
+      "BBC World",
+      "National Post"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/cj0v0484dmmo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.89,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Video shows correspondents' dinner suspect charge checkpoint"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+        "word_count": 19,
+        "keyword_overlap": 16,
+        "strong_overlap": 8
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "An armed man exchanged gunfire with law enforcement after he rushed a security checkpoint at the White House Correspondents’ Association dinner in Washington, D.C. on Saturday, authorities said, an event attended by President Donald Trump and high-ranking members of his administration.",
+        "word_count": 41,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US police say the suspected gunman at the White House correspondents' dinner had multiple weapons on him when he charged a security checkpoint.",
+        "word_count": 23,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "National Post",
+        "source_type": "research",
+        "text": "\"A man charged a security checkpoint armed with multiple weapons, and he was taken down by some very brave members of Secret Service.\" - President Donald J. Trump pic.twitter.com/N3UTveVNFM",
+        "word_count": 29,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.\n\nAn armed man exchanged gunfire with law enforcement after he rushed a security checkpoint at the White House Correspondents’ Association dinner in Washington, D.C. on Saturday, authorities said, an event attended by President Donald Trump and high-ranking members of his administration.\n\nUS police say the suspected gunman at the White House correspondents' dinner had multiple weapons on him when he charged a security checkpoint.\n\n\"A man charged a security checkpoint armed with multiple weapons, and he was taken down by some very brave members of Secret Service.\" - President Donald J. Trump pic.twitter.com/N3UTveVNFM",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Video shows correspondents' dinner suspect charge checkpoint",
+      "description": "Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--local', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260426T080254Z_1724af95c1\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE\\n- The first paragraph must be at least 30 words and summarize the verified core of the story\\n- Include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260426T080254Z_1724af95c1\",\\n  \"created_at\": \"2026-04-26T08:02:54Z\",\\n  \"headline_seed\": \"Video shows correspondents\\' dinner suspect charge checkpoint\",\\n  \"description_seed\": \"Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.\",\\n  \"link\": \"https://www.bbc.com/news/videos/cj0v0484dmmo?at_medium=RSS&at_campaign=rss\",\\n  \"source\": \"BBC World\",\\n  \"source_names\": [\\n    \"BBC World\",\\n    \"NBC News\",\\n    \"BBC World\",\\n    \"National Post\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.bbc.com/news/videos/cj0v0484dmmo?at_medium=RSS&at_campaign=rss\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.89,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Video shows correspondents\\' dinner suspect charge checkpoint\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"BBC World\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.\",\\n      \"word_count\": 19,\\n      \"keyword_overlap\": 16,\\n      \"strong_overlap\": 8\\n    },\\n    {\\n      \"source\": \"NBC News\",\\n      \"source_type\": \"research\",\\n      \"text\": \"An armed man exchanged gunfire with law enforcement after he rushed a security checkpoint at the White House Correspondents’ Association dinner in Washington, D.C. on Saturday, authorities said, an event attended by President Donald Trump and high-ranking members of his administration.\",\\n      \"word_count\": 41,\\n      \"keyword_overlap\": 6,\\n      \"strong_overlap\": 5\\n    },\\n    {\\n      \"source\": \"BBC World\",\\n      \"source_type\": \"research\",\\n      \"text\": \"US police say the suspected gunman at the White House correspondents\\' dinner had multiple weapons on him when he charged a security checkpoint.\",\\n      \"word_count\": 23,\\n      \"keyword_overlap\": 4,\\n      \"strong_overlap\": 4\\n    },\\n    {\\n      \"source\": \"National Post\",\\n      \"source_type\": \"research\",\\n      \"text\": \"\\\\\"A man charged a security checkpoint armed with multiple weapons, and he was taken down by some very brave members of Secret Service.\\\\\" - President Donald J. Trump pic.twitter.com/N3UTveVNFM\",\\n      \"word_count\": 29,\\n      \"keyword_overlap\": 4,\\n      \"strong_overlap\": 3\\n    }\\n  ],\\n  \"source_text\": \"Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.\\\\n\\\\nAn armed man exchanged gunfire with law enforcement after he rushed a security checkpoint at the White House Correspondents’ Association dinner in Washington, D.C. on Saturday, authorities said, an event attended by President Donald Trump and high-ranking members of his administration.\\\\n\\\\nUS police say the suspected gunman at the White House correspondents\\' dinner had multiple weapons on him when he charged a security checkpoint.\\\\n\\\\n\\\\\"A man charged a security checkpoint armed with multiple weapons, and he was taken down by some very brave members of Secret Service.\\\\\" - President Donald J. Trump pic.twitter.com/N3UTveVNFM\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Video shows correspondents\\' dinner suspect charge checkpoint\",\\n    \"description\": \"Surveillance video released by Donald Trump shows the suspect running past metal detectors as security agents draw their guns.\",\\n    \"category_hint\": \"\",\\n    \"research_source\": \"multi\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

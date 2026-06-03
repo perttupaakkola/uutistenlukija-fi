@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T21:05:49Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T210455Z_2e24b5926a",
+    "created_at": "2026-04-27T21:04:55Z",
+    "headline_seed": "This dangerous pregnancy complication is common. A new treatment might help",
+    "description_seed": "Preeclampsia complicates 3 to 8 percent of pregnancies. In a recent trial, a blood filter lowered blood pressure and helped prolong some pregnancies.",
+    "link": "https://www.sciencenews.org/article/preeclampsia-treatment-pregnancy-blood",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "source-2",
+      "source-14",
+      "Science News"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/preeclampsia-treatment-pregnancy-blood"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.91,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "This dangerous pregnancy complication is common. A new treatment might help"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "Preeclampsia complicates 3 to 8 percent of pregnancies. In a recent trial, a blood filter lowered blood pressure and helped prolong some pregnancies.",
+        "word_count": 23,
+        "keyword_overlap": 13,
+        "strong_overlap": 10
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "In a study of 16 women with early preeclampsia, pulling a particular protein from their blood slightly lowered blood pressure and extended some pregnancies, researchers report April 27 in Nature Medicine. If larger trials confirm the results, the technique may one day be a treatment for the sometimes-fatal condition.",
+        "word_count": 49,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-14",
+        "source_type": "research",
+        "text": "Hendricks had developed preeclampsia, a potentially fatal complication of pregnancy involving damage to the blood vessels and high amounts of fluid loss. It can lead to dangerous swelling of the lungs, brain, and heart and massive hemorrhaging.",
+        "word_count": 37,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "Filtering a protein out of a pregnant person’s blood may help ease a dangerous complication of pregnancy.",
+        "word_count": 17,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Preeclampsia complicates 3 to 8 percent of pregnancies. In a recent trial, a blood filter lowered blood pressure and helped prolong some pregnancies.\n\nIn a study of 16 women with early preeclampsia, pulling a particular protein from their blood slightly lowered blood pressure and extended some pregnancies, researchers report April 27 in Nature Medicine. If larger trials confirm the results, the technique may one day be a treatment for the sometimes-fatal condition.\n\nHendricks had developed preeclampsia, a potentially fatal complication of pregnancy involving damage to the blood vessels and high amounts of fluid loss. It can lead to dangerous swelling of the lungs, brain, and heart and massive hemorrhaging.\n\nFiltering a protein out of a pregnant person’s blood may help ease a dangerous complication of pregnancy.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "This dangerous pregnancy complication is common. A new treatment might help",
+      "description": "Preeclampsia complicates 3 to 8 percent of pregnancies. In a recent trial, a blood filter lowered blood pressure and helped prolong some pregnancies.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25123 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25126 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

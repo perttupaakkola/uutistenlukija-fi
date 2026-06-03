@@ -1,0 +1,74 @@
+{
+  "ts": "2026-04-27T18:13:22Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T181229Z_42d3b16dfe",
+    "created_at": "2026-04-27T18:12:29Z",
+    "headline_seed": "Karmea trilleri! Tappara finaaliin, Ilves suli",
+    "description_seed": "IS seuraa SM-liigan kuudensia välieriä.",
+    "link": "https://www.is.fi/sm-liiga/art-2000011970826.html",
+    "source": "IS Urheilu",
+    "source_names": [
+      "source-16",
+      "source-2",
+      "Yle"
+    ],
+    "source_urls": [
+      "https://www.is.fi/sm-liiga/art-2000011970826.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.7,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Karmea trilleri! Tappara finaaliin, Ilves suli"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-16",
+        "source_type": "research",
+        "text": "– Ilves tuomitsee jyrkästi lauantain Tappara–Ilves-ottelussa vieraskannattajien katsomonosassa tapahtuneen välikohtauksen, jossa käytettiin ottelutapahtumissa ehdottomasti kiellettyä pyroteknist",
+        "word_count": 16,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      },
+      {
+        "source": "source-2",
+        "source_type": "research",
+        "text": "Ilveksen Samuli Ratinen ottaa koukkaamisesta jäähyn. Tappara ei pysty kuitenkaan hyödyntämään illan ensimmäistä ylivoimaansa. Huippupaikkoja ei tule. Maalittomana jatketaan.",
+        "word_count": 19,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Yle",
+        "source_type": "research",
+        "text": "SM-liigan finaalipaikat menivät nyt katkolle Tapparalle ja KooKoolle. Yle seurasi tapahtumia tässä artikkelissa.",
+        "word_count": 13,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "– Ilves tuomitsee jyrkästi lauantain Tappara–Ilves-ottelussa vieraskannattajien katsomonosassa tapahtuneen välikohtauksen, jossa käytettiin ottelutapahtumissa ehdottomasti kiellettyä pyroteknist\n\nIlveksen Samuli Ratinen ottaa koukkaamisesta jäähyn. Tappara ei pysty kuitenkaan hyödyntämään illan ensimmäistä ylivoimaansa. Huippupaikkoja ei tule. Maalittomana jatketaan.\n\nSM-liigan finaalipaikat menivät nyt katkolle Tapparalle ja KooKoolle. Yle seurasi tapahtumia tässä artikkelissa.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Karmea trilleri! Tappara finaaliin, Ilves suli",
+      "description": "IS seuraa SM-liigan kuudensia välieriä.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25273 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25276 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}

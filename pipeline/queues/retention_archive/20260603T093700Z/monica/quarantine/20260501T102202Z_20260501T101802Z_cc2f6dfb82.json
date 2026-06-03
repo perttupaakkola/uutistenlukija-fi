@@ -1,0 +1,57 @@
+{
+  "ts": "2026-05-01T10:22:02Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260501T101802Z_cc2f6dfb82",
+    "created_at": "2026-05-01T10:18:02Z",
+    "headline_seed": "Video: Näin ampuja ryntää Trumpin illalliselle raskaasti aseistau­tuneena",
+    "description_seed": "Syyttäjä julkaisi valvontakamerakuvaa viime viikonlopun salamurhayrityksestä. Yhdysvaltain viranomaiset ovat julkaisseet hyvälaatuista valvontakamerakuvaa lauantaisesta välikohtauksesta, jossa aseistautunut mies pyrki sisään Valkoisen talon kirjeenvaihtajien illalliselle Washingtonissa. Videolla näkyy, kuinka tummaan takkiin pukeutunut 31-vuotias kalifornialainen opettaja Cole Thomas Allen ryntää Washington Hilton -hotellin turvatarkastuspisteen läpi pumppuhaulikko käsissään.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/cd588d31-b61b-4500-9ce2-bda5a28823ac",
+    "source": "Iltalehti",
+    "source_names": [
+      "Iltalehti"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/cd588d31-b61b-4500-9ce2-bda5a28823ac"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.52,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Video: Näin ampuja ryntää Trumpin illalliselle raskaasti aseistau­tuneena"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Iltalehti",
+        "source_type": "description",
+        "text": "Syyttäjä julkaisi valvontakamerakuvaa viime viikonlopun salamurhayrityksestä. Yhdysvaltain viranomaiset ovat julkaisseet hyvälaatuista valvontakamerakuvaa lauantaisesta välikohtauksesta, jossa aseistautunut mies pyrki sisään Valkoisen talon kirjeenvaihtajien illalliselle Washingtonissa. Videolla näkyy, kuinka tummaan takkiin pukeutunut 31-vuotias kalifornialainen opettaja Cole Thomas Allen ryntää Washington Hilton -hotellin turvatarkastuspisteen läpi pumppuhaulikko käsissään.",
+        "word_count": 44,
+        "keyword_overlap": 43,
+        "strong_overlap": 33
+      }
+    ],
+    "source_text": "Syyttäjä julkaisi valvontakamerakuvaa viime viikonlopun salamurhayrityksestä. Yhdysvaltain viranomaiset ovat julkaisseet hyvälaatuista valvontakamerakuvaa lauantaisesta välikohtauksesta, jossa aseistautunut mies pyrki sisään Valkoisen talon kirjeenvaihtajien illalliselle Washingtonissa. Videolla näkyy, kuinka tummaan takkiin pukeutunut 31-vuotias kalifornialainen opettaja Cole Thomas Allen ryntää Washington Hilton -hotellin turvatarkastuspisteen läpi pumppuhaulikko käsissään.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Video: Näin ampuja ryntää Trumpin illalliselle raskaasti aseistau­tuneena",
+      "description": "Syyttäjä julkaisi valvontakamerakuvaa viime viikonlopun salamurhayrityksestä. Yhdysvaltain viranomaiset ovat julkaisseet hyvälaatuista valvontakamerakuvaa lauantaisesta välikohtauksesta, jossa aseistautunut mies pyrki sisään Valkoisen talon kirjeenvaihtajien illalliselle Washingtonissa. Videolla näkyy, kuinka tummaan takkiin pukeutunut 31-vuotias kalifornialainen opettaja Cole Thomas Allen ryntää Washington Hilton -hotellin turvatarkastuspisteen läpi pumppuhaulikko käsissään.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "reason_code": "monica_dispatch_exception",
+    "error": "Command '['/home/pertt/.openclaw/tools/node-v22.22.0/bin/openclaw', 'agent', '--agent', 'monica', '--message', 'You are Monica, the final Finnish writer/editor for uutistenlukija.fi.\\n\\nWrite exactly one publication-quality Finnish news article from the structured packet below.\\nReturn ONLY one JSON object. No markdown fences, no commentary.\\n\\nHard rules:\\n- Language: neutral, natural standard Finnish\\n- No English title or English body paragraphs unless a very short direct quote absolutely requires it\\n- No source labels in public copy (never output \\'Lähde:\\', \\'Source:\\', \\'Continue reading\\', \\'Alkuperäinen artikkeli\\')\\n- No duplicated opener, no repeated paragraphs, no generic AI ending\\n- No invented facts\\n- If the evidence is too weak or contradictory, return: {\"packet_id\":\"20260501T101802Z_cc2f6dfb82\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"short reason\"}\\n- Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE\\n- The first paragraph must be at least 30 words and summarize the verified core of the story\\n- Include at least two H2 subheadings inside `content`\\n\\nRequired JSON schema:\\n{\\n  \"type\": \"object\",\\n  \"required\": [\\n    \"packet_id\",\\n    \"title\",\\n    \"summary\",\\n    \"content\",\\n    \"category\",\\n    \"tags\",\\n    \"summary_bullets\",\\n    \"content_type\",\\n    \"editorial_reviewed\",\\n    \"confidence\",\\n    \"journalist_note\"\\n  ],\\n  \"optional_status\": \"INSUFFICIENT_CONFIDENCE\"\\n}\\n\\nStory packet:\\n{\\n  \"packet_id\": \"20260501T101802Z_cc2f6dfb82\",\\n  \"created_at\": \"2026-05-01T10:18:02Z\",\\n  \"headline_seed\": \"Video: Näin ampuja ryntää Trumpin illalliselle raskaasti aseistau\\xadtuneena\",\\n  \"description_seed\": \"Syyttäjä julkaisi valvontakamerakuvaa viime viikonlopun salamurhayrityksestä. Yhdysvaltain viranomaiset ovat julkaisseet hyvälaatuista valvontakamerakuvaa lauantaisesta välikohtauksesta, jossa aseistautunut mies pyrki sisään Valkoisen talon kirjeenvaihtajien illalliselle Washingtonissa. Videolla näkyy, kuinka tummaan takkiin pukeutunut 31-vuotias kalifornialainen opettaja Cole Thomas Allen ryntää Washington Hilton -hotellin turvatarkastuspisteen läpi pumppuhaulikko käsissään.\",\\n  \"link\": \"https://www.iltalehti.fi/ulkomaat/a/cd588d31-b61b-4500-9ce2-bda5a28823ac\",\\n  \"source\": \"Iltalehti\",\\n  \"source_names\": [\\n    \"Iltalehti\"\\n  ],\\n  \"source_urls\": [\\n    \"https://www.iltalehti.fi/ulkomaat/a/cd588d31-b61b-4500-9ce2-bda5a28823ac\"\\n  ],\\n  \"category_hint\": \"Ulkomaat\",\\n  \"category\": \"Ulkomaat\",\\n  \"story_confidence\": 0.52,\\n  \"language_mix\": [\\n    \"fi\"\\n  ],\\n  \"facts\": {\\n    \"who\": [],\\n    \"what\": [\\n      \"Video: Näin ampuja ryntää Trumpin illalliselle raskaasti aseistau\\xadtuneena\"\\n    ],\\n    \"where\": [],\\n    \"when\": [],\\n    \"why\": [],\\n    \"consequences\": []\\n  },\\n  \"clean_source_blocks\": [\\n    {\\n      \"source\": \"Iltalehti\",\\n      \"source_type\": \"description\",\\n      \"text\": \"Syyttäjä julkaisi valvontakamerakuvaa viime viikonlopun salamurhayrityksestä. Yhdysvaltain viranomaiset ovat julkaisseet hyvälaatuista valvontakamerakuvaa lauantaisesta välikohtauksesta, jossa aseistautunut mies pyrki sisään Valkoisen talon kirjeenvaihtajien illalliselle Washingtonissa. Videolla näkyy, kuinka tummaan takkiin pukeutunut 31-vuotias kalifornialainen opettaja Cole Thomas Allen ryntää Washington Hilton -hotellin turvatarkastuspisteen läpi pumppuhaulikko käsissään.\",\\n      \"word_count\": 44,\\n      \"keyword_overlap\": 43,\\n      \"strong_overlap\": 33\\n    }\\n  ],\\n  \"source_text\": \"Syyttäjä julkaisi valvontakamerakuvaa viime viikonlopun salamurhayrityksestä. Yhdysvaltain viranomaiset ovat julkaisseet hyvälaatuista valvontakamerakuvaa lauantaisesta välikohtauksesta, jossa aseistautunut mies pyrki sisään Valkoisen talon kirjeenvaihtajien illalliselle Washingtonissa. Videolla näkyy, kuinka tummaan takkiin pukeutunut 31-vuotias kalifornialainen opettaja Cole Thomas Allen ryntää Washington Hilton -hotellin turvatarkastuspisteen läpi pumppuhaulikko käsissään.\",\\n  \"editor_brief\": \"Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.\",\\n  \"article_snapshot\": {\\n    \"title\": \"Video: Näin ampuja ryntää Trumpin illalliselle raskaasti aseistau\\xadtuneena\",\\n    \"description\": \"Syyttäjä julkaisi valvontakamerakuvaa viime viikonlopun salamurhayrityksestä. Yhdysvaltain viranomaiset ovat julkaisseet hyvälaatuista valvontakamerakuvaa lauantaisesta välikohtauksesta, jossa aseistautunut mies pyrki sisään Valkoisen talon kirjeenvaihtajien illalliselle Washingtonissa. Videolla näkyy, kuinka tummaan takkiin pukeutunut 31-vuotias kalifornialainen opettaja Cole Thomas Allen ryntää Washington Hilton -hotellin turvatarkastuspisteen läpi pumppuhaulikko käsissään.\",\\n    \"category_hint\": \"Ulkomaat\",\\n    \"research_source\": \"rss\"\\n  }\\n}\\n']' timed out after 240 seconds"
+  }
+}

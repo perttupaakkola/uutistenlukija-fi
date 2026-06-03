@@ -1,0 +1,83 @@
+{
+  "ts": "2026-04-27T20:09:08Z",
+  "reason": "dispatch_error",
+  "packet": {
+    "packet_id": "20260427T200815Z_080a366b70",
+    "created_at": "2026-04-27T20:08:15Z",
+    "headline_seed": "Canada's Carney launches a sovereign wealth fund. What is it?",
+    "description_seed": "The fund - which Canadians can invest in directly - will help pay for major infrastructure projects in the country, the prime minister says.",
+    "link": "https://www.bbc.com/news/articles/c98m800r28qo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "source-23",
+      "source-28"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c98m800r28qo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.9,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Canada's Carney launches a sovereign wealth fund. What is it?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The fund - which Canadians can invest in directly - will help pay for major infrastructure projects in the country, the prime minister says.",
+        "word_count": 24,
+        "keyword_overlap": 14,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Canada is launching a government-owned investment fund to pay for major development projects in the country, Prime Minister Mark Carney has announced.",
+        "word_count": 22,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "source-23",
+        "source_type": "research",
+        "text": "Prime Minister Mark Carney says the new sovereign wealth fund will be professionally managed and will operate as a Crown corporation at arm’s length from the government.",
+        "word_count": 27,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "source-28",
+        "source_type": "research",
+        "text": "Key questions on criteria, risk and rate of return have no answers yet, but Carney says the focus will be on investing in Canada, and mentions that other sovereign wealth funds around the world began with a domestic focus before scaling up to global investments.",
+        "word_count": 45,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "The fund - which Canadians can invest in directly - will help pay for major infrastructure projects in the country, the prime minister says.\n\nCanada is launching a government-owned investment fund to pay for major development projects in the country, Prime Minister Mark Carney has announced.\n\nPrime Minister Mark Carney says the new sovereign wealth fund will be professionally managed and will operate as a Crown corporation at arm’s length from the government.\n\nKey questions on criteria, risk and rate of return have no answers yet, but Carney says the focus will be on investing in Canada, and mentions that other sovereign wealth funds around the world began with a domestic focus before scaling up to global investments.",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Canada's Carney launches a sovereign wealth fund. What is it?",
+      "description": "The fund - which Canadians can invest in directly - will help pay for major infrastructure projects in the country, the prime minister says.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "raw_response": "",
+  "extra": {
+    "error": "Monica writer command failed: [openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[openai-codex] Token refresh failed: 401 {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}\n[diagnostic] lane task error: lane=main durationMs=25193 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:main durationMs=25196 error=\"Error: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai-codex/gpt-5.4 candidate=openai-codex/gpt-5.4 reason=auth next=none detail=OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai-codex: Failed to refresh OpenAI Codex token. Please try again or re-authenticate."
+  }
+}
