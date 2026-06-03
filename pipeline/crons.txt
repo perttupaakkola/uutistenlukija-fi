@@ -72,6 +72,9 @@
 # Pipeline health monitor (every 15 min — /api/health.json + pipeline degraded + stale >6h → #operations)
 */15 * * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/health_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/health-monitor.log 2>&1
 
+# Visual QA monitor (every 6h — desktop/mobile screenshots + overflow/image/contrast checks → #operations on failure)
+17 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && node scripts/visual_qa_monitor.js --post-discord >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/visual-qa-monitor.log 2>&1
+
 # Disk monitor (every 6h; canonical entry)
 0 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/disk_space_monitor.sh >> pipeline/logs/disk_monitor.log 2>&1
 

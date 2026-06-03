@@ -46,6 +46,11 @@
     "marker_file_path": "pipeline/logs/analytics.log"
   },
   {
+    "name": "visual_qa_monitor",
+    "expected_interval_hours": 6.0,
+    "marker_file_path": "pipeline/logs/visual-qa-monitor.log"
+  },
+  {
     "name": "disk_monitor",
     "expected_interval_hours": 6.0,
     "marker_file_path": "data/disk_space_status.json"
