@@ -187,6 +187,81 @@ RECOVERABLE_TALOUS_FAILED_CLASSES = {
     "repair_near_miss_short",
     "writer_short_after_repair",
 }
+TALOUS_NEAR_SHORT_RETRY_MIN_SOURCE_WORDS = 300
+TALOUS_NEAR_SHORT_RETRY_MIN_SOURCE_BLOCKS = 3
+TALOUS_NEAR_SHORT_RETRY_MIN_CONFIDENCE = 0.85
+TALOUS_NEAR_SHORT_RETRY_MIN_WORDS = 220
+TALOUS_NEAR_SHORT_RETRY_MAX_WORDS = 249
+TALOUS_NEAR_SHORT_RETRY_MAX_RECENT_FAILURES = 3
+
+
+def talous_near_short_retry_eligible(data: dict) -> bool:
+    """Return True for Monica-approved clean Talous near-short retries only.
+
+    This keeps the under-target Talous lane alive for source-backed writer
+    shortfalls without turning every failed org-source packet into an infinite
+    retry loop. Duplicate and quality failures stay closed elsewhere.
+    """
+    if data.get("duplicate_rejected"):
+        return False
+    packet = data.get("packet") or {}
+    original = data.get("original_article") or {}
+    feedback = data.get("writer_failure_feedback") or {}
+    category = packet_category(packet, original)
+    if category != "Talous":
+        return False
+    if staged_failed_retry_classification(data) not in RECOVERABLE_TALOUS_FAILED_CLASSES:
+        return False
+
+    try:
+        source_words = int(feedback.get("selected_source_words") or packet_source_words(data))
+    except (TypeError, ValueError):
+        source_words = packet_source_words(data)
+    try:
+        source_blocks = int(feedback.get("selected_source_blocks") or packet_source_blocks(data))
+    except (TypeError, ValueError):
+        source_blocks = packet_source_blocks(data)
+    try:
+        confidence = float(feedback.get("story_confidence") or packet.get("story_confidence") or 0.0)
+    except (TypeError, ValueError):
+        confidence = 0.0
+    try:
+        final_words = int(feedback.get("final_word_count") or 0)
+    except (TypeError, ValueError):
+        final_words = 0
+
+    if source_words < TALOUS_NEAR_SHORT_RETRY_MIN_SOURCE_WORDS:
+        return False
+    if source_blocks < TALOUS_NEAR_SHORT_RETRY_MIN_SOURCE_BLOCKS:
+        return False
+    if confidence < TALOUS_NEAR_SHORT_RETRY_MIN_CONFIDENCE:
+        return False
+    if not (TALOUS_NEAR_SHORT_RETRY_MIN_WORDS <= final_words <= TALOUS_NEAR_SHORT_RETRY_MAX_WORDS):
+        return False
+
+    issues = feedback.get("issues") or []
+    if not issues:
+        issues = [str(data.get("failure") or "")]
+    issue_text = "; ".join(str(issue) for issue in issues).lower()
+    if "content too short" not in issue_text:
+        return False
+    # Keep the retry lane to the exact Monica class: content length shortfall
+    # only. Lead/schema/quality failures need to stay fail-closed.
+    allowed_issue = re.compile(r"^\s*content too short:\s*\d+\s+words\s*$", re.IGNORECASE)
+    if any(not allowed_issue.match(str(issue)) for issue in issues):
+        return False
+
+    diagnostics = packet.get("source_diagnostics") or {}
+    selected_sources = diagnostics.get("selected_sources") or packet.get("source_names") or []
+    if isinstance(selected_sources, str):
+        selected_sources = [selected_sources]
+    selected_sources = [str(source).strip().lower() for source in selected_sources if str(source).strip()]
+    # Strict cleanliness check: the retry exception is only for one coherent
+    # selected-source cluster. Mixed-source packets can still publish normally
+    # if Monica produces valid copy, but they should not bypass cooldown.
+    if selected_sources and len(set(selected_sources)) != 1:
+        return False
+    return True
 
 
 def should_skip_staged_cooldown(article: dict, hours: int = 48) -> bool:
@@ -196,20 +271,23 @@ def should_skip_staged_cooldown(article: dict, hours: int = 48) -> bool:
         return False
     if article_category(article) == "Talous":
         saw_failed = False
+        eligible_retry_failures = 0
         for box, path in statuses:
             if box != "failed":
                 return True
             saw_failed = True
-            # Keep source acquisition alive for the under-target Talous lane
-            # when a recent failure is a writer/runtime shortfall that may be
-            # fixed by a new packet or writer pass. Do not bypass cooldown for
-            # duplicate or quality-gate failures, and do not enqueue another
-            # copy when a digest is already ready/writing/outbox.
+            # Keep source acquisition alive only for Monica's narrow
+            # source-backed near-short class. Do not bypass cooldown for
+            # duplicate, contaminated-source, lead/schema, quality-gate, or
+            # repeated unresolved writer shortfalls.
             try:
                 data = json.loads(path.read_text(encoding="utf-8", errors="replace"))
             except Exception:
                 data = {}
-            if staged_failed_retry_classification(data) not in RECOVERABLE_TALOUS_FAILED_CLASSES:
+            if not talous_near_short_retry_eligible(data):
+                return True
+            eligible_retry_failures += 1
+            if eligible_retry_failures >= TALOUS_NEAR_SHORT_RETRY_MAX_RECENT_FAILURES:
                 return True
         return not saw_failed
     return True

@@ -182,15 +182,66 @@ class StagedPublishMetricsTests(unittest.TestCase):
     def test_talous_cooldown_requeues_when_recent_recoverable_failure_exists(self) -> None:
         article = {"title": "talous-recoverable", "link": "https://example.com/talous-recoverable", "category_hint": "Talous"}
         digest = staged_publish.stable_digest(article)
-        failed = _record("talous-recoverable", source_words=220, blocks=3)
+        failed = _record("talous-recoverable", source_words=330, blocks=3)
         failed["digest"] = digest
         failed["packet"]["category_hint"] = "Talous"
         failed["packet"]["story_confidence"] = 0.98
+        failed["packet"]["source_diagnostics"] = {"selected_sources": ["Testi", "Testi", "Testi"]}
         failed["failure"] = "content too short: 225 words"
-        failed["writer_failure_feedback"] = {"retry_classification": "repair_near_miss_short"}
+        failed["writer_failure_feedback"] = {
+            "retry_classification": "repair_near_miss_short",
+            "selected_source_words": 330,
+            "selected_source_blocks": 3,
+            "story_confidence": 0.98,
+            "final_word_count": 225,
+            "issues": ["content too short: 225 words"],
+        }
         self._write("failed", "old-talous", failed, age_hours=1)
 
         self.assertFalse(staged_publish.should_skip_staged_cooldown(article, hours=48))
+
+    def test_talous_cooldown_does_not_requeue_repeated_near_short_failures(self) -> None:
+        article = {"title": "talous-repeat", "link": "https://example.com/talous-repeat", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
+        for idx, words in enumerate([225, 231, 241], start=1):
+            failed = _record(f"talous-repeat-{idx}", source_words=330, blocks=3)
+            failed["digest"] = digest
+            failed["packet"]["category_hint"] = "Talous"
+            failed["packet"]["story_confidence"] = 0.98
+            failed["packet"]["source_diagnostics"] = {"selected_sources": ["Testi", "Testi", "Testi"]}
+            failed["failure"] = f"content too short: {words} words"
+            failed["writer_failure_feedback"] = {
+                "retry_classification": "repair_near_miss_short",
+                "selected_source_words": 330,
+                "selected_source_blocks": 3,
+                "story_confidence": 0.98,
+                "final_word_count": words,
+                "issues": [f"content too short: {words} words"],
+            }
+            self._write("failed", f"failed-talous-repeat-{idx}", failed, age_hours=idx)
+
+        self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=48))
+
+    def test_talous_cooldown_does_not_requeue_mixed_source_near_short(self) -> None:
+        article = {"title": "talous-mixed", "link": "https://example.com/talous-mixed", "category_hint": "Talous"}
+        digest = staged_publish.stable_digest(article)
+        failed = _record("talous-mixed", source_words=360, blocks=3)
+        failed["digest"] = digest
+        failed["packet"]["category_hint"] = "Talous"
+        failed["packet"]["story_confidence"] = 0.98
+        failed["packet"]["source_diagnostics"] = {"selected_sources": ["Finanssiala", "Yle", "Finanssiala"]}
+        failed["failure"] = "content too short: 231 words"
+        failed["writer_failure_feedback"] = {
+            "retry_classification": "repair_near_miss_short",
+            "selected_source_words": 360,
+            "selected_source_blocks": 3,
+            "story_confidence": 0.98,
+            "final_word_count": 231,
+            "issues": ["content too short: 231 words"],
+        }
+        self._write("failed", "failed-talous-mixed", failed, age_hours=1)
+
+        self.assertTrue(staged_publish.should_skip_staged_cooldown(article, hours=48))
 
     def test_talous_cooldown_does_not_requeue_writer_runtime_timeout(self) -> None:
         article = {"title": "talous-timeout", "link": "https://example.com/talous-timeout", "category_hint": "Talous"}
@@ -1048,12 +1099,13 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
     @patch.object(staged_publish, "_run_monica")
     def test_monica_worker_records_near_short_repair_markers_in_outbox(self, run_mock) -> None:
-        record = _record("worker-near-short", source_words=240, blocks=2)
+        record = _record("worker-near-short", source_words=330, blocks=3)
         record["packet"]["packet_id"] = "pkt-worker-near-short"
         record["packet"]["story_confidence"] = 0.9
         record["packet"]["clean_source_blocks"] = [
-            {"source": "Testi 1", "text": " ".join(["sana"] * 120), "word_count": 120},
-            {"source": "Testi 2", "text": " ".join(["sana"] * 120), "word_count": 120},
+            {"source": "Testi 1", "text": " ".join(["sana"] * 110), "word_count": 110},
+            {"source": "Testi 1", "text": " ".join(["sana"] * 110), "word_count": 110},
+            {"source": "Testi 1", "text": " ".join(["sana"] * 110), "word_count": 110},
         ]
         path = self._write("ready", "worker-near-short", record, age_hours=1)
         near_payload = {
