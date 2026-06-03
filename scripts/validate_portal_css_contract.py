@@ -17,6 +17,7 @@ CSS_FILES = [
     ROOT / "assets" / "css" / "portal-overhaul.css",
     ROOT / "static" / "css" / "portal-overhaul.css",
 ]
+CRITICAL_CSS = ROOT / "layouts" / "partials" / "critical-css.html"
 
 HEADER_CLASSES = [
     "portal-masthead",
@@ -52,6 +53,15 @@ MOBILE_SURFACE_LINK_GUARDS = [
     ".portal-row-card h3 a",
 ]
 
+CONTRAST_GUARDS = [
+    '[data-theme="dark"] .portal-livebar time',
+    '[data-theme="dark"] .portal-kicker',
+    '[data-theme="dark"] .portal-newsletter',
+    '[data-theme="dark"] .portal-newsletter h2',
+    '[data-theme="dark"] .newsletter-signup__inner',
+    '[data-theme="dark"] .newsletter-signup__title',
+]
+
 
 def require(path: Path) -> str:
     if not path.exists():
@@ -62,6 +72,8 @@ def require(path: Path) -> str:
 def main() -> int:
     header = require(HEADER)
     index = require(INDEX)
+    css_by_path = {css_path: require(css_path) for css_path in CSS_FILES}
+    critical_css = require(CRITICAL_CSS)
     failures: list[str] = []
 
     for class_name in HEADER_CLASSES:
@@ -72,8 +84,7 @@ def main() -> int:
         if class_name not in index:
             failures.append(f"homepage markup missing expected class: {class_name}")
 
-    for css_path in CSS_FILES:
-        css = require(css_path)
+    for css_path, css in css_by_path.items():
         label = css_path.relative_to(ROOT)
 
         for class_name in HEADER_CLASSES + FRONTPAGE_CLASSES:
@@ -93,6 +104,19 @@ def main() -> int:
                 failures.append(
                     f"{label} is missing mobile light-surface color guard for {selector}"
                 )
+
+        for selector in CONTRAST_GUARDS:
+            if selector not in css:
+                failures.append(f"{label} is missing OPE-158 contrast guard for {selector}")
+
+    if css_by_path[CSS_FILES[0]] != css_by_path[CSS_FILES[1]]:
+        failures.append("assets/css/portal-overhaul.css and static/css/portal-overhaul.css differ")
+
+    for selector in CONTRAST_GUARDS:
+        if selector not in critical_css:
+            failures.append(
+                f"{CRITICAL_CSS.relative_to(ROOT)} is missing OPE-158 contrast lock for {selector}"
+            )
 
     if failures:
         print("Portal CSS contract validation failed:")

@@ -1053,6 +1053,50 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 [data-theme="dark"] .portal-row-card .portal-kicker {
   color: #8ab4ff;
 }
+[data-theme="dark"] .portal-livebar time {
+  color: #f0b8ad !important;
+}
+[data-theme="dark"] .portal-kicker,
+[data-theme="dark"] .portal-teaser__meta,
+[data-theme="dark"] .portal-row-card .portal-kicker,
+[data-theme="dark"] .portal-row-card__time,
+[data-theme="dark"] .portal-section-label {
+  color: #d7cfc3 !important;
+}
+[data-theme="dark"] .portal-lead .portal-kicker {
+  background: #0b49ad;
+  color: #fff !important;
+}
+[data-theme="dark"] .portal-newsletter,
+[data-theme="dark"] .newsletter-band,
+[data-theme="dark"] .newsletter-signup__inner {
+  background: #fffdf9 !important;
+  border-color: #ddd4c8 !important;
+  color: #171513 !important;
+}
+[data-theme="dark"] .portal-newsletter h2,
+[data-theme="dark"] .newsletter-band__heading,
+[data-theme="dark"] .newsletter-signup__title {
+  color: #171513 !important;
+}
+[data-theme="dark"] .portal-newsletter p,
+[data-theme="dark"] .newsletter-band__text,
+[data-theme="dark"] .newsletter-band__privacy,
+[data-theme="dark"] .newsletter-signup__text,
+[data-theme="dark"] .newsletter-signup__note {
+  color: #6f685f !important;
+}
+[data-theme="dark"] .portal-newsletter__icon {
+  background: #f4e3dc;
+  color: var(--portal-blue);
+}
+[data-theme="dark"] .portal-newsletter input,
+[data-theme="dark"] .newsletter-band__input,
+[data-theme="dark"] .newsletter-signup__input {
+  background: #fff !important;
+  border-color: #ddd4c8 !important;
+  color: #171513 !important;
+}
 
 @media (max-width: 900px) {
   [data-theme="dark"] .portal-lead h2,

@@ -101,6 +101,28 @@ CRITICAL_KEYFRAMES: list[str] = [
     "spin",
 ]
 
+PORTAL_OVERHAUL_CRITICAL_LOCKS = """
+/* OPE-158 dark portal contrast locks; keep in sync with portal-overhaul.css. */
+[data-theme="dark"] .portal-livebar time { color: #f0b8ad !important; }
+[data-theme="dark"] .portal-kicker,
+[data-theme="dark"] .portal-teaser__meta,
+[data-theme="dark"] .portal-row-card .portal-kicker,
+[data-theme="dark"] .portal-row-card__time,
+[data-theme="dark"] .portal-section-label { color: #d7cfc3 !important; }
+[data-theme="dark"] .portal-lead .portal-kicker { background: #0b49ad; color: #fff !important; }
+[data-theme="dark"] .portal-newsletter,
+[data-theme="dark"] .newsletter-band,
+[data-theme="dark"] .newsletter-signup__inner { background: #fffdf9 !important; border-color: #ddd4c8 !important; color: #171513 !important; }
+[data-theme="dark"] .portal-newsletter h2,
+[data-theme="dark"] .newsletter-band__heading,
+[data-theme="dark"] .newsletter-signup__title { color: #171513 !important; }
+[data-theme="dark"] .portal-newsletter p,
+[data-theme="dark"] .newsletter-band__text,
+[data-theme="dark"] .newsletter-band__privacy,
+[data-theme="dark"] .newsletter-signup__text,
+[data-theme="dark"] .newsletter-signup__note { color: #6f685f !important; }
+"""
+
 # ── @media that we must include (mobile critical overrides) ───────────────────
 # Only media blocks where ALL rules inside are critical — we filter rule-by-rule.
 CRITICAL_MEDIA_MAX_WIDTH_PX = 900  # include breakpoints up to this value
@@ -246,7 +268,7 @@ def extract_critical(css_src: str) -> str:
 
         # @charset, @import, other at-rules: skip
 
-    combined = "\n".join(critical_parts)
+    combined = "\n".join([*critical_parts, PORTAL_OVERHAUL_CRITICAL_LOCKS])
     return minify_css(combined)
 
 
