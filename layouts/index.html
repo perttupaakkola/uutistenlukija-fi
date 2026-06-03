@@ -108,28 +108,28 @@
         </ol>
       </section>
     </aside>
-  </section>
-  {{ end }}
 
-  {{ $digestPool := where $sorted "Permalink" "not in" $seen }}
-  {{ if gt (len $digestPool) 0 }}
-  <section class="portal-day-digest" aria-labelledby="front-digest-title">
-    <div class="portal-day-digest__intro">
-      <span class="portal-section-label">Päivän kooste</span>
-      <h2 id="front-digest-title">Mitä tänään kannattaa seurata</h2>
-      <p>Tiivis tilannekuva uusimmista aiheista ennen uutisvirtaa.</p>
-      <a href="/paivan-kooste/">Avaa päivän kooste</a>
-    </div>
-    <ol class="portal-day-digest__list">
-      {{ range first 4 $digestPool }}
-      {{ $cat := index .Params.categories 0 | default "Uutiset" }}
-      {{ $seen = $seen | append .Permalink }}
-      <li>
-        <span>{{ $cat }}</span>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-      {{ end }}
-    </ol>
+    {{ $digestPool := where $sorted "Permalink" "not in" $seen }}
+    {{ if gt (len $digestPool) 0 }}
+    <section class="portal-day-digest" aria-labelledby="front-digest-title">
+      <div class="portal-day-digest__intro">
+        <span class="portal-section-label">Päivän kooste</span>
+        <h2 id="front-digest-title">Mitä tänään kannattaa seurata</h2>
+        <p>Tiivis tilannekuva uusimmista aiheista ennen uutisvirtaa.</p>
+        <a href="/paivan-kooste/">Avaa päivän kooste</a>
+      </div>
+      <ol class="portal-day-digest__list">
+        {{ range first 4 $digestPool }}
+        {{ $cat := index .Params.categories 0 | default "Uutiset" }}
+        {{ $seen = $seen | append .Permalink }}
+        <li>
+          <span>{{ $cat }}</span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ol>
+    </section>
+    {{ end }}
   </section>
   {{ end }}
 

@@ -36,6 +36,14 @@ FRONTPAGE_CLASSES = [
     "portal-lead",
     "portal-center-list",
     "portal-right-rail",
+    "portal-day-digest",
+]
+
+LAYOUT_GUARDS = [
+    ".portal-right-rail { display: grid; grid-column: 3; grid-row: 1 / span 2;",
+    ".portal-day-digest {\n  grid-column: 1 / 3;\n  grid-row: 2;",
+    "@media (max-width: 1180px)",
+    "@media (max-width: 1020px)",
 ]
 
 OBSOLETE_HEADER_SELECTORS = [
@@ -108,6 +116,10 @@ def main() -> int:
         for selector in CONTRAST_GUARDS:
             if selector not in css:
                 failures.append(f"{label} is missing OPE-158 contrast guard for {selector}")
+
+        for snippet in LAYOUT_GUARDS:
+            if snippet not in css:
+                failures.append(f"{label} is missing OPE-162 layout guard {snippet!r}")
 
     if css_by_path[CSS_FILES[0]] != css_by_path[CSS_FILES[1]]:
         failures.append("assets/css/portal-overhaul.css and static/css/portal-overhaul.css differ")
