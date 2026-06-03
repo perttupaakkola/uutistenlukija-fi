@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-03T05:41:29.371826+00:00",
+  "digest": "c45463cbb2",
+  "packet": {
+    "packet_id": "20260603T054129Z_c45463cbb2",
+    "created_at": "2026-06-03T05:41:29Z",
+    "headline_seed": "Watch: Man attacked by bear at steel works in Japan",
+    "description_seed": "Watch: Man attacked by bear at steel works in Japan",
+    "link": "https://www.bbc.co.uk/programmes/p0npr053?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC",
+      "BroBible",
+      "BroBible",
+      "Yahoo News UK"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/programmes/p0npr053?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Watch: Man attacked by bear at steel works in Japan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "Four people have sustained minor to moderate injuries in a bear attack at Fukushima Steel Works in Japan. Police and fire department officials rushed to a residential area in the Sasakino district of the city after receiving an emergency call from the steel works, saying multiple employees had been attacked by a bear. Security camera footage shows a black bear chasing an employee near the entrance to the compound, knocking them to the ground, before running towards a building. As of Tuesday evening, the bear had still not been caught by authorities, and was thought to be hiding inside a building somewhere on the premises. Two types of bear are found in Japan - Asian black bears, and bigger brown bears which are found on the island of Hokkaido.",
+        "word_count": 129,
+        "keyword_overlap": 5,
+        "strong_overlap": 1
+      },
+      {
+        "source": "BroBible",
+        "source_type": "research",
+        "text": "According to the Associated Press, first responders were dispatched to its Sasakino district on Tuesday morning after receiving a call concerning a bear that showed up on the grounds of Fukushima Steel Works, where two factory workers were injured by the animal before it moved on. A third person was attacked after the bear showed up at another factory that specializes in the manufacture of electronic equipment, and an elderly woman who lives in the area was also targeted while it was wandering around. The three men attacked at their job were treated for what were described as “minor” injuries, while the woman suffered “moderate” ---",
+        "word_count": 106,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      },
+      {
+        "source": "BroBible",
+        "source_type": "research",
+        "text": "Japan has found itself dealing with a growing crisis due to a rise in the number of people who’ve been attacked by bears in recent years. That has coincided with an increase in the number of incidents that have unfolded in heavily populated areas, which now includes one where multiple people were injured after one of the animals went on a rampage that involved two separate factories. Three of the four major islands that comprise Japan boast a bear population that collectively exceeds more than 50,000 of those mammals. The northernmost, Hokkaido, is home to an estimated 12,000 black bears, while around 45,000 of the black variety reside across Honshu and Shikoku.",
+        "word_count": 112,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Yahoo News UK",
+        "source_type": "research",
+        "text": "The bear later injured a third person, a male employee in his 60s at separate company. A woman in her 80s who lives in the neighborhood also was attacked and injured, the Fukushima City Fire Department said. The t...",
+        "word_count": 39,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Four people have sustained minor to moderate injuries in a bear attack at Fukushima Steel Works in Japan. Police and fire department officials rushed to a residential area in the Sasakino district of the city after receiving an emergency call from the steel works, saying multiple employees had been attacked by a bear. Security camera footage shows a black bear chasing an employee near the entrance to the compound, knocking them to the ground, before running towards a building. As of Tuesday evening, the bear had still not been caught by authorities, and was thought to be hiding inside a building somewhere on the premises. Two types of bear are found in Japan - Asian black bears, and bigger brown bears which are found on the island of Hokkaido.\n\nAccording to the Associated Press, first responders were dispatched to its Sasakino district on Tuesday morning after receiving a call concerning a bear that showed up on the grounds of Fukushima Steel Works, where two factory workers were injured by the animal before it moved on. A third person was attacked after the bear showed up at another factory that specializes in the manufacture of electronic equipment, and an elderly woman who lives in the area was also targeted while it was wandering around. The three men attacked at their job were treated for what were described as “minor” injuries, while the woman suffered “moderate” ---\n\nJapan has found itself dealing with a growing crisis due to a rise in the number of people who’ve been attacked by bears in recent years. That has coincided with an increase in the number of incidents that have unfolded in heavily populated areas, which now includes one where multiple people were injured after one of the animals went on a rampage that involved two separate factories. Three of the four major islands that comprise Japan boast a bear population that collectively exceeds more than 50,000 of those mammals. The northernmost, Hokkaido, is home to an estimated 12,000 black bears, while around 45,000 of the black variety reside across Honshu and Shikoku.\n\nThe bear later injured a third person, a male employee in his 60s at separate company. A woman in her 80s who lives in the neighborhood also was attacked and injured, the Fukushima City Fire Department said. The t...",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1041,
+      "selected_blocks": 4,
+      "selected_source_words": 386,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BroBible",
+        "BroBible",
+        "BroBible",
+        "BroBible",
+        "Yahoo News UK",
+        "Yahoo News UK",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC",
+        "BroBible",
+        "BroBible",
+        "Yahoo News UK"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Watch: Man attacked by bear at steel works in Japan",
+      "description": "Watch: Man attacked by bear at steel works in Japan",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Watch: Man attacked by bear at steel works in Japan",
+    "description": "Watch: Man attacked by bear at steel works in Japan",
+    "link": "https://www.bbc.co.uk/programmes/p0npr053?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-03T00:58:09+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "695b39bdccef11b856a609b702c5b8a4",
+    "_url_hash": "75740b543e8a222b32a17b5cfba6a391a04172070d59365a04e62217d86567ca",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC]\nFour people have sustained minor to moderate injuries in a bear attack at Fukushima Steel Works in Japan.\n\nPolice and fire department officials rushed to a residential area in the Sasakino district of the city after receiving an emergency call from the steel works, saying multiple employees had been attacked by a bear.\n\nSecurity camera footage shows a black bear chasing an employee near the entrance to the compound, knocking them to the ground, before running towards a building.\n\nAs of Tuesday evening, the bear had still not been caught by authorities, and was thought to be hiding inside a building somewhere on the premises.\n\nTwo types of bear are found in Japan - Asian black bears, and bigger brown bears which are found on the island of Hokkaido.\n\nIn 2025, the number of people killed by bears in the country reached a record high.\n\nHuge crowds formed outside a shopping centre in China to see actor Zhang Linghe.\n\nThere were 242 people on board the flight on 12 June 2025, and all but one died in the crash.\n\nThe BBC is in Seoul, where tattooist from all over the country have gathered to celebrate their art, following decades of underground work.\n\nTaiwan Travelogue is the first novel translated from Mandarin Chinese to win the prestigious award.\n\nRescuers in Laos have found five villagers alive inside a flooded cave after they were trapped for a week.\n\nThe driver and passengers of the car managed to escape before the bridge gave way in Xiaogan.\n\nThe BBC's Sumedha Pal described how difficult it was to be standing in the streets of Delhi as temperatures rose to 45C .\n\nAt least 82 people have been killed and two are missing after a gas explosion at a coal mine in northern China on Sunday, officials say.\n\nAt least 82 people have been killed after a gas explosion at the Liushenyu mine in China.\n\nA North Korean women's football team played in South Korea marking the first time athletes from the North have crossed the border in nearly 8 years.\n\nRounds of gunfire were heard but officials have not revealed who fired the shots.\n\nPakistan says it hit 'military and terrorist infrastructure' - but the UN and victims' families reject this claim.\n\nOfficials said the group had been hiking up the active volcano despite a climbing ban.\n\nWu Yize, 22, was met with screaming fans at his first public appearance since his world title win - with the BBC's Stephen McDonell amongst the crowd.\n\nAnalysts say the daughter of North Korea’s leader Kim Jong Un is not just growing up - she’s \n\n---\n\n[Lähde: BroBible]\nJapan has found itself dealing with a growing crisis due to a rise in the number of people who’ve been attacked by bears in recent years. That has coincided with an increase in the number of incidents that have unfolded in heavily populated areas, which now includes one where multiple people were injured after one of the animals went on a rampage that involved two separate factories.\n\nThree of the four major islands that comprise Japan boast a bear population that collectively exceeds more than 50,000 of those mammals. The northernmost, Hokkaido, is home to an estimated 12,000 black bears, while around 45,000 of the black variety reside across Honshu and Shikoku.\n\nIn 2025, the country set a dubious record of 13 confirmed fatalities resulting from bear attacks, which was the highest total since it started officially keeping tabs on those numbers in 2006.\n\nThat led to the military being deployed in an attempt to battle back, and a company that specializes in the manufacture of robotic “monster wolves” designed to scare them away has a months-long waiting list due to a spike in demand.\n\nExperts say there are a few factors that have played a role in the concerning trend. Climate change has had an impact on food supply while driving bears into areas populated by humans in search of more food, including smaller villages that have seen their population drop and have subsequently become more attractive destinations for bears that may have otherwise been deterred from entering a more bustling one.\n\nHowever, there have also been plenty of incidents in more heavily populated areas, which was the case with one that unfolded on Tuesday.\n\nFukushima City is located in the northeast region of Honshu and is home to around 275,000 people who live in close proximity to the volcanic mountains where there are more than a few black bears to be found.\n\nAccording to the Associated Press, first responders were dispatched to its Sasakino district on Tuesday morning after receiving a call concerning a bear that showed up on the grounds of Fukushima Steel Works, where two factory workers were injured by the animal before it moved on.\n\nA third person was attacked after the bear showed up at another factory that specializes in the manufacture of electronic equipment, and an elderly woman who lives in the area was also targeted while it was wandering around. The three men attacked at their job were treated for what were described as “minor” injuries, while the woman suffered “moderate” \n\n---\n\n[Lähde: Yahoo News UK]\nTOKYO (AP) — A bear injured four people in a Japanese residential area on Tuesday in the latest attack in an area of the country where the animals have increasingly encroached on the human population in recent years.\n\nJapan's Environment Ministry said a record 13 people were killed in more than 230 attacks by bears in 2025.\n\nPolice and fire department officials rushed to the Sasakino district of Fukushima in northeastern Japan after receiving an emergency call from the Fukushima Steel Works reporting bear attacks on two employees.\n\nSecurity camera footage shows a black bear appearing and chasing an employee near the entrance. As the man in his 20s tries to flee, the bear throws him to the ground. It then moves into the compound and injures a second male employee in his 60s.\n\nThe bear later injured a third person, a male employee in his 60s at separate company. A woman in her 80s who lives in the neighborhood also was attacked and injured, the Fukushima City Fire Department said.\n\nThe t...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-03T05:44:40.807021+00:00",
+  "failure": "content too short: 238 words",
+  "payload": {
+    "packet_id": "20260603T054129Z_c45463cbb2",
+    "title": "Karhu hyökkäsi työntekijöiden kimppuun terästehtaalla Japanissa",
+    "summary": "Neljä ihmistä loukkaantui lievästi tai kohtalaisesti, kun mustakarhu hyökkäsi ihmisten kimppuun Fukushiman kaupungissa Japanissa. Viranomaiset etsivät eläintä, jonka uskottiin piileskelevän tehdasalueen rakennuksessa.",
+    "content": "Neljä ihmistä on loukkaantunut karhun hyökkäyksissä Fukushiman kaupungissa Japanissa, kun eläin ilmestyi Fukushima Steel Works -terästehtaan alueelle Sasakinon kaupunginosassa. Poliisi ja pelastusviranomaiset hälytettiin paikalle tiistaiaamuna hätäpuhelun jälkeen, jossa kerrottiin useiden työntekijöiden joutuneen karhun hyökkäyksen kohteeksi.\n\n## Hyökkäys alkoi terästehtaan alueella\n\nValvontakameran kuvissa näkyy, kuinka mustakarhu jahtaa työntekijää tehdasalueen sisäänkäynnin lähellä, kaataa tämän maahan ja juoksee sen jälkeen kohti rakennusta. Alkuvaiheessa kaksi Fukushima Steel Works -terästehtaan työntekijää loukkaantui, kun karhu ilmestyi tehtaan alueelle.\n\nKarhu liikkui myöhemmin myös muualla lähialueella. Se hyökkäsi erillisessä yrityksessä työskennelleen miehen kimppuun; lähdetietojen mukaan kyse oli elektroniikkalaitteita valmistavasta yhtiöstä. Lisäksi lähistöllä asuva 80-vuotiaiden ikäluokassa ollut nainen joutui hyökkäyksen kohteeksi karhun vaeltaessa asuinalueella.\n\nKolmen työpaikoillaan loukkaantuneen miehen vammat kuvattiin lieviksi. Naisen vammat olivat kohtalaisia. Fukushiman kaupungin palolaitos vahvisti, että myös alueella asunut nainen loukkaantui hyökkäyksessä.\n\n## Karhua etsittiin tehdasalueelta\n\nTiistai-iltaan mennessä karhua ei ollut saatu kiinni. Viranomaisten arvion mukaan se saattoi piileskellä jossakin Fukushima Steel Works -tehdasalueen rakennuksessa. Poliisi ja pelastusviranomaiset olivat lähteneet alueelle sen jälkeen, kun terästehtaalta oli ilmoitettu hätäpuhelussa useiden työntekijöiden joutuneen hyökkäyksen kohteeksi.\n\n## Karhut ovat herättäneet huolta Japanissa\n\nJapanissa elää kahta karhulajia: aasialaisia mustakarhuja sekä suurempia ruskeakarhuja, joita tavataan Hokkaidon saarella. Karhujen aiheuttamat vaaratilanteet ovat viime vuosina herättäneet maassa kasvavaa huolta, kun hyökkäyksiä on raportoitu yhä useammin myös tiheämmin asutuilla alueilla.\n\nJapanin kolmella neljästä suuresta pääsaaresta elää lähdetietojen mukaan yhteensä yli 50 000 karhua. Hokkaidolla arvioidaan olevan noin 12 000 karhua, ja Honshulla sekä Shikokulla mustakarhuja on arvioitu olevan noin 45 000.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Japani",
+      "Fukushima",
+      "karhut",
+      "onnettomuudet",
+      "työturvallisuus"
+    ],
+    "summary_bullets": [
+      "Neljä ihmistä loukkaantui karhun hyökkäyksissä Fukushiman kaupungissa Japanissa.",
+      "Hyökkäys alkoi Fukushima Steel Works -terästehtaan alueella Sasakinon kaupunginosassa.",
+      "Tiistai-iltaan mennessä karhua ei ollut saatu kiinni, ja sen uskottiin piileskelevän tehdasalueen rakennuksessa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu paketin neljään lähdeblokkiin. Luokitus korjattu Ulkomaat-kategoriaan, koska tapahtuma koskee Japania eikä kotimaan uutista."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260603T054129Z_c45463cbb2\",\n  \"title\": \"Karhu hyökkäsi työntekijöiden kimppuun terästehtaalla Japanissa\",\n  \"summary\": \"Neljä ihmistä loukkaantui lievästi tai kohtalaisesti, kun mustakarhu hyökkäsi ihmisten kimppuun Fukushiman kaupungissa Japanissa. Viranomaiset etsivät eläintä, jonka uskottiin piileskelevän tehdasalueen rakennuksessa.\",\n  \"content\": \"Neljä ihmistä on loukkaantunut karhun hyökkäyksissä Fukushiman kaupungissa Japanissa, kun eläin ilmestyi Fukushima Steel Works -terästehtaan alueelle Sasakinon kaupunginosassa. Poliisi ja pelastusviranomaiset hälytettiin paikalle tiistaiaamuna hätäpuhelun jälkeen, jossa kerrottiin useiden työntekijöiden joutuneen karhun hyökkäyksen kohteeksi.\\n\\n## Hyökkäys alkoi terästehtaan alueella\\n\\nValvontakameran kuvissa näkyy, kuinka mustakarhu jahtaa työntekijää tehdasalueen sisäänkäynnin lähellä, kaataa tämän maahan ja juoksee sen jälkeen kohti rakennusta. Alkuvaiheessa kaksi Fukushima Steel Works -terästehtaan työntekijää loukkaantui, kun karhu ilmestyi tehtaan alueelle.\\n\\nKarhu liikkui myöhemmin myös muualla lähialueella. Se hyökkäsi erillisessä yrityksessä työskennelleen miehen kimppuun; lähdetietojen mukaan kyse oli elektroniikkalaitteita valmistavasta yhtiöstä. Lisäksi lähistöllä asuva 80-vuotiaiden ikäluokassa ollut nainen joutui hyökkäyksen kohteeksi karhun vaeltaessa asuinalueella.\\n\\nKolmen työpaikoillaan loukkaantuneen miehen vammat kuvattiin lieviksi. Naisen vammat olivat kohtalaisia. Fukushiman kaupungin palolaitos vahvisti, että myös alueella asunut nainen loukkaantui hyökkäyksessä.\\n\\n## Karhua etsittiin tehdasalueelta\\n\\nTiistai-iltaan mennessä karhua ei ollut saatu kiinni. Viranomaisten arvion mukaan se saattoi piileskellä jossakin Fukushima Steel Works -tehdasalueen rakennuksessa. Poliisi ja pelastusviranomaiset olivat lähteneet alueelle sen jälkeen, kun terästehtaalta oli ilmoitettu hätäpuhelussa useiden työntekijöiden joutuneen hyökkäyksen kohteeksi.\\n\\n## Karhut ovat herättäneet huolta Japanissa\\n\\nJapanissa elää kahta karhulajia: aasialaisia mustakarhuja sekä suurempia ruskeakarhuja, joita tavataan Hokkaidon saarella. Karhujen aiheuttamat vaaratilanteet ovat viime vuosina herättäneet maassa kasvavaa huolta, kun hyökkäyksiä on raportoitu yhä useammin myös tiheämmin asutuilla alueilla.\\n\\nJapanin kolmella neljästä suuresta pääsaaresta elää lähdetietojen mukaan yhteensä yli 50 000 karhua. Hokkaidolla arvioidaan olevan noin 12 000 karhua, ja Honshulla sekä Shikokulla mustakarhuja on arvioitu olevan noin 45 000.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Japani\",\n    \"Fukushima\",\n    \"karhut\",\n    \"onnettomuudet\",\n    \"työturvallisuus\"\n  ],\n  \"summary_bullets\": [\n    \"Neljä ihmistä loukkaantui karhun hyökkäyksissä Fukushiman kaupungissa Japanissa.\",\n    \"Hyökkäys alkoi Fukushima Steel Works -terästehtaan alueella Sasakinon kaupunginosassa.\",\n    \"Tiistai-iltaan mennessä karhua ei ollut saatu kiinni, ja sen uskottiin piileskelevän tehdasalueen rakennuksessa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu paketin neljään lähdeblokkiin. Luokitus korjattu Ulkomaat-kategoriaan, koska tapahtuma koskee Japania eikä kotimaan uutista.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260603T054129Z_c45463cbb2",
+    "category": "Kotimaa",
+    "selected_source_words": 386,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 238,
+    "issues": [
+      "content too short: 238 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Karhu hyökkäsi työntekijöiden kimppuun terästehtaalla Japanissa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-03T05:44:40.806746+00:00",
+    "repair_trigger": "pre_repair_word_count=238; selected_source_words=386; selected_source_blocks=4",
+    "pre_repair_word_count": 238,
+    "pre_repair_lead_word_count": 35,
+    "post_repair_word_count": 238,
+    "post_repair_lead_word_count": 35,
+    "selected_source_words_at_repair": 386,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 386,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 238 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC:6bd899a0c0",
+      "2:BroBible:8c7f7c2193",
+      "3:BroBible:d825c175c3",
+      "4:Yahoo News UK:c4310d5788"
+    ],
+    "final_issues": [
+      "content too short: 238 words"
+    ],
+    "recovered": false
+  }
+}

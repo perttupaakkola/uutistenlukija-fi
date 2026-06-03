@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-03T09:51:30.741099+00:00",
+  "digest": "718f9312ef",
+  "packet": {
+    "packet_id": "20260603T095130Z_718f9312ef",
+    "created_at": "2026-06-03T09:51:30Z",
+    "headline_seed": "Foreign nationals among at least 21 killed in Delhi fire",
+    "description_seed": "Many victims were South Asians who had travelled to India for treatment or to accompany relatives.",
+    "link": "https://www.bbc.com/news/articles/czd29327qzvo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Indiablooms",
+      "CNBCTV18"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/czd29327qzvo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Foreign nationals among at least 21 killed in Delhi fire"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "At least 21 people have been killed and several others injured after a fire tore through a multi-storey building in India's capital Delhi, police say. Many of the victims were foreign nationals from South Asian countries who had travelled to India for medical treatment or to accompany relatives undergoing care, local media reported. The building allegedly operated as a bed-and-breakfast catering to patients and relatives of those receiving treatment at a nearby private hospital. More than 40 people were rescued and taken to hospital. It remains unclear how many people were inside the building in Malviya Nagar locality when the fire broke out. The cause of the fire is not yet known. Firefighters have brought the blaze under control, while rescue operations are continuing at the site.",
+        "word_count": 127,
+        "keyword_overlap": 15,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Many victims were South Asians who had travelled to India for treatment or to accompany relatives.",
+        "word_count": 16,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Indiablooms",
+        "source_type": "research",
+        "text": "Delhi/IBNS: At least 21 people lost their lives, and more than 40 others were rescued after a major fire engulfed a hotel building in South Delhi's Malviya Nagar on Tuesday morning. Several of the victims were reportedly foreign nationals who had travelled to the national capital for medical treatment. The blaze broke out at around 8:50 am at Flourish Stay, a bed-and-breakfast facility located in the Hauz Rani area near Saket. According to officials, the fire originated in the restaurant operating in the basement of the five-storey building before rapidly spreading through the premises and later affecting the adjacent Micasa Inn hotel. Emergency services launched a large-scale rescue operation as thick smoke and flames engulfed the structure, trapping dozens of guests inside.",
+        "word_count": 122,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "CNBCTV18",
+        "source_type": "research",
+        "text": "The Municipal Corporation of Delhi has ordered an investigation into the Malviya Nagar hotel fire that claimed at least 21 lives, including several foreign nationals. Officials said details such as the building’s age, ownership and regulatory clearances are being verified, with strict action promised against those found responsible for negligence. Authorities have also announced audits of other similar establishments in the area to prevent such incidents in future, as several of the injured remain in critical condition. #WATCH | Delhi | Malviya Nagar restaraunt fire | Max Healthcare Group Medical Director Dr Sandeep Budhiraja says, “Eight patients are on ventilators and undergoing treatment. The majority of them have suffered from asphyxiation injuries, which are caused by smoke inhalation…… pic.twitter.com/mP2UDfFGZu",
+        "word_count": 119,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "At least 21 people have been killed and several others injured after a fire tore through a multi-storey building in India's capital Delhi, police say. Many of the victims were foreign nationals from South Asian countries who had travelled to India for medical treatment or to accompany relatives undergoing care, local media reported. The building allegedly operated as a bed-and-breakfast catering to patients and relatives of those receiving treatment at a nearby private hospital. More than 40 people were rescued and taken to hospital. It remains unclear how many people were inside the building in Malviya Nagar locality when the fire broke out. The cause of the fire is not yet known. Firefighters have brought the blaze under control, while rescue operations are continuing at the site.\n\nMany victims were South Asians who had travelled to India for treatment or to accompany relatives.\n\nDelhi/IBNS: At least 21 people lost their lives, and more than 40 others were rescued after a major fire engulfed a hotel building in South Delhi's Malviya Nagar on Tuesday morning. Several of the victims were reportedly foreign nationals who had travelled to the national capital for medical treatment. The blaze broke out at around 8:50 am at Flourish Stay, a bed-and-breakfast facility located in the Hauz Rani area near Saket. According to officials, the fire originated in the restaurant operating in the basement of the five-storey building before rapidly spreading through the premises and later affecting the adjacent Micasa Inn hotel. Emergency services launched a large-scale rescue operation as thick smoke and flames engulfed the structure, trapping dozens of guests inside.\n\nThe Municipal Corporation of Delhi has ordered an investigation into the Malviya Nagar hotel fire that claimed at least 21 lives, including several foreign nationals. Officials said details such as the building’s age, ownership and regulatory clearances are being verified, with strict action promised against those found responsible for negligence. Authorities have also announced audits of other similar establishments in the area to prevent such incidents in future, as several of the injured remain in critical condition. #WATCH | Delhi | Malviya Nagar restaraunt fire | Max Healthcare Group Medical Director Dr Sandeep Budhiraja says, “Eight patients are on ventilators and undergoing treatment. The majority of them have suffered from asphyxiation injuries, which are caused by smoke inhalation…… pic.twitter.com/mP2UDfFGZu",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 948,
+      "selected_blocks": 4,
+      "selected_source_words": 384,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Indiablooms",
+        "Indiablooms",
+        "Indiablooms",
+        "CNBCTV18",
+        "CNBCTV18",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Indiablooms",
+        "CNBCTV18"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Foreign nationals among at least 21 killed in Delhi fire",
+      "description": "Many victims were South Asians who had travelled to India for treatment or to accompany relatives.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Foreign nationals among at least 21 killed in Delhi fire",
+    "description": "Many victims were South Asians who had travelled to India for treatment or to accompany relatives.",
+    "link": "https://www.bbc.com/news/articles/czd29327qzvo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-03T09:19:37+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "170810089fa131f7eeb0169741c19336",
+    "_url_hash": "c5cc81479e2abf213e2cfbfc807fb15cb0913cc88e1a70d4ac40d20e70a47aa3",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAt least 21 people have been killed and several others injured after a fire tore through a multi-storey building in India's capital Delhi, police say.\n\nMany of the victims were foreign nationals from South Asian countries who had travelled to India for medical treatment or to accompany relatives undergoing care, local media reported.\n\nThe building allegedly operated as a bed-and-breakfast catering to patients and relatives of those receiving treatment at a nearby private hospital.\n\nMore than 40 people were rescued and taken to hospital. It remains unclear how many people were inside the building in Malviya Nagar locality when the fire broke out. The cause of the fire is not yet known.\n\nFirefighters have brought the blaze under control, while rescue operations are continuing at the site.\n\n\"The fire was brought under control quite early on - it was contained very quickly. We have now cleared the building and opened it up for the police,\" fire officer AK Malik said.\n\nDelhi minister Ashish Sood said authorities were investigating whether the building had the necessary permissions to operate as a bed-and-breakfast facility, adding that those found responsible for any violations would face criminal action.\n\nPrime Minister Narendra Modi expressed his condolences and announced compensation of 200,000 rupees ($2,088; £1,552) for the families of those killed and 50,000 rupees for those injured.\n\nVideos on social media showed flames shooting from the building as people gathered nearby. Footage broadcast by Indian news channels showed its exterior badly charred as emergency workers searched the site.\n\nWitnesses said the fire spread rapidly, trapping people on upper floors. Bystanders helped some escape before emergency crews arrived.\n\n\"The fire broke out at about 08:50... we rushed to the spot to see that the entire building was on fire. There is a mattress shop at the corner from where we took out mattresses and laid them on the road,\" Wasim Raj told ANI news agency.\n\n\"People started to jump out of the building from the second and third floors. The fire-fighting team had reached the spot immediately and started rescue work.\"\n\nSher Khan, who lives nearby, described scenes of panic as people trapped on the upper floors cried out for help.\n\n\"As the fire intensified, it seemed as if there was no way to jump from here. People spread mattresses, and some from the third floor jumped out with a little kid... She was saying that she fractured her leg,\" he said.\n\nIsrar Khan, a\n\n---\n\n[Lähde: Indiablooms]\nDelhi/IBNS: At least 21 people lost their lives, and more than 40 others were rescued after a major fire engulfed a hotel building in South Delhi's Malviya Nagar on Tuesday morning.\n\nSeveral of the victims were reportedly foreign nationals who had travelled to the national capital for medical treatment.\n\nThe blaze broke out at around 8:50 am at Flourish Stay, a bed-and-breakfast facility located in the Hauz Rani area near Saket.\n\nAccording to officials, the fire originated in the restaurant operating in the basement of the five-storey building before rapidly spreading through the premises and later affecting the adjacent Micasa Inn hotel.\n\nEmergency services launched a large-scale rescue operation as thick smoke and flames engulfed the structure, trapping dozens of guests inside.\n\nFollowing the distress call, authorities rushed multiple firefighting units to the scene, including two water engines, two water bowsers, a quick-response vehicle and other emergency resources.\n\nFirefighters and rescue personnel worked to evacuate occupants from the building, rescuing more than 40 people.\n\nVisuals from the scene showed some guests jumping from upper floors in desperate attempts to escape the flames.\n\nOfficials said the hotel had around 25 rooms and was reportedly accommodating nearly 40 guests at the time of the incident. Most of them were believed to be asleep when the fire erupted.\n\nMany guests had chosen to stay at the property because of its proximity to the nearby Max Super Speciality Hospital in Saket, a major healthcare facility that attracts patients from India and abroad.\n\nAuthorities have not yet confirmed the exact cause of the fire, and an investigation is underway.\n\nAs investigators began examining the circumstances surrounding the tragedy, questions emerged over the hotel's licensing status and compliance with safety regulations.\n\nSources indicated that Flourish Stay had reportedly been granted permission under the Delhi government's Bed and Breakfast (B&B) scheme, which allegedly authorised only six rooms.\n\nHowever, authorities are examining reports that the establishment was operating around 25 rooms, including accommodation in the basement area.\n\nOfficials are also verifying whether the hotel possessed a valid fire no-objection certificate (NOC).\n\nAnother aspect under investigation is the building's evacuation infrastructure.\n\nPreliminary information suggests the hotel had only a single entry and exit point, which may have complicated rescue effo\n\n---\n\n[Lähde: CNBCTV18]\nThe Municipal Corporation of Delhi has ordered an investigation into the Malviya Nagar hotel fire that claimed at least 21 lives, including several foreign nationals. Officials said details such as the building’s age, ownership and regulatory clearances are being verified, with strict action promised against those found responsible for negligence. Authorities have also announced audits of other similar establishments in the area to prevent such incidents in future, as several of the injured remain in critical condition.\n\n#WATCH | Delhi | Malviya Nagar restaraunt fire | Max Healthcare Group Medical Director Dr Sandeep Budhiraja says, “Eight patients are on ventilators and undergoing treatment. The majority of them have suffered from asphyxiation injuries, which are caused by smoke inhalation…… pic.twitter.com/mP2UDfFGZu\n\nदिल्ली के मालवीय नगर में आग लगने की घटना में लोगों की मृत्यु का समाचार बहुत पीड़ादायक है। मैं शोकाकुल परिवारों के प्रति गहन संवेदनाएं व्यक्त करती हूं और घायल हुए लोगों ...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-03T09:55:07.927235+00:00",
+  "failure": "content too short: 218 words",
+  "payload": {
+    "packet_id": "20260603T095130Z_718f9312ef",
+    "title": "Ainakin 21 kuoli rakennuspalossa Delhissä",
+    "summary": "Delhin Malviya Nagarissa syttynyt suuri rakennuspalo on vaatinut ainakin 21 ihmisen hengen. Uhrien joukossa oli useita ulkomaalaisia, jotka olivat matkustaneet Intiaan hoitoon tai läheistensä tueksi.",
+    "content": "Ainakin 21 ihmistä on kuollut ja useita loukkaantunut tulipalossa Intian pääkaupungissa Delhissä, poliisi kertoo. Palo riehui monikerroksisessa rakennuksessa Malviya Nagarin alueella, ja monien uhrien kerrotaan olleen Etelä-Aasian maista tulleita ulkomaalaisia, jotka olivat matkustaneet Intiaan sairaalahoitoon tai saattamaan hoidossa olevia omaisiaan.\n\n## Palo levisi majoitusrakennuksessa\n\nTulipalo syttyi tiistaiaamuna noin kello 8.50 paikallista aikaa Flourish Stay -nimisessä bed and breakfast -majoituspaikassa Hauz Ranin alueella lähellä Saketia. Rakennuksen kerrotaan palvelleen erityisesti potilaita ja heidän läheisiään, jotka asioivat läheisessä yksityissairaalassa.\n\nViranomaistietojen mukaan palo sai alkunsa viisikerroksisen rakennuksen kellarissa toimineesta ravintolasta ja levisi nopeasti muualle kiinteistöön. Liekit ja paksu savu vaikeuttivat pelastustoimia, ja rakennukseen jäi loukkuun kymmeniä vieraita. Palo vaikutti myöhemmin myös viereiseen Micasa Inn -hotelliin.\n\nPelastustyöntekijät saivat yli 40 ihmistä ulos rakennuksesta, ja heidät vietiin sairaalahoitoon. Useiden loukkaantuneiden tila on vakava. Sairaalan edustajan mukaan kahdeksan potilasta oli hengityskoneessa, ja monilla hoidettavilla oli savun hengittämisestä aiheutuneita vammoja.\n\n## Syy tutkitaan\n\nPalon tarkka syy ei ole vielä tiedossa. Palomiehet ovat saaneet liekit hallintaan, mutta pelastus- ja selvitystyöt jatkuivat tapahtumapaikalla. Vielä ei ole selvää, kuinka monta ihmistä rakennuksessa oli palon syttyessä.\n\nDelhin kunnallishallinto on määrännyt tapauksesta tutkinnan. Viranomaiset selvittävät muun muassa rakennuksen ikää, omistusta ja lupia sekä sitä, onko turvallisuusmääräyksiä rikottu. He ovat luvanneet tiukkoja toimia, jos taustalta löytyy laiminlyöntejä.\n\nViranomaiset ovat myös ilmoittaneet tarkastuksista muissa vastaavissa majoituspaikoissa alueella, jotta samankaltaisia onnettomuuksia voitaisiin ehkäistä jatkossa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Delhi",
+      "Intia",
+      "tulipalo",
+      "onnettomuudet",
+      "Malviya Nagar"
+    ],
+    "summary_bullets": [
+      "Ainakin 21 ihmistä kuoli monikerroksisen rakennuksen palossa Delhissä.",
+      "Uhrien joukossa oli useita ulkomaalaisia, jotka olivat matkustaneet Intiaan hoidon vuoksi tai omaistensa tueksi.",
+      "Yli 40 ihmistä pelastettiin ja vietiin sairaalaan; useiden loukkaantuneiden tila on vakava.",
+      "Viranomaiset tutkivat rakennuksen lupia, omistusta ja mahdollisia laiminlyöntejä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. Palon syy ja rakennuksessa olleiden tarkka määrä eivät ole lähteiden mukaan vielä selvillä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260603T095130Z_718f9312ef\",\n  \"title\": \"Ainakin 21 kuoli rakennuspalossa Delhissä\",\n  \"summary\": \"Delhin Malviya Nagarissa syttynyt suuri rakennuspalo on vaatinut ainakin 21 ihmisen hengen. Uhrien joukossa oli useita ulkomaalaisia, jotka olivat matkustaneet Intiaan hoitoon tai läheistensä tueksi.\",\n  \"content\": \"Ainakin 21 ihmistä on kuollut ja useita loukkaantunut tulipalossa Intian pääkaupungissa Delhissä, poliisi kertoo. Palo riehui monikerroksisessa rakennuksessa Malviya Nagarin alueella, ja monien uhrien kerrotaan olleen Etelä-Aasian maista tulleita ulkomaalaisia, jotka olivat matkustaneet Intiaan sairaalahoitoon tai saattamaan hoidossa olevia omaisiaan.\\n\\n## Palo levisi majoitusrakennuksessa\\n\\nTulipalo syttyi tiistaiaamuna noin kello 8.50 paikallista aikaa Flourish Stay -nimisessä bed and breakfast -majoituspaikassa Hauz Ranin alueella lähellä Saketia. Rakennuksen kerrotaan palvelleen erityisesti potilaita ja heidän läheisiään, jotka asioivat läheisessä yksityissairaalassa.\\n\\nViranomaistietojen mukaan palo sai alkunsa viisikerroksisen rakennuksen kellarissa toimineesta ravintolasta ja levisi nopeasti muualle kiinteistöön. Liekit ja paksu savu vaikeuttivat pelastustoimia, ja rakennukseen jäi loukkuun kymmeniä vieraita. Palo vaikutti myöhemmin myös viereiseen Micasa Inn -hotelliin.\\n\\nPelastustyöntekijät saivat yli 40 ihmistä ulos rakennuksesta, ja heidät vietiin sairaalahoitoon. Useiden loukkaantuneiden tila on vakava. Sairaalan edustajan mukaan kahdeksan potilasta oli hengityskoneessa, ja monilla hoidettavilla oli savun hengittämisestä aiheutuneita vammoja.\\n\\n## Syy tutkitaan\\n\\nPalon tarkka syy ei ole vielä tiedossa. Palomiehet ovat saaneet liekit hallintaan, mutta pelastus- ja selvitystyöt jatkuivat tapahtumapaikalla. Vielä ei ole selvää, kuinka monta ihmistä rakennuksessa oli palon syttyessä.\\n\\nDelhin kunnallishallinto on määrännyt tapauksesta tutkinnan. Viranomaiset selvittävät muun muassa rakennuksen ikää, omistusta ja lupia sekä sitä, onko turvallisuusmääräyksiä rikottu. He ovat luvanneet tiukkoja toimia, jos taustalta löytyy laiminlyöntejä.\\n\\nViranomaiset ovat myös ilmoittaneet tarkastuksista muissa vastaavissa majoituspaikoissa alueella, jotta samankaltaisia onnettomuuksia voitaisiin ehkäistä jatkossa.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Delhi\",\n    \"Intia\",\n    \"tulipalo\",\n    \"onnettomuudet\",\n    \"Malviya Nagar\"\n  ],\n  \"summary_bullets\": [\n    \"Ainakin 21 ihmistä kuoli monikerroksisen rakennuksen palossa Delhissä.\",\n    \"Uhrien joukossa oli useita ulkomaalaisia, jotka olivat matkustaneet Intiaan hoidon vuoksi tai omaistensa tueksi.\",\n    \"Yli 40 ihmistä pelastettiin ja vietiin sairaalaan; useiden loukkaantuneiden tila on vakava.\",\n    \"Viranomaiset tutkivat rakennuksen lupia, omistusta ja mahdollisia laiminlyöntejä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu annettuihin lähdekatkelmiin. Palon syy ja rakennuksessa olleiden tarkka määrä eivät ole lähteiden mukaan vielä selvillä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260603T095130Z_718f9312ef",
+    "category": "Kotimaa",
+    "selected_source_words": 384,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 218,
+    "issues": [
+      "content too short: 218 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Ainakin 21 kuoli rakennuspalossa Delhissä",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-03T09:55:07.926821+00:00",
+    "repair_trigger": "pre_repair_word_count=218; selected_source_words=384; selected_source_blocks=4",
+    "pre_repair_word_count": 218,
+    "pre_repair_lead_word_count": 40,
+    "post_repair_word_count": 218,
+    "post_repair_lead_word_count": 40,
+    "selected_source_words_at_repair": 384,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 384,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 218 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:51ad5d990c",
+      "2:BBC World:d8a4efddb8",
+      "3:Indiablooms:a9e3bdf5d8",
+      "4:CNBCTV18:099a987072"
+    ],
+    "final_issues": [
+      "content too short: 218 words"
+    ],
+    "recovered": false
+  }
+}

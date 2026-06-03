@@ -1,9 +1,9 @@
 {
   "analytics": {
     "freshness": {
-      "age_minutes": 286.2,
+      "age_minutes": 0.0,
       "blocked_by": null,
-      "checked_at": "2026-06-02T18:15:05+00:00",
+      "checked_at": "2026-06-03T10:02:08+00:00",
       "daily_report": {
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
@@ -13,7 +13,7 @@
           "top_pages_7d": 10,
           "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-06-02T18:15:05+00:00",
+        "evidence_at": "2026-06-03T10:02:08+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
@@ -25,10 +25,10 @@
         "superseded_by_fresh_validation": false
       },
       "search_console": {
-        "age_hours": 11.75,
+        "age_hours": 3.54,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-06-02T06:30:01+00:00",
+        "evidence_at": "2026-06-03T06:30:01+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -47,13 +47,13 @@
           "top_pages_7d": 10,
           "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-06-02T18:15:05+00:00",
+        "evidence_at": "2026-06-03T10:02:08+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
       },
       "daily_traffic_log": {
-        "age_minutes": 961.3,
+        "age_minutes": 182.1,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -61,7 +61,7 @@
       "reason": "fresh GA4 validation artifact present",
       "status": "fresh",
       "weekly_metrics_log": {
-        "age_minutes": 2401.2,
+        "age_minutes": 3062.1,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -69,24 +69,24 @@
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 2341.3,
+        "age_minutes": 0.2,
         "data_source": "google_search_console",
-        "generated_at": "2026-06-01T08:00:01.476207Z",
+        "generated_at": "2026-06-03T10:01:54.953287Z",
         "source": "static/api/ctr-gap-report.json",
-        "total_gaps_found": 2
+        "total_gaps_found": 1
       },
       "fetch_log": {
-        "age_minutes": 991.3,
+        "age_minutes": 212.1,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
       },
       "reason": "fresh Search Console validation artifact present",
       "search_console_report": {
-        "age_hours": 11.75,
+        "age_hours": 3.54,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-06-02T06:30:01+00:00",
+        "evidence_at": "2026-06-03T06:30:01+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -105,7 +105,7 @@
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 826,
+        "count": 829,
         "delta": 5.6,
         "pct": 30.6,
         "status": "over",
@@ -137,7 +137,7 @@
       },
       {
         "category": "Tiede",
-        "count": 177,
+        "count": 179,
         "delta": 3.6,
         "pct": 6.6,
         "status": "ok",
@@ -160,20 +160,20 @@
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-06-02T23:01:19.710165+00:00",
+    "generated_at": "2026-06-03T07:30:01.573879+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 2700
+    "total_articles": 2705
   },
   "content": {
-    "article_count_local": 2700,
-    "last_publish_age_minutes": 3.2,
-    "last_publish_at": "2026-06-02T22:58:05.272333Z",
+    "article_count_local": 2709,
+    "last_publish_age_minutes": 24.0,
+    "last_publish_at": "2026-06-03T09:38:06.888979Z",
     "latest_article": {
-      "category": "Ulkomaat",
-      "slug": "2026-06-02-israelin-iskut-jatkuivat-etela-libanonissa-mutta-osittainen",
-      "title": "Israelin iskut jatkuivat Etelä-Libanonissa, mutta osittainen aselepo näyttää pitäneen Beirutin ulkopuolella"
+      "category": "Kotimaa",
+      "slug": "2026-06-03-sm-liigan-ensi-kaudelle-vahvistui-poikkeuksellisen-raskas-ru",
+      "title": "SM-liigan ensi kaudelle vahvistui poikkeuksellisen raskas runkosarja"
     },
-    "published_last_24h_local": 35,
+    "published_last_24h_local": 27,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -193,7 +193,7 @@
     },
     "source": "local placeholder files only; Linear API not queried"
   },
-  "generated_at": "2026-06-02T23:01:19.388497Z",
+  "generated_at": "2026-06-03T10:02:08.196709Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -224,27 +224,27 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 35,
+      "article_count": 27,
       "article_count_source": "content/posts frontmatter",
       "failure": 0,
       "generated_article_count": 0,
-      "published_article_count_local": 35,
+      "published_article_count_local": 27,
       "runs_total": 144,
       "skipped": 0,
       "success": 144,
       "top_error_reasons": []
     },
-    "last_run_age_minutes": 1.2,
+    "last_run_age_minutes": 2.0,
     "last_run_article_count": 0,
-    "last_run_at": "2026-06-02T23:00:08.045699Z",
+    "last_run_at": "2026-06-03T10:00:08.714946Z",
     "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-06-02T22:58:05.272333+00:00",
+        "last_published_ts": "2026-06-03T04:48:05.940794+00:00",
         "publish_rate": 0,
-        "published": 35,
+        "published": 30,
         "rejected": 3
       },
       "feeds": {
@@ -255,15 +255,15 @@
         "stale_names": [],
         "total": 40
       },
-      "generated_at": "2026-06-02T22:59:02+00:00",
+      "generated_at": "2026-06-03T04:49:04+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
         "central unsourced number in ti": 3,
-        "language borderline Finnish si": 1,
+        "language borderline Finnish si": 2,
         "length under target (250 words": 1,
-        "length under target (257 words": 1,
-        "length under target (264 words": 1,
+        "length under target (252 words": 1,
+        "length under target (253 words": 1,
         "missing: image": 3,
         "unsourced numbers": 3
       },
@@ -278,23 +278,23 @@
       "trending": [
         [
           "mukaansa",
-          35
-        ],
-        [
-          "prosenttia",
-          29
+          24
         ],
         [
           "jälkeen",
           24
         ],
         [
-          "samalla",
-          19
+          "prosenttia",
+          22
         ],
         [
-          "kanssa",
-          18
+          "samalla",
+          16
+        ],
+        [
+          "vaikka",
+          16
         ]
       ]
     },
@@ -302,35 +302,20 @@
   },
   "queues": {
     "queues": {
-      "monica/inbox": {
-        "count": 6598,
-        "newest_item_age_minutes": 21137.7,
-        "oldest_item_age_minutes": 65618.4
-      },
-      "monica/outbox": {
-        "count": 1575,
-        "newest_item_age_minutes": 24023.1,
-        "oldest_item_age_minutes": 65015.4
-      },
-      "monica/quarantine": {
-        "count": 5020,
-        "newest_item_age_minutes": 43762.7,
-        "oldest_item_age_minutes": 65618.4
-      },
       "staged/failed": {
-        "count": 3860,
-        "newest_item_age_minutes": 18.1,
-        "oldest_item_age_minutes": 46514.1
+        "count": 337,
+        "newest_item_age_minutes": 7.0,
+        "oldest_item_age_minutes": 4338.9
       },
       "staged/published": {
-        "count": 954,
-        "newest_item_age_minutes": 2.3,
-        "oldest_item_age_minutes": 46172.9
+        "count": 957,
+        "newest_item_age_minutes": 313.1,
+        "oldest_item_age_minutes": 46833.7
       },
-      "staged/writing": {
-        "count": 3,
-        "newest_item_age_minutes": 8149.9,
-        "oldest_item_age_minutes": 11570.0
+      "staged/ready": {
+        "count": 1,
+        "newest_item_age_minutes": 0.8,
+        "oldest_item_age_minutes": 0.8
       }
     },
     "source": "pipeline/queues/*.json file counts only"
