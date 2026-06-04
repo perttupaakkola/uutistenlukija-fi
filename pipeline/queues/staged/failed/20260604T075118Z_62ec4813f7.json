@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-04T07:51:18.471117+00:00",
+  "digest": "62ec4813f7",
+  "packet": {
+    "packet_id": "20260604T075118Z_62ec4813f7",
+    "created_at": "2026-06-04T07:51:18Z",
+    "headline_seed": "20-vuotiasta epäillään rajuista teoista Ylivieskassa",
+    "description_seed": "Oulun poliisi vaatii 20-vuotiasta miestä vangittavaksi murhanyrityksestä ja törkeästä vahingonteosta. Epäillyt rikokset tapahtuivat perjantaina 29. toukokuuta vähän ennen iltapäiväkolmea Ylivieskassa. Hätäkeskus oli saanut ilmoituksen, että 20-vuotias epäilty oli käynyt uhrin kimppuun ja kohdistanut tähän vakavaa väkivaltaa. Hän oli myös sytyttänyt Ylivieskan keskustassa sijaitsevan omakotitalon tuleen.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/5d4f4e1e-45cb-4ecd-98fc-e3e8aecfdd78",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/5d4f4e1e-45cb-4ecd-98fc-e3e8aecfdd78"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.53,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "20-vuotiasta epäillään rajuista teoista Ylivieskassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Oulun poliisi vaatii 20-vuotiasta miestä vangittavaksi murhanyrityksestä ja törkeästä vahingonteosta. Epäillyt rikokset tapahtuivat perjantaina 29. toukokuuta vähän ennen iltapäiväkolmea Ylivieskassa. Hätäkeskus oli saanut ilmoituksen, että 20-vuotias epäilty oli käynyt uhrin kimppuun ja kohdistanut tähän vakavaa väkivaltaa. Hän oli myös sytyttänyt Ylivieskan keskustassa sijaitsevan omakotitalon tuleen.",
+        "word_count": 45,
+        "keyword_overlap": 37,
+        "strong_overlap": 31
+      }
+    ],
+    "source_text": "Oulun poliisi vaatii 20-vuotiasta miestä vangittavaksi murhanyrityksestä ja törkeästä vahingonteosta. Epäillyt rikokset tapahtuivat perjantaina 29. toukokuuta vähän ennen iltapäiväkolmea Ylivieskassa. Hätäkeskus oli saanut ilmoituksen, että 20-vuotias epäilty oli käynyt uhrin kimppuun ja kohdistanut tähän vakavaa väkivaltaa. Hän oli myös sytyttänyt Ylivieskan keskustassa sijaitsevan omakotitalon tuleen.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 90,
+      "selected_blocks": 1,
+      "selected_source_words": 45,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "20-vuotiasta epäillään rajuista teoista Ylivieskassa",
+      "description": "Oulun poliisi vaatii 20-vuotiasta miestä vangittavaksi murhanyrityksestä ja törkeästä vahingonteosta. Epäillyt rikokset tapahtuivat perjantaina 29. toukokuuta vähän ennen iltapäiväkolmea Ylivieskassa. Hätäkeskus oli saanut ilmoituksen, että 20-vuotias epäilty oli käynyt uhrin kimppuun ja kohdistanut tähän vakavaa väkivaltaa. Hän oli myös sytyttänyt Ylivieskan keskustassa sijaitsevan omakotitalon tuleen.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "20-vuotiasta epäillään rajuista teoista Ylivieskassa",
+    "description": "Oulun poliisi vaatii 20-vuotiasta miestä vangittavaksi murhanyrityksestä ja törkeästä vahingonteosta. Epäillyt rikokset tapahtuivat perjantaina 29. toukokuuta vähän ennen iltapäiväkolmea Ylivieskassa. Hätäkeskus oli saanut ilmoituksen, että 20-vuotias epäilty oli käynyt uhrin kimppuun ja kohdistanut tähän vakavaa väkivaltaa. Hän oli myös sytyttänyt Ylivieskan keskustassa sijaitsevan omakotitalon tuleen.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/5d4f4e1e-45cb-4ecd-98fc-e3e8aecfdd78",
+    "published": "2026-06-04T10:29:49+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "d0e251a96461354702b1405d361c597a",
+    "_url_hash": "8085541b5cdf8a6edbccd8e496146e9dfca03c0b717f7233b1090fffb6b820eb",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Oulun poliisi vaatii 20-vuotiasta miestä vangittavaksi murhanyrityksestä ja törkeästä vahingonteosta. Epäillyt rikokset tapahtuivat perjantaina 29. toukokuuta vähän ennen iltapäiväkolmea Ylivieskassa. Hätäkeskus oli saanut ilmoituksen, että 20-vuotias epäilty oli käynyt uhrin kimppuun ja kohdistanut tähän vakavaa väkivaltaa. Hän oli myös sytyttänyt Ylivieskan keskustassa sijaitsevan omakotitalon tuleen.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-04T07:53:14.493015+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaisuartikkeliin ilman täytesisältöä tai lisätietojen keksimistä.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260604T075118Z_62ec4813f7\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaisuartikkeliin ilman täytesisältöä tai lisätietojen keksimistä.\"}"
+}
