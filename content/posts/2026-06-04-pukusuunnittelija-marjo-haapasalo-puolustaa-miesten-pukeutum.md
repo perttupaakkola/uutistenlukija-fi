@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kokenut-suunnittelija-liputtaa-meninkien-puolesta-mika-ihmeen-juttu-se-on-lansimaisessa-kulttuurissa-etta-miehet-eivat-voi-kayttaa-hameita/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

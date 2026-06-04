@@ -44,7 +44,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/04/meta-luopuu-supernaturalista-kuntoiluun-keskittyva-virtuaalitodellisuuspalvelu-jatkaa-itsenaisena-yrityksena/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
