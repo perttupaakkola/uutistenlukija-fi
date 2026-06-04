@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-04T03:11:16.345344+00:00",
+  "digest": "fa514ff2c3",
+  "packet": {
+    "packet_id": "20260604T031116Z_fa514ff2c3",
+    "created_at": "2026-06-04T03:11:16Z",
+    "headline_seed": "China bans four New Zealand MPs over Taiwan visit",
+    "description_seed": "Upon their return from Taiwan last month, the lawmakers were told that China had banned them for a year.",
+    "link": "https://www.bbc.com/news/articles/cx21r1y223ro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC",
+      "BBC World",
+      "BBC"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cx21r1y223ro?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "China bans four New Zealand MPs over Taiwan visit"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Upon their return from Taiwan last month, the lawmakers were told that China had banned them for a year.",
+        "word_count": 19,
+        "keyword_overlap": 15,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "The New Zealand lawmakers travelled to Taiwan in May, where they met Taiwan's foreign minister Lin Chia-lung (L) In a first, China has banned four New Zealand Members of Parliament for a year over their visit to Taiwan, New Zealand's foreign ministry says. The MPs learned of the ban - which the Chinese Embassy said could be reduced or waived with an apology - when they returned from the trip in May, local media reported on Thursday. China claims the self-governed island of Taiwan as its territory, and has tried to restrict the island's foreign engagements. But this is the first time China has imposed travel bans on New Zealand MPs for visiting Taiwan - a move that \"surprised\" foreign minister Winston Peters, a ministry spokesperson said in a statement to the BBC.",
+        "word_count": 133,
+        "keyword_overlap": 13,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "In a first, China has banned four New Zealand Members of Parliament for a year over their visit to Taiwan, New Zealand's foreign ministry says. The MPs learned of the ban - which the Chinese Embassy said could be reduced or waived with an apology - when they returned from the trip in May, local media reported on Thursday. China claims the self-governed island of Taiwan as its territory, and has tried to restrict the island's foreign engagements. But this is the first time China has imposed travel bans on New Zealand MPs for visiting Taiwan - a move that \"surprised\" foreign minister Winston Peters, a ministry spokesperson said in a statement to the BBC. \"New Zealand MPs have visited Taiwan for decades and such visits are not inconsistent with New Zealand's One China policy,\" the spokesperson said.",
+        "word_count": 138,
+        "keyword_overlap": 12,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "\"New Zealand MPs have visited Taiwan for decades and such visits are not inconsistent with New Zealand's One China policy,\" the spokesperson said. The visit in May comprised lawmakers from the ruling coalition - Maureen Pugh, David Wilson and Laura McClure - as well as Duncan Webb from the opposition Labour Party. McClure, from the ACT party, said the travel ban was \"a type of foreign interference\" and that she was \"not going to apologise for visiting Taiwan\", the New Zealand Herald reported. She told Radio New Zealand that she was \"quite surprised and shocked\" by the ban as similar visits had happened for years previously. She added that New Zealand MPs \"have the right to travel freely around the globe\". \"That is part of living in a free democracy,\" she said.",
+        "word_count": 132,
+        "keyword_overlap": 8,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Upon their return from Taiwan last month, the lawmakers were told that China had banned them for a year.\n\nThe New Zealand lawmakers travelled to Taiwan in May, where they met Taiwan's foreign minister Lin Chia-lung (L) In a first, China has banned four New Zealand Members of Parliament for a year over their visit to Taiwan, New Zealand's foreign ministry says. The MPs learned of the ban - which the Chinese Embassy said could be reduced or waived with an apology - when they returned from the trip in May, local media reported on Thursday. China claims the self-governed island of Taiwan as its territory, and has tried to restrict the island's foreign engagements. But this is the first time China has imposed travel bans on New Zealand MPs for visiting Taiwan - a move that \"surprised\" foreign minister Winston Peters, a ministry spokesperson said in a statement to the BBC.\n\nIn a first, China has banned four New Zealand Members of Parliament for a year over their visit to Taiwan, New Zealand's foreign ministry says. The MPs learned of the ban - which the Chinese Embassy said could be reduced or waived with an apology - when they returned from the trip in May, local media reported on Thursday. China claims the self-governed island of Taiwan as its territory, and has tried to restrict the island's foreign engagements. But this is the first time China has imposed travel bans on New Zealand MPs for visiting Taiwan - a move that \"surprised\" foreign minister Winston Peters, a ministry spokesperson said in a statement to the BBC. \"New Zealand MPs have visited Taiwan for decades and such visits are not inconsistent with New Zealand's One China policy,\" the spokesperson said.\n\n\"New Zealand MPs have visited Taiwan for decades and such visits are not inconsistent with New Zealand's One China policy,\" the spokesperson said. The visit in May comprised lawmakers from the ruling coalition - Maureen Pugh, David Wilson and Laura McClure - as well as Duncan Webb from the opposition Labour Party. McClure, from the ACT party, said the travel ban was \"a type of foreign interference\" and that she was \"not going to apologise for visiting Taiwan\", the New Zealand Herald reported. She told Radio New Zealand that she was \"quite surprised and shocked\" by the ban as similar visits had happened for years previously. She added that New Zealand MPs \"have the right to travel freely around the globe\". \"That is part of living in a free democracy,\" she said.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 838,
+      "selected_blocks": 4,
+      "selected_source_words": 422,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC",
+        "BBC World",
+        "BBC"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "China bans four New Zealand MPs over Taiwan visit",
+      "description": "Upon their return from Taiwan last month, the lawmakers were told that China had banned them for a year.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "China bans four New Zealand MPs over Taiwan visit",
+    "description": "Upon their return from Taiwan last month, the lawmakers were told that China had banned them for a year.",
+    "link": "https://www.bbc.com/news/articles/cx21r1y223ro?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-04T02:54:21+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "febfab7aacc22b288a0e0a6d96dd600b",
+    "_url_hash": "ebc7a88a6ffdac17bc0e619982a78a0e18fa9d864005f2ac26b4c009a04db196",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nIn a first, China has banned four New Zealand Members of Parliament for a year over their visit to Taiwan, New Zealand's foreign ministry says.\n\nThe MPs learned of the ban - which the Chinese Embassy said could be reduced or waived with an apology - when they returned from the trip in May, local media reported on Thursday.\n\nChina claims the self-governed island of Taiwan as its territory, and has tried to restrict the island's foreign engagements.\n\nBut this is the first time China has imposed travel bans on New Zealand MPs for visiting Taiwan - a move that \"surprised\" foreign minister Winston Peters, a ministry spokesperson said in a statement to the BBC.\n\n\"New Zealand MPs have visited Taiwan for decades and such visits are not inconsistent with New Zealand's One China policy,\" the spokesperson said.\n\nThe visit in May comprised lawmakers from the ruling coalition - Maureen Pugh, David Wilson and Laura McClure - as well as Duncan Webb from the opposition Labour Party.\n\nMcClure, from the ACT party, said the travel ban was \"a type of foreign interference\" and that she was \"not going to apologise for visiting Taiwan\", the New Zealand Herald reported.\n\nShe told Radio New Zealand that she was \"quite surprised and shocked\" by the ban as similar visits had happened for years previously.\n\nShe added that New Zealand MPs \"have the right to travel freely around the globe\".\n\n\"That is part of living in a free democracy,\" she said.\n\nNew Zealand foreign minister Peters has instructed foreign ministry officials in Beijing and Wellington to discuss the matter with Chinese authorities to \"better understand\" the \"departure from past practice\", the spokesperson said.\n\nNew Zealand established formal diplomatic ties with Beijing in 1972 and has since maintained a One China policy - the diplomatic acknowledgement of China's position that there is only one Chinese government. New Zealand has formal ties only with Beijing, and not with Taipei.\n\nBut like many countries, New Zealand has also maintained regular exchanges with Taiwan.\n\nLast year, a group of New Zealand MPs met Taiwanese President Lai Ching-te during a trip to Taiwan. The Chinese embassy in New Zealand criticised the trip, describing the MPs as \"colluding with 'Taiwan independence' separatist forces\".\n\nBeijing also previously condemned a group of New Zealand lawmakers for attending a reception hosted by Taiwan's de facto embassy in Wellington last October.\n\nTaiwan has previously accused China of trying to intervene in i\n\n---\n\n[Lähde: BBC]\nThe New Zealand lawmakers travelled to Taiwan in May, where they met Taiwan's foreign minister Lin Chia-lung (L)\n\nIn a first, China has banned four New Zealand Members of Parliament for a year over their visit to Taiwan, New Zealand's foreign ministry says.\n\nThe MPs learned of the ban - which the Chinese Embassy said could be reduced or waived with an apology - when they returned from the trip in May, local media reported on Thursday.\n\nChina claims the self-governed island of Taiwan as its territory, and has tried to restrict the island's foreign engagements.\n\nBut this is the first time China has imposed travel bans on New Zealand MPs for visiting Taiwan - a move that \"surprised\" foreign minister Winston Peters, a ministry spokesperson said in a statement to the BBC.\n\n\"New Zealand MPs have visited Taiwan for decades and such visits are not inconsistent with New Zealand's One China policy,\" the spokesperson said.\n\nThe visit in May comprised lawmakers from the ruling coalition - Maureen Pugh, David Wilson and Laura McClure - as well as Duncan Webb from the opposition Labour Party.\n\nMcClure, from the ACT party, said the travel ban was \"a type of foreign interference\" and that she was \"not going to apologise for visiting Taiwan\", the New Zealand Herald reported.\n\nShe told Radio New Zealand that she was \"quite surprised and shocked\" by the ban as similar visits had happened for years previously.\n\nShe added that New Zealand MPs \"have the right to travel freely around the globe\".\n\n\"That is part of living in a free democracy,\" she said.\n\nNew Zealand foreign minister Peters has instructed foreign ministry officials in Beijing and Wellington to discuss the matter with Chinese authorities to \"better understand\" the \"departure from past practice\", the spokesperson said.\n\nPhotos from the visit by the New Zealand MPs were posted on social media by Taiwan's foreign minister Lin Chia-lung\n\nNew Zealand established formal diplomatic ties with Beijing in 1972 and has since maintained a One China policy - the diplomatic acknowledgement of China's position that there is only one Chinese government. New Zealand has formal ties only with Beijing, and not with Taipei.\n\nBut like many countries, New Zealand has also maintained regular exchanges with Taiwan.\n\nLast year, a group of New Zealand MPs met Taiwanese President Lai Ching-te during a trip to Taiwan. The Chinese embassy in New Zealand criticised the trip, describing the MPs as \"colluding with 'Taiwan independence' separatist ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-04T03:14:40.031287+00:00",
+  "failure": "content too short: 212 words",
+  "payload": {
+    "packet_id": "20260604T031116Z_fa514ff2c3",
+    "title": "Kiina määräsi neljälle Uuden-Seelannin kansanedustajalle matkustuskiellon Taiwanin-vierailun takia",
+    "summary": "Kiina on asettanut neljälle Uuden-Seelannin kansanedustajalle vuoden mittaisen matkustuskiellon Taiwanin-vierailun jälkeen. Uuden-Seelannin ulkoministeriön mukaan kyseessä on ensimmäinen kerta, kun Kiina on kohdistanut tällaisen kiellon maan kansanedustajiin Taiwanin-matkan vuoksi.",
+    "content": "Kiina on määrännyt neljä Uuden-Seelannin parlamentin jäsentä vuoden mittaiseen matkustuskieltoon heidän Taiwanin-vierailunsa vuoksi, Uuden-Seelannin ulkoministeriö kertoo. Kansanedustajat saivat tiedon kiellosta palattuaan toukokuiselta matkalta, jonka aikana he tapasivat Taiwanin ulkoministerin Lin Chia-lungin.\n\n## Kielto tuli ilmi matkan jälkeen\n\nUuden-Seelannin paikallismedian mukaan kansanedustajille kerrottiin kiellosta heidän palattuaan Taiwanista toukokuussa. Kiinan suurlähetystön mukaan kieltoa voitaisiin lyhentää tai siitä voitaisiin luopua, jos kansanedustajat pyytäisivät anteeksi.\n\nMatkalla olivat hallituskoalitioon kuuluvat Maureen Pugh, David Wilson ja Laura McClure sekä opposition työväenpuolueen Duncan Webb. Uuden-Seelannin ulkoministeriön mukaan tämä on ensimmäinen kerta, kun Kiina on asettanut uusiseelantilaisille kansanedustajille matkustuskiellon Taiwanin-vierailun perusteella.\n\nUlkoministeri Winston Petersin kerrottiin yllättyneen päätöksestä. Ministeriön edustajan mukaan Uuden-Seelannin kansanedustajat ovat vierailleet Taiwanissa vuosikymmenten ajan, eivätkä tällaiset vierailut ole ristiriidassa maan yhden Kiinan politiikan kanssa.\n\n## Taiwanin asema taustalla\n\nKiina pitää itsehallinnollista Taiwania osana aluettaan ja on pyrkinyt rajoittamaan saaren kansainvälisiä yhteyksiä. Uuden-Seelannin ulkoministeriön mukaan nyt asetettu matkustuskielto on poikkeuksellinen, koska vastaavaa kieltoa ei ole aiemmin määrätty maan kansanedustajille Taiwanissa vierailun vuoksi.\n\nACT-puoluetta edustava Laura McClure kuvasi matkustuskieltoa New Zealand Heraldin mukaan ulkomaiseksi sekaantumiseksi ja sanoi, ettei aio pyytää anteeksi Taiwanissa vierailuaan. Radio New Zealandille hän kertoi olleensa kiellosta yllättynyt ja järkyttynyt, koska vastaavia vierailuja on tehty aiemminkin vuosien ajan.\n\nMcCluren mukaan Uuden-Seelannin kansanedustajilla on oikeus matkustaa vapaasti eri puolilla maailmaa. Hänen mukaansa tämä kuuluu vapaassa demokratiassa elämiseen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kiina",
+      "Uusi-Seelanti",
+      "Taiwan",
+      "matkustuskielto",
+      "ulkopolitiikka"
+    ],
+    "summary_bullets": [
+      "Kiina on määrännyt neljälle Uuden-Seelannin kansanedustajalle vuoden mittaisen matkustuskiellon Taiwanin-vierailun vuoksi.",
+      "Uuden-Seelannin ulkoministeriön mukaan vastaavaa kieltoa ei ole aiemmin asetettu maan kansanedustajille Taiwanin-matkan takia.",
+      "Kiinan suurlähetystön mukaan kieltoa voitaisiin lyhentää tai se voitaisiin perua anteeksipyynnöllä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu annetun paketin tietoihin. Kategorian vaihdoin ulkomaihin, koska uutisen tapahtumapaikat ja toimijat ovat Uusi-Seelanti, Kiina ja Taiwan."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260604T031116Z_fa514ff2c3\",\n  \"title\": \"Kiina määräsi neljälle Uuden-Seelannin kansanedustajalle matkustuskiellon Taiwanin-vierailun takia\",\n  \"summary\": \"Kiina on asettanut neljälle Uuden-Seelannin kansanedustajalle vuoden mittaisen matkustuskiellon Taiwanin-vierailun jälkeen. Uuden-Seelannin ulkoministeriön mukaan kyseessä on ensimmäinen kerta, kun Kiina on kohdistanut tällaisen kiellon maan kansanedustajiin Taiwanin-matkan vuoksi.\",\n  \"content\": \"Kiina on määrännyt neljä Uuden-Seelannin parlamentin jäsentä vuoden mittaiseen matkustuskieltoon heidän Taiwanin-vierailunsa vuoksi, Uuden-Seelannin ulkoministeriö kertoo. Kansanedustajat saivat tiedon kiellosta palattuaan toukokuiselta matkalta, jonka aikana he tapasivat Taiwanin ulkoministerin Lin Chia-lungin.\\n\\n## Kielto tuli ilmi matkan jälkeen\\n\\nUuden-Seelannin paikallismedian mukaan kansanedustajille kerrottiin kiellosta heidän palattuaan Taiwanista toukokuussa. Kiinan suurlähetystön mukaan kieltoa voitaisiin lyhentää tai siitä voitaisiin luopua, jos kansanedustajat pyytäisivät anteeksi.\\n\\nMatkalla olivat hallituskoalitioon kuuluvat Maureen Pugh, David Wilson ja Laura McClure sekä opposition työväenpuolueen Duncan Webb. Uuden-Seelannin ulkoministeriön mukaan tämä on ensimmäinen kerta, kun Kiina on asettanut uusiseelantilaisille kansanedustajille matkustuskiellon Taiwanin-vierailun perusteella.\\n\\nUlkoministeri Winston Petersin kerrottiin yllättyneen päätöksestä. Ministeriön edustajan mukaan Uuden-Seelannin kansanedustajat ovat vierailleet Taiwanissa vuosikymmenten ajan, eivätkä tällaiset vierailut ole ristiriidassa maan yhden Kiinan politiikan kanssa.\\n\\n## Taiwanin asema taustalla\\n\\nKiina pitää itsehallinnollista Taiwania osana aluettaan ja on pyrkinyt rajoittamaan saaren kansainvälisiä yhteyksiä. Uuden-Seelannin ulkoministeriön mukaan nyt asetettu matkustuskielto on poikkeuksellinen, koska vastaavaa kieltoa ei ole aiemmin määrätty maan kansanedustajille Taiwanissa vierailun vuoksi.\\n\\nACT-puoluetta edustava Laura McClure kuvasi matkustuskieltoa New Zealand Heraldin mukaan ulkomaiseksi sekaantumiseksi ja sanoi, ettei aio pyytää anteeksi Taiwanissa vierailuaan. Radio New Zealandille hän kertoi olleensa kiellosta yllättynyt ja järkyttynyt, koska vastaavia vierailuja on tehty aiemminkin vuosien ajan.\\n\\nMcCluren mukaan Uuden-Seelannin kansanedustajilla on oikeus matkustaa vapaasti eri puolilla maailmaa. Hänen mukaansa tämä kuuluu vapaassa demokratiassa elämiseen.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kiina\",\n    \"Uusi-Seelanti\",\n    \"Taiwan\",\n    \"matkustuskielto\",\n    \"ulkopolitiikka\"\n  ],\n  \"summary_bullets\": [\n    \"Kiina on määrännyt neljälle Uuden-Seelannin kansanedustajalle vuoden mittaisen matkustuskiellon Taiwanin-vierailun vuoksi.\",\n    \"Uuden-Seelannin ulkoministeriön mukaan vastaavaa kieltoa ei ole aiemmin asetettu maan kansanedustajille Taiwanin-matkan takia.\",\n    \"Kiinan suurlähetystön mukaan kieltoa voitaisiin lyhentää tai se voitaisiin perua anteeksipyynnöllä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu annetun paketin tietoihin. Kategorian vaihdoin ulkomaihin, koska uutisen tapahtumapaikat ja toimijat ovat Uusi-Seelanti, Kiina ja Taiwan.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260604T031116Z_fa514ff2c3",
+    "category": "Kotimaa",
+    "selected_source_words": 422,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 212,
+    "issues": [
+      "content too short: 212 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Kiina määräsi neljälle Uuden-Seelannin kansanedustajalle matkustuskiellon Taiwanin-vierailun takia",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-04T03:14:40.030993+00:00",
+    "repair_trigger": "pre_repair_word_count=212; selected_source_words=422; selected_source_blocks=4",
+    "pre_repair_word_count": 212,
+    "pre_repair_lead_word_count": 31,
+    "post_repair_word_count": 212,
+    "post_repair_lead_word_count": 31,
+    "selected_source_words_at_repair": 422,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 422,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 212 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:46c029b680",
+      "2:BBC:4ec8bce263",
+      "3:BBC World:436c8f5dfd",
+      "4:BBC:203a72dd47"
+    ],
+    "final_issues": [
+      "content too short: 212 words"
+    ],
+    "recovered": false
+  }
+}
