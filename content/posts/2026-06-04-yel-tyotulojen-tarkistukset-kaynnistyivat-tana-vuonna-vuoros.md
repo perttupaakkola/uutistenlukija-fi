@@ -45,7 +45,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/muista-nama-asiat-kun-saat-yel-ehdotuksen-taman-vuoden-tarkistukset-toden-teolla-liikkeelle/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
