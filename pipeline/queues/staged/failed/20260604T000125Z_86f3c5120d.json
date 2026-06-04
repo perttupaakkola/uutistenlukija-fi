@@ -1,0 +1,90 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-04T00:01:25.173288+00:00",
+  "digest": "86f3c5120d",
+  "packet": {
+    "packet_id": "20260604T000125Z_86f3c5120d",
+    "created_at": "2026-06-04T00:01:25Z",
+    "headline_seed": "Middle East crisis live: Israel and Lebanon agree to renew ceasefire; US House rebukes Trump over Iran war",
+    "description_seed": "Statement with US after Israel-Lebanon talks in Washington says agreement will create ‘pilot’ security zones in Lebanon from which Hezbollah banned The Kuwaiti defence ministry said it intercepted 13 ballistic missiles and 17 drones launched by Iran today. A drone and missile attack on Kuwait’s international airport killed one person, which Kuwaiti authorities identified as an Indian national. It is the first reported death in a Gulf state since the US and Iran agreed to a ceasefire in April. Continue reading...",
+    "link": "https://www.theguardian.com/world/live/2026/jun/03/us-israel-iran-war-lebanon-trump-khamenei-netanyahu-hormuz-latest-news-updates",
+    "source": "The Guardian World",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.theguardian.com/world/live/2026/jun/03/us-israel-iran-war-lebanon-trump-khamenei-netanyahu-hormuz-latest-news-updates"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.58,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Middle East crisis live: Israel and Lebanon agree to renew ceasefire; US House rebukes Trump over Iran war"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Statement with US after Israel-Lebanon talks in Washington says agreement will create ‘pilot’ security zones in Lebanon from which Hezbollah banned The Kuwaiti defence ministry said it intercepted 13 ballistic missiles and 17 drones launched by Iran today. A drone and missile attack on Kuwait’s international airport killed one person, which Kuwaiti authorities identified as an Indian national. It is the first reported death in a Gulf state since the US and Iran agreed to a ceasefire in April. Continue reading...",
+        "word_count": 81,
+        "keyword_overlap": 52,
+        "strong_overlap": 33
+      }
+    ],
+    "source_text": "Statement with US after Israel-Lebanon talks in Washington says agreement will create ‘pilot’ security zones in Lebanon from which Hezbollah banned The Kuwaiti defence ministry said it intercepted 13 ballistic missiles and 17 drones launched by Iran today. A drone and missile attack on Kuwait’s international airport killed one person, which Kuwaiti authorities identified as an Indian national. It is the first reported death in a Gulf state since the US and Iran agreed to a ceasefire in April. Continue reading...",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 162,
+      "selected_blocks": 1,
+      "selected_source_words": 81,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "source-1",
+        "The Guardian World"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Middle East crisis live: Israel and Lebanon agree to renew ceasefire; US House rebukes Trump over Iran war",
+      "description": "Statement with US after Israel-Lebanon talks in Washington says agreement will create ‘pilot’ security zones in Lebanon from which Hezbollah banned The Kuwaiti defence ministry said it intercepted 13 ballistic missiles and 17 drones launched by Iran today. A drone and missile attack on Kuwait’s international airport killed one person, which Kuwaiti authorities identified as an Indian national. It is the first reported death in a Gulf state since the US and Iran agreed to a ceasefire in April. Continue reading...",
+      "category_hint": "",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Middle East crisis live: Israel and Lebanon agree to renew ceasefire; US House rebukes Trump over Iran war",
+    "description": "Statement with US after Israel-Lebanon talks in Washington says agreement will create ‘pilot’ security zones in Lebanon from which Hezbollah banned The Kuwaiti defence ministry said it intercepted 13 ballistic missiles and 17 drones launched by Iran today. A drone and missile attack on Kuwait’s international airport killed one person, which Kuwaiti authorities identified as an Indian national. It is the first reported death in a Gulf state since the US and Iran agreed to a ceasefire in April. Continue reading...",
+    "link": "https://www.theguardian.com/world/live/2026/jun/03/us-israel-iran-war-lebanon-trump-khamenei-netanyahu-hormuz-latest-news-updates",
+    "published": "2026-06-03T23:43:28+00:00",
+    "source": "The Guardian World",
+    "source_domain": "theguardian.com",
+    "language": "en",
+    "fingerprint": "cabfb1fa9a8ca86c90c852f5a716ea43",
+    "_url_hash": "981523a5f7bedb6706849651cb49faca343c23e4ae1b09c1fc3d217481be16f0",
+    "source_tier": 2,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Statement with US after Israel-Lebanon talks in Washington says agreement will create ‘pilot’ security zones in Lebanon from which Hezbollah banned The Kuwaiti defence ministry said it intercepted 13 ballistic missiles and 17 drones launched by Iran today. A drone and missile attack on Kuwait’s international airport killed one person, which Kuwaiti authorities identified as an Indian national. It is the first reported death in a Gulf state since the US and Iran agreed to a ceasefire in April. Continue reading...",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-04T00:03:14.154588+00:00",
+  "failure": "Lähdeaineisto on liian ohut ja osin jäsentymätön: se yhdistää useita eri tapahtumia ilman riittäviä yksityiskohtia, ajankohtia tai vahvistavia tietoja 250 sanan julkaistavaa artikkelia varten.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260604T000125Z_86f3c5120d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian ohut ja osin jäsentymätön: se yhdistää useita eri tapahtumia ilman riittäviä yksityiskohtia, ajankohtia tai vahvistavia tietoja 250 sanan julkaistavaa artikkelia varten.\"}"
+}
