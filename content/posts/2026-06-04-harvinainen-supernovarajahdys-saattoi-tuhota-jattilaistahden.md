@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/avaruudessa-havaittiin-jotain-harvinaista-niin-tuhoisa-rajahdys-ettei-jaljelle-jaanyt-mitaan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
