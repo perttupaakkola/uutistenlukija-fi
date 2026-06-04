@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/elakeyhtioiden-maara-paattajien-kannasta-uusia-tuloksia/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
