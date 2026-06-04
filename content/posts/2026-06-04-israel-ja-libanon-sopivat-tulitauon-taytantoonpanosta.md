@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/israel-ja-libanon-sopivat-aselevon-taytantoonpanosta/9348858"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
