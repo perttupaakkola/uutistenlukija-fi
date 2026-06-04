@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/seuraavan-007-elokuvan-tahti-on-voitu-jo-nahda-james-bondin-roolissa-emme-vain-tienneet-sita/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
