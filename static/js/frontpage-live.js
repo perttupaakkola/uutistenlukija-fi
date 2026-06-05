@@ -58,17 +58,11 @@
   }
 
   var marketSets = {
-    indices: [
-      ['BTC', 'Bitcoin', 'crypto', 'bitcoin'],
-      ['ETH', 'Ethereum', 'crypto', 'ethereum'],
-      ['SOL', 'Solana', 'crypto', 'solana'],
-      ['XRP', 'XRP', 'crypto', 'ripple']
-    ],
-    stocks: [
-      ['NOKIA', 'Nokia', 'stock', 10.95, 'EUR'],
-      ['KONE', 'Kone', 'stock', 51.14, 'EUR'],
-      ['NESTE', 'Neste', 'stock', 27.35, 'EUR'],
-      ['SAMPO', 'Sampo', 'stock', 8.85, 'EUR']
+    crypto: [
+      ['BTC', 'Bitcoin', 'crypto', 'bitcoin', '€'],
+      ['ETH', 'Ethereum', 'crypto', 'ethereum', '€'],
+      ['SOL', 'Solana', 'crypto', 'solana', '€'],
+      ['XRP', 'XRP', 'crypto', 'ripple', '€']
     ],
     currencies: [
       ['EURUSD', 'EUR/USD', 'currency', 'usd'],
@@ -104,8 +98,9 @@
         var q = quoteMap[symbol] || {};
         var price = typeof q.price === 'number' ? q.price : null;
         var change = typeof q.changePercent === 'number' ? q.changePercent : null;
+        var suffix = q.suffix ? ' ' + q.suffix : '';
         var changeText = change === null ? '' : ' <b class="' + (change < 0 ? 'negative' : '') + '">' + (change > 0 ? '+' : '') + change.toFixed(2).replace('.', ',') + ' %</b>';
-        return '<div><dt>' + label + '</dt><dd>' + formatNumber(price) + changeText + '</dd></div>';
+        return '<div><dt>' + label + '</dt><dd>' + formatNumber(price) + suffix + changeText + '</dd></div>';
       }).join('');
     }
 
@@ -118,10 +113,9 @@
           var q = cryptoMap[row[3]] || {};
           quoteMap[row[0]] = {
             price: q.eur,
-            changePercent: typeof q.eur_24h_change === 'number' ? q.eur_24h_change : null
+            changePercent: typeof q.eur_24h_change === 'number' ? q.eur_24h_change : null,
+            suffix: row[4] || ''
           };
-        } else if (row[2] === 'stock') {
-          quoteMap[row[0]] = { price: row[3], changePercent: null };
         } else {
           quoteMap[row[0]] = { price: rates[row[3]], changePercent: null };
         }
@@ -131,7 +125,7 @@
     }
 
     function loadSet(name) {
-      var rows = marketSets[name] || marketSets.indices;
+      var rows = marketSets[name] || marketSets.crypto;
       skeleton(rows);
       if (note) note.textContent = 'Päivitetään markkinadataa…';
 
@@ -152,7 +146,7 @@
       ]).then(function (payloads) {
         var okCount = renderMarketRows(rows, payloads[0], payloads[1]);
         if (note) {
-          note.textContent = okCount ? 'Viivästetty markkinadata, päivittyy selaimessa.' : 'Markkinadataa ei saatu juuri nyt. Siirry Talous-osioon lukemaan tuoreimmat uutiset.';
+          note.textContent = okCount ? 'Viivästetty krypto- ja valuuttadata, päivittyy selaimessa.' : 'Markkinadataa ei saatu juuri nyt. Siirry Talous-osioon lukemaan tuoreimmat uutiset.';
         }
       });
     }
@@ -168,7 +162,7 @@
       });
     });
 
-    loadSet('indices');
+    loadSet('crypto');
   }
 
   if (document.readyState === 'loading') {
