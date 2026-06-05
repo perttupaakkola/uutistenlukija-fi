@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/tassa-kieroilus-loppu-poliiseja-odotti-karmaiseva-naky-malminkartanon-murha-asunnolla/9349624"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
