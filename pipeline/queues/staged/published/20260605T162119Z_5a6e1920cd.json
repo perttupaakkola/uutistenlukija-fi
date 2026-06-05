@@ -1,0 +1,261 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-05T16:21:19.993383+00:00",
+  "digest": "5a6e1920cd",
+  "packet": {
+    "packet_id": "20260605T162119Z_5a6e1920cd",
+    "created_at": "2026-06-05T16:21:19Z",
+    "headline_seed": "Google and FBI warn of ransomware group that sends fake IT workers to hack victims in person",
+    "description_seed": "Cybercriminals, part of a gang known as Silent Ransom Group, have sent people pretending to be IT support employees to law firms' offices, where the criminals have stolen data using USB drives or remote access tools.",
+    "link": "https://techcrunch.com/2026/06/05/google-and-fbi-warn-of-ransomware-group-that-sends-fake-it-workers-to-hack-victims-in-person/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "Techlicious",
+      "TechRepublic"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/05/google-and-fbi-warn-of-ransomware-group-that-sends-fake-it-workers-to-hack-victims-in-person/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Google and FBI warn of ransomware group that sends fake IT workers to hack victims in person"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Cybercriminals, part of a gang known as Silent Ransom Group, have sent people pretending to be IT support employees to law firms' offices, where the criminals have stolen data using USB drives or remote access tools.",
+        "word_count": 36,
+        "keyword_overlap": 24,
+        "strong_overlap": 13
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "A ransomware gang has escalated its attacks on law firms by sometimes sending fake IT workers in person to the victims’ offices, where the imposters steal data directly from the victims’ computers using USB drives or help other gang members connect to the computers remotely, according to Google and the FBI. On Friday, Google’s cybersecurity teams Mandiant and Google Threat Intelligence Group published a new report accusing the cybercriminal gang known as Silent Ransom Group of attempting to steal victims’ information “using physical, in-person access” in attacks from January through May of this year that targeted “dozens” of victims. ---",
+        "word_count": 100,
+        "keyword_overlap": 19,
+        "strong_overlap": 10
+      },
+      {
+        "source": "Techlicious",
+        "source_type": "research",
+        "text": "If that fails, the group takes the highly unusual step of sending a hacking team member in person to your office. That person, posing as a member of your company's IT support, explains that they need to plug in a USB drive to image your computer or create a backup due to the security issue you were just contacted about. Once the attacker gets access to your physical PC, they can quietly copy company files to file-sharing platforms, like Google Drive or Microsoft OneDrive, or may simply copy the files onto a USB drive or external hard drive. After your data is exfiltrated, the extortion begins. The group threatens to post your company's stolen files publicly or sell the data. In some cases, they have contacted victims' clients to increase the pressure on paying a ransom.",
+        "word_count": 136,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "TechRepublic",
+        "source_type": "research",
+        "text": "For some ransomware crews, the fastest route to a payout may no longer be locking systems. It may be walking through the front door. The FBI has warned that Silent Ransom Group, a cybercrime group known for phishing and phone-based IT support scams, has expanded its tactics to include physical impersonation. According to the bureau, the group may send an actor to a victim’s workplace to gain access and insert a storage device when remote access attempts fail. That shift makes the threat harder to contain with email filters and endpoint tools alone. For organizations handling legal, financial, healthcare, or insurance data, the risk now extends from the inbox to the front desk.",
+        "word_count": 113,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Cybercriminals, part of a gang known as Silent Ransom Group, have sent people pretending to be IT support employees to law firms' offices, where the criminals have stolen data using USB drives or remote access tools.\n\nA ransomware gang has escalated its attacks on law firms by sometimes sending fake IT workers in person to the victims’ offices, where the imposters steal data directly from the victims’ computers using USB drives or help other gang members connect to the computers remotely, according to Google and the FBI. On Friday, Google’s cybersecurity teams Mandiant and Google Threat Intelligence Group published a new report accusing the cybercriminal gang known as Silent Ransom Group of attempting to steal victims’ information “using physical, in-person access” in attacks from January through May of this year that targeted “dozens” of victims. ---\n\nIf that fails, the group takes the highly unusual step of sending a hacking team member in person to your office. That person, posing as a member of your company's IT support, explains that they need to plug in a USB drive to image your computer or create a backup due to the security issue you were just contacted about. Once the attacker gets access to your physical PC, they can quietly copy company files to file-sharing platforms, like Google Drive or Microsoft OneDrive, or may simply copy the files onto a USB drive or external hard drive. After your data is exfiltrated, the extortion begins. The group threatens to post your company's stolen files publicly or sell the data. In some cases, they have contacted victims' clients to increase the pressure on paying a ransom.\n\nFor some ransomware crews, the fastest route to a payout may no longer be locking systems. It may be walking through the front door. The FBI has warned that Silent Ransom Group, a cybercrime group known for phishing and phone-based IT support scams, has expanded its tactics to include physical impersonation. According to the bureau, the group may send an actor to a victim’s workplace to gain access and insert a storage device when remote access attempts fail. That shift makes the threat harder to contain with email filters and endpoint tools alone. For organizations handling legal, financial, healthcare, or insurance data, the risk now extends from the inbox to the front desk.",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 662,
+      "selected_blocks": 4,
+      "selected_source_words": 385,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "Techlicious",
+        "Techlicious",
+        "Techlicious",
+        "Techlicious",
+        "TechRepublic",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "Techlicious",
+        "TechRepublic"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Google and FBI warn of ransomware group that sends fake IT workers to hack victims in person",
+      "description": "Cybercriminals, part of a gang known as Silent Ransom Group, have sent people pretending to be IT support employees to law firms' offices, where the criminals have stolen data using USB drives or remote access tools.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Google and FBI warn of ransomware group that sends fake IT workers to hack victims in person",
+    "description": "Cybercriminals, part of a gang known as Silent Ransom Group, have sent people pretending to be IT support employees to law firms' offices, where the criminals have stolen data using USB drives or remote access tools.",
+    "link": "https://techcrunch.com/2026/06/05/google-and-fbi-warn-of-ransomware-group-that-sends-fake-it-workers-to-hack-victims-in-person/",
+    "published": "2026-06-05T16:07:46+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "df9be5b329b365c383bc6c6940191b55",
+    "_url_hash": "6c46758ad8f062bed30528d770025376e932fa3d5140ee7850f204f3ec31ba43",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nA ransomware gang has escalated its attacks on law firms by sometimes sending fake IT workers in person to the victims’ offices, where the imposters steal data directly from the victims’ computers using USB drives or help other gang members connect to the computers remotely, according to Google and the FBI.\n\nOn Friday, Google’s cybersecurity teams Mandiant and Google Threat Intelligence Group published a new report accusing the cybercriminal gang known as Silent Ransom Group of attempting to steal victims’ information “using physical, in-person access” in attacks from January through May of this year that targeted “dozens” of victims.\n\n---\n\n[Lähde: Techlicious]\nHot Topics: All Roku Players Compared | Best iPad Keyboard Cases | How to Get Emergency Satellite Service for Your Phone\n\nWe may earn commissions when you buy from links on our site. Why you can trust us.\n\nA hacking group called the Silent Ransom Group (SRG) is walking into U.S. offices, posing as IT support staff to steal company data. The FBI issued a flash warning (PDF) yesterday about the group, which has been targeting law firms since 2023 and has been known to go after other businesses with confidential files worth stealing, including insurance, finance, and healthcare.\n\nThe attack starts remotely with a call or email that looks like it's coming from your own IT department, warning about a security issue and asking you to contact support. It isn't IT. Once you're on the phone, the attacker talks you through handing over remote desktop access to your computer.\n\nIf that fails, the group takes the highly unusual step of sending a hacking team member in person to your office. That person, posing as a member of your company's IT support, explains that they need to plug in a USB drive to image your computer or create a backup due to the security issue you were just contacted about. Once the attacker gets access to your physical PC, they can quietly copy company files to file-sharing platforms, like Google Drive or Microsoft OneDrive, or may simply copy the files onto a USB drive or external hard drive.\n\nAfter your data is exfiltrated, the extortion begins. The group threatens to post your company's stolen files publicly or sell the data. In some cases, they have contacted victims' clients to increase the pressure on paying a ransom.\n\nThe FBI notes that traditional antivirus products are unlikely to flag these attacks because SRG uses legitimate remote access tools such as Zoho Assist, Quick Assist, AnyDesk, RustDesk, Syncro, Splashtop, and Atera. Instead, you should follow basic security procedures, including verifying the credentials of anyone attempting to access your computer and knowing your company's policy for how IT communicates and authenticates itself to employees.\n\nIf you suspect your company has been a target of these attacks, the FBI is requesting that you report any suspicious activity to the FBI's Internet Crime Complaint Center.\n\nRead next: How Android 17 will protect your phone from thieves\n\n[Image credit: Suzanne Kantra/Techlicious generated by ChatGPT]\n\nNews, Computers and Software, Computer Safety & Support, Blog\n\nHome | About | Meet the\n\n---\n\n[Lähde: TechRepublic]\nFor some ransomware crews, the fastest route to a payout may no longer be locking systems. It may be walking through the front door.\n\nThe FBI has warned that Silent Ransom Group, a cybercrime group known for phishing and phone-based IT support scams, has expanded its tactics to include physical impersonation. According to the bureau, the group may send an actor to a victim’s workplace to gain access and insert a storage device when remote access attempts fail.\n\nThat shift makes the threat harder to contain with email filters and endpoint tools alone. For organizations handling legal, financial, healthcare, or insurance data, the risk now extends from the inbox to the front desk.",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-05T16:24:43.045410+00:00",
+  "payload": {
+    "packet_id": "20260605T162119Z_5a6e1920cd",
+    "title": "Google ja FBI varoittavat IT-tukena esiintyvistä Silent Ransom Groupin hyökkääjistä",
+    "summary": "Silent Ransom Groupin kerrotaan laajentaneen hyökkäyksiään niin, että tekijät voivat esiintyä IT-tukena ja hakeutua uhrien toimitiloihin varastaakseen tietoja fyysisen pääsyn avulla.",
+    "content": "Google ja FBI varoittavat Silent Ransom Group -nimisestä kyberrikollisryhmästä, jonka kerrotaan lähettäneen valetyöntekijöitä uhrien toimistoihin esiintymään IT-tukena. Ryhmän on kuvattu kohdistaneen hyökkäyksiä erityisesti lakitoimistoihin ja varastaneen tietoja USB-laitteilla, ulkoisilla levyillä, tiedostonjakopalveluilla tai etäyhteystyökalujen avulla.\n\n## Fyysinen pääsy nousi osaksi hyökkäystapaa\n\nGooglen kyberturvatiimit Mandiant ja Google Threat Intelligence Group julkaisivat perjantaina raportin, jossa Silent Ransom Groupin sanotaan yrittäneen varastaa uhrien tietoja fyysisen, paikan päällä tapahtuvan pääsyn avulla. Raportin mukaan hyökkäyksiä havaittiin tämän vuoden tammi-toukokuussa, ja niiden kohteena oli kymmeniä uhreja.\n\nRyhmän taustalla on aiemmin tunnettuja kalastelu- ja puhelinpohjaisia IT-tukihuijauksia. Uudemmassa toimintatavassa rikollinen voi saapua työpaikalle henkilönä, joka väittää kuuluvansa yrityksen IT-tukeen. Peitetarina voi liittyä esimerkiksi aiemmin esitettyyn tietoturvaongelmaan, jonka vuoksi koneelle pitäisi väitetysti tehdä varmuuskopio tai levykuva.\n\n## Tietoja voidaan kopioida usealla tavalla\n\nKun hyökkääjä saa fyysisen pääsyn tietokoneelle, tietoja voidaan kopioida suoraan USB-muistille tai ulkoiselle kovalevylle. Lähteiden mukaan hyökkääjä voi myös auttaa muita ryhmän jäseniä muodostamaan etäyhteyden uhrin koneelle. Tietoja voidaan siirtää lisäksi tiedostonjakopalveluihin, kuten Google Driveen tai Microsoft OneDriveen.\n\nJos etäyhteysyritykset eivät onnistu, fyysinen esiintyminen voi olla ryhmälle vaihtoehtoinen reitti uhrin järjestelmiin. FBI:n mukaan tämä laajentaa uhkaa sähköpostista ja puhelimesta myös työpaikan etuovelle, sillä pelkät sähköpostisuodattimet ja päätelaitetyökalut eivät välttämättä riitä pysäyttämään toimitiloihin päässyttä hyökkääjää.\n\n## Kiristys seuraa varastamista\n\nTietojen viemisen jälkeen alkaa kiristysvaihe. Ryhmän kerrotaan uhanneen julkaista yritysten varastettuja tiedostoja julkisesti tai myydä tietoja eteenpäin. Joissakin tapauksissa uhreihin kohdistettua painetta on lisätty ottamalla yhteyttä myös näiden asiakkaisiin.\n\nVaroitus koskee erityisesti organisaatioita, jotka käsittelevät oikeudellisia, taloudellisia, terveydenhuollon tai vakuutusalan tietoja. Näissä ympäristöissä vuotaneet tiedostot voivat olla arvokkaita kiristäjille, ja fyysinen pääsy tietokoneelle voi muuttaa tavallisen IT-tukipyynnön näköisen tilanteen tietomurroksi.",
+    "category": "Teknologia",
+    "tags": [
+      "kyberturvallisuus",
+      "kiristyshaittaohjelmat",
+      "Google",
+      "FBI",
+      "tietomurrot"
+    ],
+    "summary_bullets": [
+      "Silent Ransom Groupin kerrotaan esiintyneen IT-tukena ja hakeutuneen uhrien toimistoihin.",
+      "Hyökkääjät voivat kopioida tietoja USB-laitteille, tiedostonjakopalveluihin tai avata etäyhteyden muille rikollisille.",
+      "Google ja FBI varoittavat, että uhka koskee myös fyysistä pääsyä toimitiloihin, ei vain sähköpostia ja verkkoa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin yhteneviin lähdetietoihin. Yksityiskohtia kohteiden maista, lunnaiden määristä tai yksittäisistä uhreista ei lisätty, koska niitä ei ollut lähdeaineistossa."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260605T162119Z_5a6e1920cd\",\"title\":\"Google ja FBI varoittavat IT-tukena esiintyvistä Silent Ransom Groupin hyökkääjistä\",\"summary\":\"Silent Ransom Groupin kerrotaan laajentaneen hyökkäyksiään niin, että tekijät voivat esiintyä IT-tukena ja hakeutua uhrien toimitiloihin varastaakseen tietoja fyysisen pääsyn avulla.\",\"content\":\"Google ja FBI varoittavat Silent Ransom Group -nimisestä kyberrikollisryhmästä, jonka kerrotaan lähettäneen valetyöntekijöitä uhrien toimistoihin esiintymään IT-tukena. Ryhmän on kuvattu kohdistaneen hyökkäyksiä erityisesti lakitoimistoihin ja varastaneen tietoja USB-laitteilla, ulkoisilla levyillä, tiedostonjakopalveluilla tai etäyhteystyökalujen avulla.\\n\\n## Fyysinen pääsy nousi osaksi hyökkäystapaa\\n\\nGooglen kyberturvatiimit Mandiant ja Google Threat Intelligence Group julkaisivat perjantaina raportin, jossa Silent Ransom Groupin sanotaan yrittäneen varastaa uhrien tietoja fyysisen, paikan päällä tapahtuvan pääsyn avulla. Raportin mukaan hyökkäyksiä havaittiin tämän vuoden tammi-toukokuussa, ja niiden kohteena oli kymmeniä uhreja.\\n\\nRyhmän taustalla on aiemmin tunnettuja kalastelu- ja puhelinpohjaisia IT-tukihuijauksia. Uudemmassa toimintatavassa rikollinen voi saapua työpaikalle henkilönä, joka väittää kuuluvansa yrityksen IT-tukeen. Peitetarina voi liittyä esimerkiksi aiemmin esitettyyn tietoturvaongelmaan, jonka vuoksi koneelle pitäisi väitetysti tehdä varmuuskopio tai levykuva.\\n\\n## Tietoja voidaan kopioida usealla tavalla\\n\\nKun hyökkääjä saa fyysisen pääsyn tietokoneelle, tietoja voidaan kopioida suoraan USB-muistille tai ulkoiselle kovalevylle. Lähteiden mukaan hyökkääjä voi myös auttaa muita ryhmän jäseniä muodostamaan etäyhteyden uhrin koneelle. Tietoja voidaan siirtää lisäksi tiedostonjakopalveluihin, kuten Google Driveen tai Microsoft OneDriveen.\\n\\nJos etäyhteysyritykset eivät onnistu, fyysinen esiintyminen voi olla ryhmälle vaihtoehtoinen reitti uhrin järjestelmiin. FBI:n mukaan tämä laajentaa uhkaa sähköpostista ja puhelimesta myös työpaikan etuovelle, sillä pelkät sähköpostisuodattimet ja päätelaitetyökalut eivät välttämättä riitä pysäyttämään toimitiloihin päässyttä hyökkääjää.\\n\\n## Kiristys seuraa varastamista\\n\\nTietojen viemisen jälkeen alkaa kiristysvaihe. Ryhmän kerrotaan uhanneen julkaista yritysten varastettuja tiedostoja julkisesti tai myydä tietoja eteenpäin. Joissakin tapauksissa uhreihin kohdistettua painetta on lisätty ottamalla yhteyttä myös näiden asiakkaisiin.\\n\\nVaroitus koskee erityisesti organisaatioita, jotka käsittelevät oikeudellisia, taloudellisia, terveydenhuollon tai vakuutusalan tietoja. Näissä ympäristöissä vuotaneet tiedostot voivat olla arvokkaita kiristäjille, ja fyysinen pääsy tietokoneelle voi muuttaa tavallisen IT-tukipyynnön näköisen tilanteen tietomurroksi.\",\"category\":\"Teknologia\",\"tags\":[\"kyberturvallisuus\",\"kiristyshaittaohjelmat\",\"Google\",\"FBI\",\"tietomurrot\"],\"summary_bullets\":[\"Silent Ransom Groupin kerrotaan esiintyneen IT-tukena ja hakeutuneen uhrien toimistoihin.\",\"Hyökkääjät voivat kopioida tietoja USB-laitteille, tiedostonjakopalveluihin tai avata etäyhteyden muille rikollisille.\",\"Google ja FBI varoittavat, että uhka koskee myös fyysistä pääsyä toimitiloihin, ei vain sähköpostia ja verkkoa.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.98,\"journalist_note\":\"Artikkeli perustuu paketissa annettuihin yhteneviin lähdetietoihin. Yksityiskohtia kohteiden maista, lunnaiden määristä tai yksittäisistä uhreista ei lisätty, koska niitä ei ollut lähdeaineistossa.\"}",
+  "article": {
+    "title": "Google ja FBI varoittavat IT-tukena esiintyvistä Silent Ransom Groupin hyökkääjistä",
+    "description": "Silent Ransom Groupin kerrotaan laajentaneen hyökkäyksiään niin, että tekijät voivat esiintyä IT-tukena ja hakeutua uhrien toimitiloihin varastaakseen tietoja fyysisen pääsyn avulla.",
+    "link": "https://techcrunch.com/2026/06/05/google-and-fbi-warn-of-ransomware-group-that-sends-fake-it-workers-to-hack-victims-in-person/",
+    "published": "2026-06-05T16:07:46+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "df9be5b329b365c383bc6c6940191b55",
+    "_url_hash": "6c46758ad8f062bed30528d770025376e932fa3d5140ee7850f204f3ec31ba43",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nA ransomware gang has escalated its attacks on law firms by sometimes sending fake IT workers in person to the victims’ offices, where the imposters steal data directly from the victims’ computers using USB drives or help other gang members connect to the computers remotely, according to Google and the FBI.\n\nOn Friday, Google’s cybersecurity teams Mandiant and Google Threat Intelligence Group published a new report accusing the cybercriminal gang known as Silent Ransom Group of attempting to steal victims’ information “using physical, in-person access” in attacks from January through May of this year that targeted “dozens” of victims.\n\n---\n\n[Lähde: Techlicious]\nHot Topics: All Roku Players Compared | Best iPad Keyboard Cases | How to Get Emergency Satellite Service for Your Phone\n\nWe may earn commissions when you buy from links on our site. Why you can trust us.\n\nA hacking group called the Silent Ransom Group (SRG) is walking into U.S. offices, posing as IT support staff to steal company data. The FBI issued a flash warning (PDF) yesterday about the group, which has been targeting law firms since 2023 and has been known to go after other businesses with confidential files worth stealing, including insurance, finance, and healthcare.\n\nThe attack starts remotely with a call or email that looks like it's coming from your own IT department, warning about a security issue and asking you to contact support. It isn't IT. Once you're on the phone, the attacker talks you through handing over remote desktop access to your computer.\n\nIf that fails, the group takes the highly unusual step of sending a hacking team member in person to your office. That person, posing as a member of your company's IT support, explains that they need to plug in a USB drive to image your computer or create a backup due to the security issue you were just contacted about. Once the attacker gets access to your physical PC, they can quietly copy company files to file-sharing platforms, like Google Drive or Microsoft OneDrive, or may simply copy the files onto a USB drive or external hard drive.\n\nAfter your data is exfiltrated, the extortion begins. The group threatens to post your company's stolen files publicly or sell the data. In some cases, they have contacted victims' clients to increase the pressure on paying a ransom.\n\nThe FBI notes that traditional antivirus products are unlikely to flag these attacks because SRG uses legitimate remote access tools such as Zoho Assist, Quick Assist, AnyDesk, RustDesk, Syncro, Splashtop, and Atera. Instead, you should follow basic security procedures, including verifying the credentials of anyone attempting to access your computer and knowing your company's policy for how IT communicates and authenticates itself to employees.\n\nIf you suspect your company has been a target of these attacks, the FBI is requesting that you report any suspicious activity to the FBI's Internet Crime Complaint Center.\n\nRead next: How Android 17 will protect your phone from thieves\n\n[Image credit: Suzanne Kantra/Techlicious generated by ChatGPT]\n\nNews, Computers and Software, Computer Safety & Support, Blog\n\nHome | About | Meet the\n\n---\n\n[Lähde: TechRepublic]\nFor some ransomware crews, the fastest route to a payout may no longer be locking systems. It may be walking through the front door.\n\nThe FBI has warned that Silent Ransom Group, a cybercrime group known for phishing and phone-based IT support scams, has expanded its tactics to include physical impersonation. According to the bureau, the group may send an actor to a victim’s workplace to gain access and insert a storage device when remote access attempts fail.\n\nThat shift makes the threat harder to contain with email filters and endpoint tools alone. For organizations handling legal, financial, healthcare, or insurance data, the risk now extends from the inbox to the front desk.",
+    "research_source": "multi",
+    "summary": "Silent Ransom Groupin kerrotaan laajentaneen hyökkäyksiään niin, että tekijät voivat esiintyä IT-tukena ja hakeutua uhrien toimitiloihin varastaakseen tietoja fyysisen pääsyn avulla.",
+    "content": "Google ja FBI varoittavat Silent Ransom Group -nimisestä kyberrikollisryhmästä, jonka kerrotaan lähettäneen valetyöntekijöitä uhrien toimistoihin esiintymään IT-tukena. Ryhmän on kuvattu kohdistaneen hyökkäyksiä erityisesti lakitoimistoihin ja varastaneen tietoja USB-laitteilla, ulkoisilla levyillä, tiedostonjakopalveluilla tai etäyhteystyökalujen avulla.\n\n## Fyysinen pääsy nousi osaksi hyökkäystapaa\n\nGooglen kyberturvatiimit Mandiant ja Google Threat Intelligence Group julkaisivat perjantaina raportin, jossa Silent Ransom Groupin sanotaan yrittäneen varastaa uhrien tietoja fyysisen, paikan päällä tapahtuvan pääsyn avulla. Raportin mukaan hyökkäyksiä havaittiin tämän vuoden tammi-toukokuussa, ja niiden kohteena oli kymmeniä uhreja.\n\nRyhmän taustalla on aiemmin tunnettuja kalastelu- ja puhelinpohjaisia IT-tukihuijauksia. Uudemmassa toimintatavassa rikollinen voi saapua työpaikalle henkilönä, joka väittää kuuluvansa yrityksen IT-tukeen. Peitetarina voi liittyä esimerkiksi aiemmin esitettyyn tietoturvaongelmaan, jonka vuoksi koneelle pitäisi väitetysti tehdä varmuuskopio tai levykuva.\n\n## Tietoja voidaan kopioida usealla tavalla\n\nKun hyökkääjä saa fyysisen pääsyn tietokoneelle, tietoja voidaan kopioida suoraan USB-muistille tai ulkoiselle kovalevylle. Lähteiden mukaan hyökkääjä voi myös auttaa muita ryhmän jäseniä muodostamaan etäyhteyden uhrin koneelle. Tietoja voidaan siirtää lisäksi tiedostonjakopalveluihin, kuten Google Driveen tai Microsoft OneDriveen.\n\nJos etäyhteysyritykset eivät onnistu, fyysinen esiintyminen voi olla ryhmälle vaihtoehtoinen reitti uhrin järjestelmiin. FBI:n mukaan tämä laajentaa uhkaa sähköpostista ja puhelimesta myös työpaikan etuovelle, sillä pelkät sähköpostisuodattimet ja päätelaitetyökalut eivät välttämättä riitä pysäyttämään toimitiloihin päässyttä hyökkääjää.\n\n## Kiristys seuraa varastamista\n\nTietojen viemisen jälkeen alkaa kiristysvaihe. Ryhmän kerrotaan uhanneen julkaista yritysten varastettuja tiedostoja julkisesti tai myydä tietoja eteenpäin. Joissakin tapauksissa uhreihin kohdistettua painetta on lisätty ottamalla yhteyttä myös näiden asiakkaisiin.\n\nVaroitus koskee erityisesti organisaatioita, jotka käsittelevät oikeudellisia, taloudellisia, terveydenhuollon tai vakuutusalan tietoja. Näissä ympäristöissä vuotaneet tiedostot voivat olla arvokkaita kiristäjille, ja fyysinen pääsy tietokoneelle voi muuttaa tavallisen IT-tukipyynnön näköisen tilanteen tietomurroksi.",
+    "category": "Teknologia",
+    "tags": [
+      "kyberturvallisuus",
+      "kiristyshaittaohjelmat",
+      "google",
+      "fbi",
+      "tietomurrot"
+    ],
+    "summary_bullets": [
+      "Silent Ransom Groupin kerrotaan esiintyneen IT-tukena ja hakeutuneen uhrien toimistoihin.",
+      "Hyökkääjät voivat kopioida tietoja USB-laitteille, tiedostonjakopalveluihin tai avata etäyhteyden muille rikollisille.",
+      "Google ja FBI varoittavat, että uhka koskee myös fyysistä pääsyä toimitiloihin, ei vain sähköpostia ja verkkoa."
+    ],
+    "key_points": [
+      "Silent Ransom Groupin kerrotaan esiintyneen IT-tukena ja hakeutuneen uhrien toimistoihin.",
+      "Hyökkääjät voivat kopioida tietoja USB-laitteille, tiedostonjakopalveluihin tai avata etäyhteyden muille rikollisille.",
+      "Google ja FBI varoittavat, että uhka koskee myös fyysistä pääsyä toimitiloihin, ei vain sähköpostia ja verkkoa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin yhteneviin lähdetietoihin. Yksityiskohtia kohteiden maista, lunnaiden määristä tai yksittäisistä uhreista ei lisätty, koska niitä ei ollut lähdeaineistossa.",
+    "source_text": "Cybercriminals, part of a gang known as Silent Ransom Group, have sent people pretending to be IT support employees to law firms' offices, where the criminals have stolen data using USB drives or remote access tools.\n\nA ransomware gang has escalated its attacks on law firms by sometimes sending fake IT workers in person to the victims’ offices, where the imposters steal data directly from the victims’ computers using USB drives or help other gang members connect to the computers remotely, according to Google and the FBI. On Friday, Google’s cybersecurity teams Mandiant and Google Threat Intelligence Group published a new report accusing the cybercriminal gang known as Silent Ransom Group of attempting to steal victims’ information “using physical, in-person access” in attacks from January through May of this year that targeted “dozens” of victims. ---\n\nIf that fails, the group takes the highly unusual step of sending a hacking team member in person to your office. That person, posing as a member of your company's IT support, explains that they need to plug in a USB drive to image your computer or create a backup due to the security issue you were just contacted about. Once the attacker gets access to your physical PC, they can quietly copy company files to file-sharing platforms, like Google Drive or Microsoft OneDrive, or may simply copy the files onto a USB drive or external hard drive. After your data is exfiltrated, the extortion begins. The group threatens to post your company's stolen files publicly or sell the data. In some cases, they have contacted victims' clients to increase the pressure on paying a ransom.\n\nFor some ransomware crews, the fastest route to a payout may no longer be locking systems. It may be walking through the front door. The FBI has warned that Silent Ransom Group, a cybercrime group known for phishing and phone-based IT support scams, has expanded its tactics to include physical impersonation. According to the bureau, the group may send an actor to a victim’s workplace to gain access and insert a storage device when remote access attempts fail. That shift makes the threat harder to contain with email filters and endpoint tools alone. For organizations handling legal, financial, healthcare, or insurance data, the risk now extends from the inbox to the front desk.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260605T162119Z_5a6e1920cd",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-06-05T16:24:43.045150+00:00",
+      "repair_trigger": "pre_repair_word_count=237; selected_source_words=385; selected_source_blocks=4",
+      "pre_repair_word_count": 237,
+      "pre_repair_lead_word_count": 31,
+      "post_repair_word_count": 260,
+      "post_repair_lead_word_count": 34,
+      "selected_source_words_at_repair": 385,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 385,
+      "source_blocks": 4,
+      "repair_added_word_count": 23,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:TechCrunch:feb2cf6ef5",
+        "2:TechCrunch:492cf3593f",
+        "3:Techlicious:955cb1819f",
+        "4:TechRepublic:ee1ece2b2e"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwb2ZmaWNlJTIwd29ya2VyfGVufDF8MHx8fDE3ODA2NzY4ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwb2ZmaWNlJTIwd29ya2VyfGVufDF8MHx8fDE3ODA2NzY4ODR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Google ja FBI varoittavat IT-tukena esiintyvistä Silent Ransom Groupin hyökkääjistä",
+    "image_credit": "Photo by Jefferson Santos on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/person-using-laptop-computers-9SoCnyQmkzI?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-05T16:24:43.045150+00:00",
+    "repair_trigger": "pre_repair_word_count=237; selected_source_words=385; selected_source_blocks=4",
+    "pre_repair_word_count": 237,
+    "pre_repair_lead_word_count": 31,
+    "post_repair_word_count": 260,
+    "post_repair_lead_word_count": 34,
+    "selected_source_words_at_repair": 385,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 385,
+    "source_blocks": 4,
+    "repair_added_word_count": 23,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:TechCrunch:feb2cf6ef5",
+      "2:TechCrunch:492cf3593f",
+      "3:Techlicious:955cb1819f",
+      "4:TechRepublic:ee1ece2b2e"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-06-05T16:28:05.930013+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwb2ZmaWNlJTIwd29ya2VyfGVufDF8MHx8fDE3ODA2NzY4ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwb2ZmaWNlJTIwd29ya2VyfGVufDF8MHx8fDE3ODA2NzY4ODR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-05T16:29:05.082240+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-05-google-ja-fbi-varoittavat-it-tukena-esiintyvista-silent-rans.md"
+  ]
+}

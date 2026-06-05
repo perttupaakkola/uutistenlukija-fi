@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/05/kommentti-computex-2026-naytti-miten-tekoaly-vaikuttaa-nyt-aivan-kaikkeen-qualcomm-ennustaa-suurta-muutosta-mobiilialalle/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
