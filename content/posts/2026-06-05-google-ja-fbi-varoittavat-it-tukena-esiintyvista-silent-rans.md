@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/06/05/google-and-fbi-warn-of-ransomware-group-that-sends-fake-it-workers-to-hack-victims-in-person/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
