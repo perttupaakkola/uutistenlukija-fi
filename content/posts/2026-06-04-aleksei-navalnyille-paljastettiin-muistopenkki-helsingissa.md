@@ -44,7 +44,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/aleksei-navalnyi-sai-muistopenkin-venajan-lahetyston-viereiseen-puistoon-penkin-valmistanut-pohjalaisyrittaja-kannanotto-sananvapauden-rohkeuden-ja-ihmisoikeuksien-puolesta/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

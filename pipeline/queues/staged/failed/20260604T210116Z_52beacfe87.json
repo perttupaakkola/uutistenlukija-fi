@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-04T21:01:16.903676+00:00",
+  "digest": "52beacfe87",
+  "packet": {
+    "packet_id": "20260604T210116Z_52beacfe87",
+    "created_at": "2026-06-04T21:01:16Z",
+    "headline_seed": "Helsinki | Poliisi otti kiinni aseen kanssa liikkuneen miehen bussissa Laaja­salossa",
+    "description_seed": "Miehen hallusta löytyi käsiase. Häntä epäillään törkeästä ampuma-aserikoksesta.",
+    "link": "https://www.hs.fi/helsinki/art-2000012058158.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/helsinki/art-2000012058158.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Helsinki | Poliisi otti kiinni aseen kanssa liikkuneen miehen bussissa Laaja­salossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 124,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Helsinki | Poliisi otti kiinni aseen kanssa liikkuneen miehen bussissa Laaja­salossa",
+      "description": "Miehen hallusta löytyi käsiase. Häntä epäillään törkeästä ampuma-aserikoksesta.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Helsinki | Poliisi otti kiinni aseen kanssa liikkuneen miehen bussissa Laaja­salossa",
+    "description": "Miehen hallusta löytyi käsiase. Häntä epäillään törkeästä ampuma-aserikoksesta.",
+    "link": "https://www.hs.fi/helsinki/art-2000012058158.html",
+    "published": "2026-06-04T20:37:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "bb2ce91cfbfb72fd2f94a892c92c4838",
+    "_url_hash": "f08cc09e95e6806905ba4b4cd2b9f675be4d5bf43e3661df0f9fe99104f53470",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nPoliisi epäilee, että yksityisen Helsinki Design Schoolin toimintaan liittyy rikos. Koulu meni konkurssiin marraskuussa 2025.\n\n– Poliisin on syytä epäillä velallisen rikosta liittyen yhtiön toimintaan, rikostarkastaja Markku Nisula Helsingin poliisista toteaa Ylelle.\n\nRikoksen kokoluokkaa Nisula ei paljasta, sillä tutkinta on yhä kesken. Poliisi ilmoitti aloittaneensa tapauksen esiselvityksen marraskuussa 2025, kun sekä koulun oppilaat että opettajat olivat tehneet koulusta rikosilmoituksia. Tuorein tutkintapyyntö tuli Nisulan mukaan Helsinki Design Schoolin konkurssipesältä.\n\nMarraskuussa 2025 selvisi, että Helsinki Design Schoolia pyörittäneellä yhtiöllä oli ainakin noin 1,3 miljoonan euron velat.\n\nViimeksi Helsingin Hietalahdessa toiminut yksityinen luovien alojen koulu houkutteli opiskelijoita nimekkäillä luennoitsijoilla. Koulussa saattoi opiskella esimerkiksi graafista suunnittelua, muotisuunnittelua ja valokuvausta.\n\nHelsingin Design Schoolin haki konkurssiin yhtiön toimitusjohtaja ja omistaja Jani Aromäki.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-04T21:03:14.636933+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja yksityiskohtia vähintään 250 sanan artikkeliin ilman keksittyjä tietoja.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260604T210116Z_52beacfe87\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja yksityiskohtia vähintään 250 sanan artikkeliin ilman keksittyjä tietoja.\"}"
+}

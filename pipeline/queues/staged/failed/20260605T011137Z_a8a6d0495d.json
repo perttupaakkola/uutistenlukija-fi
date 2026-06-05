@@ -1,0 +1,198 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-05T01:11:37.757976+00:00",
+  "digest": "a8a6d0495d",
+  "packet": {
+    "packet_id": "20260605T011137Z_a8a6d0495d",
+    "created_at": "2026-06-05T01:11:37Z",
+    "headline_seed": "US plans to fight flesh-eating screwworm outbreak with flies and dogs",
+    "description_seed": "The insect, which has been found in America for the first time since 1966, is a growing concern in the southern US.",
+    "link": "https://www.bbc.com/news/articles/c7v9vz1gd76o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "NBC News",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c7v9vz1gd76o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US plans to fight flesh-eating screwworm outbreak with flies and dogs"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US agriculture and health officials have outlined a plan to combat a flesh-eating parasite that has been detected in the US for the first time since 1966. The plan to prevent a US outbreak of the New World Screwworm focuses on deploying hundreds of millions of genetically-altered sterile flies. Experts, though, say the supply of sterile flies is too low to immediately impact and halt the growing screwworm population. Other measures include establishing a containment zone around the site of the first US infection along the southern US border, and using sniffer dogs to detect the insects. The threat to humans is low, but cattle ranchers fear an outbreak could have a large impact on beef markets.",
+        "word_count": 117,
+        "keyword_overlap": 12,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The insect, which has been found in America for the first time since 1966, is a growing concern in the southern US.",
+        "word_count": 22,
+        "keyword_overlap": 12,
+        "strong_overlap": 5
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "A flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high. The case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday. The parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals. While the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts. The parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.",
+        "word_count": 133,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Screwworm larvae grow into flies which can travel short distances. The primary way that they have travelled long distances is by being brought by humans. There have been a handful of US cases since 1966, when travellers brought the pest back, but no larger outbreaks. Officials in the US and in Latin America have been combating the problem of screwworms for much of the past six decades, with limited success. One way to fight back is by releasing hundreds of millions of sterile screwworm flies, as the females only mate once in their lifetime, and any eggs they lay will be unfertilised and will not hatch.",
+        "word_count": 106,
+        "keyword_overlap": 9,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "US agriculture and health officials have outlined a plan to combat a flesh-eating parasite that has been detected in the US for the first time since 1966. The plan to prevent a US outbreak of the New World Screwworm focuses on deploying hundreds of millions of genetically-altered sterile flies. Experts, though, say the supply of sterile flies is too low to immediately impact and halt the growing screwworm population. Other measures include establishing a containment zone around the site of the first US infection along the southern US border, and using sniffer dogs to detect the insects. The threat to humans is low, but cattle ranchers fear an outbreak could have a large impact on beef markets.\n\nThe insect, which has been found in America for the first time since 1966, is a growing concern in the southern US.\n\nA flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high. The case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday. The parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals. While the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts. The parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.\n\nScrewworm larvae grow into flies which can travel short distances. The primary way that they have travelled long distances is by being brought by humans. There have been a handful of US cases since 1966, when travellers brought the pest back, but no larger outbreaks. Officials in the US and in Latin America have been combating the problem of screwworms for much of the past six decades, with limited success. One way to fight back is by releasing hundreds of millions of sterile screwworm flies, as the females only mate once in their lifetime, and any eggs they lay will be unfertilised and will not hatch.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 1010,
+      "selected_blocks": 4,
+      "selected_source_words": 378,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "The Fence Post",
+        "The Fence Post",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US plans to fight flesh-eating screwworm outbreak with flies and dogs",
+      "description": "The insect, which has been found in America for the first time since 1966, is a growing concern in the southern US.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US plans to fight flesh-eating screwworm outbreak with flies and dogs",
+    "description": "The insect, which has been found in America for the first time since 1966, is a growing concern in the southern US.",
+    "link": "https://www.bbc.com/news/articles/c7v9vz1gd76o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-05T00:56:42+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "bf4467ed2984128da0b7bafbf6c76dd2",
+    "_url_hash": "16e93b76efbd44c4a9a455ec9f416d7b2d7700176b758f40ca5d5806ab79866a",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS agriculture and health officials have outlined a plan to combat a flesh-eating parasite that has been detected in the US for the first time since 1966.\n\nThe plan to prevent a US outbreak of the New World Screwworm focuses on deploying hundreds of millions of genetically-altered sterile flies. Experts, though, say the supply of sterile flies is too low to immediately impact and halt the growing screwworm population.\n\nOther measures include establishing a containment zone around the site of the first US infection along the southern US border, and using sniffer dogs to detect the insects.\n\nThe threat to humans is low, but cattle ranchers fear an outbreak could have a large impact on beef markets.\n\nScrewworms are parasitic flies whose females lay eggs in open wounds and mucous membranes of living warm-blooded animals and people. When the eggs hatch, hundreds of larvae burrow through living flesh with sharp mouths, eventually killing their host if left untreated.\n\nOn Wednesday, US officials announced that the first case in 60 years was detected in a three-week-old calf, with the larvae found in its umbilical area. The discovery was made in the town of La Pryor, Texas, about 30 miles (48km) from the Mexico border.\n\nOfficials have set up a 20km-wide \"control zone\", and are \"implementing quarantines, movement controls, and surveillance in this area,\" according to the US Department of Agriculture (USDA).\n\nScrewworm larvae grow into flies which can travel short distances. The primary way that they have travelled long distances is by being brought by humans. There have been a handful of US cases since 1966, when travellers brought the pest back, but no larger outbreaks.\n\nOfficials in the US and in Latin America have been combating the problem of screwworms for much of the past six decades, with limited success.\n\nOne way to fight back is by releasing hundreds of millions of sterile screwworm flies, as the females only mate once in their lifetime, and any eggs they lay will be unfertilised and will not hatch.\n\nThis method, known as the Sterile Insect Technique, has been in use for many years to control a variety of insect populations, including fruit flies and mosquitos. It works by hatching flies in an enclosed space, and then exposing them to radiation to make them sterile before releasing them into the wild.\n\nHowever, officials say that they will need to breed up to 600 million sterile screwworms flies each week in order to fight back the outbreak.\n\nCurrently, fa\n\n---\n\n[Lähde: NBC News]\nA flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high.\n\nThe case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday.\n\nThe parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals.\n\nWhile the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts.\n\nThe parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.\n\nThe case is the first confirmed detection of New World screwworm in Texas since 1966 and is the only confirmed case identified in the country so far, Rollins said.\n\nIt follows months of warnings from U.S. and Texas agriculture officials and cattle industry leaders, as the pest steadily moved north through Mexico toward the American border.\n\n“For months, the screwworm has advanced rapidly through Mexico in spite of the USDA’s existing game plan,” Texas Agriculture Commissioner Sid Miller said Wednesday, adding that “instead of using every available tool, USDA moved too slowly and relied solely on a partial solution that takes years to fully implement.”\n\nMiller has also called on President Donald Trump to take direct control of the government’s response and “throw every available federal resource at this threat before it becomes a full-blown agricultural disaster.”\n\nThe primary weapon against screwworm is a decades-old technique that has eliminated the parasite from the U.S. in the past — releasing sterilized male flies into affected areas. Since female flies generally mate only once, those that pair with sterile males are unable to produce offspring.\n\nIn a bid to contain the spread of the parasite, the U.S. Department of Agriculture said it has begun releasing sterile flies in the area and is investing heavily in new sterile flies production facilities in Texas.\n\nIt has also established a roughly 12-mile quarantine zone around the site and restricted the movement of warm-blooded animals, including livestock and pets, to further strengthen the response.\n\nState veterinarians are urging ranchers and pet owners inside the quarantine zone to follow movement restrict\n\n---\n\n[Lähde: The Fence Post]\nAll of the United States’ southern ports of entry remain closed to livestock imports due to the presence of the New World screwworm in Mexico. The U.S. Department of Agriculture closed livestock trade — affecting bison, cattle and horses — as of July 9, 2025. While most cases of NWS remain in the southern areas of Mexico, multiple infestations in cattle as well in other mammal species have been reported within 100 miles of the border in the past 10 day. USDA reported 156 active cases of NWS in Tamaulipas, 15 active cases of NWS in Coahuila and 48 active cases of NWS in Nuevo Leon on May 19, 2026. According to the American Veterinary Medical Association, a case of NWS in a 4-day-old calf was reported within 60 miles of the U.S./Mexico border in April.\n\nUSDA continues to state that “Isolated detections outside of the known affected areas in Mexico are not unexpected, and the fact that they have been identified and addressed quickly show that our collaborative efforts with Mexico to imple...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-05T01:14:17.203848+00:00",
+  "payload": {
+    "packet_id": "20260605T011137Z_a8a6d0495d",
+    "title": "Yhdysvallat torjuu lihansyöjäloisen uhkaa steriileillä kärpäsillä ja hajukoirilla",
+    "summary": "Yhdysvaltain viranomaiset ovat esitelleet toimia New World screwworm -loisen leviämisen estämiseksi sen jälkeen, kun loinen havaittiin Texasissa vasikassa lähellä Meksikon rajaa.",
+    "content": "Yhdysvaltain maatalous- ja terveysviranomaiset valmistelevat torjuntatoimia New World screwworm -loista vastaan sen jälkeen, kun lihansyöjäksi kuvattu loinen havaittiin Texasissa. Kyseessä on merkittävä huoli etenkin karjataloudelle, vaikka asiantuntijoiden mukaan riski ihmisille ja laajalle yleisölle on pieni.\n\n## Tapaus todettiin Texasissa\n\nNew World screwworm -loisen tapaus vahvistettiin kolmen viikon ikäisessä vasikassa La Pryorissa, lähellä Yhdysvaltain ja Meksikon rajaa. Yhdysvaltain maatalousministeri Brooke Rollins kertoi tapauksesta keskiviikkoiltana.\n\nLoisen toukat syövät lämminveristen eläinten elävää kudosta. Loinen voi tarttua myös ihmisiin ja lemmikkeihin, mutta asiantuntijoiden mukaan tällaiset tapaukset ovat harvinaisia eivätkä muodosta merkittävää riskiä väestölle laajemmin. Loinen ei myöskään ole elintarviketurvallisuusuhka.\n\nKarjankasvattajille tilanne on silti vakava. Laajempi leviäminen voisi aiheuttaa karjataloudelle miljardiluokan kustannuksia ja lisätä painetta naudanlihan hintoihin, jotka ovat lähteiden mukaan jo ennätyskorkealla.\n\n## Torjunta nojaa steriileihin kärpäsiin\n\nViranomaisten suunnitelman keskeinen osa on vapauttaa satoja miljoonia geneettisesti muokattuja steriilejä kärpäsiä. Menetelmä perustuu siihen, että naaraskärpänen parittelee elämänsä aikana vain kerran. Jos se parittelee steriilin koiraan kanssa, munat eivät hedelmöity eivätkä kuoriudu.\n\nAsiantuntijat kuitenkin varoittavat, että steriilien kärpästen määrä ei tällä hetkellä riitä pysäyttämään kasvavaa kantaa nopeasti. Siksi torjuntaan kuuluu myös muita toimia, kuten eristysvyöhykkeen perustaminen ensimmäisen havaitun tartuntapaikan ympärille eteläisellä rajaseudulla.\n\n## Leviämistä seurataan rajaseudulla\n\nLisäksi viranomaiset aikovat käyttää hajukoiria hyönteisten havaitsemiseen. Toukat kehittyvät kärpäsiksi, jotka voivat liikkua lyhyitä matkoja itse, mutta pitkien matkojen leviämisessä ihmisillä on ollut keskeinen rooli.\n\nYhdysvalloissa on ollut yksittäisiä tapauksia vuoden 1966 jälkeen, kun matkustajat ovat tuoneet loisen mukanaan, mutta suurempia epidemioita ei ole raportoitu. Yhdysvaltain ja Latinalaisen Amerikan viranomaiset ovat torjuneet screwworm-loisia jo vuosikymmeniä, mutta ongelman hallinta on ollut vaikeaa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Texas",
+      "karjatalous",
+      "loiset",
+      "elintarvikkeet"
+    ],
+    "summary_bullets": [
+      "New World screwworm -loinen havaittiin Texasissa vasikassa lähellä Meksikon rajaa.",
+      "Viranomaiset suunnittelevat torjuntaa steriileillä kärpäsillä, eristysvyöhykkeellä ja hajukoirilla.",
+      "Riski ihmisille on asiantuntijoiden mukaan pieni, mutta karjatalouden taloudelliset vaikutukset voivat olla suuret."
+    ],
+    "content_type": "news_article",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketin tietoihin Texasissa vahvistetusta tapauksesta, viranomaisten torjuntasuunnitelmasta ja asiantuntija-arvioista riskitasosta sekä karjatalouden mahdollisista vaikutuksista."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260605T011137Z_a8a6d0495d\",\n  \"title\": \"Yhdysvallat torjuu lihansyöjäloisen uhkaa steriileillä kärpäsillä ja hajukoirilla\",\n  \"summary\": \"Yhdysvaltain viranomaiset ovat esitelleet toimia New World screwworm -loisen leviämisen estämiseksi sen jälkeen, kun loinen havaittiin Texasissa vasikassa lähellä Meksikon rajaa.\",\n  \"content\": \"Yhdysvaltain maatalous- ja terveysviranomaiset valmistelevat torjuntatoimia New World screwworm -loista vastaan sen jälkeen, kun lihansyöjäksi kuvattu loinen havaittiin Texasissa. Kyseessä on merkittävä huoli etenkin karjataloudelle, vaikka asiantuntijoiden mukaan riski ihmisille ja laajalle yleisölle on pieni.\\n\\n## Tapaus todettiin Texasissa\\n\\nNew World screwworm -loisen tapaus vahvistettiin kolmen viikon ikäisessä vasikassa La Pryorissa, lähellä Yhdysvaltain ja Meksikon rajaa. Yhdysvaltain maatalousministeri Brooke Rollins kertoi tapauksesta keskiviikkoiltana.\\n\\nLoisen toukat syövät lämminveristen eläinten elävää kudosta. Loinen voi tarttua myös ihmisiin ja lemmikkeihin, mutta asiantuntijoiden mukaan tällaiset tapaukset ovat harvinaisia eivätkä muodosta merkittävää riskiä väestölle laajemmin. Loinen ei myöskään ole elintarviketurvallisuusuhka.\\n\\nKarjankasvattajille tilanne on silti vakava. Laajempi leviäminen voisi aiheuttaa karjataloudelle miljardiluokan kustannuksia ja lisätä painetta naudanlihan hintoihin, jotka ovat lähteiden mukaan jo ennätyskorkealla.\\n\\n## Torjunta nojaa steriileihin kärpäsiin\\n\\nViranomaisten suunnitelman keskeinen osa on vapauttaa satoja miljoonia geneettisesti muokattuja steriilejä kärpäsiä. Menetelmä perustuu siihen, että naaraskärpänen parittelee elämänsä aikana vain kerran. Jos se parittelee steriilin koiraan kanssa, munat eivät hedelmöity eivätkä kuoriudu.\\n\\nAsiantuntijat kuitenkin varoittavat, että steriilien kärpästen määrä ei tällä hetkellä riitä pysäyttämään kasvavaa kantaa nopeasti. Siksi torjuntaan kuuluu myös muita toimia, kuten eristysvyöhykkeen perustaminen ensimmäisen havaitun tartuntapaikan ympärille eteläisellä rajaseudulla.\\n\\n## Leviämistä seurataan rajaseudulla\\n\\nLisäksi viranomaiset aikovat käyttää hajukoiria hyönteisten havaitsemiseen. Toukat kehittyvät kärpäsiksi, jotka voivat liikkua lyhyitä matkoja itse, mutta pitkien matkojen leviämisessä ihmisillä on ollut keskeinen rooli.\\n\\nYhdysvalloissa on ollut yksittäisiä tapauksia vuoden 1966 jälkeen, kun matkustajat ovat tuoneet loisen mukanaan, mutta suurempia epidemioita ei ole raportoitu. Yhdysvaltain ja Latinalaisen Amerikan viranomaiset ovat torjuneet screwworm-loisia jo vuosikymmeniä, mutta ongelman hallinta on ollut vaikeaa.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Texas\",\n    \"karjatalous\",\n    \"loiset\",\n    \"elintarvikkeet\"\n  ],\n  \"summary_bullets\": [\n    \"New World screwworm -loinen havaittiin Texasissa vasikassa lähellä Meksikon rajaa.\",\n    \"Viranomaiset suunnittelevat torjuntaa steriileillä kärpäsillä, eristysvyöhykkeellä ja hajukoirilla.\",\n    \"Riski ihmisille on asiantuntijoiden mukaan pieni, mutta karjatalouden taloudelliset vaikutukset voivat olla suuret.\"\n  ],\n  \"content_type\": \"news_article\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketin tietoihin Texasissa vahvistetusta tapauksesta, viranomaisten torjuntasuunnitelmasta ja asiantuntija-arvioista riskitasosta sekä karjatalouden mahdollisista vaikutuksista.\"\n}",
+  "article": {
+    "title": "Yhdysvallat torjuu lihansyöjäloisen uhkaa steriileillä kärpäsillä ja hajukoirilla",
+    "description": "Yhdysvaltain viranomaiset ovat esitelleet toimia New World screwworm -loisen leviämisen estämiseksi sen jälkeen, kun loinen havaittiin Texasissa vasikassa lähellä Meksikon rajaa.",
+    "link": "https://www.bbc.com/news/articles/c7v9vz1gd76o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-05T00:56:42+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "bf4467ed2984128da0b7bafbf6c76dd2",
+    "_url_hash": "16e93b76efbd44c4a9a455ec9f416d7b2d7700176b758f40ca5d5806ab79866a",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS agriculture and health officials have outlined a plan to combat a flesh-eating parasite that has been detected in the US for the first time since 1966.\n\nThe plan to prevent a US outbreak of the New World Screwworm focuses on deploying hundreds of millions of genetically-altered sterile flies. Experts, though, say the supply of sterile flies is too low to immediately impact and halt the growing screwworm population.\n\nOther measures include establishing a containment zone around the site of the first US infection along the southern US border, and using sniffer dogs to detect the insects.\n\nThe threat to humans is low, but cattle ranchers fear an outbreak could have a large impact on beef markets.\n\nScrewworms are parasitic flies whose females lay eggs in open wounds and mucous membranes of living warm-blooded animals and people. When the eggs hatch, hundreds of larvae burrow through living flesh with sharp mouths, eventually killing their host if left untreated.\n\nOn Wednesday, US officials announced that the first case in 60 years was detected in a three-week-old calf, with the larvae found in its umbilical area. The discovery was made in the town of La Pryor, Texas, about 30 miles (48km) from the Mexico border.\n\nOfficials have set up a 20km-wide \"control zone\", and are \"implementing quarantines, movement controls, and surveillance in this area,\" according to the US Department of Agriculture (USDA).\n\nScrewworm larvae grow into flies which can travel short distances. The primary way that they have travelled long distances is by being brought by humans. There have been a handful of US cases since 1966, when travellers brought the pest back, but no larger outbreaks.\n\nOfficials in the US and in Latin America have been combating the problem of screwworms for much of the past six decades, with limited success.\n\nOne way to fight back is by releasing hundreds of millions of sterile screwworm flies, as the females only mate once in their lifetime, and any eggs they lay will be unfertilised and will not hatch.\n\nThis method, known as the Sterile Insect Technique, has been in use for many years to control a variety of insect populations, including fruit flies and mosquitos. It works by hatching flies in an enclosed space, and then exposing them to radiation to make them sterile before releasing them into the wild.\n\nHowever, officials say that they will need to breed up to 600 million sterile screwworms flies each week in order to fight back the outbreak.\n\nCurrently, fa\n\n---\n\n[Lähde: NBC News]\nA flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high.\n\nThe case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday.\n\nThe parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals.\n\nWhile the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts.\n\nThe parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.\n\nThe case is the first confirmed detection of New World screwworm in Texas since 1966 and is the only confirmed case identified in the country so far, Rollins said.\n\nIt follows months of warnings from U.S. and Texas agriculture officials and cattle industry leaders, as the pest steadily moved north through Mexico toward the American border.\n\n“For months, the screwworm has advanced rapidly through Mexico in spite of the USDA’s existing game plan,” Texas Agriculture Commissioner Sid Miller said Wednesday, adding that “instead of using every available tool, USDA moved too slowly and relied solely on a partial solution that takes years to fully implement.”\n\nMiller has also called on President Donald Trump to take direct control of the government’s response and “throw every available federal resource at this threat before it becomes a full-blown agricultural disaster.”\n\nThe primary weapon against screwworm is a decades-old technique that has eliminated the parasite from the U.S. in the past — releasing sterilized male flies into affected areas. Since female flies generally mate only once, those that pair with sterile males are unable to produce offspring.\n\nIn a bid to contain the spread of the parasite, the U.S. Department of Agriculture said it has begun releasing sterile flies in the area and is investing heavily in new sterile flies production facilities in Texas.\n\nIt has also established a roughly 12-mile quarantine zone around the site and restricted the movement of warm-blooded animals, including livestock and pets, to further strengthen the response.\n\nState veterinarians are urging ranchers and pet owners inside the quarantine zone to follow movement restrict\n\n---\n\n[Lähde: The Fence Post]\nAll of the United States’ southern ports of entry remain closed to livestock imports due to the presence of the New World screwworm in Mexico. The U.S. Department of Agriculture closed livestock trade — affecting bison, cattle and horses — as of July 9, 2025. While most cases of NWS remain in the southern areas of Mexico, multiple infestations in cattle as well in other mammal species have been reported within 100 miles of the border in the past 10 day. USDA reported 156 active cases of NWS in Tamaulipas, 15 active cases of NWS in Coahuila and 48 active cases of NWS in Nuevo Leon on May 19, 2026. According to the American Veterinary Medical Association, a case of NWS in a 4-day-old calf was reported within 60 miles of the U.S./Mexico border in April.\n\nUSDA continues to state that “Isolated detections outside of the known affected areas in Mexico are not unexpected, and the fact that they have been identified and addressed quickly show that our collaborative efforts with Mexico to imple...",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain viranomaiset ovat esitelleet toimia New World screwworm -loisen leviämisen estämiseksi sen jälkeen, kun loinen havaittiin Texasissa vasikassa lähellä Meksikon rajaa.",
+    "content": "Yhdysvaltain maatalous- ja terveysviranomaiset valmistelevat torjuntatoimia New World screwworm -loista vastaan sen jälkeen, kun lihansyöjäksi kuvattu loinen havaittiin Texasissa. Kyseessä on merkittävä huoli etenkin karjataloudelle, vaikka asiantuntijoiden mukaan riski ihmisille ja laajalle yleisölle on pieni.\n\n## Tapaus todettiin Texasissa\n\nNew World screwworm -loisen tapaus vahvistettiin kolmen viikon ikäisessä vasikassa La Pryorissa, lähellä Yhdysvaltain ja Meksikon rajaa. Yhdysvaltain maatalousministeri Brooke Rollins kertoi tapauksesta keskiviikkoiltana.\n\nLoisen toukat syövät lämminveristen eläinten elävää kudosta. Loinen voi tarttua myös ihmisiin ja lemmikkeihin, mutta asiantuntijoiden mukaan tällaiset tapaukset ovat harvinaisia eivätkä muodosta merkittävää riskiä väestölle laajemmin. Loinen ei myöskään ole elintarviketurvallisuusuhka.\n\nKarjankasvattajille tilanne on silti vakava. Laajempi leviäminen voisi aiheuttaa karjataloudelle miljardiluokan kustannuksia ja lisätä painetta naudanlihan hintoihin, jotka ovat lähteiden mukaan jo ennätyskorkealla.\n\n## Torjunta nojaa steriileihin kärpäsiin\n\nViranomaisten suunnitelman keskeinen osa on vapauttaa satoja miljoonia geneettisesti muokattuja steriilejä kärpäsiä. Menetelmä perustuu siihen, että naaraskärpänen parittelee elämänsä aikana vain kerran. Jos se parittelee steriilin koiraan kanssa, munat eivät hedelmöity eivätkä kuoriudu.\n\nAsiantuntijat kuitenkin varoittavat, että steriilien kärpästen määrä ei tällä hetkellä riitä pysäyttämään kasvavaa kantaa nopeasti. Siksi torjuntaan kuuluu myös muita toimia, kuten eristysvyöhykkeen perustaminen ensimmäisen havaitun tartuntapaikan ympärille eteläisellä rajaseudulla.\n\n## Leviämistä seurataan rajaseudulla\n\nLisäksi viranomaiset aikovat käyttää hajukoiria hyönteisten havaitsemiseen. Toukat kehittyvät kärpäsiksi, jotka voivat liikkua lyhyitä matkoja itse, mutta pitkien matkojen leviämisessä ihmisillä on ollut keskeinen rooli.\n\nYhdysvalloissa on ollut yksittäisiä tapauksia vuoden 1966 jälkeen, kun matkustajat ovat tuoneet loisen mukanaan, mutta suurempia epidemioita ei ole raportoitu. Yhdysvaltain ja Latinalaisen Amerikan viranomaiset ovat torjuneet screwworm-loisia jo vuosikymmeniä, mutta ongelman hallinta on ollut vaikeaa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "yhdysvallat",
+      "texas",
+      "karjatalous",
+      "loiset",
+      "elintarvikkeet"
+    ],
+    "summary_bullets": [
+      "New World screwworm -loinen havaittiin Texasissa vasikassa lähellä Meksikon rajaa.",
+      "Viranomaiset suunnittelevat torjuntaa steriileillä kärpäsillä, eristysvyöhykkeellä ja hajukoirilla.",
+      "Riski ihmisille on asiantuntijoiden mukaan pieni, mutta karjatalouden taloudelliset vaikutukset voivat olla suuret."
+    ],
+    "key_points": [
+      "New World screwworm -loinen havaittiin Texasissa vasikassa lähellä Meksikon rajaa.",
+      "Viranomaiset suunnittelevat torjuntaa steriileillä kärpäsillä, eristysvyöhykkeellä ja hajukoirilla.",
+      "Riski ihmisille on asiantuntijoiden mukaan pieni, mutta karjatalouden taloudelliset vaikutukset voivat olla suuret."
+    ],
+    "content_type": "news_article",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin tietoihin Texasissa vahvistetusta tapauksesta, viranomaisten torjuntasuunnitelmasta ja asiantuntija-arvioista riskitasosta sekä karjatalouden mahdollisista vaikutuksista.",
+    "source_text": "US agriculture and health officials have outlined a plan to combat a flesh-eating parasite that has been detected in the US for the first time since 1966. The plan to prevent a US outbreak of the New World Screwworm focuses on deploying hundreds of millions of genetically-altered sterile flies. Experts, though, say the supply of sterile flies is too low to immediately impact and halt the growing screwworm population. Other measures include establishing a containment zone around the site of the first US infection along the southern US border, and using sniffer dogs to detect the insects. The threat to humans is low, but cattle ranchers fear an outbreak could have a large impact on beef markets.\n\nThe insect, which has been found in America for the first time since 1966, is a growing concern in the southern US.\n\nA flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high. The case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday. The parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals. While the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts. The parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.\n\nScrewworm larvae grow into flies which can travel short distances. The primary way that they have travelled long distances is by being brought by humans. There have been a handful of US cases since 1966, when travellers brought the pest back, but no larger outbreaks. Officials in the US and in Latin America have been combating the problem of screwworms for much of the past six decades, with limited success. One way to fight back is by releasing hundreds of millions of sterile screwworm flies, as the females only mate once in their lifetime, and any eggs they lay will be unfertilised and will not hatch.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260605T011137Z_a8a6d0495d"
+  },
+  "duplicate_rejected_at": "2026-06-05T01:28:01.312646+00:00",
+  "duplicate_rejected": true
+}

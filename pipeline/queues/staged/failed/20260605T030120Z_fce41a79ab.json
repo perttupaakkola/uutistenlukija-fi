@@ -1,0 +1,141 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-05T03:01:20.096286+00:00",
+  "digest": "fce41a79ab",
+  "packet": {
+    "packet_id": "20260605T030120Z_fce41a79ab",
+    "created_at": "2026-06-05T03:01:20Z",
+    "headline_seed": "Vladimir Putin puhuu tänään Pietarin talousfoorumissa",
+    "description_seed": "Putin yrittää houkutella maahan ulkomaisia investointeja.",
+    "link": "https://yle.fi/a/74-20229852?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset",
+      "Yle Uutiset"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20229852?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.81,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vladimir Putin puhuu tänään Pietarin talousfoorumissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Venäjän presidentti Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa. Järjestäjien mukaan edustajia on yli 140 maasta. Moni lienee kuitenkin perunut tulonsa viime hetkillä Ukrainan keskiviikkona tekemien droonihyökkäysten takia, arvioi Ylen Venäjän-kirjeenvaihtaja Mika Hentunen. Putin yrittänee uskotella osallistujille ja medialle, että Venäjän talous kestää sodasta huolimatta. Hän halua houkutella ulkomaisia investointeja Venäjän energiahankkeisiin ja Jäämeren kuljetusreiteille. Venäjän talous on kuitenkin taantumassa, ja monet yrittäjät ovat vaikeuksissa. Lisäksi Venäjä on alkanut takavarikoida huippurikkaiden liikemiesten yrityksiä. Tämä voi aiheuttaa epäluottamusta yrittäjien keskuudessa ja haitata Venäjän talouskehitystä. Ruotsin sotilastiedustelu- ja turvallisuuspalvelun mukaan Venäjä on manipuloinut taloustietojaan näyttämään todellista paremmalta. Inflaatio ja budjettialijäämä ovat todennäköisesti korkeampia kuin Venäjä on antanut ymmärtää. Pakotteet ovat heikentäneet maan taloutta, mutta se on saanut lisätuloja öljyn hinnan noususta Iranin sodan seurauksena. Öljytuloilla on kuitenkin kääntöpuolensa. Hinnat ovat Venäjällä nousseet, ja inflaatio on kiihtynyt.",
+        "word_count": 134,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_type": "research",
+        "text": "Ukrainaan hyökkäämisen jälkeen Venäjän sotateollisuuden vetämä kasvu on perustunut valtion järeään talouselvytykseen. Siihen on käytetty kansallista hyvinvointirahastoa, joka alkaa nyt olla loppu.",
+        "word_count": 22,
+        "keyword_overlap": 0,
+        "strong_overlap": 0
+      }
+    ],
+    "source_text": "Venäjän presidentti Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa. Järjestäjien mukaan edustajia on yli 140 maasta. Moni lienee kuitenkin perunut tulonsa viime hetkillä Ukrainan keskiviikkona tekemien droonihyökkäysten takia, arvioi Ylen Venäjän-kirjeenvaihtaja Mika Hentunen. Putin yrittänee uskotella osallistujille ja medialle, että Venäjän talous kestää sodasta huolimatta. Hän halua houkutella ulkomaisia investointeja Venäjän energiahankkeisiin ja Jäämeren kuljetusreiteille. Venäjän talous on kuitenkin taantumassa, ja monet yrittäjät ovat vaikeuksissa. Lisäksi Venäjä on alkanut takavarikoida huippurikkaiden liikemiesten yrityksiä. Tämä voi aiheuttaa epäluottamusta yrittäjien keskuudessa ja haitata Venäjän talouskehitystä. Ruotsin sotilastiedustelu- ja turvallisuuspalvelun mukaan Venäjä on manipuloinut taloustietojaan näyttämään todellista paremmalta. Inflaatio ja budjettialijäämä ovat todennäköisesti korkeampia kuin Venäjä on antanut ymmärtää. Pakotteet ovat heikentäneet maan taloutta, mutta se on saanut lisätuloja öljyn hinnan noususta Iranin sodan seurauksena. Öljytuloilla on kuitenkin kääntöpuolensa. Hinnat ovat Venäjällä nousseet, ja inflaatio on kiihtynyt.\n\nUkrainaan hyökkäämisen jälkeen Venäjän sotateollisuuden vetämä kasvu on perustunut valtion järeään talouselvytykseen. Siihen on käytetty kansallista hyvinvointirahastoa, joka alkaa nyt olla loppu.",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 162,
+      "selected_blocks": 2,
+      "selected_source_words": 156,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ],
+      "selected_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vladimir Putin puhuu tänään Pietarin talousfoorumissa",
+      "description": "Putin yrittää houkutella maahan ulkomaisia investointeja.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Vladimir Putin puhuu tänään Pietarin talousfoorumissa",
+    "description": "Putin yrittää houkutella maahan ulkomaisia investointeja.",
+    "link": "https://yle.fi/a/74-20229852?origin=rss",
+    "published": "2026-06-05T05:45:35+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "64527d128f1e085b47e1c3fe77d85660",
+    "_url_hash": "980065a325baa761ca3cda7ff8286b8d84f7a40625b0a70a1c30accbf484485d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Yle Uutiset]\nVenäjän presidentti Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa.\n\nJärjestäjien mukaan edustajia on yli 140 maasta.\n\nMoni lienee kuitenkin perunut tulonsa viime hetkillä Ukrainan keskiviikkona tekemien droonihyökkäysten takia, arvioi Ylen Venäjän-kirjeenvaihtaja Mika Hentunen.\n\nPutin yrittänee uskotella osallistujille ja medialle, että Venäjän talous kestää sodasta huolimatta. Hän halua houkutella ulkomaisia investointeja Venäjän energiahankkeisiin ja Jäämeren kuljetusreiteille.\n\nVenäjän talous on kuitenkin taantumassa, ja monet yrittäjät ovat vaikeuksissa.\n\nLisäksi Venäjä on alkanut takavarikoida huippurikkaiden liikemiesten yrityksiä. Tämä voi aiheuttaa epäluottamusta yrittäjien keskuudessa ja haitata Venäjän talouskehitystä.\n\nRuotsin sotilastiedustelu- ja turvallisuuspalvelun mukaan Venäjä on manipuloinut taloustietojaan näyttämään todellista paremmalta. Inflaatio ja budjettialijäämä ovat todennäköisesti korkeampia kuin Venäjä on antanut ymmärtää.\n\nPakotteet ovat heikentäneet maan taloutta, mutta se on saanut lisätuloja öljyn hinnan noususta Iranin sodan seurauksena. Öljytuloilla on kuitenkin kääntöpuolensa. Hinnat ovat Venäjällä nousseet, ja inflaatio on kiihtynyt.\n\nUkrainaan hyökkäämisen jälkeen Venäjän sotateollisuuden vetämä kasvu on perustunut valtion järeään talouselvytykseen. Siihen on käytetty kansallista hyvinvointirahastoa, joka alkaa nyt olla loppu.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-05T03:04:22.130638+00:00",
+  "failure": "content too short: 227 words; lead paragraph too short: 27 words",
+  "payload": {
+    "packet_id": "20260605T030120Z_fce41a79ab",
+    "title": "Putin puhuu Pietarin talousfoorumissa Venäjän talouspaineiden keskellä",
+    "summary": "Venäjän presidentti Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa ja pyrkii vakuuttamaan yleisöä Venäjän talouden kestävyydestä sodan, pakotteiden ja kasvavien talousongelmien keskellä.",
+    "content": "Venäjän presidentti Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa tilanteessa, jossa Venäjä pyrkii houkuttelemaan ulkomaisia investointeja mutta samalla kamppailee talouden hidastumisen, pakotteiden ja sodan aiheuttamien paineiden kanssa.\n\n## Investointeja haetaan energialle ja kuljetusreiteille\n\nPietarin kansainvälinen talousfoorumi on Venäjälle tärkeä näyttämö, jolla maa pyrkii esittelemään talouttaan ulkomaisille vieraille ja medialle. Tapahtuman järjestäjien mukaan paikalle on odotettu edustajia yli 140 maasta.\n\nOsallistujamäärään liittyy kuitenkin epävarmuutta. Ylen Venäjän-kirjeenvaihtaja Mika Hentunen arvioi, että moni on voinut perua tulonsa viime hetkellä Ukrainan keskiviikkona tekemien droonihyökkäysten vuoksi.\n\nPutinin odotetaan korostavan puheessaan, että Venäjän talous kestää Ukrainan sodasta ja länsimaiden pakotteista huolimatta. Samalla Venäjä yrittää houkutella ulkomaisia investointeja erityisesti energiahankkeisiin ja Jäämeren kuljetusreiteille.\n\n## Talouskuvaan liittyy kasvavia epäilyjä\n\nVenäjän taloustilanne on kuitenkin heikentynyt. Maan talouden kerrotaan olevan taantumassa, ja monet yrittäjät ovat vaikeuksissa. Luottamusta yritysmaailmassa voi horjuttaa myös se, että Venäjä on alkanut takavarikoida huippurikkaiden liikemiesten yrityksiä.\n\nRuotsin sotilastiedustelu- ja turvallisuuspalvelun mukaan Venäjä on manipuloinut taloustietojaan siten, että ne näyttävät todellisuutta paremmilta. Sen arvion mukaan inflaatio ja budjettialijäämä ovat todennäköisesti korkeampia kuin Venäjä on virallisesti antanut ymmärtää.\n\nPakotteet ovat heikentäneet Venäjän taloutta, vaikka maa on saanut lisätuloja öljyn hinnan noususta Iranin sodan seurauksena. Öljytulojen vaikutus ei kuitenkaan poista maan sisäisiä paineita: hinnat ovat Venäjällä nousseet ja inflaatio on kiihtynyt.\n\nUkrainaan hyökkäämisen jälkeen Venäjän kasvua on vetänyt sotateollisuus, jota valtio on tukenut voimakkaalla talouselvytyksellä. Elvytykseen on käytetty kansallista hyvinvointirahastoa, jonka kerrotaan olevan jo lähellä loppuaan.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Venäjä",
+      "Vladimir Putin",
+      "Pietarin talousfoorumi",
+      "Venäjän talous",
+      "Ukrainan sota"
+    ],
+    "summary_bullets": [
+      "Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa.",
+      "Venäjä pyrkii houkuttelemaan ulkomaisia investointeja energiahankkeisiin ja Jäämeren kuljetusreiteille.",
+      "Venäjän taloutta painavat pakotteet, inflaatio, budjettialijäämä ja sotatalouden riippuvuus valtion tuesta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.81,
+    "journalist_note": "Artikkeli perustuu annettuun lähdeaineistoon. Epävarmat arviot osallistujien perumisista ja taloustietojen manipuloinnista on muotoiltu lähteen esittäminä arvioina, eikä uusia yksityiskohtia ole lisätty."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260605T030120Z_fce41a79ab\",\n  \"title\": \"Putin puhuu Pietarin talousfoorumissa Venäjän talouspaineiden keskellä\",\n  \"summary\": \"Venäjän presidentti Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa ja pyrkii vakuuttamaan yleisöä Venäjän talouden kestävyydestä sodan, pakotteiden ja kasvavien talousongelmien keskellä.\",\n  \"content\": \"Venäjän presidentti Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa tilanteessa, jossa Venäjä pyrkii houkuttelemaan ulkomaisia investointeja mutta samalla kamppailee talouden hidastumisen, pakotteiden ja sodan aiheuttamien paineiden kanssa.\\n\\n## Investointeja haetaan energialle ja kuljetusreiteille\\n\\nPietarin kansainvälinen talousfoorumi on Venäjälle tärkeä näyttämö, jolla maa pyrkii esittelemään talouttaan ulkomaisille vieraille ja medialle. Tapahtuman järjestäjien mukaan paikalle on odotettu edustajia yli 140 maasta.\\n\\nOsallistujamäärään liittyy kuitenkin epävarmuutta. Ylen Venäjän-kirjeenvaihtaja Mika Hentunen arvioi, että moni on voinut perua tulonsa viime hetkellä Ukrainan keskiviikkona tekemien droonihyökkäysten vuoksi.\\n\\nPutinin odotetaan korostavan puheessaan, että Venäjän talous kestää Ukrainan sodasta ja länsimaiden pakotteista huolimatta. Samalla Venäjä yrittää houkutella ulkomaisia investointeja erityisesti energiahankkeisiin ja Jäämeren kuljetusreiteille.\\n\\n## Talouskuvaan liittyy kasvavia epäilyjä\\n\\nVenäjän taloustilanne on kuitenkin heikentynyt. Maan talouden kerrotaan olevan taantumassa, ja monet yrittäjät ovat vaikeuksissa. Luottamusta yritysmaailmassa voi horjuttaa myös se, että Venäjä on alkanut takavarikoida huippurikkaiden liikemiesten yrityksiä.\\n\\nRuotsin sotilastiedustelu- ja turvallisuuspalvelun mukaan Venäjä on manipuloinut taloustietojaan siten, että ne näyttävät todellisuutta paremmilta. Sen arvion mukaan inflaatio ja budjettialijäämä ovat todennäköisesti korkeampia kuin Venäjä on virallisesti antanut ymmärtää.\\n\\nPakotteet ovat heikentäneet Venäjän taloutta, vaikka maa on saanut lisätuloja öljyn hinnan noususta Iranin sodan seurauksena. Öljytulojen vaikutus ei kuitenkaan poista maan sisäisiä paineita: hinnat ovat Venäjällä nousseet ja inflaatio on kiihtynyt.\\n\\nUkrainaan hyökkäämisen jälkeen Venäjän kasvua on vetänyt sotateollisuus, jota valtio on tukenut voimakkaalla talouselvytyksellä. Elvytykseen on käytetty kansallista hyvinvointirahastoa, jonka kerrotaan olevan jo lähellä loppuaan.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Venäjä\",\n    \"Vladimir Putin\",\n    \"Pietarin talousfoorumi\",\n    \"Venäjän talous\",\n    \"Ukrainan sota\"\n  ],\n  \"summary_bullets\": [\n    \"Vladimir Putin puhuu tänään Pietarin kansainvälisessä talousfoorumissa.\",\n    \"Venäjä pyrkii houkuttelemaan ulkomaisia investointeja energiahankkeisiin ja Jäämeren kuljetusreiteille.\",\n    \"Venäjän taloutta painavat pakotteet, inflaatio, budjettialijäämä ja sotatalouden riippuvuus valtion tuesta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.81,\n  \"journalist_note\": \"Artikkeli perustuu annettuun lähdeaineistoon. Epävarmat arviot osallistujien perumisista ja taloustietojen manipuloinnista on muotoiltu lähteen esittäminä arvioina, eikä uusia yksityiskohtia ole lisätty.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260605T030120Z_fce41a79ab",
+    "category": "Ulkomaat",
+    "selected_source_words": 156,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.81,
+    "final_word_count": 227,
+    "issues": [
+      "content too short: 227 words",
+      "lead paragraph too short: 27 words"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Putin puhuu Pietarin talousfoorumissa Venäjän talouspaineiden keskellä"
+  }
+}

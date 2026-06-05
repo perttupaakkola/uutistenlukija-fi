@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/vain-yhta-merkkia-myyvan-pienen-valokuvaamon-kameravalikoima-houkuttelee-harrastajia-ympari-suomea-siina-on-jo-kaveruuttakin-mukana/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

@@ -1,0 +1,199 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-04T23:21:23.750567+00:00",
+  "digest": "32d0b94b32",
+  "packet": {
+    "packet_id": "20260604T232123Z_32d0b94b32",
+    "created_at": "2026-06-04T23:21:23Z",
+    "headline_seed": "Mangrove forests are healing after decades of human destruction",
+    "description_seed": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.",
+    "link": "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "Earth.com"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mangrove forests are healing after decades of human destruction"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.",
+        "word_count": 19,
+        "keyword_overlap": 12,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The world's coastal mangrove forests, which protect millions of people from storms - and soak up vast amounts of planet-warming gases - are staging an unexpected comeback, scientists find. For decades these swampy trees had been declining rapidly as they were cleared for fish farms and housing. But a new study shows that since 2010 the world has been gaining more mangroves than it has been losing - driven by stronger legal protections and increased public awareness of their importance, sparked by disasters such as the 2004 Indian Ocean tsunami. The researchers say the key factor though is the remarkable capacity of these forests to regenerate naturally once humans stop chopping them down. Mangroves are one of the world's unsung environmental heroes.",
+        "word_count": 122,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Not only do they store up to five times more carbon dioxide than land-based forests, but their tangled roots can also slow down waves and protect coastal communities from storm surges and tsunamis. These same roots provide a perfect nursery for many species of fish and other marine life - protecting them from predators and providing ample food. These benefits, though, have come under serious threat over the past century as the rise of fish farming, agriculture and the expansion of coastal cities and towns have seen mangroves chopped down and rapidly removed. From the 1980s to 2010, over 12,000 sq km (4,600 sq miles) of mangroves were cleared or destroyed across Asia, Africa and the Americas - an area the size of Jamaica.",
+        "word_count": 124,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Earth.com",
+        "source_type": "research",
+        "text": "The U.S. has restricted coastal wetland destruction for 40 years. Filling and draining marshes was effectively prohibited from the mid-1980s onward, and by most accounts it worked. Direct human damage now makes up barely a fraction of total wetland loss. What those regulations could not anticipate is now visible in satellite data. A new study found that wetland loss is not just continuing – it is speeding up, driven by a force those rules were never designed for. Xiucheng Yang, a former postdoctoral researcher at the University of Connecticut (UConn), led the team. He is now a senior research fellow at the University of Victoria. Yang and his colleagues assembled more than 176,000 satellite images of US shorelines from 1985 through 2023.",
+        "word_count": 122,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.\n\nThe world's coastal mangrove forests, which protect millions of people from storms - and soak up vast amounts of planet-warming gases - are staging an unexpected comeback, scientists find. For decades these swampy trees had been declining rapidly as they were cleared for fish farms and housing. But a new study shows that since 2010 the world has been gaining more mangroves than it has been losing - driven by stronger legal protections and increased public awareness of their importance, sparked by disasters such as the 2004 Indian Ocean tsunami. The researchers say the key factor though is the remarkable capacity of these forests to regenerate naturally once humans stop chopping them down. Mangroves are one of the world's unsung environmental heroes.\n\nNot only do they store up to five times more carbon dioxide than land-based forests, but their tangled roots can also slow down waves and protect coastal communities from storm surges and tsunamis. These same roots provide a perfect nursery for many species of fish and other marine life - protecting them from predators and providing ample food. These benefits, though, have come under serious threat over the past century as the rise of fish farming, agriculture and the expansion of coastal cities and towns have seen mangroves chopped down and rapidly removed. From the 1980s to 2010, over 12,000 sq km (4,600 sq miles) of mangroves were cleared or destroyed across Asia, Africa and the Americas - an area the size of Jamaica.\n\nThe U.S. has restricted coastal wetland destruction for 40 years. Filling and draining marshes was effectively prohibited from the mid-1980s onward, and by most accounts it worked. Direct human damage now makes up barely a fraction of total wetland loss. What those regulations could not anticipate is now visible in satellite data. A new study found that wetland loss is not just continuing – it is speeding up, driven by a force those rules were never designed for. Xiucheng Yang, a former postdoctoral researcher at the University of Connecticut (UConn), led the team. He is now a senior research fellow at the University of Victoria. Yang and his colleagues assembled more than 176,000 satellite images of US shorelines from 1985 through 2023.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 982,
+      "selected_blocks": 4,
+      "selected_source_words": 387,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Earth.com",
+        "Earth.com",
+        "Earth.com",
+        "Earth.com",
+        "NPR",
+        "NPR",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Earth.com"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mangrove forests are healing after decades of human destruction",
+      "description": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mangrove forests are healing after decades of human destruction",
+    "description": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.",
+    "link": "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-04T23:11:15+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "447921bf533fac8b70377d9cdd1baa16",
+    "_url_hash": "06e03cdb72c8b2209e80534b151673abe1e61ba1f0b0895a5ae06a26b3ca2ae1",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe world's coastal mangrove forests, which protect millions of people from storms - and soak up vast amounts of planet-warming gases - are staging an unexpected comeback, scientists find.\n\nFor decades these swampy trees had been declining rapidly as they were cleared for fish farms and housing.\n\nBut a new study shows that since 2010 the world has been gaining more mangroves than it has been losing - driven by stronger legal protections and increased public awareness of their importance, sparked by disasters such as the 2004 Indian Ocean tsunami.\n\nThe researchers say the key factor though is the remarkable capacity of these forests to regenerate naturally once humans stop chopping them down.\n\nMangroves are one of the world's unsung environmental heroes.\n\nNot only do they store up to five times more carbon dioxide than land-based forests, but their tangled roots can also slow down waves and protect coastal communities from storm surges and tsunamis.\n\nThese same roots provide a perfect nursery for many species of fish and other marine life - protecting them from predators and providing ample food.\n\nThese benefits, though, have come under serious threat over the past century as the rise of fish farming, agriculture and the expansion of coastal cities and towns have seen mangroves chopped down and rapidly removed.\n\nFrom the 1980s to 2010, over 12,000 sq km (4,600 sq miles) of mangroves were cleared or destroyed across Asia, Africa and the Americas - an area the size of Jamaica.\n\nHowever, the new study shows a real reversal of that trend, particularly over the last decade. The total net losses - the forest lost and not replaced - since the 1980s have now been reduced to around 849 sq km (328 sq miles).\n\nRestoration efforts over decades have helped degraded forests to recover, but the big change has come from the natural expansion of mangroves in many parts of the world following drops in deforestation.\n\nThis has enabled forest levels to stabilise in Indonesia and grow in Myanmar (formerly known as Burma) - two of the most mangrove-dense countries.\n\nIn Indonesia, the aftermath of the Indian Ocean tsunami in 2004 seems to have played a role in changing people's minds about the importance of mangroves, and the removal of trees for fish farming has slowed.\n\n\"Some islands were covered by mangroves and after the tsunami those islands were [still] protected very well, so that increased public awareness about the importance of protecting mangroves,\" said lead author Dr\n\n---\n\n[Lähde: Earth.com]\nThe U.S. has restricted coastal wetland destruction for 40 years. Filling and draining marshes was effectively prohibited from the mid-1980s onward, and by most accounts it worked.\n\nDirect human damage now makes up barely a fraction of total wetland loss.\n\nWhat those regulations could not anticipate is now visible in satellite data.\n\nA new study found that wetland loss is not just continuing – it is speeding up, driven by a force those rules were never designed for.\n\nXiucheng Yang, a former postdoctoral researcher at the University of Connecticut (UConn), led the team. He is now a senior research fellow at the University of Victoria.\n\nYang and his colleagues assembled more than 176,000 satellite images of US shorelines from 1985 through 2023.\n\nThe team built an annual record of how the country’s tidal wetlands – salt marshes, mangroves, and tidal flats – have changed.\n\nEarlier surveys compared snapshots every few years. Wetlands look different at high and low tide, making those comparisons unreliable over long periods.\n\nYang’s team built a tool that adjusts for tidal variation at each point in the image. That continuous view makes the difference.\n\n“What we provide here is that we are continuously and consistently monitoring tidal wetland change,” Yang said. “This way we can link the change to specific events like hurricanes or storms.”\n\nAbout 60% of loss since 1985 traces to slow pressures, mainly rising seas. That aligned with what coastal scientists had long suspected.\n\nThe next finding changes the picture. When the team separated slow, grinding losses from sudden ones, extreme weather events came out ahead in driving the acceleration.\n\nHurricanes, droughts, and hard freezes drove the acceleration at roughly 40% more than slow-creep stressors.\n\nEarlier research had documented broad global declines but never connected specific storms to the wetlands they erased.\n\nSince 1985, the U.S. has lost roughly 633 square miles of tidal wetlands – more than 7.5% of what existed at the start of the record.\n\nAbout 16 square miles disappear each year on net, and the pace of loss is accelerating.\n\nHurricanes Katrina, Rita, and Gustav hit Louisiana between 2005 and 2008, stripping about 150 square miles of tidal marsh before any recovery could begin.\n\nEach storm arrived before the last one’s damage could be repaired, leaving the system less to work with.\n\nIrma’s 2017 hit caused widespread canopy loss across roughly 81 square miles of Florida mangroves.\n\nBy 2021, more tha\n\n---\n\n[Lähde: NPR]\nLocal fisheries on the coast of Cambodia struggled with decimated fish populations for years. Today, they are teeming with seafood, thanks to local ecological restoration efforts. Here (at right), Koh Kresna village chief Khiev Sat talks with a fisherman about the day's catch.\n                \n                    \n                    Ryan Kellman/NPR\n                    \n                \n                hide caption\n\nThe Gulf of Thailand is teeming with seafood: mackerel, sardines, bream and squid. Snails and anchovies. Shiny green crabs and tiny pink shrimp.\n\n\"Every day, we are out catching fish and selling them,\" says Khiev Sat, the longtime leader of the coastal Cambodian village of Koh Kresna and the patriarch of a large family of people who have fished for generations. As he speaks, his sister arrives on a bicycle loaded with the morning's catch. \"Our community fishery is strong,\" Khiev says, smiling.\n\nBut it hasn't always been this way. When Khiev was a young man, the waters near...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-04T23:23:42.682565+00:00",
+  "payload": {
+    "packet_id": "20260604T232123Z_32d0b94b32",
+    "title": "Mangrovemetsät elpyvät vuosikymmenten hävityksen jälkeen",
+    "summary": "Uuden tutkimuksen mukaan maailman rannikoiden mangrovemetsät ovat alkaneet elpyä, vaikka niitä hävitettiin pitkään kalanviljelyn, rakentamisen ja kaupunkien laajenemisen tieltä.",
+    "content": "Maailman rannikoiden mangrovemetsät ovat tutkijoiden mukaan yllättävässä elpymisvaiheessa vuosikymmeniä jatkuneen hävityksen jälkeen. Vuodesta 2010 lähtien mangrovea on kertynyt maailmassa enemmän kuin sitä on menetetty, mikä on merkittävä käänne sekä rannikkoyhteisöjen suojelun että ilmaston kannalta.\n\n## Käänne pitkän alamäen jälkeen\n\nMangrovemetsät kasvaa rannikoiden kosteilla ja suolaisilla alueilla, ja niitä on aiemmin raivattu laajasti kalanviljelyn, maatalouden, asumisen ja rannikkokaupunkien laajenemisen tieltä. 1980-luvulta vuoteen 2010 Aasiassa, Afrikassa ja Amerikoissa hävitettiin tai tuhottiin yli 12 000 neliökilometriä mangrovemetsiä. Pinta-ala vastaa suunnilleen Jamaikan kokoa.\n\nUuden tutkimuksen mukaan kehitys on kuitenkin muuttunut. Mangrovemetsien nettomäärä on kasvanut vuodesta 2010 alkaen, mikä on tutkijoiden mukaan seurausta vahvemmasta lainsäädännöllisestä suojelusta, yleisön lisääntyneestä tietoisuudesta sekä metsien kyvystä uudistua luonnollisesti, kun hakkuut ja raivaus loppuvat.\n\nTietoisuuden kasvuun ovat vaikuttaneet myös suuret luonnonkatastrofit, kuten vuoden 2004 Intian valtameren tsunami. Sen jälkeen mangrovemetsien merkitys rannikoiden suojana on saanut aiempaa enemmän huomiota.\n\n## Suojaa rannikolle ja sitoo hiiltä\n\nMangrovemetsien merkitys on suuri, koska ne toimivat yhtä aikaa ilmastoa, ihmisiä ja meriluontoa suojaavana ekosysteeminä. Ne voivat varastoida jopa viisi kertaa enemmän hiilidioksidia kuin maalla kasvavat metsät. Niiden tiheät juuristot voivat myös hidastaa aaltoja ja vaimentaa myrskyvuoksia sekä tsunameja.\n\nSamat juuristot tarjoavat suojaisia kasvupaikkoja monille kaloille ja muulle merielämälle. Ne suojaavat poikasia pedoilta ja tarjoavat ravintoa, mikä tekee mangroveista tärkeitä myös rannikkoseutujen kalakannoille.\n\nTutkimus korostaa, että elpyminen ei tarkoita uhan väistymistä kaikkialla. Yhdysvaltoja koskevassa tuoreessa tutkimuksessa kosteikkojen menetys jatkuu ja on jopa kiihtynyt, vaikka suorat ihmisen aiheuttamat vauriot ovat vähentyneet pitkään jatkuneen sääntelyn ansiosta. Satelliittiaineisto vuosilta 1985–2023 osoittaa, että osa nykyisistä menetyksistä johtuu voimista, joihin vanhat suojelusäännöt eivät ole varautuneet.",
+    "category": "Kotimaa",
+    "tags": [
+      "mangrovemetsät",
+      "ilmasto",
+      "rannikkoyhteisöt",
+      "luonnonsuojelu",
+      "kosteikot"
+    ],
+    "summary_bullets": [
+      "Tutkijoiden mukaan maailman mangrovemetsät ovat vuodesta 2010 lähtien kasvaneet enemmän kuin niitä on menetetty.",
+      "Mangrovemetsät suojaavat rannikoita myrskyiltä ja tsunameilta sekä sitovat suuria määriä hiilidioksidia.",
+      "Elpyminen liittyy vahvempaan suojeluun, tietoisuuden kasvuun ja metsien kykyyn uudistua, kun raivaus loppuu."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Artikkeli perustuu packetin tutkimuskoosteeseen. Earth.comin Yhdysvaltojen kosteikkotutkimus käsiteltiin erillisenä varauksena, ei suorana mangrovemetsien globaalia elpymistä kumoavana tietona."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260604T232123Z_32d0b94b32\",\"title\":\"Mangrovemetsät elpyvät vuosikymmenten hävityksen jälkeen\",\"summary\":\"Uuden tutkimuksen mukaan maailman rannikoiden mangrovemetsät ovat alkaneet elpyä, vaikka niitä hävitettiin pitkään kalanviljelyn, rakentamisen ja kaupunkien laajenemisen tieltä.\",\"content\":\"Maailman rannikoiden mangrovemetsät ovat tutkijoiden mukaan yllättävässä elpymisvaiheessa vuosikymmeniä jatkuneen hävityksen jälkeen. Vuodesta 2010 lähtien mangrovea on kertynyt maailmassa enemmän kuin sitä on menetetty, mikä on merkittävä käänne sekä rannikkoyhteisöjen suojelun että ilmaston kannalta.\\n\\n## Käänne pitkän alamäen jälkeen\\n\\nMangrovemetsät kasvaa rannikoiden kosteilla ja suolaisilla alueilla, ja niitä on aiemmin raivattu laajasti kalanviljelyn, maatalouden, asumisen ja rannikkokaupunkien laajenemisen tieltä. 1980-luvulta vuoteen 2010 Aasiassa, Afrikassa ja Amerikoissa hävitettiin tai tuhottiin yli 12 000 neliökilometriä mangrovemetsiä. Pinta-ala vastaa suunnilleen Jamaikan kokoa.\\n\\nUuden tutkimuksen mukaan kehitys on kuitenkin muuttunut. Mangrovemetsien nettomäärä on kasvanut vuodesta 2010 alkaen, mikä on tutkijoiden mukaan seurausta vahvemmasta lainsäädännöllisestä suojelusta, yleisön lisääntyneestä tietoisuudesta sekä metsien kyvystä uudistua luonnollisesti, kun hakkuut ja raivaus loppuvat.\\n\\nTietoisuuden kasvuun ovat vaikuttaneet myös suuret luonnonkatastrofit, kuten vuoden 2004 Intian valtameren tsunami. Sen jälkeen mangrovemetsien merkitys rannikoiden suojana on saanut aiempaa enemmän huomiota.\\n\\n## Suojaa rannikolle ja sitoo hiiltä\\n\\nMangrovemetsien merkitys on suuri, koska ne toimivat yhtä aikaa ilmastoa, ihmisiä ja meriluontoa suojaavana ekosysteeminä. Ne voivat varastoida jopa viisi kertaa enemmän hiilidioksidia kuin maalla kasvavat metsät. Niiden tiheät juuristot voivat myös hidastaa aaltoja ja vaimentaa myrskyvuoksia sekä tsunameja.\\n\\nSamat juuristot tarjoavat suojaisia kasvupaikkoja monille kaloille ja muulle merielämälle. Ne suojaavat poikasia pedoilta ja tarjoavat ravintoa, mikä tekee mangroveista tärkeitä myös rannikkoseutujen kalakannoille.\\n\\nTutkimus korostaa, että elpyminen ei tarkoita uhan väistymistä kaikkialla. Yhdysvaltoja koskevassa tuoreessa tutkimuksessa kosteikkojen menetys jatkuu ja on jopa kiihtynyt, vaikka suorat ihmisen aiheuttamat vauriot ovat vähentyneet pitkään jatkuneen sääntelyn ansiosta. Satelliittiaineisto vuosilta 1985–2023 osoittaa, että osa nykyisistä menetyksistä johtuu voimista, joihin vanhat suojelusäännöt eivät ole varautuneet.\",\"category\":\"Kotimaa\",\"tags\":[\"mangrovemetsät\",\"ilmasto\",\"rannikkoyhteisöt\",\"luonnonsuojelu\",\"kosteikot\"],\"summary_bullets\":[\"Tutkijoiden mukaan maailman mangrovemetsät ovat vuodesta 2010 lähtien kasvaneet enemmän kuin niitä on menetetty.\",\"Mangrovemetsät suojaavat rannikoita myrskyiltä ja tsunameilta sekä sitovat suuria määriä hiilidioksidia.\",\"Elpyminen liittyy vahvempaan suojeluun, tietoisuuden kasvuun ja metsien kykyyn uudistua, kun raivaus loppuu.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.88,\"journalist_note\":\"Artikkeli perustuu packetin tutkimuskoosteeseen. Earth.comin Yhdysvaltojen kosteikkotutkimus käsiteltiin erillisenä varauksena, ei suorana mangrovemetsien globaalia elpymistä kumoavana tietona.\"}",
+  "article": {
+    "title": "Mangrovemetsät elpyvät vuosikymmenten hävityksen jälkeen",
+    "description": "Uuden tutkimuksen mukaan maailman rannikoiden mangrovemetsät ovat alkaneet elpyä, vaikka niitä hävitettiin pitkään kalanviljelyn, rakentamisen ja kaupunkien laajenemisen tieltä.",
+    "link": "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-04T23:11:15+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "447921bf533fac8b70377d9cdd1baa16",
+    "_url_hash": "06e03cdb72c8b2209e80534b151673abe1e61ba1f0b0895a5ae06a26b3ca2ae1",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe world's coastal mangrove forests, which protect millions of people from storms - and soak up vast amounts of planet-warming gases - are staging an unexpected comeback, scientists find.\n\nFor decades these swampy trees had been declining rapidly as they were cleared for fish farms and housing.\n\nBut a new study shows that since 2010 the world has been gaining more mangroves than it has been losing - driven by stronger legal protections and increased public awareness of their importance, sparked by disasters such as the 2004 Indian Ocean tsunami.\n\nThe researchers say the key factor though is the remarkable capacity of these forests to regenerate naturally once humans stop chopping them down.\n\nMangroves are one of the world's unsung environmental heroes.\n\nNot only do they store up to five times more carbon dioxide than land-based forests, but their tangled roots can also slow down waves and protect coastal communities from storm surges and tsunamis.\n\nThese same roots provide a perfect nursery for many species of fish and other marine life - protecting them from predators and providing ample food.\n\nThese benefits, though, have come under serious threat over the past century as the rise of fish farming, agriculture and the expansion of coastal cities and towns have seen mangroves chopped down and rapidly removed.\n\nFrom the 1980s to 2010, over 12,000 sq km (4,600 sq miles) of mangroves were cleared or destroyed across Asia, Africa and the Americas - an area the size of Jamaica.\n\nHowever, the new study shows a real reversal of that trend, particularly over the last decade. The total net losses - the forest lost and not replaced - since the 1980s have now been reduced to around 849 sq km (328 sq miles).\n\nRestoration efforts over decades have helped degraded forests to recover, but the big change has come from the natural expansion of mangroves in many parts of the world following drops in deforestation.\n\nThis has enabled forest levels to stabilise in Indonesia and grow in Myanmar (formerly known as Burma) - two of the most mangrove-dense countries.\n\nIn Indonesia, the aftermath of the Indian Ocean tsunami in 2004 seems to have played a role in changing people's minds about the importance of mangroves, and the removal of trees for fish farming has slowed.\n\n\"Some islands were covered by mangroves and after the tsunami those islands were [still] protected very well, so that increased public awareness about the importance of protecting mangroves,\" said lead author Dr\n\n---\n\n[Lähde: Earth.com]\nThe U.S. has restricted coastal wetland destruction for 40 years. Filling and draining marshes was effectively prohibited from the mid-1980s onward, and by most accounts it worked.\n\nDirect human damage now makes up barely a fraction of total wetland loss.\n\nWhat those regulations could not anticipate is now visible in satellite data.\n\nA new study found that wetland loss is not just continuing – it is speeding up, driven by a force those rules were never designed for.\n\nXiucheng Yang, a former postdoctoral researcher at the University of Connecticut (UConn), led the team. He is now a senior research fellow at the University of Victoria.\n\nYang and his colleagues assembled more than 176,000 satellite images of US shorelines from 1985 through 2023.\n\nThe team built an annual record of how the country’s tidal wetlands – salt marshes, mangroves, and tidal flats – have changed.\n\nEarlier surveys compared snapshots every few years. Wetlands look different at high and low tide, making those comparisons unreliable over long periods.\n\nYang’s team built a tool that adjusts for tidal variation at each point in the image. That continuous view makes the difference.\n\n“What we provide here is that we are continuously and consistently monitoring tidal wetland change,” Yang said. “This way we can link the change to specific events like hurricanes or storms.”\n\nAbout 60% of loss since 1985 traces to slow pressures, mainly rising seas. That aligned with what coastal scientists had long suspected.\n\nThe next finding changes the picture. When the team separated slow, grinding losses from sudden ones, extreme weather events came out ahead in driving the acceleration.\n\nHurricanes, droughts, and hard freezes drove the acceleration at roughly 40% more than slow-creep stressors.\n\nEarlier research had documented broad global declines but never connected specific storms to the wetlands they erased.\n\nSince 1985, the U.S. has lost roughly 633 square miles of tidal wetlands – more than 7.5% of what existed at the start of the record.\n\nAbout 16 square miles disappear each year on net, and the pace of loss is accelerating.\n\nHurricanes Katrina, Rita, and Gustav hit Louisiana between 2005 and 2008, stripping about 150 square miles of tidal marsh before any recovery could begin.\n\nEach storm arrived before the last one’s damage could be repaired, leaving the system less to work with.\n\nIrma’s 2017 hit caused widespread canopy loss across roughly 81 square miles of Florida mangroves.\n\nBy 2021, more tha\n\n---\n\n[Lähde: NPR]\nLocal fisheries on the coast of Cambodia struggled with decimated fish populations for years. Today, they are teeming with seafood, thanks to local ecological restoration efforts. Here (at right), Koh Kresna village chief Khiev Sat talks with a fisherman about the day's catch.\n                \n                    \n                    Ryan Kellman/NPR\n                    \n                \n                hide caption\n\nThe Gulf of Thailand is teeming with seafood: mackerel, sardines, bream and squid. Snails and anchovies. Shiny green crabs and tiny pink shrimp.\n\n\"Every day, we are out catching fish and selling them,\" says Khiev Sat, the longtime leader of the coastal Cambodian village of Koh Kresna and the patriarch of a large family of people who have fished for generations. As he speaks, his sister arrives on a bicycle loaded with the morning's catch. \"Our community fishery is strong,\" Khiev says, smiling.\n\nBut it hasn't always been this way. When Khiev was a young man, the waters near...",
+    "research_source": "multi",
+    "summary": "Uuden tutkimuksen mukaan maailman rannikoiden mangrovemetsät ovat alkaneet elpyä, vaikka niitä hävitettiin pitkään kalanviljelyn, rakentamisen ja kaupunkien laajenemisen tieltä.",
+    "content": "Maailman rannikoiden mangrovemetsät ovat tutkijoiden mukaan yllättävässä elpymisvaiheessa vuosikymmeniä jatkuneen hävityksen jälkeen. Vuodesta 2010 lähtien mangrovea on kertynyt maailmassa enemmän kuin sitä on menetetty, mikä on merkittävä käänne sekä rannikkoyhteisöjen suojelun että ilmaston kannalta.\n\n## Käänne pitkän alamäen jälkeen\n\nMangrovemetsät kasvaa rannikoiden kosteilla ja suolaisilla alueilla, ja niitä on aiemmin raivattu laajasti kalanviljelyn, maatalouden, asumisen ja rannikkokaupunkien laajenemisen tieltä. 1980-luvulta vuoteen 2010 Aasiassa, Afrikassa ja Amerikoissa hävitettiin tai tuhottiin yli 12 000 neliökilometriä mangrovemetsiä. Pinta-ala vastaa suunnilleen Jamaikan kokoa.\n\nUuden tutkimuksen mukaan kehitys on kuitenkin muuttunut. Mangrovemetsien nettomäärä on kasvanut vuodesta 2010 alkaen, mikä on tutkijoiden mukaan seurausta vahvemmasta lainsäädännöllisestä suojelusta, yleisön lisääntyneestä tietoisuudesta sekä metsien kyvystä uudistua luonnollisesti, kun hakkuut ja raivaus loppuvat.\n\nTietoisuuden kasvuun ovat vaikuttaneet myös suuret luonnonkatastrofit, kuten vuoden 2004 Intian valtameren tsunami. Sen jälkeen mangrovemetsien merkitys rannikoiden suojana on saanut aiempaa enemmän huomiota.\n\n## Suojaa rannikolle ja sitoo hiiltä\n\nMangrovemetsien merkitys on suuri, koska ne toimivat yhtä aikaa ilmastoa, ihmisiä ja meriluontoa suojaavana ekosysteeminä. Ne voivat varastoida jopa viisi kertaa enemmän hiilidioksidia kuin maalla kasvavat metsät. Niiden tiheät juuristot voivat myös hidastaa aaltoja ja vaimentaa myrskyvuoksia sekä tsunameja.\n\nSamat juuristot tarjoavat suojaisia kasvupaikkoja monille kaloille ja muulle merielämälle. Ne suojaavat poikasia pedoilta ja tarjoavat ravintoa, mikä tekee mangroveista tärkeitä myös rannikkoseutujen kalakannoille.\n\nTutkimus korostaa, että elpyminen ei tarkoita uhan väistymistä kaikkialla. Yhdysvaltoja koskevassa tuoreessa tutkimuksessa kosteikkojen menetys jatkuu ja on jopa kiihtynyt, vaikka suorat ihmisen aiheuttamat vauriot ovat vähentyneet pitkään jatkuneen sääntelyn ansiosta. Satelliittiaineisto vuosilta 1985–2023 osoittaa, että osa nykyisistä menetyksistä johtuu voimista, joihin vanhat suojelusäännöt eivät ole varautuneet.",
+    "category": "Kotimaa",
+    "tags": [
+      "mangrovemetsät",
+      "ilmasto",
+      "rannikkoyhteisöt",
+      "luonnonsuojelu",
+      "kosteikot"
+    ],
+    "summary_bullets": [
+      "Tutkijoiden mukaan maailman mangrovemetsät ovat vuodesta 2010 lähtien kasvaneet enemmän kuin niitä on menetetty.",
+      "Mangrovemetsät suojaavat rannikoita myrskyiltä ja tsunameilta sekä sitovat suuria määriä hiilidioksidia.",
+      "Elpyminen liittyy vahvempaan suojeluun, tietoisuuden kasvuun ja metsien kykyyn uudistua, kun raivaus loppuu."
+    ],
+    "key_points": [
+      "Tutkijoiden mukaan maailman mangrovemetsät ovat vuodesta 2010 lähtien kasvaneet enemmän kuin niitä on menetetty.",
+      "Mangrovemetsät suojaavat rannikoita myrskyiltä ja tsunameilta sekä sitovat suuria määriä hiilidioksidia.",
+      "Elpyminen liittyy vahvempaan suojeluun, tietoisuuden kasvuun ja metsien kykyyn uudistua, kun raivaus loppuu."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin tutkimuskoosteeseen. Earth.comin Yhdysvaltojen kosteikkotutkimus käsiteltiin erillisenä varauksena, ei suorana mangrovemetsien globaalia elpymistä kumoavana tietona.",
+    "source_text": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.\n\nThe world's coastal mangrove forests, which protect millions of people from storms - and soak up vast amounts of planet-warming gases - are staging an unexpected comeback, scientists find. For decades these swampy trees had been declining rapidly as they were cleared for fish farms and housing. But a new study shows that since 2010 the world has been gaining more mangroves than it has been losing - driven by stronger legal protections and increased public awareness of their importance, sparked by disasters such as the 2004 Indian Ocean tsunami. The researchers say the key factor though is the remarkable capacity of these forests to regenerate naturally once humans stop chopping them down. Mangroves are one of the world's unsung environmental heroes.\n\nNot only do they store up to five times more carbon dioxide than land-based forests, but their tangled roots can also slow down waves and protect coastal communities from storm surges and tsunamis. These same roots provide a perfect nursery for many species of fish and other marine life - protecting them from predators and providing ample food. These benefits, though, have come under serious threat over the past century as the rise of fish farming, agriculture and the expansion of coastal cities and towns have seen mangroves chopped down and rapidly removed. From the 1980s to 2010, over 12,000 sq km (4,600 sq miles) of mangroves were cleared or destroyed across Asia, Africa and the Americas - an area the size of Jamaica.\n\nThe U.S. has restricted coastal wetland destruction for 40 years. Filling and draining marshes was effectively prohibited from the mid-1980s onward, and by most accounts it worked. Direct human damage now makes up barely a fraction of total wetland loss. What those regulations could not anticipate is now visible in satellite data. A new study found that wetland loss is not just continuing – it is speeding up, driven by a force those rules were never designed for. Xiucheng Yang, a former postdoctoral researcher at the University of Connecticut (UConn), led the team. He is now a senior research fellow at the University of Victoria. Yang and his colleagues assembled more than 176,000 satellite images of US shorelines from 1985 through 2023.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.88,
+    "degraded_mode": false,
+    "monica_packet_id": "20260604T232123Z_32d0b94b32"
+  },
+  "duplicate_rejected_at": "2026-06-04T23:38:01.958044+00:00",
+  "duplicate_rejected": true
+}

@@ -1,0 +1,200 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-05T05:51:25.957817+00:00",
+  "digest": "9471b87d88",
+  "packet": {
+    "packet_id": "20260605T055125Z_9471b87d88",
+    "created_at": "2026-06-05T05:51:25Z",
+    "headline_seed": "China's Xi Jinping to make rare visit to North Korea",
+    "description_seed": "Xi will be in North Korea from 8-9 June, a rare visit to the isolated regime that is a longstanding ally of Beijing.",
+    "link": "https://www.bbc.com/news/articles/clypym3q7p1o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "The Straits Times"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/clypym3q7p1o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "China's Xi Jinping to make rare visit to North Korea"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Xi will be in North Korea from 8-9 June, a rare visit to the isolated regime that is a longstanding ally of Beijing.",
+        "word_count": 23,
+        "keyword_overlap": 13,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "China's leader Xi Jinping is visiting long-standing ally North Korea for the first time in nearly seven years, state media report. Xi will be in North Korea from 8-9 June at the invitation of his counterpart Kim Jong Un. Xi last visited Pyongyang in 2019. The visit comes weeks after Xi received US President Donald Trump and Russian President Vladimir Putin in Beijing - two countries that loom large over Pyongyang's foreign policy. China is a key economic and political partner of North Korea, which faces sweeping international sanctions as a result of its nuclear weapons programme and alleged human rights violations. Pyongyang views the US as its main political enemy, and Russia as a growing friend to whom Kim has pledged unwavering support.",
+        "word_count": 124,
+        "keyword_overlap": 11,
+        "strong_overlap": 2
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Xi is wary of the burgeoning alliance between Kim and Putin, despite Beijing's close ties with both Pyongyang and Moscow. China and North Korea share a 1,400km-long border and are bound by a defence pact - the only one China has with any country. It guarantees mutual support if either is attacked. This year marks the 65th anniversary of that treaty. Beijing has also long served as the main mediator between Kim's pariah regime and the rest of the world. For Kim, the propaganda value of Xi's visit is self-evident. North Korea had improved his standing on the world stage after withstanding the pandemic and entering the war in Ukraine on the side of Russia.",
+        "word_count": 115,
+        "keyword_overlap": 7,
+        "strong_overlap": 2
+      },
+      {
+        "source": "The Straits Times",
+        "source_type": "research",
+        "text": "Singapore’s Foreign Minister Vivian Balakrishnan may have accidentally tipped off preparation for Xi when he posted a video to social media that showed construction material in the square during a visit to North Korea last week. Chinese Foreign Minister Wang Yi met Kim when he went to North Korea for his first visit to the country in six years. This added to speculation that a Xi visit was in the works. Kim made a rare trip outside his isolated country in September 2025 to attend a military parade in Beijing, where he shared smiles and handshakes with Xi and Putin.",
+        "word_count": 100,
+        "keyword_overlap": 7,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Xi will be in North Korea from 8-9 June, a rare visit to the isolated regime that is a longstanding ally of Beijing.\n\nChina's leader Xi Jinping is visiting long-standing ally North Korea for the first time in nearly seven years, state media report. Xi will be in North Korea from 8-9 June at the invitation of his counterpart Kim Jong Un. Xi last visited Pyongyang in 2019. The visit comes weeks after Xi received US President Donald Trump and Russian President Vladimir Putin in Beijing - two countries that loom large over Pyongyang's foreign policy. China is a key economic and political partner of North Korea, which faces sweeping international sanctions as a result of its nuclear weapons programme and alleged human rights violations. Pyongyang views the US as its main political enemy, and Russia as a growing friend to whom Kim has pledged unwavering support.\n\nXi is wary of the burgeoning alliance between Kim and Putin, despite Beijing's close ties with both Pyongyang and Moscow. China and North Korea share a 1,400km-long border and are bound by a defence pact - the only one China has with any country. It guarantees mutual support if either is attacked. This year marks the 65th anniversary of that treaty. Beijing has also long served as the main mediator between Kim's pariah regime and the rest of the world. For Kim, the propaganda value of Xi's visit is self-evident. North Korea had improved his standing on the world stage after withstanding the pandemic and entering the war in Ukraine on the side of Russia.\n\nSingapore’s Foreign Minister Vivian Balakrishnan may have accidentally tipped off preparation for Xi when he posted a video to social media that showed construction material in the square during a visit to North Korea last week. Chinese Foreign Minister Wang Yi met Kim when he went to North Korea for his first visit to the country in six years. This added to speculation that a Xi visit was in the works. Kim made a rare trip outside his isolated country in September 2025 to attend a military parade in Beijing, where he shared smiles and handshakes with Xi and Putin.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1035,
+      "selected_blocks": 4,
+      "selected_source_words": 362,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Sky News Australia",
+        "The Straits Times",
+        "The Straits Times",
+        "The Straits Times",
+        "The Straits Times",
+        "The New Voice of Ukraine",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Straits Times"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "China's Xi Jinping to make rare visit to North Korea",
+      "description": "Xi will be in North Korea from 8-9 June, a rare visit to the isolated regime that is a longstanding ally of Beijing.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "China's Xi Jinping to make rare visit to North Korea",
+    "description": "Xi will be in North Korea from 8-9 June, a rare visit to the isolated regime that is a longstanding ally of Beijing.",
+    "link": "https://www.bbc.com/news/articles/clypym3q7p1o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-05T05:17:13+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e06d57d4aca03d978784b22f7d40d0b9",
+    "_url_hash": "e5f6f3f94051dcb5a41f8c7e470428be89c874c2dd9450770a9fa3b93078ca9d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nChina's leader Xi Jinping is visiting long-standing ally North Korea for the first time in nearly seven years, state media report.\n\nXi will be in North Korea from 8-9 June at the invitation of his counterpart Kim Jong Un. Xi last visited Pyongyang in 2019.\n\nThe visit comes weeks after Xi received US President Donald Trump and Russian President Vladimir Putin in Beijing - two countries that loom large over Pyongyang's foreign policy.\n\nChina is a key economic and political partner of North Korea, which faces sweeping international sanctions as a result of its nuclear weapons programme and alleged human rights violations.\n\nPyongyang views the US as its main political enemy, and Russia as a growing friend to whom Kim has pledged unwavering support.\n\nXi is wary of the burgeoning alliance between Kim and Putin, despite Beijing's close ties with both Pyongyang and Moscow.\n\nChina and North Korea share a 1,400km-long border and are bound by a defence pact - the only one China has with any country. It guarantees mutual support if either is attacked.\n\nThis year marks the 65th anniversary of that treaty.\n\nBeijing has also long served as the main mediator between Kim's pariah regime and the rest of the world.\n\nFor Kim, the propaganda value of Xi's visit is self-evident. North Korea had improved his standing on the world stage after withstanding the pandemic and entering the war in Ukraine on the side of Russia.\n\nKim has been proudly displaying his nuclear and missile arsenal. He has also been developing capital Pyongyang to visiting dignitaries. And he wants the world to know that it was all achieved without bending his knee to the US or engaging with the South.\n\nPyongyang now has the leverage to demand a larger exchange with China. It is widely expected that Kim will seek more trade over the land border and more Chinese tourists to fill its newly built beach and ski resorts.\n\nSeoul is hoping Xi will play a mediator in this trip, nudging Pyongyang to resume dialogue with both Seoul and Washington.\n\nSince Kim declared the end to reunification efforts with the South in December 2024, he had called South Koreans a sworn enemy and had cut all levels of communication with Seoul.\n\nWhen the North Korean women's professional football team visited South Korea last month to face a South Korean football team, the freeze-out was in full display.\n\nThe North Koreans barely acknowledged the South Korean public who showed up to welcomed them at the airport and the stadium. They coldly\n\n---\n\n[Lähde: Sky News Australia]\nPlease note that by blocking any or all cookies you may not have access to certain features, content or personalization. For more information see our Cookie Policy.\n\nTo enable cookies, follow the instructions for your browser below.\n\nThere is a specific issue with the Facebook in-app browser intermittently making requests to websites without cookies that had previously been set. This appears to be a defect in the browser which should be addressed soon. The simplest approach to avoid this problem is to continue to use the Facebook app but not use the in-app browser. This can be done through the following steps:\n\n---\n\n[Lähde: The Straits Times]\nSign up now: Get insights on Asia's fast-moving developments\n\nA visit to North Korea by Chinese President Xi Jinping could come in early June, South Korea’s Yonhap News agency reported, citing government officials.\n\nSEOUL – Satellite imagery appears to show construction at a square in central Pyongyang that has served as a focal point for visits by foreign leaders, fuelling speculation that Chinese President Xi Jinping may soon make his first trip to North Korea in more than six years.\n\nThe imagery on May 30 by satellite firm Vantor appears to show a fenced-off section and a structure being built in Kim Il Sung Square where leader Kim Jong Un hosted Russian President Vladimir Putin about two years ago.\n\nThe fencing and construction materials were not seen in images about a month earlier.\n\nThe section apparently under construction was used for a gazebo when Kim hosted Putin in 2024 and to welcome Belarusian President Alexander Lukashenko to Pyongyang in 2026.\n\nIt was unclear what prompted the work in the North Korean capital’s most prominent public space, which has hosted events ranging from military parades to mass dance celebrations.\n\nThe next major event on the country’s calendar is the June 25 anniversary marking the start of the Korean War in 1950.\n\nA Xi visit could come in early June, South Korea’s Yonhap News agency reported, citing government officials.\n\nIt would be his first trip outside China in 2026, after hosting US President Donald Trump and Putin in Beijing.\n\nNeither North Korea nor China has formally announced a visit.\n\nSingapore’s Foreign Minister Vivian Balakrishnan may have accidentally tipped off preparation for Xi when he posted a video to social media that showed construction material in the square during a visit to North Korea last week.\n\nChinese Foreign Minister Wang Yi met Kim when he went to North Korea for his first visit to the country in six years.\n\nThis added to speculation that a Xi visit was in the works.\n\nKim made a rare trip outside his isolated country in September 2025 to attend a military parade in Beijing, where he shared smiles and handshakes with Xi and Putin.\n\nThe North Korean leader has made it clear that he views his country as an important world player, which has been highlighted by a flurry of diplomatic activity in recent months, said Rachel Minyoung Lee, a senior fellow with the 38 North programme at the Stimson Centre in Washington.\n\nChina has been North Korea’s biggest benefactor and trade partner for years, p\n\n---\n\n[Lähde: The New Voice of Ukraine]\nNew satellite images of central Pyongyang suggest North\nKorea may be preparing for Chinese leader Xi Jinping’s first visit to the\ncountry in more than six years, Bloomberg\nreported on June 4.\n\n“Images taken on May 30 by satellite company Vantor appear\nto show a fenced-off area and a structure under construction on Kim Il Sung\nSquare, where dictator Kim Jong Un hosted Russian dicta...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-05T05:53:44.176889+00:00",
+  "payload": {
+    "packet_id": "20260605T055125Z_9471b87d88",
+    "title": "Xi Jinping tekee harvinaisen vierailun Pohjois-Koreaan",
+    "summary": "Kiinan johtaja Xi Jinping matkustaa Pohjois-Koreaan 8.–9. kesäkuuta Kim Jong-unin kutsusta. Vierailu on ensimmäinen lähes seitsemään vuoteen ja osuu aikaan, jolloin Pjongjangin suhteet Moskovaan ovat tiivistyneet.",
+    "content": "Kiinan johtaja Xi Jinping tekee 8.–9. kesäkuuta harvinaisen vierailun Pohjois-Koreaan, kertovat valtiolliset tiedotusvälineet. Matka tapahtuu Pohjois-Korean johtajan Kim Jong-unin kutsusta ja on Xin ensimmäinen vierailu maassa lähes seitsemään vuoteen. Edellisen kerran Xi kävi Pjongjangissa vuonna 2019.\n\n## Vierailu korostaa vanhaa liittolaissuhdetta\n\nKiina on Pohjois-Korean keskeinen taloudellinen ja poliittinen kumppani. Maiden suhdetta vahvistaa myös puolustussopimus, joka velvoittaa osapuolet tukemaan toisiaan, jos jompikumpi joutuu hyökkäyksen kohteeksi. Kyseessä on Kiinan ainoa tällainen puolustussopimus minkään maan kanssa, ja tänä vuonna sopimuksesta tulee kuluneeksi 65 vuotta.\n\nKiina ja Pohjois-Korea jakavat noin 1 400 kilometrin pituisen rajan. Peking on pitkään toiminut myös tärkeänä välittäjänä Pohjois-Korean ja muun maailman välillä, kun maa on ollut laajojen kansainvälisten pakotteiden kohteena ydinaseohjelmansa ja väitettyjen ihmisoikeusloukkausten vuoksi.\n\n## Venäjä-suhteet tuovat vierailuun lisäpainoa\n\nVierailu tapahtuu tilanteessa, jossa Pohjois-Korean suhteet Venäjään ovat vahvistuneet. Kim on luvannut Venäjälle horjumatonta tukea, ja Pjongjang pitää Moskovaa yhä läheisempänä kumppanina. Samalla Pohjois-Korea näkee Yhdysvallat tärkeimpänä poliittisena vastustajanaan.\n\nXin kerrotaan suhtautuvan varauksella Kimin ja Venäjän presidentin Vladimir Putinin tiivistyvään yhteistyöhön, vaikka Pekingillä on läheiset suhteet sekä Pjongjangiin että Moskovaan. Matka seuraa myös aikaa, jolloin Xi on vastaanottanut Pekingissä sekä Yhdysvaltain presidentin Donald Trumpin että Putinin.\n\n## Merkkejä valmisteluista oli jo nähty\n\nVierailun mahdollisuudesta oli liikkunut spekulaatioita jo ennen virallisia tietoja. Singaporen ulkoministeri Vivian Balakrishnan julkaisi hiljattain Pohjois-Korean-vierailultaan videon, jossa näkyi rakennusmateriaalia aukiolla. Lisäksi Kiinan ulkoministeri Wang Yi tapasi Kimin käydessään Pohjois-Koreassa ensimmäistä kertaa kuuteen vuoteen.\n\nKim teki itse harvinaisen matkan maansa ulkopuolelle syyskuussa 2025, kun hän osallistui sotilasparaatiin Pekingissä ja esiintyi siellä Xin ja Putinin rinnalla. Xin tulevalla vierailulla on Kimille myös selvä symbolinen arvo: se näyttää Pohjois-Korean johtajan edelleen merkittävänä toimijana suurvaltojen välisissä suhteissa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kiina",
+      "Pohjois-Korea",
+      "Xi Jinping",
+      "Kim Jong-un",
+      "Venäjä",
+      "ulkomaat"
+    ],
+    "summary_bullets": [
+      "Xi Jinping vierailee Pohjois-Koreassa 8.–9. kesäkuuta Kim Jong-unin kutsusta.",
+      "Kyseessä on Xin ensimmäinen matka Pohjois-Koreaan lähes seitsemään vuoteen.",
+      "Vierailu osuu aikaan, jolloin Pohjois-Korean ja Venäjän suhteet ovat tiivistyneet."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin valikoituihin lähdekatkelmiin. Epävarmana muotoiltu vain valmisteluihin liittynyt spekulaatio; ydinfaktat ovat lähteissä yhtenevät."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260605T055125Z_9471b87d88\",\"title\":\"Xi Jinping tekee harvinaisen vierailun Pohjois-Koreaan\",\"summary\":\"Kiinan johtaja Xi Jinping matkustaa Pohjois-Koreaan 8.–9. kesäkuuta Kim Jong-unin kutsusta. Vierailu on ensimmäinen lähes seitsemään vuoteen ja osuu aikaan, jolloin Pjongjangin suhteet Moskovaan ovat tiivistyneet.\",\"content\":\"Kiinan johtaja Xi Jinping tekee 8.–9. kesäkuuta harvinaisen vierailun Pohjois-Koreaan, kertovat valtiolliset tiedotusvälineet. Matka tapahtuu Pohjois-Korean johtajan Kim Jong-unin kutsusta ja on Xin ensimmäinen vierailu maassa lähes seitsemään vuoteen. Edellisen kerran Xi kävi Pjongjangissa vuonna 2019.\\n\\n## Vierailu korostaa vanhaa liittolaissuhdetta\\n\\nKiina on Pohjois-Korean keskeinen taloudellinen ja poliittinen kumppani. Maiden suhdetta vahvistaa myös puolustussopimus, joka velvoittaa osapuolet tukemaan toisiaan, jos jompikumpi joutuu hyökkäyksen kohteeksi. Kyseessä on Kiinan ainoa tällainen puolustussopimus minkään maan kanssa, ja tänä vuonna sopimuksesta tulee kuluneeksi 65 vuotta.\\n\\nKiina ja Pohjois-Korea jakavat noin 1 400 kilometrin pituisen rajan. Peking on pitkään toiminut myös tärkeänä välittäjänä Pohjois-Korean ja muun maailman välillä, kun maa on ollut laajojen kansainvälisten pakotteiden kohteena ydinaseohjelmansa ja väitettyjen ihmisoikeusloukkausten vuoksi.\\n\\n## Venäjä-suhteet tuovat vierailuun lisäpainoa\\n\\nVierailu tapahtuu tilanteessa, jossa Pohjois-Korean suhteet Venäjään ovat vahvistuneet. Kim on luvannut Venäjälle horjumatonta tukea, ja Pjongjang pitää Moskovaa yhä läheisempänä kumppanina. Samalla Pohjois-Korea näkee Yhdysvallat tärkeimpänä poliittisena vastustajanaan.\\n\\nXin kerrotaan suhtautuvan varauksella Kimin ja Venäjän presidentin Vladimir Putinin tiivistyvään yhteistyöhön, vaikka Pekingillä on läheiset suhteet sekä Pjongjangiin että Moskovaan. Matka seuraa myös aikaa, jolloin Xi on vastaanottanut Pekingissä sekä Yhdysvaltain presidentin Donald Trumpin että Putinin.\\n\\n## Merkkejä valmisteluista oli jo nähty\\n\\nVierailun mahdollisuudesta oli liikkunut spekulaatioita jo ennen virallisia tietoja. Singaporen ulkoministeri Vivian Balakrishnan julkaisi hiljattain Pohjois-Korean-vierailultaan videon, jossa näkyi rakennusmateriaalia aukiolla. Lisäksi Kiinan ulkoministeri Wang Yi tapasi Kimin käydessään Pohjois-Koreassa ensimmäistä kertaa kuuteen vuoteen.\\n\\nKim teki itse harvinaisen matkan maansa ulkopuolelle syyskuussa 2025, kun hän osallistui sotilasparaatiin Pekingissä ja esiintyi siellä Xin ja Putinin rinnalla. Xin tulevalla vierailulla on Kimille myös selvä symbolinen arvo: se näyttää Pohjois-Korean johtajan edelleen merkittävänä toimijana suurvaltojen välisissä suhteissa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Kiina\",\"Pohjois-Korea\",\"Xi Jinping\",\"Kim Jong-un\",\"Venäjä\",\"ulkomaat\"],\"summary_bullets\":[\"Xi Jinping vierailee Pohjois-Koreassa 8.–9. kesäkuuta Kim Jong-unin kutsusta.\",\"Kyseessä on Xin ensimmäinen matka Pohjois-Koreaan lähes seitsemään vuoteen.\",\"Vierailu osuu aikaan, jolloin Pohjois-Korean ja Venäjän suhteet ovat tiivistyneet.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.98,\"journalist_note\":\"Artikkeli perustuu packetin valikoituihin lähdekatkelmiin. Epävarmana muotoiltu vain valmisteluihin liittynyt spekulaatio; ydinfaktat ovat lähteissä yhtenevät.\"}",
+  "article": {
+    "title": "Xi Jinping tekee harvinaisen vierailun Pohjois-Koreaan",
+    "description": "Kiinan johtaja Xi Jinping matkustaa Pohjois-Koreaan 8.–9. kesäkuuta Kim Jong-unin kutsusta. Vierailu on ensimmäinen lähes seitsemään vuoteen ja osuu aikaan, jolloin Pjongjangin suhteet Moskovaan ovat tiivistyneet.",
+    "link": "https://www.bbc.com/news/articles/clypym3q7p1o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-05T05:17:13+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e06d57d4aca03d978784b22f7d40d0b9",
+    "_url_hash": "e5f6f3f94051dcb5a41f8c7e470428be89c874c2dd9450770a9fa3b93078ca9d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nChina's leader Xi Jinping is visiting long-standing ally North Korea for the first time in nearly seven years, state media report.\n\nXi will be in North Korea from 8-9 June at the invitation of his counterpart Kim Jong Un. Xi last visited Pyongyang in 2019.\n\nThe visit comes weeks after Xi received US President Donald Trump and Russian President Vladimir Putin in Beijing - two countries that loom large over Pyongyang's foreign policy.\n\nChina is a key economic and political partner of North Korea, which faces sweeping international sanctions as a result of its nuclear weapons programme and alleged human rights violations.\n\nPyongyang views the US as its main political enemy, and Russia as a growing friend to whom Kim has pledged unwavering support.\n\nXi is wary of the burgeoning alliance between Kim and Putin, despite Beijing's close ties with both Pyongyang and Moscow.\n\nChina and North Korea share a 1,400km-long border and are bound by a defence pact - the only one China has with any country. It guarantees mutual support if either is attacked.\n\nThis year marks the 65th anniversary of that treaty.\n\nBeijing has also long served as the main mediator between Kim's pariah regime and the rest of the world.\n\nFor Kim, the propaganda value of Xi's visit is self-evident. North Korea had improved his standing on the world stage after withstanding the pandemic and entering the war in Ukraine on the side of Russia.\n\nKim has been proudly displaying his nuclear and missile arsenal. He has also been developing capital Pyongyang to visiting dignitaries. And he wants the world to know that it was all achieved without bending his knee to the US or engaging with the South.\n\nPyongyang now has the leverage to demand a larger exchange with China. It is widely expected that Kim will seek more trade over the land border and more Chinese tourists to fill its newly built beach and ski resorts.\n\nSeoul is hoping Xi will play a mediator in this trip, nudging Pyongyang to resume dialogue with both Seoul and Washington.\n\nSince Kim declared the end to reunification efforts with the South in December 2024, he had called South Koreans a sworn enemy and had cut all levels of communication with Seoul.\n\nWhen the North Korean women's professional football team visited South Korea last month to face a South Korean football team, the freeze-out was in full display.\n\nThe North Koreans barely acknowledged the South Korean public who showed up to welcomed them at the airport and the stadium. They coldly\n\n---\n\n[Lähde: Sky News Australia]\nPlease note that by blocking any or all cookies you may not have access to certain features, content or personalization. For more information see our Cookie Policy.\n\nTo enable cookies, follow the instructions for your browser below.\n\nThere is a specific issue with the Facebook in-app browser intermittently making requests to websites without cookies that had previously been set. This appears to be a defect in the browser which should be addressed soon. The simplest approach to avoid this problem is to continue to use the Facebook app but not use the in-app browser. This can be done through the following steps:\n\n---\n\n[Lähde: The Straits Times]\nSign up now: Get insights on Asia's fast-moving developments\n\nA visit to North Korea by Chinese President Xi Jinping could come in early June, South Korea’s Yonhap News agency reported, citing government officials.\n\nSEOUL – Satellite imagery appears to show construction at a square in central Pyongyang that has served as a focal point for visits by foreign leaders, fuelling speculation that Chinese President Xi Jinping may soon make his first trip to North Korea in more than six years.\n\nThe imagery on May 30 by satellite firm Vantor appears to show a fenced-off section and a structure being built in Kim Il Sung Square where leader Kim Jong Un hosted Russian President Vladimir Putin about two years ago.\n\nThe fencing and construction materials were not seen in images about a month earlier.\n\nThe section apparently under construction was used for a gazebo when Kim hosted Putin in 2024 and to welcome Belarusian President Alexander Lukashenko to Pyongyang in 2026.\n\nIt was unclear what prompted the work in the North Korean capital’s most prominent public space, which has hosted events ranging from military parades to mass dance celebrations.\n\nThe next major event on the country’s calendar is the June 25 anniversary marking the start of the Korean War in 1950.\n\nA Xi visit could come in early June, South Korea’s Yonhap News agency reported, citing government officials.\n\nIt would be his first trip outside China in 2026, after hosting US President Donald Trump and Putin in Beijing.\n\nNeither North Korea nor China has formally announced a visit.\n\nSingapore’s Foreign Minister Vivian Balakrishnan may have accidentally tipped off preparation for Xi when he posted a video to social media that showed construction material in the square during a visit to North Korea last week.\n\nChinese Foreign Minister Wang Yi met Kim when he went to North Korea for his first visit to the country in six years.\n\nThis added to speculation that a Xi visit was in the works.\n\nKim made a rare trip outside his isolated country in September 2025 to attend a military parade in Beijing, where he shared smiles and handshakes with Xi and Putin.\n\nThe North Korean leader has made it clear that he views his country as an important world player, which has been highlighted by a flurry of diplomatic activity in recent months, said Rachel Minyoung Lee, a senior fellow with the 38 North programme at the Stimson Centre in Washington.\n\nChina has been North Korea’s biggest benefactor and trade partner for years, p\n\n---\n\n[Lähde: The New Voice of Ukraine]\nNew satellite images of central Pyongyang suggest North\nKorea may be preparing for Chinese leader Xi Jinping’s first visit to the\ncountry in more than six years, Bloomberg\nreported on June 4.\n\n“Images taken on May 30 by satellite company Vantor appear\nto show a fenced-off area and a structure under construction on Kim Il Sung\nSquare, where dictator Kim Jong Un hosted Russian dicta...",
+    "research_source": "multi",
+    "summary": "Kiinan johtaja Xi Jinping matkustaa Pohjois-Koreaan 8.–9. kesäkuuta Kim Jong-unin kutsusta. Vierailu on ensimmäinen lähes seitsemään vuoteen ja osuu aikaan, jolloin Pjongjangin suhteet Moskovaan ovat tiivistyneet.",
+    "content": "Kiinan johtaja Xi Jinping tekee 8.–9. kesäkuuta harvinaisen vierailun Pohjois-Koreaan, kertovat valtiolliset tiedotusvälineet. Matka tapahtuu Pohjois-Korean johtajan Kim Jong-unin kutsusta ja on Xin ensimmäinen vierailu maassa lähes seitsemään vuoteen. Edellisen kerran Xi kävi Pjongjangissa vuonna 2019.\n\n## Vierailu korostaa vanhaa liittolaissuhdetta\n\nKiina on Pohjois-Korean keskeinen taloudellinen ja poliittinen kumppani. Maiden suhdetta vahvistaa myös puolustussopimus, joka velvoittaa osapuolet tukemaan toisiaan, jos jompikumpi joutuu hyökkäyksen kohteeksi. Kyseessä on Kiinan ainoa tällainen puolustussopimus minkään maan kanssa, ja tänä vuonna sopimuksesta tulee kuluneeksi 65 vuotta.\n\nKiina ja Pohjois-Korea jakavat noin 1 400 kilometrin pituisen rajan. Peking on pitkään toiminut myös tärkeänä välittäjänä Pohjois-Korean ja muun maailman välillä, kun maa on ollut laajojen kansainvälisten pakotteiden kohteena ydinaseohjelmansa ja väitettyjen ihmisoikeusloukkausten vuoksi.\n\n## Venäjä-suhteet tuovat vierailuun lisäpainoa\n\nVierailu tapahtuu tilanteessa, jossa Pohjois-Korean suhteet Venäjään ovat vahvistuneet. Kim on luvannut Venäjälle horjumatonta tukea, ja Pjongjang pitää Moskovaa yhä läheisempänä kumppanina. Samalla Pohjois-Korea näkee Yhdysvallat tärkeimpänä poliittisena vastustajanaan.\n\nXin kerrotaan suhtautuvan varauksella Kimin ja Venäjän presidentin Vladimir Putinin tiivistyvään yhteistyöhön, vaikka Pekingillä on läheiset suhteet sekä Pjongjangiin että Moskovaan. Matka seuraa myös aikaa, jolloin Xi on vastaanottanut Pekingissä sekä Yhdysvaltain presidentin Donald Trumpin että Putinin.\n\n## Merkkejä valmisteluista oli jo nähty\n\nVierailun mahdollisuudesta oli liikkunut spekulaatioita jo ennen virallisia tietoja. Singaporen ulkoministeri Vivian Balakrishnan julkaisi hiljattain Pohjois-Korean-vierailultaan videon, jossa näkyi rakennusmateriaalia aukiolla. Lisäksi Kiinan ulkoministeri Wang Yi tapasi Kimin käydessään Pohjois-Koreassa ensimmäistä kertaa kuuteen vuoteen.\n\nKim teki itse harvinaisen matkan maansa ulkopuolelle syyskuussa 2025, kun hän osallistui sotilasparaatiin Pekingissä ja esiintyi siellä Xin ja Putinin rinnalla. Xin tulevalla vierailulla on Kimille myös selvä symbolinen arvo: se näyttää Pohjois-Korean johtajan edelleen merkittävänä toimijana suurvaltojen välisissä suhteissa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "kiina",
+      "pohjois-korea",
+      "xi jinping",
+      "kim jong-un",
+      "venäjä"
+    ],
+    "summary_bullets": [
+      "Xi Jinping vierailee Pohjois-Koreassa 8.–9. kesäkuuta Kim Jong-unin kutsusta.",
+      "Kyseessä on Xin ensimmäinen matka Pohjois-Koreaan lähes seitsemään vuoteen.",
+      "Vierailu osuu aikaan, jolloin Pohjois-Korean ja Venäjän suhteet ovat tiivistyneet."
+    ],
+    "key_points": [
+      "Xi Jinping vierailee Pohjois-Koreassa 8.–9. kesäkuuta Kim Jong-unin kutsusta.",
+      "Kyseessä on Xin ensimmäinen matka Pohjois-Koreaan lähes seitsemään vuoteen.",
+      "Vierailu osuu aikaan, jolloin Pohjois-Korean ja Venäjän suhteet ovat tiivistyneet."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin valikoituihin lähdekatkelmiin. Epävarmana muotoiltu vain valmisteluihin liittynyt spekulaatio; ydinfaktat ovat lähteissä yhtenevät.",
+    "source_text": "Xi will be in North Korea from 8-9 June, a rare visit to the isolated regime that is a longstanding ally of Beijing.\n\nChina's leader Xi Jinping is visiting long-standing ally North Korea for the first time in nearly seven years, state media report. Xi will be in North Korea from 8-9 June at the invitation of his counterpart Kim Jong Un. Xi last visited Pyongyang in 2019. The visit comes weeks after Xi received US President Donald Trump and Russian President Vladimir Putin in Beijing - two countries that loom large over Pyongyang's foreign policy. China is a key economic and political partner of North Korea, which faces sweeping international sanctions as a result of its nuclear weapons programme and alleged human rights violations. Pyongyang views the US as its main political enemy, and Russia as a growing friend to whom Kim has pledged unwavering support.\n\nXi is wary of the burgeoning alliance between Kim and Putin, despite Beijing's close ties with both Pyongyang and Moscow. China and North Korea share a 1,400km-long border and are bound by a defence pact - the only one China has with any country. It guarantees mutual support if either is attacked. This year marks the 65th anniversary of that treaty. Beijing has also long served as the main mediator between Kim's pariah regime and the rest of the world. For Kim, the propaganda value of Xi's visit is self-evident. North Korea had improved his standing on the world stage after withstanding the pandemic and entering the war in Ukraine on the side of Russia.\n\nSingapore’s Foreign Minister Vivian Balakrishnan may have accidentally tipped off preparation for Xi when he posted a video to social media that showed construction material in the square during a visit to North Korea last week. Chinese Foreign Minister Wang Yi met Kim when he went to North Korea for his first visit to the country in six years. This added to speculation that a Xi visit was in the works. Kim made a rare trip outside his isolated country in September 2025 to attend a military parade in Beijing, where he shared smiles and handshakes with Xi and Putin.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260605T055125Z_9471b87d88"
+  },
+  "duplicate_rejected_at": "2026-06-05T06:08:01.821213+00:00",
+  "duplicate_rejected": true
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-05T01:41:18.160509+00:00",
+  "digest": "45b9bc4c3e",
+  "packet": {
+    "packet_id": "20260605T014118Z_45b9bc4c3e",
+    "created_at": "2026-06-05T01:41:18Z",
+    "headline_seed": "Jättimäisen 180 M€ tieurakan 1. osa annettiin laatuvertailun huonoimmalle – YIT:n ja Destian tarjoukset hävisivät",
+    "description_seed": "Suomessa alkaa massiivinen Valtatie 5:n parannushanke. Tekniikka&Talous kertoo, millaisin pistein ensimmäisen osan kilpailutus voitettiin ja mikä yritys jätti leikin kesken.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/f4ad4db8-616f-4aa7-9974-68bec7ec6a0e",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/f4ad4db8-616f-4aa7-9974-68bec7ec6a0e"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jättimäisen 180 M€ tieurakan 1. osa annettiin laatuvertailun huonoimmalle – YIT:n ja Destian tarjoukset hävisivät"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Suomessa alkaa massiivinen Valtatie 5:n parannushanke. Tekniikka&Talous kertoo, millaisin pistein ensimmäisen osan kilpailutus voitettiin ja mikä yritys jätti leikin kesken.",
+        "word_count": 20,
+        "keyword_overlap": 15,
+        "strong_overlap": 11
+      }
+    ],
+    "source_text": "Suomessa alkaa massiivinen Valtatie 5:n parannushanke. Tekniikka&Talous kertoo, millaisin pistein ensimmäisen osan kilpailutus voitettiin ja mikä yritys jätti leikin kesken.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 40,
+      "selected_blocks": 1,
+      "selected_source_words": 20,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jättimäisen 180 M€ tieurakan 1. osa annettiin laatuvertailun huonoimmalle – YIT:n ja Destian tarjoukset hävisivät",
+      "description": "Suomessa alkaa massiivinen Valtatie 5:n parannushanke. Tekniikka&Talous kertoo, millaisin pistein ensimmäisen osan kilpailutus voitettiin ja mikä yritys jätti leikin kesken.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Jättimäisen 180 M€ tieurakan 1. osa annettiin laatuvertailun huonoimmalle – YIT:n ja Destian tarjoukset hävisivät",
+    "description": "Suomessa alkaa massiivinen Valtatie 5:n parannushanke. Tekniikka&Talous kertoo, millaisin pistein ensimmäisen osan kilpailutus voitettiin ja mikä yritys jätti leikin kesken.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/f4ad4db8-616f-4aa7-9974-68bec7ec6a0e",
+    "published": "2026-06-05T01:32:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "3dc75329ede3491aa09cabbb85f460a0",
+    "_url_hash": "4eba7111b2615e52e50029039ca6633dc0c70c126cf8870a7753475a240147b6",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Suomessa alkaa massiivinen Valtatie 5:n parannushanke. Tekniikka&Talous kertoo, millaisin pistein ensimmäisen osan kilpailutus voitettiin ja mikä yritys jätti leikin kesken.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-05T01:43:14.195739+00:00",
+  "failure": "Lähdeaineisto on liian niukka eikä tue vähintään 250 sanan julkaistavaa uutista ilman keksittyjä yksityiskohtia.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260605T014118Z_45b9bc4c3e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka eikä tue vähintään 250 sanan julkaistavaa uutista ilman keksittyjä yksityiskohtia.\"}"
+}

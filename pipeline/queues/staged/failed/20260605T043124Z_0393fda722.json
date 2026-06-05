@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-05T04:31:24.183141+00:00",
+  "digest": "0393fda722",
+  "packet": {
+    "packet_id": "20260605T043124Z_0393fda722",
+    "created_at": "2026-06-05T04:31:24Z",
+    "headline_seed": "Printattu potilaslista löytyi kadulta – keskussairaala teki ilmoituksen tietoturvaloukkauksesta",
+    "description_seed": "Nimet ja henkilötunnukset sisältänyt lista Päijät-Hämeen keskussairaalan yhden osaston potilaista päätyi mahdollisesti sivullisten nähtäville toukokuussa.",
+    "link": "https://www.ess.fi/paikalliset/9510234",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9510234"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Printattu potilaslista löytyi kadulta – keskussairaala teki ilmoituksen tietoturvaloukkauksesta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 129,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Printattu potilaslista löytyi kadulta – keskussairaala teki ilmoituksen tietoturvaloukkauksesta",
+      "description": "Nimet ja henkilötunnukset sisältänyt lista Päijät-Hämeen keskussairaalan yhden osaston potilaista päätyi mahdollisesti sivullisten nähtäville toukokuussa.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Printattu potilaslista löytyi kadulta – keskussairaala teki ilmoituksen tietoturvaloukkauksesta",
+    "description": "Nimet ja henkilötunnukset sisältänyt lista Päijät-Hämeen keskussairaalan yhden osaston potilaista päätyi mahdollisesti sivullisten nähtäville toukokuussa.",
+    "link": "https://www.ess.fi/paikalliset/9510234",
+    "published": "2026-06-05T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "73dcfe680328b24c79b0d92fceca367a",
+    "_url_hash": "8b6ecd39fa5fb85967c0c715b95d4a350a26ab109cb2e5a858545ce8765f1ede",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSisäministeri Mari Rantanen (ps.) sanoo, että työilmapiirin ongelmat hänen johtamassaan ministeriössä selvitetään, kun toukokuussa tehdyn työsuojelutarkastuksen raportti on valmis kesäkuun lopulla.\n\n– Vakavasti tällaiset asiat otetaan. Kun raportti saadaan, niin siitä tehdään ministeriön sisällä johtopäätökset ja toimenpiteet sen perusteella.\n\nYle uutisoi eilen sisäministeriön yhdelle osastolle tehdystä työsuojelutarkastuksesta.\n\nLupa- ja valvontavirasto teki tarkastuksen toukokuun lopulla sisäministeriön työsuojeluvaltuutettujen valvontapyynnön perusteella.\n\nValvontapyynnössä monet työntekijät kertovat kokemistaan epäkohdista. He kuvailevat pitkään jatkunutta pelon ilmapiiriä, työpaikkakiusaamista sekä muita ilmapiiriongelmia.\n\nVuodenvaihteessa sisäministeriön työntekijät kertoivat painostuksesta ja vahvasta poliittisesta ohjauksesta.\n\nRantanen toisti torstaina Luxemburgissa pidetyn EU-maiden sisäasioiden neuvoston kokouksen päätteeksi, että hänen tehtävänsä sisäministeriössä on toteuttaa hallitusohjelmaa.\n\n– Ministerin täytyy siis toisinaan puuttua ministeriön valmistelutyöhön. Se sinänsä ei ole mielestäni työsuojeluasia.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-05T04:33:19.839485+00:00",
+  "failure": "Packet contains no selected source text and only a headline/description-level claim, which is insufficient for a 250+ word publication-quality article without invention.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260605T043124Z_0393fda722\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packet contains no selected source text and only a headline/description-level claim, which is insufficient for a 250+ word publication-quality article without invention.\"}"
+}
