@@ -22,6 +22,7 @@ except ImportError:  # pragma: no cover - direct script/test execution from pipe
 CONTENT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "posts")
 SITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HUGO_BIN = os.environ.get("HUGO_BIN", "/workspace/hugo")
+HUGO_BUILD_TIMEOUT_SEC = int(os.environ.get("HUGO_BUILD_TIMEOUT_SEC", "180"))
 
 TECH_CATEGORY_KEYWORDS = [
     "tekoäly", "ohjelmisto", "sovellus", "tietokone", "mobiili", "älypuhelin",
@@ -478,7 +479,7 @@ def build_site() -> tuple[bool, str]:
             cwd=SITE_DIR,
             capture_output=True,
             text=True,
-            timeout=60,
+            timeout=HUGO_BUILD_TIMEOUT_SEC,
         )
         if result.returncode == 0:
             print("[publisher] Hugo build successful")
@@ -496,7 +497,7 @@ def build_site() -> tuple[bool, str]:
                 print(f"[publisher]   {line}")
             return False, combined
     except subprocess.TimeoutExpired:
-        msg = "Hugo build timed out after 60s"
+        msg = f"Hugo build timed out after {HUGO_BUILD_TIMEOUT_SEC}s"
         print(f"[publisher] {msg}")
         return False, msg
     except FileNotFoundError:
