@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-06T03:22:13.803811+00:00",
+  "digest": "cf6320c262",
+  "packet": {
+    "packet_id": "20260606T032213Z_cf6320c262",
+    "created_at": "2026-06-06T03:22:13Z",
+    "headline_seed": "Yhdysvalloissa pörssit sukelsivat",
+    "description_seed": "Yhdysvalloissa Wall Streetin pörssit sukelsivat perjantaina.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/yhdysvalloissa-porssit-sukelsivat/9349896",
+    "source": "MTV Uutiset",
+    "source_names": [
+      "MTV Uutiset"
+    ],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/yhdysvalloissa-porssit-sukelsivat/9349896"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.53,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Yhdysvalloissa pörssit sukelsivat"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "MTV Uutiset",
+        "source_type": "research",
+        "text": "Yhdysvalloissa Wall Streetin pörssit sukelsivat perjantaina.Pääindekseistä eniten punaisella oli teknologiapainotteinen Nasdaq, joka oli pörssipäivän päätteeksi 4,2 prosenttia miinuksella. Laaja-alainen S&P 500 oli 2,6 prosentin ja teollisuusindeksi Dow Jones 1,4 prosentin laskussa.Etenkin pudotusta oli monien teknologiaosakkeiden kursseissa. Suurista puolijohdevalmistajista Nvidian osake sukelsi 6,2, AMD:n 10,9 ja Intelin 11,3 prosenttia.",
+        "word_count": 48,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Yhdysvalloissa Wall Streetin pörssit sukelsivat perjantaina.Pääindekseistä eniten punaisella oli teknologiapainotteinen Nasdaq, joka oli pörssipäivän päätteeksi 4,2 prosenttia miinuksella. Laaja-alainen S&P 500 oli 2,6 prosentin ja teollisuusindeksi Dow Jones 1,4 prosentin laskussa.Etenkin pudotusta oli monien teknologiaosakkeiden kursseissa. Suurista puolijohdevalmistajista Nvidian osake sukelsi 6,2, AMD:n 10,9 ja Intelin 11,3 prosenttia.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 54,
+      "selected_blocks": 1,
+      "selected_source_words": 48,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "MTV Uutiset",
+        "MTV Uutiset"
+      ],
+      "selected_sources": [
+        "MTV Uutiset"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Yhdysvalloissa pörssit sukelsivat",
+      "description": "Yhdysvalloissa Wall Streetin pörssit sukelsivat perjantaina.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Yhdysvalloissa pörssit sukelsivat",
+    "description": "Yhdysvalloissa Wall Streetin pörssit sukelsivat perjantaina.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/yhdysvalloissa-porssit-sukelsivat/9349896",
+    "published": "2026-06-06T03:15:38+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "5b67b0f429f82257664d807f2cad81cf",
+    "_url_hash": "3e0bf2acca9baeacb826917c7c48f88d4a6c6802104a81d8a811ea9c2630ac3a",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: MTV Uutiset]\nYhdysvalloissa Wall Streetin pörssit sukelsivat perjantaina.Pääindekseistä eniten punaisella oli teknologiapainotteinen Nasdaq, joka oli pörssipäivän päätteeksi 4,2 prosenttia miinuksella. Laaja-alainen S&P 500 oli 2,6 prosentin ja teollisuusindeksi Dow Jones 1,4 prosentin laskussa.Etenkin pudotusta oli monien teknologiaosakkeiden kursseissa. Suurista puolijohdevalmistajista Nvidian osake sukelsi 6,2, AMD:n 10,9 ja Intelin 11,3 prosenttia.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-06T03:23:15.572253+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan artikkeliin ilman täytesisältöä tai lisättyjä oletuksia.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260606T032213Z_cf6320c262\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan artikkeliin ilman täytesisältöä tai lisättyjä oletuksia.\"}"
+}
