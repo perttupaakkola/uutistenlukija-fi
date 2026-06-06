@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliarvostelut/remedy-esitteli-odotettua-control-jatko-osaa-suljettujen-ovien-takana-olimme-paikalla-eika-kotiin-ollut-kiva-palata/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
