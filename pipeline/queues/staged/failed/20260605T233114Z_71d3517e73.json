@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-05T23:31:14.605055+00:00",
+  "digest": "71d3517e73",
+  "packet": {
+    "packet_id": "20260605T233114Z_71d3517e73",
+    "created_at": "2026-06-05T23:31:14Z",
+    "headline_seed": "Kanadalaishyökkääjä Gabriel Fortier Pelicansiin",
+    "description_seed": "Pelicans ilmoitti perjantaina hankkineensa Gabriel Fortierin.",
+    "link": "https://www.jatkoaika.com/Uutiset/Kanadalaishy%C3%B6kk%C3%A4%C3%A4j%C3%A4-Gabriel-Fortier-Pelicansiin/270523",
+    "source": "Jatkoaika.com",
+    "source_names": [],
+    "source_urls": [
+      "https://www.jatkoaika.com/Uutiset/Kanadalaishy%C3%B6kk%C3%A4%C3%A4j%C3%A4-Gabriel-Fortier-Pelicansiin/270523"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kanadalaishyökkääjä Gabriel Fortier Pelicansiin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 116,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Jatkoaika.com",
+        "Jatkoaika.com"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kanadalaishyökkääjä Gabriel Fortier Pelicansiin",
+      "description": "Pelicans ilmoitti perjantaina hankkineensa Gabriel Fortierin.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kanadalaishyökkääjä Gabriel Fortier Pelicansiin",
+    "description": "Pelicans ilmoitti perjantaina hankkineensa Gabriel Fortierin.",
+    "link": "https://www.jatkoaika.com/Uutiset/Kanadalaishy%C3%B6kk%C3%A4%C3%A4j%C3%A4-Gabriel-Fortier-Pelicansiin/270523",
+    "published": "2026-06-05T19:38:20+00:00",
+    "source": "Jatkoaika.com",
+    "source_domain": "jatkoaika.com",
+    "language": "fi",
+    "fingerprint": "8aca2cef3f2efa33373cf3aad6873456",
+    "_url_hash": "ffce77784ae03caf5fee6941c8bf2f7df9b4138868464ea7e4da9bee4c717463",
+    "source_tier": 2,
+    "category_hint": "Urheilu",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: Jatkoaika.com]\nPelicansin tuorein vahvistus Gabriel Fortier on urallaan pelannut 11 NHL-ottelua ja 285 ottelua farmisarja AHL:ssä. Viime kaudella 26-vuotias hyökkääjä pelasi ensimmäistä kertaa Euroopassa, kun SHL:n Leksands IF:ssä syntyi 44 ottelussa tehot 6+10=16.\n\n– Gabriel tuo meille arvokasta kokemusta sekä AHL:stä että SHL:stä Hän on kilpailukykyinen, työteliäs ja joukkueelle sitoutunut pelaaja, jolla on vahva halu kehittyä ja ottaa seuraava askel urallaan. Uskomme, että hänen ominaisuutensa sopivat erinomaisesti Pelicansin identiteettiin ja pelitapaan.\", Pelicansin urheilutoimenjohtaja Jarkko Oikarinen Holm kommentoi uutta pelaajaansa seuran verkkosivuilla.\n\nFortier on Tampa Bay Lightningin toisen kierroksen varaus kesältä 2018 ja vuotta aiemmin hän edusti Kanadan alle 18-vuotiaiden maajoukkuetta arvostetussa Ivan Hlinkan muistoturnauksessa, joka nykyään tunnetaan nimellä Hlinka Gretzky Cup.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-05T23:33:14.379946+00:00",
+  "failure": "Lähdeaineisto puuttuu eikä paketti sisällä riittävästi varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä lisäyksiä.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260605T233114Z_71d3517e73\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu eikä paketti sisällä riittävästi varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä lisäyksiä.\"}"
+}

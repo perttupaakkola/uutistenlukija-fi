@@ -1,0 +1,193 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-05T22:22:22.479611+00:00",
+  "digest": "df75a67b53",
+  "packet": {
+    "packet_id": "20260605T222222Z_df75a67b53",
+    "created_at": "2026-06-05T22:22:22Z",
+    "headline_seed": "NASA declares MAVEN, its Mars atmosphere orbiter, dead",
+    "description_seed": "Over more than a decade at Mars, the orbiter revealed how the solar wind strips away the planet’s atmosphere — and why the world lost its water.",
+    "link": "https://www.sciencenews.org/article/nasa-maven-mars-atmosphere-dead",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Yahoo News Canada",
+      "Yahoo News Canada",
+      "Science News"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/nasa-maven-mars-atmosphere-dead"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "NASA declares MAVEN, its Mars atmosphere orbiter, dead"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "Over more than a decade at Mars, the orbiter revealed how the solar wind strips away the planet’s atmosphere — and why the world lost its water.",
+        "word_count": 27,
+        "keyword_overlap": 16,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Yahoo News Canada",
+        "source_type": "research",
+        "text": "Launched on Nov. 18, 2013, on an Atlas V rocket from Cape Canaveral Air Force Station, Florida, MAVEN arrived at Mars on Sept. 22, 2014. MAVEN was the first mission dedicated to studying the planet's upper atmosphere and its evolution. Originally designed for a one-year mission, the spacecraft operated for more than a decade beyond its planned lifespan. The purple color shows auroras across Mars' nightside as detected by the Imaging Ultraviolet Spectrograph instrument aboard NASA's MAVEN (Mars Atmosphere and Volatile EvolutioN) orbiter.",
+        "word_count": 83,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Yahoo News Canada",
+        "source_type": "research",
+        "text": "MAVEN lost contact with Earth on Dec. 6, 2025, and NASA engineers have been unable to contact it since. The spacecraft failed to reestablish communication when it passed behind Mars. According to the agency, telemetry received before the event showed all systems functioning normally. However, subsequent analysis revealed that the spacecraft entered safe mode and began rotating at an unusually high rate as it came back into Earth's view. NASA eventually concluded that the excessive rotation likely drained MAVEN's batteries, causing the communications system to lose power. MAVEN's observations gave scientists new ways to understand how the solar wind and space weather stripped away the planet's atmosphere over billions of years — transforming Mars from a potentially habitable world into the cold, dry planet seen today. It also revealed that its atmosphere was eroded more quickly during intense solar storms.",
+        "word_count": 140,
+        "keyword_overlap": 13,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "A veteran spacecraft has sniffed the Martian atmosphere for the last time. More than a decade after the MAVEN orbiter arrived at Mars and six months after it unexpectedly went quiet, NASA has officially declared the mission over. With it, NASA loses a workhorse science resource and a crucial link in the communications network between rovers on Mars and scientists on Earth. “The conclusion is that the spacecraft is not recoverable,” said project manager Mike Moreau of NASA’s Goddard Space Flight Center in Greenbelt, Md., at a June 3 news conference. “The team has really experienced the loss of a loved one with the end of the mission here.” ---",
+        "word_count": 110,
+        "keyword_overlap": 9,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Over more than a decade at Mars, the orbiter revealed how the solar wind strips away the planet’s atmosphere — and why the world lost its water.\n\nLaunched on Nov. 18, 2013, on an Atlas V rocket from Cape Canaveral Air Force Station, Florida, MAVEN arrived at Mars on Sept. 22, 2014. MAVEN was the first mission dedicated to studying the planet's upper atmosphere and its evolution. Originally designed for a one-year mission, the spacecraft operated for more than a decade beyond its planned lifespan. The purple color shows auroras across Mars' nightside as detected by the Imaging Ultraviolet Spectrograph instrument aboard NASA's MAVEN (Mars Atmosphere and Volatile EvolutioN) orbiter.\n\nMAVEN lost contact with Earth on Dec. 6, 2025, and NASA engineers have been unable to contact it since. The spacecraft failed to reestablish communication when it passed behind Mars. According to the agency, telemetry received before the event showed all systems functioning normally. However, subsequent analysis revealed that the spacecraft entered safe mode and began rotating at an unusually high rate as it came back into Earth's view. NASA eventually concluded that the excessive rotation likely drained MAVEN's batteries, causing the communications system to lose power. MAVEN's observations gave scientists new ways to understand how the solar wind and space weather stripped away the planet's atmosphere over billions of years — transforming Mars from a potentially habitable world into the cold, dry planet seen today. It also revealed that its atmosphere was eroded more quickly during intense solar storms.\n\nA veteran spacecraft has sniffed the Martian atmosphere for the last time. More than a decade after the MAVEN orbiter arrived at Mars and six months after it unexpectedly went quiet, NASA has officially declared the mission over. With it, NASA loses a workhorse science resource and a crucial link in the communications network between rovers on Mars and scientists on Earth. “The conclusion is that the spacecraft is not recoverable,” said project manager Mike Moreau of NASA’s Goddard Space Flight Center in Greenbelt, Md., at a June 3 news conference. “The team has really experienced the loss of a loved one with the end of the mission here.” ---",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 973,
+      "selected_blocks": 4,
+      "selected_source_words": 360,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "NBC News",
+        "NBC News",
+        "Yahoo News Canada",
+        "Yahoo News Canada",
+        "Yahoo News Canada",
+        "Yahoo News Canada",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Yahoo News Canada",
+        "Yahoo News Canada",
+        "Science News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "NASA declares MAVEN, its Mars atmosphere orbiter, dead",
+      "description": "Over more than a decade at Mars, the orbiter revealed how the solar wind strips away the planet’s atmosphere — and why the world lost its water.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "NASA declares MAVEN, its Mars atmosphere orbiter, dead",
+    "description": "Over more than a decade at Mars, the orbiter revealed how the solar wind strips away the planet’s atmosphere — and why the world lost its water.",
+    "link": "https://www.sciencenews.org/article/nasa-maven-mars-atmosphere-dead",
+    "published": "2026-06-05T17:06:02+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "444c610cffd4db9f82b0b40822276d10",
+    "_url_hash": "2db1c1f4c72699de84b5f835ed7c1dafde7bf7ac6db810e6a92f9caec7188872",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nA veteran spacecraft has sniffed the Martian atmosphere for the last time. More than a decade after the MAVEN orbiter arrived at Mars and six months after it unexpectedly went quiet, NASA has officially declared the mission over.\n\nWith it, NASA loses a workhorse science resource and a crucial link in the communications network between rovers on Mars and scientists on Earth.\n\n“The conclusion is that the spacecraft is not recoverable,” said project manager Mike Moreau of NASA’s Goddard Space Flight Center in Greenbelt, Md., at a June 3 news conference. “The team has really experienced the loss of a loved one with the end of the mission here.”\n\n---\n\n[Lähde: NBC News]\nAfter six months of radio silence, NASA’s Maven spacecraft at Mars has been declared dead.\n\nThe space agency confirmed Wednesday that the mission had ended after more than a decade of observations.\n\nLaunched in 2013 to study the Red Planet’s atmosphere from orbit, Maven mysteriously fell silent in early December after passing behind Mars. Data indicated the spacecraft went into a fast spin, which disrupted its orbit and drained the onboard batteries.\n\nA review board convened by NASA this year concluded that the spacecraft is useless and unable to be recovered. An investigation continues into what caused the problem.\n\nBesides studying Martian weather and observing a stray interstellar comet last year, Maven helped relay information from NASA’s Curiosity and Perseverance rovers on the surface.\n\nMaven’s lead scientist, Shannon Curry of the University of Colorado Boulder, said the spacecraft made a number of “amazing discoveries.”\n\nMaven “has truly advanced our understanding of the Martian atmosphere and evolution,” she said in a statement.\n\n---\n\n[Lähde: Yahoo News Canada]\nNASA has ended its MAVEN mission after losing contact with the spacecraft after an 11-year exploration of Mars' atmosphere and climate.\n\nNASA has officially concluded its MAVEN mission after more than 11 years orbiting Mars, marking the end of a groundbreaking effort to understand how the Red Planet lost much of its atmosphere. The space agency announced on Wednesday, June 3, that recovery efforts following an unexpected loss of contact with the spacecraft in December were unsuccessful, and that MAVEN — which stands for Mars Atmosphere and Volatile Evolution — is no longer capable of carrying out its scientific or communications duties.\n\nOne of MAVEN's final acts was to image 3I/ATLAS, the third interstellar object discovered in the solar system.\n\nLaunched on Nov. 18, 2013, on an Atlas V rocket from Cape Canaveral Air Force Station, Florida, MAVEN arrived at Mars on Sept. 22, 2014. MAVEN was the first mission dedicated to studying the planet's upper atmosphere and its evolution. Originally designed for a one-year mission, the spacecraft operated for more than a decade beyond its planned lifespan.\n\nThe purple color shows auroras across Mars' nightside as detected by the Imaging Ultraviolet Spectrograph instrument aboard NASA's MAVEN (Mars Atmosphere and Volatile EvolutioN) orbiter.\n\nMAVEN lost contact with Earth on Dec. 6, 2025, and NASA engineers have been unable to contact it since. The spacecraft failed to reestablish communication when it passed behind Mars. According to the agency, telemetry received before the event showed all systems functioning normally. However, subsequent analysis revealed that the spacecraft entered safe mode and began rotating at an unusually high rate as it came back into Earth's view. NASA eventually concluded that the excessive rotation likely drained MAVEN's batteries, causing the communications system to lose power.\n\nMAVEN's observations gave scientists new ways to understand how the solar wind and space weather stripped away the planet's atmosphere over billions of years — transforming Mars from a potentially habitable world into the cold, dry planet seen today. It also revealed that its atmosphere was eroded more quickly during intense solar storms.\n\n\"The MAVEN mission has truly advanced our understanding of the Martian atmosphere and evolution,\" said Shannon Curry, MAVEN's principal investigator and a researcher at the Laboratory for Atmospheric and Space Physics at the University of Colorado Boulder. \"Our science team i\n\n---\n\n[Lähde: CBS News]\nAs it passed behind Mars six months ago, NASA's MAVEN probe was still working normally, studying how the solar wind impacts the Martian atmosphere. But during that 20- to 30-minute pass behind the red planet, out of contact with Earth, something went wrong, and the spacecraft has not been heard from since.\n\nOn Wednesday, after concerted efforts to remotely reset the spacecraft's computer and prompt the probe to \"phone home,\" agency officials said the $582 million orbiter could not be recovered and that its extraordinarily successful mission was at an end.\n\n\"Our last successful communication with MAVEN occurred on December 6 of 2025,\" said Mike Moreau, MAVEN project manager at NASA's Goddard Space Flight Center in Maryland. \"The MAVEN spacecraft and all of the subsystems were nominal when the spacecraft entered a normally scheduled occultation where the spacecraft passed behind Mars.\"\n\n\"There were no indications of problems with the spacecraft in the week prior to the loss of signal, but when the spacecraft emerged behind Mars on December 6, the Deep Space Network did not detect a signal,\" Moreau said.\n\nCommands were sent in the blind in an attempt to force MAVEN's flight computer to restart, but to no avail.\n\n\"Unfortunately, all of these efforts to reestablish communication with MAVEN were ultimately unsuccessful, and no telemetry or signal has been received from the spacecraft since December 6,\" Moreau said.\n\nLaunched on Nov. 18, 2013, MAVEN, an acronym standing for the Mars Atmosphere and Volatile Evolution Mission, braked into orbit around Mars the following September.\n\nEquipped with a sophisticated suite of instruments, the probe was designed to study the Martian atmosphere to learn more about how it is eroded, or blown away and thinned out by particles in the solar...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-05T22:24:33.351918+00:00",
+  "failure": "content too short: 243 words",
+  "payload": {
+    "packet_id": "20260605T222222Z_df75a67b53",
+    "title": "NASA päätti MAVEN-luotaimen Mars-tehtävän",
+    "summary": "NASA on julistanut Marsin kaasukehää tutkineen MAVEN-luotaimen menetetyksi, kun yhteys siihen katkesi joulukuussa 2025 eikä sitä saatu enää palautettua. Yli vuosikymmenen kestänyt tehtävä tuotti keskeistä tietoa siitä, miten aurinkotuuli ja avaruussää ovat kuluttaneet Marsin kaasukehää.",
+    "content": "NASA on virallisesti päättänyt MAVEN-luotaimen tehtävän Marsissa yli kymmenen vuotta sen jälkeen, kun alus saapui tutkimaan planeetan yläkaasukehää ja sen kehitystä. Yhteys luotaimeen katkesi 6. joulukuuta 2025, eikä insinööritiimi onnistunut palauttamaan sitä. Päätös merkitsee sekä pitkäikäisen tiedetehtävän päättymistä että yhden Marsin ja Maan välisen viestintäyhteyden menettämistä.\n\n## Yhteys katkesi Marsin takana\n\nMAVEN menetti yhteyden Maahan, kun se kulki Marsin taakse. Ennen tapahtumaa saadun telemetrian mukaan luotaimen järjestelmät toimivat normaalisti. Myöhempi analyysi kuitenkin osoitti, että alus oli siirtynyt turvatilaan ja alkanut pyöriä poikkeuksellisen nopeasti palatessaan Maan näkyviin.\n\nNASA päätyi siihen, että voimakas pyöriminen todennäköisesti tyhjensi MAVENin akut. Tämän seurauksena viestintäjärjestelmä menetti virtansa. NASA:n Goddardin avaruuslentokeskuksen projektipäällikkö Mike Moreau sanoi 3. kesäkuuta pidetyssä tiedotustilaisuudessa, ettei alusta pidetä enää palautettavissa olevana.\n\n## Yli vuosikymmen Marsin ilmakehän tutkijana\n\nMAVEN laukaistiin 18. marraskuuta 2013 Atlas V -raketilla Cape Canaveralin lentotukikohdasta Floridasta. Se saapui Marsiin 22. syyskuuta 2014. Tehtävä oli ensimmäinen, joka oli omistettu Marsin yläkaasukehän ja sen kehityksen tutkimiselle.\n\nAlun perin MAVEN suunniteltiin yhden vuoden mittaiseksi tehtäväksi, mutta se jatkoi toimintaansa yli vuosikymmenen suunniteltua pidempään. Sen havainnot auttoivat tutkijoita ymmärtämään, miten aurinkotuuli ja avaruussää ovat miljardien vuosien aikana riistäneet Marsilta kaasukehää. Tämä prosessi on osaltaan selittänyt, miten mahdollisesti elinkelpoisemmasta maailmasta tuli nykyinen kylmä ja kuiva planeetta.\n\n## Havainnot ja menetetty yhteysverkko\n\nLuotain osoitti myös, että Marsin kaasukehä kului nopeammin voimakkaiden aurinkomyrskyjen aikana. Lisäksi MAVEN havaitsi Marsin yöpuolen revontulia Imaging Ultraviolet Spectrograph -instrumentillaan. Tehtävän päättyessä NASA menettää pitkäikäisen tiedetyökalun sekä tärkeän osan Mars-kulkijoiden ja Maassa työskentelevien tutkijoiden välisestä viestintäverkosta.",
+    "category": "Tiede",
+    "tags": [
+      "NASA",
+      "MAVEN",
+      "Mars",
+      "avaruustutkimus",
+      "kaasukehä"
+    ],
+    "summary_bullets": [
+      "NASA on päättänyt MAVEN-luotaimen Mars-tehtävän yhteyden katkettua joulukuussa 2025.",
+      "Luotain tutki yli vuosikymmenen ajan Marsin yläkaasukehää ja sen kehitystä.",
+      "Havainnot auttoivat selittämään, miten aurinkotuuli ja avaruussää kuluttivat Marsin kaasukehää."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Tiedot yhteyden katkeamisesta, tehtävän aikajanasta, päätöksen perusteluista ja MAVENin tieteellisestä merkityksestä on pidetty lähdeaineiston rajoissa."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260605T222222Z_df75a67b53\",\n  \"title\": \"NASA päätti MAVEN-luotaimen Mars-tehtävän\",\n  \"summary\": \"NASA on julistanut Marsin kaasukehää tutkineen MAVEN-luotaimen menetetyksi, kun yhteys siihen katkesi joulukuussa 2025 eikä sitä saatu enää palautettua. Yli vuosikymmenen kestänyt tehtävä tuotti keskeistä tietoa siitä, miten aurinkotuuli ja avaruussää ovat kuluttaneet Marsin kaasukehää.\",\n  \"content\": \"NASA on virallisesti päättänyt MAVEN-luotaimen tehtävän Marsissa yli kymmenen vuotta sen jälkeen, kun alus saapui tutkimaan planeetan yläkaasukehää ja sen kehitystä. Yhteys luotaimeen katkesi 6. joulukuuta 2025, eikä insinööritiimi onnistunut palauttamaan sitä. Päätös merkitsee sekä pitkäikäisen tiedetehtävän päättymistä että yhden Marsin ja Maan välisen viestintäyhteyden menettämistä.\\n\\n## Yhteys katkesi Marsin takana\\n\\nMAVEN menetti yhteyden Maahan, kun se kulki Marsin taakse. Ennen tapahtumaa saadun telemetrian mukaan luotaimen järjestelmät toimivat normaalisti. Myöhempi analyysi kuitenkin osoitti, että alus oli siirtynyt turvatilaan ja alkanut pyöriä poikkeuksellisen nopeasti palatessaan Maan näkyviin.\\n\\nNASA päätyi siihen, että voimakas pyöriminen todennäköisesti tyhjensi MAVENin akut. Tämän seurauksena viestintäjärjestelmä menetti virtansa. NASA:n Goddardin avaruuslentokeskuksen projektipäällikkö Mike Moreau sanoi 3. kesäkuuta pidetyssä tiedotustilaisuudessa, ettei alusta pidetä enää palautettavissa olevana.\\n\\n## Yli vuosikymmen Marsin ilmakehän tutkijana\\n\\nMAVEN laukaistiin 18. marraskuuta 2013 Atlas V -raketilla Cape Canaveralin lentotukikohdasta Floridasta. Se saapui Marsiin 22. syyskuuta 2014. Tehtävä oli ensimmäinen, joka oli omistettu Marsin yläkaasukehän ja sen kehityksen tutkimiselle.\\n\\nAlun perin MAVEN suunniteltiin yhden vuoden mittaiseksi tehtäväksi, mutta se jatkoi toimintaansa yli vuosikymmenen suunniteltua pidempään. Sen havainnot auttoivat tutkijoita ymmärtämään, miten aurinkotuuli ja avaruussää ovat miljardien vuosien aikana riistäneet Marsilta kaasukehää. Tämä prosessi on osaltaan selittänyt, miten mahdollisesti elinkelpoisemmasta maailmasta tuli nykyinen kylmä ja kuiva planeetta.\\n\\n## Havainnot ja menetetty yhteysverkko\\n\\nLuotain osoitti myös, että Marsin kaasukehä kului nopeammin voimakkaiden aurinkomyrskyjen aikana. Lisäksi MAVEN havaitsi Marsin yöpuolen revontulia Imaging Ultraviolet Spectrograph -instrumentillaan. Tehtävän päättyessä NASA menettää pitkäikäisen tiedetyökalun sekä tärkeän osan Mars-kulkijoiden ja Maassa työskentelevien tutkijoiden välisestä viestintäverkosta.\",\n  \"category\": \"Tiede\",\n  \"tags\": [\n    \"NASA\",\n    \"MAVEN\",\n    \"Mars\",\n    \"avaruustutkimus\",\n    \"kaasukehä\"\n  ],\n  \"summary_bullets\": [\n    \"NASA on päättänyt MAVEN-luotaimen Mars-tehtävän yhteyden katkettua joulukuussa 2025.\",\n    \"Luotain tutki yli vuosikymmenen ajan Marsin yläkaasukehää ja sen kehitystä.\",\n    \"Havainnot auttoivat selittämään, miten aurinkotuuli ja avaruussää kuluttivat Marsin kaasukehää.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään lähdeblokkiin. Tiedot yhteyden katkeamisesta, tehtävän aikajanasta, päätöksen perusteluista ja MAVENin tieteellisestä merkityksestä on pidetty lähdeaineiston rajoissa.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260605T222222Z_df75a67b53",
+    "category": "Tiede",
+    "selected_source_words": 360,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 243,
+    "issues": [
+      "content too short: 243 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "NASA päätti MAVEN-luotaimen Mars-tehtävän",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-05T22:24:33.351639+00:00",
+    "repair_trigger": "pre_repair_word_count=243; selected_source_words=360; selected_source_blocks=4",
+    "pre_repair_word_count": 243,
+    "pre_repair_lead_word_count": 46,
+    "post_repair_word_count": 243,
+    "post_repair_lead_word_count": 46,
+    "selected_source_words_at_repair": 360,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 360,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 243 words",
+    "source_block_ids_used_for_repair": [
+      "1:Science News:5403e2235d",
+      "2:Yahoo News Canada:291c4c7a78",
+      "3:Yahoo News Canada:ea571238c6",
+      "4:Science News:d332bfc396"
+    ],
+    "final_issues": [
+      "content too short: 243 words"
+    ],
+    "recovered": false
+  }
+}
