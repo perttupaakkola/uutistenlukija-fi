@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/jun/06/us-says-iran-radar-sites-struck-and-drones-intercepted-in-latest-threat-to-fragile-ceasefire"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 

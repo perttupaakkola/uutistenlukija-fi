@@ -1,0 +1,210 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-06T12:11:13.320824+00:00",
+  "digest": "ae7e74652f",
+  "packet": {
+    "packet_id": "20260606T121113Z_ae7e74652f",
+    "created_at": "2026-06-06T12:11:13Z",
+    "headline_seed": "Lebanon says three soldiers killed in Israeli attack on car",
+    "description_seed": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
+    "link": "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lebanon says three soldiers killed in Israeli attack on car"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
+        "word_count": 15,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The strike happened on a road close to the village of Kfar Tebnit, around four miles north of the Litani River and close to the city of Nabatieh, an area which has seen intense fighting and displacement in recent months. The Israeli military has previously issued sweeping evacuation orders for the region as its forces continue to push north, supported by regular air strikes against Hezbollah targets. The IDF said the vehicle it struck on Saturday was travelling in an \"active and evacuated combat zone\" where it believes Hezbollah has operated from. A statement said troop movements in the area require coordination with the IDF, and repeated that its forces \"are operating against the Hezbollah terrorist organisation, not against the Lebanese Army\". It said its initial investigation confirmed three soldiers were believed to be in the vehicle.",
+        "word_count": 137,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The Israel Defense Forces (IDF) says it has launched an investigation after confirming it attacked a vehicle carrying Lebanese soldiers in southern Lebanon on Saturday morning. The Lebanese Army said two officers and a soldier were killed in the strike on a car, which it described as an \"aggressive and barbaric raid\". The IDF said the vehicle was \"moving suspiciously towards forces\" and gunfire had been reported in the area. Israel has been fighting Lebanon-based Hezbollah since March, primarily in southern Lebanon, from where the armed group has launched rocket and drone attacks. It is not in direct conflict with the Lebanese government, which is opposed to Hezbollah and has sought to mediate a ceasefire.",
+        "word_count": 115,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The Lebanese Army has reacted furiously to the attack, accusing Israel of \"brutal, deliberate and repeated aggression\". It shared images of the burnt out wreckage of a car on a road outside the village. News of the attack comes after Hezbollah's leadership rejected efforts to revive a US-backed ceasefire agreed between Israel and Lebanon following talks which did not involve the Iran-backed group. That agreement stipulated Israel would not attack Hezbollah positions in the capital Beirut if the group did not attack Israel, as well as making provisions for \"pilot\" security zones inside southern Lebanon from which the group would be banned from operating. Hezbollah's leader Naim Qassem rejected the deal, calling talks between Lebanon and Israel \"futile\".",
+        "word_count": 118,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.\n\nThe strike happened on a road close to the village of Kfar Tebnit, around four miles north of the Litani River and close to the city of Nabatieh, an area which has seen intense fighting and displacement in recent months. The Israeli military has previously issued sweeping evacuation orders for the region as its forces continue to push north, supported by regular air strikes against Hezbollah targets. The IDF said the vehicle it struck on Saturday was travelling in an \"active and evacuated combat zone\" where it believes Hezbollah has operated from. A statement said troop movements in the area require coordination with the IDF, and repeated that its forces \"are operating against the Hezbollah terrorist organisation, not against the Lebanese Army\". It said its initial investigation confirmed three soldiers were believed to be in the vehicle.\n\nThe Israel Defense Forces (IDF) says it has launched an investigation after confirming it attacked a vehicle carrying Lebanese soldiers in southern Lebanon on Saturday morning. The Lebanese Army said two officers and a soldier were killed in the strike on a car, which it described as an \"aggressive and barbaric raid\". The IDF said the vehicle was \"moving suspiciously towards forces\" and gunfire had been reported in the area. Israel has been fighting Lebanon-based Hezbollah since March, primarily in southern Lebanon, from where the armed group has launched rocket and drone attacks. It is not in direct conflict with the Lebanese government, which is opposed to Hezbollah and has sought to mediate a ceasefire.\n\nThe Lebanese Army has reacted furiously to the attack, accusing Israel of \"brutal, deliberate and repeated aggression\". It shared images of the burnt out wreckage of a car on a road outside the village. News of the attack comes after Hezbollah's leadership rejected efforts to revive a US-backed ceasefire agreed between Israel and Lebanon following talks which did not involve the Iran-backed group. That agreement stipulated Israel would not attack Hezbollah positions in the capital Beirut if the group did not attack Israel, as well as making provisions for \"pilot\" security zones inside southern Lebanon from which the group would be banned from operating. Hezbollah's leader Naim Qassem rejected the deal, calling talks between Lebanon and Israel \"futile\".",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 410,
+      "selected_blocks": 4,
+      "selected_source_words": 385,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lebanon says three soldiers killed in Israeli attack on car",
+      "description": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lebanon says three soldiers killed in Israeli attack on car",
+    "description": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.",
+    "link": "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-06T10:57:28+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "d07b914bb77bd8b1bb5981d0e617cea2",
+    "_url_hash": "df21562ccec17383e1a6d7b8c41a998b4b195483278607c7be45543bbfd7f4cf",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe Israel Defense Forces (IDF) says it has launched an investigation after confirming it attacked a vehicle carrying Lebanese soldiers in southern Lebanon on Saturday morning.\n\nThe Lebanese Army said two officers and a soldier were killed in the strike on a car, which it described as an \"aggressive and barbaric raid\". The IDF said the vehicle was \"moving suspiciously towards forces\" and gunfire had been reported in the area.\n\nIsrael has been fighting Lebanon-based Hezbollah since March, primarily in southern Lebanon, from where the armed group has launched rocket and drone attacks.\n\nIt is not in direct conflict with the Lebanese government, which is opposed to Hezbollah and has sought to mediate a ceasefire.\n\nThe strike happened on a road close to the village of Kfar Tebnit, around four miles north of the Litani River and close to the city of Nabatieh, an area which has seen intense fighting and displacement in recent months.\n\nThe Israeli military has previously issued sweeping evacuation orders for the region as its forces continue to push north, supported by regular air strikes against Hezbollah targets.\n\nThe IDF said the vehicle it struck on Saturday was travelling in an \"active and evacuated combat zone\" where it believes Hezbollah has operated from.\n\nA statement said troop movements in the area require coordination with the IDF, and repeated that its forces \"are operating against the Hezbollah terrorist organisation, not against the Lebanese Army\".\n\nIt said its initial investigation confirmed three soldiers were believed to be in the vehicle.\n\nThe Lebanese Army has reacted furiously to the attack, accusing Israel of \"brutal, deliberate and repeated aggression\".\n\nIt shared images of the burnt out wreckage of a car on a road outside the village.\n\nNews of the attack comes after Hezbollah's leadership rejected efforts to revive a US-backed ceasefire agreed between Israel and Lebanon following talks which did not involve the Iran-backed group.\n\nThat agreement stipulated Israel would not attack Hezbollah positions in the capital Beirut if the group did not attack Israel, as well as making provisions for \"pilot\" security zones inside southern Lebanon from which the group would be banned from operating.\n\nHezbollah's leader Naim Qassem rejected the deal, calling talks between Lebanon and Israel \"futile\".\n\nLebanon's government is opposed to Hezbollah but wants to end the fighting on its territory, which has previously involved major air strikes on its capital ",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-06T12:14:24.101794+00:00",
+  "payload": {
+    "packet_id": "20260606T121113Z_ae7e74652f",
+    "title": "Libanonin armeija: Kolme sotilasta kuoli Israelin iskussa Etelä-Libanonissa",
+    "summary": "Libanonin armeijan mukaan kaksi upseeria ja yksi sotilas kuoli Israelin iskussa autoon Etelä-Libanonissa. Israelin asevoimat kertoo tutkivansa tapausta ja sanoo iskeneensä ajoneuvoon aktiivisella taistelualueella.",
+    "content": "Libanonin armeija kertoo kolmen sotilaansa kuolleen Israelin iskussa autoon Etelä-Libanonissa lauantaiaamuna. Israelin asevoimat on vahvistanut iskeneensä ajoneuvoon, jossa sen alustavan selvityksen mukaan oli kolme sotilasta, ja ilmoittaa tutkivansa tapahtunutta Etelä-Libanonissa.\n\n## Isku tapahtui Nabatiehin lähellä\n\nIsku osui tielle Kfar Tebnitin kylän lähellä, noin neljä mailia Litani-joesta pohjoiseen ja lähellä Nabatiehin kaupunkia. Alueella on viime kuukausina nähty kovia taisteluja ja väestön pakenemista.\n\nLibanonin armeijan mukaan iskussa kuoli kaksi upseeria ja yksi sotilas. Armeija kuvasi hyökkäystä jyrkästi ja syytti Israelia raa'asta, tahallisesta ja toistuvasta aggressiosta. Se julkaisi myös kuvia palaneesta autonromusta kylän ulkopuolella kulkevalla tiellä.\n\nIsraelilaisarmeijan mukaan ajoneuvo liikkui epäilyttävästi kohti sen joukkoja, ja alueella oli raportoitu tulitusta. Israelin asevoimat sanoo, että auto oli aktiivisella ja evakuoidulla taistelualueella, jossa se uskoo Hizbollahin toimineen. Armeijan mukaan joukkojen liikkeet alueella edellyttävät koordinointia Israelin asevoimien kanssa.\n\n## Taustalla Israelin ja Hizbollahin taistelut\n\nIsrael on taistellut Libanonissa toimivaa Hizbollahia vastaan maaliskuusta lähtien, etenkin Etelä-Libanonissa. Hizbollah on tehnyt alueelta raketti- ja drooni-iskuja Israeliin. Israel ei ole suorassa konfliktissa Libanonin hallituksen kanssa, joka vastustaa Hizbollahia ja on pyrkinyt välittämään tulitaukoa.\n\nIsraelin asevoimat korosti lausunnossaan toimivansa Hizbollahia eikä Libanonin armeijaa vastaan. Se on aiemmin antanut laajoja evakuointimääräyksiä alueelle ja jatkanut etenemistään pohjoiseen ilmaiskujen tukemana Hizbollahin kohteita vastaan.\n\n## Tulitaukoyritys on vaikeuksissa\n\nTapaus sattui tilanteessa, jossa Hizbollahin johto on torjunut yritykset elvyttää Yhdysvaltojen tukemaa Israelin ja Libanonin välistä tulitaukosopimusta. Sopimus oli sovittu aiempien neuvottelujen jälkeen ilman Iranin tukeman Hizbollahin osallistumista.\n\nSopimuksen mukaan Israel ei iskisi Hizbollahin kohteisiin Beirutissa, jos Hizbollah ei hyökkäisi Israeliin. Siihen sisältyi myös järjestelyjä Etelä-Libanonin turvallisuusvyöhykkeistä, joilla Hizbollahin toiminta kiellettäisiin. Hizbollahin johtaja Naim Qassem on hylännyt sopimuksen ja kuvannut Libanonin ja Israelin välisiä keskusteluja hyödyttömiksi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Libanon",
+      "Israel",
+      "Hizbollah",
+      "Etelä-Libanon",
+      "Nabatieh"
+    ],
+    "summary_bullets": [
+      "Libanonin armeijan mukaan kaksi upseeria ja yksi sotilas kuoli Israelin iskussa autoon.",
+      "Israelin asevoimat kertoo tutkivansa tapausta ja sanoo ajoneuvon liikkuneen aktiivisella taistelualueella.",
+      "Isku tapahtui Kfar Tebnitin kylän lähellä alueella, jossa Israel taistelee Hizbollahia vastaan."
+    ],
+    "content_type": "news_article",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Israelin ja Libanonin armeijoiden väitteet on erotettu toisistaan, eikä vahvistamattomia lisätietoja ole lisätty."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260606T121113Z_ae7e74652f\",\n  \"title\": \"Libanonin armeija: Kolme sotilasta kuoli Israelin iskussa Etelä-Libanonissa\",\n  \"summary\": \"Libanonin armeijan mukaan kaksi upseeria ja yksi sotilas kuoli Israelin iskussa autoon Etelä-Libanonissa. Israelin asevoimat kertoo tutkivansa tapausta ja sanoo iskeneensä ajoneuvoon aktiivisella taistelualueella.\",\n  \"content\": \"Libanonin armeija kertoo kolmen sotilaansa kuolleen Israelin iskussa autoon Etelä-Libanonissa lauantaiaamuna. Israelin asevoimat on vahvistanut iskeneensä ajoneuvoon, jossa sen alustavan selvityksen mukaan oli kolme sotilasta, ja ilmoittaa tutkivansa tapahtunutta Etelä-Libanonissa.\\n\\n## Isku tapahtui Nabatiehin lähellä\\n\\nIsku osui tielle Kfar Tebnitin kylän lähellä, noin neljä mailia Litani-joesta pohjoiseen ja lähellä Nabatiehin kaupunkia. Alueella on viime kuukausina nähty kovia taisteluja ja väestön pakenemista.\\n\\nLibanonin armeijan mukaan iskussa kuoli kaksi upseeria ja yksi sotilas. Armeija kuvasi hyökkäystä jyrkästi ja syytti Israelia raa'asta, tahallisesta ja toistuvasta aggressiosta. Se julkaisi myös kuvia palaneesta autonromusta kylän ulkopuolella kulkevalla tiellä.\\n\\nIsraelilaisarmeijan mukaan ajoneuvo liikkui epäilyttävästi kohti sen joukkoja, ja alueella oli raportoitu tulitusta. Israelin asevoimat sanoo, että auto oli aktiivisella ja evakuoidulla taistelualueella, jossa se uskoo Hizbollahin toimineen. Armeijan mukaan joukkojen liikkeet alueella edellyttävät koordinointia Israelin asevoimien kanssa.\\n\\n## Taustalla Israelin ja Hizbollahin taistelut\\n\\nIsrael on taistellut Libanonissa toimivaa Hizbollahia vastaan maaliskuusta lähtien, etenkin Etelä-Libanonissa. Hizbollah on tehnyt alueelta raketti- ja drooni-iskuja Israeliin. Israel ei ole suorassa konfliktissa Libanonin hallituksen kanssa, joka vastustaa Hizbollahia ja on pyrkinyt välittämään tulitaukoa.\\n\\nIsraelin asevoimat korosti lausunnossaan toimivansa Hizbollahia eikä Libanonin armeijaa vastaan. Se on aiemmin antanut laajoja evakuointimääräyksiä alueelle ja jatkanut etenemistään pohjoiseen ilmaiskujen tukemana Hizbollahin kohteita vastaan.\\n\\n## Tulitaukoyritys on vaikeuksissa\\n\\nTapaus sattui tilanteessa, jossa Hizbollahin johto on torjunut yritykset elvyttää Yhdysvaltojen tukemaa Israelin ja Libanonin välistä tulitaukosopimusta. Sopimus oli sovittu aiempien neuvottelujen jälkeen ilman Iranin tukeman Hizbollahin osallistumista.\\n\\nSopimuksen mukaan Israel ei iskisi Hizbollahin kohteisiin Beirutissa, jos Hizbollah ei hyökkäisi Israeliin. Siihen sisältyi myös järjestelyjä Etelä-Libanonin turvallisuusvyöhykkeistä, joilla Hizbollahin toiminta kiellettäisiin. Hizbollahin johtaja Naim Qassem on hylännyt sopimuksen ja kuvannut Libanonin ja Israelin välisiä keskusteluja hyödyttömiksi.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Libanon\",\n    \"Israel\",\n    \"Hizbollah\",\n    \"Etelä-Libanon\",\n    \"Nabatieh\"\n  ],\n  \"summary_bullets\": [\n    \"Libanonin armeijan mukaan kaksi upseeria ja yksi sotilas kuoli Israelin iskussa autoon.\",\n    \"Israelin asevoimat kertoo tutkivansa tapausta ja sanoo ajoneuvon liikkuneen aktiivisella taistelualueella.\",\n    \"Isku tapahtui Kfar Tebnitin kylän lähellä alueella, jossa Israel taistelee Hizbollahia vastaan.\"\n  ],\n  \"content_type\": \"news_article\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu annettuun lähdepakettiin. Israelin ja Libanonin armeijoiden väitteet on erotettu toisistaan, eikä vahvistamattomia lisätietoja ole lisätty.\"\n}",
+  "article": {
+    "title": "Libanonin armeija: Kolme sotilasta kuoli Israelin iskussa Etelä-Libanonissa",
+    "description": "Libanonin armeijan mukaan kaksi upseeria ja yksi sotilas kuoli Israelin iskussa autoon Etelä-Libanonissa. Israelin asevoimat kertoo tutkivansa tapausta ja sanoo iskeneensä ajoneuvoon aktiivisella taistelualueella.",
+    "link": "https://www.bbc.com/news/articles/cj0g8jymg92o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-06T10:57:28+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "d07b914bb77bd8b1bb5981d0e617cea2",
+    "_url_hash": "df21562ccec17383e1a6d7b8c41a998b4b195483278607c7be45543bbfd7f4cf",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe Israel Defense Forces (IDF) says it has launched an investigation after confirming it attacked a vehicle carrying Lebanese soldiers in southern Lebanon on Saturday morning.\n\nThe Lebanese Army said two officers and a soldier were killed in the strike on a car, which it described as an \"aggressive and barbaric raid\". The IDF said the vehicle was \"moving suspiciously towards forces\" and gunfire had been reported in the area.\n\nIsrael has been fighting Lebanon-based Hezbollah since March, primarily in southern Lebanon, from where the armed group has launched rocket and drone attacks.\n\nIt is not in direct conflict with the Lebanese government, which is opposed to Hezbollah and has sought to mediate a ceasefire.\n\nThe strike happened on a road close to the village of Kfar Tebnit, around four miles north of the Litani River and close to the city of Nabatieh, an area which has seen intense fighting and displacement in recent months.\n\nThe Israeli military has previously issued sweeping evacuation orders for the region as its forces continue to push north, supported by regular air strikes against Hezbollah targets.\n\nThe IDF said the vehicle it struck on Saturday was travelling in an \"active and evacuated combat zone\" where it believes Hezbollah has operated from.\n\nA statement said troop movements in the area require coordination with the IDF, and repeated that its forces \"are operating against the Hezbollah terrorist organisation, not against the Lebanese Army\".\n\nIt said its initial investigation confirmed three soldiers were believed to be in the vehicle.\n\nThe Lebanese Army has reacted furiously to the attack, accusing Israel of \"brutal, deliberate and repeated aggression\".\n\nIt shared images of the burnt out wreckage of a car on a road outside the village.\n\nNews of the attack comes after Hezbollah's leadership rejected efforts to revive a US-backed ceasefire agreed between Israel and Lebanon following talks which did not involve the Iran-backed group.\n\nThat agreement stipulated Israel would not attack Hezbollah positions in the capital Beirut if the group did not attack Israel, as well as making provisions for \"pilot\" security zones inside southern Lebanon from which the group would be banned from operating.\n\nHezbollah's leader Naim Qassem rejected the deal, calling talks between Lebanon and Israel \"futile\".\n\nLebanon's government is opposed to Hezbollah but wants to end the fighting on its territory, which has previously involved major air strikes on its capital ",
+    "research_source": "multi",
+    "summary": "Libanonin armeijan mukaan kaksi upseeria ja yksi sotilas kuoli Israelin iskussa autoon Etelä-Libanonissa. Israelin asevoimat kertoo tutkivansa tapausta ja sanoo iskeneensä ajoneuvoon aktiivisella taistelualueella.",
+    "content": "Libanonin armeija kertoo kolmen sotilaansa kuolleen Israelin iskussa autoon Etelä-Libanonissa lauantaiaamuna. Israelin asevoimat on vahvistanut iskeneensä ajoneuvoon, jossa sen alustavan selvityksen mukaan oli kolme sotilasta, ja ilmoittaa tutkivansa tapahtunutta Etelä-Libanonissa.\n\n## Isku tapahtui Nabatiehin lähellä\n\nIsku osui tielle Kfar Tebnitin kylän lähellä, noin neljä mailia Litani-joesta pohjoiseen ja lähellä Nabatiehin kaupunkia. Alueella on viime kuukausina nähty kovia taisteluja ja väestön pakenemista.\n\nLibanonin armeijan mukaan iskussa kuoli kaksi upseeria ja yksi sotilas. Armeija kuvasi hyökkäystä jyrkästi ja syytti Israelia raa'asta, tahallisesta ja toistuvasta aggressiosta. Se julkaisi myös kuvia palaneesta autonromusta kylän ulkopuolella kulkevalla tiellä.\n\nIsraelilaisarmeijan mukaan ajoneuvo liikkui epäilyttävästi kohti sen joukkoja, ja alueella oli raportoitu tulitusta. Israelin asevoimat sanoo, että auto oli aktiivisella ja evakuoidulla taistelualueella, jossa se uskoo Hizbollahin toimineen. Armeijan mukaan joukkojen liikkeet alueella edellyttävät koordinointia Israelin asevoimien kanssa.\n\n## Taustalla Israelin ja Hizbollahin taistelut\n\nIsrael on taistellut Libanonissa toimivaa Hizbollahia vastaan maaliskuusta lähtien, etenkin Etelä-Libanonissa. Hizbollah on tehnyt alueelta raketti- ja drooni-iskuja Israeliin. Israel ei ole suorassa konfliktissa Libanonin hallituksen kanssa, joka vastustaa Hizbollahia ja on pyrkinyt välittämään tulitaukoa.\n\nIsraelin asevoimat korosti lausunnossaan toimivansa Hizbollahia eikä Libanonin armeijaa vastaan. Se on aiemmin antanut laajoja evakuointimääräyksiä alueelle ja jatkanut etenemistään pohjoiseen ilmaiskujen tukemana Hizbollahin kohteita vastaan.\n\n## Tulitaukoyritys on vaikeuksissa\n\nTapaus sattui tilanteessa, jossa Hizbollahin johto on torjunut yritykset elvyttää Yhdysvaltojen tukemaa Israelin ja Libanonin välistä tulitaukosopimusta. Sopimus oli sovittu aiempien neuvottelujen jälkeen ilman Iranin tukeman Hizbollahin osallistumista.\n\nSopimuksen mukaan Israel ei iskisi Hizbollahin kohteisiin Beirutissa, jos Hizbollah ei hyökkäisi Israeliin. Siihen sisältyi myös järjestelyjä Etelä-Libanonin turvallisuusvyöhykkeistä, joilla Hizbollahin toiminta kiellettäisiin. Hizbollahin johtaja Naim Qassem on hylännyt sopimuksen ja kuvannut Libanonin ja Israelin välisiä keskusteluja hyödyttömiksi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "libanon",
+      "israel",
+      "hizbollah",
+      "etelä-libanon",
+      "nabatieh"
+    ],
+    "summary_bullets": [
+      "Libanonin armeijan mukaan kaksi upseeria ja yksi sotilas kuoli Israelin iskussa autoon.",
+      "Israelin asevoimat kertoo tutkivansa tapausta ja sanoo ajoneuvon liikkuneen aktiivisella taistelualueella.",
+      "Isku tapahtui Kfar Tebnitin kylän lähellä alueella, jossa Israel taistelee Hizbollahia vastaan."
+    ],
+    "key_points": [
+      "Libanonin armeijan mukaan kaksi upseeria ja yksi sotilas kuoli Israelin iskussa autoon.",
+      "Israelin asevoimat kertoo tutkivansa tapausta ja sanoo ajoneuvon liikkuneen aktiivisella taistelualueella.",
+      "Isku tapahtui Kfar Tebnitin kylän lähellä alueella, jossa Israel taistelee Hizbollahia vastaan."
+    ],
+    "content_type": "news_article",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Israelin ja Libanonin armeijoiden väitteet on erotettu toisistaan, eikä vahvistamattomia lisätietoja ole lisätty.",
+    "source_text": "The Israeli military is investigating the incident in south Lebanon, where it is fighting Hezbollah.\n\nThe strike happened on a road close to the village of Kfar Tebnit, around four miles north of the Litani River and close to the city of Nabatieh, an area which has seen intense fighting and displacement in recent months. The Israeli military has previously issued sweeping evacuation orders for the region as its forces continue to push north, supported by regular air strikes against Hezbollah targets. The IDF said the vehicle it struck on Saturday was travelling in an \"active and evacuated combat zone\" where it believes Hezbollah has operated from. A statement said troop movements in the area require coordination with the IDF, and repeated that its forces \"are operating against the Hezbollah terrorist organisation, not against the Lebanese Army\". It said its initial investigation confirmed three soldiers were believed to be in the vehicle.\n\nThe Israel Defense Forces (IDF) says it has launched an investigation after confirming it attacked a vehicle carrying Lebanese soldiers in southern Lebanon on Saturday morning. The Lebanese Army said two officers and a soldier were killed in the strike on a car, which it described as an \"aggressive and barbaric raid\". The IDF said the vehicle was \"moving suspiciously towards forces\" and gunfire had been reported in the area. Israel has been fighting Lebanon-based Hezbollah since March, primarily in southern Lebanon, from where the armed group has launched rocket and drone attacks. It is not in direct conflict with the Lebanese government, which is opposed to Hezbollah and has sought to mediate a ceasefire.\n\nThe Lebanese Army has reacted furiously to the attack, accusing Israel of \"brutal, deliberate and repeated aggression\". It shared images of the burnt out wreckage of a car on a road outside the village. News of the attack comes after Hezbollah's leadership rejected efforts to revive a US-backed ceasefire agreed between Israel and Lebanon following talks which did not involve the Iran-backed group. That agreement stipulated Israel would not attack Hezbollah positions in the capital Beirut if the group did not attack Israel, as well as making provisions for \"pilot\" security zones inside southern Lebanon from which the group would be banned from operating. Hezbollah's leader Naim Qassem rejected the deal, calling talks between Lebanon and Israel \"futile\".",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260606T121113Z_ae7e74652f",
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image": "/images/articles/libanonin-armeija-kolme-sotilasta-kuoli-israelin-iskussa-ete-hero.jpg",
+    "image_thumb": "/images/articles/libanonin-armeija-kolme-sotilasta-kuoli-israelin-iskussa-ete-thumb.jpg",
+    "image_alt": "Libanonin armeija: Kolme sotilasta kuoli Israelin iskussa Etelä-Libanonissa",
+    "image_credit": "Photo by Imprensa Agruban on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/soldiers-in-armored-vehicle-watching-outdoor-training-33353697/",
+    "image_caption": "",
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIGBP/EACIQAAIBAwQCAwAAAAAAAAAAAAECAwARIQQFEjETQVKB4f/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAFBERL/2gAMAwEAAhEDEQA/AJvZwp18fOOORM3V+j+1TSzxKpRdv0wA+TgW+qjkYrZhgqafl5JOZGbe80PqMcVH3B1fWSMioov0nVFZr0Ukf//Z"
+  },
+  "image_enriched_at": "2026-06-06T12:18:06.745326+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/libanonin-armeija-kolme-sotilasta-kuoli-israelin-iskussa-ete-hero.jpg",
+    "image_thumb": "/images/articles/libanonin-armeija-kolme-sotilasta-kuoli-israelin-iskussa-ete-thumb.jpg",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-06T12:19:13.952256+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-06-libanonin-armeija-kolme-sotilasta-kuoli-israelin-iskussa-ete.md"
+  ]
+}
