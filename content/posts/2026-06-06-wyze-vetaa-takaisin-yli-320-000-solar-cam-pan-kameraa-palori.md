@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/06/wyze-vetaa-takaisin-yli-320-000-valvontakameraa-akku-voi-syttya-tuleen-tai-rajahtaa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
