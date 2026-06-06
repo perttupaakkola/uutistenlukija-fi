@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/jun/06/doctors-grossly-irresponsible-prescribing-played-direct-role-in-two-deaths-tasmanian-coroner-finds-ntwnfb"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
