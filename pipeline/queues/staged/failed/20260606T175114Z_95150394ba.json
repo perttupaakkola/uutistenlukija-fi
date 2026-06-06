@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-06T17:51:14.296206+00:00",
+  "digest": "95150394ba",
+  "packet": {
+    "packet_id": "20260606T175114Z_95150394ba",
+    "created_at": "2026-06-06T17:51:14Z",
+    "headline_seed": "Kohuttu some­vaikuttaja Andrew Tate nähty Venäjällä",
+    "description_seed": "Tiedossa ei ole, osallistuiko Tate samaan aikaan järjestettyyn Pietarin talousfoorumiin.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012061811.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012061811.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kohuttu some­vaikuttaja Andrew Tate nähty Venäjällä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 94,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kohuttu some­vaikuttaja Andrew Tate nähty Venäjällä",
+      "description": "Tiedossa ei ole, osallistuiko Tate samaan aikaan järjestettyyn Pietarin talousfoorumiin.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kohuttu some­vaikuttaja Andrew Tate nähty Venäjällä",
+    "description": "Tiedossa ei ole, osallistuiko Tate samaan aikaan järjestettyyn Pietarin talousfoorumiin.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012061811.html",
+    "published": "2026-06-06T17:22:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "7387e87e764dab71bafd74db8b46d318",
+    "_url_hash": "c94ade3c754710fd72425cdf67b32e6befbc285d18fdd9fd3c182f570bdf30a3",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Yle]\nKolme kertaa Jussi-palkinnon saanut elokuvaleikkaaja Jukka Nykänen on kuollut 66-vuotiaana. Asiasta uutisoi ensimmäisenä Ilta-Sanomat. Nykäsen naisystävä Anni-Kaisa Vakkuri on vahvistanut tiedon lehdelle.\n\nMyös näyttelijä Kari Ketonen ja elokuvaohjaaja Markku Pölönen ovat kirjoittaneet kuolinuutisesta Facebook-julkaisuissaan.\n\nNykänen on palkittu myös elokuvataiteen valtionpalkinnolla. Nykänen on leikannut muun muassa elokuvat Poika ja ilves, Kuningasjätkä ja Kivenpyörittäjän kylä.\n\nIlta-Sanomien mukaan Nykänen on lauantaina Helsingin Vuosaaren uimarannalta löydetty vainaja. Poliisi tutkii tapausta kuolemansyyn tutkintana eikä epäile asiassa rikosta.\n\nKorjattu 22.7.2025 kello 13.18: Korjattu kuvatekstistä vuosiluku oikein, aiemmin kohdassa luki 2028.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-06T17:53:18.415758+00:00",
+  "failure": "Paketti ei sisällä käytettävää lähdetekstiä, ja story_confidence on matala.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260606T175114Z_95150394ba\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä käytettävää lähdetekstiä, ja story_confidence on matala.\"}"
+}
