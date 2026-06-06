@@ -1,0 +1,189 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-06T15:01:26.179897+00:00",
+  "digest": "a04bcd718f",
+  "packet": {
+    "packet_id": "20260606T150126Z_a04bcd718f",
+    "created_at": "2026-06-06T15:01:26Z",
+    "headline_seed": "US and Iran exchange strikes in Gulf in latest test of ceasefire",
+    "description_seed": "The US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.",
+    "link": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "South China Morning Post",
+      "South China Morning Post"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US and Iran exchange strikes in Gulf in latest test of ceasefire"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The shaky ceasefire between the US and Iran has been tested further, with American forces targeting Iranian drones and radar sites, and Iran firing missiles at US bases in the Gulf. The US military said the attacks were in response to four Iranian \"one-way attack drones\" launched towards the Strait of Hormuz, which it said \"posed an immediate threat to regional maritime traffic\". The drones were shot down, US Central Command (Centcom) said. Tehran called the US strikes a \"flagrant\" violation of the ceasefire agreement between the two countries. Iran retaliated by firing ballistic missiles at two US air bases in Kuwait, and US Navy facilities in Bahrain, Iran's Irib news agency reported. Bahrain and Kuwait both condemned the attacks, saying the drone and missile fire had been successfully repelled.",
+        "word_count": 130,
+        "keyword_overlap": 13,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.",
+        "word_count": 21,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "South China Morning Post",
+        "source_type": "research",
+        "text": "Strikes damage terminal and halt commercial flights, sparking a fierce blame game between Washington and Tehran Gulf hostilities ⁠flared again on Wednesday as Iranian attacks on Kuwait damaged its airport and injured dozens while the US military carried out strikes near the Strait of Hormuz, with diplomacy to halt the war showing little sign of progress. The attacks are the latest to test a shaky ceasefire as the strait remains largely closed more than three months after the US and Israel launched strikes on Iran. Flights at Kuwait International Airport were suspended after an Iranian drone and missile attack damaged airport facilities ‌and diplomatic missions, killing one person and injuring more than 60 others, Kuwaiti authorities and state media said. Kuwait Airways and Jazeera Airways later resumed flights after taking safety measures, the civil aviation authority said.",
+        "word_count": 137,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "South China Morning Post",
+        "source_type": "research",
+        "text": "Iran’s elite Revolutionary Guards said they did not fire at Kuwait’s airport and blamed the destruction on US interceptor missiles that failed to hit their targets, according to Iranian state media. The US military said that was not accurate, and that Iranian drones targeted the airport deliberately.",
+        "word_count": 47,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The shaky ceasefire between the US and Iran has been tested further, with American forces targeting Iranian drones and radar sites, and Iran firing missiles at US bases in the Gulf. The US military said the attacks were in response to four Iranian \"one-way attack drones\" launched towards the Strait of Hormuz, which it said \"posed an immediate threat to regional maritime traffic\". The drones were shot down, US Central Command (Centcom) said. Tehran called the US strikes a \"flagrant\" violation of the ceasefire agreement between the two countries. Iran retaliated by firing ballistic missiles at two US air bases in Kuwait, and US Navy facilities in Bahrain, Iran's Irib news agency reported. Bahrain and Kuwait both condemned the attacks, saying the drone and missile fire had been successfully repelled.\n\nThe US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.\n\nStrikes damage terminal and halt commercial flights, sparking a fierce blame game between Washington and Tehran Gulf hostilities ⁠flared again on Wednesday as Iranian attacks on Kuwait damaged its airport and injured dozens while the US military carried out strikes near the Strait of Hormuz, with diplomacy to halt the war showing little sign of progress. The attacks are the latest to test a shaky ceasefire as the strait remains largely closed more than three months after the US and Israel launched strikes on Iran. Flights at Kuwait International Airport were suspended after an Iranian drone and missile attack damaged airport facilities ‌and diplomatic missions, killing one person and injuring more than 60 others, Kuwaiti authorities and state media said. Kuwait Airways and Jazeera Airways later resumed flights after taking safety measures, the civil aviation authority said.\n\nIran’s elite Revolutionary Guards said they did not fire at Kuwait’s airport and blamed the destruction on US interceptor missiles that failed to hit their targets, according to Iranian state media. The US military said that was not accurate, and that Iranian drones targeted the airport deliberately.",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 612,
+      "selected_blocks": 4,
+      "selected_source_words": 335,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "South China Morning Post",
+        "South China Morning Post",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "South China Morning Post",
+        "South China Morning Post"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US and Iran exchange strikes in Gulf in latest test of ceasefire",
+      "description": "The US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US and Iran exchange strikes in Gulf in latest test of ceasefire",
+    "description": "The US military strikes Iranian drones and radar sites and Tehran says it has targeted US bases in Kuwait and Bahrain.",
+    "link": "https://www.bbc.com/news/articles/cvgzgyjk2weo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-06T14:46:20+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "6ffcb8cc279d360426816ae4997ca680",
+    "_url_hash": "a72dbc3053fad18cbc99d1cbc08da8ed1055f35eafde8d8fc278d8fcf07eac91",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nThe shaky ceasefire between the US and Iran has been tested further, with American forces targeting Iranian drones and radar sites, and Iran firing missiles at US bases in the Gulf.\n\nThe US military said the attacks were in response to four Iranian \"one-way attack drones\" launched towards the Strait of Hormuz, which it said \"posed an immediate threat to regional maritime traffic\". The drones were shot down, US Central Command (Centcom) said.\n\nTehran called the US strikes a \"flagrant\" violation of the ceasefire agreement between the two countries.\n\nIran retaliated by firing ballistic missiles at two US air bases in Kuwait, and US Navy facilities in Bahrain, Iran's Irib news agency reported.\n\nBahrain and Kuwait both condemned the attacks, saying the drone and missile fire had been successfully repelled.\n\nCentcom said initial assessments showed that of the seven Iranian missiles fired at the two Gulf states, six were intercepted and one did not reach its target.\n\nThe United Arab Emirates and Qatar also denounced the Iranian attacks on their Gulf neighbours.\n\nThe Iranian foreign ministry said in a statement that the US strikes on radar installations in Sirik and at Qeshm island were a \"flagrant\" violation of the ceasefire and \"an attack on the national sovereignty and territorial integrity of the Islamic Republic of Iran\", according to news agencies.\n\n\"The US attack demonstrates this country's complete disregard for the principles of international law and the United Nations Charter,\" the statement added.\n\nIran's Islamic Revolution Guard Corps (IRGC) said it had hit \"enemy bases\" as retaliation to the American strikes.\n\nThere have been several such exchanges of fire, threatening the ceasefire that has been in place since April.\n\nHowever, even with the conflict between the two nations continuing, the US has granted visas to Iran's World Cup football team, ahead of their first match in Los Angeles on 15 June.\n\nIt is the first time the competition will see a host nation receive the team of a country it is at war with.\n\nThe attacks occurred as ceasefire negotiations between the US and Iran stalled, with a deal to end the war failing to advance, and US media reporting that President Donald Trump had requested changes to the terms of an agreement.\n\nOn Monday, Iran's foreign ministry spokesman said the US was \"constantly changing its views and putting forward new or contradictory demands\".\n\nThe US and Israel launched wide-ranging strikes on Iran on 28 February, sparki\n\n---\n\n[Lähde: South China Morning Post]\nStrikes damage terminal and halt commercial flights, sparking a fierce blame game between Washington and Tehran\n\nGulf hostilities ⁠flared again on Wednesday as Iranian attacks on Kuwait damaged its airport and injured dozens while the US military carried out strikes near the Strait of Hormuz, with diplomacy to halt the war showing little sign of progress.\n\nThe attacks are the latest to test a shaky ceasefire as the strait remains largely closed more than three months after the US and Israel launched strikes on Iran.\n\nFlights at Kuwait International Airport were suspended after an Iranian drone and missile attack damaged airport facilities ‌and diplomatic missions, killing one person and injuring more than 60 others, Kuwaiti authorities and state media said.\n\nKuwait Airways and Jazeera Airways later resumed flights after taking safety measures, the civil aviation authority said.\n\nIran’s elite Revolutionary Guards said they did not fire at Kuwait’s airport and blamed the destruction on US interceptor missiles that failed to hit their targets, according to Iranian state media.\n\nThe US military said that was not accurate, and that Iranian drones targeted the airport deliberately.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-06T15:04:47.821637+00:00",
+  "failure": "content too short: 247 words",
+  "payload": {
+    "packet_id": "20260606T150126Z_a04bcd718f",
+    "title": "Yhdysvallat ja Iran iskivät toisiaan vastaan Persianlahdella",
+    "summary": "Yhdysvaltojen ja Iranin hauras tulitauko joutui uudelleen koetukselle, kun Yhdysvaltain asevoimat kertoi iskeneensä iranilaisiin lennokkeihin ja tutka-asemiin ja Iran ilmoitti kohdistaneensa ohjuksia Yhdysvaltain tukikohtiin Kuwaitissa ja Bahrainissa.",
+    "content": "Yhdysvaltojen ja Iranin välinen hauras tulitauko on joutunut jälleen koetukselle Persianlahdella, kun Yhdysvaltain asevoimat kertoi torjuneensa Iranin lennokkeja Hormuzinsalmen suunnalla ja iskeneensä iranilaisiin kohteisiin. Iran ilmoitti tämän jälkeen ampuneensa ohjuksia Yhdysvaltain tukikohtiin Kuwaitissa ja Bahrainissa.\n\n## Lennokit ja ohjukset kiristivät tilannetta\n\nYhdysvaltain asevoimien mukaan sen toimet olivat vastaus neljään iranilaiseen hyökkäyslennokkiin, jotka oli laukaistu kohti Hormuzinsalmea. Yhdysvaltain keskisen johtokeskuksen mukaan lennokit muodostivat välittömän uhan alueen meriliikenteelle ja ne ammuttiin alas.\n\nYhdysvallat kertoi iskeneensä myös Iranin tutka-asemiin. Teheran kuvasi Yhdysvaltain iskuja räikeäksi tulitaukosopimuksen rikkomukseksi. Iranin valtiollisen Irib-uutistoimiston mukaan Iran vastasi ampumalla ballistisia ohjuksia kahteen Yhdysvaltain lentotukikohtaan Kuwaitissa sekä Yhdysvaltain laivaston kohteisiin Bahrainissa.\n\nBahrain ja Kuwait tuomitsivat iskut. Molempien maiden mukaan lennokki- ja ohjustuli torjuttiin onnistuneesti.\n\n## Kuwaitissa lentoliikenne keskeytyi\n\nKuwaitissa iskut vaurioittivat lentokenttäalueen tiloja ja diplomaattisia kohteita. Kuwaitin viranomaisten ja valtiollisen median mukaan Kuwaitin kansainvälisellä lentoasemalla keskeytettiin kaupalliset lennot vahinkojen vuoksi. Tietojen mukaan yksi ihminen kuoli ja yli 60 loukkaantui.\n\nKuwait Airways ja Jazeera Airways jatkoivat myöhemmin lentojaan sen jälkeen, kun turvallisuustoimia oli lisätty. Kuwaitin siviili-ilmailuviranomainen ilmoitti lentojen palautumisesta.\n\n## Washington ja Teheran kiistelevät vastuusta\n\nIskuista syntyi nopeasti kiista Washingtonin ja Teheranin välille. Iranin vallankumouskaarti kiisti ampuneensa Kuwaitin lentokenttää kohti ja väitti tuhojen johtuneen Yhdysvaltain torjuntaohjuksista, jotka eivät osuneet kohteisiinsa. Yhdysvaltain asevoimat torjui väitteen ja sanoi iranilaisten lennokkien kohdistuneen lentokenttään tarkoituksellisesti.\n\nTilanne on uusi merkki siitä, että tulitauko pysyy epävarmana. Hormuzinsalmi on lähdetietojen mukaan yhä suurelta osin suljettu yli kolme kuukautta sen jälkeen, kun Yhdysvallat ja Israel iskivät Iraniin, eikä diplomaattisissa yrityksissä pysäyttää sota ole nähty selvää edistystä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Iran",
+      "Kuwait",
+      "Bahrain",
+      "Persianlahti",
+      "Hormuzinsalmi"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat kertoi torjuneensa iranilaisia lennokkeja Hormuzinsalmen suunnalla ja iskeneensä Iranin tutka-asemiin.",
+      "Iran ilmoitti ampuneensa ohjuksia Yhdysvaltain kohteisiin Kuwaitissa ja Bahrainissa.",
+      "Kuwaitissa lentokentän toiminta keskeytyi vahinkojen jälkeen, ja viranomaisten mukaan yksi ihminen kuoli ja yli 60 loukkaantui."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Juttu perustuu annettuihin lähdeblokkeihin. Kuwaitin lentokentän vahinkojen aiheuttajasta on osapuolten välinen kiista, joten se on esitetty väitteinä eikä varmana johtopäätöksenä."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260606T150126Z_a04bcd718f\",\n  \"title\": \"Yhdysvallat ja Iran iskivät toisiaan vastaan Persianlahdella\",\n  \"summary\": \"Yhdysvaltojen ja Iranin hauras tulitauko joutui uudelleen koetukselle, kun Yhdysvaltain asevoimat kertoi iskeneensä iranilaisiin lennokkeihin ja tutka-asemiin ja Iran ilmoitti kohdistaneensa ohjuksia Yhdysvaltain tukikohtiin Kuwaitissa ja Bahrainissa.\",\n  \"content\": \"Yhdysvaltojen ja Iranin välinen hauras tulitauko on joutunut jälleen koetukselle Persianlahdella, kun Yhdysvaltain asevoimat kertoi torjuneensa Iranin lennokkeja Hormuzinsalmen suunnalla ja iskeneensä iranilaisiin kohteisiin. Iran ilmoitti tämän jälkeen ampuneensa ohjuksia Yhdysvaltain tukikohtiin Kuwaitissa ja Bahrainissa.\\n\\n## Lennokit ja ohjukset kiristivät tilannetta\\n\\nYhdysvaltain asevoimien mukaan sen toimet olivat vastaus neljään iranilaiseen hyökkäyslennokkiin, jotka oli laukaistu kohti Hormuzinsalmea. Yhdysvaltain keskisen johtokeskuksen mukaan lennokit muodostivat välittömän uhan alueen meriliikenteelle ja ne ammuttiin alas.\\n\\nYhdysvallat kertoi iskeneensä myös Iranin tutka-asemiin. Teheran kuvasi Yhdysvaltain iskuja räikeäksi tulitaukosopimuksen rikkomukseksi. Iranin valtiollisen Irib-uutistoimiston mukaan Iran vastasi ampumalla ballistisia ohjuksia kahteen Yhdysvaltain lentotukikohtaan Kuwaitissa sekä Yhdysvaltain laivaston kohteisiin Bahrainissa.\\n\\nBahrain ja Kuwait tuomitsivat iskut. Molempien maiden mukaan lennokki- ja ohjustuli torjuttiin onnistuneesti.\\n\\n## Kuwaitissa lentoliikenne keskeytyi\\n\\nKuwaitissa iskut vaurioittivat lentokenttäalueen tiloja ja diplomaattisia kohteita. Kuwaitin viranomaisten ja valtiollisen median mukaan Kuwaitin kansainvälisellä lentoasemalla keskeytettiin kaupalliset lennot vahinkojen vuoksi. Tietojen mukaan yksi ihminen kuoli ja yli 60 loukkaantui.\\n\\nKuwait Airways ja Jazeera Airways jatkoivat myöhemmin lentojaan sen jälkeen, kun turvallisuustoimia oli lisätty. Kuwaitin siviili-ilmailuviranomainen ilmoitti lentojen palautumisesta.\\n\\n## Washington ja Teheran kiistelevät vastuusta\\n\\nIskuista syntyi nopeasti kiista Washingtonin ja Teheranin välille. Iranin vallankumouskaarti kiisti ampuneensa Kuwaitin lentokenttää kohti ja väitti tuhojen johtuneen Yhdysvaltain torjuntaohjuksista, jotka eivät osuneet kohteisiinsa. Yhdysvaltain asevoimat torjui väitteen ja sanoi iranilaisten lennokkien kohdistuneen lentokenttään tarkoituksellisesti.\\n\\nTilanne on uusi merkki siitä, että tulitauko pysyy epävarmana. Hormuzinsalmi on lähdetietojen mukaan yhä suurelta osin suljettu yli kolme kuukautta sen jälkeen, kun Yhdysvallat ja Israel iskivät Iraniin, eikä diplomaattisissa yrityksissä pysäyttää sota ole nähty selvää edistystä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Iran\",\n    \"Kuwait\",\n    \"Bahrain\",\n    \"Persianlahti\",\n    \"Hormuzinsalmi\"\n  ],\n  \"summary_bullets\": [\n    \"Yhdysvallat kertoi torjuneensa iranilaisia lennokkeja Hormuzinsalmen suunnalla ja iskeneensä Iranin tutka-asemiin.\",\n    \"Iran ilmoitti ampuneensa ohjuksia Yhdysvaltain kohteisiin Kuwaitissa ja Bahrainissa.\",\n    \"Kuwaitissa lentokentän toiminta keskeytyi vahinkojen jälkeen, ja viranomaisten mukaan yksi ihminen kuoli ja yli 60 loukkaantui.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.9,\n  \"journalist_note\": \"Juttu perustuu annettuihin lähdeblokkeihin. Kuwaitin lentokentän vahinkojen aiheuttajasta on osapuolten välinen kiista, joten se on esitetty väitteinä eikä varmana johtopäätöksenä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260606T150126Z_a04bcd718f",
+    "category": "Ulkomaat",
+    "selected_source_words": 335,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 247,
+    "issues": [
+      "content too short: 247 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Yhdysvallat ja Iran iskivät toisiaan vastaan Persianlahdella",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-06T15:04:47.821234+00:00",
+    "repair_trigger": "pre_repair_word_count=247; selected_source_words=335; selected_source_blocks=4",
+    "pre_repair_word_count": 247,
+    "pre_repair_lead_word_count": 35,
+    "post_repair_word_count": 247,
+    "post_repair_lead_word_count": 35,
+    "selected_source_words_at_repair": 335,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 335,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 247 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:54c7923461",
+      "2:BBC World:91432418d8",
+      "3:South China Morning Post:dffd8b427e",
+      "4:South China Morning Post:4eac68fe19"
+    ],
+    "final_issues": [
+      "content too short: 247 words"
+    ],
+    "recovered": false
+  }
+}
