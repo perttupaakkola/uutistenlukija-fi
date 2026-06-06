@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/news/2026/jun/06/andrew-tate-moscow-alleged-victims-uk-question-delay-extradition"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
