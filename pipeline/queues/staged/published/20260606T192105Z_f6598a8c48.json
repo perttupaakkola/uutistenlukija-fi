@@ -1,0 +1,214 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-06T19:21:05.411686+00:00",
+  "digest": "f6598a8c48",
+  "packet": {
+    "packet_id": "20260606T192105Z_f6598a8c48",
+    "created_at": "2026-06-06T19:21:05Z",
+    "headline_seed": "Pope Leo begins Spain visit with praise for government",
+    "description_seed": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".",
+    "link": "https://www.bbc.com/news/articles/c8d2pgjy4qgo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Mercury News",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c8d2pgjy4qgo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pope Leo begins Spain visit with praise for government"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".",
+        "word_count": 24,
+        "keyword_overlap": 14,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Pope Leo XIV has started his official visit to Spain by praising its government's opposition to wars as well as its support for migrants. Speaking at a reception with King Felipe VI and Queen Letizia at the royal palace in Madrid, Pope Leo spoke of Spain's \"active commitment to peace and solidarity among peoples\". Prime Minister Pedro Sanchez has clashed with US President Donald Trump over Iran, and with Israel over the war in Gaza and the Pope hailed Spain's \"faithful adherence to international law and multilateralism\". During his seven-day visit, Pope Leo will meet victims who experienced sexual abuse within the Catholic Church, as well as groups that look after the welfare of migrants.",
+        "word_count": 115,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "The Mercury News",
+        "source_type": "research",
+        "text": "By Nicole Winfield and Suman Naishadham | Associated Press MADRID — Pope Leo XIV urged Spaniards on Saturday to stop “fanning the flames of polarization” as he arrived in Spain at a moment of political turmoil for the Socialist-led government and a credibility crisis for the Catholic Church. The American pontiff, who has Spanish ancestors, traveled to Spain dozens of times as a priest, but this is the first visit by a pope in 15 years. It signals Leo is returning papal attention to Europe’s Christian roots after Pope Francis largely stayed away from the traditional centers of Christianity in favor of smaller Catholic communities farther away. Leo is seemingly keen to bring his message of peace, unity and human dignity to a continent sorely polarized over migration, the Russia-Ukraine war and anxiety over artificial intelligence.",
+        "word_count": 136,
+        "keyword_overlap": 6,
+        "strong_overlap": 1
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Immigration is a divisive issue in Spain, and the Pope's focus on the issue during his tour could be seen as support for the socialist prime minister. He will also deliver an unprecedented address before the Spanish parliament. The Chicago-born pontiff has himself been harshly criticised by Trump for his anti-war views. The message of peace, the Pope said in Madrid, \"at present unfortunately strikes some as naive and others as confrontational\" but should instead be \"welcomed by those who do not shut themselves off in preconceived ideologies\". Speaking to reporters on the plane before landing, the Pope said sexual abuse remained \"an open wound\" for the Church. Sanchez's government and the Catholic Church in Spain signed an agreement in March to compensate victims after years of complaints that religious leaders had failed to tackle the issue adequately.",
+        "word_count": 138,
+        "keyword_overlap": 5,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".\n\nPope Leo XIV has started his official visit to Spain by praising its government's opposition to wars as well as its support for migrants. Speaking at a reception with King Felipe VI and Queen Letizia at the royal palace in Madrid, Pope Leo spoke of Spain's \"active commitment to peace and solidarity among peoples\". Prime Minister Pedro Sanchez has clashed with US President Donald Trump over Iran, and with Israel over the war in Gaza and the Pope hailed Spain's \"faithful adherence to international law and multilateralism\". During his seven-day visit, Pope Leo will meet victims who experienced sexual abuse within the Catholic Church, as well as groups that look after the welfare of migrants.\n\nBy Nicole Winfield and Suman Naishadham | Associated Press MADRID — Pope Leo XIV urged Spaniards on Saturday to stop “fanning the flames of polarization” as he arrived in Spain at a moment of political turmoil for the Socialist-led government and a credibility crisis for the Catholic Church. The American pontiff, who has Spanish ancestors, traveled to Spain dozens of times as a priest, but this is the first visit by a pope in 15 years. It signals Leo is returning papal attention to Europe’s Christian roots after Pope Francis largely stayed away from the traditional centers of Christianity in favor of smaller Catholic communities farther away. Leo is seemingly keen to bring his message of peace, unity and human dignity to a continent sorely polarized over migration, the Russia-Ukraine war and anxiety over artificial intelligence.\n\nImmigration is a divisive issue in Spain, and the Pope's focus on the issue during his tour could be seen as support for the socialist prime minister. He will also deliver an unprecedented address before the Spanish parliament. The Chicago-born pontiff has himself been harshly criticised by Trump for his anti-war views. The message of peace, the Pope said in Madrid, \"at present unfortunately strikes some as naive and others as confrontational\" but should instead be \"welcomed by those who do not shut themselves off in preconceived ideologies\". Speaking to reporters on the plane before landing, the Pope said sexual abuse remained \"an open wound\" for the Church. Sanchez's government and the Catholic Church in Spain signed an agreement in March to compensate victims after years of complaints that religious leaders had failed to tackle the issue adequately.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 980,
+      "selected_blocks": 4,
+      "selected_source_words": 413,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Mercury News",
+        "The Mercury News",
+        "The Mercury News",
+        "America Magazine",
+        "America Magazine",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "The Mercury News",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pope Leo begins Spain visit with praise for government",
+      "description": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pope Leo begins Spain visit with praise for government",
+    "description": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".",
+    "link": "https://www.bbc.com/news/articles/c8d2pgjy4qgo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-06T18:34:26+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e42bd7c41aa5d12392021e207fd8ed6c",
+    "_url_hash": "09956aa59877dcfab9f2a1c17daa787484d5b705279ead373be5c46cb406c723",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nPope Leo XIV has started his official visit to Spain by praising its government's opposition to wars as well as its support for migrants.\n\nSpeaking at a reception with King Felipe VI and Queen Letizia at the royal palace in Madrid, Pope Leo spoke of Spain's \"active commitment to peace and solidarity among peoples\".\n\nPrime Minister Pedro Sanchez has clashed with US President Donald Trump over Iran, and with Israel over the war in Gaza and the Pope hailed Spain's \"faithful adherence to international law and multilateralism\".\n\nDuring his seven-day visit, Pope Leo will meet victims who experienced sexual abuse within the Catholic Church, as well as groups that look after the welfare of migrants.\n\nImmigration is a divisive issue in Spain, and the Pope's focus on the issue during his tour could be seen as support for the socialist prime minister.\n\nHe will also deliver an unprecedented address before the Spanish parliament.\n\nThe Chicago-born pontiff has himself been harshly criticised by Trump for his anti-war views.\n\nThe message of peace, the Pope said in Madrid, \"at present unfortunately strikes some as naive and others as confrontational\" but should instead be \"welcomed by those who do not shut themselves off in preconceived ideologies\".\n\nSpeaking to reporters on the plane before landing, the Pope said sexual abuse remained \"an open wound\" for the Church.\n\nSanchez's government and the Catholic Church in Spain signed an agreement in March to compensate victims after years of complaints that religious leaders had failed to tackle the issue adequately.\n\nA 2023 study by the Spanish ombudsman's office, which investigates public complaints, estimated that 1.1% of the population had suffered sexual abuse at the hands of members of the clergy or individuals linked to the Church - the equivalent of 440,000 people.\n\nThe Church has contested these findings.\n\nOn Saturday, King Felipe hailed Pope Leo's \"clarity and firmness\" on the issue, saying it was \"essential in the process of healing and reparation of the damage inflicted\".\n\nIn the Canary Islands later in the trip, the Pope will be joined by Sanchez to honour thousands of migrants who have died trying to reach Europe.\n\nNearly 47,000 people reached the Canary Islands in 2024 and the Spanish non-government organisation Caminando Fronteras estimates more than 9,000 migrants have died trying.\n\nSpain's immigration policy under its left-wing government is in stark contrast to much of Europe, and includes plans to give legal\n\n---\n\n[Lähde: The Mercury News]\nBy Nicole Winfield and Suman Naishadham | Associated Press\n\nMADRID — Pope Leo XIV urged Spaniards on Saturday to stop “fanning the flames of polarization” as he arrived in Spain at a moment of political turmoil for the Socialist-led government and a credibility crisis for the Catholic Church.\n\nThe American pontiff, who has Spanish ancestors, traveled to Spain dozens of times as a priest, but this is the first visit by a pope in 15 years. It signals Leo is returning papal attention to Europe’s Christian roots after Pope Francis largely stayed away from the traditional centers of Christianity in favor of smaller Catholic communities farther away.\n\nLeo is seemingly keen to bring his message of peace, unity and human dignity to a continent sorely polarized over migration, the Russia-Ukraine war and anxiety over artificial intelligence.\n\nThe pope, known as León XIV in Spanish, opened his weeklong trip in Madrid, greeted at the airport by the country’s Catholic monarchs, King Felipe VI and Queen Letizia, and Prime Minister Pedro Sánchez. He told reporters, while traveling, that he was particularly heartened by reports of a spiritual awakening among young people in the once-staunchly Catholic but now secularized country.\n\nDuring his welcome address, Leo appealed to Spaniards, especially political leaders, to put polemics aside and invest in educating young people to appreciate diversity and complexity rather than shunning them.\n\n“Today, the temptation to gain popularity by fanning the flames of polarization seems to have grown rather than diminished, and human dignity continues to be violated,” Leo said.\n\nHe appealed to Spain’s place at the heart of Christian Europe to serve as a model for the rest of the continent, while also recalling the country’s 800-year Moorish past, when cities like Toledo and Córdoba became, he said, “centers of dialogue between languages, religions and knowledge.”\n\n“For the love of truth, I invite everyone to set aside the divisive and polarizing narratives of your societal reality and history,” he said. Doing so will help Europe “overcome sterile simplifications through the fruitful appreciation of complexity.”\n\nSpaniards find themselves increasingly divided over issues including immigration, feminism and political corruption, while historically it was riven by territorial and independence movements.\n\nThe highlight of Leo’s visit to Madrid will be his speech on Monday to a joint parliamentary session of the Congress of Deputies and the \n\n---\n\n[Lähde: America Magazine]\n“Today, the temptation to gain popularity by fanning the flames of polarization seems to have grown rather than diminished, and human dignity continues to be violated,” Pope Leo said in his first speech soon after arriving in Spain, a majority Catholic country of 50 million people.\n\nWith these words, Leo went to the heart of the polarized situation in Spain today. He highlighted this in his address at the Royal Palace in Madrid, in the presence of King Felipe VI and his wife Queen Letizia, to an audience of some 300 people that included the state authorities, religious leaders, representatives of civil society and the diplomatic corps.\n\nHe was alluding to the fact that political forces, particularly on the extreme right and especially Vox, a national conservative political party in Spain, are increasingly causing division among the people in a country that had already suffered the tragic consequences of a civil war in the 1930s. These forces are strongly opposed to the influx and prese...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-06T19:23:38.974570+00:00",
+  "payload": {
+    "packet_id": "20260606T192105Z_f6598a8c48",
+    "title": "Paavi Leo XIV aloitti Espanjan-vierailunsa kiittämällä maan hallitusta",
+    "summary": "Paavi Leo XIV on aloittanut seitsemänpäiväisen virallisen vierailunsa Espanjassa korostamalla rauhaa, kansainvälistä oikeutta ja maahanmuuttajien tukemista.",
+    "content": "Paavi Leo XIV aloitti lauantaina virallisen seitsemänpäiväisen vierailunsa Espanjassa ja kiitti maan hallituksen linjaa sodanvastaisuudessa sekä maahanmuuttajien tukemisessa. Madridin kuninkaallisessa palatsissa pidetyssä vastaanotossa paavi nosti esiin Espanjan sitoutumisen rauhaan, kansainväliseen oikeuteen ja monenväliseen yhteistyöhön.\n\n## Vastaanotto Madridissa\n\nPaavi puhui vastaanotossa, johon osallistuivat kuningas Felipe VI ja kuningatar Letizia. Hän kuvasi Espanjan toimintaa aktiiviseksi sitoutumiseksi rauhaan ja kansojen väliseen solidaarisuuteen. Paavi myös kiitti maan uskollisuutta kansainväliselle oikeudelle ja monenkeskisyydelle.\n\nVierailu tapahtuu poliittisesti herkässä tilanteessa. Pääministeri Pedro Sanchezin sosialistijohtoinen hallitus on ollut eri linjoilla Yhdysvaltain presidentti Donald Trumpin kanssa Iranista ja Israelin kanssa Gazan sodasta. Paavin rauhanviestiä on tulkittu Espanjassa myös suhteessa näihin kiistoihin, sillä Leo XIV:ää itseään on arvosteltu Yhdysvalloissa hänen sodanvastaisista näkemyksistään.\n\nMadridissa paavi kehotti espanjalaisia lopettamaan vastakkainasettelun lietsomisen. Hän sanoi rauhan viestin näyttävän nykyisin joistakin naiivilta ja toisista riitaisalta, mutta sen tulisi hänen mukaansa puhutella ihmisiä, jotka eivät sulkeudu valmiisiin ideologioihin.\n\n## Maahanmuutto ja kirkon kriisi esillä\n\nMaahanmuutto on Espanjassa jakava poliittinen kysymys, ja paavin painotus voi näyttäytyä tukena Sanchezin hallitukselle. Vierailun aikana Leo XIV:n on määrä tavata myös ryhmiä, jotka auttavat maahanmuuttajia. Lisäksi hän pitää poikkeuksellisen puheen Espanjan parlamentille.\n\nPaavi aikoo tavata myös katolisen kirkon piirissä seksuaalista hyväksikäyttöä kokeneita uhreja. Hän sanoi toimittajille ennen laskeutumistaan, että hyväksikäyttö on yhä kirkolle avoin haava. Espanjan hallitus ja maan katolinen kirkko sopivat maaliskuussa uhrien korvaamisesta vuosia jatkuneiden valitusten jälkeen, joissa kirkon johtoa oli syytetty riittämättömistä toimista.\n\nLeo XIV on yhdysvaltalaistaustainen ja hänellä on espanjalaisia sukujuuria. Hän matkusti Espanjaan papin tehtävissä useita kertoja ennen valintaansa paaviksi, mutta kyseessä on ensimmäinen paavin vierailu maassa 15 vuoteen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Espanja",
+      "Paavi Leo XIV",
+      "Katolinen kirkko",
+      "maahanmuutto",
+      "Madrid"
+    ],
+    "summary_bullets": [
+      "Paavi Leo XIV aloitti seitsemänpäiväisen virallisen vierailun Espanjassa.",
+      "Hän kiitti Espanjan rauhanlinjaa, kansainvälisen oikeuden kunnioittamista ja maahanmuuttajien tukemista.",
+      "Vierailulla käsitellään myös kirkon hyväksikäyttökriisiä ja paavi tapaa uhreja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. Muotoilussa vältettiin lähdelabelit ja pidettiin kiinni varmistetuista tiedoista."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260606T192105Z_f6598a8c48\",\"title\":\"Paavi Leo XIV aloitti Espanjan-vierailunsa kiittämällä maan hallitusta\",\"summary\":\"Paavi Leo XIV on aloittanut seitsemänpäiväisen virallisen vierailunsa Espanjassa korostamalla rauhaa, kansainvälistä oikeutta ja maahanmuuttajien tukemista.\",\"content\":\"Paavi Leo XIV aloitti lauantaina virallisen seitsemänpäiväisen vierailunsa Espanjassa ja kiitti maan hallituksen linjaa sodanvastaisuudessa sekä maahanmuuttajien tukemisessa. Madridin kuninkaallisessa palatsissa pidetyssä vastaanotossa paavi nosti esiin Espanjan sitoutumisen rauhaan, kansainväliseen oikeuteen ja monenväliseen yhteistyöhön.\\n\\n## Vastaanotto Madridissa\\n\\nPaavi puhui vastaanotossa, johon osallistuivat kuningas Felipe VI ja kuningatar Letizia. Hän kuvasi Espanjan toimintaa aktiiviseksi sitoutumiseksi rauhaan ja kansojen väliseen solidaarisuuteen. Paavi myös kiitti maan uskollisuutta kansainväliselle oikeudelle ja monenkeskisyydelle.\\n\\nVierailu tapahtuu poliittisesti herkässä tilanteessa. Pääministeri Pedro Sanchezin sosialistijohtoinen hallitus on ollut eri linjoilla Yhdysvaltain presidentti Donald Trumpin kanssa Iranista ja Israelin kanssa Gazan sodasta. Paavin rauhanviestiä on tulkittu Espanjassa myös suhteessa näihin kiistoihin, sillä Leo XIV:ää itseään on arvosteltu Yhdysvalloissa hänen sodanvastaisista näkemyksistään.\\n\\nMadridissa paavi kehotti espanjalaisia lopettamaan vastakkainasettelun lietsomisen. Hän sanoi rauhan viestin näyttävän nykyisin joistakin naiivilta ja toisista riitaisalta, mutta sen tulisi hänen mukaansa puhutella ihmisiä, jotka eivät sulkeudu valmiisiin ideologioihin.\\n\\n## Maahanmuutto ja kirkon kriisi esillä\\n\\nMaahanmuutto on Espanjassa jakava poliittinen kysymys, ja paavin painotus voi näyttäytyä tukena Sanchezin hallitukselle. Vierailun aikana Leo XIV:n on määrä tavata myös ryhmiä, jotka auttavat maahanmuuttajia. Lisäksi hän pitää poikkeuksellisen puheen Espanjan parlamentille.\\n\\nPaavi aikoo tavata myös katolisen kirkon piirissä seksuaalista hyväksikäyttöä kokeneita uhreja. Hän sanoi toimittajille ennen laskeutumistaan, että hyväksikäyttö on yhä kirkolle avoin haava. Espanjan hallitus ja maan katolinen kirkko sopivat maaliskuussa uhrien korvaamisesta vuosia jatkuneiden valitusten jälkeen, joissa kirkon johtoa oli syytetty riittämättömistä toimista.\\n\\nLeo XIV on yhdysvaltalaistaustainen ja hänellä on espanjalaisia sukujuuria. Hän matkusti Espanjaan papin tehtävissä useita kertoja ennen valintaansa paaviksi, mutta kyseessä on ensimmäinen paavin vierailu maassa 15 vuoteen.\",\"category\":\"Ulkomaat\",\"tags\":[\"Espanja\",\"Paavi Leo XIV\",\"Katolinen kirkko\",\"maahanmuutto\",\"Madrid\"],\"summary_bullets\":[\"Paavi Leo XIV aloitti seitsemänpäiväisen virallisen vierailun Espanjassa.\",\"Hän kiitti Espanjan rauhanlinjaa, kansainvälisen oikeuden kunnioittamista ja maahanmuuttajien tukemista.\",\"Vierailulla käsitellään myös kirkon hyväksikäyttökriisiä ja paavi tapaa uhreja.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.92,\"journalist_note\":\"Artikkeli perustuu annettuihin lähdekatkelmiin. Muotoilussa vältettiin lähdelabelit ja pidettiin kiinni varmistetuista tiedoista.\"}",
+  "article": {
+    "title": "Paavi Leo XIV aloitti Espanjan-vierailunsa kiittämällä maan hallitusta",
+    "description": "Paavi Leo XIV on aloittanut seitsemänpäiväisen virallisen vierailunsa Espanjassa korostamalla rauhaa, kansainvälistä oikeutta ja maahanmuuttajien tukemista.",
+    "link": "https://www.bbc.com/news/articles/c8d2pgjy4qgo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-06T18:34:26+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e42bd7c41aa5d12392021e207fd8ed6c",
+    "_url_hash": "09956aa59877dcfab9f2a1c17daa787484d5b705279ead373be5c46cb406c723",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nPope Leo XIV has started his official visit to Spain by praising its government's opposition to wars as well as its support for migrants.\n\nSpeaking at a reception with King Felipe VI and Queen Letizia at the royal palace in Madrid, Pope Leo spoke of Spain's \"active commitment to peace and solidarity among peoples\".\n\nPrime Minister Pedro Sanchez has clashed with US President Donald Trump over Iran, and with Israel over the war in Gaza and the Pope hailed Spain's \"faithful adherence to international law and multilateralism\".\n\nDuring his seven-day visit, Pope Leo will meet victims who experienced sexual abuse within the Catholic Church, as well as groups that look after the welfare of migrants.\n\nImmigration is a divisive issue in Spain, and the Pope's focus on the issue during his tour could be seen as support for the socialist prime minister.\n\nHe will also deliver an unprecedented address before the Spanish parliament.\n\nThe Chicago-born pontiff has himself been harshly criticised by Trump for his anti-war views.\n\nThe message of peace, the Pope said in Madrid, \"at present unfortunately strikes some as naive and others as confrontational\" but should instead be \"welcomed by those who do not shut themselves off in preconceived ideologies\".\n\nSpeaking to reporters on the plane before landing, the Pope said sexual abuse remained \"an open wound\" for the Church.\n\nSanchez's government and the Catholic Church in Spain signed an agreement in March to compensate victims after years of complaints that religious leaders had failed to tackle the issue adequately.\n\nA 2023 study by the Spanish ombudsman's office, which investigates public complaints, estimated that 1.1% of the population had suffered sexual abuse at the hands of members of the clergy or individuals linked to the Church - the equivalent of 440,000 people.\n\nThe Church has contested these findings.\n\nOn Saturday, King Felipe hailed Pope Leo's \"clarity and firmness\" on the issue, saying it was \"essential in the process of healing and reparation of the damage inflicted\".\n\nIn the Canary Islands later in the trip, the Pope will be joined by Sanchez to honour thousands of migrants who have died trying to reach Europe.\n\nNearly 47,000 people reached the Canary Islands in 2024 and the Spanish non-government organisation Caminando Fronteras estimates more than 9,000 migrants have died trying.\n\nSpain's immigration policy under its left-wing government is in stark contrast to much of Europe, and includes plans to give legal\n\n---\n\n[Lähde: The Mercury News]\nBy Nicole Winfield and Suman Naishadham | Associated Press\n\nMADRID — Pope Leo XIV urged Spaniards on Saturday to stop “fanning the flames of polarization” as he arrived in Spain at a moment of political turmoil for the Socialist-led government and a credibility crisis for the Catholic Church.\n\nThe American pontiff, who has Spanish ancestors, traveled to Spain dozens of times as a priest, but this is the first visit by a pope in 15 years. It signals Leo is returning papal attention to Europe’s Christian roots after Pope Francis largely stayed away from the traditional centers of Christianity in favor of smaller Catholic communities farther away.\n\nLeo is seemingly keen to bring his message of peace, unity and human dignity to a continent sorely polarized over migration, the Russia-Ukraine war and anxiety over artificial intelligence.\n\nThe pope, known as León XIV in Spanish, opened his weeklong trip in Madrid, greeted at the airport by the country’s Catholic monarchs, King Felipe VI and Queen Letizia, and Prime Minister Pedro Sánchez. He told reporters, while traveling, that he was particularly heartened by reports of a spiritual awakening among young people in the once-staunchly Catholic but now secularized country.\n\nDuring his welcome address, Leo appealed to Spaniards, especially political leaders, to put polemics aside and invest in educating young people to appreciate diversity and complexity rather than shunning them.\n\n“Today, the temptation to gain popularity by fanning the flames of polarization seems to have grown rather than diminished, and human dignity continues to be violated,” Leo said.\n\nHe appealed to Spain’s place at the heart of Christian Europe to serve as a model for the rest of the continent, while also recalling the country’s 800-year Moorish past, when cities like Toledo and Córdoba became, he said, “centers of dialogue between languages, religions and knowledge.”\n\n“For the love of truth, I invite everyone to set aside the divisive and polarizing narratives of your societal reality and history,” he said. Doing so will help Europe “overcome sterile simplifications through the fruitful appreciation of complexity.”\n\nSpaniards find themselves increasingly divided over issues including immigration, feminism and political corruption, while historically it was riven by territorial and independence movements.\n\nThe highlight of Leo’s visit to Madrid will be his speech on Monday to a joint parliamentary session of the Congress of Deputies and the \n\n---\n\n[Lähde: America Magazine]\n“Today, the temptation to gain popularity by fanning the flames of polarization seems to have grown rather than diminished, and human dignity continues to be violated,” Pope Leo said in his first speech soon after arriving in Spain, a majority Catholic country of 50 million people.\n\nWith these words, Leo went to the heart of the polarized situation in Spain today. He highlighted this in his address at the Royal Palace in Madrid, in the presence of King Felipe VI and his wife Queen Letizia, to an audience of some 300 people that included the state authorities, religious leaders, representatives of civil society and the diplomatic corps.\n\nHe was alluding to the fact that political forces, particularly on the extreme right and especially Vox, a national conservative political party in Spain, are increasingly causing division among the people in a country that had already suffered the tragic consequences of a civil war in the 1930s. These forces are strongly opposed to the influx and prese...",
+    "research_source": "multi",
+    "summary": "Paavi Leo XIV on aloittanut seitsemänpäiväisen virallisen vierailunsa Espanjassa korostamalla rauhaa, kansainvälistä oikeutta ja maahanmuuttajien tukemista.",
+    "content": "Paavi Leo XIV aloitti lauantaina virallisen seitsemänpäiväisen vierailunsa Espanjassa ja kiitti maan hallituksen linjaa sodanvastaisuudessa sekä maahanmuuttajien tukemisessa. Madridin kuninkaallisessa palatsissa pidetyssä vastaanotossa paavi nosti esiin Espanjan sitoutumisen rauhaan, kansainväliseen oikeuteen ja monenväliseen yhteistyöhön.\n\n## Vastaanotto Madridissa\n\nPaavi puhui vastaanotossa, johon osallistuivat kuningas Felipe VI ja kuningatar Letizia. Hän kuvasi Espanjan toimintaa aktiiviseksi sitoutumiseksi rauhaan ja kansojen väliseen solidaarisuuteen. Paavi myös kiitti maan uskollisuutta kansainväliselle oikeudelle ja monenkeskisyydelle.\n\nVierailu tapahtuu poliittisesti herkässä tilanteessa. Pääministeri Pedro Sanchezin sosialistijohtoinen hallitus on ollut eri linjoilla Yhdysvaltain presidentti Donald Trumpin kanssa Iranista ja Israelin kanssa Gazan sodasta. Paavin rauhanviestiä on tulkittu Espanjassa myös suhteessa näihin kiistoihin, sillä Leo XIV:ää itseään on arvosteltu Yhdysvalloissa hänen sodanvastaisista näkemyksistään.\n\nMadridissa paavi kehotti espanjalaisia lopettamaan vastakkainasettelun lietsomisen. Hän sanoi rauhan viestin näyttävän nykyisin joistakin naiivilta ja toisista riitaisalta, mutta sen tulisi hänen mukaansa puhutella ihmisiä, jotka eivät sulkeudu valmiisiin ideologioihin.\n\n## Maahanmuutto ja kirkon kriisi esillä\n\nMaahanmuutto on Espanjassa jakava poliittinen kysymys, ja paavin painotus voi näyttäytyä tukena Sanchezin hallitukselle. Vierailun aikana Leo XIV:n on määrä tavata myös ryhmiä, jotka auttavat maahanmuuttajia. Lisäksi hän pitää poikkeuksellisen puheen Espanjan parlamentille.\n\nPaavi aikoo tavata myös katolisen kirkon piirissä seksuaalista hyväksikäyttöä kokeneita uhreja. Hän sanoi toimittajille ennen laskeutumistaan, että hyväksikäyttö on yhä kirkolle avoin haava. Espanjan hallitus ja maan katolinen kirkko sopivat maaliskuussa uhrien korvaamisesta vuosia jatkuneiden valitusten jälkeen, joissa kirkon johtoa oli syytetty riittämättömistä toimista.\n\nLeo XIV on yhdysvaltalaistaustainen ja hänellä on espanjalaisia sukujuuria. Hän matkusti Espanjaan papin tehtävissä useita kertoja ennen valintaansa paaviksi, mutta kyseessä on ensimmäinen paavin vierailu maassa 15 vuoteen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "espanja",
+      "paavi leo xiv",
+      "katolinen kirkko",
+      "maahanmuutto",
+      "madrid"
+    ],
+    "summary_bullets": [
+      "Paavi Leo XIV aloitti seitsemänpäiväisen virallisen vierailun Espanjassa.",
+      "Hän kiitti Espanjan rauhanlinjaa, kansainvälisen oikeuden kunnioittamista ja maahanmuuttajien tukemista.",
+      "Vierailulla käsitellään myös kirkon hyväksikäyttökriisiä ja paavi tapaa uhreja."
+    ],
+    "key_points": [
+      "Paavi Leo XIV aloitti seitsemänpäiväisen virallisen vierailun Espanjassa.",
+      "Hän kiitti Espanjan rauhanlinjaa, kansainvälisen oikeuden kunnioittamista ja maahanmuuttajien tukemista.",
+      "Vierailulla käsitellään myös kirkon hyväksikäyttökriisiä ja paavi tapaa uhreja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. Muotoilussa vältettiin lähdelabelit ja pidettiin kiinni varmistetuista tiedoista.",
+    "source_text": "On the first day of his official seven-day tour of Spain, the Pope praises the country's \"active commitment to peace and solidarity among peoples\".\n\nPope Leo XIV has started his official visit to Spain by praising its government's opposition to wars as well as its support for migrants. Speaking at a reception with King Felipe VI and Queen Letizia at the royal palace in Madrid, Pope Leo spoke of Spain's \"active commitment to peace and solidarity among peoples\". Prime Minister Pedro Sanchez has clashed with US President Donald Trump over Iran, and with Israel over the war in Gaza and the Pope hailed Spain's \"faithful adherence to international law and multilateralism\". During his seven-day visit, Pope Leo will meet victims who experienced sexual abuse within the Catholic Church, as well as groups that look after the welfare of migrants.\n\nBy Nicole Winfield and Suman Naishadham | Associated Press MADRID — Pope Leo XIV urged Spaniards on Saturday to stop “fanning the flames of polarization” as he arrived in Spain at a moment of political turmoil for the Socialist-led government and a credibility crisis for the Catholic Church. The American pontiff, who has Spanish ancestors, traveled to Spain dozens of times as a priest, but this is the first visit by a pope in 15 years. It signals Leo is returning papal attention to Europe’s Christian roots after Pope Francis largely stayed away from the traditional centers of Christianity in favor of smaller Catholic communities farther away. Leo is seemingly keen to bring his message of peace, unity and human dignity to a continent sorely polarized over migration, the Russia-Ukraine war and anxiety over artificial intelligence.\n\nImmigration is a divisive issue in Spain, and the Pope's focus on the issue during his tour could be seen as support for the socialist prime minister. He will also deliver an unprecedented address before the Spanish parliament. The Chicago-born pontiff has himself been harshly criticised by Trump for his anti-war views. The message of peace, the Pope said in Madrid, \"at present unfortunately strikes some as naive and others as confrontational\" but should instead be \"welcomed by those who do not shut themselves off in preconceived ideologies\". Speaking to reporters on the plane before landing, the Pope said sexual abuse remained \"an open wound\" for the Church. Sanchez's government and the Catholic Church in Spain signed an agreement in March to compensate victims after years of complaints that religious leaders had failed to tackle the issue adequately.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260606T192105Z_f6598a8c48",
+    "image": "https://images.unsplash.com/photo-1576074231421-056318ee9684?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxQb3BlJTIwTGVvJTIwWElWJTIwaW4lMjBNYWRyaWR8ZW58MXwwfHx8MTc4MDc3NDA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1576074231421-056318ee9684?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxQb3BlJTIwTGVvJTIwWElWJTIwaW4lMjBNYWRyaWR8ZW58MXwwfHx8MTc4MDc3NDA4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Paavi Leo XIV aloitti Espanjan-vierailunsa kiittämällä maan hallitusta",
+    "image_credit": "Photo by 야스민 ㄹㅁㅅ on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/man-riding-on-horse-statue-near-building-XwFQNhH9R9Y?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-06T19:28:06.446417+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1576074231421-056318ee9684?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxQb3BlJTIwTGVvJTIwWElWJTIwaW4lMjBNYWRyaWR8ZW58MXwwfHx8MTc4MDc3NDA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1576074231421-056318ee9684?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxQb3BlJTIwTGVvJTIwWElWJTIwaW4lMjBNYWRyaWR8ZW58MXwwfHx8MTc4MDc3NDA4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-06T19:29:16.742479+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-06-paavi-leo-xiv-aloitti-espanjan-vierailunsa-kiittamalla-maan.md"
+  ]
+}
