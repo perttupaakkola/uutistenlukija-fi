@@ -44,7 +44,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/science/2026/06/otzis-mummified-body-is-home-to-ancient-strains-of-yeast-and-bacteria/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 

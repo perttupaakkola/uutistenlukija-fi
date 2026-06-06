@@ -1,0 +1,213 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-06T20:51:03.363736+00:00",
+  "digest": "7140b07582",
+  "packet": {
+    "packet_id": "20260606T205103Z_7140b07582",
+    "created_at": "2026-06-06T20:51:03Z",
+    "headline_seed": "OpenAI unveils Lockdown Mode to protect sensitive data from prompt injection attacks",
+    "description_seed": "Even with Lockdown Mode, ChatGPT could be still vulnerable to prompt injections, but the goal is to reduce the likelihood that sensitive data gets shared in the process.",
+    "link": "https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/",
+    "source": "TechCrunch",
+    "source_names": [
+      "The Hacker News",
+      "The Hacker News",
+      "techtimes",
+      "The Hacker News"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "OpenAI unveils Lockdown Mode to protect sensitive data from prompt injection attacks"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Hacker News",
+        "source_type": "research",
+        "text": "OpenAI has begun rolling out a new Lockdown Mode to ChatGPT for eligible personal accounts to reduce the risk of data exfiltration arising from prompt injection attacks. The feature is primarily designed for people and organizations that handle sensitive data and require stricter protection guarantees. Lockdown Mode is available to logged-in users across Free, Go, Plus, and Pro, and self-serve ChatGPT Business plans. \"Lockdown Mode is an optional advanced security setting that limits many tools and capabilities in OpenAI products that can connect to the web or external services,\" OpenAI said. \"It is designed to reduce the risk of data exfiltration from prompt injection attacks by limiting outbound network requests, at the expense of disabling or limiting some useful features.\"",
+        "word_count": 120,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "The Hacker News",
+        "source_type": "research",
+        "text": "\"Lockdown Mode is designed to substantially reduce the risk of prompt injection-based data exfiltration in ChatGPT and supported OpenAI products, but it does not guarantee that data exfiltration cannot happen,\" the company said. \"Risk may remain through enabled Apps, unforeseen combinations of capabilities, or newly discovered techniques.\" \"Lockdown Mode also does not prevent all other effects of prompt injection attacks. For example, a malicious instruction hidden in an uploaded file could still affect ChatGPT's behavior, and cause an incorrect answer.\" The development comes as OpenAI has also launched a new account management feature that enables users to review active ChatGPT sessions and log out of individual or all sessions if signs of unauthorized account activity are det",
+        "word_count": 117,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "techtimes",
+        "source_type": "research",
+        "text": "OpenAI is prioritizing safety and security on the platform with its latest rollout of the \"Lockdown Mode,\" which is a new setting within ChatGPT that offers more protection for users in the face of attacks. There are massive threats that lurk online, and one of them is the infamous \"prompt injection attack\" that tricks chatbots and models into revealing information threat actors want to extract, steal, and more. Sam Altman's AI company has recently released a support document which confirms the rollout of its new Lockdown Mode feature that aims to help protect users from threats online.",
+        "word_count": 97,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "The Hacker News",
+        "source_type": "research",
+        "text": "The safeguards are aimed at hardening the attack surface against prompt injections, which continues to be a \"frontier\" problem impacting all large language models (LLMs). Specifically, they build upon sandboxing and existing controls to combat URL-based data exfiltration mechanisms to limit outbound network requests that could potentially transmit sensitive data to attacker-controlled infrastructure. The idea is not to stop prompt injections from occurring. Nor does it change the way memory or file uploads work, or the ability to share a conversation. Rather, the goal is to eliminate potential pathways through which the data could be exfiltrated. To that end, Lockdown Mode disables the following features - Pointing out the feature is not \"intended for everyone,\" OpenAI also noted that both Lockdown Mode and Developer Mode cannot be used at the same time, adding that turning on one disables the other.",
+        "word_count": 140,
+        "keyword_overlap": 11,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "OpenAI has begun rolling out a new Lockdown Mode to ChatGPT for eligible personal accounts to reduce the risk of data exfiltration arising from prompt injection attacks. The feature is primarily designed for people and organizations that handle sensitive data and require stricter protection guarantees. Lockdown Mode is available to logged-in users across Free, Go, Plus, and Pro, and self-serve ChatGPT Business plans. \"Lockdown Mode is an optional advanced security setting that limits many tools and capabilities in OpenAI products that can connect to the web or external services,\" OpenAI said. \"It is designed to reduce the risk of data exfiltration from prompt injection attacks by limiting outbound network requests, at the expense of disabling or limiting some useful features.\"\n\n\"Lockdown Mode is designed to substantially reduce the risk of prompt injection-based data exfiltration in ChatGPT and supported OpenAI products, but it does not guarantee that data exfiltration cannot happen,\" the company said. \"Risk may remain through enabled Apps, unforeseen combinations of capabilities, or newly discovered techniques.\" \"Lockdown Mode also does not prevent all other effects of prompt injection attacks. For example, a malicious instruction hidden in an uploaded file could still affect ChatGPT's behavior, and cause an incorrect answer.\" The development comes as OpenAI has also launched a new account management feature that enables users to review active ChatGPT sessions and log out of individual or all sessions if signs of unauthorized account activity are det\n\nOpenAI is prioritizing safety and security on the platform with its latest rollout of the \"Lockdown Mode,\" which is a new setting within ChatGPT that offers more protection for users in the face of attacks. There are massive threats that lurk online, and one of them is the infamous \"prompt injection attack\" that tricks chatbots and models into revealing information threat actors want to extract, steal, and more. Sam Altman's AI company has recently released a support document which confirms the rollout of its new Lockdown Mode feature that aims to help protect users from threats online.\n\nThe safeguards are aimed at hardening the attack surface against prompt injections, which continues to be a \"frontier\" problem impacting all large language models (LLMs). Specifically, they build upon sandboxing and existing controls to combat URL-based data exfiltration mechanisms to limit outbound network requests that could potentially transmit sensitive data to attacker-controlled infrastructure. The idea is not to stop prompt injections from occurring. Nor does it change the way memory or file uploads work, or the ability to share a conversation. Rather, the goal is to eliminate potential pathways through which the data could be exfiltrated. To that end, Lockdown Mode disables the following features - Pointing out the feature is not \"intended for everyone,\" OpenAI also noted that both Lockdown Mode and Developer Mode cannot be used at the same time, adding that turning on one disables the other.",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 664,
+      "selected_blocks": 4,
+      "selected_source_words": 474,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "techtimes",
+        "techtimes",
+        "techtimes",
+        "The Hacker News",
+        "The Hacker News",
+        "The Hacker News",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "The Hacker News",
+        "The Hacker News",
+        "techtimes",
+        "The Hacker News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "OpenAI unveils Lockdown Mode to protect sensitive data from prompt injection attacks",
+      "description": "Even with Lockdown Mode, ChatGPT could be still vulnerable to prompt injections, but the goal is to reduce the likelihood that sensitive data gets shared in the process.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "OpenAI unveils Lockdown Mode to protect sensitive data from prompt injection attacks",
+    "description": "Even with Lockdown Mode, ChatGPT could be still vulnerable to prompt injections, but the goal is to reduce the likelihood that sensitive data gets shared in the process.",
+    "link": "https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/",
+    "published": "2026-06-06T20:32:24+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "9b96f6ac84627fa1e62d898ef961f20e",
+    "_url_hash": "cea1638ff499e1211b2bb1ea382613b480b90133158a300696bffa3c719f9001",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: techtimes]\nOpenAI is prioritizing safety and security on the platform with its latest rollout of the \"Lockdown Mode,\" which is a new setting within ChatGPT that offers more protection for users in the face of attacks.\n\nThere are massive threats that lurk online, and one of them is the infamous \"prompt injection attack\" that tricks chatbots and models into revealing information threat actors want to extract, steal, and more.\n\nSam Altman's AI company has recently released a support document which confirms the rollout of its new Lockdown Mode feature that aims to help protect users from threats online.\n\nOpenAI has claimed that Lockdown Mode is an \"optional advanced security setting that limits many tools and capabilities in OpenAI products that can connect to the web or external services.\" In simple terms, this means that OpenAI will disconnect its ChatGPT platform, apps, models, and more from the internet and other external services to avoid attacks of any kind.\n\nAccording to OpenAI, the Lockdown Mode feature is only available for users who have created accounts on the platform. Accounts have to be logged in in order to take advantage of the feature.\n\nHowever, OpenAI said that it is still in the process of rolling out Lockdown Mode to different types of accounts, including eligible personal accounts, Free, Go, Plus, Pro, and self-serve ChatGPT Business accounts.\n\nTo access Lockdown Mode, users need to go to Settings > Safety and security > Advanced security > and select Lockdown mode.\n\nRead Also:\nChatGPT Reaches 1 Billion App Users: Claude's 640% Growth Splits Session Time\n\n---\n\n[Lähde: The Hacker News]\nOpenAI has begun rolling out a new Lockdown Mode to ChatGPT for eligible personal accounts to reduce the risk of data exfiltration arising from prompt injection attacks.\n\nThe feature is primarily designed for people and organizations that handle sensitive data and require stricter protection guarantees. Lockdown Mode is available to logged-in users across Free, Go, Plus, and Pro, and self-serve ChatGPT Business plans.\n\n\"Lockdown Mode is an optional advanced security setting that limits many tools and capabilities in OpenAI products that can connect to the web or external services,\" OpenAI said.\n\n\"It is designed to reduce the risk of data exfiltration from prompt injection attacks by limiting outbound network requests, at the expense of disabling or limiting some useful features.\"\n\nThe safeguards are aimed at hardening the attack surface against prompt injections, which continues to be a \"frontier\" problem impacting all large language models (LLMs).\n\nSpecifically, they build upon sandboxing and existing controls to combat URL-based data exfiltration mechanisms to limit outbound network requests that could potentially transmit sensitive data to attacker-controlled infrastructure.\n\nThe idea is not to stop prompt injections from occurring. Nor does it change the way memory or file uploads work, or the ability to share a conversation. Rather, the goal is to eliminate potential pathways through which the data could be exfiltrated. To that end, Lockdown Mode disables the following features -\n\nPointing out the feature is not \"intended for everyone,\" OpenAI also noted that both Lockdown Mode and Developer Mode cannot be used at the same time, adding that turning on one disables the other.\n\n\"Lockdown Mode is designed to substantially reduce the risk of prompt injection-based data exfiltration in ChatGPT and supported OpenAI products, but it does not guarantee that data exfiltration cannot happen,\" the company said. \"Risk may remain through enabled Apps, unforeseen combinations of capabilities, or newly discovered techniques.\"\n\n\"Lockdown Mode also does not prevent all other effects of prompt injection attacks. For example, a malicious instruction hidden in an uploaded file could still affect ChatGPT's behavior, and cause an incorrect answer.\"\n\nThe development comes as OpenAI has also launched a new account management feature that enables users to review active ChatGPT sessions and log out of individual or all sessions if signs of unauthorized account activity are det",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-06T20:53:43.382485+00:00",
+  "payload": {
+    "packet_id": "20260606T205103Z_7140b07582",
+    "title": "OpenAI ottaa ChatGPT:ssä käyttöön uuden Lockdown Mode -suojaustilan",
+    "summary": "OpenAI on alkanut tuoda ChatGPT:hen Lockdown Mode -asetusta, jonka tarkoitus on vähentää arkaluonteisen tiedon vuotoriskiä prompt injection -hyökkäyksissä. Yhtiö korostaa, ettei ominaisuus poista riskiä kokonaan.",
+    "content": "OpenAI on alkanut ottaa ChatGPT:ssä käyttöön uuden Lockdown Mode -suojaustilan, joka rajoittaa verkkoyhteyksiin ja ulkoisiin palveluihin kytkeytyviä toimintoja. Tavoitteena on pienentää riskiä, että prompt injection -hyökkäys johtaa arkaluonteisen tiedon siirtymiseen hyökkääjän hallitsemaan järjestelmään.\n\n## Suojaustila rajaa ulospäin lähteviä yhteyksiä\n\nLockdown Mode on valinnainen lisäsuojaus, joka on suunnattu erityisesti käyttäjille ja organisaatioille, jotka käsittelevät arkaluonteista tietoa ja tarvitsevat tiukempia suojausasetuksia. Ominaisuus on tulossa kirjautuneille käyttäjille Free-, Go-, Plus- ja Pro-tileillä sekä itsepalveluna hankittuihin ChatGPT Business -tilauksiin.\n\nAsetuksen keskeinen idea ei ole estää prompt injection -hyökkäyksiä syntymästä. Sen sijaan se pyrkii kaventamaan niitä reittejä, joiden kautta tietoa voisi lähteä ulos palvelusta. Käytännössä suojaustila rajoittaa monia työkaluja ja ominaisuuksia, jotka voivat muodostaa yhteyksiä verkkoon tai ulkoisiin palveluihin.\n\nPrompt injection -hyökkäyksissä haitallinen ohje voi olla piilotettuna esimerkiksi sisältöön, jota tekoälymalli käsittelee. Tällainen ohje voi yrittää ohjata mallia paljastamaan tietoja tai toimimaan tavalla, jota käyttäjä ei tarkoittanut. OpenAI:n mukaan ongelma koskee laajasti suuria kielimalleja.\n\n## Riski ei poistu kokonaan\n\nOpenAI painottaa, että Lockdown Mode vähentää prompt injection -pohjaisen tietovuodon riskiä, mutta ei takaa, etteikö tietoa voisi koskaan vuotaa. Jäännösriskiä voi syntyä esimerkiksi käytössä olevien sovellusten, toimintojen odottamattomien yhdistelmien tai uusien hyökkäystekniikoiden kautta.\n\nSuojaustila ei myöskään estä kaikkia prompt injection -hyökkäysten vaikutuksia. Esimerkiksi tiedostoon piilotettu haitallinen ohje voisi yhä vaikuttaa ChatGPT:n vastaukseen ja johtaa virheelliseen lopputulokseen. Ominaisuus ei muuta muistitoimintojen, tiedostojen lataamisen tai keskustelun jakamisen toimintaa.\n\nLockdown Modea ei ole tarkoitettu kaikille käyttäjille, sillä tiukemmat rajoitukset voivat samalla poistaa käytöstä hyödyllisiä ominaisuuksia. OpenAI on myös kertonut, ettei Lockdown Modea ja Developer Modea voi käyttää samanaikaisesti: toisen ottaminen käyttöön poistaa toisen käytöstä.\n\nUuden suojaustilan rinnalla OpenAI on tuonut käyttöön myös tilien hallintaan liittyvän toiminnon, jonka avulla käyttäjät voivat tarkistaa aktiiviset ChatGPT-istunnot ja kirjautua ulos yksittäisistä tai kaikista istunnoista, jos tilillä epäillään luvatonta toimintaa.",
+    "category": "Teknologia",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "tekoäly",
+      "kyberturvallisuus",
+      "prompt injection"
+    ],
+    "summary_bullets": [
+      "OpenAI tuo ChatGPT:hen Lockdown Mode -suojaustilan arkaluonteisen datan suojaamiseksi.",
+      "Ominaisuus rajoittaa ulkoisiin palveluihin ja verkkoon liittyviä toimintoja tietovuotoriskin pienentämiseksi.",
+      "Yhtiö korostaa, ettei suojaustila poista prompt injection -hyökkäysten riskiä kokonaan."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin lähdekatkelmiin. Keskeinen epävarmuus liittyy siihen, että lähdetekstissä yksi kohta aktiivisten istuntojen hallinnasta katkeaa kesken, joten siitä kerrottiin vain yleisellä tasolla."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260606T205103Z_7140b07582\",\"title\":\"OpenAI ottaa ChatGPT:ssä käyttöön uuden Lockdown Mode -suojaustilan\",\"summary\":\"OpenAI on alkanut tuoda ChatGPT:hen Lockdown Mode -asetusta, jonka tarkoitus on vähentää arkaluonteisen tiedon vuotoriskiä prompt injection -hyökkäyksissä. Yhtiö korostaa, ettei ominaisuus poista riskiä kokonaan.\",\"content\":\"OpenAI on alkanut ottaa ChatGPT:ssä käyttöön uuden Lockdown Mode -suojaustilan, joka rajoittaa verkkoyhteyksiin ja ulkoisiin palveluihin kytkeytyviä toimintoja. Tavoitteena on pienentää riskiä, että prompt injection -hyökkäys johtaa arkaluonteisen tiedon siirtymiseen hyökkääjän hallitsemaan järjestelmään.\\n\\n## Suojaustila rajaa ulospäin lähteviä yhteyksiä\\n\\nLockdown Mode on valinnainen lisäsuojaus, joka on suunnattu erityisesti käyttäjille ja organisaatioille, jotka käsittelevät arkaluonteista tietoa ja tarvitsevat tiukempia suojausasetuksia. Ominaisuus on tulossa kirjautuneille käyttäjille Free-, Go-, Plus- ja Pro-tileillä sekä itsepalveluna hankittuihin ChatGPT Business -tilauksiin.\\n\\nAsetuksen keskeinen idea ei ole estää prompt injection -hyökkäyksiä syntymästä. Sen sijaan se pyrkii kaventamaan niitä reittejä, joiden kautta tietoa voisi lähteä ulos palvelusta. Käytännössä suojaustila rajoittaa monia työkaluja ja ominaisuuksia, jotka voivat muodostaa yhteyksiä verkkoon tai ulkoisiin palveluihin.\\n\\nPrompt injection -hyökkäyksissä haitallinen ohje voi olla piilotettuna esimerkiksi sisältöön, jota tekoälymalli käsittelee. Tällainen ohje voi yrittää ohjata mallia paljastamaan tietoja tai toimimaan tavalla, jota käyttäjä ei tarkoittanut. OpenAI:n mukaan ongelma koskee laajasti suuria kielimalleja.\\n\\n## Riski ei poistu kokonaan\\n\\nOpenAI painottaa, että Lockdown Mode vähentää prompt injection -pohjaisen tietovuodon riskiä, mutta ei takaa, etteikö tietoa voisi koskaan vuotaa. Jäännösriskiä voi syntyä esimerkiksi käytössä olevien sovellusten, toimintojen odottamattomien yhdistelmien tai uusien hyökkäystekniikoiden kautta.\\n\\nSuojaustila ei myöskään estä kaikkia prompt injection -hyökkäysten vaikutuksia. Esimerkiksi tiedostoon piilotettu haitallinen ohje voisi yhä vaikuttaa ChatGPT:n vastaukseen ja johtaa virheelliseen lopputulokseen. Ominaisuus ei muuta muistitoimintojen, tiedostojen lataamisen tai keskustelun jakamisen toimintaa.\\n\\nLockdown Modea ei ole tarkoitettu kaikille käyttäjille, sillä tiukemmat rajoitukset voivat samalla poistaa käytöstä hyödyllisiä ominaisuuksia. OpenAI on myös kertonut, ettei Lockdown Modea ja Developer Modea voi käyttää samanaikaisesti: toisen ottaminen käyttöön poistaa toisen käytöstä.\\n\\nUuden suojaustilan rinnalla OpenAI on tuonut käyttöön myös tilien hallintaan liittyvän toiminnon, jonka avulla käyttäjät voivat tarkistaa aktiiviset ChatGPT-istunnot ja kirjautua ulos yksittäisistä tai kaikista istunnoista, jos tilillä epäillään luvatonta toimintaa.\",\"category\":\"Teknologia\",\"tags\":[\"OpenAI\",\"ChatGPT\",\"tekoäly\",\"kyberturvallisuus\",\"prompt injection\"],\"summary_bullets\":[\"OpenAI tuo ChatGPT:hen Lockdown Mode -suojaustilan arkaluonteisen datan suojaamiseksi.\",\"Ominaisuus rajoittaa ulkoisiin palveluihin ja verkkoon liittyviä toimintoja tietovuotoriskin pienentämiseksi.\",\"Yhtiö korostaa, ettei suojaustila poista prompt injection -hyökkäysten riskiä kokonaan.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.92,\"journalist_note\":\"Artikkeli perustuu paketissa annettuihin lähdekatkelmiin. Keskeinen epävarmuus liittyy siihen, että lähdetekstissä yksi kohta aktiivisten istuntojen hallinnasta katkeaa kesken, joten siitä kerrottiin vain yleisellä tasolla.\"}",
+  "article": {
+    "title": "OpenAI ottaa ChatGPT:ssä käyttöön uuden Lockdown Mode -suojaustilan",
+    "description": "OpenAI on alkanut tuoda ChatGPT:hen Lockdown Mode -asetusta, jonka tarkoitus on vähentää arkaluonteisen tiedon vuotoriskiä prompt injection -hyökkäyksissä. Yhtiö korostaa, ettei ominaisuus poista riskiä kokonaan.",
+    "link": "https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/",
+    "published": "2026-06-06T20:32:24+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "9b96f6ac84627fa1e62d898ef961f20e",
+    "_url_hash": "cea1638ff499e1211b2bb1ea382613b480b90133158a300696bffa3c719f9001",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: techtimes]\nOpenAI is prioritizing safety and security on the platform with its latest rollout of the \"Lockdown Mode,\" which is a new setting within ChatGPT that offers more protection for users in the face of attacks.\n\nThere are massive threats that lurk online, and one of them is the infamous \"prompt injection attack\" that tricks chatbots and models into revealing information threat actors want to extract, steal, and more.\n\nSam Altman's AI company has recently released a support document which confirms the rollout of its new Lockdown Mode feature that aims to help protect users from threats online.\n\nOpenAI has claimed that Lockdown Mode is an \"optional advanced security setting that limits many tools and capabilities in OpenAI products that can connect to the web or external services.\" In simple terms, this means that OpenAI will disconnect its ChatGPT platform, apps, models, and more from the internet and other external services to avoid attacks of any kind.\n\nAccording to OpenAI, the Lockdown Mode feature is only available for users who have created accounts on the platform. Accounts have to be logged in in order to take advantage of the feature.\n\nHowever, OpenAI said that it is still in the process of rolling out Lockdown Mode to different types of accounts, including eligible personal accounts, Free, Go, Plus, Pro, and self-serve ChatGPT Business accounts.\n\nTo access Lockdown Mode, users need to go to Settings > Safety and security > Advanced security > and select Lockdown mode.\n\nRead Also:\nChatGPT Reaches 1 Billion App Users: Claude's 640% Growth Splits Session Time\n\n---\n\n[Lähde: The Hacker News]\nOpenAI has begun rolling out a new Lockdown Mode to ChatGPT for eligible personal accounts to reduce the risk of data exfiltration arising from prompt injection attacks.\n\nThe feature is primarily designed for people and organizations that handle sensitive data and require stricter protection guarantees. Lockdown Mode is available to logged-in users across Free, Go, Plus, and Pro, and self-serve ChatGPT Business plans.\n\n\"Lockdown Mode is an optional advanced security setting that limits many tools and capabilities in OpenAI products that can connect to the web or external services,\" OpenAI said.\n\n\"It is designed to reduce the risk of data exfiltration from prompt injection attacks by limiting outbound network requests, at the expense of disabling or limiting some useful features.\"\n\nThe safeguards are aimed at hardening the attack surface against prompt injections, which continues to be a \"frontier\" problem impacting all large language models (LLMs).\n\nSpecifically, they build upon sandboxing and existing controls to combat URL-based data exfiltration mechanisms to limit outbound network requests that could potentially transmit sensitive data to attacker-controlled infrastructure.\n\nThe idea is not to stop prompt injections from occurring. Nor does it change the way memory or file uploads work, or the ability to share a conversation. Rather, the goal is to eliminate potential pathways through which the data could be exfiltrated. To that end, Lockdown Mode disables the following features -\n\nPointing out the feature is not \"intended for everyone,\" OpenAI also noted that both Lockdown Mode and Developer Mode cannot be used at the same time, adding that turning on one disables the other.\n\n\"Lockdown Mode is designed to substantially reduce the risk of prompt injection-based data exfiltration in ChatGPT and supported OpenAI products, but it does not guarantee that data exfiltration cannot happen,\" the company said. \"Risk may remain through enabled Apps, unforeseen combinations of capabilities, or newly discovered techniques.\"\n\n\"Lockdown Mode also does not prevent all other effects of prompt injection attacks. For example, a malicious instruction hidden in an uploaded file could still affect ChatGPT's behavior, and cause an incorrect answer.\"\n\nThe development comes as OpenAI has also launched a new account management feature that enables users to review active ChatGPT sessions and log out of individual or all sessions if signs of unauthorized account activity are det",
+    "research_source": "multi",
+    "summary": "OpenAI on alkanut tuoda ChatGPT:hen Lockdown Mode -asetusta, jonka tarkoitus on vähentää arkaluonteisen tiedon vuotoriskiä prompt injection -hyökkäyksissä. Yhtiö korostaa, ettei ominaisuus poista riskiä kokonaan.",
+    "content": "OpenAI on alkanut ottaa ChatGPT:ssä käyttöön uuden Lockdown Mode -suojaustilan, joka rajoittaa verkkoyhteyksiin ja ulkoisiin palveluihin kytkeytyviä toimintoja. Tavoitteena on pienentää riskiä, että prompt injection -hyökkäys johtaa arkaluonteisen tiedon siirtymiseen hyökkääjän hallitsemaan järjestelmään.\n\n## Suojaustila rajaa ulospäin lähteviä yhteyksiä\n\nLockdown Mode on valinnainen lisäsuojaus, joka on suunnattu erityisesti käyttäjille ja organisaatioille, jotka käsittelevät arkaluonteista tietoa ja tarvitsevat tiukempia suojausasetuksia. Ominaisuus on tulossa kirjautuneille käyttäjille Free-, Go-, Plus- ja Pro-tileillä sekä itsepalveluna hankittuihin ChatGPT Business -tilauksiin.\n\nAsetuksen keskeinen idea ei ole estää prompt injection -hyökkäyksiä syntymästä. Sen sijaan se pyrkii kaventamaan niitä reittejä, joiden kautta tietoa voisi lähteä ulos palvelusta. Käytännössä suojaustila rajoittaa monia työkaluja ja ominaisuuksia, jotka voivat muodostaa yhteyksiä verkkoon tai ulkoisiin palveluihin.\n\nPrompt injection -hyökkäyksissä haitallinen ohje voi olla piilotettuna esimerkiksi sisältöön, jota tekoälymalli käsittelee. Tällainen ohje voi yrittää ohjata mallia paljastamaan tietoja tai toimimaan tavalla, jota käyttäjä ei tarkoittanut. OpenAI:n mukaan ongelma koskee laajasti suuria kielimalleja.\n\n## Riski ei poistu kokonaan\n\nOpenAI painottaa, että Lockdown Mode vähentää prompt injection -pohjaisen tietovuodon riskiä, mutta ei takaa, etteikö tietoa voisi koskaan vuotaa. Jäännösriskiä voi syntyä esimerkiksi käytössä olevien sovellusten, toimintojen odottamattomien yhdistelmien tai uusien hyökkäystekniikoiden kautta.\n\nSuojaustila ei myöskään estä kaikkia prompt injection -hyökkäysten vaikutuksia. Esimerkiksi tiedostoon piilotettu haitallinen ohje voisi yhä vaikuttaa ChatGPT:n vastaukseen ja johtaa virheelliseen lopputulokseen. Ominaisuus ei muuta muistitoimintojen, tiedostojen lataamisen tai keskustelun jakamisen toimintaa.\n\nLockdown Modea ei ole tarkoitettu kaikille käyttäjille, sillä tiukemmat rajoitukset voivat samalla poistaa käytöstä hyödyllisiä ominaisuuksia. OpenAI on myös kertonut, ettei Lockdown Modea ja Developer Modea voi käyttää samanaikaisesti: toisen ottaminen käyttöön poistaa toisen käytöstä.\n\nUuden suojaustilan rinnalla OpenAI on tuonut käyttöön myös tilien hallintaan liittyvän toiminnon, jonka avulla käyttäjät voivat tarkistaa aktiiviset ChatGPT-istunnot ja kirjautua ulos yksittäisistä tai kaikista istunnoista, jos tilillä epäillään luvatonta toimintaa.",
+    "category": "Teknologia",
+    "tags": [
+      "openai",
+      "chatgpt",
+      "tekoäly",
+      "kyberturvallisuus",
+      "prompt injection"
+    ],
+    "summary_bullets": [
+      "OpenAI tuo ChatGPT:hen Lockdown Mode -suojaustilan arkaluonteisen datan suojaamiseksi.",
+      "Ominaisuus rajoittaa ulkoisiin palveluihin ja verkkoon liittyviä toimintoja tietovuotoriskin pienentämiseksi.",
+      "Yhtiö korostaa, ettei suojaustila poista prompt injection -hyökkäysten riskiä kokonaan."
+    ],
+    "key_points": [
+      "OpenAI tuo ChatGPT:hen Lockdown Mode -suojaustilan arkaluonteisen datan suojaamiseksi.",
+      "Ominaisuus rajoittaa ulkoisiin palveluihin ja verkkoon liittyviä toimintoja tietovuotoriskin pienentämiseksi.",
+      "Yhtiö korostaa, ettei suojaustila poista prompt injection -hyökkäysten riskiä kokonaan."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin lähdekatkelmiin. Keskeinen epävarmuus liittyy siihen, että lähdetekstissä yksi kohta aktiivisten istuntojen hallinnasta katkeaa kesken, joten siitä kerrottiin vain yleisellä tasolla.",
+    "source_text": "OpenAI has begun rolling out a new Lockdown Mode to ChatGPT for eligible personal accounts to reduce the risk of data exfiltration arising from prompt injection attacks. The feature is primarily designed for people and organizations that handle sensitive data and require stricter protection guarantees. Lockdown Mode is available to logged-in users across Free, Go, Plus, and Pro, and self-serve ChatGPT Business plans. \"Lockdown Mode is an optional advanced security setting that limits many tools and capabilities in OpenAI products that can connect to the web or external services,\" OpenAI said. \"It is designed to reduce the risk of data exfiltration from prompt injection attacks by limiting outbound network requests, at the expense of disabling or limiting some useful features.\"\n\n\"Lockdown Mode is designed to substantially reduce the risk of prompt injection-based data exfiltration in ChatGPT and supported OpenAI products, but it does not guarantee that data exfiltration cannot happen,\" the company said. \"Risk may remain through enabled Apps, unforeseen combinations of capabilities, or newly discovered techniques.\" \"Lockdown Mode also does not prevent all other effects of prompt injection attacks. For example, a malicious instruction hidden in an uploaded file could still affect ChatGPT's behavior, and cause an incorrect answer.\" The development comes as OpenAI has also launched a new account management feature that enables users to review active ChatGPT sessions and log out of individual or all sessions if signs of unauthorized account activity are det\n\nOpenAI is prioritizing safety and security on the platform with its latest rollout of the \"Lockdown Mode,\" which is a new setting within ChatGPT that offers more protection for users in the face of attacks. There are massive threats that lurk online, and one of them is the infamous \"prompt injection attack\" that tricks chatbots and models into revealing information threat actors want to extract, steal, and more. Sam Altman's AI company has recently released a support document which confirms the rollout of its new Lockdown Mode feature that aims to help protect users from threats online.\n\nThe safeguards are aimed at hardening the attack surface against prompt injections, which continues to be a \"frontier\" problem impacting all large language models (LLMs). Specifically, they build upon sandboxing and existing controls to combat URL-based data exfiltration mechanisms to limit outbound network requests that could potentially transmit sensitive data to attacker-controlled infrastructure. The idea is not to stop prompt injections from occurring. Nor does it change the way memory or file uploads work, or the ability to share a conversation. Rather, the goal is to eliminate potential pathways through which the data could be exfiltrated. To that end, Lockdown Mode disables the following features - Pointing out the feature is not \"intended for everyone,\" OpenAI also noted that both Lockdown Mode and Developer Mode cannot be used at the same time, adding that turning on one disables the other.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260606T205103Z_7140b07582",
+    "image": "https://images.unsplash.com/photo-1667372283536-a832e74401c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwc2VjdXJpdHklMjBmZWF0dXJlc3xlbnwxfDB8fHwxNzgwNzc5NDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1667372283536-a832e74401c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwc2VjdXJpdHklMjBmZWF0dXJlc3xlbnwxfDB8fHwxNzgwNzc5NDg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "OpenAI ottaa ChatGPT:ssä käyttöön uuden Lockdown Mode -suojaustilan",
+    "image_credit": "Photo by Growtika on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-blue-and-white-logo-ahgsuFHlIFo?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-06T20:58:05.801359+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1667372283536-a832e74401c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwc2VjdXJpdHklMjBmZWF0dXJlc3xlbnwxfDB8fHwxNzgwNzc5NDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1667372283536-a832e74401c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwc2VjdXJpdHklMjBmZWF0dXJlc3xlbnwxfDB8fHwxNzgwNzc5NDg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-06T20:59:15.795351+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-06-openai-ottaa-chatgptssa-kayttoon-uuden-lockdown-mode-suojaus.md"
+  ]
+}
