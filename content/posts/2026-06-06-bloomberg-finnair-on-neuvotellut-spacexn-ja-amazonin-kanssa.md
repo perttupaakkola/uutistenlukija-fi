@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/bloomberg-finnair-neuvotellut-spacex-n-kanssa-wifi-yhteydesta/9350194"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
