@@ -1,0 +1,197 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-06T06:41:07.335428+00:00",
+  "digest": "aac4a45d0d",
+  "packet": {
+    "packet_id": "20260606T064107Z_aac4a45d0d",
+    "created_at": "2026-06-06T06:41:07Z",
+    "headline_seed": "Canada bans Texas cattle over flesh-eating screwworm outbreak in US",
+    "description_seed": "The ban came as a second infected calf was identified in Texas, and the US state declaring a state of disaster over the outbreak.",
+    "link": "https://www.bbc.com/news/articles/cevpv3r7jmpo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "NBC News",
+      "NBC News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cevpv3r7jmpo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Canada bans Texas cattle over flesh-eating screwworm outbreak in US"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The ban came as a second infected calf was identified in Texas, and the US state declaring a state of disaster over the outbreak.",
+        "word_count": 24,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Canada's food inspection agency has announced a temporary ban on livestock from the US state of Texas after flesh-eating screwworms were discovered in calves this week. Cows and horses that were in Texas anytime within 21 days before crossing the border into Canada would not be accepted into the country, an agency news release said. The announcement comes after the US Department of Agriculture (USDA) said the parasite had been found in a second calf in Texas - the leading US beef and cattle producer. Texas Gov Greg Abbott declared a state of disaster on Friday over the \"imminent threat\" the outbreak posed. \"This is likely to spread over the course of the summer,\" Abbott told reporters on Friday.",
+        "word_count": 119,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "A flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high. The case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday. The parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals. While the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts. The parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.",
+        "word_count": 133,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "The case is the first confirmed detection of New World screwworm in Texas since 1966 and is the only confirmed case identified in the country so far, Rollins said. It follows months of warnings from U.S. and Texas agriculture officials and cattle industry leaders, as the pest steadily moved north through Mexico toward the American border. “For months, the screwworm has advanced rapidly through Mexico in spite of the USDA’s existing game plan,” Texas Agriculture Commissioner Sid Miller said Wednesday, adding that “instead of using every available tool, USDA moved too slowly and relied solely on a partial solution that takes years to fully implement.” Miller has also called on President Donald Trump to take direct control of the government’s response and “throw every available federal resource at this threat before it becomes a full-blown agricultural disaster.”",
+        "word_count": 137,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "The ban came as a second infected calf was identified in Texas, and the US state declaring a state of disaster over the outbreak.\n\nCanada's food inspection agency has announced a temporary ban on livestock from the US state of Texas after flesh-eating screwworms were discovered in calves this week. Cows and horses that were in Texas anytime within 21 days before crossing the border into Canada would not be accepted into the country, an agency news release said. The announcement comes after the US Department of Agriculture (USDA) said the parasite had been found in a second calf in Texas - the leading US beef and cattle producer. Texas Gov Greg Abbott declared a state of disaster on Friday over the \"imminent threat\" the outbreak posed. \"This is likely to spread over the course of the summer,\" Abbott told reporters on Friday.\n\nA flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high. The case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday. The parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals. While the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts. The parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.\n\nThe case is the first confirmed detection of New World screwworm in Texas since 1966 and is the only confirmed case identified in the country so far, Rollins said. It follows months of warnings from U.S. and Texas agriculture officials and cattle industry leaders, as the pest steadily moved north through Mexico toward the American border. “For months, the screwworm has advanced rapidly through Mexico in spite of the USDA’s existing game plan,” Texas Agriculture Commissioner Sid Miller said Wednesday, adding that “instead of using every available tool, USDA moved too slowly and relied solely on a partial solution that takes years to fully implement.” Miller has also called on President Donald Trump to take direct control of the government’s response and “throw every available federal resource at this threat before it becomes a full-blown agricultural disaster.”",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 836,
+      "selected_blocks": 4,
+      "selected_source_words": 413,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "NBC News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Canada bans Texas cattle over flesh-eating screwworm outbreak in US",
+      "description": "The ban came as a second infected calf was identified in Texas, and the US state declaring a state of disaster over the outbreak.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Canada bans Texas cattle over flesh-eating screwworm outbreak in US",
+    "description": "The ban came as a second infected calf was identified in Texas, and the US state declaring a state of disaster over the outbreak.",
+    "link": "https://www.bbc.com/news/articles/cevpv3r7jmpo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-06T04:22:25+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "b0ccec7e56386d5fc3a9cb40019ec6bf",
+    "_url_hash": "ddfe8adad39e968c76a8a83280a5c9f785753e66a53717332108b6d43b96e9b6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nCanada's food inspection agency has announced a temporary ban on livestock from the US state of Texas after flesh-eating screwworms were discovered in calves this week.\n\nCows and horses that were in Texas anytime within 21 days before crossing the border into Canada would not be accepted into the country, an agency news release said.\n\nThe announcement comes after the US Department of Agriculture (USDA) said the parasite had been found in a second calf in Texas - the leading US beef and cattle producer. Texas Gov Greg Abbott declared a state of disaster on Friday over the \"imminent threat\" the outbreak posed.\n\n\"This is likely to spread over the course of the summer,\" Abbott told reporters on Friday.\n\nThe New World Screwworm is a parasitic fly whose females lay eggs in open wounds and mucous membranes of living warm-blooded animals and people. When the eggs hatch, hundreds of larvae burrow through living flesh with sharp mouths, eventually killing their host if left untreated.\n\nOn Wednesday, US officials announced that Texas had detected its first case in 60 years in a three-week-old calf, with the larvae found in its umbilical area. The discovery was made in the town of La Pryor about 30 miles (48km) from the Mexico border.\n\nThen on Friday, a second case was detected in a one-month-old calf in Zavala County about 5.6 miles (9km) from the first case. The discovery was made as officials tested a \"number of suspected cases,\" the USDA said.\n\nIt was found in a 20km-wide \"control zone\" established after the first case was discovered, the USDA said. The department said it had also enacted \"quarantines, movement controls, and surveillance\" in that area.\n\nThe cases marked the first as part of an outbreak that's been moving through Central America and Mexico, which has been under heavy monitoring by US agricultural and health officials.\n\nGov Abbott issued a proclamation declaring a state of disaster on Friday, which states the outbreak presents \"an imminent threat or occurrence of widespread danger and injury to the Texas agricultural industry\". It directs more resources to the affected areas in the hope of combating the spread.\n\nCanadian officials note the parasite is unlikely to become a problem in the country because of the colder climate - the parasites historically have spread in warmer, humid areas - but nevertheless they are warning farmers to monitor livestock for wounds and any cut that is \"accompanied by discharge or foul odour\". They also urged residents t\n\n---\n\n[Lähde: NBC News]\nA flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high.\n\nThe case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday.\n\nThe parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals.\n\nWhile the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts.\n\nThe parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.\n\nThe case is the first confirmed detection of New World screwworm in Texas since 1966 and is the only confirmed case identified in the country so far, Rollins said.\n\nIt follows months of warnings from U.S. and Texas agriculture officials and cattle industry leaders, as the pest steadily moved north through Mexico toward the American border.\n\n“For months, the screwworm has advanced rapidly through Mexico in spite of the USDA’s existing game plan,” Texas Agriculture Commissioner Sid Miller said Wednesday, adding that “instead of using every available tool, USDA moved too slowly and relied solely on a partial solution that takes years to fully implement.”\n\nMiller has also called on President Donald Trump to take direct control of the government’s response and “throw every available federal resource at this threat before it becomes a full-blown agricultural disaster.”\n\nThe primary weapon against screwworm is a decades-old technique that has eliminated the parasite from the U.S. in the past — releasing sterilized male flies into affected areas. Since female flies generally mate only once, those that pair with sterile males are unable to produce offspring.\n\nIn a bid to contain the spread of the parasite, the U.S. Department of Agriculture said it has begun releasing sterile flies in the area and is investing heavily in new sterile flies production facilities in Texas.\n\nIt has also established a roughly 12-mile quarantine zone around the site and restricted the movement of warm-blooded animals, including livestock and pets, to further strengthen the response.\n\nState veterinarians are urging ranchers and pet owners inside the quarantine zone to follow movement restrict",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-06T06:43:44.349695+00:00",
+  "payload": {
+    "packet_id": "20260606T064107Z_aac4a45d0d",
+    "title": "Kanada keskeyttää karjan tuonnin Texasista lihansyöjäloisen takia",
+    "summary": "Kanada on asettanut väliaikaisen tuontikiellon Texasista tulevalle karjalle, kun New World screwworm -loista on havaittu vasikoissa Yhdysvaltain suurimmassa nautakarjaosavaltiossa.",
+    "content": "Kanadan elintarviketurvallisuudesta vastaava viranomainen on ilmoittanut väliaikaisesta kiellosta, joka koskee Texasista Kanadaan tuotavaa karjaa, kun lihansyöjäloiseksi kuvattua New World screwworm -loista on todettu osavaltiossa vasikoissa. Päätös tuli sen jälkeen, kun Yhdysvaltain maatalousministeriö kertoi loisen löytyneen toisesta vasikasta Texasissa ja osavaltio julisti tilanteen vuoksi katastrofitilan.\n\n## Kielto koskee Texasissa olleita eläimiä\n\nKanadan linjauksen mukaan maahan ei hyväksytä lehmiä eikä hevosia, jotka ovat olleet Texasissa milloin tahansa 21 päivän aikana ennen Kanadan rajan ylittämistä. Kyse on väliaikaisesta rajoituksesta, jolla pyritään estämään loisen leviäminen karjaan Kanadan puolella.\n\nTexas on Yhdysvaltain johtava naudanlihan ja karjan tuotantoalue, joten tapaus on herättänyt huolta myös laajemmin maan karjataloudessa. Texasin kuvernööri Greg Abbott julisti perjantaina katastrofitilan ja kuvasi outbreakin muodostavan välittömän uhan. Abbott arvioi, että tilanne todennäköisesti laajenee kesän aikana.\n\nEnsimmäinen vahvistettu tapaus todettiin kolmen viikon ikäisessä vasikassa La Pryorissa lähellä Yhdysvaltain ja Meksikon rajaa. Yhdysvaltain maatalousministeri Brooke Rollinsin mukaan kyse oli ensimmäisestä vahvistetusta New World screwworm -havainnosta Texasissa sitten vuoden 1966. Loinen oli pysynyt poissa Yhdysvaltain tuotantoeläimistä vuosikymmeniä.\n\n## Ihmisille riski on arvioiden mukaan pieni\n\nNew World screwworm on loiskärpänen, jonka toukat syövät lämminveristen eläinten elävää kudosta. Loinen voi tarttua myös ihmisiin ja lemmikkeihin, mutta asiantuntijoiden mukaan tällaiset tapaukset ovat harvinaisia eivätkä muodosta laajaa vaaraa yleisölle.\n\nLoinen ei tietojen mukaan aiheuta elintarviketurvallisuusuhkaa. Laajempi leviäminen voisi silti aiheuttaa karjataloudelle miljardiluokan kustannuksia ja lisätä painetta naudanlihan hintoihin, jotka ovat jo ennätyksellisen korkealla.\n\nTexasissa ja Yhdysvaltain maataloushallinnossa on varoitettu riskistä kuukausien ajan, kun tuholaisen on kerrottu edenneen pohjoiseen Meksikon kautta kohti Yhdysvaltain rajaa. Texasin maatalouskomissaari Sid Miller on arvostellut liittovaltion toimia liian hitaiksi ja vaatinut presidentti Donald Trumpia ottamaan hallituksen vastauksen suoraan ohjaukseensa ennen kuin tilanteesta kehittyy täysimittainen maatalouskriisi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kanada",
+      "Texas",
+      "Yhdysvallat",
+      "karjatalous",
+      "maatalous",
+      "loiset"
+    ],
+    "summary_bullets": [
+      "Kanada on asettanut väliaikaisen kiellon Texasista tulevalle karjalle ja hevosille.",
+      "New World screwworm -loinen on todettu vasikoissa Texasissa, joka on Yhdysvaltain johtava karjaosavaltio.",
+      "Viranomaisten mukaan loinen ei ole elintarviketurvallisuusuhka, mutta laaja leviäminen voisi tulla karjataloudelle hyvin kalliiksi."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin BBC:n ja NBC Newsin tietoihin. En lisännyt lähdeaineiston ulkopuolisia yksityiskohtia; huomioin ristiriidan tapausmäärästä muotoilemalla sen niin, että viranomaiset kertoivat toisesta vasikasta samalla kun aiemmassa kuvauksessa ensimmäinen vahvistettu havainto yksilöitiin."
+  },
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260606T064107Z_aac4a45d0d\",\"title\":\"Kanada keskeyttää karjan tuonnin Texasista lihansyöjäloisen takia\",\"summary\":\"Kanada on asettanut väliaikaisen tuontikiellon Texasista tulevalle karjalle, kun New World screwworm -loista on havaittu vasikoissa Yhdysvaltain suurimmassa nautakarjaosavaltiossa.\",\"content\":\"Kanadan elintarviketurvallisuudesta vastaava viranomainen on ilmoittanut väliaikaisesta kiellosta, joka koskee Texasista Kanadaan tuotavaa karjaa, kun lihansyöjäloiseksi kuvattua New World screwworm -loista on todettu osavaltiossa vasikoissa. Päätös tuli sen jälkeen, kun Yhdysvaltain maatalousministeriö kertoi loisen löytyneen toisesta vasikasta Texasissa ja osavaltio julisti tilanteen vuoksi katastrofitilan.\\n\\n## Kielto koskee Texasissa olleita eläimiä\\n\\nKanadan linjauksen mukaan maahan ei hyväksytä lehmiä eikä hevosia, jotka ovat olleet Texasissa milloin tahansa 21 päivän aikana ennen Kanadan rajan ylittämistä. Kyse on väliaikaisesta rajoituksesta, jolla pyritään estämään loisen leviäminen karjaan Kanadan puolella.\\n\\nTexas on Yhdysvaltain johtava naudanlihan ja karjan tuotantoalue, joten tapaus on herättänyt huolta myös laajemmin maan karjataloudessa. Texasin kuvernööri Greg Abbott julisti perjantaina katastrofitilan ja kuvasi outbreakin muodostavan välittömän uhan. Abbott arvioi, että tilanne todennäköisesti laajenee kesän aikana.\\n\\nEnsimmäinen vahvistettu tapaus todettiin kolmen viikon ikäisessä vasikassa La Pryorissa lähellä Yhdysvaltain ja Meksikon rajaa. Yhdysvaltain maatalousministeri Brooke Rollinsin mukaan kyse oli ensimmäisestä vahvistetusta New World screwworm -havainnosta Texasissa sitten vuoden 1966. Loinen oli pysynyt poissa Yhdysvaltain tuotantoeläimistä vuosikymmeniä.\\n\\n## Ihmisille riski on arvioiden mukaan pieni\\n\\nNew World screwworm on loiskärpänen, jonka toukat syövät lämminveristen eläinten elävää kudosta. Loinen voi tarttua myös ihmisiin ja lemmikkeihin, mutta asiantuntijoiden mukaan tällaiset tapaukset ovat harvinaisia eivätkä muodosta laajaa vaaraa yleisölle.\\n\\nLoinen ei tietojen mukaan aiheuta elintarviketurvallisuusuhkaa. Laajempi leviäminen voisi silti aiheuttaa karjataloudelle miljardiluokan kustannuksia ja lisätä painetta naudanlihan hintoihin, jotka ovat jo ennätyksellisen korkealla.\\n\\nTexasissa ja Yhdysvaltain maataloushallinnossa on varoitettu riskistä kuukausien ajan, kun tuholaisen on kerrottu edenneen pohjoiseen Meksikon kautta kohti Yhdysvaltain rajaa. Texasin maatalouskomissaari Sid Miller on arvostellut liittovaltion toimia liian hitaiksi ja vaatinut presidentti Donald Trumpia ottamaan hallituksen vastauksen suoraan ohjaukseensa ennen kuin tilanteesta kehittyy täysimittainen maatalouskriisi.\",\"category\":\"Ulkomaat\",\"tags\":[\"Kanada\",\"Texas\",\"Yhdysvallat\",\"karjatalous\",\"maatalous\",\"loiset\"],\"summary_bullets\":[\"Kanada on asettanut väliaikaisen kiellon Texasista tulevalle karjalle ja hevosille.\",\"New World screwworm -loinen on todettu vasikoissa Texasissa, joka on Yhdysvaltain johtava karjaosavaltio.\",\"Viranomaisten mukaan loinen ei ole elintarviketurvallisuusuhka, mutta laaja leviäminen voisi tulla karjataloudelle hyvin kalliiksi.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.98,\"journalist_note\":\"Artikkeli perustuu paketissa annettuihin BBC:n ja NBC Newsin tietoihin. En lisännyt lähdeaineiston ulkopuolisia yksityiskohtia; huomioin ristiriidan tapausmäärästä muotoilemalla sen niin, että viranomaiset kertoivat toisesta vasikasta samalla kun aiemmassa kuvauksessa ensimmäinen vahvistettu havainto yksilöitiin.\"}",
+  "article": {
+    "title": "Kanada keskeyttää karjan tuonnin Texasista lihansyöjäloisen takia",
+    "description": "Kanada on asettanut väliaikaisen tuontikiellon Texasista tulevalle karjalle, kun New World screwworm -loista on havaittu vasikoissa Yhdysvaltain suurimmassa nautakarjaosavaltiossa.",
+    "link": "https://www.bbc.com/news/articles/cevpv3r7jmpo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-06T04:22:25+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "b0ccec7e56386d5fc3a9cb40019ec6bf",
+    "_url_hash": "ddfe8adad39e968c76a8a83280a5c9f785753e66a53717332108b6d43b96e9b6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nCanada's food inspection agency has announced a temporary ban on livestock from the US state of Texas after flesh-eating screwworms were discovered in calves this week.\n\nCows and horses that were in Texas anytime within 21 days before crossing the border into Canada would not be accepted into the country, an agency news release said.\n\nThe announcement comes after the US Department of Agriculture (USDA) said the parasite had been found in a second calf in Texas - the leading US beef and cattle producer. Texas Gov Greg Abbott declared a state of disaster on Friday over the \"imminent threat\" the outbreak posed.\n\n\"This is likely to spread over the course of the summer,\" Abbott told reporters on Friday.\n\nThe New World Screwworm is a parasitic fly whose females lay eggs in open wounds and mucous membranes of living warm-blooded animals and people. When the eggs hatch, hundreds of larvae burrow through living flesh with sharp mouths, eventually killing their host if left untreated.\n\nOn Wednesday, US officials announced that Texas had detected its first case in 60 years in a three-week-old calf, with the larvae found in its umbilical area. The discovery was made in the town of La Pryor about 30 miles (48km) from the Mexico border.\n\nThen on Friday, a second case was detected in a one-month-old calf in Zavala County about 5.6 miles (9km) from the first case. The discovery was made as officials tested a \"number of suspected cases,\" the USDA said.\n\nIt was found in a 20km-wide \"control zone\" established after the first case was discovered, the USDA said. The department said it had also enacted \"quarantines, movement controls, and surveillance\" in that area.\n\nThe cases marked the first as part of an outbreak that's been moving through Central America and Mexico, which has been under heavy monitoring by US agricultural and health officials.\n\nGov Abbott issued a proclamation declaring a state of disaster on Friday, which states the outbreak presents \"an imminent threat or occurrence of widespread danger and injury to the Texas agricultural industry\". It directs more resources to the affected areas in the hope of combating the spread.\n\nCanadian officials note the parasite is unlikely to become a problem in the country because of the colder climate - the parasites historically have spread in warmer, humid areas - but nevertheless they are warning farmers to monitor livestock for wounds and any cut that is \"accompanied by discharge or foul odour\". They also urged residents t\n\n---\n\n[Lähde: NBC News]\nA flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high.\n\nThe case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday.\n\nThe parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals.\n\nWhile the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts.\n\nThe parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.\n\nThe case is the first confirmed detection of New World screwworm in Texas since 1966 and is the only confirmed case identified in the country so far, Rollins said.\n\nIt follows months of warnings from U.S. and Texas agriculture officials and cattle industry leaders, as the pest steadily moved north through Mexico toward the American border.\n\n“For months, the screwworm has advanced rapidly through Mexico in spite of the USDA’s existing game plan,” Texas Agriculture Commissioner Sid Miller said Wednesday, adding that “instead of using every available tool, USDA moved too slowly and relied solely on a partial solution that takes years to fully implement.”\n\nMiller has also called on President Donald Trump to take direct control of the government’s response and “throw every available federal resource at this threat before it becomes a full-blown agricultural disaster.”\n\nThe primary weapon against screwworm is a decades-old technique that has eliminated the parasite from the U.S. in the past — releasing sterilized male flies into affected areas. Since female flies generally mate only once, those that pair with sterile males are unable to produce offspring.\n\nIn a bid to contain the spread of the parasite, the U.S. Department of Agriculture said it has begun releasing sterile flies in the area and is investing heavily in new sterile flies production facilities in Texas.\n\nIt has also established a roughly 12-mile quarantine zone around the site and restricted the movement of warm-blooded animals, including livestock and pets, to further strengthen the response.\n\nState veterinarians are urging ranchers and pet owners inside the quarantine zone to follow movement restrict",
+    "research_source": "multi",
+    "summary": "Kanada on asettanut väliaikaisen tuontikiellon Texasista tulevalle karjalle, kun New World screwworm -loista on havaittu vasikoissa Yhdysvaltain suurimmassa nautakarjaosavaltiossa.",
+    "content": "Kanadan elintarviketurvallisuudesta vastaava viranomainen on ilmoittanut väliaikaisesta kiellosta, joka koskee Texasista Kanadaan tuotavaa karjaa, kun lihansyöjäloiseksi kuvattua New World screwworm -loista on todettu osavaltiossa vasikoissa. Päätös tuli sen jälkeen, kun Yhdysvaltain maatalousministeriö kertoi loisen löytyneen toisesta vasikasta Texasissa ja osavaltio julisti tilanteen vuoksi katastrofitilan.\n\n## Kielto koskee Texasissa olleita eläimiä\n\nKanadan linjauksen mukaan maahan ei hyväksytä lehmiä eikä hevosia, jotka ovat olleet Texasissa milloin tahansa 21 päivän aikana ennen Kanadan rajan ylittämistä. Kyse on väliaikaisesta rajoituksesta, jolla pyritään estämään loisen leviäminen karjaan Kanadan puolella.\n\nTexas on Yhdysvaltain johtava naudanlihan ja karjan tuotantoalue, joten tapaus on herättänyt huolta myös laajemmin maan karjataloudessa. Texasin kuvernööri Greg Abbott julisti perjantaina katastrofitilan ja kuvasi outbreakin muodostavan välittömän uhan. Abbott arvioi, että tilanne todennäköisesti laajenee kesän aikana.\n\nEnsimmäinen vahvistettu tapaus todettiin kolmen viikon ikäisessä vasikassa La Pryorissa lähellä Yhdysvaltain ja Meksikon rajaa. Yhdysvaltain maatalousministeri Brooke Rollinsin mukaan kyse oli ensimmäisestä vahvistetusta New World screwworm -havainnosta Texasissa sitten vuoden 1966. Loinen oli pysynyt poissa Yhdysvaltain tuotantoeläimistä vuosikymmeniä.\n\n## Ihmisille riski on arvioiden mukaan pieni\n\nNew World screwworm on loiskärpänen, jonka toukat syövät lämminveristen eläinten elävää kudosta. Loinen voi tarttua myös ihmisiin ja lemmikkeihin, mutta asiantuntijoiden mukaan tällaiset tapaukset ovat harvinaisia eivätkä muodosta laajaa vaaraa yleisölle.\n\nLoinen ei tietojen mukaan aiheuta elintarviketurvallisuusuhkaa. Laajempi leviäminen voisi silti aiheuttaa karjataloudelle miljardiluokan kustannuksia ja lisätä painetta naudanlihan hintoihin, jotka ovat jo ennätyksellisen korkealla.\n\nTexasissa ja Yhdysvaltain maataloushallinnossa on varoitettu riskistä kuukausien ajan, kun tuholaisen on kerrottu edenneen pohjoiseen Meksikon kautta kohti Yhdysvaltain rajaa. Texasin maatalouskomissaari Sid Miller on arvostellut liittovaltion toimia liian hitaiksi ja vaatinut presidentti Donald Trumpia ottamaan hallituksen vastauksen suoraan ohjaukseensa ennen kuin tilanteesta kehittyy täysimittainen maatalouskriisi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "kanada",
+      "texas",
+      "yhdysvallat",
+      "karjatalous",
+      "maatalous"
+    ],
+    "summary_bullets": [
+      "Kanada on asettanut väliaikaisen kiellon Texasista tulevalle karjalle ja hevosille.",
+      "New World screwworm -loinen on todettu vasikoissa Texasissa, joka on Yhdysvaltain johtava karjaosavaltio.",
+      "Viranomaisten mukaan loinen ei ole elintarviketurvallisuusuhka, mutta laaja leviäminen voisi tulla karjataloudelle hyvin kalliiksi."
+    ],
+    "key_points": [
+      "Kanada on asettanut väliaikaisen kiellon Texasista tulevalle karjalle ja hevosille.",
+      "New World screwworm -loinen on todettu vasikoissa Texasissa, joka on Yhdysvaltain johtava karjaosavaltio.",
+      "Viranomaisten mukaan loinen ei ole elintarviketurvallisuusuhka, mutta laaja leviäminen voisi tulla karjataloudelle hyvin kalliiksi."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin BBC:n ja NBC Newsin tietoihin. En lisännyt lähdeaineiston ulkopuolisia yksityiskohtia; huomioin ristiriidan tapausmäärästä muotoilemalla sen niin, että viranomaiset kertoivat toisesta vasikasta samalla kun aiemmassa kuvauksessa ensimmäinen vahvistettu havainto yksilöitiin.",
+    "source_text": "The ban came as a second infected calf was identified in Texas, and the US state declaring a state of disaster over the outbreak.\n\nCanada's food inspection agency has announced a temporary ban on livestock from the US state of Texas after flesh-eating screwworms were discovered in calves this week. Cows and horses that were in Texas anytime within 21 days before crossing the border into Canada would not be accepted into the country, an agency news release said. The announcement comes after the US Department of Agriculture (USDA) said the parasite had been found in a second calf in Texas - the leading US beef and cattle producer. Texas Gov Greg Abbott declared a state of disaster on Friday over the \"imminent threat\" the outbreak posed. \"This is likely to spread over the course of the summer,\" Abbott told reporters on Friday.\n\nA flesh-eating parasite that had been kept out of U.S. livestock for decades has been detected in Texas, threatening the nation’s cattle industry and food supply at a time when prices are already high. The case of New World screwworm was confirmed in a 3-week-old calf in La Pryor, near the U.S.-Mexico border, Agriculture Secretary Brooke Rollins said late Wednesday. The parasitic fly’s larvae feed exclusively on the living tissue of warm-blooded animals. While the fly is capable of infecting humans and pets, such cases are rare and pose little risk to the broader public, according to experts. The parasite does not pose a food safety threat, but a wider outbreak could still cost the livestock industry billions of dollars and put additional pressure on beef prices that are already at record highs.\n\nThe case is the first confirmed detection of New World screwworm in Texas since 1966 and is the only confirmed case identified in the country so far, Rollins said. It follows months of warnings from U.S. and Texas agriculture officials and cattle industry leaders, as the pest steadily moved north through Mexico toward the American border. “For months, the screwworm has advanced rapidly through Mexico in spite of the USDA’s existing game plan,” Texas Agriculture Commissioner Sid Miller said Wednesday, adding that “instead of using every available tool, USDA moved too slowly and relied solely on a partial solution that takes years to fully implement.” Miller has also called on President Donald Trump to take direct control of the government’s response and “throw every available federal resource at this threat before it becomes a full-blown agricultural disaster.”",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260606T064107Z_aac4a45d0d"
+  },
+  "duplicate_rejected_at": "2026-06-06T06:48:01.538313+00:00",
+  "duplicate_rejected": true
+}
