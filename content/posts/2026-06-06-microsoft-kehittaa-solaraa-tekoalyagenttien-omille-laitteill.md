@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/microsoft-toivoo-solarasta-mullistusta-uusi-alusta-pelkastaan-laitteille-jotka-pyorivat-ai-agenttien-avulla/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
