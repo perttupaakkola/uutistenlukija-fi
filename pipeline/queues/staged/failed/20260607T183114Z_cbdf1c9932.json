@@ -1,0 +1,137 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-07T18:31:14.893288+00:00",
+  "digest": "cbdf1c9932",
+  "packet": {
+    "packet_id": "20260607T183114Z_cbdf1c9932",
+    "created_at": "2026-06-07T18:31:14Z",
+    "headline_seed": "Mexicans chase a world record wave - but is the trend even Mexican?",
+    "description_seed": "Thousands lined the streets in Mexico City on Saturday as they attempted to set the world record for largest human wave.",
+    "link": "https://www.bbc.com/news/articles/c2ly1q0940qo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c2ly1q0940qo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mexicans chase a world record wave - but is the trend even Mexican?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Thousands lined the streets in Mexico City on Saturday as they attempted to set the world record for largest human wave.",
+        "word_count": 21,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "It's a tradition repeated in stadiums across the world, with crowds of spectators rising up in a rippling roar. The largest wave so far, according to Guinness World Records, was at a Nascar racing event in the American state of Tennessee in 2008, when 157,574 people joined a wave that swept around the stadium. Now, as part of the countdown to the World Cup, Mexico City is attempting to surpass that mark. The chosen location was not a stadium, but an urban setting ideal for spreading a visible, continuous wave: the emblematic Paseo de la Reforma, an iconic arterial road inspired by European boulevards. On Saturday, thousands gathered along the avenue and, after several practice runs, made their record attempt.",
+        "word_count": 120,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "\"Mexico, Mexico!\" crowds shouted as they threw their arms in the air, many dressed in the bright green jersey of the Mexican national team. Guinness officials are now analysing the effort to determine whether a new world record has been set. The city is a fitting venue: it was here, 40 years ago, that this unique form of collective expression first captured global attention. Since then, the phenomenon has become closely associated with Mexico. But many believe George Henderson - or Krazy George - from the US deserves credit for initiating and directing the first ever wave, which is known as the Mexican wave outside North America. He believes this took place at a baseball game in California in 1981 between the Oakland Athletics and the New York Yankees.",
+        "word_count": 129,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "\"The Oakland A's had already lost two away games,\" he remembers. \"In the third inning I thought about trying something no one had seen before. I found three sections and started explaining what I wanted.\" The first two attempts failed, but on the third try the wave went all the way around the stadium. And on the fourth, he managed to create a continuous wave. Because the game was televised, fans of other sports adopted it. But it was at the Fifa World Cup in 1986 in Mexico that it was broadcast to an enormous global audience - and so became a global phenomenon. Fifteen years later, the phenomenon caught the curiosity of a scientist from the statistical and biological physics group at the Hungarian Academy of Sciences in Budapest.",
+        "word_count": 130,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Thousands lined the streets in Mexico City on Saturday as they attempted to set the world record for largest human wave.\n\nIt's a tradition repeated in stadiums across the world, with crowds of spectators rising up in a rippling roar. The largest wave so far, according to Guinness World Records, was at a Nascar racing event in the American state of Tennessee in 2008, when 157,574 people joined a wave that swept around the stadium. Now, as part of the countdown to the World Cup, Mexico City is attempting to surpass that mark. The chosen location was not a stadium, but an urban setting ideal for spreading a visible, continuous wave: the emblematic Paseo de la Reforma, an iconic arterial road inspired by European boulevards. On Saturday, thousands gathered along the avenue and, after several practice runs, made their record attempt.\n\n\"Mexico, Mexico!\" crowds shouted as they threw their arms in the air, many dressed in the bright green jersey of the Mexican national team. Guinness officials are now analysing the effort to determine whether a new world record has been set. The city is a fitting venue: it was here, 40 years ago, that this unique form of collective expression first captured global attention. Since then, the phenomenon has become closely associated with Mexico. But many believe George Henderson - or Krazy George - from the US deserves credit for initiating and directing the first ever wave, which is known as the Mexican wave outside North America. He believes this took place at a baseball game in California in 1981 between the Oakland Athletics and the New York Yankees.\n\n\"The Oakland A's had already lost two away games,\" he remembers. \"In the third inning I thought about trying something no one had seen before. I found three sections and started explaining what I wanted.\" The first two attempts failed, but on the third try the wave went all the way around the stadium. And on the fourth, he managed to create a continuous wave. Because the game was televised, fans of other sports adopted it. But it was at the Fifa World Cup in 1986 in Mexico that it was broadcast to an enormous global audience - and so became a global phenomenon. Fifteen years later, the phenomenon caught the curiosity of a scientist from the statistical and biological physics group at the Hungarian Academy of Sciences in Budapest.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 442,
+      "selected_blocks": 4,
+      "selected_source_words": 400,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mexicans chase a world record wave - but is the trend even Mexican?",
+      "description": "Thousands lined the streets in Mexico City on Saturday as they attempted to set the world record for largest human wave.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mexicans chase a world record wave - but is the trend even Mexican?",
+    "description": "Thousands lined the streets in Mexico City on Saturday as they attempted to set the world record for largest human wave.",
+    "link": "https://www.bbc.com/news/articles/c2ly1q0940qo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-07T16:03:41+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "b46940a165e1bfdafe2e9a44fbf47f45",
+    "_url_hash": "efdcc8223d3d1e6f3e20d5229d65c03d11f77c437ee3f91b9bedd8aa03b2a720",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIt's a tradition repeated in stadiums across the world, with crowds of spectators rising up in a rippling roar.\n\nThe largest wave so far, according to Guinness World Records, was at a Nascar racing event in the American state of Tennessee in 2008, when 157,574 people joined a wave that swept around the stadium.\n\nNow, as part of the countdown to the World Cup, Mexico City is attempting to surpass that mark.\n\nThe chosen location was not a stadium, but an urban setting ideal for spreading a visible, continuous wave: the emblematic Paseo de la Reforma, an iconic arterial road inspired by European boulevards.\n\nOn Saturday, thousands gathered along the avenue and, after several practice runs, made their record attempt.\n\n\"Mexico, Mexico!\" crowds shouted as they threw their arms in the air, many dressed in the bright green jersey of the Mexican national team.\n\nGuinness officials are now analysing the effort to determine whether a new world record has been set.\n\nThe city is a fitting venue: it was here, 40 years ago, that this unique form of collective expression first captured global attention.\n\nSince then, the phenomenon has become closely associated with Mexico.\n\nBut many believe George Henderson - or Krazy George - from the US deserves credit for initiating and directing the first ever wave, which is known as the Mexican wave outside North America.\n\nHe believes this took place at a baseball game in California in 1981 between the Oakland Athletics and the New York Yankees.\n\n\"The Oakland A's had already lost two away games,\" he remembers. \"In the third inning I thought about trying something no one had seen before. I found three sections and started explaining what I wanted.\"\n\nThe first two attempts failed, but on the third try the wave went all the way around the stadium. And on the fourth, he managed to create a continuous wave.\n\nBecause the game was televised, fans of other sports adopted it.\n\nBut it was at the Fifa World Cup in 1986 in Mexico that it was broadcast to an enormous global audience - and so became a global phenomenon.\n\nFifteen years later, the phenomenon caught the curiosity of a scientist from the statistical and biological physics group at the Hungarian Academy of Sciences in Budapest.\n\n\"The reason we became interested in stadium waves is that, apparently, people very often behave like particles,\" physicist Illes Farkas told the NPR network.\n\nTogether with two colleagues, Tamas Vicsek and Dirk Helbing, he set out to determine the rules that pro",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-07T18:36:10.713318+00:00",
+  "failure": "Monica writer command failed: [state-migrations] Legacy state migration warnings:\n- Left plugin install index in place because shared SQLite state has conflicting plugin install metadata for: codex, discord, matrix, slack\ngateway connect failed: Error: gateway request timeout for connect\nEMBEDDED FALLBACK: Gateway agent failed; running embedded agent: GatewayTransportError: gateway closed (1008): connect failed\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/pertt/.openclaw/openclaw.json\nBind: loopback\n[agents/harness] Codex agent harness failed; not falling back to embedded OpenClaw backend\n[diagnostic] lane task error: lane=main durationMs=149421 error=\"OAuthRefreshFailureError: OAuth token refresh failed for openai: OAuth token refresh failed for openai: OAuth refresh failed (refresh_contention): another process is already refreshing openai for openai:chatgpt-default. Please wait for the in-flight refresh to finish and retry. | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230 | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:explicit:monica-pipeline-7734a956-2296-49d3-906a-ac5693e22728 durationMs=149425 error=\"OAuthRefreshFailureError: OAuth token refresh failed for openai: OAuth token refresh failed for openai: OAuth refresh failed (refresh_contention): another process is already refreshing openai for openai:chatgpt-default. Please wait for the in-flight refresh to finish and retry. | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230 | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai/gpt-5.5 candidate=openai/gpt-5.5 reason=auth next=none detail=OAuth token refresh failed for openai: OAuth token refresh failed for openai: OAuth refresh failed (refresh_contention): another process is already refreshing openai for openai:chatgpt-default. Please wait for the in-flight refresh to finish and retry. | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230 | file lo…\nFailoverError: OAuth token refresh failed for openai: OAuth token refresh failed for openai: OAuth refresh failed (refresh_contention): another process is already refreshing openai for openai:chatgpt-default. Please wait for the in-flight refresh to finish and retry. | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230 | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230. Please try again or re-authenticate.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260607T183114Z_cbdf1c9932",
+    "category": "Ulkomaat",
+    "selected_source_words": 400,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "Mexicans chase a world record wave - but is the trend even Mexican?"
+  }
+}

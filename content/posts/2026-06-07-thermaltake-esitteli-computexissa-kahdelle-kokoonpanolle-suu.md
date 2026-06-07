@@ -44,7 +44,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/thermaltake-esitteli-computex-messuilla-erikoisen-kahden-tietokoneen-kotelon-ja-muita-uutuuksia/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
