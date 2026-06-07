@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/IIHFn-kunniagalleriaan-valittu-Patrice-Bergeron-puhui-punnitusti-voittamisesta-ja-johtajuudesta-Kehollisesti-Stanley-Cup-on-ehdottomasti-vaikein/270527"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
