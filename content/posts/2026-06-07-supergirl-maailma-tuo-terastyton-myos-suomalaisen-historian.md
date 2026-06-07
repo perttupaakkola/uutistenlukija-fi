@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuva-artikkelit/arvostelu-supergirl-maailma-tuo-dc-comicsin-supersankarin-suomeen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
