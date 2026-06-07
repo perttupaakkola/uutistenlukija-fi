@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/jun/07/greens-warn-nuclear-submarines-deal-risks-war-with-china-as-albanese-says-aukus-full-steam-ahead"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
