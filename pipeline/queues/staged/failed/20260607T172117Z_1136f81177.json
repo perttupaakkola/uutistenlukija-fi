@@ -1,0 +1,92 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-07T17:21:17.583540+00:00",
+  "digest": "1136f81177",
+  "packet": {
+    "packet_id": "20260607T172117Z_1136f81177",
+    "created_at": "2026-06-07T17:21:17Z",
+    "headline_seed": "NHL-jätti harkitsee Joe Pavelskia päävalmentajaksi – valmentanut vain yhden kauden junioreissa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9517140",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9517140"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "NHL-jätti harkitsee Joe Pavelskia päävalmentajaksi – valmentanut vain yhden kauden junioreissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 190,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Sportti"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "NHL-jätti harkitsee Joe Pavelskia päävalmentajaksi – valmentanut vain yhden kauden junioreissa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "NHL-jätti harkitsee Joe Pavelskia päävalmentajaksi – valmentanut vain yhden kauden junioreissa",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9517140",
+    "published": "2026-06-07T20:07:09+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "f7f9a178596a59a99026fea81c286206",
+    "_url_hash": "9d4a4301d1cf4f01b89b86754f1768bb61ea4a24e346318678280e903266baa2",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Sportti]\nJääkiekkoliiga NHL julkisti ensi kauden otteluohjelmansa torstaina. Sesonki käynnistyy 11. lokakuuta. Edessä saattaa kuitenkin olla vielä kiekkofanien painajainen, sillä NHL:n ja liigan pelaajayhdistyksen välinen työehtosopimus päättyy syyskuussa. Viimeksi vastaavassa tilanteessa koko kausi 2004-05 jäi pelaamatta.\n\nAvauspäivänä ohjelmassa on neljä ottelua: Philadelphia-Boston, Montreal-Ottawa, Calgary-Vancouver ja Colorado-St.Louis. Runkosarja päättyy 13. huhtikuuta, jolloin NHL:n 30 joukkueesta on tulessa 28.\n\nStanley Cup -mestari Los Angeles aloittaa kautensa 12. lokakuuta. Los Angeles nostaa mestaruusviirin Staples Centerin kattoon isännöidessään New York Rangersia. Tämän kevään finaalipari kohtaa toisensa 9. helmikuuta, kun Los Angeles vierailee New Jerseyssä.\n\nRangersin reissu ei pysähdy Los Angelesiin vaan joukkue pelaa peräti kahdeksan ensimmäistä otteluaan vieraskaukalossa. Manhattanilaiset pääsevät kotiavaukseensa vasta 1. marraskuuta, kun Dallas saapuu remontoituun Madison Square Gardeniin.\n\nKauden ulkoilmaottelu, Winter Classic pelataan uudenvuodenpäivänä University of Michiganin stadionilla eli ´The Big Housessa´. Detroitin ja Toronton väliseen kamppailuun odotetaan yli 100,000 katsojaa.\n\nAll-Star -taukoa edeltävät viimeiset ottelut pelataan 23. tammikuuta. Tähdistötapahtuman jälkeen tositoimeen palataan 29. tammikuuta.\n\nNHL ilmoitti jo aikaisemmin tänä keväänä, että runkosarjaa ei tulevana syksynä aloiteta Euroopassa liigan ja pelaajayhdistyksen epävarman työehtosopimustilanteen takia.\n\nJääkiekko    07.06.2026 - 18:24     Janne Niemenmaa\n\nJääkiekko    07.06.2026 - 20:09     Janne Niemenmaa\n\nJääkiekko    07.06.2026 - 12:20     Salttu Forsström",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-07T17:26:18.591691+00:00",
+  "failure": "Monica writer command failed: [state-migrations] Legacy state migration warnings:\n- Left plugin install index in place because shared SQLite state has conflicting plugin install metadata for: codex, discord, matrix, slack\ngateway connect failed: Error: gateway request timeout for connect\nEMBEDDED FALLBACK: Gateway agent failed; running embedded agent: GatewayTransportError: gateway closed (1008): connect failed\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/pertt/.openclaw/openclaw.json\nBind: loopback\n[agents/harness] Codex agent harness failed; not falling back to embedded OpenClaw backend\n[diagnostic] lane task error: lane=main durationMs=150502 error=\"OAuthRefreshFailureError: OAuth token refresh failed for openai: OpenAI Codex token refresh failed (401): {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:explicit:monica-pipeline-05c4ce14-6c09-49a3-93f7-9c8c717a251d durationMs=150506 error=\"OAuthRefreshFailureError: OAuth token refresh failed for openai: OpenAI Codex token refresh failed (401): {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai/gpt-5.5 candidate=openai/gpt-5.5 reason=auth_permanent next=none detail=OAuth token refresh failed for openai: OpenAI Codex token refresh failed (401): {  \"error\": {    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",    \"type\": \"invalid_request_error\",    \"param\": null,    \"code\": \"refresh_token_reused\"  }}. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai: OpenAI Codex token refresh failed (401): {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}. Please try again or re-authenticate.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260607T172117Z_1136f81177",
+    "category": "Kotimaa",
+    "selected_source_words": 0,
+    "selected_source_blocks": 0,
+    "story_confidence": 0.15,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "NHL-jätti harkitsee Joe Pavelskia päävalmentajaksi – valmentanut vain yhden kauden junioreissa"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-07T15:31:24.237166+00:00",
+  "digest": "6e6a16f084",
+  "packet": {
+    "packet_id": "20260607T153124Z_6e6a16f084",
+    "created_at": "2026-06-07T15:31:24Z",
+    "headline_seed": "One dead, five injured after shooting in Israel",
+    "description_seed": "The suspect opened fire from a car in several locations before being shot dead.",
+    "link": "https://www.bbc.com/news/articles/cpwe8e80weyo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC",
+      "BBC World",
+      "BBC World",
+      "CBS News"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cpwe8e80weyo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "One dead, five injured after shooting in Israel"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "Israeli emergency personnel at the scene of the shooting One person has been killed and five others wounded after a man in a car opened fire at several locations in Israel, authorities say. Israel's emergency service organisation Magen David Adom (MDA) said a man aged about 35 had died of gunshot wounds. Two of those injured were in a serious condition and three were in a moderate condition \"with penetrating injuries to their bodies\", MDA said. The alleged attacker, identified as an Israeli Arab, was killed by security forces near the town of Kokhav Yair, not far from the occupied West Bank. Police chief Danny Levy told journalists the attacker had a criminal record. An alleged accomplice has also been arrested.",
+        "word_count": 121,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The suspect opened fire from a car in several locations before being shot dead.",
+        "word_count": 14,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "One person has been killed and five others wounded after a man in a car opened fire at several locations in Israel, authorities say. Israel's emergency service organisation Magen David Adom (MDA) said a man aged about 35 had died of gunshot wounds. Two of those injured were in a serious condition and three were in a moderate condition \"with penetrating injuries to their bodies\", MDA said. The alleged attacker, identified as an Israeli Arab, was killed by security forces near the town of Kokhav Yair, not far from the occupied West Bank. Police chief Danny Levy told journalists the attacker had a criminal record. An alleged accomplice has also been arrested.",
+        "word_count": 112,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "A Palestinian man with Israeli citizenship went on a shooting rampage in several towns in central Israel on Sunday, killing one person and wounding five others, according to Israeli police. The attacker was killed by police. The number of places where people were shot initially raised concerns that there could be multiple, coordinated attackers who had crossed over from the West Bank — evoking memories of the Hamas-led attacks in October 2023 — before police eventually determined that it was a lone gunman and an accomplice.",
+        "word_count": 86,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Israeli emergency personnel at the scene of the shooting One person has been killed and five others wounded after a man in a car opened fire at several locations in Israel, authorities say. Israel's emergency service organisation Magen David Adom (MDA) said a man aged about 35 had died of gunshot wounds. Two of those injured were in a serious condition and three were in a moderate condition \"with penetrating injuries to their bodies\", MDA said. The alleged attacker, identified as an Israeli Arab, was killed by security forces near the town of Kokhav Yair, not far from the occupied West Bank. Police chief Danny Levy told journalists the attacker had a criminal record. An alleged accomplice has also been arrested.\n\nThe suspect opened fire from a car in several locations before being shot dead.\n\nOne person has been killed and five others wounded after a man in a car opened fire at several locations in Israel, authorities say. Israel's emergency service organisation Magen David Adom (MDA) said a man aged about 35 had died of gunshot wounds. Two of those injured were in a serious condition and three were in a moderate condition \"with penetrating injuries to their bodies\", MDA said. The alleged attacker, identified as an Israeli Arab, was killed by security forces near the town of Kokhav Yair, not far from the occupied West Bank. Police chief Danny Levy told journalists the attacker had a criminal record. An alleged accomplice has also been arrested.\n\nA Palestinian man with Israeli citizenship went on a shooting rampage in several towns in central Israel on Sunday, killing one person and wounding five others, according to Israeli police. The attacker was killed by police. The number of places where people were shot initially raised concerns that there could be multiple, coordinated attackers who had crossed over from the West Bank — evoking memories of the Hamas-led attacks in October 2023 — before police eventually determined that it was a lone gunman and an accomplice.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 994,
+      "selected_blocks": 4,
+      "selected_source_words": 333,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC",
+        "BBC World",
+        "BBC World",
+        "CBS News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "One dead, five injured after shooting in Israel",
+      "description": "The suspect opened fire from a car in several locations before being shot dead.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "One dead, five injured after shooting in Israel",
+    "description": "The suspect opened fire from a car in several locations before being shot dead.",
+    "link": "https://www.bbc.com/news/articles/cpwe8e80weyo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-07T15:25:02+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cce82dceabe7c925c0578ebf040a008f",
+    "_url_hash": "6cbf445bf0c05e72d4860b0e297f1163a70c93294c7de490e3b3f584aea00ab6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nOne person has been killed and five others wounded after a man in a car opened fire at several locations in Israel, authorities say.\n\nIsrael's emergency service organisation Magen David Adom (MDA) said a man aged about 35 had died of gunshot wounds. Two of those injured were in a serious condition and three were in a moderate condition \"with penetrating injuries to their bodies\", MDA said.\n\nThe alleged attacker, identified as an Israeli Arab, was killed by security forces near the town of Kokhav Yair, not far from the occupied West Bank.\n\nPolice chief Danny Levy told journalists the attacker had a criminal record. An alleged accomplice has also been arrested.\n\n\"This morning, a heinous terrorist went out, reached Kokhav Yair, and unfortunately managed, before being eliminated, to murder an Israeli citizen and injure others,\" Israeli Prime Minister Benjamin Netanyahu told his cabinet.\n\nPolice said they had killed the suspect after a brief chase and recovered the weapon and the car used in the attack.\n\nA second suspect was later arrested after he \"made statements suggesting involvement in the attack,\" the police said. They added that he had tried to attack officers.\n\nFar-right National Security Minister Itamar Ben Gvir said \"the law on the death penalty for terrorists also applies to Israeli Arabs\".\n\nGvir was referring to the new Israeli law to make the death penalty the default sentence for Palestinians convicted of deadly terror attacks.\n\nAbout a fifth of Israelis are Arab citizens who often identify as and with Palestinians.\n\nIn the West Bank, local Palestinian sources and Palestinian official news agency Wafa reported that Israeli forces closed two checkpoints at entrances to the city of Tulkarem, located north of the scenes of the attacks.\n\nTemporary checkpoints were also set up at the entrance to nearby Qalqilya.\n\n---\n\n[Lähde: BBC]\nIsraeli emergency personnel at the scene of the shooting\n\nOne person has been killed and five others wounded after a man in a car opened fire at several locations in Israel, authorities say.\n\nIsrael's emergency service organisation Magen David Adom (MDA) said a man aged about 35 had died of gunshot wounds. Two of those injured were in a serious condition and three were in a moderate condition \"with penetrating injuries to their bodies\", MDA said.\n\nThe alleged attacker, identified as an Israeli Arab, was killed by security forces near the town of Kokhav Yair, not far from the occupied West Bank.\n\nPolice chief Danny Levy told journalists the attacker had a criminal record. An alleged accomplice has also been arrested.\n\n\"This morning, a heinous terrorist went out, reached Kokhav Yair, and unfortunately managed, before being eliminated, to murder an Israeli citizen and injure others,\" Israeli Prime Minister Benjamin Netanyahu told his cabinet.\n\nPolice said they had killed the suspect after a brief chase and recovered the weapon and the car used in the attack.\n\nA second suspect was later arrested after he \"made statements suggesting involvement in the attack,\" the police said. They added that he had tried to attack officers.\n\nFar-right National Security Minister Itamar Ben Gvir said \"the law on the death penalty for terrorists also applies to Israeli Arabs\".\n\nGvir was referring to the new Israeli law to make the death penalty the default sentence for Palestinians convicted of deadly terror attacks.\n\nAbout a fifth of Israelis are Arab citizens who often identify as and with Palestinians.\n\nIn the West Bank, local Palestinian sources and Palestinian official news agency Wafa reported that Israeli forces closed two checkpoints at entrances to the city of Tulkarem, located north of the scenes of the attacks.\n\nTemporary checkpoints were also set up at the entrance to nearby Qalqilya.\n\nLebanese general among three soldiers killed in Israeli attack on car\n\nFuneral held for baby shot dead by Israeli troops in occupied West Bank\n\n'Crazy' phone call between Trump and Netanyahu complicates Iran talks\n\n---\n\n[Lähde: CBS News]\nA Palestinian man with Israeli citizenship went on a shooting rampage in several towns in central Israel on Sunday, killing one person and wounding five others, according to Israeli police. The attacker was killed by police.\n\nThe number of places where people were shot initially raised concerns that there could be multiple, coordinated attackers who had crossed over from the West Bank — evoking memories of the Hamas-led attacks in October 2023 — before police eventually determined that it was a lone gunman and an accomplice.\n\nRescue services Magen David Adom said that it received the first reports of a shooting at a gas station near the town of Kokhav Yair, located on the Israeli side of the boundary with the West Bank, at around 10:30 a.m. Several other shooting reports were received soon afterward, in the towns of Tsur Natan, Tsur Yitzhak, and close to the Israeli settlement of Sal'it, located inside the West Bank.\n\nPolice arrested a second person involved in the attack later Sunday. The man attempted to stab police with a glass bottle during the arrest, but there were no injuries, police said. Additional investigations were ongoing.\n\nIsrael's Channel 12 reported that the attacker stayed in his car while shooting, allowing him to reach several locations within a matter of minutes.\n\nA 35-year-old Israeli man was killed in the town of Kokhav Yair, according to Israel's rescue services, Magen David Adom. One of the victims fled to a McDonald's restaurant where his bloodstained clothes, which were likely cut off by paramedics, were crumpled on the floor near the entrance.\n\nA total of five people were wounded in the shootings, two in severe condition and three moderately injured, Magen David Adom said. Rescue services had initially reported six injured in the chaotic aftermath of the attack.\n\nResidents in the area were instructed to stay at home and children were kept in lockdown at school for at least three hours, according to the regional council head.\n\n\"Since Oct. 7, the scenario we were expecting ...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-07T15:33:51.649594+00:00",
+  "failure": "Monica writer command failed: [state-migrations] Legacy state migration warnings:\n- Left plugin install index in place because shared SQLite state has conflicting plugin install metadata for: codex, discord, matrix, slack\ngateway connect failed: Error: gateway request timeout for connect\nEMBEDDED FALLBACK: Gateway agent failed; running embedded agent: GatewayTransportError: gateway closed (1008): connect failed\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/pertt/.openclaw/openclaw.json\nBind: loopback\n[agents/harness] Codex agent harness failed; not falling back to embedded OpenClaw backend\n[diagnostic] lane task error: lane=main durationMs=1455 error=\"OAuthRefreshFailureError: OAuth token refresh failed for openai: OpenAI Codex token refresh failed (401): {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:explicit:monica-pipeline-f361509a-84a7-4a3d-ab68-1be7b7e208fd durationMs=1459 error=\"OAuthRefreshFailureError: OAuth token refresh failed for openai: OpenAI Codex token refresh failed (401): {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai/gpt-5.5 candidate=openai/gpt-5.5 reason=auth_permanent next=none detail=OAuth token refresh failed for openai: OpenAI Codex token refresh failed (401): {  \"error\": {    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",    \"type\": \"invalid_request_error\",    \"param\": null,    \"code\": \"refresh_token_reused\"  }}. Please try again or re-authenticate.\nFailoverError: OAuth token refresh failed for openai: OpenAI Codex token refresh failed (401): {\n  \"error\": {\n    \"message\": \"Your refresh token has already been used to generate a new access token. Please try signing in again.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"refresh_token_reused\"\n  }\n}. Please try again or re-authenticate.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260607T153124Z_6e6a16f084",
+    "category": "Ulkomaat",
+    "selected_source_words": 333,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "One dead, five injured after shooting in Israel"
+  }
+}

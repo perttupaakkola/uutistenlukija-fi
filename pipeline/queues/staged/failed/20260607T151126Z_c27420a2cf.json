@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-07T15:11:26.308461+00:00",
+  "digest": "c27420a2cf",
+  "packet": {
+    "packet_id": "20260607T151126Z_c27420a2cf",
+    "created_at": "2026-06-07T15:11:26Z",
+    "headline_seed": "Lapissa on havaittu lähes 900 maasalamaa",
+    "description_seed": "Lapissa on ollut tänään monin paikoin ukkosta ja rajuja tuulenpuuskia.",
+    "link": "https://yle.fi/a/74-20230257?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20230257?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lapissa on havaittu lähes 900 maasalamaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 92,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lapissa on havaittu lähes 900 maasalamaa",
+      "description": "Lapissa on ollut tänään monin paikoin ukkosta ja rajuja tuulenpuuskia.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lapissa on havaittu lähes 900 maasalamaa",
+    "description": "Lapissa on ollut tänään monin paikoin ukkosta ja rajuja tuulenpuuskia.",
+    "link": "https://yle.fi/a/74-20230257?origin=rss",
+    "published": "2026-06-07T17:52:42+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "38063eeee8267aeef5a9d47d8c0c5d3f",
+    "_url_hash": "c3b0203a30cc014df7f5566c55978d43710ca3a38ec98f66e4272b4ef22bd1f0",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Yle Uutiset]\nIlmatieteen laitoksen mukaan Lapissa oli havaittu lähes 900 maasalamaa neljän maissa sunnuntai-iltapäivänä.\n\nUkkoset ovat edenneet Itä-Lapista luoteeseen kohti käsivartta. Myös tuuli on ollut voimakasta.\n\nUkkosrintama on kuitenkin nyt väistymässä, vaikka Inarissa ja Utsjoella saattaa vielä ukkostaa illalla.\n\nIlmatieteen laitoksen päivystävä meteorologi Petteri Pyykkö kertoo STT:lle, että monilla tunturiasemilla tuulen nopeudeksi on mitattu jopa 18–20 metriä sekunnissa.\n\nMyös Koillismaalla tuli puolenpäivän aikaan joitakin salamoita. Pyykön mukaan etelämpänä ei ole havaittu ukkosta.\n\nLännessä on ollut sadekuuroja, ja matalapaineen aiheuttamia tuulenpuuskia on nähty myös Pohjanmaalla.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-07T15:16:14.776933+00:00",
+  "failure": "Monica writer command failed: [state-migrations] Legacy state migration warnings:\n- Left plugin install index in place because shared SQLite state has conflicting plugin install metadata for: codex, discord, matrix, slack\ngateway connect failed: Error: gateway request timeout for connect\nEMBEDDED FALLBACK: Gateway agent failed; running embedded agent: GatewayTransportError: gateway closed (1008): connect failed\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/pertt/.openclaw/openclaw.json\nBind: loopback\n[agents/harness] Codex agent harness failed; not falling back to embedded OpenClaw backend\n[diagnostic] lane task error: lane=main durationMs=153263 error=\"OAuthRefreshFailureError: OAuth token refresh failed for openai: OAuth token refresh failed for openai: OAuth refresh failed (refresh_contention): another process is already refreshing openai for openai:chatgpt-default. Please wait for the in-flight refresh to finish and retry. | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230 | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230. Please try again or re-authenticate.\"\n[diagnostic] lane task error: lane=session:agent:monica:explicit:monica-pipeline-789048a6-15b2-4b38-9216-bf921e7d0358 durationMs=153267 error=\"OAuthRefreshFailureError: OAuth token refresh failed for openai: OAuth token refresh failed for openai: OAuth refresh failed (refresh_contention): another process is already refreshing openai for openai:chatgpt-default. Please wait for the in-flight refresh to finish and retry. | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230 | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230. Please try again or re-authenticate.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai/gpt-5.5 candidate=openai/gpt-5.5 reason=auth next=none detail=OAuth token refresh failed for openai: OAuth token refresh failed for openai: OAuth refresh failed (refresh_contention): another process is already refreshing openai for openai:chatgpt-default. Please wait for the in-flight refresh to finish and retry. | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230 | file lo…\nFailoverError: OAuth token refresh failed for openai: OAuth token refresh failed for openai: OAuth refresh failed (refresh_contention): another process is already refreshing openai for openai:chatgpt-default. Please wait for the in-flight refresh to finish and retry. | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230 | file lock timeout for /home/pertt/.openclaw/locks/oauth-refresh/sha256-c8467c768d4a7729e9d25c691f27fc2167f587a6e9d47dad896d3832b84ef230. Please try again or re-authenticate.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260607T151126Z_c27420a2cf",
+    "category": "Kotimaa",
+    "selected_source_words": 0,
+    "selected_source_blocks": 0,
+    "story_confidence": 0.25,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "Lapissa on havaittu lähes 900 maasalamaa"
+  }
+}
