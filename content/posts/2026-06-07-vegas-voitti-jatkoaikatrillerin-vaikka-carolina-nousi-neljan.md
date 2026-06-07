@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Mitch-Marnerin-hattutemppu-ja-Hurricanesin-hirmukiri-tekiv%C3%A4t-kolmannesta-finaalista-trillerin-%E2%80%93-ratkaisu-vasta-toisessa-jatkoer%C3%A4ss%C3%A4/270531"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
