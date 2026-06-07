@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-07T05:01:29.265156+00:00",
+  "digest": "d47f18fdb9",
+  "packet": {
+    "packet_id": "20260607T050129Z_d47f18fdb9",
+    "created_at": "2026-06-07T05:01:29Z",
+    "headline_seed": "Brittikeksinnöllä murrettiin saksalaisten puolustuslinjat 1918 Amiensin taistelussa – 1. maailmansodan panssarivaunu saattoi tosin muuttua helposti krematorioksi",
+    "description_seed": "Ensimmäisen maailmansodan aikana kehitettiin täysin uusi ase – panssarivaunu. Sen pohjana oli vuosisadan alussa maailman vallannut uusi keksintö, auto.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/a0e7bd1f-5b9a-4837-9335-f3e731df6b69",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/a0e7bd1f-5b9a-4837-9335-f3e731df6b69"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Brittikeksinnöllä murrettiin saksalaisten puolustuslinjat 1918 Amiensin taistelussa – 1. maailmansodan panssarivaunu saattoi tosin muuttua helposti krematorioksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Ensimmäisen maailmansodan aikana kehitettiin täysin uusi ase – panssarivaunu. Sen pohjana oli vuosisadan alussa maailman vallannut uusi keksintö, auto.",
+        "word_count": 19,
+        "keyword_overlap": 14,
+        "strong_overlap": 12
+      }
+    ],
+    "source_text": "Ensimmäisen maailmansodan aikana kehitettiin täysin uusi ase – panssarivaunu. Sen pohjana oli vuosisadan alussa maailman vallannut uusi keksintö, auto.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 38,
+      "selected_blocks": 1,
+      "selected_source_words": 19,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Brittikeksinnöllä murrettiin saksalaisten puolustuslinjat 1918 Amiensin taistelussa – 1. maailmansodan panssarivaunu saattoi tosin muuttua helposti krematorioksi",
+      "description": "Ensimmäisen maailmansodan aikana kehitettiin täysin uusi ase – panssarivaunu. Sen pohjana oli vuosisadan alussa maailman vallannut uusi keksintö, auto.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Brittikeksinnöllä murrettiin saksalaisten puolustuslinjat 1918 Amiensin taistelussa – 1. maailmansodan panssarivaunu saattoi tosin muuttua helposti krematorioksi",
+    "description": "Ensimmäisen maailmansodan aikana kehitettiin täysin uusi ase – panssarivaunu. Sen pohjana oli vuosisadan alussa maailman vallannut uusi keksintö, auto.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/a0e7bd1f-5b9a-4837-9335-f3e731df6b69",
+    "published": "2026-06-07T04:34:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "fe34d01ec345ffbf59c18eaa7d9f5da7",
+    "_url_hash": "7c24beab3997f58a0b72ca4c07600e7f39c8061e4535ca1e485f94d3b6d62019",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Ensimmäisen maailmansodan aikana kehitettiin täysin uusi ase – panssarivaunu. Sen pohjana oli vuosisadan alussa maailman vallannut uusi keksintö, auto.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-07T05:03:33.829780+00:00",
+  "failure": "Lähdeaineisto on liian niukka: paketissa on vain lyhyt yleiskuvaus panssarivaunun kehityksestä ilman riittäviä varmennettuja tietoja Amiensin taistelusta, tapahtumien kulusta tai seurauksista.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260607T050129Z_d47f18fdb9\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: paketissa on vain lyhyt yleiskuvaus panssarivaunun kehityksestä ilman riittäviä varmennettuja tietoja Amiensin taistelusta, tapahtumien kulusta tai seurauksista.\"}"
+}
