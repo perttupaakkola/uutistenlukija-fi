@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-06T23:40:55.331745+00:00",
+  "digest": "4607a3c388",
+  "packet": {
+    "packet_id": "20260606T234055Z_4607a3c388",
+    "created_at": "2026-06-06T23:40:55Z",
+    "headline_seed": "\"Donald Trump\" nousi eläintarhan vetonaulaksi",
+    "description_seed": "Monet haluavat nähdä rituaaliteurastukselta säästyneen albiinopuhvelin. Albiinopuhveli ”Donald Trumpista” tuli bangladeshilaisen eläintarhan kassamagneetti, kertoo uutistoimisto AP. Puhveli oli jo myyty rituaaliteurastettavaksi, mutta maailmanlaajuinen huomio pelasti sorkkaeläimen.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/4990af4e-5c52-41f8-a94a-24cdcafd960b",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/4990af4e-5c52-41f8-a94a-24cdcafd960b"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "\"Donald Trump\" nousi eläintarhan vetonaulaksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Monet haluavat nähdä rituaaliteurastukselta säästyneen albiinopuhvelin. Albiinopuhveli ”Donald Trumpista” tuli bangladeshilaisen eläintarhan kassamagneetti, kertoo uutistoimisto AP. Puhveli oli jo myyty rituaaliteurastettavaksi, mutta maailmanlaajuinen huomio pelasti sorkkaeläimen.",
+        "word_count": 26,
+        "keyword_overlap": 22,
+        "strong_overlap": 17
+      }
+    ],
+    "source_text": "Monet haluavat nähdä rituaaliteurastukselta säästyneen albiinopuhvelin. Albiinopuhveli ”Donald Trumpista” tuli bangladeshilaisen eläintarhan kassamagneetti, kertoo uutistoimisto AP. Puhveli oli jo myyty rituaaliteurastettavaksi, mutta maailmanlaajuinen huomio pelasti sorkkaeläimen.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 1,
+      "selected_source_words": 26,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "\"Donald Trump\" nousi eläintarhan vetonaulaksi",
+      "description": "Monet haluavat nähdä rituaaliteurastukselta säästyneen albiinopuhvelin. Albiinopuhveli ”Donald Trumpista” tuli bangladeshilaisen eläintarhan kassamagneetti, kertoo uutistoimisto AP. Puhveli oli jo myyty rituaaliteurastettavaksi, mutta maailmanlaajuinen huomio pelasti sorkkaeläimen.",
+      "category_hint": "Ulkomaat",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "\"Donald Trump\" nousi eläintarhan vetonaulaksi",
+    "description": "Monet haluavat nähdä rituaaliteurastukselta säästyneen albiinopuhvelin. Albiinopuhveli ”Donald Trumpista” tuli bangladeshilaisen eläintarhan kassamagneetti, kertoo uutistoimisto AP. Puhveli oli jo myyty rituaaliteurastettavaksi, mutta maailmanlaajuinen huomio pelasti sorkkaeläimen.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/4990af4e-5c52-41f8-a94a-24cdcafd960b",
+    "published": "2026-06-07T02:31:49+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "2a13b91442e4372dd0c18a512d6d9fc4",
+    "_url_hash": "defb9c8f08f48c5052fed12ad630fb58b25ebd40ff4b1a774cd7184c677c93a3",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Monet haluavat nähdä rituaaliteurastukselta säästyneen albiinopuhvelin. Albiinopuhveli ”Donald Trumpista” tuli bangladeshilaisen eläintarhan kassamagneetti, kertoo uutistoimisto AP. Puhveli oli jo myyty rituaaliteurastettavaksi, mutta maailmanlaajuinen huomio pelasti sorkkaeläimen.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-06T23:43:25.172309+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.",
+  "raw_response": "│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\n│\n◇  Doctor warnings ──────────────────────────────────────────────────────╮\n│                                                                        │\n│  - Left plugin install index in place because shared SQLite state has  │\n│    conflicting plugin install metadata for: codex, discord, matrix,    │\n│    slack                                                               │\n│                                                                        │\n├────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260606T234055Z_4607a3c388\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä yksityiskohtia.\"}"
+}
