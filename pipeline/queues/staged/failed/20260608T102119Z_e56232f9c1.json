@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-08T10:21:19.228110+00:00",
+  "digest": "e56232f9c1",
+  "packet": {
+    "packet_id": "20260608T102119Z_e56232f9c1",
+    "created_at": "2026-06-08T10:21:19Z",
+    "headline_seed": "Vantaan Kivistössä herättiin yölliseen huutoon: \"Palaa, palaa!\"",
+    "description_seed": "Kivistössä paloi asuinhuoneisto",
+    "link": "https://www.mtvuutiset.fi/artikkeli/vantaan-kivistossa-herattiin-yolliseen-huutoon-palaa-palaa/9350648",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/vantaan-kivistossa-herattiin-yolliseen-huutoon-palaa-palaa/9350648"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vantaan Kivistössä herättiin yölliseen huutoon: \"Palaa, palaa!\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 217,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "MTV Uutiset",
+        "MTV Uutiset",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vantaan Kivistössä herättiin yölliseen huutoon: \"Palaa, palaa!\"",
+      "description": "Kivistössä paloi asuinhuoneisto",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Vantaan Kivistössä herättiin yölliseen huutoon: \"Palaa, palaa!\"",
+    "description": "Kivistössä paloi asuinhuoneisto",
+    "link": "https://www.mtvuutiset.fi/artikkeli/vantaan-kivistossa-herattiin-yolliseen-huutoon-palaa-palaa/9350648",
+    "published": "2026-06-08T10:11:12+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "de72eb305dc72660298819f37efedf54",
+    "_url_hash": "347e58235e536cbd1495283f89e6445b0d5f6132fadd521a55fb0b64bcd95f31",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: MTV Uutiset]\nVantaan Kivistössä paettiin parvekepaloa yöllä.\n\nVantaan Kivistössä sijaitsevassa kerrostalohuoneistossa syttyi tulipalo viime yönä.\n\nViranomaiset saivat tiedon tulipalosta noin kello yhden aikaan aamulla.\n\n– Palon epäillään saaneen alkunsa seitsemännessä kerroksessa sijaitsevan huoneiston parvekkeelta, kertoo tutkinnanjohtaja rikoskomisario Mari Ajomaa poliisin tiedotteessa.\n\n– Huoneisto tuhoutui palossa täysin. Palo saatiin haltuun niin, että se ei ehtinyt levitä talon muihin huoneistoihin. Palosta ei aiheutunut henkilövahinkoja.\n\nVaikka tuli ei levinnyt muihin asuntoihin, kokivat kerrostalon asukkaat karun herätyksen.\n\nRakennuksen 11:nnessä kerroksessa asuva Jari kertoo MTV Uutisille heränneensä yöllä poikkeukselliseen meluun.\n\n– Yhden jälkeen oli hirveä melu ja joku huusi pihalla. Ajattelimme, että kyseessä on jokin tappelu tai muuta.Jari ketoo menneensä parvekkeelle katsomaan, mitä ulkona mekastetaan. Savunhaju iski sieraimiin, eikä parvekkeen lasien läpi nähnyt mitään voimakkaan savun vuoksi.– Joku huusi, että palaa, palaa! Samantien saunatakki päälle ja avojaloin menimme pihalle, Jari kertaa tapahtumia.Hän kertoo tarkastaneensa ensin, ettei rappukäytävässä ole savua ja sinne oli turvallista mennä.– Vaikka asunnossa pitäisi pysyä, totesimme, että rappukäytävään on turvallista mennä, kun ei ollut savua. Hissillä ei tietenkään voinut mennä, Jari sanoo.\n\nUseat muutkin asukkaat tekivät samoin ja pihamaalle alkoi Jarin mukaan kerääntyä myös muitakin asukkaita. Naapureiden kanssa paloa ei juurikaan yöllä käsitelty ja tunnelma oli hiljaisen vakava.\n\n– Pikkulapset olivat äitiensä syleissä, Jari kertoo.– Oli kyllä rajun näkyinen, kun ikkunat ja parvekelasit räjähtelivät, Jari kuvailee yöllistä näkyä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-08T10:23:19.141747+00:00",
+  "failure": "Lähdeaineisto puuttuu kokonaan, eikä paketissa ole riittävästi varmennettuja tietoja julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260608T102119Z_e56232f9c1\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu kokonaan, eikä paketissa ole riittävästi varmennettuja tietoja julkaistavaan artikkeliin.\"}"
+}
