@@ -1,0 +1,259 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-08T20:21:21.085245+00:00",
+  "digest": "1bde278056",
+  "packet": {
+    "packet_id": "20260608T202121Z_1bde278056",
+    "created_at": "2026-06-08T20:21:21Z",
+    "headline_seed": "Microsoft’s open source tools were hacked to steal passwords of AI developers",
+    "description_seed": "Microsoft shut down dozens of GitHub code repositories for Azure and AI coding tools after a reported hack.",
+    "link": "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/",
+    "source": "TechCrunch",
+    "source_names": [
+      "Wired",
+      "Wired",
+      "Wired",
+      "Wired"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Microsoft’s open source tools were hacked to steal passwords of AI developers"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "On Tuesday night, open source code platform GitHub announced that it had been breached by hackers in one such software supply chain attack: A GitHub developer had installed a “poisoned” extension for VSCode, a plug-in for a commonly used code editor that, like GitHub itself, is owned by Microsoft. As a result, the hackers behind the breach, an increasingly notorious group called TeamPCP, claim to have accessed around 4,000 of GitHub’s code repositories. GitHub’s statement confirmed that it had found at least 3,800 compromised repositories while noting that, based on its findings so far, they all contained GitHub’s own code, not that of customers.",
+        "word_count": 104,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "“We are here today to advertise GitHub’s source code and internal orgs for sale,” TeamPCP wrote on BreachForums, a forum and marketplace for cybercriminals. “Everything for the main platform is there and I very am happy to send samples to interested buyers to verify absolute authenticity.” The GitHub breach is just the latest incident in what has become the longest-running spree of software supply chain attacks ever, with no end in sight. According to cybersecurity firm Socket, which focuses on software supply chains, TeamPCP has, in just the last few months, carried out 20 “waves” of supply chain attacks that have hidden malware in more than 500 distinct pieces of software, or well over a thousand counting all of the various versions of the code that TeamPCP has hijacked.",
+        "word_count": 129,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "A so-called software supply chain attack, in which hackers corrupt a legitimate piece of software to hide their own malicious code, was once a relatively rare event but one that haunted the cybersecurity world with its insidious threat of turning any innocent application into a dangerous foothold in a victim’s network. Now one group of cybercriminals has turned that occasional nightmare into a near-weekly episode, corrupting hundreds of open source tools, extorting victims for profit, and sowing a new level of distrust in an entire ecosystem used to create the world’s software.",
+        "word_count": 92,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "Those tainted pieces of code have allowed TeamPCP’s hackers to breach hundreds of companies that installed the software, says Ben Read, who leads strategic threat intelligence at the cloud security firm Wiz. GitHub is only the latest on the group’s long list of victims, which has also included AI firm OpenAI and the data contracting firm Mercor. “It may be their biggest one,\" Read says of the GitHub breach. “But each one of these is a big deal for the company that it",
+        "word_count": 83,
+        "keyword_overlap": 2,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "On Tuesday night, open source code platform GitHub announced that it had been breached by hackers in one such software supply chain attack: A GitHub developer had installed a “poisoned” extension for VSCode, a plug-in for a commonly used code editor that, like GitHub itself, is owned by Microsoft. As a result, the hackers behind the breach, an increasingly notorious group called TeamPCP, claim to have accessed around 4,000 of GitHub’s code repositories. GitHub’s statement confirmed that it had found at least 3,800 compromised repositories while noting that, based on its findings so far, they all contained GitHub’s own code, not that of customers.\n\n“We are here today to advertise GitHub’s source code and internal orgs for sale,” TeamPCP wrote on BreachForums, a forum and marketplace for cybercriminals. “Everything for the main platform is there and I very am happy to send samples to interested buyers to verify absolute authenticity.” The GitHub breach is just the latest incident in what has become the longest-running spree of software supply chain attacks ever, with no end in sight. According to cybersecurity firm Socket, which focuses on software supply chains, TeamPCP has, in just the last few months, carried out 20 “waves” of supply chain attacks that have hidden malware in more than 500 distinct pieces of software, or well over a thousand counting all of the various versions of the code that TeamPCP has hijacked.\n\nA so-called software supply chain attack, in which hackers corrupt a legitimate piece of software to hide their own malicious code, was once a relatively rare event but one that haunted the cybersecurity world with its insidious threat of turning any innocent application into a dangerous foothold in a victim’s network. Now one group of cybercriminals has turned that occasional nightmare into a near-weekly episode, corrupting hundreds of open source tools, extorting victims for profit, and sowing a new level of distrust in an entire ecosystem used to create the world’s software.\n\nThose tainted pieces of code have allowed TeamPCP’s hackers to breach hundreds of companies that installed the software, says Ben Read, who leads strategic threat intelligence at the cloud security firm Wiz. GitHub is only the latest on the group’s long list of victims, which has also included AI firm OpenAI and the data contracting firm Mercor. “It may be their biggest one,\" Read says of the GitHub breach. “But each one of these is a big deal for the company that it",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 426,
+      "selected_blocks": 4,
+      "selected_source_words": 408,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Wired",
+        "Wired",
+        "Wired",
+        "Wired",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "Wired",
+        "Wired",
+        "Wired",
+        "Wired"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Microsoft’s open source tools were hacked to steal passwords of AI developers",
+      "description": "Microsoft shut down dozens of GitHub code repositories for Azure and AI coding tools after a reported hack.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Microsoft’s open source tools were hacked to steal passwords of AI developers",
+    "description": "Microsoft shut down dozens of GitHub code repositories for Azure and AI coding tools after a reported hack.",
+    "link": "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/",
+    "published": "2026-06-08T20:03:44+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "4a10fade22ff8e3f5b2eef76cce2a670",
+    "_url_hash": "edf98ba3e94e80bd3edf8f60a758f536569889e8c3d518a9e64a502246b62527",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Wired]\nA so-called software supply chain attack, in which hackers corrupt a legitimate piece of software to hide their own malicious code, was once a relatively rare event but one that haunted the cybersecurity world with its insidious threat of turning any innocent application into a dangerous foothold in a victim’s network. Now one group of cybercriminals has turned that occasional nightmare into a near-weekly episode, corrupting hundreds of open source tools, extorting victims for profit, and sowing a new level of distrust in an entire ecosystem used to create the world’s software.\n\nOn Tuesday night, open source code platform GitHub announced that it had been breached by hackers in one such software supply chain attack: A GitHub developer had installed a “poisoned” extension for VSCode, a plug-in for a commonly used code editor that, like GitHub itself, is owned by Microsoft. As a result, the hackers behind the breach, an increasingly notorious group called TeamPCP, claim to have accessed around 4,000 of GitHub’s code repositories. GitHub’s statement confirmed that it had found at least 3,800 compromised repositories while noting that, based on its findings so far, they all contained GitHub’s own code, not that of customers.\n\n“We are here today to advertise GitHub’s source code and internal orgs for sale,” TeamPCP wrote on BreachForums, a forum and marketplace for cybercriminals. “Everything for the main platform is there and I very am happy to send samples to interested buyers to verify absolute authenticity.”\n\nThe GitHub breach is just the latest incident in what has become the longest-running spree of software supply chain attacks ever, with no end in sight. According to cybersecurity firm Socket, which focuses on software supply chains, TeamPCP has, in just the last few months, carried out 20 “waves” of supply chain attacks that have hidden malware in more than 500 distinct pieces of software, or well over a thousand counting all of the various versions of the code that TeamPCP has hijacked.\n\nThose tainted pieces of code have allowed TeamPCP’s hackers to breach hundreds of companies that installed the software, says Ben Read, who leads strategic threat intelligence at the cloud security firm Wiz. GitHub is only the latest on the group’s long list of victims, which has also included AI firm OpenAI and the data contracting firm Mercor. “It may be their biggest one,\" Read says of the GitHub breach. “But each one of these is a big deal for the company that it ",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-08T20:24:59.855256+00:00",
+  "payload": {
+    "packet_id": "20260608T202121Z_1bde278056",
+    "title": "GitHub kertoi tuhansien omien koodivarastojensa vaarantuneen toimitusketjuhyökkäyksessä",
+    "summary": "GitHubin mukaan vähintään 3 800 sen omaa koodivarastoa vaarantui sen jälkeen, kun kehittäjä oli asentanut haitalliseksi muokatun VSCode-laajennuksen. Yhtiön mukaan tähänastiset havainnot eivät viittaa asiakkaiden koodin vaarantumiseen.",
+    "content": "GitHub on kertonut joutuneensa ohjelmistojen toimitusketjuhyökkäyksen kohteeksi sen jälkeen, kun yhtiön kehittäjä oli asentanut haitalliseksi muokatun VSCode-laajennuksen. GitHubin mukaan sen tähänastiset havainnot osoittavat, että vähintään 3 800 vaarantunutta koodivarastoa sisälsi yhtiön omaa koodia eikä asiakkaiden koodia.\n\n## Haitallinen laajennus johti murtoon\n\nHyökkäys liittyy VSCodeen, laajasti käytettyyn koodieditoriin, jonka omistaa Microsoft samoin kuin GitHubin. GitHubin ilmoituksen mukaan kehittäjän asentama myrkytetty laajennus johti siihen, että hyökkääjät pääsivät käsiksi yhtiön koodivarastoihin.\n\nHyökkäyksestä on ilmoittautunut TeamPCP-niminen rikollisryhmä. Ryhmä väitti päässeensä käsiksi noin 4 000 GitHubin koodivarastoon ja tarjosi GitHubin lähdekoodia sekä sisäisiä organisaatiotietoja myyntiin BreachForums-sivustolla, jota käytetään kyberrikollisten foorumina ja kauppapaikkana. GitHubin vahvistama määrä on hieman pienempi: yhtiö on kertonut löytäneensä ainakin 3 800 vaarantunutta varastoa.\n\n## Osa laajempaa hyökkäysaaltoa\n\nTapaus ei ole yksittäinen poikkeus, vaan osa laajempaa ohjelmistojen toimitusketjuihin kohdistuvaa hyökkäysaaltoa. Tällaisessa hyökkäyksessä rikolliset piilottavat haittakoodia muuten luotettavalta näyttävään ohjelmistoon tai sen osaan. Kun organisaatiot asentavat ohjelmiston, haittakoodi voi tarjota hyökkääjille jalansijan niiden järjestelmiin.\n\nOhjelmistojen toimitusketjuihin erikoistuneen Socketin mukaan TeamPCP on viime kuukausien aikana toteuttanut 20 hyökkäysaaltoa, joissa haittakoodia on piilotettu yli 500 erilliseen ohjelmistoon. Eri versiot mukaan laskettuna kaapattuja koodipaketteja on ollut yli tuhat. Lähteiden mukaan sama ryhmä on samalla kiristänyt uhreja ja lisännyt epäluottamusta avoimen lähdekoodin työkaluihin.\n\n## Vaikutukset yrityksiin\n\nPilviturvayhtiö Wizin strategista uhkatiedustelua johtavan Ben Readin mukaan saastuneet koodit ovat mahdollistaneet hyökkäyksiä satoihin ohjelmistoja asentaneisiin yrityksiin. Hänen mukaansa GitHub on ryhmän uusin uhri, ja samaan uhrien joukkoon on aiemmin kuulunut myös OpenAI ja Mercor. Read arvioi, että GitHubin tapaus voi olla ryhmän suurin, mutta jokainen vastaava murto on merkittävä sen kohteeksi joutuneelle yhtiölle.",
+    "category": "Teknologia",
+    "tags": [
+      "GitHub",
+      "Microsoft",
+      "kyberturvallisuus",
+      "avoin lähdekoodi",
+      "toimitusketjuhyökkäys"
+    ],
+    "summary_bullets": [
+      "GitHubin mukaan vähintään 3 800 sen omaa koodivarastoa vaarantui haitallisen VSCode-laajennuksen seurauksena.",
+      "TeamPCP-ryhmä väitti päässeensä käsiksi noin 4 000 koodivarastoon ja tarjosi tietoja myyntiin rikollisfoorumilla.",
+      "Tapaus liittyy laajempaan ohjelmistojen toimitusketjuhyökkäysten aaltoon, jossa haittakoodia on piilotettu satoihin ohjelmistoihin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin lähdetietoihin. Otsikon siemenessä mainittuja salasanojen varastamista, Azure-työkaluja tai Microsoftin sulkemia koodivarastoja ei käytetty, koska valitut lähdeblokit eivät tukeneet niitä riittävän täsmällisesti."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260608T202121Z_1bde278056\",\n  \"title\": \"GitHub kertoi tuhansien omien koodivarastojensa vaarantuneen toimitusketjuhyökkäyksessä\",\n  \"summary\": \"GitHubin mukaan vähintään 3 800 sen omaa koodivarastoa vaarantui sen jälkeen, kun kehittäjä oli asentanut haitalliseksi muokatun VSCode-laajennuksen. Yhtiön mukaan tähänastiset havainnot eivät viittaa asiakkaiden koodin vaarantumiseen.\",\n  \"content\": \"GitHub on kertonut joutuneensa ohjelmistojen toimitusketjuhyökkäyksen kohteeksi sen jälkeen, kun yhtiön kehittäjä oli asentanut haitalliseksi muokatun VSCode-laajennuksen. GitHubin mukaan sen tähänastiset havainnot osoittavat, että vähintään 3 800 vaarantunutta koodivarastoa sisälsi yhtiön omaa koodia eikä asiakkaiden koodia.\\n\\n## Haitallinen laajennus johti murtoon\\n\\nHyökkäys liittyy VSCodeen, laajasti käytettyyn koodieditoriin, jonka omistaa Microsoft samoin kuin GitHubin. GitHubin ilmoituksen mukaan kehittäjän asentama myrkytetty laajennus johti siihen, että hyökkääjät pääsivät käsiksi yhtiön koodivarastoihin.\\n\\nHyökkäyksestä on ilmoittautunut TeamPCP-niminen rikollisryhmä. Ryhmä väitti päässeensä käsiksi noin 4 000 GitHubin koodivarastoon ja tarjosi GitHubin lähdekoodia sekä sisäisiä organisaatiotietoja myyntiin BreachForums-sivustolla, jota käytetään kyberrikollisten foorumina ja kauppapaikkana. GitHubin vahvistama määrä on hieman pienempi: yhtiö on kertonut löytäneensä ainakin 3 800 vaarantunutta varastoa.\\n\\n## Osa laajempaa hyökkäysaaltoa\\n\\nTapaus ei ole yksittäinen poikkeus, vaan osa laajempaa ohjelmistojen toimitusketjuihin kohdistuvaa hyökkäysaaltoa. Tällaisessa hyökkäyksessä rikolliset piilottavat haittakoodia muuten luotettavalta näyttävään ohjelmistoon tai sen osaan. Kun organisaatiot asentavat ohjelmiston, haittakoodi voi tarjota hyökkääjille jalansijan niiden järjestelmiin.\\n\\nOhjelmistojen toimitusketjuihin erikoistuneen Socketin mukaan TeamPCP on viime kuukausien aikana toteuttanut 20 hyökkäysaaltoa, joissa haittakoodia on piilotettu yli 500 erilliseen ohjelmistoon. Eri versiot mukaan laskettuna kaapattuja koodipaketteja on ollut yli tuhat. Lähteiden mukaan sama ryhmä on samalla kiristänyt uhreja ja lisännyt epäluottamusta avoimen lähdekoodin työkaluihin.\\n\\n## Vaikutukset yrityksiin\\n\\nPilviturvayhtiö Wizin strategista uhkatiedustelua johtavan Ben Readin mukaan saastuneet koodit ovat mahdollistaneet hyökkäyksiä satoihin ohjelmistoja asentaneisiin yrityksiin. Hänen mukaansa GitHub on ryhmän uusin uhri, ja samaan uhrien joukkoon on aiemmin kuulunut myös OpenAI ja Mercor. Read arvioi, että GitHubin tapaus voi olla ryhmän suurin, mutta jokainen vastaava murto on merkittävä sen kohteeksi joutuneelle yhtiölle.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"GitHub\",\n    \"Microsoft\",\n    \"kyberturvallisuus\",\n    \"avoin lähdekoodi\",\n    \"toimitusketjuhyökkäys\"\n  ],\n  \"summary_bullets\": [\n    \"GitHubin mukaan vähintään 3 800 sen omaa koodivarastoa vaarantui haitallisen VSCode-laajennuksen seurauksena.\",\n    \"TeamPCP-ryhmä väitti päässeensä käsiksi noin 4 000 koodivarastoon ja tarjosi tietoja myyntiin rikollisfoorumilla.\",\n    \"Tapaus liittyy laajempaan ohjelmistojen toimitusketjuhyökkäysten aaltoon, jossa haittakoodia on piilotettu satoihin ohjelmistoihin.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.92,\n  \"journalist_note\": \"Artikkeli perustuu paketissa olleisiin lähdetietoihin. Otsikon siemenessä mainittuja salasanojen varastamista, Azure-työkaluja tai Microsoftin sulkemia koodivarastoja ei käytetty, koska valitut lähdeblokit eivät tukeneet niitä riittävän täsmällisesti.\"\n}",
+  "article": {
+    "title": "GitHub kertoi tuhansien omien koodivarastojensa vaarantuneen toimitusketjuhyökkäyksessä",
+    "description": "GitHubin mukaan vähintään 3 800 sen omaa koodivarastoa vaarantui sen jälkeen, kun kehittäjä oli asentanut haitalliseksi muokatun VSCode-laajennuksen. Yhtiön mukaan tähänastiset havainnot eivät viittaa asiakkaiden koodin vaarantumiseen.",
+    "link": "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/",
+    "published": "2026-06-08T20:03:44+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "4a10fade22ff8e3f5b2eef76cce2a670",
+    "_url_hash": "edf98ba3e94e80bd3edf8f60a758f536569889e8c3d518a9e64a502246b62527",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Wired]\nA so-called software supply chain attack, in which hackers corrupt a legitimate piece of software to hide their own malicious code, was once a relatively rare event but one that haunted the cybersecurity world with its insidious threat of turning any innocent application into a dangerous foothold in a victim’s network. Now one group of cybercriminals has turned that occasional nightmare into a near-weekly episode, corrupting hundreds of open source tools, extorting victims for profit, and sowing a new level of distrust in an entire ecosystem used to create the world’s software.\n\nOn Tuesday night, open source code platform GitHub announced that it had been breached by hackers in one such software supply chain attack: A GitHub developer had installed a “poisoned” extension for VSCode, a plug-in for a commonly used code editor that, like GitHub itself, is owned by Microsoft. As a result, the hackers behind the breach, an increasingly notorious group called TeamPCP, claim to have accessed around 4,000 of GitHub’s code repositories. GitHub’s statement confirmed that it had found at least 3,800 compromised repositories while noting that, based on its findings so far, they all contained GitHub’s own code, not that of customers.\n\n“We are here today to advertise GitHub’s source code and internal orgs for sale,” TeamPCP wrote on BreachForums, a forum and marketplace for cybercriminals. “Everything for the main platform is there and I very am happy to send samples to interested buyers to verify absolute authenticity.”\n\nThe GitHub breach is just the latest incident in what has become the longest-running spree of software supply chain attacks ever, with no end in sight. According to cybersecurity firm Socket, which focuses on software supply chains, TeamPCP has, in just the last few months, carried out 20 “waves” of supply chain attacks that have hidden malware in more than 500 distinct pieces of software, or well over a thousand counting all of the various versions of the code that TeamPCP has hijacked.\n\nThose tainted pieces of code have allowed TeamPCP’s hackers to breach hundreds of companies that installed the software, says Ben Read, who leads strategic threat intelligence at the cloud security firm Wiz. GitHub is only the latest on the group’s long list of victims, which has also included AI firm OpenAI and the data contracting firm Mercor. “It may be their biggest one,\" Read says of the GitHub breach. “But each one of these is a big deal for the company that it ",
+    "research_source": "multi",
+    "summary": "GitHubin mukaan vähintään 3 800 sen omaa koodivarastoa vaarantui sen jälkeen, kun kehittäjä oli asentanut haitalliseksi muokatun VSCode-laajennuksen. Yhtiön mukaan tähänastiset havainnot eivät viittaa asiakkaiden koodin vaarantumiseen.",
+    "content": "GitHub on kertonut joutuneensa ohjelmistojen toimitusketjuhyökkäyksen kohteeksi sen jälkeen, kun yhtiön kehittäjä oli asentanut haitalliseksi muokatun VSCode-laajennuksen. GitHubin mukaan sen tähänastiset havainnot osoittavat, että vähintään 3 800 vaarantunutta koodivarastoa sisälsi yhtiön omaa koodia eikä asiakkaiden koodia.\n\n## Haitallinen laajennus johti murtoon\n\nHyökkäys liittyy VSCodeen, laajasti käytettyyn koodieditoriin, jonka omistaa Microsoft samoin kuin GitHubin. GitHubin ilmoituksen mukaan kehittäjän asentama myrkytetty laajennus johti siihen, että hyökkääjät pääsivät käsiksi yhtiön koodivarastoihin.\n\nHyökkäyksestä on ilmoittautunut TeamPCP-niminen rikollisryhmä. Ryhmä väitti päässeensä käsiksi noin 4 000 GitHubin koodivarastoon ja tarjosi GitHubin lähdekoodia sekä sisäisiä organisaatiotietoja myyntiin BreachForums-sivustolla, jota käytetään kyberrikollisten foorumina ja kauppapaikkana. GitHubin vahvistama määrä on hieman pienempi: yhtiö on kertonut löytäneensä ainakin 3 800 vaarantunutta varastoa.\n\n## Osa laajempaa hyökkäysaaltoa\n\nTapaus ei ole yksittäinen poikkeus, vaan osa laajempaa ohjelmistojen toimitusketjuihin kohdistuvaa hyökkäysaaltoa. Tällaisessa hyökkäyksessä rikolliset piilottavat haittakoodia muuten luotettavalta näyttävään ohjelmistoon tai sen osaan. Kun organisaatiot asentavat ohjelmiston, haittakoodi voi tarjota hyökkääjille jalansijan niiden järjestelmiin.\n\nOhjelmistojen toimitusketjuihin erikoistuneen Socketin mukaan TeamPCP on viime kuukausien aikana toteuttanut 20 hyökkäysaaltoa, joissa haittakoodia on piilotettu yli 500 erilliseen ohjelmistoon. Eri versiot mukaan laskettuna kaapattuja koodipaketteja on ollut yli tuhat. Lähteiden mukaan sama ryhmä on samalla kiristänyt uhreja ja lisännyt epäluottamusta avoimen lähdekoodin työkaluihin.\n\n## Vaikutukset yrityksiin\n\nPilviturvayhtiö Wizin strategista uhkatiedustelua johtavan Ben Readin mukaan saastuneet koodit ovat mahdollistaneet hyökkäyksiä satoihin ohjelmistoja asentaneisiin yrityksiin. Hänen mukaansa GitHub on ryhmän uusin uhri, ja samaan uhrien joukkoon on aiemmin kuulunut myös OpenAI ja Mercor. Read arvioi, että GitHubin tapaus voi olla ryhmän suurin, mutta jokainen vastaava murto on merkittävä sen kohteeksi joutuneelle yhtiölle.",
+    "category": "Teknologia",
+    "tags": [
+      "github",
+      "microsoft",
+      "kyberturvallisuus",
+      "avoin lähdekoodi",
+      "toimitusketjuhyökkäys"
+    ],
+    "summary_bullets": [
+      "GitHubin mukaan vähintään 3 800 sen omaa koodivarastoa vaarantui haitallisen VSCode-laajennuksen seurauksena.",
+      "TeamPCP-ryhmä väitti päässeensä käsiksi noin 4 000 koodivarastoon ja tarjosi tietoja myyntiin rikollisfoorumilla.",
+      "Tapaus liittyy laajempaan ohjelmistojen toimitusketjuhyökkäysten aaltoon, jossa haittakoodia on piilotettu satoihin ohjelmistoihin."
+    ],
+    "key_points": [
+      "GitHubin mukaan vähintään 3 800 sen omaa koodivarastoa vaarantui haitallisen VSCode-laajennuksen seurauksena.",
+      "TeamPCP-ryhmä väitti päässeensä käsiksi noin 4 000 koodivarastoon ja tarjosi tietoja myyntiin rikollisfoorumilla.",
+      "Tapaus liittyy laajempaan ohjelmistojen toimitusketjuhyökkäysten aaltoon, jossa haittakoodia on piilotettu satoihin ohjelmistoihin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin lähdetietoihin. Otsikon siemenessä mainittuja salasanojen varastamista, Azure-työkaluja tai Microsoftin sulkemia koodivarastoja ei käytetty, koska valitut lähdeblokit eivät tukeneet niitä riittävän täsmällisesti.",
+    "source_text": "On Tuesday night, open source code platform GitHub announced that it had been breached by hackers in one such software supply chain attack: A GitHub developer had installed a “poisoned” extension for VSCode, a plug-in for a commonly used code editor that, like GitHub itself, is owned by Microsoft. As a result, the hackers behind the breach, an increasingly notorious group called TeamPCP, claim to have accessed around 4,000 of GitHub’s code repositories. GitHub’s statement confirmed that it had found at least 3,800 compromised repositories while noting that, based on its findings so far, they all contained GitHub’s own code, not that of customers.\n\n“We are here today to advertise GitHub’s source code and internal orgs for sale,” TeamPCP wrote on BreachForums, a forum and marketplace for cybercriminals. “Everything for the main platform is there and I very am happy to send samples to interested buyers to verify absolute authenticity.” The GitHub breach is just the latest incident in what has become the longest-running spree of software supply chain attacks ever, with no end in sight. According to cybersecurity firm Socket, which focuses on software supply chains, TeamPCP has, in just the last few months, carried out 20 “waves” of supply chain attacks that have hidden malware in more than 500 distinct pieces of software, or well over a thousand counting all of the various versions of the code that TeamPCP has hijacked.\n\nA so-called software supply chain attack, in which hackers corrupt a legitimate piece of software to hide their own malicious code, was once a relatively rare event but one that haunted the cybersecurity world with its insidious threat of turning any innocent application into a dangerous foothold in a victim’s network. Now one group of cybercriminals has turned that occasional nightmare into a near-weekly episode, corrupting hundreds of open source tools, extorting victims for profit, and sowing a new level of distrust in an entire ecosystem used to create the world’s software.\n\nThose tainted pieces of code have allowed TeamPCP’s hackers to breach hundreds of companies that installed the software, says Ben Read, who leads strategic threat intelligence at the cloud security firm Wiz. GitHub is only the latest on the group’s long list of victims, which has also included AI firm OpenAI and the data contracting firm Mercor. “It may be their biggest one,\" Read says of the GitHub breach. “But each one of these is a big deal for the company that it",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260608T202121Z_1bde278056",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-06-08T20:24:59.854773+00:00",
+      "repair_trigger": "pre_repair_word_count=239; selected_source_words=408; selected_source_blocks=4",
+      "pre_repair_word_count": 239,
+      "pre_repair_lead_word_count": 36,
+      "post_repair_word_count": 253,
+      "post_repair_lead_word_count": 36,
+      "selected_source_words_at_repair": 408,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 408,
+      "source_blocks": 4,
+      "repair_added_word_count": 14,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:Wired:55ee54b3bd",
+        "2:Wired:6c242db34a",
+        "3:Wired:0cbfa8f659",
+        "4:Wired:96f63b1d06"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw0fHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwdGVhbSUyMG1lZXRpbmd8ZW58MXwwfHx8MTc4MDk1MDQ4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw0fHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwdGVhbSUyMG1lZXRpbmd8ZW58MXwwfHx8MTc4MDk1MDQ4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "GitHub kertoi tuhansien omien koodivarastojensa vaarantuneen toimitusketjuhyökkäyksessä",
+    "image_credit": "Photo by Annie Spratt on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/group-of-people-using-laptop-computer-QckxruozjRg?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-08T20:24:59.854773+00:00",
+    "repair_trigger": "pre_repair_word_count=239; selected_source_words=408; selected_source_blocks=4",
+    "pre_repair_word_count": 239,
+    "pre_repair_lead_word_count": 36,
+    "post_repair_word_count": 253,
+    "post_repair_lead_word_count": 36,
+    "selected_source_words_at_repair": 408,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 408,
+    "source_blocks": 4,
+    "repair_added_word_count": 14,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:Wired:55ee54b3bd",
+      "2:Wired:6c242db34a",
+      "3:Wired:0cbfa8f659",
+      "4:Wired:96f63b1d06"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-06-08T20:28:06.261782+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw0fHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwdGVhbSUyMG1lZXRpbmd8ZW58MXwwfHx8MTc4MDk1MDQ4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw0fHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwdGVhbSUyMG1lZXRpbmd8ZW58MXwwfHx8MTc4MDk1MDQ4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-08T20:29:14.208167+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-08-github-kertoi-tuhansien-omien-koodivarastojensa-vaarantuneen.md"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-08T19:51:17.546677+00:00",
+  "digest": "adc86660f6",
+  "packet": {
+    "packet_id": "20260608T195117Z_adc86660f6",
+    "created_at": "2026-06-08T19:51:17Z",
+    "headline_seed": "Orpo ja Zelenskyi ovat tiistaina Tallinnassa",
+    "description_seed": "",
+    "link": "https://yle.fi/a/74-20230452?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20230452?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Orpo ja Zelenskyi ovat tiistaina Tallinnassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 117,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Orpo ja Zelenskyi ovat tiistaina Tallinnassa",
+      "description": "",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Orpo ja Zelenskyi ovat tiistaina Tallinnassa",
+    "description": "",
+    "link": "https://yle.fi/a/74-20230452?origin=rss",
+    "published": "2026-06-08T21:43:29+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "afe274a2c39adb3237f23cfba28990fa",
+    "_url_hash": "04f48805b406fcfe4cc68f3af85260e8fde6fc96473f7ac696a3747d6a774a88",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: ksml.fi]\nOrpo ja Zelenskyi keskustelivat Jerevanissa myös drooneista, joiden epäillään loukanneen Suomen ilmatilaa sunnuntain vastaisena yönä.\n\nPääministeri Petteri Orpo (kok.) sanoo pitävänsä Ukrainan presidentin Volodymyr Zelenskyin esitystä drooniyhteistyösopimuksesta kiinnostavana. STT:lle sunnuntaina illalla välitetyssä kommentissaan Orpo kertoi Suomen jo tiivistävän yhteistyötä Ukrainan kanssa.\n\n– Tulemme nyt perehtymään esitykseen, meillä on paljon opittavaa Ukrainalta, Orpo sanoi kirjallisessa kommentissa.\n\nZelenskyi on aiemmin kertonut Ukrainan esittävän kumppaneille droonisopimuksia, joiden myötä Ukraina muun muassa tarjoaisi niille asetuotantoaan ja -osaamistaan.\n\nZelenskyi ja Orpo tapasivat sunnuntaina Armenian Jerevanissa, jonne johtajat matkustivat osallistuakseen maanantaina alkavaan Euroopan poliittisen yhteisön kokoukseen. Orpon mukaan he keskustelivat laajasti drooneista, Ukrainan osaamisesta ja kehysriihessä tehdystä päätöksestä osoittaa loppuvaalikaudelle yhteensä 300 miljoonan euron lisätuki Ukrainan sotilaalliseen tukeen ja puolustusteolliseen yhteistyöhön maiden välillä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-08T19:53:15.353977+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä eikä riittäviä varmennettuja tietoja vähintään 250 sanan julkaistavaan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260608T195117Z_adc86660f6\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä eikä riittäviä varmennettuja tietoja vähintään 250 sanan julkaistavaan uutiseen.\"}"
+}
