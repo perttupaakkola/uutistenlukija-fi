@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-08T00:01:16.884730+00:00",
+  "digest": "d871c4d40c",
+  "packet": {
+    "packet_id": "20260608T000116Z_d871c4d40c",
+    "created_at": "2026-06-08T00:01:16Z",
+    "headline_seed": "Tulipalot | Kerrostaloasunnon parvekkeella raju tulipalo Vantaalla",
+    "description_seed": "Parveke vaikuttaa vaurioituneen pahasti tulipalossa yöllä.",
+    "link": "https://www.hs.fi/pkseutu/art-2000012063057.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/pkseutu/art-2000012063057.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tulipalot | Kerrostaloasunnon parvekkeella raju tulipalo Vantaalla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 212,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Länsiväylä",
+        "Länsiväylä",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tulipalot | Kerrostaloasunnon parvekkeella raju tulipalo Vantaalla",
+      "description": "Parveke vaikuttaa vaurioituneen pahasti tulipalossa yöllä.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tulipalot | Kerrostaloasunnon parvekkeella raju tulipalo Vantaalla",
+    "description": "Parveke vaikuttaa vaurioituneen pahasti tulipalossa yöllä.",
+    "link": "https://www.hs.fi/pkseutu/art-2000012063057.html",
+    "published": "2026-06-07T23:54:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "f9de15ade9eeac789122af1448abf8f4",
+    "_url_hash": "19b5c72450759a80e9f7e3691ba2e3c957080c18d2aa75e1c49aa05e09932fe8",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Länsiväylä]\nEspoon Kuitinkadulla toisen kerroksen yksiö oli täyden palon vaiheessa pelastuslaitoksen saapuessa. Kaksi ihmistä altistui savulle ja toimitettiin sairaalaan.\n\nKuitinkadulla Espoossa oli keskiviikkoiltana raju kerrostalon huoneistopalo.\n\n– Huoneisto tuhoutuu täysin. Naapuriasunnossa savuvahinkoja. Kaksi savua hengittänyttä ensihoidon toimesta sairaalaan. Tutkinta ja jälkivahingontorjunta jatkuu pitkälle iltaan, pelastuslaitos tiedotti kello 21.29 keskiviikkoiltana.\n\nPelastuslaitos sai hälytyksen kohteeseen kello 20.08. Sinne lähti 7 yksikköä.\n\nSammutustöissä meni vain noin 15 minuuttia, mutta jälkivartiointi kohteessa jatkuu edelleen poliisin tutkinnan ajan.\n\n8-kerroksisen talon toisessa kerroksessa sijaitsevassa yksiössä oli täyden palon vaihe, kun Länsi-Uudenmaan pelastuslaitos tuli paikalle.\n\n– Asukas oli jotenkin päässyt itse ulos asunnosta, en tiedä miten. Hän oli hengittänyt savua. Yläkerran asunnon asukas heräsi tulipaloon ja hänkin hengitti jonkin verran savua. Hän kuitenkin odotti pelastuslaitosta oikeaoppisesti asunnossa, kertoo päivystävä palomestari Riku Rantala.\n\nPelastuslaitos ei joutunut evakuoimaan henkilöitä rakennuksesta, vaan asukkaat olivat joko itse poistuneet ulos rakennuksesta tai odottivat pelastuslaitoksen ohjeita asunnossa.\n\n– Hyvää oli se, ettei kukaan ollut lähtenyt hortoilemaan savuiseen porraskäytävään.\n\nPalon syttymissyystä Rantala toteaa, että se oli \"inhimillistä hölmöilyä, ihmisen aiheuttama\".\n\n– Palokuorma oli suuri kohteen kokoon nähden eli asunnossa oli paljon tavaraa. Koko asunto tuhoutui ja uskon, että kaikkinensa palon aiheuttamat kustannukset nousevat useisiin satoihin euroihin.\n\nRantalan arvion mukaan rapussa on 24 asuntoa.\n\nJuttua päivitetty 27.5.2026 klo 22.27: lisätty palomestarin kommentit.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-08T00:03:23.953394+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja tapahtumapaikasta, ajankohdasta, seurauksista tai henkilövahingoista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260608T000116Z_d871c4d40c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja tapahtumapaikasta, ajankohdasta, seurauksista tai henkilövahingoista.\"}"
+}
