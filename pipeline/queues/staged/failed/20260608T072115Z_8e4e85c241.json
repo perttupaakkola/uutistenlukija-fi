@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-08T07:21:15.063668+00:00",
+  "digest": "8e4e85c241",
+  "packet": {
+    "packet_id": "20260608T072115Z_8e4e85c241",
+    "created_at": "2026-06-08T07:21:15Z",
+    "headline_seed": "Tyksissa kerätään moniammatillista palautetta erikoistuvien suorituksista",
+    "description_seed": "– Kaikki saavat äänensä kuuluviin, kertoo neurokirurgian erikoislääkäri, kouluttajalääkäri Anna Östberg.",
+    "link": "http://www.laakarilehti.fi/kliininen-tyo/tyksissa-kerataan-moniammatillista-palautetta-erikoistuvien-suorituksista/",
+    "source": "Lääkärilehti",
+    "source_names": [],
+    "source_urls": [
+      "http://www.laakarilehti.fi/kliininen-tyo/tyksissa-kerataan-moniammatillista-palautetta-erikoistuvien-suorituksista/"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tyksissa kerätään moniammatillista palautetta erikoistuvien suorituksista"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 142,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Lääkärilehti",
+        "Lääkärilehti"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tyksissa kerätään moniammatillista palautetta erikoistuvien suorituksista",
+      "description": "– Kaikki saavat äänensä kuuluviin, kertoo neurokirurgian erikoislääkäri, kouluttajalääkäri Anna Östberg.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tyksissa kerätään moniammatillista palautetta erikoistuvien suorituksista",
+    "description": "– Kaikki saavat äänensä kuuluviin, kertoo neurokirurgian erikoislääkäri, kouluttajalääkäri Anna Östberg.",
+    "link": "http://www.laakarilehti.fi/kliininen-tyo/tyksissa-kerataan-moniammatillista-palautetta-erikoistuvien-suorituksista/",
+    "published": "2026-06-08T09:37:40+03:00",
+    "source": "Lääkärilehti",
+    "source_domain": "laakarilehti.fi",
+    "language": "fi",
+    "fingerprint": "d1741e8e83ed5bb7227b9531c14bd617",
+    "_url_hash": "2a78ef6c6833e1b9d8301068904ffd60d09bb19ffb68120dc8234eaf2fbb5584",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "stale_source",
+    "fresh_source_quota_eligible": false,
+    "stale_source": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Lääkärilehti]\nPääset lukemaan artikkelin, kun kirjaudut jäsenalueelle Fimnet-tunnuksillasi. Kirjautuminen pysyy käytössäsi olevan laitteen muistissa, jos et erikseen kirjaudu ulos sivulta. Jos luet lehteä yhteisessä käytössä olevalla koneella, muista myös kirjautua ulos sivustolta.\n\nLääkärilehti on Lääkäriliiton jäsenetu. Jos sinulla ei vielä ole jäsenen Fimnet-tunnuksia tai olet unohtanut salasanasi, hanki ne tästä.\n\nKaikille avoin Potilaan Lääkärilehti -verkkosivusto sisältää osan Lääkärilehden aineistosta. Palvelu on maksuton.\n\nPotilas kertoi, että sappikiviin liittyvä ylävatsakipu oli epämääräistä, joten Jarkko Karihuhta päätti ottaa sydänsähkökäyrän.\n\nYliopistoilla on erinomaiset edellytykset uusimuotoisen koulutuksen järjestämiseen, kirjoittavat psykoterapiakoulutuksen vastuuhenkilöt.\n\nIhmisiä puhuttavat palkat, paikallinen sopiminen ja epäasiallinen käytös, Helsingin yliopiston luottamusmies Aleksi Pajunen kertoo.\n\nJo nykyiset kielimallit pärjäävät joissain diagnostisissa tilanteissa lääkärien veroisesti.\n\nYleislääketieteen tulevaisuus voi olla paitsi tehokkaampi myös oikeudenmukaisempi ja inhimillisempi, kirjoittaa Helena Liira.\n\nEsteitä ovat muun muassa resurssien ja koulutuksen puute sekä muutoshaluttomuus.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-08T07:23:14.004082+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260608T072115Z_8e4e85c241\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

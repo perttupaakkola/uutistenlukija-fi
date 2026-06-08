@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/taytyy-luottaa-sataprosenttisesti-22-vuotias-perunanviljelija-jattaa-kateiskassan-avoimeksi-ohi-kulkeville-asiakkaille/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
