@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-08T03:21:11.719001+00:00",
+  "digest": "cb7a16652d",
+  "packet": {
+    "packet_id": "20260608T032111Z_cb7a16652d",
+    "created_at": "2026-06-08T03:21:11Z",
+    "headline_seed": "Mikko Rantaseen vaihdetulta NHL-sensaatiolta tulinen avautuminen – viha kytee yhä",
+    "description_seed": "Pudotuspelien sensaatiopelaajalla Logan Stankovenilla on vielä asioita hampaankolossa. Hän nauttii nyt pystyvänsä näyttämään epäilijöille.",
+    "link": "https://www.is.fi/nhl/art-2000012058201.html",
+    "source": "IS Urheilu",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/nhl/art-2000012058201.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mikko Rantaseen vaihdetulta NHL-sensaatiolta tulinen avautuminen – viha kytee yhä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 177,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Sportti",
+        "IS Urheilu"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mikko Rantaseen vaihdetulta NHL-sensaatiolta tulinen avautuminen – viha kytee yhä",
+      "description": "Pudotuspelien sensaatiopelaajalla Logan Stankovenilla on vielä asioita hampaankolossa. Hän nauttii nyt pystyvänsä näyttämään epäilijöille.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mikko Rantaseen vaihdetulta NHL-sensaatiolta tulinen avautuminen – viha kytee yhä",
+    "description": "Pudotuspelien sensaatiopelaajalla Logan Stankovenilla on vielä asioita hampaankolossa. Hän nauttii nyt pystyvänsä näyttämään epäilijöille.",
+    "link": "https://www.is.fi/nhl/art-2000012058201.html",
+    "published": "2026-06-08T03:15:00+00:00",
+    "source": "IS Urheilu",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "a9df9b2c37482d1d9129ebe8c641cedc",
+    "_url_hash": "45bb72b31a46551d99d60cce4811e8569f1681decc94dc20feeb700af84029f3",
+    "source_tier": 1,
+    "category_hint": "Urheilu",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: Sportti]\nNHL-seura Colorado Avalanchen General Manager Joe Sakic kertoi lauantaina, ettei hyökkääjä Mikko Rantasta nähdä NHL:ssä enää kuluvalla kaudella.\n\nSyyt ovat järkeenkäyvät. Kun Avalanche hävisi lauantaina Minnesota Wildille, menetti se käytännössä mahdollisuutensa Stanley Cupin pudotuspeleihin. Ottelussa Rantanen sai yhdeksän NHL-esiintymistä täyteen. Jos hän pelaisi vielä yhdenkin NHL-ottelun lisää, hänen ensisopimuksestaan ”palaisi” kokonainen vuosi. Nyt kun otteluita näyttää tulevan vähemmän kuin kymmenen, sopimusta on ensi kaudenkin alussa kolme vuotta jäljellä.\n\n– Emme tosiaan aio polttaa vuotta hänen sopimuksestaan. Mutta ensi syksynä hän aloittaa täysiaikaisesti ylhäällä, Sakic kertoi Denver Post -sanomalehdelle (www.denverpost.com).\n\nLisäksi Sakic vihjasi, että päätöksellä pyritään entisestään varmistamaan Rantasen pitkäaikainen jatko organisaatiossa. Lähivuosina NHL:ssä saattaa olla edessä ns. laajennus-draft, jossa mahdolliset uudet joukkueet voivat varata pelaajia muista joukkueista. Vähemmän NHL:ssä pelanneet ovat enemmän ”turvassa” laajennusjoukkueilta.\n\nRantasen yhdeksän ensimmäistä NHL-ottelua eivät tuottaneet tehopisteitä. AHL:n San Antonio Rampagessa hän on riehunut pisteet 21+31=52. Hän on liigan pistepörssissä 13:ntena.\n\nJääkiekko    07.06.2026 - 18:24     Janne Niemenmaa\n\nJääkiekko    07.06.2026 - 20:09     Janne Niemenmaa\n\nJääkiekko    07.06.2026 - 12:20     Salttu Forsström",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-08T03:23:13.336937+00:00",
+  "failure": "Lähdeaineisto puuttuu: paketissa ei ole valittuja lähdeblokkeja eikä varmistettuja yksityiskohtia artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260608T032111Z_cb7a16652d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu: paketissa ei ole valittuja lähdeblokkeja eikä varmistettuja yksityiskohtia artikkelin kirjoittamiseen.\"}"
+}
