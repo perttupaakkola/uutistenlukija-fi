@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/msi-toi-computexiin-koko-kirjon-uutuustuotteita-naytille-mukana-tekoalypelinaytot/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
