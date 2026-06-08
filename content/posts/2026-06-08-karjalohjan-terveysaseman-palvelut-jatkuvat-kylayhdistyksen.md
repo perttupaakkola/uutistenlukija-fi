@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/pienta-terveysasemaa-uhkasi-sulkeminen-mutta-kylayhdistys-pani-tuulemaan-nain-tutun-laakarin-palvelut-saatiin-jatkumaan/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
