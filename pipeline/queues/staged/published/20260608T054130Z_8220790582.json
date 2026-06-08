@@ -1,0 +1,213 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-08T05:41:30.505714+00:00",
+  "digest": "8220790582",
+  "packet": {
+    "packet_id": "20260608T054130Z_8220790582",
+    "created_at": "2026-06-08T05:41:30Z",
+    "headline_seed": "Five people injured in stabbing at New York City's Penn Station",
+    "description_seed": "The city is currently heightening security measures before President Trump visits on Monday to watch the NBA finals.",
+    "link": "https://www.bbc.com/news/articles/cj0g4425zmeo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Mint",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cj0g4425zmeo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Five people injured in stabbing at New York City's Penn Station"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Five people have been injured in a stabbing at New York City’s Penn Station, officials say. One person suffered a serious injury, two had moderate injuries, and the rest suffered minor injuries from the stabbing, the Fire Department of New York said in a statement shared with US media. The New York Police Department apprehended the suspect after a manhunt following the attack, which took place around 19:00 EST (0:00 BST). The stabbing comes as the city is heightening security measures before US President Donald Trump visits on Monday to watch the New York Knicks in the National Basketball Association (NBA) finals. Law enforcement told the BBC's US partner CBS News that the stabbing was a random act of violence. The suspect was emotionally disturbed and arrested by Amtrak police, ABC News reported.",
+        "word_count": 133,
+        "keyword_overlap": 18,
+        "strong_overlap": 12
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The city is currently heightening security measures before President Trump visits on Monday to watch the NBA finals.",
+        "word_count": 18,
+        "keyword_overlap": 12,
+        "strong_overlap": 9
+      },
+      {
+        "source": "Mint",
+        "source_type": "research",
+        "text": "Police have stepped up security measures across the city ahead of the high-profile events. While officials did not provide details about the stabbing, New York's emergency alert system advised residents to avoid the area and “expect traffic delays, road closures, mass transit disruptions & emergency personnel near Penn Station.” Even before the stabbing, city officials had cancelled an outdoor watch party planned for Monday outside Madison Square Garden. The decision followed scenes on Friday when thousands of fans gathered at an intersection near the arena to watch Game 2 of the NBA Finals. New York Police said 26 people were arrested after sections of the crowd became disorderly. Mayor Zohran Mamdani said a police officer was assaulted during efforts to manage the gathering and described the behaviour as \"unacceptable.\"",
+        "word_count": 129,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The fire department said those injured in the stabbing were taken to Bellevue Hospital. New York’s Penn Station sits directly beneath Madison Square Garden, where the Knicks will play the San Antonio Spurs in Game 3 of the NBA finals on Monday evening. Ahead of the game, city officials announced new security precautions including a no-bag policy and a cancellation of a watch party outside the arena due to Trump’s presence. Mayor Zohran Mamdani will also attend. ---",
+        "word_count": 78,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Five people have been injured in a stabbing at New York City’s Penn Station, officials say. One person suffered a serious injury, two had moderate injuries, and the rest suffered minor injuries from the stabbing, the Fire Department of New York said in a statement shared with US media. The New York Police Department apprehended the suspect after a manhunt following the attack, which took place around 19:00 EST (0:00 BST). The stabbing comes as the city is heightening security measures before US President Donald Trump visits on Monday to watch the New York Knicks in the National Basketball Association (NBA) finals. Law enforcement told the BBC's US partner CBS News that the stabbing was a random act of violence. The suspect was emotionally disturbed and arrested by Amtrak police, ABC News reported.\n\nThe city is currently heightening security measures before President Trump visits on Monday to watch the NBA finals.\n\nPolice have stepped up security measures across the city ahead of the high-profile events. While officials did not provide details about the stabbing, New York's emergency alert system advised residents to avoid the area and “expect traffic delays, road closures, mass transit disruptions & emergency personnel near Penn Station.” Even before the stabbing, city officials had cancelled an outdoor watch party planned for Monday outside Madison Square Garden. The decision followed scenes on Friday when thousands of fans gathered at an intersection near the arena to watch Game 2 of the NBA Finals. New York Police said 26 people were arrested after sections of the crowd became disorderly. Mayor Zohran Mamdani said a police officer was assaulted during efforts to manage the gathering and described the behaviour as \"unacceptable.\"\n\nThe fire department said those injured in the stabbing were taken to Bellevue Hospital. New York’s Penn Station sits directly beneath Madison Square Garden, where the Knicks will play the San Antonio Spurs in Game 3 of the NBA finals on Monday evening. Ahead of the game, city officials announced new security precautions including a no-bag policy and a cancellation of a watch party outside the arena due to Trump’s presence. Mayor Zohran Mamdani will also attend. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 721,
+      "selected_blocks": 4,
+      "selected_source_words": 358,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "OrissaPOST",
+        "Mint",
+        "Mint",
+        "Mint",
+        "Mint",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Mint",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Five people injured in stabbing at New York City's Penn Station",
+      "description": "The city is currently heightening security measures before President Trump visits on Monday to watch the NBA finals.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Five people injured in stabbing at New York City's Penn Station",
+    "description": "The city is currently heightening security measures before President Trump visits on Monday to watch the NBA finals.",
+    "link": "https://www.bbc.com/news/articles/cj0g4425zmeo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-08T01:33:08+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "d3a6895d73eee01ef953988709e8025e",
+    "_url_hash": "65523e260cb9df015280aaf00efedab54a05e95f5415fb4879c7099968a3b47c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFive people have been injured in a stabbing at New York City’s Penn Station, officials say.\n\nOne person suffered a serious injury, two had moderate injuries, and the rest suffered minor injuries from the stabbing, the Fire Department of New York said in a statement shared with US media.\n\nThe New York Police Department apprehended the suspect after a manhunt following the attack, which took place around 19:00 EST (0:00 BST).\n\nThe stabbing comes as the city is heightening security measures before US President Donald Trump visits on Monday to watch the New York Knicks in the National Basketball Association (NBA) finals.\n\nLaw enforcement told the BBC's US partner CBS News that the stabbing was a random act of violence. The suspect was emotionally disturbed and arrested by Amtrak police, ABC News reported.\n\nThe fire department said those injured in the stabbing were taken to Bellevue Hospital.\n\nNew York’s Penn Station sits directly beneath Madison Square Garden, where the Knicks will play the San Antonio Spurs in Game 3 of the NBA finals on Monday evening.\n\nAhead of the game, city officials announced new security precautions including a no-bag policy and a cancellation of a watch party outside the arena due to Trump’s presence. Mayor Zohran Mamdani will also attend.\n\n---\n\n[Lähde: OrissaPOST]\nOn World Environment Day, 5 June, India launched E85, that is, petrol blended with 85 per cent ethanol at 48...\n\nBy Aakar Patel Friend Ram Madhav has written a fine piece on Prime Minister Narendra Modi reaching an important milestone....\n\nBy Dilip Cherian The Centre’s decision to significantly expand the Enforcement Directorate (ED) is a lot more than a routine...\n\nThe ongoing visit of Myanmar’s President Min Aung Hlaing to India is fraught with geopolitical significance. India's reputation as a...\n\n---\n\n[Lähde: Mint]\nFive people were stabbed at New York's Penn Station on Sunday as the city gears up to host two major sporting events - the NBA Finals and the FIFA World Cup. A suspect is in custody, according to the city's fire department.\n\nEmergency vehicles and uniformed first responders were seen outside the station following the incident.\n\nThe victims - all civilians, including one with serious injuries, two with moderate injuries and two with minor injuries - were immediately taken to hospital. \"Perp in custody,\" the department said. \"Operations ongoing.\"\n\nThe exact cause of the incident remains unknown. Images from the scene showed blood on the floor, along with gauze and medical gloves, near tracks 5 and 6, which had been cordoned off by police.\n\nThe stabbing took place at one of the busiest rail and subway hubs in the United States as New York prepares to host two major sporting events over the coming days — the NBA Finals and the FIFA World Cup.\n\nMadison Square Garden, which sits directly above Penn Station in Manhattan, is scheduled to host Games 3 and 4 of the NBA Finals on Monday and Wednesday. The matches will feature the New York Knicks and the San Antonio Spurs.\n\nMeanwhile, MetLife Stadium in neighbouring New Jersey will stage its first FIFA World Cup match on Saturday, bringing another major sporting event to the region.\n\nUS President Donald Trump is expected to attend Monday's NBA Finals game at Madison Square Garden. He recently said he had accepted an invitation from Knicks owner James Dolan.\n\nPolice have stepped up security measures across the city ahead of the high-profile events.\n\nWhile officials did not provide details about the stabbing, New York's emergency alert system advised residents to avoid the area and “expect traffic delays, road closures, mass transit disruptions & emergency personnel near Penn Station.”\n\nEven before the stabbing, city officials had cancelled an outdoor watch party planned for Monday outside Madison Square Garden.\n\nThe decision followed scenes on Friday when thousands of fans gathered at an intersection near the arena to watch Game 2 of the NBA Finals.\n\nNew York Police said 26 people were arrested after sections of the crowd became disorderly.\n\nMayor Zohran Mamdani said a police officer was assaulted during efforts to manage the gathering and described the behaviour as \"unacceptable.\"\n\nKanishka Singharia is a Senior Content Producer at Mint with a passion for news, trends, and the stories shaping the digital world. She sp",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-08T05:44:10.885166+00:00",
+  "payload": {
+    "packet_id": "20260608T054130Z_8220790582",
+    "title": "Viisi loukkaantui puukotuksessa New Yorkin Penn Stationilla",
+    "summary": "Viisi ihmistä loukkaantui puukotuksessa New Yorkin Penn Stationilla. Epäilty otettiin kiinni etsinnän jälkeen, ja kaupungissa on samaan aikaan kiristetty turvatoimia NBA-finaaliottelun ja presidentti Donald Trumpin vierailun alla.",
+    "content": "Viisi ihmistä on loukkaantunut puukotuksessa New Yorkin Penn Stationilla, viranomaiset kertovat. Palokunnan mukaan yksi uhreista sai vakavia vammoja, kaksi loukkaantui keskivaikeasti ja loput saivat lieviä vammoja. Loukkaantuneet vietiin Bellevue-sairaalaan, ja poliisi otti epäillyn kiinni hyökkäyksen jälkeen käynnistetyn etsinnän päätteeksi.\n\n## Hyökkäys tapahtui illalla\n\nPuukotus tapahtui noin kello 19 paikallista aikaa. Lainvalvontaviranomaiset kertoivat BBC:n yhdysvaltalaiselle kumppanille CBS Newsille, että kyse oli satunnaisesta väkivallanteosta. ABC Newsin mukaan epäiltyä kuvattiin henkisesti häiriintyneeksi, ja hänet pidätti Amtrakin poliisi.\n\nPenn Station on yksi New Yorkin keskeisistä liikenneasemista. Se sijaitsee suoraan Madison Square Gardenin alapuolella, mikä on lisännyt tapahtuman huomiota, koska alueella on jo valmiiksi varauduttu suureen yleisömäärään ja poikkeuksellisiin turvajärjestelyihin.\n\nNew Yorkin hätäilmoitusjärjestelmä kehotti asukkaita välttämään aluetta. Ilmoituksessa varoitettiin myös liikenneruuhkista, tiesuluista, joukkoliikenteen häiriöistä ja pelastushenkilöstön toiminnasta Penn Stationin lähistöllä.\n\n## Turvatoimia kiristetty ottelun alla\n\nKaupunki on lisännyt turvatoimia ennen maanantai-illan NBA-finaaliottelua, jossa New York Knicks kohtaa San Antonio Spursin Madison Square Gardenissa. Presidentti Donald Trumpin on määrä olla paikalla seuraamassa ottelua. Myös pormestari Zohran Mamdanin kerrotaan osallistuvan tapahtumaan.\n\nViranomaiset ovat ilmoittaneet uusista turvatoimista, joihin kuuluu muun muassa laukkujen tuontikielto. Ulkona Madison Square Gardenin läheisyydessä suunniteltu yleisön katsomotapahtuma on peruttu Trumpin läsnäolon vuoksi.\n\n## Perjantain väkijoukko vaikutti päätöksiin\n\nKatsomotapahtuman perumiseen vaikutti myös perjantain tilanne, jolloin tuhannet fanit kokoontuivat areenan lähistölle seuraamaan NBA-finaalisarjan toista ottelua. New Yorkin poliisin mukaan 26 ihmistä pidätettiin, kun osa väkijoukosta alkoi käyttäytyä häiritsevästi.\n\nMamdani sanoi, että yksi poliisi pahoinpideltiin väkijoukon hallinnan yhteydessä, ja kuvasi käytöstä tuomittavaksi. Kaupungin viranomaiset olivat kiristäneet turvatoimia jo ennen puukotusta, sillä Penn Stationin ja Madison Square Gardenin ympäristöön odotetaan maanantaina sekä otteluvieraita että tavallista enemmän viranomaisia.",
+    "category": "Ulkomaat",
+    "tags": [
+      "New York",
+      "Penn Station",
+      "puukotus",
+      "NBA",
+      "Donald Trump",
+      "Madison Square Garden"
+    ],
+    "summary_bullets": [
+      "Viisi ihmistä loukkaantui puukotuksessa New Yorkin Penn Stationilla.",
+      "Epäilty otettiin kiinni hyökkäyksen jälkeen käynnistetyn etsinnän päätteeksi.",
+      "Kaupunki on kiristänyt turvatoimia ennen NBA-finaaliottelua ja Donald Trumpin vierailua."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään valittuun lähdeblokkiin. Vältetty lisätietojen keksimistä; NBA-ottelua, turvatoimia ja pidätyksiä koskevat yksityiskohdat on pidetty lähdetekstin rajoissa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260608T054130Z_8220790582\",\n  \"title\": \"Viisi loukkaantui puukotuksessa New Yorkin Penn Stationilla\",\n  \"summary\": \"Viisi ihmistä loukkaantui puukotuksessa New Yorkin Penn Stationilla. Epäilty otettiin kiinni etsinnän jälkeen, ja kaupungissa on samaan aikaan kiristetty turvatoimia NBA-finaaliottelun ja presidentti Donald Trumpin vierailun alla.\",\n  \"content\": \"Viisi ihmistä on loukkaantunut puukotuksessa New Yorkin Penn Stationilla, viranomaiset kertovat. Palokunnan mukaan yksi uhreista sai vakavia vammoja, kaksi loukkaantui keskivaikeasti ja loput saivat lieviä vammoja. Loukkaantuneet vietiin Bellevue-sairaalaan, ja poliisi otti epäillyn kiinni hyökkäyksen jälkeen käynnistetyn etsinnän päätteeksi.\\n\\n## Hyökkäys tapahtui illalla\\n\\nPuukotus tapahtui noin kello 19 paikallista aikaa. Lainvalvontaviranomaiset kertoivat BBC:n yhdysvaltalaiselle kumppanille CBS Newsille, että kyse oli satunnaisesta väkivallanteosta. ABC Newsin mukaan epäiltyä kuvattiin henkisesti häiriintyneeksi, ja hänet pidätti Amtrakin poliisi.\\n\\nPenn Station on yksi New Yorkin keskeisistä liikenneasemista. Se sijaitsee suoraan Madison Square Gardenin alapuolella, mikä on lisännyt tapahtuman huomiota, koska alueella on jo valmiiksi varauduttu suureen yleisömäärään ja poikkeuksellisiin turvajärjestelyihin.\\n\\nNew Yorkin hätäilmoitusjärjestelmä kehotti asukkaita välttämään aluetta. Ilmoituksessa varoitettiin myös liikenneruuhkista, tiesuluista, joukkoliikenteen häiriöistä ja pelastushenkilöstön toiminnasta Penn Stationin lähistöllä.\\n\\n## Turvatoimia kiristetty ottelun alla\\n\\nKaupunki on lisännyt turvatoimia ennen maanantai-illan NBA-finaaliottelua, jossa New York Knicks kohtaa San Antonio Spursin Madison Square Gardenissa. Presidentti Donald Trumpin on määrä olla paikalla seuraamassa ottelua. Myös pormestari Zohran Mamdanin kerrotaan osallistuvan tapahtumaan.\\n\\nViranomaiset ovat ilmoittaneet uusista turvatoimista, joihin kuuluu muun muassa laukkujen tuontikielto. Ulkona Madison Square Gardenin läheisyydessä suunniteltu yleisön katsomotapahtuma on peruttu Trumpin läsnäolon vuoksi.\\n\\n## Perjantain väkijoukko vaikutti päätöksiin\\n\\nKatsomotapahtuman perumiseen vaikutti myös perjantain tilanne, jolloin tuhannet fanit kokoontuivat areenan lähistölle seuraamaan NBA-finaalisarjan toista ottelua. New Yorkin poliisin mukaan 26 ihmistä pidätettiin, kun osa väkijoukosta alkoi käyttäytyä häiritsevästi.\\n\\nMamdani sanoi, että yksi poliisi pahoinpideltiin väkijoukon hallinnan yhteydessä, ja kuvasi käytöstä tuomittavaksi. Kaupungin viranomaiset olivat kiristäneet turvatoimia jo ennen puukotusta, sillä Penn Stationin ja Madison Square Gardenin ympäristöön odotetaan maanantaina sekä otteluvieraita että tavallista enemmän viranomaisia.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"New York\",\n    \"Penn Station\",\n    \"puukotus\",\n    \"NBA\",\n    \"Donald Trump\",\n    \"Madison Square Garden\"\n  ],\n  \"summary_bullets\": [\n    \"Viisi ihmistä loukkaantui puukotuksessa New Yorkin Penn Stationilla.\",\n    \"Epäilty otettiin kiinni hyökkäyksen jälkeen käynnistetyn etsinnän päätteeksi.\",\n    \"Kaupunki on kiristänyt turvatoimia ennen NBA-finaaliottelua ja Donald Trumpin vierailua.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään valittuun lähdeblokkiin. Vältetty lisätietojen keksimistä; NBA-ottelua, turvatoimia ja pidätyksiä koskevat yksityiskohdat on pidetty lähdetekstin rajoissa.\"\n}",
+  "article": {
+    "title": "Viisi loukkaantui puukotuksessa New Yorkin Penn Stationilla",
+    "description": "Viisi ihmistä loukkaantui puukotuksessa New Yorkin Penn Stationilla. Epäilty otettiin kiinni etsinnän jälkeen, ja kaupungissa on samaan aikaan kiristetty turvatoimia NBA-finaaliottelun ja presidentti Donald Trumpin vierailun alla.",
+    "link": "https://www.bbc.com/news/articles/cj0g4425zmeo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-08T01:33:08+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "d3a6895d73eee01ef953988709e8025e",
+    "_url_hash": "65523e260cb9df015280aaf00efedab54a05e95f5415fb4879c7099968a3b47c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFive people have been injured in a stabbing at New York City’s Penn Station, officials say.\n\nOne person suffered a serious injury, two had moderate injuries, and the rest suffered minor injuries from the stabbing, the Fire Department of New York said in a statement shared with US media.\n\nThe New York Police Department apprehended the suspect after a manhunt following the attack, which took place around 19:00 EST (0:00 BST).\n\nThe stabbing comes as the city is heightening security measures before US President Donald Trump visits on Monday to watch the New York Knicks in the National Basketball Association (NBA) finals.\n\nLaw enforcement told the BBC's US partner CBS News that the stabbing was a random act of violence. The suspect was emotionally disturbed and arrested by Amtrak police, ABC News reported.\n\nThe fire department said those injured in the stabbing were taken to Bellevue Hospital.\n\nNew York’s Penn Station sits directly beneath Madison Square Garden, where the Knicks will play the San Antonio Spurs in Game 3 of the NBA finals on Monday evening.\n\nAhead of the game, city officials announced new security precautions including a no-bag policy and a cancellation of a watch party outside the arena due to Trump’s presence. Mayor Zohran Mamdani will also attend.\n\n---\n\n[Lähde: OrissaPOST]\nOn World Environment Day, 5 June, India launched E85, that is, petrol blended with 85 per cent ethanol at 48...\n\nBy Aakar Patel Friend Ram Madhav has written a fine piece on Prime Minister Narendra Modi reaching an important milestone....\n\nBy Dilip Cherian The Centre’s decision to significantly expand the Enforcement Directorate (ED) is a lot more than a routine...\n\nThe ongoing visit of Myanmar’s President Min Aung Hlaing to India is fraught with geopolitical significance. India's reputation as a...\n\n---\n\n[Lähde: Mint]\nFive people were stabbed at New York's Penn Station on Sunday as the city gears up to host two major sporting events - the NBA Finals and the FIFA World Cup. A suspect is in custody, according to the city's fire department.\n\nEmergency vehicles and uniformed first responders were seen outside the station following the incident.\n\nThe victims - all civilians, including one with serious injuries, two with moderate injuries and two with minor injuries - were immediately taken to hospital. \"Perp in custody,\" the department said. \"Operations ongoing.\"\n\nThe exact cause of the incident remains unknown. Images from the scene showed blood on the floor, along with gauze and medical gloves, near tracks 5 and 6, which had been cordoned off by police.\n\nThe stabbing took place at one of the busiest rail and subway hubs in the United States as New York prepares to host two major sporting events over the coming days — the NBA Finals and the FIFA World Cup.\n\nMadison Square Garden, which sits directly above Penn Station in Manhattan, is scheduled to host Games 3 and 4 of the NBA Finals on Monday and Wednesday. The matches will feature the New York Knicks and the San Antonio Spurs.\n\nMeanwhile, MetLife Stadium in neighbouring New Jersey will stage its first FIFA World Cup match on Saturday, bringing another major sporting event to the region.\n\nUS President Donald Trump is expected to attend Monday's NBA Finals game at Madison Square Garden. He recently said he had accepted an invitation from Knicks owner James Dolan.\n\nPolice have stepped up security measures across the city ahead of the high-profile events.\n\nWhile officials did not provide details about the stabbing, New York's emergency alert system advised residents to avoid the area and “expect traffic delays, road closures, mass transit disruptions & emergency personnel near Penn Station.”\n\nEven before the stabbing, city officials had cancelled an outdoor watch party planned for Monday outside Madison Square Garden.\n\nThe decision followed scenes on Friday when thousands of fans gathered at an intersection near the arena to watch Game 2 of the NBA Finals.\n\nNew York Police said 26 people were arrested after sections of the crowd became disorderly.\n\nMayor Zohran Mamdani said a police officer was assaulted during efforts to manage the gathering and described the behaviour as \"unacceptable.\"\n\nKanishka Singharia is a Senior Content Producer at Mint with a passion for news, trends, and the stories shaping the digital world. She sp",
+    "research_source": "multi",
+    "summary": "Viisi ihmistä loukkaantui puukotuksessa New Yorkin Penn Stationilla. Epäilty otettiin kiinni etsinnän jälkeen, ja kaupungissa on samaan aikaan kiristetty turvatoimia NBA-finaaliottelun ja presidentti Donald Trumpin vierailun alla.",
+    "content": "Viisi ihmistä on loukkaantunut puukotuksessa New Yorkin Penn Stationilla, viranomaiset kertovat. Palokunnan mukaan yksi uhreista sai vakavia vammoja, kaksi loukkaantui keskivaikeasti ja loput saivat lieviä vammoja. Loukkaantuneet vietiin Bellevue-sairaalaan, ja poliisi otti epäillyn kiinni hyökkäyksen jälkeen käynnistetyn etsinnän päätteeksi.\n\n## Hyökkäys tapahtui illalla\n\nPuukotus tapahtui noin kello 19 paikallista aikaa. Lainvalvontaviranomaiset kertoivat BBC:n yhdysvaltalaiselle kumppanille CBS Newsille, että kyse oli satunnaisesta väkivallanteosta. ABC Newsin mukaan epäiltyä kuvattiin henkisesti häiriintyneeksi, ja hänet pidätti Amtrakin poliisi.\n\nPenn Station on yksi New Yorkin keskeisistä liikenneasemista. Se sijaitsee suoraan Madison Square Gardenin alapuolella, mikä on lisännyt tapahtuman huomiota, koska alueella on jo valmiiksi varauduttu suureen yleisömäärään ja poikkeuksellisiin turvajärjestelyihin.\n\nNew Yorkin hätäilmoitusjärjestelmä kehotti asukkaita välttämään aluetta. Ilmoituksessa varoitettiin myös liikenneruuhkista, tiesuluista, joukkoliikenteen häiriöistä ja pelastushenkilöstön toiminnasta Penn Stationin lähistöllä.\n\n## Turvatoimia kiristetty ottelun alla\n\nKaupunki on lisännyt turvatoimia ennen maanantai-illan NBA-finaaliottelua, jossa New York Knicks kohtaa San Antonio Spursin Madison Square Gardenissa. Presidentti Donald Trumpin on määrä olla paikalla seuraamassa ottelua. Myös pormestari Zohran Mamdanin kerrotaan osallistuvan tapahtumaan.\n\nViranomaiset ovat ilmoittaneet uusista turvatoimista, joihin kuuluu muun muassa laukkujen tuontikielto. Ulkona Madison Square Gardenin läheisyydessä suunniteltu yleisön katsomotapahtuma on peruttu Trumpin läsnäolon vuoksi.\n\n## Perjantain väkijoukko vaikutti päätöksiin\n\nKatsomotapahtuman perumiseen vaikutti myös perjantain tilanne, jolloin tuhannet fanit kokoontuivat areenan lähistölle seuraamaan NBA-finaalisarjan toista ottelua. New Yorkin poliisin mukaan 26 ihmistä pidätettiin, kun osa väkijoukosta alkoi käyttäytyä häiritsevästi.\n\nMamdani sanoi, että yksi poliisi pahoinpideltiin väkijoukon hallinnan yhteydessä, ja kuvasi käytöstä tuomittavaksi. Kaupungin viranomaiset olivat kiristäneet turvatoimia jo ennen puukotusta, sillä Penn Stationin ja Madison Square Gardenin ympäristöön odotetaan maanantaina sekä otteluvieraita että tavallista enemmän viranomaisia.",
+    "category": "Ulkomaat",
+    "tags": [
+      "new york",
+      "penn station",
+      "puukotus",
+      "nba",
+      "donald trump"
+    ],
+    "summary_bullets": [
+      "Viisi ihmistä loukkaantui puukotuksessa New Yorkin Penn Stationilla.",
+      "Epäilty otettiin kiinni hyökkäyksen jälkeen käynnistetyn etsinnän päätteeksi.",
+      "Kaupunki on kiristänyt turvatoimia ennen NBA-finaaliottelua ja Donald Trumpin vierailua."
+    ],
+    "key_points": [
+      "Viisi ihmistä loukkaantui puukotuksessa New Yorkin Penn Stationilla.",
+      "Epäilty otettiin kiinni hyökkäyksen jälkeen käynnistetyn etsinnän päätteeksi.",
+      "Kaupunki on kiristänyt turvatoimia ennen NBA-finaaliottelua ja Donald Trumpin vierailua."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin neljään valittuun lähdeblokkiin. Vältetty lisätietojen keksimistä; NBA-ottelua, turvatoimia ja pidätyksiä koskevat yksityiskohdat on pidetty lähdetekstin rajoissa.",
+    "source_text": "Five people have been injured in a stabbing at New York City’s Penn Station, officials say. One person suffered a serious injury, two had moderate injuries, and the rest suffered minor injuries from the stabbing, the Fire Department of New York said in a statement shared with US media. The New York Police Department apprehended the suspect after a manhunt following the attack, which took place around 19:00 EST (0:00 BST). The stabbing comes as the city is heightening security measures before US President Donald Trump visits on Monday to watch the New York Knicks in the National Basketball Association (NBA) finals. Law enforcement told the BBC's US partner CBS News that the stabbing was a random act of violence. The suspect was emotionally disturbed and arrested by Amtrak police, ABC News reported.\n\nThe city is currently heightening security measures before President Trump visits on Monday to watch the NBA finals.\n\nPolice have stepped up security measures across the city ahead of the high-profile events. While officials did not provide details about the stabbing, New York's emergency alert system advised residents to avoid the area and “expect traffic delays, road closures, mass transit disruptions & emergency personnel near Penn Station.” Even before the stabbing, city officials had cancelled an outdoor watch party planned for Monday outside Madison Square Garden. The decision followed scenes on Friday when thousands of fans gathered at an intersection near the arena to watch Game 2 of the NBA Finals. New York Police said 26 people were arrested after sections of the crowd became disorderly. Mayor Zohran Mamdani said a police officer was assaulted during efforts to manage the gathering and described the behaviour as \"unacceptable.\"\n\nThe fire department said those injured in the stabbing were taken to Bellevue Hospital. New York’s Penn Station sits directly beneath Madison Square Garden, where the Knicks will play the San Antonio Spurs in Game 3 of the NBA finals on Monday evening. Ahead of the game, city officials announced new security precautions including a no-bag policy and a cancellation of a watch party outside the arena due to Trump’s presence. Mayor Zohran Mamdani will also attend. ---",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260608T054130Z_8220790582",
+    "image": "https://images.unsplash.com/photo-1610979602142-3906166288fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxQZW5uJTIwU3RhdGlvbiUyME5ldyUyMFlvcmt8ZW58MXwwfHx8MTc4MDg5NzY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1610979602142-3906166288fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxQZW5uJTIwU3RhdGlvbiUyME5ldyUyMFlvcmt8ZW58MXwwfHx8MTc4MDg5NzY4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Viisi loukkaantui puukotuksessa New Yorkin Penn Stationilla",
+    "image_credit": "Photo by Ryan Dellolio on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/text-tTwKtqyv-Xk?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-08T05:48:06.190086+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1610979602142-3906166288fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxQZW5uJTIwU3RhdGlvbiUyME5ldyUyMFlvcmt8ZW58MXwwfHx8MTc4MDg5NzY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1610979602142-3906166288fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxQZW5uJTIwU3RhdGlvbiUyME5ldyUyMFlvcmt8ZW58MXwwfHx8MTc4MDg5NzY4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-08T05:49:08.165583+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-08-viisi-loukkaantui-puukotuksessa-new-yorkin-penn-stationilla.md"
+  ]
+}
