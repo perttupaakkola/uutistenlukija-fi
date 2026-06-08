@@ -1,29 +1,29 @@
 {
   "description": "Uutistenlukija.fi KPIs — updated by Felix/Max on each flywheel cycle",
-  "lastUpdated": "2026-06-01T07:05:00Z",
+  "lastUpdated": "2026-06-08T07:05:00Z",
   "metrics": {
     "articles": {
-      "total": 2635,
-      "publishedToday": 43,
-      "publishedThisWeek": 295,
-      "lastPublishRun": "2026-06-01T06:58:06Z",
-      "note": "Weekly review 2026-06-01: publishedThisWeek is last 7 days by local post mtime; today is partial."
+      "total": 2875,
+      "publishedToday": 21,
+      "publishedThisWeek": 247,
+      "lastPublishRun": "2026-06-08T06:28:06Z",
+      "note": "Weekly review 2026-06-08: publishedThisWeek is last 7 days by local post mtime since 2026-06-01 07:00 UTC; today is partial."
     },
     "pipeline": {
       "lastRunSuccess": true,
-      "lastRunTime": "2026-06-01T07:00:02+00:00",
+      "lastRunTime": "2026-06-08T07:00:08+00:00",
       "successRateRecent14": 100,
       "failuresLast24h": 0,
-      "cronHealthyJobs": 15,
-      "note": "Weekly review 2026-06-01: site HTTP 200, static pipeline status OK, last 14 metrics runs succeeded, latest cron-health reports all 15 jobs healthy; disk improved to 72%."
+      "cronHealthyJobs": 16,
+      "note": "Weekly review 2026-06-08: site HTTP 200, health/status OK, last 14 metrics runs succeeded, latest project cron-health reports all 16 jobs healthy; disk is 71% used."
     },
     "traffic": {
-      "dailyVisitors": 1,
-      "dailyPageviews": 1,
-      "searchConsoleClicks7d": 25,
-      "searchConsoleImpressions7d": 1091,
+      "dailyVisitors": 2,
+      "dailyPageviews": 2,
+      "searchConsoleClicks7d": 19,
+      "searchConsoleImpressions7d": 931,
       "source": "GA4 + Search Console daily-report.json",
-      "note": "Weekly review 2026-06-01: analytics freshness artifact is fresh, GA4/GSC are unblocked, and weekly metrics posted; Google refresh-token expiry remains watchlisted around 2026-06-03 16:59 EEST."
+      "note": "Weekly review 2026-06-08: analytics freshness artifact is fresh, GA4/GSC are usable, and Search Console 28d artifact has 500 rows. Legacy oauth-status JSON is stale/superseded by fresh validation."
     },
     "seo": {
       "indexedPages": null,
@@ -36,12 +36,12 @@
     },
     "team": {
       "activeAgents": 3,
-      "tasksCompletedThisWeek": 0,
-      "activeLinearIssues": 3,
+      "tasksCompletedThisWeek": 4,
+      "activeLinearIssues": 4,
       "flywheel_ideasPosted": 213,
       "flywheel_ideasExecuted": 50,
       "flywheelExecutionRate": 0.37,
-      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active OPE: OPE-9 Felix, OPE-154 Sara, OPE-155 Max; owner/lane labels validate."
+      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active OPE: OPE-9 Felix, OPE-163 Alex/Iris/Max, OPE-167 Iris, OPE-169 Max; owner/lane labels validate. This week's notable completed/closed movement includes product/publishing fixes OPE-154/OPE-155/OPE-165/OPE-166/OPE-168."
     }
   }
 }
