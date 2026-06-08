@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/yle-areenan-tarkeimmat-uudet-sarjat-ja-elokuvat-viikolla-24-2026/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
