@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/09/uusi-suoratoistopalvelu-suomeen-kotimaisia-elokuviakin-sisaltava-nordisk-filmn-saataville-ruudun-kautta/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
