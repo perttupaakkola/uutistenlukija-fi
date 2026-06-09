@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T18:01:20.305540+00:00",
+  "digest": "7893c315af",
+  "packet": {
+    "packet_id": "20260609T180120Z_7893c315af",
+    "created_at": "2026-06-09T18:01:20Z",
+    "headline_seed": "Murder of Lyhanna, 11, enrages France and turns up heat on government",
+    "description_seed": "Protesters are angry that the suspect had already been reported to police last August in a separate case.",
+    "link": "https://www.bbc.com/news/articles/c4gyd1w3e20o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "The Guardian"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c4gyd1w3e20o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Murder of Lyhanna, 11, enrages France and turns up heat on government"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "France's government is under mounting pressure over the murder of an 11-year-old girl whose alleged killer had several times been denounced to police as a sex offender. More than 60,000 people took part in protests across the country on Monday following the killing of Lyhanna, many demanding the resignation of Justice Minister Gérald Darmanin – one of the senior members of the government. There is fury because the suspect – 41 year-old Jérome Barella – had been reported to police last August by the mother of a 10-year-old called Rosa, who alleged he had sexually abused her daughter on several occasions. Medical evidence confirmed she had been abused, and yet not once in the nine months since the complaint was filed was Barella questioned by investigators.",
+        "word_count": 126,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Protesters are angry that the suspect had already been reported to police last August in a separate case.",
+        "word_count": 18,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "In the eyes of an angry French public, had the suspect been at least contacted by police he would have known he was being watched and that may have prevented Lyhanna's death. Lyhanna's body was found last Thursday at a farm around 10km (6 miles) from the town of Fleurance in south-west France, where she was last seen at the end of school six days previously. Barella, who is the father of a friend of Lyhanna, was taken into custody three days after her disappearance. He has denied any involvement in her death but has admitted taking her in his car to a local swimming pool. When he was questioned by an investigating judge he refused to answer any questions.",
+        "word_count": 120,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Interior minister announces review into handling of the cases after body reportedly found in search for 11-year-old Outrage has erupted in France after it emerged the main suspect in the case of an 11-year-old girl missing since last week had been repeatedly accused of sexually abusing children with no action taken. A body was discovered on Thursday and formal identification was under way, an informed source said. Dozens of police and volunteers have for days been combing countryside in south-western France to find the girl, who has been identified only by her first name, Lyhanna. She went missing on Friday near the village of Fleurance, and was last seen getting into a man’s car. A 41-year-old father of two has been detained as the key suspect.",
+        "word_count": 126,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "France's government is under mounting pressure over the murder of an 11-year-old girl whose alleged killer had several times been denounced to police as a sex offender. More than 60,000 people took part in protests across the country on Monday following the killing of Lyhanna, many demanding the resignation of Justice Minister Gérald Darmanin – one of the senior members of the government. There is fury because the suspect – 41 year-old Jérome Barella – had been reported to police last August by the mother of a 10-year-old called Rosa, who alleged he had sexually abused her daughter on several occasions. Medical evidence confirmed she had been abused, and yet not once in the nine months since the complaint was filed was Barella questioned by investigators.\n\nProtesters are angry that the suspect had already been reported to police last August in a separate case.\n\nIn the eyes of an angry French public, had the suspect been at least contacted by police he would have known he was being watched and that may have prevented Lyhanna's death. Lyhanna's body was found last Thursday at a farm around 10km (6 miles) from the town of Fleurance in south-west France, where she was last seen at the end of school six days previously. Barella, who is the father of a friend of Lyhanna, was taken into custody three days after her disappearance. He has denied any involvement in her death but has admitted taking her in his car to a local swimming pool. When he was questioned by an investigating judge he refused to answer any questions.\n\nInterior minister announces review into handling of the cases after body reportedly found in search for 11-year-old Outrage has erupted in France after it emerged the main suspect in the case of an 11-year-old girl missing since last week had been repeatedly accused of sexually abusing children with no action taken. A body was discovered on Thursday and formal identification was under way, an informed source said. Dozens of police and volunteers have for days been combing countryside in south-western France to find the girl, who has been identified only by her first name, Lyhanna. She went missing on Friday near the village of Fleurance, and was last seen getting into a man’s car. A 41-year-old father of two has been detained as the key suspect.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 845,
+      "selected_blocks": 4,
+      "selected_source_words": 390,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Murder of Lyhanna, 11, enrages France and turns up heat on government",
+      "description": "Protesters are angry that the suspect had already been reported to police last August in a separate case.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Murder of Lyhanna, 11, enrages France and turns up heat on government",
+    "description": "Protesters are angry that the suspect had already been reported to police last August in a separate case.",
+    "link": "https://www.bbc.com/news/articles/c4gyd1w3e20o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-09T14:27:37+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "166a60908bbeff05ea79327f156671cc",
+    "_url_hash": "13644b84b1378f37791e9bca4751c0e3896313a096de0889501168cf6ff17ebf",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFrance's government is under mounting pressure over the murder of an 11-year-old girl whose alleged killer had several times been denounced to police as a sex offender.\n\nMore than 60,000 people took part in protests across the country on Monday following the killing of Lyhanna, many demanding the resignation of Justice Minister Gérald Darmanin – one of the senior members of the government.\n\nThere is fury because the suspect – 41 year-old Jérome Barella – had been reported to police last August by the mother of a 10-year-old called Rosa, who alleged he had sexually abused her daughter on several occasions.\n\nMedical evidence confirmed she had been abused, and yet not once in the nine months since the complaint was filed was Barella questioned by investigators.\n\nIn the eyes of an angry French public, had the suspect been at least contacted by police he would have known he was being watched and that may have prevented Lyhanna's death.\n\nLyhanna's body was found last Thursday at a farm around 10km (6 miles) from the town of Fleurance in south-west France, where she was last seen at the end of school six days previously.\n\nBarella, who is the father of a friend of Lyhanna, was taken into custody three days after her disappearance.\n\nHe has denied any involvement in her death but has admitted taking her in his car to a local swimming pool. When he was questioned by an investigating judge he refused to answer any questions.\n\nIt has since emerged that he was named in several other cases of alleged sexual abuse in recent years,  which should have made the Rosa case a priority - but did not.\n\nRosa's mother has now announced through her lawyers that she is filing a lawsuit against the state and against Darmanin for their responsibilities in the affair.\n\nDarmanin, a leading figure in the Renaissance party that generally supports President Emmanuel Macron, has agreed that the Lyhanna case revealed \"shocking and unacceptable failings in the services of the state\", but he has ruled out resignation.\n\nHe and the government find themselves caught between an increasingly incensed public and a justice system whose magistrates and prosecutors refuse to be made scapegoats.\n\nThe Higher Magistrature Council (CSM) said it \"deplored the discredit being thrown on thousands of magistrates\" because of the affair, which was being \"instrumentalised by people who have decided in advance that magistrates are the guilty parties\".\n\nThe CSM said magistrates, who in the French system direct polic\n\n---\n\n[Lähde: The Guardian]\nInterior minister announces review into handling of the cases after body reportedly found in search for 11-year-old\n\nOutrage has erupted in France after it emerged the main suspect in the case of an 11-year-old girl missing since last week had been repeatedly accused of sexually abusing children with no action taken.\n\nA body was discovered on Thursday and formal identification was under way, an informed source said.\n\nDozens of police and volunteers have for days been combing countryside in south-western France to find the girl, who has been identified only by her first name, Lyhanna. She went missing on Friday near the village of Fleurance, and was last seen getting into a man’s car. A 41-year-old father of two has been detained as the key suspect.\n\nA prosecutor has said that previous legal complaints existed against the suspect accusing him of raping a minor, leading to a national uproar about alleged judicial failings. “What we’re discovering day after day is absolutely unbearable,” the government spokesperson Maud Bregeon said.\n\n“It raises a profound question: what importance do we give to victims’ testimonies? How are investigations conducted?” Bregeon told the Europe 1 and CNews broadcasters.\n\nVolunteers on horseback helped about 170 police search for the child on Thursday.\n\nAfter being shown security camera footage, the suspect admitted giving her a lift but insisted he had dropped her off at a swimming pool.\n\nThe prosecutor, Clemence Meyer, said there had been previous complaints against him. In December 2017, a mother reported that her 17-year-old daughter had been in a relationship with the man. The case was dropped in 2018 after the girl said she had consented.\n\nIn January 2022, a complaint accused him of raping a child younger than 15 in 2020 at his home in south-western France. The case was transferred to the local prosecutor but dismissed in 2024 owing to lack of evidence.\n\nIn a third case, on 22 August, 2025, the mother of a girl born in 2014 accused him of raping her child between September 2024 and May 2025 at his home, the prosecutor said.\n\nThe complaint was first examined in the nearby city of Toulouse, then transferred to the local prosecutor’s office, who in January demanded police investigate. But they had still not questioned him when the 11-year-old disappeared.\n\n“The investigation was still under way when Lyhanna went missing,” Meyer said. She added that a new complaint for the alleged rape of a minor had been filed on Wednesday, bu",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-09T18:05:29.515089+00:00",
+  "failure": "content too short: 243 words",
+  "payload": {
+    "packet_id": "20260609T180120Z_7893c315af",
+    "title": "11-vuotiaan Lyhannan surma kuohuttaa Ranskaa",
+    "summary": "Ranskassa yli 60 000 ihmistä on osoittanut mieltään 11-vuotiaan Lyhannan surman jälkeen. Tapaus on lisännyt painetta hallitusta kohtaan, koska epäilty oli ilmoitettu poliisille aiemmassa seksuaalirikosepäilyssä.",
+    "content": "11-vuotiaan Lyhannan surma on synnyttänyt Ranskassa laajoja mielenosoituksia ja kovaa arvostelua viranomaisia kohtaan, sillä pääepäilty oli ilmoitettu poliisille jo viime elokuussa erillisessä lapseen kohdistunutta seksuaalista hyväksikäyttöä koskevassa tapauksessa. Yli 60 000 ihmistä osallistui maanantaina mielenosoituksiin eri puolilla maata, ja monet vaativat oikeusministeri Gérald Darmaninin eroa.\n\n## Epäiltyä ei kuulusteltu aiemmasta ilmoituksesta\n\nTapauksen herättämä suuttumus kohdistuu erityisesti siihen, miten aiempaa ilmoitusta käsiteltiin. 41-vuotias Jérome Barella oli ilmoitettu poliisille viime elokuussa, kun 10-vuotiaan Rosan äiti kertoi hänen käyttäneen tytärtään seksuaalisesti hyväksi useita kertoja. Lähdetietojen mukaan lääketieteellinen näyttö vahvisti, että tyttöä oli käytetty hyväksi.\n\nBarella ei kuitenkaan ollut joutunut tutkijoiden kuulusteltavaksi yhdeksän kuukauden aikana ilmoituksen tekemisestä. Tämä on noussut keskeiseksi kysymykseksi julkisessa keskustelussa: moni ranskalainen katsoo, että jo poliisin yhteydenotto olisi voinut osoittaa epäillylle hänen olevan viranomaisten seurannassa ja mahdollisesti estää myöhemmät tapahtumat.\n\n## Ruumis löytyi maatilalta Fleurance’n läheltä\n\nLyhannan ruumis löydettiin viime torstaina maatilalta noin kymmenen kilometrin päässä Fleurance’n kaupungista Lounais-Ranskassa. Hänet oli nähty viimeksi koulupäivän päättyessä kuusi päivää aiemmin. Etsintöihin osallistui useiden päivien ajan poliiseja ja vapaaehtoisia, jotka haravoivat alueen maaseutua.\n\nBarella, joka on Lyhannan ystävän isä, otettiin kiinni kolme päivää tytön katoamisen jälkeen. Hän on kiistänyt osallisuutensa tytön kuolemaan, mutta on myöntänyt kuljettaneensa Lyhannaa autossaan paikalliselle uimahallille. Kun häntä kuultiin tutkintatuomarin edessä, hän kieltäytyi vastaamasta kysymyksiin.\n\n## Hallitukselta vaaditaan vastauksia\n\nRanskan sisäministeri on ilmoittanut selvityksestä, jossa tarkastellaan tapausten käsittelyä. Julkinen paine hallitusta kohtaan jatkuu, kun viranomaisilta vaaditaan vastauksia siihen, miksi aiempiin syytöksiin ei reagoitu nopeammin ja miksi epäiltyä ei kuulusteltu ennen Lyhannan katoamista.",
+    "category": "Kotimaa",
+    "tags": [
+      "Ranska",
+      "rikokset",
+      "mielenosoitukset",
+      "poliisi",
+      "oikeusministeriö"
+    ],
+    "summary_bullets": [
+      "11-vuotiaan Lyhannan surma on synnyttänyt laajoja mielenosoituksia Ranskassa.",
+      "Pääepäilty oli ilmoitettu poliisille jo viime elokuussa erillisessä hyväksikäyttöepäilyssä.",
+      "Sisäministeri on ilmoittanut selvityksestä tapausten käsittelystä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin BBC:n ja The Guardianin tietoihin. Epäillyn kiistäminen ja aiemman ilmoituksen käsittely on muotoiltu lähdetietojen mukaisesti ilman lisäpäätelmiä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260609T180120Z_7893c315af\",\n  \"title\": \"11-vuotiaan Lyhannan surma kuohuttaa Ranskaa\",\n  \"summary\": \"Ranskassa yli 60 000 ihmistä on osoittanut mieltään 11-vuotiaan Lyhannan surman jälkeen. Tapaus on lisännyt painetta hallitusta kohtaan, koska epäilty oli ilmoitettu poliisille aiemmassa seksuaalirikosepäilyssä.\",\n  \"content\": \"11-vuotiaan Lyhannan surma on synnyttänyt Ranskassa laajoja mielenosoituksia ja kovaa arvostelua viranomaisia kohtaan, sillä pääepäilty oli ilmoitettu poliisille jo viime elokuussa erillisessä lapseen kohdistunutta seksuaalista hyväksikäyttöä koskevassa tapauksessa. Yli 60 000 ihmistä osallistui maanantaina mielenosoituksiin eri puolilla maata, ja monet vaativat oikeusministeri Gérald Darmaninin eroa.\\n\\n## Epäiltyä ei kuulusteltu aiemmasta ilmoituksesta\\n\\nTapauksen herättämä suuttumus kohdistuu erityisesti siihen, miten aiempaa ilmoitusta käsiteltiin. 41-vuotias Jérome Barella oli ilmoitettu poliisille viime elokuussa, kun 10-vuotiaan Rosan äiti kertoi hänen käyttäneen tytärtään seksuaalisesti hyväksi useita kertoja. Lähdetietojen mukaan lääketieteellinen näyttö vahvisti, että tyttöä oli käytetty hyväksi.\\n\\nBarella ei kuitenkaan ollut joutunut tutkijoiden kuulusteltavaksi yhdeksän kuukauden aikana ilmoituksen tekemisestä. Tämä on noussut keskeiseksi kysymykseksi julkisessa keskustelussa: moni ranskalainen katsoo, että jo poliisin yhteydenotto olisi voinut osoittaa epäillylle hänen olevan viranomaisten seurannassa ja mahdollisesti estää myöhemmät tapahtumat.\\n\\n## Ruumis löytyi maatilalta Fleurance’n läheltä\\n\\nLyhannan ruumis löydettiin viime torstaina maatilalta noin kymmenen kilometrin päässä Fleurance’n kaupungista Lounais-Ranskassa. Hänet oli nähty viimeksi koulupäivän päättyessä kuusi päivää aiemmin. Etsintöihin osallistui useiden päivien ajan poliiseja ja vapaaehtoisia, jotka haravoivat alueen maaseutua.\\n\\nBarella, joka on Lyhannan ystävän isä, otettiin kiinni kolme päivää tytön katoamisen jälkeen. Hän on kiistänyt osallisuutensa tytön kuolemaan, mutta on myöntänyt kuljettaneensa Lyhannaa autossaan paikalliselle uimahallille. Kun häntä kuultiin tutkintatuomarin edessä, hän kieltäytyi vastaamasta kysymyksiin.\\n\\n## Hallitukselta vaaditaan vastauksia\\n\\nRanskan sisäministeri on ilmoittanut selvityksestä, jossa tarkastellaan tapausten käsittelyä. Julkinen paine hallitusta kohtaan jatkuu, kun viranomaisilta vaaditaan vastauksia siihen, miksi aiempiin syytöksiin ei reagoitu nopeammin ja miksi epäiltyä ei kuulusteltu ennen Lyhannan katoamista.\",\n  \"category\": \"Kotimaa\",\n  \"tags\": [\n    \"Ranska\",\n    \"rikokset\",\n    \"mielenosoitukset\",\n    \"poliisi\",\n    \"oikeusministeriö\"\n  ],\n  \"summary_bullets\": [\n    \"11-vuotiaan Lyhannan surma on synnyttänyt laajoja mielenosoituksia Ranskassa.\",\n    \"Pääepäilty oli ilmoitettu poliisille jo viime elokuussa erillisessä hyväksikäyttöepäilyssä.\",\n    \"Sisäministeri on ilmoittanut selvityksestä tapausten käsittelystä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketissa olleisiin BBC:n ja The Guardianin tietoihin. Epäillyn kiistäminen ja aiemman ilmoituksen käsittely on muotoiltu lähdetietojen mukaisesti ilman lisäpäätelmiä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260609T180120Z_7893c315af",
+    "category": "Kotimaa",
+    "selected_source_words": 390,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 243,
+    "issues": [
+      "content too short: 243 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "11-vuotiaan Lyhannan surma kuohuttaa Ranskaa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-09T18:05:29.514794+00:00",
+    "repair_trigger": "pre_repair_word_count=243; selected_source_words=390; selected_source_blocks=4",
+    "pre_repair_word_count": 243,
+    "pre_repair_lead_word_count": 45,
+    "post_repair_word_count": 243,
+    "post_repair_lead_word_count": 45,
+    "selected_source_words_at_repair": 390,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 390,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 243 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:ef463a5974",
+      "2:BBC World:9aa9df0999",
+      "3:BBC World:ac7a38652b",
+      "4:The Guardian:4e9fa0d410"
+    ],
+    "final_issues": [
+      "content too short: 243 words"
+    ],
+    "recovered": false
+  }
+}
