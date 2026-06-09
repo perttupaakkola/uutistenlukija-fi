@@ -1,0 +1,80 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T21:21:16.040568+00:00",
+  "digest": "5f51232d7b",
+  "packet": {
+    "packet_id": "20260609T212116Z_5f51232d7b",
+    "created_at": "2026-06-09T21:21:16Z",
+    "headline_seed": "Inside Myanmar, rebels are losing ground as military forces men into army",
+    "description_seed": "The BBC travels with rebels to frontline positions in Myanmar to see how the war is unfolding.",
+    "link": "https://www.bbc.com/news/articles/c20y6966xqzo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c20y6966xqzo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Inside Myanmar, rebels are losing ground as military forces men into army"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 462,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Inside Myanmar, rebels are losing ground as military forces men into army",
+      "description": "The BBC travels with rebels to frontline positions in Myanmar to see how the war is unfolding.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Inside Myanmar, rebels are losing ground as military forces men into army",
+    "description": "The BBC travels with rebels to frontline positions in Myanmar to see how the war is unfolding.",
+    "link": "https://www.bbc.com/news/articles/c20y6966xqzo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-09T21:13:17+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "215f5bd6636b63d7311ac8ede03d7ee4",
+    "_url_hash": "25ca02c4a00f243cc392166b5122854136466902f354b75f9aae2c9abbb8b223",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe four young men in the rebel camp hidden deep in jungle-covered mountains never wanted a part in Myanmar's civil war.\n\nThey didn't choose to be soldiers for the military either.\n\nOne had been a chef on his way home from work when he was grabbed off the street. His lack of ID was enough for the military to detain him and force him to sign up. Another was taken on his way back from a late-night karaoke session; a third had been working for the forestry department when he was arrested. The fourth man says on being arrested, drugs were slipped into his shoe, and he was framed and made to enlist.\n\n\"Before we even understood what was happening, we were sent straight to the front lines,\" one of the men – all between the ages of 19 and 25 – tells the BBC.\n\n\"They made us do all kinds of things we didn't want to do,\" another adds. \"We never got any real rest, not in the morning, not during the day, and not even at night.\n\n\"The conscripts had to do everything. While the regular soldiers hardly had to work.\"\n\nThey spent four months in basic training and then were sent to the front in Karen state - one night, on their way to get washed, they decided to make a run for it.\n\nBut after escaping they walked into a nearby rebel patrol of People's Defence Force (PDF) fighters, and were detained.\n\nThey are happier here, they say, being treated \"like brothers, not strangers\".\n\nThey'll stay with the PDF for now, but will be taken to the border with Thailand eventually, \"because if we return now\", one says, \"the military could still track us\".  The BBC agreed to hide their identities to avoid their families facing retribution.\n\nThe reality is that, despite the reluctance of these four unwilling recruits, the military's forced conscription policy has shifted the junta's fortunes in the civil war.\n\nIn many parts of the country, the rebels are now on the back foot against the military, who seized power in 2021 from the democratically elected government, jailing its leader Aung San Suu Kyi.\n\nCivil war has torn the country apart. Thousands have been killed and millions displaced.\n\nMore than two years ago, an alliance of ethnic and rebel groups made sweeping gains throughout the country, notching up a string of victories against the junta. Once on the offensive, in most places across Myanmar the resistance is now on the defensive.\n\nThe military still only fully controls less than half the country, but it has been making gains - including key townships and retaking a critical road fr",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-09T21:23:38.937597+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260609T212116Z_5f51232d7b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

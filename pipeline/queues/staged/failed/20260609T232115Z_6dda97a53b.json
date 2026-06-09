@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T23:21:15.140462+00:00",
+  "digest": "6dda97a53b",
+  "packet": {
+    "packet_id": "20260609T232115Z_6dda97a53b",
+    "created_at": "2026-06-09T23:21:15Z",
+    "headline_seed": "How Justin Ernest invested nearly $400M into hot startups without a traditional VC fund",
+    "description_seed": "Instead of spending a year raising a formal venture fund, the Sabertooth VC founder used a captive network of LPs to invest startups like Anthropic, Anduril, and SpaceX.",
+    "link": "https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-400m-into-hot-startups-without-a-traditional-vc-fund/",
+    "source": "TechCrunch",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-400m-into-hot-startups-without-a-traditional-vc-fund/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "How Justin Ernest invested nearly $400M into hot startups without a traditional VC fund"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Instead of spending a year raising a formal venture fund, the Sabertooth VC founder used a captive network of LPs to invest startups like Anthropic, Anduril, and SpaceX.",
+        "word_count": 28,
+        "keyword_overlap": 18,
+        "strong_overlap": 14
+      }
+    ],
+    "source_text": "Instead of spending a year raising a formal venture fund, the Sabertooth VC founder used a captive network of LPs to invest startups like Anthropic, Anduril, and SpaceX.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 56,
+      "selected_blocks": 1,
+      "selected_source_words": 28,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "How Justin Ernest invested nearly $400M into hot startups without a traditional VC fund",
+      "description": "Instead of spending a year raising a formal venture fund, the Sabertooth VC founder used a captive network of LPs to invest startups like Anthropic, Anduril, and SpaceX.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "How Justin Ernest invested nearly $400M into hot startups without a traditional VC fund",
+    "description": "Instead of spending a year raising a formal venture fund, the Sabertooth VC founder used a captive network of LPs to invest startups like Anthropic, Anduril, and SpaceX.",
+    "link": "https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-400m-into-hot-startups-without-a-traditional-vc-fund/",
+    "published": "2026-06-09T23:17:51+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "f1476757ae3ad6bd7ffb5b54169b0ce0",
+    "_url_hash": "71481025fe6b3ff1e6d401757508e4b28b6ca53bedf7f47bdf6f4a36a498a6c0",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Instead of spending a year raising a formal venture fund, the Sabertooth VC founder used a captive network of LPs to invest startups like Anthropic, Anduril, and SpaceX.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-09T23:28:47.566981+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täydennyksiä tai keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260609T232115Z_6dda97a53b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täydennyksiä tai keksittyjä tietoja.\"}"
+}

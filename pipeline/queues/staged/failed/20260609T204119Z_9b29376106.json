@@ -1,0 +1,199 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T20:41:19.072207+00:00",
+  "digest": "9b29376106",
+  "packet": {
+    "packet_id": "20260609T204119Z_9b29376106",
+    "created_at": "2026-06-09T20:41:19Z",
+    "headline_seed": "Anthropic’s Fable 5 can make weirdly fun video games with the click of a button",
+    "description_seed": "Anthropic's Claude Fable 5 is going to be a big hit with the web's vibe coders.",
+    "link": "https://techcrunch.com/2026/06/09/anthropics-fable-5-can-make-weirdly-fun-video-games-with-the-click-of-a-button/",
+    "source": "TechCrunch",
+    "source_names": [
+      "Shacknews",
+      "Mashable",
+      "Mashable",
+      "Shacknews"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/09/anthropics-fable-5-can-make-weirdly-fun-video-games-with-the-click-of-a-button/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Anthropic’s Fable 5 can make weirdly fun video games with the click of a button"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Shacknews",
+        "source_type": "research",
+        "text": "Soon gamers will be able to have AI agents play video games for them instead of having fun. Anthropic launched its new Claude Fable 5 AI model for general public use today, and included a timelapse video of it beating Pokémon FireRed. Take a look. Here's what Anthropic had to say about its Fable 5 vision AI model demo: Fable 5 is the new state-of-the-art model for tasks involving vision. It can extract precise numbers from detailed scientific figures and can perform complex vision-based tasks like rebuilding a web app’s source code from screenshots alone. It also needs less scaffolding: for example, previous Claude models struggled to play Pokémon FireRed even with harnesses that gave them additional helpful tools, but Fable 5 beat FireRed with a minimal, vision-only harness.",
+        "word_count": 129,
+        "keyword_overlap": 6,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Mashable",
+        "source_type": "research",
+        "text": "Anthropic has released Claude Fable 5, a publicly available version of its powerful but previously restricted Mythos model — complete with a new set of safety guardrails designed to keep its most dangerous capabilities out of the wrong hands. Along with this \"safe for general use\" model, Anthropic also released Claude Mythos 5, a version of Fable without the safety guardrails, to trusted testing partners. Earlier this year, Anthropic announced a limited launch of Claude Mythos, a new model with advanced cybersecurity capabilities that Anthropic deemed too dangerous to release. The company says Fable 5 is the most capable model it has ever made generally available, leading nearly all tested benchmarks across software engineering, knowledge work, vision, and scientific research. The more complex the task, Anthropic says, the wider Fable 5's edge over its previous models and competitors.",
+        "word_count": 138,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Mashable",
+        "source_type": "research",
+        "text": "Fable 5 shares the same underlying architecture as Claude Mythos 5 — the restricted version shared with cybersecurity partners through Project Glasswing — but ships with classifiers that intercept sensitive queries and route them to Claude Opus 4.8 instead. The restricted categories include cybersecurity, biology, and chemistry, as well as attempts to distill the model's capabilities for use in competing systems. Anthropic says fewer than five percent of sessions trigger a fallback, though it acknowledges the system is tuned conservatively and will occasionally flag benign requests.",
+        "word_count": 86,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Shacknews",
+        "source_type": "research",
+        "text": "A timelapse of Claude playing Pokémon FireRed from start to finish using only raw game screenshots — with no maps, navigation aids, or extra game-state information. Earlier Claude models needed a complex helper harness to play Pokémon; Claude Fable 5 completed the game with vision alone. The Claude Fable 5 AI model also trains its memory and long-context functionality by playing Slay the Spire and Anthropic claims it reaches the final act three times more often than the Opus 4.8 model.",
+        "word_count": 81,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Soon gamers will be able to have AI agents play video games for them instead of having fun. Anthropic launched its new Claude Fable 5 AI model for general public use today, and included a timelapse video of it beating Pokémon FireRed. Take a look. Here's what Anthropic had to say about its Fable 5 vision AI model demo: Fable 5 is the new state-of-the-art model for tasks involving vision. It can extract precise numbers from detailed scientific figures and can perform complex vision-based tasks like rebuilding a web app’s source code from screenshots alone. It also needs less scaffolding: for example, previous Claude models struggled to play Pokémon FireRed even with harnesses that gave them additional helpful tools, but Fable 5 beat FireRed with a minimal, vision-only harness.\n\nAnthropic has released Claude Fable 5, a publicly available version of its powerful but previously restricted Mythos model — complete with a new set of safety guardrails designed to keep its most dangerous capabilities out of the wrong hands. Along with this \"safe for general use\" model, Anthropic also released Claude Mythos 5, a version of Fable without the safety guardrails, to trusted testing partners. Earlier this year, Anthropic announced a limited launch of Claude Mythos, a new model with advanced cybersecurity capabilities that Anthropic deemed too dangerous to release. The company says Fable 5 is the most capable model it has ever made generally available, leading nearly all tested benchmarks across software engineering, knowledge work, vision, and scientific research. The more complex the task, Anthropic says, the wider Fable 5's edge over its previous models and competitors.\n\nFable 5 shares the same underlying architecture as Claude Mythos 5 — the restricted version shared with cybersecurity partners through Project Glasswing — but ships with classifiers that intercept sensitive queries and route them to Claude Opus 4.8 instead. The restricted categories include cybersecurity, biology, and chemistry, as well as attempts to distill the model's capabilities for use in competing systems. Anthropic says fewer than five percent of sessions trigger a fallback, though it acknowledges the system is tuned conservatively and will occasionally flag benign requests.\n\nA timelapse of Claude playing Pokémon FireRed from start to finish using only raw game screenshots — with no maps, navigation aids, or extra game-state information. Earlier Claude models needed a complex helper harness to play Pokémon; Claude Fable 5 completed the game with vision alone. The Claude Fable 5 AI model also trains its memory and long-context functionality by playing Slay the Spire and Anthropic claims it reaches the final act three times more often than the Opus 4.8 model.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 827,
+      "selected_blocks": 4,
+      "selected_source_words": 434,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Shacknews",
+        "Shacknews",
+        "Shacknews",
+        "Shacknews",
+        "Mashable",
+        "Mashable",
+        "Mashable",
+        "Mashable",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "Shacknews",
+        "Mashable",
+        "Mashable",
+        "Shacknews"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Anthropic’s Fable 5 can make weirdly fun video games with the click of a button",
+      "description": "Anthropic's Claude Fable 5 is going to be a big hit with the web's vibe coders.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Anthropic’s Fable 5 can make weirdly fun video games with the click of a button",
+    "description": "Anthropic's Claude Fable 5 is going to be a big hit with the web's vibe coders.",
+    "link": "https://techcrunch.com/2026/06/09/anthropics-fable-5-can-make-weirdly-fun-video-games-with-the-click-of-a-button/",
+    "published": "2026-06-09T20:37:49+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "7cb73ab1cc846cd88003a7e87fa4deaa",
+    "_url_hash": "552819ae49dfc52ef82e56ac21e1b2a1a203033c9fe1f473d474f1d47a1b3f57",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Shacknews]\nSoon gamers will be able to have AI agents play video games for them instead of having fun.\n\nAnthropic launched its new Claude Fable 5 AI model for general public use today, and included a timelapse video of it beating Pokémon FireRed. Take a look.\n\nHere's what Anthropic had to say about its Fable 5 vision AI model demo:\n\nFable 5 is the new state-of-the-art model for tasks involving vision. It can extract precise numbers from detailed scientific figures and can perform complex vision-based tasks like rebuilding a web app’s source code from screenshots alone. It also needs less scaffolding: for example, previous Claude models struggled to play Pokémon FireRed even with harnesses that gave them additional helpful tools, but Fable 5 beat FireRed with a minimal, vision-only harness.\n\nA timelapse of Claude playing Pokémon FireRed from start to finish using only raw game screenshots — with no maps, navigation aids, or extra game-state information. Earlier Claude models needed a complex helper harness to play Pokémon; Claude Fable 5 completed the game with vision alone.\n\nThe Claude Fable 5 AI model also trains its memory and long-context functionality by playing Slay the Spire and Anthropic claims it reaches the final act three times more often than the Opus 4.8 model.\n\nYou may be asking yourself why any of this matters, and while that is a great question, these AI companies need random benchmarks to tout performance of the latest models. Maybe someday we won't even have to play video games for fun, and we can just have our AI agents do that for us while we sit alone in the corner remembering when we had potable water and could afford consoles and PCs.\n\nKeep it locked on Shacknews for all the video game and technology news you can handle as the AI bubble continues to inflate.\n\nShacknews staff does not use generative artificial intelligence (AI) in their content. Shacknews strictly prohibits the use of its content for AI training or to generate text, including text in the style or format used for this publication. Shacknews reserves all rights to this work.\n\nAsif Khan is the CEO, EIC, and majority shareholder of Shacknews. He began his career in video game journalism as a freelancer in 2001 for Tendobox.com. Asif is a CPA and was formerly an investment adviser representative. After much success in his own personal investments, he retired from his day job in financial services and is currently focused on new private investments. His favorite PC game of all time is \n\n---\n\n[Lähde: Mashable]\nAnthropic has released Claude Fable 5, a publicly available version of its powerful but previously restricted Mythos model — complete with a new set of safety guardrails designed to keep its most dangerous capabilities out of the wrong hands. Along with this \"safe for general use\" model, Anthropic also released Claude Mythos 5, a version of Fable without the safety guardrails, to trusted testing partners.\n\nEarlier this year, Anthropic announced a limited launch of Claude Mythos, a new model with advanced cybersecurity capabilities that Anthropic deemed too dangerous to release.\n\nThe company says Fable 5 is the most capable model it has ever made generally available, leading nearly all tested benchmarks across software engineering, knowledge work, vision, and scientific research. The more complex the task, Anthropic says, the wider Fable 5's edge over its previous models and competitors.\n\nFable 5 shares the same underlying architecture as Claude Mythos 5 — the restricted version shared with cybersecurity partners through Project Glasswing — but ships with classifiers that intercept sensitive queries and route them to Claude Opus 4.8 instead. The restricted categories include cybersecurity, biology, and chemistry, as well as attempts to distill the model's capabilities for use in competing systems.\n\nAnthropic says fewer than five percent of sessions trigger a fallback, though it acknowledges the system is tuned conservatively and will occasionally flag benign requests.\n\nFable 5 is available today across all Claude plans and via the API using the model string claude-fable-5. It is priced at $10 per million input tokens and $50 per million output tokens — less than half the cost of Claude Mythos Preview. Subscription plan users get access at no extra cost through June 22, after which usage credits will be required.\n\nIn agentic coding evaluations, Fable 5 outpaced GPT-5.5 and Claude Opus 4.8 by significant margins, according to Anthropic. The company's data shows that it even outperforms Claude Mythos on some key benchmarks.\n\nIn a blog post, Anthropic wrote that fintech company Stripe, which had early access to Fable 5, reported that the model completed a full migration of a 50-million-line Ruby codebase in a single day. Anthropic estimated that this work would have taken a full engineering team more than two months.\n\nThe safety story here is genuinely complicated. Anthropic spent months warning that Mythos-class models were too dangerous for general release. A",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-09T20:43:57.659037+00:00",
+  "payload": {
+    "packet_id": "20260609T204119Z_9b29376106",
+    "title": "Anthropic julkaisi Claude Fable 5:n yleiseen käyttöön",
+    "summary": "Anthropicin uusi Claude Fable 5 -tekoälymalli on yhtiön mukaan sen kyvykkäin yleisesti saatavilla oleva malli, ja sitä esitellään erityisesti näköön perustuvissa tehtävissä sekä pelidemoissa.",
+    "content": "Anthropic on julkaissut Claude Fable 5 -tekoälymallin yleiseen käyttöön. Yhtiö kuvaa mallia aiemmin rajoitetun Mythos-mallin julkiseen käyttöön sovitetuksi versioksi, jossa vaarallisimpia käyttötapoja pyritään rajaamaan turvamekanismeilla. Fable 5:tä esitellään erityisesti näköön perustuvissa tehtävissä: se on demon perusteella pelannut Pokémon FireRedin läpi pelkkien ruutukaappausten avulla ilman karttoja, navigointiapuja tai muuta erillistä pelitiladataa.\n\n## Näkötehtävät ovat julkaisun keskiössä\n\nAnthropicin mukaan Fable 5 on uusi kärkimalli näköä vaativissa tehtävissä. Yhtiö kertoo sen pystyvän poimimaan tarkkoja lukuarvoja yksityiskohtaisista tieteellisistä kuvioista sekä tekemään monimutkaisia visuaalisia tehtäviä, kuten verkkosovelluksen lähdekoodin uudelleenrakentamista kuvakaappausten perusteella.\n\nPokémon FireRed -demo korostaa samaa suuntaa. Aiemmat Claude-mallit tarvitsivat pelissä laajemman apujärjestelmän, joka tarjosi niille lisätyökaluja. Fable 5:n kerrotaan selvittäneen pelin vähäisemmällä, pelkkään näköhavaintoon nojaavalla järjestelyllä. Mallin muistia ja pitkän kontekstin käsittelyä on lisäksi harjoitettu Slay the Spiren kaltaisilla peleillä, ja Anthropic sanoo sen pääsevän pelissä viimeiseen näytökseen kolme kertaa useammin kuin Opus 4.8.\n\n## Julkinen malli ja rajoitettu sisarmalli\n\nFable 5 perustuu samaan arkkitehtuuriin kuin Claude Mythos 5, jota jaetaan rajoitetummin luotetuille kyberturvallisuuskumppaneille Project Glasswingin kautta. Anthropic oli aiemmin pitänyt Mythosia liian vaarallisena laajempaan julkaisuun sen kehittyneiden kyberturvallisuuskykyjen vuoksi.\n\nJulkisessa Fable 5:ssä arkaluonteisia pyyntöjä suodatetaan luokittimilla. Rajattuihin aiheisiin kuuluvat kyberturvallisuus, biologia ja kemia sekä yritykset tislata mallin kyvykkyyksiä kilpailevien järjestelmien käyttöön. Tällaisissa tapauksissa pyyntö voidaan ohjata Claude Opus 4.8:lle. Anthropic arvioi, että alle viisi prosenttia istunnoista laukaisee tällaisen siirron, mutta myöntää järjestelmän olevan varovaisesti viritetty ja voivan merkitä joskus harmittomiakin pyyntöjä.\n\nYhtiön mukaan Fable 5 johtaa lähes kaikkia testattuja mittareita ohjelmistokehityksessä, tietotyössä, näkötehtävissä ja tieteellisessä tutkimuksessa. Väite on merkittävä, mutta sen käytännön arvo selviää vasta, kun malli päätyy laajempaan käyttöön kehittäjien ja muiden käyttäjien käsissä.",
+    "category": "Teknologia",
+    "tags": [
+      "Anthropic",
+      "Claude Fable 5",
+      "tekoäly",
+      "pelit",
+      "kyberturvallisuus"
+    ],
+    "summary_bullets": [
+      "Anthropic julkaisi Claude Fable 5:n yleiseen käyttöön turvamekanismeilla varustettuna versiona.",
+      "Mallia esitellään erityisesti näkötehtävissä, kuten Pokémon FireRedin pelaamisessa pelkkien ruutukaappausten perusteella.",
+      "Fable 5 jakaa arkkitehtuurin rajoitetumman Claude Mythos 5:n kanssa, mutta ohjaa arkaluonteisia pyyntöjä pois mallilta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin lähdekatkelmiin. Keskeiset väitteet on muotoiltu Anthropicin esittäminä, koska riippumatonta testidataa ei ollut mukana."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260609T204119Z_9b29376106\",\"title\":\"Anthropic julkaisi Claude Fable 5:n yleiseen käyttöön\",\"summary\":\"Anthropicin uusi Claude Fable 5 -tekoälymalli on yhtiön mukaan sen kyvykkäin yleisesti saatavilla oleva malli, ja sitä esitellään erityisesti näköön perustuvissa tehtävissä sekä pelidemoissa.\",\"content\":\"Anthropic on julkaissut Claude Fable 5 -tekoälymallin yleiseen käyttöön. Yhtiö kuvaa mallia aiemmin rajoitetun Mythos-mallin julkiseen käyttöön sovitetuksi versioksi, jossa vaarallisimpia käyttötapoja pyritään rajaamaan turvamekanismeilla. Fable 5:tä esitellään erityisesti näköön perustuvissa tehtävissä: se on demon perusteella pelannut Pokémon FireRedin läpi pelkkien ruutukaappausten avulla ilman karttoja, navigointiapuja tai muuta erillistä pelitiladataa.\\n\\n## Näkötehtävät ovat julkaisun keskiössä\\n\\nAnthropicin mukaan Fable 5 on uusi kärkimalli näköä vaativissa tehtävissä. Yhtiö kertoo sen pystyvän poimimaan tarkkoja lukuarvoja yksityiskohtaisista tieteellisistä kuvioista sekä tekemään monimutkaisia visuaalisia tehtäviä, kuten verkkosovelluksen lähdekoodin uudelleenrakentamista kuvakaappausten perusteella.\\n\\nPokémon FireRed -demo korostaa samaa suuntaa. Aiemmat Claude-mallit tarvitsivat pelissä laajemman apujärjestelmän, joka tarjosi niille lisätyökaluja. Fable 5:n kerrotaan selvittäneen pelin vähäisemmällä, pelkkään näköhavaintoon nojaavalla järjestelyllä. Mallin muistia ja pitkän kontekstin käsittelyä on lisäksi harjoitettu Slay the Spiren kaltaisilla peleillä, ja Anthropic sanoo sen pääsevän pelissä viimeiseen näytökseen kolme kertaa useammin kuin Opus 4.8.\\n\\n## Julkinen malli ja rajoitettu sisarmalli\\n\\nFable 5 perustuu samaan arkkitehtuuriin kuin Claude Mythos 5, jota jaetaan rajoitetummin luotetuille kyberturvallisuuskumppaneille Project Glasswingin kautta. Anthropic oli aiemmin pitänyt Mythosia liian vaarallisena laajempaan julkaisuun sen kehittyneiden kyberturvallisuuskykyjen vuoksi.\\n\\nJulkisessa Fable 5:ssä arkaluonteisia pyyntöjä suodatetaan luokittimilla. Rajattuihin aiheisiin kuuluvat kyberturvallisuus, biologia ja kemia sekä yritykset tislata mallin kyvykkyyksiä kilpailevien järjestelmien käyttöön. Tällaisissa tapauksissa pyyntö voidaan ohjata Claude Opus 4.8:lle. Anthropic arvioi, että alle viisi prosenttia istunnoista laukaisee tällaisen siirron, mutta myöntää järjestelmän olevan varovaisesti viritetty ja voivan merkitä joskus harmittomiakin pyyntöjä.\\n\\nYhtiön mukaan Fable 5 johtaa lähes kaikkia testattuja mittareita ohjelmistokehityksessä, tietotyössä, näkötehtävissä ja tieteellisessä tutkimuksessa. Väite on merkittävä, mutta sen käytännön arvo selviää vasta, kun malli päätyy laajempaan käyttöön kehittäjien ja muiden käyttäjien käsissä.\",\"category\":\"Teknologia\",\"tags\":[\"Anthropic\",\"Claude Fable 5\",\"tekoäly\",\"pelit\",\"kyberturvallisuus\"],\"summary_bullets\":[\"Anthropic julkaisi Claude Fable 5:n yleiseen käyttöön turvamekanismeilla varustettuna versiona.\",\"Mallia esitellään erityisesti näkötehtävissä, kuten Pokémon FireRedin pelaamisessa pelkkien ruutukaappausten perusteella.\",\"Fable 5 jakaa arkkitehtuurin rajoitetumman Claude Mythos 5:n kanssa, mutta ohjaa arkaluonteisia pyyntöjä pois mallilta.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.92,\"journalist_note\":\"Artikkeli perustuu paketissa annettuihin lähdekatkelmiin. Keskeiset väitteet on muotoiltu Anthropicin esittäminä, koska riippumatonta testidataa ei ollut mukana.\"}",
+  "article": {
+    "title": "Anthropic julkaisi Claude Fable 5:n yleiseen käyttöön",
+    "description": "Anthropicin uusi Claude Fable 5 -tekoälymalli on yhtiön mukaan sen kyvykkäin yleisesti saatavilla oleva malli, ja sitä esitellään erityisesti näköön perustuvissa tehtävissä sekä pelidemoissa.",
+    "link": "https://techcrunch.com/2026/06/09/anthropics-fable-5-can-make-weirdly-fun-video-games-with-the-click-of-a-button/",
+    "published": "2026-06-09T20:37:49+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "7cb73ab1cc846cd88003a7e87fa4deaa",
+    "_url_hash": "552819ae49dfc52ef82e56ac21e1b2a1a203033c9fe1f473d474f1d47a1b3f57",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Shacknews]\nSoon gamers will be able to have AI agents play video games for them instead of having fun.\n\nAnthropic launched its new Claude Fable 5 AI model for general public use today, and included a timelapse video of it beating Pokémon FireRed. Take a look.\n\nHere's what Anthropic had to say about its Fable 5 vision AI model demo:\n\nFable 5 is the new state-of-the-art model for tasks involving vision. It can extract precise numbers from detailed scientific figures and can perform complex vision-based tasks like rebuilding a web app’s source code from screenshots alone. It also needs less scaffolding: for example, previous Claude models struggled to play Pokémon FireRed even with harnesses that gave them additional helpful tools, but Fable 5 beat FireRed with a minimal, vision-only harness.\n\nA timelapse of Claude playing Pokémon FireRed from start to finish using only raw game screenshots — with no maps, navigation aids, or extra game-state information. Earlier Claude models needed a complex helper harness to play Pokémon; Claude Fable 5 completed the game with vision alone.\n\nThe Claude Fable 5 AI model also trains its memory and long-context functionality by playing Slay the Spire and Anthropic claims it reaches the final act three times more often than the Opus 4.8 model.\n\nYou may be asking yourself why any of this matters, and while that is a great question, these AI companies need random benchmarks to tout performance of the latest models. Maybe someday we won't even have to play video games for fun, and we can just have our AI agents do that for us while we sit alone in the corner remembering when we had potable water and could afford consoles and PCs.\n\nKeep it locked on Shacknews for all the video game and technology news you can handle as the AI bubble continues to inflate.\n\nShacknews staff does not use generative artificial intelligence (AI) in their content. Shacknews strictly prohibits the use of its content for AI training or to generate text, including text in the style or format used for this publication. Shacknews reserves all rights to this work.\n\nAsif Khan is the CEO, EIC, and majority shareholder of Shacknews. He began his career in video game journalism as a freelancer in 2001 for Tendobox.com. Asif is a CPA and was formerly an investment adviser representative. After much success in his own personal investments, he retired from his day job in financial services and is currently focused on new private investments. His favorite PC game of all time is \n\n---\n\n[Lähde: Mashable]\nAnthropic has released Claude Fable 5, a publicly available version of its powerful but previously restricted Mythos model — complete with a new set of safety guardrails designed to keep its most dangerous capabilities out of the wrong hands. Along with this \"safe for general use\" model, Anthropic also released Claude Mythos 5, a version of Fable without the safety guardrails, to trusted testing partners.\n\nEarlier this year, Anthropic announced a limited launch of Claude Mythos, a new model with advanced cybersecurity capabilities that Anthropic deemed too dangerous to release.\n\nThe company says Fable 5 is the most capable model it has ever made generally available, leading nearly all tested benchmarks across software engineering, knowledge work, vision, and scientific research. The more complex the task, Anthropic says, the wider Fable 5's edge over its previous models and competitors.\n\nFable 5 shares the same underlying architecture as Claude Mythos 5 — the restricted version shared with cybersecurity partners through Project Glasswing — but ships with classifiers that intercept sensitive queries and route them to Claude Opus 4.8 instead. The restricted categories include cybersecurity, biology, and chemistry, as well as attempts to distill the model's capabilities for use in competing systems.\n\nAnthropic says fewer than five percent of sessions trigger a fallback, though it acknowledges the system is tuned conservatively and will occasionally flag benign requests.\n\nFable 5 is available today across all Claude plans and via the API using the model string claude-fable-5. It is priced at $10 per million input tokens and $50 per million output tokens — less than half the cost of Claude Mythos Preview. Subscription plan users get access at no extra cost through June 22, after which usage credits will be required.\n\nIn agentic coding evaluations, Fable 5 outpaced GPT-5.5 and Claude Opus 4.8 by significant margins, according to Anthropic. The company's data shows that it even outperforms Claude Mythos on some key benchmarks.\n\nIn a blog post, Anthropic wrote that fintech company Stripe, which had early access to Fable 5, reported that the model completed a full migration of a 50-million-line Ruby codebase in a single day. Anthropic estimated that this work would have taken a full engineering team more than two months.\n\nThe safety story here is genuinely complicated. Anthropic spent months warning that Mythos-class models were too dangerous for general release. A",
+    "research_source": "multi",
+    "summary": "Anthropicin uusi Claude Fable 5 -tekoälymalli on yhtiön mukaan sen kyvykkäin yleisesti saatavilla oleva malli, ja sitä esitellään erityisesti näköön perustuvissa tehtävissä sekä pelidemoissa.",
+    "content": "Anthropic on julkaissut Claude Fable 5 -tekoälymallin yleiseen käyttöön. Yhtiö kuvaa mallia aiemmin rajoitetun Mythos-mallin julkiseen käyttöön sovitetuksi versioksi, jossa vaarallisimpia käyttötapoja pyritään rajaamaan turvamekanismeilla. Fable 5:tä esitellään erityisesti näköön perustuvissa tehtävissä: se on demon perusteella pelannut Pokémon FireRedin läpi pelkkien ruutukaappausten avulla ilman karttoja, navigointiapuja tai muuta erillistä pelitiladataa.\n\n## Näkötehtävät ovat julkaisun keskiössä\n\nAnthropicin mukaan Fable 5 on uusi kärkimalli näköä vaativissa tehtävissä. Yhtiö kertoo sen pystyvän poimimaan tarkkoja lukuarvoja yksityiskohtaisista tieteellisistä kuvioista sekä tekemään monimutkaisia visuaalisia tehtäviä, kuten verkkosovelluksen lähdekoodin uudelleenrakentamista kuvakaappausten perusteella.\n\nPokémon FireRed -demo korostaa samaa suuntaa. Aiemmat Claude-mallit tarvitsivat pelissä laajemman apujärjestelmän, joka tarjosi niille lisätyökaluja. Fable 5:n kerrotaan selvittäneen pelin vähäisemmällä, pelkkään näköhavaintoon nojaavalla järjestelyllä. Mallin muistia ja pitkän kontekstin käsittelyä on lisäksi harjoitettu Slay the Spiren kaltaisilla peleillä, ja Anthropic sanoo sen pääsevän pelissä viimeiseen näytökseen kolme kertaa useammin kuin Opus 4.8.\n\n## Julkinen malli ja rajoitettu sisarmalli\n\nFable 5 perustuu samaan arkkitehtuuriin kuin Claude Mythos 5, jota jaetaan rajoitetummin luotetuille kyberturvallisuuskumppaneille Project Glasswingin kautta. Anthropic oli aiemmin pitänyt Mythosia liian vaarallisena laajempaan julkaisuun sen kehittyneiden kyberturvallisuuskykyjen vuoksi.\n\nJulkisessa Fable 5:ssä arkaluonteisia pyyntöjä suodatetaan luokittimilla. Rajattuihin aiheisiin kuuluvat kyberturvallisuus, biologia ja kemia sekä yritykset tislata mallin kyvykkyyksiä kilpailevien järjestelmien käyttöön. Tällaisissa tapauksissa pyyntö voidaan ohjata Claude Opus 4.8:lle. Anthropic arvioi, että alle viisi prosenttia istunnoista laukaisee tällaisen siirron, mutta myöntää järjestelmän olevan varovaisesti viritetty ja voivan merkitä joskus harmittomiakin pyyntöjä.\n\nYhtiön mukaan Fable 5 johtaa lähes kaikkia testattuja mittareita ohjelmistokehityksessä, tietotyössä, näkötehtävissä ja tieteellisessä tutkimuksessa. Väite on merkittävä, mutta sen käytännön arvo selviää vasta, kun malli päätyy laajempaan käyttöön kehittäjien ja muiden käyttäjien käsissä.",
+    "category": "Teknologia",
+    "tags": [
+      "anthropic",
+      "claude fable 5",
+      "tekoäly",
+      "pelit",
+      "kyberturvallisuus"
+    ],
+    "summary_bullets": [
+      "Anthropic julkaisi Claude Fable 5:n yleiseen käyttöön turvamekanismeilla varustettuna versiona.",
+      "Mallia esitellään erityisesti näkötehtävissä, kuten Pokémon FireRedin pelaamisessa pelkkien ruutukaappausten perusteella.",
+      "Fable 5 jakaa arkkitehtuurin rajoitetumman Claude Mythos 5:n kanssa, mutta ohjaa arkaluonteisia pyyntöjä pois mallilta."
+    ],
+    "key_points": [
+      "Anthropic julkaisi Claude Fable 5:n yleiseen käyttöön turvamekanismeilla varustettuna versiona.",
+      "Mallia esitellään erityisesti näkötehtävissä, kuten Pokémon FireRedin pelaamisessa pelkkien ruutukaappausten perusteella.",
+      "Fable 5 jakaa arkkitehtuurin rajoitetumman Claude Mythos 5:n kanssa, mutta ohjaa arkaluonteisia pyyntöjä pois mallilta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin lähdekatkelmiin. Keskeiset väitteet on muotoiltu Anthropicin esittäminä, koska riippumatonta testidataa ei ollut mukana.",
+    "source_text": "Soon gamers will be able to have AI agents play video games for them instead of having fun. Anthropic launched its new Claude Fable 5 AI model for general public use today, and included a timelapse video of it beating Pokémon FireRed. Take a look. Here's what Anthropic had to say about its Fable 5 vision AI model demo: Fable 5 is the new state-of-the-art model for tasks involving vision. It can extract precise numbers from detailed scientific figures and can perform complex vision-based tasks like rebuilding a web app’s source code from screenshots alone. It also needs less scaffolding: for example, previous Claude models struggled to play Pokémon FireRed even with harnesses that gave them additional helpful tools, but Fable 5 beat FireRed with a minimal, vision-only harness.\n\nAnthropic has released Claude Fable 5, a publicly available version of its powerful but previously restricted Mythos model — complete with a new set of safety guardrails designed to keep its most dangerous capabilities out of the wrong hands. Along with this \"safe for general use\" model, Anthropic also released Claude Mythos 5, a version of Fable without the safety guardrails, to trusted testing partners. Earlier this year, Anthropic announced a limited launch of Claude Mythos, a new model with advanced cybersecurity capabilities that Anthropic deemed too dangerous to release. The company says Fable 5 is the most capable model it has ever made generally available, leading nearly all tested benchmarks across software engineering, knowledge work, vision, and scientific research. The more complex the task, Anthropic says, the wider Fable 5's edge over its previous models and competitors.\n\nFable 5 shares the same underlying architecture as Claude Mythos 5 — the restricted version shared with cybersecurity partners through Project Glasswing — but ships with classifiers that intercept sensitive queries and route them to Claude Opus 4.8 instead. The restricted categories include cybersecurity, biology, and chemistry, as well as attempts to distill the model's capabilities for use in competing systems. Anthropic says fewer than five percent of sessions trigger a fallback, though it acknowledges the system is tuned conservatively and will occasionally flag benign requests.\n\nA timelapse of Claude playing Pokémon FireRed from start to finish using only raw game screenshots — with no maps, navigation aids, or extra game-state information. Earlier Claude models needed a complex helper harness to play Pokémon; Claude Fable 5 completed the game with vision alone. The Claude Fable 5 AI model also trains its memory and long-context functionality by playing Slay the Spire and Anthropic claims it reaches the final act three times more often than the Opus 4.8 model.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260609T204119Z_9b29376106"
+  },
+  "duplicate_rejected_at": "2026-06-09T20:48:01.816635+00:00",
+  "duplicate_rejected": true
+}
