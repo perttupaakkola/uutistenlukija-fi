@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T12:01:28.731576+00:00",
+  "digest": "28fa548729",
+  "packet": {
+    "packet_id": "20260609T120128Z_28fa548729",
+    "created_at": "2026-06-09T12:01:28Z",
+    "headline_seed": "Kesätyöttömyys vaivaa teini-ikäisiä ja nuoria aikuisia – ESS etsii haastateltavia",
+    "description_seed": "",
+    "link": "https://www.ess.fi/paikalliset/9522497",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9522497"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kesätyöttömyys vaivaa teini-ikäisiä ja nuoria aikuisia – ESS etsii haastateltavia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 195,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kesätyöttömyys vaivaa teini-ikäisiä ja nuoria aikuisia – ESS etsii haastateltavia",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kesätyöttömyys vaivaa teini-ikäisiä ja nuoria aikuisia – ESS etsii haastateltavia",
+    "description": "",
+    "link": "https://www.ess.fi/paikalliset/9522497",
+    "published": "2026-06-09T14:28:21+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "69dbccdc63c177e9632ad95e1098d70b",
+    "_url_hash": "aa4a0f59452cd36e5bdfdf63d1db5a265929b1702e290574d9fb9ede22b574df",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nAikuinen ja lapsi löytyivät hukkuneina Raaseporin Tammisaaressa Västerbyn ulkoilualueella, kertoo poliisi tiedotteessaan.\n\nHätäkeskukseen ilmoitettiin maanantai-iltana kahdesta kadonneesta henkilöstä Raaseporin Tammisaaressa. Toinen kadonneista oli aikuinen ja toinen alle kouluikäinen lapsi.\n\nTutkinnanjohtaja, rikoskomisario Mats Sjöholm kertoo sähköpostitse, että onnettomuudessa menehtynyt aikuinen on menehtyneen lapsen vanhempi.\n\nSjöholmin mukaan aikuinen on syntynyt 1990-luvulla, ja lapsi on alle kouluikäinen, mutta ei kuitenkaan vauva.\n\nLaajojen etsintöjen jälkeen henkilöt löytyivät kuolleina vedestä. Etsintöihin osallistui poliisin lisäksi useita muita viranomaisia.\n\n– Tässä vaiheessa pyrimme selvittämään tapahtumien kulkua, mutta on täysin mahdollista, että he ovat joutuneet vahingossa veteen, Sjöholm kertoo.\n\nSjöholmin mukaan ilmoitus hätäkeskukseen tuli maanantaina hieman ennen kello 20. Ilmoittaja oli kuolleiden lähiomainen.\n\nAikuinen ja lapsi löytyivät vedestä noin kaksi tuntia hätäkeskusilmoituksen jälkeen. Heidät löydettiin melko samaan aikaan, Sjöholm kertoo.\n\nSjöholm ei kerro tarkkaa löytöpaikkaa, mutta kyse ei ole uimarannasta. Myöskään hukkuneiden sukupuolia Sjöholm ei kerro omaisten suojaamiseksi.\n\nMolemmat onnettomuudessa menehtyneet ovat Sjöholmin mukaan suomalaisia.\n\nPoliisi selvittää asiaa kuolemansyyn tutkintana. Kuolemansyyn selvittäminen on laissa säädetty salassa pidettäväksi, joten asiasta ei tiedoteta enempää, poliisi kertoo tiedotteessaan.\n\nVästerbyn ulkoilualue sijaitsee noin viiden kilometrin päässä Tammisaaren keskustasta. Ulkoilualue on noin 1 500 hehtaarin kokoinen. Alueella on vaihtelevaa maastoa ja vaellusreittejä. Ulkoilualueella on useita vesialueita ja uimaranta.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-09T12:03:24.333557+00:00",
+  "failure": "Paketissa ei ole valittuja lähdekatkelmia eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260609T120128Z_28fa548729\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittuja lähdekatkelmia eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
