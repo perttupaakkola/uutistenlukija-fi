@@ -43,7 +43,6 @@ keywords:
 source_name: "IS Urheilu"
 source_url: "https://www.is.fi/nhl/art-2000012065831.html"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
