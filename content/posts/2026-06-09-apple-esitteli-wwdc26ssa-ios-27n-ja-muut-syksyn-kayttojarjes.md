@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/applen-wwdc26-tapahtumassa-nahtiin-ios-27-ja-muut-paivittyneet-kayttojarjestelmat-eri-laitteille/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
