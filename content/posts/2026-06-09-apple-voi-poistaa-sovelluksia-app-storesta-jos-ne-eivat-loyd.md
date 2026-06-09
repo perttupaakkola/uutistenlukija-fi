@@ -41,7 +41,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/06/09/apple-says-it-may-remove-apps-from-the-app-store-if-they-dont-attract-users/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
