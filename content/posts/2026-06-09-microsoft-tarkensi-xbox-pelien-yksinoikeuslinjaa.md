@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/microsoft-tarkensi-mitka-xbox-pelit-ovat-jatkossa-yksinoikeuksia/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
