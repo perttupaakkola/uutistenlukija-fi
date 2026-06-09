@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/06/09/apples-foldable-iphone-could-be-just-around-the-corner/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
