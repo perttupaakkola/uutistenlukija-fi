@@ -1,0 +1,217 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T17:11:21.161119+00:00",
+  "digest": "331b180ba5",
+  "packet": {
+    "packet_id": "20260609T171121Z_331b180ba5",
+    "created_at": "2026-06-09T17:11:21Z",
+    "headline_seed": "Anthropic’s Claude Fable is a version of Mythos the public can access today",
+    "description_seed": "Anthropic is releasing Claude Fable 5, its first Mythos-class model available to the public. The model comes with guardrails that block responses in high-risk areas like cybersecurity and biology.",
+    "link": "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
+    "source": "TechCrunch",
+    "source_names": [
+      "ZDNET",
+      "Wired",
+      "The Verge",
+      "ZDNET"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Anthropic’s Claude Fable is a version of Mythos the public can access today"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "ZDNET",
+        "source_type": "research",
+        "text": "Also: Apple's new Siri AI comes with hidden costs that power users should know of Anthropic also released Fable 5. The company described this technology as the same underlying model as Mythos, but with safeguards. Those safeguards block responses in specific high-risk areas of cybersecurity and biology. Yeah, the \"biology\" reference raised red flags. Have they seen biological weapon prompts or responses in their logs? I've asked Anthropic. I highly doubt they'll answer. Interestingly, if a Fable 5 prompt veers into one of those high-risk areas, the model drops down to Opus 4.8, which has its own restrictions. Ever since version Opus 4.7, Anthropic blocks \"Activities that are almost always used maliciously and have little to no legitimate defensive application, such as mass data exfiltration or ransomware code development.\"",
+        "word_count": 129,
+        "keyword_overlap": 14,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "Claude Fable 5, which is being publicly released, uses the same underlying model as Mythos 5, but will have “guardrails” in place at launch, the company said Tuesday, that will block the model from answering many user questions related to cybersecurity, biology, and chemistry. These requests will instead be re-routed to an older AI model, Claude Opus 4.8. If Anthropic suspects a user is trying to conduct distillation—training a smaller AI model off a larger AI model’s responses—on Claude Fable 5, those requests will also be rerouted to Claude Opus 4.8, the company says.",
+        "word_count": 94,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "The Verge",
+        "source_type": "research",
+        "text": "Fable 5 marks the first broad release from Anthropic’s Mythos class of AI models, after the company said the family was so capable at cybersecurity tasks that it was too dangerous to release publicly. Anthropic said the release was “made possible by new safeguards that block responses in specific high-risk areas,” with the system falling back to Claude Opus 4.8 — a model it praised for “honesty” when it launched last month. ...",
+        "word_count": 73,
+        "keyword_overlap": 13,
+        "strong_overlap": 6
+      },
+      {
+        "source": "ZDNET",
+        "source_type": "research",
+        "text": "Offered as the central component of a Manhattan Project-like team effort called Project Glasswing, Mythos was considered far too dangerous to be allowed to fall into the wrong hands. As such, the model has been made available only to Glasswing partners, including Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, Nvidia, and Palo Alto Networks. Up until now, Mythos was considered a preview product. Now, Anthropic is launching Claude Mythos 5, which will be available to all users with access to Mythos Preview. The company said, \"We plan to expand access over time through a more systematic trusted-access program.\" No significant details were provided about any difference between Mythos Preview and Mythos 5, except that the latter appears to be the post-beta version of Mythos.",
+        "word_count": 131,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Also: Apple's new Siri AI comes with hidden costs that power users should know of Anthropic also released Fable 5. The company described this technology as the same underlying model as Mythos, but with safeguards. Those safeguards block responses in specific high-risk areas of cybersecurity and biology. Yeah, the \"biology\" reference raised red flags. Have they seen biological weapon prompts or responses in their logs? I've asked Anthropic. I highly doubt they'll answer. Interestingly, if a Fable 5 prompt veers into one of those high-risk areas, the model drops down to Opus 4.8, which has its own restrictions. Ever since version Opus 4.7, Anthropic blocks \"Activities that are almost always used maliciously and have little to no legitimate defensive application, such as mass data exfiltration or ransomware code development.\"\n\nClaude Fable 5, which is being publicly released, uses the same underlying model as Mythos 5, but will have “guardrails” in place at launch, the company said Tuesday, that will block the model from answering many user questions related to cybersecurity, biology, and chemistry. These requests will instead be re-routed to an older AI model, Claude Opus 4.8. If Anthropic suspects a user is trying to conduct distillation—training a smaller AI model off a larger AI model’s responses—on Claude Fable 5, those requests will also be rerouted to Claude Opus 4.8, the company says.\n\nFable 5 marks the first broad release from Anthropic’s Mythos class of AI models, after the company said the family was so capable at cybersecurity tasks that it was too dangerous to release publicly. Anthropic said the release was “made possible by new safeguards that block responses in specific high-risk areas,” with the system falling back to Claude Opus 4.8 — a model it praised for “honesty” when it launched last month. ...\n\nOffered as the central component of a Manhattan Project-like team effort called Project Glasswing, Mythos was considered far too dangerous to be allowed to fall into the wrong hands. As such, the model has been made available only to Glasswing partners, including Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, Nvidia, and Palo Alto Networks. Up until now, Mythos was considered a preview product. Now, Anthropic is launching Claude Mythos 5, which will be available to all users with access to Mythos Preview. The company said, \"We plan to expand access over time through a more systematic trusted-access program.\" No significant details were provided about any difference between Mythos Preview and Mythos 5, except that the latter appears to be the post-beta version of Mythos.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1007,
+      "selected_blocks": 4,
+      "selected_source_words": 427,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Wired",
+        "Wired",
+        "Wired",
+        "Wired",
+        "ZDNET",
+        "ZDNET",
+        "ZDNET",
+        "ZDNET",
+        "The Verge",
+        "The Verge",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "ZDNET",
+        "Wired",
+        "The Verge",
+        "ZDNET"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Anthropic’s Claude Fable is a version of Mythos the public can access today",
+      "description": "Anthropic is releasing Claude Fable 5, its first Mythos-class model available to the public. The model comes with guardrails that block responses in high-risk areas like cybersecurity and biology.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Anthropic’s Claude Fable is a version of Mythos the public can access today",
+    "description": "Anthropic is releasing Claude Fable 5, its first Mythos-class model available to the public. The model comes with guardrails that block responses in high-risk areas like cybersecurity and biology.",
+    "link": "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
+    "published": "2026-06-09T17:00:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "82a3e63f85ac1c1c2f65cc882154ec08",
+    "_url_hash": "ad761ff933b7feb6445b468174504d053d3dfc7351eed6e647f0abcfe0b55ed3",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Wired]\nAnthropic released two new AI models called Claude Fable 5 and Claude Mythos 5 on Tuesday, which the company says have greater capabilities than the Mythos Preview model it released in April to a limited set of tech industry partners. Anthropic has said the initial, limited release stemmed from concerns that the model’s capabilities could be exploited by bad actors to develop hacking tools that could catch defenders off guard.\n\nAnthropic is currently only releasing Claude Mythos 5 to a limited set of industry partners, many of which received access to Mythos Preview, and the company says it is collaborating with the US government on the rollout.\n\nClaude Fable 5, which is being publicly released, uses the same underlying model as Mythos 5, but will have “guardrails” in place at launch, the company said Tuesday, that will block the model from answering many user questions related to cybersecurity, biology, and chemistry. These requests will instead be re-routed to an older AI model, Claude Opus 4.8. If Anthropic suspects a user is trying to conduct distillation—training a smaller AI model off a larger AI model’s responses—on Claude Fable 5, those requests will also be rerouted to Claude Opus 4.8, the company says.\n\nIn an interview with WIRED, Anthropic’s head of Product Management, Diane Penn, says that the company has been grappling with the question of how to handle Mythos’s software vulnerability-discovery abilities and other advanced capabilities since before its April release, but that testing and user input since then helped to hone the strategy.\n\n“We're trying to make improvements in a way that's beneficial, even if we don't have the perfect [solution] for every use case to start,” Penn says. “Out of all the different approaches, this emerged as the most viable and the best one. We just ended up feeling like this was the best product choice for users to get the maximum value out of Fable 5.”\n\nFor now, Penn says that the protective mechanism is built to err on the side of caution, meaning some user queries may be routed to the less capable AI model even if they’re benign. Over time, Anthropic hopes to make its classifiers more precise, but Penn says this was the only safe way the company could release the model broadly at this time.\n\nThe company said on Tuesday that in addition to offering Claude Mythos 5 to Project Glasswing partners, it is also giving access to “select biology researchers.” Additionally, Anthropic noted in its blog post about Tuesday\n\n---\n\n[Lähde: ZDNET]\nFollow ZDNET: Add us as a preferred source on Google.\n\nAnthropic has announced a defanged version of its fabled (and highly restricted) Mythos large language model. Called Claude Fable 5, the company describes the new AI as \"a Mythos-class model made safe for general use.\"\n\nMythos was introduced back in April to great fanfare as a model capable of finding vulnerabilities in code that neither experienced developers nor other AIs could find.\n\nAlso: US workers are the world's biggest AI skeptics - and it's not just about job loss\n\nOffered as the central component of a Manhattan Project-like team effort called Project Glasswing, Mythos was considered far too dangerous to be allowed to fall into the wrong hands. As such, the model has been made available only to Glasswing partners, including Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, Nvidia, and Palo Alto Networks.\n\nUp until now, Mythos was considered a preview product. Now, Anthropic is launching Claude Mythos 5, which will be available to all users with access to Mythos Preview. The company said, \"We plan to expand access over time through a more systematic trusted-access program.\"\n\nNo significant details were provided about any difference between Mythos Preview and Mythos 5, except that the latter appears to be the post-beta version of Mythos.\n\nAlso: Apple's new Siri AI comes with hidden costs that power users should know of\n\nAnthropic also released Fable 5. The company described this technology as the same underlying model as Mythos, but with safeguards. Those safeguards block responses in specific high-risk areas of cybersecurity and biology.\n\nYeah, the \"biology\" reference raised red flags. Have they seen biological weapon prompts or responses in their logs? I've asked Anthropic. I highly doubt they'll answer.\n\nInterestingly, if a Fable 5 prompt veers into one of those high-risk areas, the model drops down to Opus 4.8, which has its own restrictions. Ever since version Opus 4.7, Anthropic blocks \"Activities that are almost always used maliciously and have little to no legitimate defensive application, such as mass data exfiltration or ransomware code development.\"\n\nProfessionals with a security clearance from Anthropic can use Opus 4.7 and 4.8 to perform blocked security activities in the course of doing their jobs. Disclosure: I am an authorized member of Anthropic's Cyber Verification Program, so I have access to these capa\n\n---\n\n[Lähde: The Verge]\nIt says new safeguards make it possible to release a Mythos-class model it previously said was too risky to make public.\n\nIt says new safeguards make it possible to release a Mythos-class model it previously said was too risky to make public.\n\nAnthropic just announced Claude Fable 5, a new AI model it said is the most powerful model it has ever made widely available.\n\nAccording to the company, Fable 5 “shows exceptional performance in software engineering, knowledge work, and vision,” with its lead over other models growing as tasks become longer and more complex.\n\nFable 5 marks the first broad release from Anthropic’s Mythos class of AI models, after the company said the family was so capable at cybersecurity tasks that it was too dangerous to release publicly. Anthropic said the release was “made possible by new safeguards that block responses in specific high-risk areas,” with the system falling back to Claude Opus 4.8 — a model it praised for “honesty” when it launched last month.\n...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-09T17:13:49.447654+00:00",
+  "payload": {
+    "packet_id": "20260609T171121Z_331b180ba5",
+    "title": "Anthropic tuo Mythos-luokan Claude Fable 5 -mallin laajemmin saataville",
+    "summary": "Anthropic julkaisee Claude Fable 5:n, joka perustuu samaan malliin kuin Mythos 5 mutta sisältää rajoituksia riskialttiisiin pyyntöihin. Malli ohjaa muun muassa kyberturvallisuuteen, biologiaan ja kemiaan liittyviä pyyntöjä vanhemmalle Claude Opus 4.8 -mallille.",
+    "content": "Anthropic julkaisee Claude Fable 5:n, joka on yhtiön ensimmäinen laajasti saataville tuleva versio sen Mythos-luokan tekoälymalleista. Fable 5 käyttää samaa perustana olevaa mallia kuin Mythos 5, mutta se tuodaan julkiseen käyttöön suojauksilla, joiden tarkoitus on estää vastauksia tietyissä korkean riskin aiheissa.\n\n## Suojaukset rajaavat riskialttiita pyyntöjä\n\nAnthropic kertoo, että Claude Fable 5:n suojaukset estävät monia käyttäjien kysymyksiä, jotka liittyvät kyberturvallisuuteen, biologiaan ja kemiaan. Kun pyyntö osuu näihin rajattuihin aiheisiin, järjestelmä ohjaa sen Claude Opus 4.8 -mallille. Sama uudelleenohjaus koskee tilanteita, joissa yhtiö epäilee käyttäjän yrittävän mallin tislaukseen liittyvää toimintaa eli pienemmän tekoälymallin kouluttamista suuremman mallin vastausten perusteella.\n\nRatkaisu kertoo siitä, miten tekoäly-yhtiöt yrittävät tasapainottaa tehokkaampien mallien julkaisua ja väärinkäytön riskejä. Anthropic on aiemmin kuvannut Mythos-malliperheen olevan niin kyvykäs erityisesti kyberturvallisuustehtävissä, ettei sitä voitu julkaista avoimesti ilman lisärajoituksia. Fable 5:n julkaisu on yhtiön mukaan mahdollistunut uusien suojausten ansiosta.\n\n## Mythos on ollut rajatun joukon käytössä\n\nMythos on tähän asti ollut käytössä rajatummin Project Glasswing -hankkeessa ja sen kumppaneilla. Mukana on ollut useita suuria teknologiayhtiöitä ja organisaatioita, kuten Amazon Web Services, Apple, Google, Microsoft, Nvidia, Cisco, CrowdStrike, Linux Foundation ja Palo Alto Networks.\n\nAnthropic julkaisee myös Claude Mythos 5:n käyttäjille, joilla on pääsy Mythos Preview -versioon. Yhtiö on kertonut aikovansa laajentaa pääsyä ajan myötä järjestelmällisemmän luotetun pääsyn ohjelman kautta. Julkisuudessa ei kuitenkaan ole annettu merkittäviä yksityiskohtia siitä, miten Mythos Preview ja Mythos 5 eroavat toisistaan, paitsi että uudempi versio näyttää olevan esikatseluvaiheen jälkeinen julkaisu.\n\nFable 5:n merkitys on siinä, että se tuo osan Mythos-luokan kyvykkyyksistä laajempaan käyttöön, mutta ei täysin avoimena versiona. Anthropic näyttää rakentavan julkaisumallia, jossa tehokkaampi tekoäly voidaan avata käyttäjille vain, jos riskialttiiden aihealueiden käsittelyä rajoitetaan erillisillä turvamekanismeilla.",
+    "category": "Teknologia",
+    "tags": [
+      "Anthropic",
+      "Claude Fable 5",
+      "Claude Mythos 5",
+      "tekoäly",
+      "kyberturvallisuus"
+    ],
+    "summary_bullets": [
+      "Claude Fable 5 käyttää samaa perustana olevaa mallia kuin Mythos 5, mutta sisältää suojauksia.",
+      "Kyberturvallisuuteen, biologiaan ja kemiaan liittyviä pyyntöjä ohjataan Claude Opus 4.8 -mallille.",
+      "Mythos-luokan mallit ovat aiemmin olleet rajatummassa käytössä Project Glasswing -kumppaneilla."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin usean lähteen tietoihin. Vältetty väitteitä suojausten teknisestä toteutuksesta ja mallien suorituskyvystä, koska niistä ei ollut tarkkoja lähdetietoja."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260609T171121Z_331b180ba5\",\"title\":\"Anthropic tuo Mythos-luokan Claude Fable 5 -mallin laajemmin saataville\",\"summary\":\"Anthropic julkaisee Claude Fable 5:n, joka perustuu samaan malliin kuin Mythos 5 mutta sisältää rajoituksia riskialttiisiin pyyntöihin. Malli ohjaa muun muassa kyberturvallisuuteen, biologiaan ja kemiaan liittyviä pyyntöjä vanhemmalle Claude Opus 4.8 -mallille.\",\"content\":\"Anthropic julkaisee Claude Fable 5:n, joka on yhtiön ensimmäinen laajasti saataville tuleva versio sen Mythos-luokan tekoälymalleista. Fable 5 käyttää samaa perustana olevaa mallia kuin Mythos 5, mutta se tuodaan julkiseen käyttöön suojauksilla, joiden tarkoitus on estää vastauksia tietyissä korkean riskin aiheissa.\\n\\n## Suojaukset rajaavat riskialttiita pyyntöjä\\n\\nAnthropic kertoo, että Claude Fable 5:n suojaukset estävät monia käyttäjien kysymyksiä, jotka liittyvät kyberturvallisuuteen, biologiaan ja kemiaan. Kun pyyntö osuu näihin rajattuihin aiheisiin, järjestelmä ohjaa sen Claude Opus 4.8 -mallille. Sama uudelleenohjaus koskee tilanteita, joissa yhtiö epäilee käyttäjän yrittävän mallin tislaukseen liittyvää toimintaa eli pienemmän tekoälymallin kouluttamista suuremman mallin vastausten perusteella.\\n\\nRatkaisu kertoo siitä, miten tekoäly-yhtiöt yrittävät tasapainottaa tehokkaampien mallien julkaisua ja väärinkäytön riskejä. Anthropic on aiemmin kuvannut Mythos-malliperheen olevan niin kyvykäs erityisesti kyberturvallisuustehtävissä, ettei sitä voitu julkaista avoimesti ilman lisärajoituksia. Fable 5:n julkaisu on yhtiön mukaan mahdollistunut uusien suojausten ansiosta.\\n\\n## Mythos on ollut rajatun joukon käytössä\\n\\nMythos on tähän asti ollut käytössä rajatummin Project Glasswing -hankkeessa ja sen kumppaneilla. Mukana on ollut useita suuria teknologiayhtiöitä ja organisaatioita, kuten Amazon Web Services, Apple, Google, Microsoft, Nvidia, Cisco, CrowdStrike, Linux Foundation ja Palo Alto Networks.\\n\\nAnthropic julkaisee myös Claude Mythos 5:n käyttäjille, joilla on pääsy Mythos Preview -versioon. Yhtiö on kertonut aikovansa laajentaa pääsyä ajan myötä järjestelmällisemmän luotetun pääsyn ohjelman kautta. Julkisuudessa ei kuitenkaan ole annettu merkittäviä yksityiskohtia siitä, miten Mythos Preview ja Mythos 5 eroavat toisistaan, paitsi että uudempi versio näyttää olevan esikatseluvaiheen jälkeinen julkaisu.\\n\\nFable 5:n merkitys on siinä, että se tuo osan Mythos-luokan kyvykkyyksistä laajempaan käyttöön, mutta ei täysin avoimena versiona. Anthropic näyttää rakentavan julkaisumallia, jossa tehokkaampi tekoäly voidaan avata käyttäjille vain, jos riskialttiiden aihealueiden käsittelyä rajoitetaan erillisillä turvamekanismeilla.\",\"category\":\"Teknologia\",\"tags\":[\"Anthropic\",\"Claude Fable 5\",\"Claude Mythos 5\",\"tekoäly\",\"kyberturvallisuus\"],\"summary_bullets\":[\"Claude Fable 5 käyttää samaa perustana olevaa mallia kuin Mythos 5, mutta sisältää suojauksia.\",\"Kyberturvallisuuteen, biologiaan ja kemiaan liittyviä pyyntöjä ohjataan Claude Opus 4.8 -mallille.\",\"Mythos-luokan mallit ovat aiemmin olleet rajatummassa käytössä Project Glasswing -kumppaneilla.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.98,\"journalist_note\":\"Artikkeli perustuu paketissa annettuihin usean lähteen tietoihin. Vältetty väitteitä suojausten teknisestä toteutuksesta ja mallien suorituskyvystä, koska niistä ei ollut tarkkoja lähdetietoja.\"}",
+  "article": {
+    "title": "Anthropic tuo Mythos-luokan Claude Fable 5 -mallin laajemmin saataville",
+    "description": "Anthropic julkaisee Claude Fable 5:n, joka perustuu samaan malliin kuin Mythos 5 mutta sisältää rajoituksia riskialttiisiin pyyntöihin. Malli ohjaa muun muassa kyberturvallisuuteen, biologiaan ja kemiaan liittyviä pyyntöjä vanhemmalle Claude Opus 4.8 -mallille.",
+    "link": "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
+    "published": "2026-06-09T17:00:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "82a3e63f85ac1c1c2f65cc882154ec08",
+    "_url_hash": "ad761ff933b7feb6445b468174504d053d3dfc7351eed6e647f0abcfe0b55ed3",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Wired]\nAnthropic released two new AI models called Claude Fable 5 and Claude Mythos 5 on Tuesday, which the company says have greater capabilities than the Mythos Preview model it released in April to a limited set of tech industry partners. Anthropic has said the initial, limited release stemmed from concerns that the model’s capabilities could be exploited by bad actors to develop hacking tools that could catch defenders off guard.\n\nAnthropic is currently only releasing Claude Mythos 5 to a limited set of industry partners, many of which received access to Mythos Preview, and the company says it is collaborating with the US government on the rollout.\n\nClaude Fable 5, which is being publicly released, uses the same underlying model as Mythos 5, but will have “guardrails” in place at launch, the company said Tuesday, that will block the model from answering many user questions related to cybersecurity, biology, and chemistry. These requests will instead be re-routed to an older AI model, Claude Opus 4.8. If Anthropic suspects a user is trying to conduct distillation—training a smaller AI model off a larger AI model’s responses—on Claude Fable 5, those requests will also be rerouted to Claude Opus 4.8, the company says.\n\nIn an interview with WIRED, Anthropic’s head of Product Management, Diane Penn, says that the company has been grappling with the question of how to handle Mythos’s software vulnerability-discovery abilities and other advanced capabilities since before its April release, but that testing and user input since then helped to hone the strategy.\n\n“We're trying to make improvements in a way that's beneficial, even if we don't have the perfect [solution] for every use case to start,” Penn says. “Out of all the different approaches, this emerged as the most viable and the best one. We just ended up feeling like this was the best product choice for users to get the maximum value out of Fable 5.”\n\nFor now, Penn says that the protective mechanism is built to err on the side of caution, meaning some user queries may be routed to the less capable AI model even if they’re benign. Over time, Anthropic hopes to make its classifiers more precise, but Penn says this was the only safe way the company could release the model broadly at this time.\n\nThe company said on Tuesday that in addition to offering Claude Mythos 5 to Project Glasswing partners, it is also giving access to “select biology researchers.” Additionally, Anthropic noted in its blog post about Tuesday\n\n---\n\n[Lähde: ZDNET]\nFollow ZDNET: Add us as a preferred source on Google.\n\nAnthropic has announced a defanged version of its fabled (and highly restricted) Mythos large language model. Called Claude Fable 5, the company describes the new AI as \"a Mythos-class model made safe for general use.\"\n\nMythos was introduced back in April to great fanfare as a model capable of finding vulnerabilities in code that neither experienced developers nor other AIs could find.\n\nAlso: US workers are the world's biggest AI skeptics - and it's not just about job loss\n\nOffered as the central component of a Manhattan Project-like team effort called Project Glasswing, Mythos was considered far too dangerous to be allowed to fall into the wrong hands. As such, the model has been made available only to Glasswing partners, including Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, Nvidia, and Palo Alto Networks.\n\nUp until now, Mythos was considered a preview product. Now, Anthropic is launching Claude Mythos 5, which will be available to all users with access to Mythos Preview. The company said, \"We plan to expand access over time through a more systematic trusted-access program.\"\n\nNo significant details were provided about any difference between Mythos Preview and Mythos 5, except that the latter appears to be the post-beta version of Mythos.\n\nAlso: Apple's new Siri AI comes with hidden costs that power users should know of\n\nAnthropic also released Fable 5. The company described this technology as the same underlying model as Mythos, but with safeguards. Those safeguards block responses in specific high-risk areas of cybersecurity and biology.\n\nYeah, the \"biology\" reference raised red flags. Have they seen biological weapon prompts or responses in their logs? I've asked Anthropic. I highly doubt they'll answer.\n\nInterestingly, if a Fable 5 prompt veers into one of those high-risk areas, the model drops down to Opus 4.8, which has its own restrictions. Ever since version Opus 4.7, Anthropic blocks \"Activities that are almost always used maliciously and have little to no legitimate defensive application, such as mass data exfiltration or ransomware code development.\"\n\nProfessionals with a security clearance from Anthropic can use Opus 4.7 and 4.8 to perform blocked security activities in the course of doing their jobs. Disclosure: I am an authorized member of Anthropic's Cyber Verification Program, so I have access to these capa\n\n---\n\n[Lähde: The Verge]\nIt says new safeguards make it possible to release a Mythos-class model it previously said was too risky to make public.\n\nIt says new safeguards make it possible to release a Mythos-class model it previously said was too risky to make public.\n\nAnthropic just announced Claude Fable 5, a new AI model it said is the most powerful model it has ever made widely available.\n\nAccording to the company, Fable 5 “shows exceptional performance in software engineering, knowledge work, and vision,” with its lead over other models growing as tasks become longer and more complex.\n\nFable 5 marks the first broad release from Anthropic’s Mythos class of AI models, after the company said the family was so capable at cybersecurity tasks that it was too dangerous to release publicly. Anthropic said the release was “made possible by new safeguards that block responses in specific high-risk areas,” with the system falling back to Claude Opus 4.8 — a model it praised for “honesty” when it launched last month.\n...",
+    "research_source": "multi",
+    "summary": "Anthropic julkaisee Claude Fable 5:n, joka perustuu samaan malliin kuin Mythos 5 mutta sisältää rajoituksia riskialttiisiin pyyntöihin. Malli ohjaa muun muassa kyberturvallisuuteen, biologiaan ja kemiaan liittyviä pyyntöjä vanhemmalle Claude Opus 4.8 -mallille.",
+    "content": "Anthropic julkaisee Claude Fable 5:n, joka on yhtiön ensimmäinen laajasti saataville tuleva versio sen Mythos-luokan tekoälymalleista. Fable 5 käyttää samaa perustana olevaa mallia kuin Mythos 5, mutta se tuodaan julkiseen käyttöön suojauksilla, joiden tarkoitus on estää vastauksia tietyissä korkean riskin aiheissa.\n\n## Suojaukset rajaavat riskialttiita pyyntöjä\n\nAnthropic kertoo, että Claude Fable 5:n suojaukset estävät monia käyttäjien kysymyksiä, jotka liittyvät kyberturvallisuuteen, biologiaan ja kemiaan. Kun pyyntö osuu näihin rajattuihin aiheisiin, järjestelmä ohjaa sen Claude Opus 4.8 -mallille. Sama uudelleenohjaus koskee tilanteita, joissa yhtiö epäilee käyttäjän yrittävän mallin tislaukseen liittyvää toimintaa eli pienemmän tekoälymallin kouluttamista suuremman mallin vastausten perusteella.\n\nRatkaisu kertoo siitä, miten tekoäly-yhtiöt yrittävät tasapainottaa tehokkaampien mallien julkaisua ja väärinkäytön riskejä. Anthropic on aiemmin kuvannut Mythos-malliperheen olevan niin kyvykäs erityisesti kyberturvallisuustehtävissä, ettei sitä voitu julkaista avoimesti ilman lisärajoituksia. Fable 5:n julkaisu on yhtiön mukaan mahdollistunut uusien suojausten ansiosta.\n\n## Mythos on ollut rajatun joukon käytössä\n\nMythos on tähän asti ollut käytössä rajatummin Project Glasswing -hankkeessa ja sen kumppaneilla. Mukana on ollut useita suuria teknologiayhtiöitä ja organisaatioita, kuten Amazon Web Services, Apple, Google, Microsoft, Nvidia, Cisco, CrowdStrike, Linux Foundation ja Palo Alto Networks.\n\nAnthropic julkaisee myös Claude Mythos 5:n käyttäjille, joilla on pääsy Mythos Preview -versioon. Yhtiö on kertonut aikovansa laajentaa pääsyä ajan myötä järjestelmällisemmän luotetun pääsyn ohjelman kautta. Julkisuudessa ei kuitenkaan ole annettu merkittäviä yksityiskohtia siitä, miten Mythos Preview ja Mythos 5 eroavat toisistaan, paitsi että uudempi versio näyttää olevan esikatseluvaiheen jälkeinen julkaisu.\n\nFable 5:n merkitys on siinä, että se tuo osan Mythos-luokan kyvykkyyksistä laajempaan käyttöön, mutta ei täysin avoimena versiona. Anthropic näyttää rakentavan julkaisumallia, jossa tehokkaampi tekoäly voidaan avata käyttäjille vain, jos riskialttiiden aihealueiden käsittelyä rajoitetaan erillisillä turvamekanismeilla.",
+    "category": "Teknologia",
+    "tags": [
+      "anthropic",
+      "claude fable 5",
+      "claude mythos 5",
+      "tekoäly",
+      "kyberturvallisuus"
+    ],
+    "summary_bullets": [
+      "Claude Fable 5 käyttää samaa perustana olevaa mallia kuin Mythos 5, mutta sisältää suojauksia.",
+      "Kyberturvallisuuteen, biologiaan ja kemiaan liittyviä pyyntöjä ohjataan Claude Opus 4.8 -mallille.",
+      "Mythos-luokan mallit ovat aiemmin olleet rajatummassa käytössä Project Glasswing -kumppaneilla."
+    ],
+    "key_points": [
+      "Claude Fable 5 käyttää samaa perustana olevaa mallia kuin Mythos 5, mutta sisältää suojauksia.",
+      "Kyberturvallisuuteen, biologiaan ja kemiaan liittyviä pyyntöjä ohjataan Claude Opus 4.8 -mallille.",
+      "Mythos-luokan mallit ovat aiemmin olleet rajatummassa käytössä Project Glasswing -kumppaneilla."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin usean lähteen tietoihin. Vältetty väitteitä suojausten teknisestä toteutuksesta ja mallien suorituskyvystä, koska niistä ei ollut tarkkoja lähdetietoja.",
+    "source_text": "Also: Apple's new Siri AI comes with hidden costs that power users should know of Anthropic also released Fable 5. The company described this technology as the same underlying model as Mythos, but with safeguards. Those safeguards block responses in specific high-risk areas of cybersecurity and biology. Yeah, the \"biology\" reference raised red flags. Have they seen biological weapon prompts or responses in their logs? I've asked Anthropic. I highly doubt they'll answer. Interestingly, if a Fable 5 prompt veers into one of those high-risk areas, the model drops down to Opus 4.8, which has its own restrictions. Ever since version Opus 4.7, Anthropic blocks \"Activities that are almost always used maliciously and have little to no legitimate defensive application, such as mass data exfiltration or ransomware code development.\"\n\nClaude Fable 5, which is being publicly released, uses the same underlying model as Mythos 5, but will have “guardrails” in place at launch, the company said Tuesday, that will block the model from answering many user questions related to cybersecurity, biology, and chemistry. These requests will instead be re-routed to an older AI model, Claude Opus 4.8. If Anthropic suspects a user is trying to conduct distillation—training a smaller AI model off a larger AI model’s responses—on Claude Fable 5, those requests will also be rerouted to Claude Opus 4.8, the company says.\n\nFable 5 marks the first broad release from Anthropic’s Mythos class of AI models, after the company said the family was so capable at cybersecurity tasks that it was too dangerous to release publicly. Anthropic said the release was “made possible by new safeguards that block responses in specific high-risk areas,” with the system falling back to Claude Opus 4.8 — a model it praised for “honesty” when it launched last month. ...\n\nOffered as the central component of a Manhattan Project-like team effort called Project Glasswing, Mythos was considered far too dangerous to be allowed to fall into the wrong hands. As such, the model has been made available only to Glasswing partners, including Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, Nvidia, and Palo Alto Networks. Up until now, Mythos was considered a preview product. Now, Anthropic is launching Claude Mythos 5, which will be available to all users with access to Mythos Preview. The company said, \"We plan to expand access over time through a more systematic trusted-access program.\" No significant details were provided about any difference between Mythos Preview and Mythos 5, except that the latter appears to be the post-beta version of Mythos.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260609T171121Z_331b180ba5",
+    "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBsYXVuY2glMjBldmVudHxlbnwxfDB8fHwxNzgxMDI1NDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBsYXVuY2glMjBldmVudHxlbnwxfDB8fHwxNzgxMDI1NDg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Anthropic tuo Mythos-luokan Claude Fable 5 -mallin laajemmin saataville",
+    "image_credit": "Photo by Teemu Paananen on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/person-discussing-while-standing-in-front-of-a-large-screen-in-front-of-people-inside-dim-lighted-room-bzdhc5b3Bxs?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-09T17:18:06.005876+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBsYXVuY2glMjBldmVudHxlbnwxfDB8fHwxNzgxMDI1NDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBsYXVuY2glMjBldmVudHxlbnwxfDB8fHwxNzgxMDI1NDg0fDA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-09T17:19:19.674894+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-09-anthropic-tuo-mythos-luokan-claude-fable-5-mallin-laajemmin.md"
+  ]
+}

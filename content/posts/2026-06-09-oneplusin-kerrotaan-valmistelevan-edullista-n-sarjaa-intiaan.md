@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/09/euroopasta-vetaytynyt-oneplus-suunnittelee-puhelinvalikoimansa-laajentamista-toisaalla-vuotaja-uusi-edullinen-n-sarja-tulossa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
