@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T07:51:38.150656+00:00",
+  "digest": "681291b131",
+  "packet": {
+    "packet_id": "20260609T075138Z_681291b131",
+    "created_at": "2026-06-09T07:51:38Z",
+    "headline_seed": "ICC suspends top prosecutor after investigating misconduct allegations",
+    "description_seed": "Karim Khan denies all allegations of sexual misconduct and his lawyers say he rejects the decision in the strongest terms.",
+    "link": "https://www.bbc.com/news/articles/c77yx53015no?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "HuffPost",
+      "TRT World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c77yx53015no?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "ICC suspends top prosecutor after investigating misconduct allegations"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Karim Khan denies all allegations of sexual misconduct and his lawyers say he rejects the decision in the strongest terms.",
+        "word_count": 20,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The International Criminal Court's (ICC) chief prosecutor, Karim Khan, has been suspended with immediate effect while an investigation into misconduct allegations continues. The decision was made by a group within the ICC's management oversight body, which has also referred the matter to the court's 125 member states. Those states will vote on Khan's future during a special session that will be convened \"as soon as possible\". The oversight Bureau stressed that the suspension does not prejudge the outcome of the case. Khan has repeatedly denied all allegations of sexual misconduct, with his lawyers describing the decision as \"unlawful, procedurally unfair and unsupported by evidence\". Previous media reports have cited a document outlining accusations against Khan, which are understood to include unwanted sexual touching and \"abuse\".",
+        "word_count": 125,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "HuffPost",
+        "source_type": "research",
+        "text": "THE HAGUE, Netherlands (AP) — The embattled chief prosecutor of the International Criminal Court was suspended from his duties late Monday, after the court’s oversight body referred Karim Khan for disciplinary proceedings. In a scandal that has dragged on for more than two years, Khan is facing allegations of sexual misconduct with a female aide. He has steadfastly denied any wrongdoing. A final decision on the fate of the British barrister is now up to the Assembly of States Parties, the body that oversees the ICC, which will hold a special session to decide if Khan can remain in his job at the global court.",
+        "word_count": 105,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "TRT World",
+        "source_type": "research",
+        "text": "International Criminal Court (ICC) Prosecutor Karim Khan has been suspended from his duties following a probe into sexual misconduct allegations against him. The Bureau of the Assembly of States Parties to the Rome Statute, the ICC's governing body, announced the decision on Monday, saying Khan will be referred for disciplinary proceedings before all 125 member states following the results of a UN investigation, which are not being made available to the public. \"The assessment of the Bureau was based on the report of an investigation undertaken by the United Nations Office of Internal Oversight Services (OIOS), the underlying evidence, the advice of an ad hoc Panel of judicial experts, and written submissions,\" the bureau said in a statement.",
+        "word_count": 118,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Karim Khan denies all allegations of sexual misconduct and his lawyers say he rejects the decision in the strongest terms.\n\nThe International Criminal Court's (ICC) chief prosecutor, Karim Khan, has been suspended with immediate effect while an investigation into misconduct allegations continues. The decision was made by a group within the ICC's management oversight body, which has also referred the matter to the court's 125 member states. Those states will vote on Khan's future during a special session that will be convened \"as soon as possible\". The oversight Bureau stressed that the suspension does not prejudge the outcome of the case. Khan has repeatedly denied all allegations of sexual misconduct, with his lawyers describing the decision as \"unlawful, procedurally unfair and unsupported by evidence\". Previous media reports have cited a document outlining accusations against Khan, which are understood to include unwanted sexual touching and \"abuse\".\n\nTHE HAGUE, Netherlands (AP) — The embattled chief prosecutor of the International Criminal Court was suspended from his duties late Monday, after the court’s oversight body referred Karim Khan for disciplinary proceedings. In a scandal that has dragged on for more than two years, Khan is facing allegations of sexual misconduct with a female aide. He has steadfastly denied any wrongdoing. A final decision on the fate of the British barrister is now up to the Assembly of States Parties, the body that oversees the ICC, which will hold a special session to decide if Khan can remain in his job at the global court.\n\nInternational Criminal Court (ICC) Prosecutor Karim Khan has been suspended from his duties following a probe into sexual misconduct allegations against him. The Bureau of the Assembly of States Parties to the Rome Statute, the ICC's governing body, announced the decision on Monday, saying Khan will be referred for disciplinary proceedings before all 125 member states following the results of a UN investigation, which are not being made available to the public. \"The assessment of the Bureau was based on the report of an investigation undertaken by the United Nations Office of Internal Oversight Services (OIOS), the underlying evidence, the advice of an ad hoc Panel of judicial experts, and written submissions,\" the bureau said in a statement.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 975,
+      "selected_blocks": 4,
+      "selected_source_words": 368,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "HuffPost",
+        "HuffPost",
+        "HuffPost",
+        "HuffPost",
+        "TRT World",
+        "TRT World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "HuffPost",
+        "TRT World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "ICC suspends top prosecutor after investigating misconduct allegations",
+      "description": "Karim Khan denies all allegations of sexual misconduct and his lawyers say he rejects the decision in the strongest terms.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "ICC suspends top prosecutor after investigating misconduct allegations",
+    "description": "Karim Khan denies all allegations of sexual misconduct and his lawyers say he rejects the decision in the strongest terms.",
+    "link": "https://www.bbc.com/news/articles/c77yx53015no?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-09T07:29:55+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "80ebfcd3476b89b9ff86f58761973587",
+    "_url_hash": "344d6caa308efb0b47f8fc28f876ada55cfdd3aac102402afb7537a4146304f6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe International Criminal Court's (ICC) chief prosecutor, Karim Khan, has been suspended with immediate effect while an investigation into misconduct allegations continues.\n\nThe decision was made by a group within the ICC's management oversight body, which has also referred the matter to the court's 125 member states.\n\nThose states will vote on Khan's future during a special session that will be convened \"as soon as possible\". The oversight Bureau stressed that the suspension does not prejudge the outcome of the case.\n\nKhan has repeatedly denied all allegations of sexual misconduct, with his lawyers describing the decision as \"unlawful, procedurally unfair and unsupported by evidence\".\n\nPrevious media reports have cited a document outlining accusations against Khan,  which are understood to include unwanted sexual touching and \"abuse\".\n\nA two-thirds majority would be required to uphold any finding, followed by a separate vote on whether Khan, should be removed from office.\n\nKhan, a prominent British lawyer, has been on voluntary leave to fight the allegations since May 2025.\n\nRegardless of the final decision on Karin Khan's fate from the 125 member states, the controversy is unlikely to end there.\n\nThe decision follows a highly sensitive process that has left the court under intense scrutiny.\n\nIn May 2024, allegations that Khan had engaged in sexual misconduct involving a female staff member were reported to the ICC by a third party.\n\nThe court's Independent Oversight Mechanism (IOM) opened an investigation, but the case was later closed after the alleged victim declined to participate.\n\nCritics of the process argued that the investigation had been mishandled, undermining confidence in the IOM.\n\nInvestigators ultimately said there was insufficient evidence to substantiate the allegations.\n\nA second referral was made in October 2024. The matter was then transferred to the United Nations Office of Internal Oversight Services (OIOS), which conducted a broader investigation into allegations of sexual misconduct and abuse of authority.\n\nThat inquiry ran from November 2024 to December 2025 and generated more than 5,000 pages of evidence and testimony.\n\nThe OIOS findings were subsequently reviewed by a panel of three judges tasked with advising the Bureau of the ASP on whether Khan's conduct amounted to serious misconduct, less serious misconduct, or no misconduct.\n\nThe allegations have unfolded during a period of exceptional pressure on the ICC.\n\nStaff members \n\n---\n\n[Lähde: HuffPost]\nTHE HAGUE, Netherlands (AP) — The embattled chief prosecutor of the International Criminal Court was suspended from his duties late Monday, after the court’s oversight body referred Karim Khan for disciplinary proceedings.\n\nIn a scandal that has dragged on for more than two years, Khan is facing allegations of sexual misconduct with a female aide. He has steadfastly denied any wrongdoing.\n\nA final decision on the fate of the British barrister is now up to the Assembly of States Parties, the body that oversees the ICC, which will hold a special session to decide if Khan can remain in his job at the global court.\n\nThe Bureau of the Assembly of States parties — the executive committee of the court’s oversight body — said in a statement on Monday that it based its assessment on “on the report of an investigation undertaken by the United Nations Office of Internal Oversight Services (OIOS), the underlying evidence, the advice of an ad hoc Panel of judicial experts, and written submissions.”\n\nThe U.N. investigation found evidence that Khan had “nonconsensual sexual contact with (the aide) in his office, at his private residence, and whilst on mission,” according to a copy of its report seen by The Associated Press. However, a three-judge panel selected by the executive committee for a legal assessment of the findings found that the investigation was not conclusive enough.\n\nKhan had already temporarily stepped down in May 2025 pending the outcome of the investigation. The process is unprecedented for the ICC, and the Assembly of States Parties has had to repeatedly create new rules to accommodate the situation.\n\nThe allegations against Khan were first reported to the court’s independent watchdog more than two years ago. An AP investigation revealed that Khan was alleged to have seen the woman working in another ICC department and moved her into his office. She later became a regular presence on official trips, according to whistleblower documents.\n\nOn one foreign trip, Khan allegedly asked her to rest with him on a hotel bed and then “sexually touched her,” the documents said. Other alleged nonconsensual behavior cited in the documents included locking the door of his office and sticking his hand in her pocket. He also allegedly asked her several times to accompany him on a vacation.\n\nOnly the Assembly of States Parties has the authority to remove Khan from office, a move that would require a majority in a secret ballot of its 125 member states. Sixty-three count\n\n---\n\n[Lähde: TRT World]\nInternational Criminal Court (ICC) Prosecutor Karim Khan has been suspended from his duties following a probe into sexual misconduct allegations against him.\n\nThe Bureau of the Assembly of States Parties to the Rome Statute, the ICC's governing body, announced the decision on Monday, saying Khan will be referred for disciplinary proceedings before all 125 member states following the results of a UN investigation, which are not being made available to the public.\n\n\"The assessment of the Bureau was based on the report of an investigation undertaken by the United Nations Office of Internal Oversight Services (OIOS), the underlying evidence, the advice of an ad hoc Panel of judicial experts, and written submissions,\" the bureau said in a statement.\n\n\"The decision of the Bureau and the related documentation will remain confidential. The Bureau continues to call for due respect for the privacy and the rights of all parties concerned, as well as for the integrity of the ongoing process,\" it a...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-09T07:55:29.921614+00:00",
+  "failure": "content too short: 237 words",
+  "payload": {
+    "packet_id": "20260609T075138Z_681291b131",
+    "title": "ICC:n pääsyyttäjä Karim Khan hyllytettiin väärinkäytösväitteiden tutkinnan ajaksi",
+    "summary": "Kansainvälisen rikostuomioistuimen pääsyyttäjä Karim Khan on pidätetty tehtävistään välittömästi, kun häneen kohdistuvien seksuaalista väärinkäytöstä koskevien väitteiden käsittely etenee kurinpitomenettelyyn.",
+    "content": "Kansainvälisen rikostuomioistuimen ICC:n pääsyyttäjä Karim Khan on hyllytetty tehtävistään välittömästi seksuaalista väärinkäytöstä koskevien väitteiden tutkinnan jatkuessa. Khan kiistää kaikki häneen kohdistuvat syytökset, ja hänen asianajajansa ovat torjuneet päätöksen jyrkästi. Lopullinen ratkaisu hänen asemastaan siirtyy ICC:n jäsenvaltioiden käsiteltäväksi.\n\n## Päätös tehtiin valvontaelimen käsittelyn jälkeen\n\nKhanin hyllytyksestä päätti ICC:n hallinnolliseen valvontaan kuuluva elin. Asia on samalla siirretty tuomioistuimen 125 jäsenvaltiolle, joiden on määrä käsitellä hänen tulevaisuuttaan erityisistunnossa. Istunto aiotaan kutsua koolle mahdollisimman pian.\n\nPäätös liittyy väitteisiin seksuaalisesta väärinkäytöksestä naispuolista avustajaa kohtaan. Aiemmissa tiedoissa on viitattu asiakirjaan, jossa syytösten on kerrottu koskevan muun muassa ei-toivottua seksuaalista koskettelua ja hyväksikäyttöä. Lähdetietojen mukaan tapaus on ollut esillä yli kahden vuoden ajan.\n\n## Khan kiistää syytökset\n\nValvontaelin on korostanut, ettei hyllytys ratkaise syyllisyyttä eikä ennakoi asian lopputulosta. Päätös tarkoittaa kuitenkin, että Khan ei hoida pääsyyttäjän tehtävää asian käsittelyn aikana.\n\nKhan on toistuvasti kiistänyt kaikki seksuaalista väärinkäytöstä koskevat väitteet. Hänen asianajajiensa mukaan päätös on lainvastainen, menettelyllisesti epäoikeudenmukainen ja vailla näyttöä. Asianajajat ovat sanoneet Khanin vastustavan ratkaisua mahdollisimman voimakkaasti.\n\n## Jäsenvaltiot ratkaisevat jatkon\n\nAsian käsittely etenee kurinpitomenettelyyn ICC:n jäsenvaltioiden edessä. Päätöksen taustalla on ollut YK:n sisäisen valvontapalvelun OIOS:n tekemä tutkinta, sen taustalla oleva aineisto, oikeudellisten asiantuntijoiden erillisen paneelin neuvot sekä kirjalliset lausumat. Tutkinnan tuloksia ei ole julkistettu.\n\nKhan on brittiläinen juristi ja ICC:n pääsyyttäjä. Seuraavaksi tuomioistuimen jäsenvaltioiden kokous ratkaisee, voiko hän jatkaa tehtävässään vai johtaako kurinpitomenettely hänen asemansa muuttumiseen pysyvämmin. Toistaiseksi tiedossa on, että hyllytys tuli voimaan välittömästi ja asian lopullinen ratkaisu jää erityisistunnon päätettäväksi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "ICC",
+      "Karim Khan",
+      "Kansainvälinen rikostuomioistuin",
+      "seksuaalinen väärinkäytös",
+      "kurinpitomenettely"
+    ],
+    "summary_bullets": [
+      "ICC:n pääsyyttäjä Karim Khan on hyllytetty tehtävistään välittömästi.",
+      "Khan kiistää kaikki seksuaalista väärinkäytöstä koskevat syytökset.",
+      "Tuomioistuimen 125 jäsenvaltiota käsittelee hänen tulevaisuuttaan erityisistunnossa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.94,
+    "journalist_note": "Artikkeli perustuu paketin useisiin lähdekatkelmiin. Keskeiset väitteet on esitetty syytöksinä, ja Khanin kiistäminen sekä hyllytyksen ei-tuomitseva luonne on mukana."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260609T075138Z_681291b131\",\n  \"title\": \"ICC:n pääsyyttäjä Karim Khan hyllytettiin väärinkäytösväitteiden tutkinnan ajaksi\",\n  \"summary\": \"Kansainvälisen rikostuomioistuimen pääsyyttäjä Karim Khan on pidätetty tehtävistään välittömästi, kun häneen kohdistuvien seksuaalista väärinkäytöstä koskevien väitteiden käsittely etenee kurinpitomenettelyyn.\",\n  \"content\": \"Kansainvälisen rikostuomioistuimen ICC:n pääsyyttäjä Karim Khan on hyllytetty tehtävistään välittömästi seksuaalista väärinkäytöstä koskevien väitteiden tutkinnan jatkuessa. Khan kiistää kaikki häneen kohdistuvat syytökset, ja hänen asianajajansa ovat torjuneet päätöksen jyrkästi. Lopullinen ratkaisu hänen asemastaan siirtyy ICC:n jäsenvaltioiden käsiteltäväksi.\\n\\n## Päätös tehtiin valvontaelimen käsittelyn jälkeen\\n\\nKhanin hyllytyksestä päätti ICC:n hallinnolliseen valvontaan kuuluva elin. Asia on samalla siirretty tuomioistuimen 125 jäsenvaltiolle, joiden on määrä käsitellä hänen tulevaisuuttaan erityisistunnossa. Istunto aiotaan kutsua koolle mahdollisimman pian.\\n\\nPäätös liittyy väitteisiin seksuaalisesta väärinkäytöksestä naispuolista avustajaa kohtaan. Aiemmissa tiedoissa on viitattu asiakirjaan, jossa syytösten on kerrottu koskevan muun muassa ei-toivottua seksuaalista koskettelua ja hyväksikäyttöä. Lähdetietojen mukaan tapaus on ollut esillä yli kahden vuoden ajan.\\n\\n## Khan kiistää syytökset\\n\\nValvontaelin on korostanut, ettei hyllytys ratkaise syyllisyyttä eikä ennakoi asian lopputulosta. Päätös tarkoittaa kuitenkin, että Khan ei hoida pääsyyttäjän tehtävää asian käsittelyn aikana.\\n\\nKhan on toistuvasti kiistänyt kaikki seksuaalista väärinkäytöstä koskevat väitteet. Hänen asianajajiensa mukaan päätös on lainvastainen, menettelyllisesti epäoikeudenmukainen ja vailla näyttöä. Asianajajat ovat sanoneet Khanin vastustavan ratkaisua mahdollisimman voimakkaasti.\\n\\n## Jäsenvaltiot ratkaisevat jatkon\\n\\nAsian käsittely etenee kurinpitomenettelyyn ICC:n jäsenvaltioiden edessä. Päätöksen taustalla on ollut YK:n sisäisen valvontapalvelun OIOS:n tekemä tutkinta, sen taustalla oleva aineisto, oikeudellisten asiantuntijoiden erillisen paneelin neuvot sekä kirjalliset lausumat. Tutkinnan tuloksia ei ole julkistettu.\\n\\nKhan on brittiläinen juristi ja ICC:n pääsyyttäjä. Seuraavaksi tuomioistuimen jäsenvaltioiden kokous ratkaisee, voiko hän jatkaa tehtävässään vai johtaako kurinpitomenettely hänen asemansa muuttumiseen pysyvämmin. Toistaiseksi tiedossa on, että hyllytys tuli voimaan välittömästi ja asian lopullinen ratkaisu jää erityisistunnon päätettäväksi.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"ICC\",\n    \"Karim Khan\",\n    \"Kansainvälinen rikostuomioistuin\",\n    \"seksuaalinen väärinkäytös\",\n    \"kurinpitomenettely\"\n  ],\n  \"summary_bullets\": [\n    \"ICC:n pääsyyttäjä Karim Khan on hyllytetty tehtävistään välittömästi.\",\n    \"Khan kiistää kaikki seksuaalista väärinkäytöstä koskevat syytökset.\",\n    \"Tuomioistuimen 125 jäsenvaltiota käsittelee hänen tulevaisuuttaan erityisistunnossa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.94,\n  \"journalist_note\": \"Artikkeli perustuu paketin useisiin lähdekatkelmiin. Keskeiset väitteet on esitetty syytöksinä, ja Khanin kiistäminen sekä hyllytyksen ei-tuomitseva luonne on mukana.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260609T075138Z_681291b131",
+    "category": "Kotimaa",
+    "selected_source_words": 368,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 237,
+    "issues": [
+      "content too short: 237 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "ICC:n pääsyyttäjä Karim Khan hyllytettiin väärinkäytösväitteiden tutkinnan ajaksi",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-09T07:55:29.921346+00:00",
+    "repair_trigger": "pre_repair_word_count=229; selected_source_words=368; selected_source_blocks=4",
+    "pre_repair_word_count": 229,
+    "pre_repair_lead_word_count": 37,
+    "post_repair_word_count": 237,
+    "post_repair_lead_word_count": 37,
+    "selected_source_words_at_repair": 368,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 368,
+    "source_blocks": 4,
+    "repair_added_word_count": 8,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 237 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:d55ac81e38",
+      "2:BBC World:d399f1b9df",
+      "3:HuffPost:cb7563fef6",
+      "4:TRT World:a40905d0a8"
+    ],
+    "final_issues": [
+      "content too short: 237 words"
+    ],
+    "recovered": false
+  }
+}
