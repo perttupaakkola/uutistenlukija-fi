@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T01:11:15.132303+00:00",
+  "digest": "0c0bebb573",
+  "packet": {
+    "packet_id": "20260609T011115Z_0c0bebb573",
+    "created_at": "2026-06-09T01:11:15Z",
+    "headline_seed": "Yli 100 datakeskusta tulossa Suomeen – Ei ihme: 4 mittarilla Suomi on erinomainen paikka niille",
+    "description_seed": "Maailmalla on käynnissä poikkeuksellinen datakeskusinvestointien aalto. Suomi on datakeskuksille ihanteellinen sijoituspaikka, koska tarjolla on uusiutuvaa ja edullista sähköä. Viileä ilmastomme on etu jäähdytyksessä ja hukkalämpö voidaan ohjata kaukolämpöverkkoon.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/a7530236-93df-4a72-b3ef-1d529f28a229",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/a7530236-93df-4a72-b3ef-1d529f28a229"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Yli 100 datakeskusta tulossa Suomeen – Ei ihme: 4 mittarilla Suomi on erinomainen paikka niille"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Maailmalla on käynnissä poikkeuksellinen datakeskusinvestointien aalto. Suomi on datakeskuksille ihanteellinen sijoituspaikka, koska tarjolla on uusiutuvaa ja edullista sähköä. Viileä ilmastomme on etu jäähdytyksessä ja hukkalämpö voidaan ohjata kaukolämpöverkkoon.",
+        "word_count": 28,
+        "keyword_overlap": 20,
+        "strong_overlap": 18
+      }
+    ],
+    "source_text": "Maailmalla on käynnissä poikkeuksellinen datakeskusinvestointien aalto. Suomi on datakeskuksille ihanteellinen sijoituspaikka, koska tarjolla on uusiutuvaa ja edullista sähköä. Viileä ilmastomme on etu jäähdytyksessä ja hukkalämpö voidaan ohjata kaukolämpöverkkoon.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 56,
+      "selected_blocks": 1,
+      "selected_source_words": 28,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Yli 100 datakeskusta tulossa Suomeen – Ei ihme: 4 mittarilla Suomi on erinomainen paikka niille",
+      "description": "Maailmalla on käynnissä poikkeuksellinen datakeskusinvestointien aalto. Suomi on datakeskuksille ihanteellinen sijoituspaikka, koska tarjolla on uusiutuvaa ja edullista sähköä. Viileä ilmastomme on etu jäähdytyksessä ja hukkalämpö voidaan ohjata kaukolämpöverkkoon.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Yli 100 datakeskusta tulossa Suomeen – Ei ihme: 4 mittarilla Suomi on erinomainen paikka niille",
+    "description": "Maailmalla on käynnissä poikkeuksellinen datakeskusinvestointien aalto. Suomi on datakeskuksille ihanteellinen sijoituspaikka, koska tarjolla on uusiutuvaa ja edullista sähköä. Viileä ilmastomme on etu jäähdytyksessä ja hukkalämpö voidaan ohjata kaukolämpöverkkoon.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/a7530236-93df-4a72-b3ef-1d529f28a229",
+    "published": "2026-06-09T01:03:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "44b545d88228724be728e1492da75bad",
+    "_url_hash": "2be4940c703d89268494fb46da938f68f91bcdbd9f75b49c0a1c68ea3e8694e4",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Maailmalla on käynnissä poikkeuksellinen datakeskusinvestointien aalto. Suomi on datakeskuksille ihanteellinen sijoituspaikka, koska tarjolla on uusiutuvaa ja edullista sähköä. Viileä ilmastomme on etu jäähdytyksessä ja hukkalämpö voidaan ohjata kaukolämpöverkkoon.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-09T01:13:21.185671+00:00",
+  "failure": "Lähdeaineisto on vain 28 sanaa eikä tue vähintään 250 sanan julkaistavaa artikkelia ilman täydennyksiä tai keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260609T011115Z_0c0bebb573\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on vain 28 sanaa eikä tue vähintään 250 sanan julkaistavaa artikkelia ilman täydennyksiä tai keksittyjä tietoja.\"}"
+}
