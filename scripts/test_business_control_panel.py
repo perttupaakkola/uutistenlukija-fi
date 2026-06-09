@@ -107,6 +107,48 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(set(queues), {"staged/failed"})
         self.assertEqual(queues["staged/failed"]["count"], 1)
 
+    def test_coordination_summary_reads_workspace_linear_mirror(self) -> None:
+        """Business control panel should expose the live OpenClaw/Linear mirror, not only project-local placeholders."""
+        now = datetime(2026, 6, 9, 6, 30, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace = Path(tmp) / "workspace"
+            project = workspace / "projects" / "uutistenlukija"
+            project.mkdir(parents=True)
+            (workspace / "TASKBOARD.md").write_text(
+                "# TASKBOARD.md - Linear OPE mirror/cache\n"
+                "Updated: 2026-06-09T06:20:16+00:00\n"
+                "Linear OPE is authoritative. This file is a cache/recovery mirror only.\n"
+                "- **OPE-9** — Prove pull loop\n"
+                "- **OPE-163** — Restore X distribution\n",
+                encoding="utf-8",
+            )
+            (workspace / "agent-health.json").write_text(
+                '{'
+                '"updatedAt":"2026-06-09T06:20:16+00:00",'
+                '"linearOpenIssues":['
+                '{"identifier":"OPE-9","title":"Prove pull loop","state":"In Progress","stateType":"started","labels":["lane:automation","owner:felix","verification-required"],"updatedAt":"2026-06-09T06:20:08.442Z"},'
+                '{"identifier":"OPE-163","title":"Restore approval-gated X distribution","state":"Todo","stateType":"unstarted","labels":["blocked","needs:approval","needs:perttu","lane:growth","owner:iris"],"updatedAt":"2026-06-07T09:57:34.405Z"}'
+                '],'
+                '"latestEvidence":{"ownerLaneLabelAudit":{"ok":true,"checkedAt":"2026-06-09T06:20:16+00:00","checkedCount":2,"missingLabelCount":0}},'
+                '"agents":{"felix":{"status":"linear_reconciled","state":"coordinating","linearIssue":"OPE-9","lastCheck":"2026-06-09T06:20:16+00:00","currentTask":"Keep OPE-9 open"}}'
+                '}',
+                encoding="utf-8",
+            )
+
+            with patch.object(panel, "PROJECT_DIR", project):
+                coordination = panel.local_coordination_placeholders(now)
+
+        self.assertTrue(coordination["items"]["taskboard"]["available"])
+        self.assertTrue(coordination["items"]["agent_health"]["available"])
+        self.assertEqual(coordination["linear_open_issue_count"], 2)
+        self.assertEqual(coordination["active_issue_ids"], ["OPE-9", "OPE-163"])
+        self.assertEqual(coordination["blocked_issue_ids"], ["OPE-163"])
+        self.assertEqual(coordination["needs_approval_issue_ids"], ["OPE-163"])
+        self.assertTrue(coordination["assignment_coverage_ok"])
+        self.assertEqual(coordination["owner_issue_counts"], {"owner:felix": 1, "owner:iris": 1})
+        self.assertEqual(coordination["items"]["taskboard"]["path"], "workspace:TASKBOARD.md")
+        self.assertEqual(coordination["items"]["agent_health"]["summary"]["agents"]["felix"]["linear_issue"], "OPE-9")
+
 
 if __name__ == "__main__":
     unittest.main()

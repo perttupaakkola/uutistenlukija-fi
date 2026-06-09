@@ -1,19 +1,19 @@
 {
   "analytics": {
     "freshness": {
-      "age_minutes": 0.0,
+      "age_minutes": 8.9,
       "blocked_by": null,
-      "checked_at": "2026-06-03T10:02:08+00:00",
+      "checked_at": "2026-06-09T06:15:04+00:00",
       "daily_report": {
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 2,
+          "daily_pageview_rows": 1,
           "search_console_top_queries": 10,
           "top_pages_7d": 10,
           "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-06-03T10:02:08+00:00",
+        "evidence_at": "2026-06-09T06:15:04+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
@@ -25,10 +25,10 @@
         "superseded_by_fresh_validation": false
       },
       "search_console": {
-        "age_hours": 3.54,
+        "age_hours": 23.75,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-06-03T06:30:01+00:00",
+        "evidence_at": "2026-06-08T06:30:01+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -42,26 +42,25 @@
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 2,
+          "daily_pageview_rows": 1,
           "search_console_top_queries": 10,
           "top_pages_7d": 10,
           "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-06-03T10:02:08+00:00",
+        "evidence_at": "2026-06-09T06:15:04+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
       },
       "daily_traffic_log": {
-        "age_minutes": 182.1,
+        "age_minutes": 1403.9,
         "exists": true,
-        "status": "error_seen",
-        "superseded_by_freshness_status": true
+        "status": "log_present"
       },
       "reason": "fresh GA4 validation artifact present",
       "status": "fresh",
       "weekly_metrics_log": {
-        "age_minutes": 3062.1,
+        "age_minutes": 1403.8,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -69,24 +68,24 @@
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 0.2,
+        "age_minutes": 1343.9,
         "data_source": "google_search_console",
-        "generated_at": "2026-06-03T10:01:54.953287Z",
+        "generated_at": "2026-06-08T08:00:01.634769Z",
         "source": "static/api/ctr-gap-report.json",
-        "total_gaps_found": 1
+        "total_gaps_found": 3
       },
       "fetch_log": {
-        "age_minutes": 212.1,
+        "age_minutes": 1433.9,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
       },
       "reason": "fresh Search Console validation artifact present",
       "search_console_report": {
-        "age_hours": 3.54,
+        "age_hours": 23.75,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-06-03T06:30:01+00:00",
+        "evidence_at": "2026-06-08T06:30:01+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -97,47 +96,47 @@
   },
   "category_drift": {
     "alerts": [
-      "Kotimaa: 30.6% (+5.6% over target 25%)",
-      "Talous: 10.4% (-9.6% under target 20%)",
-      "Ulkomaat: 27.3% (+7.3% over target 20%)"
+      "Kotimaa: 31.1% (+6.1% over target 25%)",
+      "Talous: 10.3% (-9.7% under target 20%)",
+      "Ulkomaat: 27.1% (+7.1% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 829,
-        "delta": 5.6,
-        "pct": 30.6,
+        "count": 893,
+        "delta": 6.1,
+        "pct": 31.1,
         "status": "over",
         "target_pct": 25
       },
       {
         "category": "Kulttuuri",
         "count": 68,
-        "delta": -4.5,
-        "pct": 2.5,
+        "delta": -4.6,
+        "pct": 2.4,
         "status": "ok",
         "target_pct": 7
       },
       {
         "category": "Talous",
-        "count": 280,
-        "delta": -9.6,
-        "pct": 10.4,
+        "count": 297,
+        "delta": -9.7,
+        "pct": 10.3,
         "status": "under",
         "target_pct": 20
       },
       {
         "category": "Teknologia",
-        "count": 398,
-        "delta": -0.3,
-        "pct": 14.7,
+        "count": 433,
+        "delta": 0.1,
+        "pct": 15.1,
         "status": "ok",
         "target_pct": 15
       },
       {
         "category": "Tiede",
-        "count": 179,
+        "count": 190,
         "delta": 3.6,
         "pct": 6.6,
         "status": "ok",
@@ -145,41 +144,177 @@
       },
       {
         "category": "Ulkomaat",
-        "count": 738,
-        "delta": 7.3,
-        "pct": 27.3,
+        "count": 778,
+        "delta": 7.1,
+        "pct": 27.1,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
-        "count": 213,
-        "delta": -2.1,
-        "pct": 7.9,
+        "count": 217,
+        "delta": -2.5,
+        "pct": 7.5,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-06-03T07:30:01.573879+00:00",
+    "generated_at": "2026-06-08T07:30:01.585010+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 2705
+    "total_articles": 2876
   },
   "content": {
-    "article_count_local": 2709,
-    "last_publish_age_minutes": 24.0,
-    "last_publish_at": "2026-06-03T09:38:06.888979Z",
+    "article_count_local": 2911,
+    "last_publish_age_minutes": 5.8,
+    "last_publish_at": "2026-06-09T06:18:07.669538Z",
     "latest_article": {
       "category": "Kotimaa",
-      "slug": "2026-06-03-sm-liigan-ensi-kaudelle-vahvistui-poikkeuksellisen-raskas-ru",
-      "title": "SM-liigan ensi kaudelle vahvistui poikkeuksellisen raskas runkosarja"
+      "slug": "2026-06-09-karkkila-laskee-omakotitonttien-hintoja-rajusti",
+      "title": "Karkkila laskee omakotitonttien hintoja rajusti"
     },
-    "published_last_24h_local": 27,
+    "published_last_24h_local": 37,
     "source": "content/posts frontmatter"
   },
   "coordination": {
+    "active_issue_ids": [
+      "OPE-9",
+      "OPE-163",
+      "OPE-167",
+      "OPE-169"
+    ],
+    "assignment_coverage_ok": true,
+    "blocked_issue_ids": [
+      "OPE-163"
+    ],
     "items": {
       "agent_health": {
-        "available": false
+        "age_minutes": 3.0,
+        "available": true,
+        "path": "workspace:agent-health.json",
+        "size_bytes": 19964,
+        "summary": {
+          "active_issue_ids": [
+            "OPE-9",
+            "OPE-163",
+            "OPE-167",
+            "OPE-169"
+          ],
+          "agents": {
+            "felix": {
+              "current_task": "Keep OPE-9 open for pull-loop hardening.",
+              "last_check": "2026-06-09T06:20:55+00:00",
+              "linear_issue": "OPE-9",
+              "state": "coordinating",
+              "status": "linear_reconciled"
+            },
+            "max": {
+              "current_task": "Maintain watchdog-filtered Linear OPE mirrors.",
+              "last_check": "2026-06-09T06:20:55+00:00",
+              "linear_issue": "OPE-163",
+              "state": "ops",
+              "status": "assigned"
+            }
+          },
+          "blocked_issue_ids": [
+            "OPE-163"
+          ],
+          "issue_summaries": [
+            {
+              "blockers": [],
+              "identifier": "OPE-9",
+              "lanes": [
+                "lane:automation",
+                "lane:coordination"
+              ],
+              "owners": [
+                "owner:felix"
+              ],
+              "state": "In Progress",
+              "state_type": "started",
+              "title": "Prove and harden 24/7 Linear pull loop for all agents",
+              "updated_at": "2026-06-09T06:20:08.442Z"
+            },
+            {
+              "blockers": [
+                "blocked",
+                "needs:approval",
+                "needs:perttu"
+              ],
+              "identifier": "OPE-163",
+              "lanes": [
+                "lane:automation",
+                "lane:growth",
+                "lane:marketing",
+                "lane:social"
+              ],
+              "owners": [
+                "owner:alex",
+                "owner:iris",
+                "owner:max"
+              ],
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Restore approval-gated X article distribution for Uutistenlukija",
+              "updated_at": "2026-06-07T09:57:34.405Z"
+            },
+            {
+              "blockers": [],
+              "identifier": "OPE-167",
+              "lanes": [
+                "lane:growth",
+                "lane:seo"
+              ],
+              "owners": [
+                "owner:iris"
+              ],
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Measure OPE-161 post-recrawl GSC CTR lift",
+              "updated_at": "2026-06-09T02:19:54.275Z"
+            },
+            {
+              "blockers": [],
+              "identifier": "OPE-169",
+              "lanes": [
+                "lane:automation",
+                "lane:ops"
+              ],
+              "owners": [
+                "owner:max"
+              ],
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Retire stale OPE reconciliation artifact retention debt",
+              "updated_at": "2026-06-09T04:19:35.354Z"
+            }
+          ],
+          "lane_issue_counts": {
+            "lane:automation": 3,
+            "lane:coordination": 1,
+            "lane:growth": 2,
+            "lane:marketing": 1,
+            "lane:ops": 1,
+            "lane:seo": 1,
+            "lane:social": 1
+          },
+          "needs_approval_issue_ids": [
+            "OPE-163"
+          ],
+          "open_issue_count": 4,
+          "owner_issue_counts": {
+            "owner:alex": 1,
+            "owner:felix": 1,
+            "owner:iris": 2,
+            "owner:max": 2
+          },
+          "owner_lane_label_audit": {
+            "checked_at": "2026-06-09T06:20:55+00:00",
+            "checked_count": 4,
+            "missing_label_count": 0,
+            "ok": true
+          },
+          "updated_at": "2026-06-09T06:20:55+00:00"
+        }
       },
       "autonomy_state": {
         "available": false
@@ -188,12 +323,47 @@
         "available": false
       },
       "taskboard": {
-        "available": false
+        "age_minutes": 3.0,
+        "available": true,
+        "path": "workspace:TASKBOARD.md",
+        "size_bytes": 2756,
+        "summary": {
+          "active_issue_ids": [
+            "OPE-9",
+            "OPE-163",
+            "OPE-167",
+            "OPE-169"
+          ],
+          "linear_authoritative": true,
+          "readable": true,
+          "updated_at": "2026-06-09T06:20:55+00:00"
+        }
       }
     },
-    "source": "local placeholder files only; Linear API not queried"
+    "lane_issue_counts": {
+      "lane:automation": 3,
+      "lane:coordination": 1,
+      "lane:growth": 2,
+      "lane:marketing": 1,
+      "lane:ops": 1,
+      "lane:seo": 1,
+      "lane:social": 1
+    },
+    "linear_open_issue_count": 4,
+    "needs_approval_issue_ids": [
+      "OPE-163"
+    ],
+    "owner_issue_counts": {
+      "owner:alex": 1,
+      "owner:felix": 1,
+      "owner:iris": 2,
+      "owner:max": 2
+    },
+    "safe_public": true,
+    "source": "workspace Linear mirror/cache files; Linear API not queried by this public JSON generator",
+    "workspace_path": "workspace:."
   },
-  "generated_at": "2026-06-03T10:02:08.196709Z",
+  "generated_at": "2026-06-09T06:23:55.141684Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -224,28 +394,28 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 27,
+      "article_count": 37,
       "article_count_source": "content/posts frontmatter",
       "failure": 0,
       "generated_article_count": 0,
-      "published_article_count_local": 27,
+      "published_article_count_local": 37,
       "runs_total": 144,
       "skipped": 0,
       "success": 144,
       "top_error_reasons": []
     },
-    "last_run_age_minutes": 2.0,
+    "last_run_age_minutes": 3.8,
     "last_run_article_count": 0,
-    "last_run_at": "2026-06-03T10:00:08.714946Z",
+    "last_run_at": "2026-06-09T06:20:08.590202Z",
     "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-06-03T04:48:05.940794+00:00",
+        "last_published_ts": "2026-06-09T06:18:07.669538+00:00",
         "publish_rate": 0,
-        "published": 30,
-        "rejected": 3
+        "published": 37,
+        "rejected": 10
       },
       "feeds": {
         "disabled": 0,
@@ -255,17 +425,18 @@
         "stale_names": [],
         "total": 40
       },
-      "generated_at": "2026-06-03T04:49:04+00:00",
+      "generated_at": "2026-06-09T06:19:23+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "central unsourced number in ti": 3,
-        "language borderline Finnish si": 2,
+        "central unsourced number in ti": 8,
+        "keyword_stuffing": 2,
+        "language borderline Finnish si": 3,
         "length under target (250 words": 1,
-        "length under target (252 words": 1,
-        "length under target (253 words": 1,
-        "missing: image": 3,
-        "unsourced numbers": 3
+        "length under target (262 words": 2,
+        "length under target (275 words": 1,
+        "missing: image": 10,
+        "unsourced numbers": 8
       },
       "runs": {
         "error": 0,
@@ -277,24 +448,24 @@
       "status": "ok",
       "trending": [
         [
-          "mukaansa",
-          24
+          "apple",
+          31
         ],
         [
           "jälkeen",
-          24
+          28
         ],
         [
           "prosenttia",
-          22
+          27
         ],
         [
-          "samalla",
-          16
+          "vuoden",
+          26
         ],
         [
-          "vaikka",
-          16
+          "aikana",
+          23
         ]
       ]
     },
@@ -303,25 +474,25 @@
   "queues": {
     "queues": {
       "staged/failed": {
-        "count": 337,
-        "newest_item_age_minutes": 7.0,
-        "oldest_item_age_minutes": 4338.9
+        "count": 958,
+        "newest_item_age_minutes": 20.7,
+        "oldest_item_age_minutes": 12760.7
       },
       "staged/published": {
-        "count": 957,
-        "newest_item_age_minutes": 313.1,
-        "oldest_item_age_minutes": 46833.7
+        "count": 1117,
+        "newest_item_age_minutes": 4.5,
+        "oldest_item_age_minutes": 55255.5
       },
-      "staged/ready": {
+      "staged/writing": {
         "count": 1,
-        "newest_item_age_minutes": 0.8,
-        "oldest_item_age_minutes": 0.8
+        "newest_item_age_minutes": 2532.6,
+        "oldest_item_age_minutes": 2532.6
       }
     },
     "source": "pipeline/queues/*.json file counts only"
   },
   "safe_public": true,
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "site": "uutistenlukija.fi",
   "status": "ok"
 }

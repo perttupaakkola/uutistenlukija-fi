@@ -501,26 +501,196 @@ def monetization_status() -> dict[str, Any]:
         },
     }
 
+def inferred_workspace_dir() -> Path:
+    """Return the OpenClaw workspace root for a project checkout."""
+    if PROJECT_DIR.parent.name == "projects":
+        return PROJECT_DIR.parent.parent
+    return PROJECT_DIR
+
+
+def display_path(path: Path) -> str:
+    """Expose non-secret operator paths without absolute home details."""
+    workspace_dir = inferred_workspace_dir()
+    for label, root in (("project", PROJECT_DIR), ("workspace", workspace_dir)):
+        try:
+            return f"{label}:{path.relative_to(root)}"
+        except ValueError:
+            continue
+    return path.name
+
+
+def labels_from_issue(issue: dict[str, Any]) -> list[str]:
+    raw_labels = issue.get("labels") or []
+    labels: list[str] = []
+    if isinstance(raw_labels, list):
+        for label in raw_labels:
+            if isinstance(label, str):
+                labels.append(label)
+            elif isinstance(label, dict):
+                value = label.get("name") or label.get("label")
+                if value:
+                    labels.append(str(value))
+    return labels
+
+
+def summarize_agent_health(data: dict[str, Any]) -> dict[str, Any]:
+    raw_issues = data.get("linearOpenIssues")
+    issues = raw_issues if isinstance(raw_issues, list) else []
+    issue_summaries: list[dict[str, Any]] = []
+    owner_counts: Counter[str] = Counter()
+    lane_counts: Counter[str] = Counter()
+    blocked_ids: list[str] = []
+    needs_approval_ids: list[str] = []
+    active_issue_ids: list[str] = []
+
+    for issue in issues:
+        if not isinstance(issue, dict):
+            continue
+        identifier = str(issue.get("identifier") or "").strip()
+        if identifier:
+            active_issue_ids.append(identifier)
+        labels = labels_from_issue(issue)
+        owners = sorted(label for label in labels if label.startswith("owner:"))
+        lanes = sorted(label for label in labels if label.startswith("lane:"))
+        blockers = sorted(label for label in labels if label == "blocked" or label.startswith("needs:"))
+        for owner in owners:
+            owner_counts[owner] += 1
+        for lane in lanes:
+            lane_counts[lane] += 1
+        if "blocked" in labels and identifier:
+            blocked_ids.append(identifier)
+        if any(label in {"needs:approval", "needs:perttu"} for label in labels) and identifier:
+            needs_approval_ids.append(identifier)
+        issue_summaries.append({
+            "identifier": identifier or None,
+            "title": sanitize_reason(issue.get("title")),
+            "state": issue.get("state"),
+            "state_type": issue.get("stateType"),
+            "owners": owners,
+            "lanes": lanes,
+            "blockers": blockers,
+            "updated_at": issue.get("updatedAt"),
+        })
+
+    owner_lane_audit = {}
+    raw_latest_evidence = data.get("latestEvidence")
+    latest_evidence = raw_latest_evidence if isinstance(raw_latest_evidence, dict) else {}
+    raw_owner_lane_audit = latest_evidence.get("ownerLaneLabelAudit")
+    raw_audit = raw_owner_lane_audit if isinstance(raw_owner_lane_audit, dict) else {}
+    if raw_audit:
+        owner_lane_audit = {
+            "ok": raw_audit.get("ok"),
+            "checked_at": raw_audit.get("checkedAt"),
+            "checked_count": raw_audit.get("checkedCount"),
+            "missing_label_count": raw_audit.get("missingLabelCount"),
+        }
+
+    agents_summary: dict[str, Any] = {}
+    raw_agents = data.get("agents")
+    agents = raw_agents if isinstance(raw_agents, dict) else {}
+    for agent_id, agent in agents.items():
+        if not isinstance(agent, dict):
+            continue
+        agents_summary[str(agent_id)] = {
+            "status": agent.get("status"),
+            "state": agent.get("state"),
+            "linear_issue": agent.get("linearIssue"),
+            "last_check": agent.get("lastCheck"),
+            "current_task": sanitize_reason(agent.get("currentTask")) if agent.get("currentTask") else None,
+        }
+
+    return {
+        "updated_at": data.get("updatedAt"),
+        "open_issue_count": len(issue_summaries),
+        "active_issue_ids": active_issue_ids,
+        "blocked_issue_ids": blocked_ids,
+        "needs_approval_issue_ids": needs_approval_ids,
+        "owner_issue_counts": dict(sorted(owner_counts.items())),
+        "lane_issue_counts": dict(sorted(lane_counts.items())),
+        "owner_lane_label_audit": owner_lane_audit,
+        "issue_summaries": issue_summaries[:12],
+        "agents": agents_summary,
+    }
+
+
+def summarize_taskboard(path: Path) -> dict[str, Any]:
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return {"readable": False}
+    updated = None
+    active_ids: list[str] = []
+    in_active_section = False
+    for line in text.splitlines():
+        if line.startswith("Updated:"):
+            updated = line.split(":", 1)[1].strip()
+        if line.startswith("## Active Linear OPE issues"):
+            in_active_section = True
+            continue
+        if line.startswith("## ") and in_active_section:
+            in_active_section = False
+        if not in_active_section:
+            continue
+        match = re.search(r"\*\*(OPE-\d+)\*\*", line)
+        if match:
+            active_ids.append(match.group(1))
+    return {
+        "readable": True,
+        "updated_at": updated,
+        "active_issue_ids": active_ids[:20],
+        "linear_authoritative": "Linear OPE is authoritative" in text,
+    }
+
+
 def local_coordination_placeholders(now: datetime) -> dict[str, Any]:
+    workspace_dir = inferred_workspace_dir()
     candidates = {
-        "taskboard": PROJECT_DIR / "TASKBOARD.md",
-        "agent_health": PROJECT_DIR / "agent-health.json",
-        "autonomy_state": PROJECT_DIR / "autonomy-state.json",
-        "linear_cache": PROJECT_DIR / ".linear" / "issues.json",
+        "taskboard": [workspace_dir / "TASKBOARD.md", PROJECT_DIR / "TASKBOARD.md"],
+        "agent_health": [workspace_dir / "agent-health.json", PROJECT_DIR / "agent-health.json"],
+        "autonomy_state": [workspace_dir / "autonomy-state.json", PROJECT_DIR / "autonomy-state.json"],
+        "linear_cache": [workspace_dir / ".linear" / "issues.json", PROJECT_DIR / ".linear" / "issues.json"],
     }
     out: dict[str, Any] = {}
-    for name, path in candidates.items():
-        if path.exists():
-            try:
-                mtime = datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
-                size = path.stat().st_size
-            except OSError:
-                mtime, size = None, None
-            out[name] = {"available": True, "path": str(path.relative_to(PROJECT_DIR)), "age_minutes": age_minutes(mtime, now), "size_bytes": size}
-        else:
+    agent_health_summary: dict[str, Any] = {}
+    for name, paths in candidates.items():
+        path = next((candidate for candidate in paths if candidate.exists()), None)
+        if path is None:
             out[name] = {"available": False}
+            continue
+        try:
+            stat = path.stat()
+            mtime = datetime.fromtimestamp(stat.st_mtime, timezone.utc)
+            size = stat.st_size
+        except OSError:
+            mtime, size = None, None
+        item: dict[str, Any] = {
+            "available": True,
+            "path": display_path(path),
+            "age_minutes": age_minutes(mtime, now),
+            "size_bytes": size,
+        }
+        if name == "taskboard":
+            item["summary"] = summarize_taskboard(path)
+        elif name == "agent_health":
+            data = safe_read_json(path)
+            if isinstance(data, dict):
+                agent_health_summary = summarize_agent_health(data)
+                item["summary"] = agent_health_summary
+            else:
+                item["summary"] = {"readable": False}
+        out[name] = item
+
     return {
-        "source": "local placeholder files only; Linear API not queried",
+        "source": "workspace Linear mirror/cache files; Linear API not queried by this public JSON generator",
+        "safe_public": True,
+        "workspace_path": display_path(workspace_dir),
+        "linear_open_issue_count": agent_health_summary.get("open_issue_count"),
+        "active_issue_ids": agent_health_summary.get("active_issue_ids", []),
+        "blocked_issue_ids": agent_health_summary.get("blocked_issue_ids", []),
+        "needs_approval_issue_ids": agent_health_summary.get("needs_approval_issue_ids", []),
+        "assignment_coverage_ok": (agent_health_summary.get("owner_lane_label_audit") or {}).get("ok"),
+        "owner_issue_counts": agent_health_summary.get("owner_issue_counts", {}),
+        "lane_issue_counts": agent_health_summary.get("lane_issue_counts", {}),
         "items": out,
     }
 
@@ -556,7 +726,7 @@ def build_panel(now: datetime | None = None) -> dict[str, Any]:
     if published_last is None and not pipeline.get("metrics_rows_total"):
         status = "unknown"
     return {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "site": "uutistenlukija.fi",
         "generated_at": iso(now),
         "status": status,
