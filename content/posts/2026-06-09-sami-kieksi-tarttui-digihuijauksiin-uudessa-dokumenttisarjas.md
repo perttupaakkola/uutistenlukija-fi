@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/digihuijatut-dokumenttisarjan-ohjaaja-sami-kieksi-ajattelin-etta-koulutustausta-suojaa-huijaukselta-olin-vaarassa/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
