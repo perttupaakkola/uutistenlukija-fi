@@ -1,0 +1,215 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T10:51:33.793012+00:00",
+  "digest": "9c4d087119",
+  "packet": {
+    "packet_id": "20260609T105133Z_9c4d087119",
+    "created_at": "2026-06-09T10:51:33Z",
+    "headline_seed": "Tickets for Iran fans revoked, says federation",
+    "description_seed": "Iran's football federation says its allocation of tickets for the group stage of the World Cup has been revoked just days before the tournament.",
+    "link": "https://www.bbc.com/sport/football/articles/c9q2vrdx0ewo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "ABC (Australian Broadcasting Corporation)",
+      "Blue Mountains Gazette"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/sport/football/articles/c9q2vrdx0ewo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tickets for Iran fans revoked, says federation"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Iran are playing at the World Cup for the seventh time after coming through Asian Football Confederation qualifying Iran's allocation of fan tickets for the group stage of the World Cup has been revoked just days before the start of the tournament, says the country's football federation. The World Cup, co-hosted by Canada, Mexico and the United States, begins on Thursday, with Iran scheduled to play New Zealand on 15 June and Belgium on 21 June - both in Los Angeles - before facing Egypt in Seattle on 26 June. Iran's governing body says Fifa regulations state each federation involved in the World Cup receives 8% of the tickets for each of their matches, to distribute to supporters.",
+        "word_count": 118,
+        "keyword_overlap": 15,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Iran's football federation says its allocation of tickets for the group stage of the World Cup has been revoked just days before the tournament.",
+        "word_count": 24,
+        "keyword_overlap": 15,
+        "strong_overlap": 7
+      },
+      {
+        "source": "ABC (Australian Broadcasting Corporation)",
+        "source_type": "research",
+        "text": "Iranian football fans gave their players a send-off in Tehran last week. (Reuters: Majid Asgaripour/WANA ) Iran's football federation (FFIRI) says its ticket allocation for the FIFA World Cup has been pulled just days before the tournament kicks off. The FFIRI said the 8 per cent quota of tickets allocated to Iran has been revoked meaning \"there is no possibility to distribute tickets to fans through the Federation\", multiple Iranian news agencies said. \"This is despite the fact that many Iranian football fans, relying on the officially announced process, had already made the necessary plans to attend the matches,\" the FFIRI added in a statement. \"There is no possibility of providing even a single ticket to the national team fans through the Federation,\" Fars reported, citing the Iranian football federation.",
+        "word_count": 130,
+        "keyword_overlap": 14,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Blue Mountains Gazette",
+        "source_type": "research",
+        "text": "FIFA has revoked the ticket allocation for Iran fans at the team's three World Cup games in the United States, the national soccer federation has claimed. Each federation for the 48 teams taking part is entitled to receive and distribute eight per cent of stadium capacity at the World Cup, adding up to several thousand tickets per game. Just days before Iran opens its World Cup campaign — on June 15 at the Los Angeles Rams' stadium against New Zealand — the federation claimed in a statement reported by semi-official state media that it was now unable to provide any tickets to its supporters. The claim adds to the turmoil between Iranian soccer, FIFA and tournament co-host the US, which with Israel began military attacks on Iran on February 28.",
+        "word_count": 130,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Iran are playing at the World Cup for the seventh time after coming through Asian Football Confederation qualifying Iran's allocation of fan tickets for the group stage of the World Cup has been revoked just days before the start of the tournament, says the country's football federation. The World Cup, co-hosted by Canada, Mexico and the United States, begins on Thursday, with Iran scheduled to play New Zealand on 15 June and Belgium on 21 June - both in Los Angeles - before facing Egypt in Seattle on 26 June. Iran's governing body says Fifa regulations state each federation involved in the World Cup receives 8% of the tickets for each of their matches, to distribute to supporters.\n\nIran's football federation says its allocation of tickets for the group stage of the World Cup has been revoked just days before the tournament.\n\nIranian football fans gave their players a send-off in Tehran last week. (Reuters: Majid Asgaripour/WANA ) Iran's football federation (FFIRI) says its ticket allocation for the FIFA World Cup has been pulled just days before the tournament kicks off. The FFIRI said the 8 per cent quota of tickets allocated to Iran has been revoked meaning \"there is no possibility to distribute tickets to fans through the Federation\", multiple Iranian news agencies said. \"This is despite the fact that many Iranian football fans, relying on the officially announced process, had already made the necessary plans to attend the matches,\" the FFIRI added in a statement. \"There is no possibility of providing even a single ticket to the national team fans through the Federation,\" Fars reported, citing the Iranian football federation.\n\nFIFA has revoked the ticket allocation for Iran fans at the team's three World Cup games in the United States, the national soccer federation has claimed. Each federation for the 48 teams taking part is entitled to receive and distribute eight per cent of stadium capacity at the World Cup, adding up to several thousand tickets per game. Just days before Iran opens its World Cup campaign — on June 15 at the Los Angeles Rams' stadium against New Zealand — the federation claimed in a statement reported by semi-official state media that it was now unable to provide any tickets to its supporters. The claim adds to the turmoil between Iranian soccer, FIFA and tournament co-host the US, which with Israel began military attacks on Iran on February 28.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1006,
+      "selected_blocks": 4,
+      "selected_source_words": 402,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC (Australian Broadcasting Corporation)",
+        "Blue Mountains Gazette",
+        "Blue Mountains Gazette",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "ABC (Australian Broadcasting Corporation)",
+        "Blue Mountains Gazette"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tickets for Iran fans revoked, says federation",
+      "description": "Iran's football federation says its allocation of tickets for the group stage of the World Cup has been revoked just days before the tournament.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tickets for Iran fans revoked, says federation",
+    "description": "Iran's football federation says its allocation of tickets for the group stage of the World Cup has been revoked just days before the tournament.",
+    "link": "https://www.bbc.com/sport/football/articles/c9q2vrdx0ewo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-09T10:15:49+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e47045425708372ef952348e0d5416ed",
+    "_url_hash": "922c14741c7908e5b8c8f60541189bdb6726bcde50aba572a6e6cf75bbd81a1f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIran are playing at the World Cup for the seventh time after coming through Asian Football Confederation qualifying\n\nIran's allocation of fan tickets for the group stage of the World Cup has been revoked just days before the start of the tournament, says the country's football federation.\n\nThe World Cup, co-hosted by Canada, Mexico and the United States, begins on Thursday, with Iran scheduled to play New Zealand on 15 June and Belgium on 21 June - both in Los Angeles - before facing Egypt in Seattle on 26 June.\n\nIran's governing body says Fifa regulations state each federation involved in the World Cup receives 8% of the tickets for each of their matches, to distribute to supporters.\n\nIt added that it had already begun selling tickets but can no longer provide them to fans, some of whom have already made travel arrangements.\n\n\"Depriving Iranian supporters of access to their lawful and official allocation of tickets is an action contrary to the spirit of governing international competitions and the principle of equality among participating countries,\" the FFIRI statement said.\n\n\"This development raises serious questions about the interference of non-sporting and political considerations in the organisation of the world's biggest football event.\"\n\nThe FFIRI also called on Fifa \"to uphold the principles of neutrality, fairness, and established regulations\".\n\nThe flag Iranians are not allowed to wave at the World Cup\n\nIran's World Cup team lands in Mexico amid US visa row\n\nLast-minute visas and moving training camp: Iran's road to the World Cup\n\nIran's involvement in the World Cup has been plagued with uncertainty, linked to the ongoing war in the Middle East and related security concerns.\n\nOn 25 May, Iran moved their training base from Tucson, Arizona to the Mexican city of Tijuana, claiming the US were unwilling to host them.\n\nUnder the conditions of their visas, they will have to fly in and out of the United States on matchday for each of their three group games.\n\nLess than a fortnight later, on 6 June, they accused the US of denying visas to \"integral\" members of the national team's backroom staff, with 15 administrative officials denied entry.\n\nThe FFIRI had previously presented Fifa with a list of 10 conditions for their participation in the World Cup, including allowing players, coaches and officials who have completed military service with the Islamic Revolutionary Guard Corps (IRGC).\n\nUS secretary of state Marco Rubio has said Iran's players will be \n\n---\n\n[Lähde: ABC (Australian Broadcasting Corporation)]\nIranian football fans gave their players a send-off in Tehran last week. (Reuters: Majid Asgaripour/WANA )\n\nIran's football federation (FFIRI) says its ticket allocation for the FIFA World Cup has been pulled just days before the tournament kicks off.\n\nThe FFIRI said the 8 per cent quota of tickets allocated to Iran has been revoked meaning \"there is no possibility to distribute tickets to fans through the Federation\", multiple Iranian news agencies said.\n\n\"This is despite the fact that many Iranian football fans, relying on the officially announced process, had already made the necessary plans to attend the matches,\" the FFIRI added in a statement.\n\n\"There is no possibility of providing even a single ticket to the national team fans through the Federation,\" Fars reported, citing the Iranian football federation.\n\nEach participating federation at the World Cup receives 8% of the tickets for each of their matches to be allocated to fans according to their own criteria.\n\nIran's team arrived in Tijuana, Mexico early on Sunday, ahead of their three matches scheduled in the US.\n\nIran's football team arrived in Tijuana on Sunday. (Reuters: Victor Medina)\n\nCoach Amir Ghalenoei told FIFA that the team ideally would have arrived in Tijuana last week in order to adapt to the time difference.\n\n\"Normally, in tournaments like this, humanitarian and ethical considerations should come before technical matters, and I believe those considerations were not extended to us,\" he said after arriving at Tijuana airport.\n\nIranian defender Ehsan Hajsafi said the team has suffered \"very difficult circumstances\".\n\nThe ticket allocation being withdrawn comes just days after the US awarded visas to all the Iranian players on Friday.\n\nFor months, the Iranian team had issues getting their visas approved, which they were just 10 days before their first match.\n\nSeveral members of the Iranian squad were not given visas, including \"key managerial and administrative members\", according to Iran's football federation.\n\nIran's ambassador in Mexico, Abolfazl Pasandideh said 15 of the 70 members of the party who arrived in Tijuana on Sunday had not been given visas to enter the US.\n\nFIFA did not respond to a request for comment about the dispute.\n\nAn official with the US State Department said the Trump administration had issued \"the visas necessary for Iran to compete in the World Cup, including for athletes and necessary support staff\".\n\nThe official added: \"We will not allow the Iranian team to \n\n---\n\n[Lähde: Blue Mountains Gazette]\nFIFA has revoked the ticket allocation for Iran fans at the team's three World Cup games in the United States, the national soccer federation has claimed.\n\nEach federation for the 48 teams taking part is entitled to receive and distribute eight per cent of stadium capacity at the World Cup, adding up to several thousand tickets per game.\n\nJust days before Iran opens its World Cup campaign — on June 15 at the Los Angeles Rams' stadium against New Zealand — the federation claimed in a statement reported by semi-official state media that it was now unable to provide any tickets to its supporters.\n\nThe claim adds to the turmoil between Iranian soccer, FIFA and tournament co-host the US, which with Israel began military attacks on Iran on February 28.\n\nIran's team is now based in the Mexican border city of Tijuana instead of its pre-war plan to train in Tucson, Arizona.\n\nSome federation officials also have been denied visas to enter the US, where Iran also plays Belgium in Los Angeles on Ju...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-09T10:54:29.269999+00:00",
+  "payload": {
+    "packet_id": "20260609T105133Z_9c4d087119",
+    "title": "Iranin jalkapalloliitto: kannattajien MM-lippukiintiö on peruttu",
+    "summary": "Iranin jalkapalloliitto kertoo, että maan kannattajille tarkoitettu lippukiintiö jalkapallon MM-kisojen alkulohkon otteluihin on peruttu vain päiviä ennen turnauksen alkua.",
+    "content": "Iranin jalkapalloliitto kertoo, että maan kannattajille tarkoitettu lippukiintiö jalkapallon MM-kisojen alkulohkon otteluihin on peruttu vain päiviä ennen turnauksen alkua. Liiton mukaan se ei voi tämän vuoksi jakaa kannattajille lippuja Iranin kolmeen alkulohko-otteluun, jotka pelataan Yhdysvalloissa.\n\n## Liitto kertoo kiintiön poistuneen\n\nIranin jalkapalloliiton mukaan MM-kisojen sääntöjen perusteella jokaisella turnaukseen osallistuvalla maalla on oikeus saada ja jakaa kannattajilleen kahdeksan prosentin osuus kunkin ottelunsa lipuista. Käytännössä kiintiö tarkoittaa stadionin koosta riippuen useita tuhansia lippuja ottelua kohden.\n\nIranilaisliitto sanoo, että sen kahdeksan prosentin kiintiö on nyt peruttu. Liiton mukaan tämä merkitsee, ettei sillä ole mahdollisuutta toimittaa kannattajille lippuja virallisen jakelukanavan kautta. Iranilaismedioissa siteeratun liiton lausunnon mukaan monet kannattajat olivat jo tehneet matkasuunnitelmia virallisesti ilmoitetun prosessin perusteella.\n\nLiiton ilmoituksen mukaan tilanne koskee Iranin kaikkia kolmea alkulohko-ottelua. Farsin siteeraaman liiton kannan mukaan liitto ei pysty tarjoamaan maajoukkueen kannattajille edes yksittäistä lippua liiton kautta.\n\n## Iran pelaa alkulohkonsa Yhdysvalloissa\n\nJalkapallon MM-turnaus järjestetään Kanadassa, Meksikossa ja Yhdysvalloissa, ja se alkaa torstaina. Iran on mukana MM-kisoissa seitsemättä kertaa selvitettyään tiensä turnaukseen Aasian jalkapalloliiton karsintojen kautta.\n\nIranin ensimmäinen ottelu on Uutta-Seelantia vastaan 15. kesäkuuta Los Angelesissa. Toinen alkulohko-ottelu Belgiaa vastaan pelataan niin ikään Los Angelesissa 21. kesäkuuta. Lohkovaiheen viimeisessä ottelussaan Iran kohtaa Egyptin Seattlessa 26. kesäkuuta.\n\n## Ilmoitus tuli lähellä avausottelua\n\nIranilaiset kannattajat olivat lähdetietojen mukaan saattaneet joukkueen matkaan Teheranissa edellisellä viikolla. Lippukiintiötä koskeva ilmoitus tuli vain vähän ennen turnauksen käynnistymistä ja Iranin avausottelua Los Angelesissa.\n\nLähteiden mukaan väite lisää jännitteitä Iranin jalkapallon, Fifan ja turnauksen yhtenä isäntämaana toimivan Yhdysvaltojen välillä. Blue Mountains Gazetten mukaan taustalla on myös laajempi kuohunta, joka liittyy Yhdysvaltoihin ja Israeliin sekä 28. helmikuuta alkaneisiin sotilaallisiin iskuihin Iraniin.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Iran",
+      "jalkapallo",
+      "MM-kisat",
+      "FIFA",
+      "Yhdysvallat"
+    ],
+    "summary_bullets": [
+      "Iranin jalkapalloliitto sanoo kannattajien MM-lippukiintiön peruuntuneen.",
+      "Liiton mukaan kahdeksan prosentin kiintiötä ei voi enää jakaa kannattajille virallista reittiä.",
+      "Iran pelaa alkulohkon ottelunsa Los Angelesissa ja Seattlessa kesäkuussa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Artikkeli perustuu useisiin samansuuntaisiin lähdekatkelmiin. Muotoilu pitää keskeisen väitteen Iranin jalkapalloliiton ilmoituksena, koska päätöksen perusteita tai erillistä vahvistusta ei annettu paketissa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260609T105133Z_9c4d087119\",\n  \"title\": \"Iranin jalkapalloliitto: kannattajien MM-lippukiintiö on peruttu\",\n  \"summary\": \"Iranin jalkapalloliitto kertoo, että maan kannattajille tarkoitettu lippukiintiö jalkapallon MM-kisojen alkulohkon otteluihin on peruttu vain päiviä ennen turnauksen alkua.\",\n  \"content\": \"Iranin jalkapalloliitto kertoo, että maan kannattajille tarkoitettu lippukiintiö jalkapallon MM-kisojen alkulohkon otteluihin on peruttu vain päiviä ennen turnauksen alkua. Liiton mukaan se ei voi tämän vuoksi jakaa kannattajille lippuja Iranin kolmeen alkulohko-otteluun, jotka pelataan Yhdysvalloissa.\\n\\n## Liitto kertoo kiintiön poistuneen\\n\\nIranin jalkapalloliiton mukaan MM-kisojen sääntöjen perusteella jokaisella turnaukseen osallistuvalla maalla on oikeus saada ja jakaa kannattajilleen kahdeksan prosentin osuus kunkin ottelunsa lipuista. Käytännössä kiintiö tarkoittaa stadionin koosta riippuen useita tuhansia lippuja ottelua kohden.\\n\\nIranilaisliitto sanoo, että sen kahdeksan prosentin kiintiö on nyt peruttu. Liiton mukaan tämä merkitsee, ettei sillä ole mahdollisuutta toimittaa kannattajille lippuja virallisen jakelukanavan kautta. Iranilaismedioissa siteeratun liiton lausunnon mukaan monet kannattajat olivat jo tehneet matkasuunnitelmia virallisesti ilmoitetun prosessin perusteella.\\n\\nLiiton ilmoituksen mukaan tilanne koskee Iranin kaikkia kolmea alkulohko-ottelua. Farsin siteeraaman liiton kannan mukaan liitto ei pysty tarjoamaan maajoukkueen kannattajille edes yksittäistä lippua liiton kautta.\\n\\n## Iran pelaa alkulohkonsa Yhdysvalloissa\\n\\nJalkapallon MM-turnaus järjestetään Kanadassa, Meksikossa ja Yhdysvalloissa, ja se alkaa torstaina. Iran on mukana MM-kisoissa seitsemättä kertaa selvitettyään tiensä turnaukseen Aasian jalkapalloliiton karsintojen kautta.\\n\\nIranin ensimmäinen ottelu on Uutta-Seelantia vastaan 15. kesäkuuta Los Angelesissa. Toinen alkulohko-ottelu Belgiaa vastaan pelataan niin ikään Los Angelesissa 21. kesäkuuta. Lohkovaiheen viimeisessä ottelussaan Iran kohtaa Egyptin Seattlessa 26. kesäkuuta.\\n\\n## Ilmoitus tuli lähellä avausottelua\\n\\nIranilaiset kannattajat olivat lähdetietojen mukaan saattaneet joukkueen matkaan Teheranissa edellisellä viikolla. Lippukiintiötä koskeva ilmoitus tuli vain vähän ennen turnauksen käynnistymistä ja Iranin avausottelua Los Angelesissa.\\n\\nLähteiden mukaan väite lisää jännitteitä Iranin jalkapallon, Fifan ja turnauksen yhtenä isäntämaana toimivan Yhdysvaltojen välillä. Blue Mountains Gazetten mukaan taustalla on myös laajempi kuohunta, joka liittyy Yhdysvaltoihin ja Israeliin sekä 28. helmikuuta alkaneisiin sotilaallisiin iskuihin Iraniin.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Iran\",\n    \"jalkapallo\",\n    \"MM-kisat\",\n    \"FIFA\",\n    \"Yhdysvallat\"\n  ],\n  \"summary_bullets\": [\n    \"Iranin jalkapalloliitto sanoo kannattajien MM-lippukiintiön peruuntuneen.\",\n    \"Liiton mukaan kahdeksan prosentin kiintiötä ei voi enää jakaa kannattajille virallista reittiä.\",\n    \"Iran pelaa alkulohkon ottelunsa Los Angelesissa ja Seattlessa kesäkuussa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Artikkeli perustuu useisiin samansuuntaisiin lähdekatkelmiin. Muotoilu pitää keskeisen väitteen Iranin jalkapalloliiton ilmoituksena, koska päätöksen perusteita tai erillistä vahvistusta ei annettu paketissa.\"\n}",
+  "article": {
+    "title": "Iranin jalkapalloliitto: kannattajien MM-lippukiintiö on peruttu",
+    "description": "Iranin jalkapalloliitto kertoo, että maan kannattajille tarkoitettu lippukiintiö jalkapallon MM-kisojen alkulohkon otteluihin on peruttu vain päiviä ennen turnauksen alkua.",
+    "link": "https://www.bbc.com/sport/football/articles/c9q2vrdx0ewo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-09T10:15:49+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e47045425708372ef952348e0d5416ed",
+    "_url_hash": "922c14741c7908e5b8c8f60541189bdb6726bcde50aba572a6e6cf75bbd81a1f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nIran are playing at the World Cup for the seventh time after coming through Asian Football Confederation qualifying\n\nIran's allocation of fan tickets for the group stage of the World Cup has been revoked just days before the start of the tournament, says the country's football federation.\n\nThe World Cup, co-hosted by Canada, Mexico and the United States, begins on Thursday, with Iran scheduled to play New Zealand on 15 June and Belgium on 21 June - both in Los Angeles - before facing Egypt in Seattle on 26 June.\n\nIran's governing body says Fifa regulations state each federation involved in the World Cup receives 8% of the tickets for each of their matches, to distribute to supporters.\n\nIt added that it had already begun selling tickets but can no longer provide them to fans, some of whom have already made travel arrangements.\n\n\"Depriving Iranian supporters of access to their lawful and official allocation of tickets is an action contrary to the spirit of governing international competitions and the principle of equality among participating countries,\" the FFIRI statement said.\n\n\"This development raises serious questions about the interference of non-sporting and political considerations in the organisation of the world's biggest football event.\"\n\nThe FFIRI also called on Fifa \"to uphold the principles of neutrality, fairness, and established regulations\".\n\nThe flag Iranians are not allowed to wave at the World Cup\n\nIran's World Cup team lands in Mexico amid US visa row\n\nLast-minute visas and moving training camp: Iran's road to the World Cup\n\nIran's involvement in the World Cup has been plagued with uncertainty, linked to the ongoing war in the Middle East and related security concerns.\n\nOn 25 May, Iran moved their training base from Tucson, Arizona to the Mexican city of Tijuana, claiming the US were unwilling to host them.\n\nUnder the conditions of their visas, they will have to fly in and out of the United States on matchday for each of their three group games.\n\nLess than a fortnight later, on 6 June, they accused the US of denying visas to \"integral\" members of the national team's backroom staff, with 15 administrative officials denied entry.\n\nThe FFIRI had previously presented Fifa with a list of 10 conditions for their participation in the World Cup, including allowing players, coaches and officials who have completed military service with the Islamic Revolutionary Guard Corps (IRGC).\n\nUS secretary of state Marco Rubio has said Iran's players will be \n\n---\n\n[Lähde: ABC (Australian Broadcasting Corporation)]\nIranian football fans gave their players a send-off in Tehran last week. (Reuters: Majid Asgaripour/WANA )\n\nIran's football federation (FFIRI) says its ticket allocation for the FIFA World Cup has been pulled just days before the tournament kicks off.\n\nThe FFIRI said the 8 per cent quota of tickets allocated to Iran has been revoked meaning \"there is no possibility to distribute tickets to fans through the Federation\", multiple Iranian news agencies said.\n\n\"This is despite the fact that many Iranian football fans, relying on the officially announced process, had already made the necessary plans to attend the matches,\" the FFIRI added in a statement.\n\n\"There is no possibility of providing even a single ticket to the national team fans through the Federation,\" Fars reported, citing the Iranian football federation.\n\nEach participating federation at the World Cup receives 8% of the tickets for each of their matches to be allocated to fans according to their own criteria.\n\nIran's team arrived in Tijuana, Mexico early on Sunday, ahead of their three matches scheduled in the US.\n\nIran's football team arrived in Tijuana on Sunday. (Reuters: Victor Medina)\n\nCoach Amir Ghalenoei told FIFA that the team ideally would have arrived in Tijuana last week in order to adapt to the time difference.\n\n\"Normally, in tournaments like this, humanitarian and ethical considerations should come before technical matters, and I believe those considerations were not extended to us,\" he said after arriving at Tijuana airport.\n\nIranian defender Ehsan Hajsafi said the team has suffered \"very difficult circumstances\".\n\nThe ticket allocation being withdrawn comes just days after the US awarded visas to all the Iranian players on Friday.\n\nFor months, the Iranian team had issues getting their visas approved, which they were just 10 days before their first match.\n\nSeveral members of the Iranian squad were not given visas, including \"key managerial and administrative members\", according to Iran's football federation.\n\nIran's ambassador in Mexico, Abolfazl Pasandideh said 15 of the 70 members of the party who arrived in Tijuana on Sunday had not been given visas to enter the US.\n\nFIFA did not respond to a request for comment about the dispute.\n\nAn official with the US State Department said the Trump administration had issued \"the visas necessary for Iran to compete in the World Cup, including for athletes and necessary support staff\".\n\nThe official added: \"We will not allow the Iranian team to \n\n---\n\n[Lähde: Blue Mountains Gazette]\nFIFA has revoked the ticket allocation for Iran fans at the team's three World Cup games in the United States, the national soccer federation has claimed.\n\nEach federation for the 48 teams taking part is entitled to receive and distribute eight per cent of stadium capacity at the World Cup, adding up to several thousand tickets per game.\n\nJust days before Iran opens its World Cup campaign — on June 15 at the Los Angeles Rams' stadium against New Zealand — the federation claimed in a statement reported by semi-official state media that it was now unable to provide any tickets to its supporters.\n\nThe claim adds to the turmoil between Iranian soccer, FIFA and tournament co-host the US, which with Israel began military attacks on Iran on February 28.\n\nIran's team is now based in the Mexican border city of Tijuana instead of its pre-war plan to train in Tucson, Arizona.\n\nSome federation officials also have been denied visas to enter the US, where Iran also plays Belgium in Los Angeles on Ju...",
+    "research_source": "multi",
+    "summary": "Iranin jalkapalloliitto kertoo, että maan kannattajille tarkoitettu lippukiintiö jalkapallon MM-kisojen alkulohkon otteluihin on peruttu vain päiviä ennen turnauksen alkua.",
+    "content": "Iranin jalkapalloliitto kertoo, että maan kannattajille tarkoitettu lippukiintiö jalkapallon MM-kisojen alkulohkon otteluihin on peruttu vain päiviä ennen turnauksen alkua. Liiton mukaan se ei voi tämän vuoksi jakaa kannattajille lippuja Iranin kolmeen alkulohko-otteluun, jotka pelataan Yhdysvalloissa.\n\n## Liitto kertoo kiintiön poistuneen\n\nIranin jalkapalloliiton mukaan MM-kisojen sääntöjen perusteella jokaisella turnaukseen osallistuvalla maalla on oikeus saada ja jakaa kannattajilleen kahdeksan prosentin osuus kunkin ottelunsa lipuista. Käytännössä kiintiö tarkoittaa stadionin koosta riippuen useita tuhansia lippuja ottelua kohden.\n\nIranilaisliitto sanoo, että sen kahdeksan prosentin kiintiö on nyt peruttu. Liiton mukaan tämä merkitsee, ettei sillä ole mahdollisuutta toimittaa kannattajille lippuja virallisen jakelukanavan kautta. Iranilaismedioissa siteeratun liiton lausunnon mukaan monet kannattajat olivat jo tehneet matkasuunnitelmia virallisesti ilmoitetun prosessin perusteella.\n\nLiiton ilmoituksen mukaan tilanne koskee Iranin kaikkia kolmea alkulohko-ottelua. Farsin siteeraaman liiton kannan mukaan liitto ei pysty tarjoamaan maajoukkueen kannattajille edes yksittäistä lippua liiton kautta.\n\n## Iran pelaa alkulohkonsa Yhdysvalloissa\n\nJalkapallon MM-turnaus järjestetään Kanadassa, Meksikossa ja Yhdysvalloissa, ja se alkaa torstaina. Iran on mukana MM-kisoissa seitsemättä kertaa selvitettyään tiensä turnaukseen Aasian jalkapalloliiton karsintojen kautta.\n\nIranin ensimmäinen ottelu on Uutta-Seelantia vastaan 15. kesäkuuta Los Angelesissa. Toinen alkulohko-ottelu Belgiaa vastaan pelataan niin ikään Los Angelesissa 21. kesäkuuta. Lohkovaiheen viimeisessä ottelussaan Iran kohtaa Egyptin Seattlessa 26. kesäkuuta.\n\n## Ilmoitus tuli lähellä avausottelua\n\nIranilaiset kannattajat olivat lähdetietojen mukaan saattaneet joukkueen matkaan Teheranissa edellisellä viikolla. Lippukiintiötä koskeva ilmoitus tuli vain vähän ennen turnauksen käynnistymistä ja Iranin avausottelua Los Angelesissa.\n\nLähteiden mukaan väite lisää jännitteitä Iranin jalkapallon, Fifan ja turnauksen yhtenä isäntämaana toimivan Yhdysvaltojen välillä. Blue Mountains Gazetten mukaan taustalla on myös laajempi kuohunta, joka liittyy Yhdysvaltoihin ja Israeliin sekä 28. helmikuuta alkaneisiin sotilaallisiin iskuihin Iraniin.",
+    "category": "Ulkomaat",
+    "tags": [
+      "iran",
+      "jalkapallo",
+      "mm-kisat",
+      "fifa",
+      "yhdysvallat"
+    ],
+    "summary_bullets": [
+      "Iranin jalkapalloliitto sanoo kannattajien MM-lippukiintiön peruuntuneen.",
+      "Liiton mukaan kahdeksan prosentin kiintiötä ei voi enää jakaa kannattajille virallista reittiä.",
+      "Iran pelaa alkulohkon ottelunsa Los Angelesissa ja Seattlessa kesäkuussa."
+    ],
+    "key_points": [
+      "Iranin jalkapalloliitto sanoo kannattajien MM-lippukiintiön peruuntuneen.",
+      "Liiton mukaan kahdeksan prosentin kiintiötä ei voi enää jakaa kannattajille virallista reittiä.",
+      "Iran pelaa alkulohkon ottelunsa Los Angelesissa ja Seattlessa kesäkuussa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu useisiin samansuuntaisiin lähdekatkelmiin. Muotoilu pitää keskeisen väitteen Iranin jalkapalloliiton ilmoituksena, koska päätöksen perusteita tai erillistä vahvistusta ei annettu paketissa.",
+    "source_text": "Iran are playing at the World Cup for the seventh time after coming through Asian Football Confederation qualifying Iran's allocation of fan tickets for the group stage of the World Cup has been revoked just days before the start of the tournament, says the country's football federation. The World Cup, co-hosted by Canada, Mexico and the United States, begins on Thursday, with Iran scheduled to play New Zealand on 15 June and Belgium on 21 June - both in Los Angeles - before facing Egypt in Seattle on 26 June. Iran's governing body says Fifa regulations state each federation involved in the World Cup receives 8% of the tickets for each of their matches, to distribute to supporters.\n\nIran's football federation says its allocation of tickets for the group stage of the World Cup has been revoked just days before the tournament.\n\nIranian football fans gave their players a send-off in Tehran last week. (Reuters: Majid Asgaripour/WANA ) Iran's football federation (FFIRI) says its ticket allocation for the FIFA World Cup has been pulled just days before the tournament kicks off. The FFIRI said the 8 per cent quota of tickets allocated to Iran has been revoked meaning \"there is no possibility to distribute tickets to fans through the Federation\", multiple Iranian news agencies said. \"This is despite the fact that many Iranian football fans, relying on the officially announced process, had already made the necessary plans to attend the matches,\" the FFIRI added in a statement. \"There is no possibility of providing even a single ticket to the national team fans through the Federation,\" Fars reported, citing the Iranian football federation.\n\nFIFA has revoked the ticket allocation for Iran fans at the team's three World Cup games in the United States, the national soccer federation has claimed. Each federation for the 48 teams taking part is entitled to receive and distribute eight per cent of stadium capacity at the World Cup, adding up to several thousand tickets per game. Just days before Iran opens its World Cup campaign — on June 15 at the Los Angeles Rams' stadium against New Zealand — the federation claimed in a statement reported by semi-official state media that it was now unable to provide any tickets to its supporters. The claim adds to the turmoil between Iranian soccer, FIFA and tournament co-host the US, which with Israel began military attacks on Iran on February 28.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.88,
+    "degraded_mode": false,
+    "monica_packet_id": "20260609T105133Z_9c4d087119",
+    "image": "https://images.unsplash.com/photo-1570731601191-d7effdc8f7cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxJcmFuJTIwZm9vdGJhbGwlMjBmYW5zJTIwV29ybGQlMjBDdXB8ZW58MXwwfHx8MTc4MTAwMjY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1570731601191-d7effdc8f7cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxJcmFuJTIwZm9vdGJhbGwlMjBmYW5zJTIwV29ybGQlMjBDdXB8ZW58MXwwfHx8MTc4MTAwMjY4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Iranin jalkapalloliitto: kannattajien MM-lippukiintiö on peruttu",
+    "image_credit": "Photo by Hadi Yazdi Aznaveh on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/woman-sitting-on-bench-hJKkyoG8_ng?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-09T10:58:05.898883+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1570731601191-d7effdc8f7cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxJcmFuJTIwZm9vdGJhbGwlMjBmYW5zJTIwV29ybGQlMjBDdXB8ZW58MXwwfHx8MTc4MTAwMjY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1570731601191-d7effdc8f7cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxJcmFuJTIwZm9vdGJhbGwlMjBmYW5zJTIwV29ybGQlMjBDdXB8ZW58MXwwfHx8MTc4MTAwMjY4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-09T10:59:17.633536+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-09-iranin-jalkapalloliitto-kannattajien-mm-lippukiintio-on-peru.md"
+  ]
+}
