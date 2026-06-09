@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/09/dna-paljasti-naissa-suomen-kunnissa-puhutaan-eniten-perinteisia-mobiilipuheluja/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
