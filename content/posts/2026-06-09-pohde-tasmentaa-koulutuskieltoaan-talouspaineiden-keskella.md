@@ -44,7 +44,6 @@ keywords:
 source_name: "Lääkärilehti"
 source_url: "http://www.laakarilehti.fi/terveydenhuolto/pohde-tasmensi-koulutuskieltoaan-johtajaylilaakari-ristiriitainen-ja-epatoivottu-tilanne/"
 source_domain: "laakarilehti.fi"
-briefing: true
 draft: false
 ---
 
