@@ -1,0 +1,215 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-09T09:01:38.236276+00:00",
+  "digest": "c66d2ee9d1",
+  "packet": {
+    "packet_id": "20260609T090138Z_c66d2ee9d1",
+    "created_at": "2026-06-09T09:01:38Z",
+    "headline_seed": "Black bear caught in Japan after days of sightings",
+    "description_seed": "The capture in Utsunomiya comes as bear attacks have reached record levels across Japan.",
+    "link": "https://www.bbc.com/news/articles/c0qyzvnjlxno?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Mirror",
+      "AOL"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c0qyzvnjlxno?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Black bear caught in Japan after days of sightings"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The capture in Utsunomiya comes as bear attacks have reached record levels across Japan.",
+        "word_count": 14,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Japanese authorities have sedated and captured a black bear, days after it was spotted roaming around a city near Tokyo. A veterinarian fired a tranquiliser gun at the bear in Utsunomiya, home to half a million people, but missed the first shot. A second was fired about 15 minutes later, followed by a third. Another \"extremely intelligent\" bear filmed chasing people in Fukushima is still evading officials, as Japan deals with a rise in bear encounters. Attacks reached record levels in 2025, with 238 bear attack victims reported to the environment ministry, including 13 deaths. It took officials an hour and 40 minutes to capture the bear after identifying its location about 2.5km south of the main railway station on Tuesday, according to Utsunomiya East Police.",
+        "word_count": 126,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Mirror",
+        "source_type": "research",
+        "text": "Almost 100 schools have been forced to close after a bear began prowling the streets of a busy city and skilfully evaded capture. Authorities in Utsunomiya, a city about 60 miles north of Tokyo, told children to stay at home this morning after multiple sightings of a brown bear over the weekend. The one metre-long bear was first spotted near a park on Saturday. In the early hours of Sunday, it was caught on CCTV running directly in front of two startled young men in the city centre. It re-emerged in residential areas later that day and made another appearance in an industrial estate about a mile-and-half from the city centre at 4am this morning.",
+        "word_count": 115,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "Japan is witnessing a sharp rise in bear sightings as animals emerge from their winter hibernation, with authorities warning of increased danger ahead of upcoming national holidays. In recent years, bears have been spotted in urban areas across northeastern Japan, prompting alerts in Fukushima, Iwate and Aomori prefectures. More worryingly, bear encounters have grown increasingly dangerous, with 238 attacks last year leaving hundreds of people injured and at least 13 dead. In a recent incident, a woman was found dead in Iwate after a suspected bear attack and a police officer was injured nearby. It was believed to be the first fatality from a bear attack this year. In another case, police shot and killed a 100kg bear in a residential area after a prolonged standoff.",
+        "word_count": 126,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The capture in Utsunomiya comes as bear attacks have reached record levels across Japan.\n\nJapanese authorities have sedated and captured a black bear, days after it was spotted roaming around a city near Tokyo. A veterinarian fired a tranquiliser gun at the bear in Utsunomiya, home to half a million people, but missed the first shot. A second was fired about 15 minutes later, followed by a third. Another \"extremely intelligent\" bear filmed chasing people in Fukushima is still evading officials, as Japan deals with a rise in bear encounters. Attacks reached record levels in 2025, with 238 bear attack victims reported to the environment ministry, including 13 deaths. It took officials an hour and 40 minutes to capture the bear after identifying its location about 2.5km south of the main railway station on Tuesday, according to Utsunomiya East Police.\n\nAlmost 100 schools have been forced to close after a bear began prowling the streets of a busy city and skilfully evaded capture. Authorities in Utsunomiya, a city about 60 miles north of Tokyo, told children to stay at home this morning after multiple sightings of a brown bear over the weekend. The one metre-long bear was first spotted near a park on Saturday. In the early hours of Sunday, it was caught on CCTV running directly in front of two startled young men in the city centre. It re-emerged in residential areas later that day and made another appearance in an industrial estate about a mile-and-half from the city centre at 4am this morning.\n\nJapan is witnessing a sharp rise in bear sightings as animals emerge from their winter hibernation, with authorities warning of increased danger ahead of upcoming national holidays. In recent years, bears have been spotted in urban areas across northeastern Japan, prompting alerts in Fukushima, Iwate and Aomori prefectures. More worryingly, bear encounters have grown increasingly dangerous, with 238 attacks last year leaving hundreds of people injured and at least 13 dead. In a recent incident, a woman was found dead in Iwate after a suspected bear attack and a police officer was injured nearby. It was believed to be the first fatality from a bear attack this year. In another case, police shot and killed a 100kg bear in a residential area after a prolonged standoff.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1014,
+      "selected_blocks": 4,
+      "selected_source_words": 381,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Mirror",
+        "The Mirror",
+        "The Mirror",
+        "The Mirror",
+        "AOL",
+        "AOL",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "The Mirror",
+        "AOL"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Black bear caught in Japan after days of sightings",
+      "description": "The capture in Utsunomiya comes as bear attacks have reached record levels across Japan.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Black bear caught in Japan after days of sightings",
+    "description": "The capture in Utsunomiya comes as bear attacks have reached record levels across Japan.",
+    "link": "https://www.bbc.com/news/articles/c0qyzvnjlxno?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-09T08:27:31+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4b48d1249f45ed830875e0901df51965",
+    "_url_hash": "acc87d16324105e9530106ee2cd46aea9573898b373110626c2ad091909b81d8",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nJapanese authorities have sedated and captured a black bear, days after it was spotted roaming around a city near Tokyo.\n\nA veterinarian fired a tranquiliser gun at the bear in Utsunomiya, home to half a million people, but missed the first shot. A second was fired about 15 minutes later, followed by a third.\n\nAnother \"extremely intelligent\" bear filmed chasing people in Fukushima is still evading officials, as Japan deals with a rise in bear encounters.\n\nAttacks reached record levels in 2025, with 238 bear attack victims reported to the environment ministry, including 13 deaths.\n\nIt took officials an hour and 40 minutes to capture the bear after identifying its location about 2.5km south of the main railway station on Tuesday, according to Utsunomiya East Police.\n\nThe bear, believed to weigh around 100kg, had been spotted by residents more than 20 times since Saturday - near homes, schools, and parks. It was also seen swimming in a river, and climbing over fences across backyards.\n\nThe unprecedented sighting forced the closure of all 94 public primary and middle schools. Officials said there were possibly two bears in the city and urged residents to keep their doors and windows locked.\n\nLast week, another bear attacked and injured four people in a residential district of Fukushima city. That bear is yet to be caught after attempts to tranquilise it were unsuccessful. It broke into an electronics factory, but surprised police who had surrounded the building after reportedly escaping by unlocking a window.\n\nThe Fukushima mayor said officials also saw the bear drinking water from a tap, adding it may have turned the handle itself, and describing it as being \"extremely intelligent.\"\n\nA search for the bear using drones has been launched.\n\nEarlier this year, the Japanese government established a ministerial task force and introduced emergency response measures to address the rise in bear attacks and reduce casualties.\n\nLocal governments and companies are increasingly turning to technology for solutions.\n\nA village in Fukushima prefecture is weighing the use of an AI-powered image analysis system for trail cameras, while KDDI SmartDrone says its unmanned aircraft system can help municipalities track bears without training. The drones are equipped with thermal cameras , and can follow bears through dense vegetation until hunters or police arrive.\n\nOther companies are also developing unique deterrents. In 2016, Ohta Seiki introduced the \"Super Monster Wolf,\" a sol\n\n---\n\n[Lähde: The Mirror]\nAlmost 100 schools have been forced to close after a bear began prowling the streets of a busy city and skilfully evaded capture.\n\nAuthorities in Utsunomiya, a city about 60 miles north of Tokyo, told children to stay at home this morning after multiple sightings of a brown bear over the weekend.\n\nThe one metre-long bear was first spotted near a park on Saturday. In the early hours of Sunday, it was caught on CCTV running directly in front of two startled young men in the city centre.\n\nIt re-emerged in residential areas later that day and made another appearance in an industrial estate about a mile-and-half from the city centre at 4am this morning.\n\nIt is the first time a bear has been spotted in the city, where a search made up of police officers and a local hunting group resumed this morning.\n\nResidents have been told to seek shelter in the nearest building if they spot the bear, keep windows and doors locked, and not to put out rubbish in the evening, as it is feared this could attract the animal towards homes.\n\nCars with loudhailers have also been driven across the city to warn residents. It is thought the bear may have been hiding in bushes, and it is expected to emerge again after sunset.\n\nOn Monday, all 94 primary and junior high schools in the region were closed, affecting 36,000 students in total. Eight high schools with 3,700 students have also asked parents to keep their children at home. It comes after a 'highly intelligent' bear injured four people last week in a separate incident.\n\nPolice and fire crews rushed to the Sasakino district of Fukushima in northeastern Japan after receiving an emergency call from a steel factory, where the bear had ventured inside and attacked two employees. He then fled the scene by opening a window.\n\nCCTV footage shows the black bear arriving at the gates of the factory and approaching a man in his 20s. As he tries to flee, the bear throws him to the ground, before moving to another part of the site and attacking a second man in his 60s.\n\nWhile inside the factory, the bear was also observed using its front paws to turn on a water tap so it could drink. No update was provided on the bear's whereabouts at the weekend.\n\nJapan is currently experiencing unprecedented surge in bear sightings and encounters, driven by environmental factors and a shrinking rural population.\n\nClimate change its impact on weather patterns have led to poor harvests of acorns and beech nuts in the mountains over recent years, forcing bears t\n\n---\n\n[Lähde: AOL]\nJapan is witnessing a sharp rise in bear sightings as animals emerge from their winter hibernation, with authorities warning of increased danger ahead of upcoming national holidays.\n\nIn recent years, bears have been spotted in urban areas across northeastern Japan, prompting alerts in Fukushima, Iwate and Aomori prefectures. More worryingly, bear encounters have grown increasingly dangerous, with 238 attacks last year leaving hundreds of people injured and at least 13 dead.\n\nIn a recent incident, a woman was found dead in Iwate after a suspected bear attack and a police officer was injured nearby. It was believed to be the first fatality from a bear attack this year.\n\nIn another case, police shot and killed a 100kg bear in a residential area after a prolonged standoff.\n\nFive people were killed in animal attacks in Iwate between July and October last year, according to government data.\n\nThe last known bear attack before the hibernation period took place on 3 November in Yuzawa, in neigh...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-09T09:04:48.954884+00:00",
+  "payload": {
+    "packet_id": "20260609T090138Z_c66d2ee9d1",
+    "title": "Karhu saatiin kiinni Japanin Utsunomiyassa useiden havaintojen jälkeen",
+    "summary": "Viranomaiset nukuttivat ja ottivat kiinni kaupungilla liikkuneen karhun Utsunomiyassa, noin 100 kilometriä Tokiosta pohjoiseen. Tapaus sattuu aikaan, jolloin karhukohtaamiset ovat lisääntyneet Japanissa.",
+    "content": "Japanilaisviranomaiset ovat nukuttaneet ja ottaneet kiinni karhun Utsunomiyassa useiden päivien havaintojen jälkeen. Noin puolen miljoonan asukkaan kaupungissa liikkunut eläin oli herättänyt huolta asuinalueilla ja keskustan tuntumassa, ja lähes sata koulua suljettiin varotoimena havaintojen jatkuessa viikonlopun yli.\n\n## Karhu liikkui kaupungin alueella\n\nKarhu havaittiin ensimmäisen kerran lauantaina puiston lähellä. Sunnuntain vastaisena yönä se tallentui valvontakameralle juoksemassa kahden nuoren miehen edestä kaupungin keskustassa. Myöhemmin samana päivänä eläin nähtiin uudelleen asuinalueilla.\n\nHavainnot jatkuivat vielä maanantain varhaisina tunteina, kun karhu ilmestyi teollisuusalueelle noin puolentoista mailin eli runsaan kahden kilometrin päähän keskustasta. Utsunomiyan viranomaiset kehottivat lapsia pysymään kotona, kun havaintoja oli kertynyt useita. Kaupunki sijaitsee noin 100 kilometriä Tokiosta pohjoiseen.\n\n## Nukutus vei useita yrityksiä\n\nViranomaisten mukaan karhun sijainti varmistui tiistaina noin 2,5 kilometriä etelään Utsunomiyan päärautatieasemasta. Eläinlääkäri yritti nukuttaa karhun rauhoitusaseella, mutta ensimmäinen laukaus meni ohi. Toinen laukaus ammuttiin noin 15 minuuttia myöhemmin, ja sen jälkeen tarvittiin vielä kolmas.\n\nUtsunomiya East Policen mukaan kiinniotto kesti tunnin ja 40 minuuttia siitä, kun karhun tarkka sijainti oli tunnistettu. Lähteissä eläintä kuvattiin eri tavoin mustaksi tai ruskeaksi karhuksi, joten tapauksen yksityiskohdissa korostuu ennen kaikkea se, että villieläin oli päässyt liikkumaan tiheästi asutussa kaupunkiympäristössä.\n\n## Karhukohtaamiset ovat lisääntyneet\n\nJapanissa karhujen kohtaamiset ihmisten kanssa ovat yleistyneet, kun eläimiä on nähty myös kaupunkialueilla erityisesti maan koillisosissa. Viranomaiset ovat antaneet hälytyksiä muun muassa Fukushiman, Iwaten ja Aomorin prefektuureissa, ja riskeistä on varoitettu myös lähestyvien kansallisten vapaapäivien alla.\n\nViranomaisten tilastojen mukaan karhujen hyökkäyksissä oli vuonna 2025 yhteensä 238 uhria, ja kuolonuhreja raportoitiin 13. Iwatessa nainen löydettiin hiljattain kuolleena epäillyn karhun hyökkäyksen jälkeen, ja lähistöllä loukkaantui myös poliisi. Toisessa tapauksessa poliisi ampui 100-kiloisen karhun asuinalueella pitkän pattitilanteen jälkeen.\n\nFukushimassa viranomaisilta on yhä paossa toinen karhu, joka on kuvattu jahtaamassa ihmisiä. Sitä on kuvattu poikkeuksellisen älykkääksi, ja sen etsinnät jatkuvat samaan aikaan, kun Utsunomiyan tapaus on saatu päätökseen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Japani",
+      "karhut",
+      "Utsunomiya",
+      "villieläimet",
+      "turvallisuus"
+    ],
+    "summary_bullets": [
+      "Karhu nukutettiin ja otettiin kiinni Utsunomiyassa useiden päivien havaintojen jälkeen.",
+      "Lähes sata koulua suljettiin varotoimena, kun eläin liikkui kaupungin alueella.",
+      "Karhukohtaamiset ovat lisääntyneet Japanissa, ja hyökkäykset nousivat vuonna 2025 ennätystasolle."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Lähteissä karhun lajista ja väristä on pientä vaihtelua, joten julkisessa tekstissä käytetään varovaisesti yleisnimitystä karhu."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260609T090138Z_c66d2ee9d1\",\n  \"title\": \"Karhu saatiin kiinni Japanin Utsunomiyassa useiden havaintojen jälkeen\",\n  \"summary\": \"Viranomaiset nukuttivat ja ottivat kiinni kaupungilla liikkuneen karhun Utsunomiyassa, noin 100 kilometriä Tokiosta pohjoiseen. Tapaus sattuu aikaan, jolloin karhukohtaamiset ovat lisääntyneet Japanissa.\",\n  \"content\": \"Japanilaisviranomaiset ovat nukuttaneet ja ottaneet kiinni karhun Utsunomiyassa useiden päivien havaintojen jälkeen. Noin puolen miljoonan asukkaan kaupungissa liikkunut eläin oli herättänyt huolta asuinalueilla ja keskustan tuntumassa, ja lähes sata koulua suljettiin varotoimena havaintojen jatkuessa viikonlopun yli.\\n\\n## Karhu liikkui kaupungin alueella\\n\\nKarhu havaittiin ensimmäisen kerran lauantaina puiston lähellä. Sunnuntain vastaisena yönä se tallentui valvontakameralle juoksemassa kahden nuoren miehen edestä kaupungin keskustassa. Myöhemmin samana päivänä eläin nähtiin uudelleen asuinalueilla.\\n\\nHavainnot jatkuivat vielä maanantain varhaisina tunteina, kun karhu ilmestyi teollisuusalueelle noin puolentoista mailin eli runsaan kahden kilometrin päähän keskustasta. Utsunomiyan viranomaiset kehottivat lapsia pysymään kotona, kun havaintoja oli kertynyt useita. Kaupunki sijaitsee noin 100 kilometriä Tokiosta pohjoiseen.\\n\\n## Nukutus vei useita yrityksiä\\n\\nViranomaisten mukaan karhun sijainti varmistui tiistaina noin 2,5 kilometriä etelään Utsunomiyan päärautatieasemasta. Eläinlääkäri yritti nukuttaa karhun rauhoitusaseella, mutta ensimmäinen laukaus meni ohi. Toinen laukaus ammuttiin noin 15 minuuttia myöhemmin, ja sen jälkeen tarvittiin vielä kolmas.\\n\\nUtsunomiya East Policen mukaan kiinniotto kesti tunnin ja 40 minuuttia siitä, kun karhun tarkka sijainti oli tunnistettu. Lähteissä eläintä kuvattiin eri tavoin mustaksi tai ruskeaksi karhuksi, joten tapauksen yksityiskohdissa korostuu ennen kaikkea se, että villieläin oli päässyt liikkumaan tiheästi asutussa kaupunkiympäristössä.\\n\\n## Karhukohtaamiset ovat lisääntyneet\\n\\nJapanissa karhujen kohtaamiset ihmisten kanssa ovat yleistyneet, kun eläimiä on nähty myös kaupunkialueilla erityisesti maan koillisosissa. Viranomaiset ovat antaneet hälytyksiä muun muassa Fukushiman, Iwaten ja Aomorin prefektuureissa, ja riskeistä on varoitettu myös lähestyvien kansallisten vapaapäivien alla.\\n\\nViranomaisten tilastojen mukaan karhujen hyökkäyksissä oli vuonna 2025 yhteensä 238 uhria, ja kuolonuhreja raportoitiin 13. Iwatessa nainen löydettiin hiljattain kuolleena epäillyn karhun hyökkäyksen jälkeen, ja lähistöllä loukkaantui myös poliisi. Toisessa tapauksessa poliisi ampui 100-kiloisen karhun asuinalueella pitkän pattitilanteen jälkeen.\\n\\nFukushimassa viranomaisilta on yhä paossa toinen karhu, joka on kuvattu jahtaamassa ihmisiä. Sitä on kuvattu poikkeuksellisen älykkääksi, ja sen etsinnät jatkuvat samaan aikaan, kun Utsunomiyan tapaus on saatu päätökseen.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Japani\",\n    \"karhut\",\n    \"Utsunomiya\",\n    \"villieläimet\",\n    \"turvallisuus\"\n  ],\n  \"summary_bullets\": [\n    \"Karhu nukutettiin ja otettiin kiinni Utsunomiyassa useiden päivien havaintojen jälkeen.\",\n    \"Lähes sata koulua suljettiin varotoimena, kun eläin liikkui kaupungin alueella.\",\n    \"Karhukohtaamiset ovat lisääntyneet Japanissa, ja hyökkäykset nousivat vuonna 2025 ennätystasolle.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään lähdeblokkiin. Lähteissä karhun lajista ja väristä on pientä vaihtelua, joten julkisessa tekstissä käytetään varovaisesti yleisnimitystä karhu.\"\n}",
+  "article": {
+    "title": "Karhu saatiin kiinni Japanin Utsunomiyassa useiden havaintojen jälkeen",
+    "description": "Viranomaiset nukuttivat ja ottivat kiinni kaupungilla liikkuneen karhun Utsunomiyassa, noin 100 kilometriä Tokiosta pohjoiseen. Tapaus sattuu aikaan, jolloin karhukohtaamiset ovat lisääntyneet Japanissa.",
+    "link": "https://www.bbc.com/news/articles/c0qyzvnjlxno?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-09T08:27:31+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4b48d1249f45ed830875e0901df51965",
+    "_url_hash": "acc87d16324105e9530106ee2cd46aea9573898b373110626c2ad091909b81d8",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nJapanese authorities have sedated and captured a black bear, days after it was spotted roaming around a city near Tokyo.\n\nA veterinarian fired a tranquiliser gun at the bear in Utsunomiya, home to half a million people, but missed the first shot. A second was fired about 15 minutes later, followed by a third.\n\nAnother \"extremely intelligent\" bear filmed chasing people in Fukushima is still evading officials, as Japan deals with a rise in bear encounters.\n\nAttacks reached record levels in 2025, with 238 bear attack victims reported to the environment ministry, including 13 deaths.\n\nIt took officials an hour and 40 minutes to capture the bear after identifying its location about 2.5km south of the main railway station on Tuesday, according to Utsunomiya East Police.\n\nThe bear, believed to weigh around 100kg, had been spotted by residents more than 20 times since Saturday - near homes, schools, and parks. It was also seen swimming in a river, and climbing over fences across backyards.\n\nThe unprecedented sighting forced the closure of all 94 public primary and middle schools. Officials said there were possibly two bears in the city and urged residents to keep their doors and windows locked.\n\nLast week, another bear attacked and injured four people in a residential district of Fukushima city. That bear is yet to be caught after attempts to tranquilise it were unsuccessful. It broke into an electronics factory, but surprised police who had surrounded the building after reportedly escaping by unlocking a window.\n\nThe Fukushima mayor said officials also saw the bear drinking water from a tap, adding it may have turned the handle itself, and describing it as being \"extremely intelligent.\"\n\nA search for the bear using drones has been launched.\n\nEarlier this year, the Japanese government established a ministerial task force and introduced emergency response measures to address the rise in bear attacks and reduce casualties.\n\nLocal governments and companies are increasingly turning to technology for solutions.\n\nA village in Fukushima prefecture is weighing the use of an AI-powered image analysis system for trail cameras, while KDDI SmartDrone says its unmanned aircraft system can help municipalities track bears without training. The drones are equipped with thermal cameras , and can follow bears through dense vegetation until hunters or police arrive.\n\nOther companies are also developing unique deterrents. In 2016, Ohta Seiki introduced the \"Super Monster Wolf,\" a sol\n\n---\n\n[Lähde: The Mirror]\nAlmost 100 schools have been forced to close after a bear began prowling the streets of a busy city and skilfully evaded capture.\n\nAuthorities in Utsunomiya, a city about 60 miles north of Tokyo, told children to stay at home this morning after multiple sightings of a brown bear over the weekend.\n\nThe one metre-long bear was first spotted near a park on Saturday. In the early hours of Sunday, it was caught on CCTV running directly in front of two startled young men in the city centre.\n\nIt re-emerged in residential areas later that day and made another appearance in an industrial estate about a mile-and-half from the city centre at 4am this morning.\n\nIt is the first time a bear has been spotted in the city, where a search made up of police officers and a local hunting group resumed this morning.\n\nResidents have been told to seek shelter in the nearest building if they spot the bear, keep windows and doors locked, and not to put out rubbish in the evening, as it is feared this could attract the animal towards homes.\n\nCars with loudhailers have also been driven across the city to warn residents. It is thought the bear may have been hiding in bushes, and it is expected to emerge again after sunset.\n\nOn Monday, all 94 primary and junior high schools in the region were closed, affecting 36,000 students in total. Eight high schools with 3,700 students have also asked parents to keep their children at home. It comes after a 'highly intelligent' bear injured four people last week in a separate incident.\n\nPolice and fire crews rushed to the Sasakino district of Fukushima in northeastern Japan after receiving an emergency call from a steel factory, where the bear had ventured inside and attacked two employees. He then fled the scene by opening a window.\n\nCCTV footage shows the black bear arriving at the gates of the factory and approaching a man in his 20s. As he tries to flee, the bear throws him to the ground, before moving to another part of the site and attacking a second man in his 60s.\n\nWhile inside the factory, the bear was also observed using its front paws to turn on a water tap so it could drink. No update was provided on the bear's whereabouts at the weekend.\n\nJapan is currently experiencing unprecedented surge in bear sightings and encounters, driven by environmental factors and a shrinking rural population.\n\nClimate change its impact on weather patterns have led to poor harvests of acorns and beech nuts in the mountains over recent years, forcing bears t\n\n---\n\n[Lähde: AOL]\nJapan is witnessing a sharp rise in bear sightings as animals emerge from their winter hibernation, with authorities warning of increased danger ahead of upcoming national holidays.\n\nIn recent years, bears have been spotted in urban areas across northeastern Japan, prompting alerts in Fukushima, Iwate and Aomori prefectures. More worryingly, bear encounters have grown increasingly dangerous, with 238 attacks last year leaving hundreds of people injured and at least 13 dead.\n\nIn a recent incident, a woman was found dead in Iwate after a suspected bear attack and a police officer was injured nearby. It was believed to be the first fatality from a bear attack this year.\n\nIn another case, police shot and killed a 100kg bear in a residential area after a prolonged standoff.\n\nFive people were killed in animal attacks in Iwate between July and October last year, according to government data.\n\nThe last known bear attack before the hibernation period took place on 3 November in Yuzawa, in neigh...",
+    "research_source": "multi",
+    "summary": "Viranomaiset nukuttivat ja ottivat kiinni kaupungilla liikkuneen karhun Utsunomiyassa, noin 100 kilometriä Tokiosta pohjoiseen. Tapaus sattuu aikaan, jolloin karhukohtaamiset ovat lisääntyneet Japanissa.",
+    "content": "Japanilaisviranomaiset ovat nukuttaneet ja ottaneet kiinni karhun Utsunomiyassa useiden päivien havaintojen jälkeen. Noin puolen miljoonan asukkaan kaupungissa liikkunut eläin oli herättänyt huolta asuinalueilla ja keskustan tuntumassa, ja lähes sata koulua suljettiin varotoimena havaintojen jatkuessa viikonlopun yli.\n\n## Karhu liikkui kaupungin alueella\n\nKarhu havaittiin ensimmäisen kerran lauantaina puiston lähellä. Sunnuntain vastaisena yönä se tallentui valvontakameralle juoksemassa kahden nuoren miehen edestä kaupungin keskustassa. Myöhemmin samana päivänä eläin nähtiin uudelleen asuinalueilla.\n\nHavainnot jatkuivat vielä maanantain varhaisina tunteina, kun karhu ilmestyi teollisuusalueelle noin puolentoista mailin eli runsaan kahden kilometrin päähän keskustasta. Utsunomiyan viranomaiset kehottivat lapsia pysymään kotona, kun havaintoja oli kertynyt useita. Kaupunki sijaitsee noin 100 kilometriä Tokiosta pohjoiseen.\n\n## Nukutus vei useita yrityksiä\n\nViranomaisten mukaan karhun sijainti varmistui tiistaina noin 2,5 kilometriä etelään Utsunomiyan päärautatieasemasta. Eläinlääkäri yritti nukuttaa karhun rauhoitusaseella, mutta ensimmäinen laukaus meni ohi. Toinen laukaus ammuttiin noin 15 minuuttia myöhemmin, ja sen jälkeen tarvittiin vielä kolmas.\n\nUtsunomiya East Policen mukaan kiinniotto kesti tunnin ja 40 minuuttia siitä, kun karhun tarkka sijainti oli tunnistettu. Lähteissä eläintä kuvattiin eri tavoin mustaksi tai ruskeaksi karhuksi, joten tapauksen yksityiskohdissa korostuu ennen kaikkea se, että villieläin oli päässyt liikkumaan tiheästi asutussa kaupunkiympäristössä.\n\n## Karhukohtaamiset ovat lisääntyneet\n\nJapanissa karhujen kohtaamiset ihmisten kanssa ovat yleistyneet, kun eläimiä on nähty myös kaupunkialueilla erityisesti maan koillisosissa. Viranomaiset ovat antaneet hälytyksiä muun muassa Fukushiman, Iwaten ja Aomorin prefektuureissa, ja riskeistä on varoitettu myös lähestyvien kansallisten vapaapäivien alla.\n\nViranomaisten tilastojen mukaan karhujen hyökkäyksissä oli vuonna 2025 yhteensä 238 uhria, ja kuolonuhreja raportoitiin 13. Iwatessa nainen löydettiin hiljattain kuolleena epäillyn karhun hyökkäyksen jälkeen, ja lähistöllä loukkaantui myös poliisi. Toisessa tapauksessa poliisi ampui 100-kiloisen karhun asuinalueella pitkän pattitilanteen jälkeen.\n\nFukushimassa viranomaisilta on yhä paossa toinen karhu, joka on kuvattu jahtaamassa ihmisiä. Sitä on kuvattu poikkeuksellisen älykkääksi, ja sen etsinnät jatkuvat samaan aikaan, kun Utsunomiyan tapaus on saatu päätökseen.",
+    "category": "Kotimaa",
+    "tags": [
+      "japani",
+      "karhut",
+      "utsunomiya",
+      "villieläimet",
+      "turvallisuus"
+    ],
+    "summary_bullets": [
+      "Karhu nukutettiin ja otettiin kiinni Utsunomiyassa useiden päivien havaintojen jälkeen.",
+      "Lähes sata koulua suljettiin varotoimena, kun eläin liikkui kaupungin alueella.",
+      "Karhukohtaamiset ovat lisääntyneet Japanissa, ja hyökkäykset nousivat vuonna 2025 ennätystasolle."
+    ],
+    "key_points": [
+      "Karhu nukutettiin ja otettiin kiinni Utsunomiyassa useiden päivien havaintojen jälkeen.",
+      "Lähes sata koulua suljettiin varotoimena, kun eläin liikkui kaupungin alueella.",
+      "Karhukohtaamiset ovat lisääntyneet Japanissa, ja hyökkäykset nousivat vuonna 2025 ennätystasolle."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Lähteissä karhun lajista ja väristä on pientä vaihtelua, joten julkisessa tekstissä käytetään varovaisesti yleisnimitystä karhu.",
+    "source_text": "The capture in Utsunomiya comes as bear attacks have reached record levels across Japan.\n\nJapanese authorities have sedated and captured a black bear, days after it was spotted roaming around a city near Tokyo. A veterinarian fired a tranquiliser gun at the bear in Utsunomiya, home to half a million people, but missed the first shot. A second was fired about 15 minutes later, followed by a third. Another \"extremely intelligent\" bear filmed chasing people in Fukushima is still evading officials, as Japan deals with a rise in bear encounters. Attacks reached record levels in 2025, with 238 bear attack victims reported to the environment ministry, including 13 deaths. It took officials an hour and 40 minutes to capture the bear after identifying its location about 2.5km south of the main railway station on Tuesday, according to Utsunomiya East Police.\n\nAlmost 100 schools have been forced to close after a bear began prowling the streets of a busy city and skilfully evaded capture. Authorities in Utsunomiya, a city about 60 miles north of Tokyo, told children to stay at home this morning after multiple sightings of a brown bear over the weekend. The one metre-long bear was first spotted near a park on Saturday. In the early hours of Sunday, it was caught on CCTV running directly in front of two startled young men in the city centre. It re-emerged in residential areas later that day and made another appearance in an industrial estate about a mile-and-half from the city centre at 4am this morning.\n\nJapan is witnessing a sharp rise in bear sightings as animals emerge from their winter hibernation, with authorities warning of increased danger ahead of upcoming national holidays. In recent years, bears have been spotted in urban areas across northeastern Japan, prompting alerts in Fukushima, Iwate and Aomori prefectures. More worryingly, bear encounters have grown increasingly dangerous, with 238 attacks last year leaving hundreds of people injured and at least 13 dead. In a recent incident, a woman was found dead in Iwate after a suspected bear attack and a police officer was injured nearby. It was believed to be the first fatality from a bear attack this year. In another case, police shot and killed a 100kg bear in a residential area after a prolonged standoff.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.88,
+    "degraded_mode": false,
+    "monica_packet_id": "20260609T090138Z_c66d2ee9d1",
+    "image": "https://images.unsplash.com/photo-1524080578602-838ed6b52013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxiZWFyJTIwaW4lMjB1cmJhbiUyMHNldHRpbmd8ZW58MXwwfHx8MTc4MDk5NjA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1524080578602-838ed6b52013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxiZWFyJTIwaW4lMjB1cmJhbiUyMHNldHRpbmd8ZW58MXwwfHx8MTc4MDk5NjA4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Karhu saatiin kiinni Japanin Utsunomiyassa useiden havaintojen jälkeen",
+    "image_credit": "Photo by Joshua Hoehne on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/brown-grizzle-bear-f8rvGDHdZ04?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-09T09:08:05.759990+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1524080578602-838ed6b52013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxiZWFyJTIwaW4lMjB1cmJhbiUyMHNldHRpbmd8ZW58MXwwfHx8MTc4MDk5NjA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1524080578602-838ed6b52013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxiZWFyJTIwaW4lMjB1cmJhbiUyMHNldHRpbmd8ZW58MXwwfHx8MTc4MDk5NjA4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-09T09:09:15.189280+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-09-karhu-saatiin-kiinni-japanin-utsunomiyassa-useiden-havaintoj.md"
+  ]
+}
