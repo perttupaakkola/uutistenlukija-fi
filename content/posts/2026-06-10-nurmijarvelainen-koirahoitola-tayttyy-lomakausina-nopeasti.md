@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/koirahoitola-on-lomasesonkina-aina-taynna-paikat-varataan-joskus-jo-puoli-vuotta-etukateen/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

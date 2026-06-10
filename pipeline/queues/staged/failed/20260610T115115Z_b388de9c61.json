@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-10T11:51:15.175997+00:00",
+  "digest": "b388de9c61",
+  "packet": {
+    "packet_id": "20260610T115115Z_b388de9c61",
+    "created_at": "2026-06-10T11:51:15Z",
+    "headline_seed": "Uutta tietoa Belfastin puukotuksesta – uhri menetti silmänsä",
+    "description_seed": "Hyökkäys on synnyttänyt levottomuuksia Britanniassa.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012069586.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012069586.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Uutta tietoa Belfastin puukotuksesta – uhri menetti silmänsä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 210,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Uutta tietoa Belfastin puukotuksesta – uhri menetti silmänsä",
+      "description": "Hyökkäys on synnyttänyt levottomuuksia Britanniassa.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Uutta tietoa Belfastin puukotuksesta – uhri menetti silmänsä",
+    "description": "Hyökkäys on synnyttänyt levottomuuksia Britanniassa.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012069586.html",
+    "published": "2026-06-10T11:23:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "a4af3cdd02e1cf353249511e171e714a",
+    "_url_hash": "8c86185b66ac209b5f71c0e41bcee5fff26806398850e562adc67184e173aaad",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Yle]\nPoliisi tutkii maanantaiaamun Maatullissa tapahtunutta väkivallantekoa tapon yrityksenä, poliisi tiedottaa.\n\nHelsingin poliisi sai maanantaina kello 9.16 hätäkeskuksen kautta tehtävän, jonka mukaan Maatullin peruskoulun aulassa oli tapahtunut puukotus. Sekä tekijä että uhri ovat yläkoulun oppilaita.\n\nPoliisin saapuessa 15-vuotias epäilty tekijä oli poistunut paikalta.\n\n14-vuotiaalle uhrille annettiin ensiapua ja hänet vietiin jatkohoitoon sairaalaan. Uhrin saamat vammat ovat vakavia, mutta hänen tilansa on tällä hetkellä vakaa.\n\nPoliisi otti kiinni epäillyn tekijän noin tunti hätäkeskusilmoituksen jälkeen. Kiinniotto sujui rauhallisesti.\n\nMuita henkilöitä ei ole tällä hetkellä kiinniotettuna.\n\nOppilaat ja henkilökunta suojautuivat luokkiin tapahtuman aikana. Poliisin tutkintatoimien ajan oppilaita pidettiin luokissa noin kello 11 saakka.\n\nKoulupäivä keskeytettiin tapahtumien jälkeen. Helsingin kaupunki järjesti oppilaille kriisiapua paikan päällä.\n\nPoliisin selvitysten perusteella tapahtumat olivat saaneet alkunsa siitä, kun koulun oppilas oli lyönyt nyrkillä toista oppilasta. Tämän jälkeen tilanteeseen oli liittynyt kolmas oppilas, jota nyrkin iskun saanut oppilas oli puolestaan iskenyt teräaseella.\n\nTapahtumaan liittyvien oppilaiden välillä on ollut edeltävällä viikolla riitaa, johon on liittynyt myös fyysistä väkivaltaa.\n\nPoliisi selvittää esitutkinnassaan edeltävän viikon tapahtumien sekä osallisten yhteyttä tämän päivän tekoon.\n\nTutkinta jatkuu epäillyn kuulusteluilla sekä muilla tutkintatoimilla. Poliisi selvittää esitutkinnassa tapahtumien kulkua, sekä tekoon mahdollisesti liittyviä aiempia tapahtumia.\n\nTekoa tutkitaan rikosnimikkeillä tapon yritys ja pahoinpitely.\n\nKiinniotettua 15-vuotiasta epäillään tapon yrityksestä, ja hänen kanssaan tapellutta oppilasta pahoinpitelystä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-10T11:53:17.420781+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmistettuja perustietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260610T115115Z_b388de9c61\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmistettuja perustietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
