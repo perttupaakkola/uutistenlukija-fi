@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/nain-kotitalousvahennyksen-leikkaus-vaikutti-palveluiden-ostoon-ja-tyopaikkojen-maaraan/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
