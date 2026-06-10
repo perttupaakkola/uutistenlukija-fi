@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/video/why-andrew-yang-is-building-instead-of-waiting-for-washington/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
