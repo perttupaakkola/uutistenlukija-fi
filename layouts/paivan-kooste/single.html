@@ -66,7 +66,7 @@
   {{/* Page header */}}
   <header class="kooste-header">
     <div class="kooste-header__eyebrow">
-      <a href="/kooste/" class="kooste-nav-back">← Kaikki koosteet</a>
+      <a href="/paivan-kooste/" class="kooste-nav-back">← Kaikki koosteet</a>
     </div>
     <h1 class="kooste-header__title">Päivän kooste</h1>
     <p class="kooste-header__date">
@@ -168,7 +168,8 @@
       <a href="{{ .RelPermalink }}" class="kooste-footer__next">{{ .Date | time.Format "2.1.2006" }} →</a>
       {{ end }}
     </div>
-    <a href="/kooste/" class="kooste-footer__archive">Kaikki koosteet</a>
+    <a href="/" class="kooste-footer__home">Etusivu</a>
+    <a href="/paivan-kooste/" class="kooste-footer__archive">Kaikki koosteet</a>
   </footer>
 
 </div>
@@ -216,8 +217,8 @@
 
 .kooste-footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border, #e5e7eb); display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: .9rem; }
 .kooste-footer__nav { display: flex; gap: 1.25rem; }
-.kooste-footer__prev, .kooste-footer__next, .kooste-footer__archive { color: var(--color-accent, #2563eb); text-decoration: none; }
-.kooste-footer__prev:hover, .kooste-footer__next:hover, .kooste-footer__archive:hover { text-decoration: underline; }
+.kooste-footer__prev, .kooste-footer__next, .kooste-footer__home, .kooste-footer__archive { color: var(--color-accent, #2563eb); text-decoration: none; }
+.kooste-footer__prev:hover, .kooste-footer__next:hover, .kooste-footer__home:hover, .kooste-footer__archive:hover { text-decoration: underline; }
 
 @media (max-width: 600px) {
   .kooste-section__header { flex-direction: column; gap: .25rem; }

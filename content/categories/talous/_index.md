@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-description: "Markkinoiden reaktiot, yritysmaailman peliliikkeet ja talouden iso kuva. Suoraa puhetta rahasta, työelämästä ja päätöksistä."
+description: "Talousuutiset seuraavat yrityksiä, markkinoita, julkista taloutta ja arjen rahankäyttöä Uutistenlukijan ajankohtaisista uutisista."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"

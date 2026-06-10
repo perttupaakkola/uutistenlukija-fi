@@ -1,6 +1,6 @@
 ---
 title: "Teknologiauutiset suomeksi – tekoäly ja IT"
-description: "Tekoälyn murros, digijättien valtapeli ja kybermaailman uhat. Seuraamme, miten teknologia muuttaa yhteiskuntaa ja arkea."
+description: "Teknologiauutiset seuraavat digiyhtiöitä, tutkimusta, laitteita ja verkkoilmiöitä Uutistenlukijan uutisvirrasta."
 og_image: "/images/og-teknologia.png"
 keywords:
   - "teknologia uutiset suomeksi"

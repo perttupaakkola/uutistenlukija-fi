@@ -11,7 +11,7 @@
 
   <header class="kooste-archive__header">
     <h1 class="kooste-archive__title">Päivän koosteet</h1>
-    <p class="kooste-archive__lead">Päivittäiset uutiskoosteet — tärkeimmät uutiset yhdellä sivulla.</p>
+    <p class="kooste-archive__lead">{{ .Description | default "Päivän kooste kokoaa Uutistenlukijan ajankohtaiset pääuutiset ja päivän seurattavat aiheet yhteen selattavaan näkymään." }}</p>
   </header>
 
   {{ $pages := .Pages.ByDate.Reverse }}
@@ -21,6 +21,15 @@
   {{ else }}
 
   {{ $currentMonth := "" }}
+  {{ $latest := index $pages 0 }}
+
+  <nav class="kooste-archive__related" aria-label="Päivän kooste ja aihealueet">
+    <a href="{{ $latest.RelPermalink }}">Uusin päivän kooste</a>
+    <a href="/categories/kotimaa/">Kotimaa</a>
+    <a href="/categories/talous/">Talous</a>
+    <a href="/categories/teknologia/">Teknologia</a>
+    <a href="/">Etusivu</a>
+  </nav>
 
   <div class="kooste-archive__list">
     {{ range $pages }}
@@ -70,6 +79,10 @@
 .kooste-archive__title { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 .5rem; }
 .kooste-archive__lead { font-size: 1rem; color: var(--color-muted, #6b7280); margin: 0; max-width: 480px; margin: 0 auto; }
 .kooste-archive__empty { text-align: center; color: var(--color-muted, #6b7280); font-style: italic; padding: 3rem 0; }
+
+.kooste-archive__related { display: flex; flex-wrap: wrap; gap: .5rem .85rem; justify-content: center; margin: 0 0 1.25rem; font-size: .86rem; }
+.kooste-archive__related a { color: var(--color-accent, #2563eb); text-decoration: none; }
+.kooste-archive__related a:hover { text-decoration: underline; }
 
 .kooste-archive__list { display: flex; flex-direction: column; gap: .75rem; }
 

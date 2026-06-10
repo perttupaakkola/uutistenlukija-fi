@@ -3,12 +3,23 @@
 <div class="digest-page">
   <h1>Päivän kooste</h1>
   <p class="digest-date">{{ partial "finnish-date.html" . }}</p>
-  <p class="digest-intro">Kooste päivän tärkeimmistä uutisista.</p>
+  <p class="digest-intro">{{ .Description | default "Päivän kooste kokoaa Uutistenlukijan ajankohtaiset pääuutiset ja päivän seurattavat aiheet yhteen selattavaan näkymään." }}</p>
 
   {{ $today := now.Format "2006-01-02" }}
   {{ $posts := where .Site.RegularPages "Section" "posts" }}
   {{ $todayPosts := where $posts "Date" "ge" (time.AsTime $today) }}
   {{ $sorted := $todayPosts.ByDate.Reverse }}
+  {{ $archives := where .Site.RegularPages "Section" "paivan-kooste" }}
+  {{ $archives = where $archives "Draft" "ne" true }}
+  {{ $archives = $archives.ByDate.Reverse }}
+
+  <nav class="digest-related" aria-label="Päivän kooste ja aihealueet">
+    {{ with index $archives 0 }}<a href="{{ .RelPermalink }}">Uusin päivän kooste</a>{{ end }}
+    <a href="/categories/kotimaa/">Kotimaa</a>
+    <a href="/categories/talous/">Talous</a>
+    <a href="/categories/teknologia/">Teknologia</a>
+    <a href="/">Etusivu</a>
+  </nav>
 
   {{ if not $sorted }}
   <p class="no-articles">Päivän artikkeleita ei vielä ole. Tarkista myöhemmin uudelleen.</p>
@@ -34,9 +45,8 @@
   {{ end }}
   {{ end }}
 
-  {{ $archives := where .Site.RegularPages "Section" "paivan-kooste" }}
-  {{ $archives = where $archives "Draft" "ne" true }}
-  {{ $archives = $archives.ByDate.Reverse }}
+  {{ end }}
+
   {{ if $archives }}
   <section class="digest-section" aria-labelledby="digest-archive-heading">
     <h2 id="digest-archive-heading">Aiemmat koosteet</h2>
@@ -50,13 +60,15 @@
   </section>
   {{ end }}
 
-  {{ end }}
 </div>
 
 <style>
 .digest-page { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
 .digest-date { font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
 .digest-intro { color: var(--text-secondary); margin-bottom: 2rem; font-style: italic; }
+.digest-related { display: flex; flex-wrap: wrap; gap: .5rem .85rem; margin: -1rem 0 2rem; font-family: var(--font-sans); font-size: .86rem; }
+.digest-related a { color: var(--accent); text-decoration: none; }
+.digest-related a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .digest-count { font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
 .digest-section { margin-bottom: 2rem; }
 .digest-section h2 { font-size: 1.2rem; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 0.25rem; margin-bottom: 1rem; }

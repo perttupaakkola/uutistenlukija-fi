@@ -2,12 +2,27 @@
 {{ partial "breadcrumbs.html" . }}
 {{ $heading := partial "category-heading.html" . }}
 {{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) 20 }}
+{{ $relatedByCategory := dict
+  "talous" (slice (dict "label" "Kotimaa" "url" "/categories/kotimaa/") (dict "label" "Teknologia" "url" "/categories/teknologia/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
+  "kotimaa" (slice (dict "label" "Talous" "url" "/categories/talous/") (dict "label" "Ulkomaat" "url" "/categories/ulkomaat/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
+  "teknologia" (slice (dict "label" "Talous" "url" "/categories/talous/") (dict "label" "Tiede" "url" "/categories/tiede/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
+}}
+{{ $termSlug := .Data.Term | default .Title | urlize }}
+{{ $relatedLinks := index $relatedByCategory $termSlug }}
 
 <section class="portal-list-page">
   <header class="portal-list-header">
     <span class="portal-list-header__eyebrow">Kategoria</span>
     <h1>{{ $heading }}</h1>
     {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ with $relatedLinks }}
+    <nav class="category-related-links" aria-label="Jatka aiheesta">
+      <span>Jatka aiheesta</span>
+      {{ range . }}
+      <a href="{{ .url }}">{{ .label }}</a>
+      {{ end }}
+    </nav>
+    {{ end }}
   </header>
 
   {{ if gt (len $paginator.Pages) 0 }}
@@ -76,4 +91,10 @@
   </article>
   {{ end }}
 </section>
+<style>
+.category-related-links { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .85rem; margin-top: .9rem; font-size: .88rem; }
+.category-related-links span { color: var(--portal-muted, var(--text-secondary)); font-weight: 700; }
+.category-related-links a { color: var(--accent, #c0392b); text-decoration: none; }
+.category-related-links a:hover { text-decoration: underline; text-underline-offset: 2px; }
+</style>
 {{ end }}

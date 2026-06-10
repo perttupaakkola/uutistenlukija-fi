@@ -4,6 +4,8 @@
   {{- $desc = .Site.Params.description -}}
 {{- else if eq .RelPermalink "/haku/" -}}
   {{- $desc = "Hae uutisia Uutistenlukijasta – kotimaa, ulkomaat, talous, teknologia, urheilu, kulttuuri ja tiede." -}}
+{{- else if and .IsPage (eq .Section "paivan-kooste") -}}
+  {{- $desc = printf "Päivän kooste %s kokoaa keskeiset uutiset, aiheet ja linkit Uutistenlukijan päivän uutisvirrasta." (.Date | time.Format "2.1.2006") -}}
 {{- else if .IsPage -}}
   {{- $descParam := index .Params "description" | default "" -}}
   {{- if $descParam -}}
@@ -34,6 +36,9 @@
   {{- else -}}
     {{- $desc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) -}}
   {{- end -}}
+{{- else if and .IsSection (eq .Section "paivan-kooste") -}}
+  {{- $descParam := index .Params "description" | default "" -}}
+  {{- $desc = $descParam | default "Päivän kooste kokoaa Uutistenlukijan ajankohtaiset pääuutiset ja päivän seurattavat aiheet yhteen selattavaan näkymään." -}}
 {{- else if .IsSection -}}
   {{- $desc = printf "%s – %s" .Title (.Site.Params.description | default .Site.Title) -}}
 {{- end -}}

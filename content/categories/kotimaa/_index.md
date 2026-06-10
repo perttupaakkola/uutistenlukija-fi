@@ -1,6 +1,6 @@
 ---
 title: "Kotimaa"
-description: "Suomen politiikan käänteet, yhteiskunnan kipupisteet ja päivän polttavimmat aiheet. Kaikki olennainen kotimaasta yhdellä silmäyksellä."
+description: "Kotimaan uutiset kokoavat Suomen politiikan, viranomaisten, alueiden ja arjen tapahtumien keskeiset aiheet yhteen näkymään."
 og_image: "/images/og-kotimaa.png"
 keywords:
   - "kotimaan uutiset"
