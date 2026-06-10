@@ -1,0 +1,186 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-10T06:31:20.756235+00:00",
+  "digest": "f90709505f",
+  "packet": {
+    "packet_id": "20260610T063120Z_f90709505f",
+    "created_at": "2026-06-10T06:31:20Z",
+    "headline_seed": "Twelve killed in mass shooting in Johannesburg, police say",
+    "description_seed": "Another nine people were injured at an informal settlement in Cleveland late on Tuesday.",
+    "link": "https://www.bbc.com/news/articles/c79yzqw0z0wo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c79yzqw0z0wo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Twelve killed in mass shooting in Johannesburg, police say"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "At least 12 people have been killed in a mass shooting in an area of Johannesburg, police in South Africa say. They say another nine people were injured in the attack at an informal settlement in Cleveland late on Tuesday, and a manhunt for suspects is under way. \"It is alleged that more than 10 suspects were dropped off by a white Toyota Quantum near a petrol station in Cleveland,\" the police said in a statement. \"The suspects allegedly entered the informal settlement through both entrances and moved through the area, opening fire on residents and community members at multiple locations before fleeing the scene in the same vehicle,\" the statement added. South Africa has one of the highest murder rates in the world, with around 60 people killed per day on average.",
+        "word_count": 133,
+        "keyword_overlap": 15,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "At least 12 people have been killed in a mass shooting in an area of Johannesburg, police in South Africa say. They say another nine people were injured in the attack at an informal settlement in Cleveland late on Tuesday, and a manhunt for suspects is under way. \"It is alleged that more than 10 suspects were dropped off by a white Toyota Quantum near a petrol station in Cleveland,\" the police said in a statement. \"The suspects allegedly entered the informal settlement through both entrances and moved through the area, opening fire on residents and community members at multiple locations before fleeing the scene in the same vehicle,\" the statement added. This breaking news story is being updated and more details will be published shortly. Please refresh the page for the fullest version.",
+        "word_count": 134,
+        "keyword_overlap": 15,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Another nine people were injured at an informal settlement in Cleveland late on Tuesday.",
+        "word_count": 14,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The local police department said its officers responded to a \"complaint of shooting in progress\" at about 23:10 local time on Tuesday (21:10 GMT). Emergency medical services were also deployed to treat the injured. Police said eight men and three women died at the scene, while an additional man died from his injuries in hospital. At least nine others were taken to various medical facilities for treatment of gunshot wounds. The police statement said that \"the motive for the attack is currently unknown and forms part of the ongoing investigation\". This breaking news story is being updated and more details will be published shortly. Please refresh the page for the fullest version. You can receive Breaking News on a smartphone or tablet via the BBC News App. You can also follow @BBCBreaking on X to get the latest alerts. ---",
+        "word_count": 140,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "At least 12 people have been killed in a mass shooting in an area of Johannesburg, police in South Africa say. They say another nine people were injured in the attack at an informal settlement in Cleveland late on Tuesday, and a manhunt for suspects is under way. \"It is alleged that more than 10 suspects were dropped off by a white Toyota Quantum near a petrol station in Cleveland,\" the police said in a statement. \"The suspects allegedly entered the informal settlement through both entrances and moved through the area, opening fire on residents and community members at multiple locations before fleeing the scene in the same vehicle,\" the statement added. South Africa has one of the highest murder rates in the world, with around 60 people killed per day on average.\n\nAt least 12 people have been killed in a mass shooting in an area of Johannesburg, police in South Africa say. They say another nine people were injured in the attack at an informal settlement in Cleveland late on Tuesday, and a manhunt for suspects is under way. \"It is alleged that more than 10 suspects were dropped off by a white Toyota Quantum near a petrol station in Cleveland,\" the police said in a statement. \"The suspects allegedly entered the informal settlement through both entrances and moved through the area, opening fire on residents and community members at multiple locations before fleeing the scene in the same vehicle,\" the statement added. This breaking news story is being updated and more details will be published shortly. Please refresh the page for the fullest version.\n\nAnother nine people were injured at an informal settlement in Cleveland late on Tuesday.\n\nThe local police department said its officers responded to a \"complaint of shooting in progress\" at about 23:10 local time on Tuesday (21:10 GMT). Emergency medical services were also deployed to treat the injured. Police said eight men and three women died at the scene, while an additional man died from his injuries in hospital. At least nine others were taken to various medical facilities for treatment of gunshot wounds. The police statement said that \"the motive for the attack is currently unknown and forms part of the ongoing investigation\". This breaking news story is being updated and more details will be published shortly. Please refresh the page for the fullest version. You can receive Breaking News on a smartphone or tablet via the BBC News App. You can also follow @BBCBreaking on X to get the latest alerts. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 449,
+      "selected_blocks": 4,
+      "selected_source_words": 421,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Twelve killed in mass shooting in Johannesburg, police say",
+      "description": "Another nine people were injured at an informal settlement in Cleveland late on Tuesday.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Twelve killed in mass shooting in Johannesburg, police say",
+    "description": "Another nine people were injured at an informal settlement in Cleveland late on Tuesday.",
+    "link": "https://www.bbc.com/news/articles/c79yzqw0z0wo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-10T06:25:34+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "c2150e57c63ffa509e6a8a6d9ef31a4f",
+    "_url_hash": "0eac6bb8ed07eb77dd77b4179253d0f3a4b3c6428a872bdf8b1dbb7e391d76af",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nAt least 12 people have been killed in a mass shooting in an area of Johannesburg, police in South Africa say.\n\nThey say another nine people were injured in the attack at an informal settlement in Cleveland late on Tuesday, and a manhunt for suspects is under way.\n\n\"It is alleged that more than 10 suspects were dropped off by a white Toyota Quantum near a petrol station in Cleveland,\" the police said in a statement.\n\n\"The suspects allegedly entered the informal settlement through both entrances and moved through the area, opening fire on residents and community members at multiple locations before fleeing the scene in the same vehicle,\" the statement added.\n\nSouth Africa has one of the highest murder rates in the world, with around 60 people killed per day on average.\n\nThe local police department said its officers responded to a \"complaint of shooting in progress\" at about 23:10 local time on Tuesday (21:10 GMT).\n\nEmergency medical services were also deployed to treat the injured.\n\nPolice said eight men and three women died at the scene, while an additional man died from his injuries in hospital.\n\nAt least nine others were taken to various medical facilities for treatment of gunshot wounds.\n\nThe police statement said that \"the motive for the attack is currently unknown and forms part of the ongoing investigation\".\n\nThis breaking news story is being updated and more details will be published shortly. Please refresh the page for the fullest version.\n\nYou can receive Breaking News on a smartphone or tablet via the BBC News App. You can also follow @BBCBreaking on X to get the latest alerts.\n\n---\n\n[Lähde: BBC]\nAt least 12 people have been killed in a mass shooting in an area of Johannesburg, police in South Africa say.\n\nThey say another nine people were injured in the attack at an informal settlement in Cleveland late on Tuesday, and a manhunt for suspects is under way.\n\n\"It is alleged that more than 10 suspects were dropped off by a white Toyota Quantum near a petrol station in Cleveland,\" the police said in a statement.\n\n\"The suspects allegedly entered the informal settlement through both entrances and moved through the area, opening fire on residents and community members at multiple locations before fleeing the scene in the same vehicle,\" the statement added.\n\nThis breaking news story is being updated and more details will be published shortly. Please refresh the page for the fullest version.\n\nYou can receive Breaking News on a smartphone or tablet via the BBC News App. You can also follow @BBCBreaking on X, external to get the latest alerts.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-10T06:34:54.348710+00:00",
+  "failure": "content too short: 212 words",
+  "payload": {
+    "packet_id": "20260610T063120Z_f90709505f",
+    "title": "Johannesburgin joukkoampumisessa kuoli ainakin 12 ihmistä",
+    "summary": "Etelä-Afrikan poliisin mukaan ainakin 12 ihmistä on kuollut ja yhdeksän haavoittunut ampumisessa Johannesburgin Clevelandin alueella. Epäiltyjä etsitään, ja hyökkäyksen motiivi on yhä epäselvä.",
+    "content": "Ainakin 12 ihmistä on kuollut joukkoampumisessa Johannesburgissa Etelä-Afrikassa, maan poliisi kertoo. Hyökkäys tapahtui Clevelandin alueella sijaitsevassa epävirallisessa asutuksessa myöhään tiistaina. Poliisin mukaan yhdeksän muuta ihmistä haavoittui, ja viranomaiset ovat käynnistäneet epäiltyjen etsinnän.\n\n## Poliisi sai ilmoituksen käynnissä olevasta ampumisesta\n\nPaikallisen poliisin mukaan sen yksiköt hälytettiin paikalle noin kello 23.10 tiistai-iltana paikallista aikaa eli kello 21.10 GMT-aikaa. Ilmoitus koski käynnissä olevaa ampumista. Myös ensihoito lähetettiin alueelle hoitamaan haavoittuneita.\n\nPoliisin mukaan kahdeksan miestä ja kolme naista kuoli tapahtumapaikalla. Lisäksi yksi mies menehtyi vammoihinsa sairaalassa. Ainakin yhdeksän muuta ihmistä vietiin eri hoitolaitoksiin ampumahaavojen vuoksi.\n\n## Epäillyt pakenivat samalla ajoneuvolla\n\nPoliisin alustavien tietojen mukaan yli kymmenen epäiltyä olisi tuotu Clevelandissa sijaitsevan huoltoaseman lähelle valkoisella Toyota Quantum -ajoneuvolla. Poliisin mukaan epäillyt menivät epäviralliseen asutukseen molempien sisäänkäyntien kautta ja liikkuivat alueella ampuen asukkaita ja muita paikalla olleita useissa kohdissa.\n\nPoliisin lausunnon mukaan epäillyt poistuivat paikalta samalla ajoneuvolla. Viranomaiset etsivät heitä edelleen. Hyökkäyksen motiivi ei poliisin mukaan ole tällä hetkellä tiedossa, ja sitä selvitetään osana meneillään olevaa tutkintaa.\n\n## Tiedot perustuvat poliisin lausuntoon\n\nTapauksesta on kerrottu vasta rajallisesti vahvistettuja tietoja. Poliisi ei ole lähdetietojen mukaan julkaissut tarkempia tietoja uhreista tai epäillyistä. BBC:n välittämien poliisitietojen mukaan kyseessä on yhä päivittyvä uutistilanne.\n\nEtelä-Afrikassa henkirikosten määrä on kansainvälisesti vertaillen erittäin korkea. Lähdetietojen mukaan maassa kuolee keskimäärin noin 60 ihmistä päivässä henkirikosten seurauksena.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Etelä-Afrikka",
+      "Johannesburg",
+      "ampuminen",
+      "poliisi",
+      "rikostutkinta"
+    ],
+    "summary_bullets": [
+      "Ainakin 12 ihmistä kuoli joukkoampumisessa Johannesburgin Clevelandin alueella.",
+      "Yhdeksän haavoittunutta vietiin hoitoon ampumahaavojen vuoksi.",
+      "Poliisi etsii yli kymmentä epäiltyä, ja hyökkäyksen motiivi on yhä epäselvä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu poliisin kertomiin tietoihin BBC:n välittämänä. Uhreista, epäillyistä ja motiivista on saatavilla vain rajallisesti vahvistettuja tietoja."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260610T063120Z_f90709505f\",\n  \"title\": \"Johannesburgin joukkoampumisessa kuoli ainakin 12 ihmistä\",\n  \"summary\": \"Etelä-Afrikan poliisin mukaan ainakin 12 ihmistä on kuollut ja yhdeksän haavoittunut ampumisessa Johannesburgin Clevelandin alueella. Epäiltyjä etsitään, ja hyökkäyksen motiivi on yhä epäselvä.\",\n  \"content\": \"Ainakin 12 ihmistä on kuollut joukkoampumisessa Johannesburgissa Etelä-Afrikassa, maan poliisi kertoo. Hyökkäys tapahtui Clevelandin alueella sijaitsevassa epävirallisessa asutuksessa myöhään tiistaina. Poliisin mukaan yhdeksän muuta ihmistä haavoittui, ja viranomaiset ovat käynnistäneet epäiltyjen etsinnän.\\n\\n## Poliisi sai ilmoituksen käynnissä olevasta ampumisesta\\n\\nPaikallisen poliisin mukaan sen yksiköt hälytettiin paikalle noin kello 23.10 tiistai-iltana paikallista aikaa eli kello 21.10 GMT-aikaa. Ilmoitus koski käynnissä olevaa ampumista. Myös ensihoito lähetettiin alueelle hoitamaan haavoittuneita.\\n\\nPoliisin mukaan kahdeksan miestä ja kolme naista kuoli tapahtumapaikalla. Lisäksi yksi mies menehtyi vammoihinsa sairaalassa. Ainakin yhdeksän muuta ihmistä vietiin eri hoitolaitoksiin ampumahaavojen vuoksi.\\n\\n## Epäillyt pakenivat samalla ajoneuvolla\\n\\nPoliisin alustavien tietojen mukaan yli kymmenen epäiltyä olisi tuotu Clevelandissa sijaitsevan huoltoaseman lähelle valkoisella Toyota Quantum -ajoneuvolla. Poliisin mukaan epäillyt menivät epäviralliseen asutukseen molempien sisäänkäyntien kautta ja liikkuivat alueella ampuen asukkaita ja muita paikalla olleita useissa kohdissa.\\n\\nPoliisin lausunnon mukaan epäillyt poistuivat paikalta samalla ajoneuvolla. Viranomaiset etsivät heitä edelleen. Hyökkäyksen motiivi ei poliisin mukaan ole tällä hetkellä tiedossa, ja sitä selvitetään osana meneillään olevaa tutkintaa.\\n\\n## Tiedot perustuvat poliisin lausuntoon\\n\\nTapauksesta on kerrottu vasta rajallisesti vahvistettuja tietoja. Poliisi ei ole lähdetietojen mukaan julkaissut tarkempia tietoja uhreista tai epäillyistä. BBC:n välittämien poliisitietojen mukaan kyseessä on yhä päivittyvä uutistilanne.\\n\\nEtelä-Afrikassa henkirikosten määrä on kansainvälisesti vertaillen erittäin korkea. Lähdetietojen mukaan maassa kuolee keskimäärin noin 60 ihmistä päivässä henkirikosten seurauksena.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Etelä-Afrikka\",\n    \"Johannesburg\",\n    \"ampuminen\",\n    \"poliisi\",\n    \"rikostutkinta\"\n  ],\n  \"summary_bullets\": [\n    \"Ainakin 12 ihmistä kuoli joukkoampumisessa Johannesburgin Clevelandin alueella.\",\n    \"Yhdeksän haavoittunutta vietiin hoitoon ampumahaavojen vuoksi.\",\n    \"Poliisi etsii yli kymmentä epäiltyä, ja hyökkäyksen motiivi on yhä epäselvä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu poliisin kertomiin tietoihin BBC:n välittämänä. Uhreista, epäillyistä ja motiivista on saatavilla vain rajallisesti vahvistettuja tietoja.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260610T063120Z_f90709505f",
+    "category": "Kotimaa",
+    "selected_source_words": 421,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 212,
+    "issues": [
+      "content too short: 212 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Johannesburgin joukkoampumisessa kuoli ainakin 12 ihmistä",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-10T06:34:54.348082+00:00",
+    "repair_trigger": "pre_repair_word_count=212; selected_source_words=421; selected_source_blocks=4",
+    "pre_repair_word_count": 212,
+    "pre_repair_lead_word_count": 32,
+    "post_repair_word_count": 212,
+    "post_repair_lead_word_count": 32,
+    "selected_source_words_at_repair": 421,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 421,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 212 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:b606f726f9",
+      "2:BBC:d257c0117c",
+      "3:BBC World:0e991a00b5",
+      "4:BBC World:e74b8194e5"
+    ],
+    "final_issues": [
+      "content too short: 212 words"
+    ],
+    "recovered": false
+  }
+}
