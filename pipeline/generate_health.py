@@ -84,6 +84,7 @@ def pipeline_stats(post_dates: list[datetime] | None = None) -> dict:
     last_run = None
     success_rate_7d = None
     published_today = 0
+    post_dates = post_dates or []
 
     # From metrics.json (per-run records)
     if METRICS_FILE.exists():
@@ -110,8 +111,10 @@ def pipeline_stats(post_dates: list[datetime] | None = None) -> dict:
         except Exception:
             pass
 
-    # Published today from publish-metrics.json
-    if PUBLISH_METRICS.exists():
+    if post_dates:
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
+        published_today = sum(1 for dt in post_dates if dt.astimezone(timezone.utc) >= cutoff)
+    elif PUBLISH_METRICS.exists():
         today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         try:
             for line in PUBLISH_METRICS.read_text().splitlines():
@@ -128,10 +131,6 @@ def pipeline_stats(post_dates: list[datetime] | None = None) -> dict:
                     pass
         except Exception:
             pass
-
-    if published_today == 0 and post_dates:
-        today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        published_today = sum(1 for dt in post_dates if dt.astimezone(timezone.utc).strftime("%Y-%m-%d") == today_str)
 
     return {
         "lastRun": last_run,
