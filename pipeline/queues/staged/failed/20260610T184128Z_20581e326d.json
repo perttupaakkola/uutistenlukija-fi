@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-10T18:41:28.645932+00:00",
+  "digest": "20581e326d",
+  "packet": {
+    "packet_id": "20260610T184128Z_20581e326d",
+    "created_at": "2026-06-10T18:41:28Z",
+    "headline_seed": "Nuori lupaus varasti huomion Lahden GP-kilpailun moukarissa",
+    "description_seed": "19-vuotias moukarilupaus nousi moukarikilpailun neljänneksi. Krista Tervon uusi Suomen ennätys jäi haaveeksi.",
+    "link": "https://www.ess.fi/urheilu/9527487",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9527487"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nuori lupaus varasti huomion Lahden GP-kilpailun moukarissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 93,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nuori lupaus varasti huomion Lahden GP-kilpailun moukarissa",
+      "description": "19-vuotias moukarilupaus nousi moukarikilpailun neljänneksi. Krista Tervon uusi Suomen ennätys jäi haaveeksi.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nuori lupaus varasti huomion Lahden GP-kilpailun moukarissa",
+    "description": "19-vuotias moukarilupaus nousi moukarikilpailun neljänneksi. Krista Tervon uusi Suomen ennätys jäi haaveeksi.",
+    "link": "https://www.ess.fi/urheilu/9527487",
+    "published": "2026-06-10T21:32:21+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "f27467eb62660cda36870d7110ca787b",
+    "_url_hash": "8d2fd2e3b1a47b521c617f51e4b11116d4d4fc688c8886f144293d330cd29b0b",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nG7-maiden ulkoministerit kokoontuvat torstaina kaksipäiväiseen kokoukseen Ranskan pääkaupunki Pariisin ulkopuolelle.\n\nTapaamisessa on määrä keskustella muun muassa Lähi-idän tilanteesta ja Ukrainasta. Lisäksi liittolaiset toivovat saavansa kokouksessa selvyyttä Yhdysvaltojen ja Israelin yhteisestä taistelusta Irania vastaan.\n\nOsallistujat saavat tapaamisessa katsauksen Yhdysvaltain ulkoministeri Marco Rubiolta, jonka on määrä osallistua kokoukseen perjantaina. Matka on Rubion ensimmäinen ulkomaille sen jälkeen, kun Yhdysvallat ja Israel iskivät Iraniin 28. helmikuuta.\n\nRyhmittymän lisäksi kokoukseen on määrä osallistua ministerit Brasiliasta, Intiasta, Etelä-Koreasta, Saudi-Arabiasta ja Ukrainasta.\n\nTämän vuoden G7-huippukokous järjestetään kesäkuussa Ranskassa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-10T18:43:14.954931+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260610T184128Z_20581e326d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

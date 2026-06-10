@@ -1,0 +1,187 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-10T21:51:13.888502+00:00",
+  "digest": "2cbd71f31c",
+  "packet": {
+    "packet_id": "20260610T215113Z_2cbd71f31c",
+    "created_at": "2026-06-10T21:51:13Z",
+    "headline_seed": "Cybercriminals claim breach of Oracle PeopleSoft servers at 100-plus organizations",
+    "description_seed": "The ShinyHunters hacking gang claims to have compromised the Oracle PeopleSoft servers of more than 100 organizations, including many universities.",
+    "link": "https://techcrunch.com/2026/06/10/cybercriminals-claim-breach-of-oracle-peoplesoft-servers-at-100-plus-organizations/",
+    "source": "TechCrunch",
+    "source_names": [
+      "Bleeping Computer",
+      "Bleeping Computer",
+      "Bleeping Computer",
+      "Bleeping Computer"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/10/cybercriminals-claim-breach-of-oracle-peoplesoft-servers-at-100-plus-organizations/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Cybercriminals claim breach of Oracle PeopleSoft servers at 100-plus organizations"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "Oracle PeopleSoft servers are being targeted in ongoing data theft attacks by the ShinyHunters extortion gang, which claims to have stolen data from over 100 organizations. PeopleSoft is an enterprise business software suite used by large organizations to manage business operations such as human resources, payroll, finance, supply chain management, procurement, and student administration. Yesterday, BleepingComputer learned of widespread data theft attacks targeting both cloud and on-premises Oracle PeopleSoft customer instances.These customers were receiving extortion demands that were signed by the ShinyHunters extortion gang. Today, the threat actor confirmed to BleepingComputer that they were behind the attacks, claiming to have stolen data from 300 instances across more than 100 organizations.",
+        "word_count": 110,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "They claim their initial goal was to breach an FBI portal running PeopleSoft to \"publish a statement and set the record straight on some misinsformation that has been spreading.\" However, they said their attack was not successful, and they were unable to gain access to the instance. The threat actor told BleepingComputer that Nottingham University is a victim of these attacks, and that its data has already been published on the ShinyHunters data leak site. The University also released a statement today, acknowledging that it suffered a cybersecurity incident. While Oracle has not publicly disclosed any information about these attacks, cybersecurity researcher \"Michael R\" found several exposed online directories containing tooling related to this attack. \"ShinyHunters, (or a group impersonating them) exposed several directories revealing ongoing targeting of PeopleSoft (Enterprise Resource Planning software) environments,\" the researcher posted.",
+        "word_count": 137,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "ShinyHunters says they are using a \"gadget chain\" of old and zero-day vulnerabilities to conduct the attacks. However, they state that their attack is not working on all systems and believe that exploitation success may depend on how an instance is configured. BleepingComputer contacted Oracle this morning to ask whether it is aware of an Oracle PeopleSoft zero-day being exploited in data theft attacks, but had not received a reply at this time. According to the threat actor, most of the organizations impacted by these attacks are in the education sector, with many previously extorted by the threat actor.",
+        "word_count": 99,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "\"Also visible were staging materials, including MeshCentral agents, and a defacement and credential spray s",
+        "word_count": 15,
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Oracle PeopleSoft servers are being targeted in ongoing data theft attacks by the ShinyHunters extortion gang, which claims to have stolen data from over 100 organizations. PeopleSoft is an enterprise business software suite used by large organizations to manage business operations such as human resources, payroll, finance, supply chain management, procurement, and student administration. Yesterday, BleepingComputer learned of widespread data theft attacks targeting both cloud and on-premises Oracle PeopleSoft customer instances.These customers were receiving extortion demands that were signed by the ShinyHunters extortion gang. Today, the threat actor confirmed to BleepingComputer that they were behind the attacks, claiming to have stolen data from 300 instances across more than 100 organizations.\n\nThey claim their initial goal was to breach an FBI portal running PeopleSoft to \"publish a statement and set the record straight on some misinsformation that has been spreading.\" However, they said their attack was not successful, and they were unable to gain access to the instance. The threat actor told BleepingComputer that Nottingham University is a victim of these attacks, and that its data has already been published on the ShinyHunters data leak site. The University also released a statement today, acknowledging that it suffered a cybersecurity incident. While Oracle has not publicly disclosed any information about these attacks, cybersecurity researcher \"Michael R\" found several exposed online directories containing tooling related to this attack. \"ShinyHunters, (or a group impersonating them) exposed several directories revealing ongoing targeting of PeopleSoft (Enterprise Resource Planning software) environments,\" the researcher posted.\n\nShinyHunters says they are using a \"gadget chain\" of old and zero-day vulnerabilities to conduct the attacks. However, they state that their attack is not working on all systems and believe that exploitation success may depend on how an instance is configured. BleepingComputer contacted Oracle this morning to ask whether it is aware of an Oracle PeopleSoft zero-day being exploited in data theft attacks, but had not received a reply at this time. According to the threat actor, most of the organizations impacted by these attacks are in the education sector, with many previously extorted by the threat actor.\n\n\"Also visible were staging materials, including MeshCentral agents, and a defacement and credential spray s",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 381,
+      "selected_blocks": 4,
+      "selected_source_words": 361,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Bleeping Computer"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Cybercriminals claim breach of Oracle PeopleSoft servers at 100-plus organizations",
+      "description": "The ShinyHunters hacking gang claims to have compromised the Oracle PeopleSoft servers of more than 100 organizations, including many universities.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Cybercriminals claim breach of Oracle PeopleSoft servers at 100-plus organizations",
+    "description": "The ShinyHunters hacking gang claims to have compromised the Oracle PeopleSoft servers of more than 100 organizations, including many universities.",
+    "link": "https://techcrunch.com/2026/06/10/cybercriminals-claim-breach-of-oracle-peoplesoft-servers-at-100-plus-organizations/",
+    "published": "2026-06-10T21:33:32+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "589489fb8f943e856f6ad7c0cf3534b5",
+    "_url_hash": "08064b12d3befb104160e72e33a3a173926150609883d5709b7d0a794036028e",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Bleeping Computer]\nOracle PeopleSoft servers are being targeted in ongoing data theft attacks by the ShinyHunters extortion gang, which claims to have stolen data from over 100 organizations.\n\nPeopleSoft is an enterprise business software suite used by large organizations to manage business operations such as human resources, payroll, finance, supply chain management, procurement, and student administration.\n\nYesterday, BleepingComputer learned of widespread data theft attacks targeting both cloud and on-premises Oracle PeopleSoft customer instances.These customers were receiving extortion demands that were signed by the ShinyHunters extortion gang.\n\nToday, the threat actor confirmed to BleepingComputer that they were behind the attacks, claiming to have stolen data from 300 instances across more than 100 organizations.\n\nShinyHunters says they are using a \"gadget chain\" of old and zero-day vulnerabilities to conduct the attacks. However, they state that their attack is not working on all systems and believe that exploitation success may depend on how an instance is configured.\n\nBleepingComputer contacted Oracle this morning to ask whether it is aware of an Oracle PeopleSoft zero-day being exploited in data theft attacks, but had not received a reply at this time.\n\nAccording to the threat actor, most of the organizations impacted by these attacks are in the education sector, with many previously extorted by the threat actor.\n\nThey claim their initial goal was to breach an FBI portal running PeopleSoft to \"publish a statement and set the record straight on some misinsformation that has been spreading.\" However, they said their attack was not successful, and they were unable to gain access to the instance.\n\nThe threat actor told BleepingComputer that Nottingham University is a victim of these attacks, and that its data has already been published on the ShinyHunters data leak site. The University also released a statement today, acknowledging that it suffered a cybersecurity incident.\n\nWhile Oracle has not publicly disclosed any information about these attacks, cybersecurity researcher \"Michael R\" found several exposed online directories containing tooling related to this attack.\n\n\"ShinyHunters, (or a group impersonating them) exposed several directories revealing ongoing targeting of PeopleSoft (Enterprise Resource Planning software) environments,\" the researcher posted.\n\n\"Also visible were staging materials, including MeshCentral agents, and a defacement and credential spray s",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-10T21:54:56.429160+00:00",
+  "failure": "lead paragraph too short: 29 words",
+  "payload": {
+    "packet_id": "20260610T215113Z_2cbd71f31c",
+    "title": "Kiristyshakkerit väittävät murtautuneensa yli sadan organisaation Oracle PeopleSoft -palvelimille",
+    "summary": "ShinyHunters-kiristysryhmä väittää varastaneensa tietoja yli sadalta Oracle PeopleSoftia käyttävältä organisaatiolta. Väitteiden mukaan kohteita on erityisesti koulutussektorilla, mutta Oraclen julkista vahvistusta asiasta ei ole.",
+    "content": "ShinyHunters-kiristysryhmä väittää varastaneensa tietoja yli sadalta organisaatiolta hyökkäyksissä, jotka kohdistuvat Oracle PeopleSoft -järjestelmiin. Ryhmän mukaan tietoja olisi viety noin 300 PeopleSoft-instanssista, ja kohteissa on väitteiden perusteella paljon koulutusalan organisaatioita.\n\n## Hyökkäykset kohdistuvat PeopleSoft-ympäristöihin\n\nOracle PeopleSoft on suurten organisaatioiden käyttämä yritysohjelmistojen kokonaisuus, jolla hallitaan esimerkiksi henkilöstöhallintoa, palkanlaskentaa, taloutta, hankintoja, toimitusketjuja ja opiskelijahallintoa. Hyökkäysten kerrotaan koskeneen sekä pilvessä toimivia että organisaatioiden omissa ympäristöissä ajettavia PeopleSoft-asiakasinstansseja.\n\nKohteiksi joutuneille asiakkaille on tietojen mukaan lähetetty kiristysvaatimuksia, jotka on allekirjoitettu ShinyHuntersin nimissä. Ryhmä on myös itse väittänyt olevansa hyökkäysten takana. Väitteitä ei kuitenkaan pidä rinnastaa riippumattomaan tekniseen vahvistukseen kaikista mainituista uhreista.\n\n## Nimetyksi uhriksi kerrotaan Nottinghamin yliopisto\n\nYhtenä nimettynä uhrina on Nottinghamin yliopisto. Ryhmän väitteen mukaan yliopiston tietoja on jo julkaistu sen vuotosivustolla. Yliopisto on puolestaan kertonut kärsineensä kyberturvallisuuspoikkeamasta, mutta paketin tiedoissa ei täsmennetä tapahtuman laajuutta tai yhteyttä kaikkiin ryhmän väitteisiin.\n\nShinyHunters on lisäksi väittänyt, että sen alkuperäinen tavoite oli murtautua PeopleSoftia käyttävään FBI:n portaaliin julkaistakseen oman lausuntonsa. Ryhmän mukaan tämä yritys ei onnistunut, eikä se saanut pääsyä kyseiseen instanssiin.\n\n## Väitetty hyökkäystapa ja avoimet kysymykset\n\nShinyHuntersin mukaan hyökkäyksissä käytetään niin sanottua gadget chain -menetelmää, jossa yhdistyisi vanhoja haavoittuvuuksia ja nollapäivähaavoittuvuuksia. Ryhmä on kuitenkin sanonut, ettei hyökkäys toimi kaikissa järjestelmissä, ja arvioinut onnistumisen riippuvan PeopleSoft-instanssin asetuksista.\n\nKyberturvallisuustutkija Michael R on kertonut löytäneensä verkosta avoimia hakemistoja, joissa näkyi hyökkäyksiin liittyväksi kuvattua työkalustoa. Hänen mukaansa näkyvissä oli merkkejä PeopleSoft-ympäristöjen jatkuvasta kohdentamisesta joko ShinyHuntersin tai sitä esittävän ryhmän toimesta. Näkyvissä olleisiin valmistelumateriaaleihin kerrottiin kuuluneen myös MeshCentral-agentteja sekä defacement- ja tunnusten kokeiluun liittyvää aineistoa.\n\nOracle ei ole paketin mukaan julkaissut hyökkäyksistä omia tietojaan eikä vastannut kysymykseen siitä, onko se tietoinen PeopleSoftin nollapäivähaavoittuvuuden hyväksikäytöstä tietovarkauksissa. Tämän vuoksi keskeisiä seikkoja, kuten väitetyn haavoittuvuuden luonne, uhrien lopullinen määrä ja mahdolliset korjaustoimet, on vielä avoinna.",
+    "category": "Teknologia",
+    "tags": [
+      "Oracle",
+      "PeopleSoft",
+      "kyberturvallisuus",
+      "ShinyHunters",
+      "tietomurrot"
+    ],
+    "summary_bullets": [
+      "ShinyHunters väittää varastaneensa tietoja yli sadalta Oracle PeopleSoftia käyttävältä organisaatiolta.",
+      "Ryhmän mukaan hyökkäykset koskevat noin 300 instanssia, ja kohteita on erityisesti koulutussektorilla.",
+      "Oracle ei ole paketin tietojen mukaan julkisesti vahvistanut hyökkäyksiä tai mahdollista nollapäivähaavoittuvuutta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu paketin lähdetietoihin. Keskeiset väitteet on muotoiltu väitteiksi, koska hyökkääjäryhmän ilmoituksia ja kaikkien uhrien määrää ei ole riippumattomasti vahvistettu."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260610T215113Z_2cbd71f31c\",\n  \"title\": \"Kiristyshakkerit väittävät murtautuneensa yli sadan organisaation Oracle PeopleSoft -palvelimille\",\n  \"summary\": \"ShinyHunters-kiristysryhmä väittää varastaneensa tietoja yli sadalta Oracle PeopleSoftia käyttävältä organisaatiolta. Väitteiden mukaan kohteita on erityisesti koulutussektorilla, mutta Oraclen julkista vahvistusta asiasta ei ole.\",\n  \"content\": \"ShinyHunters-kiristysryhmä väittää varastaneensa tietoja yli sadalta organisaatiolta hyökkäyksissä, jotka kohdistuvat Oracle PeopleSoft -järjestelmiin. Ryhmän mukaan tietoja olisi viety noin 300 PeopleSoft-instanssista, ja kohteissa on väitteiden perusteella paljon koulutusalan organisaatioita.\\n\\n## Hyökkäykset kohdistuvat PeopleSoft-ympäristöihin\\n\\nOracle PeopleSoft on suurten organisaatioiden käyttämä yritysohjelmistojen kokonaisuus, jolla hallitaan esimerkiksi henkilöstöhallintoa, palkanlaskentaa, taloutta, hankintoja, toimitusketjuja ja opiskelijahallintoa. Hyökkäysten kerrotaan koskeneen sekä pilvessä toimivia että organisaatioiden omissa ympäristöissä ajettavia PeopleSoft-asiakasinstansseja.\\n\\nKohteiksi joutuneille asiakkaille on tietojen mukaan lähetetty kiristysvaatimuksia, jotka on allekirjoitettu ShinyHuntersin nimissä. Ryhmä on myös itse väittänyt olevansa hyökkäysten takana. Väitteitä ei kuitenkaan pidä rinnastaa riippumattomaan tekniseen vahvistukseen kaikista mainituista uhreista.\\n\\n## Nimetyksi uhriksi kerrotaan Nottinghamin yliopisto\\n\\nYhtenä nimettynä uhrina on Nottinghamin yliopisto. Ryhmän väitteen mukaan yliopiston tietoja on jo julkaistu sen vuotosivustolla. Yliopisto on puolestaan kertonut kärsineensä kyberturvallisuuspoikkeamasta, mutta paketin tiedoissa ei täsmennetä tapahtuman laajuutta tai yhteyttä kaikkiin ryhmän väitteisiin.\\n\\nShinyHunters on lisäksi väittänyt, että sen alkuperäinen tavoite oli murtautua PeopleSoftia käyttävään FBI:n portaaliin julkaistakseen oman lausuntonsa. Ryhmän mukaan tämä yritys ei onnistunut, eikä se saanut pääsyä kyseiseen instanssiin.\\n\\n## Väitetty hyökkäystapa ja avoimet kysymykset\\n\\nShinyHuntersin mukaan hyökkäyksissä käytetään niin sanottua gadget chain -menetelmää, jossa yhdistyisi vanhoja haavoittuvuuksia ja nollapäivähaavoittuvuuksia. Ryhmä on kuitenkin sanonut, ettei hyökkäys toimi kaikissa järjestelmissä, ja arvioinut onnistumisen riippuvan PeopleSoft-instanssin asetuksista.\\n\\nKyberturvallisuustutkija Michael R on kertonut löytäneensä verkosta avoimia hakemistoja, joissa näkyi hyökkäyksiin liittyväksi kuvattua työkalustoa. Hänen mukaansa näkyvissä oli merkkejä PeopleSoft-ympäristöjen jatkuvasta kohdentamisesta joko ShinyHuntersin tai sitä esittävän ryhmän toimesta. Näkyvissä olleisiin valmistelumateriaaleihin kerrottiin kuuluneen myös MeshCentral-agentteja sekä defacement- ja tunnusten kokeiluun liittyvää aineistoa.\\n\\nOracle ei ole paketin mukaan julkaissut hyökkäyksistä omia tietojaan eikä vastannut kysymykseen siitä, onko se tietoinen PeopleSoftin nollapäivähaavoittuvuuden hyväksikäytöstä tietovarkauksissa. Tämän vuoksi keskeisiä seikkoja, kuten väitetyn haavoittuvuuden luonne, uhrien lopullinen määrä ja mahdolliset korjaustoimet, on vielä avoinna.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"Oracle\",\n    \"PeopleSoft\",\n    \"kyberturvallisuus\",\n    \"ShinyHunters\",\n    \"tietomurrot\"\n  ],\n  \"summary_bullets\": [\n    \"ShinyHunters väittää varastaneensa tietoja yli sadalta Oracle PeopleSoftia käyttävältä organisaatiolta.\",\n    \"Ryhmän mukaan hyökkäykset koskevat noin 300 instanssia, ja kohteita on erityisesti koulutussektorilla.\",\n    \"Oracle ei ole paketin tietojen mukaan julkisesti vahvistanut hyökkäyksiä tai mahdollista nollapäivähaavoittuvuutta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu paketin lähdetietoihin. Keskeiset väitteet on muotoiltu väitteiksi, koska hyökkääjäryhmän ilmoituksia ja kaikkien uhrien määrää ei ole riippumattomasti vahvistettu.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260610T215113Z_2cbd71f31c",
+    "category": "Teknologia",
+    "selected_source_words": 361,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 281,
+    "issues": [
+      "lead paragraph too short: 29 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Kiristyshakkerit väittävät murtautuneensa yli sadan organisaation Oracle PeopleSoft -palvelimille",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-10T21:54:56.428643+00:00",
+    "repair_trigger": "pre_repair_word_count=246; selected_source_words=361; selected_source_blocks=4",
+    "pre_repair_word_count": 246,
+    "pre_repair_lead_word_count": 29,
+    "post_repair_word_count": 281,
+    "post_repair_lead_word_count": 29,
+    "selected_source_words_at_repair": 361,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 361,
+    "source_blocks": 4,
+    "repair_added_word_count": 35,
+    "repair_result": "quality_gate_rejected",
+    "repair_rejection_reason": "lead paragraph too short: 29 words",
+    "source_block_ids_used_for_repair": [
+      "1:Bleeping Computer:94498e3092",
+      "2:Bleeping Computer:1201407e90",
+      "3:Bleeping Computer:1994796f21",
+      "4:Bleeping Computer:d8e7ba1979"
+    ],
+    "final_issues": [
+      "lead paragraph too short: 29 words"
+    ],
+    "recovered": false
+  }
+}

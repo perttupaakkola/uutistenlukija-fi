@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-10T19:01:17.108789+00:00",
+  "digest": "07ac666289",
+  "packet": {
+    "packet_id": "20260610T190117Z_07ac666289",
+    "created_at": "2026-06-10T19:01:17Z",
+    "headline_seed": "Kolme maalia kahdeksaan minuuttiin, Ilves maksoi Kuhnureille potut pottuina Suomen cupissa",
+    "description_seed": "Erik Anderssonin maalivire oli laiha lohtu cupiin panostaneille lahtelaisille.",
+    "link": "https://www.ess.fi/urheilu/9527530",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9527530"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kolme maalia kahdeksaan minuuttiin, Ilves maksoi Kuhnureille potut pottuina Suomen cupissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 179,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kolme maalia kahdeksaan minuuttiin, Ilves maksoi Kuhnureille potut pottuina Suomen cupissa",
+      "description": "Erik Anderssonin maalivire oli laiha lohtu cupiin panostaneille lahtelaisille.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kolme maalia kahdeksaan minuuttiin, Ilves maksoi Kuhnureille potut pottuina Suomen cupissa",
+    "description": "Erik Anderssonin maalivire oli laiha lohtu cupiin panostaneille lahtelaisille.",
+    "link": "https://www.ess.fi/urheilu/9527530",
+    "published": "2026-06-10T21:51:31+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "bc5b238fcc870ed7fb70c83d3a56b8ce",
+    "_url_hash": "c7f44617ca96e578496bd333ede0db47943e96f2e55599ba74d22354ea16852c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nIlves vei Tapparan ja Ilveksen välieräsarjan toisen kohtaamisen 6–0-lukemin ja johtaa sarjaa 2–0.\n\nTappara pääsi hetkeksi ylivoimalle, mutta ei onnistunut maalinteossa.\n\nIlves voittaa tylyin 6–0-lukemin. Sarjan kolmas ottelu pelataan tiistaina.\n\nIlves ei anna armoa Tapparalle, vaan jatkaa pyörittämistään Tapparan päädyssä.\n\nSitten kiehahtaa Tapparan Aapeli Räsäsellä, joka kaataa Radek Kucericin.\n\nIlves-pelaaja joutui poistumaan pukukoppiin.\n\nTapparan nöyryytys ei ota loppuakseen. Matic Török töräyttää illan toisellaan 6–0-lukemat.\n\nTörökin lisäksi myös Samuli Ratinen on viimeistellyt tänään kaksi osumaa.\n\nToisessa erässä tunteet Tapparan fanileirissä kävivät erittäin kuumina.\n\nMTV Urheilun mukaan Tapparan fanikatsomo tyhjennettiin lähes kokonaan toisen erän aikana.\n\nTapahtumapäällikkö Lasse Fihlin mukaan järjestäjien kovat toimenpiteet johtuivat ”sovittujen sääntöjen rikkomisesta”. Tappara-fanit heiluttivat jättimäisiä lippuja pelin ollessa käynnissä, ja tapahtumapäällikön mukaan näin ei ole lupa toimia.\n\nIlves ei anna Tapparalle armoa. Kultakypärä Simon Johansson painaa taululle jo 5–0-lukemat.\n\nIlveksen nuori Ondrej Kos väänsi ja väänsi Tapparan päädyssä. Lopulta Tapparan Daniel Brickley joutui rikkomaan ja Ilves pääsi ylivoimalle.\n\nTappara pääsee jo neljättä kertaa ylivoimalle. Tässä sarjassa se ei ole tehnyt vielä yhtään yv-osumaa.\n\nSaako Tappara jonkinlaista ryhtiliikettä aikaan?",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-10T19:03:16.635802+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä riittäviä varmistettuja tietoja ottelusta julkaistavan uutisen kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260610T190117Z_07ac666289\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä riittäviä varmistettuja tietoja ottelusta julkaistavan uutisen kirjoittamiseen.\"}"
+}
