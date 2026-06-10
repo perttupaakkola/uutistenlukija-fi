@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/quentin-tarantinon-yli-neljan-tunnin-k18-vakivaltatykityksen-voi-pian-katsoa-kotona/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
