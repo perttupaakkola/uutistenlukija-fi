@@ -44,7 +44,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/marleena-lehtosen-naistenvaateliikkeen-myynti-hyppasi-ylen-uutisen-jalkeen-tilauksia-alkoi-tulla-minuutin-valein/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
