@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/yle-areenasta-lahtee-huomenna-yksi-maailman-tunnetuimmista-sotaelokuvista/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
