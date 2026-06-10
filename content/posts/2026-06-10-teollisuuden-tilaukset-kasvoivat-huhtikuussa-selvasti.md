@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/teollisuudessa-positiivinen-huhtikuu-vahvistaa-kuvaa-siita-etta-suomen-talouden-elpyminen-on-alkanut/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
