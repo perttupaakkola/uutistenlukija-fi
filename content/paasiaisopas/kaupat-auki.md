@@ -2,7 +2,7 @@
 title: "Kaupat auki pääsiäisenä 2026 – Prisma, K-ryhmä, Lidl ja Alko"
 description: "Katso pääsiäisen 2026 kauppojen aukioloajat: pitkäperjantai, lauantai, pääsiäissunnuntai ja toinen pääsiäispäivä. Mukana Prisma, K-ryhmä, Lidl, Tokmanni ja Alko."
 date: 2026-03-26
-lastmod: 2026-06-03
+lastmod: 2026-06-11
 draft: false
 categories: ["kotimaa", "talous"]
 ---
@@ -76,4 +76,10 @@ Pitkäperjantain sulkemisajoilla on tapana yllättää. Suosittelemme hankkimaan
 
 ---
 
-→ [Takaisin pääsiäisoppaaseen](/paasiaisopas/) | [Pääsiäisen päivämäärät 2026](/paasiaisopas/paivamaarat/) | [Pääsiäisruoka ja ostoslista](/paasiaisopas/ruoka/) | [Päivittäinen uutiskooste](/kooste/)
+## Katso myös
+
+- [Pääsiäisopas 2026](/paasiaisopas/)
+- [Pääsiäisen päivämäärät 2026](/paasiaisopas/paivamaarat/)
+- [Pääsiäisruoka ja ostoslista](/paasiaisopas/ruoka/)
+- [Kaupat auki vappuna 2026](/vappuopas/kaupat-auki/)
+- [Päivän kooste](/paivan-kooste/)
