@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-11T22:01:22.198648+00:00",
+  "digest": "4900677313",
+  "packet": {
+    "packet_id": "20260611T220122Z_4900677313",
+    "created_at": "2026-06-11T22:01:22Z",
+    "headline_seed": "Kolme punaista korttia! MM-avauksesta tuli kaikkien aikojen törkyottelu",
+    "description_seed": "IS seuraa MM-kisojen avauspäivää.",
+    "link": "https://www.is.fi/mm-futis/art-2000012071264.html",
+    "source": "IS Urheilu",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/mm-futis/art-2000012071264.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kolme punaista korttia! MM-avauksesta tuli kaikkien aikojen törkyottelu"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 121,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "IS Urheilu"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kolme punaista korttia! MM-avauksesta tuli kaikkien aikojen törkyottelu",
+      "description": "IS seuraa MM-kisojen avauspäivää.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kolme punaista korttia! MM-avauksesta tuli kaikkien aikojen törkyottelu",
+    "description": "IS seuraa MM-kisojen avauspäivää.",
+    "link": "https://www.is.fi/mm-futis/art-2000012071264.html",
+    "published": "2026-06-11T21:58:00+00:00",
+    "source": "IS Urheilu",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "ddcbbdc662a5b64d90af81e847fec07b",
+    "_url_hash": "558fa503c7452c320be2dadd08606719e4d31d31b2e2188e13f6fa36a86197dd",
+    "source_tier": 1,
+    "category_hint": "Urheilu",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: Sportti]\nKärppien luottohyökkääjä Mika Pyörälä on noussut seuran kaikkien aikojen parhaaksi maalintekijäksi.\n\nPyörälä teki eilen yhden osuman oululaisten voittaessa Pelicansin 3-0, ja tuo osuma oli miehen kärppäuran 176:s.\n\nKoko liigauransa Kärppiä edustanut Pyörälä oli jaetulla ykkössijalla Kai Suikkasen kanssa. Suikkanen teki viimeisen kärppämaalinsa keväällä 1988, joten Pyörälä rikkoi 31 vuotta vanhan ennätyksen.\n\n38-vuotiaasta laiturista saattaa vielä tulla Kärppien kaikkien aikojen paras pistemieskin. 361 tehopistettä oululaisten riveissä tehnyt Pyörälä on pistetilastossa toisena, ja ero kärkimies Jari Viuhkolaan on 24 pistettä.\n\nPyörälä on liigan kaikkien aikojen maalipörssissä 51:s. Hän on ohittanut tilastossa tällä kaudella sellaisia legendoja, kuten Marko Jantunen ja Darren Boyko.\n\nJääkiekko    11.06.2026 - 13:54     Salttu Forsström\n\nJääkiekko    11.06.2026 - 13:17     Salttu Forsström\n\nJääkiekko    11.06.2026 - 09:20     Salttu Forsström",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-11T22:04:06.781073+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai varmistettuja perustietoja ottelusta, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260611T220122Z_4900677313\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai varmistettuja perustietoja ottelusta, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}
