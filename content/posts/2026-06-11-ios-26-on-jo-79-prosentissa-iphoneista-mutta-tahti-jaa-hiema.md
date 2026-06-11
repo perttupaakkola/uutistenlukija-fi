@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/11/nain-monesta-iphonesta-loytyy-jo-ios-26-yleistynyt-aavistuksen-edeltajaansa-hitaammin/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
