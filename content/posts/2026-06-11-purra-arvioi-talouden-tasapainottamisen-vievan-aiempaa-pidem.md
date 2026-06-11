@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/purra-olemme-geopoliittisessa-taantumassa/9352394"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
