@@ -1,0 +1,216 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-11T17:11:31.274675+00:00",
+  "digest": "770fc0e4b9",
+  "packet": {
+    "packet_id": "20260611T171131Z_770fc0e4b9",
+    "created_at": "2026-06-11T17:11:31Z",
+    "headline_seed": "Coinbase debuts AI agent that can trade and pay for premium research",
+    "description_seed": "Coinbase's agent can use x402 protocol to get access to data and APIs.",
+    "link": "https://techcrunch.com/2026/06/11/coinbase-debuts-ai-agent-that-can-trade-and-pay-for-premium-research/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "Live Bitcoin News",
+      "CoinTelegraph"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/11/coinbase-debuts-ai-agent-that-can-trade-and-pay-for-premium-research/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Coinbase debuts AI agent that can trade and pay for premium research"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "As AI agent traffic surpasses human traffic on the internet, companies working in commerce and finance are building tools that allow agents to take action on behalf of users at a rapid pace. Days after trading platform Robinhood introduced agents that can trade for users, Coinbase launched its own agents that can execute trades and pay for premium research. The company said Thursday that users can integrate the agent with their main account and start trading. If users don’t want to give the agent access to their main account, they can choose to have it operate in a separate sandbox. ---",
+        "word_count": 101,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Coinbase's agent can use x402 protocol to get access to data and APIs.",
+        "word_count": 13,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Live Bitcoin News",
+        "source_type": "research",
+        "text": "The payment protocol powering most of this activity is x402, which launched in May 2025. Base reported that over the last 30 days as of May 29, 2026, x402 processed 3.1 million transactions worth $1.2 million in value on Base alone. The number of sellers on the protocol grew 23% during that period. Buyers grew 37%. The services agents are paying for reflect the complexity of their tasks. Research agents purchase web search results from providers like Exa. Finance agents buy real-time market data. Travel agents pay for flight status, hotel availability, and booking access through services like FlightAware and Amadeus. Browserbase allows agents to pay in USDC for cloud browser sessions to navigate websites and collect information. Each of these transactions settles in microtransactions, often fractions of a cent, rather than expensive bulk subscriptions.",
+        "word_count": 135,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "CoinTelegraph",
+        "source_type": "research",
+        "text": "The development adds another layer to the emerging market for agent payments. It comes a week after Amazon Web Services (AWS) integrated Coinbase's x402 payment protocol and wallet infrastructure to allow AI agents to make USDC (USDC) payments on Base and Solana without direct access to private keys. Days earlier, Coinbase CEO Brian Armstrong announced cutting 14% of the company’s workforce to restructure around smaller AI-focused teams using more automation tools, Cointelegraph reported on May 5. Coinbase introduces x402 batch settlement. Source: x402.org X402 is an open protocol based on the HTTP 402 “Payment Required” status code to support machine-to-machine payments. Coinbase said the protocol processed over 169 million payments across 590,000 buyers and over 100,000 sellers in its first year. Related: Polygon reduces block time to 1.75 seconds as payments push accelerates",
+        "word_count": 133,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "As AI agent traffic surpasses human traffic on the internet, companies working in commerce and finance are building tools that allow agents to take action on behalf of users at a rapid pace. Days after trading platform Robinhood introduced agents that can trade for users, Coinbase launched its own agents that can execute trades and pay for premium research. The company said Thursday that users can integrate the agent with their main account and start trading. If users don’t want to give the agent access to their main account, they can choose to have it operate in a separate sandbox. ---\n\nCoinbase's agent can use x402 protocol to get access to data and APIs.\n\nThe payment protocol powering most of this activity is x402, which launched in May 2025. Base reported that over the last 30 days as of May 29, 2026, x402 processed 3.1 million transactions worth $1.2 million in value on Base alone. The number of sellers on the protocol grew 23% during that period. Buyers grew 37%. The services agents are paying for reflect the complexity of their tasks. Research agents purchase web search results from providers like Exa. Finance agents buy real-time market data. Travel agents pay for flight status, hotel availability, and booking access through services like FlightAware and Amadeus. Browserbase allows agents to pay in USDC for cloud browser sessions to navigate websites and collect information. Each of these transactions settles in microtransactions, often fractions of a cent, rather than expensive bulk subscriptions.\n\nThe development adds another layer to the emerging market for agent payments. It comes a week after Amazon Web Services (AWS) integrated Coinbase's x402 payment protocol and wallet infrastructure to allow AI agents to make USDC (USDC) payments on Base and Solana without direct access to private keys. Days earlier, Coinbase CEO Brian Armstrong announced cutting 14% of the company’s workforce to restructure around smaller AI-focused teams using more automation tools, Cointelegraph reported on May 5. Coinbase introduces x402 batch settlement. Source: x402.org X402 is an open protocol based on the HTTP 402 “Payment Required” status code to support machine-to-machine payments. Coinbase said the protocol processed over 169 million payments across 590,000 buyers and over 100,000 sellers in its first year. Related: Polygon reduces block time to 1.75 seconds as payments push accelerates",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 939,
+      "selected_blocks": 4,
+      "selected_source_words": 382,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "Live Bitcoin News",
+        "Live Bitcoin News",
+        "Live Bitcoin News",
+        "CoinTelegraph",
+        "CoinTelegraph",
+        "CoinTelegraph",
+        "CoinDesk",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "Live Bitcoin News",
+        "CoinTelegraph"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Coinbase debuts AI agent that can trade and pay for premium research",
+      "description": "Coinbase's agent can use x402 protocol to get access to data and APIs.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Coinbase debuts AI agent that can trade and pay for premium research",
+    "description": "Coinbase's agent can use x402 protocol to get access to data and APIs.",
+    "link": "https://techcrunch.com/2026/06/11/coinbase-debuts-ai-agent-that-can-trade-and-pay-for-premium-research/",
+    "published": "2026-06-11T17:00:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "2e2c7e6c14459ba4548af5ef9114d70c",
+    "_url_hash": "6f89cc609adc64fa5a97e85a291b7a9b970609eed20fd6d7e230aa3278af5d63",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nAs AI agent traffic surpasses human traffic on the internet, companies working in commerce and finance are building tools that allow agents to take action on behalf of users at a rapid pace. Days after trading platform Robinhood introduced agents that can trade for users, Coinbase launched its own agents that can execute trades and pay for premium research.\n\nThe company said Thursday that users can integrate the agent with their main account and start trading. If users don’t want to give the agent access to their main account, they can choose to have it operate in a separate sandbox.\n\n---\n\n[Lähde: Live Bitcoin News]\nAI agents on Coinbase’s Base network are now paying for services via x402, logging $43M+ in transactions and reshaping crypto commerce.\n\nAI agents are no longer just browsing the internet. They are paying for it. Coinbase’s Base network is emerging as the home of what insiders now call the “agentic economy.”\n\nAutonomous AI agents are using blockchain rails to purchase services ranging from web search to data analysis.\n\nJesse Pollak, the creator of Base, recently declared on social media that agents will soon transact more than humans. The numbers are already beginning to reflect that shift.\n\nBase’s First Major Upgrade Cuts Ethereum Withdrawals to Just One Day\n\nAccording to Base, agents on the network already hold wallets and use stablecoins to pay for inference, live search, market data, browser sessions, and full research workflows.\n\nThe payment protocol powering most of this activity is x402, which launched in May 2025.\n\nBase reported that over the last 30 days as of May 29, 2026, x402 processed 3.1 million transactions worth $1.2 million in value on Base alone. The number of sellers on the protocol grew 23% during that period. Buyers grew 37%.\n\nThe services agents are paying for reflect the complexity of their tasks. Research agents purchase web search results from providers like Exa.\n\nFinance agents buy real-time market data. Travel agents pay for flight status, hotel availability, and booking access through services like FlightAware and Amadeus.\n\nBrowserbase allows agents to pay in USDC for cloud browser sessions to navigate websites and collect information. Each of these transactions settles in microtransactions, often fractions of a cent, rather than expensive bulk subscriptions.\n\nBase noted that tools like BlockRunAI route agents across 50-plus AI models using per-call USDC payments on Base through x402. Venice enables wallet-based payments for inference across chat, image, audio, and video.\n\nBankr’s x402 Cloud helps builders convert their endpoints into paid services with USDC settlement sent directly to the builder’s wallet.\n\nThe x402 protocol is central to this shift. It allows payments to become part of a normal internet request, removing the need for a human to approve each transaction manually.\n\nBase stated that between October 2024 and February 2025, nearly 16,000 agents launched on Base through Virtuals.io, an AI agent platform. Most of that early activity involved social actions, posting, trading attention, and testing financial rails for \n\n---\n\n[Lähde: CoinTelegraph]\nCoinbase-backed x402 adds batch settlement, letting AI agents authorize many small payments offchain before settling them later onchain.\n\nCoinbase-backed x402 has added batch settlement, a feature designed to reduce the cost of high-frequency AI agent payments by allowing many small transactions to settle later in bulk.\n\nBase creator Jesse Pollak said Wednesday that x402 now supports batched settlement, enabling very small payments below $0.0001 for on-demand resources such as compute and inference.\n\nThe feature lets buyers deposit ERC-20 funds into onchain escrow and sign offchain vouchers for each paid request. Sellers can verify those vouchers quickly, serve the request and later redeem many payments together in batched onchain transactions, according to x402’s documentation.\n\nThe development adds another layer to the emerging market for agent payments. It comes a week after Amazon Web Services (AWS) integrated Coinbase's x402 payment protocol and wallet infrastructure to allow AI agents to make USDC (USDC) payments on Base and Solana without direct access to private keys.\n\nDays earlier, Coinbase CEO Brian Armstrong announced cutting 14% of the company’s workforce to restructure around smaller AI-focused teams using more automation tools, Cointelegraph reported on May 5.\n\nCoinbase introduces x402 batch settlement. Source: x402.org\n\nX402 is an open protocol based on the HTTP 402 “Payment Required” status code to support machine-to-machine payments. Coinbase said the protocol processed over 169 million payments across 590,000 buyers and over 100,000 sellers in its first year.\n\nRelated: Polygon reduces block time to 1.75 seconds as payments push accelerates\n\nBatch settlements look to allow sellers to offer agents a cheaper and faster experience where deposits, batched settlements and refunds are all sponsored by the transaction's facilitator, said Coinbase Developer Platform product lead Joshua Nickerson, in a Wednesday X post.\n\nAI agents using batch settlement will be able to accept any Ethereum-native ERC-20 tokens, not just stablecoins. The feature is currently available in TypeScript and Go, with a Python implementation coming soon.\n\nIn the documented flow, the buyer opens or tops up a channel by depositing ERC-20 tokens into escrow. Each paid request includes a signed cumulative voucher, and the seller’s channel manager later claims vouchers from many channels in a single transaction before sweeping funds to the receiver.\n\nOther large cryptocurrency c\n\n---\n\n[Lähde: CoinDesk]\nFoster’s words echo those of Coinbase founder Brian Armstrong, Binance founder Changpeng Zhao and of Cardano Founder Charles Hoskinson, who agree that shortly all activity on the internet will be conducted by AI agents.\n\nStripe said this roll-out is part of a broader push to build financial infrastructure for autonomous AI commerce. “For agents to become meaningful economic actors, they need a way to hold a...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-11T17:14:03.550669+00:00",
+  "payload": {
+    "packet_id": "20260611T171131Z_770fc0e4b9",
+    "title": "Coinbase toi markkinoille tekoälyagentin, joka voi käydä kauppaa ja ostaa tutkimustietoa",
+    "summary": "Coinbase on julkaissut tekoälyagentin, joka voi tehdä käyttäjän puolesta kauppoja ja maksaa pääsystä maksulliseen tutkimus- ja markkinadataan x402-protokollan avulla.",
+    "content": "Coinbase on julkaissut tekoälyagentin, joka voi tehdä käyttäjän puolesta kauppoja ja maksaa pääsystä maksulliseen tutkimustietoon, dataan ja rajapintoihin. Yhtiön mukaan käyttäjä voi liittää agentin päätiliinsä kaupankäyntiä varten tai käyttää sitä erillisessä testiympäristössä, jos päätilin käyttöoikeuden antaminen ei tunnu sopivalta.\n\n## Agentit siirtyvät katselusta toimintaan\n\nUutuus kertoo siitä, miten tekoälyagentteja pyritään viemään tiedonhausta ja avustavista tehtävistä kohti suoria toimia käyttäjän puolesta. Kaupankäynnissä tämä tarkoittaa esimerkiksi sitä, että agentti voi hyödyntää markkinadataa, analyysiä ja maksullista tutkimusta päätöksenteon tukena.\n\nCoinbasen agentti nojaa x402-maksuprotokollaan, jonka avulla ohjelmistot voivat maksaa pääsystä dataan ja ohjelmointirajapintoihin. Protokolla perustuu HTTP:n 402 Payment Required -tilakoodiin ja on suunniteltu koneiden välisiin maksuihin. Käytännössä tämä voi tarkoittaa pieniä maksuja yksittäisestä tiedonhausta, markkinadatasta tai muusta palvelusta sen sijaan, että käyttäjä tai kehittäjä ostaisi laajan tilauksen etukäteen.\n\n## x402:n käyttö kasvaa agenttimaksuissa\n\nx402 julkaistiin toukokuussa 2025, ja sen ympärille on alkanut muodostua markkina, jossa tekoälyagentit ostavat tarvitsemiaan palveluja tehtäväkohtaisesti. Base kertoi, että 29. toukokuuta 2026 päättyneen 30 päivän jakson aikana x402 käsitteli pelkästään Basessa 3,1 miljoonaa transaktiota, joiden arvo oli yhteensä 1,2 miljoonaa dollaria. Samaan aikaan myyjien määrä kasvoi 23 prosenttia ja ostajien määrä 37 prosenttia.\n\nEsimerkit kuvaavat käyttötapojen laajenemista. Tutkimusagentit voivat ostaa verkkohakutuloksia, talousagentit reaaliaikaista markkinadataa ja matkailuun liittyvät agentit tietoja lennoista, hotelleista tai varausmahdollisuuksista. Selainpalveluja tarjoava Browserbase mahdollistaa puolestaan sen, että agentit maksavat USDC:llä pilviselainistunnoista verkkosivujen selaamista ja tiedonkeruuta varten.\n\nKehitys kytkeytyy myös laajempaan infrastruktuurityöhön. Amazon Web Services integroi hiljattain Coinbasen x402-protokollan ja lompakkoinfrastruktuurin, jotta tekoälyagentit voivat tehdä USDC-maksuja Basessa ja Solanassa ilman suoraa pääsyä yksityisiin avaimiin. Coinbase on kertonut, että protokolla käsitteli ensimmäisen vuoden aikana yli 169 miljoonaa maksua, mukana 590 000 ostajaa ja yli 100 000 myyjää.",
+    "category": "Teknologia",
+    "tags": [
+      "Coinbase",
+      "tekoälyagentit",
+      "x402",
+      "kryptomaksut",
+      "USDC",
+      "Base"
+    ],
+    "summary_bullets": [
+      "Coinbase julkaisi tekoälyagentin, joka voi käydä kauppaa käyttäjän puolesta.",
+      "Agentti voi maksaa tutkimustiedosta, datasta ja rajapinnoista x402-protokollan avulla.",
+      "x402:n käyttö on kasvanut nopeasti erityisesti tekoälyagenttien pienmaksuissa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Yksityiskohdat on rajattu niihin tietoihin, jotka lähteissä mainitaan; käyttäjämäärien ja transaktioiden ajankohdat on säilytetty lähdetekstin mukaisina."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260611T171131Z_770fc0e4b9\",\"title\":\"Coinbase toi markkinoille tekoälyagentin, joka voi käydä kauppaa ja ostaa tutkimustietoa\",\"summary\":\"Coinbase on julkaissut tekoälyagentin, joka voi tehdä käyttäjän puolesta kauppoja ja maksaa pääsystä maksulliseen tutkimus- ja markkinadataan x402-protokollan avulla.\",\"content\":\"Coinbase on julkaissut tekoälyagentin, joka voi tehdä käyttäjän puolesta kauppoja ja maksaa pääsystä maksulliseen tutkimustietoon, dataan ja rajapintoihin. Yhtiön mukaan käyttäjä voi liittää agentin päätiliinsä kaupankäyntiä varten tai käyttää sitä erillisessä testiympäristössä, jos päätilin käyttöoikeuden antaminen ei tunnu sopivalta.\\n\\n## Agentit siirtyvät katselusta toimintaan\\n\\nUutuus kertoo siitä, miten tekoälyagentteja pyritään viemään tiedonhausta ja avustavista tehtävistä kohti suoria toimia käyttäjän puolesta. Kaupankäynnissä tämä tarkoittaa esimerkiksi sitä, että agentti voi hyödyntää markkinadataa, analyysiä ja maksullista tutkimusta päätöksenteon tukena.\\n\\nCoinbasen agentti nojaa x402-maksuprotokollaan, jonka avulla ohjelmistot voivat maksaa pääsystä dataan ja ohjelmointirajapintoihin. Protokolla perustuu HTTP:n 402 Payment Required -tilakoodiin ja on suunniteltu koneiden välisiin maksuihin. Käytännössä tämä voi tarkoittaa pieniä maksuja yksittäisestä tiedonhausta, markkinadatasta tai muusta palvelusta sen sijaan, että käyttäjä tai kehittäjä ostaisi laajan tilauksen etukäteen.\\n\\n## x402:n käyttö kasvaa agenttimaksuissa\\n\\nx402 julkaistiin toukokuussa 2025, ja sen ympärille on alkanut muodostua markkina, jossa tekoälyagentit ostavat tarvitsemiaan palveluja tehtäväkohtaisesti. Base kertoi, että 29. toukokuuta 2026 päättyneen 30 päivän jakson aikana x402 käsitteli pelkästään Basessa 3,1 miljoonaa transaktiota, joiden arvo oli yhteensä 1,2 miljoonaa dollaria. Samaan aikaan myyjien määrä kasvoi 23 prosenttia ja ostajien määrä 37 prosenttia.\\n\\nEsimerkit kuvaavat käyttötapojen laajenemista. Tutkimusagentit voivat ostaa verkkohakutuloksia, talousagentit reaaliaikaista markkinadataa ja matkailuun liittyvät agentit tietoja lennoista, hotelleista tai varausmahdollisuuksista. Selainpalveluja tarjoava Browserbase mahdollistaa puolestaan sen, että agentit maksavat USDC:llä pilviselainistunnoista verkkosivujen selaamista ja tiedonkeruuta varten.\\n\\nKehitys kytkeytyy myös laajempaan infrastruktuurityöhön. Amazon Web Services integroi hiljattain Coinbasen x402-protokollan ja lompakkoinfrastruktuurin, jotta tekoälyagentit voivat tehdä USDC-maksuja Basessa ja Solanassa ilman suoraa pääsyä yksityisiin avaimiin. Coinbase on kertonut, että protokolla käsitteli ensimmäisen vuoden aikana yli 169 miljoonaa maksua, mukana 590 000 ostajaa ja yli 100 000 myyjää.\",\"category\":\"Teknologia\",\"tags\":[\"Coinbase\",\"tekoälyagentit\",\"x402\",\"kryptomaksut\",\"USDC\",\"Base\"],\"summary_bullets\":[\"Coinbase julkaisi tekoälyagentin, joka voi käydä kauppaa käyttäjän puolesta.\",\"Agentti voi maksaa tutkimustiedosta, datasta ja rajapinnoista x402-protokollan avulla.\",\"x402:n käyttö on kasvanut nopeasti erityisesti tekoälyagenttien pienmaksuissa.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.98,\"journalist_note\":\"Artikkeli perustuu packetin neljään lähdeblokkiin. Yksityiskohdat on rajattu niihin tietoihin, jotka lähteissä mainitaan; käyttäjämäärien ja transaktioiden ajankohdat on säilytetty lähdetekstin mukaisina.\"}",
+  "article": {
+    "title": "Coinbase toi markkinoille tekoälyagentin, joka voi käydä kauppaa ja ostaa tutkimustietoa",
+    "description": "Coinbase on julkaissut tekoälyagentin, joka voi tehdä käyttäjän puolesta kauppoja ja maksaa pääsystä maksulliseen tutkimus- ja markkinadataan x402-protokollan avulla.",
+    "link": "https://techcrunch.com/2026/06/11/coinbase-debuts-ai-agent-that-can-trade-and-pay-for-premium-research/",
+    "published": "2026-06-11T17:00:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "2e2c7e6c14459ba4548af5ef9114d70c",
+    "_url_hash": "6f89cc609adc64fa5a97e85a291b7a9b970609eed20fd6d7e230aa3278af5d63",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nAs AI agent traffic surpasses human traffic on the internet, companies working in commerce and finance are building tools that allow agents to take action on behalf of users at a rapid pace. Days after trading platform Robinhood introduced agents that can trade for users, Coinbase launched its own agents that can execute trades and pay for premium research.\n\nThe company said Thursday that users can integrate the agent with their main account and start trading. If users don’t want to give the agent access to their main account, they can choose to have it operate in a separate sandbox.\n\n---\n\n[Lähde: Live Bitcoin News]\nAI agents on Coinbase’s Base network are now paying for services via x402, logging $43M+ in transactions and reshaping crypto commerce.\n\nAI agents are no longer just browsing the internet. They are paying for it. Coinbase’s Base network is emerging as the home of what insiders now call the “agentic economy.”\n\nAutonomous AI agents are using blockchain rails to purchase services ranging from web search to data analysis.\n\nJesse Pollak, the creator of Base, recently declared on social media that agents will soon transact more than humans. The numbers are already beginning to reflect that shift.\n\nBase’s First Major Upgrade Cuts Ethereum Withdrawals to Just One Day\n\nAccording to Base, agents on the network already hold wallets and use stablecoins to pay for inference, live search, market data, browser sessions, and full research workflows.\n\nThe payment protocol powering most of this activity is x402, which launched in May 2025.\n\nBase reported that over the last 30 days as of May 29, 2026, x402 processed 3.1 million transactions worth $1.2 million in value on Base alone. The number of sellers on the protocol grew 23% during that period. Buyers grew 37%.\n\nThe services agents are paying for reflect the complexity of their tasks. Research agents purchase web search results from providers like Exa.\n\nFinance agents buy real-time market data. Travel agents pay for flight status, hotel availability, and booking access through services like FlightAware and Amadeus.\n\nBrowserbase allows agents to pay in USDC for cloud browser sessions to navigate websites and collect information. Each of these transactions settles in microtransactions, often fractions of a cent, rather than expensive bulk subscriptions.\n\nBase noted that tools like BlockRunAI route agents across 50-plus AI models using per-call USDC payments on Base through x402. Venice enables wallet-based payments for inference across chat, image, audio, and video.\n\nBankr’s x402 Cloud helps builders convert their endpoints into paid services with USDC settlement sent directly to the builder’s wallet.\n\nThe x402 protocol is central to this shift. It allows payments to become part of a normal internet request, removing the need for a human to approve each transaction manually.\n\nBase stated that between October 2024 and February 2025, nearly 16,000 agents launched on Base through Virtuals.io, an AI agent platform. Most of that early activity involved social actions, posting, trading attention, and testing financial rails for \n\n---\n\n[Lähde: CoinTelegraph]\nCoinbase-backed x402 adds batch settlement, letting AI agents authorize many small payments offchain before settling them later onchain.\n\nCoinbase-backed x402 has added batch settlement, a feature designed to reduce the cost of high-frequency AI agent payments by allowing many small transactions to settle later in bulk.\n\nBase creator Jesse Pollak said Wednesday that x402 now supports batched settlement, enabling very small payments below $0.0001 for on-demand resources such as compute and inference.\n\nThe feature lets buyers deposit ERC-20 funds into onchain escrow and sign offchain vouchers for each paid request. Sellers can verify those vouchers quickly, serve the request and later redeem many payments together in batched onchain transactions, according to x402’s documentation.\n\nThe development adds another layer to the emerging market for agent payments. It comes a week after Amazon Web Services (AWS) integrated Coinbase's x402 payment protocol and wallet infrastructure to allow AI agents to make USDC (USDC) payments on Base and Solana without direct access to private keys.\n\nDays earlier, Coinbase CEO Brian Armstrong announced cutting 14% of the company’s workforce to restructure around smaller AI-focused teams using more automation tools, Cointelegraph reported on May 5.\n\nCoinbase introduces x402 batch settlement. Source: x402.org\n\nX402 is an open protocol based on the HTTP 402 “Payment Required” status code to support machine-to-machine payments. Coinbase said the protocol processed over 169 million payments across 590,000 buyers and over 100,000 sellers in its first year.\n\nRelated: Polygon reduces block time to 1.75 seconds as payments push accelerates\n\nBatch settlements look to allow sellers to offer agents a cheaper and faster experience where deposits, batched settlements and refunds are all sponsored by the transaction's facilitator, said Coinbase Developer Platform product lead Joshua Nickerson, in a Wednesday X post.\n\nAI agents using batch settlement will be able to accept any Ethereum-native ERC-20 tokens, not just stablecoins. The feature is currently available in TypeScript and Go, with a Python implementation coming soon.\n\nIn the documented flow, the buyer opens or tops up a channel by depositing ERC-20 tokens into escrow. Each paid request includes a signed cumulative voucher, and the seller’s channel manager later claims vouchers from many channels in a single transaction before sweeping funds to the receiver.\n\nOther large cryptocurrency c\n\n---\n\n[Lähde: CoinDesk]\nFoster’s words echo those of Coinbase founder Brian Armstrong, Binance founder Changpeng Zhao and of Cardano Founder Charles Hoskinson, who agree that shortly all activity on the internet will be conducted by AI agents.\n\nStripe said this roll-out is part of a broader push to build financial infrastructure for autonomous AI commerce. “For agents to become meaningful economic actors, they need a way to hold a...",
+    "research_source": "multi",
+    "summary": "Coinbase on julkaissut tekoälyagentin, joka voi tehdä käyttäjän puolesta kauppoja ja maksaa pääsystä maksulliseen tutkimus- ja markkinadataan x402-protokollan avulla.",
+    "content": "Coinbase on julkaissut tekoälyagentin, joka voi tehdä käyttäjän puolesta kauppoja ja maksaa pääsystä maksulliseen tutkimustietoon, dataan ja rajapintoihin. Yhtiön mukaan käyttäjä voi liittää agentin päätiliinsä kaupankäyntiä varten tai käyttää sitä erillisessä testiympäristössä, jos päätilin käyttöoikeuden antaminen ei tunnu sopivalta.\n\n## Agentit siirtyvät katselusta toimintaan\n\nUutuus kertoo siitä, miten tekoälyagentteja pyritään viemään tiedonhausta ja avustavista tehtävistä kohti suoria toimia käyttäjän puolesta. Kaupankäynnissä tämä tarkoittaa esimerkiksi sitä, että agentti voi hyödyntää markkinadataa, analyysiä ja maksullista tutkimusta päätöksenteon tukena.\n\nCoinbasen agentti nojaa x402-maksuprotokollaan, jonka avulla ohjelmistot voivat maksaa pääsystä dataan ja ohjelmointirajapintoihin. Protokolla perustuu HTTP:n 402 Payment Required -tilakoodiin ja on suunniteltu koneiden välisiin maksuihin. Käytännössä tämä voi tarkoittaa pieniä maksuja yksittäisestä tiedonhausta, markkinadatasta tai muusta palvelusta sen sijaan, että käyttäjä tai kehittäjä ostaisi laajan tilauksen etukäteen.\n\n## x402:n käyttö kasvaa agenttimaksuissa\n\nx402 julkaistiin toukokuussa 2025, ja sen ympärille on alkanut muodostua markkina, jossa tekoälyagentit ostavat tarvitsemiaan palveluja tehtäväkohtaisesti. Base kertoi, että 29. toukokuuta 2026 päättyneen 30 päivän jakson aikana x402 käsitteli pelkästään Basessa 3,1 miljoonaa transaktiota, joiden arvo oli yhteensä 1,2 miljoonaa dollaria. Samaan aikaan myyjien määrä kasvoi 23 prosenttia ja ostajien määrä 37 prosenttia.\n\nEsimerkit kuvaavat käyttötapojen laajenemista. Tutkimusagentit voivat ostaa verkkohakutuloksia, talousagentit reaaliaikaista markkinadataa ja matkailuun liittyvät agentit tietoja lennoista, hotelleista tai varausmahdollisuuksista. Selainpalveluja tarjoava Browserbase mahdollistaa puolestaan sen, että agentit maksavat USDC:llä pilviselainistunnoista verkkosivujen selaamista ja tiedonkeruuta varten.\n\nKehitys kytkeytyy myös laajempaan infrastruktuurityöhön. Amazon Web Services integroi hiljattain Coinbasen x402-protokollan ja lompakkoinfrastruktuurin, jotta tekoälyagentit voivat tehdä USDC-maksuja Basessa ja Solanassa ilman suoraa pääsyä yksityisiin avaimiin. Coinbase on kertonut, että protokolla käsitteli ensimmäisen vuoden aikana yli 169 miljoonaa maksua, mukana 590 000 ostajaa ja yli 100 000 myyjää.",
+    "category": "Teknologia",
+    "tags": [
+      "coinbase",
+      "tekoälyagentit",
+      "x402",
+      "kryptomaksut",
+      "usdc"
+    ],
+    "summary_bullets": [
+      "Coinbase julkaisi tekoälyagentin, joka voi käydä kauppaa käyttäjän puolesta.",
+      "Agentti voi maksaa tutkimustiedosta, datasta ja rajapinnoista x402-protokollan avulla.",
+      "x402:n käyttö on kasvanut nopeasti erityisesti tekoälyagenttien pienmaksuissa."
+    ],
+    "key_points": [
+      "Coinbase julkaisi tekoälyagentin, joka voi käydä kauppaa käyttäjän puolesta.",
+      "Agentti voi maksaa tutkimustiedosta, datasta ja rajapinnoista x402-protokollan avulla.",
+      "x402:n käyttö on kasvanut nopeasti erityisesti tekoälyagenttien pienmaksuissa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Yksityiskohdat on rajattu niihin tietoihin, jotka lähteissä mainitaan; käyttäjämäärien ja transaktioiden ajankohdat on säilytetty lähdetekstin mukaisina.",
+    "source_text": "As AI agent traffic surpasses human traffic on the internet, companies working in commerce and finance are building tools that allow agents to take action on behalf of users at a rapid pace. Days after trading platform Robinhood introduced agents that can trade for users, Coinbase launched its own agents that can execute trades and pay for premium research. The company said Thursday that users can integrate the agent with their main account and start trading. If users don’t want to give the agent access to their main account, they can choose to have it operate in a separate sandbox. ---\n\nCoinbase's agent can use x402 protocol to get access to data and APIs.\n\nThe payment protocol powering most of this activity is x402, which launched in May 2025. Base reported that over the last 30 days as of May 29, 2026, x402 processed 3.1 million transactions worth $1.2 million in value on Base alone. The number of sellers on the protocol grew 23% during that period. Buyers grew 37%. The services agents are paying for reflect the complexity of their tasks. Research agents purchase web search results from providers like Exa. Finance agents buy real-time market data. Travel agents pay for flight status, hotel availability, and booking access through services like FlightAware and Amadeus. Browserbase allows agents to pay in USDC for cloud browser sessions to navigate websites and collect information. Each of these transactions settles in microtransactions, often fractions of a cent, rather than expensive bulk subscriptions.\n\nThe development adds another layer to the emerging market for agent payments. It comes a week after Amazon Web Services (AWS) integrated Coinbase's x402 payment protocol and wallet infrastructure to allow AI agents to make USDC (USDC) payments on Base and Solana without direct access to private keys. Days earlier, Coinbase CEO Brian Armstrong announced cutting 14% of the company’s workforce to restructure around smaller AI-focused teams using more automation tools, Cointelegraph reported on May 5. Coinbase introduces x402 batch settlement. Source: x402.org X402 is an open protocol based on the HTTP 402 “Payment Required” status code to support machine-to-machine payments. Coinbase said the protocol processed over 169 million payments across 590,000 buyers and over 100,000 sellers in its first year. Related: Polygon reduces block time to 1.75 seconds as payments push accelerates",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260611T171131Z_770fc0e4b9",
+    "image": "https://images.unsplash.com/photo-1646583288948-24548aedffd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxBSSUyMHRyYWRpbmclMjBhZ2VudCUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4MTE5ODI4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1646583288948-24548aedffd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxBSSUyMHRyYWRpbmclMjBhZ2VudCUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4MTE5ODI4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Coinbase toi markkinoille tekoälyagentin, joka voi käydä kauppaa ja ostaa tutkimustietoa",
+    "image_credit": "Photo by Markus Spiske on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/the-word-ai-spelled-in-white-letters-on-a-black-surface-ViC0envGdTU?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-11T17:18:05.715416+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1646583288948-24548aedffd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxBSSUyMHRyYWRpbmclMjBhZ2VudCUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4MTE5ODI4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1646583288948-24548aedffd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxBSSUyMHRyYWRpbmclMjBhZ2VudCUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4MTE5ODI4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-11T17:19:10.752854+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-11-coinbase-toi-markkinoille-tekoalyagentin-joka-voi-kayda-kaup.md"
+  ]
+}
