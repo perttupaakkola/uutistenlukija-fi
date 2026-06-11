@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/spacex-julkisti-avaruuteen-datakeskussatelliitteja-tuottavan-gigasat-tuotantolaitoksen/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
