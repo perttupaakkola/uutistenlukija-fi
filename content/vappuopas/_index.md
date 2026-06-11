@@ -94,4 +94,4 @@ Päivitämme sääennusteen tähän lähempänä vappua.
 
 ---
 
-→ [Kaupat auki vappuna 2026 →](/vappuopas/kaupat-auki/) | [Päivittäinen uutiskooste →](/kooste/)
+→ [Kaupat auki vappuna 2026 →](/vappuopas/kaupat-auki/) | [Päivittäinen uutiskooste →](/paivan-kooste/)
