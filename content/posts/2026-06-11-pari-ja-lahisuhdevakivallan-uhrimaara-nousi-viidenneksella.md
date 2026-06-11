@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/perhevakivallan-uhrien-maara-nousi-20-prosentilla-viime-vuonna-nain-asiantuntijat-selittavat/9352144"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
