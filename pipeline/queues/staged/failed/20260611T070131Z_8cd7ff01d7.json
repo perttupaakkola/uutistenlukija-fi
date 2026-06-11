@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-11T07:01:31.304594+00:00",
+  "digest": "8cd7ff01d7",
+  "packet": {
+    "packet_id": "20260611T070131Z_8cd7ff01d7",
+    "created_at": "2026-06-11T07:01:31Z",
+    "headline_seed": "Jäätelöiden hinta­lappu järkytti turistin Roomassa – italialaiset ihmeissään",
+    "description_seed": "Turisti ei saanut jäätelökioskista sitä, mitä tilasi.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012068273.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012068273.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jäätelöiden hinta­lappu järkytti turistin Roomassa – italialaiset ihmeissään"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 191,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Seiska",
+        "Seiska",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jäätelöiden hinta­lappu järkytti turistin Roomassa – italialaiset ihmeissään",
+      "description": "Turisti ei saanut jäätelökioskista sitä, mitä tilasi.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Jäätelöiden hinta­lappu järkytti turistin Roomassa – italialaiset ihmeissään",
+    "description": "Turisti ei saanut jäätelökioskista sitä, mitä tilasi.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012068273.html",
+    "published": "2026-06-11T06:49:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "cdb9f9dad9193fca529f11b389e411bd",
+    "_url_hash": "d6d7f7023c20b75889117fc1fa02e2d79caff8c488dcdef0dd736ecd4568a6e3",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Seiska]\nTennisvalmentaja ja -selostaja Jari Hedman, 62, on mennyt kaikessa hiljaisuudessa naimisiin.\n\nJarin tytär, Diili-voittajana tunnetuksi noussut Clarissa Hedman kertoi asiasta Instagram-sivullaan toissa sunnuntaina. Clarissa nimittäin julkaisi otoksen, jossa poseeraa tenniskentällä tyylikkäissä vaatteissa, kädessään lasi kuohuvaa. Kaunotar on sonnustautunut korkeavartisiin nahkasaappaisiin ja turkoosiin takkiin.\n\n- Isä meni naimisiin, hän kirjoittaa kuvatekstissä vapaasti suomennettuna.\n\nTennisvalmentaja Jari Hedmanin Clarissa-tytär esitteli jääkiekkoilijarakkaan isälleen – ”Helskutin kiva ja leppoinen mies”\n\nA post shared by Clarissa Hedman (@clarissahedman)\n\nErityisen yllättävä asia häissä on se, että Clarissan lisäämän kuvan perusteella vihkivalat on vannottu käytännössä Jarin työpaikalla eli tenniskentällä. Kyseessä on tennisgurun kolmas avioliitto. Hänellä on aiemmista liitoistaan Clarissan lisäksi neljä tytärtä.\n\nJari on opettanut tennistä vuodesta 1976 lähtien, ja hän on valmentanut monia julkkiksiakin, kuten laulaja Juha Tapiota.\n\nTennisvalmentaja Jari Hedmanin tytär on upea mallikaunotar – ”Jollain se raha on tienattava!”\n\nA post shared by Jari Hedman (@jarihedmantennis)\n\nClarissa-tytär meni myös vastikään naimisiin. Hän ja jääkiekkoilijarakas Eetu Pöysti viettivät pienimuotoisia häitä helmikuussa, mutta juhlivat isommin Italiassa alkukesästä. Pariskunta kihlautui jo vuonna 2018, mutta koronapandemia siirsi hääpäivää pitkälle tulevaisuuteen.\n\nTällainen on Diilin uusi voittaja! Juhli häitään hulppeasti Italiassa - paljastaa suunnitelmansa tulevaisuudelle",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-11T07:03:30.071649+00:00",
+  "failure": "Paketissa ei ole käytettävää lähdetekstiä tai varmistettuja perustietoja jutun kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260611T070131Z_8cd7ff01d7\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole käytettävää lähdetekstiä tai varmistettuja perustietoja jutun kirjoittamiseen.\"}"
+}
