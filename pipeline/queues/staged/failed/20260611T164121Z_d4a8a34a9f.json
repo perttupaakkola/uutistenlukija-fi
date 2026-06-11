@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-11T16:41:21.841381+00:00",
+  "digest": "d4a8a34a9f",
+  "packet": {
+    "packet_id": "20260611T164121Z_d4a8a34a9f",
+    "created_at": "2026-06-11T16:41:21Z",
+    "headline_seed": "Deadly Sudan drone strike targets funeral procession",
+    "description_seed": "Rights groups accuse the RSF paramilitary group of killing civilians in el-Obeid, a city on the civil war's front line.",
+    "link": "https://www.bbc.com/news/articles/c70yeee2jvqo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "23ABC News Bakersfield"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c70yeee2jvqo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Deadly Sudan drone strike targets funeral procession"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Rights groups accuse the RSF paramilitary group of killing civilians in el-Obeid, a city on the civil war's front line.",
+        "word_count": 20,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A drone strike on a funeral procession at a cemetery in the Sudanese city of el-Obeid has killed at least four people and injured several others, two rights groups, Sudan Doctors Network and Emergency Lawyers, have said. Both groups blame the paramilitary Rapid Support Forces (RSF) for the attack. Emergency Lawyers said it was part of a series of drone strikes that started on Wednesday evening in which at least 23 people have died in all. El-Obeid, currently in the hands of the army, is a key battleground in Sudan's three-year civil war which began after the leaders of the army and RSF fell out over the future direction of the country. The fighting has created the world's worst humanitarian crisis with more than 11 million people forced from their homes and 28 million facing acute hunger.",
+        "word_count": 137,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The two groups describe systematic and repeated attacks on civilians in el-Obeid for several days. The city is in the country's oil-rich Kordofan region - which is divided into North, South and West Kordofan states. It become a major front line in the war due to its strategic significance, sitting between RSF-controlled areas in the west and eastern areas where the army is mostly in charge. Analysts say whoever controls the region effectively controls the country's oil supply, as well as a large chunk of the country. Go to BBCAfrica.com for more news from the African continent. Follow us on Twitter @BBCAfrica, on Facebook at BBC Africa or on Instagram at bbcafrica ---",
+        "word_count": 113,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "23ABC News Bakersfield",
+        "source_type": "research",
+        "text": "Sudan's civil war — now in its fourth year — began as a power struggle between the Sudanese Armed Forces and the paramilitary Rapid Support Forces. It has evolved into something else. Something more precise, and in its precision, more terrifying. The United Nations put a figure on it in May. Between January and April of 2026, drone strikes killed at least 880 civilians in Sudan — more than 80% of all conflict-related civilian deaths in that period. U.N. Human Rights Chief Volker Türk called armed drones \"by far and away the leading cause of civilian deaths\" in the conflict. The Armed Conflict Location & Event Data Project found that drone-related deaths in 2025 alone marked a 600% increase over the previous year.",
+        "word_count": 123,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Rights groups accuse the RSF paramilitary group of killing civilians in el-Obeid, a city on the civil war's front line.\n\nA drone strike on a funeral procession at a cemetery in the Sudanese city of el-Obeid has killed at least four people and injured several others, two rights groups, Sudan Doctors Network and Emergency Lawyers, have said. Both groups blame the paramilitary Rapid Support Forces (RSF) for the attack. Emergency Lawyers said it was part of a series of drone strikes that started on Wednesday evening in which at least 23 people have died in all. El-Obeid, currently in the hands of the army, is a key battleground in Sudan's three-year civil war which began after the leaders of the army and RSF fell out over the future direction of the country. The fighting has created the world's worst humanitarian crisis with more than 11 million people forced from their homes and 28 million facing acute hunger.\n\nThe two groups describe systematic and repeated attacks on civilians in el-Obeid for several days. The city is in the country's oil-rich Kordofan region - which is divided into North, South and West Kordofan states. It become a major front line in the war due to its strategic significance, sitting between RSF-controlled areas in the west and eastern areas where the army is mostly in charge. Analysts say whoever controls the region effectively controls the country's oil supply, as well as a large chunk of the country. Go to BBCAfrica.com for more news from the African continent. Follow us on Twitter @BBCAfrica, on Facebook at BBC Africa or on Instagram at bbcafrica ---\n\nSudan's civil war — now in its fourth year — began as a power struggle between the Sudanese Armed Forces and the paramilitary Rapid Support Forces. It has evolved into something else. Something more precise, and in its precision, more terrifying. The United Nations put a figure on it in May. Between January and April of 2026, drone strikes killed at least 880 civilians in Sudan — more than 80% of all conflict-related civilian deaths in that period. U.N. Human Rights Chief Volker Türk called armed drones \"by far and away the leading cause of civilian deaths\" in the conflict. The Armed Conflict Location & Event Data Project found that drone-related deaths in 2025 alone marked a 600% increase over the previous year.",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 809,
+      "selected_blocks": 4,
+      "selected_source_words": 393,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "23ABC News Bakersfield",
+        "23ABC News Bakersfield",
+        "23ABC News Bakersfield",
+        "23ABC News Bakersfield",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "23ABC News Bakersfield"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Deadly Sudan drone strike targets funeral procession",
+      "description": "Rights groups accuse the RSF paramilitary group of killing civilians in el-Obeid, a city on the civil war's front line.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Deadly Sudan drone strike targets funeral procession",
+    "description": "Rights groups accuse the RSF paramilitary group of killing civilians in el-Obeid, a city on the civil war's front line.",
+    "link": "https://www.bbc.com/news/articles/c70yeee2jvqo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-11T15:57:04+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "58f96cd4a47094bbc6cd508ae803195a",
+    "_url_hash": "a728c83b2ea2fc848f486f3a5261afc627fd3eb9c3b73bf8845d6d0774b383e3",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA drone strike on a funeral procession at a cemetery in the Sudanese city of el-Obeid has killed at least four people and injured several others, two rights groups, Sudan Doctors Network and Emergency Lawyers, have said.\n\nBoth groups blame the paramilitary Rapid Support Forces (RSF) for the attack. Emergency Lawyers said it was part of a series of drone strikes that started on Wednesday evening in which at least 23 people have died in all.\n\nEl-Obeid, currently in the hands of the army, is a key battleground in Sudan's three-year civil war which began after the leaders of the army and RSF fell out over the future direction of the country.\n\nThe fighting has created the world's worst humanitarian crisis with more than 11 million people forced from their homes and 28 million facing acute hunger.\n\nThere are no reliable figures for the death toll, but it is thought to be at least 50,000.\n\nIn addition to the attack on the cemetery, Emergency Lawyers said that drones struck homes in a residential neighbourhood, the airport district and areas surrounding an army base. Thirteen civilians were killed, the group said, as civilians gathered near destroyed houses.\n\nIt also reported that five civilians were killed in earlier attacks.\n\n\"It is tragic. The roofs of houses collapsed on their occupants. When you look at some houses, you feel no-one could have survived,\" one resident told the AFP news agency in the wake of the attacks.\n\nIn another attack a driver of a lorry carrying food supplies died when his vehicle was struck on Thursday, both Emergency Lawyers and Sudan Doctors Network have said.\n\nThe two groups describe systematic and repeated attacks on civilians in el-Obeid for several days.\n\nThe city is in the country's oil-rich Kordofan region - which is divided into North, South and West Kordofan states.\n\nIt become a major front line in the war due to its strategic significance, sitting between RSF-controlled areas in the west and eastern areas where the army is mostly in charge.\n\nAnalysts say whoever controls the region effectively controls the country's oil supply, as well as a large chunk of the country.\n\nGo to BBCAfrica.com for more news from the African continent.\n\nFollow us on Twitter @BBCAfrica, on Facebook at BBC Africa or on Instagram at bbcafrica\n\n---\n\n[Lähde: 23ABC News Bakersfield]\nSudan's civil war — now in its fourth year — began as a power struggle between the Sudanese Armed Forces and the paramilitary Rapid Support Forces. It has evolved into something else. Something more precise, and in its precision, more terrifying.\n\nThe United Nations put a figure on it in May. Between January and April of 2026, drone strikes killed at least 880 civilians in Sudan — more than 80% of all conflict-related civilian deaths in that period. U.N. Human Rights Chief Volker Türk called armed drones \"by far and away the leading cause of civilian deaths\" in the conflict.\n\nThe Armed Conflict Location & Event Data Project found that drone-related deaths in 2025 alone marked a 600% increase over the previous year.\n\nMost of the carnage has concentrated in Kordofan and Darfur — regions that have already seen the worst of what this war can do. Markets. Hospitals. Aid convoys. Schools. The pattern, human rights groups say, signifies strategy.\n\nTo understand how Sudan got here, you have to understand where its paramilitary force came from.\n\nThe RSF grew out of the Janjaweed militias — the horseback raiders accused of mass slaughter in Darfur two decades ago. In those days, the violence was intimate. Up close. Men with rusty AK-47s.\n\nNathaniel Raymond, executive director of the Humanitarian Research Lab at Yale's School of Public Health, has spent years building forensic evidence of what's happening in Sudan from satellite imagery and open-source intelligence. What his lab found in El Fasher — the last major city in Darfur still contested before the RSF's final assault — reveals a level of operational sophistication that rewrites what we thought we knew about this conflict.\n\nIN CASE YOU MISSED IT | Inside Sudan's hidden genocide: Eyewitness accounts from the world's worst humanitarian crisis\n\nThe RSF, Raymond says, used Chinese-made fixed-wing drones — CH-95 or FH-95 models — launched from Nyala Airport in South Darfur, roughly 150 miles to the south. Those drones flew north to El Fasher and loitered. They didn't strike immediately. They gathered. Sucking up communications data to locate where people were hiding. Blocking residents from calling for help. Preventing videos from getting out of the city.\n\nThen came the quadcopters — small, camera-equipped, packed with explosives — deployed from along the berm the RSF had built to prevent escape. Targeting people in bomb shelters, mosques, community kitchens, and schools.\n\nIn October, they hunted at the Al-Safiya M",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-11T16:45:21.866765+00:00",
+  "failure": "content too short: 244 words",
+  "payload": {
+    "packet_id": "20260611T164121Z_d4a8a34a9f",
+    "title": "Hautajaissaattueeseen iskenyt lennokki tappoi siviilejä Sudanissa",
+    "summary": "Sudanilaiset oikeusryhmät syyttävät RSF-joukkoja lennokki-iskusta el-Obeidin kaupungissa. Hautausmaalla tapahtuneessa iskussa kuoli ainakin neljä ihmistä ja useita haavoittui.",
+    "content": "Sudanin el-Obeidin kaupungissa hautajaissaattueeseen kohdistunut lennokki-isku on tappanut ainakin neljä ihmistä ja haavoittanut useita muita, kertovat Sudan Doctors Network ja Emergency Lawyers -oikeusryhmät. Ryhmät syyttävät iskusta puolisotilaallisia Rapid Support Forces -joukkoja eli RSF:ää, joka taistelee Sudanin armeijaa vastaan maan sisällissodassa.\n\n## Isku osana laajempaa hyökkäyssarjaa\n\nEmergency Lawyersin mukaan hautausmaalla tapahtunut isku oli osa keskiviikkoiltana alkanutta lennokki-iskujen sarjaa. Ryhmän mukaan iskuissa on kuollut yhteensä ainakin 23 ihmistä. Molemmat järjestöt kuvaavat el-Obeidissa useiden päivien aikana tapahtuneita hyökkäyksiä järjestelmällisiksi ja toistuviksi siviileihin kohdistuneiksi iskuiksi.\n\nEl-Obeid on tällä hetkellä Sudanin armeijan hallussa, mutta se sijaitsee keskeisellä rintamalinjalla maan sisällissodassa. Kaupunki on öljyrikkaalla Kordofanin alueella, joka jakautuu Pohjois-, Etelä- ja Länsi-Kordofanin osavaltioihin. Sen strateginen merkitys liittyy sijaintiin RSF:n hallitsemien läntisten alueiden ja armeijan pääosin hallitsemien itäisten alueiden välissä.\n\nAnalyytikoiden mukaan Kordofanin hallinta vaikuttaa käytännössä Sudanin öljyvarojen hallintaan sekä laajan maa-alueen kontrolliin. Siksi el-Obeidista on tullut merkittävä taistelukohde sodassa, joka alkoi armeijan ja RSF:n johtajien ajauduttua erimielisyyteen maan tulevasta suunnasta.\n\n## Lennokit ovat lisänneet siviilikuolemia\n\nSudanin sota on jatkunut jo neljättä vuotta ja aiheuttanut maailman vakavimmaksi kuvatun humanitaarisen kriisin. Yli 11 miljoonaa ihmistä on joutunut lähtemään kodeistaan, ja 28 miljoonaa ihmistä kärsii akuutista nälästä.\n\nYK:n toukokuussa esittämien tietojen mukaan lennokki-iskut tappoivat Sudanissa tammi-huhtikuussa 2026 ainakin 880 siviiliä. Se oli yli 80 prosenttia kaikista konfliktissa kyseisenä aikana kirjatuista siviilikuolemista. YK:n ihmisoikeusvaltuutettu Volker Türk on kuvannut aseistettuja lennokkeja konfliktin selvästi merkittävimmäksi siviilikuolemien aiheuttajaksi. Armed Conflict Location & Event Data Projectin mukaan lennokkeihin liittyvät kuolemat lisääntyivät vuonna 2025 noin 600 prosenttia edellisvuoteen verrattuna.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Sudan",
+      "el-Obeid",
+      "RSF",
+      "sisällissota",
+      "lennokki-isku"
+    ],
+    "summary_bullets": [
+      "El-Obeidissa hautajaissaattueeseen kohdistunut lennokki-isku tappoi ainakin neljä ihmistä.",
+      "Sudanilaiset oikeusryhmät syyttävät iskusta RSF-joukkoja.",
+      "Kaupunki sijaitsee strategisesti tärkeällä rintamalinjalla Kordofanin alueella.",
+      "YK:n mukaan lennokki-iskut ovat aiheuttaneet suuren osan Sudanin viimeaikaisista siviilikuolemista."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. RSF:n osuus on muotoiltu oikeusryhmien syytökseksi, koska paketissa ei ollut riippumatonta vahvistusta tekijästä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260611T164121Z_d4a8a34a9f\",\n  \"title\": \"Hautajaissaattueeseen iskenyt lennokki tappoi siviilejä Sudanissa\",\n  \"summary\": \"Sudanilaiset oikeusryhmät syyttävät RSF-joukkoja lennokki-iskusta el-Obeidin kaupungissa. Hautausmaalla tapahtuneessa iskussa kuoli ainakin neljä ihmistä ja useita haavoittui.\",\n  \"content\": \"Sudanin el-Obeidin kaupungissa hautajaissaattueeseen kohdistunut lennokki-isku on tappanut ainakin neljä ihmistä ja haavoittanut useita muita, kertovat Sudan Doctors Network ja Emergency Lawyers -oikeusryhmät. Ryhmät syyttävät iskusta puolisotilaallisia Rapid Support Forces -joukkoja eli RSF:ää, joka taistelee Sudanin armeijaa vastaan maan sisällissodassa.\\n\\n## Isku osana laajempaa hyökkäyssarjaa\\n\\nEmergency Lawyersin mukaan hautausmaalla tapahtunut isku oli osa keskiviikkoiltana alkanutta lennokki-iskujen sarjaa. Ryhmän mukaan iskuissa on kuollut yhteensä ainakin 23 ihmistä. Molemmat järjestöt kuvaavat el-Obeidissa useiden päivien aikana tapahtuneita hyökkäyksiä järjestelmällisiksi ja toistuviksi siviileihin kohdistuneiksi iskuiksi.\\n\\nEl-Obeid on tällä hetkellä Sudanin armeijan hallussa, mutta se sijaitsee keskeisellä rintamalinjalla maan sisällissodassa. Kaupunki on öljyrikkaalla Kordofanin alueella, joka jakautuu Pohjois-, Etelä- ja Länsi-Kordofanin osavaltioihin. Sen strateginen merkitys liittyy sijaintiin RSF:n hallitsemien läntisten alueiden ja armeijan pääosin hallitsemien itäisten alueiden välissä.\\n\\nAnalyytikoiden mukaan Kordofanin hallinta vaikuttaa käytännössä Sudanin öljyvarojen hallintaan sekä laajan maa-alueen kontrolliin. Siksi el-Obeidista on tullut merkittävä taistelukohde sodassa, joka alkoi armeijan ja RSF:n johtajien ajauduttua erimielisyyteen maan tulevasta suunnasta.\\n\\n## Lennokit ovat lisänneet siviilikuolemia\\n\\nSudanin sota on jatkunut jo neljättä vuotta ja aiheuttanut maailman vakavimmaksi kuvatun humanitaarisen kriisin. Yli 11 miljoonaa ihmistä on joutunut lähtemään kodeistaan, ja 28 miljoonaa ihmistä kärsii akuutista nälästä.\\n\\nYK:n toukokuussa esittämien tietojen mukaan lennokki-iskut tappoivat Sudanissa tammi-huhtikuussa 2026 ainakin 880 siviiliä. Se oli yli 80 prosenttia kaikista konfliktissa kyseisenä aikana kirjatuista siviilikuolemista. YK:n ihmisoikeusvaltuutettu Volker Türk on kuvannut aseistettuja lennokkeja konfliktin selvästi merkittävimmäksi siviilikuolemien aiheuttajaksi. Armed Conflict Location & Event Data Projectin mukaan lennokkeihin liittyvät kuolemat lisääntyivät vuonna 2025 noin 600 prosenttia edellisvuoteen verrattuna.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Sudan\",\n    \"el-Obeid\",\n    \"RSF\",\n    \"sisällissota\",\n    \"lennokki-isku\"\n  ],\n  \"summary_bullets\": [\n    \"El-Obeidissa hautajaissaattueeseen kohdistunut lennokki-isku tappoi ainakin neljä ihmistä.\",\n    \"Sudanilaiset oikeusryhmät syyttävät iskusta RSF-joukkoja.\",\n    \"Kaupunki sijaitsee strategisesti tärkeällä rintamalinjalla Kordofanin alueella.\",\n    \"YK:n mukaan lennokki-iskut ovat aiheuttaneet suuren osan Sudanin viimeaikaisista siviilikuolemista.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.9,\n  \"journalist_note\": \"Artikkeli perustuu annettuihin lähdekatkelmiin. RSF:n osuus on muotoiltu oikeusryhmien syytökseksi, koska paketissa ei ollut riippumatonta vahvistusta tekijästä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260611T164121Z_d4a8a34a9f",
+    "category": "Kotimaa",
+    "selected_source_words": 393,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 244,
+    "issues": [
+      "content too short: 244 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Hautajaissaattueeseen iskenyt lennokki tappoi siviilejä Sudanissa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-11T16:45:21.866422+00:00",
+    "repair_trigger": "pre_repair_word_count=244; selected_source_words=393; selected_source_blocks=4",
+    "pre_repair_word_count": 244,
+    "pre_repair_lead_word_count": 40,
+    "post_repair_word_count": 244,
+    "post_repair_lead_word_count": 40,
+    "selected_source_words_at_repair": 393,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 393,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 244 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:486c3a9832",
+      "2:BBC World:9fb17e4eca",
+      "3:BBC World:2e4889f28f",
+      "4:23ABC News Bakersfield:fd52902d93"
+    ],
+    "final_issues": [
+      "content too short: 244 words"
+    ],
+    "recovered": false
+  }
+}
