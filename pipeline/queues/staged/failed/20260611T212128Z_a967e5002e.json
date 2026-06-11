@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-11T21:21:28.153179+00:00",
+  "digest": "a967e5002e",
+  "packet": {
+    "packet_id": "20260611T212128Z_a967e5002e",
+    "created_at": "2026-06-11T21:21:28Z",
+    "headline_seed": "World Cup kicks off in Mexico with Shakira, performers and vibrant fans",
+    "description_seed": "A star-studded opening ceremony featured artists from the World Cup's official soundtrack.",
+    "link": "https://www.bbc.com/news/articles/c2ly928xz8go?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "Emirates 24/7",
+      "Emirates 24/7",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c2ly928xz8go?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "World Cup kicks off in Mexico with Shakira, performers and vibrant fans"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A star-studded opening ceremony featured artists from the World Cup's official soundtrack.",
+        "word_count": 12,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Emirates 24/7",
+        "source_type": "research",
+        "text": "The opening ceremony featured performers and artistes Shakira, alongside Burna Boy, Alejandro Fernandez, Belinda, Danny Ocean, J Balvin, Lila Downs, Los Angeles Azules, Mana, Tyla, Ryan Castro, and Salma Hayek Pinaut.",
+        "word_count": 31,
+        "keyword_overlap": 5,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Emirates 24/7",
+        "source_type": "research",
+        "text": "From Shakira and Burna Boy to dazzling performances and packed crowds, here's how the tournament began. Dubai: The 2026 FIFA World Cup officially kicks off today, with host Mexico and South Africa facing off. But before the action commences, fans were treated to plenty of entertainment on the pitch during the opening ceremony. With this already set to be the biggest World Cup in history, with 48 teams and an astounding 104 games, the opening ceremony was no ordinary affair. Mexico is the first nation to host three World Cups as they join the United States and Canada as co-hosts for a North American tournament. Although technically, each host nation will have their own opening ceremony, only one gets to do it first. Mexico takes the honours today.",
+        "word_count": 128,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The 2026 World Cup has begun in Mexico City with an opening ceremony filled with colour, culture and a performance by global music star Shakira. Thousands of fans arrived at the legendary Azteca stadium in Mexico City with a real sense of excitement and anticipation to watch the World Cup on their home turf for the first time in 40 years. It's been a complicated build-up, from the renovations of the airport and Azteca stadium, to protests around the event, and the cartel violence seen in Mexico only months ago. On Thursday, those issues appear to have been pushed to the side as football takes centre stage in Mexico. Javier Pérez came with his family for the opener and told the BBC that the excitement now outweighs any hassles experienced up to this point.",
+        "word_count": 134,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "A star-studded opening ceremony featured artists from the World Cup's official soundtrack.\n\nThe opening ceremony featured performers and artistes Shakira, alongside Burna Boy, Alejandro Fernandez, Belinda, Danny Ocean, J Balvin, Lila Downs, Los Angeles Azules, Mana, Tyla, Ryan Castro, and Salma Hayek Pinaut.\n\nFrom Shakira and Burna Boy to dazzling performances and packed crowds, here's how the tournament began. Dubai: The 2026 FIFA World Cup officially kicks off today, with host Mexico and South Africa facing off. But before the action commences, fans were treated to plenty of entertainment on the pitch during the opening ceremony. With this already set to be the biggest World Cup in history, with 48 teams and an astounding 104 games, the opening ceremony was no ordinary affair. Mexico is the first nation to host three World Cups as they join the United States and Canada as co-hosts for a North American tournament. Although technically, each host nation will have their own opening ceremony, only one gets to do it first. Mexico takes the honours today.\n\nThe 2026 World Cup has begun in Mexico City with an opening ceremony filled with colour, culture and a performance by global music star Shakira. Thousands of fans arrived at the legendary Azteca stadium in Mexico City with a real sense of excitement and anticipation to watch the World Cup on their home turf for the first time in 40 years. It's been a complicated build-up, from the renovations of the airport and Azteca stadium, to protests around the event, and the cartel violence seen in Mexico only months ago. On Thursday, those issues appear to have been pushed to the side as football takes centre stage in Mexico. Javier Pérez came with his family for the opener and told the BBC that the excitement now outweighs any hassles experienced up to this point.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1026,
+      "selected_blocks": 4,
+      "selected_source_words": 305,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "TODAY",
+        "TODAY",
+        "TODAY",
+        "TODAY",
+        "Emirates 24/7",
+        "Emirates 24/7",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "Emirates 24/7",
+        "Emirates 24/7",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "World Cup kicks off in Mexico with Shakira, performers and vibrant fans",
+      "description": "A star-studded opening ceremony featured artists from the World Cup's official soundtrack.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "World Cup kicks off in Mexico with Shakira, performers and vibrant fans",
+    "description": "A star-studded opening ceremony featured artists from the World Cup's official soundtrack.",
+    "link": "https://www.bbc.com/news/articles/c2ly928xz8go?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-11T20:26:06+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4d1b70eb47ee651b7f63f72b67b4a838",
+    "_url_hash": "a8a570f355cad0d2b4367f1f68c8ba840237a75b631c4652c47031fc4985a015",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kulttuuri",
+    "research": "[Lähde: BBC World]\nThe 2026 World Cup has begun in Mexico City with an opening ceremony filled with colour, culture and a performance by global music star Shakira.\n\nThousands of fans arrived at the legendary Azteca stadium in Mexico City with a real sense of excitement and anticipation to watch the World Cup on their home turf for the first time in 40 years.\n\nIt's been a complicated build-up, from the renovations of the airport and Azteca stadium, to protests around the event, and the cartel violence seen in Mexico only months ago.\n\nOn Thursday, those issues appear to have been pushed to the side as football takes centre stage in Mexico.\n\nJavier Pérez came with his family for the opener and told the BBC that the excitement now outweighs any hassles experienced up to this point.\n\n\"We were lucky to get hospitality tickets and it's a unique experience. I have never been to a World Cup before so to bring my family is wonderful,\" he said.\n\n\"I just want Mexico to get off on the right foot, win today and score a load of goals! And then we'll see how far we can go!\"\n\nMexico is co-hosting the 2026 tournament alongside the US and Canada, with those North American teams hosting their own opening ceremonies on Friday.\n\nToday, the focus is on Mexico's festivities. Ahead of the co-hosts match against South Africa, fans in the stadium were treated to musical performances from Shakira, Colombia's J Balvin, Afrobeats star Burna Boy, Latin music star Danny Ocean and Fher Olvera.\n\n\"Bienvenida a México. Welcome to Mexico,\" a performer announced to start the tournament.\n\n\"Mexico receives you with smiles from our heart. We are a nation of diversity, heritage and pride. Football carries the same heartbeat, uniting generations. The trophy is not defined by one player or nation but by all.\"\n\nPerformers wore indigenous clothing, while others were dressed in all gold and held giant golden footballs above their heads.\n\nA packed stadium of fans dressed in their own colourful outfits, many wearing Mexico's team colours.\n\nOpera superstar Andrea Bocelli and K-Pop Demon Hunters singer Ejae performed the tournament's official anthem DNA, which was officially released on Wednesday.\n\nMexican singer Fernández, who is the son of veteran crooner Vicente Fernández, sang the Mexican national anthem in unison with many of the 80,000 fans.\n\nGrammy-winning South African star Tyla performed her nation's anthem.\n\nTyla, whose hits include the song Water and the Fifa song Game Time, will return to the World Cup stage on\n\n---\n\n[Lähde: TODAY]\nThe global soccer tournament officially kicks off on June 11 in Mexico City.\n\nThree major stars taking part in the June 11 World Cup opener.  Getty Images\n\nGilberto Mora of Mexico is the youngest player on the team and tournament. Agustin Cuevas / Getty Images\n\nAt just 17 years old, Mexican player Gilberto Mora is the youngest player on his team and the youngest player competing at the 2026 FIFA World Cup.\n\nAn attacking midfielder, he is a rising star that began his career with the Liga MX club Tijuana. At 15, he became the youngest-ever goal scorer in the Mexican league, according to ESPN.\n\nWhen he confirmed his participation in the World Cup, he shared a photo of himself as a child wearing a Mexican jersey.\n\nHe wrote on Instagram, in Spanish, \"I once had a dream: to play for my national team in a World Cup.\"\n\n\"Today, I am overjoyed because that dream is coming true. Thank you God for helping me fulfill my dreams, and thank you to my entire family. Without you this wouldn’t be possible,\" he continued.\n\n\"Mexico deserves to be at the very top of the world. And together, we’re going to achieve it!! Let’s go after the cup together!\" he cheered.\n\nA slew of athletes and stars from the entertainment world attended the first match of the World Cup. Many posed for photos ahead of the South Africa vs. Mexico game.\n\nAmong the celebs in attendance were actor Diego Boneta, Luis Gerardo Méndez and Jaime Camil, as well as soccer legend Ronaldo, among others.\n\nDiego Boneta at the 2026 World Cup in Mexico. Angel Delgado / Getty Images\n\nJaime Camil and his son. Angel Delgado / Getty Images\n\nLuis Gerardo Méndez, Karla Souza and Juan Pablo Medina ahead of the match. Angel Delgado / Getty Images\n\nRonaldo, former Brazilian soccer player, was in attendance. Angel Delgado / Getty Images\n\nAt the 66-minute mark, Mexico's lead extended to 2-0.\n\nRaúl Jiménez scored the second goal for Mexico, who was visibly emotional as his teammates congratulated him. The 35-year-old striker has participated and represented Mexico in four World Cups.\n\nIn other World Cup news, the Algerian team picked Lawrence, Kansas, as a place to train ahead of the tournament, and the city has embraced them with open arms.\n\nLocals in Lawrence, which is the home of the University of Kansas, have been expressing their gratitude over hosting Algeria. One video on X shows an older man thanking the team for choosing their city.\n\n\"I was so happy that they chose our town for their base camp,\" the unidentified man said \n\n---\n\n[Lähde: Emirates 24/7]\nFrom Shakira and Burna Boy to dazzling performances and packed crowds, here's how the tournament began.\n\nDubai: The 2026 FIFA World Cup officially kicks off today, with host Mexico and South Africa facing off.\n\nBut before the action commences, fans were treated to plenty of entertainment on the pitch during the opening ceremony. With this already set to be the biggest World Cup in history, with 48 teams and an astounding 104 games, the opening ceremony was no ordinary affair.\n\nMexico is the first nation to host three World Cups as they join the United States and Canada as co-hosts for a North American tournament. Although technically, each host nation will have their own opening ceremony, only one gets to do it first. Mexico takes the honours today.\n\nThe opening ceremony featured performers and artistes Shakira, alongside Burna Boy, Alejandro Fernandez, Belinda, Danny Ocean, J Balvin, Lila Downs, Los Angeles Azules, Mana, Tyla, Ryan Castro, and Salma Hayek Pinaut.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-11T21:27:36.901242+00:00",
+  "failure": "content too short: 244 words",
+  "payload": {
+    "packet_id": "20260611T212128Z_a967e5002e",
+    "title": "Jalkapallon MM-kisat käynnistyivät Meksikossa värikkäällä avajaisseremonialla",
+    "summary": "Vuoden 2026 jalkapallon MM-kisat ovat alkaneet Méxicossa, jossa avajaisseremonia keräsi Azteca-stadionille tuhansia innostuneita faneja. Lavalla nähtiin muun muassa Shakira sekä muita turnauksen viralliseen musiikkiin liitettyjä esiintyjiä.",
+    "content": "Vuoden 2026 jalkapallon MM-kisat ovat käynnistyneet Méxicossa avajaisseremonialla, jossa korostuivat musiikki, värit ja kotikatsomon pitkä odotus. Azteca-stadionille saapui tuhansia faneja seuraamaan turnauksen alkua ennen avausottelua, jossa isäntämaa Meksiko kohtasi Etelä-Afrikan.\n\n## Shakira ja muut esiintyjät avasivat kisat\n\nAvajaisseremoniassa nähtiin useita kansainvälisesti tunnettuja esiintyjiä. Mukana olivat muun muassa Shakira, Burna Boy, Alejandro Fernández, Belinda, Danny Ocean, J Balvin, Lila Downs, Los Ángeles Azules, Maná, Tyla, Ryan Castro ja Salma Hayek Pinault.\n\nSeremonia rakentui turnauksen viralliseen musiikkiin liitettyjen artistien ympärille. Ennen ottelun alkua katsojille tarjottiin kentällä viihdeohjelmaa, jota kuvattiin näyttäväksi ja täysien katsomoiden tunnelmaa vahvistaneeksi kokonaisuudeksi. Shakiran esiintyminen nousi avajaisten näkyvimmäksi hetkeksi, mutta ohjelmassa korostui myös laaja esiintyjäjoukko.\n\n## Historiallisen suuri turnaus alkaa\n\nVuoden 2026 MM-turnaus on mittakaavaltaan poikkeuksellinen. Mukana on 48 joukkuetta, ja otteluita pelataan yhteensä 104. Kisat järjestetään Pohjois-Amerikassa, kun Meksiko, Yhdysvallat ja Kanada toimivat yhteisinä isäntämaina.\n\nMeksiko sai kunnian avata turnauksen ensimmäisenä isäntämaana, vaikka jokaisella järjestäjämaalla on oma avajaisseremoniansa. Samalla Meksikosta tuli ensimmäinen maa, joka isännöi jalkapallon MM-kisoja kolmannen kerran. Méxicossa sijaitseva Azteca-stadion on yksi lajin tunnetuimmista areenoista, ja avauspäivä toi sinne vahvan odotuksen tunteen.\n\n## Huomio siirtyi jalkapalloon\n\nMonille paikallisille katsojille kyse oli ensimmäisestä mahdollisuudesta seurata MM-jalkapalloa kotimaassa 40 vuoteen. Ennen turnauksen alkua valmisteluihin liittyi kuitenkin myös vaikeuksia, kuten lentokentän ja Azteca-stadionin remontteja, tapahtumaan kohdistuneita protesteja sekä Meksikossa aiemmin koettua kartelliväkivaltaa.\n\nAvauspäivänä nämä aiheet näyttivät jäävän taka-alalle, kun stadionin yleisö ja ottelun odotus nousivat pääosaan. Paikalle perheensä kanssa saapunut Javier Pérez kertoi BBC:lle, että innostus painoi lopulta enemmän kuin valmisteluihin liittyneet hankaluudet.",
+    "category": "Ulkomaat",
+    "tags": [
+      "jalkapallon MM-kisat",
+      "Meksiko",
+      "Shakira",
+      "Azteca-stadion",
+      "MM-kisat 2026"
+    ],
+    "summary_bullets": [
+      "Vuoden 2026 jalkapallon MM-kisat käynnistyivät Méxicossa Azteca-stadionilla.",
+      "Avajaisseremoniassa esiintyivät muun muassa Shakira, Burna Boy, J Balvin ja Lila Downs.",
+      "Turnaus pelataan Meksikossa, Yhdysvalloissa ja Kanadassa, ja mukana on 48 joukkuetta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Taustahuolista mainittiin vain lähteissä nimetyt aiheet, eikä uusia väitteitä lisätty."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260611T212128Z_a967e5002e\",\n  \"title\": \"Jalkapallon MM-kisat käynnistyivät Meksikossa värikkäällä avajaisseremonialla\",\n  \"summary\": \"Vuoden 2026 jalkapallon MM-kisat ovat alkaneet Méxicossa, jossa avajaisseremonia keräsi Azteca-stadionille tuhansia innostuneita faneja. Lavalla nähtiin muun muassa Shakira sekä muita turnauksen viralliseen musiikkiin liitettyjä esiintyjiä.\",\n  \"content\": \"Vuoden 2026 jalkapallon MM-kisat ovat käynnistyneet Méxicossa avajaisseremonialla, jossa korostuivat musiikki, värit ja kotikatsomon pitkä odotus. Azteca-stadionille saapui tuhansia faneja seuraamaan turnauksen alkua ennen avausottelua, jossa isäntämaa Meksiko kohtasi Etelä-Afrikan.\\n\\n## Shakira ja muut esiintyjät avasivat kisat\\n\\nAvajaisseremoniassa nähtiin useita kansainvälisesti tunnettuja esiintyjiä. Mukana olivat muun muassa Shakira, Burna Boy, Alejandro Fernández, Belinda, Danny Ocean, J Balvin, Lila Downs, Los Ángeles Azules, Maná, Tyla, Ryan Castro ja Salma Hayek Pinault.\\n\\nSeremonia rakentui turnauksen viralliseen musiikkiin liitettyjen artistien ympärille. Ennen ottelun alkua katsojille tarjottiin kentällä viihdeohjelmaa, jota kuvattiin näyttäväksi ja täysien katsomoiden tunnelmaa vahvistaneeksi kokonaisuudeksi. Shakiran esiintyminen nousi avajaisten näkyvimmäksi hetkeksi, mutta ohjelmassa korostui myös laaja esiintyjäjoukko.\\n\\n## Historiallisen suuri turnaus alkaa\\n\\nVuoden 2026 MM-turnaus on mittakaavaltaan poikkeuksellinen. Mukana on 48 joukkuetta, ja otteluita pelataan yhteensä 104. Kisat järjestetään Pohjois-Amerikassa, kun Meksiko, Yhdysvallat ja Kanada toimivat yhteisinä isäntämaina.\\n\\nMeksiko sai kunnian avata turnauksen ensimmäisenä isäntämaana, vaikka jokaisella järjestäjämaalla on oma avajaisseremoniansa. Samalla Meksikosta tuli ensimmäinen maa, joka isännöi jalkapallon MM-kisoja kolmannen kerran. Méxicossa sijaitseva Azteca-stadion on yksi lajin tunnetuimmista areenoista, ja avauspäivä toi sinne vahvan odotuksen tunteen.\\n\\n## Huomio siirtyi jalkapalloon\\n\\nMonille paikallisille katsojille kyse oli ensimmäisestä mahdollisuudesta seurata MM-jalkapalloa kotimaassa 40 vuoteen. Ennen turnauksen alkua valmisteluihin liittyi kuitenkin myös vaikeuksia, kuten lentokentän ja Azteca-stadionin remontteja, tapahtumaan kohdistuneita protesteja sekä Meksikossa aiemmin koettua kartelliväkivaltaa.\\n\\nAvauspäivänä nämä aiheet näyttivät jäävän taka-alalle, kun stadionin yleisö ja ottelun odotus nousivat pääosaan. Paikalle perheensä kanssa saapunut Javier Pérez kertoi BBC:lle, että innostus painoi lopulta enemmän kuin valmisteluihin liittyneet hankaluudet.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"jalkapallon MM-kisat\",\n    \"Meksiko\",\n    \"Shakira\",\n    \"Azteca-stadion\",\n    \"MM-kisat 2026\"\n  ],\n  \"summary_bullets\": [\n    \"Vuoden 2026 jalkapallon MM-kisat käynnistyivät Méxicossa Azteca-stadionilla.\",\n    \"Avajaisseremoniassa esiintyivät muun muassa Shakira, Burna Boy, J Balvin ja Lila Downs.\",\n    \"Turnaus pelataan Meksikossa, Yhdysvalloissa ja Kanadassa, ja mukana on 48 joukkuetta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään lähdeblokkiin. Taustahuolista mainittiin vain lähteissä nimetyt aiheet, eikä uusia väitteitä lisätty.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260611T212128Z_a967e5002e",
+    "category": "Ulkomaat",
+    "selected_source_words": 305,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 244,
+    "issues": [
+      "content too short: 244 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Jalkapallon MM-kisat käynnistyivät Meksikossa värikkäällä avajaisseremonialla",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-11T21:27:36.900799+00:00",
+    "repair_trigger": "pre_repair_word_count=244; selected_source_words=305; selected_source_blocks=4",
+    "pre_repair_word_count": 244,
+    "pre_repair_lead_word_count": 30,
+    "post_repair_word_count": 244,
+    "post_repair_lead_word_count": 30,
+    "selected_source_words_at_repair": 305,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 305,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 244 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:3e79400553",
+      "2:Emirates 24/7:2cbe873661",
+      "3:Emirates 24/7:e00d5518a6",
+      "4:BBC World:6db5439938"
+    ],
+    "final_issues": [
+      "content too short: 244 words"
+    ],
+    "recovered": false
+  }
+}
