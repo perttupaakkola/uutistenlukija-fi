@@ -28,7 +28,7 @@ if [[ -f "$STATE_FILE" ]]; then
 fi
 
 # ── Fetch latest run ──────────────────────────────────────────────────────────
-RUNS=$(curl -sf "https://api.github.com/repos/$REPO/actions/runs?per_page=1" 2>/dev/null) || {
+RUNS=$(curl -sf "https://api.github.com/repos/$REPO/actions/workflows/deploy.yml/runs?per_page=1" 2>/dev/null) || {
     log "ERROR: GitHub API unreachable"
     exit 0
 }
