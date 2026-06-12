@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/12/huhu-oppo-kehittaa-leveampaa-taittuvanayttoista-puhelinta-haastajaksi-applen-ja-samsungin-tuleville-uutuuksille/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
