@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-12T19:11:19.151600+00:00",
+  "digest": "9e86631d6e",
+  "packet": {
+    "packet_id": "20260612T191119Z_9e86631d6e",
+    "created_at": "2026-06-12T19:11:19Z",
+    "headline_seed": "Jalkapallotilastoja | Miesten Ykkösliiga",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9535525",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9535525"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jalkapallotilastoja | Miesten Ykkösliiga"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 177,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jalkapallotilastoja | Miesten Ykkösliiga",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Jalkapallotilastoja | Miesten Ykkösliiga",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9535525",
+    "published": "2026-06-12T21:47:26+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "c3081f0cc8b522dbd61abfc83cf65ff7",
+    "_url_hash": "e30bae8895b9755ce198d2c603ef97f23efb00deb78e98322071e9bd3b4a15a7",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\n8. Roni Pietsalo 1–0, 15. Ville Ahola 1-1, 36. Charles Katashira 1-2.\n\nFC Haka: Anton Lepola (v), Eero-Matti Auvinen (v), Tomas Sovelius (46. Aaron Keto-Diyawan), Spencer Silas (v), Jesper Karlsson, Torfiq Ali-Abubakar (v), Imani Lanquedoc, Oiva Laaksonen (64. Kevin Nurmi), Roni Pietsalo (64. Nika Sichinava), Valentin Purosalo, Oliver Whyte (78. Miika Mahlamäki).\n\nJäPS: Topi Valtonen (v), Peetu Haikonen (v), Omar Jama (v), Ville Ahola, Emil Pallas (71. Impton Söderlund), Aleksi Sainio, Riku Selander (v), Oscar Dahlfors (81. Salomon Maliki), Henrik Ölander, Charles Katashira, Julius Salo.\n\n22. Nathaniel Tahmbi 0-1, 32. Antonio Almén 1-1, 74. Onni Hänninen 1-2.\n\nKäPa: Tuomas Collin, Urho Huhtamäki (89. Aito Pitkänen), Pekka Hietalahti (v), Pontus Lindgren (83. Niklas Leinonen), Niko Nurmi (84. Antti Pastinen), Antonio Almén, Yllson Lika, Samba Sillah (72. Reko Huhtamäki), Daniel Rökman, Daniel Ripatti (72. Elias Jantunen), Mikko Kuningas (v).\n\nKTP: Maksym Zhuk, Derrick Atta Agyei, Junior Christian Chibuzor, Joni Mäkelä (v), Mustapha Coker, Petteri Forsell (60. Onni Hänninen), Ruslan Haapalainen (59. Atomu Tanaka (v)), Nathaniel Tahmbi, Foday Manneh (60. Samuli Hölttä (v)), Roni Polat (80. Gift Sunday), Matias Paavola.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-12T19:13:19.522380+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä tai varmistettuja yksityiskohtia artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260612T191119Z_9e86631d6e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä tai varmistettuja yksityiskohtia artikkelin kirjoittamiseen.\"}"
+}

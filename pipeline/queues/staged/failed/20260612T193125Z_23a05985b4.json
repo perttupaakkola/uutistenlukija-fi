@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-12T19:31:25.984203+00:00",
+  "digest": "23a05985b4",
+  "packet": {
+    "packet_id": "20260612T193125Z_23a05985b4",
+    "created_at": "2026-06-12T19:31:25Z",
+    "headline_seed": "Nordealla oli ongelmia",
+    "description_seed": "Tilanne ratkesi iltakymmeneen mennessä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012076603.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012076603.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nordealla oli ongelmia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 154,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "yrittajat.fi",
+        "yrittajat.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nordealla oli ongelmia",
+      "description": "Tilanne ratkesi iltakymmeneen mennessä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nordealla oli ongelmia",
+    "description": "Tilanne ratkesi iltakymmeneen mennessä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012076603.html",
+    "published": "2026-06-12T19:28:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "81b631cada27a2741ae1d51366f5da97",
+    "_url_hash": "cb0d11c96d946c37963cab082a4bfe8c761bf97ababa866dcebeddebd821f9ac",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: yrittajat.fi]\nYRITTÄJÄ, tule mukaan omiesi pariin! Liity Yrittäjiin.\n\nVaikutamme ja verkostoimme ympäri Suomea! Etsi täältä oma paikallisyhdistyksesi ja aluejärjestösi.\n\nPukkaako hikeä jo pelkkä ajatus yrityksen rahoituksesta? Jos tuntuu tutulta niin tule mukaan Raha-iltaan!\n\nAika: Ke 7.5.2025 klo 17.00-20.00Paikka: Harmooni, Harmoonisali. Väinönkatu 1, Hannikaisenkatu 39, 40100 JyväskyläKahvitarjoilu.\n\nIllan aikana käsittelemme rahoitusta monipuolisesti ja käytännönläheisesti. Saat arvokkaita neuvoja muun muassa seuraaviin aiheisiin: mistä rahoitusta voi hakea, mitä pohjatöitä on hyvä olla tehtynä ja vinkkejä hakemuksen tekemiseen.\n\nTapahtuman jälkeen sinulla on selkeämmät askelmerkit yrityksen rahoituksen maailmaan ja monta uutta yrittäjätuttua jakamassa kokemuksia aiheesta.\n\nVinkkejä ja neuvoja meille jakaa yrityksen kasvun asiantuntija Paula Makkonen (Paula Makkonen Oy). Paulalla on vankka kokemus yrityksen kokonaisvaltaisen toiminnan kehittämisessä, sen rahoittamisessa ja kansainvälistymisessä.\n\nMukana myös Fennian rahoitusasiantuntija Lauri Haapakoski ja Finnveran aluepäällikkö Markus Raaska.\n\nKeski-Suomen Yrittäjät tarjoaa sinulle illan yhdessä Fennian ja Finnveran kanssa. Vinkkejä yrityksen rahoitukseen jaetaan eritoten mikro- ja pk-yritysten näkökulmasta.\n\nMaiju Peltonen\n050 543 6647\nmaiju.peltonen@yrittajat.fi",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-12T19:33:18.019096+00:00",
+  "failure": "Paketti ei sisällä valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260612T193125Z_23a05985b4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
