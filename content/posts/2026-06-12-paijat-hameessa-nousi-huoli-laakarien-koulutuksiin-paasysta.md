@@ -43,7 +43,6 @@ keywords:
 source_name: "Lääkärilehti"
 source_url: "http://www.laakarilehti.fi/terveydenhuolto/myos-paijat-hameessa-huolta-koulutuksista/"
 source_domain: "laakarilehti.fi"
-briefing: true
 draft: false
 ---
 
