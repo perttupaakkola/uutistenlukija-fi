@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kaupankaynti-spacex-n-osakkeilla-alkaa-muskista-voi-tulla-maailman-ensimmainen-biljonaari/9352596"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
