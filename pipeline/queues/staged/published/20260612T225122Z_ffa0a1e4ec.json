@@ -1,0 +1,216 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-12T22:51:22.291650+00:00",
+  "digest": "ffa0a1e4ec",
+  "packet": {
+    "packet_id": "20260612T225122Z_ffa0a1e4ec",
+    "created_at": "2026-06-12T22:51:22Z",
+    "headline_seed": "A popular sunscreen ingredient can finally be sold in the United States",
+    "description_seed": "The FDA will allow bemotrizinol in sunscreen. The chemical is long-lasting and defends against solar radiation that ages skin.",
+    "link": "https://www.sciencenews.org/article/sunscreen-bemotrizinol-fda-safe",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News",
+      "Time",
+      "AOL"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/sunscreen-bemotrizinol-fda-safe"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "A popular sunscreen ingredient can finally be sold in the United States"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "The FDA will allow bemotrizinol in sunscreen. The chemical is long-lasting and defends against solar radiation that ages skin.",
+        "word_count": 19,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "Glowy oils, tinted creams, misty sprays, chalky sticks, lightweight gels. Like many people gearing up for summer, my pool bag holds a stunning variety of sunscreens. They come in different forms, but all rely on a handful of the same sun-shielding ingredients. In the United States, this ingredient list hasn’t changed in 20 years — until now. In June, the U.S. Food and Drug Administration added a new chemical, bemotrizinol, to the list of permitted sunscreen ingredients. “I think we should all be super excited,” says Tanya Hathaway, a dermatologist at Fred Hutch Cancer Center in Seattle who specializes in high-risk skin cancer patients. ---",
+        "word_count": 105,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Time",
+        "source_type": "research",
+        "text": "Finding a product you like and trust enough to wear every day—applying a full shot glass’s worth to the face and skin left exposed by a swimsuit, every two hours, if you’re following the rules—isn’t always simple. On May 19, the Environmental Working Group released a report finding that out of the 2,700-plus products it evaluated, only 550 met the group's criteria for safety and UV protection. However, after decades without much appreciable change, the U.S. Food and Drug Administration (FDA) announced in December that they are considering approving a new, powerful sunscreen ingredient called bemotrizinol—a move the Environmental Working Group called \"cause for optimism.\" Experts speculate that the FDA may render a decision on the ingredient sometime this summer. It’s been used in Europe and elsewhere for years, and according to experts, it could revolutionize sunscreen in the U.S.",
+        "word_count": 140,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "This created a new issue: It's illegal to sell the overseas versions of sunscreens like Bioré UV in the United States. America is an anomaly when it comes to sunscreen. While the U.S. isn't alone globally in regulating sunscreen as a nonprescription drug, the FDA requires expensive and lengthy animal-based testing and stringent safety reviews. The result? The last time the FDA approved a new sunscreen filter was in 1999. For a country that lacks universal health care, staying up to date on one of the best prevention tools for skin cancer (and aging) should be a no-brainer. Until recently, there was little hope things would ever change.",
+        "word_count": 108,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The FDA will allow bemotrizinol in sunscreen. The chemical is long-lasting and defends against solar radiation that ages skin.\n\nGlowy oils, tinted creams, misty sprays, chalky sticks, lightweight gels. Like many people gearing up for summer, my pool bag holds a stunning variety of sunscreens. They come in different forms, but all rely on a handful of the same sun-shielding ingredients. In the United States, this ingredient list hasn’t changed in 20 years — until now. In June, the U.S. Food and Drug Administration added a new chemical, bemotrizinol, to the list of permitted sunscreen ingredients. “I think we should all be super excited,” says Tanya Hathaway, a dermatologist at Fred Hutch Cancer Center in Seattle who specializes in high-risk skin cancer patients. ---\n\nFinding a product you like and trust enough to wear every day—applying a full shot glass’s worth to the face and skin left exposed by a swimsuit, every two hours, if you’re following the rules—isn’t always simple. On May 19, the Environmental Working Group released a report finding that out of the 2,700-plus products it evaluated, only 550 met the group's criteria for safety and UV protection. However, after decades without much appreciable change, the U.S. Food and Drug Administration (FDA) announced in December that they are considering approving a new, powerful sunscreen ingredient called bemotrizinol—a move the Environmental Working Group called \"cause for optimism.\" Experts speculate that the FDA may render a decision on the ingredient sometime this summer. It’s been used in Europe and elsewhere for years, and according to experts, it could revolutionize sunscreen in the U.S.\n\nThis created a new issue: It's illegal to sell the overseas versions of sunscreens like Bioré UV in the United States. America is an anomaly when it comes to sunscreen. While the U.S. isn't alone globally in regulating sunscreen as a nonprescription drug, the FDA requires expensive and lengthy animal-based testing and stringent safety reviews. The result? The last time the FDA approved a new sunscreen filter was in 1999. For a country that lacks universal health care, staying up to date on one of the best prevention tools for skin cancer (and aging) should be a no-brainer. Until recently, there was little hope things would ever change.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 937,
+      "selected_blocks": 4,
+      "selected_source_words": 372,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "AOL",
+        "AOL",
+        "AOL",
+        "AOL",
+        "Time",
+        "Time",
+        "Time",
+        "Time",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News",
+        "Time",
+        "AOL"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "A popular sunscreen ingredient can finally be sold in the United States",
+      "description": "The FDA will allow bemotrizinol in sunscreen. The chemical is long-lasting and defends against solar radiation that ages skin.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "A popular sunscreen ingredient can finally be sold in the United States",
+    "description": "The FDA will allow bemotrizinol in sunscreen. The chemical is long-lasting and defends against solar radiation that ages skin.",
+    "link": "https://www.sciencenews.org/article/sunscreen-bemotrizinol-fda-safe",
+    "published": "2026-06-12T18:58:30+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "4525cde68ba1ae8e56df60f81164efc2",
+    "_url_hash": "8c508c28014da4b135fda820bb8bb3500dad42471faa392dd6a5e79a5994915a",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nGlowy oils, tinted creams, misty sprays, chalky sticks, lightweight gels. Like many people gearing up for summer, my pool bag holds a stunning variety of sunscreens. They come in different forms, but all rely on a handful of the same sun-shielding ingredients. In the United States, this ingredient list hasn’t changed in 20 years — until now.\n\nIn June, the U.S. Food and Drug Administration added a new chemical, bemotrizinol, to the list of permitted sunscreen ingredients. “I think we should all be super excited,” says Tanya Hathaway, a dermatologist at Fred Hutch Cancer Center in Seattle who specializes in high-risk skin cancer patients.\n\n---\n\n[Lähde: AOL]\n\"Hearst Magazines and AOL may earn commission or revenue on some items through these links.\"\n\nAs an American, you always remember your first international sunscreen. I had panic-booked my inaugural cosmetic dermatologist appointment after my skin started to mottle with hyperpigmentation—it turns out, \"base tans\" and years of lifeguarding had taken their toll. The doctor told me that until I got really good at sunscreen, all interventions were off the table. The problem? I hated them.\n\nWhen I told a friend my dilemma, she sent me to New York's Chinatown to \"find the blue bottle of Japanese sunscreen,\" or Bioré UV. As soon as I got home, I applied what I thought was the appropriate amount, a tiny dot. It felt different. Confused by a sensation I can only describe as \"silk water,\" I applied more. It was spiritual. By the end of my sunscreen baptism, I had slathered on far more than the recommended quarter teaspoon—a full handful—leaving my skin with an incandescent finish. And in that devotion, I haven't missed a daily application since.\n\nThis created a new issue: It's illegal to sell the overseas versions of sunscreens like Bioré UV in the United States. America is an anomaly when it comes to sunscreen. While the U.S. isn't alone globally in regulating sunscreen as a nonprescription drug, the FDA requires expensive and lengthy animal-based testing and stringent safety reviews. The result? The last time the FDA approved a new sunscreen filter was in 1999. For a country that lacks universal health care, staying up to date on one of the best prevention tools for skin cancer (and aging) should be a no-brainer. Until recently, there was little hope things would ever change.\n\nBut after 26 years of stagnation, the FDA is close to approving the first new sunscreen filter in a generation: Parsol Shield, the brand name for bemotrizinol (BEMT), or bis-ethylhexyloxyphenol methoxyphenyl triazine, as seen on the ingredients list for Bioré UV. So what caused this sunscreen awakening? The hero of this story is Carl D'Ruiz, head of beauty and care science, advocacy, and business development at DSM-Firmenich, a beauty manufacturing company. He has watched repeated attempts to introduce modern sunscreen filters fall short. Considering that BEMT has existed globally for decades, what company would spend millions to re-vet an ingredient, all for a mere 18 months of U.S. market exclusivity? After decades of putting formulators and brands, as cosmetic chemist, licensed esthetician\n\n---\n\n[Lähde: Time]\nStop us if you’ve heard this one before: Wear sunscreen.\n\nIn the U.S., this advice, so commonly bandied about, can be a bit tricky to follow. Compared to other places in the world, manufacturers in the U.S. can use only a handful of ingredients. As a result, many American sunscreens are greasy or leave a white cast on the skin. Others contain substances that may make their way into the bloodstream, according to research, though the health effects of this potential leakage aren’t clear.\n\nFinding a product you like and trust enough to wear every day—applying a full shot glass’s worth to the face and skin left exposed by a swimsuit, every two hours, if you’re following the rules—isn’t always simple. On May 19, the Environmental Working Group released a report finding that out of the 2,700-plus products it evaluated, only 550 met the group's criteria for safety and UV protection.\n\nHowever, after decades without much appreciable change, the U.S. Food and Drug Administration (FDA) announced in December that they are considering approving a new, powerful sunscreen ingredient called bemotrizinol—a move the Environmental Working Group called \"cause for optimism.\" Experts speculate that the FDA may render a decision on the ingredient sometime this summer. It’s been used in Europe and elsewhere for years, and according to experts, it could revolutionize sunscreen in the U.S.\n\nSunscreen, as we now use it, is a relatively recent invention. It was less than 100 years ago that scientists made a direct link between ultraviolet (UV) rays produced by the sun and the development of skin cancer. That didn’t affect most people’s behavior for many decades; tanning was a popular pastime for much of the 20th century. However, in the 1970s, the U.S. government began to regulate sunscreens as drugs, reasoning that they could be powerful tools for public health.\n\nMany early sunscreens contained molecules that blocked one particular class of UV rays, says Kelly Dobos, an independent chemistry consultant who also teaches at the University of Cincinnati. “When sunscreens were first developed and first put on the market, we were concerned about preventing sunburn,” she says. “And the UVB rays are primarily the ones that cause sunburn.”\n\nBut by the late 20th century, scientists had realized that UVA rays, though they didn’t contribute as much to sunburn, were also potent disruptors of skin cell DNA, making exposure to them a cancer risk. That sparked the formulation of “broad spectrum” s",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-12T22:54:25.325531+00:00",
+  "payload": {
+    "packet_id": "20260612T225122Z_ffa0a1e4ec",
+    "title": "Yhdysvallat sallii uuden aurinkovoiteiden suodattimen vuosikymmenten tauon jälkeen",
+    "summary": "Yhdysvaltain lääkevirasto FDA sallii bemotrizinolin käytön aurinkovoiteissa. Aine on ollut käytössä Euroopassa ja muualla jo vuosia, mutta Yhdysvaltain aurinkosuojien hyväksyttyjen suodattimien lista ei ole juuri muuttunut pitkään aikaan.",
+    "content": "Yhdysvaltain lääkevirasto FDA sallii bemotrizinolin käytön aurinkovoiteissa, mikä merkitsee poikkeuksellista muutosta maan aurinkosuojamarkkinoilla vuosikymmenten hitaan kehityksen jälkeen. Bemotrizinoli on pitkäkestoinen aurinkosuojakemikaali, joka suojaa ihoa auringon säteilyltä, myös siltä osalta, joka liittyy ihon ikääntymiseen.\n\n## Pitkä tauko uusissa suodattimissa\n\nYhdysvalloissa aurinkovoiteiden hyväksyttyjen suoja-aineiden valikoima on pysynyt pitkään lähes ennallaan. Lähdetietojen mukaan maan hyväksyttyjen aurinkosuojan ainesosien lista ei ollut muuttunut 20 vuoteen, ja edellinen uusi aurinkosuodatin oli hyväksytty vuonna 1999.\n\nMuutos on siksi merkittävä sekä kuluttajille että ihotautien asiantuntijoille. Fred Hutch Cancer Centerissä Seattlessa työskentelevä ihotautilääkäri Tanya Hathaway, joka hoitaa suuren ihosyöpäriskin potilaita, kuvasi uutista innostavaksi. Hänen näkökulmastaan uusi suodatin voi parantaa käytännön mahdollisuuksia löytää aurinkovoide, jota ihmiset käyttävät säännöllisesti.\n\nAurinkosuojan teho ei riipu vain sen laboratorio-ominaisuuksista. Tuotteen koostumus, tuntuma ja käyttömukavuus vaikuttavat siihen, tuleeko voidetta todella levitettyä riittävästi ja toistuvasti. Juuri siksi uusilla suodattimilla voi olla merkitystä arjessa, jos ne mahdollistavat paremmin miellyttäviä ja toimivia tuotteita.\n\n## Euroopassa jo tuttu aine\n\nBemotrizinolia on käytetty Euroopassa ja muualla maailmassa jo vuosien ajan. Yhdysvalloissa ulkomaisten aurinkovoideversioiden myynti on kuitenkin ollut laitonta, jos niiden sisältämät suodattimet eivät ole olleet FDA:n sallimia.\n\nYhdysvaltain järjestelmä poikkeaa monista muista maista siinä, että aurinkovoiteita säädellään itsehoitolääkkeinä. Hyväksyntäprosessi on kuvattu kalliiksi ja pitkäksi, ja siihen liittyy tiukkoja turvallisuusarvioita. Tämä on hidastanut uusien aurinkosuodattimien tuloa markkinoille.\n\nAurinkosuoja on keskeinen osa ihosyövän ehkäisyä ja ihon ennenaikaisen vanhenemisen torjuntaa. Toukokuussa julkaistussa Environmental Working Groupin arvioinnissa yli 2 700 tuotteesta vain 550 täytti ryhmän turvallisuutta ja UV-suojaa koskevat kriteerit. Uuden suodattimen hyväksyntä ei yksin ratkaise kaikkia aurinkosuojien ongelmia, mutta se avaa yhdysvaltalaisille valmistajille ja kuluttajille aiempaa laajemmat mahdollisuudet.",
+    "category": "Tiede",
+    "tags": [
+      "aurinkovoide",
+      "bemotrizinoli",
+      "FDA",
+      "ihosyöpä",
+      "UV-säteily"
+    ],
+    "summary_bullets": [
+      "FDA sallii bemotrizinolin käytön aurinkovoiteissa Yhdysvalloissa.",
+      "Aine on pitkäkestoinen ja suojaa ihoa auringon säteilyltä.",
+      "Yhdysvaltain hyväksyttyjen aurinkosuodattimien lista on muuttunut hyvin hitaasti viime vuosikymmeninä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin; vältetty väitteitä tarkasta voimaantulopäivästä ja markkinoille tulon aikataulusta, joita packet ei yksilöi."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260612T225122Z_ffa0a1e4ec\",\n  \"title\": \"Yhdysvallat sallii uuden aurinkovoiteiden suodattimen vuosikymmenten tauon jälkeen\",\n  \"summary\": \"Yhdysvaltain lääkevirasto FDA sallii bemotrizinolin käytön aurinkovoiteissa. Aine on ollut käytössä Euroopassa ja muualla jo vuosia, mutta Yhdysvaltain aurinkosuojien hyväksyttyjen suodattimien lista ei ole juuri muuttunut pitkään aikaan.\",\n  \"content\": \"Yhdysvaltain lääkevirasto FDA sallii bemotrizinolin käytön aurinkovoiteissa, mikä merkitsee poikkeuksellista muutosta maan aurinkosuojamarkkinoilla vuosikymmenten hitaan kehityksen jälkeen. Bemotrizinoli on pitkäkestoinen aurinkosuojakemikaali, joka suojaa ihoa auringon säteilyltä, myös siltä osalta, joka liittyy ihon ikääntymiseen.\\n\\n## Pitkä tauko uusissa suodattimissa\\n\\nYhdysvalloissa aurinkovoiteiden hyväksyttyjen suoja-aineiden valikoima on pysynyt pitkään lähes ennallaan. Lähdetietojen mukaan maan hyväksyttyjen aurinkosuojan ainesosien lista ei ollut muuttunut 20 vuoteen, ja edellinen uusi aurinkosuodatin oli hyväksytty vuonna 1999.\\n\\nMuutos on siksi merkittävä sekä kuluttajille että ihotautien asiantuntijoille. Fred Hutch Cancer Centerissä Seattlessa työskentelevä ihotautilääkäri Tanya Hathaway, joka hoitaa suuren ihosyöpäriskin potilaita, kuvasi uutista innostavaksi. Hänen näkökulmastaan uusi suodatin voi parantaa käytännön mahdollisuuksia löytää aurinkovoide, jota ihmiset käyttävät säännöllisesti.\\n\\nAurinkosuojan teho ei riipu vain sen laboratorio-ominaisuuksista. Tuotteen koostumus, tuntuma ja käyttömukavuus vaikuttavat siihen, tuleeko voidetta todella levitettyä riittävästi ja toistuvasti. Juuri siksi uusilla suodattimilla voi olla merkitystä arjessa, jos ne mahdollistavat paremmin miellyttäviä ja toimivia tuotteita.\\n\\n## Euroopassa jo tuttu aine\\n\\nBemotrizinolia on käytetty Euroopassa ja muualla maailmassa jo vuosien ajan. Yhdysvalloissa ulkomaisten aurinkovoideversioiden myynti on kuitenkin ollut laitonta, jos niiden sisältämät suodattimet eivät ole olleet FDA:n sallimia.\\n\\nYhdysvaltain järjestelmä poikkeaa monista muista maista siinä, että aurinkovoiteita säädellään itsehoitolääkkeinä. Hyväksyntäprosessi on kuvattu kalliiksi ja pitkäksi, ja siihen liittyy tiukkoja turvallisuusarvioita. Tämä on hidastanut uusien aurinkosuodattimien tuloa markkinoille.\\n\\nAurinkosuoja on keskeinen osa ihosyövän ehkäisyä ja ihon ennenaikaisen vanhenemisen torjuntaa. Toukokuussa julkaistussa Environmental Working Groupin arvioinnissa yli 2 700 tuotteesta vain 550 täytti ryhmän turvallisuutta ja UV-suojaa koskevat kriteerit. Uuden suodattimen hyväksyntä ei yksin ratkaise kaikkia aurinkosuojien ongelmia, mutta se avaa yhdysvaltalaisille valmistajille ja kuluttajille aiempaa laajemmat mahdollisuudet.\",\n  \"category\": \"Tiede\",\n  \"tags\": [\n    \"aurinkovoide\",\n    \"bemotrizinoli\",\n    \"FDA\",\n    \"ihosyöpä\",\n    \"UV-säteily\"\n  ],\n  \"summary_bullets\": [\n    \"FDA sallii bemotrizinolin käytön aurinkovoiteissa Yhdysvalloissa.\",\n    \"Aine on pitkäkestoinen ja suojaa ihoa auringon säteilyltä.\",\n    \"Yhdysvaltain hyväksyttyjen aurinkosuodattimien lista on muuttunut hyvin hitaasti viime vuosikymmeninä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu annettuihin lähdekatkelmiin; vältetty väitteitä tarkasta voimaantulopäivästä ja markkinoille tulon aikataulusta, joita packet ei yksilöi.\"\n}",
+  "article": {
+    "title": "Yhdysvallat sallii uuden aurinkovoiteiden suodattimen vuosikymmenten tauon jälkeen",
+    "description": "Yhdysvaltain lääkevirasto FDA sallii bemotrizinolin käytön aurinkovoiteissa. Aine on ollut käytössä Euroopassa ja muualla jo vuosia, mutta Yhdysvaltain aurinkosuojien hyväksyttyjen suodattimien lista ei ole juuri muuttunut pitkään aikaan.",
+    "link": "https://www.sciencenews.org/article/sunscreen-bemotrizinol-fda-safe",
+    "published": "2026-06-12T18:58:30+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "4525cde68ba1ae8e56df60f81164efc2",
+    "_url_hash": "8c508c28014da4b135fda820bb8bb3500dad42471faa392dd6a5e79a5994915a",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nGlowy oils, tinted creams, misty sprays, chalky sticks, lightweight gels. Like many people gearing up for summer, my pool bag holds a stunning variety of sunscreens. They come in different forms, but all rely on a handful of the same sun-shielding ingredients. In the United States, this ingredient list hasn’t changed in 20 years — until now.\n\nIn June, the U.S. Food and Drug Administration added a new chemical, bemotrizinol, to the list of permitted sunscreen ingredients. “I think we should all be super excited,” says Tanya Hathaway, a dermatologist at Fred Hutch Cancer Center in Seattle who specializes in high-risk skin cancer patients.\n\n---\n\n[Lähde: AOL]\n\"Hearst Magazines and AOL may earn commission or revenue on some items through these links.\"\n\nAs an American, you always remember your first international sunscreen. I had panic-booked my inaugural cosmetic dermatologist appointment after my skin started to mottle with hyperpigmentation—it turns out, \"base tans\" and years of lifeguarding had taken their toll. The doctor told me that until I got really good at sunscreen, all interventions were off the table. The problem? I hated them.\n\nWhen I told a friend my dilemma, she sent me to New York's Chinatown to \"find the blue bottle of Japanese sunscreen,\" or Bioré UV. As soon as I got home, I applied what I thought was the appropriate amount, a tiny dot. It felt different. Confused by a sensation I can only describe as \"silk water,\" I applied more. It was spiritual. By the end of my sunscreen baptism, I had slathered on far more than the recommended quarter teaspoon—a full handful—leaving my skin with an incandescent finish. And in that devotion, I haven't missed a daily application since.\n\nThis created a new issue: It's illegal to sell the overseas versions of sunscreens like Bioré UV in the United States. America is an anomaly when it comes to sunscreen. While the U.S. isn't alone globally in regulating sunscreen as a nonprescription drug, the FDA requires expensive and lengthy animal-based testing and stringent safety reviews. The result? The last time the FDA approved a new sunscreen filter was in 1999. For a country that lacks universal health care, staying up to date on one of the best prevention tools for skin cancer (and aging) should be a no-brainer. Until recently, there was little hope things would ever change.\n\nBut after 26 years of stagnation, the FDA is close to approving the first new sunscreen filter in a generation: Parsol Shield, the brand name for bemotrizinol (BEMT), or bis-ethylhexyloxyphenol methoxyphenyl triazine, as seen on the ingredients list for Bioré UV. So what caused this sunscreen awakening? The hero of this story is Carl D'Ruiz, head of beauty and care science, advocacy, and business development at DSM-Firmenich, a beauty manufacturing company. He has watched repeated attempts to introduce modern sunscreen filters fall short. Considering that BEMT has existed globally for decades, what company would spend millions to re-vet an ingredient, all for a mere 18 months of U.S. market exclusivity? After decades of putting formulators and brands, as cosmetic chemist, licensed esthetician\n\n---\n\n[Lähde: Time]\nStop us if you’ve heard this one before: Wear sunscreen.\n\nIn the U.S., this advice, so commonly bandied about, can be a bit tricky to follow. Compared to other places in the world, manufacturers in the U.S. can use only a handful of ingredients. As a result, many American sunscreens are greasy or leave a white cast on the skin. Others contain substances that may make their way into the bloodstream, according to research, though the health effects of this potential leakage aren’t clear.\n\nFinding a product you like and trust enough to wear every day—applying a full shot glass’s worth to the face and skin left exposed by a swimsuit, every two hours, if you’re following the rules—isn’t always simple. On May 19, the Environmental Working Group released a report finding that out of the 2,700-plus products it evaluated, only 550 met the group's criteria for safety and UV protection.\n\nHowever, after decades without much appreciable change, the U.S. Food and Drug Administration (FDA) announced in December that they are considering approving a new, powerful sunscreen ingredient called bemotrizinol—a move the Environmental Working Group called \"cause for optimism.\" Experts speculate that the FDA may render a decision on the ingredient sometime this summer. It’s been used in Europe and elsewhere for years, and according to experts, it could revolutionize sunscreen in the U.S.\n\nSunscreen, as we now use it, is a relatively recent invention. It was less than 100 years ago that scientists made a direct link between ultraviolet (UV) rays produced by the sun and the development of skin cancer. That didn’t affect most people’s behavior for many decades; tanning was a popular pastime for much of the 20th century. However, in the 1970s, the U.S. government began to regulate sunscreens as drugs, reasoning that they could be powerful tools for public health.\n\nMany early sunscreens contained molecules that blocked one particular class of UV rays, says Kelly Dobos, an independent chemistry consultant who also teaches at the University of Cincinnati. “When sunscreens were first developed and first put on the market, we were concerned about preventing sunburn,” she says. “And the UVB rays are primarily the ones that cause sunburn.”\n\nBut by the late 20th century, scientists had realized that UVA rays, though they didn’t contribute as much to sunburn, were also potent disruptors of skin cell DNA, making exposure to them a cancer risk. That sparked the formulation of “broad spectrum” s",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain lääkevirasto FDA sallii bemotrizinolin käytön aurinkovoiteissa. Aine on ollut käytössä Euroopassa ja muualla jo vuosia, mutta Yhdysvaltain aurinkosuojien hyväksyttyjen suodattimien lista ei ole juuri muuttunut pitkään aikaan.",
+    "content": "Yhdysvaltain lääkevirasto FDA sallii bemotrizinolin käytön aurinkovoiteissa, mikä merkitsee poikkeuksellista muutosta maan aurinkosuojamarkkinoilla vuosikymmenten hitaan kehityksen jälkeen. Bemotrizinoli on pitkäkestoinen aurinkosuojakemikaali, joka suojaa ihoa auringon säteilyltä, myös siltä osalta, joka liittyy ihon ikääntymiseen.\n\n## Pitkä tauko uusissa suodattimissa\n\nYhdysvalloissa aurinkovoiteiden hyväksyttyjen suoja-aineiden valikoima on pysynyt pitkään lähes ennallaan. Lähdetietojen mukaan maan hyväksyttyjen aurinkosuojan ainesosien lista ei ollut muuttunut 20 vuoteen, ja edellinen uusi aurinkosuodatin oli hyväksytty vuonna 1999.\n\nMuutos on siksi merkittävä sekä kuluttajille että ihotautien asiantuntijoille. Fred Hutch Cancer Centerissä Seattlessa työskentelevä ihotautilääkäri Tanya Hathaway, joka hoitaa suuren ihosyöpäriskin potilaita, kuvasi uutista innostavaksi. Hänen näkökulmastaan uusi suodatin voi parantaa käytännön mahdollisuuksia löytää aurinkovoide, jota ihmiset käyttävät säännöllisesti.\n\nAurinkosuojan teho ei riipu vain sen laboratorio-ominaisuuksista. Tuotteen koostumus, tuntuma ja käyttömukavuus vaikuttavat siihen, tuleeko voidetta todella levitettyä riittävästi ja toistuvasti. Juuri siksi uusilla suodattimilla voi olla merkitystä arjessa, jos ne mahdollistavat paremmin miellyttäviä ja toimivia tuotteita.\n\n## Euroopassa jo tuttu aine\n\nBemotrizinolia on käytetty Euroopassa ja muualla maailmassa jo vuosien ajan. Yhdysvalloissa ulkomaisten aurinkovoideversioiden myynti on kuitenkin ollut laitonta, jos niiden sisältämät suodattimet eivät ole olleet FDA:n sallimia.\n\nYhdysvaltain järjestelmä poikkeaa monista muista maista siinä, että aurinkovoiteita säädellään itsehoitolääkkeinä. Hyväksyntäprosessi on kuvattu kalliiksi ja pitkäksi, ja siihen liittyy tiukkoja turvallisuusarvioita. Tämä on hidastanut uusien aurinkosuodattimien tuloa markkinoille.\n\nAurinkosuoja on keskeinen osa ihosyövän ehkäisyä ja ihon ennenaikaisen vanhenemisen torjuntaa. Toukokuussa julkaistussa Environmental Working Groupin arvioinnissa yli 2 700 tuotteesta vain 550 täytti ryhmän turvallisuutta ja UV-suojaa koskevat kriteerit. Uuden suodattimen hyväksyntä ei yksin ratkaise kaikkia aurinkosuojien ongelmia, mutta se avaa yhdysvaltalaisille valmistajille ja kuluttajille aiempaa laajemmat mahdollisuudet.",
+    "category": "Tiede",
+    "tags": [
+      "aurinkovoide",
+      "bemotrizinoli",
+      "fda",
+      "ihosyöpä",
+      "uv-säteily"
+    ],
+    "summary_bullets": [
+      "FDA sallii bemotrizinolin käytön aurinkovoiteissa Yhdysvalloissa.",
+      "Aine on pitkäkestoinen ja suojaa ihoa auringon säteilyltä.",
+      "Yhdysvaltain hyväksyttyjen aurinkosuodattimien lista on muuttunut hyvin hitaasti viime vuosikymmeninä."
+    ],
+    "key_points": [
+      "FDA sallii bemotrizinolin käytön aurinkovoiteissa Yhdysvalloissa.",
+      "Aine on pitkäkestoinen ja suojaa ihoa auringon säteilyltä.",
+      "Yhdysvaltain hyväksyttyjen aurinkosuodattimien lista on muuttunut hyvin hitaasti viime vuosikymmeninä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin; vältetty väitteitä tarkasta voimaantulopäivästä ja markkinoille tulon aikataulusta, joita packet ei yksilöi.",
+    "source_text": "The FDA will allow bemotrizinol in sunscreen. The chemical is long-lasting and defends against solar radiation that ages skin.\n\nGlowy oils, tinted creams, misty sprays, chalky sticks, lightweight gels. Like many people gearing up for summer, my pool bag holds a stunning variety of sunscreens. They come in different forms, but all rely on a handful of the same sun-shielding ingredients. In the United States, this ingredient list hasn’t changed in 20 years — until now. In June, the U.S. Food and Drug Administration added a new chemical, bemotrizinol, to the list of permitted sunscreen ingredients. “I think we should all be super excited,” says Tanya Hathaway, a dermatologist at Fred Hutch Cancer Center in Seattle who specializes in high-risk skin cancer patients. ---\n\nFinding a product you like and trust enough to wear every day—applying a full shot glass’s worth to the face and skin left exposed by a swimsuit, every two hours, if you’re following the rules—isn’t always simple. On May 19, the Environmental Working Group released a report finding that out of the 2,700-plus products it evaluated, only 550 met the group's criteria for safety and UV protection. However, after decades without much appreciable change, the U.S. Food and Drug Administration (FDA) announced in December that they are considering approving a new, powerful sunscreen ingredient called bemotrizinol—a move the Environmental Working Group called \"cause for optimism.\" Experts speculate that the FDA may render a decision on the ingredient sometime this summer. It’s been used in Europe and elsewhere for years, and according to experts, it could revolutionize sunscreen in the U.S.\n\nThis created a new issue: It's illegal to sell the overseas versions of sunscreens like Bioré UV in the United States. America is an anomaly when it comes to sunscreen. While the U.S. isn't alone globally in regulating sunscreen as a nonprescription drug, the FDA requires expensive and lengthy animal-based testing and stringent safety reviews. The result? The last time the FDA approved a new sunscreen filter was in 1999. For a country that lacks universal health care, staying up to date on one of the best prevention tools for skin cancer (and aging) should be a no-brainer. Until recently, there was little hope things would ever change.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260612T225122Z_ffa0a1e4ec",
+    "image": "https://images.unsplash.com/photo-1596980846062-81a524d170ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzdW5zY3JlZW4lMjBhcHBsaWNhdGlvbiUyMHN1bW1lciUyMGJlYWNofGVufDF8MHx8fDE3ODEzMDUwODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1596980846062-81a524d170ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzdW5zY3JlZW4lMjBhcHBsaWNhdGlvbiUyMHN1bW1lciUyMGJlYWNofGVufDF8MHx8fDE3ODEzMDUwODN8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Yhdysvallat sallii uuden aurinkovoiteiden suodattimen vuosikymmenten tauon jälkeen",
+    "image_credit": "Photo by Dimitris Chapsoulas on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/white-and-orange-plastic-bottle-on-blue-table-0JZgnNL2N8s?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-12T22:58:05.591241+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1596980846062-81a524d170ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzdW5zY3JlZW4lMjBhcHBsaWNhdGlvbiUyMHN1bW1lciUyMGJlYWNofGVufDF8MHx8fDE3ODEzMDUwODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1596980846062-81a524d170ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxzdW5zY3JlZW4lMjBhcHBsaWNhdGlvbiUyMHN1bW1lciUyMGJlYWNofGVufDF8MHx8fDE3ODEzMDUwODN8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-12T22:59:05.096269+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-12-yhdysvallat-sallii-uuden-aurinkovoiteiden-suodattimen-vuosik.md"
+  ]
+}
