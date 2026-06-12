@@ -41,7 +41,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://tombedor.dev/human-attention-and-human-effort/"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
