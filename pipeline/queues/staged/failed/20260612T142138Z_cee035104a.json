@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-12T14:21:38.620242+00:00",
+  "digest": "cee035104a",
+  "packet": {
+    "packet_id": "20260612T142138Z_cee035104a",
+    "created_at": "2026-06-12T14:21:38Z",
+    "headline_seed": "MM-jalkapallossa nähtiin historiallinen epäonnistuminen",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9534905",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9534905"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "MM-jalkapallossa nähtiin historiallinen epäonnistuminen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 162,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset",
+        "Helsingin Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "MM-jalkapallossa nähtiin historiallinen epäonnistuminen",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "MM-jalkapallossa nähtiin historiallinen epäonnistuminen",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9534905",
+    "published": "2026-06-12T16:42:36+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "1f7a1c0d77ccfc483be9f8b832753061",
+    "_url_hash": "ddbabc3c683f6c4701a0da3ef92b102a0504209e1ab490e1561eb989d210b971",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Helsingin Uutiset]\nJalkapallon miesten MM-kisojen avausottelu oli Etelä-Afrikan näkökulmasta karmea. Se hävisi torstaina käydyn kamppailun kisaisäntä Meksikolle 0–2, ja lisäksi kaksi joukkueen pelaajaa ajettiin ulos.\n\nVarsinkin ensimmäisen punalapun saanut Etelä-Afrikan keskikenttäpelaaja Yaya Sithole haluaa varmasti unohtaa ottelun nopeasti. Yhdeksännellä peliminuutilla Meksikon 1–0-maali syntyi Sitholen pallonmenetyksestä, ja heti toisen jakson alussa hän rikkoi alimpana pelaajana vastustajaa ulosajon arvoisesti.\n\nUrheiluanalytiikkaan erikoistuneen Opta Analyst -sivuston mukaan Sitholesta tuli vasta historian kolmas pelaaja (vuoden 1966 jälkeen), joka on yhdessä MM-ottelussa tehnyt maaliin johtaneen virheen ja ottanut punaisen kortin. Edellisen kerran saman tilastorivin ovat merkauttaneet Ghanan Cyrille Domoraud ja Tshekin Tomas Ujfalusi vuoden 2006 MM-kisoissa.\n\n👻 𝐖𝐨𝐫𝐥𝐝 𝐂𝐮𝐩 𝐧𝐢𝐠𝐡𝐭𝐦𝐚𝐫𝐞𝐬Yaya Sithole became only the third player on record (since 1966) to commit an error leading to a goal 𝒂𝒏𝒅 receive a red card in a World Cup game. pic.twitter.com/ypoQaTETef\n\nVaiherikkaassa MM-avauksessa ulosajon saivat lisäksi Etelä-Afrikan Themba Zwane ja Meksikon Cesar Montes. Koskaan aiemmin turnauksen avausottelussa ei ole tuomittu kolmea ulosajoa.\n\nKahdessa edellisessä MM-turnauksessa punaisia kortteja annettiin yhteensä neljä per turnaus.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-12T14:23:16.921032+00:00",
+  "failure": "Paketissa ei ole käytettävää lähdetekstiä tai varmistettuja perustietoja tapahtumasta.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260612T142138Z_cee035104a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole käytettävää lähdetekstiä tai varmistettuja perustietoja tapahtumasta.\"}"
+}
