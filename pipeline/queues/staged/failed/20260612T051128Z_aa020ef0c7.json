@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-12T05:11:28.506375+00:00",
+  "digest": "aa020ef0c7",
+  "packet": {
+    "packet_id": "20260612T051128Z_aa020ef0c7",
+    "created_at": "2026-06-12T05:11:28Z",
+    "headline_seed": "'They destroyed the future': Palestinian anger at rise in Israeli demolitions in East Jerusalem",
+    "description_seed": "Palestinian homes are being pulled down in occupied East Jerusalem to make way for a park.",
+    "link": "https://www.bbc.com/news/articles/cewpwjr9rj4o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "Religion News Service",
+      "AOL",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cewpwjr9rj4o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "'They destroyed the future': Palestinian anger at rise in Israeli demolitions in East Jerusalem"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "There is the loud din of a demolition below Jerusalem's walled Old City, and from a hillside I watch a large Israeli excavator tearing into a Palestinian house. Some 59 properties have now been destroyed in the al-Bustan area of the Silwan neighbourhood since late 2023. With world attention diverted by the war in Gaza and now in Iran and Lebanon, there has been a dramatic rise in the number of Palestinians being pushed from their homes in Israeli-occupied east of the city. \"There is no future. They destroyed the future and everything else,\" says Fayez Awad, 58, who is sitting in the only remaining floor of his property when I reach him.",
+        "word_count": 113,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Religion News Service",
+        "source_type": "research",
+        "text": "AL-EIZARIYA, West Bank (AP) — Israeli bulldozers tore down dozens of Palestinian shops on the edge of a town southeast of Jerusalem this week, clearing land ahead of a settlement-linked road project in the occupied West Bank. Israel says the demolitions are needed to make way for a road serving Palestinian communities. But Palestinian officials say the road is part of a broader plan to keep Palestinian vehicles off a new highway being built to serve nearby Israeli settlements. That project is part of a strategic section of the West Bank known as E1, which Israel is developing with the intention of preventing the establishment of a Palestinian state.",
+        "word_count": 109,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "Israeli bulldozers have demolished dozens of Palestinian shops this week on the edge of a town located southeast of Jerusalem, clearing ground for a settlement-linked road project within the occupied West Bank. Authorities in Israel state the demolitions are essential to construct a road intended to serve local Palestinian communities. However, Palestinian officials present a contrasting view, asserting the road forms part of a broader scheme designed to keep Palestinian vehicles off a new highway being built specifically for nearby Israeli settlements. This contentious project is situated in E1, a strategic section of the West Bank. Israel's development of this area is widely understood as a move to obstruct the establishment of a viable Palestinian state.",
+        "word_count": 116,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Palestinian homes are being pulled down in occupied East Jerusalem to make way for a park.",
+        "word_count": 16,
+        "keyword_overlap": 10,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "There is the loud din of a demolition below Jerusalem's walled Old City, and from a hillside I watch a large Israeli excavator tearing into a Palestinian house. Some 59 properties have now been destroyed in the al-Bustan area of the Silwan neighbourhood since late 2023. With world attention diverted by the war in Gaza and now in Iran and Lebanon, there has been a dramatic rise in the number of Palestinians being pushed from their homes in Israeli-occupied east of the city. \"There is no future. They destroyed the future and everything else,\" says Fayez Awad, 58, who is sitting in the only remaining floor of his property when I reach him.\n\nAL-EIZARIYA, West Bank (AP) — Israeli bulldozers tore down dozens of Palestinian shops on the edge of a town southeast of Jerusalem this week, clearing land ahead of a settlement-linked road project in the occupied West Bank. Israel says the demolitions are needed to make way for a road serving Palestinian communities. But Palestinian officials say the road is part of a broader plan to keep Palestinian vehicles off a new highway being built to serve nearby Israeli settlements. That project is part of a strategic section of the West Bank known as E1, which Israel is developing with the intention of preventing the establishment of a Palestinian state.\n\nIsraeli bulldozers have demolished dozens of Palestinian shops this week on the edge of a town located southeast of Jerusalem, clearing ground for a settlement-linked road project within the occupied West Bank. Authorities in Israel state the demolitions are essential to construct a road intended to serve local Palestinian communities. However, Palestinian officials present a contrasting view, asserting the road forms part of a broader scheme designed to keep Palestinian vehicles off a new highway being built specifically for nearby Israeli settlements. This contentious project is situated in E1, a strategic section of the West Bank. Israel's development of this area is widely understood as a move to obstruct the establishment of a viable Palestinian state.\n\nPalestinian homes are being pulled down in occupied East Jerusalem to make way for a park.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 995,
+      "selected_blocks": 4,
+      "selected_source_words": 354,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "AOL",
+        "AOL",
+        "Religion News Service",
+        "Religion News Service",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "Religion News Service",
+        "AOL",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "'They destroyed the future': Palestinian anger at rise in Israeli demolitions in East Jerusalem",
+      "description": "Palestinian homes are being pulled down in occupied East Jerusalem to make way for a park.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "'They destroyed the future': Palestinian anger at rise in Israeli demolitions in East Jerusalem",
+    "description": "Palestinian homes are being pulled down in occupied East Jerusalem to make way for a park.",
+    "link": "https://www.bbc.com/news/articles/cewpwjr9rj4o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-12T05:01:48+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "5d7311ef1dd9adcbe368fa743cc8c3c7",
+    "_url_hash": "de21e3e86caa6a9c2fb3da17c20f60d5a68fc0a79a14b5988f9f525768e81908",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThere is the loud din of a demolition below Jerusalem's walled Old City, and from a hillside I watch a large Israeli excavator tearing into a Palestinian house.\n\nSome 59 properties have now been destroyed in the al-Bustan area of the Silwan neighbourhood since late 2023. With world attention diverted by the war in Gaza and now in Iran and Lebanon, there has been a dramatic rise in the number of Palestinians being pushed from their homes in Israeli-occupied east of the city.\n\n\"There is no future. They destroyed the future and everything else,\" says Fayez Awad, 58, who is sitting in the only remaining floor of his property when I reach him.\n\n\"We spent our whole lives building this house. This is all we managed to achieve in life. They brought us back to zero again, me and my children.\"\n\nHoly to Jews, Christians and Muslims, Jerusalem is at the heart of the Israel-Palestinian conflict and competing claims to the land. Israel captured the east of the city, including its holy places, along with the rest of the West Bank from Jordan in the 1967 Middle East War and later annexed it in a move that is not recognised by most countries.\n\nFor some 20 years, Israel's Jerusalem Municipality has pursued plans to turn al-Bustan into a biblically-themed park, the King's Garden, to be run by a Jewish settler organisation. Recently, demolition orders enforced by Israeli courts have accelerated along the narrow streets here.\n\nSettlements and the forced transfer of a population from occupied land are illegal under international law.\n\nThe Jerusalem Municipality told the BBC in a statement that it was working \"for the benefit of all city residents\" and that it aimed \"to build a park in a zone that suffers from a severe shortage of open public spaces\".\n\nPalestinians point out that Israeli construction permits in East Jerusalem are almost impossible for them to get. According to the Israeli human rights group Bimkom, in 2025, only 7% of new housing approved in Jerusalem was for Palestinians, who account for some 40% of the city's population. People in al-Bustan say that their efforts to reach a compromise on alternative planning proposals were rejected by the local authority.\n\nHalf of the homes here have now been demolished. Many residents facing demolition orders are opting to take sledgehammers to their own properties to avoid hefty costs and fines imposed by the municipality which typically total tens of thousands of dollars.\n\n\"We're being given warnings that in the coming mont\n\n---\n\n[Lähde: AOL]\nIsraeli bulldozers have demolished dozens of Palestinian shops this week on the edge of a town located southeast of Jerusalem, clearing ground for a settlement-linked road project within the occupied West Bank.\n\nAuthorities in Israel state the demolitions are essential to construct a road intended to serve local Palestinian communities. However, Palestinian officials present a contrasting view, asserting the road forms part of a broader scheme designed to keep Palestinian vehicles off a new highway being built specifically for nearby Israeli settlements.\n\nThis contentious project is situated in E1, a strategic section of the West Bank. Israel's development of this area is widely understood as a move to obstruct the establishment of a viable Palestinian state.\n\n\"The shops that were demolished are where Israel is planning to build a new road that will divert all Palestinian traffic to that road so that they can close down the whole area of E1 for Palestinians,\" said Hagit Ofran, director of the antisettlement group Peace Now.\n\nThe project would lead to the displacement of thousands of Bedouin Arabs living in the area, Ofran said.\n\nTuesday's demolitions took place in the town of al-Eizariya, less than a week after some owners received notices to evacuate shops built without permits. Attorneys appealed, up to Israel's Supreme Court, but the demolitions went ahead.\n\nIsraeli authorities said the buildings including car washes, scrap metal shops and vegetable stands were built illegally and owners had been warned for \"several years\" enforcement was forthcoming.\n\nCOGAT, the Israeli military body overseeing civil affairs in the West Bank, said the structures obstructed construction of the planned road to connect Palestinian towns.\n\nThe new road system is meant to solve congestion and improve the quality of life of Palestinian towns in the area, Israel says.\n\nThe Palestinian Authority says the demolitions are connected to Israel's plans to overhaul transportation and build a tunnel and bypass road to reroute Palestinian traffic off a major Israeli highway linking nearby settlements to Jerusalem and cutting them off from large swaths of the West Bank. They say it will lead to separate road systems for Israelis and Palestinians.\n\nIsrael has not linked the demolitions to its plans for E1.\n\nSome of the demolished shops partially blocked sidewalks and roads leading into the town. But Palestinians say proper construction permits are nearly impossible to obtain from Israel\n\n---\n\n[Lähde: Religion News Service]\nAL-EIZARIYA, West Bank (AP) — Israeli bulldozers tore down dozens of Palestinian shops on the edge of a town southeast of Jerusalem this week, clearing land ahead of a settlement-linked road project in the occupied West Bank.\n\nIsrael says the demolitions are needed to make way for a road serving Palestinian communities. But Palestinian officials say the road is part of a broader plan to keep Palestinian vehicles off a new highway being built to serve nearby Israeli settlements.\n\nThat project is part of a strategic section of the West Bank known as E1, which Israel is developing with the intention of preventing the establishment of a Palestinian state.\n\n“The shops that were demolished are where Israel is planning to build a new road that will divert all Palestinian traffic to that road so that they can close down the whole area of E1 for Palestinians,” said Hagit Ofran, director of the antisettlement group Peace Now.\n\nTuesday’s demolitions took place in the town of al-Eizariya, less tha...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-12T05:14:38.409693+00:00",
+  "failure": "content too short: 230 words",
+  "payload": {
+    "packet_id": "20260612T051128Z_aa020ef0c7",
+    "title": "Palestiinalaisten koteja ja liikkeitä puretaan Jerusalemin alueella",
+    "summary": "Itä-Jerusalemin Silwanissa palestiinalaiskiinteistöjä on purettu kiihtyvään tahtiin, ja al-Bustanin alueella tuhojen kerrotaan koskeneen 59 kiinteistöä vuoden 2023 lopusta lähtien. Samalla Länsirannalla Jerusalemin kaakkoispuolella on purettu kymmeniä palestiinalaisliikkeitä tiehankkeen alta.",
+    "content": "Itä-Jerusalemin Silwanin kaupunginosassa palestiinalaiskotien purkaminen on lisännyt asukkaiden vihaa ja epävarmuutta, kun al-Bustanin alueella on tuhottu 59 kiinteistöä vuoden 2023 lopusta lähtien. Purkuja on tehty Israelin miehittämässä kaupungin itäosassa, ja niiden kerrotaan liittyvän muun muassa puistohankkeeseen. Samaan aikaan Jerusalemin kaakkoispuolella Länsirannalla on purettu kymmeniä palestiinalaisliikkeitä tiehankkeen tieltä.\n\n## Silwanissa koteja puretaan puiston alta\n\nJerusalemin vanhankaupungin muurien alapuolella sijaitsevassa Silwanissa purkutyöt ovat osuneet erityisesti al-Bustanin alueeseen. Paikalta kuvattu tilanne kertoo raskaasta israelilaisesta kaivinkoneesta, joka repii palestiinalaistaloa rinteessä kaupungin muurien alapuolella.\n\nYksi alueen asukkaista, 58-vuotias Fayez Awad, kuvasi tilannetta synkästi istuessaan kiinteistönsä ainoassa jäljellä olevassa kerroksessa. Hänen mukaansa tulevaisuus ja kaikki muukin on tuhottu. Lausunto kuvastaa monien palestiinalaisten kokemaa turvattomuutta, kun koteja menetetään ja asumisen jatkuvuus muuttuu epävarmaksi.\n\nPurkujen määrä on kasvanut aikana, jolloin kansainvälinen huomio on ollut vahvasti Gazan sodassa sekä Iranin ja Libanonin tilanteissa. Lähdetietojen mukaan yhä useampia palestiinalaisia on työnnetty pois kodeistaan Israelin miehittämässä kaupungin itäosassa.\n\n## Länsirannalla kiistaa tiehankkeesta\n\nMyös miehitetyllä Länsirannalla, al-Eizariyan kaupungin laidalla Jerusalemin kaakkoispuolella, israelilaiset puskutraktorit ovat purkaneet tällä viikolla kymmeniä palestiinalaiskauppoja. Purkujen tarkoituksena on raivata maata tiehankkeelle, joka liittyy läheisiin israelilaisiin siirtokuntiin.\n\nIsraelilaisviranomaisten mukaan purut ovat tarpeen, jotta voidaan rakentaa tie palestiinalaisyhteisöjen käyttöön. Palestiinalaisviranomaiset kiistävät tämän tulkinnan ja katsovat, että hanke on osa laajempaa suunnitelmaa ohjata palestiinalaisliikennettä pois uudelta valtatieltä, jota rakennetaan läheisiä israelilaisia siirtokuntia varten.\n\nHanke sijoittuu E1-alueelle, jota pidetään strategisesti merkittävänä osana Länsirantaa. Palestiinalaisviranomaisten mukaan Israelin toimet alueella vaikeuttavat elinkelpoisen palestiinalaisvaltion perustamista.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Itä-Jerusalem",
+      "Silwan",
+      "Länsiranta",
+      "Israel",
+      "Palestiinalaiset"
+    ],
+    "summary_bullets": [
+      "Silwanin al-Bustanissa on tuhottu 59 kiinteistöä vuoden 2023 lopusta lähtien.",
+      "Palestiinalaiskoteja puretaan Itä-Jerusalemissa muun muassa puistohankkeen alta.",
+      "Al-Eizariyan laidalla Länsirannalla on purettu kymmeniä palestiinalaiskauppoja tiehankkeen vuoksi."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin tietoihin. Kiistanalaiset väitteet tiehankkeen tarkoituksesta on esitetty osapuolten kantoina ilman lisäpäätelmiä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260612T051128Z_aa020ef0c7\",\n  \"title\": \"Palestiinalaisten koteja ja liikkeitä puretaan Jerusalemin alueella\",\n  \"summary\": \"Itä-Jerusalemin Silwanissa palestiinalaiskiinteistöjä on purettu kiihtyvään tahtiin, ja al-Bustanin alueella tuhojen kerrotaan koskeneen 59 kiinteistöä vuoden 2023 lopusta lähtien. Samalla Länsirannalla Jerusalemin kaakkoispuolella on purettu kymmeniä palestiinalaisliikkeitä tiehankkeen alta.\",\n  \"content\": \"Itä-Jerusalemin Silwanin kaupunginosassa palestiinalaiskotien purkaminen on lisännyt asukkaiden vihaa ja epävarmuutta, kun al-Bustanin alueella on tuhottu 59 kiinteistöä vuoden 2023 lopusta lähtien. Purkuja on tehty Israelin miehittämässä kaupungin itäosassa, ja niiden kerrotaan liittyvän muun muassa puistohankkeeseen. Samaan aikaan Jerusalemin kaakkoispuolella Länsirannalla on purettu kymmeniä palestiinalaisliikkeitä tiehankkeen tieltä.\\n\\n## Silwanissa koteja puretaan puiston alta\\n\\nJerusalemin vanhankaupungin muurien alapuolella sijaitsevassa Silwanissa purkutyöt ovat osuneet erityisesti al-Bustanin alueeseen. Paikalta kuvattu tilanne kertoo raskaasta israelilaisesta kaivinkoneesta, joka repii palestiinalaistaloa rinteessä kaupungin muurien alapuolella.\\n\\nYksi alueen asukkaista, 58-vuotias Fayez Awad, kuvasi tilannetta synkästi istuessaan kiinteistönsä ainoassa jäljellä olevassa kerroksessa. Hänen mukaansa tulevaisuus ja kaikki muukin on tuhottu. Lausunto kuvastaa monien palestiinalaisten kokemaa turvattomuutta, kun koteja menetetään ja asumisen jatkuvuus muuttuu epävarmaksi.\\n\\nPurkujen määrä on kasvanut aikana, jolloin kansainvälinen huomio on ollut vahvasti Gazan sodassa sekä Iranin ja Libanonin tilanteissa. Lähdetietojen mukaan yhä useampia palestiinalaisia on työnnetty pois kodeistaan Israelin miehittämässä kaupungin itäosassa.\\n\\n## Länsirannalla kiistaa tiehankkeesta\\n\\nMyös miehitetyllä Länsirannalla, al-Eizariyan kaupungin laidalla Jerusalemin kaakkoispuolella, israelilaiset puskutraktorit ovat purkaneet tällä viikolla kymmeniä palestiinalaiskauppoja. Purkujen tarkoituksena on raivata maata tiehankkeelle, joka liittyy läheisiin israelilaisiin siirtokuntiin.\\n\\nIsraelilaisviranomaisten mukaan purut ovat tarpeen, jotta voidaan rakentaa tie palestiinalaisyhteisöjen käyttöön. Palestiinalaisviranomaiset kiistävät tämän tulkinnan ja katsovat, että hanke on osa laajempaa suunnitelmaa ohjata palestiinalaisliikennettä pois uudelta valtatieltä, jota rakennetaan läheisiä israelilaisia siirtokuntia varten.\\n\\nHanke sijoittuu E1-alueelle, jota pidetään strategisesti merkittävänä osana Länsirantaa. Palestiinalaisviranomaisten mukaan Israelin toimet alueella vaikeuttavat elinkelpoisen palestiinalaisvaltion perustamista.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Itä-Jerusalem\",\n    \"Silwan\",\n    \"Länsiranta\",\n    \"Israel\",\n    \"Palestiinalaiset\"\n  ],\n  \"summary_bullets\": [\n    \"Silwanin al-Bustanissa on tuhottu 59 kiinteistöä vuoden 2023 lopusta lähtien.\",\n    \"Palestiinalaiskoteja puretaan Itä-Jerusalemissa muun muassa puistohankkeen alta.\",\n    \"Al-Eizariyan laidalla Länsirannalla on purettu kymmeniä palestiinalaiskauppoja tiehankkeen vuoksi.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Artikkeli perustuu paketissa annettuihin tietoihin. Kiistanalaiset väitteet tiehankkeen tarkoituksesta on esitetty osapuolten kantoina ilman lisäpäätelmiä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260612T051128Z_aa020ef0c7",
+    "category": "Ulkomaat",
+    "selected_source_words": 354,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 230,
+    "issues": [
+      "content too short: 230 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Palestiinalaisten koteja ja liikkeitä puretaan Jerusalemin alueella",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-12T05:14:38.408976+00:00",
+    "repair_trigger": "pre_repair_word_count=230; selected_source_words=354; selected_source_blocks=4",
+    "pre_repair_word_count": 230,
+    "pre_repair_lead_word_count": 47,
+    "post_repair_word_count": 230,
+    "post_repair_lead_word_count": 47,
+    "selected_source_words_at_repair": 354,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 354,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 230 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:59cffa3189",
+      "2:Religion News Service:8a9fb7016f",
+      "3:AOL:08a7cd8cd4",
+      "4:BBC World:6c78c47b82"
+    ],
+    "final_issues": [
+      "content too short: 230 words"
+    ],
+    "recovered": false
+  }
+}
