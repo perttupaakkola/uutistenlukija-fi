@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-12T09:31:21.491678+00:00",
+  "digest": "8589a0895a",
+  "packet": {
+    "packet_id": "20260612T093121Z_8589a0895a",
+    "created_at": "2026-06-12T09:31:21Z",
+    "headline_seed": "Poliisi teki pöyristyttävän havainnon perhesurmasta syytetyn isän, 23, käytöksestä",
+    "description_seed": "”Mun lapset ja kaikki kuoli”, perheenisä itki hätäkeskuspuhelussa. Nyt synkkien syytteiden käsittely jatkuu oikeudessa.",
+    "link": "https://www.is.fi/kotimaa/art-2000012072831.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012072831.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Poliisi teki pöyristyttävän havainnon perhesurmasta syytetyn isän, 23, käytöksestä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 152,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Poliisi teki pöyristyttävän havainnon perhesurmasta syytetyn isän, 23, käytöksestä",
+      "description": "”Mun lapset ja kaikki kuoli”, perheenisä itki hätäkeskuspuhelussa. Nyt synkkien syytteiden käsittely jatkuu oikeudessa.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Poliisi teki pöyristyttävän havainnon perhesurmasta syytetyn isän, 23, käytöksestä",
+    "description": "”Mun lapset ja kaikki kuoli”, perheenisä itki hätäkeskuspuhelussa. Nyt synkkien syytteiden käsittely jatkuu oikeudessa.",
+    "link": "https://www.is.fi/kotimaa/art-2000012072831.html",
+    "published": "2026-06-12T09:21:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "ce20f8d7930ffdfcd5a010d4f9b113d7",
+    "_url_hash": "a94ebfe67ca127ad88772d0fd62a3e7124d87aba786863360d7b476d773bda02",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nPoliisi on tehnyt karkotuspäätöksen Muuramessa ihmisten läheisyydessä liikkuneesta karhusta.\n\nKarkotuspäätös annetaan yleensä kolmeksi viikoksi. Sen aikana karhua yritetään karkottaa esimerkiksi äänillä, karkotusaseella tai koirilla.\n\nKarhua karkottavat riistanhoitoyhdistysten suurriistavirka-avun antamiseen koulutetut ihmiset.\n\nKomisario Mikko Särkioja Sisä-Suomen poliisista kertoo, että hän teki karkotuspäätöksen maanantaina puolenpäivän aikaan.\n\nJos karkotus ei onnistu tai karhun käytös muuttuu ihmiselle vaaralliseksi, poliisi voi tehdä lopettamispäätöksen. Särkiojan mukaan Muuramessa liikkunut karhu ei ole toistaiseksi käyttäytynyt niin, että se olisi aiheuttanut ihmisille konkreettista vaaraa.\n\nSärkioja kertoo, että karkotus- ja lopettamispäätöksiä määrittelevät useat lait, joiden kautta eläintä kunnioitetaan.\n\nMuuramessa on viime aikoina tehty lukuisia karhuhavaintoja. Särkiojan mukaan ensimmäiset havainnot tehtiin 14. toukokuuta.\n\nPoliisin mukaan havainnot koskevat yhtä ja samaa karhua.\n\nKarhusta tehtiin maanantaiaamuna havainto Leikarin päiväkodin läheisyydessä, kun karhu ylitti Kinkovuorentien Paavalinvuoressa noin sata metriä keskustaan päin. Karhu liikkui Tervamäen suuntaan.\n\nIltapäivällä karhu poistui Kinkomaan alueelta Jyväskylän puolelle.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-12T09:33:27.202481+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai varmennettuja yksityiskohtia, ja tarinan luottamusarvio on matala.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260612T093121Z_8589a0895a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai varmennettuja yksityiskohtia, ja tarinan luottamusarvio on matala.\"}"
+}
