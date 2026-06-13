@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-12T23:01:23.438111+00:00",
+  "digest": "13dbc067a5",
+  "packet": {
+    "packet_id": "20260612T230123Z_13dbc067a5",
+    "created_at": "2026-06-12T23:01:23Z",
+    "headline_seed": "Oletko nähnyt tätä miestä? Soita 112",
+    "description_seed": "Mies on kadonnut Nurmijärvellä. Mies on kadonnut Nurmijärven Klaukkalasta, Itä-Uudenmaan poliisi tiedottaa. Kadonnut on noin 160–170 senttimetriä pitkä ja pukeutunut punaiseen paitaan ja mustiin housuihin.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/6a1dd87b-9f4d-4753-87ae-72ce011be59e",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/6a1dd87b-9f4d-4753-87ae-72ce011be59e"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Oletko nähnyt tätä miestä? Soita 112"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Mies on kadonnut Nurmijärvellä. Mies on kadonnut Nurmijärven Klaukkalasta, Itä-Uudenmaan poliisi tiedottaa. Kadonnut on noin 160–170 senttimetriä pitkä ja pukeutunut punaiseen paitaan ja mustiin housuihin.",
+        "word_count": 25,
+        "keyword_overlap": 16,
+        "strong_overlap": 13
+      }
+    ],
+    "source_text": "Mies on kadonnut Nurmijärvellä. Mies on kadonnut Nurmijärven Klaukkalasta, Itä-Uudenmaan poliisi tiedottaa. Kadonnut on noin 160–170 senttimetriä pitkä ja pukeutunut punaiseen paitaan ja mustiin housuihin.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 50,
+      "selected_blocks": 1,
+      "selected_source_words": 25,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Oletko nähnyt tätä miestä? Soita 112",
+      "description": "Mies on kadonnut Nurmijärvellä. Mies on kadonnut Nurmijärven Klaukkalasta, Itä-Uudenmaan poliisi tiedottaa. Kadonnut on noin 160–170 senttimetriä pitkä ja pukeutunut punaiseen paitaan ja mustiin housuihin.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Oletko nähnyt tätä miestä? Soita 112",
+    "description": "Mies on kadonnut Nurmijärvellä. Mies on kadonnut Nurmijärven Klaukkalasta, Itä-Uudenmaan poliisi tiedottaa. Kadonnut on noin 160–170 senttimetriä pitkä ja pukeutunut punaiseen paitaan ja mustiin housuihin.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/6a1dd87b-9f4d-4753-87ae-72ce011be59e",
+    "published": "2026-06-13T00:48:13+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "f4865905ea8601db49ecd2ee875c3a9f",
+    "_url_hash": "1d2ca92b0e81e6cdd7192133f4a59c09cc1f94c759dcc306f68ad4f33ace12b4",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Mies on kadonnut Nurmijärvellä. Mies on kadonnut Nurmijärven Klaukkalasta, Itä-Uudenmaan poliisi tiedottaa. Kadonnut on noin 160–170 senttimetriä pitkä ja pukeutunut punaiseen paitaan ja mustiin housuihin.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-12T23:03:19.828553+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260612T230123Z_13dbc067a5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä tietoja.\"}"
+}
