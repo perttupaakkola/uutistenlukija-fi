@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Artikkeli/Darnell-Nursea-kehutaan-Kanadassa-%E2%88%92-mik%C3%A4-on-kanadalaisen-todellinen-taso/270790"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
