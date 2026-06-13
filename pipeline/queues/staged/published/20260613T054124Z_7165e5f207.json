@@ -1,0 +1,262 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-13T05:41:24.775809+00:00",
+  "digest": "7165e5f207",
+  "packet": {
+    "packet_id": "20260613T054124Z_7165e5f207",
+    "created_at": "2026-06-13T05:41:24Z",
+    "headline_seed": "Watch: Why is Trump not at the World Cup?",
+    "description_seed": "All three leaders of the North America host nations have missed the tournament opening matches.",
+    "link": "https://www.bbc.com/news/videos/ced48dv99lvo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "Metro",
+      "Yahoo Sports",
+      "Metro"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/ced48dv99lvo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Watch: Why is Trump not at the World Cup?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "All three leaders of the North America host nations have missed the tournament opening matches.",
+        "word_count": 15,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Metro",
+        "source_type": "research",
+        "text": "President Donald Trump is not expected to attend the US opening ceremony for the World Cup or the United States’ opening match of the tournament tonight. Mexico, Canada and the USA will each host their own opening ceremony in the coming days with Shakira and Burna Boy helping raise the curtain on Thursday night at the glorious Azteca Stadium as Mexico beat South Africa in the opening match. Alanis Morissette and Michael Bublé are part of the line-up ahead of Canada’s opening ceremony which will take place on this evening ahead of their game against Bosnia and Herzegovina. The US show taking place later tonight ahead of their opening match against Paraguay in Los Angeles.",
+        "word_count": 115,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Yahoo Sports",
+        "source_type": "research",
+        "text": "Donald Trump will not be in attendance for the United States’ opening World Cup fixture against Paraguay on Friday. The decision was confirmed by Andrew Giuliani, a member of the World Cup task force, ahead of kick-off. Giuliani cited Trump’s busy schedule as the reason, but added that the president is still expected to play a role in the tournament as it progresses. Giuliani gave the clearest explanation himself. “He’s not going to end up attending the opening game,” he said. He then pointed to Trump’s packed diary, adding that “his scheduling is tight” before making clear that the decision applied to the opener against Paraguay. That makes the reason public and specific. Trump is not absent because of a confirmed security issue, a footballing decision, or a change in tournament status.",
+        "word_count": 132,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Metro",
+        "source_type": "research",
+        "text": "Get everything you need to know about the World Cup – England updates, the games to watch and stories you missed – in five minutes, at 1pm, every day. Sign up here. Paraguay president Santiago Pena will be making the journey to California, but Trump is not currently expected to be in attendance at the SoFi Stadium in Inglewood. Instead, Secretary of State Marco Rubio will lead the official U.S. delegation to the match, the State Department announced this week. He will be joined by Secretary of Transportation Sean Duffy and Secretary of Homeland Security Markwayne Mullin. While the World Cup takes centre stage this weekend, there is another major sporting event taking place right in Trump’s front garden.",
+        "word_count": 119,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "All three leaders of the North America host nations have missed the tournament opening matches.\n\nPresident Donald Trump is not expected to attend the US opening ceremony for the World Cup or the United States’ opening match of the tournament tonight. Mexico, Canada and the USA will each host their own opening ceremony in the coming days with Shakira and Burna Boy helping raise the curtain on Thursday night at the glorious Azteca Stadium as Mexico beat South Africa in the opening match. Alanis Morissette and Michael Bublé are part of the line-up ahead of Canada’s opening ceremony which will take place on this evening ahead of their game against Bosnia and Herzegovina. The US show taking place later tonight ahead of their opening match against Paraguay in Los Angeles.\n\nDonald Trump will not be in attendance for the United States’ opening World Cup fixture against Paraguay on Friday. The decision was confirmed by Andrew Giuliani, a member of the World Cup task force, ahead of kick-off. Giuliani cited Trump’s busy schedule as the reason, but added that the president is still expected to play a role in the tournament as it progresses. Giuliani gave the clearest explanation himself. “He’s not going to end up attending the opening game,” he said. He then pointed to Trump’s packed diary, adding that “his scheduling is tight” before making clear that the decision applied to the opener against Paraguay. That makes the reason public and specific. Trump is not absent because of a confirmed security issue, a footballing decision, or a change in tournament status.\n\nGet everything you need to know about the World Cup – England updates, the games to watch and stories you missed – in five minutes, at 1pm, every day. Sign up here. Paraguay president Santiago Pena will be making the journey to California, but Trump is not currently expected to be in attendance at the SoFi Stadium in Inglewood. Instead, Secretary of State Marco Rubio will lead the official U.S. delegation to the match, the State Department announced this week. He will be joined by Secretary of Transportation Sean Duffy and Secretary of Homeland Security Markwayne Mullin. While the World Cup takes centre stage this weekend, there is another major sporting event taking place right in Trump’s front garden.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 1028,
+      "selected_blocks": 4,
+      "selected_source_words": 381,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Yahoo Sports",
+        "Yahoo Sports",
+        "Yahoo Sports",
+        "Metro",
+        "Metro",
+        "Metro",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "Metro",
+        "Yahoo Sports",
+        "Metro"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Watch: Why is Trump not at the World Cup?",
+      "description": "All three leaders of the North America host nations have missed the tournament opening matches.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Watch: Why is Trump not at the World Cup?",
+    "description": "All three leaders of the North America host nations have missed the tournament opening matches.",
+    "link": "https://www.bbc.com/news/videos/ced48dv99lvo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-13T00:56:37+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f2c3dec3c262b1f7b39434bc241da7ef",
+    "_url_hash": "9a8cad4783a07b924038503624ba108383d4aa574083de6d8bff2a27fbf8b187",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS President Donald Trump became the first American president to skip a United States opening match at a Fifa World Cup. President Claudia Sheinbaum also did not attend the Mexico opener at Azteca Stadium on Thursday, and Prime Minister Mark Carney skipped the Canada opener in Toronto on Friday.\n\nThe BBC's Carl Nasman breaks down the significance of Trump's decision.\n\nPeruvian police officers disguised themselves as 2026 World Cup mascots to break into the home of a suspected drug dealer - and football fan.\n\nThe former footballer was joined by his wife Victoria Beckham and their children, as well as actor Tom Cruise.\n\nTranslink apologised, saying \"it was prioritising keeping staff, passengers, and the wider public safe\".\n\nThe clip subsequently went viral, something co-headteacher Paul Bailey says took them by surprise.\n\nThe power station was completed in 1964 and has been a landmark in the Vale of Glamorgan for decades.\n\nThe UK government says its going to crackdown on illegal migrants living in Northern Ireland.\n\nIt is seen playing with a ball in his enclosure, only two days after his arrival.\n\nThe peal of a full set of a 14th Century church's bells is heard once again across a parish.\n\nWatch the latest news summary from BBC World News. International news updated 24 hours a day.\n\nThe BBC's Samira Hussain explains everything you need to know about SpaceX's historic IPO.\n\nThe princess had been in a coma for more than three years, and was 47 at the time of her death.\n\nThe BBC's Michelle Fleury spoke to Tom Mueller, who was one of the company's founders alongside Elon Musk in 2002.\n\nVivian Panka, who plays Regina George, says she has been scared to leave her room.\n\nA nurse was chased into the Ulster Hospital by four masked men as disorder continued for a second night.\n\nA huntsman is seen on aerial footage along with hounds, which chase down a hare in a field.\n\nThe BBC's Will Grant got access inside the renovated venue ahead of the first game of the tournament.\n\nScone fans get to sample a regional treat created by bakery students for a competition.\n\nDavid Wheatley says he trains using old tyres and gas canisters.\n\nPope Leo XIV says Barcelona's iconic Sagrada Família is a masterpiece of \"stones, colours and light\" during his visit to Spain.\n\n---\n\n[Lähde: Yahoo Sports]\nDonald Trump will not be in attendance for the United States’ opening World Cup fixture against Paraguay on Friday.\n\nThe decision was confirmed by Andrew Giuliani, a member of the World Cup task force, ahead of kick-off.\n\nGiuliani cited Trump’s busy schedule as the reason, but added that the president is still expected to play a role in the tournament as it progresses.\n\nGiuliani gave the clearest explanation himself. “He’s not going to end up attending the opening game,” he said.\n\nHe then pointed to Trump’s packed diary, adding that “his scheduling is tight” before making clear that the decision applied to the opener against Paraguay.\n\nThat makes the reason public and specific. Trump is not absent because of a confirmed security issue, a footballing decision, or a change in tournament status.\n\nEven without the president in attendance, the match remains a significant moment for the USMNT as they begin their home World Cup campaign in Group D.\n\nGiuliani was quick to stress that Trump’s absence from the opener should not be seen as a sign he will be distant from the tournament.\n\nHe said Trump would remain engaged throughout the World Cup, and added that fans should “expect the unexpected” over the coming weeks.\n\nGiuliani’s comments stop short of confirming any future appearances, but leave the door open for Trump to become more involved as the tournament unfolds.\n\nThe task force has broader responsibilities beyond this one match, including overseeing security and logistics across the United States for the entire competition.\n\nFor now, the message is clear. Trump will not be at USA vs Paraguay, but this may not be the last fans hear of him during the tournament.\n\nThe World Cup record that will change hands three times in 72 hours\n\nMexico and South Korean fans win hearts worldwide after viral videos from 2026 World Cup’s first day\n\nWhen is Lionel Messi playing? Argentina’s full World Cup schedule\n\n---\n\n[Lähde: Metro]\nPresident Donald Trump is not expected to attend the US opening ceremony for the World Cup or the United States’ opening match of the tournament tonight.\n\nMexico, Canada and the USA will each host their own opening ceremony in the coming days with Shakira and Burna Boy helping raise the curtain on Thursday night at the glorious Azteca Stadium as Mexico beat South Africa in the opening match.\n\nAlanis Morissette and Michael Bublé are part of the line-up ahead of Canada’s opening ceremony which will take place on this evening ahead of their game against Bosnia and Herzegovina.\n\nThe US show taking place later tonight ahead of their opening match against Paraguay in Los Angeles.\n\nGet everything you need to know about the World Cup – England updates, the games to watch and stories you missed – in five minutes, at 1pm, every day. Sign up here.\n\nParaguay president Santiago Pena will be making the journey to California, but Trump is not currently expected to be in attendance at the SoFi Stadium in Inglewood.\n\nInstead, Secretary of State Marco Rubio will lead the official U.S. delegation to the match, the State Department announced this week. He will be joined by Secretary of Transportation Sean Duffy and Secretary of Homeland Security Markwayne Mullin.\n\nWhile the World Cup takes centre stage this weekend, there is another major sporting event taking place right in Trump’s front garden.\n\nUFC Freedom 250 takes place at the White House on Sunday 14 June with the Octagon relocated to the South Lawn to stage championship fights on a historic night of MMA action.\n\nTrump has a long-standing association with the MMA giant, hosting events at his Atlantic City casinos during its early days. He and UFC president Dana White are close friends.\n\nThe event celebrates 250 years of independence f...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-13T05:44:46.459122+00:00",
+  "payload": {
+    "packet_id": "20260613T054124Z_7165e5f207",
+    "title": "Trump jää pois Yhdysvaltojen MM-avauksesta kiireisen aikataulun vuoksi",
+    "summary": "Donald Trumpin ei odoteta osallistuvan Yhdysvaltojen MM-kisojen avausotteluun Paraguayta vastaan Los Angelesin alueella. Virallinen Yhdysvaltain valtuuskunta otteluun on nimetty erikseen.",
+    "content": "Donald Trumpin ei odoteta osallistuvan Yhdysvaltojen jalkapallon MM-kisojen avausotteluun Paraguayta vastaan perjantaina Los Angelesin alueella. Poissaolon syyksi on kerrottu presidentin tiukka aikataulu, ja Yhdysvaltojen virallista valtuuskuntaa ottelussa johtaa ulkoministeri Marco Rubio.\n\n## Avausottelu pelataan Kaliforniassa\n\nYhdysvaltojen avausottelu Paraguayta vastaan pelataan SoFi Stadiumilla Inglewoodissa Kaliforniassa. Trumpin ei myöskään odoteta osallistuvan Yhdysvaltojen avajaisseremoniaan, joka järjestetään ennen ottelua Los Angelesin alueella.\n\nTrumpin poissaoloa koskeva tieto vahvistettiin ennen ottelun alkua. MM-kisojen työryhmään kuuluva Andrew Giuliani perusteli päätöstä presidentin kiireisellä kalenterilla ja sanoi samalla, että Trumpin odotetaan yhä olevan mukana turnauksen myöhemmissä vaiheissa jollakin tavalla. Giulianin mukaan ratkaisu koskee nimenomaan avausottelua Paraguayta vastaan. Julkisesti poissaoloa ei ole liitetty vahvistettuun turvallisuushuoleen, jalkapalloon liittyvään päätökseen tai turnauksen aseman muutokseen.\n\nParaguayn presidentin Santiago Peñan kerrotaan matkustavan Kaliforniaan seuraamaan ottelua. Yhdysvaltojen virallista delegaatiota johtaa ulkoministeri Rubio. Mukana ovat myös liikenneministeri Sean Duffy sekä kotimaan turvallisuudesta vastaava ministeri Markwayne Mullin.\n\n## Isäntämaiden avaukset ovat erillisiä\n\nPohjois-Amerikassa järjestettävissä MM-kisoissa isäntämaina ovat Yhdysvallat, Meksiko ja Kanada. Kaikkien kolmen isäntämaan johtajat ovat jääneet pois turnauksen avausotteluista. Jokaisella isäntämaalla on oma avajaisseremoniansa turnauksen alkuvaiheessa.\n\nKisat käynnistyivät Meksikossa, jossa Meksiko voitti Etelä-Afrikan Azteca-stadionilla pelatussa avausottelussa. Meksikon avausseremonian esiintyjiin kuuluivat Shakira ja Burna Boy. Kanadan oma avausseremonia järjestetään ennen maan ottelua Bosnia ja Hertsegovinaa vastaan, ja esiintyjälistalle on kerrottu Alanis Morissette ja Michael Bublé.\n\n## Trumpille odotetaan myöhempää roolia\n\nYhdysvaltojen osalta huomio kohdistuu nyt sekä joukkueen Paraguay-otteluun että siihen, millainen rooli Trumpilla on turnauksen edetessä. Saatavilla olevien tietojen mukaan poissaolo koskee avausottelua, eikä kyse ole ilmoitetusta muutoksesta turnauksen järjestelyihin. Toistaiseksi julkinen selitys hänen poissaololleen avausillasta on aikataulu.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Donald Trump",
+      "jalkapallon MM-kisat",
+      "Yhdysvallat",
+      "Paraguay",
+      "Marco Rubio"
+    ],
+    "summary_bullets": [
+      "Donald Trump ei ole osallistumassa Yhdysvaltojen MM-avausotteluun Paraguayta vastaan.",
+      "Poissaolon syyksi on kerrottu presidentin tiukka aikataulu.",
+      "Yhdysvaltojen virallista valtuuskuntaa ottelussa johtaa ulkoministeri Marco Rubio."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.94,
+    "journalist_note": "Artikkeli perustuu paketin tietoihin Trumpin poissaolosta, virallisesta valtuuskunnasta ja isäntämaiden avausotteluista. Mukaan ei lisätty lähteistämättömiä taustatietoja tai arvioita."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260613T054124Z_7165e5f207\",\n  \"title\": \"Trump jää pois Yhdysvaltojen MM-avauksesta kiireisen aikataulun vuoksi\",\n  \"summary\": \"Donald Trumpin ei odoteta osallistuvan Yhdysvaltojen MM-kisojen avausotteluun Paraguayta vastaan Los Angelesin alueella. Virallinen Yhdysvaltain valtuuskunta otteluun on nimetty erikseen.\",\n  \"content\": \"Donald Trumpin ei odoteta osallistuvan Yhdysvaltojen jalkapallon MM-kisojen avausotteluun Paraguayta vastaan perjantaina Los Angelesin alueella. Poissaolon syyksi on kerrottu presidentin tiukka aikataulu, ja Yhdysvaltojen virallista valtuuskuntaa ottelussa johtaa ulkoministeri Marco Rubio.\\n\\n## Avausottelu pelataan Kaliforniassa\\n\\nYhdysvaltojen avausottelu Paraguayta vastaan pelataan SoFi Stadiumilla Inglewoodissa Kaliforniassa. Trumpin ei myöskään odoteta osallistuvan Yhdysvaltojen avajaisseremoniaan, joka järjestetään ennen ottelua Los Angelesin alueella.\\n\\nTrumpin poissaoloa koskeva tieto vahvistettiin ennen ottelun alkua. MM-kisojen työryhmään kuuluva Andrew Giuliani perusteli päätöstä presidentin kiireisellä kalenterilla ja sanoi samalla, että Trumpin odotetaan yhä olevan mukana turnauksen myöhemmissä vaiheissa jollakin tavalla. Giulianin mukaan ratkaisu koskee nimenomaan avausottelua Paraguayta vastaan. Julkisesti poissaoloa ei ole liitetty vahvistettuun turvallisuushuoleen, jalkapalloon liittyvään päätökseen tai turnauksen aseman muutokseen.\\n\\nParaguayn presidentin Santiago Peñan kerrotaan matkustavan Kaliforniaan seuraamaan ottelua. Yhdysvaltojen virallista delegaatiota johtaa ulkoministeri Rubio. Mukana ovat myös liikenneministeri Sean Duffy sekä kotimaan turvallisuudesta vastaava ministeri Markwayne Mullin.\\n\\n## Isäntämaiden avaukset ovat erillisiä\\n\\nPohjois-Amerikassa järjestettävissä MM-kisoissa isäntämaina ovat Yhdysvallat, Meksiko ja Kanada. Kaikkien kolmen isäntämaan johtajat ovat jääneet pois turnauksen avausotteluista. Jokaisella isäntämaalla on oma avajaisseremoniansa turnauksen alkuvaiheessa.\\n\\nKisat käynnistyivät Meksikossa, jossa Meksiko voitti Etelä-Afrikan Azteca-stadionilla pelatussa avausottelussa. Meksikon avausseremonian esiintyjiin kuuluivat Shakira ja Burna Boy. Kanadan oma avausseremonia järjestetään ennen maan ottelua Bosnia ja Hertsegovinaa vastaan, ja esiintyjälistalle on kerrottu Alanis Morissette ja Michael Bublé.\\n\\n## Trumpille odotetaan myöhempää roolia\\n\\nYhdysvaltojen osalta huomio kohdistuu nyt sekä joukkueen Paraguay-otteluun että siihen, millainen rooli Trumpilla on turnauksen edetessä. Saatavilla olevien tietojen mukaan poissaolo koskee avausottelua, eikä kyse ole ilmoitetusta muutoksesta turnauksen järjestelyihin. Toistaiseksi julkinen selitys hänen poissaololleen avausillasta on aikataulu.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Donald Trump\",\n    \"jalkapallon MM-kisat\",\n    \"Yhdysvallat\",\n    \"Paraguay\",\n    \"Marco Rubio\"\n  ],\n  \"summary_bullets\": [\n    \"Donald Trump ei ole osallistumassa Yhdysvaltojen MM-avausotteluun Paraguayta vastaan.\",\n    \"Poissaolon syyksi on kerrottu presidentin tiukka aikataulu.\",\n    \"Yhdysvaltojen virallista valtuuskuntaa ottelussa johtaa ulkoministeri Marco Rubio.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.94,\n  \"journalist_note\": \"Artikkeli perustuu paketin tietoihin Trumpin poissaolosta, virallisesta valtuuskunnasta ja isäntämaiden avausotteluista. Mukaan ei lisätty lähteistämättömiä taustatietoja tai arvioita.\"\n}",
+  "article": {
+    "title": "Trump jää pois Yhdysvaltojen MM-avauksesta kiireisen aikataulun vuoksi",
+    "description": "Donald Trumpin ei odoteta osallistuvan Yhdysvaltojen MM-kisojen avausotteluun Paraguayta vastaan Los Angelesin alueella. Virallinen Yhdysvaltain valtuuskunta otteluun on nimetty erikseen.",
+    "link": "https://www.bbc.com/news/videos/ced48dv99lvo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-13T00:56:37+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f2c3dec3c262b1f7b39434bc241da7ef",
+    "_url_hash": "9a8cad4783a07b924038503624ba108383d4aa574083de6d8bff2a27fbf8b187",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nUS President Donald Trump became the first American president to skip a United States opening match at a Fifa World Cup. President Claudia Sheinbaum also did not attend the Mexico opener at Azteca Stadium on Thursday, and Prime Minister Mark Carney skipped the Canada opener in Toronto on Friday.\n\nThe BBC's Carl Nasman breaks down the significance of Trump's decision.\n\nPeruvian police officers disguised themselves as 2026 World Cup mascots to break into the home of a suspected drug dealer - and football fan.\n\nThe former footballer was joined by his wife Victoria Beckham and their children, as well as actor Tom Cruise.\n\nTranslink apologised, saying \"it was prioritising keeping staff, passengers, and the wider public safe\".\n\nThe clip subsequently went viral, something co-headteacher Paul Bailey says took them by surprise.\n\nThe power station was completed in 1964 and has been a landmark in the Vale of Glamorgan for decades.\n\nThe UK government says its going to crackdown on illegal migrants living in Northern Ireland.\n\nIt is seen playing with a ball in his enclosure, only two days after his arrival.\n\nThe peal of a full set of a 14th Century church's bells is heard once again across a parish.\n\nWatch the latest news summary from BBC World News. International news updated 24 hours a day.\n\nThe BBC's Samira Hussain explains everything you need to know about SpaceX's historic IPO.\n\nThe princess had been in a coma for more than three years, and was 47 at the time of her death.\n\nThe BBC's Michelle Fleury spoke to Tom Mueller, who was one of the company's founders alongside Elon Musk in 2002.\n\nVivian Panka, who plays Regina George, says she has been scared to leave her room.\n\nA nurse was chased into the Ulster Hospital by four masked men as disorder continued for a second night.\n\nA huntsman is seen on aerial footage along with hounds, which chase down a hare in a field.\n\nThe BBC's Will Grant got access inside the renovated venue ahead of the first game of the tournament.\n\nScone fans get to sample a regional treat created by bakery students for a competition.\n\nDavid Wheatley says he trains using old tyres and gas canisters.\n\nPope Leo XIV says Barcelona's iconic Sagrada Família is a masterpiece of \"stones, colours and light\" during his visit to Spain.\n\n---\n\n[Lähde: Yahoo Sports]\nDonald Trump will not be in attendance for the United States’ opening World Cup fixture against Paraguay on Friday.\n\nThe decision was confirmed by Andrew Giuliani, a member of the World Cup task force, ahead of kick-off.\n\nGiuliani cited Trump’s busy schedule as the reason, but added that the president is still expected to play a role in the tournament as it progresses.\n\nGiuliani gave the clearest explanation himself. “He’s not going to end up attending the opening game,” he said.\n\nHe then pointed to Trump’s packed diary, adding that “his scheduling is tight” before making clear that the decision applied to the opener against Paraguay.\n\nThat makes the reason public and specific. Trump is not absent because of a confirmed security issue, a footballing decision, or a change in tournament status.\n\nEven without the president in attendance, the match remains a significant moment for the USMNT as they begin their home World Cup campaign in Group D.\n\nGiuliani was quick to stress that Trump’s absence from the opener should not be seen as a sign he will be distant from the tournament.\n\nHe said Trump would remain engaged throughout the World Cup, and added that fans should “expect the unexpected” over the coming weeks.\n\nGiuliani’s comments stop short of confirming any future appearances, but leave the door open for Trump to become more involved as the tournament unfolds.\n\nThe task force has broader responsibilities beyond this one match, including overseeing security and logistics across the United States for the entire competition.\n\nFor now, the message is clear. Trump will not be at USA vs Paraguay, but this may not be the last fans hear of him during the tournament.\n\nThe World Cup record that will change hands three times in 72 hours\n\nMexico and South Korean fans win hearts worldwide after viral videos from 2026 World Cup’s first day\n\nWhen is Lionel Messi playing? Argentina’s full World Cup schedule\n\n---\n\n[Lähde: Metro]\nPresident Donald Trump is not expected to attend the US opening ceremony for the World Cup or the United States’ opening match of the tournament tonight.\n\nMexico, Canada and the USA will each host their own opening ceremony in the coming days with Shakira and Burna Boy helping raise the curtain on Thursday night at the glorious Azteca Stadium as Mexico beat South Africa in the opening match.\n\nAlanis Morissette and Michael Bublé are part of the line-up ahead of Canada’s opening ceremony which will take place on this evening ahead of their game against Bosnia and Herzegovina.\n\nThe US show taking place later tonight ahead of their opening match against Paraguay in Los Angeles.\n\nGet everything you need to know about the World Cup – England updates, the games to watch and stories you missed – in five minutes, at 1pm, every day. Sign up here.\n\nParaguay president Santiago Pena will be making the journey to California, but Trump is not currently expected to be in attendance at the SoFi Stadium in Inglewood.\n\nInstead, Secretary of State Marco Rubio will lead the official U.S. delegation to the match, the State Department announced this week. He will be joined by Secretary of Transportation Sean Duffy and Secretary of Homeland Security Markwayne Mullin.\n\nWhile the World Cup takes centre stage this weekend, there is another major sporting event taking place right in Trump’s front garden.\n\nUFC Freedom 250 takes place at the White House on Sunday 14 June with the Octagon relocated to the South Lawn to stage championship fights on a historic night of MMA action.\n\nTrump has a long-standing association with the MMA giant, hosting events at his Atlantic City casinos during its early days. He and UFC president Dana White are close friends.\n\nThe event celebrates 250 years of independence f...",
+    "research_source": "multi",
+    "summary": "Donald Trumpin ei odoteta osallistuvan Yhdysvaltojen MM-kisojen avausotteluun Paraguayta vastaan Los Angelesin alueella. Virallinen Yhdysvaltain valtuuskunta otteluun on nimetty erikseen.",
+    "content": "Donald Trumpin ei odoteta osallistuvan Yhdysvaltojen jalkapallon MM-kisojen avausotteluun Paraguayta vastaan perjantaina Los Angelesin alueella. Poissaolon syyksi on kerrottu presidentin tiukka aikataulu, ja Yhdysvaltojen virallista valtuuskuntaa ottelussa johtaa ulkoministeri Marco Rubio.\n\n## Avausottelu pelataan Kaliforniassa\n\nYhdysvaltojen avausottelu Paraguayta vastaan pelataan SoFi Stadiumilla Inglewoodissa Kaliforniassa. Trumpin ei myöskään odoteta osallistuvan Yhdysvaltojen avajaisseremoniaan, joka järjestetään ennen ottelua Los Angelesin alueella.\n\nTrumpin poissaoloa koskeva tieto vahvistettiin ennen ottelun alkua. MM-kisojen työryhmään kuuluva Andrew Giuliani perusteli päätöstä presidentin kiireisellä kalenterilla ja sanoi samalla, että Trumpin odotetaan yhä olevan mukana turnauksen myöhemmissä vaiheissa jollakin tavalla. Giulianin mukaan ratkaisu koskee nimenomaan avausottelua Paraguayta vastaan. Julkisesti poissaoloa ei ole liitetty vahvistettuun turvallisuushuoleen, jalkapalloon liittyvään päätökseen tai turnauksen aseman muutokseen.\n\nParaguayn presidentin Santiago Peñan kerrotaan matkustavan Kaliforniaan seuraamaan ottelua. Yhdysvaltojen virallista delegaatiota johtaa ulkoministeri Rubio. Mukana ovat myös liikenneministeri Sean Duffy sekä kotimaan turvallisuudesta vastaava ministeri Markwayne Mullin.\n\n## Isäntämaiden avaukset ovat erillisiä\n\nPohjois-Amerikassa järjestettävissä MM-kisoissa isäntämaina ovat Yhdysvallat, Meksiko ja Kanada. Kaikkien kolmen isäntämaan johtajat ovat jääneet pois turnauksen avausotteluista. Jokaisella isäntämaalla on oma avajaisseremoniansa turnauksen alkuvaiheessa.\n\nKisat käynnistyivät Meksikossa, jossa Meksiko voitti Etelä-Afrikan Azteca-stadionilla pelatussa avausottelussa. Meksikon avausseremonian esiintyjiin kuuluivat Shakira ja Burna Boy. Kanadan oma avausseremonia järjestetään ennen maan ottelua Bosnia ja Hertsegovinaa vastaan, ja esiintyjälistalle on kerrottu Alanis Morissette ja Michael Bublé.\n\n## Trumpille odotetaan myöhempää roolia\n\nYhdysvaltojen osalta huomio kohdistuu nyt sekä joukkueen Paraguay-otteluun että siihen, millainen rooli Trumpilla on turnauksen edetessä. Saatavilla olevien tietojen mukaan poissaolo koskee avausottelua, eikä kyse ole ilmoitetusta muutoksesta turnauksen järjestelyihin. Toistaiseksi julkinen selitys hänen poissaololleen avausillasta on aikataulu.",
+    "category": "Ulkomaat",
+    "tags": [
+      "donald trump",
+      "jalkapallon mm-kisat",
+      "yhdysvallat",
+      "paraguay",
+      "marco rubio"
+    ],
+    "summary_bullets": [
+      "Donald Trump ei ole osallistumassa Yhdysvaltojen MM-avausotteluun Paraguayta vastaan.",
+      "Poissaolon syyksi on kerrottu presidentin tiukka aikataulu.",
+      "Yhdysvaltojen virallista valtuuskuntaa ottelussa johtaa ulkoministeri Marco Rubio."
+    ],
+    "key_points": [
+      "Donald Trump ei ole osallistumassa Yhdysvaltojen MM-avausotteluun Paraguayta vastaan.",
+      "Poissaolon syyksi on kerrottu presidentin tiukka aikataulu.",
+      "Yhdysvaltojen virallista valtuuskuntaa ottelussa johtaa ulkoministeri Marco Rubio."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin tietoihin Trumpin poissaolosta, virallisesta valtuuskunnasta ja isäntämaiden avausotteluista. Mukaan ei lisätty lähteistämättömiä taustatietoja tai arvioita.",
+    "source_text": "All three leaders of the North America host nations have missed the tournament opening matches.\n\nPresident Donald Trump is not expected to attend the US opening ceremony for the World Cup or the United States’ opening match of the tournament tonight. Mexico, Canada and the USA will each host their own opening ceremony in the coming days with Shakira and Burna Boy helping raise the curtain on Thursday night at the glorious Azteca Stadium as Mexico beat South Africa in the opening match. Alanis Morissette and Michael Bublé are part of the line-up ahead of Canada’s opening ceremony which will take place on this evening ahead of their game against Bosnia and Herzegovina. The US show taking place later tonight ahead of their opening match against Paraguay in Los Angeles.\n\nDonald Trump will not be in attendance for the United States’ opening World Cup fixture against Paraguay on Friday. The decision was confirmed by Andrew Giuliani, a member of the World Cup task force, ahead of kick-off. Giuliani cited Trump’s busy schedule as the reason, but added that the president is still expected to play a role in the tournament as it progresses. Giuliani gave the clearest explanation himself. “He’s not going to end up attending the opening game,” he said. He then pointed to Trump’s packed diary, adding that “his scheduling is tight” before making clear that the decision applied to the opener against Paraguay. That makes the reason public and specific. Trump is not absent because of a confirmed security issue, a footballing decision, or a change in tournament status.\n\nGet everything you need to know about the World Cup – England updates, the games to watch and stories you missed – in five minutes, at 1pm, every day. Sign up here. Paraguay president Santiago Pena will be making the journey to California, but Trump is not currently expected to be in attendance at the SoFi Stadium in Inglewood. Instead, Secretary of State Marco Rubio will lead the official U.S. delegation to the match, the State Department announced this week. He will be joined by Secretary of Transportation Sean Duffy and Secretary of Homeland Security Markwayne Mullin. While the World Cup takes centre stage this weekend, there is another major sporting event taking place right in Trump’s front garden.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.94,
+    "degraded_mode": false,
+    "monica_packet_id": "20260613T054124Z_7165e5f207",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-06-13T05:44:46.458744+00:00",
+      "repair_trigger": "pre_repair_word_count=232; selected_source_words=381; selected_source_blocks=4",
+      "pre_repair_word_count": 232,
+      "pre_repair_lead_word_count": 31,
+      "post_repair_word_count": 251,
+      "post_repair_lead_word_count": 31,
+      "selected_source_words_at_repair": 381,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 381,
+      "source_blocks": 4,
+      "repair_added_word_count": 19,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:BBC World:2128c1456e",
+        "2:Metro:20c1aae4bf",
+        "3:Yahoo Sports:1175367c0e",
+        "4:Metro:b1430134ee"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image": "https://images.unsplash.com/photo-1644291833042-1361b57de761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxTb2NjZXIlMjBtYXRjaCUyMFNvRmklMjBTdGFkaXVtfGVufDF8MHx8fDE3ODEzMjk2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1644291833042-1361b57de761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxTb2NjZXIlMjBtYXRjaCUyMFNvRmklMjBTdGFkaXVtfGVufDF8MHx8fDE3ODEzMjk2ODR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Trump jää pois Yhdysvaltojen MM-avauksesta kiireisen aikataulun vuoksi",
+    "image_credit": "Photo by London Bridges on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/an-empty-parking-lot-in-front-of-a-large-building-t1XCb5HtVqg?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-13T05:44:46.458744+00:00",
+    "repair_trigger": "pre_repair_word_count=232; selected_source_words=381; selected_source_blocks=4",
+    "pre_repair_word_count": 232,
+    "pre_repair_lead_word_count": 31,
+    "post_repair_word_count": 251,
+    "post_repair_lead_word_count": 31,
+    "selected_source_words_at_repair": 381,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 381,
+    "source_blocks": 4,
+    "repair_added_word_count": 19,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:2128c1456e",
+      "2:Metro:20c1aae4bf",
+      "3:Yahoo Sports:1175367c0e",
+      "4:Metro:b1430134ee"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-06-13T05:48:05.615110+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1644291833042-1361b57de761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxTb2NjZXIlMjBtYXRjaCUyMFNvRmklMjBTdGFkaXVtfGVufDF8MHx8fDE3ODEzMjk2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1644291833042-1361b57de761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxTb2NjZXIlMjBtYXRjaCUyMFNvRmklMjBTdGFkaXVtfGVufDF8MHx8fDE3ODEzMjk2ODR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-13T05:49:01.582531+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-13-trump-jaa-pois-yhdysvaltojen-mm-avauksesta-kiireisen-aikatau.md"
+  ]
+}
