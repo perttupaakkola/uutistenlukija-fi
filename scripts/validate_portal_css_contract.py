@@ -13,6 +13,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 HEADER = ROOT / "layouts" / "partials" / "header.html"
 INDEX = ROOT / "layouts" / "index.html"
+FRONTPAGE_PARTIALS = [
+    ROOT / "layouts" / "partials" / "hero-cluster.html",
+    ROOT / "layouts" / "partials" / "quick-briefing.html",
+    ROOT / "layouts" / "partials" / "lyhyet.html",
+]
 CSS_FILES = [
     ROOT / "assets" / "css" / "portal-overhaul.css",
     ROOT / "static" / "css" / "portal-overhaul.css",
@@ -32,17 +37,18 @@ HEADER_CLASSES = [
 ]
 
 FRONTPAGE_CLASSES = [
-    "portal-front-grid",
-    "portal-lead",
-    "portal-center-list",
-    "portal-right-rail",
-    "portal-day-digest",
+    "reference-front-package",
+    "quick-briefing",
+    "lyhyet",
+    "talous-rail",
+    "category-spotlights",
 ]
 
 LAYOUT_GUARDS = [
-    ".portal-right-rail { display: grid; grid-column: 3; grid-row: 1 / span 2;",
-    ".portal-day-digest {\n  grid-column: 1 / 3;\n  grid-row: 2;",
-    "@media (max-width: 1180px)",
+    ".reference-front-package__grid { display:grid;",
+    ".talous-rail__header {",
+    ".talous-rail__items { display:grid !important;",
+    "@media (max-width: 680px)",
     "@media (max-width: 1020px)",
 ]
 
@@ -54,18 +60,18 @@ OBSOLETE_HEADER_SELECTORS = [
 ]
 
 MOBILE_SURFACE_LINK_GUARDS = [
-    ".portal-lead h2 a",
-    ".portal-save-link",
-    ".portal-mobile-section-head h2",
-    ".portal-teaser h3 a",
-    ".portal-row-card h3 a",
+    ".reference-front-package__lead-title a",
+    ".quick-briefing__headline",
+    ".category-article-card h3",
+    ".talous-rail__header .see-all",
+    ".talous-rail__card h3 a",
 ]
 
 CONTRAST_GUARDS = [
-    '[data-theme="dark"] .portal-livebar time',
+    '[data-theme="dark"] .hero-ticker-time',
     '[data-theme="dark"] .portal-kicker',
-    '[data-theme="dark"] .portal-newsletter',
-    '[data-theme="dark"] .portal-newsletter h2',
+    '[data-theme="dark"] .newsletter-band',
+    '[data-theme="dark"] .newsletter-band__heading',
     '[data-theme="dark"] .newsletter-signup__inner',
     '[data-theme="dark"] .newsletter-signup__title',
 ]
@@ -79,7 +85,7 @@ def require(path: Path) -> str:
 
 def main() -> int:
     header = require(HEADER)
-    index = require(INDEX)
+    index = require(INDEX) + "\n" + "\n".join(require(path) for path in FRONTPAGE_PARTIALS)
     css_by_path = {css_path: require(css_path) for css_path in CSS_FILES}
     critical_css = require(CRITICAL_CSS)
     failures: list[str] = []
