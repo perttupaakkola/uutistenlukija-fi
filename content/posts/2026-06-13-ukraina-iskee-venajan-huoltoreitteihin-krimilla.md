@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/ukraina-iskee-krimille-komentaja-hankkikaa-popcornia-istukaa-alas-ja-nauttikaa/9352876"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
