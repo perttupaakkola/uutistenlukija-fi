@@ -131,12 +131,6 @@
 {{ end }}
 {{ partial "trending.html" (dict "items" $trending) }}
 
-{{ $lyhyetItems := first 5 (where $sorted "Permalink" "not in" $seen) }}
-{{ partial "lyhyet.html" (dict "Site" .Site "exclude" $seen "limit" 5) }}
-{{ range $lyhyetItems }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
-
 {{ $talousLatest := where $sorted ".Params.categories" "intersect" (slice "Talous") }}
 {{ $talousRail := first 4 (where $talousLatest "Permalink" "not in" $seen) }}
 {{ if lt (len $talousRail) 4 }}
@@ -148,6 +142,7 @@
     <div>
       <p class="talous-rail__eyebrow">Talous</p>
       <h2 id="talous-rail-title"><a href="/categories/talous/">Talous juuri nyt</a></h2>
+      <p class="talous-rail__dek">Korot, yritykset ja markkinat yhdessä nopeasti selattavassa näkymässä.</p>
     </div>
     <a href="/categories/talous/" class="see-all">Kaikki talous →</a>
   </div>
@@ -170,6 +165,12 @@
     {{ end }}
   </div>
 </section>
+{{ end }}
+
+{{ $lyhyetItems := first 5 (where $sorted "Permalink" "not in" $seen) }}
+{{ partial "lyhyet.html" (dict "Site" .Site "exclude" $seen "limit" 5) }}
+{{ range $lyhyetItems }}
+  {{ $seen = $seen | append .Permalink }}
 {{ end }}
 
 {{/* Category sections ordered by freshest story in the last 24h. */}}

@@ -221,6 +221,7 @@ main, .container, .single-article, .article-card, .category-article-card { min-w
 .talous-rail__header > div { min-width:0; }
 .talous-rail__header .see-all { flex:0 0 auto; max-width:100%; white-space:normal; overflow-wrap:anywhere; }
 .talous-rail__eyebrow { margin:0 0 .35rem; color:#9a6700; font:800 .68rem/1 var(--font-sans); letter-spacing:.08em; text-transform:uppercase; }
+.talous-rail__dek { max-width: 36rem; margin:.3rem 0 0; color: var(--text-secondary); font:500 .92rem/1.45 var(--font-sans); overflow-wrap:anywhere; }
 .talous-rail__items { display:grid !important; grid-template-columns: repeat(4,minmax(0,1fr)) !important; gap: var(--card-gap) !important; }
 .talous-rail__card { grid-column:auto !important; min-width:0; }
 .talous-rail__card:first-child .article-image-link { margin-bottom:.75rem !important; }

@@ -47,6 +47,7 @@ FRONTPAGE_CLASSES = [
 LAYOUT_GUARDS = [
     ".reference-front-package__grid { display:grid;",
     ".talous-rail__header {",
+    ".talous-rail__dek {",
     ".talous-rail__items { display:grid !important;",
     "@media (max-width: 680px)",
     "@media (max-width: 1020px)",
