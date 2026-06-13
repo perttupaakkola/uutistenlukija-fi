@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-13T12:31:25.958140+00:00",
+  "digest": "c167762b74",
+  "packet": {
+    "packet_id": "20260613T123125Z_c167762b74",
+    "created_at": "2026-06-13T12:31:25Z",
+    "headline_seed": "Mies ajoi rajusti päin puuta Helsingissä",
+    "description_seed": "Nuoren mieskuskin auto kääntyi kyljelleen, kun se törmäsi puuhun.",
+    "link": "https://www.is.fi/kotimaa/art-2000012077103.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012077103.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mies ajoi rajusti päin puuta Helsingissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 207,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Sportti",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mies ajoi rajusti päin puuta Helsingissä",
+      "description": "Nuoren mieskuskin auto kääntyi kyljelleen, kun se törmäsi puuhun.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mies ajoi rajusti päin puuta Helsingissä",
+    "description": "Nuoren mieskuskin auto kääntyi kyljelleen, kun se törmäsi puuhun.",
+    "link": "https://www.is.fi/kotimaa/art-2000012077103.html",
+    "published": "2026-06-13T12:23:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "961654816ba8d8f7de8db5c148cfecee",
+    "_url_hash": "c1e6d269c65225c16d1e4acddcc9039271205d5549039d9d4f31f3de6018f12e",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Sportti]\nF1-tähti Max Verstappenin isä Jos Verstappen selvisi ilman vammoja rajusta ulosajosta Belgian rallimestaruussarjan osakilpailussa sunnuntaina.\n\nVerstappen ajoi Rallye de Walloniessa, kun hänen Skoda Fabia RS Rally2 -autonsa suistui tieltä Loyersin erikoiskokeella. Auto osui vasemmalta puolelta puuhun nopeassa mutkayhdistelmässä ja pyörähti tämän jälkeen katon kautta ympäri.\n\nSekä Verstappen että kartanlukija Jasper Vermeulen selvisivät tilanteesta ilman loukkaantumisia, vaikka auto vaurioitui pahoin.\n\nKilpailu alkoi kaksikolta vaikeasti, kun he saivat 40 sekunnin aikasakon ylinopeudesta siirtymäosuudella. Tämä pudotti heidät varhaisessa vaiheessa sijalle 17.\n\nVerstappen ja Vermeulen onnistuivat kuitenkin nousemaan kilpailussa jo kolmanneksi ennen sunnuntaiaamun ulosajoa. He olivat tuolloin ajamassa kärkeä kiinni, kun kärjessä olivat Adrien Fernémont ja Maxime Potty.\n\nVerstappen ajoi viikonloppuna poikkeuksellisesti Vermeulenin kanssa, sillä hänen vakiokartanlukijansa Renaud Jamoul on sivussa loukkaantumisen vuoksi. Vermeulen joutui myös sopeutumaan englanninkielisiin nuotteihin ensimmäistä kertaa.\n\n– Kaikki sujui hyvin ja auto tuntui hyvältä, Verstappen kertoi ennen onnettomuutta.\n\nJos Verstappen voitti Belgian rallimestaruuden viime kaudella. Kyseessä oli hänen ensimmäinen mestaruutensa sitten vuoden 2008, jolloin hän juhli LMP2-luokan voittoa Le Mans -sarjassa.\n\nSarjan seuraava osakilpailu ajetaan 16. toukokuuta – samana viikonloppuna, kun Max Verstappen tekee debyyttinsä Nürburgringin 24 tunnin kilpailussa.\n\nMoottoriurheilu    10.06.2026 - 10:00     Salttu Forsström\n\nMoottoriurheilu    09.06.2026 - 15:47     Salttu Forsström\n\nMoottoriurheilu    09.06.2026 - 11:55     Salttu Forsström",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-13T12:33:18.993358+00:00",
+  "failure": "Lähdeaineisto puuttuu kokonaan eikä paketti tue vähintään 250 sanan julkaistavaa artikkelia ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260613T123125Z_c167762b74\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu kokonaan eikä paketti tue vähintään 250 sanan julkaistavaa artikkelia ilman keksittyjä tietoja.\"}"
+}

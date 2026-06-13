@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/poliisin-aseleikki-kostautui-pahasti-ampui-kollegaansa/9353178"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
