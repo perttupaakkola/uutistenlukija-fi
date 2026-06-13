@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/vaarinkasitys-ansiosidonnaisesta-tyottomyysturvasta-elaa-yha-sitkeasti-liitot-eivat-tahdo-tata-mielikuvaa-aktiivisesti-oikaista/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
