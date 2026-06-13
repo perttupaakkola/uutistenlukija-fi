@@ -43,7 +43,6 @@ keywords:
 source_name: "Iltalehti"
 source_url: "https://www.iltalehti.fi/saauutiset/a/2d0cc627-5955-40e6-91e2-7468a601cfc8"
 source_domain: "iltalehti.fi"
-briefing: true
 draft: false
 ---
 
