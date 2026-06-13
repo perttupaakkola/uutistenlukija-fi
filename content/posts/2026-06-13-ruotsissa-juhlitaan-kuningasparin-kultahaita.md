@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/ruotsissa-juhlitaan-kuningasparin-kultahaita/9353090"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 

@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-13T06:31:23.545785+00:00",
+  "digest": "7f897ea441",
+  "packet": {
+    "packet_id": "20260613T063123Z_7f897ea441",
+    "created_at": "2026-06-13T06:31:23Z",
+    "headline_seed": "The costs and challenges facing the 2026 World Cup",
+    "description_seed": "The World Cup officially kicked off this week - but alongside the football, there are questions around heat, cost, the environmental impact and travel restrictions.",
+    "link": "https://www.bbc.com/news/videos/c24ynjvm43qo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Le Monde",
+      "Smith College"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/videos/c24ynjvm43qo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "The costs and challenges facing the 2026 World Cup"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The World Cup officially kicked off this week - but alongside the football, there are questions around heat, cost, the environmental impact and travel restrictions. The BBC Analysis Editor Ros Atkins takes a look at the challenges facing this year's tournament. Bosnia-Herzegovina fans attending the team's game in Toronto, Canada spoke to the BBC about how costly their trip and seats were. President Trump denies having promised 'no new wars'. BBC Verify has found multiple examples of him saying this during the 2024 US election campaign. The players and staff will have to fly in and out of the US for each of their games in the group stage. Some wore matching suits and others carried identical green bags as they landed, just days before the tournament kicks off.",
+        "word_count": 129,
+        "keyword_overlap": 18,
+        "strong_overlap": 12
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The World Cup officially kicked off this week - but alongside the football, there are questions around heat, cost, the environmental impact and travel restrictions.",
+        "word_count": 25,
+        "keyword_overlap": 16,
+        "strong_overlap": 10
+      },
+      {
+        "source": "Le Monde",
+        "source_type": "research",
+        "text": "Three host countries, 48 teams and 104 matches: The 2026 FIFA Men's World Cup, which is held in North America and set to run from June 11 to July 19, is the largest football tournament ever organized. This unprecedentedly large event faces a number of questions and uncertainties.",
+        "word_count": 48,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      },
+      {
+        "source": "Smith College",
+        "source_type": "research",
+        "text": "“There are very, very significant costs to host cities, which host anywhere from four to eight games,” says Andrew Zimbalist, Robert A. Woods Professor Emeritus of Economics at Smith College. “I think it’s fair to say that none of them will benefit economically from [the World Cup] because they don’t get the revenue, but they get the costs, which can run well over $100 million.” That aforementioned revenue—amounting to billions of dollars—lands squarely in the pockets of FIFA (Fédération Internationale de Football Association), the global governing body for association football and organizers of the World Cup. Backlash against FIFA, combined with skyrocketing hotel and transportation costs, exorbitant ticket prices, international criticism and the call for a boycott against the United States have made for a dramatic lead-up to the international event.",
+        "word_count": 131,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The World Cup officially kicked off this week - but alongside the football, there are questions around heat, cost, the environmental impact and travel restrictions. The BBC Analysis Editor Ros Atkins takes a look at the challenges facing this year's tournament. Bosnia-Herzegovina fans attending the team's game in Toronto, Canada spoke to the BBC about how costly their trip and seats were. President Trump denies having promised 'no new wars'. BBC Verify has found multiple examples of him saying this during the 2024 US election campaign. The players and staff will have to fly in and out of the US for each of their games in the group stage. Some wore matching suits and others carried identical green bags as they landed, just days before the tournament kicks off.\n\nThe World Cup officially kicked off this week - but alongside the football, there are questions around heat, cost, the environmental impact and travel restrictions.\n\nThree host countries, 48 teams and 104 matches: The 2026 FIFA Men's World Cup, which is held in North America and set to run from June 11 to July 19, is the largest football tournament ever organized. This unprecedentedly large event faces a number of questions and uncertainties.\n\n“There are very, very significant costs to host cities, which host anywhere from four to eight games,” says Andrew Zimbalist, Robert A. Woods Professor Emeritus of Economics at Smith College. “I think it’s fair to say that none of them will benefit economically from [the World Cup] because they don’t get the revenue, but they get the costs, which can run well over $100 million.” That aforementioned revenue—amounting to billions of dollars—lands squarely in the pockets of FIFA (Fédération Internationale de Football Association), the global governing body for association football and organizers of the World Cup. Backlash against FIFA, combined with skyrocketing hotel and transportation costs, exorbitant ticket prices, international criticism and the call for a boycott against the United States have made for a dramatic lead-up to the international event.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1011,
+      "selected_blocks": 4,
+      "selected_source_words": 333,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Le Monde",
+        "Le Monde",
+        "Le Monde",
+        "Smith College",
+        "Smith College",
+        "Smith College",
+        "Smith College",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Le Monde",
+        "Smith College"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "The costs and challenges facing the 2026 World Cup",
+      "description": "The World Cup officially kicked off this week - but alongside the football, there are questions around heat, cost, the environmental impact and travel restrictions.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "The costs and challenges facing the 2026 World Cup",
+    "description": "The World Cup officially kicked off this week - but alongside the football, there are questions around heat, cost, the environmental impact and travel restrictions.",
+    "link": "https://www.bbc.com/news/videos/c24ynjvm43qo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-13T06:21:43+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "1640b3cde3437178847417b50f766dd0",
+    "_url_hash": "8fc98f4f2424b8aa4bb1aac7b434f306578fbdb866523263d5adec3bbe35ccee",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe World Cup officially kicked off this week - but alongside the football, there are questions around heat, cost, the environmental impact and travel restrictions.\n\nThe BBC Analysis Editor Ros Atkins takes a look at the challenges facing this year's tournament.\n\nBosnia-Herzegovina fans attending the team's game in Toronto, Canada spoke to the BBC about how costly their trip and seats were.\n\nPresident Trump denies having promised 'no new wars'. BBC Verify has found multiple examples of him saying this during the 2024 US election campaign.\n\nThe players and staff will have to fly in and out of the US for each of their games in the group stage.\n\nSome wore matching suits and others carried identical green bags as they landed, just days before the tournament kicks off.\n\nFour people have been arrested and charged with trafficking more than $45 million in cocaine, according to federal officials.\n\nWill Grant spoke to a 70-year-old widow who says the inability to use her building's elevator during a power outage trapped her and her husband when he needed medical care.\n\nBBC's Brandon Livesay toured the Columbia Park Training Facility in Morris Township, New Jersey that will host the team in the coming weeks.\n\nBBC's Will Grant reports from a pro-government demonstration held after the US indictment of the former president.\n\nThe DOJ charged the former leader of Cuba with murder and other crimes for his alleged role in the downing of two civilian aircraft in 1996.\n\nBBC correspondent Will Grant reports from Havana, hours after the US charged former Cuban leader with conspiracy to kill US nationals and other crimes.\n\nThe US government has charged the former Cuban president with conspiracy to kill US nationals and other crimes over the downing of the two planes.\n\nChinese President Xi Jinping welcomed Russia's Vladimir Putin with a near-identical ceremony to Trump's last week.\n\nLaura Bicker and Steven Rosenberg explain the relationship between the leaders as the pair meet in Beijing.\n\nJuan Orlando Hernández was controversially pardoned by Trump in December while serving a 45-year prison sentence in the US for drug trafficking.\n\nUS fans of the Eurovision Song Contest gathered in Washington DC to cheer on their favourite European acts.\n\nThe BBC's Tom Bateman asked President Trump about China's willingness to pressure Iran to open the Strait of Hormuz.\n\nPresident Trump has concluded a two-day visit to Beijing at a high-stakes summit with Chinese leader Xi Jinping.\n\nThe passen\n\n---\n\n[Lähde: Le Monde]\nThree host countries, 48 teams and 104 matches: The 2026 FIFA Men's World Cup, which is held in North America and set to run from June 11 to July 19, is the largest football tournament ever organized. This unprecedentedly large event faces a number of questions and uncertainties.\n\nThough the war in the Middle East shows no sign of resolution, Iran is set to play in the World Cup, putting an end to weeks of speculation and contradictory statements from both the American and Iranian sides. \"Team Melli\" is due to play its three group-stage matches in the United States: The first two in Los Angeles, against New Zealand on June 16 and then Belgium on June 21, before the team heads to Seattle, on June 27, to face Egypt. Despite the matches being in the US, Iran's team will train in Mexico, after it moved its base from Tucson, Arizona, to Tijuana.\n\nWhile the team's players and \"necessary support staff\" received authorization to enter the US, several members of the Iranian delegation, including Mehdi Taj, the president of the national football federation and a former commander of the Islamic Revolutionary Guard Corps, did not get visas, according to Iranian media outlets.\n\nYou have 83.45% of this article left to read. The rest is for subscribers only.\n\n---\n\n[Lähde: Smith College]\nSmith College Professor Emeritus Andrew Zimbalist examines the impacts—positive and negative—of the upcoming World Cup\n\nThere’s no doubt about it: The 2026 World Cup is a numbers game—48 teams, 104 matches, 16 host cities (including Foxborough’s Gillette Stadium, which has undergone a temporary rebrand to Boston Stadium) across the United States, Canada, and Mexico. But as the United States prepares to host a slew of games during the tournament’s run from June 11 to July 19, those numbers aren’t the only ones at the forefront of people’s minds.\n\n“There are very, very significant costs to host cities, which host anywhere from four to eight games,” says Andrew Zimbalist, Robert A. Woods Professor Emeritus of Economics at Smith College. “I think it’s fair to say that none of them will benefit economically from [the World Cup] because they don’t get the revenue, but they get the costs, which can run well over $100 million.”\n\nThat aforementioned revenue—amounting to billions of dollars—lands squarely in the pockets of FIFA (Fédération Internationale de Football Association), the global governing body for association football and organizers of the World Cup. Backlash against FIFA, combined with skyrocketing hotel and transportation costs, exorbitant ticket prices, international criticism and the call for a boycott against the United States have made for a dramatic lead-up to the international event.\n\nFor all intents and purposes, hosting the World Cup seems like an uphill battle. Ahead of Boston Stadium’s kickoff on June 13, Zimbalist discussed how this year’s preparations compare to those of years past, whether or not host cities can expect the economic boost to their communities promised by FIFA, and what, in spite of it all, still drives cities to host and fans to attend.\n\nWho usually sees the most financial benefit from the World Cup? FIFA, the host cities, the players?“It’s important to understand that the economic model of the World Cup and of FIFA has changed quite a bit over the last 20 or 30 years, so whatever might have been true in 1990 or 2000 isn’t necessarily true today. FIFA has switched the model to the current one, where basically FIFA gets all the revenue from national and international...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-13T06:34:59.460944+00:00",
+  "failure": "content too short: 248 words",
+  "payload": {
+    "packet_id": "20260613T063123Z_7f897ea441",
+    "title": "Jalkapallon MM-kisat käynnistyivät kustannus- ja matkustushuolten varjossa",
+    "summary": "Pohjois-Amerikassa pelattava vuoden 2026 jalkapallon miesten MM-turnaus on historian suurin, ja sen ympärillä keskustellaan jo avausviikolla kuumuudesta, hinnoista, ympäristövaikutuksista ja matkustusrajoituksista.",
+    "content": "Vuoden 2026 jalkapallon miesten MM-kisat ovat käynnistyneet Pohjois-Amerikassa poikkeuksellisen laajana turnauksena, jossa kolme isäntämaata järjestää yhteensä 104 ottelua. Jalkapallon rinnalla huomio on kohdistunut turnauksen kustannuksiin, kuumuuteen, ympäristövaikutuksiin ja matkustamisen rajoituksiin.\n\n## Historian suurin turnaus\n\nTurnaus pelataan 11. kesäkuuta ja 19. heinäkuuta välisenä aikana. Mukana on 48 joukkuetta, mikä tekee kilpailusta laajemman kuin yksikään aiempi jalkapallon MM-turnaus. Ottelumäärän kasvu ja kolmen isäntämaan malli merkitsevät myös tavallista laajempaa järjestelykokonaisuutta.\n\nSuuruus näkyy erityisesti matkustamisessa. Lähdeaineiston mukaan osa pelaajista ja taustahenkilöistä joutuu lentämään Yhdysvaltoihin ja sieltä pois jokaisen lohkovaiheen ottelunsa yhteydessä. Tämä on nostanut esiin kysymyksiä sekä joukkueiden kuormituksesta että turnauksen ympäristövaikutuksista.\n\n## Kannattajien ja kaupunkien kulut esillä\n\nMyös kannattajille turnaus voi olla kallis. Bosnia-Hertsegovinan kannattajat kertoivat Torontossa pelattavan ottelun yhteydessä, että sekä matka että otteluliput olivat käyneet kalliiksi. Lisäksi keskustelua ovat herättäneet hotellien ja liikenteen nopeasti nousseet hinnat sekä poikkeuksellisen kalliiksi kuvatut liput.\n\nTaloudellinen hyöty ei lähteiden mukaan jakaudu tasaisesti. Urheilutalouden tutkija Andrew Zimbalist Smith Collegesta on arvioinut, että isäntäkaupungeille voi koitua erittäin merkittäviä kustannuksia, vaikka ne järjestävät yleensä vain neljästä kahdeksaan ottelua. Hänen mukaansa kaupunkien kulut voivat nousta yli 100 miljoonaan dollariin.\n\n## Fifa saa suurimmat tulovirrat\n\nZimbalistin mukaan isäntäkaupungit eivät saa turnauksen suurimpia tuloja, vaikka ne vastaavat huomattavista kuluista. Lähdeaineistossa todetaan, että miljardiluokan tulovirrat päätyvät kansainväliselle jalkapalloliitolle Fifalle, joka järjestää maailmanmestaruuskilpailut.\n\nTurnauksen alla Fifaa kohtaan on esitetty kritiikkiä, ja Yhdysvaltoihin kohdistuva kansainvälinen arvostelu sekä boikottivaatimukset ovat lisänneet poliittista painetta. Kun tähän yhdistyvät lipunhintojen, majoituksen ja liikkumisen kustannukset, MM-kisojen avaus on ollut urheilun lisäksi keskustelu rahasta, matkustamisesta ja suurturnauksen vaikutuksista.",
+    "category": "Ulkomaat",
+    "tags": [
+      "jalkapallo",
+      "MM-kisat",
+      "Fifa",
+      "Pohjois-Amerikka",
+      "urheilutalous"
+    ],
+    "summary_bullets": [
+      "Vuoden 2026 miesten jalkapallon MM-turnaus pelataan Pohjois-Amerikassa 11. kesäkuuta–19. heinäkuuta.",
+      "Turnaus on historian suurin: mukana on 48 joukkuetta ja otteluita on 104.",
+      "Keskustelua herättävät kustannukset, matkustaminen, ympäristövaikutukset, kuumuus ja matkustusrajoitukset."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. Yksityiskohdissa vältettiin väitteitä, joita paketti ei täsmennä, kuten yksittäisten maiden tai kaupunkien kattavaa talousvaikutusta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260613T063123Z_7f897ea441\",\n  \"title\": \"Jalkapallon MM-kisat käynnistyivät kustannus- ja matkustushuolten varjossa\",\n  \"summary\": \"Pohjois-Amerikassa pelattava vuoden 2026 jalkapallon miesten MM-turnaus on historian suurin, ja sen ympärillä keskustellaan jo avausviikolla kuumuudesta, hinnoista, ympäristövaikutuksista ja matkustusrajoituksista.\",\n  \"content\": \"Vuoden 2026 jalkapallon miesten MM-kisat ovat käynnistyneet Pohjois-Amerikassa poikkeuksellisen laajana turnauksena, jossa kolme isäntämaata järjestää yhteensä 104 ottelua. Jalkapallon rinnalla huomio on kohdistunut turnauksen kustannuksiin, kuumuuteen, ympäristövaikutuksiin ja matkustamisen rajoituksiin.\\n\\n## Historian suurin turnaus\\n\\nTurnaus pelataan 11. kesäkuuta ja 19. heinäkuuta välisenä aikana. Mukana on 48 joukkuetta, mikä tekee kilpailusta laajemman kuin yksikään aiempi jalkapallon MM-turnaus. Ottelumäärän kasvu ja kolmen isäntämaan malli merkitsevät myös tavallista laajempaa järjestelykokonaisuutta.\\n\\nSuuruus näkyy erityisesti matkustamisessa. Lähdeaineiston mukaan osa pelaajista ja taustahenkilöistä joutuu lentämään Yhdysvaltoihin ja sieltä pois jokaisen lohkovaiheen ottelunsa yhteydessä. Tämä on nostanut esiin kysymyksiä sekä joukkueiden kuormituksesta että turnauksen ympäristövaikutuksista.\\n\\n## Kannattajien ja kaupunkien kulut esillä\\n\\nMyös kannattajille turnaus voi olla kallis. Bosnia-Hertsegovinan kannattajat kertoivat Torontossa pelattavan ottelun yhteydessä, että sekä matka että otteluliput olivat käyneet kalliiksi. Lisäksi keskustelua ovat herättäneet hotellien ja liikenteen nopeasti nousseet hinnat sekä poikkeuksellisen kalliiksi kuvatut liput.\\n\\nTaloudellinen hyöty ei lähteiden mukaan jakaudu tasaisesti. Urheilutalouden tutkija Andrew Zimbalist Smith Collegesta on arvioinut, että isäntäkaupungeille voi koitua erittäin merkittäviä kustannuksia, vaikka ne järjestävät yleensä vain neljästä kahdeksaan ottelua. Hänen mukaansa kaupunkien kulut voivat nousta yli 100 miljoonaan dollariin.\\n\\n## Fifa saa suurimmat tulovirrat\\n\\nZimbalistin mukaan isäntäkaupungit eivät saa turnauksen suurimpia tuloja, vaikka ne vastaavat huomattavista kuluista. Lähdeaineistossa todetaan, että miljardiluokan tulovirrat päätyvät kansainväliselle jalkapalloliitolle Fifalle, joka järjestää maailmanmestaruuskilpailut.\\n\\nTurnauksen alla Fifaa kohtaan on esitetty kritiikkiä, ja Yhdysvaltoihin kohdistuva kansainvälinen arvostelu sekä boikottivaatimukset ovat lisänneet poliittista painetta. Kun tähän yhdistyvät lipunhintojen, majoituksen ja liikkumisen kustannukset, MM-kisojen avaus on ollut urheilun lisäksi keskustelu rahasta, matkustamisesta ja suurturnauksen vaikutuksista.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"jalkapallo\",\n    \"MM-kisat\",\n    \"Fifa\",\n    \"Pohjois-Amerikka\",\n    \"urheilutalous\"\n  ],\n  \"summary_bullets\": [\n    \"Vuoden 2026 miesten jalkapallon MM-turnaus pelataan Pohjois-Amerikassa 11. kesäkuuta–19. heinäkuuta.\",\n    \"Turnaus on historian suurin: mukana on 48 joukkuetta ja otteluita on 104.\",\n    \"Keskustelua herättävät kustannukset, matkustaminen, ympäristövaikutukset, kuumuus ja matkustusrajoitukset.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu annettuihin lähdekatkelmiin. Yksityiskohdissa vältettiin väitteitä, joita paketti ei täsmennä, kuten yksittäisten maiden tai kaupunkien kattavaa talousvaikutusta.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260613T063123Z_7f897ea441",
+    "category": "Ulkomaat",
+    "selected_source_words": 333,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 248,
+    "issues": [
+      "content too short: 248 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Jalkapallon MM-kisat käynnistyivät kustannus- ja matkustushuolten varjossa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-13T06:34:59.460689+00:00",
+    "repair_trigger": "pre_repair_word_count=248; selected_source_words=333; selected_source_blocks=4",
+    "pre_repair_word_count": 248,
+    "pre_repair_lead_word_count": 30,
+    "post_repair_word_count": 248,
+    "post_repair_lead_word_count": 30,
+    "selected_source_words_at_repair": 333,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 333,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 248 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:2e15f3f9f3",
+      "2:BBC World:8ec82d64bc",
+      "3:Le Monde:2e88698bb9",
+      "4:Smith College:191cb3cdab"
+    ],
+    "final_issues": [
+      "content too short: 248 words"
+    ],
+    "recovered": false
+  }
+}
