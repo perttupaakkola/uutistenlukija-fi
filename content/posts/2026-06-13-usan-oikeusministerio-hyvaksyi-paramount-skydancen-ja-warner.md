@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/usa-n-oikeusministerio-hyvaksyi-paramountin-ja-warner-bros-discoveryn-jattifuusion/9353100"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
