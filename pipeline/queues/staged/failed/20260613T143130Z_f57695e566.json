@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-13T14:31:30.968788+00:00",
+  "digest": "f57695e566",
+  "packet": {
+    "packet_id": "20260613T143130Z_f57695e566",
+    "created_at": "2026-06-13T14:31:30Z",
+    "headline_seed": "Testaa, millä tasolla on yleis­sivistyksesi – Välkyin saa 15/15",
+    "description_seed": "Kuinka hyvä yleistietämys sinulla on? Se selviää pian. Onko sinulla hyvä yleistietämys? Se selviää, kun vastaat Iltalehden testiin. Testissä on kahdeksan kysymystä, mutta pisteitä on jaossa 15. Se tarkoittaa tietysti sitä, että määrätyissä kysymyksissä pitää tietää useampi oikea vastaus.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/78bf029b-3943-49f0-b47b-7910ac2ddb71",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/78bf029b-3943-49f0-b47b-7910ac2ddb71"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.52,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Testaa, millä tasolla on yleis­sivistyksesi – Välkyin saa 15/15"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Kuinka hyvä yleistietämys sinulla on? Se selviää pian. Onko sinulla hyvä yleistietämys? Se selviää, kun vastaat Iltalehden testiin. Testissä on kahdeksan kysymystä, mutta pisteitä on jaossa 15. Se tarkoittaa tietysti sitä, että määrätyissä kysymyksissä pitää tietää useampi oikea vastaus.",
+        "word_count": 39,
+        "keyword_overlap": 27,
+        "strong_overlap": 19
+      }
+    ],
+    "source_text": "Kuinka hyvä yleistietämys sinulla on? Se selviää pian. Onko sinulla hyvä yleistietämys? Se selviää, kun vastaat Iltalehden testiin. Testissä on kahdeksan kysymystä, mutta pisteitä on jaossa 15. Se tarkoittaa tietysti sitä, että määrätyissä kysymyksissä pitää tietää useampi oikea vastaus.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 78,
+      "selected_blocks": 1,
+      "selected_source_words": 39,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Testaa, millä tasolla on yleis­sivistyksesi – Välkyin saa 15/15",
+      "description": "Kuinka hyvä yleistietämys sinulla on? Se selviää pian. Onko sinulla hyvä yleistietämys? Se selviää, kun vastaat Iltalehden testiin. Testissä on kahdeksan kysymystä, mutta pisteitä on jaossa 15. Se tarkoittaa tietysti sitä, että määrätyissä kysymyksissä pitää tietää useampi oikea vastaus.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Testaa, millä tasolla on yleis­sivistyksesi – Välkyin saa 15/15",
+    "description": "Kuinka hyvä yleistietämys sinulla on? Se selviää pian. Onko sinulla hyvä yleistietämys? Se selviää, kun vastaat Iltalehden testiin. Testissä on kahdeksan kysymystä, mutta pisteitä on jaossa 15. Se tarkoittaa tietysti sitä, että määrätyissä kysymyksissä pitää tietää useampi oikea vastaus.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/78bf029b-3943-49f0-b47b-7910ac2ddb71",
+    "published": "2026-06-13T17:17:10+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "9adc9a8f5600521c4d7033e4797ec732",
+    "_url_hash": "7b36e42d790432422a4d4121c82a0b3196ca5883e9a659caa89a4b7a54afa2d7",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Kuinka hyvä yleistietämys sinulla on? Se selviää pian. Onko sinulla hyvä yleistietämys? Se selviää, kun vastaat Iltalehden testiin. Testissä on kahdeksan kysymystä, mutta pisteitä on jaossa 15. Se tarkoittaa tietysti sitä, että määrätyissä kysymyksissä pitää tietää useampi oikea vastaus.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-13T14:33:17.311999+00:00",
+  "failure": "Lähdeaineisto on liian niukka eikä tue vähintään 250 sanan uutisartikkelia ilman täytettä tai keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260613T143130Z_f57695e566\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka eikä tue vähintään 250 sanan uutisartikkelia ilman täytettä tai keksittyjä tietoja.\"}"
+}
