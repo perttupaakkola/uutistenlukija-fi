@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-13T18:31:25.816293+00:00",
+  "digest": "4c36419dd4",
+  "packet": {
+    "packet_id": "20260613T183125Z_4c36419dd4",
+    "created_at": "2026-06-13T18:31:25Z",
+    "headline_seed": "US-Iran deal scheduled to be signed on Sunday, says Trump",
+    "description_seed": "Before the US president's comments, Iran expressed caution about the exact timing.",
+    "link": "https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "UPI",
+      "Mint"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US-Iran deal scheduled to be signed on Sunday, says Trump"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A deal to end fighting between the US and Iran is \"scheduled to get signed\" on Sunday, US President Donald Trump has said - but Iran has cast doubt on the timing. In a post on social media, Trump also said the Strait of Hormuz, a key shipping route for the world's oil and liquefied natural gas, would be \"open to all\" following the deal. Earlier Pakistan, a key mediator, said finalisation of the deal was expected within 24 hours and they were \"preparing for the electronic signing\". But Iranian Foreign Ministry spokesman Esmaeil Baghaei expressed caution saying \"we will have to wait and see about the exact date of the signing of the memorandum of understanding, although it will not be tomorrow\".",
+        "word_count": 123,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Before the US president's comments, Iran expressed caution about the exact timing.",
+        "word_count": 12,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "UPI",
+        "source_type": "research",
+        "text": "June 13 (UPI) -- President Donald Trump and Pakistan have said that a memorandum of understanding extending the cease-fire between the United States and Iran will be virtually signed Sunday, though Iran has not confirmed the meeting. Trump posted on Truth Social at 12:45 p.m. EDT Saturday: \"The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL.\" He also posted a screenshot of a Saturday morning tweet by Pakistani Prime Minister Shehbaz Sharif: \"We are closer to a peace deal than ever before. With finalization expected in the next 24 hours, Pakistan is preparing for the electronic signing of the peace deal immediately after, followed by technical level talks next week.\" The Pakistani foreign minister confirmed that the signing was set for Sunday, Axios reported.",
+        "word_count": 136,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Mint",
+        "source_type": "research",
+        "text": "US President Donald Trump on Saturday (local time) said that a peace deal with Iran will be signed on Sunday, echoing Pakistani Prime Minister Shehbaz Sharif's remarks. In a post on Truth Social, he said, \"The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL. Our relationship with Iran is a much different and better one than previous Administrations have had.\" The US President further said, \"We look forward to working with Iran, and the entire Middle East, long into the future. Hopefully, this process will all work out quickly, easily, and smoothly. If it doesn’t, we have the ultimate alternative, hopefully never to be used again.\"",
+        "word_count": 118,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "A deal to end fighting between the US and Iran is \"scheduled to get signed\" on Sunday, US President Donald Trump has said - but Iran has cast doubt on the timing. In a post on social media, Trump also said the Strait of Hormuz, a key shipping route for the world's oil and liquefied natural gas, would be \"open to all\" following the deal. Earlier Pakistan, a key mediator, said finalisation of the deal was expected within 24 hours and they were \"preparing for the electronic signing\". But Iranian Foreign Ministry spokesman Esmaeil Baghaei expressed caution saying \"we will have to wait and see about the exact date of the signing of the memorandum of understanding, although it will not be tomorrow\".\n\nBefore the US president's comments, Iran expressed caution about the exact timing.\n\nJune 13 (UPI) -- President Donald Trump and Pakistan have said that a memorandum of understanding extending the cease-fire between the United States and Iran will be virtually signed Sunday, though Iran has not confirmed the meeting. Trump posted on Truth Social at 12:45 p.m. EDT Saturday: \"The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL.\" He also posted a screenshot of a Saturday morning tweet by Pakistani Prime Minister Shehbaz Sharif: \"We are closer to a peace deal than ever before. With finalization expected in the next 24 hours, Pakistan is preparing for the electronic signing of the peace deal immediately after, followed by technical level talks next week.\" The Pakistani foreign minister confirmed that the signing was set for Sunday, Axios reported.\n\nUS President Donald Trump on Saturday (local time) said that a peace deal with Iran will be signed on Sunday, echoing Pakistani Prime Minister Shehbaz Sharif's remarks. In a post on Truth Social, he said, \"The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL. Our relationship with Iran is a much different and better one than previous Administrations have had.\" The US President further said, \"We look forward to working with Iran, and the entire Middle East, long into the future. Hopefully, this process will all work out quickly, easily, and smoothly. If it doesn’t, we have the ultimate alternative, hopefully never to be used again.\"",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 1016,
+      "selected_blocks": 4,
+      "selected_source_words": 389,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "UPI",
+        "UPI",
+        "Mint",
+        "Mint",
+        "Mint",
+        "Mint",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "UPI",
+        "Mint"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US-Iran deal scheduled to be signed on Sunday, says Trump",
+      "description": "Before the US president's comments, Iran expressed caution about the exact timing.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US-Iran deal scheduled to be signed on Sunday, says Trump",
+    "description": "Before the US president's comments, Iran expressed caution about the exact timing.",
+    "link": "https://www.bbc.com/news/articles/cvglmn49xz0o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-13T18:03:51+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "79df8f86c0ac88d57bf5fa467817d0bb",
+    "_url_hash": "541392269897c4390e590e90788a9afd36e4ca847ffd53e3e71365c68b67735f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA deal to end fighting between the US and Iran is \"scheduled to get signed\" on Sunday, US President Donald Trump has said - but Iran has cast doubt on the timing.\n\nIn a post on social media, Trump also said the Strait of Hormuz, a key shipping route for the world's oil and liquefied natural gas, would be \"open to all\" following the deal.\n\nEarlier Pakistan, a key mediator, said finalisation of the deal was expected within 24 hours and they were \"preparing for the electronic signing\".\n\nBut Iranian Foreign Ministry spokesman Esmaeil Baghaei expressed caution saying \"we will have to wait and see about the exact date of the signing of the memorandum of understanding, although it will not be tomorrow\".\n\nPakistani Prime Minister Shehbaz Sharif added there would be technical-level talks next week if the deal is signed this weekend.\n\nOn Friday, Iran's Foreign Minister Seyed Abbas Araghchialso said that a deal to end fighting with the US was close.\n\nPakistan's prime minister also said the Memorandum of Understanding (MOU) between the US and Iran had been agreed and awaited finalising.\n\nThe agreement also envisaged an end to the conflict between Israel and Hezbollah in Lebanon, he said.\n\nAraghchi told Iran's state TV that the deal included reopening the Strait of Hormuz and also the lifting of a US blockade of Iranian ports.\n\nHowever, he said talks on Iran's nuclear programme would begin later.\n\nUS officials have confirmed some of the details of the agreement, saying economic benefits for Iran would depend on Tehran meeting its obligations.\n\nPrevious reports from the US had suggested Lebanon may not be part of this deal - with Iran reportedly insisting on it.\n\nThe war began with US and Israeli strikes across Iran on 28 February, prompting Iran to attack Israel and US-allied states in the Gulf - as well as effectively closing the Strait of Hormuz.\n\n---\n\n[Lähde: UPI]\nJune 13 (UPI) -- President Donald Trump and Pakistan have said that a memorandum of understanding extending the cease-fire between the United States and Iran will be virtually signed Sunday, though Iran has not confirmed the meeting.\n\nTrump posted on Truth Social at 12:45 p.m. EDT Saturday: \"The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL.\"\n\nHe also posted a screenshot of a Saturday morning tweet by Pakistani Prime Minister Shehbaz Sharif: \"We are closer to a peace deal than ever before. With finalization expected in the next 24 hours, Pakistan is preparing for the electronic signing of the peace deal immediately after, followed by technical level talks next week.\"\n\nThe Pakistani foreign minister confirmed that the signing was set for Sunday, Axios reported.\n\nBut Iran said there were no talks planned for Sunday. Iranian Foreign Ministry Spokesperson Esmail Baghaei said there were no plans for an Iranian negotiating team to travel to Geneva or elsewhere in the next day or two, according to IRIB, Iran's state broadcaster, The New York Times reported. While Iran could also sign electronically, it's unclear if the signing event will happen.\n\nOne of the main reasons the signing will be virtual is that Vice President JD Vance, who has been negotiating the peace deal, wouldn't be able to go to the signings and be back in the United States before Trump leaves for the G7 summit in France Monday, Axios said.\n\nAlso, Sunday is the president's 80th birthday and the day of the UFC fight on the White House lawn.\n\n---\n\n[Lähde: Mint]\nUS President Donald Trump on Saturday (local time) said that a peace deal with Iran will be signed on Sunday, echoing Pakistani Prime Minister Shehbaz Sharif's remarks.\n\nIn a post on Truth Social, he said, \"The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL. Our relationship with Iran is a much different and better one than previous Administrations have had.\"\n\nThe US President further said, \"We look forward to working with Iran, and the entire Middle East, long into the future. Hopefully, this process will all work out quickly, easily, and smoothly. If it doesn’t, we have the ultimate alternative, hopefully never to be used again.\"\n\nHis remarks came hours after Pakistan's PM, Shehbaz Sharif, said that the peace deal is closer than ever before and that finalisation could be expected in the next 24 hours.\n\nIn a post on X, Sharif wrote, \"We are closer to a peace deal than ever before. With finalisation likely expected in the next 24 hours, Pakistan is preparing for the electronic signing of the peace deal immediately after, followed by technical-level talks next week.\" He added, \"We would like to thank the United States of America and the Islamic Republic of Iran for their ongoing commitment during the negotiations, and we extend our sincere appreciation to our brothers in the region for their support. We are confident that this historic peace deal will form a strong foundation for lasting peace.\"\n\nEarlier today, Sharif also received a call from the Prime Minister and Foreign Minister of Qatar, Sheikh Mohammed bin Abdulrahman bin Jassim Al Thani. During the call, Sharif reiterated that a deal between the two sides is close. In a separate post on X, Sharif's office stated, \"The peace deal was ready for signatures by the relevant parties very shortly.\"\n\nThe contradictory statements from the United States and Iran continue, keeping everyone on the edge. While Trump says that a peace deal will be signed tomorrow, earlier today, Iran denied that the signing would take place so soon. Iranian Foreign Ministry spokesperson Esmaeil Baghaei cautioned against commenting on the timing of the signing.\n\n\"We will have to wait and see about the exact date of the signing of the memorandum of understanding, although it will not be tomorrow,\" state media quoted Baghaei as saying.\n\n\"The possibility of this happening in the coming days cannot be ruled out. However, due to the hesitation of the other side, we must be ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-13T18:34:53.274672+00:00",
+  "failure": "content too short: 224 words",
+  "payload": {
+    "packet_id": "20260613T183125Z_4c36419dd4",
+    "title": "Trump: Yhdysvaltain ja Iranin sopimus on määrä allekirjoittaa sunnuntaina",
+    "summary": "Yhdysvaltain presidentti Donald Trump sanoo, että Yhdysvaltain ja Iranin välinen sopimus on määrä allekirjoittaa sunnuntaina. Iran ei ole vahvistanut ajankohtaa, ja maan ulkoministeriön edustaja on kehottanut odottamaan tarkempaa tietoa.",
+    "content": "Yhdysvaltain presidentti Donald Trump sanoo, että Yhdysvaltain ja Iranin välinen sopimus taistelujen lopettamisesta on määrä allekirjoittaa sunnuntaina. Pakistanin mukaan sopimuksen viimeistelyä odotetaan pian, mutta Iran on suhtautunut varovaisesti tarkkaan aikatauluun eikä ole vahvistanut allekirjoitustilaisuutta.\n\n## Trump ilmoitti aikataulusta\n\nTrump kirjoitti lauantaina Truth Social -palvelussa, että sopimus on tarkoitus allekirjoittaa seuraavana päivänä. Hänen mukaansa Hormuzinsalmi olisi heti allekirjoituksen jälkeen avoin kaikille.\n\nHormuzinsalmi on kansainvälisesti tärkeä merireitti, jonka kautta kulkee maailman öljyn ja nesteytetyn maakaasun kuljetuksia. Trump kuvasi myös Yhdysvaltain suhdetta Iraniin aiempaa paremmaksi ja sanoi odottavansa yhteistyötä Iranin ja Lähi-idän kanssa jatkossa. Hän lisäsi toivovansa prosessin etenevän nopeasti, helposti ja sujuvasti.\n\n## Pakistan kertoo valmisteluista\n\nPakistan on ollut asiassa keskeinen välittäjä. Pakistanin pääministeri Shehbaz Sharif on sanonut, että rauhansopimus on lähempänä kuin koskaan ja että viimeistelyn odotetaan tapahtuvan 24 tunnin kuluessa. Hänen mukaansa Pakistan valmistautuu sopimuksen sähköiseen allekirjoittamiseen.\n\nSharifin mukaan sähköistä allekirjoitusta seuraisivat teknisen tason neuvottelut ensi viikolla. Pakistanin ulkoministerin kerrotaan myös vahvistaneen, että allekirjoitus on asetettu sunnuntaille. Kyseessä olisi yhteisymmärryspöytäkirja, joka pidentäisi Yhdysvaltain ja Iranin välistä tulitaukoa.\n\n## Iran ei vahvista päivää\n\nIranin kanta aikatauluun on ollut varovaisempi kuin Trumpin ja Pakistanin julkiset arviot. Iranin ulkoministeriön tiedottaja Esmaeil Baghaei sanoi, että yhteisymmärryspöytäkirjan allekirjoituksen tarkkaa päivämäärää on vielä odotettava.\n\nBaghaein mukaan allekirjoitus ei tapahtuisi heti seuraavana päivänä. Tämä jättää sunnuntain aikataulun avoimeksi Iranin vahvistuksen puuttuessa, vaikka Trump ja Pakistan ovat kuvanneet valmisteluja jo pitkälle edenneiksi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Iran",
+      "Donald Trump",
+      "Pakistan",
+      "Hormuzinsalmi",
+      "Lähi-itä"
+    ],
+    "summary_bullets": [
+      "Trumpin mukaan Yhdysvaltain ja Iranin sopimus on määrä allekirjoittaa sunnuntaina.",
+      "Pakistan sanoo valmistautuvansa sähköiseen allekirjoitukseen ja teknisiin neuvotteluihin.",
+      "Iran ei ole vahvistanut ajankohtaa ja on korostanut varovaisuutta aikataulun suhteen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.87,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin tietoihin Trumpin, Pakistanin ja Iranin esittämistä kannoista. Iranin vahvistuksen puuttuminen on tuotu selvästi esiin, eikä sopimuksen sisältöä ole laajennettu lähteiden ulkopuolelle."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260613T183125Z_4c36419dd4\",\n  \"title\": \"Trump: Yhdysvaltain ja Iranin sopimus on määrä allekirjoittaa sunnuntaina\",\n  \"summary\": \"Yhdysvaltain presidentti Donald Trump sanoo, että Yhdysvaltain ja Iranin välinen sopimus on määrä allekirjoittaa sunnuntaina. Iran ei ole vahvistanut ajankohtaa, ja maan ulkoministeriön edustaja on kehottanut odottamaan tarkempaa tietoa.\",\n  \"content\": \"Yhdysvaltain presidentti Donald Trump sanoo, että Yhdysvaltain ja Iranin välinen sopimus taistelujen lopettamisesta on määrä allekirjoittaa sunnuntaina. Pakistanin mukaan sopimuksen viimeistelyä odotetaan pian, mutta Iran on suhtautunut varovaisesti tarkkaan aikatauluun eikä ole vahvistanut allekirjoitustilaisuutta.\\n\\n## Trump ilmoitti aikataulusta\\n\\nTrump kirjoitti lauantaina Truth Social -palvelussa, että sopimus on tarkoitus allekirjoittaa seuraavana päivänä. Hänen mukaansa Hormuzinsalmi olisi heti allekirjoituksen jälkeen avoin kaikille.\\n\\nHormuzinsalmi on kansainvälisesti tärkeä merireitti, jonka kautta kulkee maailman öljyn ja nesteytetyn maakaasun kuljetuksia. Trump kuvasi myös Yhdysvaltain suhdetta Iraniin aiempaa paremmaksi ja sanoi odottavansa yhteistyötä Iranin ja Lähi-idän kanssa jatkossa. Hän lisäsi toivovansa prosessin etenevän nopeasti, helposti ja sujuvasti.\\n\\n## Pakistan kertoo valmisteluista\\n\\nPakistan on ollut asiassa keskeinen välittäjä. Pakistanin pääministeri Shehbaz Sharif on sanonut, että rauhansopimus on lähempänä kuin koskaan ja että viimeistelyn odotetaan tapahtuvan 24 tunnin kuluessa. Hänen mukaansa Pakistan valmistautuu sopimuksen sähköiseen allekirjoittamiseen.\\n\\nSharifin mukaan sähköistä allekirjoitusta seuraisivat teknisen tason neuvottelut ensi viikolla. Pakistanin ulkoministerin kerrotaan myös vahvistaneen, että allekirjoitus on asetettu sunnuntaille. Kyseessä olisi yhteisymmärryspöytäkirja, joka pidentäisi Yhdysvaltain ja Iranin välistä tulitaukoa.\\n\\n## Iran ei vahvista päivää\\n\\nIranin kanta aikatauluun on ollut varovaisempi kuin Trumpin ja Pakistanin julkiset arviot. Iranin ulkoministeriön tiedottaja Esmaeil Baghaei sanoi, että yhteisymmärryspöytäkirjan allekirjoituksen tarkkaa päivämäärää on vielä odotettava.\\n\\nBaghaein mukaan allekirjoitus ei tapahtuisi heti seuraavana päivänä. Tämä jättää sunnuntain aikataulun avoimeksi Iranin vahvistuksen puuttuessa, vaikka Trump ja Pakistan ovat kuvanneet valmisteluja jo pitkälle edenneiksi.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Iran\",\n    \"Donald Trump\",\n    \"Pakistan\",\n    \"Hormuzinsalmi\",\n    \"Lähi-itä\"\n  ],\n  \"summary_bullets\": [\n    \"Trumpin mukaan Yhdysvaltain ja Iranin sopimus on määrä allekirjoittaa sunnuntaina.\",\n    \"Pakistan sanoo valmistautuvansa sähköiseen allekirjoitukseen ja teknisiin neuvotteluihin.\",\n    \"Iran ei ole vahvistanut ajankohtaa ja on korostanut varovaisuutta aikataulun suhteen.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.87,\n  \"journalist_note\": \"Artikkeli perustuu paketissa olleisiin tietoihin Trumpin, Pakistanin ja Iranin esittämistä kannoista. Iranin vahvistuksen puuttuminen on tuotu selvästi esiin, eikä sopimuksen sisältöä ole laajennettu lähteiden ulkopuolelle.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260613T183125Z_4c36419dd4",
+    "category": "Ulkomaat",
+    "selected_source_words": 389,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 224,
+    "issues": [
+      "content too short: 224 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Trump: Yhdysvaltain ja Iranin sopimus on määrä allekirjoittaa sunnuntaina",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-13T18:34:53.274275+00:00",
+    "repair_trigger": "pre_repair_word_count=242; selected_source_words=389; selected_source_blocks=4",
+    "pre_repair_word_count": 242,
+    "pre_repair_lead_word_count": 34,
+    "post_repair_word_count": 224,
+    "post_repair_lead_word_count": 34,
+    "selected_source_words_at_repair": 389,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 389,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 224 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:db74bf7420",
+      "2:BBC World:e31681083b",
+      "3:UPI:7b5a6fc848",
+      "4:Mint:1ccba8ec25"
+    ],
+    "final_issues": [
+      "content too short: 224 words"
+    ],
+    "recovered": false
+  }
+}
