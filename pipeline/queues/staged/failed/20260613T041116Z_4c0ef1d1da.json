@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-13T04:11:16.720788+00:00",
+  "digest": "4c0ef1d1da",
+  "packet": {
+    "packet_id": "20260613T041116Z_4c0ef1d1da",
+    "created_at": "2026-06-13T04:11:16Z",
+    "headline_seed": "Vuohitila rakensi oman meijerin Orimattilan Artjärvelle – \"Emme halua välikäsiä\"",
+    "description_seed": "Ida Vanonen valmistaa kotitilallaan vuohenmaidosta juustoja, jäätelöä, jugurttia ja viiliä.",
+    "link": "https://www.ess.fi/paikalliset/9533430",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9533430"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vuohitila rakensi oman meijerin Orimattilan Artjärvelle – \"Emme halua välikäsiä\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 101,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vuohitila rakensi oman meijerin Orimattilan Artjärvelle – \"Emme halua välikäsiä\"",
+      "description": "Ida Vanonen valmistaa kotitilallaan vuohenmaidosta juustoja, jäätelöä, jugurttia ja viiliä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Vuohitila rakensi oman meijerin Orimattilan Artjärvelle – \"Emme halua välikäsiä\"",
+    "description": "Ida Vanonen valmistaa kotitilallaan vuohenmaidosta juustoja, jäätelöä, jugurttia ja viiliä.",
+    "link": "https://www.ess.fi/paikalliset/9533430",
+    "published": "2026-06-13T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "796dfbf786268cb8ed820116082fc678",
+    "_url_hash": "5f31fc44f9a17359f256ecb628d1ec85889efba223bdc2c637130d3d54777d9a",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nMetan palveluissa havaittiin paljon häiriöitä perjantaina iltapäivällä. Häiriöt ovat koskeneet ainakin Facebookia ja Instagramia.\n\nEnnen ilta-kahdeksaa Downdetectorin mukaan Facebookin häiriöt olivat jo vähentyneet.\n\nKäyttäjät ja uutissivustot ovat kertoneet häiriöistä esimerkiksi X:ssä.\n\nKäyttäjiä on kirjattu palvelusta ulos eivätkä he ole päässeet enää kirjautumaan takaisin palveluun, kertoo esimerkiksi The Independent-lehti.\n\nKäyttäjät ovat saaneet ruudulle virheilmoituksia.\n\nAndy Stone Metan viestinnästä kirjoitti X:ssä, että yhtiössä ollaan tietoisia siitä, että ihmisillä on tällä hetkellä vaikeuksia päästä palveluihin.\n\n– Työskentelemme asian parissa, hän kirjoittaa.\n\nNew York Post kertoo, että tilanne toi kävijäpiikin myös palveluiden häiriöistä kertovalle Downdetector-sivulle.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-13T04:13:18.199534+00:00",
+  "failure": "Lähdeaineisto puuttuu kokonaan ja packetin confidence on matala.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260613T041116Z_4c0ef1d1da\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu kokonaan ja packetin confidence on matala.\"}"
+}
