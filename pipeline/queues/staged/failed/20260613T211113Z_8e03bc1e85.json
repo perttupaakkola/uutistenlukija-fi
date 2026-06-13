@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-13T21:11:13.466657+00:00",
+  "digest": "8e03bc1e85",
+  "packet": {
+    "packet_id": "20260613T211113Z_8e03bc1e85",
+    "created_at": "2026-06-13T21:11:13Z",
+    "headline_seed": "Katso tästä oikeat Lotto-numerot – Jokerin päävoitto meni Raisioon",
+    "description_seed": "Jokeri-pelistä löytyi yksi täysosuma. Lauantain Lotto-arvonnassa ei löytynyt yhtään täysosumaa. Kierroksen oikea rivi on 4, 9, 12, 19, 20, 22 ja 30. Lisänumero on 25 ja plusnumero 15.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/58e85bc1-ee2b-4ff6-94f2-54857b97bc00",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/58e85bc1-ee2b-4ff6-94f2-54857b97bc00"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Katso tästä oikeat Lotto-numerot – Jokerin päävoitto meni Raisioon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Jokeri-pelistä löytyi yksi täysosuma. Lauantain Lotto-arvonnassa ei löytynyt yhtään täysosumaa. Kierroksen oikea rivi on 4, 9, 12, 19, 20, 22 ja 30. Lisänumero on 25 ja plusnumero 15.",
+        "word_count": 28,
+        "keyword_overlap": 14,
+        "strong_overlap": 11
+      }
+    ],
+    "source_text": "Jokeri-pelistä löytyi yksi täysosuma. Lauantain Lotto-arvonnassa ei löytynyt yhtään täysosumaa. Kierroksen oikea rivi on 4, 9, 12, 19, 20, 22 ja 30. Lisänumero on 25 ja plusnumero 15.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 56,
+      "selected_blocks": 1,
+      "selected_source_words": 28,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Katso tästä oikeat Lotto-numerot – Jokerin päävoitto meni Raisioon",
+      "description": "Jokeri-pelistä löytyi yksi täysosuma. Lauantain Lotto-arvonnassa ei löytynyt yhtään täysosumaa. Kierroksen oikea rivi on 4, 9, 12, 19, 20, 22 ja 30. Lisänumero on 25 ja plusnumero 15.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Katso tästä oikeat Lotto-numerot – Jokerin päävoitto meni Raisioon",
+    "description": "Jokeri-pelistä löytyi yksi täysosuma. Lauantain Lotto-arvonnassa ei löytynyt yhtään täysosumaa. Kierroksen oikea rivi on 4, 9, 12, 19, 20, 22 ja 30. Lisänumero on 25 ja plusnumero 15.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/58e85bc1-ee2b-4ff6-94f2-54857b97bc00",
+    "published": "2026-06-13T23:34:29+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "c22f13e9689d539c55a5f0bc849618fc",
+    "_url_hash": "0f599f9f32adb9cd4e2690c6367295927b1eeaf0ee6a181a8beda71e5ddf5de0",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Jokeri-pelistä löytyi yksi täysosuma. Lauantain Lotto-arvonnassa ei löytynyt yhtään täysosumaa. Kierroksen oikea rivi on 4, 9, 12, 19, 20, 22 ja 30. Lisänumero on 25 ja plusnumero 15.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-13T21:13:20.418819+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytettä tai lisätietojen keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260613T211113Z_8e03bc1e85\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytettä tai lisätietojen keksimistä.\"}"
+}
