@@ -43,7 +43,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/culture/2026/06/review-disclosure-day-is-big-on-action-light-on-ideas/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
