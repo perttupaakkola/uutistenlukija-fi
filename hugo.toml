@@ -64,8 +64,8 @@ disableHugoGeneratorInject = true
 [outputs]
   home = ["HTML", "RSS", "JSON", "NewsSitemap", "Sitemap", "llmstxt"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  term = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
 
 [related]
   threshold = 80

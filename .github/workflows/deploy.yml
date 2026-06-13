@@ -40,6 +40,9 @@ jobs:
         continue-on-error: true
         run: python3 pipeline/ci_validate.py --skip templates
 
+      - name: Check Cloudflare Pages file budget
+        run: python3 scripts/check_public_file_count.py --public-dir public --limit 20000 --min-headroom 1000
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
