@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-06-14T16:39:03.728277+00:00",
+  "source": "pipeline/buffer_dry_run.py",
+  "policy": {
+    "public_actions_disabled": true,
+    "allowed_use": "review Buffer draft payloads only",
+    "requires_approval_before": [
+      "account signup completion",
+      "posting",
+      "queueing",
+      "scheduling",
+      "replies",
+      "direct_messages",
+      "follows",
+      "reposts",
+      "payment",
+      "campaign_launch"
+    ]
+  },
+  "selection": {
+    "hours": 24,
+    "max_posts": 5,
+    "draft_count": 5
+  },
+  "missing_fields": [
+    "BUFFER_PROFILE_ID"
+  ],
+  "drafts": [
+    {
+      "provider": "buffer",
+      "mode": "draft_only",
+      "profile_id": "BUFFER_PROFILE_ID_PLACEHOLDER",
+      "profile_id_status": "placeholder",
+      "text": "🌍 Trump torjui Iranin vastauksen Lähi-idän sopimusesitykseen, Israelin iskut Libanonissa kiristävät tilannetta\n\n▪ Trump torjui Iranin vastauksen Yhdysvalt…\n\nhttps://uutistenlukija.fi/posts/2026-06-14-trump-torjui-iranin-vastauksen-lahi-idan-sopimusesitykseen-i/ #ulkomaat #maailma",
+      "url": "https://uutistenlukija.fi/posts/2026-06-14-trump-torjui-iranin-vastauksen-lahi-idan-sopimusesitykseen-i/",
+      "title": "Trump torjui Iranin vastauksen Lähi-idän sopimusesitykseen, Israelin iskut Libanonissa kiristävät tilannetta",
+      "category": "Ulkomaat",
+      "cadence_target": "draft-only morning slot, 07:00-08:30 Europe/Helsinki",
+      "scheduled_at": null,
+      "approval_required": true
+    },
+    {
+      "provider": "buffer",
+      "mode": "draft_only",
+      "profile_id": "BUFFER_PROFILE_ID_PLACEHOLDER",
+      "profile_id_status": "placeholder",
+      "text": "🇫🇮 Justin Trudeau puolustautui Kanadan ottelun väliin jättämisestä Katy Perryn esiintymisen vuoksi\n\n▪ Justin Trudeau seurasi Yhdysvaltojen MM-avausottelua Lo…\n\nhttps://uutistenlukija.fi/posts/2026-06-14-justin-trudeau-puolustautui-kanadan-ottelun-valiin-jattamise/ #suomi #kotimaa",
+      "url": "https://uutistenlukija.fi/posts/2026-06-14-justin-trudeau-puolustautui-kanadan-ottelun-valiin-jattamise/",
+      "title": "Justin Trudeau puolustautui Kanadan ottelun väliin jättämisestä Katy Perryn esiintymisen vuoksi",
+      "category": "Kotimaa",
+      "cadence_target": "draft-only evening slot, 17:00-18:30 Europe/Helsinki",
+      "scheduled_at": null,
+      "approval_required": true
+    },
+    {
+      "provider": "buffer",
+      "mode": "draft_only",
+      "profile_id": "BUFFER_PROFILE_ID_PLACEHOLDER",
+      "profile_id_status": "placeholder",
+      "text": "💻 Stroopin testi paljasti suurten kielimallien heikkouden pitkissä tehtävissä\n\n▪ Suuret kielimallit menestyivät Stroopin testissä lyhyillä sanalistoilla, mutta t…\n\nhttps://uutistenlukija.fi/posts/2026-06-14-stroopin-testi-paljasti-suurten-kielimallien-heikkouden-pitk/ #teknologia",
+      "url": "https://uutistenlukija.fi/posts/2026-06-14-stroopin-testi-paljasti-suurten-kielimallien-heikkouden-pitk/",
+      "title": "Stroopin testi paljasti suurten kielimallien heikkouden pitkissä tehtävissä",
+      "category": "Teknologia",
+      "cadence_target": "draft-only morning slot, 07:00-08:30 Europe/Helsinki",
+      "scheduled_at": null,
+      "approval_required": true
+    },
+    {
+      "provider": "buffer",
+      "mode": "draft_only",
+      "profile_id": "BUFFER_PROFILE_ID_PLACEHOLDER",
+      "profile_id_status": "placeholder",
+      "text": "🇫🇮 Äiti odottaa uutta oikeudenkäyntiä tyttärensä murhasta Dominikaanisessa tasavallassa\n\n▪ Lindsay de Felizin kuolemasta järjestetään uusi oikeudenkäynti Dom…\n\nhttps://uutistenlukija.fi/posts/2026-06-14-aiti-odottaa-uutta-oikeudenkayntia-tyttarensa-murhasta-domin/ #suomi #kotimaa",
+      "url": "https://uutistenlukija.fi/posts/2026-06-14-aiti-odottaa-uutta-oikeudenkayntia-tyttarensa-murhasta-domin/",
+      "title": "Äiti odottaa uutta oikeudenkäyntiä tyttärensä murhasta Dominikaanisessa tasavallassa",
+      "category": "Kotimaa",
+      "cadence_target": "draft-only evening slot, 17:00-18:30 Europe/Helsinki",
+      "scheduled_at": null,
+      "approval_required": true
+    },
+    {
+      "provider": "buffer",
+      "mode": "draft_only",
+      "profile_id": "BUFFER_PROFILE_ID_PLACEHOLDER",
+      "profile_id_status": "placeholder",
+      "text": "💻 Viikon peliuutisissa GTA 6 -huolia, ilmaispelejä ja Destiny 2:n päätöksen tunnelmia\n\n▪ Viikon koosteessa nostetaan esiin kymmenen peliuutista ja -aihetta.\n\nhttps://uutistenlukija.fi/posts/2026-06-14-viikon-peliuutisissa-gta-6-huolia-ilmaispeleja-ja-destiny-2n/ #teknologia",
+      "url": "https://uutistenlukija.fi/posts/2026-06-14-viikon-peliuutisissa-gta-6-huolia-ilmaispeleja-ja-destiny-2n/",
+      "title": "Viikon peliuutisissa GTA 6 -huolia, ilmaispelejä ja Destiny 2:n päätöksen tunnelmia",
+      "category": "Teknologia",
+      "cadence_target": "draft-only morning slot, 07:00-08:30 Europe/Helsinki",
+      "scheduled_at": null,
+      "approval_required": true
+    }
+  ]
+}
