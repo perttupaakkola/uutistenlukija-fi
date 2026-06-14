@@ -1,0 +1,90 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-14T04:41:15.595950+00:00",
+  "digest": "edf6772e34",
+  "packet": {
+    "packet_id": "20260614T044115Z_edf6772e34",
+    "created_at": "2026-06-14T04:41:15Z",
+    "headline_seed": "Suomeen rakennetaan uutta koko maan laajuista järjestelmää sodan varalle – Venäjän olisi vaikea häiritä",
+    "description_seed": "Jos Suomessa syttyisi sota, eri puolille maata rakennettavien kyläradioiden viestit kulkisivat, vaikka netti ja puhelimet pimenisivät. Tekniikka&Talous kertoo, mistä on kyse uudessa valtakunnallisessa mutta hajautetussa järjestelmässä ja miten se toimisi kriisitilanteessa.",
+    "link": "https://www.tivi.fi/uutiset/a/e104c935-a723-45c7-832c-412a5c4c9584",
+    "source": "Tivi",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tivi.fi/uutiset/a/e104c935-a723-45c7-832c-412a5c4c9584"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomeen rakennetaan uutta koko maan laajuista järjestelmää sodan varalle – Venäjän olisi vaikea häiritä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Jos Suomessa syttyisi sota, eri puolille maata rakennettavien kyläradioiden viestit kulkisivat, vaikka netti ja puhelimet pimenisivät. Tekniikka&Talous kertoo, mistä on kyse uudessa valtakunnallisessa mutta hajautetussa järjestelmässä ja miten se toimisi kriisitilanteessa.",
+        "word_count": 31,
+        "keyword_overlap": 23,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Jos Suomessa syttyisi sota, eri puolille maata rakennettavien kyläradioiden viestit kulkisivat, vaikka netti ja puhelimet pimenisivät. Tekniikka&Talous kertoo, mistä on kyse uudessa valtakunnallisessa mutta hajautetussa järjestelmässä ja miten se toimisi kriisitilanteessa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 62,
+      "selected_blocks": 1,
+      "selected_source_words": 31,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tivi"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomeen rakennetaan uutta koko maan laajuista järjestelmää sodan varalle – Venäjän olisi vaikea häiritä",
+      "description": "Jos Suomessa syttyisi sota, eri puolille maata rakennettavien kyläradioiden viestit kulkisivat, vaikka netti ja puhelimet pimenisivät. Tekniikka&Talous kertoo, mistä on kyse uudessa valtakunnallisessa mutta hajautetussa järjestelmässä ja miten se toimisi kriisitilanteessa.",
+      "category_hint": "",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Suomeen rakennetaan uutta koko maan laajuista järjestelmää sodan varalle – Venäjän olisi vaikea häiritä",
+    "description": "Jos Suomessa syttyisi sota, eri puolille maata rakennettavien kyläradioiden viestit kulkisivat, vaikka netti ja puhelimet pimenisivät. Tekniikka&Talous kertoo, mistä on kyse uudessa valtakunnallisessa mutta hajautetussa järjestelmässä ja miten se toimisi kriisitilanteessa.",
+    "link": "https://www.tivi.fi/uutiset/a/e104c935-a723-45c7-832c-412a5c4c9584",
+    "published": "2026-06-14T04:22:00+00:00",
+    "source": "Tivi",
+    "source_domain": "tivi.fi",
+    "language": "fi",
+    "fingerprint": "cde237184e800cc2a8e5462a500e5990",
+    "_url_hash": "6d9ae7cd18e7cc08a32f1824dc5b2f13f628e3dd88f493cee74344ca0930c08d",
+    "source_tier": 2,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Jos Suomessa syttyisi sota, eri puolille maata rakennettavien kyläradioiden viestit kulkisivat, vaikka netti ja puhelimet pimenisivät. Tekniikka&Talous kertoo, mistä on kyse uudessa valtakunnallisessa mutta hajautetussa järjestelmässä ja miten se toimisi kriisitilanteessa.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-14T04:43:49.209021+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman olennaisten yksityiskohtien keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260614T044115Z_edf6772e34\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman olennaisten yksityiskohtien keksimistä.\"}"
+}
