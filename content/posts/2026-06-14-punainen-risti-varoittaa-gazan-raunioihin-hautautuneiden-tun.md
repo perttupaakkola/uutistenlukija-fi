@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/jun/14/growing-risk-thousands-buried-gaza-rubble-never-identified-red-cross"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
