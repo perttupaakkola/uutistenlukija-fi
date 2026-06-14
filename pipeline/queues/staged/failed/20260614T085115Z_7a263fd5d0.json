@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-14T08:51:15.814902+00:00",
+  "digest": "7a263fd5d0",
+  "packet": {
+    "packet_id": "20260614T085115Z_7a263fd5d0",
+    "created_at": "2026-06-14T08:51:15Z",
+    "headline_seed": "Kysymys & vastaus | Kannattaako maassa räpiköivään linnunpoikaseen koskea? Ennakointi on ihmiselle paras tapa auttaa luonnon eläimiä",
+    "description_seed": "Hylätyltä vaikuttava poikanen ei välttämättä ole hylätty.",
+    "link": "https://www.ess.fi/paikalliset/9537226",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9537226"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kysymys & vastaus | Kannattaako maassa räpiköivään linnunpoikaseen koskea? Ennakointi on ihmiselle paras tapa auttaa luonnon eläimiä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 145,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kysymys & vastaus | Kannattaako maassa räpiköivään linnunpoikaseen koskea? Ennakointi on ihmiselle paras tapa auttaa luonnon eläimiä",
+      "description": "Hylätyltä vaikuttava poikanen ei välttämättä ole hylätty.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kysymys & vastaus | Kannattaako maassa räpiköivään linnunpoikaseen koskea? Ennakointi on ihmiselle paras tapa auttaa luonnon eläimiä",
+    "description": "Hylätyltä vaikuttava poikanen ei välttämättä ole hylätty.",
+    "link": "https://www.ess.fi/paikalliset/9537226",
+    "published": "2026-06-14T11:41:29+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "f800d971836332e65b2d4db12472ebd6",
+    "_url_hash": "615285aa82af68d57c319fdd6729deab9c733b37e6f69af8908895e32598ad17",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nNaisten maailmanlistan kärkinimi Aryna Sabalenka kaatoi Naomi Osakan Ranskan avoimessa tennisturnauksessa maanantain iltaottelussa.\n\nSabalenka voitti erin 7–5, 6–3 ja eteni kahdeksan parhaan joukkoon. Valkovenäläinen on naisten ja miesten kaksinpeleissä ainut entinen grand slam -voittaja, joka onnistui pääsemään puolivälieriin yllätyksien täyteisessä tennisturnauksessa.\n\n– Pystyin eristämään itseni siitä, mitä tänä vuonna tapahtuu, Sabalenka kommentoi turnauksen yllätyksistä.\n\nNelinkertainen grand slam -voittaja tavoittelee ensimmäistä voittoaan Ranskan avoimessa. Viime vuonna hän hävisi kivuliaasti finaalissa Coco Gauffille.\n\nSabalenkan ja Osakan kohtaaminen oli myös ensimmäinen naisten iltaottelu Ranskan avoimissa sitten vuoden 2023. Sabalenka on kritisoinut naisten otteluiden puuttumista iltavaloista ja sanoi viime vuonna, että naisten kiertueen tähdet ansaitsevat tasa-arvoista kohtelua. Miehet olivat pelanneet 32 kertaa peräkkäin iltakohtaamisissa Ranskan avoimissa.\n\n– Toivon tämän olevan alku, tämän illan ottelun. Se on kuin avaisimme oven naisten iltaotteluille, Sabalenka sanoi AFP:n mukaan maanantaina.\n\nSabalenka kohtaa venäläisen Diana Shnaiderin puolivälierässä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-14T08:53:19.050611+00:00",
+  "failure": "Paketissa ei ole käytettävää lähdetekstiä eikä riittävästi varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260614T085115Z_7a263fd5d0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole käytettävää lähdetekstiä eikä riittävästi varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

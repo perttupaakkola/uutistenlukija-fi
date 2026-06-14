@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-14T08:41:14.754688+00:00",
+  "digest": "41725f4126",
+  "packet": {
+    "packet_id": "20260614T084114Z_41725f4126",
+    "created_at": "2026-06-14T08:41:14Z",
+    "headline_seed": "Näin suurkaupunki räjähti juhlaan – New York voitti NBA-mestaruuden",
+    "description_seed": "New Yorkin kaupungissa juhlittiin koripallon NBA-mestaruutta.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/nain-suurkaupunki-rajahti-juhlaan-new-york-voitti-nba-mestaruuden/9353426",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/nain-suurkaupunki-rajahti-juhlaan-new-york-voitti-nba-mestaruuden/9353426"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näin suurkaupunki räjähti juhlaan – New York voitti NBA-mestaruuden"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 187,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Kouvolan Sanomat",
+        "Kouvolan Sanomat",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näin suurkaupunki räjähti juhlaan – New York voitti NBA-mestaruuden",
+      "description": "New Yorkin kaupungissa juhlittiin koripallon NBA-mestaruutta.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Näin suurkaupunki räjähti juhlaan – New York voitti NBA-mestaruuden",
+    "description": "New Yorkin kaupungissa juhlittiin koripallon NBA-mestaruutta.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/nain-suurkaupunki-rajahti-juhlaan-new-york-voitti-nba-mestaruuden/9353426",
+    "published": "2026-06-14T07:39:24+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "b77effc7fa429cb7e0f71da6983a7c5e",
+    "_url_hash": "6c26a4f67ccd76166d86a1609ef46279f1b09a9cea509834793b640f329c59f5",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Kouvolan Sanomat]\nNew York otti kaiken irti koripalloseura Knicksin pitkään jahtaamasta NBA-mestaruudesta. Kun 53 vuoden odotus päättyi paikallista aikaa lauantai-iltana, ihmiset ryntäsivät kaduille.\n\nSosiaalisen median videoista ja kuvista näkee, millainen merkitys mestaruudella oli. Materiaali on peräisin pohjoisamerikkalaisilta mediayhtiöiltä, ei yksityishenkilöiden tileiltä.\n\nTHE STREETS OF NEW YORK ARE ABSOLUTELY PACKEDMADNESS. 🤯🤯🤯 pic.twitter.com/cpRrM36lVQ\n\nThe Empire State Building glows orange and blue to celebrate the Knicks' #NBAFinals win! 🔵🟠(via @EmpireStateBldg) pic.twitter.com/LXwkMJBZXd\n\nSTART SPREADING THE NEWS‼️NEW YORK IS BACK ON TOP 🏆 pic.twitter.com/7kOBadIhq8\n\nNew York Timesin tekemässä hetki hetkeltä -seurannassa Steven Molty kirjoittaa, että kaupunki on \"täydessä juhlatilassa\". Central Parkin edusta on täynnä auton tööttiä huudattavia kuskeja ja laulavaa ihmisjoukkoa.\n\nNew York on monipuolinen palloilukaupunki, mutta menestys on kiertänyt itäisen rannikon metropolia lajissa kuin lajissa.\n\nJääkiekossa Rangers voitti NHL:n viimeksi vuonna 1994. Islandersin kohdalla saadaan palata vuoteen 1983 asti.\n\nBaseballissa Yankees on menestynyt seura, mutta edellisestä World Series -voitosta on 17 vuotta aikaa. Metsin MLB-mestaruudesta tulee kuluneeksi 20 vuotta.\n\nAmerikkalaisessa jalkapallossa New Yorkilla on kaksi NFL-seuraa: Giants ja Jets. Nelinkertainen NFL-mestari Giants valloitti Super Bowlin viimeksi vuonna 2012. Jets on voittanut Super Bowlin ainoastaan kerran: vuonna 1968.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-14T08:43:18.222825+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja 250 sanan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260614T084114Z_41725f4126\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja 250 sanan uutiseen.\"}"
+}
