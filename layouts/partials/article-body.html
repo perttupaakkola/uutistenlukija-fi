@@ -8,7 +8,6 @@
 {{- if eq .showSummary true }}{{ partial "article-summary.html" $page }}{{ end }}
 {{- if eq .showKeyFacts true }}{{ partial "key-facts.html" $page }}{{ end }}
 {{- if eq .showToc true }}{{ partial "toc.html" $page }}{{ end }}
-{{- if eq .showSource true }}{{ partial "article-source-attribution.html" $page }}{{ end }}
 
 {{- if eq .metaVariant "single" }}
 <div class="article-meta">
@@ -45,9 +44,17 @@
   · {{ $page.ReadingTime }} min lukuaika
 </div>
 {{- end }}
+{{- if eq .showSource true }}{{ partial "article-source-attribution.html" $page }}{{ end }}
 <div class="{{ $contentClass }}">
   {{ $page.Content }}
 </div>
+
+{{- if and (eq .showSource true) (not $page.Params.source_url) (not $page.Params.journalist_note) }}
+{{- $fallbackSource := $page.Params.source_name | default $page.Params.source_domain -}}
+<div class="article-end-note">
+  <p>{{ with $fallbackSource }}Tämä juttu perustuu lähteeseen {{ . }} ja muuhun toimitukselliseen taustoitukseen.{{ else }}Tämä juttu perustuu useisiin uutislähteisiin ja on koottu tiiviiksi kokonaisuudeksi.{{ end }}</p>
+</div>
+{{- end }}
 
 {{ partial "article-outro-topic-prompt.html" $page }}
 
