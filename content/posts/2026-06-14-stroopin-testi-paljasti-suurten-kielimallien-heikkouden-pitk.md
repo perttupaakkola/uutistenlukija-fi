@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/klassinen-psykologiatesti-paljasti-tekoalyn-hakellyttavan-heikkouden/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
