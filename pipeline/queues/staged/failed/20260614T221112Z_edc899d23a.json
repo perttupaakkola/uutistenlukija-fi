@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-14T22:11:12.205976+00:00",
+  "digest": "edc899d23a",
+  "packet": {
+    "packet_id": "20260614T221112Z_edc899d23a",
+    "created_at": "2026-06-14T22:11:12Z",
+    "headline_seed": "Kynttilät sytyttivät asuntopalon Vantaan Myyrmäessä",
+    "description_seed": "Naapurin valppaus pelasti kerrostaloasunnon suuremmilta tuhoilta kynttilöistä alkaneessa palossa Vantaalla.",
+    "link": "https://yle.fi/a/74-20231496?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20231496?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kynttilät sytyttivät asuntopalon Vantaan Myyrmäessä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 123,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kynttilät sytyttivät asuntopalon Vantaan Myyrmäessä",
+      "description": "Naapurin valppaus pelasti kerrostaloasunnon suuremmilta tuhoilta kynttilöistä alkaneessa palossa Vantaalla.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kynttilät sytyttivät asuntopalon Vantaan Myyrmäessä",
+    "description": "Naapurin valppaus pelasti kerrostaloasunnon suuremmilta tuhoilta kynttilöistä alkaneessa palossa Vantaalla.",
+    "link": "https://yle.fi/a/74-20231496?origin=rss",
+    "published": "2026-06-15T00:17:09+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "f75af58ea7d4e7c59ea86817186a9f80",
+    "_url_hash": "ed9d4bc829d8fddc5137e5dd76de73650c24539bfb5f58c1d13af1173c20fc4c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle Uutiset]\nKerrostaloasunnossa syttyi sunnuntai-iltana tulipalo Vantaa Myyrmäessä. Palo ei vaatinut henkilövahinkoja.\n\nPelastuslaitoksen mukaan naapuri oli kuullut palovaroittimen äänen ja lähtenyt selvittämään tilannetta, jolloin hän havaitsi alakerran huoneistossa savua.\n\nAsunnossa ei ollut ketään paikalla, ja pelastuslaitos joutui murtamaan oven päästäkseen sisään asuinhuoneistoon.\n\nAsunnon haltija oli lähtiessään jättänyt kynttilät palamaan puisen laatikoston päälle, jonka seurauksena lähellä olleet paperit olivat syttyneet tuleen. Palo ei ehtinyt levitä laajemmalle huoneistoon ja vahingot jäivät pieniksi.\n\nPelastuslaitoksen mukaan tilanteessa oli ainekset huomattavasti suurempaan onnettomuuteen, mutta naapurin esimerkillisen toiminnan ansiosta tällä kertaa selvittiin vähällä.\n\n– On erittäin tärkeää, että kynttilöitä ei jätetä vartioimatta, sillä palo voi levitä nopeasti. Lisäksi myöskään pesukoneita tai kuivausrumpuja ei tule jättää yksin pyörimään kotoa poistuessa, muistuttaa pelastuslaitos.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-14T22:13:18.660601+00:00",
+  "failure": "Lähdeaineisto puuttuu lähes kokonaan: paketissa ei ole lähdetekstiä, ajankohtaa, tarkkaa paikkaa, vahinkoja tai viranomaisvahvistusta artikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260614T221112Z_edc899d23a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu lähes kokonaan: paketissa ei ole lähdetekstiä, ajankohtaa, tarkkaa paikkaa, vahinkoja tai viranomaisvahvistusta artikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
