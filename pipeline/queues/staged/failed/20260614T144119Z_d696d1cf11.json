@@ -1,0 +1,188 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-14T14:41:19.033753+00:00",
+  "digest": "d696d1cf11",
+  "packet": {
+    "packet_id": "20260614T144119Z_d696d1cf11",
+    "created_at": "2026-06-14T14:41:19Z",
+    "headline_seed": "Teen shot and buses torched in Manhattan after historic NBA win for Knicks",
+    "description_seed": "At least 63 people were arrested in the disorder after the Knicks beat the Spurs to clinch the title.",
+    "link": "https://www.bbc.com/news/articles/c8623n5pq2vo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "Yahoo Sports"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c8623n5pq2vo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Teen shot and buses torched in Manhattan after historic NBA win for Knicks"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "At least 63 people were arrested in the disorder after the Knicks beat the Spurs to clinch the title.",
+        "word_count": 19,
+        "keyword_overlap": 11,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A teenager was shot and buses destroyed during chaotic scenes in New York City that marred jubilant celebrations for the Knicks' historic NBA championship win. The New York Knicks beat the San Antonio Spurs 94–90 in game five on Saturday to clinch the title for the first time in more than half a century. The game was in Texas, but New Yorkers took to their hometown streets in droves to toast the milestone for fans and the city. As crowds swelled into the early hours, gunfire rang out near Times Square, a 17-year-old was wounded and school buses that had transported World Cup fans were torched. It is unclear if anyone was hurt in that incident. Knicks owner James Dolan had called for restraint following his team's victory against the Spurs in San Antonio on Saturday night.",
+        "word_count": 137,
+        "keyword_overlap": 10,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "\"We need to tell everybody in New York that we know that they're celebrating, we want them to have a great time,\" said Dolan, interrupting Knicks player Josh Hart's news conference. \"Please be safe. Don't get hurt, don't hurt anybody.\" But celebrations turned violent as fans spilling out of bars and viewing parties clashed with officers in Midtown Manhattan. In a statement to the BBC, the NYPD said crowds became \"increasingly destructive\" with \"many incidents of incredibly reckless and dangerous behaviour\". Five yellow school buses were set alight or destroyed with bats and people jumping on them, the force said. They had been used to shuttle World Cup football fans back to Times Square following a match between Brazil and Morocco.",
+        "word_count": 121,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Yahoo Sports",
+        "source_type": "research",
+        "text": "A 17-year-old boy was shot amid the chaos in Times Square early Sunday after the Knicks’ historic NBA championship win, police said. The teen was shot in the foot at about 2 a.m. at W. 42nd St. and Broadway, police said. An NYPD vehicle took him to Bellevue Hospital because the rampaging crowds of fans around Times Square prevented ambulance access, cops said. Police took three persons of interest into custody, with charges against them pending. Cops recovered a gun from the scene. The shooting comes as out-of-control fans lit a school bus connected to the World Cup on fire nearby, set off fireworks and damaged vehicles. There were 63 arrests.",
+        "word_count": 111,
+        "keyword_overlap": 6,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "At least 63 people were arrested in the disorder after the Knicks beat the Spurs to clinch the title.\n\nA teenager was shot and buses destroyed during chaotic scenes in New York City that marred jubilant celebrations for the Knicks' historic NBA championship win. The New York Knicks beat the San Antonio Spurs 94–90 in game five on Saturday to clinch the title for the first time in more than half a century. The game was in Texas, but New Yorkers took to their hometown streets in droves to toast the milestone for fans and the city. As crowds swelled into the early hours, gunfire rang out near Times Square, a 17-year-old was wounded and school buses that had transported World Cup fans were torched. It is unclear if anyone was hurt in that incident. Knicks owner James Dolan had called for restraint following his team's victory against the Spurs in San Antonio on Saturday night.\n\n\"We need to tell everybody in New York that we know that they're celebrating, we want them to have a great time,\" said Dolan, interrupting Knicks player Josh Hart's news conference. \"Please be safe. Don't get hurt, don't hurt anybody.\" But celebrations turned violent as fans spilling out of bars and viewing parties clashed with officers in Midtown Manhattan. In a statement to the BBC, the NYPD said crowds became \"increasingly destructive\" with \"many incidents of incredibly reckless and dangerous behaviour\". Five yellow school buses were set alight or destroyed with bats and people jumping on them, the force said. They had been used to shuttle World Cup football fans back to Times Square following a match between Brazil and Morocco.\n\nA 17-year-old boy was shot amid the chaos in Times Square early Sunday after the Knicks’ historic NBA championship win, police said. The teen was shot in the foot at about 2 a.m. at W. 42nd St. and Broadway, police said. An NYPD vehicle took him to Bellevue Hospital because the rampaging crowds of fans around Times Square prevented ambulance access, cops said. Police took three persons of interest into custody, with charges against them pending. Cops recovered a gun from the scene. The shooting comes as out-of-control fans lit a school bus connected to the World Cup on fire nearby, set off fireworks and damaged vehicles. There were 63 arrests.",
+    "source_diagnostics": {
+      "candidate_blocks": 6,
+      "candidate_source_words": 543,
+      "selected_blocks": 4,
+      "selected_source_words": 388,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Yahoo Sports",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Yahoo Sports"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Teen shot and buses torched in Manhattan after historic NBA win for Knicks",
+      "description": "At least 63 people were arrested in the disorder after the Knicks beat the Spurs to clinch the title.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Teen shot and buses torched in Manhattan after historic NBA win for Knicks",
+    "description": "At least 63 people were arrested in the disorder after the Knicks beat the Spurs to clinch the title.",
+    "link": "https://www.bbc.com/news/articles/c8623n5pq2vo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-14T14:08:03+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "855c81b4b2930bc0e40bc3b57f48f148",
+    "_url_hash": "d78e4ec45efb622186e06a24388eecb5b3d1990aa70150c6b171ef47dce3fc88",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA teenager was shot and buses destroyed during chaotic scenes in New York City that marred jubilant celebrations for the Knicks' historic NBA championship win.\n\nThe New York Knicks beat the San Antonio Spurs 94–90 in game five on Saturday to clinch the title for the first time in more than half a century.\n\nThe game was in Texas, but New Yorkers took to their hometown streets in droves to toast the milestone for fans and the city.\n\nAs crowds swelled into the early hours, gunfire rang out near Times Square, a 17-year-old was wounded and school buses that had transported World Cup fans were torched. It is unclear if anyone was hurt in that incident.\n\nKnicks owner James Dolan had called for restraint following his team's victory against the Spurs in San Antonio on Saturday night.\n\n\"We need to tell everybody in New York that we know that they're celebrating, we want them to have a great time,\" said Dolan, interrupting Knicks player Josh Hart's news conference. \"Please be safe. Don't get hurt, don't hurt anybody.\"\n\nBut celebrations turned violent as fans spilling out of bars and viewing parties clashed with officers in Midtown Manhattan.\n\nIn a statement to the BBC, the NYPD said crowds became \"increasingly destructive\" with \"many incidents of incredibly reckless and dangerous behaviour\".\n\nFive yellow school buses were set alight or destroyed with bats and people jumping on them, the force said.\n\nThey had been used to shuttle World Cup football fans back to Times Square following a match between Brazil and Morocco.\n\nRevellers were photographed swarming and climbing on to the roofs of the buses, with some also getting inside the vehicles and posing for photos.\n\nBystanders gathered around one of the buses, some taking pictures and videos, as it was engulfed in flames.\n\nPolice cars were also targeted, the NYPD said, with some people using bats to damage them and jumping on top of them, shattering windshields.\n\nGunshots were reported near 42nd Street and Broadway at around 02:00 EDT (06:00 GMT) on Sunday, prompting people to run for cover.\n\nA 17-year-old boy was shot in the foot, officials said. Preliminary reports indicated no fatalities.\n\nThe victim was transported to hospital in an NYPD vehicle as an ambulance couldn't access 43rd Street because of the crowds, police said.\n\nThree people of interest were taken into custody and a firearm recovered from the scene.\n\nPolice said other disorder included four slashings/stabbings, destruction of private vehicles, people l\n\n---\n\n[Lähde: Yahoo Sports]\nA 17-year-old boy was shot amid the chaos in Times Square early Sunday after the Knicks’ historic NBA championship win, police said.\n\nThe teen was shot in the foot at about 2 a.m. at W. 42nd St. and Broadway, police said. An NYPD vehicle took him to Bellevue Hospital because the rampaging crowds of fans around Times Square prevented ambulance access, cops said.\n\nPolice took three persons of interest into custody, with charges against them pending. Cops recovered a gun from the scene.\n\nThe shooting comes as out-of-control fans lit a school bus connected to the World Cup on fire nearby, set off fireworks and damaged vehicles. There were 63 arrests.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-14T14:44:56.158250+00:00",
+  "failure": "content too short: 243 words",
+  "payload": {
+    "packet_id": "20260614T144119Z_d696d1cf11",
+    "title": "Teini haavoittui ampumisessa ja busseja sytytettiin tuleen Knicksin mestaruusjuhlien jälkeen",
+    "summary": "New York Knicksin historiallinen NBA-mestaruus johti Manhattanilla levottomiin juhliin, joissa 17-vuotias poika haavoittui ampumisessa, koulubusseja tuhottiin ja ainakin 63 ihmistä pidätettiin.",
+    "content": "New York Knicksin ensimmäinen NBA-mestaruus yli puoleen vuosisataan sai New Yorkissa aikaan laajat juhlat, jotka muuttuivat Manhattanilla väkivaltaisiksi varhain sunnuntaina. Poliisin mukaan 17-vuotias poika haavoittui ampumisessa Times Squaren lähellä, viisi keltaista koulubussia sytytettiin tuleen tai tuhottiin, ja levottomuuksien yhteydessä tehtiin ainakin 63 pidätystä.\n\n## Mestaruus ratkesi Texasissa\n\nKnicks voitti San Antonio Spursin 94–90 viidennessä ottelussa lauantaina ja varmisti mestaruuden San Antoniossa. Vaikka ottelu pelattiin Texasissa, New Yorkissa suuri määrä kannattajia kokoontui kaduille, baareihin ja katsomotilaisuuksiin juhlimaan seuran pitkään odotettua mestaruutta.\n\nJoukkueen omistaja James Dolan vetosi voiton jälkeen kannattajiin, jotta juhlat pysyisivät turvallisina. Hän keskeytti Knicks-pelaaja Josh Hartin tiedotustilaisuuden ja sanoi haluavansa newyorkilaisten juhlivan, mutta pyysi ihmisiä välttämään vahingoittamasta itseään tai muita.\n\n## Ampuminen Times Squaren lähellä\n\nPoliisin mukaan 17-vuotias poika ammuttiin jalkaan noin kello kahdelta aamuyöllä West 42nd Streetin ja Broadwayn alueella. Hänet vietiin Bellevue-sairaalaan poliisiautolla, koska Times Squaren ympärille kerääntyneet väkijoukot estivät ambulanssin pääsyn paikalle.\n\nPoliisi otti tapaukseen liittyen kiinni kolme kiinnostuksen kohteena olevaa henkilöä. Heitä koskevat mahdolliset syytteet olivat vielä kesken. Paikalta löydettiin myös ase.\n\n## Bussit tuhoutuivat levottomuuksissa\n\nNYPD:n mukaan väkijoukot muuttuivat illan ja yön aikana yhä tuhoisammiksi. Poliisin mukaan alueella nähtiin vaarallista ja vastuutonta käytöstä, kun osa juhlijoista otti yhteen virkavallan kanssa Midtown Manhattanilla, ampui ilotulitteita ja vahingoitti ajoneuvoja.\n\nPoliisin mukaan viisi keltaista koulubussia sytytettiin tuleen tai rikottiin muun muassa mailoilla ja hyppimällä niiden päällä. Busseja oli käytetty kuljettamaan jalkapallon MM-tapahtuman kannattajia takaisin Times Squarelle Brasilian ja Marokon välisen ottelun jälkeen. Ei ollut selvää, loukkaantuiko kukaan bussien tuhoamisen yhteydessä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "New York",
+      "NBA",
+      "New York Knicks",
+      "Manhattan",
+      "Times Square",
+      "poliisi"
+    ],
+    "summary_bullets": [
+      "New York Knicks varmisti ensimmäisen NBA-mestaruutensa yli 50 vuoteen voitettuaan San Antonio Spursin 94–90.",
+      "Manhattanin juhlat muuttuivat levottomiksi varhain sunnuntaina, ja poliisin mukaan ainakin 63 ihmistä pidätettiin.",
+      "17-vuotias poika haavoittui ampumisessa Times Squaren lähellä, ja viisi koulubussia sytytettiin tuleen tai tuhottiin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin tietoihin. Luokaksi vaihdettu Ulkomaat, koska tapahtumat sijoittuvat New Yorkiin eikä Suomeen."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260614T144119Z_d696d1cf11\",\n  \"title\": \"Teini haavoittui ampumisessa ja busseja sytytettiin tuleen Knicksin mestaruusjuhlien jälkeen\",\n  \"summary\": \"New York Knicksin historiallinen NBA-mestaruus johti Manhattanilla levottomiin juhliin, joissa 17-vuotias poika haavoittui ampumisessa, koulubusseja tuhottiin ja ainakin 63 ihmistä pidätettiin.\",\n  \"content\": \"New York Knicksin ensimmäinen NBA-mestaruus yli puoleen vuosisataan sai New Yorkissa aikaan laajat juhlat, jotka muuttuivat Manhattanilla väkivaltaisiksi varhain sunnuntaina. Poliisin mukaan 17-vuotias poika haavoittui ampumisessa Times Squaren lähellä, viisi keltaista koulubussia sytytettiin tuleen tai tuhottiin, ja levottomuuksien yhteydessä tehtiin ainakin 63 pidätystä.\\n\\n## Mestaruus ratkesi Texasissa\\n\\nKnicks voitti San Antonio Spursin 94–90 viidennessä ottelussa lauantaina ja varmisti mestaruuden San Antoniossa. Vaikka ottelu pelattiin Texasissa, New Yorkissa suuri määrä kannattajia kokoontui kaduille, baareihin ja katsomotilaisuuksiin juhlimaan seuran pitkään odotettua mestaruutta.\\n\\nJoukkueen omistaja James Dolan vetosi voiton jälkeen kannattajiin, jotta juhlat pysyisivät turvallisina. Hän keskeytti Knicks-pelaaja Josh Hartin tiedotustilaisuuden ja sanoi haluavansa newyorkilaisten juhlivan, mutta pyysi ihmisiä välttämään vahingoittamasta itseään tai muita.\\n\\n## Ampuminen Times Squaren lähellä\\n\\nPoliisin mukaan 17-vuotias poika ammuttiin jalkaan noin kello kahdelta aamuyöllä West 42nd Streetin ja Broadwayn alueella. Hänet vietiin Bellevue-sairaalaan poliisiautolla, koska Times Squaren ympärille kerääntyneet väkijoukot estivät ambulanssin pääsyn paikalle.\\n\\nPoliisi otti tapaukseen liittyen kiinni kolme kiinnostuksen kohteena olevaa henkilöä. Heitä koskevat mahdolliset syytteet olivat vielä kesken. Paikalta löydettiin myös ase.\\n\\n## Bussit tuhoutuivat levottomuuksissa\\n\\nNYPD:n mukaan väkijoukot muuttuivat illan ja yön aikana yhä tuhoisammiksi. Poliisin mukaan alueella nähtiin vaarallista ja vastuutonta käytöstä, kun osa juhlijoista otti yhteen virkavallan kanssa Midtown Manhattanilla, ampui ilotulitteita ja vahingoitti ajoneuvoja.\\n\\nPoliisin mukaan viisi keltaista koulubussia sytytettiin tuleen tai rikottiin muun muassa mailoilla ja hyppimällä niiden päällä. Busseja oli käytetty kuljettamaan jalkapallon MM-tapahtuman kannattajia takaisin Times Squarelle Brasilian ja Marokon välisen ottelun jälkeen. Ei ollut selvää, loukkaantuiko kukaan bussien tuhoamisen yhteydessä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"New York\",\n    \"NBA\",\n    \"New York Knicks\",\n    \"Manhattan\",\n    \"Times Square\",\n    \"poliisi\"\n  ],\n  \"summary_bullets\": [\n    \"New York Knicks varmisti ensimmäisen NBA-mestaruutensa yli 50 vuoteen voitettuaan San Antonio Spursin 94–90.\",\n    \"Manhattanin juhlat muuttuivat levottomiksi varhain sunnuntaina, ja poliisin mukaan ainakin 63 ihmistä pidätettiin.\",\n    \"17-vuotias poika haavoittui ampumisessa Times Squaren lähellä, ja viisi koulubussia sytytettiin tuleen tai tuhottiin.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketissa annettuihin tietoihin. Luokaksi vaihdettu Ulkomaat, koska tapahtumat sijoittuvat New Yorkiin eikä Suomeen.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260614T144119Z_d696d1cf11",
+    "category": "Kotimaa",
+    "selected_source_words": 388,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 243,
+    "issues": [
+      "content too short: 243 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Teini haavoittui ampumisessa ja busseja sytytettiin tuleen Knicksin mestaruusjuhlien jälkeen",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-14T14:44:56.157956+00:00",
+    "repair_trigger": "pre_repair_word_count=243; selected_source_words=388; selected_source_blocks=4",
+    "pre_repair_word_count": 243,
+    "pre_repair_lead_word_count": 43,
+    "post_repair_word_count": 243,
+    "post_repair_lead_word_count": 43,
+    "selected_source_words_at_repair": 388,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 388,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 243 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:9fb57fd4ec",
+      "2:BBC World:fefab38b6a",
+      "3:BBC World:cdecbd4f37",
+      "4:Yahoo Sports:449d18cef6"
+    ],
+    "final_issues": [
+      "content too short: 243 words"
+    ],
+    "recovered": false
+  }
+}
