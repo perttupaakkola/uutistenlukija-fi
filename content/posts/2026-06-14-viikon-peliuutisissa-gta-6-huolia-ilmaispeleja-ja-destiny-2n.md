@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/gta-6n-pelataan-mullistavan-peliteollisuuden-jaossa-ilmaispeleja-muistokirjoitus-destiny-2lle-10-uutista-jotka-talta-viikolta-pitaa-lukea/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
