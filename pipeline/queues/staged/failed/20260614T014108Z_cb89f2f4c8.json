@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-14T01:41:08.972373+00:00",
+  "digest": "cb89f2f4c8",
+  "packet": {
+    "packet_id": "20260614T014108Z_cb89f2f4c8",
+    "created_at": "2026-06-14T01:41:08Z",
+    "headline_seed": "Henri Neuvosen keski-iso yhtiö on ostanut Suomessa jo 1300 asuntoa tänä vuonna, vaikka toiset kiihdyttävät karkuun – Näin hän perustelee",
+    "description_seed": "Sijoitusasunnot.com ostaa kokonaisia kerrostaloja. Voittoja voi tehdä taantuvillakin paikkakunnilla, Henri Neuvonen sanoo ja kertoo, miten.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/d56d3fc6-6349-45d1-a6e0-1e38a7195311",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/d56d3fc6-6349-45d1-a6e0-1e38a7195311"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.47,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Henri Neuvosen keski-iso yhtiö on ostanut Suomessa jo 1300 asuntoa tänä vuonna, vaikka toiset kiihdyttävät karkuun – Näin hän perustelee"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Sijoitusasunnot.com ostaa kokonaisia kerrostaloja. Voittoja voi tehdä taantuvillakin paikkakunnilla, Henri Neuvonen sanoo ja kertoo, miten.",
+        "word_count": 15,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Sijoitusasunnot.com ostaa kokonaisia kerrostaloja. Voittoja voi tehdä taantuvillakin paikkakunnilla, Henri Neuvonen sanoo ja kertoo, miten.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 30,
+      "selected_blocks": 1,
+      "selected_source_words": 15,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Henri Neuvosen keski-iso yhtiö on ostanut Suomessa jo 1300 asuntoa tänä vuonna, vaikka toiset kiihdyttävät karkuun – Näin hän perustelee",
+      "description": "Sijoitusasunnot.com ostaa kokonaisia kerrostaloja. Voittoja voi tehdä taantuvillakin paikkakunnilla, Henri Neuvonen sanoo ja kertoo, miten.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Henri Neuvosen keski-iso yhtiö on ostanut Suomessa jo 1300 asuntoa tänä vuonna, vaikka toiset kiihdyttävät karkuun – Näin hän perustelee",
+    "description": "Sijoitusasunnot.com ostaa kokonaisia kerrostaloja. Voittoja voi tehdä taantuvillakin paikkakunnilla, Henri Neuvonen sanoo ja kertoo, miten.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/d56d3fc6-6349-45d1-a6e0-1e38a7195311",
+    "published": "2026-06-14T01:35:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "10361d9f879c4db533cf65432d5a38b1",
+    "_url_hash": "9fef867b2c1242c6edb562329d077089b00841a5d9132c99e8c88d92e21f0ef1",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Sijoitusasunnot.com ostaa kokonaisia kerrostaloja. Voittoja voi tehdä taantuvillakin paikkakunnilla, Henri Neuvonen sanoo ja kertoo, miten.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-14T01:43:16.671406+00:00",
+  "failure": "Lähdeaineisto on liian niukka: paketissa on vain lyhyt kuvaus ilman riittäviä tarkistettavia tietoja 250 sanan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260614T014108Z_cb89f2f4c8\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: paketissa on vain lyhyt kuvaus ilman riittäviä tarkistettavia tietoja 250 sanan uutiseen.\"}"
+}
