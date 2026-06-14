@@ -66,6 +66,7 @@ MOBILE_SURFACE_LINK_GUARDS = [
     ".category-article-card h3",
     ".talous-rail__header .see-all",
     ".talous-rail__card h3 a",
+    ".category-focus-panel",
 ]
 
 CONTRAST_GUARDS = [
