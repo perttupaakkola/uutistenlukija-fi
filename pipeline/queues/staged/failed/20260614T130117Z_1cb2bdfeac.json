@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-14T13:01:17.142111+00:00",
+  "digest": "1cb2bdfeac",
+  "packet": {
+    "packet_id": "20260614T130117Z_1cb2bdfeac",
+    "created_at": "2026-06-14T13:01:17Z",
+    "headline_seed": "Koirat | Tuhansien eurojen pikkukoira yleistyy Suomessa, asiantuntija tyrmää",
+    "description_seed": "Pomsky on noussut someajan trendikoiraksi, jonka pennuista maksetaan tuhansia euroja. Kennelliiton asiantuntijan mukaan sen suosioon liittyy ongelmia, joita moni ostaja ei välttämättä tule ajatelleeksi.",
+    "link": "https://www.hs.fi/suomi/art-2000012064177.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/suomi/art-2000012064177.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Koirat | Tuhansien eurojen pikkukoira yleistyy Suomessa, asiantuntija tyrmää"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Pomsky on noussut someajan trendikoiraksi, jonka pennuista maksetaan tuhansia euroja. Kennelliiton asiantuntijan mukaan sen suosioon liittyy ongelmia, joita moni ostaja ei välttämättä tule ajatelleeksi.",
+        "word_count": 24,
+        "keyword_overlap": 20,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Pomsky on noussut someajan trendikoiraksi, jonka pennuista maksetaan tuhansia euroja. Kennelliiton asiantuntijan mukaan sen suosioon liittyy ongelmia, joita moni ostaja ei välttämättä tule ajatelleeksi.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 48,
+      "selected_blocks": 1,
+      "selected_source_words": 24,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Koirat | Tuhansien eurojen pikkukoira yleistyy Suomessa, asiantuntija tyrmää",
+      "description": "Pomsky on noussut someajan trendikoiraksi, jonka pennuista maksetaan tuhansia euroja. Kennelliiton asiantuntijan mukaan sen suosioon liittyy ongelmia, joita moni ostaja ei välttämättä tule ajatelleeksi.",
+      "category_hint": "Uutiset",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Koirat | Tuhansien eurojen pikkukoira yleistyy Suomessa, asiantuntija tyrmää",
+    "description": "Pomsky on noussut someajan trendikoiraksi, jonka pennuista maksetaan tuhansia euroja. Kennelliiton asiantuntijan mukaan sen suosioon liittyy ongelmia, joita moni ostaja ei välttämättä tule ajatelleeksi.",
+    "link": "https://www.hs.fi/suomi/art-2000012064177.html",
+    "published": "2026-06-14T12:38:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "0676a5cb45c7d36999476c1059222acc",
+    "_url_hash": "dcccf7ba45529969e868892faeea383d310fe18219fdc7f1a3002226025fbe2a",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Pomsky on noussut someajan trendikoiraksi, jonka pennuista maksetaan tuhansia euroja. Kennelliiton asiantuntijan mukaan sen suosioon liittyy ongelmia, joita moni ostaja ei välttämättä tule ajatelleeksi.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-14T13:03:17.593739+00:00",
+  "failure": "Lähdeaineisto on liian niukka eikä sisällä riittävästi varmennettuja yksityiskohtia 250 sanan julkaistavaan uutiseen ilman täydennyksiä tai keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260614T130117Z_1cb2bdfeac\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka eikä sisällä riittävästi varmennettuja yksityiskohtia 250 sanan julkaistavaan uutiseen ilman täydennyksiä tai keksittyjä tietoja.\"}"
+}
