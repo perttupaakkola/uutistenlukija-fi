@@ -9,6 +9,7 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 summary: "Traficom varoittaa Facebookissa leviävästä huijauksesta"
+description: "Traficomin Kyberturvallisuuskeskus varoittaa yrityksiin kohdistuvasta huijauksesta, jossa rikolliset yrittävät siirtää keskustelun WhatsAppiin."
 summary_bullets:
   - "Traficom varoittaa Facebookissa leviävästä huijauksesta Traficom varoittaa Facebookissa leviävästä"
   - "Huijarit hyödyntävät rikoksissaan yhä useammin suosittuja"

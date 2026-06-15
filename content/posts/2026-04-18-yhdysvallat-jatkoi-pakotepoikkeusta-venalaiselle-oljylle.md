@@ -9,6 +9,7 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 summary: "Myönnytyksellä pyritään hillitsemään Iranin sodan seurauksena jyrkkään nousuun lähteneitä energiahintoja."
+description: "Yhdysvallat jatkaa poikkeuslupaa venäläisen öljyn ostolle merellä, jotta Iranin sodan nostamia energiahintoja saataisiin hillittyä."
 summary_bullets:
   - "Myönnytyksellä pyritään hillitsemään Iranin sodan seurauksena jyrkkään nousuun"
   - "## Tilannekuva Myönnytyksellä pyritään hillitsemään Iranin sodan seurauksena jyrkkään nousuun"

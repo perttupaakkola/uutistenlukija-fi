@@ -9,6 +9,7 @@ author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
 summary: "Toimeentulotuen tarve kasvaa kevään aikana useimmilla hyvinvointialueilla. Varautuminen tukihakemusten määrän kasvuun kävi ilmi Ylen hyvinvointialueille tekemästä kyselystä. Toimeentulotuen tarve kasvaa kevään aikana use"
+description: "Ylen kyselyn mukaan useat hyvinvointialueet varautuvat toimeentulotuen hakemusten kasvuun sosiaaliturvan kiristysten ja taloustilanteen takia."
 summary_bullets:
   - "Toimeentulotuen tarve kasvaa kevään aikana useimmilla hyvinvointialueilla"
   - "Varautuminen tukihakemusten määrän kasvuun kävi ilmi Ylen hyvinvointialueille tekemästä kyselystä"
