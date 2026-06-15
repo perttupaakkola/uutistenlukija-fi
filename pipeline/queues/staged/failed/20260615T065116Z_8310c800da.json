@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T06:51:16.464716+00:00",
+  "digest": "8310c800da",
+  "packet": {
+    "packet_id": "20260615T065116Z_8310c800da",
+    "created_at": "2026-06-15T06:51:16Z",
+    "headline_seed": "Sebastian Ahon ketjukaveri otti kaiken ilon irti mestaruushumusta – katso hulvaton video",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9538111",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9538111"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sebastian Ahon ketjukaveri otti kaiken ilon irti mestaruushumusta – katso hulvaton video"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 115,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sebastian Ahon ketjukaveri otti kaiken ilon irti mestaruushumusta – katso hulvaton video",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Sebastian Ahon ketjukaveri otti kaiken ilon irti mestaruushumusta – katso hulvaton video",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9538111",
+    "published": "2026-06-15T09:08:23+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "badb318cf4672e69a835a7b790b25bc1",
+    "_url_hash": "689729f13e9d459a24ead12da187c586575518381a9b286ee12ba612c76de75c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Helsingin Uutiset]\nCarolina Hurricanes varmisti NHL:n Stanley Cup -mestaruuden varhain maanantaiaamuna Suomen aikaa, kun se päihitti ratkaisevassa kuudennessa finaalitaistossa Vegas Golden Knightsin maalein 3–0. Mestaruus on Carolinalle seurahistorian toinen. Edellisen kerran joukkue nosti NHL:n voittopokaalia tasan 20 vuotta sitten.\n\nYksi mestaruushumun huvittavimmista hetkistä nähtiin, kun joukkueen venäläistähti Andrei Svetshnikov jäi makoilemaan kaukaloon keskelle konfettisadetta. Maassa selällään lojunut hyökkääjä teki käsillään liikettä, joka muistutti lumienkelin tekemistä – ele kuvasi osuvasti mestaruuden tuomaa iloa ja helpotusta.\n\nANDREI SVECHNIKOV YOU ARE UNREAL pic.twitter.com/u1PHgJXM1A\n\n26-vuotias Svetshnikov on edustanut Hurricanesia kaudesta 2018–2019 lähtien. Kuluneella kaudella hän pelasi runkosarjassa 79 ottelua tehopistein 31+39. Pudotuspeleissä pelejä kertyi 18, joissa hän merkkautti tehot 6+5.\n\nMestaruutta juhlivat Hurricanesin riveissä myös suomalaispelaajat Sebastian Aho ja Jesperi Kotkaniemi.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-15T06:53:20.043905+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä eikä varmistettuja perustietoja jutun kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260615T065116Z_8310c800da\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä eikä varmistettuja perustietoja jutun kirjoittamiseen.\"}"
+}
