@@ -1,0 +1,210 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T03:21:16.072912+00:00",
+  "digest": "9d373cfce6",
+  "packet": {
+    "packet_id": "20260615T032116Z_9d373cfce6",
+    "created_at": "2026-06-15T03:21:16Z",
+    "headline_seed": "Oil prices slide after Pakistan announces deal between US and Iran",
+    "description_seed": "Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.",
+    "link": "https://www.bbc.com/news/articles/c6217106px6o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c6217106px6o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Oil prices slide after Pakistan announces deal between US and Iran"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.",
+        "word_count": 17,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Oil prices fell in Asia on Monday after Pakistan, which has been mediating an end to the US-Iran war, announced a deal that President Donald Trump said would see the reopening of the key Strait of Hormuz shipping route. Brent crude, the global oil benchmark, was 4.8% lower at $83.18 (£61.89) a barrel, while US-traded oil was down 5.6% at $80.13. Pakistan's prime minister Shehbaz Sharif said an official signing ceremony would be held on Friday, 19 June in Switzerland. Iran's Deputy Foreign Minister Kazem Gharibabadi confirmed in a phone call on state TV that a deal with the US had been finalised, while Trump posted on social media \"let the oil flow!\".",
+        "word_count": 113,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "But Vandana Hari from energy markets analysis firm Vanda Insights said a lack of detail on what has been agreed \"is likely to inject unease and uncertainty into the market.\" This could mean a week of uncertainty and volatility for the oil market, she added. The Strait of Hormuz had been effectively closed since shortly after the US and Israel launched airstrikes on Iran on 28 February. Tehran had threatened to attack vessels using the crucial waterway, through which around 20% of the world's oil and liquefied natural gas (LNG) normally passes. Global energy markets have been on a wild ride in recent months, with prices often rising or falling sharply in response to developments in the US-Israel war with Iran.",
+        "word_count": 121,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Brent crude, which was trading at around $70 a barrel before the conflict started, peaked at about $120 during the war. Energy market experts have also warned that the movement of oil through the strait is unlikely to immediately return to pre-war levels. Andrew Lipow from consulting company Lipow Oil Associates said mines would first need to cleared from the waterway, which could take from a few weeks to up to six months. He also said there is a large backlog of tankers waiting to use the waterway and that restarting oil production and getting the loading of ships back to normal levels could take weeks. Asian stock markets also rose on Monday as investors welcomed the deal.",
+        "word_count": 118,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.\n\nOil prices fell in Asia on Monday after Pakistan, which has been mediating an end to the US-Iran war, announced a deal that President Donald Trump said would see the reopening of the key Strait of Hormuz shipping route. Brent crude, the global oil benchmark, was 4.8% lower at $83.18 (£61.89) a barrel, while US-traded oil was down 5.6% at $80.13. Pakistan's prime minister Shehbaz Sharif said an official signing ceremony would be held on Friday, 19 June in Switzerland. Iran's Deputy Foreign Minister Kazem Gharibabadi confirmed in a phone call on state TV that a deal with the US had been finalised, while Trump posted on social media \"let the oil flow!\".\n\nBut Vandana Hari from energy markets analysis firm Vanda Insights said a lack of detail on what has been agreed \"is likely to inject unease and uncertainty into the market.\" This could mean a week of uncertainty and volatility for the oil market, she added. The Strait of Hormuz had been effectively closed since shortly after the US and Israel launched airstrikes on Iran on 28 February. Tehran had threatened to attack vessels using the crucial waterway, through which around 20% of the world's oil and liquefied natural gas (LNG) normally passes. Global energy markets have been on a wild ride in recent months, with prices often rising or falling sharply in response to developments in the US-Israel war with Iran.\n\nBrent crude, which was trading at around $70 a barrel before the conflict started, peaked at about $120 during the war. Energy market experts have also warned that the movement of oil through the strait is unlikely to immediately return to pre-war levels. Andrew Lipow from consulting company Lipow Oil Associates said mines would first need to cleared from the waterway, which could take from a few weeks to up to six months. He also said there is a large backlog of tankers waiting to use the waterway and that restarting oil production and getting the loading of ships back to normal levels could take weeks. Asian stock markets also rose on Monday as investors welcomed the deal.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 417,
+      "selected_blocks": 4,
+      "selected_source_words": 369,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Oil prices slide after Pakistan announces deal between US and Iran",
+      "description": "Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Oil prices slide after Pakistan announces deal between US and Iran",
+    "description": "Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.",
+    "link": "https://www.bbc.com/news/articles/c6217106px6o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-15T03:17:36+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f674048d0083fe19c49ab67a5151286e",
+    "_url_hash": "14f0bae25a8952b0d9548362c1a0db5599750fa0eb40a818d4dd08d6ec90be50",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nOil prices fell in Asia on Monday after Pakistan, which has been mediating an end to the US-Iran war, announced a deal that President Donald Trump said would see the reopening of the key Strait of Hormuz shipping route.\n\nBrent crude, the global oil benchmark, was 4.8% lower at $83.18 (£61.89) a barrel, while US-traded oil was down 5.6% at $80.13.\n\nPakistan's prime minister Shehbaz Sharif said an official signing ceremony would be held on Friday, 19 June in Switzerland.\n\nIran's Deputy Foreign Minister Kazem Gharibabadi confirmed in a phone call on state TV that a deal with the US had been finalised, while Trump posted on social media \"let the oil flow!\".\n\nBut Vandana Hari from energy markets analysis firm Vanda Insights said a lack of detail on what has been agreed \"is likely to inject unease and uncertainty into the market.\"\n\nThis could mean a week of uncertainty and volatility for the oil market, she added.\n\nThe Strait of Hormuz had been effectively closed since shortly after the US and Israel launched airstrikes on Iran on 28 February.\n\nTehran had threatened to attack vessels using the crucial waterway, through which around 20% of the world's oil and liquefied natural gas (LNG) normally passes.\n\nGlobal energy markets have been on a wild ride in recent months, with prices often rising or falling sharply in response to developments in the US-Israel war with Iran.\n\nBrent crude, which was trading at around $70 a barrel before the conflict started, peaked at about $120 during the war.\n\nEnergy market experts have also warned that the movement of oil through the strait is unlikely to immediately return to pre-war levels.\n\nAndrew Lipow from consulting company Lipow Oil Associates said mines would first need to cleared from the waterway, which could take from a few weeks to up to six months.\n\nHe also said there is a large backlog of tankers waiting to use the waterway and that restarting oil production and getting the loading of ships back to normal levels could take weeks.\n\nAsian stock markets also rose on Monday as investors welcomed the deal.\n\nJapan's Nikkei 225 share index was 5.4% higher in morning trade while the Kospi in South Korea was up by more than 5.5%.\n\nThe region was hit particularly hard by higher energy prices as it is heavily reliant on the Middle East for its oil and LNG supplies.",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-15T03:24:33.788960+00:00",
+  "payload": {
+    "packet_id": "20260615T032116Z_9d373cfce6",
+    "title": "Öljyn hinta laski Pakistanin ilmoitettua Yhdysvaltojen ja Iranin sopimuksesta",
+    "summary": "Öljyn hinta putosi Aasian kaupassa maanantaina, kun Pakistan ilmoitti Yhdysvaltojen ja Iranin välisestä sopimuksesta. Presidentti Donald Trumpin mukaan sopimus avaisi uudelleen Hormuzinsalmen, jonka kautta kulkee tavallisesti merkittävä osa maailman öljystä ja nesteytetystä maakaasusta.",
+    "content": "Öljyn hinta laski Aasiassa maanantaina sen jälkeen, kun Pakistan kertoi Yhdysvaltojen ja Iranin välisestä sopimuksesta. Pakistan on välittänyt ratkaisua Yhdysvaltojen ja Iranin sodan päättämiseksi, ja presidentti Donald Trumpin mukaan sopimus merkitsisi keskeisen Hormuzinsalmen laivareitin avaamista uudelleen.\n\n## Hinnat laskivat nopeasti\n\nKansainvälinen viitehinta Brent-raakaöljy oli 4,8 prosentin laskussa 83,18 dollarissa tynnyriltä. Yhdysvalloissa kaupankäynnin kohteena oleva öljy oli puolestaan 5,6 prosenttia alempana 80,13 dollarissa.\n\nPakistanin pääministeri Shehbaz Sharifin mukaan virallinen allekirjoitustilaisuus järjestetään perjantaina 19. kesäkuuta Sveitsissä. Iranin varaulkoministeri Kazem Gharibabadi vahvisti valtion televisiossa puhelimitse, että sopimus Yhdysvaltojen kanssa on viimeistelty. Trump kommentoi asiaa sosiaalisessa mediassa kehottamalla antamaan öljyn virrata.\n\nAasian osakemarkkinat nousivat maanantaina, kun sijoittajat ottivat sopimusuutisen vastaan myönteisesti. Energiamarkkinoilla reaktio näkyi nopeasti, koska Hormuzinsalmen sulkeutuminen on viime kuukausina lisännyt huolta öljyn ja nesteytetyn maakaasun kuljetuksista.\n\n## Hormuzinsalmen avaaminen voi kestää\n\nHormuzinsalmi on ollut käytännössä suljettuna pian sen jälkeen, kun Yhdysvallat ja Israel aloittivat ilmaiskut Iraniin 28. helmikuuta. Teheran oli uhannut hyökätä salmea käyttäviä aluksia vastaan. Reitin merkitys on suuri, sillä sen kautta kulkee tavallisesti noin viidennes maailman öljystä ja nesteytetystä maakaasusta.\n\nEnergiamarkkina-asiantuntijat varoittavat kuitenkin, ettei öljyliikenne välttämättä palaudu heti sotaa edeltävälle tasolle. Konsulttiyhtiö Lipow Oil Associatesin Andrew Lipowin mukaan salmesta olisi ensin raivattava miinat, mikä voisi kestää muutamasta viikosta jopa kuuteen kuukauteen. Lisäksi reittiä odottaa suuri määrä tankkereita, ja öljyntuotannon sekä laivojen lastauksen palautuminen normaaliksi voi viedä viikkoja.\n\n## Yksityiskohdat yhä epäselviä\n\nMarkkinoilla voi jatkua epävarmuus, koska sopimuksen tarkka sisältö ei ole vielä selvillä. Vanda Insightsin Vandana Harin mukaan yksityiskohtien puute voi lisätä levottomuutta ja heiluntaa öljymarkkinoilla tällä viikolla.\n\nBrent maksoi ennen konfliktin alkua noin 70 dollaria tynnyriltä ja kävi sodan aikana noin 120 dollarissa. Viime kuukausina hinnat ovat liikkuneet jyrkästi Yhdysvaltojen, Israelin ja Iranin sotaan liittyvien käänteiden mukaan.",
+    "category": "Ulkomaat",
+    "tags": [
+      "öljy",
+      "Iran",
+      "Yhdysvallat",
+      "Pakistan",
+      "Hormuzinsalmi",
+      "energiamarkkinat"
+    ],
+    "summary_bullets": [
+      "Brent-raakaöljy laski Aasiassa 4,8 prosenttia 83,18 dollariin tynnyriltä.",
+      "Pakistanin mukaan Yhdysvaltojen ja Iranin sopimus allekirjoitetaan perjantaina 19. kesäkuuta Sveitsissä.",
+      "Asiantuntijoiden mukaan Hormuzinsalmen liikenteen palautuminen normaaliksi voi kestää viikkoja tai kuukausia."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään valittuun lähdelohkoon. Keskeiset varaukset koskevat sopimuksen yksityiskohtien puutetta ja Hormuzinsalmen avaamisen aikataulun epävarmuutta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260615T032116Z_9d373cfce6\",\n  \"title\": \"Öljyn hinta laski Pakistanin ilmoitettua Yhdysvaltojen ja Iranin sopimuksesta\",\n  \"summary\": \"Öljyn hinta putosi Aasian kaupassa maanantaina, kun Pakistan ilmoitti Yhdysvaltojen ja Iranin välisestä sopimuksesta. Presidentti Donald Trumpin mukaan sopimus avaisi uudelleen Hormuzinsalmen, jonka kautta kulkee tavallisesti merkittävä osa maailman öljystä ja nesteytetystä maakaasusta.\",\n  \"content\": \"Öljyn hinta laski Aasiassa maanantaina sen jälkeen, kun Pakistan kertoi Yhdysvaltojen ja Iranin välisestä sopimuksesta. Pakistan on välittänyt ratkaisua Yhdysvaltojen ja Iranin sodan päättämiseksi, ja presidentti Donald Trumpin mukaan sopimus merkitsisi keskeisen Hormuzinsalmen laivareitin avaamista uudelleen.\\n\\n## Hinnat laskivat nopeasti\\n\\nKansainvälinen viitehinta Brent-raakaöljy oli 4,8 prosentin laskussa 83,18 dollarissa tynnyriltä. Yhdysvalloissa kaupankäynnin kohteena oleva öljy oli puolestaan 5,6 prosenttia alempana 80,13 dollarissa.\\n\\nPakistanin pääministeri Shehbaz Sharifin mukaan virallinen allekirjoitustilaisuus järjestetään perjantaina 19. kesäkuuta Sveitsissä. Iranin varaulkoministeri Kazem Gharibabadi vahvisti valtion televisiossa puhelimitse, että sopimus Yhdysvaltojen kanssa on viimeistelty. Trump kommentoi asiaa sosiaalisessa mediassa kehottamalla antamaan öljyn virrata.\\n\\nAasian osakemarkkinat nousivat maanantaina, kun sijoittajat ottivat sopimusuutisen vastaan myönteisesti. Energiamarkkinoilla reaktio näkyi nopeasti, koska Hormuzinsalmen sulkeutuminen on viime kuukausina lisännyt huolta öljyn ja nesteytetyn maakaasun kuljetuksista.\\n\\n## Hormuzinsalmen avaaminen voi kestää\\n\\nHormuzinsalmi on ollut käytännössä suljettuna pian sen jälkeen, kun Yhdysvallat ja Israel aloittivat ilmaiskut Iraniin 28. helmikuuta. Teheran oli uhannut hyökätä salmea käyttäviä aluksia vastaan. Reitin merkitys on suuri, sillä sen kautta kulkee tavallisesti noin viidennes maailman öljystä ja nesteytetystä maakaasusta.\\n\\nEnergiamarkkina-asiantuntijat varoittavat kuitenkin, ettei öljyliikenne välttämättä palaudu heti sotaa edeltävälle tasolle. Konsulttiyhtiö Lipow Oil Associatesin Andrew Lipowin mukaan salmesta olisi ensin raivattava miinat, mikä voisi kestää muutamasta viikosta jopa kuuteen kuukauteen. Lisäksi reittiä odottaa suuri määrä tankkereita, ja öljyntuotannon sekä laivojen lastauksen palautuminen normaaliksi voi viedä viikkoja.\\n\\n## Yksityiskohdat yhä epäselviä\\n\\nMarkkinoilla voi jatkua epävarmuus, koska sopimuksen tarkka sisältö ei ole vielä selvillä. Vanda Insightsin Vandana Harin mukaan yksityiskohtien puute voi lisätä levottomuutta ja heiluntaa öljymarkkinoilla tällä viikolla.\\n\\nBrent maksoi ennen konfliktin alkua noin 70 dollaria tynnyriltä ja kävi sodan aikana noin 120 dollarissa. Viime kuukausina hinnat ovat liikkuneet jyrkästi Yhdysvaltojen, Israelin ja Iranin sotaan liittyvien käänteiden mukaan.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"öljy\",\n    \"Iran\",\n    \"Yhdysvallat\",\n    \"Pakistan\",\n    \"Hormuzinsalmi\",\n    \"energiamarkkinat\"\n  ],\n  \"summary_bullets\": [\n    \"Brent-raakaöljy laski Aasiassa 4,8 prosenttia 83,18 dollariin tynnyriltä.\",\n    \"Pakistanin mukaan Yhdysvaltojen ja Iranin sopimus allekirjoitetaan perjantaina 19. kesäkuuta Sveitsissä.\",\n    \"Asiantuntijoiden mukaan Hormuzinsalmen liikenteen palautuminen normaaliksi voi kestää viikkoja tai kuukausia.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään valittuun lähdelohkoon. Keskeiset varaukset koskevat sopimuksen yksityiskohtien puutetta ja Hormuzinsalmen avaamisen aikataulun epävarmuutta.\"\n}",
+  "article": {
+    "title": "Öljyn hinta laski Pakistanin ilmoitettua Yhdysvaltojen ja Iranin sopimuksesta",
+    "description": "Öljyn hinta putosi Aasian kaupassa maanantaina, kun Pakistan ilmoitti Yhdysvaltojen ja Iranin välisestä sopimuksesta. Presidentti Donald Trumpin mukaan sopimus avaisi uudelleen Hormuzinsalmen, jonka kautta kulkee tavallisesti merkittävä osa maailman öljystä ja nesteytetystä maakaasusta.",
+    "link": "https://www.bbc.com/news/articles/c6217106px6o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-15T03:17:36+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f674048d0083fe19c49ab67a5151286e",
+    "_url_hash": "14f0bae25a8952b0d9548362c1a0db5599750fa0eb40a818d4dd08d6ec90be50",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nOil prices fell in Asia on Monday after Pakistan, which has been mediating an end to the US-Iran war, announced a deal that President Donald Trump said would see the reopening of the key Strait of Hormuz shipping route.\n\nBrent crude, the global oil benchmark, was 4.8% lower at $83.18 (£61.89) a barrel, while US-traded oil was down 5.6% at $80.13.\n\nPakistan's prime minister Shehbaz Sharif said an official signing ceremony would be held on Friday, 19 June in Switzerland.\n\nIran's Deputy Foreign Minister Kazem Gharibabadi confirmed in a phone call on state TV that a deal with the US had been finalised, while Trump posted on social media \"let the oil flow!\".\n\nBut Vandana Hari from energy markets analysis firm Vanda Insights said a lack of detail on what has been agreed \"is likely to inject unease and uncertainty into the market.\"\n\nThis could mean a week of uncertainty and volatility for the oil market, she added.\n\nThe Strait of Hormuz had been effectively closed since shortly after the US and Israel launched airstrikes on Iran on 28 February.\n\nTehran had threatened to attack vessels using the crucial waterway, through which around 20% of the world's oil and liquefied natural gas (LNG) normally passes.\n\nGlobal energy markets have been on a wild ride in recent months, with prices often rising or falling sharply in response to developments in the US-Israel war with Iran.\n\nBrent crude, which was trading at around $70 a barrel before the conflict started, peaked at about $120 during the war.\n\nEnergy market experts have also warned that the movement of oil through the strait is unlikely to immediately return to pre-war levels.\n\nAndrew Lipow from consulting company Lipow Oil Associates said mines would first need to cleared from the waterway, which could take from a few weeks to up to six months.\n\nHe also said there is a large backlog of tankers waiting to use the waterway and that restarting oil production and getting the loading of ships back to normal levels could take weeks.\n\nAsian stock markets also rose on Monday as investors welcomed the deal.\n\nJapan's Nikkei 225 share index was 5.4% higher in morning trade while the Kospi in South Korea was up by more than 5.5%.\n\nThe region was hit particularly hard by higher energy prices as it is heavily reliant on the Middle East for its oil and LNG supplies.",
+    "research_source": "multi",
+    "summary": "Öljyn hinta putosi Aasian kaupassa maanantaina, kun Pakistan ilmoitti Yhdysvaltojen ja Iranin välisestä sopimuksesta. Presidentti Donald Trumpin mukaan sopimus avaisi uudelleen Hormuzinsalmen, jonka kautta kulkee tavallisesti merkittävä osa maailman öljystä ja nesteytetystä maakaasusta.",
+    "content": "Öljyn hinta laski Aasiassa maanantaina sen jälkeen, kun Pakistan kertoi Yhdysvaltojen ja Iranin välisestä sopimuksesta. Pakistan on välittänyt ratkaisua Yhdysvaltojen ja Iranin sodan päättämiseksi, ja presidentti Donald Trumpin mukaan sopimus merkitsisi keskeisen Hormuzinsalmen laivareitin avaamista uudelleen.\n\n## Hinnat laskivat nopeasti\n\nKansainvälinen viitehinta Brent-raakaöljy oli 4,8 prosentin laskussa 83,18 dollarissa tynnyriltä. Yhdysvalloissa kaupankäynnin kohteena oleva öljy oli puolestaan 5,6 prosenttia alempana 80,13 dollarissa.\n\nPakistanin pääministeri Shehbaz Sharifin mukaan virallinen allekirjoitustilaisuus järjestetään perjantaina 19. kesäkuuta Sveitsissä. Iranin varaulkoministeri Kazem Gharibabadi vahvisti valtion televisiossa puhelimitse, että sopimus Yhdysvaltojen kanssa on viimeistelty. Trump kommentoi asiaa sosiaalisessa mediassa kehottamalla antamaan öljyn virrata.\n\nAasian osakemarkkinat nousivat maanantaina, kun sijoittajat ottivat sopimusuutisen vastaan myönteisesti. Energiamarkkinoilla reaktio näkyi nopeasti, koska Hormuzinsalmen sulkeutuminen on viime kuukausina lisännyt huolta öljyn ja nesteytetyn maakaasun kuljetuksista.\n\n## Hormuzinsalmen avaaminen voi kestää\n\nHormuzinsalmi on ollut käytännössä suljettuna pian sen jälkeen, kun Yhdysvallat ja Israel aloittivat ilmaiskut Iraniin 28. helmikuuta. Teheran oli uhannut hyökätä salmea käyttäviä aluksia vastaan. Reitin merkitys on suuri, sillä sen kautta kulkee tavallisesti noin viidennes maailman öljystä ja nesteytetystä maakaasusta.\n\nEnergiamarkkina-asiantuntijat varoittavat kuitenkin, ettei öljyliikenne välttämättä palaudu heti sotaa edeltävälle tasolle. Konsulttiyhtiö Lipow Oil Associatesin Andrew Lipowin mukaan salmesta olisi ensin raivattava miinat, mikä voisi kestää muutamasta viikosta jopa kuuteen kuukauteen. Lisäksi reittiä odottaa suuri määrä tankkereita, ja öljyntuotannon sekä laivojen lastauksen palautuminen normaaliksi voi viedä viikkoja.\n\n## Yksityiskohdat yhä epäselviä\n\nMarkkinoilla voi jatkua epävarmuus, koska sopimuksen tarkka sisältö ei ole vielä selvillä. Vanda Insightsin Vandana Harin mukaan yksityiskohtien puute voi lisätä levottomuutta ja heiluntaa öljymarkkinoilla tällä viikolla.\n\nBrent maksoi ennen konfliktin alkua noin 70 dollaria tynnyriltä ja kävi sodan aikana noin 120 dollarissa. Viime kuukausina hinnat ovat liikkuneet jyrkästi Yhdysvaltojen, Israelin ja Iranin sotaan liittyvien käänteiden mukaan.",
+    "category": "Ulkomaat",
+    "tags": [
+      "öljy",
+      "iran",
+      "yhdysvallat",
+      "pakistan",
+      "hormuzinsalmi"
+    ],
+    "summary_bullets": [
+      "Brent-raakaöljy laski Aasiassa 4,8 prosenttia 83,18 dollariin tynnyriltä.",
+      "Pakistanin mukaan Yhdysvaltojen ja Iranin sopimus allekirjoitetaan perjantaina 19. kesäkuuta Sveitsissä.",
+      "Asiantuntijoiden mukaan Hormuzinsalmen liikenteen palautuminen normaaliksi voi kestää viikkoja tai kuukausia."
+    ],
+    "key_points": [
+      "Brent-raakaöljy laski Aasiassa 4,8 prosenttia 83,18 dollariin tynnyriltä.",
+      "Pakistanin mukaan Yhdysvaltojen ja Iranin sopimus allekirjoitetaan perjantaina 19. kesäkuuta Sveitsissä.",
+      "Asiantuntijoiden mukaan Hormuzinsalmen liikenteen palautuminen normaaliksi voi kestää viikkoja tai kuukausia."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin neljään valittuun lähdelohkoon. Keskeiset varaukset koskevat sopimuksen yksityiskohtien puutetta ja Hormuzinsalmen avaamisen aikataulun epävarmuutta.",
+    "source_text": "Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.\n\nOil prices fell in Asia on Monday after Pakistan, which has been mediating an end to the US-Iran war, announced a deal that President Donald Trump said would see the reopening of the key Strait of Hormuz shipping route. Brent crude, the global oil benchmark, was 4.8% lower at $83.18 (£61.89) a barrel, while US-traded oil was down 5.6% at $80.13. Pakistan's prime minister Shehbaz Sharif said an official signing ceremony would be held on Friday, 19 June in Switzerland. Iran's Deputy Foreign Minister Kazem Gharibabadi confirmed in a phone call on state TV that a deal with the US had been finalised, while Trump posted on social media \"let the oil flow!\".\n\nBut Vandana Hari from energy markets analysis firm Vanda Insights said a lack of detail on what has been agreed \"is likely to inject unease and uncertainty into the market.\" This could mean a week of uncertainty and volatility for the oil market, she added. The Strait of Hormuz had been effectively closed since shortly after the US and Israel launched airstrikes on Iran on 28 February. Tehran had threatened to attack vessels using the crucial waterway, through which around 20% of the world's oil and liquefied natural gas (LNG) normally passes. Global energy markets have been on a wild ride in recent months, with prices often rising or falling sharply in response to developments in the US-Israel war with Iran.\n\nBrent crude, which was trading at around $70 a barrel before the conflict started, peaked at about $120 during the war. Energy market experts have also warned that the movement of oil through the strait is unlikely to immediately return to pre-war levels. Andrew Lipow from consulting company Lipow Oil Associates said mines would first need to cleared from the waterway, which could take from a few weeks to up to six months. He also said there is a large backlog of tankers waiting to use the waterway and that restarting oil production and getting the loading of ships back to normal levels could take weeks. Asian stock markets also rose on Monday as investors welcomed the deal.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260615T032116Z_9d373cfce6",
+    "image": "https://images.unsplash.com/photo-1775563798442-a1b7e114bff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxIb3JtdXolMjBTdHJhaXQlMjBvaWwlMjB0cmFuc3BvcnR8ZW58MXwwfHx8MTc4MTQ5NDA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1775563798442-a1b7e114bff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxIb3JtdXolMjBTdHJhaXQlMjBvaWwlMjB0cmFuc3BvcnR8ZW58MXwwfHx8MTc4MTQ5NDA4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Öljyn hinta laski Pakistanin ilmoitettua Yhdysvaltojen ja Iranin sopimuksesta",
+    "image_credit": "Photo by Planet Volumes on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/strait-of-hormuz-between-iran-and-oman-8koWngCqqzM?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-15T03:28:06.297465+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1775563798442-a1b7e114bff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxIb3JtdXolMjBTdHJhaXQlMjBvaWwlMjB0cmFuc3BvcnR8ZW58MXwwfHx8MTc4MTQ5NDA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1775563798442-a1b7e114bff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxIb3JtdXolMjBTdHJhaXQlMjBvaWwlMjB0cmFuc3BvcnR8ZW58MXwwfHx8MTc4MTQ5NDA4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-15T03:29:18.609971+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-15-oljyn-hinta-laski-pakistanin-ilmoitettua-yhdysvaltojen-ja-ir.md"
+  ]
+}
