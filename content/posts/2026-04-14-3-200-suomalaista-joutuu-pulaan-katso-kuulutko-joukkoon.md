@@ -1,5 +1,6 @@
 ---
 title: "3 200 suomalaista joutuu pulaan: Katso, kuulutko joukkoon"
+description: "Monia osittain varhennettua eläkettä nostavia voi kohdata toukokuussa ikävä yllätys."
 date: 2026-04-14T13:30:41.277973+00:00
 categories:
   - Kotimaa

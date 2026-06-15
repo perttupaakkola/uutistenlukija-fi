@@ -1,5 +1,6 @@
 ---
 title: "Kova arvio: Hallituksen esitys voi maksaa Suomelle kymmeniä miljoonia euroja vuodessa"
+description: "Kemianteollisuus ry:n mukaan jakeluvelvoitteen laskeminen saattaisi maksaa Suomelle kymmeniä miljoonia euroja vuodessa."
 date: 2026-04-16T11:02:46.902181+00:00
 categories:
   - Talous

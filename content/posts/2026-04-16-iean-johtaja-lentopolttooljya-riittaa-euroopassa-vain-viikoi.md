@@ -1,5 +1,6 @@
 ---
 title: "IEA:n johtaja: Lentopolttoöljyä riittää Euroopassa vain viikoiksi"
+description: "Kansainvälisen energiajärjestön (IEA) johtaja Fatih Birolin mukaan Euroopalla riittää lentopolttoainetta noin kuudeksi viikoksi."
 date: 2026-04-16T20:12:59.988410+00:00
 categories:
   - Kotimaa

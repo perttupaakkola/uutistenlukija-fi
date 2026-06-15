@@ -1,5 +1,6 @@
 ---
 title: "'I was tortured and lost my hand' - one student's struggle to get an education in Nigeria"
+description: "The BBC speaks to a student who pushed for his his toe print to be taken to verify his identity."
 date: 2026-04-17T08:23:08.904586+00:00
 categories:
   - Tiede

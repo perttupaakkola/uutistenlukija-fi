@@ -1,5 +1,6 @@
 ---
 title: "WSJ: Euroopan Nato-maat varautuvat Yhdysvaltain lähtöön"
+description: "IS seuraa tässä artikkelissa tilannetta Lähi-idässä. Presidentti Alexander Stubb sanoo,"
 date: 2026-04-15T04:23:26.937448+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Opiskelijat huolestuivat huumaustapauksista – järjestö suunnittelee mukinsuojien jakamista"
+description: "Jyväskylässä opiskelijat ovat toivoneet selkeitä ohjeistuksia, mitä tehdä mahdollisessa huumaustapauksessa."
 date: 2026-04-16T07:33:09.518922+00:00
 categories:
   - Tiede

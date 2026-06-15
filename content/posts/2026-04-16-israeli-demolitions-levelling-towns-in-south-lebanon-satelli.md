@@ -1,5 +1,6 @@
 ---
 title: "Israeli demolitions levelling towns in south Lebanon, satellite images show"
+description: "BBC Verify analysis found more than 1,400 buildings had been destroyed since 2 March."
 date: 2026-04-16T06:52:53.916238+00:00
 categories:
   - Tiede

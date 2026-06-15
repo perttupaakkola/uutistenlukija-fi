@@ -1,5 +1,6 @@
 ---
 title: "Yle: 30 miljoonan euron setelipotti nuorten työllistämiseen ei kelpaa – tässä syyt floppiin"
+description: "Nuorten työllistymisseteliä hyödynnetään vasta vähän. Valtio on myöntänyt työllisyysalueille yhteensä 30 miljoonaa euroa tukeen,"
 date: 2026-04-16T08:42:54.494190+00:00
 categories:
   - Tiede

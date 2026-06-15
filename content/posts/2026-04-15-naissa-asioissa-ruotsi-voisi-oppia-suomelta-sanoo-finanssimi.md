@@ -1,5 +1,6 @@
 ---
 title: "Näissä asioissa Ruotsi voisi oppia Suomelta, sanoo finanssiministeri – Vahva vetoomus Fortumille"
+description: "Rahoitusmarkkinoista vastaavan ministerin Stefan Wykmanin mukaan Ruotsi on onnistunut kansankapitalismissaan,"
 date: 2026-04-15T04:43:28.019385+00:00
 categories:
   - Talous

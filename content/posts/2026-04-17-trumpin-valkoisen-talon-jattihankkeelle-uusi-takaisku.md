@@ -1,5 +1,6 @@
 ---
 title: "Trumpin Valkoisen talon jätti­hankkeelle uusi takaisku"
+description: "Trump kommentoi tuomarin päätöstä tulikivenkatkuisessa Truth Social -julkaisussa."
 date: 2026-04-17T00:33:25.456672+00:00
 categories:
   - Ulkomaat

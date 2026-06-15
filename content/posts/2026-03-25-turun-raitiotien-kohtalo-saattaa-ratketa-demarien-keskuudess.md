@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Turun kaupunginvaltuusto äänestää raitiotien toteutussuunnitelmasta toukokuussa, mutta SDP:n valtuutettujen eriävien mielipiteiden vuoksi tilanne on epävarma."
+description: "Turun kaupunginvaltuusto äänestää raitiotiestä toukokuussa, mutta SDP:n valtuutettujen eriävät kannat pitävät tilanteen auki."
 summary: "Turun kaupungin valtuusto äänestää raitiotien toteutussuunnitelmasta toukokuussa. SDP:n sisäiset erimielisyydet voivat vaikuttaa merkittävästi päätöksentekoon."
 content_type: "article"
 editorial_reviewed: true

@@ -1,5 +1,6 @@
 ---
 title: "Time-lehti valitsi maailman sata vaikutusvaltaisinta ihmistä – mukana yksi suomalainen"
+description: "Suomen pääministeri Sanna Marin (sd.) on päässyt Time-lehden TIME 100 Next -listalle,"
 date: 2026-04-15T15:23:23.983223+00:00
 categories:
   - Tiede

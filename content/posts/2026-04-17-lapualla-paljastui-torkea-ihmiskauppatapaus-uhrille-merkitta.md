@@ -1,5 +1,6 @@
 ---
 title: "Lapualla paljastui törkeä ihmiskauppatapaus – uhrille merkittävää kärsimystä"
+description: "Poliisi epäilee kahta ihmistä törkeästä ihmiskaupasta ja muista vakavista rikoksista Lapualla."
 date: 2026-04-17T15:13:13.468767+00:00
 categories:
   - Kotimaa

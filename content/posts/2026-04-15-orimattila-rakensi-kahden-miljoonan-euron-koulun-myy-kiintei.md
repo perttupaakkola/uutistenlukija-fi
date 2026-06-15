@@ -1,5 +1,6 @@
 ---
 title: "Orimattila rakensi kahden miljoonan euron koulun – myy kiinteistöä nyt 50 000 euron lähtöhinnalla"
+description: "Kevään jälkeen lakkautettavassa koulussa on tilaa noin 900 neliötä. Orimattilan kaupunki on hyväksynyt Jymylinnasta huutokaupassa saadun tarjouksen."
 date: 2026-04-15T15:13:38.207805+00:00
 categories:
   - Kotimaa

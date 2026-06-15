@@ -1,5 +1,6 @@
 ---
 title: "US blockade of Iran ports irresponsible and dangerous, China says"
+description: "China, the biggest buyer of Iranian oil, says the US naval blockade undermines an \"already fragile ceasefire\"."
 date: 2026-04-14T14:33:08.773640+00:00
 categories:
   - Ulkomaat

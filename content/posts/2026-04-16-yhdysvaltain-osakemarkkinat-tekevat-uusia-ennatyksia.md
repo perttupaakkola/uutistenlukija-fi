@@ -1,5 +1,6 @@
 ---
 title: "Yhdysvaltain osakemarkkinat tekevät uusia ennätyksiä"
+description: "Markkinoilla sivuutettiin Lähi-idän sotaan liittyvät huolet ja rauhanneuvotteluihin liittyvä epävarmuus."
 date: 2026-04-16T20:43:06.216190+00:00
 categories:
   - Talous

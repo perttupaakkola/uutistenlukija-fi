@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Pääministeri Orpon mukaan Kouvolaan pudonnut kaksi dronea on todennäköisesti ukrainalaisia. Yksi laite on tunnistettu AN196-malliksi. Venäläinen häirintä arvioidaan syyksi harhautumiseen."
+description: "Pääministeri Orpon mukaan Kouvolaan pudonneet kaksi dronea ovat todennäköisesti ukrainalaisia. Yksi on tunnistettu AN196-malliksi."
 summary: "Kaksi dronea putosi Kouvolan lähelle sunnuntaina 29. maaliskuuta. Pääministeri Orpo sanoo dronejen olevan todennäköisesti ukrainalaisia. Yksi on tunnistettu AN196-malliksi. Ilmavoimat teki tunnistustehtäviä F/A-18-hävittäjillä."
 content_type: "article"
 editorial_reviewed: true

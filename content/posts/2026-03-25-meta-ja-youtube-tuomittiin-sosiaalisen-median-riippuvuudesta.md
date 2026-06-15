@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Los Angelesissa oikeus tuomitsee Metan ja YouTuben vastuulliseksi nuorten sosiaalisen median käytön aiheuttamasta riippuvuudesta ja mielenterveysongelmista."
+description: "Los Angelesissa oikeus tuomitsee Metan ja YouTuben vastuullisiksi nuorten sosiaalisen median käytön haitoista."
 summary: "Kaley, 20-vuotias nainen, sai kolmen miljoonan dollarin vahingonkorvaukset Meta- ja YouTube-yhtiöiltä sosiaalisen median riippuvuudestaan. Tämä ennakkotapaus voi vaikuttaa moniin tuleviin oikeusjuttuihin Yhdysvalloissa."
 content_type: "article"
 editorial_reviewed: true

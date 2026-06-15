@@ -1,5 +1,6 @@
 ---
 title: "Lämpö tulee ryminällä – Karu sääkäänne häämöttää?"
+description: "Viime päivien lämpötilat ovat muistuttaneet enemmän toukokuun kuin huhtikuun puoliväliä. Tilanne voi kuitenkin muuttua ensi viikolla."
 date: 2026-04-15T16:53:20.807401+00:00
 categories:
   - Kotimaa

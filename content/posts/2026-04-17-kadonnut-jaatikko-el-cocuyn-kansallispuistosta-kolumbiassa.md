@@ -1,5 +1,6 @@
 ---
 title: "Kadonnut: Jäätikkö el Cocuyn kansallispuistosta Kolumbiassa"
+description: "Kolumbian ympäristöministeriön mukaan jään peittämä alue kansallispuistossa on kutistunut 90 prosentilla 1800-luvun puolivälistä lähtien."
 date: 2026-04-17T07:03:20.051468+00:00
 categories:
   - Kotimaa

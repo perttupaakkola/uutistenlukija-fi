@@ -1,5 +1,6 @@
 ---
 title: "Suomen Ilmavoimien lentäjä lensi ensi kertaa F-35-hävittäjällä"
+description: "Suomen ilmavoimien lentäjä on lentänyt F-35-hävittäjällä ensimmäistä kertaa eilen keskiviikkona, ilmavoimat kertoo."
 date: 2026-04-16T07:33:09.518922+00:00
 categories:
   - Tiede

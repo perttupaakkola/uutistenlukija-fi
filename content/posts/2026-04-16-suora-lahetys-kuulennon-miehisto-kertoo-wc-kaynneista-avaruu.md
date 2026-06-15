@@ -1,5 +1,6 @@
 ---
 title: "Suora lähetys: Kuulennon miehistö kertoo wc-käynneistä avaruudessa – ”Sitä oli hauska katsoa”"
+description: "Nasan Artemis II -kuulennon astronautit pitävät suoran tiedotustilaisuuden kuusi päivää laskeutumisen jälkeen."
 date: 2026-04-16T19:23:08.076324+00:00
 categories:
   - Ulkomaat

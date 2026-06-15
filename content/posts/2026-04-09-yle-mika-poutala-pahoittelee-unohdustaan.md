@@ -1,5 +1,6 @@
 ---
 title: "Yle: Mika Poutala pahoittelee unohdustaan"
+description: "Liikunta-, urheilu- ja nuorisoministeri Mika Poutala (kd) on jättänyt ilmoittamatta omistuksensa joukkorahoitusyhtiö Vauraus Suomessa."
 date: 2026-04-09T06:03:26.660826+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Putinista kiusallinen väite somessa – Kreml joutui kommentoimaan"
+description: "Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat perjantailta 17. huhtikuuta 2026. Kyseessä on sodan 1514. päivä."
 date: 2026-04-17T20:43:06.543370+00:00
 categories:
   - Ulkomaat

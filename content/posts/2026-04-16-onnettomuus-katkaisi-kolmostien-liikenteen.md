@@ -1,5 +1,6 @@
 ---
 title: "Onnettomuus katkaisi Kolmostien liikenteen"
+description: "Onnettomuus sattui noin puoli yhden aikaan. Pelastuslaitos sai hälytyksen torstai-iltapäivällä kahden henkilöauton kolarista Tampereentiellä Hämeenkyrössä"
 date: 2026-04-16T10:52:59.518680+00:00
 categories:
   - Tiede

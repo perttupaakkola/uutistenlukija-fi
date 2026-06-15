@@ -1,5 +1,6 @@
 ---
 title: "Outo valoilmiö yötaivaalla: Poliisi kertoi syyn"
+description: "Erikoinen valo näkyi laajasti Suomessa. Iltalehti on saanut useilta lukijoilta vinkkejä valoilmiöstä yötaivaalla."
 date: 2026-04-17T01:43:29.103797+00:00
 categories:
   - Kotimaa

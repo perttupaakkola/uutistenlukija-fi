@@ -1,5 +1,6 @@
 ---
 title: "Kanye West postpones France gig following UK ban"
+description: "It comes a week after the UK government announced it would block the rapper from entering the country."
 date: 2026-04-15T08:42:50.756198+00:00
 categories:
   - Tiede

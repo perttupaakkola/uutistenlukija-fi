@@ -1,5 +1,6 @@
 ---
 title: "Henna Virkkunen Time-lehden arvostetulle listalle"
+description: "Henna Virkkunen on ainoa suomalainen arvostetulle listalla. Euroopan komission varapuheenjohtaja Henna Virkkunen (kok.) on päässyt yhdysvaltalaisen"
 date: 2026-04-15T16:23:25.084275+00:00
 categories:
   - Kotimaa

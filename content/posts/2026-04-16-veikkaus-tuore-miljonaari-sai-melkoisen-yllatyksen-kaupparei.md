@@ -1,5 +1,6 @@
 ---
 title: "Veikkaus: Tuore miljonääri sai melkoisen yllätyksen kauppa­reissulla – ”Miten paljon siellä on”"
+description: "Tuore Eurojackpot-voittaja kertoo Veikkaukselle, että aikoo pitää tiedon voitosta visusti perhepiirissä."
 date: 2026-04-16T15:23:03.960248+00:00
 categories:
   - Kotimaa

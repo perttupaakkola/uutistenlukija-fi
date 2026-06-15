@@ -1,5 +1,6 @@
 ---
 title: "Kaikkonen lähetti kirjeen – ”Hyvä Petteri”"
+description: "Oppositiopuolue keskusta kertoi toiveensa, mitä hallituksen pitäisi tehdä ensi viikolla kehysriihessään."
 date: 2026-04-17T09:23:20.992824+00:00
 categories:
   - Tiede

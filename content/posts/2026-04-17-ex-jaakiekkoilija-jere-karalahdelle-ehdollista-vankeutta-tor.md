@@ -1,5 +1,6 @@
 ---
 title: "Ex-jääkiekkoilija Jere Karalahdelle ehdollista vankeutta törkeästä huumausainerikoksesta"
+description: "Helsingin käräjäoikeus antoi perjantaina vankeustuomion ex-jääkiekkoilija Jere Karalahdelle törkeästä huumausainerikoksesta."
 date: 2026-04-17T07:33:12.837816+00:00
 categories:
   - Tiede

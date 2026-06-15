@@ -1,5 +1,6 @@
 ---
 title: "‘A dollar or two increase is devastating’: US readers on toll of rising gas prices"
+description: "Guardian readers describe how their lives have been upended by cost hikes stemming from Trump’s Iran war With the US and Israel’s war on Iran now in its"
 date: 2026-04-16T11:32:55.196324+00:00
 categories:
   - Ulkomaat

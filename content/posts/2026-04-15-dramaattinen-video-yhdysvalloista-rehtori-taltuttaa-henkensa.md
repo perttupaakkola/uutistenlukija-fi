@@ -1,5 +1,6 @@
 ---
 title: "Dramaattinen video Yhdysvalloista: Rehtori taltuttaa henkensä uhalla kouluampujan"
+description: "Kouluampumisia tilastoivan sivuston mukaan tänä vuonna on kuollut jo lähes kolme sataa lasta aseellisen väkivallan seurauksena."
 date: 2026-04-15T13:23:59.432424+00:00
 categories:
   - Ulkomaat

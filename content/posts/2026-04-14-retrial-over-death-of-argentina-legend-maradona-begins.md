@@ -1,5 +1,6 @@
 ---
 title: "Retrial over death of Argentina legend Maradona begins"
+description: "The first trial - which saw members of Maradona's medical team accused of poor care - collapsed after a judge let cameras into the court."
 date: 2026-04-14T17:53:32.592464+00:00
 categories:
   - Tiede

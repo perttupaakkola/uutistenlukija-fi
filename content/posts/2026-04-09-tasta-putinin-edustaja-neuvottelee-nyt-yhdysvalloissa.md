@@ -1,5 +1,6 @@
 ---
 title: "Tästä Putinin edustaja neuvottelee nyt Yhdysvalloissa"
+description: "Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat torstailta 9. huhtikuuta 2026. Kyseessä on sodan 1506. päivä."
 date: 2026-04-09T20:33:02.659265+00:00
 categories:
   - Ulkomaat

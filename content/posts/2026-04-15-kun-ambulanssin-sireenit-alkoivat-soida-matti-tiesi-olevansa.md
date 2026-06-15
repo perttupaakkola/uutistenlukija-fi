@@ -1,5 +1,6 @@
 ---
 title: "Kun ambulanssin sireenit alkoivat soida, Matti tiesi olevansa lähellä kuolemaa – Keuhkoveritulppa paljasti karun totuuden: ”Yrittäjän sairastuminen on YEL-katastrofi”"
+description: "Helmikuun viimeinen viikko oli alkanut, kun Uudellamaalla asuva toiminimiyrittäjä Matti, 58, havahtui outoon tunteeseen. Hän ei saanut henkeä."
 date: 2026-04-15T06:22:42.839816+00:00
 categories:
   - Talous

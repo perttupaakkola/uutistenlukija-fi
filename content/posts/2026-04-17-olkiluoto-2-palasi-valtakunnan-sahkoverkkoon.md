@@ -1,5 +1,6 @@
 ---
 title: "Olkiluoto 2 palasi valtakunnan sähköverkkoon"
+description: "Olkiluodon kakkosreaktori liitetään takaisin valtakunnan sähköverkkoon alkavan viikon eli viikon 51 lopulla, kertoo Teollisuuden Voima (TVO)."
 date: 2026-04-17T10:13:25.258395+00:00
 categories:
   - Tiede

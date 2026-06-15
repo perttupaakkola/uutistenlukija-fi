@@ -1,5 +1,6 @@
 ---
 title: "PNX esitteli vakuuttavan näköisen ratin simulaattoripelaamiseen – kuin ammattikuskin työkalu"
+description: "Simulaattoripeleihin oheislaitteita valmistava PXN esitteli uuden GT ONE -ohjauspyörän. Se on ulkonäöltään kuin ammattikuskin työkalua katsoisi."
 date: 2026-04-15T05:02:59.855810+00:00
 categories:
   - Teknologia

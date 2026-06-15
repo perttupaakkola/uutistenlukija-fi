@@ -1,5 +1,6 @@
 ---
 title: "Ranskan poliisi yritti ratsiaa presidentin virka-asuntoon"
+description: "Ranskan poliisi on yrittänyt tehdä ratsiaa maan presidentin Emmanuel Macronin toimistoon."
 date: 2026-04-14T16:43:34.281342+00:00
 categories:
   - Ulkomaat

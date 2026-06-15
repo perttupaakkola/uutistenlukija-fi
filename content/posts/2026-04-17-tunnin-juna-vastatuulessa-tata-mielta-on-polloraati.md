@@ -1,5 +1,6 @@
 ---
 title: "Tunnin juna vastatuulessa? Tätä mieltä on Pöllöraati"
+description: "Tunni juna Turkuun puhutti Huomenta Suomen Pöllöraatia. Noin 4 000 asukkaan Aurassa odotetaan,"
 date: 2026-04-17T18:53:15.596901+00:00
 categories:
   - Tiede

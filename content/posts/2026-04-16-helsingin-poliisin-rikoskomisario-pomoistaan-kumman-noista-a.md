@@ -1,5 +1,6 @@
 ---
 title: "Helsingin poliisin rikoskomisario pomoistaan: ”Kumman noista ampuisin ensin?”"
+description: "Helsingin poliisin väkivaltarikosyksikön tutkinnan­johtajan puheet johtivat virka-aseen takavarikointiin ja rikostutkintaan."
 date: 2026-04-16T04:13:19.226263+00:00
 categories:
   - Kotimaa

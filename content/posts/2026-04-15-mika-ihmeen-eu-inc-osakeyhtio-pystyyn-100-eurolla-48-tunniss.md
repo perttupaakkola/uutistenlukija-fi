@@ -1,5 +1,6 @@
 ---
 title: "Mikä ihmeen EU Inc? Osakeyhtiö pystyyn 100 eurolla 48 tunnissa: ”Ennen kaikkea kasvuyrityksiä ja startupeja varten”"
+description: "– Tämä on ennen kaikkea kasvuyrityksiä ja startupeja varten. Yrityksiä, joilla on selkeä tavoite kasvaa EU:n sisämarkkinoilla ja hankkia rahoitusta"
 date: 2026-04-15T04:53:16.565518+00:00
 categories:
   - Talous

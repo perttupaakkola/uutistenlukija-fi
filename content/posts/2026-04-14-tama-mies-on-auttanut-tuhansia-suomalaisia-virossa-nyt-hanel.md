@@ -1,5 +1,6 @@
 ---
 title: "Tämä mies on auttanut tuhansia suomalaisia Virossa – Nyt hänellä on uusi uskomaton hanke"
+description: "Urmas Sõõrumaa on auttanut tuhansia Tallinnassa rahansa ja passinsa kadottaneita suomalaisia takaisin kotimaahansa."
 date: 2026-04-14T17:43:31.159384+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Eduskunta muutti sääntöjään – Näille matkoille puolisoilla ei ole enää asiaa"
+description: "Valiokunnan puheenjohtajien puolisoiden matkakuluja ei korvata enää ilman erillistä päätöstä."
 date: 2026-04-15T06:12:52.130908+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Perheen aamuyön kauhunhetket: Isoäiti tunkeutui taloon ja alkoi puukottaa tytärtään"
+description: "Isoäiti tunkeutui aamuyöllä tyttärensä lapsiperheen kotiin ja yritti puukottaa tätä."
 date: 2026-04-17T13:03:01.534771+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Oikeus linjasi: Stora Enso ei saanut jättää palkkoja maksamatta lakon takia"
+description: "Stora Enson Oulun tehdas keskeytti palkanmaksun työntekijöille SAK:n lakkojen takia. Nyt oikeus linjasi, että työntekijöille olisi pitänyt maksaa palkka."
 date: 2026-04-17T10:33:24.184357+00:00
 categories:
   - Talous

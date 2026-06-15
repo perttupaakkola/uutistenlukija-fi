@@ -1,5 +1,6 @@
 ---
 title: "AL: Opiskelijat ottivat jättilainoja koulutukseen – Konkurssi jätti tyhjän päälle"
+description: "Siviililentäjän koulutuksesta maksaneet opiskelijat jäivät ilman lentolupakirjoja, koska koulutuksen järjestäjä meni konkurssiin, kertoo Aamulehti."
 date: 2026-04-16T17:22:56.550950+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Netissä kaupatun ”venäläisen sotasaaliin” arvoitus ratkesi"
+description: "Helsingin poliisi selvitti poikkeuksellista kaupittelutapausta lievänä sotarikoksena. Lopulta myyjä otti itse yhteyttä poliisiin."
 date: 2026-04-15T17:13:21.436217+00:00
 categories:
   - Tiede

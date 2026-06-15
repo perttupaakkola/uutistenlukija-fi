@@ -1,5 +1,6 @@
 ---
 title: "Hyvinvointi­alueen palvelukotien asiakastietoja löytyi maastosta Lappeenrannassa"
+description: "Pariskunta löysi sunnuntaina Ruholammen maastosta neljä paperia, joissa oli 75 asiakkaan henkilötietoja. Etelä-Karjalan hyvinvointialue selvittää asiaa."
 date: 2026-04-14T13:52:53.704257+00:00
 categories:
   - Kotimaa

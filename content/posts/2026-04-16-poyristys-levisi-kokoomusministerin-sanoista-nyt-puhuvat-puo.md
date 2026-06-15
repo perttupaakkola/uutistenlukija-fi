@@ -1,5 +1,6 @@
 ---
 title: "Pöyristys levisi kokoomus­ministerin sanoista – Nyt puhuvat puolustajat: ”Tuo on törkeätä”"
+description: "SDP, vasemmistoliitto ja vihreät arvostelivat kovin sanoin sosiaaliturvaministeri Sanni Grahn-Laasosen (kok) puheita eduskunnassa."
 date: 2026-04-16T14:23:12.836643+00:00
 categories:
   - Kotimaa

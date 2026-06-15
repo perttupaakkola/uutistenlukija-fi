@@ -1,5 +1,6 @@
 ---
 title: "Kreml syytteli Suomea – ISW: Venäjä voi suunnitella ”kostoa”"
+description: "Putinin avustajan Nikolai Patrushevin syytökset drooni-iskuista voivat ajatushautomon mukaan olla valmistautumista vastatoimiin."
 date: 2026-04-15T09:32:47.368181+00:00
 categories:
   - Ulkomaat

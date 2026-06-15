@@ -1,5 +1,6 @@
 ---
 title: "Siitepölyallergikot huomio – nyt ei kannata tuulettaa vaatteita ulkona"
+description: "Siitepölyallergikkojen kannattaa nyt pidättäytyä tuulettamasta tekstiilejä ulkona, muistuttaa Koti Puhtaaksi Oy tiedotteessaan."
 date: 2026-04-16T18:02:58.686009+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Täysi yllätys Venäjältä – Käynnissä selvä operaatio, varoittaa virkamies"
+description: "Opetus- ja kulttuuriministeriön virkamies näkee, että Venäjällä on nyt käynnissä selvä operaatio, joka on alkanut kulttuurin ja urheilun puolelta."
 date: 2026-04-16T18:23:00.211178+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Diabeetikkojen hoito muuttuu Satakunnassa – potilasjärjestö huolissaan, hyvinvointialue lupaa hoidon laadun paranevan"
+description: "Jatkossa vaativa­hoitoisen diabeteksen hoito keskitetään osaamis­yksiköihin Porissa ja Raumalla."
 date: 2026-04-16T03:23:16.974625+00:00
 categories:
   - Tiede

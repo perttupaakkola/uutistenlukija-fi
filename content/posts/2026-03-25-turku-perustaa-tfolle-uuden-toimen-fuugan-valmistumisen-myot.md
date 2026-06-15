@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Turku vahvistaa Turun filharmonisen orkesterin johtoa uuden Fuuga-musiikkitalon valmistuessa. Rakennus parantaa kulttuuritarjontaa ja herättää kiinnostusta."
+description: "Turku vahvistaa filharmonisen orkesterinsa johtoa uuden Fuuga-musiikkitalon valmistuessa ja kulttuuritarjonnan kasvaessa."
 summary: "Turku vahvistaa Turun filharmonisen orkesterin johtoa uudella musiikkitalolla, Fuugalla. Fuuga tuo mukanaan uusia mahdollisuuksia kulttuurille ja orkesteritoiminnalle, sillä se avaa ovensa ensi vuonna Aurajoen rannalla."
 content_type: "article"
 editorial_reviewed: true

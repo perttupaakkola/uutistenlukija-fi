@@ -1,5 +1,6 @@
 ---
 title: "Yhtenäiskoulun suunnittelu nytkähtää viimein eteenpäin Vaasassa – vuosien valituskierre päättyy"
+description: "Korkein hallinto-oikeus ei myöntänyt valituslupaa Vaasan rakennus­perintöyhdistyksen hakemuksille, joka koskivat keskustan yhtenäiskoulua."
 date: 2026-04-17T08:43:02.781292+00:00
 categories:
   - Kotimaa

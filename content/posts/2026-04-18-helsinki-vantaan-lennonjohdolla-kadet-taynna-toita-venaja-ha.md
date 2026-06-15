@@ -1,5 +1,6 @@
 ---
 title: "Helsinki-Vantaan lennonjohdolla kädet täynnä töitä – Venäjä häiritsee lähes kaikkia koneita"
+description: "Lennonjohdon työkuormaa lisää myös se, että Venäjän puolelta Suomen ilmatilaan tulee pahimmillaan 30 lentokonetta yössä."
 date: 2026-04-18T06:42:59.133509+00:00
 categories:
   - Tiede

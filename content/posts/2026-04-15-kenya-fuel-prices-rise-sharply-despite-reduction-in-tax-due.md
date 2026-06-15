@@ -1,5 +1,6 @@
 ---
 title: "Kenya fuel prices rise sharply despite reduction in tax due to Iran war"
+description: "Diesel prices rise by a record margin despite a reduction in value added tax. Kenya has sharply raised the cost of petroleum,"
 date: 2026-04-15T09:22:54.321095+00:00
 categories:
   - Ulkomaat

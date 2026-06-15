@@ -1,5 +1,6 @@
 ---
 title: "Sauli Niinistö ja joukko eurooppalaisia johtajia Helsingissä – suora lähetys 11.30 alkaen"
+description: "Varautumiskoalition kokousta emännöi sisäministeri Mari Rantanen. Presidentti Sauli Niinistö toivoo 1970-luvulla sovittujen Helsingin periaatteiden ja"
 date: 2026-04-16T07:22:54.320153+00:00
 categories:
   - Tiede

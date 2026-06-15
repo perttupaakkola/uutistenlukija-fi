@@ -1,5 +1,6 @@
 ---
 title: "Hallitus aikoo tehdä 100 miljoonan euron säästöt sosiaalihuollosta"
+description: "Hallitus esittää 55 miljoonan euron säästöjä sosiaalihuoltoon ensi vuodelle. Suurin yksittäinen säästö syntyy kuntouttavan työtoiminnan lakkauttamisesta"
 date: 2026-04-17T11:23:13.301370+00:00
 categories:
   - Kotimaa

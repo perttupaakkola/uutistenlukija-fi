@@ -1,5 +1,6 @@
 ---
 title: "Avengers reassemble and Top Gun flies back - Hollywood studios preview their new movies"
+description: "Some of the most hotly anticipated new films of the next couple of years are previewed at CinemaCon."
 date: 2026-04-17T08:53:32.999725+00:00
 categories:
   - Teknologia

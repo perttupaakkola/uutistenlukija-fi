@@ -1,5 +1,6 @@
 ---
 title: "Tutkimuksen mukaan suomalaiset suhtautuvat poliittisista puolueista kaikkein myönteisimmin SDP:hen ja keskustaan."
+description: "Kaksi suomalaista kolmesta eli 66 prosenttia ajattelee Petteri Orpon (kok.) hallituksen onnistuneen tehtävissään heikosti."
 date: 2026-04-16T10:52:59.518680+00:00
 categories:
   - Kotimaa

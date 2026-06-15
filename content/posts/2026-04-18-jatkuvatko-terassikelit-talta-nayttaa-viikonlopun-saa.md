@@ -1,5 +1,6 @@
 ---
 title: "Jatkuvatko terassikelit? Tältä näyttää viikonlopun sää"
+description: "Sää jatkuu kauniina, mutta hieman viileämpänä. Valtioneuvoston kanslia (VNK) kertoo tarkastavansa pääministeri Paavo Lipposen (sd.) ajan"
 date: 2026-04-18T08:12:59.097660+00:00
 categories:
   - Tiede

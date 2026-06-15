@@ -1,5 +1,6 @@
 ---
 title: "Pope criticises 'tyrants' who spend billions on wars, days after Trump spat"
+description: "The comments follow a high-profile spat with US President Donald Trump, who called the Pope weak on crime."
 date: 2026-04-16T13:02:55.312247+00:00
 categories:
   - Ulkomaat

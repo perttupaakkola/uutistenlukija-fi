@@ -1,5 +1,6 @@
 ---
 title: "Muovikassien myynti kaupoissa väheni vuodessa 14 prosenttia"
+description: "S- ja K-kauppa nostavat helmikuusta lähtien muovikassin hinnan 50 senttiin. Hinnankorotuksen tavoite on vähentää muovikassien käyttöä."
 date: 2026-04-16T09:03:37.271804+00:00
 categories:
   - Tiede

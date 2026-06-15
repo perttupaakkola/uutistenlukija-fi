@@ -1,5 +1,6 @@
 ---
 title: "Poliisi­operaatio Vantaalla – Päiväkodissa ovet lukkoon"
+description: "Yksi ihminen on otettu kiinni. Poliisi on ottanut kiinni epäilyttävästi käyttäytyneen ihmisen Vantaalla, tiedottaa poliisi."
 date: 2026-04-15T09:12:58.902919+00:00
 categories:
   - Kotimaa

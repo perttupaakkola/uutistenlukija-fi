@@ -1,5 +1,6 @@
 ---
 title: "Suomen poliittinen johto boikotoi Venetsian biennaalia Venäjän vuoksi"
+description: "Suomen poliittinen johto ei osallistu Venetsian biennaaliin vuonna 2026. Syynä on Venäjän mukanaolo."
 date: 2026-04-16T07:12:55.975453+00:00
 categories:
   - Tiede

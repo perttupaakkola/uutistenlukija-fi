@@ -1,5 +1,6 @@
 ---
 title: "Hyvin poikkeuk­sellinen tilanne valiokunnassa: puheen­johtajilta eriävä mielipide"
+description: "Eduskunnan perustus­lakivaliokunta sai valmiiksi lausuntonsa määräaikaisten työsopimusten tekoa helpottavasta laista."
 date: 2026-04-14T13:42:53.801430+00:00
 categories:
   - Teknologia

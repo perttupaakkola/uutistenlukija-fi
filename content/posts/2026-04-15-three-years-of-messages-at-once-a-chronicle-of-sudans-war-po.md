@@ -1,5 +1,6 @@
 ---
 title: "Three years of messages at once - a chronicle of Sudan's war pours in as trapped reporter's phone turns on"
+description: "As the conflict enters its fourth year, journalist Mohamed Suleiman shudders at what has been lost."
 date: 2026-04-15T04:33:28.163178+00:00
 categories:
   - Tiede

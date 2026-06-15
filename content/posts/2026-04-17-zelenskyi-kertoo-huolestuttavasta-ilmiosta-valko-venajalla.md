@@ -1,5 +1,6 @@
 ---
 title: "Zelenskyi kertoo huolestuttavasta ilmiöstä Valko-Venäjällä"
+description: "IS seuraa tässä artikkelissa tilannetta Ukrainan sodassa sekä siihen liittyviä tapahtumia Venäjällä."
 date: 2026-04-17T21:23:09.501805+00:00
 categories:
   - Kotimaa

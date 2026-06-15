@@ -1,5 +1,6 @@
 ---
 title: "Suora | Hallitus vastaa opposition välikysymykseen köyhyydestä"
+description: "Hallitus joutuu puolustautumaan opposition arvostelua vastaan eduskunnassa, kun se vastaa täysistunnossa sosialidemokraattien,"
 date: 2026-04-15T11:53:06.825135+00:00
 categories:
   - Tiede

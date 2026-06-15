@@ -1,5 +1,6 @@
 ---
 title: "Jyrki oli tietämättään tarkkailun alla – Isä ja poika maksoivat siitä kovan hinnan"
+description: "Vuosia Jyrki yritti saada poikansa elämää raiteilleen, kunnes voimat ehtyivät. Nyt hän puhuu asiasta, jota monen isän olisi vaikeaa sanoa ääneen."
 date: 2026-04-17T03:13:09.909172+00:00
 categories:
   - Kotimaa

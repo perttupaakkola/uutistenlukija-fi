@@ -1,5 +1,6 @@
 ---
 title: "Peruvians go to the polls hoping to break cycle of instability"
+description: "Soaring crime and corruption top voter concerns in highly unpredictable election with record 35 candidates for president Peruvians go to the polls on"
 date: 2026-04-10T12:43:05.422414+00:00
 categories:
   - Tiede

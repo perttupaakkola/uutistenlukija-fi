@@ -1,5 +1,6 @@
 ---
 title: "Ensimmäinen risteilyalus on päässyt Hormuzinsalmen läpi"
+description: "Ensimmäinen risteilyalus on päässyt Hormuzinsalmen läpi Yhdysvaltain ja Iranin konfliktin alkamisen jälkeen,"
 date: 2026-04-17T18:02:57.877261+00:00
 categories:
   - Tiede

@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Suomen jalkapallomaajoukkue Huuhkajat pelaa Kap Verdea vastaan maanantaina 30. maaliskuuta FIFA Series 2026 -turnauksessa. Ottelu alkaa Suomen aikaa klo 06.00."
+description: "Huuhkajat pelaa Kap Verdeä vastaan maanantaina 30. maaliskuuta FIFA Series 2026 -turnauksessa. Ottelu alkaa Suomen aikaa klo 06.00."
 summary: "Huuhkajat kohtaa Kap Verden FIFA Series 2026 -turnauksessa Aucklandissa maanantaina aamulla Suomen aikaa. Ottelu on osa FIFA:n uutta kansainvälistä turnausta, johon osallistuvat myös Uusi-Seelanti ja Chile."
 content_type: "article"
 editorial_reviewed: true

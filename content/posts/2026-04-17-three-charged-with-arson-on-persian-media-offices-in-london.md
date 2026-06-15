@@ -1,5 +1,6 @@
 ---
 title: "Three charged with arson on Persian media offices in London"
+description: "Two teenagers and a 21-year-old man appear in court charged with arson with intent to endanger life."
 date: 2026-04-17T16:53:08.805282+00:00
 categories:
   - Tiede

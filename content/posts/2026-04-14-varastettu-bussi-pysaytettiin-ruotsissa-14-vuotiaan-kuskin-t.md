@@ -1,5 +1,6 @@
 ---
 title: "Varastettu bussi pysäytettiin Ruotsissa – 14-vuotiaan kuskin toiminta sai poliisin ällistymään"
+description: "Bussivarkaus ei ollut pojalle nuoresta iästä huolimatta ensimmäinen. Norjalainen bussiyhtiö havaitsi tiistain vastaisena yönä,"
 date: 2026-04-14T14:42:46.586268+00:00
 categories:
   - Ulkomaat

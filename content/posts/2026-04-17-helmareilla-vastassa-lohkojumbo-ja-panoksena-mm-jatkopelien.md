@@ -1,5 +1,6 @@
 ---
 title: "Helmareilla vastassa lohkojumbo – ja panoksena MM-jatkopelien varmistus"
+description: "Suomen naisten jalkapallomaajoukkueen taival kohti suurta unelmaa eli MM-lopputurnausta jatkuu kotiyleisön edessä tiistai-iltana,"
 date: 2026-04-17T16:13:14.010318+00:00
 categories:
   - Tiede

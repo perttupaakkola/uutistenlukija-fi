@@ -1,5 +1,6 @@
 ---
 title: "Lahden kaupunginkirjasto jalkautuu Malskille ja Nastolan kirkonkylään"
+description: "Liikennettä Lahden ja Nastolan välillä haitanneet tietyöt ovat hellittämässä pian."
 date: 2026-04-16T12:23:17.011080+00:00
 categories:
   - Kotimaa

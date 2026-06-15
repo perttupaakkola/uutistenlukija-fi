@@ -1,5 +1,6 @@
 ---
 title: "Vuokra-asuntoja välittävältä yritysjohtajalta varoitus: ”Vuokratontti saattaa olla orjasopimus”"
+description: "Vuokraturvan toimitusjohtaja Timo Metsola esittää lakimuutoksia asunnonostajien suojaamiseksi ikäviltä yllätyksiltä."
 date: 2026-04-15T08:32:51.262530+00:00
 categories:
   - Talous

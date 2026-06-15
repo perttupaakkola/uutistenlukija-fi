@@ -1,5 +1,6 @@
 ---
 title: "Sotekyydit takkuavat edelleen pohjoisessa – asiakkaat odottelevat takseja ja etenkin lyhyitä kyytejä jää ajamatta"
+description: "Pohjoisten hyvinvointi­alueiden yhteisyritys Tervian kyytipalvelu ei toimi toivotulla tavalla."
 date: 2026-04-17T15:33:11.179424+00:00
 categories:
   - Talous

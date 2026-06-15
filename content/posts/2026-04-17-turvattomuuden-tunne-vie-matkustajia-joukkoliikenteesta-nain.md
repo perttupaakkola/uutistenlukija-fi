@@ -1,5 +1,6 @@
 ---
 title: "Turvattomuuden tunne vie matkustajia joukko­liikenteestä – näin vastaa HSL"
+description: "HSL:n turvallisuus­asiantuntijan Janne Lohilahden mukaan joukkoliikenne on yksi turvallisim­mista tavoista liikkua kaupungissa."
 date: 2026-04-17T11:13:18.526608+00:00
 categories:
   - Tiede

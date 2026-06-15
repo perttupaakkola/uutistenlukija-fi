@@ -1,5 +1,6 @@
 ---
 title: "Pori | Poliisille ilmoitus aseistautuneesta ihmisestä ammatti­korkea­koulussa, yksi otettu kiinni"
+description: "Kukaan ei poliisin tietojen mukaan ole haavoittunut. Erling Haaland teki Manchester Citylle 150. maalinsa."
 date: 2026-04-17T07:43:18.752373+00:00
 categories:
   - Kotimaa

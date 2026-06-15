@@ -1,5 +1,6 @@
 ---
 title: "South Korea's runaway wolf finally captured after nine-day search"
+description: "The search has been marked by twists and turns, gripping South Korea and even inspiring a meme coin."
 date: 2026-04-17T04:33:10.816940+00:00
 categories:
   - Tiede

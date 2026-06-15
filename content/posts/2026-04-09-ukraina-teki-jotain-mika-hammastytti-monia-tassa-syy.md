@@ -1,5 +1,6 @@
 ---
 title: "Ukraina teki jotain, mikä hämmästytti monia – Tässä syy"
+description: "Ukrainan asevoimissa on ollut viime aikoina käynnissä useita muutoksia. Huomiota on herättänyt muun muassa paljon julkisuuttakin saaneen kansainvälisen"
 date: 2026-04-09T05:53:18.798622+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Näin lento­polttoaineen pula iskisi matkustajaan: ”Tuplavaikutus”"
+description: "Euroopan lentopolttoainevarastojen hupeneminen ei toistaiseksi näy Suomen lentoliikenteessä."
 date: 2026-04-17T16:43:09.470645+00:00
 categories:
   - Tiede

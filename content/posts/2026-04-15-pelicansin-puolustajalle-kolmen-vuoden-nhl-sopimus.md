@@ -1,5 +1,6 @@
 ---
 title: "Pelicansin puolustajalle kolmen vuoden NHL-sopimus"
+description: "Nuori suomalaispuolustaja Daniel Nieminen ottaa seuraavan askeleen urallaan ja siirtyy NHL-organisaatioon."
 date: 2026-04-15T05:43:05.252226+00:00
 categories:
   - Tiede

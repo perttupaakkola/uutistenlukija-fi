@@ -1,5 +1,6 @@
 ---
 title: "Vaarallinen onnettomuus Kärsämäellä – Osallisena noin 60 yläkoululaista opettajineen"
+description: "Kaksi henkilöautoa päätyi ojaan, mutta kukaan ei loukkaantunut. Nelostiellä Kärsämäen pohjoispuolella tapahtui torstaina vaarallinen liikenneonnettomuus,"
 date: 2026-04-16T12:43:21.065896+00:00
 categories:
   - Kotimaa

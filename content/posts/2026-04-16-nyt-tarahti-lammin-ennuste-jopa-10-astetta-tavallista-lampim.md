@@ -1,5 +1,6 @@
 ---
 title: "Nyt tärähti lämmin ennuste – jopa 10 astetta tavallista lämpimämpää"
+description: "Loppuviikon lämpötilat ovat selvästi tavanomaista korkeampia. Huhtikuu on hädin tuskin ehtinyt vielä alkaa,"
 date: 2026-04-16T03:33:20.208379+00:00
 categories:
   - Kotimaa

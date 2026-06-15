@@ -1,5 +1,6 @@
 ---
 title: "Koura-palkinnot jaettiin – näin MTV menestyi!"
+description: "Koulutusrahasto Koura jakoi tänään torstaina palkintoja ja kunniamainintoja MTV:n ja Ylen omatuotantoisille ohjelmille."
 date: 2026-04-16T18:43:17.448263+00:00
 categories:
   - Teknologia

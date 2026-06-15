@@ -1,5 +1,6 @@
 ---
 title: "Viking-laivalle saapui mies, joka kantoi kahta matkalaukkua – niiden sisällä oli hänen vaimonsa"
+description: "41-vuotias perheenäiti katosi oudosti töiden jälkeen. Hän päätyi viimeiselle matkalle Viking Linen risteilylle Turusta Tukholmaan,"
 date: 2026-04-16T15:13:10.562840+00:00
 categories:
   - Kotimaa

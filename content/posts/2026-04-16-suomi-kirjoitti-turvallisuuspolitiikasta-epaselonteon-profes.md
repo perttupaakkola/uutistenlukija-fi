@@ -1,5 +1,6 @@
 ---
 title: "Suomi kirjoitti turvallisuus­politiikasta epäselonteon, professori Tuomas Forsberg sanoo"
+description: "Selonteosta ei selviä, miten Suomi toimii, jos asiat eivät mene toivotulla tavalla."
 date: 2026-04-16T12:23:17.011080+00:00
 categories:
   - Tiede

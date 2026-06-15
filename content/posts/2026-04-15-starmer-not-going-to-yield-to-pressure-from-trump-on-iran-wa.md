@@ -1,5 +1,6 @@
 ---
 title: "Starmer 'not going to yield' to pressure from Trump on Iran war"
+description: "It follows a warning from the US president that America's trade deal with the UK \"can always be changed\"."
 date: 2026-04-15T12:03:10.346550+00:00
 categories:
   - Ulkomaat

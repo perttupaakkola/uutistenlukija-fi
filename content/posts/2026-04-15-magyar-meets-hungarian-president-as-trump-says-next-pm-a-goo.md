@@ -1,5 +1,6 @@
 ---
 title: "Magyar meets Hungarian president as Trump says next PM 'a good man'"
+description: "The man who ended Viktor Orbán's 16 years of continuous rule, Péter Magyar, is calling for a speedy transfer of power."
 date: 2026-04-15T09:22:54.321095+00:00
 categories:
   - Ulkomaat

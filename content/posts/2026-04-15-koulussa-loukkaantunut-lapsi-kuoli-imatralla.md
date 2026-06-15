@@ -1,5 +1,6 @@
 ---
 title: "Koulussa loukkaantunut lapsi kuoli Imatralla"
+description: "Koululaiset törmäsivät toisiinsa pihaleikeissä välitunnilla. Imatran Vuoksenniskan koululla vakavasti loukkaantunut lapsi on kuollut, kertoo poliisi."
 date: 2026-04-15T06:42:44.519460+00:00
 categories:
   - Kotimaa

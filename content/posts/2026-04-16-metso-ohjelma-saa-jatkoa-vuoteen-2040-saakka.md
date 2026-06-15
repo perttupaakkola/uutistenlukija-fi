@@ -1,5 +1,6 @@
 ---
 title: "Metso-ohjelma saa jatkoa vuoteen 2040 saakka"
+description: "Vapaaehtoinen Metso-metsiensuojeluohjelma on saamassa jatkoa vuoteen 2040 asti, mutta rahoituspula uhkaa suojelutavoitteiden toteutumista."
 date: 2026-04-16T14:12:52.762556+00:00
 categories:
   - Tiede

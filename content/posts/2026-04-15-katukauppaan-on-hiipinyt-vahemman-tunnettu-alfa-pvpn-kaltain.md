@@ -1,5 +1,6 @@
 ---
 title: "Katukauppaan on hiipinyt vähemmän tunnettu alfa-PVP:n kaltainen huume – tällaisesta aineesta on kyse"
+description: "Länsi-Uudenmaan poliisi teki usean kilon NEP-takavarikon marraskuussa. Aineelta puuttuu Suomessa huumeluokitus."
 date: 2026-04-15T04:53:16.565518+00:00
 categories:
   - Kotimaa

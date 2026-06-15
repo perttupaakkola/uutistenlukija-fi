@@ -1,5 +1,6 @@
 ---
 title: "Orpo kumoaa ministeri Ranteen väitteen Länsiradasta"
+description: "Pääministeri Petteri Orpo kumoaa hallituksensa ministerin puheet Länsiradan rakentamisen viivästymisestä."
 date: 2026-04-16T12:32:54.706633+00:00
 categories:
   - Tiede

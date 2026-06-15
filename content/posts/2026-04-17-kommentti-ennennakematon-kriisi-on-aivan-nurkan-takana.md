@@ -1,5 +1,6 @@
 ---
 title: "Kommentti: Ennennäkemätön kriisi on aivan nurkan takana"
+description: "Pitkittyvän kriisin seurauksilta ei yksinkertaisesti voi välttyä, kirjoittaa Iltalehden ulkomaantoimittaja Magnus Brunnsberg."
 date: 2026-04-17T09:13:32.462961+00:00
 categories:
   - Ulkomaat

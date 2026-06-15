@@ -1,5 +1,6 @@
 ---
 title: "HS: Helsingin sote-rahoja leikataan odotettua vähemmän, Länsi-Uudenmaan leikkaustarve kasvaa entisestään"
+description: "Hallituksen esitys hyvinvointialueiden sote-rahoituksesta on valmistumassa. Uudenmaan hyvinvointialueille on tulossa lisäsäästöjä."
 date: 2026-04-15T10:42:48.595228+00:00
 categories:
   - Tiede

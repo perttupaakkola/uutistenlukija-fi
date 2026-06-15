@@ -1,5 +1,6 @@
 ---
 title: "Suora lähetys: Artemis II -astronautit median edessä"
+description: "Nasan Artemis II -kuulennon astronautit pitävät suoran tiedotustilaisuuden kuusi päivää laskeutumisen jälkeen."
 date: 2026-04-16T18:52:57.972277+00:00
 categories:
   - Ulkomaat

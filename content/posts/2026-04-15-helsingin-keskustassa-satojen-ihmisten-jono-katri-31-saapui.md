@@ -1,5 +1,6 @@
 ---
 title: "Helsingin keskustassa satojen ihmisten jono – Katri, 31, saapui paikalle jo edellisiltana"
+description: "Helsingin Kaisaniemeen muodostui keskiviikkoaamuna pitkä jono. Columbus Blue Jacketsin Markus Nutivaara pelaa ensi yönä Suomen aikaa ensimmäisen ottelunsa"
 date: 2026-04-15T06:22:42.839816+00:00
 categories:
   - Talous

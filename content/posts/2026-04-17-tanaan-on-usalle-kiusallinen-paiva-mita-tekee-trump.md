@@ -1,5 +1,6 @@
 ---
 title: "Tänään on USA:lle kiusallinen päivä – Mitä tekee Trump?"
+description: "Millaisen operaation Donald Trump voisi tehdä Kuubaan ja mitä hän siitä oikein hyötyisi?"
 date: 2026-04-17T14:43:21.361189+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "YIT:n muutosneuvottelut ohi – 95 tehtävää päättyy Suomessa"
+description: "Rakennusyhtiö YIT kertoo muutosneuvotteluidensa päättyneen. Neuvotteluiden lopputuloksena 95 tehtävää päättyy Suomessa."
 date: 2026-04-17T06:43:06.557504+00:00
 categories:
   - Urheilu

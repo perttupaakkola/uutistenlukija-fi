@@ -1,5 +1,6 @@
 ---
 title: "Nainen löytyi kuolleena metsästä Laukaassa – poliisilta tietoa tutkinnasta"
+description: "Poliisi vangitsi naisen epäiltynä taposta aviomiehen, mutta vapautti hänet pian."
 date: 2026-04-17T11:43:27.600907+00:00
 categories:
   - Kotimaa

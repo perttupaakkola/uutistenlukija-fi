@@ -1,5 +1,6 @@
 ---
 title: "Päivän ravit: Ikäluokkahevosia viivalla Jyväskylässä"
+description: "Löydän istumapaikan Jyväskylän yliopiston juhlasalista vanhemman rouvan vierestä."
 date: 2026-04-15T07:52:47.453275+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "EU-parlamentin puhemies Roberta Metsola: Trumpin paavin arvostelu ei ole hyväksyttävää"
+description: "Yhdysvaltojen ja EU:n suhteet eivät Metsolan mukaan ole rikkoontuneet, mutta jännitteitä on."
 date: 2026-04-15T16:53:20.807401+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Kuiva maa kärynnyt eri puolilla maata – maastopalovaroitusalue laajenee"
+description: "Tänään perjantaina on syttynyt useita maastopaloja risujen, roskien ja nuotion polton seurauksena."
 date: 2026-04-17T18:22:47.936426+00:00
 categories:
   - Kotimaa

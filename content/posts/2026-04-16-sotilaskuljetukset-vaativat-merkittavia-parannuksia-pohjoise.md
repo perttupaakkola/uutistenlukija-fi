@@ -1,5 +1,6 @@
 ---
 title: "Sotilaskuljetukset vaativat merkittäviä parannuksia pohjoisen reitteihin, sanoo puolustusvaliokunnan puheenjohtaja"
+description: "Liikenneyhteydet Atlantin rannalle palvelisivat sotilaskuljetuksia ja huoltovarmuutta. Pienempiä remonttikohteita löytyi maaliskuun sotaharjoituksessa."
 date: 2026-04-16T15:03:04.264551+00:00
 categories:
   - Tiede

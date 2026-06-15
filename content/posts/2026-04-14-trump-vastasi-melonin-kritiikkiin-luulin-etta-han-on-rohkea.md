@@ -1,5 +1,6 @@
 ---
 title: "Trump vastasi Melonin kritiikkiin – \"Luulin, että hän on rohkea\""
+description: "Yhdysvaltain presidentti Donald Trump on herättänyt viime päivinä hämmennystä muun muassa julkaisemalla tekoälyllä tehdyn kuvan itsestään Jeesuksen"
 date: 2026-04-14T19:43:01.368754+00:00
 categories:
   - Teknologia

@@ -1,5 +1,6 @@
 ---
 title: "Trump Foxille: Sota Iranissa on ”lähellä loppua”"
+description: "IS seuraa tässä artikkelissa tilannetta Lähi-idässä. Puoluejohtajat arvostelevat Yhdysvaltojen presidentin Donald Trumpin lähtöä Iranin sotaan sekä tämän"
 date: 2026-04-15T06:12:52.130908+00:00
 categories:
   - Ulkomaat

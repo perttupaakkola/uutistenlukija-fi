@@ -1,5 +1,6 @@
 ---
 title: "Televisiosta tuttu MTV:n toimittaja on kuollut 44-vuotiaana"
+description: "MTV Uutisten toimittaja Joonas Lepistö on kuollut nopeasti edenneeseen syöpään."
 date: 2026-04-09T06:53:49.331535+00:00
 categories:
   - Tiede

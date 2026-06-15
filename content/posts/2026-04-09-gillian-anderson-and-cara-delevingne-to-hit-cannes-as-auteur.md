@@ -1,5 +1,6 @@
 ---
 title: "Gillian Anderson and Cara Delevingne to hit Cannes as auteur heavyweights dominate festival lineup"
+description: "The 79th edition of the film festival will see work by Pedro Almodóvar, Hirokazu Kore-eda and László Nemes considered for the coveted Palme d’Or Gillian"
 date: 2026-04-09T13:43:09.323722+00:00
 categories:
   - Teknologia

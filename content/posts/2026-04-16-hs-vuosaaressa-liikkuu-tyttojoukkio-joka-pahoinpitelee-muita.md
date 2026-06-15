@@ -1,5 +1,6 @@
 ---
 title: "HS: Vuosaaressa liikkuu tyttöjoukkio, joka pahoinpitelee muita"
+description: "Poliisi on vahvistanut Helsingin Sanomille, että sille on tehty tapauksista useita rikosilmoituksia."
 date: 2026-04-16T09:03:37.271804+00:00
 categories:
   - Kotimaa

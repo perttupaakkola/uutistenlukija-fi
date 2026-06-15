@@ -1,5 +1,6 @@
 ---
 title: "Raportissa rajua tekstiä: Eläkkeistä pakko säästää"
+description: "Elinkeinoelämän valtuuskunta EVA katsoo tuoreessa raportissa, että ensi vaalikaudelle pitäisi julkista taloutta sopeuttaa 13 miljardilla eurolla."
 date: 2026-04-17T12:43:12.148900+00:00
 categories:
   - Kotimaa

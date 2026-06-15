@@ -1,5 +1,6 @@
 ---
 title: "Halkosurma, vasaramurha ja yli sata iskua saksilla – tällaisia henkirikoksia asumisyksiköissä on tehty"
+description: "Asumisyksiköissä on tapahtunut viime vuosina useita väkivalta- ja henkirikoksia, joita MTV listasi tähän juttuun."
 date: 2026-04-15T03:33:45.725875+00:00
 categories:
   - Tiede

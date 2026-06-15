@@ -1,5 +1,6 @@
 ---
 title: "Unkarin vaalivoittaja naljaili Orbánille – ”Lukiko hän Trumpin lausuntoa”"
+description: "Presidentti Viktor Orbánin rökittäneen puolueen johtaja viittasi presidentti Donald Trumpin kehuun."
 date: 2026-04-15T20:33:04.990754+00:00
 categories:
   - Ulkomaat

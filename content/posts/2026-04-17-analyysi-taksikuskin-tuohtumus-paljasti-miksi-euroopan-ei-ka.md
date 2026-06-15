@@ -1,5 +1,6 @@
 ---
 title: "Analyysi: Taksikuskin tuohtumus paljasti, miksi Euroopan ei kannata odottaa Unkarin uudelta johdolta liikoja"
+description: "Unkarin vaalit voittaneeseen Péter Magyariin ladatut suuret odotukset voivat paljastua ylimitoi­tetuiksi, kirjoittaa ulkomaan­toimittaja Sakari Nuuttila."
 date: 2026-04-17T02:43:32.057540+00:00
 categories:
   - Tiede

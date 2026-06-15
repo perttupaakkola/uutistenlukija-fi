@@ -1,5 +1,6 @@
 ---
 title: "Droonisota ja entistä kurjakuntoisempi Venäjän varjolaivasto uhkaavat Itämerta – Ukrainan iskut eivät tehneet pysyvää lovea Venäjän öljyralliin"
+description: "Luottamus kotimaan ilmatilan turvallisuuteen on kärsinyt kolhuja, kun Suomen maaperältä on löytynyt viime kuukausina ainakin neljä ukrainalaiseksi"
 date: 2026-04-17T15:03:23.726192+00:00
 categories:
   - Kotimaa

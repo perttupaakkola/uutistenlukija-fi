@@ -1,5 +1,6 @@
 ---
 title: "Oppositiossa tulistuttiin Rydmanille: ”Vanhuksilta viedään tuhkatkin pesästä”"
+description: "Hallituksen aikeissa on säästää sosiaalihuollosta 100 miljoonaa euroa. TS-Yhtymän lehtien teettämän puolueiden kannatusmittauksen mukaan SDP saisi"
 date: 2026-04-17T16:22:57.077043+00:00
 categories:
   - Tiede

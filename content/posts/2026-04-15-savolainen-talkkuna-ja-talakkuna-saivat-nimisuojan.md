@@ -1,5 +1,6 @@
 ---
 title: "Savolainen talkkuna ja talakkuna saivat nimisuojan"
+description: "Savolainen talkkuna tai talakkuna on Suomen kahdeksastoista EU:n nimisuojan saanut tuote, tiedottaa Ruokavirasto."
 date: 2026-04-15T12:13:15.147350+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Susanna Liukkonen aloitti autofiksauksen nollabudjetilla ja nousi alan sometähdeksi – ”Monelle kova pala, kun nuori nainen neuvoo”"
+description: "Vuonna 2021 Susanna Liukkosella oli autoalan tutkinto ja nolla euroa rahaa. Tuore autonasentaja yritti päästä myymään autojen varaosia suuriin"
 date: 2026-04-16T08:02:55.091820+00:00
 categories:
   - Talous

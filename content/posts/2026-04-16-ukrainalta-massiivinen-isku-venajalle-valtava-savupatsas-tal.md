@@ -1,5 +1,6 @@
 ---
 title: "Ukrainalta massiivinen isku Venäjälle – valtava savu­patsas tallentui kuviin"
+description: "IS seuraa tässä artikkelissa tilannetta Ukrainan sodassa sekä siihen liittyviä tapahtumia Venäjällä."
 date: 2026-04-16T13:53:00.871941+00:00
 categories:
   - Ulkomaat

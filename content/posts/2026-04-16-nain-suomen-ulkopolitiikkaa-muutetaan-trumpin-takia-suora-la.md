@@ -1,5 +1,6 @@
 ---
 title: "Näin Suomen ulko­politiikkaa muutetaan Trumpin takia – Suora lähetys kello 14.10"
+description: "Ulkoministeri Elina Valtonen (kok) kommentoi tuoretta ulko- ja turvallisuuspoliittista selontekoa. Kyseessä on päivitys vuoden 2024 selontekoon."
 date: 2026-04-16T10:12:52.396830+00:00
 categories:
   - Kotimaa

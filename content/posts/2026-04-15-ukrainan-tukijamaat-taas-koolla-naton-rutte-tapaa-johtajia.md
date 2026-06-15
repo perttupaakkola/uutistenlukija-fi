@@ -1,5 +1,6 @@
 ---
 title: "Ukrainan tukijamaat taas koolla – Naton Rutte tapaa johtajia"
+description: "Berliinissä pidetään Ukrainalle aseapua koordinoivan Ramstein-ryhmän kokous. Euroopassa seurataan tarkasti keskiviikkona,"
 date: 2026-04-15T03:13:23.770453+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Puhemies Metsola tapasi Suomessa myös armeijaa käyvän poikansa"
+description: "Ylen tietojen mukaan Roberta Metsola on nähty tänään Vekaranjärven varuskunnassa."
 date: 2026-04-17T15:23:04.268495+00:00
 categories:
   - Kotimaa

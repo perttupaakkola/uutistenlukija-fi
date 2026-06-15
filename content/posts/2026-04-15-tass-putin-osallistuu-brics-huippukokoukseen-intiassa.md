@@ -1,5 +1,6 @@
 ---
 title: "Tass: Putin osallistuu Brics-huippu­kokoukseen Intiassa"
+description: "Tassin mukaan kokous järjestetään New Delhissä syyskuussa. Venäjän presidentti Vladimir Putin osallistuu Brics-maiden huippukokoukseen Intiassa,"
 date: 2026-04-15T16:43:01.002633+00:00
 categories:
   - Kotimaa

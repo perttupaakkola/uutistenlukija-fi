@@ -1,5 +1,6 @@
 ---
 title: "Venäjälle kytköksissä oleva hakkeriryhmä murtautui virkamiesten sähköposti­tileihin Ukrainassa"
+description: "Tutkijan mukaan hakkerit tekivät tietomurtoja Ukrainaan pysyäkseen askeleen edellä ukrainalaisia, Moskovan vakoojia paljastavia tutkijoita."
 date: 2026-04-15T06:32:29.941164+00:00
 categories:
   - Ulkomaat

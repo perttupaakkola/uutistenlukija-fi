@@ -1,5 +1,6 @@
 ---
 title: "Yle: Kainuussa poikkeuk­sellinen tilanne – Ei ole tapahtunut yli 140 vuoteen"
+description: "Järvien jäät ovat katoamassa Kainuusta ennätysaikaisin, kertoo Yle. Järvien jäiden lähdössä on todennäköisesti syntymässä uusi ennätys Kainuussa."
 date: 2026-04-17T19:13:09.874577+00:00
 categories:
   - Tiede

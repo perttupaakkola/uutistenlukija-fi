@@ -1,5 +1,6 @@
 ---
 title: "Satu Rämön Hildur-sarjan käännösoikeudet myytiin Yhdysvaltoihin"
+description: "Rämön kirjojen käännösoikeudet on myyty nyt 29 maahan. Suomalais-islantilaisen kirjailijan Satu Rämön suositun Hildur-sarjan kolmen ensimmäisen osan"
 date: 2026-04-16T07:52:47.392744+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Lyse Doucet: Under fragile ceasefire, Iranians wonder if US deal can be done"
+description: "The BBC's chief international correspondent reports from Iran as diplomatic efforts to avoid a return to war intensify."
 date: 2026-04-15T21:22:56.715100+00:00
 categories:
   - Ulkomaat

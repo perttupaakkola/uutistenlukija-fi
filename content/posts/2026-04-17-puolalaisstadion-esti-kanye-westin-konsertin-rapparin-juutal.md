@@ -1,5 +1,6 @@
 ---
 title: "Puolalaisstadion esti Kanye Westin konsertin räppärin juutalaisvastaisten mielipiteiden takia"
+description: "Britannian hallitus on tehnyt harvinaisen päätöksen ja estänyt yhdysvaltalaismuusikon pääsyn maahan."
 date: 2026-04-17T17:12:49.246869+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Näin Eurooppa varautuu Natoon ilman Yhdysvaltoja: \"Olisi tyhmyyttä ja hulluutta\""
+description: "Euroopan Nato-maiden keinoihin kuuluvat asetuotannon lisääminen, yleinen asevelvollisuus ja oma ydinpelote."
 date: 2026-04-15T16:33:05.009025+00:00
 categories:
   - Tiede

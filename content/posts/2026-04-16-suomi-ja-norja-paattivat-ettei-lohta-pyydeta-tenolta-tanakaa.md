@@ -1,5 +1,6 @@
 ---
 title: "Suomi ja Norja päättivät, ettei lohta pyydetä Tenolta tänäkään kesänä – Luke: ”Tilanne on ollut erittäin huono”"
+description: "Lohenkalastuksen mahdollisuudet ovat olleet Tenolla aallonpohjassa koko 2020-luvun."
 date: 2026-04-16T18:13:11.328773+00:00
 categories:
   - Kotimaa

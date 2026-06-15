@@ -1,5 +1,6 @@
 ---
 title: "Canada was once a dream destination for Indian students. Is that changing?"
+description: "Tighter rules, rising costs and visa risks are forcing Indian students to rethink studying in Canada."
 date: 2026-04-15T05:32:49.839403+00:00
 categories:
   - Tiede

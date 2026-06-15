@@ -1,5 +1,6 @@
 ---
 title: "Australian pleads guilty to creating deepfake porn in landmark case"
+description: "The 19-year-old is the first person to be charged under a new national law. An Australian teenager has pleaded guilty to creating deepfake pornography,"
 date: 2026-04-15T07:42:47.520236+00:00
 categories:
   - Teknologia

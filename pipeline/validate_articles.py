@@ -165,6 +165,7 @@ def check_image_url(url: str) -> tuple[bool, int]:
 def validate_articles(
     check_images: bool = False,
     fix_descriptions: bool = False,
+    dry_run: bool = False,
     limit: int | None = None,
 ) -> dict:
     files = sorted(CONTENT_DIR.glob("*.md"))
@@ -202,8 +203,12 @@ def validate_articles(
             if fix_descriptions:
                 new_desc = extract_description_from_body(body)
                 if new_desc:
+                    if dry_run:
+                        fixed_count += 1
+                        continue
                     # Write back
-                    new_fm_line = f'description: "{new_desc}"\n'
+                    safe_desc = new_desc.replace('"', '\\"')
+                    new_fm_line = f'description: "{safe_desc}"\n'
                     if 'description:' in text:
                         # Replace existing empty line
                         new_text = re.sub(
@@ -439,6 +444,7 @@ def main():
     result = validate_articles(
         check_images=check_images,
         fix_descriptions=fix_descriptions,
+        dry_run=dry_run,
         limit=limit,
     )
 

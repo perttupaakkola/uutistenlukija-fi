@@ -1,5 +1,6 @@
 ---
 title: "Analyysi: Ikävä totuus Marinin hallituksen lupauksista paljastui"
+description: "Marinin hallitus lupasi liikaa ja otti sote-malliinsa palasia, joista asiantuntijat varoittivat."
 date: 2026-04-17T04:13:17.995053+00:00
 categories:
   - Kotimaa

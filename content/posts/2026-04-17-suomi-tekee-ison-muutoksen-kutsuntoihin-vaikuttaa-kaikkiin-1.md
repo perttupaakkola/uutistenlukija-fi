@@ -1,5 +1,6 @@
 ---
 title: "Suomi tekee ison muutoksen kutsuntoihin – Vaikuttaa kaikkiin 17-vuotiaisiin"
+description: "Puolustusvoimien kutsunnat aiotaan muuttaa kaksiosaisiksi ja niiden ensimmäisen osa koko ikäluokkaa koskevaksi."
 date: 2026-04-17T19:43:12.529592+00:00
 categories:
   - Kotimaa

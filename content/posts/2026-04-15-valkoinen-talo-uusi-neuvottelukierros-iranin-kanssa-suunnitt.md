@@ -1,5 +1,6 @@
 ---
 title: "Valkoinen talo: Uusi neuvottelukierros Iranin kanssa suunnitteilla, järjestetään todennäköisesti Pakistanissa"
+description: "Yhdysvallat ja Iran neuvottelevat edelleen rauhasta, sanoo Valkoinen talo. Tiedottaja Karoline Leavittin mukaan keskustelut ovat rakentavia."
 date: 2026-04-15T19:13:17.009884+00:00
 categories:
   - Tiede

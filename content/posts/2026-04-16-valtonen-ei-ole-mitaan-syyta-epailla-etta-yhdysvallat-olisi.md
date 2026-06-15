@@ -1,5 +1,6 @@
 ---
 title: "Valtonen: \"Ei ole mitään syytä epäillä, että Yhdysvallat olisi vetäytymässä Natosta\""
+description: "Suomi on yhtenäistämässä linjansa Pohjoismaiden mukaan, sanoo ulkoministeri Elina Valtonen."
 date: 2026-04-16T12:53:08.587430+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Nine killed in second Turkish school shooting in two days"
+description: "Eight students and one teacher died in the attack, according to Interior Minister Mustafa Cifci."
 date: 2026-04-15T15:33:25.543645+00:00
 categories:
   - Tiede

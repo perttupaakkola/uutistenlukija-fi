@@ -1,5 +1,6 @@
 ---
 title: "Apetit sulkee Pudasjärven pakastepizzatehtaan"
+description: "Suomen ja koko maailman pohjoisinta pakastepizzatehdasta uhkaa sulkeminen. Elintarvikeyhtiö Apetit harkitsee vaihtoehtoisia malleja"
 date: 2026-04-16T12:32:54.706633+00:00
 categories:
   - Tiede

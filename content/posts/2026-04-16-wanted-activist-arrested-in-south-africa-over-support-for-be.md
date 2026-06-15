@@ -1,5 +1,6 @@
 ---
 title: "Wanted activist arrested in South Africa over support for Benin coup plot"
+description: "Keba Seba is known for opposing French influence in Africa and backing West Africa's military leaders."
 date: 2026-04-16T10:02:58.434895+00:00
 categories:
   - Tiede

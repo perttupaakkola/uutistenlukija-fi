@@ -1,5 +1,6 @@
 ---
 title: "Lapsi kuoli jäätyään kuorma-auton alle Mynämäellä – rikosnimike muuttui"
+description: "Polkupyörällä liikkunut lapsi kuoli jäätyään kääntyvän kuorma-auton alle. Poliisin selvityksen mukaan Mynämäellä lapsen päälle ajanut kuorma-auton"
 date: 2026-04-17T13:32:54.267829+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Middle East crisis live: Netanyahu confirms Israel has agreed to 10-day ceasefire with Lebanon"
+description: "Israeli prime minister says key demand is that Hezbollah must be dismantled; Lebanon’s PM Nawaf Salam welcomes ceasefire announced by Donald Trump Trump"
 date: 2026-04-16T18:43:17.448263+00:00
 categories:
   - Ulkomaat

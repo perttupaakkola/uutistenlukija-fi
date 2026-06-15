@@ -1,5 +1,6 @@
 ---
 title: "Iranin sota | Libanon ja Israel neuvottelevat tänään, sanoo Trump – Libanon ei ole tietoinen"
+description: "HS seuraa sotaa hetki hetkeltä tässä jutussa. Lähi-idässä iskut energiantuotantoon kiihtyvät."
 date: 2026-04-16T06:22:48.265475+00:00
 categories:
   - Kotimaa

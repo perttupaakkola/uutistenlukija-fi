@@ -1,5 +1,6 @@
 ---
 title: "Suolistosta imeytyvä kolesteroli voi lisätä sydäninfarktin riskiä"
+description: "Suolistosta imeytyvä kolesteroli voi lisätä vakavien sydäntapahtumien riskiä, selviää Helsingin yliopiston ja Husin tutkimuksesta."
 date: 2026-04-15T10:02:50.657355+00:00
 categories:
   - Tiede

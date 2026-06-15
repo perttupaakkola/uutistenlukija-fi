@@ -1,5 +1,6 @@
 ---
 title: "Nuoret kansantanssijat kokoontuvat Orimattilassa"
+description: "Työttömiä työnhakijoita on Etelä-Pohjanmaalla enemmän kuin vuosi sitten. Työttömyys on lisääntynyt eniten nuorten ja lähellä eläkeikää olevien joukossa,"
 date: 2026-04-17T12:03:08.959104+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Liki 400 työntekijää hakee palkkasaatavia UPM:ltä käräjäoikeuden kautta"
+description: "Palkkakiistan taustalla on kolme viikkoa kestänyt kuljetusalan lakko keväällä 2024. Tuolloin UPM keskeytti palkanmaksun Kymin tehtaalla Kouvolassa."
 date: 2026-04-15T10:13:18.657650+00:00
 categories:
   - Talous

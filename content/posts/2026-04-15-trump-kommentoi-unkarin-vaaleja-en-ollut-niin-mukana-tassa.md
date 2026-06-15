@@ -1,5 +1,6 @@
 ---
 title: "Trump kommentoi Unkarin vaaleja: En ollut niin mukana tässä"
+description: "Asiantuntijat ovat pitäneet Unkarin pääministerin Viktor Orbánin häviötä iskuna niin Trumpille."
 date: 2026-04-15T05:12:50.062946+00:00
 categories:
   - Ulkomaat

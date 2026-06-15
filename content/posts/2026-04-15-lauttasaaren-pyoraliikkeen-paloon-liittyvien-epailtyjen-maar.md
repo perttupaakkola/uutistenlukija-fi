@@ -1,5 +1,6 @@
 ---
 title: "Lauttasaaren pyörä­liikkeen paloon liittyvien epäiltyjen määrä kasvaa, poliisilla jo seitsemän epäiltyä"
+description: "Poliisi selvittää esitutkinnassa erityisesti sitä, ketkä ovat tilausrikoksen taustalla. Palon sytyttämisestä epäillyt nuoret ovat tutkinta­vankeudessa."
 date: 2026-04-15T13:34:07.542057+00:00
 categories:
   - Kotimaa

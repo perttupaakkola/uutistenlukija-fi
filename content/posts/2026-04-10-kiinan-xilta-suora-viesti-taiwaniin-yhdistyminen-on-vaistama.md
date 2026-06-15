@@ -1,5 +1,6 @@
 ---
 title: "Kiinan Xiltä suora viesti Taiwaniin: Yhdistyminen on väistämätöntä"
+description: "Kiinan presidentti Xi Jinping tapasi perjantaina Pekingissä Taiwanin oppositiopuolue Kuomintangin puheenjohtajan Cheng Li-wunin ja sanoi uskovansa,"
 date: 2026-04-10T12:13:05.436958+00:00
 categories:
   - Ulkomaat

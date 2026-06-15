@@ -1,5 +1,6 @@
 ---
 title: "Poliisi otti kiinni Samkin tiloissa liikkuneen aseistautuneen maastopukuhenkilön"
+description: "Poliisi on ottanut kiinni Porissa Satakunnan ammattikorkeakoulussa henkilön, jonka epäillään liikkuneen tiloissa maastopuvussa aseistautuneena."
 date: 2026-04-17T07:53:29.441602+00:00
 categories:
   - Kotimaa

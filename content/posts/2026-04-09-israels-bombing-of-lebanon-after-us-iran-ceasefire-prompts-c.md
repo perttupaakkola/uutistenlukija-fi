@@ -1,5 +1,6 @@
 ---
 title: "Israel’s bombing of Lebanon after US-Iran ceasefire prompts condemnation"
+description: "Strikes that killed more than 200 people spark outrage amid global efforts to salvage truce Middle East crisis – live updates Israel’s devastating"
 date: 2026-04-09T14:03:31.600665+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Pörssisähkön hinta kohoaa torstaina rutkasti – Katso halvimmat vartit tästä"
+description: "Iltalehden päivittyvä taulukko näyttää pörssisähkön vallitsevan hinnan. Iltalehden palvelu mahdollistaa pörssisähkön hinnan seuraamisen."
 date: 2026-04-15T11:43:11.559975+00:00
 categories:
   - Kotimaa

@@ -1,5 +1,6 @@
 ---
 title: "Iso muutos pyöräkaupassa – Kauppias: ”Odotimme pahempaa”"
+description: "Työsuhdepolkupyöriä koskevan veroedun poisto nosti ”luomupyörien” suosiota ja vähensi kausityöntekijöiden määrää."
 date: 2026-04-16T10:02:58.434895+00:00
 categories:
   - Talous

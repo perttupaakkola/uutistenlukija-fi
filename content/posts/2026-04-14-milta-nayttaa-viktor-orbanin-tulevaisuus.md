@@ -1,5 +1,6 @@
 ---
 title: "Miltä näyttää Viktor Orbanin tulevaisuus?"
+description: "Tyytyykö Orban rooliin oppositiojohtajana vai suuntaako hän ulkomaille tukijoidensa helmoihin?"
 date: 2026-04-14T15:22:46.149523+00:00
 categories:
   - Ulkomaat

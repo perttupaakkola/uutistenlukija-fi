@@ -1,5 +1,6 @@
 ---
 title: "Yle: Hävittäjät saivat hevoset sekoamaan"
+description: "Haminalaisella ravitallilla tapahtui potentiaalinen vaaratilanne hävittäjien vuoksi, Yle kertoo."
 date: 2026-04-16T19:02:48.603139+00:00
 categories:
   - Tiede

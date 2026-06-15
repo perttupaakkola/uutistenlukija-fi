@@ -1,5 +1,6 @@
 ---
 title: "Naples bank robbers hold 25 people hostage then vanish through tunnel"
+description: "The armed men reportedly evaded capture by escaping through the city's sewer system."
 date: 2026-04-16T18:13:11.328773+00:00
 categories:
   - Tiede

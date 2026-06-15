@@ -1,5 +1,6 @@
 ---
 title: "Pe­rus­tus­la­ki­va­lio­kun­ta haluaa tiukennuksia siihen, miten passien sormenjälkiä voisi luovuttaa vakavien rikosten tutkintaan"
+description: "Hallitus haluaa passien sormenjäljet ja kasvokuvat avuksi vakavien rikosten tutkintaan."
 date: 2026-04-16T09:53:21.616973+00:00
 categories:
   - Kotimaa

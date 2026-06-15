@@ -1,5 +1,6 @@
 ---
 title: "Antti Lindtman lyttää SDP-toveri Matias Mäkysen kritiikin: \"Hiukan vaikea pysyä perässä\""
+description: "Antti Lindtman on Uutisextrassa täysin toisella linjalla kuin Matias Mäkynen. SDP:n sisäiset linjaerimielisyydet ovat pulpahdelleet pintaan toistuvasti."
 date: 2026-04-17T12:23:12.350987+00:00
 categories:
   - Tiede

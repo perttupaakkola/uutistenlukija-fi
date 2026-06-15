@@ -1,5 +1,6 @@
 ---
 title: "Alko alkaa myydä osassa myymälöistään pikkunaposteltavaa"
+description: "Alko kertoo alkavansa myydä osassa myymälöistään pikkunaposteltavaa juomien lisäksi. Yhtiö aloittaa huhtikuun puolivälissä kokeilun 30 myymälässä."
 date: 2026-04-15T05:23:04.132486+00:00
 categories:
   - Tiede

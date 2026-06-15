@@ -1,5 +1,6 @@
 ---
 title: "Uhrin paon estänyt tuomittiin Helsingin karaoketaposta – mies tapettiin juomariidan jälkeen"
+description: "Kaksi parikymppistä miestä sai tappotuomion Helsingin ydinkeskustassa sijaitsevan Tokio Karaoke -ravintolan edustalla tapahtuneesta puukotuksesta."
 date: 2026-04-14T14:02:59.814175+00:00
 categories:
   - Kotimaa

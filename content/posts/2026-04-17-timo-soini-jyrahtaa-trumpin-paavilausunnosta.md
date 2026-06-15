@@ -1,5 +1,6 @@
 ---
 title: "Timo Soini jyrähtää Trumpin paavi­lausunnosta"
+description: "Trump on moittinut paavia kovin sanoin. Entinen ulkoministeri ja itsekin katolilainen Timo Soini korostaa,"
 date: 2026-04-17T08:33:03.807197+00:00
 categories:
   - Kotimaa

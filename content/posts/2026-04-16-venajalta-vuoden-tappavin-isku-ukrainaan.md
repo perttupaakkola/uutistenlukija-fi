@@ -1,5 +1,6 @@
 ---
 title: "Venäjältä vuoden tappavin isku Ukrainaan"
+description: "Tähän artikkeliin on koottu Ukrainan sodan keskeisimmät tapahtumat torstailta 16. huhtikuuta 2026. Kyseessä on sodan 1513. päivä."
 date: 2026-04-16T21:13:06.417848+00:00
 categories:
   - Ulkomaat

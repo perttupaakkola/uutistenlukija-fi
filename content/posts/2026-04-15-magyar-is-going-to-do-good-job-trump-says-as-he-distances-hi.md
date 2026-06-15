@@ -1,5 +1,6 @@
 ---
 title: "Magyar ‘is going to do good job’, Trump says as he distances himself from Orbán – Europe live"
+description: "US president says he wasn’t ‘involved’ in Hungarian election despite JD Vance’s trip to Budapest ahead of polls Europe correspondent Analysts warn that"
 date: 2026-04-15T13:44:03.178923+00:00
 categories:
   - Ulkomaat

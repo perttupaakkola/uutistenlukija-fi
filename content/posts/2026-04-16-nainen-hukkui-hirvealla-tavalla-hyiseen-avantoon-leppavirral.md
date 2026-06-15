@@ -1,5 +1,6 @@
 ---
 title: "Nainen hukkui hirveällä tavalla hyiseen avantoon Leppävirralla – nyt tuli tuomio"
+description: "Kokenut avantouimari ei jaksanut uida virtausta vastaan ja hukkui hyiseen veteen Leppävirralla joulukuussa 2023."
 date: 2026-04-16T09:23:10.588733+00:00
 categories:
   - Tiede

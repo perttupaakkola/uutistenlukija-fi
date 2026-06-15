@@ -1,5 +1,6 @@
 ---
 title: "Palestinians hand over suspect in 1982 attack on Jewish restaurant in Paris"
+description: "Hicham Harb is suspected of directing the attack in the Rue des Rosiers and acting as one of the gunmen who shot at diners."
 date: 2026-04-17T13:46:53.195661+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "How South Korea plans to use the Iran crisis to spur a renewables revolution"
+description: "Energy crisis unfolding in Middle East has added political urgency, and more funding, to transform South Korea’s solar industry In Guyang-ri,"
 date: 2026-04-16T03:42:46.968881+00:00
 categories:
   - Ulkomaat

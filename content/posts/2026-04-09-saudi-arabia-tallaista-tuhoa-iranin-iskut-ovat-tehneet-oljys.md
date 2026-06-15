@@ -1,5 +1,6 @@
 ---
 title: "Saudi-Arabia: Tällaista tuhoa Iranin iskut ovat tehneet öljysektorilla"
+description: "Yhdysvaltain presidentti Donald Trump on sanonut suostuvansa kahden viikon tulitaukoon. Ehtona on, että Iran avaa Hormuzinsalmen."
 date: 2026-04-09T21:13:00.585278+00:00
 categories:
   - Talous

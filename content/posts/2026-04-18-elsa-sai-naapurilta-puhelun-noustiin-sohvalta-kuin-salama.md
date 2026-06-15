@@ -1,5 +1,6 @@
 ---
 title: "Elsa sai naapurilta puhelun – ”Noustiin sohvalta kuin salama”"
+description: "Elsa Haaparanta puolisoineen katsoi elokuvaa, kun naapuri soitti. Näky pihalla oli ”kuin Leijonakuninkaasta”."
 date: 2026-04-18T05:03:04.463442+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Viherpesudirektiiviin puolen vuoden siirtymäaika – ”Laajamittainen tuotehävikki ja lisäkustannukset uhkasivat”"
+description: "Kaupan liitto, Elintarviketeollisuusliitto, Suomen Yrittäjät ja Elinkeinoelämän keskusliitto kiittävät hallitusta ratkaisusta,"
 date: 2026-04-09T14:12:57.816295+00:00
 categories:
   - Talous

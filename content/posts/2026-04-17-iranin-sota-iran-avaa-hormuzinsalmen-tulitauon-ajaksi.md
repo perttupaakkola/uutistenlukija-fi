@@ -1,5 +1,6 @@
 ---
 title: "Iranin sota | Iran avaa Hormuzin­salmen tuli­tauon ajaksi"
+description: "HS seuraa sotaa hetki hetkeltä tässä jutussa. Yhdysvallat käynnistää Hormuzinsalmen merisaarron maanantaina kello 10 itäistä aikaa (kello 17 Suomen"
 date: 2026-04-17T13:12:51.949551+00:00
 categories:
   - Kotimaa

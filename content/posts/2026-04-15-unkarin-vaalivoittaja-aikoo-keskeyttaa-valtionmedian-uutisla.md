@@ -1,5 +1,6 @@
 ---
 title: "Unkarin vaali­voittaja aikoo keskeyttää valtion­median uutis­lähetykset"
+description: "Unkarin tulevan pääministerin mukaan unkarilaiset ansaitsevat valtiollisen median, joka kertoo totuuden."
 date: 2026-04-15T12:33:03.512978+00:00
 categories:
   - Ulkomaat

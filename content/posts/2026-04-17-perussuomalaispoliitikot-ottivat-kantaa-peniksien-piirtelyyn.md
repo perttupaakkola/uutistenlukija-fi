@@ -1,5 +1,6 @@
 ---
 title: "Perussuomalaispoliitikot ottivat kantaa peniksien piirtelyyn taivaalle: \"Jonniin joutavaa vouhottamista\""
+description: "Iltalehti uutisoi perjantaina, että Ilmavoimien lentoreserviupseerikurssin oppilaat lentelivät taivaalla peniksen muotoisia reittejä maanantaina 13."
 date: 2026-04-17T19:03:18.984595+00:00
 categories:
   - Tiede

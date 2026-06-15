@@ -1,5 +1,6 @@
 ---
 title: "Suomi hakee miljoonapottia sotadroonien torjuntaan"
+description: "Komissiolta haettavalla rahalla on tarkoitus parantaa droonien torjuntakykyä. Talouspoliittinen ministerivaliokunta linjasi torstaina,"
 date: 2026-04-09T10:53:43.435255+00:00
 categories:
   - Teknologia

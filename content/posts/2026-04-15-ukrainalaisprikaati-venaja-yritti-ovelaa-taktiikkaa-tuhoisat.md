@@ -1,5 +1,6 @@
 ---
 title: "Ukrainalaisprikaati: Venäjä yritti ovelaa taktiikkaa – tuhoisat seuraukset"
+description: "IS seuraa tässä artikkelissa tilannetta Ukrainan sodassa sekä siihen liittyviä tapahtumia Venäjällä."
 date: 2026-04-15T08:03:06.636021+00:00
 categories:
   - Ulkomaat

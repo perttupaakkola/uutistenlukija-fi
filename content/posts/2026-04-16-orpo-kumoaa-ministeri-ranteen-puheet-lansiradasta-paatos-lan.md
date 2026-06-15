@@ -1,5 +1,6 @@
 ---
 title: "Orpo kumoaa ministeri Ranteen puheet Länsiradasta – päätös Länsiradan rakentamisesta tällä hallituskaudella"
+description: "Pääministeri Petteri Orpon (kok.) mukaan hallitus rakentaa kuluvalla hallituskaudella vain osan kiistellystä Länsiradasta."
 date: 2026-04-16T12:03:24.339916+00:00
 categories:
   - Tiede

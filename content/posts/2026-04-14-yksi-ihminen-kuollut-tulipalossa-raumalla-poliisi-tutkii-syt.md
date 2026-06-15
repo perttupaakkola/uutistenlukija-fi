@@ -1,5 +1,6 @@
 ---
 title: "Yksi ihminen kuollut tulipalossa Raumalla – poliisi tutkii syttymissyytä"
+description: "Poliisi epäilee, että yksityisasunnossa Helsingin Jätkäsaaressa sytytettiin keskiviikkona tulipalo tahallisesti."
 date: 2026-04-14T21:13:06.198591+00:00
 categories:
   - Kotimaa

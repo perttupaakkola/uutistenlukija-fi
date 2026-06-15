@@ -1,5 +1,6 @@
 ---
 title: "IMF: Näin Lähi-idän sota vaikuttaa maailmantalouteen"
+description: "Kansainvälinen valuuttarahasto ennustaa maailmantalouden kasvavan tänä vuonna 3,1 prosenttia. Tammikuussa ennuste oli 3,3 prosenttia."
 date: 2026-04-14T16:33:21.371578+00:00
 categories:
   - Tiede

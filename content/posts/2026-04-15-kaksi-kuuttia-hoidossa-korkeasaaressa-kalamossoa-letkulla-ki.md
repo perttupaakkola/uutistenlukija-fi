@@ -1,5 +1,6 @@
 ---
 title: "Kaksi kuuttia hoidossa Korkeasaaressa: Kalamössöä letkulla kitusiin"
+description: "Korkeasaaren Villieläinsairaalassa on hoidossa kaksi harmaahylkeen poikasta. Kuutit opettelevat keväällä kalastamaan itse."
 date: 2026-04-15T15:53:32.542997+00:00
 categories:
   - Tiede

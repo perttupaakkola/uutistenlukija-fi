@@ -1,5 +1,6 @@
 ---
 title: "HS: EU harjoittelee ensi kertaa keskinäisen avunannon lauseketta – varautuu Venäjän aggressioon"
+description: "Tarkoitus on käydä läpi, kuinka jäsenmaan avunpyyntöön vastataan. EU valmistelee harjoitusta,"
 date: 2026-04-17T14:53:14.615968+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Widow, 86, back in France after being held by ICE"
+description: "Marie-Thérèse had moved to the US after reuniting with her long-lost love, an American man who died in January."
 date: 2026-04-17T17:42:54.775121+00:00
 categories:
   - Tiede

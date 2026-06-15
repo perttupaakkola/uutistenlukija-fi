@@ -1,5 +1,6 @@
 ---
 title: "Yritysten maksuviiveet kääntyivät alkuvuonna rajuun nousuun"
+description: "Maksuviiveellisten yritysten osuus nousi jyrkästi vuoden 2025 viimeiseen neljännekseen sekä vuodentakaiseen verrattuna,"
 date: 2026-04-15T09:32:47.368181+00:00
 categories:
   - Talous

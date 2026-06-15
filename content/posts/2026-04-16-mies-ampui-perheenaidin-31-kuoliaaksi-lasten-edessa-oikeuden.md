@@ -1,5 +1,6 @@
 ---
 title: "Mies ampui perheenäidin, 31, kuoliaaksi lasten edessä – oikeuden­käynnissä heti viivästys"
+description: "Ex-vaimonsa kuoliaaksi ampunutta miestä kuullaan oikeudessa. IS seuraa murhakäräjiä hetki hetkeltä tässä artikkelissa."
 date: 2026-04-16T06:32:56.874849+00:00
 categories:
   - Kotimaa

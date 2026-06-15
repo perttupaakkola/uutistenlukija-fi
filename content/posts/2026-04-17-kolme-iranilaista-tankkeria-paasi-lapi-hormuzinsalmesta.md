@@ -1,5 +1,6 @@
 ---
 title: "Kolme iranilaista tankkeria pääsi läpi Hormuzinsalmesta"
+description: "Iranilaisia öljytankkereita pääsi läpi Hormuzinsalmesta. Kiina kertoi tiistaina olevansa kiitollinen siitä,"
 date: 2026-04-17T12:13:04.177236+00:00
 categories:
   - Kotimaa

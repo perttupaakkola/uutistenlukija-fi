@@ -1,5 +1,6 @@
 ---
 title: "Vaarallinen tilanne Itämerellä – Tässä tapauksessa Suomi puuttuisi"
+description: "Suomenlahden merivartioston apulaiskomentajan Ilja Iljinin mukaan Suomenlahdella ankkuroituneena olevien öljytankkerien suma on jo paranemaan päin."
 date: 2026-04-17T12:23:12.350987+00:00
 categories:
   - Ulkomaat

@@ -1,5 +1,6 @@
 ---
 title: "Varusmiehet saivat taivaalla räävittömän idean – näin Puolustus­voimat kommentoi"
+description: "Puolustusvoimat kertoo, että tapahtuneesta käynnistettiin heti selvitys. Omien lajiensa huiput lumilautailija,"
 date: 2026-04-17T09:13:32.462961+00:00
 categories:
   - Tiede

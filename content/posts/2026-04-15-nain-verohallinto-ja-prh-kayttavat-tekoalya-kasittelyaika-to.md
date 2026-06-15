@@ -1,5 +1,6 @@
 ---
 title: "Näin Verohallinto ja PRH käyttävät tekoälyä – ”Käsittelyaika toivon mukaan nopeutuu”"
+description: "Verohallinto julkaisi viime vuodenvaihteessa asiakkaille puhuvan botin, jolta voi tilata ”yksinkertaisen verokortin”."
 date: 2026-04-15T16:03:15.405112+00:00
 categories:
   - Talous

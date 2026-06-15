@@ -1,5 +1,6 @@
 ---
 title: "Pedro Pascal ei tätä hyväksy – Chilessä myydään alkoholia nimellä Pedro Piscal"
+description: "Chileläis-yhdysvaltalainen näyttelijä Pedro Pascal haastoi oikeuteen chileläisen alkoholimerkin, kertoo The Guardian."
 date: 2026-04-16T17:43:08.264956+00:00
 categories:
   - Tiede

@@ -1,5 +1,6 @@
 ---
 title: "Madonna julkaisee uutta musiikkia kesällä: \"Kuningatar on palannut!\""
+description: "Popin kuningattareksi tituleerattu Madonna, 67, julkaisee uuden levyn heinäkuussa. Hän kertoi asiasta Instagram-tilillään keskiviikkona."
 date: 2026-04-17T17:32:56.881029+00:00
 categories:
   - Tiede
