@@ -1,0 +1,76 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T16:11:19.024997+00:00",
+  "digest": "0657626b53",
+  "packet": {
+    "packet_id": "20260615T161119Z_0657626b53",
+    "created_at": "2026-06-15T16:11:19Z",
+    "headline_seed": "Unkarin parlamentti hyväksyi pääministerin kausien rajoittamisen",
+    "description_seed": "",
+    "link": "https://yle.fi/a/74-20231715?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20231715?origin=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Unkarin parlamentti hyväksyi pääministerin kausien rajoittamisen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 94,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Unkarin parlamentti hyväksyi pääministerin kausien rajoittamisen",
+      "description": "",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Unkarin parlamentti hyväksyi pääministerin kausien rajoittamisen",
+    "description": "",
+    "link": "https://yle.fi/a/74-20231715?origin=rss",
+    "published": "2026-06-15T18:56:38+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "78403e87cb7222ddda487abc92d321cd",
+    "_url_hash": "20fbf7887426b87a1451f442289996cd263dacd58f9c17af5084103c49c0314d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nUnkarin valtapuolue Tisza on jättänyt parlamentille esityksen muutoksesta perustuslakiin, joka sallisi pääministerin toimia virassaan enintään kahdeksan vuotta, Reuters kertoo.\n\nLäpi mennessään lakiesitys estäisi Unkaria yli 16 vuotta hallinneen ex-pääministeri Viktor Orbánin paluun valtaan.\n\nUnkarin parlamentin verkkosivuilla esillä olevassa lakiesityksessä sanotaan, että henkilöitä, jotka ovat toimineet aiemmin pääministerinä vähintään kahdeksan vuotta, \"ei voida valita pääministeriksi\". Muutos koskisi 2. toukokuuta 1990 jälkeen suoritettuja pääministerikausia.\n\nLakiesityksessä sanotaan, että pääministerin olisi jätettävä virkansa kahdeksan vuoden eli kahden kauden jälkeen.\n\nOrbánin vaaleissa syrjäyttänyt nykyinen pääministeri Peter Magyar on sanonut käyttävänsä puolueensa parlamentaarista enemmistöä purkaakseen Orbánin johtaman Fidesz-puolueen toteuttamia lakimuutoksia.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-15T16:13:27.218866+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260615T161119Z_0657626b53\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
