@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T17:21:18.151742+00:00",
+  "digest": "1cac3bc20e",
+  "packet": {
+    "packet_id": "20260615T172118Z_1cac3bc20e",
+    "created_at": "2026-06-15T17:21:18Z",
+    "headline_seed": "Näkökulma: Islam-keskustelu uhkaa mennä ojasta allikkoon",
+    "description_seed": "Keskustelu muslimiyhteisöjen ongelmista ei saa johtaa islamin totaaliseen demonisoimiseen, kirjoittaa Iltalehden ulkomaantoimittaja Olivia Din Belle. – Edes taivas ei ole rajana Allahin johdatuksessa. Koko maailma on sinun. Näin 32-vuotias perheenäiti Nada Bahaa kuvaa minulle suhdettaan islamiin.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/0ff05895-45bc-4426-8115-c617c9f2c2ed",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/0ff05895-45bc-4426-8115-c617c9f2c2ed"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Näkökulma: Islam-keskustelu uhkaa mennä ojasta allikkoon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Keskustelu muslimiyhteisöjen ongelmista ei saa johtaa islamin totaaliseen demonisoimiseen, kirjoittaa Iltalehden ulkomaantoimittaja Olivia Din Belle. – Edes taivas ei ole rajana Allahin johdatuksessa. Koko maailma on sinun. Näin 32-vuotias perheenäiti Nada Bahaa kuvaa minulle suhdettaan islamiin.",
+        "word_count": 36,
+        "keyword_overlap": 29,
+        "strong_overlap": 21
+      }
+    ],
+    "source_text": "Keskustelu muslimiyhteisöjen ongelmista ei saa johtaa islamin totaaliseen demonisoimiseen, kirjoittaa Iltalehden ulkomaantoimittaja Olivia Din Belle. – Edes taivas ei ole rajana Allahin johdatuksessa. Koko maailma on sinun. Näin 32-vuotias perheenäiti Nada Bahaa kuvaa minulle suhdettaan islamiin.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 72,
+      "selected_blocks": 1,
+      "selected_source_words": 36,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Näkökulma: Islam-keskustelu uhkaa mennä ojasta allikkoon",
+      "description": "Keskustelu muslimiyhteisöjen ongelmista ei saa johtaa islamin totaaliseen demonisoimiseen, kirjoittaa Iltalehden ulkomaantoimittaja Olivia Din Belle. – Edes taivas ei ole rajana Allahin johdatuksessa. Koko maailma on sinun. Näin 32-vuotias perheenäiti Nada Bahaa kuvaa minulle suhdettaan islamiin.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Näkökulma: Islam-keskustelu uhkaa mennä ojasta allikkoon",
+    "description": "Keskustelu muslimiyhteisöjen ongelmista ei saa johtaa islamin totaaliseen demonisoimiseen, kirjoittaa Iltalehden ulkomaantoimittaja Olivia Din Belle. – Edes taivas ei ole rajana Allahin johdatuksessa. Koko maailma on sinun. Näin 32-vuotias perheenäiti Nada Bahaa kuvaa minulle suhdettaan islamiin.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/0ff05895-45bc-4426-8115-c617c9f2c2ed",
+    "published": "2026-06-15T20:14:29+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "bdbe9734b518de3322e60407efc0b37b",
+    "_url_hash": "26bdcfbc56a33a1011ab58ce7fa1d81d1a2256d7238279bcac734a9f804ce4b7",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Keskustelu muslimiyhteisöjen ongelmista ei saa johtaa islamin totaaliseen demonisoimiseen, kirjoittaa Iltalehden ulkomaantoimittaja Olivia Din Belle. – Edes taivas ei ole rajana Allahin johdatuksessa. Koko maailma on sinun. Näin 32-vuotias perheenäiti Nada Bahaa kuvaa minulle suhdettaan islamiin.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-15T17:23:21.870575+00:00",
+  "failure": "Lähdeaineisto on liian niukka ja perustuu yhteen lyhyeen näkökulmatekstin kuvaukseen, joten 250 sanan uutisartikkelia ei voi kirjoittaa ilman täytettä tai keksittyjä taustatietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260615T172118Z_1cac3bc20e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka ja perustuu yhteen lyhyeen näkökulmatekstin kuvaukseen, joten 250 sanan uutisartikkelia ei voi kirjoittaa ilman täytettä tai keksittyjä taustatietoja.\"}"
+}
