@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T13:41:15.917966+00:00",
+  "digest": "34bc575fe4",
+  "packet": {
+    "packet_id": "20260615T134115Z_34bc575fe4",
+    "created_at": "2026-06-15T13:41:15Z",
+    "headline_seed": "Trumpilta kova uhkaus Ranskalle",
+    "description_seed": "Trumpin mukaan Ranskan pitäisi luopua amerikkalaisten teknologiajättien verotuksesta. Yhdysvaltain presidentti Donald Trump uhkailee Ranskaa 100 prosentin viinitulleilla, mikäli Ranska ei luovu amerikkalaisten teknologiajättien verotuksesta, kertoo New York Post. Yhdysvaltalaismedian haastattelussa Trump antoi varoituksen suoraan Ranskan presidentti Emmanuel Macronille.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/4fd6568b-288a-4560-8b7a-c6d58f17f2b4",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/4fd6568b-288a-4560-8b7a-c6d58f17f2b4"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trumpilta kova uhkaus Ranskalle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Trumpin mukaan Ranskan pitäisi luopua amerikkalaisten teknologiajättien verotuksesta. Yhdysvaltain presidentti Donald Trump uhkailee Ranskaa 100 prosentin viinitulleilla, mikäli Ranska ei luovu amerikkalaisten teknologiajättien verotuksesta, kertoo New York Post. Yhdysvaltalaismedian haastattelussa Trump antoi varoituksen suoraan Ranskan presidentti Emmanuel Macronille.",
+        "word_count": 38,
+        "keyword_overlap": 27,
+        "strong_overlap": 22
+      }
+    ],
+    "source_text": "Trumpin mukaan Ranskan pitäisi luopua amerikkalaisten teknologiajättien verotuksesta. Yhdysvaltain presidentti Donald Trump uhkailee Ranskaa 100 prosentin viinitulleilla, mikäli Ranska ei luovu amerikkalaisten teknologiajättien verotuksesta, kertoo New York Post. Yhdysvaltalaismedian haastattelussa Trump antoi varoituksen suoraan Ranskan presidentti Emmanuel Macronille.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 76,
+      "selected_blocks": 1,
+      "selected_source_words": 38,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trumpilta kova uhkaus Ranskalle",
+      "description": "Trumpin mukaan Ranskan pitäisi luopua amerikkalaisten teknologiajättien verotuksesta. Yhdysvaltain presidentti Donald Trump uhkailee Ranskaa 100 prosentin viinitulleilla, mikäli Ranska ei luovu amerikkalaisten teknologiajättien verotuksesta, kertoo New York Post. Yhdysvaltalaismedian haastattelussa Trump antoi varoituksen suoraan Ranskan presidentti Emmanuel Macronille.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Trumpilta kova uhkaus Ranskalle",
+    "description": "Trumpin mukaan Ranskan pitäisi luopua amerikkalaisten teknologiajättien verotuksesta. Yhdysvaltain presidentti Donald Trump uhkailee Ranskaa 100 prosentin viinitulleilla, mikäli Ranska ei luovu amerikkalaisten teknologiajättien verotuksesta, kertoo New York Post. Yhdysvaltalaismedian haastattelussa Trump antoi varoituksen suoraan Ranskan presidentti Emmanuel Macronille.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/4fd6568b-288a-4560-8b7a-c6d58f17f2b4",
+    "published": "2026-06-15T14:55:01+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "a69fe54e788f02e389e89e3b7118e083",
+    "_url_hash": "3aaba6d97599e5062327a84e3270874d8a8c280272782f28b3d13bc2335e6d79",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Trumpin mukaan Ranskan pitäisi luopua amerikkalaisten teknologiajättien verotuksesta. Yhdysvaltain presidentti Donald Trump uhkailee Ranskaa 100 prosentin viinitulleilla, mikäli Ranska ei luovu amerikkalaisten teknologiajättien verotuksesta, kertoo New York Post. Yhdysvaltalaismedian haastattelussa Trump antoi varoituksen suoraan Ranskan presidentti Emmanuel Macronille.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-15T13:43:25.927307+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman toistoa tai taustatietojen keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260615T134115Z_34bc575fe4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman toistoa tai taustatietojen keksimistä.\"}"
+}

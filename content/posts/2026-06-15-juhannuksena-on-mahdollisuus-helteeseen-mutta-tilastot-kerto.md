@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/talta-juhannussaa-nayttaa-talla-hetkella-toivoa-on/9353792"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
