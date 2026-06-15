@@ -1,0 +1,80 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T10:11:20.082672+00:00",
+  "digest": "23a59aff56",
+  "packet": {
+    "packet_id": "20260615T101120Z_23a59aff56",
+    "created_at": "2026-06-15T10:11:20Z",
+    "headline_seed": "Is the convertible heading into the sunset?",
+    "description_seed": "UK drivers have taken a shine to the SUV but could the fate of the convertible be reversed?",
+    "link": "https://www.bbc.com/news/articles/cx212yy4er0o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cx212yy4er0o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Is the convertible heading into the sunset?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 444,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Is the convertible heading into the sunset?",
+      "description": "UK drivers have taken a shine to the SUV but could the fate of the convertible be reversed?",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Is the convertible heading into the sunset?",
+    "description": "UK drivers have taken a shine to the SUV but could the fate of the convertible be reversed?",
+    "link": "https://www.bbc.com/news/articles/cx212yy4er0o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-14T23:25:00+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "a6d17b0d81673bdde5d00ce5a73f387a",
+    "_url_hash": "aa5e5bf65f005fd81877776ec860d454b080f647149a0c4dc8935598c01c80a0",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nSophistication, freedom, rebellion or just the simple joy of taking to the open road with the wind in your hair. The convertible car used to represent all of these. But over the past two decades sales have collapsed, and its future seems deeply uncertain. So what's gone wrong?\n\nIn the 1950s and 60s, owning a convertible showed you had style. They were what the celebrities of the era were seen in.\n\nWhen Hollywood deities Grace Kelly and Cary Grant were shown cruising along the French Riviera in a beautiful, sleek Sunbeam Alpine in To Catch a Thief, for example, they epitomised silver-screen elegance and savoir-faire.\n\nLater films like The Graduate and Thelma and Louise helped cement the open top car's position as a symbol of escapism and rebellion for new generations.\n\nFor a while, convertibles were what people dreamed of buying, and manufacturers were happy to make them.\n\nYet today, the convertible is looking like an endangered species in the UK.\n\nOver the past 20 years, sales of new open-tops have fallen by nearly 90%, from 109,171 in 2005 to just 11,484 last year, according to the Society of Motor Manufacturers and Traders.\n\nThat decline has coincided with a dramatic rise in Sports Utility Vehicles, or SUVs – large cars with at least a passing resemblance to four-wheel-drive off road vehicles. Last year they accounted for 59% of car sales across Europe, according to the research company Dataforce GmbH.\n\nSUVs certainly have the kind of celebrity endorsement convertibles used to enjoy. Big is also bling, and today upmarket models such as the Lamborghini Urus, the Mercedes-Benz G Wagon or the Bentley Bentayga are widely favoured by today's reality TV stars, footballers and music artists.\n\nWhat SUVs offer is some of the style and image of a convertible without the limitations an open top car creates, says Steve Fowler – a leading automotive journalist and founder of the car review website Carblah.\n\n\"It's a simple fact of people wanting more practicality these days,\" he explains. \"I always say SUVs are sports cars for people who can't have sports cars any more. They've got that kind of image that perhaps a convertible used to have.\n\n\"And it's very difficult to put the kids, the dog, the bike, and everything else we have in our lives into a convertible.\"\n\nWhether it's down to the rise of the SUV or not, demand for open top cars has fallen – and that makes manufacturers reluctant to build them.\n\n\"It costs so much money to build any car these days,\" explains Fow",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-15T10:13:31.067163+00:00",
+  "failure": "Lähdeaineisto puuttuu käytännössä kokonaan, eikä paketti sisällä riittäviä varmistettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260615T101120Z_23a59aff56\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu käytännössä kokonaan, eikä paketti sisällä riittäviä varmistettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T10:21:19.247295+00:00",
+  "digest": "b2c64cd40d",
+  "packet": {
+    "packet_id": "20260615T102119Z_b2c64cd40d",
+    "created_at": "2026-06-15T10:21:19Z",
+    "headline_seed": "Lahden Malva voitti Ympäristökestävyyden museopalkinnon eurooppalaisessa palkintogaalassa",
+    "description_seed": "Malva sai tunnustuksen EMYA-palkintogaalassa lauantaina.",
+    "link": "https://www.ess.fi/paikalliset/9539401",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9539401"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahden Malva voitti Ympäristökestävyyden museopalkinnon eurooppalaisessa palkintogaalassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 189,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahden Malva voitti Ympäristökestävyyden museopalkinnon eurooppalaisessa palkintogaalassa",
+      "description": "Malva sai tunnustuksen EMYA-palkintogaalassa lauantaina.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lahden Malva voitti Ympäristökestävyyden museopalkinnon eurooppalaisessa palkintogaalassa",
+    "description": "Malva sai tunnustuksen EMYA-palkintogaalassa lauantaina.",
+    "link": "https://www.ess.fi/paikalliset/9539401",
+    "published": "2026-06-15T13:16:41+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "862751b4ccdc31a8fb984b2bf9da7384",
+    "_url_hash": "788e73ef09e97dc9fb75e65c113546fc38f8859e75d9ad1902458d32d19c523c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nRovaniemen palloseuran (RoPSin) entinen puheenjohtaja ja toiminnanjohtaja Risto Niva tuomittiin Lapin käräjäoikeudessa maanantaina kavalluksesta neljän kuukauden ehdolliseen vankeuteen. Oikeuden mukaan Niva siirsi itselleen laittomasti 9 040 euroa RoPSin varoja.\n\nOikeuden mukaan Niva oli lainannut RoPSille rahaa, mutta maksoi itselleen takaisin 4 000 euroa liikaa. Lisäksi Niva oli maksanut itselleen rahaa kulukorvauksina ilman, että niitä oli perusteltu.\n\nKäräjäoikeus tuomitsi Nivan maksamaan erilaisia korvauksia yhteensä 8 820 euroa.\n\nSyyttäjän vaatimuksen mukaan Niva olisi maksattanut perusteettomasti itselleen palkkaa toiminnanjohtajan tehtävästä. Oikeus kuitenkin katsoi, että hänellä oli oikeus saada palkkaa työstään, koska työtä ei ollut päätetty laillisella tavalla ennen kuin Niva itse irtisanoutui vuonna 2022.\n\nNiva totesi oikeudessa toukokuussa, että hän halusi saada pöydän puhtaaksi ennen kuin lopettaa seuran puheenjohtajana loppuvuonna 2022.\n\n– Olin jäämässä pois ja halusin tilit selviksi. On tässä hommia painettu, enkä ala töitä ilmaiseksi tekemään, Niva sanoi oikeudessa.\n\nHän ilmoitti palkanlaskentaan toiminnanjohtajan palkkansa noin kolmen vuoden ajalta eli kesästä 2019 kesään 2022.\n\nItse rahamääristä oikeudessa ei ollut kiistaa. Riitaisaa oli se, oliko kyse Nivan palkasta ja muista korvauksista, vai oliko kyse seuran ja sen tytäryhtiön varojen luvattomasta käytöstä.\n\nNivan tuomio ei ole vielä lainvoimainen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-15T10:23:20.909646+00:00",
+  "failure": "Paketti ei sisällä valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260615T102119Z_b2c64cd40d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/henna-riikka-22-perusti-paikkakunnan-ainoan-ravintolan-josta-tuli-yllatysmenestys-meilla-on-parempi-ruoka/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
