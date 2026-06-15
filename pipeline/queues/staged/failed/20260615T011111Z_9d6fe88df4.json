@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T01:11:11.787462+00:00",
+  "digest": "9d6fe88df4",
+  "packet": {
+    "packet_id": "20260615T011111Z_9d6fe88df4",
+    "created_at": "2026-06-15T01:11:11Z",
+    "headline_seed": "Satelliittipaikannuksen häirintä luo nyt kysyntää suomalaiselle tekniikalle – T&T esittelee 3 ratkaisua",
+    "description_seed": "Satelliittipaikannuksen häirinnän vaikutuksia voidaan torjua teknologialla. Se avaa liiketoimintamahdollisuuksia myös suomalaisille toimijoille. Tässä jutussa esittelemme kolme suomalaista teknologiaa, jotka hyötyvät kasvaneesta häirinnästä.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/0c1da15c-1f2e-478b-91b7-16e44380acda",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/0c1da15c-1f2e-478b-91b7-16e44380acda"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Satelliittipaikannuksen häirintä luo nyt kysyntää suomalaiselle tekniikalle – T&T esittelee 3 ratkaisua"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Satelliittipaikannuksen häirinnän vaikutuksia voidaan torjua teknologialla. Se avaa liiketoimintamahdollisuuksia myös suomalaisille toimijoille. Tässä jutussa esittelemme kolme suomalaista teknologiaa, jotka hyötyvät kasvaneesta häirinnästä.",
+        "word_count": 22,
+        "keyword_overlap": 19,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Satelliittipaikannuksen häirinnän vaikutuksia voidaan torjua teknologialla. Se avaa liiketoimintamahdollisuuksia myös suomalaisille toimijoille. Tässä jutussa esittelemme kolme suomalaista teknologiaa, jotka hyötyvät kasvaneesta häirinnästä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 44,
+      "selected_blocks": 1,
+      "selected_source_words": 22,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Satelliittipaikannuksen häirintä luo nyt kysyntää suomalaiselle tekniikalle – T&T esittelee 3 ratkaisua",
+      "description": "Satelliittipaikannuksen häirinnän vaikutuksia voidaan torjua teknologialla. Se avaa liiketoimintamahdollisuuksia myös suomalaisille toimijoille. Tässä jutussa esittelemme kolme suomalaista teknologiaa, jotka hyötyvät kasvaneesta häirinnästä.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Satelliittipaikannuksen häirintä luo nyt kysyntää suomalaiselle tekniikalle – T&T esittelee 3 ratkaisua",
+    "description": "Satelliittipaikannuksen häirinnän vaikutuksia voidaan torjua teknologialla. Se avaa liiketoimintamahdollisuuksia myös suomalaisille toimijoille. Tässä jutussa esittelemme kolme suomalaista teknologiaa, jotka hyötyvät kasvaneesta häirinnästä.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/0c1da15c-1f2e-478b-91b7-16e44380acda",
+    "published": "2026-06-15T01:03:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "c1b39871dbadc7c21fb84d1a6d2cd7a5",
+    "_url_hash": "47625c18ef066baaaeeb47f9491435c80edb1531df28949efa04c3b638d3c5b0",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Satelliittipaikannuksen häirinnän vaikutuksia voidaan torjua teknologialla. Se avaa liiketoimintamahdollisuuksia myös suomalaisille toimijoille. Tässä jutussa esittelemme kolme suomalaista teknologiaa, jotka hyötyvät kasvaneesta häirinnästä.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-15T01:13:19.904467+00:00",
+  "failure": "Lähdeaineisto on liian niukka: se kertoo vain yleisen aiheen eikä yksilöi kolmea teknologiaa, toimijoita, ajankohtaa tai konkreettisia vaikutuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260615T011111Z_9d6fe88df4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: se kertoo vain yleisen aiheen eikä yksilöi kolmea teknologiaa, toimijoita, ajankohtaa tai konkreettisia vaikutuksia.\"}"
+}

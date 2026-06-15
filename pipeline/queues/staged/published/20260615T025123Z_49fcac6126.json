@@ -1,0 +1,261 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T02:51:23.190343+00:00",
+  "digest": "49fcac6126",
+  "packet": {
+    "packet_id": "20260615T025123Z_49fcac6126",
+    "created_at": "2026-06-15T02:51:23Z",
+    "headline_seed": "Why Delhi feels hotter than what temperatures show",
+    "description_seed": "We spent a day out in the city with a thermal camera, recording surface temperatures indoors and outdoors.",
+    "link": "https://www.bbc.com/news/articles/c62173jqd4wo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c62173jqd4wo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Why Delhi feels hotter than what temperatures show"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "We spent a day out in the city with a thermal camera, recording surface temperatures indoors and outdoors.",
+        "word_count": 18,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "For several weeks now, the Indian capital, Delhi, has been battling a severe heatwave, with temperatures routinely rising above 40C. The real feel, the weather apps helpfully tell us, is always a few degrees higher. But how hot do you feel when you hit the streets? On Tuesday, the Indian Meteorological Department (IMD) recorded the maximum day temperature at 43.5C in the capital. But we spent the day out on the city streets with a thermal camera deployed by Greenpeace India which recorded surface temperatures of up to 64C in some places. The comparison is not like-for-like. The IMD's official data reflects the temperature of the city air measured under standard conditions, while thermal cameras record the temperature of surfaces. On hot days, roads, concrete, vehicles and other exposed surfaces can become substantially hotter than the air around them.",
+        "word_count": 139,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "High surface temperatures increase the heat absorbed by the human body through radiation and can make urban areas feel considerably hotter than the official temperature, particularly where there is little shade or vegetation. Our first stop was just after mid-day at the IIT flyover in south Delhi, one of the busiest traffic junctions in the city. Hundreds of thousands of vehicles pass this crossing daily and, in peak traffic, wait time can sometimes stretch up to 10 minutes.",
+        "word_count": 78,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "As Greenpeace researcher Nibedita Saha moved her camera from the shaded areas under the flyover (where the reading was 42C) to the bikers idling at stop signals under the direct sunlight, the reading went up to 64C. The surface temperature of the spot where we stood was 61C - it fell to 39.8C when we moved less than 10ft away to stand under a tree. \"Consistent exposure to such high temperatures can cause major health issues,\" says Nibedita, adding that sometimes, moving just a few feet can help. \"We got instant relief. That's the difference just one tree can make.\" Dr A Fathahudeen, a pulmonologist, says that the core human body temperature is 37C and prolonged exposure to high heat can make it rise.",
+        "word_count": 124,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "We spent a day out in the city with a thermal camera, recording surface temperatures indoors and outdoors.\n\nFor several weeks now, the Indian capital, Delhi, has been battling a severe heatwave, with temperatures routinely rising above 40C. The real feel, the weather apps helpfully tell us, is always a few degrees higher. But how hot do you feel when you hit the streets? On Tuesday, the Indian Meteorological Department (IMD) recorded the maximum day temperature at 43.5C in the capital. But we spent the day out on the city streets with a thermal camera deployed by Greenpeace India which recorded surface temperatures of up to 64C in some places. The comparison is not like-for-like. The IMD's official data reflects the temperature of the city air measured under standard conditions, while thermal cameras record the temperature of surfaces. On hot days, roads, concrete, vehicles and other exposed surfaces can become substantially hotter than the air around them.\n\nHigh surface temperatures increase the heat absorbed by the human body through radiation and can make urban areas feel considerably hotter than the official temperature, particularly where there is little shade or vegetation. Our first stop was just after mid-day at the IIT flyover in south Delhi, one of the busiest traffic junctions in the city. Hundreds of thousands of vehicles pass this crossing daily and, in peak traffic, wait time can sometimes stretch up to 10 minutes.\n\nAs Greenpeace researcher Nibedita Saha moved her camera from the shaded areas under the flyover (where the reading was 42C) to the bikers idling at stop signals under the direct sunlight, the reading went up to 64C. The surface temperature of the spot where we stood was 61C - it fell to 39.8C when we moved less than 10ft away to stand under a tree. \"Consistent exposure to such high temperatures can cause major health issues,\" says Nibedita, adding that sometimes, moving just a few feet can help. \"We got instant relief. That's the difference just one tree can make.\" Dr A Fathahudeen, a pulmonologist, says that the core human body temperature is 37C and prolonged exposure to high heat can make it rise.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 816,
+      "selected_blocks": 4,
+      "selected_source_words": 359,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "AOL",
+        "AOL",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Why Delhi feels hotter than what temperatures show",
+      "description": "We spent a day out in the city with a thermal camera, recording surface temperatures indoors and outdoors.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Why Delhi feels hotter than what temperatures show",
+    "description": "We spent a day out in the city with a thermal camera, recording surface temperatures indoors and outdoors.",
+    "link": "https://www.bbc.com/news/articles/c62173jqd4wo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-15T02:04:29+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "47d0363588b68761603da39ddbd65290",
+    "_url_hash": "cf6a046ccf29328617ee81410538d85a7b463ff6c8a12b221e65cc7de807d86c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFor several weeks now, the Indian capital, Delhi, has been battling a severe heatwave, with temperatures routinely rising above 40C. The real feel, the weather apps helpfully tell us, is always a few degrees higher. But how hot do you feel when you hit the streets?\n\nOn Tuesday, the Indian Meteorological Department (IMD) recorded the maximum day temperature at 43.5C in the capital.\n\nBut we spent the day out on the city streets with a thermal camera deployed by Greenpeace India which recorded surface temperatures of up to 64C in some places.\n\nThe comparison is not like-for-like. The IMD's official data reflects the temperature of the city air measured under standard conditions, while thermal cameras record the temperature of surfaces.\n\nOn hot days, roads, concrete, vehicles and other exposed surfaces can become substantially hotter than the air around them.\n\nHigh surface temperatures increase the heat absorbed by the human body through radiation and can make urban areas feel considerably hotter than the official temperature, particularly where there is little shade or vegetation.\n\nOur first stop was just after mid-day at the IIT flyover in south Delhi, one of the busiest traffic junctions in the city. Hundreds of thousands of vehicles pass this crossing daily and, in peak traffic, wait time can sometimes stretch up to 10 minutes.\n\nAs Greenpeace researcher Nibedita Saha moved her camera from the shaded areas under the flyover (where the reading was 42C) to the bikers idling at stop signals under the direct sunlight, the reading went up to 64C. The surface temperature of the spot where we stood was 61C - it fell to 39.8C when we moved less than 10ft away to stand under a tree.\n\n\"Consistent exposure to such high temperatures can cause major health issues,\" says Nibedita, adding that sometimes, moving just a few feet can help. \"We got instant relief. That's the difference just one tree can make.\"\n\nDr A Fathahudeen, a pulmonologist, says that the core human body temperature is 37C and prolonged exposure to high heat can make it rise.\n\n\"When it exceeds 40C, the body ceases to work normally. The most common symptom is heat exhaustion. People become extremely sweaty, complain of headaches and fatigue,\" he said, adding that in more serious cases, people can become confused and dazed and even have seizures.\n\n\"If not treated urgently, they can have multiple organ failures, leading to death,\" he said.\n\nTo stay safe during a heatwave, Dr Fathahudeen's advice to people is\n\n---\n\n[Lähde: AOL]\nDelhi recorded its warmest May night in almost 14 years this week, with the minimum temperature reaching 32.4C – 5.7 degrees above normal – meaning there was no respite for millions of people sweltering across northern India.\n\nDaytimes highs have repeatedly crossed 45C across the country in the past two weeks, with Banda in Uttar Pradesh recording a maximum of 48.2C last Tuesday. At least 16 people have died from heatstroke in the southern state of Telangana alone so far this summer.\n\nIndia's summers have always been brutal, but experts say the health impacts are getting worse because night-time temperatures are reaching new records.\n\n\"The nighttime temperatures are sometimes even more important than daytime temperatures, because the body not being able to lose heat, which means the metabolism remains high, the body temperature remains high – it is like constantly running a long distance race through 24 hours,\" Dr Sumit Ray, medical director at Holy Family Hospital in Delhi, tells The Independent.\n\nThe India Meteorological Department has issued active heatwave warnings across Delhi, Rajasthan, Punjab, Haryana, Uttar Pradesh, Madhya Pradesh, Vidarbha, Chhattisgarh, Bihar and Telangana, with a yellow alert for Delhi in place until 27 May. Thunderstorms are forecast for the end of the week, finally bringing some relief.\n\nThe heat is being driven by north-westerly winds blowing in from the desert regions of Rajasthan and neighbouring Pakistan, meteorologists say.\n\n\"In the absence of any weather system over the Indian mainland, hot northwesterly winds from the desert of the adjoining Sindh region of Pakistan and Rajasthan are penetrating deep into the country,\" said Mahesh Palawat, vice-president of meteorology and climate change at Skymet Weather.\n\n\"The uninterrupted flow of these winds for the last three to four days has been pushing the mercury, resulting in heatwave to severe heatwave conditions. We would only see some respite with the arrival of a western disturbance, which would then alter the wind pattern.\"\n\nIn Telangana, Ponguleti Srinivasa Reddy, the state's revenue minister, warned that \"the intensity of the heat has reached unprecedented levels\" and urged local officials to alert the public about heatwave precautions. Authorities have advised elderly people, children and pregnant women to stay indoors during the day.\n\nA warming global climate has been inching up India's heatwave frequency for years. IMD figures show heatwave frequency across India's ",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-15T02:55:10.008025+00:00",
+  "payload": {
+    "packet_id": "20260615T025123Z_49fcac6126",
+    "title": "Lämpökamera näyttää, miksi Delhi tuntuu mittarilukemia kuumemmalta",
+    "summary": "Delhissä virallinen ilman lämpötila nousi tiistaina 43,5 asteeseen, mutta lämpökameralla mitatut pintalämpötilat olivat paikoin selvästi korkeampia. Havainnot korostavat varjon ja kasvillisuuden merkitystä helleaallon keskellä.",
+    "content": "Intian pääkaupunki Delhi on kärsinyt viikkoja ankarasta helleaallosta, jossa lämpötila on noussut toistuvasti yli 40 asteen. Tiistaina Intian ilmatieteen laitos mittasi kaupungin päivän ylimmäksi ilman lämpötilaksi 43,5 astetta, mutta kaupungilla tehdyt lämpökameramittaukset näyttivät, että ihmisten ympärillä olevat pinnat voivat kuumentua selvästi enemmän.\n\n## Virallinen lämpötila ei kerro kaikkea\n\nIntian ilmatieteen laitoksen mittaus kuvaa ilman lämpötilaa vakioiduissa olosuhteissa. Lämpökamera puolestaan mittaa pintojen lämpötilaa. Siksi lukemia ei voi verrata suoraan toisiinsa, mutta ero auttaa selittämään, miksi kaupunki voi tuntua ihmisestä virallista lämpötilaa tukalammalta.\n\nGreenpeace Indian käyttämä lämpökamera rekisteröi Delhissä paikoin jopa 64 asteen pintalämpötiloja. Kuumina päivinä asfaltti, betoni, ajoneuvot ja muut auringolle altistuvat pinnat imevät lämpöä ja voivat säteillä sitä takaisin ympäristöön. Korkeat pintalämpötilat lisäävät ihmisen kehon saamaa lämpöä säteilyn kautta etenkin alueilla, joilla varjoa tai kasvillisuutta on vähän.\n\n## Varjo muutti lukemia muutamassa metrissä\n\nYksi mittauspaikoista oli Etelä-Delhissä sijaitseva IIT:n ylikulkusillan alue, joka on kaupungin vilkkaita liikennesolmuja. Risteyksen läpi kulkee päivittäin satojatuhansia ajoneuvoja, ja ruuhka-aikoina odotus liikennevaloissa voi venyä jopa kymmeneen minuuttiin.\n\nSillan alla varjossa lämpökamera näytti 42 astetta. Kun Greenpeace-tutkija Nibedita Saha suuntasi kameran suorassa auringonpaisteessa liikennevaloissa odottaviin moottoripyöräilijöihin, lukema nousi 64 asteeseen. Paikassa, jossa mittaajat seisoivat, pintalämpötila oli 61 astetta. Alle kymmenen jalan eli noin kolmen metrin siirtyminen puun alle laski lukeman 39,8 asteeseen.\n\n## Pitkä altistus voi kuormittaa kehoa\n\nSahan mukaan jatkuva altistuminen näin korkeille lämpötiloille voi aiheuttaa vakavia terveysongelmia, mutta joskus jo muutaman metrin siirtyminen voi helpottaa oloa nopeasti. Hänen mukaansa puun antama varjo näytti mittauksissa konkreettisesti, miten suuri ero yhdellä puulla voi olla. Keuhkolääkäri A. Fathahudeen muistutti, että ihmisen kehon sisälämpötila on noin 37 astetta ja pitkä altistuminen kovalle kuumuudelle voi nostaa sitä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Delhi",
+      "helleaallot",
+      "Intia",
+      "kaupunkilämpö",
+      "terveys"
+    ],
+    "summary_bullets": [
+      "Delhissä virallinen päivän ylin lämpötila oli tiistaina 43,5 astetta.",
+      "Lämpökamera mittasi kaupungilla pintalämpötiloja paikoin jopa 64 astetta.",
+      "Varjo ja puut laskivat mitattua pintalämpötilaa selvästi jo lyhyellä siirtymällä."
+    ],
+    "content_type": "news_article",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu paketin BBC-aineistoon. Kategoria korjattu ulkomaihin, koska aihe koskee Intian Delhiä eikä Suomen kotimaan uutista."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260615T025123Z_49fcac6126\",\n  \"title\": \"Lämpökamera näyttää, miksi Delhi tuntuu mittarilukemia kuumemmalta\",\n  \"summary\": \"Delhissä virallinen ilman lämpötila nousi tiistaina 43,5 asteeseen, mutta lämpökameralla mitatut pintalämpötilat olivat paikoin selvästi korkeampia. Havainnot korostavat varjon ja kasvillisuuden merkitystä helleaallon keskellä.\",\n  \"content\": \"Intian pääkaupunki Delhi on kärsinyt viikkoja ankarasta helleaallosta, jossa lämpötila on noussut toistuvasti yli 40 asteen. Tiistaina Intian ilmatieteen laitos mittasi kaupungin päivän ylimmäksi ilman lämpötilaksi 43,5 astetta, mutta kaupungilla tehdyt lämpökameramittaukset näyttivät, että ihmisten ympärillä olevat pinnat voivat kuumentua selvästi enemmän.\\n\\n## Virallinen lämpötila ei kerro kaikkea\\n\\nIntian ilmatieteen laitoksen mittaus kuvaa ilman lämpötilaa vakioiduissa olosuhteissa. Lämpökamera puolestaan mittaa pintojen lämpötilaa. Siksi lukemia ei voi verrata suoraan toisiinsa, mutta ero auttaa selittämään, miksi kaupunki voi tuntua ihmisestä virallista lämpötilaa tukalammalta.\\n\\nGreenpeace Indian käyttämä lämpökamera rekisteröi Delhissä paikoin jopa 64 asteen pintalämpötiloja. Kuumina päivinä asfaltti, betoni, ajoneuvot ja muut auringolle altistuvat pinnat imevät lämpöä ja voivat säteillä sitä takaisin ympäristöön. Korkeat pintalämpötilat lisäävät ihmisen kehon saamaa lämpöä säteilyn kautta etenkin alueilla, joilla varjoa tai kasvillisuutta on vähän.\\n\\n## Varjo muutti lukemia muutamassa metrissä\\n\\nYksi mittauspaikoista oli Etelä-Delhissä sijaitseva IIT:n ylikulkusillan alue, joka on kaupungin vilkkaita liikennesolmuja. Risteyksen läpi kulkee päivittäin satojatuhansia ajoneuvoja, ja ruuhka-aikoina odotus liikennevaloissa voi venyä jopa kymmeneen minuuttiin.\\n\\nSillan alla varjossa lämpökamera näytti 42 astetta. Kun Greenpeace-tutkija Nibedita Saha suuntasi kameran suorassa auringonpaisteessa liikennevaloissa odottaviin moottoripyöräilijöihin, lukema nousi 64 asteeseen. Paikassa, jossa mittaajat seisoivat, pintalämpötila oli 61 astetta. Alle kymmenen jalan eli noin kolmen metrin siirtyminen puun alle laski lukeman 39,8 asteeseen.\\n\\n## Pitkä altistus voi kuormittaa kehoa\\n\\nSahan mukaan jatkuva altistuminen näin korkeille lämpötiloille voi aiheuttaa vakavia terveysongelmia, mutta joskus jo muutaman metrin siirtyminen voi helpottaa oloa nopeasti. Hänen mukaansa puun antama varjo näytti mittauksissa konkreettisesti, miten suuri ero yhdellä puulla voi olla. Keuhkolääkäri A. Fathahudeen muistutti, että ihmisen kehon sisälämpötila on noin 37 astetta ja pitkä altistuminen kovalle kuumuudelle voi nostaa sitä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Delhi\",\n    \"helleaallot\",\n    \"Intia\",\n    \"kaupunkilämpö\",\n    \"terveys\"\n  ],\n  \"summary_bullets\": [\n    \"Delhissä virallinen päivän ylin lämpötila oli tiistaina 43,5 astetta.\",\n    \"Lämpökamera mittasi kaupungilla pintalämpötiloja paikoin jopa 64 astetta.\",\n    \"Varjo ja puut laskivat mitattua pintalämpötilaa selvästi jo lyhyellä siirtymällä.\"\n  ],\n  \"content_type\": \"news_article\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.92,\n  \"journalist_note\": \"Artikkeli perustuu paketin BBC-aineistoon. Kategoria korjattu ulkomaihin, koska aihe koskee Intian Delhiä eikä Suomen kotimaan uutista.\"\n}",
+  "article": {
+    "title": "Lämpökamera näyttää, miksi Delhi tuntuu mittarilukemia kuumemmalta",
+    "description": "Delhissä virallinen ilman lämpötila nousi tiistaina 43,5 asteeseen, mutta lämpökameralla mitatut pintalämpötilat olivat paikoin selvästi korkeampia. Havainnot korostavat varjon ja kasvillisuuden merkitystä helleaallon keskellä.",
+    "link": "https://www.bbc.com/news/articles/c62173jqd4wo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-15T02:04:29+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "47d0363588b68761603da39ddbd65290",
+    "_url_hash": "cf6a046ccf29328617ee81410538d85a7b463ff6c8a12b221e65cc7de807d86c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFor several weeks now, the Indian capital, Delhi, has been battling a severe heatwave, with temperatures routinely rising above 40C. The real feel, the weather apps helpfully tell us, is always a few degrees higher. But how hot do you feel when you hit the streets?\n\nOn Tuesday, the Indian Meteorological Department (IMD) recorded the maximum day temperature at 43.5C in the capital.\n\nBut we spent the day out on the city streets with a thermal camera deployed by Greenpeace India which recorded surface temperatures of up to 64C in some places.\n\nThe comparison is not like-for-like. The IMD's official data reflects the temperature of the city air measured under standard conditions, while thermal cameras record the temperature of surfaces.\n\nOn hot days, roads, concrete, vehicles and other exposed surfaces can become substantially hotter than the air around them.\n\nHigh surface temperatures increase the heat absorbed by the human body through radiation and can make urban areas feel considerably hotter than the official temperature, particularly where there is little shade or vegetation.\n\nOur first stop was just after mid-day at the IIT flyover in south Delhi, one of the busiest traffic junctions in the city. Hundreds of thousands of vehicles pass this crossing daily and, in peak traffic, wait time can sometimes stretch up to 10 minutes.\n\nAs Greenpeace researcher Nibedita Saha moved her camera from the shaded areas under the flyover (where the reading was 42C) to the bikers idling at stop signals under the direct sunlight, the reading went up to 64C. The surface temperature of the spot where we stood was 61C - it fell to 39.8C when we moved less than 10ft away to stand under a tree.\n\n\"Consistent exposure to such high temperatures can cause major health issues,\" says Nibedita, adding that sometimes, moving just a few feet can help. \"We got instant relief. That's the difference just one tree can make.\"\n\nDr A Fathahudeen, a pulmonologist, says that the core human body temperature is 37C and prolonged exposure to high heat can make it rise.\n\n\"When it exceeds 40C, the body ceases to work normally. The most common symptom is heat exhaustion. People become extremely sweaty, complain of headaches and fatigue,\" he said, adding that in more serious cases, people can become confused and dazed and even have seizures.\n\n\"If not treated urgently, they can have multiple organ failures, leading to death,\" he said.\n\nTo stay safe during a heatwave, Dr Fathahudeen's advice to people is\n\n---\n\n[Lähde: AOL]\nDelhi recorded its warmest May night in almost 14 years this week, with the minimum temperature reaching 32.4C – 5.7 degrees above normal – meaning there was no respite for millions of people sweltering across northern India.\n\nDaytimes highs have repeatedly crossed 45C across the country in the past two weeks, with Banda in Uttar Pradesh recording a maximum of 48.2C last Tuesday. At least 16 people have died from heatstroke in the southern state of Telangana alone so far this summer.\n\nIndia's summers have always been brutal, but experts say the health impacts are getting worse because night-time temperatures are reaching new records.\n\n\"The nighttime temperatures are sometimes even more important than daytime temperatures, because the body not being able to lose heat, which means the metabolism remains high, the body temperature remains high – it is like constantly running a long distance race through 24 hours,\" Dr Sumit Ray, medical director at Holy Family Hospital in Delhi, tells The Independent.\n\nThe India Meteorological Department has issued active heatwave warnings across Delhi, Rajasthan, Punjab, Haryana, Uttar Pradesh, Madhya Pradesh, Vidarbha, Chhattisgarh, Bihar and Telangana, with a yellow alert for Delhi in place until 27 May. Thunderstorms are forecast for the end of the week, finally bringing some relief.\n\nThe heat is being driven by north-westerly winds blowing in from the desert regions of Rajasthan and neighbouring Pakistan, meteorologists say.\n\n\"In the absence of any weather system over the Indian mainland, hot northwesterly winds from the desert of the adjoining Sindh region of Pakistan and Rajasthan are penetrating deep into the country,\" said Mahesh Palawat, vice-president of meteorology and climate change at Skymet Weather.\n\n\"The uninterrupted flow of these winds for the last three to four days has been pushing the mercury, resulting in heatwave to severe heatwave conditions. We would only see some respite with the arrival of a western disturbance, which would then alter the wind pattern.\"\n\nIn Telangana, Ponguleti Srinivasa Reddy, the state's revenue minister, warned that \"the intensity of the heat has reached unprecedented levels\" and urged local officials to alert the public about heatwave precautions. Authorities have advised elderly people, children and pregnant women to stay indoors during the day.\n\nA warming global climate has been inching up India's heatwave frequency for years. IMD figures show heatwave frequency across India's ",
+    "research_source": "multi",
+    "summary": "Delhissä virallinen ilman lämpötila nousi tiistaina 43,5 asteeseen, mutta lämpökameralla mitatut pintalämpötilat olivat paikoin selvästi korkeampia. Havainnot korostavat varjon ja kasvillisuuden merkitystä helleaallon keskellä.",
+    "content": "Intian pääkaupunki Delhi on kärsinyt viikkoja ankarasta helleaallosta, jossa lämpötila on noussut toistuvasti yli 40 asteen. Tiistaina Intian ilmatieteen laitos mittasi kaupungin päivän ylimmäksi ilman lämpötilaksi 43,5 astetta, mutta kaupungilla tehdyt lämpökameramittaukset näyttivät, että ihmisten ympärillä olevat pinnat voivat kuumentua selvästi enemmän.\n\n## Virallinen lämpötila ei kerro kaikkea\n\nIntian ilmatieteen laitoksen mittaus kuvaa ilman lämpötilaa vakioiduissa olosuhteissa. Lämpökamera puolestaan mittaa pintojen lämpötilaa. Siksi lukemia ei voi verrata suoraan toisiinsa, mutta ero auttaa selittämään, miksi kaupunki voi tuntua ihmisestä virallista lämpötilaa tukalammalta.\n\nGreenpeace Indian käyttämä lämpökamera rekisteröi Delhissä paikoin jopa 64 asteen pintalämpötiloja. Kuumina päivinä asfaltti, betoni, ajoneuvot ja muut auringolle altistuvat pinnat imevät lämpöä ja voivat säteillä sitä takaisin ympäristöön. Korkeat pintalämpötilat lisäävät ihmisen kehon saamaa lämpöä säteilyn kautta etenkin alueilla, joilla varjoa tai kasvillisuutta on vähän.\n\n## Varjo muutti lukemia muutamassa metrissä\n\nYksi mittauspaikoista oli Etelä-Delhissä sijaitseva IIT:n ylikulkusillan alue, joka on kaupungin vilkkaita liikennesolmuja. Risteyksen läpi kulkee päivittäin satojatuhansia ajoneuvoja, ja ruuhka-aikoina odotus liikennevaloissa voi venyä jopa kymmeneen minuuttiin.\n\nSillan alla varjossa lämpökamera näytti 42 astetta. Kun Greenpeace-tutkija Nibedita Saha suuntasi kameran suorassa auringonpaisteessa liikennevaloissa odottaviin moottoripyöräilijöihin, lukema nousi 64 asteeseen. Paikassa, jossa mittaajat seisoivat, pintalämpötila oli 61 astetta. Alle kymmenen jalan eli noin kolmen metrin siirtyminen puun alle laski lukeman 39,8 asteeseen.\n\n## Pitkä altistus voi kuormittaa kehoa\n\nSahan mukaan jatkuva altistuminen näin korkeille lämpötiloille voi aiheuttaa vakavia terveysongelmia, mutta joskus jo muutaman metrin siirtyminen voi helpottaa oloa nopeasti. Hänen mukaansa puun antama varjo näytti mittauksissa konkreettisesti, miten suuri ero yhdellä puulla voi olla. Keuhkolääkäri A. Fathahudeen muistutti, että ihmisen kehon sisälämpötila on noin 37 astetta ja pitkä altistuminen kovalle kuumuudelle voi nostaa sitä.",
+    "category": "Kotimaa",
+    "tags": [
+      "delhi",
+      "helleaallot",
+      "intia",
+      "kaupunkilämpö",
+      "terveys"
+    ],
+    "summary_bullets": [
+      "Delhissä virallinen päivän ylin lämpötila oli tiistaina 43,5 astetta.",
+      "Lämpökamera mittasi kaupungilla pintalämpötiloja paikoin jopa 64 astetta.",
+      "Varjo ja puut laskivat mitattua pintalämpötilaa selvästi jo lyhyellä siirtymällä."
+    ],
+    "key_points": [
+      "Delhissä virallinen päivän ylin lämpötila oli tiistaina 43,5 astetta.",
+      "Lämpökamera mittasi kaupungilla pintalämpötiloja paikoin jopa 64 astetta.",
+      "Varjo ja puut laskivat mitattua pintalämpötilaa selvästi jo lyhyellä siirtymällä."
+    ],
+    "content_type": "news_article",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin BBC-aineistoon. Kategoria korjattu ulkomaihin, koska aihe koskee Intian Delhiä eikä Suomen kotimaan uutista.",
+    "source_text": "We spent a day out in the city with a thermal camera, recording surface temperatures indoors and outdoors.\n\nFor several weeks now, the Indian capital, Delhi, has been battling a severe heatwave, with temperatures routinely rising above 40C. The real feel, the weather apps helpfully tell us, is always a few degrees higher. But how hot do you feel when you hit the streets? On Tuesday, the Indian Meteorological Department (IMD) recorded the maximum day temperature at 43.5C in the capital. But we spent the day out on the city streets with a thermal camera deployed by Greenpeace India which recorded surface temperatures of up to 64C in some places. The comparison is not like-for-like. The IMD's official data reflects the temperature of the city air measured under standard conditions, while thermal cameras record the temperature of surfaces. On hot days, roads, concrete, vehicles and other exposed surfaces can become substantially hotter than the air around them.\n\nHigh surface temperatures increase the heat absorbed by the human body through radiation and can make urban areas feel considerably hotter than the official temperature, particularly where there is little shade or vegetation. Our first stop was just after mid-day at the IIT flyover in south Delhi, one of the busiest traffic junctions in the city. Hundreds of thousands of vehicles pass this crossing daily and, in peak traffic, wait time can sometimes stretch up to 10 minutes.\n\nAs Greenpeace researcher Nibedita Saha moved her camera from the shaded areas under the flyover (where the reading was 42C) to the bikers idling at stop signals under the direct sunlight, the reading went up to 64C. The surface temperature of the spot where we stood was 61C - it fell to 39.8C when we moved less than 10ft away to stand under a tree. \"Consistent exposure to such high temperatures can cause major health issues,\" says Nibedita, adding that sometimes, moving just a few feet can help. \"We got instant relief. That's the difference just one tree can make.\" Dr A Fathahudeen, a pulmonologist, says that the core human body temperature is 37C and prolonged exposure to high heat can make it rise.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260615T025123Z_49fcac6126",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-06-15T02:55:10.007791+00:00",
+      "repair_trigger": "pre_repair_word_count=248; selected_source_words=359; selected_source_blocks=4",
+      "pre_repair_word_count": 248,
+      "pre_repair_lead_word_count": 41,
+      "post_repair_word_count": 267,
+      "post_repair_lead_word_count": 42,
+      "selected_source_words_at_repair": 359,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 359,
+      "source_blocks": 4,
+      "repair_added_word_count": 19,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:BBC World:a099571687",
+        "2:BBC World:afbc57fc51",
+        "3:BBC World:86cd2ade1a",
+        "4:BBC World:11ae33a44e"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxoZWF0d2F2ZSUyMERlbGhpJTIwdGVtcGVyYXR1cmV8ZW58MXwwfHx8MTc4MTQ5MjI4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1587474260584-136574528ed5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxoZWF0d2F2ZSUyMERlbGhpJTIwdGVtcGVyYXR1cmV8ZW58MXwwfHx8MTc4MTQ5MjI4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Lämpökamera näyttää, miksi Delhi tuntuu mittarilukemia kuumemmalta",
+    "image_credit": "Photo by shalender kumar on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/brown-concrete-arch-under-blue-sky-during-daytime-XjKaPInYVCM?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-15T02:55:10.007791+00:00",
+    "repair_trigger": "pre_repair_word_count=248; selected_source_words=359; selected_source_blocks=4",
+    "pre_repair_word_count": 248,
+    "pre_repair_lead_word_count": 41,
+    "post_repair_word_count": 267,
+    "post_repair_lead_word_count": 42,
+    "selected_source_words_at_repair": 359,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 359,
+    "source_blocks": 4,
+    "repair_added_word_count": 19,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:a099571687",
+      "2:BBC World:afbc57fc51",
+      "3:BBC World:86cd2ade1a",
+      "4:BBC World:11ae33a44e"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-06-15T02:58:05.998482+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxoZWF0d2F2ZSUyMERlbGhpJTIwdGVtcGVyYXR1cmV8ZW58MXwwfHx8MTc4MTQ5MjI4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1587474260584-136574528ed5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxoZWF0d2F2ZSUyMERlbGhpJTIwdGVtcGVyYXR1cmV8ZW58MXwwfHx8MTc4MTQ5MjI4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-15T02:59:19.037319+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-15-lampokamera-nayttaa-miksi-delhi-tuntuu-mittarilukemia-kuumem.md"
+  ]
+}
