@@ -1,0 +1,101 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-14T23:01:15.532346+00:00",
+  "digest": "d558f036ee",
+  "packet": {
+    "packet_id": "20260614T230115Z_d558f036ee",
+    "created_at": "2026-06-14T23:01:15Z",
+    "headline_seed": "Startup CEO Charlie Javice is reportedly angling for a Trump pardon",
+    "description_seed": "JPMorgan can't be pleased by any of this.",
+    "link": "https://techcrunch.com/2026/06/14/startup-ceo-charlie-javice-is-reportedly-angling-for-a-trump-pardon/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/14/startup-ceo-charlie-javice-is-reportedly-angling-for-a-trump-pardon/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.7,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Startup CEO Charlie Javice is reportedly angling for a Trump pardon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "Charlie Javice, the convicted Frank founder, is reportedly seeking a presidential pardon, with her camp quietly courting people close to the Trump administration, according to the WSJ. So far, her name hasn’t turned up on a formal clemency request list at the Justice Department, it adds. That list is growing fast. As the administration reportedly weighs handing out roughly 250 pardons this summer to mark America’s 250th birthday, a wave of clemency requests is pouring in from white-collar defendants — including Sam Bankman-Fried.",
+        "word_count": 83,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "JPMorgan can't be pleased by any of this.",
+        "word_count": 8,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Charlie Javice, the convicted Frank founder, is reportedly seeking a presidential pardon, with her camp quietly courting people close to the Trump administration, according to the WSJ. So far, her name hasn’t turned up on a formal clemency request list at the Justice Department, it adds. That list is growing fast. As the administration reportedly weighs handing out roughly 250 pardons this summer to mark America’s 250th birthday, a wave of clemency requests is pouring in from white-collar defendants — including Sam Bankman-Fried.\n\nJPMorgan can't be pleased by any of this.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 91,
+      "selected_blocks": 2,
+      "selected_source_words": 91,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Startup CEO Charlie Javice is reportedly angling for a Trump pardon",
+      "description": "JPMorgan can't be pleased by any of this.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Startup CEO Charlie Javice is reportedly angling for a Trump pardon",
+    "description": "JPMorgan can't be pleased by any of this.",
+    "link": "https://techcrunch.com/2026/06/14/startup-ceo-charlie-javice-is-reportedly-angling-for-a-trump-pardon/",
+    "published": "2026-06-14T21:55:34+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "29f273cad917833c19be031baf69331d",
+    "_url_hash": "2092b8fccbdfb1332cc428c8bfb632d6c1ef958794fffc72503607e49380d025",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nCharlie Javice, the convicted Frank founder, is reportedly seeking a presidential pardon, with her camp quietly courting people close to the Trump administration, according to the WSJ. So far, her name hasn’t turned up on a formal clemency request list at the Justice Department, it adds.\n\nThat list is growing fast. As the administration reportedly weighs handing out roughly 250 pardons this summer to mark America’s 250th birthday, a wave of clemency requests is pouring in from white-collar defendants — including Sam Bankman-Fried.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-14T23:03:20.865850+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman taustatietojen lisäämistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260614T230115Z_d558f036ee\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman taustatietojen lisäämistä.\"}"
+}
