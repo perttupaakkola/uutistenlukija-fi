@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/neste-yrittaja-tietaa-koska-asiakkaan-hermot-ovat-koetuksella-kesatyontekijat-valilla-kovilla-jos-ei-tule-poytaan-saman-tien/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
