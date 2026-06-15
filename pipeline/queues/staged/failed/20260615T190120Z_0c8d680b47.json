@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-15T19:01:20.703069+00:00",
+  "digest": "0c8d680b47",
+  "packet": {
+    "packet_id": "20260615T190120Z_0c8d680b47",
+    "created_at": "2026-06-15T19:01:20Z",
+    "headline_seed": "Viljamilla, 44, kävi ”aivan järjetön tuuri” – pimitti tietoa puolitoista vuotta",
+    "description_seed": "Museovirasto sai tiedon asiasta kolme viikkoa sitten.",
+    "link": "https://www.is.fi/kotimaa/art-2000012080622.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012080622.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Viljamilla, 44, kävi ”aivan järjetön tuuri” – pimitti tietoa puolitoista vuotta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 191,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Seiska",
+        "Seiska",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Viljamilla, 44, kävi ”aivan järjetön tuuri” – pimitti tietoa puolitoista vuotta",
+      "description": "Museovirasto sai tiedon asiasta kolme viikkoa sitten.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Viljamilla, 44, kävi ”aivan järjetön tuuri” – pimitti tietoa puolitoista vuotta",
+    "description": "Museovirasto sai tiedon asiasta kolme viikkoa sitten.",
+    "link": "https://www.is.fi/kotimaa/art-2000012080622.html",
+    "published": "2026-06-15T18:57:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "734183c4ebb6494b42f1de8790785224",
+    "_url_hash": "fc0cb105c9ee6edcdd55291b1290f823788e2d97a13d42b42f759b875508fec3",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Seiska]\nTennisvalmentaja ja -selostaja Jari Hedman, 62, on mennyt kaikessa hiljaisuudessa naimisiin.\n\nJarin tytär, Diili-voittajana tunnetuksi noussut Clarissa Hedman kertoi asiasta Instagram-sivullaan toissa sunnuntaina. Clarissa nimittäin julkaisi otoksen, jossa poseeraa tenniskentällä tyylikkäissä vaatteissa, kädessään lasi kuohuvaa. Kaunotar on sonnustautunut korkeavartisiin nahkasaappaisiin ja turkoosiin takkiin.\n\n- Isä meni naimisiin, hän kirjoittaa kuvatekstissä vapaasti suomennettuna.\n\nTennisvalmentaja Jari Hedmanin Clarissa-tytär esitteli jääkiekkoilijarakkaan isälleen – ”Helskutin kiva ja leppoinen mies”\n\nA post shared by Clarissa Hedman (@clarissahedman)\n\nErityisen yllättävä asia häissä on se, että Clarissan lisäämän kuvan perusteella vihkivalat on vannottu käytännössä Jarin työpaikalla eli tenniskentällä. Kyseessä on tennisgurun kolmas avioliitto. Hänellä on aiemmista liitoistaan Clarissan lisäksi neljä tytärtä.\n\nJari on opettanut tennistä vuodesta 1976 lähtien, ja hän on valmentanut monia julkkiksiakin, kuten laulaja Juha Tapiota.\n\nTennisvalmentaja Jari Hedmanin tytär on upea mallikaunotar – ”Jollain se raha on tienattava!”\n\nA post shared by Jari Hedman (@jarihedmantennis)\n\nClarissa-tytär meni myös vastikään naimisiin. Hän ja jääkiekkoilijarakas Eetu Pöysti viettivät pienimuotoisia häitä helmikuussa, mutta juhlivat isommin Italiassa alkukesästä. Pariskunta kihlautui jo vuonna 2018, mutta koronapandemia siirsi hääpäivää pitkälle tulevaisuuteen.\n\nTällainen on Diilin uusi voittaja! Juhli häitään hulppeasti Italiassa - paljastaa suunnitelmansa tulevaisuudelle",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-15T19:13:44.678603+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä tai varmennettavia perustietoja, joten julkaisukelpoista artikkelia ei voi kirjoittaa ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260615T190120Z_0c8d680b47\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä tai varmennettavia perustietoja, joten julkaisukelpoista artikkelia ei voi kirjoittaa ilman keksittyjä faktoja.\"}"
+}
