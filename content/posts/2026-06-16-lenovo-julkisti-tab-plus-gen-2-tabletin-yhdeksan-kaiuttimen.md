@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/16/lenovo-julkisti-poikkeuksellisella-aanentoistolla-varustetun-tab-plus-gen-2-tabletin-yhdeksan-kaiuttimen-jbl-jarjestelma-ei-jaa-huomaamatta/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 

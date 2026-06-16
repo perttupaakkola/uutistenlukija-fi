@@ -1,0 +1,141 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-16T22:01:21.893465+00:00",
+  "digest": "ca32e1d001",
+  "packet": {
+    "packet_id": "20260616T220121Z_ca32e1d001",
+    "created_at": "2026-06-16T22:01:21Z",
+    "headline_seed": "SpaceX valuation balloons to $2.6T, briefly passes Amazon",
+    "description_seed": "SpaceX's valuation has increased by $1 trillion since its shares started trading on Friday.",
+    "link": "https://techcrunch.com/2026/06/16/spacex-valuation-balloons-to-2-6t-briefly-passes-amazon/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/16/spacex-valuation-balloons-to-2-6t-briefly-passes-amazon/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.72,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "SpaceX valuation balloons to $2.6T, briefly passes Amazon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "SpaceX's valuation has increased by $1 trillion since its shares started trading on Friday.",
+        "word_count": 14,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "SpaceX briefly passed Amazon to become the fifth-most valuable company in the world, and nearly eclipsed Microsoft, before the company’s shares pared back those gains before the market closed Tuesday. The newly public company’s stock had already climbed 20% on Monday — its first full day of trading. Tuesday’s news that SpaceX was acquiring AI coding company Cursor, along with the start of options trading on SpaceX’s shares, sent the share price even higher, spiking its valuation to $2.9 trillion before it ultimately settled back down.",
+        "word_count": 86,
+        "keyword_overlap": 7,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "SpaceX's valuation has increased by $1 trillion since its shares started trading on Friday.\n\nSpaceX briefly passed Amazon to become the fifth-most valuable company in the world, and nearly eclipsed Microsoft, before the company’s shares pared back those gains before the market closed Tuesday. The newly public company’s stock had already climbed 20% on Monday — its first full day of trading. Tuesday’s news that SpaceX was acquiring AI coding company Cursor, along with the start of options trading on SpaceX’s shares, sent the share price even higher, spiking its valuation to $2.9 trillion before it ultimately settled back down.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 100,
+      "selected_blocks": 2,
+      "selected_source_words": 100,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "SpaceX valuation balloons to $2.6T, briefly passes Amazon",
+      "description": "SpaceX's valuation has increased by $1 trillion since its shares started trading on Friday.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "SpaceX valuation balloons to $2.6T, briefly passes Amazon",
+    "description": "SpaceX's valuation has increased by $1 trillion since its shares started trading on Friday.",
+    "link": "https://techcrunch.com/2026/06/16/spacex-valuation-balloons-to-2-6t-briefly-passes-amazon/",
+    "published": "2026-06-16T20:11:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "4e9ef17d6f4422c8d288283072840945",
+    "_url_hash": "b97e05d78edd656862bff0ecd9a31e73b6acbaa62cc6b58a4f5b01091a6c4d70",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nSpaceX briefly passed Amazon to become the fifth-most valuable company in the world, and nearly eclipsed Microsoft, before the company’s shares pared back those gains before the market closed Tuesday.\n\nThe newly public company’s stock had already climbed 20% on Monday — its first full day of trading. Tuesday’s news that SpaceX was acquiring AI coding company Cursor, along with the start of options trading on SpaceX’s shares, sent the share price even higher, spiking its valuation to $2.9 trillion before it ultimately settled back down.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-16T22:04:09.163765+00:00",
+  "failure": "content too short: 211 words",
+  "payload": {
+    "packet_id": "20260616T220121Z_ca32e1d001",
+    "title": "SpaceX:n arvo nousi rajusti pörssikaupan alkuvaiheessa",
+    "summary": "SpaceX:n markkina-arvo kohosi voimakkaasti yhtiön osakkeiden alettua käydä kauppaa ja nousi hetkellisesti maailman arvokkaimpien yhtiöiden joukossa Amazonin ohi.",
+    "content": "SpaceX:n markkina-arvo on noussut noin biljoonalla dollarilla sen jälkeen, kun yhtiön osakkeilla alettiin käydä kauppaa perjantaina. Tiistaina arvostus kävi lähdetietojen mukaan hetkellisesti 2,9 biljoonassa dollarissa, ennen kuin osake luopui osasta päivän noususta markkinan sulkeutumista kohti.\n\n## Arvo kävi Amazonin edellä\n\nVoimakas kurssiliike nosti SpaceX:n hetkellisesti maailman viidenneksi arvokkaimmaksi yhtiöksi. Samalla se ohitti hetkeksi Amazonin ja oli lähellä myös Microsoftin arvostusta. Nousu ei kuitenkaan pysynyt täysimääräisenä päivän loppuun asti, vaan yhtiön osakkeet peruuttivat osan aiemmista voitoista ennen tiistain kaupankäynnin päättymistä.\n\nLähdetietojen perusteella SpaceX:n pörssitaival alkoi erittäin vahvasti jo ennen tiistain huippua. Yhtiön osake oli noussut maanantaina 20 prosenttia, kun sen ensimmäinen kokonainen kaupankäyntipäivä oli takana. Perjantaina alkanut kaupankäynti oli siten kasvattanut yhtiön markkina-arvoa lyhyessä ajassa huomattavasti.\n\n## Cursor-kauppa ja optiot lisäsivät vauhtia\n\nTiistain lisänousua vauhdittivat kaksi lähteessä mainittua tekijää. Ensimmäinen oli tieto siitä, että SpaceX oli ostamassa tekoälyyn keskittyvää koodausyhtiö Cursoria. Toinen oli optiokaupan alkaminen SpaceX:n osakkeilla. Näiden uutisten jälkeen osakekurssi nousi päivän aikana niin voimakkaasti, että yhtiön arvostus kävi 2,9 biljoonassa dollarissa.\n\n## Nousu loiveni päivän päätteeksi\n\nVaikka päivän huipputaso jäi väliaikaiseksi, lähdetiedot kuvaavat SpaceX:n arvostuksen kasvua poikkeuksellisen nopeaksi. Yhtiön markkina-arvo oli kasvanut noin biljoonalla dollarilla perjantaina alkaneen osakekaupan jälkeen. Tiistain kehitys osoitti samalla, että tuoreen pörssiyhtiön arvo voi liikkua rajusti, kun yhtiöön liittyvät yrityskauppauutiset ja uudet kaupankäyntimuodot lisäävät sijoittajien aktiivisuutta.",
+    "category": "Teknologia",
+    "tags": [
+      "SpaceX",
+      "Amazon",
+      "Microsoft",
+      "Cursor",
+      "pörssi",
+      "teknologia"
+    ],
+    "summary_bullets": [
+      "SpaceX:n markkina-arvo on noussut noin biljoonalla dollarilla perjantaina alkaneen osakekaupan jälkeen.",
+      "Yhtiö ohitti hetkellisesti Amazonin ja nousi maailman viidenneksi arvokkaimmaksi yhtiöksi.",
+      "Tiistain nousua vauhdittivat Cursor-yrityskauppaa koskeva uutinen ja optiokaupan alkaminen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.72,
+    "journalist_note": "Artikkeli perustuu packetin yhteen lähdekokonaisuuteen. Keskeiset arvostusluvut, kaupankäynnin ajankohdat ja Cursor-maininta on pidetty lähdetietojen rajoissa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260616T220121Z_ca32e1d001\",\n  \"title\": \"SpaceX:n arvo nousi rajusti pörssikaupan alkuvaiheessa\",\n  \"summary\": \"SpaceX:n markkina-arvo kohosi voimakkaasti yhtiön osakkeiden alettua käydä kauppaa ja nousi hetkellisesti maailman arvokkaimpien yhtiöiden joukossa Amazonin ohi.\",\n  \"content\": \"SpaceX:n markkina-arvo on noussut noin biljoonalla dollarilla sen jälkeen, kun yhtiön osakkeilla alettiin käydä kauppaa perjantaina. Tiistaina arvostus kävi lähdetietojen mukaan hetkellisesti 2,9 biljoonassa dollarissa, ennen kuin osake luopui osasta päivän noususta markkinan sulkeutumista kohti.\\n\\n## Arvo kävi Amazonin edellä\\n\\nVoimakas kurssiliike nosti SpaceX:n hetkellisesti maailman viidenneksi arvokkaimmaksi yhtiöksi. Samalla se ohitti hetkeksi Amazonin ja oli lähellä myös Microsoftin arvostusta. Nousu ei kuitenkaan pysynyt täysimääräisenä päivän loppuun asti, vaan yhtiön osakkeet peruuttivat osan aiemmista voitoista ennen tiistain kaupankäynnin päättymistä.\\n\\nLähdetietojen perusteella SpaceX:n pörssitaival alkoi erittäin vahvasti jo ennen tiistain huippua. Yhtiön osake oli noussut maanantaina 20 prosenttia, kun sen ensimmäinen kokonainen kaupankäyntipäivä oli takana. Perjantaina alkanut kaupankäynti oli siten kasvattanut yhtiön markkina-arvoa lyhyessä ajassa huomattavasti.\\n\\n## Cursor-kauppa ja optiot lisäsivät vauhtia\\n\\nTiistain lisänousua vauhdittivat kaksi lähteessä mainittua tekijää. Ensimmäinen oli tieto siitä, että SpaceX oli ostamassa tekoälyyn keskittyvää koodausyhtiö Cursoria. Toinen oli optiokaupan alkaminen SpaceX:n osakkeilla. Näiden uutisten jälkeen osakekurssi nousi päivän aikana niin voimakkaasti, että yhtiön arvostus kävi 2,9 biljoonassa dollarissa.\\n\\n## Nousu loiveni päivän päätteeksi\\n\\nVaikka päivän huipputaso jäi väliaikaiseksi, lähdetiedot kuvaavat SpaceX:n arvostuksen kasvua poikkeuksellisen nopeaksi. Yhtiön markkina-arvo oli kasvanut noin biljoonalla dollarilla perjantaina alkaneen osakekaupan jälkeen. Tiistain kehitys osoitti samalla, että tuoreen pörssiyhtiön arvo voi liikkua rajusti, kun yhtiöön liittyvät yrityskauppauutiset ja uudet kaupankäyntimuodot lisäävät sijoittajien aktiivisuutta.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"SpaceX\",\n    \"Amazon\",\n    \"Microsoft\",\n    \"Cursor\",\n    \"pörssi\",\n    \"teknologia\"\n  ],\n  \"summary_bullets\": [\n    \"SpaceX:n markkina-arvo on noussut noin biljoonalla dollarilla perjantaina alkaneen osakekaupan jälkeen.\",\n    \"Yhtiö ohitti hetkellisesti Amazonin ja nousi maailman viidenneksi arvokkaimmaksi yhtiöksi.\",\n    \"Tiistain nousua vauhdittivat Cursor-yrityskauppaa koskeva uutinen ja optiokaupan alkaminen.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.72,\n  \"journalist_note\": \"Artikkeli perustuu packetin yhteen lähdekokonaisuuteen. Keskeiset arvostusluvut, kaupankäynnin ajankohdat ja Cursor-maininta on pidetty lähdetietojen rajoissa.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260616T220121Z_ca32e1d001",
+    "category": "Teknologia",
+    "selected_source_words": 100,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.72,
+    "final_word_count": 211,
+    "issues": [
+      "content too short: 211 words"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "SpaceX:n arvo nousi rajusti pörssikaupan alkuvaiheessa"
+  }
+}
