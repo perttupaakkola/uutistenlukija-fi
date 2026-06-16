@@ -1,0 +1,195 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-16T04:41:24.377984+00:00",
+  "digest": "20ebf15e69",
+  "packet": {
+    "packet_id": "20260616T044124Z_20ebf15e69",
+    "created_at": "2026-06-16T04:41:24Z",
+    "headline_seed": "The North Atlantic’s ‘cold blob’ may signal a major current’s decline",
+    "description_seed": "A cold blob of water in the North Atlantic points to a weakening of the Atlantic Meridional Overturning Circulation, researchers report.",
+    "link": "https://www.sciencenews.org/article/cold-blob-may-signal-current-decline",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News",
+      "USA TODAY",
+      "Discover Magazine"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/cold-blob-may-signal-current-decline"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "The North Atlantic’s ‘cold blob’ may signal a major current’s decline"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "A cold blob of water in the North Atlantic points to a weakening of the Atlantic Meridional Overturning Circulation, researchers report.",
+        "word_count": 21,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "Earth’s oceans are heating up, but one patch in the North Atlantic has cooled by about 1 degree Celsius since the 19th century. Scientists now think they know why: The “cold blob” is the result of slowing ocean heat transport in the Atlantic, researchers report in the June 16 Geophysical Research Letters. Prevailing wisdom has been that the patch was getting colder because less heat was coming in via ocean currents — specifically, a massive current known as the Atlantic Meridional Overturning Circulation, or AMOC. This current brings heat from the tropics northward toward Europe, shaping temperature and precipitation in Europe, North Africa and beyond. Another possibility was that the area was losing large amounts of heat to the atmosphere, leaving colder waters behind. ---",
+        "word_count": 125,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "USA TODAY",
+        "source_type": "research",
+        "text": "Scientists have linked an unusual \"cold blob\" in the North Atlantic — one eerily similar to the one featured in the film \"The Day After Tomorrow,\" that has a major impact on global weather. While the findings weren't that extreme, a recent study showed the area has cooled by up to 1 degree Celsius (1.8 degrees Fahrenheit) over the past few decades. Researchers at the University of California believe this is due to changes to the Atlantic Meridional Overturning Circulation (AMOC), a complex network of ocean currents. \"The region to the south of Greenland is highly sensitive to AMOC change, where the surface cooling due to an AMOC slowdown may exceed background greenhouse gas warming,\" said Wei Liu, a climate scientist at the University of California, Riverside, who led the study.",
+        "word_count": 131,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Discover Magazine",
+        "source_type": "research",
+        "text": "Researchers call it the Atlantic “cold blob,” and for years they have debated what is causing it. A new study published in Geophysical Research Letters points to the cooling being driven mainly by weakening ocean circulation, not by heat escaping through the sea surface, as some researchers had proposed. And if that circulation continues to weaken, the cold blob could be an early sign of larger changes in the Atlantic system that helps shape Europe’s climate.",
+        "word_count": 76,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "A cold blob of water in the North Atlantic points to a weakening of the Atlantic Meridional Overturning Circulation, researchers report.\n\nEarth’s oceans are heating up, but one patch in the North Atlantic has cooled by about 1 degree Celsius since the 19th century. Scientists now think they know why: The “cold blob” is the result of slowing ocean heat transport in the Atlantic, researchers report in the June 16 Geophysical Research Letters. Prevailing wisdom has been that the patch was getting colder because less heat was coming in via ocean currents — specifically, a massive current known as the Atlantic Meridional Overturning Circulation, or AMOC. This current brings heat from the tropics northward toward Europe, shaping temperature and precipitation in Europe, North Africa and beyond. Another possibility was that the area was losing large amounts of heat to the atmosphere, leaving colder waters behind. ---\n\nScientists have linked an unusual \"cold blob\" in the North Atlantic — one eerily similar to the one featured in the film \"The Day After Tomorrow,\" that has a major impact on global weather. While the findings weren't that extreme, a recent study showed the area has cooled by up to 1 degree Celsius (1.8 degrees Fahrenheit) over the past few decades. Researchers at the University of California believe this is due to changes to the Atlantic Meridional Overturning Circulation (AMOC), a complex network of ocean currents. \"The region to the south of Greenland is highly sensitive to AMOC change, where the surface cooling due to an AMOC slowdown may exceed background greenhouse gas warming,\" said Wei Liu, a climate scientist at the University of California, Riverside, who led the study.\n\nResearchers call it the Atlantic “cold blob,” and for years they have debated what is causing it. A new study published in Geophysical Research Letters points to the cooling being driven mainly by weakening ocean circulation, not by heat escaping through the sea surface, as some researchers had proposed. And if that circulation continues to weaken, the cold blob could be an early sign of larger changes in the Atlantic system that helps shape Europe’s climate.",
+    "source_diagnostics": {
+      "candidate_blocks": 12,
+      "candidate_source_words": 1009,
+      "selected_blocks": 4,
+      "selected_source_words": 353,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "USA TODAY",
+        "USA TODAY",
+        "USA TODAY",
+        "USA TODAY",
+        "Discover Magazine",
+        "Discover Magazine",
+        "Discover Magazine",
+        "Discover Magazine",
+        "Discover Magazine",
+        "WABI-TV",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News",
+        "USA TODAY",
+        "Discover Magazine"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "The North Atlantic’s ‘cold blob’ may signal a major current’s decline",
+      "description": "A cold blob of water in the North Atlantic points to a weakening of the Atlantic Meridional Overturning Circulation, researchers report.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "The North Atlantic’s ‘cold blob’ may signal a major current’s decline",
+    "description": "A cold blob of water in the North Atlantic points to a weakening of the Atlantic Meridional Overturning Circulation, researchers report.",
+    "link": "https://www.sciencenews.org/article/cold-blob-may-signal-current-decline",
+    "published": "2026-06-15T19:16:49+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "0c85113e9edc410a769075094429c24c",
+    "_url_hash": "7ffb6792491fda3703934bfe94ec4eab11aa6da629747d41c0b26248549c810c",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "stale_source",
+    "fresh_source_quota_eligible": false,
+    "stale_source": true,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nEarth’s oceans are heating up, but one patch in the North Atlantic has cooled by about 1 degree Celsius since the 19th century. Scientists now think they know why: The “cold blob” is the result of slowing ocean heat transport in the Atlantic, researchers report in the June 16 Geophysical Research Letters.\n\nPrevailing wisdom has been that the patch was getting colder because less heat was coming in via ocean currents — specifically, a massive current known as the Atlantic Meridional Overturning Circulation, or AMOC. This current brings heat from the tropics northward toward Europe, shaping temperature and precipitation in Europe, North Africa and beyond. Another possibility was that the area was losing large amounts of heat to the atmosphere, leaving colder waters behind.\n\n---\n\n[Lähde: USA TODAY]\nScientists have linked an unusual \"cold blob\" in the North Atlantic — one eerily similar to the one featured in the film \"The Day After Tomorrow,\" that has a major impact on global weather.\n\nWhile the findings weren't that extreme, a recent study showed the area has cooled by up to 1 degree Celsius (1.8 degrees Fahrenheit) over the past few decades. Researchers at the University of California believe this is due to changes to the Atlantic Meridional Overturning Circulation (AMOC), a complex network of ocean currents.\n\n\"The region to the south of Greenland is highly sensitive to AMOC change, where the surface cooling due to an AMOC slowdown may exceed background greenhouse gas warming,\" said Wei Liu, a climate scientist at the University of California, Riverside, who led the study.\n\nBecause these currents carry heat throughout the planet like an oceanic conveyor belt, any changes could have a domino effect on many parts of the Earth.\n\nUnable to view our graphics? Click here to see them.\n\nOcean water is continuously moved around by currents. Near coastlines, tidal currents are impacted by the gravitational pull of the sun and moon. Winds drive surface currents and much slower currents extend from the ocean’s surface down to the seafloor.\n\nThese deeper currents are caused by variations in temperature and salinity. Together, these movements form a vast \"global conveyor belt,\" which includes the AMOC, according to the National Oceanic and Atmospheric Administration.\n\nEl Niño has formed: Forecasters expect a global weather powerhouse.\n\nFor years, this region has stood out on global temperature maps as one of the few ocean areas showing long-term cooling. It has become a key area for studying how the atmosphere and ocean respond to change, according to NASA's Goddard Institute for Space Studies.\n\n\"One of the most striking features of modern climate change is a region south of Greenland that has cooled while most of the global ocean has warmed. This is called the North Atlantic Warming Hole or the North Atlantic Cold Blob,\" said Kai‑Yuan Li, a PhD candidate in the Department of Earth and Planetary Sciences at UC Riverside.\n\nScientists have cautioned that ocean currents are weakening and may eventually become so weak that they can no longer distribute heat around the world.\n\nIf any part of the AMOC slows, it could bring the entire system to a standstill. Scientists estimate it will weaken by at least 20% by 2100 and it may eventually shut down completely.\n\nThe stro\n\n---\n\n[Lähde: Discover Magazine]\nLearn how the Atlantic cold blob may reveal a weakening ocean circulation system, and why reduced heat transport could affect Europe’s weather, rainfall, and agriculture.\n\nLook at a map of global temperature change since the 19th century, and one thing stands out — almost everywhere, the colors run warm. Except for one patch of ocean south of Greenland and Iceland, which has been cooling while much of the world around it heats up.\n\nResearchers call it the Atlantic “cold blob,” and for years they have debated what is causing it. A new study published in Geophysical Research Letters points to the cooling being driven mainly by weakening ocean circulation, not by heat escaping through the sea surface, as some researchers had proposed. And if that circulation continues to weaken, the cold blob could be an early sign of larger changes in the Atlantic system that helps shape Europe’s climate.\n\nThe cold blob sits in the subpolar Atlantic, where ocean currents deliver warm water northward from the tropics. That system, known as the Atlantic Meridional Overturning Circulation (AMOC), moves heat through the Atlantic and releases much of it into the atmosphere of the North Atlantic and Europe. This heat transport is one reason the Northern Hemisphere is about 1.8 to 3.6 degrees Fahrenheit (1 to 2 degrees Celsius) warmer than the Southern Hemisphere.\n\nAs the cold blob continued to show up in long-term records, two explanations emerged. One was that the AMOC had weakened, delivering less heat to the region. The other was that more heat was being lost through the sea surface, driven by atmospheric changes rather than ocean circulation.\n\nTo test both explanations, the new study compared ocean heat content records from 1955 to 2024 with surface heat flux data from 1955 to 2022. The data showed that surface heat loss in the cold blob region has not increased. If anything, it has slightly decreased. The heat content of the water column in this region, however, has been declining significantly, and that decline tracks more closely with changes in ocean heat transport than with anything happening at the surface.\n\nThe cooling also extends deep into the water column, affecting roughly the top 3,300 feet (1,000 meters), which coincides with the depth of the northward-flowing AMOC layer. That depth makes it harder to explain the cold blob as a surface-weather effect alone.\n\nRead More: A Major Atlantic Ocean Current May Be Weakening Faster Than Expected — Here’s What That Could Me\n\n---\n\n[Lähde: WABI-TV]\n(CNN) - There’s a mysterious cold spot in the Atlantic Ocean, and scientists think it’s a signal that a critical system of ocean currents is weakening.\n\nWhat researchers have nicknamed the “cold blob” is a large patch i...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-16T04:45:04.815484+00:00",
+  "failure": "content too short: 239 words",
+  "payload": {
+    "packet_id": "20260616T044124Z_20ebf15e69",
+    "title": "Pohjois-Atlantin kylmä laikku voi kertoa suuren merivirran heikkenemisestä",
+    "summary": "Pohjois-Atlantilla havaittu poikkeuksellisen viileä merialue voi uuden tutkimuksen mukaan johtua Atlantin suuren kiertoliikkeen heikkenemisestä. Ilmiöllä on merkitystä, koska merivirta kuljettaa lämpöä tropiikista kohti Eurooppaa ja vaikuttaa laajasti ilmastoon.",
+    "content": "Pohjois-Atlantilla, Grönlannin eteläpuolella, sijaitseva merialue on viilentynyt samaan aikaan kun maapallon meret kokonaisuutena lämpenevät. Uuden tutkimuksen mukaan niin sanottu Atlantin kylmä laikku viittaa ennen kaikkea Atlantin meridionaalisen kiertoliikkeen eli AMOC-järjestelmän heikkenemiseen eikä siihen, että alue menettäisi poikkeuksellisen paljon lämpöä ilmakehään.\n\n## Poikkeus lämpenevissä merissä\n\nTutkijoiden mukaan kyseinen Pohjois-Atlantin alue on viilentynyt noin yhdellä celsiusasteella 1800-luvulta lähtien. Viime vuosikymmeniin ulottuvat arviot kuvaavat samaa suuruusluokkaa olevaa viilenemistä, vaikka ympäröivät merialueet ovat lämmenneet kasvihuonekaasujen lisääntyessä.\n\nKylmä laikku on herättänyt tutkijoissa pitkään kysymyksiä, koska se erottuu selvästi valtamerten yleisestä kehityksestä. Yksi selitys on ollut, että merivirrat tuovat alueelle aiempaa vähemmän lämpöä. Toinen mahdollisuus on ollut, että meri luovuttaa siellä tavallista enemmän lämpöä ilmakehään, jolloin pintavedet jäähtyvät.\n\nGeophysical Research Letters -tiedelehdessä julkaistu uusi tutkimus tukee ensimmäistä selitystä. Sen mukaan viilenemistä ajaa pääasiassa Atlantin lämmönkuljetuksen hidastuminen.\n\n## AMOC kuljettaa lämpöä kohti pohjoista\n\nAMOC on laaja merivirtojen järjestelmä, joka siirtää lämpöä tropiikista pohjoiseen kohti Eurooppaa. Se vaikuttaa lämpötiloihin ja sademääriin Euroopassa, Pohjois-Afrikassa ja laajemminkin Atlantin ympäristössä.\n\nTutkimusta johtaneen Kalifornian yliopiston ilmastotutkijan Wei Liun mukaan Grönlannin eteläpuolinen alue on erityisen herkkä AMOC-järjestelmän muutoksille. Hänen mukaansa AMOCin hidastumisesta johtuva pintaveden viileneminen voi tällä alueella olla voimakkaampaa kuin taustalla vaikuttava kasvihuonekaasujen aiheuttama lämpeneminen.\n\n## Varhainen merkki Atlantin muutoksista\n\nTutkijat eivät kuvaa havaintoja äkillisen katastrofin merkiksi. Sen sijaan kylmä laikku voi olla varhainen signaali siitä, että Atlantin kiertojärjestelmässä on käynnissä suurempia muutoksia. Jos kiertoliike jatkaa heikkenemistään, vaikutukset voivat ulottua alueelliseen ilmastoon erityisesti Euroopassa, jonka sääoloihin Atlantin lämmönkuljetuksella on keskeinen merkitys.",
+    "category": "Tiede",
+    "tags": [
+      "Pohjois-Atlantti",
+      "AMOC",
+      "ilmastonmuutos",
+      "merivirrat",
+      "ilmastotutkimus"
+    ],
+    "summary_bullets": [
+      "Pohjois-Atlantin kylmä laikku on viilentynyt noin yhdellä celsiusasteella, vaikka meret yleisesti lämpenevät.",
+      "Uusi tutkimus yhdistää viilenemisen Atlantin meridionaalisen kiertoliikkeen heikkenemiseen.",
+      "AMOC kuljettaa lämpöä tropiikista kohti Eurooppaa ja vaikuttaa alueelliseen ilmastoon."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Teksti pitää väitteet varovaisina: tutkimus tukee AMOC-selitystä, mutta ei esitä varmoja ennusteita tulevista vaikutuksista."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260616T044124Z_20ebf15e69\",\n  \"title\": \"Pohjois-Atlantin kylmä laikku voi kertoa suuren merivirran heikkenemisestä\",\n  \"summary\": \"Pohjois-Atlantilla havaittu poikkeuksellisen viileä merialue voi uuden tutkimuksen mukaan johtua Atlantin suuren kiertoliikkeen heikkenemisestä. Ilmiöllä on merkitystä, koska merivirta kuljettaa lämpöä tropiikista kohti Eurooppaa ja vaikuttaa laajasti ilmastoon.\",\n  \"content\": \"Pohjois-Atlantilla, Grönlannin eteläpuolella, sijaitseva merialue on viilentynyt samaan aikaan kun maapallon meret kokonaisuutena lämpenevät. Uuden tutkimuksen mukaan niin sanottu Atlantin kylmä laikku viittaa ennen kaikkea Atlantin meridionaalisen kiertoliikkeen eli AMOC-järjestelmän heikkenemiseen eikä siihen, että alue menettäisi poikkeuksellisen paljon lämpöä ilmakehään.\\n\\n## Poikkeus lämpenevissä merissä\\n\\nTutkijoiden mukaan kyseinen Pohjois-Atlantin alue on viilentynyt noin yhdellä celsiusasteella 1800-luvulta lähtien. Viime vuosikymmeniin ulottuvat arviot kuvaavat samaa suuruusluokkaa olevaa viilenemistä, vaikka ympäröivät merialueet ovat lämmenneet kasvihuonekaasujen lisääntyessä.\\n\\nKylmä laikku on herättänyt tutkijoissa pitkään kysymyksiä, koska se erottuu selvästi valtamerten yleisestä kehityksestä. Yksi selitys on ollut, että merivirrat tuovat alueelle aiempaa vähemmän lämpöä. Toinen mahdollisuus on ollut, että meri luovuttaa siellä tavallista enemmän lämpöä ilmakehään, jolloin pintavedet jäähtyvät.\\n\\nGeophysical Research Letters -tiedelehdessä julkaistu uusi tutkimus tukee ensimmäistä selitystä. Sen mukaan viilenemistä ajaa pääasiassa Atlantin lämmönkuljetuksen hidastuminen.\\n\\n## AMOC kuljettaa lämpöä kohti pohjoista\\n\\nAMOC on laaja merivirtojen järjestelmä, joka siirtää lämpöä tropiikista pohjoiseen kohti Eurooppaa. Se vaikuttaa lämpötiloihin ja sademääriin Euroopassa, Pohjois-Afrikassa ja laajemminkin Atlantin ympäristössä.\\n\\nTutkimusta johtaneen Kalifornian yliopiston ilmastotutkijan Wei Liun mukaan Grönlannin eteläpuolinen alue on erityisen herkkä AMOC-järjestelmän muutoksille. Hänen mukaansa AMOCin hidastumisesta johtuva pintaveden viileneminen voi tällä alueella olla voimakkaampaa kuin taustalla vaikuttava kasvihuonekaasujen aiheuttama lämpeneminen.\\n\\n## Varhainen merkki Atlantin muutoksista\\n\\nTutkijat eivät kuvaa havaintoja äkillisen katastrofin merkiksi. Sen sijaan kylmä laikku voi olla varhainen signaali siitä, että Atlantin kiertojärjestelmässä on käynnissä suurempia muutoksia. Jos kiertoliike jatkaa heikkenemistään, vaikutukset voivat ulottua alueelliseen ilmastoon erityisesti Euroopassa, jonka sääoloihin Atlantin lämmönkuljetuksella on keskeinen merkitys.\",\n  \"category\": \"Tiede\",\n  \"tags\": [\n    \"Pohjois-Atlantti\",\n    \"AMOC\",\n    \"ilmastonmuutos\",\n    \"merivirrat\",\n    \"ilmastotutkimus\"\n  ],\n  \"summary_bullets\": [\n    \"Pohjois-Atlantin kylmä laikku on viilentynyt noin yhdellä celsiusasteella, vaikka meret yleisesti lämpenevät.\",\n    \"Uusi tutkimus yhdistää viilenemisen Atlantin meridionaalisen kiertoliikkeen heikkenemiseen.\",\n    \"AMOC kuljettaa lämpöä tropiikista kohti Eurooppaa ja vaikuttaa alueelliseen ilmastoon.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään lähdeblokkiin. Teksti pitää väitteet varovaisina: tutkimus tukee AMOC-selitystä, mutta ei esitä varmoja ennusteita tulevista vaikutuksista.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260616T044124Z_20ebf15e69",
+    "category": "Tiede",
+    "selected_source_words": 353,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 239,
+    "issues": [
+      "content too short: 239 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Pohjois-Atlantin kylmä laikku voi kertoa suuren merivirran heikkenemisestä",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-16T04:45:04.815216+00:00",
+    "repair_trigger": "pre_repair_word_count=239; selected_source_words=353; selected_source_blocks=4",
+    "pre_repair_word_count": 239,
+    "pre_repair_lead_word_count": 40,
+    "post_repair_word_count": 239,
+    "post_repair_lead_word_count": 40,
+    "selected_source_words_at_repair": 353,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 353,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 239 words",
+    "source_block_ids_used_for_repair": [
+      "1:Science News:fc8442ea3a",
+      "2:Science News:e0ee93110a",
+      "3:USA TODAY:bddcaf802f",
+      "4:Discover Magazine:e65d630d17"
+    ],
+    "final_issues": [
+      "content too short: 239 words"
+    ],
+    "recovered": false
+  }
+}
