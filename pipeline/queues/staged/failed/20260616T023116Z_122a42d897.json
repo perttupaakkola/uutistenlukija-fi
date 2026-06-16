@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-16T02:31:16.639630+00:00",
+  "digest": "122a42d897",
+  "packet": {
+    "packet_id": "20260616T023116Z_122a42d897",
+    "created_at": "2026-06-16T02:31:16Z",
+    "headline_seed": "Karavaanarit täyttävät Päijät-Hämeen leirintäalueet – Alan yrittäjät toivovat apua kalliista polttoaineesta",
+    "description_seed": "Alkukesä on ollut osalle camping-yrittäjistä hiljaista aikaa, mutta toisaalta sesonki on vasta edessä päin.",
+    "link": "https://www.ess.fi/paikalliset/9540942",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9540942"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Karavaanarit täyttävät Päijät-Hämeen leirintäalueet – Alan yrittäjät toivovat apua kalliista polttoaineesta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 97,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Karavaanarit täyttävät Päijät-Hämeen leirintäalueet – Alan yrittäjät toivovat apua kalliista polttoaineesta",
+      "description": "Alkukesä on ollut osalle camping-yrittäjistä hiljaista aikaa, mutta toisaalta sesonki on vasta edessä päin.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Karavaanarit täyttävät Päijät-Hämeen leirintäalueet – Alan yrittäjät toivovat apua kalliista polttoaineesta",
+    "description": "Alkukesä on ollut osalle camping-yrittäjistä hiljaista aikaa, mutta toisaalta sesonki on vasta edessä päin.",
+    "link": "https://www.ess.fi/paikalliset/9540942",
+    "published": "2026-06-16T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "d3af82e8dec4b7f239beeb3ab0bb001d",
+    "_url_hash": "36e0c534ed6f8d7024601a42c0f219189baecdff281f9917c3008859342da94f",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSosiaaliturvaministeri Sanni Grahn-Laasonen (kok.) jää tänään perhevapaalle tehtävistään. Hänen tilalleen hallitukseen nousee kokoomuksen kansanedustaja, varatuomari Karoliina Partanen.\n\nVaihdos tapahtuu tasavallan presidentin esittelyssä. Heti tilaisuuden jälkeen käsitellään vaihdoksen aiheuttamat muutokset ministerien sijaisuuksiin ja ministerityöryhmien kokoonpanoihin.\n\nPartanen valittiin Grahn-Laasosen sijaiseksi viime viikon torstaina. Häntä pidettiin jo etukäteen vahvana kandidaattina tehtävään.\n\nPartanen sanoi tiedotustilaisuudessa viime viikolla, että hän tahtoo erityisesti viedä läpi yrittäjien eläkeuudistuksen. Lisäksi hän otti esille perhe- ja lähisuhdeväkivallan uhrien turvakotipaikkojen riittävyyden, joustojen pohtimisen sosiaaliturvaan ja sosiaalisen median käytön rajoitukset.\n\nGrahn-Laasonen palaa ministeriksi vuodenvaihteessa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-16T02:33:44.107157+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260616T023116Z_122a42d897\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
