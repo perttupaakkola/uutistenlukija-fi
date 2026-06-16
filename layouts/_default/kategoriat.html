@@ -1,21 +1,27 @@
 {{ define "main" }}
 {{ $terms := .Site.Taxonomies.categories }}
+{{ $orderedCategories := slice "talous" "kotimaa" "ulkomaat" "teknologia" "urheilu" "kulttuuri" "tiede" }}
 <div class="category-header">
   <h1>Kategoriat</h1>
-  <p class="category-header__description">Selaa uutisia aiheen mukaan.</p>
+  <p class="category-header__description">Löydä nopeasti talousuutiset ja muut päivän aiheet.</p>
 </div>
 
 {{ if gt (len $terms) 0 }}
 <div class="articles-grid category-index-grid">
-  {{ range $name, $taxonomy := $terms }}
+  {{ range $name := $orderedCategories }}
+    {{ with index $terms $name }}
+    {{ $taxonomy := . }}
     {{ $page := site.GetPage (printf "/categories/%s" $name) }}
     {{ $title := humanize $name | title }}
     {{ with $page }}{{ $title = .Title }}{{ end }}
-    <article class="article-card category-index-card">
+    <article class="article-card category-index-card{{ if eq $name "talous" }} category-index-card--featured{{ end }}">
+      {{ if eq $name "talous" }}<p class="category-index-card__eyebrow">Talous juuri nyt</p>{{ end }}
       <h2><a href="/categories/{{ $name | urlize }}/">{{ $title }}</a></h2>
       <p class="excerpt">{{ len $taxonomy.Pages }} artikkelia</p>
       {{ with $page.Params.description }}<p>{{ . }}</p>{{ end }}
+      <a class="category-index-card__link" href="/categories/{{ $name | urlize }}/">Avaa {{ $title | lower }}</a>
     </article>
+    {{ end }}
   {{ end }}
 </div>
 {{ else }}
