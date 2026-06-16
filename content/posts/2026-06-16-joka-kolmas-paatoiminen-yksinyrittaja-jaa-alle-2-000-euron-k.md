@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/raportti-paljastaa-joka-kolmas-yksinyrittaja-ansaitsee-alle-2-000-euroa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
