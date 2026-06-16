@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/16/google-julkaisi-wear-os-7n-pixel-watch-kelloilleen-parantaa-myos-akunkestoa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
