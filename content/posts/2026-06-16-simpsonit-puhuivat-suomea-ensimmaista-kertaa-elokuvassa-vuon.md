@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/melkein-20-vuotta-sitten-simpsonit-puhuivat-suomea-ensimmaista-kertaa-etenkin-anna-abreussa-oli-monella-sulattelemista/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
