@@ -41,7 +41,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/karmea-virhe-johti-tragediaan-maria-21-heitettiin-kuolemaansa-brasiliassa/9354522"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
