@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/vuoden-pakolainen-on-nayttelija-youssef-asad-alkhatib/9354448"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
