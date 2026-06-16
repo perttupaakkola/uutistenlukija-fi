@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/06/15/sundar-pichai-faces-boos-walkout-at-stanford-graduation-ceremony-over-googles-israel-ice-ties/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
