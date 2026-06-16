@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/eu-raportti-suomen-uimavedet-erinomaisia/9354654"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
