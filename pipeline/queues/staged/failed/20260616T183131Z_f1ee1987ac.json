@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-16T18:31:31.729291+00:00",
+  "digest": "f1ee1987ac",
+  "packet": {
+    "packet_id": "20260616T183131Z_f1ee1987ac",
+    "created_at": "2026-06-16T18:31:31Z",
+    "headline_seed": "Pesäpallotuloksia | Naisten Ykköspesis",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9544957",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9544957"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pesäpallotuloksia | Naisten Ykköspesis"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 225,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Sportti"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pesäpallotuloksia | Naisten Ykköspesis",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pesäpallotuloksia | Naisten Ykköspesis",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9544957",
+    "published": "2026-06-16T21:22:13+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "178750130f587bb0e139d8f057812530",
+    "_url_hash": "3cb5418161419f7e4e6b0ef041550dd7a48a7c43e915bed323501c5af5bd5e19",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Sportti]\nJääkiekkoliiton liittohallitus on vahvistanut, että kuluvan kauden 2025–26 Mestiksen pelaamiseen ei tehdä muutoksia. Mestiksen väliset karsinnat pelataan suunnitellusti, ja Mestiksessä pelaavat ensi kaudella ne joukkueet, jotka ovat paikkansa pelaamalla ansainneet.\n\nKaudella 2026–27 Mestiksen joukkuemäärä tulee olemaan 8–10 riippuen Liigapaikkaa hakevien seurojen määrästä ja näiden lisenssikelpoisuudesta. Suomi-sarjasta ei nosteta uusia joukkueita. Päätöksellä halutaan varmistaa, että kaikki Mestis-seurat saavat parhaan mahdollisen tuen valmistautuessaan kohti Jääkiekon SM-Liiga Oy:n järjestämää sarjaa kaudella 2027–28.\n\nLiittohallitus vahvisti myös Jääkiekon Sarjaseurat ry:n esityksen pohjalta kauden 2026–27 pelaamistavan. Tavoitteena on antaa runkosarjalle mahdollisimman iso merkitys, erityisesti jos joukkuemäärä pienenee, sekä samalla säilyttää pudotuspelien korkea panos kauden lopussa. Samalla varmistetaan sarjan tasapuolisuus, eikä erillisiä lisäpelejä tai välisarjoja järjestetä.\n\nMestiksen kauden 2026–27 sarjamuoto riippuu joukkuemäärästä. Kahdeksalla joukkueella pelataan 42 ottelun ja yhdeksällä 48 ottelun kuusinkertainen runkosarja. Neljä parasta etenee suoraan välieriin ja saa paikan Liigan järjestämään sarjaan kaudelle 2027–28.\n\nSijoille 5–8 päätyneet pelaavat paras seitsemästä -sarjat, joiden voittajat etenevät niin ikään Liigan sarjaan. Yhdeksän joukkueen mallissa häviäjät pelaavat vielä keskenään viimeisestä paikasta, ja viimeiseksi sijoittuneen kausi päättyy runkosarjaan.\n\nJääkiekon liittohallitus linjasi lisäksi, että kaudella 2027–28 sarja jatkuu Mestiksen nimellä ja laajenee 10–12 joukkueen sarjaksi. Tavoitteena on mahdollistaa jatkossa suora nousu ja putoaminen Liigan ja Mestiksen välillä.\n\nMikäli Mestiksessä pelaa 10 joukkuetta kaudella 2026–27, päätös pelaamistavasta tehdään myöhemmin.\n\nJääkiekko    15.06.2026 - 16:32     Ville Hirvonen\n\nJääkiekko    15.06.2026 - 12:24     Salttu Forsström\n\nJääkiekko    14.06.2026 - 21:26     Ville Hirvonen",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-16T18:33:22.004101+00:00",
+  "failure": "Paketti ei sisällä todennettavia ottelutuloksia, joukkueita, ajankohtaa tai lähdetekstiä julkaistavan uutisen kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260616T183131Z_f1ee1987ac\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä todennettavia ottelutuloksia, joukkueita, ajankohtaa tai lähdetekstiä julkaistavan uutisen kirjoittamiseen.\"}"
+}
