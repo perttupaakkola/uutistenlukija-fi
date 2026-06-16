@@ -43,7 +43,6 @@ keywords:
 source_name: "Etelä-Suomen Sanomat"
 source_url: "https://www.ess.fi/paikalliset/9544491"
 source_domain: "ess.fi"
-briefing: true
 draft: false
 ---
 
