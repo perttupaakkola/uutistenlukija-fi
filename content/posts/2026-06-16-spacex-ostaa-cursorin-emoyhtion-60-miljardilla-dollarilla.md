@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/16/musk-ei-paljoa-aikaillut-juuri-porssiin-listautunut-spacex-ostaa-cursorin-60-miljardilla-dollarilla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
