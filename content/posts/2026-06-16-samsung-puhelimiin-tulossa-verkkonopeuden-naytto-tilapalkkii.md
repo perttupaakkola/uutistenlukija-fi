@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/16/tama-verkkotieto-on-puuttunut-samsung-puhelimista-tulossa-seuraavan-suuren-paivityksen-myota/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
