@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/media/2026/jun/16/digital-news-australia-2026-newspapers-radio-tv-social-media-tiktok-facebook-instagram"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
