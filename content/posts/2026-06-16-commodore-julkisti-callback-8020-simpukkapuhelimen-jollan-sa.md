@@ -44,7 +44,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/commodore-julkisti-yllattavasti-callback-8020-puhelimen-jollan-sailfish-os-kayttojarjestelmalla/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
